@@ -144,6 +144,7 @@ A `DomStatusFieldDescriptorLink` has the following properties:
 >
 > - If no `FieldDescriptorLink` is present for an existing `FieldDescriptor`, no values are allowed to be present for this `FieldDescriptor` when the `DomInstance` has that specific status.
 > - To prevent performance issues, when a `DomBehaviorDefinition` is saved, there is no check whether the `SectionDefinitions` and `FieldDescriptors` exist.
+> - When the *ReadOnly* or *ClientReadOnly* option is enabled, it will be possible to assign the field in a low-code app form when a new instance is created but not when an instance is edited. This behavior is consistent with the non-status system, where it would otherwise be impossible to assign a value. If a field should be hidden when an instance is created, you must set it as hidden in the initial state and make it visible in subsequent states.
 
 Examples:
 

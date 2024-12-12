@@ -57,7 +57,7 @@ DataMiner Sharing allows you to share live data via dataminer.services. For more
 > See also:
 >
 > - [DataMiner interfaces](xref:DataMiner_interfaces)
-> - [Web Services](xref:WS_v1)
+> - [Web Services](xref:Using_the_Web_Services_v1)
 
 ## DataMiner Replication
 

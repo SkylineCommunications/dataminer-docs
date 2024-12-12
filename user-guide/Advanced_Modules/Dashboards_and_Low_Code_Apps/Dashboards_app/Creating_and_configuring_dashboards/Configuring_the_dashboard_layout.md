@@ -16,8 +16,6 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 - To create a new dashboard theme, see [Creating a new dashboard theme](#creating-a-new-dashboard-theme).
 
-- To override a dashboard theme, see [Overriding a dashboard theme](#overriding-a-dashboard-theme).
-
 - To apply an existing theme, see [Applying an existing theme to a dashboard](#applying-an-existing-theme-to-a-dashboard).
 
 > [!NOTE]
@@ -70,7 +68,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
      - In the *Spacing* section (formerly called the *Containers* section), you can configure the margins, i.e. the amount of space (in pixels) around the components, as well as the padding, i.e. the amount of space (in pixels) that should be left free within the components.
 
-     - In the *Borders* section, you can select the type of border that should be displayed around the components. From DataMiner 10.0.9 onwards, you can also select for which sides of a component a border should be displayed, e.g. at the top and bottom only.
+     - In the *Borders* section, you can select the type of border that should be displayed around the components. You can also select for which sides of a component a border should be displayed, e.g. at the top and bottom only.
 
      - In the *Shadow* section, you can select the size of the shadow displayed behind the components.
 
@@ -81,30 +79,15 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 1. When the theme is fully configured, click *Create* or *Save*, depending on your DataMiner version<!--RN 38278-->.
 
-### Overriding a dashboard theme
-
-It is possible to customize the theme for one dashboard by overriding the applied theme, without creating or applying a new theme. Note that this is no longer possible from DataMiner 10.0.12 onwards.
-
-1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
-
-1. In the panel on the right, select the *Layout* tab.
-
-1. Select the *Override* checkbox.
-
-1. Specify the colors and component layout according to your preference. See [Creating a new dashboard theme](#creating-a-new-dashboard-theme).
-
-> [!NOTE]
-> If you do want to save the modified dashboard theme as a new theme, click *Save as new theme*. However, if you only want to customize the theme for a single dashboard, there is no need to click this button.
-
 ### Applying an existing theme to a dashboard
 
 1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
 1. In the panel on the right, select the *Layout* tab.
 
-1. Click the box *Search for a theme*. From DataMiner 10.0.12 onwards, just click the box indicating the currently used theme.
+1. Click the box indicating the currently used theme.
 
-   A list of available themes will be displayed below the box. Enter a term in the box to filter the displayed themes (prior to DataMiner 10.0.12 only).
+   A list of available themes will be displayed below the box.
 
 1. Select the theme you wish to use.
 

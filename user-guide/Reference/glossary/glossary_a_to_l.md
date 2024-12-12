@@ -38,7 +38,7 @@ uid: glossary_a_to_l
 | ASI | Asynchronous serial interface. Streaming data format that often carries an MPEG transport stream. |
 | ASN.1 | Abstract Syntax Notation 1. Standardized notation for data structures. |
 | ASP | Active Server Pages. Server-side Microsoft script engine for dynamically generated web pages. |
-| Asset Manager | DataMiner module that is used for Inventory & Asset Management.<br>See [Inventory & Asset Management](xref:AssetManagement). |
+| Asset Manager | DataMiner module that is used for Inventory & Asset Management.<br>See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
 | ATM | Asynchronous Transfer Mode. Set of network protocols used to transfer data in fixed-size packets. |
 | ATP | Acceptance Test Plan. Document describing the required testing in order to determine if a software system meets the criteria for acceptability. |
 | Automation | DataMiner module that allows you to create, manage and run scripts to execute tasks automatically.<br>See [Automation](xref:automation). |
@@ -85,7 +85,7 @@ uid: glossary_a_to_l
 | CLI | Command Line Interface. Interface that allows a user to operate software by entering commands in the form of lines of text. |
 | Cluster | Several DMAs integrated into one DataMiner System via an IP network. |
 | CM | Cable Modem. |
-| CMDB | Configuration Management Database. A database containing information about the hardware and software assets of an organization.<br>See [Inventory & Asset Management](xref:AssetManagement). |
+| CMDB | Configuration Management Database. A database containing information about the hardware and software assets of an organization.<br>See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
 | CMTS | Cable Modem Termination System. Piece of equipment used to provide high-speed data services to cable subscribers. |
 | Concurrency | Used in the context of DataMiner SRM to indicate the number of times a resource can be used at the same time.<br>See [Service and Resource Management](xref:SRM). |
 | Connectivity chain | Definition of how interfaces are connected on one or more elements, in the context of the DataMiner Connectivity Framework.<br>See [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files). Also used in the context of Root Cause Analysis, as a chain of elements, services or parameters that is configured to make it possible to analyze the distance to the most probable root cause of an alarm.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
@@ -132,7 +132,7 @@ uid: glossary_a_to_l
 | DataMiner ID | The unique ID of a DataMiner Agent. |
 | DataMiner Live Data Sharing Service | Service included in dataminer.services that allows DataMiner users to share specific live operational data with third parties.<br>See [DataMiner Sharing](xref:Sharing#dataminer-sharing). |
 | DataMiner package | Archive file that contains all the files necessary to make a modification to a DataMiner System, for example to upgrade, downgrade or restore a DataMiner Agent, or to install a DataMiner app or DataMiner protocol.<br>See [DataMiner packages](xref:DataMiner_packages). |
-| DataMiner Project Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. [Project Collaboration](xref:Collaboration#project-collaboration). |
+| DataMiner Project Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. [Project Collaboration](xref:About_the_Project_Collaboration_module). |
 | dataMiner.services | Online platform that provides many additional services related to the DataMiner software and DataMiner projects. See [dataminer.services](xref:AboutCloudPlatform). |
 | DataMiner System | One or more DMAs, integrated into one cluster via an IP network. Abbreviated as DMS. |
 | DataMiner Taskbar Utility | System tray application on a DataMiner Agent that can be used to manage the Agent.<br>See [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). |
@@ -219,7 +219,7 @@ uid: glossary_a_to_l
 | Global constant | Fixed variable used in spectrum scripts.<br>See [Using global constants](xref:Working_with_spectrum_scripts#using-global-constants). |
 | GOTS | Government Off-The-Shelf. Term used for off-the shelf products that are created and owned by a government agency. |
 | GPIB | General Purpose Interface Bus. IEEE-488 interface used to connect sensors and programmable instruments to a computer or to other instruments. |
-| GQI | Generic Query Interface. A special type of data feed for DataMiner Dashboards and Low-Code Apps. See [Generic Query Interface (GQI)](xref:About_GQI). |
+| GQI | Generic Query Interface. A special type of data for DataMiner Dashboards and Low-Code Apps. See [Generic Query Interface (GQI)](xref:About_GQI). |
 | Grandmaster clock | Device from which the time is retrieved in a PTP environment.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
 
 ## H
@@ -247,7 +247,7 @@ uid: glossary_a_to_l
 |------|-------------|
 | IaaS | Infrastructure as a Service. Cloud-based service that provides a basic computing infrastructure. |
 | IaC  | Infrastructure as Code |
-| IAM | Inventory & Asset Management. DataMiner module that establishes a link between a DMS and a CMDB.<br>See [Inventory & Asset Management](xref:AssetManagement). |
+| IAM | Inventory & Asset Management. DataMiner module that establishes a link between a DMS and a CMDB.<br>See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
 | IAS | Interactive Automation script. A DataMiner Automation script that is designed to require user interaction.<br>See [Building interactive Automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp). |
 | IDE | Integrated Development Environment. Software application that provides comprehensive facilities for software development. |
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network.<br>See [DataMiner IDP app](xref:SolIDP). |
@@ -259,7 +259,7 @@ uid: glossary_a_to_l
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself.<br>See [Information templates](xref:Information_templates). |
 | Input attenuation | Adjusting of the signal strength at the input of a spectrum analyzer to improve measuring accuracy.<br>See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
 | IntelliSense | Intelligent code completion, available within DataMiner when configuring C# code in Automation scripts.<br>See [IntelliSense](xref:Adding_CSharp_code_to_an_Automation_script#intellisense). |
-| Inventory & Asset Management | DataMiner module that establishes a link between a DMS and a CMDB. Commonly abbreviated as IAM.<br>See [Inventory & Asset Management](xref:AssetManagement). |
+| Inventory & Asset Management | DataMiner module that establishes a link between a DMS and a CMDB. Commonly abbreviated as IAM.<br>See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
 | IP | Internet Protocol. |
 | IPDR | Internet Protocol Detail Record. Standardized interface that enables the collection and redistribution of data on service usage and other activities in an IP ecosystem. |
 | IRD | Integrated Receiver/Decoder. Electronic device used to receive and then convert radio frequency signals. |
@@ -289,6 +289,7 @@ uid: glossary_a_to_l
 |------|-------------|
 | LAN | Local Area Network. Network connecting devices within a limited area. |
 | Latch level | The previous highest alarm severity level of a DataMiner object.<br>See [Special icon settings](xref:DataMiner_Cube_sidebar#special-icon-settings). |
+| LCA | [Low-Code Apps](xref:Application_framework). DataMiner module that allows you to create custom applications to interact with data from a DataMiner System or an external source. |
 | LDAP | Lightweight Directory Access Protocol. Cross-platform protocol used for directory services authentication. |
 | Level shift | Change in the behavior of a trend, detected by DataMiner Analytics, where the value shifts upwards or downwards and then stays at that level.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
 | LINQ | Language Integrated Query.<br>See [Language Integrated Query](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/) |

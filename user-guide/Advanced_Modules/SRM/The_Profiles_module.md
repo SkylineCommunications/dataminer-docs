@@ -9,14 +9,3 @@ The *Profiles* module does not require a separate license. It is intended to man
 The *Profiles* module consists of a list pane on the left with three tabs, *Definitions*, *Instances*, and *Parameters*, and a configuration pane on the right, which displays detailed information and settings for items selected in the pane on the left.
 
 To create useful instances, you first need to create profile parameters and definitions. The instances can then be linked to a session variable in Visual Overview, or applied to elements with an Automation script.
-
-This section consists of the following topics:
-
-- [Configuring profile parameters](xref:Configuring_profile_parameters)
-
-- [Configuring profile definitions](xref:Configuring_profile_definitions)
-
-- [Configuring profile instances](xref:Configuring_profile_instances)
-
-> [!TIP]
-> See also: [Creating a list of profile instances](xref:Adding_options_to_a_session_variable_control#creating-a-list-of-profile-instances)

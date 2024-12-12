@@ -12,4 +12,4 @@ Specifies the login method.
 |--- |--- |--- |
 |***string restriction***|||
 |&nbsp;&nbsp;Enumeration|credentials|Credential-based authentication.|
-|&nbsp;&nbsp;Enumeration|certificate|Authentication using a client certificate. Feature introduced in DataMiner 10.0.5 (RN 25243).|
+|&nbsp;&nbsp;Enumeration|certificate|Authentication using a client certificate.<!-- RN 25243 -->|

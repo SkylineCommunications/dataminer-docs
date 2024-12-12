@@ -25,7 +25,7 @@ You can find more info on trending in the sections below:
 
 In average trend graphs, for each window of 5 minutes (or 60 minutes for the last year trend graph) an average value is calculated and the minimum and maximum value in this window is determined.
 
-From DataMiner version 7.5 onwards, it is possible to define the following trend types in addition to the default average:
+The following trend types can be defined in addition to the default average:
 
 - Last: Last value in the time span
 - Sum: Sum of all the values in the time span. This cannot be used for parameters holding discrete values
@@ -50,21 +50,25 @@ By default, when the window has passed, the average value of this window is calc
 For example, consider a protocol that has a trended parameter (ID 100) with an initial value of 10. The element starts at 9:06:14.
 
 - In the real-time trend data table, the following entry is added:
+
   |param id|value|timestamp|
   |--- |--- |--- |
   |100|10|[YYYY]-[MM]-[DD] 09:06:14|
 
 - In the average trend data table, the following entry is added:
+
   |param id|avg value|timestamp|
   |--- |--- |--- |
   |100|10|[YYYY]-[MM]-[DD] 09:06:14|
 
 - At 09:07:56, the trended parameter gets set to a new value of 20. This results in a new entry being added in the real-time trend data table:
+
   |param id|value|timestamp|
   |--- |--- |--- |
   |100|20|[YYYY]-[MM]-[DD] 09:07:56|
 
 - At 09:10:00, the 5-minute window automatically closes and this results in the following entry being added to the average trend data table for the element:
+
   |param id|avg value|timestamp|
   |--- |--- |--- |
   |100|15.4867256637168|[YYYY]-[MM]-[DD] 09:10:00|
@@ -79,9 +83,9 @@ Average: ((102*10)+(124*20))/226=15.4867256637168
 
 Below is a graphical representation of how an average trend graph is constructed. At 10:35, a new window begins, which lasts until 10:40. At 10:37:30, the value of the trended parameter changes from 12 to 14. At 10:40, the window closes automatically, and an average value of 13 is calculated for this window. The minimum and maximum value of the trended parameter in this window is 12 and 14, respectively. This is then shown in the average trend graph.
 
-![alt text](../../images/real-time_trend_graph.svg "Example real-time trend graph")
+![Example real-time trend graph](~/develop/images/real-time_trend_graph.svg)
 
-![alt text](../../images/Average_trending_graph_basics.svg "Corresponding average trend graph")
+![Corresponding average trend graph](~/develop/images/Average_trending_graph_basics.svg)
 
 ### History sets
 
@@ -122,15 +126,15 @@ When historySet is set to "true", its last set value will also not be stored in 
 
 ### Closing a window without a new data point
 
-It is also possible to close a window without having to provide an actual data point. This can be done by using a NotifyProtocol call type 374 "NT_CLOSE_HISTORY_TREND_WINDOW". For more information, see NT_CLOSE_HISTORY_TREND_WINDOW (374).
+It is also possible to close a window without having to provide an actual data point. This can be done by using a NotifyProtocol call type 374 "NT_CLOSE_HISTORY_TREND_WINDOW". For more information, see [NT_CLOSE_HISTORY_TREND_WINDOW (374)](xref:NT_CLOSE_HISTORY_TREND_WINDOW).
 
 ## Retrieving trend data from the database
 
-From DataMiner 9.0.0 (RN 40653, RN 11750) onwards, the GetTrendDataMessage class should be used to retrieve trend data.
+To retrieve trend data from the database, the GetTrendDataMessage class should be used.<!-- RN 40653, RN 11750 -->
 
 The following examples show how this class can be used to retrieve trend data.
 
-See also: GetTrendDataMessage class
+See also: [GetTrendDataMessage class](xref:Skyline.DataMiner.Net.Messages.GetTrendDataMessage)
 
 ### Retrieving real-time trend data of a standalone parameter
 

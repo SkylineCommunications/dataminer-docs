@@ -38,7 +38,9 @@ A `FieldDescriptor` object defines what a field of a `DomInstance` should look l
 - bool
 
 > [!IMPORTANT]
-> When you store `DateTime` values, you can save them in either the local or UTC time zone. However, we strongly recommend always using UTC. When a `DateTime` field value is displayed in a low-code app form, the values will be converted to the time zone set by the browser. When it is updated via the form, the value will be converted and saved in UTC even if the value was originally stored in local time.
+>
+> - When you store `DateTime` values, you can save them in either the local or UTC time zone. However, we strongly recommend always using UTC. When a `DateTime` field value is displayed in a low-code app form, the values will be converted to the time zone set by the browser. When it is updated via the form, the value will be converted and saved in UTC even if the value was originally stored in local time.
+> - When a `string` value is stored, from DataMiner 10.4.12/10.5.0 onwards, the value is limited to a maximum of 32 766 UTF-8 bytes, so the maximum number of characters will have to be lower.<!-- RN 39496 -->
 
 Below is an overview of all other important properties:
 

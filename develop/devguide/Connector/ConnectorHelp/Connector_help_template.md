@@ -6,26 +6,6 @@ uid: Connector_help_template
 
 [Short description of the data source and of the function of the connector.]
 
-## About
-
-### Version Info
-
-| Range            | Key Features | Based on | System Impact |
-|----------------------|------------------|--------------|-------------------|
-| 1.0.0.x [SLC Main] | Initial version. | -           | -                |
-
-### Product Info
-
-| Range | Supported Firmware |
-|-----------|------------------------|
-| 1.0.0.x   | -                     |
-
-### System Info
-
-| Range | DCF Integration | Cassandra Compliant | Linked Components | Exported Components |
-|-----------|---------------------|-------------------------|-----------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | -                    | -                      |
-
 ## Configuration
 
 ### Connections
@@ -119,7 +99,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## DataMiner Connectivity Framework
 
-The [x.x.x.x] range of the [connector name] connector supports the usage of DCF and can only be used on a DMA with DataMiner version 8.5.4 or higher.
+The [x.x.x.x] range of the [connector name] connector supports the usage of DCF.
 
 DCF can also be implemented through the DataMiner DCF user interface and through third-party DataMiner connectors (e.g. a manager).
 

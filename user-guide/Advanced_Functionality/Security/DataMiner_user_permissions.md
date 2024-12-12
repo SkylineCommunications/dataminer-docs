@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_user_permissions
+description: With the user permissions in the Cube System Center, you can fine-tune which users and groups have access to specific DataMiner functionality.
 ---
 
 # DataMiner user permissions
@@ -310,6 +311,10 @@ Permission to edit audio files that can be used for audible alerts.
 #### General \> Alarms \> Audible alert \> Delete audio files
 
 Permission to delete audio files that can be used for audible alerts.
+
+#### General \> Alarms \> Allow to add or update hyperlinks
+
+Available from DataMiner 10.2.6/10.3.0 onwards. Permission to ad or update custom commands in the Alarm Console context menu.
 
 ### General \> Workspaces
 
@@ -666,7 +671,7 @@ Permission to delete DataMiner protocols.
 
 #### Modules \> Protocols & Templates \> Protocols \> Download protocols from DCP
 
-Permission to download protocols from the DataMiner Collaboration Platform.
+Permission to download protocols via the Update Center in Cube. This permission is not required to [deploy protocols from the Catalog](xref:Deploying_a_catalog_item).
 
 #### Modules \> Protocols & Templates \> Protocols \> Generate MIB
 
@@ -938,6 +943,10 @@ Available from DataMiner 10.2.0/10.1.12 onwards. Permission to add or edit servi
 
 Available from DataMiner 10.2.0/10.1.12 onwards. Permission to delete profile instances.
 
+#### Modules \> Swarming
+
+Available from DataMiner 10.5.1/10.6.0 onwards.<!-- RN 41490 --> Permission to trigger [swarming](xref:Swarming).
+
 ### Modules \> System configuration \> Agents
 
 #### Modules \> System configuration \> Agents \> UI available
@@ -960,6 +969,9 @@ Permission to initiate a manual Failover.
 
 Permission to configure a pair of Failover DataMiner Agents.
 
+> [!NOTE]
+> If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your DMS is fully hosted and maintained by Skyline Communications. As such, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40013-->, the *Configure Failover* user permission is no longer available for DaaS.
+
 #### Modules \> System configuration \> Agents \> Change operator info
 
 Permission to change the *System info* for a DataMiner Agent.
@@ -972,13 +984,22 @@ Permission to (re)start DataMiner Agents.
 
 Permission to stop the DataMiner Agent software on DataMiner Agents.
 
+> [!NOTE]
+> If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your DMS is fully hosted and maintained by Skyline Communications. As such, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40013-->, the *Stop* user permission is no longer available for DaaS.
+
 #### Modules \> System configuration \> Agents \> Shut down
 
 Permission to shut down DataMiner Agents.
 
+> [!NOTE]
+> If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your DMS is fully hosted and maintained by Skyline Communications. As such, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40013-->, the *Shut down* user permission is no longer available for DaaS.
+
 #### Modules \> System configuration \> Agents \> Reboot
 
 Permission to reboot DataMiner Agents.
+
+> [!NOTE]
+> If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your DMS is fully hosted and maintained by Skyline Communications. As such, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40013-->, the *Reboot* user permission is no longer available for DaaS.
 
 #### Modules \> System configuration \> Agents \> Change IP settings
 

@@ -1,5 +1,7 @@
 ---
 uid: Dedicated_clustered_storage
+keywords: Cassandra Cluster
+description: If you use DataMiner with self-hosted storage, the recommended setup is dedicated clustered storage using Cassandra and OpenSearch.
 ---
 
 # Dedicated clustered storage
@@ -26,12 +28,12 @@ An on-premises **OpenSearch** cluster must have an **uneven number of nodes**, r
 
 Instead of OpenSearch, you can also use **Elasticsearch**. However, Elasticsearch is only supported up to version 6.8, so this is **not recommended**.
 
-For a **Cassandra** cluster, any number of nodes can be used, ideally running on **Linux** machines. To get an idea of how many nodes would be required for your system, use the [**node calculator**](https://community.dataminer.services/calculator/).
+For a **Cassandra** cluster, any number of nodes can be used, running on **Linux** machines. To get an idea of how many nodes would be required for your system, use the [**node calculator**](https://community.dataminer.services/calculator/).
 
 ![Recommended setup: DataMiner, Cassandra, and OpenSearch hosted on dedicated machines](~/user-guide/images/Recommended-Setup-1.png)<br>
 *Recommended on-premises setup: DataMiner, Cassandra, and OpenSearch hosted on dedicated machines*
 
-In a development environment with **limited load**, it is possible to host DataMiner, Cassandra, and OpenSearch on **one Windows machine**. In this case, OpenSearch and DataMiner must be installed on a separate disk or partition. However, note that this is not recommended for normal production environments. For Cassandra, we recommend using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), as only old versions of Cassandra (< 4.x) are supported on Windows. However, keep in mind that using [Storage as a Service (STaaS)](xref:STaaS) instead will greatly reduce CPU and memory usage, especially for smaller setups.
+In a development environment with **limited load**, it is possible to host DataMiner, Cassandra, and OpenSearch on **one Windows machine**. In this case, OpenSearch and DataMiner must be installed on a separate disk or partition. However, note that this is not recommended for normal production environments. For Cassandra, we recommend using [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), as Cassandra is no longer supported on Windows starting from Cassandra 4.x and DataMiner 10.4.x. However, keep in mind that using [Storage as a Service (STaaS)](xref:STaaS) instead will greatly reduce CPU and memory usage, especially for smaller setups.
 
 ![Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine](~/user-guide/images/Development-setup-DataMiner-Cassandra-and-OpenSearch.png)<br>
 *Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine*
@@ -44,7 +46,7 @@ An on-premises **OpenSearch** cluster must have an **uneven number of nodes**, r
 
 Instead of OpenSearch, you can also use **Elasticsearch**. However, Elasticsearch is only supported up to version 6.8, so this is **not recommended**. It is also possible to host a DataMiner and Elasticsearch node on the same machine. In this case, Elasticsearch and DataMiner must be installed on a separate disk or partition. Note that in that case it is not required to install an Elasticsearch node on every single DataMiner node. While compute resources can be shared, logically there still is a separate DataMiner node cluster and Elasticsearch cluster.
 
-For **Cassandra**, any number of nodes can be used, ideally running on **Linux** machines. To get an idea of how many nodes would be required for your system, use the [**node calculator**](https://community.dataminer.services/calculator/).
+For **Cassandra**, any number of nodes can be used, running on **Linux** machines. To get an idea of how many nodes would be required for your system, use the [**node calculator**](https://community.dataminer.services/calculator/).
 
 ![Recommended setup: DataMiner, Cassandra, and OpenSearch hosted on dedicated machines, with a minimum of three OpenSearch nodes](~/user-guide/images/Recommended-Setup-2.png)<br>
 *Recommended on-premises setup: DataMiner, Cassandra, and OpenSearch hosted on dedicated machines, with a minimum of three OpenSearch nodes*

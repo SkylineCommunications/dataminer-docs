@@ -27,7 +27,7 @@ When there is a version difference between DMAs for which synchronization is not
 ```xml
 <SyncRules xmlns="http://www.skyline.be/config/syncrules">
   <VersionRestrictions allowMajorVersions="false">
-    <Rule allow="false" old="8.5.6" new="8.5.7" />
+    <Rule allow="false" old="10.2.6" new="10.2.7" />
   </VersionRestrictions>
 </SyncRules>
 ```

@@ -29,7 +29,7 @@ The following factors, in order, are taken into account for the grouping:
 
 - Element information
 
-- Alarm, element, service or view properties, if these have been configured for incident tracking (see [Configuration of incident tracking based on properties](#configuration-of-incident-tracking-based-on-properties)).
+- Alarm, element, service or view properties, if these have been configured for incident tracking (see [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules)).
 
 If a single factor is used, it is mentioned in the value of the created alarm group.
 
@@ -52,6 +52,9 @@ The grouping of alarms into incidents is updated in real time whenever appropria
 > - Using automatic incident tracking with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
 > - When an element is stopped or paused, the alarms associated with that element will not be taken into account when grouping alarms. Also, alarms associated with elements that are stopped or paused will be removed from any existing alarm group.
 
+> [!TIP]
+> It is possible to manually customize alarm grouping. See [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules).
+
 ## Automatic incident tracking configuration in System Center
 
 In DataMiner Cube, you can enable this feature in System Center, via *System settings* > *analytics config* > *automatic incident tracking*. From DataMiner 10.2.0/10.2.1 onwards, in new installations and in systems upgrading from DataMiner versions that did not support automatic incident tracking yet, it is enabled by default.
@@ -61,7 +64,7 @@ In DataMiner Cube, you can enable this feature in System Center, via *System set
 
 The following settings are available in System Center:
 
-- *Enabled*: Allows you to activate or deactivate this feature. Note that when you upgrade to DataMiner 10.0.11, the feature is automatically disabled, unless it has previously been activated as a soft-launch feature.
+- *Enabled*: Allows you to activate or deactivate this feature.
 
 - *Leader DataMiner ID*: The DMA performing all incident tracking calculations. By default, this is the DMA with the lowest DataMiner ID at the time when alarm grouping is enabled.
 
@@ -77,67 +80,6 @@ When this feature has been enabled in System Center as detailed above, it still 
 
 > [!NOTE]
 > Automatic incident tracking is only shown for active alarms, not for history alarms. Consequently, from DataMiner 10.2.0 [CU12]/10.3.3 onwards, the *Automatic incident tracking* option is not available for a history tab in the Alarm Console. <!-- RN 35556 -->
-
-## Configuration of incident tracking based on properties
-
-From DataMiner 10.2.0/10.1.4 onwards, automatic incident tracking can also take into account alarm, element, service or view properties, if these have been configured as detailed below. Alarms are grouped as soon as they have the same value for one of the configured alarm, service or view properties, the same focus value and approximately the same timestamp. For element properties, alarms are grouped depending on a threshold that must be specified in the analytics configuration detailed below. Alarms for elements with the same property value will only be grouped if the proportion of elements in alarm among all elements with that property value is greater than the configured threshold.
-
-The following basic configuration is needed in Cube:
-
-- For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
-
-In addition, the following configuration is needed in the file *C:\\Skyline DataMiner\\analytics\\configuration.xml*:
-
-- For each alarm, element, view or service property that should be taken into account for incident tracking, add an \<item> tag within the \<Value> tag in the following section of the *configuration.xml* file.
-
-  ```xml
-  <item type="skyline::dataminer::analytics::workers::configuration::XMLConfigurationProperty&lt;class std::vector&lt;class std::shared_ptr&lt;class skyline::dataminer::analytics::workers::configuration:: IGenericPropertyVisitorConfiguration&gt;,class std::allocator&lt;class std::shared_ptr&lt;class skyline::dataminer::analytics::workers::configuration:: IGenericPropertyVisitorConfiguration&gt; &gt; &gt; &gt;">
-    <Value>
-      [One <item> tag per property that has to be taken into account. See below.]
-    </Value>
-    <Accessibility>2</Accessibility>
-    <Name>GenericProperties</Name>
-  </item>
-  ```
-
-- For an **element property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the element property and \[THRESHOLD\] with the desired threshold. Alarms for elements with the same property value will only be grouped if the proportion of elements in alarm among all elements with that property value is greater than this threshold.
-
-  ```xml
-  <item type="skyline::dataminer::analytics::workers::configuration::GenericElementPropertyVisitorConfiguration">
-    <enable>true</enable>
-    <threshold>[THRESHOLD]</threshold>
-    <name>[PROPERTY_NAME]</name>
-  </item>
-  ```
-
-- For an **alarm property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the alarm property.
-
-  ```xml
-  <item type="skyline::dataminer::analytics::workers::configuration::GenericAlarmPropertyVisitorConfiguration">
-    <enable>true</enable>
-    <name>[PROPERTY_NAME]</name>
-  </item>
-  ```
-
-- For a **view property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the view property.
-
-  ```xml
-  <item type="skyline::dataminer::analytics::workers::configuration::GenericViewPropertyVisitorConfiguration">
-    <enable>true</enable>
-    <name>[PROPERTY_NAME]</name>
-  </item>
-  ```
-
-- For a **service property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the service property.
-
-  ```xml
-  <item type="skyline::dataminer::analytics::workers::configuration::GenericServicePropertyVisitorConfiguration">
-    <enable>true</enable>
-    <name>[PROPERTY_NAME]</name>
-  </item>
-  ```
-
-- After you have edited the configuration file, **restart the SLAnalytics process** to make sure your changes take effect.
 
 ## Alarm groups in the Alarm Console
 

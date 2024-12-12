@@ -34,4 +34,4 @@ A protocol typically contains a number of parameters that will be displayed (e.g
 
 Coding Guidelines
 
-- [User interface](xref:CODUserInterface)
+- [User interface](xref:Default_settings)

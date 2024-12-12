@@ -2,12 +2,12 @@
 uid: github_reusable_workflows_nuget_solution_master_workflow
 ---
 
-# NuGet solution master workflow
+# NuGet Solution Master Workflow
 
 > [!IMPORTANT]
 > This workflow is intended for internal use at Skyline Communications as it uses Skyline-specific validation. However, you can use it as a baseline and adjust it for use elsewhere by replacing the validation step with your own.
 
-The NuGet solution master workflow is designed to run on repositories containing the DataMiner NuGet Package Solution provided by the DIS extension in Visual Studio or from [Skyline.DataMiner.VisualStudioTemplates](https://www.nuget.org/packages/Skyline.DataMiner.VisualStudioTemplates#readme-body-tab).
+The NuGet Solution Master Workflow is designed to run on repositories containing the DataMiner NuGet Package Solution provided by the DIS extension in Visual Studio or from [Skyline.DataMiner.VisualStudioTemplates](https://www.nuget.org/packages/Skyline.DataMiner.VisualStudioTemplates#readme-body-tab).
 
 This workflow is a migration of the original [internal Jenkins pipelines](xref:Pipeline_stages_for_custom_solutions) used for automation and quality assurance within Skyline Communications.
 
@@ -59,6 +59,8 @@ For most reusable workflows, several arguments and secrets need to be provided. 
 
 However, we recommend that you instead use one of the available [starter workflows](xref:github_starter_workflows) that in turn call one of our reusable workflows and that are preconfigured with most of the arguments.
 
+For more information on GitHub secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+
 For example:
 
 ```yml
@@ -102,7 +104,7 @@ Searches for any project ending with Tests or UnitTests and will then attempt to
 Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
 
 > [!NOTE]
-> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). The value of the secret is an API token that can be created in SonarCloud under the [Security](https://sonarcloud.io/account/security) tab of the account settings.
+> For public repositories, the analysis step uses the SONAR_TOKEN organization secret. For private repositories, you will need to create a repository secret with name SONAR_TOKEN (as private repositories cannot access the organization secret). For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 ### Quality gate
 

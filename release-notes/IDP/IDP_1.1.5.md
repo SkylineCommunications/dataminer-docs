@@ -6,7 +6,7 @@ uid: IDP_1.1.5
 
 ## New features
 
-#### Configuration Management \[ID_23670\]\[ID_23688\]\[ID_23777\]\[ID_23848\]\[ID_23951\] \[ID_23962\]\[ID_24324\]\[ID_24369\]\[ID_24646\]\[ID_24654\]\[ID_24742\]\[ID_24774\] \[ID_24798\]
+#### Configuration Management \[ID 23670\]\[ID 23688\]\[ID 23777\]\[ID 23848\]\[ID 23951\] \[ID 23962\]\[ID 24324\]\[ID 24369\]\[ID 24646\]\[ID 24654\]\[ID 24742\]\[ID 24774\] \[ID 24798\]
 
 A new Configuration Management feature is now available in the IDP app. This new feature allows you to set the default configuration of an element and make a backup of a configuration.
 
@@ -38,7 +38,7 @@ A number of changes have been implemented in the IDP app as part of the Configur
   - Backup script folder: *DataMiner Solutions/IDP/CI Type Management/Configuration Management/Backup*
   - Default script folder: *DataMiner Solutions/IDP/CI Type Management/Configuration Management/Default*
 
-#### Additional rack assignment possibilities in IDP app \[ID_24526\]
+#### Additional rack assignment possibilities in IDP app \[ID 24526\]
 
 The IDP app now contains additional information and settings related to its Rack Layout Manager functionality. You can access these via *Admin* > *Facilities*. The *Facilities* tab consists of a *View Settings* page, which contains the previously available RLM settings, and a *Rack Assignment* page.
 
@@ -46,10 +46,10 @@ The *Rack Assignment* page displays an overview of the devices managed by the Ra
 
 - *Show in Rack*: Opens the rack view in a new card.
 - *Assign*: Allows you to assign the selected device to a rack.
-- *Auto Assign*: Launches an Automation script to automatically assign the selected device to a rack. See [Automatic rack assignment \[ID_24528\]\[ID_24543\]](#automatic-rack-assignment-id_24528id_24543).
+- *Auto Assign*: Launches an Automation script to automatically assign the selected device to a rack. See [Automatic rack assignment \[ID 24528\]\[ID 24543\]](#automatic-rack-assignment-id-24528id-24543).
 - *Remove*: Removes the device from the rack it is currently assigned to.
 
-#### Automatic rack assignment \[ID_24528\]\[ID_24543\]
+#### Automatic rack assignment \[ID 24528\]\[ID 24543\]
 
 It is now possible for administrators to configure a rack assignment script per CI type in order to allow devices to be automatically assigned to racks.
 
@@ -67,31 +67,31 @@ The automatic rack assignment script can also be launched silently in automated 
 
 ### Enhancements
 
-#### Automation: New configuration management methods \[ID_23718\]
+#### Automation: New configuration management methods \[ID 23718\]
 
 In order to provide access to all configuration management options in Automation scripts, new methods have been made available in the *Skyline.DataMiner.DataMinerSolutions.IDP.ConfigurationManagement* namespace.
 
-#### CI type name validation now ignores casing \[ID_24395\]
+#### CI type name validation now ignores casing \[ID 24395\]
 
 To ensure that the name validation of CI types is in line with the regular validation for DataMiner element names, it will now no longer take casing into consideration. As such, it will for example not be possible to create a CI type "Cisco manager" if the CI type "Cisco Manager" already exists.
 
-#### Notification of discovery interruption \[ID_24642\]
+#### Notification of discovery interruption \[ID 24642\]
 
 In case a discovery request is interrupted because the *DataMiner IDP Discovery* element is restarted, a message will now be displayed to notify the user that the discovery request was not completed.
 
 In addition, in such a case, the progress indicated under *Most Recent Discoveries* in the *Inventory* > *Discovered* tab will mention *Interrupted* for the requests that were in progress or were not yet started at the time of the discovery element restart, so that it is clear that a new discovery request is needed to get complete results.
 
-#### IDP app: 'Create Elements' option renamed to 'Automatically Create Elements After Discovery' \[ID_24728\]
+#### IDP app: 'Create Elements' option renamed to 'Automatically Create Elements After Discovery' \[ID 24728\]
 
 In the *Admin* > *Provisioning* tab of the IDP app, the option *Create Elements* has been renamed to *Automatically Create Elements After Discovery*.
 
 If this option is enabled, and the toggle button *Provisioning* is enabled on the *Workflow* > *Automation* tab, discovered elements are automatically provisioned. If this option is not enabled, discovered elements are not provisioned, regardless of the *Provisioning* toggle button setting.
 
-#### IDP app: Custom IDP icon \[ID_24778\]
+#### IDP app: Custom IDP icon \[ID 24778\]
 
 The IDP app now has a custom IDP icon, instead of the general Skyline icon.
 
-#### CI type management script enhancements \[ID_24813\]
+#### CI type management script enhancements \[ID 24813\]
 
 The following changes have been implemented to the CI type management script:
 
@@ -100,30 +100,30 @@ The following changes have been implemented to the CI type management script:
 
 ### Fixes
 
-#### Out of memory exception when discovery request has large IP range \[ID_24391\]
+#### Out of memory exception when discovery request has large IP range \[ID 24391\]
 
 When the IP range in a discovery request was too large, it could occur that an out of memory exception was thrown.
 
-#### Elements not added to Software tab when Software update/Software compliancy was enabled \[ID_24588\]
+#### Elements not added to Software tab when Software update/Software compliancy was enabled \[ID 24588\]
 
 When *Software Update* or *Software Compliancy* was enabled for a CI type via *Workflows* > *Automation*, it could occur that the corresponding elements were not added to the *Software* tab.
 
-#### Removing scan range not possible without Resource Manager license \[ID_24613\]
+#### Removing scan range not possible without Resource Manager license \[ID 24613\]
 
 When you tried to remove a scan range on a system without a Resource Manager license, the scan range failed to be removed.
 
-#### CI type management script issue \[ID_24813\]
+#### CI type management script issue \[ID 24813\]
 
 In the CI type management script, if the provisioning configuration was edited, it could occur that the pop-up window showed *Based on device address*, even though the DMA was configured differently. Now the correct value will be displayed.
 
-#### Rack Layout Manager: Incorrect scaling Visio drawings \[ID_24818\]
+#### Rack Layout Manager: Incorrect scaling Visio drawings \[ID 24818\]
 
 Previously, some RLM Visio drawings did not apply the correct scaling. Now all Visio drawings will be scaled to use the maximum width or height.
 
-#### No element properties created on empty DMA \[ID_24835\]
+#### No element properties created on empty DMA \[ID 24835\]
 
 In some cases, it could occur that no element properties were created if IDP was installed on an empty DMA.
 
-#### Not possible to generate CI types after new IDP installation \[ID_24890\]
+#### Not possible to generate CI types after new IDP installation \[ID 24890\]
 
 If IDP was installed on a DMA that did not yet contain any CI types, it could occur that it was not possible to generate CI types for the production protocols.

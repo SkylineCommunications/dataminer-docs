@@ -14,4 +14,6 @@ uid: General_Main_Release_10.5.0
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 - [New features](xref:General_Main_Release_10.5.0_new_features)
-- [Changes](xref:General_Main_Release_10.5.0_changes)
+- [Breaking changes](xref:General_Main_Release_10.5.0_breaking_changes)
+- [Enhancements](xref:General_Main_Release_10.5.0_enhancements)
+- [Fixes](xref:General_Main_Release_10.5.0_fixes)

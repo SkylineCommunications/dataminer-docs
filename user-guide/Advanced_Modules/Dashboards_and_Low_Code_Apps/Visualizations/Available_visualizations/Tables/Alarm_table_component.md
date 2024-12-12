@@ -9,7 +9,7 @@ uid: DashboardAlarmTable
 
 Available from DataMiner 10.2.0/10.1.5 onwards. Prior to this, the component is available in soft launch from DataMiner 9.6.8 onwards.
 
-The component displays a list of alarms or information events, which can be filtered in multiple ways.
+The component displays a list of alarms or information events, which can be filtered in multiple ways. By default, the following columns are included in the alarm table: element name, parameter description, value, time, and root time. However, columns can be removed and added in the component settings (see information below).
 
 ![Alarm table](~/user-guide/images/Alarm_Table.png)<br>*Alarm table component in DataMiner 10.4.6*
 
@@ -35,7 +35,17 @@ To configure the component:
      > - If an initial number of alarms to load is specified, no grouping is applied.
      > - From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39484-->, the initial number of alarms to load is limited to a minimum of 1 alarm and a maximum of 100,000 alarms.
 
-   - Below *Columns*, you can select one or more columns in order to have only those columns displayed in the alarm list. For each column, arrow buttons will be displayed that allow you to customize the column order.
+   - Below *Columns*, you can select one or more columns in order to have only those columns displayed in the alarm list, and you can add columns that were initially not included in the alarm table, e.g. "Alarm ID", "Root alarm ID", "Severity", and "Alarm type". For each column, arrow buttons will be displayed that allow you to customize the column order.
+
+     > [!NOTE]
+     > The content of the *Alarm ID* and *Root Alarm ID* columns may differ depending on your DataMiner version:
+     >
+     > | Column | From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards<!--RN 41113--> | Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 |
+     > |--|--|--|
+     > | Alarm ID | DMAID/EID/RootAlarmID/AlarmID | HostingDMAID/AlarmID |
+     > | Root Alarm ID | DMAID/EID/RootAlarmID | HostingDMAID/RootAlarmID |
+     >
+     > "DMAID" refers to the DataMiner ID of the DataMiner Agent where the element was originally created. "HostingDMAID" refers to the DataMiner ID of the DataMiner Agent currently hosting the element and managing its alarms. Most of the time, these two values will be the same, but they may differ, for example, when an element is exported from one Agent and imported onto another Agent. In this case, the element retains the original DMAID, but the HostingDMAID will reflect the new Agent's ID.
 
    - In the *Group by* box, you can select the column by which the alarms or information events should be grouped.
 
@@ -47,4 +57,4 @@ To configure the component:
 
    - *Expand on hover*: If this option is selected, and not all data within the component can be shown in the available space, the component will expand across other components when you hover the mouse pointer over it in order to show as much data as possible.
 
-1. Optionally, apply a data filter. Element, parameter, index, service and view data can be used as a filter. Various feed components, such as a parameter feed and time range feed, can also be used as a filter. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Optionally, apply a data filter. Element, parameter, index, service and view data can be used as a filter. Various components, such as a parameter selector and time range, can also be used as a filter. See [Adding data to a component](xref:Adding_data_to_component).

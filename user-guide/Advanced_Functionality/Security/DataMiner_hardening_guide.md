@@ -34,6 +34,9 @@ After you have run a BPA test, it will provide an overview of the detected issue
 
 ## DataMiner Agent hardening
 
+> [!NOTE]
+> If you have deployed DataMiner using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk), your system will be hardened out of the box, so you do not need to do anything to harden DataMiner. For an overview of the implemented measures, refer to [DataMiner Dojo](https://community.dataminer.services/download/overview-hardening-pre-installed-dataminer-vhdx/). However, note that if you have selected the data storage type *Self-hosted - External Storage*, you are responsible for the management of the external Cassandra and OpenSearch database clusters. See [Secure self-hosted DataMiner storage](#secure-self-hosted-dataminer-storage).
+
 ### Secure Cube-server communication
 
 By default, Cube currently uses .NET Remoting to communicate with DataMiner. From DataMiner 10.1.7 onwards, this communication is encrypted using the Rijndael algorithm using a 256-bit key, which is negotiated over a 1024-bit RSA encrypted communication channel. However, .NET Remoting is a legacy technology and is widely considered insecure. For this reason, DataMiner 10.3.2/10.3.0 introduces the possibility to use gRPC instead as a secure alternative.
@@ -137,61 +140,143 @@ For more information about disabling legacy SSL/TLS versions, refer to [TLS, DTL
 
 ### Configure the firewall
 
-On DataMiner versions installed using the **10.0 installer** (or older), the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
+Depending on which version of the DataMiner Installer is used, different firewall ports are opened by default. You can find more information about this below.
 
-- TCP **23**: Telnet (disabled by default)
+#### [Installer v10.4](#tab/tabid-1)
+
+If DataMiner is installed with the **DataMiner Installer v10.4**, the following (inbound) ports and rules are opened in the Windows firewall:
 
 - TCP 80: HTTP
 
 - TCP 8004: Remoting (client-server & inter-DMS communication)
 
-- TCP **9004**: Web Services (end of life)
+- TCP 5100: CloudGateway (dataminer.services endpoint)
+
+- TCP 4222 and 6222: NATS (inter-process communication)
+
+- TCP 9090: NATS Account Server
+
+- UDP 162: SNMP
+
+- Allow ICMP: Ping
+
+Some of the ports that are opened by default can potentially be closed depending on the configuration of your DataMiner System:
+
+- TCP port **80** can be closed if IIS is configured to require HTTPS connections and if IIS is not configured to redirect HTTP to HTTPS. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+
+- TCP port **8004** can be closed if the DMA is configured to use gRPC for both Cube-to-DMA and inter-DMA communication.
+
+- The ports for NATS communication, i.e. **4222, 6222, and 9090**, can be closed when the DMA is not part of a cluster.
+
+- TCP port **5100** can be closed when the DMA is not part of a cluster and no DxMs are hosted on external machines.
+
+#### [Installer v10.2](#tab/tabid-2)
+
+On DataMiner versions installed using the **DataMiner Installer v10.2**, the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
+
+- TCP 80: HTTP
+
+- TCP 8004: Remoting (client-server & inter-DMS communication)
 
 - TCP 7000: Cassandra (inter-node communication)
 
 - TCP 9042: Cassandra (client-server communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database locally.
-  > If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
+  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
 - TCP 9300: Elasticsearch (inter-node communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 9200 only apply when the DataMiner System uses an Elasticsearch database locally.
+  > This rule and the one above for TCP 9200 only apply when the DataMiner System uses an Elasticsearch database that is installed on the same machine as DataMiner.
 
-- TCP 4222, 6222, **8222**: NATS (inter-process communication)
+- TCP 4222 and 6222: NATS (inter-process communication)
 
 - TCP 9090: NATS Account Server
 
-- UDP **161**, 162, **362**: SNMP (disabled by default)
-
-- Allow **Remote Administration**
+- UDP 162: SNMP
 
 - Allow ICMP: Ping
 
-If you use the **DataMiner 10.1 installer or a more recent installer**, the ports that are displayed in bold above are no longer opened by default during DataMiner installation. However, to avoid breaking changes, these ports are **not closed when you upgrade an existing DataMiner System** that was installed with an installer prior to version 10.1. We therefore recommend that you verify if any of the following ports can be closed manually:
-
-- TCP port **23** can be closed if the DataMiner Telnet feature is disabled. For more information, see [DataMiner.Telnet](xref:DataMiner_xml#dataminertelnet).
+Some of the ports that are opened by default can potentially be closed depending on the configuration of your DataMiner System:
 
 - TCP port **80** can be closed if IIS is configured to require HTTPS connections and if IIS is not configured to redirect HTTP to HTTPS. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+
+- TCP port **8004** can be closed if the DMA is configured to use gRPC for both Cube-to-DMA and inter-DMA communication.
+
+- The ports for NATS communication, i.e. **4222, 6222, and 9090**, can be closed when the DMA is not part of a cluster.
+
+- If DataMiner is not installed on the same machine as Cassandra/Elasticsearch, the respective ports can be closed.
+
+> [!NOTE]
+> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication with dataminer.services via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
+
+#### [Installer v10.0 (or older)](#tab/tabid-3)
+
+On DataMiner versions installed using the **DataMiner Installer v10.0 (or older)**, the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
+
+- TCP 23: Telnet
+
+- TCP 80: HTTP
+
+- TCP 8004: Remoting (client-server & inter-DMS communication)
+
+- TCP 9004: Web Services (end of life)
+
+- TCP 7000: Cassandra (inter-node communication)
+
+- TCP 9042: Cassandra (client-server communication)
+
+  > [!NOTE]
+  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
+
+- TCP 9200: Elasticsearch (client-server communication)
+
+- TCP 9300: Elasticsearch (inter-node communication)
+
+  > [!NOTE]
+  > This rule and the one above for TCP 9200 only apply when the DataMiner System uses an Elasticsearch database that is installed on the same machine as DataMiner.
+
+- TCP 4222, 6222, 8222: NATS (inter-process communication)
+
+- TCP 9090: NATS Account Server
+
+- UDP 161, 162, 362: SNMP (disabled by default)
+
+- Allow Remote Administration
+
+- Allow ICMP: Ping
+
+Some of the ports that are opened by default can potentially be closed depending on the configuration of your DataMiner System:
+
+- TCP port **80** can be closed if IIS is configured to require HTTPS connections and if IIS is not configured to redirect HTTP to HTTPS. We highly recommended enabling HTTPS on your DataMiner System. Note that TCP port 443 needs to be open for HTTPS connections. For more information, see [Setting up https on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+
+- TCP port **8004** can be closed if the DMA is configured to use gRPC for both Cube-to-DMA and inter-DMA communication.
+
+- The ports for NATS communication, i.e. **4222, 6222, and 9090**, can be closed when the DMA is not part of a cluster.
+
+- If DataMiner is not installed on the same machine as Cassandra/Elasticsearch, the respective ports can be closed.
+
+Some ports that are displayed above are no longer opened by default during DataMiner installation with newer versions of the installer. However, to avoid breaking changes, these ports are **not closed when you upgrade an existing DataMiner System** that was installed with an installer prior to version 10.1. We therefore recommend that you verify if any of the following ports can be closed manually:
+
+- TCP port **23** can be closed if the DataMiner Telnet feature is disabled. For more information, see [DataMiner.Telnet](xref:DataMiner_xml#dataminertelnet).
 
 - TCP port **9004** can always be closed in the currently supported DataMiner versions.
 
 - TCP port **8222** can always be closed. The port is closed by default from 10.1.12 CU0 and 10.2.0 CU0 onwards.
 
-- The ports for NATS communication (**4222, 6222, and 9090**) can be closed when the DMA is not part of a cluster.
-
 - UDP ports **161 and 362** can be closed if the DataMiner SNMP Agent feature is disabled, which is by default the case in the currently supported DataMiner versions. For more information, see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality).
 
+- The **Remote Administration** is only required when the DataMiner server is monitored by a remote element using the Microsoft Platform protocol. This is for example the case when two DataMiner Agents are used in a Failover setup, and both servers are monitored through the Microsoft Platform protocol.
+
+- **ICMP** is only required when Failover heartbeats are active or the *pingCount* attribute in the *DMS* tag in *DMS.xml* is set to a value greater than 0. For more information, see [Attributes of the DMS tag](xref:DMS_xml#attributes-of-the-dms-tag). Allowing ICMP is also useful to debug connectivity issues.
+
 > [!NOTE]
-> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication to the cloud via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
+> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication with dataminer.services via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
 
-The **Remote Administration** rule must be enabled when the DataMiner server is monitored by a remote element using the Microsoft Platform protocol. This is for example the case when two DataMiner Agents are used in a Failover setup, and both servers are monitored through the Microsoft Platform protocol.
-
-**ICMP** is only required when Failover heartbeats are active or the *pingCount* attribute in the *DMS* tag in *DMS.xml* is set to a value greater than 0. For more information, see [Attributes of the DMS tag](xref:DMS_xml#attributes-of-the-dms-tag). Allowing ICMP is also useful to debug connectivity issues.
+***
 
 > [!TIP]
 > See also: [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)

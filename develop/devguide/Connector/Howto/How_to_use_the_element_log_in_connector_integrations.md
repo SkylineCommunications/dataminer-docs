@@ -89,7 +89,7 @@ In this line, "CRU|5|" indicates that LogType is defined as Always and LogLevel 
 
 ### Adding an error log entry
 
-Error logging should only be used for when something goes wrong. This could for example be logic that breaks for an unknown reason or data that no longer has the expected format. Whenever this occurs, it should be indicated as an error so that it will not only be displayed in the element log, but also in the protocol errors log file *Errors In Protocol*. This file shows all the error log lines from all the running elements on the DataMiner Agent. This includes native errors (written by DataMiner) and error log lines defined in the driver itself (written by QActions).
+Error logging should only be used for when something goes wrong. This could for example be logic that breaks for an unknown reason or data that no longer has the expected format. Whenever this occurs, it should be indicated as an error so that it will not only be displayed in the element log, but also in the protocol errors log file *Errors In Protocol*. This file shows all the error log lines from all the running elements on the DataMiner Agent. This includes native errors (written by DataMiner) and error log lines defined in the connector itself (written by QActions).
 
 You can find this log file in DataMiner Cube by going to *Apps > System Center > Logging > DataMiner > Errors In Protocol*.
 
@@ -118,7 +118,7 @@ public static void Run(SLProtocol protocol)
 
 As you should always reduce the amount of logging to a minimum to reduce the load and increase readability of the log file, it can become difficult to investigate a problem, especially in case the problem no longer occurs after an element restart.
 
-To help prepare for these kinds of situations, you can add extra logic in the driver that will start writing extra logging on request, e.g. the different steps of a complex flow. To do so:
+To help prepare for these kinds of situations, you can add extra logic in the connector that will start writing extra logging on request, e.g. the different steps of a complex flow. To do so:
 
 1. Create a configurable (read and write) parameter *Debug Mode* with the values Disabled (0) and Enabled (1).
 1. Make sure that the *Debug Mode* parameter is by default set to Disabled.

@@ -16,7 +16,7 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
 
 1. Look up the item in the Catalog. See [Looking up an item in the Catalog](xref:Looking_up_an_item_in_the_catalog).
 
-   ![Microsoft Platform](~/user-guide/images/Catalog_Microsoft.png)<br>*DataMiner Catalog in DataMiner 10.4.5*
+   ![Microsoft Platform](~/user-guide/images/Catalog_Microsoft.png)
 
 1. If you cannot see the *Deploy* button yet, go to the *Versions* tab and expand the version you want to deploy.
 
@@ -28,15 +28,17 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
    > - To be able to deploy an item to your DataMiner System, the DataMiner user profile linked to your dataminer.services user profile has to have the following permissions:
    >   - [Modules > System configuration > Agents > Install App packages](xref:DataMiner_user_permissions#modules--system-configuration--agents--install-app-packages).
    >   - [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute).
-   > - For Skyline employees only, a *Download* button can be available instead. To get access to this button as a Skyline employee, click the user icon and select *Toggle privileged options*.
 
 1. Click the *Deploy* button.
 
-   ![Deploy connector](~/user-guide/images/Deploy_Connector.png)<br>*DataMiner Catalog in DataMiner 10.4.5*
+   ![Deploy connector](~/user-guide/images/Catalog_Deploy_Account_Not_Linked.png)
 
-1. Select the target DataMiner System and click *Deploy*.
+    > [!NOTE]
+    > If your account is not linked to one of the selected DataMiner systems, a message will be displayed indicating which systems the account is not linked to yet. Clicking the name of the DataMiner System will open a new tab to link your account. After the account linking process is complete, navigating back to the original tab will revalidate the account linking.
+
+1. Select the target DataMiner System.
 
    The item will be pushed to the DataMiner System. In the Admin app, you can check the status of the deployment. See [Viewing information on deployments](xref:Viewing_info_on_deployments).
 
 > [!NOTE]
-> Deploying a connector from the Catalog will never change the production version for that connector in the DataMiner System.
+> From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you install a connector for the first time by deploying it from the DataMiner Catalog, it will automatically be promoted to the production version. However, when you later deploy a new version of the same connector and want it to be set as the production version, you will need to manually [promote this protocol version](xref:Promoting_a_protocol_version_to_production_version). Prior to DataMiner 10.4.10/10.5.0, deploying a connector from the Catalog will never change the production version for that connector in the DataMiner System.

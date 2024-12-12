@@ -30,7 +30,7 @@ If, for example, you select a [Trigger](xref:Protocol.Triggers.Trigger), then
 
 When working in the XML editor or the C# editor, you can do one of the following to move the cursor to the DIS Tree and select the DIS tree node representing the element you are editing:
 
-- Press a key combination (default: CTRL+1), or
+- Press a key combination (default: Ctrl+1), or
 
 - Click the following button, which is situated in the top-left corner of the DIS Tree window:
 

@@ -25,8 +25,7 @@ The first parameter defines the group box header.
 
 > [!NOTE]
 >
-> - To support the legacy System Display application, add the connect option. (`options="begin;connect"` and `options="end;connect"`).
-> - When a "begin" title parameter is read, it will be matched with the first "end" title parameter that is positioned below it (in the same column on the same page). In case other "begin" title parameters are mentioned in between these "begin" and "end" title parameters, these in-between "begin" parameters will be considered in-line titles. Nested group boxes are therefore not supported.
+> When a "begin" title parameter is read, it will be matched with the first "end" title parameter that is positioned below it (in the same column on the same page). In case other "begin" title parameters are mentioned in between these "begin" and "end" title parameters, these in-between "begin" parameters will be considered in-line titles. Nested group boxes are therefore not supported.
 
 ```xml
 <Param id="500">
@@ -52,7 +51,7 @@ The first parameter defines the group box header.
 </Param>
 ```
 
-![alt text](../../images/uigroupbox.png "DataMiner Cube group box")
+![DataMiner Cube group box](~/develop/images/uigroupbox.png)
 
 ## See also
 

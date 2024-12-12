@@ -8,7 +8,7 @@ uid: DIS_2.0.2
 
 ### IDE
 
-#### Protocol tag shortcut menus \[ID_12467\]
+#### Protocol tag shortcut menus \[ID 12467\]
 
 A number of features have been added to the shortcut menu menus that open when you click a small Down arrow in front of certain protocol tags in the protocol editor.
 
@@ -39,7 +39,7 @@ See the table below for an overview of those new features.
 
 ### Validator
 
-#### New test added: CheckTableColumnExports \[ID_12446\]
+#### New test added: CheckTableColumnExports \[ID 12446\]
 
 If you click *Validate* in the Protocol Editor, DIS now also checks the export settings of table columns.
 
@@ -56,38 +56,38 @@ Result codes:
 
 ### Enhancements
 
-#### IDE - Linked items listed in incorrect order \[ID_12694\]
+#### IDE - Linked items listed in incorrect order \[ID 12694\]
 
 Up to now, lists of items linked to items selected in the protocol editor (e.g. a list of actions in a trigger, a list of parameters in a command, a list of groups in a timer, etc.) were sorted by ID. Now, linked items will be listed in the order in which they appear in the protocol.xml file.
 
 ### Fixes
 
-#### Validator - Invalid timeout warnings \[ID_12449\]
+#### Validator - Invalid timeout warnings \[ID 12449\]
 
 In some cases, warnings were incorrectly generated for timeouts of serial responses if those responses contained a “next param” parameter and had a trailer followed by a CRC.
 
-#### Validator - Invalid warnings for exported parameters with 'RTDisplay=false' \[ID_12450\]
+#### Validator - Invalid warnings for exported parameters with 'RTDisplay=false' \[ID 12450\]
 
 Previously, warnings were generated for exported parameters with “RTDisplay=false”.
 
 As it is allowed to specify “RTDisplay=false” for exported parameters, such warnings will no longer be generated.
 
-#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID_12451\]
+#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID 12451\]
 
 Previously, “Unexpected RTDisplay=true” warnings were incorrectly generated for Write parameters associated with Read parameters used in dependency values. Now, an additional check will be performed to prevent such warnings from being generated.
 
-#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID_12457\]
+#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID 12457\]
 
 From now on, “Unexpected RTDisplay=true” warnings will no longer be generated for table parameters with a *duplicateAs* attribute.
 
-#### Validator - Incorrect element count \[ID_12460\]
+#### Validator - Incorrect element count \[ID 12460\]
 
 Up to now, when verifying group contents, comments were also evaluated. This could result in either a program error or an incorrect count of the items in the group.
 
-#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID_12464\]
+#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID 12464\]
 
 From now on, “Unexpected RTDisplay=true” warnings will no longer be generated for tables used in tree control “extratabs”.
 
-#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID_12466\]
+#### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID 12466\]
 
 From now on, “Unexpected RTDisplay=true” warnings will no longer be generated for parameters of which the *\<Type>* tag has a *virtual=”source”* attribute.

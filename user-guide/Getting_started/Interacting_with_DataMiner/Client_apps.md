@@ -14,7 +14,7 @@ Several client apps are available that allow you to interact with a DataMiner Sy
 
 ![dataminer.services home page](~/user-guide/images/Accessing_Client_Apps.png)<br>*[dataminer.services](https://dataminer.services/) home page*
 
-In addition to this, many [tools](xref:DataminerTools) are available, such as the [Alerter app](xref:Accessing_Alerter) to get alarm notifications on your desktop, or the [DataMiner&nbsp;Taskbar Utility](xref:Accessing_the_DataMiner_Taskbar_Utility) for DataMiner administrators, and it is also possible to interact with DataMiner via the [DataMiner Web APIs](xref:WS_v1).
+In addition to this, many [tools](xref:DataminerTools) are available, such as the [Alerter app](xref:Accessing_Alerter) to get alarm notifications on your desktop, or the [DataMiner&nbsp;Taskbar Utility](xref:Accessing_the_DataMiner_Taskbar_Utility) for DataMiner administrators, and it is also possible to interact with DataMiner via the [DataMiner Web APIs](xref:Using_the_Web_Services_v1).
 
 ## DataMiner Cube
 

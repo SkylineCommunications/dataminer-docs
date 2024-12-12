@@ -49,8 +49,6 @@ if (person?.LocationInfo?.Street?.StartsWith("Test") ?? false)
 
 If *person*, *LocationInfo* or *Street* is empty, null will be returned. With the `??` check, this will be translated to false, so that the content inside the if clause will not be executed. If none of the members are null, the normal result of the *StartsWith* method will be used.
 
-Note that this requires at least DataMiner feature release 9.6.11 or DataMiner main release 10.0. Drivers that need to be compatible with DataMiner versions prior to 9.6.11 will need to use solution 1.A.
-
 ## Example 2
 
 Converting to a string can give different results:

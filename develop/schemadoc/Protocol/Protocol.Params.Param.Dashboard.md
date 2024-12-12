@@ -4,6 +4,8 @@ uid: Protocol.Params.Param.Dashboard
 
 # Dashboard element
 
+<!-- RN 22855, RN 22874, RN 22875, RN 23080, RN 23084, RN 23097, RN 23103, RN 23173, RN 23176, RN 23245, RN 23249, RN 23281, RN 23293 -->
+
 Specifies the configuration for use in dashboards.
 
 ## Parent
@@ -20,10 +22,7 @@ Specifies the configuration for use in dashboards.
 
 ## Remarks
 
-*Feature introduced in DataMiner 9.6.11 (RN 22855, RN 22874, RN 22875, RN 23080, RN 23084, RN 23097, RN 23103, RN 23173, RN 23176, RN 23245, RN 23249, RN 23281, RN 23293).*
-
-> [!NOTE]
-> From DataMiner 10.0.3 to DataMiner 10.3.9/10.4.0, the button panel component is only available in soft launch. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+Prior to DataMiner 10.3.9/10.4.0, the button panel component is only available in soft launch. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 ## Examples
 

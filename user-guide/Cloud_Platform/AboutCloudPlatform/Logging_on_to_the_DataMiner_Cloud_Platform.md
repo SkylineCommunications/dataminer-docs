@@ -1,5 +1,6 @@
 ---
 uid: Logging_on_to_the_DataMiner_Cloud_Platform
+description: Authenticate using a corporate email address linked to a Microsoft, Google, Amazon, or LinkedIn account, or create a dedicated account.
 ---
 
 # Logging on to dataminer.services

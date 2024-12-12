@@ -28,6 +28,7 @@ The following sections provide more information on the DIS menu:
 - [Tool Windows \> DIS Validator](xref:DisValidatorToolWindow)
 - [Tool Windows \> DIS Comparer](xref:DisComparerToolWindow)
 - [Settings](xref:DIS_settings)
+- [Send feedback](#send-feedback)
 - [Check for updates...](#check-for-updates) (removed from DIS v3.0 onwards)
 - [Help](#help)
 
@@ -91,6 +92,10 @@ C# helper classes are automatically added or updated each time you switch from a
 ## Protocol \> Convert to Solution
 
 If you want to convert the standalone protocol XML file you opened in the XML editor to a protocol solution, select *Protocol \> Convert to Solution...*
+
+## Send feedback
+
+If you want to send feedback to Skyline Communications, for example because you have encountered an issue in DIS, select *Send Feedback*.
 
 ## Check for updates
 

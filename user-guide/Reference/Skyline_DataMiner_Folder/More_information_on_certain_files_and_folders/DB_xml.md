@@ -15,7 +15,7 @@ In the file *DB.xml*, you can specify the configuration data for several databas
 - [CMDB settings](#cmdb-settings)
 
   > [!TIP]
-  > See also: [Inventory & Asset Management](xref:AssetManagement)
+  > See also: [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management)
 
 This file is located in the folder *C:\\Skyline DataMiner\\*.
 
@@ -332,7 +332,7 @@ In the following example, “1;TRUE” means that the real-time trend data recor
   <DataBase>
     <Offloads>
       ...
-      <Offload state="active" local="data" rate="5;FALSE" />
+      <Offload state="active" local="data" rate="1;TRUE" />
       ...
     </Offloads>
   </DataBase>

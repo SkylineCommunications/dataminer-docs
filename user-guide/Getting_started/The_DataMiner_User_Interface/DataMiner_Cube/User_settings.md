@@ -178,6 +178,8 @@ On the *Card* page, the settings are divided into four sections, i.e. a section 
 
   By default, this is the Visual Overview page. It is also possible to set cards to show a Data Display page or one of the default pages, to show the page that was last visible when the card was closed, or to show the Visual Overview page only if a Visio file has been assigned to it.
 
+- **Open EPM cards undocked**: Select this setting to open EPM cards in a new, undocked window. Available from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards.<!-- RN 40782 -->
+
 - **Open element cards undocked**: Select this setting to open element cards in a new, undocked window. The setting also applies to parameter cards.
 
   > [!NOTE]

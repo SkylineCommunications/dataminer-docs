@@ -10,9 +10,12 @@ In DataMiner Cube, it is also possible to add these dialog boxes using the scrip
 
 > [!NOTE]
 >
-> - For detailed information on the classes, methods and properties that can be used in C# code blocks of Automation scripts, see [Skyline.DataMiner.Automation](xref:Skyline.DataMiner.Automation).
+> - For detailed information on the classes, methods, and properties that can be used in C# code blocks of Automation scripts, see [Skyline.DataMiner.Automation](xref:Skyline.DataMiner.Automation).
 > - For more information on how to abort an interactive Automation script, see [How do I abort a running Automation script?](xref:How_do_I_abort_a_running_Automation_script)
 > - For a high-level API to build interactive Automation scripts, see [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
+
+> [!IMPORTANT]
+> Avoid assigning multiple blocks to the same row and column. This could lead to unexpected results in the UI.
 
 ## Example of a dialog box displaying information
 

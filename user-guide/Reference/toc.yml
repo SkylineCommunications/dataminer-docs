@@ -114,6 +114,17 @@ items:
         topicUid: Data_Aggregator_Migrator
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
+      - name: DataMiner Health Check Tool
+        topicUid: DataMiner_Health_Check_Tool
+        items:
+          - name: Installing the Health Check Tool
+            topicUid: DataMiner_Health_Check_Tool_Installation
+          - name: Configuring the Health Check Tool
+            topicUid: DataMiner_Health_Check_Tool_Configuration
+          - name: Using the Health Check Tool
+            topicUid: DataMiner_Health_Check_Usage
+          - name: Health Check Tool Dashboards
+            topicUid: DataMiner_Health_Dashboards
       - name: DataMiner Size tool
         topicUid: DataMinerSizeTool
       - name: DataMiner Taskbar Utility
@@ -251,6 +262,8 @@ items:
                 topicUid: SLNetClientTest_viewing_connection_details
               - name: Inspecting the stack sizes in SLNet
                 topicUid: SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet
+              - name: Querying the assembly resolution hint paths
+                topicUid: SLNetClientTest_query_hint_paths
               - name: Requesting a list of active merge actions for a protocol
                 topicUid: SLNetClientTest_active_merge_actions_protocols
               - name: Requesting an estimate of the number of rows for a storage type in the database
@@ -263,6 +276,8 @@ items:
                 topicUid: SLNetClientTest_retrieving_connection_info
               - name: Retrieving DCF debug information
                 topicUid: SLNetClientTest_retrieving_dcf_debug_info
+              - name: Retrieving general information about elements
+                topicUid: SLNetClientTest_retrieving_element_info
               - name: Retrieving information on open GQI sessions
                 topicUid: SLNetClientTest_info_on_open_gqi_sessions
               - name: Tracking DMA communication
@@ -280,6 +295,8 @@ items:
             items:
               - name: Aborting a running Automation script
                 topicUid: SLNetClientTest_aborting_running_script
+              - name: Accessing script execution metrics
+                topicUid: SLNetClientTest_accessing_script_execution_metrics
               - name: Changing the grace period for the SLNetCom Notification thread
                 topicUid: SLNetClientTest_grace_period_SLNetCom_notification
               - name: Changing the number of records in the protocol cache
@@ -378,6 +395,8 @@ items:
         topicUid: Verify_Elastic_Storage_Type
       - name: Verify NATS is Running
         topicUid: VerifyNatsIsRunning
+      - name: Verify No Legacy Correlation
+        topicUid: VerifyNoLegacyCorrelation
       - name: Verify No Legacy Reports Dashboards
         topicUid: Verify_No_Legacy_Reports_Dashboards
       - name: Verify No Obsolete API Deployed
@@ -443,7 +462,7 @@ items:
         topicUid: Activating_SLProtocol_as_a_64_Bit_Process
       - name: Activating SLProtocol as a 32-bit process
         topicUid: Activating_SLProtocol_as_a_32_Bit_Process
-  - name: DataMiner Extension Modules
+  - name: DataMiner Extension Modules (DxMs)
     topicUid: DataMinerExtensionModules
   - name: Custom branding
     topicUid: Custom_branding
@@ -500,6 +519,8 @@ items:
         topicUid: service_profile_benchmarks
       - name: Service & Resource Management benchmarks
         topicUid: service_resource_management_benchmarks
+      - name: Swarming bookings benchmarks
+        topicUid: swarming_bookings_benchmarks
       - name: Trending benchmarks
         topicUid: trend_benchmarks
       - name: User-Defined APIs benchmarks

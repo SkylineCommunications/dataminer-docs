@@ -17,6 +17,7 @@ We use a combination of:
 
 For more information, refer to:
 
+- [Getting started with CI/CD using GitHub](xref:CICD_on_GitHub_getting_started)
 - [CI/CD starter workflows](xref:github_starter_workflows)
 - [CI/CD reusable workflows](xref:github_reusable_workflows)
 - [CI/CD GitHub Examples](xref:CICD_GitHub_Examples)

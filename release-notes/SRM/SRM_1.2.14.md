@@ -6,11 +6,11 @@ uid: SRM_1.2.14
 
 ## New features
 
-#### Service profile booking creation with persistent service \[ID_29864\]
+#### Service profile booking creation with persistent service \[ID 29864\]
 
 It is now possible to create bookings based on service profiles using the persistent service feature. When the persistent service is selected during booking creation, the service definition selection will be fixed, so that it can no longer be modified.
 
-#### Support for automatically assigned alarm and trend template for generated service \[ID_29890\]
+#### Support for automatically assigned alarm and trend template for generated service \[ID 29890\]
 
 In addition to an enhanced service protocol, you can now assign an alarm and/or trend template to a newly generated booking service, using the service definition property *Enhanced Protocol*.
 
@@ -25,7 +25,7 @@ JSON example of the property value:
 }
 ```
 
-#### Extra isSilent parameter for Booking Manager methods \[ID_29937\]
+#### Extra isSilent parameter for Booking Manager methods \[ID 29937\]
 
 To make it possible to hide specific steps in the wizard to create a new booking, a number of methods in the Booking Manager class now have an extra *isSilent* parameter.
 
@@ -43,7 +43,7 @@ public bool TryCreateNewBooking(Engine engine, BookingManagerInfo bookingManager
 public bool TryCreateNewBooking(Engine engine, Booking bookingData, IEnumerable<Function> functions, IEnumerable<Event> events, IEnumerable<Property> properties, IEnumerable<Group> groups, out ReservationInstance reservationInstance, bool isSilent = true)
 ```
 
-#### Skyline Booking Monitoring protocol integration \[ID_29955\]
+#### Skyline Booking Monitoring protocol integration \[ID 29955\]
 
 The *Skyline Booking Monitoring* protocol, which allows additional monitoring of bookings, can now be integrated with the Booking Manager app. For this purpose, the following two parameters can be configured on the *Config* > *General* tab of the app:
 
@@ -54,7 +54,7 @@ The *Skyline Booking Monitoring* protocol, which allows additional monitoring of
   - *Non-Nominal*: The monitoring element only features failed, quarantined and interrupted bookings.
   - *Nominal*: The monitoring element features all bookings that have started.
 
-#### New network path configuration options \[ID_29963\]
+#### New network path configuration options \[ID 29963\]
 
 Two new configuration options have been added to the *TransportLink* field of a network path configuration.
 
@@ -87,7 +87,7 @@ In addition, it is now possible to apply a weighted order to the paths with the 
 }
 ```
 
-#### New TransportBuilder API \[ID_29984\]
+#### New TransportBuilder API \[ID 29984\]
 
 A new *TransportBuilder* API is available that allows you to select and assign a path to a contributing transport function. For an existing booking, it will select a transport function and get the paths available for the selection, so that a path can be assigned to the function.
 
@@ -123,31 +123,31 @@ if (path != null)
 
 ### Enhancements
 
-#### Support for pool inheritance on unconnected interfaces \[ID_29779\]
+#### Support for pool inheritance on unconnected interfaces \[ID 29779\]
 
 Previously, it was not possible to use the pool inheritance feature on unconnected interfaces if the selected pool item was not booked. Now this will be supported if the property *NoConnectivityCheck* of these interfaces is set to *True*.
 
-#### Possible to finish unlocked contributing booking that is in use \[ID_29809\]
+#### Possible to finish unlocked contributing booking that is in use \[ID 29809\]
 
 Previously, it was never possible to finish an unlocked contributing booking that was in use in a main active booking. Now this will be possible as long as the timing of the bookings remains compatible.
 
-#### Additional validation when booking is confirmed \[ID_29810\]
+#### Additional validation when booking is confirmed \[ID 29810\]
 
 Additional validation has been added to ensure that all profiles and resources in a booking are in order when it is confirmed.
 
-#### Possible to skip assigning profile instance if node is marked as optional \[ID_29820\]
+#### Possible to skip assigning profile instance if node is marked as optional \[ID 29820\]
 
 When assigning profiles and resources to a custom service definition in the booking wizard, it is now possible to skip assigning a profile instance for a transport node that is marked as optional for this (with the *IsProfileInstanceOptional* property).
 
-#### Possible booking actions restricted in case user is not the booking owner \[ID_29825\]
+#### Possible booking actions restricted in case user is not the booking owner \[ID 29825\]
 
 The Booking Manager app will now no longer allow you to confirm a booking if it is owned by a different user. In case a booking is owned by a different user, the Confirm, Extend, Cancel, Finish, Change Time, On Hold, Delete, Delete Service, Start and Change Name actions will now also be hidden in the Booking Manager.
 
-#### Improved silent editing of bookings \[ID_29867\]
+#### Improved silent editing of bookings \[ID 29867\]
 
 Editing bookings without user interaction has been made more efficient, which will result in improved performance.
 
-#### Improvement to service definitions with custom Dijkstra contributing booking \[ID_30104\]
+#### Improvement to service definitions with custom Dijkstra contributing booking \[ID 30104\]
 
 The following improvements have been implemented to the way a service definition is built when a custom Dijkstra contributing booking is added:
 
@@ -158,31 +158,31 @@ In addition, a migration script *SRM_MigrateTransportServiceDefinitions* is now 
 
 ### Fixes
 
-#### Icon View Name for custom booking actions could not be set to root view \[ID_29749\]
+#### Icon View Name for custom booking actions could not be set to root view \[ID 29749\]
 
 When you set the *Icon View Name* in the custom booking action table to the root view of the DMS, this view was incorrectly considered invalid.
 
-#### Capacities not defined in profile instance included when retrieving available resources \[ID_29764\]
+#### Capacities not defined in profile instance included when retrieving available resources \[ID 29764\]
 
 When the list of available resources was requested, the SRM framework would include all capacities defined in the profile definition, even if they were in fact not defined in the selected profile instance.
 
-#### Problem loading profile definitions \[ID_29789\]
+#### Problem loading profile definitions \[ID 29789\]
 
 In some cases, it could occur that profile parameters were not displayed in the Booking Wizard step where resources and profiles are assigned. This depended on the description used for the profile definition.
 
-#### DST change not taken into account \[ID_29838\]
+#### DST change not taken into account \[ID 29838\]
 
 In the Booking Wizard and Service Profile Wizard, it could occur that the change to or from Daylight Saving Time was not taken into account.
 
-#### Transition to service state not possible for contributing booking with orchestration type "Main" \[ID_29909\]
+#### Transition to service state not possible for contributing booking with orchestration type "Main" \[ID 29909\]
 
 When a contributing booking was configured with "OrchestrationType" set to "Main", it could occur that it could not transition to a different service state.
 
-#### Custom booking block not updated with changed booking name \[ID_29923\]
+#### Custom booking block not updated with changed booking name \[ID 29923\]
 
 When a booking was renamed, it could occur that the information in the corresponding custom booking block on the Booking Manager timeline was not updated.
 
-#### Problem adding Visio file for enhanced protocol of contributing resource \[ID_29997\]
+#### Problem adding Visio file for enhanced protocol of contributing resource \[ID 29997\]
 
 It could occur that the following exception was displayed in the logging for a contributing resource booking, even though the Visio file specified in the contributing configuration of the service definition was correct:
 

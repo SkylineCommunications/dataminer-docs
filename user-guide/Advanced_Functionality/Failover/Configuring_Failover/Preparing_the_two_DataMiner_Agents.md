@@ -15,10 +15,13 @@ Before you start the actual configuration, make sure you have the following:
   > [!NOTE]
   > If you use IP addresses instead of a hostname:
   >
-  > - Make sure [NPCap](https://nmap.org/npcap/) or WinPCap (deprecated) is installed on both DMAs (see [Before you run the installer](xref:Installing_DM_using_the_DM_installer#before-you-run-the-installer)).
+  > - Make sure [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) is installed on both DMAs. From DataMiner 10.4.10/10.5.0 onwards<!--RN 40257 + RN 40267-->, you can check whether this is installed via *System Center* > *Agents* > *Failover*. This will open the *Failover Config* window, where an information icon will be displayed next to *Failover (Virtual IP)* in case neither of these is installed or no valid installation could be detected on the DMA you are currently connected to. Hover the mouse pointer over this icon for more detailed information.
   > - To avoid possible conflicts, make sure the IP addresses are not used anywhere else and that these are reserved for the Failover pair.
 
 In addition, make sure the [required ports are opened](#opening-the-required-ports), and the [database is prepared](#preparing-the-database).
+
+> [!IMPORTANT]
+> The [Swarming](xref:Swarming) feature must not be enabled on either of the DMAs, as Failover is not supported in combination with Swarming.
 
 ## Primary DataMiner Agent
 
@@ -66,6 +69,10 @@ Make sure that packets to and from these ports coming from the virtual IP addres
 
 Each [supported system data storage architecture](xref:Supported_system_data_storage_architectures) has a different way of handling the setup of a Failover system. Below you can find the measures that need to be taken for each of the supported architectures.
 
+### Storage as a Service
+
+If you want to add the Failover pair to a DataMiner System that uses STaaS, first make sure the primary DMA has been added as detailed under [Adding a DMA to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS). Then follow the same steps for the backup DMA, but skip the step where you actually join the DMA to the cluster.
+
 ### Dedicated clustered storage
 
 1. Make sure that the Agents to be added can reach the Cassandra cluster through ports 9042 or 9142 when using TLS.
@@ -87,6 +94,10 @@ Each [supported system data storage architecture](xref:Supported_system_data_sto
 
       > [!NOTE]
       > If multiple [OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) are used, you may wish to configure the *priorityOrder* attribute differently on the main or backup DMA. You can do this if you want to change which indexing cluster is read from when there is a Failover switch. For more info on the *priorityOrder* attribute, see [OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
+
+   1. In the `PWD` tags, replace the GUID reference with the password in plain text.
+
+      During the next startup, DataMiner will encrypt this password again and replace it with a placeholder GUID.
 
    1. Restart the backup DMA.
 

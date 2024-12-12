@@ -8,7 +8,7 @@ uid: DIS_2.40
 
 ### IDE
 
-#### Plugins [ID_34190] [ID_34381] [ID_34391] [ID_34428] [ID_34459]
+#### Plugins [ID 34190] [ID 34381] [ID 34391] [ID 34428] [ID 34459]
 
 In the *DIS menu*, you can now find the following plugins. These will allow you to easily add functionality to the *protocol.xml* file you are editing.
 
@@ -20,7 +20,7 @@ In the *DIS menu*, you can now find the following plugins. These will allow you 
 | Plugins \> Add SNMP Trap Receiver... | Adds an SNMP trap receiver and a QAction with boilerplate code to process received traps. |
 | Plugins \> Add Table Context Menu... | Adds a custom context menu to a table in the protocol. You can choose between the following:<br>- Rows Manager (User-definable Keys): A default context menu that provides add, duplicate, edit and delete functionality.<br>- Rows Manager (Auto-incremented Keys): An extension of the previous type that allows developers to work with an auto-increment key parameter.<br>- Custom: Opens a wizard that allows you to specify the options. |
 
-#### XML editor: Specifying a project reference as DLL import [ID_34565]
+#### XML editor: Specifying a project reference as DLL import [ID 34565]
 
 When, in the XML editor, you clicked the small *Down* arrow in front of a `<QAction>` tag and select *DLL Imports*, up to now, the submenu would list all QActions of which the `options` attribute contained the "precompile" option, as well as all commonly used system DLL files. From now on, it will also list QActions of which the C# project has a reference to another C# project in the solution that is not QAction_Helper, QAction_ClassLibrary or another QAction.
 
@@ -30,7 +30,7 @@ Also, it is now possible to override the path associated with a DLL import. To d
 1. Open its properties.
 1. Locate the *DLL Path* property, and enter in the value that should override the default path.
 
-#### DIS diagram: Third direction option "Both" [ID_34584]
+#### DIS diagram: Third direction option "Both" [ID 34584]
 
 In the *DIS diagram* window, up to now, after selecting the required depth (i.e. the number of items you want to have displayed starting from or ending with the item you selected), you could select *Forward* or *Reverse* as direction. From now on, you can also select a third option: *Both*.
 
@@ -42,7 +42,7 @@ In the *DIS diagram* window, up to now, after selecting the required depth (i.e.
 
 *\* The value entered in the Depth box.*
 
-#### XML editor: QAction\@dllImport attribute will now include subfolder [ID_34598]
+#### XML editor: QAction\@dllImport attribute will now include subfolder [ID 34598]
 
 In the *QAction\@dllImport* attribute, you can now reference a DLL file that is stored in
 
@@ -51,23 +51,23 @@ In the *QAction\@dllImport* attribute, you can now reference a DLL file that is 
 
 Up to now, the *QAction\@dllImport* attribute would only contain the name of the DLL file. From now on, it will include the subfolders as well.
 
-#### Snippets, plugins and macros: References to former Class Library updated [ID_35769]
+#### Snippets, plugins and macros: References to former Class Library updated [ID 35769]
 
 The Class Library has been split up in smaller NuGet packages. For more information, see [Unlimited DevOps power at your fingertips – Code Library NuGet packages are living on the cloud!](https://community.dataminer.services/unlimited-devops-power-at-your-fingertips-code-library-nuget-packages-are-living-on-the-cloud).
 
 Every snippet, plugin and macro has been updated with the new namespaces and the correct references.
 
-#### Support for connecting to DataMiner Agents via gRPC [ID_36035]
+#### Support for connecting to DataMiner Agents via gRPC [ID 36035]
 
 Before connecting to a DataMiner Agent, DIS will now first check the connection settings of that Agent and connect to it via either .NET Remoting or gRPC. This will enable DIS to also connect to cloud-connected Agents.
 
-#### Minimum supported DataMiner version is now 10.1.0 [ID_36036]
+#### Minimum supported DataMiner version is now 10.1.0 [ID 36036]
 
 The minimum supported DataMiner version has now been incremented to version 10.1.0.
 
 ### Validator
 
-#### New feature check: Usage of NuGet packages [ID_34527]
+#### New feature check: Usage of NuGet packages [ID 34527]
 
 A new feature check now verifies whether the QAction projects in the protocol are using NuGet packages.
 
@@ -83,19 +83,19 @@ This check can return the following error messages:
 
 ### Enhancements
 
-#### DIS diagram: Enhancements with regard to re-arranging items and zooming in and out [ID_34586]
+#### DIS diagram: Enhancements with regard to re-arranging items and zooming in and out [ID 34586]
 
 A number of enhancements have been made to the DIS diagram, especially with regard to re-arranging items and zooming in and out.
 
-#### Remove regions from QAction_1 in template [ID_35007]
+#### Remove regions from QAction_1 in template [ID 35007]
 
 In the DataMiner protocol template, the region preprocessor directives have been removed from QAction_1.
 
-#### Executables in VSIX extension package are now signed [ID_35879]
+#### Executables in VSIX extension package are now signed [ID 35879]
 
 The executables included in the DIS VSIX extension package are now signed.
 
-#### Automation script template: Namespace added and input argument updated [ID_36033]
+#### Automation script template: Namespace added and input argument updated [ID 36033]
 
 The Automation script template will now put a namespace around the `Script` class.
 
@@ -103,10 +103,10 @@ Also, the `Engine` argument in the *Run* methods has been changed to `IEngine`.
 
 ### Fixes
 
-#### Protocol Schema: Casing of calculateAlarmState attribute was incorrect [ID_34430]
+#### Protocol Schema: Casing of calculateAlarmState attribute was incorrect [ID 34430]
 
 In the `Protocol.xsd` file, the casing of the `calculateAlarmState` attribute has been changed from "calculateALarmState" to "calculateAlarmState".
 
-#### Package manifest Schema: Files and Folders elements removed from packageManifest.xsd file [ID_35006]
+#### Package manifest Schema: Files and Folders elements removed from packageManifest.xsd file [ID 35006]
 
 The `<Files>` and `<Folders>` elements have been removed from the `packageManifest.xsd` file.

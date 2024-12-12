@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_modules
+description: A DataMiner System can have several additional modules or apps, e.g. Automation, Dashboards, etc. Some require a specific type of DataMiner license.
 ---
 
 # DataMiner modules

@@ -10,6 +10,9 @@ By default, behavioral anomaly detection is active on trended parameters. It wil
 
 Estimated duration: 45 minutes.
 
+> [!NOTE]
+> The content and screenshots for this tutorial were created in **DataMiner 10.3.12**.
+
 > [!TIP]
 >
 > - For more information, such as technical limitations of anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
@@ -29,7 +32,7 @@ Estimated duration: 45 minutes.
 
 The tutorial consists of the following steps:
 
-- [Step 1: Install the example package from the catalog](#step-1-install-the-example-package-from-the-catalog)
+- [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
 - [Step 2: Discover anomaly detection in trend graphs](#step-2-discover-anomaly-detection-in-trend-graphs)
 - [Step 3: Discover anomaly detection in the Alarm Console](#step-3-discover-anomaly-detection-in-the-alarm-console)
 - [Step 4: Make DataMiner generate alarms for anomalies](#step-4-make-dataminer-generate-alarms-for-anomalies)
@@ -37,11 +40,11 @@ The tutorial consists of the following steps:
 - [Step 6: Set custom alarm thresholds](#step-6-set-custom-alarm-thresholds)
 - [Step 7: Final exercise](#step-7-final-exercise)
 
-## Step 1: Install the example package from the catalog
+## Step 1: Install the example package from the Catalog
 
 1. Go to <https://catalog.dataminer.services/details/package/5467>.
 
-1. Deploy the catalog item to your DataMiner Agent by clicking the *Deploy* button.
+1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
    This will create several DataMiner elements in your system that will be used throughout the rest of the tutorial. The elements will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Anomaly Detection Tutorial*.
 
@@ -209,7 +212,7 @@ In some cases, it can be useful to only generate alarms for certain types of ano
    ![Trend graph of the "Audio Bit Rate Channel 1" parameter](~/user-guide/images/Audio_Bit_Rate_CBR_Trending_Variance_Increase.png)
 
 > [!TIP]
-> It would be very difficult to configure similar alarm monitoring behavior using static alarm thresholds. This shows the power of anomaly alarm monitoring for detecting sudden unexpected behavior. For a complete list of all options related to alarm monitoring of anomalies, see [Configuring anomaly detection alarms for specific parameters](xref:Configuring_anomaly_detection_alarms).
+> It would be very difficult to configure similar alarm monitoring behavior using static alarm thresholds. This shows the power of anomaly alarm monitoring for detecting sudden unexpected behavior. For a complete list of all options related to alarm monitoring of anomalies, see [Configuring Augmented Operations alarm settings](xref:Configuring_anomaly_detection_alarms).
 
 ## Step 6: Set custom alarm thresholds
 
@@ -313,7 +316,7 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
       ![Trend graph of 'Cable Modems Out of Service' with relative thresholds configured for level shifts](~/user-guide/images/CMOOS_Trend_Graph_With_Relative_Alarming.png)
 
 > [!TIP]
-> In exactly the same way, you can configure alarm monitoring of *outlier* anomalies. See [Configuring anomaly detection alarms](xref:Configuring_anomaly_detection_alarms).
+> In exactly the same way, you can configure alarm monitoring of *outlier* anomalies. See [Configuring Augmented Operations alarm settings](xref:Configuring_anomaly_detection_alarms).
 
 ## Step 7: Final exercise
 

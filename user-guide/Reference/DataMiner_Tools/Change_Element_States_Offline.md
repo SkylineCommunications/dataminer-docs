@@ -20,7 +20,7 @@ To change element states using this tool:
 
 1. Indicate for which elements the state should change:
 
-   - In the *Elements by Name* tab, move the elements for which you want to change the state from the column on the left to the column on the right using the arrow buttons in between the columns. To quickly select all elements in a column, press CTRL + A. To filter the displayed elements, add a filter value in the box on the right.
+   - In the *Elements by Name* tab, move the elements for which you want to change the state from the column on the left to the column on the right using the arrow buttons in between the columns. To quickly select all elements in a column, press Ctrl + A. To filter the displayed elements, add a filter value in the box on the right.
 
    - In the *Elements by Protocol* tab, select the checkboxes in front of the elements for which you want to change the state. If you select the checkbox in front of a protocol or protocol version, the state of all elements using that protocol or protocol version will be changed. To search for specific items in the tree view, add a search term in the box on the right.
 

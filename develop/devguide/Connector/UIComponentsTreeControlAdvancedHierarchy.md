@@ -6,7 +6,7 @@ uid: UIComponentsTreeControlAdvancedHierarchy
 
 It is possible to choose a different hierarchy path based on the cell value of the parent row. In order to use the advanced structure, the path attribute must be omitted or empty.
 
-![alt text](../../images/uiX_-_advanced_hierarchy.png "DataMiner Cube tree control advanced hierarchy example")
+![alt text](~/develop/images/uiX_-_advanced_hierarchy.png "DataMiner Cube tree control advanced hierarchy example")
 
 ```xml
 <TreeControl parameterId="10" readOnly="false">

@@ -57,6 +57,9 @@ Because, in a connector solution, the QActions in the protocol XML file do not c
 
 A connector will automatically be assembled when you click the *Publish* button at the top of the file tab, or when you right-click and select *Copy Protocol to Clipboard*.
 
+> [!NOTE]
+> From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you install a protocol for the first time by publishing it from within DataMiner Integration Studio, it will automatically be promoted to the production version. This action adds the following entry to the *SLNet.txt* log file: `Initial upload of protocol '{protocolName}'. Version '{protocolVersion}' will be automatically set as production.` However, when you later deploy a new version of the same protocol and want it to be set as the production version, you will need to manually [promote this protocol version](xref:Promoting_a_protocol_version_to_production_version).
+
 ## Saving an assembled connector to a file
 
 A compiled connector can be saved either as an XML file or as a *.dmprotocol* package.

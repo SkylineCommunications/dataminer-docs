@@ -4,6 +4,8 @@ uid: Protocol.Params.Param.Mediation.LinkTo.ValueMapping
 
 # ValueMapping element
 
+<!-- RN 24127 -->
+
 Specifies a conversion of a value on the device protocol to a different value on the base protocol. This functionality can, for instance, be used to map a discrete value on the device protocol (remoteValue) to an equivalent discrete represented by a different value on the base protocol.
 
 ## Parent
@@ -19,12 +21,8 @@ Specifies a conversion of a value on the device protocol to a different value on
 
 ## Remarks
 
-> [!NOTE]
->
-> - Value mappings can be defined for both single-value and column parameters of type string or double. If you define them for parameters with Interprete type "high nibble", they will be ignored.
-> - In case of read/write parameters, value mappings have to be defined on both. Note, however, that they should not be identical. If a value mapping match is found when reading or writing a parameter, then the ops attribute of the LinkTo tag will be ignored. However, if no relevant mappings could be found for the value in question, the ops attribute will be taken into account. This can prove useful in case of exception values.
-
-*Feature introduced in DataMiner 10.0.2 (RN 24127).*
+- Value mappings can be defined for both single-value and column parameters of type string or double. If you define them for parameters with Interprete type "high nibble", they will be ignored.
+- In case of read/write parameters, value mappings have to be defined on both. Note, however, that they should not be identical. If a value mapping match is found when reading or writing a parameter, then the ops attribute of the LinkTo tag will be ignored. However, if no relevant mappings could be found for the value in question, the ops attribute will be taken into account. This can prove useful in case of exception values.
 
 ## Examples
 

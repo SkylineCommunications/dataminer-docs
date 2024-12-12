@@ -4,7 +4,7 @@ uid: Uninstalling_the_DataMiner_Cube_desktop_application
 
 # Uninstalling the DataMiner Cube desktop application
 
-If you have installed the DataMiner Cube desktop application using the installer available from DataMiner 10.0.9 onwards, you can uninstall the application as follows:
+You can uninstall DataMiner Cube like any other program in Windows:
 
 1. Open the *Programs and Features* control panel.
 

@@ -55,7 +55,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    - *UnRegister DataMiner.bat*
 
-   - *UnRegister DLLs of DataMiner.bat*
+   - *UnRegister dll's of DataMiner.bat*
 
    - *RemoveEventLog.exe*
 

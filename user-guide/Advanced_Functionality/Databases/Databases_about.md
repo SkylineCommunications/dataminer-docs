@@ -14,8 +14,7 @@ Each DataMiner System requires its own system data storage. This data storage se
 |--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | **Storage as a Service (STaaS)** | | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | **Dedicated clustered storage** | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | | |
-| **Storage per DMA without indexing** | :heavy_check_mark: | | | | | | |
-| **Storage per DMA with indexing** | :heavy_check_mark: | | :heavy_check_mark: | | | |  |
+| **Storage per DMA** | :heavy_check_mark: | | | | | | |
 
 <br/>
 
@@ -23,7 +22,7 @@ Each DataMiner System requires its own system data storage. This data storage se
 
 - If you prefer to host and manage the DataMiner storage yourself, you can configure a **dedicated clustered storage setup**, using a [Cassandra-compatible database service](xref:Cassandra_database) and an [indexing database](xref:Indexing_Database) (i.e. a Search Cluster).
 
-- Instead of a dedicated clustered storage setup, it is also possible to use **storage per DMA** (with [Cassandra](xref:Migrating_the_general_database_to_Cassandra) or [MySQL](xref:MySQL_database)), though this is not recommended. If you are still using a legacy setup with MySQL, we highly recommend migrating to Cassandra, as MySQL is no longer supported as of DataMiner 10.3. If you are using a setup with Cassandra, we also highly recommend adding an [indexing database](xref:Indexing_Database) to make sure you have access to features such as DOM and SRM.
+- Instead of a dedicated clustered storage setup, older systems often use **storage per DMA** (with [Cassandra](xref:Migrating_the_general_database_to_Cassandra) or [MySQL](xref:MySQL_database)), though this is not recommended (and MySQL is no longer supported as of DataMiner 10.3). Not all DataMiner features are available in such a setup. We highly recommend [migrating to a STaaS setup](xref:STaaS#migrating-existing-data-to-staas) or [to a dedicated clustered storage setup](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) instead. To migrate a MySQL setup to STaaS, you will first need to [migrate to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
 
 If you host the DataMiner storage yourself, you can also configure an additional [offload database](xref:Offload_database), for example to produce reports without interfering with the live DataMiner System. [Additional databases](xref:Configuring_an_additional_database) can also be configured, for example for DataMiner Inventory & Asset Management.
 

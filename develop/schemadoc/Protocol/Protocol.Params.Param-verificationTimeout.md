@@ -4,6 +4,8 @@ uid: Protocol.Params.Param-verificationTimeout
 
 # verificationTimeout attribute
 
+<!-- RN 3925 -->
+
 Overrides the default verification timeout (or the verification timeout value set in MaintenanceSettings.xml) for this parameter with the specified value (in ms).
 
 ## Content Type
@@ -40,19 +42,17 @@ With the hex attribute, it is possible to display a number in HEX format:
 
 In this case, the WRITE is of type STRING (write in HEX format)
 
-When using the verification, the number value on the read can be compared with the string value of the write. This is done internally by converting the string to the correct decimal value. When the convert fails, for example in case of invalid HEX characters, a “-1 unable to verify” information event will be generated.
+When using the verification, the number value on the read can be compared with the string value of the write. This is done internally by converting the string to the correct decimal value. When the convert fails, for example in case of invalid HEX characters, a "-1 unable to verify" information event will be generated.
 
 Example of information events:
 
-- Succeeded to Set “parameter name” “optional displaykey” to “displayvalue”
-- Failed to Set “parameter name” “optional displaykey” to “displayvalue”
-- Succeeded to Set “parameter name” “optional displaykey” to “displayvalue” +- “your deviation”
-- Failed to Set “parameter name” “optional displaykey” to “displayvalue” +- “your deviation”
-- Failed to verify “parameter name” “optional displaykey”
+- Succeeded to Set "parameter name" "optional displaykey" to "displayvalue"
+- Failed to Set "parameter name" "optional displaykey" to "displayvalue"
+- Succeeded to Set "parameter name" "optional displaykey" to "displayvalue" +- "your deviation"
+- Failed to Set "parameter name" "optional displaykey" to "displayvalue" +- "your deviation"
+- Failed to verify "parameter name" "optional displaykey"
 
 The parameter ID for these information events is 65046, and is called Execution Verification.
-
-*Feature introduced in DataMiner 7.0.3 (RN 3925).*
 
 ## Examples
 

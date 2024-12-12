@@ -1,5 +1,6 @@
 ---
 uid: Overview_of_page_and_shape_options
+description: When you configure shape data in Visio to enrich a drawing with DataMiner functionality, you can add many different options to pages or shapes.
 ---
 
 # Overview of page and shape options
@@ -86,7 +87,7 @@ By default, child shapes of an *Element* or *View* shape automatically inherit t
 > [!NOTE]
 >
 > - This renders the option *NoCopyElementProperty* obsolete, since this option does the same thing for *Element* shapes only.
-> - From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, this option can also be used for element shapes that are a child of another element shape, to ensure that these do not inherit the service context of the parent if they have no service context of their own. This inheritance does not occur in earlier DataMiner versions.
+> - This option can also be used for element shapes that are a child of another element shape, to ensure that these do not inherit the service context of the parent if they have no service context of their own. This inheritance does not occur in earlier DataMiner versions.
 
 ## ArrangeMode
 
@@ -335,7 +336,7 @@ FixedWidth=<px>|MinWidth=<px>|MaxWidth=<px>|FixedHeight=<px>|MinHeight=<px>|MaxH
 >
 > - When the maximum size is reached, the content is centered on the card.
 > - When the minimum size is reached, the content is shown in a scroll viewer.
-> - When page scrollbars are visible, you can use the mouse wheel to scroll the page. Use CTRL+Scroll to zoom.
+> - When page scrollbars are visible, you can use the mouse wheel to scroll the page. Use Ctrl+Scroll to zoom.
 
 ## FollowInput
 

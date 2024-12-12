@@ -8,18 +8,18 @@ uid: DIS_2.41
 
 ### IDE
 
-#### XML editor: Clicking 'Validate' will now also validate exported DVE protocols [ID_33618]
+#### XML editor: Clicking 'Validate' will now also validate exported DVE protocols [ID 33618]
 
 When, in the XML editor, you open a main DVE protocol and click *Validate*, from now on, DIS will not only validate the main protocol but also all its exported child DVE protocols.
 
-#### Support for Microsoft Visual Studio 2017 has been dropped [ID_35770]
+#### Support for Microsoft Visual Studio 2017 has been dropped [ID 35770]
 
 Support for Microsoft Visual Studio 2017 has been dropped. The last DIS version supporting Visual Studio 2017 is DIS v2.40.
 
 > [!NOTE]
 > The minimum supported DataMiner version is now DataMiner v10.1.0.
 
-#### Class Library generation feature has been removed in favor of NuGet packages [ID_35819] [ID_35827]
+#### Class Library generation feature has been removed in favor of NuGet packages [ID 35819] [ID 35827]
 
 The Class Library generation feature has been removed in favor of NuGet packages.
 
@@ -31,17 +31,17 @@ Also, an information bar will allow you to convert existing solutions that make 
 
 This information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (which, by default, will have ID 63000).
 
-#### C# editor: New snippet [ID_35991]
+#### C# editor: New snippet [ID 35991]
 
 In the C# editor, the following snippet now allows you to generate an `OnApiTrigger` entrypoint method in an Automation script. This entrypoint method will be used to create an API from an Automation script.
 
 - DIS \> Automation Script \> CreateUserDefinedApi (Automation)
 
-#### XML editor: Protocols will now be allowed to use SLManagedAutomation DLL files [ID_36099]
+#### XML editor: Protocols will now be allowed to use SLManagedAutomation DLL files [ID 36099]
 
 Up to now, DIS would filter out any development packs or Skyline.DataMiner.Files NuGet packages. From now on, when it detects that a reference to such a SLManagedAutomation DLL file is needed for a particular QAction to run, it will add the reference to the `dllImport` attribute of the QAction. However, the file itself will not be included.
 
-#### XML editor: Referring to a library script Exe from another Automation script [ID_36117]
+#### XML editor: Referring to a library script Exe from another Automation script [ID 36117]
 
 ​Up to now, it was only possible to refer to a library script Exe from within the same Automation script. From now on, in a Visual Studio solution, you can also add a reference to a project from another Automation script in the solution. DIS will then automatically add a `scriptRef`.
 
@@ -55,7 +55,7 @@ As DIS will automatically add a `scriptRef`, developers will only need to add a 
 
 ### Validator
 
-#### New checks and error messages [ID_35384] [ID_35558]
+#### New checks and error messages [ID 35384] [ID 35558]
 
 The following checks and error messages have been added.
 
@@ -71,14 +71,14 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### Protocol Schema: New element & new element value [ID_35350]
+#### Protocol Schema: New element & new element value [ID 35350]
 
 The following element has been added to the protocol schema:
 
 - New element: `Protocol.Params.Param.Matrix`
 - New `Protocol.Params.Param.Type` value: "Matrix"
 
-#### UOM Schema: New units added [ID_36032]
+#### UOM Schema: New units added [ID 36032]
 
 The following units have been added to the UOM Schema:
 
@@ -89,7 +89,7 @@ The following units have been added to the UOM Schema:
 
 ### Enhancements
 
-#### Changes made to the Microsoft Visual Studio UI [ID_35566]
+#### Changes made to the Microsoft Visual Studio UI [ID 35566]
 
 The following changes have been made to the Microsoft Visual Studio UI:
 
@@ -104,7 +104,7 @@ The following changes have been made to the Microsoft Visual Studio UI:
 
 ### Fixes
 
-#### Validator: False positive thrown when a column was added to a table that contained a column of type displayKey [ID_35266]
+#### Validator: False positive thrown when a column was added to a table that contained a column of type displayKey [ID 35266]
 
 When a column was added to a table that contained a column of type *displayKey*, the *CheckOptionsAttribute* (2.31) check would thrown a false positive *ColumnOrderChanged* (2.31.1) error.
 

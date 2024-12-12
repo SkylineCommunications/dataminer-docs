@@ -30,11 +30,11 @@ When working with the [Data API](xref:Data_API) and [scripted connectors](xref:S
 
 - Parameters in auto-generated connectors:
 
-  - Only prior to [DataAPI 1.1.3](xref:DataAPI_change_log#1-april-2024---new-feature---dataapi-113---new-configuration-endpoint-for-units-and-decimals-id_39016), lack units, with no adjustable configuration.
+  - Only prior to [DataAPI 1.1.3](xref:DataAPI_change_log#1-april-2024---new-feature---dataapi-113---new-configuration-endpoint-for-units-and-decimals-id-39016), lack units, with no adjustable configuration.
 
   - Are automatically assigned to pages in the element layout, and this allocation cannot be modified.
 
-  - Cannot use any of the names in the [Prohibited names](xref:Parameter_names) list.
+  - Cannot use any of the names in the [Reserved parameter names](xref:ConnectorBestPracticesReservedParameterNames) list.
 
 > [!NOTE]
 > Certain limitations are expected to be addressed in future DataMiner versions.

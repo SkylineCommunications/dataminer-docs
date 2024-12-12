@@ -2,9 +2,9 @@
 uid: MOP_Migrating_a_Failover_pair_to_new_hardware
 ---
 
-# Migrating a Failover pair to new hardware
+# Migrating a Failover pair to new hardware in an existing cluster
 
-The procedure below details how you can migrate a pair of Failover DMAs to new hardware. After the procedure, both DMAs should be running just like before, but on new servers.
+The procedure below details how you can migrate a pair of Failover DMAs to new hardware in an existing cluster consisting of multiple Agents. After the procedure, both DMAs should be running just like before, but on new servers.
 
 ## Requirements
 

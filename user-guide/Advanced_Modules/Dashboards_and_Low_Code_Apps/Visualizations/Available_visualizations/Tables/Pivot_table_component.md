@@ -15,15 +15,15 @@ It is possible to export this status report to CSV. To do so, click the ... icon
 
 To configure the component:
 
-1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. [Add data to the component](xref:Adding_data_to_component).
 
-   This component requires a parameter feed based on *Protocol* or *Element*, or a group of parameters from a *Parameter* feed component.
+   This component requires parameter data based on *Protocol* or *Element*, or a group of parameters from a parameter picker component.
 
-   - In case a protocol parameter feed is used, you can add an additional element or view feed as a filter.
+   - In case protocol parameter data is used, you can add additional element or view data as a filter.
 
-   - In case an element parameter feed is used, you can add an additional view feed as a filter.
+   - In case element parameter data is used, you can add additional view data as a filter.
 
-   - If a table parameter feed is used, you can an additional indices feed as a filter.
+   - If table parameter data is used, you can add additional indices data as a filter.
 
 1. In the *Settings* tab, you can fine-tune the component:
 
@@ -36,11 +36,11 @@ To configure the component:
      If this option is selected, a trend statistics row is included in the *Items to include* section, allowing you to determine where the statistics are displayed. In addition, a *Trend span* option will be displayed, allowing you to select a different time span for which statistics are displayed.
 
      > [!NOTE]
-     > A pivot table that displays trend statistics can use a time range feed as a filter.
+     > A pivot table that displays trend statistics can use data exposed by a time range component as a filter.
 
    - *Limit*: Determines how many rows (i.e. indices) or elements can be displayed. If a particular number “X” is specified, only the X first rows or elements that are retrieved from the server will be displayed.
 
-   - *Filter*: In case a table column parameter feed is used, this box allows you to specify a table row filer. To combine multiple filters, use a semicolon, e.g. *SLA\*;SLP\**.
+   - *Filter*: In case table column parameter data is used, this box allows you to specify a table row filer. To combine multiple filters, use a semicolon, e.g. *SLA\*;SLP\**.
 
    - *Conditions*: Allows you to add conditions, so that for example an element is only displayed if a particular parameter has a particular value.
 

@@ -9,7 +9,7 @@ uid: General_Main_Release_10.4.0_new_features
 
 ### Core functionality
 
-#### New table matrix [ID_34645] [ID_34661] [ID_34839] [ID_34879] [ID_34933]
+#### New table matrix [ID 34645] [ID 34661] [ID 34839] [ID 34879] [ID 34933]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
@@ -297,7 +297,7 @@ protected virtual void OnCrossPointsSetViaLockOverrideFromUI(Skyline.DataMiner.L
 }
 ```
 
-#### All DOM objects now have 'LastModified', 'LastModifiedBy', 'CreatedAt' and 'CreatedBy' properties [ID_34980]
+#### All DOM objects now have 'LastModified', 'LastModifiedBy', 'CreatedAt' and 'CreatedBy' properties [ID 34980]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
@@ -320,7 +320,7 @@ All DOM objects (DomInstance, DomTemplate, DomDefinition, DomBehaviorDefinition,
 > - In the Elasticsearch database, existing data will not contain values for these new fields (except the *LastModified* field for all but *ModuleSettings*).
 > - All four fields are also available in the GQI data source *Object Manager Instances*. The *Last Modified* and *Created At* columns should show the time in the time zone of the browser.
 
-#### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID_35226]
+#### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID 35226]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -331,7 +331,7 @@ When such a button is clicked in a low-code app, the UI of the interactive Autom
 > [!NOTE]
 > One button can only execute one action. So, one button can only execute one interactive Automation script.
 
-#### DataMiner Object Models: New field descriptors [ID_35278] [ID_36556]
+#### DataMiner Object Models: New field descriptors [ID 35278] [ID 36556]
 
 <!-- RN 35278: MR 10.4.0 - FR 10.3.3 -->
 <!-- RN 36556: MR 10.4.0 - FR 10.3.9 -->
@@ -353,13 +353,13 @@ The form component will render these descriptors as filterable dropdown boxes.
 > [!NOTE]
 > Up to now, only users with *Modules > System configuration > Security > UI available* permission were allowed to view the list of DataMiner users. From now on, even users without *Modules > System configuration > Security > UI available* permission will at least be able to view the list of DataMiner users who are a member of any of the groups they themselves are a member of.
 
-#### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID_35605]
+#### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID 35605]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
 
-#### Process Automation: Support for PaToken bulk operations [ID_35685]
+#### Process Automation: Support for PaToken bulk operations [ID 35685]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -391,7 +391,7 @@ From now on, `PaToken` objects can be created, updated and deleted in bulk using
 
   The result will contain a list of tokens that were successfully deleted. The trace data is available per token ID. If an issue occurs when an item gets deleted, no exception will be thrown (even when `ThrowExceptionsOnErrorData` is true). The trace data of the last call is available and will contain the data for all items.
 
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514] [ID_36799] [ID_37137] [ID_37895]
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID 36085] [ID 36513] [ID 36514] [ID 36799] [ID 37137] [ID 37895]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 <!-- RNs 36799/37137: MR 10.4.0 - FR 10.3.9 -->
@@ -414,7 +414,7 @@ In addition, the DataMiner installer will now also add a firewall rule allowing 
 > - For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
 > - The above-mentioned DxMs all use .NET 6.
 
-#### DataMiner Object Models: Caching of DOM configuration data [ID_36412]
+#### DataMiner Object Models: Caching of DOM configuration data [ID 36412]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -447,7 +447,7 @@ In the log files, you will be able to find out which caches are enabled and when
 
 When the caches are enabled, it is no longer possible to get paged results when retrieving DomDefinitions, DomBehaviorDefinitions or SectionDefinitions. Instead, the complete list of objects matching the given query will be returned, even if that list is larger than the configured page size.
 
-#### API Gateway: DataMiner modules can now register with API Gateway [ID_36575] [ID_37734]
+#### API Gateway: DataMiner modules can now register with API Gateway [ID 36575] [ID 37734]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
@@ -459,7 +459,7 @@ All modules registered with API Gateway will be displayed under `/APIGateway/api
 - Version
 - Endpoint on which they can be accessed via API Gateway (proxy modules only)
 
-#### DataMiner Object Models: Soft-deletable objects [ID_36721] [ID_37121]
+#### DataMiner Object Models: Soft-deletable objects [ID 36721] [ID 37121]
 
 <!-- RN 36721: MR 10.4.0 - FR 10.3.9 -->
 <!-- RN 37121: MR 10.4.0 - FR 10.3.10 -->
@@ -488,7 +488,7 @@ Soft-deleting a *GenericEnumEntry* object will have the following consequences:
 - It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
 - It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
 
-#### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
+#### DataMiner Object Models: 'Full CRUD meta' scripts [ID 37004]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
@@ -496,7 +496,7 @@ Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point me
 
 For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
 
-#### Support for real-time GQI row updates [ID_37060]
+#### Support for real-time GQI row updates [ID 37060]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
@@ -509,7 +509,7 @@ At present, this is supported for the following GQI data sources:
 
 It is supported for the *Select* operator, but it can also be supported for other operators if they are combined with specific data sources, for instance for a filter on a parameter table.
 
-#### Proactive cap detection extended to absolute and relative alarm types [ID_37373]
+#### Proactive cap detection extended to absolute and relative alarm types [ID 37373]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -522,7 +522,7 @@ As a result, proactive detection will now predict when a parameter will cross on
 - A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation.
 - A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the [0,100] interval.
 
-#### DataMiner upgrade: Additional prerequisite will now check whether profiles and resources are stored in an indexing database [ID_37763]
+#### DataMiner upgrade: Additional prerequisite will now check whether profiles and resources are stored in an indexing database [ID 37763]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -532,7 +532,7 @@ See also: [Verify Elastic Storage Type](xref:Verify_Elastic_Storage_Type)
 
 ### Protocols
 
-#### 'ExportRule' elements can now have a 'whereAttribute' attribute [ID_36622]
+#### 'ExportRule' elements can now have a 'whereAttribute' attribute [ID 36622]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -550,7 +550,7 @@ In this next example, all *Column* elements of parameters that have a `level` at
 <ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Column" value="2" whereTag="Protocol/Params/Param" whereAttribute="level" whereValue="5"/>
 ```
 
-#### Smart-serial communication now supports dynamic polling [ID_37404]
+#### Smart-serial communication now supports dynamic polling [ID 37404]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -567,7 +567,7 @@ To enable dynamic polling for a smart-serial connection, add a parameter that co
 
 ### Maps
 
-#### DataMiner Maps: Marker images can now also be generated dynamically in layers with sourceType set to objects [ID_36246]
+#### DataMiner Maps: Marker images can now also be generated dynamically in layers with sourceType set to objects [ID 36246]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
@@ -575,7 +575,7 @@ Marker images can now also be generated dynamically in layers with `sourceType` 
 
 To generate a marker image dynamically, you can use placeholders in the `url` attribute of the *\<MarkerImage\>* tag.
 
-#### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID_38274]
+#### DataMiner Maps: ForeignKeyRelationsSourceInfo tag now supports an elementVar attribute [ID 38274]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
@@ -596,7 +596,7 @@ maps.aspx?config=MyConfigFile&dmyElement=VesselData
 
 ### Service & Resource Management
 
-#### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]
+#### Service & Resource Management: Exposers for resource capacities and capabilities [ID 34841]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
@@ -649,9 +649,9 @@ Please note the following:
 - The following extension methods have been added to easily compose the filters: *HasRangePoint*, *DiscreteCapability*, *StringCapability* and *MaxCapacityValue*.
 
 > [!TIP]
-> See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID_34857]](xref:Cube_Feature_Release_10.3.1#visual-overview-session-variable-yaxisresources-now-supports-filters-to-pass-exposers-id_34857)
+> See also: [Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID 34857]](xref:Cube_Feature_Release_10.3.1#visual-overview-session-variable-yaxisresources-now-supports-filters-to-pass-exposers-id-34857)
 
-#### Service & Resource Management: Reinitializing Resource Manager [ID_36811]
+#### Service & Resource Management: Reinitializing Resource Manager [ID 36811]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -673,7 +673,7 @@ To (re)initialize Resource Manager:
 
    Resource Manager will be (re)initialized on the DataMiner Agent you are connected to.
 
-#### Service & Resource Management: Storage type for ProfileManager and ResourceManager will now always be Elasticsearch/OpenSearch [ID_37877]
+#### Service & Resource Management: Storage type for ProfileManager and ResourceManager will now always be Elasticsearch/OpenSearch [ID 37877]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -699,7 +699,7 @@ TraceData: (amount = 1)
 
 ### Tools
 
-#### SLLogCollector will now order the Standalone BPA Executor tool to execute all BPA tests available in the system [ID_35436]
+#### SLLogCollector will now order the Standalone BPA Executor tool to execute all BPA tests available in the system [ID 35436]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -707,7 +707,7 @@ Each time the *SLLogCollector* tool is run, it will now order the *Standalone BP
 
 The names of the files containing the test results will have the following format: `<BPA Name>_<Date(yyyy-MM-dd_HH)>`
 
-#### SLNetClientTest tool: New menu to manage the cloud connection of a DMA while it is offline [ID_36611]
+#### SLNetClientTest tool: New menu to manage the cloud connection of a DMA while it is offline [ID 36611]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 

@@ -8,23 +8,23 @@ uid: DIS_2.29
 
 ### IDE
 
-#### XML editor: Contents of \<VersionHistory> element copied into the comment section at the top of the file when compiling a protocol XML file \[ID_26541\]
+#### XML editor: Contents of \<VersionHistory> element copied into the comment section at the top of the file when compiling a protocol XML file \[ID 26541\]
 
 From now on, when you compile a protocol XML file, the entire contents of the \<VersionHistory> element will be copied into the comment section at the top of the file.
 
-#### An information banner can now appear at the top of an editor window \[ID_26691\]
+#### An information banner can now appear at the top of an editor window \[ID 26691\]
 
 A yellow banner can now appear at the top of an editor window to convey important information to the user.
 
 Currently, a banner will appear to inform users that a new DIS version is available, that the protocol XML file being edited does not contain the UTF-8 header bytes or that it is advisable to update all C# projects to Microsoft .NET Framework 4.6.2.
 
-#### XML editor: Generating parameters based on data in an Ember+ file \[ID_27064\]
+#### XML editor: Generating parameters based on data in an Ember+ file \[ID 27064\]
 
 From now on, it is also possible to automatically generate \<Param> tags based on parameter data in an Ember+ file.
 
 ### Validator
 
-#### New checks and error messages \[ID_26471\]\[ID_26845\]\[ID_26846\]\[ID_26847\]\[ID_26848\]\[ID_26849\]
+#### New checks and error messages \[ID 26471\]\[ID 26845\]\[ID 26846\]\[ID 26847\]\[ID 26848\]\[ID 26849\]
 
 The following checks and error messages have been added.
 
@@ -44,7 +44,7 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### Protocol Schema: New elements and element attributes \[ID_26549\]\[ID_26758\]\[ID_26763\]
+#### Protocol Schema: New elements and element attributes \[ID 26549\]\[ID 26758\]\[ID 26763\]
 
 The following elements and element attributes have been added to the Protocol XML Schema:
 
@@ -64,7 +64,7 @@ The following elements and element attributes have been added to the Protocol XM
 
 ### Enhancements
 
-#### Display editor & Table editor: Miscellaneous enhancements \[ID_24677\]
+#### Display editor & Table editor: Miscellaneous enhancements \[ID 24677\]
 
 A number of enhancements have been made to the Display editor and the Table editor.
 
@@ -104,7 +104,7 @@ A number of enhancements have been made to the Display editor and the Table edit
   - In case of columns of type “displaykey”, room for key icons will be reserved when needed.
   - Room will now also be reserved for sorting icons.
 
-#### IDE - XML editor: Restructuring of the 'DIS \> Protocol \> Param' snippets \[ID_26706\]
+#### IDE - XML editor: Restructuring of the 'DIS \> Protocol \> Param' snippets \[ID 26706\]
 
 The extensive list of snippets in the *DIS \> Protocol \> Param* folder have now been restructured into the following subfolders:
 
@@ -116,11 +116,11 @@ The extensive list of snippets in the *DIS \> Protocol \> Param* folder have now
 | Serial communication | Code to add serial communication parameters (e.g. headers, trailers, etc.)                        |
 | SNMP communication   | Code to add SNMP communication parameters (e.g. trap receivers, SNMP tables, etc.)                |
 
-#### Protocol Schema: Slowpoll settings now only configurable for main port \[ID_26790\]
+#### Protocol Schema: Slowpoll settings now only configurable for main port \[ID 26790\]
 
 From now on, it will only be possible to add SlowPoll and SlowPollBase elements to the Protocol.PortSettings element (i.e. the configuration of the main connection). It will no longer be possible to add these elements to the Protocol.Ports.PortSettings element (i.e. the configuration of the additional connections).
 
-#### Class Library \[ID_27161\]
+#### Class Library \[ID 27161\]
 
 - Settings for base class library package are now stored by name and version, instead of the (internal) path of the package. This way, we know which version was previously selected, even when the previous file doesn't exist anymore (after an update), and it allows us to select the newer version in the same range.
 
@@ -134,6 +134,6 @@ From now on, it will only be possible to add SlowPoll and SlowPollBase elements 
 
 ### Fixes
 
-#### IDE: Index parameter would not be generated when the table index defined in the MIB file was not within the table OID range \[ID_27022\]
+#### IDE: Index parameter would not be generated when the table index defined in the MIB file was not within the table OID range \[ID 27022\]
 
 When DIS generated parameter data based on information stored in a MIB file, up to now, an additional index parameter would only be generated when the MIB file defined multiple indexes on a table. From now on, an additional index parameter will also be generated when the table index defined in the MIB file is not part of the table itself.

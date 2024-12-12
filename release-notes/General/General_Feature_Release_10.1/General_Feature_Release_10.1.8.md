@@ -14,14 +14,14 @@ uid: General_Feature_Release_10.1.8
 
 ### DMS core functionality
 
-#### Configuration of credentials for Elasticsearch backup location \[ID_29024\]
+#### Configuration of credentials for Elasticsearch backup location \[ID 29024\]
 
 It is now possible to configure specific credentials for the Elasticsearch backup location. To do so, send a *SetElasticBackupPath* message with the credentials using the SLNetClientTest tool. This will create a Windows scheduled task "elasticbackupwithcredentials", which is triggered on startup, and which makes it possible to access the backup path location.
 
 > [!WARNING]
 > Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Failover without virtual IP address [ID_29189] [ID_29911]
+#### Failover without virtual IP address [ID 29189] [ID 29911]
 
 In a Failover system, which consists of two redundant DataMiner Agents, the offline Agent will stand by, waiting to take over as soon as the online Agent goes offline. Up to now, a Failover system always made use of a so-called "virtual IP address", an IP address that is shared by the two Agents and that the online Agent assigns to itself. However, in certain situations, it is very hard or even impossible to share a virtual IP address. In those situations, it is now possible to set up a Failover system using a shared hostname instead.
 
@@ -58,7 +58,7 @@ When you set up a Failover system using a shared hostname, in IIS, a URL Rewrite
 >
 > See: <https://www.iis.net/downloads/microsoft/application-request-routing>
 
-#### NATS upgraded to version 2.2.6 + new NATS SLNet settings \[ID_30156\]
+#### NATS upgraded to version 2.2.6 + new NATS SLNet settings \[ID 30156\]
 
 To improve support for previous enhancements, the NATS version used by DataMiner has been upgraded to version 2.2.6.
 
@@ -84,7 +84,7 @@ For example:
 
 ### DMS Protocols
 
-#### Aggregation: Using regular expressions in the filter \[ID_30199\]
+#### Aggregation: Using regular expressions in the filter \[ID 30199\]
 
 It is now possible to a regular expression in the filtering options of an aggregate action.
 
@@ -163,11 +163,11 @@ Example:
 
 ### DMS Cube
 
-#### Profiles app: Failsafe mechanism added to prevent situations where updates made by one user get overwritten by updates made by another user \[ID_28651\] \[ID_30057\]
+#### Profiles app: Failsafe mechanism added to prevent situations where updates made by one user get overwritten by updates made by another user \[ID 28651\] \[ID 30057\]
 
 The Profiles app now contains a failsafe mechanism to prevent possible situations where updates made by one user get overwritten by updates made simultaneously by another user.
 
-#### Visual Overview: History mode for alarm states + culture option for datetime control \[ID_29822\]
+#### Visual Overview: History mode for alarm states + culture option for datetime control \[ID 29822\]
 
 When shapes in Visual Overview are linked to an element, parameter or service, it is now possible to show the alarm state for this linked object at a specific point in the past. To do so, you can use the new shape data *HistoryMode*, which can be added to a specific shape, or to the entire page.
 
@@ -190,7 +190,7 @@ For example:
 |------------------|-------------------------------------------|
 | SetVarOptions    | Control=DateTime\|DateTimeCulture=Current |
 
-#### Visual Overview: History mode for spectrum thumbnails \[ID_30130\]
+#### Visual Overview: History mode for spectrum thumbnails \[ID 30130\]
 
 It is now possible to have a spectrum thumbnail in Visual Overview show the trace from a specific moment in the past, based on the recorded trending for a parameter in a spectrum monitor.
 
@@ -221,7 +221,7 @@ For example:
 | Parameter        | 50016\|11\|trace_2mps\|5\|DisplayLabels;DisplayTime\| |
 | HistoryMode      | State=On\|TimeStamp=\[var:myTime\]                    |
 
-#### Visual Overview: New Collapse shape data field \[ID_30149\]
+#### Visual Overview: New Collapse shape data field \[ID 30149\]
 
 In Visual Overview, you can now hide a shape in a different way than with the *Hide* shape data field, using the new *Collapse* shape data field. This field is configured in the same way, as detailed under [Extended conditional shape manipulation actions](xref:Extended_conditional_shape_manipulation_actions). While on the face of it, the result of the *Collapse* action will be the same as for a *Hide* action, the shape is hidden in a different way, i.e. its visibility is collapsed.
 
@@ -229,7 +229,7 @@ This makes it a convenient alternative to the *ChildrenFilter* shape data, as it
 
 Using the *Collapse* action can also be convenient in a grid layout, as a collapsed shape will not take up room in a grid, unlike a shape hidden using *Hide*.This can allow you to use the "Auto" width or height more effectively.
 
-#### Visual Overview: New icons added to Icons stencils \[ID_30198\]
+#### Visual Overview: New icons added to Icons stencils \[ID 30198\]
 
 The following icons have been added to the Icons stencil:
 
@@ -238,17 +238,17 @@ The following icons have been added to the Icons stencil:
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app: Data selected in a State, Gauge or Ring components used as a feed will be highlighted \[ID_29657\]
+#### Dashboards app: Data selected in a State, Gauge or Ring components used as a feed will be highlighted \[ID 29657\]
 
 When State, Gauge or Ring components are used as feeds by other components, the data selected in those feed component will now be highlighted.
 
-#### Dashboards app: Table visualizations now allow columns to be reordered \[ID_30091\]
+#### Dashboards app: Table visualizations now allow columns to be reordered \[ID 30091\]
 
 In table visualizations, it is now possible to reorder columns.
 
 To move a table column to another location, click its header and drag it to its new location.
 
-#### Dashboards app: Column filter based on text in Node edge graph and Table component \[ID_30182\]
+#### Dashboards app: Column filter based on text in Node edge graph and Table component \[ID 30182\]
 
 When you configure a column filter for a Node edge graph or Table dashboard component in order to highlight specific columns depending on the displayed value, you can now filter on specific text. Previously, it was only possible to apply a column filter on a selected range. Now, you can instead select the column you want to use for highlighting, and then specify text to filter on in a text box. You can then choose whether a positive or negative filter should be used, and whether the value should equal the filter, contain the filter or match a regular expression.
 
@@ -256,7 +256,7 @@ Multiple filters can be applied on the same value. In that case, the filters wil
 
 ### DMS Automation
 
-#### ProcessAutomationHelper \[ID_30108\]
+#### ProcessAutomationHelper \[ID 30108\]
 
 A new ProcessAutomationHelper has been added to manipulate PaToken and PaProcess objects. See the following example.
 
@@ -284,7 +284,7 @@ public class Script
 > - At present, bulk operations are not yet supported.
 > - Both PaProcess and PaToken now have a new LastModifiedAt property, filled in by SLNet. It will be used to compare cached versions with versions retrieved from the database.
 
-#### Interactive Automation scripts: File selector allowing multiple selections + file selector enhancements \[ID_30196\]
+#### Interactive Automation scripts: File selector allowing multiple selections + file selector enhancements \[ID 30196\]
 
 In an interactive Automation script that is used in the DataMiner web apps, you can now configure a file selector component that allows the user to upload multiple files. To do so, set the property *AllowMultipleFiles* to true.
 
@@ -310,17 +310,17 @@ There have also been a number of enhancements to the file selector control in ge
 
 ### DMS web apps
 
-#### Visual Overview: Links starting with 'mailto:' now also work in web apps \[ID_30109\]
+#### Visual Overview: Links starting with 'mailto:' now also work in web apps \[ID 30109\]
 
 When, in shape data, you specify links starting with “mailto:”, those links will now also work in web apps.
 
 ### DMS Service & Resource Management
 
-#### Profile manager errors with ErrorReason 'ReservationsMustBeReconfigured' now include a ReservationInstanceDetails list \[ID_29914\]
+#### Profile manager errors with ErrorReason 'ReservationsMustBeReconfigured' now include a ReservationInstanceDetails list \[ID 29914\]
 
 From now on, an error with ErrorReason “ReservationsMustBeReconfigured” will now include a ReservationInstanceDetails list containing the ID, the name and the start time of every affected ReservationInstance.
 
-#### Availability checks for contributing resources \[ID_30017\]
+#### Availability checks for contributing resources \[ID 30017\]
 
 From now on, the GetEligibleResources and AddOrUpdateReservationInstances calls will determine the availability of a contributing resource during a certain time range based on the following criteria:
 
@@ -337,7 +337,7 @@ Adding or updating bookings with resources that are unavailable based on the abo
 
 If the contributing booking has Status set to “Interrupted”, then the bookings using its linked contributing resources will also have their usages quarantined.
 
-#### More detailed parameter check error messages when generating protocols for virtual functions \[ID_30093\]
+#### More detailed parameter check error messages when generating protocols for virtual functions \[ID 30093\]
 
 When an error occurs during a parameter check while generating a protocol for a virtual function, the error message will now contain more detailed information.
 
@@ -351,7 +351,7 @@ The VirtualFunctionDefinitionError will have the following properties filled in:
 
 ### DMS tools
 
-#### Standalone Cassandra Backup Tool \[ID_29005\] \[ID_30234\]
+#### Standalone Cassandra Backup Tool \[ID 29005\] \[ID 30234\]
 
 The StandaloneCassandraBackup.exe tool can be used by an administrator to take a backup of a Cassandra database (either a single node or a cluster).
 
@@ -363,18 +363,18 @@ For more information on this tool, see [Standalone Cassandra Backup Tool](xref:S
 
 ### Enhancements
 
-#### Security enhancements \[ID_29980\] \[ID_30012\] \[ID_30086\] \[ID_30087\] \[ID_30192\] \[ID_30195\] \[ID_30202\] \[ID_30257\]
+#### Security enhancements \[ID 29980\] \[ID 30012\] \[ID 30086\] \[ID 30087\] \[ID 30192\] \[ID 30195\] \[ID 30202\] \[ID 30257\]
 
 A number of security enhancements have been made.
 
-#### Enhanced performance when executing offloaded database operations against a Cassandra or Elasticsearch database \[ID_29451\] \[ID_29857\]
+#### Enhanced performance when executing offloaded database operations against a Cassandra or Elasticsearch database \[ID 29451\] \[ID 29857\]
 
 Due to a number of enhancements, overall performance has increased when executing Cassandra and Elasticsearch database operations that were offloaded to a file when the database was unavailable.
 
 > [!NOTE]
 > While executing database operations that were offloaded to a file when the database was unavailable, an information event and a log entry will be created every 30 seconds to indicate the execution progress.
 
-#### Limiting disk space occupied by offload files \[ID_29563\]
+#### Limiting disk space occupied by offload files \[ID 29563\]
 
 In the C:\\Skyline DataMiner\\Database\\DBConfiguration.xml file, you can now specify the maximum amount of disk space that can be occupied by database offload files.
 
@@ -394,11 +394,11 @@ Example:
 > - If no limit is set in DBConfiguration.xml or if the file offload configuration is invalid, the size of the database offload files will by default be limited to 10 GB.
 > - When the specified limit has been reached, an alarm with the following text will be generated: “Max file offload disk usage for certain storages has been reached, new data for these storages will be dropped.” Also, the following entry will be added to the SLDBConnection log file: “\|INF\|0\|112\|2021-04-14T13:34:19.559\|DEBUG\|DataGateway.FileOffload\|Max disk usage reached: True for storage Cassandra.TimeTrace (timetrace)”.
 
-#### Enhanced handling of stack overflow exceptions \[ID_29796\]
+#### Enhanced handling of stack overflow exceptions \[ID 29796\]
 
 A number of enhancements have been made to better handle stack overflow exceptions.
 
-#### Smart-serial client connections: Logging incoming data \[ID_29874\]
+#### Smart-serial client connections: Logging incoming data \[ID 29874\]
 
 When a smart-serial client connection receives incoming data, it will forward that data to SLProtocol and display it in Stream Viewer. However, when the incoming data does not match the configured response, the connection will forward TIMEOUT to SLProtocol, making it hard to find out what data was received by SLPort.
 
@@ -408,7 +408,7 @@ From now on, if you enable a specific connection in PortLog.txt (see DataMiner H
 2021/05/14 15:30:57.452|SLPort.exe 8.5.1519.6|39680|39544|CSmartIP::ProcessIncomming|DBG|4|Incoming data from 127.0.0.2:4598 (total length: 5 bytes) -    000000  576F72642E                                   Word.
 ```
 
-#### SLUpgrade can now run BPA tests before starting the upgrade process \[ID_29903\]
+#### SLUpgrade can now run BPA tests before starting the upgrade process \[ID 29903\]
 
 When a DataMiner upgrade package contains a set of BPA tests in its Prerequisites folder, SLUpgrade will now run those tests before starting the upgrade process. Upon failure of one or more of these tests, the upgrade process will be aborted and a message will be displayed.
 
@@ -419,21 +419,21 @@ BPA tests added to the Prerequisites folder of a DataMiner upgrade package must 
 - They must have their CanRunOnOfflineAgents flag enabled. This will make sure that, in a Failover setup, the offline agent will also be checked.
 - They must have their RequireSLNet flag disabled.
 
-#### Enhanced performance when exporting function protocols \[ID_29929\]
+#### Enhanced performance when exporting function protocols \[ID 29929\]
 
 When you uploaded a new version of a protocol that had an active functions file, up to now, all active function elements would be re-evaluated after the function protocols were exported. From now on, the function elements will only be re-evaluated when the function file is set to active.
 
-#### Dashboards app - GQI: Enhanced performance when processing GQI query results \[ID_29977\]
+#### Dashboards app - GQI: Enhanced performance when processing GQI query results \[ID 29977\]
 
 Due to a number of enhancements, overall performance has increased when processing a GQI query result.
 
-#### Enhanced logging of parameter update stack notices \[ID_29996\]
+#### Enhanced logging of parameter update stack notices \[ID 29996\]
 
 Up to now, when the number of items on the parameter update stack was divisible by 1000 after an item had been added to it, a log entry would be added to the log file of the element for which that last item had been added. As a result, parameter update stack notices would be scattered among different log files.
 
 From now on, when the parameter update stack exceeds 5000 items, log entries will be added to the log files of all elements for which there are items on the stack. Also, similar log entries will be added to the same log files each time the number of items on the stack is divisible by 1000 until the number of items on the stack drops below 1000.
 
-#### Service & Resource Management: Enhanced error message when a referenced resource capability does not exist \[ID_30065\]
+#### Service & Resource Management: Enhanced error message when a referenced resource capability does not exist \[ID 30065\]
 
 When you created a ReservationInstance that referenced a non-existing capability of an existing resource, up to now, the following error message of type “ResourceCapabilityInvalid” would be displayed:
 
@@ -447,15 +447,15 @@ From now on, the following error message will be displayed instead:
 Could not find capability parameter {oneCapabilityUsage.CapabilityProfileID} on resource {resource.ID}.
 ```
 
-#### DataMiner backup packages will now also include the SoftLaunchOptions.xml file \[ID_30076\]
+#### DataMiner backup packages will now also include the SoftLaunchOptions.xml file \[ID 30076\]
 
 From now on, DataMiner backup packages will also include the SoftLaunchOptions.xml file.
 
-#### Service & Resource Management: Enhanced performance when creating bookings \[ID_30116\]
+#### Service & Resource Management: Enhanced performance when creating bookings \[ID 30116\]
 
 Due to a number of enhancements, overall performance has increased when creating bookings.
 
-#### Logging: An entry will no longer by default be added to the SLDataMiner.txt and SLErrors.txt log files when the “C:\\Skyline DataMiner\\Simulations” folder cannot be found at DataMiner startup \[ID_30168\]
+#### Logging: An entry will no longer by default be added to the SLDataMiner.txt and SLErrors.txt log files when the “C:\\Skyline DataMiner\\Simulations” folder cannot be found at DataMiner startup \[ID 30168\]
 
 Up to now, at DataMiner startup, the following entry would by default be added to the SLDataMiner.txt and SLErrors.txt log files when no C:\\Skyline DataMiner\\Simulations folder could be found:
 
@@ -465,23 +465,23 @@ CDataMiner::LoadSimulations|ERR|0|Failed to query directory 'C:\Skyline DataMine
 
 From now on, such entries will no longer by default be added to the above-mentioned log files at DataMiner startup.
 
-#### DataMiner Cube: 'DataMiner Cube mobile' changed to 'DataMiner web apps' \[ID_30201\]
+#### DataMiner Cube: 'DataMiner Cube mobile' changed to 'DataMiner web apps' \[ID 30201\]
 
 Throughout the Cube UI, the term “DataMiner Cube mobile” has been replaced by the term “DataMiner web apps”.
 
-#### Service & Resource Management: ReservationInstance will again be marked as interrupted when created with a start time before the Resource Manager was initialized \[ID_30211\]
+#### Service & Resource Management: ReservationInstance will again be marked as interrupted when created with a start time before the Resource Manager was initialized \[ID 30211\]
 
 Since DataMiner version 10.0.0 CU11/10.1.3, when a ReservationInstance was created with a start time in the past, before the Resource Manager was initialized, that ReservationInstance would no longer be marked as interrupted. From now on, when a ReservationInstance is created with a start time in the past, before the Resource Manager was initialized, that ReservationInstance will again be marked as interrupted.
 
-#### DataMiner Cube - Data Display: Service cards now also support conditional page visibility \[ID_30217\]
+#### DataMiner Cube - Data Display: Service cards now also support conditional page visibility \[ID 30217\]
 
 In a protocol.xml file, it is possible to specify that a Data Display page should either be shown or hidden based on a parameter value. Service cards now also support this feature.
 
-#### BPA test 'Report Active RTE' will now run more frequently \[ID_30250\]
+#### BPA test 'Report Active RTE' will now run more frequently \[ID 30250\]
 
 The BPA test “Report Active RTE” will now run once every 8 minutes instead of once every hour.
 
-#### Updated BPA tests: 'Minimum Requirements Check' & 'View Recursion' \[ID_30259\]
+#### Updated BPA tests: 'Minimum Requirements Check' & 'View Recursion' \[ID 30259\]
 
 The following default BPA tests were updated:
 
@@ -490,41 +490,41 @@ The following default BPA tests were updated:
 
 ### Fixes
 
-#### NATS service would fail to start on DataMiner startup \[ID_29143\]
+#### NATS service would fail to start on DataMiner startup \[ID 29143\]
 
 When, in a DataMiner System with at least three agents, a DataMiner Agent was starting up, in some cases, the NATS service would fail to start without any log entry explaining the reason for this failure.
 
-#### Dashboards app - Time range feed: Value passed along incorrectly when 'Use quick picks' option was selected \[ID_29471\]
+#### Dashboards app - Time range feed: Value passed along incorrectly when 'Use quick picks' option was selected \[ID 29471\]
 
 When the “Use quick picks” option was selected, a time range feed would pass along the selected value incorrectly.
 
 Also, custom quick picks would disappear when reloading the dashboard, and when the “Allow refresh” option was selected, the feed would not correctly update the linked trend graph when the refresh counter was reset.
 
-#### DMS Alerter: Problem when closing Alerter while balloons are popping up \[ID_29725\]
+#### DMS Alerter: Problem when closing Alerter while balloons are popping up \[ID 29725\]
 
 In some cases, an exception could be thrown when you closed Alerter while balloons were popping up.
 
-#### DataMiner Cube - Resources app: Labels not displayed in the correct color when using the Skyline Black theme \[ID_29767\]
+#### DataMiner Cube - Resources app: Labels not displayed in the correct color when using the Skyline Black theme \[ID 29767\]
 
 When using the Skyline Black theme, labels in the Resources app would not be displayed in the correct color.
 
-#### SLDataMiner: High-level log entries would incorrectly not get added to the log after increasing the log level \[ID_29781\]
+#### SLDataMiner: High-level log entries would incorrectly not get added to the log after increasing the log level \[ID 29781\]
 
 When you increased the log level of SLDataMiner, high-level log entries would incorrectly not get added to the log.
 
-#### DataMiner Cube - Visual Overview: Problem with SelectionSetVar option \[ID_29797\]
+#### DataMiner Cube - Visual Overview: Problem with SelectionSetVar option \[ID 29797\]
 
 When, in Visual Overview, a table control had the SelectionSetVar option specified, in some cases, it would not be possible to select a row.
 
-#### DataMiner Cube - Resources app: No scroll bars would appear when a pane was not able to show all content \[ID_29836\]
+#### DataMiner Cube - Resources app: No scroll bars would appear when a pane was not able to show all content \[ID 29836\]
 
 When, in the Resources app, you selected a resource with e.g. a large number of capacity and/or capability parameters, no scroll bars would appear, even when the pane was not able to show all content.
 
-#### HTML5 apps: Incorrect overlay could appear when a timespan field got the focus \[ID_29849\]
+#### HTML5 apps: Incorrect overlay could appear when a timespan field got the focus \[ID 29849\]
 
 When, in an HTML5 app, a timespan field got the focus, in some cases, an incorrect overlay could appear on top of the field.
 
-#### Cassandra: 'tried to execute null statement' errors incorrectly added to SLDBConnection.txt log file \[ID_29947\]
+#### Cassandra: 'tried to execute null statement' errors incorrectly added to SLDBConnection.txt log file \[ID 29947\]
 
 On systems with a Cassandra database, errors similar to the one below would incorrectly be added to the SLDBConnection.txt log file:
 
@@ -532,15 +532,15 @@ On systems with a Cassandra database, errors similar to the one below would inco
 [timestamp]|SLDBConnection.txt|SLDBConnection|SLDBConnection|ERR|0|335|Cassandra: tried to execute null statement.
 ```
 
-#### DataMiner Cube - Visual Overview: Problem when using the FollowPathColor option \[ID_29959\]
+#### DataMiner Cube - Visual Overview: Problem when using the FollowPathColor option \[ID 29959\]
 
 In some cases, using the FollowPathColor option would cause Cube to become unresponsive.
 
-#### Dashboards app - Group component: Visualizations would incorrectly be removed when opening the Layout tab \[ID_29962\]
+#### Dashboards app - Group component: Visualizations would incorrectly be removed when opening the Layout tab \[ID 29962\]
 
 When you opened the Layout tab of a Group component, in some cases, the visualizations will incorrectly be removed.
 
-#### Problem when changing a protocol that had a production version \[ID_29966\]
+#### Problem when changing a protocol that had a production version \[ID 29966\]
 
 When you changed a protocol that had a production version, in some rare cases, elements could receive an incorrect XML cookie, causing the following error to appear in the Alarm Console. Also, the elements in question would be prevented from starting up properly.
 
@@ -548,74 +548,74 @@ When you changed a protocol that had a production version, in some rare cases, e
 Initializing the protocol for X failed. The XML module is not initialized. (hr = 0x80040216)
 ```
 
-#### Data offloading would incorrectly be disabled when saving the settings of the offload database \[ID_29985\]
+#### Data offloading would incorrectly be disabled when saving the settings of the offload database \[ID 29985\]
 
 When, in DataMiner Cube, you saved the settings of the offload database, the settings for offloading the real-time trend data would not be applied correctly. As a result, offloading would be disabled until the DataMiner Agent was restarted.
 
-#### Part of SLNet initialization could be skipped when a client disconnected while the DMA was starting up \[ID_29986\]
+#### Part of SLNet initialization could be skipped when a client disconnected while the DMA was starting up \[ID 29986\]
 
 When a client disconnected while the DMA was starting up, in some rare cases, part of the initialization of the SLNet process could get skipped, which would lead to issues later on. Up to now, the error would only be added to the logs. From now on, in cases like this, the following will happen:
 
 - When a client cannot be re-registered during the SLNet initialization, an entry will be added to the logs, but the initialization will no longer fail.
 - Any exception thrown during the SLNet initialization will now also show up in the Alarm Console as “Unexpected Exception \[Initialize DMA\]: xxxxxx”
 
-#### Interactive Automation scripts: Only the value added in the last text box would be saved \[ID_29995\]
+#### Interactive Automation scripts: Only the value added in the last text box would be saved \[ID 29995\]
 
 When, in interactive Automation scripts, you rapidly entered values in multiple text boxes, in some rare cases, only the value entered in the last text box would be saved.
 
-#### Stopping an SLA would cause a 'window change' event that would lead to outages being closed when history set alarms were received \[ID_29998\]
+#### Stopping an SLA would cause a 'window change' event that would lead to outages being closed when history set alarms were received \[ID 29998\]
 
 When an SLA is stopped while it has an open outage, the open outage will be closed with a timestamp containing the time at which the SLA was stopped. This ensures that all outages are closed in case the SLA starts again when no impacting alarms are present to open and later close the outage.
 
 However, this event would be logged as a “window change”, causing the SLA to close and reevaluate the current alarms at the time the SLA was stopped whenever a history set alarm was received with a timestamp earlier than the time at which the SLA was stopped. This would then cause extra non-intended outages.
 
-#### Interactive Automation scripts: Values shown in datetime controls would be out of sync with the values sent to the server \[ID_30015\]
+#### Interactive Automation scripts: Values shown in datetime controls would be out of sync with the values sent to the server \[ID 30015\]
 
 In interactive Automation scripts, in some rare cases, the value shown in a datetime control would be out of sync with the value sent to the server. Also, in some cases, datetime controls could trigger updates even when their WantsOnChange property was set to false.
 
-#### Synchronization of a cleared DMS.xml file would incorrectly cause all agents to remove themselves from the DataMiner System \[ID_30023\] \[ID_30163\]
+#### Synchronization of a cleared DMS.xml file would incorrectly cause all agents to remove themselves from the DataMiner System \[ID 30023\] \[ID 30163\]
 
 When a DataMiner Agent is starting up, it checks whether the DMS.xml file was changed while it was down. If changes are found, these are then synchronized among the other agents in the DataMiner System. However, up to now, when the DMS.xml file had been cleared and only contained either the IP address of the DataMiner Agent that was starting up or the name of the DataMiner System, this would incorrectly cause a cascade of delete operations throughout the DataMiner System, resulting in all the agents slowly removing themselves from the DataMiner System.
 
 Also, when an outdated cluster configuration was left on a standalone DataMiner Agent after manually removing the DMS.xml file or after restoring a DataMiner backup, other agents in the DataMiner System could be triggered to leave the DataMiner System once the standalone agent was re-added to the cluster.
 
-#### DataMiner Cube - Resources app: Contributing resources would not be visualized correctly \[ID_30031\]
+#### DataMiner Cube - Resources app: Contributing resources would not be visualized correctly \[ID 30031\]
 
 In the Resources app, up to now, contributing resources would be visualized incorrectly.
 
-#### Failover: Network interface would not properly release the virtual IP address when being re-attached after being disconnected during a Failover switch \[ID_30033\]
+#### Failover: Network interface would not properly release the virtual IP address when being re-attached after being disconnected during a Failover switch \[ID 30033\]
 
 When a network interface was disconnected or disabled during a Failover switch, in some cases, it would not properly release the virtual IP address when it was re-attached.
 
-#### InstanceAlarmLevel would not fall back to CellActualAlarmLevel when there was bubble-up information but no instance information \[ID_30044\]
+#### InstanceAlarmLevel would not fall back to CellActualAlarmLevel when there was bubble-up information but no instance information \[ID 30044\]
 
 In case of a view table with bubble-up information and view columns with alarm information, up to now, the InstanceAlarmLevel property on the primary key cell would incorrectly be set to “Undefined” instead of the highest severity of those columns.
 
-#### Service & Resource Management: ReservationInstance property updates could incorrectly overwrite more recent updates when performed on an agent other than the hosting agent \[ID_30047\]
+#### Service & Resource Management: ReservationInstance property updates could incorrectly overwrite more recent updates when performed on an agent other than the hosting agent \[ID 30047\]
 
 In some cases, ReservationInstance property updates would incorrectly overwrite more recent updates when performed on an agent other than the hosting agent.
 
-#### DataMiner Cube - System Center: No longer possible to change a user’s group membership \[ID_30075\]
+#### DataMiner Cube - System Center: No longer possible to change a user’s group membership \[ID 30075\]
 
 When, in a user card, you opened the *Group membership* tab, both the *Available groups* list and the *Included in groups* list would be empty. Hence, in a user card, it would not possible to make a user a member of a particular group. If you wanted to make a user a member of a particular group, you had to select the group in question, open the *Users* tab and add the user to the *Included users* list.
 
-#### Dashboards app: Selection not set in parameter feed \[ID_30092\]
+#### Dashboards app: Selection not set in parameter feed \[ID 30092\]
 
 In a parameter feed, in some rare cases, the selection would not be set.
 
-#### DataMiner Cube - Alarm Console: Problem when reconnecting after adding the 'Severity Duration' column \[ID_30099\]
+#### DataMiner Cube - Alarm Console: Problem when reconnecting after adding the 'Severity Duration' column \[ID 30099\]
 
 When, in the Alarm Console, you added the Severity Duration column and then reconnected, on a large DataMiner System, Cube could become unresponsive.
 
-#### DataMiner Cube desktop app: No DataMiner Systems shown on start window \[ID_30100\]
+#### DataMiner Cube desktop app: No DataMiner Systems shown on start window \[ID 30100\]
 
 When you started the DataMiner Cube desktop app, in some cases, the start window would not show any DataMiner System.
 
-#### Dashboards app - Tables: Primary key columns would have an incorrect background color \[ID_30110\]
+#### Dashboards app - Tables: Primary key columns would have an incorrect background color \[ID 30110\]
 
 In table visualizations, in some cases, primary key columns would have an incorrect background color. From now on, the Dashboards app will visualize primary key columns in the same way as they are visualized in DataMiner Cube.
 
-#### BPA tests could fail with a 'BPA has an invalid signature' error \[ID_30118\]
+#### BPA tests could fail with a 'BPA has an invalid signature' error \[ID 30118\]
 
 On DataMiner Agents on which the latest Windows updates had not been installed, in some cases, BPA tests would fail with the following error:
 
@@ -635,74 +635,74 @@ From now on, BPA tests that are signed with the Skyline code signing certificate
 Force loaded certificate: SkylineCodeSigning.cer (Skyline Certificate). WARNING! Machine might not have latest Windows Updates.
 ```
 
-#### SNMPv1/SNMPv2 element could remain in a timeout state after its IP address had been first set to a non-existing address and then to its original address \[ID_30123\]
+#### SNMPv1/SNMPv2 element could remain in a timeout state after its IP address had been first set to a non-existing address and then to its original address \[ID 30123\]
 
 When you change the IP address of an SNMPv1 or SNMPv2 element that is polled using a “dynamic IP” parameter to a non-existing address, the element will go into timeout as it tries to poll that non-existing IP address. However, up to now, when you then changed the IP address back to the one the element had before, it would incorrectly remain in timeout until it was restarted.
 
 Also, from now on, when an SNMP-related failure occurs, the log entry will include the error code. Where previously a log entry like “Unable to set destination port” would be added, DataMiner will now add a log entry like “Unable to set destination port (error code: 3)”.
 
-#### DataMiner Cube - Backup: Users without 'Backup \> Configure' permission would incorrectly be allowed to update the “Indexing Engine location” backup path \[ID_30131\]
+#### DataMiner Cube - Backup: Users without 'Backup \> Configure' permission would incorrectly be allowed to update the “Indexing Engine location” backup path \[ID 30131\]
 
 In the *Backup* section of *System Center*, users without *Modules \> System configuration \> Backup \> Configure* permission would incorrectly be allowed to update the *Indexing Engine location* backup path.
 
-#### DataMiner Cube - Scheduler: Users with permission to add tasks but not to edit them would not be able to save a newly created task \[ID_30132\]
+#### DataMiner Cube - Scheduler: Users with permission to add tasks but not to edit them would not be able to save a newly created task \[ID 30132\]
 
 When, in the Scheduler app, users created a new scheduled task, they were not able to save that task when they had permission to add tasks but not to edit them.
 
-#### NATS logfile_size_limit setting would not automatically be added after a DataMiner upgrade \[ID_30146\]
+#### NATS logfile_size_limit setting would not automatically be added after a DataMiner upgrade \[ID 30146\]
 
 When a DataMiner Agent using NATS was upgraded to a version containing the logfile_size_limit setting, that setting would not automatically be added to the nats-server.config file in the C:\\Skyline DataMiner\\NATS\\nats-streaming-server folder. It would only be added the first time you manually sent a NatsCustodianRestartNatsRequest message.
 
 From now on, when a DataMiner Agent starts up after being upgraded and the nats-server.config does not contain the logfile_size_limit setting, it will be added at SLNet startup. Its value will by default be set to 10 MB.
 
-#### Dashboards app - GQI: 'Start from' option would not be available when the Queries.json file was empty or missing \[ID_30157\]
+#### Dashboards app - GQI: 'Start from' option would not be available when the Queries.json file was empty or missing \[ID 30157\]
 
 When building a GQI query, in some cases, the “Start from” option would not be available when the C:\\Skyline DataMiner\\Generic Interface\\Queries.json file was empty or missing.
 
-#### DataMiner Cube - Users/Groups: Duplicate activity log entries \[ID_30162\]
+#### DataMiner Cube - Users/Groups: Duplicate activity log entries \[ID 30162\]
 
 When, in the *Users/groups* section of *System Center*, you opened a user card and selected the *Activity* tab, in some cases, the list would contain duplicate activity log entries.
 
-#### DataMiner Cube - Visual Overview: Button to navigate to another card would no longer work after clicking the Back button \[ID_30167\]
+#### DataMiner Cube - Visual Overview: Button to navigate to another card would no longer work after clicking the Back button \[ID 30167\]
 
 When, on a visual overview, you clicked a button to navigate to another card and then clicked the Back button, in some cases, clicking the button to navigate to another card a second time would no longer open that other card.
 
-#### DataMiner Cube - EPM: Problem opening an EPM card from an alarm when the 'System Name' alarm property contained a trailing space \[ID_30169\]
+#### DataMiner Cube - EPM: Problem opening an EPM card from an alarm when the 'System Name' alarm property contained a trailing space \[ID 30169\]
 
 When the “System Name” property of an alarm contained a trailing space, in some cases, it would not be possible to open the EPM card from the alarm in question.
 
-#### DataMiner Cube - Cassandra: Information events would not have the correct properties \[ID_30178\]
+#### DataMiner Cube - Cassandra: Information events would not have the correct properties \[ID 30178\]
 
 When you opened an information event on a DataMiner Cube connected to a system with a Cassandra database, in some cases, that information event would not have the correct properties. The problem was due to the properties being stored incorrectly into the database.
 
-#### Dashboards app - GQI: Filter on protocol-based inter-element query would not be applied to all elements \[ID_30187\]
+#### Dashboards app - GQI: Filter on protocol-based inter-element query would not be applied to all elements \[ID 30187\]
 
 Up to now, a filter on a protocol-based inter-element query would incorrectly only be applied to the first two elements of the protocol. This caused the parameters of the other elements to be returned even when they did not match the filter.
 
-#### SLLogCollector: Problem when process list update took longer than 1 second \[ID_30203\]
+#### SLLogCollector: Problem when process list update took longer than 1 second \[ID 30203\]
 
 When SLLogCollector updated its list of processes, it would incorrectly try to update it again when the update took longer than 1 second.
 
-#### Interactive Automation scripts: Lazy-loaded tree controls could no longer be expanded \[ID_30204\]
+#### Interactive Automation scripts: Lazy-loaded tree controls could no longer be expanded \[ID 30204\]
 
 In interactive Automation scripts, in some cases, it would no longer be possible to expand lazy-loaded tree controls.
 
-#### DataMiner Cube: Not possible to unmask a masked EPM object \[ID_30208\]
+#### DataMiner Cube: Not possible to unmask a masked EPM object \[ID 30208\]
 
 In some cases, it would not be possible to unmask a masked EPM object. When you right-clicked, the shortcut menu’s *Unmask* command would incorrectly be disabled.
 
-#### Failover: Datetime values read from the \<Failover> section of DMS.xml would be parsed incorrectly \[ID_30215\]
+#### Failover: Datetime values read from the \<Failover> section of DMS.xml would be parsed incorrectly \[ID 30215\]
 
 In some cases, datetime values read from the \<Failover> section of DMS.xml would be parsed incorrectly.
 
-#### DataMiner Cube could become unresponsive when you opened the Profiles app \[ID_30244\]
+#### DataMiner Cube could become unresponsive when you opened the Profiles app \[ID 30244\]
 
 In some cases, DataMiner Cube could become unresponsive when you opened the Profiles app.
 
-#### Dashboards app - GQI: Random values displayed in table when query returned an empty result set \[ID_30252\]
+#### Dashboards app - GQI: Random values displayed in table when query returned an empty result set \[ID 30252\]
 
 When a GQI query returned an empty result set, in some cases, the table would incorrectly display a series of random values.
 
-#### DataMiner Cube - Data Display: Pie charts no longer displayed on the Reports page of element cards \[ID_30344\]
+#### DataMiner Cube - Data Display: Pie charts no longer displayed on the Reports page of element cards \[ID 30344\]
 
 In some cases, the Reports page of an element card would no longer display pie charts.

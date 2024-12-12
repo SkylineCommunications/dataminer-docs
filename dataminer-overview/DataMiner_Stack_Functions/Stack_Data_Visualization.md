@@ -162,7 +162,7 @@ Moreover, dashboards adhere to DevOps principles and can easily evolve over time
 > [!TIP]
 > See [Dashboard Share](xref:Overview_Collaboration#dashboard-share) for more information.
 
-The DataMiner Dashboards app offers a wide range of visualizations that can make use of various data feeds, including **GQI-based query feeds**. This "Queries" data item allows you to [construct queries](xref:Creating_GQI_query) to access the wealth of data available in your DataMiner System. See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi)
+The DataMiner Dashboards app offers a wide range of visualizations that can make use of various data, including **GQI-based queries**. This "Queries" data item allows you to [construct queries](xref:Creating_GQI_query) to access the wealth of data available in your DataMiner System. See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi)
 
 > [!TIP]
 > For more information:

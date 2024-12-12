@@ -27,15 +27,7 @@ update.log.YYYY_MM_DD_HH_MM_SS.txt
 
 ## In DataMiner Cube
 
-From DataMiner 10.0.0/10.0.2 onwards:
-
 1. Click the user icon in the Cube header and select *About*.
-
-1. In the *About* box, click the *Versions* tab and scroll all the way to the bottom to get to the upgrade history.
-
-Prior to DataMiner 10.0.0/10.0.2:
-
-1. In the top-right corner of the screen, click the *?* icon and select *About*.
 
 1. In the *About* box, click the *Versions* tab and scroll all the way to the bottom to get to the upgrade history.
 

@@ -99,7 +99,7 @@ class Surveyor,AlarmConsole,Element Gray;
 
   1. Restart the element, if possible.
 
-  1. Check for the element state in *Element.xml*.
+  1. If [Swarming](xref:Swarming) is not enabled, check for the element state in *Element.xml*.
 
   1. Check for Correlation issues.
 

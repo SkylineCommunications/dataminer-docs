@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.3.9
 
 ## Highlights
 
-#### SLProtocol is now a 64-bit process by default [ID_36725]
+#### SLProtocol is now a 64-bit process by default [ID 36725]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -28,7 +28,7 @@ However, if necessary, it can still be run as a 32-bit process. For more informa
 
 ## Other features
 
-#### DataMiner Object Models: Caching of DOM configuration data [ID_36412]
+#### DataMiner Object Models: Caching of DOM configuration data [ID 36412]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -61,7 +61,7 @@ In the log files, you will be able to find out which caches are enabled and when
 
 When the caches are enabled, it is no longer possible to get paged results when retrieving DomDefinitions, DomBehaviorDefinitions or SectionDefinitions. Instead, the complete list of objects matching the given query will be returned, even if that list is larger than the configured page size.
 
-#### DataMiner Object Models: GroupFieldDescriptor and UserFieldDescriptor now have dropdown support [ID_36556]
+#### DataMiner Object Models: GroupFieldDescriptor and UserFieldDescriptor now have dropdown support [ID 36556]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -76,7 +76,7 @@ From now on, the form component will render the `GroupFieldDescriptor` and `User
 > [!NOTE]
 > Up to now, only users with *Modules > System configuration > Security > UI available* permission were allowed to view the list of DataMiner users. From now on, even users without *Modules > System configuration > Security > UI available* permission will at least be able to view the list of DataMiner users who are a member of any of the groups they themselves are a member of.
 
-#### DataMiner Object Models: Soft-deletable objects [ID_36721]
+#### DataMiner Object Models: Soft-deletable objects [ID 36721]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -94,7 +94,7 @@ When the fields linked to a soft-deleted `FieldDescriptor` or part of a soft-del
 - Values are allowed to exist in the fields on a `DomInstance` for a soft-deleted `FieldDescriptor`, `SectionDefinitionLink`, or `DomStatusSectionDefinitionLink`.
 - Updating a `DomInstance` with new/updated values will be blocked for a field that has a soft-deleted `FieldDescriptor`, or is part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` (for that status). A [ValueForSoftDeletedFieldNotAllowed error](xref:DomInstance#errors) will be returned.
 
-#### Reinitializing ResourceManager [ID_36811]
+#### Reinitializing ResourceManager [ID 36811]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -120,7 +120,7 @@ To (re)initialize Resource Manager:
 
 ### Enhancements
 
-#### NATS: Enhanced (re)configuration [ID_35246]
+#### NATS: Enhanced (re)configuration [ID 35246]
 
 Automatic NATS (re)configuration has been enhanced.
 
@@ -134,31 +134,31 @@ Automatic NATS (re)configuration has been enhanced.
 
 All logging related to a NATS reconfiguration will be added to the *SLNATSCustodian.txt* log file.
 
-#### Security enhancements [ID_36319] [ID_36928]
+#### Security enhancements [ID 36319] [ID 36928]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 A number of security enhancements have been made.
 
-#### DataMiner upgrade: New upgrade action added that will clean up default ListView column configuration data [ID_36475]
+#### DataMiner upgrade: New upgrade action added that will clean up default ListView column configuration data [ID 36475]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 During a DataMiner upgrade, from now on, all default ListView column configuration data left on the server will automatically be cleaned up if no more than one Cube client has taken a copy of that data.
 
-#### Cassandra Cluster: Trend tables will no longer be sharded [ID_36551]
+#### Cassandra Cluster: Trend tables will no longer be sharded [ID 36551]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 On a Cassandra Cluster database, from now on, the trend tables will no longer be sharded. This will enhance overall performance when requesting trend data, especially on systems on which real-time trend data is stored for longer than a day.
 
-#### SLDataGateway: Enhanced performance of the Elasticsearch health monitoring logic [ID_36554]
+#### SLDataGateway: Enhanced performance of the Elasticsearch health monitoring logic [ID 36554]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 Because of a number of enhancements, overall performance of the Elasticsearch health monitoring logic has increased.
 
-#### Cassandra Cleaner can now also be used to clean the 'infotrace' table [ID_36592]
+#### Cassandra Cleaner can now also be used to clean the 'infotrace' table [ID 36592]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -180,13 +180,13 @@ Up to now, the *Cassandra Cleaner* tool could only be used to remove data from t
 
 For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
 
-#### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
+#### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID 36645]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
 
-#### Automation: DLL references on script libraries will also be loaded when an Automation script does not need to be recompiled [ID_36730]
+#### Automation: DLL references on script libraries will also be loaded when an Automation script does not need to be recompiled [ID 36730]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -194,13 +194,13 @@ Up to now, when the SLAutomation service was started, the DLL references defined
 
 From now on, when the SLAutomation service is started, the DLL references on an Automation script library will also be loaded when that library does not need to be recompiled.
 
-#### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
+#### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID 36745]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 redistributable will no longer be checked.
 
-#### DataMiner Object Models: DomInstanceHistory will now be saved asynchronously [ID_36785]
+#### DataMiner Object Models: DomInstanceHistory will now be saved asynchronously [ID 36785]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -228,13 +228,13 @@ The `DomInstanceHistoryStorageBehavior` can be set to one of three values:
 > [!NOTE]
 > When you delete a DomInstance with a large number of associated HistoryChange records, deleting all those HistoryChange records can take a long time, even when this is done asynchronously. Therefore, we recommend disabling the creation of HistoryChange records if you do not need them.
 
-#### Service & Resource Management: Enhanced performance when adding or updating ReservationInstances [ID_36788]
+#### Service & Resource Management: Enhanced performance when adding or updating ReservationInstances [ID 36788]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 Because of a number of enhancements, overall performance has increased when adding or updating ReservationInstances, especially on systems with a large number of overlapping bookings and a large number of bookings using the same resources.
 
-#### DataMiner installation/upgrade: Updated DataMiner Extension Modules [ID_36799] [ID_37137]
+#### DataMiner installation/upgrade: Updated DataMiner Extension Modules [ID 36799] [ID 37137]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -251,7 +251,7 @@ When you install or upgrade a DataMiner Agent, the following DataMiner Extension
 > - For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
 > - The above-mentioned DxMs all use .NET 6.
 
-#### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID_36809]
+#### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID 36809]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -259,7 +259,7 @@ From now on, the root time of an alarm group (i.e. the time of arrival of the fi
 
 Up to now, when alarm groups were recreated after a DataMiner upgrade, their time of arrival and root time was set to the time of the upgrade.
 
-#### DataMiner upgrade: Microsoft .NET 5 will no longer be installed by default [ID_36815]
+#### DataMiner upgrade: Microsoft .NET 5 will no longer be installed by default [ID 36815]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -268,7 +268,7 @@ Up to now, Microsoft .NET 5 would always be installed during a DataMiner upgrade
 > [!NOTE]
 > If Microsoft .NET 5 is present, it will not be automatically uninstalled during a DataMiner upgrade.  
 
-#### SLWatchdog: Additional logging & retry mechanism for restarts [ID_36839]
+#### SLWatchdog: Additional logging & retry mechanism for restarts [ID 36839]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -285,7 +285,7 @@ In the `C:\Skyline DataMiner\Tools` folder, you can also find the following new 
 - *DataMiner Start DataMiner And SLNet.bat*
 - *DataMiner Start DataMiner.bat*
 
-#### Renaming objects: DMA will throw a more clearer error message in case the name already exists [ID_36845]
+#### Renaming objects: DMA will throw a more clearer error message in case the name already exists [ID 36845]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -297,7 +297,7 @@ The name is already used by another object in the DMS.
 
 Also, certain false positive errors that used to occur when renaming objects will no longer be logged in *SLErrors.txt*, and a NATS exception that is generated when a message needs to be sent from SLNet to SLDataGateway, SLHelper or SLAnalytics has now been converted to a *DataMinerException* to avoid DataMiner/client disconnects due to `message not marked as serializable` errors.
 
-#### User-Defined APIs: ApiTriggerInput object has a new TokenId property [ID_36856] [ID_37015]
+#### User-Defined APIs: ApiTriggerInput object has a new TokenId property [ID 36856] [ID 37015]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 <!-- Not added to MR 10.4.0 -->
@@ -306,7 +306,7 @@ The `ApiTriggerInput` object, which contains information about the API trigger, 
 
 This property will contain the GUID of the `ApiToken` that was used to trigger the API.
 
-#### Elasticsearch/OpenSearch: Unused suggest indices have been disabled [ID_36875]
+#### Elasticsearch/OpenSearch: Unused suggest indices have been disabled [ID 36875]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -355,7 +355,7 @@ The following suggest indices have been disabled:
 > [!NOTE]
 > Existing suggest indices will not automatically be removed from the database. You can remove them manually if necessary.
 
-#### SLNetClientTest: Enhancements made to 'DataMiner Object Model' window [ID_36891]
+#### SLNetClientTest: Enhancements made to 'DataMiner Object Model' window [ID 36891]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -382,13 +382,13 @@ A number of enhancements have been made to the *DataMiner Object Model* window.
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### NATS firewall rule profiles set to 'All" during DataMiner upgrades [ID_36914]
+#### NATS firewall rule profiles set to 'All" during DataMiner upgrades [ID 36914]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 During a DataMiner upgrade, from now on, the *InstallNATS* upgrade action will set all existing NATS firewall rule profiles to "All".
 
-#### SLLogCollector: Easier selection of processes after selecting 'Include memory dump' [ID_36982]
+#### SLLogCollector: Easier selection of processes after selecting 'Include memory dump' [ID 36982]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -396,13 +396,13 @@ When configuring the *SLLogCollector* tool, you can select the *Include memory d
 
 ### Fixes
 
-#### Problem due to incorrect NATS reconfiguration [ID_35246]
+#### Problem due to incorrect NATS reconfiguration [ID 35246]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When, for example in a three-node DMS configuration composed of a Failover pair and another, separate DMA, one of the agents in the Failover setup went offline, after 5 minutes, the separate non-Failover agent would incorrectly shift to a two-node DMS configuration. From now on, the non-Failover agent will keep the three-node DMS configuration if one of the Failover agents goes offline.
 
-#### Cassandra: Table data that should not expire had a TTL value set [ID_35263]
+#### Cassandra: Table data that should not expire had a TTL value set [ID 35263]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -414,19 +414,19 @@ The following mechanisms have now been implemented:
 
 - When existing data with an incorrect TTL value set is retrieved from the database, its TTL value will automatically be removed to prevent it from being deleted.
 
-#### NATS auto-reconnect mechanism could lead to a situation in which a large number of TCP ports were left open [ID_36339]
+#### NATS auto-reconnect mechanism could lead to a situation in which a large number of TCP ports were left open [ID 36339]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 When NATS tried to automatically reconnect at a moment when none of the servers were available, it would incorrectly not wait for a while until the cluster was online again. In some cases, this could lead to a situation in which a large number of TCP ports were left open.
 
-#### SLDataGateway: Memory leak when migrating average trend data from MySQL to Cassandra Cluster [ID_36367]
+#### SLDataGateway: Memory leak when migrating average trend data from MySQL to Cassandra Cluster [ID 36367]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 SLDataGateway would leak memory when migrating average trend data from MySQL to Cassandra Cluster.
 
-#### Problem when an SNMP connection was assigned to a separate thread [ID_36441]
+#### Problem when an SNMP connection was assigned to a separate thread [ID 36441]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -443,7 +443,7 @@ Also, the following issues have been fixed:
 > [!NOTE]
 > Known issue: Currently, the action to stop the current group is only capable of stopping the group on the main thread. It is not yet possible to specify a particular thread on which to stop a group.
 
-#### Failover: Problems when running BPA tests [ID_36445]
+#### Failover: Problems when running BPA tests [ID 36445]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -456,13 +456,13 @@ Also, certain managers in SLNet (e.g. BPA Manager) would not properly initialize
 - `State="Offline"`
 - `StateBeforeShutDown="Online"`
 
-#### SNMPv3 credentials would not get deleted when an SNMPv3 element was deleted [ID_36573]
+#### SNMPv3 credentials would not get deleted when an SNMPv3 element was deleted [ID 36573]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When an SNMPv3 element was deleted, its SNMPv3 credentials would incorrectly not get deleted. Also, when users were deleted, their DCP credentials would not get deleted.
 
-#### NT Notify type NT_ADD_VIEW could be executed with an invalid parent view ID [ID_36739]
+#### NT Notify type NT_ADD_VIEW could be executed with an invalid parent view ID [ID 36739]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -470,13 +470,13 @@ Up to now, when an `NT_ADD_VIEW` call was executed with `parentViewID` set to a 
 
 Validation has now been added to `NT_ADD_VIEW`. When a request enters to create a view with an invalid parent view ID, the view will not be created. Also, views with an invalid parent view ID will now be placed directly under the root view. This will allow you to drag the view to its correct location, updating its parent view ID to a valid ID in the process. An error will also be logged and the *View Recursion* BPA test will report the view in question.
 
-#### SLAnalytics - Behavioral anomaly detection: Problem when processing a behavioral change point [ID_36755]
+#### SLAnalytics - Behavioral anomaly detection: Problem when processing a behavioral change point [ID 36755]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 In some cases, an `index out of bounds` error could occur when processing a behavioral change point.
 
-#### Certain alarms would have their 'root creation time' set incorrectly [ID_36812]
+#### Certain alarms would have their 'root creation time' set incorrectly [ID 36812]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -484,50 +484,50 @@ In some cases, the *root creation time* of an alarm would not be equal to the *c
 
 For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
 
-#### SLAnalytics - Automatic incident tracking: 'relationThreshold' set to an incorrect value after a DataMiner upgrade [ID_36826]
+#### SLAnalytics - Automatic incident tracking: 'relationThreshold' set to an incorrect value after a DataMiner upgrade [ID 36826]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 <!-- Not added to MR 10.4.0 -->
 
 After upgrading from DataMiner main version 10.3.0 (or older) to DataMiner feature version 10.3.7 or 10.3.8, the default `relationThreshold` value would unexpectedly be set to 0.5 instead of 0.7 (i.e. the default value).
 
-#### Problem with SLScripting when resolving assemblies [ID_36843]
+#### Problem with SLScripting when resolving assemblies [ID 36843]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 In some cases, an error could occur in SLScripting when it was resolving DLL files for a QAction or an Automation Script.
 
-#### Problem with SLProtocol when the system locale was set to Japanese [ID_36854]
+#### Problem with SLProtocol when the system locale was set to Japanese [ID 36854]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 On the system locale was set to Japanese, an error could occur in SLProtocol when a QAction tried to read a parameter value containing raw bytes.
 
-#### Problem when renaming an element [ID_36855]
+#### Problem when renaming an element [ID 36855]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 In some rare cases, an error could be thrown when an element was renamed.
 
-#### Cassandra Cluster: Not all data would get offloaded when the database went down [ID_36865]
+#### Cassandra Cluster: Not all data would get offloaded when the database went down [ID 36865]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When a Cassandra Cluster database went down, not all data would get offloaded.
 
-#### Polling an SNMP table with MultipleGetNext could incorrectly produce two result sets [ID_36867]
+#### Polling an SNMP table with MultipleGetNext could incorrectly produce two result sets [ID 36867]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When an SNMP table was polled with *MultipleGetNext* and the response was not processed within 10 minutes, in some rare cases, an error could occur in SLSNMPManager, causing the table to be polled a second time as the result of a retry. This meant that, in such a case, one poll action would produce two result sets.
 
-#### Elements would not be created on remote agents when importing elements from a CSV file [ID_36873]
+#### Elements would not be created on remote agents when importing elements from a CSV file [ID 36873]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you imported elements from a CSV file, new elements would only be created on the local agent, not on any of the remote agents, i.e. the agents other than the one the Cube client was connected to. Existing elements would be updated correctly on the local agents as well as on all remote agents.
 
-#### Incorrect error message was thrown when NATS credentials could not be retrieved from a remote DMA [ID_36906]
+#### Incorrect error message was thrown when NATS credentials could not be retrieved from a remote DMA [ID 36906]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -543,13 +543,13 @@ Failed to copy credentials from <ip> - TraceData: (amount = 1)
           - Reason: ModuleNotInitialized
 ```
 
-#### A DataMiner Agent with a single-node Cassandra and an Elasticsearch would not start up when Elasticsearch was down [ID_36930]
+#### A DataMiner Agent with a single-node Cassandra and an Elasticsearch would not start up when Elasticsearch was down [ID 36930]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 When a DataMiner Agent had its own single-node Cassandra database as well as its own Elasticsearch database, DataMiner would not start up when Elasticsearch was down. From now on, it will start up, but a full DataMiner restart will be required for all modules depending on Elasticsearch to work properly.
 
-#### Elements would no longer be able to generate alarms and information events after having been migrated [ID_36951]
+#### Elements would no longer be able to generate alarms and information events after having been migrated [ID 36951]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -558,11 +558,11 @@ When an element had been migrated from one DataMiner Agent to another, it would 
 > [!IMPORTANT]
 > The element protocol must pass the DataMiner ID of the element instead of the DataMiner ID of the DataMiner Agent.
 
-#### Deprecated DMS_GET_INFO call could return unexpected DVE child data [ID_36964]
+#### Deprecated DMS_GET_INFO call could return unexpected DVE child data [ID 36964]
 
 The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
 
-#### Dynamic IP setting for a serial connection would cause incorrect SSH errors to be logged [ID_37016]
+#### Dynamic IP setting for a serial connection would cause incorrect SSH errors to be logged [ID 37016]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -572,7 +572,7 @@ When, for a particular parameter, the `options` attribute of the `<Type>` elemen
 
 Moreover, when additional logging was activated for SLPort, an `Attempted to set SSH options on a non-SSH connection` error would be added to the same log file, followed by an unreadable value (representing the IP address), which could even cause a fatal error to occur in SLPort.
 
-#### Problem when the NATS library called the error handling event [ID_37028]
+#### Problem when the NATS library called the error handling event [ID 37028]
 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
 

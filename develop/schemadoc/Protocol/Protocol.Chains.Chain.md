@@ -4,7 +4,7 @@ uid: Protocol.Chains.Chain
 
 # Chain element
 
-Each Protocol.Chains.Chain child represents a different topology view of an EPM (formerly known as CPE) or Service Overview Manager element.
+Each Protocol.Chains.Chain child represents a different topology view of an EPM or Service Overview Manager element.
 
 > [!TIP]
 > See also: [EPM chains and fields configuration](xref:EPMManagerChainsAndFields)
@@ -30,4 +30,4 @@ Each Protocol.Chains.Chain child represents a different topology view of an EPM 
 |***Choice***|||
 |&nbsp;&nbsp;***Sequence***|[0, 1]||
 |&nbsp;&nbsp;&nbsp;&nbsp;[Display](xref:Protocol.Chains.Chain.Display)||Configures chain display settings.|
-|&nbsp;&nbsp;&nbsp;&nbsp;[Field](xref:Protocol.Chains.Chain.Field)|[0, *]|Each field in a chain is a possible block in the drill-down diagram displayed on the visual pages of an EPM (formerly known as CPE) element.|
+|&nbsp;&nbsp;&nbsp;&nbsp;[Field](xref:Protocol.Chains.Chain.Field)|[0, *]|Each field in a chain is a possible block in the drill-down diagram displayed on the visual pages of an EPM element.|

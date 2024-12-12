@@ -365,6 +365,8 @@ items:
         items:
         - name: Introduction
           topicUid: ConnectionsSnmpIntroduction
+        - name: OIDs
+          topicUid: ConnectionsSnmpOids
         - name: Retrieving a variable
           topicUid: ConnectionsSnmpRetrievingAVariable
         - name: Retrieving multiple variables
@@ -383,6 +385,8 @@ items:
           topicUid: ConnectionsSnmpTraps
         - name: Bitrate calculations
           topicUid: ConnectionsSnmpBitRateCalculations
+        - name: SNMPv3
+          topicUid: ConnectionsSnmpSnmpv3
         - name: Protocol inner workings
           topicUid: ConnectionsSnmpProtocolInnterWorkings
         - name: Exercise
@@ -620,6 +624,200 @@ items:
         topicUid: Connector_help_template
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
+    - name: Best practices
+      topicUid: CodingGuidelines
+      items:
+        - name: General
+          items:
+            - name: Protocol name
+              topicUid: Protocol_name
+            - name: Formatting
+              topicUid: ConnectorBestPracticesFormatting
+            - name: Names
+              topicUid: ConnectorBestPracticesNames
+              items:
+                - name: Reserved parameter names
+                  topicUid: ConnectorBestPracticesReservedParameterNames
+            - name: ID values
+              items:
+                - name: ID range
+                  topicUid: ID_range
+                - name: ID gaps
+                  topicUid: ID_gaps
+                - name: ID ordering
+                  topicUid: ID_ordering
+                - name: ID grouping
+                  topicUid: ID_grouping
+            - name: C# code conventions
+              items:
+                - name: General
+                  topicUid: General_COD
+                - name: Capitalization style
+                  topicUid: Capitalization_style
+                - name: Namespaces
+                  topicUid: Namespaces
+                - name: Classes, structs and interfaces
+                  topicUid: Classes_structs_and_interfaces
+                - name: Enumerations
+                  topicUid: Enumerations
+                - name: Methods
+                  topicUid: Methods
+                - name: Properties
+                  topicUid: Properties
+                - name: Fields
+                  topicUid: Fields
+                - name: Parameters
+                  topicUid: Parameters1
+                - name: Local variables
+                  topicUid: Local_variables
+                - name: Ordering
+                  topicUid: Ordering
+                - name: Layout
+                  topicUid: Layout
+                - name: Spacing
+                  topicUid: Spacing
+                - name: Readability
+                  topicUid: Readability
+                - name: Maintainability
+                  topicUid: Maintainability
+                - name: XML documentation
+                  topicUid: XML_documentation
+                - name: Commenting
+                  topicUid: Commenting
+        - name: Administrative metadata
+          items:
+            - name: Comment metadata
+              topicUid: Comment_metadata
+            - name: Protocol metadata
+              topicUid: Protocol_metadata
+        - name: User interface
+          items:
+            - name: Element wizard
+              items:
+                - name: Default settings
+                  topicUid: Default_settings
+                - name: Connection names
+                  topicUid: Connection_names
+            - name: Protocol pages
+              topicUid: ConnectorBestPracticesProtocolPages
+            - name: Displayed text
+              topicUid: Displayed_text
+              items:
+                - name: Title case
+                  topicUid: Title_case
+                - name: Brand and product names
+                  topicUid: Brand_and_product_names
+                - name: Acronyms and initialisms
+                  topicUid: Acronyms_and_initialisms
+            - name: Parameters
+              topicUid: ConnectorBestPracticesParameters
+            - name: Tables
+              topicUid: ConnectorBestPracticesTables
+            - name: Buttons
+              topicUid: Buttons
+            - name: Toggle buttons
+              topicUid: Toggle_buttons
+            - name: Page buttons
+              topicUid: ConnectorBestPracticesPageButtons
+            - name: Progress bars
+              topicUid: Progress_bars
+        - name: Monitoring
+          items:
+            - name: Trending
+              topicUid: Trending1
+            - name: Alarming
+              topicUid: Alarming1
+        - name: Protocol
+          items:
+            - name: API
+              items:
+                - name: Device API
+                  topicUid: Device_API
+                - name: DataMiner API
+                  topicUid: DataMiner_API
+            - name: Communication
+              topicUid: Communication1
+            - name: Logic
+              items:
+                - name: Operation duration
+                  topicUid: Operation_duration
+                - name: Operation execution delay
+                  topicUid: Operation_execution_delay
+                - name: Value update verification
+                  topicUid: Value_update_verification
+                - name: Protocol threads
+                  topicUid: Protocol_threads
+            - name: Timers
+              topicUid: ConnectorBestPracticesTimers
+            - name: DVE
+              topicUid: ConnectorBestPracticesDVEs
+            - name: Tables
+              items:
+                - name: Primary keys
+                  topicUid: Primary_keys1
+                - name: Display keys
+                  topicUid: Display_keys1
+                - name: Data handling
+                  topicUid: Data_handling
+                - name: Integrity constraints
+                  topicUid: Integrity_constraints
+                - name: Preserve state option
+                  topicUid: Preserve_state_option
+                - name: Clear Table Data on Polling Disable
+                  topicUid: Clear_Table_Data_on_Polling_Disable
+            - name: Parameters
+              items:
+                - name: Saving parameters
+                  topicUid: Saving_parameters
+                - name: Loading parameters in SLElement
+                  topicUid: Loading_parameters_in_SLElement
+            - name: QActions
+              items:
+                - name: Functionality
+                  topicUid: Functionality
+                - name: Maintainability
+                  topicUid: Maintainability1
+                - name: Robustness
+                  topicUid: Robustness
+                - name: Conditional execution
+                  topicUid: Conditional_execution
+                - name: Localization
+                  topicUid: Localization
+                - name: Inter-process communication
+                  topicUid: Inter-process_communication
+                - name: Exception handling
+                  topicUid: Exception_handling
+                - name: Logging
+                  topicUid: Logging
+                - name: Multi-threading
+                  topicUid: Multi-threading1
+                - name: Thread.Sleep
+                  topicUid: Thread_Sleep
+                - name: StyleCop
+                  topicUid: StyleCop
+            - name: .NET Recommendations
+              topicUid: _NET_Recommendations
+              items:
+                - name: Microbenchmarking
+                  topicUid: Microbenchmarking
+                - name: String vs. StringBuilder
+                  topicUid: String_vs_StringBuilder
+                - name: Conditional statements
+                  topicUid: Conditional_statements
+                - name: Loops
+                  topicUid: Loops
+                - name: Collections
+                  topicUid: Collections
+                - name: Linq
+                  topicUid: Linq
+        - name: Validation
+          topicUid: ConnectorBestPracticesValidation
+        - name: Points of attention
+          items:
+            - name: Skyline Driver Passport Platform
+              topicUid: Skyline_Driver_Passport_Platform
+            - name: Minimum DMA version
+              topicUid: Minimum_DMA_version
     - name: How-tos
       items:
       - name: How to aggregate alarm severities
@@ -649,13 +847,12 @@ items:
       - name: How to use the element log in connector integrations
         topicUid: How_to_use_the_element_log_in_connector_integrations
     - name: Troubleshooting
-      items:
+      items: 
       - name: Investigating a protocol thread RTE
         topicUid: Investigating_a_protocol_thread_RTE
       - name: Why is serial data not visible in DataMiner?
         topicUid: Why_is_serial_data_not_visible_in_DataMiner
       - name: QAction exceptions
-        topicUid: QAction_exceptions
         items:
         - name: System.NullReferenceException
           topicUid: System_NullReferenceException
@@ -665,6 +862,12 @@ items:
           topicUid: System_FormatException
         - name: System.Collections.Generic.KeyNotFoundException
           topicUid: System_Collections_Generic_KeyNotFoundException
+        - name: System.OutOfMemoryException
+          topicUid: System_OutOfMemoryException
+        - name: System.StackOverflowException
+          topicUid: System_StackOverflowException
+        - name: Exception in Finalizer
+          topicUid: Finalizer_Exception
         - name: Identifying the source of an exception
           topicUid: Identifying_the_source_of_an_exception
       - name: Use cases
@@ -737,14 +940,18 @@ items:
         topicUid: AutomationActionUi
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
+    - name: Best practices
+      topicUid: Automation_best_practices
     - name: How-tos
       items:
-      - name: How to make your Automation scripts debug ready
+      - name: Making your Automation scripts debug-ready
         topicUid: How_to_make_your_automation_scripts_debug_ready
       - name: Getting started with the IAS Toolkit
         topicUid: Getting_Started_with_the_IAS_Toolkit
       - name: Implementing interactive Automation scripts in regression tests (best practices)
         topicUid: BP_Implementing_IAS_in_Regression_Tests
+      - name: Creating a Cypress test for an interactive Automation script
+        topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
   - name: Class Library
     items:
     - name: Class library introduction
@@ -816,6 +1023,8 @@ items:
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
+    - name: Skyline.DataMiner.Net.Swarming
+      topicUid: Skyline.DataMiner.Net.Swarming
     - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
       topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
     - name: Interop.SLDms
@@ -1457,6 +1666,8 @@ items:
             topicUid: Protocol.Groups.Group-id
           - name: '@ping'
             topicUid: Protocol.Groups.Group-ping
+          - name: '@threadId'
+            topicUid: Protocol.Groups.Group-threadId
           - name: Condition
             topicUid: Protocol.Groups.Group.Condition
           - name: Content
@@ -2567,6 +2778,13 @@ items:
             topicUid: Protocol.PortSettings.SetCommunity.DefaultValue
           - name: Disabled
             topicUid: Protocol.PortSettings.SetCommunity.Disabled
+        - name: SkipCertificateVerification
+          topicUid: Protocol.PortSettings.SkipCertificateVerification
+          items: 
+          - name: DefaultValue
+            topicUid: Protocol.PortSettings.SkipCertificateVerification.DefaultValue
+          - name: Disabled
+            topicUid: Protocol.PortSettings.SkipCertificateVerification.Disabled
         - name: SlowPoll
           topicUid: Protocol.PortSettings.SlowPoll
           items: 
@@ -2749,6 +2967,10 @@ items:
           items: 
           - name: '@connection'
             topicUid: Protocol.Threads.Thread-connection
+          - name: '@id'
+            topicUid: Protocol.Threads.Thread-id
+          - name: '@name'
+            topicUid: Protocol.Threads.Thread-name
       - name: Timers
         topicUid: Protocol.Timers
         items: 
@@ -3083,6 +3305,188 @@ items:
                       topicUid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.Version-max
                     - name: '@min'
                       topicUid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.Version-min
+    - name: SchemaTypes
+      items:
+      - name: EnumActionOn
+        topicUid: Protocol-EnumActionOn
+      - name: EnumActionType
+        topicUid: Protocol-EnumActionType
+      - name: EnumChainsFilters
+        topicUid: Protocol-EnumChainsFilters
+      - name: EnumColumnOptionType
+        topicUid: Protocol-EnumColumnOptionType
+      - name: EnumCpeAlignment
+        topicUid: Protocol-EnumCpeAlignment
+      - name: EnumDatabasePartition
+        topicUid: Protocol-EnumDatabasePartition
+      - name: EnumDiscreteValue
+        topicUid: Protocol-EnumDiscreteValue
+      - name: EnumDisplayState
+        topicUid: Protocol-EnumDisplayState
+      - name: EnumDisplayType
+        topicUid: Protocol-EnumDisplayType
+      - name: EnumEncoding
+        topicUid: Protocol-EnumEncoding
+      - name: EnumGeneralParameterGroupType
+        topicUid: Protocol-EnumGeneralParameterGroupType
+      - name: EnumGroupType
+        topicUid: Protocol-EnumGroupType
+      - name: EnumHttpHeader
+        topicUid: Protocol-EnumHttpHeader
+      - name: EnumHttpLoginMethod
+        topicUid: Protocol-EnumHttpLoginMethod
+      - name: EnumHttpRequestHeader
+        topicUid: Protocol-EnumHttpRequestHeader
+      - name: EnumHttpRequestVerb
+        topicUid: Protocol-EnumHttpRequestVerb
+      - name: EnumHttpResponseHeader
+        topicUid: Protocol-EnumHttpResponseHeader
+      - name: EnumIcons
+        topicUid: Protocol-EnumIcons
+      - name: EnumInterpretTypeTrim
+        topicUid: Protocol-EnumInterpretTypeTrim
+      - name: EnumMatrixInputsMappingNameType
+        topicUid: Protocol-EnumMatrixInputsMappingNameType
+      - name: EnumMatrixMappingType
+        topicUid: Protocol-EnumMatrixMappingType
+      - name: EnumMatrixMatrixOptionNameType
+        topicUid: Protocol-EnumMatrixMatrixOptionNameType
+      - name: EnumMatrixMatrixOptionType
+        topicUid: Protocol-EnumMatrixMatrixOptionType
+      - name: EnumMatrixOutputsMappingNameType
+        topicUid: Protocol-EnumMatrixOutputsMappingNameType
+      - name: EnumOIDType
+        topicUid: Protocol-EnumOIDType
+      - name: EnumOnOff
+        topicUid: Protocol-EnumOnOff
+      - name: EnumOwnershipAccessType
+        topicUid: Protocol-EnumOwnershipAccessType
+      - name: EnumParamConfirmPopup
+        topicUid: Protocol-EnumParamConfirmPopup
+      - name: EnumParamCRCType
+        topicUid: Protocol-EnumParamCRCType
+      - name: EnumParametersViewType
+        topicUid: Protocol-EnumParametersViewType
+      - name: EnumParamGroupType
+        topicUid: Protocol-EnumParamGroupType
+      - name: EnumParamInformationInclude
+        topicUid: Protocol-EnumParamInformationInclude
+      - name: EnumParamInterpretAlignment
+        topicUid: Protocol-EnumParamInterpretAlignment
+      - name: EnumParamInterpretEndian
+        topicUid: Protocol-EnumParamInterpretEndian
+      - name: EnumParamInterpretLengthType
+        topicUid: Protocol-EnumParamInterpretLengthType
+      - name: EnumParamInterpretRawType
+        topicUid: Protocol-EnumParamInterpretRawType
+      - name: EnumParamInterpretType
+        topicUid: Protocol-EnumParamInterpretType
+      - name: EnumParamMeasurementType
+        topicUid: Protocol-EnumParamMeasurementType
+      - name: EnumParamMeasurementTypeCase
+        topicUid: Protocol-EnumParamMeasurementTypeCase
+      - name: EnumParamType
+        topicUid: Protocol-EnumParamType
+      - name: EnumPortSettingsFlowControl
+        topicUid: Protocol-EnumPortSettingsFlowControl
+      - name: EnumPortSettingsParity
+        topicUid: Protocol-EnumPortSettingsParity
+      - name: EnumPortSettingsStopBits
+        topicUid: Protocol-EnumPortSettingsStopBits
+      - name: EnumPortTypes
+        topicUid: Protocol-EnumPortTypes
+      - name: EnumProcessAutomationOptionName
+        topicUid: Protocol-EnumProcessAutomationOptionName
+      - name: EnumProtocolType
+        topicUid: Protocol-EnumProtocolType
+      - name: EnumProtocolTypeRelativeTimers
+        topicUid: Protocol-EnumProtocolTypeRelativeTimers
+      - name: EnumQActionEncoding
+        topicUid: Protocol-EnumQActionEncoding
+      - name: EnumQActionOption
+        topicUid: Protocol-EnumQActionOption
+      - name: EnumRounding
+        topicUid: Protocol-EnumRounding
+      - name: EnumScientificNotation
+        topicUid: Protocol-EnumScientificNotation
+      - name: EnumSNMP
+        topicUid: Protocol-EnumSNMP
+      - name: EnumSNMPType
+        topicUid: Protocol-EnumSNMPType
+      - name: EnumSuppressionType
+        topicUid: Protocol-EnumSuppressionType
+      - name: EnumTrapOIDType
+        topicUid: Protocol-EnumTrapOIDType
+      - name: EnumTrendingType
+        topicUid: Protocol-EnumTrendingType
+      - name: EnumTriggerOn
+        topicUid: Protocol-EnumTriggerOn
+      - name: EnumTriggerTime
+        topicUid: Protocol-EnumTriggerTime
+      - name: EnumTriggerType
+        topicUid: Protocol-EnumTriggerType
+      - name: EnumTrueFalse
+        topicUid: Protocol-EnumTrueFalse
+      - name: EnumTypePortSlowPollBase
+        topicUid: Protocol-EnumTypePortSlowPollBase
+      - name: EnumWebSocketMessageType
+        topicUid: Protocol-EnumWebSocketMessageType
+      - name: TypeAlarmTemplateDefaultValues
+        topicUid: Protocol-TypeAlarmTemplateDefaultValues
+      - name: TypeCamelCaseName
+        topicUid: Protocol-TypeCamelCaseName
+      - name: TypeCommaSeparatedNumbers
+        topicUid: Protocol-TypeCommaSeparatedNumbers
+      - name: TypeDataMinerVersion
+        topicUid: Protocol-TypeDataMinerVersion
+      - name: TypeDllImport
+        topicUid: Protocol-TypeDllImport
+      - name: TypeEmptyString
+        topicUid: Protocol-TypeEmptyString
+      - name: TypeGroupParamId
+        topicUid: Protocol-TypeGroupParamId
+      - name: TypeNonEmptyString
+        topicUid: Protocol-TypeNonEmptyString
+      - name: TypeNonLeadingZeroUnsignedInt
+        topicUid: Protocol-TypeNonLeadingZeroUnsignedInt
+      - name: TypeObjectId
+        topicUid: Protocol-TypeObjectId
+      - name: TypeParamId
+        topicUid: Protocol-TypeParamId
+      - name: TypeProcessAutomationOptionName
+        topicUid: Protocol-TypeProcessAutomationOptionName
+      - name: TypePingInterval
+        topicUid: Protocol-TypePingInterval
+      - name: TypePortNumber
+        topicUid: Protocol-TypePortNumber
+      - name: TypePortRetryCount
+        topicUid: Protocol-TypePortRetryCount
+      - name: TypePortSlowPoll
+        topicUid: Protocol-TypePortSlowPoll
+      - name: TypeProtocolVersion
+        topicUid: Protocol-TypeProtocolVersion
+      - name: TypeQActionOptions
+        topicUid: Protocol-TypeQActionOptions
+      - name: TypeSemicolonSeparatedNumbers
+        topicUid: Protocol-TypeSemicolonSeparatedNumbers
+      - name: TypeSemicolonSeparatedValidatorIds
+        topicUid: Protocol-TypeSemicolonSeparatedValidatorIds
+      - name: TypeTimerContentGroup
+        topicUid: Protocol-TypeTimerContentGroup
+      - name: TypeTimerContentGroupCol
+        topicUid: Protocol-TypeTimerContentGroupCol
+      - name: TypeTriggerOnId
+        topicUid: Protocol-TypeTriggerOnId
+      - name: TypeTriggerTime
+        topicUid: Protocol-TypeTriggerTime
+      - name: TypeTrueOrSemicolonSeparatedNumbers
+        topicUid: Protocol-TypeTrueOrSemicolonSeparatedNumbers
+      - name: TypeVendorOID
+        topicUid: Protocol-TypeVendorOID
+      - name: TypeWildcard
+        topicUid: Protocol-TypeWildcard
+      - name: TypeWildcardOrNumber
+        topicUid: Protocol-TypeWildcardOrNumber
   - name: Automation script schema
     topicUid: SchemaAutomationScript
     items:
@@ -3223,6 +3627,14 @@ items:
               topicUid: DMSScript.Script.Exe.Value-ref
       - name: Type
         topicUid: DMSScript.Type
+    - name: SchemaTypes
+      items:
+      - name: EnumTrueFalse
+        topicUid: Automation-EnumTrueFalse
+      - name: EnumTrueFalseLowerCase
+        topicUid: Automation-EnumTrueFalseLowerCase
+      - name: NonEmptyStringType
+        topicUid: Automation-NonEmptyStringType
   - name: NuGet stages schema
     topicUid: SchemaNuGetStagesConfig
     items:
@@ -3631,7 +4043,6 @@ items:
 - name: Web Services
   items:
   - name: Web Services (v1)
-    topicUid: WS_v1
     items:
       - name: Using the Web Services (v1)
         items:
@@ -4838,10 +5249,8 @@ items:
           - name: DMAVisioRegionAction
             topicUid: DMAVisioRegionAction
   - name: Web Services (v0)
-    topicUid: WS_v0
     items:
       - name: About the Web Services (v0)
-        topicUid: WS_About_v0
         items:
           - name: Using the Web Services (v0)
             topicUid: Using_the_Web_Services_v0
@@ -4915,311 +5324,11 @@ items:
             topicUid: DMAElement1
           - name: ParamValue
             topicUid: ParamValue
-- name: DataMiner Protocol Development Guidelines
-  topicUid: CodingGuidelines
-  items:
-    - name: General
-      topicUid: CODGeneral
-      items:
-        - name: Protocol name
-          topicUid: Protocol_name
-        - name: Formatting
-          topicUid: Formatting
-          items:
-            - name: Indentation
-              topicUid: Indentation
-            - name: Alignment and wording
-              topicUid: Alignment_and_wording
-        - name: Names
-          topicUid: Names
-          items:
-            - name: Unique and meaningful names
-              topicUid: Unique_and_meaningful_names
-            - name: Parameter names
-              topicUid: Parameter_names
-            - name: QAction and Action names
-              topicUid: QAction_and_Action_names
-            - name: Trigger names
-              topicUid: Trigger_names
-            - name: Group names
-              topicUid: Group_names
-            - name: DMS element names
-              topicUid: DMS_element_names
-        - name: ID values
-          topicUid: ID_values
-          items:
-            - name: ID range
-              topicUid: ID_range
-            - name: ID gaps
-              topicUid: ID_gaps
-            - name: ID ordering
-              topicUid: ID_ordering
-            - name: ID grouping
-              topicUid: ID_grouping
-        - name: C# code conventions
-          topicUid: C_code_conventions
-          items:
-            - name: General
-              topicUid: General_COD
-            - name: Capitalization style
-              topicUid: Capitalization_style
-            - name: Namespaces
-              topicUid: Namespaces
-            - name: Classes, structs and interfaces
-              topicUid: Classes_structs_and_interfaces
-            - name: Enumerations
-              topicUid: Enumerations
-            - name: Methods
-              topicUid: Methods
-            - name: Properties
-              topicUid: Properties
-            - name: Fields
-              topicUid: Fields
-            - name: Parameters
-              topicUid: Parameters1
-            - name: Local variables
-              topicUid: Local_variables
-            - name: Ordering
-              topicUid: Ordering
-            - name: Layout
-              topicUid: Layout
-            - name: Spacing
-              topicUid: Spacing
-            - name: Readability
-              topicUid: Readability
-            - name: Maintainability
-              topicUid: Maintainability
-            - name: XML documentation
-              topicUid: XML_documentation
-            - name: Commenting
-              topicUid: Commenting
-    - name: Administrative metadata
-      topicUid: CODAdminMetadata
-      items:
-        - name: Comment metadata
-          topicUid: Comment_metadata
-        - name: Protocol metadata
-          topicUid: Protocol_metadata
-    - name: User interface
-      topicUid: CODUserInterface
-      items:
-        - name: Element wizard
-          topicUid: Element_wizard
-          items:
-            - name: Default settings
-              topicUid: Default_settings
-            - name: Connection names
-              topicUid: Connection_names
-        - name: Protocol pages
-          topicUid: Protocol_pages
-          items:
-            - name: Page layout
-              topicUid: Page_layout
-            - name: Look and feel
-              topicUid: Look_and_feel
-            - name: General page
-              topicUid: General_page
-            - name: Core functionality pages
-              topicUid: Core_functionality_pages
-            - name: Web interface page
-              topicUid: Web_interface_page
-        - name: Displayed text
-          topicUid: Displayed_text
-          items:
-            - name: Title case
-              topicUid: Title_case
-            - name: Brand and product names
-              topicUid: Brand_and_product_names
-            - name: Acronyms and initialisms
-              topicUid: Acronyms_and_initialisms
-        - name: Parameters
-          topicUid: Parameters2
-          items:
-            - name: Parameter descriptions and values
-              topicUid: Parameter_descriptions_and_values
-            - name: Unit of measure
-              topicUid: Unit_of_measure
-            - name: Value range
-              topicUid: Value_range
-            - name: Date and time values
-              topicUid: Date_and_time_values
-            - name: Exceptional states
-              topicUid: Exceptional_states
-            - name: Tooltips
-              topicUid: Tooltips
-            - name: Octet values
-              topicUid: Octet_values
-            - name: Error Counter values
-              topicUid: Error_Counter_values
-        - name: Tables
-          topicUid: Tables_COD
-          items:
-            - name: Column names
-              topicUid: Column_names
-            - name: Column descriptions
-              topicUid: Column_descriptions
-            - name: Column header options
-              topicUid: Column_header_options
-        - name: Buttons
-          topicUid: Buttons
-        - name: Toggle buttons
-          topicUid: Toggle_buttons
-        - name: Page buttons
-          topicUid: Page_buttons
-          items:
-            - name: Page button dimensions
-              topicUid: Page_button_dimensions
-            - name: Page button labels
-              topicUid: Page_button_labels
-            - name: Page button content
-              topicUid: Page_button_content
-        - name: Progress bars
-          topicUid: Progress_bars
-    - name: Monitoring
-      topicUid: CODMonitoring
-      items:
-        - name: Trending
-          topicUid: Trending1
-        - name: Alarming
-          topicUid: Alarming1
-    - name: Protocol
-      topicUid: CODProtocol
-      items:
-        - name: API
-          topicUid: API
-          items:
-            - name: Device API
-              topicUid: Device_API
-            - name: DataMiner API
-              topicUid: DataMiner_API
-        - name: Communication
-          topicUid: Communication1
-        - name: Logic
-          topicUid: Logic1
-          items:
-            - name: Operation duration
-              topicUid: Operation_duration
-            - name: Operation execution delay
-              topicUid: Operation_execution_delay
-            - name: Value update verification
-              topicUid: Value_update_verification
-            - name: Protocol threads
-              topicUid: Protocol_threads
-        - name: Timers
-          topicUid: Timers1
-          items:
-            - name: Number of timers
-              topicUid: Number_of_timers
-            - name: Default timer speeds
-              topicUid: Default_timer_speeds
-            - name: Timer speed restrictions
-              topicUid: Timer_speed_restrictions
-            - name: Starting/stopping timers
-              topicUid: Starting_stopping_timers
-            - name: Timer content
-              topicUid: Timer_content
-        - name: DVE
-          topicUid: DVE
-          items:
-            - name: DVE names
-              topicUid: DVE_names
-            - name: DVE export rules
-              topicUid: DVE_export_rules
-            - name: DVE child element deletion
-              topicUid: DVE_child_element_deletion
-        - name: Tables
-          topicUid: Tables1
-          items:
-            - name: Primary keys
-              topicUid: Primary_keys1
-            - name: Display keys
-              topicUid: Display_keys1
-            - name: Data handling
-              topicUid: Data_handling
-            - name: Integrity constraints
-              topicUid: Integrity_constraints
-            - name: Preserve state option
-              topicUid: Preserve_state_option
-            - name: Clear Table Data on Polling Disable
-              topicUid: Clear_Table_Data_on_Polling_Disable
-        - name: Parameters
-          topicUid: Parameters3
-          items:
-            - name: Saving parameters
-              topicUid: Saving_parameters
-            - name: Loading parameters in SLElement
-              topicUid: Loading_parameters_in_SLElement
-        - name: QActions
-          topicUid: QActions
-          items:
-            - name: Functionality
-              topicUid: Functionality
-            - name: Maintainability
-              topicUid: Maintainability1
-            - name: Robustness
-              topicUid: Robustness
-            - name: Conditional execution
-              topicUid: Conditional_execution
-            - name: Localization
-              topicUid: Localization
-            - name: Inter-process communication
-              topicUid: Inter-process_communication
-            - name: Exception handling
-              topicUid: Exception_handling
-            - name: Logging
-              topicUid: Logging
-            - name: Multi-threading
-              topicUid: Multi-threading1
-            - name: Thread.Sleep
-              topicUid: Thread_Sleep
-            - name: StyleCop
-              topicUid: StyleCop
-        - name: .NET Recommendations
-          topicUid: _NET_Recommendations
-          items:
-            - name: Microbenchmarking
-              topicUid: Microbenchmarking
-            - name: String vs. StringBuilder
-              topicUid: String_vs_StringBuilder
-            - name: Conditional statements
-              topicUid: Conditional_statements
-            - name: Loops
-              topicUid: Loops
-            - name: Collections
-              topicUid: Collections
-            - name: Linq
-              topicUid: Linq
-    - name: Validation
-      topicUid: CODValidation
-      items:
-        - name: General
-          topicUid: General1
-        - name: Spell checker
-          topicUid: Spell_checker
-        - name: DIS validator
-          topicUid: DIS_validator
-        - name: Stream Viewer
-          topicUid: Stream_Viewer
-        - name: Log files
-          topicUid: Log_files
-        - name: Alarm Console
-          topicUid: Alarm_Console
-    - name: Points of attention
-      topicUid: CODAttention
-      items:
-        - name: Skyline Driver Passport Platform
-          topicUid: Skyline_Driver_Passport_Platform
-        - name: Minimum DMA version
-          topicUid: Minimum_DMA_version
 - name: CI/CD
   topicUid: CICD
   items:
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
-  - name: Tutorials
-    items:
-     - name: Setting up a GitHub workflow for connectors
-       topicUid: CICD_Tutorial_Connector
   - name: CI/CD using command line
     items:
     - name: Command line examples
@@ -5227,6 +5336,10 @@ items:
   - name: CI/CD using GitHub
     topicUid: CICD_on_GitHub
     items:
+    - name: Getting started with CI/CD using GitHub
+      topicUid: CICD_on_GitHub_getting_started
+    - name: GitHub secrets and tokens
+      topicUid: GitHub_Secrets
     - name: GitHub example workflows
       topicUid: CICD_GitHub_Examples
     - name: GitHub starter workflows
@@ -5238,12 +5351,24 @@ items:
     - name: GitHub reusable workflows
       topicUid: github_reusable_workflows
       items:
-      - name: Reusable workflow Automation scripts
+      - name: Automation Master Workflow
         topicUid: github_reusable_workflows_automation_master_workflow
-      - name: Reusable workflow NuGet solutions
+      - name: NuGet Solution Master Workflow
         topicUid: github_reusable_workflows_nuget_solution_master_workflow
-      - name: Reusable workflow SRM function
+      - name: SRM Function Master Workflow
         topicUid: github_reusable_workflows_srm_function_master_workflow
+      - name: Connector Master Workflow
+        topicUid: github_reusable_workflows_connector_master_workflow
+      - name: Update Catalog Details
+        topicUid: github_reusable_workflows_update_catalog_details
+    - name: Tutorials
+      items:
+       - name: Setting up your development environment in GitHub
+         topicUid: CICD_Tutorial_GitHub_Setting_Up_Organization
+       - name: Going from code to product in GitHub
+         topicUid: CICD_Tutorial_GitHub_Code_To_Product
+       - name: Setting up basic CI/CD for connector deployment
+         topicUid: CICD_Tutorial_Connector
   - name: CI/CD using GitLab
     items:
     - name: GitLab examples
@@ -5269,7 +5394,7 @@ items:
       items:
       - name: GitHub quality gate
         topicUid: CICD_Quality_Gate_Github
-    - name: Publishing artifacts to the DataMiner Catalog
+    - name: Publishing items in the DataMiner Catalog
       topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
       items:
@@ -5373,7 +5498,6 @@ items:
         - name: DIS menu
           topicUid: DIS_menu
         - name: Editors
-          topicUid: DisEditors
           items:
           - name: XML editor
             topicUid: XML_editor
@@ -5388,7 +5512,6 @@ items:
           - name: C# editor
             topicUid: C_editor
         - name: Tool windows
-          topicUid: DisToolWindows
           items:
             - name: DIS Tree
               topicUid: DisTreeViewToolWindow
@@ -5457,7 +5580,6 @@ items:
             - name: Publishing problems
               topicUid: DIS_Troubleshooting_UploadFailure
         - name: DIS reference
-          topicUid: DIS_reference
           items:
             - name: DIS settings
               topicUid: DIS_settings
@@ -5629,8 +5751,13 @@ items:
                 topicUid: StyleCopAnalyzers
       - name: Visual Studio Code
         topicUid: Visual_Studio_Code
+      - name: WinDbg
+        topicUid: WinDbg
       - name: Wireshark
         topicUid: Wireshark
+        items:
+        - name: Wireshark stream decryption
+          topicUid: WiresharkDecrypt
 - name: DataMiner device-specific integrations
   topicUid: DSI
   items:
@@ -5732,6 +5859,17 @@ items:
       topicUid: Configure_DataMiner_using_Ansible
     - name: Grafana
       topicUid: Grafana_plugin
+    - name: mbgNMS
+      topicUid: mbgNMS
+      items:
+      - name: Releases
+        topicUid: mbgNMS_Releases
+      - name: Security
+        topicUid: mbgNMS_Security
+      - name: Meinberg NMS or DataMiner
+        topicUid: mbgNMS_MeinbergOrDataMiner
+      - name: Additional Information
+        topicUid: mbgNMS_Additional_Information
 - name: Best practices
   topicUid: Best_practices
   items:

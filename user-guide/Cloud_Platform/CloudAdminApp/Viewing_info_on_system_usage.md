@@ -21,9 +21,11 @@ To view your usage:
 
    This will open the page with usage information.
 
+   If the selected organization does not use any of the features for which usage reporting is currently supported, you will see a message stating that there is no data to display.
+
 1. Optionally, filter the displayed information by month or select one or more DataMiner Systems to view the total usage for the selected systems.
 
    Note that filtering by month is always available, even if there is no usage for this period.
 
 > [!NOTE]
-> If the selected organization does not use any of the features for which usage reporting is currently supported, you will see a message stating that there is no data to display.
+> It is possible to export the usage data to CSV, with the *Export usage* button at the top of the *Usage* page.<!-- RN 41117 -->

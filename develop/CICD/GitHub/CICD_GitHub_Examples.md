@@ -6,22 +6,16 @@ uid: CICD_GitHub_Examples
 
 ## Basic deployment example
 
-This is a basic pipeline for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
+This is a basic pipeline for uploading to the DataMiner Catalog and/or deploying to DMAs connected to dataminer.services. We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
 
-We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
+If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
 
 > [!TIP]
 > For information on creating a new pipeline in GitHub, see [GitHub Tutorial](https://docs.github.com/en/actions/quickstart).
 
-### Creating a dataminer.services key
-
-A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
-
-For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
-
 ### GitHub workflow
 
-You will need DATAMINER_DEPLOY_KEY as a secret. This will be the key for the DataMiner Agent as provided through the [DataMiner Admin app](xref:CloudAdminApp).
+You will need *DATAMINER_DEPLOY_KEY* as a secret. This will be the key for the DataMiner Agent as provided through the [DataMiner Admin app](xref:CloudAdminApp). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 On a **Ubuntu** runner:
 

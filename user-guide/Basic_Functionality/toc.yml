@@ -232,14 +232,24 @@ items:
             topicUid: Proactive_cap_detection
           - name: Automatic incident tracking
             topicUid: Automatic_incident_tracking
+            items:
+            - name: Customizing alarm grouping rules
+              topicUid: Customizing_alarm_grouping_rules
           - name: Monitoring of trend patterns
             topicUid: Monitoring_of_trend_patterns
+          - name: Providing user feedback
+            topicUid: Providing_user_feedback
           - name: Tutorials
             items:
             - name: Detecting anomalies with DataMiner
               topicUid: Anomaly_Tutorial
+            - name: Improving anomaly detection using feedback
+              topicUid: Anomaly_Feedback_Tutorial
+            - name: Creating an anomaly overview dashboard
+              topicUid: Creating_Anomaly_Overview_Dashboard
+            - name: Fine-tuning incident tracking
+              topicUid: Incident_Tracking_Configuration_Tutorial
       - name: Advanced alarm functionality
-        topicUid: Advanced_alarm_functionality
         items:
           - name: Changing the default alarm colors
             topicUid: Changing_the_default_alarm_colors
@@ -298,6 +308,10 @@ items:
                 topicUid: Deleting_a_pattern_definition
               - name: Managing pattern definitions
                 topicUid: Managing_pattern_definitions
+              - name: Tutorials
+                items:
+                  - name: Using trend patterns to detect backup failures
+                    topicUid: trend_patterns_backup_failures
           - name: Working with relation learning
             topicUid: Working_with_relation_learning
             items:
@@ -309,6 +323,8 @@ items:
             items:
               - name: Gaining insights using time-scoped relation learning
                 topicUid: Time_Scoped_Relation_Learning_Tutorial
+              - name: Working with trend patterns in DataMiner Cube
+                topicUid: Pattern_Matching_Trend_Tutorial
       - name: Working with histograms
         topicUid: Viewing_trend_information_in_a_histogram
         items:
@@ -394,7 +410,7 @@ items:
                 topicUid: Configuring_alarm_template_information_message
               - name: Using conditions in an alarm template
                 topicUid: Using_conditions_in_an_alarm_template
-              - name: Configuring anomaly detection alarms for specific parameters
+              - name: Configuring Augmented Operations alarm settings
                 topicUid: Configuring_anomaly_detection_alarms
               - name: Setting the autoclear options for alarms in an alarm template
                 topicUid: Setting_the_autoclear_option_in_alarm_template
@@ -663,6 +679,8 @@ items:
             topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
           - name: Using Visual Overview to control dashboard feed components
             topicUid: Using_visio_to_control_dashboard_feed_components
+          - name: Using Visual Overview to switch spectrum presets
+            topicUid: Using_Visual_Overview_to_switch_spectrum_presets
       - name: Miscellaneous
         topicUid: Miscellaneous
         items:

@@ -12,7 +12,7 @@ uid: EPM_6.1.2_I-DOCSIS
 
 ### Enhancements
 
-#### CCAP platforms: Polling optimization \[ID_33249\]
+#### CCAP platforms: Polling optimization \[ID 33249\]
 
 Several improvements have been implemented to the polling of CCAP platforms:
 
@@ -20,15 +20,15 @@ Several improvements have been implemented to the polling of CCAP platforms:
 - To allow for cooling time after a polling cycle, an auto-adjust fast SNMP interval functionality has been implemented. You can control this cooling time with the new *SNMP Fast Polling Cooling Time* parameter on the *Debug* page.
 - If the fast SNMP polling is auto-adjusted, the threshold execution interval is now also auto-adjusted with the cooling time value.
 
-#### CCAP platforms: No more "-1" values in CM configuration files \[ID_33263\]
+#### CCAP platforms: No more "-1" values in CM configuration files \[ID 33263\]
 
 The CCAP platform connectors have been adjusted so that "-1" IDs will no longer be exported to the configuration files.
 
-#### Support for CCAPs and CM collectors hosted on different DMAs \[ID_33264\]
+#### Support for CCAPs and CM collectors hosted on different DMAs \[ID 33264\]
 
 DataMiner EPM now supports combining CCAPs and CM collectors hosted on different DataMiner Agents.
 
-#### General improvements \[ID_33266\]
+#### General improvements \[ID 33266\]
 
 The following general improvements have been implemented:
 
@@ -36,7 +36,7 @@ The following general improvements have been implemented:
 - To prevent possible issues, the importing logic in the back end now uses an impersonated user only during the reading of the files.
 - The timing of the aggregation actions for the front and back end has been adjusted from 20 seconds to 5 minutes
 
-#### Improved passive logic in DOCSIS back end \[ID_33421\]
+#### Improved passive logic in DOCSIS back end \[ID 33421\]
 
 The following changes have been implemented in the Skyline EPM Platform DOCSIS connector to improve the passive logic in the DOCSIS back end:
 
@@ -46,15 +46,15 @@ The following changes have been implemented in the Skyline EPM Platform DOCSIS c
 
 ### Fixes
 
-#### Reset caused CCAPs to be removed \[ID_33265\]
+#### Reset caused CCAPs to be removed \[ID 33265\]
 
 In some cases, it could occur that CCAPS were removed from the system during a reset.
 
-#### Cable Modem table not cleaned up after restart back end \[ID_33308\]
+#### Cable Modem table not cleaned up after restart back end \[ID 33308\]
 
 When a back-end element restarted, it could occur that old rows in the Cable Modem table were not cleaned up.
 
-#### Missing values in Cable Modem table \[ID_33309\]
+#### Missing values in Cable Modem table \[ID 33309\]
 
 In some cases, the following exception could be thrown by the collector element:
 

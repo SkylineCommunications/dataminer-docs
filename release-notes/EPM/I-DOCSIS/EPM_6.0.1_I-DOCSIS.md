@@ -6,7 +6,7 @@ uid: EPM_6.0.1_I-DOCSIS
 
 ## New features
 
-#### Integration of QAM US/DS Channels tables further refined \[ID_31433\]
+#### Integration of QAM US/DS Channels tables further refined \[ID 31433\]
 
 The integration of the QAM US/DS Channels tables has been refined, so that channel parameter values are not necessarily immediately based on the first occurrence within the respective CM QAM US/DS Channels tables.
 
@@ -16,11 +16,11 @@ Depending on their operational meaning, parameters will be determined as follows
 - Average: The average of valid values for the given parameter is calculated from the source table. If no valid value found, N/A is displayed instead.
 - Contextual Calculation: The value is calculated contextually for the given table. For example, the *NMTER Alarm Status* will be determined based on the NMTER value and not based on the first occurrence of the channel in the source table.
 
-#### Reflection Distance Threshold removed \[ID_31436\]
+#### Reflection Distance Threshold removed \[ID 31436\]
 
 The *Reflection Distance Threshold* is now no longer displayed or taken into account. The *Reflection Distance Alarm Status* in the US Channels tables is also no longer available.
 
-#### UI improvements \[ID_31438\]
+#### UI improvements \[ID 31438\]
 
 A number of changes have been implemented to the EPM user interface.
 
@@ -41,7 +41,7 @@ Adjustments related to CM QAM DS Channels and QAM DS Channels:
 
 - The *Rx Power* parameter has been renamed to *DS Rx Power*. The tooltip of this parameter has also been enhanced.
 
-#### Generic DOCSIS CM Collector improvements \[ID_31460\]
+#### Generic DOCSIS CM Collector improvements \[ID 31460\]
 
 Several improvements have been implemented in the Generic DOCSIS CM Collector connector:
 
@@ -59,20 +59,20 @@ Several improvements have been implemented in the Generic DOCSIS CM Collector co
 
 ### Enhancements
 
-#### CM-level parameters in Generic DOCSIS CM Collector no longer available for monitoring \[ID_31453\]
+#### CM-level parameters in Generic DOCSIS CM Collector no longer available for monitoring \[ID 31453\]
 
 As parameters at CM level in the Generic DOCSIS CM Collector should not be monitored, these are now no longer available for monitoring. This includes the CM US QAM and CM DS QAM tables.
 
-#### Directory path adjustments \[ID_31463\]
+#### Directory path adjustments \[ID 31463\]
 
 All directory paths used in the Skyline EPM Platform element will now point to the parent folder containing the relevant subfolder (e.g. DOCSIS, GPON, etc.), instead of directly to the subfolder.
 
 ### Fixes
 
-#### Negative infinity values in CM QAM and QAM tables \[ID_31439\]
+#### Negative infinity values in CM QAM and QAM tables \[ID 31439\]
 
 In some cases, negative infinity values could occur in CM QAM and QAM tables.
 
-#### Incorrect ratio in CM QAM US Channel table + old rows not removed \[ID_31477\]
+#### Incorrect ratio in CM QAM US Channel table + old rows not removed \[ID 31477\]
 
 In some cases, it could occur that the corrected ratio and the uncorrected ratio in the CM QAM US Channel table were incorrectly displayed as zero. In addition, it could occur that old rows in the QAM US Channels table were not removed.

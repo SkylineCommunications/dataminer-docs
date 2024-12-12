@@ -12,13 +12,13 @@ uid: General_Main_Release_10.2.0_CU22
 
 ### Enhancements
 
-#### Security enhancements [ID_37641]
+#### Security enhancements [ID 37641]
 
 <!-- 37641: MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 A number of security enhancements have been made.
 
-#### DataMiner Cube - Visual Overview: Enhanced service chain behavior [ID_37645]
+#### DataMiner Cube - Visual Overview: Enhanced service chain behavior [ID 37645]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -26,14 +26,14 @@ A number of UI enhancements have been made with regard to service chain behavior
 
 Up to now, in some cases, service chains could get redrawn too often, or shapes would not get redrawn when a service chain was updated. Also, context menus of shapes would not always close when those shapes were updated and context menus would incorrectly show the *Display connectivity* command twice.
 
-#### DataMiner Cube - Spectrum analysis: Zooming inside a spectrum window [ID_37668]
+#### DataMiner Cube - Spectrum analysis: Zooming inside a spectrum window [ID 37668]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 It is now possible to zoom inside a spectrum window:
 
 - To zoom horizontally, scroll up and down. This has the same effect as altering the frequency span.
-- To zoom vertically, scroll up and down while pressing the CTRL key. This has the same effect as altering the amplitude scale.
+- To zoom vertically, scroll up and down while pressing the Ctrl key. This has the same effect as altering the amplitude scale.
 
 When you stop scrolling, the new zoom dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
 
@@ -42,25 +42,25 @@ When you stop scrolling, the new zoom dimensions will be set on the spectrum ana
 > - It is only possible to zoom horizontally if the spectrum protocol includes the *Start frequency*, *Stop frequency* and *Frequency span* parameters.
 > - It is only possible to zoom vertically if the spectrum protocol includes the *Amplitude scale* parameter.
 
-#### DataMiner Cube - Spectrum Analysis: Buttons in 'Reference lines' panel, 'Thresholds' panel and 'Measurement Points' panel have been restyled [ID_37752]
+#### DataMiner Cube - Spectrum Analysis: Buttons in 'Reference lines' panel, 'Thresholds' panel and 'Measurement Points' panel have been restyled [ID 37752]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel and the *Thresholds* panel as well as the delete buttons in the *Measurement Points* panel have been restyled to match the buttons in the *Markers* panel.
 
-#### Enhanced performance when locking or unlocking inputs and output of matrices in client applications [ID_37755]
+#### Enhanced performance when locking or unlocking inputs and output of matrices in client applications [ID 37755]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 Because of a number of enhancements, overall performance has increased when locking or unlocking inputs and output of matrices in client applications.
 
-#### DataMiner Cube - Visual Overview: Enhanced performance when opening a visual overview with a large amount of shapes that link to a webpage [ID_37799]
+#### DataMiner Cube - Visual Overview: Enhanced performance when opening a visual overview with a large amount of shapes that link to a webpage [ID 37799]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 Because of a number of enhancements, overall performance has increased when opening a visual overview with a large amount of shapes that link to a webpage.
 
-#### DataMiner Cube - Spectrum Analysis: Editing the X-axis and Y-axis labels [ID_37821]
+#### DataMiner Cube - Spectrum Analysis: Editing the X-axis and Y-axis labels [ID 37821]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -81,7 +81,7 @@ To modify the reference level:
 > [!NOTE]
 > To change the unit of either the center frequency or the reference level, go to the settings menu on the right.
 
-#### Protocols: Buffer for SNMP responses now has a dynamic size [ID_37824]
+#### Protocols: Buffer for SNMP responses now has a dynamic size [ID 37824]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -89,7 +89,7 @@ Up to now, when an SNMP response was received, a buffer with a fixed size of 102
 
 From now on, the buffer will have a dynamic size. This allow larger responses to be processed, and will also make sure that less memory has to be reserved when smaller responses are received.
 
-#### DataMiner Cube - Trending: Relation learning light bulb enhancements [ID_37834]
+#### DataMiner Cube - Trending: Relation learning light bulb enhancements [ID 37834]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -108,7 +108,7 @@ Also, this light bulb can now have the following states, which will indicate why
 > - *DataMiner CloudFeed* version 1.1.0 or higher
 > - *Allow performance and usage data offload* option
 
-#### DataMiner Cube - Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
+#### DataMiner Cube - Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID 37855]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -116,13 +116,13 @@ When you add a new alarm tab showing the current suggestion events, that tab wil
 
 This means that suggestion events will automatically disappear from the tab approximately 2 hours after they have been detected.
 
-#### DataMiner Cube: Optimization of memory handling when closing cards [ID_37858]
+#### DataMiner Cube: Optimization of memory handling when closing cards [ID 37858]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU1] - FR 10.4.2 -->
 
 Overall memory handling when closing cards has been optimized.
 
-#### DataMiner Cube - Settings: Default values of trend graph action settings have been changed [ID_37867]
+#### DataMiner Cube - Settings: Default values of trend graph action settings have been changed [ID 37867]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -133,7 +133,7 @@ In the *Settings* window, the default values of the following trend graph action
 | Right mouse button action on graph         | Select |
 | Hotkey + left mouse button action on graph | Zoom   |
 
-#### DataMiner Cube - Protocols & Templates: Clicking Help will now open the protocol's help page on 'DataMiner Connector Documentation' [ID_37873]
+#### DataMiner Cube - Protocols & Templates: Clicking Help will now open the protocol's help page on 'DataMiner Connector Documentation' [ID 37873]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -142,13 +142,13 @@ When, in the *Protocols & Templates* app, you right-click a protocol in the *Pro
 > [!NOTE]
 > That same help page will appear when, in an element card, you open the hamburger menu and select *Help*.
 
-#### DataMiner Cube - Service templates: Scrollbar added inside every tab of a service template card [ID_37882]
+#### DataMiner Cube - Service templates: Scrollbar added inside every tab of a service template card [ID 37882]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 A number of enhancements have been made to the service template card, one of which is a scrollbar added inside every tab.
 
-#### DataMiner Cube - Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID_37888]
+#### DataMiner Cube - Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID 37888]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -156,13 +156,13 @@ You can now start the DataMiner Cube desktop application with the new command-li
 
 This argument will make sure that all other arguments you specified when you started the application will again be applied when Cube has to reconnect for some reason.
 
-#### DataMiner Cube - Alarm templates: Enhanced selection box in 'Anomaly alarm settings' window [ID_37899]
+#### DataMiner Cube - Alarm templates: Enhanced selection box in 'Anomaly alarm settings' window [ID 37899]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 The selection box at the top of the *Anomaly alarm settings* window has now been made wider in order to better accommodate content in languages other than English.
 
-#### DataMiner Cube: Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37935]
+#### DataMiner Cube: Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID 37935]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -172,7 +172,7 @@ Now, the above-mentioned soft-launch options will be disabled by default, causin
 
 In DataMiner Cube, all buttons related to these modules will now by default also be hidden.
 
-#### DataMiner Cube - Spectrum analysis: Zero span mode [ID_37946]
+#### DataMiner Cube - Spectrum analysis: Zero span mode [ID 37946]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -185,13 +185,13 @@ In zero span mode, the sweeptime parameter is used to indicate the time on the X
 - Left: 0
 - Right: Sweeptime
 
-#### DataMiner Cube - Alarm Console: All alarms tabs listing suggestion events now have the 'Automatically remove cleared alarms' option enabled by default [ID_38034]
+#### DataMiner Cube - Alarm Console: All alarms tabs listing suggestion events now have the 'Automatically remove cleared alarms' option enabled by default [ID 38034]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
 From now on, all alarm tabs listing suggestion events will behave like alarm tabs listing active alarms, i.e. the *Automatically remove cleared alarms* option will be enabled by default, except for alarm tabs listing historical alarms or information events.
 
-#### DataMiner Cube - Search: Request to initialize client indexing will only be sent when the user has AdminTools permission [ID_38090]
+#### DataMiner Cube - Search: Request to initialize client indexing will only be sent when the user has AdminTools permission [ID 38090]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
@@ -199,7 +199,7 @@ When, in *System Center > Search & Indexing*, the *Enable search indexing on the
 
 From now on, before it sends the message in question to the DataMiner Agent, DataMiner Cube will first check whether the user has *Admin tools* permission. If not, it will not send the message.
 
-#### DataMiner Cube - Alarm Console: Enhanced performance when loading history alarms of a view, a service or an element dragged onto the Alarm Console [ID_38141]
+#### DataMiner Cube - Alarm Console: Enhanced performance when loading history alarms of a view, a service or an element dragged onto the Alarm Console [ID 38141]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
@@ -210,7 +210,7 @@ Because of a number of enhancements, overall performance has increased when load
 > [!NOTE]
 > When indicating that an alarm tab should list history alarms, it is no longer possible to select the *Show masked alarms* option. From now on, all masked alarms will automatically be included when history alarms are loaded.
 
-#### DataMiner Cube - System Center: 'Install Indexing Engine' button removed [ID_38145]
+#### DataMiner Cube - System Center: 'Install Indexing Engine' button removed [ID 38145]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
@@ -218,13 +218,13 @@ Up to now, you could go to *System Center > Search & Indexing* and click *Instal
 
 Elasticsearch is only supported up to version 6.8, which is no longer supported by Elastic. We recommend using OpenSearch instead, ideally with a dedicated clustered storage setup. Using storage per DMA with OpenSearch is also possible; in that case you will first need to install an OpenSearch database (ideally on a separate Linux server), and then connect your DMS to the OpenSearch database.
 
-#### DataMiner Cube - Data Display: Enhanced performance when loading partial tables [ID_38155]
+#### DataMiner Cube - Data Display: Enhanced performance when loading partial tables [ID 38155]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 Because of a number of enhancements, overall performance has increased when loading partial tables in DataMiner Cube.
 
-#### DataMiner Cube - System Center: Database setting "CloudStorage" renamed to "STaaS" [ID_38325]
+#### DataMiner Cube - System Center: Database setting "CloudStorage" renamed to "STaaS" [ID 38325]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
@@ -232,7 +232,7 @@ In the *Database* section of *System Center*, up to now, when a DataMiner Agent 
 
 Also, when *Database* is set to "STaaS", the *Configuration* and *Maintenance* sections will no longer be visible in both the *General* and *Offload* tabs, and the *Cassandra preparation/migration* button will be hidden.
 
-#### DataMiner Cube: Enhanced operator support when constructing filters for numeric columns of partial tables [ID_38367]
+#### DataMiner Cube: Enhanced operator support when constructing filters for numeric columns of partial tables [ID 38367]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
@@ -247,13 +247,13 @@ From now on, the following operators are supported in filters for numeric column
 !=
 ```
 
-#### DataMiner Cube: Incident alarms and correlation alarms will now be processed separately [ID_38389]
+#### DataMiner Cube: Incident alarms and correlation alarms will now be processed separately [ID 38389]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 In order to enhance overall performance, incident alarms and correlation alarms will now be processed separately.
 
-#### DataMiner Cube: Property names identical to names of existing properties except for leading or trailing whitespace characters will no longer be allowed [ID_38424]
+#### DataMiner Cube: Property names identical to names of existing properties except for leading or trailing whitespace characters will no longer be allowed [ID 38424]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
@@ -262,13 +262,13 @@ When creating a new property, from now on, it will no longer be allowed to use a
 > [!NOTE]
 > Property names will now be trimmed before being saved.
 
-#### DataMiner Cube - Service templates: Enhanced performance when reapplying a service template [ID_38463]
+#### DataMiner Cube - Service templates: Enhanced performance when reapplying a service template [ID 38463]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 Because of a number of enhancements, overall performance has increased when reapplying a service template.
 
-#### CubeConnection entry will now be added to the SLClient.txt log file each time a Cube client has fully connected to a DMA [ID_38574]
+#### CubeConnection entry will now be added to the SLClient.txt log file each time a Cube client has fully connected to a DMA [ID 38574]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
@@ -287,7 +287,7 @@ This entry will contain the following information:
 - The connected hostname
 - The raw text of the client connection (includes connection property data such as *AmountCallsIn*, *AmountCallsOut*, *AmountInitiatedConnectionChecks*, *AmountCallsInProgress*, *AmountCallsWaiting*, etc.)
 
-#### DataMiner Cube - Logging: Viewing the logging of enhanced services [ID_38623]
+#### DataMiner Cube - Logging: Viewing the logging of enhanced services [ID 38623]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
@@ -298,13 +298,13 @@ In Cube, you can now view the logging of an enhanced service by doing one of the
 
 ### Fixes
 
-#### DataMiner Cube: Error could occur in SLHelper when generating visual overviews to be displayed in web apps [ID_32584]
+#### DataMiner Cube: Error could occur in SLHelper when generating visual overviews to be displayed in web apps [ID 32584]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
 In some cases, an error could occur in SLHelper when it was generating visual overviews to be displayed in web apps.
 
-#### DataMiner Cube: Problem when adding up [Start Time:] placeholders [ID_37661]
+#### DataMiner Cube: Problem when adding up [Start Time:] placeholders [ID 37661]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
@@ -314,7 +314,7 @@ From now on, when configuring [Start Time:] placeholders that will be used in Su
 
 See also: [Linking a shape to a booking](xref:Linking_a_shape_to_a_booking)
 
-#### DataMiner Cube: A number of Automation issues have been fixed [ID_37674]
+#### DataMiner Cube: A number of Automation issues have been fixed [ID 37674]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -324,80 +324,80 @@ A number of issues have been fixed with regard to Automation:
 - A *nullreference* exception could be thrown when an Automation script was deleted.
 - Cube could leak memory each time you opened an Automation script in a new card.
 
-#### DataMiner Cube - Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID_37754]
+#### DataMiner Cube - Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID 37754]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When, in the *Protocols & Templates* app, you activated a functions file, the activated function definitions would incorrectly not be listed. For this list to be displayed, you had to close the *Protocols & Templates* app and re-opened it again.
 
-#### DataMiner Cube - Visual Overview: Placeholder containing '[Elapsed Time]' would not be updated when the elapsed time had changed [ID_37756]
+#### DataMiner Cube - Visual Overview: Placeholder containing '[Elapsed Time]' would not be updated when the elapsed time had changed [ID 37756]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When the placeholder `[Elapsed Time]` was used inside another placeholder (e.g. `[Subtract:[Elapsed Time],[PreRoll]]`), the entire placeholder (e.g. `[Subtract:[Elapsed Time],[PreRoll]]`) would not be updated when the elapsed time had changed.
 
-#### DataMiner Cube - Pattern matching: Memory leak [ID_37771]
+#### DataMiner Cube - Pattern matching: Memory leak [ID 37771]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 DataMiner Cube could start leaking memory when you opened trend graphs with pattern matching.
 
-#### SLAnalytics: Problem when the alarm repository was not available at startup [ID_37782]
+#### SLAnalytics: Problem when the alarm repository was not available at startup [ID 37782]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 In some cases, an error could occur in SLAnalytics when it was not able to connect to the alarm repository at startup.
 
-#### DataMiner Cube - Data Display: Problem when hovering over lite parameter controls in Skyline Black theme [ID_37814]
+#### DataMiner Cube - Data Display: Problem when hovering over lite parameter controls in Skyline Black theme [ID 37814]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When DataMiner Cube was using the *Skyline Black* theme, lite parameter controls would become unreadable when you hovered over them.
 
-#### Entire SNMPv3 response would be discarded when one or more cells contained 'no such instance' [ID_37815]
+#### Entire SNMPv3 response would be discarded when one or more cells contained 'no such instance' [ID 37815]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When a table was polled via SNMPv3 and the response included a cell that contained *no such instance*, the table would not get populated with the values that were received. Instead, the entire result set would be discarded.
 
-#### DataMiner Cube - Visual Overview: URLs that did not link to a DataMiner web apps would incorrectly get a connection ticket [ID_37822]
+#### DataMiner Cube - Visual Overview: URLs that did not link to a DataMiner web apps would incorrectly get a connection ticket [ID 37822]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When the URL specified in a shape data item of type *Link* did not link to a DataMiner web app, but contained a keyword that could be interpreted as a keyword of a DataMiner web app, a connection ticket would incorrectly be added to that URL.
 
-#### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID_37857] [ID_38021]
+#### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID 37857] [ID 38021]
 
 <!-- RN 37857: MR 10.2.0 [CU22]/10.3.0 [CU10]/10.4.0 [CU1] - FR 10.4.1 -->
 <!-- RN 38021: MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU1] - FR 10.4.2 -->
 
 When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
 
-#### DataMiner Cube - Visual Overview: Problem when a parameter value changed while executing an Automation script [ID_37854]
+#### DataMiner Cube - Visual Overview: Problem when a parameter value changed while executing an Automation script [ID 37854]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When, in a visual overview, a parameter value changed while executing an Automation script, an exception would be thrown.
 
-#### DataMiner Cube - System Center: Term 'Client independent updates' replaced by 'Server independent client updates' [ID_37926]
+#### DataMiner Cube - System Center: Term 'Client independent updates' replaced by 'Server independent client updates' [ID 37926]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 In the *System settings > Manage client versions* section of *System Center*, the term *client independent updates* has been replaced by *server independent client updates*.
 
-#### DataMiner Cube: Problem when right-clicking after selecting a large number of elements and/or services in a view card [ID_37981]
+#### DataMiner Cube: Problem when right-clicking after selecting a large number of elements and/or services in a view card [ID 37981]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
 When, in a view card, you selected a large number of elements and/or services and then right-clicked, in some cases, Cube could become unresponsive.
 
-#### DataMiner Cube - Automation: Save button would incorrectly not be enabled after renaming an Automation script [ID_37987]
+#### DataMiner Cube - Automation: Save button would incorrectly not be enabled after renaming an Automation script [ID 37987]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
 When you had renamed an Automation script, in some rare cases, the *Save* button would incorrectly not be enabled. As a result, it was not possible to save the change.
 
-#### DataMiner Cube - Correlation: Problem with 'Dynamic' option in 'Send email' action [ID_37995]
+#### DataMiner Cube - Correlation: Problem with 'Dynamic' option in 'Send email' action [ID 37995]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11] - FR 10.4.2 -->
 
@@ -405,7 +405,7 @@ When configuring a Correlation rule, you can make that rule send an email by add
 
 In some cases, when you opened a *Send email* action, it would incorrectly not be possible to select the *Dynamic* option to indicate that the elements that triggered the Correlation rule have to be included.
 
-#### DataMiner Cube - Visual Overview: Problem with user permissions when right-clicking a visual overview linked to a service [ID_38018]
+#### DataMiner Cube - Visual Overview: Problem with user permissions when right-clicking a visual overview linked to a service [ID 38018]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
@@ -413,49 +413,49 @@ When, in DataMiner Cube, you right-clicked inside a visual overview linked to a 
 
 From now on, when you right-click inside a visual overview linked to a service, the context menu will only allow you to edit the visual overview when you have permission to edit that specific service (on top of the permission to edit services in general and the permission to access and edit visual overviews).
 
-#### DataMiner Cube: Memory leaks when opening/closing alarm cards and 'Alarm Console' or 'Cube sides' section of the 'Settings' window [ID_38054]
+#### DataMiner Cube: Memory leaks when opening/closing alarm cards and 'Alarm Console' or 'Cube sides' section of the 'Settings' window [ID 38054]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 DataMiner Cube would leak memory each time you opened and closed an alarm card and each time you opened and closed the *Alarm Console* section or the *Cube sides* section in the user settings tab of the *Settings* window.
 
-#### DataMiner Cube: Memory leak in About window [ID_38055]
+#### DataMiner Cube: Memory leak in About window [ID 38055]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 DataMiner Cube would leak memory each time you opened the *About* window.
 
-#### DataMiner Cube - System Center: Memory leak in Update Center window [ID_38056]
+#### DataMiner Cube - System Center: Memory leak in Update Center window [ID 38056]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 DataMiner Cube would leak memory each time you opened the *Update Center* window.
 
-#### DataMiner Cube: Memory leak in Alarm Console [ID_38057]
+#### DataMiner Cube: Memory leak in Alarm Console [ID 38057]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 The Alarm Console would leak memory each time you opened an active alarms tab.
 
-#### DataMiner Cube - System Center: 'Clean up unused' tool would incorrectly consider custom Visio files assigned to elements as unused [ID_38061]
+#### DataMiner Cube - System Center: 'Clean up unused' tool would incorrectly consider custom Visio files assigned to elements as unused [ID 38061]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 In *System Center*, you can clean up unused Visio files. However, up to now, this *Clean up unused Visio files* tool would incorrectly consider custom Visio files assigned to elements as unused.
 
-#### DataMiner Cube - Visual Overview: Exception values of numeric parameters would be displayed incorrectly when the DynamicUnits soft-launch option was enabled [ID_38083]
+#### DataMiner Cube - Visual Overview: Exception values of numeric parameters would be displayed incorrectly when the DynamicUnits soft-launch option was enabled [ID 38083]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When the *DynamicUnits* soft-launch option was enabled, exception values of numeric parameters would be displayed incorrectly.
 
-#### DataMiner Cube could become unresponsive when event messages were being sent [ID_38115]
+#### DataMiner Cube could become unresponsive when event messages were being sent [ID 38115]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 In some rare cases, DataMiner Cube could become unresponsive when event messages were being sent.
 
-#### DataMiner Cube would leak memory when you closed a card or when you closed an alarm tab containing correlated alarms [ID_38127]
+#### DataMiner Cube would leak memory when you closed a card or when you closed an alarm tab containing correlated alarms [ID 38127]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
@@ -464,19 +464,19 @@ DataMiner Cube would leak memory
 - when you closed an alarm tab containing correlated alarms, or
 - when you closed a card (e.g. an element card) after navigating to it by clicking *Previous* on another card.
 
-#### DataMiner Cube - Visual Overview: Unexpected behavior when locale was set to Turkish [ID_38140]
+#### DataMiner Cube - Visual Overview: Unexpected behavior when locale was set to Turkish [ID 38140]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When the locale of the client machine was set to Turkish, visual overviews could manifest unexpected behavior due to names of shape data items being transformed incorrectly. These transformations will now be done culture independently.
 
-#### DataMiner Cube: Problem after logging out and in repeatedly [ID_38171]
+#### DataMiner Cube: Problem after logging out and in repeatedly [ID 38171]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When you logged out and in repeatedly, an exception could be thrown, causing Cube to become unresponsive.
 
-#### DataMiner Cube - User menu: Problem when logging out immediately after logging in [ID_38178]
+#### DataMiner Cube - User menu: Problem when logging out immediately after logging in [ID 38178]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
@@ -484,55 +484,55 @@ When you logged out of Cube immediately after logging in, in some cases, a blank
 
 From now on, the *Sign out* button will only be enabled once the login screen has been loaded.
 
-#### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID_38180]
+#### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID 38180]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When a web app user without full administrative rights viewed a visual overview linked to a view, the app would incorrectly not receive any updates for that visual overview.
 
-#### DataMiner Cube: No longer allowed to create properties with a name that consists of whitespace characters only [ID_38209]
+#### DataMiner Cube: No longer allowed to create properties with a name that consists of whitespace characters only [ID 38209]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 Up to now, DataMiner Cube would incorrectly allow you to create properties of which the name consisted of whitespace characters only. From now on, this is no longer allowed.
 
-#### DataMiner Cube would incorrect show 'Could not connect to the DataMiner Agent' instead of 'This Dataminer Agent is not running' [ID_38212]
+#### DataMiner Cube would incorrect show 'Could not connect to the DataMiner Agent' instead of 'This Dataminer Agent is not running' [ID 38212]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When Cube connected to a DataMiner Agent that had APIGateway running as a process but did not have SLNet running, it would incorrectly show a `Could not connect to the DataMiner Agent` error instead of `This Dataminer Agent is not running`.
 
-#### DataMiner Cube - Correlation app: Problem when loading read-only connectivity chains in the connectivity editor [ID_38252]
+#### DataMiner Cube - Correlation app: Problem when loading read-only connectivity chains in the connectivity editor [ID 38252]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When, in the Correlation app, you opened the connectivity editor and loaded the read-only chains (e.g. connectivity chains automatically generated by service templates), Cube would throw an exception when it found duplicate items in those chains. From now on, when Cube finds duplicate items in connectivity chains, it will add a log entry.
 
-#### DataMiner Cube would incorrectly still show the 'Add to dashboard...' menu option when the 'LegacyReportsAndDashboards' soft-launch option was disabled [ID_38258]
+#### DataMiner Cube would incorrectly still show the 'Add to dashboard...' menu option when the 'LegacyReportsAndDashboards' soft-launch option was disabled [ID 38258]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When the *LegacyReportsAndDashboards* soft-launch option was disabled, DataMiner Cube will incorrectly still show the *Add to dashboard...* menu option when you right-clicked a parameter, an element or a service.
 
-#### DataMiner Cube was not able to reconnect to the server after a disconnect using gRPC [ID_38261]
+#### DataMiner Cube was not able to reconnect to the server after a disconnect using gRPC [ID 38261]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
 
-#### DataMiner Cube - Visual overview: Problem when VdxPage data item and View data item of a shape were set by the same SetVar shape [ID_38321]
+#### DataMiner Cube - Visual overview: Problem when VdxPage data item and View data item of a shape were set by the same SetVar shape [ID 38321]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When a shape had both a *VdxPage* data field and a *View* data field in which the Visio page name as well as the view name were card variables set by the same *SetVar* shape, in some rare cases, the Visio page name would not be applied correctly, causing the incorrect page being displayed.
 
-#### DataMiner Cube - Alarm Console: Alarms grouped by time, root time, creation time or root creation time could be grouped incorrectly [ID_38329]
+#### DataMiner Cube - Alarm Console: Alarms grouped by time, root time, creation time or root creation time could be grouped incorrectly [ID 38329]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
 When, in the Alarm Console, alarms were grouped by time, root time, creation time or root creation time, they could be grouped incorrectly.
 
-#### DataMiner Cube - System center: Description of 'Log file size' setting was incorrect [ID_38330]
+#### DataMiner Cube - System center: Description of 'Log file size' setting was incorrect [ID 38330]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 -->
 
@@ -540,7 +540,7 @@ In System Center, you can go to *System settings > Logging* to change the log fi
 
 Up to now, the description of this setting mentioned that the setting applied to the DataMiner Agent to which you were connected. It will now mention that the setting applies to the entire DataMiner System.
 
-#### DataMiner Cube - Correlation: Apply button would not be enabled when a correlation rule had been modified [ID_38351]
+#### DataMiner Cube - Correlation: Apply button would not be enabled when a correlation rule had been modified [ID 38351]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
@@ -548,37 +548,37 @@ When changes had been made to a correlation rule, in some cases, the Apply butto
 
 Also, the *Limit the base alarms* option will now be properly validated.
 
-#### DataMiner Cube: Problem when opening a service card [ID_38354]
+#### DataMiner Cube: Problem when opening a service card [ID 38354]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When you opened a service card, in some rare cases, an `InvalidOperationException` could be thrown.
 
-#### DataMiner Cube: Problem when opening a service card of which the default page was set to 'Reports' [ID_38380]
+#### DataMiner Cube: Problem when opening a service card of which the default page was set to 'Reports' [ID 38380]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When you opened a service card of which the default page was set to *Reports*, an error could occur, causing DataMiner Cube to become unresponsive.
 
-#### DataMiner Cube - Alarm Console: Reports view button would not be shown [ID_38398]
+#### DataMiner Cube - Alarm Console: Reports view button would not be shown [ID 38398]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 On undocked alarm cards or alarm consoles that were embedded in e.g. elements cards, in some cases, the reports view button would incorrectly not be shown.
 
-#### DataMiner Cube - Visual Overview: Parsing problem when using a custom separator inside a [param:] placeholder [ID_38405]
+#### DataMiner Cube - Visual Overview: Parsing problem when using a custom separator inside a [param:] placeholder [ID 38405]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When a custom separator was used inside a [param:] placeholder referring to a table parameter value, the retrieved value would not be parsed correctly.
 
-#### DataMiner Cube - Automation: Problem when selecting 'User interaction' in the 'Add action' box [ID_38406]
+#### DataMiner Cube - Automation: Problem when selecting 'User interaction' in the 'Add action' box [ID 38406]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When, while creating or editing an Automation script, you opened the *Add action* selection box and selected "User interaction", in some cases, an exception could be thrown.
 
-#### DataMiner Cube - Protocols & templates: Problem when creating alarm templates or trend templates due to casing issue [ID_38456]
+#### DataMiner Cube - Protocols & templates: Problem when creating alarm templates or trend templates due to casing issue [ID 38456]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
@@ -588,31 +588,31 @@ Up to now, when the protocol name or protocol version of the element had a casin
 
 From now on, protocol comparisons will be performed case-insensitively.
 
-#### DataMiner Cube - Settings: Description of 'Filter the alarms before they enter Cube' setting did not fit the screen [ID_38493]
+#### DataMiner Cube - Settings: Description of 'Filter the alarms before they enter Cube' setting did not fit the screen [ID 38493]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 In the *Settings* windows, the description of the *Filter the alarms before they enter Cube* setting did not fit the screen. The text would be wrapped incorrectly.
 
-#### DataMiner Cube - Redundancy groups: Problem with imported elements [ID_38505]
+#### DataMiner Cube - Redundancy groups: Problem with imported elements [ID 38505]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When a redundancy group included a primary or backup element that had been imported by means of a DELT package, in some cases, another element would incorrectly be displayed instead of the imported element.
 
-#### DataMiner Cube could become unresponsive after you had logged in [ID_38607]
+#### DataMiner Cube could become unresponsive after you had logged in [ID 38607]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU13]/10.4.0 [CU1] - FR 10.4.4 -->
 
 In some cases, after you had logged in, DataMiner Cube could become unresponsive when the "Show the news section" setting was enabled.
 
-#### DataMiner Cube - Correlation: Not possible to enable or disable any of the options for the 'Set parameter' action [ID_38616]
+#### DataMiner Cube - Correlation: Not possible to enable or disable any of the options for the 'Set parameter' action [ID 38616]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When editing a correlation rule in which a *Set Parameter* action had previously been configured, up to now, enabling or disabling any of the options for that action (e.g. *Execute on base alarm updates*) would incorrectly not enable the *Apply* button. As a result, it would not be possible to save the correlation rule after enabling or disabling some of those options.
 
-#### DataMiner Cube: Sidebar would not contain any buttons [ID_38652]
+#### DataMiner Cube: Sidebar would not contain any buttons [ID 38652]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 

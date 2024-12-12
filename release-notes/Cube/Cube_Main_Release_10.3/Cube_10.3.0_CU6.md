@@ -12,37 +12,37 @@ uid: Cube_Main_Release_10.3.0_CU6
 
 ### Enhancements
 
-#### Resources: Enhanced logging when function resources failed to initialize [ID_36763]
+#### Resources: Enhanced logging when function resources failed to initialize [ID 36763]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 A more detailed entry will now be added to the Cube logging when a function resource failed to initialize.
 
-#### Visual Overview: Warning message will now appear when you embed a visual overview assigned to a view in that same visual overview [ID_36791]
+#### Visual Overview: Warning message will now appear when you embed a visual overview assigned to a view in that same visual overview [ID 36791]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 Up to now, embedding a visual overview assigned to a view in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to a view in that same visual overview has been embedded, a warning message will be displayed.
 
-#### Services module: Enhanced linking to help pages on docs.dataminer.services [ID_36813]
+#### Services module: Enhanced linking to help pages on docs.dataminer.services [ID 36813]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 A number of enhancements have been made with regard to how help buttons in the *Services* module are linked to pages on <https://docs.dataminer.services/>.
 
-#### Alarm Console: Enhanced performance when loading history alarms [ID_36929]
+#### Alarm Console: Enhanced performance when loading history alarms [ID 36929]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 Because of a number of enhancements, overall performance has considerably increased when loading history alarms.
 
-#### Visual Overview: Warning message when embedding visual overview assigned to element in that same visual overview [ID_37078]
+#### Visual Overview: Warning message when embedding visual overview assigned to element in that same visual overview [ID 37078]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 Up to now, embedding a visual overview assigned to an element in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to an element in that same visual overview has been embedded, a warning message will be displayed.
 
-#### Visual Overview: Warning message when embedding visual overview assigned to service in that same visual overview [ID_37082]
+#### Visual Overview: Warning message when embedding visual overview assigned to service in that same visual overview [ID 37082]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -50,25 +50,25 @@ Up to now, embedding a visual overview assigned to a service in that same visual
 
 ### Fixes
 
-#### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID_36631]
+#### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID 36631]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 In *Automation*, *Correlation* and *Scheduler*, you can select a report of a dashboard in an *Email*, *Upload to FTP* or *Upload to shared folder* action. When such an action was initialized, in some rare cases, the report or dashboard would not be automatically selected.
 
-#### DataMiner Cube - Trending: Panning across the graph would not work [ID_36769]
+#### DataMiner Cube - Trending: Panning across the graph would not work [ID 36769]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you opened a trend graph showing trend data of a parameter that only had average trending enabled, in some cases, it would not be possible to pan across the graph.
 
-#### DataMiner Cube - Visual Overview: Problem when opening a service chain shape while element updates were being received [ID_36794] [ID_36966]
+#### DataMiner Cube - Visual Overview: Problem when opening a service chain shape while element updates were being received [ID 36794] [ID 36966]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 In some rare cases, an error could occur when, In Visual Overview, you opened a service chain shape linked to an SRM service while Resource Manager updates and DCF connection updates for the elements in that SRM service were being received.
 
-#### DataMiner Cube - Visual Overview: Problem with [this EnhancedServiceID] placeholder [ID_36808]
+#### DataMiner Cube - Visual Overview: Problem with [this EnhancedServiceID] placeholder [ID 36808]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -76,13 +76,13 @@ In some cases, the *[this EnhancedServiceID]* placeholder would not resolve corr
 
 For example, when you had specified `[param: [this EnhancedServiceID], 1]`, the parameter of the service element with parameter ID 1 would not be displayed correctly in the shape text.
 
-#### DataMiner Cube - Element cards: DataMiner Connectivity Framework tables did incorrectly not have a filter box [ID_36920]
+#### DataMiner Cube - Element cards: DataMiner Connectivity Framework tables did incorrectly not have a filter box [ID 36920]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When, on the *General parameters* page of an element card, you click *Configure* next to *DataMiner Connectivity Framework*, a window with four tables is displayed. Up to now, these tables would incorrectly no longer have a filter box. From now on, they will all have a filter box again.
 
-#### Problems when selecting report in Automation or Scheduler module [ID_37052]
+#### Problems when selecting report in Automation or Scheduler module [ID 37052]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 

@@ -1,5 +1,6 @@
 ---
 uid: Template_Editor
+keywords: table templates
 ---
 
 # Using the Template Editor

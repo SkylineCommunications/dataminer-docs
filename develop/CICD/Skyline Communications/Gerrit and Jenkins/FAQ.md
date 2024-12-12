@@ -312,7 +312,9 @@ At this point, you have introduced the new branch with the changes you have made
    *1.0.0.X branch is pointing to the commit for the 1.0.0.2 tag*
 
    > [!NOTE]
-   > Pushing a reset is not allowed by default. To enable this, go to *Tools* &gt; *Options*, select the *Git* tab and make sure the check box for the *Enable Force Push* option is checked. ![](../../images/EnableForcePush.png
+   > Pushing a reset is not allowed by default. To enable this, go to *Tools* &gt; *Options*, select the *Git* tab and make sure the check box for the *Enable Force Push* option is checked.
+   >
+   > ![](~/develop/images/EnableForcePush.png)
 
 1. To push, click the *Push* button and make sure the *Force Push* check box is selected. Then click *Push*.
 

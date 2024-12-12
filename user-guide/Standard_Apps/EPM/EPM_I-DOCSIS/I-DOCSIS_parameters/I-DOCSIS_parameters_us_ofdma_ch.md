@@ -25,6 +25,16 @@ This page contains an overview of the US OFDMA CH parameters available in the In
 
   - OID: 1.3.6.1.4.1.4491.2.1.28.1.23.1.3
 
+## OFDMA IUC Statistics
+
+- **Interface Name**: Name of the channel retrieved from the Interface Table using the instance ID.
+
+- **IUC Code**: Direct value. The Information and Unique Channel code within the OFDMA Channel.
+
+- **MER**: Direct value. The ratio of the power of the ideal modulated signal to the power of the error or distortion in the signal in dB. Polled from the CCAP.
+
+  - OID: 1.3.6.1.4.1.4491.2.1.28.1.24.1.10
+
 ## CM OFDMA Channels
 
 - **Rx Power**: Direct value. The Rx power in a specified OFDMA channel at the RF input port of the CCAP for a given CM. Polled from the CCAP.

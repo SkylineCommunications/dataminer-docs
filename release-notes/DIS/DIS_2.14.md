@@ -8,7 +8,7 @@ uid: DIS_2.14
 
 ### IDE
 
-#### DIS MIB Browser: Error messages will now be shown when not all MIB files could be loaded \[ID_19905\]
+#### DIS MIB Browser: Error messages will now be shown when not all MIB files could be loaded \[ID 19905\]
 
 From now on, the following error messages will be shown in the *DIS MIB Browser* window when not all MIB files could be loaded:
 
@@ -26,15 +26,15 @@ From now on, the following error messages will be shown in the *DIS MIB Browser*
 
 Also, items in the *Pending Modules* section will now be displayed in orange and items in the *Missing Modules* section will be displayed in red.
 
-#### XML editor: Update button indicating that a new DIS version is available will now have an orange background \[ID_20077\]
+#### XML editor: Update button indicating that a new DIS version is available will now have an orange background \[ID 20077\]
 
 If DataMiner Integration Studio is set to check for updates, an *Update…* button will appear if a newer version of the DataMinerIntegrationStudio.vsix file is available on the DataMiner Collaboration Platform. From now on, this *Update...* button will have an orange background.
 
-#### XML editor: ‘Copy Script to Clipboard’ command \[ID_20150\]
+#### XML editor: ‘Copy Script to Clipboard’ command \[ID 20150\]
 
 When you are editing an Automation script file, you can click the small Down arrow in front of the Script.Exe element to open a shortcut menu. In that menu, you will now find a *Copy Script to Clipboard* command, which will allow you to easily copy an entire Automation script to another file.
 
-#### XML editor: No longer possible to publish a protocol with an incorrect Type tag, an empty Version tag or an empty Name tag \[ID_20182\]
+#### XML editor: No longer possible to publish a protocol with an incorrect Type tag, an empty Version tag or an empty Name tag \[ID 20182\]
 
 When, in the XML editor, you click *Publish* in order to publish the protocol you are editing, DIS will now refuse to publish the protocol and show a message box
 
@@ -42,7 +42,7 @@ When, in the XML editor, you click *Publish* in order to publish the protocol yo
 - when the Protocol.Version tag is empty, or
 - when the Protocol.Name tag is empty.
 
-#### New tool window: DIS Macros \[ID_20348\]
+#### New tool window: DIS Macros \[ID 20348\]
 
 The new *DIS Macros* tool window allows developers to create C# scripts that can be used to make changes to a protocol file (e.g. update OIDs based on conditions, update table definitions, increment/decrement parameters, etc.).
 
@@ -87,7 +87,7 @@ The following methods are available in the "engine" object:
 
 ### Validator
 
-#### Protocol.CheckNameTag check now also returns an error if the protocol name starts with 'Production' \[ID_20285\]
+#### Protocol.CheckNameTag check now also returns an error if the protocol name starts with 'Production' \[ID 20285\]
 
 From now on, the Protocol.CheckNameTag check will also return an error if the name of a protocol starts with "Production".
 
@@ -99,7 +99,7 @@ If an error of this type appears in the *DIS Validation* window, you will be abl
 
 ### XML Schema
 
-#### Protocol Schema: New elements and attributes \[ID_20112\]\[ID_20113\]
+#### Protocol Schema: New elements and attributes \[ID 20112\]\[ID 20113\]
 
 The Protocol XML schema now supports the following elements and/or element attributes:
 
@@ -108,7 +108,7 @@ The Protocol XML schema now supports the following elements and/or element attri
 | Protocol.Chains.SearchChain |                 |
 | Protocol.Params.Param       | pollingInterval |
 
-#### Protocol Schema: Updated element and attribute rules \[ID_20114\]\[ID_20117\]\[ID_20118\]\[ID_20120\]\[ID_20121\]\[ID_20133\]\[ID_20403\]
+#### Protocol Schema: Updated element and attribute rules \[ID 20114\]\[ID 20117\]\[ID 20118\]\[ID 20120\]\[ID 20121\]\[ID 20133\]\[ID 20403\]
 
 The syntax rules for the following elements and/or attributes have been updated:
 
@@ -122,7 +122,7 @@ The syntax rules for the following elements and/or attributes have been updated:
 | Protocol.Triggers.Trigger.Name         | Must be unique.                                                                     |
 | Protocol.Triggers.Trigger.On@id        | Must contain either an integer or “each”.                                           |
 
-#### Protocol Schema: All elements and attributes must have a type defined \[ID_20404\]
+#### Protocol Schema: All elements and attributes must have a type defined \[ID 20404\]
 
 From now on, all elements and attributes configured in the Protocol XML schema must explicitly have a type defined.
 
@@ -134,7 +134,7 @@ Also, the type of the following elements has been updated:
 | NoTimeout    | Type is now ‘xs:string’.           |
 | ActionToTake | Empty string is no longer allowed. |
 
-#### Protocol Schema: Removed elements and attributes \[ID_20405\]
+#### Protocol Schema: Removed elements and attributes \[ID 20405\]
 
 The following elements and/or element attributes have been removed from the Protocol XML schema:
 
@@ -142,7 +142,7 @@ The following elements and/or element attributes have been removed from the Prot
 |----------------------------|-----------|
 | Protocol.Timers.Timer.Time | options   |
 
-#### UOM Schema: New units added \[ID_20407\]
+#### UOM Schema: New units added \[ID 20407\]
 
 The following units have been added to the UOM Schema:
 
@@ -153,15 +153,15 @@ The following units have been added to the UOM Schema:
 
 ### Enhancements
 
-#### Debugging: Migrated elements can now also be debugged \[ID_20071\]
+#### Debugging: Migrated elements can now also be debugged \[ID 20071\]
 
 It is now also possible to debug elements that were migrated from one DataMiner Agent to another within a DataMiner System.
 
-#### XML editor: Enhanced Automation script publication process \[ID_20255\]
+#### XML editor: Enhanced Automation script publication process \[ID 20255\]
 
 A number of enhancements have been made to the Automation script publication process.
 
-#### XML editor: Enhanced 'Automation Root' snippet and 'DataMiner Automation Script Template' file \[ID_20265\]
+#### XML editor: Enhanced 'Automation Root' snippet and 'DataMiner Automation Script Template' file \[ID 20265\]
 
 The following enhancements have been made to the ‘Automation Root’ snippet and the ‘DataMiner Automation Script Template’ file:
 
@@ -179,43 +179,43 @@ The following enhancements have been made to the ‘Automation Root’ snippet a
     <!--<Param type="debug">true</Param>-->
     ```
 
-#### XML editor: Exception handling added to 'QAction' snippet and 'After Startup' QAction of 'Protocol Root' snippet \[ID_20266\]
+#### XML editor: Exception handling added to 'QAction' snippet and 'After Startup' QAction of 'Protocol Root' snippet \[ID 20266\]
 
 Exception handling (try-catch) has now been added to
 
 - the “QAction” snippet, and
 - the “After Startup” QAction of the “Protocol Root” snippet.
 
-#### Validator: Text in Description column now wraps to the next line \[ID_20306\]
+#### Validator: Text in Description column now wraps to the next line \[ID 20306\]
 
 When the *Description* column of an error message in the *DIS Validator* window contains a large amount of text, from now on, that text will automatically wrap to the next line.
 
-#### XML editor: Enhanced behavior when opening a QAction for editing \[ID_20336\]
+#### XML editor: Enhanced behavior when opening a QAction for editing \[ID 20336\]
 
 Up to now, DIS would always ask you to save the protocol file when you opened a QAction for editing. From now on, it will only do so when necessary.
 
-#### Settings.StyleCop file now included in DIS \[ID_20563\]
+#### Settings.StyleCop file now included in DIS \[ID 20563\]
 
 The Settings.StyleCop file, which contains all rule definitions used by StyleCop, is now included in DIS and automatically applied to all QAction and Automation script projects. It is no longer necessary to download and install this file manually.
 
 ### Fixes
 
-#### IDE: MIB nodes incorrectly interpreted as tables during a MIB file import \[ID_20080\]
+#### IDE: MIB nodes incorrectly interpreted as tables during a MIB file import \[ID 20080\]
 
 When importing a MIB file, in some cases, MIB nodes would be incorrectly interpreted as tables.
 
-#### IDE - Display editor: Page names containing special characters were decoded incorrectly \[ID_20184\]
+#### IDE - Display editor: Page names containing special characters were decoded incorrectly \[ID 20184\]
 
 When the display editor was opened, in some cases, page names with special characters (e.g. “&”) would be decoded incorrectly.
 
-#### Problem when creating a new protocol or Automation script file via File \> New \> File... \[ID_20297\]
+#### Problem when creating a new protocol or Automation script file via File \> New \> File... \[ID 20297\]
 
 When you created a new protocol or Automation script file via *File \> New \> File...*, in some cases, the new file would incorrectly be saved without the “.xml” extension.
 
-#### IDE - DIS Tree View: Problem when removing redundant CDATA closing tags from a QAction \[ID_20358\]
+#### IDE - DIS Tree View: Problem when removing redundant CDATA closing tags from a QAction \[ID 20358\]
 
 When a CDATA element in a QAction had two closing tags (“\]\]\>\]\]\>”), and the DIS tree window indicated that it had found a syntax error in the QAction in question, the moment you removed one of those closing tags and closed the QAction, in some cases, it would become impossible to open the QAction again.
 
-#### IDE: Problem when using 'Repeat selected text...' option \[ID_20546\]
+#### IDE: Problem when using 'Repeat selected text...' option \[ID 20546\]
 
 In some cases, an “out of memory” exception could be thrown when you used the shortcut menu option “Repeat selected text...”.

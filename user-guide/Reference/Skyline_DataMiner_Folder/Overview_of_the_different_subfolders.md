@@ -22,7 +22,7 @@ uid: Overview_of_the_different_subfolders
 | Recycle Bin | Backup of changed data. See [Recycle bin](xref:Recycle_bin). | No |
 | Redundancy | Redundancy group configuration. | No |
 | Scripts | Automation scripts. | Yes |
-| Services | Services. | Yes |
+| Services | Services. | See note below. |
 | Simulations | Simulation files. | No |
 | Sounds | Custom alert sounds. See [Configuring a custom alert sound for an alarm tab](xref:ConfiguringACustomAlertSoundForAnAlarmTab). | Yes |
 | Spectrum Alarm Recordings | Alarm records of spectrum elements. | No |
@@ -33,4 +33,6 @@ uid: Overview_of_the_different_subfolders
 | Webpages | All webpages of the DataMiner client applications. | No |
 
 > [!NOTE]
-> Files marked as "synchronized" in the rightmost column are synchronized among all DMAs in the cluster every day at midnight (00:00). Therefore, it is of great importance that the time settings of all DMAs in the cluster are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms)
+>
+> - Files marked as "synchronized" in the rightmost column are synchronized among all DMAs in the cluster every day at midnight (00:00). Therefore, it is of great importance that the time settings of all DMAs in the cluster are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms)
+> - The *Services* folder contains the services hosted on the DataMiner Agent. Services hosted on other DMAs are synchronized with subfolders of the folder `C:\Skyline DataMiner\RemoteServices`. Each of these subfolders has the DMA ID of the DMA it is synchronized with.

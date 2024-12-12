@@ -67,7 +67,7 @@ The action you provide to the StartMonitor can be written as:
 
 Depending on what you are monitoring, you will be provided with a different “OnXChange” object that encapsulates the important data received from an event.
 
-Note that it also contains an instance of the Dms class that should be used for all sets and gets in this logic. It is important to realize that the code you are writing in the action is running on the SLNet Process and not the SLScripting process. You should therefore treat it as running outside of your protocol and possibly in parallel with other code.
+Note that it also contains an instance of the Dms class that should be used for all sets and gets in this logic.
 
 Always use methods and calls that work for inter-element communication. Never use SLProtocol and try to avoid manipulating collections that are not part of the action.
 

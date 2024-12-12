@@ -1,5 +1,6 @@
 ---
 uid: OverviewIndex
+description: Get a bird's eye view on DataMiner, including a general introduction, hosting & availability info, stack functions, and more.
 ---
 
 # DataMiner Overview

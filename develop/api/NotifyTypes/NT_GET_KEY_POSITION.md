@@ -43,4 +43,4 @@ int keyPosition = Convert.ToInt32(protocol.NotifyProtocol(163 /*NT_GET_KEY_POSIT
 
 ## See also
 
-- SLProtocol.GetKeyPosition method
+- [GetKeyPosition (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.GetKeyPosition(System.Int32,System.String)) method

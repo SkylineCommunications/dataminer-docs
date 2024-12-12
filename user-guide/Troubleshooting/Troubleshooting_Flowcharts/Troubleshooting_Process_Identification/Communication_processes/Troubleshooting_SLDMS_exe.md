@@ -141,11 +141,11 @@ class Nt Gray;
 
 **Since 2020, there have been some major changes to SLDMS:**
 
-- DataMiner 10.1.8 ([29189](xref:General_Feature_Release_10.1.8#failover-without-virtual-ip-address-id_29189-id_29911)): Failover without VIP
+- DataMiner 10.1.8 ([29189](xref:General_Feature_Release_10.1.8#failover-without-virtual-ip-address-id-29189-id-29911)): Failover without VIP
 
 - DataMiner 10.1.6 (29119): Toolset upgrade
 
-- DataMiner 10.1.6 ([28775](xref:General_Feature_Release_10.1.6#dmsxml-now-supports-using-hostnames-instead-of-ip-addresses-id_28775)): Allow hostnames in *DMS.xml*
+- DataMiner 10.1.6 ([28775](xref:General_Feature_Release_10.1.6#dmsxml-now-supports-using-hostnames-instead-of-ip-addresses-id-28775)): Allow hostnames in *DMS.xml*
 
 - DataMiner 10.1.0/10.0.10 (26221): COM impersonation security update
 

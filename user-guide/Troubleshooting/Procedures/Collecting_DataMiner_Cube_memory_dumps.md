@@ -33,7 +33,7 @@ ProcDump is a very versatile tool and will suffice in almost all cases. Only whe
 To take a memory dump with ProcDump:
 
 1. Open a command prompt (*cmd.exe*) in the folder containing *procdump.exe*.
-1. Run `procdump -ma DataMinerCube.exe`
+1. Run `procdump -ma "DataMinerCube.exe"`
 
 In the command above, replace *DataMinerCube.exe* with the name or ID of the process you want to take a memory dump from. For example, to take a memory dump of the DataMiner Cube browser app (XBAP), specify *PresentationHost.exe* instead.
 

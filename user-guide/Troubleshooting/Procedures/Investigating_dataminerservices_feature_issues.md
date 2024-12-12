@@ -1,5 +1,6 @@
 ---
 uid: Investigating_Dataminerservices_Feature_Issues
+description: Check the cloud connection, check if all DxMs are OK, check if requirements are met, and validate the internal network configuration.
 ---
 
 # Investigating issues with dataminer.services features

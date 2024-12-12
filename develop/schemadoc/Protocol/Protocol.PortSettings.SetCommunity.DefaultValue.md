@@ -4,7 +4,7 @@ uid: Protocol.PortSettings.SetCommunity.DefaultValue
 
 # DefaultValue element
 
-Specifies the default value of the SNMP set community string that will be used in the DataMiner user interface for SNMP drivers..
+Specifies the default value of the SNMP set community string that will be used in the DataMiner user interface for SNMP connectors.
 
 ## Type
 

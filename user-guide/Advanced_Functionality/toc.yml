@@ -143,11 +143,11 @@ items:
         items:
           - name: Cassandra DB Size
             topicUid: BPA_Cassandra_DB_Size
-          - name: Check Agent Presence Test In NATS
+          - name: NATS connections between the DataMiner Agents
             topicUid: BPA_Check_Agent_Presence
-          - name: Check Antivirus DLLs
+          - name: Antivirus on the DataMiner Agents
             topicUid: BPA_Check_Antivirus_DLLs
-          - name: Check Cluster SLNet Connections
+          - name: SLNet connections between the DataMiner Agents
             topicUid: BPA_Check_Cluster_SLNet_Connections
           - name: Check Deprecated MySql DLL
             topicUid: BPA_Check_Deprecated_MySql_DLL
@@ -157,11 +157,11 @@ items:
             topicUid: BPA_Firewall_Configuration
           - name: HTTPS Configuration
             topicUid: BPA_Https_Configuration
-          - name: Minimum Requirements Check
+          - name: DataMiner Agent Minimum Requirements
             topicUid: BPA_Minimum_Requirements_Check
           - name: Password Strength
             topicUid: BPA_Password_Strength
-          - name: Report Active RTE
+          - name: Active Runtime Errors
             topicUid: BPA_Report_Active_RTE
           - name: Security Advisory
             topicUid: BPA_Security_Advisory
@@ -175,7 +175,7 @@ items:
             topicUid: BPA_Validate_Connectors
           - name: Verify Cloud DxM Version
             topicUid: BPA_Verify_Cloud_DxM_Version
-          - name: View Recursion
+          - name: View Recursive Loops
             topicUid: BPA_View_Recursion
   - name: Failover
     topicUid: failover
@@ -277,6 +277,8 @@ items:
                 topicUid: Configuring_the_database_settings_in_Cube
               - name: Migrating existing systems to dedicated clustered storage
                 topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+              - name: Decommissioning WSL
+                topicUid: Decommissioning_WSL
           - name: Configuring storage per DMA
             topicUid: Configuring_storage_per_DMA
             items:
@@ -453,7 +455,6 @@ items:
               - name: Customizing the layout of notification messages
                 topicUid: Customizing_the_layout_of_notification_messages
           - name: Managing user groups
-            topicUid: Managing_user_groups
             items:
               - name: Viewing information about user groups
                 topicUid: Viewing_information_about_user_groups
@@ -473,6 +474,8 @@ items:
             topicUid: Frequently_asked_questions_about_user_group_settings
       - name: Advanced security configuration
         items:
+#          - name: Lockbox service for DaaS and STaaS systems
+#            topicUid: Lockbox
           - name: Securing self-hosted DataMiner storage
             items:
               - name: Securing the Cassandra general database
@@ -584,6 +587,10 @@ items:
             topicUid: Connectivity_xml_files_representing_chains
           - name: Automatically generating service RCA chains based on connectivity
             topicUid: Automatically_generating_service_RCA_chains_based_on_connectivity
+      - name: Tutorials
+        items:
+          - name: Getting started with DCF
+            topicUid: getting_started_dataminer_connectivity_framework
   - name: TCP-IP sockets
     items:
       - name: About TCP-IP sockets
@@ -609,5 +616,14 @@ items:
   - name: Swarming
     topicUid: Swarming
     items:
-      - name: Switching objects
-        topicUid: SwitchingObjects
+      - name: Preparing your system for Swarming
+        topicUid: SwarmingPrepare
+      - name: Enabling the Swarming feature
+        topicUid: EnableSwarming
+      - name: Swarming elements
+        topicUid: SwarmingElements
+      - name: Swarming bookings
+        topicUid: SwarmingBookings
+      - name: Partially rolling back Swarming
+        topicUid: SwarmingRollback
+

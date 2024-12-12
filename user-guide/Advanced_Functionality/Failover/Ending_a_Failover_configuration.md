@@ -6,6 +6,8 @@ uid: Ending_a_Failover_configuration
 
 When two DMAs are linked together in a Failover setup, it is possible to end the Failover configuration, and thereby separate the two DMAs again.
 
+From DataMiner 10.3.0 [CU18]/10.4.0/10.4.9 onwards<!--RN 40161-->, when you decommission a Failover setup, the DataMiner Agent that was online when you started the decommission process will be restarted as soon as the process is complete.
+
 > [!CAUTION]
 > While it is possible from DataMiner 10.2.0 [CU9]/10.2.12 onwards to decommission a Failover setup while the server hosting the offline Agent is unavailable, this will not reset the offline Agent to a clean installation. As such, you will need to make sure the offline Agent is not brought online again in the network as this would cause double polling. In addition, there could be minor data loss and inconsistencies on the database level as the database node cannot be cleanly decommissioned.
 

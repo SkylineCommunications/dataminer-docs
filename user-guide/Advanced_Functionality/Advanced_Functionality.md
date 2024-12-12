@@ -1,5 +1,6 @@
 ---
 uid: Part3AdvancedFunctionalities
+description: Discover everything you need to know as a DataMiner administrator, from the basic setup of your system to the most complex configurations.
 ---
 
 # Advanced DataMiner functionality for administrators

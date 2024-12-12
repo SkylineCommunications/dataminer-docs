@@ -1,5 +1,6 @@
 ---
 uid: Masking_and_unmasking_alarms
+description: When an alarm is raised that does not need an intervention (e.g. maintenance/test), right-click it in the Alarm Console and select 'Mask alarm'.
 ---
 
 # Masking and unmasking alarms

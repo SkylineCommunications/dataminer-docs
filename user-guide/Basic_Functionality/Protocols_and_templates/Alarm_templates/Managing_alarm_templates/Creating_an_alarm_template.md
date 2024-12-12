@@ -45,7 +45,7 @@ To create a new alarm template:
 
    - [Configure conditional alarm monitoring](xref:Using_conditions_in_an_alarm_template).
 
-   - [Configure anomaly detection alarms](xref:Configuring_anomaly_detection_alarms).
+   - [Configuring Augmented Operations alarm settings](xref:Configuring_anomaly_detection_alarms).
 
    - [Configure automatic clearing of alarms](xref:Setting_the_autoclear_option_in_alarm_template).
 

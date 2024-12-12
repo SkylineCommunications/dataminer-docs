@@ -4,7 +4,9 @@ uid: Protocol.ParameterGroups.Group-dynamicUsePK
 
 # dynamicUsePK attribute
 
-Specifies whether the display key or the primary key should be used in the interface name (Default: false).
+<!-- RN 9767 -->
+
+Specifies whether the display key or the primary key should be used in the interface name (default: false).
 
 ## Content Type
 
@@ -16,9 +18,7 @@ Specifies whether the display key or the primary key should be used in the inter
 
 ## Remarks
 
-By default, when defining a parameter group that uses a dynamic ID to dynamically generate interfaces, the display key is used. If you want to use the primary key instead of the display key in the interface name, use this attribute and set it to “true”.
-
-*Feature introduced in DataMiner 8.5.6 (RN 9767).*
+By default, when defining a parameter group that uses a dynamic ID to dynamically generate interfaces, the display key is used. If you want to use the primary key instead of the display key in the interface name, use this attribute and set it to "true".
 
 ## Examples
 

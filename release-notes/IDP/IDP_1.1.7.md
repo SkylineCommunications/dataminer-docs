@@ -6,7 +6,7 @@ uid: IDP_1.1.7
 
 ## New features
 
-#### IDP now supports WMI discovery \[ID_25559\]
+#### IDP now supports WMI discovery \[ID 25559\]
 
 IDP has now been extended with WMI discovery, so that Windows servers can be discovered.
 
@@ -52,17 +52,17 @@ For example:
 }
 ```
 
-#### Customizable rack slot position numbering \[ID_25561\]
+#### Customizable rack slot position numbering \[ID 25561\]
 
 It is now possible to configure how rack slot positions are numbered, by using the *Rack Position* setting. You can find this setting in the IDP app under *Admin* > *Facilities* > *View Settings*.
 
 The rack position can either be set to "bottom-up", in which case position 1 will be at the bottom of the rack, or to "top-down", in which case position 1 will be at the top of the rack.
 
-#### New 'Identify Unknown Devices' option in IDP app \[ID_25593\]
+#### New 'Identify Unknown Devices' option in IDP app \[ID 25593\]
 
 A new option, *Identify Unknown Devices*, is now available in the IDP app, via *Admin* > *Discovery* > *Settings*. This option determines whether the app shows devices that have been discovered but for which no matching CI type is found.
 
-#### IDP app: Inventory tab enhancements \[ID_25638\]
+#### IDP app: Inventory tab enhancements \[ID 25638\]
 
 In the *Inventory* tab of the IDP app, you can now delete an element from the *Discovered Elements* table by selecting the element and clicking the *Delete* button above the table.
 
@@ -70,7 +70,7 @@ In addition, the filter options for the *Discovered Elements* table have been ch
 
 Finally, the new *Identify Unknown Devices* option is now also available on this tab, allowing you to determine whether discovered devices should be displayed in the table if no matching CI type was found for them.
 
-#### Discovery of SNMPv3 devices \[ID_25706\]
+#### Discovery of SNMPv3 devices \[ID 25706\]
 
 Discovery of SNMPv3 devices is now supported. For this purpose, you can import discovery profiles with SNMPv3 actions and credentials. You can do so by going to *Admin* > *Discovery* in the IDP app and clicking the upload icon.
 
@@ -134,7 +134,7 @@ Finally, the following restrictions apply:
   - MD5/SHA-1 and AES192
   - MD5/SHA-1/SHA-224 and AES256
 
-#### Configuration comparison \[ID_25773\]
+#### Configuration comparison \[ID 25773\]
 
 A new *Compare* subtab has been added to the *Configuration* tab in the IDP app. On this tab, you can compare two configuration files.
 
@@ -153,36 +153,36 @@ You can also quickly launch the configuration comparison from the *Summary* and 
 
 ### Enhancements
 
-#### IDP app toggle buttons now use Cube accent color \[ID_25617\]
+#### IDP app toggle buttons now use Cube accent color \[ID 25617\]
 
 The toggle buttons in the IDP app have been adjusted so that they now use the Cube accent color.
 
-#### Rack Layout Manager: Support for larger rack-mountable devices \[ID_25663\]
+#### Rack Layout Manager: Support for larger rack-mountable devices \[ID 25663\]
 
 The Rack Layout Manager now supports larger rack-mountable devices. The maximum size has been increased from 6 rack units to 20 rack units.
 
-#### Improved performance when synchronizing element names \[ID_25709\]
+#### Improved performance when synchronizing element names \[ID 25709\]
 
 Performance has improved when element names are synchronized between the DataMiner System and the IDP app.
 
-#### Base protocols no longer available as protocol for element creation in CI types \[ID_25765\]
+#### Base protocols no longer available as protocol for element creation in CI types \[ID 25765\]
 
 When you create or edit a CI type, you can no longer use a base protocol (also known as a mediation protocol) as the protocol for element creation, as it is not possible to create elements with these kinds of protocols. As such, base protocols are no longer listed in the Solution when CI types are generated, created or edited.
 
 ### Fixes
 
-#### Element creation failed if multiple proposed element names for discovered elements were set to 'N/A' \[ID_25596\]
+#### Element creation failed if multiple proposed element names for discovered elements were set to 'N/A' \[ID 25596\]
 
 If the *Discovered Elements* table contained multiple entries where the proposed element name was "N/A", it could occur that element creation failed.
 
-#### Skyline IDP Discovery: IP address range calculation issue \[ID_25681\]
+#### Skyline IDP Discovery: IP address range calculation issue \[ID 25681\]
 
 In some cases, it could occur that IP address ranges were not calculated correctly.
 
-#### Not possible to delete discovery profile \[ID_25706\]
+#### Not possible to delete discovery profile \[ID 25706\]
 
 In some cases, it could occur that it was not possible to delete discovery profiles using the context menu of the *Discovery Profiles* table.
 
-#### Element state configuration in CI type not applied \[ID_25757\]
+#### Element state configuration in CI type not applied \[ID 25757\]
 
 When a particular element state other than active was defined in a CI type configuration, this was not taken into account. Instead, elements were always created in the active state.

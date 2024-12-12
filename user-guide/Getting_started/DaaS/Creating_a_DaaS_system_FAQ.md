@@ -21,6 +21,10 @@ You can order DataMiner credits through the Azure Marketplace. See [Order DataMi
 
 For more information, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
 
+### When does maintenance take place on a DaaS system?
+
+See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
+
 ### When does a DaaS system expire?
 
 A DataMiner Community Edition DaaS system will be scheduled to expire as soon as the organization does not have sufficient DataMiner credits to extend its lifetime.

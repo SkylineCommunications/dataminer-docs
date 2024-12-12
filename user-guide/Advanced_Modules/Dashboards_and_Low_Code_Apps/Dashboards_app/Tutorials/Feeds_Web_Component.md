@@ -42,7 +42,7 @@ Expected duration: 5 minutes
 
 1. Go to [edit mode](xref:Editing_custom_apps).
 
-1. Make sure you are on the *Static* page, and click the pencil icon next to the title "Static" on the left.
+1. Make sure you are on the *Static* page. Depending on your DataMiner version, you may need to click the pencil icon next to the title "Static" on the left.
 
    On this page, you will find two assignments.
 
@@ -60,7 +60,7 @@ Expected duration: 5 minutes
 
    1. Preview or publish the app to see the embedded webpage.
 
-1. Go back to edit mode, make sure you are again on the *Static* page, and click its pencil icon.
+1. Go back to edit mode and make sure you are again on the *Static* page. Depending on your DataMiner version, you may need to click the pencil icon next to "Static".
 
 1. Scroll down to the second assignment, which is to embed a web page by specifying custom HTML code:
 
@@ -76,7 +76,7 @@ Expected duration: 5 minutes
 
 1. Go to [edit mode](xref:Editing_custom_apps).
 
-1. Go to the *Using feeds* page of the low-code app, and click the pencil icon next to the title "Using feeds" on the left.
+1. Go to the *Using feeds* page of the low-code app. Depending on your DataMiner version, you may need to click the pencil icon next to the title "Using feeds" on the left.
 
    On this page, you will find a [table component](xref:DashboardTable) containing different katas and two assignments.
 
@@ -118,4 +118,4 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Feeds](xref:Using_dashboard_feeds)
+- [Component data](xref:Component_Data)

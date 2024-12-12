@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.1.10
 
 ### DMS core functionality
 
-#### Improved average trending \[ID_28684\]
+#### Improved average trending \[ID 28684\]
 
 The following improvements have been implemented to average trending:
 
@@ -121,7 +121,7 @@ Let’s start from the example of a protocol with the following exception values
 
   Note that exception values are always interpreted as discrete values.
 
-#### DataMiner Object Model: New field descriptors \[ID_30583\]
+#### DataMiner Object Model: New field descriptors \[ID 30583\]
 
 Two special types of field descriptors have been added to the DataMiner Object Model:
 
@@ -140,7 +140,7 @@ From now on, the following special types of field descriptors are available:
 | ServiceDefinitionFieldDescriptor | Defines a field that should contain the ID of a ServiceDefinition. The descriptor contains a ServiceDefinitionFilter property, which has a FilterElement that can be used to determine the ServiceDefinitions that will be presented to the user. |
 | StaticTextFieldDescriptor | Defines a field that should contain a static value defined by the StaticText property. |
 
-#### Alarm templates - Smart baselines: Calculated baseline values outside the value range will automatically be set to the nearest value in the range \[ID_30704\]
+#### Alarm templates - Smart baselines: Calculated baseline values outside the value range will automatically be set to the nearest value in the range \[ID 30704\]
 
 When a calculated baseline value is outside the baseline value range, from now on, it will automatically be set to the nearest value in the range.
 
@@ -151,13 +151,13 @@ Examples:
 
 ### DMS Security
 
-#### New user permission to send emails via DataMiner \[ID_30425\]
+#### New user permission to send emails via DataMiner \[ID 30425\]
 
 A new user permission *Email* > *Send via DataMiner System* is now available under the general user permissions in Users/Groups section of System Center. This user permission determines whether a user is allowed to send emails via the DataMiner System.
 
 ### DMS Protocols
 
-#### New polling scheme polls SNMP tables by row [ID_30780]
+#### New polling scheme polls SNMP tables by row [ID 30780]
 
 A new polling scheme can now be used to poll SNMP tables.
 
@@ -191,7 +191,7 @@ To use this new polling scheme, add the “multipleGet” to the SNMP options of
 
 ### DMS Cube
 
-#### Visual Overview: History mode for parameter values of element shapes \[ID_30333\]
+#### Visual Overview: History mode for parameter values of element shapes \[ID 30333\]
 
 It is now possible to make an element shape in Visual Overview show the parameter values for a specific point in the past. This time and date can optionally be selected using another Visual Overview component.
 
@@ -233,7 +233,7 @@ The following new placeholders are now also supported in an *Element* shape. The
 - \[minimum value\]
 - \[maximum value\]
 
-#### Aggregation rule conditions can now be specified in the form of a regular expression \[ID_30640\]
+#### Aggregation rule conditions can now be specified in the form of a regular expression \[ID 30640\]
 
 Aggregation rule conditions can now be specified in the form of a regular expression.
 
@@ -243,13 +243,13 @@ Aggregation rule conditions can now be specified in the form of a regular expres
     - If you chose “by value” (i.e. the default setting), then enter a regular expression.
     - If you chose “by reference”, then select a single-value parameter of type “string” containing a regular expression.
 
-#### DataMiner Cube will now take into account ResourceManagerEventMessages sent when ReservationInstance properties were updated \[ID_30668\]
+#### DataMiner Cube will now take into account ResourceManagerEventMessages sent when ReservationInstance properties were updated \[ID 30668\]
 
 As from DataMiner feature release version 10.1.9, a ResourceManagerEventMessage is sent next to a ReservationInstanceChangePropertiesEventMessage when a ReservationInstance property was updated using either ResourceManagerHelper#UpdateProperties or ResourceManagerHelper#SafelyUpdateProperties.
 
 DataMiner Cube has now been adapted accordingly.
 
-#### Visual Overview: New ChildrenFilter 'ResourceMapping' \[ID_30751\]
+#### Visual Overview: New ChildrenFilter 'ResourceMapping' \[ID 30751\]
 
 When, within a service context, child shapes are automatically generated, it is now possible to use a ResourceMapping filter. This will allow you to only show shapes that have a certain role (mapped, unmapped, inheritance) within the booking.
 
@@ -264,7 +264,7 @@ See the following example.
 > [!NOTE]
 > Within a data field of type *ChildrenFilter*, you can specify multiple filters separated by pipe characters (“\|”). If you do so, only shapes matching all specified filters will be shown.
 
-#### Visual Overview: Linking an element shape to a resource that is using that element \[ID_30752\]
+#### Visual Overview: Linking an element shape to a resource that is using that element \[ID 30752\]
 
 It is now possible to link an element shape to a resource that is using that element.
 
@@ -291,7 +291,7 @@ When a resource is linked to an element shape, you can use the following placeho
 | \[Resource ID\] | The ID of the resource (GUID). |
 | \[Resource Name\] | The name of the resource. |
 
-#### Visual Overview: New \[ServiceDefinition:\] placeholder & new \[Reservation:\] placeholder property 'ServiceDefinitionID' \[ID_30757\]
+#### Visual Overview: New \[ServiceDefinition:\] placeholder & new \[Reservation:\] placeholder property 'ServiceDefinitionID' \[ID 30757\]
 
 ##### New \[ServiceDefinition:\] placeholder
 
@@ -313,7 +313,7 @@ Full syntax: \[Reservation:\<Service ID or Booking ID>,ServiceDefinitionID\]
 
 ### DMS Automation
 
-#### Interactive Automation scripts: New 'TreeViewItemCheckingBehavior' property of TreeViewItem \[ID_29993\]\[ID_30603\]
+#### Interactive Automation scripts: New 'TreeViewItemCheckingBehavior' property of TreeViewItem \[ID 29993\]\[ID 30603\]
 
 You can now configure what happens when you select a tree view item in an interactive Automation script, using the new *TreeViewItemCheckingBehavior* enum property of the *TreeViewItem* object.
 
@@ -365,7 +365,7 @@ UIBuilder uib = new UIBuilder();
    _treeResults = _engine.ShowUI(uib);
 ```
 
-#### Interactive Automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID_30638\]
+#### Interactive Automation scripts: Input components now have a 'WantsOnFocusLost' property & other input component enhancements \[ID 30638\]
 
 In an interactive Automation script that is used in the DataMiner web apps, the following components now have a *WantsOnFocusLost* property. If you set this property to true, then an *OnChange* event will be triggered when the component loses focus.
 
@@ -385,7 +385,7 @@ Other enhancements:
 - In a Checkbox, a CheckboxList or a RadioButtonList component, users can now select or clear options using the space bar.
 - In a CheckboxList or a RadioButtonList component, users can now go from one checkbox or radio button to another using the TAB keys.
 
-#### Interactive Automation scripts: File selector component can now be configured to only allow a script to continue after a file has been uploaded \[ID_30728\]
+#### Interactive Automation scripts: File selector component can now be configured to only allow a script to continue after a file has been uploaded \[ID 30728\]
 
 In an interactive Automation script that is used in Dashboards, you can now configure a file selector component to only allow a script to continue after a file has been uploaded. To do so, set the property *IsRequired* to true.
 
@@ -400,19 +400,19 @@ uibDef.IsRequired = true;
 
 ### DMS Web Services
 
-#### Web Services API v1: SetParameter and SetParameterRow methods can now also be used to update parameters of enhanced services \[ID_30823\]
+#### Web Services API v1: SetParameter and SetParameterRow methods can now also be used to update parameters of enhanced services \[ID 30823\]
 
 The SetParameter and SetParameterRow methods of the DataMiner Web Services API v1 can now also be used to update parameters of enhanced services.
 
 ### DMS Service & Resource Management
 
-#### Automation - Service & Resource Management: Option to return time-dependent capabilities when requesting eligible resources \[ID_30576\]
+#### Automation - Service & Resource Management: Option to return time-dependent capabilities when requesting eligible resources \[ID 30576\]
 
 When the eligible resources for a booking are requested, it is now possible to calculate all booked time-dependent capabilities for the eligible resources. For this purpose, the *CalculateAllCapabilities* flag should be set to true on *EligibleResourceContext*. This feature is intended to be used in the DataMiner Booking Manager app.
 
 ### DMS Mobile Gateway
 
-#### Getting and setting the value of a table column parameter \[ID_30399\]
+#### Getting and setting the value of a table column parameter \[ID 30399\]
 
 It is now possible to get and set values of table column parameters using text messages.
 
@@ -438,19 +438,19 @@ Using special characters:
 
 ### Enhancements
 
-#### Security enhancements \[ID_30124\] \[ID_30345\] \[ID_30479\] \[ID_30570\] \[ID_30581\] \[ID_30597\] \[ID_30600\] \[ID_30604\] \[ID_30786\]
+#### Security enhancements \[ID 30124\] \[ID 30345\] \[ID 30479\] \[ID 30570\] \[ID 30581\] \[ID 30597\] \[ID 30600\] \[ID 30604\] \[ID 30786\]
 
 A number of security enhancements have been made.
 
-#### Improved performance when including/excluding elements in services based on alarm or element alarm state \[ID_30303\]
+#### Improved performance when including/excluding elements in services based on alarm or element alarm state \[ID 30303\]
 
 Performance has improved when elements are dynamically included or excluded in a service based on alarm state or element alarm state.
 
-#### Cassandra cluster: SLA tables now stored in one table \[ID_30369\]
+#### Cassandra cluster: SLA tables now stored in one table \[ID 30369\]
 
 If one Cassandra cluster database is used for the entire DMS, the SLA database tables will now all be stored in one table instead of in a table per SLA. This will improve the performance of Cassandra.
 
-#### Profile Manager: Objects added, updated or deleted in bulk will now be grouped into one single event \[ID_30465\]
+#### Profile Manager: Objects added, updated or deleted in bulk will now be grouped into one single event \[ID 30465\]
 
 When profile parameters, profile instances or profile definitions are added, updated or deleted in bulk, from now on, a single event listing all objects will be sent. Up to now, a separate event would be sent for every object.
 
@@ -458,11 +458,11 @@ To prevent events from getting too large, the maximum amount of objects listed i
 
 Also, due to a number of enhancements, overall performance has increased when deleting profile objects in bulk.
 
-#### DataMiner Cube: Enhanced performance of Booking Manager and Resource Manager \[ID_30483\]
+#### DataMiner Cube: Enhanced performance of Booking Manager and Resource Manager \[ID 30483\]
 
 In DataMiner Cube, the Resource Manager and the Booking Manager always run side by side. Up to now, when the Booking Manager was being used, in some cases, data would also be requested from the Resource Manager. A number of enhancements have now been made to prevent this. As a result, overall performance of both the Booking Manager and the Resource Manager has increased.
 
-#### Profiles module: Parameter list improvements \[ID_30530\]
+#### Profiles module: Parameter list improvements \[ID 30530\]
 
 A number of small improvements have been implemented to the list of parameters in the Profiles module:
 
@@ -470,19 +470,19 @@ A number of small improvements have been implemented to the list of parameters i
 - When you create a new parameter, that parameter is automatically selected.
 - It is now possible to search for a parameter in the list by typing its first characters.
 
-#### Service & Resource Management: Interface state calculation for virtual function interfaces disabled \[ID_30537\]
+#### Service & Resource Management: Interface state calculation for virtual function interfaces disabled \[ID 30537\]
 
 As the interfaces of virtual functions are generated from a table that cannot be monitored, the interface state calculation for these interfaces is now disabled. This may result in improved performance.
 
-#### Service & Resource Management: Improved performance when processing virtual functions \[ID_30585\]
+#### Service & Resource Management: Improved performance when processing virtual functions \[ID 30585\]
 
 A number of enhancements have been implemented to improve performance when processing virtual functions.
 
-#### Improved logging in case encrypted password in DB.xml cannot be retrieved \[ID_30614\]
+#### Improved logging in case encrypted password in DB.xml cannot be retrieved \[ID 30614\]
 
 If a password is encrypted in DB.xml but for some reason (e.g. syncing issue) DataMiner is unable to retrieve it, this will now be indicated more clearly in the logging.
 
-#### Ticket migration from Cassandra to Elasticsearch: Notice generated when unsupported characters are found in TicketFieldDescriptors \[ID_30624\]
+#### Ticket migration from Cassandra to Elasticsearch: Notice generated when unsupported characters are found in TicketFieldDescriptors \[ID 30624\]
 
 When unsupported characters are found in TicketFieldDescriptors at the start of a ticket data migration from Cassandra to Elasticsearch, from now on,
 
@@ -492,35 +492,35 @@ When unsupported characters are found in TicketFieldDescriptors at the start of 
 
 See also: [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails)
 
-#### Web apps: Notification when reconnect happens in background \[ID_30628\]
+#### Web apps: Notification when reconnect happens in background \[ID 30628\]
 
 When a reconnect happens in the background in the DataMiner web apps, a notification will now be displayed to inform the user.
 
-#### SLAnalytics: pollingtime values in ParameterInfo records can no longer be equal to zero \[ID_30729\]
+#### SLAnalytics: pollingtime values in ParameterInfo records can no longer be equal to zero \[ID 30729\]
 
 In a Cassandra database, from now on, pollingTime values in ParameterInfo records will no longer be allowed to be equal to zero. pollingTime values between 0 and 1 seconds will automatically be updated to 1 before they are stored in the database.
 
-#### Dashboards app - Table components: Selecting multiple rows on an Apple Mac computer \[ID_30734\]
+#### Dashboards app - Table components: Selecting multiple rows on an Apple Mac computer \[ID 30734\]
 
 When working inside a table component using an Apple Mac computer, up to now, it was not possible to select multiple rows. From now on, users of an Apple Mac computer will be able to select multiple table rows while holding down the *Command* key.
 
 Also, on an Apple Mac computer, it will now be possible to sort a table on multiple columns by clicking column headers while holding down the *Command* key.
 
-#### SLElement: Enhanced performance when looking up linked rows after a foreign key has changed \[ID_30747\]
+#### SLElement: Enhanced performance when looking up linked rows after a foreign key has changed \[ID 30747\]
 
 Due to a number of enhancements, overall performance of SLElement has increased when looking up linked rows after a foreign key has changed.
 
-#### Dashboards app - GQI: Enhanced performance when fetching trend statistics \[ID_30783\]
+#### Dashboards app - GQI: Enhanced performance when fetching trend statistics \[ID 30783\]
 
 Due to a number of enhancements, overall performance has increased when fetching trend statistics.
 
 ### Fixes
 
-#### SRM module not starting after Failover switch \[ID_29169\]
+#### SRM module not starting after Failover switch \[ID 29169\]
 
 In some rare cases, after a Failover switch, it could occur that an SRM module could not be started.
 
-#### Slow initial synchronization of services in DMS \[ID_30074\]
+#### Slow initial synchronization of services in DMS \[ID 30074\]
 
 In some cases, it could occur that the initial synchronization of services in a DMS was slow because of unnecessary errors generated in the SLDMS process. Usually, an error similar to the following was logged:
 
@@ -528,11 +528,11 @@ In some cases, it could occur that the initial synchronization of services in a 
 2021/06/03 01:00:00.302|SLDMS.txt|SLDMS.exe 10.1.2118.668|13524|26072|CSystem::ResolveServicePaths|ERR|-1|Failed resolving hosting DMA info for 10.10.80.20 and service RT_ServiceCreationDelete_66_2021_06_03_00_58
 ```
 
-#### DataMiner Cube: Missing alarms in Active alarms tab \[ID_30126\]
+#### DataMiner Cube: Missing alarms in Active alarms tab \[ID 30126\]
 
 In some rare cases, after connecting to a busy system, it could occur that alarms were missing in the Active alarms tab in the Alarm Console.
 
-#### No longer possible to disable a Failover setup \[ID_30458\]
+#### No longer possible to disable a Failover setup \[ID 30458\]
 
 In some cases, it would no longer be possible to disable a Failover setup.
 
@@ -541,43 +541,43 @@ From now on, when you disable a Failover setup
 - the offline agent will be reset to factory settings using SLReset, and
 - the online agent will be reconfigured to become a standalone agent.
 
-#### Not possible to log in to web app using SAML \[ID_30469\]
+#### Not possible to log in to web app using SAML \[ID 30469\]
 
 In some cases, it could occur that it was not possible to log in to the Dashboards or Monitoring app using SAML.
 
-#### Dashboards app: Query with filter on value discrete parameter not working correctly \[ID_30486\]
+#### Dashboards app: Query with filter on value discrete parameter not working correctly \[ID 30486\]
 
 If a query in a dashboard was filtered on the value of a discrete parameter, it could occur that the filter was not executed correctly. This happened because the filter used the display value of the parameter instead of the actual value.
 
-#### Profile parameter with mediation snippet incorrectly shown as changed \[ID_30530\]
+#### Profile parameter with mediation snippet incorrectly shown as changed \[ID 30530\]
 
 When a profile parameter with a mediation snippet was loaded initially, it would incorrectly be shown as having unsaved changes.
 
-#### Problem with conditional monitoring after alarm template update \[ID_30531\]
+#### Problem with conditional monitoring after alarm template update \[ID 30531\]
 
 When an alarm template was refreshed in the SLElement process, e.g. because the alarm template was modified or the baseline changed, it could occur that conditional monitoring was ignored for standalone parameters. Because of this, if a parameter was not monitored because the condition for this was met, it was shown as monitored regardless.
 
-#### Profiles module: Discrete capability parameter showed actual values instead of display values \[ID_30533\]
+#### Profiles module: Discrete capability parameter showed actual values instead of display values \[ID 30533\]
 
 In the Profiles module, if a capability parameter of type Discrete was configured in a profile instance, the drop-down box for this parameter showed the actual discrete values instead of the display values.
 
-#### Standalone Cassandra Backup Tool: Problem when using the clearsnapshot command without -name argument \[ID_30549\]
+#### Standalone Cassandra Backup Tool: Problem when using the clearsnapshot command without -name argument \[ID 30549\]
 
 When you used the clearsnapshot command without -name argument in order to clear all snapshots, in some cases, an exception could be thrown.
 
-#### Dashboards app: Table incorrectly identified by display name instead of ID \[ID_30591\] \[ID_30684\]
+#### Dashboards app: Table incorrectly identified by display name instead of ID \[ID 30591\] \[ID 30684\]
 
 Previously, if a query in a dashboard used the data source "Get parameter table by ID", the table was identified by its display name. However, as this is not necessarily unique in a protocol, this could cause incorrect results. New queries will now us the table ID as the identifier, though they will display the name in the UI.
 
-#### Insufficient information in exception message in case of invalid characters in dictionary keys \[ID_30602\]
+#### Insufficient information in exception message in case of invalid characters in dictionary keys \[ID 30602\]
 
 When an exception was thrown because invalid characters were used in dictionary keys, it could occur that the message did not include all invalid characters, but only the string array type name.
 
-#### Automation: CheckboxList and RadiobuttonList not decoding "\\" correctly \[ID_30605\]
+#### Automation: CheckboxList and RadiobuttonList not decoding "\\" correctly \[ID 30605\]
 
 In an interactive Automation script, it could occur that the *CheckboxList* and *RadiobuttonList* components did not correctly decode a backslash ("\\") character.
 
-#### Automation: Problems with datetime filters in scripts \[ID_30611\]
+#### Automation: Problems with datetime filters in scripts \[ID 30611\]
 
 Several issues have been resolved in case data is retrieved using a datetime filter in a script:
 
@@ -585,23 +585,23 @@ Several issues have been resolved in case data is retrieved using a datetime fil
 
 - If *DateTime.Kind* is unspecified, now no action is performed.
 
-#### Information about running elements missing in SLProtocol logging \[ID_30612\]
+#### Information about running elements missing in SLProtocol logging \[ID 30612\]
 
 Since DataMiner 9.6.0/9.6.1, information about running elements could be missing in the SLProtocol logging.
 
-#### Problem with SLNet due to unhandled exception \[ID_30626\]
+#### Problem with SLNet due to unhandled exception \[ID 30626\]
 
 In some rare cases, an unhandled exception could cause a problem in the SLNet process.
 
-#### DataMiner Cube: /Bootstrap command line argument not copying files \[ID_30632\]
+#### DataMiner Cube: /Bootstrap command line argument not copying files \[ID 30632\]
 
 In some cases, it could occur that the */Bootstrap* command line argument for the DataMiner Cube launcher did not copy the files *DataMinerCube.exe.config* and *CubeLauncherConfig.json* to the target location.
 
-#### DataMiner Cube - Spectrum Analysis: Problem when retrieved client session data contained duplicate keys \[ID_30644\]
+#### DataMiner Cube - Spectrum Analysis: Problem when retrieved client session data contained duplicate keys \[ID 30644\]
 
 When you open a spectrum analyzer element in Cube, it will retrieve all client sessions of that spectrum element. Up to now, when the retrieved client session data contained duplicate keys, an exception could be thrown. From now on, a log entry will be generated instead.
 
-#### GetAlarmFilterResponse and GetTrendFilterResponse messages caused protocol buffer serialization errors \[ID_30650\]
+#### GetAlarmFilterResponse and GetTrendFilterResponse messages caused protocol buffer serialization errors \[ID 30650\]
 
 In some cases, it could occur that the *GetAlarmFilterResponse* and *GetTrendFilterResponse* messages failed to be serialized even though these were marked as eligible for protocol buffer serialization. An error similar to the following could be displayed in the Cube logging:
 
@@ -615,19 +615,19 @@ Exception : (Code: 0x80131508) Skyline.DataMiner.Net.Exceptions.DataMinerExcepti
 
 The scenarios where these messages cannot be serialized will now be handled better, so that they can no longer cause errors. In addition, to make it easier to troubleshoot errors with protocol buffer serialization, a new *SLProtobufSerialization.txt* log file is now available.
 
-#### DataMiner Cube - Resources app: Not possible to link virtual function resources to elements of which the protocol version was set to 'production' \[ID_30655\]
+#### DataMiner Cube - Resources app: Not possible to link virtual function resources to elements of which the protocol version was set to 'production' \[ID 30655\]
 
 In the Resources app, it is possible to create virtual function resources that are linked to compatible elements. Up to now, in some cases, it was not possible to link virtual function resources to elements of which the protocol version was set to “production”.
 
-#### DataMiner Cube: Problem with table filters \[ID_30658\]
+#### DataMiner Cube: Problem with table filters \[ID 30658\]
 
 In Data Display and Visual Overview, in some cases, table filters could yield incorrect results when they contained numeric column filters with a “\<=”, “=”, or “=>” operator.
 
-#### DataMiner Cube: No reports or alarm heatlines shown for view table parameters \[ID_30667\]
+#### DataMiner Cube: No reports or alarm heatlines shown for view table parameters \[ID 30667\]
 
 Up to now, for view table parameters, no reports were shown on the details page for the parameter in DataMiner Cube. In addition, no alarm heatline was shown for these parameters in trend graphs.
 
-#### Spelling error in exception when minimum software version requirements for app package not met \[ID_30672\]
+#### Spelling error in exception when minimum software version requirements for app package not met \[ID 30672\]
 
 When an app package was installed on a DMA but the minimum software version requirements were not met, the exception message contained a spelling error.
 
@@ -635,49 +635,49 @@ When an app package was installed on a DMA but the minimum software version requ
 Could not install the package because it requires DataMiner version {appInfo.MinDmaVersion}, but this agent us running version {dataMinerVersion}.
 ```
 
-#### Dashboards app: Trace not displayed for spectrum buffer \[ID_30686\]
+#### Dashboards app: Trace not displayed for spectrum buffer \[ID 30686\]
 
 If a Spectrum analyzer component in the Dashboards app was used to visualize a spectrum buffer, it could occur that the buffer trace was not displayed.
 
-#### Visual Overview: Property value not shown in shape text \[ID_30696\]
+#### Visual Overview: Property value not shown in shape text \[ID 30696\]
 
 If an element shape was configured with property shape data and contained "\*" as its shape text, it could occur that the property value was not shown even though it was available.
 
-#### Dashboards app: All pages of query initially loaded in table component \[ID_30697\]
+#### Dashboards app: All pages of query initially loaded in table component \[ID 30697\]
 
 If a table component showed a query with multiple pages of data, it could occur that all pages were initially fetched instead of only the first page.
 
-#### Dashboards app: State component showed GQI query ID instead of display name \[ID_30702\]
+#### Dashboards app: State component showed GQI query ID instead of display name \[ID 30702\]
 
 The State component would incorrectly show the ID of a GQI query instead of its display name.
 
 From now on, when you select the *Display query name* option in the *Layout* tab of the State component, the component will show the display name of the query.
 
-#### Deadlock in SLDataGateway could cause data to not get written to the database \[ID_30717\]
+#### Deadlock in SLDataGateway could cause data to not get written to the database \[ID 30717\]
 
 In some cases, a deadlock in the SLDataGateway process could cause e.g. correlation rule data to not get written to the database and remain in memory indefinitely.
 
-#### Problem with Protocol.ShowInformationMessage() method \[ID_30722\]
+#### Problem with Protocol.ShowInformationMessage() method \[ID 30722\]
 
 In some cases, the Protocol.ShowInformationMessage() method would not work properly.
 
-#### CRC parameter with LengthType 'fixed' and RawType 'other', 'text' or 'numeric text' would incorrectly always be set to 0x20 or 0x30 \[ID_30730\]
+#### CRC parameter with LengthType 'fixed' and RawType 'other', 'text' or 'numeric text' would incorrectly always be set to 0x20 or 0x30 \[ID 30730\]
 
 When a CRC parameter with LengthType “fixed” and RawType “other”, “text” or “numeric text” was used in a command, it would incorrectly always be set to 0x20 characters for parameter of type “string” or 0x30 characters for parameters of type “double”.
 
-#### Problem with SLDataMiner when using alarm templates with a monitoring schedule \[ID_30732\]
+#### Problem with SLDataMiner when using alarm templates with a monitoring schedule \[ID 30732\]
 
 In some cases, an error could occur in SLDataMiner when alarm templates with a monitoring schedule were being used.
 
-#### Problem with SLDataMiner when an element was restarted while a protocol exporting DVE or function protocols was being uploaded \[ID_30743\]
+#### Problem with SLDataMiner when an element was restarted while a protocol exporting DVE or function protocols was being uploaded \[ID 30743\]
 
 In some cases, an error could occur in SLDataMIner when an element was restarted while a protocol exporting DVE or function protocols was being uploaded.
 
-#### DataMiner Cube - Visual Overview: Cube could become unresponsive while retrieving service states \[ID_30762\]
+#### DataMiner Cube - Visual Overview: Cube could become unresponsive while retrieving service states \[ID 30762\]
 
 When a visual overview with at least one service shape was open when you opened a Cube, and the initial service states had not yet been received, in some cases, Cube could become unresponsive while retrieving the service states.
 
-#### Dashboards - Button panel component: \[ID_30788\]
+#### Dashboards - Button panel component: \[ID 30788\]
 
 When a button panel component retrieved parameter data using a GetParameter call, in some cases, the following error would be thrown:
 
@@ -685,18 +685,18 @@ When a button panel component retrieved parameter data using a GetParameter call
 Parameter 'options' is not of type Skyline.DataMiner.Web.Common.v1.DMAGetParameterOptions.
 ```
 
-#### DataMiner Cube: Problem when hovering the mouse pointer over an alarm storm warning \[ID_30799\]
+#### DataMiner Cube: Problem when hovering the mouse pointer over an alarm storm warning \[ID 30799\]
 
 When, during an alarm storm, you hovered the mouse pointer over the alarm storm warning, in some cases, an exception could be thrown.
 
-#### DataMiner Cube - Alarm Console: Comments containing a new line would be displayed incorrectly \[ID_30801\]
+#### DataMiner Cube - Alarm Console: Comments containing a new line would be displayed incorrectly \[ID 30801\]
 
 When an alarm contains one or more comments, you can right-click it and select “View comments” to see all comments in the alarm tree in question. In that list, up to now, comments containing a new line would not be displayed correctly.
 
-#### DataMiner Cube - Bookings app: check added of elastic support when retrieving virtual functions \[ID_30814\]
+#### DataMiner Cube - Bookings app: check added of elastic support when retrieving virtual functions \[ID 30814\]
 
 When, in DataMiner Cube, you opened the Bookings app while being connected to a DataMiner Agent without an Elasticsearch database, in some cases, an error could occur when trying to retrieve virtual function definitions. From now on, Cube will only retrieve virtual function definitions when it is connected to a DataMiner Agent with an Elasticsearch database.
 
-#### DataMiner Cube - Settings: Boolean settings were either not saved or incorrectly saved \[ID_30952\]
+#### DataMiner Cube - Settings: Boolean settings were either not saved or incorrectly saved \[ID 30952\]
 
 When, in the Settings window, you changed the value of a boolean setting (i.e. a setting that can be set to true or false), in some cases, the new value would either not be saved or saved incorrectly.

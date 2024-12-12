@@ -20,7 +20,7 @@ uid: General_Feature_Release_10.3.11
 
 ## New features
 
-#### Proactive cap detection extended to absolute and relative alarm types [ID_37373]
+#### Proactive cap detection extended to absolute and relative alarm types [ID 37373]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -33,7 +33,7 @@ As a result, proactive detection will now predict when a parameter will cross on
 - A (by default) critical alarm limit of type "absolute" or "relative" specified in the alarm template if either a fixed baseline value is set or a dynamically updated baseline value is configured in the alarm template to detect a continuos degradation.
 - A data range indirectly derived from the protocol info. Currently this is limited to the values 0 and 100 for percentage data for which no historical values were encountered outside the [0,100] interval.
 
-#### Smart-serial communication now supports dynamic polling [ID_37404]
+#### Smart-serial communication now supports dynamic polling [ID 37404]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -52,7 +52,7 @@ To enable dynamic polling for a smart-serial connection, add a parameter that co
 
 ### Enhancements
 
-#### Cassandra Cluster Migrator is now able to resume a migration that was in progress when a DMA was stopped [ID_35199]
+#### Cassandra Cluster Migrator is now able to resume a migration that was in progress when a DMA was stopped [ID 35199]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -71,13 +71,13 @@ To resume a migration after restarting all DMAs in your DataMiner System, do the
 > - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
 > - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
 
-#### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID_37030]
+#### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID 37030]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 Because of a number of enhancements, overall performance has increased when enabling and disabling function DVEs.
 
-#### Cassandra Cluster: IP addresses will no longer be added and synchronized automatically [ID_37154]
+#### Cassandra Cluster: IP addresses will no longer be added and synchronized automatically [ID 37154]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -85,7 +85,7 @@ Up to now, for the *CassandraCluster* database type, the IP addresses of the Cas
 
 Also, in case of a Failover setup, the above-mentioned list of IP addresses will no longer be automatically synchronized to prevent re-ordering.
 
-#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID_37162]
+#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID 37162]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -93,7 +93,7 @@ Up to now, a run-time error would be thrown when the `<AzureAD>` element in the 
 
 This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
 
-#### Security enhancements [ID_37267] [ID_37291] [ID_37335] [ID_37345]
+#### Security enhancements [ID 37267] [ID 37291] [ID 37335] [ID 37345]
 
 <!-- RN 37267: MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.11 -->
 <!-- RN 37345: MR 10.3.0 [CU14] - FR 10.3.11 -->
@@ -102,7 +102,7 @@ This `objectId` attribute will now be considered optional. Hence, no run-time er
 
 A number of security enhancements have been made.
 
-#### NATSCustodian: Enhanced behavior when detecting unreachable NATS nodes [ID_37271]
+#### NATSCustodian: Enhanced behavior when detecting unreachable NATS nodes [ID 37271]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -114,7 +114,7 @@ NATSCustodian will only reset the NATS configuration when it detects
 - that NATS nodes have been deleted, or
 - when NATS is in an incorrect state.
 
-#### SLLogCollector now collects information regarding the IIS configuration [ID_37273]
+#### SLLogCollector now collects information regarding the IIS configuration [ID 37273]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -126,7 +126,7 @@ SLLogCollector packages now include information regarding the IIS configuration:
 | Network Information | Information regarding the SSL certificate on port 443 |
 | SSL Cert            | The SSL certificate for port 443                      |
 
-#### Improved alarm grouping for DVE child elements [ID_37275]
+#### Improved alarm grouping for DVE child elements [ID 37275]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -134,19 +134,19 @@ Alarm grouping for DVE child elements has been improved. As change points are ge
 
 However, note that cases where a main DVE element exports the same parameter to multiple DVE child elements are not supported for this.
 
-#### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
+#### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID 37280]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 A number of enhancements have been made to the trend prediction models, especially with regard to detecting daily trend recurrences.
 
-#### SLAnalytics: Enhanced processing of trended parameters of which the value remains constant [ID_37303]
+#### SLAnalytics: Enhanced processing of trended parameters of which the value remains constant [ID 37303]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 A number of enhancements have been made to the memory resources used for trended parameters of which the value remains constant.
 
-#### SLNetClientTest: New 'Debug SAML' checkbox [ID_37370]
+#### SLNetClientTest: New 'Debug SAML' checkbox [ID 37370]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -155,7 +155,7 @@ When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox befo
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Old versions of NATS configuration files will now be kept when changes are made to those files [ID_37401]
+#### Old versions of NATS configuration files will now be kept when changes are made to those files [ID 37401]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -167,7 +167,7 @@ When changes are made to one of the following NATS configuration files, from now
 
 This will allow you to trace changes made to these configuration files when issues arise.
 
-#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
+#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID 37480]
 
 <!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
 
@@ -175,7 +175,7 @@ Up to now, a DataMiner using STaaS communicated with the database via TCP/IP por
 
 ### Fixes
 
-#### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
+#### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID 34018]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -183,13 +183,13 @@ When the backup agent is the online agent while a Failover pair is being migrate
 
 From now on, when you start a Cassandra Cluster migration, a warning message will appear if, for any of the Failover pairs in the cluster, the backup agent is the online agent. This warning message will advise you to make sure that, for all Failover pairs in the cluster, the main agent is the online agent.
 
-#### Not all Protocol.Params.Param.Interprete.Others tags would be read out [ID_36797]
+#### Not all Protocol.Params.Param.Interprete.Others tags would be read out [ID 36797]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
 
-#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143] [ID_37509]
+#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID 37143] [ID 37509]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -204,13 +204,13 @@ From now on, the number of backups you specify will be the number of backups tha
 > - A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
 > - When you upgrade to this DataMiner version, an upgrade action will automatically divide the number of backups to be kept by the number of DataMiner Agents in the DMS if the number of backups to be kept is set to more than 3 and if there are at least two DMAs in the DMS. Note that this upgrade action will do nothing if, in the backup settings, you specified that all DMAs in the DMS have to store their backups on the same network path.
 
-#### Problem in different native processes when interacting with message broker calls [ID_37150]
+#### Problem in different native processes when interacting with message broker calls [ID 37150]
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.11 -->
 
 In some cases, an error could occur in different native processes when interacting with message broker calls.
 
-#### SLNet would incorrectly return certain port information fields of type string as null values [ID_37165]
+#### SLNet would incorrectly return certain port information fields of type string as null values [ID 37165]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 <!-- Not added to MR 10.4.0 - This RN is identical to RN 36524 -->
@@ -224,7 +224,7 @@ Affected port information fields:
 - PollingIPAddress
 - PollingIPPort
 
-#### Inventory & Asset Management: Problem when synchronizing between the DMA and the database [ID_37177]
+#### Inventory & Asset Management: Problem when synchronizing between the DMA and the database [ID 37177]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -232,31 +232,31 @@ The Asset Manager would add NullReference exceptions to the SLNet log file when 
 
 When a view or an element was deleted on the DMA before a synchronization was performed from the database to the DMA, the deleted items would not get recreated unless the DMA had been restarted before the synchronization, and when a mediation configuration file was adapted and reloaded, the view configuration would not be reloaded.
 
-#### SLElement could read and write to the same memory blocks on different threads [ID_37180]
+#### SLElement could read and write to the same memory blocks on different threads [ID 37180]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, SLElement could read and write to the same memory blocks on different threads, causing a serialized parameter update to get into a corrupt state.
 
-#### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID_37235]
+#### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID 37235]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updated with values that contained illegal XML characters, the entire `<LDAP>` element would be removed from the file.
 
-#### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID_37238]
+#### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID 37238]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
 
-#### Problem when masking a DVE child element or a virtual function [ID_37240]
+#### Problem when masking a DVE child element or a virtual function [ID 37240]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When you masked a DVE child element or a virtual function, not all alarms of all parameters would be masked.
 
-#### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
+#### Service & Resource Management: Resources that were still in use could be deactivated [ID 37244]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
@@ -264,80 +264,80 @@ When a booking ends or when a booking is deleted, SLNet will try to deactivate a
 
 In some cases, when function DVEs were being cleaned up while a resource swap occurred on another booking, DVEs required by that other booking would incorrectly also get deactivated.
 
-#### SLLogCollector would not copy all memory dumps to the correct folder [ID_37255]
+#### SLLogCollector would not copy all memory dumps to the correct folder [ID 37255]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.
 
-#### Problem with SLNet due to unhandled MessageBroker exceptions in SLHelper [ID_37258]
+#### Problem with SLNet due to unhandled MessageBroker exceptions in SLHelper [ID 37258]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHelper.
 
-#### SLAnalytics: Problem when trying to edit a multivariate pattern [ID_37270]
+#### SLAnalytics: Problem when trying to edit a multivariate pattern [ID 37270]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
 
-#### Elements with multiple SSH connections would go into timeout after being restarted [ID_37294]
+#### Elements with multiple SSH connections would go into timeout after being restarted [ID 37294]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When an element with multiple SSH connections was restarted, in some cases, it would no longer be able to communicate with the SSH server. As a result, it would immediately go into timeout.
 
-#### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
+#### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID 37296]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
 
-#### Service & Resource Management: Bookings could get stuck in the 'Confirmed' state [ID_37306]
+#### Service & Resource Management: Bookings could get stuck in the 'Confirmed' state [ID 37306]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some rare cases, a booking created with a start time in the past or equal to "Now" could incorrectly get stuck in the *Confirmed* state.
 
-#### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
+#### SLAnalytics: Problem due to some features not starting up correctly [ID 37321]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in the SLAnalytics process due to some features not starting up correctly.
 
-#### SLAnalytics: Problem when stopping a feature [ID_37329]
+#### SLAnalytics: Problem when stopping a feature [ID 37329]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, an error could occur in SLAnalytics when a feature (e.g. automatic incident tracking) was stopped.
 
-#### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID_37336]
+#### Protocols: Problem when using 'MultipleGetBulk' in combination with 'PartialSNMP' [ID 37336]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 When a protocol was configured to use `MultipleGetBulk` in combination with `PartialSNMP` (e.g. `<OID options="partialSNMP:10;multipleGetBulk:10">`), and the device would return less table cells than the configured `MultipleGetBulk` value, certain fields would not get filled in.
 
-#### SLAnalytics: Problem when fetching protocol information while creating a multivariate pattern [ID_37366]
+#### SLAnalytics: Problem when fetching protocol information while creating a multivariate pattern [ID 37366]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, an error could occur in SLAnalytics when fetching protocol information while creating a multivariate pattern.
 
-#### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID_37402] [ID_37459]
+#### SLAnalytics: Problem when the SLNet connection got lost while resetting the data sources [ID 37402] [ID 37459]
 
 <!-- RN 37402: MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 <!-- RN 37459: MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in SLAnalytics when the SLNet connection got lost while resetting the data sources.
 
-#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID_37462]
+#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID 37462]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
 
-#### GQI: Problem when aggregating Elasticsearch table columns [ID_37472]
+#### GQI: Problem when aggregating Elasticsearch table columns [ID 37472]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 <!-- Not added to MR 10.4.0 -->

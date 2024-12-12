@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Client_Requirements
+description: To run the DataMiner Cube client application, a recent Windows OS is required, on a system with sufficient CPU and (graphics) memory.
 ---
 
 # DataMiner Client Requirements

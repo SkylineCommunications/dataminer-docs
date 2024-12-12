@@ -46,4 +46,4 @@ To access the TAG Management application:
 > This application enhances the functionality of existing TAG MCM and MCS elements on your DMA. If these elements have not been configured yet, [add the necessary elements](xref:Adding_elements) using the [appropriate protocols](https://docs.dataminer.services/connector/doc/TAG_Video_Systems_MBC-7000.html).
 
 > [!TIP]
-> See also: [Use case: TAG VS – Tech Partner Integration](https://community.dataminer.services/use-case/tag-vs-tech-partner-integration/).
+> See also: [Use case: TAG VS – Tech Partner Integration](https://community.dataminer.services/use-case/tag-vs-tag-management-app).

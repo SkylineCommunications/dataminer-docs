@@ -1,5 +1,6 @@
 ---
 uid: Placeholders_for_variables_in_shape_data_values
+description: In shape data values in Visio, you can use different placeholders. Among many others, this includes the keywords from Info shape data fields.
 ---
 
 # Placeholders for variables in shape data values
@@ -297,9 +298,9 @@ During the event, the `[Event:...]` placeholder will be replaced by the value of
 
     - **DCF interface name**: The name of the DCF interface that is linked to the input or output that was clicked.
 
-    - **Type**: Available from DataMiner 10.0.3 onwards. Can be "input" or "output", depending on the type of interface.
+    - **Type**: Can be "input" or "output", depending on the type of interface.
 
-    - **Matrix**: Available from DataMiner 10.0.3 onwards. The name of the matrix that contains the clicked input or output.
+    - **Matrix**: The name of the matrix that contains the clicked input or output.
 
   - Example: `[Event:IOClicked,Label]`
 
@@ -473,6 +474,7 @@ For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]`, the defau
 >
 > - If the regular expression or the input are empty, the placeholder will return an empty string.
 > - The "]" character cannot be used as a separator.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[placeholders > REGEX]* page.
 
 ### \[RegexReplace:x,y,z\]
 
@@ -494,6 +496,8 @@ In this placeholder, specify three items, separated by commas:
 >   ```txt
 >   [RegexReplace:[Sep:,#]x#y#z]
 >   ```
+>   
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[placeholders > REGEX]* page.
 
 Examples:
 

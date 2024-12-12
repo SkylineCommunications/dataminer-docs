@@ -46,18 +46,18 @@ string
 
   Example
 
-  - Read parameter: `<Sequence noset=”true”>div:100;+:5</Sequence>`.
-  - Write parameter: `<Sequence noset=”true”>min:5;factor:100</Sequence> or <Sequence noset=”true”>-:5;*:100</Sequence>`.
+  - Read parameter: `<Sequence noset="true">div:100;+:5</Sequence>`.
+  - Write parameter: `<Sequence noset="true">min:5;factor:100</Sequence> or <Sequence noset="true">-:5;*:100</Sequence>`.
 - Contains at least one of the following mathematical operations, which must be specified using one of the following predefined formats:
 
   - Fixed value: `[operation]:[value]`
   - Value stored in a single parameter: `[operation]:id:[pid]`
   - Value stored in a column parameter of the same row: `[operation]:param:[pid]`
 
-  If you specify multiple operations, separate them using semicolons (”;”).
+  If you specify multiple operations, separate them using semicolons (`;`).
   List of possible operations:
 
-  |Operation|Description
+  |Operation|Description |
   |--- |--- |
   |factor (*)|Multiply the parameter with a particular value.|
   |offset (+)|Add a particular value to the parameter.|
@@ -68,7 +68,7 @@ string
   |log10|Perform a 10*log10 operation on the parameter.|
   |log20|Perform a 20*log10 operation on the parameter.|
 
-  *Column parameter option introduced in DataMiner 8.5.0 (RN 7634).*
+  <!-- Column parameter option introduced in DataMiner 8.5.0 (RN 7634). -->
 
 ## Examples
 

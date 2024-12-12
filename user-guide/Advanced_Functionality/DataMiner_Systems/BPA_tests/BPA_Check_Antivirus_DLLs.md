@@ -2,17 +2,19 @@
 uid: BPA_Check_Antivirus_DLLs
 ---
 
-# Check Antivirus DLLs
+# Antivirus on the DataMiner Agents
+
+Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "Check Antivirus DLLs".
 
 When installed on a DataMiner Agent, [antivirus software must be configured to exclude the DataMiner processes](xref:Regarding_antivirus_software).
 
-The *Check Antivirus DLLs* BPA test specifically detects the presence of antivirus DLLs loaded into DataMiner processes (SL*.exe hosted from the `C:\Skyline DataMiner\Files` folder). You can find information about this BPA test below.
+The *Antivirus on the DataMiner Agents* BPA test specifically detects the presence of antivirus DLLs loaded into DataMiner processes (SL*.exe hosted from the `C:\Skyline DataMiner\Files` folder). You can find information about this BPA test below.
 
 This BPA test is available by default from DataMiner 10.1.4 onwards.
 
 ## Metadata
 
-- Name: Check Antivirus DLLs
+- Name: Antivirus on the DataMiner Agents
 - Description: Verifies that no antivirus DLLs have been loaded into DataMiner processes
 - Author: Skyline Communications
 - Default Schedule: Every day
@@ -48,6 +50,9 @@ In the message above, the exception message is included (e.g. "Access Denied"). 
 - Impact: Operation of the DataMiner System might be affected by the antivirus software.
 - Corrective action: Please configure the antivirus software to exclude DataMiner processes (sl*.exe).
 
+> [!NOTE]
+> As some antivirus software injects itself into the DataMiner processes, it may be necessary to also restart DataMiner to resolve this error.
+
 ## List of DLLs being checked
 
 The following DLLs are currently checked (case insensitive):
@@ -64,6 +69,16 @@ The following DLLs are currently checked (case insensitive):
 
 - `^(?:CrowdStrike\.Sensor\.)?ScriptControl(?:32_|64_|86_)?\d+\.dll$` (CrowdStrike)
 - `^ScriptSn\.\d+\.dll$` (McAfee)
+
+### File path checks
+
+From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards<!--RN 32567-->, the BPA test also checks the paths of loaded antivirus DLL files.
+
+This means:
+
+- The test can detect antivirus DLLs even if they are renamed or newly added, as long as they are loaded from a known antivirus file path.
+
+- The test takes into consideration both the file name and the source path, which increases the chances of detection.
 
 ## Limitations
 

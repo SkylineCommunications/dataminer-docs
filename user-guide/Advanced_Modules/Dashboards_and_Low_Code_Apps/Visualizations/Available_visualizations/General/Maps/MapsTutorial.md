@@ -46,7 +46,7 @@ The content and screenshots for this tutorial have been created in DataMiner ver
 
    ![CellTowersQuery](~/user-guide/images/MapsCellTowersQuery.png)
 
-1. Add a [maps visualization](xref:DashboardMaps) to the page and add the query to it by [applying a data feed](xref:Apply_Data_Feed).
+1. Add a [maps visualization](xref:DashboardMaps) to the page and add the query to it by [adding data to a component](xref:Adding_data_to_component).
 
    The maps component will look at the columns returned by the query and will try to automatically configure the identifier, latitude, and longitude. This means that the cell towers will automatically be shown on the map. By default, the query will be in the first layer.
 

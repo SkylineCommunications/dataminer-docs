@@ -20,7 +20,7 @@ In the header bar of DataMiner Cube, you can find the following items:
 
   - *Show server time*: Determines whether the DMS time is displayed.
 
-  - *Show cluster name*: Determines whether the name of the cluster is displayed. (Available from DataMiner 10.0.12 onwards.)
+  - *Show cluster name*: Determines whether the name of the cluster is displayed.
 
   - *Show search box*: Determines whether the search box is displayed. (Available from DataMiner 10.3.5/10.4.0 onwards).
 
@@ -77,6 +77,6 @@ In the header bar of DataMiner Cube, you can find the following items:
     > [!TIP]
     > See also: [Updating protocols with the Update Center](xref:Adding_a_protocol_or_protocol_version_to_your_DataMiner_System#updating-protocols-with-the-update-center)
 
-  - *Open Cube Mobile*/*Open web apps*: Opens the DataMiner landing page, with access to the various DataMiner web apps. This option is renamed from DataMiner 10.0.0 \[CU16\] /10.1.0 \[CU5\]/10.1.8 onwards to better reflect the actual usage of these apps.
+  - *Open DataMiner web apps*: Opens the DataMiner landing page, with access to the various DataMiner web apps.
 
   - *Sign out*: Ends your current DataMiner Cube session and returns you to the logon screen. If you are using a desktop app, you can click then the arrow button next to the DMA name or IP to go back to the start window and select a different DMS to connect to.

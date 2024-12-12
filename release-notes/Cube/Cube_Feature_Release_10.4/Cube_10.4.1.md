@@ -8,25 +8,27 @@ uid: Cube_Feature_Release_10.4.1
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.1](xref:General_Feature_Release_10.4.1).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.1](xref:General_Feature_Release_10.4.1).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.1](xref:Web_apps_Feature_Release_10.4.1).
 
 ## Highlights
 
-- [Spectrum analysis: Zooming inside a spectrum window [ID_37668]](#spectrum-analysis-zooming-inside-a-spectrum-window-id_37668)
-- [Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID_37888]](#desktop-application-new-command-line-argument-useinitialargumentsafterdisconnect-id_37888)
-- [DataMiner Cube: Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37935]](#dataminer-cube-legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id_37935)
-- [DataMiner Cube - Spectrum analysis: Zero span mode [ID_37946]](#dataminer-cube---spectrum-analysis-zero-span-mode-id_37946)
+- [Spectrum analysis: Zooming inside a spectrum window [ID 37668]](#spectrum-analysis-zooming-inside-a-spectrum-window-id-37668)
+- [Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID 37888]](#desktop-application-new-command-line-argument-useinitialargumentsafterdisconnect-id-37888)
+- [DataMiner Cube: Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID 37935]](#dataminer-cube-legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id-37935)
+- [DataMiner Cube - Spectrum analysis: Zero span mode [ID 37946]](#dataminer-cube---spectrum-analysis-zero-span-mode-id-37946)
 
 ## New features
 
-#### Spectrum analysis: Zooming inside a spectrum window [ID_37668]
+#### Spectrum analysis: Zooming inside a spectrum window [ID 37668]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 It is now possible to zoom inside a spectrum window:
 
 - To zoom horizontally, scroll up and down. This has the same effect as altering the frequency span.
-- To zoom vertically, scroll up and down while pressing the CTRL key. This has the same effect as altering the amplitude scale.
+- To zoom vertically, scroll up and down while pressing the Ctrl key. This has the same effect as altering the amplitude scale.
 
 When you stop scrolling, the new zoom dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
 
@@ -35,7 +37,7 @@ When you stop scrolling, the new zoom dimensions will be set on the spectrum ana
 > - It is only possible to zoom horizontally if the spectrum protocol includes the *Start frequency*, *Stop frequency* and *Frequency span* parameters.
 > - It is only possible to zoom vertically if the spectrum protocol includes the *Amplitude scale* parameter.
 
-#### Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID_37888]
+#### Desktop application: New command-line argument 'UseInitialArgumentsAfterDisconnect' [ID 37888]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -47,7 +49,7 @@ This argument will make sure that all other arguments you specified when you sta
 
 ### Enhancements
 
-#### Visual Overview: Enhanced service chain behavior [ID_37645]
+#### Visual Overview: Enhanced service chain behavior [ID 37645]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -55,13 +57,13 @@ A number of UI enhancements have been made with regard to service chain behavior
 
 Up to now, in some cases, service chains could get redrawn too often, or shapes would not get redrawn when a service chain was updated. Also, context menus of shapes would not always close when those shapes were updated and context menus would incorrectly show the *Display connectivity* command twice.
 
-#### Spectrum Analysis: Buttons in 'Reference lines' panel, 'Thresholds' panel and 'Measurement Points' panel have been restyled [ID_37752]
+#### Spectrum Analysis: Buttons in 'Reference lines' panel, 'Thresholds' panel and 'Measurement Points' panel have been restyled [ID 37752]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 In the *View* tab of a spectrum card, the buttons in the *Reference lines* panel and the *Thresholds* panel as well as the delete buttons in the *Measurement Points* panel have been restyled to match the buttons in the *Markers* panel.
 
-#### Spectrum Analysis: Editing the X-axis and Y-axis labels [ID_37821]
+#### Spectrum Analysis: Editing the X-axis and Y-axis labels [ID 37821]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -82,7 +84,7 @@ To modify the reference level:
 > [!NOTE]
 > To change the unit of either the center frequency or the reference level, go to the settings menu on the right.
 
-#### Trending: Relation learning light bulb enhancements [ID_37834]
+#### Trending: Relation learning light bulb enhancements [ID 37834]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -101,7 +103,7 @@ Also, this light bulb can now have the following states, which will indicate why
 > - *DataMiner CloudFeed* version 1.1.0 or higher
 > - *Allow performance and usage data offload* option
 
-#### Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID_37855]
+#### Alarm Console: New alarm tab showing current suggestion events now has the 'Automatically remove cleared alarms' option enabled by default [ID 37855]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -109,7 +111,7 @@ When you add a new alarm tab showing the current suggestion events, that tab wil
 
 This means that suggestion events will automatically disappear from the tab approximately 2 hours after they have been detected.
 
-#### Settings: Default values of trend graph action settings have been changed [ID_37867]
+#### Settings: Default values of trend graph action settings have been changed [ID 37867]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -120,7 +122,7 @@ In the *Settings* window, the default values of the following trend graph action
 | Right mouse button action on graph         | Select |
 | Hotkey + left mouse button action on graph | Zoom   |
 
-#### DataMiner Cube - Protocols & Templates: Clicking Help will now open the protocol's help page on 'DataMiner Connector Documentation' [ID_37873]
+#### DataMiner Cube - Protocols & Templates: Clicking Help will now open the protocol's help page on 'DataMiner Connector Documentation' [ID 37873]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -129,19 +131,19 @@ When, in the *Protocols & Templates* app, you right-click a protocol in the *Pro
 > [!NOTE]
 > That same help page will appear when, in an element card, you open the hamburger menu and select *Help*.
 
-#### Service templates: Scrollbar added inside every tab of a service template card [ID_37882]
+#### Service templates: Scrollbar added inside every tab of a service template card [ID 37882]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 A number of enhancements have been made to the service template card, one of which is a scrollbar added inside every tab.
 
-#### Alarm templates: Enhanced selection box in 'Anomaly alarm settings' window [ID_37899]
+#### Alarm templates: Enhanced selection box in 'Anomaly alarm settings' window [ID 37899]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 The selection box at the top of the *Anomaly alarm settings* window has now been made wider in order to better accommodate content in languages other than English.
 
-#### DataMiner Cube: Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37935]
+#### DataMiner Cube: Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID 37935]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -151,7 +153,7 @@ Now, the above-mentioned soft-launch options will be disabled by default, causin
 
 In DataMiner Cube, all buttons related to these modules will now by default also be hidden.
 
-#### DataMiner Cube - Spectrum analysis: Zero span mode [ID_37946]
+#### DataMiner Cube - Spectrum analysis: Zero span mode [ID 37946]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -166,7 +168,7 @@ In zero span mode, the sweeptime parameter is used to indicate the time on the X
 
 ### Fixes
 
-#### A number of Automation issues have been fixed [ID_37674]
+#### A number of Automation issues have been fixed [ID 37674]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -176,49 +178,49 @@ A number of issues have been fixed with regard to Automation:
 - A *nullreference* exception could be thrown when an Automation script was deleted.
 - Cube could leak memory each time you opened an Automation script in a new card.
 
-#### Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID_37754]
+#### Protocols & Templates: Function definitions would not be listed when you activated a functions file [ID 37754]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When, in the *Protocols & Templates* app, you activated a functions file, the activated function definitions would incorrectly not be listed. For this list to be displayed, you had to close the *Protocols & Templates* app and re-opened it again.
 
-#### Visual Overview: Placeholder containing '[Elapsed Time]' would not be updated when the elapsed time had changed [ID_37756]
+#### Visual Overview: Placeholder containing '[Elapsed Time]' would not be updated when the elapsed time had changed [ID 37756]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When the placeholder `[Elapsed Time]` was used inside another placeholder (e.g. `[Subtract:[Elapsed Time],[PreRoll]]`), the entire placeholder (e.g. `[Subtract:[Elapsed Time],[PreRoll]]`) would not be updated when the elapsed time had changed.
 
-#### Pattern matching: Memory leak [ID_37771]
+#### Pattern matching: Memory leak [ID 37771]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 DataMiner Cube could start leaking memory when you opened trend graphs with pattern matching.
 
-#### Alarm Console: Problem with hyperlinks that should be shown or hidden based on the value of a property [ID_37777]
+#### Alarm Console: Problem with hyperlinks that should be shown or hidden based on the value of a property [ID 37777]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
 When you had created a hyperlink that should only be shown when a particular property had a certain value, that hyperlink would never be shown when different types of objects (elements, services, views or alarms) had a property with a name identical to that of the property used in the filter.
 
-#### Data Display: Problem when hovering over lite parameter controls in Skyline Black theme [ID_37814]
+#### Data Display: Problem when hovering over lite parameter controls in Skyline Black theme [ID 37814]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When DataMiner Cube was using the *Skyline Black* theme, lite parameter controls would become unreadable when you hovered over them.
 
-#### Visual Overview: URLs that did not link to a DataMiner web apps would incorrectly get a connection ticket [ID_37822]
+#### Visual Overview: URLs that did not link to a DataMiner web apps would incorrectly get a connection ticket [ID 37822]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 
 When the URL specified in a shape data item of type *Link* did not link to a DataMiner web app, but contained a keyword that could be interpreted as a keyword of a DataMiner web app, a connection ticket would incorrectly be added to that URL.
 
-#### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID_37857]
+#### DataMiner Cube could leak memory leak when a card in tab layout was closed before it had fully been loaded [ID 37857]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10]/10.4.0 [CU1] - FR 10.4.1 -->
 
 When a card in tab layout was closed before it had fully been loaded, DataMiner Cube could leak memory due to list boxes not being cleared from memory.
 
-#### DataMiner Cube - System Center: Term 'Client independent updates' replaced by 'Server independent client updates' [ID_37926]
+#### DataMiner Cube - System Center: Term 'Client independent updates' replaced by 'Server independent client updates' [ID 37926]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU10] - FR 10.4.1 -->
 

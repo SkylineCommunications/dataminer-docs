@@ -8,7 +8,7 @@ When a shape is linked to an Automation script, by default this script will be e
 
 > [!NOTE]
 >
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Operations* > *Other* > *Visual Overview Design Examples* view > *[linking > EXE]* page.
+> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Solutions* > *Other* > *Visual Overview Design Examples* view > *[linking > EXE]* page.
 > - Aside from the default **Execute** shape data, you can also use **OnClose** shape data to link to a script. See [Specifying a script to be executed when the page is closed](#specifying-a-script-to-be-executed-when-the-page-is-closed).
 
 To link a shape to an Automation script:

@@ -21,7 +21,7 @@ uid: General_Main_Release_10.1.0_new_features_1
 
 ### DMS core functionality
 
-#### New SLNet setting 'ClusterTransitionStateTimeout' in MaintenanceSettings.xml \[ID_22136\]
+#### New SLNet setting 'ClusterTransitionStateTimeout' in MaintenanceSettings.xml \[ID 22136\]
 
 In the *MaintenanceSettings.xml* file, you can now specify a cluster transition state timeout (in seconds).
 
@@ -33,7 +33,7 @@ If you do so, DataMiner Agents leaving the DataMiner System (i.e. cluster) will 
 </SLNet>
 ```
 
-#### New Cassandra cluster feature \[ID_23210\]\[ID_23975\]\[ID_25945\]\[ID_26144\]\[ID_26475\] \[ID_27080\]\[ID_27520\]\[ID_27615\]\[ID_27648\]\[ID_27694\]\[ID_28406\]
+#### New Cassandra cluster feature \[ID 23210\]\[ID 23975\]\[ID 25945\]\[ID 26144\]\[ID 26475\] \[ID 27080\]\[ID 27520\]\[ID 27615\]\[ID 27648\]\[ID 27694\]\[ID 28406\]
 
 A Cassandra cluster is now supported as the general database for a DataMiner System. While previously it was already possible to use a separate Cassandra cluster for each DataMiner node, this new feature allows all DataMiner nodes in a cluster to connect to the same Cassandra cluster.
 
@@ -394,7 +394,7 @@ If a Cassandra node goes down or when a node is down when DataMiner starts up, a
 > [!NOTE]
 > If a database of type Cassandra cluster is used, the soft-launch feature [NewAverageTrending](xref:Overview_of_Soft_Launch_Options#newaveragetrending) is automatically enabled.
 
-#### Dynamic table filters: New component type 'recursivefullfilter' \[ID_24672\] \[ID_24676\]
+#### Dynamic table filters: New component type 'recursivefullfilter' \[ID 24672\] \[ID 24676\]
 
 When configuring a dynamic table filter, you can now add a filter component of type “recursivefullfilter”.
 
@@ -409,29 +409,29 @@ recursivefullfilter=(1002 > 0)
 > [!NOTE]
 > This new filter component can also be used in table filters specified in a DataMiner Maps configuration file.
 
-#### Support for icons in SVG format \[ID_24841\]
+#### Support for icons in SVG format \[ID 24841\]
 
 In function protocols and the *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml* file, icons can now also be defined in SVG format.
 
 Also, the default function icon has been updated.
 
-#### SLAnalytics: Trend data prediction now also available for direct view table parameters \[ID_25013\]
+#### SLAnalytics: Trend data prediction now also available for direct view table parameters \[ID 25013\]
 
 Trend data prediction is now also available for direct view table parameters.
 
-#### All DataMiner server DLLs now target Microsoft .NET Framework 4.6.2 \[ID_25269\]
+#### All DataMiner server DLLs now target Microsoft .NET Framework 4.6.2 \[ID 25269\]
 
 All DataMiner server DLLs now target Microsoft .NET Framework 4.6.2.
 
-#### Less open IP ports needed when installing DataMiner with a Cassandra database \[ID_25833\]
+#### Less open IP ports needed when installing DataMiner with a Cassandra database \[ID 25833\]
 
 When installing DataMiner with a Cassandra database, up to now, IP ports 7000, 7001, 7199, 9042, 9142 and 9160 needed to be open. From now on, only ports 7000 and 9042 will need to be open.
 
-#### A notice will now be generated when elements or services with identical names are found in the DMS \[ID_25899\]
+#### A notice will now be generated when elements or services with identical names are found in the DMS \[ID 25899\]
 
 When elements or services are created on agents of the same DMS while those are not able to synchronize due to connection issues, it can happen that elements or services are created with identical names. From now on, as soon as the connection between disconnected agents is restored, the agent with the lowest DMA ID will generate a notice when it finds elements or services with identical names.
 
-#### DataMiner Application packages \[ID_25911\]\[ID_26027\]\[ID_26169\]\[ID_26243\]\[ID_26271\]\[ID_26338\]\[ID_26351\]\[ID_26371\]\[ID_27257\]
+#### DataMiner Application packages \[ID 25911\]\[ID 26027\]\[ID 26169\]\[ID 26243\]\[ID 26271\]\[ID 26338\]\[ID 26351\]\[ID 26371\]\[ID 27257\]
 
 It is now possible to install a DataMiner application or solution on an existing DataMiner system by uploading and installing a so-called “application package”.
 
@@ -571,7 +571,7 @@ An AppPackageHelper class has been made available, containing a series of method
 
 - GetCurrentAppConfiguration
 
-#### LoggerUtil: RepositoryLoggerProvider & LogEntry API \[ID_26289\]\[ID_26291\]
+#### LoggerUtil: RepositoryLoggerProvider & LogEntry API \[ID 26289\]\[ID 26291\]
 
 The LoggerUtil tool now provides
 
@@ -603,7 +603,7 @@ A LogEntry object contains the following fields:
 
 - UserName
 
-#### LogHelper API \[ID_26434\]
+#### LogHelper API \[ID 26434\]
 
 The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in Automation scripts and in QActions to manage log entries stored in Indexing Engine:
 
@@ -655,7 +655,7 @@ It returns a connection that impersonates the user who triggered the QAction bas
 
 Automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
 
-#### Proactive cap detection \[ID_26637\]\[ID_27132\]\[ID_27241\]\[ID_27355\]\[ID_27393\]
+#### Proactive cap detection \[ID 26637\]\[ID 27132\]\[ID 27241\]\[ID 27355\]\[ID 27393\]
 
 To further enhance the proactive monitoring capabilities of DataMiner, proactive cap detection is now available. This DataMiner Analytics feature predicts future issues based on trend data in the Cassandra database, using advanced techniques that consider repeating patterns, information on the rate at which a parameter value increases or decreases, etc. However, note that some events simply cannot be predicted. For example, a spike in a trend graph caused by randomly pulling out a cable can never be predicted by looking at historical trend data, so proactive cap detection will not know about this in advance.
 
@@ -685,17 +685,17 @@ The notifications generated by the proactive cap detection feature are displayed
 
 The value of the suggestion event mentions what kind of issue is expected, e.g. a critical high or low alarm or an above or below range violation. The value also mentions between which times the issue is expected to occur. The closer to the predicted time, the more accurate this prediction will be, so the suggestion event will be automatically updated with more accurate information when appropriate. As soon as the predicted time of the incident has passed, the suggestion event will be cleared.
 
-#### A notice will now be generated at DataMiner startup when duplicate properties are found for views, elements or services \[ID_26705\]
+#### A notice will now be generated at DataMiner startup when duplicate properties are found for views, elements or services \[ID 26705\]
 
 When, at DataMiner startup, duplicate properties are found for views, elements or services, from now on, one agent in the DataMiner System will generate a notice.
 
 If an Administrator clears the notice manually, it will re-appear at the next DataMiner restart if the issue has not yet been resolved.
 
-#### Custom prefix configuration for Elasticsearch indices \[ID_27091\]
+#### Custom prefix configuration for Elasticsearch indices \[ID 27091\]
 
 To support the possibility to have two independent DataMiner Systems using the same Elasticsearch cluster, in the DB.xml file, you can now specify a custom prefix in the \<DB> tag for the Elasticsearch database, so that the Elasticsearch indices are updated with this prefix instead of the default "dms" prefix. Note that only regular alphanumeric characters are supported for the prefix, not symbols.
 
-#### Support for FileCache tag in DB.xml \[ID_27314\]
+#### Support for FileCache tag in DB.xml \[ID 27314\]
 
 To support the offload of files to a file cache instead of to a MySQL, MSSQL or Oracle central database, a new *FileCache* tag is now supported in the file DB.xml. for example:
 
@@ -711,7 +711,7 @@ If the *enabled* attribute of this tag is set to *true*, files will still be of
 
 The *MaxSizeKb* subtag determines the maximum size of the offloaded files (by default 10 GB). If this limit is reached, the oldest files will be removed until the total size is again less than the defined limit.
 
-#### Gradual introduction of inter-process communication via NATS \[ID_27496\]\[ID_28082\]\[ID_28131\] \[ID_28233\]\[ID_28660\]
+#### Gradual introduction of inter-process communication via NATS \[ID 27496\]\[ID 28082\]\[ID 28131\] \[ID 28233\]\[ID 28660\]
 
 From now on, more and more DataMiner processes will start to communicate with each other using NATS, an open-source messaging system.
 
@@ -723,7 +723,7 @@ The NATS and NAS services will automatically be installed on each NATS-enabled D
 > - Automatic detection and triggering of NATS cluster self healing can be activated or deactivated by setting the \<NATSDisasterCheck> option to true of false in the MaintenanceSettings.xml file. Default setting: deactivated.
 > - Only users who have been granted the *Admin tools* permission (Modules \> System configuration \> Tools) are allowed to reset the NATS service.
 
-#### SLSNMPAgent will now also use the SNMP++ library to forward SNMPv2 traps and inform messages \[ID_27590\]
+#### SLSNMPAgent will now also use the SNMP++ library to forward SNMPv2 traps and inform messages \[ID 27590\]
 
 From now on, SLSNMPAgent will also use the SNMP++ library to forward SNMPv2 traps and inform messages. This means that it will now use the same library to send SNMPv1 traps, SNMPv2 traps and inform messages and SNMPv3 traps and inform messages.
 
@@ -734,7 +734,7 @@ From now on, SLSNMPAgent will also use the SNMP++ library to forward SNMPv2 trap
 
 ### DMS Security
 
-#### Jobs and ReservationInstances now have a SecurityViewID property to control access to them \[ID_24800\]
+#### Jobs and ReservationInstances now have a SecurityViewID property to control access to them \[ID 24800\]
 
 Jobs and ReservationInstances now have a SecurityViewID property.
 
@@ -751,14 +751,14 @@ If, for a particular job or ReservationInstance, this property contains a view I
 > - All ReservationInstances in a particular tree must have the same SecurityViewID.
 > - If a view specified in the SecurityViewID property of a job or ReservationInstance is deleted, then only Administrators or users with access to all views will have access to that job or ReservationInstance.
 
-#### User management: Domain attribute of DataMiner users will now be filled in with the NETBIOS name if it can be found in the LDAP \[ID_25876\]
+#### User management: Domain attribute of DataMiner users will now be filled in with the NETBIOS name if it can be found in the LDAP \[ID 25876\]
 
 From now on, DataMiner users will have their domain attribute filled in with the domain's NETBIOS name if found in the LDAP. If this NETBIOS name cannot be found, the domain name will be used instead.
 
 > [!NOTE]
 > If a NETBIOS name can be found, it will also replace the domain name in Cube user names.
 
-#### DataMiner Cube - System Center: New user permissions \[ID_26437\]
+#### DataMiner Cube - System Center: New user permissions \[ID 26437\]
 
 In the Users/Groups section of Cube’s System Center, the following user permissions have been added:
 
@@ -766,13 +766,13 @@ In the Users/Groups section of Cube’s System Center, the following user permis
 
 - BPA tests (Create/Update, Delete, Read, Execute, Get test results)
 
-#### Elasticsearch: Security now by default enabled on new installations \[ID_27026\]
+#### Elasticsearch: Security now by default enabled on new installations \[ID 27026\]
 
 From now on, when you install an Elasticsearch database, security will be enabled by default (basic authentication and TLS).
 
 In the Db.xml file, it will now also be possible to configure an Elasticsearch user name and password. This will enable remote installations or current installations to also use basic Elasticsearch authentication features.
 
-#### DataMiner Cube - System Center: Renamed user permissions \[ID_28439\]
+#### DataMiner Cube - System Center: Renamed user permissions \[ID 28439\]
 
 In the *Users/Groups* section of *System Center*, the following has been changed:
 
@@ -780,13 +780,13 @@ In the *Users/Groups* section of *System Center*, the following has been change
 
 - All “local database” references have been renamed to “general database”.
 
-#### Elasticsearch: Security now by default disabled on new installations \[ID_28598\]
+#### Elasticsearch: Security now by default disabled on new installations \[ID 28598\]
 
 From now on, when you install an Elasticsearch database, security will be disabled by default (basic authentication and TLS).
 
 ### DMS Protocols
 
-#### Serial clients can now parse data past the trailer of a response of which the length is defined in a parameter of type 'next param' \[ID_24442\]
+#### Serial clients can now parse data past the trailer of a response of which the length is defined in a parameter of type 'next param' \[ID 24442\]
 
 From now on, when serial clients receive a response with a variable length (specified in a parameter of type “next param”), they will be able to parse it correctly when the trailer is not at the very end, but only if the following conditions apply:
 
@@ -802,7 +802,7 @@ Up to now, when a response like the one in the example below was received, the d
 [header][length parameter (next param)][fixed-length parameter][another parameter of any type][trailer][data with length defined in length parameter]
 ```
 
-#### NT_DELETE_FOLDER (182): Option added to bypass DataMiner recycle bin \[ID_24639\]
+#### NT_DELETE_FOLDER (182): Option added to bypass DataMiner recycle bin \[ID 24639\]
 
 The NotifyDataMiner function “NT_DELETE_FOLDER” is now able to bypass the DataMiner recycle bin.
 
@@ -821,7 +821,7 @@ protocol.NotifyDataMiner(182 /*NT_DELETE_FOLDER*/, folderName, bRecycle);
 > [!NOTE]
 > If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the *C:\\Skyline DataMiner\\Documents\\* folder. So, in the example above, the function will try to delete the *C:\\Skyline DataMiner\\Documents\\Configurations* folder. If you want it to delete the *C:\\Skyline DataMiner\\Configurations* folder, then you have to specify the full path.
 
-#### Authentication via a client certificate when polling an HTTPS server \[ID_25243\]
+#### Authentication via a client certificate when polling an HTTPS server \[ID 25243\]
 
 When configuring an HTTPS session in a DataMiner protocol, you can now specify that authentication should be performed using a client certificate. To do so, in the \<Session> tag, set the loginMethod attribute to “certificate”.
 
@@ -836,7 +836,7 @@ If, for a particular session, loginMethod is set to “certificate”, DataMiner
 > [!NOTE]
 > As some web servers accept certificates even when they do not require them, DataMiner will not send a client certificate by default. It will send an empty certificate list instead. This will prevent any ERROR_WINHTTP-\_CLIENT_AUTH_CERT_NEEDED errors from being thrown.
 
-#### Configuring the layout of a matrix \[ID_25456\]\[ID_25892\]
+#### Configuring the layout of a matrix \[ID 25456\]\[ID 25892\]
 
 A typical matrix layout shows the inputs on the left and the outputs at the top. However, in certain circumstances, it can be useful to visualize a matrix in an alternative way.
 
@@ -876,11 +876,11 @@ NotifyDataMiner(128 /* NT_UPDATE_PORTS */,"10;[ELEMENT_ID];[MATRIX_PARAM_ID];[DM
 >
 > Note that, in the alarm template, the default layout (e.g. inputs on the left, outputs at the top) will always be used. Although the layout of a matrix can be defined per element, an alarm template is not linked to a single element.
 
-#### Socket buffer of a serial interface will now be flushed before a command is sent \[ID_26513\]
+#### Socket buffer of a serial interface will now be flushed before a command is sent \[ID 26513\]
 
 From now on, each time a command is sent via a serial interface, the socket buffer of that serial interface will be flushed in advance.
 
-#### Replacing QAction DLL dependencies \[ID_26605\]
+#### Replacing QAction DLL dependencies \[ID 26605\]
 
 It is now possible to replace QAction DLL dependencies by installing a .dmprotocol package that contains an Assemblies folder with new DLL dependencies.
 
@@ -900,7 +900,7 @@ By default, the DLL files in the package will be copied to the C:\\Skyline DataM
 > - If an uploaded DLL dependency would break existing QActions, no errors will be returned.
 > - It is advised to strong-name DLL files when referring to multiple versions of the same file in different QActions. Not strong-naming DLL files could lead to unexpected behavior.
 
-#### NT_SNMP_RAW_GET, NT_SNMP_RAW_SET, NT_SNMP_GET and NT_SNMP_SET requests now support the credential library \[ID_27275\]
+#### NT_SNMP_RAW_GET, NT_SNMP_RAW_SET, NT_SNMP_GET and NT_SNMP_SET requests now support the credential library \[ID 27275\]
 
 The NT_SNMP_RAW_GET, NT_SNMP_RAW_SET, NT_SNMP_GET and NT_SNMP_SET requests now support the credential library.
 
@@ -947,7 +947,7 @@ See the examples below.
   result = (object[])protocol.NotifyProtocol(292 /*NT_SNMP_SET*/, oTableElementInfo, oRequestInfo);
   ```
 
-#### A message body can now be added to raw HTTP requests \[ID_27438\]
+#### A message body can now be added to raw HTTP requests \[ID 27438\]
 
 In a QAction, it is now possible to add a message body to raw HTTP requests sent in a multi-threaded timer.
 
@@ -972,7 +972,7 @@ object[] httpRequestInfo = new object[3] { "http", new string[6] { sVerb, sURL, 
 >   - The second part of each string array is the message body that needs to be sent to that specific subpage.
 > - DataMiner does not format the given message body in any way. It is forwarded as received from within the QAction. It is up to the user to correctly format the message body.
 
-#### Updating direct views showing data from elements on remote DMAs \[ID_27547\]
+#### Updating direct views showing data from elements on remote DMAs \[ID 27547\]
 
 From now on, DirectView updates are supported in the following scenarios:
 
@@ -1013,6 +1013,6 @@ From now on, DirectView updates are supported in the following scenarios:
     directView=6505 => FILTER: value=6501 == REMOTE-DATA-1
     ```
 
-#### Values displayed using scientific notation will now use a dot as separator \[ID_27690\]
+#### Values displayed using scientific notation will now use a dot as separator \[ID 27690\]
 
 Values set to be displayed using scientific notation will now use a dot instead of a comma as separator.

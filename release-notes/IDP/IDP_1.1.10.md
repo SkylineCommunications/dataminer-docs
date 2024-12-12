@@ -6,7 +6,7 @@ uid: IDP_1.1.10
 
 ## New features
 
-#### Management of deleted elements \[ID_27164\]\[ID_27332\]
+#### Management of deleted elements \[ID 27164\]\[ID 27332\]
 
 DataMiner IDP can now automatically detect when elements are deleted from the DMS. The deleted elements will no longer be managed by IDP and will be removed from all IDP components as a result.
 
@@ -14,11 +14,11 @@ An overview of the deleted elements will be displayed in the *Deleted Elements* 
 
 You can delete individual rows in the table or clean up the entire table to permanently remove managed element records of deleted elements. There is also an option available that allows you to recreate an element that has been deleted. Once the element has been recreated, the entry representing the element will be removed from the *Deleted Elements* table. If recreating the element failed, the *Status* column of the table will indicate what went wrong.
 
-#### 'Pending' tab renamed to 'Unmanaged' \[ID_27164\]
+#### 'Pending' tab renamed to 'Unmanaged' \[ID 27164\]
 
 The *Pending* tab of the IDP app, which lists the elements that are not yet managed by IDP, has been renamed to *Unmanaged*.
 
-#### Support for backup operation based on file location \[ID_27170\]
+#### Support for backup operation based on file location \[ID 27170\]
 
 It is now possible to configure a backup script with a file location, so that IDP will copy the file from that location to the archive. This location can be on a DMA in the cluster or on a separate server, as long as it can be accessed with the IDP user credentials.
 
@@ -52,17 +52,17 @@ ConfigurationBackup configuration = new ConfigurationBackup
 };
 ```
 
-#### New Supported File Extensions table \[ID_27205\]
+#### New Supported File Extensions table \[ID 27205\]
 
 It is now possible to configure which types of files can be visualized in the *Configuration* section of the IDP app. You can do so by adding the extensions in the *Supported File Extensions* table, which is available via *Admin* > *Configuration* > *Visualization*. By default, the table contains the XML and TXT extensions. If a file has an extension that is not listed in the table, the *Show content* action on the *Configuration* > *Backups* tab and the *Compare* action on the *Configuration* > *Compare* tab will result in an error.
 
-#### Support for \[DNSName\] keyword in CI type \[ID_27416\]
+#### Support for \[DNSName\] keyword in CI type \[ID 27416\]
 
 In addition to the *\[IPAddress\]* keyword, the provisioning item in a CI type now supports the *\[DNSName\]* keyword. This keyword is automatically resolved when elements are provisioned, including when CI types are reapplied or reassigned.
 
 In case the new keyword cannot be resolved, it will not be replaced and the element will contain the string *\[DNSName\]* in the places corresponding to the location of the keyword in the CI type definition. In case *\[DNSName\]* is used as the Polling IP and cannot be resolved, the following status message is returned when the element is manually provisioned: *The element cannot be provisioned because \[DNSName\] cannot be resolved in the Polling IP*.
 
-#### Configuration change detection \[ID_27274\]\[ID_27427\]
+#### Configuration change detection \[ID 27274\]\[ID 27427\]
 
 An extra method is now available to have IDP store a device configuration in the configuration archive. Previously, only the *StoreResult* method could be used, but now you can also use the *StoreResultAndChangeDetection* method, which will pass the comparison version and the change detection data along with the configuration backup.
 
@@ -77,7 +77,7 @@ In the IDP app, you can find the change detection information on the *Configurat
 - Also on the *Backups* subtab, when you select a file to visualize its content, you can now select to view the *Full Configuration Backup* or the *Core Configuration Only.*
 - Similarly, on the *Compare* subtab, when you select a configuration file to visualize its content, you can now select to view the *Full Configuration Backup* or the *Core Configuration Only*.
 
-#### Alarm notification in case configuration change is detected \[ID_27455\]
+#### Alarm notification in case configuration change is detected \[ID 27455\]
 
 It is now possible to have an alarm generated when a configuration change is detected. For this purpose, the following parameters have been added in the *Configuration Management* table (available via *Admin* > *CI Types* > *Configuration Management*):
 
@@ -94,11 +94,11 @@ If *Set Checksum in Alarm Template* and/or *Take Backup* (via *Workflows* > *Aut
 
 ### Enhancements
 
-#### Update Progress column shows progress of copying data to configuration archive \[ID_27236\]
+#### Update Progress column shows progress of copying data to configuration archive \[ID 27236\]
 
 When data is copied to the configuration archive, the *Update Progress* column in the *Configuration Summary* table will now be updated with the amount of data transferred so far.
 
-#### Changes to purge settings and mechanism to support configuration backup files for change detection \[ID_27351\]
+#### Changes to purge settings and mechanism to support configuration backup files for change detection \[ID 27351\]
 
 A number of changes have been implemented in the IDP app in order to support the new possibility to store a partial backup used for change detection together with a full backup.
 
@@ -108,7 +108,7 @@ If purging happens based on the total number of backups or the number of backups
 
 In addition, if a full configuration backup is deleted from the archive during purging, any accompanying file used for change detection is now deleted as well.
 
-#### List of IDP element properties updated \[ID_27383\]
+#### List of IDP element properties updated \[ID 27383\]
 
 The list of element properties managed by IDP has been updated. It now consists of the following properties:
 
@@ -149,6 +149,6 @@ The following properties are no longer created when IDP is newly installed:
 
 ### Fixes
 
-#### Model and Manufacturer properties in CI type overwritten by update properties script \[ID_27249\]
+#### Model and Manufacturer properties in CI type overwritten by update properties script \[ID 27249\]
 
 Previously, when an element was created, it could occur that the *Model* and *Manufacturer* properties in the CI type were overwritten by the *IDP_Default_UpdateProperties* script. Now, if *Model* is not defined in the CI type, the value of this element property will be the name of the CI type. If *Manufacturer* is not defined in the CI type, its value will be *Unknown*. Note that a custom update property script can still overwrite the values of *Model* and *Manufacturer*.

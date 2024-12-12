@@ -101,7 +101,7 @@ Expected duration: 5 minutes.
 
 ## Step 5: Duplicate a page
 
-You can quickly create a duplicate of an existing page, resulting in a new page that is identical to the original. The entire configuration, including feed references, will be preserved in this duplicated page.
+You can quickly create a duplicate of an existing page, resulting in a new page that is identical to the original. The entire configuration, including data references, will be preserved in this duplicated page.
 
 1. In the navigation sidebar, click the ... icon next to the page name of your new page and select *Duplicate*.
 

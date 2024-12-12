@@ -8,7 +8,7 @@ uid: DIS_2.16
 
 ### IDE
 
-#### Table editor now also allows 'RTDisplay' settings to be edited \[ID_20200\]
+#### Table editor now also allows 'RTDisplay' settings to be edited \[ID 20200\]
 
 In the table editor, it is now also possible to edit "RTDisplay" settings.
 
@@ -19,7 +19,7 @@ When you enable or disable the RTDisplay setting of a particular table parameter
 
 Also, in the *Tables* list on the left, warning icons will now appear next to table parameters with configuration errors.
 
-#### DIS will now be using Microsoft .NET Framework 4.6 \[ID_21320\]
+#### DIS will now be using Microsoft .NET Framework 4.6 \[ID 21320\]
 
 From v2.16 onwards, DIS will be using Microsoft .NET Framework 4.6 to be able to support debugging (DIS Inject) as from DataMiner 9.6.4.
 
@@ -28,7 +28,7 @@ From v2.16 onwards, DIS will be using Microsoft .NET Framework 4.6 to be able to
 
 ### Validator
 
-#### New and updated checks and error messages \[ID_20432\]\[ID_21330\]\[ID_21341\]\[ID_21392\]\[ID_21393\]\[ID_21394\]\[ID_21435\]\[ID_21455\]
+#### New and updated checks and error messages \[ID 20432\]\[ID 21330\]\[ID 21341\]\[ID 21392\]\[ID 21393\]\[ID 21394\]\[ID 21435\]\[ID 21455\]
 
 The following checks and error messages have been added or updated.
 
@@ -72,7 +72,7 @@ The following checks and error messages have been added or updated.
 
 ### XML Schema
 
-#### UOM Schema: New units added \[ID_21125\]
+#### UOM Schema: New units added \[ID 21125\]
 
 The following units have been added to the UOM Schema:
 
@@ -81,7 +81,7 @@ The following units have been added to the UOM Schema:
 - Jobs
 - cps (chips per second)
 
-#### Protocol Schema: Updated element and attribute rules \[ID_21126\]\[ID_21250\]
+#### Protocol Schema: Updated element and attribute rules \[ID 21126\]\[ID 21250\]
 
 The syntax rules for the following elements and/or attributes have been updated:
 
@@ -91,11 +91,11 @@ The syntax rules for the following elements and/or attributes have been updated:
 | Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field@columnPid | No longer needs to refer to a defined parameter ID. |
 | Protocol.Params.Param.SNMP.TrapOID@setBindings              | Suggested value: “allBindingInfo”                   |
 
-#### Action type 'power' has been changed to 'pow' \[ID_21127\]
+#### Action type 'power' has been changed to 'pow' \[ID 21127\]
 
 The action type “power” has been changed to “pow”.
 
-#### Types and base types changed to 32-bit integer \[ID_21129\]
+#### Types and base types changed to 32-bit integer \[ID 21129\]
 
 The type of the following attributes is now “xs:int”:
 
@@ -121,12 +121,12 @@ The base type of the following types is now “xs:int”:
 
 ### Enhancements
 
-#### IDE - Display editor: Title labels more visible when using color theme 'Dark' \[ID_20667\]
+#### IDE - Display editor: Title labels more visible when using color theme 'Dark' \[ID 20667\]
 
 When, in Visual Studio, you have selected the color theme “Dark”, then title labels like “Options” and “Filter” will now be more visible in the *Display Editor* window.
 
 ### Fixes
 
-#### Problem loading a MIB file that contained tables \[ID_21508\]
+#### Problem loading a MIB file that contained tables \[ID 21508\]
 
 When loading a MIB file that contained tables, in some cases, those tables were not detected.

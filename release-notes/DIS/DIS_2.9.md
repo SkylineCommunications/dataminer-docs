@@ -8,7 +8,7 @@ uid: DIS_2.9
 
 ### IDE
 
-#### Automation script editor \[ID_17482\]
+#### Automation script editor \[ID 17482\]
 
 DIS can now also be used to create and edit Automation script XML files.
 
@@ -23,19 +23,19 @@ At the top of the editor window, you can find a *Publish* button. Click that but
 
 If, in the *DIS* menu, you select *DMA \> Import Automation Script…*, the *Import Automation Script…* dialog box will allow you to import a copy of an existing Automation script XML file found on the DMA specified in the *DMA* tab of the *DIS Settings* window. In most cases, this will be your local DMA.
 
-#### DIS MIB Browser: SNMP trap information \[ID_17601\]
+#### DIS MIB Browser: SNMP trap information \[ID 17601\]
 
 When, in the DIS MIB Browser tool window, you select an SNMP trap, the information pane at the bottom will now display all available information about that SNMP trap.
 
 Also, the DIS MIB Browser tool window will now display units and value ranges where appropriate.
 
-#### Table editor now supports ColumnOption type ‘viewTableKey’ \[ID_17667\]
+#### Table editor now supports ColumnOption type ‘viewTableKey’ \[ID 17667\]
 
 The table editor now also supports the ColumnOption type ‘viewTableKey’.
 
 In the *All Columns* section, the selection boxes in the *Type* column now also contain the ‘View Table Key’ value.
 
-#### New snippets \[ID_17713\]\[ID_17854\]
+#### New snippets \[ID 17713\]\[ID 17854\]
 
 When editing a protocol XML file or an Automation script XML file, you can now insert the following new snippets:
 
@@ -54,7 +54,7 @@ When editing a protocol XML file or an Automation script XML file, you can now i
 
 ### Validator
 
-#### New ‘DIS Validator’ tool window \[ID_14566\]
+#### New ‘DIS Validator’ tool window \[ID 14566\]
 
 Up to now, when you clicked *Validate* in the header of a protocol editor tab, the results of the protocol validation were displayed in the Visual Studio error list. From now on, those results will be displayed in a dedicated *DIS Validator* tool window.
 
@@ -67,7 +67,7 @@ At the top of the tool window, you can find two buttons:
 
 ### XML Schema
 
-#### New tags and attributes \[ID_17649\]\[ID_17650\]\[ID_17651\]\[ID_17653\]\[ID_17657\]\[ID_17661\]\[ID_17663\]
+#### New tags and attributes \[ID 17649\]\[ID 17650\]\[ID 17651\]\[ID 17653\]\[ID 17657\]\[ID 17661\]\[ID 17663\]
 
 The Protocol XML schema now supports the following tags and/or tag attributes:
 
@@ -84,23 +84,23 @@ The Protocol XML schema now supports the following tags and/or tag attributes:
 | Protocol.Params.Param.Dependencies.ID           | postSet            |
 | Protocol.Params.Param.Measurement.Type          | scientificNotation |
 
-#### Unit ‘THz’ added to UOM schema \[ID_17658\]
+#### Unit ‘THz’ added to UOM schema \[ID 17658\]
 
 The unit ‘THz’ has now been added to the UOM schema.
 
-#### Protocol.Params.Param.ArrayOptions.ColumnOption: ‘viewTableKey’ type \[ID_17659\]
+#### Protocol.Params.Param.ArrayOptions.ColumnOption: ‘viewTableKey’ type \[ID 17659\]
 
 The Protocol XML schema now supports the ColumnOption type ‘viewTableKey’.
 
-#### Protocol.Actions.Action.Type: ‘reschedule’ value & ‘reschedule’ attribute \[ID_17660\]
+#### Protocol.Actions.Action.Type: ‘reschedule’ value & ‘reschedule’ attribute \[ID 17660\]
 
 The Protocol XML schema now supports both the Action.Type attribute ‘reschedule’ (in combination with Action.Type ‘restart timer’) and the Action.Type value ‘reschedule’.
 
-#### Protocol.Timers.Timer.Time: Maximum timer time is now 24 days \[ID_17662\]
+#### Protocol.Timers.Timer.Time: Maximum timer time is now 24 days \[ID 17662\]
 
 From now on, the protocol XML schema will enforce a maximum timer time of 24 days (2,073,600 seconds).
 
-#### Automation script XML schema \[ID_17702\]
+#### Automation script XML schema \[ID 17702\]
 
 DIS is now able to validate Automation script XML files against an Automation script XML schema.
 
@@ -108,7 +108,7 @@ DIS is now able to validate Automation script XML files against an Automation sc
 
 ### Enhancements
 
-#### IDE: DIS tool windows now compatible with all built-in Visual Studio themes \[ID_14440\]
+#### IDE: DIS tool windows now compatible with all built-in Visual Studio themes \[ID 14440\]
 
 The following DIS tool windows are now compatible with all built-in Visual Studio themes:
 
@@ -119,11 +119,11 @@ The following DIS tool windows are now compatible with all built-in Visual Studi
 - DIS Grid
 - DIS Validator
 
-#### XSD: ArrayOptions tag no longer has an autoAdd attribute \[ID_17733\]
+#### XSD: ArrayOptions tag no longer has an autoAdd attribute \[ID 17733\]
 
 The *ArrayOptions* tag no longer has an *autoAdd* attribute.
 
-#### IDE: More consistent naming of the DIS tool windows \[ID_17483\]
+#### IDE: More consistent naming of the DIS tool windows \[ID 17483\]
 
 The names of the DIS tool windows have been made more consistent:
 
@@ -136,19 +136,19 @@ The names of the DIS tool windows have been made more consistent:
 | Protocol Grid     | DIS Grid        |
 | \-                | DIS Validator   |
 
-#### XSD: Protocol.Actions.Action.On tag no longer supports 'action' value \[ID_17654\]
+#### XSD: Protocol.Actions.Action.On tag no longer supports 'action' value \[ID 17654\]
 
 The Protocol.Actions.Action.On tag no longer supports its value to be set to "action".
 
-#### XSD: Protocol.HTTP.Session.Connection.Response.Headers.Header tags no longer accept any content \[ID_17655\]
+#### XSD: Protocol.HTTP.Session.Connection.Response.Headers.Header tags no longer accept any content \[ID 17655\]
 
 Protocol.HTTP.Session.Connection.Response.Headers.Header tags no longer accept any content.
 
-#### XSD: Protocol.Groups.Group.Content tags can no longer contain both actions and triggers \[ID_17656\]
+#### XSD: Protocol.Groups.Group.Content tags can no longer contain both actions and triggers \[ID 17656\]
 
 Up to now, it was allowed to specify both \<Action> and \<Trigger> tags inside a Protocol.Groups.Group.Content tag. From now on, a Protocol.Groups.Group.Content tag can contain only actions or only triggers. Mixing actions and triggers is no longer allowed.
 
-#### XSD: General review of the schema file \[ID_17663\]
+#### XSD: General review of the schema file \[ID 17663\]
 
 The Protocol XML schema file has been reviewed.
 
@@ -182,6 +182,6 @@ The Protocol XML schema file has been reviewed.
 
 ### Fixes
 
-#### IDE - Protocol editor: Problem with ‘Add New Column’ option in shortcut menu of \<Param> tag \[ID_17720\]
+#### IDE - Protocol editor: Problem with ‘Add New Column’ option in shortcut menu of \<Param> tag \[ID 17720\]
 
 When you opened the shortcut menu in front of a \<Param> tag of the table parameter, and selected *Add New Column*, in some cases, you needed to click inside the proposed text string before you were able to type. This problem has now been fixed.

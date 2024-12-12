@@ -1,6 +1,6 @@
 ---
 uid: Adding_elements
-description: How to add elements to a DataMiner System
+description: In DataMiner Cube, right-click the Surveyor, and select New > Element. Configure the element settings, and click Create.
 ---
 
 # Adding elements

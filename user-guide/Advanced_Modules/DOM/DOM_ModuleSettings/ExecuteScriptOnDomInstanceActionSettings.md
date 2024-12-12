@@ -21,6 +21,9 @@ There are currently two types of script, which each have their own unique entry 
 1. [**ID only**](#id-only-type): Default. Uses the `OnDomInstanceCrud` entry point method. Gives you access to the CRUD type and the ID of the `DomInstance` in the script.
 1. [**Full CRUD meta**](#full-crud-meta-type): Recommended. Uses the `OnDomInstanceCrudWithFullMeta` entry point method. Gives you access to the CRUD type and the full `DomInstance` object(s). Available from DataMiner version 10.3.10/10.4.0 onwards.
 
+> [!NOTE]
+> Prior to DataMiner versions 10.5.0/10.5.2<!-- RN 41536 -->, a "Script started" information event is generated when any of the configured scripts are launched. To reduce the load on the database, this no longer happens from those DataMiner versions onwards.
+
 ## ID Only type
 
 When the "ID Only" type (`IdOnly` enum value) is selected, the Automation script needs to contain an entry point method that has the `AutomationEntryPoint` attribute with argument `AutomationEntryPointType.Types.OnDomInstanceCrud`. When the CRUD action is executed, this method will be called with the following arguments:
@@ -79,7 +82,7 @@ public class Script
 
 ### Calculating changes done to a DOM instance in a CRUD script
 
-From 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to calculate the changes done to a `DomInstance` in a CRUD script using the `GetDifferences` method on the `DomInstanceCrudMeta` object.
+From DataMiner 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to calculate the changes done to a `DomInstance` in a CRUD script using the `GetDifferences` method on the `DomInstanceCrudMeta` object.
 
 The `GetDifferences` method returns an object `DomInstanceDifferences`. This contains the differences of the `DomInstance`:
 

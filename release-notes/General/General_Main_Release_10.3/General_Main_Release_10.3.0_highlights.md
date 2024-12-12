@@ -14,13 +14,13 @@ uid: General_Main_Release_10.3.0_highlights
 
 ### DMS core functionality
 
-#### BREAKING CHANGE: GetSpectrumTrendTraceDataMessage will now always require a time range [ID_31402] [ID_32016]
+#### BREAKING CHANGE: GetSpectrumTrendTraceDataMessage will now always require a time range [ID 31402] [ID 32016]
 
 <!-- MR 10.3.0 - FR 10.2.2 -->
 
 When a GetSpectrumTrendTraceDataMessage was used to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e. RangeStart and RangeEnd) next to an ID (i.e. RecordID). From now on, passing a time range next to an ID will be mandatory.
 
-#### DataMiner Object Models: Defining a TLL for DomTemplates, DomInstances and DomInstance history [ID_32662]
+#### DataMiner Object Models: Defining a TLL for DomTemplates, DomInstances and DomInstance history [ID 32662]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -54,7 +54,7 @@ var moduleSettings = new ModuleSettings("example")
 > [!NOTE]
 > TTL settings are checked every 30 minutes. When you configure a very short TTL (e.g. 15 minutes), keep in mind that the objects in question will only be removed during the next cleanup cycle.
 
-#### OpenSearch & Amazon OpenSearch Service [ID_34651]
+#### OpenSearch & Amazon OpenSearch Service [ID 34651]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
@@ -70,7 +70,7 @@ For more information on setup and configuration, see [OpenSearch database](xref:
 > [!NOTE]
 > It is also possible to use Amazon OpenSearch Service on AWS as an alternative to an on-premises hosted Elasticsearch/OpenSearch cluster. For more information on setup and configuration, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
 
-#### Amazon Keyspaces [ID_34872]
+#### Amazon Keyspaces [ID 34872]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
@@ -87,7 +87,7 @@ For more information on setup and configuration, see [Amazon Keyspaces Service](
 
 ### DMS Security
 
-#### SLSSH: Enhanced HMAC, cypher and key exchange algorithm support [ID_32664] [ID_32786]
+#### SLSSH: Enhanced HMAC, cypher and key exchange algorithm support [ID 32664] [ID 32786]
 
 <!-- RN 32664: MR 10.3.0 - FR 10.2.4
 RN 32786: MR 10.3.0 - FR 10.2.5 -->
@@ -124,7 +124,7 @@ DataMiner now supports the encryption methods detailed below (in order of prefer
 - Aes-128-CBC
 - 3des-CBC
 
-#### SLSSH: Enhanced host key verification algorithm support [ID_33132]
+#### SLSSH: Enhanced host key verification algorithm support [ID 33132]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -138,7 +138,7 @@ When acting as an SSH client, DataMiner now supports the following host key veri
 
 ### DMS Protocols
 
-#### Timers: Specifying an interval between two consecutive ping packets [ID_34463] [ID_34549]
+#### Timers: Specifying an interval between two consecutive ping packets [ID 34463] [ID 34549]
 
 <!-- MR 10.3.0 - FR 10.2.11 -->
 
@@ -155,7 +155,7 @@ When you configure a timer to automatically send ping requests to a device, you 
 
 ### DMS Service & Resource Management
 
-#### Replacing system functions by uploading an XML file [ID_32264]
+#### Replacing system functions by uploading an XML file [ID 32264]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -172,7 +172,7 @@ pfHelper.ReplaceActiveSystemFunctionDefinitions(xmlcontent);
 > - If the uploaded file is not a valid XML file, a DataMinerException will be thrown and the system functions will not be replaced.
 > - Each function in the XML file must have a valid ID. Functions without a valid ID will be ignored.
 
-#### Modified AbsoluteQuarantinePriority behavior and several new SRM features [ID_32654]
+#### Modified AbsoluteQuarantinePriority behavior and several new SRM features [ID 32654]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -307,7 +307,7 @@ var filter = ReservationInstanceExposers.ElementUsages.Contains(elementToSearchF
 var bookings = rmHelper.GetReservationInstances(filter);
 ```
 
-#### Functions.xml file: Assigning a function type to a function [ID_32851]
+#### Functions.xml file: Assigning a function type to a function [ID 32851]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -340,7 +340,7 @@ Example:
 > [!NOTE]
 > If you add a \<FunctionType> element inside a \<Function> element, it must be the last child element inside the \<Function> element.
 
-#### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID_33836]
+#### BREAKING CHANGE: Removing a Resource or ResourcePool object will now always require a valid ID [ID 33836]
 
 <!-- MR 10.3.0 - FR 10.2.9 -->
 

@@ -10,6 +10,34 @@ uid: Cloud_Pack_change_log
 > [!TIP]
 > For more information about the Cloud Pack, see [DataMiner Cloud Pack](xref:CloudPackages).
 
+#### 13 November 2024 - DataMiner Cloud Pack 3.2.2.0
+
+- [DataMiner ArtifactDeployer 1.8.2](xref:artifactdeployer_change_log)
+- [DataMiner CloudGateway 2.14.5](xref:cloudgateway_change_log)
+- [DataMiner CoreGateway 2.14.11](xref:coregateway_change_log)
+- [DataMiner FieldControl 2.11.1](xref:fieldcontrol_change_log)
+- [DataMiner Orchestrator 1.7.4](xref:orchestrator_change_log)
+- [DataMiner SupportAssistant 1.7.1](xref:supportassistant_change_log)
+
+#### 07 November 2024 - DataMiner Cloud Pack 3.2.1.0
+
+- [DataMiner ArtifactDeployer 1.8.2](xref:artifactdeployer_change_log)
+- [DataMiner CloudGateway 2.14.5](xref:cloudgateway_change_log)
+- [DataMiner CoreGateway 2.14.11](xref:coregateway_change_log)
+- [DataMiner FieldControl 2.11.1](xref:fieldcontrol_change_log)
+- [DataMiner Orchestrator 1.7.2](xref:orchestrator_change_log)
+- [DataMiner SupportAssistant 1.7.1](xref:supportassistant_change_log)
+
+#### 07 August 2024 - DataMiner Cloud Pack 3.2.0.0
+
+- [DataMiner ArtifactDeployer 1.8.0](xref:artifactdeployer_change_log)
+- [DataMiner CloudFeed 1.3.1](xref:cloudfeed_change_log)
+- [DataMiner CloudGateway 2.14.0](xref:cloudgateway_change_log)
+- [DataMiner CoreGateway 2.14.10](xref:coregateway_change_log)
+- [DataMiner FieldControl 2.11.0](xref:fieldcontrol_change_log)
+- [DataMiner Orchestrator 1.7.0](xref:orchestrator_change_log)
+- [DataMiner SupportAssistant 1.7.0](xref:supportassistant_change_log)
+
 #### 17 July 2024 - DataMiner Cloud Pack 3.1.12.0
 
 - [DataMiner ArtifactDeployer 1.7.1](xref:artifactdeployer_change_log)

@@ -69,4 +69,4 @@ For an overview of the different applications available in the package, see [Med
 
 ## Getting started with MediaOps
 
-For instructions how to install and get started with MediaOps, see our [user guide](xref:Installing_MediaOps).
+For instructions how to install and get started with MediaOps, refer to our [user guide](xref:Installing_MediaOps).

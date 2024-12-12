@@ -8,7 +8,7 @@ uid: DIS_2.12
 
 ### IDE
 
-#### QAction code library \[ID_13977\]
+#### QAction code library \[ID 13977\]
 
 DIS now contains a code library with reusable C# code, such as classes and methods that can be used for e.g. creating elements and services, processing DVEs, etc. Code from that library can be used in all QActions without having to copy/paste code from an external source into the protocol.
 
@@ -18,7 +18,7 @@ The advantage of this approach is that no additional DLL files need to be copied
 
 In the *DIS Settings* window, a new *Code Library* tab has been added. In that tab, you can specify custom directories containing additional .cs code files to be added to the QAction code library.
 
-#### Generate Parameters Wizard: New input type 'WSDL' \[ID_17747\]
+#### Generate Parameters Wizard: New input type 'WSDL' \[ID 17747\]
 
 The *Generate Parameters Wizard* window now also allows you to generate \<Param> tag (as well as all the necessary \<Timer>, \<Group>, \<Trigger> and \<Action> tags) based on parameter data in a WSDL file.
 
@@ -27,7 +27,7 @@ The *Generate Parameters Wizard* window now also allows you to generate \<Param>
 >
 > A *Generate Parameters...* command has now also been added to the DIS menu.
 
-#### Enhanced grid view \[ID_18351\]
+#### Enhanced grid view \[ID 18351\]
 
 The *DIS Grid* window has been enhanced. This tool window allows you to manage and configure all parameters in the protocol using a spreadsheet-like view.
 
@@ -38,7 +38,7 @@ Important changes:
 - When a position tag is generated, a *Row* and *Column* tag is automatically included (default values: 0).
 - The right-click menu now also contains a *Duplicate* command.
 
-#### QActions can now be built and maintained on a computer without a local DataMiner Agent \[ID_18457\]
+#### QActions can now be built and maintained on a computer without a local DataMiner Agent \[ID 18457\]
 
 The DataMiner DLL files that are necessary to build and maintain QActions are now included into the DIS installation file. Hence, it is now possible to build and maintain QActions on a computer that has no local DataMiner Agent installed.
 
@@ -51,7 +51,7 @@ The following DLL files are included:
 - SLManagedScripting.dll
 - SLNetTypes.dll
 
-#### DIS installation file: Additional prerequisites \[ID_18823\]
+#### DIS installation file: Additional prerequisites \[ID 18823\]
 
 To ensure that the user's Visual Studio installation has all the assemblies required to run the DIS extension, two prerequisites have been added to the extension manifest:
 
@@ -62,7 +62,7 @@ These two modules will now automatically be installed when you install DIS.
 
 ### Validator
 
-#### Check Interprete table as inputParameter \[ID_18444\]
+#### Check Interprete table as inputParameter \[ID 18444\]
 
 From now on, the Validator will check whether table parameters specified in the inputParameter attribute of a QAction have a correct Interprete tag.
 
@@ -75,7 +75,7 @@ Two new error codes have been added:
 
 ### XML Schema
 
-#### New units added to UOM schema: pHz, nHz, L \[ID_18512\]
+#### New units added to UOM schema: pHz, nHz, L \[ID 18512\]
 
 The following units have been added to the UOM schema:
 
@@ -83,7 +83,7 @@ The following units have been added to the UOM schema:
 - nHz: nanohertz
 - L: liter
 
-#### New tags and attributes \[ID_18513\]\[ID_18949\]\[ID_18950\]\[ID_18951\]\[ID_18952\]\[ID_18954\]
+#### New tags and attributes \[ID 18513\]\[ID 18949\]\[ID 18950\]\[ID 18951\]\[ID 18952\]\[ID 18954\]
 
 The Protocol XML schema now supports the following tags and/or tag attributes:
 
@@ -100,7 +100,7 @@ The Protocol XML schema now supports the following tags and/or tag attributes:
 | Protocol.Params.Param.ArrayOptions.ColumnOptions.ColumnOption | pollingRate   |
 | Protocol.Params.Param.Interprete.Rounding                     | \-            |
 
-#### EnumTriggerOn: New value 'session' \[ID_18954\]
+#### EnumTriggerOn: New value 'session' \[ID 18954\]
 
 The value “session” has been added to the list of allowed values for the Trigger.On tag (EnumTriggerOn).
 
@@ -108,11 +108,11 @@ The value “session” has been added to the list of allowed values for the Tri
 
 ### Enhancements
 
-#### XML editor: Publish button is now disabled in debug mode \[ID_18872\]
+#### XML editor: Publish button is now disabled in debug mode \[ID 18872\]
 
 From now on, it will no longer be possible to click the *Publish* button at the top of the XML editor when Visual Studio is running in debug mode.
 
-#### Schema: Additional content model restrictions \[ID_18514\]
+#### Schema: Additional content model restrictions \[ID 18514\]
 
 A number of additional content model restrictions have been added to the protocol schema:
 
@@ -142,14 +142,14 @@ A number of additional content model restrictions have been added to the protoco
 
 ### Fixes
 
-#### QAction editor: Problem with synchronization of a QAction C# project linked to a protocol.xml file \[ID_18421\]
+#### QAction editor: Problem with synchronization of a QAction C# project linked to a protocol.xml file \[ID 18421\]
 
 In some rare cases, a QAction C# project linked to a protocol.xml file would no longer be synchronized correctly. Changes made to the QAction would be applied incorrectly in the protocol.xml file and vice versa. This problem has now been fixed.
 
-#### Display editor: Problem when dragging a parameter from one page to another \[ID_18450\]
+#### Display editor: Problem when dragging a parameter from one page to another \[ID 18450\]
 
 When, in the display editor, you dragged a parameter from one page to another, in some cases, DIS would incorrectly indicate that there are two parameters on the same position. This problem has now been fixed.
 
-#### DIS settings: Problem when pressing ENTER after updating the Host box in the DMA tab \[ID_18881\]
+#### DIS settings: Problem when pressing ENTER after updating the Host box in the DMA tab \[ID 18881\]
 
 When, in the *DMA* tab of the *DIS Settings* window, you changed the URL in the *Host* box and pressed ENTER, the change would not be applied. This problem has now been fixed.

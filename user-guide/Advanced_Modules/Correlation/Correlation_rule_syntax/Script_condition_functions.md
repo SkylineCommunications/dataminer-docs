@@ -41,7 +41,7 @@ Retrieves one of the following fields from a base alarm.
 | componentinfo |  |
 | hostingdmaid |  |
 | viewname | Name of the view containing the element that generated the alarm. If the element can be found in more than one view, then a random name is used. |
-| elementkey | The DmaID/ElementID (supported from DataMiner version 8.5.5 onwards) |
+| elementkey | The DmaID/ElementID |
 
 ## property
 

@@ -15,7 +15,7 @@ uid: General_Feature_Release_10.3.3
 
 ## Highlights
 
-#### OpenSearch & Amazon OpenSearch Service [ID_34651]
+#### OpenSearch & Amazon OpenSearch Service [ID 34651]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 <!-- See Cube RNs for System Center change -->
@@ -32,7 +32,7 @@ For more information on setup and configuration, see [OpenSearch database](xref:
 > [!NOTE]
 > It is also possible to use Amazon OpenSearch Service on AWS as an alternative to an on-premises hosted Elasticsearch/OpenSearch cluster. For more information on setup and configuration, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
 
-#### Amazon Keyspaces [ID_34872]
+#### Amazon Keyspaces [ID 34872]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
@@ -49,7 +49,7 @@ For more information on setup and configuration, see [Amazon Keyspaces Service](
 
 ## Other features
 
-#### DataMiner Object Model: New 'ClientReadOnly' and 'AllowMultipleSections' properties [ID_35172]
+#### DataMiner Object Model: New 'ClientReadOnly' and 'AllowMultipleSections' properties [ID 35172]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
@@ -98,7 +98,7 @@ Rules that apply with regard to multiple sections:
 
 Up to now, if there were multiple sections, it was allowed for some of those sections to not contain all the required fields. From now on, every section must contain each and every required field.
 
-#### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID_35226]
+#### DataMiner Object Models: Action buttons can now be configured to launch an interactive Automation script when clicked [ID 35226]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -109,7 +109,7 @@ When such a button is clicked in a low-code app, the UI of the interactive Autom
 > [!NOTE]
 > One button can only execute one action. So, one button can only execute one interactive Automation script.
 
-#### DataMiner Object Models: New field descriptors [ID_35278]
+#### DataMiner Object Models: New field descriptors [ID 35278]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -119,7 +119,7 @@ Two new field descriptors have been added to the DataMiner Object Models:
 
 - UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
 
-#### SLLogCollector will now order the Standalone BPA Executor tool to execute all BPA tests available in the system [ID_35436]
+#### SLLogCollector will now order the Standalone BPA Executor tool to execute all BPA tests available in the system [ID 35436]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -131,14 +131,14 @@ The names of the files containing the test results will have the following forma
 
 ### Enhancements
 
-#### Security enhancements [ID_34894] [ID_35331]
+#### Security enhancements [ID 34894] [ID 35331]
 
 <!-- RN 34894: MR 10.2.0 [CU12] - FR 10.3.3 -->
 <!-- RN 35331: MR 10.3.0 - FR 10.3.3 -->
 
 A number of security enhancements have been made.
 
-#### Elasticsearch: 'Request Entity Too Large (413)' errors will now be prevented when writing data in bulk [ID_34937]
+#### Elasticsearch: 'Request Entity Too Large (413)' errors will now be prevented when writing data in bulk [ID 34937]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -146,13 +146,13 @@ When data was written to Elasticsearch in bulk, up to now, DataMiner would throw
 
 From now on, DataMiner will detect when too much data is being sent in a single request and will split up the data into smaller parts.
 
-#### SLLogCollector: Multiple instances can now be run simultaneously [ID_35204]
+#### SLLogCollector: Multiple instances can now be run simultaneously [ID 35204]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Multiple instances of the SLLogCollector tool can now be run simultaneously.
 
-#### Cassandra Cluster: Enhanced query performance [ID_35247]
+#### Cassandra Cluster: Enhanced query performance [ID 35247]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
 
@@ -163,31 +163,31 @@ This change will considerably improve overall query performance, especially when
 > [!NOTE]
 > This change will not enhance performance when requesting trend data for an element that has no trend data points before the requested window. In cases like this, the full two-year range of shards will be queried to try and find an initial point.
 
-#### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
+#### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID 35299]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 From now on, when you define a tag for pattern matching, the pattern you selected will be saved as a pattern occurrence in the Elasticsearch database and highlighted in bright orange, similar to so-called "streaming matches", which are detected while tracking for trend patterns whenever a trended parameter is updated.
 
-#### SLDataGateway: Memory enhancements with regard to average trending [ID_35312]
+#### SLDataGateway: Memory enhancements with regard to average trending [ID 35312]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the SLDataGateway process, a number of memory enhancements have been made with regard to the management of average trend data.
 
-#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID_35332]
+#### SLAnalytics - Behavioral anomaly detection: Suggestion events and alarm events for a DVE child element will now be generated on that same DVE child element [ID 35332]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When a behavioral anomaly was detected on a DVE child element, up to now, the suggestion event or the alarm event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
-#### Maps: Markers will now move more gradual when zooming [ID_35337]
+#### Maps: Markers will now move more gradual when zooming [ID 35337]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 Because of a number of enhancements, markers will now move more gradual when zooming.
 
-#### Alarm templates - Smart baseline calculations: NullReferenceException prevented & enhanced exception logging [ID_35348]
+#### Alarm templates - Smart baseline calculations: NullReferenceException prevented & enhanced exception logging [ID 35348]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -195,19 +195,19 @@ In some cases, a `Baseline Calculation Failed: System.NullReferenceException: Ob
 
 Also, log entries indicating an exception thrown during baseline calculations will now include details regarding the element and parameter associated with the exception.
 
-#### Maps: Enhanced zooming behavior [ID_35351]
+#### Maps: Enhanced zooming behavior [ID 35351]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 From now on, when you zoom in or out, the data of the previous zoom level will stay visible until the data of the current zoom level has been loaded.
 
-#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
+#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID 35363]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
 
 During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
-#### SLSNMPAgent log entries will now include the alarm ID [ID_35404]
+#### SLSNMPAgent log entries will now include the alarm ID [ID 35404]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -219,13 +219,13 @@ Example:
 
 - New format: `Received ACK from SNMP Manager SNMP - LFR for alarm 239/4270232`
 
-#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414]
+#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID 35414]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Service & Resource Management: Enhanced performance when changing active function files [ID_35424]
+#### Service & Resource Management: Enhanced performance when changing active function files [ID 35424]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -233,13 +233,13 @@ Because of a number of enhancements, overall performance has increased when chan
 
 Also, in the Cube UI, users will receive more concise feedback regarding the impact of the change. Up to now, they would receive a list of all items affected by the change. From now on, the list of affected items will only show up to 10 affected items per object type.
 
-#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID 35465]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 From now on, anomaly detection will no longer be available for discrete parameters.
 
-#### Automation: Enhanced memory usage [ID_35502]
+#### Automation: Enhanced memory usage [ID 35502]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -247,7 +247,7 @@ Because of a number of enhancements, overall memory usage of the SLAutomation pr
 
 ### Fixes
 
-#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
+#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID 31923]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU3] - FR 10.3.3 -->
 
@@ -255,7 +255,7 @@ At start-up, every DataMiner Agent with a Cassandra Cluster configuration would 
 
 From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
-#### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID_34790]
+#### DataMiner Taskbar Utility: Problem when stopping DataMiner [ID 34790]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -263,31 +263,31 @@ Up to now, when you right-clicked the *DataMiner Taskbar Utility* system tray ic
 
 Also, after DataMiner had been stopped, up to now, the *SLXml*, *SLLog* and *SLDataGateway* processes would incorrectly start up again.
 
-#### Problem with SLLog when logging large entries regarding failed Elasticsearch query requests/responses [ID_35037]
+#### Problem with SLLog when logging large entries regarding failed Elasticsearch query requests/responses [ID 35037]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Up to now, an error could occur in SLLog when adding large entries regarding failed Elasticsearch query requests/responses.
 
-#### When a direct view table was updated, the wrong columns could be updated in the source element [ID_35075]
+#### When a direct view table was updated, the wrong columns could be updated in the source element [ID 35075]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When a direct view table was updated while one of the source elements was stopped, due to a column translation issue, the wrong columns could be updated in that source element the moment it was started again.
 
-#### SLDataGateway would leak memory when offloading average trend data for DVE elements [ID_35167]
+#### SLDataGateway would leak memory when offloading average trend data for DVE elements [ID 35167]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 The SLDataGateway process would leak memory when offloading average trend data for DVE elements.
 
-#### Service & Resource Management: Setting a new function file to active would incorrectly not cause the function DVEs of elements using a production version of the protocol to be updated [ID_35178]
+#### Service & Resource Management: Setting a new function file to active would incorrectly not cause the function DVEs of elements using a production version of the protocol to be updated [ID 35178]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When a new function file was set to active, up to now, the function DVEs of elements using a production version of the protocol in question would incorrectly not be updated.
 
-#### Problem with CassandraBackup.exe when the configuration file of a general database of type 'Cassandra' had a DBServer element that contained multiple host addresses [ID_35253]
+#### Problem with CassandraBackup.exe when the configuration file of a general database of type 'Cassandra' had a DBServer element that contained multiple host addresses [ID 35253]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -295,19 +295,19 @@ When, in the configuration file of a general database of type "Cassandra", the `
 
 From now on, when the `<DBServer>` element contains multiple host addresses including that of the local database, the *CassandraBackup.exe* tool will take a backup of the local database.
 
-#### SLDataGateway could end up with an excessive number of HealthMonitor.Refresh threads [ID_35286]
+#### SLDataGateway could end up with an excessive number of HealthMonitor.Refresh threads [ID 35286]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In some cases, the SLDataGateway process could end up with an excessive number of *HealthMonitor.Refresh* threads.
 
-#### Some agents in the cluster would incorrectly remove the run-time hosting agent info they had stored for another agent [ID_35287]
+#### Some agents in the cluster would incorrectly remove the run-time hosting agent info they had stored for another agent [ID 35287]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When run-time connections were being set up between agents or when a midnight sync was being executed, some agents in the DataMiner cluster would incorrectly remove the run-time hosting agent information they had stored for another agent in the same cluster.
 
-#### DataMiner Object Models: Permission checks for DOM modules requiring view permission 'None' were too strict [ID_35305]
+#### DataMiner Object Models: Permission checks for DOM modules requiring view permission 'None' were too strict [ID 35305]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
@@ -315,7 +315,7 @@ If a DOM module is created without specifying *SecuritySettings*, the view permi
 
 Up to now, the check to determine whether a user had the view permission set to "None", would only return true for the Administrator or users in the Administrator group. From now on, when the required view permission is "None", permission checks will no longer be performed.
 
-#### External authentication via SAML: Issues fixed when using Okta as identity provider [ID_35374]
+#### External authentication via SAML: Issues fixed when using Okta as identity provider [ID 35374]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -323,7 +323,7 @@ Using Okta as identity provider, it would incorrectly no longer be possible to r
 
 Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
 
-#### Problem when connecting to Azure AD via a proxy [ID_35382]
+#### Problem when connecting to Azure AD via a proxy [ID 35382]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -335,31 +335,31 @@ In case a DataMiner Agent has to connect to Azure AD via a proxy, then that prox
 netsh winhttp set proxy <proxyaddress> <bypasslist>
 ```
 
-#### Cassandra: TTL setting of spectrum trace data would not be applied correctly [ID_35385]
+#### Cassandra: TTL setting of spectrum trace data would not be applied correctly [ID 35385]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 In a Cassandra database, the "time to live" (TTL) setting of spectrum trace data would not be applied correctly. As a result, this type of data would never be removed.
 
-#### Problem with SLElement when stopping an EPM element [ID_35439]
+#### Problem with SLElement when stopping an EPM element [ID 35439]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1]  - FR 10.3.3 -->
 
 When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
 
-#### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID_35440]
+#### SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster [ID 35440]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 SLDataGateway would not correctly return errors when querying SLA logger tables in a Cassandra Cluster, causing an error to occur in SLProtocol.
 
-#### Problem when sending northbound SNMP inform messages in chronological order [ID_35441]
+#### Problem when sending northbound SNMP inform messages in chronological order [ID 35441]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When northbound SNMP inform messages were being sent in chronological order, an error could occur when sending those messages suddenly stopped.
 
-#### Automation: 'engine.RunClientProgram' overload with two parameters would incorrectly always be run synchronously [ID_35476]
+#### Automation: 'engine.RunClientProgram' overload with two parameters would incorrectly always be run synchronously [ID 35476]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -369,25 +369,25 @@ An `engine.RunClientProgram` overload with two parameters, of which the second o
 RunClientProgram(String applicationPath, bool waitForCompletion)
 ```
 
-#### Business Intelligence: Problem when correcting outages on an SLA with a week-based window [ID_35503]
+#### Business Intelligence: Problem when correcting outages on an SLA with a week-based window [ID 35503]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When outages on an SLA with a week-based window were corrected, the *History Statistics Table* that started in the first 9 weeks of every year would incorrectly not get updated.
 
-#### SLAnalytics - Behavioral anomaly detection: Two identical behavioral anomaly alarms would incorrectly be created [ID_35511]
+#### SLAnalytics - Behavioral anomaly detection: Two identical behavioral anomaly alarms would incorrectly be created [ID 35511]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
 
 In some cases, two identical behavioral anomaly alarms would incorrectly be created.
 
-#### SLAnalytics : Problem after a DVE parent element had been deleted [ID_35521]
+#### SLAnalytics : Problem after a DVE parent element had been deleted [ID 35521]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.3 -->
 
 In some cases, an error could occur in the SLAnalytics process after a DVE parent element had been deleted.
 
-#### Cassandra Cluster: Rows would incorrectly be added without TTL value [ID_35789]
+#### Cassandra Cluster: Rows would incorrectly be added without TTL value [ID 35789]
 
 <!-- MR 10.3.0 [CU0] - FR 10.3.3 [CU0] -->
 

@@ -174,7 +174,7 @@ The following time frame shall apply for Issues reported during Out of Business 
 
 This Evolve plan section shall only be applicable for Users that comply with the requirements of the Evolve plan. These requirements shall be tested for compliance at regular intervals. In case of non-compliance by the User, Skyline reserves the right to limit the User's Support Services to the provisions of the Continuity plan.
 
-For the minimum requirements to enable the Evolve plan, refer to [Minimum requirements](xref:Overview_Support_Plans#minimum-requirements).
+For the minimum requirements to enable the Evolve plan, refer to [Minimum requirements](xref:Overview_Support_Plans#minimum-requirements-for-each-level).
 
 Do not hesitate to [contact your sales representative](https://community.dataminer.services/get-in-touch/sales-team/).
 

@@ -9,7 +9,7 @@ uid: General_Main_Release_10.4.0_highlights
 
 ## Highlights
 
-#### Storage as a Service (STaaS) [ID_34616] [ID_37141] [ID_37256] [ID_37257] [ID_37283]
+#### Storage as a Service (STaaS) [ID 34616] [ID 37141] [ID 37256] [ID 37257] [ID 37283]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 <!-- RN 37141: MR 10.4.0 - FR 10.3.10 [CU1] -->
@@ -18,7 +18,7 @@ DataMiner now supports Storage as a Service (STaaS), a scalable and user-friendl
 
 For detailed information, see [Storage as a Service (STaaS)](xref:STaaS).
 
-#### User-Defined APIs [ID_34910] [ID_35134] [ID_35169] [ID_35417] [ID_35743] [ID_35810] [ID_35880] [ID_35885] [ID_36118] [ID_36250] [ID_36273] [ID_36366]
+#### User-Defined APIs [ID 34910] [ID 35134] [ID 35169] [ID 35417] [ID 35743] [ID 35810] [ID 35880] [ID 35885] [ID 36118] [ID 36250] [ID 36273] [ID 36366]
 
 With the DataMiner User-Defined APIs, you can define custom API calls that will be made available on DataMiner Agents hosting the *UserDefinableApiEndpoint* DxM. This DxM is included in DataMiner upgrade packages from now on and will be automatically installed when you upgrade. The APIs can be secured using API tokens, which can be generated on the fly and linked to the API definitions.
 
@@ -111,7 +111,7 @@ If you trigger an API via the SLNetClientTest tool, this will bypass the endpoin
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Configuration of behavioral anomaly alarms [ID_36857] [ID_36976] [ID_37124] [ID_37246] [ID_37334] [37434]
+#### Configuration of behavioral anomaly alarms [ID 36857] [ID 36976] [ID 37124] [ID 37246] [ID 37334] [37434]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
@@ -127,7 +127,7 @@ Customized anomaly monitoring will enable you to do the following:
 - Set absolute or relative thresholds on the jump sizes of the change points of type *Level Shift* or *Outlier*.
 - Enable or disable monitoring for each of the two possible directions of a behavioral change for level shifts, trend changes, variance changes and outliers. This will allow you, for example, to configure different alarm monitoring behaviors for downward level shifts and upward level shifts.
 
-For more information on how to configure anomaly monitoring in DataMiner Cube, see [Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171] [ID_37670]](xref:Cube_Feature_Release_10.3.12#alarm-templates-configuration-of-behavioral-anomaly-alarms-id_37148-id_37171-id_37670).
+For more information on how to configure anomaly monitoring in DataMiner Cube, see [Alarm templates: Configuration of behavioral anomaly alarms [ID 37148] [ID 37171] [ID 37670]](xref:Cube_Feature_Release_10.3.12#alarm-templates-configuration-of-behavioral-anomaly-alarms-id-37148-id-37171-id-37670).
 
 Summary of server-side changes:
 
@@ -153,7 +153,7 @@ Summary of server-side changes:
 
 - A behavioral change point of type "flatline" shown in the trend graph will now always receive the correct alarm color when an anomaly alarm was created for it. In other words, if a critical behavioral anomaly alarm was created for the behavioral change of type "flatline", the change point bar shown in the trend graph will receive the red color.
 
-#### DataMiner requirements: .NET 8.0 now required [ID_37969]
+#### DataMiner requirements: .NET 8.0 now required [ID 37969]
 
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
 

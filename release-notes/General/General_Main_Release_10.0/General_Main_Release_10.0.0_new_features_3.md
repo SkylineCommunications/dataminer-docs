@@ -12,7 +12,7 @@ uid: General_Main_Release_10.0.0_new_features_3
 
 ### DMS Cube (Visual Overview)
 
-#### Visual Overview: Option to embed Chromium browser \[ID_18501\]
+#### Visual Overview: Option to embed Chromium browser \[ID 18501\]
 
 If a shape in Visio is linked to a web page, it is now possible to add an option in order to display the page using the Chromium browser. To do so, add the following shape data:
 
@@ -20,7 +20,7 @@ If a shape in Visio is linked to a web page, it is now possible to add an option
 |------------------|-----------|
 | Options          | UseChrome |
 
-#### Visual Overview: Highlighting connections based on the source and target of the connection \[ID_19511\]\[ID_21428\]
+#### Visual Overview: Highlighting connections based on the source and target of the connection \[ID 19511\]\[ID 21428\]
 
 From now on, it is possible to configure a highlight style that is only applied if the path comes from a certain source and (optionally) goes to a certain destination.
 
@@ -65,7 +65,7 @@ HighlightStyle|HighlightTarget=SourceDestination|Source:Protocol=MyDCFProtocol|D
 HighlightStyle|HighlightTarget=SourceDestination|Source:Tag=MySource|Direction=Backwards
 ```
 
-#### Visual Overview: Device discovery shape \[ID_19646\]
+#### Visual Overview: Device discovery shape \[ID 19646\]
 
 It is now possible to configure a shape in Visio so that it launches the Device Discovery app when it is clicked in Cube. To do so, add the following shape data to a shape linked to a view:
 
@@ -80,7 +80,7 @@ Example:
 | View             | MyView           |
 | Execute          | Device discovery |
 
-#### Visual Overview: New option to automatically close a VdxPage popup/window after executing the main action \[ID_19689\]
+#### Visual Overview: New option to automatically close a VdxPage popup/window after executing the main action \[ID 19689\]
 
 It is now possible to have a VdxPage popup/window close itself automatically after the main action has been executed. To do so, add a data field of type “Options” to a shape displayed inside the VdxPage popup/window and set its value to “ClosePage”.
 
@@ -90,7 +90,7 @@ It is now possible to have a VdxPage popup/window close itself automatically aft
 
 The difference between this new “ClosePage” option and the “AutoClosePopup” option is that the former is set on a shape inside the VdxPage popup/window, while the latter is set on the shape opening the popup/window.
 
-#### Visual Overview: Embedded Resource Manager timeline component has three new session variables \[ID_19996\]\[ID_23047\]
+#### Visual Overview: Embedded Resource Manager timeline component has three new session variables \[ID 19996\]\[ID 23047\]
 
 When you embed a Resource Manager timeline component in a Visio drawing, you can now use the following additional session variables:
 
@@ -115,7 +115,7 @@ When you embed a Resource Manager timeline component in a Visio drawing, you can
 > - Using the above-mentioned session variables, you can link two timeline components in a master-detail relation.
 > - The Viewport session variable can be set on Cube level, card level, page level and workspace level.
 
-#### Visual Overview: 'Edit in Visio' enhancements \[ID_20361\]\[ID_22394\]
+#### Visual Overview: 'Edit in Visio' enhancements \[ID 20361\]\[ID 22394\]
 
 When, in DataMiner Cube, you right-click a visual overview and select *Edit in Visio*, the Visio file in question will be opened in Microsoft Visio. In Visio, a new set of add-ins is now available to manage DataMiner-related data.
 
@@ -134,7 +134,7 @@ When you click the page background, this panel will list the page data items cur
 
 - To remove a data item from either the page or the selected shape, click the black cross on the right of the item.
 
-#### Visual Overview: Shapes turned into a tab control showing Visio file pages now also support different tab control styles \[ID_20507\]
+#### Visual Overview: Shapes turned into a tab control showing Visio file pages now also support different tab control styles \[ID 20507\]
 
 Shapes turned into a tab control that displays specific pages of a Visio file now also support the new tab control style introduced in DataMiner version 9.5.14.
 
@@ -147,7 +147,7 @@ Example:
 | VdxPage          | Page1\|Page2      |
 | Options          | TabControlStyle=2 |
 
-#### Visual Overview: Reservation shape \[ID_20517\]\[ID_22075\]
+#### Visual Overview: Reservation shape \[ID 20517\]\[ID 22075\]
 
 It is now possible to link a shape to a booking, used in the Service & Resource Management suite.
 
@@ -179,7 +179,7 @@ The following placeholders can be used in the text displayed on the *Reservation
 >   - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings>
 >   - <https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings>
 
-#### Visual Overview: New context menu item to copy text to clipboard + new option to customize context menu \[ID_20539\]\[ID_21715\]
+#### Visual Overview: New context menu item to copy text to clipboard + new option to customize context menu \[ID 20539\]\[ID 21715\]
 
 If a shape in Visual Overview displays text, a new context menu item is now available for the shape that will allow users to easily copy the text to the clipboard.
 
@@ -195,7 +195,7 @@ Optionally, to make sure that this action is also executed when a user left-clic
 |------------------|----------------------------------------------------|
 | ContextMenu      | MenuItem:Action=CopyShapeText,IsDefaultAction=True |
 
-#### Visual Overview: Using a protocol name in a shape condition \[ID_20646\]
+#### Visual Overview: Using a protocol name in a shape condition \[ID 20646\]
 
 It is now possible to use a protocol name in a shape condition. This allows shapes to be shown or hidden based on the protocol of an element.
 
@@ -205,7 +205,7 @@ If, for example, a shape has the following shape data, it will be shown only whe
 |------------------|------------------------------------------------------|
 | Show             | \<A>-A\|Element:MyElement\|Protocol\|=MyProtocolName |
 
-#### Visual Overview: New 'ListView' component [ID_20649] [ID_21203] [ID_21752] [ID_21686] [ID_21886] [ID_21929] [ID_21931] [ID_22795]
+#### Visual Overview: New 'ListView' component [ID 20649] [ID 21203] [ID 21752] [ID 21686] [ID 21886] [ID 21929] [ID 21931] [ID 22795]
 
 Up to now, when you wanted to turn a shape into a list box control, you had to add two shape data items to that shape: one of type "SetVar" and one of type "SetVarOptions". In the first, you had to specify a list of fixes values or refer to a table parameter containing a number of values, and in the second, you had to specify "Control=ListBox", followed by a number of options if necessary.
 
@@ -253,9 +253,9 @@ List of session variables that can be used in conjunction with this *ListView* c
 
 In DataMiner Cube, right-clicking the header of the *ListView* component will allow users to change the alignment of a column, change a column name and modify which columns are displayed. It is also possible to save and load a column configuration.
 
-These options are also available in the *Services* tab of the Services app, which uses a similar kind of component. For more information on the different options, see [Services app: New 'Services' tab \[ID_20459\]\[ID_20962\]\[ID_21203\]\[ID_23460\]\[ID_23785\]](xref:General_Main_Release_10.0.0_new_features_5#services-app-new-services-tab-id_20459id_20962id_21203id_23460id_23785).
+These options are also available in the *Services* tab of the Services app, which uses a similar kind of component. For more information on the different options, see [Services app: New 'Services' tab \[ID 20459\]\[ID 20962\]\[ID 21203\]\[ID 23460\]\[ID 23785\]](xref:General_Main_Release_10.0.0_new_features_5#services-app-new-services-tab-id-20459id-20962id-21203id-23460id-23785).
 
-#### Visual Overview: Embedding the Bookings app as a component \[ID_20812\]\[ID_21686\]
+#### Visual Overview: Embedding the Bookings app as a component \[ID 20812\]\[ID 21686\]
 
 It is now possible to embed the *Bookings* app in a Visio shape.
 
@@ -273,11 +273,11 @@ To do so, add a shape data item of type *Source*, and set its value to “*Reser
 
     Example: 5248460498427387904;5248491602427387904
 
-#### Visual Overview: Cropped images now supported \[ID_21019\]
+#### Visual Overview: Cropped images now supported \[ID 21019\]
 
 Visual Overview now supports images that were cropped in Microsoft Visio.
 
-#### Visual Overview - Trend component: Top/bottom X & wildcard result limitation \[ID_21035\]
+#### Visual Overview - Trend component: Top/bottom X & wildcard result limitation \[ID 21035\]
 
 The trend component has two new features.
 
@@ -316,13 +316,13 @@ See the following example:
 > [!NOTE]
 > The trend component will show an information bar only if the number of parameter found for at least one of the wildcard expressions exceeds the default limit (i.e. 10). It will not show an information bar if the number of parameters found for at least one of the wildcard expressions exceeds a limit that was explicitly specified in the “ParametersOptions” data field.
 
-#### Service & Resource Management - Visual Overview: Shape inheritance for Reservation shapes and support for placeholders containing booking properties \[ID_21391\]
+#### Service & Resource Management - Visual Overview: Shape inheritance for Reservation shapes and support for placeholders containing booking properties \[ID 21391\]
 
 It is now possible to use placeholders containing custom booking properties in the text on a Visio shape.
 
 In addition, shape inheritance has been added for *Reservation* shapes. This means that if a parent shape has *Reservation* shape data and a child shape is linked to this same booking, for instance because of shape text placeholders or *Info* shape data, the child shape will be considered a Reservation shape linked to the same booking.
 
-#### Visual Overview: Condition to check the number of quarantined bookings \[ID_21598\]
+#### Visual Overview: Condition to check the number of quarantined bookings \[ID 21598\]
 
 In Visio, it is now possible to apply conditional shape manipulations depending on the number of bookings that have been quarantined in the system. Quarantined bookings are bookings that they have automatically returned to a pending state by the DMA.
 
@@ -332,7 +332,7 @@ To do so, for shape data fields such as Hide, Show, Highlight, etc., specify a c
 <A>-A|Reservations|NumberOfQuarantinedReservations|>1
 ```
 
-#### Visual Overview: A shape linked to an alarm can now list the impacted services of that alarm \[ID_21657\]
+#### Visual Overview: A shape linked to an alarm can now list the impacted services of that alarm \[ID 21657\]
 
 If a shape is linked to an alarm, it is now possible to have the list of impacted services displayed on that shape.
 
@@ -347,7 +347,7 @@ Example:
 | Alarm            | 111/273/350 |
 | Info             | Services    |
 
-#### Visual Overview: Dynamic placeholder '\[Param:\]' can now retrieve all values of a column parameter \[ID_21781\]
+#### Visual Overview: Dynamic placeholder '\[Param:\]' can now retrieve all values of a column parameter \[ID 21781\]
 
 The dynamic placeholder “\[Param:\]” can now retrieve all values of a column parameter. Up to now, specifying a column parameter in a “\[Param:\]” placeholder would result in a “Not Initialized” error.
 
@@ -365,7 +365,7 @@ If you want a custom separator instead of the default separator (“\|”), then
 |------------------|--------------------|
 | Options          | MultipleValueSep=; |
 
-#### Visual Overview: YaxisResources session variable now allows DMA ID/Element ID configuration \[ID_21832\]
+#### Visual Overview: YaxisResources session variable now allows DMA ID/Element ID configuration \[ID 21832\]
 
 When a *Reservations* or *Bookings* component is embedded in Visio, the resources on the Y-axis of the timeline can be specified using the session variable *YAxisResources*. When this session variable is used to refer to specific resources, this can now also be done by referring to the DMA ID and element ID of resources linked to an element, using the syntax "*YaxisResources:Resource=**DMA ID/Element ID*". For example:
 
@@ -373,7 +373,7 @@ When a *Reservations* or *Bookings* component is embedded in Visio, the resour
 |------------------|--------------------------------|
 | SetVar           | YaxisResources:Resource=34/101 |
 
-#### Visual Overview: Displaying or using the current DataMiner time in a shape \[ID_21866\]
+#### Visual Overview: Displaying or using the current DataMiner time in a shape \[ID 21866\]
 
 It is now possible to have a shape display the current DataMiner time or to use that time in shape data items.
 
@@ -388,7 +388,7 @@ By default, the current DataMiner time will be displayed in the regional date/ti
 > [!NOTE]
 > The time shown by this dynamic placeholder will be refreshed every second.
 
-#### Visual Overview: Calculating datetime and timespan values using dynamic placeholders \[ID_21911\]
+#### Visual Overview: Calculating datetime and timespan values using dynamic placeholders \[ID 21911\]
 
 The existing \[Sum:...\] placeholder and the new \[Subtract:...\] placeholder can now be used to calculate datetime and timespan values.
 
@@ -428,7 +428,7 @@ See the following example: \[Reservation:\<ReservationGuid>,Start\]
 
 As this \[Reservation:...\] placeholder produces a datetime value, it can also be used inside a \[Sum:...\] or \[Subtract:...\] placeholder.
 
-#### Visual Overview: Shape data fields of type 'Parameters' now also accept element names, \[this element\] placeholders and keys containing forward slashes \[ID_21976\]
+#### Visual Overview: Shape data fields of type 'Parameters' now also accept element names, \[this element\] placeholders and keys containing forward slashes \[ID 21976\]
 
 When configuring a trend component or a parameter chart, up to now, the shape data field of type *Parameters* had to contain a value with the following syntax:
 
@@ -438,7 +438,7 @@ DmaID:ElementID:ParameterID[:TableRowFilter]|...|...
 
 In a value like the one found above, from now on, it is also allowed to use element names, \[this element\] placeholders and keys containing forward slashes (e.g. dmaID/elementID).
 
-#### Visual Overview: Possibility to link page to multiple CPE chains and/or fields \[ID_22107\]
+#### Visual Overview: Possibility to link page to multiple CPE chains and/or fields \[ID 22107\]
 
 Previously, a Visio page could only be linked to one particular chain and field of a CPE Manager element. Now it is possible to link a page to several chains and/or fields.
 
@@ -456,7 +456,7 @@ With the configuration of the example above, the page will be visible for the *O
 > [!NOTE]
 > If the *Field* shape data ends in a pipe character, the page will also be displayed when no field is selected.
 
-#### Visual Overview: New dynamic placeholder \[Resource:...\] \[ID_22157\]
+#### Visual Overview: New dynamic placeholder \[Resource:...\] \[ID 22157\]
 
 From now on, the \[Resource:...\] placeholder can be used to retrieve a property of a resource, which can be the name of the resource, the ID of the element linked to the resource, or a custom property.
 
@@ -476,7 +476,7 @@ This syntax consists of the following components:
     | Name                                                  | The name of the resource.                                                                                                                                                    |
     | Property=*\<propName>* | The value of a custom property of the resource. The name of that custom property must be specified in *\<propName>*, e.g. Property=State. |
 
-#### Visual Overview: Displaying or using the DataMiner time in UTC or local time in a shape \[ID_22252\]
+#### Visual Overview: Displaying or using the DataMiner time in UTC or local time in a shape \[ID 22252\]
 
 It is now possible to have a shape display the current DataMiner time in either UTC time or local time, and to use those times in shape data items.
 
@@ -492,7 +492,7 @@ By default, those times will be displayed in the regional date/time format. If y
 > [!NOTE]
 > The times shown by these dynamic placeholders will be refreshed every second.
 
-#### Visual Overview: Comprehensive set of Visio stencils now shipped with DataMiner \[ID_22643\]
+#### Visual Overview: Comprehensive set of Visio stencils now shipped with DataMiner \[ID 22643\]
 
 DataMiner is now shipped with a comprehensive set of Visio stencils, which will automatically be downloaded to the client computer when you open Microsoft Visio from within DataMiner Cube. In Microsoft Visio, these stencils can be found under *More Shapes \> DataMiner*.
 
@@ -503,7 +503,7 @@ Using the new DataMiner stencils will considerably speed up the design of visual
 > - In Microsoft Visio, open the *Visio options* window, go to *Advanced \> General*, and make sure the *Enable Automation events* option is selected.
 > - Shape data used by the macros to fill in child-level shape data is always preceded by an underscore character.
 
-#### Visual Overview: Parameter cache can now be used by shapes linked to a table column value and by \[param:\] placeholders that retrieve a table column value \[ID_22900\]
+#### Visual Overview: Parameter cache can now be used by shapes linked to a table column value and by \[param:\] placeholders that retrieve a table column value \[ID 22900\]
 
 In the global user settings in DataMiner Cube (*C:\\Skyline DataMiner\\Users\\ClientSettings.json*), it is possible to configure that certain table parameters have to be cached. This cache can now also be used for:
 
@@ -515,7 +515,7 @@ In the global user settings in DataMiner Cube (*C:\\Skyline DataMiner\\Users\\Cl
 > - For this to work, you only have to configure in the *ClientSettings.json* file that the table in question needs to be cached on the client. No changes have to be made to the Visio file.
 > - Table indices containing wildcards are not yet supported.
 
-#### Visual Overview: Linking to an element or partial element in a service by passing the service context in the element shape \[ID_23319\]
+#### Visual Overview: Linking to an element or partial element in a service by passing the service context in the element shape \[ID 23319\]
 
 Up to now, it was possible to link to partial elements in a service context if the parent shape or the Visio file had a service context. In other words, when using child shapes or when the Visio file was linked to a service.
 
@@ -525,7 +525,7 @@ From now on, it will also be possible to set the service context by explicitly s
 |------------------|-------------------------------------------------------------------|
 | ServiceContext   | *Name, ID or alias of the service* |
 
-#### Visual Overview: Navigation to data pages via shapes \[ID_23386\]
+#### Visual Overview: Navigation to data pages via shapes \[ID 23386\]
 
 You can now configure a shape in Visio so that it can be used to navigate to any page of an element, service or view. Previously, this was only possible for visual overview pages, but now you can also configure a shape to navigate to data pages.
 
@@ -539,11 +539,11 @@ To do so:
     |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | Page               | “*data*” or “*d*” for a data page or “*visual*” or “*v*” for a visual page, followed by a colon and the name of the page. To link to a subpage, add a forward slash and the name of the subpage. For example: *data:performance/Task Manager* |
 
-#### Visual Overview: Bookings component and ListView component on same Visio page are now automatically synchronized \[ID_23715\]
+#### Visual Overview: Bookings component and ListView component on same Visio page are now automatically synchronized \[ID 23715\]
 
 On a Visio page containing both a Bookings component showing a timeline and a ListView component listing bookings, selecting a booking in one component will now automatically cause the same booking to be selected in the other component.
 
-#### Visual Overview: New options for VdxPage pop-up windows \[ID_23734\]
+#### Visual Overview: New options for VdxPage pop-up windows \[ID 23734\]
 
 When a shape is configured to display a page of the Visio drawing in a normal, undocked window using a VdxPage data shape field set to “\<Pagename>\|Window”, two new options can now be specified in a LinkOptions data shape field.
 
@@ -552,7 +552,7 @@ When a shape is configured to display a page of the Visio drawing in a normal, u
 | VdxPage          | *\<PageName>*\|Window                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | LinkOptions      | WindowStyle=*\<Style>*<br> \<Style> can be:<br> - SingleBorderWindow: A window with a single border<br> - ThreeDBorderWindow: A window with a 3-D border<br> - ToolWindow (default): A fixed-size tool window without minimize/maximize buttons<br> KeepOnTop=*\<true/false>*<br> - When set to true, the window will always appear in front of the window from which it was launched (default: false) |
 
-#### Visual Overview: New \[Event:...\] placeholder \[ID_23834\]
+#### Visual Overview: New \[Event:...\] placeholder \[ID 23834\]
 
 By specifying an \[Event:...\] placeholder in a shape data field or a page data field, it is now possible to have an action triggered when a particular event occurs. During the event, the \[Event:...\] placeholder will be replaced by the value of the argument specified in the placeholder.
 
@@ -578,7 +578,7 @@ Example: \[Event:IOClicked,Label\]
 > - If you specify multiple \[Event:...\] placeholders in a shape data field or a page data field, only one action will be triggered when that event occurs.
 > - It is advised not to insert \[Event:...\] placeholders into other dynamic parts or placeholders.
 
-#### Visual Overview: New option to collapse empty rows and columns in the connectivity chain of a service instance \[ID_23941\]
+#### Visual Overview: New option to collapse empty rows and columns in the connectivity chain of a service instance \[ID 23941\]
 
 By adding a data field of type ‘ServiceInstance’ to a shape, it is possible to have the connectivity chain of a service instance drawn automatically in Visual Overview.
 
@@ -591,7 +591,7 @@ Example:
 | ServiceInstance  | \[this service\]                 |
 | Options          | CollapseEmptyRowsAndColumns=True |
 
-#### Visual Overview: New icons added to DataMiner stencils \[ID_25024\]
+#### Visual Overview: New icons added to DataMiner stencils \[ID 25024\]
 
 The following additional icons are now available in the DataMiner stencils:
 

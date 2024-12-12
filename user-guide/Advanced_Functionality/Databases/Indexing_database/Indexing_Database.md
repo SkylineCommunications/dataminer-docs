@@ -8,7 +8,9 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
 An indexing database is required for many DataMiner features, including:
 
-- DataMiner Advanced Analytics features such as pattern matching (see [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) and [Advanced analytics in trend graphs](xref:Advanced_analytics_trending))
+- [Pattern matching](xref:Working_with_pattern_matching)
+
+- [Time-scoped relations](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
 
 - [DataMiner Object Models (DOM)](xref:DOM)
 
@@ -17,6 +19,8 @@ An indexing database is required for many DataMiner features, including:
 - [DataMiner User-Defined APIs](xref:UD_APIs)
 
 - [Specific GQI data sources](xref:Query_data_sources)
+
+A [dedicated clustered storage setup](#dedicated-clustered-storage-setup) always requires indexing, among others to store active and historical alarms and information events. 
 
 > [!IMPORTANT]
 > Elasticsearch is only supported up to version 6.8. As this version is no longer supported by Elastic, we recommend using OpenSearch instead.

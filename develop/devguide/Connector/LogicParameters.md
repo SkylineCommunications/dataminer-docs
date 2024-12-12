@@ -13,7 +13,7 @@ A protocol parameter is a versatile component. A parameter can represent a table
 
 The following subsections introduce the different types of parameters that are defined in DPML
 
-### Read, write, fixed and dummy parameters
+### Read, write, fixed, and dummy parameters
 
 |Type  |Description  |
 |---------|---------|
@@ -43,6 +43,9 @@ A **fixed** parameter acts as a data placeholder that will not change. Though it
 In the example above, the Interprete tag is used to define the length of the fixed parameter and the value. For more information, see [Protocol.Params.Param.Interprete](xref:Protocol.Params.Param.Interprete).
 
 A parameter of type dummy is typically used to hold data that is not of real interest, e.g. to hold part of the response that is not processed or to trigger a QAction.
+
+> [!NOTE]
+> The units of measure for numeric parameters can be automatically adjusted to a more readable format if the dynamic units feature is enabled. This depends on the DataMiner version and the configuration of the *DynamicUnits* element. See [DynamicUnits](xref:Protocol.Params.Param.Display.DynamicUnits).
 
 ### Element information
 
@@ -115,22 +118,22 @@ use in Interprete: numeric text, length 4, string
 
 ### Internal parameters
 
-When developing a protocol, a number of building blocks such as parameters, actions, triggers, etc. are specified. In addition to the parameters defined by the developer, a number of general internal parameters are defined for each element. These general parameters are all defined in the 65000 range. For an overview of these parameters, refer to <xref:ReservedIDsParameters>.
+When a protocol is developed, a number of building blocks such as parameters, actions, triggers, etc. are specified. In addition to the parameters defined by the developer, a number of general internal parameters are defined for each element. These general parameters are all defined in the 65000 range. For an overview of these parameters, refer to <xref:ReservedIDsParameters>.
 
 The configuration of these parameters for an element is displayed on the [GENERAL PARAMETERS] page of the element:
 
-![alt text](../../images/generalParametersPage.png "General Parameters Page")
+![General Parameters Page](~/develop/images/generalParametersPage.png)
 
-The general parameters are organized into four groups: communication, DCF, replication and verification.
+The general parameters are organized into four groups: communication, DCF, replication, and verification.
 
-Since DataMiner version 9.0.1 (RN 12263), general parameters can be loaded dynamically and the following defaults apply:
+General parameters can be loaded dynamically, and the following defaults apply:<!-- RN 12263 -->
 
-- Communication: General parameters belonging to this group are not loaded for protocols of type http, websocket, opc, gpib, virtual, sla and service.
+- Communication: General parameters belonging to this group are not loaded for protocols of type *http*, *websocket*, *opc*, *gpib*, *virtual*, *sla*, and *service*.
 - DCF: Only loaded if parameter groups are defined in the protocol.
-- Verification: General parameters belonging to this group are not loaded when MaintenanceSettings.xml has been configured to enable Command Execution Verification. (With the ProtocolSettings.ExecutionVerification tag. See [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).)
+- Verification: General parameters belonging to this group are not loaded when *MaintenanceSettings.xml* has been configured to enable Command Execution Verification. (With the [ProtocolSettings.ExecutionVerification](xref:MaintenanceSettings_xml#protocolsettingsexecutionverification) tag.)
 - Replication: By default, general parameters belonging to this group are always loaded.
 
-You can override the above-mentioned default behavior by adding a GeneralParameters tag to the protocol. In this tag, you can specify for each of the different types of general parameters whether you want these added to elements based on the protocol in question. Refer to [Protocol.GeneralParameters](xref:Protocol.GeneralParameters) in the DataMiner Protocol Markup Language section for more information.
+You can override the above-mentioned default behavior by adding a *GeneralParameters* tag to the protocol. In this tag, you can specify for each of the different types of general parameters whether you want these added to elements based on the protocol in question. Refer to [Protocol.GeneralParameters](xref:Protocol.GeneralParameters) in the DataMiner Protocol Markup Language section for more information.
 
 ### Other parameter types
 

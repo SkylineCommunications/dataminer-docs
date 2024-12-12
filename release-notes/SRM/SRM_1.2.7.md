@@ -6,7 +6,7 @@ uid: SRM_1.2.7
 
 ## New features
 
-#### New SRM_ExportFunctions and SRM_ImportFunctions scripts\[ID_27634\]
+#### New SRM_ExportFunctions and SRM_ImportFunctions scripts\[ID 27634\]
 
 Two new scripts, *SRM_ExportFunctions* and *SRM_ImportFunctions*, are now available, which can be used to export a function definition, including the associated profile definition, parameters and profile loading script, from one DMA and import it on another DMA.
 
@@ -23,7 +23,7 @@ The import script will:
 - Generate a log indicating the old data/new data if the protocol function/system function/parameter/profile definition already exists in the target DMS but with different content.
 - Finally, display a summary indicating what has or has not been imported.
 
-#### DTR between main and contributing bookings \[ID_27763\]
+#### DTR between main and contributing bookings \[ID 27763\]
 
 Data Transfer Rules (DTR) have been implemented between contributing and main bookings.
 
@@ -61,7 +61,7 @@ private static void CopyContributingDecoderVideoStateToMainDecoder(SrmBookingCon
 
 These examples are available in the script *SRM_DataTransferRulesTemplate*.
 
-#### Booking Manager: Creating a new booking based on a service profile \[ID_27907\]
+#### Booking Manager: Creating a new booking based on a service profile \[ID 27907\]
 
 In the Booking Manager UI, it is now possible to create a new booking based on a service profile. You can enable this new wizard by going to *Config* > *Wizard* in the Booking Manager and setting *Type of Wizard* to *Service Profile*.
 
@@ -69,27 +69,27 @@ In the Booking Manager UI, it is now possible to create a new booking based on a
 
 ### Enhancements
 
-#### SRM_ServiceDefinitionImportExport script improved \[ID_27485\]
+#### SRM_ServiceDefinitionImportExport script improved \[ID 27485\]
 
 The *SRM_ServiceDefinitionImportExport* script now also imports the service definition, node and interface properties.
 
-#### Support for editing contributing bookings \[ID_27502\]
+#### Support for editing contributing bookings \[ID 27502\]
 
 It is now possible to edit contributing bookings that were created by converting a booking to a contributing booking.
 
-#### Default Virtual Platform parameter automatically initialized \[ID_27662\]
+#### Default Virtual Platform parameter automatically initialized \[ID 27662\]
 
 The *Default Virtual Platform* of the Booking Manager is now automatically initialized, so that bookings are listed in the *Bookings* tab even if this parameter has not been configured.
 
-#### Progress of booking creation displayed \[ID_27665\]
+#### Progress of booking creation displayed \[ID 27665\]
 
 When bookings are created via the *SRM_DefineBooking* script, the progress of the creation is now displayed.
 
-#### Support for cancellation of bookings in Interrupted state \[ID_27672\]
+#### Support for cancellation of bookings in Interrupted state \[ID 27672\]
 
 When a booking is in the *Interrupted* state, it is now possible to cancel the booking.
 
-#### Performance improvement when creating bookings using DTR \[ID_27731\]
+#### Performance improvement when creating bookings using DTR \[ID 27731\]
 
 Performance has improved when bookings are created using data transfer rules (DTR). Note that this improvement involves a small change in functionality, as DTR scripts will now need to initialize the object *SrmBookingConfiguration* with a constructor that takes the Engine object.
 
@@ -105,44 +105,44 @@ Now:
 var srmBooking = new SrmBookingConfiguration(inputData.ReservationInstanceId, inputData.BookingManagerInfo, engine);
 ```
 
-#### Improved booking wizard screen titles \[ID_27906\]
+#### Improved booking wizard screen titles \[ID 27906\]
 
 The different screens of the booking wizard have been updated with user-friendly titles matching the current action.
 
 ### Fixes
 
-#### Failure not logged in case profile loading script throws exception \[ID_26873\]\[ID_27944\]
+#### Failure not logged in case profile loading script throws exception \[ID 26873\]\[ID 27944\]
 
 When the method *ProfileParameterEntryHelper.LogFailureResult* was used to log the failure of a set in a profile loading script, it could occur that this information was not recorded in the log file if the script threw an exception.
 
-#### End time control displayed for permanent services \[ID_27537\]
+#### End time control displayed for permanent services \[ID 27537\]
 
 If only the booking type Permanent Service was enabled in the Booking Manager, the UI still displayed an end time control, even though this was not relevant in that case.
 
-#### Booking actions triggered before booking could be converted to contributing \[ID_27573\]
+#### Booking actions triggered before booking could be converted to contributing \[ID 27573\]
 
 When the option *Automatically Convert to Contributing* was used in the Booking Wizard, it could occur that the booking actions were already triggered before the conversion could be started.
 
-#### Problem when no property name was provided for new booking \[ID_27637\]
+#### Problem when no property name was provided for new booking \[ID 27637\]
 
 When a new booking was created and no property name was provided, it could occur that custom property values were not set.
 
-#### User not notified of error during conversion to contributing booking \[ID_27661\]
+#### User not notified of error during conversion to contributing booking \[ID 27661\]
 
 If an error happened during the conversion of a booking to a contributing booking, it could occur that the user was not notified.
 
-#### DTR script not triggered correctly if function data were set by value \[ID_27792\]
+#### DTR script not triggered correctly if function data were set by value \[ID 27792\]
 
 In some cases, it could occur that a DTR (Data Transfer Rules) script was not triggered correctly if the script was called silently and the function data were set by value instead of by reference.
 
-#### Not possible to view booked resources of booking created using service profiles \[ID_27886\]
+#### Not possible to view booked resources of booking created using service profiles \[ID 27886\]
 
 In some cases, when a booking using service profiles had been successfully created, it could occur that it was not possible to view the booked resources.
 
-#### Problem exporting profile instance with enabled capability parameter without value \[ID_27982\]
+#### Problem exporting profile instance with enabled capability parameter without value \[ID 27982\]
 
 If a profile instance had a required capability parameter enabled without any value, a problem could occur if it was exported.
 
-#### Resources selected automatically for hidden and optional nodes \[ID_28019\]
+#### Resources selected automatically for hidden and optional nodes \[ID 28019\]
 
 In some cases, it could occur that resources were automatically selected for hidden and optional nodes when a booking was created, even though this should not happen.

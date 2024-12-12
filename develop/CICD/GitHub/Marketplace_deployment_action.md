@@ -5,7 +5,7 @@ uid: Marketplace_deployment_action
 # Deployment through the GitHub Marketplace action
 
 > [!IMPORTANT]
-> Deprecated. Though this will still work, consider using the .NET tools instead to package, upload, and deploy as shown in [this example](xref:CICD_GitHub_Examples).
+> This GitHub action no longer runs under its own docker image. The docker image has been deprecated and is replaced by .NET tools that makes it easier to create workflows/pipelines/... outside of GitHub and still be able to deploy packages to DataMiner. You can still use this GitHub action in GitHub workflows. It will perform the dotnet tool calls in the background on the current runner. If you want more modular control on the actions performed, consider using the .NET tools instead to package, upload, and deploy as shown in [this example](xref:CICD_GitHub_Examples).
 
 It is possible to deploy an Automation script solution from a GitHub repository by using the Skyline DataMiner Deploy Action in a workflow.
 

@@ -13,7 +13,7 @@ This page consists of three sections:
 - An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
 
     > [!NOTE]
-    > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.0.0.0", and debug logging is used for more detailed information. Which level is used depends on the configuration specified in the element protocol.
+    > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information. Which level is used depends on the configuration specified in the element protocol.
 
 - A pane on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
 

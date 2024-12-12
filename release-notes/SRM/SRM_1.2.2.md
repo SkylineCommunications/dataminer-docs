@@ -6,7 +6,7 @@ uid: SRM_1.2.2
 
 ## New features
 
-#### Contributing booking life cycle changes \[ID_25547\]
+#### Contributing booking life cycle changes \[ID 25547\]
 
 Some changes have been implemented to the life cycle behavior of contributing bookings (including contributing bookings within contributing bookings):
 
@@ -51,7 +51,7 @@ Some changes have been implemented to the life cycle behavior of contributing bo
 
 - When a contributing booking leaves the quarantined state, this does not affect the quarantined state of any main bookings making use of it.
 
-#### Contributing booking timing adjustments \[ID_25599\]
+#### Contributing booking timing adjustments \[ID 25599\]
 
 Some changes have been implemented with regards to the timing of contributing bookings.
 
@@ -83,7 +83,7 @@ When the timing of the contributing booking is updated:
   - If the main booking has not started yet, the contributing booking will be removed from it, and the main booking will go into "partial" state.
   - If the main booking has already started, the update will not be allowed.
 
-#### Data transfer rules \[ID_25707\]
+#### Data transfer rules \[ID 25707\]
 
 To allow more freedom in the implementation of SRM parameter inheritance, it is now possible to configure data transfer rules (DTR), by using a custom script associated with a service definition. The DTR script can be executed when a profile instance is executed, when a parameter value is updated, or when a resource is selected.
 
@@ -114,40 +114,40 @@ To configure DTR:
 
 ### Enhancements
 
-#### SRM_AssignProfiles script now supports capabilities of type string \[ID_25446\]
+#### SRM_AssignProfiles script now supports capabilities of type string \[ID 25446\]
 
 The *SRM_AssignProfiles* script has been updated to support capabilities of type string.
 
-#### Superfluous JSON booking properties removed \[ID_25525\]
+#### Superfluous JSON booking properties removed \[ID 25525\]
 
 Some booking properties contained JSON code to allow easy editing or duplication of a booking. However, most of these data were already available in the fields of the booking and if the properties contained a large amount of data, this could cause issues when they were stored. As such, the properties from the scripts *SRM_CreateNewBooking*, *SRM_ManageProperties* and *SRM_ManageEvents* have now been removed.
 
-#### Booking Wizard: Filter in drop-down boxes \[ID_25526\]
+#### Booking Wizard: Filter in drop-down boxes \[ID 25526\]
 
 In the Booking Wizard, all drop-down boxes now have a filter.
 
-#### Retry mechanism for data retrieval in DataMiner System \[ID_25610\]
+#### Retry mechanism for data retrieval in DataMiner System \[ID 25610\]
 
 In order to take the synchronization timing of DataMiner Systems into account, a retry mechanism was implemented for the retrieval of SRM data in a DataMiner System. A default retry timeout of 20 seconds and retry interval of 15 ms are used, but this can be customized in specific SRM methods.
 
-#### Error now shown in case of problem when creating silent booking \[ID_25728\]
+#### Error now shown in case of problem when creating silent booking \[ID 25728\]
 
 Previously, when a booking was created silently but errors occurred, these errors were not shown, so that a user could get the impression that the booking was created correctly. Now an error will be thrown in this case.
 
 ### Fixes
 
-#### Conversion to contributing booking triggered before booking is fully configured \[ID_25524\]
+#### Conversion to contributing booking triggered before booking is fully configured \[ID 25524\]
 
 When you created a booking with a service definition that was configured to convert the booking to a contributing booking and clicked the *Back* button while in the resource selection screen of the Booking Wizard, it could occur that the conversion to a contributing booking was triggered already.
 
-#### Problem when node is configured as hidden and optional \[ID_25635\]
+#### Problem when node is configured as hidden and optional \[ID 25635\]
 
 If a service definition node was configured as hidden and optional at the same time, an exception could be thrown when resources were assigned to the service definition.
 
-#### Problem with Create Booking Action script \[ID_25727\]
+#### Problem with Create Booking Action script \[ID 25727\]
 
 In some cases, if the *Create Booking Action* property was configured with a script that had to run every time a booking was set to the state Confirmed, it could occur that the booking was not updated correctly, so that changes done by this script were lost.
 
-#### Service definition node label modified when resource was assigned \[ID_25756\]
+#### Service definition node label modified when resource was assigned \[ID 25756\]
 
 In case a resource was compatible with more than one service definition node, it could occur that the label of the first compatible node was modified when the resource was assigned using the method *TryAddResources*.

@@ -18,7 +18,7 @@ This component is used to display markers and/or lines on a map. It uses one or 
 
 ## Adding data
 
-Add one or multiple GQI data sources to the component. See [Applying a data feed](xref:Apply_Data_Feed).
+Add one or multiple GQI data sources to the component. See [Adding data to a component](xref:Adding_data_to_component).
 
 The data is visualized as a set of markers by default, but it can also be configured as a set of lines. In both cases, the component will try to automatically apply the dimensions needed to show the visualization of the data.
 
@@ -96,11 +96,11 @@ The following actions are available:
 
 - *Fetch the data*: This action fetches the data from the component again.
 
-- *Pan to view*: This action pans to a certain location. The coordinates for this action can be static or dynamic (using a feed).
+- *Pan to view*: This action pans to a certain location. The coordinates for this action can be static or dynamic (using the *Link to data* option).
 
-- *Set zoom level*: This action zooms to a certain level on the map. The zoom level can be static or dynamic (using a feed).
+- *Set zoom level*: This action zooms to a certain level on the map. The zoom level can be static or dynamic (using the *Link to data* option).
 
-- *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (which can also be received from a feed ), and it can be either a local source, specified by a relative path in the *C:\Skyline DataMiner\Maps* folder, or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available:
+- *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (which can also be received using the *Link to data* option), and it can be either a local source, specified by a relative path in the *C:\Skyline DataMiner\Maps* folder, or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available:
 
   - *Open overlay*
 
@@ -115,3 +115,25 @@ The following actions are available:
 
   > [!TIP]
   > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay)
+
+## Zooming
+
+Zooming functionalities are available for the maps component.
+
+- From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
+
+  - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
+
+  - When this setting is disabled: Scroll up or down to zoom in or out.
+
+- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017--> up to DataMiner 10.4.0 [CU9]/10.4.12:
+
+  - To zoom in, press Ctrl while scrolling up.
+
+  - To zoom out, press Ctrl while scrolling down.
+
+- Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9:
+
+  - To zoom in, scroll up.
+
+  - To zoom out, scroll down.

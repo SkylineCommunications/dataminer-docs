@@ -11,7 +11,7 @@ uid: General_Main_Release_10.4.0_changes
 
 ### Breaking changes
 
-#### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID_38193]
+#### NATS: All processes will now use the DataMinerMessageBroker.API NuGet package [ID 38193]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
@@ -27,7 +27,7 @@ All processes that were still using the deprecated *SLMessageBroker.dll* or *CSL
 
 ### Enhancements
 
-#### SLXML no longer used to read out element data [ID_33515] [ID_33616] [ID_33625] [ID_33659]
+#### SLXML no longer used to read out element data [ID 33515] [ID 33616] [ID 33625] [ID 33659]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
@@ -52,7 +52,7 @@ From now on, SLXML will no longer be used to read out the following files contai
 > - NT_SET_ITEM_DATA
 > - NT_SET_PARAMETER_BY_DATA
 
-#### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
+#### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID 34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
@@ -60,7 +60,7 @@ More detailed information will now be added to the `SLDBConnection.txt` log file
 
 Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
 
-#### SLLogCollector now collects more API Gateway data [ID_34967]
+#### SLLogCollector now collects more API Gateway data [ID 34967]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -72,13 +72,13 @@ SLLogCollector packages now include the following API Gateway data:
 - Log file
 - Version
 
-#### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID 35080]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 Because of a number of enhancements, overall accuracy has increased when generating alarm predictions.
 
-#### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID_35156]
+#### DataMiner Object Models: DomInstanceButtonDefinitions can only reference a single action [ID 35156]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
@@ -89,31 +89,31 @@ Also, when using the DomBehaviorDefinition inheritance system, the server-side l
 - If a duplicate action is found, a `DomBehaviorDefinitionError` with reason `DuplicateActionDefinitionIds` will be returned.
 - If a duplicate button is found, a `DomBehaviorDefinitionError` with reason `DuplicateButtonDefinitionIds` will be returned.
 
-#### SLLogCollector: Custom CollectorConfig XML files will now be synchronized across the DataMiner cluster [ID_35180]
+#### SLLogCollector: Custom CollectorConfig XML files will now be synchronized across the DataMiner cluster [ID 35180]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
-#### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
+#### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID 35299]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 From now on, when you define a tag for pattern matching, the pattern you selected will be saved as a pattern occurrence in the Elasticsearch database and highlighted in bright orange, similar to so-called "streaming matches", which are detected while tracking for trend patterns whenever a trended parameter is updated.
 
-#### SLDataGateway: Memory enhancements with regard to average trending [ID_35312]
+#### SLDataGateway: Memory enhancements with regard to average trending [ID 35312]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 In the SLDataGateway process, a number of memory enhancements have been made with regard to the management of average trend data.
 
-#### Maps: Markers will now move more gradual when zooming [ID_35337]
+#### Maps: Markers will now move more gradual when zooming [ID 35337]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 Because of a number of enhancements, markers will now move more gradual when zooming.
 
-#### Alarm templates - Smart baseline calculations: NullReferenceException prevented & enhanced exception logging [ID_35348]
+#### Alarm templates - Smart baseline calculations: NullReferenceException prevented & enhanced exception logging [ID 35348]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -121,20 +121,20 @@ In some cases, a `Baseline Calculation Failed: System.NullReferenceException: Ob
 
 Also, log entries indicating an exception thrown during baseline calculations will now include details regarding the element and parameter associated with the exception.
 
-#### Maps: Enhanced zooming behavior [ID_35351]
+#### Maps: Enhanced zooming behavior [ID 35351]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 From now on, when you zoom in or out, the data of the previous zoom level will stay visible until the data of the current zoom level has been loaded.
 
-#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID_35414] [ID_35508]
+#### SLAnalytics - Automatic incident tracking: Enhanced performance when fetching relation information [ID 35414] [ID 35508]
 
 <!-- 35414:  MR 10.4.0 - FR 10.3.3 -->
 <!-- 35508:  MR 10.4.0 - FR 10.3.4 -->
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37540] [ID_37637] [ID_38514]
+#### Security enhancements [ID 35434] [ID 35997] [ID 36319] [ID 36624] [ID 36928] [ID 37540] [ID 37637] [ID 38514]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
@@ -146,19 +146,19 @@ Because of a number of enhancements, overall performance has increased when fetc
 
 A number of security enhancements have been made.
 
-#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID_35465]
+#### SLAnalytics - Behavioral anomaly detection: No longer available for discrete parameters [ID 35465]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 From now on, anomaly detection will no longer be available for discrete parameters.
 
-#### SLAnalytics - Pattern matching: Enhanced performance when detecting large patterns [ID_35474]
+#### SLAnalytics - Pattern matching: Enhanced performance when detecting large patterns [ID 35474]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 Because of a number of enhancements, overall performance has increased when detecting trend patterns that cover more than 30,000 data points.
 
-#### SLNetClientTest: New DOM-related features [ID_35550]
+#### SLNetClientTest: New DOM-related features [ID 35550]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -176,19 +176,19 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID 35695]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 Proactive cap detection predicts future issues based on trend data in the Cassandra database. Because of a number of enhancements, overall prediction accuracy has increased.
 
-#### Service & Resource Management: Bookings of type 'Custom Process Automation' no longer consume license credits [ID_35742]
+#### Service & Resource Management: Bookings of type 'Custom Process Automation' no longer consume license credits [ID 35742]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 From now on, ReservationInstances of type *Custom Process Automation* will no longer consume SRM credits. This means that, from now on, you can schedule an unlimited number of concurrent bookings of type *Custom Process Automation*.
 
-#### SLAnalytics: A message will be added to the SLAnalytics.txt log file when no Cassandra database is present [ID_35748]
+#### SLAnalytics: A message will be added to the SLAnalytics.txt log file when no Cassandra database is present [ID 35748]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -196,7 +196,7 @@ Up to now, SLAnalytics would stop working without giving any notice whatsoever w
 
 From now on, when no Cassandra database is present, SLAnalytics will be stopped gracefully and a message will be added to the *SLAnalytics.txt* log file.
 
-#### SLNetClientTest: More user-friendly pop-up window will now appear when connecting to a DMA that uses external authentication via SAML [ID_35755]
+#### SLNetClientTest: More user-friendly pop-up window will now appear when connecting to a DMA that uses external authentication via SAML [ID 35755]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -205,31 +205,31 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Service & Resource Management: Enhanced performance when loading service profile instances [ID_35878]
+#### Service & Resource Management: Enhanced performance when loading service profile instances [ID 35878]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 Because of a number of enhancements, overall performance has increased when loading service profile instances.
 
-#### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element will no longer be linked to the DVE parent element [ID_35901]
+#### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element will no longer be linked to the DVE parent element [ID 35901]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
-#### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
+#### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID 36255]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
 
-#### SLAnalytics - Pattern matching: No automatic pattern matching anymore after creating or editing a pattern [ID_36265]
+#### SLAnalytics - Pattern matching: No automatic pattern matching anymore after creating or editing a pattern [ID 36265]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 Up to now, when a trend pattern was created or edited, the system would automatically start searching for that new or updated pattern. Now, this will no longer happen. Pattern matching will only be done after explicitly sending a `getPatternMatchMessage`.
 
-#### SLAnalytics - Automatic incident tracking: Relations based on alarm data will now also be taken into account [ID_36337]
+#### SLAnalytics - Automatic incident tracking: Relations based on alarm data will now also be taken into account [ID 36337]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
@@ -249,25 +249,25 @@ Example:
 > [!CAUTION]
 > Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Service & Resource Management: Enhanced performance when creating and updating bookings [ID_36391]
+#### Service & Resource Management: Enhanced performance when creating and updating bookings [ID 36391]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings, especially on systems with a large number of overlapping bookings.
 
-#### SLAnalytics: Overall accuracy of the proactive cap detection function has increased [ID_36476]
+#### SLAnalytics: Overall accuracy of the proactive cap detection function has increased [ID 36476]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 Because of a number of enhancements, overall accuracy of the proactive cap detection function has increased.
 
-#### Enhancements in order to deal with situations where HTTP traffic is modified [ID_36540]
+#### Enhancements in order to deal with situations where HTTP traffic is modified [ID 36540]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 A number of enhancements have been made in order to deal with situations where proxy servers, gateways, routers or firewalls modify HTTP traffic.
 
-#### Cassandra Cleaner can now also be used to clean the 'infotrace' table [ID_36592]
+#### Cassandra Cleaner can now also be used to clean the 'infotrace' table [ID 36592]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -289,7 +289,7 @@ Up to now, the *Cassandra Cleaner* tool could only be used to remove data from t
 
 For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
 
-#### SLAnalytics - Automatic incident tracking: Alarms will no longer be regrouped after a manual operation [ID_36595]
+#### SLAnalytics - Automatic incident tracking: Alarms will no longer be regrouped after a manual operation [ID 36595]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -297,19 +297,19 @@ Up to now, manually removing an alarm from an incident could result in that alar
 
 From now on, alarms will no longer be regrouped after a manual operation.
 
-#### SLAnalytics - Automatic incident tracking: Automatic incidents can now also be cleared manually [ID_36600]
+#### SLAnalytics - Automatic incident tracking: Automatic incidents can now also be cleared manually [ID 36600]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 From now on, users will be allowed to manually clear automatic incidents.
 
-#### SLAnalytics - Behavioral anomaly detection & Proactive cap detection: Enhanced caching mechanism [ID_36639]
+#### SLAnalytics - Behavioral anomaly detection & Proactive cap detection: Enhanced caching mechanism [ID 36639]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 A number of enhancements have been made to the caching mechanism used by the *Behavioral anomaly detection* and *Proactive cap detection* features.
 
-#### SLProtocol is now a 64-bit process by default [ID_36725]
+#### SLProtocol is now a 64-bit process by default [ID 36725]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -317,7 +317,7 @@ SLProtocol is now a 64-bit process by default.
 
 However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
 
-#### Service & Resource Management: A series of checks will now be performed when you add or upload a functions file [ID_36732]
+#### Service & Resource Management: A series of checks will now be performed when you add or upload a functions file [ID 36732]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
@@ -331,7 +331,7 @@ When a functions file is added or uploaded, the following checks will now be per
 
 When you try to upload a functions file using DataMiner Cube, the log entry (in Cube logging) and the information event (in the Alarm Console) created when the upload fails will indicate the checks that did not return true.
 
-#### DataMiner Object Models: DomInstanceHistory will now be saved asynchronously [ID_36785]
+#### DataMiner Object Models: DomInstanceHistory will now be saved asynchronously [ID 36785]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -359,13 +359,13 @@ The `DomInstanceHistoryStorageBehavior` can be set to one of three values:
 > [!NOTE]
 > When you delete a DomInstance with a large number of associated HistoryChange records, deleting all those HistoryChange records can take a long time, even when this is done asynchronously. Therefore, we recommend disabling the creation of HistoryChange records if you do not need them.
 
-#### Service & Resource Management: Enhanced performance when adding or updating ReservationInstances [ID_36788]
+#### Service & Resource Management: Enhanced performance when adding or updating ReservationInstances [ID 36788]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 Because of a number of enhancements, overall performance has increased when adding or updating ReservationInstances, especially on systems with a large number of overlapping bookings and a large number of bookings using the same resources.
 
-#### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID_36809]
+#### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID 36809]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -373,7 +373,7 @@ From now on, the root time of an alarm group (i.e. the time of arrival of the fi
 
 Up to now, when alarm groups were recreated after a DataMiner upgrade, their time of arrival and root time was set to the time of the upgrade.
 
-#### DataMiner upgrade: Microsoft .NET 5 will no longer be installed by default [ID_36815]
+#### DataMiner upgrade: Microsoft .NET 5 will no longer be installed by default [ID 36815]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -382,7 +382,7 @@ Up to now, Microsoft .NET 5 would always be installed during a DataMiner upgrade
 > [!NOTE]
 > If Microsoft .NET 5 is present, it will not be automatically uninstalled during a DataMiner upgrade.  
 
-#### Elasticsearch/OpenSearch: Unused suggest indices have been disabled [ID_36875]
+#### Elasticsearch/OpenSearch: Unused suggest indices have been disabled [ID 36875]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -431,7 +431,7 @@ The following suggest indices have been disabled:
 > [!NOTE]
 > Existing suggest indices will not automatically be removed from the database. You can remove them manually if necessary.
 
-#### SLNetClientTest: Enhancements made to 'DataMiner Object Model' window [ID_36891]
+#### SLNetClientTest: Enhancements made to 'DataMiner Object Model' window [ID 36891]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -458,7 +458,7 @@ A number of enhancements have been made to the *DataMiner Object Model* window.
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Service & Resource Management: Improved ResourceManager logging [ID_36989]
+#### Service & Resource Management: Improved ResourceManager logging [ID 36989]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
@@ -466,13 +466,13 @@ The ResourceManager logging (*SLResourceManager.txt*) has been improved to make 
 
 Some log entries have been rewritten to make them clearer, have been assigned another log level or have been removed entirely.
 
-#### DataMiner Object Models: Bulk deletion of history records when deleting a DOM instance [ID_37012]
+#### DataMiner Object Models: Bulk deletion of history records when deleting a DOM instance [ID 37012]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
 
-#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID_37162]
+#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID 37162]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -480,16 +480,16 @@ Up to now, a run-time error would be thrown when the `<AzureAD>` element in the 
 
 This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
 
-#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID_37198]
+#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID 37198]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
 
 > [!IMPORTANT]
-> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
-#### SLLogCollector now collects information regarding the IIS configuration [ID_37273]
+#### SLLogCollector now collects information regarding the IIS configuration [ID 37273]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -501,7 +501,7 @@ SLLogCollector packages now include information regarding the IIS configuration:
 | Network Information | Information regarding the SSL certificate on port 443 |
 | SSL Cert            | The SSL certificate for port 443                      |
 
-#### Improved alarm grouping for DVE child elements [ID_37275]
+#### Improved alarm grouping for DVE child elements [ID 37275]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -509,13 +509,13 @@ Alarm grouping for DVE child elements has been improved. As change points are ge
 
 However, note that cases where a main DVE element exports the same parameter to multiple DVE child elements are not supported for this.
 
-#### SLAnalytics - Proactive cap detection: Enhanced verification of forecasted alarms [ID_37368]
+#### SLAnalytics - Proactive cap detection: Enhanced verification of forecasted alarms [ID 37368]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 A number of enhancements have been made with regard to the verification of forecasted alarms generated by the proactive cap detection feature.
 
-#### SLNetClientTest: New 'Debug SAML' checkbox [ID_37370]
+#### SLNetClientTest: New 'Debug SAML' checkbox [ID 37370]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
@@ -524,7 +524,7 @@ When, in the SLNetClientTest tool, you select the new *Debug SAML* checkbox befo
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### DataMiner Object Models: Enhanced checks when removing field descriptors from a section definition [ID_37395]
+#### DataMiner Object Models: Enhanced checks when removing field descriptors from a section definition [ID 37395]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
@@ -549,13 +549,13 @@ Other changes to a section definition that fail when the section is being used b
 > [!NOTE]
 > Currently, on systems using STaaS, the validation of DOM instances might not detect if a field descriptor is in use when there are more then 100 DOM instances. In that case, the removal of the field descriptor in question will be allowed.
 
-#### SLAnalytics - Trend predictions: Flatline periods will no longer be included in the prediction model training data [ID_37432]
+#### SLAnalytics - Trend predictions: Flatline periods will no longer be included in the prediction model training data [ID 37432]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 When a parameter has anomalous flatline periods in its trend data history that are breaking the normal trend data patterns, from now on, those flatline periods will no longer be included into the training data of the prediction model. As a result, a more accurate prediction can be expected on this kind of behavior.
 
-#### Configuration of database offload functionality moved from DBConfiguration.xml to DB.xml [ID_37446]
+#### Configuration of database offload functionality moved from DBConfiguration.xml to DB.xml [ID 37446]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
@@ -602,19 +602,19 @@ Up to now, the database offload functionality described below had to be configur
   </DataBases>
   ```
 
-#### SLAnalytics: Not all occurrences of multivariate patterns containing subpatterns hosted on different DMAs would be detected [ID_37451]
+#### SLAnalytics: Not all occurrences of multivariate patterns containing subpatterns hosted on different DMAs would be detected [ID 37451]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 Up to now, when you had created a multivariate pattern containing subpatterns hosted on different DMAs, in some cases, not all occurrences would get detected internally. From now on, all occurrences of multivariate patterns containing subpatterns hosted on different DMAs will be correctly detected.
 
-#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID_37480]
+#### Storage as a Service: DataMiner Agent will now communicate with the database via port 443 only [ID 37480]
 
 <!-- MR 10.4.0 - FR 10.3.11 [CU0] -->
 
 Up to now, a DataMiner using STaaS communicated with the database via TCP/IP ports 443, 5671 and 5672. From now on, it will communicate with the database via port 443 only.
 
-#### DataMiner Object Models: Generic enum field descriptors now allow you to select multiple values [ID_37482]
+#### DataMiner Object Models: Generic enum field descriptors now allow you to select multiple values [ID 37482]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -639,13 +639,13 @@ Values need to be set as follows:
   new ListValueWrapper<string>(new List<string>(){ "Value 0", "Value 1" });
   ```
 
-#### Storage as a Service: Enhanced performance of DOM and SRM queries [ID_37495]
+#### Storage as a Service: Enhanced performance of DOM and SRM queries [ID 37495]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 Because of a number of enhancements, overall performance of DOM and SRM queries has increased.
 
-#### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID_37521]
+#### GQI: Enhanced error handling when an error occurs while executing a query before it is joined with another query [ID 37521]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -653,7 +653,7 @@ Up to now, when an error occurred during the execution of a GQI query that, late
 
 From now on, an exception that occurs when executing a query before it is joined with another query will be re-thrown afterwards. This will make sure the exception reveals the actual reason why the query failed.
 
-#### SLAnalytics - Automatic incident tracking: Enhanced error handling [ID_37530]
+#### SLAnalytics - Automatic incident tracking: Enhanced error handling [ID 37530]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
@@ -665,7 +665,7 @@ Up to now, when the table index of an alarm update had a casing that was not ide
 
 Because of a number of enhancements made to the automatic incident tracking feature, SLAnalytics will no longer throw errors like the ones above.
 
-#### DataMiner Object Models: GQI sort operations will now be executed by the database [ID_37541]
+#### DataMiner Object Models: GQI sort operations will now be executed by the database [ID 37541]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
@@ -682,19 +682,19 @@ From now on, the sort nodes (e.g. By X, Then By Y, etc.) will be forwarded to th
 > - When sorting by DOM status or by an enum field, the sorting is will occur on the underlying value stored in the DOM instance and not on the display value.
 > - When the DOM GQI query is combined in a join operation, any sort node added after the join node will not be forwarded to the database. This will also be the case when the sorting uses the header of the table and the DOM query is part of a join.
 
-#### Storage as a Service: Enhanced error handling [ID_37554]
+#### Storage as a Service: Enhanced error handling [ID 37554]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 A number of enhancements have been made with regard to error handling.
 
-#### New downgrade action that adapts the SLAnalytics configuration file when downgrading to version 10.3.0 or older [ID_37582]
+#### New downgrade action that adapts the SLAnalytics configuration file when downgrading to version 10.3.0 or older [ID 37582]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 When you downgrade a DataMiner Agent from version 10.3.1 or later to version 10.3.0 or older, a downgrade action will now remove the section related to relation grouping from the SLAnalytics configuration file.
 
-#### SLAnalytics: Enhanced error handling [ID_37607]
+#### SLAnalytics: Enhanced error handling [ID 37607]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
@@ -702,19 +702,19 @@ Because of a number of enhancements with regard to error handling, the following
 
 `Unexpected number of responses returned on GetInfoMessage...`
 
-#### ManagerStore: Exceptions thrown during actions of high importance will now be logged as errors [ID_37631]
+#### ManagerStore: Exceptions thrown during actions of high importance will now be logged as errors [ID 37631]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 Up to now, when managers under the control of the ManagerStore framework in SLNet (DOM, Profiles, User-Defined APIs) threw exceptions during a de-initialization, a failover switch or a midnight synchronization, those exceptions would be logged as level-5 log entries of type *Info*. From now on, they will be logged as level-0 log entries of type *Error*.
 
-#### Storage as a Service: Enhanced performance when restarting elements or performing certain DOM and SRM operations [ID_37638]
+#### Storage as a Service: Enhanced performance when restarting elements or performing certain DOM and SRM operations [ID 37638]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 Because of a number of enhancements, overall performance has increased, especially when restarting elements or performing certain DOM and SRM operations.
 
-#### DataMiner Objects Models: Fields used in multiple sections will no longer be returned for GQI queries [ID_37644]
+#### DataMiner Objects Models: Fields used in multiple sections will no longer be returned for GQI queries [ID 37644]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
@@ -725,7 +725,7 @@ From now on, when GQI detects that having multiple sections is allowed for a par
 > [!IMPORTANT]
 > This change will break any existing query that references columns containing multiple values due to being linked to SectionDefinitions that allowed multiple sections in one DOM instance.
 
-#### Service & Resource Management: ProfileManager cache [ID_37735]
+#### Service & Resource Management: ProfileManager cache [ID 37735]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -733,13 +733,13 @@ When profile data is stored in an Elasticsearch/OpenSearch database, all Profile
 
 Also, additional logging has been added to indicate when a cache was refilled and how many objects were added, updated, removed or ignored. Each log entry will also include the IDs of the first ten of these objects.
 
-#### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID_37740]
+#### Storage as a Service: Enhanced performance when migrating data from Cassandra to the cloud [ID 37740]
 
 <!-- MR 10.4.0 - FR 10.3.12 [CU0] -->
 
 Because of a number of enhancements, overall performance has increased when migrating data from a Cassandra database to the cloud.
 
-#### User-Defined APIs: Maximum size of HTTP request body and HTTP response body has been reduced to 29MB [ID_37753] [ID_38397]
+#### User-Defined APIs: Maximum size of HTTP request body and HTTP response body has been reduced to 29MB [ID 37753] [ID 38397]
 
 <!-- RN 37753: MR 10.4.0 - FR 10.4.1 -->
 <!-- RN 38397: MR 10.4.0 - FR 10.4.3 -->
@@ -748,7 +748,7 @@ The maximum size of both the HTTP request body and the HTTP response body has be
 
 Also, additional logging will be added to the *SLUserDefinableApiManager.txt* log file when subscribing on NATS fails and when sending a reply on an incoming NATS request fails.
 
-#### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID_37786]
+#### Legacy Reports, Dashboards and Annotations modules are now end-of-life and will be disabled by default [ID 37786]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -756,31 +756,31 @@ As from DataMiner versions 10.1.10/10.2.0, the *LegacyReportsAndDashboards* and/
 
 Now, the above-mentioned soft-launch options will be disabled by default, causing the legacy *Reports*, *Dashboards* and *Annotations* modules to be hidden. If you want to continue using these modules, which are now considered end-of-life, you will have to explicitly enable the soft-launch options.
 
-#### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID_37788]
+#### SLAnalytics - Behavioral anomaly detection: Changes made to the anomaly configuration in an alarm template of a main DVE element will immediately be applied to all open anomaly alarm events [ID 37788]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When you change the anomaly configuration in an alarm template assigned to a main DVE element, from now on, the changes will immediately be applied to all open anomaly alarm events. The severity of the open alarm events will be changed to the new severity defined in the updated anomaly configuration.
 
-#### GQI: Enhanced performance when executing inner of left join queries in which sorting is applied to the left query [ID_37803]
+#### GQI: Enhanced performance when executing inner of left join queries in which sorting is applied to the left query [ID 37803]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 Because of a number of enhancements, overall performance has increased when executing inner or left join queries in which sorting is applied to the left query.
 
-#### GQI: Enhanced performance when executing sorted queries [ID_37806]
+#### GQI: Enhanced performance when executing sorted queries [ID 37806]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 Forwarding sort operators to the backend is now supported for a wider range of query configurations. This will considerably increase overall performance of numerous sorted queries.
 
-#### SLNet will no longer allow DataMiner Agents to connect when they share the same DataMiner GUID [ID_37819]
+#### SLNet will no longer allow DataMiner Agents to connect when they share the same DataMiner GUID [ID 37819]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When two DataMiner Agents try to connect via SLNet, from now on, this will no longer be allowed if the two agents share the same DataMiner GUID (except when they are both part of the same Failover setup).
 
-#### DataMiner upgrade: New 'UninstallAPIDeployment' upgrade action and 'VerifyNoObsoleteApiDeployed' prerequisite [ID_37825]
+#### DataMiner upgrade: New 'UninstallAPIDeployment' upgrade action and 'VerifyNoObsoleteApiDeployed' prerequisite [ID 37825]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -805,13 +805,13 @@ Also, the newly added *UninstallApiDeployment* upgrade action will remove everyt
 
 - Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
 
-#### Parameter ID range 10,000,000 to 10,999,999 now reserved [ID_37837]
+#### Parameter ID range 10,000,000 to 10,999,999 now reserved [ID 37837]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 Parameters IDs in the range of 10,000,000 to 10,999,999 are now reserved for DataMiner parameters. These will be used for DataMiner features in the future.
 
-#### GQI: Ad hoc data sources and custom operators now support row metadata [ID_37879]
+#### GQI: Ad hoc data sources and custom operators now support row metadata [ID 37879]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -820,7 +820,7 @@ Ad hoc data sources and custom operators now support row metadata.
 - In case of an ad hoc data source, any metadata can be attached to a row.
 - In case of a custom operator, row metadata can be read from existing rows, and row metadata can be modified.
 
-#### DataMiner upgrade: New prerequisite will check whether the DMA still contains legacy reports or legacy dashboards [ID_37922]
+#### DataMiner upgrade: New prerequisite will check whether the DMA still contains legacy reports or legacy dashboards [ID 37922]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -828,7 +828,7 @@ When you upgrade DataMiner from a version older than 10.4.0 to a version from 10
 
 See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards)
 
-#### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID_37976]
+#### Service & Resource Management: Enhanced performance when updating/applying profile instances [ID 37976]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -838,7 +838,7 @@ Overall performance has increased when updating/applying profile instances by pr
 public virtual void UpdateAllCapacitiesAndCapabilitiesByReference(Func<FilterElement<ProfileInstance>, List<ProfileInstance>> retriever, Dictionary<Guid, ProfileInstance> profileInstanceCache, IEnumerable<QuarantinedResourceUsageDefinition> correspondingQuarantines = null);
 ```
 
-#### GQI - 'Get parameter table by ID' data source: Enhanced sorting [ID_38039]
+#### GQI - 'Get parameter table by ID' data source: Enhanced sorting [ID 38039]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
@@ -846,25 +846,25 @@ When multiple, separate sort operators were optimized by the GQI data source *Ge
 
 For example, from now on, when you sort by A and, later on in the GQI query, sort again by B, the query will now only be sorted by B.
 
-#### SLAnalytics - Behavioral anomaly detection: Reduction of memory used for flatline detection [ID_38118]
+#### SLAnalytics - Behavioral anomaly detection: Reduction of memory used for flatline detection [ID 38118]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 The amount of memory used for flatline detection has been reduced.
 
-#### GQI: Right query will be fetched lazily in case of a right join [ID_38134]
+#### GQI: Right query will be fetched lazily in case of a right join [ID 38134]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 Up to now, when a *Join* operator of type "Right join" was applied, both the entire left query and the entire right query would be fetched. From now on, the right query will be fetched lazily.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly check algorithm [ID_38176]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly check algorithm [ID 38176]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 A number of enhancements have been made to the anomaly check algorithm.
 
-#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID_38184] [ID_38251]
+#### SLAnalytics - Alarm focus: Alarm occurrences will now be identified using a combination of element ID, parameter ID and primary key  [ID 38184] [ID 38251]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
@@ -873,19 +873,19 @@ When calculating alarm likelihood (i.e. focus score), up to now, the alarm focus
 > [!NOTE]
 > When you upgrade to version 10.4.0/10.4.3, the Cassandra table *analytics_alarmfocus* will automatically be removed.
 
-#### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID_38228]
+#### SLLogCollector will now also collect the backup logs of the StorageModule DxM [ID 38228]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 SLLogCollector will now also collect the backup logs of the *StorageModule* DxM located in the `C:\ProgramData\Skyline Communications\DataMiner StorageModule\Logs\Backup` folder.
 
-#### Failover: NATS nodes will now advertise their physical IP address instead of their virtual IP address [ID_38340]
+#### Failover: NATS nodes will now advertise their physical IP address instead of their virtual IP address [ID 38340]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 From now, NATS nodes will advertise their physical IP address instead of their virtual IP address.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38383]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID 38383]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
@@ -895,7 +895,7 @@ From now on, a behavioral change will only be taken into account when the change
 
 As a result, anomalies that report a trend change "from 0%/day to 0%/day", a level shift from "0.1 to 0.1", etc. will no longer be taken into account.
 
-#### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID_38388]
+#### SLProtocol will now always fetch element data page by page except on systems with a MySQL database [ID 38388]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
 
@@ -904,7 +904,7 @@ From now on, SLProtocol will always fetch element data page by page, except on s
 On systems with a MySQL database, SLProtocol will continue to fetch element data by parameter ID.
 
 
-#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID_38392] [ID_38517]
+#### SLProtocol will no longer log messages related to duplicate keys at the default log levels [ID 38392] [ID 38517]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
@@ -915,7 +915,7 @@ From now on, if you want to have log entries related to duplicate keys, increase
 > [!NOTE]
 > When polling via SNMP, duplicate keys will only be logged when error log level is set to 1. When using FillArray in a QAction, duplicate keys will always be logged regardless of error log level.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID_38400]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced accuracy [ID 38400]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
@@ -923,31 +923,31 @@ Change point detection accuracy has been improved for parameters that have a dis
 
 For parameters of which the trend data behavior is mostly stable, with only infrequent sudden value changes, only behavioral changes that are larger than those infrequent sudden value changes will be taken into account.
 
-#### SLAnalytics: Enhanced memory usage [ID_38471]
+#### SLAnalytics: Enhanced memory usage [ID 38471]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Because of a number of enhancements with regard to memory usage, overall performance of SLAnalytics has increased.
 
-#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_38508]
+#### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID 38508]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 The accuracy of proactive cap detection events (i.e. forecasted alarms) reporting data range violations has been improved.
 
-#### Service & Resource Management: Enhanced performance when adding or updating bookings [ID_38521]
+#### Service & Resource Management: Enhanced performance when adding or updating bookings [ID 38521]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Because of a number of enhancements, overall performance has increased when adding or updating bookings, especially on systems with a large number of bookings.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID_38528]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of change points of type flatline [ID 38528]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Change point detection accuracy has been improved for change points of type flatline.
 
-#### DataMinerSolutions.dll now included in core DataMiner software [ID_38530]
+#### DataMinerSolutions.dll now included in core DataMiner software [ID 38530]
 
 <!-- MR 10.4.0 - FR 10.4.3 / originally included in IDP 1.5.0 -->
 
@@ -955,13 +955,13 @@ To make sure that installing IDP will no longer require a DataMiner restart, *Da
 
 ### Fixes
 
-#### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
+#### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID 34981]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 In some cases, Resource Manager could throw a NullReferenceException when *ResourceStorageType* was not specified in the `C:\Skyline DataMiner\ResourceManager\Config.xml` file.
 
-#### External authentication via SAML: Issues fixed when using Okta as identity provider [ID_35374]
+#### External authentication via SAML: Issues fixed when using Okta as identity provider [ID 35374]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -969,7 +969,7 @@ Using Okta as identity provider, it would incorrectly no longer be possible to r
 
 Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
 
-#### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an Automation script [ID_35708]
+#### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an Automation script [ID 35708]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
@@ -984,61 +984,61 @@ Example:
 </DMSScript>
 ```
 
-#### DateTime instances would not get serialized correctly when an SLNet connection supported protocol buffer serialization [ID_35777]
+#### DateTime instances would not get serialized correctly when an SLNet connection supported protocol buffer serialization [ID 35777]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
 
-#### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
+#### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID 35857]
 
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 When an ElementProtocol object was being created, due to a caching issue in SLNet, the input/output values stored in the protocol of a matrix element would incorrectly be overridden with the input/output values in the ElementProtocol object that was being created.
 
-#### Message broker: Memory leak [ID_35898]
+#### Message broker: Memory leak [ID 35898]
 
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
 
-#### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
+#### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID 35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When a history alarm affected a closed outage to which a correction had been applied, the correction would incorrectly be increased. From now on, the correction will be left untouched.
 
-#### Handle in the Timer class would not be cleaned correctly [ID_35959]
+#### Handle in the Timer class would not be cleaned correctly [ID 35959]
 
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 In some cases, a handle in the Timer class would not be cleaned correctly, causing handles to leak.
 
-#### DataMiner Object Models: Problem when creating a DomInstance with an empty status [ID_36063]
+#### DataMiner Object Models: Problem when creating a DomInstance with an empty status [ID 36063]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 When a DomInstance was created with an empty status, in some cases, a `MultipleSectionsNotAllowedForSectionDefinition` error could be returned, even when the configuration was correct.
 
-#### External authentication via SAML: Removal of whitespace characters from signatures would cause validation to fail [ID_36181]
+#### External authentication via SAML: Removal of whitespace characters from signatures would cause validation to fail [ID 36181]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
 
-#### NATS auto-reconnect mechanism could lead to a situation in which a large number of TCP ports were left open [ID_36339]
+#### NATS auto-reconnect mechanism could lead to a situation in which a large number of TCP ports were left open [ID 36339]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 When NATS tried to automatically reconnect at a moment when none of the servers were available, it would incorrectly not wait for a while until the cluster was online again. In some cases, this could lead to a situation in which a large number of TCP ports were left open.
 
-#### Community credentials from the credential library would be ignored for SNMPv1 and SNMPv2 [ID_36353]
+#### Community credentials from the credential library would be ignored for SNMPv1 and SNMPv2 [ID 36353]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
 
-#### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
+#### SLNet would incorrectly return certain port information fields of type string as null values [ID 36524]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -1051,13 +1051,13 @@ Affected port information fields:
 - PollingIPAddress
 - PollingIPPort
 
-#### Cassandra Cluster Migrator would fail to start up [ID_36804]
+#### Cassandra Cluster Migrator would fail to start up [ID 36804]
 
 <!-- MR 10.4.0 - FR 10.3.8 [CU0] -->
 
 When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in some cases, it would get stuck in the initialization phase due to a connection issue.
 
-#### Certain alarms would have their 'root creation time' set incorrectly [ID_36812]
+#### Certain alarms would have their 'root creation time' set incorrectly [ID 36812]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -1065,53 +1065,53 @@ In some cases, the *root creation time* of an alarm would not be equal to the *c
 
 For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
 
-#### Problem when renaming an element [ID_36855]
+#### Problem when renaming an element [ID 36855]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 In some rare cases, an error could be thrown when an element was renamed.
 
-#### Deprecated DMS_GET_INFO call could return unexpected DVE child data [ID_36964]
+#### Deprecated DMS_GET_INFO call could return unexpected DVE child data [ID 36964]
 
 The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
 
-#### Problem when the NATS library called the error handling event [ID_37028]
+#### Problem when the NATS library called the error handling event [ID 37028]
 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
 
 When the NATS library called the error handling event, in some cases, it would pass a `nullptr` for the subscription parameter. As a result, an exception would be thrown, potentially causing the hosting process to stop working.
 
-#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
+#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID 37212]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you created or edited a linked pattern with subpatterns from elements on different agents, and the first subpattern was from an element on an agent other than the one from which the CreateLinkedPatternMessage or EditLinkedPatternMessage was originally sent, SLNet would throw an exception.
 
-#### Problem when importing an existing element [ID_37214]
+#### Problem when importing an existing element [ID 37214]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
 
-#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID_37225]
+#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID 37225]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
 
-#### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID_37235]
+#### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID 37235]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updated with values that contained illegal XML characters, the entire `<LDAP>` element would be removed from the file.
 
-#### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID_37238]
+#### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID 37238]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
 
-#### Max Payload exceptions when using MessageBroker with chunking [ID_37245]
+#### Max Payload exceptions when using MessageBroker with chunking [ID 37245]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -1119,67 +1119,67 @@ When MessageBroker used chunking, the generated chunks would not be trimmed to t
 
 For more detailed information, refer to [Max Payload exceptions occur when using MessageBroker with chunking](xref:KI_DataMinerMessageBroker_Chunking_MaxPayload).
 
-#### SLAnalytics: Problem when trying to edit a multivariate pattern [ID_37270]
+#### SLAnalytics: Problem when trying to edit a multivariate pattern [ID 37270]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Due to a cache synchronization issue, problems could occur when trying to edit a multivariate pattern of which one of the elements is located on another DataMiner Agent.
 
-#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID_37462]
+#### EPM: Problem when SLNet requested information from other DataMiner Agents in the DMS [ID 37462]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In EPM environments, an error could occur when SLNet requested information from other DataMiner Agents in the DMS.  
 
-#### Problem with ExistsCustomDataTypeRequest message when using a database other than Cassandra [ID_37470]
+#### Problem with ExistsCustomDataTypeRequest message when using a database other than Cassandra [ID 37470]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 On systems using a database other than Cassandra, up to now, an `ExistsCustomDataTypeRequest` message would always return false and cause an error to be logged in the *SLDBConnection.txt* and *SLErrors.txt* files.
 
-#### Storage as a Service: Row limits were disregarded when a post filter was applied to a query result [ID_37515]
+#### Storage as a Service: Row limits were disregarded when a post filter was applied to a query result [ID 37515]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 In cases where SLDataGateway retrieved an entire table and then applied a filter afterwards, any row limits defined for the query in question would incorrectly be disregarded.
 
-#### Problem when using MessageBroker with chunking [ID_37532]
+#### Problem when using MessageBroker with chunking [ID 37532]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 On high-load systems, MessageBroker threads could leak when using chunking.
 
-#### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID_37533]
+#### Storage as a Service: Paged data retrieval operations would be cut off prematurely [ID 37533]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 When reading data from the database page by page, in some cases, the operation would be cut off prematurely.
 
-#### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID_37560]
+#### Newly created element could get assigned the same DmaId/ElementId key as another, already existing element [ID 37560]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 In some cases, a newly created element could get assigned the same DmaId/ElementId key as another, already existing element on another DataMiner Agent in the cluster. From now on, this will be prevented as long as the DataMiner Agents in questions can communicate with each other.
 
-#### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID_37596]
+#### PropertyConfiguration.xml: New properties could incorrectly be assigned an existing property ID [ID 37596]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 When, in a client application (e.g. DataMiner Cube) you created a new custom property, in some cases, that new property would incorrectly be assigned an ID that had already been assigned to another, existing property.
 
-#### Storage as a Service: Every agent in the DMS would send the average trend data to the cloud during a migration [ID_37717]
+#### Storage as a Service: Every agent in the DMS would send the average trend data to the cloud during a migration [ID 37717]
 
 <!-- MR 10.4.0 - FR 10.3.12 -->
 
 When data was being migrated from a Cassandra Cluster database to a STaaS database, every DataMiner Agent in the DMS would incorrectly send the average trend data to the cloud. From now on, only one of the agents will send this data.
 
-#### DELT package created on DataMiner v10.3.8 or newer could no longer be imported on DataMiner v10.3.7 or older [ID_37731]
+#### DELT package created on DataMiner v10.3.8 or newer could no longer be imported on DataMiner v10.3.7 or older [ID 37731]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
 When you exported elements via a DELT package on a DMA running DataMiner version 10.3.8 or newer, it would no longer be possible to import that DELT package on a DMA running DataMiner version 10.3.7 or older.
 
-#### SLAnalytics: Problem with table parameter indices containing special characters [ID_37860]
+#### SLAnalytics: Problem with table parameter indices containing special characters [ID 37860]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
@@ -1187,7 +1187,7 @@ Up to now, SLAnalytics would not correctly handle special characters in the tabl
 
 Also, special characters in parameter indices will no longer cause errors to be logged.
 
-#### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID_37874]
+#### Incorrect 'Clearing cache ...' entries in SLEventCache.txt [ID 37874]
 
 <!-- MR 10.4.0 - FR 10.4.1 -->
 
@@ -1197,31 +1197,31 @@ Example of an incorrect log entry:
 
 `Clearing cache: predicate<entries with old hosting agent id> for type XXXXXX`
 
-#### Storage as a Service: Problem when starting a database migration [ID_38059]
+#### Storage as a Service: Problem when starting a database migration [ID 38059]
 
 <!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
 
 When you tried to start a migration of an on-premises database to a DataMiner Storage as a Service platform, the connection towards the cloud could not get established.
 
-#### DataMiner Storage Module: Thread leak [ID_38095]
+#### DataMiner Storage Module: Thread leak [ID 38095]
 
 <!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
 
 In some cases, the DataMiner Storage Module could leak threads.
 
-#### Behavioral anomaly detection: Unlabelled changes would cause the trend icon to not be updated [ID_38105]
+#### Behavioral anomaly detection: Unlabelled changes would cause the trend icon to not be updated [ID 38105]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 When small, unlabelled changes were detected in a trend graph of a parameter of which the value was clearly increasing, decreasing or remaining stable, up to now, the trend icon would incorrectly not be updated to indicate this increasing, decreasing or stable trend. From now on, when a small, unlabelled change occurs in a trend graph that clearly increases, decreases or remains stable, the trend icon will be updated to indicate this.
 
-#### Storage as a Service: Database write operations would not get processed [ID_38112]
+#### Storage as a Service: Database write operations would not get processed [ID 38112]
 
 <!-- MR 10.4.0 - FR 10.4.1 [CU0] -->
 
 In some rare cases, a database write operation could incorrectly remain stuck in an internal queue and would never get processed.
 
-#### Problems with gRPC connections when SLNet was not running [ID_38177]
+#### Problems with gRPC connections when SLNet was not running [ID 38177]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
@@ -1231,13 +1231,13 @@ When a DataMiner Agent had the APIGateway service running but not the SLNet proc
 
 - When an attempt was made to establish a new gRPC connection, an `Invalid username or password` would be returned instead of a `DataMinerNotRunningException`.
 
-#### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID_38180]
+#### Web apps: Visual overview linked to a view would not get any updates when the user did not have full administrative rights [ID 38180]
 
 <!-- MR 10.2.0 [CU22]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
 When a web app user without full administrative rights viewed a visual overview linked to a view, the app would incorrectly not receive any updates for that visual overview.
 
-#### SLAnalytics - Automatic incident tracking: Problem after clearing or removing an alarm [ID_38239]
+#### SLAnalytics - Automatic incident tracking: Problem after clearing or removing an alarm [ID 38239]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
@@ -1245,25 +1245,25 @@ When an alarm had been cleared or removed, in some cases, the automatic incident
 
 `Parameter key [PARAMETER_KEY] was not in parameterKeyConverter, while it should have been.`
 
-#### SLAnalytics - Automatic incident tracking: Empty alarm group would be created when manually creating an incident with non-active alarms [ID_38248]
+#### SLAnalytics - Automatic incident tracking: Empty alarm group would be created when manually creating an incident with non-active alarms [ID 38248]
 
 <!-- MR 10.4.0 - FR 10.4.2 -->
 
 When, while automatic incident tracking was running, you manually created an incident (i.e. an alarm group) containing non-active alarms, an empty alarm group would be created.
 
-#### DataMiner Cube was not able to reconnect to the server after a disconnect using gRPC [ID_38260]
+#### DataMiner Cube was not able to reconnect to the server after a disconnect using gRPC [ID 38260]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 Up to now, when using a gRPC connection, Cube was not able to verify whether the server endpoint was available. As a result, it would fail to reconnect to the server when the connection had been lost and would display a `Waiting for the connection to become available...` message indefinitely.
 
-#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID 38331]
 
 <!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
 
 When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
 
-#### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID_38408]
+#### Automation: Problem when empty data is passed to the UI parser when running an interactive Automation script [ID 38408]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 -->
 
@@ -1271,13 +1271,13 @@ When running an interactive Automation script that was launched from Cube or a w
 
 From now on, an exception will no longer be thrown when empty data is passed to the UI parser.
 
-#### DataMiner Cube was not able to reconnect to the server after a disconnect [ID_38481]
+#### DataMiner Cube was not able to reconnect to the server after a disconnect [ID 38481]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
 In some cases, DataMiner Cube would not be able to reconnect to the server after having been disconnected.
 
-#### SLAnalytics - Behavioral anomaly detection: Certain parameter value changes would incorrectly not get processed [ID_38545]
+#### SLAnalytics - Behavioral anomaly detection: Certain parameter value changes would incorrectly not get processed [ID 38545]
 
 <!-- MR 10.4.0 - FR 10.4.3 -->
 
@@ -1285,19 +1285,19 @@ When SLAnalytics was handling large amounts of traffic, in some cases, certain p
 
 Also, a large number of low-severity change points were generated without a label. Those have now been reduced.
 
-#### Protocols: IDisposable QActions would incorrectly not be disposed [ID_38605]
+#### Protocols: IDisposable QActions would incorrectly not be disposed [ID 38605]
 
 <!-- MR 10.3.0 [CU12]/10.4.0 - FR 10.4.3 -->
 
 When DataMiner was processing all QActions in order to call the `Dispose` method on the QActions that implement `IDisposable`, it would incorrectly no longer call the `Dispose` method on QActions that implement `IDisposable` after processing a QAction that did not implement `IDisposable`.
 
-#### Problem when adding a DMA to a DMS [ID_38620]
+#### Problem when adding a DMA to a DMS [ID 38620]
 
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
 
 When a DataMiner Agent was added to a DataMiner System, in some cases, the SLNet cache of the new DataMiner Agent would not get updated, causing the Agent to not be aware it was now part of a DMS.
 
-#### Problem with SLDataMiner while sending a SetDocumentEofMessage with a negative file number [ID_38712]
+#### Problem with SLDataMiner while sending a SetDocumentEofMessage with a negative file number [ID 38712]
 
 <!-- MR 10.3.0 [CU12] / 10.4.0 [CU0] - FR 10.4.3 [CU0] -->
 

@@ -12,7 +12,7 @@ uid: General_Feature_Release_10.0.10_new_features
 
 ### DMS core functionality
 
-#### LogHelper API \[ID_26434\]
+#### LogHelper API \[ID 26434\]
 
 The new LogHelper API, which combines the SLLoggerUtil API and the LogEntry repository API, can be used in Automation scripts and in QActions to manage log entries stored in Indexing Engine:
 
@@ -62,7 +62,7 @@ It returns a connection that impersonates the user who triggered the QAction bas
 
 Automation scripts and QActions will now by default be compiled with a reference to SLLoggerUtil.dll (C:\\Skyline DataMiner\\Files\\SLLoggerUtil.dll).
 
-#### A notice will now be generated at DataMiner startup when duplicate properties are found for views, elements or services \[ID_26705\]
+#### A notice will now be generated at DataMiner startup when duplicate properties are found for views, elements or services \[ID 26705\]
 
 When, at DataMiner startup, duplicate properties are found for views, elements or services, from now on, one agent in the DataMiner System will generate a notice.
 
@@ -70,11 +70,11 @@ If an Administrator clears the notice manually, it will re-appear at the next Da
 
 ### DMS Protocols
 
-#### Socket buffer of a serial interface will now be flushed before a command is sent \[ID_26513\]
+#### Socket buffer of a serial interface will now be flushed before a command is sent \[ID 26513\]
 
 From now on, each time a command is sent via a serial interface, the socket buffer of that serial interface will be flushed in advance.
 
-#### Replacing QAction DLL dependencies \[ID_26605\]
+#### Replacing QAction DLL dependencies \[ID 26605\]
 
 It is now possible to replace QAction DLL dependencies by installing a .dmprotocol package that contains an Assemblies folder with new DLL dependencies.
 
@@ -96,11 +96,11 @@ By default, the DLL files in the package will be copied to the C:\\Skyline DataM
 
 ### DMS Cube
 
-#### Anomaly detection configuration in alarm templates \[ID_24578\]
+#### Anomaly detection configuration in alarm templates \[ID 24578\]
 
 It is now possible to enable specific anomaly detection options for parameters in an alarm template. To do so, select the *Advanced configuration of anomaly detection* option via the cogwheel button in the alarm template editor. Three additional columns will then be displayed in the alarm template, where you can enable or disable trend monitor, variance monitor and level shift anomaly detection for each monitored parameter.
 
-#### Services app: New and updated booking state icons \[ID_26270\]
+#### Services app: New and updated booking state icons \[ID 26270\]
 
 In the *Overview* tab of the *Services* app, the booking state of a service is indicated by an icon in the *Booking state* column.
 
@@ -116,11 +116,11 @@ In the *Overview* tab of the *Services* app, the booking state of a service is i
   - Future
   - Past/None
 
-#### Service & Resource Management - Profiles app: Value of a capability of type 'text' can now be changed regardless of the 'User time-dependent' option \[ID_26538\]
+#### Service & Resource Management - Profiles app: Value of a capability of type 'text' can now be changed regardless of the 'User time-dependent' option \[ID 26538\]
 
 Up to now, when you configured a profile instance, the value of a capability of type “text” could only be changed when the “Use time-dependent" option was selected. From now on, it will be possible to change the value of a capability of type “text” regardless of the “User time-dependent" option.
 
-#### System Center - SNMP forwarding: Generate MIB file \[ID_26591\]
+#### System Center - SNMP forwarding: Generate MIB file \[ID 26591\]
 
 When an SNMP manager is configured to forward SNMPv2 or SNMPv3 traps with custom bindings, then you can now generate a MIB file containing those custom bindings.
 
@@ -133,7 +133,7 @@ To do so, go to the *Notification* tab of the SNMP manager in question, open the
 > - the list of custom bindings contains at least one entry, and
 > - all changes to the SNMP manager in question have been saved.
 
-#### Default browser engine is now Chromium \[ID_26662\]
+#### Default browser engine is now Chromium \[ID 26662\]
 
 From now on, Cube will use Chromium as the default browser engine. When that engine is not installed, it will fall back to the first installed browser (currently, on most systems, this will be Microsoft Internet Explorer).
 
@@ -144,7 +144,7 @@ When, on a Visio page, you configured a shape to display a web page, that web pa
 > [!NOTE]
 > Cube also use the default browser engine when displaying annotations.
 
-#### Visual Overview: New option to show table name in parameter control shape \[ID_26694\]
+#### Visual Overview: New option to show table name in parameter control shape \[ID 26694\]
 
 Up to now, a parameter control displaying a parameter value retrieved from a table would by default also show the name of that table. From now on, this will no longer be the case.
 
@@ -154,7 +154,7 @@ If you want a parameter control to also show the name of the table, then specify
 |-------------------------|--------------------|
 | ParameterControlOptions | ShowTableName=true |
 
-#### Visual Overview: Factoring in decimals when using the DynamicUnits option \[ID_26697\]
+#### Visual Overview: Factoring in decimals when using the DynamicUnits option \[ID 26697\]
 
 The *DynamicUnits* option allows you to enable the use of dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol. You may decide to enable this feature if you want to have large values converted to more legible values (e.g. to convert 1000 Mb to 1 Gb, 1000 m to 1 km, etc.).
 
@@ -174,7 +174,7 @@ From now on, when using the *DynamicUnits* option, it is also possible to factor
 </Display>
 ```
 
-#### Periodic updates of Cube and Cube Launcher \[ID_26725\]\[ID_26986\]
+#### Periodic updates of Cube and Cube Launcher \[ID 26725\]\[ID 26986\]
 
 The first time you start Cube Launcher, a task named “Update DataMiner Cube” will be added to Windows Task Scheduler. Every 3 days, that task will start Cube Launcher with the /Update argument. The /Update argument combines the /UpdateClients and /UpdateLauncher arguments. See below.
 
@@ -185,7 +185,7 @@ The first time you start Cube Launcher, a task named “Update DataMiner Cube”
 
 The scheduled task is checked each time you start Cube Launcher, and is removed when you uninstall Cube Launcher. Periodic updates can be suspended by disabling the task in Windows Task Scheduler.
 
-#### Visual Overview / Service & Resource Management: Reservation placeholder now supports Status field \[ID_26859\]
+#### Visual Overview / Service & Resource Management: Reservation placeholder now supports Status field \[ID 26859\]
 
 Using the syntax “\[Reservation:\<id>,\<fieldName>\]”, it is possible to resolve a booking field based on the ID and the name of that field.
 
@@ -193,7 +193,7 @@ The Status field has now been added to the list of possible fields. This field i
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app: New style layout options for State components displaying parameters \[ID_26498\]
+#### Dashboards app: New style layout options for State components displaying parameters \[ID 26498\]
 
 In DataMiner v.10.0.9, the layout options for a State component displaying a parameter were adjusted. Now, these new layout options will also be available when a State component displays other DataMiner objects like elements, services, views or redundancy groups:
 
@@ -211,13 +211,13 @@ In DataMiner v.10.0.9, the layout options for a State component displaying a par
   - *Background*: The background of the component displays the alarm color. If this option is selected, an additional option, *Automatically adjust text color to alarm color*, can be selected to make sure the text color is adapted if necessary.
   - *None*: No alarm color is displayed.
 
-#### Dashboard app: New setting to configure number of dashboard columns \[ID_26530\]
+#### Dashboard app: New setting to configure number of dashboard columns \[ID 26530\]
 
 It is now possible to configure in how many columns components can be displayed in a dashboard. You can do so via the new *Number of columns* option in the settings of a dashboard. The maximum number of columns is 50. If you change the number of columns to a lower number and the columns currently contain components, a warning will be displayed, saying that components may be relocated.
 
 In addition, when a dashboard is being edited, a new button is now available in the dashboard header bar that allows you to show or hide the grid lines in the dashboard while you are in edit mode.
 
-#### Dashboards app: New Spectrum Analyzer component \[ID_26606\]\[ID_26675\]\[ID_26734\]\[ID_26820\] \[ID_26927\]
+#### Dashboards app: New Spectrum Analyzer component \[ID 26606\]\[ID 26675\]\[ID 26734\]\[ID 26820\] \[ID 26927\]
 
 When you create or update a dashboard, you can now add Spectrum Analyzer components.
 
@@ -231,13 +231,13 @@ For Spectrum Analyzer components, a *Triggers* tab is available in the pane on t
 
 When the specified dashboard is opened, the Spectrum Analyzer component will pass its data (a spectrum element and optionally a spectrum preset) to that dashboard. The opened dashboard can then use that data as if it was specified in the URL.
 
-#### Dashboards app: Advanced settings \[ID_26659\]
+#### Dashboards app: Advanced settings \[ID 26659\]
 
 Component settings can now be marked as advanced. When marked as such, they will only be displayed when you opened the Dashboards app with the following URL argument:
 
 - “showAdvancedSettings=true”
 
-#### Dashboards app: Optimization of component visualizations \[ID_26751\]
+#### Dashboards app: Optimization of component visualizations \[ID 26751\]
 
 After adding a component to a dashboard, you can apply a specific visualization. The list of available visualizations has now been optimized.
 
@@ -247,7 +247,7 @@ The order of the listed visualization has also been optimized. First in the list
 
 Hovering over a visualization will preview the component.
 
-#### Dashboards app: State timeline component \[ID_26772\]
+#### Dashboards app: State timeline component \[ID 26772\]
 
 The state timeline component visualizes the alarm state changes over time of a parameter, element or service. By default, it shows a timeline for the last 24 hours, but a time range feed can be added to set the component to a different time range.
 
@@ -262,7 +262,7 @@ To configure the component:
 
 3. Optionally, add a Time range component to the dashboard and configure the state timeline component to use it as a filter feed.
 
-#### State/Gauge/Ring components now able to show multiple items for several types of feeds \[ID_26780\]
+#### State/Gauge/Ring components now able to show multiple items for several types of feeds \[ID 26780\]
 
 In the Dashboards app, it is now possible to show multiple states with the same *State*, *Ring* or *Gauge* component, even if elements, services, views or redundancy groups are used as the data feed. Previously, this was only supported for parameter feeds.
 
@@ -270,19 +270,19 @@ For the *State* component, the *Layout flow* options in the *Layout* panel allow
 
 For the *Ring* and *Gauge* component, if parameter feeds are used, additional options in the layout panel allow you to configure whether the different parameters are displayed next to each other or below each other, and how many rows and columns of parameters can be displayed at the same time. These options are not available for other types of feeds; for those only one item is displayed at the same time and you need to scroll to see the next item.
 
-#### Dashboards app: Dashboards created by users will now be included in DataMiner backup packages \[ID_26836\]
+#### Dashboards app: Dashboards created by users will now be included in DataMiner backup packages \[ID 26836\]
 
 When, in DataMiner Cube, you take a backup, all dashboards created by users (i.e. all files stored in C:\\Skyline DataMiner\\Dashboards) will now be included in the backup package if you selected either “full backup” or “full backup without database”.
 
 ### DMS Automation
 
-#### Connecting a DMS to a remote ElasticSearch cluster from an Automation script \[ID_26569\]
+#### Connecting a DMS to a remote ElasticSearch cluster from an Automation script \[ID 26569\]
 
 It is now possible to have a DMS connect to the nodes of a remote ElasticSearch cluster from an Automation script by sending an InstallElasticAndMigrateRequest message.
 
 This message will add the IP addresses of the remote ElasticSearch nodes to the db.xml file.
 
-#### Replacing Automation script DLL dependencies \[ID_26605\]
+#### Replacing Automation script DLL dependencies \[ID 26605\]
 
 It is now possible to replace an Automation script DLL dependency from an Automation script by sending an UploadScriptDependencyMessage.
 
@@ -308,7 +308,7 @@ By default, the DLL file will be uploaded to the C:\\Skyline DataMiner\\scripts\
 > - If an uploaded DLL dependency would break existing scripts and/or libraries, no errors will be returned.
 > - It is advised to strong-name DLL files when referring to multiple versions of the same file in different scripts. Not strong-naming DLL files could lead to unexpected behavior.
 
-#### Uninstalling app packages \[ID_26643\]
+#### Uninstalling app packages \[ID 26643\]
 
 App packages can now be uninstalled using the new AppPackageHelper method UninstallApp.
 
@@ -371,7 +371,7 @@ public void Uninstall(Engine engine, AppUninstallContext context)
 > [!NOTE]
 > The DataMiner SLNetClientTest tool now also supports uninstalling app packages. See *Advanced \> Apps \> App Packages*.
 
-#### Automation: Tree view control for interactive Automation scripts \[ID_26840\]\[ID_27041\]
+#### Automation: Tree view control for interactive Automation scripts \[ID 26840\]\[ID 27041\]
 
 It is now possible to add a tree view control in an interactive Automation script. However, note that Automation scripts with tree view controls are currently only supported in the DataMiner mobile apps. These are not yet supported in DataMiner Cube.
 
@@ -456,15 +456,15 @@ ShowResult();
 
 ### DMS Mobile apps
 
-#### HTML5 apps: Sidebar settings will now be stored per user account in the browser's local storage \[ID_26719\]
+#### HTML5 apps: Sidebar settings will now be stored per user account in the browser's local storage \[ID 26719\]
 
 For each of the HTML5 apps (Monitoring, Jobs, etc.), the size and expand/collapse state of the sidebar will now be stored per user account in the browser’s local storage.
 
-#### Jobs app: Job domains can now be hidden \[ID_26813\]\[ID_26814\]
+#### Jobs app: Job domains can now be hidden \[ID 26813\]\[ID 26814\]
 
 Up to now, in configuration mode, when you edited a job domain, it was only possible to change the name of that domain. From now on, it is also possible to hide the domain.
 
-#### Jobs app: Duplicating domains \[ID_26844\]
+#### Jobs app: Duplicating domains \[ID 26844\]
 
 In configuration mode, next to the *New*, *Edit* and *Delete* buttons on the right of the job domain selection box, there is now also a *Duplicate* button. Clicking that button will allow you to select one of the following options:
 
@@ -510,7 +510,7 @@ As a result of the above-mentioned changes, adding a new section to a domain has
 
 ### DMS Service & Resource Management
 
-#### Mediated virtual functions \[ID_24657\]\[ID_25046\]\[ID_25193\]\[ID_25271\]\[ID_25401\]\[ID_25651\] \[ID_26078\]
+#### Mediated virtual functions \[ID 24657\]\[ID 25046\]\[ID 25193\]\[ID 25271\]\[ID 25401\]\[ID 25651\] \[ID 26078\]
 
 Server-side support has been added for mediated virtual functions.
 
@@ -598,7 +598,7 @@ Logging with regard to element binding will be added to the following log files:
 - SLProfileManager.txt can contain information about errors that occurred during the mediation step of the parameter replication.
 - The log file of the virtual function element can contain information about errors that occurred during binding, unbinding or replication operations in general.
 
-#### Tracking the rebinding history of VirtualFunctionResources \[ID_25307\]
+#### Tracking the rebinding history of VirtualFunctionResources \[ID 25307\]
 
 The rebinding history of VirtualFunctionResources will now be logged by means of HistoryChange records, stored in Indexing Engine (index “chistory-resource”).
 
@@ -631,7 +631,7 @@ var query =HistoryChangeExposers.SubjectID.Equal(someResourceID.ToFileFriendlySt
 >
 > From now on, no new HistoryChange record will be added any longer to indicate when the ReservationInstance was deleted and by whom.
 
-#### Possibility to add attachments to booking instances \[ID_26784\]
+#### Possibility to add attachments to booking instances \[ID 26784\]
 
 To support adding attachments to booking instances (i.e. ReservationInstance objects), a new ReservationInstanceAttachments property is now available in the ResourceManagerHelper. This property allows you to manage booking attachments using the following methods:
 
@@ -651,17 +651,17 @@ To support adding attachments to booking instances (i.e. ReservationInstance obj
 
 ### DMS tools
 
-#### StandAloneBpaExecutor now included in tools folder \[ID_26261\]
+#### StandAloneBpaExecutor now included in tools folder \[ID 26261\]
 
 The StandAloneBpaExecutor tool, which can be used to execute BPA (Best Practice Analysis) tests, is now by default included in the folder C:\\Skyline DataMiner\\Tools of a DMA.
 
-#### DMS Alerter: New 'Set the alarm as read in Cube after the alarm has been acknowledged' setting \[ID_26579\]
+#### DMS Alerter: New 'Set the alarm as read in Cube after the alarm has been acknowledged' setting \[ID 26579\]
 
 When, in DMS Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in DMS Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
 
 > [!NOTE]
 > This feature will only work if one and the same user is running both DMS Alerter and DataMiner Cube on the same client machine.
 
-#### DMS Alerter: New 'Hide the comment window when acknowledging an alarm' setting \[ID_26621\]
+#### DMS Alerter: New 'Hide the comment window when acknowledging an alarm' setting \[ID 26621\]
 
 A new setting, *Hide the comment window when acknowledging an alarm*, is available in the Alerter app. If this setting is enabled, you can take ownership of an alarm in an Alerter pop-up balloon without having to add a comment.

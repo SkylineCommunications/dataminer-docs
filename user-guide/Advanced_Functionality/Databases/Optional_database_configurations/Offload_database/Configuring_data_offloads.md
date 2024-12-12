@@ -4,6 +4,9 @@ uid: Configuring_data_offloads
 
 # Configuring data offloads
 
+> [!NOTE]
+> This feature is not available if [Swarming](xref:Swarming) is enabled.
+
 ## Configuring the offload rate
 
 The offload rate for trend data and alarm data can be configured in System Center.

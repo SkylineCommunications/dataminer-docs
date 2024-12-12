@@ -4,6 +4,8 @@ uid: Protocol.Groups.Group-ping
 
 # ping attribute
 
+<!-- RN 16626, RN 16633 -->
+
 Specifies whether this is the group to be used when testing the connection in the element wizard.
 
 ## Content Type
@@ -27,19 +29,16 @@ You can only test connections for which a ping group has been defined in the pro
 > Current limitations:
 >
 > - Only main connections can be tested.
-> - SNMPv3 connections can only be tested from DataMiner 9.5.12 onwards.
 > - Ping groups are not executed when an element is in slow poll mode.
-
-*Feature introduced in DataMiner 9.5.7 (RN 16626, RN 16633).*
 
 ## Examples
 
 ```xml
 <Group id="6" ping="true">
-	<Name>sysUptime</Name>
-	<Description>System Uptime</Description>
-	<Content>
-		<Param>6</Param>
-	</Content>
+   <Name>sysUptime</Name>
+   <Description>System Uptime</Description>
+   <Content>
+      <Param>6</Param>
+   </Content>
 </Group>
 ```

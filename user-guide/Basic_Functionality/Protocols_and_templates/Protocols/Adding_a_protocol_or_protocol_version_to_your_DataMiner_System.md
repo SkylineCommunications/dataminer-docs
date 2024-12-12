@@ -19,6 +19,15 @@ You can upload:
 > [!CAUTION]
 > When you replace a protocol version (i.e. when you add a protocol version that was already available on your DataMiner System), all elements using that protocol version will restart automatically.
 
+> [!NOTE]
+> From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you install a protocol for the first time by [uploading a protocol package](#uploading-a-protocol-package) or by [deploying a protocol from the DataMiner Catalog](#deploying-a-protocol-from-the-catalog), this protocol version will automatically be promoted to the production version.
+>
+> You will need to manually [promote the protocol version to production version](xref:Promoting_a_protocol_version_to_production_version) in the following cases:
+>
+> - When you later deploy a new version of the same protocol and want it to be set as the production version.
+> - When you install a protocol by [uploading a *Protocol.xml* file](#uploading-a-protocolxml-file).
+> - In all instances prior to DataMiner 10.4.10/10.5.0.
+
 ## Deploying a protocol from the catalog
 
 See [Deploying a Catalog item](xref:Deploying_a_catalog_item).

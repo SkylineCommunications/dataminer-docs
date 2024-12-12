@@ -8,15 +8,15 @@ uid: DIS_2.43
 
 ### IDE
 
-#### DIS now fully supports the 'whereAttribute' attribute of 'ExportRule' elements [ID_36787]
+#### DIS now fully supports the 'whereAttribute' attribute of 'ExportRule' elements [ID 36787]
 
 DIS now fully support the `whereAttribute` attribute of `ExportRule` elements when exporting protocols. The Display Editor and Validator have been adapted accordingly.
 
-See also [release note 36622](xref:General_Main_Release_10.4.0_new_features#exportrule-elements-can-now-have-a-whereattribute-attribute-id_36622)
+See also [release note 36622](xref:General_Main_Release_10.4.0_new_features#exportrule-elements-can-now-have-a-whereattribute-attribute-id-36622)
 
 ### Validator
 
-#### New checks and error messages [ID_36787]
+#### New checks and error messages [ID 36787]
 
 The following checks and error messages have been added.
 
@@ -29,7 +29,7 @@ The following checks and error messages have been added.
 | 17.4.2 | EmptyAttribute | Empty attribute 'ExportRule@whereTag'. |
 | 17.4.3 | UntrimmedAttribute | Untrimmed attribute 'ExportRule@whereTag'. Current value '{untrimmedValue}'. |
 
-#### New feature check: Usage of 'whereAttribute' [ID_36787]
+#### New feature check: Usage of 'whereAttribute' [ID 36787]
 
 A new feature check now verifies whether the `whereAttribute` attribute is being used.
 
@@ -45,21 +45,21 @@ This check can return the following error messages:
 
 ### Enhancements
 
-#### Enhanced performance when connecting to a DMA with a large number of Automation scripts [ID_36899]
+#### Enhanced performance when connecting to a DMA with a large number of Automation scripts [ID 36899]
 
 Because of a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large number of Automation scripts.
 
-#### DIS Validator: 'DveColumnOptionElement' check will no longer be performed when validating an exported protocol [ID_36921]
+#### DIS Validator: 'DveColumnOptionElement' check will no longer be performed when validating an exported protocol [ID 36921]
 
 The *DveColumnOptionElement* check will no longer be performed when validating an exported protocol.
 
 ### Fixes
 
-#### DIS would incorrectly consider code analysis files outdated when it did not have the correct line endings [ID_36771]
+#### DIS would incorrectly consider code analysis files outdated when it did not have the correct line endings [ID 36771]
 
 Up to now, when DIS checked whether the code analysis files were up to date, it would incorrectly consider a file outdated when it did not have the correct line endings (e.g. Unix line endings vs. Windows line endings). From now on, DIS will ignore the line endings when checking whether the code analysis files are up to date.
 
-#### Snippets would not be available or would not be updated [ID_36950]
+#### Snippets would not be available or would not be updated [ID 36950]
 
 When DIS was installed on top of a newly installed copy of Microsoft Visual Studio, it would incorrectly not include any snippets.
 

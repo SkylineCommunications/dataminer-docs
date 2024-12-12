@@ -9,13 +9,13 @@ uid: SRM_1.2.30_CU4
 
 ## Enhancements
 
-#### SRM_DiscoverResources: Support for multiple resources linked to element without entry point [ID_36163]
+#### SRM_DiscoverResources: Support for multiple resources linked to element without entry point [ID 36163]
 
 The *SRM_DiscoverResources* script now supports multiple function resources from the same element without entry point.
 
 ## Fixes
 
-#### Milliseconds incorrectly taken into account when updating booking time [ID_36247]
+#### Milliseconds incorrectly taken into account when updating booking time [ID 36247]
 
 When bookings created prior to SRM 1.2.30 were updated and only a millisecond value changed, this could cause delays or possibly even errors.
 

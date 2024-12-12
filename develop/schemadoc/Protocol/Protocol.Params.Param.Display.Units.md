@@ -704,6 +704,7 @@ In case you have a suggestion for a unit to be added to the list below, send an 
 |Programs|programs|
 |ps|picosecond|
 |ps/nm|picosecond per nanometer|
+|ps/s|picosecond per second|
 |ps/(nm.km)|picosecond per nanometer per kilometer|
 |Ps|petasecond|
 |PSI|pounds per square inch (Non-SI Pascal (Pa) is preferred)|

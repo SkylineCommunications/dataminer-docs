@@ -4,7 +4,7 @@ uid: Protocol.Display-pageOptions
 
 # pageOptions attribute
 
-Used for EPM (formerly known as CPE) elements in order to disable the possibility to open the Data Display page of the element.
+Used for EPM elements in order to disable the possibility to open the Data Display page of the element.
 
 ## Content Type
 
@@ -16,7 +16,7 @@ string
 
 ## Remarks
 
-Used for EPM (formerly known as CPE) elements in order to disable the possibility to open the Data Display page of the element. Otherwise, if the Data Display page is opened, the cross-driver table view is entirely constructed, which significantly increases the load on both the server and the client.
+Used for EPM elements in order to disable the possibility to open the Data Display page of the element. Otherwise, if the Data Display page is opened, the cross-driver table view is entirely constructed, which significantly increases the load on both the server and the client.
 
 > [!NOTE]
 > The Administrator user will still be able to load the Data Display page manually.

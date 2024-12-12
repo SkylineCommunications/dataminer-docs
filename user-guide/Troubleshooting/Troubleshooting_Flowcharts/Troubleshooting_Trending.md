@@ -70,7 +70,7 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 %% Define blocks %%
 ReadIssue([Read issue])
 FollowCTT{{Follow your session with the client test tool and open the trend graph.}}
-ClientExport{{1. Turn on computer setting for trend debug\n2. Open trend\n3. On the trend timeline, do CTRL + ALT + SHIFT + Right click}}
+ClientExport{{1. Turn on computer setting for trend debug\n2. Open trend\n3. On the trend timeline, press Ctrl + Alt + Shift + Right-click}}
 ReadIssueChecks{{"1. Check trend template flags (find your parameter in the element protocol)\n2. Check the export and/or GetTrendDataMessage requests and responses\n3.Check user settings ('show most detailed data', range settings...)"}}
 NotFixed{{"If your issue is not fixed,\ncontact support.data-core@skyline.be,\nincluding all info gathered and steps taken."}}
 %% Connect blocks %%

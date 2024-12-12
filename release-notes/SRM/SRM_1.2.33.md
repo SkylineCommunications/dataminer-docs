@@ -9,13 +9,13 @@ uid: SRM_1.2.33
 
 ## New features
 
-#### BookingManager.AddResource and BookingManager.RemoveResourceAndNode methods now support passing a service definition [ID_36792]
+#### BookingManager.AddResource and BookingManager.RemoveResourceAndNode methods now support passing a service definition [ID 36792]
 
 It is now possible to pass a service definition to the methods *BookingManager.AddResource* and *BookingManager.RemoveResourceAndNode*. The service definition must contain the correct functions; otherwise, the methods will have the previous behavior.
 
 In addition, more logging has been added in the script *SRM_ResourceAction*.
 
-#### New InputReference property in AssignResourceRequest class [ID_37080]
+#### New InputReference property in AssignResourceRequest class [ID 37080]
 
 To support capacity reference in an *AssignResources* request, a new *InputReference* property has been added to the *AssignResourceRequest* class. If this property is set to null, no reference is taken into account.
 
@@ -23,23 +23,23 @@ To support capacity reference in an *AssignResources* request, a new *InputRefer
 
 ### Fixes
 
-#### Problem when editing contributing booking without setting ConvertToContributing to true [ID_36716]
+#### Problem when editing contributing booking without setting ConvertToContributing to true [ID 36716]
 
 When a contributing booking was edited and *Booking.ConvertToContributing* was not passed as true, this could lead to corrupt data, as it is not possible to convert a contributing booking back to a normal booking. Now in such a case, an InvalidBookingDataException will be thrown.
 
-#### Problem with disabled service state [ID_36736]
+#### Problem with disabled service state [ID 36736]
 
 When the service state for an event was disabled, it could occur that the booking incorrectly got the service state -1, while actually the previous state had to be kept.
 
-#### Profile instances with DOM references not imported with full configuration import [ID_36838]
+#### Profile instances with DOM references not imported with full configuration import [ID 36838]
 
 When the full SRM configuration was imported, it could occur that profile instances with DOM references could not be imported.
 
-#### Problem with SRM_CreateNewBooking if two services on different DMAs had the same ID [ID_36922]
+#### Problem with SRM_CreateNewBooking if two services on different DMAs had the same ID [ID 36922]
 
 When two services on different DMAs had the same ID, this could cause a problem in the *SRM_CreateNewBooking* script.
 
-#### Skyline Profile Load Script Tester: Not possible to start or delete test case that was running when element/DataMiner restart occurred [ID_37253]
+#### Skyline Profile Load Script Tester: Not possible to start or delete test case that was running when element/DataMiner restart occurred [ID 37253]
 
 If the Skyline Profile Load Script Tester connector was running a test case and an element restart or DataMiner restart occurred, it was no longer possible to start or delete the test case entry in the corresponding table.
 

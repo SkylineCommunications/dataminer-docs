@@ -211,7 +211,7 @@ When a group with ID -1 is the root of an open protocol thread RTE, then the cau
 
 - A ping group only works on the first connection
 
-Note that the ping group is only used when slow polling is active on the element. This is the reason a driver with a badly defined ping will work perfectly when slow polling is not activated.
+Note that the ping group is only used when slow polling is active on the element. This is the reason a connector with a badly defined ping will work perfectly when slow polling is not activated.
 
 ## Useful links
 

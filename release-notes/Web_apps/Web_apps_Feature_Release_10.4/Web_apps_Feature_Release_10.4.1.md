@@ -8,19 +8,21 @@ uid: Web_apps_Feature_Release_10.4.1
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.1](xref:General_Feature_Release_10.4.1).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.1](xref:General_Feature_Release_10.4.1).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.4.1](xref:Cube_Feature_Release_10.4.1).
 
 ## Highlights
 
-- [Dashboards app & Low-Code Apps: New Grid and Timeline components [ID_33276] [ID_33287] [ID_34761] [ID_34948] [ID_37269] [ID_37699] [ID_37812]](#dashboards-app--low-code-apps-new-grid-and-timeline-components-id_33276-id_33287-id_34761-id_34948-id_37269-id_37699-id_37812)
-- [Dashboards app & Low-Code Apps - Table component: Customizing the appearance of a column [ID_37522]](#dashboards-app--low-code-apps---table-component-customizing-the-appearance-of-a-column-id_37522)
-- [Low-Code Apps: Duplicating low-code apps [ID_37698] [ID_37724]](#low-code-apps-duplicating-low-code-apps-id_37698-id_37724)
-- [Dashboards app & Low-Code Apps: Duplicating GQI queries [ID_37739]](#dashboards-app--low-code-apps-duplicating-gqi-queries-id_37739)
-- [Dashboards app & Low-Code Apps: Configuring custom operators [ID_37840]](#dashboards-app--low-code-apps-configuring-custom-operators-id_37840)
+- [Dashboards app & Low-Code Apps: New Grid and Timeline components [ID 33276] [ID 33287] [ID 34761] [ID 34948] [ID 37269] [ID 37699] [ID 37812]](#dashboards-app--low-code-apps-new-grid-and-timeline-components-id-33276-id-33287-id-34761-id-34948-id-37269-id-37699-id-37812)
+- [Dashboards app & Low-Code Apps - Table component: Customizing the appearance of a column [ID 37522]](#dashboards-app--low-code-apps---table-component-customizing-the-appearance-of-a-column-id-37522)
+- [Low-Code Apps: Duplicating low-code apps [ID 37698] [ID 37724]](#low-code-apps-duplicating-low-code-apps-id-37698-id-37724)
+- [Dashboards app & Low-Code Apps: Duplicating GQI queries [ID 37739]](#dashboards-app--low-code-apps-duplicating-gqi-queries-id-37739)
+- [Dashboards app & Low-Code Apps: Configuring custom operators [ID 37840]](#dashboards-app--low-code-apps-configuring-custom-operators-id-37840)
 
 ## New features
 
-#### Dashboards app & Low-Code Apps: New Grid and Timeline components [ID_33276] [ID_33287] [ID_34761] [ID_34948] [ID_37269] [ID_37699] [ID_37812]
+#### Dashboards app & Low-Code Apps: New Grid and Timeline components [ID 33276] [ID 33287] [ID 34761] [ID 34948] [ID 37269] [ID 37699] [ID 37812]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -40,7 +42,7 @@ In additional to the normal layout options, you can use the Template Editor to f
 > - If the number of items to be displayed exceeds the number of cells displayed in the component, navigation buttons are available to navigate through the data.
 > - When the scaling of the cells is set to a fixed size and there are too many columns and/or rows to show them at once in the component, in read mode, it is possible to scroll through them with a scrollbar that becomes visible when you hover over the component.
 
-#### Dashboards app & Low-Code Apps - Table component: Customizing the appearance of a column [ID_37522]
+#### Dashboards app & Low-Code Apps - Table component: Customizing the appearance of a column [ID 37522]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -70,7 +72,7 @@ To change the appearance of a column using presets, in the *Column appearance* s
 > - In the *Parameter table* component, the default column alignment is now "Left" instead of "Center".
 > - The default alignment of GQI table columns is now "Left" for columns of type string and "Right" for columns of type numeric or date.
 
-#### Interactive Automation scripts: Certain components can now be visualized as read-only in web environments [ID_37659]
+#### Interactive Automation scripts: Certain components can now be visualized as read-only in web environments [ID 37659]
 
 <!-- MR 10.5.0 - FR 10.4.1 -->
 
@@ -92,7 +94,7 @@ To change the appearance of a column using presets, in the *Column appearance* s
 > - When a component has its *IsEnabled* option set to false and its *IsReadOnly* option set to true, it will be considered disabled. Except for components of UIBlockType *Treeview*. These will behave as enabled and read-only.
 > - When an interactive Automation script is executed in DataMiner Cube, the *IsReadOnly* option will be ignored.
 
-#### Low-Code Apps: Duplicating low-code apps [ID_37698] [ID_37724]
+#### Low-Code Apps: Duplicating low-code apps [ID 37698] [ID 37724]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -131,7 +133,7 @@ There are now two ways to duplicate a low-code app:
   > [!NOTE]
   > You are only allowed to duplicate an older version of an app if you have permission to edit the app in question.
 
-#### Dashboards app & Low-Code Apps: 'Text input' and 'Numeric input' components can now be fed data from other components and from the URL [ID_37736]
+#### Dashboards app & Low-Code Apps: 'Text input' and 'Numeric input' components can now be fed data from other components and from the URL [ID 37736]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -141,7 +143,7 @@ To feed a component from the URL, you need to link the component to the URL feed
 
 `?data={"feed": {"strings": ["data for url feed"], "numbers": [1]}}`
 
-#### Dashboards app & Low-Code Apps: Duplicating GQI queries [ID_37739]
+#### Dashboards app & Low-Code Apps: Duplicating GQI queries [ID 37739]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -150,13 +152,13 @@ It is now possible to duplicate a GQI query:
 1. In the *Data* tab, open the *Queries* section, and click the ellipsis ("...") button of the GQI query that you want to duplicate.
 1. In the context menu, select *Duplicate*.
 
-#### Low-Code Apps: New Edit and Delete commands in app context menu of Root page [ID_37830]
+#### Low-Code Apps: New Edit and Delete commands in app context menu of Root page [ID 37830]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When, on the Root page of a DataMiner Agent, you hover over an application and click the ellipsis ("...") button, the context menu will now include an *Edit* command as well as a *Delete* command.
 
-#### Dashboards app & Low-Code Apps: Configuring custom operators [ID_37840]
+#### Dashboards app & Low-Code Apps: Configuring custom operators [ID 37840]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -172,7 +174,7 @@ On [docs.dataminer.services](xref:docs_dataminer_services), you can find a numbe
 
 ### Enhancements
 
-#### Dashboards app: Selection box data for 'All available data' tab will no longer automatically be retrieved when you enter edit mode [ID_37706]
+#### Dashboards app: Selection box data for 'All available data' tab will no longer automatically be retrieved when you enter edit mode [ID 37706]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -180,7 +182,7 @@ Up to now, as soon as you entered edit mode, the client would send a number of r
 
 From now on, the client will only send a request the moment you open a particular selection box on the *All available data* tab.
 
-#### Dashboards app: User and user group information will no longer automatically be retrieved when you enter edit mode [ID_37727]
+#### Dashboards app: User and user group information will no longer automatically be retrieved when you enter edit mode [ID 37727]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -188,13 +190,13 @@ Up to now, as soon as you entered edit mode, a number of API calls were executed
 
 From now on, those API calls will only be executed the moment you open the *Settings* tab on the right.
 
-#### Dashboards app & Low-Code Apps: Enhanced About box [ID_37757]
+#### Dashboards app & Low-Code Apps: Enhanced About box [ID 37757]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 A number of enhancements have been made to the About box.
 
-#### Dashboards app & Low-Code Apps - State component: Alignment setting will now always be displayed [ID_37918]
+#### Dashboards app & Low-Code Apps - State component: Alignment setting will now always be displayed [ID 37918]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -202,13 +204,13 @@ Up to now, the *State* component's *Alignment* setting would only be displayed w
 
 ### Fixes
 
-#### Low-Code Apps: Panels would not stack in the correct order [ID_37696]
+#### Low-Code Apps: Panels would not stack in the correct order [ID 37696]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 Panels would not stack in the correct order. From now on, they will stack in the order in which they were opened, and panels opening as pop-up windows will always stack on top of the left/right panels.
 
-#### Low-Code Apps: Initials would be displayed instead of user icon in edit mode [ID_37700]
+#### Low-Code Apps: Initials would be displayed instead of user icon in edit mode [ID 37700]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -217,19 +219,19 @@ In edit mode, the user's initials would be displayed instead of the user icon.
 > [!NOTE]
 > In all DataMiner web apps, the user's initials will be displayed until the user icon has been retrieved.
 
-#### Web APIs: Changes made to a user's access level would not be applied immediately [ID_37730]
+#### Web APIs: Changes made to a user's access level would not be applied immediately [ID 37730]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When the access level of a user was changed, up to now, that change would not immediately get applied to existing Web API connections.
 
-#### Dashboards app - Clock component: DataMiner time would be displayed instead of local time (and vice versa) [ID_37750]
+#### Dashboards app - Clock component: DataMiner time would be displayed instead of local time (and vice versa) [ID 37750]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When, in the settings of a *Clock* component, you had specified that it had to display the current DataMiner time (i.e. the time of the DataMiner server to which you are connected), the component would incorrectly display the local time (i.e. the DataMiner client time), and vice versa.
 
-#### Dashboards app & Low-Code Apps: Problems with certain component settings [ID_37829]
+#### Dashboards app & Low-Code Apps: Problems with certain component settings [ID 37829]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -244,13 +246,13 @@ A number of component settings no longer worked.
 | Trigger     | Time description and timer refresh would always be hidden. |
 | Web         | Text area would always be hidden. URL input would be hidden depending on the type. |
 
-#### Dashboards app & Low-Code Apps: Problem when a 'Line & area chart' component was linked to a query [ID_37863]
+#### Dashboards app & Low-Code Apps: Problem when a 'Line & area chart' component was linked to a query [ID 37863]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When, in the Dashboards app or a low-code app, a *Line & area chart* component was linked to a query, in some cases, the entire app could become unresponsive.
 
-#### Dashboards app - Table component: Header options would not be initialized correctly after an error message had been displayed [ID_37869]
+#### Dashboards app - Table component: Header options would not be initialized correctly after an error message had been displayed [ID 37869]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
@@ -258,43 +260,43 @@ After the table component had displayed an error message, the header options wou
 
 For example, it would incorrectly be possible to select *Export to CSV* even when the table component displayed an error.
 
-#### Low-Code Apps: Newly added themes seemed to disappear [ID_37871]
+#### Low-Code Apps: Newly added themes seemed to disappear [ID 37871]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 Newly added themes seemed to disappear when opening the theme editor or when switching to another page. This was due to newly added themes not being correctly added to the theme cache.
 
-#### Web Services API: Problem with GetServicesForFilter method [ID_37901]
+#### Web Services API: Problem with GetServicesForFilter method [ID 37901]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 In some cases, the filter passed to the *GetServicesForFilter* method would not get deserialized correctly, causing an exception to be thrown.
 
-#### Dashboards app & Low-Code Apps: Problem when opening the query data set [ID_37920]
+#### Dashboards app & Low-Code Apps: Problem when opening the query data set [ID 37920]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When, during a session, you opened the query data set for the first time, a run-time error would be thrown when there were no queries.
 
-#### Dashboards app - Parameter table component: Filter could incorrectly be duplicated [ID_37928]
+#### Dashboards app - Parameter table component: Filter could incorrectly be duplicated [ID 37928]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 It would incorrectly be possible to duplicate the filter of a *Parameter table* component. The *Duplicate* option has now been removed.
 
-#### Dashboards app & Low-Code Apps: Problem when editing the property of a feed linked to a query row [ID_37947]
+#### Dashboards app & Low-Code Apps: Problem when editing the property of a feed linked to a query row [ID 37947]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 When you tried to edit the property of a feed linked to a query row, the input box would incorrectly not display the existing value.
 
-#### Dashboards app & Low-Code Apps - Node edge graph component: Problem when filtering and analytical coloring [ID_37982]
+#### Dashboards app & Low-Code Apps - Node edge graph component: Problem when filtering and analytical coloring [ID 37982]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 
 In some cases, the node edge graph component would not apply filtering and/or analytical coloring correctly when the data contained parameters and the graph was filtered using a query filter.
 
-#### Dashboards app & Low-Code Apps: Problem when opening the DOM Definitions or DOM Instances datasets on a system without Elasticsearch/OpenSearch [ID_37997]
+#### Dashboards app & Low-Code Apps: Problem when opening the DOM Definitions or DOM Instances datasets on a system without Elasticsearch/OpenSearch [ID 37997]
 
 <!-- MR 10.3.0 [CU10] - FR 10.4.1 -->
 

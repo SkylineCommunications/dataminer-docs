@@ -16,7 +16,7 @@ Please note the following:
 
 - From DataMiner 10.2.0/10.1.11 onwards, **HLS** (HTTPS Live Streaming) is supported. See [Configuring a thumbnail for HTTP Live Streaming](#configuring-a-thumbnail-for-http-live-streaming).
 
-- To display video thumbnails with the **VLC** plugin in the DataMiner Cube browser app, make sure the 32-bit version of VLC is installed, not the 64-bit version, as the latter may not run correctly. If you are using the DataMiner Cube desktop app (version 10.0.0 or higher), use the 64-bit version of VLC instead.
+- To display video thumbnails with the **VLC** plugin in the Cube desktop app, use the 64-bit version of VLC. If you use the DataMiner Cube browser app (not recommended), make sure the 32-bit version of VLC is installed instead of the 64-bit version, as the latter may not run correctly.
 
 - To display video feeds from **Selenio MCP1 and MCP3** platforms, the Selenio modules need to have at least firmware version 6.1.
 
@@ -221,6 +221,8 @@ To configure the thumbnail, add a shape data field of type **Link** to the shape
 ```txt
 #https://<DMAIP>/VideoThumbnails/Video.htm?type=HTML5-HLS&source=https://<video server>.<stream>.m3u8
 ```
+
+From DataMiner web 10.4.0 [CU10]/10.5.1 onwards<!--RN 41407-->, if the HLS stream has multiple audio tracks, you can select your preferred audio track using the dropdown menu in the top-right corner of the video thumbnail.
 
 > [!NOTE]
 >

@@ -10,7 +10,7 @@ uid: Cloud_Remote_Access_URL
 
    The URL is also shown below the DMS name.
 
-![Remote Cube in the home app](~/user-guide/images/CcaHomeApp.png)
+![Remote Cube in the home app](~/user-guide/images/findingRemoteAccessUrl.png)
 
 > [!NOTE]
 > If you cannot find your DMS in the list, make sure the correct organization is selected in the top-right corner.

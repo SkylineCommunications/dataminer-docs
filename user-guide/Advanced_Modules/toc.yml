@@ -277,10 +277,16 @@ items:
                 topicUid: Editing_a_dashboard
               - name: Changing dashboard settings
                 topicUid: Changing_dashboard_settings
+              - name: Configuring security for a dashboard
+                topicUid: Configuring_dashboard_security
               - name: Configuring the dashboard layout
                 topicUid: Configuring_the_dashboard_layout
               - name: Embedding a dashboard component in a webpage or Visio drawing
                 topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
+              - name: Specifying data input in a dashboard or app URL
+                topicUid: Specifying_data_input_in_a_dashboard_URL
+              - name: Configuring a dashboard to use data in a URL without a dedicated component
+                topicUid: Using_data_in_URL_without_dedicated_component
           - name: Sharing a dashboard
             topicUid: Sharing_a_dashboard
           - name: Generating a report based on a dashboard
@@ -371,10 +377,12 @@ items:
         items:
           - name: Applying a visualization
             topicUid: Apply_Visualization
-          - name: Applying a data feed
-            topicUid: Apply_Data_Feed
+          - name: Adding data to a component
+            topicUid: Adding_data_to_component
           - name: Customizing the component layout
             topicUid: Customize_Component_Layout
+          - name: Dynamically referencing data in text
+            topicUid: Dynamically_Referencing_Data_in_Text
           - name: Using the Template Editor
             topicUid: Template_Editor
           - name: Deleting a component
@@ -384,34 +392,40 @@ items:
         items:
           - name: General
             items:
+              - name: Block
+                topicUid: DashboardBlock
               - name: Button
                 topicUid: DashboardButton
               - name: Button panel
                 topicUid: DashboardButtonPanel
-              - name: Text
-                topicUid: DashboardText
-              - name: Clock (digital)
-                topicUid: DashboardClockDigital
               - name: Form
                 topicUid: DashboardForm
+              - name: Text
+                topicUid: DashboardText
               - name: Image
                 topicUid: DashboardImage
               - name: Icon
                 topicUid: DashboardIcon
-              - name: Maps
-                topicUid: DashboardMaps
-              - name: Stepper
-                topicUid: DashboardStepper
-              - name: Web
-                topicUid: DashboardWeb
               - name: Generic map
                 topicUid: DashboardGenericMap
+              - name: Clock (digital)
+                topicUid: DashboardClockDigital
               - name: Clock (analog)
                 topicUid: DashboardClockAnalog
-              - name: Block
-                topicUid: DashboardBlock
               - name: Group
                 topicUid: DashboardGroup
+              - name: Maps
+                topicUid: DashboardMaps
+              - name: Query filter
+                topicUid: DashboardQueryFilter
+              - name: Stepper
+                topicUid: DashboardStepper
+              - name: Trigger
+                topicUid: DashboardTrigger
+              - name: Web
+                topicUid: DashboardWeb
+              - name: Time range
+                topicUid: DashboardTimeRange
           - name: States and values
             items:
               - name: State
@@ -444,6 +458,12 @@ items:
                 topicUid: PieAndDonutChart
           - name: Other
             items:
+              - name: Timeline
+                topicUid: DashboardTimeline
+              - name: List
+                topicUid: DashboardList
+              - name: EPM picker
+                topicUid: DashboardEPMPicker
               - name: Grid
                 topicUid: DashboardGrid
               - name: Interactive Automation script
@@ -458,50 +478,35 @@ items:
                 topicUid: DashboardSpectrumAnalyzer
               - name: Visual Overview
                 topicUid: DashboardVisualOverview
-              - name: Timeline
-                topicUid: DashboardTimeline
+              - name: Tree
+                topicUid: DashboardTree
+              - name: Parameter picker
+                topicUid: DashboardParameterPicker
               - name: Trend statistics
                 topicUid: DashboardTrendStatistics
           - name: Feeds
             topicUid: Feeds
-            items:
-              - name: Time range feed
-                topicUid: DashboardTimeRangeFeed
-              - name: List feed
-                topicUid: DashboardListFeed
-              - name: Tree feed
-                topicUid: DashboardTreeFeed
-              - name: Parameter feed
-                topicUid: DashboardParameterFeed
-              - name: EPM feed
-                topicUid: DashboardCPEFeed
-              - name: Query filter feed
-                topicUid: DashboardQueryFilterFeed
-              - name: Trigger feed
-                topicUid: DashboardTriggerFeed
-              - name: Dropdown feed
-                topicUid: DashboardDropdownFeed
           - name: Basic controls
             items:
               - name: Dropdown
                 topicUid: DashboardDropdown
               - name: Numeric input
-                topicUid: DashboardNumericInputFeed
-              - name: Text input
-                topicUid: DashboardTextInputFeed
+                topicUid: DashboardNumericInput
               - name: Search input
-                topicUid: DashboardSearchInputFeed
-      - name: Feeds
-        topicUid: Using_dashboard_feeds
+                topicUid: DashboardSearchInput
+              - name: Text input
+                topicUid: DashboardTextInput
+      - name: Component data
+        topicUid: Component_Data
+      - name: Flows
+        topicUid: Using_flows
         items:
-          - name: Configuring feed components
-            topicUid: Configuring_feed_components
-          - name: Dynamically referencing feed values in text
-            topicUid: Feed_Link
-          - name: Specifying data input in a dashboard or app URL
-            topicUid: Specifying_data_input_in_a_dashboard_URL
-          - name: Configuring a dashboard to use a URL feed without a feed component
-            topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+          - name: Configuring a flow
+            topicUid: Configuring_a_flow
+          - name: Flow operators
+            topicUid: Flow_operators
+      - name: Variables
+        topicUid: Variables
       - name: Generic Query Interface (GQI)
         items:
           - name: About the Generic Query Interface
@@ -575,10 +580,14 @@ items:
                     topicUid: Ad_hoc_Life_cycle
                   - name: Linking rows to DataMiner objects
                     topicUid: Ad_hoc_Metadata
-                  - name: Tutorials
+                  - name: Examples
                     items:
                       - name: Forwarding dummy data to the GQI
-                        topicUid: Ad_hoc_Tutorials
+                        topicUid: Forwarding_dummy_data_to_GQI
+                      - name: Scaling an ad hoc data source
+                        topicUid: Scaling_Ad_hoc_Data_Source
+                  - name: Tutorials
+                    items:
                       - name: Building a GQI data source that fetches satellites
                         topicUid: Ad_hoc_Tutorials_Satellites
                       - name: Building a GQI data source that retrieves data from a DMS
@@ -856,7 +865,7 @@ items:
             topicUid: DOM_Invoice_app_example
           - name: Status system example
             topicUid: DOM_status_system_example
-          - name: Altering values of a DomInstance - examples
+          - name: Altering and getting values of a DomInstance - examples
             topicUid: DOM_Altering_values_of_a_DomInstance
           - name: Processing multiple DomInstances - examples
             topicUid: DOM_BulkProcessing_Example
@@ -925,8 +934,11 @@ items:
             topicUid: Creating_a_link_between_DataMiner_elements_and_the_EPM_element
       - name: EPM integration training
         topicUid: EPM_Integration_Training
+      - name: Tutorials
+        items:
+          - name: Getting started with EPM
+            topicUid: EPM_Introduction_Tutorial
   - name: Inventory & Asset Management
-    topicUid: AssetManagement
     items:
       - name: About DataMiner Inventory & Asset Management
         topicUid: About_DMS_Inventory_Asset_Management
@@ -1053,7 +1065,6 @@ items:
     topicUid: MobileGateway
     items:
       - name: Configuring Mobile Gateway
-        topicUid: Configuring_Mobile_Gateway
         items:
           - name: Configuring a serial cell phone modem
             topicUid: Configuring_a_serial_cell_phone_modem
@@ -1139,7 +1150,6 @@ items:
       - name: Reporter Admin tools
         topicUid: Reporter_Admin_tools
       - name: Publishing Reporter components on your own website
-        topicUid: Publishing_Reporter_components_on_your_own_website
         items:
           - name: Img tags referring to ASP pages
             topicUid: Img_tags_referring_to_ASP_pages
@@ -1282,8 +1292,6 @@ items:
             topicUid: Automatic_cleanup_of_alarm_recordings_folder
           - name: Configuring a spectrum element to follow the device settings
             topicUid: Configuring_a_spectrum_element_to_follow_the_device_settings
-          - name: Creating a simulated spectrum element
-            topicUid: Creating_a_simulated_spectrum_element
       - name: Tutorials
         items:
             - name: Monitoring a spectrum signal by comparing it with thresholds

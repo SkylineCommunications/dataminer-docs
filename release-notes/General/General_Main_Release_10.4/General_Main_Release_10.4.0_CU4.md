@@ -8,30 +8,33 @@ uid: General_Main_Release_10.4.0_CU4
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.4.0 CU4](xref:Cube_Main_Release_10.4.0_CU4).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.4.0 CU4](xref:Web_apps_Main_Release_10.4.0_CU4).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 
-#### Security enhancements [ID_38263] [ID_39611]
+#### Security enhancements [ID 38263] [ID 39611]
 
 <!-- 38263: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.3 -->
 <!-- 39611: MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 A number of security enhancements have been made.
 
-#### Cassandra & Cassandra cluster: Enhanced performance when querying the maskstate table [ID_39192]
+#### Cassandra & Cassandra cluster: Enhanced performance when querying the maskstate table [ID 39192]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 Because of a number of enhancements, on systems using a Cassandra and Cassandra cluster database, overall performance has increased when querying the maskstate database table. As a result, elements will start up quicker depending on the number of masked objects in the database.
 
-#### Enhanced performance when loading services during a DataMiner startup [ID_39286]
+#### Enhanced performance when loading services during a DataMiner startup [ID 39286]
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
 Because of a number of enhancements, overall performance has increased when loading services during a DataMiner startup.
 
-#### SLDataMiner: Enhanced log entry indicating progress of multi-threaded operations that take longer that 30 seconds to complete [ID_39367]
+#### SLDataMiner: Enhanced log entry indicating progress of multi-threaded operations that take longer that 30 seconds to complete [ID 39367]
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -39,13 +42,13 @@ When a multi-threaded operation takes longer that 30 seconds to complete, an ent
 
 `Waiting for completion of %s : %lli/%lli completed`
 
-#### Service & Resource Management: Enhanced performance when creating multiple bookings simultaneously [ID_39390]
+#### Service & Resource Management: Enhanced performance when creating multiple bookings simultaneously [ID 39390]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 Because of a number of enhancements, overall performance has increased when creating multiple bookings simultaneously.
 
-#### Replication buffering enhancements [ID_39428]
+#### Replication buffering enhancements [ID 39428]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -89,19 +92,19 @@ On some systems, the `C:\Skyline DataMiner\System Cache\SLNet` folder can contai
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Failover: Enhanced agent performance when going online [ID_39435]
+#### Failover: Enhanced agent performance when going online [ID 39435]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 Because of a number of enhancements, it will now take less time for a Failover agent to go online, especially when a large number of clients are trying to connect to it.
 
-#### SLAnalytics: Enhanced alarm template monitoring [ID_39561]
+#### SLAnalytics: Enhanced alarm template monitoring [ID 39561]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 When an alarm template contained multiple lines for the same parameter, each with a different filter, up to now, SLAnalytics would only take into account the lines that were being monitored. From now on, as soon as one line related to a specific parameter is being monitored, SLAnalytics will take into account all lines related to that parameter.
 
-#### ReIndexElasticSearchIndexes tool: Enhancements [ID_39614]
+#### ReIndexElasticSearchIndexes tool: Enhancements [ID 39614]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
 
@@ -121,7 +124,7 @@ A number of enhancements have been made to the *ReIndexElasticSearchIndexes* too
 
   `ReIndexElasticSearchIndexes.exe [-R <path to failed indexes file>]`
 
-#### SNMP++: Trap processing enhancements [ID_39629]
+#### SNMP++: Trap processing enhancements [ID 39629]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -137,7 +140,7 @@ From now on, one thread will read the raw data from the UDP buffer and add it to
 > [!CAUTION]
 > Please take extreme care when modifying the Windows registry. We strongly advise you to back up the registry before you modify it.
 
-#### Service & Resource Management: DVE activation enhancements [ID_39672]
+#### Service & Resource Management: DVE activation enhancements [ID 39672]
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -177,7 +180,7 @@ Waiting for DVEs to get activated will now be processed asynchronously. This wil
 
 ### Fixes
 
-#### Issues with user accounts [ID_39234]
+#### Issues with user accounts [ID 39234]
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -185,25 +188,25 @@ In some cases, user accounts could become corrupted and group memberships could 
 
 Also, in some cases, SLDataMiner could stop working when an alarm template or trend template was uploaded, removed, assigned or unassigned.
 
-#### SLNet: Problem when sending messages due to an issue with the protobuf serializers [ID_39275]
+#### SLNet: Problem when sending messages due to an issue with the protobuf serializers [ID 39275]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 When SLNet sent a message, in some cases, an error could occur due to an issue with the protobuf serializers.
 
-#### Problem with SLNet when information on hanging calls was being retrieved [ID_39373]
+#### Problem with SLNet when information on hanging calls was being retrieved [ID 39373]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 In some rare cases, an error could occur in SLNet when information on hanging calls was being retrieved.
 
-#### SLSNMPAgent would incorrectly interpret variable trap bindings of type 'IpAddress' as bindings of type 'OctetString' [ID_39425]
+#### SLSNMPAgent would incorrectly interpret variable trap bindings of type 'IpAddress' as bindings of type 'OctetString' [ID 39425]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 Up to now, SLSNMPAgent would incorrectly interpret variable trap bindings of type 'IpAddress' as bindings of type 'OctetString'.
 
-#### Protocols: 'next' attribute would no longer work for SNMP parameters [ID_39430]
+#### Protocols: 'next' attribute would no longer work for SNMP parameters [ID 39430]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -214,7 +217,7 @@ Also, when a group contained single parameters in combination with a partial tab
 > [!NOTE]
 > When a `next` attribute is defined on a partial SNMP table parameter inside a parameter group, then the delay will also be applied between the batches of rows that are requested.
 
-#### Interactive Automation script was not able to continue once a lost connection was re-established [ID_39487]
+#### Interactive Automation script was not able to continue once a lost connection was re-established [ID 39487]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -222,13 +225,13 @@ When a client application lost connection while an interactive Automation script
 
 From now on, when a client application loses connection while an interactive Automation script is being run, the script will continue once the connection is re-established.
 
-#### Service & Resource Management: Service Manager would initialize twice on Failover systems [ID_39598]
+#### Service & Resource Management: Service Manager would initialize twice on Failover systems [ID 39598]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
 On Failover systems, the Service Manager would incorrectly initialize twice.
 
-#### 'Security Advisory' BPA test: Issues fixed [ID_39606] [ID_39716]
+#### 'Security Advisory' BPA test: Issues fixed [ID 39606] [ID 39716]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -240,7 +243,7 @@ The following issues have been fixed in the [Security Advisory](xref:BPA_Securit
 
   In cases like this, from now on, instead of throwing an exception, the BPA will now report that the certificate is missing.
 
-#### Problem when setting up SLNet connections to the IPv6 loopback address or an FQDN pointing to a loopback address [ID_39667]
+#### Problem when setting up SLNet connections to the IPv6 loopback address or an FQDN pointing to a loopback address [ID 39667]
 
 <!-- MR 10.4.0 [CU4] - FR 10.4.7 -->
 
@@ -248,7 +251,7 @@ When an SLNet connection was made to the IPv6 loopback address, the system would
 
 Also, when an SLNet connection was made to a FQDN which points to a loopback address, the system would incorrectly use a TCP connection to the primary IPv4 address.
 
-#### Problem during SLDataMiner startup when loading in services with duplicate IDs [ID_39896]
+#### Problem during SLDataMiner startup when loading in services with duplicate IDs [ID 39896]
 
 <!-- MR 10.3.0 [CU16]/10.4.0 [CU4] - FR 10.4.7 [CU0] -->
 

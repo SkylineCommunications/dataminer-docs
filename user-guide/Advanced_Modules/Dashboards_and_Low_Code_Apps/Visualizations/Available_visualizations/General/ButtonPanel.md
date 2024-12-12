@@ -27,9 +27,9 @@ To configure the component in the Dashboards app:
 
 1. Make sure the button panel element is correctly configured. See [Configuring the button panel element](#configuring-the-button-panel-element).
 
-1. Add the table parameter from the button panel element as the data feed.
+1. Add the table parameter from the button panel element as data.
 
-1. Optionally, add a parameter feed as a filter, in order to determine which page is displayed.
+1. Optionally, add parameter data as a filter, in order to determine which page is displayed.
 
 1. In the *Component* > *Layout* tab, optionally configure the following options:
 
@@ -140,7 +140,7 @@ Within the *Param* tag of the protocol, the following tags can be used to config
 
   - **Button panel collection**: The parameter contains grouping information. A group is a collection of one or more button panels. Every row of this table parameter represents one group with all the necessary information for the dashboard to be able to display the button panels of that group.
 
-    This parameter can be used as a feed in the dashboard that will allow the user to easily switch between dashboard groups.
+    This parameter can be used as data in the dashboard that will allow the user to easily switch between dashboard groups.
 
 - **Param.Dashboard.DashboardOptions.DashboardOption**: These tags allow you to configure the options that will determine how the button panel is displayed. Each *DashboardOption* tag has the following **attributes**:
 

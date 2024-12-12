@@ -8,11 +8,11 @@ uid: DIS_2.35
 
 ### IDE
 
-#### XML editor: Link lists now also contain parameters referred to in id attributes of \<LengthType> elements and in connectionPID attributes of \<Group> elements \[ID_30926\] \[ID_30935\]
+#### XML editor: Link lists now also contain parameters referred to in id attributes of \<LengthType> elements and in connectionPID attributes of \<Group> elements \[ID 30926\] \[ID 30935\]
 
 In the XML editor, next to certain items, you will find a button in the shape of a paper clip. When you hover over this paper clip, a list box will appear, listing all items that are in some way linked to the item in question. From now on, this list box will also contain parameters referred to in id attributes of \<LengthType> elements and in connectionPID attributes of \<Group> elements.
 
-#### Support for Microsoft Visual Studio 2022 \[ID_31366\]
+#### Support for Microsoft Visual Studio 2022 \[ID 31366\]
 
 DIS now supports Microsoft Visual Studio 2022.
 
@@ -28,7 +28,7 @@ Available installation packages:
 
 ### Validator
 
-#### New checks and error messages \[ID_30887\] \[ID_31170\]
+#### New checks and error messages \[ID 30887\] \[ID 31170\]
 
 The following checks and error messages have been added.
 
@@ -54,13 +54,13 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### Protocol Schema: New Protocol.ParameterGroups.Group@calculateAlarmState attribute \[ID_31600\]
+#### Protocol Schema: New Protocol.ParameterGroups.Group@calculateAlarmState attribute \[ID 31600\]
 
 The Protocol.ParameterGroups.Group element now has a calculateAlarmState attribute.
 
 Possible values: true or false
 
-#### Installation Package Manifest Schema: setAsDefault attribute replaced by SetAsDefault element \[ID_31603\]
+#### Installation Package Manifest Schema: setAsDefault attribute replaced by SetAsDefault element \[ID 31603\]
 
 The Manifest.Content.Visios.Visio.Version@setAsDefault attribute has now been replaced by the SetAsDefault element.
 
@@ -70,6 +70,6 @@ Also, in the VersionHistory, it is now allowed to set the ID of the CU part to 0
 
 ### Enhancements
 
-#### IDE - DIS Validator: Navigate to QAction C# validator results \[ID_31384\]
+#### IDE - DIS Validator: Navigate to QAction C# validator results \[ID 31384\]
 
 When, in the DIS Validator tool window, you double-clicked on a validator result that described an error in the C# code of a QAction, up to now, Visual Studio would jump to the start of the \<QAction> tag in the protocol XML file. From now on, it will jump to the actual line containing the error in the C# file.

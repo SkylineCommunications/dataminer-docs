@@ -33,11 +33,13 @@ Occasionally, there may be a need to edit a previous version of an application. 
 
 1. Click the app on the landing page to open it.
 
-1. Click your user image or initials and select *Versions*.
+1. Click the user icon in the top-right corner, and select *Versions*.
+
+   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 or higher<!--RN 40077-->), click the ellipsis button ("...") in the top-right corner instead, and select *Versions*.
+
+   This will show the version history of the app.
 
    ![Versions option](~/user-guide/images/VersionsUser.png)<br/>*DataMiner Low-Code Apps in DataMiner 10.3.12*
-
-   This brings up a list of previous versions.
 
 1. Open the version you want to edit by hovering over it in the list and then clicking the pencil icon.
 

@@ -15,9 +15,9 @@ This component allows you to visualize data as a grid.
 
 ## Configuring the component
 
-1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed). The grid component should always be configured with *Queries* data input.
+1. [Add data to the component](xref:Adding_data_to_component). The grid component should always be configured with *Queries* data input.
 
-1. Optionally, hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Query columns* section of the data pane. You can repeat this several times in order to filter on several query columns<!--RN 34761-->.
+1. Optionally, hover the mouse pointer over the component, click the filter icon, and then add a filter from the *URL* > *Query column* section of the data pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, you can find the filter in the *Feeds* > *URL* > *Query columns* section of the data pane. You can repeat this several times in order to filter on several query columns<!--RN 34761-->. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, you can find the filter in the *Feeds > URL > Query columns* section of the data pane.
 
 1. Optionally, customize the following component options:
 

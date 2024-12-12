@@ -15,8 +15,6 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
 1. Specify the following database settings, depending on your DataMiner version:
 
-   From DataMiner 10.0.13/10.1.0 onwards:
-
    - **Type**: *Database per Agent*.
 
    - **Database**: The type of database, i.e. *Cassandra*.
@@ -30,20 +28,6 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
    - **User**: The username with which the DMA has to log on to Cassandra.
 
    - **Password**: The password with which the DMA has to log on to Cassandra.
-
-   Earlier DataMiner versions:
-
-   - **Type**: The type of database, i.e. *Cassandra*.
-
-   - **DB**: The name of the database.
-
-   - **DB Server**: The name or IP address of the server that hosts the database.
-
-   - **Connection string**: Can be filled in instead of the other fields, in which case this string will be used to connect to the database.
-
-   - **User**: The username with which the DMA has to log on to the general database.
-
-   - **Password**: The password with which the DMA has to log on to the general database.
 
 1. Click *Save*.
 

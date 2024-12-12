@@ -4,7 +4,7 @@ uid: UD_APIs_UserDefinableApiEndpoint
 
 # DataMiner UserDefinableApiEndpoint DxM
 
-*DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core 6 web API (from DataMiner 10.3.7 onwards) or ASP.NET Core 5 web API (prior to DataMiner 10.3.7). It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
+*DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
 
 > [!CAUTION]
 > There is currently no rate limiting or protection in place to prevent malicious users from spamming the endpoint. We recommend only exposing the DMA using a firewall or network protection that prevents unknown IP addresses from sending requests.
@@ -36,10 +36,15 @@ Below you can find a list of all the *UserDefinableApiEndpoint* DxM versions and
 | 2.0.0       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.8                           |
 | 2.0.2       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.9                           |
 | 3.1.0       | .NET 6                | 10.4.0+                            | 10.4.1                           |
-| 3.2.0       | .NET 6                | 10.4.0+                            | 10.4.3/10.4.0                    |
+| 3.2.0       | .NET 6                | 10.4.0+                            | 10.4.3/10.4.0 (prior to [CU10])  |
+| 3.2.3       | .NET 8<!--RN 40303--> | 10.4.0+                            | 10.4.9                           |
+| 3.2.4       | .NET 8                | 10.4.0+                            | 10.4.10                          |
+| 3.3.0       | .NET 8                | 10.4.0+                            | 10.4.0 [CU10]/10.4.12<!--RN 40797--><!--RN 41466-->    |
 
 > [!NOTE]
-> Versions that are not listed in the overview above were not released in official DataMiner upgrade packages.
+>
+> - Versions not listed above were not released in official DataMiner upgrade packages.
+> - As of .NET 8, DataMiner no longer installs .NET automatically. Manually install the [ASP.NET Core Runtime Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet) available for the .NET version that matches your DxM version.
 
 ## Consulting logging for the DxM
 

@@ -49,3 +49,6 @@ public class Script
  }
 }
 ```
+
+> [!NOTE]
+> From version 2.0.2 of the SRM framework feature release track (Dev Pack) onwards<!-- RN40481 -->, it is possible to finish a permanent booking while defining a post-roll time. To do so, change the timing of that booking using `ChangeTime`/`TryChangeTime` like in the example above, by changing the end date to a time in the near future and setting the appropriate post-roll time. Providing a post-roll time is not supported when a permanent booking is finished using `Finish`/`TryFinish`. Although the timing of contributing bookings will be adapted accordingly if appropriate, no post-roll time will be set for the contributing bookings. In case orchestration is required, you will need to change the timing for each of them separately.

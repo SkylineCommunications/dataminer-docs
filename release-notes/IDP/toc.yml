@@ -1,10 +1,8 @@
 items:
+  - name: IDP 1.5.1
+    topicUid: IDP_1.5.1
   - name: IDP 1.5.0
-    items:
-      - name: New features and changes
-        topicUid: IDP_1.5.0
-      - name: Addendum CU1 (preview)
-        topicUid: IDP_1.5.0_CU1
+    topicUid: IDP_1.5.0
   - name: IDP 1.2.1
     topicUid: IDP_1.2.1
   - name: IDP 1.2.0

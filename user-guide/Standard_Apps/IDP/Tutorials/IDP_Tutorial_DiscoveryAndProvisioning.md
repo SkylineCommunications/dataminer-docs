@@ -167,4 +167,4 @@ Proceed as follows:
 Congratulations, you have provisioned your first element with IDP!
 
 > [!NOTE]
-> To be granted DevOps points for taking this tutorial, take a screenshot of the newly created element and the *Managed Elements* table and either send it to [thunder@skyline.be](mailto:thunder@skyline.be) or upload it via the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/).
+> To be granted DevOps Points for taking this tutorial, take a screenshot of the newly created element and the *Managed Elements* table and either send it to [thunder@skyline.be](mailto:thunder@skyline.be) or upload it via the [Dojo tutorials page](https://community.dataminer.services/learning-courses-tutorials/).

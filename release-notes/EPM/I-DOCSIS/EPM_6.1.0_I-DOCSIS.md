@@ -6,7 +6,7 @@ uid: EPM_6.1.0_I-DOCSIS
 
 ## New features
 
-#### CCAP decoupled from Generic DOCSIS CM Collector connector \[ID_32627\]
+#### CCAP decoupled from Generic DOCSIS CM Collector connector \[ID 32627\]
 
 To improve performance, the CCAP connection and all associated logic have been removed from the Generic DOCSIS CM Collector connector. Parameters that were filled in based on CCAP data have also been removed.
 
@@ -15,7 +15,7 @@ In addition, a number of new parameters have been introduced:
 - *SNMP Interval* and *Virtual Interval*: These parameters allow you to configure the frequency at which the different SNMP and virtual are polled, respectively.
 - Virtual Execution Time: This parameter shows how long it takes for a command to be executed on the virtual interface.
 
-#### Improvements related to the decoupling of CCAPs from the CM collector \[ID_32630\]
+#### Improvements related to the decoupling of CCAPs from the CM collector \[ID 32630\]
 
 To further support the removal of CCAPs from the CM collector, the CM Overview, CM US QAM, CM DS QAM, QAM US and QAM DS tables have been adjusted to reflect the fact that CCAPs have been decoupled from the CM collector.
 
@@ -28,7 +28,7 @@ In addition, in the Arris E6000 CCAP Platform, Casa Systems CCAP Platform, CISCO
 
 ### Enhancements
 
-#### Multiple I-DOCSIS front-end enhancements \[ID_32629\]
+#### Multiple I-DOCSIS front-end enhancements \[ID 32629\]
 
 Multiple enhancements have been implemented to the I-DOCSIS front end:
 
@@ -37,7 +37,7 @@ Multiple enhancements have been implemented to the I-DOCSIS front end:
 - Multiple tables have been adjusted to reflect the fact that CCAP data has been decoupled from the CM collectors.
 - Collector registration has been adjusted. Now the IDs for CCAP and CM collector are both placed in the table, in the format CCAPDataMinerID/CCAPElementID\|CMCollectorDataMinerID/CMCollectorElementID.
 
-#### Multiple I-DOCSIS back-end enhancements \[ID_32631\]
+#### Multiple I-DOCSIS back-end enhancements \[ID 32631\]
 
 Multiple enhancements have been implemented to the I-DOCSIS back end:
 
@@ -47,7 +47,7 @@ Multiple enhancements have been implemented to the I-DOCSIS back end:
 - Collector registration has been adjusted. Now the IDs for CCAP and CM collector are both placed in the table, in the format CCAPDataMinerID/CCAPElementID\|CMCollectorDataMinerID/CMCollectorElementID.
 - A back-end registration table has been added, which makes it possible to map view tables.
 
-#### New messaging Automation scripts using InterApp communication \[ID_32632\]
+#### New messaging Automation scripts using InterApp communication \[ID 32632\]
 
 The existing EPM messaging logic using Correlation and Automation has been replaced with 3 new Automation scripts that use InterApp communication:
 

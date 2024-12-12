@@ -8,9 +8,11 @@ Regardless of whether you are restoring the backup to the DMA it was taken from 
 
 To prepare the destination server, there are several possibilities:
 
-- Install a blank, fully functional DataMiner Agent, as described in the DataMiner Installation Guide.
+- Install a blank, fully functional DataMiner Agent, as described under [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
-- Clear the configuration of an existing DMA using the [Factory reset tool](xref:Factory_reset_tool). This is highly recommended over manually clearing the configuration; however, it is only possible if the DMA is using DataMiner 10.0.12 or higher.
+- Create a virtual machine using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk).
+
+- Clear the configuration of an existing DMA using the [Factory reset tool](xref:Factory_reset_tool). This is highly recommended over manually clearing the configuration.
 
 - Manually clear the configuration of an existing DMA:
 
@@ -106,7 +108,7 @@ To prepare the destination server, there are several possibilities:
 
       1. Connect to the server using the user credentials that were used to configure OpenSearch.
 
-      1. Stop OpenSearch by going to the Command Prompt or Powershell window that is running OpenSearch and either entering CTRL+C or closing the window.
+      1. Stop OpenSearch by going to the Command Prompt or Powershell window that is running OpenSearch and either entering Ctrl+C or closing the window.
 
       1. Open the *opensearch.yaml* file and look for *path.data*.
 

@@ -12,7 +12,7 @@ uid: ClassLibrary_Range_1.4
 
 ### 1.4.0.1
 
-#### New TableMatrixHelper class [ID_35302]
+#### New TableMatrixHelper class [ID 35302]
 
 The *TableMatrixHelper* class will read out the mappings and options of a table matrix dummy parameter and forward this information to the *MatrixHelper* class.
 

@@ -14,7 +14,7 @@ When initializing a Cassandra Cluster migration, the process of generating new a
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.0 [CU19], 10.4.0 [CU7], or 10.4.10<!--RN 40476-->.
 
 ## Description
 

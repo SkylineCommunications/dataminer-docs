@@ -4,15 +4,14 @@ uid: Creating_a_DMS_on_dataminer_services
 
 # Creating a new DMS on dataminer.services
 
-> [!IMPORTANT]
-> You must be a member of an [organization](xref:Pricing_Usage_based_service#organization) to create a new DaaS instance and have sufficient [DataMiner credits](xref:Order_DataMiner_credits).
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>Prefer to watch a video instead of reading? Watch <a href="https://community.dataminer.services/courses/kata-11/">Kata #11: Create a DMS on dataminer.services</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
 
-1. Log on to [dataminer.services](https://dataminer.services).
-
-   > [!TIP]
-   > For more detailed information, see [Logging on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
-   >
-   > See also: [Kata #11: Create a DMS on dataminer.services](https://community.dataminer.services/courses/kata-11/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+1. [Log on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
 1. Next to *DataMiner Systems*, click *Add a DataMiner System*.
 

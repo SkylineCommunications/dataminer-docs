@@ -4,6 +4,8 @@ uid: Protocol.Chains.Chain.Field.DiagramTitleFormat
 
 # DiagramTitleFormat element
 
+<!-- RN 14442, RN 14468 -->
+
 Specifies a custom title for the diagram box.
 
 ## Type
@@ -23,9 +25,7 @@ The following placeholders are supported:
 - {pid:x} inserts the value of the specified field row cell (x denotes the column parameter ID to be included).
 - {rowDK} inserts the display key.
 
-To include a new line or tab, use '\n' or '\t', respectively.
-
-*Feature introduced in DataMiner 9.5.1 (RN 14442, RN 14468).*
+To include a new line or tab, use "\n" or "\t", respectively.
 
 ## Examples
 

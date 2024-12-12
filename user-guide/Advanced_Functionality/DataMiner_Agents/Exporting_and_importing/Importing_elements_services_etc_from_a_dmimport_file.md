@@ -44,3 +44,4 @@ To import a .dmimport file:
 >   - Keep the existing information template in the DMS, and not import the information template from the package.
 >   - Overwrite the existing information template in the DMS.
 >   - Import the information template from the package with a new name.
+> - If you are running a DataMiner System prior to version 10.4.9/10.5.0 and import a package that includes SNMPv3 elements exported from systems running DataMiner 10.4.9/10.5.0 or higher, all [SNMPv3 credentials](xref:SNMPv3_Connection) will be lost and will have to be re-entered manually. If you used the [DataMiner Cube Credentials Library](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication) to configure the SNMPv3 credentials, you will always need to re-enter the credentials manually after an import, regardless of your DataMiner version.

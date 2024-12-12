@@ -29,7 +29,7 @@ It is possible that different version ranges are maintained in parallel but we s
 
 ### Branch
 
-- A new branch number is used to support multiple versions that contain distinct differences (e.g. different protocol types, subsets of a driver, etc.).
+- A new branch number is used to support multiple versions that contain distinct differences (e.g. different protocol types, subsets of a connector, etc.).
 - Different branch ranges are maintained in parallel unless a range is explicitly marked as obsolete.
 - Range: [1 ... n]
 - Examples:
@@ -40,7 +40,7 @@ It is possible that different version ranges are maintained in parallel but we s
 
 ### System version
 
-- A new system version number is used when a system dependency has increased, and it is not possible to keep the driver compatible with previous versions. For example, the data source with which the connector communicates has a new firmware version which is not backwards compatible.
+- A new system version number is used when a system dependency has increased, and it is not possible to keep the connector compatible with previous versions. For example, the data source with which the connector communicates has a new firmware version that is not backwards compatible.
 
 - Different data source ranges are maintained in parallel unless a range is explicitly marked as obsolete.
 - Range: [0 ... n]
@@ -63,8 +63,8 @@ It is possible that different version ranges are maintained in parallel but we s
 
 ### Minor change
 
-- A new minor change version number indicates an iteration in the driver range consisting of new features, fixes and/or changes.
-- This number is not included in the driver version range as previous iterations are never maintained in parallel.
+- A new minor change version number indicates an iteration in the connector range consisting of new features, fixes and/or changes.
+- This number is not included in the connector version range as previous iterations are never maintained in parallel.
 - Range:  [1 ... n]
 - If the suffix _Bx is added, where x is a number in the range [1...n], this indicates a version build that is still being developed. For example: 1.0.0.5_B1.
 - Examples:

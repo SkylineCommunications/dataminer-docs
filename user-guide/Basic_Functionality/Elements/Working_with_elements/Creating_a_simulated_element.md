@@ -1,12 +1,13 @@
 ---
 uid: Creating_a_simulated_element
+keywords: element simulation
 ---
 
 # Creating a simulated element
 
 To create a simulated element:
 
-1. Verify if a simulation file is available that uses the relevant protocol. To do so, in the folder *C:\\Skyline DataMiner\\simulations\\*, look for an .xml file with a file name consisting of the term “Simulation” and the name of the protocol.
+1. Verify if a simulation file is available that uses the relevant protocol. To do so, in the folder *C:\\Skyline DataMiner\\simulations\\*, look for an .xml file with a file name consisting of the term "Simulation" and the name of the protocol.
 
    If no simulation file is available yet, it will first need to be created. See [Creating a simulation file](#creating-a-simulation-file).
 
@@ -30,11 +31,12 @@ To create a simulated element:
 > [!TIP]
 > See also: [Simulated elements](xref:Simulated_elements)
 
+> [!NOTE]
+> To create a simulated spectrum element, use the [Skyline Spectrum Simulation](https://docs.dataminer.services/connector/doc/Skyline_Spectrum_Simulation.html) connector.
+
 ## Creating a simulation file
 
-From DataMiner 10.0.6 onwards, simulation files can be created in DataMiner Cube.
-
-To do so:
+To create a simulation file based on an element in DataMiner Cube:
 
 1. Right-click the element for which you want to create a simulation file.
 
@@ -46,6 +48,9 @@ To do so:
 
 1. On the DMA, go to the following directory: *C:\\Skyline DataMiner\\Protocols\\NAME\\VERSION\\*
 
-1. Copy the file named Simulation_ELEMENTNAME.xml to the following directory: *C:\\Skyline DataMiner\\simulations\\*
+1. Copy the file named *Simulation_ELEMENTNAME.xml* to the following directory: *C:\\Skyline DataMiner\\simulations\\*
 
 1. Restart the DMA.
+
+> [!NOTE]
+> DataMiner will automatically use the simulation file of which the *protocol* and *version* attributes match the protocol and protocol version of the element. If no such file can be found, then the one of which only the *protocol* attribute matches the protocol of the element will be used. If you have several simulation files for the same protocol and version and want one specific file to be used, make sure only that file is present in the *C:\\Skyline DataMiner\\simulations\\* folder.

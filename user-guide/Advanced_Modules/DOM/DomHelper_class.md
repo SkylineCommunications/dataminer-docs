@@ -59,7 +59,7 @@ if (!traceData.HasSucceeded())
 
 ### Reading DOM data
 
-When reading DOM data using the `Read(FilterElement<T>)` methods, you can opt to do a single read or retrieve the results in pages. When there is a chance that a lot of records can be returned, using paging is highly recommend. This ensures that a response is not too large, as large responses can have a negative impact on performance. It also gives you the chance to make a decision in the code to abort the action without having to retrieve all records.
+When reading DOM data using the `Read(FilterElement<T>)` methods, you can opt to do a single read or retrieve the results in pages. When there is a chance that a lot of records can be returned, using paging is highly recommended. This ensures that a response is not too large, as large responses can have a negative impact on performance. It also gives you the chance to make a decision in the code to abort the action without having to retrieve all records.
 
 **Read all without paging:**
 
@@ -87,6 +87,132 @@ while (pagingHelper.MoveToNextPage())
     // Handle current page of data...
 }
 ```
+
+Once you have read the `DomInstance`, you can get or alter the field values. See the [examples](xref:DOM_Altering_values_of_a_DomInstance) for more info on how to do this.
+
+> [!TIP]
+> When reading multiple `DomInstances` using their IDs, it is more efficient to build one large OR filter and read them in a single call instead of retrieving them one by one. The `Tools.RetrieveBigOrFilter()` helper method is available for this. See [DOM best practices](xref:DOM_best_practices#try-to-limit-the-number-of-crud-calls) for more info.
+
+#### Filtering
+
+To specify which `DomInstances` need to be retrieved from the database, you can build filters using the `FilterElement` structures.
+
+Start a filter by specifying the field you want to filter on using the `DomInstanceExposers` class. Once a field is selected, choose the comparer and provide a value. These filters can then be concatenated with AND and OR conditions.
+
+**Base properties:**
+
+|Field                |Type        |Supported Comparer |
+|---------------------|------------|-------------------|
+|Id                   |string      |Equal, NotEqual |
+|SectionDefinitionIds |List\<Guid> |Contains, NotContains |
+|SectionIds           |List\<Guid> |Contains, NotContains |
+|DomDefinitionId      |Guid        |Equal, NotEqual |
+|Name                 |string      |Equal, NotEqual, Contains, NotContains |
+|StatusId             |string      |Equal, NotEqual, Contains, NotContains |
+|LastModified         |DateTime    |LessThan, GreaterThan |
+|LastModifiedBy       |string      |Equal, NotEqual, Contains, NotContains |
+|CreatedAt            |DateTime    |LessThan, GreaterThan |
+|CreatedBy            |string      |Equal, NotEqual, Contains, NotContains |
+
+**Fields:**
+
+These are the supported comparers when filtering on `DomInstance` values using the `DomInstanceExposers.FieldValues.DomInstanceField()` exposer.
+
+|Field Type                |Supported Comparer |
+|--------------------------|-------------------|
+|string                    |Equal, NotEqual, Contains, NotContains |
+|double                    |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|long                      |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|TimeSpan                  |Equal, LessThan*, GreaterThan* |
+|Boolean                   |Equal |
+|DateTime                  |Equal, NotEqual, LessThan, GreaterThan |
+|GenericEnum (int)         |Equal, NotEqual, LessThan, LessThanOrEqual, GreaterThan, GreaterThanOrEqual |
+|List GenericEnum (int)    |Contains |
+|GenericEnum (string)      |Equal, NotEqual, Contains, NotContains |
+|List GenericEnum (string) |Contains |
+|Guid                      |Equals, NotEquals |
+|List Guid                 |Contains |
+|List string               |Contains |
+
+*Only supported for [STaaS](xref:STaaS)
+
+> [!NOTE]
+> From DataMiner 10.4.5/10.4.0 [CU2] onwards, `string` filters are handled as case-insensitive when using the OpenSearch database (which is how STaaS has handled `string` reads since its introduction). Prior to DataMiner version 10.4.5/10.4.0 [CU2], `string` filters are handled as case-sensitive.
+
+**Examples:**
+
+```csharp
+var domHelper = new DomHelper(engine.SendSLNetMessages, "vehicles_app");
+
+// DOM instances linked to a specific DOM definition
+var domDefinitionId = Guid.Parse("838fbabb-3651-43fb-84ea-568995b4d066"); // Vehicles definition
+var definitionFilter = DomInstanceExposers.DomDefinitionId.Equal(domDefinitionId);
+var allForDefinition = domHelper.DomInstances.Read(definitionFilter);
+
+// DOM instances in the 'maintenance' status
+var statusFilter = DomInstanceExposers.StatusId.Equal("maintenance");
+var inMaintenance = domHelper.DomInstances.Read(statusFilter);
+
+// DOM instances updated in the last 24 hours
+var lastModifiedFilter = DomInstanceExposers.LastModified.GreaterThan(DateTime.UtcNow.AddHours(-1));
+var recentlyModified = domHelper.DomInstances.Read(lastModifiedFilter);
+
+// DOM instances where the value for FieldDescriptor with the given ID equals 'AZN-070'
+var fieldDescriptorId = new FieldDescriptorID(Guid.Parse("aa675f01-c841-4572-83c9-b2710f41ea39")); // Car license plate
+var valueFilter = DomInstanceExposers.FieldValues.DomInstanceField(fieldDescriptorId).Equal("AZN-070");
+var specificCar = domHelper.DomInstances.Read(valueFilter);
+
+// DOM instances matching all of the above using an AND filter
+var andFilter = new ANDFilterElement<DomInstance>(definitionFilter, statusFilter, lastModifiedFilter, valueFilter);
+var andResult = domHelper.DomInstances.Read(andFilter);
+
+// DOM instances matching any of the above using OR filter 
+var orFilter = new ORFilterElement<DomInstance>(definitionFilter, statusFilter, lastModifiedFilter, valueFilter);
+var orResult = domHelper.DomInstances.Read(orFilter);
+
+// Combinations of OR and AND filters
+orFilter = new ORFilterElement<DomInstance>(lastModifiedFilter, statusFilter, valueFilter);
+andFilter = new ANDFilterElement<DomInstance>(definitionFilter, orFilter);
+var combinedResult = domHelper.DomInstances.Read(andFilter);
+```
+
+> [!NOTE]
+> Although, this section explained reading `DomInstances`, the same principles apply to all other DOM objects. Building filters is done using exposer classes and reading is done using the `DomHelper`. For example, for `SectionDefinitions`, this could be `domHelper.SectionDefinitions.Read(SectionDefinitionExposers.Name.Contains("My Name"))`.
+
+> [!IMPORTANT]
+> On a DataMiner Agent that is using OpenSearch or Elasticsearch, there is a default limit of 1024 clauses in a query. This means that you can only concatenate a maximum of 1024 field filters using an "OR" filter. If this limit is not sufficient, you can adjust it using the "indices.query.bool.max_clause_count" option in [OpenSearch](https://opensearch.org/docs/latest/install-and-configure/configuring-opensearch/index-settings/) or [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/search-settings.html).
+>
+> For STaaS, there is no such hard limit, but we do recommend keeping the queries short.
+
+#### Sorting
+
+It is also possible to sort your results based on a specific field of a DOM instance (both core fields and `FieldValues`). This sorting is done in the database, which should result in good performance. To apply this sorting, call the `OrderBy` or `OrderByDescending` methods on a filter. This will return a query object that can be passed to the read method of the helper.
+
+**Examples:**
+
+```csharp
+var domHelper = new DomHelper(engine.SendSLNetMessages, "vehicles_app");
+
+// Build a filter
+var filter = DomInstanceExposers.StatusId.Equal("maintenance");
+
+// Sort ascending on name
+var onNameQuery = filter.OrderBy(DomInstanceExposers.Name);
+var orderedOnName = domHelper.DomInstances.Read(onNameQuery);
+
+// Sort descending on last modified
+var onModifiedQuery = filter.OrderByDescending(DomInstanceExposers.LastModified);
+var orderedOnModified = domHelper.DomInstances.Read(onModifiedQuery);
+
+// Sort on certain field (e.g. 'Vehicle mass')
+var fieldDescriptorId = new FieldDescriptorID(Guid.Parse("253700a1-1293-4dfa-997b-86efb601d894")); // Vehicle mass
+var field = DomInstanceExposers.FieldValues.DomInstanceField(fieldDescriptorId);
+var onFieldQuery = filter.OrderBy(field);
+var orderedOnField = domHelper.DomInstances.Read(onFieldQuery);
+```
+
+> [!NOTE]
+> Natural sorting is not supported. Enabling this option on the sorting API could result in poor performance since this will be executed in memory and requires all data to be loaded from the database.
 
 ### Multiple instances
 

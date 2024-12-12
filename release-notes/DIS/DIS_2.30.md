@@ -8,13 +8,13 @@ uid: DIS_2.30
 
 ### IDE
 
-#### Protocol solutions will now by default have a Documentation folder \[ID_27596\]
+#### Protocol solutions will now by default have a Documentation folder \[ID 27596\]
 
 When you create a new protocol solution or convert an existing protocol to a protocol solution, from now on, a “Documentation” folder will automatically be added to the solution.
 
 In this folder, you can store all information about the protocol in question.
 
-#### Broken references to DataMiner DLLs will now automatically be detected and fixed \[ID_27604\]
+#### Broken references to DataMiner DLLs will now automatically be detected and fixed \[ID 27604\]
 
 When it creates a QAction project, DIS will look for the DataMiner DLLs in the C:\\Skyline DataMiner\\ folder. If it does not find them there, it will check the DIS extension folder. However, the name of that folder is a unique ID that differs from one installation to another and from one update to another. As a result, a QAction project can easily contain broken DLL references.
 
@@ -22,13 +22,13 @@ From now on, when DIS detects a broken DLL reference, it will automatically try 
 
 ### Validator
 
-#### New checks and error messages \[ID_26852\]\[ID_27639\]\[ID_27819\]
+#### New checks and error messages \[ID 26852\]\[ID 27639\]\[ID 27819\]
 
 The following checks and error messages have been added.
 
 | Check ID | Error message name                  | Error message                                                                                                                                              |
 |----------|-------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.23.6   | InvalidCombinationOfSyntax1And2 | Connections can not be defined simultaneously via 'Protocol/Type' and 'Protocol/Connections'.                                                              |
+| 1.23.6   | InvalidCombinationOfSyntax1And2 | Connections cannot be defined simultaneously via 'Protocol/Type' and 'Protocol/Connections'.                                                              |
 | 1.23.7   | UnrecommendedSyntax2                | Unrecommended use of the 'Protocol/Connections' syntax.                                                                                                    |
 | 3.10.1   | NonExistingParam                    | The SLProtocol.FillArrayNoDelete method references a non-existing table.                                                                                   |
 | 3.10.2   | ParamMissingHistorySet              | The SLProtocol.FillArrayNoDelete overload with DateTime argument requires the historySet attribute to be set to true.                                      |
@@ -65,7 +65,7 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### Protocol Schema: Miscellaneous updates \[ID_27564\]\[ID_27566\]\[ID_27709\]\[ID_27772\]
+#### Protocol Schema: Miscellaneous updates \[ID 27564\]\[ID 27566\]\[ID 27709\]\[ID 27772\]
 
 The Protocol XML schema has been updated.
 
@@ -74,7 +74,7 @@ The Protocol XML schema has been updated.
 - PortSettings.FlowControl.DefaultValue, PortSettings.FlowControl.Range.From and PortSettings.FlowControl.Range.To can now all be set to “no”.
 - Protocol.Params.Param.Interprete.Exceptions.Exception.Display is now of type non-empty string.
 
-#### UOM Schema: New units added \[ID_27568\]
+#### UOM Schema: New units added \[ID 27568\]
 
 The following units have been added to the UOM Schema:
 
@@ -87,13 +87,13 @@ The following units have been added to the UOM Schema:
 
 ### Enhancements
 
-#### Validator: Enhanced endless loop check \[ID_27554\]
+#### Validator: Enhanced endless loop check \[ID 27554\]
 
 Up to now, in some cases, false positives could be raised when there was an Action of type “make” or “crc” and a trigger on the related command.
 
 Also, when a (potential) endless loop is detected, from now on, the result of the check will contain the protocol implementation path rather than the DataMiner processing order path.
 
-#### Validator - Major Change Check: Miscellaneous enhancements \[ID_27720\]
+#### Validator - Major Change Check: Miscellaneous enhancements \[ID 27720\]
 
 A number of enhancements have been made to the Major Change Check functionality.
 
@@ -134,10 +134,10 @@ A number of enhancements have been made to the Major Change Check functionality.
 
 ### Fixes
 
-#### Class Library: Name of an element with a RealConnection could no longer be updated  \[ID_27783\]
+#### Class Library: Name of an element with a RealConnection could no longer be updated  \[ID 27783\]
 
 In some cases, the name of an element with a RealConnection (SNMP, HTTP, SERIAL, etc.) could no longer be updated.
 
-#### Class Library: A matrix output could not be disconnected when it was connected to the first input \[ID_27784\]
+#### Class Library: A matrix output could not be disconnected when it was connected to the first input \[ID 27784\]
 
 Due to an error in the Matrix Helper class, in some cases, an output could not be disconnected when it was connected to the first input.

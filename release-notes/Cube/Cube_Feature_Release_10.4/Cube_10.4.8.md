@@ -8,22 +8,24 @@ uid: Cube_Feature_Release_10.4.8
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.8](xref:General_Feature_Release_10.4.8).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.8](xref:General_Feature_Release_10.4.8).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.8](xref:Web_apps_Feature_Release_10.4.8).
 
 ## Highlights
 
-- [Enabling or disabling SLAnalytics features either system-wide or for specific parameters [ID_39692]](#enabling-or-disabling-slanalytics-features-either-system-wide-or-for-specific-parameters-id_39692)
-- [Visual Overview: New RegexMatch placeholder [ID_39763]](#visual-overview-new-regexmatch-placeholder-id_39763)
+- [Enabling or disabling SLAnalytics features either system-wide or for specific parameters [ID 39692]](#enabling-or-disabling-slanalytics-features-either-system-wide-or-for-specific-parameters-id-39692)
+- [Visual Overview: New RegexMatch placeholder [ID 39763]](#visual-overview-new-regexmatch-placeholder-id-39763)
 
 ## New features
 
-#### DataMiner Cube will now reflect all changes to user-defined APIs in real time [ID_39238]
+#### DataMiner Cube will now reflect all changes to user-defined APIs in real time [ID 39238]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 DataMiner Cube now subscribes to the *ApiTokenChangedEventMessage* and the *ApiDefinitionChangedEventMessage*, which were introduced in DataMiner version 10.5.0/10.4.6. As a result, the *User-Defined APIs* section of *System Center* and the *Automation* module will now reflect all changes to user-defined APIs in real time.
 
-#### Enabling or disabling SLAnalytics features either system-wide or for specific parameters [ID_39692]
+#### Enabling or disabling SLAnalytics features either system-wide or for specific parameters [ID 39692]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
@@ -68,7 +70,7 @@ To configure for which parameters those features are enabled, do the following:
    > [!NOTE]
    > In the trend template editor, the *Trend icons*, *Anomalies* and/or *Proactive alarms* settings are only displayed when you click the cogwheel button and select the *Allow Augmented Operations configuration* option.
 
-#### Visual Overview: New RegexMatch placeholder [ID_39763]
+#### Visual Overview: New RegexMatch placeholder [ID 39763]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
@@ -97,7 +99,7 @@ For example, in `[RegexMatch:[sep:,$][a-z]$a,Bc$index=0$separator=%]` the defaul
 > - If the regular expression or the input are empty, the placeholder will return an empty string.
 > - The ']' character cannot be used as a separator.
 
-#### Element cards: Documents page now supports subfolders [ID_39876]
+#### Element cards: Documents page now supports subfolders [ID 39876]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 <!-- See also 'Fixes' -->
@@ -108,13 +110,13 @@ On element/service level, it is now possible to use subfolders on the *Documents
 
 ### Enhancements
 
-#### Cube logging: Entries regarding known UI issues now include a link to a page where you can find more information [ID_39768]
+#### Cube logging: Entries regarding known UI issues now include a link to a page where you can find more information [ID 39768]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 In the Cube logging, entries regarding known UI issues will now include a link to a page on <https://docs.dataminer.services/> where you can find more information about the issue in question.
 
-#### Surveyor: Root view will always be expanded when no expanded views can be found in the user settings of the user [ID_39848]
+#### Surveyor: Root view will always be expanded when no expanded views can be found in the user settings of the user [ID 39848]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
@@ -122,7 +124,7 @@ When a user expands a view in the Surveyor, this is saved in the user settings o
 
 From now on, the root view will always be expanded when no expanded views can be found in the user settings of the user.
 
-#### Some user permissions will no longer be visible when Cube is connected to a DaaS system [ID_39870]
+#### Some user permissions will no longer be visible when Cube is connected to a DaaS system [ID 39870]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
@@ -133,7 +135,7 @@ When Cube is connected to a DaaS system, the following user permissions will no 
 - *Modules > System Configuration > Indexing engine*
 - *Modules > System Configuration > Tools > Allow access to query executor*
 
-#### System Center - Logging: Additional log files available in DataMiner tab [ID_39938]
+#### System Center - Logging: Additional log files available in DataMiner tab [ID 39938]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
@@ -173,7 +175,7 @@ In the *Logging* section of *System Center*, a number of additional log files ca
 
 ### Fixes
 
-#### Incorrect `CubeHost: Unable to load assembly` errors in Cube log files on client computers [ID_39767]
+#### Incorrect `CubeHost: Unable to load assembly` errors in Cube log files on client computers [ID 39767]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
@@ -186,25 +188,25 @@ On client computers, up to now, incorrect `CubeHost: Unable to load assembly` er
 - System.Numerics.Vectors
 - System.Runtime.CompilerServices.Unsafe
 
-#### Visual Overview: Opening a visual overview containing an image could cause Cube to become unresponsive [ID_39770]
+#### Visual Overview: Opening a visual overview containing an image could cause Cube to become unresponsive [ID 39770]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When you opened a visual overview that containing an image, in some cases, DataMiner Cube could become unresponsive.
 
-#### Alarm Console: Problem when sorting alarms by the PollingIP column [ID_39804]
+#### Alarm Console: Problem when sorting alarms by the PollingIP column [ID 39804]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When, in the Alarm Console, you tried to sort alarms by the *PollingIP* column, Cube could throw an exception or even stop working when that column contained IP addresses starting with "http://" or "https://".
 
-#### Visual Overview: Show/hide condition would not be evaluated correctly when the Show data field contained a placeholder that included a DataMinerTime placeholder [ID_39833]
+#### Visual Overview: Show/hide condition would not be evaluated correctly when the Show data field contained a placeholder that included a DataMinerTime placeholder [ID 39833]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When a shape was configured to be shown or hidden depending on the value of a placeholder that included a [DataMinerTime] placeholder, in some cases, the show/hide condition would not be evaluated correctly.
 
-#### Problem when clicking a 'DataMiner web apps' link when using a STaaS or DaaS system [ID_39840]
+#### Problem when clicking a 'DataMiner web apps' link when using a STaaS or DaaS system [ID 39840]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
@@ -215,13 +217,13 @@ In DataMiner Cube, there are two places where you can find a link to your DMA's 
 
 Up to now, when you clicked one of those links when using a STaaS or DaaS system, an ERR_NAME_NOT_RESOLVED error would be returned.
 
-#### URLs pointing to the DataMiner Agent to which Cube was connected via gRPC would contain an incorrect hostname [ID_39851]
+#### URLs pointing to the DataMiner Agent to which Cube was connected via gRPC would contain an incorrect hostname [ID 39851]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
 When Cube was connected to a DataMiner Agent via a gRPC connection, in some cases, the URLs of e.g. log files would contain an incorrect hostname, making it impossible to retrieve those files from the DataMiner Agent.
 
-#### Documents: Issues fixed [ID_39876]
+#### Documents: Issues fixed [ID 39876]
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 <!-- See also 'New features' -->

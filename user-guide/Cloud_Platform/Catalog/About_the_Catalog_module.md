@@ -10,16 +10,20 @@ As part of dataminer.services, the Catalog module allows Skyline customers and D
 
 ## Accessing the Catalog module
 
-1. Go to <https://dataminer.services>, and [sign in](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+There are several ways to access the Catalog module:
 
-1. On the dataminer.services landing page, click *Catalog*.
+- Go directly to <https://catalog.dataminer.services/>.
 
-> [!TIP]
-> From DataMiner 10.2.9/10.3.0 onwards, you can navigate directly to the catalog from DataMiner Cube by selecting *Catalog* in the *Apps* pane.
+- Go to <https://dataminer.services>, [sign in](xref:Logging_on_to_the_DataMiner_Cloud_Platform), and click *Catalog* on the landing page.
+
+- In DataMiner Cube, go to *Apps* > *Catalog* (from DataMiner 10.2.9/10.3.0 onwards).
+
+> [!NOTE]
+> While you do not have to sign in to view Catalog items, not all functionality will be available if you are not signed in. To sign in, click the button in the top-right corner of the Catalog UI.
 
 ## About Catalog items
 
-A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner System. [Different types of Catalog items](#supported-catalog-item-types) are supported. For example, an item could be a single connector, or it could be an application package containing multiple dashboards, Automation scripts, and connectors.
+A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner System. Different types of Catalog items are supported. For example, an item could be a single connector, or it could be an application package containing multiple dashboards, Automation scripts, and connectors.
 
 ### Public and private Catalog items
 
@@ -29,32 +33,17 @@ A Catalog item is a small package that contains one or more artifacts that can b
 
 ### Versioning of Catalog items
 
-Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [Semver](https://semver.org/) versioning is enforced. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
+Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [semantic versioning](https://semver.org/) is recommended. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
+
+For Catalog items that follow semantic versioning, versions are grouped by **range**. A range is defined by the first three indicators of a version (e.g. **7.1.2**.33).
+
+Tags can be assigned to specific versions and ranges, for instance to indicate the main range of a connector. If you are a member of the organization that published an item, you can manage these tags via the ![Context menu button](~/user-guide/images/Catalog_context_menu.png) button for each item.<!-- RN 40030 -->
+
+The Catalog will recommend certain versions based on the following conditions:
+
+- The latest version of a range that is tagged as the "Main" version (visualized in green).
+- The latest version of a range that is tagged with a custom tag (visualized in gray).
+- If neither of the above apply, the latest version of the highest active range will be recommended.
 
 > [!NOTE]
-> For items of type Connector, the version must have the format mentioned under [Protocol version semantics](xref:ProtocolVersionSemantics).
-
-### Supported Catalog item types
-
-At present, the following types of Catalog items are supported:
-
-- Ad Hoc Data Source
-- Automation script
-- Best Practices Analyzer
-- ChatOps Extension
-- Connector
-- Dashboard
-- Data Query
-- Data Transformer
-- Enhanced Service Model
-- Function Definition
-- Life Cycle Service Orchestration
-- Low-Code App
-- Profile-Load Script
-- Sample Solution
-- Scripted Connector
-- SLA Model
-- Solution
-- Standard Solution
-- User-defined API
-- Visual Overview
+> Versions and ranges that are not supported (i.e. deprecated ranges and versions marked as pre-release or unlisted) are not shown by default. To view these, use the *Unsupported versions* toggle button.<!-- RN 39903 -->

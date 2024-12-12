@@ -103,6 +103,6 @@ The test above will reveal if the router is sensitive to sending too many comman
 
 For example:
 
-- Reduce the speed of the polling cycle used to monitor the current state of the router. Make sure it is in line with the recommendations in the development guide (see [Timers](xref:Timers1)).
+- Reduce the speed of the polling cycle used to monitor the current state of the router. Make sure it is in line with the best practices in the development guide (see [Timers](xref:ConnectorBestPracticesTimers)).
 
 - When setting a crosspoint, use the router’s “SET” confirmation to refresh the matrix component instead of sending the “Status Request” again. This will avoid an overload of this command when a large number of crosspoints are set.

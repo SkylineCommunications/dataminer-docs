@@ -1,5 +1,6 @@
 ---
 uid: ZiineDemoSystem
+description: Use the Ziine Demo System to explore DataMiner features in a functioning DataMiner System. To connect, you need a dataminer.services account.
 ---
 
 # Ziine Demo System

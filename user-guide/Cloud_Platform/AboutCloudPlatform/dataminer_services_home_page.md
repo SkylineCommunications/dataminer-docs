@@ -14,7 +14,7 @@ To access the dataminer.services home page:
 
 At the top of the dataminer.services home page, you will find links to the different available dataminer.services apps:
 
-- [Project Collaboration](xref:Collaboration)
+- [Project Collaboration](xref:About_the_Project_Collaboration_module)
 
 - [DataMiner Catalog](xref:About_the_Catalog_module)
 

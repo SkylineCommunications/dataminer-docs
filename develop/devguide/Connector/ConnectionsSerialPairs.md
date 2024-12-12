@@ -20,7 +20,7 @@ Multiple pairs can be defined in a protocol (in the Pairs tag), each defined usi
 
 This pair can then be added to a group which in turn is added to a timer. In the following example, the timer will add the group to the group execution queue at the specified interval.
 
-![alt text](../../images/Connection_Types_-_Pairs_Building_Blocks.svg "Timer executing a pair")
+![alt text](~/develop/images/Connection_Types_-_Pairs_Building_Blocks.svg "Timer executing a pair")
 
 > [!NOTE]
 >
@@ -31,7 +31,7 @@ This pair can then be added to a group which in turn is added to a timer. In the
 
 Suppose two pairs are defined, where each pair consists of a command and a response. The two responses use the same parameter A:
 
-![alt text](../../images/two_responses_using_same_parameter.svg "Two responses using the same parameter")
+![alt text](~/develop/images/two_responses_using_same_parameter.svg "Two responses using the same parameter")
 
 In addition, two triggers are defined, one after response 1 and another one after response 2. Both triggers trigger the execution of a QAction that processes the value of parameter A. Now consider the following sequence:
 
@@ -52,17 +52,17 @@ When working with multiple responses, it is important to perform a "clear respon
 
 The following example illustrates why the other response(s) need to be cleared upon matching a response. Consider a pair consisting of one command and two responses. Response 1 matches a device response indicating the command succeeded while response 2 matches a device response indicating an error occurred. Parameter C is a status parameter displayed on a page indicating whether commands sent to the device succeed or not and gets updated on a change of either parameter A or B.
 
-![alt text](../../images/Pair_with_two_responses_1.svg "Pair with two responses, response 1 matches")
+![alt text](~/develop/images/Pair_with_two_responses_1.svg "Pair with two responses, response 1 matches")
 
 Now suppose a command has been sent to the device and the device responds the command succeeded. Therefore, response 1 matches and parameter A receives value "OK".
 
 The next command that is sent to the device fails. Consequently, response 2 matches and parameter C gets updated indicating "Error".
 
-![alt text](../../images/Pair_with_two_responses_2.svg "Pair with two responses, response 2 matches")
+![alt text](~/develop/images/Pair_with_two_responses_2.svg "Pair with two responses, response 2 matches")
 
 The following command that is executed again succeeds. However, as response 1 has not been cleared when a response matching response 2 has been received, parameter A already holds value "OK" and therefore parameter C will not get updated as there is no change event.
 
-![alt text](../../images/Pair_with_two_responses_3.svg "Pair with two responses, response 1 matches again")
+![alt text](~/develop/images/Pair_with_two_responses_3.svg "Pair with two responses, response 1 matches again")
 
 In the example above, response 1 should be cleared upon matching response 2 and vice versa. The following protocol fragment illustrates how to clear response 1 after receiving response 2:
 

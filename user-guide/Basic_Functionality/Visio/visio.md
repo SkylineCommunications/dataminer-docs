@@ -1,5 +1,6 @@
 ---
 uid: visio
+description: Custom user interfaces in DataMiner Visual Overview are based on Microsoft Visio drawings enriched with DataMiner functionality using shape data.
 ---
 
 # Visio drawings
