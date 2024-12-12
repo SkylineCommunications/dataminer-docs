@@ -102,6 +102,12 @@ When you tried to open the DataMiner Cube desktop app from the DataMiner Taskbar
 
 When one of the base alarms of an incident alarm got cleared, in some cases, the incident alarm would incorrectly still show the cleared alarm as a base alarm.
 
+#### DataMiner Cube desktop app: Problem when closing the app while configuration files were being updated [ID 41576]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When the DataMiner Cube desktop app was closed while its configuration files were being updated, in some cases, these files could get corrupted.
+
 #### Correlation: Problem when correlation rules were updated in bulk [ID 41644]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
