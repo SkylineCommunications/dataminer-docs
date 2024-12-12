@@ -100,7 +100,14 @@ Secondly, it will set the BrokerGateway softlaunch flag to true. This flag can b
 </SLNet>
 ```
 
-Afterwards, it will write the MessageBrokerConfig.json file at **C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json**. This file is used when creating default Sessions using the DataMinerMessageBroker.API(.Native) library. The file will be rewritten to reference the BrokerGateway url and api key path. Content might look similar to this:
+Then, the NAS and NATS services will be stopped and their startup type set to "Manual".
+At a later stage, the Migration tool might delete the services instead.
+The ResetCluster API (https://\<ip\>/BrokerGateway/api/clusteringapi/resetcluster) is called on BrokerGateway to create a new NATS cluster. The NATS binaries will be installed at **C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server** and started as a service called "nats-server".
+
+The ResetCluster API call is only executed by one of the NATSMigration instances, if migrating a cluster.
+The node chosen to execute this command is the one with the lowest alphabetical IP. The other nodes will simply wait until a nats session using BrokerGateway can be created.
+
+Lastly, it will write the MessageBrokerConfig.json file at **C:\ProgramData\Skyline Communications\DataMiner\MessageBrokerConfig.json**. This file is used when creating default Sessions using the DataMinerMessageBroker.API(.Native) library. The file will be rewritten to reference the BrokerGateway url and api key path. Content might look similar to this:
 
 ```json
 {
@@ -110,13 +117,6 @@ Afterwards, it will write the MessageBrokerConfig.json file at **C:\ProgramData\
   }
 }
 ```
-
-Then, the NAS and NATS services will be stopped and their startup type set to "Manual".
-At a later stage, the Migration tool might delete the services instead.
-The ResetCluster API (https://\<ip\>/BrokerGateway/api/clusteringapi/resetcluster) is called on BrokerGateway to create a new NATS cluster. The NATS binaries will be installed at **C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server** and started as a service called "nats-server".
-
-The ResetCluster API call is only executed by one of the NATSMigration instances, if migrating a cluster.
-The node chosen to execute this command is the one with the lowest alphabetical IP. The other nodes will simply wait until a nats session using BrokerGateway can be created.
 
 The NATSMigration tool has a hardcoded 10 minute timeout in which the ResetCluster operation has to finish. This is the same time frame you have to start the migration (enter the "install" command in the tool) on all nodes in the cluster.
 
