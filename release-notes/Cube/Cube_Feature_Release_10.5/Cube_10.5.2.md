@@ -40,6 +40,12 @@ From now on, it will show the following message instead:
 
 `xxx is currently swarming`
 
+#### Visual Overview: Enhanced performance when loading inline visual overviews [ID 41590]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance has increased when loading inline visual overviews.
+
 #### About box: Enhancements made to 'License' tab [ID 41654]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
@@ -95,3 +101,15 @@ When you tried to open the DataMiner Cube desktop app from the DataMiner Taskbar
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When one of the base alarms of an incident alarm got cleared, in some cases, the incident alarm would incorrectly still show the cleared alarm as a base alarm.
+
+#### Correlation: Problem when correlation rules were updated in bulk [ID 41644]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When a number of correlation rules were updated in bulk, in some cases, some would either be skipped or not processed correctly.
+
+#### Data Display: Thresholds shown in 'Templates' tab would be incorrect when the alarm template was part of a template group [ID 41645]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When, in Data Display, you double-clicked a parameter and then opened the *Templates* tab, the parameter thresholds would be incorrect when the alarm template was part of a template group.

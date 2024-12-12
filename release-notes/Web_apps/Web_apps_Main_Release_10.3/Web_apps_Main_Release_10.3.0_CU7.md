@@ -8,7 +8,9 @@ uid: Web_apps_Main_Release_10.3.0_CU7
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU7](xref:General_Main_Release_10.3.0_CU7).
+>
+> - For release notes related to the general DataMiner release, see [General Main Release 10.3.0 CU7](xref:General_Main_Release_10.3.0_CU7).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.3.0 CU7](xref:Cube_Main_Release_10.3.0_CU7).
 
 ### Enhancements
 

@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 11 December 2024 - Enhancement - Admin app - Improved usage export file [ID 41695]
+
+From now on, when you export the usage information from the *Usage* page in the [Admin app](https://admin.dataminer.services), the export file will have a better name, which will include the organization name and a readable timestamp. The metrics in the file itself will now also contain the organization and DMS name, and if the option to include column titles was selected, there will be better column titles at the the top.
+
 ### 9 December 2024 - Enhancement - Home/Admin/Catalog/Marketplace/Sharing - App title now works as link that can be opened in new tab [ID 41524]
 
 When you click the title of the Admin, Catalog, Home, Marketplace, or Sharing apps with the middle mouse button, this will now open the app again in a new tab. In addition, you can now also right-click the title to among others open the app in a new tab or in a new window.
