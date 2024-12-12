@@ -107,6 +107,22 @@ During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will 
 
 A number of security enhancements have been made.
 
+#### Clearer error message when generating a PDF report based on a dashboard fails [ID 41661]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+In the *Automation*, *Correlation* and *Scheduler* modules, you can generate a PDF report based on a dashboard.
+
+When an error occurred while generating the PDF file, up to now, the following error message would be logged in the log file of *Automation*, *Correlation* or *Scheduler*:
+
+```txt
+2024/12/09 08:45:02.635|SLScheduler.exe 10.5.2449.76|27128|26140|CRequest::Request|ERR|5|Remote Request for -SLNet- on -VT_EMPTY- failed.  (hr = 0x8013150C)
+Type 126/0/0
+MESSAGE: Type 'Skyline.DataMiner.Net.ReportsAndDashboards.ReportsAndDashboardsException' in Assembly 'SLNetTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12' is not marked as serializable.
+```
+
+A clearer error message will now be logged. The `ReportsAndDashboardsException` has been marked as serializable.
+
 #### SLLogCollector packages can now include a memory dump of the w3wp process in case of web API issues [ID 41664]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
