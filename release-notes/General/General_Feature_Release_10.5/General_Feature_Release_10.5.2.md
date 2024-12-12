@@ -179,6 +179,12 @@ During start-up, in some cases, DataMiner would use an incorrect IP address when
 
 When you zoomed to a different layer while an alarm level filter was active, in some cases, markers that did not match the filter would become visible for a split second before disappearing again.
 
+#### Service & Resource Management: Debug lines would incorrect get logged multiple times in SLResourceManagerScheduler.txt [ID 41568]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+While the booking scheduler task queue was being processed, in some cases, debug lines would incorrectly get logged multiple times in the *SLResourceManagerScheduler.txt* log file.
+
 #### DataMiner installer: Problem when upgrading a Hotfix or Cumulative Update version to Feature Version 10.5.1 [ID 41579]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->

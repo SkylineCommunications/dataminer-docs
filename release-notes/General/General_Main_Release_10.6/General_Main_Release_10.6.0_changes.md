@@ -122,4 +122,8 @@ From now on, SLLogCollector packages can also include a memory dump of the *w3wp
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Service & Resource Management: Debug lines would incorrect get logged multiple times in SLResourceManagerScheduler.txt [ID 41568]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+While the booking scheduler task queue was being processed, in some cases, debug lines would incorrectly get logged multiple times in the *SLResourceManagerScheduler.txt* log file.
