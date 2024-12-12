@@ -11,9 +11,9 @@ items:
 - name: DataMiner modules
   topicUid: Part4AdvancedModules
   href: Advanced_Modules/toc.yml
-- name: DataMiner Standard Apps, Frameworks & Solutions
-  topicUid: Part5StandardApps
-  href: Standard_Apps/toc.yml
+- name: DataMiner Frameworks
+  topicUid: DataMiner_Frameworks
+  href: Frameworks/toc.yml
 - name: dataminer.services
   topicUid: dataminerservices
   href: Cloud_Platform/toc.yml

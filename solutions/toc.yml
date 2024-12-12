@@ -1,0 +1,200 @@
+items:
+  - name: Standard Solutions
+    items:
+    - name: dataminer.MediaOps
+      topicUid: MediaOps
+      items:
+        - name: Installing dataminer.MediaOps
+          topicUid: Installing_MediaOps
+        - name: MediaOps applications
+          topicUid: MediaOps_apps
+          items:
+            - name: People & Organizations
+              topicUid: People_Organizations
+              items:
+                - name: Managing contacts
+                  topicUid: PO_Managing_Contacts
+                - name: Managing teams
+                  topicUid: PO_Managing_Teams
+                - name: Managing organizations
+                  topicUid: PO_Managing_Organizations
+    - name: DataMiner PTP
+      topicUid: SolPTP
+      items:
+        - name: Installing the DataMiner PTP app
+          topicUid: Installing_the_DataMiner_PTP_app
+        - name: Using the DataMiner PTP app
+          topicUid: Using_the_DataMiner_PTP_app
+          items:
+            - name: Types of PTP devices
+              topicUid: Types_of_PTP_devices
+            - name: Overview of the DataMiner PTP app UI
+              topicUid: Overview_of_the_DataMiner_PTP_app_UI
+    - name: DataMiner EPM
+      topicUid: SolEPM
+      items:
+        - name: DataMiner EPM D-DOCSIS
+          topicUid: EPM_D-DOCSIS
+          items:
+            - name: EPM D-DOCSIS architecture
+              topicUid: D-DOCSIS_architecture
+            - name: EPM D-DOCSIS components
+              topicUid: D-DOCSIS_components
+            - name: Supported technologies for D-DOCSIS
+              topicUid: D-DOCSIS_supported_technologies
+            - name: EPM D-DOCSIS deployment
+              topicUid: D-DOCSIS_deployment
+            - name: Available parameters in D-DOCSIS
+              topicUid: D-DOCSIS_parameters
+              items:
+                - name: Network
+                  topicUid: D-DOCSIS_parameters_network
+                - name: Market
+                  topicUid: D-DOCSIS_parameters_market
+                - name: Hub
+                  topicUid: D-DOCSIS_parameters_hub
+                - name: CCAP Core
+                  topicUid: D-DOCSIS_parameters_ccap_core
+                - name: RPD
+                  topicUid: D-DOCSIS_parameters_rpd
+                - name: CM
+                  topicUid: D-DOCSIS_parameters_cm
+                - name: DPIC
+                  topicUid: D-DOCSIS_parameters_dpic
+                - name: DPIC Interface
+                  topicUid: D-DOCSIS_parameters_dpic_interface
+                - name: US Controller
+                  topicUid: D-DOCSIS_parameters_us_controller
+                - name: DS Controller
+                  topicUid: D-DOCSIS_parameters_ds_controller
+                - name: Fiber Node
+                  topicUid: D-DOCSIS_parameters_fiber_node
+                - name: Node Segment
+                  topicUid: D-DOCSIS_parameters_node_segment
+                - name: Service Group
+                  topicUid: D-DOCSIS_parameters_service_group
+                - name: DS Service Group
+                  topicUid: D-DOCSIS_parameters_ds_service_group
+                - name: US Service Group
+                  topicUid: D-DOCSIS_parameters_us_service_group
+                - name: Core Leaf
+                  topicUid: D-DOCSIS_parameters_core_leaf
+                - name: Spine
+                  topicUid: D-DOCSIS_parameters_spine
+                - name: Node Leaf
+                  topicUid: D-DOCSIS_parameters_node_leaf
+                - name: CIN Interface
+                  topicUid: D-DOCSIS_parameters_cin_interface
+                - name: Manufacturer
+                  topicUid: D-DOCSIS_parameters_manufacturer
+        #xPON TOC
+        - name: DataMiner EPM xPON
+          topicUid: EPM_xPON
+          items:
+            - name: EPM xPON architecture
+              topicUid: xPON_architecture
+            - name: EPM xPON components
+              topicUid: xPON_components
+              items:
+                - name: EPM xPON supported technologies
+                  topicUid: xPON_supported_technologies
+                - name: Standard EPM xPON ONT JSON definition
+                  topicUid: xPON_ONT_Json_definition
+            - name: EPM xPON deployment
+              topicUid: xPON_deployment
+            - name: Available parameters in EPM xPON
+              topicUid: xPON_KPI
+              items:
+                - name: EPM xPON parameter thresholds
+                  topicUid: xPON_parameters_thresholds
+                - name: EPM xPON ONT parameters
+                  topicUid: xPON_ONT
+        #xPON TOC END
+        - name: DataMiner EPM Integrated DOCSIS
+          topicUid: EPM_I-DOCSIS
+          items:
+            - name: EPM Integrated DOCSIS architecture
+              topicUid: I-DOCSIS_architecture
+            - name: EPM Integrated DOCSIS components
+              topicUid: I-DOCSIS_components
+            - name: Supported technologies for Integrated DOCSIS
+              topicUid: I-DOCSIS_supported_technologies
+            - name: EPM Integrated DOCSIS deployment
+              topicUid: I-DOCSIS_deployment
+            - name: EPM Integrated DOCSIS maps deployment
+              topicUid: I-DOCSIS_maps_deployment
+              items:
+                - name: Systems with one back-end element
+                  topicUid: I-DOCSIS_maps_deployment_one_backend
+                - name: Systems with multiple back-end elements
+                  topicUid: I-DOCSIS_maps_deployment_multiple_backends
+            - name: EPM Integrated DOCSIS GQI integration
+              topicUid: I-DOCSIS_GQI_Integration
+            - name: EPM Integrated DOCSIS passives integration
+              topicUid: I-DOCSIS_passives_integration
+            - name: EPM Integrated DOCSIS upgrade
+              topicUid: I-DOCSIS_upgrade
+            - name: Creating a new CCAP/CM pair
+              topicUid: I-DOCSIS_Create_CCAP_CM_pair
+            - name: Deleting a CCAP/CM pair
+              topicUid: I-DOCSIS_Delete_CCAP_CM_pair
+            - name: Available parameters in Integrated DOCSIS
+              topicUid: I-DOCSIS_parameters
+              items:
+                - name: Node Segment
+                  topicUid: I-DOCSIS_parameters_node_segment
+                - name: CM DS QAM CH
+                  topicUid: I-DOCSIS_parameters_cm_ds_qam_ch
+                - name: DS QAM CH
+                  topicUid: I-DOCSIS_parameters_ds_qam_ch
+                - name: CM US QAM CH
+                  topicUid: I-DOCSIS_parameters_cm_us_qam_ch
+                - name: US QAM CH
+                  topicUid: I-DOCSIS_parameters_us_qam_ch
+                - name: DS OFDM CH
+                  topicUid: I-DOCSIS_parameters_ds_ofdm_ch
+                - name: US OFDMA CH
+                  topicUid: I-DOCSIS_parameters_us_ofdma_ch
+                - name: Cable Modem
+                  topicUid: I-DOCSIS_parameters_cable_modem
+                - name: Thresholds
+                  topicUid: I-DOCSIS_parameters_thresholds
+                - name: PTP
+                  topicUid: I-DOCSIS_parameters_ptp
+        - name: DataMiner EPM VSAT
+          topicUid: EPM_VSAT
+          items:
+            - name: EPM VSAT architecture
+              topicUid: VSAT_architecture
+            - name: EPM VSAT components
+              topicUid: VSAT_components
+            - name: EPM VSAT deployment
+              topicUid: VSAT_deployment
+            - name: EPM VSAT topology
+              topicUid: VSAT_EPM_Topology
+            - name: EPM VSAT metrics
+              topicUid: VSAT_metrics
+            - name: Available parameters in VSAT
+              topicUid: VSAT_parameters
+        - name: DataMiner EPM Availability
+          topicUid: Availability_Overview
+          items:
+            - name: Deploying the DataMiner EPM Availability solution
+              topicUid: Availability_deployment
+            - name: Using the EPM Availability solution
+              topicUid: Availability_Using
+            - name: Available parameters in Availability
+              topicUid: Availability_parameters
+    - name: DataMiner Ping Monitoring
+      topicUid: PingMonitoring
+      items:
+        - name: Installing the Ping Monitoring tool
+          topicUid: Installing_Ping_Monitoring
+        - name: Accessing the Ping Monitoring tool
+          topicUid: Accessing_Ping_Monitoring
+        - name: Ping Monitoring UI overview
+          topicUid: Ping_Monitoring_UI
+        - name: Managing groups and destinations
+          topicUid: Ping_Monitoring_managing_groups_destinations
+        - name: Getting started tutorial
+          topicUid: Tutorial_Apps_Ping_Monitoring_App

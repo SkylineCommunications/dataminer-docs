@@ -45,7 +45,7 @@ description: Create a DataMiner System, and learn how to interact with DataMiner
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Standard_Apps/Standard_Apps.html" title="Standard apps" target="_self"><img src="~/user-guide/images/Docs_StandardApps_Frameworks_Solutions.svg" style="width:100%"></a>
+    <a href="/user-guide/Frameworks/DataMiner_Frameworks.html" title="DataMiner Frameworks" target="_self"><img src="~/user-guide/images/TBD.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Cloud_Platform/dataminerservices.html" title="dataminer.services" target="_self"><img src="~/user-guide/images/Docs_DataMinerServices.svg" style="width:100%"></a>
