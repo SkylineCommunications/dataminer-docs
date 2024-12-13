@@ -118,7 +118,7 @@ Because of a number of enhancements, overall performance has increased when upda
 
 #### Clearer error message when generating a PDF report based on a dashboard fails [ID 41661]
 
-<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- MR 10.5.0 - FR 10.5.2 -->
 
 In the *Automation*, *Correlation* and *Scheduler* modules, you can generate a PDF report based on a dashboard.
 
