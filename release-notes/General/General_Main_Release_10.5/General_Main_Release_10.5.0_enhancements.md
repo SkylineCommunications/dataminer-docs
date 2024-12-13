@@ -1044,3 +1044,9 @@ Up to now, a "Script started" information event would be generated each time a D
 Up to now, when a protocol performed multiple actions on a table, SLProtocol would not properly lock the array in which the data was stored. This could then lead to concurrent access to the array, causing the entries to get corrupted and SLProtocol to stop working when those corrupted entries were accessed.
 
 The above-mentioned array will now be locked to prevent the data from getting corrupted.
+
+#### SLLogCollector packages can now include a memory dump of the w3wp process in case of web API issues [ID 41664]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+From now on, SLLogCollector packages can also include a memory dump of the *w3wp* process in case of web API issues.
