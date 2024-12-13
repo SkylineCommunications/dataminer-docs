@@ -265,12 +265,6 @@ A number of issues that occurred while synchronizing files among agents in a DMS
 
 When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
 
-#### Parameter values that were never updated would incorrectly not be sent to a client application [ID 41414]
-
-<!-- MR 10.5.0 - FR 10.5.2 -->
-
-In some rare cases, parameter values would incorrectly not be sent to a client application, especially when those values were never updated.
-
 #### DataMiner would use an incorrect IP address when connecting to BrokerGateway during start-up [ID 41530]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
