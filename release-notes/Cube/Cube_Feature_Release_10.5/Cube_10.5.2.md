@@ -64,6 +64,12 @@ A number of enhancements have been made with regard to the listing of license in
 
 A number of security enhancements have been made.
 
+#### Visual Overview: Enhanced performance [ID 41668]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance of visual overviews has increased, especially when a large number of cards have been opened.
+
 ### Fixes
 
 #### Alarm Console: Problem when an alarm tab and an AlarmSummary shape were being loaded simultaneously [ID 41484]
