@@ -53,6 +53,12 @@ MESSAGE: Type 'Skyline.DataMiner.Net.ReportsAndDashboards.ReportsAndDashboardsEx
 
 A clearer error message will now be logged. The `ReportsAndDashboardsException` has been marked as serializable.
 
+#### SLLogCollector packages can now include a memory dump of the w3wp process in case of web API issues [ID 41664]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+From now on, SLLogCollector packages can also include a memory dump of the *w3wp* process in case of web API issues.
+
 #### EPM systems: Enhanced performance when aggregating large data sets [ID 41685]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
