@@ -131,3 +131,9 @@ When a number of correlation rules were updated in bulk, in some cases, some wou
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When, in Data Display, you double-clicked a parameter and then opened the *Templates* tab, the parameter thresholds would be incorrect when the alarm template was part of a template group.
+
+#### Memory leak when logging out of DataMiner Cube [ID 41712]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you logged out of DataMiner Cube, up to now, certain event handlers would leak memory.
