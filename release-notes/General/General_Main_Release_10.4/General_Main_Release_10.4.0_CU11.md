@@ -37,6 +37,12 @@ From now on, when the History Manager API is used after the History Manager has 
 
 Because of a number of enhancements, overall performance has increased when updating alarm information on STaaS systems.
 
+#### EPM systems: Enhanced performance when aggregating large data sets [ID 41685]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Because of a number of enhancements, on EPM systems, overall performance has increased when aggregating large data sets.
+
 ### Fixes
 
 #### SLNet could stop working due to NATS throwing an exception [ID 41396]
