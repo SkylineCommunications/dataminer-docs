@@ -30,6 +30,9 @@ This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configurati
 
       - `C:\Skyline DataMiner\Files\SyncInfo\{DO_NOT_REMOVE_68EE4388-7EF6-4cb4-B38F-5E0045175340}.xml`
 
+   > [!CAUTION]
+   > Only remove users that appear without their domain prefix in the `name` attribute, i.e. `username` instead of `CONTOSA\username`.
+
    1. Restart the DMAs.
 
 ## Issue description
