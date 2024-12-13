@@ -46,6 +46,12 @@ From now on, it will show the following message instead:
 
 Because of a number of enhancements, overall performance has increased when loading inline visual overviews.
 
+#### Data Display: Table layout changes will now be saved automatically [ID 41608]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+Up to now, when you rearranged the columns of a table, you had to right-click in the table header and select *Columns > Save layout* to save the changes you made. From now on, when you rearrange the columns of a table, the changes will be saved automatically.
+
 #### About box: Enhancements made to 'License' tab [ID 41654]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
