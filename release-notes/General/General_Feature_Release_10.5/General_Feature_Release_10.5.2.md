@@ -152,6 +152,12 @@ Because of a number of enhancements, on EPM systems, overall performance has inc
 
 In some rare cases, SLNet could stop working due to NATS throwing an exception.
 
+#### Parameter values that were never updated would incorrectly not be sent to a client application [ID 41414]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+In some rare cases, parameter values would incorrectly not be sent to a client application, especially when those values were never updated.
+
 #### NT_FILL_ARRAY_WITH_COLUMN call would silently fail when providing a string[] instead of an object[] for the keys and values [ID 41511]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
