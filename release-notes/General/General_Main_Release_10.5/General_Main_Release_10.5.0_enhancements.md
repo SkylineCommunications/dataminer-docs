@@ -1044,19 +1044,3 @@ Up to now, a "Script started" information event would be generated each time a D
 Up to now, when a protocol performed multiple actions on a table, SLProtocol would not properly lock the array in which the data was stored. This could then lead to concurrent access to the array, causing the entries to get corrupted and SLProtocol to stop working when those corrupted entries were accessed.
 
 The above-mentioned array will now be locked to prevent the data from getting corrupted.
-
-#### Clearer error message when generating a PDF report based on a dashboard fails [ID 41661]
-
-<!-- MR 10.5.0 - FR 10.5.2 -->
-
-In the *Automation*, *Correlation* and *Scheduler* modules, you can generate a PDF report based on a dashboard.
-
-When an error occurred while generating the PDF file, up to now, the following error message would be logged in the log file of *Automation*, *Correlation* or *Scheduler*:
-
-```txt
-2024/12/09 08:45:02.635|SLScheduler.exe 10.5.2449.76|27128|26140|CRequest::Request|ERR|5|Remote Request for -SLNet- on -VT_EMPTY- failed.  (hr = 0x8013150C)
-Type 126/0/0
-MESSAGE: Type 'Skyline.DataMiner.Net.ReportsAndDashboards.ReportsAndDashboardsException' in Assembly 'SLNetTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12' is not marked as serializable.
-```
-
-A clearer error message will now be logged. The `ReportsAndDashboardsException` has been marked as serializable.
