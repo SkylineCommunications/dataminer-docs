@@ -6,7 +6,7 @@ uid: KI_LDAP_users_unable_to_log_in_after_upgrade
 
 ## Affected versions
 
-- Main Releases versions from DataMiner 10.4.0 [CU4] to 10.4.0 [CU9]
+- Main Release versions from DataMiner 10.4.0 [CU4] to 10.4.0 [CU9]
 
 - Feature Release versions from DataMiner 10.4.7 to 10.4.12
 
