@@ -27,7 +27,7 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
     <a href="/user-guide/Getting_started/Getting_Started.html" title="User Guide" target="_self"><img src="images/Docs_UserGuide.svg" style="width:100%"></a>
   </div>  
   <div class="columnhome">
-    <a href="/solutions/solution_index.html" title="solutions" target="_self"><img src="images/TBD.svg" style="width:100%"></a>
+    <a href="/solutions/solution_index.html" title="DataMiner Solutions" target="_self"><img src="images/Docs_DMSolutions.svg" style="width:100%"></a>
   </div>
 </div>
 
@@ -43,8 +43,11 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
   </div>
 </div>
 
-<div style="display: flex; align-items: center;">
+<div style="display: flex; margin-top: 20px;">
   <a href="xref:Tutorials">
-    <img src="~/images/Docs_DataMinerTutorials.svg" alt="DataMiner tutorials" style="width: 897; margin-right: 8px;">
+    <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; background-color: #DEF7FF; color: #000000; width: 80; text-align: center; display: flex; align-items: center; justify-content: center;">
+      <b style="font-size: 30px; color: #00517d;">DATAMINER TUTORIALS</b>
+      <img src="~/images/Docs_Tutorials.svg" alt="DataMiner tutorials" style="width: 50px; margin-left: 10px;">
+    </div>
   </a>
 </div>
