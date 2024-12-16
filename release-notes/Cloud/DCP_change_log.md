@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 16 December 2024 - Enhancement - Catalog Api - Decrease loading time of Catalog type filters [ID 41734]
+
+An improvement has been done to make requests to get the Catalog item categories and types more performant by adding a cache. This will reduce the loading times of obtaining the type filters in the Catalog.
+
 ### 16 December 2024 - Enhancement - Catalog - Replaced banner image [ID 41731]
 
 On the homepage, the background banner image is now replaced with a CSS gradient to reduce initial load times.
@@ -18,9 +22,27 @@ On the homepage, the background banner image is now replaced with a CSS gradient
 On the details page of a Catalog item, actions should no longer clip outside the parent container.
 Actions besides the 'Deploy' action will now be grouped in a context menu.
 
+### 16 December 2024 - Enhancement - Catalog Api - Small memory usage improvement [ID 41676]
+
+An improvement has been done to reduce the amount of memory consumed when registering a Catalog item version.
+
+### 16 December 2024 - Enhancement - Admin app - Catalog Key API auditing [ID 41667]
+
+The following actions are now included in the Audit records accessible in the Admin app :
+
+- registration of a Catalog item using an organization key
+- registration of a Catalog item version using an organization key
+- get Catalog item info using an organization key
+- update the publishing state of a Catalog item using an organization key
+
 ### 16 December 2024 - Fix - Admin - Prevent sidebar pollution [ID 41594]
 
 When quickly switching organizations, it should no longer create duplicate items in the sidebar.
+
+### 16 December 2024 - Fix - Artifact Uploader - Uploading an item did not link it to organization [ID 41587] [ID 41588]
+
+when using the Skyline.DataMiner.CICD.Tools.CatalogUpload tool, the catalog item would be available for Skyline Communications but not for the organization executing the upload.
+This has been fixed.
 
 ### 16 December 2024 - Enhancement - Catalog - Improved initial load times [ID 41573]
 
