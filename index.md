@@ -43,4 +43,8 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
   </div>
 </div>
 
-![DataMiner tutorials](~/images/Docs_DataMinerTutorials.svg)
+<div style="display: flex; align-items: center;">
+  <a href="xref:Tutorials">
+    <img src="~/images/Docs_DataMinerTutorials.svg" alt="DataMiner tutorials" style="width: 897; margin-right: 8px;">
+  </a>
+</div>
