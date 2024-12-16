@@ -977,6 +977,15 @@ From now on, the deprecated NT Notify type *NT_PING* can no longer be used.
 
 Up to now, when an error occurred while a booking is being created, in some cases, the entry added to the *SLResourceManager.txt* log file would contain insufficient information about the reason why the error had occurred. From now on, this log entry will contain more detailed information.
 
+#### DataMiner upgrade packages now include the latest Visual C++ Redistributable [ID 41173]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+All DataMiner upgrade packages now include the latest Visual C++ Redistributable.
+
+> [!NOTE]
+> From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
+
 #### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
 
 <!-- MR 10.5.0 - FR 10.5.1 -->

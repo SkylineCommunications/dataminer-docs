@@ -46,6 +46,12 @@ From now on, it will show the following message instead:
 
 Because of a number of enhancements, overall performance has increased when loading inline visual overviews.
 
+#### Data Display: Table layout changes will now be saved automatically [ID 41608]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+Up to now, when you rearranged the columns of a table, you had to right-click in the table header and select *Columns > Save layout* to save the changes you made. From now on, when you rearrange the columns of a table, the changes will be saved automatically.
+
 #### About box: Enhancements made to 'License' tab [ID 41654]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
@@ -57,6 +63,12 @@ A number of enhancements have been made with regard to the listing of license in
 <!-- 41655: MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 A number of security enhancements have been made.
+
+#### Visual Overview: Enhanced performance [ID 41668]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance of visual overviews has increased, especially when a large number of cards have been opened.
 
 ### Fixes
 
@@ -102,6 +114,12 @@ When you tried to open the DataMiner Cube desktop app from the DataMiner Taskbar
 
 When one of the base alarms of an incident alarm got cleared, in some cases, the incident alarm would incorrectly still show the cleared alarm as a base alarm.
 
+#### DataMiner Cube desktop app: Problem when closing the app while configuration files were being updated [ID 41576]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When the DataMiner Cube desktop app was closed while its configuration files were being updated, in some cases, these files could get corrupted.
+
 #### Correlation: Problem when correlation rules were updated in bulk [ID 41644]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
@@ -113,3 +131,9 @@ When a number of correlation rules were updated in bulk, in some cases, some wou
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When, in Data Display, you double-clicked a parameter and then opened the *Templates* tab, the parameter thresholds would be incorrect when the alarm template was part of a template group.
+
+#### Memory leak when logging out of DataMiner Cube [ID 41712]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you logged out of DataMiner Cube, up to now, certain event handlers would leak memory.

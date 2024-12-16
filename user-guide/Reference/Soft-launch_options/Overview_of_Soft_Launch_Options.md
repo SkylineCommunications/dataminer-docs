@@ -99,7 +99,7 @@ Enables the use of DOM data in dashboards and applications.
 
 ### DynamicUnits
 
-Allows you to enable dynamic units in Data Display in DataMiner Cube. When enabled, many numerical values are automatically converted into more readable formats with appropriate units. For example, 11 939 964 kB is displayed as 11.4 GB.
+Allows you to enable dynamic units in Data Display in DataMiner Cube. When enabled, many numerical values are automatically converted into more readable formats with appropriate units. For example, 11 939 964 kB is displayed as 11.9 GB.
 
 The following units are automatically converted:
 

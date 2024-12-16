@@ -35,15 +35,6 @@ When, in e.g. DataMiner Cube, you try to add a DataMiner Agent to the DataMiner 
 
 The checks with regard to database compatibility have now been enhanced.
 
-#### DataMiner upgrade packages now include the latest Visual C++ Redistributable [ID 41173]
-
-<!-- MR 10.6.0 - FR 10.5.2 -->
-
-All DataMiner upgrade packages now include the latest Visual C++ Redistributable.
-
-> [!NOTE]
-> From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
-
 #### SLAnalytics: Synchronization of the configuration.xml file can now be forced via Cube [ID 41270]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
@@ -106,12 +97,6 @@ During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will 
 <!-- 41475: MR 10.6.0 - FR 10.5.2 -->
 
 A number of security enhancements have been made.
-
-#### SLLogCollector packages can now include a memory dump of the w3wp process in case of web API issues [ID 41664]
-
-<!-- MR 10.6.0 - FR 10.5.2 -->
-
-From now on, SLLogCollector packages can also include a memory dump of the *w3wp* process in case of web API issues.
 
 ### Fixes
 
