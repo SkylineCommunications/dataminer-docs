@@ -222,7 +222,7 @@ Enables the Query Filter component in the Dashboards app.
 > - Prior to DataMiner 10.0.13, this option also enables the Generic Interface feature in the Dashboards app, which becomes available from 10.0.13 onwards (partially using the GenericInterface soft-launch option).
 > - Prior to DataMiner 10.1.5, this option also enables the Node Edge component, which becomes available by default from DataMiner 10.1.5 onwards.
 
-- **Minimum version**: 10.0.4
+- **Minimum version**: 10.0.10
 - **Release version**: 10.3.9/10.4.0 ([RN 36822](xref:Web_apps_Feature_Release_10.3.9#dashboards-app--low-code-apps-query-filter-component-now-officially-released-id-33530-id-33547-id-34037-id-36822-id-36832))
 
 ### ReportsAndDashboardsScheduler
