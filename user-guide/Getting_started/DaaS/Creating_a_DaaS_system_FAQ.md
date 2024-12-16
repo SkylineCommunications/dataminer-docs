@@ -71,12 +71,11 @@ For more information, see [Data resilience and backups](xref:STaaS#data-resilien
 
 ### Is it possible to make a local backup of all data?
 
-This is currently not possible. We are taking regular backups of all systems that can be used by us to restore systems.
-You can always contact support if you would like to get access to a backup of your system.
+This is currently not possible. Skyline takes regular backups of all systems, which they can use to restore systems. If you want to get access to a backup of your system, please contact <daas@dataminer.services>.
 
 ### Is it possible to copy data from Azure and store it locally?
 
-You can use the DataMiner API to copy data from Azure at no additional subscription cost. Note that you will need a Site-To-Site VPN to gain access to the DataMiner API.
+You can use the DataMiner API to copy data from Azure at no additional subscription cost. This requires a site-to-site VPN connection. To set up this connection, contact <daas@dataminer.services>.
 
 ### How can a DaaS system connect to on-premises and cloud resources?
 
