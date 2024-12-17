@@ -112,7 +112,7 @@ items:
             topicUid: Pushing_Tokens_Into_A_Process
           - name: Integrating gateways
             topicUid: PA_Integrating_Gateways
-  - name: Service & Resource Management Framework
+  - name: Service & Resource Management framework
     items:
       - name: About SRM
         topicUid: About_SRM
