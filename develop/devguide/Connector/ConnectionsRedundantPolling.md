@@ -19,9 +19,9 @@ The option [redundantPolling](xref:Protocol.Type-communicationOptions#redundantp
 >
 > Note that for smart-serial connections, in order to get a timeout (enabling the redundant polling connections to switch) the pair must contain a response. Alternatively, you can implement logic to set the communication state using the <xref:NT_CHANGE_COMMUNICATION_STATE> Notify call.
 
-## Switching implementation
+## Scenarios that trigger redundant polling switching
 
-This section describes the situations that will trigger a switch between polling interfaces during an element's runtime.
+This section describes when this feature would switch between polling interfaces during an element's runtime.
 
 ### On timeout after retries of a single group
 
@@ -38,17 +38,20 @@ If the polled SNMP parameter returns an error such as *NO SUCH NAME*, DataMiner 
 
 ## Other polling scenarios
 
+This section describes how redundant polling would behave with other connection configurations that could be made on the protocol.
+
 ### SNMP polling of specific interfaces using the ipid attribute
 
 Switching of interfaces is triggered on timeout after retries on that specific group/parameter. After this, DataMiner will proceed to poll for the next group in the queue.
 
 See also: [ipid attribute](xref:Protocol.Params.Param.SNMP.OID-ipid)
 
-### On SNMP Get through QActions (NT Notify Type 295)
+### On SNMP Get through QActions
 
-Switching of interfaces is **not triggered**.
+When using *NT_SNMP_GET* or *NT_SNMP_RAW_GET* in a QAction, switching of interfaces are **not triggered**.
 
 See also: [NT Notify Type 295](xref:NT_SNMP_GET)
+		  [NT Notify Type 424](xref:NT_SNMP_RAW_GET)
 
 ### SNMP polling of specific interfaces through the connection attribute in a Group
 
