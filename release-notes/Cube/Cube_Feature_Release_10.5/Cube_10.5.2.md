@@ -88,6 +88,14 @@ A number of security enhancements have been made.
 
 Because of a number of enhancements, overall performance of visual overviews has increased, especially when a large number of cards have been opened.
 
+#### Automation app: Enhanced drag-and-drop of scripts between folders [ID 41678]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+A number of enhancements have been made with regard to dragging and dropping Automation scripts between folders.
+
+For example, up to now, when you dragged a script from one folder to another after having selected another script first, in some cases, the script you had selected first would incorrect be moved to the other folder.
+
 ### Fixes
 
 #### Alarm Console: Problem when an alarm tab and an AlarmSummary shape were being loaded simultaneously [ID 41484]
