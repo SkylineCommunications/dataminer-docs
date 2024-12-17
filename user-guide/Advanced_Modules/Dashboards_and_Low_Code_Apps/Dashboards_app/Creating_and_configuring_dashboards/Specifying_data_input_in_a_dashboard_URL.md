@@ -4,9 +4,7 @@ uid: Specifying_data_input_in_a_dashboard_URL
 
 # Specifying data input in a dashboard URL
 
-From DataMiner 10.2.11/10.3.0 onwards<!--RN 34261-->, you can specify default data for a dashboard via URL parameters. This way, you can for instance specify the elements, parameters, views, etc. that need to be selected in the dashboard. You can pass the data using a [JSON object](#json-syntax) in the URL.
-
-If a dashboard has been configured with one or more components, it is possible to specify data input for this data in a dashboard URL as well. This way, you can immediately make the dashboard display specific data when it is opened. From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, you can pass the data using a JSON object in the URL. Prior to DataMiner 10.2.0/10.2.2, you can use the [legacy syntax](#legacy-syntax), which continues to be supported in recent DataMiner versions for now as well.
+In the URL of a dashboard, you can specify data input for the dashboard. This way, you can immediately make the dashboard display specific data when it is opened. From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, you can pass the data using a [JSON object](#json-syntax) in the URL. Prior to DataMiner 10.2.0/10.2.2, you can use the [legacy syntax](#legacy-syntax), which continues to be supported in recent DataMiner versions for now.
 
 > [!NOTE]
 >
