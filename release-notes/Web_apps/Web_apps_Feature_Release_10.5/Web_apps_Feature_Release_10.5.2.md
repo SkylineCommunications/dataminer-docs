@@ -35,6 +35,12 @@ Examples:
 
 ### Enhancements
 
+#### Dashboards/Low-Code Apps - Alarm table component: Enhanced performance when fetching history alarms [ID 41342]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Overall performance has increased when fetching history alarms. From now on, history alarms will be fetched whenever the alarm filter changes and will be kept in a cache.
+
 #### Web apps: Angular and other dependencies have been upgraded [ID 41488]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
