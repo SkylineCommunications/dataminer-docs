@@ -59,6 +59,12 @@ Video thumbnails will now have a default volume of 100%.
 
 Up to now, when you clicked the sound icon of a video thumbnail, the video would unmute, but the volume would stay at 0%. From now on, when a video is unmuted, its volume will be at 100%.
 
+#### Dashboards/Low-Code Apps: 'Link to data' dialog box has been redesigned [ID 41682]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+The *Link to data* dialog box has been redesigned. It will now offer a better overview, especially when a large number of entries are listed.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Timeline component: Boundaries of the vertical timeline sections would not be correct [ID 41514]
@@ -125,3 +131,9 @@ In some cases, *Table* and *Grid* components could incorrectly keep fetching que
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When a DOM instance was updated while a client connection was being closed, in some cases, the DOMHelper could stop working.
+
+#### Low-Code Apps: Problem when adding an 'Execute a script' action to a low-code app that was hosted on a dashboard gateway [ID 41697]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When you tried to add an *Execute a script* action to a low-code app that was hosted on a dashboard gateway, an error could be thrown due to a serialization issue.

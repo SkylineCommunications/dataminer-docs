@@ -8,7 +8,9 @@ uid: Web_apps_Feature_Release_10.3.8
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.8](xref:General_Feature_Release_10.3.8).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.3.8](xref:General_Feature_Release_10.3.8).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.8](xref:Cube_Feature_Release_10.3.8).
 
 ## Features
 

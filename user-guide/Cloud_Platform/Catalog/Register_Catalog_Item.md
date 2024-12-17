@@ -102,7 +102,6 @@ This file will contain all the necessary information to register a Catalog item 
 #   - System Health: If the Catalog item is intended to monitor the health of a system.
 #   - User-Defined API: If the Catalog item is a DataMiner Automation script designed as a user-defined API.
 #   - Visual Overview: If the Catalog item is a Microsoft Visio design.
-
 type: '<fill in type here>'
 
 # [Required] 
@@ -159,7 +158,8 @@ owners:
 #   Cannot contain newlines.
 #   Cannot contain leading or trailing whitespace characters.
 tags:
-  - '<fill in tag here>'
+  - '<fill in tag 1 here>'
+  - '<fill in tag 2 here>'
 ```
 
 ## Registering a new version with the API

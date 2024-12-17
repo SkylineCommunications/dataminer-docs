@@ -266,8 +266,10 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: LDAP/ActiveDirectory domain users no longer able to log in after upgrade
+            topicUid: KI_LDAP_users_unable_to_log_in_after_upgrade
           - name: SNMPv3 elements not loaded correctly after upgrade
-            topicuid: KI_SNMPv3_elements_broken_after_upgrade
+            topicUid: KI_SNMPv3_elements_broken_after_upgrade
           - name: Inter-DMA connection issues when ExternalAuthentication is used
             topicUid: KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used
           - name: Problem after upgrading Window OS to Windows Server 2022

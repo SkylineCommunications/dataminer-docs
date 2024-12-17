@@ -46,7 +46,7 @@ The logging of the arp command will now also include the MAC address that claime
 
 #### DataMiner upgrade packages now include the latest Visual C++ Redistributable [ID 41173]
 
-<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- MR 10.5.0 - FR 10.5.2 -->
 
 All DataMiner upgrade packages now include the latest Visual C++ Redistributable.
 
@@ -116,11 +116,33 @@ The above-mentioned array will now be locked to prevent the data from getting co
 
 Because of a number of enhancements, overall performance has increased when updating alarm information on STaaS systems.
 
+#### Clearer error message when generating a PDF report based on a dashboard fails [ID 41661]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In the *Automation*, *Correlation* and *Scheduler* modules, you can generate a PDF report based on a dashboard.
+
+When an error occurred while generating the PDF file, up to now, the following error message would be logged in the log file of *Automation*, *Correlation* or *Scheduler*:
+
+```txt
+2024/12/09 08:45:02.635|SLScheduler.exe 10.5.2449.76|27128|26140|CRequest::Request|ERR|5|Remote Request for -SLNet- on -VT_EMPTY- failed.  (hr = 0x8013150C)
+Type 126/0/0
+MESSAGE: Type 'Skyline.DataMiner.Net.ReportsAndDashboards.ReportsAndDashboardsException' in Assembly 'SLNetTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12' is not marked as serializable.
+```
+
+A clearer error message will now be logged. The `ReportsAndDashboardsException` has been marked as serializable.
+
 #### SLLogCollector packages can now include a memory dump of the w3wp process in case of web API issues [ID 41664]
 
-<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 From now on, SLLogCollector packages can also include a memory dump of the *w3wp* process in case of web API issues.
+
+#### EPM systems: Enhanced performance when aggregating large data sets [ID 41685]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Because of a number of enhancements, on EPM systems, overall performance has increased when aggregating large data sets.
 
 ### Fixes
 
@@ -129,6 +151,12 @@ From now on, SLLogCollector packages can also include a memory dump of the *w3wp
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 In some rare cases, SLNet could stop working due to NATS throwing an exception.
+
+#### Parameter values that were never updated would incorrectly not be sent to a client application [ID 41414]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some rare cases, parameter values would incorrectly not be sent to a client application, especially when those values were never updated.
 
 #### NT_FILL_ARRAY_WITH_COLUMN call would silently fail when providing a string[] instead of an object[] for the keys and values [ID 41511]
 
@@ -162,6 +190,12 @@ During start-up, in some cases, DataMiner would use an incorrect IP address when
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When you zoomed to a different layer while an alarm level filter was active, in some cases, markers that did not match the filter would become visible for a split second before disappearing again.
+
+#### Service & Resource Management: Debug lines would incorrect get logged multiple times in SLResourceManagerScheduler.txt [ID 41568]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+While the booking scheduler task queue was being processed, in some cases, debug lines would incorrectly get logged multiple times in the *SLResourceManagerScheduler.txt* log file.
 
 #### DataMiner installer: Problem when upgrading a Hotfix or Cumulative Update version to Feature Version 10.5.1 [ID 41579]
 
