@@ -14,8 +14,8 @@ uid: DMAParameterInfo
 | HasRange         | Boolean | Determines whether the value of the parameter is defined within a certain range. |
 | RangeLow         | Double | If *HasRange* is true, this determines the lowest value of the parameter range. |
 | RangeHigh        | Double | If *HasRange* is true, this determines the highest value of the parameter range. |
-| RangeLowDisplay  | String |  |
-| RangeHighDisplay | String |  |
+| RangeLowDisplay  | String | The display value of the raw value stored in RangeLow. |
+| RangeHighDisplay | String | The display value of the raw value stored in RangeHigh. |
 | Options          | String | The parameter options (extra flags to e.g. indicate special formatting instructions). |
 | Unit             | String | The unit of measure of the parameter. |
 | PrimaryKeyID     | Integer | If the parameter is a table parameter, the primary key. |
@@ -32,9 +32,9 @@ uid: DMAParameterInfo
 | Discreets        | Array of [DMAParameterEditDiscreet](xref:DMAParameterEditDiscreet) | The discreet values of the parameter (only if *WriteType* is “Discreet”). |
 | DashboardsType   | String | The button panel dashboard type: *None*, *ButtonPanel*, *ButtonPanelContainers* or *ButtonPanelCollection*. |
 | Positions        | Array of [DMAParameterPosition](xref:DMAParameterPosition) | The places where the parameter can be found in the different Data Display pages of the element. |
-| WarningMessage   | String |  |
-| AvgTrendingFilters      | Array of String |  |
-| RealTimeTrendingFilters | Array of String |  |
+| WarningMessage   | String | The message that, in the protocol, can be configured on the write parameter. This message will be displayed when an attempt is made to update the parameter. For example: "Changing this setting will make the device unavailable." |
+| AvgTrendingFilters      | Array of String | An array of filters for which average trending is enabled (as configured in the trend template). |
+| RealTimeTrendingFilters | Array of String | An array of filters for which real-time trending is enabled (as configured in the trend template). |
 
 <!--
 | Item | Format | Description |

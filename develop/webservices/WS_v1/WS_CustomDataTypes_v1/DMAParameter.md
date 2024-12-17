@@ -8,12 +8,12 @@ uid: DMAParameter
 |--|--|--|
 | DataMinerID        | Integer | The ID of the DataMiner Agent. |
 | ElementID          | Integer | The ID of the element. |
-| TableIndex         | String  |  |
+| TableIndex         | String  | The key of the row (if the parameter is a table column parameter). |
 | Value              | String | The current value of the parameter. |
 | DisplayValue       | String | The parameter value that will be displayed. |
 | LastValueChange    | String | The last time the value of the parameter has changed. |
 | LastValueChangeUTC | Long integer | The last time the value of the parameter has changed, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
-| AlarmState         | String |  |
+| AlarmState         | String | The current alarm severity: "Undefined", "Normal", "Warning", "Minor", "Major" or "Critical". |
 | Filters            | String | Column and row filters, only filled in when using the method *GetParametersByPageForServiceElement*, in case only part of a table is included in the service. |
 | LastChangeUTC      | Long integer | The time when the parameter last changed, in UTC format (milliseconds since midnight January 1, 1970 GMT). |
 
