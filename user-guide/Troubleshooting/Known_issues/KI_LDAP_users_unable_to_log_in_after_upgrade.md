@@ -24,14 +24,19 @@ This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configurati
 
    1. Stop all DMAs simultaneously.
 
-   1. Edit the following files to remove corrupted users:
+   1. Identify users that appear without their domain prefix in the `name` attribute (i.e. `username` instead of `CONTOSA\username`) in the following files:
 
       - `C:\Skyline DataMiner\Security.xml`
 
       - `C:\Skyline DataMiner\Files\SyncInfo\{DO_NOT_REMOVE_68EE4388-7EF6-4cb4-B38F-5E0045175340}.xml`
 
-      > [!CAUTION]
-      > Only remove users that appear without their domain prefix in the `name` attribute, i.e. `username` instead of `CONTOSA\username`.
+   1. Set the `deleted` attribute to `true`. For example:
+
+      ```xml
+      <User name="Luke" fullName="Luke Daniels" level="" expired="false" tel="" email="luke.daniels95@gmail.com" deleted="true" pagerNr="" twitter="" dcpUserName="" automaticallyAdded="true" isCca="false" domain="CONTOSA">
+         <Member notificationSchedule="">1</Member>
+      </User>
+      ```
 
    1. Restart the DMAs.
 
