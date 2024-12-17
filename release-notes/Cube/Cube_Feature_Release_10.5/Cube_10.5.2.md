@@ -40,6 +40,12 @@ From now on, it will show the following message instead:
 
 `xxx is currently swarming`
 
+#### DataMiner Cube desktop app: Enhanced performance when starting up [ID 41532]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance of the DataMiner Cube desktop app has improved, especially at start-up.
+
 #### Visual Overview: Enhanced performance when loading inline visual overviews [ID 41590]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
