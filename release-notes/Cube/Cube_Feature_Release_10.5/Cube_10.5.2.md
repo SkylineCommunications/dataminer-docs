@@ -96,6 +96,12 @@ When you opened a parameter-specific alarm, trend or information template editor
 
 When you had linked an *AlarmSummary* shape to all alarms (i.e. active alarms, masked alarms and information events) by adding a data field of type *AlarmSummary* set to "all", the counter showing the number of masked alarms in the shape text (i.e. "#Masked") would show an incorrect number of alarms.
 
+#### DataMiner Cube desktop app: First instance would incorrectly open in system tray mode instead of windowed mode [ID 41532]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you opened a first instance of the DataMiner Cube desktop app on a client computer, up to now, it would incorrectly open in system tray mode. From now on, it will open in windowed mode instead.
+
 #### Alarm Console: Linked alarm tab could have incorrect alarm counters when a correlation alarm was cleared [ID 41547]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
