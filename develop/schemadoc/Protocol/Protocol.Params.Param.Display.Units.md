@@ -232,6 +232,10 @@ In case you have a suggestion for a unit to be added to the list below, send an 
 |dF|decifarad|
 |dH|decihenry|
 |dHz|decihertz|
+|Discards|discards|
+|Discards/h|discards per hour|
+|Discards/min|discards per minute|
+|Discards/s|discards per second|
 |dJ|decijoule|
 |dm|decimeter|
 |dm/d|decimeter per day|
