@@ -36,7 +36,6 @@ This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configurati
       <User name="Luke" fullName="Luke Daniels" level="" expired="false" tel="" email="luke.daniels95@gmail.com" deleted="true" pagerNr="" twitter="" dcpUserName="" automaticallyAdded="true" isCca="false" domain="CONTOSA">
          <Member notificationSchedule="">1</Member>
       </User>
-
       ```
 
    1. Restart the DMAs.
