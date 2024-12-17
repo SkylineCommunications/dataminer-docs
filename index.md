@@ -43,11 +43,11 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
   </div>
 </div>
 
-<div style="display: flex; margin-top: 20px;">
-  <a href="xref:Tutorials">
-    <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; background-color: #DEF7FF; color: #000000; width: 80; text-align: center; display: flex; align-items: center; justify-content: center;">
-      <b style="font-size: 30px; color: #00517d;">DATAMINER TUTORIALS</b>
-      <img src="~/images/Docs_Tutorials.svg" alt="DataMiner tutorials" style="width: 50px; margin-left: 10px;">
+<div style="display: flex; flex-wrap: wrap; margin-top: 20px; max-width: 59.6%; ">
+  <a class="xref" href="/tutorials/Tutorials.html" style="flex: 1; min-width: 250px; text-decoration: none;">
+    <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; background-color: #DEF7FF; color: #000000; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <b style="font-size: 30px; color: #00517e;">DATAMINER TUTORIALS</b>
+      <img src="images/Docs_Tutorials.svg" alt="DataMiner tutorials" style="width: 50px;">
     </div>
   </a>
 </div>
