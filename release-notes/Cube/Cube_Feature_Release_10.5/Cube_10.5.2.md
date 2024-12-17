@@ -46,6 +46,18 @@ From now on, it will show the following message instead:
 
 Because of a number of enhancements, overall performance of the DataMiner Cube desktop app has improved, especially at start-up.
 
+#### Swarming: UI enhancements [ID 41589]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+A number of enhancements have been made to the *Element Swarming* window:
+
+- When you had selected a number of elements in the *Element Swarming* window, and then created or deleted an element in either the same client or another client, up to now, the element selection in the *Element Swarming* window would incorrectly be cleared.
+
+- Up to now, when you closed the *Element Swarming* window while a swarming operation was in progress and then opened it again, the progress bar would no longer get updated.
+
+- From now on, the progress bar will show a percentage without decimals.
+
 #### Visual Overview: Enhanced performance when loading inline visual overviews [ID 41590]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
