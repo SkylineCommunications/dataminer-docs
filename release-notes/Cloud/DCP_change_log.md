@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 16 December 2024 - Fix - Audit - Audit records were unable to get the organization name [ID 41740]
+
+Audit records were using the organization id as reference to an organization due to a failing request, this has been fixed, and they will now show the organization name.
+
 ### 16 December 2024 - Enhancement - Catalog Api - Decrease loading time of Catalog type filters [ID 41734]
 
 An improvement has been done to make requests to get the Catalog item categories and types more performant by adding a cache. This will reduce the loading times of obtaining the type filters in the Catalog.
