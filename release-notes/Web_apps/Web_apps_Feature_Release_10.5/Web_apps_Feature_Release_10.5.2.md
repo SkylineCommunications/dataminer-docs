@@ -31,6 +31,16 @@ Examples:
 | `https://myaddress.skyline.local/dashboard/#/db/SLC/QA%20tables.dmadb` | myaddress.skyline.local |
 | `https://localhost:4200/#/db/SLC/QA%20tables.dmadb` | localhost:4200 |
 
+#### Low-Code Apps: New 'Copy to clipboard' action [ID 41729]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+It is now possible to configure *Copy to clipboard* actions.
+
+This type of action will allow users to copy a value\* to their Windows clipboard.
+
+*\*This can be a fixed value, but also a component data entry, a value from a flow or a variable.*
+
 ## Changes
 
 ### Enhancements
@@ -64,6 +74,18 @@ Currently, by default, the existing components will still be used by default to 
 Video thumbnails will now have a default volume of 100%.
 
 Up to now, when you clicked the sound icon of a video thumbnail, the video would unmute, but the volume would stay at 0%. From now on, when a video is unmuted, its volume will be at 100%.
+
+#### Enhanced network status indicator in Dashboards app & network status banner in Low-Code Apps [ID 41669]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+The network status indicator in the *Dashboards* app is no longer a separate icon. The current network status will now be incorporated into the user icon in the top-right corner. Also, from now on, when everything is fine, no network status will be shown.
+
+In low-code apps, network status issues will now be shown in a colored banner. Possible notices include:
+
+- "You are offline." (red)
+- "Busy recovering connection..." (orange)
+- "Connection recovered." (green)
 
 #### Dashboards/Low-Code Apps: 'Link to data' dialog box has been redesigned [ID 41682]
 

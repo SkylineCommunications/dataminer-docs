@@ -17,6 +17,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Offline Failover DMA not synchronized](xref:KI_offline_DMA_cannot_sync) | DataMiner 10.3.0 [CU11] to 10.4.0 [CU9]<br>DataMiner 10.4.2 to 10.4.12 | DataMiner 10.4.0 [CU10] and 10.5.1 | December 18, 2024 |
 | [LDAP/ActiveDirectory domain users no longer able to log in after upgrade](xref:KI_LDAP_users_unable_to_log_in_after_upgrade) | DataMiner 10.4.0 [CU4] to 10.4.0 [CU9]<br>DataMiner 10.4.7 to 10.4.12 | DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 | December 13, 2024 |
 | [SNMPv3 elements not loaded correctly after upgrade](xref:KI_SNMPv3_elements_broken_after_upgrade) | DataMiner 10.4.9 to 10.4.12, after upgrade from 10.4.0 [CU6] or higher | DataMiner 10.5.0/10.5.1 | December 4, 2024 |
 | [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
