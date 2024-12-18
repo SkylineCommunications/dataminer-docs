@@ -21,7 +21,7 @@ The option [redundantPolling](xref:Protocol.Type-communicationOptions#redundantp
 
 ## Scenarios that trigger redundant polling switching
 
-This section describes when this feature would switch between polling interfaces during an element's runtime.
+This section describes when this feature will switch between polling interfaces during an element's runtime.
 
 ### On timeout after retries of a single group
 
@@ -38,7 +38,7 @@ If the polled SNMP parameter returns an error such as *NO SUCH NAME*, DataMiner 
 
 ## Other polling scenarios
 
-This section describes how redundant polling would behave with other connection configurations that could be made on the protocol.
+This section describes how redundant polling will behave with other connection configurations that can be made in the protocol.
 
 ### SNMP polling of specific interfaces using the ipid attribute
 
@@ -48,13 +48,15 @@ See also: [ipid attribute](xref:Protocol.Params.Param.SNMP.OID-ipid)
 
 ### On SNMP Get through QActions
 
-When using *NT_SNMP_GET* or *NT_SNMP_RAW_GET* in a QAction, switching of interfaces are **not triggered**.
+When *NT_SNMP_GET* or *NT_SNMP_RAW_GET* are used in a QAction, switching of interfaces is **not triggered**.
 
-See also: [NT Notify Type 295](xref:NT_SNMP_GET)
-		  [NT Notify Type 424](xref:NT_SNMP_RAW_GET)
+See also:
+
+- [NT Notify Type 295](xref:NT_SNMP_GET)
+- [NT Notify Type 424](xref:NT_SNMP_RAW_GET)
 
 ### SNMP polling of specific interfaces through the connection attribute in a Group
 
-Switching of interfaces is **not triggered**. When the group goes into timeout on a specific connection, DataMiner will try to poll the group again until all retries are exhausted. After this, DataMiner will proceed to poll for the next group in the queue.
+In this case, switching of interfaces is **not triggered**. When the group goes into timeout on a specific connection, DataMiner will try to poll the group again until all retries are exhausted. After this, DataMiner will proceed to poll for the next group in the queue.
 
 See also: [connection attribute](xref:Protocol.Groups.Group-connection)
