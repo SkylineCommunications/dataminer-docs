@@ -31,7 +31,10 @@ Prior to DataMiner 10.1.9, when a parameter has a (smart) baseline value specifi
 > [!NOTE]
 >
 > - The alarm template baseline editor will not allow you to change the monitoring type (Normal, Relative, Absolute or Rate).
-> - When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. Although you should specify a read parameter (e.g. `<Alarm type="absolute:NOMINAL_VALUE_PID,FACTOR_PID">`), make sure that read parameter has an associated write parameter. Otherwise, it will not be possible to update the baseline value stored in that parameter. Also, the parameter in which the baseline value is stored must not have any restrictions (e.g. step size, number of decimals, high/low range, etc.).
+> - When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. Although you should specify a read parameter (e.g. `<Alarm type="absolute:NOMINAL_VALUE_PID,FACTOR_PID">`), make sure that read parameter has an associated write parameter. Otherwise, it will not be possible to update the baseline value stored in that parameter. Also, the parameter in which the baseline value is stored must not have any restrictions (e.g. step size, number of decimals, high/low range, the interprete->rawtype tag should not be an "unsigned" number, etc.).
+> - The smart baseline algorithm may sometimes produce unexpected results with respect to parameter ranges. For example, consider a parameter that consistently fluctuates between 0 and 100. While approximating its behavior using a polynomial, the calculated baseline value might occasionally fall below 0 or exceed 100.
+To address this, it is recommended to configure appropriate ranges for the parameter within the protocol. The algorithm will respect these limits during baseline calculations. For instance, if a lower range of 0 is defined in the protocol, any baseline value calculated below 0 will automatically be capped at 0.
+
 
 ## Examples
 

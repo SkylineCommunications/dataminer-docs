@@ -41,16 +41,23 @@ Both for "absolute" and "relative" alarm thresholds, the "normal" value has to b
 
 1. If you chose a smart baseline, select one of the following options:
 
-   - **To detect a continuous degradation**. This type of baseline is used in order to detect a deviation from a typically stable signal or fixed value. The median value of the average trend points during the selected trend window is calculated and kept for 24 hours. Every 15 minutes, DataMiner will check whether enough time has elapsed that the baseline value can be calculated again.
+   - **To detect a continuous degradation**. This type of baseline is used in order to detect a deviation from a typically stable signal or fixed value. The median value of the average trend points during the selected trend window is calculated and used as the baseline. The median is recalculated every day around midnight.
 
      Example of continuous degradation of a signal:
 
      ![Example of continuous signal degradation](~/user-guide/images/SmartBaselinesContinuous.png)
 
-   - **To detect a deviation in the expected daily pattern**. This type of baseline is used to detect a deviation from a signal that follows a day/night pattern. In this case, the day/night pattern is checked by calculating the median value per 15 minutes of the trend window. The baselines are calculated every 24 hours at midnight for every 15-minute timeslot of the next day (e.g. 10:00, 10:15, 10:30, …).
+   - **To detect a deviation in the expected daily pattern**. This type of baseline is designed to detect deviations from signals that follow a day/night pattern. To achieve this, the day is divided into 288 intervals, each lasting 5 minutes (24 hours × 12 intervals per hour).
+For example, if the trend window is set to 7 days, each of the 288 intervals will have 7 data points corresponding to that interval's time range. We calculate the median for each interval, resulting in 288 median values.
+Rather than storing all these values, we approximate them by fitting a degree-8 polynomial through the 288 medians. This polynomial represents the typical daily behavior of the signal. By default, every 15 minutes, the value of the polynomial at the current time is evaluated and used as the baseline value.
 
-     > [!NOTE]
-     > If this option is selected, the DataMiner system will calculate the median value of all average trend points in the 15-minute time window equal to the current time window and apply a polynomial regression to these median values from the last x number of days.
+
+
+        > [!NOTE]
+        > If a range is defined in the protocol, the baseline value is capped to ensure it stays within the specified minimum and maximum limits.
+   
+        > [!NOTE]
+        > The polynomial is recalculated every day around midnight
 
      Example of a deviation in the expected daily pattern for a signal:
 
