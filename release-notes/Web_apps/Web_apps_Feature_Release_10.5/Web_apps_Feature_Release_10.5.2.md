@@ -65,6 +65,18 @@ Video thumbnails will now have a default volume of 100%.
 
 Up to now, when you clicked the sound icon of a video thumbnail, the video would unmute, but the volume would stay at 0%. From now on, when a video is unmuted, its volume will be at 100%.
 
+#### Enhanced network status indicator in Dashboards app & network status banner in Low-Code Apps [ID 41669]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+The network status indicator in the *Dashboards* app is no longer a separate icon. The current network status will now be incorporated into the user icon in the top-right corner. Also, from now on, when everything is fine, no network status will be shown.
+
+In low-code apps, network status issues will now be shown in a colored banner. Possible notices include:
+
+- "You are offline." (red)
+- "Busy recovering connection..." (orange)
+- "Connection recovered." (green)
+
 #### Dashboards/Low-Code Apps: 'Link to data' dialog box has been redesigned [ID 41682]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
