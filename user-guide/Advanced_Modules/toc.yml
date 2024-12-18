@@ -939,7 +939,6 @@ items:
           - name: Getting started with EPM
             topicUid: EPM_Introduction_Tutorial
   - name: Inventory & Asset Management
-    topicUid: AssetManagement
     items:
       - name: About DataMiner Inventory & Asset Management
         topicUid: About_DMS_Inventory_Asset_Management
@@ -1066,7 +1065,6 @@ items:
     topicUid: MobileGateway
     items:
       - name: Configuring Mobile Gateway
-        topicUid: Configuring_Mobile_Gateway
         items:
           - name: Configuring a serial cell phone modem
             topicUid: Configuring_a_serial_cell_phone_modem
@@ -1152,7 +1150,6 @@ items:
       - name: Reporter Admin tools
         topicUid: Reporter_Admin_tools
       - name: Publishing Reporter components on your own website
-        topicUid: Publishing_Reporter_components_on_your_own_website
         items:
           - name: Img tags referring to ASP pages
             topicUid: Img_tags_referring_to_ASP_pages

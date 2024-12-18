@@ -46,12 +46,18 @@ The logging of the arp command will now also include the MAC address that claime
 
 #### DataMiner upgrade packages now include the latest Visual C++ Redistributable [ID 41173]
 
-<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- MR 10.5.0 - FR 10.5.2 -->
 
 All DataMiner upgrade packages now include the latest Visual C++ Redistributable.
 
 > [!NOTE]
 > From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
+
+#### Security Advisory BPA test: Enhancements [ID 41385]
+
+<!-- MR 10.5.0 / 10.4.0 [CU11] - FR 10.5.2 -->
+
+A number of minor enhancements have been made to the *Security Advisory* BPA test.
 
 #### Service & Resource Management: More detailed trace data will now be returned when a quarantine conflict occurs [ID 41399]
 
@@ -110,7 +116,62 @@ The above-mentioned array will now be locked to prevent the data from getting co
 
 Because of a number of enhancements, overall performance has increased when updating alarm information on STaaS systems.
 
+#### Clearer error message when generating a PDF report based on a dashboard fails [ID 41661]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In the *Automation*, *Correlation* and *Scheduler* modules, you can generate a PDF report based on a dashboard.
+
+When an error occurred while generating the PDF file, up to now, the following error message would be logged in the log file of *Automation*, *Correlation* or *Scheduler*:
+
+```txt
+2024/12/09 08:45:02.635|SLScheduler.exe 10.5.2449.76|27128|26140|CRequest::Request|ERR|5|Remote Request for -SLNet- on -VT_EMPTY- failed.  (hr = 0x8013150C)
+Type 126/0/0
+MESSAGE: Type 'Skyline.DataMiner.Net.ReportsAndDashboards.ReportsAndDashboardsException' in Assembly 'SLNetTypes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9789b1eac4cb1b12' is not marked as serializable.
+```
+
+A clearer error message will now be logged. The `ReportsAndDashboardsException` has been marked as serializable.
+
+#### SLLogCollector packages can now include a memory dump of the w3wp process in case of web API issues [ID 41664]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+From now on, SLLogCollector packages can also include a memory dump of the *w3wp* process in case of web API issues.
+
+#### EPM systems: Enhanced performance when aggregating large data sets [ID 41685]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Because of a number of enhancements, on EPM systems, overall performance has increased when aggregating large data sets.
+
 ### Fixes
+
+#### SLNet could stop working due to NATS throwing an exception [ID 41396]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some rare cases, SLNet could stop working due to NATS throwing an exception.
+
+#### Parameter values that were never updated would incorrectly not be sent to a client application [ID 41414]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some rare cases, parameter values would incorrectly not be sent to a client application, especially when those values were never updated.
+
+#### NT_FILL_ARRAY_WITH_COLUMN call would silently fail when providing a string[] instead of an object[] for the keys and values [ID 41511]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When an NT_FILL_ARRAY_WITH_COLUMN call was performed in a QAction, up to now, it would silently fail when providing a string[] (or any other type of object that is allowed in an object[]) instead of an object[] for the keys and values. This would also affect all wrapper methods that accept an object[] argument.
+
+A cast and type check has now been added to the following calls in order to prevent this type mismatch issue from going unnoticed:
+
+- `protocol.FillArrayWithColumn(...)`
+- `protocol.FillArray(...)`
+- `protocol.FillArrayNoDelete(...)`
+- `protocol.NotifyProtocol(220, ...)`
+
+From now on, when an invalid type is passed to one of these methods, the error that is thrown will automatically be logged in the element's log file.
 
 #### Problem with SLDataMiner when deleting a connector [ID 41520]
 
@@ -118,11 +179,34 @@ Because of a number of enhancements, overall performance has increased when upda
 
 In some rare cases, SLDataMiner could stop working when a connector was deleted immediately after an element using that connector had been deleted.
 
+#### DataMiner would use an incorrect IP address when connecting to BrokerGateway during start-up [ID 41530]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+During start-up, in some cases, DataMiner would use an incorrect IP address when connecting to BrokerGateway.
+
 #### DataMiner Maps: Markers that did not match the alarm level filter would become visible for a split second [ID 41555]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When you zoomed to a different layer while an alarm level filter was active, in some cases, markers that did not match the filter would become visible for a split second before disappearing again.
+
+#### Service & Resource Management: Debug lines would incorrect get logged multiple times in SLResourceManagerScheduler.txt [ID 41568]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+While the booking scheduler task queue was being processed, in some cases, debug lines would incorrectly get logged multiple times in the *SLResourceManagerScheduler.txt* log file.
+
+#### DataMiner installer: Problem when upgrading a Hotfix or Cumulative Update version to Feature Version 10.5.1 [ID 41579]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+<!-- Not added MR 10.5.0. CloudFeed added to DataMiner upgrade packages in 10.5.0/10.5.1 (RN 41357)  -->
+
+When DataMiner was upgraded from an older Hotfix or Cumulative Update version to Feature Version 10.5.1, the following would happen:
+
+- An error would occur when trying to parse the version number of the Hotfix or Cumulative Update.
+
+- When checking the DataMiner version, the CloudFeed DxM installer would incorrectly check the current DataMiner version instead of the new DataMiner version.
 
 #### Problems with SLNet call GetProtocolQActionsStateRequestMessage [ID 41591]
 
@@ -140,3 +224,9 @@ From now on, no QAction validation will be performed when the DataMiner Agent do
 
 > [!NOTE]
 > The above-mentioned SLNet message is subject to change without notice.
+
+#### NATS: A large number of "duplicate route" and "created route" entries would get added to the NATS server logging [ID 41616]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When a large DataMiner System included agents in a Failover setup, the more agents were present in this DMS, the more "duplicate route" and "created route" entries would get added to the NATS server logging.

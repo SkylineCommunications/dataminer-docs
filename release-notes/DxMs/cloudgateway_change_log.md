@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 10 December 2024 - Enhancement - CloudGateway 2.16.0 - Dependencies updated [ID 41681]
+
+An important dependency has been updated that the dataminer.services connection uses to proxy most remote access requests.
+
 #### 5 December 2024 - Enhancement - CloudGateway 2.15.0 - Improved handling and error logging of invalid certificates [ID 40746]
 
 Improvements have been implemented to ensure that the configured HTTPS certificates for port 443 in IIS are verified and any problems with a certificate will be logged. If a certificate is valid but becomes invalid, CloudGateway will now correctly notice this within 2 minutes and make sure it is set to offline. CloudGateway will also recover automatically when the certificates are valid again so the connection with dataminer.services is restored.

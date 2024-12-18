@@ -33,10 +33,10 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 > - This setup is not needed for [DataMiner as a Service (DaaS) systems](xref:Creating_a_DMS_in_the_cloud), as these automatically use STaaS.
 > - If you want to add a DMA to an existing DMS that uses STaaS, refer to [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
-1. [Upgrade your DataMiner System](xref:Upgrading_a_DataMiner_Agent) to version 10.4.0 [CU0] or higher.
+1. [Upgrade your DataMiner System](xref:Upgrading_a_DataMiner_Agent) to DataMiner 10.4.0 [CU0]/10.4.1 or higher.
 
    > [!NOTE]
-   > To be able to use non-indexed logger tables, upgrade to DataMiner version 10.4.0 [CU5]/10.4.8 or higher. <!-- RN 40066 -->
+   > To be able to use non-indexed logger tables, upgrade to DataMiner 10.4.0 [CU5]/10.4.8 or higher. <!-- RN 40066 -->
 
    > [!IMPORTANT]
    > We recommend always upgrading DataMiner to the latest available version to get the latest features and performance updates.

@@ -7,6 +7,12 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.2.2
+
+#### Fix - Cached property definitions cleared when PropertyExists is called [ID 41610]
+
+​The property definitions are cached in the class library. However, when a server call is made to retrieve the properties again (through the PropertyExists method), the cached values should be cleared and repopulated. Until now, the cached values were not cleared, leading to the possible situation where a property that was deleted in DataMiner would still be present in the cache of the class library.
+
 ### 1.1.2.1
 
 #### API changes for improved performance [ID 41178]

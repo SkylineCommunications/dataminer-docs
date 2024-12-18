@@ -10,7 +10,7 @@ uid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_5.x
 
 The `DataMinerConnectorDataMapper` retains the last known value for each cell in memory. Previously, when a gNMI notification was received to delete a row, the corresponding cell values were not cleared from memory. This issue has now been resolved.
 
-#### Support for notification throttling in the DataMinerConnectorDataMapper [ID 41467]
+#### Support for notification throttling in the DataMinerConnectorDataMapper [ID 41177]
 
 The `DataMinerConnectorDataMapper` implementation now includes a new `ThrottleInterval` configuration option.
 

@@ -324,7 +324,7 @@ The layout pane of a State component now has an additional setting that allows y
 
 Also, in the components pane on the left, the *States* section has now been renamed to *States and values*.
 
-#### Dashboards app - Table component: GQI query result can now be export to a CSV file \[ID 28637\]
+#### Dashboards app - Table component: GQI query result can now be exported to a CSV file \[ID 28637\]
 
 When a table component displays the result of a GQI query, it is now possible to export that result to a CSV file.
 

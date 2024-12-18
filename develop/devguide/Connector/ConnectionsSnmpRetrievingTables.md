@@ -59,7 +59,7 @@ Protocol implementation:
   > [!NOTE]
   >
   > - It is possible to define a table in the protocol that only contains the first columns. In the example above, the protocol table only defines column parameters for the first eight columns of the ifTable. Note, however, that once you include a column, all preceding columns must be included as well.
-  > - In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, all columns were retrieved from the agent, even though these were not visualized.<!-- RN 41235 -->
+  > - In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, all columns were retrieved from the Agent, even though these were not visualized.<!-- RN 41235 -->
 
 Capture observation:
 

@@ -5488,7 +5488,6 @@ items:
         - name: DIS menu
           topicUid: DIS_menu
         - name: Editors
-          topicUid: DisEditors
           items:
           - name: XML editor
             topicUid: XML_editor
@@ -5503,7 +5502,6 @@ items:
           - name: C# editor
             topicUid: C_editor
         - name: Tool windows
-          topicUid: DisToolWindows
           items:
             - name: DIS Tree
               topicUid: DisTreeViewToolWindow
@@ -5572,7 +5570,6 @@ items:
             - name: Publishing problems
               topicUid: DIS_Troubleshooting_UploadFailure
         - name: DIS reference
-          topicUid: DIS_reference
           items:
             - name: DIS settings
               topicUid: DIS_settings

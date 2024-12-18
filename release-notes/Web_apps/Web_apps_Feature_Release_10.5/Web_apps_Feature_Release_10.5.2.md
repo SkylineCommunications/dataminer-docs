@@ -18,15 +18,44 @@ uid: Web_apps_Feature_Release_10.5.2
 
 ## New features
 
+#### Dashboards/Low-Code Apps: New variable 'DMAIP' [ID 41561]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In dashboards and low-code apps, you can now use a new variable `DMAIP`, which contains the hostname and the IP port of the URL.
+
+Examples:
+
+| URL | DMAIP value |
+|-----|-------------|
+| `https://myaddress.skyline.local/dashboard/#/db/SLC/QA%20tables.dmadb` | myaddress.skyline.local |
+| `https://localhost:4200/#/db/SLC/QA%20tables.dmadb` | localhost:4200 |
+
 ## Changes
 
 ### Enhancements
+
+#### Dashboards/Low-Code Apps - Alarm table component: Enhanced performance when fetching history alarms [ID 41342]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Overall performance has increased when fetching history alarms. From now on, history alarms will be fetched whenever the alarm filter changes and will be kept in a cache.
 
 #### Web apps: Angular and other dependencies have been upgraded [ID 41488]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and other dependencies have been upgraded.
+
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Button' [ID 41495]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+The UI component `UIBlockType.Button` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new *Button* component, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
 
 #### Video thumbnails will now have a default volume of 100% [ID 41597]
 
@@ -35,6 +64,12 @@ In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, etc.), Angular and 
 Video thumbnails will now have a default volume of 100%.
 
 Up to now, when you clicked the sound icon of a video thumbnail, the video would unmute, but the volume would stay at 0%. From now on, when a video is unmuted, its volume will be at 100%.
+
+#### Dashboards/Low-Code Apps: 'Link to data' dialog box has been redesigned [ID 41682]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+The *Link to data* dialog box has been redesigned. It will now offer a better overview, especially when a large number of entries are listed.
 
 ### Fixes
 
@@ -90,3 +125,21 @@ When, in the settings of a *Visual overview* component, you changed the page to 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When a custom time zone was configured in a *Timeline* component, up to now, that time zone would not be taken into account by the *Set viewport* action.
+
+#### Dashboards/Low-Code Apps: Table and Grid components could incorrectly keep fetching query rows after the session had been closed [ID 41670]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some cases, *Table* and *Grid* components could incorrectly keep fetching query rows after the session had been closed, eventually causing the web page to become unresponsive.
+
+#### Web API: DOMHelper could stop working when a DOM instance was updated while a client connection was being closed [ID 41677]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When a DOM instance was updated while a client connection was being closed, in some cases, the DOMHelper could stop working.
+
+#### Low-Code Apps: Problem when adding an 'Execute a script' action to a low-code app that was hosted on a dashboard gateway [ID 41697]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When you tried to add an *Execute a script* action to a low-code app that was hosted on a dashboard gateway, an error could be thrown due to a serialization issue.
