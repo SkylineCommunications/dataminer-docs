@@ -11,7 +11,7 @@ items:
 - name: DataMiner modules
   topicUid: Part4AdvancedModules
   href: Advanced_Modules/toc.yml
-- name: DataMiner Frameworks
+- name: DataMiner frameworks
   topicUid: DataMiner_Frameworks
   href: Frameworks/toc.yml
 - name: dataminer.services
