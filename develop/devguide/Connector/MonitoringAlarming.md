@@ -135,6 +135,11 @@ In case you want to define default alarm values for exception values, use the va
 </Alarm>
 ```
 
+> [!NOTE]
+>
+> - If exception values are not defined within alarm thresholds, a parameter's alarm will be cleared when it goes from alarmed value to exception value.
+> - However if this default behaviour is undesired, exception values will need to be defined within alarm thresholds.
+
 ## Threshold
 
 With the threshold option, you can define that when the value of the second parameter is lower than the first, no alarm should be created.
