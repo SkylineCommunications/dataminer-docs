@@ -197,6 +197,15 @@ When you zoomed to a different layer while an alarm level filter was active, in 
 
 While the booking scheduler task queue was being processed, in some cases, debug lines would incorrectly get logged multiple times in the *SLResourceManagerScheduler.txt* log file.
 
+#### SLDataMiner will now check BrokerGateway soft-launch option in order to decide which NATS services to start [ID 41570]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
+
+- If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
+- If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.
+
 #### DataMiner installer: Problem when upgrading a Hotfix or Cumulative Update version to Feature Version 10.5.1 [ID 41579]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
