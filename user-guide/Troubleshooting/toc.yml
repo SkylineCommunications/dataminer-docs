@@ -232,6 +232,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Reuploaded DVE protocol version is incorrectly set as production version
+            topicUid: KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version
           - name: SLProtocol crash when restarting elements used by enhanced services
             topicUid: KI_SLProtocol_Crash_Enhanced_Services
           - name: Sticky element alarm state caused by correlation rules
