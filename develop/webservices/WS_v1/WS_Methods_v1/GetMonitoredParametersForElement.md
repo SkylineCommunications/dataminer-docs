@@ -8,12 +8,12 @@ Use this method to retrieve all the monitored parameters for a specified element
 
 ## Input
 
-| Item                | Format  | Description                                                                      |
-|---------------------|---------|----------------------------------------------------------------------------------|
+| Item                | Format  | Description                                           |
+|---------------------|---------|-------------------------------------------------------|
 | connection          | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| dmaID               | Integer | The DataMiner Agent ID.                                                          |
-| elementID           | Integer | The element ID.                                                                  |
-| includeTableIndices | Boolean | Indicates whether table indices should be included.                              |
+| dmaID               | Integer | The DataMiner Agent ID.                               |
+| elementID           | Integer | The element ID.                                       |
+| includeTableIndices | Boolean | Indicates whether table indices should be included.   |
 
 ## Output
 

@@ -18,3 +18,4 @@ uid: DMAAlarmFilterV2
 | Limit | Integer | The maximum number of alarms to include. (By default: 100.) |
 | SortBy | Array of string | The field(s) by which the alarms should be sorted. |
 | SortAscending | Boolean | Determines whether alarms should be sorted in ascending or descending order. |
+| Search | String | An additional search string that will be applied on top of the alarm filter specified in *FilterItem*. |

@@ -10,11 +10,11 @@ Use this method to retrieve a job domain. Available from DataMiner 10.0.9 onward
 
 | Item       | Format | Description                                                                             |
 |------------|--------|-----------------------------------------------------------------------------------------|
-| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp).                                    |
+| connection | String | The connection ID. See [ConnectApp](xref:ConnectApp).                                   |
 | domainID   | String | The job domain ID. If no ID is specified, the first available domain will be retrieved. |
 
 ## Output
 
 | Item | Format | Description |
 |--|--|--|
-| GetJobsDomainResult | DMAJobsDomain | The job domain, consisting of an array of [DMASectionDefinition](xref:DMASectionDefinition). |
+| GetJobsDomainResult | Array of DMASectionDefinition | The job domain, consisting of an array of [DMASectionDefinition](xref:DMASectionDefinition). |

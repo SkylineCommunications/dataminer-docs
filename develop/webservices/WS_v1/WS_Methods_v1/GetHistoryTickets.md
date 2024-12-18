@@ -28,7 +28,7 @@ This method retrieves the tickets created in a particular timespan. The tickets 
 | count | Integer | The number of tickets to be retrieved. |
 | filter | Array | An array of various filters that can be used to determine which tickets are retrieved. |
 | filter.TicketTypeID | GUID | The GUID of the ticket type (or “domain” in the Ticketing app). |
-| filter.Filters | Array of DMATicketFieldValueDisplay | The display name, name and value of a field that is used to filter the retrieved tickets. |
+| filter.Filters | Array of [DMATicketFieldValueDisplay](xref:DMATicketFieldValueDisplay) | The display name, name and value of a field that is used to filter the retrieved tickets. |
 | filter.Affecting.Value | Array | Array containing the DMA ID, ID and name of a DataMiner object. |
 | filter.Affecting.Type | String | The type of the affected DataMiner object. |
 | filter.SearchText | String | A piece of text used to filter the tickets, similar to the quick filter in the Ticketing app. |

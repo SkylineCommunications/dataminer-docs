@@ -10,11 +10,11 @@ Available from DataMiner 10.0.7 onwards.
 
 ## Input
 
-| Item       | Format  | Description                                                                      |
-|------------|---------|----------------------------------------------------------------------------------|
+| Item       | Format  | Description                                           |
+|------------|---------|-------------------------------------------------------|
 | connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| dmaID      | Integer | The DataMiner Agent ID.                                                          |
-| serviceID  | Integer | The service ID.                                                                  |
+| dmaID      | Integer | The DataMiner Agent ID.                               |
+| serviceID  | Integer | The service ID.                                       |
 
 ## Output
 

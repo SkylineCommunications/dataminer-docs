@@ -27,4 +27,4 @@ Use this method to retrieve the connection string using the configured authentic
 | TryConnectAndInfoResult | [DMAConnectAndInfo](xref:DMAConnectAndInfo) | The connection string, information about the DataMiner Agent, and the user permissions granted. |
 
 > [!NOTE]
-> When two-step authentication is required, the MessageType property will contain “Challenge” and the Message property will contain the challenge to which the user has to respond.
+> When two-step authentication is required, the *MessageType* property will contain “Challenge” and the *Message* property will contain the challenge to which the user has to respond.

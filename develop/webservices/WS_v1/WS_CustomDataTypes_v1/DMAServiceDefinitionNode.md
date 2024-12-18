@@ -15,4 +15,4 @@ uid: DMAServiceDefinitionNode
 | Image | String | The image used for the node. |
 | Properties | Array of DMASRMProperty | The properties of the node. |
 | InterfaceConfiguration | Array of DMANodeInterfaceConfiguration | The interface configuration of the node. |
-| FunctionDefinition | [DMAFunctionDefinitionLite](xref:DMAFunctionDefinitionLite) | the function definition linked to the node. |
+| FunctionDefinition | [DMAFunctionDefinitionLite](xref:DMAFunctionDefinitionLite) | The function definition linked to the node. |

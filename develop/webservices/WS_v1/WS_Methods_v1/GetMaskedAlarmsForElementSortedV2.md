@@ -15,7 +15,7 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item       | Format  | Description                                                                         |
 |------------|---------|-------------------------------------------------------------------------------------|
-| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                               |
 | dmaID      | Integer | The DMA ID.                                                                         |
 | elementID  | Integer | The element ID.                                                                     |
 | index      | Integer | The point from which to start returning alarms.                                     |
