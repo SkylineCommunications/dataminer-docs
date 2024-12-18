@@ -19,3 +19,12 @@ The People & Organizations app consists of four main pages:
 - ![Organizations overview](~/user-guide/images/PO_Organizations_Overview.png) **Organizations overview**: This page helps you [manage all organizations](xref:PO_Managing_Organizations) within your system. Here, you can [add new organizations](xref:PO_Managing_Organizations#adding-a-new-organization), and [edit](xref:PO_Managing_Organizations#editing-an-organization) or [deprecate](xref:PO_Managing_Organizations#deprecating-an-organization) existing ones. You can also efficiently [add or remove organization members](xref:PO_Managing_Organizations#configuring-organization-members). Use the [search functionality](xref:PO_Managing_Organizations#searching-within-the-list-of-organizations) to locate specific organizations quickly, and [assign specific categories](xref:PO_Managing_Organizations#managing-organization-categories) to the available organizations.
 
 - ![About](~/user-guide/images/PO_About.png) **About**: The *About* page displays an overview of important app info.
+
+## People
+People that are created in the People & Organizations app will show up in different places throughout other DataMiner apps:
+* As contact persons in the Scheduling app
+* As bookable resources in the Resource Studio, Scheduling and Workflow Designer apps
+
+## Teams
+
+## Organizations
