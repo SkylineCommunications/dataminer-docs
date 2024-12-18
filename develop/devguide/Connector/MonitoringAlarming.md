@@ -136,7 +136,7 @@ In case you want to define default alarm values for exception values, use the va
 ```
 
 > [!NOTE]
-> If no exception values are defined for alarm thresholds, a parameter's alarm will be cleared when it goes from an alarmed value to an exception value. If this default behavior is undesired, exception values will need to be defined for the alarm thresholds.
+> If no exception values are defined for alarm thresholds, a parameter's alarm will be cleared when it goes from an alarmed value to an exception value. If this default behavior is undesired, exception values will need to be defined for the alarm thresholds. For more information on how exception values are configured in alarm templates, see [Configuring alarm thresholds for hybrid parameters](xref:Configuring_normal_alarm_thresholds#configuring-alarm-thresholds-for-hybrid-parameters).
 
 ## Threshold
 
