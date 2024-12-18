@@ -1,0 +1,76 @@
+---
+uid: solution_index
+---
+
+# DataMiner Solutions
+
+## Standard Solutions
+
+<div class="row"> 
+  <div class="column">
+    <a href="/solutions/standard_solutions/MediaOps/MediaOps.html" title="MediaOps" target="_self"><img src="~/solutions/images/MediaOps.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/standard_solutions/PTP/SolPTP.html" title="PTP" target="_self"><img src="~/solutions/images/PTP.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/standard_solutions/EPM/SolEPM.html" title="EPM" target="_self"><img src="~/solutions/images/EPM.svg" style="width:100%"></a>
+  </div>
+</div>
+
+<div class="row"> 
+  <div class="column">
+    <a href="/solutions/standard_solutions/META_WhatsApp_Messaging/META_WhatsApp_Messaging.html" title="META WhatsApp Messaging" target="_self"><img src="~/solutions/images/META_WhatsApp_Messaging.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/standard_solutions/Ping_Monitoring/PingMonitoring.html" title="Ping Monitoring" target="_self"><img src="~/solutions/images/Ping_Monitoring.svg" style="width:100%"></a>
+  </div>
+</div>
+
+## Product Solutions
+
+<div class="row"> 
+  <div class="column">
+    <a href="/solutions/product_solutions/EVS_Cerebrum/EVS_Cerebrum.html" title="EVS Cerebrum" target="_self"><img src="~/solutions/images/EVS_Cerebrum.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/product_solutions/Nevion_Video_IPath/NevionVideoIPath_Overview.html" title="Nevion Video IPath app" target="_self"><img src="~/solutions/images/Nevion_Video_IPath.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/product_solutions/TAG/TAG_Overview.html" title="Tag Management app" target="_self"><img src="~/solutions/images/Tag_Management.svg" style="width:100%"></a>
+  </div>
+</div>
+
+## DevTools
+
+<div class="row"> 
+  <div class="column">
+    <a href="/solutions/devtools/DataMiner_Objects_Tool/DataMiner_Objects_Tool.html" title="DataMiner Objects tool" target="_self"><img src="~/solutions/images/DataMiner_objects_tool.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/devtools/Performance_Analyzer/Performance_Analyzer.html" title="Performance Analyzer" target="_self"><img src="~/solutions/images/performance_analyzer.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/devtools/Smart_Trap_Processor/Smart_Trap_Processor_Overview.html" title="Smart Trap Processor" target="_self"><img src="~/solutions/images/Smart_Trap_Processor.svg" style="width:100%"></a>
+  </div>
+</div>
+
+## Custom Solutions
+
+<div class="row"> 
+  <div class="column">
+    <a href="/solutions/custom_solutions/Asset_Management/Asset_Management.html" title="Asset Management" target="_self"><img src="~/solutions/images/Asset_Management.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/custom_solutions/DITT/Dataminer_IT_Tool_Overview.html" title="IT Tools" target="_self"><img src="~/solutions/images/DataMiner_IT_Tools.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
+    <a href="/solutions/custom_solutions/PLM_Tool/DataMiner_PLM_Tool_Overview.html" title="PLM tool" target="_self"><img src="~/solutions/images/PLM.svg" style="width:100%"></a>
+  </div>
+</div>
+
+<div class="row"> 
+  <div class="column">
+    <a href="/solutions/custom_solutions/Vecima_Remote_PHY_Monitor/Remote_PHY_Monitoring.html" title="Remote PHY Monitoring" target="_self"><img src="~/solutions/images/Remote_PHY_Monitoring.svg" style="width:100%"></a>
+  </div>
+</div>
