@@ -96,6 +96,12 @@ A number of enhancements have been made with regard to dragging and dropping Aut
 
 For example, up to now, when you dragged a script from one folder to another after having selected another script first, in some cases, the script you had selected first would incorrect be moved to the other folder.
 
+#### Swarming: Pressing CTRL+a now selects all elements [ID 41688]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+In the *Element Swarming* window, it is now possible to select all elements by pressing CTRL+a.
+
 ### Fixes
 
 #### Alarm Console: Problem when an alarm tab and an AlarmSummary shape were being loaded simultaneously [ID 41484]
