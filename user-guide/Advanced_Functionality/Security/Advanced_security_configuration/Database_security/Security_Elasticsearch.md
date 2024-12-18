@@ -22,7 +22,7 @@ To configure TLS encryption for client-server communication:
 
 1. Add the following lines to the *elasticsearch.yml* file:
 
-   ```yaml
+   ```yml
    xpack.security.http.ssl.enabled: true
    xpack.security.http.ssl.keystore.path: path/to/your/<NODE CERT STORE>
    xpack.security.http.ssl.truststore.path: path/to/your/<NODE CERT STORE>
@@ -30,7 +30,7 @@ To configure TLS encryption for client-server communication:
 
    If you are using a `.PEM` certificate generated using `openssl` utility, add the following lines to the *elasticsearch.yml* file instead:
 
-   ```yaml
+   ```yml
     xpack.security.http.ssl.enabled: true
     xpack.security.http.ssl.verification_mode: full
     xpack.security.http.ssl.key: path/to/your/PrivateKey/used/to/generatet/the/certificate
@@ -87,7 +87,7 @@ To configure TLS encryption for client-server communication:
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
 > [!NOTE]
-> When replacing certificates, e.g. when the certificates expired, make sure to delete the **elasticsearch.keystore** file in the **elasticsearch** folder.
+> When replacing certificates, e.g. when the certificates have expired, make sure to delete the **elasticsearch.keystore** file in the **elasticsearch** folder.
 
 ### Inter-node TLS encryption
 
@@ -99,7 +99,7 @@ To configure TLS encryption for inter-node communication:
 
 1. Add the following to the *elasticsearch.yml* file on each node:
 
-   ```yaml
+   ```yml
    xpack.security.transport.ssl.enabled: true
    xpack.security.transport.ssl.verification_mode: full 
    xpack.security.transport.ssl.keystore.path: elastic-certificates.p12 
@@ -108,7 +108,7 @@ To configure TLS encryption for inter-node communication:
 
    If you are using a `.PEM` certificate generated using `openssl` utility, add the following lines to *elasticsearch.yml* file instead.
 
-   ```yaml
+   ```yml
     xpack.security.transport.ssl.enabled: true
     xpack.security.transport.ssl.verification_mode: full 
     xpack.security.transport.ssl.key: path/to/your/PrivateKey/used/to/generatet/the/certificate
@@ -128,14 +128,15 @@ To configure TLS encryption for inter-node communication:
 1. Restart the Elasticsearch cluster (all nodes).
 
 > [!NOTE]
-> DataMiner does **not** require a restart when enabling *inter-node* TLS encryption.
-> When replacing certificates, e.g. when the certificates expired, make sure to delete the **elasticsearch.keystore** file in the **elasticsearch** folder.
+>
+> - DataMiner does **not** require a restart when enabling *inter-node* TLS encryption.
+> - When replacing certificates, e.g. when the certificates have expired, make sure to delete the **elasticsearch.keystore** file in the **elasticsearch** folder.
 
 ### Troubleshooting
 
 #### Syntax error when executing the generate-certificates.sh script
 
-**Situation**: You have cloned the "Generate-TLS-Certificates" GitHub repository on a Windows machine, and have transferred the *generate-certificates.sh* file to a Linux machine using SCP. You have executed the following command:
+**Situation**: You have cloned the "Generate-TLS-Certificates" GitHub repository on a Windows machine and have transferred the *generate-certificates.sh* file to a Linux machine using SCP. You have executed the following command:
 
 ```bash
 sudo generate-certificates.sh
