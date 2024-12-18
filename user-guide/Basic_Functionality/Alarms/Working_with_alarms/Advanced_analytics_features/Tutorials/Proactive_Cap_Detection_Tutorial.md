@@ -8,7 +8,7 @@ In this tutorial, you will learn how to use DataMiner's [proactive cap detection
 
 By default, proactive cap detection is enabled for all trended parameters. Trending is activated by default for the parameters used in this tutorial. For more information about the technical limitations, see the [proactive cap detection](xref:Proactive_cap_detection) page.
 
-Estimated duration: 30 minutes
+Estimated duration: 30 minutes.
 
 > [!NOTE]
 > The content and screenshots for this tutorial were created in **DataMiner 10.5.1**.
@@ -28,9 +28,9 @@ Estimated duration: 30 minutes
 The tutorial consists of the following steps:
 
 - [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
-- [Step 2: Detecting parameters that are about to hit upper and lower bounds](#step-2-detecting-parameters-that-are-about-to-hit-upper-and-lower-bounds)
-- [Step 3: Detecting parameters that are about to hit alarm thresholds](#step-3-detecting-parameters-that-are-about-to-hit-alarm-thresholds)
-- [Step 4: Configuring proactive cap detection in the alarm template](#step-4-configuring-proactive-cap-detecting-in-the-alarm-template)
+- [Step 2: Detect parameters that are about to hit upper and lower bounds](#step-2-detect-parameters-that-are-about-to-hit-upper-and-lower-bounds)
+- [Step 3: Detect parameters that are about to hit alarm thresholds](#step-3-detect-parameters-that-are-about-to-hit-alarm-thresholds)
+- [Step 4: Configure proactive cap detection in the alarm template](#step-4-configure-proactive-cap-detecting-in-the-alarm-template)
 - [Step 5: Final exercise](#step-5-final-exercise-optional)
 
 ## Step 1: Install the example package from the Catalog
@@ -43,59 +43,71 @@ The tutorial consists of the following steps:
 
    ![Elements](~/user-guide/images/Proactive_Cap_Detection_Tutorial_Elements.png)
 
-## Step 2: Detecting parameters that are about to hit upper and lower bounds
+## Step 2: Detect parameters that are about to hit upper and lower bounds
 
-In this step, we will explore what potential issues DataMiner's proactive cap detection can spot and how you can be notified about them before they become problematic. We will focus on what DataMiner does out-of-the-box without any configuration. In later steps, we will explore how proactive cap detection leverages information in your alarm template and how you can configure it.
+In this step, you will learn what potential issues DataMiner's proactive cap detection can spot and how you can be notified about them before they become problematic. This step focuses on DataMiner's out-of-the-box capabilities. Later steps will cover how proactive cap detection leverages information in your alarm template and how you can configure it.
 
 1. In DataMiner Cube, select the view *Content Management Servers* in the Surveyor.
 
-   This view shows a simulation of three servers hosting a large website. To serve the website efficiently and reliably, each server has a cache of frequently accessed content. You can see the evolution of the size of each of these caches on the trend graph in the view.
+   This view shows a simulation of three servers hosting a large website. Each server has a cache of frequently accessed content to serve the website efficiently and reliably. The trend graph in this view displays the evolution of cache sizes for the three servers.
 
    ![Cache utilization of three content management servers after failure](~/user-guide/images/Proactive_Cap_Detection_Tutorial_CMS_After_Failure.png)
 
-1. When looking at the graph, you can see that the cache utilization of the first server (blue line) goes up and down periodically and often reaches quite high values, without ever getting completely full. The third server (purple line), on the other hand, has a much lower cache utilization and is fairly stable.
+1. Analyze the trend graph:
 
-   The second server (green line) also typically has a stable, fairly low level of cache utilization. However, about two days ago, the cache suddenly started to grow, reaching 100% within two days, which significantly affected the performance of the server and thus the reliability of the website.
+   - Server 1 (blue line): The cache utilization fluctuates periodically, often reaching high values, without ever reaching full capacity (100% utilization).
 
-   We would have liked to receive a notification about the growing cache size of server 2 before it was actually full, in order to fix the issue before it propagated. Many classical strategies would not have worked, or would have been difficult in this case.
-   - **Alarm Templates**: one could set an alarm threshold for these parameters in the alarm template. However, since server 1 often reaches high values for cache utilization without being problematic, setting the threshold too low would result in many false alarms, while setting the threshold higher, would result in a notification only shortly before the cache of server 2 is full.
-   - **Manual inspection of the parameters**: by manually inspecting the parameters one could detect the changing behavior of the cache utilization of server 2. However, this is time-consuming, and if operators were to view the graph with an unfortunate window size, as in the picture below, they might miss the problem.
+   - Server 2 (green line): The cache utilization is initially stable, but then begins growing rapidly over the course of two days, reaching 100%. This significantly affects server performance and website reliability.
+
+   - Server 3 (purple line): The cache utilization remains low and fairly stable.
+
+   Conclusion: Receiving a notification about server 2's growing cache size before it reached 100% would have allowed the issue to be fixed before it propagated.
+
+1. Consider these common approaches and their limitations:
+
+   - **Alarm templates**: In an alarm template, you can configure an alarm threshold for the parameters. However, since server 1 often reaches high cache utilization without causing issues, setting the threshold too low would generate many false alarms, while setting it higher would result in a notification only shortly before server 2's cache is full.
+
+   - **Manual inspection of the parameters**: By manually inspecting the parameters, you could detect the changing behavior of server 2's cache utilization. However, this approach is time-consuming, and if you view the graph with an unfortunate window size, as shown in the picture below, you might overlook the problem.
 
      ![Cache utilization of three content management servers before failure](~/user-guide/images/Proactive_Cap_Detection_Tutorial_CMS_Before_Failure.png)
 
-   - **Anomalies**: DataMiner's [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) detects a trend change at the moment when the cache utilization of the second server starts to increase, as you can see on the trend graph of *Cache Utilization (after failure)* of *Proactive Tutorial - CMS 2* (see the picture below). However, it was not marked as anomalous (light gray color) because the algorithm did not have enough data before the trend change. Experiments show that it would have been marked as anomalous though if more data had been available. See the [Anomaly Detection Tutorial](xref:Anomaly_Tutorial) for a hands-on first introduction to anomaly detection in DataMiner.
+   - **Anomalies**: DataMiner's [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) identifies a trend change at the moment when server 2's cache utilization starts to increase, as shown below:
 
-     ![Trend change detected on cache utilization of Proactive Tutorial - CMS 2](~/user-guide/images/Proactive_Cap_Detection_Tutorial_CMS_Server2_TrendChange.png)
+     ![Trend change detected on cache utilization of Proactive Tutorial - CMS 2](~/user-guide/images/Proactive_Cap_Detection_Tutorial_CMS_Server2_TrendChange.png)<br>*Proactive Cap Detection Tutorial > Content Management Servers > Proactive Tutorial - CMS 2 > Cache Utilization (after failure)*
 
-1. Open the tab *before failure* on the view *Content Management Servers*.
+     However, the light gray color used for the change point indicates it was not flagged as anomalous. This is because the algorithm lacked sufficient data before the trend change. Experiments show that, with more data, the anomaly would have been detected. For a hands-on introduction to anomaly detection in DataMiner, refer to the [anomaly detection tutorial](xref:Anomaly_Tutorial).
 
-   This tab shows the situation before the cache utilization of server 2 reached 100%. As noted above, when you look at the metrics in this window, it is not immediately clear that the blue line is about to go down again, while the green one will continue to rise.
+1. Navigate to *Content Management Servers* > *VISUAL* > *Before failure*.
 
-1. Have a look at the dashed lines on the right hand side, and scroll a bit to the right by clicking on the trend graph and dragging left.
+   This tab displays the situation before the cache utilization of server 2 reached 100%. As mentioned earlier, when you look at the metrics in this window, it is not immediately clear that the blue line will decrease again, while the green line will continue to rise.
 
-   These dashed lines show how DataMiner predicts that the metrics will evolve in the near future. Note that it correctly indicates that the blue line will not continue to rise, but that the green line will soon hit 100%, as indicated by the yellow triangle above the trend graph.
+1. Scroll slightly to the right by clicking and dragging the trend graph, and take a look at the dashed lines on the right-hand side.
 
    ![Prediction of cache utilization of the three content management servers](~/user-guide/images/Proactive_Cap_Detection_Tutorial_CMS_Before_Failure_Prediction.png)
 
-   This prediction is also used to notify users of such parameters that are about to hit the upper or lower limit of their range.
+   These dashed lines represent DataMiner's predictions for the near future. Note that it correctly indicates that the blue line will not continue to rise, but that the green line will soon hit 100%, as indicated by the yellow triangle above the trend graph.
 
-1. Click the light bulb icon in the upper right corner of the Alarm Console.
+   This prediction is also used to notify users when parameters are about to hit the upper or lower limit of their range.
 
-   This icon lights up blue to indicate that DataMiner Analytics has found something interesting. For more detailed information, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
+1. Click the light bulb icon in the top-right corner of the Alarm Console.
 
-1. Click the menu item *1 alarm is predicted in the near future* (this can also be a higher number if your system predicts alarms on other elements).
+   This icon lights up blue to indicate that DataMiner Analytics has identified something interesting. For more detailed information, see [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature).
 
-   A new *Predicted alarms* tab will appear in the Alarm Console, listing a predicted alarm for the second server's cache utilization.
+1. Click the menu item *1 alarm is predicted in the near future* (this can also be a higher number if your system predicts alarms for other elements).
+
+   A new *Predicted alarms* tab will now be shown in the Alarm Console, listing the predicted alarm for the server 2's cache utilization.
 
    ![Predicted alarm in the Alarm Console for the cache utilization of the second content management server](~/user-guide/images/Proactive_Cap_Detection_Tutorial_CMS_AlarmConsoleLightBulb.gif)
 
-   This tab shows a predicted alarm for each metric that is likely to hit the upper or lower limit of its range in the near future (as well as certain alarm thresholds, see later in this tutorial). Note that these predicted alarms are not real alarms, only *suggestion events*, and are not shown in the *Active alarms* tab.
+   This tab shows predicted alarms for metrics that are likely to hit the upper or lower limits of their range in the near future (along with certain alarm thresholds, discussed later in this tutorial).
 
-> [!NOTE]
-> You can also find the predicted alarms using the *Suggestion events* tab. To do so, click the plus icon in the header of the Alarm Console, and then select *Show current* > *Suggestion events*. This will open a tab with all suggestion events, including the predicted alarm above. However, this tab page can show more than only the predicted alarms. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) for more information.
->
->
-> ![Suggestion events tab in the alarm console showing a predicted alarm](~/user-guide/images/Proactive_Cap_Detection_Tutorial_CMS_AlarmConsoleSuggestionEvents.gif)
+   > [!NOTE]
+   >
+   > - These predicted alarms are not actual alarms, but *suggestion events*, and will not be shown in the *Active alarms* tab.
+   > - You can also find predicted alarms using the *Suggestion events* tab. To access this, click the plus icon ("+") in the Alarm Console header, and select *Show current* > *Suggestion events*. This will open a tab with all suggestion events, including the predicted alarm above. However, this tab page can show more than just the predicted alarms. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) for more information.
+   >
+   >
+   > ![Suggestion events tab in the alarm console showing a predicted alarm](~/user-guide/images/Proactive_Cap_Detection_Tutorial_CMS_AlarmConsoleSuggestionEvents.gif)
 
 ## Step 3: Detecting parameters that are about to hit alarm thresholds
 
