@@ -104,6 +104,14 @@ In the *Element Swarming* window, it is now possible to select all elements by p
 
 ### Fixes
 
+#### DataMiner Cube desktop app: Problem when starting an older version on a client on which a newer version has already been used [ID 41461]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you started an older version of the DataMiner Cube desktop app on a client on which you had previously started a newer version of that same app, up to now, in some cases, the older version could update the desktop app configuration file, making it unusable for the newer version of the app.
+
+From now on, when a newer version of the DataMiner Cube desktop app is found on a client, older versions of that same app will no longer be allowed to update the desktop app configuration file.
+
 #### Alarm Console: Problem when an alarm tab and an AlarmSummary shape were being loaded simultaneously [ID 41484]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
