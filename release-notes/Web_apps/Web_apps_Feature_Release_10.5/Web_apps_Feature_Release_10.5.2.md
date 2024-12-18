@@ -31,6 +31,16 @@ Examples:
 | `https://myaddress.skyline.local/dashboard/#/db/SLC/QA%20tables.dmadb` | myaddress.skyline.local |
 | `https://localhost:4200/#/db/SLC/QA%20tables.dmadb` | localhost:4200 |
 
+#### Low-Code Apps: New 'Copy to clipboard' action [ID 41729]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+It is now possible to configure *Copy to clipboard* actions.
+
+This type of action will allow users to copy a value\* to their Windows clipboard.
+
+*\*This can be a fixed value, but also a component data entry, a value from a flow or a variable.*
+
 ## Changes
 
 ### Enhancements
