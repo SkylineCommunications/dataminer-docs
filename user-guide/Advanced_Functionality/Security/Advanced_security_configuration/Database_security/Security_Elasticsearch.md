@@ -1,5 +1,6 @@
 ---
 uid: Security_Elasticsearch
+keywords: elasticsearch, security
 ---
 
 # Securing the Elasticsearch database
@@ -7,7 +8,9 @@ uid: Security_Elasticsearch
 > [!TIP]
 > If you do not want the hassle of maintaining the DataMiner storage databases yourself, we recommend using [DataMiner Storage as a Service](xref:STaaS) instead.
 
-## Client-server TLS encryption
+## TLS
+
+### Client-server TLS encryption
 
 By default all client-server communication with Elasticsearch is unencrypted.
 
@@ -19,7 +22,7 @@ To configure TLS encryption for client-server communication:
 
 1. Add the following lines to the *elasticsearch.yml* file:
 
-   ```
+   ```yaml
    xpack.security.http.ssl.enabled: true
    xpack.security.http.ssl.keystore.path: path/to/your/<NODE CERT STORE>
    xpack.security.http.ssl.truststore.path: path/to/your/<NODE CERT STORE>
@@ -27,7 +30,7 @@ To configure TLS encryption for client-server communication:
 
    If you are using a `.PEM` certificate generated using `openssl` utility, add the following lines to the *elasticsearch.yml* file instead:
 
-   ```
+   ```yaml
     xpack.security.http.ssl.enabled: true
     xpack.security.http.ssl.verification_mode: full
     xpack.security.http.ssl.key: path/to/your/PrivateKey/used/to/generatet/the/certificate
@@ -39,9 +42,9 @@ To configure TLS encryption for client-server communication:
 
 1. **For cert stores generated with the script or password-protected certificates**, execute the following commands **as Administrator** and enter the password when prompted:
 
-   ```
-   bin\elasticsearch-keystore add xpack.security.http.ssl.keystore.secure_password
-   bin\elasticsearch-keystore add xpack.security.http.ssl.truststore.secure_password
+   ```bash
+   bin/elasticsearch-keystore add xpack.security.http.ssl.keystore.secure_password
+   bin/elasticsearch-keystore add xpack.security.http.ssl.truststore.secure_password
    ```
 
    For example, if you use Ubuntu, you can do so as follows:
@@ -83,6 +86,51 @@ To configure TLS encryption for client-server communication:
 > [!TIP]
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
+> [!NOTE]
+> When replacing certificates, e.g. when the certificates expired, make sure to delete the **elasticsearch.keystore** file in the **elasticsearch** folder.
+
+### Inter-node TLS encryption
+
+By default inter-node communication in Elasticsearch is unencrypted.
+
+To configure TLS encryption for inter-node communication:
+
+1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
+
+1. Add the following to the *elasticsearch.yml* file on each node:
+
+   ```yaml
+   xpack.security.transport.ssl.enabled: true
+   xpack.security.transport.ssl.verification_mode: full 
+   xpack.security.transport.ssl.keystore.path: elastic-certificates.p12 
+   xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
+   ```
+
+   If you are using a `.PEM` certificate generated using `openssl` utility, add the following lines to *elasticsearch.yml* file instead.
+
+   ```yaml
+    xpack.security.transport.ssl.enabled: true
+    xpack.security.transport.ssl.verification_mode: full 
+    xpack.security.transport.ssl.key: path/to/your/PrivateKey/used/to/generatet/the/certificate
+    xpack.security.transport.ssl.certificate: path/to/your/certificate
+    xpack.security.transport.ssl.certificate_authorities: path/to/certificate/authority
+    #In case of a self-signed certificates replace `path/to/certificate/authority` with path to certificate
+    of each node in cluster.
+    ```
+
+1. For cert stores generated with the script or if you secured the node's certificate with a password, add the password to your Elasticsearch keystore by executing the following commands:
+
+   ```bash
+   bin/elasticsearch-keystore add xpack.security.transport.ssl.keystore.secure_password
+   bin/elasticsearch-keystore add xpack.security.transport.ssl.truststore.secure_password
+   ```
+
+1. Restart the Elasticsearch cluster (all nodes).
+
+> [!NOTE]
+> DataMiner does **not** require a restart when enabling *inter-node* TLS encryption.
+> When replacing certificates, e.g. when the certificates expired, make sure to delete the **elasticsearch.keystore** file in the **elasticsearch** folder.
+
 ### Troubleshooting
 
 #### Syntax error when executing the generate-certificates.sh script
@@ -110,47 +158,6 @@ sudo generate-certificates.sh
    ```
 
    Once the conversion is complete, you can execute the script again.
-
-## Inter-node TLS encryption
-
-By default inter-node communication in Elasticsearch is unencrypted.
-
-To configure TLS encryption for inter-node communication:
-
-1. Request or generate a TLS certificate (the certificates should be in the PKCS#12 format). Make sure the IP address of the node is included in the *Subject Alternative Names* of the certificate.
-
-1. Add the following to the *elasticsearch.yml* file on each node:
-
-   ```
-   xpack.security.transport.ssl.enabled: true
-   xpack.security.transport.ssl.verification_mode: full 
-   xpack.security.transport.ssl.keystore.path: elastic-certificates.p12 
-   xpack.security.transport.ssl.truststore.path: elastic-certificates.p12
-   ```
-
-   If you are using a `.PEM` certificate generated using `openssl` utility, add the following lines to *elasticsearch.yml* file instead.
-
-   ```
-    xpack.security.transport.ssl.enabled: true
-    xpack.security.transport.ssl.verification_mode: full 
-    xpack.security.transport.ssl.key: path/to/your/PrivateKey/used/to/generatet/the/certificate
-    xpack.security.transport.ssl.certificate: path/to/your/certificate
-    xpack.security.transport.ssl.certificate_authorities: path/to/certificate/authority
-    #In case of a self-signed certificates replace `path/to/certificate/authority` with path to certificate
-    of each node in cluster.
-    ```
-
-1. For cert stores generated with the script or if you secured the node's certificate with a password, add the password to your Elasticsearch keystore by executing the following commands:
-
-   ```
-   bin/elasticsearch-keystore add xpack.security.transport.ssl.keystore.secure_password
-   bin/elasticsearch-keystore add xpack.security.transport.ssl.truststore.secure_password
-   ```
-
-1. Restart the Elasticsearch cluster (all nodes).
-
-> [!NOTE]
-> DataMiner does **not** require a restart when enabling *inter-node* TLS encryption.
 
 ## Authentication
 
@@ -215,7 +222,6 @@ To **update** an existing password:
    ```
 
 1. Update the password in the *DB.xml* file on every DataMiner Agent and restart the DataMiner System.
-
 
 ## Updating Elasticsearch
 
