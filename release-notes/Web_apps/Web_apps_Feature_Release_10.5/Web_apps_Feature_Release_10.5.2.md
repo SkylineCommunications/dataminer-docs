@@ -138,6 +138,18 @@ In some cases, *Table* and *Grid* components could incorrectly keep fetching que
 
 When a DOM instance was updated while a client connection was being closed, in some cases, the DOMHelper could stop working.
 
+#### Dashboards/Low-Code Apps - Table component: 'Refresh' button would not work when the GQI query session had expired [ID 41679]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Up to now, when more data was loaded into a *Table* component after the GQI query session had expired, the following could happen:
+
+- If WebSockets were enabled, a `Session does not exist` error would appear.
+
+- If WebSockets were disabled, a *Refresh* button would appear, but clicking it would not have any effect.
+
+From now on, when more data is loaded into a *Table* component after the GQI query session has expired, a *Refresh* button will appear, and clicking it will cause a new GQI query session to be started.
+
 #### Low-Code Apps: Problem when adding an 'Execute a script' action to a low-code app that was hosted on a dashboard gateway [ID 41697]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
