@@ -6,9 +6,7 @@ uid: KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version
 
 ## Affected versions
 
-- Main Release versions from DataMiner 10.2.0 [CU16]/10.3.0 [CU4].
-
-- Feature Release versions from DataMiner 10.3.7.
+From DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 onwards.
 
 ## Cause
 
