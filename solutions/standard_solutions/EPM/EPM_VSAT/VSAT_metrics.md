@@ -10,7 +10,7 @@ All specifications are provided based on the assumption that DMAs are running on
 
 ## Limits
 
-The limits provided below override any similar, general DataMiner [limits](xref:dataminer_metrics#limits) under the scope of the EPM VSAT solution.  
+The limits provided below override any similar, general DataMiner [limits](xref:dataminer_metrics#limits) under the scope of the EPM VSAT Solution.
 
 | \# | Specification | Scope | Metric | Remarks |
 | -- | ------------- | ----- | ------- | ------- |

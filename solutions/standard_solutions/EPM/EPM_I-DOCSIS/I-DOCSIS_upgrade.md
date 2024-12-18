@@ -5,7 +5,7 @@ keywords: I-DOCSIS upgrade
 
 # EPM Integrated DOCSIS upgrade
 
-When you have upgraded the EPM solution, execute the following procedure:
+When you have upgraded the EPM Solution, execute the following procedure:
 
 1. Go to the folder `C:\Skyline DataMiner\Dashboards\EPM SOLUTION`.
 
@@ -22,4 +22,4 @@ When you have upgraded the EPM solution, execute the following procedure:
 >
 > - `newElementID` is the element ID of the front-end element.
 > - `newDataMinerID` is the DMA ID of the DataMiner Agent where the front-end (FE) element is located.
-> - Currently, this procedure needs to be executed every time the EPM solution is upgraded.
+> - Currently, this procedure needs to be executed every time the EPM Solution is upgraded.

@@ -14,7 +14,7 @@ Start by deploying the DataMiner EPM VSAT package to the system:
 
 1. Click the *Deploy* button to [deploy the package](xref:Deploying_a_catalog_item) on your DMA.
 
-This will install the connectors, Automation scripts, and Visio drawings needed to create and configure the DataMiner EPM VSAT solution.
+This will install the connectors, Automation scripts, and Visio drawings needed to create and configure the DataMiner EPM VSAT Solution.
 
 While the package is being deployed, you can follow the progress of the deployment in the Admin app, on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
 

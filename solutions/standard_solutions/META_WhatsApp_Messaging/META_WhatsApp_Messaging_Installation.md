@@ -2,7 +2,7 @@
 uid: META_WhatsApp_Messaging_Installation
 ---
 
-# Installing the META WhatsApp Messaging solution
+# Installing the META WhatsApp Messaging Solution
 
 ## Prerequisites
 
@@ -121,7 +121,7 @@ Before [installing the *META WhatsApp Messaging* connector](#installing-the-meta
 
 ## Installing the 'META WhatsApp Messaging' connector
 
-1. Look up the [*META WhatsApp Messaging* solution](https://catalog.dataminer.services/details/909de004-7a8f-43bd-b40c-824051fe3fe1) in the DataMiner Catalog.
+1. Look up the [*META WhatsApp Messaging* Solution](https://catalog.dataminer.services/details/909de004-7a8f-43bd-b40c-824051fe3fe1) in the DataMiner Catalog.
 
 1. Click the *Deploy* button.
 

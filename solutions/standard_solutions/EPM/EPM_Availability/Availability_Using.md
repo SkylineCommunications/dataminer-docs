@@ -2,7 +2,7 @@
 uid: Availability_Using
 ---
 
-# Using the EPM Availability solution
+# Using the EPM Availability Solution
 
 ## Topology app
 

@@ -2,7 +2,7 @@
 uid: DataMiner_Frameworks
 ---
 
-# DataMiner Frameworks
+# DataMiner frameworks
 
 <div class="row"> 
   <div class="column">

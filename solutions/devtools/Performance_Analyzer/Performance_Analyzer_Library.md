@@ -4,7 +4,7 @@ uid: Performance_Analyzer_Library
 
 # Performance Analyzer library
 
-The first component of the Performance Analyzer solution is the library, which is available as a NuGet package. You can use this component on its own, or together with the [Performance Analyzer app](xref:Performance_Analyzer_LCA).
+The first component of the Performance Analyzer Solution is the library, which is available as a NuGet package. You can use this component on its own, or together with the [Performance Analyzer app](xref:Performance_Analyzer_LCA).
 
 ## Installing the library
 

@@ -30,4 +30,4 @@ Currently, these parameters are not shown on the topology chains available in In
     OID: 1.3.6.1.4.1.4491.2.1.32.1.1.2.1.1
 
 > [!NOTE]
-> These KPIs are aimed at a distributed architecture (D-DOCSIS). They have been added to the connector because this connector will also be used in the D-DOCSIS solution.
+> These KPIs are aimed at a distributed architecture (D-DOCSIS). They have been added to the connector because this connector will also be used in the D-DOCSIS Solution.

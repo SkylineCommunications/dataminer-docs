@@ -4,7 +4,7 @@ uid: xPON_KPI
 
 # Available parameters in EPM xPON
 
-This page lists the parameters available per topology level defined in the xPON EPM solution, except the parameters acquired for the ONT. Those are listed under [EPM xPON ONT parameters](xref:xPON_ONT)
+This page lists the parameters available per topology level defined in the xPON EPM Solution, except the parameters acquired for the ONT. Those are listed under [EPM xPON ONT parameters](xref:xPON_ONT)
 
 ## KPIs & KQIs per aggregation level
 

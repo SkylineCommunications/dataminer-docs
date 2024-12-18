@@ -1,4 +1,7 @@
 items:
+- name: Solutions
+  topicUid: solution_index
+  items:
   - name: Standard Solutions
     items:
     - name: dataminer.MediaOps
@@ -178,18 +181,18 @@ items:
       - name: DataMiner EPM Availability
         topicUid: Availability_Overview
         items:
-        - name: Deploying the DataMiner EPM Availability solution
+        - name: Deploying the DataMiner EPM Availability Solution
           topicUid: Availability_deployment
-        - name: Using the EPM Availability solution
+        - name: Using the EPM Availability Solution
           topicUid: Availability_Using
         - name: Available parameters in Availability
           topicUid: Availability_parameters
-    - name: META Whatsapp Messaging solution
+    - name: META Whatsapp Messaging Solution
       topicUid: META_WhatsApp_Messaging
       items:
-      - name: Installing the META WhatsApp Messaging solution
+      - name: Installing the META WhatsApp Messaging Solution
         topicUid: META_WhatsApp_Messaging_Installation
-      - name: Using the META WhatsApp Messaging solution
+      - name: Using the META WhatsApp Messaging Solution
         topicUid: Using_META_WhatsApp_Messaging
     - name: DataMiner Ping Monitoring
       topicUid: PingMonitoring
@@ -236,7 +239,7 @@ items:
         topicUid: Installing_DataMiner_Objects_Tool
       - name: Working with the DataMiner Objects Tool
         topicUid: Using_DataMiner_Objects_Tool
-    - name: Performance Analyzer solution
+    - name: Performance Analyzer Solution
       topicUid: Performance_Analyzer
       items:
       - name: Performance Analyzer library

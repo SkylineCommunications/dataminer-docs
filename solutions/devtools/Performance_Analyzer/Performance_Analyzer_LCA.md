@@ -4,7 +4,7 @@ uid: Performance_Analyzer_LCA
 
 # Performance Analyzer app
 
-Raw numbers can often be difficult to interpret, which is why the Performance Analyzer solution provides a built-in low-code app to visualize the data collected by the solution. Using this app will make it much easier to make decisions based on the collected performance metrics.
+Raw numbers can often be difficult to interpret, which is why the Performance Analyzer Solution provides a built-in low-code app to visualize the data collected by the solution. Using this app will make it much easier to make decisions based on the collected performance metrics.
 
 To use this app, the [Performance Analyzer library](xref:Performance_Analyzer_Library) must have been implemented in the system.
 

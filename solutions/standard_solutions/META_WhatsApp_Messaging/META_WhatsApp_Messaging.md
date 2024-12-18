@@ -2,9 +2,9 @@
 uid: META_WhatsApp_Messaging
 ---
 
-# META WhatsApp Messaging solution
+# META WhatsApp Messaging Solution
 
-The META WhatsApp Messaging solution acts as a link between the [Alarm Console](xref:Working_with_the_Alarm_Console) (1) and the WhatsApp API, allowing alarms to be sent directly to designated users' devices with WhatsApp installed (2).
+The META WhatsApp Messaging Solution acts as a link between the [Alarm Console](xref:Working_with_the_Alarm_Console) (1) and the WhatsApp API, allowing alarms to be sent directly to designated users' devices with WhatsApp installed (2).
 
 ![META WhatsApp Messaging cover](~/user-guide/images/META_WhatsApp_Messaging_Cover.png)
 

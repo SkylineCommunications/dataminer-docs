@@ -3,7 +3,7 @@ uid: Availability_parameters
 keywords: Availability parameters
 ---
 
-# Available parameters in the EPM Availability solution
+# Available parameters in the EPM Availability Solution
 
 ## Aggregated parameters
 

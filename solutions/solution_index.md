@@ -4,8 +4,6 @@ uid: solution_index
 
 # DataMiner Solutions
 
-<!-- Todo: add tiles for each solution -->
-
 ## Standard Solutions
 
 <div class="row"> 

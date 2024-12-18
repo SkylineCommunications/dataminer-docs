@@ -15,7 +15,7 @@ To use the *R-PHY Analog & RF* low-code app, users need to have access to the DM
 
    1. Assign the R-PHY Analog & RF users for which you want to restrict access to the newly created group.
 
-1. For each [protocol used in the Remote PHY Monitoring solution](xref:Remote_PHY_Monitoring_components), change the level attribute for the parameters these users should not have access to:
+1. For each [protocol used in the Remote PHY Monitoring Solution](xref:Remote_PHY_Monitoring_components), change the level attribute for the parameters these users should not have access to:
 
    1. In the Protocols & Templates module in Cube, right-click the Production version of the protocol for which you want to restrict access, and click *Open*:
 

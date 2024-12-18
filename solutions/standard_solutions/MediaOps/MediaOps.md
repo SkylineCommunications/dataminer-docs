@@ -9,4 +9,4 @@ uid: MediaOps
 
 dataminer.MediaOps will soon be available in the DataMiner Catalog as a package containing multiple low-code apps designed to simplify customization within media operations.
 
-All functions of the MediaOps solution are built on the [Standard Data Model (SDM)](xref:SDM), which will also be included in the package.
+All functions of the MediaOps Solution are built on the [Standard Data Model (SDM)](xref:SDM), which will also be included in the package.

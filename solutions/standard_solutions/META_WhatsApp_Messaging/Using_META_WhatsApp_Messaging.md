@@ -2,7 +2,7 @@
 uid: Using_META_WhatsApp_Messaging
 ---
 
-# Using the META WhatsApp Messaging solution
+# Using the META WhatsApp Messaging Solution
 
 1. Configure the *META WhatsApp Messaging* connector.
 

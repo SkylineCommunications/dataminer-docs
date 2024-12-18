@@ -4,7 +4,7 @@ uid: xPON_ONT
 
 # EPM xPON ONT parameters
 
-Below you can find the indexable parameters for an ONT in the xPON EPM solution.
+Below you can find the indexable parameters for an ONT in the xPON EPM Solution.
 
 These are parameters that will not be available in an alarm template, but that can be used by queries or Automation scripts to execute complex actions.
 

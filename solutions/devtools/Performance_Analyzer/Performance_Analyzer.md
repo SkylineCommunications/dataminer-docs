@@ -2,9 +2,9 @@
 uid: Performance_Analyzer
 ---
 
-# Performance Analyzer solution
+# Performance Analyzer Solution
 
-When you have implemented a solution, it is often necessary to monitor whether its performance is up to the required standards. To track the performance of a solution and identify possible bottlenecks, people often implement their own performance tracking, but this can be both time-consuming and difficult. This is where the generic Performance Analyzer solution comes in. It will **streamline the process of analyzing the performance of a solution**, thereby reducing time to deliver and the cost.
+When you have implemented a solution, it is often necessary to monitor whether its performance is up to the required standards. To track the performance of a solution and identify possible bottlenecks, people often implement their own performance tracking, but this can be both time-consuming and difficult. This is where the generic Performance Analyzer Solution comes in. It will **streamline the process of analyzing the performance of a solution**, thereby reducing time to deliver and the cost.
 
 The solution consists of two main parts: the Performance Analyzer library and the corresponding low-code app.
 

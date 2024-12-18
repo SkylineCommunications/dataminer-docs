@@ -115,8 +115,8 @@ A typical example as part of the automation and orchestration stack is the Booki
 > For more information:
 >
 > - [Booking Manager app](xref:Booking_Manager_user_interface) in the DataMiner User Guide
-> - [DataMiner Frameworks](xref:DataMiner_Frameworks) in the DataMiner User Guide
-> - [DataMiner Apps](https://community.dataminer.services/dataminer-apps/) on DataMiner Dojo Community
+> - [DataMiner frameworks](xref:DataMiner_Frameworks) in the DataMiner User Guide
+> - [DataMiner apps](https://community.dataminer.services/dataminer-apps/) on DataMiner Dojo Community
 
 ## Profile Manager
 
