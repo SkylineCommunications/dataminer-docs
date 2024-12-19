@@ -149,7 +149,7 @@ This connector uses a virtual connection and does not require any input during e
 ```
 
 > [!TIP]
-> You can find the structure for all possible connection sections in the [template](xref:Connector_help_template). If you copy from there, remember to remove the placeholder text and the square brackets surrounding it.
+> You can find the structure for all possible connection sections in the [technical template](xref:Connector_technical_template). If you copy from there, remember to remove the placeholder text and the square brackets surrounding it.
 
 ##### 'Initialization' subsection
 
