@@ -300,3 +300,12 @@ From now on, no QAction validation will be performed when the DataMiner Agent do
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When a large DataMiner System included agents in a Failover setup, the more agents were present in this DMS, the more "duplicate route" and "created route" entries would get added to the NATS server logging.
+
+#### Invalidated property configuration objects in the SLNet cache would incorrectly not be set to null [ID 41687]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- Not added to MR 10.6.0 - Introduced by RN 41169 -->
+
+When Class Library retrieves property configurations of type element, service or view, these get cached in SLNet, and when a configuration is added or updated, the cached object associated with that configuration is invalidated.
+
+Up to now, when a cached view, element or service property configuration object was invalidated, it would incorrectly not be set to null.
