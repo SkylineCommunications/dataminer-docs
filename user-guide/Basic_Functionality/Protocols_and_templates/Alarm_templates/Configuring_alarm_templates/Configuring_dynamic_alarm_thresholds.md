@@ -47,17 +47,12 @@ Both for "absolute" and "relative" alarm thresholds, the "normal" value has to b
 
      ![Example of continuous signal degradation](~/user-guide/images/SmartBaselinesContinuous.png)
 
-   - **To detect a deviation in the expected daily pattern**. This type of baseline is designed to detect deviations from signals that follow a day/night pattern. To achieve this, the day is divided into 288 intervals, each lasting 5 minutes (24 hours × 12 intervals per hour).
-For example, if the trend window is set to 7 days, each of the 288 intervals will have 7 data points corresponding to that interval's time range. We calculate the median for each interval, resulting in 288 median values.
-Rather than storing all these values, we approximate them by fitting a degree-8 polynomial through the 288 medians. This polynomial represents the typical daily behavior of the signal. By default, every 15 minutes, the value of the polynomial at the current time is evaluated and used as the baseline value.
+   - **To detect a deviation in the expected daily pattern**. This type of baseline is designed to detect deviations from signals that follow a day/night pattern. To achieve this, the day is divided into 288 intervals, each lasting 5 minutes (24 hours × 12 intervals per hour). For example, if the trend window is set to 7 days, each of the 288 intervals will have 7 data points corresponding to that interval's time range. The median is calculated for each interval, resulting in 288 median values. Rather than storing all these values, they are approximated by fitting a degree-8 polynomial through the 288 medians. This polynomial represents the typical daily behavior of the signal. By default, every 15 minutes, the value of the polynomial at the current time is evaluated and used as the baseline value.
 
-
-
-        > [!NOTE]
-        > If a range is defined in the protocol, the baseline value is capped to ensure it stays within the specified minimum and maximum limits.
-   
-        > [!NOTE]
-        > The polynomial is recalculated every day around midnight
+     > [!NOTE]
+     >
+     > - If a range is defined in the protocol, the baseline value is capped to ensure it stays within the specified minimum and maximum limits.
+     > - The polynomial is recalculated every day around midnight.
 
      Example of a deviation in the expected daily pattern for a signal:
 
