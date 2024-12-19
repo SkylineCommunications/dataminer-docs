@@ -71,13 +71,11 @@ For more information, see [Data resilience and backups](xref:STaaS#data-resilien
 
 ### Is it possible to make a local backup of all data?
 
-You can set up your own offload or "central" database in your DaaS system at no additional subscription cost. That database will contain an offline copy of all (or some of) the data in the general DMA databases.
-
-See also: [Offload database](xref:Offload_database).
+This is currently not possible. Skyline takes regular backups of all systems, which they can use to restore systems. If you want to get access to a backup of your system, please contact <daas@dataminer.services>.
 
 ### Is it possible to copy data from Azure and store it locally?
 
-You can use the DataMiner API to copy data from Azure at no additional subscription cost.
+You can use the DataMiner API to copy data from Azure at no additional subscription cost. This requires a site-to-site VPN connection. To set up this connection, contact <daas@dataminer.services>.
 
 ### How can a DaaS system connect to on-premises and cloud resources?
 
