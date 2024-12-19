@@ -286,7 +286,7 @@ items:
               - name: Specifying data input in a dashboard or app URL
                 topicUid: Specifying_data_input_in_a_dashboard_URL
               - name: Configuring a dashboard to use data in a URL without a dedicated component
-                topicUid: Using_data_in_URL_without_dedicated_component
+                topicUid: Using_data_in_URL_without_dedicated_component        
           - name: Sharing a dashboard
             topicUid: Sharing_a_dashboard
           - name: Generating a report based on a dashboard
@@ -312,6 +312,8 @@ items:
                 topicUid: Tutorial_Apps_Node_Edge
               - name: Creating a parameter table connected to an element feed
                 topicUid: Creating_a_parameter_table_connected_to_an_element_feed
+              - name: Alarm Dashboard for your daily DMS health check
+                topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
