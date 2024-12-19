@@ -30,7 +30,7 @@ The tutorial consists of the following steps:
 - [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
 - [Step 2: Detect parameters that are about to hit upper and lower bounds](#step-2-detect-parameters-that-are-about-to-hit-upper-and-lower-bounds)
 - [Step 3: Detect parameters that are about to hit alarm thresholds](#step-3-detect-parameters-that-are-about-to-hit-alarm-thresholds)
-- [Step 4: Configure proactive cap detection in the alarm template](#step-4-configure-proactive-cap-detecting-in-the-alarm-template)
+- [Step 4: Configure proactive cap detection in the alarm template](#step-4-configure-proactive-cap-detection-in-the-alarm-template)
 - [Step 5: Final exercise](#step-5-final-exercise-optional)
 
 ## Step 1: Install the example package from the Catalog
@@ -103,80 +103,85 @@ In this step, you will learn what potential issues DataMiner's proactive cap det
 
    > [!NOTE]
    >
-   > - These predicted alarms are not actual alarms, but *suggestion events*, and will not be shown in the *Active alarms* tab.
+   > - These predicted alarms are not actual alarms, but suggestion events, and will not be shown in the *Active alarms* tab.
    > - You can also find predicted alarms using the *Suggestion events* tab. To access this, click the plus icon ("+") in the Alarm Console header, and select *Show current* > *Suggestion events*. This will open a tab with all suggestion events, including the predicted alarm above. However, this tab page can show more than just the predicted alarms. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) for more information.
    >
    >
    > ![Suggestion events tab in the alarm console showing a predicted alarm](~/user-guide/images/Proactive_Cap_Detection_Tutorial_CMS_AlarmConsoleSuggestionEvents.gif)
 
-## Step 3: Detecting parameters that are about to hit alarm thresholds
+## Step 3: Detect parameters that are about to hit alarm thresholds
 
-In the previous step, we showed what proactive cap detection can detect out-of-the-box, without any configuration, by relying on a parameter's upper and lower range limits. In this step, we will see how proactive cap detection uses the alarm thresholds configured in the alarm template to improve its suggestions.
+In the previous step, you explored how proactive cap detection can identify issues out-of-the-box, without any configuration, by relying on a parameter's upper and lower range limits. In this step, you will see how proactive cap detection uses the alarm thresholds configured in the alarm template to improve its suggestions.
 
-1. Open the element *Proactive Tutorial - SFP Monitor*. This element simulates the *Optical RX Power* metric of an SFPs (Small Form-Factor Pluggable), a device used together with network switches to connect fiber-optic or copper cables (see [this use-case](https://community.dataminer.services/use-case/ai-assisted-sfp-monitoring/) for more information).
-1. Open the trend graph of the parameter *Optical RX Power* on *Port 1* by clicking ![the trend icon](~/user-guide/images/trend_icon_unknown.png).
+1. Navigate to the *DATA* > *General* page of the *Proactive Tutorial - SFP Monitor* element. This element simulates the *Optical RX Power* metric of an SFP (Small Form-Factor Pluggable), a device used together with network switches to connect fiber-optic or copper cables. For more details, see [this use case](https://community.dataminer.services/use-case/ai-assisted-sfp-monitoring/).
 
-1. Click *Month to date* to see the data for the past month.
+1. Click the trend icon ![the trend icon](~/user-guide/images/trend_icon_unknown.png) next to *Port 1*.
 
-   You can see that the power remained stable until about three weeks ago (until November 11th in the picture), at which point it suddenly dropped and then continued to gradually degrade. If the value of this parameter would get too low, it could lead to a connection failure. Therefore, we would like to be warned about cases like this.
+1. Click *Month to date* to see data for the past month.
+
+   You will see that the power remained stable until around November 11th. At that point, it suddenly dropped and continued to gradually degrade. If the value of this parameter drops too low, it could lead to a connection failure. Therefore, you should configure a warning for scenarios like this.
 
    ![Optical RX Power of Port 1 over the past month](~/user-guide/images/Proactive_Cap_Detection_Tutorial_SFP_Trend_Graph.png)
 
-   The *Suggestion events* and *Proactive alarms* tab do not currently show any events for this parameter, because it does not have a lower limit. However, we can set alarm thresholds in the alarm template.
+   In the Alarm Console, you will see that no events for this parameter are shown in the *Suggestion events* and *Proactive alarms* tabs because the parameter does not have a lower limit. This can be resolved by setting alarm thresholds in an alarm template.
 
-1. Right-click the element *Proactive Tutorial - SFP Monitor* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*
-1. Enter a name for the alarm template, e.g. *RX Monitoring*, and click *OK*
+1. Right-click the element *Proactive Tutorial - SFP Monitor* in the Surveyor, and select *Protocols & Templates* > *Assign alarm templates* > *New alarm template*.
+
+1. Enter a name for the alarm template, e.g. *RX Monitoring*, and click *OK*.
+
 1. Select the checkbox in the *MON* column for the parameter *SFPs: Optical RX Power*.
 
-    This enables alarm monitoring for this parameter.
+   This will enable alarm monitoring for this parameter.
+
 1. Enter a threshold of -10 in the *CRIT LO* column.
+
 1. Click *OK* to save the alarm template.
 
-    A critical alarm threshold is now configured on the parameter *Optical RX Power* of the SFP monitor.
+   The critical alarm threshold is now applied to the *Optical RX Power* parameter of the SFP monitor.
 
-1. Click the *Generate Extra Data* button on the element *Proactive Tutorial - SFP Monitor*.
+1. On the *DATA* > *General* page of the *Proactive Tutorial - SFP Monitor* element, click the *Generate Extra Data* button.
 
-   This will generate a few more data points for *Optical RX Power* of *Port 1*, causing DataMiner to re-evaluate its prediction. This is equivalent to waiting a few minutes for more data points to come in.
+   This will generate additional data points for the *Optical RX Power* of *Port 1*, causing DataMiner to re-evaluate its predictions. This simulates waiting a few minutes for more data points to arrive.
 
    > [!IMPORTANT]
    > Throughout the rest of this tutorial, when generating data, always wait until the *Data Generated?* parameter displays *Yes* before proceeding to the next step.
 
-1. Reopen the *Predicted alarms* tab (if necessary) by clicking the light bulb icon in the upper right corner of the Alarm Console and selecting the item *2 alarms are predicted in the near future*.
+1. Click the light bulb icon in the top-right corner of the Alarm Console and select *2 alarms are predicted in the near future* to access the *Predicted alarms* tab.
 
-   The tab now also lists a *Predicted Critical Low* event for *Optical RX Power Port 1*, as DataMiner now predicts that the parameter will cross the critical low threshold that we configured above in the near future, even though the parameter has not crossed the threshold yet.
+   You will now see a *Predicted Critical Low* event for *Optical RX Power Port 1*. DataMiner predicts that the parameter will cross the critical low threshold you just configured in the near future.
 
-   The advantage of using these predicted alarms here, is that you will be notified earlier, and thus that you can use less strict thresholds in your alarm template. This way you avoid false positives, while still receiving notifications when parameters are likely to cross a critical threshold in the near future.
-
-   Note again that this predicted alarm is a *suggestion event*, not a real alarm, and therefore will not be appear in the *Active alarms* tab.
+   The advantage of these predicted alarms is that they notify you in advance, allowing you to use less strict thresholds in your alarm template. This approach helps you avoid false positives while still receiving notifications when parameters are likely to cross a critical threshold soon.
 
    ![Predicted critical low alarm on Optical RX Power Port 1](~/user-guide/images/Proactive_Cap_Detection_Tutorial_SFP_PredictedAlarms.png)
 
-> [!NOTE]
-> By default, predicted alarms are generated only for critical alarm thresholds (as well as upper and lower range limits of the parameter). However, other thresholds can be configured by setting the *Minimum alarm severity* option under *System Center* > *System settings* > *analytics config* > *Proactive cap detection* or, as we will see below, by changing the alarm template. For more information, see the [proactive cap detection](xref:Proactive_cap_detection) page.
+   > [!NOTE]
+   > Predicted alarms are not actual alarms, but suggestion events, and will not be shown in the *Active alarms* tab.
 
-## Step 4: Configuring proactive cap detecting in the alarm template
+By default, predicted alarms are generated only for critical alarm thresholds (as well as the upper and lower range limits of the parameter). However, you can configure predictions for other thresholds by changing the *Minimum alarm severity* option under *System Center* > *System settings* > *analytics config* > *Proactive cap detection*. Alternatively, you can adjust the alarm template (see step 4). For more information, see the [proactive cap detection](xref:Proactive_cap_detection) page.
 
-In the previous steps, the predicted alarms we generated were not shown in the *Active alarms* tab in the Alarm Console, as they were suggestion events, and not real alarms. In this step, you will learn how to create real alarms for them. This can be useful to avoid having to keep an eye on two tabs in the Alarm Console at the same time.
+## Step 4: Configure proactive cap detection in the alarm template
 
-1. Hover your mouse over the predicted alarm on *Optical RX Power* in the *Predicted alarms* tab in the Alarm Console. In the ![Feedback](~/user-guide/images/Feedback_Column.png) column, click ![the thumbs up icon](~/user-guide/images/Thumbs_Up.png).
+As predicted alarms are suggestion events and not actual alarms, they are shown in the *Predicted alarms* tab, not in the *Active alarms* tab of the Alarm Console. In this step, you will learn how to configure real alarms for these predictions. This can be useful to avoid monitoring two separate tabs in the Alarm Console at the same time.
 
-   This lets DataMiner know that you found the predicted alarm useful, and makes it more likely to show similar events in the future. Selecting ![the thumbs down icon](~/user-guide/images/Thumbs_Down.png) would make DataMiner less likely to trigger similar events.
+1. Hover your mouse over the predicted alarm for *Optical RX Power* in the *Predicted alarms* tab of the Alarm Console. In the ![Feedback](~/user-guide/images/Feedback_Column.png) column, click ![the thumbs up icon](~/user-guide/images/Thumbs_Up.png).
+
+   This feedbacks informs DataMiner that you found the predicted alarm useful, which makes it more likely that similar events will be generated in the future. Selecting ![the thumbs down icon](~/user-guide/images/Thumbs_Down.png) would make decrease the likelihood of similar events being triggered.
 
    ![Giving thumbs up on the predicted alarm on Optical RX Power](~/user-guide/images/Proactive_Cap_Detection_Tutorial_SFP_PositiveFeedback.gif)
 
-   Note that next to the ![thumbs up](~/user-guide/images/Thumbs_Up.png) and ![thumbs down](~/user-guide/images/Thumbs_Down.png) icons, a light bulb icon has appeared. This icon proposes certain follow-up actions based on your feedback. We will use it to change the alarm template of *Proactive Tutorial - SFP Monitor*.
+   Next to the thumbs up and thumbs down icons, a light bulb icon will appear. This icon offers follow-up actions based on your feedback. You will use it to change the alarm template for *Proactive Tutorial - SFP Monitor*.
 
 1. Click the light bulb icon and select *Improve alarm template* from the list of follow-up actions.
 
-   This will open a pop-up window with the proposed configuration for proactive alarming. In this case, DataMiner proposes to create a real alarm, instead of a suggestion event, with severity *Critical* whenever it predicts that the parameter will cross the *Critical Low* threshold.
+   This will open a pop-up window with the proposed configuration for your augmented operations alarms. In this case, DataMiner proposes creating a real alarm with critical severity whenever it predicts the parameter will cross the *Critical Low* threshold.
 
    ![Proposed proactive alarming settings for Optical RX Power](~/user-guide/images/Proactive_Cap_Detection_Tutorial_SFP_Popup.gif)
 
-1. Click on the text *Critical Low (-10 dBm)*.
+1. Click the underlined text "Critical Low (-10.00 dBm)".
 
-   Here, you can select the thresholds for which to create predicted alarms. These thresholds are the alarm thresholds configured in the alarm template (*Critical Low*, *Major Low*, *Minor Low*, *Warning Low*, *Warning High*, *Minor High*, *Major High* and *Critical High*), and the upper and lower range limits of the parameter defined in the protocol. In this case only *Critical Low* is shown, as this is the only threshold configured in the alarm template and no range is specified in the protocol for the parameter.
+   Here, you can select the thresholds for which predicted alarms should be triggered. These alarm thresholds are those configured in the alarm template (*Critical Low*, *Major Low*, *Minor Low*, *Warning Low*, *Warning High*, *Minor High*, *Major High* and *Critical High*), and the upper and lower range limits of the parameter defined in the protocol. In this case, only *Critical Low* is shown because it is the only threshold configured in the alarm template and no range is specified in the protocol for the parameter.
 
-1. Change the severity of the alarm that is triggered to, for instance, *Major* by clicking on the text *Critical*.
+1. Change the severity of the triggered alarm by clicking the text *Critical* and selecting, for example, *Major*.
 
    ![Changing severity of the alarm that will be triggered to major](~/user-guide/images/Proactive_Cap_Detection_Tutorial_SFP_AlarmSeverity.gif)
 
@@ -186,38 +191,44 @@ In the previous steps, the predicted alarms we generated were not shown in the *
 
    ![The predicted alarms in the Active alarms tab](~/user-guide/images/Proactive_Cap_Detection_Tutorial_SFP_MajorAlarm.png)
 
-   The options for proactive alarming can also be accessed directly from the alarm template.
+   > [!NOTE]
+   > The options for proactive alarming can also be accessed directly from the alarm template.
 
-1. Right-click the element *Proactive Tutorial - SFP Monitor* and select *Protocols & Templates* > *Assign Alarm Template* > *RX Monitoring*.
-1. Scroll to the far right of the alarm template and find the *ANALYTICS* column.
+1. Right-click the element *Proactive Tutorial - SFP Monitor* in the Surveyor and select *Protocols & Templates* > *View alarm template 'RX Monitoring'*.
 
-   This column contains a button that indicates whether any alarm monitoring has been enabled for anomalies or proactive cap detection. Right now it shows *Customized*, since alarm monitoring for proactive cap detection is enabled, but not for anomalies.
+1. Scroll to the far-right side of the alarm template and locate the *ANALYTICS* column.
+
+   This column contains a button that indicates whether alarm monitoring has been enabled for anomalies or proactive cap detection. Currently, it displays *Customized*, since alarm monitoring is enabled for proactive cap detection, but not for anomaly detection.
 
 1. Click the button in the *ANALYTICS* column.
 
-   The same pop-up will open as in the previous window.
+   The same *Augmented Operations Alarm Settings* pop-up window will open.
 
 > [!NOTE]
 > For a full overview of the Augmented Operations alarm settings, see [Configuring Augmented Operations alarm settings](xref:Configuring_anomaly_detection_alarms).
 
 ## Step 5: Final exercise (optional)
 
-In this final step, you will apply what you have learned earlier in a practical exercise.
+In this final step, you will apply what you have learned in this tutorial through a practical exercise.
 
-Open the element *Proactive Tutorial - AMS Server*, simulating the free disk space of several drives of a server. Data for a new drive will be generated every time you click the *Generate Data* button. The data will be very similar for each drive you generate, allowing you to try several times to get the desired result. The *Free Disk Space* parameter's range has a lower limit of 0&nbsp;GB.
+1. Open the element *Proactive Tutorial - AMS Server*. This element simulates the free disk space of several drives on a server.
 
-Your goal is to configure proactive alarming in the alarm template so that you get a real alarm (i.e. not just a suggestion event) with severity *Warning* before the disk gets full, as in the picture below. Good luck!
+1. Click the *Generate Data* button to generate data for a new drive. Each drive's data will be very similar, allowing you to try get the desired result several times.
+
+1. Use the alarm template to configure proactive alarming for the *Free Disk Space* parameter. The parameter's range has a lower limit of 0 GB.
+
+   Your goal is to configure proactive alarming so that a real alarm (i.e. not just a suggestion event) with severity *Warning* is triggered before the disk becomes full. Refer to the image below for the desired outcome.
 
 ![Predicted alarm with severity warning for Free Disk Space on AMS Server](~/user-guide/images/Proactive_Cap_Detection_Tutorial_AMS_Alarm.png)
 
-> If you are a member of the [DevOps Program](https://community.dataminer.services/dataminer-devops-professional-program/) and you have completed the exercise above, send us screenshots of your alarm template and your alarm console to earn DevOps Points.
+> If you are a member of the [DevOps Program](https://community.dataminer.services/dataminer-devops-professional-program/) and you have completed the exercise above, send us screenshots of your alarm template and your Alarm Console to earn DevOps Points.
 >
 > Use the following email format:
 >
 > - Subject: Tutorial - Proactive Tutorial
 > - To: [ai@skyline.be](mailto:ai@skyline.be)
 > - Body:
->   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email
+>   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
 >   - Feedback (optional): We value your feedback! Please share any thoughts or suggestions regarding this tutorial or the proactive cap detection feature.
 > - Attachment:
 >   - A screenshot of the *Active alarms* tab in the Alarm Console with the predicted alarm.
@@ -226,7 +237,7 @@ Your goal is to configure proactive alarming in the alarm template so that you g
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points as a token of your accomplishment.
 
 > [!IMPORTANT]
-> We want to keep improving our proactive cap detection capabilities, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us good examples of detected predicted alarms and/or situations where the proactive cap detection can be improved (e.g. no alarm was predicted, or an alarm was predicted for something that is not problematic).
+> We want to keep improving our proactive cap detection capabilities, and your feedback is very helpful for this. That is why you can also earn DevOps Points by sending us good examples of detected predicted alarms and/or situations where the proactive cap detection can be improved (e.g. no alarm was predicted or an alarm was predicted for something that is not problematic).
 >
 > Use the following email format to send us your examples:
 >
@@ -236,7 +247,7 @@ Your goal is to configure proactive alarming in the alarm template so that you g
 >   - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to send this email.
 >   - Feedback: Provide a short explanation of what is shown in the examples you are sending us and why the predicted alarm is good or bad.
 > - Attachment:
->   - A picture of the trend graph of the parameter on which the alarm was predicted or not predicted.
+>   - A picture of the trend graph of the parameter for which the alarm was predicted or not predicted.
 >   - An [export of your trend graph](xref:Exporting_a_trend_graph), obtained by right-clicking the trend graph and selecting *Export to CSV*.
 >
 > Skyline will review your submission. Upon successful validation, you will be awarded the appropriate DevOps Points.
