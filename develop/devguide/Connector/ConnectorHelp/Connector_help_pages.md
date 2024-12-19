@@ -8,7 +8,7 @@ For every connector that is developed for DataMiner, 2 or more documentation pag
 
 The first one, which we will call the [marketing page](#Marketing-page), should be appealing and focus on demonstrating the value the connector can bring to users. Comparing our Catalog to a real physical store, see this page as being the packaging of your product.
 
-The second one, which we will call the [technical page](#Technical-page), should be a subpage of the marketing one and contain further technical details? Comparing our Catalog to a real physical store again, see this page as being the technical notice of your product. This technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc. If a connector exports child connectors, a subpage should also be created for each of these child connectors.
+The second one, which we will call the [technical page](#Technical-page), should be a subpage of the marketing one and contain further technical details. Comparing our Catalog to a real physical store again, see this page as being the technical notice of your product. This technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc. If a connector exports child connectors, a subpage should also be created for each of these child connectors.
 
 When you develop a connector using DIS, you can pre-generate the connector documentation pages with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the pages directly in Markdown, starting from our [marketing](xref:Connector_marketing_template) and [technical](xref:Connector_technical_template) templates. When you have created the pages, add them in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
 
@@ -23,13 +23,13 @@ To make sure your pages can be automatically included in the [DataMiner Catalog]
   > [!IMPORTANT]
   > It is very important that the file name **does not contain any spaces**. If the file name contains spaces, this will cause an error when the new file is pushed to the DataMiner Catalog.
 
-- Technical page: make sure the **file name** follows the same rules as mentioned here above for the Marketing page followed by a _Technical prefix. For example, the file name of the *Microsoft Platform* technical page has to be *Microsoft_Platform_Technical.md*.
+- Technical page: make sure the **file name** follows the same rules as mentioned here above for the Marketing page followed by a **_Technical** prefix. For example, the file name of the *Microsoft Platform* technical page has to be *Microsoft_Platform_Technical.md*.
 
 - Add your documentation files in the following folder of the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository: */dataminer-docs-connectors/connector/doc*
 
 ### Table of contents
 
-When you add a new page to the connector documentation, you will need to add it to the table of contents as well. To do so, add it to the *toc.yml* file in the *connector* folder. Please note:
+When you add new pages to the connector documentation, you will need to add them to the table of contents as well. To do so, add it to the *toc.yml* file in the *connector* folder. Please note:
 
 - The connector documentation pages are listed in alphabetical order underneath each vendor node. Make sure to add your pages in the correct location.
 - Use the following syntax to add the pages:
@@ -60,7 +60,7 @@ Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:CTB_Markdown_Synta
 
 ### Title
 
-The title of both page should be the name of the connector in the [DataMiner Catalog](https://catalog.dataminer.services/).
+The title of both pages should be the name of the connector in the [DataMiner Catalog](https://catalog.dataminer.services/).
 
 ### Marketing page
 
