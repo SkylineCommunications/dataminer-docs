@@ -177,6 +177,10 @@ items:
             topicUid: BPA_Verify_Cloud_DxM_Version
           - name: View Recursive Loops
             topicUid: BPA_View_Recursion
+          - name: Verify NATS Migration Prerequisites
+            topicUid: BPA_NATS_Migration_Prerequisites
+      - name: BrokerGateway Migration
+        topicUid: BrokerGateway_Migration
   - name: Failover
     topicUid: failover
     items:
