@@ -29,7 +29,7 @@ This object is also used in the Jobs app. It is used to store a link to a `Secti
 It also has the *IsSoftDeleted* boolean. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects).
 
 > [!NOTE]
-> From DataMiner version 10.3.0/10.3.3 onwards, the `SectionDefinitionLink` also contains the *AllowMultipleSections* boolean, which can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition`. In earlier DataMiner versions, it is possible to add multiple `Sections` already, but these are not checked and cannot be used in the UI. When you upgrade to DataMiner 10.3.0/10.3.3, you will need to update any existing `DomDefinitions` with multiple `Sections`. Note that when fields are used in multiple sections, they are not available in GQI queries.
+> From DataMiner version 10.3.0/10.3.3 onwards, the `SectionDefinitionLink` also contains the *AllowMultipleSections* boolean, see [multiple sections](xref:DOM_MultipleSections).
 
 ### ModuleSettingsOverrides
 
