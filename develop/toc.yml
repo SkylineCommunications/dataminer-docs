@@ -4311,6 +4311,8 @@ items:
             topicUid: GetAlarmCountForService
           - name: GetAlarmDetails
             topicUid: GetAlarmDetails
+          - name: GetAlarmDetailsV2
+            topicUid: GetAlarmDetailsV2
           - name: GetAlarmHistory
             topicUid: GetAlarmHistory
           - name: GetAlarmHistoryV2

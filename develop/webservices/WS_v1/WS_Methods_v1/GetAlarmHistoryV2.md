@@ -10,6 +10,8 @@ Use this method to retrieve:
 - all alarms in the alarm tree of a specific alarm, or
 - alarm details of a cleared non-root alarm.
 
+Available from DataMiner 10.4.11 onwards.
+
 ## Input
 
 | Item | Format | Description |
