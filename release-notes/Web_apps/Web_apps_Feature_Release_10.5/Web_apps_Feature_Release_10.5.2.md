@@ -93,6 +93,14 @@ In low-code apps, network status issues will now be shown in a colored banner. P
 
 The *Link to data* dialog box has been redesigned. It will now offer a better overview, especially when a large number of entries are listed.
 
+#### Low-Code Apps: Enhanced retrieval of version history [ID 41700]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Overall performance has increased when retrieving the version history of a low-code app.
+
+Up to now, in order to retrieve the entire version history of a low-code app, the configuration file of each version had to be checked. From now on, all version information of a low-code app can be found in the *App.info.json* file.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Timeline component: Boundaries of the vertical timeline sections would not be correct [ID 41514]
