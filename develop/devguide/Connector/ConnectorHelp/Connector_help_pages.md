@@ -199,7 +199,7 @@ For a page for a parent DVE element, to make it clear that DCF in a child DVE is
 
 For a DVE child element, no detailed description is necessary in this section. Instead it is sufficient to mention the following: "Connectivity for this connector is managed by the parent connector [connector name]."
 
-If applicable, add the **Interfaces** and/or **DCF Connections** sections as detailed in the [template](xref:Connector_help_template).
+If applicable, add the **Interfaces** and/or **DCF Connections** sections as detailed in the [technical template](xref:Connector_technical_template).
 
 #### 'Notes' section
 
