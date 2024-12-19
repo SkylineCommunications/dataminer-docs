@@ -1053,3 +1053,9 @@ At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\So
 
 - If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
 - If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.
+
+#### Storage as a Service: Timeout for responses to write requests has been reduced to 10 seconds [ID 41717]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+On STaaS systems, the timeout for responses to write requests has been reduced to 10 seconds.

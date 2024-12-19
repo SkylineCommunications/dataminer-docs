@@ -185,7 +185,19 @@ From now on, SLLogCollector packages can also include a memory dump of the *w3wp
 
 Because of a number of enhancements, on EPM systems, overall performance has increased when aggregating large data sets.
 
+#### Storage as a Service: Timeout for responses to write requests has been reduced to 10 seconds [ID 41717]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+On STaaS systems, the timeout for responses to write requests has been reduced to 10 seconds.
+
 ### Fixes
+
+#### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+Due to an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
 
 #### SLNet could stop working due to NATS throwing an exception [ID 41396]
 
