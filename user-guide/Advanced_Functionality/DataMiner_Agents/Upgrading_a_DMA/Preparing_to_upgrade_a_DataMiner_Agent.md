@@ -85,7 +85,7 @@ This does not apply for upgrades within the same major version. For example, to 
 
 If you are about to upgrade across major versions, before proceeding with the upgrade, **ensure the following requirements are met**:
 
-- Depending on the target DataMiner version, make sure the corresponding Microsoft .NET and ASP.NET Core packages are installed:
+- Depending on the target DataMiner version, make sure the corresponding **Microsoft .NET and ASP.NET Core** packages are installed:
 
   | DataMiner version | Microsoft .NET | ASP.NET Core |
   |--|--|--|
@@ -94,7 +94,20 @@ If you are about to upgrade across major versions, before proceeding with the up
   | DataMiner 10.3.0 main release versions from 10.3.0 [CU3] onwards<br/>DataMiner 10.3.3 to 10.3.8 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe)<br/>[ASP.NET Core 6.0.13](https://download.visualstudio.microsoft.com/download/pr/0cb3c095-c4f4-4d55-929b-3b4888a7b5f1/4156664d6bfcb46b63916a8cd43f8305/dotnet-hosting-6.0.13-win.exe) |
   | DataMiner 10.3.0 [CU0] up to [CU2]<br/>DataMiner 10.2.0/10.2.x | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) | [ASP.NET Core 5.0.11](https://download.visualstudio.microsoft.com/download/pr/df452763-4b7d-490a-bc03-bd1003d3ff4c/665ee1786528809f33e791558b69cf51/dotnet-hosting-5.0.11-win.exe) |
 
-- Make sure the IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only) are opened, as explained in [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+- Depending on the target DataMiner version, make sure the corresponding minimum version of the **Microsoft Visual C++ x86/x64 redistributables** is installed.
+
+  If you do not install this before the upgrade, it will be installed as part of the DataMiner upgrade when necessary, but this may trigger an automatic **reboot** of the DMA to complete the installation.
+
+  The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+
+  - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+  - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+  | DataMiner version | Microsoft VC++ |
+  |--|--|
+  | DataMiner 10.5.0/10.5.2 and higher<!-- RN 41173+41609 --> | 14.40.33816 |
+
+- Make sure the IP network **ports 9090, 4222, 6222, and 8222** (NATS monitoring only) are opened, as explained in [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 
   > [!TIP]
   > See also: [Checking the required open ports in a DMS](xref:MOP_Checking_the_required_open_ports_in_a_DMS)
