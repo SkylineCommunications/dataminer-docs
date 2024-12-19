@@ -10,7 +10,7 @@ The first one, which we will call the [marketing page](#Marketing-page), should 
 
 The second one, which we will call the [technical page](#Technical-page), should be a subpage of the marketing one and contain further technical details? Comparing our Catalog to a real physical store again, see this page as being the technical notice of your product. This technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc. If a connector exports child connectors, a subpage should also be created for each of these child connectors.
 
-When you develop a connector using DIS, you can pre-generate the connector documentation pages with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the pages directly in Markdown, starting from our [template](xref:Connector_help_template). When you have created the pages, add them in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
+When you develop a connector using DIS, you can pre-generate the connector documentation pages with the *Plugins* > *Generate driver help* option in the [DIS menu](xref:DIS_menu). You can also create the pages directly in Markdown, starting from our [marketing](xref:Connector_marketing_template) and [technical](xref:Connector_technical_template) templates. When you have created the pages, add them in the [dataminer-docs-connectors](https://github.com/SkylineCommunications/dataminer-docs-connectors) repository.
 
 ## Adding new connector documentation pages
 
