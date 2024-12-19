@@ -97,6 +97,12 @@ For detailed information about the changes included in those versions, refer to 
 
 When an element of type SNMPv3 does not have its user name filled in, from now on, it will go into an error state and an alarm will be generated.
 
+#### User-Defined APIs: UserDefinableApiEndpoint DxM has been updated [ID 41466]
+
+<!-- MR 10.4.0 [CU10] - FR TBD -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to version 3.3.0. It requires .NET version 8.
+
 #### Security enhancements [ID 41542]
 
 <!-- 41542: MR 10.4.0 [CU10] - FR 10.5.1 [CU0] -->
