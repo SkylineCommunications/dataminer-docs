@@ -7,7 +7,7 @@ uid: Sharing_a_dashboard
 ## Sharing a dashboard using the Live Sharing Service
 
 > [!NOTE]
-> This feature is only available if the DMA is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud). Prior to DataMiner 10.1.12, this feature is only available in [soft launch](xref:SoftLaunchOptions).
+> This feature is only available if the DMA is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 1. In the list of dashboards on the left, select the dashboard you want to share.
 
@@ -15,13 +15,9 @@ uid: Sharing_a_dashboard
 
    > [!NOTE]
    >
-   > - Make sure you have the necessary user permissions for this:
-   >
-   >   - Prior to DataMiner 10.2.0 \[CU2\]/10.2.5, to edit the dashboard, you need the user permission [Modules > Reports & Dashboards > Dashboards > Edit](xref:DataMiner_user_permissions#modules--reports--dashboards--dashboards--edit).
-   >   - In DataMiner 10.1.2, you need the user permission *Other* > *CCALinkAccount*.
-   >   - In DataMiner 10.1.3, you need the user permission [Modules > System configuration > Cloud sharing/gateway > Account linking](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--account-linking).
-   >   - From DataMiner 10.1.4 onwards, you need the appropriate [Live sharing user permissions](xref:DataMiner_user_permissions#general--live-sharing).
-   > - If access to a dashboard is limited to some users only, it will not be possible to share this dashboard.
+   > - Make sure you have the appropriate [Live sharing user permissions](xref:DataMiner_user_permissions#general--live-sharing).
+   > - Prior to DataMiner 10.2.0 [CU2]/10.2.5, to edit the dashboard, you need the user permission [Modules > Reports & Dashboards > Dashboards > Edit](xref:DataMiner_user_permissions#modules--reports--dashboards--dashboards--edit).
+   > - If access to a dashboard is limited to some users only, it will not be possible to share the dashboard.
 
 1. If you are using DataMiner 10.2.0/10.2.2 or higher, in the pop-up window, select *Create cloud share*. Otherwise, skip this step.
 
