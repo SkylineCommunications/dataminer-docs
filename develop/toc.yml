@@ -4313,6 +4313,8 @@ items:
             topicUid: GetAlarmDetails
           - name: GetAlarmHistory
             topicUid: GetAlarmHistory
+          - name: GetAlarmHistoryV2
+            topicUid: GetAlarmHistoryV2
           - name: GetAlarmPages
             topicUid: GetAlarmPages
           - name: GetAlarmPageUpdates
