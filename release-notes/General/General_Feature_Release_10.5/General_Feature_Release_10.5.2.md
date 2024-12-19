@@ -32,6 +32,47 @@ These alarms will be generated per DataMiner Agent for every Automation script t
 
 This type of alarms will automatically be cleared after a DataMiner restart. They can also be cleared manually.
 
+#### Mobile visual overviews: Load balancing [ID 41434] [ID 41728]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.2 -->
+
+It is now possible to implement load balancing for mobile visual overviews among DataMiner Agent in a DMS.
+
+Up to now, the DataMiner Agent to which you were connected would handle all requests and updates with regard to mobile visual overviews.
+
+##### Configuration
+
+In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
+
+- `<add key="visualOverviewLoadBalancer" value="true" />`
+
+  Enables or disables load balancing on the DataMiner Agent in question.
+
+  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the DataMiner Agents specified in the `dmasForLoadBalancer` key (see below).
+  - When this key is set to **false**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the local SLHelper process.
+
+- `<add key="dmasForLoadBalancer" value="1;2;15" />`
+
+  Specifies which DataMiner Agents will be used for visual overview load balancing.
+
+  The key's value must be set to a semicolon-separated list of DMA IDs. For example, if the value is set to "1;2;15", then the DataMiner Agents with ID 1, 2 and 15 will be used to handle all requests and updates with regard to mobile visual overviews.
+
+  If you only specify one ID (without trailing semicolon), only that specific DataMiner Agent will be used to handle all requests and updates with regard to mobile visual overviews.
+
+> [!NOTE]
+> These settings are not synchronized among the agents in the cluster.
+
+##### New server messages
+
+The following new messages can now be used to  which you can target to be sent to other DMAs in the cluster:
+
+- `TargetedGetVisualOverviewDataMessage` allows you to retrieve a Visual Overview data message containing the image and the content of a visual overview.
+
+- `TargetedSetVisualOverviewDataMessage` allows you to execute actions on a visual overview that is rendered on a specific DataMiner Agent.
+
+> [!NOTE]
+> DataMiner Agents will now automatically detect that a visual overview they are rendering has been updated. This means that other agents in the cluster will now be able to correctly process update events and request new images for their clients.
+
 ## Changes
 
 ### Enhancements
