@@ -84,7 +84,7 @@ Add a note containing a link to the connector [technical page](#Technical-page).
 
 ```md
 > [!NOTE]
-> For detailed technical information, refer to our [technical documentation](xref:My_connector_Name).
+> For detailed technical information, refer to our [technical documentation](xref:Connector_help_My_connector_name_Technical).
 
 ```
 
