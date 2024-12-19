@@ -4873,6 +4873,8 @@ items:
             topicUid: ReconnectAppAndInfo
           - name: ReleaseOwnershipAlarm
             topicUid: ReleaseOwnershipAlarm
+          - name: ReleaseOwnershipAlarmV2
+            topicUid: ReleaseOwnershipAlarmV2
           - name: RemoveElementFromPinned
             topicUid: RemoveElementFromPinned
           - name: RemoveElementFromView
