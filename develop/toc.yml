@@ -620,8 +620,11 @@ items:
     - name: Connector documentation
       topicUid: Connector_help_pages
       items:
-      - name: Connector documentation template
-        topicUid: Connector_help_template
+      - name: Connector marketing documentation template
+        topicUid: Connector_marketing_template
+        items:
+        - name: Connector technical documentation template
+          topicUid: Connector_technical_template
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: Best practices
