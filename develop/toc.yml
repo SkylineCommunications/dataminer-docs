@@ -4861,6 +4861,8 @@ items:
             topicUid: LogOut
           - name: MaskAlarm
             topicUid: MaskAlarm
+          - name: MaskAlarmV2
+            topicUid: MaskAlarmV2
           - name: MaskElement
             topicUid: MaskElement
           - name: PauseElement
