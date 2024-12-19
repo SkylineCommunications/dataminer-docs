@@ -4061,6 +4061,8 @@ items:
             topicUid: AddBookingAttachmentV2
           - name: AddCommentToAlarm
             topicUid: AddCommentToAlarm
+          - name: AddCommentToAlarmV2
+            topicUid: AddCommentToAlarmV2
           - name: AddElementToPinned
             topicUid: AddElementToPinned
           - name: AddElementToRecent
