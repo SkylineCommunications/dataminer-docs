@@ -52,7 +52,7 @@ Both for "absolute" and "relative" alarm thresholds, the "normal" value has to b
      > [!NOTE]
      >
      > - If a range is defined in the protocol, the baseline value is capped to ensure it stays within the specified minimum and maximum limits.
-     > - The polynomial is recalculated every day around midnight.
+     > - The typical daily behavior of the signal is recalculated every day around midnight.
 
      Example of a deviation in the expected daily pattern for a signal:
 
