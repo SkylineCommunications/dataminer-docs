@@ -4397,6 +4397,8 @@ items:
             topicUid: GetCurrentAlarmByRootID
           - name: GetCurrentAlarmByRootIDV2
             topicUid: GetCurrentAlarmByRootIDV2
+          - name: GetCurrentAlarmByRootIDV3
+            topicUid: GetCurrentAlarmByRootIDV3
           - name: GetDashboardsForElement
             topicUid: GetDashboardsForElement
           - name: GetDashboardsForService
