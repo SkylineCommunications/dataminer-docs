@@ -4939,6 +4939,8 @@ items:
             topicUid: UnhideJobSectionDefinitionField
           - name: UnmaskAlarm
             topicUid: UnmaskAlarm
+          - name: UnmaskAlarmV2
+            topicUid: UnmaskAlarmV2
           - name: UnmaskElement
             topicUid: UnmaskElement
           - name: UpdateAlarmTemplate
