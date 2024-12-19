@@ -42,21 +42,26 @@ The examiner will use a predefined exam plan to ask different questions per modu
 
 ### Requirements
 
-**Exam environment**
-- Sit in a separate room during the examination. If a seperate room is not possible, make sure that you sit alone.
-- Turn on your camera during the exam.
-- The examiner can ask you to show the room with the camera to ensure compliance.
+- **Exam environment**:
 
-**Language**
-- Exams are conducted in English
+  - Make sure you are in a separate room during the examination. If a separate room is not possible, make sure that you are alone.
+  - Turn on your camera during the exam.
+  - The examiner can ask you to show the room with the camera to ensure compliance.
 
-**Training DMA**
-- By default, the training DMA will be used to conduct the exam.
+- **Language**:
 
-**Prohibited resources**
-- The usage of DataMiner Docs or any other resource is strictly forbidded during the exam.
+  - Exams are conducted in English.
+
+- **Training DMA**:
+
+  - By default, the training DMA will be used to conduct the exam.
+
+- **Prohibited resources**:
+
+  - The usage of DataMiner Docs or any other resource is strictly forbidden during the exam.
 
 > [!NOTE]
+>
 > - If you do not pass the exam, you have one free retake.
 > - Exams are recorded to ensure the integrity of the process and to provide a reference for review if needed.
 
