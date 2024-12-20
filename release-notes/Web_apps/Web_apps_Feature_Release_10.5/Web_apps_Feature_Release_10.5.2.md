@@ -197,3 +197,9 @@ In some cases, an interactive Automation script running in an *Interactive Autom
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 In some cases, in low-code apps, flows could get triggered too often. As a result, queries that consumed those flows would refetch data more frequently then needed.
+
+#### Low-Code Apps: Panel selection box would incorrectly be displayed when configuring a 'Close all panels' action [ID 41779]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+When, in the action editor, you were configuring a *Close all panels* action, a panel selection box would incorrectly be displayed.
