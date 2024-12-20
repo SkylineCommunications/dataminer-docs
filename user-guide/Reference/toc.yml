@@ -462,6 +462,8 @@ items:
         topicUid: Activating_SLProtocol_as_a_64_Bit_Process
       - name: Activating SLProtocol as a 32-bit process
         topicUid: Activating_SLProtocol_as_a_32_Bit_Process
+      - name: BrokerGateway migration
+        topicUid: BrokerGateway_Migration
   - name: DataMiner Extension Modules (DxMs)
     topicUid: DataMinerExtensionModules
   - name: Custom branding

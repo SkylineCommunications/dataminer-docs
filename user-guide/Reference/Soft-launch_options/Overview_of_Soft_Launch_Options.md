@@ -46,6 +46,9 @@ Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS
 
 - **Minimum version**: 10.4.1<!-- RN 37649 -->
 
+> [!TIP]
+> See also: [Migrating to BrokerGateway](xref:BrokerGateway_Migration)
+
 ### CloudConnectedAgents
 
 Makes it possible to [connect the DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
