@@ -104,6 +104,12 @@ In the *Element Swarming* window, it is now possible to select all elements by p
 
 ### Fixes
 
+#### Visual Overview: Children shapes would be displayed twice [ID 41160]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When *Children* shapes were being loaded, in some cases, some shapes would incorrectly already be updated while loading was still in progress. As a result, some shapes would be displayed twice.
+
 #### DataMiner Cube desktop app: Problem when starting an older version on a client on which a newer version has already been used [ID 41461]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
