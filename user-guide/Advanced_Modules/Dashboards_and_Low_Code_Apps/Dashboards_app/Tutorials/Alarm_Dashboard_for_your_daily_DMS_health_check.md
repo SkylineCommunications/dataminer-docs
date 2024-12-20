@@ -8,10 +8,13 @@ In this tutorial, you’ll learn how to create an Alarm Report Dashboard that’
 
 Moreover, we’ll dive into the Alarm Filtering app—your trusty tool to sail through even the wildest alarm storms while keeping a clear overview.
 
-Expected duration: 10 minutes
+Expected duration: 20 minutes
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created with the DataMiner 10.4.12 web apps.
+
+> [!TIP]
+> See also: [Kata #52: Alarm Dashboards for your daily DMS Health Check](https://community.dataminer.services/courses/kata-52/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -24,9 +27,12 @@ Expected duration: 10 minutes
   - [Prerequisites](#prerequisites)
   - [Overview](#overview)
   - [Step 1: Install the Alarm Report Package](#step-1-install-the-alarm-report-package)
-  - [Step 2: Create a dashboard and add a text input](#step-2-create-a-dashboard-and-add-a-text-input)
-  - [Step 3: Add a query and visualize it](#step-3-add-a-query-and-visualize-it)
-  - [Step 4: Replace the static filter value with a feed](#step-4-replace-the-static-filter-value-with-a-feed)
+  - [Step 2: Install the Alarm Filtering App](#step-2-install-the-alarm-filtering-app)
+  - [Step 3: Optionally install the Animal Shelter Package](#step-3-optionally-install-the-animal-shelter-package)
+  - [Step 4: Adapt the Alarm Report Dashboard so that it can filter on Views](#step-4-adapt-the-alarm-report-dashboard-so-that-it-can-filter-on-views)
+  - [Step 5: Optionally create a new specific alarm template for the Labradors](#step-5-optionally-create-a-new-specific-alarm-template-for-the-labradors)
+  - [Step 6: Taking ownership of an alarm](#step-6-taking-ownership-of-an-alarm)
+  - [Step 7: Add a new customized page to the Alarms Filtering App](#step-7-add-a-new-customized-page-to-the-alarms-filtering-app)
   - [Learning paths](#learning-paths)
   - [Related documentation](#related-documentation)
 
@@ -44,77 +50,128 @@ Expected duration: 10 minutes
    >
    > In the new panel, you can edit the Location as indicated in the section [Move a dashboard to a different folder](xref:Managing_dashboard_folders#moving-a-dashboard-to-a-different-folder)
 
-## Step 2: Create a dashboard and add a text input
+## Step 2: Install the Alarm Filtering App
 
-1. [Create a new dashboard](xref:Creating_a_completely_new_dashboard).
+1. Go to <https://catalog.dataminer.services/details/9794badc-d191-4f36-9b96-08c415e620a4>.
 
-1. Add a [Text input](xref:DashboardTextInput) component so the user can enter a search term:
+1. Click the *Deploy* button to deploy the *Alarm Filtering App* package on your DMA.
 
-   1. In edit mode, drag and drop the *Text input* visualization from the pane on the left on to the main dashboard area.
+As a result you should see the Alarm Filtering App appearing on the home screen of your DataMiner Web Services, under the section "Other Apps".
 
-   1. Select the input and go to the layout pane where you can configure additional options to style the input.
+![Alarm Filtering App](~/user-guide/images/Tutorial_Alarm_Dashboard_AlarmFilteringAppLogo.png)
 
-   1. Fill in "VLAN name" as the placeholder for the text input.
+## Step 3: Optionally install the Animal Shelter Package
 
-   1. Search for "Filter" in the *Icon* option and and select an applicable icon.
+> [!NOTE]
+> This is an optional step.
 
-Your text input should look like this:
+To get to a good starting point for the rest of this tutorial, you ideally need a DataMiner System with a history of multiple alarms. In case of an already longer existing Production or Staging system, with multiple elements and views, this is probably the case. 
 
-   ![Numeric input](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Numeric.jpg)
+In case you are working on a _brand new_ DataMiner As A Service (DaaS) system, this is not the case, and you might want to install a package that helps to create this starting point.
 
-## Step 3: Add a query and visualize it
+In this case, it is advised to proceed with the following steps to install the **Animal Shelter** Package, which is a _learning &amp; solution_ specifically created for this type of use cases.
 
-1. [Create a GQI query](xref:Creating_GQI_query) using the "IP subnets - Dummy" ad hoc data source.
+1. Go to <https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f>.
 
-1. Add a GQI operator of type "Filter":
+2. Click the *Deploy* button to deploy the *Animal Shelter* package on your DMA. As a result, 6 elements will be created, as described in the Readme-page of the Catalog package.
 
-   1. Select the "VLAN Name" as the column to filter on.
+![Overview Of Animals And Parameters](~/user-guide/images/Tutorial_Alarm_Dashboard_OverviewOfAnimalsAndParameters.png)
 
-   1. Select the "contains" filter method.
+1. Restart your DataMiner Agent to make sure the historical alarms are loaded in correctly.
 
-   1. Fill in the "VLAN 1" as the value for the filter.
+   > [!WARNING]
+   > Please check the Deployment Details on the Technical Reference section of the [Catalog package Readme](https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f). The restart of the DataMiner System  is only recommended in the very specific case of a _brand new DaaS_. In other cases, it's even not recommended as it can have an impact on any other ongoing operations on your DataMiner System. 
 
-1. Visualize the result in a [Table](xref:DashboardTable) component.
+2. Please double check by clicking on the view **Alarm Dashboard** and more specifically on the **REPORTS** section. If everything was loaded in correctly, the alarm distribution should look like indicated below.
 
-   The result should look like this:
+![Report Summary](~/user-guide/images/Tutorial_Alarm_Dashboard_ReportSummaryOnDaasAfterRestart.png)
 
-   ![Statically filtered query](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Static.jpg)
+## Step 4: Adapt the Alarm Report Dashboard so that it can filter on Views
 
-## Step 4: Replace the static filter value with a feed
+1. Open the Alarm Report Dashboard
 
-1. Edit the GQI query again and open the filter operator.
+2. Click on **Start editing** on the right upper corner of your screen.
 
-1. In the *Value* box, click the "Link to feed" icon (or the "Link to data" icon in DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 or higher).
+   ![Start Editing](~/user-guide/images/Tutorial_Alarm_Dashboard_StartEditing.png)
 
-   This icon is used everywhere a user can link a value to data.
+3. Add a dropdown with all the views as the dropdown options.
 
-   !["Link to feed" icon in DataMiner 10.4.1](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Link.jpg)
+   1. Make other components smaller, to make a free space on the top right of the typical Dashboard grid.
+   2. On the right of your screen, you see the possible options of Data Sources. Drag the option Views to the empty space on your dashboard.
+   3. Alter the visualization to a dropdown like indicated in the screenshot below.
 
-   Clicking the icon opens the *Link to feed* dialog (or *Link to data* in recent DataMiner versions), which will ask for a specific feed or data, the type, and a property.
+      ![Start Editing](~/user-guide/images/Tutorial_Alarm_Dashboard_PickAVisualization.png)
 
-1. Specify the necessary info in the dialog:
+   4. As an end result, you should have a dropdown with all views.
 
-   1. In the first box, select "Text input 1".
+      ![All Views](~/user-guide/images/Tutorial_Alarm_Dashboard_EndResultOfDropdown.png)
 
-      You will notice that the type and property are automatically filled in if only one possible value is available.
+4. Adapt the **Distribution query** to use the new Dropdown as a feed for the View Input. This query makes use of an Ad Hoc Data Source that has a View filter as one of the two inputs.
 
-   1. To determine what the behavior should be when the feed is empty, at the bottom of the dialog, select *everything*.
+   1. Click on the icon on the input field of the View Filter.
 
-      This determines what will happen when the user does not fill in any value in the text input. Selecting *everything* ensures that all data is retrieved in this case.
+      ![Distribution Query Step 1](~/user-guide/images/Tutorial_Alarm_Dashboard_ChangeOfDistributionQueryStep1.png)
 
-      !["Link to feed" configuration in DataMiner 10.4.1](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Popup.jpg)
+   2. Use as a Data Source the Dropdown you just created (it can be another number than the 14 of the screenshot). The Property needs to be ID, as it in that case will pass the View ID to the Ad Hoc Data Source, which will lead to the wanted result.
 
-      > [!TIP]
-      > If you want the text input to behave like a search engine, you can select *nothing* instead. This will not retrieve any data until the user fills in a value in the text input.
+      ![Distribution Query Step 2](~/user-guide/images/Tutorial_Alarm_Dashboard_ChangeOfDistributionQueryStep2.png)
 
-1. Leave the dashboard edit mode using the button in the top-right corner.
+5. Repeat step 4 for the query **Alarm Events** and **States**.
 
-1. In the text input of the dashboard, fill in the value "VLAN 2".
+## Step 5: Optionally create a new specific alarm template for the Labradors
 
-   As soon as you press Enter or click outside the textbox, the filter will be applied in the table.
+In the KATA video, the tutorial works up to step 6, where we take ownership of an active alarm and where we filter on the ownership on Step 7.
 
-   > [!NOTE]
-   > This is the default behavior for the text input. You can customize this in the *Settings* tab of the text input, so that this for instance happens as soon as the value changes, or only if Enter is pressed.
+In case you use the Animal Shelter package and want to force the creation of an active creative alarm, we can fine-tune the alarm template for the Labradors.
+
+1. Open the _Protocols &amp; Templates_ module.
+1. Navigate to **Skyline Animal Shelter** in the Protocols column.
+1. Navigate to **1.0.0.1** in the Versions column.
+1. Right-click on the Default 3 Alarm template to create a duplicate that can be named 'Default 3 - Labradors'.
+
+   ![Duplicate Existing Alarm Template For Animal Shelter](~/user-guide/images/Tutorial_Alarm_Dashboard_DuplicateExistingAlarmTemplateForAnimalShelter.png)
+
+1. Fine-tune the thresholds for the Shelter Temperature parameter. You want to make them more strict, so that it is more likely the current Shelter Temperature is out of the limits and creates an active alarm. Click on OK to Apply and close the window.
+
+   ![Finetune Alarm Template Alarm Template For Animal Shelter](~/user-guide/images/Tutorial_Alarm_Dashboard_FinetuneAlarmTemplateForAnimalShelter.png)
+
+1. As a final step, click on **Assign Elements...** and assign the newly created Alarm Template to the Labrador elements.
+
+   ![Assign Template to Labradors](~/user-guide/images/Tutorial_Alarm_Dashboard_AssingTemplateToLabradors.png)
+
+## Step 6: Taking ownership of an alarm
+
+1. In the Alarm Console, open the tab **Active Alarms**.
+2. Pick an alarm (like the alarm you forced to create by fine-tuning the alarm template for the labradors in the previous step).
+3. Right-click on the alarm to open the context menu and click on **Take ownership...**.
+
+   ![Taking ownership of an alarm](~/user-guide/images/Tutorial_Alarm_Dashboard_TakingOwnership.png)
+
+4. Write a message (in case of the Shelter Temperature, you could say "I'll open a window to cool down.".) in the message box.
+
+   ![Write an ownership message](~/user-guide/images/Tutorial_Alarm_Dashboard_OwnershipMessage.png)
+
+5. Click on Take ownership and the dialog will close.
+
+## Step 7: Add a new customized page to the Alarms Filtering App
+
+1. Open the Alarm Filtering App that you installed in Step 2.
+2. Click on the pencil on the right upper corner to start editing the app.
+3. Create a new page and name it "My Alarm Overview".
+4. Add a new query named "My own alarms"
+5. Filter on the property "Is Active" equal to true
+6. Filter on the property "Owner" equal to your own user name, in this example it is _joachim_.
+
+   ![My Own Alarms Query](~/user-guide/images/Tutorial_Alarm_Dashboard_MyOwnAlarmsQuery.png)
+
+7. After creating the query, click on the pencil icon next to the query name to stop the editing of the query.
+8. Drag the query on the page and choose Table as the Visualization.
+9. You should see the alarm that you took ownership of as an end result.
+
+   ![Alarms that I took ownership of](~/user-guide/images/Tutorial_Alarm_Dashboard_EndResultAlarmsThatITookOwnershipOf.png)
+
+> [!TIP]
+> This is just one possible adaptation you can do to the Alarm Filtering App. By checking other tutorials related to Dashboards and Low Code Apps, you can get inspiration to further enhance this app to your needs.
 
 ## Learning paths
 
