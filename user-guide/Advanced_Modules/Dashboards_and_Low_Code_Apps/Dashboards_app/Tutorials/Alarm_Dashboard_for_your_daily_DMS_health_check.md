@@ -35,13 +35,22 @@ Expected duration: 20 minutes
 
 1. Click the *Deploy* button to deploy the *Alarm Report* package on your DMA.
 
-   This package will install the Alarm Report Dashboard that we will work with later on. It will by default be created in the root view of your Dashboard folder structure.
+   While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
 
-   > [!TIP]
-   > If you want to relocate this dashboard to another folder, right-click the dashboard in the pane on the left and select *Settings*.
-   > ![Relocated Dashboard Settings](~/user-guide/images/Tutorial_Alarm_Dashboard_RelocateDashboardSettings.png)
-   >
-   > In the new panel, you can edit the location as indicated in the section [Move a dashboard to a different folder](xref:Managing_dashboard_folders#moving-a-dashboard-to-a-different-folder)
+1. Open the Dashboards app and check if you can see the *Alarm Report* dashboard.
+
+   When the deployment is complete, this dashboard is added in the root view of your dashboard folder structure.
+
+1. Optionally, move the dashboard to another folder:
+
+   1. Right-click the dashboard in the pane on the left and select *Settings*.
+
+      ![Dashboard settings](~/user-guide/images/Tutorial_Alarm_Dashboard_RelocateDashboardSettings.png)
+
+   1. Specify a new location and click *Apply*.
+
+      > [!TIP]
+      > For more detailed information, see [Moving a dashboard to a different folder](xref:Managing_dashboard_folders#moving-a-dashboard-to-a-different-folder)
 
 ## Step 2: Install the Alarm Filtering app
 
@@ -49,30 +58,38 @@ Expected duration: 20 minutes
 
 1. Click the *Deploy* button to deploy the *Alarm Filtering App* package on your DMA.
 
-As a result you should see the Alarm Filtering App appearing on the home screen of your DataMiner Web Services, under the section "Other Apps".
+1. Go to root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
 
-![Alarm Filtering App](~/user-guide/images/Tutorial_Alarm_Dashboard_AlarmFilteringAppLogo.png)
+1. Check if you can see the *Alarm Filtering* app listed under *Other Apps*.
+
+   When the package is fully deployed, this app should be available.
+
+   ![Alarm Filtering app](~/user-guide/images/Tutorial_Alarm_Dashboard_AlarmFilteringAppLogo.png)
 
 ## Step 3: Install the Animal Shelter package (optional)
 
-To get to a good starting point for the rest of this tutorial, you ideally need a DataMiner System with a history of multiple alarms. If you already have an existing production or staging system available with multiple elements and views, you could use this for this tutorial, which means you can skip this step in that case.
+To get to a good starting point for the rest of this tutorial, you ideally need a DataMiner System with a history of multiple alarms. If you already have an existing production or staging system available with multiple elements and views, you could use this for this tutorial, which means that you can skip this step in that case.
 
-However, if are working on a **brand-new DataMiner As A Service (DaaS) system**, you will need to install a package that helps you create this starting point. You can use the **Animal Shelter** package for this, which is a Learning & Sample Solution designed specifically for this type of use case:
+However, if you are for example working on a **brand-new DataMiner As A Service (DaaS) system**, you will need to install a package that helps you create this starting point. You can use the **Animal Shelter** package for this, which is a Learning & Sample Solution designed specifically for this type of use case.
 
 1. Go to <https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f>.
 
-1. Click the *Deploy* button to deploy the *Animal Shelter* package on your DMA. As a result, 6 elements will be created, as described in the Readme-page of the Catalog package.
+1. Click the *Deploy* button to deploy the *Animal Shelter* package on your DMA.
 
-   ![Overview Of Animals And Parameters](~/user-guide/images/Tutorial_Alarm_Dashboard_OverviewOfAnimalsAndParameters.png)
+   Six elements will be created on the DMA, as mentioned in the description of the Catalog package.
 
-1. If you are installing this package on a brand-new DaaS system, restart DataMiner to make sure the historical alarms are loaded in correctly.
+   ![Overview of animals And parameters](~/user-guide/images/Tutorial_Alarm_Dashboard_OverviewOfAnimalsAndParameters.png)
+
+1. If you are installing this package on a brand-new DaaS system, restart DataMiner to make sure the historical alarms are loaded correctly: In DataMiner Cube, go to the *Agents* page in System Center, and click the *(Re)start* button.
 
    > [!IMPORTANT]
-   > Please check the deployment details in the Technical Reference section of the [package description](https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f). Restarting DataMiner is only recommended in the very specific case of a brand-new DaaS system. In other cases, do not restart DataMiner, as this could affect other ongoing operations on your DataMiner System.
+   > Only restart DataMiner if you are using a brand-new DaaS system. In other cases, do not restart DataMiner, as this could affect other ongoing operations on your DataMiner System. For detailed information, refer to the deployment details in the Technical Reference section of the [package description](https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f).
 
-1. Please double check by clicking on the view **Alarm Dashboard** and more specifically on the **REPORTS** section. If everything was loaded in correctly, the alarm distribution should look like indicated below.
+1. In DataMiner Cube, navigate to the *DataMiner Catalog* > *Alarm Dashboard* view, and select the *REPORTS* page.
 
-![Report Summary](~/user-guide/images/Tutorial_Alarm_Dashboard_ReportSummaryOnDaasAfterRestart.png)
+   When everything is loaded correctly, the alarm distribution will look like this:
+
+   ![Report summary](~/user-guide/images/Tutorial_Alarm_Dashboard_ReportSummaryOnDaasAfterRestart.png)
 
 ## Step 4: Adapt the Alarm Report dashboard to filter on views
 
