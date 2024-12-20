@@ -158,6 +158,14 @@ Up to now, when a protocol performed multiple actions on a table, SLProtocol wou
 
 The above-mentioned array will now be locked to prevent the data from getting corrupted.
 
+#### DataMiner Object Models: Only the first 100 DomInstances will be checked when an enum entry is removed from a FieldDescriptor [ID 41572]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor`, a check is performed to make sure that entry is not being used by a `DomInstance`. However, as this check would verify all existing DomInstances, this could cause memory issues in SLNet when a large number of DomInstances were using the removed enum entry.
+
+From now on, a maximum of 100 DomInstances will be verified. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
+
 #### Storage as a Service: Enhanced performance when updating alarm information [ID 41581]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
