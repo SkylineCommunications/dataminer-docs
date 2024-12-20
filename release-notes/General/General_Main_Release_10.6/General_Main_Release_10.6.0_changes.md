@@ -98,6 +98,12 @@ During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will 
 
 A number of security enhancements have been made.
 
+#### DataMiner Cube server-side search engine: Enhanced performance [ID 41643]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
+
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
