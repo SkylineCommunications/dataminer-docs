@@ -23,6 +23,8 @@ For more detailed information, see [Storage as a Service (STaaS)](xref:STaaS)
 
 Below diagram shows overview of two clusters using STaaS vs Cassandra.
 
+![STaaS vs Cassandra](~/images/STaaS_vs_Cassandra.png)
+
 ## How to find out your setup is using STaaS
 
 1. In DataMiner Cube, go to System Center > Database > General tab.
@@ -31,6 +33,10 @@ Below diagram shows overview of two clusters using STaaS vs Cassandra.
 
    The type (i.e. per agent or per cluster) is not important, all data from the cluster will be stored the same way.
   
+   ![System Center - Database set to STaaS](~/images/SystemCenter_STaaS.png)
+
+   ![System Center - Database per cluster](~/images/SystemCenter_DB_per_cluster.png)
+
 1. C:/Skyline DataMiner/DB.xml
 
    You should find a 'Database' tag, which has an attribute 'type' of value 'CloudStorage'
