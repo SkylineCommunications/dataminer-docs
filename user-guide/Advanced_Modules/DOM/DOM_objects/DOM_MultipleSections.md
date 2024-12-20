@@ -21,7 +21,7 @@ It is not possible to filter on FieldValues scoped to one section part of multip
     - From: Brussels
     - To: Paris
 
-We want to create a filter to know if a DOM instance exists that has a connection from 'London' to 'Paris:
+We want to create a filter to know if a DOM instance exists that has a connection from 'London' to 'Paris':
 
 ```csharp
 DomInstanceExposers.FieldValues.DomInstanceField(FromFieldDescriptor).Equal("London")
