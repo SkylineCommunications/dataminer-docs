@@ -312,6 +312,8 @@ items:
                 topicUid: Tutorial_Apps_Node_Edge
               - name: Creating a parameter table connected to an element feed
                 topicUid: Creating_a_parameter_table_connected_to_an_element_feed
+              - name: Creating an alarm dashboard for a daily DMS health check
+                topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
