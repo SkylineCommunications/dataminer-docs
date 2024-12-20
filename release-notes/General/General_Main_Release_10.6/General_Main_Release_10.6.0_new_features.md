@@ -233,3 +233,7 @@ The following new messages can now be used to  which you can target to be sent t
 
 > [!NOTE]
 > DataMiner Agents will now automatically detect that a visual overview they are rendering has been updated. This means that other agents in the cluster will now be able to correctly process update events and request new images for their clients.
+
+##### Logging
+
+Additional logging with regard to visual overview load balancing will be available in the web logs located in the *C:\\Skyline DataMiner\\Logging\\Web* folder.
