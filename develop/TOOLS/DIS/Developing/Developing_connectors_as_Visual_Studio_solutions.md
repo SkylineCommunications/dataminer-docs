@@ -40,9 +40,9 @@ To edit a QAction, you have two options:
 > [!NOTE]
 >
 > - A QAction project can contain several \*.cs files that you can organize in different folders. The files will then be combined when the protocol is assembled.
-> - It is recommended to place all "using" directives inside the namespace instead of at the top of the file.
-> - When developing connectors as a Visual Studio solution, DLL imports need to be configured by adding references on the C# project itself (instead of using the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute).
-> - The QAction ID can also be edited via the dropdown menu of the *Edit QAction* icon next to the \<QAction> tag in the protocol XML file. This will result in adapting both the xml and the related C# projects.
+> - We recommend placing all "using" directives inside the namespace instead of at the top of the file.
+> - When connectors are developed as a Visual Studio solution, DLL imports need to be configured by adding references on the C# project itself (instead of using the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute).
+> - You can also edit the QAction ID via the dropdown menu of the *Edit QAction* icon next to the \<QAction> tag in the protocol XML file. This will adapt both the XML and the related C# projects.
 
 To introduce a reference to another QAction, select the QAction project, right-click, and select *Add* > *Reference*. In the *Reference Manager* window, select *Projects*, and then select the checkbox for the desired QAction project(s) you want to reference. This will be translated by DIS to `[ProtocolName].[ProtocolVersion].QAction.<id>.dll` imports in the protocol XML when the connector is assembled.
 
@@ -50,7 +50,7 @@ For custom DLLs, make sure the DLL is located in the *Dlls* folder of the solut
 
 ### Removing a QAction
 
-To remove a QAction, go to the dropdown menu of the *Edit QAction* icon and select *Delete QAction* which will remove everything that needs to be removed automatically for you. Alternatively, you could also remove the \<QAction> tag in the protocol XML file as well as the C# project manually.
+To remove a QAction, go to the dropdown menu of the *Edit QAction* icon and select *Delete QAction*. This will automatically remove everything that needs to be removed for you. Alternatively, you could also manually remove the \<QAction> tag in the protocol XML file as well as the C# project.
 
 ## Uploading a protocol to a DataMiner Agent
 
