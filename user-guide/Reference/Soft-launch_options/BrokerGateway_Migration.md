@@ -131,7 +131,7 @@ The following actions will be executed during the migration, in the indicated or
 
 ## Migrating back to the old system
 
-After you have migrated to BrokerGateway, to go back ot the old system, follow the same procedure as when you run the migration, but use the `uninstall` command instead of the `install` command.
+After you have migrated to BrokerGateway, to go back to the old system, follow the same procedure as when you [run the migration](#migrating-to-brokergateway), but use the `uninstall` command instead of the `install` command.
 
 The same restrictions apply as for the migration: this must happen on all DataMiner Agents in the cluster at the same time.
 
