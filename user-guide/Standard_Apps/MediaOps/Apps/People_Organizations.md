@@ -21,10 +21,15 @@ The People & Organizations app consists of four main pages:
 - ![About](~/user-guide/images/PO_About.png) **About**: The *About* page displays an overview of important app info.
 
 ## People
-People that are created in the People & Organizations app will show up in different places throughout other DataMiner apps:
+People can be created to store administrative data on them like contact information, skills and org chart information. The People that are created in the People & Organizations app will show up in different places throughout other DataMiner apps:
 * As contact persons in the Scheduling app
-* As bookable resources in the Resource Studio, Scheduling and Workflow Designer apps
-
-## Teams
+* As bookable resources in the Resource Studio, Scheduling and Workflow apps
 
 ## Organizations
+Every person created in the app can be part of up to one Organization. An organization represents another company in your supply chain, like customers, suppliers or partners. 
+
+
+## Teams
+Teams are used to group together a number of people. They can be converted into pools of bookable people resources that will show up in the resource studio, scheduling and workflow designer apps. People from different organizations can be part of the same team.
+
+
