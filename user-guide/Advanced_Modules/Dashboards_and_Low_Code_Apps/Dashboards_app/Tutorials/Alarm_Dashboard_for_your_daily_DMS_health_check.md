@@ -16,7 +16,7 @@ Expected duration: 20 minutes
 
 ## Prerequisites
 
-- A DataMiner System that is connected to dataminer.services.
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - Version 10.3.5 or higher of the DataMiner web apps.
 
 ## Overview
@@ -25,7 +25,7 @@ Expected duration: 20 minutes
 - [Step 2: Install the Alarm Filtering app](#step-2-install-the-alarm-filtering-app)
 - [Step 3: Install the Animal Shelter package (optional)](#step-3-install-the-animal-shelter-package-optional)
 - [Step 4: Adapt the Alarm Report dashboard to filter on views](#step-4-adapt-the-alarm-report-dashboard-to-filter-on-views)
-- [Step 5: Create an alarm template for the Labradors (optional)](#step-5-create-an-alarm-template-for-the-labradors-optional)
+- [Step 5: Create a custom alarm template for the Animal Shelter protocol (optional)](#step-5-create-a-custom-alarm-template-for-the-animal-shelter-protocol-optional)
 - [Step 6: Take ownership of an alarm](#step-6-take-ownership-of-an-alarm)
 - [Step 7: Add a new customized page to the Alarms Filtering app](#step-7-add-a-new-customized-page-to-the-alarms-filtering-app)
 
@@ -37,20 +37,18 @@ Expected duration: 20 minutes
 
    While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
 
-1. Open the Dashboards app and check if you can see the *Alarm Report* dashboard.
+1. [Open the Dashboards app](xref:Accessing_the_Dashboards_app) and check if you can see the *Alarm Report* dashboard.
 
-   When the deployment is complete, this dashboard is added in the root view of your dashboard folder structure.
+   When the deployment is complete, this dashboard is added in the root view of your dashboards folder structure.
 
 1. Optionally, move the dashboard to another folder:
 
-   1. Right-click the dashboard in the pane on the left and select *Settings*.
-
-      ![Dashboard settings](~/user-guide/images/Tutorial_Alarm_Dashboard_RelocateDashboardSettings.png)
+   1. Right-click the dashboard in the pane on the left and select *Settings* in the context menu.
 
    1. Specify a new location and click *Apply*.
 
-      > [!TIP]
-      > For more detailed information, see [Moving a dashboard to a different folder](xref:Managing_dashboard_folders#moving-a-dashboard-to-a-different-folder)
+   > [!TIP]
+   > For more detailed information, see [Moving a dashboard to a different folder](xref:Managing_dashboard_folders#moving-a-dashboard-to-a-different-folder)
 
 ## Step 2: Install the Alarm Filtering app
 
@@ -58,19 +56,17 @@ Expected duration: 20 minutes
 
 1. Click the *Deploy* button to deploy the *Alarm Filtering App* package on your DMA.
 
-1. Go to root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
+1. Go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
 
 1. Check if you can see the *Alarm Filtering* app listed under *Other Apps*.
-
-   When the package is fully deployed, this app should be available.
 
    ![Alarm Filtering app](~/user-guide/images/Tutorial_Alarm_Dashboard_AlarmFilteringAppLogo.png)
 
 ## Step 3: Install the Animal Shelter package (optional)
 
-To get to a good starting point for the rest of this tutorial, you ideally need a DataMiner System with a history of multiple alarms. If you already have an existing production or staging system available with multiple elements and views, you could use this for this tutorial, which means that you can skip this step in that case.
+To get to a good starting point for the rest of this tutorial, you ideally need a DataMiner System with a history of multiple alarms. If you already have an existing system available with multiple elements and views, you could use this for this tutorial, which means that you can skip this step in that case.
 
-However, if you are for example working on a **brand-new DataMiner As A Service (DaaS) system**, you will need to install a package that helps you create this starting point. You can use the **Animal Shelter** package for this, which is a Learning & Sample Solution designed specifically for this type of use case.
+However, if you are for example using a **brand-new [DaaS system](xref:Creating_a_DMS_in_the_cloud)**, you will need to install a package that helps you create this starting point. You can use the **Animal Shelter** package for this, which is a Learning & Sample Solution designed specifically for this type of use case.
 
 1. Go to <https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f>.
 
@@ -80,10 +76,10 @@ However, if you are for example working on a **brand-new DataMiner As A Service 
 
    ![Overview of animals And parameters](~/user-guide/images/Tutorial_Alarm_Dashboard_OverviewOfAnimalsAndParameters.png)
 
-1. If you are installing this package on a brand-new DaaS system, restart DataMiner to make sure the historical alarms are loaded correctly: In DataMiner Cube, go to the *Agents* page in System Center, and click the *(Re)start* button.
+1. If you are installing this package on a brand-new DaaS system, restart DataMiner to make sure the historical alarms are loaded correctly: In DataMiner Cube, go to *System Center* > *Agents*, and click the *(Re)start* button.
 
    > [!IMPORTANT]
-   > Only restart DataMiner if you are using a brand-new DaaS system. In other cases, do not restart DataMiner, as this could affect other ongoing operations on your DataMiner System. For detailed information, refer to the deployment details in the Technical Reference section of the [package description](https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f).
+   > Only restart DataMiner if you are using a brand-new DaaS system. In other cases, do not restart DataMiner, as this could affect other ongoing operations on your DataMiner System. For detailed information, refer to the deployment details in the *Technical Reference* section of the [package description](https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f).
 
 1. In DataMiner Cube, navigate to the *DataMiner Catalog* > *Alarm Dashboard* view, and select the *REPORTS* page.
 
@@ -93,66 +89,93 @@ However, if you are for example working on a **brand-new DataMiner As A Service 
 
 ## Step 4: Adapt the Alarm Report dashboard to filter on views
 
-1. Open the Alarm Report Dashboard
+1. Go to the Dashboards app, and open the Alarm Report dashboard.
 
-1. Click **Start editing** on the right upper corner of your screen.
+1. In the top-right corner, click *Start editing*.
 
-   ![Start Editing](~/user-guide/images/Tutorial_Alarm_Dashboard_StartEditing.png)
+   ![Start editing the dashboard](~/user-guide/images/Tutorial_Alarm_Dashboard_StartEditing.png)
 
-1. Add a dropdown with all the views as the dropdown options.
+1. Add a dropdown component where users will be able to select a view in the DataMiner System:
 
-   1. Make other components smaller, to make a free space on the top right of the typical Dashboard grid.
-   1. On the right of your screen, you see the possible options of Data Sources. Drag the option Views to the empty space on your dashboard.
-   1. Alter the visualization to a dropdown like indicated in the screenshot below.
+   1. Drag and drop the edge of the components to create free space in the top-right corner of the dashboard.
 
-      ![Start Editing](~/user-guide/images/Tutorial_Alarm_Dashboard_PickAVisualization.png)
+   1. In the *Data* pane on the right, select the *Views* data source and drag it to the empty space on your dashboard.
 
-   1. As an end result, you should have a dropdown with all views.
+   1. in the component, click *Pick a visualization*, and then select the *Dropdown* visualization.
 
-      ![All Views](~/user-guide/images/Tutorial_Alarm_Dashboard_EndResultOfDropdown.png)
+      ![Pick the Dropdown visualization](~/user-guide/images/Tutorial_Alarm_Dashboard_PickAVisualization.png)
 
-1. Adapt the **Distribution query** to use the new Dropdown as a feed for the View Input. This query makes use of an Ad Hoc Data Source that has a View filter as one of the two inputs.
+      This should result in a dropdown box where all views are available for selection:
 
-   1. Click the icon in the input field of the View Filter.
+      ![Dropdown box with all views](~/user-guide/images/Tutorial_Alarm_Dashboard_EndResultOfDropdown.png)
 
-      ![Distribution Query Step 1](~/user-guide/images/Tutorial_Alarm_Dashboard_ChangeOfDistributionQueryStep1.png)
+1. Link the *Distribution* query in the dashboard to the dropdown component for its view filter:
 
-   1. Use as a Data Source the Dropdown you just created (it can be another number than the 14 of the screenshot). The Property needs to be ID, as it in that case will pass the View ID to the Ad Hoc Data Source, which will lead to the wanted result.
+   1. In the *Data* pane on the right, expand the *Queries* node and click the pencil icon next to the *Distribution* query.
+
+   1.Click the dot next to the second item in the query to view its detailed configuration:
+
+      ![Expand the query](~/user-guide/images/Tutorial_Alarm_Dashboard_Expand_Query.png)
+
+   1. Click the link icon next to the input field of the view filter.
+
+      ![Click the view filter link icon](~/user-guide/images/Tutorial_Alarm_Dashboard_ChangeOfDistributionQueryStep1.png)
+
+   1. In the *Data* box, select the dropdown component you have just created (*Dropdown 14* in the example below, but the number in your dashboard can be different).
 
       ![Distribution Query Step 2](~/user-guide/images/Tutorial_Alarm_Dashboard_ChangeOfDistributionQueryStep2.png)
 
-1. Repeat step 4 for the query **Alarm Events** and **States**.
+      In case the dropdown is not among the available options you can select, close and reopen the Dashboards app to reload the UI.
 
-## Step 5: Create an alarm template for the Labradors (optional)
+   1. The *Property* box, select *ID*.
 
-In the KATA video, the tutorial works up to step 6, where we take ownership of an active alarm and where we filter on the ownership on Step 7.
+      This way, the view ID will be passed to the ad hoc data source, which will lead to the wanted result.
 
-In case you use the Animal Shelter package and want to force the creation of an active creative alarm, we can fine-tune the alarm template for the Labradors.
+1. Also link the *Alarm Events* and *States* queries to the dropdown component for their view filter, in the same way as detailed above.
 
-1. Open the Protocols & Templates module.
-1. Navigate to **Skyline Animal Shelter** in the Protocols column.
-1. Navigate to **1.0.0.1** in the Versions column.
-1. Right-click the Default 3 alarm template to create a duplicate that can be named 'Default 3 - Labradors'.
+The dashboard will now give you an overview of the alarm distribution and the main alarms for the selected view (similar to the *Reports* page from the previous step), so that you can easily check the health of your DMS. You can also [share the dashboard with other users as a PDF or via dataminer.services](xref:Sharing_a_dashboard).
 
-   ![Duplicate Existing Alarm Template For Animal Shelter](~/user-guide/images/Tutorial_Alarm_Dashboard_DuplicateExistingAlarmTemplateForAnimalShelter.png)
+## Step 5: Create a custom alarm template for the Animal Shelter protocol (optional)
 
-1. Fine-tune the thresholds for the Shelter Temperature parameter. You want to make them more strict, so that it is more likely the current Shelter Temperature is out of the limits and creates an active alarm. Click *OK* to apply and close the window.
+In the next step, you will need to be able to take ownership of an alarm. If you have installed the Animal Shelter package to have alarms in your system, you will first need to fine-tune the alarm template so that an active alarm will be created:
+
+1. In DataMiner Cube, open the Protocols & Templates module.
+
+1. In the *Protocols* column, select *Skyline Animal Shelter*.
+
+1. in the *Versions* column, select *1.0.0.1*.
+
+1. Right-click the *Default3* alarm template and select *Duplicate*.
+
+1. Specify the name `Default3 - Labradors` and click *OK*.
+
+   ![Duplicate an existing alarm template for Animal Shelter](~/user-guide/images/Tutorial_Alarm_Dashboard_DuplicateExistingAlarmTemplateForAnimalShelter.png)
+
+1. Double-click the duplicated alarm template to open it.
+
+1. Configure the alarm thresholds for the *Shelter Temperature* parameter as indicated below.
 
    ![Fine-tune the alarm template for Animal Shelter](~/user-guide/images/Tutorial_Alarm_Dashboard_FinetuneAlarmTemplateForAnimalShelter.png)
 
-1. As a final step, click *Assign Elements* and assign the newly created alarm template to the Labrador elements.
+   This will make the alarm thresholds more strict, so that it is more likely that an alarm will be triggered.
 
-   ![Assign Template to Labradors](~/user-guide/images/Tutorial_Alarm_Dashboard_AssingTemplateToLabradors.png)
+1. Click *OK* to apply and close the window.
+
+1. In the *Elements* column, click the *Assign Elements* button, assign the newly created alarm template to the *Labrador* elements, and click *Close*.
+
+   ![Assign the template to the Labrador elements](~/user-guide/images/Tutorial_Alarm_Dashboard_AssingTemplateToLabradors.png)
 
 ## Step 6: Take ownership of an alarm
 
-1. In the Alarm Console, open the tab **Active Alarms**.
-1. Pick an alarm (like the alarm you forced to create by fine-tuning the alarm template for the labradors in the previous step).
-1. Right-click the alarm and select *Take ownership*.
+1. In the Alarm Console in DataMiner Cube, open the tab *Active Alarms*.
+
+1. Right-click an alarm and select *Take ownership*
+
+   This can for example be an alarm for a *Labrador* element that you forced by assigning the custom alarm template in the previous step.
 
    ![Taking ownership of an alarm](~/user-guide/images/Tutorial_Alarm_Dashboard_TakingOwnership.png)
 
-1. Write a message (in case of the Shelter Temperature, you could say "I'll open a window to cool down.".) in the message box.
+1. In the message box, write a message (for example, `We will open a window.` for the *Shelter Temperature* alarm).
 
    ![Write an ownership message](~/user-guide/images/Tutorial_Alarm_Dashboard_OwnershipMessage.png)
 
@@ -160,20 +183,46 @@ In case you use the Animal Shelter package and want to force the creation of an 
 
 ## Step 7: Add a new customized page to the Alarms Filtering app
 
-1. Open the Alarm Filtering App that you installed in Step 2.
-1. Click the pencil icon in the right upper corner to start editing the app.
-1. Create a new page and name it "My Alarm Overview".
-1. Add a new query named "My own alarms"
-1. Filter on the property "Is Active" equal to true
-1. Filter on the property "Owner" equal to your own user name, in this example it is *joachim*.
+1. Open the Alarm Filtering app that you installed in [step 2](#step-2-install-the-alarm-filtering-app).
 
-   ![My Own Alarms Query](~/user-guide/images/Tutorial_Alarm_Dashboard_MyOwnAlarmsQuery.png)
+1. Click the pencil icon in the top-right corner to start editing the app.
 
-1. After creating the query, click the pencil icon next to the query name to stop editing the query.
-1. Drag the query on the page and choose Table as the Visualization.
-1. You should see the alarm that you took ownership of as an end result.
+1. Click the + icon in the bar all the way on the left to add a new page, and name it `My Alarm Overview`.
 
-   ![Alarms that I took ownership of](~/user-guide/images/Tutorial_Alarm_Dashboard_EndResultAlarmsThatITookOwnershipOf.png)
+1. In the *Data* pane on the right, expand the *Queries* node and click the + icon to add a query.
 
-> [!TIP]
-> This is just one possible adaptation you can do to the Alarm Filtering App. By checking other tutorials related to Dashboards and Low Code Apps, you can get inspiration to further enhance this app to your needs.
+1. Configure the new query as follows:
+
+   1. Enter the name `My own alarms`.
+
+   1. Add the data source *Get alarms*.
+
+   1. Add a *Filter* operator.
+
+   1. Configure the filter with the column *Is Active* and select the *Value* check box.
+
+      This way, the filter will be applied for alarms for which the *Is Active* property is equal to true.
+
+   1. Add another *Filter* operator.
+
+   1. Configure the second filter with the column *Owner*, filter method *equals*, and your username as the value.
+
+      In the example below, the username is *joachim*.
+
+   ![My Own Alarms query](~/user-guide/images/Tutorial_Alarm_Dashboard_MyOwnAlarmsQuery.png)
+
+1. Click the pencil icon next to the query name to stop editing the query.
+
+1. Drag the query onto the page.
+
+1. Click *Pick a visualization* and select the *Table* visualization.
+
+   ![Select the table visualization](~/user-guide/images/Tutorial_Alarm_Dashboard_Select_Table_Visualization.png)
+
+1. Take a look at the end result:
+
+   The table should now list any alarms that you have taken ownership of, including the alarm from the previous step.
+
+   ![Table listing the alarms](~/user-guide/images/Tutorial_Alarm_Dashboard_EndResultAlarmsThatITookOwnershipOf.png)
+
+This is just one of the possible changes you can do to the Alarm Filtering app in order to get a custom filtered overview of the alarms in your system. Check out the other [tutorials related to Dashboards and Low-Code Apps](xref:Dashboards_Low-Code_Apps_Tutorials) to get inspiration as to how you can further customize this app to your needs.
