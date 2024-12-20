@@ -48,12 +48,15 @@ In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular D
 
   Enables or disables load balancing on the DataMiner Agent in question.
 
-  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the DataMiner Agents specified in the `dmasForLoadBalancer` key (see below).
+  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will by default be handled in a balanced manner by all the DataMiner Agents in the cluster.
+
+    However, if you also add the `dmasForLoadBalancer` key (see below), these requests and updates will only be handled by the DataMiner Agents specified in that `dmasForLoadBalancer` key.
+
   - When this key is set to **false**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the local SLHelper process.
 
 - `<add key="dmasForLoadBalancer" value="1;2;15" />`
 
-  Specifies which DataMiner Agents will be used for visual overview load balancing.
+  If you enabled load balancing by setting the `visualOverviewLoadBalancer` key to true, then you can use this key to restrict the number of DataMiner Agents that will be used for visual overview load balancing.
 
   The key's value must be set to a semicolon-separated list of DMA IDs. For example, if the value is set to "1;2;15", then the DataMiner Agents with ID 1, 2 and 15 will be used to handle all requests and updates with regard to mobile visual overviews.
 
