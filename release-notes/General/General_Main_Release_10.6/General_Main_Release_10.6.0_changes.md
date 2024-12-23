@@ -106,12 +106,6 @@ When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor
 
 From now on, a maximum of 100 DomInstances will be verified. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
 
-#### DataMiner Cube server-side search engine: Enhanced performance [ID 41643]
-
-<!-- MR 10.6.0 - FR 10.5.2 -->
-
-Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
-
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
