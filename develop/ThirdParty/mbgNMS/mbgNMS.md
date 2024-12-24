@@ -19,7 +19,7 @@ The latest **mbgNMS installation package** can be downloaded using the link belo
 
 - Release notes: [Release notes mbgNMS 1.4.0](xref:MbgNMS_1.4.0)
 
-- Minimum required DataMiner version: [10.4.0 Main Release](https://community.dataminer.services/download/dataminer-main-release-10-4-0-0-14511-cu4/)
+- Minimum required DataMiner version: [10.4.0 Main Release](https://community.dataminer.services/download/dataminer-main-release-10-4-0-0-15230-cu10/)
 
 ![Upgrading](~/develop/images/mbgNMS_Upgrading_across_major_versions.png)
 
