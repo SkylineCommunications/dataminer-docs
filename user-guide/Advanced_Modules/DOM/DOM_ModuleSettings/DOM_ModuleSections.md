@@ -13,4 +13,4 @@ Once the ID of a `SectionDefinition` is added to this list, it can only be (re-)
 > [!IMPORTANT]
 > 
 > - If a `DomDefinition` uses the status system, these `SectionDefinitions` do not have to be linked, although they can be. When the status system is used, you can make `SectionDefinitions` mandatory using the `ModuleBehaviorDefinition` setting.
-> - Defining a `SectionDefinition` as a module section limits the possibly to define `SectionDefinitionLink` options on a `DomDefinition`. Since exactly one `Section` needs to be present in that case, it makes it incompatible with the multiple sections or optional flags.
+> - When a `SectionDefinition` is defined as a module section, it limits the possibility of defining `SectionDefinitionLink` options on a `DomDefinition`, as exactly one `Section` must be present. This makes it incompatible with multiple sections or optional flags.
