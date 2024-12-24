@@ -251,8 +251,12 @@ items:
           - name: Scheduling
             topicUid: MO_Scheduling
             items:
+              - name: Creating a Job
+                topicUid: SCH_Create_Job
               - name: Job States
                 topicUid: MO_S_Job_States
+              - name: Editing a Job
+                topicUid: SCH_Edit_Job
               - name: Job Validation
                 topicUid: MO_S_Job_Validation
               - name: Locking of Jobs

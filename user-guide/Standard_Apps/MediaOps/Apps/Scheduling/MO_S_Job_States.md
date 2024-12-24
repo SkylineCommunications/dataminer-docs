@@ -7,16 +7,16 @@ uid: MO_S_Job_States
 A job can have one of the following states:
 
 <div style="background-color:#9140D9;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Draft</div>
-Draft allows you to build a potential job without booking any of the resources or triggering financial calculations. When a new job is created it will start from the Draft state.
+The Draft state allows to create a provisionary job without actually booking any of the resources or triggering cost & billing calculations. When a new job is created from scratch or based on a workflow in the Scheduling app, it will be created in Draft state.
 
 <div style="background-color:#F7EC15;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Tentative</div>
-When a job moves into a tentative state, the resources assigned in the job will be reserved to prevent other jobs to select the same resources.
+When a job moves into a Tentative state, the resources assigned in the job will be reserved to prevent other jobs to select the same resources.
 
 <div style="background-color:#348D42;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Confirmed</div>
-Once a job is confirmed it indicates that the job will occur and therefor all resources that are (or where) assigned to the job from this stage will be considered for [Cost & Billing](xref:MO_Cost_Billing).
+Once a job is confirmed it indicates that the job will occur and therefor all resources that are (or where) assigned to the job from this stage will be considered for [Cost & Billing](xref:MO_Cost_Billing). 
 
 <div style="background-color:#4CEF8E;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Running</div>
-When a confirmed job starts it will go to the running state. This indicates the job is live.
+When a confirmed job starts, and only when it has been confirmed, it will go to the running state. This indicates the job is live.
 
 <div style="background-color:#4A41E6;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Completed</div>
 When a running job stops it will go to the Completed state. This indicates that the job has ended. In this stage it is still possible to make adjustments to the C&B information.
