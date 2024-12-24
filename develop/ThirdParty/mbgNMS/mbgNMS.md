@@ -15,9 +15,9 @@ The latest **mbgNMS installation package** can be downloaded using the link belo
 > [!TIP]
 > Refer to the [Meinberg NMS manual](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2/) and release notes for detailed instructions.
 
-- Latest release: [Meinberg Element Manager 1.3.1](https://community.dataminer.services/download/meinberg-element-manager-1-3-1/)
+- Latest release: [Meinberg Element Manager 1.4.0](https://community.dataminer.services/download/meinberg-element-manager-1-4-0/)
 
-- Release notes: [Release notes mbgNMS 1.3.1](xref:MbgNMS_1.3.1)
+- Release notes: [Release notes mbgNMS 1.4.0](xref:MbgNMS_1.4.0)
 
 - Minimum required DataMiner version: [10.4.0 Main Release](https://community.dataminer.services/download/dataminer-main-release-10-4-0-0-14511-cu4/)
 
