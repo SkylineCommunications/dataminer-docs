@@ -2,6 +2,8 @@
 uid: SCH_Edit_Job
 ---
 
+# Editing a Job
+
 Jobs can be edited through the Edit Job panel. This panel can be accessed from the [Job](#job-view) or [Resource](#resource-view) view through the 🖉 icon. On top of the Edit Job panel the current state of the job is indicated and what states will follow under normal circumstances. The panel also contains sections which are described below.
 
 - **Job info**: Contains the general information (e.g. Name, Description, start, end) of the job and based on the [state of the job](xref:MO_S_Job_States) different buttons will be shown:
