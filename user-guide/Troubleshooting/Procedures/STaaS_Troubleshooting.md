@@ -6,40 +6,51 @@ uid: Troubleshooting_STaaS
 
 STaaS (Storage as a Service) is a means to store your data in a cloud-native environment.
 
-Key advantage is that this replaces storage via Cassandra and Elastic, and it has own backup mechanism via Microsoft Azure.
+The key advantage is that this replaces storage via Cassandra and Elastic, and it has its own backup mechanism via Microsoft Azure.
 
-For more detailed information, see [Storage as a Service (STaaS)](xref:STaaS)
+For more detailed information, see [Storage as a Service (STaaS)](xref:STaaS).
 
 > [!IMPORTANT]
-> The communication between DataMiner agents and STaaS is done via internet, this means all DataMiner Agents must
+> The communication between DataMiner Agents and STaaS is done via the internet. This means all DataMiner Agents must:
 >
-> - have internet access, and
-> - be able to reach the STaaS endpoints
+> - Have internet access.
+> - Be able to reach the STaaS endpoints.
 
 > [!NOTE]
-> Every interaction with cloud has a cost. As with any storage, the number of interactions with it should be reduced to a minimum. Using STaaS will highlight any inefficiency due to the direct link with cost. How and when to do this, is integration specific.
+> Every interaction with the cloud has a cost. As with any storage, the number of interactions should be reduced to a minimum. Using STaaS will highlight any inefficiencies because of their direct impact on cost. How and when to optimize this is specific to the integration.
 
 ## Architecture
 
-Below diagram shows overview of two clusters using STaaS vs Cassandra.
+The diagram below provides an overview of two clusters using STaaS versus Cassandra.
 
 ![STaaS vs Cassandra](~/images/STaaS_vs_Cassandra.png)
 
 ## How to find out your setup is using STaaS
 
-1. In DataMiner Cube, go to System Center > Database > General tab.
+There are several ways to find out whether you are using a STaaS setup:
 
-   You should see "STaaS" filled into the Database field.
+- In DataMiner Cube, navigate to *System Center* > *Database* > *General* and check whether "STaaS" is entered into the *Database* field.
 
-   The type (i.e. per agent or per cluster) is not important, all data from the cluster will be stored the same way.
-  
-   ![System Center - Database set to STaaS](~/images/SystemCenter_STaaS.png)
+  ![System Center - Database set to STaaS](~/images/SystemCenter_STaaS.png)
 
-   ![System Center - Database per cluster](~/images/SystemCenter_DB_per_cluster.png)
+  > [!NOTE]
+  > The type of database (i.e. *Database per cluster* or *Database per Agent*) is not relevant, as all data from the cluster will be stored the same way.
+  >
+  > For example:
+  >
+  > ![System Center - Database per cluster](~/images/SystemCenter_DB_per_cluster.png)
 
-1. C:/Skyline DataMiner/DB.xml
+- In the `C:\Skyline DataMiner\DB.xml` file, when the `type` attribute of the `<Database>` element is set to `CloudStorage`, the system is configured for a STaaS setup.
 
-   You should find a 'Database' tag, which has an attribute 'type' of value 'CloudStorage'
+  If the `type` attribute is set to something other than `CloudStorage`, the system is not configured for STaaS.
+
+  Example of *DB.xml* file when dedicated clustered storage is used:
+
+  ```xml
+  <DataBase search="false" active="True" local="true" type="CassandraCluster">
+   ... 
+  </DataBase>
+  ```
 
 1. CDMR (Skyline Internal)
 
