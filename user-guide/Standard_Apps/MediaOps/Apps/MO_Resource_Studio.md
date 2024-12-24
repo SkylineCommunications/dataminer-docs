@@ -4,7 +4,7 @@ uid: MO_Resource_Studio
 
 # Resource Studio
 
-The Resource Studio app is used to quickly create and manage an inventory of bookable resources. This includes both resources tied to elements in the DataMiner System and resources that are not managed by DataMiner.
+The Resource Studio app is used to quickly create and manage an inventory of bookable resources. This includes both resources tied to elements in the DataMiner System (for example devices, network interfaces or compute resources) and resources that are not managed by DataMiner (for example people, rooms or vehicles).
 
 ADD IMAGE
 TBC WITH TEAM WHAT DO WE SAY ABOUT CREATION IN DM. --> not allowed in Cube
