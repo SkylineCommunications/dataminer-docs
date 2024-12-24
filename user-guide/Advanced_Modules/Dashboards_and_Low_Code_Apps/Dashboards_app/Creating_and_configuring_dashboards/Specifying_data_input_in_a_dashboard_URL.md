@@ -217,7 +217,7 @@ Within the dashboard URL, the following data objects can be specified:
 
   - *CELLS*: A list of rows, each consisting of cells represented in the format `VALUE\u000EDISPLAYVALUE`. As the separator between the cells, use `\u000E`. As the separator between the rows, use `\u001F`.
 
-  - *KEYS*: A list of the keys of the rows, separated by `\u001`. This key is unique for the row.
+  - *KEYS*: A list of the keys of the rows, separated by `\u001F`. This key is unique for the row.
 
   For example, to add a query row with two columns to the URL, of which the first column, *ID*, contains string values, and the second column, *Value*, contains numbers:
 
