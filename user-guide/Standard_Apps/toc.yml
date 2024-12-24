@@ -241,6 +241,8 @@ items:
             items:
               - name: Changing icons
                 topicUid: MO_RS_Changing_Icons
+              - name: Linking pools
+                topicUid: RS_Linking_Pools
           - name: Satellite Data & Capacity Planning
             topicUid: MO_Satellite
             items:
