@@ -241,6 +241,10 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 > [!NOTE]
 > In case of issues during or after the migration, revert the `DB.xml` file to its previous state and re-trigger the migration process. If you want to be certain no data inconsistencies are possible, contact [STaaS support](mailto:staas@dataminer.services).
 
+## Deleting a system
+
+When [Disconnecting a system from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices) or [Removing a DaaS system](xref:Removing_a_DaaS_system), all STaaS data for that specific system, including backups, will be removed 7 days after the deletion. Upon request, all STaaS data can be recovered within those 7 days.
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:
