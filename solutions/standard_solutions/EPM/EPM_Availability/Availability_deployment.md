@@ -9,7 +9,7 @@ To deploy the Availability branch of the EPM Solution:
 
 1. Deploy the EPM package:
 
-   - If the DMA is connected to dataminer.services, you can [deploy the package](xref:Deploying_a_catalog_item) directly [from the Catalog](https://catalog.dataminer.services/details/b661f936-d6e7-447c-baee-f0a5503e75b4).
+   - If the DMA is connected to dataminer.services, you can [deploy the package](xref:Deploying_a_catalog_item) directly [from the Catalog](https://catalog.dataminer.services/details/85c53fba-9f58-42cb-bd94-5adce97f662e).
 
    - Otherwise, place the application package on any DMA available in the cluster. No specific location is required; however, avoid using the Skyline DataMiner folder (C:\Skyline DataMiner). More information about how to install application packages using the Taskbar Utility can be found under [Upgrading a DataMiner Agent using DataMiner Taskbar Utility](xref:Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility).
 
