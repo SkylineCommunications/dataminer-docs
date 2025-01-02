@@ -44,15 +44,15 @@ Below, you can find an overview of the main components of the app.
 ### Metrics
 Left-clicking a method in the Metrics table provides a menu with different options to vizualize the execution times of the method.
 
-![Performance Analyzer LCA](~/user-guide/images/Performance_analyzer_metrics_method_menu.png)
+![Performance Analyzer Metrics Method Menu](~/user-guide/images/Performance_analyzer_metrics_method_menu.png)
 
 The first option will display statistics for the method in the file that's currently selected.
 
-![Performance Analyzer LCA](~/user-guide/images/Performance_analyzer_analyze_method_single_file.png)
+![Performance Analyzer Analyze Method Single File](~/user-guide/images/Performance_analyzer_analyze_method_single_file.png)
 
 The second option will display statistics for the method across all files in the configured Performance Analyzer Metrics Folder.
 
-![Performance Analyzer LCA](~/user-guide/images/Performance_analyzer_analyze_method_multi_file.png)
+![Performance Analyzer Analyze Method Multi File](~/user-guide/images/Performance_analyzer_analyze_method_multi_file.png)
 
 > [!WARNING]
 >  Analyzing a method across all files can cause a lot of memory and disk usage depending on the size of the metrics folder. A failsafe is implemented to load only the most recent 2 GB of files depending on the last modified date.
