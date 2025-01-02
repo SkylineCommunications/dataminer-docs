@@ -99,7 +99,7 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 
 **Purpose:** **User-centric**. Demonstrate practical, real-world scenarios where the solution provides value.
 
-**Format:** Provide a link to a [use case on DataMiner Dojo](https://community.dataminer.services/use-cases/) or include 2 or 3 bullet points summarizing use cases.
+**Format:** Typically, the package is designed to solve specific problems for users. Explain this clearly with accompanying visuals. Optionally, provide a link to a [use case on DataMiner Dojo](https://community.dataminer.services/use-cases/).
 
 **Do's:**
 
