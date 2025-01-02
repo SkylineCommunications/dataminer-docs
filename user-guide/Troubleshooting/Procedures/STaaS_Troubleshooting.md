@@ -52,27 +52,46 @@ There are several ways to find out whether you are using a STaaS setup:
   </DataBase>
   ```
 
-1. CDMR (Skyline Internal)
-
-   Go to the CDMR Agent Element > Database > DB Engine type = 'CloudStorage'
+- **Only applicable to Skyline employees**: Navigate to the *CDMR Agent* element and check whether the *DB Engine type* on the *Database* page is set to "CloudStorage".
 
 ## Investigation
 
-1. Verify STaaS is used. (see previous section)
+1. [Verify that STaaS is used](#how-to-find-out-your-setup-is-using-staas).
 
-1. Verify the prerequisites:
+1. Make sure the following prerequisites are met:
 
-   - DataMiner v10.4 or higher
+   - DataMiner 10.4.0 or higher.
 
-   - CloudGateway v2.8.0 or higher installed on at least 1 agent
+   - The CloudGateway DxM (version 2.8.0 or higher) must be deployed on at least one DataMiner Agent.
 
-     - Go to <https://admin.dataminer.services/> and select your DataMiner System in the left bar. Then open the 'DxMs' menu, here you can check the installed version per DxM and if needed upgrade.
+     To install the module:
 
-     - Via a LogCollector package > Logs > DxM > DataMiner CloudGateway > DataMiner CloudGateway.exe_version.txt > Product Version
+     1. In the Admin app, check whether the correct organization is mentioned in the header bar.
 
-     - (Techsupport only) [Skyline Admin](https://skyline-admin.dataminer.services/organization) > search organization > search DMS (coordination) > check the status of the Nodes + DxMs
+        > [!TIP]
+        > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
 
-   - A valid connection to dataminer.services
+     1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+
+     1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *DxMs* page.
+
+     1. Locate the node (i.e. the DMA) you want to install the DxM on.
+
+     1. Next to the *CloudGateway* module, click *Deploy* to start the automatic installation process.
+
+     If the *CloudGateway* module is installed on your DMA already, verify that it is version 2.8.0 or higher:
+
+     - SLLogCollector:
+
+       1. Run the [SLLogCollector tool](xref:SLLogCollector).
+
+       1. Open the resulting package, and navigate to *Logs* > *DxM* > *DataMiner CloudGateway* > *DataMiner CloudGateway.exe_version.txt*.
+
+          The CloudGateway DxM version is displayed under *Product Version*.
+
+     - Only applicable to Skyline employees (more specifically Techsupport): [Skyline Admin](https://skyline-admin.dataminer.services/organization) > search organization > search DMS (coordination) > check the status of the Nodes + DxMs
+
+   - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
      - In DataMiner Cube, go to System Center > Cloud. It should mention 'Session is active'
 
