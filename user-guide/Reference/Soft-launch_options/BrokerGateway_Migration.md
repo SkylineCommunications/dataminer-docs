@@ -10,7 +10,7 @@ From DataMiner 10.6.0 onwards, this migration will be done automatically during 
 
 ## Prerequisites
 
-Before you start the migration, the entire cluster must have been running smoothly for some time. This means that all DataMiner Agents in the cluster must be online and function together for some time. To confirm that the DMS is ready to be migrated, run the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) BPA.
+Before you start the migration, the entire cluster must have been running smoothly for some time. This means that all DataMiner Agents in the cluster must be online and function together for at least 15 minutes. To confirm that the DMS is ready to be migrated, run the [Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites) BPA.
 
 If the BPA succeeds, the system is all set to migrate.
 
@@ -143,7 +143,7 @@ This is not possible. Both NATS installations use the same network ports, so the
 
 ### Why should I migrate to BrokerGateway? What are the advantages of this?
 
-Careless NATS communications managed by a decoupled and robust BrokerGateway based on a Single Source of Truth that has the complete knowledge of the cluster. A newer and more performant NATS version is also used and is easier than ever to upgrade.
+Carefree NATS communications managed by a decoupled and robust BrokerGateway based on a Single Source of Truth that has the complete knowledge of the cluster. A newer and more performant NATS version is also used and is easier than ever to upgrade.
 
 ## Troubleshooting
 
@@ -153,6 +153,7 @@ When calling *ResetCluster*, BrokerGateway will first try to remove itself from 
 
 The endpoints BrokerGateway is currently clustered with are listed in the ClusterInfo in *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json*. If one of those IPs cannot be reached, the error message above is generated.
 
-By agreeing to forcibly remove itself from this cluster, the current machine can free itself to cluster with the new setup. However, because it forcibly removes itself, it no longer informs any of these unreachable endpoints of its removal. These may still attempt to contact the current machine, which will no longer be reachable for them.
+The user will be asked if the node may be forcibly removed. By agreeing to forcibly remove itself from this cluster, the current machine can free itself to cluster with the new setup. However, because it forcibly removes itself, it no longer informs any of these unreachable endpoints of its removal. These may still attempt to contact the current machine, which will no longer be reachable for them.
+The user can also choose to not allow the forcible removal, this will abort the NATS Migration process and revert back to the previous configuration.
 
 If you do not want this forced removal, make sure all endpoints specified in *appsettings.runtime.json* can be reached by the current machine.
