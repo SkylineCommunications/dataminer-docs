@@ -42,15 +42,15 @@ Below, you can find an overview of the main components of the app.
 1. **Metric Metadata (Timeline)**: Provides an overview of the context for the selected timeline block.
 
 ### Metrics
-Left-clicking a method in the Metris table provides a menu with different options to vizualize the execution times of the method.
+Left-clicking a method in the Metrics table provides a menu with different options to vizualize the execution times of the method.
 
 ![Performance Analyzer LCA](~/user-guide/images/Performance_analyzer_metrics_method_menu.png)
 
-The first option will display a graph with all execution times for the method in the file that's currently selected.
+The first option will display statistics for the method in the file that's currently selected.
 
 ![Performance Analyzer LCA](~/user-guide/images/Performance_analyzer_analyze_method_single_file.png)
 
-The second option will display the execution times for all files in the configured **Performance Analyzer Metrics Folder**.
+The second option will display statistics for the method across all files in the configured Performance Analyzer Metrics Folder.
 
 ![Performance Analyzer LCA](~/user-guide/images/Performance_analyzer_analyze_method_multi_file.png)
 
