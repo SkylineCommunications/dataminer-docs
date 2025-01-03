@@ -214,7 +214,10 @@ items:
           - name: Investigating StackOverflowException occurrences
             topicUid: TroubleshootingSLScriptingStackOverflowException
       - name: Troubleshooting – STaaS
-        topicUid: Troubleshooting_STaaS_Issues
+        topicUid: Troubleshooting_STaaS
+        items:
+          - name: STaaS error messages
+            topicUid: STaaS_Error_messages
       - name: Troubleshooting – web
         topicUid: Investigating_Web_Issues
       - name: Troubleshooting – Miscellaneous

@@ -22,7 +22,7 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting - SLScripting](xref:TroubleshootingSLScriptingFinalizerException)
 
-- [Troubleshooting – STaaS](xref:Troubleshooting_STaaS_Issues)
+- [Troubleshooting – STaaS](xref:Troubleshooting_STaaS)
 
 - [Troubleshooting – web](xref:Investigating_Web_Issues)
 
