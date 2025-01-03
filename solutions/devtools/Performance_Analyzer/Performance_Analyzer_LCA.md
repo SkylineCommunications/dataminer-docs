@@ -16,7 +16,9 @@ To install the Performance Analyzer app, deploy the [Performance Analyzer](https
 > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).
 
 ## Performance Analyzer app user interface
-### Main overview
+
+### Components overview
+
 Below, you can find an overview of the main components of the app.
 
 ![Performance Analyzer LCA](~/user-guide/images/performance_analyzer_lca.png)
@@ -41,18 +43,19 @@ Below, you can find an overview of the main components of the app.
 
 1. **Metric Metadata (Timeline)**: Provides an overview of the context for the selected timeline block.
 
-### Metrics
-Left-clicking a method in the Metrics table provides a menu with different options to vizualize the execution times of the method.
+### Metrics menu
 
-![Performance Analyzer Metrics Method Menu](~/user-guide/images/Performance_analyzer_metrics_method_menu.png)
+Left-clicking a method in the Metrics table opens a menu with different options to visualize the execution times of the method.
 
-The first option will display statistics for the method in the file that's currently selected.
+![Performance Analyzer metrics method menu](~/user-guide/images/Performance_analyzer_metrics_method_menu.png)
 
-![Performance Analyzer Analyze Method Single File](~/user-guide/images/Performance_analyzer_analyze_method_single_file.png)
+- *Analyze Method (File)* displays statistics for the method in the file that is currently selected.
 
-The second option will display statistics for the method across all files in the configured Performance Analyzer Metrics Folder.
+  ![Performance Analyzer analyze method single file](~/user-guide/images/Performance_analyzer_analyze_method_single_file.png)
 
-![Performance Analyzer Analyze Method Multi File](~/user-guide/images/Performance_analyzer_analyze_method_multi_file.png)
+- *Analyze Method (Multi-File)* displays statistics for the method across all files in the configured Performance Analyzer metrics folder.
 
-> [!WARNING]
->  Analyzing a method across all files can cause a lot of memory and disk usage depending on the size of the metrics folder. A failsafe is implemented to load only the most recent 2 GB of files depending on the last modified date.
+  ![Performance Analyzer analyze method multi-file](~/user-guide/images/Performance_analyzer_analyze_method_multi_file.png)
+
+> [!IMPORTANT]
+> Analyzing a method across all files can cause a lot of memory and disk usage depending on the size of the metrics folder. A failsafe is implemented to load only the most recent 2 GB of files based on the last modified date.
