@@ -230,7 +230,7 @@ var createResult = helper.DomInstances.CreateOrUpdate(domInstances);
 *CreateOrUpdate* will consider the provided `DomInstances` that already exist as updates. The other `DomInstances` will be created. Providing a mix of both is supported.
 
 > [!TIP]
-> For more information and best practices for using these calls, see [Processing multiple DomInstances — examples](xref:DOM_BulkProcessing_Example).
+> For more information and best practices for using these calls, see [Processing multiple DomInstances — examples](xref:DOM_BulkProcessing_Examples).
 
 > [!IMPORTANT]
 > When designing the object model, consider if a high number of `DomInstances` might need to be processed quickly or need to be provisioned. If this is the case, we recommend avoiding related actions such as [launching script actions](xref:ExecuteScriptOnDomInstanceActionSettings) and [history tracking](xref:DOM_history).
@@ -245,7 +245,7 @@ The result of the bulk methods will contain:
 
 - A list of `DomInstance` IDs that were successfully deleted, when `Delete` is called.
 
-From DataMiner 10.5.0/10.5.2 onwards<!-- RN 41546 -->, if an issue occurs for any of the items that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Example#checking-issues).
+From DataMiner 10.5.0/10.5.2 onwards<!-- RN 41546 -->, if an issue occurs for any of the items that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Examples#checking-issues).
 
 As an alternative, the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will return false. The `result` output parameter will contain:
 

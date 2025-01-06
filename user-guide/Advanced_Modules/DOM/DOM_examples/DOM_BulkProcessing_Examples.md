@@ -1,5 +1,5 @@
 ---
-uid: DOM_BulkProcessing_Example
+uid: DOM_BulkProcessing_Examples
 ---
 
 # Processing multiple DomInstances - examples
@@ -132,4 +132,4 @@ var domInstances = domHelper.DomInstances.Read(filter);
 var deleteResult = domHelper.DomInstances.Delete(domInstances);
 ```
 
-Similar to the [previous example](xref:DOM_BulkProcessing_Example#checking-issues), it is possible to get `UnsuccessfulIds` and `TraceDataPerItem` and to call `HasFailures()` and `GetTraceData()` using the `deleteResult` to log any failures that occurred. However, the `deleteResult` only contains the `SuccessfulIds`.
+Similar to the [previous example](#checking-issues), it is possible to get `UnsuccessfulIds` and `TraceDataPerItem` and to call `HasFailures()` and `GetTraceData()` using the `deleteResult` to log any failures that occurred. However, the `deleteResult` only contains the `SuccessfulIds`.

@@ -873,7 +873,7 @@ items:
           - name: Altering and getting values of a DomInstance - examples
             topicUid: DOM_Altering_values_of_a_DomInstance
           - name: Processing multiple DomInstances - examples
-            topicUid: DOM_BulkProcessing_Example
+            topicUid: DOM_BulkProcessing_Examples
       - name: DOM DevOps tools
         topicUid: DOM_DevOps_tools
         items:
