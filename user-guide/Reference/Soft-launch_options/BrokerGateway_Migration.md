@@ -143,7 +143,7 @@ This is not possible. Both NATS installations use the same network ports, so the
 
 ### Why should I migrate to BrokerGateway? What are the advantages of this?
 
-Carefree NATS communications managed by a decoupled and robust BrokerGateway based on a Single Source of Truth that has the complete knowledge of the cluster. A newer and more performant NATS version is also used and is easier than ever to upgrade.
+BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. A newer version of NATS will also be used that has better performance and is easier to upgrade.
 
 ## Troubleshooting
 
