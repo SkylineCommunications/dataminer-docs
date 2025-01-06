@@ -16,9 +16,9 @@ uid: swarming_bookings_benchmarks
 | 6 | Swarming 100 elements (Failover-like switchover) | DMS | 10 s | First element available after 2 seconds. |
 | 7 | Agent startup with 100 elements present | DMS | 6.353 s | Loading from DB. |
 | 8 | Agent startup with 100 elements present (non-Swarming) | DMS | 2.853 s | Non-swarming system (Loading from XML) |
-| 9 | Setting element property | DMS | 0.024ms | Non-Swarming, 10.5.2 |
-| 10 | Setting element property | DMS | 0.025ms | Swarming-enabled CassandraCluster config, 10.5.2 |
-| 11 | Setting element property | DMS | 0.070ms | Swarming-enabled STaaS config, 10.5.2 |
+| 9 | Setting element property | DMS | 0.024 s | Non-Swarming, 10.5.2 |
+| 10 | Setting element property | DMS | 0.025 s | Swarming-enabled CassandraCluster config, 10.5.2 |
+| 11 | Setting element property | DMS | 0.070 s | Swarming-enabled STaaS config, 10.5.2 |
 
 ## General Notes
 
