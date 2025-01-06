@@ -4,28 +4,24 @@ uid: Troubleshooting_STaaS
 
 # Troubleshooting – STaaS
 
-STaaS (Storage as a Service) is a means to store your data in a cloud-native environment.
+[Storage as a Service (STaaS)](xref:STaaS) is a cloud-native data storage architecture that allows you to securely store your data without the need to maintain databases yourself.
 
-The key advantage of STaaS is that it replaces storage via Cassandra and Elastic, and it has its own backup mechanism via Microsoft Azure.
-
-For more detailed information, see [Storage as a Service (STaaS)](xref:STaaS).
+One of the key advantages of STaaS is its ability to replace storage solutions like Cassandra and Elastic, while providing its own backup mechanism through Microsoft Azure.
 
 > [!IMPORTANT]
-> The communication between DataMiner Agents and STaaS is done via the internet. This means all DataMiner Agents must:
+> Communication between DataMiner Agents and STaaS occurs over the internet. This means all DataMiner Agents must:
 >
 > - Have internet access.
 > - Be able to reach the STaaS endpoints.
 
 > [!NOTE]
-> Every interaction with the cloud has a cost. As with any storage, the number of interactions should be reduced to a minimum. Using STaaS will highlight any inefficiencies because of their direct impact on cost. How and when to optimize this is specific to the integration.
+> Every interaction with the cloud has a cost. As with any storage system, the number of interactions should be reduced to a minimum. Using STaaS will highlight any inefficiencies because of their direct impact on cost. How and when to optimize this is specific to the integration.
 
 ## Architecture
 
 The diagram below provides an overview of two clusters using STaaS versus Cassandra.
 
 ![STaaS vs Cassandra](~/images/STaaS_vs_Cassandra.png)
-
-- **Only applicable to Skyline employees**: Navigate to the *CDMR Agent* element and check whether the *DB Engine type* on the *Database* page is set to "CloudStorage".
 
 ## Investigation
 
@@ -64,9 +60,11 @@ There are two ways to verify if you are using a STaaS setup:
      </DataBase>
      ```
 
+- **Only applicable to Skyline employees**: Navigate to the *CDMR Agent* element and check whether the *DB Engine type* on the *Database* page is set to "CloudStorage".
+
 ### Check if the prerequisites are met
 
-The following prerequisites must be met for a successful STaaS setup. Failing to meet these can cause issues:
+The following prerequisites must be met for a successful STaaS setup:
 
 - DataMiner version 10.4.0 or higher.
 
@@ -185,7 +183,7 @@ Impact:
 
 Reason:
 
-- The CloudGateway module is unable to refresh the cloud session automatically.
+- The *CloudGateway* module is unable to refresh the cloud session automatically.
 
 Actions:
 
@@ -207,7 +205,7 @@ Reason:
 
 - The DMA was previously registered under a different cloud organization.
 
-- The CloudGateway module is not running.
+- The *CloudGateway* module is not running.
 
 Actions:
 
@@ -233,7 +231,7 @@ Reason:
 
 - High volume of interaction with dataminer.services.
 
-- The Upload/download bandwidth of the local internet connection is insufficient to handle the high load, resulting in queueing.
+- The upload/download bandwidth of the local internet connection is insufficient to handle the high load, resulting in queueing.
 
 - dataminer.services cannot handle the high load, resulting in queueing.
 
