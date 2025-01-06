@@ -128,7 +128,7 @@ In this example, some `DomInstances` get filtered out to be removed.
 // Retrieve the DomInstances that need to get deleted.
 var domInstances = domHelper.DomInstances.Read(filter);
 
-// Remove them from the DB.
+// Remove them from the database.
 var deleteResult = domHelper.DomInstances.Delete(domInstances);
 ```
 
