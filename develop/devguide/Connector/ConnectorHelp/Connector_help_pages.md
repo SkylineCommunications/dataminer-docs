@@ -66,19 +66,19 @@ The title of both pages should be the name of the connector in the [DataMiner Ca
 
 #### About
 
-In this about section, add a short paragraph explaining the **function of the connector**. Try to also include some **information about the data source**. If you copy this information from somewhere else, make sure it fits the informative context of documentation (e.g. remove meaningless praise like "best-of-breed", "top-of-the-line", etc.). Don't be too technical here. Keep things high level and user centric.
+In this About section, add a short paragraph explaining the **function of the connector**. Try to also include some **information about the data source**. If you copy this information from somewhere else, make sure it fits the informative context of documentation (e.g. remove meaningless praise like "best-of-breed", "top-of-the-line", etc.). Avoid technical explanations here. Keep things high-level and user-centric.
 
 #### Key Features
 
-List up the main features of the connector. No need to list up all features here, stick to the main ones, we typically aim at a list of 3 to 5 features.
+List up the main features of the connector. There is no need to list up all features here; just the main ones is sufficient. We typically aim at a list of 3 to 5 features.
 
 #### Use Cases
 
-This section is optional. Some times it will make sense to add some specific use-cases on top of the above Key Features section. Some times it will be skipped to avoid duplicating info already available in the above Key Features section.
+This section is optional. Sometimes it will make sense to add some specific use cases on top of the above Key Features section, but sometimes it will be better to leave out this Use Cases section to avoid duplicate info.
 
 #### Technical info
 
-This section can be use to list up prerequisites or any other important technical info that you deem necessary to put on this main page. Keep this section to the absolute minimum though. Any other technical detail does not belong here but will go to the [technical page](#Technical-page).
+This section can be used to list up prerequisites or any other important technical info that is important enough to mention on this main page. However, you should keep this section to the absolute minimum. Any other technical details do not belong here but should be added on the [technical page](#Technical-page).
 
 Add a note containing a link to the connector [technical page](#Technical-page).
 
