@@ -816,6 +816,9 @@ items:
             topicUid: DomDefinition
           - name: DomInstance object
             topicUid: DomInstance
+            items:
+              - name: DOM multiple sections
+                topicUid: DOM_MultipleSections
           - name: DomTemplate object
             topicUid: DomTemplate
           - name: DomBehaviorDefinition object
@@ -826,8 +829,6 @@ items:
         topicUid: DomHelper_class
       - name: DOM events
         topicUid: DOM_events
-      - name: DOM multiple sections
-        topicUid: DOM_MultipleSections
       - name: DOM history
         topicUid: DOM_history
       - name: DOM status system
