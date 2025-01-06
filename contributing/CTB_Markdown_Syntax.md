@@ -287,7 +287,7 @@ These alerts are displayed as follows:
 
 ## Keywords
 
-It is possible to add keywords in the metadata at the top of the page to ensure that the page will be found when a user enters such a keyword in a search query.
+It is possible to add keywords in the metadata at the top of a page to ensure that the page will be found when a user enters such a keyword in a search query.
 
 To do so, add a "keywords:" line below the "uid:" line in the metadata, and then specify the keywords, separated by commas. For example:
 
