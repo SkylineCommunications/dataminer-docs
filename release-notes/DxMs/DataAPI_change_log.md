@@ -7,6 +7,23 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 11 December - Enhancement - DataAPI 1.2.6 - Added validation on parameter type for existing connector [ID 41684]
+
+A new validation has been added to verify the parameter type before modifying an existing connector to ensure types are not changed (e.g.: pushing string data to a numeric parameter).
+In case a wrong parameter type is identified, an error message is logged and the request is rejected.
+
+### 10 December - Fix - DataAPI 1.2.6 - Unexpected parameters outside range error [ID 41683]
+
+The issue causing the DataAPI to fail with the error, "There are parameters outside of the allowed range of '10000000' to '10999999'," has been resolved. This error occurred when the first payload sent was an empty structure (e.g.: `{ "Table 0": [] }`), followed by a second payload with data (e.g.: `{ "Table 0": [{ "Added Column 0": 891662541, "id": "Row 0" }] }`).
+
+### 4 December - Fix - DataAPI 1.2.6 - Make connector manipulation thread-safe [ID 41637]
+
+The manipulation of a connector is now thread-safe, allowing concurrent requests to read and change the same connector.
+
+### 22 November - New feature - DataAPI 1.2.5 - Sync deleted connectors [ID 40090]
+
+DataAPI now removes a connector from its local cache when the connector is deleted in DataMiner.
+
 ### 14 November - Fix - DataAPI 1.2.4 - MessageBroker updated [ID 41381]
 
 DataAPI has been updated to use the latest MessageBroker NuGet version.
