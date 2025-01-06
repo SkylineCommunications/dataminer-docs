@@ -1,8 +1,8 @@
 ---
-uid: swarming_bookings_benchmarks
+uid: swarming_elements_benchmarks
 ---
 
-# Swarming bookings benchmarks
+# Swarming elements benchmarks
 
 ## Benchmarks
 
