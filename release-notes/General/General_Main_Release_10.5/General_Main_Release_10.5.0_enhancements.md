@@ -1054,6 +1054,12 @@ At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\So
 - If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
 - If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.
 
+#### DataMiner Cube server-side search engine: Enhanced performance [ID 41643]
+
+<!-- MR 10.4.0 [CU11]/10.5.0 - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
+
 #### Storage as a Service: Timeout for responses to write requests has been reduced to 10 seconds [ID 41717]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
