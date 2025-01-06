@@ -104,7 +104,7 @@ The following actions will be executed during the migration, in the indicated or
 
 1. The NAS and NATS services are stopped and their startup type is set to "Manual".
 
-   At a later stage, the Migration tool might delete the services instead.
+   At a later stage, the migration tool might delete the services instead.
 
 1. The *ResetCluster* API (*https://\<ip\>/BrokerGateway/api/clusteringapi/resetcluster*) is called on BrokerGateway to create a new NATS cluster, and the NATS binaries are installed at **C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server** and started as a service called "nats-server".
 
@@ -153,7 +153,6 @@ When calling *ResetCluster*, BrokerGateway will first try to remove itself from 
 
 The endpoints BrokerGateway is currently clustered with are listed in the ClusterInfo in *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json*. If one of those IPs cannot be reached, the error message above is generated.
 
-The user will be asked if the node may be forcibly removed. By agreeing to forcibly remove itself from this cluster, the current machine can free itself to cluster with the new setup. However, because it forcibly removes itself, it no longer informs any of these unreachable endpoints of its removal. These may still attempt to contact the current machine, which will no longer be reachable for them.
-The user can also choose to not allow the forcible removal, this will abort the NATS Migration process and revert back to the previous configuration.
+You will be asked if the node may be forcibly removed. If you agree to this, the current machine can free itself from the cluster to cluster with the new setup instead. However, because it forcibly removes itself, it no longer informs any of the unreachable endpoints of its removal. These may still attempt to contact the current machine, which will no longer be reachable for them. If you choose to not allow the forcible removal, this will cancel the migration process and revert back to the previous configuration.
 
-If you do not want this forced removal, make sure all endpoints specified in *appsettings.runtime.json* can be reached by the current machine.
+If you do want to migrate to BrokerGateway but you do not want this forced removal, make sure all endpoints specified in *appsettings.runtime.json* can be reached by the current machine.
