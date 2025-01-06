@@ -29,7 +29,7 @@ This object is also used in the Jobs app. It is used to store a link to a `Secti
 It also has the *IsSoftDeleted* boolean. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects).
 
 > [!NOTE]
-> From DataMiner version 10.3.0/10.3.3 onwards, the `SectionDefinitionLink` also contains the *AllowMultipleSections* boolean, see [multiple sections](xref:DOM_MultipleSections).
+> From DataMiner version 10.3.0/10.3.3 onwards, the `SectionDefinitionLink` also contains the *AllowMultipleSections* boolean. See [Multiple sections](xref:DOM_MultipleSections).
 
 ### ModuleSettingsOverrides
 
