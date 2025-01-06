@@ -7,83 +7,83 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
-### 11 December - Enhancement - DataAPI 1.2.6 - Validation added on parameter type for existing connector [ID 41684]
+### 11 December 2024 - Enhancement - DataAPI 1.2.6 - Validation added on parameter type for existing connector [ID 41684]
 
 New validation has been added to verify the parameter type before modifying an existing connector to ensure types have not been changed (e.g. pushing string data to a numeric parameter). In case a wrong parameter type is identified, an error message is logged and the request is rejected.
 
-### 10 December - Fix - DataAPI 1.2.6 - Unexpected parameters outside range error [ID 41683]
+### 10 December 2024 - Fix - DataAPI 1.2.6 - Unexpected parameters outside range error [ID 41683]
 
 When the first payload sent was an empty structure (e.g. `{ "Table 0": [] }`), followed by a second payload with data (e.g. `{ "Table 0": [{ "Added Column 0": 891662541, "id": "Row 0" }] }`), it could occur that the Data API failed with the error "There are parameters outside of the allowed range of '10000000' to '10999999'". This problem has been resolved.
 
-### 4 December - Enhancement - DataAPI 1.2.6 - Connector manipulation now thread-safe [ID 41637]
+### 4 December 2024 - Enhancement - DataAPI 1.2.6 - Connector manipulation now thread-safe [ID 41637]
 
 The manipulation of a connector is now thread-safe, allowing concurrent requests to read and change the same connector.
 
-### 22 November - New feature - DataAPI 1.2.5 - Sync deleted connectors [ID 40090]
+### 22 November 2024 - New feature - DataAPI 1.2.5 - Sync deleted connectors [ID 40090]
 
 DataAPI now removes a connector from its local cache when the connector is deleted in DataMiner.
 
-### 14 November - Fix - DataAPI 1.2.4 - MessageBroker updated [ID 41381]
+### 14 November 2024 - Fix - DataAPI 1.2.4 - MessageBroker updated [ID 41381]
 
 DataAPI has been updated to use the latest MessageBroker NuGet version.
 
-### 14 November - Fix - DataAPI 1.2.4 - Soft-launch verification incompatible with DataMiner 10.5.x and higher [ID 41286]
+### 14 November 2024 - Fix - DataAPI 1.2.4 - Soft-launch verification incompatible with DataMiner 10.5.x and higher [ID 41286]
 
 Previously, the soft-launch verification, which checks whether Data API is running on a compatible DataMiner version, verified only 10.4.x versions. Now 10.5.x versions and higher will be included in the check.
 
-### 14 November - Fix - DataAPI 1.2.4 - Telemetry data not collected when TraceParent header was specified in request [ID 40512]
+### 14 November 2024 - Fix - DataAPI 1.2.4 - Telemetry data not collected when TraceParent header was specified in request [ID 40512]
 
 If the TraceParent header was specified in a request, it could occur that the telemetry data was not collected. To prevent this, the AlwaysOnSampler option has been added to the open telemetry setup.
 
-### 14 November - Enhancement - DataAPI 1.2.4 - SLLogCollector config file deployed with installation of Data API DxM [ID 41003]
+### 14 November 2024 - Enhancement - DataAPI 1.2.4 - SLLogCollector config file deployed with installation of Data API DxM [ID 41003]
 
 Up until recently, SLLogCollector was configured by default (with the *Collector-xml* configuration file) to collect the log files of the DataAPI DxM, even when the DxM was not installed. This default configuration has been removed from DataMiner (see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12#sllogcollector-will-no-longer-be-configured-by-default-to-collect-the-log-files-of-the-dataapi-dxm-id-41003)), and the Data API installer will instead create the log configuration file upon installation.
 
-### 14 November - Enhancement - DataAPI 1.2.4 - PDB files removed from installer [ID 40901]
+### 14 November 2024 - Enhancement - DataAPI 1.2.4 - PDB files removed from installer [ID 40901]
 
 To improve security, the DataAPI installer has been updated so that it will no longer install PDB files.
 
-### 14 November - Enhancement - DataAPI 1.2.4 - Improved handling of missing columns when parsing request [ID 40222]
+### 14 November 2024 - Enhancement - DataAPI 1.2.4 - Improved handling of missing columns when parsing request [ID 40222]
 
 If a request contains missing columns, DataAPI will no longer fail to handle the request or encounter unexpected behavior. Previously, sending a request with `{"table": [{"param1": 4}, {"param2": 3}]}` would result in a table with one single row, instead of two rows. Now, sending `{"table": [{"param1": 4}, {"param2": 3}]}` generates the same result as `{"table": [{"Id": 1, "param1": 4}, {"Id": 2, "param2": 3}]}`.
 
-### 12 September - Fix - DataAPI 1.2.3 - Auto-increment column duplicated when ID column was specified in new request [ID 40187]
+### 12 September 2024 - Fix - DataAPI 1.2.3 - Auto-increment column duplicated when ID column was specified in new request [ID 40187]
 
 When DataAPI generates a table, it uses the *ID* column from the request as the index. If the request does not include an *ID* column, DataAPI creates an *Idx* column with auto-incremented values. However, up to now, when the *ID* column was added in later requests, it could occur that two *Idx* columns were created.
 
-### 12 September - Enhancement - DataAPI 1.2.3 - Prevent the configuration of units or decimals on table parameters [ID 40152]
+### 12 September 2024 - Enhancement - DataAPI 1.2.3 - Prevent the configuration of units or decimals on table parameters [ID 40152]
 
 The config endpoint will now return an error when it receives a request to configure the units or decimals of a table parameter.
 
-### 30 July - Enhancement - DataAPI 1.2.2 - Dual instance for debugging [ID 40192]
+### 30 July 2024 - Enhancement - DataAPI 1.2.2 - Dual instance for debugging [ID 40192]
 
 The ability to debug two running instances of the DxM to test inter-DxM communication has been added.
 
-### 30 July - Fix - DataAPI 1.2.2 - Case-insensitive handling of push and config requests [ID 40100]
+### 30 July 2024 - Fix - DataAPI 1.2.2 - Case-insensitive handling of push and config requests [ID 40100]
 
 Previously, when data was sent to *DataAPI*, the field names in the request body were modified according to title case rules during connector setup. If subsequent requests did not use the same casing, this could lead to mismatches, causing the request to fail. This update ensures that the request fields are now case-insensitive.
 
-### 1 July - Enhancement - DataAPI 1.2.1 - Extra protections added to not use parameter IDs outside allowed ranges [ID 39860]
+### 1 July 2024 - Enhancement - DataAPI 1.2.1 - Extra protections added to not use parameter IDs outside allowed ranges [ID 39860]
 
 Protections have been added in the DataAPI DxM so that no IDs can be used outside of the allowed range (10M to 11M).
 
 When reading faulty connectors from DataMiner, the DxM will sanitize its in-memory representation to not have those disallowed parameters, and it will publish a fixed version.
 
-### 1 July - Fix - DataAPI 1.2.1 - Error when NATS is not available at startup [ID 39827]
+### 1 July 2024 - Fix - DataAPI 1.2.1 - Error when NATS is not available at startup [ID 39827]
 
 When the DataAPI DxM started up before NATS was completely started, this could cause a critical error to be thrown during the initialization.
 
 Protection has been added to prevent this error, and a more robust recovery mechanism has been implemented to keep trying to initialize until NATS is fully up and running.
 
-### 1 July - Enhancement - DataAPI 1.2.1 - Upgrade NuGet dependencies with known vulnerabilities [ID 39760]
+### 1 July 2024 - Enhancement - DataAPI 1.2.1 - Upgrade NuGet dependencies with known vulnerabilities [ID 39760]
 
 The ​Data API now uses updated NuGet package versions, which address known vulnerabilities.
 
-### 29 April - Enhancement - DataAPI 1.2.0 - Improved performance when creating new connectors [ID 39401]
+### 29 April 2024 - Enhancement - DataAPI 1.2.0 - Improved performance when creating new connectors [ID 39401]
 
 The ​Data API now uses an updated version of the [Skyline.DataMiner.CICD.Models.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Models.Protocol) NuGet package, which improves performance when creating a new connector with many standalone parameters.
 
-### 29 April - Enhancement - DataAPI 1.2.0 - Removed copyright from auto-generated connectors [ID 39400]
+### 29 April 2024 - Enhancement - DataAPI 1.2.0 - Removed copyright from auto-generated connectors [ID 39400]
 
 The auto-generated connectors generated by the Data API no longer contain the copyright message. Instead, these just contain the following line, where the timestamp indicates the UTC timestamp of when the connector was generated:
 
@@ -91,11 +91,11 @@ The auto-generated connectors generated by the Data API no longer contain the co
 <!--This protocol is auto-generated by the DataMiner Data API at 2024-04-12T05:43:30.823Z.-->
 ```
 
-### 29 April - Fix - DataAPI 1.2.0 - All active elements updated with same identifier [ID 39352]
+### 29 April 2024 - Fix - DataAPI 1.2.0 - All active elements updated with same identifier [ID 39352]
 
 Multiple elements can use the same auto-generated connector (e.g. specifying the same type but using different identifiers in data/parameters REST calls results in the creation of multiple elements using the same auto-generated connector). An issue has now been fixed so that you can push data to an active element that runs a specific auto-generated connector even if other elements that run the same auto-generated connector are in stopped state. Prior to this fix, as soon as there was a stopped element that used the same auto-generated connector, the call failed.
 
-### 29 April - New feature - DataAPI 1.2.0 - Added support for horizontal scalability of the DataAPI DxM [ID 39146]
+### 29 April 2024 - New feature - DataAPI 1.2.0 - Added support for horizontal scalability of the DataAPI DxM [ID 39146]
 
 The Data API now supports horizontal scalability: Multiple DataAPI DxMs can be installed, which will form a cluster of nodes where one node is elected as the leader and the remaining nodes are followers. Each node will broadcast a heartbeat message (every 2s), which contains the ID (GUID) of the node and an indication of whether it is the leader.
 
