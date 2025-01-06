@@ -2,7 +2,7 @@
 uid: DOM_BulkProcessing_Example
 ---
 
-# Processing multiple DomInstances — examples
+# Processing multiple DomInstances - examples
 
 From DataMiner 10.4.2/10.5.0 onwards<!-- RN 37891 -->, the `DomInstance` CRUD helper component supports processing multiple `DomInstances` in one call.
 
