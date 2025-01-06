@@ -137,7 +137,9 @@ These are the supported comparers when filtering on `DomInstance` values using t
 *Only supported for [STaaS](xref:STaaS)
 
 > [!NOTE]
-> From DataMiner 10.4.5/10.4.0 [CU2] onwards, `string` filters are handled as case-insensitive when using the OpenSearch database (which is how STaaS has handled `string` reads since its introduction). Prior to DataMiner version 10.4.5/10.4.0 [CU2], `string` filters are handled as case-sensitive.
+>
+> - From DataMiner 10.4.5/10.4.0 [CU2] onwards, `string` filters are handled as case-insensitive when using the OpenSearch database (which is how STaaS has handled `string` reads since its introduction). Prior to DataMiner version 10.4.5/10.4.0 [CU2], `string` filters are handled as case-sensitive.
+> - When multiple sections of one `SectionDefinition` are allowed, filtering on a `FieldValue` scoped to a single section is not possible. See [Multiple sections](xref:DOM_MultipleSections#filtering).
 
 **Examples:**
 

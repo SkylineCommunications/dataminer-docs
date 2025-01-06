@@ -818,6 +818,9 @@ items:
             topicUid: DomDefinition
           - name: DomInstance object
             topicUid: DomInstance
+            items:
+              - name: DOM multiple sections
+                topicUid: DOM_MultipleSections
           - name: DomTemplate object
             topicUid: DomTemplate
           - name: DomBehaviorDefinition object
