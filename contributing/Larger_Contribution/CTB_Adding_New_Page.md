@@ -15,13 +15,14 @@ To add a new page to the documentation:
    ```md
    ---
    uid: contributing
-   keywords: contribute, document
    ---
    ```
 
    > [!NOTE]
    > Do not use spaces in a UID.
-   > 'keywords' are optional. They allow you to add keywords so that the page will be found when someone uses those terms in a search query.
+
+   >[!TIP]
+   > Optionally, you can also add a line with keywords below the UID to make the page easier to find based on specific search queries. See [Keywords](xref:CTB_Markdown_Syntax#keywords).
 
 1. Add the new page to the relevant *toc.yml* file so that it is included in the table of contents. To do so, specify the name and UID as follows:
 

@@ -285,6 +285,19 @@ These alerts are displayed as follows:
 > [!WARNING]
 > Information about dangerous consequences of an action.
 
+## Keywords
+
+It is possible to add keywords in the metadata at the top of the page to ensure that the page will be found when a user enters such a keyword in a search query.
+
+To do so, add a "keywords:" line below the "uid:" line in the metadata, and then specify the keywords, separated by commas. For example:
+
+```txt
+---
+uid: Configuring_multiple_datacenter_Elasticsearch_cluster
+keywords: allocation awareness, elasticsearch
+---
+```
+
 ## Reserved characters
 
 Some characters, such as angle brackets and backslashes, are used as part of the Markdown syntax. If you want to just display these characters, this may not work. Add a backslash in front of such a character to make sure it is displayed correctly.
