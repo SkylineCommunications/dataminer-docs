@@ -237,22 +237,33 @@ var createResult = helper.DomInstances.CreateOrUpdate(domInstances);
 
 #### Call result
 
-When the operation fails for one of the `DomInstances`, the result of those calls will contain the necessary information.
+The result of the bulk methods will contain:
 
-- When `CreateOrUpdate` is called, the result will contain a list of `DomInstances` that were successfully created or updated. The trace data is available per `DomInstance` ID.
-- When `Delete` is called with a list of `DomInstances`, the result will contain a list of `DomInstance` IDs that were successfully deleted. The trace data is also available per `DomInstance` ID.
+- A list of `DomInstances` that were successfully created or updated, when `CreateOrUpdate` is called.
 
-If an issue occurs when an item gets created, updated, or deleted (e.g. validation), no exception will be thrown (even when `ThrowExceptionsOnErrorData` is *true*). The result of the call can be used to check for which `DomInstances` the call succeeded or failed. In addition, the trace data of that call is available and will contain the trace data for all processed `DomInstances`.
+- A list of `DomInstance` IDs that were successfully deleted, when `Delete` is called.
 
-In case the entire operation fails (e.g. when the storage layer fails while storing the data) a `CrudFailedException` is thrown. If, in that case, `ThrowExceptionsOnErrorData` was set to false, these calls will return `null` and the `TraceData` of the last call should be checked to get more details about the issue. For information on how to implement this flow, refer to the [Unexpected issue example](xref:DOM_BulkProcessing_Example#unexpected-issue).
+From DataMiner 10.5.0/10.5.2 onwards<!-- RN 41546 -->, if an issue occurs for any of the items that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Example#checking-issues).
+
+As an alternative, the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will return false. The `result` output parameter will contain:
+
+- The list of successfully processed items, as is the case for `CreateOrUpdate` and `Delete`.
+
+- A list of `DomInstance` IDs that failed to be created, updated, or deleted.
+
+- The trace data per `DomInstance` ID.
+
+For each of these methods, the trace data of that call is still available and will contain the trace data for all processed `DomInstances`.
+
+In DataMiner versions prior to DataMiner Feature Release 10.5.0/10.5.2<!-- RN 37891 -->, when any validation issue occurs, no exception is thrown (even when `ThrowExceptionsOnErrorData` is true) when calling the `CreateOrUpdate` or `Delete` methods. Instead, the result of the call should be used to check for which `DomInstances` the call succeeded or failed.
 
 #### Maximum number of instances
 
 Since these calls might trigger related actions (such as [launching script actions](xref:ExecuteScriptOnDomInstanceActionSettings)), this could cause a high load on the system when a lot of instances are involved. A limit of 100 `DomInstances` is set, to make sure those bulk operations are implemented with scalability in mind. When a higher number of instances need processing, these actions will need to be performed in batches.
 
-You can also find this maximum number of instances for the `CreateOrUpdate` or `Delete` calls in the `MaxAmountBulkOperation` property on a `DomInstance` CRUD helper component.
+You can also find this maximum number of instances for the `CreateOrUpdate`, `TryCreateOrUpdate`, `Delete`, or `TryDelete` calls in the `MaxAmountBulkOperation` property on a `DomInstance` CRUD helper component.
 
-If more items get passed, `CreateOrUpdate` or `Delete` calls will fail with a `DomInstanceCrudMaxAmountExceededArgumentException`, and the message of the exception will state how many items were passed.
+If more items get passed, `CreateOrUpdate`, `TryCreateOrUpdate`, `Delete`, or `TryDelete` calls will fail with a `DomInstanceCrudMaxAmountExceededArgumentException`, and the message of the exception will state how many items were passed.
 
 ## Special methods
 
