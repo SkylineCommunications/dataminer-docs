@@ -243,7 +243,7 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 
 ## Deleting a system
 
-When [Disconnecting a system from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices) or [Removing a DaaS system](xref:Removing_a_DaaS_system), all STaaS data for that specific system, including backups, will be removed 7 days after the deletion. Upon request, all STaaS data can be recovered within those 7 days.
+When you [disconnect a system from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices) or [remove a DaaS system](xref:Removing_a_DaaS_system), all STaaS data for that specific system, including backups, will be removed 7 days after you take this action. Upon request, all STaaS data can be recovered within those 7 days.
 
 ## Limitations
 
