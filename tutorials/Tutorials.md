@@ -46,23 +46,23 @@ description: DataMiner tutorials are step-by-step guides that teach you how to u
     <a href="/tutorials/Data_sources_tutorials.html" title="Data Sources tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Data_Sources.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/tutorials/DIS_Tutorials.html" title="DIS tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DIS.svg" style="width:100%"></a>
+    <a href="/tutorials/Frameworks_and_Solutions_Tutorials.html" title="Frameworks & Solutions tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Frameworks_Solutions.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/tutorials/DOM_tutorials.html" title="DOM tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DOM.svg" style="width:100%"></a>
+    <a href="/tutorials/DIS_Tutorials.html" title="DIS tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DIS.svg" style="width:100%"></a>
   </div>
 </div>
 
 <div class="row"> 
+  <div class="column">
+    <a href="/tutorials/DOM_tutorials.html" title="DOM tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DOM.svg" style="width:100%"></a>
+  </div>
   <div class="column">
     <a href="/tutorials/Protocols_Templates_Tutorials.html" title="Protocols & Templates tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Protocols_Templates.svg" style="width:100%"></a>
   </div>  
   <div class="column">
     <a href="/tutorials/Spectrum_Analysis_tutorials.html" title="Spectrum Analysis tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Spectrum_Analysis.svg" style="width:100%"></a>
   </div>  
-  <div class="column">
-    <a href="/tutorials/Standard_Apps_Solutions_Tutorials.html" title="Standard Apps & Solutions tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Standard_Apps_Solutions.svg" style="width:100%"></a>
-  </div>
 </div>
 
 <div class="row"> 

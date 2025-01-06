@@ -30,8 +30,8 @@ items:
         topicUid: Protocols_Templates_tutorials
       - name: Spectrum Analysis tutorials
         topicUid: Spectrum_Analysis_tutorials
-      - name: Standard Apps & Solutions tutorials
-        topicUid: Standard_Apps_Solutions_Tutorials
+      - name: Frameworks & Solutions tutorials
+        topicUid: Frameworks_and_Solutions_Tutorials
       - name: User-defined APIs tutorials
         topicUid: User-defined_APIs_Tutorials
       - name: Visual Overview tutorials
