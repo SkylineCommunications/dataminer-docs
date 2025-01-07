@@ -101,6 +101,14 @@ Overall performance has increased when retrieving the version history of a low-c
 
 Up to now, in order to retrieve the entire version history of a low-code app, the configuration file of each version had to be checked. From now on, all version information of a low-code app can be found in the *App.info.json* file.
 
+#### Dashboards/Low-Code Apps: Column & bar chart and Line & area chart components will only render the first 1000 items [ID 41777]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+From now on, the *Column & bar chart* and *Line & area chart* components will only render the first 1000 items.
+
+When 1000 items have been rendered, the following message will appear: `Only the first 1 000 items are shown.`
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Timeline component: Boundaries of the vertical timeline sections would not be correct [ID 41514]
