@@ -180,6 +180,8 @@ items:
                     topicUid: Troubleshooting_Run_Time_Errors
               - name: Troubleshooting - apps
                 topicUid: Troubleshooting_Apps
+              - name: Troubleshooting - Visual Overview
+                topicUid: Troubleshooting_Visual_Overview
   - name: Troubleshooting procedures
     topicUid: Troubleshooting_procedures
     items:
