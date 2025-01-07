@@ -4,7 +4,7 @@ uid: DataMiner_logging
 
 # DataMiner logging
 
-The *DataMiner* page shows the log information for the various DataMiner modules.
+The *DataMiner* page shows the log information for the various DataMiner modules, including the logs for DataMiner Extension Modules (DxMs).
 
 This page consists of three sections:
 
@@ -14,15 +14,16 @@ This page consists of three sections:
 
   > [!NOTE]
   > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information.
+  > For *DxM logs*, this section is not available; logging must be configured directly via the DxM configuration file.
 
-- A pane on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
+- A panel on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
 
 > [!NOTE]
 > To retrieve a previous log file, right-click an item in the list and select *Open previous*. If there is no previous log file, this option is not available.
 
 ## Changing log levels
 
-The log levels for each module are indicated to the right of the module name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc. At the top of the list, the default settings are displayed.
+The log levels for each module (except DxMs) are indicated to the right of the module name in the log file list. Example: 0 0 0, 1 0 0, 1 3 2, etc. At the top of the list, the default settings are displayed.
 
 In the *Log settings* section, you can change the log levels for a specific module or change the default log levels of the DMA.
 
@@ -101,3 +102,9 @@ Some items in the list are of particular note:
 >
 > - For each of these log files, a corresponding TXT file is located in the `C:\Skyline DataMiner\Logging\` folder. The name of the TXT file is often the same as the name mentioned in Cube, but with an "SL" prefix. However, this is not always the case. If you select a log file in Cube, the corresponding TXT file name will be displayed at the top.
 > - Some of the mentioned log files refer to advanced DataMiner modules that are not part of the DataMiner system by default.
+
+## DataMiner Extension Modules (DxM) logs
+
+The DataMiner Extension Modules logs are identified by their module name with the suffix (DxM).
+
+To adjust these logs, manually edit the *appsettings.json* or *appsettings.custom.json* file located in the installation directory of the respective DxM.
