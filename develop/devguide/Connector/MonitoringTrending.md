@@ -37,8 +37,8 @@ The following trend types can be defined in addition to the default average:
 <Display>
    <RTDisplay>true</RTDisplay>
    <Trending>
-      <Type>MAX</Type>
-</Trending>
+      <Type>max</Type>
+    </Trending>
 </Display>
 <Alarm>
    <Monitored>true</Monitored>

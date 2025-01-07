@@ -12,7 +12,7 @@ Use this method to retrieve the first letters of all the elements in a view.
 |-----------------|---------|------------------------------------------------------|
 | connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | viewID          | Integer | The view ID.                                         |
-| includeSubViews | Boolean | Whether subviews should be included.              |
+| includeSubViews | Boolean | Whether subviews should be included.                 |
 
 ## Output
 

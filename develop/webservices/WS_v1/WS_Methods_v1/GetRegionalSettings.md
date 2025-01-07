@@ -8,8 +8,8 @@ Use this method to retrieve the regional settings.
 
 ## Input
 
-| Item       | Format | Description                                                                      |
-|------------|--------|----------------------------------------------------------------------------------|
+| Item       | Format | Description                                           |
+|------------|--------|-------------------------------------------------------|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output

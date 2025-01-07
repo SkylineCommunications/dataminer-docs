@@ -58,7 +58,7 @@ Below you can find a complete overview of the differences between a system using
 | Legacy Reports & Dashboards                      | Supported                              | Not supported                  |
 | Failover                                         | Supported                              | Not supported                  |
 | Offload database                                 | Supported                              | Not supported*                 |
-| Contributing bookings                            | Supported                              | Not supported*                 |
+| Contributing bookings                            | Supported                              | Supported as of DataMiner 10.5.2 <!-- RN 41706 --> but not swarmable* |
 | SLA elements                                     | Supported                              | Supported but not swarmable*   |
 | Enhanced services                                | Supported                              | Supported** but not swarmable* |
 | Spectrum elements                                | Supported                              | Supported but not swarmable*   |

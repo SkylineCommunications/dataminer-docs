@@ -32,6 +32,76 @@ These alarms will be generated per DataMiner Agent for every Automation script t
 
 This type of alarms will automatically be cleared after a DataMiner restart. They can also be cleared manually.
 
+#### Mobile visual overviews: Load balancing [ID 41434] [ID 41728]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.2 -->
+
+It is now possible to implement load balancing for mobile visual overviews among DataMiner Agent in a DMS.
+
+Up to now, the DataMiner Agent to which you were connected would handle all requests and updates with regard to mobile visual overviews.
+
+##### Configuration
+
+In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
+
+- `<add key="visualOverviewLoadBalancer" value="true" />`
+
+  Enables or disables load balancing on the DataMiner Agent in question.
+
+  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will by default be handled in a balanced manner by all the DataMiner Agents in the cluster.
+
+    However, if you also add the `dmasForLoadBalancer` key (see below), these requests and updates will only be handled by the DataMiner Agents specified in that `dmasForLoadBalancer` key.
+
+  - When this key is set to **false**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the local SLHelper process.
+
+- `<add key="dmasForLoadBalancer" value="1;2;15" />`
+
+  If you enabled load balancing by setting the `visualOverviewLoadBalancer` key to true, then you can use this key to restrict the number of DataMiner Agents that will be used for visual overview load balancing.
+
+  The key's value must be set to a semicolon-separated list of DMA IDs. For example, if the value is set to "1;2;15", then the DataMiner Agents with ID 1, 2 and 15 will be used to handle all requests and updates with regard to mobile visual overviews.
+
+  If you only specify one ID (without trailing semicolon), only that specific DataMiner Agent will be used to handle all requests and updates with regard to mobile visual overviews.
+
+> [!NOTE]
+> These settings are not synchronized among the agents in the cluster.
+
+##### New server messages
+
+The following new messages can now be used to  which you can target to be sent to other DMAs in the cluster:
+
+- `TargetedGetVisualOverviewDataMessage` allows you to retrieve a Visual Overview data message containing the image and the content of a visual overview.
+
+- `TargetedSetVisualOverviewDataMessage` allows you to execute actions on a visual overview that is rendered on a specific DataMiner Agent.
+
+> [!NOTE]
+> DataMiner Agents will now automatically detect that a visual overview they are rendering has been updated. This means that other agents in the cluster will now be able to correctly process update events and request new images for their clients.
+
+##### Logging
+
+Additional logging with regard to visual overview load balancing will be available in the web logs located in the *C:\\Skyline DataMiner\\Logging\\Web* folder.
+
+#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Correlation engine [ID 41653]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Correlation engine.
+
+In other words, when an Automation script is triggered by the Correlation engine, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Feature_Release_10.2.8#added-the-option-to-skip-the-script-started-information-event-id-33666).
+
+If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
+
+```xml
+<MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+    ...
+    <SLNet>
+        ...
+        <SkipInformationEvents>false</SkipInformationEvents>
+        ...
+    </SLNet>
+    ...
+</MaintenanceSettings>
+```
+
 ## Changes
 
 ### Enhancements
@@ -96,6 +166,12 @@ From now on, when the History Manager API is used after the History Manager has 
 
 `There is no known manager that can process objects for Manager X. Check if the manager has been initialized, the agent is licensed and is using the required database.`
 
+#### SLLogCollector packages now also contain information about the NATS connections that were closed [ID 41504]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+SLLogCollector packages now also include the *ClosedConnections.json* file, which contains information about the NATS connections that were closed.
+
 #### DataMiner Object Models: An information event will no longer be generated when a DOM CRUD or DOM Action script is started [ID 41536]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
@@ -110,15 +186,29 @@ Up to now, when a protocol performed multiple actions on a table, SLProtocol wou
 
 The above-mentioned array will now be locked to prevent the data from getting corrupted.
 
+#### DataMiner Object Models: Only the first 100 DomInstances will be checked when an enum entry is removed from a FieldDescriptor [ID 41572]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor`, a check is performed to make sure that entry is not being used by a `DomInstance`. However, as this check would verify all existing DomInstances, this could cause memory issues in SLNet when a large number of DomInstances were using the removed enum entry.
+
+From now on, a maximum of 100 DomInstances will be verified. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
+
 #### Storage as a Service: Enhanced performance when updating alarm information [ID 41581]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 Because of a number of enhancements, overall performance has increased when updating alarm information on STaaS systems.
 
+#### DataMiner Cube server-side search engine: Enhanced performance [ID 41643]
+
+<!-- MR 10.4.0 [CU11]/10.5.0 - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
+
 #### Clearer error message when generating a PDF report based on a dashboard fails [ID 41661]
 
-<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 In the *Automation*, *Correlation* and *Scheduler* modules, you can generate a PDF report based on a dashboard.
 
@@ -134,17 +224,41 @@ A clearer error message will now be logged. The `ReportsAndDashboardsException` 
 
 #### SLLogCollector packages can now include a memory dump of the w3wp process in case of web API issues [ID 41664]
 
-<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 From now on, SLLogCollector packages can also include a memory dump of the *w3wp* process in case of web API issues.
 
+#### EPM systems: Enhanced performance when aggregating large data sets [ID 41685]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Because of a number of enhancements, on EPM systems, overall performance has increased when aggregating large data sets.
+
+#### Storage as a Service: Timeout for responses to write requests has been reduced to 10 seconds [ID 41717]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+On STaaS systems, the timeout for responses to write requests has been reduced to 10 seconds.
+
 ### Fixes
+
+#### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+Due to an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
 
 #### SLNet could stop working due to NATS throwing an exception [ID 41396]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 In some rare cases, SLNet could stop working due to NATS throwing an exception.
+
+#### Parameter values that were never updated would incorrectly not be sent to a client application [ID 41414]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some rare cases, parameter values would incorrectly not be sent to a client application, especially when those values were never updated.
 
 #### NT_FILL_ARRAY_WITH_COLUMN call would silently fail when providing a string[] instead of an object[] for the keys and values [ID 41511]
 
@@ -173,11 +287,34 @@ In some rare cases, SLDataMiner could stop working when a connector was deleted 
 
 During start-up, in some cases, DataMiner would use an incorrect IP address when connecting to BrokerGateway.
 
+#### Cassandra compaction settings would incorrectly be overwritten at DataMiner start-up [ID 41551]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+Up to now, all Cassandra compaction settings would incorrectly be overwritten at DataMiner start-up.
+
+For example, if you had manually configured a compaction setting (e.g. *unsafe_aggressive_sstable_expiration*), this change would get overwritten by the default setting.
+
 #### DataMiner Maps: Markers that did not match the alarm level filter would become visible for a split second [ID 41555]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When you zoomed to a different layer while an alarm level filter was active, in some cases, markers that did not match the filter would become visible for a split second before disappearing again.
+
+#### Service & Resource Management: Debug lines would incorrect get logged multiple times in SLResourceManagerScheduler.txt [ID 41568]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+While the booking scheduler task queue was being processed, in some cases, debug lines would incorrectly get logged multiple times in the *SLResourceManagerScheduler.txt* log file.
+
+#### SLDataMiner will now check BrokerGateway soft-launch option in order to decide which NATS services to start [ID 41570]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
+
+- If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
+- If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.
 
 #### DataMiner installer: Problem when upgrading a Hotfix or Cumulative Update version to Feature Version 10.5.1 [ID 41579]
 
@@ -212,3 +349,12 @@ From now on, no QAction validation will be performed when the DataMiner Agent do
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When a large DataMiner System included agents in a Failover setup, the more agents were present in this DMS, the more "duplicate route" and "created route" entries would get added to the NATS server logging.
+
+#### Invalidated property configuration objects in the SLNet cache would incorrectly not be set to null [ID 41687]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- Not added to MR 10.6.0 - Introduced by RN 41169 -->
+
+When Class Library retrieves property configurations of type element, service or view, these get cached in SLNet, and when a configuration is added or updated, the cached object associated with that configuration is invalidated.
+
+Up to now, when a cached view, element or service property configuration object was invalidated, it would incorrectly not be set to null.

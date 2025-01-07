@@ -39,6 +39,9 @@ To set up external authentication, you first need to create an enterprise applic
 
    1. Click *Create your own application*.
 
+      > [!IMPORTANT]
+      > You need administrator permissions to create your own application.
+
    1. Select *Integrate another application you don’t find in the gallery* and click *Create*.
 
 1. In the pane on the left, go to *Users and groups*.
@@ -227,7 +230,7 @@ Once authentication has been configured, you need to make sure users are provisi
 
    - *Object ID* (optional from 10.3.11/10.4.0 onwards<!-- RN 37162 -->)
 
-   - *Tenant ID*
+   - *Directory (tenant) ID*
 
    These GUIDs identify the application (DataMiner) in the Entra ID platform, and identify the users & groups directory on the Azure portal, respectively. You will need these later in this procedure.
 
@@ -268,6 +271,11 @@ Once authentication has been configured, you need to make sure users are provisi
      clientSecret="[the DataMiner application secret value]" />
    ```
 
+   - **tenantId**: Directory (tenant) ID from Azure.
+   - **objectId**: Object ID from Azure.
+   - **clientId**: Application (client) ID from Azure.
+   - **clientSecret**: The client secret you created earlier.
+
 1. Save the file and restart DataMiner.
 
    > [!NOTE]
@@ -287,8 +295,11 @@ Once authentication has been configured, you need to make sure users are provisi
 
    - Microsoft Graph > Application.Read.All – Application – Read applications
 
-     > [!NOTE]
-     > From DataMiner 10.3.12 onwards, the *Application.Read.All* permission is optional. However, if you do not enable this permission, you will not get a warning if your client secret is about to expire, so we **strongly recommend that you enable this**. If this is enabled, you will get the following notice in the Alarm Console when appropriate: *Your Azure AD application's client secret is expiring soon.*
+   > [!IMPORTANT]
+   > For the GroupMember.Read.All, User.Read.All and Application.Read.All permissions, administrator permissions are required.
+
+   > [!NOTE]
+   > From DataMiner 10.3.12 onwards, the *Application.Read.All* permission is optional. However, if you do not enable this permission, you will not get a warning if your client secret is about to expire, so we **strongly recommend that you enable this**. If this is enabled, you will get the following notice in the Alarm Console when appropriate: *Your Azure AD application's client secret is expiring soon.*
 
 1. Open DataMiner Cube and log in with an existing Administrator account.
 
@@ -319,9 +330,11 @@ While it is possible to use DataMiner versions prior to DataMiner 10.1.11/10.2.0
 
    - *Object ID* (optional from 10.3.11/10.4.0 onwards<!-- RN 37162 -->)
 
-   - *Tenant ID*
+   - *Directory (tenant) ID*
 
    These GUIDs identify the application (DataMiner) in the Entra ID platform, and identify the users & groups directory on the Azure portal, respectively. You will need these later in this procedure.
+
+   ![SAML application info](~/user-guide/images/SAML_application_info.png)
 
    > [!NOTE]
    > Do not use the *Object ID* under *Azure Active Directory > Enterprise applications > [your application name]*. This is a different Object ID, which will not work for this procedure.
@@ -345,6 +358,11 @@ While it is possible to use DataMiner versions prior to DataMiner 10.1.11/10.2.0
      username="[username]"
      password="[password]" />
    ```
+
+   - **tenantId**: Directory (tenant) ID from Azure.
+   - **objectId**: Object ID from Azure.
+   - **clientId**: Application (client) ID from Azure.
+   - **username/password**: The username and password of the Entra ID user account that DataMiner will use to request data from Azure.
 
 1. Save the file and restart DataMiner.
 

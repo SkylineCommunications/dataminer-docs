@@ -247,6 +247,8 @@ items:
               topicUid: Anomaly_Feedback_Tutorial
             - name: Creating an anomaly overview dashboard
               topicUid: Creating_Anomaly_Overview_Dashboard
+            - name: Staying ahead of issues with proactive cap detection
+              topicUid: Proactive_Cap_Detection_Tutorial
             - name: Fine-tuning incident tracking
               topicUid: Incident_Tracking_Configuration_Tutorial
       - name: Advanced alarm functionality

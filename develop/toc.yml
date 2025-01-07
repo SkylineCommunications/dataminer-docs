@@ -4409,6 +4409,8 @@ items:
             topicUid: GetDataMinerAgentTime
           - name: GetDataMinerAgentTimeUTC
             topicUid: GetDataMinerAgentTimeUTC
+          - name: GetDataMinerAgentTimeZone
+            topicUid: GetDataMinerAgentTimeZone  
           - name: GetDataMinerAgentsInfo
             topicUid: GetDataMinerAgentsInfo
           - name: GetDataMinerAgentsLicenseInfo
@@ -5002,6 +5004,8 @@ items:
             topicUid: DMAAutomationScriptMemoryFile
           - name: DMAAutomationScriptParameter
             topicUid: DMAAutomationScriptParameter
+          - name: DMAAutomationVariableInfo
+            topicUid: DMAAutomationVariableInfo
           - name: DMABaseline
             topicUid: DMABaseline
           - name: DMABooking
@@ -5186,12 +5190,16 @@ items:
             topicUid: DMASpectrumBuffer
           - name: DMASpectrumMeasptModel
             topicUid: DMASpectrumMeasptModel
+          - name: DMASpectrumMonitor
+            topicUid: DMASpectrumMonitor
           - name: DMASpectrumPreset
             topicUid: DMASpectrumPreset
           - name: DMAStatistics
             topicUid: DMAStatistics
           - name: DMASTString
             topicUid: DMASTString
+          - name: DMAThirdPartyNotice
+            topicUid: DMAThirdPartyNotice
           - name: DMATicket
             topicUid: DMATicket
           - name: DMATicketField
@@ -5222,6 +5230,8 @@ items:
             topicUid: DMATopologyFieldValues
           - name: DMATrendData
             topicUid: DMATrendData
+          - name: DMATrendDataStatisticsService
+            topicUid: DMATrendDataStatisticsService  
           - name: DMAUser
             topicUid: DMAUser
           - name: DMAUserGroup

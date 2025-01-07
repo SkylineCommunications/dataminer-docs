@@ -54,6 +54,7 @@ In case you have a suggestion for a unit to be added to the list below, send an 
 |barG|bar gauge pressure|
 |Base Units|base units|
 |Bd|baud|
+|Beacons|Beacons|
 |Bft|Beaufort (wind speed)|
 |bits/sym|bits per symbol|
 |Blocks|Blocks|
@@ -232,6 +233,10 @@ In case you have a suggestion for a unit to be added to the list below, send an 
 |dF|decifarad|
 |dH|decihenry|
 |dHz|decihertz|
+|Discards|discards|
+|Discards/h|discards per hour|
+|Discards/min|discards per minute|
+|Discards/s|discards per second|
 |dJ|decijoule|
 |dm|decimeter|
 |dm/d|decimeter per day|
@@ -701,6 +706,7 @@ In case you have a suggestion for a unit to be added to the list below, send an 
 |ppb/s|parts per billion per second|
 |ppm|parts per million|
 |Pps|packet per second|
+|Processes|Processes|
 |Programs|programs|
 |ps|picosecond|
 |ps/nm|picosecond per nanometer|

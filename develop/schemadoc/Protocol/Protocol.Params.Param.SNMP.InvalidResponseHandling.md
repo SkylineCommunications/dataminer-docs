@@ -16,7 +16,7 @@ Specifies the invalid response handling strategy.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[InfiniteLoop](xref:Protocol.Params.Param.SNMP.InvalidResponseHandling.InfiniteLoop)||Specifies the response handling in case an infinite loop was detected when polling a table.|
+|&nbsp;&nbsp;[InfiniteLoop](xref:Protocol.Params.Param.SNMP.InvalidResponseHandling.InfiniteLoop)||Specifies the response handling in case an infinite loop was detected while polling a table.|
 
 ## Examples
 

@@ -10,10 +10,10 @@ Use this method to retrieve the list of child items (elements and/or services) i
 
 | Item            | Format  | Description                                                        |
 |-----------------|---------|--------------------------------------------------------------------|
-| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp).               |
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp).              |
 | viewID          | Integer | The view ID.                                                       |
 | includeSubViews | Boolean | Whether subviews of the specified view should be included in the search.  |
-| includeServices | Boolean | Whether services in the specified view should also be included. |
+| includeServices | Boolean | Whether services in the specified view should also be included.    |
 
 ## Output
 

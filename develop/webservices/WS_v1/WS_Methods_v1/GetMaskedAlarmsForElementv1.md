@@ -8,11 +8,11 @@ Use this method to retrieve the list of all the masked alarms of a particular el
 
 ## Input
 
-| Item       | Format  | Description                                                                      |
-|------------|---------|----------------------------------------------------------------------------------|
+| Item       | Format  | Description                                           |
+|------------|---------|-------------------------------------------------------|
 | connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| dmaID      | Integer | The DataMiner Agent ID.                                                          |
-| elementID  | Integer | The element ID.                                                                  |
+| dmaID      | Integer | The DataMiner Agent ID.                               |
+| elementID  | Integer | The element ID.                                       |
 
 ## Output
 

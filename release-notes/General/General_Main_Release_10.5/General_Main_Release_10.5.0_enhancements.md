@@ -1044,3 +1044,24 @@ Up to now, a "Script started" information event would be generated each time a D
 Up to now, when a protocol performed multiple actions on a table, SLProtocol would not properly lock the array in which the data was stored. This could then lead to concurrent access to the array, causing the entries to get corrupted and SLProtocol to stop working when those corrupted entries were accessed.
 
 The above-mentioned array will now be locked to prevent the data from getting corrupted.
+
+#### SLDataMiner will now check BrokerGateway soft-launch option in order to decide which NATS services to start [ID 41570]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
+
+- If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
+- If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.
+
+#### DataMiner Cube server-side search engine: Enhanced performance [ID 41643]
+
+<!-- MR 10.4.0 [CU11]/10.5.0 - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
+
+#### Storage as a Service: Timeout for responses to write requests has been reduced to 10 seconds [ID 41717]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+On STaaS systems, the timeout for responses to write requests has been reduced to 10 seconds.

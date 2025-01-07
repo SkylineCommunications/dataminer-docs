@@ -148,7 +148,7 @@ See the following examples:
 
 ### DMS Automation
 
-#### Added the option to skip the 'script started' information event \[ID 33666\]
+#### Added the option to skip the 'script started' information event [ID 33666]
 
 When sending an ExecuteScriptMessage, you can now specify that no “Script started” information event should be generated when the script is executed. To do so, add the SKIP_STARTED_INFO_EVENT:TRUE option to the string array as shown in the following example.
 

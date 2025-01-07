@@ -12,7 +12,7 @@ Available from DataMiner 10.0.2 onwards.
 
 | Item              | Format       | Description                                                                          |
 |-------------------|--------------|--------------------------------------------------------------------------------------|
-| connection        | String       | The connection ID. See [ConnectApp](xref:ConnectApp).     |
+| connection        | String       | The connection ID. See [ConnectApp](xref:ConnectApp).                                |
 | resourceID        | String       | The resource ID.                                                                     |
 | capacityProfileID | String       | The ID of the capacity profile.                                                      |
 | sinceUTC          | Long integer | The starting time (in UTC format) from which data points and info must be retrieved. |
@@ -22,4 +22,4 @@ Available from DataMiner 10.0.2 onwards.
 
 | Item | Format | Description |
 |--|--|--|
-| GetResourceCapacityTrendResult | DMAResourceCapacityTrend | The trend data points for the specified capacity and resource, along with booking information and information on the maximum capacity. |
+| GetResourceCapacityTrendResult | [DMAResourceCapacityTrend](xref:DMAResourceCapacityTrend) | The trend data points for the specified capacity and resource, along with booking information and information on the maximum capacity. |
