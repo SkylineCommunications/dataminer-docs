@@ -207,3 +207,9 @@ In some cases, the scale of automatically generated shapes would incorrectly be 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When you logged out of DataMiner Cube, up to now, certain event handlers would leak memory.
+
+#### Alarm Console: Alarms generated during the last week of 2024 would not be grouped correctly [ID 41830]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+In the Alarm Console, alarms generated during the last week of 2024 (i.e. week 53) would not be grouped correctly.
