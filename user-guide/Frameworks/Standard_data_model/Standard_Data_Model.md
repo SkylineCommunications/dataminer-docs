@@ -768,13 +768,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Azimuth</td>
-			<td>String</td>
-			<td>The horizontal position of the satellite.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
 			<td>Longitude for GEO (degrees)</td>
 			<td>Double</td>
 			<td>The satellite’s position in the Geostationary orbit.</td>
@@ -884,32 +877,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 	</tbody>
 </table>
 
-### Skills
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Skill information</td>
-		</tr>
-		<tr>
-			<td>Skill</td>
-			<td>String</td>
-			<td>For example, Producer, Director, Video Editor, Audio Mixer, etc.</td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-	</tbody>
-</table>
-
 ### Category
 
 <table>
@@ -986,13 +953,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Mandatory</td>
 		</tr>
 		<tr>
-			<td>Personal skills</td>
-			<td>Guid</td>
-			<td>For example, Producer, Director, Video Editor, Audio Mixer, etc.</td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
 			<td>Experience level</td>
 			<td>Guid</td>
 			<td>For example, Junior, Senior, Manager, etc.</td>
@@ -1005,6 +965,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Personal skills</td>
+			<td>String</td>
+			<td>For example, Producer, Director, Video Editor, Audio Mixer, etc.</td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Contact info</td>
@@ -1129,13 +1096,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Team expertise(s)</td>
-			<td>Guid</td>
-			<td>For example, Video Editing, Audio Mixing, Contribution, OTT, etc.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
 			<td>Bookable</td>
 			<td>Boolean</td>
 			<td>Indicates whether this team's time can be booked and scheduled.</td>
@@ -1148,6 +1108,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Team expertise(s)</td>
+			<td>String</td>
+			<td>For example, Video Editing, Audio Mixing, Contribution, OTT, etc.</td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Resource pool</td>
@@ -1200,32 +1167,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 	</tbody>
 </table>
 
-### Expertises
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Expertise information</td>
-		</tr>
-		<tr>
-			<td>Expertise</td>
-			<td>String</td>
-			<td>For example, Video Editing, Audio Mixing, Contribution, OTT, etc.</td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-	</tbody>
-</table>
-
 ### Organizations
 
 <table>
@@ -1273,19 +1214,12 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
-		<tr>
-			<td>Bill to</td>
-			<td>Guid</td>
-			<td>The billing contact for this contract</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
 	</tbody>
 </table>
 
 ## (slc)workflow
 
-### Workflows
+### App Settings
 
 <table>
 	<thead>
@@ -1299,372 +1233,40 @@ Definitions that are functionally related are grouped into modules to enhance da
 	</thead>
 	<tbody>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Workflow info</td>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job settings</td>
 		</tr>
 		<tr>
-			<td>Workflow name</td>
+			<td>Job ID prefix</td>
 			<td>String</td>
-			<td>A short name for the workflow. </td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td>Workflow description</td>
-			<td>String</td>
-			<td>A description of the workflow, which can include its purpose, steps, and functionality.</td>
+			<td>The prefix is a string that will be prepended to each Job ID.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Favorite</td>
-			<td>Boolean</td>
-			<td>Flag that indicates whether this workflow is a favorite. </td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Priority</td>
-			<td>GenericEnum`1</td>
-			<td>Describes the relative importance of the workflow.</td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Workflow execution</td>
-		</tr>
-		<tr>
-			<td>Workflow execution script</td>
-			<td>String</td>
-			<td>Specifies a script to be triggered when this workflow is executed (optional).</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Workflow configuration</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Monitoring settings</td>
-		</tr>
-		<tr>
-			<td>At job start</td>
-			<td>GenericEnum`1</td>
-			<td>Determines whether and when a service will be created for this workflow.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>At job end</td>
-			<td>GenericEnum`1</td>
-			<td>Determines whether and when a service will be deleted for this workflow.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Monitoring service template</td>
-			<td>String</td>
-			<td>The name of the service template, which will be used to create a service when the workflow is run. </td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Monitoring service ID</td>
-			<td>String</td>
-			<td>The ID of the service associated to this job. </td>
-			<td>Read</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Nodes</td>
-		</tr>
-		<tr>
-			<td>Node ID</td>
-			<td>String</td>
-			<td>An auto-assigned value representing the ID of this node within the job.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Node alias</td>
-			<td>String</td>
-			<td>Allows the user to provide a more user-friendly name for the node. </td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Node type</td>
-			<td>GenericEnum`1</td>
-			<td>Specifies the category or function of a node within a job.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Node reference ID</td>
-			<td>String</td>
-			<td>The DOM GUID of the resource, resource pool, or other entity that this node represents.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Node parent reference ID</td>
-			<td>String</td>
-			<td>The DOM GUID of the parent resource, resource pool, or other entity that this node represents.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Node icon</td>
-			<td>String</td>
-			<td>The name of the icon that will be used for the workflow visualization.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Automatic configuration?</td>
-			<td>Boolean</td>
-			<td>Indicates if the node needs to be configured when the job is run.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Configuration parameters</td>
-			<td>String</td>
-			<td>A JSON object defining a list of configuration parameters and values for elements and virtual functions for user configuration.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Ad-hoc control script</td>
-			<td>String</td>
-			<td>An Automation script name that will be executed to configure this node.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Visualization order</td>
+			<td>Job ID minimum digits</td>
 			<td>Int64</td>
-			<td>Controls the order in which the nodes are shown in the visualization. </td>
+			<td>Defines the minimum number of digits in the auto-generated value, which must be between 1 and 20.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Node configuration execution order</td>
+			<td>Job ID starting seed</td>
 			<td>Int64</td>
-			<td>Indicates the order in which the nodes will be configured. </td>
+			<td>Provides the "starting seed" when first configuring the job IDs.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Manual configuration complete?</td>
-			<td>Boolean</td>
-			<td>This flag is TRUE if the node still requires some form of manual configuration. </td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td>Reserve node?</td>
-			<td>Boolean</td>
-			<td>If checked, a booking will be created for this node to ensure resource availability. Leave unchecked if the node does not require a booking.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Hidden?</td>
-			<td>Boolean</td>
-			<td>When marked TRUE, this node will be reserved as part of the booking but will not be displayed in the job or included in the calculation of rates or costs.</td>
-			<td>Read</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td>Capability requirements</td>
-			<td>String</td>
-			<td>Specifies which capabilities are required for this node.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Capacity requirements</td>
-			<td>String</td>
-			<td>Specifies how much capacity will be consumed by this node.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Node start time</td>
-			<td>DateTime</td>
-			<td>If different from the Job Start time, this indicates when the resource started being used.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Node end time</td>
-			<td>DateTime</td>
-			<td>"If different from the Job End time, this indicates when the resource finished being used.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Linked booking IDs</td>
-			<td>String</td>
-			<td>If the node resource has an associated SRM booking, this field stores the corresponding booking ID from SRM.</td>
-			<td>Read</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Resource select mode</td>
-			<td>GenericEnum`1</td>
-			<td>Indicates how and when the resource assignment is expected to be made.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Resource select state</td>
-			<td>GenericEnum`1</td>
-			<td>Indicates the current state of the resource selection process.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Billable?</td>
-			<td>Boolean</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Node configuration</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Node configuration status</td>
-			<td>GenericEnum`1</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Connections</td>
-		</tr>
-		<tr>
-			<td>Connection ID</td>
-			<td>String</td>
-			<td>An auto-assigned value representing the ID of this edge within the workflow.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Source node ID</td>
-			<td>String</td>
-			<td>The ID of the node that is the source of this connection.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Destination node ID</td>
-			<td>String</td>
-			<td>The ID of the node that is the destination of this connection.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Connection alias</td>
-			<td>String</td>
-			<td>An optional user-friendly name for the connection.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Connection execution order</td>
+			<td>Job ID increment</td>
 			<td>Int64</td>
-			<td>Indicates the order in which the connections will be made. </td>
+			<td>An integer defining the increment by which the auto-generated ID increases.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Connection type</td>
-			<td>GenericEnum`1</td>
-			<td>Defines whether this connection is based on the levels or tags of its source and destination.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Connection subtype</td>
-			<td>GenericEnum`1</td>
-			<td>Further specifies how the connection will be made. 'All': All matching levels or tags between the source and destination nodes will be connected. 'Predefined subset': Only valid for level-based connections. Only a predefined subset of matching levels between the source and destination nodes will be connected, for example, all audio levels. 'Custom subset': A freely defined subset of matching levels or tags will be connected, for example, level three to five. 'Shuffle': Levels or tags can be freely mapped from source to destination.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Predefined subset</td>
-			<td>GenericEnum`1</td>
-			<td>In the case of a level-based connection of subtype 'predefined subset,' this indicates the subset of levels to be used. This subset is a combination of all video levels ('V'), all audio levels ('A'), and/or all data levels ('D').</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Connection details</td>
-			<td>String</td>
-			<td>For 'custom subset' or 'shuffle' connections, this field contains the exact mapping of levels or tags between the source and destination.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Connection execution script</td>
-			<td>String</td>
-			<td>Optionally specifies a script to be used when setting up this connection during the execution of the workflow or job.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
-
-### Job Statuses
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job states</td>
-		</tr>
-		<tr>
-			<td>Job State</td>
-			<td>String</td>
-			<td>A user-defined job status that allows more customization over how jobs are processed.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Job DOM state</td>
-			<td>GenericEnum`1</td>
-			<td>A user-defined status for a job. The job DOM state is the base job state that this user-defined job status maps to. </td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Default</td>
-			<td>Boolean</td>
-			<td>The default state assigned upon the creation of a job.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Active</td>
-			<td>Boolean</td>
-			<td>Only active states will be available for the job.</td>
+			<td>Job ID next sequence</td>
+			<td>Int64</td>
+			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -1731,60 +1333,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 	</tbody>
 </table>
 
-### App Settings
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job settings</td>
-		</tr>
-		<tr>
-			<td>Job ID prefix</td>
-			<td>String</td>
-			<td>The prefix is a string that will be prepended to each Job ID.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Job ID minimum digits</td>
-			<td>Int64</td>
-			<td>Defines the minimum number of digits in the auto-generated value, which must be between 1 and 20.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Job ID starting seed</td>
-			<td>Int64</td>
-			<td>Provides the "starting seed" when first configuring the job IDs.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Job ID increment</td>
-			<td>Int64</td>
-			<td>An integer defining the increment by which the auto-generated ID increases.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Job ID next sequence</td>
-			<td>Int64</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
-
 ### Jobs
 
 <table>
@@ -1827,13 +1375,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Guid</td>
 			<td>If the job was created starting from a workflow, this field links to that workflow object.</td>
 			<td>Read</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Job status</td>
-			<td>Guid</td>
-			<td>The user-defined status value indicating where a job is in its life cycle.</td>
-			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
 		<tr>
@@ -1924,6 +1465,13 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Action status</td>
 			<td>GenericEnum`1</td>
 			<td>Indicates if the job still needs manual resource selection.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Action needed</td>
+			<td>Boolean</td>
+			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
@@ -2056,25 +1604,11 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Visualization order</td>
-			<td>Int64</td>
-			<td>Controls the order in which the nodes are shown in the visualization. </td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
 			<td>Node configuration execution order</td>
 			<td>Int64</td>
 			<td>Indicates the order in which the nodes will be configured. </td>
 			<td>Read/Write</td>
 			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Manual configuration complete?</td>
-			<td>Boolean</td>
-			<td>This flag is TRUE if the node still requires some form of manual configuration. </td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
 		</tr>
 		<tr>
 			<td>Reserve node?</td>
@@ -2089,20 +1623,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>When marked TRUE, this node will be reserved as part of the booking but will not be displayed in the job or included in the calculation of rates or costs.</td>
 			<td>Read</td>
 			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td>Capability requirements</td>
-			<td>String</td>
-			<td>Specifies which capabilities are required for this node.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Capacity requirements</td>
-			<td>String</td>
-			<td>Specifies how much capacity will be consumed by this node.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
 		</tr>
 		<tr>
 			<td>Node start time</td>
@@ -2401,30 +1921,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Node capacities</td>
-		</tr>
-		<tr>
-			<td>Capacity Value</td>
-			<td>Double</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Node Id</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Capacity</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
 			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Node relationships</td>
 		</tr>
 		<tr>
@@ -2442,32 +1938,8 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Optional</td>
 		</tr>
 		<tr>
-			<td>Relationship type</td>
+			<td>Relationship action</td>
 			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job error</td>
-		</tr>
-		<tr>
-			<td>Error Type</td>
-			<td>Guid</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>State at Error</td>
-			<td>String</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Error Message</td>
-			<td>String</td>
 			<td></td>
 			<td>Read/Write</td>
 			<td>Optional</td>
@@ -2488,6 +1960,515 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>The message explaining why the error was raised</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
+		</tr>
+	</tbody>
+</table>
+
+### Job Node Relationship Actions
+
+<table>
+	<thead>
+		<tr>
+			<th>Field Name</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Access</th>
+			<th>Constraints</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job node relationship general actions</td>
+		</tr>
+		<tr>
+			<td>Booking action</td>
+			<td>GenericEnum`1</td>
+			<td>Action taken when a node is added to a job.</td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td>Delete action</td>
+			<td>GenericEnum`1</td>
+			<td>Action taken when a node is removed from a job.</td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job node relationship replace actions</td>
+		</tr>
+		<tr>
+			<td>Replace action</td>
+			<td>GenericEnum`1</td>
+			<td>Action taken when a node is replaced in a job.</td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td>Execute pool links</td>
+			<td>Boolean</td>
+			<td>Defines whether to apply pool links (if available) during a replace action.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Execute booking extension script</td>
+			<td>Boolean</td>
+			<td>Defines whether to execute booking extension scripts (if available) during a replace action.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+	</tbody>
+</table>
+
+### Workflows
+
+<table>
+	<thead>
+		<tr>
+			<th>Field Name</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Access</th>
+			<th>Constraints</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Workflow info</td>
+		</tr>
+		<tr>
+			<td>Workflow name</td>
+			<td>String</td>
+			<td>A short name for the workflow. </td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td>Workflow description</td>
+			<td>String</td>
+			<td>A description of the workflow, which can include its purpose, steps, and functionality.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Favorite</td>
+			<td>Boolean</td>
+			<td>Flag that indicates whether this workflow is a favorite. </td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Priority</td>
+			<td>GenericEnum`1</td>
+			<td>Describes the relative importance of the workflow.</td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Workflow execution</td>
+		</tr>
+		<tr>
+			<td>Workflow execution script</td>
+			<td>String</td>
+			<td>Specifies a script to be triggered when this workflow is executed (optional).</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Workflow configuration</td>
+			<td>Guid</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Monitoring settings</td>
+		</tr>
+		<tr>
+			<td>At job start</td>
+			<td>GenericEnum`1</td>
+			<td>Determines whether and when a service will be created for this workflow.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>At job end</td>
+			<td>GenericEnum`1</td>
+			<td>Determines whether and when a service will be deleted for this workflow.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Monitoring service template</td>
+			<td>String</td>
+			<td>The name of the service template, which will be used to create a service when the workflow is run. </td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Monitoring service ID</td>
+			<td>String</td>
+			<td>The ID of the service associated to this job. </td>
+			<td>Read</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Nodes</td>
+		</tr>
+		<tr>
+			<td>Node ID</td>
+			<td>String</td>
+			<td>An auto-assigned value representing the ID of this node within the job.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node alias</td>
+			<td>String</td>
+			<td>Allows the user to provide a more user-friendly name for the node. </td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node type</td>
+			<td>GenericEnum`1</td>
+			<td>Specifies the category or function of a node within a job.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node reference ID</td>
+			<td>String</td>
+			<td>The DOM GUID of the resource, resource pool, or other entity that this node represents.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node parent reference ID</td>
+			<td>String</td>
+			<td>The DOM GUID of the parent resource, resource pool, or other entity that this node represents.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node icon</td>
+			<td>String</td>
+			<td>The name of the icon that will be used for the workflow visualization.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Automatic configuration?</td>
+			<td>Boolean</td>
+			<td>Indicates if the node needs to be configured when the job is run.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Configuration parameters</td>
+			<td>String</td>
+			<td>A JSON object defining a list of configuration parameters and values for elements and virtual functions for user configuration.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Ad-hoc control script</td>
+			<td>String</td>
+			<td>An Automation script name that will be executed to configure this node.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node configuration execution order</td>
+			<td>Int64</td>
+			<td>Indicates the order in which the nodes will be configured. </td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Reserve node?</td>
+			<td>Boolean</td>
+			<td>If checked, a booking will be created for this node to ensure resource availability. Leave unchecked if the node does not require a booking.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Hidden?</td>
+			<td>Boolean</td>
+			<td>When marked TRUE, this node will be reserved as part of the booking but will not be displayed in the job or included in the calculation of rates or costs.</td>
+			<td>Read</td>
+			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td>Node start time</td>
+			<td>DateTime</td>
+			<td>If different from the Job Start time, this indicates when the resource started being used.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node end time</td>
+			<td>DateTime</td>
+			<td>"If different from the Job End time, this indicates when the resource finished being used.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Linked booking IDs</td>
+			<td>String</td>
+			<td>If the node resource has an associated SRM booking, this field stores the corresponding booking ID from SRM.</td>
+			<td>Read</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Resource select mode</td>
+			<td>GenericEnum`1</td>
+			<td>Indicates how and when the resource assignment is expected to be made.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Resource select state</td>
+			<td>GenericEnum`1</td>
+			<td>Indicates the current state of the resource selection process.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Billable?</td>
+			<td>Boolean</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node configuration</td>
+			<td>Guid</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Node configuration status</td>
+			<td>GenericEnum`1</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Connections</td>
+		</tr>
+		<tr>
+			<td>Connection ID</td>
+			<td>String</td>
+			<td>An auto-assigned value representing the ID of this edge within the workflow.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Source node ID</td>
+			<td>String</td>
+			<td>The ID of the node that is the source of this connection.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Destination node ID</td>
+			<td>String</td>
+			<td>The ID of the node that is the destination of this connection.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Connection alias</td>
+			<td>String</td>
+			<td>An optional user-friendly name for the connection.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Connection execution order</td>
+			<td>Int64</td>
+			<td>Indicates the order in which the connections will be made. </td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Connection type</td>
+			<td>GenericEnum`1</td>
+			<td>Defines whether this connection is based on the levels or tags of its source and destination.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Connection subtype</td>
+			<td>GenericEnum`1</td>
+			<td>Further specifies how the connection will be made. 'All': All matching levels or tags between the source and destination nodes will be connected. 'Predefined subset': Only valid for level-based connections. Only a predefined subset of matching levels between the source and destination nodes will be connected, for example, all audio levels. 'Custom subset': A freely defined subset of matching levels or tags will be connected, for example, level three to five. 'Shuffle': Levels or tags can be freely mapped from source to destination.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Predefined subset</td>
+			<td>GenericEnum`1</td>
+			<td>In the case of a level-based connection of subtype 'predefined subset,' this indicates the subset of levels to be used. This subset is a combination of all video levels ('V'), all audio levels ('A'), and/or all data levels ('D').</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Connection details</td>
+			<td>String</td>
+			<td>For 'custom subset' or 'shuffle' connections, this field contains the exact mapping of levels or tags between the source and destination.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Connection execution script</td>
+			<td>String</td>
+			<td>Optionally specifies a script to be used when setting up this connection during the execution of the workflow or job.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+	</tbody>
+</table>
+
+### Rates
+
+<table>
+	<thead>
+		<tr>
+			<th>Field Name</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Access</th>
+			<th>Constraints</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Rate</td>
+		</tr>
+		<tr>
+			<td>Qty</td>
+			<td>Int64</td>
+			<td>The quantity of units (expressed in Qty Type), e.g. 10 EUR per hour.</td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td>Qty type</td>
+			<td>GenericEnum`1</td>
+			<td>Determines whether this rate is charged by the minute, hour, day, or per use.</td>
+			<td>Read/Write</td>
+			<td>Mandatory</td>
+		</tr>
+		<tr>
+			<td>Amount per unit</td>
+			<td>Double</td>
+			<td>The price per unit based on the quantity type, which can be minute, hour, day, or per use.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Total amount</td>
+			<td>Double</td>
+			<td>The quantity multiplied by the amount per unit, before applying any discounts.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Total net amount</td>
+			<td>Double</td>
+			<td>The total amount after applying the discount.</td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+	</tbody>
+</table>
+
+### MCR Cockpit
+
+<table>
+	<thead>
+		<tr>
+			<th>Field Name</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Access</th>
+			<th>Constraints</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">MCR_TimeStepper_CurrentRange</td>
+		</tr>
+		<tr>
+			<td>User</td>
+			<td>String</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>End</td>
+			<td>DateTime</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Start</td>
+			<td>DateTime</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>LastSet</td>
+			<td>DateTime</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+	</tbody>
+</table>
+
+### Recurrences
+
+<table>
+	<thead>
+		<tr>
+			<th>Field Name</th>
+			<th>Type</th>
+			<th>Description</th>
+			<th>Access</th>
+			<th>Constraints</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Recurrence details</td>
+		</tr>
+		<tr>
+			<td>Start time</td>
+			<td>DateTime</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>End time</td>
+			<td>DateTime</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
+		</tr>
+		<tr>
+			<td>Type</td>
+			<td>GenericEnum`1</td>
+			<td></td>
+			<td>Read/Write</td>
+			<td>Optional</td>
 		</tr>
 	</tbody>
 </table>
@@ -2550,164 +2531,6 @@ Definitions that are functionally related are grouped into modules to enhance da
 			<td>Reference ID</td>
 			<td>String</td>
 			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
-
-### Recurrences
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Recurrence details</td>
-		</tr>
-		<tr>
-			<td>Start time</td>
-			<td>DateTime</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>End time</td>
-			<td>DateTime</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Type</td>
-			<td>GenericEnum`1</td>
-			<td></td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
-
-### Rates
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Rate</td>
-		</tr>
-		<tr>
-			<td>Qty</td>
-			<td>Int64</td>
-			<td>The quantity of units (expressed in Qty Type), e.g. 10 EUR per hour.</td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td>Qty type</td>
-			<td>GenericEnum`1</td>
-			<td>Determines whether this rate is charged by the minute, hour, day, or per use.</td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td>Amount per unit</td>
-			<td>Double</td>
-			<td>The price per unit based on the quantity type, which can be minute, hour, day, or per use.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Total amount</td>
-			<td>Double</td>
-			<td>The quantity multiplied by the amount per unit, before applying any discounts.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Total net amount</td>
-			<td>Double</td>
-			<td>The total amount after applying the discount.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-	</tbody>
-</table>
-
-### Job Node Relationship Actions
-
-<table>
-	<thead>
-		<tr>
-			<th>Field Name</th>
-			<th>Type</th>
-			<th>Description</th>
-			<th>Access</th>
-			<th>Constraints</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job node relationship general actions</td>
-		</tr>
-		<tr>
-			<td>Relationship</td>
-			<td>Guid</td>
-			<td>Relationship type to which this instance is linked.</td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td>Booking action</td>
-			<td>GenericEnum`1</td>
-			<td>Action taken when a node is added to a job.</td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td>Delete action</td>
-			<td>GenericEnum`1</td>
-			<td>Action taken when a node is removed from a job.</td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td colspan=5 style="text-align:center; background-color:lightgrey; font-weight: bold">Job node relationship replace actions</td>
-		</tr>
-		<tr>
-			<td>Replace action</td>
-			<td>GenericEnum`1</td>
-			<td>Action taken when a node is replaced in a job.</td>
-			<td>Read/Write</td>
-			<td>Mandatory</td>
-		</tr>
-		<tr>
-			<td>Execute pool links</td>
-			<td>Boolean</td>
-			<td>Defines whether to apply pool links (if available) during a replace action.</td>
-			<td>Read/Write</td>
-			<td>Optional</td>
-		</tr>
-		<tr>
-			<td>Execute booking extension script</td>
-			<td>Boolean</td>
-			<td>Defines whether to execute booking extension scripts (if available) during a replace action.</td>
 			<td>Read/Write</td>
 			<td>Optional</td>
 		</tr>
