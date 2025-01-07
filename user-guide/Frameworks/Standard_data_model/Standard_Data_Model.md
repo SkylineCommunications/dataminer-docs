@@ -1219,7 +1219,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 
 ## (slc)workflow
 
-### App Settings
+### App settings
 
 <table>
 	<thead>
@@ -1273,7 +1273,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 	</tbody>
 </table>
 
-### Session Data
+### Session data
 
 <table>
 	<thead>
@@ -1964,7 +1964,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 	</tbody>
 </table>
 
-### Job Node Relationship Actions
+### Job node relationship actions
 
 <table>
 	<thead>
@@ -2386,7 +2386,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 	</tbody>
 </table>
 
-### MCR Cockpit
+### MCR cockpit
 
 <table>
 	<thead>
