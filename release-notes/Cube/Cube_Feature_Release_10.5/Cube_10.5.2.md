@@ -108,6 +108,12 @@ In the *Element Swarming* window, it is now possible to select all elements by p
 
 A number of enhancements have been made to the *ListView* component with regard to element and service property subscriptions.
 
+#### DataMiner Cube desktop app: Enhanced configuration file management [ID 41808]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+A number of enhancements have been made with regard to configuration file management.
+
 ### Fixes
 
 #### Visual Overview: Children shapes would be displayed twice [ID 41160]
