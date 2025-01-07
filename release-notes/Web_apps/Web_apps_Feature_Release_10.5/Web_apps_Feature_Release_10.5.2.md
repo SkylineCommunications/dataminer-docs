@@ -211,3 +211,9 @@ In some cases, in low-code apps, flows could get triggered too often. As a resul
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When, in the action editor, you were configuring a *Close all panels* action, a panel selection box would incorrectly be displayed.
+
+#### Low-Code Apps: Additional page would incorrectly be added after a reload or after a new draft had been created [ID 41787]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some cases, an additional page would incorrectly be added to a low-code app after a reload or after a new draft had been created.
