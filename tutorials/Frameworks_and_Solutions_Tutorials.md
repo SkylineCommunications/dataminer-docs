@@ -26,4 +26,6 @@ uid: Frameworks_and_Solutions_Tutorials
 
 ### DevTools tutorials
 
+| Name | Description |
+|--|--|
 | [Getting started with the Smart Trap Processor](xref:Smart_Trap_Processor_Tutorial) | Learn to configure trap rules in different ways to process traps. |

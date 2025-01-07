@@ -22,6 +22,8 @@ items:
         topicUid: Dashboards_Low-Code_Apps_Tutorials
       - name: Data Sources tutorials
         topicUid: Data_sources_tutorials
+      - name: Frameworks & Solutions tutorials
+        topicUid: Frameworks_and_Solutions_Tutorials
       - name: DataMiner Integration Studio (DIS) tutorials
         topicUid: DIS_Tutorials
       - name: DataMiner Object Manager (DOM) tutorials
@@ -30,8 +32,6 @@ items:
         topicUid: Protocols_Templates_tutorials
       - name: Spectrum Analysis tutorials
         topicUid: Spectrum_Analysis_tutorials
-      - name: Frameworks & Solutions tutorials
-        topicUid: Frameworks_and_Solutions_Tutorials
       - name: User-defined APIs tutorials
         topicUid: User-defined_APIs_Tutorials
       - name: Visual Overview tutorials
