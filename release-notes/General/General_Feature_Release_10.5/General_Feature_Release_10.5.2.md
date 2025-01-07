@@ -166,6 +166,12 @@ From now on, when the History Manager API is used after the History Manager has 
 
 `There is no known manager that can process objects for Manager X. Check if the manager has been initialized, the agent is licensed and is using the required database.`
 
+#### SLLogCollector packages now also contain information about the NATS connections that were closed [ID 41504]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+SLLogCollector packages now also include the *ClosedConnections.json* file, which contains information about the NATS connections that were closed.
+
 #### DataMiner Object Models: An information event will no longer be generated when a DOM CRUD or DOM Action script is started [ID 41536]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->

@@ -31,6 +31,12 @@ From now on, when the History Manager API is used after the History Manager has 
 
 `There is no known manager that can process objects for Manager X. Check if the manager has been initialized, the agent is licensed and is using the required database.`
 
+#### SLLogCollector packages now also contain information about the NATS connections that were closed [ID 41504]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+SLLogCollector packages now also include the *ClosedConnections.json* file, which contains information about the NATS connections that were closed.
+
 #### Storage as a Service: Enhanced performance when updating alarm information [ID 41581]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
