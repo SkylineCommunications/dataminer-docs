@@ -184,6 +184,12 @@ When a number of correlation rules were updated in bulk, in some cases, some wou
 
 When, in Data Display, you double-clicked a parameter and then opened the *Templates* tab, the parameter thresholds would be incorrect when the alarm template was part of a template group.
 
+#### Visual Overview - Children shape: Scale of automatically generated shapes would incorrectly be set to 0 [ID 41710]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+In some cases, the scale of automatically generated shapes would incorrectly be set to 0, causing those shapes to not be visible.
+
 #### Memory leak when logging out of DataMiner Cube [ID 41712]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
