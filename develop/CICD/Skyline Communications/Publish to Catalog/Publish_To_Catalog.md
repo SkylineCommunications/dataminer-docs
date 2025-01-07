@@ -8,9 +8,6 @@ The [DataMiner Catalog](https://catalog.dataminer.services/) allows users to qui
 
 This platform is constantly getting improved. At present, several workarounds are still needed to get certain items to show up in the Catalog. Below, you can find more information about how to publish specific kinds of items.
 
-> [!NOTE]
-> Publishing public items to the Catalog is currently only possible for members of Skyline Communications.
-
 > [!TIP]
 > See also: [DataMiner Catalog](xref:About_the_Catalog_module)
 
