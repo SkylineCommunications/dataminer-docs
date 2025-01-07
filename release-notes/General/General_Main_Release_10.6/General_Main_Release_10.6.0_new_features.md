@@ -247,7 +247,7 @@ Additional logging with regard to visual overview load balancing will be availab
 
 From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Correlation engine.
 
-In other words, when an Automation script is triggered by the Correlation engine, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Feature_Release_10.2.8#added-the-option-to-skip-the-script-started-information-event-id-33666).
+In other words, when an Automation script is triggered by the Correlation engine, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
 
 If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
 
