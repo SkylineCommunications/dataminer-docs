@@ -102,6 +102,12 @@ For example, up to now, when you dragged a script from one folder to another aft
 
 In the *Element Swarming* window, it is now possible to select all elements by pressing CTRL+a.
 
+#### Visual Overview - ListView component: Enhancements with regard to element or service property subscriptions [ID 41754]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+A number of enhancements have been made to the *ListView* component with regard to element and service property subscriptions.
+
 ### Fixes
 
 #### Visual Overview: Children shapes would be displayed twice [ID 41160]
