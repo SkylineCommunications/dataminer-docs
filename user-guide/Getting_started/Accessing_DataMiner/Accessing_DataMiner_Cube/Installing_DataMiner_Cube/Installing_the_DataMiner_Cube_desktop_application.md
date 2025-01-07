@@ -5,8 +5,12 @@ description: Log on to dataminer.services, select 'Desktop installation' and run
 
 # Installing the DataMiner Cube desktop application
 
-> [!IMPORTANT]
-> Make sure the client machine meets the minimum requirements detailed in the [DataMiner Client Requirements](xref:DataMiner_Client_Requirements).
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>Before you install DataMiner Cube, make sure the client machine meets the minimum requirements detailed in the <a href="xref:DataMiner_Client_Requirements" style="color: #657AB7;">DataMiner Client Requirements</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
 
 ## Standard installation
 

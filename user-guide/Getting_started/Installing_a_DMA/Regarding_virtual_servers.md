@@ -18,5 +18,9 @@ Please note the following:
   - 512 KiB blocks should be 300 MB/s or higher.
   - The average latency should be lower than 10 ms.
 
-  > [!NOTE]
-  > We recommend using [DataMiner Storage as a Service](xref:STaaS) instead of hosting the DataMiner storage yourself.
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>We recommend using <a href="xref:STaaS" style="color: #657AB7;">DataMiner Storage as a Service</a> instead of hosting the DataMiner storage yourself.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>

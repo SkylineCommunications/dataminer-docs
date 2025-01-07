@@ -28,28 +28,20 @@ In the header bar of DataMiner Cube, you can find the following items:
 
   - *Account details*: Opens your user card.
 
-  - *X online contacts*: Displays the contacts that are currently online. Right-click a contact in the list to access a menu that allows you to exchange chat messages with them or to disconnect them (if you have the necessary permissions to do so).
-
-    > [!TIP]
-    > See also: [Chat collaboration](xref:chat#chat-collaboration)
+  - *X online contacts*: Displays the contacts that are currently online. Right-click a contact in the list to access a menu that allows you to exchange [chat messages](xref:chat) with them or to disconnect them (if you have the necessary permissions to do so).
 
   - *Settings*: Opens the *Settings* window.
 
-    > [!TIP]
-    > See also:
-    >
-    > - [User settings](xref:User_settings)
-    > - [Computer settings](xref:Computer_settings)
+    <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+      <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+        <b>💡 TIPS TO TAKE FLIGHT</b><br>In the <i>Settings</i> window, you will find two types of settings: <a href="xref:User_settings" style="color: #657AB7;">user settings</a> and <a href="xref:Computer_settings" style="color: #657AB7;">computer settings</a>.
+      </div>
+      <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+    </div>
 
-  - *Change layout*: Allows you to select a different layout for the cards in the Cube workspace.
+  - *Change layout*: Allows you to [select a different layout](xref:Working_with_cards_in_DataMiner_Cube#changing-the-card-layout) for the cards in the Cube workspace.
 
-    > [!TIP]
-    > See also: [Changing the card layout](xref:Working_with_cards_in_DataMiner_Cube#changing-the-card-layout)
-
-  - *System Center*: Opens the System Center, where you can among others configure the DMS setup, backups, the database and DataMiner security, if you have the necessary permissions to do so. The System Center also provides access to all DataMiner log files.
-
-    > [!TIP]
-    > See also: [Logging](xref:logging)
+  - *System Center*: Opens the System Center, where you can among others configure the DMS setup, backups, the database, and DataMiner security, if you have the necessary permissions to do so. The System Center also provides access to all [DataMiner log files](xref:logging).
 
   - *Agents*: Opens the *Agents* page in System Center, where you can view information on the DMS and configure the DMS, if you have the necessary permissions to do so.
 
