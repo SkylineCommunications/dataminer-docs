@@ -8,7 +8,13 @@ uid: General_Feature_Release_10.5.2
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!IMPORTANT]
-> When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
+>
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 > [!TIP]
 >
@@ -22,11 +28,15 @@ uid: General_Feature_Release_10.5.2
 
 ## New features
 
-#### Unhandled exceptions in Automation scripts that cause SLAutomation to stop working will now be logged and will lead to an alarm being generated [ID 41375]
+#### Unhandled exceptions in Automation scripts that cause SLAutomation to stop working will now be logged and will lead to an alarm being generated [ID 41375] [ID 41781]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-From now on, when SLAutomation stops working due to an unhandled exception that occurred in an Automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and an alarm of type "error" will be generated.
+From now on, when SLAutomation stops working due to an unhandled exception that occurred in an Automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and the following alarm of type "error" will be generated:
+
+```txt
+The automation script 'Script name' caused the hosting process SLAutomation.exe to crash. Please correct the script to prevent further system instability and check Automation log file for more details.
+```
 
 These alarms will be generated per DataMiner Agent for every Automation script that causes SLAutomation to stop working. In other words, when SLAutomation repeatedly stops working on a DataMiner Agent due to multiple unhandled exceptions thrown while running a particular Automation script, only one alarm will be generated on the DataMiner Agent in question.
 
@@ -104,6 +114,8 @@ If you do want such information events to be generated, you can add the `SkipInf
 
 ## Changes
 
+### Breaking changes
+
 ### Enhancements
 
 #### Failover - Virtual IP address check: Logging of the arp command will now also include the MAC address that claimed the IP address [ID 40703]
@@ -122,6 +134,16 @@ All DataMiner upgrade packages now include the latest Visual C++ Redistributable
 
 > [!NOTE]
 > From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
+
+#### DataMiner Taskbar Utility: 'Launch > DataMiner Cube' command will now launch the DataMiner Cube desktop app [ID 41308]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrect still try to launch the deprecated XBAP version of DataMiner Cube.
+
+From now on, when you click *Launch > DataMiner Cube*, the DataMiner Taskbar Utility will launch the DataMiner Cube desktop app, which will automatically connect to localhost.
+
+Moreover, if no DataMiner Cube desktop app is installed, the most recent version will automatically be downloaded via HTTP.
 
 #### Security Advisory BPA test: Enhancements [ID 41385]
 
@@ -185,6 +207,14 @@ Up to now, a "Script started" information event would be generated each time a D
 Up to now, when a protocol performed multiple actions on a table, SLProtocol would not properly lock the array in which the data was stored. This could then lead to concurrent access to the array, causing the entries to get corrupted and SLProtocol to stop working when those corrupted entries were accessed.
 
 The above-mentioned array will now be locked to prevent the data from getting corrupted.
+
+#### Service & Resource Management: Property updates and swarming requests sent to the old master agent will now be resent to the new master agent [ID 41549]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+Since DataMiner feature release 10.4.11, it is possible to switch to another master agent.
+
+Up to now, if the current master agent had been marked "not eligible to be promoted to master", it would continue to process property updates and swarming requests as if it were still master agent. This behavior has now changed. From now on, all property updates and swarming requests sent to the current master agent that has been marked "not eligible to be promoted to master" will fail with a `NotAMasterAgentException`, and the agents that sent those messages will resend them to the new master agent.
 
 #### DataMiner Object Models: Only the first 100 DomInstances will be checked when an enum entry is removed from a FieldDescriptor [ID 41572]
 

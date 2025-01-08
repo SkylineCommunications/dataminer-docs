@@ -108,12 +108,6 @@ In the *Element Swarming* window, it is now possible to select all elements by p
 
 A number of enhancements have been made to the *ListView* component with regard to element and service property subscriptions.
 
-#### DataMiner Cube desktop app: Enhanced configuration file management [ID 41808]
-
-<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
-
-A number of enhancements have been made with regard to configuration file management.
-
 ### Fixes
 
 #### Visual Overview: Children shapes would be displayed twice [ID 41160]
@@ -207,6 +201,12 @@ In some cases, the scale of automatically generated shapes would incorrectly be 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When you logged out of DataMiner Cube, up to now, certain event handlers would leak memory.
+
+#### Problem when trying to uninstall DataMinerCube.exe [ID 41802]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you tried to uninstall the *DataMinerCube.exe* file from a client computer via *Control Panel\Programs\Programs and Features*, an error would occur, causing both the *DataMinerCube.exe* file and an associated scheduled task to not get removed.
 
 #### Alarm Console: Alarms generated during the last week of 2024 would not be grouped correctly [ID 41830]
 
