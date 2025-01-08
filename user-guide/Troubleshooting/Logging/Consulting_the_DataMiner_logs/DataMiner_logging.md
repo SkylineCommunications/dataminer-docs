@@ -106,6 +106,8 @@ Some items in the list are of particular note:
 
 ## DataMiner Extension Modules (DxM) logs
 
-The DataMiner Extension Modules logs are identified by their module name with the suffix (DxM).
+The DataMiner Extension Modules logs are identified by their module name followed by the suffix *(DxM)*.
 
-To adjust these logs, manually edit the *appsettings.json* or *appsettings.custom.json* file located in the installation directory of the respective DxM.
+Each extension module includes a default configuration file, *appsettings.json*, located in the module's installation directory, where the DxM settings are defined.
+
+To adjust the log settings and prevent your customizations from being overwritten during upgrades, create an *appsettings.custom.json* file in the same directory with the desired log settings. In this file, add the log settings that you want to override, with your custom value.
