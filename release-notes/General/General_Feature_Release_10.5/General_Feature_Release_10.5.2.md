@@ -392,3 +392,10 @@ When a large DataMiner System included agents in a Failover setup, the more agen
 When Class Library retrieves property configurations of type element, service or view, these get cached in SLNet, and when a configuration is added or updated, the cached object associated with that configuration is invalidated.
 
 Up to now, when a cached view, element or service property configuration object was invalidated, it would incorrectly not be set to null.
+
+#### Swarming: Problem with alarm events associated with DVE elements [ID 41741]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- Not added to MR 10.6.0 - Introduced by RN 41392 -->
+
+On systems on which the *Swarming* feature had been enabled, in some cases, alarm events associated with DVE elements would not show up in the connected clients or would not end up in the database.
