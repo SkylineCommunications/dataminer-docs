@@ -8,7 +8,13 @@ uid: General_Feature_Release_10.5.2
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!IMPORTANT]
-> When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
+>
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 > [!TIP]
 >
