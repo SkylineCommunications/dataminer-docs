@@ -18,8 +18,9 @@ Expected duration: 10 minutes.
 
 - DataMiner version 10.3.10 or higher.
 - A DataMiner System with an [indexing database](xref:Indexing_Database) or [Storage as a Service](xref:STaaS).
+- [DOM Editor](https://catalog.dataminer.services/details/11674850-aeac-48c4-9f35-03c387ebcf18) (version 10.4.4.3 or higher) is installed.
+- Visual Studio and [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
 - Basic knowledge of DataMiner Object Models (DOM).
-- [The DOM editor](https://catalog.dataminer.services/details/11674850-aeac-48c4-9f35-03c387ebcf18).
 
 ## Overview
 
@@ -50,6 +51,8 @@ This tutorial consists of the following steps:
 
 1. Select the script and click the *Execute* button on the right, then click *Execute now*.
 
+   ![DOM Editor script execution](~/user-guide/images/DOM_Generating_code_Step2_1.png)
+
 1. Click the *Generate Code* button in the lower-right corner.
 
 1. Select the checkbox in front of the *eventmanagement* module.
@@ -58,9 +61,7 @@ This tutorial consists of the following steps:
 
 1. Copy the generated code to the clipboard.
 
-![Step 2_1](~/user-guide/images/DOM_Generating_code_Step2_1.png)
-
-![Step 2_2](~/user-guide/images/DOM_Generating_code_Step2_2.png)
+   ![Generated code](~/user-guide/images/DOM_Generating_code_Step2_2.png)
 
 ## Step 3: Use the generated code
 
@@ -88,13 +89,13 @@ To create an Automation script solution:
 
 1. Right-click the *Generate Kata DOM Instances_1* project in the Solution explorer and choose *Add > New Item*
 
-   ![Step 3_1](~/user-guide/images/DOM_Generating_code_Step3_1.png)
+   ![Add a new item to the project](~/user-guide/images/DOM_Generating_code_Step3_1.png)
 
 1. Enter *DomIds* as the name.
 
 1. Replace the content of the *DomIds* file with the code you copied from the DOM Editor.
 
-   ![Step 3_2](~/user-guide/images/DOM_Generating_code_Step3_2.png)
+   ![DomIds.cs file](~/user-guide/images/DOM_Generating_code_Step3_2.png)
 
 1. Double click the *Generate Kata Dom Instances_1.cs* file to edit the main script code.
 
@@ -143,16 +144,22 @@ namespace GenerateKataDOMInstances_1
 ```
 
 > [!IMPORTANT]
-> Visual studio will show some errors if you are not using the latest version for some of the NuGet packages. To resolve this, open the *NuGet package manager* from the tools menu: *Tools* > *Nuget Package Manager* > *Manage NuGet Packages for Solution*. Then navigate to the *Updates tab* and select the *Skyline.DataMiner.Dev.Automation* package. On the right-hand side, choose *version 10.3.10* (or higher) and click the install button.
+> Visual studio will show some errors if you are not using the latest version for some of the NuGet packages. To resolve this:
 >
-> ![Step3_3](~/user-guide/images/DOM_Generating_code_Step3_3.png)
+> 1. Open the *NuGet package manager* from the tools menu: *Tools* > *Nuget Package Manager* > *Manage NuGet Packages for Solution*.
 >
-> ![Step3_4](~/user-guide/images/DOM_Generating_code_Step3_4.png)
+>    ![Manage NuGet Packages for Solution](~/user-guide/images/DOM_Generating_code_Step3_3.png)
+>
+> 1. Navigate to the *Updates tab* and select the *Skyline.DataMiner.Dev.Automation* package.
+>
+> 1. On the right-hand side, select *version 10.3.10* (or higher) and click the install button.
+>
+>    ![Install version 10.3.10 or higher](~/user-guide/images/DOM_Generating_code_Step3_4.png)
 
-You can spot the different places in the code where the generated code is used through the *DomIds* prefix. Using the generated code, you can write code quicker, while making it more readable at the same time. Without the generated code, the code would contain a series of GUIDs.
+You can spot the different places in the code where the generated code is used through the *DomIds* prefix. Using the generated code, you can write code more quickly, while making it more readable at the same time. Without the generated code, the code would contain a series of GUIDs.
 
 > [!NOTE]
-> The "DomIds" namespace prefix does not have to be present in the body of the code. It is only added in this tutorial to clearly indicate where the generated code is used.
+> The *DomIds* namespace prefix does not have to be present in the body of the code. It is only added in this tutorial to clearly indicate where the generated code is used.
 
 ### Publish the script
 
@@ -164,15 +171,15 @@ When the Automation script is complete, it needs to be published to the DataMine
 
 ## Step 4: Test the code
 
-1. Open the *Event Management* application.
+1. Go to the *Event Management* application.
 
-1. Verify there are no entries present.
+1. Verify whether no entries are present.
 
 1. In Cube, execute the *Generate Kata DOM Instances* script.
 
-   A series of events will be generated and visible in the app.
+   A series of events will be generated and shown in the app.
 
 > [!IMPORTANT]
-> The events table is not updated automatically. To refresh the table, use the refresh button in the upper right-hand side, just above the table.
+> The events table is not updated automatically. To refresh the table, use the refresh button in the upper right corner.
 
 ![Step 4](~/user-guide/images/DOM_Generating_code_Step4.png)
