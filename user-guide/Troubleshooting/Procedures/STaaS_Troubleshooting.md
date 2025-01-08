@@ -23,6 +23,26 @@ The diagram below provides an overview of two clusters using STaaS versus Cassan
 
 ![STaaS vs Cassandra](~/images/STaaS_vs_Cassandra.png)
 
+- **DMS A and B**: Interaction with STaaS
+
+  The diagram provides a compact visualization of how DMS A and DMS B interact with STaaS. The SLDataGateway facilitates the exchange of data with STaaS. Each STaaS-connected Agent requires a secure HTTPS channel to the STaaS database, hosted on a Microsoft Azure endpoint (West Europe or UK South).
+
+  This secure connection is established via port 443 and authenticated using an access token provided by the Cloud Gateway. Think of this token as a "key" that unlocks the secure communication channel.
+
+  - **DMS A**: Both Agents in the cluster have a Cloud Gateway installed.
+
+  - **DMS B**: Only one Cloud Gateway is installed in the cluster, which is the minimum required per cluster.
+
+- **DMS C and D**: Cassandra-related databases
+
+  The visualization for DMS C and D highlights their interaction with Cassandra-related databases.
+
+  - **DMS D**: Uses local Cassandra nodes and an external OpenSearch/Elasticsearch node.
+
+  - **DMS C**: Communicates with a Cassandra cluster that also includes OpenSearch/Elasticsearch.
+
+All communication between the DMS and the databases is routed through SLDataGateway.
+
 ## Investigation
 
 ### Verify your setup is using STaaS
