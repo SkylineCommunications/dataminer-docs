@@ -202,6 +202,12 @@ In some cases, the scale of automatically generated shapes would incorrectly be 
 
 When you logged out of DataMiner Cube, up to now, certain event handlers would leak memory.
 
+#### Problem when trying to uninstall DataMinerCube.exe [ID 41802]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you tried to uninstall the *DataMinerCube.exe* file from a client computer via *Control Panel\Programs\Programs and Features*, an error would occur, causing both the *DataMinerCube.exe* file and an associated scheduled task to not get removed.
+
 #### Alarm Console: Alarms generated during the last week of 2024 would not be grouped correctly [ID 41830]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->

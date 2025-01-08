@@ -104,6 +104,8 @@ If you do want such information events to be generated, you can add the `SkipInf
 
 ## Changes
 
+### Breaking changes
+
 ### Enhancements
 
 #### Failover - Virtual IP address check: Logging of the arp command will now also include the MAC address that claimed the IP address [ID 40703]
