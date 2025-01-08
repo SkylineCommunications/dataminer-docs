@@ -4,7 +4,7 @@ uid: DataMiner_logging
 
 # DataMiner logging
 
-The *DataMiner* page shows the log information for the various DataMiner modules, including the logs for DataMiner Extension Modules (DxMs).
+The *DataMiner* page shows the log information for the various DataMiner modules. From DataMiner 10.5.1/10.6.0 onwards<!-- RN 40766 -->, this also includes log information for DataMiner Extension Modules (DxMs).
 
 This page consists of three sections:
 
@@ -13,10 +13,11 @@ This page consists of three sections:
 - An expandable *Log settings* section at the top of the page, which shows the log levels for info, debug and error logging.
 
   > [!NOTE]
-  > Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information.
-  > For *DxM logs*, this section is not available; logging must be configured directly via the DxM configuration file.
+  >
+  > - Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information.
+  > - For DxM logs, this section is not available; logging must be configured directly via the DxM configuration file.
 
-- A panel on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
+- A pane on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
 
 > [!NOTE]
 > To retrieve a previous log file, right-click an item in the list and select *Open previous*. If there is no previous log file, this option is not available.
