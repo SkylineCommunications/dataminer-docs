@@ -192,6 +192,14 @@ Up to now, when a protocol performed multiple actions on a table, SLProtocol wou
 
 The above-mentioned array will now be locked to prevent the data from getting corrupted.
 
+#### Service & Resource Management: Property updates and swarming requests sent to the old master agent will now be resent to the new master agent [ID 41549]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+Since DataMiner feature release 10.4.11, it is possible to switch to another master agent.
+
+Up to now, if the current master agent had been marked "not eligible to be promoted to master", it would continue to process property updates and swarming requests as if it were still master agent. This behavior has now changed. From now on, all property updates and swarming requests sent to the current master agent that has been marked "not eligible to be promoted to master" will fail with a `NotAMasterAgentException`, and the agents that sent those messages will resend them to the new master agent.
+
 #### DataMiner Object Models: Only the first 100 DomInstances will be checked when an enum entry is removed from a FieldDescriptor [ID 41572]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
