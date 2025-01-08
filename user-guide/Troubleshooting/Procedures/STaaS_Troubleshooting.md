@@ -278,7 +278,7 @@ Actions:
 
     - uks = UK South.
 
-- Ask the customer's IT department to verify the upload and download bandwidth usage.
+- Verify the upload and download bandwidth usage by contacting the IT department.
 
 ## Adding a new DMA to a DMS running STaaS
 
