@@ -135,15 +135,19 @@ All DataMiner upgrade packages now include the latest Visual C++ Redistributable
 > [!NOTE]
 > From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
 
-#### DataMiner Taskbar Utility: 'Launch > DataMiner Cube' command will now launch the DataMiner Cube desktop app [ID 41308]
+#### DataMiner Taskbar Utility: 'Launch > Download DataMiner Cube' command will now download the DataMiner Cube desktop app [ID 41308]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
 When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrect still try to launch the deprecated XBAP version of DataMiner Cube.
 
-From now on, when you click *Launch > DataMiner Cube*, the DataMiner Taskbar Utility will launch the DataMiner Cube desktop app, which will automatically connect to localhost.
+From now on, when you click *Launch > Download DataMiner Cube*, the DataMiner Cube desktop app will be downloaded. When you then double-click the downloaded file, the following will happen:
 
-Moreover, if no DataMiner Cube desktop app is installed, the most recent version will automatically be downloaded via HTTP.
+- When the DataMiner Cube desktop app is installed, the DataMiner Cube desktop app will open and a tile representing the local DMA will be added to it (if no such tile already exists).
+
+  If you then want to open a Cube session connected to the local DMA, click the tile representing the local DMA.
+
+- When the DataMiner Cube desktop app has not yet been installed, you will be asked whether it should be installed or not. If you choose to install it, it will be installed and immediately opened to host a Cube session connected to the local DMA.
 
 #### Security Advisory BPA test: Enhancements [ID 41385]
 
