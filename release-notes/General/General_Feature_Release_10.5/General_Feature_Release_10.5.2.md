@@ -129,6 +129,16 @@ All DataMiner upgrade packages now include the latest Visual C++ Redistributable
 > [!NOTE]
 > From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
 
+#### DataMiner Taskbar Utility: 'Launch > DataMiner Cube' command will now launch the DataMiner Cube desktop app [ID 41308]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrect still try to launch the deprecated XBAP version of DataMiner Cube.
+
+From now on, when you click *Launch > DataMiner Cube*, the DataMiner Taskbar Utility will launch the DataMiner Cube desktop app, which will automatically connect to localhost.
+
+Moreover, if no DataMiner Cube desktop app is installed, the most recent version will automatically be downloaded via HTTP.
+
 #### Security Advisory BPA test: Enhancements [ID 41385]
 
 <!-- MR 10.5.0 / 10.4.0 [CU11] - FR 10.5.2 -->

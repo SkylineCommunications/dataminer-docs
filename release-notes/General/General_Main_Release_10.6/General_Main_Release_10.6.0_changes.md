@@ -43,6 +43,16 @@ Up to now, when you had made changes to a *C:\\Skyline DataMiner\\Analytics\\con
 
 See also [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_between_DataMiner_Agents)
 
+#### DataMiner Taskbar Utility: 'Launch > DataMiner Cube' command will now launch the DataMiner Cube desktop app [ID 41308]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrect still try to launch the deprecated XBAP version of DataMiner Cube.
+
+From now on, when you click *Launch > DataMiner Cube*, the DataMiner Taskbar Utility will launch the DataMiner Cube desktop app, which will automatically connect to localhost.
+
+Moreover, if no DataMiner Cube desktop app is installed, the most recent version will automatically be downloaded via HTTP.
+
 #### Business intelligence: SLAs will now use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID [ID 41328]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
