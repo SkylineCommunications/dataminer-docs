@@ -4,7 +4,7 @@ uid: DataMiner_logging
 
 # DataMiner logging
 
-The *DataMiner* page shows the log information for the various DataMiner modules. From DataMiner 10.5.1/10.6.0 onwards<!-- RN 40766 -->, this also includes log information for DataMiner Extension Modules (DxMs).
+The *DataMiner* page shows the log information for the various DataMiner modules. From DataMiner 10.5.3/10.6.0 onwards<!-- RN 41674 -->, this also includes log information for DataMiner Extension Modules (DxMs).
 
 This page consists of three sections:
 
