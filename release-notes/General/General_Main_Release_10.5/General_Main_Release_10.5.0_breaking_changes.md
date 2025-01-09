@@ -55,3 +55,25 @@ In the *Get alarms* data source, the following columns have been updated:
 If you have created an Automation script that launches subscripts, you can use the `SkipStartedInfoEvent` option to specify whether "Script started" information events should be generated for the subscripts or not.
 
 Up to now, this `SkipStartedInfoEvent` option would by default be set to false. From now on, it will by default be set to true.
+
+#### DataMiner Object Models: An exception will now be thrown when an issue occurs for any of the DomInstances that are created, updated, or deleted in bulk [ID 41546]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+From now on, if an issue occurs for any of the `DomInstances` that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Examples#checking-issues).
+
+As an alternative, the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will return false. The `result` output parameter will contain:
+
+- The list of successfully processed items, as is the case for `CreateOrUpdate` and `Delete`.
+
+- A list of `DomInstance` IDs that failed to be created, updated, or deleted.
+
+- The trace data per `DomInstance` ID.
+
+For each of these methods, the trace data of that call is still available and will contain the trace data for all processed `DomInstances`.
+
+> [!IMPORTANT]
+> In DataMiner versions prior to DataMiner Feature Release 10.5.0/10.5.2, when any validation issue occurs, no exception is thrown (even when `ThrowExceptionsOnErrorData` is true) when calling the `CreateOrUpdate` or `Delete` methods. Instead, the result of the call should be used to check for which `DomInstances` the call succeeded or failed.
+
+> [!NOTE]
+> When creating, updating or deleting a single `DomInstance`, you can now also use the `TryCreate`, `TryUpdate` and `TryDelete` methods as an alternative in order to avoid having to check for exceptions. These methods are also available for other objects that make use of the CRUD helper component.

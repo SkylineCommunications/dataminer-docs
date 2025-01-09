@@ -312,6 +312,8 @@ items:
                 topicUid: Tutorial_Apps_Node_Edge
               - name: Creating a parameter table connected to an element feed
                 topicUid: Creating_a_parameter_table_connected_to_an_element_feed
+              - name: Creating an alarm dashboard for a daily DMS health check
+                topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
@@ -816,6 +818,9 @@ items:
             topicUid: DomDefinition
           - name: DomInstance object
             topicUid: DomInstance
+            items:
+              - name: DOM multiple sections
+                topicUid: DOM_MultipleSections
           - name: DomTemplate object
             topicUid: DomTemplate
           - name: DomBehaviorDefinition object
@@ -868,7 +873,7 @@ items:
           - name: Altering and getting values of a DomInstance - examples
             topicUid: DOM_Altering_values_of_a_DomInstance
           - name: Processing multiple DomInstances - examples
-            topicUid: DOM_BulkProcessing_Example
+            topicUid: DOM_BulkProcessing_Examples
       - name: DOM DevOps tools
         topicUid: DOM_DevOps_tools
         items:

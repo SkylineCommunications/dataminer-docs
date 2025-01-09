@@ -17,10 +17,13 @@ The DataMiner installer allows you to run a DataMiner installation and perform t
 
 1. Make sure the necessary .NET and .NET Framework versions are installed. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
-   > [!TIP]
-   >
-   > - For information on how to determine which versions you have installed. See <https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed>.
-   > - For installation information, see [Installation guide](https://docs.microsoft.com/en-us/dotnet/framework/install/).
+   <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+     <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+       <b>💡 TIPS TO TAKE FLIGHT</b><br>Are you not sure which versions you have installed? Take a look at <a href="https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed" style="color: #657AB7;">Microsoft's guide</a> on this topic. You can also consult their <a href="https://learn.microsoft.com/en-us/dotnet/framework/install/" style="color: #657AB7;">.NET Framework installation guide</a>.
+     </div>
+     <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+   </div>
+   <br>
 
 1. Make sure the Windows setting "fast startup" is not activated.
 
@@ -177,8 +180,13 @@ If you are using an older installer, follow the steps below to install DataMiner
 
 1. Send the *Request.lic* file to <dataminer.licensing@skyline.be>, and wait until you receive the reply.
 
-   > [!TIP]
-   > See also: [Obtaining a DataMiner license](xref:DataminerLicenses)
+   <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+     <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+       <b>💡 TIPS TO TAKE FLIGHT</b><br>For more information, see <a href="xref:DataminerLicenses" style="color: #657AB7;">Obtaining a DataMiner license</a>.
+     </div>
+     <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+   </div>
+   <br>
 
    > [!NOTE]
    > If you are a Skyline employee, use the procedure from the [Skyline internal documentation](https://internaldocs.skyline.be/Corporate/OperatingProcedures/OP_RequestDecommissionMaintainInternalServer/Requesting_a_DMA_ID_or_a_DataMiner_license_for_an_internal_DataMiner_Agent.html) instead.

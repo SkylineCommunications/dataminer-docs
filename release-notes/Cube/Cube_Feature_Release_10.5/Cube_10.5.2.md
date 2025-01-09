@@ -102,7 +102,19 @@ For example, up to now, when you dragged a script from one folder to another aft
 
 In the *Element Swarming* window, it is now possible to select all elements by pressing CTRL+a.
 
+#### Visual Overview - ListView component: Enhancements with regard to element or service property subscriptions [ID 41754]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+A number of enhancements have been made to the *ListView* component with regard to element and service property subscriptions.
+
 ### Fixes
+
+#### Visual Overview: Children shapes would be displayed twice [ID 41160]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When *Children* shapes were being loaded, in some cases, some shapes would incorrectly already be updated while loading was still in progress. As a result, some shapes would be displayed twice.
 
 #### DataMiner Cube desktop app: Problem when starting an older version on a client on which a newer version has already been used [ID 41461]
 
@@ -178,8 +190,26 @@ When a number of correlation rules were updated in bulk, in some cases, some wou
 
 When, in Data Display, you double-clicked a parameter and then opened the *Templates* tab, the parameter thresholds would be incorrect when the alarm template was part of a template group.
 
+#### Visual Overview - Children shape: Scale of automatically generated shapes would incorrectly be set to 0 [ID 41710]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+In some cases, the scale of automatically generated shapes would incorrectly be set to 0, causing those shapes to not be visible.
+
 #### Memory leak when logging out of DataMiner Cube [ID 41712]
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
 When you logged out of DataMiner Cube, up to now, certain event handlers would leak memory.
+
+#### Problem when trying to uninstall DataMinerCube.exe [ID 41802]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+When you tried to uninstall the *DataMinerCube.exe* file from a client computer via *Control Panel\Programs\Programs and Features*, an error would occur, causing both the *DataMinerCube.exe* file and an associated scheduled task to not get removed.
+
+#### Alarm Console: Alarms generated during the last week of 2024 would not be grouped correctly [ID 41830]
+
+<!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
+
+In the Alarm Console, alarms generated during the last week of 2024 (i.e. week 53) would not be grouped correctly.

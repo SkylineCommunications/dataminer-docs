@@ -62,8 +62,8 @@ To do so:
 
       This name **should also be configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
 
-      > [!WARNING]
-      > Do not use wildcard configurations if you want to use your DataMiner Agent to connect your system to dataminer.services, as this is not supported. In that case, use the FQDN (e.g. "dma01.skyline.be") instead.
+      > [!IMPORTANT]
+      > Do not use wildcard certificates if you want to use your DataMiner Agent to connect your system to dataminer.services, as this is not supported. In that case, the certificate should be for the FQDN (e.g. "dma01.skyline.be").
 
 1. Save the file and restart the DMA.
 

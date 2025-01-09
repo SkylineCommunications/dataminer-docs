@@ -71,14 +71,13 @@ The icons that precede an item name in the tree show what kind of item it is and
 
 - View icons are filled with a different color, depending on their alarm state. On other icons, a colored circle is displayed when they are in a particular alarm state. In addition to the default colors indicating the alarm severity, the circle can also be displayed in purple to indicate that an item is masked.
 
-  > [!NOTE]
-  > The alarm state color is determined by the most severe of all the current alarms for the item.
-
-  > [!TIP]
-  > See also:
-  >
-  > - [Alarm severity levels](xref:Alarm_types#alarm-severity-levels)
-  > - [Changing the default alarm colors](xref:Changing_the_default_alarm_colors)
+  <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+    <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+      <b>💡 TIPS TO TAKE FLIGHT</b><br>The alarm state color is determined by the most severe of all the current alarms for the item. There are four <a href="xref:Alarm_types#alarm-severity-levels" style="color: #657AB7;">alarm severity levels</a>, each indicated by a color. These default alarm colors can be changed in the <a href="xref:Changing_the_default_alarm_colors" style="color: #657AB7;"><i>DataMiner.xml</i> file</a>.
+    </div>
+    <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+  </div>
+  <br>
 
 - There may be additional symbols on an icon to indicate a particular state:
 

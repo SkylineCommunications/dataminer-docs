@@ -43,7 +43,7 @@ Here you can also [link your dataminer.services and DataMiner account](xref:Link
 
 In the system overview, you can see the state of the connection between your system and the dataminer.services platform. Next to the name of each DMS, an icon indicates the connection state:
 
-- **DMS is connected connection to dataminer.services**
+- **DMS is connected to dataminer.services**
 
   It is possible to access the system and all dataminer.services features are available. This is indicated by a green icon and a green bar next to the DMS information.
 
