@@ -14,6 +14,8 @@ items:
         items:
           - name: dataminer.services change log
             items:
+            - name: 2025
+              topicUid: DCP_change_log_2025
             - name: 2024
               topicUid: DCP_change_log
             - name: 2023
