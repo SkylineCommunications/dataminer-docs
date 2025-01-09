@@ -13,4 +13,4 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 Several enhancements were made to improve performance and stability for all remote access features which have immediate effect.
 
-In addition dataminer.services now supports for the CloudGateway DxM >= 2.17.0 to create multiple connections instead of one to increase throughput and improve stability even more. CloudGateway 2.17.0, will take benefit of this, is expected to be released in the upcoming weeks.
+In addition dataminer.services now supports for the CloudGateway DxM >= 2.17.0 to create multiple connections instead of one to increase throughput and improve stability even more. CloudGateway 2.17.0, will take benefit of this, and is expected to be released in the upcoming weeks.
