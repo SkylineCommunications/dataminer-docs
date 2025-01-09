@@ -76,7 +76,7 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   <ColumnOption idx="0" pid="1001" type="retrieved" options="" />
   ```
 
-- The column data should always be wrapped in object arrays for the data to be correctly interpreted by the SLProtocol process.
+- The column data should always be wrapped in object arrays for the data to be correctly interpreted by the SLProtocol process. If an invalid type, like a string array, is passed, the function will fail and throw an error, which will automatically be logged in the element's log file. Prior to DataMiner 10.4.0 [CU11]/10.5.2<!--RN 41511-->, the function fails silently in such cases, without logging or throwing an error.
 
 - It is possible to specify a datetime that will be applied to all values passed in the parameter set.<!-- RN 21482 -->
 
