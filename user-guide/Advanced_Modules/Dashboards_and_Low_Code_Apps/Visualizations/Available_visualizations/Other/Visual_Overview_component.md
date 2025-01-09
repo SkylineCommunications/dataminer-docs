@@ -24,9 +24,7 @@ To configure this component:
 
 > [!NOTE]
 >
-> - Spectrum components are currently not yet supported in visual overviews within dashboards or low-code apps.
-> - Quick filters are supported for table parameters in visual overview components. See [Using quick filters](xref:Using_quick_filters).
-> - In versions prior to DataMiner 10.4.10<!--RN 40497-->, when you have multiple components that show the same visual overview with user context (e.g. a visual overview with card variables), the contexts of those components are shared. For example, if you click a button on one component, the same action will be mirrored on the other component.
+> Quick filters are supported for table parameters in visual overview components. See [Using quick filters](xref:Using_quick_filters).
 
 ## Zooming
 
@@ -49,3 +47,18 @@ Zooming functionalities are available for the Visual Overview component.
   - To zoom in, scroll up.
 
   - To zoom out, scroll down.
+
+## Unsupported Capabilities
+
+> [!NOTE]
+>
+> This list is not complete.
+
+Mobile Visual Overviews were always considered a lightweight version of their Cube counterparts. It's therefore never been guaranteed that the same functionalities will work there as well.
+
+- Spectrum components
+- In versions prior to DataMiner 10.4.10<!--RN 40497-->, when you have multiple components that show the same visual overview with user context (e.g. a visual overview with card variables), the contexts of those components are shared. For example, if you click a button on one component, the same action will be mirrored on the other component.
+- DataMiner Connectivity Framework (DCF) lacks much of its interactivity features, such as being able to click connection lines.
+- Navigating to elements/services/views will always open the monitoring app, even if you are within the context of a Dashboard or Low Code App.
+- Components/Apps that do not exist as visualizations in mobile such as Router Control, Dynamic List...
+- Alarm list components.
