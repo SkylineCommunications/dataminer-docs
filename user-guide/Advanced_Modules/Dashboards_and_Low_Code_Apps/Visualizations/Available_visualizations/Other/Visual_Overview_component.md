@@ -62,3 +62,4 @@ Mobile Visual Overviews were always considered a lightweight version of their Cu
 - Navigating to elements/services/views will always open the monitoring app, even if you are within the context of a Dashboard or Low Code App.
 - Components/Apps that do not exist as visualizations in mobile such as Router Control, Dynamic List...
 - Alarm list components.
+- Drag/Drop functionalities.
