@@ -15,7 +15,7 @@ This page consists of three sections:
   > [!NOTE]
   >
   > - Error logging is used only for errors, which will also be logged in SLErrors.txt, info logging is used for more informative log messages, e.g. "Running DataMiner 10.2.0.0", and debug logging is used for more detailed information.
-  > - For DxM logs, this section is not available; logging must be configured directly via the DxM configuration file.
+  > - For DxM logs, this section is not available; logging must be [configured directly](#dataminer-extension-modules-dxm-logs) via the DxM configuration file.
 
 - A pane on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
 
@@ -108,6 +108,6 @@ Some items in the list are of particular note:
 
 The DataMiner Extension Modules logs are identified by their module name followed by the suffix *(DxM)*.
 
-Each extension module includes a default configuration file, *appsettings.json*, located in the module's installation directory, where the DxM settings are defined.
+Each extension module includes a default configuration file, *appsettings.json*, where the DxM settings are defined. This file is located in the module's installation directory. To adjust the log settings, you will need to use a file named *appsettings.custom.json* file in the same directory. If this file does not exist yet, you will need to create it yourself. In this file, add the log settings that you want to override, with your custom value.
 
-To adjust the log settings and prevent your customizations from being overwritten during upgrades, create an *appsettings.custom.json* file in the same directory with the desired log settings. In this file, add the log settings that you want to override, with your custom value.
+Note that if you change the settings directly in *appsettings.json*, this will work, but your changes will be overwritten as soon as the software is upgraded.
