@@ -18,6 +18,34 @@ uid: Web_apps_Feature_Release_10.5.2
 
 ## New features
 
+#### DataMiner upgrade packages now include the new GQI DxM [ID 39145] [ID 41097] [ID 41811]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+From now on, full DataMiner upgrade packages as well as web-only DataMiner upgrade packages will include the new GQI DxM.
+
+Up to now, all GQI-related operations were executed by the SLHelper process, which only gets updated during a full DataMiner upgrade. From now on, you can opt to have all GQI-related operations executed by the GQI DxM instead. This has the following advantages:
+
+- GQI can now be updated independently from the DataMiner core software.
+- System load by GQI operations can now be balanced among the different DataMiner Agents in a DMS.
+
+> [!IMPORTANT]
+> Until further notice, the DataMiner web apps will continue to use the SLHelper process to execute GQI-related operations. If you want them to use the new GQI DxM instead, update the *C:\\Skyline DataMiner\\Webpages\\web.config* file accordingly.
+
+##### Specifying when idle child processes should be terminated
+
+When the GQI DxM is used, in the *C:\\Program Files\\Skyline Communications\\DataMiner GQI\\appsettings.json* file, you can specify when idle child processes should be terminated.
+
+See the following example. In this case, idle child processes will be terminated within WorkerExpiration + 30 seconds.
+
+```json
+"GQIOptions": {
+    "Extensions": {
+      "WorkerExpiration": "1.00:00:00",
+    },
+}
+```
+
 #### Dashboards/Low-Code Apps: New variable 'DMAIP' [ID 41561]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
