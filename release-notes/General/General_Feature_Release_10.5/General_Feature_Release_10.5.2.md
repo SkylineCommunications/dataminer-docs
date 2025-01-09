@@ -112,6 +112,19 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
+#### DataMiner upgrade: New upgrade action 'UpdateSrmContributingProtocolsForSwarming' [ID 41706]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+On systems on which Swarming has been enabled, contributing bookings are not working because protocols of enhanced services do not have a parameter with ID 7.
+
+During a DataMiner upgrade, a new upgrade action named *UpdateSrmcontributingProtocolsForSwarming* will now check for generated service protocols that do not have a parameter with ID 7. If such protocols exist, the parameter in question will be added to them.
+
+When the above-mentioned upgrade action is executed, it will log the name and the version of every protocol to which it has added a parameter with ID 7. It will also log a warning for every corrupt protocol it has found.
+
+> [!NOTE]
+> From now on, newly generated service protocols will by default have a parameter with ID 7.
+
 ## Changes
 
 ### Breaking changes
