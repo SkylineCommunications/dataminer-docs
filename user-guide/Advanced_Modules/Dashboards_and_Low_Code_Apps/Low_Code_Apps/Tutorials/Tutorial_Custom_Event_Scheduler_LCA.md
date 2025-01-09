@@ -4,24 +4,22 @@ uid: Tutorial_Custom_Event_Scheduler_LCA
 
 # Creating a custom event scheduler low-code app
 
-This tutorial explains how you can create an event scheduler app.
-After this tutorial you will have an app with two pages, an overview page and a page showing a timeline with all the events.
+This tutorial explains how you can create an event scheduler app. When you have completed this tutorial, you will have an app with two pages: an overview page and a page showing a timeline with all the events.
 
 Expected duration: 45 minutes
 
-> [!NOTE]
-> In this tutorial we will only focus on the functional aspects of the app. If you want to apply a nice layout and custom templates you can take a look at the example app that will be deployed with the package in step 1.
+The text and screenshots for this tutorial were created using DataMiner 10.5.1.
 
 > [!TIP]
-> See also: [Build a custom event scheduler](https://community.dataminer.services/courses/kata-51/) on DataMiner Dojo!
+> See also: [Kata #51: Build a custom event scheduler](https://community.dataminer.services/courses/kata-51/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
-- A DataMiner system that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-- Basic understanding of low-code apps.
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- Basic understanding of DataMiner Low-Code Apps.
 
 > [!TIP]
-> If you are not that familiar with low-code apps you can take a look at the following tutorials:
+> If you are not familiar with DataMiner Low-Code Apps yet, take a look at the following tutorials:
 >
 > - [Creating and publishing](xref:Tutorial_Apps_Creating_And_Publishing)
 > - [Edit an existing app](xref:Tutorial_Apps_Edit_Existing_App)
@@ -34,10 +32,11 @@ Expected duration: 45 minutes
 - [Step 1: Install the example package from the catalog](#step-1-install-the-example-package-from-the-catalog)
 - [Step 2: Create the app and the pages](#step-2-create-the-app-and-the-pages)
 - [Step 3: Create the GQI queries](#step-3-create-the-gqi-queries)
-- [Step 4: Create the event overview page](#step-4-create-the-event-overview-page)
+- [Step 4: Configure the event overview page](#step-4-configure-the-event-overview-page)
 - [Step 5: Enable users to add events](#step-5-enable-users-to-add-events)
 - [Step 6: Enable users to edit events](#step-6-enable-users-to-edit-events)
-- [Step 7: Create the timeline overview page](#step-7-create-the-timeline-overview-page)
+- [Step 7: Configure the timeline overview page](#step-7-configure-the-timeline-overview-page)
+- [Step 8: Configure actions on the timeline](#step-8-configure-actions-on-the-timeline)
 
 ## Step 1: Install the example package from the catalog
 
@@ -45,40 +44,75 @@ Expected duration: 45 minutes
 
 1. Click the *Deploy* button to deploy the package to your DMA
 
-   This package contains the final solution that you can use as a guideline, the necessary DOM models and it will create some sample events to work with upon installation.
+   This package contains the final solution that you can use as a guideline, as well as the necessary DOM models, and it will create some sample events to work with upon installation.
 
 ## Step 2: Create the app and the pages
 
-1. Go to the landing page of your DataMiner, here you should see a new app called "Sport event manager" in the section "Event Planning"
+1. Go to `http(s)://[DMA name]/root`.
 
-1. Hover over the section name and click the icon that appears to create a new app
+   In the *Event Planning* section, you should see the **Sport event manager** application.
 
-1. Choose a name for your app
+   > [!TIP]
+   > In this tutorial, you will mainly learn about the functional aspects of an event scheduler app. If you want to experiment with the layout and with custom templates as well, you can use the *Sport event manager* app as an example.
 
-1. Rename the current page to "Event table" and choose an appropriate icon to your choosing
+1. Hover over the section name and click the "+" icon to create a new app.
 
-1. Add a new page by clicking the "Create page" button under your current page, name this page "Timeline" and look for another fitting icon
+   ![Add app icon](~/user-guide/images/Tutorial_Add_app.png)
 
-These are the only pages that we will need for this exercise.
+1. Specify a name for the new app.
+
+1. Rename the first page of the app to `Event table`.
+
+1. In the pane to the right of the navigation pane, select an icon of your choosing for the page.
+
+1. Click the *Create page* button under your current page to add a new page.
+
+1. Name this new page `Timeline` and select a suitable icon for it.
+
+   For example:
+
+   ![app pages](~/user-guide/images/Tutorial_events_app_pages.png)
+
+These are the only pages that you will need for this tutorial.
 
 ## Step 3: Create the GQI queries
 
+In this step, you will create two queries: a full events query and a table events query.
+
 ### Full events query
 
-1. [Create a GQI query](xref:Creating_GQI_query) called "Full Events" by using "Get object manager instances" as data source and select the "sporteventmanagement" module. From this module you can select the "Event" object manager definitions
+1. On either of the pages of your app, in the *Data* pane on the right, expand the *Queries* section and click "+" to add a new GQI query.
 
-1. Add a "Select" operator and add the "ID" column to the query
+1. In the *Name* box for your query, add the name `Full Events`.
 
-1. Add a "Apply custom operator" operator amd select the "Date comparer" operator.
-Configure this operator to use "Start Time" for the "Start" parameter, and "End Time" for the "End" parameter. This operator will ad a new column called "Compared Times" to the result of your query indicating if the event is "Ongoing" or "Future"
+1. Select the data source *Get object manager instances*, and configure it as follows:
+
+   - Module: *sporteventmanagement*
+   - Object manager definition: *Event*
+
+1. Add a *Select* operator, keep the selection for all columns that are selected by default for the operator, and select the column *ID* as well.
+
+1. Add an *Apply custom operator* operator, and select the operator *Date comparer*.
+
+1. Configure the operator as follows:
+
+   - Start: *Start Time*
+   - End: *End Time*
+
+   This  will add a new column called *Compared Times* to the result of your query, indicating if the event is "Ongoing" or "Future".
+
+The complete query should look like this:
 
 ![Full events query](~/user-guide/images/Full_events_query.png)
 
 ### Table events query
 
-1. Now create a new GQI query called "Table Events" by selecting "Start From" to start from your previously created query
+1. In the same way as before, create a GQI query called `Table Events`.
 
-1. Use a Select operator to only include the following columns in the query:
+1. Select the data source *Start From* and make sure the previously created query is selected.
+
+1. Add a *Select* operator to only include the following columns in the query:
+
    - Event Name
    - Priority
    - Type
@@ -86,230 +120,301 @@ Configure this operator to use "Start Time" for the "Start" parameter, and "End 
    - End Time
    - Tags
 
+The complete query should look like this:
+
 ![Table events query](~/user-guide/images/Table_events_query.png)
 
-## Step 4: Create the event overview page
+## Step 4: Configure the event overview page
 
-### Add Title component
+1. Go to the *Event table* page of your app.
 
-1. Drag a [web component](xref:DashboardWeb) on the page and position it in the top left corner
+1. Add a title component:
 
-1. Now go to settings in the "Component" section and paste the following custom HTML
+   1. Drag a [web component](xref:DashboardWeb) from the visualizations pane on the left onto the page and position it in the top-left corner.
 
-```html
-<div>
-   <h1>Sport <span data-y>Event</span> Manager</h1>
-</div>
-<style>
-div {
-	font-family: Segoe UI, sans-serif;
-	line-height: .6;
-	font-size: 16px;
-	color: 464646;
-	display: flex;
-	align-items: end;
-	height: 100%
-}
+      ![Web component](~/user-guide/images/Tutorial_events_app_add_web_component.png)
 
-p {
-	margin: 0
-}
+   1. Make sure the component is selected and select the *Settings* pane on the right.
 
-[data-b] {
-	color: rgb(0, 191, 239)
-}
+   1. Make sure *Type* is set to *Custom HTML* and paste the following custom HTML in the *HTML* box:
 
-[data-y] {
-	color: rgb(255, 179, 0)
-}
+      ```html
+      <div>
+         <h1>Sport <span data-y>Event</span> Manager</h1>
+      </div>
+      <style>
+      div {
+         font-family: Segoe UI, sans-serif;
+         line-height: .6;
+         font-size: 16px;
+         color: 464646;
+         display: flex;
+         align-items: end;
+         height: 100%
+      }
 
-[data-p] {
-	color: rgb(255, 0, 107)
-}
+      p {
+         margin: 0
+      }
 
-</style>
-```
+      [data-b] {
+         color: rgb(0, 191, 239)
+      }
 
-1. Under "Layout" change the theme to "Transparent"
+      [data-y] {
+         color: rgb(255, 179, 0)
+      }
 
-### Add Query filter component
+      [data-p] {
+         color: rgb(255, 0, 107)
+      }
 
-1. Add a [query filter component](xref:DashboardQueryFilter) to the page on the left side under the title
+      </style>
+      ```
 
-1. Drag the "Table events" query on the component to feed it with data
+   1. Go to the *Layout* pane, and enable the *Customize* toggle button.
 
-1. Now add all columns from the "Table events" query as filter to the query filter component, except for the "Priority" column
+   1. At the top of the *Styles* section, click *Custom theme*, and select *Transparent*.
 
-### Add Table component
+1. Add a query filter component:
 
-1. Add a [dashboard table](xref:DashboardTable) to the page next to the query filter component
+   1. Drag a [query filter component](xref:DashboardQueryFilter) onto the page so that it is located on the left side under the title.
 
-1. Add the previously created GQI query called "Table Events"
+   1. Drag the *Table events* query onto the component to provide it with data.
+
+   1. Expand the *Table events* query in the *Data* pane, and drag each of the columns in the query, except for the *Priority* column, to the query filter component as a filter.
+
+      ![Add columns as a filter](~/user-guide/images/Tutorial_events_app_add_columns_as_filter.png)
+
+1. Add a table component:
+
+   1. Drag a regular [table component](xref:DashboardTable) onto the page next to the query filter component.
+
+   1. In the *Data* pane, expand the *Components* section, and drag the *Query filter* component entry onto your table component to provide it with data based on the selection in the query filter component.
 
 ## Step 5: Enable users to add events
 
-We want the user to be able to create new events when clicking a button on the page. To be able to achieve this we will create a button and configure to open a new panel when it is clicked. This panel will hold a form that the user can use to create new events, together with a button that will allow the user to save the event.
+In this step, you will make sure the user can create new events by clicking a button on the page. For this, you will first need to create a button and configure it to open a new panel when it is clicked. This panel will contain a form that the user can use to create new events, together with a button that will allow the user to save the event.
 
-### Add button
+1. Drag a [button component](xref:DashboardButton) to the top of the *Event table* page of your app.
 
-1. Add a [Button](xref:DashboardButton) to the low-code app
+1. Make sure the new component is selected, go to *Layout* pane on the right, and configure the layout as follows:
 
-1. Change the label under the "Layout" section to "Add event", feel free to change the icon
+   - Change the label to `Add event`.
+   - Customize the icon according to your preferences.
 
-### Create the "New event" panel
+1. In the *Panels* section on the left, create a new panel called `New event`.
 
-1. Create a new panel and call it "New event"
+   ![Create a new panel](~/user-guide/images/Tutorial_events_app_new_event_panel.png)
 
-> [!TIP]
-> For more information on panels see: [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).
+   > [!TIP]
+   > For more information on panels, see [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).
 
-1. Add a [Form](xref:DashboardForm) to the panel
+1. Click the pencil icon next to the panel name to begin editing the panel.
 
-1. Take the "Event" definition under "Object Manager Definitions" from the Data tab and drag it onto the form
+1. Drag a [form component](xref:DashboardForm) onto the panel.
 
-1. Enable the Header Bar and add a button called "Save"
+1. In the *Data* pane, expand *Object Manager Definitions* > *eventmanagement*, and drag the *Event* definition onto the form component.
 
-> [!TIP]
-> For more information on the header bar see: [Using a header bar](xref:Tutorial_Apps_Headerbar)
+1. Make sure the header bar is enabled for the panel, and click the "+" button in the header bar to add a button called `Save`.
 
-1. Select the button and open the "Events" section to configure the actions. We will configure 5 actions that will run upon completion of the previous action:
-    1. Add a component action "Save current changes" on the form component
-    1. Add an action to show a notification with a message indicating that the event was saved
-    1. Add an action to close the panel
-    1. Add an component action "Fetch the data" on the table component
-    1. Add an component action "Select an item" on the table component
+   ![Add a "Save" button](~/user-guide/images/Tutorial_events_app_add_save_button.png)
 
-1. Go back to the "Event table" page
+   > [!TIP]
+   > For more information on the header bar, see [Using a header bar](xref:Tutorial_Apps_Headerbar).
 
-1. Select the "Add event" button and go to the "Settings" menu
+1. In the *Events* section for the *Save* button, click *Configure actions*.
 
-1. Under "General" configure the actions so the "New event" panel is opened when the button is clicked
+1. Configure the following consecutive actions that will run when the button is clicked:
+
+   1. Select *Execute component action* and *Save current changes*.
+
+   1. Click *+ Upon completion* to add the next action, select *Show a notification*, and configure the notification so it indicates that the event has been saved.
+
+   1. Click *+ Upon completion*, and select *Close a panel*.
+
+   1. Click *+ Upon completion*, select *Execute component action*, and select *Fetch the data* for the table component.
+
+   1. Click *+ Upon completion*, select *Execute component action*, and select *Select an item* for the table component.
+
+   1. Click *OK* to save your changes.
+
+   ![Actions configured on the "Save" button](~/user-guide/images/Tutorial_events_app_save_button_actions.png)
+
+1. Click the arrow icon in the top-left corner to go back to the *Event table* page.
+
+1. Select the *Add event* button that you added to the page earlier and go to the *Settings* pane on the right.
+
+1. Click *Configure actions*.
+
+1. Select the action *Open a panel*, and configure it so that the *New event* panel is opened when the button is clicked.
 
 ## Step 6: Enable users to edit events
 
-The last thing we want to add to this page is functionality to allow the user to edit events. We will again add a new panel that will open when an event in the table is double clicked. This new panel will show an overview of the selected event and enable the user to save the changes or delete the event.
+In this step, you will add another panel that will open when an event in the table is double-clicked. This new panel will show an overview of the selected event and enable the user to save changes or delete the event.
 
-> [!WARNING]
-> Make sure you select an event in the table before you continue. If you do not do this you will not be able to correctly link the selected event with the form component in the panel.
+1. Select an event in the table.
 
-1. Select an event in the table
+   > [!IMPORTANT]
+   > Make sure not to skip this step. If no event is selected in the table, you will not be able to correctly link the selected event with the form component in the panel.
 
-1. Create a new panel called "Event form"
+1. Create a new panel called `Event form`.
 
-1. Add a [Form](xref:DashboardForm) to the panel
+1. Add a [form component](xref:DashboardForm) to the panel.
 
-1. Go to "Components" section in the Data tab and drag the "Object manager instances" from the "Selected rows" property from your table on to the form (you should now see the details in the form of the event you selected)
+1. In the *Data* pane on the right, expand *Components* > *Event table* > *Table X* (e.g. *Table 3*) > *Selected rows*, and drag *Object manager instances* onto the form.
 
-1. Add a button named "Save" in the header bar
+   In the form, you should now see the details of the event you have selected.
 
-1. Configure the following consecutive actions on the "Save" button
-    1. Add a component action "Save current changes" on the form component on the "Event form" panel
-    1. Add an action to show a notification with a message indicating that the changes were saved
-    1. Add an action to close the panel
-    1. Add a component action "Fetch the data" for the table component
+1. Add a button named `Save` in the header bar for the panel.
 
-1. Add a button named "Delete" in the header bar
+1. In the *Events* section for the *Save* button, click *Configure actions*.
 
-1. Configure the following consecutive actions on the "Delete" button
-    1. Add a component action "Delete instance" on the form component
-    1. Add an action to close the panel
-    1. Add a component action "Fetch the data" on the table component
+1. Configure the following consecutive actions for the button, using the *+ Upon completion* button to add each consecutive action like before:
 
-## Step 7: Create the timeline overview page
+   1. A component action *Save current changes* on the form component on the *Event form* panel.
 
-### Add title component
+   1. A *Show a notification* action with a message indicating that the changes have been saved.
 
-1. Drag a [web component](xref:DashboardWeb) on the page and position it in the top left corner
+   1. A *Close a panel* action to close this panel.
 
-1. Now go to settings in the "Component" section and paste the following custom HTML
+   1. A component action *Fetch the data* for the table component.
 
-```html
-<div>
-<h1>Timeline</h1>
-</div>
-<style>
-div {
-	font-family: Segoe UI, sans-serif;
-	line-height: .6;
-	font-size: 16px;
-	color: 464646;
-	display: flex;
-	align-items: end;
-	height: 100%
-}
+   ![Actions configured on the "Save" button](~/user-guide/images/Tutorial_events_app_save_button_actions_2.png)
 
-p {
-	margin: 0
-}
+1. Add a button named `Delete` in the header bar.
 
-[data-b] {
-	color: rgb(0, 191, 239)
-}
+1. In the *Events* section for the *Delete* button, click *Configure actions*.
 
-[data-y] {
-	color: rgb(255, 179, 0)
-}
+1. Configure the following consecutive actions for the button, using the *+ Upon completion* button to add each consecutive action like before:
 
-[data-p] {
-	color: rgb(255, 0, 107)
-}
-</style>
-```
+   1. A component action *Delete instance* on the form component.
 
-### Add time range component
+   1. A *Close a panel* action to close this panel.
 
-1. Add a [Time range](xref:DashboardTimeRange) component to the page
-1. Under the "Settings" tab set the "Default range" to "Last and next 12 hours"
-1. Under the "Layout" tab disable all presets
-1. Enable the quick picks and select some that make sense to you
+   1. A component action *Fetch the data* for the table component.
 
-### Add time line component
+   ![Actions configured on the "Delete" button](~/user-guide/images/Tutorial_events_app_delete_button_actions.png)
 
-1. Add a [Timeline](xref:DashboardTimeline) component to the page
+1. Click the arrow icon in the top-left corner to go back to the *Event table* page.
 
-1. Add the previously created query called "Full events" to the timeline component
+1. Select the table component and go to the *Settings* pane on the right.
 
-1. Configure grouping on the "Type" column from the query (see [Configuring the timeline component](xref:DashboardTimeline#configuring-the-component))
+1. Under *Actions*, next to *On double-click*, click *Configure actions*.
 
-1. Go to "Settings" and set the "Default time range" to "Last and next 12 hours"
+1. Select the action *Open a panel*, and configure it so that the *Event form* panel is opened when the table is double-clicked.
 
-### Link time range to timeline
+   ![Actions configured on double-click](~/user-guide/images/Tutorial_events_app_double_click_actions.png)
 
-Here we will link the time ranges from the timeline and the time range component to each other. This will make sure the timeline updates its viewport when we select a quick pick from the time range component, and that the time range updates when we pan in the timeline.
+## Step 7: Configure the timeline overview page
 
-1. On the "Settings" tab from the timeline component, select the icon next to "Link time range"
+In this step, you will add a title, a time range component, and a timeline component, and then link the latter two components to one another so that the timeline updates its viewport when a time range is selected, and that the time range selection updates automatically when a user pans in the timeline.
 
-1. Select the time range component to link the time ranges
+1. Add a title component:
 
-1. Go to the "Data tab", under "Components" take the "Timespans" property from the "Viewport" of the timeline component and drag this onto the time range component
+   1. Drag a [web component](xref:DashboardWeb) onto the page and and position it in the top-left corner.
 
-### Configure actions on the time line
+   1. Make sure the component is selected and select the *Settings* pane on the right.
 
-In this section we will add support for different actions on the timeline like drag and dropping events or changing the start and endtime of an event by dragging the edges.
+   1. Make sure *Type* is set to *Custom HTML* and paste the following custom HTML in the *HTML* box:
+
+      ```html
+      <div>
+      <h1>Timeline</h1>
+      </div>
+      <style>
+      div {
+         font-family: Segoe UI, sans-serif;
+         line-height: .6;
+         font-size: 16px;
+         color: 464646;
+         display: flex;
+         align-items: end;
+         height: 100%
+      }
+
+      p {
+         margin: 0
+      }
+
+      [data-b] {
+         color: rgb(0, 191, 239)
+      }
+
+      [data-y] {
+         color: rgb(255, 179, 0)
+      }
+
+      [data-p] {
+         color: rgb(255, 0, 107)
+      }
+      </style>
+      ```
+
+1. Add a time range component:
+
+   1. Drag a [time range component](xref:DashboardTimeRange) onto the page so that it is located to the right of the title.
+
+   1. Make sure the component is selected and select the *Settings* pane on the right.
+
+   1. In the *Default range* box, select *Last and next 12 hours*.
+
+   1. Go to the *Layout* pane, expand the *Presets* section, and clear all checkboxes to disable all presets.
+
+   1. Select *Use quick picks*, and select the quick pick buttons you want to add to the component.
+
+1. Add a timeline component:
+
+   1. Drag a [timeline component](xref:DashboardTimeline) onto the page so that it is located underneath the title and the time range component.
+
+   1. From the *Data* pane, drag the previously created query *Full events* onto the timeline component.
+
+   1. Expand the *Full events* query in the *Data* pane, and drag the *Type* column to the blue grouping icon that will appear on top of the timeline component.
+
+      ![Group the timeline based on type](~/user-guide/images/Tutorial_events_app_group_on_type.png)
+
+      This will group the events on the timeline based on their type.
+
+   1. In the *Settings* pane, set *Default time range* to *Last and next 12 hours*, so that it is the same as for the time range component.
+
+1. Link the time range to the timeline and vice versa:
+
+   1. Make sure the timeline component is selected, go to the *Settings* pane, and click the icon next to *Link time range*.
+
+   1. In the *Link to* box, select the time range component, and click *Link*.
+
+   1. In the *Data* pane, expand *Components* > *Timeline X* (e.g. *Timeline 3*) > *Viewport*, and drag the *Timespans* item below this onto the time range component
+
+## Step 8: Configure actions on the timeline
+
+In this step, you will further configure the timeline so that users will be able to drag and drop events and to change the start and end time of an event by dragging its edges.
+
+> [!IMPORTANT]
+> Make sure an event is selected in the timeline before you continue. Otherwise, you will not be able to select the event for the actions.
+
+1. Select the timeline component and go to the *Settings* pane.
+
+1. Next to *On item resize*, click *Configure actions*, and configure the actions as follows:
+
+   1. Select *Launch a script* to add a script action.
+
+   1. Select the *Event manager - Update event* script.
+
+   1. Expand the *Parameters* section, and click the link icon next to the *Event ID* box.
+
+   1. Link to *Event info*, with the type *Current item/Tables*, and the property *ID*.
+
+      ![Link "Event ID" to the ID property](~/user-guide/images/Tutorial_events_link_to_event_info.png)
+
+   1. Click the link icon for the *From* parameter, and link it to *Event info*, with the type *New/Timespans*, and the property *From*.
+
+   1. Click the link icon for the *Until* parameter, and link it to *Event info*, with the type *New/Timespans*, and the property *To*.
+
+   1. Click *+ Upon completion*.
+
+   1. Add a component action *Fetch the data* on the timeline, and click *OK*.
+
+1. Back in the *Settings* pane, next to *On item move*, click *Configure actions*, and add the same actions as for *On item resize*.
 
 > [!TIP]
-> For more information on how to configure events and actions on the timeline component go to [Configuring events and actions on the timeline component](xref:DashboardTimeline#configuring-events-and-actions)
-
-> [!WARNING]
-> Make sure you select an event in the timeline before you continue. If you do not do this you will not be able to select the event for the actions.
-
-1. Select the timeline component and go to the "Settings" tab
-
-1. Configure the actions for "On item resize"
-    1. Add an action "Launch a script" and select the "Event manager - Update event" script
-    1. Link the "Event ID" parameter to the ID of the selected event
-        1. Link to "Event info"
-        1. Type: "Current item/Tables"
-        1. Property: "ID"
-    1. Link the "From" parameter to the new start time of the event
-        1. Link to "Event info"
-        1. Type: "New/Timespans"
-        1. Property: "From"
-    1. Link the "Until" parameter to the new end time of the event
-        1. Link to "Event info"
-        1. Type: "New/Timespans"
-        1. Property: "To"
-    1. Add a component action "Fetch the data" on the timeline
-
-1. Configure the actions for "On item move"
-    Repeat the same steps as for the "On item resize" event.
+> For more information on how to configure events and actions on a timeline component, see [Configuring events and actions on the timeline component](xref:DashboardTimeline#configuring-events-and-actions).
