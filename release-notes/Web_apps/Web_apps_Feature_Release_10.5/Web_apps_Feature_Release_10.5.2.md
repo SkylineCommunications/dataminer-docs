@@ -41,6 +41,17 @@ This type of action will allow users to copy a value\* to their Windows clipboar
 
 *\*This can be a fixed value, but also a component data entry, a value from a flow or a variable.*
 
+#### DataMiner upgrade: New upgrade action will update web.config settings [ID 41813]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+As the *web.config* file of the web API can contain custom settings, neither a full DataMiner upgrade nor a web-only DataMiner upgrade will replace that file.
+
+From now on, during either a full DataMiner upgrade or a web-only DataMiner upgrade, a new upgrade action will be executed to check the *web.config* file for outdated settings. If such settings are found, the file will be updated.
+
+> [!NOTE]
+> Up to now, in some cases, communication via WebSockets would not work when the *web.config* file contained outdated settings. As this new upgrade action will now make sure the *web.config* file is up to date, most WebSocket issues should now be prevented. 
+
 ## Changes
 
 ### Enhancements
