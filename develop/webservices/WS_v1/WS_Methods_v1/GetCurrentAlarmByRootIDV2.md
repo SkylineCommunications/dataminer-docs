@@ -8,6 +8,9 @@ Use this method to retrieve the current alarm associated with a particular root 
 
 Available from DataMiner 10.0.7 onwards.
 
+> [!NOTE]
+> From DataMiner 10.6.0/10.5.1 onwards, when Swarming is enabled, use the [GetCurrentAlarmByRootIDV3](xref:GetCurrentAlarmByRootIDV3) method instead.
+
 ## Input
 
 | Item        | Format  | Description                                          |
