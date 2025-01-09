@@ -147,6 +147,12 @@ From now on, when that message appears, the cause of the error will be added to 
 
 When you open the *Version history* pane of a low-code app, it will now also display the version numbers.
 
+#### Monitoring app is now compatible with new alarm IDs [ID 41060]
+
+<!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
+
+The Monitoring app is now fully compatible with the new alarms IDs that will be used on systems with Swarming enabled.
+
 #### Dashboards/Low-Code Apps: Data type 'String' and 'Query row' have been renamed to 'Text' and 'Table' [ID 41075]
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
