@@ -39,6 +39,12 @@ In *System Center > Users/Groups > Groups*, it is now possible to select a user 
 
 A number of minor enhancements have been made to the DataMiner Cube desktop app with regard to configuration file management.
 
+#### DataMiner Cube can no longer be deployed as a ClickOnce XBAP application [ID 41869] [ID 41873]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+From now on, it will no longer be possible to deploy DataMiner Cube as a ClickOne XBAP application.
+
 ### Fixes
 
 #### Alarm Console: Alarms generated during the last week of 2024 would not be grouped correctly [ID 41867]
