@@ -25,9 +25,17 @@ Throughout its lifespan, the extension can use the [IGQILogger](xref:GQI_IGQILog
 
 Log files are created for both types of extensions, each within their respective subfolders:
 
-- For ad hoc data sources: *C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources*
+- [GQI DxM](xref:GQI_DxM):
 
-- For custom operators: *C:\Skyline DataMiner\Logging\GQI\Custom operators*
+  - For ad hoc data sources: *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Ad hoc data sources*
+
+  - For custom operators: *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Custom operators*
+
+- SLHelper:
+
+  - For ad hoc data sources: *C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources*
+
+  - For custom operators: *C:\Skyline DataMiner\Logging\GQI\Custom operators*
 
 Log file names adhere to the following format: *Script_Library_Type.txt*.
 

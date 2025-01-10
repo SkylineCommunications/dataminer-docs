@@ -6,11 +6,14 @@ uid: GQI_Logging
 
 Logging for GQI is available from DataMiner 10.4.0/10.4.4 onwards.<!-- RN 38870 -->
 
-Errors and warnings are logged to log files in the folder `C:\Skyline DataMiner\Logging\GQI`.
+Errors and warnings are logged to log files in the folder:
+
+* [GQI DxM](xref:GQI_DxM): `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs`
+* SLHelper: `C:\Skyline DataMiner\Logging\GQI`
 
 If this folder does not exist, it will be created automatically with the first log.
 
-From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, information about SLNet requests is also logged to the log files in the `C:\Skyline DataMiner\Logging\GQI` folder, if the minimum log level is set to *Debug* or lower.
+From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, information about SLNet requests is also logged to the log files in the logging folder, if the minimum log level is set to *Debug* or lower.
 
 > [!NOTE]
 > The logs are buffered and written asynchronously, so it may take a few seconds for them to appear in the file.
@@ -20,7 +23,12 @@ From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, information about SLNet req
 
 ## Metrics
 
-From DataMiner 10.4.0 [CU3]/10.4.5 onwards<!-- RN 39098 -->, metrics such as the duration of individual GQI requests are also logged, in the folder `C:\Skyline DataMiner\Logging\GQI\Metrics`. These can be used to investigate potential performance issues.
+From DataMiner 10.4.0 [CU3]/10.4.5 onwards<!-- RN 39098 -->, metrics such as the duration of individual GQI requests are also logged, in the folder:
+
+* [GQI DxM](xref:GQI_DxM): `C:\ProgramData\Skyline Communications\DataMiner GQI\Metrics`
+* SLHelper: `C:\Skyline DataMiner\Logging\GQI\Metrics`
+
+These can be used to investigate potential performance issues.
 
 Currently, the following kinds of metrics are logged:
 
@@ -50,7 +58,41 @@ You can change the minimum log level to include less or more information in the 
 
 From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, when you change the minimum log level to *Debug* or lower, information about requests sent to SLNet is also logged.
 
-To change the minimum log level, change the configuration in the *appSettings* section in *C:\Skyline DataMiner\Files\SLHelper.exe.config*. For example:
+### Change the minimum log level (GQI DxM)
+
+If it does not exist yet, create the file `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.custom.json`.
+
+Add the following configuration:
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Debug",
+      "Microsoft": "Information"
+    }
+  },
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "Microsoft": "Information",
+      }
+    }
+  },
+  "GQIOptions": {
+    "Extensions": {
+      "Logging": {
+        "MinimumLogLevel": "Information"
+      }
+    }
+  }
+}
+```
+
+### Change the minimum log level (SLHelper)
+
+Change the configuration in the *appSettings* section in *C:\Skyline DataMiner\Files\SLHelper.exe.config*. For example:
 
 ```xml
 <appSettings>
@@ -66,4 +108,4 @@ To change the minimum log level, change the configuration in the *appSettings* s
 For some requests, from DataMiner 10.4.0 [CU3]/10.4.5 onwards<!-- RN 39098 -->, the query name is included in the logging. However, if you set the minimum log level to *Debug*, the full query is logged instead.
 
 > [!NOTE]
-> Any changes to the configuration file are reset after a full DataMiner upgrade or downgrade.
+> Any changes to the configuration file *SLHelper.exe.config* are reset after a full DataMiner upgrade or downgrade.
