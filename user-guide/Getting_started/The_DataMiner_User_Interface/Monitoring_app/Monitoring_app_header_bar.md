@@ -17,7 +17,20 @@ The Monitoring app header bar contains the following items, from left to right:
 
 - Search box (3): The box in the middle of the header bar allows you to search the app. When you activate the box, a list of suggestions is displayed below it, based on the recent items list. This list of suggestions gets updated with search results as soon as you type in the box. Select a suggestion in the list to open the corresponding card.
 
-- WebSocket connection status (4): Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38676-->. This indicator shows the current status of your WebSocket connection. The available statuses include:
+- WebSocket connection status (4): Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41669-->. This banner shows the current status of your WebSocket connection. If no banner is displayed, the connection is successful and stable. The available statuses include:
+
+  - The connection is offline: A red banner with the message `You are offline` is displayed.
+
+    > [!NOTE]
+    > If your connection is offline, a red "x" icon is also displayed on the user button (5).
+
+  - The connection has been interrupted: An orange banner with the message `Connection has been interrupted` is displayed.
+
+  - The connection is being re-established: An orange banner with the message `Busy recovering connection...` is displayed.
+
+  - The connection has been re-established: A green banner with the message `Connection recovered` is displayed.
+
+  From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4<!--RN 38676--> to DataMiner 10.4.0 [CU10]/10.5.1<!--RN 41669-->, a dedicated WebSocket connection status icon is displayed next to the user button in the header bar instead. The available statuses include:
 
   - ![Successful connection](~/user-guide/images/MA_Successful.png) : A stable connection with instant updates.
 
