@@ -268,15 +268,25 @@ Actions:
 
   DataMiner Systems may experience performance issues because of the high number of interactions when using SLNet Subscriptions for specific actions. In DataMiner 10.3.12, improvements were made to increase the efficiency of these interactions, with further enhancements added in DataMiner 10.4.6.
 
-- Only applicable to Skyline employees: Check whether dataminer.services is queueing with [Microsoft Azure](https://portal.azure.com/#view/AppInsightsExtension/WorkbookViewerBlade/ComponentId/azure%20monitor/ConfigurationId/%2Fsubscriptions%2Fc1a16bf4-039a-4778-8053-72e813c52ca4%2Fresourcegroups%2Frg-workbooks%2Fproviders%2Fmicrosoft.insights%2Fworkbooks%2Fd36c92a8-ef00-4c26-bf09-13962d3b705d/WorkbookTemplateName/Shared%20Cloud%20Storage).
+- Only applicable to Skyline employees: Use the Microsoft Azure monitoring tool to check for delays on Azure's side:
 
-  - EventHub: Throttled requests by EventHub.
+  1. Open the [Microsoft Azure monitoring tool](https://portal.azure.com/#view/AppInsightsExtension/WorkbookViewerBlade/ComponentId/azure%20monitor/ConfigurationId/%2Fsubscriptions%2Fc1a16bf4-039a-4778-8053-72e813c52ca4%2Fresourcegroups%2Frg-workbooks%2Fproviders%2Fmicrosoft.insights%2Fworkbooks%2Fd36c92a8-ef00-4c26-bf09-13962d3b705d/WorkbookTemplateName/Shared%20Cloud%20Storage).
 
-  - Events: Event queue time. Check the instance that is used by the DMA:
+  1. Check the following sections for visual indicators of delays:
 
-    - weu = West Europe.
+     - *EventHub* tab: Look at the graph labeled "Throttled requests by EventHub".
 
-    - uks = UK South.
+     - *Events* tab: Look at the graph labeled "Event queue time".
+
+  1. In both graphs, you can filter data by:
+
+     - Time range
+
+     - Instance (i.e. the endpoint used by the DMA):
+
+       - `weu` = West Europe.
+
+       - `uks` = UK South.
 
 - Verify the upload and download bandwidth usage by contacting the IT department.
 
