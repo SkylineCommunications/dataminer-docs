@@ -35,4 +35,4 @@ In some rare cases, the element state of a DVE or Virtual Function element would
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-When the same version of a DVE connector was uploaded twice, in some cases, the production version of all DVE child elements using an older version of that connector as production version would incorrectly have their production version set to the newly uploaded version.
+When the same version of a DVE connector was uploaded twice, the production version of all DVE child elements using another version of that connector as production version would incorrectly have their production version set to the newly uploaded version.

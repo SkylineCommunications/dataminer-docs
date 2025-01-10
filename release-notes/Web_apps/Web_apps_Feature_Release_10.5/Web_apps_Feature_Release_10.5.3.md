@@ -28,4 +28,8 @@ uid: Web_apps_Feature_Release_10.5.3
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards/Low-Code Apps - Timeline component: Problem with custom timezones [ID 41839]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When using a custom timezone, in some cases, that timezone would not be applied correctly in action configurations or when linking to certain components.
