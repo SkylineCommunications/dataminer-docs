@@ -15,7 +15,11 @@ uid: General_Main_Release_10.4.0_CU12
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### SLLogCollector packages now also contain the ClusterEndpoints.json file [ID 41887]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
 ### Fixes
 
