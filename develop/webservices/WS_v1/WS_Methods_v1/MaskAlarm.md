@@ -6,6 +6,9 @@ uid: MaskAlarm
 
 Use this method to mask an alarm for a certain period of time.
 
+> [!NOTE]
+> From DataMiner 10.6.0/10.5.1 onwards, when Swarming is enabled, use the [MaskAlarmV2](xref:MaskAlarmV2) method instead.
+
 ## Input
 
 | Item | Format | Description |
