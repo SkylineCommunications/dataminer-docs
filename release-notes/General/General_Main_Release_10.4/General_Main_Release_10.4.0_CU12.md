@@ -24,3 +24,7 @@ uid: General_Main_Release_10.4.0_CU12
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When DataMiner was restarted, an issue could occur, causing the DATAMINER_NOTIFICATION_QUEUE thread not to be registered in processes like SLDMS, SLElement or SLDataGateway. These missing threads could then lead to a number of symptoms like empty element data cards or not being able to swarm back elements.
+
+#### Problem with incorrect virtual element states [ID 41705]
+
+In some rare cases, the element state of a DVE or Virtual Function element would end up incorrect in the SLNet cache, causing some caches to not be initialized correctly.
