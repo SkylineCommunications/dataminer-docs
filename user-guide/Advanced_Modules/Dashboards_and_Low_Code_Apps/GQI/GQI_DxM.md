@@ -16,7 +16,7 @@ Running GQI as an extension module benefits from several key improvements:
 
 ## Installation
 
-The GQI DxM gets installed automatically when installing or upgrading to DataMiner version 10.5.2/10.5.0.<!-- RN 41811 -->
+The GQI DxM is supported from DataMiner 10.5.0 onwards. It gets installed or updated automatically from DataMiner version 10.5.2/10.5.0 onwards. The GQI DxM also gets updated when installing a web-only upgrade package.<!-- RN 41811 -->
 
 > [!IMPORTANT]
 > By default, DataMiner web applications will continue using the SLHelper process for GQI-related operations. To switch to the new GQI DxM, see the instructions below.
@@ -38,7 +38,7 @@ The WebAPI process will automatically restart upon saving the file. Once this se
 
 ## Architecture
 
-The GQI DxM comprises multiple processes that work together to handle GQI requests and execute core functionalities efficiently. The architecture ensures modularity, scalability, and efficient communication between the different components.
+The GQI DxM comprises multiple processes that work together to handle GQI requests and execute these efficiently. The architecture ensures modularity, scalability, and efficient communication between the different components.
 
 ### Parent process (DataMiner GQI.exe - Windows Service)
 
@@ -62,7 +62,7 @@ Facilitates communication between GQI extensions and the DataMiner Agent (DMA) t
 
 ## Configuration
 
-Below you can find an overview of the different settings you can configure in the file *C:\\Program Files\\Skyline Communications\\DataMiner GQI\\appsettings.custom.json*. Do not edit *appsettings.json* since this file gets overwritten when installing a new version.
+Below you can find an overview of the different settings you can configure in the file *C:\\Program Files\\Skyline Communications\\DataMiner GQI\\appsettings.custom.json*. Do not edit *appsettings.json* since this file gets overwritten when a new version of the GQI DxM gets installed.
 
 ### Logging
 
