@@ -45,7 +45,9 @@ To configure an event to launch a script:
 1. Optionally, click the *Show settings* button to configure [script execution options](xref:Script_execution_options).
 
 > [!NOTE]
-> Data can often contain multiple values, and therefore the values will be wrapped in a JSON array. To be consistent, this will also be the case when only a single value is provided.
+>
+> - Data can often contain multiple values, and therefore the values will be wrapped in a JSON array. To be consistent, this will also be the case when only a single value is provided.
+> - From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41495-->, when an interactive Automation script is launched using the *Launch a script* event and the parameter *useNewIASInputComponents=true* has been added to the URL of the low-code app, the latest version of the interactive Automation script UI is displayed. If the parameter is set to "false" or omitted from the URL, the low-code app will use the old UI to display the interactive Automation script.
 
 > [!IMPORTANT]
 > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!-- RN 39027 -->, linking a script parameter to empty data (or to an empty feed, prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->) will fill it with an empty array. The dialog to manually enter a parameter will no longer be shown when the action is launched. This change can break existing implementations when it is not handled by the script.
