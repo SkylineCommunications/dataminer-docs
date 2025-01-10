@@ -38,4 +38,8 @@ uid: General_Feature_Release_10.5.3
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Missing DATAMINER_NOTIFICATION_QUEUE thread [ID 41699]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When DataMiner was restarted, an issue could occur, causing the DATAMINER_NOTIFICATION_QUEUE thread not to be registered in processes like SLDMS, SLElement or SLDataGateway. These missing threads could then lead to a number of symptoms like empty element data cards or not being able to swarm back elements.
