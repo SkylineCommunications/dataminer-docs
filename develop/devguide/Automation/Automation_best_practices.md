@@ -24,6 +24,21 @@ Keep the following best practices in mind:
 
   By default, DataMiner generates an information event when an Automation script is started and when it finishes.
 
-  In case you run the script from code, you can add `SKIP_STARTED_INFO_EVENT:TRUE` in the options array of the *ExecuteScriptMessage* message.
+  In case you run the script from code, you can add `SKIP_STARTED_INFO_EVENT:TRUE` in the options array of the *ExecuteScriptMessage* message. From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, this option is automatically added when an Automation script is triggered by the Correlation engine.
+
+  > [!NOTE]
+  > If you no longer want information events to be automatically skipped for Automation scripts triggered by the Correlation engine, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to "false":
+  >
+  > ``` xml
+  > <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+  >     ...
+  >     <SLNet>
+  >         ...
+  >         <SkipInformationEvents>false</SkipInformationEvents>
+  >         ...
+  >     </SLNet>
+  >     ...
+  > </MaintenanceSettings>
+  > ```
 
   If you have created an Automation script that launches subscripts, use the [SkipStartedInfoEvent](xref:Skyline.DataMiner.Automation.SubScriptOptions.SkipStartedInfoEvent) option so that these information events are not generated for the subscripts. From DataMiner 10.4.12/10.5.0 onwards, these information events will be skipped by default. <!-- RN 40867 -->
