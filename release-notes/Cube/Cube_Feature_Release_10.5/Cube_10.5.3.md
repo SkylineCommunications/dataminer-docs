@@ -41,4 +41,8 @@ A number of minor enhancements have been made to the DataMiner Cube desktop app 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Alarm Console: Alarms generated during the last week of 2024 would not be grouped correctly [ID 41867]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+In the Alarm Console, alarms generated during the last week of 2024 (i.e. week 53) would not be grouped correctly.
