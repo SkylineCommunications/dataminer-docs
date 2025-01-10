@@ -18,7 +18,15 @@ uid: Web_apps_Feature_Release_10.5.3
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards/Low-Code Apps: Support for variables of type Boolean [ID 41845]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When editing a dashboard or a low-code app, you can now also create variables of type Boolean.
+
+Also, boolean values can now be passed in the URL of a dashboard. See the following example of a query parameter:
+
+`?data={"components": [{"cid":1, "select": {"booleans": ["true"]}}]}`
 
 ## Changes
 
