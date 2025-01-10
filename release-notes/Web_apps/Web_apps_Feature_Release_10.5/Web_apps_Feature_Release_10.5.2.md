@@ -30,21 +30,9 @@ Up to now, all GQI-related operations were executed by the SLHelper process, whi
 - System load by GQI operations can now be balanced among the different DataMiner Agents in a DMS.
 
 > [!IMPORTANT]
-> Until further notice, the DataMiner web apps will continue to use the SLHelper process to execute GQI-related operations. If you want them to use the new GQI DxM instead, update the *C:\\Skyline DataMiner\\Webpages\\web.config* file accordingly.
+> Until further notice, the DataMiner web apps will continue to use the SLHelper process to execute GQI-related operations. If you want them to use the new GQI DxM instead, update the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file accordingly.
 
-##### Specifying when idle child processes should be terminated
-
-When the GQI DxM is used, in the *C:\\Program Files\\Skyline Communications\\DataMiner GQI\\appsettings.json* file, you can specify when idle child processes should be terminated.
-
-See the following example. In this case, idle child processes will be terminated within WorkerExpiration + 30 seconds.
-
-```json
-"GQIOptions": {
-    "Extensions": {
-      "WorkerExpiration": "1.00:00:00",
-    },
-}
-```
+See [GQI DxM](xref:GQI_DxM) for more information.
 
 #### Dashboards/Low-Code Apps: New variable 'DMAIP' [ID 41561]
 
