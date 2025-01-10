@@ -12,7 +12,7 @@ The main principle to keep in mind is that the documentation in the Catalog shou
 
 When you create documentation for an item in the DataMiner Catalog, focus on showcasing the value of the item in a concise and engaging way, while keeping the technical details to a minimum. Use this structure to ensure clarity and consistency, and make sure to [include visuals](#visuals) in your text:
 
-1. [Overview](#overview-section)
+1. [About](#about-section)
 
 1. [Key Features](#key-features-section)
 
@@ -55,7 +55,7 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 - Avoid **unnecessary blank space** by resizing the window when taking a screen capture.
 - Make sure not to show any **confidential data**. Blur any sensitive data, but keep the data that is not sensitive visible to still have a useful image.
 
-## Overview section
+## About section
 
 **Purpose:** Summarize what makes the item valuable and why users should deploy it. Address the problems it solves and its primary benefits.
 
@@ -63,8 +63,8 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 
 **Do's:**
 
-- Begin with a concise **introductory paragraph** focused on the item’s value.
-- Add **up to 3 additional paragraphs** elaborating on features or key use cases.
+- Begin with a concise **introductory paragraph** focused on the describing the item.
+- Add **up to 3 additional paragraphs** summarizing the value the item brings.
 - Keep the tone **professional**, focused on **motivating** user adoption.
 - Highlight important points with **bold text**.
 - **Organize content** from broad benefits to specific features and practical applications.
@@ -76,6 +76,8 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 - Avoid **excessive technical details**; link to reference documentation instead.
 - Avoid jargon or **overly complex language** that could obscure the message.
 - Avoid **excessive** amounts of **bold text and/or alerts**, as these then lose their purpose of drawing the reader's attention.
+- Do not refer to **DataMiner generic benefits** such as alarming, trending. Instead focus on the value this specific item brings.
+- Do not **duplicate** points covered by the **Key Features** and **Use Cases** sections.
 
 ## Key Features section
 
