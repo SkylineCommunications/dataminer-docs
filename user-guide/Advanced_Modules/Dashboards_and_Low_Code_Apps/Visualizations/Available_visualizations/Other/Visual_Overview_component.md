@@ -23,10 +23,7 @@ To configure this component:
 1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Customize_Component_Layout).
 
 > [!NOTE]
->
-> - Spectrum components are currently not yet supported in visual overviews within dashboards or low-code apps.
-> - Quick filters are supported for table parameters in visual overview components. See [Using quick filters](xref:Using_quick_filters).
-> - In versions prior to DataMiner 10.4.10<!--RN 40497-->, when you have multiple components that show the same visual overview with user context (e.g. a visual overview with card variables), the contexts of those components are shared. For example, if you click a button on one component, the same action will be mirrored on the other component.
+> Quick filters are supported for table parameters in visual overview components. See [Using quick filters](xref:Using_quick_filters).
 
 ## Zooming
 
@@ -49,3 +46,25 @@ Zooming functionalities are available for the Visual Overview component.
   - To zoom in, scroll up.
 
   - To zoom out, scroll down.
+
+## Unsupported capabilities
+
+The visual overviews shown in the DataMiner web apps are a lightweight version of their Cube counterparts. As such, not all functionality that is available in Cube will also be available in the web apps. Below, you can find a list of the main features that are not available in the web apps. However, note that this list is **not exhaustive**.
+
+- Spectrum components.
+
+- Interactivity features of the DataMiner Connectivity Framework (DCF), such as being able to click connection lines.
+
+- Alarm list components.
+
+- Drag/drop functionalities.
+
+- Router Control components.
+
+- Dynamic list components.
+
+There are also some differences in functionality:
+
+- If you navigate to an element, service, or view from a visual overview in a DataMiner web app, this will always open the Monitoring app, even if the visual overview is embedded in a dashboard or low-code app.
+
+- Prior to DataMiner 10.4.10<!--RN 40497-->, when you have multiple components that show the same visual overview with user context (e.g. a visual overview with card variables), the contexts of those components are shared. For example, if you click a button on one component, the same action will be mirrored on the other component.
