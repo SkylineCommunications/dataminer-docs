@@ -18,7 +18,16 @@ uid: Cube_Feature_Release_10.5.3
 
 ## New features
 
-*No new features have been added yet.*
+#### System Center: Copying user permissions from one user group to one or more other user groups [ID 41803]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+In *System Center > Users/Groups > Groups*, it is now possible to select a user group, click the *Copy rights...* button, and then copy the user permissions of the user group you selected to one or more other user groups.
+
+> [!NOTE]
+>
+> - The *Copy rights...* button will only be available if there are no pending changes to the user permissions in the user group you selected.
+> - Users can only copy user permissions to user groups they are allowed to edit. If you do not have permission to edit any of the user groups, a "No groups available" message will appear.
 
 ## Changes
 
