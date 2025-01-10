@@ -55,12 +55,11 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 
 **Purpose:** Summarize what makes the item valuable and why users should deploy it. Address the problems it solves and its primary benefits.
 
-**Format:** One introductory paragraph with up to 3 supporting paragraphs, of 3 to 4 sentences each.
+**Format:** A digestable, comprehensive and rather small piece of text.
 
 **Do's:**
 
-- Begin with a concise **introductory paragraph** focused on the describing the item.
-- Add **up to 3 additional paragraphs** summarizing the value the item brings.
+- Limit the content to the essentials, keep it short and well organized. When required for clarity, a few paragraphs can optionally be made.
 - Keep the tone **professional**, focused on **motivating** user adoption.
 - Highlight important points with **bold text**.
 - **Organize content** from broad benefits to specific features and practical applications.
