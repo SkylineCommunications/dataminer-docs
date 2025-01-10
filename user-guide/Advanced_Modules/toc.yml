@@ -374,6 +374,8 @@ items:
                 topicUid: Tutorial_Apps_Grid
               - name: Creating a visually appealing and user-friendly low-code app
                 topicUid: Tutorial_App_Design
+              - name: Creating a custom event scheduler low-code app
+                topicUid: Tutorial_Custom_Event_Scheduler_LCA
       - name: Configuring components
         topicUid: Configuring_components
         items:
