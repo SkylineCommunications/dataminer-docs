@@ -33,7 +33,11 @@ In *System Center > Users/Groups > Groups*, it is now possible to select a user 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner Cube desktop app: Enhanced configuration file management [ID 41808]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+A number of minor enhancements have been made to the DataMiner Cube desktop app with regard to configuration file management.
 
 ### Fixes
 
