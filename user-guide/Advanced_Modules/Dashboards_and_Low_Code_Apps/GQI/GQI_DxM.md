@@ -8,7 +8,7 @@ The GQI DxM is a [DataMiner Extension Module (DxM)](xref:DataMinerExtensionModul
 
 Running GQI as an extension module benefits from several key improvements:
 
-* Independent updates: GQI can be updated independently from the main DataMiner core software, eliminating the need for a core software restart during updates.
+* Independent updates: using a [web-only upgrade package](xref:Upgrading_Downgrading_Webapps), GQI can be updated independently from the main DataMiner core software, eliminating the need for a core software restart during updates.
 * Load balancing: GQI operations can now distribute system load more effectively across multiple DataMiner Agents within a DataMiner System (DMS).
 * Resource visibility: enhanced monitoring capabilities provide greater insight into the resource consumption of individual extensions.
 * Improved dependency resolving: simplifies and optimizes the resolution of DLL dependencies, avoiding conflicts.
