@@ -284,9 +284,11 @@ Actions:
 
      - Instance (i.e. the endpoint used by the DMA):
 
-       - `weu` = West Europe.
+       - weu = West Europe.
 
-       - `uks` = UK South.
+       - uks = UK South.
+
+     ![Throttled Requests by EventHub](xref:Throttled_Requests_By_EventHub.png)
 
 - Verify the upload and download bandwidth usage by contacting the IT department.
 
