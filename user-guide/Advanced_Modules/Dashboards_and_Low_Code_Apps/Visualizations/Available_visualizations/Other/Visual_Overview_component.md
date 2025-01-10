@@ -23,7 +23,6 @@ To configure this component:
 1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Customize_Component_Layout).
 
 > [!NOTE]
->
 > Quick filters are supported for table parameters in visual overview components. See [Using quick filters](xref:Using_quick_filters).
 
 ## Zooming
@@ -48,18 +47,24 @@ Zooming functionalities are available for the Visual Overview component.
 
   - To zoom out, scroll down.
 
-## Unsupported Capabilities
+## Unsupported capabilities
 
-> [!NOTE]
->
-> This list is not complete.
+The visual overviews shown in the DataMiner web apps are a lightweight version of their Cube counterparts. As such, not all functionality that is available in Cube will also be available in the web apps. Below, you can find a list of the main features that are not available in the web apps. However, note that this list is **not exhaustive**.
 
-Mobile Visual Overviews were always considered a lightweight version of their Cube counterparts. It's therefore never been guaranteed that the same functionalities will work there as well.
+- Spectrum components.
 
-- Spectrum components
-- In versions prior to DataMiner 10.4.10<!--RN 40497-->, when you have multiple components that show the same visual overview with user context (e.g. a visual overview with card variables), the contexts of those components are shared. For example, if you click a button on one component, the same action will be mirrored on the other component.
-- DataMiner Connectivity Framework (DCF) lacks much of its interactivity features, such as being able to click connection lines.
-- Navigating to elements/services/views will always open the monitoring app, even if you are within the context of a Dashboard or Low Code App.
-- Components/Apps that do not exist as visualizations in mobile such as Router Control, Dynamic List...
+- Interactivity features of the DataMiner Connectivity Framework (DCF), such as being able to click connection lines.
+
 - Alarm list components.
-- Drag/Drop functionalities.
+
+- Drag/drop functionalities.
+
+- Router Control components.
+
+- Dynamic list components.
+
+There are also some differences in functionality:
+
+- If you navigate to an element, service, or view from a visual overview in a DataMiner web app, this will always open the Monitoring app, even if the visual overview is embedded in a dashboard or low-code app.
+
+- Prior to DataMiner 10.4.10<!--RN 40497-->, when you have multiple components that show the same visual overview with user context (e.g. a visual overview with card variables), the contexts of those components are shared. For example, if you click a button on one component, the same action will be mirrored on the other component.

@@ -19,12 +19,12 @@ flowchart TD
     %% Define blocks %%
     START([Visual Overview])
     Cube([Cube])
-    Mobile([Mobile Only])
+    Mobile([Web apps only])
     Regression([Worked in previous version?])
-    Supported([Functionality supported in Mobile?])
-    ReportIssue([Report Issue])
-    FeatureSuggestion([Feature Suggestion])
-    ConfigIssue([Configuration Issue?])
+    Supported([Functionality supported in web apps?])
+    ReportIssue([Report issue])
+    FeatureSuggestion([Feature suggestion])
+    ConfigIssue([Configuration issue?])
     Dojo([Ask on Dojo])
     Solved([Solved?])
     Nice([Nice!])
@@ -55,10 +55,10 @@ flowchart TD
     class Nice classSolution;
 ```
 
-| **Flow item** | **Meaning** |
+| Flow item | Description |
 |--|--|
-| Cube | Issues you are encountering in DataMiner Cube or issues you found in mobile applications that also occur in DataMiner Cube. |
-| Mobile Only | Issues that **only** occur in mobile applications. |
-| Configuration Issue? | Try to verify if your configuration is correct. Try to isolate the problem by changing placeholders to static values, removing added complexity like shape grouping... For more tips, refer to the [Visual Overview Learning Course](https://community.dataminer.services/courses/visio/) or [DataMiner Dojo Questions](https://community.dataminer.services/questions/). |
-| Functionality supported in Mobile? | For more information on what capabilities are supported in mobile Visual Overviews, please refer to the [Visual Overview Component](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Visual_Overview_component.html) documentation. |
-| [Feature Suggestion](https://community.dataminer.services/feature-suggestions) | Visual Overview is still fully supported, but innovation on this functionality is limited. Posting a feature suggestion or upvoting an existing one can still be useful however to indicate your wishes as a user and maybe shift the priorities of our development.
+| Cube | Issues you have encountered in DataMiner Cube or the web apps that also occur in DataMiner Cube. |
+| Web apps only | Issues that **only** occur in DataMiner web apps. |
+| Configuration issue? | Verify if your configuration is correct. Try to isolate the problem by changing placeholders to static values, removing added complexity like shape grouping, etc. For more tips, refer to the [Visual Overview Learning Course](https://community.dataminer.services/courses/visio/) or [DataMiner Dojo Questions](https://community.dataminer.services/questions/). |
+| Functionality supported in web apps? | For more information on which Visual Overview capabilities are supported in web apps, see [Unsupported capabilities](xref:DashboardVisualOverview#unsupported-capabilities). |
+| Feature suggestion | Visual Overview is still fully supported, but limited innovations are introduced for this functionality at the moment. However, [posting a feature suggestion or upvoting an existing one](https://community.dataminer.services/feature-suggestions) can still be useful to indicate your wishes as a user and possibly shift the priorities of the DataMiner development team. |
