@@ -24,7 +24,13 @@ uid: Web_apps_Feature_Release_10.5.3
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner root page: Links to deprecated DataMiner XBAP and legacy Reports & Dashboards app have now been removed [ID 41844]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When, on the root page of a DataMiner Agent (i.e. `https://myDMA/root/tools`), you click the user icon and then select *Tools*, a *Tools* page will open.
+
+Up to now, this page would still contain links to the XBAP version of DataMiner Cube and to the legacy *Reports & Dashboards* app. As both are now deprecated, the links to both those apps as well as the *Clean DataMiner Cube XBAP Cache* link have now been removed.
 
 ### Fixes
 
@@ -33,3 +39,9 @@ uid: Web_apps_Feature_Release_10.5.3
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When using a custom timezone, in some cases, that timezone would not be applied correctly in action configurations or when linking to certain components.
+
+#### Dashboards/Low-Code Apps - State component: Scale of text would not be updated when the value of the linked parameter changed [ID 41843]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a *State* component was linked to a parameter, and the size of that component was set to "Auto", up to now, the scale of the text would not be updated when the value of the parameter changed. In some cases, this would render the text unreadable.
