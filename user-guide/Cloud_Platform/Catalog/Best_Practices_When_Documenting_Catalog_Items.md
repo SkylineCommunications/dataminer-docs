@@ -24,10 +24,6 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 
    Link to public documentation for more extensive info when necessary.
 
-1. Support
-
-   Include a support sentence, such as "For additional help, reach out to support at [techsupport@skyline.be](mailto:techsupport@skyline.be)".
-
 > [!NOTE]
 > Depending on the size and complexity of your Catalog item, you can combine or exclude some sections. For example, for a very simple item you could leave out the Use Cases section but mention this information under Key Features.
 
