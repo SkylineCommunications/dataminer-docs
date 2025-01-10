@@ -28,6 +28,14 @@ Also, boolean values can now be passed in the URL of a dashboard. See the follow
 
 `?data={"components": [{"cid":1, "select": {"booleans": ["true"]}}]}`
 
+#### Dashboards/Low-Code Apps: Component themes now allow you to specify an accent color [ID 41859]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When customizing a component theme, you can now also specify an accent color.
+
+By default, this accent color will be identical to the app color. For example, in the *Dashboards* app, the accent color will by default be green.
+
 ## Changes
 
 ### Enhancements
