@@ -27,4 +27,12 @@ When DataMiner was restarted, an issue could occur, causing the DATAMINER_NOTIFI
 
 #### Problem with incorrect virtual element states [ID 41705]
 
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
 In some rare cases, the element state of a DVE or Virtual Function element would end up incorrect in the SLNet cache, causing some caches to not be initialized correctly.
+
+#### Uploading the same version of a DVE connector twice would incorrectly cause the production version of DVE child elements to be changed [ID 41798]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When the same version of a DVE connector was uploaded twice, in some cases, the production version of all DVE child elements using an older version of that connector as production version would incorrectly have their production version set to the newly uploaded version.
