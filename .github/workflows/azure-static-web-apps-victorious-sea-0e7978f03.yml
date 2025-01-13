@@ -10,16 +10,6 @@ on:
       - main
 
 jobs:
-  test_job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install AzCopy
-        run: | 
-          wget https://aka.ms/downloadazcopy-v10-linux
-          tar -xvf downloadazcopy-v10-linux
-          sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
-          azcopy --version
-          az --help
   build_job:
     runs-on: windows-latest
     name: Build Job
@@ -93,13 +83,13 @@ jobs:
           rm -f ./_site/404.html
           rm -f ./_site/README.html
           find ./_site -name 'toc.html' -type f -delete
-      # - name: Upload the new files
-      #   run: |
-      #     wget https://aka.ms/downloadazcopy-v10-linux
-      #     tar -xvf downloadazcopy-v10-linux
-      #     sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
-      #     azcopy --version
-      #     az storage blob sync --connection-string ${{ secrets.AZURE_STORAGE_ACCOUNT_DOCS_CONNECTION_STRING }} --source _site --container docs 
+      - name: Upload the new files
+        run: |
+          wget https://aka.ms/downloadazcopy-v10-linux
+          tar -xvf downloadazcopy-v10-linux
+          sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
+          azcopy --version
+          az storage blob sync --connection-string ${{ secrets.AZURE_STORAGE_ACCOUNT_DOCS_CONNECTION_STRING }} --source _site --container docs 
       # - name: Upload the new files
       #   uses: bacongobbler/azure-blob-storage-upload@main
       #   with:
@@ -122,13 +112,13 @@ jobs:
       - name: Unzip artifact for deployment
         run: Expand-Archive -Path _site.zip -DestinationPath ./_site
         shell: pwsh
-      # - name: Upload the new files
-      #   run: |
-      #     wget https://aka.ms/downloadazcopy-v10-linux
-      #     tar -xvf downloadazcopy-v10-linux
-      #     sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
-      #     azcopy --version
-      #     az storage blob sync --connection-string ${{ secrets.AZURE_SA_DOCS_SWA }} --source _site --container $web 
+      - name: Upload the new files
+        run: |
+          wget https://aka.ms/downloadazcopy-v10-linux
+          tar -xvf downloadazcopy-v10-linux
+          sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
+          azcopy --version
+          az storage blob sync --connection-string ${{ secrets.AZURE_SA_DOCS_SWA }} --source _site --container $web 
       # - name: Upload the new files
       #   uses: bacongobbler/azure-blob-storage-upload@main
       #   with:
