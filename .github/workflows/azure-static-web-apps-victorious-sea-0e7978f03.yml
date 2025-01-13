@@ -17,6 +17,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
+      - name: Install AzCopy
+        run: | 
+          wget https://aka.ms/downloadazcopy-v10-linux
+          tar -xvf downloadazcopy-v10-linux
+          sudo rm /usr/bin/azcopy
+          sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
+      - name: AzCopy Version
+        run: azcopy
       - name: Install DocFX
         run: dotnet tool update -g docfx
         env:
@@ -38,12 +46,6 @@ jobs:
         with:
           name: release
           path: _site.zip
-      - name: Install AzCopy
-        run: | 
-          curl -sL https://aka.ms/downloadazcopy-v10-linux | tar -xz
-          sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
-      - name: AzCopy Version
-        run: azcopy
   deploy_job:
     if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
