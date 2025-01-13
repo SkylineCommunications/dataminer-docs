@@ -10,13 +10,9 @@ on:
       - main
 
 jobs:
-  build_job:
-    runs-on: windows-latest
-    name: Build Job
+  test_job:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true
       - name: Install AzCopy
         run: | 
           wget https://aka.ms/downloadazcopy-v10-linux
@@ -25,6 +21,13 @@ jobs:
           sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
       - name: AzCopy Version
         run: azcopy
+  build_job:
+    runs-on: windows-latest
+    name: Build Job
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
       - name: Install DocFX
         run: dotnet tool update -g docfx
         env:
