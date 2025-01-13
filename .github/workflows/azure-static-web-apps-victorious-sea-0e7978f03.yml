@@ -38,7 +38,12 @@ jobs:
         with:
           name: release
           path: _site.zip
-          
+      - name: Install AzCopy
+        run: | 
+          curl -sL https://aka.ms/downloadazcopy-v10-linux | tar -xz
+          sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
+      - name: AzCopy Version
+        run: azcopy
   deploy_job:
     if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
