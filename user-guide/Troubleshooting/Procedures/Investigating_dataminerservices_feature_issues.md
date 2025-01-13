@@ -36,7 +36,7 @@ You can validate this as follows:
 
 If your connection to dataminer.services is valid, but you are still unable to access your DMS remotely with DataMiner Cube, check whether all requirements are met, as detailed under [Accessing your DMS remotely with DataMiner Cube](xref:Accessing_DMS_remotely_with_Cube).
 
-If the issues still persist, contact [tech support](https://skyline.be/contact/tech-support).
+If the issues still persist, [contact tech support](xref:Contacting_tech_support).
 
 ## Validate the internal network configuration
 
@@ -51,4 +51,4 @@ By default, the **internal** communication within the DMS uses TCP port 5100; ho
 
 ## Contact support
 
-If you have tried the procedures above, but the issues still persist, contact [tech support](https://skyline.be/contact/tech-support).
+If you have tried the procedures above, but the issues still persist, [contact tech support](xref:Contacting_tech_support).
