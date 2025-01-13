@@ -20,28 +20,13 @@ The main page of the Dashboards app consists of the following main components:
 
 The header bar contains the following items, from left to right:
 
-- Apps button (1): The button in the top-left corner provides quick access to other DataMiner web apps.
+- Apps button: The button in the top-left corner provides quick access to other DataMiner web apps.
 
-- *Dashboards* button (2): Click this button to return to the main page of the app at any time.
+- *Dashboards* button: Click this button to return to the main page of the app at any time.
 
-- Search box (3): The box in the middle of the header bar allows you to search the app. As soon as you activate the box, a list of suggestions is displayed below it. The list gets updated with new suggestions as you type. Select a suggestion in the list to open the corresponding dashboard or dashboard folder.
+- Search box: The box in the middle of the header bar allows you to search the app. As soon as you activate the box, a list of suggestions is displayed below it. The list gets updated with new suggestions as you type. Select a suggestion in the list to open the corresponding dashboard or dashboard folder.
 
-- WebSocket connection status (4): Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41669-->. This banner shows the current status of your WebSocket connection.
-
-  - The connection is successful: No banner is displayed.
-
-  - The connection is offline: A red banner with the message `You are offline` is displayed.
-
-    > [!NOTE]
-    > If your connection is offline, a red "x" icon is also displayed on the user button (5).
-
-  - The connection has been interrupted: An orange banner with the message `Connection has been interrupted` is displayed.
-
-  - The connection is being re-established: An orange banner with the message `Busy recovering connection...` is displayed.
-
-  - The connection has been re-established: A green banner with the message `Connection recovered` is displayed.
-
-  From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4<!--RN 38676--> to DataMiner 10.4.0 [CU10]/10.5.1<!--RN 41669-->, a dedicated WebSocket connection status icon is displayed next to the user button in the header bar instead. The available statuses include:
+- WebSocket connection status: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4<!--RN 38676--> up to DataMiner 10.4.0 [CU10]/10.5.1. This indicator shows the current status of your WebSocket connection. The available statuses include:
 
   - ![Successful connection](~/user-guide/images/WebSocket_Success.png) : A stable connection with instant updates.
 
@@ -51,7 +36,20 @@ The header bar contains the following items, from left to right:
 
   - ![Establishing connection](~/user-guide/images/WebSocket_Establishing_Connection.gif) : Re-establishing a WebSocket connection. Updates will happen more slowly than usual.
 
-- User button (5): A button with the initials or an image of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
+  From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41669-->, WebSocket connection issues are indicated via colored banners directly below the header bar instead. When the connection is successful, no banner is displayed. Other options include:
+
+  - The connection is offline: A red banner with the message `You are offline` is displayed.
+
+    > [!NOTE]
+    > If your connection is offline, a red "x" icon is also displayed on the user button.
+
+  - The connection has been interrupted: An orange banner with the message `Connection has been interrupted` is displayed.
+
+  - The connection is being re-established: An orange banner with the message `Busy recovering connection...` is displayed.
+
+  - The connection has been re-established: A green banner with the message `Connection recovered` is displayed.
+
+- User button: A button with the initials or an image of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
   - *Settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) (1) and configure whether [specific actions](#the-dashboards-app-details-pane) are pinned to the dashboard header bar (2).
 

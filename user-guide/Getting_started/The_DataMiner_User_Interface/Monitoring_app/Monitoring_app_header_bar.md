@@ -11,18 +11,28 @@ The Monitoring app header bar contains the following items, from left to right:
 
 ![Monitoring app header bar](~/user-guide/images/Monitoring_app_Header_Bar.png)<br>*Monitoring app header bar in DataMiner 10.4.4*
 
-- Apps button (1): The button in the top-left corner provides quick access to other DataMiner web apps.
+- Apps button: The button in the top-left corner provides quick access to other DataMiner web apps.
 
-- *Monitoring* button (2): Click this button to return to the main page of the app at any time.
+- *Monitoring* button: Click this button to return to the main page of the app at any time.
 
-- Search box (3): The box in the middle of the header bar allows you to search the app. When you activate the box, a list of suggestions is displayed below it, based on the recent items list. This list of suggestions gets updated with search results as soon as you type in the box. Select a suggestion in the list to open the corresponding card.
+- Search box: The box in the middle of the header bar allows you to search the app. When you activate the box, a list of suggestions is displayed below it, based on the recent items list. This list of suggestions gets updated with search results as soon as you type in the box. Select a suggestion in the list to open the corresponding card.
 
-- WebSocket connection status (4): Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41669-->. This banner shows the current status of your WebSocket connection. If no banner is displayed, the connection is successful and stable. The available statuses include:
+- WebSocket connection status: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4<!--RN 38676--> up to DataMiner 10.4.0 [CU10]/10.5.1. This indicator shows the current status of your WebSocket connection. The available statuses include:
+
+  - ![Successful connection](~/user-guide/images/WebSocket_Success.png) : A stable connection with instant updates.
+
+  - ![Offline](~/user-guide/images/WebSocket_No_Connection.png) : An offline connection.
+
+  - ![No real-time connection](~/user-guide/images/WebSocket_No_Real-Time_Connection.png) : No real-time connection could be established. Updates will happen more slowly than usual.
+
+  - ![Establishing connection](~/user-guide/images/WebSocket_Establishing_Connection.gif) : Re-establishing a WebSocket connection. Updates will happen more slowly than usual.
+
+  From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41669-->, WebSocket connection issues are indicated via colored banners directly below the header bar instead. When the connection is successful, no banner is displayed. Other options include:
 
   - The connection is offline: A red banner with the message `You are offline` is displayed.
 
     > [!NOTE]
-    > If your connection is offline, a red "x" icon is also displayed on the user button (5).
+    > If your connection is offline, a red "x" icon is also displayed on the user button.
 
   - The connection has been interrupted: An orange banner with the message `Connection has been interrupted` is displayed.
 
@@ -30,17 +40,7 @@ The Monitoring app header bar contains the following items, from left to right:
 
   - The connection has been re-established: A green banner with the message `Connection recovered` is displayed.
 
-  From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4<!--RN 38676--> to DataMiner 10.4.0 [CU10]/10.5.1<!--RN 41669-->, a dedicated WebSocket connection status icon is displayed next to the user button in the header bar instead. The available statuses include:
-
-  - ![Successful connection](~/user-guide/images/MA_Successful.png) : A stable connection with instant updates.
-
-  - ![Offline](~/user-guide/images/MA_No_Connection.png) : An offline connection.
-
-  - ![No real-time connection](~/user-guide/images/MA_No_Real-Time_Connection.png) : No real-time connection could be established. Updates will happen more slowly than usual.
-
-  - ![Establishing connection](~/user-guide/images/MA_Establishing.png) : Re-establishing a WebSocket connection. Updates will happen more slowly than usual.
-
-- User button (5): A button with the initials or picture of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
+- User button: A button with the initials or picture of the current user is displayed in the top-right corner. Click this button to open a menu that provides access to the following options:
 
   - *Settings*: Allows you to configure the default page that is displayed when you open an element or a view card.
 
