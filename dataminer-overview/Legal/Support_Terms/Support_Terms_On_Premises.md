@@ -84,7 +84,7 @@ The User shall ensure that they have an industry-standard and uninterrupted remo
 
 ## Ticket generation
 
-When the User encounters an Issue with the Software or wishes to receive Support for another reason, the User should open a ticket for Support using the [User Operations Support web application](https://supportpreview.dataminer.services/Home/CreateTicket). More details about this can be found in the [User Operations Support documentation](xref:User_operations_support).
+When the User encounters an Issue with the Software or wishes to receive Support for another reason, the User should open a ticket for Support using the [Support application](https://supportpreview.dataminer.services/Home/CreateTicket). More details about this can be found in the [Support application documentation](xref:User_operations_support).
 
 If for some reason the User cannot access the User Operations Support web application and create a ticket, they can also [contact Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
 

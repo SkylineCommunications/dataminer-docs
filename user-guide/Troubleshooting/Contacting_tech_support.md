@@ -4,9 +4,9 @@ uid: Contacting_tech_support
 
 # Contacting tech support
 
-When you encounter an issue with the software and you need help to resolve it, contact DataMiner tech support by creating a ticket using the [User Operations Support web application](xref:User_operations_support) (also known as UOSA).
+When you encounter an issue with the software and you need help to resolve it, contact DataMiner tech support by creating a ticket using the [Support application](xref:User_operations_support).
 
-If for some reason you cannot access the User Operations Support web application and create a ticket, you can instead [contact Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
+If for some reason you cannot access the Support application and create a ticket, you can instead [contact Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
 
 > [!TIP]
 >

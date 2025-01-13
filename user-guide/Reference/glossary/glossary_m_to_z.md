@@ -291,7 +291,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | UHF | Ultra High Frequency. Refers to radio frequencies between 300 MHz and 3 GHz. |
 | UI | User Interface. |
 | Unmanaged inventory | In the context of DataMiner IDP, this represents the elements in a DMS that are not yet managed by IDP. Also known as "pending inventory".<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
-| UOSA | [User Operations Support web application](xref:User_operations_support). Application used to create and keep track of tickets for DataMiner software issues. |
+| UOSA | [Support application](xref:User_operations_support) (formerly known as User Operations Support Application). |
 | Update Center | Application in DataMiner Cube that allows you to check for DataMiner protocol and software updates and download these.<br>See [Upgrading a DataMiner Agent in the Update Center](xref:Upgrading_a_DataMiner_Agent_in_the_Update_Center). |
 | Update package | Package containing minor updates for an existing DataMiner release. |
 | Upgrade package | DataMiner package containing all files necessary to upgrade a DMA to a new version of the DataMiner software. |
