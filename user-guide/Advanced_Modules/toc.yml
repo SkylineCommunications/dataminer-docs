@@ -374,6 +374,8 @@ items:
                 topicUid: Tutorial_Apps_Grid
               - name: Creating a visually appealing and user-friendly low-code app
                 topicUid: Tutorial_App_Design
+              - name: Using flows in a Low-Code Apps
+                topicUid: Tutorial_Apps_Flows
       - name: Configuring components
         topicUid: Configuring_components
         items:
