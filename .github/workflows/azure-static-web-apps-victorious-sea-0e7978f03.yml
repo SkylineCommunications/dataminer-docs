@@ -84,6 +84,8 @@ jobs:
           rm -f ./_site/README.html
           find ./_site -name 'toc.html' -type f -delete
       - name: Upload the new files
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_ACCOUNT_DOCS_CONNECTION_STRING }}
         run: |
           wget https://aka.ms/downloadazcopy-v10-linux
           tar -xvf downloadazcopy-v10-linux
@@ -91,8 +93,8 @@ jobs:
           azcopy --version
           az storage blob sync \
             --source _site \
-            --container docs \
-            --connection-string ${{ secrets.AZURE_STORAGE_ACCOUNT_DOCS_CONNECTION_STRING }}
+            --container docs
+      #       --connection-string ${{ secrets.AZURE_STORAGE_ACCOUNT_DOCS_CONNECTION_STRING }}
       # - name: Upload the new files
       #   uses: bacongobbler/azure-blob-storage-upload@main
       #   with:
@@ -116,6 +118,8 @@ jobs:
         run: Expand-Archive -Path _site.zip -DestinationPath ./_site
         shell: pwsh
       - name: Upload the new files
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_SA_DOCS_SWA }}
         run: |
           wget https://aka.ms/downloadazcopy-v10-linux
           tar -xvf downloadazcopy-v10-linux
@@ -123,8 +127,8 @@ jobs:
           azcopy --version
           az storage blob sync \
             --source _site \
-            --container $web \
-            --connection-string ${{ secrets.AZURE_SA_DOCS_SWA }} 
+            --container '$web'
+      #      --connection-string ${{ secrets.AZURE_SA_DOCS_SWA }} 
       # - name: Upload the new files
       #   uses: bacongobbler/azure-blob-storage-upload@main
       #   with:
