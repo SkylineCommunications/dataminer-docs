@@ -29,7 +29,7 @@ Contains one of the following values:
 
 The parameter has a fixed length, which has to be defined in the Protocol.Params.Param.Interprete.Length tag. During parameter initialization, DataMiner does the following for parameters that have LengthType set to "fixed":
 
-1. A byte array is created with size equal to the value specified in InterPrete.Length. This array is then initialized. The initialization value depends on the RawType value:
+1. A byte array is created with size equal to the value specified in Interprete.Length. This array is then initialized. The initialization value depends on the RawType value:
 
     - If RawType is set to "text" or "other", the array is initialized with 0x20 bytes.
     - If RawType is set to "numeric text", the array is initialized with 0x30 bytes.
