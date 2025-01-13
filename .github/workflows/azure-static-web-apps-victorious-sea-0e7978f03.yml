@@ -89,7 +89,10 @@ jobs:
           tar -xvf downloadazcopy-v10-linux
           sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
           azcopy --version
-          az storage blob sync --connection-string ${{ secrets.AZURE_STORAGE_ACCOUNT_DOCS_CONNECTION_STRING }} --source _site --container docs 
+          az storage blob sync \
+            --source _site \
+            --container docs \
+            --connection-string ${{ secrets.AZURE_STORAGE_ACCOUNT_DOCS_CONNECTION_STRING }}
       # - name: Upload the new files
       #   uses: bacongobbler/azure-blob-storage-upload@main
       #   with:
@@ -118,7 +121,10 @@ jobs:
           tar -xvf downloadazcopy-v10-linux
           sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
           azcopy --version
-          az storage blob sync --connection-string ${{ secrets.AZURE_SA_DOCS_SWA }} --source _site --container $web 
+          az storage blob sync \
+            --source _site \
+            --container $web \
+            --connection-string ${{ secrets.AZURE_SA_DOCS_SWA }} 
       # - name: Upload the new files
       #   uses: bacongobbler/azure-blob-storage-upload@main
       #   with:
