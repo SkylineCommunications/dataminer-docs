@@ -2,15 +2,15 @@
 uid: User_operations_support
 ---
 
-# User Operations Support application
+# Support application
 
-With the User Operations Support application, you can both keep track of existing tickets and create new ones.
+With the Support application, you can both keep track of existing tickets and create new ones.
 
 The application is available at <https://supportpreview.dataminer.services/>. You can log in in the [same way as for dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
 ## Ticket Overview page
 
-The *Ticket Overview* page is the default page shown when you open the User Operations Support application. On this page, you can check existing tickets.
+The *Ticket Overview* page is the default page shown when you open the Support application. On this page, you can check existing tickets.
 
 Several **filters** are available on this page:
 
