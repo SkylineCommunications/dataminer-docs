@@ -8,7 +8,7 @@ For every connector that is developed for DataMiner, two or more documentation p
 
 The first page is the [marketing page](#marketing-page), which should be appealing and focus on demonstrating the value the connector can bring to users, similar to the packaging of a product in a store.
 
-The second page is the [technical page](#technical-page), which should be a subpage of the marketing page containing further technical details. You could compare this to the technical label of a product in a store. The technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc.
+The second page is the [technical page](#technical-page), which should be a subpage of the marketing page containing further technical details. You could compare this to the instructions booklet included with a product in a store. The technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc.
 
 If a connector exports child connectors, a subpage should also be created for each of these child connectors.
 
