@@ -19,7 +19,6 @@ jobs:
           tar -xvf downloadazcopy-v10-linux
           sudo cp ./azcopy_linux_amd64_*/azcopy /usr/bin/
           azcopy --version
-          curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
           az --help
   build_job:
     runs-on: windows-latest
