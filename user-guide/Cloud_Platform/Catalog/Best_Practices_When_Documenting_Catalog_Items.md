@@ -55,11 +55,11 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 
 **Purpose:** Summarize what makes the item valuable and why users should deploy it. Address the problems it solves and its primary benefits.
 
-**Format:** A digestable, comprehensive and rather small piece of text.
+**Format:** A relatively short piece of text that is easy to read and understand.
 
 **Do's:**
 
-- Limit the content to the essentials, keep it short and well organized. When required for clarity, a few paragraphs can optionally be made.
+- Limit the content to the **essentials**, and keep it short and well organized. When required for clarity, you can optionally divide the text over a few paragraphs.
 - Keep the tone **professional**, focused on **motivating** user adoption.
 - Highlight important points with **bold text**.
 - **Organize content** from broad benefits to specific features and practical applications.
@@ -71,8 +71,8 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 - Avoid **excessive technical details**; link to reference documentation instead.
 - Avoid jargon or **overly complex language** that could obscure the message.
 - Avoid **excessive** amounts of **bold text and/or alerts**, as these then lose their purpose of drawing the reader's attention.
-- Do not refer to **DataMiner generic benefits** such as alarming, trending. Instead focus on the value this specific item brings.
-- Do not **duplicate** points covered by the **Key Features** and **Use Cases** sections.
+- Do not refer to **generic DataMiner benefits** such as alarming and trending. Instead focus on the value this specific item brings.
+- Do not **duplicate** points mentioned in the **Key Features** and **Use Cases** sections.
 
 ## Key Features section
 
