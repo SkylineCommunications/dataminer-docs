@@ -47,7 +47,7 @@ See also [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_b
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrect still try to launch the deprecated XBAP version of DataMiner Cube.
+When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrectly still try to launch the deprecated XBAP version of DataMiner Cube.
 
 From now on, when you click *Launch > Download DataMiner Cube*, the DataMiner Cube desktop app will be downloaded. When you then double-click the downloaded file, the following will happen:
 
