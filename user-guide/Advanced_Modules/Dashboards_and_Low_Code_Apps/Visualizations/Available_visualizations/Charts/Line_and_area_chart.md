@@ -12,6 +12,7 @@ This component can be used to display a trend graph.
 >
 > - If this type of component is added, the time span displayed by the component is available as an output in the data pane, so that this can be applied to other components.
 > - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, this component also supports line graphs for string parameters.
+> - From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, only the first 1000 items in a line & area chart are shown.
 
 ## Configuring the component
 
@@ -90,7 +91,7 @@ To configure the component:
 
      - *Maximum columns per page*: Determines how many charts can at most be displayed next to each other on a single page.
 
-     - *Chart limit*: Determines how many parameters can at most be displayed in one chart. By default, this is set to 16 parameters.
+     - *Chart limit*: Determines how many parameters can at most be displayed in one chart. By default, this is set to 16 parameters. From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, regardless of this setting, only the first 1000 parameters can be rendered in a single chart.
 
      - *Chart limit behavior*: Determines what happens when the number of parameters in the chart exceeds the defined chart limit:
 
