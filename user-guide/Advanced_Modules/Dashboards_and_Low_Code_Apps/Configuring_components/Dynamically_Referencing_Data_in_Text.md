@@ -80,11 +80,18 @@ To create URL references inside textual settings, use the following syntax:
 > - Any parts of this syntax that contain spaces should be enclosed in double quotation marks.
 > - All parts of this syntax are case-sensitive.
 
-Example: If you want to pass a number as a query parameter to a URL, you could use the following syntax:
+Examples:
 
-```txt
-{URL."Query parameters".Numbers.Value}
-```
+- If you want to pass a number as a query parameter to a URL, you could use the following syntax:
+
+  ```txt
+  {URL."Query parameters".Numbers.Value}
+  ```
+
+- If you want to pass a hostname and IP port to a URL, you could use the following syntax:
+
+  ```txt
+  {URL.DMAIP.Value}
 
 #### Flows
 
