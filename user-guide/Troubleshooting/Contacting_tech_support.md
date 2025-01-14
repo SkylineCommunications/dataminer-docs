@@ -6,7 +6,13 @@ uid: Contacting_tech_support
 
 When you encounter an issue with the software and you need help to resolve it, contact DataMiner tech support by creating a ticket using the [Support application](xref:User_operations_support).
 
-If for some reason you cannot access the Support application and create a ticket, you can instead [contact Skyline's Support helpdesk](https://skyline.be/contact/tech-support).
+If for some reason you cannot access the Support application and create a ticket, you can instead contact Skyline's Support helpdesk:
+
+- Email: <techsupport@skyline.be>
+- Phone:
+  - Belgium head office: +32 51 33 19 25
+  - Portugal office: +351 308 80 6270
+  - Weston, Florida office: +1 754 218 2040
 
 > [!TIP]
 >
