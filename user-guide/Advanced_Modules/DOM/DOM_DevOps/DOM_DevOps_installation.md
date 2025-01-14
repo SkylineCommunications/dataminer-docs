@@ -24,4 +24,4 @@ uid: DOM_DevOps_installation
    > For example, package version 10.3.3.x requires at least DataMiner 10.3.3, and package 10.4.1.x requires at least DataMiner 10.4.1.
 
    > [!IMPORTANT]
-   > It is recommended that the DOM Editor version matches as close as possible to the DataMiner agent version. When using an old script version on a much newer DMA, there is a risk where the configuration of DOM features added inbetween these two version could get corrupted by the use of the old DOM Editor tool.
+   > Make sure your DOM Editor version matches the DataMiner Agent version as closely as possible. If you use an outdated DOM Editor version on a more recent DMA, the configuration of DOM features that have been added in the meantime could get corrupted.
