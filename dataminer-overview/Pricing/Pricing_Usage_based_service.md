@@ -91,7 +91,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 | Service | Definition |
 |---|---|
-| *Standard Managed Object* | Endpoints directly or indirectly interfaced by DataMiner with more than 200 metrics, metered as the count of 10K metrics on each endpoint. Example: A Managed Object with 24K metrics is metered as 3. |
+| *Standard Managed Object* | Endpoints directly or indirectly interfaced by DataMiner with 200 or more metrics, metered as the count of 10K metrics on each endpoint. Example: A Managed Object with 24K metrics is metered as 3. |
 | *Light Managed Object* | Endpoints with less than 200 metrics, metered as the sum of their metrics. |
 | *Connector Services* | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [Catalog](https://catalog.dataminer.services/).<br>Connectors developed by the user or another third party are not counted. |
 | *Script Runs* | Every time Automation scripts are [triggered](xref:Running_Automation_scripts).<br>Amongst others, this includes Life cycle Service Orchestration (LSO) scripts, Profile-Load Scripts (PLS), Process Automation activities, and DOM instance state transitions. |
@@ -106,8 +106,8 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 | Service | Metering unit | Credits per month |
 |---|---|---|
-| *Standard Managed Object* | Count of 10K metrics on Managed Objects with more than 200 metrics | 0.4 |
-| *Light Managed Object* | Sum of metrics on Managed Objects with 100 metrics or above | 2 for 1000 metrics |
+| *Standard Managed Object* | Count of 10K metrics on Managed Objects with 200 or more metrics | 0.4 |
+| *Light Managed Object* | Sum of metrics on Managed Objects with less than 200 metrics | 2 for 1000 metrics |
 | *Connector Services* | Sum of connectors delivered by Skyline, concurrently used | 8 |
 | *Script Runs* | Sum of script runs. | Starting at 5 for 1k script runs.<br>Unit credit rate decreases with increased quantities. |
 | *Collaboration Services* | Sum of total used volume | Dashboard Sharing: 0.5 credits/share/recipient/month |
