@@ -40,6 +40,16 @@ By default, this accent color will be identical to the app color. For example, i
 
 ### Enhancements
 
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI components 'Calendar' and 'Time' [ID 41529]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+The UI components `UIBlockType.Calendar` and `UIBlockType.Time` have been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new *Button* component, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
 #### DataMiner root page: Links to deprecated DataMiner XBAP and legacy Reports & Dashboards app have now been removed [ID 41844]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->

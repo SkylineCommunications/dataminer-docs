@@ -48,11 +48,11 @@ To do so, proceed as follows:
 
 A number of minor enhancements have been made to the DataMiner Cube desktop app with regard to configuration file management.
 
-#### DataMiner Cube can no longer be deployed as a ClickOnce XBAP application [ID 41869] [ID 41873]
+#### DataMiner Cube will no longer be available as XBAP application [ID 41869] [ID 41873]
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
 
-From now on, it will no longer be possible to deploy DataMiner Cube as a ClickOne XBAP application.
+From now on, DataMiner Cube will no longer be available as XBAP application.
 
 ### Fixes
 
