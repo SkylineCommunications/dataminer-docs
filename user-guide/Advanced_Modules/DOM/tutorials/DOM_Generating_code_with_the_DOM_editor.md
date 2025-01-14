@@ -73,7 +73,7 @@ While you could develop the Automation script in Cube, creating an Automation sc
 
 To create an Automation script solution:
 
-1. In Visual Studio, select *Create a new project*.
+1. In Visual Studio, select *File > New > Project...*
 
 1. Search for *DataMiner Automation Script Solution (Skyline Communications)* in the template search box and click *Next*.
 
@@ -91,13 +91,13 @@ To create an Automation script solution:
 
    ![Add a new item to the project](~/user-guide/images/DOM_Generating_code_Step3_1.png)
 
+   If the Solution Explorer is empty, then close Visual Studio, open Windows Explorer, go to the folder containing the Generate Kata DOM solution, and double-click the *Generate Kata DOM.sln* file. This will start Visual Studio and automatically load the solution. The Solution Explorer should then list all files contained in the solution.
+
 1. Enter *DomIds* as the name.
 
-1. Replace the content of the *DomIds* file with the code you copied from the DOM Editor.
+1. Replace the content of the *DomIds.cs* file with the code you copied from the DOM Editor.
 
-   ![DomIds.cs file](~/user-guide/images/DOM_Generating_code_Step3_2.png)
-
-1. Double click the *Generate Kata Dom Instances_1.cs* file to edit the main script code.
+1. Open the *Generate Kata Dom Instances_1.cs* file to edit the main script code.
 
 1. Replace the content of the *Generate Kata Dom Instances_1.cs* file with the code below.
 
@@ -148,11 +148,9 @@ namespace GenerateKataDOMInstances_1
 >
 > 1. Open the *NuGet package manager* from the tools menu: *Tools* > *Nuget Package Manager* > *Manage NuGet Packages for Solution*.
 >
->    ![Manage NuGet Packages for Solution](~/user-guide/images/DOM_Generating_code_Step3_3.png)
+> 1. Go to the *Updates* tab and select the *Skyline.DataMiner.Dev.Automation* package.
 >
-> 1. Navigate to the *Updates tab* and select the *Skyline.DataMiner.Dev.Automation* package.
->
-> 1. On the right-hand side, select *version 10.3.10* (or higher) and click the install button.
+> 1. On the right-hand side, select *version 10.3.10* (or higher) and click the *Install* button.
 >
 >    ![Install version 10.3.10 or higher](~/user-guide/images/DOM_Generating_code_Step3_4.png)
 
