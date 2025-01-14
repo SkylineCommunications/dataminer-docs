@@ -17,6 +17,9 @@ The type of data required depends on the type of issue you are experiencing:
 
 - For element communication issues: [Stream Viewer traces](#stream-viewer-traces)
 
+> [!TIP]
+> See also: [Contacting tech support](xref:Contacting_tech_support)
+
 ## Log Collector packages
 
 A Log Collector package provides comprehensive information about the DataMiner System, including software version, cluster composition, network and database statistics, and more. Even if the Log Collector package contains no errors, this can be valuable information, helping Technical Support verify that the DataMiner core logic is functioning correctly, and the issue lies elsewhere.

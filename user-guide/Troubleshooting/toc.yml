@@ -180,6 +180,8 @@ items:
                     topicUid: Troubleshooting_Run_Time_Errors
               - name: Troubleshooting - apps
                 topicUid: Troubleshooting_Apps
+              - name: Troubleshooting - Visual Overview
+                topicUid: Troubleshooting_Visual_Overview
   - name: Troubleshooting procedures
     topicUid: Troubleshooting_procedures
     items:
@@ -434,6 +436,8 @@ items:
             topicUid: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
           - name: GenIf folder takes up too much disk space
             topicUid: KI_GenIf_Folder_Growing_In_Size
+  - name: Contacting tech support
+    topicUid: Contacting_tech_support
   - name: Customer DataMiner Reporting (CDMR)
     topicUid: CDMR
   - name: Remote Log Collection

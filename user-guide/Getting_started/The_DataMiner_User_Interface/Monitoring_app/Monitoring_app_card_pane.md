@@ -46,3 +46,7 @@ If the app is used on a mobile device:
 - To zoom out, place two fingers stretched apart on the screen and bring them together.
 
 - To move left or right across a visual overview, slide a finger across the screen.
+
+## Visual Overview
+
+Visual overview pages in the DataMiner web apps are a lightweight version of their DataMiner Cube counterparts. This means that some features that are available in Cube will not be available in the web apps. For more details, see [Unsupported capabilities](xref:DashboardVisualOverview#unsupported-capabilities).
