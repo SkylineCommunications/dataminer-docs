@@ -285,8 +285,6 @@ items:
                 topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
               - name: Specifying data input in a dashboard or app URL
                 topicUid: Specifying_data_input_in_a_dashboard_URL
-              - name: Configuring a dashboard to use data in a URL without a dedicated component
-                topicUid: Using_data_in_URL_without_dedicated_component
           - name: Sharing a dashboard
             topicUid: Sharing_a_dashboard
           - name: Generating a report based on a dashboard
@@ -502,6 +500,8 @@ items:
                 topicUid: DashboardTextInput
       - name: Component data
         topicUid: Component_Data
+      - name: URL data
+        topicUid: URL_data
       - name: Flows
         topicUid: Using_flows
         items:
