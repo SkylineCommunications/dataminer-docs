@@ -27,7 +27,7 @@ When you double-clicking on an item, you will be directed to the location of tha
 
 When you open a protocol XML file, the *DIS menu* will now include an *Administration* submenu, containing the *Open Driver Help* command. Selecting that command will open the default web browser and go to the connector help page on [DataMiner Connector Documentation](https://docs.dataminer.services/connector/index.html).
 
-If no matching page can be found, you will be directed to a page explaining [how to add a new connector documentation page](xref:Connector_help_pages#adding-new-connector-documentation-pages).
+If no matching page can be found, you will be directed to a page explaining [how to add new connector documentation pages](xref:Connector_help_pages#adding-new-connector-documentation-pages).
 
 ### Validator
 
