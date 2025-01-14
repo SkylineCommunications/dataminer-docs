@@ -46,7 +46,7 @@ uid: Connector_marketing_template
 
 **Benefit**: benefit(s) description.
 
-## Technical info
+## Technical Reference
 
 ### Prerequisites
 
