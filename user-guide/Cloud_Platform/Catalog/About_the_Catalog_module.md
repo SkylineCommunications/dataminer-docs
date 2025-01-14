@@ -40,7 +40,12 @@ At present, the following types of Catalog items are supported:
 | Dashboard | Contains a [DataMiner dashboard](xref:newR_D). This can be a standard out-of-the-box dashboard or a sample dashboard, which can for example be used for training and reference purposes or to serve as a quick start template. Deploying the component will make it available on the target DataMiner System, where it can be used as is, or where you can further adjust it to meet your own specific needs. |
 | Visual Overview | Contains a [Microsoft Visio design](xref:visio), intended to be used for the DataMiner Visual Overview bubble-up and drill-down graphical UI. Deploying the component will make it available on the target DataMiner System, where it then needs to be assigned to the desired views, elements, or services. Optionally, you can further adapt or evolve the design to your own specific needs or preferences. |
 | ChatOps Extension | Contains a [ChatOps](xref:ChatOps) extension, which provides new custom commands to be used in Microsoft Teams ChatOps, enabling users to interact with DataMiner through chat. Deploying the component will make it available on the target DataMiner System, where it can be used as is, or where you can further adjust it to meet your own specific needs. |
+| Product Solution | Seamless vendor-specific integration, leveraging the DataMiner platform to provide superior value and centralized control. |
 | Standard Solution | Standard solutions are DataMiner Solutions that are out-of-the-box solutions for specific use cases or applications. They are designed to require as little configuration and setup work as possible. Standard solutions are typically owned and managed by a Product Owner, who will release updates and evolutions of the standard solutions. If you want to benefit from those future updates and new versions, you should therefore not alter or change standard solutions. |
+| Custom Solution | Flexible solutions tailored for unique requirements, enabling adaptation to specific operational needs. |
+| Learning & Samples | Educational resources and examples to explore or demonstrate DataMiner features. |
+| DevTools | Tools for advanced customization, debugging, and optimization of your DataMiner environment. |
+| System Health | Components to monitor performance, detect issues, and maintain system reliability. |
 
 ### Public and private Catalog items
 
