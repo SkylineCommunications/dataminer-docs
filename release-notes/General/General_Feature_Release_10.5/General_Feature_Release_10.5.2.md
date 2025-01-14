@@ -255,13 +255,13 @@ Since DataMiner feature release 10.4.11, it is possible to switch to another mas
 
 Up to now, if the current master agent had been marked "not eligible to be promoted to master", it would continue to process property updates and swarming requests as if it were still master agent. This behavior has now changed. From now on, all property updates and swarming requests sent to the current master agent that has been marked "not eligible to be promoted to master" will fail with a `NotAMasterAgentException`, and the agents that sent those messages will resend them to the new master agent.
 
-#### DataMiner Object Models: Only the first 100 DomInstances will be checked when an enum entry is removed from a FieldDescriptor [ID 41572]
+#### DataMiner Object Models: Number of DomInstanceIds in SectionDefinitionErrors now limited to 100 [ID 41572]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor`, a check is performed to make sure that entry is not being used by a `DomInstance`. However, as this check would verify all existing DomInstances, this could cause memory issues in SLNet when a large number of DomInstances were using the removed enum entry.
+When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor`, a check is performed to make sure that entry is not being used by a `DomInstance`. This check reads all DomInstances that use that entry and places the IDs in the error data. However, as this check verifies all existing DomInstances, this could cause memory issues in SLNet when a large number of DomInstances were using the removed enum entry.
 
-From now on, a maximum of 100 DomInstances will be verified. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
+From now on, a maximum of 100 DomInstances will be included in the error data. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
 
 #### Storage as a Service: Enhanced performance when updating alarm information [ID 41581]
 
