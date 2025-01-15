@@ -5748,6 +5748,8 @@ items:
             items:
               - name: StyleCop.Analyzers
                 topicUid: StyleCopAnalyzers
+          - name: Troubleshooting
+            topicUid: VisualStudioTroubleshooting
       - name: Visual Studio Code
         topicUid: Visual_Studio_Code
       - name: WinDbg

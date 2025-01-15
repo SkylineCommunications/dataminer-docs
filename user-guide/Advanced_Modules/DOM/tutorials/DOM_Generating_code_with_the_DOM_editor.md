@@ -91,6 +91,9 @@ To create an Automation script solution:
 
    ![Add a new item to the project](~/user-guide/images/DOM_Generating_code_Step3_1.png)
 
+   > [!TIP]
+   > If you have trouble accessing the project in the Solution Explorer, refer to [Visual Studio troubleshooting](xref:VisualStudioTroubleshooting).
+
 1. Enter *DomIds* as the name.
 
 1. Replace the content of the *DomIds.cs* file with the code you copied from the DOM editor.
