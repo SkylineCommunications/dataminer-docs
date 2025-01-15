@@ -10,7 +10,7 @@ The Scheduler NuGet package provides useful functionalities to interact with the
 
 To install the Scheduler package, follow these steps:
 
-1. Open the NuGet Package Manager Console in [Visual Studio](xref:TOOVisualStudio).
+1. Open the NuGet Package Manager Console in Visual Studio.
 
 1. Run the following command:
 
