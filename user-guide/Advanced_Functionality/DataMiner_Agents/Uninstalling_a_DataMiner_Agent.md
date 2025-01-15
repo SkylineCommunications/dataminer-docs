@@ -11,7 +11,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
 ## Uninstalling a DMA using the Installer
 
-1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
+1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/dataminer-installer/?hilite=installer).
 
 1. Make sure you are logged into Windows with the Administrator account. (Do not use a regular user account with administrative rights.)
 
