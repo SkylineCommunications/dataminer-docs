@@ -34,8 +34,34 @@ uid: General_Feature_Release_10.5.3
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### SLLogCollector packages now also contain the ClusterEndpoints.json file [ID 41887]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Missing DATAMINER_NOTIFICATION_QUEUE thread [ID 41699]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When DataMiner was restarted, an issue could occur, causing the DATAMINER_NOTIFICATION_QUEUE thread not to be registered in processes like SLDMS, SLElement or SLDataGateway. These missing threads could then lead to a number of symptoms like empty element data cards or not being able to swarm back elements.
+
+#### Problem with incorrect virtual element states [ID 41705]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+In some rare cases, the element state of a DVE or Virtual Function element would end up incorrect in the SLNet cache, causing some caches to not be initialized correctly.
+
+#### Service & Resource Management: Problem when a previously deleted booking was created again [ID 41718]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a previously deleted booking was created again with the same ID, up to now, that booking would incorrectly not be retrieved.
+
+#### Uploading the same version of a DVE connector twice would incorrectly cause the production version of DVE child elements to be changed [ID 41798]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When the same version of a DVE connector was uploaded twice, the production version of all DVE child elements using another version of that connector as production version would incorrectly have their production version set to the newly uploaded version.

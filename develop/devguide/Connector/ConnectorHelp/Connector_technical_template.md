@@ -1,8 +1,8 @@
 ---
-uid: Connector_help_template
+uid: Connector_technical_template
 ---
 
-# Connector documentation template
+# Connector technical documentation template
 
 [Short description of the data source and of the function of the connector.]
 

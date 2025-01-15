@@ -12,7 +12,7 @@ The main principle to keep in mind is that the documentation in the Catalog shou
 
 When you create documentation for an item in the DataMiner Catalog, focus on showcasing the value of the item in a concise and engaging way, while keeping the technical details to a minimum. Use this structure to ensure clarity and consistency, and make sure to [include visuals](#visuals) in your text:
 
-1. [Overview](#overview-section)
+1. [About](#about-section)
 
 1. [Key Features](#key-features-section)
 
@@ -23,10 +23,6 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 1. [Technical Reference](#technical-reference-section) *(optional)*
 
    Link to public documentation for more extensive info when necessary.
-
-1. Support
-
-   Include a support sentence, such as "For additional help, reach out to support at [techsupport@skyline.be](mailto:techsupport@skyline.be)".
 
 > [!NOTE]
 > Depending on the size and complexity of your Catalog item, you can combine or exclude some sections. For example, for a very simple item you could leave out the Use Cases section but mention this information under Key Features.
@@ -55,16 +51,15 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 - Avoid **unnecessary blank space** by resizing the window when taking a screen capture.
 - Make sure not to show any **confidential data**. Blur any sensitive data, but keep the data that is not sensitive visible to still have a useful image.
 
-## Overview section
+## About section
 
 **Purpose:** Summarize what makes the item valuable and why users should deploy it. Address the problems it solves and its primary benefits.
 
-**Format:** One introductory paragraph with up to 3 supporting paragraphs, of 3 to 4 sentences each.
+**Format:** A relatively short piece of text that is easy to read and understand.
 
 **Do's:**
 
-- Begin with a concise **introductory paragraph** focused on the item’s value.
-- Add **up to 3 additional paragraphs** elaborating on features or key use cases.
+- Limit the content to the **essentials**, and keep it short and well organized. When required for clarity, you can optionally divide the text over a few paragraphs.
 - Keep the tone **professional**, focused on **motivating** user adoption.
 - Highlight important points with **bold text**.
 - **Organize content** from broad benefits to specific features and practical applications.
@@ -76,6 +71,8 @@ When you create documentation for an item in the DataMiner Catalog, focus on sho
 - Avoid **excessive technical details**; link to reference documentation instead.
 - Avoid jargon or **overly complex language** that could obscure the message.
 - Avoid **excessive** amounts of **bold text and/or alerts**, as these then lose their purpose of drawing the reader's attention.
+- Do not refer to **generic DataMiner benefits** such as alarming and trending. Instead focus on the value this specific item brings.
+- Do not **duplicate** points mentioned in the **Key Features** and **Use Cases** sections.
 
 ## Key Features section
 

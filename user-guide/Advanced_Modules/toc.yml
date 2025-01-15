@@ -376,6 +376,8 @@ items:
                 topicUid: Tutorial_App_Design
               - name: Using flows in a Low-Code Apps
                 topicUid: Tutorial_Apps_Flows
+              - name: Creating a custom event scheduler low-code app
+                topicUid: Tutorial_Custom_Event_Scheduler_LCA
       - name: Configuring components
         topicUid: Configuring_components
         items:
