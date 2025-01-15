@@ -73,7 +73,7 @@ While you could develop the Automation script in Cube, creating an Automation sc
 
 To create an Automation script solution:
 
-1. In Visual Studio, select *File > New > Project...*
+1. In Visual Studio, select *File > New > Project*.
 
 1. Search for *DataMiner Automation Script Solution (Skyline Communications)* in the template search box and click *Next*.
 
@@ -87,15 +87,15 @@ To create an Automation script solution:
 
 ### Add the generated code to your solution
 
-1. Right-click the *Generate Kata DOM Instances_1* project in the Solution explorer and choose *Add > New Item*
+1. Right-click the *Generate Kata DOM Instances_1* project in the Solution explorer and select *Add > New Item*.
 
    ![Add a new item to the project](~/user-guide/images/DOM_Generating_code_Step3_1.png)
 
-   If the Solution Explorer is empty, then close Visual Studio, open Windows Explorer, go to the folder containing the Generate Kata DOM solution, and double-click the *Generate Kata DOM.sln* file. This will start Visual Studio and automatically load the solution. The Solution Explorer should then list all files contained in the solution.
+   If the Solution Explorer is empty, close Visual Studio, open Windows Explorer, go to the folder containing the *Generate Kata DOM* solution, and double-click the *Generate Kata DOM.sln* file. This will start Visual Studio and automatically load the solution. The Solution Explorer should then list all files contained in the solution.
 
 1. Enter *DomIds* as the name.
 
-1. Replace the content of the *DomIds.cs* file with the code you copied from the DOM Editor.
+1. Replace the content of the *DomIds.cs* file with the code you copied from the DOM editor.
 
 1. Open the *Generate Kata Dom Instances_1.cs* file to edit the main script code.
 
