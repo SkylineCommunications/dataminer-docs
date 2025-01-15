@@ -38,6 +38,15 @@ To do so, proceed as follows:
 
 1. Click *Apply*.
 
+#### System Center - Logging: Consulting DxM logs [ID 41674]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+In the *Logging* section of *System Center*, the *DataMiner* tab now also allows you to consult the logs of the different DataMiner Extension Modules (DxMs).
+
+> [!NOTE]
+> These DxM logs have a predefined log level that cannot be changed.
+
 ## Changes
 
 ### Enhancements
