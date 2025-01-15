@@ -57,7 +57,7 @@ The element `{COMPONENT."Page 1"."Dropdown 3"."Selected item".Elements.Name}` us
 
 #### URLs
 
-In the URL section, you have the ability to either select query parameters or the DMAIP.
+In the URL section, you have the ability to either select [query parameters](#query-parameters) or the [static value `DMAIP`](#dmaip).
 
 ##### Query parameters
 
