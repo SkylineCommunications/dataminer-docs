@@ -71,3 +71,9 @@ When using a custom timezone, in some cases, that timezone would not be applied 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When a *State* component was linked to a parameter, and the size of that component was set to "Auto", up to now, the scale of the text would not be updated when the value of the parameter changed. In some cases, this would render the text unreadable.
+
+#### Low-Code Apps - Timeline component: Post actions after 'Set viewport' or 'Highlight time range' actions would incorrectly not be executed [ID 41862]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a post action was configured to get triggered after a *Set viewport* or a *Highlight time range* action, up to now, the post action would incorrectly not be executed.
