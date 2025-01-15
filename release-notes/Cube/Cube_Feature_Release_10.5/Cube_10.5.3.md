@@ -75,6 +75,18 @@ For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Servi
 
 ### Fixes
 
+#### DataMiner Cube desktop app: Some Cube sessions would not get closed correctly [ID 41831]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When a Cube session was closed, in some cases, the DataMiner Cube desktop app would not end the session correctly.
+
+#### Trending: Open trend graph would not reflect alarm template changes [ID 41835]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When an alarm template was updated while a trend graph containing parameters from that template was being displayed, in some cases, the trend graph would incorrectly not get updated. As a result, the graph would not reflect the changes that were made to the alarm template.
+
 #### Alarm Console: Alarms generated during the last week of 2024 would not be grouped correctly [ID 41867]
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
