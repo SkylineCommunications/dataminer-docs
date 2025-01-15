@@ -23,5 +23,5 @@ To embed individual dashboard components in a Visio drawing or a web page:
    > [!NOTE]
    >
    > - "SERIALIZED-COMPONENT" is a serialized representation of the component in JSON format.
-   > - If the component contains data, that data will automatically be included into the URL. See [Configuring a dashboard to use data in a URL without a dedicated component](xref:Using_data_in_URL_without_dedicated_component).
+   > - If the component contains data, that data will automatically be included into the URL. See [URL data](xref:URL_data).
    > - An embedded dashboard component is sometimes called a "volatile dashboard", as a temporary dashboard is generated to render the component.
