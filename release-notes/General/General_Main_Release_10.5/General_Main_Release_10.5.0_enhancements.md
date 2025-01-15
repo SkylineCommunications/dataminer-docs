@@ -1064,3 +1064,13 @@ Because of a number of enhancements, overall performance of the DataMiner Cube s
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
 On STaaS systems, the timeout for responses to write requests has been reduced to 10 seconds.
+
+#### Amazon Keyspaces Service is now end-of-life [ID 41874]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.3 -->
+
+Support for Amazon Keyspaces Service is now officially end-of-life.
+
+We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+
+For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)

@@ -54,6 +54,16 @@ A number of minor enhancements have been made to the DataMiner Cube desktop app 
 
 From now on, DataMiner Cube will no longer be available as XBAP application.
 
+#### Amazon Keyspaces Service is now end-of-life [ID 41874]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+Support for Amazon Keyspaces Service is now officially end-of-life.
+
+We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+
+For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
+
 ### Fixes
 
 #### Alarm Console: Alarms generated during the last week of 2024 would not be grouped correctly [ID 41867]
