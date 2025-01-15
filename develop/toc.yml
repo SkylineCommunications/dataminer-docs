@@ -5723,12 +5723,10 @@ items:
               - name: Merging conflicts
                 topicUid: Merging_conflicts
       - name: Visual Studio
-        topicUid: TOOVisualStudio
         items:
           - name: Installation procedure
             topicUid: Installation_procedure
           - name: Settings
-            topicUid: VisualStudioSettings
             items:
               - name: Text editor general
                 topicUid: Text_editor_general
@@ -5737,7 +5735,6 @@ items:
           - name: Shortcuts
             topicUid: Shortcuts
           - name: Plugins
-            topicUid: Plugins
             items:
               - name: DataMiner Integration Studio (DIS)
                 topicUid: DataMiner_Integration_Studio_DIS
@@ -5748,7 +5745,6 @@ items:
               - name: SonarLint
                 topicUid: SonarLint
           - name: NuGet packages
-            topicUid: VisualStudioNuGetPackages
             items:
               - name: StyleCop.Analyzers
                 topicUid: StyleCopAnalyzers
