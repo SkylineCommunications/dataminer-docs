@@ -77,3 +77,9 @@ When a *State* component was linked to a parameter, and the size of that compone
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When a post action was configured to get triggered after a *Set viewport* or a *Highlight time range* action, up to now, the post action would incorrectly not be executed.
+
+#### Authentication screen would not redirect users to the correct app [ID 41900]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When you tried to log on to a DataMiner web app, in some cases, the authentication screen would not redirect you to the correct app.
