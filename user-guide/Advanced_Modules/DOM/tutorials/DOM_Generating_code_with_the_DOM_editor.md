@@ -91,8 +91,6 @@ To create an Automation script solution:
 
    ![Add a new item to the project](~/user-guide/images/DOM_Generating_code_Step3_1.png)
 
-   If the Solution Explorer is empty, close Visual Studio, open Windows Explorer, go to the folder containing the *Generate Kata DOM* solution, and double-click the *Generate Kata DOM.sln* file. This will start Visual Studio and automatically load the solution. The Solution Explorer should then list all files contained in the solution.
-
 1. Enter *DomIds* as the name.
 
 1. Replace the content of the *DomIds.cs* file with the code you copied from the DOM editor.
