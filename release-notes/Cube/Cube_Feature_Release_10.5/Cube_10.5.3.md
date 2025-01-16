@@ -104,3 +104,13 @@ When an alarm template was updated while a trend graph containing parameters fro
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
 
 In the Alarm Console, alarms generated during the last week of 2024 (i.e. week 53) would not be grouped correctly.
+
+#### Settings: Problem when interpreting the value of the 'Parameter display mode' setting [ID 41890]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+In the *User > Data Display* section of the *Settings* window, the *Parameter display mode* setting allows you to specify whether you want Cube to use normal parameter controls or lite parameter controls.
+
+Up to now, Cube would check the value of this setting ("Normal" or "Lite") depending on the UI language. As a result, when that language was set to a language other than English, in some cases, the value of this setting would be interpreted incorrectly.
+
+From now on, Cube will check whether the value is the default setting (i.e. "Normal") or not. In the latter case, Cube will use the lite parameter controls.
