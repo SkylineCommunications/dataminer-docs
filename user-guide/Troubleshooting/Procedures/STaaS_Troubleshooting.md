@@ -2,7 +2,7 @@
 uid: Troubleshooting_STaaS
 ---
 
-# Troubleshooting – STaaS
+# Troubleshooting - STaaS
 
 [Storage as a Service (STaaS)](xref:STaaS) is a cloud-native data storage architecture that allows you to securely store your data without the need to maintain databases yourself.
 
@@ -261,12 +261,12 @@ Actions:
 
 - Navigate to the *C:/Skyline DataMiner/Logging* folder of your DataMiner Agent, open the *SLCloudStorage.txt* log file, and look for throttling warnings.
 
-- Make sure you have the latest improvements to InterApp read calls, with the most recent updates introduced in DataMiner 10.4.6.
+- If the DataMiner System relies heavily on inter-element or inter-automation communication, consider using the InterApp framework as a better architectural choice.
+
+  If SLNet performance issues arise because of large interactions when using SLNet Subscriptions, ensure that you are using DataMiner version 10.3.12/10.4.6 or higher. InterApp communication efficiency has been significantly improved in these versions, which also directly impacts  interactions with STaaS.
 
   > [!TIP]
   > For more information, refer to [Skyline DataMiner Core InterAppCalls Range 1.0.1.1](xref:Skyline_DataMiner_Core_InterAppCalls_Range_1.0#1011).
-
-  DataMiner Systems may experience performance issues because of the high number of interactions when using SLNet Subscriptions for specific actions. In DataMiner 10.3.12, improvements were made to increase the efficiency of these interactions, with further enhancements added in DataMiner 10.4.6.
 
 - Only applicable to Skyline employees: Use the Microsoft Azure monitoring tool to check for delays on Azure's side:
 
