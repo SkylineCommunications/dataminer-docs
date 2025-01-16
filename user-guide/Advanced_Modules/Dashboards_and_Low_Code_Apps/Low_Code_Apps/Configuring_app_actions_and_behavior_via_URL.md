@@ -1,8 +1,8 @@
 ---
-uid: Executing_actions_via_URL
+uid: Configuring_app_actions_and_behavior_via_URL
 ---
 
-# Using app URL actions and configurations
+# Configuring app actions and behavior via the URL
 
 ## Executing actions via the app URL
 
