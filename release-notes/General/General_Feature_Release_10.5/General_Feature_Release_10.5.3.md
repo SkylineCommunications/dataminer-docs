@@ -50,6 +50,16 @@ We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you wa
 
 For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
 
+#### SLLogCollector now collects data regarding the GQI DxM [ID 41880]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+SLLogCollector packages now include the following data regarding the GQI DxM:
+
+- *appsettings.json*
+- Log file
+- Version
+
 #### SLLogCollector packages now also contain the ClusterEndpoints.json file [ID 41887]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
