@@ -6,12 +6,6 @@ uid: Downloading_a_catalog_item
 
 The download API call allows you to download a Catalog item.
 
-Route parameter "catalogId" is the ID of the Catalog item of which you want to download a version from, which is the same as the ID used to [register the Catalog item](#registering-a-catalog-item-with-the-api). This must be a valid GUID.
-
-To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
-
-Route parameter "versionId" is the version number of the Catalog item you want to download.
-
 > [!NOTE]
 > The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Download catalog versions* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
 
@@ -19,7 +13,7 @@ Route parameter "versionId" is the version number of the Catalog item you want t
 
 For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
 
-This page also provides a quick way to execute the call: Expand the "download" item, and click the *Try it out* button.
+This page also provides a quick way to execute the call: Expand the "/api/key-catalog/v2-0/{catalogId}/versions/{versionId}/download" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the download call on the production Catalog.
@@ -29,3 +23,11 @@ The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.ser
 ### HTTP method
 
 GET
+
+### Route parameters
+
+- Route parameter "catalogId" is the ID of the Catalog item of which you want to download a version from, which is the same as the ID used to [register the Catalog item](#registering-a-catalog-item-with-the-api). This must be a valid GUID.
+
+To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
+
+- Route parameter "versionId" is the version number of the Catalog item you want to download.
