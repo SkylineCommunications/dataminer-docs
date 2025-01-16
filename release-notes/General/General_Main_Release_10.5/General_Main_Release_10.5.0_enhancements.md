@@ -730,10 +730,11 @@ Since Main Release 10.3.0 [CU20]/10.4.0 [CU8] and Feature Release 10.4.11, the v
 
 The logging of the arp command will now also include the MAC address that claimed the IP address.
 
-#### Service & Resource Management: Switching master agents [ID 40712] [ID 41089]
+#### Service & Resource Management: Switching master agents [ID 40712] [ID 41089] [ID 41549]
 
 <!-- RN 40712: MR 10.5.0 - FR 10.4.11 -->
 <!-- RN 41089: MR 10.5.0 - FR 10.5.1 -->
+<!-- RN 41549: MR 10.5.0 - FR 10.5.2 -->
 
 From now on, when you have been granted the *Modules > System configuration > Tools > Admin tools* permission, you can indicate that a DataMiner Agent is "not eligible to be promoted to master" by sending a `ResourceManagerConfigInfoMessage` in which the `IsMasterEligible` property is set to false.
 
@@ -742,9 +743,7 @@ When the DataMiner Agent that is currently the master agent is marked "not eligi
 The `IsMasterEligible` property of a DataMiner Agent is stored in the ResourceManager configuration. If the property is not filled in, the agent will be considered "eligible to be promoted to master".
 
 > [!NOTE]
->
-> - If the current master agent is marked "not eligible to be promoted to master", all ongoing and queued requests that had been sent to it will fail with a `NotAMasterAgentException`, and the agents that sent those requests will resend them to the new master agent. All new requests will be forwarded to the new master agent.
-> - Currently, property updates will still be processed by the agent that was marked "not eligible to be promoted to master" (i.e. the old master).
+> If the current master agent is marked "not eligible to be promoted to master", all ongoing and queued requests that had been sent to it will fail with a `NotAMasterAgentException`, and the agents that sent those requests will resend them to the new master agent. All new requests will be forwarded to the new master agent.
 
 #### Minor enhancements made to BPAs [ID 40751]
 
@@ -1054,8 +1053,40 @@ At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\So
 - If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
 - If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.
 
+#### DataMiner Cube server-side search engine: Enhanced performance [ID 41643]
+
+<!-- MR 10.4.0 [CU11]/10.5.0 - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
+
+#### Enhanced error and exception handling when updating or clearing correlation alarms [ID 41675]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Error and exception handling has been enhanced in order to prevent duplicate or sticky correlation alarms due to errors or exceptions thrown when updating or clearing correlation alarms.
+
 #### Storage as a Service: Timeout for responses to write requests has been reduced to 10 seconds [ID 41717]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
 On STaaS systems, the timeout for responses to write requests has been reduced to 10 seconds.
+
+#### Amazon Keyspaces Service is now end-of-life [ID 41874]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.3 -->
+
+Support for Amazon Keyspaces Service is now officially end-of-life.
+
+We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+
+For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
+
+#### SLLogCollector now collects data regarding the GQI DxM [ID 41880]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+SLLogCollector packages now include the following data regarding the GQI DxM:
+
+- *appsettings.json*
+- Log file
+- Version

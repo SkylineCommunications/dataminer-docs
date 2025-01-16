@@ -285,8 +285,6 @@ items:
                 topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
               - name: Specifying data input in a dashboard or app URL
                 topicUid: Specifying_data_input_in_a_dashboard_URL
-              - name: Configuring a dashboard to use data in a URL without a dedicated component
-                topicUid: Using_data_in_URL_without_dedicated_component
           - name: Sharing a dashboard
             topicUid: Sharing_a_dashboard
           - name: Generating a report based on a dashboard
@@ -312,6 +310,8 @@ items:
                 topicUid: Tutorial_Apps_Node_Edge
               - name: Creating a parameter table connected to an element feed
                 topicUid: Creating_a_parameter_table_connected_to_an_element_feed
+              - name: Creating an alarm dashboard for a daily DMS health check
+                topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
@@ -343,8 +343,8 @@ items:
                 topicUid: LowCodeApps_organizing_landing_page
           - name: Deleting a low-code application
             topicUid: Deleting_custom_apps
-          - name: Executing actions via the app URL
-            topicUid: Executing_actions_via_URL
+          - name: Configuring app actions and behavior via the URL
+            topicUid: Configuring_app_actions_and_behavior_via_URL
           - name: Tutorials
             topicUid: Tutorial_Apps
             items:
@@ -372,6 +372,8 @@ items:
                 topicUid: Tutorial_Apps_Grid
               - name: Creating a visually appealing and user-friendly low-code app
                 topicUid: Tutorial_App_Design
+              - name: Creating a custom event scheduler low-code app
+                topicUid: Tutorial_Custom_Event_Scheduler_LCA
       - name: Configuring components
         topicUid: Configuring_components
         items:
@@ -498,6 +500,8 @@ items:
                 topicUid: DashboardTextInput
       - name: Component data
         topicUid: Component_Data
+      - name: URL data
+        topicUid: URL_data
       - name: Flows
         topicUid: Using_flows
         items:
@@ -816,6 +820,9 @@ items:
             topicUid: DomDefinition
           - name: DomInstance object
             topicUid: DomInstance
+            items:
+              - name: DOM multiple sections
+                topicUid: DOM_MultipleSections
           - name: DomTemplate object
             topicUid: DomTemplate
           - name: DomBehaviorDefinition object
@@ -868,7 +875,7 @@ items:
           - name: Altering and getting values of a DomInstance - examples
             topicUid: DOM_Altering_values_of_a_DomInstance
           - name: Processing multiple DomInstances - examples
-            topicUid: DOM_BulkProcessing_Example
+            topicUid: DOM_BulkProcessing_Examples
       - name: DOM DevOps tools
         topicUid: DOM_DevOps_tools
         items:
@@ -912,6 +919,8 @@ items:
             topicUid: DOM_Remove_Enum_Entry
           - name: Removing a field descriptor from a definition
             topicUid: DOM_Remove_FieldDescriptor_Definition
+          - name: Generating code with the DOM editor
+            topicUid: DOM_Generating_code_with_the_DOM_editor
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:

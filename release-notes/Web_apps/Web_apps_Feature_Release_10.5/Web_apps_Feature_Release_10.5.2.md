@@ -18,6 +18,34 @@ uid: Web_apps_Feature_Release_10.5.2
 
 ## New features
 
+#### DataMiner upgrade packages now include the new GQI DxM [ID 39145] [ID 41097] [ID 41811]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+From now on, full DataMiner upgrade packages as well as web-only DataMiner upgrade packages will include the new GQI DxM.
+
+Up to now, all GQI-related operations were executed by the SLHelper process, which only gets updated during a full DataMiner upgrade. From now on, you can opt to have all GQI-related operations executed by the GQI DxM instead. This has the following advantages:
+
+- GQI can now be updated independently from the DataMiner core software.
+- System load by GQI operations can now be balanced among the different DataMiner Agents in a DMS.
+
+> [!IMPORTANT]
+> Until further notice, the DataMiner web apps will continue to use the SLHelper process to execute GQI-related operations. If you want them to use the new GQI DxM instead, update the *C:\\Skyline DataMiner\\Webpages\\web.config* file accordingly.
+
+##### Specifying when idle child processes should be terminated
+
+When the GQI DxM is used, in the *C:\\Program Files\\Skyline Communications\\DataMiner GQI\\appsettings.json* file, you can specify when idle child processes should be terminated.
+
+See the following example. In this case, idle child processes will be terminated within WorkerExpiration + 30 seconds.
+
+```json
+"GQIOptions": {
+    "Extensions": {
+      "WorkerExpiration": "1.00:00:00",
+    },
+}
+```
+
 #### Dashboards/Low-Code Apps: New variable 'DMAIP' [ID 41561]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
@@ -40,6 +68,17 @@ It is now possible to configure *Copy to clipboard* actions.
 This type of action will allow users to copy a value\* to their Windows clipboard.
 
 *\*This can be a fixed value, but also a component data entry, a value from a flow or a variable.*
+
+#### DataMiner upgrade: New upgrade action will update web.config settings [ID 41813]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+As the *web.config* file of the web API can contain custom settings, neither a full DataMiner upgrade nor a web-only DataMiner upgrade will replace that file.
+
+From now on, during either a full DataMiner upgrade or a web-only DataMiner upgrade, a new upgrade action will be executed to check the *web.config* file for outdated settings. If such settings are found, the file will be updated.
+
+> [!NOTE]
+> Up to now, in some cases, communication via WebSockets would not work when the *web.config* file contained outdated settings. As this new upgrade action will now make sure the *web.config* file is up to date, most WebSocket issues should now be prevented. 
 
 ## Changes
 
@@ -100,6 +139,14 @@ The *Link to data* dialog box has been redesigned. It will now offer a better ov
 Overall performance has increased when retrieving the version history of a low-code app.
 
 Up to now, in order to retrieve the entire version history of a low-code app, the configuration file of each version had to be checked. From now on, all version information of a low-code app can be found in the *App.info.json* file.
+
+#### Dashboards/Low-Code Apps: Column & bar chart and Line & area chart components will only render the first 1000 items [ID 41777]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+From now on, the *Column & bar chart* and *Line & area chart* components will only render the first 1000 items.
+
+When 1000 items have been rendered, the following message will appear: `Only the first 1 000 items are shown.`
 
 ### Fixes
 
@@ -203,3 +250,9 @@ In some cases, in low-code apps, flows could get triggered too often. As a resul
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 When, in the action editor, you were configuring a *Close all panels* action, a panel selection box would incorrectly be displayed.
+
+#### Low-Code Apps: Additional page would incorrectly be added after a reload or after a new draft had been created [ID 41787]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+In some cases, an additional page would incorrectly be added to a low-code app after a reload or after a new draft had been created.

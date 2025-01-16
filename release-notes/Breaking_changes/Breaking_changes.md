@@ -8,6 +8,7 @@ The following breaking changes have been introduced in recent DataMiner releases
 
 | Release note ID | Release version(s) | Description |
 |--|--|--|
+| [41546](xref:General_Feature_Release_10.5.2#dataminer-object-models-an-exception-will-now-be-thrown-when-an-issue-occurs-for-any-of-the-dominstances-that-are-created-updated-or-deleted-in-bulk-id-41546) | DataMiner 10.5.0/10.5.2 | An exception will now be thrown when an issue occurs for any of the `DomInstances` that are created, updated, or deleted in bulk. |
 | [41195](xref:General_Feature_Release_10.5.1#automation-locking-behavior-of-automation-script-actions-has-been-enhanced-id-41195) | DataMiner 10.4.0 [CU10]/10.5.1 | Changes made to the locking behavior of Automation script actions will affect the behavior of the *Generate Information*, *Log*, *Send Notification*, *Send Report*, *Set State* and *Set Template* actions. |
 | [41178](xref:Skyline_DataMiner_Core_DataMinerSystem_Range_1.1#api-changes-for-improved-performance-id-41178) | Skyline.DataMiner.Core.DataMinerSystem | API changes for improved performance cause some calls to no longer throw an ElementStoppedException but instead an ElementNotFoundException or no exception at all. |
 | [41059](xref:Web_apps_Feature_Release_10.4.12#monitoring-app-alarm-card-urls-now-also-contain-the-element-id-id-41059) | DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 | From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards, Monitoring app alarm card URLs will also contain the element ID. |

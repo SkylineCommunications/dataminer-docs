@@ -24,5 +24,5 @@ To have a component in your dashboard or app updated based on component data:
 
 > [!NOTE]
 >
-> - You can also have a [dashboard depend on data in a URL without containing any dedicated components](xref:Using_data_in_URL_without_dedicated_component).
+> - You can also have a [dashboard or app depend on data in a URL without containing any dedicated components](xref:URL_data).
 > - For more information on configuring query (GQI) data, see [Creating a GQI query](xref:Creating_GQI_query).

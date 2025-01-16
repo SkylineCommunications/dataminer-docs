@@ -8,7 +8,13 @@ uid: General_Feature_Release_10.5.2
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!IMPORTANT]
-> When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
+>
+> Before you upgrade to this DataMiner version, make sure **version 14.40.33816** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+>
+> The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+>
+> - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+> - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 > [!TIP]
 >
@@ -22,11 +28,15 @@ uid: General_Feature_Release_10.5.2
 
 ## New features
 
-#### Unhandled exceptions in Automation scripts that cause SLAutomation to stop working will now be logged and will lead to an alarm being generated [ID 41375]
+#### Unhandled exceptions in Automation scripts that cause SLAutomation to stop working will now be logged and will lead to an alarm being generated [ID 41375] [ID 41781]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-From now on, when SLAutomation stops working due to an unhandled exception that occurred in an Automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and an alarm of type "error" will be generated.
+From now on, when SLAutomation stops working due to an unhandled exception that occurred in an Automation script, the stack trace of the unhandled exception will be logged in *SLAutomation.txt* and the following alarm of type "error" will be generated:
+
+```txt
+The automation script 'Script name' caused the hosting process SLAutomation.exe to crash. Please correct the script to prevent further system instability and check Automation log file for more details.
+```
 
 These alarms will be generated per DataMiner Agent for every Automation script that causes SLAutomation to stop working. In other words, when SLAutomation repeatedly stops working on a DataMiner Agent due to multiple unhandled exceptions thrown while running a particular Automation script, only one alarm will be generated on the DataMiner Agent in question.
 
@@ -48,12 +58,15 @@ In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular D
 
   Enables or disables load balancing on the DataMiner Agent in question.
 
-  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the DataMiner Agents specified in the `dmasForLoadBalancer` key (see below).
+  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will by default be handled in a balanced manner by all the DataMiner Agents in the cluster.
+
+    However, if you also add the `dmasForLoadBalancer` key (see below), these requests and updates will only be handled by the DataMiner Agents specified in that `dmasForLoadBalancer` key.
+
   - When this key is set to **false**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the local SLHelper process.
 
 - `<add key="dmasForLoadBalancer" value="1;2;15" />`
 
-  Specifies which DataMiner Agents will be used for visual overview load balancing.
+  If you enabled load balancing by setting the `visualOverviewLoadBalancer` key to true, then you can use this key to restrict the number of DataMiner Agents that will be used for visual overview load balancing.
 
   The key's value must be set to a semicolon-separated list of DMA IDs. For example, if the value is set to "1;2;15", then the DataMiner Agents with ID 1, 2 and 15 will be used to handle all requests and updates with regard to mobile visual overviews.
 
@@ -77,7 +90,66 @@ The following new messages can now be used to  which you can target to be sent t
 
 Additional logging with regard to visual overview load balancing will be available in the web logs located in the *C:\\Skyline DataMiner\\Logging\\Web* folder.
 
+#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Correlation engine [ID 41653]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Correlation engine.
+
+In other words, when an Automation script is triggered by the Correlation engine, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Feature_Release_10.2.8#added-the-option-to-skip-the-script-started-information-event-id-33666).
+
+If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
+
+```xml
+<MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+    ...
+    <SLNet>
+        ...
+        <SkipInformationEvents>false</SkipInformationEvents>
+        ...
+    </SLNet>
+    ...
+</MaintenanceSettings>
+```
+
+#### DataMiner upgrade: New upgrade action 'UpdateSrmContributingProtocolsForSwarming' [ID 41706]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+On systems on which Swarming has been enabled, contributing bookings are not working because protocols of enhanced services do not have a parameter with ID 7.
+
+During a DataMiner upgrade, a new upgrade action named *UpdateSrmcontributingProtocolsForSwarming* will now check for generated service protocols that do not have a parameter with ID 7. If such protocols exist, the parameter in question will be added to them.
+
+When the above-mentioned upgrade action is executed, it will log the name and the version of every protocol to which it has added a parameter with ID 7. It will also log a warning for every corrupt protocol it has found.
+
+> [!NOTE]
+> From now on, newly generated service protocols will by default have a parameter with ID 7.
+
 ## Changes
+
+### Breaking changes
+
+#### DataMiner Object Models: An exception will now be thrown when an issue occurs for any of the DomInstances that are created, updated, or deleted in bulk [ID 41546]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+From now on, if an issue occurs for any of the `DomInstances` that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Examples#checking-issues).
+
+As an alternative, the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will return false. The `result` output parameter will contain:
+
+- The list of successfully processed items, as is the case for `CreateOrUpdate` and `Delete`.
+
+- A list of `DomInstance` IDs that failed to be created, updated, or deleted.
+
+- The trace data per `DomInstance` ID.
+
+For each of these methods, the trace data of that call is still available and will contain the trace data for all processed `DomInstances`.
+
+> [!IMPORTANT]
+> In DataMiner versions prior to DataMiner Feature Release 10.5.0/10.5.2, when any validation issue occurs, no exception is thrown (even when `ThrowExceptionsOnErrorData` is true) when calling the `CreateOrUpdate` or `Delete` methods. Instead, the result of the call should be used to check for which `DomInstances` the call succeeded or failed.
+
+> [!NOTE]
+> When creating, updating or deleting a single `DomInstance`, you can now also use the `TryCreate`, `TryUpdate` and `TryDelete` methods as an alternative in order to avoid having to check for exceptions. These methods are also available for other objects that make use of the CRUD helper component.
 
 ### Enhancements
 
@@ -97,6 +169,20 @@ All DataMiner upgrade packages now include the latest Visual C++ Redistributable
 
 > [!NOTE]
 > From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
+
+#### DataMiner Taskbar Utility: 'Launch > Download DataMiner Cube' command will now download the DataMiner Cube desktop app [ID 41308]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrectly still try to launch the deprecated XBAP version of DataMiner Cube.
+
+From now on, when you click *Launch > Download DataMiner Cube*, the DataMiner Cube desktop app will be downloaded. When you then double-click the downloaded file, the following will happen:
+
+- When the DataMiner Cube desktop app is installed, the DataMiner Cube desktop app will open and a tile representing the local DMA will be added to it (if no such tile already exists).
+
+  If you then want to open a Cube session connected to the local DMA, click the tile representing the local DMA.
+
+- When the DataMiner Cube desktop app has not yet been installed, you will be asked whether it should be installed or not. If you choose to install it, it will be installed and immediately opened to host a Cube session connected to the local DMA.
 
 #### Security Advisory BPA test: Enhancements [ID 41385]
 
@@ -141,6 +227,12 @@ From now on, when the History Manager API is used after the History Manager has 
 
 `There is no known manager that can process objects for Manager X. Check if the manager has been initialized, the agent is licensed and is using the required database.`
 
+#### SLLogCollector packages now also contain information about the NATS connections that were closed [ID 41504]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+SLLogCollector packages now also include the *ClosedConnections.json* file, which contains information about the NATS connections that were closed.
+
 #### DataMiner Object Models: An information event will no longer be generated when a DOM CRUD or DOM Action script is started [ID 41536]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
@@ -155,6 +247,22 @@ Up to now, when a protocol performed multiple actions on a table, SLProtocol wou
 
 The above-mentioned array will now be locked to prevent the data from getting corrupted.
 
+#### Service & Resource Management: Property updates and swarming requests sent to the old master agent will now be resent to the new master agent [ID 41549]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+
+Since DataMiner feature release 10.4.11, it is possible to switch to another master agent.
+
+Up to now, if the current master agent had been marked "not eligible to be promoted to master", it would continue to process property updates and swarming requests as if it were still master agent. This behavior has now changed. From now on, all property updates and swarming requests sent to the current master agent that has been marked "not eligible to be promoted to master" will fail with a `NotAMasterAgentException`, and the agents that sent those messages will resend them to the new master agent.
+
+#### DataMiner Object Models: Number of DomInstanceIds in SectionDefinitionErrors now limited to 100 [ID 41572]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor`, a check is performed to make sure that entry is not being used by a `DomInstance`. This check reads all DomInstances that use that entry and places the IDs in the error data. However, as this check verifies all existing DomInstances, this could cause memory issues in SLNet when a large number of DomInstances were using the removed enum entry.
+
+From now on, a maximum of 100 DomInstances will be included in the error data. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
+
 #### Storage as a Service: Enhanced performance when updating alarm information [ID 41581]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
@@ -163,7 +271,7 @@ Because of a number of enhancements, overall performance has increased when upda
 
 #### DataMiner Cube server-side search engine: Enhanced performance [ID 41643]
 
-<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- MR 10.4.0 [CU11]/10.5.0 - FR 10.5.2 -->
 
 Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
 
@@ -319,3 +427,10 @@ When a large DataMiner System included agents in a Failover setup, the more agen
 When Class Library retrieves property configurations of type element, service or view, these get cached in SLNet, and when a configuration is added or updated, the cached object associated with that configuration is invalidated.
 
 Up to now, when a cached view, element or service property configuration object was invalidated, it would incorrectly not be set to null.
+
+#### Swarming: Problem with alarm events associated with DVE elements [ID 41741]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- Not added to MR 10.6.0 - Introduced by RN 41392 -->
+
+On systems on which the *Swarming* feature had been enabled, in some cases, alarm events associated with DVE elements would not show up in the connected clients or would not end up in the database.

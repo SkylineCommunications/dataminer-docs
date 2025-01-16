@@ -4,6 +4,9 @@ uid: Installation_procedure
 
 # Installation procedure
 
+> [!IMPORTANT]
+> This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+
 1. Download Visual Studio 2022 from [visualstudio.microsoft.com](https://visualstudio.microsoft.com/downloads/).
 
 1. Install Visual Studio.

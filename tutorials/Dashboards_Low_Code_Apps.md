@@ -15,6 +15,7 @@ keywords: low-code, low code, lowcode
 | [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
 | [Creating an anomaly overview dashboard](xref:Creating_Anomaly_Overview_Dashboard) | Create a dashboard that shows an overview of behavioral change event data. |
+| [Creating an alarm dashboard for a daily DMS health check](xref:Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check) | Create an alarm overview dashboard that can be used for a daily check of health of your DataMiner System. |
 
 > [!NOTE]
 > Most of the content in the Dashboards tutorials also applies for Low-Code Apps, as the functionality of these modules overlaps. Components that can be used in a dashboard can usually be used in exactly the same way in a low-code app. Consequently, it can occur that a low-code app is used as an example within a Dashboards tutorial.
@@ -41,6 +42,7 @@ keywords: low-code, low code, lowcode
 | [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
 | [Getting started with the grid component](xref:Tutorial_Apps_Grid) | Getting started with a grid component in a low-code app using GQI queries and the Template Editor. |
 | [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design) | Create an intuitive, visually appealing, and user-friendly low-code app, learning about best practices in low-code app design. |
+| [Creating a custom event scheduler low-code app](xref:Tutorial_Custom_Event_Scheduler_LCA) | Create an event scheduler app. |
 
 ### GQI tutorials
 

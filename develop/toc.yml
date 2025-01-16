@@ -620,8 +620,11 @@ items:
     - name: Connector documentation
       topicUid: Connector_help_pages
       items:
-      - name: Connector documentation template
-        topicUid: Connector_help_template
+      - name: Connector marketing documentation template
+        topicUid: Connector_marketing_template
+        items:
+        - name: Connector technical documentation template
+          topicUid: Connector_technical_template
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: Best practices
@@ -5720,12 +5723,10 @@ items:
               - name: Merging conflicts
                 topicUid: Merging_conflicts
       - name: Visual Studio
-        topicUid: TOOVisualStudio
         items:
           - name: Installation procedure
             topicUid: Installation_procedure
           - name: Settings
-            topicUid: VisualStudioSettings
             items:
               - name: Text editor general
                 topicUid: Text_editor_general
@@ -5734,7 +5735,6 @@ items:
           - name: Shortcuts
             topicUid: Shortcuts
           - name: Plugins
-            topicUid: Plugins
             items:
               - name: DataMiner Integration Studio (DIS)
                 topicUid: DataMiner_Integration_Studio_DIS
@@ -5745,10 +5745,11 @@ items:
               - name: SonarLint
                 topicUid: SonarLint
           - name: NuGet packages
-            topicUid: VisualStudioNuGetPackages
             items:
               - name: StyleCop.Analyzers
                 topicUid: StyleCopAnalyzers
+          - name: Troubleshooting
+            topicUid: VisualStudioTroubleshooting
       - name: Visual Studio Code
         topicUid: Visual_Studio_Code
       - name: WinDbg

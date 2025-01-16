@@ -209,12 +209,15 @@ In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular D
 
   Enables or disables load balancing on the DataMiner Agent in question.
 
-  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the DataMiner Agents specified in the `dmasForLoadBalancer` key (see below).
+  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will by default be handled in a balanced manner by all the DataMiner Agents in the cluster.
+
+    However, if you also add the `dmasForLoadBalancer` key (see below), these requests and updates will only be handled by the DataMiner Agents specified in that `dmasForLoadBalancer` key.
+
   - When this key is set to **false**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the local SLHelper process.
 
 - `<add key="dmasForLoadBalancer" value="1;2;15" />`
 
-  Specifies which DataMiner Agents will be used for visual overview load balancing.
+  If you enabled load balancing by setting the `visualOverviewLoadBalancer` key to true, then you can use this key to restrict the number of DataMiner Agents that will be used for visual overview load balancing.
 
   The key's value must be set to a semicolon-separated list of DMA IDs. For example, if the value is set to "1;2;15", then the DataMiner Agents with ID 1, 2 and 15 will be used to handle all requests and updates with regard to mobile visual overviews.
 
@@ -237,3 +240,38 @@ The following new messages can now be used to  which you can target to be sent t
 ##### Logging
 
 Additional logging with regard to visual overview load balancing will be available in the web logs located in the *C:\\Skyline DataMiner\\Logging\\Web* folder.
+
+#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Correlation engine [ID 41653]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Correlation engine.
+
+In other words, when an Automation script is triggered by the Correlation engine, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
+
+If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
+
+```xml
+<MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+    ...
+    <SLNet>
+        ...
+        <SkipInformationEvents>false</SkipInformationEvents>
+        ...
+    </SLNet>
+    ...
+</MaintenanceSettings>
+```
+
+#### DataMiner upgrade: New upgrade action 'UpdateSrmContributingProtocolsForSwarming' [ID 41706]
+
+<!-- MR 10.6.0 - FR 10.5.2 -->
+
+On systems on which Swarming has been enabled, contributing bookings are not working because protocols of enhanced services do not have a parameter with ID 7.
+
+During a DataMiner upgrade, a new upgrade action named *UpdateSrmcontributingProtocolsForSwarming* will now check for generated service protocols that do not have a parameter with ID 7. If such protocols exist, the parameter in question will be added to them.
+
+When the above-mentioned upgrade action is executed, it will log the name and the version of every protocol to which it has added a parameter with ID 7. It will also log a warning for every corrupt protocol it has found.
+
+> [!NOTE]
+> From now on, newly generated service protocols will by default have a parameter with ID 7.

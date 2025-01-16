@@ -464,6 +464,8 @@ items:
         topicUid: Activating_SLProtocol_as_a_64_Bit_Process
       - name: Activating SLProtocol as a 32-bit process
         topicUid: Activating_SLProtocol_as_a_32_Bit_Process
+      - name: BrokerGateway migration
+        topicUid: BrokerGateway_Migration
   - name: DataMiner Extension Modules (DxMs)
     topicUid: DataMinerExtensionModules
   - name: Custom branding
@@ -523,6 +525,8 @@ items:
         topicUid: service_resource_management_benchmarks
       - name: Swarming bookings benchmarks
         topicUid: swarming_bookings_benchmarks
+      - name: Swarming elements benchmarks
+        topicUid: swarming_elements_benchmarks
       - name: Trending benchmarks
         topicUid: trend_benchmarks
       - name: User-Defined APIs benchmarks

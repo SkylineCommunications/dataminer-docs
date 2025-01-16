@@ -31,11 +31,23 @@ From now on, when the History Manager API is used after the History Manager has 
 
 `There is no known manager that can process objects for Manager X. Check if the manager has been initialized, the agent is licensed and is using the required database.`
 
+#### SLLogCollector packages now also contain information about the NATS connections that were closed [ID 41504]
+
+<!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
+
+SLLogCollector packages now also include the *ClosedConnections.json* file, which contains information about the NATS connections that were closed.
+
 #### Storage as a Service: Enhanced performance when updating alarm information [ID 41581]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
 Because of a number of enhancements, overall performance has increased when updating alarm information on STaaS systems.
+
+#### DataMiner Cube server-side search engine: Enhanced performance [ID 41643]
+
+<!-- MR 10.4.0 [CU11]/10.5.0 - FR 10.5.2 -->
+
+Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
 
 #### Clearer error message when generating a PDF report based on a dashboard fails [ID 41661]
 
