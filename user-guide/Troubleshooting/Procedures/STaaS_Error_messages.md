@@ -1,10 +1,8 @@
 ---
-uid: Troubleshooting_STaaS_Issues
+uid: STaaS_Error_messages
 ---
 
-# Troubleshooting – STaaS
-
-This page provides solutions to common issues that you may encounter while using STaaS. It covers problems related to dataminer.services connectivity, registration, token expiration, and service reachability.
+# STaaS error messages
 
 ## The DMS is not connected to dataminer.services
 
