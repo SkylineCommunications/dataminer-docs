@@ -12,10 +12,9 @@ Estimated duration: 30 minutes.
 
 > [!NOTE]
 > The content and screenshots for this tutorial were created in **DataMiner 10.5.1**.
->
->[!TIP]
->See also: [Kata #53: Stay ahead of issues with proactive cap detection](https://community.dataminer.services/courses/kata-53/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
+> [!TIP]
+> See also: [Kata #53: Stay ahead of issues with proactive cap detection](https://community.dataminer.services/courses/kata-53/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
