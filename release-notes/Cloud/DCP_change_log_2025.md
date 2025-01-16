@@ -9,29 +9,29 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 16 January 2025 - Enhancement - Sharing - Add feedback button to user menu [ID_41926]
+### 16 January 2025 - Enhancement - Sharing - Feedback button added to user menu [ID 41926]
 
-A new button was added to the user menu allowing users to provide us with feedback on our apps.
+A new button has been added to the user menu of the Sharing page, allowing users to provide Skyline with feedback on its apps.
 
-### 16 January 2025 - Enhancement - dataminer.serivces home page - Add feedback button to user menu [ID_41926]
+### 16 January 2025 - Enhancement - dataminer.services homepage - Feedback button added to user menu [ID 41926]
 
-A new button was added to the user menu allowing users to provide us with feedback on our apps.
+A new button has been added to the user menu of the dataminer.services homepage, allowing users to provide Skyline with feedback on its apps.
 
-### 16 January 2025 - Enhancement - Admin app - Add feedback button to user menu [ID_41926]
+### 16 January 2025 - Enhancement - Admin app - Feedback button added to user menu [ID 41926]
 
-A new button was added to the user menu allowing users to provide us with feedback on our apps.
-
-### 16 January 2025 - Enhancement - Admin app - Remove all references to old cloud licensing [ID_41919]
-
-Obsolete license info and license usage has bene removed from the organization overview on the Admin App. This information can now be tracked on the usage page as mentioned in change [ID_41918].
-
-### 16 January 2025 - Enhancement - Admin app - Add Collaboration category on usage overview page [ID_41918]
-
-A new category was added to the usage overview page. For now only the dashboard sharing falls under this category.
+A new button has been added to the user menu of the Admin app, allowing users to provide Skyline with feedback on its apps.
 
 ### 16 January 2025 - Enhancement - Admin app - Improved auditing of Catalog items and deployments [ID 41922]
 
 All audit records related to Catalog items and their deployments will now show the type of the item in the details of the record.
+
+### 16 January 2025 - Enhancement - Admin app - References to old cloud licensing removed [ID 41919]
+
+Obsolete license info and license usage info has been removed from the organization overview in the Admin App. This information can now be tracked on the usage page (see [[ID 41918]](#16-january-2025---enhancement---admin-app---collaboration-category-added-on-usage-overview-page-id-41918)).
+
+### 16 January 2025 - Enhancement - Admin app - Collaboration category added on usage overview page [ID 41918]
+
+A new "Collaboration" category has been added to the usage overview page in the Admin app. For now, only dashboard sharing is part of this category.
 
 ### 15 January 2025 - Enhancement - Catalog Api - Reduced loading time of Catalog type filters [ID 41734]
 
