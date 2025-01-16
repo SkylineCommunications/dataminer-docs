@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 16 January 2025 - Enhancement - Admin app - Improved auditing of catalog items and deployments [ID_41922]
+### 16 January 2025 - Enhancement - Admin app - Improved auditing of Catalog items and deployments [ID_41922]
 
-All audit records related to catalog items and their deployments will now show the type of the item in the details of the record.
+All audit records related to Catalog items and their deployments will now show the type of the item in the details of the record.
 
 ### 15 January 2025 - Enhancement - Catalog Api - Reduced loading time of Catalog type filters [ID 41734]
 
