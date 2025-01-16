@@ -6,10 +6,10 @@ uid: GQI_Logging
 
 Logging for GQI is available from DataMiner 10.4.0/10.4.4 onwards.<!-- RN 38870 -->
 
-Errors and warnings are logged to log files in the folder:
+Errors and warnings are logged to log files in the following folder:
 
-* [GQI DxM](xref:GQI_DxM): `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs`
-* SLHelper: `C:\Skyline DataMiner\Logging\GQI`
+- If the [GQI DxM](xref:GQI_DxM) is used: `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs`
+- If GQI runs in the SLHelper process: `C:\Skyline DataMiner\Logging\GQI`
 
 If this folder does not exist, it will be created automatically with the first log.
 
@@ -23,10 +23,10 @@ From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, information about SLNet req
 
 ## Metrics
 
-From DataMiner 10.4.0 [CU3]/10.4.5 onwards<!-- RN 39098 -->, metrics such as the duration of individual GQI requests are also logged, in the folder:
+From DataMiner 10.4.0 [CU3]/10.4.5 onwards<!-- RN 39098 -->, metrics such as the duration of individual GQI requests are also logged, in the following folder:
 
-* [GQI DxM](xref:GQI_DxM): `C:\ProgramData\Skyline Communications\DataMiner GQI\Metrics`
-* SLHelper: `C:\Skyline DataMiner\Logging\GQI\Metrics`
+- If the [GQI DxM](xref:GQI_DxM) is used: `C:\ProgramData\Skyline Communications\DataMiner GQI\Metrics`
+- If GQI runs in the SLHelper process: `C:\Skyline DataMiner\Logging\GQI\Metrics`
 
 These can be used to investigate potential performance issues.
 
@@ -58,7 +58,7 @@ You can change the minimum log level to include less or more information in the 
 
 From DataMiner 10.4.6/10.5.0 onwards<!--RN 39355-->, when you change the minimum log level to *Debug* or lower, information about requests sent to SLNet is also logged.
 
-### Change the minimum log level (GQI DxM)
+### Changing the minimum log level (GQI DxM)
 
 If it does not exist yet, create the file `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.custom.json`.
 
@@ -90,7 +90,7 @@ Add the following configuration:
 }
 ```
 
-### Change the minimum log level (SLHelper)
+### Changing the minimum log level (SLHelper)
 
 Change the configuration in the *appSettings* section in *C:\Skyline DataMiner\Files\SLHelper.exe.config*. For example:
 
