@@ -2,11 +2,13 @@
 uid: Executing_actions_via_URL
 ---
 
-# Executing actions via the app URL
+# Using app URL actions and configurations
+
+## Executing actions via the app URL
 
 From DataMiner 10.3.6/10.4.0 onwards<!-- RN 35979 -->, you can make an app execute one or more actions by adding the action configuration to the app URL. This can for instance be used to make an app embedded in Visual Overview execute actions.
 
-## Configuration
+### Configuration
 
 1. Configure the actions in the action editor.
 
@@ -30,7 +32,7 @@ As soon as the actions have been executed, the action configuration will be remo
 > [!IMPORTANT]
 > To guarantee support across all browsers and prevent possible issues, the URL value should be encoded. If, for example, the JSON structure contains any ampersands ("&"), this will not work unencoded.
 
-## Example
+### Example
 
 In this example, an *Open a panel* action is added to an app URL:
 
@@ -40,3 +42,25 @@ https://myDMA/APP_ID/PAGE_NAME#{"actions":[{"Type":6,"__type":"Skyline.DataMiner
 
 > [!NOTE]
 > For the example above, this is the encoded equivalent: `https://myDMA/APP_ID/PAGE_NAME#%7B%22actions%22%3A%5B%7B%22Type%22%3A6%2C%22__type%22%3A%22Skyline.DataMiner.Web.Common.v1.DMAApplicationPagePanelAction%22%2C%22Panel%22%3A%224507edc7-fcee-47bd-985c-f40d844e72cb%22%2C%22Position%22%3A%22Center%22%2C%22Width%22%3A30%2C%22AsOverlay%22%3Atrue%7D%5D%7D`
+
+## Configuring app behavior via the URL
+
+The app's behavior can be modified by adding specific parameters to the URL.
+
+- `showAdvancedSettings=true`: Enables access to advanced settings, including:
+
+  - [Page/Panel configuration > *Lazy load components* setting](xref:Changing_low-code_app_settings)
+
+  - [*Join* query operator > *Row by row* option](xref:GQI_Join)
+
+  - [Line & area chart > Parameter table filter](xref:LineAndAreaChart#configuring-the-component)
+
+  - [Node edge graph > *Enable tooltip* setting](xref:DashboardNodeEdgeGraph#basic-component-configuration)
+
+  - [Node edge graph > *Show metric* setting](xref:DashboardNodeEdgeGraph#basic-component-configuration)
+
+  - [Parameter picker > Parameter table filter](xref:DashboardParameterPicker#configuring-the-component)
+
+  - [Parameter picker > *Index filter separator* setting](xref:DashboardParameterPicker#configuring-the-component)
+
+- `useNewIASInputComponent=true`: Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41495-->. Allows you to control whether the latest version of the interactive Automation script UI is used for IAS components or when launching an interactive Automation script via the *Launch a script* event. When this parameter is set to "false" or omitted, the app uses the old UI.

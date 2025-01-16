@@ -12,7 +12,6 @@ This component allows you to visualize any interactive Automation script (IAS) w
 >
 > - This component is only available in the Low-Code Apps module.
 > - Scripts will time out after they have run for 15 minutes. This means that after a script has been shown in the component for 15 minutes, an error will be shown.
-> - From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41495-->, when the parameter *useNewIASInputComponents=true* has been added to the URL of the low-code app, the latest version of the interactive Automation script UI is displayed. If the parameter is set to "false" or omitted from the URL, the low-code app will use the old UI to display the script.
 
 ## Configuring the component
 
