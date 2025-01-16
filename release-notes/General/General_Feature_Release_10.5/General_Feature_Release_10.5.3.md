@@ -40,6 +40,14 @@ uid: General_Feature_Release_10.5.3
 
 A number of security enhancements have been made.
 
+#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a Virtual Function [ID 41388]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well Virtual Functions.From now on, this option will only apply to DVE elements.
+
+In order to override the timeout for a Virtual Function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
+
 #### Enhanced error and exception handling when updating or clearing correlation alarms [ID 41675]
 
 <!-- MR 10.5.0 - FR 10.5.3 -->
