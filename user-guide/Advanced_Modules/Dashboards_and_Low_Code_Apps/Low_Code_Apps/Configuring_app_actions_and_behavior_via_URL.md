@@ -45,7 +45,7 @@ https://myDMA/APP_ID/PAGE_NAME#{"actions":[{"Type":6,"__type":"Skyline.DataMiner
 
 ## Configuring app behavior via the URL
 
-The app's behavior can be modified by adding specific parameters to the URL.
+You can modify the behavior of an app by adding specific parameters to the URL.
 
 - `showAdvancedSettings=true`: Enables access to advanced settings, including:
 
