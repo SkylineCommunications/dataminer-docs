@@ -10,6 +10,8 @@ Use this method to retrieve:
 - all alarms in the alarm tree of a specific alarm, or
 - alarm details of a cleared non-root alarm.
 
+Deprecated since DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11.<!-- RN 40240 -->. From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards, use the [GetAlarmHistoryV2](xref:GetAlarmHistoryV2) method instead.
+
 ## Input
 
 | Item | Format | Description |
