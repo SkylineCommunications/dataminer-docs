@@ -7,17 +7,17 @@ uid: ExecuteScriptOnDomInstanceActionSettings
 >[!NOTE]
 > From 10.4.2/10.5.0 onwards<!-- RN 37963 -->, it is possible to override this setting in a `DomDefinition` with the [ModuleSettingsOverrides](xref:DomDefinition#modulesettingsoverrides) property.
 
-This settings object contains the names of the scripts that should be executed after a [DomInstance](xref:DomInstance) is created, updated, or deleted. If no name is filled in, no script will be executed. From DataMiner version 10.3.10/10.4.0 onwards, it is also possible to define which type of script (entry point) should be executed. In earlier DataMiner versions, only the "ID only" type is supported. In DataMiner version 10.5.3/10.6.0, support for conditions was added that allow you to define whether not the configured update script should be executed for a `DomInstance` update.
+This settings object contains the names of the scripts that should be executed after a [DomInstance](xref:DomInstance) is created, updated, or deleted. If no name is filled in, no script will be executed. From DataMiner version 10.3.10/10.4.0 onwards, it is also possible to define which type of script (entry point) should be executed. In earlier DataMiner versions, only the "ID only" type is supported. From DataMiner 10.5.3/10.6.0 onwards<!-- RN 41780 -->, conditions are supported that allow you to define whether the configured update script should be executed for a `DomInstance` update.
 
 |Property |Type   |Description |
 |---------|-------|------------|
 |OnCreate |string |Name of the script that will be executed after each `DomInstance` is created in this module. |
 |OnUpdate |string |Name of the script that will be executed after each `DomInstance` is updated in this module. |
 |OnDelete |string |Name of the script that will be executed after each `DomInstance` is deleted in this module. |
-|ScriptType |OnDomInstanceActionScriptType |Type of the script that should be executed. See the ['Script Types'](#script-types) section for more info. |
-|OnUpdateTriggerConditions |List&lt;IDomCrudScriptTriggerCondition&gt; |Conditions where one has to be met before the update script is triggered. See the ['Conditions'](#conditions) section for more info. |
+|ScriptType |OnDomInstanceActionScriptType |Type of the script that should be executed. See [Script types](#script-types). |
+|OnUpdateTriggerConditions |List&lt;IDomCrudScriptTriggerCondition&gt; |Conditions of which one has to be met before the update script is triggered. See [Conditions](#conditions). |
 
-## Script Types
+## Script types
 
 There are currently two types of script, which each have their own unique entry point method:
 
@@ -196,14 +196,14 @@ namespace Example
 
 ## Conditions
 
-Conditions (available since 10.5.3/10.6.0)<!-- RN 41780 -->, can be used to prevent the update script from being triggered for each and every `DomInstance` update. This allows you to make your solution more efficient as no unnecessary script triggers are executed. These conditions can be configured by instantiating one of the supported condition classes and adding it to the `OnUpdateTriggerConditions` collection property on the `ExecuteScriptOnDomInstanceActionSettings`. These conditions are evaluated using a logical 'OR', meaning that only one condition needs to be true for the script to trigger.
+From DataMiner 10.5.3/10.6.0 onwards<!-- RN 41780 -->, conditions can be used to prevent the update script from being triggered for each and every `DomInstance` update. This allows you to make a solution more efficient as no unnecessary script triggers are executed. These conditions can be configured by instantiating one of the supported condition classes and adding it to the `OnUpdateTriggerConditions` collection property on the `ExecuteScriptOnDomInstanceActionSettings`. The conditions are evaluated using a logical 'OR', meaning that only one condition needs to be true for the script to trigger.
 
 > [!IMPORTANT]
 > When you configure conditions, the update script will no longer be triggered when a status transition is done. A status-related condition to define a trigger based on a specific status is currently not available.
 
 ### FieldValueUpdatedTriggerCondition
 
-This condition type allows you to check whether a `FieldValue` for a given `FieldDescriptor` has been added, updated, or removed. It also supports multiple `Sections`, meaning the condition will be met if:
+This condition type allows you to check whether a `FieldValue` for a given `FieldDescriptor` has been added, updated, or removed. It also supports multiple sections, meaning the condition will be met if:
 
 - A **new** `FieldValue` is added in a new or existing `Section`.
 - An **existing** `FieldValue` is deleted from a deleted or existing `Section`.
