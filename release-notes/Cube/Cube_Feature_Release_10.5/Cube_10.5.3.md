@@ -51,6 +51,18 @@ In the *Logging* section of *System Center*, the *DataMiner* tab now also allows
 
 ### Enhancements
 
+#### Visual Overview: Load times shown in SPI logging will now take into account the loading states of pending child shapes [ID 41517]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+In *System Center*, the *Cube* tab of the *Logging* section can be set to show SPI logging. This logging includes entries that show how long it took for Visual Overview pages to get loaded. From now on, the load times shown in those entries will also take into account the loading states of pending child shapes (i.e. child shapes that have placeholders that have not yet been resolved). Also, child shapes will now inherit any *EnableLoading* option that was set on shape, page, or system level.
+
+> [!NOTE]
+>
+> - Because of the changes that were made, you may notice more loading bars than before when opening visual overviews. If you want to reduce the number of loading bars, make sure the shapes resolve or add the *EnableLoading=False* option to the shapes that do not resolve.
+> - Mobile visual overviews only render their images when loading stops or when a one-minute timeout is reached. In setups where child shapes are not loaded and the *EnableLoading* option is set to true, the visual overview will only appear after 1 minute.
+> - After shape loading has reached the two-minute timeout, or after you have cancelled loading by clicking *X* on the loading bar, you can check the debug logging to find out which shapes are still pending.
+
 #### DataMiner Cube desktop app: Enhanced configuration file management [ID 41808]
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
