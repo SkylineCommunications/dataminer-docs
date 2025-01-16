@@ -85,6 +85,20 @@ We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you wa
 
 For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
 
+#### Alarm Console: Enhanced behavior of correlated alarms in linked alarm tabs [ID 41907]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+Up to now, when a correlated alarm appeared in a linked alarm tab because it matched the linked object, its base alarms would also appear in that alarm tab if they too matched the linked object. The behavior of correlated alarms in linked alarm tab has now been enhanced. See below.
+
+- When the correlated alarm matches the linked object, but the base alarms do not, then only the correlated alarm will be shown.
+
+- When the correlated alarm does not match the filter, but one or more of the base alarms do, then only those matching base alarms will be shown, even when *Correlation tracking* is enabled.
+
+- When the correlated alarm matches the filter, and one or more of the base alarms also match the filter, then only the correlated alarm will be shown.
+
+- When the correlated alarm does not match the filter, and none of the base alarms match the filter, then neither the correlated alarm nor the base alarms will be shown.
+
 ### Fixes
 
 #### DataMiner Cube desktop app: Some Cube sessions would not get closed correctly [ID 41831]

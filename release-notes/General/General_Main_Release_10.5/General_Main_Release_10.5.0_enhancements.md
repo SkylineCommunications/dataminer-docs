@@ -1059,6 +1059,12 @@ At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\So
 
 Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
 
+#### Enhanced error and exception handling when updating or clearing correlation alarms [ID 41675]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Error and exception handling has been enhanced in order to prevent duplicate or sticky correlation alarms due to errors or exceptions thrown when updating or clearing correlation alarms.
+
 #### Storage as a Service: Timeout for responses to write requests has been reduced to 10 seconds [ID 41717]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->

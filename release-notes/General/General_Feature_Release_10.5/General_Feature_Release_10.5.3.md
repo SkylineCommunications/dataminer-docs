@@ -34,6 +34,12 @@ uid: General_Feature_Release_10.5.3
 
 ### Enhancements
 
+#### Enhanced error and exception handling when updating or clearing correlation alarms [ID 41675]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Error and exception handling has been enhanced in order to prevent duplicate or sticky correlation alarms due to errors or exceptions thrown when updating or clearing correlation alarms.
+
 #### Amazon Keyspaces Service is now end-of-life [ID 41874]
 
 <!-- MR 10.5.0 [CU0] - FR 10.5.3 -->
@@ -51,6 +57,13 @@ For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Servi
 SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
 ### Fixes
+
+#### Elements no longer visible after having been swarmed [ID 41635]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.5.0 -->
+
+In some rare cases, when an element had been swarmed, it would no longer be visible in client apps like DataMiner Cube.
 
 #### Missing DATAMINER_NOTIFICATION_QUEUE thread [ID 41699]
 
