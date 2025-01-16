@@ -21,6 +21,13 @@ When the configuration window appears, it will now be possible to either continu
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
+#### Security enhancements [ID 40632] [ID 41475]
+
+<!-- 40632: MR 10.6.0 - FR 10.5.3 -->
+<!-- 41475: MR 10.6.0 - FR 10.5.2 -->
+
+A number of security enhancements have been made.
+
 #### Legacy correlation engine is now deprecated [ID 40834]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
@@ -105,12 +112,6 @@ From now on, SLLogCollector packages will also include the log files of the *Mod
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
 During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will now by default be added to the list of MIME types in the *C:\\Skyline DataMiner\\Webpages\\web.config* file.
-
-#### Security enhancements [ID 41475]
-
-<!-- 41475: MR 10.6.0 - FR 10.5.2 -->
-
-A number of security enhancements have been made.
 
 #### DataMiner Object Models: Number of DomInstanceIds in SectionDefinitionErrors now limited to 100 [ID 41572]
 

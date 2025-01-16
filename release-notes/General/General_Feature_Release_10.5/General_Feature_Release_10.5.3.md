@@ -34,6 +34,12 @@ uid: General_Feature_Release_10.5.3
 
 ### Enhancements
 
+#### Security enhancements [ID 40632]
+
+<!-- 40632: MR 10.6.0 - FR 10.5.3 -->
+
+A number of security enhancements have been made.
+
 #### Enhanced error and exception handling when updating or clearing correlation alarms [ID 41675]
 
 <!-- MR 10.5.0 - FR 10.5.3 -->
