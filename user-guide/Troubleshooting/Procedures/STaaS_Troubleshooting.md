@@ -263,7 +263,7 @@ Actions:
 
 - If the DataMiner System relies heavily on inter-element or inter-automation communication, consider using the InterApp framework as a better architectural choice.
 
-  If SLNet performance issues arise because of large interactions when using SLNet Subscriptions, ensure that you are using DataMiner version 10.3.12/10.4.6 or higher. InterApp communication efficiency has been significantly improved in these versions, which also directly impacts  interactions with STaaS.
+  If SLNet performance issues arise because of large interactions when using SLNet Subscriptions, ensure that you are using DataMiner version 10.3.12 or higher. InterApp communication efficiency has been significantly improved in this version, which also directly impacts interactions with STaaS.
 
   > [!TIP]
   > For more information, refer to [Skyline DataMiner Core InterAppCalls Range 1.0.1.1](xref:Skyline_DataMiner_Core_InterAppCalls_Range_1.0#1011).
