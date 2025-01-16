@@ -185,7 +185,7 @@ In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular D
 
     However, if you also add the `dmasForLoadBalancer` key (see below), these requests and updates will only be handled by the DataMiner Agents specified in that `dmasForLoadBalancer` key.
 
-  - When this key is set to "false", for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the local SLHelper process.
+  - When this key is set to "false" or is removed, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the local SLHelper process.
 
 - `<add key="dmasForLoadBalancer" value="1;2;15" />`
 
