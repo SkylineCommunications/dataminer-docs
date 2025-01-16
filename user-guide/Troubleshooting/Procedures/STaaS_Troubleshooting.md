@@ -15,13 +15,13 @@ One of the key advantages of STaaS is its ability to replace storage solutions l
 > - Be able to reach the STaaS endpoints.
 
 > [!NOTE]
-> Every interaction with the cloud has a cost. As with any storage system, the number of interactions should be reduced to a minimum. Using STaaS will highlight any inefficiencies because of their direct impact on cost. How and when to optimize this is specific to the integration.
+> Every interaction with the cloud has a cost. As with any storage system, the number of interactions should be reduced to a minimum. Using STaaS will highlight any inefficiencies because of their direct impact on costs. The approach to optimizing this, including how and when to implement it, will depend on the specific integration.
 
 ## Architecture
 
 The diagram below provides an overview of two clusters using STaaS versus Cassandra.
 
-![STaaS vs Cassandra](~/images/STaaS_vs_Cassandra.png)
+![STaaS vs Cassandra](~/user-guide/images/STaaS_vs_Cassandra.png)
 
 - **DMS A and B**: Interaction with STaaS
 
@@ -37,9 +37,9 @@ The diagram below provides an overview of two clusters using STaaS versus Cassan
 
   The visualization for DMS C and D highlights their interaction with Cassandra-related databases.
 
-  - **DMS D**: Uses local Cassandra nodes and an external OpenSearch/Elasticsearch node.
-
   - **DMS C**: Communicates with a Cassandra cluster that also includes OpenSearch/Elasticsearch.
+
+  - **DMS D**: Uses local Cassandra nodes and an external OpenSearch/Elasticsearch node.
 
 All communication between the DMS and the databases is routed through SLDataGateway.
 
@@ -55,14 +55,14 @@ There are two ways to verify if you are using a STaaS setup:
 
   1. Check if "STaaS" is entered in the *Database* field.
 
-     ![System Center - Database set to STaaS](~/images/SystemCenter_STaaS.png)
+     ![System Center - Database set to STaaS](~/user-guide/images/SystemCenter_STaaS.png)
 
      > [!NOTE]
      > The type of database (i.e. *Database per cluster* or *Database per Agent*) is not relevant, as all data from the cluster will be stored the same way.
      >
      > For example:
      >
-     > ![System Center - Database per cluster](~/images/SystemCenter_DB_per_cluster.png)
+     > ![System Center - Database per cluster](~/user-guide/images/SystemCenter_DB_per_cluster.png)
 
 - **In the *DB.xml* file**:
 
@@ -195,7 +195,7 @@ In the *SLCloudStorage.txt* log file, you may encounter entries similar to the e
 
 Impact:
 
-- DataMiner will not be able to start up.
+- DataMiner is not able to start up.
 
 - Data cannot be retrieved or stored.
 
@@ -217,7 +217,7 @@ In the *SLError.txt* log file, you may find the error message detailed under [Da
 
 Impact:
 
-- DataMiner will not be able start up.
+- DataMiner is not able start up.
 
 - DataMiner startup gets stuck at 99%.
 
@@ -288,7 +288,7 @@ Actions:
 
        - uks = UK South.
 
-     ![Throttled Requests by EventHub](xref:Throttled_Requests_By_EventHub.png)
+     ![Throttled Requests by EventHub](~/user-guide/images/Throttled_Requests_By_EventHub.png)
 
 - Verify the upload and download bandwidth usage by contacting the IT department.
 
