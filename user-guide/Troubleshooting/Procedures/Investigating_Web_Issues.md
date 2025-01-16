@@ -146,6 +146,7 @@ Visual Overview in web apps has limited functionality:
 - Visual Overview pages are rendered as images containing clickable regions. As a result, some features (e.g. embedding) and some session variable controls are not fully supported.
 - To render a Visual Overview page, [SLHelper](xref:Troubleshooting_SLHelper_exe) loads a virtual instance of DataMiner Cube in its memory. Initial loading of a page can take a long time because SLHelper needs to start Cube, connect to a DMA, and then generate an image.
 - SLHelper may use a significant amount of memory to display Visual Overview pages, especially when multiple users are connected. When Visual Overview pages are not viewed by any user, the virtual DataMiner Cube instance is terminated after a timeout of 5 minutes and the memory is released.
+- The DataMiner Agent you are connected to handles all requests and updates for mobile visual overview, which can lead to performance limitations when handling multiple users or requests. From DataMiner 10.5.2/10.6.0 onwards<!--RN 41434-->, you can implement [load balancing](#load-balancing) to distribute requests and updates across multiple Agents in the DMS, alleviating these performance limitations.
 
 If you encounter any issues or if you notice any behavior that is different from that in Cube, then check the `SLUIProvider.txt` and `SLHelperWrapper.txt` log files. Always include the Visio file when you ask for support by email.
 
@@ -167,6 +168,35 @@ For example:
 
 > [!NOTE]
 > When `helper:load-alarms` is set to "false", no alarms will be loaded, even when a visual overview needs alarm information to render correctly.
+
+#### Load balancing
+
+From DataMiner 10.5.2/10.6.0 onwards<!--RN 41434-->, you can implement load balancing for mobile visual overviews among DataMiner Agents in a DMS. Prior to this, the DataMiner Agent to which you were connected would handle all requests and updates with regard to mobile visual overviews.
+
+To configure load balancing:
+
+In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
+
+- `<add key="visualOverviewLoadBalancer" value="true" />`
+
+  Enables or disables load balancing on the DataMiner Agent in question.
+
+  - When this key is set to "true", for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will by default be handled in a balanced manner by all the DataMiner Agents in the cluster.
+
+    However, if you also add the `dmasForLoadBalancer` key (see below), these requests and updates will only be handled by the DataMiner Agents specified in that `dmasForLoadBalancer` key.
+
+  - When this key is set to "false", for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the local SLHelper process.
+
+- `<add key="dmasForLoadBalancer" value="1;2;15" />`
+
+  If you enabled load balancing by setting the `visualOverviewLoadBalancer` key to "true", then you can use this key to restrict the number of DataMiner Agents that will be used for visual overview load balancing.
+
+  The key's value must be set to a semicolon-separated list of DMA IDs. For example, if the value is set to "1;2;15", then the DataMiner Agents with ID 1, 2, and 15 will be used to handle all requests and updates with regard to mobile visual overviews.
+
+  If you only specify one ID (without trailing semicolon), only that specific DataMiner Agent will be used to handle all requests and updates with regard to mobile visual overviews.
+
+> [!NOTE]
+> These settings are not synchronized among the Agents in the cluster.
 
 ### Maps
 
