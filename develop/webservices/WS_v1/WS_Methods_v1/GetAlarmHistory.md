@@ -10,8 +10,7 @@ Use this method to retrieve:
 - all alarms in the alarm tree of a specific alarm, or
 - alarm details of a cleared non-root alarm.
 
-> [!NOTE]
-> From DataMiner 10.6.0/10.5.1 onwards, when Swarming is enabled, use the [GetAlarmHistoryV2](xref:GetAlarmHistoryV2) method instead.
+Deprecated since DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11.<!-- RN 40240 -->. From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards, use the [GetAlarmHistoryV2](xref:GetAlarmHistoryV2) method instead.
 
 ## Input
 

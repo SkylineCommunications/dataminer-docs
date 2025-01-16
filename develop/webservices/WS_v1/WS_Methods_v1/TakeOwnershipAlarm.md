@@ -6,8 +6,7 @@ uid: TakeOwnershipAlarm
 
 Use this method to take ownership of an alarm.
 
-> [!NOTE]
-> From DataMiner 10.6.0/10.5.1 onwards, when Swarming is enabled, use the [TakeOwnershipAlarmV2](xref:TakeOwnershipAlarmV2) method instead.
+Deprecated since DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11.<!-- RN 40240 -->. From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards, use the [TakeOwnershipAlarmV2](xref:TakeOwnershipAlarmV2) method instead.
 
 ## Input
 

@@ -6,8 +6,7 @@ uid: AddCommentToAlarm
 
 Use this method to add a comment to an alarm.
 
-> [!NOTE]
-> From DataMiner 10.6.0/10.5.1 onwards, when Swarming is enabled, use the [AddCommentToAlarmV2](xref:AddCommentToAlarmV2) method instead.
+Deprecated since DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11.<!-- RN 40240 -->. From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards, use the [AddCommentToAlarmV2](xref:AddCommentToAlarmV2) method instead.
 
 ## Input
 
