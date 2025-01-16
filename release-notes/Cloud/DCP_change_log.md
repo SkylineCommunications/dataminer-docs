@@ -1,5 +1,5 @@
 ---
-uid: DCP_change_log_2024
+uid: DCP_change_log
 ---
 
 # dataminer.services change log - 2024
