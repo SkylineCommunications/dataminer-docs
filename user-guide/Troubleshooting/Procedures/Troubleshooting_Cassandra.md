@@ -156,4 +156,4 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
   - When you **increase** the TTL, note that old data will still expire with the old, smaller TTL, as only new data will be written with the higher TTL.
 
-- Prior to DataMiner 10.4.0 [CU11]/10.5.2<!--RN 41551-->, changes to Cassandra compaction settings, such as the *unsafe_aggressive_sstable_expiration* option, may be incorrectly overwritten by the default settings during DataMiner start-up. This issue applies only to manually configured Cassandra systems.
+- Prior to DataMiner 10.4.0 [CU11]/10.5.2<!--RN 41551-->, changes to Cassandra compaction settings, such as the *unsafe_aggressive_sstable_expiration* option, may be incorrectly overwritten by the default settings during DataMiner startup. This issue applies only to manually configured Cassandra systems.
