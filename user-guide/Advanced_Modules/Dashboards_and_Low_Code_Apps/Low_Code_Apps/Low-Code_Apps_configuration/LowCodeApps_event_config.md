@@ -63,6 +63,26 @@ To configure an event to navigate to a URL:
 
 1. Optionally, to open the webpage in a new tab, enable the option *Open in new tab*.
 
+## Copying text to the clipboard
+
+Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41729-->.
+
+To configure an event to copy text to the clipboard:
+
+1. Select *Copy to clipboard*.
+
+1. In the text box, enter the content to be copied when the event is triggered. Alternatively, use curly brackets to insert variables dynamically.
+
+In the following example, an on-click *Copy to clipboard* action was configured for an icon added to a table column:
+
+![Copy to clipboard](~/user-guide/images/Copy_to_Clipboard.png)<br>*Copy to clipboard action configuration in DataMiner 10.5.2*
+
+When the icon is clicked, the content of the associated "Order ID" cell is copied to the clipboard.
+
+Optionally, you can configure a [*Show a notification* action](#showing-a-notification) to run after the *Copy to clipboard* action. This notification confirms that the content was successfully copied to the clipboard:
+
+![Copy to clipboard](~/user-guide/images/Copy_to_Clipboard.gif)<br>*Low-Code Apps module in DataMiner 10.5.2*
+
 ## Opening a page of the app
 
 To configure an event to open another page of the app:
