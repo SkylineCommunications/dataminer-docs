@@ -343,8 +343,8 @@ items:
                 topicUid: LowCodeApps_organizing_landing_page
           - name: Deleting a low-code application
             topicUid: Deleting_custom_apps
-          - name: Executing actions via the app URL
-            topicUid: Executing_actions_via_URL
+          - name: Configuring app actions and behavior via the URL
+            topicUid: Configuring_app_actions_and_behavior_via_URL
           - name: Tutorials
             topicUid: Tutorial_Apps
             items:
