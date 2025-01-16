@@ -9,6 +9,16 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 16 January 2025 - New feature - Admin - Usage charts [ID 41937]
+Two pie charts have been added to the usage page.
+These pie charts visualize the usage data by system or feature.
+
+Additionally, the filtering has been improved to also allow to show or hide deleted systems.
+
+### 16 January 2025 - Enhancement - Admin app - Collaboration category added on usage overview page [ID 41918]
+
+A new "Managed Object" category has been added to the usage overview page in the Admin app.
+
 ### 16 January 2025 - Enhancement - Sharing - Feedback button added to user menu [ID 41926]
 
 A new button has been added to the user menu of the Sharing page, allowing users to provide Skyline with feedback on its apps.
