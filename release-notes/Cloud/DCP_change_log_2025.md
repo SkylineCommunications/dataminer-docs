@@ -9,6 +9,47 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 15 January 2025 - Enhancement - Catalog Api - Reduced loading time of Catalog type filters [ID 41734]
+
+To improve the performance of requests to retrieve the Catalog item categories and types, a cache has been added. This will reduce the loading time of the type filters in the Catalog.
+
+### 15 January 2025 - Enhancement - Catalog - Replaced banner image [ID 41731]
+
+On the homepage, the background banner image has now been replaced with a CSS gradient to reduce initial load times.
+
+### 15 January 2025 - Enhancement - Catalog - Support added for smaller screens [ID 41690]
+
+Support has been added for smaller screens, so that when you view the details page of a Catalog item on a smaller screen, everything will now be displayed correctly. Actions other than the "Deploy" action will be grouped in a context menu in such a case.
+
+### 15 January 2025 - Enhancement - Catalog Api - Small memory usage improvement [ID 41676]
+
+An improvement has been implemented to reduce the amount of memory consumed when registering a Catalog item version.
+
+### 15 January 2025 - Enhancement - Admin app - Catalog Key API auditing [ID 41667]
+
+The following actions are now included in the Audit records accessible in the Admin app :
+
+- Registration of a Catalog item using an organization key.
+- Registration of a Catalog item version using an organization key.
+- Retrieval of Catalog item info using an organization key.
+- Updating of the publishing state of a Catalog item using an organization key.
+
+### 15 January 2025 - Fix - Admin - Prevent sidebar pollution [ID 41594]
+
+When you quickly switched between organizations in the Admin app, it could occur that duplicate items were shown in the sidebar.
+
+### 15 January 2025 - Fix - Artifact Uploader - Uploading an item did not link it to the organization [ID 41587] [ID 41588]
+
+When the Skyline.DataMiner.CICD.Tools.CatalogUpload tool was used, the uploaded Catalog item was incorrectly only available for Skyline Communications but not for the organization executing the upload. This issue has been resolved.
+
+### 15 January 2025 - Enhancement - Catalog - Improved initial load times [ID 41573]
+
+The number of required API calls to initially load the Catalog homepage has been reduced, resulting in improved initial load times.
+
+### 15 January 2025 - Enhancement - Catalog - Trusted source indicator [ID 41540]
+
+On the browse page, Catalog items that are published by the selected organization or by Skyline Communications will now display a green indicator.
+
 ### 9 January 2025 - Enhancement - Remote Access performance and stability improvements [ID 41897]
 
 Several enhancements were made to improve performance and stability for all remote access features with immediate effect.
