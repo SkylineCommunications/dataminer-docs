@@ -293,3 +293,9 @@ When a DataMiner Agent was upgraded from Main Release version 10.4.0 CU6 (or lat
 <!-- MR 10.5.0 - FR 10.5.3 -->
 
 Up to now, when a Min or Max aggregation was performed on a datetime column, the aggregated column would incorrectly be a number column instead of datetime column.
+
+#### Fixes made with regard to the management of locally-stored element documents [ID 41882]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+A number of fixes have been made with regard to the management of locally-stored element documents that are not synchronized among the DMAs in a DataMiner System.

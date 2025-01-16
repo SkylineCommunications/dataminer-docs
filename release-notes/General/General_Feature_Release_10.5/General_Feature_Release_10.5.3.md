@@ -40,11 +40,13 @@ uid: General_Feature_Release_10.5.3
 
 Error and exception handling has been enhanced in order to prevent duplicate or sticky correlation alarms due to errors or exceptions thrown when updating or clearing correlation alarms.
 
-#### Amazon Keyspaces Service is now end-of-life [ID 41874]
+#### Amazon Keyspaces Service is now end-of-life [ID 41874] [ID 41914]
 
 <!-- MR 10.5.0 [CU0] - FR 10.5.3 -->
 
 Support for Amazon Keyspaces Service is now officially end-of-life.
+
+When you run the DataMiner installer or install a DataMiner upgrade package, the *VerifyNoAmazonKeyspaces* prerequisite will check whether the DataMiner Agent is configured to use a database of type *Amazon Keyspaces*. If so, the upgrade process will not be allowed to continue.
 
 We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
 
@@ -104,3 +106,15 @@ Up to now, when a Min or Max aggregation was performed on a datetime column, the
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When the same version of a DVE connector was uploaded twice, the production version of all DVE child elements using another version of that connector as production version would incorrectly have their production version set to the newly uploaded version.
+
+#### SNMP managers would incorrectly receive some or all active alarms at DMA start-up [ID 41878]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a DataMiner Agent was started, in some cases, the configured SNMP managers would incorrectly receive some or all active alarms.
+
+#### Fixes made with regard to the management of locally-stored element documents [ID 41882]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+A number of fixes have been made with regard to the management of locally-stored element documents that are not synchronized among the DMAs in a DataMiner System.

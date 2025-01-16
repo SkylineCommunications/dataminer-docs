@@ -75,11 +75,13 @@ A number of minor enhancements have been made to the DataMiner Cube desktop app 
 
 From now on, DataMiner Cube will no longer be available as XBAP application.
 
-#### Amazon Keyspaces Service is now end-of-life [ID 41874]
+#### Amazon Keyspaces Service is now end-of-life [ID 41874] [ID 41914]
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
 
 Support for Amazon Keyspaces Service is now officially end-of-life.
+
+When you run the DataMiner installer or install a DataMiner upgrade package, the *VerifyNoAmazonKeyspaces* prerequisite will check whether the DataMiner Agent is configured to use a database of type *Amazon Keyspaces*. If so, the upgrade process will not be allowed to continue.
 
 We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
 

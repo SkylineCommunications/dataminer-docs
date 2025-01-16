@@ -46,3 +46,9 @@ When a previously deleted booking was created again with the same ID, up to now,
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When the same version of a DVE connector was uploaded twice, the production version of all DVE child elements using another version of that connector as production version would incorrectly have their production version set to the newly uploaded version.
+
+#### SNMP managers would incorrectly receive some or all active alarms at DMA start-up [ID 41878]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a DataMiner Agent was started, in some cases, the configured SNMP managers would incorrectly receive some or all active alarms.
