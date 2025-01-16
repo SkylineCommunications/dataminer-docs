@@ -287,3 +287,9 @@ When a DataMiner Agent was upgraded from Main Release version 10.4.0 CU6 (or lat
 
 > [!NOTE]
 > See also [SNMPv3 elements not loaded correctly after upgrade](xref:KI_SNMPv3_elements_broken_after_upgrade)
+
+#### GQI: Min and Max aggregation of a datetime column would incorrectly result in a number column [ID 41789]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Up to now, when a Min or Max aggregation was performed on a datetime column, the aggregated column would incorrectly be a number column instead of datetime column.

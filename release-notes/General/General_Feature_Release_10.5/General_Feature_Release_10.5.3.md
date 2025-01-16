@@ -93,6 +93,12 @@ In some rare cases, the element state of a DVE or Virtual Function element would
 
 When a previously deleted booking was created again with the same ID, up to now, that booking would incorrectly not be retrieved.
 
+#### GQI: Min and Max aggregation of a datetime column would incorrectly result in a number column [ID 41789]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Up to now, when a Min or Max aggregation was performed on a datetime column, the aggregated column would incorrectly be a number column instead of datetime column.
+
 #### Uploading the same version of a DVE connector twice would incorrectly cause the production version of DVE child elements to be changed [ID 41798]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
