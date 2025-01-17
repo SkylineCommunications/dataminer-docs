@@ -12,6 +12,11 @@ uid: Web_apps_Feature_Release_10.5.2
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.2](xref:General_Feature_Release_10.5.2).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.5.2](xref:Cube_Feature_Release_10.5.2).
 
+## Highlights
+
+- [Dashboards/Low-Code Apps: New variable 'DMAIP' [ID 41561]](#dashboardslow-code-apps-new-variable-dmaip-id-41561)
+- [Low-Code Apps: New 'Copy to clipboard' action [ID 41729]](#low-code-apps-new-copy-to-clipboard-action-id-41729)
+
 ## New features
 
 #### DataMiner upgrade packages now include the new GQI DxM [ID 39145] [ID 41097] [ID 41811]
@@ -74,7 +79,7 @@ As the *web.config* file of the web API can contain custom settings, neither a f
 From now on, during either a full DataMiner upgrade or a web-only DataMiner upgrade, a new upgrade action will be executed to check the *web.config* file for outdated settings. If such settings are found, the file will be updated.
 
 > [!NOTE]
-> Up to now, in some cases, communication via WebSockets would not work when the *web.config* file contained outdated settings. As this new upgrade action will now make sure the *web.config* file is up to date, most WebSocket issues should now be prevented. 
+> Up to now, in some cases, communication via WebSockets would not work when the *web.config* file contained outdated settings. As this new upgrade action will now make sure the *web.config* file is up to date, most WebSocket issues should now be prevented.
 
 ## Changes
 
