@@ -103,6 +103,13 @@ When DataMiner was restarted, an issue could occur, causing the DATAMINER_NOTIFI
 
 In some rare cases, the element state of a DVE or Virtual Function element would end up incorrect in the SLNet cache, causing some caches to not be initialized correctly.
 
+#### Problem when trying to swarm an element back to its original DataMiner Agent [ID 41709]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+In some cases, it would not be possible to swarm an element back to its original DataMiner Agent due to a caching issue in the SLDataMiner process.
+
 #### Service & Resource Management: Problem when a previously deleted booking was created again [ID 41718]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
