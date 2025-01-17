@@ -164,3 +164,10 @@ When a DataMiner Agent was started, in some cases, the configured SNMP managers 
 <!-- MR 10.5.0 - FR 10.5.3 -->
 
 A number of fixes have been made with regard to the management of locally-stored element documents that are not synchronized among the DMAs in a DataMiner System.
+
+#### Problem when swarming elements between two DMAs with a time difference [ID 41910]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+When elements were swarmed between two DataMiner Agents, in some rare cases, a problem could occur when there was a time difference between both agents.
