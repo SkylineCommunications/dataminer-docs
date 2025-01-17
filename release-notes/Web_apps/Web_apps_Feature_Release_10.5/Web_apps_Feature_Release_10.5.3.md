@@ -99,3 +99,9 @@ When a post action was configured to get triggered after a *Set viewport* or a *
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When you tried to log on to a DataMiner web app, in some cases, the authentication screen would not redirect you to the correct app.
+
+#### Low-Code Apps: Problem when using queries in flows [ID 41955]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a low-code app used queries in some of its flows, in some cases, it could become unresponsive.
