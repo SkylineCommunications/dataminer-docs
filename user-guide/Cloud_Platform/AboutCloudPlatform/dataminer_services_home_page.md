@@ -24,6 +24,11 @@ At the top of the dataminer.services home page, you will find links to the diffe
 
 - [Admin](xref:CloudAdminApp)
 
+> [!TIP]
+> Both on the dataminer.services home page and in many of the dataminer.services apps, you can provide direct feedback to Skyline via  the *Feedback* option in the user menu.<!-- RN 41926 -->
+>
+> ![Feedback option](~/user-guide/images/Cloud_feedback.png)
+
 ## DataMiner Cube installation button
 
 You can install DataMiner Cube from the dataminer.services home page. To do so, click the *Desktop installation* button in the top-right corner.
