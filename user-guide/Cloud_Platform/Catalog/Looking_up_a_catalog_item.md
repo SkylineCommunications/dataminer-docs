@@ -2,7 +2,7 @@
 uid: Looking_up_an_item_in_the_catalog
 ---
 
-# Looking up an item in the Catalog
+# Looking up an item in the Catalog with UI
 
 When you open up the Catalog, a search box is displayed.
 
@@ -30,3 +30,31 @@ When you open up the Catalog, a search box is displayed.
 
    > [!TIP]
    > See also: [Versioning of Catalog items](xref:About_the_Catalog_module#versioning-of-catalog-items)
+
+# Looking up versions of an item with the API
+
+The catalog API call allows you to retrieve version information of a Catalog item.
+
+> [!NOTE]
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
+
+### API Definition
+
+For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
+
+This page also provides a quick way to execute the call: Expand the "/api/key-catalog/v2-0/catalogs/{catalogId}/versions" item, and click the *Try it out* button.
+
+> [!IMPORTANT]
+> Clicking the *Try it out* button will execute the call on the production Catalog.
+
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+
+### HTTP method
+
+GET
+
+### Route parameters
+
+- Route parameter "catalogId" is the ID of the Catalog item of which you want to look up versions from, which is the same as the ID used to [register the Catalog item](#registering-a-catalog-item-with-the-api). This must be a valid GUID.
+
+To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
