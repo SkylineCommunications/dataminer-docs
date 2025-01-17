@@ -6,7 +6,7 @@ uid: Monitoring_Processed_Traps
 
 Once at least one trap processor element has been configured to process traps from a valid source that is actively generating events, you can monitor the processed events and heartbeats on the *Processed Traps* page of the Smart Trap Processor tool.
 
-![Smart Trap Processor Homepage](~/user-guide/images/TrapProcessor_Overview.png)
+![Smart Trap Processor home page](~/user-guide/images/TrapProcessor_Overview.png)
 
 - At the top, you can find the total number of trap processors available for monitoring.
 

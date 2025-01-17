@@ -61,7 +61,7 @@ The buffer size of Stream Viewer’s text box has increased from 32 kB to 1 MB.
 
 In the Monitoring, Dashboards and Jobs apps, it is now possible to use the *ShowInformationMessage* method in a script to display a message in the app.
 
-Note that a small change has also been implemented in the Dashboards app. The *New dashboard* button will no longer be displayed in the header bar. Creating a new dashboard remains possible via the context menu of the side panel and via the Dashboards homepage.
+Note that a small change has also been implemented in the Dashboards app. The *New dashboard* button will no longer be displayed in the header bar. Creating a new dashboard remains possible via the context menu of the side panel and via the Dashboards home page.
 
 #### Jobs app: Timeline improvement \[ID 24352\]
 

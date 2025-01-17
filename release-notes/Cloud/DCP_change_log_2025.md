@@ -13,9 +13,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 A new button has been added to the user menu of the Sharing page, allowing users to provide Skyline with feedback on its apps.
 
-### 16 January 2025 - Enhancement - dataminer.services homepage - Feedback button added to user menu [ID 41926]
+### 16 January 2025 - Enhancement - dataminer.services home page - Feedback button added to user menu [ID 41926]
 
-A new button has been added to the user menu of the dataminer.services homepage, allowing users to provide Skyline with feedback on its apps.
+A new button has been added to the user menu of the dataminer.services home page, allowing users to provide Skyline with feedback on its apps.
 
 ### 16 January 2025 - Enhancement - Admin app - Feedback button added to user menu [ID 41926]
 
@@ -39,7 +39,7 @@ To improve the performance of requests to retrieve the Catalog item categories a
 
 ### 15 January 2025 - Enhancement - Catalog - Replaced banner image [ID 41731]
 
-On the homepage, the background banner image has now been replaced with a CSS gradient to reduce initial load times.
+On the home page, the background banner image has now been replaced with a CSS gradient to reduce initial load times.
 
 ### 15 January 2025 - Enhancement - Catalog - Support added for smaller screens [ID 41690]
 
@@ -68,7 +68,7 @@ When the Skyline.DataMiner.CICD.Tools.CatalogUpload tool was used, the uploaded 
 
 ### 15 January 2025 - Enhancement - Catalog - Improved initial load times [ID 41573]
 
-The number of required API calls to initially load the Catalog homepage has been reduced, resulting in improved initial load times.
+The number of required API calls to initially load the Catalog home page has been reduced, resulting in improved initial load times.
 
 ### 15 January 2025 - Enhancement - Catalog - Trusted source indicator [ID 41540]
 
