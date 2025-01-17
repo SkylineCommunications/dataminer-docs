@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 20 January 2025 - New Feature - Deploy a Catalog version using Key Catalog API [ID xxx]
+
+It is now possible to deploy a version of a Catalog item using an organization key which has the "Deploy a version of a Catalog item" permission.
+
+### 20 January 2025 - New Feature - Download a Catalog version using Key Catalog API [ID 41892]
+
+It is now possible to download a version of a Catalog item using an organization key which has the "Download Catalog" permission.
+
+### 20 January 2025 - New Feature - Get Catalog versions using Key Catalog API [ID 41941]
+
+It is now possible to obtain version information of a Catalog item using an organization key which has the "Read Catalog items" permission.
+
 ### 16 January 2025 - Enhancement - Sharing - Feedback button added to user menu [ID 41926]
 
 A new button has been added to the user menu of the Sharing page, allowing users to provide Skyline with feedback on its apps.
