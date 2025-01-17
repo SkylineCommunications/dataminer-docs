@@ -70,6 +70,12 @@ Up to now, this page would still contain links to the XBAP version of DataMiner 
 
 ### Fixes
 
+#### Dashboards/Low-Code Apps - Table component: Refetching data would cause the data in the table to shift across the different pages [ID 41638]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a *Table* component refetched its data, in some cases, the data would incorrectly shift across the different pages.
+
 #### Dashboards/Low-Code Apps - Timeline component: Problem with custom timezones [ID 41839]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
