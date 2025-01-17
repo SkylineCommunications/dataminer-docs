@@ -128,6 +128,13 @@ In some rare cases, the element state of a DVE or Virtual Function element would
 
 In some cases, it would not be possible to swarm an element back to its original DataMiner Agent due to a caching issue in the SLDataMiner process.
 
+#### Problem with SLDataMiner when a DMS with swarming enabled had a database connection issue at start-up [ID 41714]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+When, while starting up, a DataMiner System with swarming enabled experienced a problem with its database connection, the SLDataMiner process would incorrectly shut down.
+
 #### Service & Resource Management: Problem when a previously deleted booking was created again [ID 41718]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
