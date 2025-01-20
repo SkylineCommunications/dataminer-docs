@@ -11,7 +11,12 @@ When you register a new Catalog item, it will only become available for the regi
 A Catalog item is identified by a unique ID (GUID), which you will need to provide yourself.
 
 > [!IMPORTANT]
-> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Register Catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**. Also, note that you need to have the *Owner* role in order to access or create organization keys.
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Register Catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**. Also, note that you need to have the *Owner* role in order to access or create organization keys.  
+> The API calls use the following rate-limiting policy:
+>- Partitionkey: IP address or host name of connection
+>  - Burst limit: 100 requests
+>  - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
+>  - No queueing for extra requests beyond the token bucket
 
 > [!TIP]
 > For practical examples, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version), and [Registering a new version of a connector in the Catalog using GitHub Actions](xref:Tutorial_Register_Catalog_Version_GitHub_Actions).

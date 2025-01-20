@@ -37,7 +37,12 @@ When you open up the Catalog, a search box is displayed.
 The catalog API allows you to retrieve information of a Catalog item.
 
 > [!NOTE]
-> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
+> The API calls use the following rate-limiting policy:
+>- Partitionkey: IP address or host name of connection
+>  - Burst limit: 100 requests
+>  - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
+>  - No queueing for extra requests beyond the token bucket
 
 ### API Definition
 
@@ -65,7 +70,12 @@ To obtain this ID for an existing Catalog item, navigate to its details page in 
 The catalog API call allows you to retrieve version information of a Catalog item.
 
 > [!NOTE]
-> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
+> The API calls use the following rate-limiting policy:
+>- Partitionkey: IP address or host name of connection
+>  - Burst limit: 100 requests
+>  - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
+>  - No queueing for extra requests beyond the token bucket
 
 ### API Definition
 

@@ -50,7 +50,12 @@ The deploy API call allows you to deploy a Catalog item to a DataMiner System.
 
 
 > [!NOTE]
-> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Deploy a version of a catalog item* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Deploy a version of a catalog item* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
+> The API calls use the following rate-limiting policy:
+>- Partitionkey: IP address or host name of connection
+>  - Burst limit: 100 requests
+>  - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
+>  - No queueing for extra requests beyond the token bucket
 
 ### API Definition
 
