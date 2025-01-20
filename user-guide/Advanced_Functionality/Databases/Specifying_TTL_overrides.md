@@ -51,6 +51,8 @@ The following default values and limitations apply:
 | History slider     | 31 days     | 1 hour           | 3660 days   |
 | Spectrum traces    | 366 days    | 1 hour           | 3660 days   |
 
+When using Cassandra, there are however other maxima recommended for trending. This is because of the [Time Window Compaction Strategy](xref:TWCS) (TWCS) used by Cassandra. When exceeding this recommended value, a warning icon will appear.
+
 > [!NOTE]
 >
 > - The TTL settings are stored in the file *DBMaintenanceDMS.xml*. For more information, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).
