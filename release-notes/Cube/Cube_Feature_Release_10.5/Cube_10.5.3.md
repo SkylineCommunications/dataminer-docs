@@ -69,6 +69,12 @@ In *System Center*, the *Cube* tab of the *Logging* section can be set to show S
 
 A number of minor enhancements have been made to the DataMiner Cube desktop app with regard to configuration file management.
 
+#### DataMiner Cube desktop app: Users will no longer be able to simultaneously update the configuration file [ID 41851]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+A number of enhancements have been made to the DataMiner Cube desktop app to prevent users from simultaneously updating the configuration file.
+
 #### DataMiner Cube will no longer be available as XBAP application [ID 41869] [ID 41873]
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
