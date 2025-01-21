@@ -36,13 +36,13 @@ When customizing a component theme, you can now also specify an accent color.
 
 By default, this accent color will be identical to the app color. For example, in the *Dashboards* app, the accent color will by default be green.
 
-#### Dashboards/Low-Code Apps: New Toggle component [ID 41903] [ID 41911]
+#### Dashboards/Low-Code Apps: New Toggle component [ID 41903] [ID 41911] [ID 41915]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When creating or updating a dashboard or a low-code app, you can now add *Toggle* components, which are visualized as switches.
 
-When configuring a *Toggle* component, you can link it to a variable of type Boolean, set its default value, and specify a label, an icon, and an accent color. The latter will then be used as background color when the component is set to true.
+When configuring a *Toggle* component, you can link it to a variable of type Boolean, set its default value, and specify a label and an icon. The font color, background color and accent color of the component will automatically be adapted to those specified in the theme of the dashboard or app.
 
 When you add a *Toggle* component to a low-code app, you can also configure a *Set value* action for it. This action will allow users to either set the current value of the component in question to either a static value (True, False, or Empty) or link the component to a variable of type Boolean.
 
