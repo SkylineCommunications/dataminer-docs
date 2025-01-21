@@ -109,12 +109,12 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 %% Define blocks %%
 CreationIssue([Creation issue])
 AlarmTemplate{{"Check alarm template configuration."}}
-ProtocolDebug{{"Use the protocol debug tool to simulate.\nClick the node to go the relevant docs page."}}
+ProtocolDebug{{"Use the protocol debug tool to simulate. Click the node to go the relevant docs page."}}
 CanSimulate{{"Managed to simulate?"}}
-ReduceFeatures{{"Reduce the number of features used to\nnarrow down the issue.\n(e.g. Hysteresis, conditional monitoring...)\nClick the node to go to a relevant docs page."}}
+ReduceFeatures{{"Reduce the number of features used to narrow down the issue. (e.g. Hysteresis, conditional monitoring...)\nClick the node to go to a relevant docs page."}}
 VerifyConfiguration{{"Verify if you have a clear issue,\nincorrect configuration or undefined behavior."}}
 NotFixedCOPS{{"Contact techsupport@skyline.be.\nInclude all gathered information and steps taken."}}
-ExtraInfoNotFixed{{"1. Check if the behavior is the same on a\nstandalone parameter, column parameter, matrix parameter...\n2. Check the element logging.\n3. Contact support.data-core@skyline.be.\nInclude all gathered information and steps taken."}}
+ExtraInfoNotFixed{{"1\. Check if the behavior is the same on a standalone parameter, column parameter, matrix parameter... <br>2\. Check the element logging. <br>3\. Contact support.data-core@skyline.be. Include all gathered information and steps taken."}}
 %% Connect blocks %%
 CreationIssue --- AlarmTemplate
 AlarmTemplate --- ProtocolDebug

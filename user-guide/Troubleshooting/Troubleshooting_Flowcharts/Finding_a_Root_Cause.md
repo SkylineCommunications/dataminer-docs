@@ -20,9 +20,9 @@ flowchart TD
     CheckStartup{{Does the DMA start up?}}
     CHECK1{{Any critical issues? }}
     identify{{Identify issue per... }}
-    AlarmsServicesTrending{{Is it an issue related to <br>alarms, services, or trending?}}
-    DMAStartupIssues([To DMA Startup Issues<br>flowchart])
-    critical([To Critical Issues<br>flowchart])
+    AlarmsServicesTrending{{Is it an issue related to alarms, services, or trending?}}
+    DMAStartupIssues([To DMA Startup Issues flowchart])
+    critical([To Critical Issues flowchart])
     ProcessFlowcharts([Process])
     Module([Module])
     Which{{What is your issue related to?}}
