@@ -15,7 +15,7 @@ If for some reason you cannot access the Support application and create a ticket
   - Portugal: +351 308 80 6270
   - United States: +1 754 218 2040
 
-- 24/7 support:
+- 24/7 support (only for critical issues with severe impact; additional charges will apply):
   - All regions: +32 474 101 888
   - North America: +1 754 218 2045
 

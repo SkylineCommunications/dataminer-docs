@@ -9,6 +9,27 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 20 January 2025 - Enhancement - Catalog API - Enhanced scope of retrieving Catalog item using a key [ID 41977]
+
+While previously the Catalog API only allowed users to retrieve information for Catalog items published by their own organization, now they can also retrieve information for any public Catalog item (using the organization key).
+
+### 20 January 2025 - New feature - Catalog API - Retrieving Catalog item versions using a key [ID 41941]
+
+It is now possible to obtain version information for a Catalog item using an organization key that has the "Read Catalog items" permission.
+
+### 20 January 2025 - New feature - Catalog API - Rate Limiter when using organization key [ID 41940]
+
+When the Catalog API is used with an organization key, the following rate-limiting policy is applied:
+
+- Partition key: IP address or host name of connection
+- Burst limit: 100 requests
+- Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
+- No queueing for extra requests beyond the token bucket
+
+### 20 January 2025 - New feature - Catalog API - Downloading a Catalog item version using a key [ID 41892]
+
+It is now possible to download a version of a Catalog item using an organization key that has the "Download Catalog" permission.
+
 ### 16 January 2025 - Enhancement - Admin app - Collaboration category added on usage overview page [ID 41947]
 
 A new "Managed Object" category has been added to the usage overview page in the Admin app.
@@ -23,9 +44,9 @@ Additionally, the filtering has been improved so that deleted systems can also b
 
 A new button has been added to the user menu of the Sharing page, allowing users to provide Skyline with feedback on its apps.
 
-### 16 January 2025 - Enhancement - dataminer.services homepage - Feedback button added to user menu [ID 41926]
+### 16 January 2025 - Enhancement - dataminer.services home page - Feedback button added to user menu [ID 41926]
 
-A new button has been added to the user menu of the dataminer.services homepage, allowing users to provide Skyline with feedback on its apps.
+A new button has been added to the user menu of the dataminer.services home page, allowing users to provide Skyline with feedback on its apps.
 
 ### 16 January 2025 - Enhancement - Admin app - Feedback button added to user menu [ID 41926]
 
@@ -49,7 +70,7 @@ To improve the performance of requests to retrieve the Catalog item categories a
 
 ### 15 January 2025 - Enhancement - Catalog - Replaced banner image [ID 41731]
 
-On the homepage, the background banner image has now been replaced with a CSS gradient to reduce initial load times.
+On the home page, the background banner image has now been replaced with a CSS gradient to reduce initial load times.
 
 ### 15 January 2025 - Enhancement - Catalog - Support added for smaller screens [ID 41690]
 
@@ -78,7 +99,7 @@ When the Skyline.DataMiner.CICD.Tools.CatalogUpload tool was used, the uploaded 
 
 ### 15 January 2025 - Enhancement - Catalog - Improved initial load times [ID 41573]
 
-The number of required API calls to initially load the Catalog homepage has been reduced, resulting in improved initial load times.
+The number of required API calls to initially load the Catalog home page has been reduced, resulting in improved initial load times.
 
 ### 15 January 2025 - Enhancement - Catalog - Trusted source indicator [ID 41540]
 

@@ -107,7 +107,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Protocol package | Package containing all files necessary to install a particular DataMiner protocol on an existing DataMiner System. |
 | PSK | Phase-Shift Keying. Digital modulation process that conveys data by changing the phase of a transmitted signal. |
 | PTP | Precision Time Protocol. Protocol used to synchronize clocks throughout a network.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
-| Pulse | DataMiner Cube homepage, displayed when no cards are open in the workspace.<br>See [DataMiner Pulse](xref:Working_with_cards_in_DataMiner_Cube#dataminer-pulse). |
+| Pulse | DataMiner Cube home page, displayed when no cards are open in the workspace.<br>See [DataMiner Pulse](xref:Working_with_cards_in_DataMiner_Cube#dataminer-pulse). |
 
 ## Q
 

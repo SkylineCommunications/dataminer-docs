@@ -32,7 +32,39 @@ uid: General_Feature_Release_10.5.3
 
 ## Changes
 
+### Breaking changes
+
+#### Protocols: Separate SLScripting process for every protocol used [ID 41713]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+From now on, DataMiner will by default start a separate SLScripting process for every SLProtocol process.
+
+Up to now, if you wanted to have separate SLScripting processes created for every protocol being used, you had to explicitly configure this in `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
+
+```xml
+<DataMiner>
+  <ProcessOptions protocolProcesses="protocol" scriptingProcesses="protocol" />
+</DataMiner>
+```
+
+If you only want a single SLScripting process for all protocols that are used, then set the `scriptingProcesses` attribute to "1".
+
 ### Enhancements
+
+#### Security enhancements [ID 40632]
+
+<!-- 40632: MR 10.6.0 - FR 10.5.3 -->
+
+A number of security enhancements have been made.
+
+#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a Virtual Function [ID 41388]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well Virtual Functions.From now on, this option will only apply to DVE elements.
+
+In order to override the timeout for a Virtual Function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
 
 #### Enhanced error and exception handling when updating or clearing correlation alarms [ID 41675]
 
@@ -89,6 +121,20 @@ When DataMiner was restarted, an issue could occur, causing the DATAMINER_NOTIFI
 
 In some rare cases, the element state of a DVE or Virtual Function element would end up incorrect in the SLNet cache, causing some caches to not be initialized correctly.
 
+#### Problem when trying to swarm an element back to its original DataMiner Agent [ID 41709]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+In some cases, it would not be possible to swarm an element back to its original DataMiner Agent due to a caching issue in the SLDataMiner process.
+
+#### Problem with SLDataMiner when a DMS with swarming enabled had a database connection issue at start-up [ID 41714]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+When, while starting up, a DataMiner System with swarming enabled experienced a problem with its database connection, the SLDataMiner process would incorrectly shut down.
+
 #### Service & Resource Management: Problem when a previously deleted booking was created again [ID 41718]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
@@ -118,3 +164,10 @@ When a DataMiner Agent was started, in some cases, the configured SNMP managers 
 <!-- MR 10.5.0 - FR 10.5.3 -->
 
 A number of fixes have been made with regard to the management of locally-stored element documents that are not synchronized among the DMAs in a DataMiner System.
+
+#### Problem when swarming elements between two DMAs with a time difference [ID 41910]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+When elements were swarmed between two DataMiner Agents, in some rare cases, a problem could occur when there was a time difference between both agents.

@@ -36,13 +36,13 @@ When customizing a component theme, you can now also specify an accent color.
 
 By default, this accent color will be identical to the app color. For example, in the *Dashboards* app, the accent color will by default be green.
 
-#### Dashboards/Low-Code Apps: New Toggle component [ID 41903] [ID 41911]
+#### Dashboards/Low-Code Apps: New Toggle component [ID 41903] [ID 41911] [ID 41915]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When creating or updating a dashboard or a low-code app, you can now add *Toggle* components, which are visualized as switches.
 
-When configuring a *Toggle* component, you can link it to a variable of type Boolean, set its default value, and specify a label, an icon, and an accent color. The latter will then be used as background color when the component is set to true.
+When configuring a *Toggle* component, you can link it to a variable of type Boolean, set its default value, and specify a label and an icon. The font color, background color and accent color of the component will automatically be adapted to those specified in the theme of the dashboard or app.
 
 When you add a *Toggle* component to a low-code app, you can also configure a *Set value* action for it. This action will allow users to either set the current value of the component in question to either a static value (True, False, or Empty) or link the component to a variable of type Boolean.
 
@@ -60,6 +60,12 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### DataMiner Object Models: A confirmation box will now appear when you remove a section from a DOM form [ID 41792]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Up to now, When you removed a section from a DOM instance form with multiple sections, that section would be removed immediately, without any notification. From now on, a confirmation box will appear, prompting the user to either confirm or cancel the action.
+
 #### DataMiner root page: Links to deprecated DataMiner XBAP and legacy Reports & Dashboards app have now been removed [ID 41844]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
@@ -69,6 +75,12 @@ When, on the root page of a DataMiner Agent (i.e. `https://myDMA/root/tools`), y
 Up to now, this page would still contain links to the XBAP version of DataMiner Cube and to the legacy *Reports & Dashboards* app. As both are now deprecated, the links to both those apps as well as the *Clean DataMiner Cube XBAP Cache* link have now been removed.
 
 ### Fixes
+
+#### Dashboards/Low-Code Apps - Table component: Refetching data would cause the data in the table to shift across the different pages [ID 41638]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a *Table* component refetched its data, in some cases, the data would incorrectly shift across the different pages.
 
 #### Dashboards/Low-Code Apps - Timeline component: Problem with custom timezones [ID 41839]
 
@@ -93,3 +105,9 @@ When a post action was configured to get triggered after a *Set viewport* or a *
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When you tried to log on to a DataMiner web app, in some cases, the authentication screen would not redirect you to the correct app.
+
+#### Low-Code Apps: Problem when using queries in flows [ID 41955]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a low-code app used queries in some of its flows, in some cases, it could become unresponsive.

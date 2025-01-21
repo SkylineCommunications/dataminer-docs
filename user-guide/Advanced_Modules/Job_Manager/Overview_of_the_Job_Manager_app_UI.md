@@ -10,7 +10,7 @@ The main page of the app consists of a header bar, a side panel and an overview 
 
   - The apps button: Click this button to access other DataMiner web apps, such as the Monitoring app.
 
-  - The *Jobs* button: Click this button to return to the homepage of the app.
+  - The *Jobs* button: Click this button to return to the home page of the app.
 
   - The search box: Enter text in this box to search for matching jobs.
 

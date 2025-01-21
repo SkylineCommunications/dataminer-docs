@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.2
 ---
 
-# General Feature Release 10.5.2 – Preview
+# General Feature Release 10.5.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -24,7 +24,8 @@ uid: General_Feature_Release_10.5.2
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Web visual overviews: Load balancing [ID 41434] [ID 41728]](#web-visual-overviews-load-balancing-id-41434-id-41728)
+- [DataMiner Object Models: An exception will now be thrown when an issue occurs for any of the DomInstances that are created, updated, or deleted in bulk [ID 41546]](#dataminer-object-models-an-exception-will-now-be-thrown-when-an-issue-occurs-for-any-of-the-dominstances-that-are-created-updated-or-deleted-in-bulk-id-41546)
 
 ## New features
 
