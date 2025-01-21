@@ -171,3 +171,9 @@ A number of fixes have been made with regard to the management of locally-stored
 <!-- Not added to MR 10.6.0 -->
 
 When elements were swarmed between two DataMiner Agents, in some rare cases, a problem could occur when there was a time difference between both agents.
+
+#### Alarms without focus value would not be correctly removed from alarm groups when the associated element was deleted, stopped or paused [ID 41950]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+In some cases, alarm groups containing alarms without a focus value (e.g. notices or errors) would not be correctly removed from the group when the element associated with the alarm was deleted, stopped or paused.
