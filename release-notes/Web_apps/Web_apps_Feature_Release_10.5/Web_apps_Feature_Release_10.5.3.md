@@ -74,6 +74,14 @@ When, on the root page of a DataMiner Agent (i.e. `https://myDMA/root/tools`), y
 
 Up to now, this page would still contain links to the XBAP version of DataMiner Cube and to the legacy *Reports & Dashboards* app. As both are now deprecated, the links to both those apps as well as the *Clean DataMiner Cube XBAP Cache* link have now been removed.
 
+#### Dashboards/Low-Code Apps - Time range component: Automatic refresh now has to be implemented via a linked Trigger component [ID 41931]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Up to now, when you wanted a *Time range* component to automatically refresh its data at regular intervals, you had to enable the *Allow refresh* option. This would then cause a refresh timer to appear (by default set to 10 seconds).
+
+The *Allow refresh* option has now been removed. In order to have *Time range* component refresh its data at regular intervals, you now have to link a *Trigger* component to it as a filter.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Table component: Refetching data would cause the data in the table to shift across the different pages [ID 41638]
