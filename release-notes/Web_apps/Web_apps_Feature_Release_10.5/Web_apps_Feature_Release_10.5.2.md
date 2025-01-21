@@ -33,7 +33,8 @@ Up to now, all GQI-related operations were executed by the SLHelper process, whi
 > [!IMPORTANT]
 > Until further notice, the DataMiner web apps will continue to use the SLHelper process to execute GQI-related operations. If you want them to use the new GQI DxM instead, update the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file accordingly.
 
-See [GQI DxM](xref:GQI_DxM) for more information.
+> [!TIP]
+> For more information, see [GQI DxM](xref:GQI_DxM).
 
 ##### Specifying when idle child processes should be terminated
 
