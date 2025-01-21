@@ -88,6 +88,12 @@ The *Allow refresh* option has now been removed. In order to have *Time range* c
 
 The *Time range* component has been moved from the *General* category to the *Basic controls* category. Also, its icon has now been updated to better represent a range.
 
+#### GQI DxM: Web applications will now run GQI queries via the GQI DxM installed on the local DMA [ID 41949]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+From now on, the DataMiner web applications will by default run GQI queries via the GQI DxM installed on the local DataMiner Agent.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Table component: Refetching data would cause the data in the table to shift across the different pages [ID 41638]
