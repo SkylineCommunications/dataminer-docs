@@ -10,6 +10,7 @@ In the *Condition* column, you can add conditions for the alarm triggering of se
 >
 > - When you specify a condition for a parameter in an alarm template, that parameter will only be monitored when the condition is false.
 > - Some protocols specify default conditions, which are automatically filled in. However, it is possible to override these.
+> - Conditions in combination with hysteresis on the same parameter is not supported. In future Cube versions a warning can appear about   this limitation (as long as it's not fully supported by the Core).
 
 When you click in the selection box in the *Condition* column, the following actions are possible:
 
