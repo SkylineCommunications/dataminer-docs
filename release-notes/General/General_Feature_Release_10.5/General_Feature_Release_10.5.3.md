@@ -58,6 +58,14 @@ If you only want a single SLScripting process for all protocols that are used, t
 
 A number of security enhancements have been made.
 
+#### Change Element States Offline tool: Service elements will now be hidden by default [ID 41341]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+From now on, the *Change Element States Offline* tool will hide service elements by default. This will prevent users from mistakenly stopping those elements.
+
+If you do want service elements to be visible, select the *Advanced* checkbox.
+
 #### Protocols: New 'overrideTimeoutVF' option to override the timeout for a Virtual Function [ID 41388]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
