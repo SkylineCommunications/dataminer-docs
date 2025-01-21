@@ -85,7 +85,7 @@ The *SLNet Client Test* tool contains a *Trend Data Inspector* (*Advanced > Test
 
 ### GQI
 
-GQI runs inside [SLHelper](xref:Troubleshooting_SLHelper_exe).
+GQI runs as an extension module ([GQI DxM](xref:GQI_DxM)) or inside the [SLHelper](xref:Troubleshooting_SLHelper_exe) process.
 
 - Are data sources missing? Check whether the DMA has the necessary licenses and soft-launch options.
 - Are there no errors, but invalid data? Check the origin of the invalid data.
@@ -93,6 +93,9 @@ GQI runs inside [SLHelper](xref:Troubleshooting_SLHelper_exe).
 - Error messages, no data, no response, or slow performance? Then record the GQI session and include the ad-hoc data scripts (if any) when asking support.
 
 #### Record GQI session
+
+> [!NOTE]
+> Recording is not supported with the [GQI DxM](xref:GQI_DxM).
 
 GQI recording is a debugging feature that allows you to save GQI communication and replay it in a lab environment. GQI recording is disabled by default. To create a recording, do the following:
 

@@ -515,6 +515,8 @@ items:
         items:
           - name: About the Generic Query Interface
             topicUid: About_GQI
+          - name: GQI DxM
+            topicUid: GQI_DxM
           - name: Creating a GQI query
             topicUid: Creating_GQI_query
           - name: Query data sources
