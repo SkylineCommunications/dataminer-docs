@@ -13,4 +13,4 @@ To reset the SLA counters, do the following:
    The date and time next to *Last Manual Reset* will now be updated, and all SLA counters are reset.
 
 > [!NOTE]
-> You need at least security level 3 in order to use this button. For users who do not have a sufficiently high security level, this button is not displayed.
+> You need at least security level 4 in order to use this button. For users who do not have a sufficiently high security level, this button is not displayed.
