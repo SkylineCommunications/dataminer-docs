@@ -14,6 +14,23 @@ uid: Web_apps_Feature_Release_10.4.11
 
 ## New features
 
+#### Web API: New methods capable of dealing with new alarm IDs [ID 40240]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+On a DataMiner System with Swarming enabled (from DataMiner 10.6.0/10.5.1 onwards), the following new methods will have to be used instead of their existing counterpart:
+
+|New method | Existing counterpart |
+|---|---|
+| AddCommentToAlarmV2 | AddCommentToAlarm |
+| GetAlarmDetailsV2   | GetAlarmDetails   |
+| GetAlarmHistoryV2   | GetAlarmHistory   |
+| GetCurrentAlarmByRootIDV3 | GetCurrentAlarmByRootIDV2 |
+| MaskAlarmV2               | MaskAlarm |
+| ReleaseOwnershipAlarmV2 | ReleaseOwnershipAlarm |
+| TakeOwnershipAlarmV2    | TakeOwnershipAlarm    |
+| UnmaskAlarmV2           | UnmaskAlarm           |
+
 #### Low-Code Apps - Time range component: New 'Set value' action [ID 40569]
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->

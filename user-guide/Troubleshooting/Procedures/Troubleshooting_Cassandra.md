@@ -110,7 +110,7 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
    If a tombstone problem or a timeout is detected, the query that causes this will be logged. Make a note of this.
 
-## Common configuration mistakes
+## Common configuration issues
 
 - The machines hosting the databases do not meet the **system requirements**. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
@@ -155,3 +155,5 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
       > If you do not feel confident executing these actions, contact your Skyline representative for assistance.
 
   - When you **increase** the TTL, note that old data will still expire with the old, smaller TTL, as only new data will be written with the higher TTL.
+
+- Prior to DataMiner 10.4.0 [CU11]/10.5.2<!--RN 41551-->, changes to Cassandra compaction settings, such as the *unsafe_aggressive_sstable_expiration* option, may be incorrectly overwritten by the default settings during DataMiner startup. This issue applies only to manually configured Cassandra systems.

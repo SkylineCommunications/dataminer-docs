@@ -41,7 +41,7 @@ Expected duration: 15 minutes
 
    ![DMS root page](~/user-guide/images/DMAroot-PingMonitoring.png)
 
-   If you do not know where to find the homepage URL, open <https://dataminer.services/> in a browser, and copy the URL or click the *Home* button.
+   If you do not know where to find the home page URL, open <https://dataminer.services/> in a browser, and copy the URL or click the *Home* button.
 
    ![dataminer.services](~/user-guide/images/dataminerservices-PingMonitoring.png)
 

@@ -620,8 +620,11 @@ items:
     - name: Connector documentation
       topicUid: Connector_help_pages
       items:
-      - name: Connector documentation template
-        topicUid: Connector_help_template
+      - name: Connector marketing documentation template
+        topicUid: Connector_marketing_template
+        items:
+        - name: Connector technical documentation template
+          topicUid: Connector_technical_template
     - name: Questions & Answers
       topicUid: QuestionsAndAnswers
     - name: Best practices
@@ -4061,6 +4064,8 @@ items:
             topicUid: AddBookingAttachmentV2
           - name: AddCommentToAlarm
             topicUid: AddCommentToAlarm
+          - name: AddCommentToAlarmV2
+            topicUid: AddCommentToAlarmV2
           - name: AddElementToPinned
             topicUid: AddElementToPinned
           - name: AddElementToRecent
@@ -4311,8 +4316,12 @@ items:
             topicUid: GetAlarmCountForService
           - name: GetAlarmDetails
             topicUid: GetAlarmDetails
+          - name: GetAlarmDetailsV2
+            topicUid: GetAlarmDetailsV2
           - name: GetAlarmHistory
             topicUid: GetAlarmHistory
+          - name: GetAlarmHistoryV2
+            topicUid: GetAlarmHistoryV2
           - name: GetAlarmPages
             topicUid: GetAlarmPages
           - name: GetAlarmPageUpdates
@@ -4397,6 +4406,8 @@ items:
             topicUid: GetCurrentAlarmByRootID
           - name: GetCurrentAlarmByRootIDV2
             topicUid: GetCurrentAlarmByRootIDV2
+          - name: GetCurrentAlarmByRootIDV3
+            topicUid: GetCurrentAlarmByRootIDV3
           - name: GetDashboardsForElement
             topicUid: GetDashboardsForElement
           - name: GetDashboardsForService
@@ -4855,6 +4866,8 @@ items:
             topicUid: LogOut
           - name: MaskAlarm
             topicUid: MaskAlarm
+          - name: MaskAlarmV2
+            topicUid: MaskAlarmV2
           - name: MaskElement
             topicUid: MaskElement
           - name: PauseElement
@@ -4865,6 +4878,8 @@ items:
             topicUid: ReconnectAppAndInfo
           - name: ReleaseOwnershipAlarm
             topicUid: ReleaseOwnershipAlarm
+          - name: ReleaseOwnershipAlarmV2
+            topicUid: ReleaseOwnershipAlarmV2
           - name: RemoveElementFromPinned
             topicUid: RemoveElementFromPinned
           - name: RemoveElementFromView
@@ -4915,6 +4930,8 @@ items:
             topicUid: SwitchRedundancyGroup
           - name: TakeOwnershipAlarm
             topicUid: TakeOwnershipAlarm
+          - name: TakeOwnershipAlarmV2
+            topicUid: TakeOwnershipAlarmV2
           - name: TestElementDeviceConnectivity
             topicUid: TestElementDeviceConnectivity
           - name: ToggleMatrixCrosspoint
@@ -4931,6 +4948,8 @@ items:
             topicUid: UnhideJobSectionDefinitionField
           - name: UnmaskAlarm
             topicUid: UnmaskAlarm
+          - name: UnmaskAlarmV2
+            topicUid: UnmaskAlarmV2
           - name: UnmaskElement
             topicUid: UnmaskElement
           - name: UpdateAlarmTemplate
@@ -5720,12 +5739,10 @@ items:
               - name: Merging conflicts
                 topicUid: Merging_conflicts
       - name: Visual Studio
-        topicUid: TOOVisualStudio
         items:
           - name: Installation procedure
             topicUid: Installation_procedure
           - name: Settings
-            topicUid: VisualStudioSettings
             items:
               - name: Text editor general
                 topicUid: Text_editor_general
@@ -5734,7 +5751,6 @@ items:
           - name: Shortcuts
             topicUid: Shortcuts
           - name: Plugins
-            topicUid: Plugins
             items:
               - name: DataMiner Integration Studio (DIS)
                 topicUid: DataMiner_Integration_Studio_DIS
@@ -5745,10 +5761,11 @@ items:
               - name: SonarLint
                 topicUid: SonarLint
           - name: NuGet packages
-            topicUid: VisualStudioNuGetPackages
             items:
               - name: StyleCop.Analyzers
                 topicUid: StyleCopAnalyzers
+          - name: Troubleshooting
+            topicUid: VisualStudioTroubleshooting
       - name: Visual Studio Code
         topicUid: Visual_Studio_Code
       - name: WinDbg

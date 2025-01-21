@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.5.2
 ---
 
-# DataMiner web apps Feature Release 10.5.2 – Preview
+# DataMiner web apps Feature Release 10.5.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +14,8 @@ uid: Web_apps_Feature_Release_10.5.2
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards/Low-Code Apps: New variable 'DMAIP' [ID 41561]](#dashboardslow-code-apps-new-variable-dmaip-id-41561)
+- [Low-Code Apps: New 'Copy to clipboard' action [ID 41729]](#low-code-apps-new-copy-to-clipboard-action-id-41729)
 
 ## New features
 
@@ -66,7 +67,7 @@ As the *web.config* file of the web API can contain custom settings, neither a f
 From now on, during either a full DataMiner upgrade or a web-only DataMiner upgrade, a new upgrade action will be executed to check the *web.config* file for outdated settings. If such settings are found, the file will be updated.
 
 > [!NOTE]
-> Up to now, in some cases, communication via WebSockets would not work when the *web.config* file contained outdated settings. As this new upgrade action will now make sure the *web.config* file is up to date, most WebSocket issues should now be prevented. 
+> Up to now, in some cases, communication via WebSockets would not work when the *web.config* file contained outdated settings. As this new upgrade action will now make sure the *web.config* file is up to date, most WebSocket issues should now be prevented.
 
 ## Changes
 
