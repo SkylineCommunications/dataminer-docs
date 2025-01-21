@@ -82,6 +82,12 @@ Up to now, when you wanted a *Time range* component to automatically refresh its
 
 The *Allow refresh* option has now been removed. In order to have *Time range* component refresh its data at regular intervals, you now have to link a *Trigger* component to it as a filter.
 
+#### Dashboards/Low-Code Apps - Time range component: Moved from the 'General' category to the 'Basic controls' category  [ID 41934]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+The *Time range* component has been moved from the *General* category to the *Basic controls* category. Also, its icon has now been updated to better represent a range.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Table component: Refetching data would cause the data in the table to shift across the different pages [ID 41638]
