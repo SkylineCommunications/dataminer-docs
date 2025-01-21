@@ -8,6 +8,9 @@ uid: DisPlugins
 
 Generates a help page for the connector. See [Connector documentation](xref:Connector_help_pages).
 
+> [!NOTE]
+> This plugin is only available to Skyline employees.
+
 ## Add After Startup
 
 Adds the after startup logic to the protocol. DIS will check whether the *protocol.xml* file contains an after startup trigger, and will add one if none was found. Apart from the trigger, it will also add all remaining items of the after startup flow.
