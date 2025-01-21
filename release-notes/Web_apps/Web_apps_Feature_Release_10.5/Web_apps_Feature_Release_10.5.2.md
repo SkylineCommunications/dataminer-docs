@@ -34,6 +34,22 @@ Up to now, all GQI-related operations were executed by the SLHelper process, whi
 
 See [GQI DxM](xref:GQI_DxM) for more information.
 
+##### Specifying when idle child processes should be terminated
+
+When the GQI DxM is used, in the *C:\\Program Files\\Skyline Communications\\DataMiner GQI\\appsettings.custom.json* file, you can specify when idle child processes should be terminated.
+
+See the following example. Idle child processes will be terminated within the configured *WorkerExpiration* (in this case 1 day) + 30 seconds.
+
+```json
+{
+  "GQIOptions": {
+    "Extensions": {
+      "WorkerExpiration": "1.00:00:00"
+    },
+  }
+}
+```
+
 #### Dashboards/Low-Code Apps: New variable 'DMAIP' [ID 41561]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
