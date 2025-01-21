@@ -16,7 +16,7 @@ Running GQI as an extension module has several advantages:
 
 ## Installation
 
-The GQI DxM is supported from DataMiner 10.5.0 onwards. It gets installed or updated automatically from DataMiner version 10.5.2/10.5.0 onwards. The GQI DxM also gets updated when installing a web-only upgrade package.<!-- RN 41811 -->
+The GQI DxM is supported from DataMiner 10.5.0/10.5.2 onwards, and automatically gets installed and updated by upgrade packages from that version onwards. It also gets updated when you install a web-only upgrade package.<!-- RN 41811 --> 
 
 > [!IMPORTANT]
 > By default, DataMiner web applications will continue to use the SLHelper process for GQI-related operations. To switch to using the GQI DxM, see [Enabling the use of the GQI DxM](#enabling-the-use-of-the-gqi-dxm).
