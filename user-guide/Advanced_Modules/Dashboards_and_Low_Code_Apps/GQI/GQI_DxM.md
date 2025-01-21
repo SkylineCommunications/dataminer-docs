@@ -10,13 +10,13 @@ Running GQI as an extension module has several advantages:
 
 - **Independent updates**: Using a [web-only upgrade package](xref:Upgrading_Downgrading_Webapps), GQI can be updated independently from the main DataMiner core software, eliminating the need for a core software restart during updates.
 - **Load balancing**: With the DxM, GQI operations can distribute system load more effectively across multiple DataMiner Agents within a DataMiner System (DMS).
-- **Resource visibility**: Enhanced monitoring capabilities provide greater insight into the resource consumption of individual extensions.
+- **Resource visibility**: Running each extension in a separate process provides greater insight into its resource consumption, allowing to monitor every extension individually.
 - **Improved dependency resolving**: Using the DxM simplifies and optimizes the resolution of DLL dependencies, preventing conflicts.
 - **Performance enhancements**: The GQI DxM leverages the latest advancements in .NET 8 for improved speed and efficiency, uses proto-first communication, prevents SLNet throttling, etc.
 
 ## Installation
 
-The GQI DxM is supported from DataMiner 10.5.0 onwards. It gets installed or updated automatically from DataMiner version 10.5.2/10.5.0 onwards. The GQI DxM also gets updated when installing a web-only upgrade package.<!-- RN 41811 -->
+The GQI DxM is supported from DataMiner 10.5.0/10.5.2 onwards, and automatically gets installed and updated by upgrade packages from that version onwards. It also gets updated when you install a web-only upgrade package.<!-- RN 41811 -->
 
 > [!IMPORTANT]
 > By default, DataMiner web applications will continue to use the SLHelper process for GQI-related operations. To switch to using the GQI DxM, see [Enabling the use of the GQI DxM](#enabling-the-use-of-the-gqi-dxm).
@@ -80,7 +80,7 @@ See the following example. Idle child processes will be terminated within the co
 {
   "GQIOptions": {
     "Extensions": {
-      "WorkerExpiration": "1.00:00:00",
+      "WorkerExpiration": "1.00:00:00"
     }
   }
 }
