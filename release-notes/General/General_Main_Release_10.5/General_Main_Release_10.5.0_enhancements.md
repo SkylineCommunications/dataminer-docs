@@ -1059,8 +1059,36 @@ At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\So
 
 Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
 
+#### Enhanced error and exception handling when updating or clearing correlation alarms [ID 41675]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Error and exception handling has been enhanced in order to prevent duplicate or sticky correlation alarms due to errors or exceptions thrown when updating or clearing correlation alarms.
+
 #### Storage as a Service: Timeout for responses to write requests has been reduced to 10 seconds [ID 41717]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
 On STaaS systems, the timeout for responses to write requests has been reduced to 10 seconds.
+
+#### Amazon Keyspaces Service is now end-of-life [ID 41874] [ID 41914]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.3 -->
+
+Support for Amazon Keyspaces Service is now officially end-of-life.
+
+When you run the DataMiner installer or install a DataMiner upgrade package, the *VerifyNoAmazonKeyspaces* prerequisite will check whether the DataMiner Agent is configured to use a database of type *Amazon Keyspaces*. If so, the upgrade process will not be allowed to continue.
+
+We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+
+For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
+
+#### SLLogCollector now collects data regarding the GQI DxM [ID 41880]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+SLLogCollector packages now include the following data regarding the GQI DxM:
+
+- *appsettings.json*
+- Log file
+- Version

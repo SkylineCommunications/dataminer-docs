@@ -11,7 +11,9 @@ This chart can be used to display the elements or services in a view that caused
 It can also be used to represent any data based on a data query in the form of a bar chart. In that case the bars can represent any number of variables for any set of categories.
 
 > [!NOTE]
-> Negative values are only supported in bar chart components from DataMiner 10.1.0/10.1.3 onwards.
+>
+> - Negative values are only supported in bar chart components from DataMiner 10.1.0/10.1.3 onwards.
+> - From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, only the first 1000 items in a column & bar chart are shown.
 
 To configure the component:
 
@@ -31,7 +33,7 @@ To configure the component:
 
    - *General* \> *Select*: Determines whether the top items (i.e. the items that had the most alarms or were in an alarm state for the longest time) or the bottom items (i.e. the items that had the least alarms or were in an alarm state for the shortest time) are displayed.
 
-   - *General* \> *Limit*: Determines how many elements or services are included in the chart.
+   - *General* \> *Limit*: Determines how many elements or services are included in the chart. From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, regardless of this setting, only the first 1000 parameters can be rendered in a single chart.
 
    - *General* \> *Time span*: Determines the time range for which the information is retrieved.
 

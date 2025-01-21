@@ -9,6 +9,24 @@ uid: General_Main_Release_10.6.0_changes
 
 ## Changes
 
+### Breaking changes
+
+#### Protocols: Separate SLScripting process for every protocol used [ID 41713]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+From now on, DataMiner will by default start a separate SLScripting process for every SLProtocol process.
+
+Up to now, if you wanted to have separate SLScripting processes created for every protocol being used, you had to explicitly configure this in `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
+
+```xml
+<DataMiner>
+  <ProcessOptions protocolProcesses="protocol" scriptingProcesses="protocol" />
+</DataMiner>
+```
+
+If you only want a single SLScripting process for all protocols that are used, then set the `scriptingProcesses` attribute to "1".
+
 ### Enhancements
 
 #### DataMiner installer has been updated [ID 40409] [ID 41299]
@@ -20,6 +38,13 @@ The DataMiner installer has been updated.
 When the configuration window appears, it will now be possible to either continue with the configuration or cancel the entire installation.
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
+
+#### Security enhancements [ID 40632] [ID 41475]
+
+<!-- 40632: MR 10.6.0 - FR 10.5.3 -->
+<!-- 41475: MR 10.6.0 - FR 10.5.2 -->
+
+A number of security enhancements have been made.
 
 #### Legacy correlation engine is now deprecated [ID 40834]
 
@@ -47,7 +72,7 @@ See also [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_b
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrect still try to launch the deprecated XBAP version of DataMiner Cube.
+When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrectly still try to launch the deprecated XBAP version of DataMiner Cube.
 
 From now on, when you click *Launch > Download DataMiner Cube*, the DataMiner Cube desktop app will be downloaded. When you then double-click the downloaded file, the following will happen:
 
@@ -62,6 +87,14 @@ From now on, when you click *Launch > Download DataMiner Cube*, the DataMiner Cu
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
 From now on, SLAs will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up to now, they used alarm IDs with the syntax DMAID/AlarmID.
+
+#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a Virtual Function [ID 41388]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well Virtual Functions.From now on, this option will only apply to DVE elements.
+
+In order to override the timeout for a Virtual Function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
 
 #### DataMiner upgrade: No longer possible to perform a 10.5.x web-only upgrade on DMAs running a version older than 10.4.x [ID 41395]
 
@@ -106,19 +139,13 @@ From now on, SLLogCollector packages will also include the log files of the *Mod
 
 During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will now by default be added to the list of MIME types in the *C:\\Skyline DataMiner\\Webpages\\web.config* file.
 
-#### Security enhancements [ID 41475]
-
-<!-- 41475: MR 10.6.0 - FR 10.5.2 -->
-
-A number of security enhancements have been made.
-
-#### DataMiner Object Models: Only the first 100 DomInstances will be checked when an enum entry is removed from a FieldDescriptor [ID 41572]
+#### DataMiner Object Models: Number of DomInstanceIds in SectionDefinitionErrors now limited to 100 [ID 41572]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor`, a check is performed to make sure that entry is not being used by a `DomInstance`. However, as this check would verify all existing DomInstances, this could cause memory issues in SLNet when a large number of DomInstances were using the removed enum entry.
+When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor`, a check is performed to make sure that entry is not being used by a `DomInstance`. This check reads all DomInstances that use that entry and places the IDs in the error data. However, as this check verifies all existing DomInstances, this could cause memory issues in SLNet when a large number of DomInstances were using the removed enum entry.
 
-From now on, a maximum of 100 DomInstances will be verified. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
+From now on, a maximum of 100 DomInstances will be included in the error data. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
 
 ### Fixes
 

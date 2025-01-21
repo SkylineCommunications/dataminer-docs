@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.2
 ---
 
-# General Feature Release 10.5.2 – Preview
+# General Feature Release 10.5.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -24,7 +24,8 @@ uid: General_Feature_Release_10.5.2
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Web visual overviews: Load balancing [ID 41434] [ID 41728]](#web-visual-overviews-load-balancing-id-41434-id-41728)
+- [DataMiner Object Models: An exception will now be thrown when an issue occurs for any of the DomInstances that are created, updated, or deleted in bulk [ID 41546]](#dataminer-object-models-an-exception-will-now-be-thrown-when-an-issue-occurs-for-any-of-the-dominstances-that-are-created-updated-or-deleted-in-bulk-id-41546)
 
 ## New features
 
@@ -42,13 +43,13 @@ These alarms will be generated per DataMiner Agent for every Automation script t
 
 This type of alarms will automatically be cleared after a DataMiner restart. They can also be cleared manually.
 
-#### Mobile visual overviews: Load balancing [ID 41434] [ID 41728]
+#### Web visual overviews: Load balancing [ID 41434] [ID 41728]
 
 <!-- MR 10.6.0 [CU0] - FR 10.5.2 -->
 
-It is now possible to implement load balancing for mobile visual overviews among DataMiner Agent in a DMS.
+It is now possible to implement load balancing among DataMiner Agents in a DMS for visual overviews shown in web apps.
 
-Up to now, the DataMiner Agent to which you were connected would handle all requests and updates with regard to mobile visual overviews.
+Up to now, the DataMiner Agent to which you were connected would handle all requests and updates with regard to web visual overviews.
 
 ##### Configuration
 
@@ -58,22 +59,22 @@ In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular D
 
   Enables or disables load balancing on the DataMiner Agent in question.
 
-  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will by default be handled in a balanced manner by all the DataMiner Agents in the cluster.
+  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to web visual overviews will by default be handled in a balanced manner by all the DataMiner Agents in the cluster.
 
     However, if you also add the `dmasForLoadBalancer` key (see below), these requests and updates will only be handled by the DataMiner Agents specified in that `dmasForLoadBalancer` key.
 
-  - When this key is set to **false**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the local SLHelper process.
+  - When this key is set to **false**, for the DataMiner Agent in question, all requests and updates with regard to web visual overviews will be handled by the local SLHelper process.
 
 - `<add key="dmasForLoadBalancer" value="1;2;15" />`
 
-  If you enabled load balancing by setting the `visualOverviewLoadBalancer` key to true, then you can use this key to restrict the number of DataMiner Agents that will be used for visual overview load balancing.
+  If you enabled load balancing by setting the `visualOverviewLoadBalancer` key to true, you can use this key to restrict the number of DataMiner Agents that will be used for visual overview load balancing.
 
-  The key's value must be set to a semicolon-separated list of DMA IDs. For example, if the value is set to "1;2;15", then the DataMiner Agents with ID 1, 2 and 15 will be used to handle all requests and updates with regard to mobile visual overviews.
+  The key's value must be set to a semicolon-separated list of DMA IDs. For example, if the value is set to "1;2;15", the DataMiner Agents with ID 1, 2, and 15 will be used to handle all requests and updates with regard to web visual overviews.
 
-  If you only specify one ID (without trailing semicolon), only that specific DataMiner Agent will be used to handle all requests and updates with regard to mobile visual overviews.
+  If you only specify one ID (without trailing semicolon), only that specific DataMiner Agent will be used to handle all requests and updates with regard to web visual overviews.
 
 > [!NOTE]
-> These settings are not synchronized among the agents in the cluster.
+> These settings are not synchronized among the Agents in the cluster.
 
 ##### New server messages
 
@@ -174,7 +175,7 @@ All DataMiner upgrade packages now include the latest Visual C++ Redistributable
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrect still try to launch the deprecated XBAP version of DataMiner Cube.
+When you right-clicked the *DataMiner Taskbar Utility* icon in the system tray, and then clicked *Launch > DataMiner Cube*, up to now, the DataMiner Taskbar Utility would incorrectly still try to launch the deprecated XBAP version of DataMiner Cube.
 
 From now on, when you click *Launch > Download DataMiner Cube*, the DataMiner Cube desktop app will be downloaded. When you then double-click the downloaded file, the following will happen:
 
@@ -255,13 +256,13 @@ Since DataMiner feature release 10.4.11, it is possible to switch to another mas
 
 Up to now, if the current master agent had been marked "not eligible to be promoted to master", it would continue to process property updates and swarming requests as if it were still master agent. This behavior has now changed. From now on, all property updates and swarming requests sent to the current master agent that has been marked "not eligible to be promoted to master" will fail with a `NotAMasterAgentException`, and the agents that sent those messages will resend them to the new master agent.
 
-#### DataMiner Object Models: Only the first 100 DomInstances will be checked when an enum entry is removed from a FieldDescriptor [ID 41572]
+#### DataMiner Object Models: Number of DomInstanceIds in SectionDefinitionErrors now limited to 100 [ID 41572]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor`, a check is performed to make sure that entry is not being used by a `DomInstance`. However, as this check would verify all existing DomInstances, this could cause memory issues in SLNet when a large number of DomInstances were using the removed enum entry.
+When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor`, a check is performed to make sure that entry is not being used by a `DomInstance`. This check reads all DomInstances that use that entry and places the IDs in the error data. However, as this check verifies all existing DomInstances, this could cause memory issues in SLNet when a large number of DomInstances were using the removed enum entry.
 
-From now on, a maximum of 100 DomInstances will be verified. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
+From now on, a maximum of 100 DomInstances will be included in the error data. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
 
 #### Storage as a Service: Enhanced performance when updating alarm information [ID 41581]
 

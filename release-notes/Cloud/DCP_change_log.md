@@ -4,7 +4,7 @@ uid: DCP_change_log
 
 # dataminer.services change log - 2024
 
-The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available in 2024.
+This change log can help you trace when specific features and changes became available on the dataminer.services platform in 2024.
 
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
@@ -565,7 +565,7 @@ An enhancement has been done to the way timed out requests are handled when the 
 
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID 40121]
 
-When you deploy a DaaS system from the dataminer.services homepage, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
+When you deploy a DaaS system from the dataminer.services home page, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
 
 #### 9 July 2024 - Fix - Catalog - Main ranges incorrectly filtered out in version history [ID 40147]
 

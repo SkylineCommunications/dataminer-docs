@@ -206,7 +206,7 @@ items:
           topicUid: Proactive_Support
         - name: Partner support lines
           topicUid: Partner_support_lines
-        - name: User Operations Support application
+        - name: Support application
           topicUid: User_operations_support
     - name: DataMiner Partner Program
       topicUid: Partner_Program

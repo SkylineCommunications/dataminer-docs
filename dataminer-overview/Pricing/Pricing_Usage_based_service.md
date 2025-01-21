@@ -91,11 +91,11 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 | Service | Definition |
 |---|---|
-| *Standard Managed Object* | Endpoints directly or indirectly interfaced by DataMiner with more than 200 metrics, metered as the count of 10K metrics on each endpoint. Example: A Managed Object with 24K metrics is metered as 3. |
+| *Standard Managed Object* | Endpoints directly or indirectly interfaced by DataMiner with 200 or more metrics, metered as the count of 10K metrics on each endpoint. Example: A Managed Object with 24K metrics is metered as 3. |
 | *Light Managed Object* | Endpoints with less than 200 metrics, metered as the sum of their metrics. |
 | *Connector Services* | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [Catalog](https://catalog.dataminer.services/).<br>Connectors developed by the user or another third party are not counted. |
 | *Script Runs* | Every time Automation scripts are [triggered](xref:Running_Automation_scripts).<br>Amongst others, this includes Life cycle Service Orchestration (LSO) scripts, Profile-Load Scripts (PLS), Process Automation activities, and DOM instance state transitions. |
-| *Cloud Data Consumption* | Traffic consumed as part of [dataminer.services](xref:Overview_Collaboration). |
+| *Collaboration Services* | Services consumed as part of [dataminer.services](xref:Overview_Collaboration), charged per volume. |
 | *Storage as a Service (STaaS)* | Charged based solely on data ingress (i.e. data going into the cloud). No charges apply for data egress (i.e. consumption of data from the cloud).<br>This includes Zone-Redundant Storage (ZRS) in one of the available [regions](xref:STaaS#data-location-and-redundancy), as well as automatic backup every 24 hours with a sliding window of 30 days. Other regions as well as Geo-Redundant Storage (GRS) are available at an additional charge. |
 | *DataMiner as a Service (DaaS)* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
 
@@ -106,11 +106,11 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 | Service | Metering unit | Credits per month |
 |---|---|---|
-| *Standard Managed Object* | Count of 10K metrics on Managed Objects with more than 200 metrics | 0.4 |
-| *Light Managed Object* | Sum of metrics on Managed Objects with less than 200 metrics | 2.5 for 1000 metrics |
+| *Standard Managed Object* | Count of 10K metrics on Managed Objects with 200 or more metrics | 0.4 |
+| *Light Managed Object* | Sum of metrics on Managed Objects with less than 200 metrics | 2 for 1000 metrics |
 | *Connector Services* | Sum of connectors delivered by Skyline, concurrently used | 8 |
 | *Script Runs* | Sum of script runs. | Starting at 5 for 1k script runs.<br>Unit credit rate decreases with increased quantities. |
-| *Cloud Data Consumption* | Sum of total GB of traffic. | 1 |
+| *Collaboration Services* | Sum of total used volume | Dashboard Sharing: 0.5 credits/share/recipient/month |
 | *Storage as a Service (STaaS)* | Sum of ingress units. | 0.9 per 100K alarm updates.<br>0.3 per 100K information events.<br>0.3 per 10M trend data points.<br>0.3 per 10M element data updates. |
 | *DataMiner as a Service (DaaS)* | Sum of metrics of all Managed Objects hosted. | 0.1 for 10000 metrics|
 

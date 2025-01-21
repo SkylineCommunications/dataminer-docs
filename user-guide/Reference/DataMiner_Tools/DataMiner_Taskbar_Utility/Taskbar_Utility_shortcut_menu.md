@@ -8,7 +8,7 @@ When you right-click the DataMiner Taskbar Utility system tray icon, a menu appe
 
 - **Launch \> DataMiner Cube**
 
-    Starts DataMiner Cube as a web application.
+    Starts DataMiner Cube as a web application. From DataMiner 10.5.2/10.6.0 onwards<!--RN 41308-->, if the Cube desktop app is not installed, clicking this option will initiate [its download](xref:Installing_the_DataMiner_Cube_desktop_application#dataminer-taskbar-utility).
 
 - **Launch \> Tools \> Client Test**
 

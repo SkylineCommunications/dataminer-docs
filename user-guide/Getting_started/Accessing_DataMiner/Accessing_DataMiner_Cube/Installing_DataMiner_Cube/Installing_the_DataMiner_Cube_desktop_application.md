@@ -30,6 +30,25 @@ description: Log on to dataminer.services, select 'Desktop installation' and run
 > - Once the desktop app has been installed, it will be updated automatically when you connect to other DataMiner versions.
 > - Administrators can [enforce the use of a specific Cube version](xref:DMA_configuration_related_to_client_applications#managing-client-versions) when you connect to a DMA.
 
+## DataMiner Taskbar Utility
+
+From DataMiner 10.5.2/10.6.0 onwards<!--RN 41308-->, it is also possible to install DataMiner Cube using [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility).
+
+1. Right-click the *DataMiner Taskbar Utility* icon in the system tray.
+
+1. Select *Launch* > *Download DataMiner Cube*.
+
+1. Open your downloads folder and locate the *DataMinerCube.exe* file.
+
+1. Double-click the file to start the installation process.
+
+1. Follow the prompts to confirm that you want to install the application.
+
+Once installed, DataMiner Cube will launch automatically and open a session connected to the local DMA.
+
+> [!NOTE]
+> If you attempt to install the *DataMinerCube.exe* file while DataMiner Cube is already installed, the existing Cube desktop app will open. Additionally, if a tile representing the local DMA does not already exist, it will be added automatically.
+
 ## MSI installation
 
 From DataMiner 10.2.0/10.2.2 onwards, it is also possible to install DataMiner Cube using an **MSI installer**, but this is **not recommended as this requires manual updating** when a new version is available. Typically, this is used by a system administrator to deploy DataMiner Cube in bulk on many client machines at the same time using some form of automation. The MSI installer can be found in the folder `C:\Skyline DataMiner\Webpages\Tools\Installs` on each DMA.

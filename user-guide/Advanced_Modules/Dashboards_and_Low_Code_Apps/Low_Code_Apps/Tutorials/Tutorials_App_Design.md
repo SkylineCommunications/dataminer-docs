@@ -53,7 +53,7 @@ Expected duration: 30 minutes.
 
 1. Select the *Best Practices in Low-Code App Design* app.
 
-   You now see the homepage of the application. Since the initial package does not contain any contacts, no contacts are listed on this page yet.
+   You now see the home page of the application. Since the initial package does not contain any contacts, no contacts are listed on this page yet.
 
    ![Initial app](~/user-guide/images/tutorial_app_design_intial_app.png)
 

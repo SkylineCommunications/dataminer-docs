@@ -4,7 +4,7 @@ uid: Monitoring_app_card_pane
 
 # Monitoring app card pane
 
-The card pane of the Monitoring app is the large pane on the right side of the app. If no cards are opened, this pane displays the app homepage, which shows a list of recent items. If a card is opened, the displayed content depends on the type of card.
+The card pane of the Monitoring app is the large pane on the right side of the app. If no cards are opened, this pane displays the app home page, which shows a list of recent items. If a card is opened, the displayed content depends on the type of card.
 
 ## Types of cards
 
@@ -46,3 +46,7 @@ If the app is used on a mobile device:
 - To zoom out, place two fingers stretched apart on the screen and bring them together.
 
 - To move left or right across a visual overview, slide a finger across the screen.
+
+## Visual Overview
+
+Visual overview pages in the DataMiner web apps are a lightweight version of their DataMiner Cube counterparts. This means that some features that are available in Cube will not be available in the web apps. For more details, see [Unsupported capabilities](xref:DashboardVisualOverview#unsupported-capabilities).
