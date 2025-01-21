@@ -34,12 +34,11 @@ https://*.skyline.be/*
 > [!IMPORTANT]
 > DIS works with Visual Studio Community, Visual Studio Professional, and Visual Studio Enterprise. Visual Studio Code and Visual Studio for Mac are not supported.
 
-## DataMiner Templates
+### nuget.org configuration
 
-DataMiner templates are automatically installed as of version 2.42 when Microsoft Visual Studio is opened after installing DIS.
+Make sure you have configured and enabled [nuget.org](https://api.nuget.org/v3/index.json) in Visual Studio.
 
-> [!NOTE]
-> Make sure you configured and enabled [nuget.org](https://api.nuget.org/v3/index.json) in Visual Studio.
+This is a requirement to be able to automatically install DataMiner templates when Microsoft Visual Studio is opened after DIS is installed (which happens as of DIS 2.42).
 
 ### Required user permissions
 
