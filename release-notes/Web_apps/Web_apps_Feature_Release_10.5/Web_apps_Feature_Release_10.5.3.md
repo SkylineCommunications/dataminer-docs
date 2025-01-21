@@ -131,3 +131,9 @@ When you tried to log on to a DataMiner web app, in some cases, the authenticati
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When a low-code app used queries in some of its flows, in some cases, it could become unresponsive.
+
+#### Dashboards/Low-Code Apps - Grid component: Problem when a linked Trigger component is triggered while viewing the last page [ID 41991]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a *Trigger* component linked to a *Grid* component was triggered while you were viewing the last page of grid data, a skeleton loading animation would incorrectly be shown. From now on, the last values will remain on the screen until the new data has been fetched.
