@@ -9,26 +9,26 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 20 January 2025 - New Feature - Rate Limiter when using Key Catalog API [ID 41940]
+### 20 January 2025 - Enhancement - Catalog API - Enhanced scope of retrieving Catalog item using a key [ID 41977]
 
-When using the Catalog API with an organization key, the following rate-limiting policy is applied:
+While previously the Catalog API only allowed users to retrieve information for Catalog items published by their own organization, now they can also retrieve information for any public Catalog item (using the organization key).
 
-- Partitionkey: IP address or host name of connection
+### 20 January 2025 - New feature - Catalog API - Retrieving Catalog item versions using a key [ID 41941]
+
+It is now possible to obtain version information for a Catalog item using an organization key that has the "Read Catalog items" permission.
+
+### 20 January 2025 - New feature - Catalog API - Rate Limiter when using organization key [ID 41940]
+
+When the Catalog API is used with an organization key, the following rate-limiting policy is applied:
+
+- Partition key: IP address or host name of connection
 - Burst limit: 100 requests
 - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
 - No queueing for extra requests beyond the token bucket
 
-### 20 January 2025 - New Feature - Download a Catalog version using Key Catalog API [ID 41892]
+### 20 January 2025 - New feature - Catalog API - Downloading a Catalog item version using a key [ID 41892]
 
-It is now possible to download a version of a Catalog item using an organization key which has the "Download Catalog" permission.
-
-### 20 January 2025 - New Feature - Get Catalog versions using Key Catalog API [ID 41941]
-
-It is now possible to obtain version information of a Catalog item using an organization key which has the "Read Catalog items" permission.
-
-### 20 January 2025 - Enhancement - Get Catalog using Key Catalog API enhanced scope [ID 41977]
-
-A user is now able to get information from a Catalog item that is public or is made by his own organization while up until now it was limited to Catalog items published by his own organization (organization key)
+It is now possible to download a version of a Catalog item using an organization key that has the "Download Catalog" permission.
 
 ### 16 January 2025 - Enhancement - Sharing - Feedback button added to user menu [ID 41926]
 
