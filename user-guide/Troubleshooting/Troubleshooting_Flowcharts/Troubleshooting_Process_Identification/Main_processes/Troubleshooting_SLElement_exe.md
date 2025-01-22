@@ -28,12 +28,12 @@ StartPage([Start page])
 RTE{{Is there an RTE or a memory leak?}}
 Watchdog[RTE troubleshooting:<br/>- Verify RTE Count = 1.<br/>- Check memory/CPU usage of SLElement.<br/>- Run collector and include memory dump.]
 Threads{{Which SLDataMiner thread is affected?}}
-ThreadsDB[DB threads:<br/>- CentralOffloadThread<br/>- DBThread<br/>- DataGatewayParameterThread<br/>- DataGatewayTableThread<br/>- DataGatewayAlarmThread<br/>- DataGatewayElementNotifyThread]
+ThreadsDB[" DB threads:<br/>- CentralOffloadThread<br/>- DBThread<br/>DataGatewayParameterThread<br/>- DataGatewayTableThread<br/>- DataGatewayAlarmThread<br/>DataGatewayElementNotifyThread "]
 Offload[" \- Check Offload DB folder for new files.<br/>- Confirm that DB connection is healthy.<br/>- Check if there are big tables that might be slowing down queries. "]
 IssuesAfterCheck{{Any issues after check?}}
 CassandraTb([Cassandra troubleshooting])
 DumpDb[Run Log Collector with the following dumps:<br/>- SLElement<br/>- SLProtocol<br/>- SLDataGateway]
-ThreadsAlarm[Alarm threads:<br/>- AlarmThread<br/>- AlarmOffloadThread<br/>- DataMinerNotificationsThread<br/>- ClientNotificationsThread<br/>- AlarmLinkLevel]
+ThreadsAlarm[Alarm threads:<br/>- AlarmThread<br/>- AlarmOffloadThread<br/>-DataMinerNotificationsThread<br/>- ClientNotificationsThread<br/>- AlarmLinkLevel]
 DumpAlarm[Run Log Collector with the following dumps:<br/>- SLElement<br/>- SLDataminer<br/>- SLNet]
 Delt[If the issue is related to a specific element, create a DELT export package and make sure trend and alarm data are not selected.]
 SendSw[Send the collected information to the software team.]

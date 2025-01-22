@@ -26,11 +26,11 @@ S----|No|T["Fix device communication."]:::Solution
 S----|Yes|I
 L---|Yes|F["RTE troubleshooting:<br/>- Verify RTE Count = 1.<br/>- Check memory/CPU usage of SLPort.<br/> - Run collector and include memory dump."]:::InfoAccNoClick
 F---G["Check SLErrors and SLErrorsInProtocol."]:::InfoAccNoClick
-G---H{{"Can you link the issues with a connector? (Check for a new connector in the system.)"}}:::Decision
+G---H{{"Can you link the issues with a connector? "}}:::Decision
 H---|Yes|K{{"Stop the element(s) using the connector. Has this solved the issue?"}}:::Decision
-H---|No|J["- Investigate the root cause of the leak/RTE/crash:<br/>- Check information events.<br/>- Check the Recycle Bin.<br/>- Check Event Viewer."]:::InfoAccNoClick
+H---|No|J["\- Investigate the root cause of the leak/RTE/crash:<br/>\- Check information events.<br/>\- Check the Recycle Bin.<br/>\- Check Event Viewer."]:::InfoAccNoClick
 J---I
-K---|Yes|Log["- Add or update the Portlog.txt file in the Skyline DataMiner folder.<br/>- Add the IP of the affected devices to the Portlog.txt file."]:::InfoAccNoClick
+K---|Yes|Log["\- Add or update the Portlog.txt file in the Skyline DataMiner folder.<br/>\- Add the IP of the affected devices to the Portlog.txt file."]:::InfoAccNoClick
 Log---|After 5 min of logging into SLPort.txt|I
 K---|No|I["Contact software team with the information and memory dump."]:::Solution
 XX([Start page]):::InfoAccClick

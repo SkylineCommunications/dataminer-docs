@@ -21,18 +21,18 @@ L----|No|U{{"Is SNMP functionality broken?"}}:::Decision
 U----|No|S{{"Does the device respond as expected?"}}:::Decision
 S----|No|T["Fix device communication."]:::Start
 S----|Yes|I
-U----|Yes|M{{"Is 1 of the 3 SLSNMPManager processes consuming more CPU/memory than the others?"}}:::Decision
+U----|Yes|M{{"Is 1 of the 3 SLSNMPManager<br>processes consuming more <br>CPU/memory than the others?"}}:::Decision
 M----|Yes|V["Collect memory dump of that process only."]:::InfoAccNoClick
 V----I
 M----|No|W["Collect memory dump of all 3 processes."]:::InfoAccNoClick
 W----I
-L---|Yes|F["RTE troubleshooting:<br/>- Verify RTE Count = 1.<br/>- Check memory/CPU usage of SLPort.<br/> - Run collector and include memory dump."]:::InfoAccNoClick
+L---|Yes|F["RTE troubleshooting:<br/>\- Verify RTE Count = 1.<br/>\- Check memory/CPU usage of SLPort.<br/>\- Run collector and<br>include memory dump."]:::InfoAccNoClick
 F---G["Check SLErrors and SLErrorsInProtocol."]:::InfoAccNoClick
 G---H{{"Can you link the issues with a connector? (Check for a new connector in the system.)"}}:::Decision
 H---|Yes| K{{"Stop the element(s) using the connector. Has this solved the issue?"}}:::Decision
-H---|No| J["- Investigate the root cause of the leak/RTE/crash.<br/>- Check information events.<br/>- Check the Recycle Bin.<br/>- Check Event Viewer."]:::InfoAccNoClick
+H---|No| J["\- Investigate the root cause<br> of the leak/RTE/crash.<br/>\- Check information events.<br/>\- Check the Recycle Bin.<br/>\- Check Event Viewer."]:::InfoAccNoClick
 J---I
-K---|Yes| Log["- Add or update the Portlog.txt file in the Skyline DataMiner folder.<br/>- Contact the connector developer to find the root cause in the protocol."]:::InfoAccNoClick
+K---|Yes| Log["\- Add or update the Portlog.txt file in the Skyline DataMiner folder.<br/>\- Contact the connector developer to find the root cause in the protocol."]:::InfoAccNoClick
 K---|No| I["Contact software team with the information and memory dump."]:::Start
 XX([Start page]):::External
 click XX "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to the start page"

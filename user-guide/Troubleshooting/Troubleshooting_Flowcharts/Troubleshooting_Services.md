@@ -28,7 +28,7 @@ DifferentHost([Check the service folder. Check the RemoteService folder.])
 SameHost{{"Compare the service impact (alarm property) vs the service state (surveyor/card)."}}
 DMAsDisconnected{{Are the DMAs disconnected?}}
 SyncCheck{{Run Sync Check tool. Click node to see how. Investigate why the DMAs are disconnected.}}
-NotFixed{{"If your issue is not fixed, contact support.data-core@skyline.be. Include all gathered information and steps taken."}}
+NotFixed{{"If your issue is not fixed, contact <a href="mailto:support.data-core@skyline.be">support.data-core@skyline.be</a>. Include all gathered information and steps taken."}}
 ImpactOrStateIssue{{Service impact or state issue?}}
 StateIssue{{Check SLElement service states in Client Test Tool => Diagnostics => DMA. Check __service_'serviceName'.txt logging.}}
 ImpactIssue{{Are there duplicate display keys from partially included elements?}}

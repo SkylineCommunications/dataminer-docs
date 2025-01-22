@@ -28,7 +28,7 @@ Leak[Memory leak]
 Crash[Process crash]
 StartPage([Start page])
 LogCollector([Log collector usage guide])
-Ch[- Check Task Manager for high memory. <br/>- Check Microsoft Platform element for gradual increase in memory over a period of time.]
+Ch[" \- Check Task Manager for high memory. <br/>\- Check Microsoft Platform element for gradual increase in memory over a period of time. "]
 D1{{Are the conditions above met?}}
 CrashdumpDetected{{"Crash dump found at issue time? C:\Skyline DataMiner\Logging\CrashDump"}}
 %% Connect blocks %%
@@ -68,8 +68,8 @@ classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 D1{{Are the conditions above met?}}
 N1([No memory leak.])
-Y1[- Find the time when memory use started to grow. <br/>- Check logging, info events, Windows Event Viewer around that time. <br/>- Installing Windows updates or updating Windows XML modules can trigger a leak too.]
-Sol1[- Check if Windows file updates are correctly installed. <br/>- If an update is not correctly installed, a server restart might be needed to finish the installation. <br/>- Check in the SLXml log file for a possible cause.]
+Y1[" \- Find the time when memory use started to grow. <br/>- Check logging, info events, Windows Event Viewer around that time. <br/>\- Installing Windows updates or updating Windows XML modules can trigger a leak too. "]
+Sol1[" \- Check if Windows file updates are correctly installed. <br/>\- If an update is not correctly installed, a server restart might be needed to finish the installation. <br/>\- Check in the SLXml log file for a possible cause. "]
 Ch1{{Is the leak still present?}}
 N2([Issue resolved.])
 Y2([Contact tech support with the required logging and memory dump.])
@@ -102,7 +102,7 @@ classDef DarkGray fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
-ProcessCrashed["- Save .high crashdump + note timestamp. <br/>- Check the ErrorLog.txt file for possible causes. <br/>- Check if DMA was missing production DVEs while restarting."]
+ProcessCrashed["\- Save .high crashdump + note timestamp. <br/>\- Check the ErrorLog.txt file for possible causes. <br/>\- Check if DMA was missing production DVEs while restarting."]
 Minidump{{"Minidump found at issue time? C:\Skyline DataMiner\Logging\MiniDump"}}
 MinidumpNo(["Contact tech support with the required logging and memory dump."])
 MinidumpYes["Identify the cause in the required log file: SLXML, SLErrors, SLDMS, etc."]

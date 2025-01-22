@@ -117,7 +117,7 @@ classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 CrashdumpDetected{{"Crash dump found at issue time?  C:\Skyline DataMiner\Logging\CrashDump"}}
-ProcessCrashed(["1\. Save .high crashdump  + note timestamp. <br/>2\. Check the ErrorLog.txt file for possible causes. <br/>3\. Send crashdump + logging + conclusions to Create squads. "])
+ProcessCrashed(["1\. Save .high crashdump<br> + note timestamp. <br/>2\. Check the ErrorLog.txt file for possible causes. <br/>3\. Send crashdump + logging + conclusions to Create squads. "])
 Minidump{{"Minidump found at issue time? C:\Skyline DataMiner\Logging\MiniDump"}}
 MinidumpNo(["Contact tech support with the required logging and memory dump."])
 MinidumpYes["Identify the cause in the required log file: SLWatchDog2, SLDataMiner, SLDMS, etc."]
@@ -163,9 +163,11 @@ class Nt Gray;
 
 Check the entries near the time of the issue, find a suspicious thread and follow it in the logging:
 
+```txt
 2021/06/16 10:18:24.328|SLDMS.exe 10.1.2123.558|24012|10828|CDMS::NotifyFunc|DBG|-1|** Creating Scheduler
 
 \<datetime>            |\<process>              |\<pid>|\<tid>|\<message>
+```
 
 ## RTEs
 

@@ -71,8 +71,8 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 ReadIssue([Read issue])
 FollowCTT{{Follow your session with the client test tool and open the trend graph.}}
 ClientExport{{1\. Turn on computer setting for trend debug<br>2\. Open trend<br>3\. On the trend timeline, press Ctrl + Alt + Shift + Right-click}}
-ReadIssueChecks{{"1\. Check trend template flags (find your parameter in the element protocol)<br>2\. Check the export and/or GetTrendDataMessage requests and responses<br>3\.Check user settings ('show most detailed data', range settings...)"}}
-NotFixed{{"If your issue is not fixed, contact support.data-core@skyline.be, including all info gathered and steps taken."}}
+ReadIssueChecks{{"1\. Check trend template flags (find your parameter in the element protocol)<br>2\. Check the export and/or GetTrendDataMessage requests and responses<br>3\. Check user settings ('show most detailed data', range settings...)"}}
+NotFixed{{"If your issue is not fixed, contact <a href="mailto:support.data-core@skyline.be">support.data-core@skyline.be</a>, including all info gathered and steps taken."}}
 %% Connect blocks %%
 ReadIssue --- FollowCTT
 ReadIssue --- ClientExport
@@ -108,8 +108,8 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:0px;
 classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0px;
 %% Define blocks %%
 WriteIssue([Write issue])
-NotFixed{{"If your issue is not fixed, contact support.data-core@skyline.be, including all info gathered and steps taken."}}
-WriteIssueActionLogging{{"Check Logging: SLDBConnection, SLNet, NATS, SLMessageBroker_SLNet. Look for errors/exceptions/status messages."}}
+NotFixed{{"If your issue is not fixed, contact <a href="mailto:support.data-core@skyline.be">support.data-core@skyline.be</a>, including all info gathered and steps taken."}}
+WriteIssueActionLogging{{"Check Logging: SLDBConnection, SLNet, NATS, SLMessageBroker_SLNet. Look for `errors/exceptions/status messages`."}}
 WriteIssueActionDBXML{{"Check DB.xml."}}
 WriteIssueActionTrendTemplate{{"Check trend template flags."}}
 WriteIssueActionParameter{{"Check if parameter value is updating."}}

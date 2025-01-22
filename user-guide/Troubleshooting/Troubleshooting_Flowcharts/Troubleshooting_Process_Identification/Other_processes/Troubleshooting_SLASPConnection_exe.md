@@ -48,7 +48,7 @@ Process[/Affected process: SLASPConnection/]
 RTE[Critical Issues flowchart]
 Other[Post question on Dojo]
 IssueResolved{{Issue resolved?}}
-Workaround[" Workaround: access reports directly via \https://x.x.x.x/reports "]
+Workaround[" Workaround: access reports directly via <a href="/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Other_processes/Troubleshooting_SLASPConnection_exe.html#reporter-troubleshooting-flowchart">https://x.x.x.x/reports</a> "]
 End([End])
 %% Connect blocks %%
 Start--- TypeofIssue

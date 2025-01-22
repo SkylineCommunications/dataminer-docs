@@ -90,7 +90,7 @@ Cassandra --- |YES| Prunsrv
 Cassandra --- |NO| RAMup
 %% Define hyperlinks %%
 click FreeSpace "/user-guide/Troubleshooting/Procedures/Keeping_a_DMA_from_running_out_of_disk_space.html"
-click SLScriptingTroubleShooting "/user-guide/Troubleshooting/Procedures/Troubleshooting_SLScripting_Issues.html#memory-dump-investigation"
+click SLScriptingTroubleShooting "/user-guide/Troubleshooting/Procedures/TroubleshootingSLScriptingOutOfMemoryException.html"
 %% Apply styles to blocks %%
 class Start DarkBlue;
 class Prunsrv,Proc,FreeSpace,RAMup,SLScriptingTroubleShooting LightGray;
