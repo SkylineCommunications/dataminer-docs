@@ -10,13 +10,13 @@ uid: DIS_3.1
 
 #### IDE
 
-##### Secure Coding Analyzers NuGet installed by default [ID 41904]
+##### Secure Coding Analyzers NuGet will now be installed by default [ID 41904]
 
-When creating a new QAction project in a protocol solution, or a project for a C# exe block in an Automation script, the created project now will already contain a reference to the ]Skyline.DataMiner.Utils.SecureCoding.Analyzers](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SecureCoding.Analyzers) NuGet package.
+When a new QAction project is created in a protocol solution, or when a project for a C# exe block is created in an Automation script, from now on, the newly-created project will by default contain a reference to the [Skyline.DataMiner.Utils.SecureCoding.Analyzers](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SecureCoding.Analyzers) NuGet package.
 
-Also, a new info bar has been introduces that will show up when a solution is opened which contains projects that do not have the Skyline.DataMiner.Utils.SecureCoding.Analyzers package installed or it has an outdated version. When pressing the fix button on the info bar, it will ensure the NuGet package is installed on all applicable projects.
+Also, a new info bar has been introduced, which will show up when you open a solution that contains projects that either do not have the *Skyline.DataMiner.Utils.SecureCoding.Analyzers* package installed or have an outdated version installed. Pressing the fix button on the info bar will then ensure that the NuGet package is installed on all applicable projects.
 
-If a project als has the [Skyline.DataMiner.Utils.SecureCoding](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SecureCoding) NuGet package installed, during executing the fix, it will also update that NuGet package to the latest version.
+If a project also has the [Skyline.DataMiner.Utils.SecureCoding](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SecureCoding) NuGet package installed, during the execution of the fix, that NuGet package will also be updated to the latest version.
 
 #### Validator
 
@@ -29,7 +29,7 @@ DIS now uses
 
 #### Enhancements
 
-##### Unicode option now by default set in the protocol snippet [ID 41837]
+##### Unicode option will now by default be set in the protocol snippet [ID 41837]
 
 The protocol snippet now has the [unicode](xref:Protocol.Type-options) option set by default.
 
@@ -39,26 +39,24 @@ The protocol snippet now has the [unicode](xref:Protocol.Type-options) option se
 
 #### Fixes
 
-##### Satellite assemblies are now excluded in packages  [ID 41997]
+##### Satellite assemblies are now excluded in packages [ID 41997]
 
-DIS now uses a new version of the [Skyline.DataMiner.CICD.Assemblers](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Common) NuGet package (1.0.18) which will now exclude satellite assemblies that are part of NuGet packages when assembling a protocol or Automation script.
+When assembling a protocol or an Automation script, DIS will now use a new version of the [Skyline.DataMiner.CICD.Assemblers](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Common) NuGet package (1.0.18), which will now exclude satellite assemblies that are part of NuGet packages.
 
-Prior to this release note, it could occur that a satellite assembly would get added to the package while the primary assembly (with the same name) would already have been added to as a reference. This would result in an message in DIS stating that the protocol or script could not be created as a reference with the same name was already added.
+Up to now, in some cases, a satellite assembly would get added to the package while the primary assembly (with the same name) would already have been added to it as a reference. In DIS, this would then result in a message stating that the protocol or script could not be created as a reference with the same name was already added.
 
-##### Info bar checks only triggered after 30s and no longer throws an exception [ID 41840]
+##### Info bar checks will only be triggered after 30 seconds and will no longer throw an exception [ID 41840]
 
-When opening a solution, the info bar checks will now only execute after a delay of 30s instead of the previous delay of 3s.
-This gives the solution more time to load (e.g. when switching branches).
+When you open a solution, the info bar checks will now only execute after a delay of 30 seconds instead of 3 seconds. This will give the solution more time to load (e.g. when switching branches).
 
-If the solution is not yet loaded while the info bar checks execute, this could result in an exception being thrown.
-DIS has now been updated to no longer throw an exception but silently skip the check (until it is retriggered if the solution changes).
+Up to now, if the solution was not yet loaded when the info bar checks were started, in some cases, an exception would be thrown. From now on, DIS will no longer throw an exception. Instead, it will silently skip the check (until it is retriggered when the solution changes).
 
 ##### Public plugins are now available to external users [ID 41927]
 
-When logged in as an external user in DIS, from now on the public [plugins](xref:DisPlugins) will be available under the Plugins menu item of DIS. 
+When an external user logs in to DIS, from now on, the public [plugins](xref:DisPlugins) will be available under the *DIS > Plugins* menu item.
 
 > [!NOTE]
-> After logging in, a restart of Visual Studio is needed for the menu items to become available under the Plugins menu item.
+> After you have logged in to DIS, the plugins will only become visible after a restart of Visual Studio.
 
 ## DIS 3.1.4
 
