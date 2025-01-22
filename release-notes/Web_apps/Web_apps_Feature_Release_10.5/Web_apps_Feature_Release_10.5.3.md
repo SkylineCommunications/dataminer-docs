@@ -60,6 +60,12 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### Dashboards/Low-Code Apps: Node edge graph component now supports real-time updates [ID 41545]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+The *Node edge graph* component now supports real-time updates.
+
 #### DataMiner Object Models: A confirmation box will now appear when you remove a section from a DOM form [ID 41792]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
