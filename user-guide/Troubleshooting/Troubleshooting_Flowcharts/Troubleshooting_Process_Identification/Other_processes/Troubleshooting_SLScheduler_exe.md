@@ -24,21 +24,20 @@ classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 Start[SLScheduler]
 Home([Start page])
-SLLogCollector([Log collector <br>usage guide])
+SLLogCollector([Log collector usage guide])
 Investigation([How to investigate])
 RTE{{"Was there an RTE?"}}
-RTE1[- Verify RTE count = 1.<br> - Check memory/CPU usage. <br> - Take high memory dump <br>or set up procdump.<br> - If RTE is still present, restart DMA.]
-RTE2[Check SLScheduler.txt.]
-RTE3[Verify which scheduled task was <br>executed at the time of the RTE.]
-RTE4[Check Windows Task Scheduler: <br> - Verify that everything is OK in the Active Tasks. <br> - Verify when the task started to fail. <br> - Try to run it from the Task Scheduler.]
-RTE5[Investigate the root cause of the leak/RTE/crash: <br> - Check information events. <br> - Check resources of other processes. <br> - Check the Recycle Bin. <br> - Check Event Viewer.]
-ScheduledEvent{{"Did the <br>scheduled event run?"}}
+RTE1[" \- Verify RTE count = 1.<br>\- Check memory/CPU usage.<br>\-Take high memory dump or set up procdump.<br>\- If RTE is still present, restart DMA. "]
+RTE3[" Verify which scheduled task was executed at the time of the RTE." ]
+RTE4[" Check Windows Task Scheduler: <br> \- Verify that everything is OK in the Active Tasks. <br> \- Verify when the task started to fail. <br> \- Try to run it from the Task Scheduler. "]
+RTE5[" Investigate the root cause of the leak/RTE/crash: <br> \- Check information events. <br> \- Check resources of other processes. <br> \- Check the Recycle Bin. <br> \- Check Event Viewer."]
+ScheduledEvent{{"Did the scheduled event run?"}}
 Win[Windows Task Scheduler]
 InfoEvents["Check information events."]
 Errors{{"Are there any errors? "}}
-Config["Check scheduled <br>task/event configuration."]
+Config["Check scheduled task/event configuration."]
 ErrorYes[Check the respective errors.]
-End[Manually execute <br>the scheduled event.]
+End[Manually execute the scheduled event.]
 %% Connect blocks %%
 Start ---- ScheduledEvent
 Start --- RTE

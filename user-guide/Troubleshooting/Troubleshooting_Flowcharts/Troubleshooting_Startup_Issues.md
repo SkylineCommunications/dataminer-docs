@@ -20,7 +20,7 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 %% Define blocks %%
    START([DMA startup issues])
    HOME([Start page])
-   CHECK1{{Check: <br>1. SLDataminer.txt <br>2. SLWatchDog2.txt}}
+   CHECK1{{Check: <br>1\. SLDataminer.txt <br>2\. SLWatchDog2.txt}}
    licensing([Licensing issue])
    nicpriority([NIC priority])
    dbOffloading([DB offloading])

@@ -69,9 +69,9 @@ flowchart TD
     SLWatchDog[SLWatchDog]
     MemoryLeak{{Is there a memory leak?}}
     ConfirmLeak(How to confirm a memory leak)
-    ReportsGrowing[Check if the size of generated reports is growing: <br>C:\Skyline DataMiner\Logging\WatchDog\Reports]
-    ValidateXml[Open recent reports and check if the XML is valid. <br>Check XML tags, attributes, data.]
-    togglingRTE[Check for toggling RTEs, i.e. RTEs switching on and off in quick<br/>succession, which can cause SLWatchDog to generate many files: <br> C:\Skyline DataMiner\Logging\WatchDog\Notifications]
+    ReportsGrowing[Check if the size of generated reports is growing: C:\Skyline DataMiner\Logging\WatchDog\Reports]
+    ValidateXml[Open recent reports and check if the XML is valid. Check XML tags, attributes, data.]
+    togglingRTE[Check for toggling RTEs, i.e. RTEs switching on and off in quick succession, which can cause SLWatchDog to generate many files: C:\Skyline DataMiner\Logging\WatchDog\Notifications]
     RteLink([How to check for RTEs])
     CheckSlXml[Check SLXML process for issues]
     XmlFlowchart([SLXML flowchart])
@@ -118,20 +118,20 @@ class Home,SLLogCollector,Investigation,RteLink,XmlFlowchart classExternalRef;
 flowchart TD
 %% Define blocks %%
     CommonIssues[SLWatchDog common issues]
-    WatchdogStarted{{Is the SLWatchdog.exe process <br>running in Windows Task Manager?}}
-    UpgradeStuck{{Is a DataMiner upgrade stuck <br>unpacking update.zip?}}
-    CheckBitness[Watchdog registered as wrong bitness:<br/>32-bit vs. 64-bit process.]
-    InstructionsBitness[Confirm if SLWatchdog is running<br> as a 64- or 32-bit process. ]
+    WatchdogStarted{{Is the SLWatchdog.exe process running in Windows Task Manager?}}
+    UpgradeStuck{{Is a DataMiner upgrade stuck unpacking update.zip?}}
+    CheckBitness[Watchdog registered as wrong bitness:32-bit vs. 64-bit process.]
+    InstructionsBitness[Confirm if SLWatchdog is running as a 64- or 32-bit process. ]
     dmaVersion[Look up the DataMiner version.]
-    ResolveMismatch([Resolve a mismatch between <br/>the DataMiner version and<br/>the 64-/32-bit process. ])
+    ResolveMismatch([Resolve a mismatch between the DataMiner version and the 64-/32-bit process. ])
     LogIssues[Issues with logging]
-    WrongDates([Incorrect dates: year 1899 <br>Fixed in DataMiner 9.6.1: RN 19671])
+    WrongDates([Incorrect dates: year 1899 Fixed in DataMiner 9.6.1: RN 19671])
     FailedMinidumps[Minidumps not created.]
-    CheckSystemCache[Check the System Cache folder <br>for temporary minidumps.]
+    CheckSystemCache[Check the System Cache folder for temporary minidumps.]
     RunLogCollector([Run SLLogCollector and check for errors.])
      CrashdumpIssues[Crash dump issues]
-     CrashRestart[Normally, DataMiner restarts upon a process crash. <br>When a process has a crash dump, <br>the process could keep running.]
-     VerifyRestart([Check if SLWatchDog restarts after crash dumps. <br> See DataMiner 10.0.0/10.0.12 RNs: RN 27321.])
+     CrashRestart[Normally, DataMiner restarts upon a process crash. When a process has a crash dump, the process could keep running.]
+     VerifyRestart([Check if SLWatchDog restarts after crash dumps. See DataMiner 10.0.0/10.0.12 RNs: RN 27321.])
 %% Connect blocks %%
     Home([Start page])
     SLLogCollector([Log collector usage guide])
