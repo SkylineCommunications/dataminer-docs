@@ -4,6 +4,62 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.5
+
+### New features
+
+#### IDE
+
+##### Secure Coding Analyzers NuGet installed by default [ID 41904]
+
+When creating a new QAction project in a protocol solution, or a project for a C# exe block in an Automation script, the created project now will already contain a reference to the ]Skyline.DataMiner.Utils.SecureCoding.Analyzers](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SecureCoding.Analyzers) NuGet package.
+
+Also, a new info bar has been introduces that will show up when a solution is opened which contains projects that do not have the Skyline.DataMiner.Utils.SecureCoding.Analyzers package installed or it has an outdated version. When pressing the fix button on the info bar, it will ensure the NuGet package is installed on all applicable projects.
+
+If a project als has the [Skyline.DataMiner.Utils.SecureCoding](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SecureCoding) NuGet package installed, during executing the fix, it will also update that NuGet package to the latest version.
+
+#### Validator
+
+DIS now uses
+
+- [Validator version 1.1.12](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.1.12)
+- [Skyline.DataMiner.XmlSchemas.Protocol version 1.0.8](https://github.com/SkylineCommunications/Skyline.DataMiner.XmlSchemas/releases/tag/1.0.8)
+
+### Changes
+
+#### Enhancements
+
+##### Unicode option now by default set in the protocol snippet [ID 41837]
+
+The protocol snippet now has the [unicode](xref:Protocol.Type-options) option set by default.
+
+```xml
+<Type relativeTimers="true" options=";unicode">protocolType</Type>
+```
+
+#### Fixes
+
+##### Satellite assemblies are now excluded in packages  [ID 41997]
+
+DIS now uses a new version of the [Skyline.DataMiner.CICD.Assemblers](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Assemblers.Common) NuGet package (1.0.18) which will now exclude satellite assemblies that are part of NuGet packages when assembling a protocol or Automation script.
+
+Prior to this release note, it could occur that a satellite assembly would get added to the package while the primary assembly (with the same name) would already have been added to as a reference. This would result in an message in DIS stating that the protocol or script could not be created as a reference with the same name was already added.
+
+##### Info bar checks only triggered after 30s and no longer throws an exception [ID 41840]
+
+When opening a solution, the info bar checks will now only execute after a delay of 30s instead of the previous delay of 3s.
+This gives the solution more time to load (e.g. when switching branches).
+
+If the solution is not yet loaded while the info bar checks execute, this could result in an exception being thrown.
+DIS has now been updated to no longer throw an exception but silently skip the check (until it is retriggered if the solution changes).
+
+##### Public plugins are now available to external users [ID 41927]
+
+When logged in as an external user in DIS, from now on the public [plugins](xref:DisPlugins) will be available under the Plugins menu item of DIS. 
+
+> [!NOTE]
+> After logging in, a restart of Visual Studio is needed for the menu items to become available under the Plugins menu item.
+
 ## DIS 3.1.4
 
 ### New features
