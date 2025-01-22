@@ -147,6 +147,13 @@ SLLogCollector packages now include the following data regarding the GQI DxM:
 
 SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
+#### Swarming prerequisites: Entries will now be added to SLNet.txt while checking alarm ID usage in Automation scripts and protocol QActions [ID 41930]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+While checking the Swarming prerequisites, DataMiner checks alarm ID usage in Automation scripts and protocol QActions. As this step can take up to several minutes, log entries will now be added to the *SLNet.txt* log file while alarm ID usage is being checked.
+
 ### Fixes
 
 #### Elements no longer visible after having been swarmed [ID 41635]
