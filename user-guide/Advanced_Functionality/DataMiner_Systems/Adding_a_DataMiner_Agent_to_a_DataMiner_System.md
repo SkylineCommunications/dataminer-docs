@@ -16,7 +16,6 @@ More information on adding DataMiner Agents is included in the following section
 >
 > - In most cases, when you add a DataMiner Agent to a DataMiner System, all other DataMiner Agents in the DataMiner System will connect to it using its primary IP address. However, in case e.g. NAT (Network Address Translation) is being used, you have to configure the connection strings by hand. See [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
 > - If a [manual configuration was forced for NATS](xref:SLNetClientTest_disabling_automatic_nats_config) with the *NATSForceManualConfig* option in *MaintenanceSettings.xml*, you will need to manually adjust your NATS configuration with the added DMA.
-> - After adding a DataMiner Agent to a DMS, incidents created by Incident Tracking will temporarily be shown correctly for up to 30 minutes. If needed, this can be fixed sooner by manually changing the *Leader DataMiner ID* in the configuration, see [Automatic incident tracking configuration in System Center](xref:Automatic_incident_tracking#automatic-incident-tracking-configuration-in-system-center).
 
 > [!WARNING]
 > If you add a DataMiner Agent to a DataMiner System, please make sure that it is a new DataMiner Agent that has not yet been put into use and that uses the same software version as the other Agents in the system.

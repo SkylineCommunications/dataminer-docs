@@ -51,6 +51,7 @@ The grouping of alarms into incidents is updated in real time whenever appropria
 >
 > - Using automatic incident tracking with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
 > - When an element is stopped or paused, the alarms associated with that element will not be taken into account when grouping alarms. Also, alarms associated with elements that are stopped or paused will be removed from any existing alarm group.
+> - After a [DataMiner Agent is added to a DMS](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System), incidents created by automatic incident tracking will temporarily be shown incorrectly. This issue will automatically be resolved within 30 minutes, but you can also manually fix this sooner by changing the *Leader DataMiner ID* in the [automatic incident tracking configuration in System Center](xref:Automatic_incident_tracking#automatic-incident-tracking-configuration-in-system-center).
 
 > [!TIP]
 > It is possible to manually customize alarm grouping. See [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules).
