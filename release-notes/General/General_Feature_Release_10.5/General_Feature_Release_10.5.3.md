@@ -28,7 +28,38 @@ uid: General_Feature_Release_10.5.3
 
 ## New features
 
-*No new features have been added yet.*
+#### DataMiner Object Models: Configuring trigger conditions for CRUD scripts [ID 41780]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+From now on, conditions can be used to prevent the update script from being triggered for each and every `DomInstance` update. This allows you to make a solution more efficient as no unnecessary script triggers are executed. These conditions can be configured by instantiating one of the supported condition classes and adding it to the `OnUpdateTriggerConditions` collection property on the `ExecuteScriptOnDomInstanceActionSettings`.
+
+The conditions are evaluated using a logical 'OR', meaning that only one condition needs to be true for the script to trigger.
+
+> [!IMPORTANT]
+> When you configure conditions, the update script will no longer be triggered when a status transition is done. A status-related condition to define a trigger based on a specific status is currently not available.
+
+##### FieldValueUpdatedTriggerCondition
+
+This condition type allows you to check whether a `FieldValue` for a given `FieldDescriptor` has been added, updated, or removed. It also supports multiple sections, meaning the condition will be met if:
+
+- A **new** `FieldValue` is added in a new or existing `Section`.
+- An **existing** `FieldValue` is deleted from a deleted or existing `Section`.
+
+To use this condition, define the ID of the `FieldDescriptor` by passing it to the condition's constructor.
+
+Example:
+
+```csharp
+var licensePlate = new FieldDescriptorID(Guid.Parse("81915fe0-8f55-4ad1-8da5-3b703f9e7842"));
+var insuranceId = new FieldDescriptorID(Guid.Parse("7cd4366c-983c-46d2-aa92-e0308a3102e5"));
+
+moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new List<IDomCrudScriptTriggerCondition>
+{
+   new FieldValueUpdatedTriggerCondition(licensePlate),
+   new FieldValueUpdatedTriggerCondition(insuranceId)
+};
+```
 
 ## Changes
 
