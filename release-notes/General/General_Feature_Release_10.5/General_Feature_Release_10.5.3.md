@@ -111,6 +111,14 @@ In order to override the timeout for a Virtual Function, you will now be able to
 
 Error and exception handling has been enhanced in order to prevent duplicate or sticky correlation alarms due to errors or exceptions thrown when updating or clearing correlation alarms.
 
+#### Smart baselines will now also get capped when the parameter only has either a low value or a high value [ID 41870]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+When DataMiner calculates a smart baseline value that lies outside the range specified in the protocol for the parameter in question, then the value is capped. However, up to now, this would only happen when the range had both a low value and a high value.
+
+From now on, calculated smart baseline values will also get capped when the parameter in question only has either a low value or a high value.
+
 #### Amazon Keyspaces Service is now end-of-life [ID 41874] [ID 41914]
 
 <!-- MR 10.5.0 [CU0] - FR 10.5.3 -->
