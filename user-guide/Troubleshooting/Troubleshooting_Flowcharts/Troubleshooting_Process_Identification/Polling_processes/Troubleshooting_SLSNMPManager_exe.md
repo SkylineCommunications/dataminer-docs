@@ -16,24 +16,24 @@ SLSNMPManager controls all communication from and to devices using the SNMP prot
 %%{init: { 'theme': 'base', 'themeVariables': { 'edgeLabelBackground':'#fff', 'fontFamily' : 'Segoe UI'}}}%%
 flowchart TD
 Title["SLSNMPManager"]:::Start
-Title---L{{"Are RTEs present <br>in the system?"}}:::Decision
-L----|No|U{{"Is SNMP <br>functionality broken?"}}:::Decision
-U----|No|S{{"Does the device <br>respond as expected?"}}:::Decision
+Title---L{{"Are RTEs present in the system?"}}:::Decision
+L----|No|U{{"Is SNMP functionality broken?"}}:::Decision
+U----|No|S{{"Does the device respond as expected?"}}:::Decision
 S----|No|T["Fix device communication."]:::Start
 S----|Yes|I
-U----|Yes|M{{"Is 1 of the 3 SLSNMPManager <br>processes consuming more CPU/<br>memory than the others?"}}:::Decision
-M----|Yes|V["Collect memory dump of <br>that process only."]:::InfoAccNoClick
+U----|Yes|M{{"Is 1 of the 3 SLSNMPManager processes consuming more CPU/memory than the others?"}}:::Decision
+M----|Yes|V["Collect memory dump of that process only."]:::InfoAccNoClick
 V----I
-M----|No|W["Collect memory dump of <br>all 3 processes."]:::InfoAccNoClick
+M----|No|W["Collect memory dump of all 3 processes."]:::InfoAccNoClick
 W----I
-L---|Yes|F["RTE troubleshooting:<br/>- Verify RTE Count = 1.<br/>- Check memory/CPU <br>usage of SLPort.<br/> - Run collector and <br>include memory dump."]:::InfoAccNoClick
-F---G["Check SLErrors <br>and SLErrorsInProtocol."]:::InfoAccNoClick
-G---H{{"Can you link the issues <br>with a connector?<br/>(Check for a new <br>connector in the system.)"}}:::Decision
-H---|Yes| K{{"Stop the element(s) using the connector.<br/>Has this solved the issue?"}}:::Decision
-H---|No| J["- Investigate the root cause<br> of the leak/RTE/crash.<br/>- Check information events.<br/>- Check the Recycle Bin.<br/>- Check Event Viewer."]:::InfoAccNoClick
+L---|Yes|F["RTE troubleshooting:<br/>- Verify RTE Count = 1.<br/>- Check memory/CPU usage of SLPort.<br/> - Run collector and include memory dump."]:::InfoAccNoClick
+F---G["Check SLErrors and SLErrorsInProtocol."]:::InfoAccNoClick
+G---H{{"Can you link the issues with a connector? (Check for a new connector in the system.)"}}:::Decision
+H---|Yes| K{{"Stop the element(s) using the connector. Has this solved the issue?"}}:::Decision
+H---|No| J["- Investigate the root cause of the leak/RTE/crash.<br/>- Check information events.<br/>- Check the Recycle Bin.<br/>- Check Event Viewer."]:::InfoAccNoClick
 J---I
-K---|Yes| Log["- Add or update the Portlog.txt file in <br/>the Skyline DataMiner folder.<br/>- Contact the connector developer to <br/>find the root cause in the protocol."]:::InfoAccNoClick
-K---|No| I["Contact software team with the <br/>information and memory dump."]:::Start
+K---|Yes| Log["- Add or update the Portlog.txt file in the Skyline DataMiner folder.<br/>- Contact the connector developer to find the root cause in the protocol."]:::InfoAccNoClick
+K---|No| I["Contact software team with the information and memory dump."]:::Start
 XX([Start page]):::External
 click XX "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to the start page"
 linkStyle default stroke:#cccccc

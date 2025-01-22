@@ -34,31 +34,31 @@ classDef classInputOutput fill:#ffffff,stroke:#3f70ba,stroke-width:1px;
 %% Define blocks %%
 HOME([Start page])
 Start([Reporter/SLASPConnection issue])
-TypeofIssue{{Which kind of issue<br/>are you facing?}}
-ApplicationError{{Which error appears<br/>in the application?}}
+TypeofIssue{{Which kind of issue are you facing?}}
+ApplicationError{{Which error appears in the application?}}
 Dcom[DCOM]
 ChartDirector[ChartDirector]
-ReportGeneration{{Which error appears after<br/>a report is generated?}}
+ReportGeneration{{Which error appears after a report is generated?}}
 UrlProcessing[URL processing]
 WinHTTPRequest[WinHTTPRequest error]
 RequestFailure[Request failure error]
 TimeoutConfig[Report fails because of timeout]
-ReportTimeout(Split the report if it <br/>retrieves a lot of data.)
+ReportTimeout(Split the report if it retrieves a lot of data.)
 Process[/Affected process: SLASPConnection/]
 RTE[Critical Issues flowchart]
 Other[Post question on Dojo]
 IssueResolved{{Issue resolved?}}
-Workaround[Workaround: access<br/>reports directly via<br/>https://x.x.x.x/reports]
+Workaround[" Workaround: access reports directly via \https://x.x.x.x/reports "]
 End([End])
 %% Connect blocks %%
 Start--- TypeofIssue
-TypeofIssue ---|Error in<br/>Reporter application| ApplicationError
-ApplicationError ---|DMS Reporter could not<br/>communicate with the DMS| Dcom
+TypeofIssue ---|Error in Reporter application| ApplicationError
+ApplicationError ---|DMS Reporter could not communicate with the DMS| Dcom
 Dcom----IssueResolved
-ApplicationError ---|Could not start<br/>the ChartDirector object| ChartDirector
+ApplicationError ---|Could not start the ChartDirector object| ChartDirector
 ChartDirector --- IssueResolved
-TypeofIssue---|Issue or error<br/>at report generation| ReportGeneration
-ReportGeneration---|Error occurred<br/>while processing URL|UrlProcessing
+TypeofIssue---|Issue or error at report generation| ReportGeneration
+ReportGeneration---|Error occurred while processing URL|UrlProcessing
 UrlProcessing-----IssueResolved
 ReportGeneration ---|WinHTTPRequest|WinHTTPRequest
 WinHTTPRequest----IssueResolved
@@ -68,7 +68,7 @@ ReportGeneration ---|Report timeout|TimeoutConfig
 TimeoutConfig--- ReportTimeout
 ReportTimeout---IssueResolved
 TypeofIssue --- |Other| Other
-TypeofIssue ---|RTE, process disappearance,<br/> or memory leak| Process
+TypeofIssue ---|RTE, process disappearance, or memory leak| Process
 Process---RTE
 IssueResolved--- |Yes|End
 IssueResolved--- |No|Workaround---Other

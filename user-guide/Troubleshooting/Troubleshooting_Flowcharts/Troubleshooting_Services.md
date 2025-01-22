@@ -22,19 +22,19 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:0px;
 classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0px;
 %% Define blocks %%
 START([Service issue])
-GetDELT{{Get a .dmimport package.\nCheck the service configuration.}}
-HostInfo{{Is the host of the service \nthe same or different \nfrom the element?\nFind this by editing \nthe service/element, \nwhere you can find \nthe 'DMA:' setting.}}
-DifferentHost([Check the service folder.\nCheck the RemoteService folder.])
-SameHost{{"Compare the service impact \n(alarm property) \nvs\nthe service state \n(surveyor/card)."}}
+GetDELT{{Get a .dmimport package. Check the service configuration.}}
+HostInfo{{Is the host of the service the same or different from the element? Find this by editing the service/element, where you can find the 'DMA:' setting.}}
+DifferentHost([Check the service folder. Check the RemoteService folder.])
+SameHost{{"Compare the service impact (alarm property) vs the service state (surveyor/card)."}}
 DMAsDisconnected{{Are the DMAs disconnected?}}
-SyncCheck{{Run Sync Check tool.\nClick node to see how.\nInvestigate why the \nDMAs are disconnected.}}
-NotFixed{{"If your issue is not fixed,\ncontact support.data-core@skyline.be.\nInclude all gathered information \nand steps taken."}}
-ImpactOrStateIssue{{Service impact \nor \nstate issue?}}
-StateIssue{{Check SLElement service states in\nClient Test Tool => Diagnostics => DMA.\nCheck __service_'serviceName'.txt logging.}}
-ImpactIssue{{Are there duplicate \ndisplay keys\nfrom partially \nincluded elements?}}
-NotFixedProtocolIssue{{Rows should have \nunique display keys.\nContact the author \nof your \nelement's connector.}}
-IsolateIssue{{Try to isolate and \nsimulate the actual issue.\ne.g. if the elements \nare partially included\ncheck if it also happens \nwith full inclusion.\ne.g. does the issue \noccur on standalone \nor column parameters?}}
-Alarms{{If your issue is not resolved,\nclick this node to go to the alarm flow.}}
+SyncCheck{{Run Sync Check tool. Click node to see how. Investigate why the DMAs are disconnected.}}
+NotFixed{{"If your issue is not fixed, contact support.data-core@skyline.be. Include all gathered information and steps taken."}}
+ImpactOrStateIssue{{Service impact or state issue?}}
+StateIssue{{Check SLElement service states in Client Test Tool => Diagnostics => DMA. Check __service_'serviceName'.txt logging.}}
+ImpactIssue{{Are there duplicate display keys from partially included elements?}}
+NotFixedProtocolIssue{{Rows should have unique display keys. Contact the author of your element's connector.}}
+IsolateIssue{{Try to isolate and simulate the actual issue. e.g. if the elements are partially included check if it also happens with full inclusion. e.g. does the issue occur on standalone or column parameters?}}
+Alarms{{If your issue is not resolved, click this node to go to the alarm flow.}}
 %% Connect blocks %%
 START --- GetDELT
 GetDELT --- HostInfo

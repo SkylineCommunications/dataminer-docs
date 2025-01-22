@@ -26,7 +26,7 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:0px;
 classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0px;
 %% Define blocks %%
 START([Trend issue])
-GetDELT{{Get a .dmimport package with trend data,\nunzip it and check the 'Database' folder.}}
+GetDELT{{Get a .dmimport package with trend data, unzip it and check the 'Database' folder.}}
 TrendDataInspector{{"Check the data with the trend data inspector."}}
 QueryDatabase{{Query the database directly.}}
 DataPresent([Is the data there?])
@@ -108,8 +108,8 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:0px;
 classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0px;
 %% Define blocks %%
 WriteIssue([Write issue])
-NotFixed{{"If your issue is not fixed,\ncontact support.data-core@skyline.be,\nincluding all info gathered and steps taken."}}
-WriteIssueActionLogging{{"Check Logging: SLDBConnection, SLNet, NATS, SLMessageBroker_SLNet.\nLook for errors/exceptions/status messages."}}
+NotFixed{{"If your issue is not fixed, contact support.data-core@skyline.be, including all info gathered and steps taken."}}
+WriteIssueActionLogging{{"Check Logging: SLDBConnection, SLNet, NATS, SLMessageBroker_SLNet. Look for errors/exceptions/status messages."}}
 WriteIssueActionDBXML{{"Check DB.xml."}}
 WriteIssueActionTrendTemplate{{"Check trend template flags."}}
 WriteIssueActionParameter{{"Check if parameter value is updating."}}

@@ -24,7 +24,7 @@ classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 Start[SLScheduler]
 Home([Start page])
-SLLogCollector([Log collector <br>usage guide])
+SLLogCollector([Log collector usage guide])
 Investigation([How to investigate])
 RTE{{"Was there an RTE?"}}
 RTE1[" \- Verify RTE count = 1.<br>\- Check memory/CPU usage.<br>\-Take high memory dump or set up procdump.<br>\- If RTE is still present, restart DMA. "]
