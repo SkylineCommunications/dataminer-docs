@@ -18,6 +18,8 @@ Before connecting your DataMiner System to dataminer.services, verify that the f
 
   - ``wss://tunnel.dataminer.services/``
 
+  - ``https://dataminerservices.b2clogin.com/``
+
   For more information about these endpoints, their underlying IPs, and the way traffic is secured, refer to [Cloud connectivity and security](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices).
 
   > [!NOTE]
