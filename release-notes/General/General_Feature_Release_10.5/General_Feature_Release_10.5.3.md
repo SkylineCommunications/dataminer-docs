@@ -154,6 +154,15 @@ SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
 While checking the Swarming prerequisites, DataMiner checks alarm ID usage in Automation scripts and protocol QActions. As this step can take up to several minutes, log entries will now be added to the *SLNet.txt* log file while alarm ID usage is being checked.
 
+#### Swarming: Elements polling the local IP address no longer blocked from being swarmed [ID 41957]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+Up to now, it was not allowed to swarm elements polling the local IP address of any agent in the DMS and elements polling the loopback address.
+
+From now on, it will be allowed to swarm elements polling the local IP address of any agent in the DMS. However, elements polling the loopback address will remain blocked.
+
 ### Fixes
 
 #### Elements no longer visible after having been swarmed [ID 41635]
