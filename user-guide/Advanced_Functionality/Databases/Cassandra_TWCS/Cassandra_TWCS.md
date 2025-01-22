@@ -4,9 +4,9 @@ uid: Cassandra_TWCS
 
 # Cassandra TWCS
 
-When choosing the [TTL](xref:Specifying_TTL_overrides) on Cassandra for trending, there are some recommended boundaries. These are defined by the TWCS.
+**Time Window Compaction Strategy (TWCS)** is a compaction mechanism specifically designed for time-series data. The data is organized and compacted into time-based buckets, referred to as **time windows**.
 
-**Time Window Compaction Strategy (TWCS)** is a compaction mechanism specifically designed for time-series data. This data is organized and compacted into time-based buckets, referred to as **time windows**.
+When choosing the [TTL](xref:Specifying_TTL_overrides) on Cassandra for trending, there are some recommended boundaries.
 
 ## Time Window Compaction Strategy
 
@@ -14,9 +14,7 @@ In the TWCS mechanism, data is grouped into defined time intervals (e.g. 3 hours
 
 While data is being actively written to the current time window, it is compacted into SSTables for that specific window. Compaction occurs incrementally, merging data within the same time window.
 
-When the current time window ends (data is no longer written to it), the data is compacted further into a final SSTable. This finalized SSTable is considered immutable and will never be written to again, only read during queries.
-
-Once the **time-to-live (TTL)** of the data expires, the entire SSTable for that time window can be safely deleted, minimizing overhead and reclaiming storage.
+SSTables are immutable and compacting SSTables leads to a new SSTable. When a window ends, a final SSTable will be constructed. A full SSTable for a specific window will exist until the TTL is passed. After the TTL passed, the SSTable can safely be deleted.
 
 ## Importance of Limiting SSTables
 
@@ -40,4 +38,4 @@ The following recommended limitations apply:
 | Day trending       | 30 days          | 1500 days               |
 
 > [!NOTE]
-> These recommended maximum TTL values cannot be changed.
+> Regardless of how the Cassandra database is configured, the recommended maximum TTL values cannot be changed.
