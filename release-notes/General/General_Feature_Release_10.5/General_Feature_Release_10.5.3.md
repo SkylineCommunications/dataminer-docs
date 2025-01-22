@@ -60,7 +60,7 @@ A number of security enhancements have been made.
 
 #### Change Element States Offline tool: Service elements will now be hidden by default [ID 41341]
 
-<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- MR 10.5.0 - FR 10.5.3 -->
 
 From now on, the *Change Element States Offline* tool will hide service elements by default. This will prevent users from mistakenly stopping those elements.
 
