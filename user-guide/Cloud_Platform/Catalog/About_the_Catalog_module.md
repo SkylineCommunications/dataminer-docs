@@ -26,7 +26,6 @@ There are several ways to access the Catalog module:
 A Catalog item is a small package that contains one or more artifacts that can be deployed on a DataMiner System. Different types of Catalog items are supported. For example, an item could be a single connector, or it could be an application package containing multiple dashboards, Automation scripts, and connectors.
 
 At present, the following types of Catalog items are supported:
-<!-- Awaiting definitions for Product Solution, Custom Solution, Learning & Samples, DevTools, System Health -->
 
 | Type | Description |
 |--|--|
