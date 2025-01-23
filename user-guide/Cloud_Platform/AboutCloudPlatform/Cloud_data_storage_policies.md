@@ -1,5 +1,6 @@
 ---
 uid: Cloud_data_storage_policies
+keywords: cloud
 ---
 
 # Cloud data storage policies

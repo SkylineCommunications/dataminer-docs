@@ -1,5 +1,6 @@
 ---
 uid: Giving_users_access_to_cloud_features
+keywords: cloud
 ---
 
 # Controlling user access to dataminer.services features

@@ -1,5 +1,6 @@
 ---
 uid: Disconnecting_from_dataminer.services
+keywords: cloud
 ---
 
 # Disconnecting from dataminer.services

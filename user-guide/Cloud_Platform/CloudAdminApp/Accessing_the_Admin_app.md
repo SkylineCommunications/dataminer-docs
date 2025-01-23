@@ -1,5 +1,6 @@
 ---
 uid: Accessing_the_Admin_app
+keywords: cloud
 ---
 
 # Accessing the Admin app

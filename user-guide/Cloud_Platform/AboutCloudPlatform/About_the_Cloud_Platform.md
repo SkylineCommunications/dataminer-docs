@@ -1,5 +1,6 @@
 ---
 uid: AboutCloudPlatform
+keywords: cloud
 ---
 
 # About dataminer.services

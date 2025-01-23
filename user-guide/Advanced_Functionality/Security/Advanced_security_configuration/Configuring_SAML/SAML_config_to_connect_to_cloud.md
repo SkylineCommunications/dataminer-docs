@@ -1,5 +1,6 @@
 ---
 uid: SAML_config_to_connect_to_cloud
+keywords: cloud
 ---
 
 # Additional configuration for systems connected to dataminer.services

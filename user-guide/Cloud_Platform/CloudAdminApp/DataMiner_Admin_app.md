@@ -1,5 +1,6 @@
 ---
 uid: CloudAdminApp
+keywords: cloud
 ---
 
 # Admin app

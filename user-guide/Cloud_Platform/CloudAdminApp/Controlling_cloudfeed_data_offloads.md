@@ -1,5 +1,6 @@
 ---
 uid: Controlling_cloudfeed_data_offloads
+keywords: cloud
 ---
 
 # Controlling performance and usage data offloads with the Admin app

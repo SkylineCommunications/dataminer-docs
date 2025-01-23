@@ -1,5 +1,6 @@
 ---
 uid: CloudPackages
+keywords: cloud
 ---
 
 # DataMiner Cloud Pack

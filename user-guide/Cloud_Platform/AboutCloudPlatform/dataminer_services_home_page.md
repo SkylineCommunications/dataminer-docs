@@ -1,5 +1,6 @@
 ---
 uid: dataminer_services_home_page
+keywords: cloud
 ---
 
 # The dataminer.services home page
