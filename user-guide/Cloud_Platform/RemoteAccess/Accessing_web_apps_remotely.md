@@ -1,5 +1,6 @@
 ---
 uid: Accessing_web_apps_remotely
+keywords: cloud
 ---
 
 # Accessing DataMiner web apps remotely

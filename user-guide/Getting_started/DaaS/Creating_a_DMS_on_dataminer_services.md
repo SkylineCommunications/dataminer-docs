@@ -1,5 +1,6 @@
 ---
 uid: Creating_a_DMS_on_dataminer_services
+keywords: cloud
 ---
 
 # Creating a new DMS on dataminer.services

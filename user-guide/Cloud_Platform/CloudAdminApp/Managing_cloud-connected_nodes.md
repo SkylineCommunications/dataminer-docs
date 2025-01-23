@@ -2,6 +2,7 @@
 uid: Managing_cloud-connected_nodes
 keywords: cloud
 ---
+
 # Managing the nodes of a DMS connected to dataminer.services
 
 As of DataMiner Cloud Pack version 2.5.0, you can use the Admin app to manage the nodes of a DMS that is connected to dataminer.services. You can upgrade the installed DxM versions on the nodes and remove nodes that have become obsolete.

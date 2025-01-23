@@ -1,5 +1,6 @@
 ---
 uid: Controlling_remote_access
+keywords: cloud
 ---
 
 # Controlling remote access with the Admin app

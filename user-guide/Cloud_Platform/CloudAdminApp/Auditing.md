@@ -1,5 +1,6 @@
 ---
 uid: DCP_Auditing
+keywords: cloud
 ---
 
 # Consulting dataminer.services audit logs

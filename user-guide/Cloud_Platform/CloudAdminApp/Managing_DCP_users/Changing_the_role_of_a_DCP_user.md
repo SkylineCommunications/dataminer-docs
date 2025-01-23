@@ -1,5 +1,6 @@
 ---
 uid: Changing_the_role_of_a_DCP_user
+keywords: cloud
 ---
 
 # Changing the role of a dataminer.services user

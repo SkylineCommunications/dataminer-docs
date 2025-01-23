@@ -1,5 +1,6 @@
 ---
 uid: Cloud_Remote_Access
+keywords: cloud
 ---
 
 # Remote access
