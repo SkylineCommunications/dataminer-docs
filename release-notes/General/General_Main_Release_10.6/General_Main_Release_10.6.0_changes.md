@@ -147,14 +147,6 @@ When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor
 
 From now on, a maximum of 100 DomInstances will be included in the error data. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
 
-#### Smart baselines will now also get capped when the parameter only has either a low value or a high value [ID 41870]
-
-<!-- MR 10.6.0 - FR 10.5.3 -->
-
-When DataMiner calculates a smart baseline value that lies outside the range specified in the protocol for the parameter in question, then the value is capped. However, up to now, this would only happen when the range had both a low value and a high value.
-
-From now on, calculated smart baseline values will also get capped when the parameter in question only has either a low value or a high value.
-
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]

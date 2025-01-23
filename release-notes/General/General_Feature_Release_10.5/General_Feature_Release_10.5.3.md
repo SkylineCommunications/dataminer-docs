@@ -129,7 +129,7 @@ Also, from now on, a new leader will be elected when the former leader has left 
 
 #### Smart baselines will now also get capped when the parameter only has either a low value or a high value [ID 41870]
 
-<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When DataMiner calculates a smart baseline value that lies outside the range specified in the protocol for the parameter in question, then the value is capped. However, up to now, this would only happen when the range had both a low value and a high value.
 
