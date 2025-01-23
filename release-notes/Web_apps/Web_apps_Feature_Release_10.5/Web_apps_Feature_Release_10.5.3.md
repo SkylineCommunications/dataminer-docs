@@ -100,6 +100,12 @@ The *Time range* component has been moved from the *General* category to the *Ba
 
 From now on, the DataMiner web applications will by default run GQI queries via the GQI DxM installed on the local DataMiner Agent.
 
+#### Low-Code Apps: Default set of icon files will be created when you create a new low-code app [ID 42004]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When you create a new low-code app on the root page of a DataMiner Agent (e.g. `https://myDMA/root/`), from now on, a default set of icon files will automatically be created for that app.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Table component: Refetching data would cause the data in the table to shift across the different pages [ID 41638]
