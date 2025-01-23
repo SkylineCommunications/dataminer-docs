@@ -1,5 +1,6 @@
 ---
 uid: Structure_of_the_offload_database
+keywords: central database
 ---
 
 # Structure of the offload database

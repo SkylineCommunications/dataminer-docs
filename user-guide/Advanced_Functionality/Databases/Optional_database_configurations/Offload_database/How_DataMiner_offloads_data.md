@@ -1,5 +1,6 @@
 ---
 uid: How_DataMiner_offloads_data
+keywords: central database
 ---
 
 # How DataMiner offloads data
