@@ -38,4 +38,4 @@ The following recommended limitations apply:
 | Day trending       | 30 days          | 1500 days               |
 
 > [!NOTE]
-> Regardless of how the Cassandra database is configured, the recommended maximum TTL values cannot be changed.
+> Regardless of how the Cassandra database is configured, the TTL of the tables should never exceed the maximum TTL as defined in this table.
