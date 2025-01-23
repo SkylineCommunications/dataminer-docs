@@ -111,6 +111,16 @@ In order to override the timeout for a Virtual Function, you will now be able to
 
 Error and exception handling has been enhanced in order to prevent duplicate or sticky correlation alarms due to errors or exceptions thrown when updating or clearing correlation alarms.
 
+#### SLAnalytics: New check to verify if the incident tracking leader is still a member of the current DMS [ID 41836]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+At DataMiner start-up, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
+
+Also, from now on, a new leader will be elected when the former leader has left the cluster.
+
+*\* In DataMiner Cube, the leader can be configured in the *Leader DataMiner ID* box, which can be found in *System Center > System settings > Analytics config > Automatic incident tracking*.*
+
 #### Smart baselines will now also get capped when the parameter only has either a low value or a high value [ID 41870]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
