@@ -1067,6 +1067,12 @@ At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\So
 
 Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
 
+#### DataMiner Connectivity Framework: Enhanced processing of SRM services by the connectivity manager [ID 41649]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Because of a number of enhancements made to the DataMiner Connectivity Framework, overall performance of the connectivity manager has increased when processing SRM services.
+
 #### Enhanced error and exception handling when updating or clearing correlation alarms [ID 41675]
 
 <!-- MR 10.5.0 - FR 10.5.3 -->
