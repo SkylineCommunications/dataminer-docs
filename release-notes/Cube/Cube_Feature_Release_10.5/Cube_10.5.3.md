@@ -81,6 +81,12 @@ A number of enhancements have been made to the DataMiner Cube desktop app to pre
 
 From now on, DataMiner Cube will no longer be available as XBAP application.
 
+#### Ticketing app will no longer be available when the DMA does not have an indexing engine configured [ID 41895]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+in DataMiner Cube, from now on, the Ticketing app will no longer be available if the DataMiner Agent to which you are connected does not have an indexing engine configured.
+
 #### Amazon Keyspaces Service is now end-of-life [ID 41874] [ID 41914]
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
