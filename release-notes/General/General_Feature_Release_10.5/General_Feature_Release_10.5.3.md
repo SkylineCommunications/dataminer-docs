@@ -262,3 +262,11 @@ When elements were swarmed between two DataMiner Agents, in some rare cases, a p
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 In some cases, alarm groups containing alarms without a focus value (e.g. notices or errors) would not be correctly removed from the group when the element associated with the alarm was deleted, stopped or paused.
+
+#### Errors would be logged in SLErrors.txt and SLNet.txt when Mobile Gateway was enabled in a DMS with more than one agent [ID 41988]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Up to now, errors would be logged in the *SLErrors.txt* and *SLNet.txt* log files when Mobile Gateway was enabled in a DataMiner System with more than one DMA.
+
+Also, the Mobile Gateway process would only be aware of elements that were hosted on the same agent as the one on which it was hosted itself. As a result, actions like GET and SET on other elements via the Mobile Gateway would fail.
