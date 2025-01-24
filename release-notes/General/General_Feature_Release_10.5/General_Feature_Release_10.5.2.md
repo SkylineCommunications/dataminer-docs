@@ -318,6 +318,13 @@ On STaaS systems, the timeout for responses to write requests has been reduced t
 
 Due to an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
 
+#### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41339]
+
+<!-- MR 10.5.0 - FR 10.5.2 -->
+<!-- Not added to MR 10.5.0: Related to RN 41143 -->
+
+In some cases, LDAP/ActiveDirectory domain users would no longer be able to log in. When synchronizing users from an LDAP/ActiveDirectory domain, DataMiner would not correctly process the result.
+
 #### SLNet could stop working due to NATS throwing an exception [ID 41396]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
