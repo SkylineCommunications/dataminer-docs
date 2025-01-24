@@ -265,7 +265,7 @@ In some cases, alarm groups containing alarms without a focus value (e.g. notice
 
 #### Errors would be logged in SLErrors.txt and SLNet.txt when Mobile Gateway was enabled in a DMS with more than one agent [ID 41988]
 
-<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- MR 10.5.0 - FR 10.5.3 -->
 
 Up to now, errors would be logged in the *SLErrors.txt* and *SLNet.txt* log files when Mobile Gateway was enabled in a DataMiner System with more than one DMA.
 
