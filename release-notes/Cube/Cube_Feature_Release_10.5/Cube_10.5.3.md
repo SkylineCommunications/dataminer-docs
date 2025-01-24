@@ -99,6 +99,12 @@ We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you wa
 
 For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
 
+#### DataMiner Cube desktop app: Prevent a tile from being added when an identical tile already exists [ID 41899]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+A number of enhancements have been made to the DataMiner Cube desktop app to prevent an agent/cluster from being added when a tile for that agent/cluster already exists.
+
 #### Alarm Console: Enhanced behavior of correlated alarms in linked alarm tabs [ID 41907]
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
