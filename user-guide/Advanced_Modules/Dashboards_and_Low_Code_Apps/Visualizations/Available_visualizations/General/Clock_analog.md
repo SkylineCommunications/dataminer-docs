@@ -8,7 +8,7 @@ This component displays an analog clock that indicates the current time.
 
 ![Clock (analog)](~/user-guide/images/Clock_Analog.png)<br>*Analog clock component in DataMiner 10.4.6*
 
-In the *Component* > *Settings* tab, the following settings can be configured for this component:
+In the *Component* > *Settings* pane, the following settings can be configured for this component:
 
 - To use a custom polling interval for this component, in the *WebSocket settings* section, clear the checkbox and specify a different polling interval (in seconds).
 

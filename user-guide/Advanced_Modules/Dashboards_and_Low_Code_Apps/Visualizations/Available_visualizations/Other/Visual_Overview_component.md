@@ -10,9 +10,9 @@ This component displays a Visio file linked to an element.
 
 To configure this component:
 
-1. In the *Data* tab, select the element for which the visual overview should be displayed and drag it to the component.
+1. In the *Data* pane, select the element for which the visual overview should be displayed and drag it to the component.
 
-1. Optionally, customize the following component options in the *Settings* tab:
+1. Optionally, customize the following component options in the *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 

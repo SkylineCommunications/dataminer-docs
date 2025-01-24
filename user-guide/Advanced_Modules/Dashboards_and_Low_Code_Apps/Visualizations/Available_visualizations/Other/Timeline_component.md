@@ -17,13 +17,13 @@ This component allows you to visualize and manage bookings, events, and other ti
 
 1. [Add data to the component](xref:Adding_data_to_component). The timeline component should always be configured with *Queries* data input.
 
-1. Optionally, hover the mouse pointer over the component and click the ![filter](~/user-guide/images/DashboardsX_filter.png) icon. In the data pane on the right, any data that cannot be added will become unavailable. Data that is compatible will be marked with the following icon: ![available filters](~/user-guide/images/Available_Filters.png)
+1. Optionally, hover the mouse pointer over the component and click the ![filter](~/user-guide/images/DashboardsX_filter.png) icon. In the *Data* pane on the right, any data that cannot be added will become unavailable. Data that is compatible will be marked with the following icon: ![available filters](~/user-guide/images/Available_Filters.png)
 
 1. Optionally, add groups to the timeline component, so that you can group items on the timeline based on one of the columns in your data<!--35638-->:
 
    1. Hover the mouse pointer over the component and click the ![Groups](~/user-guide/images/NewRD_Groups.png) icon.
 
-      In the data pane on the right, any data that cannot be added will become unavailable. Data that is compatible will be marked with the following icon: ![available groups](~/user-guide/images/Group_Icon.png)
+      In the *Data* pane on the right, any data that cannot be added will become unavailable. Data that is compatible will be marked with the following icon: ![available groups](~/user-guide/images/Group_Icon.png)
 
       ![groups](~/user-guide/images/Example_Groups.png)<br/>*Data tab in DataMiner 10.4.1*
 
@@ -38,7 +38,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
    1. To make sure users can see which group is selected, you can add a table component displaying the selected group:
 
-      1. Go to *Components* > *Timeline #* > *Selected groups* > *Tables* in the *Data* tab, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline # > Selected groups > Query rows* in the *Data* tab instead.
+      1. Go to *Components* > *Timeline #* > *Selected groups* > *Tables* in the *Data* pane, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline # > Selected groups > Query rows* in the *Data* pane instead.
   
       1. Hover the mouse pointer over the component and click the ![visualization](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
 
@@ -46,7 +46,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
    1. To make sure users can see which item is selected, you can add a table component displaying the selected item:
 
-      1. Go to *Components* > *Timeline #* > *Selected items* > *Tables* in the *Data* tab, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline # > Selected items > Query rows* in the *Data* tab instead.
+      1. Go to *Components* > *Timeline #* > *Selected items* > *Tables* in the *Data* pane, and drag it onto an empty section of the dashboard or low-code app page. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, use *Feeds > Timeline # > Selected items > Query rows* in the *Data* pane instead.
 
       1. Hover the mouse pointer over the component and click the ![visualization](~/user-guide/images/DashboardsX_visualizations00095.png) icon.
 
@@ -54,7 +54,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
       ![Selected group and item](~/user-guide/images/Selected_Items_Groups.png)<br/>*Timeline and table components in DataMiner 10.4.1*
 
-   1. If you want to display the name of the column the data was grouped by, make sure the *Advanced > Style > Grouping by* setting is enabled in the *Layout* tab.
+   1. If you want to display the name of the column the data was grouped by, make sure the *Advanced > Style > Grouping by* setting is enabled in the *Layout* pane.
 
 1. Optionally, customize the following component options:
 
@@ -84,7 +84,7 @@ This component allows you to visualize and manage bookings, events, and other ti
      > [!NOTE]
      > To add a [time range component](xref:DashboardTimeRange) to the dashboard or low-code app that displays the time range configured for the timeline component<!--RN 33287-->:
      >
-     > 1. Select *Timeline # > Viewport > Timespans* in the *Components* section of the data pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, this data source can be found in the *Feeds* section of the data pane.
+     > 1. Select *Timeline # > Viewport > Timespans* in the *Components* section of the *Data* pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, this data source can be found in the *Feeds* section of the *Data* pane.
      > 1. Drag it onto an empty section of the dashboard or low-code app page.
      >
      > When you manually adjust the time range by zooming in or out, or by moving across the timeline component, the time range displayed in the time range component will automatically be adjusted.
@@ -106,7 +106,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
      From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41251-->, a timeline linked to other data can be identified by the ![Unlink](~/user-guide/images/Unlink.png) icon displayed next to the *Time range* dropdown box. To unlink the timeline, click this icon and select *Unlink*.
 
-1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 

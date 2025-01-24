@@ -41,7 +41,7 @@ The tutorial consists of the following steps:
 
    1. In edit mode, drag and drop the *Dropdown* visualization from the pane on the left on to the main dashboard area.
 
-   1. In the data pane, select *Elements* under *All available data*, and drag this to the component.
+   1. In the *Data* pane, select *Elements* under *All available data*, and drag this to the component.
 
       The dropdown component is now configured to show all available elements.
 

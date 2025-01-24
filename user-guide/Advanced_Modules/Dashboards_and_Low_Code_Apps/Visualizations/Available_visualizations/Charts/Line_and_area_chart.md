@@ -10,7 +10,7 @@ This component can be used to display a trend graph.
 
 > [!NOTE]
 >
-> - If this type of component is added, the time span displayed by the component is available as an output in the data pane, so that this can be applied to other components.
+> - If this type of component is added, the time span displayed by the component is available as an output in the *Data* pane, so that this can be applied to other components.
 > - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, this component also supports line graphs for string parameters.
 > - From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, only the first 1000 items in a line & area chart are shown.
 
@@ -23,7 +23,7 @@ To configure the component:
    > [!NOTE]
    >
    > - If a query is used as data, additional configuration is required. See [Configuration with query data](#configuration-with-query-data).
-   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to pass a line chart by linking *Parameters* and *Indices* data, available in the data pane. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* data of the table to the line chart in order to see the data, similar to when you use a [parameter picker component](xref:DashboardParameterPicker).
+   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to pass a line chart by linking *Parameters* and *Indices* data, available in the *Data* pane. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* data of the table to the line chart in order to see the data, similar to when you use a [parameter picker component](xref:DashboardParameterPicker).
 
 1. Optionally, apply a filter:
 
@@ -42,7 +42,7 @@ To configure the component:
 
    - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view trending for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
 
-1. Optionally, customize the following component options in the *Component* > *Settings* tab:
+1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
@@ -79,7 +79,7 @@ To configure the component:
 
      This setting is disabled by default. See also: [Zooming and panning](#zooming-and-panning).
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -151,7 +151,7 @@ Query results are supported as data for this component from DataMiner 10.2.9/10.
 
 1. Create query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. In the *Component* > *Layout* tab, configure the following fields in the *Lines* section:
+1. In the *Component* > *Layout* pane, configure the following fields in the *Lines* section:
 
    - *X-axis column*: The numeric column that should be used for the X-axis data.
 
@@ -196,7 +196,7 @@ Query results are supported as data for this component from DataMiner 10.2.9/10.
 
 1. Create query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. In the *Component* > *Settings* tab, configure the following fields in the *Dimensions* section:
+1. In the *Component* > *Settings* pane, configure the following fields in the *Dimensions* section:
 
    - *Query*: The query data you want to use.
 
@@ -256,9 +256,9 @@ To add a component to a dashboard to show a basic trend graph with several DMA K
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
-1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the *Data* pane.
 
-1. Expand the *Parameters* section in the data pane and specify the element representing the DMA in the *Element* box.
+1. Expand the *Parameters* section in the *Data* pane and specify the element representing the DMA in the *Element* box.
 
 1. Select a parameter you want to display in the graph, and drag it to the graph. Repeat this for each parameter that should be displayed in the graph.
 
@@ -267,7 +267,7 @@ To add a component to a dashboard to show a basic trend graph with several DMA K
    >
    > ![Parameters section with filter](~/user-guide/images/dashboard_parameter_filter_icon.png)<br>*Parameters section with filter in DataMiner 10.3.11*
 
-1. In the *Settings* tab, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
+1. In the *Settings* pane, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
 
 ![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart1.png)
 
@@ -277,14 +277,14 @@ To add a component to a dashboard to show a basic trend graph using profile para
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
-1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the *Data* pane.
 
-1. Expand the *Profile parameters* section in the data pane.
+1. Expand the *Profile parameters* section in the *Data* pane.
 
    If you have configured it correctly in DataMiner Cube, there should be a profile parameter linked with a protocol and a trended parameter of the data you want to see.
 
 1. Select the profile parameter you want to display in the graph, and drag it to the graph.
 
-1. Expand the *Elements* section in the data pane, select the element you want to display in the graph, and drag it to the graph.
+1. Expand the *Elements* section in the *Data* pane, select the element you want to display in the graph, and drag it to the graph.
 
 ![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart2.png)

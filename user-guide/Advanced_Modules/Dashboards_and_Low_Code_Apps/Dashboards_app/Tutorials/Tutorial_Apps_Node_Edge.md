@@ -118,7 +118,7 @@ The dashboard *Node_Edge* contains the following GQI queries:
 
    ![Node edge graph visualization](~/user-guide/images/Node_edge_tutorial1.png)
 
-1. In the *Data pane* on the right, expand the *Queries* node, and drag the following queries to the visualization you have just added:
+1. In the **Data* pane* on the right, expand the *Queries* node, and drag the following queries to the visualization you have just added:
 
    - *Node_Network_Devices*
 
@@ -229,7 +229,7 @@ The dashboard *Node_Edge* contains the following GQI queries:
 
 In this step, you will add extra nodes representing PCs to the component. The same *Edges* query will be used for this, as this query contains the connections between all devices.
 
-1. From the *Data pane* on the right, drag the *Node_PC* query to the node edge graph component.
+1. From the **Data* pane* on the right, drag the *Node_PC* query to the node edge graph component.
 
 1. Click the node edge graph component to select it, and select the *Settings* pane on the right.
 
@@ -285,7 +285,7 @@ Since the GQI query *Edges* contains all the connections between devices in the 
 
 1. Override the edges between PCs and switches:
 
-   1. At the bottom of the settings pane, click *Add Override*.
+   1. At the bottom of the *Settings* pane, click *Add Override*.
 
       The following setting will be displayed:
 

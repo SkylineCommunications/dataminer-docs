@@ -21,9 +21,9 @@ To configure the component:
 
    This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. To do so, hover the mouse pointer over the component, click the filter icon, and then add a filter from the *parameters* section of the data pane.
+1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. To do so, hover the mouse pointer over the component, click the filter icon, and then add a filter from the *parameters* section of the *Data* pane.
 
-1. Optionally, customize the following component options in the *Settings* tab:
+1. Optionally, customize the following component options in the *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
@@ -46,7 +46,7 @@ To configure the component:
    > [!NOTE]
    > From DataMiner 10.3.7/10.4.0 onwards, when you add a query to the component, the label and bars will automatically be configured. <!-- RN 36229 -->
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available if the chart is not used with queries data input:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available if the chart is not used with queries data input:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 

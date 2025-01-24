@@ -6,7 +6,7 @@ uid: Customize_Component_Layout
 
 Each component in a dashboard or low-code app has a number of default options. By default, the configuration of these options is determined by the layout of the [dashboard](xref:Configuring_the_dashboard_layout) or [low-code app](xref:LowCodeApps_Layout) on the whole. However, it is possible to override this. The way this can be done depends on the DataMiner version.
 
-1. Select the component and go to the ***Layout*** tab on the right.
+1. Select the component and go to the ***Layout*** pane on the right.
 
 1. In the ***Styles*** section, you can then change the component theme in different ways:
 

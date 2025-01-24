@@ -27,21 +27,21 @@ To configure the component:
    - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the dropdown box for the parameter data source, select *View*.
 
    > [!NOTE]
-   > From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *Components* section of the data pane so that it can be used as data for other components. Prior to DataMiner 10.3.0[CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, the component is available in the *Feeds* section of the data pane instead. This way, if the input for this component changes, it will also change for all other components using this component as their data input. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.
+   > From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *Components* section of the *Data* pane so that it can be used as data for other components. Prior to DataMiner 10.3.0[CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, the component is available in the *Feeds* section of the *Data* pane instead. This way, if the input for this component changes, it will also change for all other components using this component as their data input. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.
 
 1. Optionally, customize the following component options:
 
    - To customize the polling interval for this component, expand the *Settings* \> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
 
-   - If the component shows a parameter with a unit, but you do not want the unit to be displayed, in the *Settings* tab, clear the *Show units* option (available from DataMiner 10.1.9/10.2.0 onwards).
+   - If the component shows a parameter with a unit, but you do not want the unit to be displayed, in the *Settings* pane, clear the *Show units* option (available from DataMiner 10.1.9/10.2.0 onwards).
 
-   - In case the component displays more than one item, in the *Settings* tab, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all the above together. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
+   - In case the component displays more than one item, in the *Settings* pane, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all the above together. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
 
    - In case the component displays a query source and you want the data to be refreshed automatically, Set *Update data* to *On* (available from DataMiner 10.2.0/10.2.1 onwards<!-- RN 31450 -->).
 
-   - If you want the first item in the component to be selected by default, in the *Settings* tab, under *Initial Selection*, set the toggle button to *On* (available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first item will be automatically selected whenever the component is loaded or when the data is refreshed.
+   - If you want the first item in the component to be selected by default, in the *Settings* pane, under *Initial Selection*, set the toggle button to *On* (available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first item will be automatically selected whenever the component is loaded or when the data is refreshed.
 
-1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
