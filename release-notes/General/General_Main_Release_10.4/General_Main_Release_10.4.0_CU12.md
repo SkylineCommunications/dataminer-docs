@@ -15,6 +15,12 @@ uid: General_Main_Release_10.4.0_CU12
 
 ### Enhancements
 
+#### SLNet: Enhancements to prevent SLNet modules from forwarding requests back and forth between two DMAs [ID 41827]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+A number of enhancements have been made to prevent SLNet modules from forwarding requests back and forth between two DataMiner Agents.
+
 #### Smart baselines will now also get capped when the parameter only has either a low value or a high value [ID 41870]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
