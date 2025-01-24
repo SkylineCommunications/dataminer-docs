@@ -23,15 +23,15 @@ However, two-step authentication can be enabled by using a Dashboard Gateway, or
 
 1. Open the file *C:\\Skyline DataMiner\\webpages\\Dashboards\\web.config*.
 
-2. Set the following tags as shown below:
+1. Set the following tags as shown below:
 
-    ```xml
-    <formsAuthenticationWrapper enabled="true" />
-    <windowsAuthentication enabled="false" />
-    <anonymousAuthentication enabled="true" />
-    ```
+   ```xml
+   <formsAuthenticationWrapper enabled="true" />
+   <windowsAuthentication enabled="false" />
+   <anonymousAuthentication enabled="true" />
+   ```
 
-3. Save the file.
+1. Save the file.
 
 ### Adding a custom provider logo
 
@@ -39,17 +39,17 @@ It is possible to configure the *Dashboards* app to show a custom provider logo.
 
 1. Place a .jpg file displaying your logo in the folder *C:\\Skyline DataMiner\\Webpages\\Dashboards.*
 
-2. In the same folder, open the file *web.config*.
+1. In the same folder, open the file *web.config*.
 
-3. In the *web.config* file, in the tag configuration.dataminer.clusters.add, add the attributes *providedByUrl* and *providedByImage* as follows:
+1. In the *web.config* file, in the tag configuration.dataminer.clusters.add, add the attributes *providedByUrl* and *providedByImage* as follows:
 
-    ```xml
-    <add id="local" connectionString="..." user="..." password="..." description="..." providedByUrl="http://provider/" providedByImage="image.jpg"/>
-    ```
+   ```xml
+   <add id="local" connectionString="..." user="..." password="..." description="..." providedByUrl="http://provider/" providedByImage="image.jpg"/>
+   ```
 
-4. Save the file.
+1. Save the file.
 
-    As soon as you open or refresh the DMS Dashboards interface, the logo will now be shown in the top left corner, next to the DataMiner logo.
+   As soon as you open or refresh the DMS Dashboards interface, the logo will now be shown in the top left corner, next to the DataMiner logo.
 
 > [!NOTE]
 > The maximum size for the image is 300x45 pixels. Larger images will be resized to fit within the allocated area.
@@ -62,19 +62,19 @@ To modify the memory cache size:
 
 1. Open the file *C:\\Skyline DataMiner\\webpages\\Dashboards\\web.config*.
 
-2. In the web.config file, in the tag configuration.dataminer.clusters.add, add the attribute *memoryCacheSize* and set it to the desired value, as illustrated in the example below:
+1. In the web.config file, in the tag configuration.dataminer.clusters.add, add the attribute *memoryCacheSize* and set it to the desired value, as illustrated in the example below:
 
-    ```xml
-    <configuration>
-      ...
-      <dataminer appName="Dashboard">
-        <clusters>
-          <clear />
-          <add id="local" connectionString="demoserver" user="" password="" description="Demo DataMiner" memoryCacheSize="500" />
-        </clusters>
-      </dataminer>
-      ...
-    </configuration>
-    ```
+   ```xml
+   <configuration>
+     ...
+     <dataminer appName="Dashboard">
+       <clusters>
+         <clear />
+         <add id="local" connectionString="demoserver" user="" password="" description="Demo DataMiner" memoryCacheSize="500" />
+       </clusters>
+     </dataminer>
+     ...
+   </configuration>
+   ```
 
-3. Save the file.
+1. Save the file.

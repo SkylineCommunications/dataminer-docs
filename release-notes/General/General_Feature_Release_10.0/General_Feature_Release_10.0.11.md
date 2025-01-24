@@ -256,10 +256,10 @@ To visualize all measurement points for a particular spectrum session, do the fo
 
 1. Add a Spectrum Analyzer component to the dashboard and, in the Data pane of the component, select a Spectrum Analyzer element (and, optionally, a Spectrum preset).
 
-2. Add a List feed to the dashboard and, in the Data pane of the feed, select the Spectrum session feed of the Spectrum Analyzer component.
+1. Add a List feed to the dashboard and, in the Data pane of the feed, select the Spectrum session feed of the Spectrum Analyzer component.
 
-    > [!NOTE]
-    > A Spectrum Analyzer component can now be used as a feed for a Spectrum session. Up to now, the Spectrum Analyzer component already created a session, but from now on, it will be possible for other components to use that session as input.
+   > [!NOTE]
+   > A Spectrum Analyzer component can now be used as a feed for a Spectrum session. Up to now, the Spectrum Analyzer component already created a session, but from now on, it will be possible for other components to use that session as input.
 
 By selecting and unselecting measurement points in this measurement point visualization, you can control which measurement points will be used by the Spectrum Analyzer component.
 
@@ -349,15 +349,15 @@ ServiceReservationInstance objects now have a LockLifeCycle property, which can 
 
 - When this property is set to “Locked”, an additional check will be performed during the Concurrency License check.
 
-    > [!NOTE]
-    > When checking whether the concurrency limit set in the DataMiner License has been reached, a booking will not be taken into account when
-    >
-    > - it is a ServiceReservationInstance,
-    > - the ContributingResourceID is filled in,
-    > - the Contributing Resource exists, and
-    > - the Contributing Resource is used in an overlapping booking.
-    >
-    > A booking that is not taken into account when checking the concurrency limit will not be taken into account for the entire duration of the booking, even if the overlapping booking (see above) has already ended.
+  > [!NOTE]
+  > When checking whether the concurrency limit set in the DataMiner License has been reached, a booking will not be taken into account when
+  >
+  > - it is a ServiceReservationInstance,
+  > - the ContributingResourceID is filled in,
+  > - the Contributing Resource exists, and
+  > - the Contributing Resource is used in an overlapping booking.
+  >
+  > A booking that is not taken into account when checking the concurrency limit will not be taken into account for the entire duration of the booking, even if the overlapping booking (see above) has already ended.
 
 #### Element of a virtual function resource will now be updated when the resource changes \[ID 27043\]
 
@@ -368,10 +368,10 @@ From now on, the following resource updates will be taken into account:
 - When the name of the resource is updated, the name of the element will also be updated.
 - When the virtual function definition of the resource is updated, the protocol of the element will also be updated.
 
-    > [!NOTE]
-    > When the virtual function definition of a resource is updated while it is bound, the binding must still be valid after the update. Otherwise, the update will be blocked.
-    >
-    > It is possible to change both the binding and the virtual function definition in a single update by simultaneously updating the VirtualFunctionDefinitionID, the PhysicalDeviceDmaID and the PhysicalDeviceElementID.
+  > [!NOTE]
+  > When the virtual function definition of a resource is updated while it is bound, the binding must still be valid after the update. Otherwise, the update will be blocked.
+  >
+  > It is possible to change both the binding and the virtual function definition in a single update by simultaneously updating the VirtualFunctionDefinitionID, the PhysicalDeviceDmaID and the PhysicalDeviceElementID.
 
 ## Changes
 
