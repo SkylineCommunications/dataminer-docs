@@ -3288,7 +3288,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="nameFilter">The name filter.</param>
 		/// <param name="exported"><c>true</c> to include connections of DVE children; otherwise, <c>false</c>.</param>
-		/// <returns>The DCF connections that are known by the specified element and that match the specified name filter.</returns>
+		/// <returns>The DCF connections that are known by the specified element and that match the specified name filter. Returns <see langword="null"/> when the specified element is stopped or unavailable.</returns>
 		/// <remarks>
 		/// <para>Feature introduced in DataMiner 8.5.8 (RN 10066).</para>
 		/// </remarks>
@@ -3305,7 +3305,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
 		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="nameFilter">The name filter.</param>
-		/// <returns>The DCF connections that are known by the specified element and that match the specified name filter.</returns>
+		/// <returns>The DCF connections that are known by the specified element and that match the specified name filter. Returns <see langword="null"/> when the specified element is stopped or unavailable.</returns>
 		/// <example>
 		/// <code>
 		/// Dictionary&lt;int, ConnectivityConnection&gt; connections = protocol.GetConnectivityConnections(400, 2000, "Input*");
@@ -3319,7 +3319,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
 		/// <param name="iEId">The element ID of the element.</param>
 		/// <param name="exported"><c>true</c> to include connections of DVE children; otherwise, <c>false</c>.</param>
-		/// <returns>The DCF connections that are known by the specified element.</returns>
+		/// <returns>The DCF connections that are known by the specified element. Returns <see langword="null"/> when the specified element is stopped or unavailable.</returns>
 		/// <remarks>
 		/// <para>Feature introduced in DataMiner 8.5.8 (RN 10066).</para>
 		/// </remarks>
@@ -3335,7 +3335,7 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="iDMAId">The DataMiner Agent ID of the element.</param>
 		/// <param name="iEId">The element ID of the element.</param>
-		/// <returns>The DCF connections that are known by the specified element.</returns>
+		/// <returns>The DCF connections that are known by the specified element. Returns <see langword="null"/> when the specified element is stopped or unavailable.</returns>
 		/// <example>
 		/// <code>
 		/// Dictionary&lt;int, ConnectivityConnection&gt; connections = protocol.GetConnectivityConnections(400, 2000);
