@@ -1,5 +1,6 @@
 ---
 uid: MySQL_database
+keywords: local database
 ---
 
 # MySQL database

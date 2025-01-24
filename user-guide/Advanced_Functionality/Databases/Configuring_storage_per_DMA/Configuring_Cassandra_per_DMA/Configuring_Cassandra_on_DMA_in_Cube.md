@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Cassandra_per_DMA_in_Cube
+keywords: local database
 ---
 
 # Configuring the Cassandra database per DMA settings

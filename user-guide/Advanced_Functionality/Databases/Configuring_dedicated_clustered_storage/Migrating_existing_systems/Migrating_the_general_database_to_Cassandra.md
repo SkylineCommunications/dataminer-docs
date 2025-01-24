@@ -1,5 +1,6 @@
 ---
 uid: Migrating_the_general_database_to_Cassandra
+keywords: local database
 ---
 
 # Migrating the SQL general database to Cassandra
