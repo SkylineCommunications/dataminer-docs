@@ -255,7 +255,7 @@ Additionally, the following information in the checklist itself should correspon
 - Initials of integration engineer
 
 > [!NOTE]
-> You should always use the latest version of the checklist, which is available on Dojo: <[https://community.dataminer.services/documentation/protocol-development-checklists/](https://community.dataminer.services/protocol-development-downloads/)>
+> You should always use the latest version of the checklist, which is available on Dojo on the [Protocol development downloads](https://community.dataminer.services/protocol-development-downloads/) page.
 
 ## Prepare Driver Passport Platform scheduling
 
