@@ -117,6 +117,12 @@ Because of a number of enhancements made to the DataMiner Connectivity Framework
 
 Error and exception handling has been enhanced in order to prevent duplicate or sticky correlation alarms due to errors or exceptions thrown when updating or clearing correlation alarms.
 
+#### SLNet: Enhancements to prevent SLNet modules from forwarding requests back and forth between two DMAs [ID 41827]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+A number of enhancements have been made to prevent SLNet modules from forwarding requests back and forth between two DataMiner Agents.
+
 #### SLAnalytics: New check to verify if the incident tracking leader is still a member of the current DMS [ID 41836]
 
 <!-- MR 10.5.0 - FR 10.5.3 -->
