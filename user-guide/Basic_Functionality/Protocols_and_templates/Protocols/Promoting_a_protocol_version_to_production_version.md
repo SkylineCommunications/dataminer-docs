@@ -1,6 +1,6 @@
 ---
 uid: Promoting_a_protocol_version_to_production_version
-keywords: production protocol, production driver, production connector
+keywords: production protocol, production driver, production connector, protocol, driver, connector
 ---
 
 # Promoting a protocol version to production version

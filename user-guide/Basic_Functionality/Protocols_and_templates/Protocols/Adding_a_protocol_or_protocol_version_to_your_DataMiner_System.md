@@ -1,6 +1,6 @@
 ---
 uid: Adding_a_protocol_or_protocol_version_to_your_DataMiner_System
-keywords: adding a driver, adding a connector
+keywords: adding a driver, adding a connector, protocol, driver, connector
 ---
 
 # Adding a protocol or protocol version to your DataMiner System

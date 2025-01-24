@@ -1,6 +1,6 @@
 ---
 uid: Viewing_protocol_help
-keywords: driver help, connector help, protocol help, connector documentation
+keywords: driver help, connector help, protocol help, connector documentation, protocol, driver, connector
 ---
 
 # Viewing protocol documentation
