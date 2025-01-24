@@ -50,7 +50,7 @@ Please note the following regarding query data input:
 
 - From DataMiner 10.2.0/10.1.4 onwards, if a row is selected in a table component that uses a query data source, any view, service, or element linked to that row is also exposed as a data source. In practice, this means that a data source will be available in the *Components* or *Feeds* section of the *Data* pane (depending on your DataMiner version) that will change based on the selection in the table.
 
-  ![Selected rows](~/user-guide/images/Selected_Rows.png)<br>*Data tab in DataMiner 10.4.12*
+  ![Selected rows](~/user-guide/images/Selected_Rows.png)<br>*Data pane in DataMiner 10.4.12*
 
 - From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range component by selecting the *From data* checkbox. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this setting is called "*From feed*".
 

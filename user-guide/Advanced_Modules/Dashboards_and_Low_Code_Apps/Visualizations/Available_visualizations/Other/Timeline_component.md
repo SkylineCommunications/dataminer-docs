@@ -25,7 +25,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
       In the *Data* pane on the right, any data that cannot be added will become unavailable. Data that is compatible will be marked with the following icon: ![available groups](~/user-guide/images/Group_Icon.png)
 
-      ![groups](~/user-guide/images/Example_Groups.png)<br/>*Data tab in DataMiner 10.4.1*
+      ![groups](~/user-guide/images/Example_Groups.png)<br/>*Data pane in DataMiner 10.4.1*
 
    1. Drag compatible data onto the component.
 

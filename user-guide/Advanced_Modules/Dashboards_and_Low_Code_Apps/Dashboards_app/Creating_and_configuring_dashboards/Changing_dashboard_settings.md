@@ -10,7 +10,7 @@ uid: Changing_dashboard_settings
 
 1. Without selecting any of the dashboard components, go to the *Settings* pane on the right.
 
-   If a component is selected, this tab will instead show the settings for that component. In that case, click an empty area of the dashboard first.
+   If a component is selected, this pane will instead show the settings for that component. In that case, click an empty area of the dashboard first.
 
 1. Configure the following settings as required:
 
