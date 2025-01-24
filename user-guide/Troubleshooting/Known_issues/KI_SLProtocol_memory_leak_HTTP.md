@@ -1,5 +1,6 @@
 ---
 uid: KI_SLProtocol_memory_leak_HTTP
+keywords: protocol, driver, connector
 ---
 
 # SLProtocol memory leak when HTTP connectors are used
