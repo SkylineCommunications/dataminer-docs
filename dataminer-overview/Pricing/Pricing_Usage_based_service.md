@@ -155,16 +155,14 @@ MUA increased to 250 credits on August 1, 2023
 
 ### Overage
 
-**No Penalties:** Service overage usage is charged at the standard pay-per-use fees, using the current credit rate.
+**No Penalties**: Service overage usage is charged at the standard pay-per-use fees, using the current credit rate.
 
-**No Throttling:** Your service performance will not be throttled or degraded due to overage.
+**No Throttling**: Your service performance will not be throttled or degraded because of overage.
 
-**Monthly Billing:** Overage charges will be included in your bill at the end of the month. If you have pay-per-use credits available, they will be deducted to cover the overage at the end of the month. If you do not have sufficient credits, the additional costs will be invoiced at the end of the month.
+**Monthly Billing**: Overage charges will be included in your bill at the end of the month. If you have pay-per-use credits available, they will be deducted to cover the overage at the end of the month. If you do not have sufficient credits, the additional costs will be invoiced at the end of the month.
 
-**Service Suspension:** If overage fees are not settled by the due date, service may be temporarily suspended until payment is received.
+**Service Suspension**: If overage fees are not settled by the due date, service may be temporarily suspended until payment is received.
 
-**Notification:** You will receive alerts when you are approaching your usage limit and once you have exceeded it.
+**Notification**: You will receive alerts when you are approaching your usage limit and once you have exceeded it.
 
-**Avoid Overages:** Although you are not penalized, the cost of overage is at the service's pay-per-use credit rate, which may be higher than the subscription rate. To avoid future overage charges, consider upgrading to a higher-tier plan that better suits your usage needs. 
-
-
+**Avoid Overages**: Although you are not penalized, the cost of overage is at the service's pay-per-use credit rate, which may be higher than the subscription rate. To avoid future overage charges, consider upgrading to a higher-tier plan that better suits your usage needs.
