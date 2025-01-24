@@ -20,7 +20,7 @@ To configure the component:
    > - From DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38811-->, when you apply a single query data source or *Tables* data source, individual rows from that query or table are listed instead of the query or table itself. Additionally, if you want to use this dropdown component as data, the entry will be listed as *Tables* or *Query rows* in the *Data* pane (depending on your DataMiner version<!--RN 41075-->). When you apply multiple query data sources or *Tables* data sources, the queries or tables themselves are listed as data. Prior to DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4, when you apply a single query data source, the query itself is listed as data. If you use this dropdown component as data, the entry will be listed as *Queries* in the *Data* pane.
    > - You can use the *Tables* data source for this component from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards.<!--RN 41161-->
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -28,7 +28,7 @@ To configure the component:
 
    - *Label*: Allows you to specify text that should be displayed next to the dropdown box.
 
-1. Optionally, customize the following component options in the *Component* > *Settings* tab:
+1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 

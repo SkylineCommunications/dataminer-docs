@@ -31,13 +31,13 @@ To configure the component in the Dashboards app:
 
 1. Optionally, add parameter data as a filter, in order to determine which page is displayed.
 
-1. In the *Component* > *Layout* tab, optionally configure the following options:
+1. In the *Component* > *Layout* pane, optionally configure the following options:
 
    - *Override number of columns*: When you select this option, the *Number of columns* option becomes available, which allows you to specify a different number of columns than is configured in the button panel element. The size and position of the buttons will then be adapted to match this configuration.
 
    - *Simple button text size*: Determines the size of the text displayed on buttons of type “Simple”.
 
-1. In case the component should be set to configuration mode, in the *Component* > *Settings* tab, select *In configuration mode*.
+1. In case the component should be set to configuration mode, in the *Component* > *Settings* pane, select *In configuration mode*.
 
    In that case, clicking a button will not execute the action of the button, but instead select the button. This selection can be linked to a button component that launches an Automation script. When that button is clicked, an interactive Automation script will be executed that can be used to configure the button of the button panel.
 

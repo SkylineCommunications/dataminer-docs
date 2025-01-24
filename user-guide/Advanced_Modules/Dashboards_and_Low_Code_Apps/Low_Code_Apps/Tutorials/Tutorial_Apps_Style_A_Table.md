@@ -355,7 +355,7 @@ You can now create the query using the *Orders.json* file as the data source.
 
 1. Create a new low-code app. See [Creating low-code applications](xref:Creating_custom_apps).
 
-1. In the data pane, select *Queries* and click the + icon to add a new query.
+1. In the *Data* pane, select *Queries* and click the + icon to add a new query.
 
 1. Provide the necessary information:
 
@@ -524,7 +524,7 @@ To add a column indicating the currently selected row, follow these steps using 
 
 Add a new column using GQI:
 
-1. In the *Data* tab, go to *Queries*.
+1. In the *Data* pane, go to *Queries*.
 
 1. Click the pencil icon next to *Orders*. Configure as follows:
 

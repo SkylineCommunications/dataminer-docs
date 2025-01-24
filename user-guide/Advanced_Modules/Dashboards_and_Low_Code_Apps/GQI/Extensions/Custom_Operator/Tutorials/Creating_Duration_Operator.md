@@ -131,7 +131,7 @@ This is the first step to implement the custom operator.
 
 1. Open the *Dashboards* app and [create a new dashboard](xref:Creating_a_completely_new_dashboard).
 
-1. In the data pane on the right, go to *Queries* and click the "+" icon to create a query.
+1. In the *Data* pane on the right, go to *Queries* and click the "+" icon to create a query.
 
    ![+ icon to create query](~/user-guide/images/GQI_create_query.png)
 

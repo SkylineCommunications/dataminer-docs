@@ -15,7 +15,7 @@ This component allows you to visualize any interactive Automation script (IAS) w
 
 ## Configuring the component
 
-1. In the *Component* > *Settings* tab, select the script that should be shown in the component in the *Script* box.
+1. In the *Component* > *Settings* pane, select the script that should be shown in the component in the *Script* box.
 
    > [!NOTE]
    > Make sure to select an interactive script, because only interactive Automation scripts will work with this component.
@@ -25,9 +25,9 @@ This component allows you to visualize any interactive Automation script (IAS) w
    > [!NOTE]
    > If any required parameters or dummies are not configured, either here in the settings or through a [component action](#component-actions), the component will remain blank.
 
-1. Optionally, in the *Events* section of the *Component* > *Settings* tab, configure what should happen when the script is finished.
+1. Optionally, in the *Events* section of the *Component* > *Settings* pane, configure what should happen when the script is finished.
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 

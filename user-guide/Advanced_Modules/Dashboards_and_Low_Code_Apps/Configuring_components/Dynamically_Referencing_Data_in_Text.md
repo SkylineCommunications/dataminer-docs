@@ -42,7 +42,7 @@ To create component references inside textual settings, use the following syntax
 - **Property name**: The property of the data that should be used, e.g. "Protocol Name".
 
 > [!TIP]
-> You can find the name of each part in the *Components* data source of the edit panel's *Data* tab.
+> You can find the name of each part in the *Components* data source of the edit panel's *Data* pane.
 
 > [!NOTE]
 >
@@ -152,7 +152,7 @@ To create feed references inside textual settings, use the following syntax:
 - **Property name**: The property of the fed data that should be used, e.g. "Protocol Name".
 
 > [!TIP]
-> You can find the name of each part in the *FEEDS* data source of the edit panel's *DATA* tab.
+> You can find the name of each part in the *FEEDS* data source of the edit panel's *Data* pane.
 
 > [!NOTE]
 >

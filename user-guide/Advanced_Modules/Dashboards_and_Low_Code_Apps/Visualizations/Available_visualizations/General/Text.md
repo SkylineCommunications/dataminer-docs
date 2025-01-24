@@ -10,7 +10,7 @@ This component displays a block of static text.
 
 To configure this component:
 
-- In the *Component* > *Settings* tab, add the text in the *Text* box.
+- In the *Component* > *Settings* pane, add the text in the *Text* box.
 
   > [!NOTE]
   > From DataMiner 10.3.0 [CU14]/10.4.0 [CU2]/10.4.5 onwards<!--RN 38993-->, you can link this component to data by [dynamically referencing data](xref:Dynamically_Referencing_Data_in_Text) in the text. However, note that the text is limited to 200,000 characters.

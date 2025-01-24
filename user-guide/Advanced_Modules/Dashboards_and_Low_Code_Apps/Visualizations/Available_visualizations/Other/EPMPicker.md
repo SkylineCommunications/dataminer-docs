@@ -16,7 +16,7 @@ To configure the component:
 
 1. In the *Settings* pane of the component, select the chain that should be filtered by the component and the chain filters that should be available.
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 

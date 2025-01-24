@@ -13,7 +13,7 @@ This picker component allows the user to select multiple parameters from a prede
 > [!NOTE]
 >
 > - From DataMiner 10.2.4, 10.1.0 [CU13] and 10.2.0 [CU1] onwards, if the component is loaded with an initial selection, the selected items are always displayed at the top. Prior to these DataMiner versions, the *Selected only* toggle button can be used to show or hide items that are not selected.
-> - From DataMiner 10.3.4/10.4.0 onwards, when an [EPM picker](xref:DashboardEPMPicker) is used to pass EPM identifiers to a parameter picker, it will also list the parameters of the enhanced elements that are linked to the EPM objects. EPM identifiers are System Type and Name data provided by an EPM picker (indicated as *EPM identifiers* in the data pane). <!-- RN 35562 -->
+> - From DataMiner 10.3.4/10.4.0 onwards, when an [EPM picker](xref:DashboardEPMPicker) is used to pass EPM identifiers to a parameter picker, it will also list the parameters of the enhanced elements that are linked to the EPM objects. EPM identifiers are System Type and Name data provided by an EPM picker (indicated as *EPM identifiers* in the *Data* pane). <!-- RN 35562 -->
 
 ## Configuring the component
 
@@ -28,7 +28,7 @@ This picker component allows the user to select multiple parameters from a prede
      > [!NOTE]
      > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use filters found either on a dashboard, on the same low-code app page/panel, or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, these filters can only be found on a dashboard or the same low-code app page/panel.
 
-1. Optionally, customize the following component options in the *Component* > *Settings* tab:
+1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
@@ -59,7 +59,7 @@ This picker component allows the user to select multiple parameters from a prede
      > [!NOTE]
      > From DataMiner 10.2.12/10.3.0 onwards, it is possible to group parameters in a parameter picker that lists EPM parameters.
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -82,7 +82,7 @@ When other components are linked to the parameter picker, so that their content 
 
 To configure the default grouping:
 
-- Once data has been added to the component, go to the *Component* > *Settings* tab, and set *Default grouping* setting to the option of your choice.
+- Once data has been added to the component, go to the *Component* > *Settings* pane, and set *Default grouping* setting to the option of your choice.
 
   For example (in DataMiner 10.3.8):
 

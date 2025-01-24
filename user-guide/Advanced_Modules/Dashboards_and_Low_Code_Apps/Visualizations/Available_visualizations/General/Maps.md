@@ -81,7 +81,7 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
 - *Default Map Type* > *Show map type control*: Makes the map type setting visible in the component itself.
 
-In addition, in the *Settings* tab for this component, you can further customize the map behavior:
+In addition, in the *Settings* pane for this component, you can further customize the map behavior:
 
 - *Update data*: If you want the data in the map to be refreshed automatically (provided this is supported by the data source), set this setting to *On*.
 
