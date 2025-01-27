@@ -17,7 +17,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
-| [LDAP/ActiveDirectory domain users no longer able to log in after upgrade](xref:KI_LDAP_users_unable_to_log_in_after_upgrade) | DataMiner 10.4.0 [CU4] to 10.4.0 [CU9] or 10.4.0 [CU12]<br>DataMiner 10.4.7 to 10.4.12 or 10.5.1 | DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 or<br>DataMiner 10.5.0/10.5.2, depending on the message returned by the LDAP server | December 13, 2024 |
+| [LDAP/ActiveDirectory domain users no longer able to log in after upgrade](xref:KI_LDAP_users_unable_to_log_in_after_upgrade) | DataMiner 10.4.0 [CU4] to 10.4.0 [CU9] or 10.4.0 [CU11]<br>DataMiner 10.4.7 to 10.4.12 or 10.5.1 | DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 or<br>DataMiner 10.4.0 [CU12]/10.5.0/10.5.2, depending on the message returned by the LDAP server | December 13, 2024 |
 
 ## 10.4.x
 

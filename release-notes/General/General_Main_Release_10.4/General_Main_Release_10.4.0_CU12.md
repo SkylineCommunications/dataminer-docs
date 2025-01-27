@@ -37,6 +37,12 @@ SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
 ### Fixes
 
+#### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41339]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.2 -->
+
+In some cases, LDAP/ActiveDirectory domain users would no longer be able to log in. When synchronizing users from an LDAP/ActiveDirectory domain, DataMiner would not correctly process the result.
+
 #### Missing DATAMINER_NOTIFICATION_QUEUE thread [ID 41699]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
