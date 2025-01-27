@@ -58,6 +58,7 @@ To remove a reference
 
 > [!NOTE]
 > In the *Interface* tab of the *DIS Settings* window, you can define the URL format of the two types of references in the following fields:
+>
 > - Task URL String Format
 > - Reference URL String Format
 >
@@ -78,12 +79,13 @@ In this tab, you can find an overview of all versions of the current protocol.
 - In the tree structure on the left, you can add and delete branches representing branch versions, system versions, major versions and minor versions by right-clicking a node and selecting the appropriate menu command. On the bottom of the pane, you can also find a button to add a minor version.
 - In the edit pane on the right, you can edit the properties of the version selected on the left.
 
-    - To a branch version, you can add a list of branch features.
-    - To a system version, you can add a list of system requirements.
-    - To a major version, you can add a list of major changes.
-    - To a minor version, you can add a list of features, changes and fixes, and a list of references. See also [Current version](#current-version).
+  - To a branch version, you can add a list of branch features.
+  - To a system version, you can add a list of system requirements.
+  - To a major version, you can add a list of major changes.
+  - To a minor version, you can add a list of features, changes and fixes, and a list of references. See also [Current version](#current-version).
 
 > [!NOTE]
+>
 > - All four parts of a version number (branch, system, major and minor) are editable anywhere in the tree. When you update a version number, all child items will be updated accordingly and recursively.
 > - When you select a version that is not the current version, you can click the *Set this version as current button* to make that version the current version. Also, in the version tree on the left, you can right-click a version and select *Set as current version*. The current version and all its parent versions will be marked in bold.
 > - When you create a new version, the *Based On* field will now automatically be populated when possible.

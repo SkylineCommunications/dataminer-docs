@@ -102,6 +102,7 @@ When a row is called, a ping can be executed first. The column containing the IP
   If you only specify "amountPacketsMeasurements=x" and leave out "amountPackets=x", the number of packets to be taken into account to calculate the KPIs will be considered the same as the total number of packets.
 
   > [!NOTE]
+  >
   > - This option and the amountPacketsPID option are only supported in conjunction with the threadPool option. When no threadPool is used, only one ping request will be sent.
   > - If the number specified for amountPacketsMeasurements is larger than for amountPackets, amountPacketsMeasurements will be adjusted to the same number as amountPackets.
 

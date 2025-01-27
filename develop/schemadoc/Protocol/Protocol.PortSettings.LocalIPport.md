@@ -35,6 +35,6 @@ By default, an available port number is automatically selected for the client so
 >
 >   For example, in case you try to create another element with a connection with the same local port specified but another destination IP:port, you will notice the following error in Stream Viewer: SOCKET ERROR : 10048
 >
->   This indicates that the address is already in use. (For more information, refer to https://docs.microsoft.com/en-us/windows/win32/winsock/windows-sockets-error-codes-2
+>   This indicates that the address is already in use. (For more information, refer to <https://docs.microsoft.com/en-us/windows/win32/winsock/windows-sockets-error-codes-2>)
 >
 > - For connections where DataMiner acts as a client, the SLPort process creates a client socket for each (destination IP, destination port, local port) tuple. This means that e.g. in case you have two elements with a serial connection that specify the same destination IP and destination port but do not specify a local port, those elements will use the same socket in SLPort.
