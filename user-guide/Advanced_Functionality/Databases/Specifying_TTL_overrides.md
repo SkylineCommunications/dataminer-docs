@@ -15,7 +15,7 @@ This page explains how to configure TTL settings to optimize your database perfo
 
 In System Center, you can configure a custom TTL for data in the database. This determines how long the data is kept in the database.
 
-1. In DataMiner Cube, go to System Center \> *System settings* > *time to live*.
+1. In DataMiner Cube, go to System Center > *System settings* > *time to live*.
 
 1. To configure general TTL overrides:
 
@@ -52,10 +52,44 @@ The following default values and limitations apply:
 | Spectrum traces    | 366 days    | 1 hour           | 3660 days   |
 
 > [!IMPORTANT]
-> When a Cassandra database is used, other maxima are recommended for trending. This is because of the [Time Window Compaction Strategy](xref:Cassandra_TWCS) (TWCS) used by Cassandra.
+> When a Cassandra database is used, other maxima are recommended for trending. This is because of the [Time Window Compaction Strategy](#cassandra-twcs) (TWCS) used by Cassandra.
 
 > [!NOTE]
 >
 > - The TTL settings are stored in the file *DBMaintenanceDMS.xml*. For more information, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).
 > - If a record is saved with a particular TTL setting in a Cassandra database, this setting applies permanently for that record, even if the configuration is later changed in Cube. The changes are only applied for new records. For example, if a record is saved with TTL set to 150 days, it will only be removed after 150 days, even if the TTL configuration in Cube is later changed to 100 days.
 > - To prevent the [year 2038 problem](xref:Year_2038_Problem_for_Cassandra) for Cassandra, from DataMiner 10.2.0 [CU14]/10.3.0 [CU2]/10.3.4 onwards, the maximum allowed TTL for databases is limited to 10 years.
+
+## Cassandra TWCS
+
+### About TWCS
+
+Time Window Compaction Strategy (TWCS) is a compaction mechanism specifically designed for time-series data. The data is organized and compacted into time-based buckets, referred to as time windows. Cassandra groups data into defined time intervals (e.g. 3 hours, 1 day, etc.). Each time, a time window contains all the data written within that interval.
+
+While data is being actively written to the current time window, it is compacted into SSTables for that specific window. Compaction occurs incrementally, merging data within the same time window.
+
+SSTables are immutable and compacting SSTables leads to a new SSTable. When a window ends, a final SSTable will be constructed. A full SSTable for a specific window will exist until the TTL has passed. After the TTL has passed, the SSTable can safely be deleted.
+
+For efficient operation, it is better to maintain **fewer than 50 SSTables on disk per node**. Exceeding this threshold can lead to performance degradation because of:
+
+- Increased storage overhead.
+- Higher read latencies as queries need to scan more SSTables.
+- Inefficient compaction processes.
+
+Because of this, when choosing the TTL for trending with a Cassandra database, there are some recommended boundaries.
+
+### Recommended maximum TTL
+
+The relationship between the time window size and the recommended maximum TTL is governed by the number of allowable SSTables. The recommended maximum TTL can be calculated as $50 \times \text{time window size}$. This ensures that no more than 50 old SSTables are retained.
+
+The following recommended limitations apply:
+
+| Type of data       | Time window size | Maximum TTL    |
+|--------------------|------------------|----------------|
+| Real-time trending | 3 hours          | 6 days 6 hours |
+| Minute trending    | 4 days           | 200 days       |
+| Hour trending      | 14 days          | 700 days       |
+| Day trending       | 30 days          | 1500 days      |
+
+> [!NOTE]
+> Regardless of how the Cassandra database is configured, the TTL of the tables should never exceed the maximum TTL as defined in this table.
