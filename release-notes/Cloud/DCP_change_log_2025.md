@@ -113,7 +113,7 @@ On the browse page, Catalog items that are published by the selected organizatio
 
 ### 13 January 2025 - Fix - Rollback of Remote Access performance and stability improvements [ID 42042]
 
-Remote Access performance and stability improvements released on 9th of January was rollbacked due to issues found in the release.
+The Remote Access performance and stability improvements released on the 9th of January were rolled back because of issues found in the release.
 
 ### 9 January 2025 - Enhancement - Remote Access performance and stability improvements [ID 41897]
 
