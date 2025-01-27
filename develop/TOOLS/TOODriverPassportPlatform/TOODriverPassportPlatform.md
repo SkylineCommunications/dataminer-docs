@@ -20,8 +20,7 @@ The Driver Passport Platform protocol uses:
 - The Skyline Device Simulator to simulate behavior of real devices.
 
 > [!NOTE]
->
-> - For more information on the Skyline device simulator, see [Skyline Device Simulator](xref:TOOQASNMPSimulator).
+> For more information on the Skyline device simulator, see [Skyline Device Simulator](xref:TOOQASNMPSimulator).
 
 - [Platform location](xref:Platform_location)
 - [Platform capabilities](xref:Platform_capabilities)

@@ -165,8 +165,9 @@ The following filters can be specified in the input for this method:
   ```
 
   > [!NOTE]
-  > -  String values should be enclosed in single quotation marks (').
-  > -  Prior to DataMiner 9.0.1, *AND* and *OR* operators in the filter are applied from left to right in one accumulated result, which can potentially lead to unexpected results. To avoid this, if there is a single *AND* value, place this at the end of the filter.
+  >
+  > - String values should be enclosed in single quotation marks (').
+  > - Prior to DataMiner 9.0.1, *AND* and *OR* operators in the filter are applied from left to right in one accumulated result, which can potentially lead to unexpected results. To avoid this, if there is a single *AND* value, place this at the end of the filter.
 
 - **RECURSIVEFULLFILTER**
 

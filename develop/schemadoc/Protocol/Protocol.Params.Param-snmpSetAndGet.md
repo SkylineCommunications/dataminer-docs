@@ -23,17 +23,15 @@ For a list of possible values, see [dynamicSnmpGet](xref:Protocol.Params.Param.T
 > [!NOTE]
 >
 > - The SnmpSetAndGet method can be triggered by means of a button inside a table cell. When the button is clicked, the value of the button will be sent along with an SNMP Set command.<!-- RN 12017 -->
->
 > - To reduce the number of SNMP requests, you can specify a multipleGet option when retrieving table data using dynamicSnmpGet or snmpSetAndGet, allowing a reduction of the number of SNMP requests. For more information, see [dynamicSnmpGet](xref:Protocol.Params.Param.Type-dynamicSnmpGet).<!-- RN 12409 -->
->
 > - In case the SNMP connection through which this set and get operation must be performed is not the main connection, make sure to specify the connection ID in the "connection" options:
 >
->    ```xml
->    <Param id="1282" snmpSetAndGet="executeNext">
->      ...
->      <Type options="connection=1">write</Type>
->    </Param>
->     ```
+>   ```xml
+>   <Param id="1282" snmpSetAndGet="executeNext">
+>     ...
+>     <Type options="connection=1">write</Type>
+>   </Param>
+>    ```
 
 ## Examples
 

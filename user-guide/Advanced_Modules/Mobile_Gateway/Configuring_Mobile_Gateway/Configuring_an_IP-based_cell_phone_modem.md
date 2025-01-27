@@ -8,24 +8,24 @@ To configure an IP-based cell phone modem that is connected to your DataMiner Sy
 
 1. Insert the SIM card in the device.
 
-2. Connect the antenna to the device.
+1. Connect the antenna to the device.
 
-3. Connect the device to the network using a UTP cable.
+1. Connect the device to the network using a UTP cable.
 
-4. Connect the device to a power source.
+1. Connect the device to a power source.
 
-5. In an internet browser, go to the IP address of the device, and configure the PIN of the SIM card as well as the necessary user accounts.
+1. In an internet browser, go to the IP address of the device, and configure the PIN of the SIM card as well as the necessary user accounts.
 
-6. In the *C:\\Skyline DataMiner\\Mobile Gateway* folder of one of your DataMiner Agents, make sure that there is a *Config.xml* file similar to the one in the example below.
+1. In the *C:\\Skyline DataMiner\\Mobile Gateway* folder of one of your DataMiner Agents, make sure that there is a *Config.xml* file similar to the one in the example below.
 
-    > [!NOTE]
-    > You can add the password as plain text as illustrated in the example below. After the DMA has restarted, the password will be replaced by a GUID referring to the encrypted password, which is stored elsewhere.
+   > [!NOTE]
+   > You can add the password as plain text as illustrated in the example below. After the DMA has restarted, the password will be replaced by a GUID referring to the encrypted password, which is stored elsewhere.
 
-7. After you have saved the *Config.xml* file, restart the DataMiner Agent.
+1. After you have saved the *Config.xml* file, restart the DataMiner Agent.
 
-8. In DataMiner Cube, go to *Apps* > *System Center.*
+1. In DataMiner Cube, go to *Apps* > *System Center.*
 
-9. Select the *Mobile Gateway* tab and configure the necessary settings. For more information, see [Configuring Mobile Gateway in DataMiner Cube](xref:Configuring_Mobile_Gateway_in_DataMiner_Cube).
+1. Select the *Mobile Gateway* tab and configure the necessary settings. For more information, see [Configuring Mobile Gateway in DataMiner Cube](xref:Configuring_Mobile_Gateway_in_DataMiner_Cube).
 
 > [!NOTE]
 > Since multiple DataMiner Agents can use the same IP-based device (e.g. SMSEagle, Turnpike), there is no way to know which DataMiner Agent will receive an incoming message.
