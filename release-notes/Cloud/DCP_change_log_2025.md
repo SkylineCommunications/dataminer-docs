@@ -9,6 +9,16 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 27 January 2025 - Enhancement - Admin app - Collaboration category added on usage overview page [ID 41947]
+
+A new "Managed Object" category has been added to the usage overview page in the Admin app.
+
+### 27 January 2025 - New feature - Admin - Usage charts [ID 41937]
+
+Two pie charts have been added to the usage page in the Admin app. These pie charts visualize the usage data by system or feature.
+
+Additionally, the filtering has been improved so that deleted systems can also be shown or hidden.
+
 ### 20 January 2025 - Enhancement - Catalog API - Enhanced scope of retrieving Catalog item using a key [ID 41977]
 
 While previously the Catalog API only allowed users to retrieve information for Catalog items published by their own organization, now they can also retrieve information for any public Catalog item (using the organization key).
@@ -29,16 +39,6 @@ When the Catalog API is used with an organization key, the following rate-limiti
 ### 20 January 2025 - New feature - Catalog API - Downloading a Catalog item version using a key [ID 41892]
 
 It is now possible to download a version of a Catalog item using an organization key that has the "Download Catalog" permission.
-
-### 16 January 2025 - Enhancement - Admin app - Collaboration category added on usage overview page [ID 41947]
-
-A new "Managed Object" category has been added to the usage overview page in the Admin app.
-
-### 16 January 2025 - New feature - Admin - Usage charts [ID 41937]
-
-Two pie charts have been added to the usage page in the Admin app. These pie charts visualize the usage data by system or feature.
-
-Additionally, the filtering has been improved so that deleted systems can also be shown or hidden.
 
 ### 16 January 2025 - Enhancement - Sharing - Feedback button added to user menu [ID 41926]
 
