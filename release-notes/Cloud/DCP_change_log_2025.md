@@ -9,6 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 27 January 2025 - Enhancement - Remote Access performance and stability improvements [ID 42043]
+
+Several enhancements were made to improve performance and stability for all remote access features with immediate effect.
+
+In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further. CloudGateway will be able to benefit from this change as soon as the 2.17.0 version is released (expected soon).
+
 ### 27 January 2025 - Enhancement - Admin app - Collaboration category added on usage overview page [ID 41947]
 
 A new "Managed Object" category has been added to the usage overview page in the Admin app.
@@ -105,8 +111,12 @@ The number of required API calls to initially load the Catalog home page has bee
 
 On the browse page, Catalog items that are published by the selected organization or by Skyline Communications will now display a green indicator.
 
+### 13 January 2025 - Fix - Rollback of Remote Access performance and stability improvements [ID 42042]
+
+Remote Access performance and stability improvements released on 9th of January was rollbacked due to issues found in the release.
+
 ### 9 January 2025 - Enhancement - Remote Access performance and stability improvements [ID 41897]
 
 Several enhancements were made to improve performance and stability for all remote access features with immediate effect.
 
-In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further. CloudGateway will be able to benefit from this change as soon as the 2.17.0 version is released (expected soon).
+In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.
