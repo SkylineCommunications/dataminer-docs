@@ -320,8 +320,7 @@ Due to an issue in SLNet, after a restart of a DataMiner Agent, "not supported b
 
 #### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41339]
 
-<!-- MR 10.5.0 - FR 10.5.2 -->
-<!-- Not added to MR 10.5.0: Related to RN 41143 -->
+<!-- MR 10.4.0 [CU12] - FR 10.5.2 -->
 
 In some cases, LDAP/ActiveDirectory domain users would no longer be able to log in. When synchronizing users from an LDAP/ActiveDirectory domain, DataMiner would not correctly process the result.
 

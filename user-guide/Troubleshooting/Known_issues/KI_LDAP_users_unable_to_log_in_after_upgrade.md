@@ -10,7 +10,7 @@ uid: KI_LDAP_users_unable_to_log_in_after_upgrade
 
 - Feature Release versions from DataMiner 10.4.7 to 10.4.12
 
-- Depending on the message returned by the LDAP server, DataMiner versions prior to 10.5.0/10.5.2 may also be affected (see [Fix](#fix)).
+- Depending on the message returned by the LDAP server, DataMiner versions prior to 10.4.0 [CU12]/10.5.2 may also be affected (see [Fix](#fix)).
 
 ## Cause
 
@@ -22,7 +22,7 @@ This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configurati
 
    - If you see `0x80072030`, install DataMiner 10.4.0 [CU10], 10.5.0, or 10.5.1.<!--RN 41143-->
 
-   - If you see `0x00005012`, install DataMiner 10.5.0 or 10.5.2.<!--RN 41339-->
+   - If you see `0x00005012`, install DataMiner 10.4.0 [CU12], 10.5.0, or 10.5.2.<!--RN 41339-->
 
 1. Wait up to an hour for LDAP synchronization to occur, or manually trigger the `Skyline DataMiner LDAP Resync` task in Windows Task Scheduler.
 
