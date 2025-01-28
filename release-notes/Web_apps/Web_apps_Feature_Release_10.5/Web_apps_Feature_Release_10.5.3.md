@@ -173,3 +173,9 @@ When a *Trigger* component linked to a *Grid* component was triggered while you 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 In some cases, the *Change variable* action would not apply the correct value, especially when it was linked to dynamic data.
+
+#### Monitoring app: Problem when consulting alarm details when using external authentication via SAML [ID 42037]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When you logged in to the *Monitoring* app using external authentication via SAML, and then opened an alarm, the user name of the alarm owner would be incorrect.
