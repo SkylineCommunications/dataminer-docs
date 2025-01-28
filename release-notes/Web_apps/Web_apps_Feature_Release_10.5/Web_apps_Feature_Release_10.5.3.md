@@ -167,3 +167,9 @@ When users consulted a shared dashboard containing an *Alarm table* component on
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When a *Trigger* component linked to a *Grid* component was triggered while you were viewing the last page of grid data, a skeleton loading animation would incorrectly be shown. From now on, the last values will remain on the screen until the new data has been fetched.
+
+#### Low-Code Apps: 'Change variable' action would not always apply the correct value when linked to dynamic data [ID 42027]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+In some cases, the *Change variable* action would not apply the correct value, especially when it was linked to dynamic data.
