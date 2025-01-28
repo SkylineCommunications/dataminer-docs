@@ -4,6 +4,13 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 28 January 2025 - Enhancement - CommunicationGateway 5.1.0 - Node ID has a fixed value [ID 41784]
+
+The node ID of a CommunicationGateway is now assigned a fixed value, enabling middleware to target a specific node of its choice. This enhancement was introduced to allow middleware to prioritize the CommunicationGateway running on the same machine where the middleware is hosted.
+
+> [!NOTE]
+> For this to work as intended, connectors need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 6.1.0](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x#prioritize-connection-to-the-local-communicationgateway-id-41784) or higher.
+
 #### 25 November 2024 - Enhancement - CommunicationGateway 4.0.0 - MessageBroker version 3.0.3 [ID 41467]
 
 The CommunicationGateway DxM has been updated so that from now on it uses MessageBroker version 3.0.3.
