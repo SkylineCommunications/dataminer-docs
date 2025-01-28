@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [Upgrade to DataMiner 10.5.1 or 10.5.2 is stuck](xref:KI_Upgrade_to_1051_stuck) | DataMiner 10.5.1 and 10.5.2 | | January 28, 2025 |
 | [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | From DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 onwards | | December 18, 2024 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
