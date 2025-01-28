@@ -17,7 +17,7 @@ This only affects DataMiner Agents that are part of a cluster.
 ## Workaround
 
 1. Stop the DataMiner Agent.
-1. Set the passwords of all users to never expire.
+1. In the Windows Local Users and Groups configuration (*lusrmgr.msc*), set the passwords of all users to never expire.
 1. In the *Security.xml* file (located in `C:\Skyline DataMiner`), replace all instances of `expired="true"` with `expired="false"`.
 1. Save your changes and restart DataMiner.
 
