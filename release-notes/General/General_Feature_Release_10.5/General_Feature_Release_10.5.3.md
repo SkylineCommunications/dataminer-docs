@@ -191,6 +191,12 @@ Up to now, it was not allowed to swarm elements polling the local IP address of 
 
 From now on, it will be allowed to swarm elements polling the local IP address of any agent in the DMS. However, elements polling the loopback address will remain blocked.
 
+#### SLNet: Enhanced performance when clearing the alarms cache [ID 41998]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Because of a number of enhancements, overall performance of SLNet has increased when clearing the alarms cache.
+
 ### Fixes
 
 #### Elements no longer visible after having been swarmed [ID 41635]

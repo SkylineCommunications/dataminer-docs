@@ -41,6 +41,12 @@ SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
 Because of a number of enhancements, overall performance of SLPort has increased. The process will now also use less memory and CPU.
 
+#### SLNet: Enhanced performance when clearing the alarms cache [ID 41998]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Because of a number of enhancements, overall performance of SLNet has increased when clearing the alarms cache.
+
 ### Fixes
 
 #### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41339]
