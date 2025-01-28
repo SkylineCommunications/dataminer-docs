@@ -6,7 +6,7 @@ uid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x
 
 ## 6.1.0
 
-#### Prioritize connection to the local CommunicationGateway [ID 41784]
+#### Prioritize connection to the local CommunicationGateway instance [ID 41784]
 
 Previously, when multiple CommunicationGateway nodes were available, the OpenConfig library would randomly select one to establish a connection. Now, the local CommunicationGateway will always be prioritized. If the local node is unavailable, the library will fall back to the discovery process and randomly select another node.
 
