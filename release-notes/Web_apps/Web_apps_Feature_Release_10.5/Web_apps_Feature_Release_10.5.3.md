@@ -150,6 +150,12 @@ When you tried to log on to a DataMiner web app, in some cases, the authenticati
 
 When a low-code app used queries in some of its flows, in some cases, it could become unresponsive.
 
+#### Dashboards app: Users would not be allowed to see any of the alarms listed in an Alarm table component of a shared dashboard [ID 41965]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When users consulted a shared dashboard containing an *Alarm table* component on which an element filter or a view filter was applied, in some cases, they would incorrectly not be allowed to see any of the alarms listed in that *Alarm table* component.
+
 #### Dashboards/Low-Code Apps - Grid component: Problem when a linked Trigger component is triggered while viewing the last page [ID 41991]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
