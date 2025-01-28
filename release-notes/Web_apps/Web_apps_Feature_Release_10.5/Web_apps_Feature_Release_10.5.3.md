@@ -179,3 +179,9 @@ In some cases, the *Change variable* action would not apply the correct value, e
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When you logged in to the *Monitoring* app using external authentication via SAML, and then opened an alarm, the user name of the alarm owner would be incorrect.
+
+#### Low-Code Apps: Not possible to execute a 'Change variable' action via the URL of the app [ID 42038]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Up to now, it would incorrectly not be possible to execute a *Change variable* action via the URL of the app.
