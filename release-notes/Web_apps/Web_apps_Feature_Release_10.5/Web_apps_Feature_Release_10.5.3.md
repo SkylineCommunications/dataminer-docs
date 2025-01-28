@@ -72,6 +72,12 @@ The *Node edge graph* component now supports real-time updates.
 
 Up to now, When you removed a section from a DOM instance form with multiple sections, that section would be removed immediately, without any notification. From now on, a confirmation box will appear, prompting the user to either confirm or cancel the action.
 
+#### Dashboards/Low-Code Apps: Linking a Trigger component to a Query filter component now allows you to refetch the columns and column statistics [ID 41799]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+By linking a *Trigger* component to a *Query filter* component, it is now possible to have the columns and column statistics refetched.
+
 #### DataMiner root page: Links to deprecated DataMiner XBAP and legacy Reports & Dashboards app have now been removed [ID 41844]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->

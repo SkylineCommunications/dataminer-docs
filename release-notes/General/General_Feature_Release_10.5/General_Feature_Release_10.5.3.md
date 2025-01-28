@@ -169,6 +169,12 @@ SLLogCollector packages now include the following data regarding the GQI DxM:
 
 SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
+#### SLPort: Enhanced performance and reduced memory and CPU usage [ID 41896]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Because of a number of enhancements, overall performance of SLPort has increased. The process will now also use less memory and CPU.
+
 #### Swarming prerequisites: Entries will now be added to SLNet.txt while checking alarm ID usage in Automation scripts and protocol QActions [ID 41930]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
