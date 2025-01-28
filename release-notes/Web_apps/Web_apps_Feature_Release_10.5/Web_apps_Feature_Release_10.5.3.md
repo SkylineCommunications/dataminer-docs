@@ -100,17 +100,23 @@ The *Allow refresh* option has now been removed. In order to have *Time range* c
 
 The *Time range* component has been moved from the *General* category to the *Basic controls* category. Also, its icon has now been updated to better represent a range.
 
-#### GQI DxM: Web applications will now run GQI queries via the GQI DxM installed on the local DMA [ID 41949]
+#### GQI DxM: Web applications will now use the GQI DxM installed on the local DMA to build and run GQI queries [ID 41949] [ID 42010]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-From now on, the DataMiner web applications will by default run GQI queries via the GQI DxM installed on the local DataMiner Agent.
+From now on, the DataMiner web applications will by default use the GQI DxM installed on the local DataMiner Agent when building and running GQI queries.
 
 #### Low-Code Apps: Default set of icon files will be created when you create a new low-code app [ID 42004]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When you create a new low-code app on the root page of a DataMiner Agent (e.g. `https://myDMA/root/`), from now on, a default set of icon files will automatically be created for that app.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Zoom factor for arrows and KPI labels on edges is now capped [ID 42011]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+From now on, the zoom factor for arrows and KPI labels on edges will be capped. This means that, when you keep zooming in on a node edge graph, at some point, the magnification factor of the arrows and the KPI labels on edges will no longer change.
 
 ### Fixes
 
