@@ -282,3 +282,9 @@ In some cases, alarm groups containing alarms without a focus value (e.g. notice
 Up to now, errors would be logged in the *SLErrors.txt* and *SLNet.txt* log files when Mobile Gateway was enabled in a DataMiner System with more than one DMA.
 
 Also, the Mobile Gateway process would only be aware of elements that were hosted on the same agent as the one on which it was hosted itself. As a result, actions like GET and SET on other elements via the Mobile Gateway would fail.
+
+#### BPA tests would fail to load the necessary DLL files [ID 42000]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+In some cases, BPAs tests would fail to load the necessary DLL files.

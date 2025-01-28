@@ -90,3 +90,9 @@ When a DataMiner Agent was started, in some cases, the configured SNMP managers 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 In some cases, alarm groups containing alarms without a focus value (e.g. notices or errors) would not be correctly removed from the group when the element associated with the alarm was deleted, stopped or paused.
+
+#### BPA tests would fail to load the necessary DLL files [ID 42000]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+In some cases, BPAs tests would fail to load the necessary DLL files.
