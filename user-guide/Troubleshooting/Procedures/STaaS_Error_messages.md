@@ -1,5 +1,6 @@
 ---
 uid: STaaS_Error_messages
+keywords: cloud storage, cloud errors
 ---
 
 # STaaS error messages
