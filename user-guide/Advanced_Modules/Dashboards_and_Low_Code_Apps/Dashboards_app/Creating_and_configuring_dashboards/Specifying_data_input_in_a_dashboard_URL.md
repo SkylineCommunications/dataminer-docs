@@ -138,7 +138,7 @@ For example:
 
   This URL opens a dashboard in which the elements 1/1 and 1/2, view 1 and parameters 1/1/1 and 1/1/2/myIndex are selected by default.
 
-- ``https://myDma/Dashboard/#/myDashboard?time%20spans=1549753200000/1549835265007``
+- ``https://myDma/Dashboard/#/myDashboard?timespans=1549753200000/1549835265007``
 
   This URL opens a dashboard with a time range filter from 1549753200000 to 1549835265007.
 
@@ -172,7 +172,7 @@ Within the dashboard URL, the following data objects can be specified:
 
 - *indices*: Requires the index.
 
-- *time spans*: Requires the start and/or end time stamp. If you leave out the start time stamp, the time span will be interpreted as starting at midnight. If you leave out the end time stamp, the time span will be interpreted as ending at the current time.
+- *timespans*: Requires the start and/or end time stamp. If you leave out the start time stamp, the time span will be interpreted as starting at midnight. If you leave out the end time stamp, the time span will be interpreted as ending at the current time.
 
   > [!NOTE]
   > From DataMiner 10.2.0/10.1.1 onwards, for a predefined time span in a time range component, the URL can contain the name of that time span (e.g. today, yesterday, etc.) instead of the start time and end time of the time span.
