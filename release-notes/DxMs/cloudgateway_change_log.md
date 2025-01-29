@@ -12,19 +12,19 @@ This enhancement improves **performance** because it allows a higher request thr
 
 Next to that it also improves the **stability** of the cloud connection. Connections will be able to disconnect and reconnect without having any downtime for all Remote Access and Live Sharing features, as long as there is one or more connections still up. It is expected for connections to disconnect (and reconnect) at a regular basis, by example if (rolling) upgrades are deployed at dataminer.services or services are scaled down.
 
-#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Automatically force refresh access token when the cloud session is manually renewed [ID ]
+#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Automatically force refresh access token when the cloud session is manually renewed [ID 42081]
 
 From now on, when the [cloud session is renewed](xref:Cloud_Connection_Issues#check-the-cloud-session) manually, another access token, which is used by STaaS for example, will be refreshed instantly while before it could take up to 30 minutes.
 
-#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload the local setting for Remote Access and Live Sharing [ID ]
+#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload the local setting for Remote Access and Live Sharing [ID 42080]
 
 The CloudGateway will offload [the local setting for Remote Access and Live Sharing](xref:Disabling_Remote_Access_and_Live_Sharing).
 
-#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload the ApiGateway health [ID ]
+#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload the ApiGateway health [ID 42080]
 
 The CloudGateway will offload the health of the ApiGateway. This allows for better technical support and for dataminer.services to validate if everything is correctly configured to use the DataMiner Cube desktop app remotely via dataminer.services.
 
-#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload error information if the state of the DMA cannot be determined [ID ]
+#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload error information if the state of the DMA cannot be determined [ID 42080]
 
 The CloudGateway will offload error information in case the running state of the DMA cannot be determined, for example when the SSL certificate for the web apis is invalid. This allows to provide better technical support.
 
