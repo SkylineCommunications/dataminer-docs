@@ -134,13 +134,19 @@ A number of enhancements have been made to prevent SLNet modules from forwarding
 
 #### SLAnalytics: New check to verify if the incident tracking leader is still a member of the current DMS [ID 41836]
 
-<!-- MR 10.5.0 - FR 10.5.3 -->
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 At DataMiner start-up, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
 
 Also, from now on, a new leader will be elected when the former leader has left the cluster.
 
 *\* In DataMiner Cube, the leader can be configured in the *Leader DataMiner ID* box, which can be found in *System Center > System settings > Analytics config > Automatic incident tracking*.*
+
+#### Service & Resource Management: Enhanced performance when processing history entries for booking instances and resources [ID 41842]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Up to now, history entries for booking instances and resources would be processed individually. From now on, they will be processed in batches of 100 entries. This will considerably enhance overall performance when processing these history entries.
 
 #### Smart baselines will now also get capped when the parameter only has either a low value or a high value [ID 41870]
 
@@ -264,6 +270,13 @@ When the same version of a DVE connector was uploaded twice, the production vers
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When an element was deleted, a run-time error could occur in SLProtocol when a parameter had a duplicate `RawType` tag configured.
+
+#### No longer possible to clear or update an alarm associated with a general information parameter [ID 41877]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39193 -->
+
+When an alarm had been generated for a general information parameter (i.e. a parameter with an ID within the range 64502 to 64999), it would incorrectly not be possible to clear or update that alarm.
 
 #### SNMP managers would incorrectly receive some or all active alarms at DMA start-up [ID 41878]
 

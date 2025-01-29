@@ -1,6 +1,6 @@
 ---
 uid: Troubleshooting_STaaS
-keywords: cloud, cloud connected agent, CCA
+keywords: cloud storage, cloud issues, cloud connected agent, CCA
 ---
 
 # Troubleshooting - STaaS

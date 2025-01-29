@@ -1085,16 +1085,6 @@ Error and exception handling has been enhanced in order to prevent duplicate or 
 
 On STaaS systems, the timeout for responses to write requests has been reduced to 10 seconds.
 
-#### SLAnalytics: New check to verify if the incident tracking leader is still a member of the current DMS [ID 41836]
-
-<!-- MR 10.5.0 - FR 10.5.3 -->
-
-At DataMiner start-up, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
-
-Also, from now on, a new leader will be elected when the former leader has left the cluster.
-
-*\* In DataMiner Cube, the leader can be configured in the *Leader DataMiner ID* box, which can be found in *System Center > System settings > Analytics config > Automatic incident tracking*.*
-
 #### Amazon Keyspaces Service is now end-of-life [ID 41874] [ID 41914]
 
 <!-- MR 10.5.0 [CU0] - FR 10.5.3 -->

@@ -1,5 +1,6 @@
 ---
 uid: Creating_a_DaaS_system_FAQ
+keywords: cloud faq
 ---
 
 # Frequently asked questions related to DaaS

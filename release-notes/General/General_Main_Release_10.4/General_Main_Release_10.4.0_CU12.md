@@ -21,6 +21,16 @@ uid: General_Main_Release_10.4.0_CU12
 
 A number of enhancements have been made to prevent SLNet modules from forwarding requests back and forth between two DataMiner Agents.
 
+#### SLAnalytics: New check to verify if the incident tracking leader is still a member of the current DMS [ID 41836]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+At DataMiner start-up, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
+
+Also, from now on, a new leader will be elected when the former leader has left the cluster.
+
+*\* In DataMiner Cube, the leader can be configured in the *Leader DataMiner ID* box, which can be found in *System Center > System settings > Analytics config > Automatic incident tracking*.*
+
 #### Smart baselines will now also get capped when the parameter only has either a low value or a high value [ID 41870]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
