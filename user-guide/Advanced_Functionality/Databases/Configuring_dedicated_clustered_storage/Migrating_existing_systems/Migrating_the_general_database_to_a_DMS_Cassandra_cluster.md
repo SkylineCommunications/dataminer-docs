@@ -232,7 +232,7 @@ Any errors that occur during a migration process will be displayed in a pop-up w
 
 - To check the migration server logging, go to `C:\Skyline DataMiner\Logging` and open *SLDBConnection.txt*.
 
-- If you encounter **issues when you start a migration** (e.g. “No connection with DataMiner”), check if there are any [NATS issues](xref:Investigating_NATS_Issues)
+- If you encounter **issues when you start a migration** (e.g. "No connection with DataMiner"), check if there are any [NATS issues](xref:Investigating_NATS_Issues).
 
 - If **TLS** is enabled on the Elasticsearch or OpenSearch nodes and **some Agents do not initialize**, you can check the connection to the Elasticsearch/OpenSearch nodes as follows:
 
