@@ -2,7 +2,9 @@
 uid: Looking_up_an_item_in_the_catalog
 ---
 
-# Looking up an item in the Catalog with UI
+# Looking up an item in the Catalog
+
+## Looking up an item using the Catalog UI
 
 When you open up the Catalog, a search box is displayed.
 
@@ -31,18 +33,18 @@ When you open up the Catalog, a search box is displayed.
    > [!TIP]
    > See also: [Versioning of Catalog items](xref:About_the_Catalog_module#versioning-of-catalog-items)
 
-
-# Looking up an item with the API
+## Looking up an item using the Catalog API
 
 The catalog API allows you to retrieve information of a Catalog item.
 
 > [!NOTE]
 > The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
 > The API calls use the following rate-limiting policy:
->- Partitionkey: IP address or host name of connection
->  - Burst limit: 100 requests
->  - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
->  - No queueing for extra requests beyond the token bucket
+>
+> - Partition key: IP address or host name of connection
+> - Burst limit: 100 requests
+> - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
+> - No queueing for extra requests beyond the token bucket
 
 ### API Definition
 
@@ -65,17 +67,18 @@ GET
 
 To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
 
-# Looking up versions of an item with the API
+## Looking up a version of an item with the Catalog API
 
 The catalog API call allows you to retrieve version information of a Catalog item.
 
 > [!NOTE]
 > The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
 > The API calls use the following rate-limiting policy:
->- Partitionkey: IP address or host name of connection
->  - Burst limit: 100 requests
->  - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
->  - No queueing for extra requests beyond the token bucket
+>
+> - Partition key: IP address or host name of connection
+> - Burst limit: 100 requests
+> - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
+> - No queueing for extra requests beyond the token bucket
 
 ### API Definition
 
