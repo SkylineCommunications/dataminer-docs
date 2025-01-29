@@ -216,7 +216,10 @@ items:
           - name: Investigating StackOverflowException occurrences
             topicUid: TroubleshootingSLScriptingStackOverflowException
       - name: Troubleshooting – STaaS
-        topicUid: Troubleshooting_STaaS_Issues
+        topicUid: Troubleshooting_STaaS
+        items:
+          - name: STaaS error messages
+            topicUid: STaaS_Error_messages
       - name: Troubleshooting – web
         topicUid: Investigating_Web_Issues
       - name: Troubleshooting – Miscellaneous
@@ -234,6 +237,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Upgrade to DataMiner 10.5.1 or 10.5.2 is stuck
+            topicUid: KI_Upgrade_to_1051_stuck
           - name: Reuploaded DVE protocol version is incorrectly set as production version
             topicUid: KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version
           - name: SLProtocol crash when restarting elements used by enhanced services

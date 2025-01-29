@@ -51,9 +51,7 @@ Also note that, inside the Exposer element, you can add linked tables. In the ex
 > - If a protocol contains at least one Protocol.Topologies.Topology.Cell element, two properties will be created on the DataMiner Agent: "System Type" and "System Name". Alarms generated in tables defined in Cell@table attributes will have their "System Type" property set to the value of the Cell@name attribute and their "System Name" property set to the row's display key.
 >
 >   - If an exposer is defined with a LinkedId, it will receive the same property values. The "System Name" property will be set to the display key of the table defined in Cell@table as resolved by the foreign key relations. If no link can be resolved, then the display key of the original row will be used.
->
 >   - If a LinkedId element has a columnPid attribute containing a column parameter ID in the LinkedId table, then the alarm's "System Name" property will be set to the value found in the specified column.
 >
 > - If the topology contains view tables instead of physical tables, then the above-mentioned alarm properties will also be filled in. However, note that if view tables are used, secondary tables are currently not able to retrieve display keys of primary tables.
->
 > - This feature will only works with Protocol.Topologies.Topology elements, not with legacy Protocol.Topology elements.

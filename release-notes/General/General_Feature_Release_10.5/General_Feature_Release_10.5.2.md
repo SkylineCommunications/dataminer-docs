@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.2
 ---
 
-# General Feature Release 10.5.2 – Preview
+# General Feature Release 10.5.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -24,7 +24,8 @@ uid: General_Feature_Release_10.5.2
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Web visual overviews: Load balancing [ID 41434] [ID 41728]](#web-visual-overviews-load-balancing-id-41434-id-41728)
+- [DataMiner Object Models: An exception will now be thrown when an issue occurs for any of the DomInstances that are created, updated, or deleted in bulk [ID 41546]](#dataminer-object-models-an-exception-will-now-be-thrown-when-an-issue-occurs-for-any-of-the-dominstances-that-are-created-updated-or-deleted-in-bulk-id-41546)
 
 ## New features
 
@@ -42,13 +43,13 @@ These alarms will be generated per DataMiner Agent for every Automation script t
 
 This type of alarms will automatically be cleared after a DataMiner restart. They can also be cleared manually.
 
-#### Mobile visual overviews: Load balancing [ID 41434] [ID 41728]
+#### Web visual overviews: Load balancing [ID 41434] [ID 41728]
 
 <!-- MR 10.6.0 [CU0] - FR 10.5.2 -->
 
-It is now possible to implement load balancing for mobile visual overviews among DataMiner Agent in a DMS.
+It is now possible to implement load balancing among DataMiner Agents in a DMS for visual overviews shown in web apps.
 
-Up to now, the DataMiner Agent to which you were connected would handle all requests and updates with regard to mobile visual overviews.
+Up to now, the DataMiner Agent to which you were connected would handle all requests and updates with regard to web visual overviews.
 
 ##### Configuration
 
@@ -58,22 +59,22 @@ In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular D
 
   Enables or disables load balancing on the DataMiner Agent in question.
 
-  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will by default be handled in a balanced manner by all the DataMiner Agents in the cluster.
+  - When this key is set to **true**, for the DataMiner Agent in question, all requests and updates with regard to web visual overviews will by default be handled in a balanced manner by all the DataMiner Agents in the cluster.
 
     However, if you also add the `dmasForLoadBalancer` key (see below), these requests and updates will only be handled by the DataMiner Agents specified in that `dmasForLoadBalancer` key.
 
-  - When this key is set to **false**, for the DataMiner Agent in question, all requests and updates with regard to mobile visual overviews will be handled by the local SLHelper process.
+  - When this key is set to **false**, for the DataMiner Agent in question, all requests and updates with regard to web visual overviews will be handled by the local SLHelper process.
 
 - `<add key="dmasForLoadBalancer" value="1;2;15" />`
 
-  If you enabled load balancing by setting the `visualOverviewLoadBalancer` key to true, then you can use this key to restrict the number of DataMiner Agents that will be used for visual overview load balancing.
+  If you enabled load balancing by setting the `visualOverviewLoadBalancer` key to true, you can use this key to restrict the number of DataMiner Agents that will be used for visual overview load balancing.
 
-  The key's value must be set to a semicolon-separated list of DMA IDs. For example, if the value is set to "1;2;15", then the DataMiner Agents with ID 1, 2 and 15 will be used to handle all requests and updates with regard to mobile visual overviews.
+  The key's value must be set to a semicolon-separated list of DMA IDs. For example, if the value is set to "1;2;15", the DataMiner Agents with ID 1, 2, and 15 will be used to handle all requests and updates with regard to web visual overviews.
 
-  If you only specify one ID (without trailing semicolon), only that specific DataMiner Agent will be used to handle all requests and updates with regard to mobile visual overviews.
+  If you only specify one ID (without trailing semicolon), only that specific DataMiner Agent will be used to handle all requests and updates with regard to web visual overviews.
 
 > [!NOTE]
-> These settings are not synchronized among the agents in the cluster.
+> These settings are not synchronized among the Agents in the cluster.
 
 ##### New server messages
 
@@ -316,6 +317,12 @@ On STaaS systems, the timeout for responses to write requests has been reduced t
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
 Due to an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
+
+#### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41339]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.2 -->
+
+In some cases, LDAP/ActiveDirectory domain users would no longer be able to log in. When synchronizing users from an LDAP/ActiveDirectory domain, DataMiner would not correctly process the result.
 
 #### SLNet could stop working due to NATS throwing an exception [ID 41396]
 

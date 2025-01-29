@@ -41,6 +41,7 @@ To add a DMA to the list:
 To update a DMA in the list:
 
 1. Right-click the DMA, and select *Edit*.
+
 1. In the *Edit DMA Connection* window, make the necessary changes, and click *OK*.
 
    > [!NOTE]

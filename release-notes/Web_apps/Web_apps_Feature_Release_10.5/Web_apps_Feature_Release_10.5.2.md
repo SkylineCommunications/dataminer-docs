@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.5.2
 ---
 
-# DataMiner web apps Feature Release 10.5.2 – Preview
+# DataMiner web apps Feature Release 10.5.2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +14,8 @@ uid: Web_apps_Feature_Release_10.5.2
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards/Low-Code Apps: New variable 'DMAIP' [ID 41561]](#dashboardslow-code-apps-new-variable-dmaip-id-41561)
+- [Low-Code Apps: New 'Copy to clipboard' action [ID 41729]](#low-code-apps-new-copy-to-clipboard-action-id-41729)
 
 ## New features
 
@@ -30,19 +31,24 @@ Up to now, all GQI-related operations were executed by the SLHelper process, whi
 - System load by GQI operations can now be balanced among the different DataMiner Agents in a DMS.
 
 > [!IMPORTANT]
-> Until further notice, the DataMiner web apps will continue to use the SLHelper process to execute GQI-related operations. If you want them to use the new GQI DxM instead, update the *C:\\Skyline DataMiner\\Webpages\\web.config* file accordingly.
+> Until further notice, the DataMiner web apps will continue to use the SLHelper process to execute GQI-related operations. If you want them to use the new GQI DxM instead, update the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file accordingly.
+
+> [!TIP]
+> For more information, see [GQI DxM](xref:GQI_DxM).
 
 ##### Specifying when idle child processes should be terminated
 
-When the GQI DxM is used, in the *C:\\Program Files\\Skyline Communications\\DataMiner GQI\\appsettings.json* file, you can specify when idle child processes should be terminated.
+When the GQI DxM is used, in the *C:\\Program Files\\Skyline Communications\\DataMiner GQI\\appsettings.custom.json* file, you can specify when idle child processes should be terminated.
 
-See the following example. In this case, idle child processes will be terminated within WorkerExpiration + 30 seconds.
+See the following example. Idle child processes will be terminated within the configured *WorkerExpiration* (in this case 1 day) + 30 seconds.
 
 ```json
-"GQIOptions": {
+{
+  "GQIOptions": {
     "Extensions": {
-      "WorkerExpiration": "1.00:00:00",
+      "WorkerExpiration": "1.00:00:00"
     },
+  }
 }
 ```
 
@@ -78,7 +84,7 @@ As the *web.config* file of the web API can contain custom settings, neither a f
 From now on, during either a full DataMiner upgrade or a web-only DataMiner upgrade, a new upgrade action will be executed to check the *web.config* file for outdated settings. If such settings are found, the file will be updated.
 
 > [!NOTE]
-> Up to now, in some cases, communication via WebSockets would not work when the *web.config* file contained outdated settings. As this new upgrade action will now make sure the *web.config* file is up to date, most WebSocket issues should now be prevented. 
+> Up to now, in some cases, communication via WebSockets would not work when the *web.config* file contained outdated settings. As this new upgrade action will now make sure the *web.config* file is up to date, most WebSocket issues should now be prevented.
 
 ## Changes
 

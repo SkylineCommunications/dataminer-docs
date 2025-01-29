@@ -287,3 +287,23 @@ When a DataMiner Agent was upgraded from Main Release version 10.4.0 CU6 (or lat
 
 > [!NOTE]
 > See also [SNMPv3 elements not loaded correctly after upgrade](xref:KI_SNMPv3_elements_broken_after_upgrade)
+
+#### GQI: Min and Max aggregation of a datetime column would incorrectly result in a number column [ID 41789]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Up to now, when a Min or Max aggregation was performed on a datetime column, the aggregated column would incorrectly be a number column instead of datetime column.
+
+#### Fixes made with regard to the management of locally-stored element documents [ID 41882]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+A number of fixes have been made with regard to the management of locally-stored element documents that are not synchronized among the DMAs in a DataMiner System.
+
+#### Errors would be logged in SLErrors.txt and SLNet.txt when Mobile Gateway was enabled in a DMS with more than one agent [ID 41988]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Up to now, errors would be logged in the *SLErrors.txt* and *SLNet.txt* log files when Mobile Gateway was enabled in a DataMiner System with more than one DMA.
+
+Also, the Mobile Gateway process would only be aware of elements that were hosted on the same agent as the one on which it was hosted itself. As a result, actions like GET and SET on other elements via the Mobile Gateway would fail.

@@ -52,7 +52,8 @@ When configuring a table in the table editor, it is now possible to delete colum
 To delete one or more columns from a table, do the following:
 
 1. In the *All Columns* section, select the column(s) you want to delete.
-2. In the confirmation box, click *Yes*.
+
+1. In the confirmation box, click *Yes*.
 
 ### Validator
 

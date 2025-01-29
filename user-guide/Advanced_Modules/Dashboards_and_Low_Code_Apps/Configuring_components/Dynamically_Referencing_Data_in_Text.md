@@ -42,7 +42,7 @@ To create component references inside textual settings, use the following syntax
 - **Property name**: The property of the data that should be used, e.g. "Protocol Name".
 
 > [!TIP]
-> You can find the name of each part in the *Components* data source of the edit panel's *Data* tab.
+> You can find the name of each part in the *Components* data source of the edit panel's *Data* pane.
 
 > [!NOTE]
 >
@@ -57,7 +57,11 @@ The element `{COMPONENT."Page 1"."Dropdown 3"."Selected item".Elements.Name}` us
 
 #### URLs
 
-To create URL references inside textual settings, use the following syntax:
+In the URL section, you have the ability to either select [query parameters](#query-parameters) or the [static value `DMAIP`](#dmaip).
+
+##### Query parameters
+
+To create references to the URL query parameters inside textual settings, use the following syntax:
 
 ```txt
 {URL."Category name".type.Value}
@@ -76,7 +80,7 @@ To create URL references inside textual settings, use the following syntax:
 
 > [!NOTE]
 >
-> - URL references are only supported in the Dashboards app, not in Low-Code Apps.
+> - URL query parameter references are only supported in the Dashboards app, not in Low-Code Apps.
 > - Any parts of this syntax that contain spaces should be enclosed in double quotation marks.
 > - All parts of this syntax are case-sensitive.
 
@@ -84,6 +88,14 @@ Example: If you want to pass a number as a query parameter to a URL, you could u
 
 ```txt
 {URL."Query parameters".Numbers.Value}
+```
+
+##### DMAIP
+
+From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41561-->, the static value `DMAIP` is available in Dashboards and Low-Code Apps. It represents both the hostname and the IP port. You can access it using the following syntax:
+
+```txt
+{URL.DMAIP.Value}
 ```
 
 #### Flows
@@ -140,7 +152,7 @@ To create feed references inside textual settings, use the following syntax:
 - **Property name**: The property of the fed data that should be used, e.g. "Protocol Name".
 
 > [!TIP]
-> You can find the name of each part in the *FEEDS* data source of the edit panel's *DATA* tab.
+> You can find the name of each part in the *FEEDS* data source of the edit panel's *Data* pane.
 
 > [!NOTE]
 >

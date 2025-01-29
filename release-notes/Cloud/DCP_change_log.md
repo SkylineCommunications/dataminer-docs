@@ -565,7 +565,7 @@ An enhancement has been done to the way timed out requests are handled when the 
 
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID 40121]
 
-When you deploy a DaaS system from the dataminer.services homepage, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
+When you deploy a DaaS system from the dataminer.services home page, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
 
 #### 9 July 2024 - Fix - Catalog - Main ranges incorrectly filtered out in version history [ID 40147]
 

@@ -14,7 +14,7 @@ To have a component in your dashboard or app updated based on component data:
 
 1. [Add a new component](xref:Configuring_components), such as a time range component, to the dashboard or low-code app.
 
-   After doing so, a new data entry will appear in the *Components* section of the *Data* tab. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this entry is located under *Feeds* in the *Data* tab.
+   After doing so, a new data entry will appear in the *Components* section of the *Data* pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this entry is located under *Feeds* in the *Data* pane.
 
 1. Select the data entry and drag it onto the component you wish to link it to.
 
@@ -24,5 +24,5 @@ To have a component in your dashboard or app updated based on component data:
 
 > [!NOTE]
 >
-> - You can also have a [dashboard depend on data in a URL without containing any dedicated components](xref:Using_data_in_URL_without_dedicated_component).
+> - You can also have a [dashboard or app depend on data in a URL without containing any dedicated components](xref:URL_data).
 > - For more information on configuring query (GQI) data, see [Creating a GQI query](xref:Creating_GQI_query).

@@ -27,6 +27,7 @@ On request, anyone can add a connector to the [Catalog](xref:Overview_DevOps#cat
 >
 > - There is no direct cashback or revenue-sharing model for third-party connectors. However, Skyline Communications’ business partners indirectly benefit from downloads from the Catalog (see [Earning Credits](xref:About_Partner_Program#earning-credits)).
 > - Third parties can request to publish a connector directly in the Catalog. However, opting for a paid Skyline Service offers the following benefits:
+>
 >   - Versioning enabled.
 >   - Validation compiles on the latest DataMiner feature release.
 >   - SonarQube code analysis.

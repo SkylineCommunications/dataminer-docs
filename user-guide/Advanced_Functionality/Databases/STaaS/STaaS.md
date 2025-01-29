@@ -47,6 +47,7 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
    - STaaS West Europe: 20.76.71.123
    - STaaS UK South: 20.162.131.128
+   - STaaS Southeast Asia: 20.247.192.226
 
    > [!NOTE]
    > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
@@ -193,7 +194,7 @@ To request a cost estimation, follow the procedure below:
 If you have any questions regarding this cost estimation, please contact <staas@dataminer.services>.
 
 > [!IMPORTANT]
-> Cost estimations can currently only be performed for the West Europe and UK South regions.
+> Cost estimations can currently only be performed for the West Europe, UK South, and Southeast Asia regions.
 
 > [!TIP]
 > To optimize the cost efficiency of a STaaS solution, adhere to the best practices to prevent storing unnecessary data [with Automation scripts](xref:Automation_best_practices) or [with connectors](xref:Saving_parameters).
@@ -287,7 +288,7 @@ In addition, the following **other limitations** currently apply:
 
 ## Troubleshooting
 
-For troubleshooting information related to STaaS, see [Troubleshooting – STaaS](xref:Troubleshooting_STaaS_Issues).
+For troubleshooting information related to STaaS, see [Troubleshooting – STaaS](xref:Troubleshooting_STaaS).
 
 > [!NOTE]
 > If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these using the available troubleshooting information, contact <staas@dataminer.services>.

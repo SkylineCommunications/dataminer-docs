@@ -17,10 +17,10 @@ The EPM Solution makes use of the following components:
 ```mermaid
 %%{init: {'flowchart':{'curve':'monotoneY'}}}%%
 flowchart TB
-  subgraph Integrated DOCSIS architecture
+  subgraph Integrated_DOCSIS_architecture
     direction TB
     style Front-End fill:#00aff0
-    style Back-End fill:#00517d
+    style Back-End fill:#00517d,color:#ffffff
     style CM-Collector fill:#898989
     style CCAP fill:#898989
     Front-End(front end) <--> Back-End(back end)

@@ -8,6 +8,6 @@ In the Reporter app, you can use the *View filter* to display reports that only 
 
 1. In the top-right corner, select *View filter*.
 
-2. Click *switch*.
+1. Click *switch*.
 
-3. In the *View Selection* dialog box, select a view.
+1. In the *View Selection* dialog box, select a view.

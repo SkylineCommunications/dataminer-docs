@@ -51,9 +51,9 @@ Typically, a protocol with an SNMP connection contains logic to:
 DataMiner runs three processes with the name *SLSNMPManager* (one for each version of SNMP), which control all communication from and to devices running SNMP agents.
 
 > [!NOTE]
+> For more information related to SNMP, refer to:
 >
-> - For more information related to SNMP, refer to:
->    - http://www.snmp.com/protocol/snmp_rfcs.shtml
->    - https://www.rfc-editor.org/search/rfc_search_detail.php?title=SNMP&page=All
->    - http://www.snmplink.org 
->    - http://en.wikipedia.org/wiki/Simple_Network_Management_Protocol
+> - <http://www.snmp.com/protocol/snmp_rfcs.shtml>
+> - <https://www.rfc-editor.org/search/rfc_search_detail.php?title=SNMP&page=All>
+> - <http://www.snmplink.org> 
+> - <http://en.wikipedia.org/wiki/Simple_Network_Management_Protocol>

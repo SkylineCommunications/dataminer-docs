@@ -41,15 +41,15 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
 %% flowchart structure
 %% -------------------------------------------------------------------------
   HOME([Start page])
-  START([SLNet problem <br />suspected])
+  START([SLNet problem suspected])
   MODULES{{Which symptom?}}
-    CORR[[Correlation engine<br/>issues]]
-    STARTUP[[DMA startup<br/>issues]]
-    DISC[[DMA disconnect<br/>issues]]
+    CORR[[Correlation engine issues]]
+    STARTUP[[DMA startup issues]]
+    DISC[[DMA disconnect issues]]
 %% FAILOVER case to be defined later (uncomment next line):
-%% FAILOVER[[Failover<br/>issues]]
-    THREAD[[Thread<br/>issues]]
-    OTHER[[Follow generic<br/>investigation path]]
+%% FAILOVER[[Failover issues]]
+    THREAD[[Thread issues]]
+    OTHER[[Follow generic investigation path]]
      START --- MODULES
 	 MODULES --- |Startup| STARTUP
 	 MODULES --- |Correlation| CORR

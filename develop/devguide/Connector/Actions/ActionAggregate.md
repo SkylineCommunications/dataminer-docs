@@ -335,7 +335,7 @@ The type of aggregate action to be performed on the source data:
 
     > [!NOTE]
     > When this is used in combination with ignoreValues:
-    > 
+    >
     > - If only the value to be ignored is specified, the ignored row will still count as total. For example, 3 rows with value 50,70,-1 with pct equation > 60 ignoreValues:-1 will result in 33.33%, weight 3.
     > - If a column to be ignored is specified, the ignored row will not count in the percentage calculation. For example, 3 rows with value 50,70,-1 with pct equation > 60 ignoreValues:5/-1 will result in 50%, weight 2.
 

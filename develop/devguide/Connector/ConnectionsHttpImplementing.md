@@ -44,14 +44,16 @@ The url attribute defines the path, optionally including a query string and/or f
 >
 > - Instead of using the url attribute, you can specify the ID of a parameter that holds the request path. This is done using the pid attribute:
 >
->    ```xml
->    <Request verb="GET" url="/barco-webservice/rest/NetworkWall/alarm">
->    <Request verb="GET" pid="5045"> <!-- content parameter 5045: "barco-webservice/rest/NetworkWall/alarm" -->
->    ```
+>   ```xml
+>   <Request verb="GET" url="/barco-webservice/rest/NetworkWall/alarm">
+>   <Request verb="GET" pid="5045"> <!-- content parameter 5045: "barco-webservice/rest/NetworkWall/alarm" -->
+>   ```
 >
->    - In case the pid attribute is used, parameter 5045 does not need a leading slash ("/").
->    - In case both the url and pid attributes are specified, the pid attribute will be ignored. Typically, only one of these attributes is specified.
-> - It is also possible to specify an absolute URL (e.g. "http://google.com"), which possibly specifies another host (or IP address/port) than the one specified in the corresponding element connection.
+>   - In case the pid attribute is used, parameter 5045 does not need a leading slash ("/").
+>   - In case both the url and pid attributes are specified, the pid attribute will be ignored. Typically, only one of these attributes is specified.
+>
+> - It is also possible to specify an absolute URL (e.g. `http://google.com`), which possibly specifies another host (or IP address/port) than the one specified in the corresponding element connection.
+
 However, this should be used only when there is no other option, because when the specified host becomes unavailable, the element will go into timeout, giving the impression that the host specified in the element wizard is no longer available.
 
 Including a request header (e.g. "Accept", "Content-Type", "Content-Length", etc.) is possible by defining a header. See Protocol.HTTP.Session.Connection.Request.Headers.Header.
@@ -151,10 +153,12 @@ Using the statusCode attribute, you can specify the ID of the parameter in which
 > [!NOTE]
 >
 > - DataMiner behaves as follows based on the received status code (RN 5132):
->    - 2xx (Success): No additional action is performed.
->    - 3xx (Redirection): In case the location response header is present, automatically redirect (301 ""Moved permanently"", 303 "See other", 307 "Temporary redirect", etc.). Note that in case this automatic redirection is not desired, this can be disabled by specifying the customRedirect communication option (See customRedirect). If customRedirect is specified, the protocol implements the redirection logic. In case nothing is done, the element will go into timeout. In case no location response header is returned (300: Multiple choices, 306: Unused), the element will go into timeout.
->    - 4xx (Client error): The element will go into timeout.
->    - 5xx (Server error): The element will go into timeout.
+>
+>   - 2xx (Success): No additional action is performed.
+>   - 3xx (Redirection): In case the location response header is present, automatically redirect (301 ""Moved permanently"", 303 "See other", 307 "Temporary redirect", etc.). Note that in case this automatic redirection is not desired, this can be disabled by specifying the customRedirect communication option (See customRedirect). If customRedirect is specified, the protocol implements the redirection logic. In case nothing is done, the element will go into timeout. In case no location response header is returned (300: Multiple choices, 306: Unused), the element will go into timeout.
+>   - 4xx (Client error): The element will go into timeout.
+>   - 5xx (Server error): The element will go into timeout.
+>
 > - HTTP communication logging can be enabled by setting information logging to level 3 (RN 14439).
 > - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e. upon reception of the WINHTTP_ERROR_TIMEOUT error). From DataMiner 9.0.0 [CU5] (RN 13111) onwards, the retry mechanism will also be triggered when the SLPort process is unable to connect to the web server (i.e. upon reception of the ERROR_WINHTTP_CANNOT_CONNECT error).
 

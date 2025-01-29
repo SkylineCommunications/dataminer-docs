@@ -8,7 +8,7 @@ To add data or change the data of a component:
 
 1. Click on the component or hover the mouse pointer over the component and **click the ![Data icon](~/user-guide/images/dashboards_data.png) icon**.
 
-   In the data pane on the right, any data that does not match the visualization of the component will become unavailable. Data that is compatible with the component will be marked with the following icon: ![Compatible data icon](~/user-guide/images/NewRD_data.png)
+   In the *Data* pane on the right, any data that does not match the visualization of the component will become unavailable. Data that is compatible with the component will be marked with the following icon: ![Compatible data icon](~/user-guide/images/NewRD_data.png)
 
 1. **Drag the compatible data entry** onto the component.
 
@@ -32,7 +32,7 @@ To add data or change the data of a component:
        > [!NOTE]
        > These filters are applied server-side, so if your DMS has many elements, these can help you load the elements you need much faster.
 
-   - For some components, you can add the **complete set** of a certain type of items. In that case, the ![Data](~/user-guide/images/dashboards_data.png) icon will be displayed in front of the group in the data pane, and you will be able to drag the entire group onto the component.
+   - For some components, you can add the **complete set** of a certain type of items. In that case, the ![Data](~/user-guide/images/dashboards_data.png) icon will be displayed in front of the group in the *Data* pane, and you will be able to drag the entire group onto the component.
 
      > [!NOTE]
      >

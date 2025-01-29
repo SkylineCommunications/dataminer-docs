@@ -8,21 +8,21 @@ To create a custom report template from scratch, do the following:
 
 1. In your ASP editor, enter the following base structure:
 
-    ```xml
-    <%@ Language="JScript" %>
-    <!-- #include file="Templates.inc.asp" -->
-    <%
-    // generate web page here
-    %>
-    ```
+   ```xml
+   <%@ Language="JScript" %>
+   <!-- #include file="Templates.inc.asp" -->
+   <%
+   // generate web page here
+   %>
+   ```
 
-2. Under the *// generate webpage here* line, start writing your ASP code.
+1. Under the *// generate webpage here* line, start writing your ASP code.
 
-    > [!TIP]
-    > See also:
-    > [Passing parameters](#passing-parameters)<br> [Including external files in a report template](xref:Including_external_files_in_a_report_template)
+   > [!TIP]
+   > See also:
+   > [Passing parameters](#passing-parameters)<br> [Including external files in a report template](xref:Including_external_files_in_a_report_template)
 
-3. Save the template.
+1. Save the template.
 
 > [!TIP]
 > See also:

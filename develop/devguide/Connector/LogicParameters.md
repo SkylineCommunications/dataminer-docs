@@ -96,13 +96,13 @@ For example, to define a parameter that holds the combination DMA ID/element ID,
 > - Parameters of type "elementdmaid", "elementid" or "elementname" cannot be displayed. To show the values of these parameters, define a parameter of type "read" and perform a "copy" action to copy the value of one of these parameters to the "read" parameter. Alternatively, a SendToDisplay method call (SLProtocol) can be used.
 > - If you want to use the bus address in a command, the command could require either a decimal value or a hex value. Depending on the required format, you can use these Interprete values:
 >   - Bus address is a decimal value, command needs hex bytes
-Example: bus=23133
-use in Interprete: unsigned number, length 2, base 16, double
-->bytes = 5A5D (hex values of bus address)
+>     Example: bus=23133
+>     use in Interprete: unsigned number, length 2, base 16, double
+>     -> bytes = 5A5D (hex values of bus address)
 >   - Bus address contains hex values, command needs ASCII bytes
-example: bus=5AFF
-use in Interprete: numeric text, length 4, string
--> bytes = 35414646 (ASCII values of bus address)
+>     example: bus=5AFF
+>     use in Interprete: numeric text, length 4, string
+>     -> bytes = 35414646 (ASCII values of bus address)
 > - When multiple connections are defined, the parameters of type "ip", "pollingip" and "bus" will show a semicolon-separated list of values.
 
 ### DataMiner Agent information

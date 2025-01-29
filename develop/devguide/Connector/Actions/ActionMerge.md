@@ -139,11 +139,13 @@ Trigger 15300, found in the Class protocols, calls action 15300, which is an “
 > [!NOTE]
 >
 > - When using a write parameter on the child element that will be executing an “aggregate” action, do not set RTDisplay to true. When this is done, it will be processed by SLElement and this will generate an error in the log file even when the merge action was correctly done. The error will look like this:
+>
 >   ```bash
 >   SLElement.exe|11040|CElement::NotifyFunc|ERR|0|!! Generating alarm on an unknown parameter (0)
 >   alarm info: VT_ARRAY|VT_VARIANT (4) ~ 0 VT_UI4 : 236844 ~ 1 VT_I4 : 0 ~ 2 VT_BSTR :
 >   SLProtocol - Elementname ~ 3 VT_ARRAY|VT_BSTR (16) : 16;2014/06/19 12:08:23;13;5;;0;5;11;2910;;0;;;;16;
 >   ```
+>
 > - The type options PCT, COUNT and PCT TOTAL are not supported for actions of type merge.
 
 Only the following combinations of merge actions that trigger an aggregate action are supported:

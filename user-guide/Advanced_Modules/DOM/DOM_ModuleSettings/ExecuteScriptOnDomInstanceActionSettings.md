@@ -7,14 +7,17 @@ uid: ExecuteScriptOnDomInstanceActionSettings
 >[!NOTE]
 > From 10.4.2/10.5.0 onwards<!-- RN 37963 -->, it is possible to override this setting in a `DomDefinition` with the [ModuleSettingsOverrides](xref:DomDefinition#modulesettingsoverrides) property.
 
-This settings object contains the names of the scripts that should be executed after a [DomInstance](xref:DomInstance) is created, updated, or deleted. If no name is filled in, no script will be executed. From DataMiner version 10.3.10/10.4.0 onwards, it is also possible to define which type of script (entry point) should be executed. In earlier DataMiner versions, only the "ID only" type is supported.
+This settings object contains the names of the scripts that should be executed after a [DomInstance](xref:DomInstance) is created, updated, or deleted. If no name is filled in, no script will be executed. From DataMiner version 10.3.10/10.4.0 onwards, it is also possible to define which type of script (entry point) should be executed. In earlier DataMiner versions, only the "ID only" type is supported. From DataMiner 10.5.3/10.6.0 onwards<!-- RN 41780 -->, conditions are supported that allow you to define whether the configured update script should be executed for a `DomInstance` update.
 
 |Property |Type   |Description |
 |---------|-------|------------|
 |OnCreate |string |Name of the script that will be executed after each `DomInstance` is created in this module. |
 |OnUpdate |string |Name of the script that will be executed after each `DomInstance` is updated in this module. |
 |OnDelete |string |Name of the script that will be executed after each `DomInstance` is deleted in this module. |
-|ScriptType |OnDomInstanceActionScriptType |Type of the script that should be executed. See below for more info. |
+|ScriptType |OnDomInstanceActionScriptType |Type of the script that should be executed. See [Script types](#script-types). |
+|OnUpdateTriggerConditions |List&lt;IDomCrudScriptTriggerCondition&gt; |Conditions of which one has to be met before the update script is triggered. See [Conditions](#conditions). |
+
+## Script types
 
 There are currently two types of script, which each have their own unique entry point method:
 
@@ -24,7 +27,7 @@ There are currently two types of script, which each have their own unique entry 
 > [!NOTE]
 > Prior to DataMiner versions 10.5.0/10.5.2<!-- RN 41536 -->, a "Script started" information event is generated when any of the configured scripts are launched. To reduce the load on the database, this no longer happens from those DataMiner versions onwards.
 
-## ID Only type
+### ID Only type
 
 When the "ID Only" type (`IdOnly` enum value) is selected, the Automation script needs to contain an entry point method that has the `AutomationEntryPoint` attribute with argument `AutomationEntryPointType.Types.OnDomInstanceCrud`. When the CRUD action is executed, this method will be called with the following arguments:
 
@@ -49,7 +52,7 @@ public class Script
 }
 ```
 
-## Full CRUD meta type
+### Full CRUD meta type
 
 When the "Full CRUD meta" type (`FullCrudMeta` enum value) is selected, the Automation script needs to contain an entry point method that has the `AutomationEntryPoint` attribute with argument `AutomationEntryPointType.Types.OnDomInstanceCrudWithFullMeta`. When the CRUD action is executed, this method will be called with the following arguments:
 
@@ -80,7 +83,7 @@ public class Script
 }
 ```
 
-### Calculating changes done to a DOM instance in a CRUD script
+#### Calculating changes done to a DOM instance in a CRUD script
 
 From DataMiner 10.4.3/10.5.0 onwards<!-- RN 38364 -->, it is possible to calculate the changes done to a `DomInstance` in a CRUD script using the `GetDifferences` method on the `DomInstanceCrudMeta` object.
 
@@ -189,4 +192,33 @@ namespace Example
         }
     }
 }
+```
+
+## Conditions
+
+From DataMiner 10.5.3/10.6.0 onwards<!-- RN 41780 -->, conditions can be used to prevent the update script from being triggered for each and every `DomInstance` update. This allows you to make a solution more efficient as no unnecessary script triggers are executed. These conditions can be configured by instantiating one of the supported condition classes and adding it to the `OnUpdateTriggerConditions` collection property on the `ExecuteScriptOnDomInstanceActionSettings`. The conditions are evaluated using a logical 'OR', meaning that only one condition needs to be true for the script to trigger.
+
+> [!IMPORTANT]
+> When you configure conditions, the update script will no longer be triggered when a status transition is done. A status-related condition to define a trigger based on a specific status is currently not available.
+
+### FieldValueUpdatedTriggerCondition
+
+This condition type allows you to check whether a `FieldValue` for a given `FieldDescriptor` has been added, updated, or removed. It also supports multiple sections, meaning the condition will be met if:
+
+- A **new** `FieldValue` is added in a new or existing `Section`.
+- An **existing** `FieldValue` is deleted from a deleted or existing `Section`.
+
+To use this condition, define the ID of the `FieldDescriptor` by passing it to the condition's constructor.
+
+Example:
+
+```csharp
+var licensePlate = new FieldDescriptorID(Guid.Parse("81915fe0-8f55-4ad1-8da5-3b703f9e7842"));
+var insuranceId = new FieldDescriptorID(Guid.Parse("7cd4366c-983c-46d2-aa92-e0308a3102e5"));
+
+moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new List<IDomCrudScriptTriggerCondition>
+{
+   new FieldValueUpdatedTriggerCondition(licensePlate),
+   new FieldValueUpdatedTriggerCondition(insuranceId)
+};
 ```

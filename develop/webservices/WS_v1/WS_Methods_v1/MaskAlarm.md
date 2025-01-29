@@ -6,6 +6,8 @@ uid: MaskAlarm
 
 Use this method to mask an alarm for a certain period of time.
 
+Deprecated since DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11.<!-- RN 40240 -->. From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards, use the [MaskAlarmV2](xref:MaskAlarmV2) method instead.
+
 ## Input
 
 | Item | Format | Description |

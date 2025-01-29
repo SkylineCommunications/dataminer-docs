@@ -12,9 +12,9 @@ To change the settings of a low-code app page/panel:
 
 1. Select a page in the leftmost pane of the app editor. If you want to edit the panel settings, open the *panels* section in the page configuration pane.
 
-1. Without selecting any of the low-code app components, in the configuration pane to the right, go to the settings tab.
+1. Without selecting any of the low-code app components, in the configuration pane to the right, go to the *Settings* pane.
 
-   If a component is selected, this tab will instead show the settings for that component. In that case, click an empty area of the low-code app first.
+   If a component is selected, this pane will instead show the settings for that component. In that case, click an empty area of the low-code app first.
 
 1. Configure the following settings as required:
 

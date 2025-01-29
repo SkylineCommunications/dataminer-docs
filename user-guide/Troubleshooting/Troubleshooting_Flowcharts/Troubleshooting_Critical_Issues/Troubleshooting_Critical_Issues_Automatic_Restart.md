@@ -62,13 +62,13 @@ classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 Automaticrestart([Automatic restart])
-CrashdumpDetected{{"Crashdump found <br> at issue time? <br/>  C:\Skyline DataMiner\Logging\CrashDump"}}
-MinidumpDetected{{"Minidump found <br> at issue time? <br/>  C:\Skyline DataMiner\Logging\MiniDump"}}
-CheckWatchdog{{"Process disappearance <br> in log? <br/> C:\Skyline DataMiner\SLWatchdog2.txt"}}
-UserActions["Did a user <br> trigger a restart?<br/> Check C:\Skyline DataMiner\SLWatchdog2_BAK.txt.<br/> "]
-OSissues["Unexpected OS shutdown/problems, <br/> e.g. power outage, etc."]
-ProcessCrash["1. Save .high Crashdump <br> + note timestamp. <br/>2. Collect minidump/<br>Log Collector logging. <br/>3. Investigate using the <br> Generic Investigation Flow. <br/>4. Send crashdump + logging <br> + conclusions to Create squads. "]
-ProcessDisappearance["1. Identify process that <br> disappeared + timestamp.<br/> 2. Collect minidump. <br/> 3. Set up process dump <br> in Log Collector. <br/> 4.Identify DataMiner actions <br> during disappearance, <br/>using the Generic <br> Investigation Flow."]
+CrashdumpDetected{{"Crashdump found at issue time? C:\Skyline DataMiner\Logging\CrashDump"}}
+MinidumpDetected{{"Minidump found at issue time? C:\Skyline DataMiner\Logging\MiniDump"}}
+CheckWatchdog{{"Process disappearance in log? C:\Skyline DataMiner\SLWatchdog2.txt"}}
+UserActions["Did a user trigger a restart? Check C:\Skyline DataMiner\SLWatchdog2_BAK.txt. "]
+OSissues["Unexpected OS shutdown/problems, e.g. power outage, etc."]
+ProcessCrash["1\. Save \.high Crashdump + note timestamp. <br/>2\. Collect minidump/Log Collector logging. <br/>3\. Investigate using the Generic Investigation Flow. <br/>4\. Send crashdump + logging + conclusions to Create squads. "]
+ProcessDisappearance["1\. Identify process that disappeared + timestamp.<br/>2\. Collect minidump. <br/>3\. Set up process dump in Log Collector. <br/> 4\. Identify DataMiner actions during disappearance, using the Generic Investigation Flow."]
 %% Connect blocks %%
 Automaticrestart --- CrashdumpDetected
 CrashdumpDetected --- |Yes| ProcessCrash

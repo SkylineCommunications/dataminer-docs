@@ -13,7 +13,7 @@ The "Queries" data item allows you to construct a query in order to tap into the
 
 1. In edit mode, select the dashboard component for which you want to use a query as a data input.
 
-1. In the data pane, select *Queries* and click the + icon to add a new query.
+1. In the *Data* pane, select *Queries* and click the + icon to add a new query.
 
 1. Specify a name for the query.
 
@@ -36,21 +36,21 @@ The "Queries" data item allows you to construct a query in order to tap into the
 
 ## Duplicating a query
 
-From DataMiner 10.3.0 [CU10]/10.4.1 onwards, you can duplicate a query. To do so, click the "..." button next to the query in the data pane and then select *Duplicate*.
+From DataMiner 10.3.0 [CU10]/10.4.1 onwards, you can duplicate a query. To do so, click the "..." button next to the query in the *Data* pane and then select *Duplicate*.
 
 ## Notes on GQI queries
 
 Please note the following regarding query data input:
 
-- When a query has been created, the columns from the table that results from the query are available as individual data items in the data pane, so that you can use them to filter or group a component.
+- When a query has been created, the columns from the table that results from the query are available as individual data items in the *Data* pane, so that you can use them to filter or group a component.
 
 - It is not possible to retrieve data from a stopped element.
 
 - From DataMiner 10.1.0/10.1.3 onwards, dynamic units will automatically be used when applicable for the retrieved data if this is enabled in the dashboard settings. This means that parameter units will change dynamically based on their value and protocol definition. You can override the behavior configured for the dashboard in the settings for the component.
 
-- From DataMiner 10.2.0/10.1.4 onwards, if a row is selected in a table component that uses a query data source, any view, service, or element linked to that row is also exposed as a data source. In practice, this means that a data source will be available in the *Components* or *Feeds* section of the data pane (depending on your DataMiner version) that will change based on the selection in the table.
+- From DataMiner 10.2.0/10.1.4 onwards, if a row is selected in a table component that uses a query data source, any view, service, or element linked to that row is also exposed as a data source. In practice, this means that a data source will be available in the *Components* or *Feeds* section of the *Data* pane (depending on your DataMiner version) that will change based on the selection in the table.
 
-  ![Selected rows](~/user-guide/images/Selected_Rows.png)<br>*Data tab in DataMiner 10.4.12*
+  ![Selected rows](~/user-guide/images/Selected_Rows.png)<br>*Data pane in DataMiner 10.4.12*
 
 - From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range component by selecting the *From data* checkbox. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this setting is called "*From feed*".
 

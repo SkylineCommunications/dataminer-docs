@@ -18,7 +18,7 @@ The following options are available to fine-tune the component layout:
 
 - *Icon*: Icon that will be displayed in the numeric input box.
 
-In the *Settings* tab, you can also configure the following optional settings:
+In the *Settings* pane, you can also configure the following optional settings:
 
 - *Emit value on*: Determines when the value in the box becomes available as data. This can be when the user presses Enter ("Enter"), when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change"). If you select *Focus lost*, the value will also become available when the user presses Enter. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this setting is called "*Feed value on*" instead.
 
