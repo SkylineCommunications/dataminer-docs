@@ -1,6 +1,6 @@
 ---
 uid: Managing_DCP_users
-keywords: cloud
+keywords: cloud users
 ---
 
 # Managing dataminer.services users

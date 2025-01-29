@@ -1,6 +1,6 @@
 ---
 uid: Viewing_info_on_DMS
-keywords: cloud
+keywords: cloud admin, cloud administration
 ---
 
 # Viewing information on DataMiner Systems

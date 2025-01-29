@@ -1,6 +1,6 @@
 ---
 uid: dataminerservices
-keywords: cloud
+keywords: cloud, dataminer cloud
 ---
 
 # dataminer.services

@@ -1,7 +1,7 @@
 ---
 uid: Investigating_Dataminerservices_Feature_Issues
 description: Check the cloud connection, check if all DxMs are OK, check if requirements are met, and validate the internal network configuration.
-keywords: cloud
+keywords: cloud issues, cloud connection, connect to the cloud, connecting to the cloud
 ---
 
 # Investigating issues with dataminer.services features

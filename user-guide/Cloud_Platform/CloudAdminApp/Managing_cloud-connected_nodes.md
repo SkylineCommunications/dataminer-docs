@@ -1,6 +1,6 @@
 ---
 uid: Managing_cloud-connected_nodes
-keywords: cloud
+keywords: cloud nodes
 ---
 
 # Managing the nodes of a DMS connected to dataminer.services

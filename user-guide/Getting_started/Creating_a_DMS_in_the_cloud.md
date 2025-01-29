@@ -1,7 +1,7 @@
 ---
 uid: Creating_a_DMS_in_the_cloud
 description: With DaaS, you can create a complete DataMiner System in no time, fully hosted in the cloud, allowing easy scaling both vertically and horizontally.
-keywords: cloud
+keywords: dms in the cloud
 ---
 
 # Creating a DataMiner System in the cloud (DaaS)

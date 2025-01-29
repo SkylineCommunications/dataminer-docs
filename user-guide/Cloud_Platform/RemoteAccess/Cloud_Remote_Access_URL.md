@@ -1,6 +1,6 @@
 ---
 uid: Cloud_Remote_Access_URL
-keywords: cloud
+keywords: cloud connection, cloud url
 ---
 
 # Finding the remote access URL

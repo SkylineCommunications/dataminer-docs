@@ -1,6 +1,6 @@
 ---
 uid: Managing_DCP_keys
-keywords: cloud
+keywords: cloud keys
 ---
 
 # Managing dataminer.services keys

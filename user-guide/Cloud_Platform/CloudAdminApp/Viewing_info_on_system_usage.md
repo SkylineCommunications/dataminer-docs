@@ -1,6 +1,6 @@
 ---
 uid: Viewing_info_on_system_usage
-keywords: cloud
+keywords: cloud usage
 ---
 
 # Viewing information on system usage

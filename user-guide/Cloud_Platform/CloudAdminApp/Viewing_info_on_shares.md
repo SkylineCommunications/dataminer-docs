@@ -1,6 +1,6 @@
 ---
 uid: Viewing_info_on_shares
-keywords: cloud
+keywords: cloud shares
 ---
 
 # Viewing information on shares

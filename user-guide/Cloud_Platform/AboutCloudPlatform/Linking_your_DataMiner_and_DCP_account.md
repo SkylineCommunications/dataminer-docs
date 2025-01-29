@@ -1,6 +1,6 @@
 ---
 uid: Linking_your_DataMiner_and_DCP_account
-keywords: cloud
+keywords: cloud account
 ---
 
 # Linking your DataMiner account to your dataminer.services account

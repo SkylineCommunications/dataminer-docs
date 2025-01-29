@@ -1,6 +1,6 @@
 ---
 uid: CloudPackages
-keywords: cloud
+keywords: dxm
 ---
 
 # DataMiner Cloud Pack

@@ -1,6 +1,6 @@
 ---
 uid: CloudConnectionVerification
-keywords: cloud
+keywords: cloud organization, cloud connection
 ---
 
 # Getting your organization verified

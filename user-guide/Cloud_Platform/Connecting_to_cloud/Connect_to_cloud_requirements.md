@@ -1,7 +1,7 @@
 ---
 uid: Connect_to_cloud_requirements
 description: Use at least DataMiner 10.1.12, make sure the necessary endpoints can be reached, and allow HTTPS traffic via port TCP 5100 on the internal network.
-keywords: cloud
+keywords: cloud requirements, cloud connection
 ---
 
 # Requirements for connection to dataminer.services
