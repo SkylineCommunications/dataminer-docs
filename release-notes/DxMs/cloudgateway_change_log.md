@@ -22,7 +22,7 @@ The CloudGateway will offload [the local setting for Remote Access and Live Shar
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload the ApiGateway health [ID ]
 
-The CloudGateway will offload the health of the ApiGateway. This allows to provide better technical support and for dataminer.services to validate if everything is correctly configured to use the DataMiner Cube desktop app remotely via dataminer.services.
+The CloudGateway will offload the health of the ApiGateway. This allows for better technical support and for dataminer.services to validate if everything is correctly configured to use the DataMiner Cube desktop app remotely via dataminer.services.
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload error information if the state of the DMA cannot be determined [ID ]
 
