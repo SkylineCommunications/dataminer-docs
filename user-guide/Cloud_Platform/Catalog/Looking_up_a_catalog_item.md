@@ -61,7 +61,7 @@ GET
 
 ### Route parameters
 
-- Route parameter "catalogId" is the ID of the Catalog item of which you want to look up information from, which is the same as the ID used to [register the Catalog item](#registering-a-catalog-item-with-the-api). This must be a valid GUID.
+- Route parameter "catalogId" is the ID of the Catalog item of which you want to look up information from, which is the same as the ID used to [register the Catalog item](xref:Register_Catalog_Item). This must be a valid GUID.
 
 To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
 
@@ -94,6 +94,6 @@ GET
 
 ### Route parameters
 
-- Route parameter "catalogId" is the ID of the Catalog item of which you want to look up versions from, which is the same as the ID used to [register the Catalog item](#registering-a-catalog-item-with-the-api). This must be a valid GUID.
+- Route parameter "catalogId" is the ID of the Catalog item of which you want to look up versions from, which is the same as the ID used to [register the Catalog item](xref:Register_Catalog_Item). This must be a valid GUID.
 
 To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
