@@ -134,7 +134,7 @@ A number of enhancements have been made to prevent SLNet modules from forwarding
 
 #### SLAnalytics: New check to verify if the incident tracking leader is still a member of the current DMS [ID 41836]
 
-<!-- MR 10.5.0 - FR 10.5.3 -->
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 At DataMiner start-up, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
 
