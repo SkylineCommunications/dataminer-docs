@@ -118,6 +118,12 @@ When you create a new low-code app on the root page of a DataMiner Agent (e.g. `
 
 From now on, the zoom factor for arrows and KPI labels on edges will be capped. This means that, when you keep zooming in on a node edge graph, at some point, the magnification factor of the arrows and the KPI labels on edges will no longer change.
 
+#### Dashboards/Low-Code Apps - Grid component: Scroll position will now be retained when new data is received [ID 42071]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a *Grid* component without a fixed page size received new data, in some cases, the current scroll position would not be retained. From now on, the scroll position will be left untouched when new data is received.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps - Table component: Refetching data would cause the data in the table to shift across the different pages [ID 41638]
