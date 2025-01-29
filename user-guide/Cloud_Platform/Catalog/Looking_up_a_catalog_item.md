@@ -35,18 +35,17 @@ When you open up the Catalog, a search box is displayed.
 
 ## Looking up an item using the Catalog API
 
-The catalog API allows you to retrieve information of a Catalog item.
+The Catalog API allows you to retrieve information of a Catalog item.
 
 > [!NOTE]
-> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
-> The API calls use the following rate-limiting policy:
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read Catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**. The API calls use the following rate limiting policy:
 >
-> - Partition key: IP address or host name of connection
+> - Partition key: IP address or hostname of connection
 > - Burst limit: 100 requests
 > - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
 > - No queueing for extra requests beyond the token bucket
 
-### API Definition
+### API definition
 
 For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
 
@@ -63,19 +62,18 @@ GET
 
 ### Route parameters
 
-- Route parameter "catalogId" is the ID of the Catalog item of which you want to look up information from, which is the same as the ID used to [register the Catalog item](xref:Register_Catalog_Item). This must be a valid GUID.
+Route parameter "catalogId" is the ID of the Catalog item for which information will be retrieved, which is the same as the ID used to [register the Catalog item](xref:Register_Catalog_Item). This must be a valid GUID.
 
 To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
 
 ## Looking up a version of an item with the Catalog API
 
-The catalog API call allows you to retrieve version information of a Catalog item.
+The *versions* API call allows you to retrieve version information for a Catalog item.
 
 > [!NOTE]
-> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
-> The API calls use the following rate-limiting policy:
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Read Catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**. The API calls use the following rate limiting policy:
 >
-> - Partition key: IP address or host name of connection
+> - Partition key: IP address or hostname of connection
 > - Burst limit: 100 requests
 > - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
 > - No queueing for extra requests beyond the token bucket
@@ -97,6 +95,6 @@ GET
 
 ### Route parameters
 
-- Route parameter "catalogId" is the ID of the Catalog item of which you want to look up versions from, which is the same as the ID used to [register the Catalog item](xref:Register_Catalog_Item). This must be a valid GUID.
+Route parameter "catalogId" is the ID of the Catalog item for which version information will be retrieved, which is the same as the ID used to [register the Catalog item](xref:Register_Catalog_Item). This must be a valid GUID.
 
 To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.

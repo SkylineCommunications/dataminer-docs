@@ -43,19 +43,17 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
 
    The item will be pushed to the DataMiner System. In the Admin app, you can check the status of the deployment. See [Viewing information on deployments](xref:Viewing_info_on_deployments).
 
-
 ## Deploying a Catalog item to your system with the API
 
-The deploy API call allows you to deploy a Catalog item to a DataMiner System.
-
+The *deploy* API call allows you to deploy a Catalog item to a DataMiner System.
 
 > [!NOTE]
-> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Deploy a version of a catalog item* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**.  
-> The API calls use the following rate-limiting policy:
->- Partitionkey: IP address or host name of connection
->  - Burst limit: 100 requests
->  - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
->  - No queueing for extra requests beyond the token bucket
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Deploy a version of a Catalog item* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**. The API calls use the following rate limiting policy:
+>
+> - Partition key: IP address or host name of connection
+> - Burst limit: 100 requests
+> - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
+> - No queueing for extra requests beyond the token bucket
 
 ### API Definition
 
@@ -74,12 +72,12 @@ GET
 
 ### Route parameters
 
-- Route parameter "catalogId" is the ID of the Catalog item of which you want to download a version from, which is the same as the ID used to [register the Catalog item](xref:Register_Catalog_Item). This must be a valid GUID.
+- Route parameter "catalogId" is the ID of the Catalog item that will be deployed, which is the same as the ID used to [register the Catalog item](xref:Register_Catalog_Item#registering-a-catalog-item-with-the-api). This must be a valid GUID.
 
   To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
 
-- Route parameter "versionId" is the version number of the Catalog item you want to download.
+- Route parameter "versionId" is the version number of the Catalog item that will be deployed.
 
-- Route parameter "coordinationId" is the id of the DataMiner System to deploy to.
+- Route parameter "coordinationId" is the ID of the DataMiner System to deploy to.
 
-  To obtain this ID for an existing DataMiner system, navigate to its details page in the [Admin](https://admin.dataminer.services/). The ID is the last GUID of the URL.
+  To obtain this ID for an existing DataMiner System, navigate to its details page in the [Admin app](https://admin.dataminer.services/). The ID is the last GUID of the URL.
