@@ -79,6 +79,12 @@ When a previously deleted booking was created again with the same ID, up to now,
 
 When the same version of a DVE connector was uploaded twice, the production version of all DVE child elements using another version of that connector as production version would incorrectly have their production version set to the newly uploaded version.
 
+#### Protocols: Problem when deleting an element with a parameter that had a duplicate RawType tag configured [ID 41871]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When an element was deleted, a run-time error could occur in SLProtocol when a parameter had a duplicate `RawType` tag configured.
+
 #### SNMP managers would incorrectly receive some or all active alarms at DMA start-up [ID 41878]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->

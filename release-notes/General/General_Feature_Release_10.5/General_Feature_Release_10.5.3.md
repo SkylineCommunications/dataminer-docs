@@ -105,6 +105,15 @@ Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* 
 
 In order to override the timeout for a Virtual Function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
 
+#### Swarming: Clearer exception will now be thrown when the state of an element is changed while the element is being swarmed [ID 41634]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+When the state of an element was changed while that element was being swarmed, up to now, a "host unknown" exception would be thrown.
+
+From now on, an *SL_SWARMING_IN_PROGRESS* exception will be thrown instead. This exception will now clearly state that the update cannot be performed because the element is being swarmed.
+
 #### DataMiner Connectivity Framework: Enhanced processing of SRM services by the connectivity manager [ID 41649]
 
 <!-- MR 10.5.0 - FR 10.5.3 -->
@@ -249,6 +258,12 @@ Up to now, when a Min or Max aggregation was performed on a datetime column, the
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When the same version of a DVE connector was uploaded twice, the production version of all DVE child elements using another version of that connector as production version would incorrectly have their production version set to the newly uploaded version.
+
+#### Protocols: Problem when deleting an element with a parameter that had a duplicate RawType tag configured [ID 41871]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When an element was deleted, a run-time error could occur in SLProtocol when a parameter had a duplicate `RawType` tag configured.
 
 #### SNMP managers would incorrectly receive some or all active alarms at DMA start-up [ID 41878]
 
