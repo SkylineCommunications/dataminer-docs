@@ -151,15 +151,22 @@ Incorrect IP addresses in *DMS.xml* cause IP conflicts within the DataMiner Syst
 
 #### Solution
 
-1. Compare the IP addresses in *DMS.xml* with the Failover configuration in DataMiner Cube to identify discrepancies and find the incorrect IP addresses.
+1. Check the *DMS.xml* configuration:
+
+   - If there are Agents in the cluster that do start up, connect to one of those Agents and compare the IP addresses in *DMS.xml* with the Failover configuration in DataMiner Cube to identify discrepancies and find the incorrect IP addresses.
+
+   - If all Agents in the cluster fail to start up, manually inspect each *DMS.xml* file to check if the IP addresses in the file match the actual IPs assigned to each Agent.
 
 1. Update the *DMS.xml* file with the correct IP addresses.
 
-1. Reinstall NATS to ensure all Agents can come online without issues.
+1. Reinstall NATS to ensure all Agents can come online without issues. See [NATS troubleshooting](xref:Investigating_NATS_Issues#remaining-steps) for details.
 
-1. Check the configuration to ensure that each DMA retains its respective IP address.
+1. Check *DMS.xml* to ensure that each DMA retains its respective IP address.
 
 1. Verify that no two PCs have similar hostnames that could be truncated to identical names in *DMS.xml*.
+
+> [!TIP]
+> See also: [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA)
 
 ## NATS issue
 
@@ -169,7 +176,7 @@ Incorrect IP addresses in *DMS.xml* cause IP conflicts within the DataMiner Syst
 
 - Errors in the *SLDataMiner.txt* file, including:
 
-  - Initializing Cloud Bridge.
+  - `Initializing Cloud Bridge`
   - "ERR" logs that include references to NATS.
 
 - *SLWatchdog2.txt* contains logs referencing NATS.
@@ -186,13 +193,11 @@ NATS is not running as expected. As every DataMiner Agent must be able to reach 
 
 ### Solution
 
-1. Check if NAS and NATS are running.
+1. Check in the Task Manager if NAS and NATS are running.
 
-1. Check the NAS and NATS configuration.
+1. [Reinstall NAS and NATS](xref:Investigating_NATS_Issues#remaining-steps).
 
-1. Recreate SLCloud.xml
-
-1. If the steps above fail, [reinstall NATS and NAS](xref:Investigating_NATS_Issues#remaining-steps).
+1. If this does not fix the issue, follow the steps under [NATS Troubleshooting](xref:Investigating_NATS_Issues).
 
 ## Cassandra issue
 
@@ -255,7 +260,7 @@ DataMiner is unable to establish a connection to the database. This can be cause
 
    Look for the log line indicating the service is listening for CQL clients: `DEBUG [main] 2024-XX-XX XX:XX:XX Server.java:XX - Starting listening for CQL clients on /<IP>:9042.`
 
-   If the node is down because of the disk policy, other nodes in the cluster will report it as down.
+   If the node is down because of the disk policy, other nodes in the cluster will report it as down. The affected node itself might still report its state as "UN" even when it is actually down, which is why it is important to check *debug.log*. Alternatively, you could also check the node status via nodetool on other nodes in the cluster, as these should report the correct state.
 
 > [!TIP]
 > See also: [Troubleshooting – Cassandra](xref:Troubleshooting_Cassandra)
