@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 30 January 2025 - Enhancement - CloudGateway 2.17.1 - Cloud connection performance and stability improvements [ID ]
 
-From now on the CloudGateway DxM will create multiple connections to dataminer.services instead of one which is possible since [Remote Access performance and stability improvements](xref:DCP_change_log_2025#27-january-2025---enhancement---remote-access-performance-and-stability-improvements-id-42043). 
+From now on the CloudGateway DxM will create multiple connections to dataminer.services instead of one which is possible since [Remote Access and Live Sharing performance and stability improvements](xref:DCP_change_log_2025#27-january-2025---enhancement---remote-access-and-live-sharing-performance-and-stability-improvements-id-42043). 
 
 This enhancement improves **performance** because it allows a higher request througput.
 Next to that it also improves the **stability** of the cloud connection. Connections will be able to disconnect and reconnect without having any downtime for Remote Access or Live Sharing features, as long as there is one or more connections still up. It is expected for connections to disconnect (and reconnect) at a regular basis, by example if (rolling) upgrades are deployed at dataminer.services or services are scaled down.
