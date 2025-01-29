@@ -1,5 +1,6 @@
 ---
 uid: Troubleshooting_STaaS
+keywords: cloud storage, cloud issues
 ---
 
 # Troubleshooting - STaaS

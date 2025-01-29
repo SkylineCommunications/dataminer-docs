@@ -1,5 +1,6 @@
 ---
 uid: Sharing
+keywords: cloud shares, cloud sharing
 ---
 
 # DataMiner Sharing

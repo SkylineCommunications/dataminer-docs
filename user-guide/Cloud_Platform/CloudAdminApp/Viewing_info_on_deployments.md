@@ -1,5 +1,6 @@
 ---
 uid: Viewing_info_on_deployments
+keywords: cloud deployments
 ---
 
 # Viewing information on deployments
