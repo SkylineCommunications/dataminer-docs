@@ -271,6 +271,13 @@ When the same version of a DVE connector was uploaded twice, the production vers
 
 When an element was deleted, a run-time error could occur in SLProtocol when a parameter had a duplicate `RawType` tag configured.
 
+#### No longer possible to clear or update an alarm associated with a general information parameter [ID 41877]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39193 -->
+
+When an alarm had been generated for a general information parameter (i.e. a parameter with an ID within the range 64502 to 64999), it would incorrectly not be possible to clear or update that alarm.
+
 #### SNMP managers would incorrectly receive some or all active alarms at DMA start-up [ID 41878]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
