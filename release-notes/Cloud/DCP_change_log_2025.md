@@ -9,12 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-
-### 28 January 2025 - New Feature - Catalog API - Deploying a Catalog item using an organization key [ID 41987]
+### 28 January 2025 - New feature - Catalog API - Deploying a Catalog item using an organization key [ID 41987]
 
 It is now possible to deploy a Catalog item to a cloud connected system using an organization key.
 
-### 28 January 2025 - Fix - Catalog API - Registration failed due to invalid artifact references in Catalog versions [ID 41985]
+### 28 January 2025 - Fix - Catalog API - Registration failed because of invalid artifact references in Catalog versions [ID 41985]
 
 A Catalog registration call could fail because existing Catalog versions had invalid artifact references.
 
