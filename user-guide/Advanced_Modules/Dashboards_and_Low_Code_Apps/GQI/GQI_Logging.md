@@ -66,12 +66,6 @@ Add the following configuration:
 
 ```json
 {
-  "Logging": {
-    "LogLevel": {
-      "Default": "Debug",
-      "Microsoft": "Information"
-    }
-  },
   "Serilog": {
     "MinimumLevel": {
       "Default": "Debug",
