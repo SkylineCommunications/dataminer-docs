@@ -6,7 +6,7 @@ uid: CommunicationGateway_change_log
 
 #### 28 January 2025 - Enhancement - CommunicationGateway 5.1.0 - Node ID has a fixed value [ID 41784]
 
-The node ID of a CommunicationGateway is now assigned a fixed value, enabling middleware to target a specific instance of its choice. This enhancement was introduced to allow middleware to prioritize the CommunicationGateway instance running on the same machine as where the middleware is hosted.
+The node ID of a CommunicationGateway instance is now assigned a fixed value, enabling middleware to target a specific instance of its choice. This enhancement was introduced to allow middleware to prioritize the CommunicationGateway instance running on the same machine as where the middleware is hosted.
 
 > [!NOTE]
 > For this to work as intended, connectors need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 6.1.0](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x#prioritize-connection-to-the-local-communicationgateway-instance-id-41784) or higher.
