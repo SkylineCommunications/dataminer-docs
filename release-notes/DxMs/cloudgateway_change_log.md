@@ -14,7 +14,7 @@ Next to that it also improves the **stability** of the cloud connection. Connect
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Automatically force refresh access token when the cloud session is manually renewed [ID ]
 
-From now on, when the [cloud session is renewed](xref:Cloud_Connection_Issues#check-the-cloud-session) manually, another access token which is used for STaaS by example, will be refreshed instantly while before it could take up to 30 minutes.
+From now on, when the [cloud session is renewed](xref:Cloud_Connection_Issues#check-the-cloud-session) manually, another access token, which is used by STaaS for example, will be refreshed instantly while before it could take up to 30 minutes.
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload the local setting for Remote Access and Live Sharing [ID ]
 
