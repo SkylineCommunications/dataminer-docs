@@ -13,9 +13,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 You can now use the Catalog API to deploy a Catalog item to a system connected to dataminer.services using an organization key.
 
-### 28 January 2025 - Fix - Catalog API - Registration failed because of invalid artifact references in Catalog versions [ID 41985]
+### 28 January 2025 - Fix - Catalog API - Registration failed because of invalid artifact references in Catalog item versions [ID 41985]
 
-A Catalog registration call could fail because existing Catalog versions had invalid artifact references.
+A Catalog registration call could fail because existing Catalog item versions had invalid artifact references.
 
 ### 27 January 2025 - Enhancement - Remote Access performance and stability improvements [ID 42043]
 
