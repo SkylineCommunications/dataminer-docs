@@ -142,6 +142,12 @@ Also, from now on, a new leader will be elected when the former leader has left 
 
 *\* In DataMiner Cube, the leader can be configured in the *Leader DataMiner ID* box, which can be found in *System Center > System settings > Analytics config > Automatic incident tracking*.*
 
+#### Service & Resource Management: Enhanced performance when processing history entries for booking instances and resources [ID 41842]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Up to now, history entries for booking instances and resources would be processed individually. From now on, they will be processed in batches of 100 entries. This will considerably enhance overall performance when processing these history entries.
+
 #### Smart baselines will now also get capped when the parameter only has either a low value or a high value [ID 41870]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
