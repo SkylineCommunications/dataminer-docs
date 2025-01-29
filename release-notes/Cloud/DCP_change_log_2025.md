@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 28 January 2025 - New feature - Catalog API - Deploying a Catalog item using an organization key [ID 41987]
 
-It is now possible to deploy a Catalog item to a cloud connected system using an organization key.
+You can now use the Catalog API to deploy a Catalog item to a system connected to dataminer.services using an organization key.
 
 ### 28 January 2025 - Fix - Catalog API - Registration failed because of invalid artifact references in Catalog versions [ID 41985]
 
