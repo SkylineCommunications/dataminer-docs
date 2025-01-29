@@ -26,7 +26,7 @@ The CloudGateway will offload the health of the ApiGateway. This allows for bett
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload error information if the state of the DMA cannot be determined [ID ]
 
-The CloudGateway will offload error information in case the running state of the DMA cannot be determined, by example if the SSL certificate for the web apis is invalid. This allows to provide better technical support.
+The CloudGateway will offload error information in case the running state of the DMA cannot be determined, for example when the SSL certificate for the web apis is invalid. This allows to provide better technical support.
 
 #### 10 December 2024 - Enhancement - CloudGateway 2.16.0 - Dependencies updated [ID 41681]
 
