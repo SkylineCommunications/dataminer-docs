@@ -232,23 +232,7 @@ Any errors that occur during a migration process will be displayed in a pop-up w
 
 - To check the migration server logging, go to `C:\Skyline DataMiner\Logging` and open *SLDBConnection.txt*.
 
-- If you encounter **issues when you start a migration** (e.g. “No connection with DataMiner”), check the following NATS message broker log files:
-
-  - `C:/Skyline DataMiner/Logging/SLMessageBroker.txt`
-  - `C:/Skyline DataMiner/Logging/SLMessageBroker.Crash.txt`
-
-- If you encounter an **issue initializing all the Agents**, check whether the logging of the *SLCCMigrator.exe* tool contains a line mentioning "*No responders are available for the request.*". Alternatively, you can also identify this issue by going to `http://<ip>:8222/varz` and checking if the "cluster" tag mentions all the IPs in the cluster. To resolve this issue:
-
-  1. Make sure all Agents are online.
-
-  1. Open the [SLNetClientTest tool](xref:SLNetClientTest_tool), and connect to the Agent that is not initialized.
-
-  1. In the *Build Message* tab, send a *NatsCustodianResetNatsRequest* (leaving the *IsDistributed* property set to false).
-
-  1. Initialize the Agents again using the *Initialize* button for these Agents in the migrator tool, and continue with the migration procedure as detailed above.
-
-  > [!CAUTION]
-  > Always be very careful when you use the SLNetClientTest tool, as it allows actions that can have far-reaching consequences for a DataMiner System. Always ask for support in case you need to use this tool and something is not clear.
+- If you encounter **issues when you start a migration** (e.g. “No connection with DataMiner”), check if there are any [NATS issues](xref:Investigating_NATS_Issues)
 
 - If **TLS** is enabled on the Elasticsearch or OpenSearch nodes and **some Agents do not initialize**, you can check the connection to the Elasticsearch/OpenSearch nodes as follows:
 
