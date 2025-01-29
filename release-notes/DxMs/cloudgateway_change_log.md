@@ -4,7 +4,7 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Cloud connection performance and stability improvements [ID ]
+#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Cloud connection performance and stability improvements [ID 41733]
 
 From now on the CloudGateway DxM will create multiple connections to dataminer.services instead of one, which is possible since [Remote Access and Live Sharing performance and stability improvements](xref:DCP_change_log_2025#27-january-2025---enhancement---remote-access-and-live-sharing-performance-and-stability-improvements-id-42043). 
 
