@@ -10,7 +10,7 @@ From now on, when the [cloud session is renewed](xref:Cloud_Connection_Issues#ch
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offloading of local setting for Remote Access and Live Sharing [ID 42080]
 
-Cloud Gateway will now offload [the local setting for Remote Access and Live Sharing](xref:Disabling_Remote_Access_and_Live_Sharing).
+Cloud Gateway will now offload [the local setting for Remote Access and Live Sharing](xref:Disabling_Remote_Access_and_Live_Sharing). This allows for better technical support and for dataminer.services to validate if everything is correctly configured to use the DataMiner Cube desktop app remotely via dataminer.services.
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offloading of API Gateway health [ID 42080]
 
