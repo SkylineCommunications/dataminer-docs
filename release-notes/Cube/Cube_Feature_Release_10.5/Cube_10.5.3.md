@@ -119,6 +119,15 @@ Up to now, when a correlated alarm appeared in a linked alarm tab because it mat
 
 - When the correlated alarm does not match the filter, and none of the base alarms match the filter, then neither the correlated alarm nor the base alarms will be shown.
 
+#### Web apps: GQI DxM version displayed in About box [ID 42003]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When a DataMiner web app is using the GQI DxM to build and run GQI queries, the version of the GQI DxM will now be displayed in the app's *About* box.
+
+> [!NOTE]
+> When the web app is using SLHelper instead of the GQI DxM, the *About* box will not display any GQI version. Instead, it will display "no DxM".
+
 ### Fixes
 
 #### DataMiner Cube desktop app: Some Cube sessions would not get closed correctly [ID 41831]
