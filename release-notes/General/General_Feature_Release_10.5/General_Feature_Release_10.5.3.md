@@ -61,6 +61,59 @@ moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new
 };
 ```
 
+#### Relational anomaly detection [ID 42034]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. User can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related. Whenever the relation is broken, RAD will detect this and generate suggestion events. A suggestion event will be generated for each parameter instance in the group where a broken relation was detected.
+
+##### Configuration file
+
+Per DataMiner Agent, the above-mentioned parameter groups must be configured in the *C:\\Skyline DataMiner\\Analytics\\RelationalAnomalyDetection.xml* file. This file will be read when SLAnalytics starts up, when RAD is enabled or re-enabled, or when a *ReloadMadConfigurationMessage* is sent.
+
+The configuration file must be formatted as follows.
+
+```xml
+<?xml version="1.0" ?>
+<RelationalAnomalyDetection>
+  <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]">
+    <Instance>[INSTANCE1]</Instance>
+    <Instance>[INSTANCE2]</Instance>
+    [... one <Instance> tag per parameter in the group]
+  </Group>
+  [... one <Group> tag per group of parameters that should be monitored by RAD]
+</RelationalAnomalyDetection>
+```
+
+**Group arguments**
+
+| Argument | Description |
+|---|---|
+| `name`         | The name of the parameter group.<br>This name must be unique, and will be used when a suggestion event is generated for the group in question. |
+| `updateModel`  | Indicates whether RAD should update its internal model of the relation between the parameters in the group.<br>- If set to "false", RAD will only do an initial training based on the data available at start-up.<br>- If set to "true", RAD will update the model each time new data comes in. |
+| `anomalyScore` | Optional argument that can be used to specify the suggestion event generation threshold.<br>By default, this value will be set to 3. Higher values will result in less suggestion events, lower values will result in more suggestion events. |
+
+**Parameter instance formats**
+
+In each `Instance`, you can specify either a single-value parameter or a table parameter by using one of the following formats:
+
+- Single-value parameter: [DataMinerID]/[ElementID]/[ParameterID]
+- Table parameter: [DataMinerID]/[ElementID]/[ParameterID]/[PrimaryKey]
+
+##### Average trending
+
+RAD requires parameter instances to have at least one week of five-minute average trend data. If at least one parameter instance has less than a week of trend data available, monitoring will only start after this one week becomes available. In particular, this means that average trending has to be enable for each parameter instance used in a RAD group and that the TTL for five-minute average trend data has to be set to more than one week (recommended setting: 1 month). Also, RAD only works for numeric parameters.
+
+If necessary, users can force RAD to retrain its internal model by sending a `RetrainMadModelMessage`. In this message, they can indicate the periods during which the parameters were behaving as expected. This will help RAD to identify when the parameters deviate from that expected behavior in the future.
+
+##### Limitations
+
+- RAD is only able to monitor parameters on the local DataMiner Agent. This means, that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
+
+- RAD does not support history sets.
+
+- Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
+
 ## Changes
 
 ### Breaking changes
