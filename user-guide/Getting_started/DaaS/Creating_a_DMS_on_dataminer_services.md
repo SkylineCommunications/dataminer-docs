@@ -11,6 +11,18 @@ Watch this short video to learn how to create a new DataMiner System hosted on d
   <source src="~/user-guide/images/DaaS.mp4" type="video/mp4">
 </video>
 
+<br />
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%; margin-top: 20px;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DFF6DD; margin-right: 20px; color: black;">
+    <b><span style="color: #2A7661;">💡 TIP</span></b><br>
+    You can also watch our interactive exercise on DataMiner Dojo: 
+    <a href="https://community.dataminer.services/courses/kata-11/">Kata #11: Create a DMS on dataminer.services</a>.
+  </div>
+</div>
+
+<br />
+
 1. [Log on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
 1. Next to *DataMiner Systems*, click *Add a DataMiner System*.
