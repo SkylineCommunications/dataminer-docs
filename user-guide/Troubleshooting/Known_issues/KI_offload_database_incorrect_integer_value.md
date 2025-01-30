@@ -1,5 +1,6 @@
 ---
 uid: KI_offload_database_incorrect_integer_value
+keywords: central database
 ---
 
 # Offload to MySQL offload database fails

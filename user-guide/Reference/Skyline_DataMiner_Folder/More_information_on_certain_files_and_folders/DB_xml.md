@@ -1,5 +1,6 @@
 ---
 uid: DB_xml
+keywords: central database, local database, general database, offload database
 ---
 
 # DB.xml

@@ -1,5 +1,6 @@
 ---
 uid: Configuring_data_offloads
+keywords: central database
 ---
 
 # Configuring data offloads
