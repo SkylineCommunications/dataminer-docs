@@ -9,6 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+
+### 29 January 2025 - Fix - Rollback of Remote Access and Live Sharing performance and stability improvements [ID 42087]
+
+The Remote Access and Live Sharing performance and stability improvements released on the 27th of January were rolled back because of an issue found in combination with CloudGateway 2.16.0 - 2.17.1. The issues has been fixed in [CloudGateway 2.17.2 - Reconnect banner shows up all the time during remote accessing](xref:cloudgateway_change_log#30-january-2025---enhancement---cloudgateway-2172---reconnect-banner-shows-up-all-the-time-during-remote-accessing-id-42043).
+
+It is strongly advised to update to CloudGateway 2.17.2 before this rollback will be released again.
+
 ### 28 January 2025 - New feature - Catalog API - Deploying a Catalog item using an organization key [ID 41987]
 
 You can now use the Catalog API to deploy a Catalog item to a system connected to dataminer.services using an organization key.
@@ -21,7 +28,7 @@ A Catalog registration call could fail because existing Catalog item versions ha
 
 Several enhancements were made to improve performance and stability for all Remote Access and Live Sharing features with immediate effect.
 
-In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further. CloudGateway will be able to benefit from this change as soon as the 2.17.0 version is released (expected soon).
+In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.
 
 ### 27 January 2025 - Enhancement - Admin app - Collaboration category added on usage overview page [ID 41947]
 
