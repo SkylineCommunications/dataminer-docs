@@ -4,29 +4,29 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Access tokens instantly refreshed when cloud session is manually renewed [ID 42081]
+
+From now on, when the [cloud session is renewed](xref:Cloud_Connection_Issues#check-the-cloud-session) manually, other access tokens, for example used by STaaS, will be refreshed instantly. Previously, this could take up to 30 minutes.
+
+#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offloading of local setting for Remote Access and Live Sharing [ID 42080]
+
+Cloud Gateway will now offload [the local setting for Remote Access and Live Sharing](xref:Disabling_Remote_Access_and_Live_Sharing).
+
+#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offloading of API Gateway health [ID 42080]
+
+Cloud Gateway will now offload the health of the API Gateway. This allows for better technical support and for dataminer.services to validate if everything is correctly configured to use the DataMiner Cube desktop app remotely via dataminer.services.
+
+#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offloading of error information if DMA state cannot be determined [ID 42080]
+
+Cloud Gateway will now offload error information in case the running state of a DMA cannot be determined, for example when the SSL certificate for the web APIs is invalid. This allows for better technical support.
+
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Cloud connection performance and stability improvements [ID 41733]
 
-From now on the CloudGateway DxM will create multiple connections to dataminer.services instead of one, which is possible since [Remote Access and Live Sharing performance and stability improvements](xref:DCP_change_log_2025#27-january-2025---enhancement---remote-access-and-live-sharing-performance-and-stability-improvements-id-42043). 
+From now on, the CloudGateway DxM will create multiple connections to dataminer.services instead of one, which is possible since the recent [Remote Access and Live Sharing performance and stability improvements](xref:DCP_change_log_2025#27-january-2025---enhancement---remote-access-and-live-sharing-performance-and-stability-improvements-id-42043).
 
-This enhancement improves **performance** because it allows a higher request througput.
+This enhancement improves **performance** because it allows a higher request throughput.
 
-Next to that it also improves the **stability** of the cloud connection. Connections will be able to disconnect and reconnect without having any downtime for all Remote Access and Live Sharing features, as long as there is one or more connections still up. It is expected for connections to disconnect (and reconnect) at a regular basis, by example if (rolling) upgrades are deployed at dataminer.services or services are scaled down.
-
-#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Automatically force refresh access token when the cloud session is manually renewed [ID 42081]
-
-From now on, when the [cloud session is renewed](xref:Cloud_Connection_Issues#check-the-cloud-session) manually, another access token, which is used by STaaS for example, will be refreshed instantly while before it could take up to 30 minutes.
-
-#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload the local setting for Remote Access and Live Sharing [ID 42080]
-
-The CloudGateway will offload [the local setting for Remote Access and Live Sharing](xref:Disabling_Remote_Access_and_Live_Sharing).
-
-#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload the ApiGateway health [ID 42080]
-
-The CloudGateway will offload the health of the ApiGateway. This allows for better technical support and for dataminer.services to validate if everything is correctly configured to use the DataMiner Cube desktop app remotely via dataminer.services.
-
-#### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Offload error information if the state of the DMA cannot be determined [ID 42080]
-
-The CloudGateway will offload error information in case the running state of the DMA cannot be determined, for example when the SSL certificate for the web apis is invalid. This allows to provide better technical support.
+It also improves the **stability** of the connection to dataminer.services. Connections will be able to disconnect and reconnect without having any downtime for all Remote Access and Live Sharing features, as long as there is one or more connections still up. Connections are expected to disconnect (and reconnect) at a regular basis, for example when (rolling) upgrades are deployed on dataminer.services or when services are scaled down.
 
 #### 10 December 2024 - Enhancement - CloudGateway 2.16.0 - Dependencies updated [ID 41681]
 
