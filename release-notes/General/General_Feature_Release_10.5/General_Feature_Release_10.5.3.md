@@ -265,6 +265,12 @@ From now on, it will be allowed to swarm elements polling the local IP address o
 
 Because of a number of enhancements, overall performance of SLNet has increased when clearing the alarms cache.
 
+#### SLProtocol: Reduced CPU usage when converting data from String to Double [ID 42049]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Because of a number of enhancements made to SLProtocol, overall CPU usage has been reduced when converting data from String to Double.
+
 ### Fixes
 
 #### Elements no longer visible after having been swarmed [ID 41635]

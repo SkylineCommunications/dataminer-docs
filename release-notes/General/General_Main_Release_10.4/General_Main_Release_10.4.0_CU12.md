@@ -57,6 +57,12 @@ Because of a number of enhancements, overall performance of SLPort has increased
 
 Because of a number of enhancements, overall performance of SLNet has increased when clearing the alarms cache.
 
+#### SLProtocol: Reduced CPU usage when converting data from String to Double [ID 42049]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Because of a number of enhancements made to SLProtocol, overall CPU usage has been reduced when converting data from String to Double.
+
 ### Fixes
 
 #### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41339]
