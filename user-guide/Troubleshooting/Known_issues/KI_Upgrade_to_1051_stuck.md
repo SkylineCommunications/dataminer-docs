@@ -12,8 +12,6 @@ DataMiner 10.5.1 and 10.5.2
 
 In DataMiner 10.5.1, a change was introduced that could trigger a loop when users in the *Security.xml* file have `expired` set to `"true"`.
 
-This only affects DataMiner Agents that are part of a cluster.
-
 ## Workaround
 
 1. Stop the DataMiner Agent.
