@@ -271,6 +271,18 @@ Because of a number of enhancements, overall performance of SLNet has increased 
 
 Because of a number of enhancements made to SLProtocol, overall CPU usage has been reduced when converting data from String to Double.
 
+#### Swarming: Prerequisite checks will now also check whether obsolete Engine methods are being used [ID 42073]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+[Prerequisite checks](xref:EnableSwarming#running-a-prerequisites-check) are in place to prevent the enabling of the Swarming feature when non-supported objects are present. From now on, these checks will also check whether the following obsolete Engine methods are being used:
+
+- Engine.GetAlarmProperty(int, int, string)
+- Engine.SetAlarmProperty(int, int, string, string)
+- Engine.SetAlarmProperties(int, int, string[], string[])
+- Engine.AcknowledgeAlarm(int, int, string)
+
 ### Fixes
 
 #### Elements no longer visible after having been swarmed [ID 41635]
