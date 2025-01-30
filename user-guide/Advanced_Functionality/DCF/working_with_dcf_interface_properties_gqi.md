@@ -1,14 +1,15 @@
 ---
-uid: working_with_dcf_queries
+uid: working_with_dcf_interface_properties_gqi
 ---
 
-# Working with DCF GQI Queries
+# Working with DCF Interface Properties in GQI Queries
 
-This tutorial shows you how to work with GQI queries that contains DCF data sources. For this specific example, you will work with DCF interface properties available in the data source DCF Interface Properties.
+This tutorial shows you how to work with GQI queries that contains DCF Interface information. For this specific example, you will be able to display DCF interface properties available in GQI queries.
 
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
+
 - Make sure that the [Generic Interface](https://docs.dataminer.services/user-guide/Reference/Soft-launch_options/Overview_of_Soft_Launch_Options.html#genericinterface) soft-launch option is enabled. See [Soft-launch options](https://docs.dataminer.services/user-guide/Reference/Soft-launch_options/SoftLaunchOptions.html).
 
 >[!TIP]
@@ -19,7 +20,7 @@ This tutorial shows you how to work with GQI queries that contains DCF data sour
 
 ## Objective
 
-The objective of this tutorial is to display information about DCF interface properties using a grid visualization. Furthermore, using a GQI Query filter components, we will be able to filter items in the grid component.
+The objective of this tutorial is to display information about DCF interface properties using a grid visualization. Furthermore, using a GQI Query filter components, you will be able to filter interfaces in a grid component.
 
 ## Overview
 
