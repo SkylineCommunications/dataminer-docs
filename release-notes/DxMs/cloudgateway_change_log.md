@@ -4,7 +4,7 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 30 January 2025 - Fix - CloudGateway 2.17.2 - Reconnect banner continually showing when remote access is used [ID 42043]
+#### 30 January 2025 - Fix - CloudGateway 2.17.2 - Reconnect banner continually showing when remote access is used [ID 42086]
 
 With the Remote Access and Live Sharing performance and stability improvements released on the 27th of January (rolled back on the 29th of January), if CloudGateway version 2.16.0 - 2.17.1 was used, the reconnect banner showed up all the time while remote access was used. This issue has been fixed. 
 
