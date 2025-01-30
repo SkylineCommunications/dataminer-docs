@@ -148,3 +148,9 @@ In the *User > Data Display* section of the *Settings* window, the *Parameter di
 Up to now, Cube would check the value of this setting ("Normal" or "Lite") depending on the UI language. As a result, when that language was set to a language other than English, in some cases, the value of this setting would be interpreted incorrectly.
 
 From now on, Cube will check whether the value is the default setting (i.e. "Normal") or not. In the latter case, Cube will use the lite parameter controls.
+
+#### Visual Overview: AlarmSummary shapes linked to a function would not show the correct alarm color [ID 41916]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When an *AlarmSummary* shape was linked to a function, the shape would not show the correct alarm color.
