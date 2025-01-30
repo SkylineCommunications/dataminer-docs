@@ -16,7 +16,7 @@ This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configurati
 
 ## Fix
 
-1. Check the logging in *ActiveDirectory.txt* (in the `C:\Skyline DataMiner\Logging folder`) to check whether the LDAP server returns `0x00005012` (S_ADS_NOMORE_ROWS) or `0x80072030` (ERROR_DS_NO_SUCH_OBJECT). If either of these two are present, install DataMiner 10.4.0 [CU12], 10.5.0, or 10.5.2.<!--RN 41339-->
+1. Install DataMiner 10.4.0 [CU12], 10.5.0, or 10.5.2.<!--RN 41339-->
 
 1. Wait up to an hour for LDAP synchronization to occur, or manually trigger the `Skyline DataMiner LDAP Resync` task in Windows Task Scheduler.
 
@@ -53,6 +53,8 @@ This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configurati
   ```
 
   If the number of `Total rows` is 0, the issue is present.
+
+  In some cases, it can occur that the LDAP server returns `0x00005012` (S_ADS_NOMORE_ROWS) instead of `0x80072030` (ERROR_DS_NO_SUCH_OBJECT). The error is also present in such cases.
 
 - **After an upgrade**:
 
