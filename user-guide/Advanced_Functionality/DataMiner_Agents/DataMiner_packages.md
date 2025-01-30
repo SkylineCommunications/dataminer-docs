@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_packages
+keywords: driver package, connector package
 ---
 
 # DataMiner packages

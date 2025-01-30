@@ -1,5 +1,6 @@
 ---
 uid: protocols
+keywords: protocol, driver, connector
 ---
 
 # Protocols and templates
