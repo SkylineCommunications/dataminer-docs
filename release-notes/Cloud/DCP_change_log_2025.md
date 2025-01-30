@@ -17,9 +17,9 @@ You can now use the Catalog API to deploy a Catalog item to a system connected t
 
 A Catalog registration call could fail because existing Catalog item versions had invalid artifact references.
 
-### 27 January 2025 - Enhancement - Remote Access performance and stability improvements [ID 42043]
+### 27 January 2025 - Enhancement - Remote Access and Live Sharing performance and stability improvements [ID 42043]
 
-Several enhancements were made to improve performance and stability for all remote access features with immediate effect.
+Several enhancements were made to improve performance and stability for all Remote Access and Live Sharing features with immediate effect.
 
 In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further. CloudGateway will be able to benefit from this change as soon as the 2.17.0 version is released (expected soon).
 
@@ -119,12 +119,12 @@ The number of required API calls to initially load the Catalog home page has bee
 
 On the browse page, Catalog items that are published by the selected organization or by Skyline Communications will now display a green indicator.
 
-### 13 January 2025 - Fix - Rollback of Remote Access performance and stability improvements [ID 42042]
+### 13 January 2025 - Fix - Rollback of Remote Access and Live Sharing performance and stability improvements [ID 42042]
 
-The Remote Access performance and stability improvements released on the 9th of January were rolled back because of issues found in the release.
+The Remote Access and Live Sharing performance and stability improvements released on the 9th of January were rolled back because of issues found in the release.
 
-### 9 January 2025 - Enhancement - Remote Access performance and stability improvements [ID 41897]
+### 9 January 2025 - Enhancement - Remote Access and Live Sharing performance and stability improvements [ID 41897]
 
-Several enhancements were made to improve performance and stability for all remote access features with immediate effect.
+Several enhancements were made to improve performance and stability for all Remote Access and Live Sharing features with immediate effect.
 
 In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.
