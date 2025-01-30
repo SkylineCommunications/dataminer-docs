@@ -1,6 +1,6 @@
 ---
 uid: Cleaning_up_unused_files_on_a_DMA
-keywords: protocol, driver, connector
+keywords: unused drivers, unused connectors, cleanup
 ---
 
 # Cleaning up unused files on a DMA
