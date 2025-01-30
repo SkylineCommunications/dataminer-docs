@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 30 January 2025 - Fix - CloudGateway 2.17.2 - Reconnect banner continually showing when remote access is used [ID 42043]
+
+With the Remote Access and Live Sharing performance and stability improvements released on the 27th of January (rolled back on the 29th of January), if CloudGateway version 2.16.0 - 2.17.1 was used, the reconnect banner showed up all the time while remote access was used. This issue has been fixed. 
+
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Access tokens instantly refreshed when cloud session is manually renewed [ID 42081]
 
 From now on, when the [cloud session is renewed](xref:Cloud_Connection_Issues#check-the-cloud-session) manually, other access tokens, for example used by STaaS, will be refreshed instantly. Previously, this could take up to 30 minutes.
