@@ -14,7 +14,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 The Remote Access and Live Sharing performance and stability improvements released on the 27th of January were rolled back because of an issue found in combination with CloudGateway 2.16.0 - 2.17.1. The issue has been fixed in [CloudGateway 2.17.2 - Reconnect banner shows up all the time during remote accessing](xref:cloudgateway_change_log#30-january-2025---enhancement---cloudgateway-2172---reconnect-banner-shows-up-all-the-time-during-remote-accessing-id-42043).
 
-It is strongly advised to update to CloudGateway 2.17.2 before this rollback will be released again.
+We strongly recommend updating to CloudGateway 2.17.2 as soon as possible to prevent issues when these improvements are introduced again.
 
 ### 28 January 2025 - New feature - Catalog API - Deploying a Catalog item using an organization key [ID 41987]
 
