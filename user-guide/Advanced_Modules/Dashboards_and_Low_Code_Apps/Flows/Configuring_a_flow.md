@@ -10,7 +10,7 @@ Flows are available starting from DataMiner web 10.4.12. The minimum required se
 
 To create a flow:
 
-1. In edit mode, go the data pane on the right, expand the *Flows* item, and click the + icon.
+1. In edit mode, go the *Data* pane on the right, expand the *Flows* item, and click the + icon.
 
    This will open the flow editor pop-up window.
 

@@ -14,13 +14,13 @@ You can for example use this in a low-code app or a dashboard to refresh a [tabl
 
 To configure the trigger:
 
-1. Optionally, customize the following component options in the *Component* > *Settings* tab:
+1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
    - *Trigger timer*: Determines whether the trigger will automatically go off based on a timer. If this option is enabled, a countdown bar will show when the trigger will go off again.
 
    - *Time*: If *Trigger Timer* is selected, this setting determines after how many seconds the data is refreshed. By default, this is set to 60 seconds.
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -39,4 +39,4 @@ To configure the trigger:
 
    - *Align*: Determines whether the label and icon are displayed on the left side, in the middle or on the right side of the component.
 
-1. Select the trigger component data in the data pane and drag it to the component (e.g. a table component) that should be refreshed based on the trigger.
+1. Select the trigger component data in the *Data* pane and drag it to the component (e.g. a table component) that should be refreshed based on the trigger.

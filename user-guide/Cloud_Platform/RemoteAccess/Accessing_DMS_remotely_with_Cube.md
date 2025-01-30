@@ -1,5 +1,6 @@
 ---
 uid: Accessing_DMS_remotely_with_Cube
+keywords: cloud connection
 ---
 
 # Accessing your DMS remotely with DataMiner Cube

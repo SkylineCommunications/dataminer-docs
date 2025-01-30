@@ -61,6 +61,59 @@ moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new
 };
 ```
 
+#### Relational anomaly detection [ID 42034]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related. Whenever the relation is broken, RAD will detect this and generate suggestion events. A suggestion event will be generated for each parameter instance in the group where a broken relation was detected.
+
+##### Configuration file
+
+Per DataMiner Agent, the above-mentioned parameter groups must be configured in the *C:\\Skyline DataMiner\\Analytics\\RelationalAnomalyDetection.xml* file. This file will be read when SLAnalytics starts up, when RAD is enabled or re-enabled, or when a *ReloadMadConfigurationMessage* is sent.
+
+The configuration file must be formatted as follows.
+
+```xml
+<?xml version="1.0" ?>
+<RelationalAnomalyDetection>
+  <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]">
+    <Instance>[INSTANCE1]</Instance>
+    <Instance>[INSTANCE2]</Instance>
+    [... one <Instance> tag per parameter in the group]
+  </Group>
+  [... one <Group> tag per group of parameters that should be monitored by RAD]
+</RelationalAnomalyDetection>
+```
+
+**Group arguments**
+
+| Argument | Description |
+|---|---|
+| `name`         | The name of the parameter group.<br>This name must be unique, and will be used when a suggestion event is generated for the group in question. |
+| `updateModel`  | Indicates whether RAD should update its internal model of the relation between the parameters in the group.<br>- If set to "false", RAD will only do an initial training based on the data available at start-up.<br>- If set to "true", RAD will update the model each time new data comes in. |
+| `anomalyScore` | Optional argument that can be used to specify the suggestion event generation threshold.<br>By default, this value will be set to 3. Higher values will result in less suggestion events, lower values will result in more suggestion events. |
+
+**Parameter instance formats**
+
+In each `Instance`, you can specify either a single-value parameter or a table parameter by using one of the following formats:
+
+- Single-value parameter: [DataMinerID]/[ElementID]/[ParameterID]
+- Table parameter: [DataMinerID]/[ElementID]/[ParameterID]/[PrimaryKey]
+
+##### Average trending
+
+RAD requires parameter instances to have at least one week of five-minute average trend data. If at least one parameter instance has less than a week of trend data available, monitoring will only start after this one week becomes available. In particular, this means that average trending has to be enabled for each parameter instance used in a RAD group and that the TTL for five-minute average trend data has to be set to more than one week (recommended setting: 1 month). Also, RAD only works for numeric parameters.
+
+If necessary, users can force RAD to retrain its internal model by sending a `RetrainMadModelMessage`. In this message, they can indicate the periods during which the parameters were behaving as expected. This will help RAD to identify when the parameters deviate from that expected behavior in the future.
+
+##### Limitations
+
+- RAD is only able to monitor parameters on the local DataMiner Agent. This means, that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
+
+- RAD does not support history sets.
+
+- Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
+
 ## Changes
 
 ### Breaking changes
@@ -105,6 +158,15 @@ Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* 
 
 In order to override the timeout for a Virtual Function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
 
+#### Swarming: Clearer exception will now be thrown when the state of an element is changed while the element is being swarmed [ID 41634]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+When the state of an element was changed while that element was being swarmed, up to now, a "host unknown" exception would be thrown.
+
+From now on, an *SL_SWARMING_IN_PROGRESS* exception will be thrown instead. This exception will now clearly state that the update cannot be performed because the element is being swarmed.
+
 #### DataMiner Connectivity Framework: Enhanced processing of SRM services by the connectivity manager [ID 41649]
 
 <!-- MR 10.5.0 - FR 10.5.3 -->
@@ -117,15 +179,27 @@ Because of a number of enhancements made to the DataMiner Connectivity Framework
 
 Error and exception handling has been enhanced in order to prevent duplicate or sticky correlation alarms due to errors or exceptions thrown when updating or clearing correlation alarms.
 
+#### SLNet: Enhancements to prevent SLNet modules from forwarding requests back and forth between two DMAs [ID 41827]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+A number of enhancements have been made to prevent SLNet modules from forwarding requests back and forth between two DataMiner Agents.
+
 #### SLAnalytics: New check to verify if the incident tracking leader is still a member of the current DMS [ID 41836]
 
-<!-- MR 10.5.0 - FR 10.5.3 -->
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 At DataMiner start-up, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
 
 Also, from now on, a new leader will be elected when the former leader has left the cluster.
 
 *\* In DataMiner Cube, the leader can be configured in the *Leader DataMiner ID* box, which can be found in *System Center > System settings > Analytics config > Automatic incident tracking*.*
+
+#### Service & Resource Management: Enhanced performance when processing history entries for booking instances and resources [ID 41842]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Up to now, history entries for booking instances and resources would be processed individually. From now on, they will be processed in batches of 100 entries. This will considerably enhance overall performance when processing these history entries.
 
 #### Smart baselines will now also get capped when the parameter only has either a low value or a high value [ID 41870]
 
@@ -163,6 +237,12 @@ SLLogCollector packages now include the following data regarding the GQI DxM:
 
 SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
+#### SLPort: Enhanced performance and reduced memory and CPU usage [ID 41896]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Because of a number of enhancements, overall performance of SLPort has increased. The process will now also use less memory and CPU.
+
 #### Swarming prerequisites: Entries will now be added to SLNet.txt while checking alarm ID usage in Automation scripts and protocol QActions [ID 41930]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
@@ -178,6 +258,30 @@ While checking the Swarming prerequisites, DataMiner checks alarm ID usage in Au
 Up to now, it was not allowed to swarm elements polling the local IP address of any agent in the DMS and elements polling the loopback address.
 
 From now on, it will be allowed to swarm elements polling the local IP address of any agent in the DMS. However, elements polling the loopback address will remain blocked.
+
+#### SLNet: Enhanced performance when clearing the alarms cache [ID 41998]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Because of a number of enhancements, overall performance of SLNet has increased when clearing the alarms cache.
+
+#### SLProtocol: Reduced CPU usage when converting data from String to Double [ID 42049]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Because of a number of enhancements made to SLProtocol, overall CPU usage has been reduced when converting data from String to Double.
+
+#### Swarming: Prerequisite checks will now also check whether obsolete Engine methods are being used [ID 42073]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+[Prerequisite checks](xref:EnableSwarming#running-a-prerequisites-check) are in place to prevent the enabling of the Swarming feature when non-supported objects are present. From now on, these checks will also check whether the following obsolete Engine methods are being used:
+
+- Engine.GetAlarmProperty(int, int, string)
+- Engine.SetAlarmProperty(int, int, string, string)
+- Engine.SetAlarmProperties(int, int, string[], string[])
+- Engine.AcknowledgeAlarm(int, int, string)
 
 ### Fixes
 
@@ -232,6 +336,19 @@ Up to now, when a Min or Max aggregation was performed on a datetime column, the
 
 When the same version of a DVE connector was uploaded twice, the production version of all DVE child elements using another version of that connector as production version would incorrectly have their production version set to the newly uploaded version.
 
+#### Protocols: Problem when deleting an element with a parameter that had a duplicate RawType tag configured [ID 41871]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When an element was deleted, a run-time error could occur in SLProtocol when a parameter had a duplicate `RawType` tag configured.
+
+#### No longer possible to clear or update an alarm associated with a general information parameter [ID 41877]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.5.0 - Introduced by RN 39193 -->
+
+When an alarm had been generated for a general information parameter (i.e. a parameter with an ID within the range 64502 to 64999), it would incorrectly not be possible to clear or update that alarm.
+
 #### SNMP managers would incorrectly receive some or all active alarms at DMA start-up [ID 41878]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
@@ -256,3 +373,32 @@ When elements were swarmed between two DataMiner Agents, in some rare cases, a p
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 In some cases, alarm groups containing alarms without a focus value (e.g. notices or errors) would not be correctly removed from the group when the element associated with the alarm was deleted, stopped or paused.
+
+#### Problem with SLDataMiner when creating a dmimport package [ID 41963]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Up to now, in some cases, SLDataMiner could stop working while creating a dmimport package.
+
+A number of enhancements have now been made with regard to error handling during the creation of dmimport packages. From now on, when an issue occurs while a dmimport package is being created, an error message will be shown in the client (e.g. DataMiner Cube).
+
+#### Errors would be logged in SLErrors.txt and SLNet.txt when Mobile Gateway was enabled in a DMS with more than one agent [ID 41988]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Up to now, errors would be logged in the *SLErrors.txt* and *SLNet.txt* log files when Mobile Gateway was enabled in a DataMiner System with more than one DMA.
+
+Also, the Mobile Gateway process would only be aware of elements that were hosted on the same agent as the one on which it was hosted itself. As a result, actions like GET and SET on other elements via the Mobile Gateway would fail.
+
+#### BPA tests would fail to load the necessary DLL files [ID 42000]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+In some cases, BPAs tests would fail to load the necessary DLL files.
+
+#### Swarming: Not all data would be flushed when the element was unloaded [ID 42077]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element was being swarmed, not all data would be flushed when the element was unloaded.

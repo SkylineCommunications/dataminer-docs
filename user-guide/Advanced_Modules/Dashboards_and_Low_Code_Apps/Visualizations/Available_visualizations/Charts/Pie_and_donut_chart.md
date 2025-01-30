@@ -12,7 +12,7 @@ To configure the component:
 
 1. Apply query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. Optionally, customize the following component options in the *Component* > *Settings* tab:
+1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
    - *Label*: Allows you to select which data should be used as a label.
 
@@ -21,7 +21,7 @@ To configure the component:
    > [!NOTE]
    > From DataMiner 10.3.7/10.4.0 onwards, when you add a query to the component, the label and segment size will automatically be configured. <!-- RN 36229 -->
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - *Chart shape*: Can be set to *Pie* or *Donut*.
 

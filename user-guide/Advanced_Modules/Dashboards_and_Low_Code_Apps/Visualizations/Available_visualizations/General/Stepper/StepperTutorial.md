@@ -80,7 +80,7 @@ To complete the app, you should now add a header bar with a button to save chang
 
 By default, every stepper component uses the same template, but you can switch to a different template of your choice.
 
-To do so, use the *Appearance* setting in the component layout tab on the right.
+To do so, use the *Appearance* setting in the component *Layout* pane on the right.
 
 ![Appearance presets](~/user-guide/images/StepperAppearance.png)
 

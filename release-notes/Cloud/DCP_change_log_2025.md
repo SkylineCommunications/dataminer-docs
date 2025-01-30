@@ -9,6 +9,36 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 29 January 2025 - Fix - Rollback of Remote Access and Live Sharing performance and stability improvements [ID 42087]
+
+The Remote Access and Live Sharing performance and stability improvements released on the 27th of January were rolled back because of an issue found in combination with CloudGateway 2.16.0 - 2.17.1. The issue has been fixed in [CloudGateway 2.17.2 - Reconnect banner shows up all the time during remote accessing](xref:cloudgateway_change_log#30-january-2025---fix---cloudgateway-2172---reconnect-banner-continually-showing-when-remote-access-is-used-id-42086).
+
+We strongly recommend updating to CloudGateway 2.17.2 as soon as possible to prevent issues when these improvements are introduced again.
+
+### 28 January 2025 - New feature - Catalog API - Deploying a Catalog item using an organization key [ID 41987]
+
+You can now use the Catalog API to deploy a Catalog item to a system connected to dataminer.services using an organization key.
+
+### 28 January 2025 - Fix - Catalog API - Registration failed because of invalid artifact references in Catalog item versions [ID 41985]
+
+A Catalog registration call could fail because existing Catalog item versions had invalid artifact references.
+
+### 27 January 2025 - Enhancement - Remote Access and Live Sharing performance and stability improvements [ID 42043]
+
+Several enhancements were made to improve performance and stability for all Remote Access and Live Sharing features with immediate effect.
+
+In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.
+
+### 27 January 2025 - Enhancement - Admin app - Collaboration category added on usage overview page [ID 41947]
+
+A new "Managed Object" category has been added to the usage overview page in the Admin app.
+
+### 27 January 2025 - New feature - Admin - Usage charts [ID 41937]
+
+Two pie charts have been added to the usage page in the Admin app. These pie charts visualize the usage data by system or feature.
+
+Additionally, the filtering has been improved so that deleted systems can also be shown or hidden.
+
 ### 20 January 2025 - Enhancement - Catalog API - Enhanced scope of retrieving Catalog item using a key [ID 41977]
 
 While previously the Catalog API only allowed users to retrieve information for Catalog items published by their own organization, now they can also retrieve information for any public Catalog item (using the organization key).
@@ -95,8 +125,12 @@ The number of required API calls to initially load the Catalog home page has bee
 
 On the browse page, Catalog items that are published by the selected organization or by Skyline Communications will now display a green indicator.
 
-### 9 January 2025 - Enhancement - Remote Access performance and stability improvements [ID 41897]
+### 13 January 2025 - Fix - Rollback of Remote Access and Live Sharing performance and stability improvements [ID 42042]
 
-Several enhancements were made to improve performance and stability for all remote access features with immediate effect.
+The Remote Access and Live Sharing performance and stability improvements released on the 9th of January were rolled back because of issues found in the release.
 
-In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further. CloudGateway will be able to benefit from this change as soon as the 2.17.0 version is released (expected soon).
+### 9 January 2025 - Enhancement - Remote Access and Live Sharing performance and stability improvements [ID 41897]
+
+Several enhancements were made to improve performance and stability for all Remote Access and Live Sharing features with immediate effect.
+
+In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.

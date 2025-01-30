@@ -29,7 +29,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
    > [!NOTE]
    >
-   > - You can also create a new theme directly from the Layout pane of a dashboard, using the *New theme* button there. The available options will be the same as described below.
+   > - You can also create a new theme directly from the *Layout* pane of a dashboard, using the *New theme* button there. The available options will be the same as described below.
    > - If a theme already exists that looks similar to what you have in mind, use the duplicate button to start from a duplicate of that theme.
    >
    >   ![Duplicate theme button](~/user-guide/images/Dashboards_duplicate_theme.png)
@@ -83,7 +83,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
-1. In the panel on the right, select the *Layout* tab.
+1. In the panel on the right, select the *Layout* pane.
 
 1. Click the box indicating the currently used theme.
 

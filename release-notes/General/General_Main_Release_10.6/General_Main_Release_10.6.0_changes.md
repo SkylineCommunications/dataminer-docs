@@ -147,6 +147,12 @@ When, in a `SectionDefinition`, an enum entry is removed from a `FieldDescriptor
 
 From now on, a maximum of 100 DomInstances will be included in the error data. For example, when an enum entry is removed from a `FieldDescriptor`, and 150 DomInstances are using the entry, the error message will only contain the IDs of the first 100 DomInstances.
 
+#### Service & Resource Management: Enhanced performance when processing history entries for booking instances and resources [ID 41842]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Up to now, history entries for booking instances and resources would be processed individually. From now on, they will be processed in batches of 100 entries. This will considerably enhance overall performance when processing these history entries.
+
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]

@@ -1,6 +1,7 @@
 ---
 uid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
 ---
+
 # Manually connecting a DMA to an indexing database
 
 If you choose self-hosted storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, you can connect a DataMiner Agent to an existing OpenSearch or Elasticsearch cluster.

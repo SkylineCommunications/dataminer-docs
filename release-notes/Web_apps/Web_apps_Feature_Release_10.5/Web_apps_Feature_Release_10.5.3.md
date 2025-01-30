@@ -72,6 +72,12 @@ The *Node edge graph* component now supports real-time updates.
 
 Up to now, When you removed a section from a DOM instance form with multiple sections, that section would be removed immediately, without any notification. From now on, a confirmation box will appear, prompting the user to either confirm or cancel the action.
 
+#### Dashboards/Low-Code Apps: Linking a Trigger component to a Query filter component now allows you to refetch the columns and column statistics [ID 41799]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+By linking a *Trigger* component to a *Query filter* component, it is now possible to have the columns and column statistics refetched.
+
 #### DataMiner root page: Links to deprecated DataMiner XBAP and legacy Reports & Dashboards app have now been removed [ID 41844]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
@@ -94,17 +100,29 @@ The *Allow refresh* option has now been removed. In order to have *Time range* c
 
 The *Time range* component has been moved from the *General* category to the *Basic controls* category. Also, its icon has now been updated to better represent a range.
 
-#### GQI DxM: Web applications will now run GQI queries via the GQI DxM installed on the local DMA [ID 41949]
+#### GQI DxM: Web applications will now use the GQI DxM installed on the local DMA to build and run GQI queries [ID 41949] [ID 42010]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-From now on, the DataMiner web applications will by default run GQI queries via the GQI DxM installed on the local DataMiner Agent.
+From now on, the DataMiner web applications will by default use the GQI DxM installed on the local DataMiner Agent when building and running GQI queries.
 
 #### Low-Code Apps: Default set of icon files will be created when you create a new low-code app [ID 42004]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When you create a new low-code app on the root page of a DataMiner Agent (e.g. `https://myDMA/root/`), from now on, a default set of icon files will automatically be created for that app.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Zoom factor for arrows and KPI labels on edges is now capped [ID 42011]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+From now on, the zoom factor for arrows and KPI labels on edges will be capped. This means that, when you keep zooming in on a node edge graph, at some point, the magnification factor of the arrows and the KPI labels on edges will no longer change.
+
+#### Dashboards/Low-Code Apps - Grid component: Scroll position will now be retained when new data is received [ID 42071]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When a *Grid* component without a fixed page size received new data, in some cases, the current scroll position would not be retained. From now on, the scroll position will be left untouched when new data is received.
 
 ### Fixes
 
@@ -144,8 +162,32 @@ When you tried to log on to a DataMiner web app, in some cases, the authenticati
 
 When a low-code app used queries in some of its flows, in some cases, it could become unresponsive.
 
+#### Dashboards app: Users would not be allowed to see any of the alarms listed in an Alarm table component of a shared dashboard [ID 41965]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When users consulted a shared dashboard containing an *Alarm table* component on which an element filter or a view filter was applied, in some cases, they would incorrectly not be allowed to see any of the alarms listed in that *Alarm table* component.
+
 #### Dashboards/Low-Code Apps - Grid component: Problem when a linked Trigger component is triggered while viewing the last page [ID 41991]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When a *Trigger* component linked to a *Grid* component was triggered while you were viewing the last page of grid data, a skeleton loading animation would incorrectly be shown. From now on, the last values will remain on the screen until the new data has been fetched.
+
+#### Low-Code Apps: 'Change variable' action would not always apply the correct value when linked to dynamic data [ID 42027]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+In some cases, the *Change variable* action would not apply the correct value, especially when it was linked to dynamic data.
+
+#### Monitoring app: Problem when consulting alarm details when using external authentication via SAML [ID 42037]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+When you logged in to the *Monitoring* app using external authentication via SAML, and then opened an alarm, the user name of the alarm owner would be incorrect.
+
+#### Low-Code Apps: Not possible to execute a 'Change variable' action via the URL of the app [ID 42038]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Up to now, it would incorrectly not be possible to execute a *Change variable* action via the URL of the app.

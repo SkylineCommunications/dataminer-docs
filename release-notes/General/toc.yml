@@ -32,7 +32,11 @@ items:
           - name: General Feature Release 10.5.3 - Preview
             topicUid: General_Feature_Release_10.5.3
           - name: General Feature Release 10.5.2
-            topicUid: General_Feature_Release_10.5.2
+            items:
+              - name: New features and changes
+                topicUid: General_Feature_Release_10.5.2
+              - name: General Feature Release 10.5.2 CU1
+                topicUid: General_Feature_Release_10.5.2_CU1
           - name: General Feature Release 10.5.1
             topicUid: General_Feature_Release_10.5.1
   - name: v10.4

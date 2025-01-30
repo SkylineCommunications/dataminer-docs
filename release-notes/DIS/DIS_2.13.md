@@ -38,8 +38,10 @@ It is now possible to compare two protocols and have the major changes displayed
 To compare two protocols, do the following:
 
 1. Open both protocols in Visual Studio.
-2. At the top of the XML editor tab containing one of the protocols, open the *Validator* drop-down menu, and click *Compare*.
-3. In the *Major Change Check* window, select the two protocols to be compared, and click *Check*.
+
+1. At the top of the XML editor tab containing one of the protocols, open the *Validator* drop-down menu, and click *Compare*.
+
+1. In the *Major Change Check* window, select the two protocols to be compared, and click *Check*.
 
 > [!NOTE]
 >

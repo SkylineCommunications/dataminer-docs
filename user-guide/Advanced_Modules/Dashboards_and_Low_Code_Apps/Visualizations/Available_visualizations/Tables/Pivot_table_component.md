@@ -25,7 +25,7 @@ To configure the component:
 
    - If table parameter data is used, you can add additional indices data as a filter.
 
-1. In the *Settings* tab, you can fine-tune the component:
+1. In the *Settings* pane, you can fine-tune the component:
 
    - *Auto-expand rows*: Depending on the added data, the pivot table can consist of rows that can be expanded to view all data related to that row. If this option is selected, these rows will be expanded automatically.
 

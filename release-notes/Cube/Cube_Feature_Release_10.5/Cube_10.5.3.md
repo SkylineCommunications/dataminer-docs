@@ -99,6 +99,12 @@ We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you wa
 
 For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
 
+#### DataMiner Cube desktop app: Prevent a tile from being added when an identical tile already exists [ID 41899]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+A number of enhancements have been made to the DataMiner Cube desktop app to prevent an agent/cluster from being added when a tile for that agent/cluster already exists.
+
 #### Alarm Console: Enhanced behavior of correlated alarms in linked alarm tabs [ID 41907]
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
@@ -112,6 +118,23 @@ Up to now, when a correlated alarm appeared in a linked alarm tab because it mat
 - When the correlated alarm matches the filter, and one or more of the base alarms also match the filter, then only the correlated alarm will be shown.
 
 - When the correlated alarm does not match the filter, and none of the base alarms match the filter, then neither the correlated alarm nor the base alarms will be shown.
+
+#### Alarm Console: Sound played when the alarm banner appears can now be disabled [ID 41982]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When you enable the *Show in banner* option for a particular alarm tab, a banner will appear at the top of the Cube window when new alarms enter the tab. That banner will show the number of new alarms, the color of the most severe among them, and service impact information.
+
+Up to now, each time the alarm banner appeared or was updated, a sound would be played. A new *Disable sound of alarm banner* setting has now been added in the *Alarm Console* section of the *Settings* window. This setting will allow you to indicate that no sound should be played when the alarm banner appears or is updated. By default, a sound will be played.
+
+#### Web apps: GQI DxM version displayed in About box [ID 42003]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When a DataMiner web app is using the GQI DxM to build and run GQI queries, the version of the GQI DxM will now be displayed in the app's *About* box.
+
+> [!NOTE]
+> When the web app is using SLHelper instead of the GQI DxM, the *About* box will not display any GQI version. Instead, it will display "no DxM".
 
 ### Fixes
 
@@ -142,3 +165,9 @@ In the *User > Data Display* section of the *Settings* window, the *Parameter di
 Up to now, Cube would check the value of this setting ("Normal" or "Lite") depending on the UI language. As a result, when that language was set to a language other than English, in some cases, the value of this setting would be interpreted incorrectly.
 
 From now on, Cube will check whether the value is the default setting (i.e. "Normal") or not. In the latter case, Cube will use the lite parameter controls.
+
+#### Visual Overview: AlarmSummary shapes linked to a function would not show the correct alarm color [ID 41916]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When an *AlarmSummary* shape was linked to a function, the shape would not show the correct alarm color.

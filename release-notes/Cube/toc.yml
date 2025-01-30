@@ -54,7 +54,11 @@ items:
       - name: Feature Release
         items:
           - name: DataMiner Cube Feature Release 10.4.12
-            topicUid: Cube_Feature_Release_10.4.12
+            items:
+              - name: New features and changes
+                topicUid: Cube_Feature_Release_10.4.12
+              - name: DataMiner Cube Feature Release 10.4.12 CU1
+                topicUid: Cube_Feature_Release_10.4.12_CU1
           - name: DataMiner Cube Feature Release 10.4.11
             topicUid: Cube_Feature_Release_10.4.11
           - name: DataMiner Cube Feature Release 10.4.10

@@ -18,7 +18,7 @@ To configure this component:
 
    Once a visualization has been added, you can delete it again using a delete icon. You can also replace an added visualization by a different one by dragging that other visualization to the same location. By clicking a visualization within the group, you can gain access to its specific layout options and settings.
 
-1. Optionally, in the *Component* > *Layout* tab, configure the following options:
+1. Optionally, in the *Component* > *Layout* pane, configure the following options:
 
    - *Page Layout* \> *Layout*: Determines whether the different items are displayed next to each other or below each other. However, note that when the dashboard is used on a small screen, they will always be displayed below each other.
 
@@ -32,7 +32,7 @@ To configure this component:
 
    - *Expand legend initially*: Select this option to immediately show the group legend in the component. Otherwise, the legend section is initially collapsed, and you can display it using the arrow icon in the top-right corner of the component.
 
-1. Optionally, in the *Component* > *Settings* tab, configure the following options:
+1. Optionally, in the *Component* > *Settings* pane, configure the following options:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 

@@ -1,5 +1,6 @@
 ---
 uid: Advanced_protocol_functionality
+keywords: protocol, driver, connector
 ---
 
 # Advanced protocol functionality

@@ -26,47 +26,47 @@ The information in this tab is displayed in several separate blocks.
 
 - The **PTP system summary** block in the top-left corner shows:
 
-    - At the top, the number of PTP nodes that are reporting the current active grandmaster. Clicking the table icon next to this counter opens a window listing all nodes. The *Status* column in this overview, which allows alarm monitoring, provides more information about node synchronization status. This column can have the following values:
+  - At the top, the number of PTP nodes that are reporting the current active grandmaster. Clicking the table icon next to this counter opens a window listing all nodes. The *Status* column in this overview, which allows alarm monitoring, provides more information about node synchronization status. This column can have the following values:
 
-        - *Synced With Active Preferred Grandmaster*: The node is synchronized with the active grandmaster.
+    - *Synced With Active Preferred Grandmaster*: The node is synchronized with the active grandmaster.
 
-        - *Synced With Preferred Grandmaster*: The node is synchronized with the preferred grandmaster, but this grandmaster is not active at the moment.
+    - *Synced With Preferred Grandmaster*: The node is synchronized with the preferred grandmaster, but this grandmaster is not active at the moment.
 
-        - *Synced With Non-Preferred Grandmaster*: The node is synchronized with a grandmaster that is not configured as a preferred grandmaster.
+    - *Synced With Non-Preferred Grandmaster*: The node is synchronized with a grandmaster that is not configured as a preferred grandmaster.
 
-        - *Synced With Other Device*: The node is synchronized with another node, which is not a grandmaster. This situation is typically to be avoided.
+    - *Synced With Other Device*: The node is synchronized with another node, which is not a grandmaster. This situation is typically to be avoided.
 
-        - *Unknown*: The Node is synchronized with a node that is not known by the PTP application.
+  - *Unknown*: The Node is synchronized with a node that is not known by the PTP application.
 
-    - From left to right, the total number of grandmaster, boundary clock, transparent clock, and slave devices in the configured PTP domain, or in the entire system if no domain is configured. For each of these, a summary icon displays the alarm color of the most severe PTP-related alarm on these devices. Clicking this icon opens a filtered alarm tab with the relevant alarms.
+  - From left to right, the total number of grandmaster, boundary clock, transparent clock, and slave devices in the configured PTP domain, or in the entire system if no domain is configured. For each of these, a summary icon displays the alarm color of the most severe PTP-related alarm on these devices. Clicking this icon opens a filtered alarm tab with the relevant alarms.
 
-    - On the right, the currently active probe. This is the probe in charge of identifying the current active grandmaster clock in the PTP topology. A cogwheel icon next to the probe allows you to select a different probe.
+  - On the right, the currently active probe. This is the probe in charge of identifying the current active grandmaster clock in the PTP topology. A cogwheel icon next to the probe allows you to select a different probe.
 
 - The **alarms** block in the top-right corner shows a summary of the PTP-related alarms (total, critical, major, minor and warning). If no domain is specified for the app, all alarms in the system are taken into account. Otherwise, only the alarms for the specified domain are taken into account. (See [The Admin tab](#the-admin-tab).)
 
-    Clicking the list icon next to the total alarm count will open an alarm tab listing all these alarms. Clicking one of the four other alarm counters will open an alarm tab with these alarms filtered on the alarm severity in question.
+  Clicking the list icon next to the total alarm count will open an alarm tab listing all these alarms. Clicking one of the four other alarm counters will open an alarm tab with these alarms filtered on the alarm severity in question.
 
 - In the **grandmaster** block, you can find the following information:
 
-    - On the left, a block with general information about the grandmaster:
+  - On the left, a block with general information about the grandmaster:
 
-        - The name of the current grandmaster clock (i.e. the grandmaster clock reported by the PTP probe). A toggle button next to the name allows you to switch between the element name in DataMiner or the alias.
+    - The name of the current grandmaster clock (i.e. the grandmaster clock reported by the PTP probe). A toggle button next to the name allows you to switch between the element name in DataMiner or the alias.
 
-        - The ID of the current grandmaster clock.
+    - The ID of the current grandmaster clock.
 
-        - The role of the current grandmaster clock. This can be either *Potential* or *Preferred*. If it is *Preferred*, this means that this grandmaster should always be used to synchronize if possible.
+    - The role of the current grandmaster clock. This can be either *Potential* or *Preferred*. If it is *Preferred*, this means that this grandmaster should always be used to synchronize if possible.
 
-        - The time of the DMA or the grandmaster clock. A toggle button allows you to switch between these. The DMA time is the local time of the DataMiner Agent, which is not equal to the PTP time, unless the DataMiner Agent is synchronized with the PTP domain.
+    - The time of the DMA or the grandmaster clock. A toggle button allows you to switch between these. The DMA time is the local time of the DataMiner Agent, which is not equal to the PTP time, unless the DataMiner Agent is synchronized with the PTP domain.
 
-    - Next to this, the *Settings GM* block is displayed. This shows the *Settings*, *BMCA* (Best Master Clock Algorithm), and *Message Rates* information related to the grandmaster. To the right of each column header, a list icon is available that opens a filtered alarm tab when clicked. On the right side of each column, aggregated alarm information is displayed if available. This information is aggregated either for all nodes in the configured PTP domain, or for the entire system if no domain is configured.
+  - Next to this, the *Settings GM* block is displayed. This shows the *Settings*, *BMCA* (Best Master Clock Algorithm), and *Message Rates* information related to the grandmaster. To the right of each column header, a list icon is available that opens a filtered alarm tab when clicked. On the right side of each column, aggregated alarm information is displayed if available. This information is aggregated either for all nodes in the configured PTP domain, or for the entire system if no domain is configured.
 
-      > [!NOTE]
-      >
-      > - A number of parameters in this block are of specific note. For more information on these parameters, see [Special PTP parameters in the Summary tab](#special-ptp-parameters-in-the-summary-tab).
-      > - The *Delay Response* parameter is retrieved from the PTP probe instead of the grandmaster. Clicking the probe icon will open a tool tip with this information.
-      > - Prior to PTP 1.1.3 CU1, the aggregated alarm information is displayed in a separate *Nodes Summary* tab, which also contains the list icons to open filtered alarm tabs. Next to the tab names, an icon is available that can be clicked to switch between “play” and “stop” mode. In “play” mode, the app will automatically switch between the two tabs at regular intervals. In “stop” mode, only the last selected tab remains displayed.
+    > [!NOTE]
+    >
+    > - A number of parameters in this block are of specific note. For more information on these parameters, see [Special PTP parameters in the Summary tab](#special-ptp-parameters-in-the-summary-tab).
+    > - The *Delay Response* parameter is retrieved from the PTP probe instead of the grandmaster. Clicking the probe icon will open a tool tip with this information.
+    > - Prior to PTP 1.1.3 CU1, the aggregated alarm information is displayed in a separate *Nodes Summary* tab, which also contains the list icons to open filtered alarm tabs. Next to the tab names, an icon is available that can be clicked to switch between “play” and “stop” mode. In “play” mode, the app will automatically switch between the two tabs at regular intervals. In “stop” mode, only the last selected tab remains displayed.
 
-    - In the top-right corner, the name of the current grandmaster interface is displayed. Click the cogwheel button next to this name to select a different interface.
+  - In the top-right corner, the name of the current grandmaster interface is displayed. Click the cogwheel button next to this name to select a different interface.
 
 - The **performance** block at the bottom of the tab allows you to track the overall PTP performance by monitoring PTP metrics that have trending activated (e.g. *Offset From Master* and *Mean Path Delay*). Below the trend graph, you can select any trended PTP parameter from any PTP node. If you want to display the trend graph in full-screen mode, click the full-screen icon in the top-right corner of this block.
 
@@ -174,21 +174,21 @@ This tab consists of the following subtabs:
 
 - **Grandmasters**: Allows you to compare a number of parameters as well as the PTP interfaces of two grandmaster clocks.
 
-    Above the element name or alias of each displayed grandmaster clock, three icons are available:
+  Above the element name or alias of each displayed grandmaster clock, three icons are available:
 
-    - A toggle icon that allows you to switch between displaying the name of the grandmaster clock or its alias.
+  - A toggle icon that allows you to switch between displaying the name of the grandmaster clock or its alias.
 
-    - An icon that opens the element card for the grandmaster clock.
+  - An icon that opens the element card for the grandmaster clock.
 
-    - A cogwheel icon that allows you to select a different grandmaster clock to compare.
+  - A cogwheel icon that allows you to select a different grandmaster clock to compare.
 
 - **Boundary clocks**: Allows you to compare a number of parameters of two boundary clocks.
 
-    Two random boundary clocks are selected by default. Above the name of each displayed boundary clock, two icons are available:
+  Two random boundary clocks are selected by default. Above the name of each displayed boundary clock, two icons are available:
 
-    - An icon that will open the element card of the boundary clock, which contains in-depth information on all PTP interfaces of the clock.
+  - An icon that will open the element card of the boundary clock, which contains in-depth information on all PTP interfaces of the clock.
 
-    - A cogwheel icon that allows you to select a different boundary clock to compare with.
+  - A cogwheel icon that allows you to select a different boundary clock to compare with.
 
 - **Transparent clocks**: Lists all transparent clocks in the PTP topology.
 
@@ -196,11 +196,11 @@ This tab consists of the following subtabs:
 
 - **Analyzers**: Allows you to compare a number of parameters of two PTP analyzers, i.e. slave devices that have been specially assigned to monitor and analyze the PTP signal they retrieve from a clock.
 
-    Above the element name of each displayed PTP analyzer, two icons are available:
+  Above the element name of each displayed PTP analyzer, two icons are available:
 
-    - An icon that will open the element card of the PTP analyzer.
+  - An icon that will open the element card of the PTP analyzer.
 
-    - A cogwheel icon that can be used to select a different PTP analyzer to compare with.
+  - A cogwheel icon that can be used to select a different PTP analyzer to compare with.
 
 ## The Topology tab
 
@@ -231,13 +231,12 @@ This tab consists of three different sections:
 
 - In the **Configuration** section, two buttons are available:
 
-    - **Setup**: Launches the setup wizard again, allowing you to reconfigure the PTP topology. If there are several instances of the app, each with their own domain, the setup wizard will only allow you to reconfigure the PTP topology for the domain of the app instance you are currently using.
+  - **Setup**: Launches the setup wizard again, allowing you to reconfigure the PTP topology. If there are several instances of the app, each with their own domain, the setup wizard will only allow you to reconfigure the PTP topology for the domain of the app instance you are currently using.
 
-        > [!TIP]
-        > See also:
-        > [Installing the DataMiner PTP app](xref:Installing_the_DataMiner_PTP_app)
+    > [!TIP]
+    > See also: [Installing the DataMiner PTP app](xref:Installing_the_DataMiner_PTP_app)
 
-    - **Role assignment**: Launches the role assignment wizard, allowing you to change the roles that were assigned to the different PTP devices, or to assign roles to newly added devices.
+  - **Role assignment**: Launches the role assignment wizard, allowing you to change the roles that were assigned to the different PTP devices, or to assign roles to newly added devices.
 
 ## The Help tab
 

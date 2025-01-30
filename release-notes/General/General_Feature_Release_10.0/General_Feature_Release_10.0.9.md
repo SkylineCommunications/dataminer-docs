@@ -133,13 +133,13 @@ Although the above-mentioned method is to be preferred, it is also possible to e
 
 1. Create a .dmupgrade package.
 
-2. In the UpdateContent.txt file of that package, add an “InstallApp” instruction, followed by the path to the application package you created earlier:
+1. In the UpdateContent.txt file of that package, add an “InstallApp” instruction, followed by the path to the application package you created earlier:
 
-    ```txt
-    InstallApp ./Path/To/AppPackage/AppPackage.zip
-    ```
+   ```txt
+   InstallApp ./Path/To/AppPackage/AppPackage.zip
+   ```
 
-3. Install the .dmupgrade package on a DataMiner Agent that is running.
+1. Install the .dmupgrade package on a DataMiner Agent that is running.
 
     > [!NOTE]
     >
@@ -248,20 +248,20 @@ When you configure a node in a service definition, a toggle button now allows yo
 
 It is now possible to automatically generate booking shapes. To implement this feature, do the following:
 
-1. Create a shape representing the booking items, add a *ChildType* data field to that shape, and set its value to “Booking”.
+1. Create a shape representing the booking items, add a *ChildType* data field to that shape, and set its value to "Booking".
 
-2. Create a shape group containing the shape you made in step 1, add a *Children* data field to the shape group, and set its value to “Booking”.
+1. Create a shape group containing the shape you made in step 1, add a *Children* data field to the shape group, and set its value to "Booking".
 
 By default, all bookings in the Cube cache will be shown. If that cache does not contain any bookings, then a default set of bookings will be retrieved (i.e. from 1 day in the past to 2 days in the future).
 
-- If you want to set a specific time range, then add a *ChildrenSource* data field to the shape group and set its value to a specific time range (e.g. “StartTime=\<dateTime>; EndTime=\<dateTime>”).
+- If you want to set a specific time range, then add a *ChildrenSource* data field to the shape group and set its value to a specific time range (e.g. "StartTime=\<dateTime>; EndTime=\<dateTime>").
 
     > [!NOTE]
     > If you retrieve a specific set of bookings by using a *ChildrenSource* data field set to a specific time range, the retrieved bookings will be added to the ones already present in the cache. If, by specifying a time range, you only want to filter the bookings currently in the cache, then use a *ChildrenFilter* data field instead.
 
 - If you want to filter the bookings, then add a *ChildrenFilter* data field to the shape group and set its value to a booking filter, using the same filter format that is used when specifying a ListView filter.
 
-- If you want to sort the bookings, then add a *ChildrenSort* data field to the shape group and set its value to “Name” (i.e. the default setting), “Property\|Start time” or “Property\|End time”, optionally followed by “,asc” (i.e. the default order) or “,desc”.
+- If you want to sort the bookings, then add a *ChildrenSort* data field to the shape group and set its value to "Name" (i.e. the default setting), "Property\|Start time" or "Property\|End time", optionally followed by ",asc" (i.e. the default order) or ",desc".
 
     > [!NOTE]
     > Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders.
@@ -457,112 +457,112 @@ The DMAJobDomain class, which now extends from the newly added DMAJobDomainLite 
 
 - CreateJobsDomain(string connection, string name)
 
-    Creates a job domain with a unique name, containing a default section definition. If the job domain was created successfully, the ID of the created job domain will be returned.
+  Creates a job domain with a unique name, containing a default section definition. If the job domain was created successfully, the ID of the created job domain will be returned.
 
 - GetJobsDomains(string connection)
 
-    Retrieves all available job domains and sorts them naturally by name. Returns an array of JobDomainLite objects.
+  Retrieves all available job domains and sorts them naturally by name. Returns an array of JobDomainLite objects.
 
 - GetJobsDomain(string connection, string domainID)
 
-    Retrieves a job domain by ID. If no ID is provided, then the first domain found will be returned. Also, the method will migrate the client information in the user’s VisualData to JobDomain.VisualStructure.
+  Retrieves a job domain by ID. If no ID is provided, then the first domain found will be returned. Also, the method will migrate the client information in the user’s VisualData to JobDomain.VisualStructure.
 
 - UpdateJobsDomain(string connection, string id, string name)
 
-    Updates a job domain. If the job domain was updated successfully, the ID of the updated job domain will be returned.
+  Updates a job domain. If the job domain was updated successfully, the ID of the updated job domain will be returned.
 
 - DeleteJobsDomain(string connection, string id)
 
-    Deletes a job domain. If the job domain was deleted successfully, the method will return TRUE.
+  Deletes a job domain. If the job domain was deleted successfully, the method will return TRUE.
 
 - UpdateDomainSectionDefinitionConfiguration(string connection, string domainID, DMASectionDomainConfig\[\] configuration)
 
-    This method, which was formerly named SaveJobsSectionDomainConfig, updates all client information of each section definition in JobDomain.VisualStructure.
+  This method, which was formerly named SaveJobsSectionDomainConfig, updates all client information of each section definition in JobDomain.VisualStructure.
 
 ##### Methods to manage job section definitions
 
 - CreateJobsSectionDefinition(string connection, string domainID, string name, DMABookingLink bookingLinkInfo, DMASectionDefinitionInfo info)
 
-    This method, which now includes a domain ID, now creates a section definition in the specified domain. If the section definition was created successfully, the section definition ID will be returned.
+  This method, which now includes a domain ID, now creates a section definition in the specified domain. If the section definition was created successfully, the section definition ID will be returned.
 
 - GetJobsSectionDefinitions(string connection)
 
-    Retrieves all section definitions.
+  Retrieves all section definitions.
 
-    > [!NOTE]
-    > This method will only work as long as there is only one domain. As soon as there are multiple domains, the method will return an error indicating that you should use the new GetJobsSectionDefinitionsV2 method instead (see below).
+  > [!NOTE]
+  > This method will only work as long as there is only one domain. As soon as there are multiple domains, the method will return an error indicating that you should use the new GetJobsSectionDefinitionsV2 method instead (see below).
 
 - GetJobsSectionDefinitionsV2(string connection, string domainID)
 
-    Retrieves all section definitions from the specified domain and parses them using the client information in the VisualStructure of the domain in question.
+  Retrieves all section definitions from the specified domain and parses them using the client information in the VisualStructure of the domain in question.
 
 - GetJobsSectionDefinition(string connection)
 
-    Retrieves a specific section definition.
+  Retrieves a specific section definition.
 
-    > [!NOTE]
-    > This method will only work as long as there is only one domain. As soon as there are multiple domains, the method will return an error indicating that you should use the new GetJobsSectionDefinitionV2 method instead (see below).
+  > [!NOTE]
+  > This method will only work as long as there is only one domain. As soon as there are multiple domains, the method will return an error indicating that you should use the new GetJobsSectionDefinitionV2 method instead (see below).
 
 - GetJobsSectionDefinitionV2(string connection, string domainID. string sectionDefinitionID)
 
-    Retrieves a specific section definition from the specified domain and parses it using the client information in the VisualStructure of the domain in question.
+  Retrieves a specific section definition from the specified domain and parses it using the client information in the VisualStructure of the domain in question.
 
 - UpdateJobsSectionDefinition(string connection, string domainID, string sectionDefinitionID, string name, DMABookingLink bookingLinkInfo, DMASectionDefinitionInfo info)
 
-    This method, which now includes a domain ID, now updates the specified section definition in the specified domain. If the section definition was updated successfully, the section definition ID will be returned.
+  This method, which now includes a domain ID, now updates the specified section definition in the specified domain. If the section definition was updated successfully, the section definition ID will be returned.
 
 - DeleteJobsSectionDefinition(string connection string sectionDefinitionID)
 
-    > [!NOTE]
-    > This method is no longer supported. It will return an error indicating that you should use the new DeleteJobsSectionDefinitionFromDomain method instead (see below).
+  > [!NOTE]
+  > This method is no longer supported. It will return an error indicating that you should use the new DeleteJobsSectionDefinitionFromDomain method instead (see below).
 
 - DeleteJobsSectionDefinitionFromDomain(string connection, string domainID, string sectionDefinitionID)
 
-    Removes the specified section definition from the specified domain and the client information for that domain from the VisualStructure.
+  Removes the specified section definition from the specified domain and the client information for that domain from the VisualStructure.
 
-    > [!NOTE]
-    > This method does not physically delete a section definition. It only removes the link between the section definition and the job domain.
+  > [!NOTE]
+  > This method does not physically delete a section definition. It only removes the link between the section definition and the job domain.
 
 - UnhideJobsSectionDefinition(string connection, string domainID, string sectionDefinitionID)
 
-    Unhides the specified section definition of the specified domain.
+  Unhides the specified section definition of the specified domain.
 
 - UpdateSectionDefinitionFieldOrder(string connection, string domainID, string sectionDefinitionID, string\[\] fieldOrder)
 
-    Updates the field order in the specified section definition of the specified domain.
+  Updates the field order in the specified section definition of the specified domain.
 
 ##### Methods to manage job section definition fields
 
 - AddOrUpdateJobsSectionDefinitionField(string connection, string domainID, string sectionDefinitionID, DMASectionDefinitionField field, DMAJobFieldPossibleValueUpdate\[\] possibleValueUpdates)
 
-    Adds or updates a section definition field in the specified section definition of the specified domain.
+  Adds or updates a section definition field in the specified section definition of the specified domain.
 
 - DeleteJobsSectionDefinitionField(string connection, string sectionDefinitionID, string fieldID)
 
-    Removes a section definition field from the specified section definition of the specified domain.
+  Removes a section definition field from the specified section definition of the specified domain.
 
 - UnhideJobSectionDefinitionField(string connection, string domainID, string sectionDefinitionID, string fieldID)
 
-    Unhides the specified section definition field in the specified section definition of the specified domain.
+  Unhides the specified section definition field in the specified section definition of the specified domain.
 
 ##### Methods to manage jobs
 
 - DeleteJobs(string connection, string domainID, string\[\] jobIDs)
 
-    Deletes the specified jobs and returns an DMARemoveInfo object containing an array with all successful and failed removals.
+  Deletes the specified jobs and returns an DMARemoveInfo object containing an array with all successful and failed removals.
 
 ##### Methods to manage job templates
 
 - GetJobTemplates(string connection)
 
-    Retrieves all job templates.
+  Retrieves all job templates.
 
-    > [!NOTE]
-    > This method will only work as long as there is only one domain. As soon as there are multiple domains, the method will return an error indicating that you should use the new GetJobTemplatesV2 method instead (see below).
+  > [!NOTE]
+  > This method will only work as long as there is only one domain. As soon as there are multiple domains, the method will return an error indicating that you should use the new GetJobTemplatesV2 method instead (see below).
 
 - GetJobTemplatesV2(string connection, string domainID)
 
-    Retrieves all job templates for the specified domain.
+  Retrieves all job templates for the specified domain.
 
 ### DMS Mobile apps
 
@@ -574,10 +574,10 @@ In the Jobs app, it is now possible to have different job domains, each with the
 
 - In configuration mode, you can select the job domain in the top-left corner of the screen, and then configure the job sections within the selected domain. The *New*, *Edit* and *Delete* buttons on the right of the job domain selection box allow you to add a new domain, edit the name of the selected domain or delete the selected domain.
 
-    > [!NOTE]
-    > When you upgrade from a DataMiner system without job domains, all existing job section definitions will be stored in a job domain named “DefaultJobDomain”.
-    >
-    > Note that, if necessary, it is possible to rename this default job domain.
+  > [!NOTE]
+  > When you upgrade from a DataMiner system without job domains, all existing job section definitions will be stored in a job domain named “DefaultJobDomain”.
+  >
+  > Note that, if necessary, it is possible to rename this default job domain.
 
 #### Jobs app: Managing job attachments no longer requires explicit Delete permission \[ID 25961\]
 
@@ -622,7 +622,7 @@ Disabled text boxes in e.g. interactive Automation scripts will now automaticall
 
 #### User menu now has a 'Sign out' command \[ID 26254\]
 
-In all mobile apps (Monitoring, Dashboards, Jobs, etc.), the user menu in the top-right corner of the screen now has a “Sign out” command.
+In all mobile apps (Monitoring, Dashboards, Jobs, etc.), the user menu in the top-right corner of the screen now has a "Sign out" command.
 
 #### Monitoring & Dashboards apps: Number groups in numeric parameter values will now be separated by a thin space \[ID 26394\]
 
@@ -649,7 +649,7 @@ Due to a number of enhancements, overall performance has increased when retrievi
 
 #### SLAnalytics: Alarm focus enhancements \[ID 25591\]
 
-From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software assigns an estimated likelihood or “alarm focus score” to each alarm, after analyzing the short-term history and current behavior of incoming alarms in real time.
+From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software assigns an estimated likelihood or "alarm focus score" to each alarm, after analyzing the short-term history and current behavior of incoming alarms in real time.
 
 Due to a number of enhancements, overall performance of this alarm focus feature has now increased.
 

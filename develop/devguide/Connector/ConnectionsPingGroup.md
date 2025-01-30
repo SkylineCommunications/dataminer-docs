@@ -20,8 +20,7 @@ If the main connection is a serial connection, and there is no group with ID "-1
 In case there is no pair with the [ping](xref:Protocol.Pairs.Pair-ping) attribute set to ´true´, the pair with the lowest ID that contains a response will be used as ping pair.
 
 > [!NOTE]
->
-> - For serial connections, instead of using a group with ID "-1", it is advised to use the ping attribute to define a ping pair.
+> For serial connections, instead of using a group with ID "-1", it is advised to use the ping attribute to define a ping pair.
 
 ## SNMP connection
 

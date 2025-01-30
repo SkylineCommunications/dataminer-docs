@@ -1,5 +1,6 @@
 ---
 uid: DBConfiguration_xml
+keywords: central database
 ---
 
 # DBConfiguration.xml

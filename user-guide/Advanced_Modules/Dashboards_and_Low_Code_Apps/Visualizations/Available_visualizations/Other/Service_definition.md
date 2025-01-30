@@ -40,7 +40,7 @@ To configure the component:
 
    If you want to reorder the configured actions, hover the mouse pointer over an action, and click the up or down arrow at the top of the action. Similarly, to delete a configured action, hover the mouse pointer over the action and click the red garbage can icon.
 
-1. Optionally, fine-tune the way the component is displayed with the following settings in the *Layout* tab:
+1. Optionally, fine-tune the way the component is displayed with the following settings in the *Layout* pane:
 
    - *Show ID*: Determines whether node IDs are displayed.
 

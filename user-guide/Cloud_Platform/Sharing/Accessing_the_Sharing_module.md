@@ -1,5 +1,6 @@
 ---
 uid: Accessing_the_Sharing_module
+keywords: cloud shares, cloud sharing
 ---
 
 # Accessing the Sharing module

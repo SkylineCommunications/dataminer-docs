@@ -1,5 +1,6 @@
 ---
 uid: Setting_up_an_offload_database
+keywords: central database
 ---
 
 # Setting up an offload database
