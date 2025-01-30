@@ -324,3 +324,10 @@ Also, the Mobile Gateway process would only be aware of elements that were hoste
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 In some cases, BPAs tests would fail to load the necessary DLL files.
+
+#### Swarming: Not all data would be flushed when the element was unloaded [ID 42077]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element was being swarmed, not all data would be flushed when the element was unloaded.
