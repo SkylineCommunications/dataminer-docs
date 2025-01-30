@@ -116,7 +116,10 @@ Two different DataMiner startup issues are related to IP changes: DataMiner may 
   - `Destroying connection (SLAnalytics): Authentication took too long.`
   - `Destroying connection (SLDataMiner.exe): Authentication took too long.`
 
-- NATS logs indicate "connected to NATS for account and activation notifications" and "STREAM: Streaming Server is ready".
+- NATS logging:
+
+  - The *nats-account-server.log* file in `C:\Skyline DataMiner\NATS\nats-account-server` mentions `connected to NATS for account and activation notifications`.
+  - The *nats-server.log* file in `C:\Skyline DataMiner\NATS\nats-streaming-server` mentions `STREAM: Streaming Server is ready`.
 
 #### Root cause
 
