@@ -2,7 +2,7 @@
 uid: working_with_dcf_interface_properties_gqi
 ---
 
-# Working with DCF Interface Properties in GQI Queries
+# Working with DCF Interface Properties
 
 This tutorial shows you how to work with GQI queries that contains DCF Interface information. For this specific example, you will be able to display DCF interface properties available in GQI queries.
 
@@ -36,9 +36,9 @@ To deploy the package:
 
 1. Select the last version of the catalog (currently version 1.0.0.3) and click the *Deploy* button to deploy the package on your DMA.
 
-  While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
+    While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
 
-  The package will deploy the following components:
+    The package will deploy the following components:
 
     - The **Generic Data Simulator** connector, which exposes DCF interfaces and will be used by the elements created for this tutorial.
 
@@ -48,9 +48,9 @@ To deploy the package:
 
     - The **KATA_DCF** dashboard, located in the dashboard folder with the same name. This is a blank dashboard containing the following GQI queries, which are required to create the node edge graph for this tutorial:
 
-      - **DCF_ELEMENTS**: The nodes representing the routers, switches, and PCs available in the network diagram.
-      - **DCF_INTERFACES**: The DCF interfaces exposed by the elements created for this tutorial
-      - **DCF_CONNECTIONS**: The DCF connections created for this tutorial.
+    - **DCF_ELEMENTS**: The nodes representing the routers, switches, and PCs available in the network diagram.
+    - **DCF_INTERFACES**: The DCF interfaces exposed by the elements created for this tutorial
+    - **DCF_CONNECTIONS**: The DCF connections created for this tutorial.
 
     > [!NOTE]
     > This dashboard has been used for the previous Kata session [Kata #45](https://community.dataminer.services/courses/kata-45/) and was kept for reference.
@@ -65,33 +65,33 @@ To deploy the package:
 
 1. When the package has been fully deployed, in the **Automation** module in DataMiner Cube, go to the folder **Kata DCF** and execute the script **SLC-AS-Kata-DCF** to provision the components required for this tutorial.
 
-   > [!TIP]
-   > See also: [Manually executing a script](xref:Manually_executing_a_script)
+    > [!TIP]
+    > See also: [Manually executing a script](xref:Manually_executing_a_script)
 
-   When the script is complete, the following items should become available in the Surveyor:
+    When the script is complete, the following items should become available in the Surveyor:
 
-   - Views:
-     - SLC_KATA_DCF
-     - 00_ROUTER
-     - 01_SWITCH
-     - 02_PC
-     - 10_PROVISIONING
+    - Views:
+      - SLC_KATA_DCF
+      - 00_ROUTER
+      - 01_SWITCH
+      - 02_PC
+      - 10_PROVISIONING
 
-   - Elements:
-     - RO-01
-     - SW-01
-     - SW-02
-     - PC-11
-     - PC-12
-     - PC-13
-     - PC-21
-     - PC-22
-     - PC-23
-     - SKYLINE_GENERIC_PROVISIONING
+    - Elements:
+      - RO-01
+      - SW-01
+      - SW-02
+      - PC-11
+      - PC-12
+      - PC-13
+      - PC-21
+      - PC-22
+      - PC-23
+      - SKYLINE_GENERIC_PROVISIONING
 
-Below a overview of the provisioned elements in the surveyor:
+    Below an overview of the provisioned elements in the surveyor:
 
-![Kata DCF Advanced Provisioned Elements](~/user-guide/images/kata_dcf_advanced_tutorial_0.png)
+    ![Kata DCF Advanced Provisioned Elements](~/user-guide/images/kata_dcf_advanced_tutorial_0.png)
 
 1. In the Cube Surveyor, select the view **SLC_KATA_DCF**.
 
@@ -108,18 +108,18 @@ Below a overview of the provisioned elements in the surveyor:
 
 1. To confirm that these properties were correctly provisioned, open any element (router, switch or PC) and go to the page **General Parameters** > and click the button *Configure..* for the parameter **DataMiner Connectivity Framework**. The table [Interface Properties] should contain the DCF Interface property *Bandwidth* for each port available in the Interface table (4 in total).
 
-> [!TIP]
-> See also: [General Parameters](xref:General_parameters)
+    > [!TIP]
+    > See also: [General Parameters](xref:General_parameters)
 
-Below an overview of the DCF interfaces properties provisioned for an element:
+    Below an overview of the DCF interfaces properties provisioned for an element:
 
-![DCF Interface Properties](~/user-guide/images/kata_dcf_advanced_tutorial_1.png)
+    ![DCF Interface Properties](~/user-guide/images/kata_dcf_advanced_tutorial_1.png)
 
 1. Open the element **SKYLINE_GENERIC_PROVISIONING**. In the page **DCF Import**, click the button *Import*. Once the **Progress** parameter is set to 100, the **Status** parameter should indicate that 8 connections were found, and imported.
 
 1. Open the overview available in the view **SLC_KATA_DCF** (tab *dcf*) and confirm that all the DCF connections were provisioned correctly. The following connections should be displayed.
 
-![Network Diagram Overview with connections](~/user-guide/images/kata_dcf_advanced_tutorial_2.png)
+    ![Network Diagram Overview with connections](~/user-guide/images/kata_dcf_advanced_tutorial_2.png)
 
 ## Step 3: Configure the visualizations
 
@@ -131,48 +131,48 @@ Below an overview of the DCF interfaces properties provisioned for an element:
 
 1. Drag a *Grid* visualization from the pane on the left onto the dashboard.
 
-![Grid Visualization](~/user-guide/images/kata_dcf_advanced_tutorial_3.png)
+    ![Grid Visualization](~/user-guide/images/kata_dcf_advanced_tutorial_3.png)
 
 1. Drag a *Query Filter* visualization from the pane on the left onto the dashboard.
 
-![Query Filter Visualization](~/user-guide/images/kata_dcf_advanced_tutorial_4.png)
+    ![Query Filter Visualization](~/user-guide/images/kata_dcf_advanced_tutorial_4.png)
 
 1. Drag the edges from both visualizations to resize them so they will be large enough to display all the interfaces.
 
 1. In the *Data Pane* on the right, expand the *Queries* node, and drag the query *DCF_INTERFACES* to both visualizations.
 
-> [!NOTE]
-> You can have a look at the GQI query to further understand how the GQI query was built to retrieve the DCF interface property.
+    > [!NOTE]
+    > You can have a look at the GQI query to further understand how the GQI query was built to retrieve the DCF interface property.
 
 1. In the *Data Pane*, extend the query *DCF_INTERFACES* and drag the *Bandwidth* column to the *Query filter* visualization.
 
-![Query Filter Configuration](~/user-guide/images/kata_dcf_advanced_tutorial_5.gif)
+    ![Query Filter Configuration](~/user-guide/images/kata_dcf_advanced_tutorial_5.gif)
 
 1. Select the *Query Filter* visualization and on the right, select *Settings*. Enable the *Filter assistance*. As a result, you should be able to see 3 possible suggestions for the *Bandwidth* column.
 
-![Query Filter with filter suggestion](~/user-guide/images/kata_dcf_advanced_tutorial_6.png)
+    ![Query Filter with filter suggestion](~/user-guide/images/kata_dcf_advanced_tutorial_6.png)
 
 1. In the *Data Pane* on the right, expand *Components*. Expand *Query Filter* and drag *Query columns* to the *Grid* visualization.
 
-![Query Filter in grid visualization](~/user-guide/images/kata_dcf_advanced_tutorial_7.gif)
+    ![Query Filter in grid visualization](~/user-guide/images/kata_dcf_advanced_tutorial_7.gif)
 
 1. Stop editing the dashboard to test the query filter. When selecting one of the values available for the *Bandwidth* in the query filter, only the DCF interfaces that matches the value of this property will be highlighted.
 
-![Query Filter in action](~/user-guide/images/kata_dcf_advanced_tutorial_8.png)
+    ![Query Filter in action](~/user-guide/images/kata_dcf_advanced_tutorial_8.png)
 
 1. Edit the dashboard, and select the *Grid* visualization. Next, on the right select the *Layout* tab. At the bottom, select *Edit* to open the template editor.
 
-> [!TIP]
-> See also [Using the Template Editor](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Configuring_components/Template_Editor.html)
+    > [!TIP]
+    > See also [Using the Template Editor](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Configuring_components/Template_Editor.html)
 
 1. Add two texts layers, one that will be used to display the element name of the DCF interface, and another one that will display the DCF Interface property *Bandwidth*.
 
-![Template Editor - Text layers](~/user-guide/images/kata_dcf_advanced_tutorial_9.png)
+    ![Template Editor - Text layers](~/user-guide/images/kata_dcf_advanced_tutorial_9.png)
 
 1. Select on the new text layers, and on the right side change the value to *{Element Name}*. Proceed in a similar way with the other text layer and set as value *{Bandwidth}*.
 
-![Template Editor - Text layers (Configuration)](~/user-guide/images/kata_dcf_advanced_tutorial_10.png)
+    ![Template Editor - Text layers (Configuration)](~/user-guide/images/kata_dcf_advanced_tutorial_10.png)
 
 1. To save these changes, on the right panel select *Save*. The grid should now display the element name and bandwidth for each interface.
 
-![Grid Visualization updated](~/user-guide/images/kata_dcf_advanced_tutorial_11.png)
+    ![Grid Visualization updated](~/user-guide/images/kata_dcf_advanced_tutorial_11.png)
