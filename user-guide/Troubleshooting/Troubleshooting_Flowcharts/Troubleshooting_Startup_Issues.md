@@ -116,6 +116,12 @@ Two different DataMiner startup issues are related to IP changes: DataMiner may 
   - `Destroying connection (SLAnalytics): Authentication took too long.`
   - `Destroying connection (SLDataMiner.exe): Authentication took too long.`
 
+- *SLAnalytics.txt* mentions an exception while opening SLNetConnection.
+
+  For example:
+
+  `2023/12/12 17:42:20.733|SLAnalytics.txt|SLAnalytics|SLNetConnection.cpp(196): Skyline::DataMiner::Analytics::SLNetConnection::openConnection)|ERR|0|Exception while opening SLNetConnection`
+
 - NATS logging:
 
   - The *nats-account-server.log* file in `C:\Skyline DataMiner\NATS\nats-account-server` mentions `connected to NATS for account and activation notifications`.
