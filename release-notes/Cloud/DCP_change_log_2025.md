@@ -10,34 +10,34 @@ The dataminer.services platform gets updated continuously. This change log can h
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
 
-### 30 January 2025 - Fix - Admin - Deployments - Duplicate load calls
+### 30 January 2025 - Fix - Admin - Deployments - Duplicate load calls [RN 41989]
 
 Fixed an issue where the deployments page would make unnecessary calls to load the data.
 
-### 30 January 2025 - New feature - Admin - Add DaaS usage
+### 30 January 2025 - New feature - Admin - Add DaaS usage [RN 42030]
 
 Users can now view and export your DaaS usage directly from the Admin app.
 
-### 30 January 2025 - Enhancement - Catalog - Browse filters
+### 30 January 2025 - Enhancement - Catalog - Browse filters [RN 42035]
 
 Fixed an issue that caused query parameters to be added at the wrong time on the catalog app.
 Now query parameters will only be added on the browse page and if the user sets any filter or sorting;
 
-### 30 January 2025 - New feature - Catalog - ServiceWorker and app improvements
+### 30 January 2025 - New feature - Catalog - ServiceWorker and app improvements [RN 42036]
 
 The Catalog app now notifies you when a new version is available.
 Additionally, the Catalog app can now be installed as a Progressive Web App (PWA).
 
-### 30 January 2025 - Enhancement - Catalog - Auto-login for returning users
+### 30 January 2025 - Enhancement - Catalog - Auto-login for returning users [RN 42041]
 
 Users of the catalog app who were logged in previously are automatically logged back in, even if their session expires.
 
-### 30 January 2025 - Enhancement - Catalog - Category icons
+### 30 January 2025 - Enhancement - Catalog - Category icons [RN 42051]
 
 Catalog items now show category icons when no vendor logo or image is available.
 The category icon is also shown on the browse page with the type filters.
 
-### 30 January 2025 - Enhancement - Admin - Usage page improvements
+### 30 January 2025 - Enhancement - Admin - Usage page improvements [ID 42054]
 
 The tabs and sections of usage page have been reordered for better navigation.
 Improvements for smaller devices hava also been implemented.
