@@ -23,7 +23,7 @@ You will now be able to execute the upgrade. Until a fix is available, we recomm
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.5.0/10.5.2 [CU1]<!--RN 42058-->.
 
 ## Description
 
