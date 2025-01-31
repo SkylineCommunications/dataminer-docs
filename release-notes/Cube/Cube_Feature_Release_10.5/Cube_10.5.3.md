@@ -171,3 +171,9 @@ From now on, Cube will check whether the value is the default setting (i.e. "Nor
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
 
 When an *AlarmSummary* shape was linked to a function, the shape would not show the correct alarm color.
+
+#### Swarming: Element selection in 'Element Swarming' window would be cleared when an element was created or deleted [ID 42079]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When, while a number of elements were selected in the *Element Swarming* window, an element was created or deleted in either the same client or another client, up to now, the element selection in the *Element Swarming* window would incorrectly be cleared.

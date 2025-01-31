@@ -339,6 +339,12 @@ When, while starting up, a DataMiner System with swarming enabled experienced a 
 
 When a previously deleted booking was created again with the same ID, up to now, that booking would incorrectly not be retrieved.
 
+#### Start-up routine of a DMA with an offline time-based license would temporarily halt before continuing [ID 41736]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+In some cases, the start-up routine of a DataMiner Agent with an offline time-based license would temporarily halt before continuing.
+
 #### GQI: Min and Max aggregation of a datetime column would incorrectly result in a number column [ID 41789]
 
 <!-- MR 10.5.0 - FR 10.5.3 -->
