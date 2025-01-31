@@ -136,7 +136,7 @@ When a *Grid* component without a fixed page size received new data, in some cas
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-The *Time range* component has been updated. It now has a calendar display that allows you to enter one or two date or datetime values without having to open the picker. The latter will now include a filterable list of all presets configured in the layout settings. Selecting a preset will cause a value to be updated instantly, while the calendar will only be updated when you click the *Apply* button. Also, the component now follows the colors defined in the theme (font, background and accent color).
+The *Time range* component has been updated. It now has a calendar display that allows you to enter one or two date or datetime values without having to open the picker. The latter will now include a filterable list of all presets configured in the layout settings. Selecting a preset will cause a value to be updated instantly, while the selected date and time from the calendar will only be applied when you click the *Apply* button. Also, the component now follows the colors defined in the theme (font, background and accent color).
 
 *Time range* components that were already added to a dashboard or low-code app will by default be in *Calendar* mode, showing the configured time as text, and will open the new picker when clicked. This way, the former behavior is mimicked. To change the mode, use the new *Edit using* setting explained below. New *Time range* components added as from now will automatically have the new layout (i.e. calendar and keyboard).
 
@@ -166,7 +166,7 @@ New settings:
 
   | Option | Description |
   |--------|-------------|
-  | Keyboard & Calendar | The component will allow you to specify a time range using two text boxes and a picker. |
+  | Keyboard & Calendar | The component will allow you to specify a time range using multiple number boxes and a picker. |
   | Calendar            | The component will mimic the former behavior. The time range will be represented as text, and a picker will allow you to change the value. |
 
 ### Fixes
