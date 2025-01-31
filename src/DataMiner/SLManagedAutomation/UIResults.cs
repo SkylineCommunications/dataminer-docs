@@ -93,6 +93,60 @@ namespace Skyline.DataMiner.Automation
 		public DateTime GetDateTime(string key) { return DateTime.Now; }
 
 		/// <summary>
+		/// Gets the date/time that was selected in the specified destination variable, in the time zone of the client, that is linked to a Calendar and Time item.
+		/// </summary>
+		/// <param name="key">The name of the destination variable.</param>
+		/// <returns>The date/time that was selected in the specified destination variable, in the time zone of the client, that is linked to a Calendar and Time item.</returns>
+		/// <example>
+		/// <code>
+		/// UIResults uir = null;
+		/// DateTime selection = DateTime.Now;
+		/// ...
+		/// UIBlockDefinition blockCalendar = new UIBlockDefinition();
+		/// blockCalendar.Type = UIBlockType.Calendar;
+		/// blockCalendar.InitialValue = selection.ToString(AutomationConfigOptions.GlobalDateTimeFormat);
+		/// blockCalendar.DestVar = "calendar";
+		/// blockCalendar.WantsOnChange = true;
+		/// ...
+		/// uib.AppendBlock(blockCalendar);
+		/// ...
+		/// uir = engine.ShowUI(uib);
+		/// selection = uir.GetClientDateTime("calendar").DateTime;
+		/// </code>
+		/// </example>
+		/// <remarks>
+		/// <note type="note">Available since DataMiner 10.5.4.</note>
+		/// </remarks>
+		public DateTimeOffset GetClientDateTime(string key) { return DateTimeOffset.Now; }
+
+		/// <summary>
+		/// Gets the time zone info for was entered for the specified destination variable, that is linked to a Calendar and Time item.
+		/// </summary>
+		/// <param name="key">The name of the destination variable.</param>
+		/// <returns>The time zone info for was entered for the specified destination variable, that is linked to a Calendar and Time item.</returns>
+		/// <example>
+		/// <code>
+		/// UIResults uir = null;
+		/// string timeZoneId;
+		/// ...
+		/// UIBlockDefinition blockCalendar = new UIBlockDefinition();
+		/// blockCalendar.Type = UIBlockType.Calendar;
+		/// blockCalendar.InitialValue = selection.ToString(AutomationConfigOptions.GlobalDateTimeFormat);
+		/// blockCalendar.DestVar = "calendar";
+		/// blockCalendar.WantsOnChange = true;
+		/// ...
+		/// uib.AppendBlock(blockCalendar);
+		/// ...
+		/// uir = engine.ShowUI(uib);
+		/// timeZoneId = uir.GetClientTimeZoneInfo("calendar").Id;
+		/// </code>
+		/// </example>
+		/// <remarks>
+		/// <note type="note">Available since DataMiner 10.5.4.</note>
+		/// </remarks>
+		public TimeZoneInfo GetClientTimeZoneInfo(string key) { return null; }
+
+		/// <summary>
 		/// Gets the key values of the tree view items that are expanded for the specified key.
 		/// </summary>
 		/// <param name="key">The name of the destination variable.</param>
