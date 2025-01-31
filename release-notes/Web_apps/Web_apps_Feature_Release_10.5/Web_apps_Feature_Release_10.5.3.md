@@ -236,3 +236,17 @@ When you logged in to the *Monitoring* app using external authentication via SAM
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 Up to now, it would incorrectly not be possible to execute a *Change variable* action via the URL of the app.
+
+#### Dashboards/Low-Code Apps - Flows: Long page names would incorrectly not be ellipsed in the flow editor [ID 42089]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+In the *Data* pane of the flow editor, up to now, long page names would incorrectly not be ellipsed.
+
+Also, from now on, when you hover over ellipsed text strings in the flow editor, a tooltip will now appear, show the entire string.
+
+#### Low-Code Apps: Not possible to transfer data from a table to a form on a panel [ID 42092]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+In some cases, it would not be possible to transfer data from a table to a form on a panel.
