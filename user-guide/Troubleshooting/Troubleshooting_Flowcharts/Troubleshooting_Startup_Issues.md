@@ -43,10 +43,10 @@ CassandraErrors --- |YES| CassandraIssue
 CassandraErrors --- |NO| ContactTechSupport
 %% Define hyperlinks %%
 click Home "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click LicensingIssue "/user-guide/Troubleshooting/Procedures/Troubleshooting_SLScripting_Issues.html#licensing-issue"
-click IPChangeIssue "/user-guide/Troubleshooting/Procedures/Troubleshooting_SLScripting_Issues.html#ip-change-issue"
-click NATSIssue "/user-guide/Troubleshooting/Procedures/Troubleshooting_SLScripting_Issues.html#nats-issue"
-click CassandraIssue "/user-guide/Troubleshooting/Procedures/Troubleshooting_SLScripting_Issues.html#cassandra-issue"
+click LicensingIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#licensing-issue"
+click IPChangeIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#ip-change-issue"
+click NATSIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#nats-issue"
+click CassandraIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#cassandra-issue"
 click ContactTechSupport "/user-guide/Troubleshooting/Contacting_tech_support.html"
 %% Apply styles to blocks %%
 class DMAStartupIssues,ContactTechSupport DarkBlue;
