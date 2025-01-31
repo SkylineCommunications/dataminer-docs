@@ -118,6 +118,14 @@ When you create a new low-code app on the root page of a DataMiner Agent (e.g. `
 
 From now on, the zoom factor for arrows and KPI labels on edges will be capped. This means that, when you keep zooming in on a node edge graph, at some point, the magnification factor of the arrows and the KPI labels on edges will no longer change.
 
+#### Low-Code Apps: 'On open' events will now be triggered without delay [ID 42039]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+Up to now, *On open* events would only be triggered after all components on a page or panel were loaded. This meant that, in some cases, events would be delayed until all lazy-loaded components had been rendered, potentially requiring users to scroll down to force events to get triggered.
+
+From now on, *On open* events will be triggered as expected, without delay.
+
 #### Dashboards/Low-Code Apps - Grid component: Scroll position will now be retained when new data is received [ID 42071]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
