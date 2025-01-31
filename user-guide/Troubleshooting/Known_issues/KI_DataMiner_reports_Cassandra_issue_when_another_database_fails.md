@@ -18,7 +18,7 @@ Restore the affected database to its working state.
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.4.11/10.5.0<!--RN 40488-->.
 
 ## Description
 
