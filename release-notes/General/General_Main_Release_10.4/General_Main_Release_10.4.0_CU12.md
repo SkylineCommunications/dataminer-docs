@@ -121,6 +121,12 @@ Up to now, in some cases, SLDataMiner could stop working while creating a dmimpo
 
 A number of enhancements have now been made with regard to error handling during the creation of dmimport packages. From now on, when an issue occurs while a dmimport package is being created, an error message will be shown in the client (e.g. DataMiner Cube).
 
+#### Problem with SLProtocol when using a condition to check whether a table is empty [ID 41968]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+SLProtocol could stop working when, in a protocol, a condition was used to check whether a table is empty.
+
 #### BPA tests would fail to load the necessary DLL files [ID 42000]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->

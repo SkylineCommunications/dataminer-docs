@@ -382,6 +382,12 @@ Up to now, in some cases, SLDataMiner could stop working while creating a dmimpo
 
 A number of enhancements have now been made with regard to error handling during the creation of dmimport packages. From now on, when an issue occurs while a dmimport package is being created, an error message will be shown in the client (e.g. DataMiner Cube).
 
+#### Problem with SLProtocol when using a condition to check whether a table is empty [ID 41968]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+SLProtocol could stop working when, in a protocol, a condition was used to check whether a table is empty.
+
 #### Errors would be logged in SLErrors.txt and SLNet.txt when Mobile Gateway was enabled in a DMS with more than one agent [ID 41988]
 
 <!-- MR 10.5.0 - FR 10.5.3 -->
