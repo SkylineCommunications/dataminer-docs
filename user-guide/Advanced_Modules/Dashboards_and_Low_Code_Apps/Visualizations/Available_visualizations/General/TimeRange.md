@@ -8,13 +8,15 @@ This component allows the user to specify a time range. You can either select a 
 
 This time range can be used as a filter for compatible components, such as the [line & area chart](xref:LineAndAreaChart). When you modify the time range in the component, the time span displayed in the filtered component will update accordingly.
 
+- From Dataminer 10.5.3 onwards<!--RN 42082-->, presets with a sliding window, for example *Last 15 minutes*, will always feed a range that is consistent with the range that is shown in the time range component.
+- Prior to 10.5.3, the feed from a sliding window range would be calculated at the moment it was used. Unless the data of the time range was refreshed every minute, this would result in an inconsistency between what was shown in the time range and the feed that was actually outputted.
+
 > [!NOTE]
 > From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40622-->, when you set a custom time range, the data of the component is only updated after you click the *Apply* button. If you have not yet clicked this button, you can revert any changes to the custom time range by clicking *Cancel*. In previous versions, changing the custom time range automatically updates the component data.
 
-![Time range](~/user-guide/images/Time_Range.png)<br>*Time range component in DataMiner 10.4.11*
+![Time range](~/user-guide/images/Time_Range.png)<br>*Time range component in DataMiner 10.5.3*
 
 ## Configuring the component
-
 To configure the component:
 
 1. Optionally, customize the following component options in the *Component* > *Settings* pane:
@@ -24,7 +26,9 @@ To configure the component:
    - *Allow refresh*: Determines whether the component includes a refresh timer. By default disabled.
 
    - *Refresh rate*: If *Allow refresh* is selected, this setting determines after how many seconds the data is refreshed. By default set to 10 seconds.
-
+   > [!NOTE]
+   > From DataMiner 10.5.3 onwards<!--RN 42082-->, the *Allow refresh* and related *Refresh rate* settings are no longer available. 
+   Refreshing the data of the time range will instead be possible by linking it to a feed from a [trigger component](xref:DashboardTrigger)
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
@@ -46,7 +50,7 @@ To configure the component:
 
    - *Show current range*: Determines whether the current time range is displayed at the top of the component (4).
 
-   ![Time range](~/user-guide/images/TimeRange.png)<br>*Time range component in DataMiner 10.4.11*
+   ![Time range](~/user-guide/images/TimeRange.png)<br>*Time range component in DataMiner 10.5.3*
 
 ## Component actions
 
@@ -54,4 +58,4 @@ From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40569-->, when y
 
 - *Set value*: Allows you to set the current value of the component to a preset or custom time range.
 
-  ![Example](~/user-guide/images/Set_Value_Time_Range.gif)<br>*Time range, button, and line & area chart components in DataMiner 10.4.11*
+  ![Example](~/user-guide/images/Set_Value_Time_Range.gif)<br>*Time range, button, and line & area chart components in DataMiner 10.5.3*
