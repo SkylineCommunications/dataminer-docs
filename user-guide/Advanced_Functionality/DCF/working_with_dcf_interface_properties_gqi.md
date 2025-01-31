@@ -2,31 +2,26 @@
 uid: working_with_dcf_interface_properties_gqi
 ---
 
-# Working with DCF Interface Properties
+# Working with DCF interface properties in GQI queries
 
-This tutorial shows you how to work with GQI queries that contains DCF Interface information. For this specific example, you will be able to display DCF interface properties available in GQI queries.
+In this tutorial, you will learn how to work with GQI queries that contain DCF interface information. By way of example, the tutorial will show how you can display information about the DCF interface properties using a grid visualization. Using GQI query filter components, you will then be able to filter the displayed interfaces.
+
+> [!TIP]
+> This tutorial is a continuation of [Kata #45: DataMiner Connectivity Framework](https://community.dataminer.services/courses/kata-45/), available on DataMiner Dojo.
 
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
+- Make sure the [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface) soft-launch option is enabled. See [Soft-launch options](xref:SoftLaunchOptions).
 
-- Make sure that the [Generic Interface](https://docs.dataminer.services/user-guide/Reference/Soft-launch_options/Overview_of_Soft_Launch_Options.html#genericinterface) soft-launch option is enabled. See [Soft-launch options](https://docs.dataminer.services/user-guide/Reference/Soft-launch_options/SoftLaunchOptions.html).
-
->[!TIP]
->If you use a [DaaS system](https://docs.dataminer.services/user-guide/Getting_started/Creating_a_DMS_in_the_cloud.html), these prerequisites are automatically met.
-
->[!TIP]
->This tutorial is a continuation of the [Kata #45: DataMiner Connectivity Framework](https://community.dataminer.services/courses/kata-45/), available on DataMiner Dojo.
-
-## Objective
-
-The objective of this tutorial is to display information about DCF interface properties using a grid visualization. Furthermore, using a GQI Query filter components, you will be able to filter interfaces in a grid component.
+> [!TIP]
+> If you use a [DaaS system](xref:Creating_a_DMS_in_the_cloud), these prerequisites are automatically met.
 
 ## Overview
 
 - [Step 1: Deploy the tutorial package from the catalog](#step-1-deploy-the-tutorial-package-from-the-catalog)
 - [Step 2: Provision DCF Connections and properties](#step-2-provision-dcf-connections-and-properties)
-- [Step 3: Configure the visualizations](step-3-configure-the-grid-visualization)
+- [Step 3: Configure the visualizations](#step-3-configure-the-visualizations)
 
 ## Step 1: Deploy the tutorial package from the Catalog
 
@@ -163,7 +158,7 @@ To deploy the package:
 1. Edit the dashboard, and select the *Grid* visualization. Next, on the right select the *Layout* tab. At the bottom, select *Edit* to open the template editor.
 
     > [!TIP]
-    > See also [Using the Template Editor](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Configuring_components/Template_Editor.html)
+    > See also [Using the Template Editor](xref:Template_Editor)
 
 1. Add two texts layers, one that will be used to display the element name of the DCF interface, and another one that will display the DCF Interface property *Bandwidth*.
 

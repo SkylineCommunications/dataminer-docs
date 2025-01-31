@@ -593,7 +593,7 @@ items:
         items:
           - name: Getting started with DCF
             topicUid: getting_started_dataminer_connectivity_framework
-          - name: Working with DCF Interface Properties in GQI Queries
+          - name: Working with DCF interface properties in GQI queries
             topicUid: working_with_dcf_interface_properties_gqi
   - name: TCP-IP sockets
     items:
