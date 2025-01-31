@@ -153,11 +153,11 @@ From now on, a maximum of 100 DomInstances will be included in the error data. F
 
 Up to now, history entries for booking instances and resources would be processed individually. From now on, they will be processed in batches of 100 entries. This will considerably enhance overall performance when processing these history entries.
 
-#### Credential library is now fully aware of all supported SNMPv3 authentication and encryption algorithms [ID 41923]
+#### Credentials library is now fully aware of all supported SNMPv3 authentication and encryption algorithms [ID 41923]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
-Up to now, the credential library would only be aware of a subset of all SNMPv3 authentication and encryption algorithms.
+Up to now, the credentials library would only be aware of a subset of all SNMPv3 authentication and encryption algorithms.
 
 Because of a number of enhancements, it will now be fully aware of all supported algorithms.
 
