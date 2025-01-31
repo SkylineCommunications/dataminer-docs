@@ -9,6 +9,34 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 30 January 2025 - Enhancement - Admin - Deployments - Duplicate load calls prevented [RN 41989]
+
+The efficiency of the Deployments page in the Admin app has been improved. Previously, this page would make unnecessary duplicate calls to load the data.
+
+### 30 January 2025 - New feature - Admin - DaaS usage [RN 42030]
+
+You can now view your DaaS usage directly on the Usage page in the Admin app and export it.
+
+### 30 January 2025 - Fix - Catalog - Query parameters shown incorrectly [RN 42035]
+
+Previously, it could occur that query parameters were shown in the Catalog app when they were not needed. Now query parameters will only be added on the browse page and only if you configure any filter or sorting.
+
+### 30 January 2025 - New feature - Catalog - Notification when new app version is available + support for installation as PWA [RN 42036]
+
+The Catalog app will now notify you when a new version is available. In addition, it can now be installed as a Progressive Web App (PWA).
+
+### 30 January 2025 - Enhancement - Catalog - Auto-login for returning users [RN 42041]
+
+Users of the Catalog app who were logged in previously will now be automatically logged back in, even if their session has expired.
+
+### 30 January 2025 - Enhancement - Catalog - Category icons [RN 42051]
+
+Catalog items now show category icons when no vendor logo or image is available. The category icon is also shown on the browse page with the type filters.
+
+### 30 January 2025 - Enhancement - Admin - Usage page improvements [ID 42054]
+
+In the Admin app, the tabs and sections of the Usage page have been reordered to allow better navigation. Improvements for smaller devices have also been implemented.
+
 ### 29 January 2025 - Fix - Rollback of Remote Access and Live Sharing performance and stability improvements [ID 42087]
 
 The Remote Access and Live Sharing performance and stability improvements released on the 27th of January were rolled back because of an issue found in combination with CloudGateway 2.16.0 - 2.17.1. The issue has been fixed in [CloudGateway 2.17.2 - Reconnect banner shows up all the time during remote accessing](xref:cloudgateway_change_log#30-january-2025---fix---cloudgateway-2172---reconnect-banner-continually-showing-when-remote-access-is-used-id-42086).
