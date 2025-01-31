@@ -283,6 +283,21 @@ Because of a number of enhancements made to SLProtocol, overall CPU usage has be
 - Engine.SetAlarmProperties(int, int, string[], string[])
 - Engine.AcknowledgeAlarm(int, int, string)
 
+#### GQI DxM: Redundant Logging section removed from appsettings.custom.json file [ID 42075]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+The redundant `Logging` section (see example below) has now been removed from the `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.custom.json` file.
+
+```json
+"Logging": {
+  "LogLevel": {
+  "Default": "Debug",
+  "Microsoft": "Information"
+  }
+},
+```
+
 ### Fixes
 
 #### Elements no longer visible after having been swarmed [ID 41635]

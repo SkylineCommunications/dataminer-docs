@@ -1106,3 +1106,18 @@ SLLogCollector packages now include the following data regarding the GQI DxM:
 - *appsettings.json*
 - Log file
 - Version
+
+#### GQI DxM: Redundant Logging section removed from appsettings.custom.json file [ID 42075]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+The redundant `Logging` section (see example below) has now been removed from the `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.custom.json` file.
+
+```json
+"Logging": {
+  "LogLevel": {
+  "Default": "Debug",
+  "Microsoft": "Information"
+  }
+},
+```
