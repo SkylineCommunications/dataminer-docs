@@ -114,7 +114,14 @@ foreach (var error in errors)
             // The 'QuarantineTriggers' contains information about why this usage was moved to quarantine
             foreach (var trigger in quarantinedUsage.QuarantineTriggers)
             {
-                errorBuilder.Append($"\t\t{trigger.QuarantineReason}");
+                errorBuilder.Append($"\t\t{trigger.QuarantineReason}. ");
+
+                // From DMA 10.5.2 onwards the 'ReservationConflictType' can provide more detailed information 
+                // when a booking update causes quarantine.
+                if (trigger.ReservationConflictType != ReservationConflictReason.None)
+                {
+                    errorBuilder.Append($"Conflict reason: {trigger.ReservationConflictType}");
+                }
                 errorBuilder.AppendLine();
             }
         }
@@ -124,7 +131,7 @@ foreach (var error in errors)
     // Scheduling conflict. The following bookings need to be moved to quarantine::
     //     Test Booking 1 (54add931-66fc-44f5-a76e-95ad0317f6af):
     // 	       resource with ID 'a250cffb-7054-4704-aa58-96200b0c49b3' will be quarantined because:
-    // 		       ReservationInstanceUpdated
+    // 		       ReservationInstanceUpdated. Conflict reason: ConcurrencyOverflow
 }
 ```
 
@@ -173,6 +180,7 @@ The following updates to resources can trigger quarantine:
 - Deleting a capacity or capability. All bookings using the deleted capacity/capability of this resource will be moved to quarantine.
 - Decreasing a maximum capacity in such a way that existing bookings are no longer supported.
 - Changing or removing a capability in such a way that currently booked values are no longer supported.
+- Changing the availability window in such a way that existing bookings are no longer supported (see [Resource availability](xref:Resource_availability)).
 
 > [!NOTE]
 > Deletion of a resource will not trigger quarantine, but this will always be blocked if the resource is in use in a future or ongoing booking.
@@ -246,6 +254,19 @@ These are the possible values for the *QuarantineReason* field:
 | MovedToMaintenance  | The resource was moved to the *Maintenance* state. |
 | ReservationInstanceUpdated  | A booking was added or updated and caused a scheduling conflict. |
 | ContributingResourceNotAvailable  | A contributing resource is not available. This can happen when contributing bookings are interrupted, or when trying to assign an unavailable contributing resource to a booking. |
+| ResourceAvailabilityWindowChanged  | The availability of a resource changed. This can happen when updating the availability window resource in such a way that existing bookings fall outside of the availability.  See also [Resource availability](xref:Resource_availability) |
+
+### Overview of possible *ReservationConflictType* values
+
+The script example in [Quarantine on booking updates](#quarantine-on-booking-updates) shows that from DataMiner version 10.5.2 onwards, the *QuarantineTrigger* will have a *ReservationConflictType* field if the conflict was caused by a booking update. The table below shows the possible values for the *ReservationConflictType* field.
+
+|*ReservationConflictType* value   | Used when  |
+|---|---|
+| ConcurrencyOverflow  | The resource does not have enough concurrency to support all bookings. |
+| CapacityOverflow  | The booked resource does not have enough capacity to support all bookings. |
+| UnavailableCapability  |  The booked resource does not provide the requested capability value. |
+| UnavailableTimeDependentCapability  | The booked time-dependent capability on the resource has a conflict with a different booking. |
+| OutsideResourceAvailabilityWindow  | The resource has an availability window defined and is not available in the time range of the booking.  |
 
 ## Moving bookings out of the quarantine state
 

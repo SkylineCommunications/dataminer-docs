@@ -1254,6 +1254,8 @@ items:
         items:
           - name: Function resource settings
             topicUid: Function_resource_settings
+          - name: Resource Availability
+            topicUid: Resource_availability
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:
