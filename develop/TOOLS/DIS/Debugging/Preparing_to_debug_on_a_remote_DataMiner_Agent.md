@@ -50,7 +50,7 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
    |---------|-------------|
    | Publish path | The network path to the shared folder on the remote DMA where DIS will upload the DLL files and the symbol files.<br> Default: \\\\remote-dma\\dis |
    | Path on DataMiner | The local path to the shared folder on the remote DMA where DIS will upload the DLL files and the symbol files.<br> Default: C:\\dis\\ |
-   | Debugger qualifier | The qualifier supplied by Remote Debugging Monitor (msvsmon.exe) in a log entry at start-up.<br>Format:<br>- username@dmaname (Visual Studio 2010)<br>- dmaname:ipport (as from Visual Studio 2012)<br>Default: RemoteDebug@remote-dma |
+   | Debugger qualifier | The qualifier supplied by Remote Debugging Monitor (msvsmon.exe) in a log entry at startup.<br>Format:<br>- username@dmaname (Visual Studio 2010)<br>- dmaname:ipport (as from Visual Studio 2012)<br>Default: RemoteDebug@remote-dma |
 
    See [DMA](xref:DIS_settings#dma)
 

@@ -77,7 +77,7 @@ In the *Computer > Advanced* section of the *Settings* windows, you can now find
 
 <!-- MR 10.3.0 [CU21] / 10.4.0 [CU9] - FR 10.4.12 -->
 
-Up to now, DataMiner Cube would by default retrieve all DCF interface data at start-up. From now on, it will only retrieve the DCF interface data when required.
+Up to now, DataMiner Cube would by default retrieve all DCF interface data at startup. From now on, it will only retrieve the DCF interface data when required.
 
 #### System Center - Logging: 'Resource Manager Scheduler' log file now available in DataMiner tab [ID 40899]
 

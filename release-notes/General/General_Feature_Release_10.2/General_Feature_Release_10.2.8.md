@@ -287,9 +287,9 @@ Up to now, each time a state component linked to a GQI query received an update,
 
 Also, when a query error occur, from now on, the actual error will be displayed instead of “No data”.
 
-#### Business Intelligence: Enhancements made to the automatic SLA data clean-up mechanism \[ID 33663\]
+#### Business Intelligence: Enhancements made to the automatic SLA data cleanup mechanism \[ID 33663\]
 
-A number of enhancements have been made to the automatic SLA data clean-up mechanism.
+A number of enhancements have been made to the automatic SLA data cleanup mechanism.
 
 #### GQI: Enhanced performance when running a GQI query with a filter applied to it \[ID 33664\]
 

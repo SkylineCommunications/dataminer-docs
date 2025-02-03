@@ -46,9 +46,9 @@ Because of a number of enhancements, overall GQI query performance has increased
 
 In DataMiner main version 10.0.0 CU11 and feature version 10.1.1, new Elasticsearch templates for custom data indices were introduced to support adding new fields after index creation. An upgrade action has now been added to remove all legacy Elasticsearch templates from the system. During the first DataMiner startup after the upgrade, the templates will then be recreated.
 
-#### Business Intelligence: Enhancements made to the automatic SLA data clean-up mechanism \[ID 33663\]
+#### Business Intelligence: Enhancements made to the automatic SLA data cleanup mechanism \[ID 33663\]
 
-A number of enhancements have been made to the automatic SLA data clean-up mechanism.
+A number of enhancements have been made to the automatic SLA data cleanup mechanism.
 
 #### DataMiner Cube - System Center: Enhancements made to Failover Configuration window \[ID 33747\]
 

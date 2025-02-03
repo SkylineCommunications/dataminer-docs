@@ -71,9 +71,9 @@ Up to now, when an element with an SSH connection was started, these values woul
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU3] - FR 10.3.3 -->
 
-At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
+At startup, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
 
-From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
+From now on, at startup, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
 #### Alarm templates: Problem with anomaly detection alarms [ID 33216]
 

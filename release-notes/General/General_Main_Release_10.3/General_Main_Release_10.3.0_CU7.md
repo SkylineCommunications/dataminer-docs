@@ -61,13 +61,13 @@ The handling of smart baseline parameter sets in SLNet has improved in cases whe
 
 In addition, a write parameter is no longer needed in this scenario. Previously, if there was no write parameter, it was not possible to update the stored baseline value. Now if a write parameter is present, it will be used to set the values in case of single parameter sets.
 
-#### Automatic clean-up of C:\\Skyline DataMiner\\Upgrades\\Packages folder [ID 37033]
+#### Automatic cleanup of C:\\Skyline DataMiner\\Upgrades\\Packages folder [ID 37033]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 After each DataMiner upgrade, up to now, the DataMiner upgrade package would be kept indefinitely in the `C:\Skyline DataMiner\Upgrades\Packages` folder.
 
-From now on, after each DataMiner upgrade or DataMiner start-up, this folder will be cleaned up.
+From now on, after each DataMiner upgrade or DataMiner startup, this folder will be cleaned up.
 
 - When a DataMiner upgrade was successful, only the `progress.log` file for that particular upgrade will be kept.
 - When a DataMiner upgrade failed, apart from the `progress.log` file, the [prerequisite checks](xref:Preparing_to_upgrade_a_DataMiner_Agent#prerequisite-checks) will also be kept for debugging purposes.
@@ -140,7 +140,7 @@ This will now be prevented. The offline DMA will now collect all nodes locally w
 
 When you perform a factory reset by running *SLReset.exe*, NATS will automatically be re-installed.
 
-Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file clean-up.
+Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file cleanup.
 
 #### Failover: NATS servers would incorrectly use the virtual IP address of a Failover setup to establish the route to the online agent [ID 37073]
 

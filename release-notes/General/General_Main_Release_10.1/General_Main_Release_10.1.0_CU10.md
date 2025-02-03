@@ -38,9 +38,9 @@ When the Alarm Console contained an alarm on a parameter of an EPM element with 
 
 In DataMiner versions prior to 10.1.11, when MultipleGetBulk was used to poll a table that contained only a single row and the response from the device was cut because it exceeded the maximum package size, in some cases, the algorithm could get stuck into an infinite loop. That problem was fixed in DataMiner version 10.1.11, but now, the MultipleGetBulk/MultipleGetNext polling mechanism has received a more thorough overhaul.
 
-#### SLA management: Enhanced automatic SLA data clean-up \[ID 31729\]
+#### SLA management: Enhanced automatic SLA data cleanup \[ID 31729\]
 
-A number of enhancements have been made with regard to automatic SLA data clean-up.
+A number of enhancements have been made with regard to automatic SLA data cleanup.
 
 ### Fixes
 
@@ -211,7 +211,7 @@ In some cases, SLProtocol could leak memory when a fill array or fill column met
 
 #### Problem when SLWatchDog was copying log files to the Minidump folder \[ID 31652\]
 
-When an error of type “thread problem” occurs, the contents of the C:\\Skyline DataMiner\\Logging folder is compressed into a zip file, which is then placed in the C:\\Skyline DataMiner\\Logging\\Minidump folder. During this action, in some cases, a lock inside the SLWatchdog process would accidentally delay the start-up of elements.
+When an error of type “thread problem” occurs, the contents of the C:\\Skyline DataMiner\\Logging folder is compressed into a zip file, which is then placed in the C:\\Skyline DataMiner\\Logging\\Minidump folder. During this action, in some cases, a lock inside the SLWatchdog process would accidentally delay the startup of elements.
 
 #### DataMiner Cube: Problem when refreshing a log file after scrolling down \[ID 31662\]
 

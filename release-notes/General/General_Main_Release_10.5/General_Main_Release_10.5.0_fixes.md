@@ -265,11 +265,11 @@ A number of issues that occurred while synchronizing files among agents in a DMS
 
 When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
 
-#### DataMiner would use an incorrect IP address when connecting to BrokerGateway during start-up [ID 41530]
+#### DataMiner would use an incorrect IP address when connecting to BrokerGateway during startup [ID 41530]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-During start-up, in some cases, DataMiner would use an incorrect IP address when connecting to BrokerGateway.
+During startup, in some cases, DataMiner would use an incorrect IP address when connecting to BrokerGateway.
 
 #### Service & Resource Management: Debug lines would incorrect get logged multiple times in SLResourceManagerScheduler.txt [ID 41568]
 

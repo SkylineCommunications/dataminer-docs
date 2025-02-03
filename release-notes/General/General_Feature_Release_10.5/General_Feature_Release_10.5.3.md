@@ -90,7 +90,7 @@ The configuration file must be formatted as follows.
 | Argument | Description |
 |---|---|
 | `name`         | The name of the parameter group.<br>This name must be unique, and will be used when a suggestion event is generated for the group in question. |
-| `updateModel`  | Indicates whether RAD should update its internal model of the relation between the parameters in the group.<br>- If set to "false", RAD will only do an initial training based on the data available at start-up.<br>- If set to "true", RAD will update the model each time new data comes in. |
+| `updateModel`  | Indicates whether RAD should update its internal model of the relation between the parameters in the group.<br>- If set to "false", RAD will only do an initial training based on the data available at startup.<br>- If set to "true", RAD will update the model each time new data comes in. |
 | `anomalyScore` | Optional argument that can be used to specify the suggestion event generation threshold.<br>By default, this value will be set to 3. Higher values will result in less suggestion events, lower values will result in more suggestion events. |
 
 **Parameter instance formats**
@@ -189,7 +189,7 @@ A number of enhancements have been made to prevent SLNet modules from forwarding
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-At DataMiner start-up, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
+At DataMiner startup, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
 
 Also, from now on, a new leader will be elected when the former leader has left the cluster.
 
@@ -334,7 +334,7 @@ In some rare cases, the element state of a DVE or Virtual Function element would
 
 In some cases, it would not be possible to swarm an element back to its original DataMiner Agent due to a caching issue in the SLDataMiner process.
 
-#### Problem with SLDataMiner when a DMS with swarming enabled had a database connection issue at start-up [ID 41714]
+#### Problem with SLDataMiner when a DMS with swarming enabled had a database connection issue at startup [ID 41714]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 <!-- Not added to MR 10.6.0 -->
@@ -347,11 +347,11 @@ When, while starting up, a DataMiner System with swarming enabled experienced a 
 
 When a previously deleted booking was created again with the same ID, up to now, that booking would incorrectly not be retrieved.
 
-#### Start-up routine of a DMA with an offline time-based license would temporarily halt before continuing [ID 41736]
+#### Startup routine of a DMA with an offline time-based license would temporarily halt before continuing [ID 41736]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-In some cases, the start-up routine of a DataMiner Agent with an offline time-based license would temporarily halt before continuing.
+In some cases, the startup routine of a DataMiner Agent with an offline time-based license would temporarily halt before continuing.
 
 #### GQI: Min and Max aggregation of a datetime column would incorrectly result in a number column [ID 41789]
 
@@ -378,7 +378,7 @@ When an element was deleted, a run-time error could occur in SLProtocol when a p
 
 When an alarm had been generated for a general information parameter (i.e. a parameter with an ID within the range 64502 to 64999), it would incorrectly not be possible to clear or update that alarm.
 
-#### SNMP managers would incorrectly receive some or all active alarms at DMA start-up [ID 41878]
+#### SNMP managers would incorrectly receive some or all active alarms at DMA startup [ID 41878]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 

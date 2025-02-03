@@ -478,7 +478,7 @@ When the “Enable trend logging (debug)” setting was deactivated, in some cas
 
 When a (new) server setting did not have a value, in some cases, instead of being assigned the default value it would incorrectly inherit the value that was assigned to it during the previous Cube session.
 
-#### Problem during SLElement start-up \[ID 24075\]
+#### Problem during SLElement startup \[ID 24075\]
 
 When SLElement started up, in some cases, an error could occur when determining the amount of parameter threads to be created.
 

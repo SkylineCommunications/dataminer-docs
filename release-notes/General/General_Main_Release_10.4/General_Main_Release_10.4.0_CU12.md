@@ -25,7 +25,7 @@ A number of enhancements have been made to prevent SLNet modules from forwarding
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-At DataMiner start-up, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
+At DataMiner startup, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
 
 Also, from now on, a new leader will be elected when the former leader has left the cluster.
 
@@ -89,11 +89,11 @@ In some rare cases, the element state of a DVE or Virtual Function element would
 
 When a previously deleted booking was created again with the same ID, up to now, that booking would incorrectly not be retrieved.
 
-#### Start-up routine of a DMA with an offline time-based license would temporarily halt before continuing [ID 41736]
+#### Startup routine of a DMA with an offline time-based license would temporarily halt before continuing [ID 41736]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-In some cases, the start-up routine of a DataMiner Agent with an offline time-based license would temporarily halt before continuing.
+In some cases, the startup routine of a DataMiner Agent with an offline time-based license would temporarily halt before continuing.
 
 #### Uploading the same version of a DVE connector twice would incorrectly cause the production version of DVE child elements to be changed [ID 41798]
 
@@ -107,7 +107,7 @@ When the same version of a DVE connector was uploaded twice, the production vers
 
 When an element was deleted, a run-time error could occur in SLProtocol when a parameter had a duplicate `RawType` tag configured.
 
-#### SNMP managers would incorrectly receive some or all active alarms at DMA start-up [ID 41878]
+#### SNMP managers would incorrectly receive some or all active alarms at DMA startup [ID 41878]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 

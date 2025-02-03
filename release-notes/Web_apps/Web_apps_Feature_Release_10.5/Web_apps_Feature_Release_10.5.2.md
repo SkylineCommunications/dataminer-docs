@@ -173,11 +173,11 @@ When you opened the Dashboards app on a mobile device, none of the following das
 - Private
 - Shared
 
-#### Web API: Client applications would not receive any new events due to a WebSocket clean-up issue [ID 41560]
+#### Web API: Client applications would not receive any new events due to a WebSocket cleanup issue [ID 41560]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-Due to a WebSocket clean-up issue, in some rare cases, client applications would incorrectly not receive any new events.
+Due to a WebSocket cleanup issue, in some rare cases, client applications would incorrectly not receive any new events.
 
 #### Dashboards/Low-Code Apps - Visual overview component: Loading indicator would not be shown [ID 41565]
 

@@ -112,11 +112,11 @@ From now on, when an invalid type is passed to one of these methods, the error t
 
 In some rare cases, SLDataMiner could stop working when a connector was deleted immediately after an element using that connector had been deleted.
 
-#### Cassandra compaction settings would incorrectly be overwritten at DataMiner start-up [ID 41551]
+#### Cassandra compaction settings would incorrectly be overwritten at DataMiner startup [ID 41551]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-Up to now, all Cassandra compaction settings would incorrectly be overwritten at DataMiner start-up.
+Up to now, all Cassandra compaction settings would incorrectly be overwritten at DataMiner startup.
 
 For example, if you had manually configured a compaction setting (e.g. *unsafe_aggressive_sstable_expiration*), this change would get overwritten by the default setting.
 
