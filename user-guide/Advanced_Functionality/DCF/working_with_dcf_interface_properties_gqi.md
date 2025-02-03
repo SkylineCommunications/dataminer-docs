@@ -7,7 +7,7 @@ uid: working_with_dcf_interface_properties_gqi
 In this tutorial, you will learn how to work with GQI queries that contain DCF interface information. By way of example, the tutorial will show how you can display information about the DCF interface properties using a grid visualization. Using GQI query filter components, you will then be able to filter the displayed interfaces.
 
 > [!TIP]
-> This tutorial is a continuation of [Kata #45: DataMiner Connectivity Framework](https://community.dataminer.services/courses/kata-45/), available on DataMiner Dojo.
+> This tutorial is a continuation of [Kata #45: DataMiner Connectivity Framework](https://community.dataminer.services/courses/kata-45/) and [Kata #55: Advanced Features of the DataMiner Connectivity Framework](https://community.dataminer.services/courses/kata-55/), available on DataMiner Dojo.
 
 ## Prerequisites
 
