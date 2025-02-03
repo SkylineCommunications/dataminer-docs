@@ -93,10 +93,10 @@ namespace Skyline.DataMiner.Automation
 		public DateTime GetDateTime(string key) { return DateTime.Now; }
 
 		/// <summary>
-		/// Gets the date/time that was selected in the specified destination variable, in the time zone of the client, that is linked to a Calendar and Time item.
+		/// Gets the date/time that was selected in the specified destination variable, in the time zone of the client, which is linked to a Calendar and Time item.
 		/// </summary>
 		/// <param name="key">The name of the destination variable.</param>
-		/// <returns>The date/time that was selected in the specified destination variable, in the time zone of the client, that is linked to a Calendar and Time item.</returns>
+		/// <returns>The date/time that was selected in the specified destination variable, in the time zone of the client, which is linked to a Calendar and Time item.</returns>
 		/// <example>
 		/// <code>
 		/// UIResults uir = null;
@@ -120,10 +120,10 @@ namespace Skyline.DataMiner.Automation
 		public DateTimeOffset GetClientDateTime(string key) { return DateTimeOffset.Now; }
 
 		/// <summary>
-		/// Gets the time zone info for was entered for the specified destination variable, that is linked to a Calendar and Time item.
+		/// Gets the time zone info that was entered for the specified destination variable, which is linked to a Calendar and Time item.
 		/// </summary>
 		/// <param name="key">The name of the destination variable.</param>
-		/// <returns>The time zone info for was entered for the specified destination variable, that is linked to a Calendar and Time item.</returns>
+		/// <returns>The time zone info that was entered for the specified destination variable, which is linked to a Calendar and Time item.</returns>
 		/// <example>
 		/// <code>
 		/// UIResults uir = null;
