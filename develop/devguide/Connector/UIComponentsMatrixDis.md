@@ -66,10 +66,6 @@ The matrix library provides 3 classes that a developer can inherit from:
 - MatrixHelperForMatrix
 - MatrixHelperForMatrixAndTables
 
-See also:
-
-Skyline.DataMiner.Core.Matrix namespace
-
 Depending on the user requirements, you will likely create your own class inheriting from one of these.
 
 The instance of this class has to be saved through the use of an instanced QAction.

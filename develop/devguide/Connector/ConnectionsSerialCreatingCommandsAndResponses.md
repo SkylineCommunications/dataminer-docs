@@ -96,7 +96,7 @@ The group travels through the queue until it reaches the front and is processed.
 
 ![Default command construction](~/develop/images/Protocol_Explained_-_Default_command_construction.svg)
 
-By using the "makeCommandByProtocol" communication option (see CommunicationOptions), commands will be composed the moment the corresponding group is added to the group execution queue. In the example, this means the command that will be sent is "Get A".
+When the [makeCommandByProtocol](xref:Protocol.Type-communicationOptions#makecommandbyprotocol) communication option is used, commands will be composed the moment the corresponding group is added to the group execution queue. In the example, this means the command that will be sent is "Get A".
 
 If this option is enabled, the following behavior is applicable:
 
@@ -679,7 +679,7 @@ This is a response that is not used in a pair, but is used to define the structu
 This allows the content of the different fields to be read without the use of a QAction.
 
 > [!NOTE]
-> For more information about the optional attribute, see optional.
+> For more information about the optional attribute, see [optional attribute](xref:Protocol.Responses.Response.Content-optional).
 
 A "read response" action is needed that must be triggered on this response.
 

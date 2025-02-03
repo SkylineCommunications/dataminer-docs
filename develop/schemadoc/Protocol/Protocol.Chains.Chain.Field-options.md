@@ -265,7 +265,7 @@ Example:
 
 <!-- RN 5828 -->
 
-Combined with the DetailTabs option (see detailTabs). Use this option to hide the panel on the right-hand side with the KPIs of the selected item. Specify the option immediately after the ID of the list, using a dash as separator.
+Combined with the [detailTabs](#detailtabs) option. Use this option to hide the panel on the right-hand side with the KPIs of the selected item. Specify the option immediately after the ID of the list, using a dash as separator.
 
 Example:
 

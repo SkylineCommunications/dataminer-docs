@@ -4,7 +4,7 @@ uid: LogicGroups
 
 # Groups
 
-Groups get processed by the group execution queue (see also: <xref:InnerWorkings>). A group allows the grouping of a number of items of the same type. The supported types of items in a group are:
+Groups get processed by the group execution queue (see [Inner workings](xref:InnerWorkingsIntroduction)). A group allows the grouping of a number of items of the same type. The supported types of items in a group are:
 
 - parameter
 - pair
@@ -26,7 +26,7 @@ The following types of groups exist:
 
 When groups are processed by timers, there is a difference between groups of type "poll action" and "action" (or "poll trigger" and "trigger").
 
-When the type name of a group starts with "poll" (i.e. the group type is "poll", "poll action" or "poll trigger"), this indicates that the group will be added to the group execution queue of the main protocol execution thread. (For more information on the group execution queue, see  [Item execution](xref:InnerWorkingsSLProtocol#item-execution).) Groups of type "action" or "trigger", however, will immediately be executed by the initiating thread. (For more details, see  [Executing groups by timer threads](xref:InnerWorkingsSLProtocol#executing-groups-by-timer-threads).)
+When the type name of a group starts with "poll" (i.e. the group type is "poll", "poll action" or "poll trigger"), this indicates that the group will be added to the group execution queue of the main protocol execution thread. (For more information on the group execution queue, see [Item execution](xref:InnerWorkingsSLProtocol#item-execution).) Groups of type "action" or "trigger", however, will immediately be executed by the initiating thread. (For more details, see [Executing groups by timer threads](xref:InnerWorkingsSLProtocol#executing-groups-by-timer-threads).)
 
 - *Timer*
   - **Group (poll action)**

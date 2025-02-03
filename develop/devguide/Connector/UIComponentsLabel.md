@@ -32,7 +32,7 @@ A label displays the current value of a standalone parameter. The text provided 
 
 ![alt text](~/develop/images/uilabel.png "DataMiner Cube label")
 
-The way a label is visualized can be customized in many ways. For the available options, see Options for measurement type “string”.
+The way a label is visualized can be customized in many ways. For the available options, see [Options for measurement type "string"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string).
 
 The following example displays a numeric parameter:
 
@@ -55,11 +55,11 @@ The following example displays a numeric parameter:
 </Param>
 ```
 
-By default, 6 decimals are stored. In case more decimals are required to avoid rounding errors, this can be specified via the Decimals tag. See Protocol/Params/Param/Interprete/Decimals. (This is for example the case for the DateTime picker UI component, mentioned in the section Datetime picker.)
+By default, 6 decimals are stored. In case more decimals are required to avoid rounding errors, this can be specified via the Decimals tag. See [Protocol.Params.Param.Interprete.Decimals](xref:Protocol.Params.Param.Interprete.Decimals). (This is for example the case for the DateTime picker UI component, mentioned in the section Datetime picker.)
 
 > [!NOTE]
 >
-> - A unit can be specified using the Units tag. See Protocol/Params/Param/Display/Units.
+> - A unit can be specified using the Units tag. See [Protocol.Params.Param.Display.Units](xref:Protocol.Params.Param.Display.Units).
 > - When the value of the parameter is a string starting with a "file", "ftp", "http", "https", or "mailto" URI scheme, the parameter value will be displayed as a clickable link.
 
 ## Creating an editable label

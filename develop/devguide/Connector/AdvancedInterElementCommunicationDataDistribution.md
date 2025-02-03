@@ -6,7 +6,7 @@ uid: AdvancedInterElementCommunicationDataDistribution
 
 Data distribution allows the distribution of the values of standalone parameters or table column parameters from one element to other elements. By using data distribution, you can prevent data being retrieved more than once, and also ensure that the data in the parent and child element are the same.
 
-In a protocol, these data distribution parameters can be defined in either a fixed or a dynamic way. To use data distribution, add the attribute distribution to the parameter of the parent element you want to distribute. (For an overview of all possibilities, see distribution.) This parameter can be a standalone parameter or a column parameter from a table.
+In a protocol, these data distribution parameters can be defined in either a fixed or a dynamic way. To use data distribution, add the *distribution* attribute to the parameter of the parent element you want to distribute. (For an overview of all possibilities, see [distribution](xref:Protocol.Params.Param.Type-distribution).) This parameter can be a standalone parameter or a column parameter from a table.
 
 For example, the following parameter, defined on the parent element, will send the value of this parameter to parameter 100 of every element executing the protocol "Tandberg" on the DMA that runs the master element.
 

@@ -27,4 +27,4 @@ Summary:
 1. A trigger that triggers after this group is executed to put the flag back to *not busy* (back to step 2 until buffer is empty).
 
 > [!NOTE]
-> When implementing crosspoint sets via a serial connection using the "makeCommandByProtocol" communication option, the usage of a buffer is not needed. The commands can be constructed and added to the group execution queue immediately. For more information, see makeCommandByProtocol.
+> When implementing crosspoint sets via a serial connection using the [makeCommandByProtocol](xref:Protocol.Type-communicationOptions#makecommandbyprotocol) communication option, the usage of a buffer is not needed. The commands can be constructed and added to the group execution queue immediately.

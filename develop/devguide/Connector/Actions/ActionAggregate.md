@@ -58,7 +58,7 @@ For example, if you specify ignoreValues:2/4,3/5, the row will be ignored if col
 > To avoid the creation of the undesired "-1" key row in the parent table, you have a number of options:
 >
 > - Use limitresult (In that case, only the rows of the parent will be taken into account), or
-> - Specify "avoidZeroInResult" in the aggregate action. In that case, the row will not be included. To see the valid zero results in the parent table, you can use the defaultValue option. For more information, see avoidZeroInResult
+> - Specify "avoidZeroInResult" in the aggregate action. In that case, the row will not be included. To see the valid zero results in the parent table, you can use the defaultValue option. For more information, see [avoidZeroInResult](#avoidzeroinresult).
 
 #### avoidZeroInResult
 

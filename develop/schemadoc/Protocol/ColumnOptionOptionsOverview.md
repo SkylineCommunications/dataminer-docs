@@ -287,7 +287,7 @@ This option indicates that this column should be indexed. This allows you to qui
 
 #### Requesting index values from index columns
 
-In a QAction, you can use the SLProtocol.GetKeysForIndex method to retrieve the primary keys of the rows that have the specified value for the specified column that has been marked as an indexColumn or a foreignKey. See indexColumn.
+In a QAction, you can use the SLProtocol.GetKeysForIndex method to retrieve the primary keys of the rows that have the specified value for the specified column that has been marked as an indexColumn or a foreignKey.
 
 See also:
 
