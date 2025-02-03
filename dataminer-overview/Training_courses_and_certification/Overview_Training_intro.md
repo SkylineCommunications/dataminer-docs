@@ -18,3 +18,4 @@ Our DataMiner training and certification services include:
 - [DataMiner certification](xref:Overview_Training_certification)
 - [Video Library](xref:Overview_Training_videolibrary)
 - [Agile Awareness Training](xref:Overview_Training_agile_aw)
+- [Kanban workshop](xref:Overview_Kanban_workshop)
