@@ -76,10 +76,6 @@ The goals reached by the end of the workshop include:
 
   - Remote: We recommend splitting the workshop into two 4-hour sessions.
 
-## Requirements
-
-<!--to be added-->
-
 ## How to register
 
-<!--to be added-->
+Send an email to [academy@skyline.be](mailto:academy@skyline.be?subject=Kanban%20Workshop%20registration&body=Hi%2C%20I%27d%20like%20to%20register%20for%20the%20Kanban%20Workshop.%20You%20can%20contact%20me%20at%20this%20email%20address.) to register for the Kanban workshop.
