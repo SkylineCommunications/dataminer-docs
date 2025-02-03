@@ -4,72 +4,77 @@ uid: Overview_Kanban_workshop
 
 # Kanban workshop
 
-This workshop provides a comprehensive introduction to the Kanban methodology, equipping participants with the knowledge and tools to optimize workflows, enhance team collaboration, and maximize value delivery. Through hands-on exercises and interactive discussions, participants will create actionable metrics, visualize workflows, and build a functional Kanban board tailored to their team’s needs. This practical training ensures you can immediately implement Kanban practices in your daily work.
+This workshop provides a comprehensive introduction to the Kanban methodology, equipping you with the knowledge and tools to optimize workflows, enhance team collaboration, and maximize value delivery. Through hands-on exercises and interactive discussions, you will create actionable metrics, visualize workflows, and build a functional Kanban board tailored to their team's needs. This practical training ensures you can immediately implement Kanban practices in your daily work.
 
 ## What you will learn
 
 ### Competencies
 
-Your team will have:
+By the end of the workshop, you will have learned how to:
 
-- Increased effectiveness
+- Increase effectiveness.
 
-- Reduction of bottlenecks
+- Reduce bottlenecks.
 
-- Increased productivity
+- Boost productivity.
 
 ### Goals
 
-By the end of this training, participants will:
+The goals reached by the end of the workshop include:
 
-- Understand the Kanban Methodology: Gain a high-level understanding of Kanban principles and practices to apply them effectively in their workplace.
+- Understanding the Kanban methodology: Gain a high-level understanding of Kanban principles and practices, enabling you to apply them effectively in your workplace.
 
-- Master Key Metrics: Learn how to define and measure four essential Kanban metrics: WIP (Work in Progress), Throughput, Work Item Age, and Cycle Time.
+- Mastering key metrics: Learn how to define and measure four essential Kanban metrics: "WIP" (Work in Progress), "Throughput", "Work Item Age", and "Cycle Time".
 
-- Visualize and Define Workflow: Develop skills to visualize and clearly define workflows to improve transparency and efficiency.
+- Visualizing and defining workflow: Develop the ability to visualize and clearly define workflows to improve transparency and efficiency.
 
-- Optimize Value Delivery: Cultivate a mindset focused on delivering maximum value through continuous improvement and flow optimization.
+- Optimizing value delivery: Cultivate a mindset focused on delivering maximum value through continuous improvement and flow optimization.
 
-- Build a Kanban Board: Create a fully functional Kanban board using real work items from your team, ready for immediate use after the workshop.
+- Building a Kanban board: Create a fully functional Kanban board using real work items from your team, ready to be implemented immediately after the workshop.
 
-- Prepare for Certification: Be ready to complete two Kanban certification tests, reinforcing the knowledge and skills gained during the training.
+- Preparing for certification: Be ready to complete two Kanban certification tests, reinforcing the knowledge and skills you have gained during the training.
 
 ## Who should attend?
 
-Your (near) full team.
+- Your (almost) full team: Ideal for teams that work together on a (near-)daily basis
 
-Teams working together on a (near) daily basis.
+- Teams looking to become more productive and improve close collaboration with team members.
 
-Teams open to become more productive and gain closer collaboration with their teammates.
-
-Teams that need to be able to adapt to changes quickly.
+- Teams that need to be able to adapt quickly to changes.
 
 ## Workshop content
 
-- High level of understanding of the Kanban methodology with the intent of using it for your benefit at work.
+- High-level understanding of the Kanban methodology with practical application to your work.
 
-- The creation of 4 essential metrics
+- Creation of four essential Kanban metrics:
 
-  - WIP
+  - WIP (Work in Progress).
 
-  - Throughput
+  - Throughput.
 
-  - Work Item Age => This is the reason we do all of the others.
+  - Work Item Age (i.e. the reason for all other metrics).
 
-  - Cycle Time
+  - Cycle Time.
 
-- A visualization of workflow
+- Visualization of workflow.
 
-- A definition of workflow
+- Definition of workflow.
 
-- A spirit of optimizing value
+- Mindset focused on optimizing value.
 
-- The creation of a Kanban board and flow with the real work items of your team ready to be used immediately after the workshop.
+- Creation of a Kanban board and flow, ready to be used immediately after the workshop, using your team's real work items.
 
 ## Practical info
 
-8 hours of workshop for 40 Service Credits
-The workshop can be done co-located (recommended) or remotely. Co-located we recommend a 1-day workshop. Remotely we recommend splitting it in two days of 4 hours each.
+- Duration: 8 hours
+
+- Pricing: 40 Service Credits
+
+- Format: The workshop can be conducted either co-located (recommended) or remotely.
+
+  - Co-located: We recommend a 1-day workshop.
+
+  - Remote: We recommend splitting the workshop into two 4-hour sessions.
 
 ## Requirements
 
