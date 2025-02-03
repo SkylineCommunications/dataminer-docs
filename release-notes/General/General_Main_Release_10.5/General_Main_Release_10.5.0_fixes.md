@@ -288,12 +288,6 @@ When a DataMiner Agent was upgraded from Main Release version 10.4.0 CU6 (or lat
 > [!NOTE]
 > See also [SNMPv3 elements not loaded correctly after upgrade](xref:KI_SNMPv3_elements_broken_after_upgrade)
 
-#### Start-up routine of a DMA with an offline time-based license would temporarily halt before continuing [ID 41736]
-
-<!-- MR 10.5.0 - FR 10.5.3 -->
-
-In some cases, the start-up routine of a DataMiner Agent with an offline time-based license would temporarily halt before continuing.
-
 #### GQI: Min and Max aggregation of a datetime column would incorrectly result in a number column [ID 41789]
 
 <!-- MR 10.5.0 - FR 10.5.3 -->

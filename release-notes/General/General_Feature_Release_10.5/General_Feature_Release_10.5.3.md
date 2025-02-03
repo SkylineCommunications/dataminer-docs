@@ -349,7 +349,7 @@ When a previously deleted booking was created again with the same ID, up to now,
 
 #### Start-up routine of a DMA with an offline time-based license would temporarily halt before continuing [ID 41736]
 
-<!-- MR 10.5.0 - FR 10.5.3 -->
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 In some cases, the start-up routine of a DataMiner Agent with an offline time-based license would temporarily halt before continuing.
 

@@ -89,6 +89,12 @@ In some rare cases, the element state of a DVE or Virtual Function element would
 
 When a previously deleted booking was created again with the same ID, up to now, that booking would incorrectly not be retrieved.
 
+#### Start-up routine of a DMA with an offline time-based license would temporarily halt before continuing [ID 41736]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+In some cases, the start-up routine of a DataMiner Agent with an offline time-based license would temporarily halt before continuing.
+
 #### Uploading the same version of a DVE connector twice would incorrectly cause the production version of DVE child elements to be changed [ID 41798]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
