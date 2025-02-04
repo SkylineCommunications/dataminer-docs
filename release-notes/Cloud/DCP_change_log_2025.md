@@ -9,6 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 4 February 2025 - Enhancement - Remote Access and Live Sharing performance and stability improvements [ID 42129]
+
+Several enhancements were made to improve performance and stability for all Remote Access and Live Sharing features with immediate effect.
+
+In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.
+
 ### 30 January 2025 - Enhancement - Admin - Usage page improvements [ID 42054]
 
 In the Admin app, the tabs and sections of the Usage page have been reordered to allow better navigation. Improvements for smaller devices have also been implemented.
