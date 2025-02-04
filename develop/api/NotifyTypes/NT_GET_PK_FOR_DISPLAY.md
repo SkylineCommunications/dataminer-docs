@@ -25,4 +25,4 @@ string primaryKey = (string)protocol.NotifyProtocol(162/*NT_GET_PK_FOR_DISPLAY*/
 
 ## Remarks
 
-- This call only works in case the now deprecated displayColumn attribute is used. Using this notify on a table without the displayColumn attribute will result in the provided primary key value being returned (see displayColumn).
+- This call only works in case the now deprecated [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute is used. Using this notify on a table without the displayColumn attribute will result in the provided primary key value being returned.

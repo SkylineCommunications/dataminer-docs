@@ -6,16 +6,16 @@ uid: AdvancedDataMinerDataPersistencePersistingTables
 
 In order for a table column to persist in the database, one of the following must apply:
 
-- The column is referred to by the index attribute of the ArrayOptions tag. See index @.
-- The column is referred to by the displayColumn attribute of the ArrayOptions tag. See displayColumn.
-- From DataMiner 9.0.0 \[CU19\]/9.5.0 \[CU2\] onwards (RN 16743), columns that are referred to by the naming option or in the NamingFormat tag are saved automatically (except for volatile tables). See naming and Protocol.Params.Param.ArrayOptions.NamingFormat.
-- The options attribute of the ColumnOption tag for the column includes the foreignKey option. See foreignKey.
-- The options attribute of the ColumnOption tag for the column includes the element option. See element.
-- The options attribute of the ColumnOption tag for the column includes the hidden option. See hidden.
-- The options attribute of the ColumnOption tag for the column includes the save option. See save.
-- The options attribute of the ColumnOption tag for the column includes the view option. See view.
+- The column is referred to by the [index](xref:Protocol.Params.Param.ArrayOptions-index) attribute of the [ArrayOptions](xref:Protocol.Params.Param.ArrayOptions) tag.
+- The column is referred to by the [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute of the [ArrayOptions](xref:Protocol.Params.Param.ArrayOptions) tag.
+- Columns that are referred to by the [naming](xref:Protocol.Params.Param.ArrayOptions-options#naming) option or in the [NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat) tag are saved automatically (except for volatile tables).<!-- RN 16743 -->
+- The options attribute of the ColumnOption tag for the column includes the [foreignKey](xref:ColumnOptionOptionsOverview#foreignkey) option.
+- The options attribute of the ColumnOption tag for the column includes the [element](xref:ColumnOptionOptionsOverview#element) option.
+- The options attribute of the ColumnOption tag for the column includes the [hidden](xref:ColumnOptionOptionsOverview#hidden) option.
+- The options attribute of the ColumnOption tag for the column includes the [save](xref:ColumnOptionOptionsOverview#save) option.
+- The options attribute of the ColumnOption tag for the column includes the [view](xref:ColumnOptionOptionsOverview#view) option.
 
-For example, the following table parameter defines some columns to be saved. Column 1001 will also be saved, as this is the column holding the primary keys (as indicated by the index attribute).
+For example, the following table parameter defines some columns to be saved. Column 1001 will also be saved, as this is the column holding the primary keys (as indicated by the [index](xref:Protocol.Params.Param.ArrayOptions-index) attribute).
 
 ```xml
 <Param id="1000" trending="false">

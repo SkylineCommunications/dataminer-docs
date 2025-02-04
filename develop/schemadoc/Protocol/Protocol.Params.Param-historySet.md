@@ -29,6 +29,7 @@ If you mark a parameter as a history set parameter, its last set value will not 
 ```xml
 <Param id="1" historySet="true">
 ```
+
 ## See also
 
 - [How to use history sets on a protocol parameter](xref:How_to_use_history_sets_on_a_protocol_parameter)

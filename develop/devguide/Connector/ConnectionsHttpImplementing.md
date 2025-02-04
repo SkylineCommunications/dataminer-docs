@@ -56,9 +56,9 @@ The url attribute defines the path, optionally including a query string and/or f
 
 However, this should be used only when there is no other option, because when the specified host becomes unavailable, the element will go into timeout, giving the impression that the host specified in the element wizard is no longer available.
 
-Including a request header (e.g. "Accept", "Content-Type", "Content-Length", etc.) is possible by defining a header. See Protocol.HTTP.Session.Connection.Request.Headers.Header.
+Including a request header (e.g. "Accept", "Content-Type", "Content-Length", etc.) is possible by defining a header. See [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header).
 
-By using either Data or Parameters, you can send data along with the HTTP request. See Protocol.HTTP.Session.Connection.Request.Data and Protocol.HTTP.Session.Connection.Request.Parameters.
+By using either Data or Parameters, you can send data along with the HTTP request. See [Protocol.HTTP.Session.Connection.Request.Data](xref:Protocol.HTTP.Session.Connection.Request.Data) and [Protocol.HTTP.Session.Connection.Request.Parameters](xref:Protocol.HTTP.Session.Connection.Request.Parameters).
 
 > [!IMPORTANT]
 > DataMiner does not perform any encoding on the provided data. Therefore, if you are, for example, building a URL for a GET request with a query string or the body of a POST request with content type "application/x-www-form-urlencoded", you must ensure that the data is using [percent-encoding](https://datatracker.ietf.org/doc/html/rfc3986#section-2.1) (also known as URL encoding) to avoid misinterpretation of the provided data. Otherwise, the provided data might be misinterpreted by the server in case the data contains characters from the [reserved character set](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2) (e.g. '&amp;').
@@ -155,16 +155,16 @@ Using the statusCode attribute, you can specify the ID of the parameter in which
 > - DataMiner behaves as follows based on the received status code (RN 5132):
 >
 >   - 2xx (Success): No additional action is performed.
->   - 3xx (Redirection): In case the location response header is present, automatically redirect (301 ""Moved permanently"", 303 "See other", 307 "Temporary redirect", etc.). Note that in case this automatic redirection is not desired, this can be disabled by specifying the customRedirect communication option (See customRedirect). If customRedirect is specified, the protocol implements the redirection logic. In case nothing is done, the element will go into timeout. In case no location response header is returned (300: Multiple choices, 306: Unused), the element will go into timeout.
+>   - 3xx (Redirection): In case the location response header is present, automatically redirect (301 ""Moved permanently"", 303 "See other", 307 "Temporary redirect", etc.). Note that in case this automatic redirection is not desired, this can be disabled by specifying the [customRedirect](xref:Protocol.Type-communicationOptions#customredirect) communication option. If customRedirect is specified, the protocol implements the redirection logic. In case nothing is done, the element will go into timeout. In case no location response header is returned (300: Multiple choices, 306: Unused), the element will go into timeout.
 >   - 4xx (Client error): The element will go into timeout.
 >   - 5xx (Server error): The element will go into timeout.
 >
 > - HTTP communication logging can be enabled by setting information logging to level 3 (RN 14439).
 > - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e. upon reception of the WINHTTP_ERROR_TIMEOUT error). From DataMiner 9.0.0 [CU5] (RN 13111) onwards, the retry mechanism will also be triggered when the SLPort process is unable to connect to the web server (i.e. upon reception of the ERROR_WINHTTP_CANNOT_CONNECT error).
 
-The value of a header can be captured by defining a header (see Protocol.HTTP.Session.Connection.Request.Headers.Header) and specifying the name of the header and the ID of the parameter in which the value should be put.
+The value of a header can be captured by defining a header (see [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header)) and specifying the name of the header and the ID of the parameter in which the value should be put.
 
-The message body can be captured by specifying the ID of the parameter in which the body should be put in Content (see Protocol.HTTP.Session.Connection.Response.Content).
+The message body can be captured by specifying the ID of the parameter in which the body should be put in Content (see [Protocol.HTTP.Session.Connection.Response.Content](xref:Protocol.HTTP.Session.Connection.Response.Content)).
 
 ## See also
 

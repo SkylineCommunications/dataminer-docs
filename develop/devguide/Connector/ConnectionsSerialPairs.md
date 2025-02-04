@@ -4,7 +4,7 @@ uid: ConnectionsSerialPairs
 
 # Pairs
 
-Once commands and responses have been created, these can be grouped into pairs. A pair typically contains a command and the response that is expected from the device after sending that command. Another typical scenario is to have a pair containing one command and multiple responses (See Defining multiple responses in a pair). It is also possible to just add a command to a pair without specifying a response. This can be done for example in case no response is expected back from the device.
+Once commands and responses have been created, these can be grouped into pairs. A pair typically contains a command and the response that is expected from the device after sending that command. Another typical scenario is to have a pair containing one command and multiple responses (See [Defining multiple responses in a pair](#defining-multiple-responses-in-a-pair)). It is also possible to just add a command to a pair without specifying a response. This can be done for example in case no response is expected back from the device.
 
 Multiple pairs can be defined in a protocol (in the Pairs tag), each defined using a Pair tag with a unique identifier.
 

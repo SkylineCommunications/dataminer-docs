@@ -79,7 +79,7 @@ To implement a direct view table, create a custom table that contains a column h
 
 > [!NOTE]
 >
-> - In case the tables of the source elements can have conflicting primary keys (i.e. it is possible that at least two source elements each have a row with the same primary key), use a column of type "viewTableKey" (see viewTableKey). This will prefix the primary key with [DMA ID]\_[Element ID]_.
+> - In case the tables of the source elements can have conflicting primary keys (i.e. it is possible that at least two source elements each have a row with the same primary key), use a column of type [viewTableKey](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#viewtablekey). This will prefix the primary key with [DMA ID]\_[Element ID]_.
 > - For direct view tables, it is not possible to include a column without the preceding columns being included.
 > - In recent DataMiner versions, direct view tables are automatically refreshed in Cube.<!-- RN 16999 --> When the update mechanism is used, this will be indicated below the table, together with the time when the table was last updated and a button that allows you to update the table manually.
 

@@ -26,7 +26,7 @@ protocol.NotifyProtocol(193/*NT_FILL_ARRAY*/ , tableID, tableContent);
 
 ## Remarks
 
-- Only the provided content will be present in the table after this call. In case the provided content should only be added to the table, use the NT_FILL_ARRAY_NO_DELETE call. See NT_FILL_ARRAY_NO_DELETE (194).
+- Only the provided content will be present in the table after this call. In case the provided content should only be added to the table, use the [NT_FILL_ARRAY_NO_DELETE (194)](xref:NT_FILL_ARRAY_NO_DELETE) call.
 
 - In case the column data contains null references, the corresponding cells will be cleared.
 

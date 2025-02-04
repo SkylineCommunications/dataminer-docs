@@ -37,9 +37,9 @@ See the following diagram:
 
 Watch out for pitfalls when creating displayColumn for an SNMP table. When you adjust the displayColumn values using a row=true QAction triggered by the table, the values set will initially not be used.
 
-See Dynamically retrieving a value: the data from SLScripting will be overwritten when the complete table is retrieved.
+See [Dynamically retrieving a value](xref:ConnectionsSnmpDynamicallyRetrievingAVariable): the data from SLScripting will be overwritten when the complete table is retrieved.
 
-To avoid pitfalls, either follow the procedure below or use naming (“naming” option or NamingFormat).
+To avoid pitfalls, either follow the procedure below or use naming ([naming](xref:Protocol.Params.Param.ArrayOptions-options#naming) option or [NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat)).
 
 1. Use the NewRow method to set a flag (a parameter) that indicates that the values used for the displayColumn have changed. To avoid unnecessary sets, check if the flag is set before setting it. At the same time, store the keys of the changed rows in a second parameter.
 1. Following the group that retrieves the table, add a trigger with a condition tag to check the flag. When the flag is set, do a "run actions" action to force the execution of a QAction that will set the displayColumn values. Only loop through the keys of the second parameter. Clear the flag at the end of the QAction.

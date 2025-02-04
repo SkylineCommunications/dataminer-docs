@@ -11,9 +11,9 @@ It can happen that information of two tables needs to be available in a single t
 > - View information is only updated when the card or data display is open.
 > - No actions need to be implemented in the protocol to fill in the view table; this is done automatically.
 
-To define a view table, start the name of the table with "View_" and make sure it is a volatile table (by specifying the "volatile" option on the ArrayOptions tag).
+To define a view table, start the name of the table with "View_" and make sure it is a volatile table (by specifying the [volatile](xref:Protocol.Params.Param.ArrayOptions-options#volatile) option on the ArrayOptions tag).
 
-A view table always refers to another table, the so-called base table. This is done via the option "view" (e.g. `options=";volatile;view=200"`) of the ArrayOptions tag (see view). In case the view table should also show data from other tables than this base table, the base table must contain columns that hold the foreign keys to these other tables.
+A view table always refers to another table, the so-called base table. This is done via the option [view](xref:Protocol.Params.Param.ArrayOptions-options#view) (e.g. `options=";volatile;view=200"`) of the ArrayOptions tag. In case the view table should also show data from other tables than this base table, the base table must contain columns that hold the foreign keys to these other tables.
 
 The "view" option of the individual ColumnOption tags of the view table then specifies the column that should be shown. For example, `options=";view=201"` specifies that the data from column parameter 201 will be shown in this column of the view table.
 
@@ -69,7 +69,7 @@ Below is an example of a base table. Note that as the view table will show data 
 </Param>
 ```
 
-For a view table it is not necessary to define the individual column parameters of the view table as is done for regular tables. Instead, the column parameters of the base table (or linked table) that are duplicated in the view table must have a duplicateAs attribute defined (see duplicateAs). This attribute then defines the column(s) of the view table(s) that will correspond with this column.
+For a view table it is not necessary to define the individual column parameters of the view table as is done for regular tables. Instead, the column parameters of the base table (or linked table) that are duplicated in the view table must have a [duplicateAs](xref:Protocol.Params.Param-duplicateAs) attribute defined. This attribute then defines the column(s) of the view table(s) that will correspond with this column.
 
 For example, the column parameter with ID 201 of the base table will be included in the view table. Therefore, the definition of column parameter 201 includes the duplicateAs parameter and its value is set to 501 (i.e. the column parameter ID of the view table that will hold the data of this column).
 
@@ -151,7 +151,7 @@ Why does this work with a randomly chosen unique parameter ID? Consider the foll
   <Type>write</Type>
 ```
 
-In the background, DataMiner translates the original parameter name/description to "1_Stream Active Channel" for the duplicate parameter to have a unique parameter description. You can see this in Element Display, but DataMiner Cube filters this "1_" out before displaying the parameter name. If there was a second parameter ID specified in the duplicateAs attribute, then this would have prefix "2_". In case the duplicateAs attribute of the write parameter does not specify a parameter ID, this means that no "1_" write parameter is created that matches the "1_" read parameter, so no write parameter is displayed for the duplicated read parameter.
+In the background, DataMiner translates the original parameter name/description to "1_Stream Active Channel" for the duplicate parameter to have a unique parameter description. DataMiner Cube filters this "1_" out before displaying the parameter name. If there was a second parameter ID specified in the duplicateAs attribute, then this would have prefix "2_". In case the duplicateAs attribute of the write parameter does not specify a parameter ID, this means that no "1_" write parameter is created that matches the "1_" read parameter, so no write parameter is displayed for the duplicated read parameter.
 
 So in case there are two view tables and there should only be a write parameter on one table view, in the duplicateAs attribute of the read parameter, first specify the parameter ID that should have a write parameter and then the parameter ID without write parameter; on the write parameter specify only one duplicateAs parameter ID.
 

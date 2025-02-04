@@ -4,7 +4,8 @@ uid: AdvancedDataMinerDataPersistenceStandaloneParameters
 
 # Standalone parameters
 
-In order to make a standalone parameter persist in the database, set the save attribute of the Param tag to "true". See “save”
+In order to make a standalone parameter persist in the database, set the [save](xref:Protocol.Params.Param-save) attribute of the Param tag to "true".
+
 This is typically useful for parameters holding a configurable value. For example:
 
 ```xml
