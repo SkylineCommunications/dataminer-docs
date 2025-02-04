@@ -17,7 +17,7 @@ The Interfaces table contains the DCF interfaces of the element.
 
 For standalone interfaces, the key used in the Interfaces table corresponds with the ID of the corresponding Group.
 
-The key of dynamic interfaces is an autoincremented value starting from 10 001 (prior DataMiner 9.0.4) or 100 001 (since DataMiner 9.0.4).
+The key of dynamic interfaces is an autoincremented value starting from 100 001.
 
 ![alt text](~/develop/images/DcfInterfacesTable.png "DataMiner Connectivity Framework - Interfaces table.")
 
