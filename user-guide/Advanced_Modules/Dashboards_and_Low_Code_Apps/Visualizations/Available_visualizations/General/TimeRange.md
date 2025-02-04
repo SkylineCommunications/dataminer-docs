@@ -6,7 +6,7 @@ uid: DashboardTimeRange
 
 The time range component allows you to specify a time range, which can then be used as a filter for compatible components such as the [line & area chart](xref:LineAndAreaChart). You can either select a **quick pick button** or a **preset**, or manually set a **custom time range**.
 
-The time range passed to a filtered component is always consistent with the one shown in the time range component itself. When you modify the time range in this component, the data displayed in any filtered component is updated accordingly. For example, selecting the *Last 24 hours* preset will display data for the last 24 hours and update the filtered components to match that time range.
+When you modify the time range in this component, the data displayed in any linked component is updated accordingly. For example, selecting the *Last 24 hours* preset will display data for the last 24 hours and update the filtered components to match that time range.
 
 > [!NOTE]
 >
