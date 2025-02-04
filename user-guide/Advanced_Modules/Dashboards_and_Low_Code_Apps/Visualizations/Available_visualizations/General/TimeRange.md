@@ -4,31 +4,33 @@ uid: DashboardTimeRange
 
 # Time range
 
-This component allows the user to specify a time range. You can either select a **quick pick button** or a **preset**, or manually set a **custom time range**.
+The time range component allows you to specify a time range, which can then be used as a filter for compatible components such as the [line & area chart](xref:LineAndAreaChart). You can either select a **quick pick button** or a **preset**, or manually set a **custom time range**.
 
-This time range can be used as a filter for compatible components, such as the [line & area chart](xref:LineAndAreaChart). When you modify the time range in the component, the time span displayed in the filtered component will update accordingly.
-
-- From Dataminer 10.5.3 onwards<!--RN 42082-->, presets with a sliding window, for example *Last 15 minutes*, will always feed a range that is consistent with the range that is shown in the time range component.
-- Prior to 10.5.3, the feed from a sliding window range would be calculated at the moment it was used. Unless the data of the time range was refreshed every minute, this would result in an inconsistency between what was shown in the time range and the feed that was actually outputted.
+The time range passed to a filtered component is always consistent with the one shown in the time range component itself. When you modify the time range in this component, the data displayed in any filtered component is updated accordingly. For example, selecting the *Last 24 hours* preset will display data for the last 24 hours and update the filtered components to match that time range.
 
 > [!NOTE]
-> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40622-->, when you set a custom time range, the data of the component is only updated after you click the *Apply* button. If you have not yet clicked this button, you can revert any changes to the custom time range by clicking *Cancel*. In previous versions, changing the custom time range automatically updates the component data.
+>
+> - Prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42082-->, if you use a sliding window preset like *Last 24 hours* and filter another component, the data will dynamically update. As a result, the time range shown in the time range component may not match the one used in the linked component, unless the *Allow refresh* setting is enabled and the refresh rate is set to at least once per minute.
+> - From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40622-->, when you set a custom time range, the data of the component is only updated after you click the *Apply* button. If you have not yet clicked this button, you can revert any changes to the custom time range by clicking *Cancel*. In previous versions, changing the custom time range automatically updates the component data.
 
 ![Time range](~/user-guide/images/Time_Range.png)<br>*Time range component in DataMiner 10.5.3*
 
 ## Configuring the component
+
 To configure the component:
 
 1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
    - *Default range*: The default range selected in the component. By default set to *Today so far*.
 
-   - *Allow refresh*: Determines whether the component includes a refresh timer. By default disabled.
+   - *Allow refresh*: Available up to DataMiner 10.4.0 [CU11]/10.5.2<!--RN 42082-->. Determines whether the component includes a refresh timer. By default disabled.
+
+     From DataMiner 10.4.0 [CU11]/10.5.2 onwards, you can use a [trigger component](xref:DashboardTrigger) to refresh data instead.
 
    - *Refresh rate*: If *Allow refresh* is selected, this setting determines after how many seconds the data is refreshed. By default set to 10 seconds.
-   > [!NOTE]
-   > From DataMiner 10.5.3 onwards<!--RN 42082-->, the *Allow refresh* and related *Refresh rate* settings are no longer available. 
-   Refreshing the data of the time range will instead be possible by linking it to a feed from a [trigger component](xref:DashboardTrigger)
+
+     Prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42082-->, if you are using a sliding window preset and filtering another component with it, the refresh rate should be set between 5 to 60 seconds to prevent any mismatch between the time range displayed and the actual time range used in the filtered component.
+
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
