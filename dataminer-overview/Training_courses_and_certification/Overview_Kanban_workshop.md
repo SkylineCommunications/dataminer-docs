@@ -78,4 +78,4 @@ The goals reached by the end of the workshop include:
 
 ## How to register
 
-Send an email to [academy@skyline.be](mailto:academy@skyline.be?subject=Kanban%20Workshop%20registration&body=Hi%2C%20I%27d%20like%20to%20register%20for%20the%20Kanban%20Workshop.%20You%20can%20contact%20me%20at%20this%20email%20address.) to register for the Kanban workshop.
+Send an email to [salesops@skyline.be](mailto:salesops@skyline.be?subject=Kanban%20Workshop%20request%20for%20information&body=Hi%2C%20I%27d%20like%20to%20register%20for%20the%20Kanban%20Workshop.%20You%20can%20contact%20me%20at%20this%20email%20address.) to register or request additional information for the Kanban workshop.
