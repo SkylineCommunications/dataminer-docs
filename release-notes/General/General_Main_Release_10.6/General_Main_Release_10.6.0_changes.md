@@ -163,8 +163,4 @@ Because of a number of enhancements, it will now be fully aware of all supported
 
 ### Fixes
 
-#### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
-
-<!-- MR 10.6.0 - FR 10.5.2 -->
-
-Due to an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
+*No fixes have been added yet.*

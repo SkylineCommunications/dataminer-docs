@@ -314,9 +314,9 @@ On STaaS systems, the timeout for responses to write requests has been reduced t
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
 
-<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.2 -->
 
-Due to an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
+Because of an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
 
 #### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41339]
 
