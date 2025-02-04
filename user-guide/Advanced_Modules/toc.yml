@@ -500,6 +500,8 @@ items:
                 topicUid: DashboardSearchInput
               - name: Text input
                 topicUid: DashboardTextInput
+              - name: Time range
+                topicUid: TimeRange
       - name: Component data
         topicUid: Component_Data
       - name: URL data
