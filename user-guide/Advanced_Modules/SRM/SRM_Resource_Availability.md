@@ -11,7 +11,7 @@ The **Resource availability** feature, available from DataMiner version 10.5.3 o
 - A resource will be decommissioned at a specific date. An availability window can be defined on the resource that makes it impossible to book the booking after that decommission date.
 - A resource always needs to be available within 30 days. An availability window can be defined on the resource that makes it impossible to book it further than 30 days in the future.
 
-Trying to book a resource outside its availability window will move that booking to quarantine. Likewise, adjusting the availability window of an existing resource in such a way that existing bookings are no longer supported will quarantine those bookings. (see [Quarantine](xref:SRM_Quarantine)). Requesting available resources in a certain time range (see [Getting available resources](xref:srm_using_resourcemanagerhelper#getting-available-resources)) will also not return resources that are not available in that time range.
+Trying to book a resource outside its availability window will move that booking to quarantine. Likewise, adjusting the availability window of an existing resource in such a way that existing bookings are no longer supported will quarantine those bookings (see [Quarantine](xref:SRM_Quarantine)). Requesting available resources in a certain time range (see [Getting available resources](xref:srm_using_resourcemanagerhelper#getting-available-resources)) will also not return resources that are not available in that time range.
 
 ## Availability Window Properties
 

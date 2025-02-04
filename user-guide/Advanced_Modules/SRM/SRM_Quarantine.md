@@ -254,7 +254,7 @@ These are the possible values for the *QuarantineReason* field:
 | MovedToMaintenance  | The resource was moved to the *Maintenance* state. |
 | ReservationInstanceUpdated  | A booking was added or updated and caused a scheduling conflict. |
 | ContributingResourceNotAvailable  | A contributing resource is not available. This can happen when contributing bookings are interrupted, or when trying to assign an unavailable contributing resource to a booking. |
-| ResourceAvailabilityWindowChanged  | The availability of a resource changed. This can happen when updating the availability window resource in such a way that existing bookings fall outside of the availability.  See also [Resource availability](xref:Resource_availability) |
+| ResourceAvailabilityWindowChanged  | The availability of a resource changed. This can happen when updating the availability window resource in such a way that existing bookings fall outside of the availability. See also [Resource availability](xref:Resource_availability). |
 
 ### Overview of possible *ReservationConflictType* values
 
@@ -266,7 +266,7 @@ The script example in [Quarantine on booking updates](#quarantine-on-booking-upd
 | CapacityOverflow  | The booked resource does not have enough capacity to support all bookings. |
 | UnavailableCapability  |  The booked resource does not provide the requested capability value. |
 | UnavailableTimeDependentCapability  | The booked time-dependent capability on the resource has a conflict with a different booking. |
-| OutsideResourceAvailabilityWindow  | The resource has an availability window defined and is not available in the time range of the booking.  |
+| OutsideResourceAvailabilityWindow  | The resource has an availability window defined and is not available in the time range of the booking. See also [Resource availability](xref:Resource_availability). |
 
 ## Moving bookings out of the quarantine state
 
