@@ -68,7 +68,7 @@ Below you can find a complete overview of the differences between a system using
 | Elements polling localhost                       | Supported                              | Supported but not swarmable    |
 | Elements with element connections                | Supported                              | Supported but not swarmable*   |
 | Smart-serial elements in server mode             | Supported                              | Supported but not swarmable    |
-| Elements receiving SNMP traps                    | Supported                              | Supported but not swarmable    |
+| Elements receiving SNMP traps in a DMS with trap distribution disabled on at least one DMA.       | Supported                              | Supported but not swarmable    |
 
 (*) To be added in later versions.
 
