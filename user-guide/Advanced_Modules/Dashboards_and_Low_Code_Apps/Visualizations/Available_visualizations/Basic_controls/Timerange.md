@@ -24,7 +24,7 @@ The time range component allows you to specify a time range, which can then be u
 
   - Prior to DataMiner 10.4.0 [CU12]/10.5.3, click the ![Clock](~/user-guide/images/Clock_Icon.png) icon and specify the start and end time manually.
 
-When you select a preset or quick pick, the time range will be updated immediately. If the time range is used as a filter, the component data will also update immediately. When you set a custom time range, the data will only be updated after clicking the *Apply* button. If you have not yet clicked this button, you can revert any changes by clicking *Cancel*. Prior to DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11<!--RN 40622-->, the data is updated automatically when the custom time range is changed.
+When you select a preset or quick pick, the time range will be updated immediately. If the time range is used as a filter, the component data will also update immediately. When you set a custom time range, the data will only be updated after clicking the *Apply* button. If you have not yet clicked this button, you can revert any changes by clicking *Cancel*. Prior to DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11<!--RN 40622-->, the data is updated immediately after the custom time range is changed.
 
 ![Options time range component](~/user-guide/images/Time_Range2.png)<br>*Time range component in DataMiner 10.5.3*
 
@@ -56,7 +56,7 @@ To configure the component:
 
      - *Keyboard & calendar*: Allows you to enter a custom time range manually in the text box (format: `DD/MM/YYYY HH:MM`) or select one using the calender interface, which you can access by clicking the ![Calendar](~/user-guide/images/Calendar_Icon.png) icon.
 
-     - *Calendar*: Allows you to set a custom time range only by clicking the ![Calendar](~/user-guide/images/Calendar_Icon.png) and selecting the dates in the calendar interface.
+     - *Calendar*: Allows you to set a custom time range only by clicking the ![Calendar](~/user-guide/images/Calendar_Icon.png) icon and selecting the dates in the calendar interface.
 
        > [!NOTE]
        > If your dashboard or low-code app contains time range components created before upgrading to DataMiner 10.4.0 [CU12]/10.5.3, they will default to *Calendar* to maintain the previous behavior of the component.
