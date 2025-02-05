@@ -19,7 +19,7 @@ A dataminer.services key is scoped to the specific DMS for which it was created 
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-### Azure DevOps pipeline
+### Azure DevOps pipeline for Connectors
 
 You need a secret variable DATAMINER_DEPLOY_KEY.
 
@@ -44,11 +44,11 @@ steps:
 - script: dotnet tool install -g Skyline.DataMiner.CICD.Tools.DataMinerDeploy
   displayName: 'Install Catalog Deploy'
 
-- script: dataminer-package-create dmapp $(Build.SourcesDirectory) --name HelloFromAzure --output $(Build.SourcesDirectory) --type automation
+- script: dataminer-package-create dmprotocol $(Build.SourcesDirectory) --name HelloFromAzure --output $(Build.SourcesDirectory)
   displayName: 'Create Package'
 
 - script: |
-    uploadOutput=$(dataminer-catalog-upload --path-to-artifact "$(Build.SourcesDirectory)/HelloFromAzure.dmapp" --dm-catalog-token $(DATAMINER_DEPLOY_KEY))
+    uploadOutput=$(dataminer-catalog-upload --path-to-artifact "$(Build.SourcesDirectory)/HelloFromAzure.dmprotocol" --dm-catalog-token $(DATAMINER_DEPLOY_KEY))
     echo "##vso[task.setvariable variable=uploadOutput]$uploadOutput"
   displayName: 'Upload Package'
 
