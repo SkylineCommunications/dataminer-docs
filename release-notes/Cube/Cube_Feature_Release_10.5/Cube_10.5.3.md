@@ -49,6 +49,7 @@ Proceed as follows to grant all rights in an existing preset to a particular use
 1. Select a user group.
 1. Go to *Permissions > Rights*. On the right, you will see a list with all the available presets (including the built-in presets like *Administrators*).
 1. Select a preset to grant all rights in that preset to the user group selected in step 1.
+1. Click *Apply*.
 
 When you have selected a user group, you will now also be able to choose the following preset-related commands:
 
@@ -56,9 +57,16 @@ When you have selected a user group, you will now also be able to choose the fol
 |---------|----------|
 | Save rights as preset... | Saves the currently selected rights to a preset.<br>Note: If the currently selected rights have already been saved to a preset, this command will be unavailable. |
 | Export preset            | Opens a window that will allow you to export the currently selected rights to a preset file (in JSON format).<br>If no preset is selected when you click *Export preset*, you will be asked to enter the name of the preset. |
-| Import preset            | Opens a window that will allow you to import a preset file.<br>If the name of the preset already exists, then you will be asked whether you want to override the rights in the existing preset with the rights in the preset you are about to import. |
+| Import preset            | Opens a window that will allow you to import a preset file.<br>If the name of the preset is identical to the one of an existing preset, and the currently selected rights do not entirely match the rights in the existing preset with the same name, then you will be asked whether you want to override the rights in the existing preset with the rights in the preset you are about to import. |
 | Reset                    | Reverts all changes made to the rights in the selected preset. |
 | Delete preset            | Deletes the currently selected preset.<br>Note: Built-in presets (e.g. *Administrators*) cannot be deleted. |
+
+When you try to import
+
+- a preset file without a version or with version 0, a message will appear, saying that the file version is not valid.
+- a preset file of which the version is too recent, a message will appear, indicating both the version that is expected and the version of the file you are trying to import.
+- a preset file that is not a valid JSON file, a message will appear, saying that the file could not be parsed.
+- a preset file of which the permissions field is missing or of which the permissions field does not contain any presets, a message will appear, saying that the file does not contain exactly one preset.
 
 #### System Center - Logging: Consulting DxM logs [ID 41674]
 
