@@ -243,14 +243,6 @@ SLLogCollector packages now also include the *ClusterEndpoints.json* file.
 
 Because of a number of enhancements, overall performance of SLPort has increased. The process will now also use less memory and CPU.
 
-#### Credentials library is now fully aware of all supported SNMPv3 authentication and encryption algorithms [ID 41923]
-
-<!-- MR 10.6.0 - FR 10.5.3 -->
-
-Up to now, the credentials library would only be aware of a subset of all SNMPv3 authentication and encryption algorithms.
-
-Because of a number of enhancements, it will now be fully aware of all supported algorithms.
-
 #### Swarming prerequisites: Entries will now be added to SLNet.txt while checking alarm ID usage in Automation scripts and protocol QActions [ID 41930]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->

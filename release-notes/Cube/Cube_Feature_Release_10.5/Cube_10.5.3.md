@@ -119,14 +119,6 @@ Up to now, when a correlated alarm appeared in a linked alarm tab because it mat
 
 - When the correlated alarm does not match the filter, and none of the base alarms match the filter, then neither the correlated alarm nor the base alarms will be shown.
 
-#### System Center: Credentials library is now fully aware of all supported SNMPv3 authentication and encryption algorithms [ID 41945]
-
-<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
-
-Up to now, the credentials library would only be aware of a subset of all SNMPv3 authentication and encryption algorithms. Because of a number of enhancements, it will now be fully aware of all supported algorithms.
-
-Throughout the Cube UI, in selection boxes listing these SNMPv3 authentication and encryption algorithms, the algorithms will now be sorted by strength (ascending). Also, wherever a *Security level and protocol* setting has to specified for an SNMPv3 connection (e.g. when configuring an SNMPv3 element), that setting will now by default be set to "AuthPriv".
-
 #### Alarm Console: Sound played when the alarm banner appears can now be disabled [ID 41982]
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
