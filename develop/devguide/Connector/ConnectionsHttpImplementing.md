@@ -160,7 +160,7 @@ Using the statusCode attribute, you can specify the ID of the parameter in which
 >   - 5xx (Server error): The element will go into timeout.
 >
 > - HTTP communication logging can be enabled by setting information logging to level 3 (RN 14439).
-> - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e. upon reception of the WINHTTP_ERROR_TIMEOUT error). From DataMiner 9.0.0 [CU5] (RN 13111) onwards, the retry mechanism will also be triggered when the SLPort process is unable to connect to the web server (i.e. upon reception of the ERROR_WINHTTP_CANNOT_CONNECT error).
+> - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e. upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e. upon reception of the ERROR_WINHTTP_CANNOT_CONNECT error).<!-- RN 13111 -->
 
 The value of a header can be captured by defining a header (see [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header)) and specifying the name of the header and the ID of the parameter in which the value should be put.
 
