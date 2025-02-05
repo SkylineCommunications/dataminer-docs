@@ -25,7 +25,7 @@ Each time a user adds an element using the element wizard, the flow control sett
 >
 > - DES
 > - AES128
-> - AES192 (Since DataMiner 9.6.13 (RN 23586)).
-> - AES256 (Since DataMiner 9.6.13 (RN 23586)).
+> - AES192<!-- RN 23586 -->
+> - AES256<!-- RN 23586 -->
 >
 > If no default value is specified, the most secure option will be the default.
