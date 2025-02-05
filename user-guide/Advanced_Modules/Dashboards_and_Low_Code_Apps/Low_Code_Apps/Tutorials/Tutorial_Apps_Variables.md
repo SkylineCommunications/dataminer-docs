@@ -46,15 +46,15 @@ In this step, you will create and visualize a query that shows the elements in y
 
 1. Select the *[Get elements](xref:Get_elements)* data source.
 
-1. Add a *[Filter](xref:GQI_Filter)* operator on the *State* column and [link it to the variable](xref:Controls_Feeds_Query#step-4-replace-the-static-filter-value-with-a-feed).
+1. Add a *[Filter](xref:GQI_Filter)* operator on the *State* column and [link it to the variable](xref:Tutorial_Dashboards_Controls_And_Feeds_Query#step-4-replace-the-static-filter-value-with-a-feed).
 
-1. Create a *[Table](xref:Table_component)* to [visualize the query](xref:Configuring_components).
+1. Create a *[Table](xref:DashboardTable)* to [visualize the query](xref:Configuring_components).
 
 ## Step 3: Change the value of the variable to dynamically filter the list of elements
 
 This final step will add an entry point to the app where the value of the variable can be overwritten so that the query automatically applies a new value for the filter.
 
-1. [Add a headerbar](xref:Tutorial_Apps_Using_A_Headerbar) with two buttons.
+1. [Add a headerbar](xref:Tutorial_Apps_Headerbar) with two buttons.
 
 1. Configure the first button to [change the variable](xref:LowCodeApps_event_config) to "Active".
 
