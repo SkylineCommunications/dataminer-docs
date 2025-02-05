@@ -4,7 +4,7 @@ uid: ConnectionsHttpDynamicIp
 
 # Dynamically changing the IP address and port number
 
-From DataMiner 9.0.0 CU12/9.0.5 (RN 13369) onwards, it is possible to dynamically change the used polling IP and port of an HTTP connection.
+It is possible to dynamically change the used polling IP and port of an HTTP connection.<!-- RN 13369 -->
 
 Create a parameter that has the "dynamic ip" option defined.
 
