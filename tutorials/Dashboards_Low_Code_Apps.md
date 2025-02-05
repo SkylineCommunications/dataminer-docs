@@ -44,6 +44,7 @@ keywords: low-code, low code, lowcode
 | [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design) | Create an intuitive, visually appealing, and user-friendly low-code app, learning about best practices in low-code app design. |
 | [Using flows in a low-code app](xref:Tutorial_Apps_Flows) | Use flows to only load items inside of the timeline viewport and reuse panels. |
 | [Creating a custom event scheduler low-code app](xref:Tutorial_Custom_Event_Scheduler_LCA) | Create an event scheduler app. |
+| [Using variables in a low-code app](xref:Tutorial_Apps_Variables) | Use variables to apply filters through the headerbar. |
 
 ### GQI tutorials
 

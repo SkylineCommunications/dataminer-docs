@@ -33,3 +33,4 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 - [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design)
 - [Using flows in a low-code app](xref:Tutorial_Apps_Flows)
 - [Creating a custom event scheduler low-code app](xref:Tutorial_Custom_Event_Scheduler_LCA)
+- [Using variables in a low-code app](xref:Tutorial_Apps_Variables)
