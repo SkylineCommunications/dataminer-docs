@@ -38,33 +38,7 @@ jobs:
         with:
           name: release
           path: _site.zip
-  deploy_job:
-    if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
-    runs-on: ubuntu-latest
-    needs: build_job
-    name: Deploy Job
-    steps:
-      - uses: actions/download-artifact@v4
-        with:
-          name: release
-          path: .
-      - name: Unzip artifact for deployment
-        run: Expand-Archive -Path _site.zip -DestinationPath ./_site
-        shell: pwsh
-      - name: Build And Deploy
-        id: builddeploy
-        uses: Azure/static-web-apps-deploy@v1
-        with:
-          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_VICTORIOUS_SEA_0E7978F03 }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
-          action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
-          # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
-          app_location: "/_site" # App source code path
-          api_location: "" # Api source code path - optional
-          output_location: "" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
-
+  
   deploy_job_Storage_Account:
     if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
@@ -104,6 +78,7 @@ jobs:
       #     # Sync: true keeps the source and destination in sync,
       #     # otherwise changed files and new would be pushed, but deleted wouldn't be removed.
       #     sync: 'true'
+  
   deploy_job_SA_SWA:
     if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
