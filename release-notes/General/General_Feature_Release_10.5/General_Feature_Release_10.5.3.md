@@ -417,6 +417,14 @@ Up to now, errors would be logged in the *SLErrors.txt* and *SLNet.txt* log file
 
 Also, the Mobile Gateway process would only be aware of elements that were hosted on the same agent as the one on which it was hosted itself. As a result, actions like GET and SET on other elements via the Mobile Gateway would fail.
 
+#### Problem when updating the GQI DxM [ID 41990]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+When you tried to update the GQI DxM by means of the MSI installer, in some cases, the update would either not entirely succeed or even fail.
+
+A number of enhancements have now been made to prevent any problems from occurring while updating the GQI DxM.
+
 #### BPA tests would fail to load the necessary DLL files [ID 42000]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
