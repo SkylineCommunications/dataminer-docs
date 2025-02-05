@@ -250,3 +250,9 @@ Also, from now on, when you hover over ellipsed text strings in the flow editor,
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 In some cases, it would not be possible to transfer data from a table to a form on a panel.
+
+#### Dashboards app: GQI components on a shared dashboard would not show any data [ID 42130]
+
+<!-- MR 10.4.0 [CU12]/10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When you opened a shared dashboards, any GQI component on that dashboard would not get loaded and would as a result not show any data.
