@@ -232,16 +232,18 @@ items:
       - name: Supported system data storage architectures
         topicUid: Supported_system_data_storage_architectures
         items:
-          - name: Dedicated clustered storage
-            topicUid: Dedicated_clustered_storage
-          - name: Separate Cassandra setup with indexing
-            topicUid: Separate_Cassandra_setup_with_Elasticsearch
-          - name: Separate Cassandra setup without indexing
-            topicUid: Separate_Cassandra_setup_without_Elasticsearch
-          - name: Legacy setup with MySQL or MSSQL database
-            topicUid: Legacy_setup_with_MySQL_or_MSSQL_database
-      - name: Storage as a Service (STaaS)
-        topicUid: STaaS
+          - name: Storage as a Service (STaaS)
+            topicUid: STaaS
+          - name: Other (not recommended)
+            items:
+            - name: Dedicated clustered storage
+              topicUid: Dedicated_clustered_storage
+            - name: Separate Cassandra setup with indexing
+              topicUid: Separate_Cassandra_setup_with_Elasticsearch
+            - name: Separate Cassandra setup without indexing
+              topicUid: Separate_Cassandra_setup_without_Elasticsearch
+            - name: Legacy setup with MySQL or MSSQL database
+              topicUid: Legacy_setup_with_MySQL_or_MSSQL_database
       - name: Database configuration
         items:
           - name: Configuring dedicated clustered storage
