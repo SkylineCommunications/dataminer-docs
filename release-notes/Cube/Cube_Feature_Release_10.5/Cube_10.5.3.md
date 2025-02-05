@@ -125,7 +125,7 @@ Up to now, when a correlated alarm appeared in a linked alarm tab because it mat
 
 When you enable the *Show in banner* option for a particular alarm tab, a banner will appear at the top of the Cube window when new alarms enter the tab. That banner will show the number of new alarms, the color of the most severe among them, and service impact information.
 
-Up to now, each time the alarm banner appeared or was updated, a sound would be played. A new *Enable the sound for the alarmbanner* setting has now been added in the *Alarm Console* section of the *Settings* window. This setting will allow you to indicate whether or not a sound should be played when the alarm banner appears or is updated. By default, a sound will be played.
+Up to now, each time the alarm banner appeared or was updated, a sound would be played. A new *Enable the sound for the alarm banner* setting has now been added in the *Alarm Console* section of the *Settings* window. This setting will allow you to indicate whether or not a sound should be played when the alarm banner appears or is updated. By default, a sound will be played.
 
 #### Web apps: GQI DxM version displayed in About box [ID 42003]
 
