@@ -22,4 +22,10 @@ uid: Web_apps_Feature_Release_10.5.4
 
 ## Changes
 
-*No changes have been added yet.*
+### Enhancements
+
+*No enhancements have been added yet.*
+
+### Fixes
+
+*No fixes have been added yet.*
