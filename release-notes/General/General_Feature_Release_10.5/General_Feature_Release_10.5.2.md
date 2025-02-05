@@ -45,7 +45,7 @@ This type of alarms will automatically be cleared after a DataMiner restart. The
 
 #### Web visual overviews: Load balancing [ID 41434] [ID 41728]
 
-<!-- MR 10.6.0 [CU0] - FR 10.5.2 -->
+<!-- MR 10.5.0 [CU1]/10.6.0 [CU0] - FR 10.5.2 -->
 
 It is now possible to implement load balancing among DataMiner Agents in a DMS for visual overviews shown in web apps.
 
