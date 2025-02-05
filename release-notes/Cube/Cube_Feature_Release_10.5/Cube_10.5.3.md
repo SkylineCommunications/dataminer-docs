@@ -38,6 +38,28 @@ To do so, proceed as follows:
 
 1. Click *Apply*.
 
+#### System Center: Save the rights of a user group as a preset [ID 41656]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.3 [CU0] -->
+
+In *System Center > Users/Groups > Groups*, it is now possible to save the rights of a user group as a preset, which can then be exported/imported as a JSON file.
+
+Proceed as follows to grant all rights in an existing preset to a particular user group:
+
+1. Select a user group.
+1. Go to *Permissions > Rights*. On the right, you will see a list with all the available presets (including the built-in presets like *Administrators*).
+1. Select a preset to grant all rights in that preset to the user group selected in step 1.
+
+When you have selected a user group, you will now also be able to choose the following preset-related commands:
+
+| Command | Function |
+|---------|----------|
+| Save rights as preset... | Saves the currently selected rights to a preset.<br>Note: If the currently selected rights have already been saved to a preset, this command will be unavailable. |
+| Export preset            | Opens a window that will allow you to export the currently selected rights to a preset file (in JSON format).<br>If no preset is selected when you click *Export preset*, you will be asked to enter the name of the preset. |
+| Import preset            | Opens a window that will allow you to import a preset file.<br>If the name of the preset already exists, then you will be asked whether you want to override the rights in the existing preset with the rights in the preset you are about to import. |
+| Reset                    | Reverts all changes made to the rights in the selected preset. |
+| Delete preset            | Deletes the currently selected preset.<br>Note: Built-in presets (e.g. *Administrators*) cannot be deleted. |
+
 #### System Center - Logging: Consulting DxM logs [ID 41674]
 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
