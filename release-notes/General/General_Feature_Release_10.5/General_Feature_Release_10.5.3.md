@@ -425,6 +425,15 @@ When you tried to update the GQI DxM by means of the MSI installer, in some case
 
 A number of enhancements have now been made to prevent any problems from occurring while updating the GQI DxM.
 
+#### Swarming: Problems with information events [ID 41999]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element was being swarmed, in some cases, the final information event that was generated would have an incorrect alarm ID.
+
+Also, in some rare cases, the *Activated By* information event could have a duplicate alarm tree key.
+
 #### BPA tests would fail to load the necessary DLL files [ID 42000]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
