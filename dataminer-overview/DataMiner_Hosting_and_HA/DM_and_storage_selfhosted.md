@@ -4,7 +4,7 @@ uid: DM_and_storage_selfhosted
 
 # Self-hosted DataMiner nodes and storage nodes
 
-If this is really necessary, you host both the DataMiner nodes and the storage nodes yourself. However, this is a **complex setup that we do not recommend**.
+If this is really necessary, you can host both the DataMiner nodes and the storage nodes yourself. However, this is a **complex setup that we do not recommend**.
 
 ![Self-hosted](~/user-guide/images/Self-hosted.svg)
 
