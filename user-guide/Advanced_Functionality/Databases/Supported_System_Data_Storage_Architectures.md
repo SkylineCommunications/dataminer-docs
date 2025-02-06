@@ -3,7 +3,7 @@ uid: Supported_system_data_storage_architectures
 description: Aside from the recommended Storage as a Service (STaaS) data storage architecture, you can also use DataMiner with dedicated clustered storage.
 ---
 
-# Supported system data storage architectures
+# Storage options overview
 
 The most straightforward of data storage architectures is [Storage as a Service (STaaS)](xref:STaaS). With this setup, you do not need to maintain the databases yourself, and all the scaling and complexity is taken care of for you. If you instead choose self-hosted storage, the most usual setup involves a Cassandra main database and OpenSearch indexing database for system data storage. However, note that with self-hosted storage, you are responsible for installing and maintaining the databases.
 

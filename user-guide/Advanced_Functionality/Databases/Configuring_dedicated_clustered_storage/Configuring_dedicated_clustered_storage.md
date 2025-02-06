@@ -20,7 +20,7 @@ Then install the [indexing database](xref:Indexing_Database). We recommend an on
 When both of the above have been installed, you can [configure the database settings in Cube](xref:Configuring_the_database_settings_in_Cube) or [specify the configuration data in the *DB.xml* file](xref:DB_xml). If you already had an existing DataMiner System using storage per DMA, you can [migrate to the clustered storage setup](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).
 
 > [!TIP]
-> For more information on this architecture and on other possible data storage architectures, see [Supported data storage architectures](xref:Supported_system_data_storage_architectures).
+> For more information on this architecture and on other possible data storage architectures, see [Storage options overview](xref:Supported_system_data_storage_architectures).
 
 > [!NOTE]
 >

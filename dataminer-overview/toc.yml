@@ -33,7 +33,7 @@ items:
           topicUid: DaaS_hosting
         - name: Self-hosted DataMiner nodes with Storage as a Service
           topicUid: DM_selfhosted_and_StaaS
-        - name: Self-hosted DataMiner nodes and storage nodes
+        - name: Self-hosted DataMiner nodes and storage nodes (not recommended)
           topicUid: DM_and_storage_selfhosted
     - name: dataminer.services
       topicUid: Overview_DCP

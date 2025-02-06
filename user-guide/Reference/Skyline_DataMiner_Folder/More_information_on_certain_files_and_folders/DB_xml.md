@@ -445,7 +445,7 @@ To support the offload of files to a file cache instead of to a MySQL, MSSQL, or
 1. Save and close *DB.xml*, and restart the DMA.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offload database](xref:Offload_database).
+> From DataMiner 10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offloading data](xref:Offload_database).
 
 ### Example of an offload database configuration
 

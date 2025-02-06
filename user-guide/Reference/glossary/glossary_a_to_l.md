@@ -77,7 +77,7 @@ uid: glossary_a_to_l
 | CCAP | Converged Cable Access Platform. Platform combining the functionality of a CMTS with that of an edge QAM, providing high-density services to cable subscribers. |
 | CCU | Camera Control Unit. Device used to monitor and control camera functions, for example in live video broadcasting. |
 | CDN | Content Delivery Network. Network of servers in different locations that work together to allow fast delivery of internet content. |
-| Central database | Alternative name for the offload database, especially used for older DataMiner versions.<br>See [Offload database](xref:Offload_database). |
+| Central database | Alternative name for the offload database, especially used for older DataMiner versions.<br>See [Offloading data](xref:Offload_database). |
 | Change point | Point where the behavior of a parameter trend changes, detected by the DataMiner Analytics software.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
 | CI/CD | Continuous Integration Continuous Delivery/Deployment. A set of practices that ensure small changes are continuously implemented to the software and made available to customers. |
 | CI Type | Configuration Item type. Definition of the behavior of elements in network implementation workflows as part of DataMiner IDP. This includes how to discover the device, provision an element, and perform software management, configuration management and more. A CI Type can be unique for a specific protocol or common for multiple element types, such as a product family.<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
@@ -253,7 +253,7 @@ uid: glossary_a_to_l
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network.<br>See [DataMiner IDP app](xref:SolIDP). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
 | Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc.<br>See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
-| Indexing Engine | Dedicated indexing database used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. GQI. See [About databases](xref:Databases_about) |
+| Indexing Engine | Dedicated indexing database used to index information from the DataMiner System to allow rapid information retrieval. In case self-hosted storage is used (not recommended), this database is required to have access to certain DataMiner features, e.g. GQI. See [About storage](xref:About_storage) |
 | Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:About_SNMP_managers). |
 | Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm.<br>See [Information event](xref:Alarm_types#information-events). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself.<br>See [Information templates](xref:Information_templates). |

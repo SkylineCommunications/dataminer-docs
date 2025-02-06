@@ -12,7 +12,7 @@ You can for instance use this in case a parameter (e.g. the total available memo
 
 ## Prerequisites
 
-- The DataMiner System must use [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
+- The DataMiner System must use [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
 
 - Behavioral anomaly detection must be enabled. You can enable this feature in System Center, via *System settings* > *analytics config*.
 

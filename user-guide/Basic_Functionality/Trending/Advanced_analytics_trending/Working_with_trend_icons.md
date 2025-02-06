@@ -7,7 +7,7 @@ uid: Working_with_trend_icons
 The DataMiner Analytics software analyzes the behavior of numeric parameters in real time. A visual summary of the most recent behavior is shown in the form of a **trend icon** next to a trended parameter on a data page.
 
 > [!NOTE]
-> This feature requires [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
+> This feature requires [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
 
 ## Available trend icons
 

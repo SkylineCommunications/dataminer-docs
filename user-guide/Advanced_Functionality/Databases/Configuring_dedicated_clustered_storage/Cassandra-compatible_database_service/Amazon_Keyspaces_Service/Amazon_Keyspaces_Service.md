@@ -22,4 +22,4 @@ In this section of the documentation, you can find instructions on [how to deplo
 > - The only replication strategy supported is the Amazon Keyspaces specific `Single-Region strategy`, which is not configurable.
 
 > [!TIP]
-> See also: [Supported system data storage architectures](xref:Supported_system_data_storage_architectures)
+> See also: [Storage options overview](xref:Supported_system_data_storage_architectures)
