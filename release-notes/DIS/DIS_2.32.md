@@ -60,7 +60,7 @@ Also, from now on, when you use this menu option while working with a protocol s
 
 #### Microsoft Azure B2C authentication \[ID 28959\]
 
-DIS now uses Azure B2C authentication. This means, that users will now have to provide their dataminer.services account to sign in to DIS or to have DIS check for updates.
+DIS now uses Azure B2C authentication. This means that users will now have to provide their dataminer.services account to sign in to DIS or to have DIS check for updates.
 
 In the *DIS Settings* window, the *DCP* tab has been replaced by the following tabs:
 
