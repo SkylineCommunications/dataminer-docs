@@ -20,11 +20,11 @@ The time range component allows you to specify a time range, which can then be u
 
 - Custom time range (3): You can manually set a custom time range by specifying a start and end time. If the *Pinning as quick pick* option is enabled in the *Layout* pane, you can save the time selection as a custom quick pick button.
 
-  - From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 42082-->, you can either enter a custom start and end time in the text box (in `DD/MM/YYYY HH:MM` format) or click the ![Calendar](~/user-guide/images/Calendar_Icon.png) icon to open the *Calendar* pane, where you can select the start and end time using the calendar interface.
+  - From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 42082-->, you can either enter a custom start and end time in the input box (in `DD/MM/YYYY HH:MM` or `DD/MM/YYYY` format, depending on the level of granularity) or click the ![Calendar](~/user-guide/images/Calendar_Icon.png) icon to open the *Calendar* pane, where you can select the start and end time using the calendar interface.
 
   - Prior to DataMiner 10.4.0 [CU12]/10.5.3, click the ![Clock](~/user-guide/images/Clock_Icon.png) icon and specify the start and end time manually.
 
-When you select a preset or quick pick, the time range will be updated immediately. If the time range is used as a filter, the component data will also update immediately. When you set a custom time range, the data will only be updated after clicking the *Apply* button. If you have not yet clicked this button, you can revert any changes by clicking *Cancel*. Prior to DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11<!--RN 40622-->, the data is updated immediately after the custom time range is changed.
+When you select a preset or quick pick, the time range will be updated immediately. If the time range is used as a filter, the component data will also update immediately. When you manually enter a custom time range in the input box, the data will be updated based on the *Emit value on* setting (*Enter*, *Focus lost*, or *Value change*). When you set a custom time range using the calendar interface or the custom time range editor (prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42082-->), the data will only be updated after clicking the *Apply* button. If you have not yet clicked this button, you can revert any changes by clicking *Cancel*. Prior to DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11<!--RN 40622-->, the data is always updated immediately after the time range is changed.
 
 ![Options time range component](~/user-guide/images/Time_Range2.png)<br>*Time range component in DataMiner 10.5.3*
 
@@ -36,7 +36,7 @@ To configure the component:
 
    - *Default range*: The default range selected in the component. By default set to *Today so far*.
 
-   - *Allow refresh*: Available up to DataMiner 10.4.0 [CU11]/10.5.2<!--RN 42082-->. Determines whether the component includes a refresh timer. By default disabled.
+   - *Allow refresh*: Available up to DataMiner 10.4.0 [CU11]/10.5.2<!--RN 41931-->. Determines whether the component includes a refresh timer. By default disabled.
 
      From DataMiner 10.4.0 [CU11]/10.5.2 onwards, you can use a [trigger component](xref:DashboardTrigger) to refresh data instead.
 
@@ -50,11 +50,11 @@ To configure the component:
 
      - *Date*: Only the dates must be specified for the start and end times, e.g. `05/02/2025 to 06/02/2025`. If the same date  is entered for both the start and end time, the time range will cover the full 24 hours (from midnight to midnight).
 
-   - *Emit value on*: Available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 42082-->. Determines when the time range entered in the text box becomes available as data. This can be when the user presses Enter ("Enter"), when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change"). If you select *Focus lost*, the value will also become available when the user presses Enter.
+   - *Emit value on*: Available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 42082-->. Determines when the time range entered in the input box becomes available as data. This can be when the user presses Enter ("Enter"), when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change"). If you select *Focus lost*, the value will also become available when the user presses Enter.
 
    - *Edit using*: Available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 42082-->. Determines how the time range can be modified:
 
-     - *Keyboard & calendar*: Allows you to enter a custom time range manually in the text box (format: `DD/MM/YYYY HH:MM`) or select one using the calender interface, which you can access by clicking the ![Calendar](~/user-guide/images/Calendar_Icon.png) icon.
+     - *Keyboard & calendar*: Allows you to enter a custom time range manually in the input box (format: `DD/MM/YYYY HH:MM`) or select one using the calender interface, which you can access by clicking the ![Calendar](~/user-guide/images/Calendar_Icon.png) icon.
 
      - *Calendar*: Allows you to set a custom time range only by clicking the ![Calendar](~/user-guide/images/Calendar_Icon.png) icon and selecting the dates in the calendar interface.
 
@@ -75,7 +75,7 @@ To configure the component:
      > [!NOTE]
      > Prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42082-->, this setting is called *Align current time position* instead.
 
-   - *Show refresh timer*: Determines whether an indication is displayed that the data will be refreshed.
+   - *Show refresh timer*: Available up to DataMiner 10.4.0 [CU11]/10.5.2<!--RN 41931-->. Determines whether an indication is displayed that the data will be refreshed.
 
    - *Presets*: Available from DataMiner 10.3.10/10.4.0 onwards<!--RN 37050-->. Allows you to customize the presets displayed when you select the component (1). The following presets are available: *Still busy*, *In the past*, *Recently*, *Long run*, *Starting from now*, *Near future*, and *Distant future*.
 
