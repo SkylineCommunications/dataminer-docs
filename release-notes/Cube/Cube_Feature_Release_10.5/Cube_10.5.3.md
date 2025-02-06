@@ -71,8 +71,8 @@ When you try to import
 > [!NOTE]
 >
 > - There is no command to rename a preset. To rename a preset, select it, delete it, and then save it again with another name.
-> - If you make any changes to presets, those changes will not automatically be visible in other client applications.
-> - If you want to override a certain preset, then save it as a new preset using the same name. This way, the previously created preset with the same name will be overridden. However, note that other user groups that are using that preset will continue to use the previously created preset.
+> - If you make any changes to presets, those changes will not automatically be visible in other places (e.g. other cards within the same Cube session or other Cube sessions).
+> - If you want to override a certain preset, then save it as a new preset using the same name. This way, the previously created preset with the same name will be overridden. However, note that if that preset is being used by other user groups, it will not be overridden there.
 
 #### System Center - Logging: Consulting DxM logs [ID 41674]
 
