@@ -56,7 +56,7 @@ When you add a *Toggle* component to a low-code app, you can also configure a *S
 
 The UI components `UIBlockType.Calendar` and `UIBlockType.Time` have been redesigned.
 
-Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new *Button* component, then add the following argument to the URL of the low-code app:
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
 
 `?useNewIASInputComponents=true`
 
