@@ -4,6 +4,9 @@ uid: Configuring_dedicated_clustered_storage
 
 # Configuring dedicated clustered storage
 
+> [!IMPORTANT]
+> This architecture is supported but not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS).
+
 If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, typically, you will need to configure a dedicated clustered storage setup.
 
 For this setup, both a Cassandra Cluster and indexing database (also known as Search Cluster) are required. This setup can be either on premises or in the cloud, or a mix of both.
@@ -17,7 +20,7 @@ Then install the [indexing database](xref:Indexing_Database). We recommend an on
 When both of the above have been installed, you can [configure the database settings in Cube](xref:Configuring_the_database_settings_in_Cube) or [specify the configuration data in the *DB.xml* file](xref:DB_xml). If you already had an existing DataMiner System using storage per DMA, you can [migrate to the clustered storage setup](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).
 
 > [!TIP]
-> For more information on this architecture and on other possible data storage architectures, see [Supported data storage architectures](xref:Supported_system_data_storage_architectures).
+> For more information on this architecture and on other possible data storage architectures, see [Storage options overview](xref:Supported_system_data_storage_architectures).
 
 > [!NOTE]
 >

@@ -6,7 +6,7 @@ uid: Advanced_analytics_trending
 
 A number of features in trend graphs make use of the artificial intelligence capabilities provided by DataMiner Analytics.
 
-Most of these features rely on the SLAnalytics process. These require [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures) and can be activated or deactivated in System Center, via *System Center* > *System settings* > *analytics config*:
+Most of these features rely on the SLAnalytics process. These require [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures) and can be activated or deactivated in System Center, via *System Center* > *System settings* > *analytics config*:
 
 - [Working with trend predictions](xref:Working_with_trend_predictions)
 

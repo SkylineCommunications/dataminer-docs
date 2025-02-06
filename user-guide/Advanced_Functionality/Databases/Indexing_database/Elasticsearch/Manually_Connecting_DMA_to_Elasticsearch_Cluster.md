@@ -50,4 +50,4 @@ If you are using an older DataMiner version or a setup with storage per DMA, fol
 1. When the DMA is online again, confirm that there are no errors related to the database configuration.
 
 > [!NOTE]
-> An indexing database is never used on its own by DataMiner. It is always combined with a Cassandra database, either with a Cassandra cluster per DMA, or a Cassandra cluster per DMS. See [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
+> An indexing database is never used on its own by DataMiner. It is always combined with a Cassandra database, either with a Cassandra cluster per DMA, or a Cassandra cluster per DMS. See [Storage options overview](xref:Supported_system_data_storage_architectures).

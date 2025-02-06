@@ -4,6 +4,9 @@ uid: Configuring_storage_per_DMA
 
 # Configuring storage per DMA
 
+> [!IMPORTANT]
+> To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. If for some reason you need to continue using self-hosted storage even though this is not recommended, you will need to switch to [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) to have access to all features.
+
 If you are still using an older setup with storage per DMA instead of the recommended [Storage as a Service (STaaS)](xref:STaaS), typically this will involve a Cassandra database per DMA. In the oldest legacy setups, a MySQL (or MSSQL) database may still be used.
 
 ## Cassandra database per DMA
@@ -18,9 +21,6 @@ By default, when you install a new self-hosted DataMiner System, a Cassandra dat
 - Heatmap reports (in the legacy Reporter app)
 
 ![storage per DMA](~/user-guide/images/Storage_per_DMA.svg)
-
-> [!IMPORTANT]
-> To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. If you prefer to keep using self-hosted storage, you will need to switch to [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
 
 ## MySQL database
 

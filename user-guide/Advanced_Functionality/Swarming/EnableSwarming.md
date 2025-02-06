@@ -12,7 +12,7 @@ uid: EnableSwarming
 - DataMiner 10.5.1/10.6.0 or higher.
 - [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) setup.
 - No [Failover Agents](xref:About_DMA_Failover) are present in the cluster.
-- No [offload database](xref:Offload_database) is configured.
+- No [data offloads](xref:Offload_database) are configured.
 - Enhanced services in the cluster (if any) use only [compatible connectors](xref:SwarmingPrepare).
 - Scripts (Automation/GQI) and QActions in connectors have all been [made compatible](xref:SwarmingPrepare), i.e. they do not use obsolete or incompatible SLNet calls/properties that handle Alarm IDs as "DmaID/AlarmID".
 - For the user account that will be used to enable Swarming, the [Admin Tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is enabled.

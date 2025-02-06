@@ -4,6 +4,9 @@ uid: Indexing_Database
 
 # Configuring an indexing database
 
+> [!IMPORTANT]
+> Using a self-hosted storage setup with indexing database is supported but not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS).
+
 If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you also need to set up an OpenSearch or Elasticsearch indexing database in your DMS.
 
 An indexing database is required for many DataMiner features, including:

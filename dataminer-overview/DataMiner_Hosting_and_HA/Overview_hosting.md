@@ -6,19 +6,17 @@ uid: Overview_hosting
 
 DataMiner's architecture makes it extremely resilient to all types of failures, also because this architecture has no single point of failure.
 
-Skyline Communications offers three different hosting possibilities, each with its own strengths in term of redundancy and high-availability options:
+Skyline Communications offers the following hosting possibilities, each with its own strengths in term of redundancy and high-availability options:
 
-1. DataMiner as a Service: both the DataMiner nodes and the storage nodes as a service
+- [DataMiner as a Service](xref:DaaS_hosting): both the DataMiner nodes and the storage nodes as a service.
 
-   ![DaaS](~/user-guide/images/DaaS.svg)
+  ![DaaS](~/user-guide/images/DaaS.svg)
 
-1. Self-hosted DataMiner nodes with Storage as a Service
+- [Self-hosted DataMiner nodes with Storage as a Service](xref:DM_selfhosted_and_StaaS).
 
-   ![Hybrid](~/user-guide/images/Hybrid.svg)
+  ![Hybrid](~/user-guide/images/Hybrid.svg)
 
-1. Self-hosted DataMiner nodes and storage nodes
-
-   ![Self-hosted](~/user-guide/images/Self-hosted.svg)
-
-> [!TIP]
-> For more hands-on information, see [Creating a DataMiner System](xref:Creating_a_DataMiner_System).
+> [!NOTE]
+> If this is really necessary, you can also host both the DataMiner nodes and the storage nodes yourself. However, this is a complex setup that we do not recommend. See [Self-hosted DataMiner nodes and storage nodes](xref:DM_and_storage_selfhosted).
+>
+> ![Self-hosted](~/user-guide/images/Self-hosted.svg)

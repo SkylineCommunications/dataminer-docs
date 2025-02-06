@@ -19,4 +19,4 @@ The general DataMiner release notes contain all new features, enhancements, and 
 > - For detailed information on how to upgrade your DataMiner System, see [Upgrading your DataMiner system](xref:Upgrading_a_DataMiner_Agent).
 
 > [!NOTE]
-> To get access to all the latest DataMiner features, a DataMiner System needs to use [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted data storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database.
+> To get access to all the latest DataMiner features, a DataMiner System needs to use a supported data storage architecture, such as [Storage as a Service](xref:STaaS).

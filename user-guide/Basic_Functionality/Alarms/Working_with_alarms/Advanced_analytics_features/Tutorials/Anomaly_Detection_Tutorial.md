@@ -20,7 +20,7 @@ Estimated duration: 45 minutes.
 
 ## Prerequisites
 
-- DataMiner 10.3.12 or higher with [Storage as a Service (STaaS)](xref:STaaS) or a [self-hosted Cassandra database](xref:Supported_system_data_storage_architectures).
+- DataMiner 10.3.12 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-hosted Cassandra database](xref:Supported_system_data_storage_architectures).
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 

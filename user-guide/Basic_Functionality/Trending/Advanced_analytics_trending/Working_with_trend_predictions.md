@@ -6,7 +6,7 @@ uid: Working_with_trend_predictions
 
 > [!NOTE]
 >
-> - This feature requires [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
+> - This feature requires [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
 > - Predictions are not available for discrete and string parameters.
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config.* However, note that the feature needs to be enabled to receive automatic notifications for predicted alarm threshold breaches by [Proactive cap detection](xref:Proactive_cap_detection).
 

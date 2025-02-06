@@ -6,7 +6,7 @@ uid: Accessing_trend_information_from_a_card
 
 On the data side of element cards, service cards, and (for aggregation) view cards, trended parameters are indicated with a [trend icon](xref:Working_with_trend_icons).
 
-On a DMA using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures), these trend icons can be displayed differently depending on the recent trend or the detected behavioral changes.
+On a DMA using [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures), these trend icons can be displayed differently depending on the recent trend or the detected behavioral changes.
 
 > [!TIP]
 > See also:
