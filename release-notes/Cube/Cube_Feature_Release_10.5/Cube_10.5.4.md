@@ -40,6 +40,21 @@ For more information about running elements in isolation mode, see [Elements can
 
 When swarming is enabled, it is currently not possible to offload data. In the *Database* section of *System Center*, it has therefore been made impossible to configure offloads on systems with swarming enabled.
 
+#### System Center: A warning icon will now be displayed when you specify a TTL value above a fixed limit [ID 41981]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When, in *System settings > Time to live*, you enter TTL values for trend data, a warning icon will now be displayed when you enter a value above a fixed limit. See the table below.
+
+| Type of data       | Time window size | Maximum TTL    |
+|--------------------|------------------|----------------|
+| Real-time trending | 3 hours          | 6 days 6 hours |
+| Minute trending    | 4 days           | 200 days       |
+| Hour trending      | 14 days          | 700 days       |
+| Day trending       | 30 days          | 1500 days      |
+
+If you enter a TTL value that exceeds the maximum value, at the bottom of the *DMS DEFAULTS* section, you will be able to click the *More information about recommended TTL limits* link. This will open a page on docs.dataminer.services where you can find more information on [Cassandra TWCS](xref:Specifying_TTL_overrides#cassandra-twcs).
+
 ### Fixes
 
 #### Visual Overview: Problem when updating element shapes that are linked to service elements via aliases [ID 41730]
