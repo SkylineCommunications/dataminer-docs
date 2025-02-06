@@ -15,7 +15,11 @@ uid: General_Main_Release_10.4.0_CU13
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Enhanced performance when updating subscriptions and when checking events against the set of active subscriptions [ID 41822]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
 ### Fixes
 

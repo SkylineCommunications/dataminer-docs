@@ -38,4 +38,23 @@ For more information about running elements in isolation mode, see [Elements can
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Visual Overview: Problem when updating element shapes that are linked to service elements via aliases [ID 41730]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+Elements that are part of a service can be given an alias within that service context. Element data within a visual overview can then contain such an element alias to make sure a particular shape is linked to the element referred to by the alias.
+
+Up to now, when a service containing different elements was updated, and those elements had aliases that were used in element shapes, those shapes would not get updated because they would incorrectly be linked to the actual elements instead of the aliases.
+
+From now on, when services are updated, element shapes will reflect the element to which the alias in the shape data refers to at the time of the update.
+
+#### Visual Overview: Shapes displaying the name of a service or a view would not be updated when the name was changed [ID 41769]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+Up to now, when the name of a service or a view was updated, shapes displaying that name would incorrectly not be updated.
+
+From now on, shapes that display the name of an object using an asterisk in the shape text and a shape data field of type *Info* set to "NAME" will automatically be updated when the name of that object changes.
+
+> [!NOTE]
+> The "[Name]" placeholder does not update in real time, only shape data fields of type *Info* set to "NAME" will.

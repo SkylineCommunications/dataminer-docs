@@ -24,7 +24,25 @@ uid: Web_apps_Feature_Release_10.5.4
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Dropdown' [ID 41838]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The UI component `UIBlockType.Dropdown` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'CheckBox' [ID 41891]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The UI component `UIBlockType.CheckBox` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
 
 ### Fixes
 

@@ -60,6 +60,12 @@ The following new messages can now be used to  which you can target to be sent t
 
 Additional logging with regard to visual overview load balancing will be available in the web logs located in the *C:\\Skyline DataMiner\\Logging\\Web* folder.
 
+#### Enhanced performance when updating subscriptions and when checking events against the set of active subscriptions [ID 41822]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
+
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
