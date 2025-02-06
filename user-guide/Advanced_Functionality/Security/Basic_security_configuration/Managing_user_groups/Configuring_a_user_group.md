@@ -71,7 +71,8 @@ To configure a user group:
    
    - To override a certain preset, save it as a new preset using the same name.
    
-   > [!NOTE] Any changes to the presets will not automatically be reflected in other places.
+   > [!NOTE]
+   > Any changes to the presets will not automatically be reflected in other places.
 
 1. To configure notifications for the group, go to the *Alerts* tab and follow the same procedure as for alerts for a single user. See [Configuring user notifications](xref:Configuring_user_notifications).
 
