@@ -61,7 +61,7 @@ moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new
 };
 ```
 
-#### Service & Resource Management: Defining time windows on resources [ID 41894]
+#### Service & Resource Management: Defining an availability window for a resource [ID 41894]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
@@ -71,8 +71,8 @@ An availability window has the following (optional) properties:
 
 | Property | Description |
 |----------|-------------|
-| AvailableFrom  | The start time of the availability window. |
-| AvailableUntil | The end time of the availability window. |
+| AvailableFrom  | The start time of the availability window. Default value: `DateTimeOffset.MinValue` (i.e. no start time). |
+| AvailableUntil | The end time of the availability window. Default value: `DateTimeOffset.MaxValue` (i.e. no end time). |
 | RollingWindowConfiguration | The size of the availability window relative to the current time.<br>For example, if you set this property to 30 days, the resource will be available for booking until 30 days from now.<br>If both a fixed end time and a rolling window are set, the earlier time of the two will be used. For example, if the fixed end time is 15 days from now, but the rolling window is 30 days, the resource will no longer be available after the 15-day mark, even though the rolling window would extend to 30 days. |
 
 When you use the *GetEligibleResources* API call to retrieve resources available during a specific time range, resources that are not available for the entire requested range will not be returned.
@@ -126,7 +126,7 @@ foreach (var range in availableRanges)
 }
 ```
 
-The `AvailabilityContext` parameter has a property `Now` that can be used to override the "now" timestamp in order to calculate e.g. the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
+The `AvailabilityContext` parameter has a property `Now`, which can be used to override the "now" timestamp in order to calculate e.g. the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
 
 #### Relational anomaly detection [ID 42034]
 
