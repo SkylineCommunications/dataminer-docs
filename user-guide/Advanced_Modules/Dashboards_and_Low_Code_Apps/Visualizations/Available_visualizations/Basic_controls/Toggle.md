@@ -18,7 +18,6 @@ To configure the toggle component:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-   - *Styles* > *Customize* > *Color* > *Accent color*: Allows you to customize the color of the toggle switch<!--RN 41859-->. There are two options available:
 
      - *Default*: The toggle switch will match the app's or dashboard's theme color.
 
