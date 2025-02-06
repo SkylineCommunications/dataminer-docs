@@ -502,6 +502,8 @@ items:
                 topicUid: DashboardTextInput
               - name: Time range
                 topicUid: TimeRange
+              - name: Toggle
+                topicUid: Toggle
       - name: Component data
         topicUid: Component_Data
       - name: URL data
