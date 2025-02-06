@@ -18,11 +18,6 @@ To configure the toggle component:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-
-     - *Default*: The toggle switch will match the app's or dashboard's theme color.
-
-     - *Custom*: Specify a custom color for the toggle switch, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
-
    - *Label*: Text that will be displayed next to the toggle switch.
 
    - *Icon*: Icon that will be displayed next to the toggle switch.
