@@ -34,7 +34,11 @@ For more information about running elements in isolation mode, see [Elements can
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### System Center: Not possible to configure offloads when swarming is enabled [ID 41953]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When swarming is enabled, it is currently not possible to offload data. In the *Database* section of *System Center*, it has therefore been made impossible to configure offloads on systems with swarming enabled.
 
 ### Fixes
 
