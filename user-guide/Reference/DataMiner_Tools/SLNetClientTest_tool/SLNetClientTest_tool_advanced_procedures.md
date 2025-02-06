@@ -38,6 +38,7 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Reinitializing Resource Manager](xref:SLNetClientTest_reinitialize_resourcemanager)
 - [Removing a DOM manager](xref:SLNetClientTest_removing_DOM_Manager)
 - [Removing references to items that no longer exist](xref:SLNetClientTest_removing_references)
+- [Retraining the internal model used by RAD](xref:SLNetClientTest_retrain_rad_model)
 - [Setting the TTL for database records](xref:SLNetClientTest_setting_TTL_database)
 - [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_credentials_shared_backup_Elasticsearch)
 - [Triggering a midnight sync for a DOM manager](xref:SLNetClientTest_triggering_DOM_midnight_sync)

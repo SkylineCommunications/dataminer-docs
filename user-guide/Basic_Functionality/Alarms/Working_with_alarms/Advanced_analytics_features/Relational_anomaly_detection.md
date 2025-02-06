@@ -6,7 +6,7 @@ uid: Relational_anomaly_detection
 
 From DataMiner 10.5.3/10.6.0 onwards, you can use relational anomaly detection (RAD) to detect when a group of parameters deviates from its normal behavior.<!-- RN 42034 -->
 
-After you have configured one or more groups of parameters that should be monitored together, RAD will learn how these parameters are related.
+After you have [configured one or more groups of parameters](#configuring-parameter-groups-for-rad) that should be monitored together, RAD will learn how these parameters are related.
 
 Whenever the relation is broken, RAD will detect this and generate suggestion events in the Alarm Console. A suggestion event will be generated for each parameter in the group where a broken relation was detected.
 
@@ -21,55 +21,48 @@ This means that the following prerequisites apply:
 
 ## Configuring parameter groups for RAD
 
-To configure the parameter groups monitored by RAD, you will need to add them in the file `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml`.
+1. On the DMA where you want to configure the parameter groups, open the file `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml`.
 
-This file must be formatted as follows:
+1. Configure the file as follows:
 
-```xml
-<?xml version="1.0" ?>
-<RelationalAnomalyDetection>
-  <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]">
-    <Instance>[INSTANCE1]</Instance>
-    <Instance>[INSTANCE2]</Instance>
-    [... one <Instance> tag per parameter in the group]
-  </Group>
-  [... one <Group> tag per group of parameters that should be monitored by RAD]
-</RelationalAnomalyDetection>
-```
+   ```xml
+   <?xml version="1.0" ?>
+   <RelationalAnomalyDetection>
+     <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]">
+       <Instance>[INSTANCE1]</Instance>
+       <Instance>[INSTANCE2]</Instance>
+       [... one <Instance> tag per parameter in the group]
+     </Group>
+     [... one <Group> tag per group of parameters that should be monitored by RAD]
+   </RelationalAnomalyDetection>
+   ```
 
-- In the `Group` tag, configure the following attributes:
+   - In the `Group` tag, configure the following attributes:
 
-  - `name`: The name of the parameter group. This name must be unique and will be used when a suggestion event is generated for the group in question.
+     - `name`: The name of the parameter group. This name must be unique and will be used when a suggestion event is generated for the group in question.
 
-  - `updateModel`: Indicates whether RAD should update its internal model of the relation between the parameters in the group.
+     - `updateModel`: Indicates whether RAD should update its internal model of the relation between the parameters in the group.
   
-    - If set to "false", RAD will only do an initial training based on the data available at startup.
-    - If set to "true", RAD will update the model each time new data comes in.
+       - If set to "false", RAD will only do an initial training based on the data available at startup.
+       - If set to "true", RAD will update the model each time new data comes in.
 
-  - `anomalyScore`: Optional argument that can be used to specify the suggestion event generation threshold.
+     - `anomalyScore`: Optional argument that can be used to specify the suggestion event generation threshold.
 
-    Higher values will result in less suggestion events, lower values will result in more suggestion events. Default: 3.
+       Higher values will result in less suggestion events, lower values will result in more suggestion events. Default: 3.
 
-- In each `Instance` element, you can specify either a single-value parameter or a table parameter using one of the following formats:
+   - In each `Instance` element, you can specify either a single-value parameter or a table parameter using one of the following formats:
 
-  - Single-value parameter: [DataMinerID]/[ElementID]/[ParameterID]
-  - Table parameter: [DataMinerID]/[ElementID]/[ParameterID]/[PrimaryKey]
+     - Single-value parameter: [DataMinerID]/[ElementID]/[ParameterID]
+     - Table parameter: [DataMinerID]/[ElementID]/[ParameterID]/[PrimaryKey]
 
-<!-- When you are ready updating the file, restart DataMiner or ...
+1. To make sure the changes take effect, in DataMiner Cube, go to *System Center* > *System settings* > *analytics config*, and disable and re-enable *Relational anomaly detection*.
 
-This file will be read when SLAnalytics starts up, when RAD is enabled or re-enabled, or when a *ReloadMadConfigurationMessage* is sent. -->
-
-## Retraining the internal RAD model
-
-In some cases, it can be useful to retrain the internal model used by RAD. This allows you to indicate the periods during which a parameter group was behaving as expected, so that RAD can better identify when the parameters deviate from that expected behavior in the future.
-
-To do so, you will need to use the SLNetClientTest tool. See [Retraining the internal model used by RAD](TBD).
-
-<!-- If necessary, users can force RAD to retrain its internal model by sending a `RetrainMadModelMessage`. In this message, they can indicate the periods during which the parameters were behaving as expected. This will help RAD to identify when the parameters deviate from that expected behavior in the future. -->
+> [!NOTE]
+> In some cases, it can be useful to retrain the internal model used by RAD. This allows you to indicate the periods during which a parameter group was behaving as expected, so that RAD can better identify when the parameters deviate from that expected behavior in the future. To do so, you will need to use the SLNetClientTest tool. See [Retraining the internal model used by RAD](xref:SLNetClientTest_retrain_rad_model).
 
 ## Limitations
 
-- RAD is only able to monitor parameters on the local DataMiner Agent. This means, that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
+- RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
 
 - RAD does not support history sets.
 
