@@ -2,7 +2,7 @@
 uid: About_storage
 ---
 
-# About data storage
+# About storage
 
 Each DataMiner System requires its own system data storage. This data storage serves as a repository for configuration data, historical parameter information, and alarm data.
 
