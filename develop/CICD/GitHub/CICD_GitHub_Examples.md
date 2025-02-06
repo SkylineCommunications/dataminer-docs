@@ -8,10 +8,15 @@ uid: CICD_GitHub_Examples
 
 This is a basic pipeline for uploading to the DataMiner Catalog and/or deploying to DMAs connected to dataminer.services. We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
 
-If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to:
+
+- [CI/CD For Connectors](xref:CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub) tutorial.
+- [CI/CD For Other Items](xref:github_reusable_workflows_dataminer_app_packages_master_workflow) information.
 
 > [!TIP]
 > For information on creating a new pipeline in GitHub, see [GitHub Tutorial](https://docs.github.com/en/actions/quickstart).
+
+## Basic deployment for connectors
 
 ### GitHub workflow
 

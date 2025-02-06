@@ -5,7 +5,7 @@ uid: CICD_Tutorial_For_Other_Items_User_Defined_API_VisualStudio_And_GitHub
 # Developing a User-Defined API Using Visual Studio and GitHub
 
 In this tutorial, you will learn how to develop, (pre-)release, and upload a User Defined API to the DataMiner Catalog with a CI/CD pipeline using Visual Studio and GitHub.
-You can however utilize this tutorial for **any artifact type** except for connectors (e.g. Automation Script, Automation Script Library, Package Project, ...).
+You can however utilize this tutorial for **any artifact type** except for connectors (e.g. Automation Script Project, Automation Script Library Project, Package Project, ...).
 
 Expected duration: 5 minutes
 

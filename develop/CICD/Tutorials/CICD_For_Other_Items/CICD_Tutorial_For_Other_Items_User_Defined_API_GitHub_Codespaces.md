@@ -14,11 +14,13 @@ Expected duration: 5 minutes
 
 ## Overview
 
-- [Step 1: Create a Visual Studio project](#step-1-create-a-visual-studio-project)
-- [Step 2: Create a GitHub repository](#step-2-create-a-github-repository)
-- [Step 3: Check GitHub Actions](#step-3-check-github-actions)
-- [Step 4: Create and add secret](#step-4-create-and-add-secret)
-- [Step 5: Check The Results](#step-5-check-the-results)
+- [Step 1: Create a GitHub Repository](#step-1-create-a-github-repository)
+- [Step 2: Create a GitHub Codespaces Environment](#step-2-create-a-github-codespaces-environment)
+- [Step 3: Install DataMiner Templates](#step-3-install-dataminer-templates)
+- [Step 4: Add Project Content](#step-4-add-project-content)
+- [Step 5: Check GitHub Actions](#step-5-check-github-actions)
+- [Step 6: Create and add secret](#step-6-create-and-add-secret)
+- [Step 7: Check The Results](#step-7-check-the-results)
 
 ## Step 1: Create a GitHub Repository
 
@@ -41,7 +43,7 @@ Expected duration: 5 minutes
 1. Let the development instance connect
 
 > [!NOTE]
-> If you see *Oh No, it looks like you are offline?* It's likely due to your network firewall settings, following the [Troubleshooting guide](https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-your-connection-to-github-codespaces#browser-cannot-connect) should be able to resolve your issues.
+> If you see *Oh No, it looks like you are offline?* It's likely due to your network firewall settings. You or your IT Department can follow the [Troubleshooting guide](https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-your-connection-to-github-codespaces#browser-cannot-connect) and be able to resolve any issues.
 > Alternatively you can continue this tutorial by restarting this step, but selecting *Continue Working in New Local Clone*. This will require you to have Visual Studio Code installed, alongside GIT and dotnet 8.0.
 
 ### Step 3: Install DataMiner Templates
@@ -67,17 +69,11 @@ Expected duration: 5 minutes
       dotnet new install skyline.dataminer.visualstudiotemplates
     ```
 
-### Step 4: Create A Project Folder
-
-1. Right-click inside the explorer and select New Folder...
-
-1. Create a folder that will represent your project, give it a name. (e.g. *MyUserDefinedApiFromGithub*)
-
-### Step 5: Add Project Content
+### Step 4: Add Project Content
 
 1. Inside your Terminal (Control + Shift + C)
 
-    1. Add the DataMiner User Defined API Project Template
+    1. Add the DataMiner User Defined API Project Template inside a new project folder
 
     ```cmd
       dotnet new dataminer-user-defined-api-project -o MyUserDefinedApiFromGithub -auth JanS -I Basic
@@ -89,7 +85,7 @@ Expected duration: 5 minutes
 1. Click the button *Sync Changes*, if asked to pull and push from and to "origin/main" select *OK*
 1. Return to your *GitHub Repository*
 
-### Step 4: Check GitHub Actions
+### Step 5: Check GitHub Actions
 
 1. In GitHub, go to the *Actions* tab.
 
@@ -107,7 +103,7 @@ Expected duration: 5 minutes
 
    You can use the links from the actual error to better address the next couple of steps.
 
-### Step 4: Create and add secret
+### Step 6: Create and add secret
 
 1. Obtain an **Organization Key** from [admin.dataminer.services](https://admin.dataminer.services/) with the required scopes:
    - **Register catalog items**
@@ -119,7 +115,7 @@ Expected duration: 5 minutes
 
 With this setup, any push with new content (including the initial creation) to the main/master branch will generate a new pre-release version, using the latest commit message as the version description.
 
-### Step 5: Check The Results
+### Step 7: Check The Results
 
 1. Go to the [DataMiner Catalog](https://catalog.dataminer.services/)
 
