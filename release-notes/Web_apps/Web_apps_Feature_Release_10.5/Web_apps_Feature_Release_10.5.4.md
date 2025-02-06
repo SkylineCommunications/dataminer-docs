@@ -46,4 +46,12 @@ Currently, by default, the existing components will still be used by default to 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When the following actions were executed, up to now, they would incorrectly not use the event information that was passed to them.
+
+- *Set viewport* action on a *Line & area chart* component with parameter data
+- *Set value* action on a *Time range* component
+- *Set value* action on a *Numeric input* component
