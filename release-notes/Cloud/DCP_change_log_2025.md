@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 6 February 2025 - Fix - Random failures when sharing, deploying DxMs or catalogs, or using the DataMiner Teams bot [ID ]
+### 6 February 2025 - Fix - Random failures when sharing, deploying DxMs or catalogs, or using the DataMiner Teams bot [ID 42178]
 
 The Remote Access and Live Sharing performance and stability improvements released on the 4th of February introduced a specific issue which would only occur if a CloudGateway older than 2.17.0 was restarted or updated. The issue would cause random failures while creating or updating shares, deploying DxM updates from the Admin app, deploying Catalogs or using the DataMiner Teams Bot. This issue has now been resolved with immediate effect.
 
