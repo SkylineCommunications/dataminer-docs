@@ -190,7 +190,7 @@ This page displays all alarms related to the view, in the default Alarm Console 
 
 ### REPORTS
 
-A graphic representation of the alarm distribution, alarm events and alarm states, as well as a heatmap for the view’s child items (on systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures)). You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date.
+A graphic representation of the alarm distribution, alarm events and alarm states, as well as a heatmap for the view’s child items (on systems using [Storage as a Service](xref:STaaS) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures)). You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date.
 
 > [!TIP]
 > See also: [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card)

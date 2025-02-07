@@ -4,7 +4,7 @@ uid: Restoring_a_DataMiner_Agent
 
 # Restoring a DataMiner Agent
 
-Restoring a DataMiner Agent can be done with the [Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility), or manually, depending on the way the backup was taken. If you do not restore the DMA using the Taskbar Utility and you are using self-hosted storage nodes instead of [Storage as a Service](xref:STaaS), the [database](xref:Restoring_the_database_only) and [configuration](xref:Restoring_the_DMA_configuration_only) need to be restored separately. If you do use Storage as a Service, there is no need to restore the database.
+Restoring a DataMiner Agent can be done with the [Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility), or manually, depending on the way the backup was taken. If you do not restore the DMA using the Taskbar Utility and you are using self-managed storage nodes instead of [Storage as a Service](xref:STaaS), the [database](xref:Restoring_the_database_only) and [configuration](xref:Restoring_the_DMA_configuration_only) need to be restored separately. If you do use Storage as a Service, there is no need to restore the database.
 
 You can restore a DMA either on the same (virtual) machine or on a new one.
 

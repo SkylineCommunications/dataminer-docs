@@ -20,7 +20,7 @@ Estimated duration: 35 minutes.
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-- [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-hosted Cassandra database with indexing](xref:Supported_system_data_storage_architectures).
+- [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-managed Cassandra database with indexing](xref:Supported_system_data_storage_architectures).
 
 - Behavioral anomaly detection is enabled (in DataMiner Cube: *System Center* > *System settings* > *analytics config*).
 

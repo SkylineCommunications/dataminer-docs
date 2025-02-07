@@ -35,7 +35,7 @@ After you have run a BPA test, it will provide an overview of the detected issue
 ## DataMiner Agent hardening
 
 > [!NOTE]
-> If you have deployed DataMiner using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk), your system will be hardened out of the box, so you do not need to do anything to harden DataMiner. For an overview of the implemented measures, refer to [DataMiner Dojo](https://community.dataminer.services/download/overview-hardening-pre-installed-dataminer-vhdx/). However, note that if you have selected the data storage type *Self-hosted - External Storage*, you are responsible for the management of the external Cassandra and OpenSearch database clusters. See [Secure self-hosted DataMiner storage](#secure-self-hosted-dataminer-storage).
+> If you have deployed DataMiner using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk), your system will be hardened out of the box, so you do not need to do anything to harden DataMiner. For an overview of the implemented measures, refer to [DataMiner Dojo](https://community.dataminer.services/download/overview-hardening-pre-installed-dataminer-vhdx/). However, note that if you have selected the data storage type *Self-hosted - External Storage*, you are responsible for the management of the external Cassandra and OpenSearch database clusters. See [Secure self-managed DataMiner storage](#secure-self-managed-dataminer-storage).
 
 ### Secure Cube-server communication
 
@@ -183,7 +183,7 @@ On DataMiner versions installed using the **DataMiner Installer v10.2**, the Dat
 - TCP 9042: Cassandra (client-server communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
+  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [secure self-managed storage](#secure-self-managed-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
@@ -230,7 +230,7 @@ On DataMiner versions installed using the **DataMiner Installer v10.0 (or older)
 - TCP 9042: Cassandra (client-server communication)
 
   > [!NOTE]
-  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [securing self hosted storage](#secure-self-hosted-dataminer-storage).
+  > This rule and the one above for TCP 7000 only apply when the DataMiner System uses a Cassandra database that is installed on the same machine as DataMiner. If Cassandra is configured to use TLS, port 7001 and 9142 are used instead. For detailed information on securing Cassandra, refer to [secure self-managed storage](#secure-self-managed-dataminer-storage).
 
 - TCP 9200: Elasticsearch (client-server communication)
 
@@ -285,7 +285,7 @@ Some ports that are displayed above are no longer opened by default during DataM
 
 DataMiner has one built-in user, named "Administrator". This user is the local administrator on the Windows server hosting DataMiner and intended for recovery and initial configuration purposes. Once Operator users have been created, we recommend disabling the local Administrator user on the DataMiner server.
 
-## Secure self-hosted DataMiner storage
+## Secure self-managed DataMiner storage
 
 If you do not make use of [Storage as a Service (STaaS)](xref:STaaS) but manage DataMiner storage yourself, you need to make sure that the databases used for DataMiner storage are fully secure.
 

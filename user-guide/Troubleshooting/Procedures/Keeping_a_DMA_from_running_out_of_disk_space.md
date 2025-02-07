@@ -72,7 +72,7 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
             ```
 
       > [!TIP]
-      > If you are using a system with self-hosted DataMiner storage (e.g. Cassandra), we recommend switching to [Storage as a Service](xref:STaaS) instead.
+      > If you are using a system with self-managed DataMiner storage (e.g. Cassandra), we recommend switching to [Storage as a Service](xref:STaaS) instead.
 
     - **Cleaning up alarm and trend templates – approx. 2 minutes/protocol**
 

@@ -30,7 +30,7 @@ To create a list view, add a shape on the Visio page with the following shape da
 > [!NOTE]
 >
 > - Viewing a list of elements will only be possible if you have the user permission *Elements* > *Access*.
-> - Viewing a list of bookings will only be possible if the DMS has the necessary licenses and uses [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
+> - Viewing a list of bookings will only be possible if the DMS has the necessary licenses and uses [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
 > - If a *ListView* component with source *Reservations* or *Bookings* is used together with an embedded Resource Manager component, selecting an item in the list will select the corresponding block on the Resource Manager timeline and vice versa. See [Embedding a Resource Manager component](xref:Embedding_a_Resource_Manager_component).
 
 ## Component options

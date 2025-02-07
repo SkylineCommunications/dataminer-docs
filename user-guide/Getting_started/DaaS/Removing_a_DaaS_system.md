@@ -16,4 +16,4 @@ uid: Removing_a_DaaS_system
 1. Click *Delete*.
 
 > [!NOTE]
-> If you select *Delete DMS* for a self-hosted DataMiner System instead of a DaaS system, this will disconnect the system from dataminer.services. See [Permanently disconnecting from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices).
+> If you select *Delete DMS* for a self-managed DataMiner System instead of a DaaS system, this will disconnect the system from dataminer.services. See [Permanently disconnecting from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices).

@@ -11,7 +11,7 @@ If you do not use the Taskbar Utility to restore a DMA, there are two ways you c
 - by manually copying the data files.
 
 > [!NOTE]
-> For information on how to restore other self-hosted data storage nodes, see:
+> For information on how to restore other self-managed data storage nodes, see:
 >
 > - OpenSearch: [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups)
 > - Elasticsearch: [Taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux)

@@ -176,7 +176,7 @@ To filter the alarm list to only show such unexpected alarms, click the followin
 
 Please note the following regarding the alarm focus feature:
 
-- This feature is only available if your DataMiner System uses [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
+- This feature is only available if your DataMiner System uses [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
 
 - The focus icon in the alarm bar is only displayed on tabs displaying active alarms.
 

@@ -499,7 +499,7 @@ To support the offload of files to a file cache instead of to a MySQL, MSSQL, or
 
 ## Indexing database settings
 
-In a self-hosted setup with Cassandra, usually an indexing database is also installed, which can be OpenSearch or Elasticsearch. In a setup with storage per DMA, only Elasticsearch is supported, but this setup is not recommended. The indexing database will also be added to *DB.xml*.
+In a self-managed storage setup with Cassandra, usually an indexing database is also installed, which can be OpenSearch or Elasticsearch. In a setup with storage per DMA, only Elasticsearch is supported, but this setup is not recommended. The indexing database will also be added to *DB.xml*.
 
 The *\<Database>* tag for an indexing database has the following attributes:
 
