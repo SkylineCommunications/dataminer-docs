@@ -26,8 +26,6 @@ The time range component allows you to specify a time range, which can then be u
 
 When you select a preset or quick pick, the time range will be updated immediately. If the time range is used as a filter, the component data will also update immediately. When you manually enter a custom time range in the input box, the data will be updated based on the *Emit value on* setting (*Enter*, *Focus lost*, or *Value change*). When you set a custom time range using the calendar interface or the custom time range editor (prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42082-->), the data will only be updated after clicking the *Apply* button. If you have not yet clicked this button, you can revert any changes by clicking *Cancel*. Prior to DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11<!--RN 40622-->, the data is always updated immediately after the time range is changed.
 
-![Options time range component](~/user-guide/images/Time_Range2.png)<br>*Time range component in DataMiner 10.5.3*
-
 ## Configuring the component
 
 To configure the component:
