@@ -65,6 +65,19 @@ For more information regarding the above-mentioned JSON syntax and legacy syntax
 > [!NOTE]
 > Contrary to dashboards, low-code apps will not push data to the URL. In other words, the URL will not change when data is selected in a component.
 
+#### Dashboards/Low-Code Apps - Column & bar chart component: Settings now have new default values [ID 42106]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The following settings of a *Column & bar chart* component now have new default values:
+
+| Setting | Old default | New default |
+|---------|-------------|-------------|
+| Chart layout      | Relative per variable | Absolute      |
+| Chart orientation | Left to right         | Bottom to top |
+
+Existing components will not be affected.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]

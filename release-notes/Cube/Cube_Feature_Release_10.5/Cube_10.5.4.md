@@ -74,3 +74,9 @@ From now on, when services are updated, element shapes will reflect the element 
 Up to now, when the name of a service or a view was updated, shapes displaying that name would incorrectly not be updated.
 
 From now on, shapes that display the name of an object using an asterisk in the shape text and a shape data field of type *Info* set to "NAME" will automatically be updated when the name of that object changes, as will any [Name], [this service] and [this view] placeholders.
+
+#### Problem when closing an element card [ID 42063]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, an exception could be thrown when you closed an element card.
