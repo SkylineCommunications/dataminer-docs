@@ -25,8 +25,6 @@ The DataMiner installer allows you to run a DataMiner installation and perform t
    </div>
    <br>
 
-1. Make sure the Windows setting "fast startup" is not activated.
-
 1. Make sure the server is synced with an NTP server. If you intend to install multiple DataMiner Agents in a cluster, make sure all servers are synced with the same NTP server.
 
 1. Make sure that no anti-virus software will interfere with the DataMiner installer and with the DataMiner software once it is installed. See [Regarding antivirus software](xref:Regarding_antivirus_software).

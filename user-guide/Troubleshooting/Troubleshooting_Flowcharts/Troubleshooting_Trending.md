@@ -131,3 +131,6 @@ class GetDELT,TrendDataInspector,QueryDatabase,FollowCTT,ReadIssueChecks,ClientE
 class DataPresent classDecision;
 class NotFixed classSolution;
 ```
+
+> [!NOTE]
+> If the Windows setting "fast startup" is activated on the DataMiner server, trend graphs for the server will not show a gap when it is turned off. We recommend disabling this option to make sure trending is displayed correctly.
