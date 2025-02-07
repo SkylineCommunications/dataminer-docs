@@ -5,7 +5,7 @@ uid: Working_with_behavioral_anomaly_detection
 # Working with behavioral anomaly detection
 
 > [!NOTE]
-> This feature requires [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
+> This feature requires [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
 
 > [!TIP]
 > See also:

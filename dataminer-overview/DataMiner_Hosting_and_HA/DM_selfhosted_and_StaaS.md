@@ -2,13 +2,13 @@
 uid: DM_selfhosted_and_StaaS
 ---
 
-# Self-hosted DataMiner nodes with Storage as a Service (STaaS)
+# Self-managed DataMiner nodes with Storage as a Service (STaaS)
 
-If you choose to [host the DataMiner nodes yourself](#self-hosted-dataminer-nodes), you can host them on premises, in a private cloud, or in a hybrid setup, or you could also decide to run them in a public cloud. Different license models are available. You can make use of [usage-based services or perpetual-use licensing](xref:Pricing_Commercial_Models), depending on which model best suits your business models and strategy.
+If you choose to [manage the DataMiner nodes yourself](#self-managed-dataminer-nodes), you can host them on premises, in a private cloud, or in a hybrid setup, or you could also decide to run them in a public cloud. Different license models are available. You can make use of [usage-based services or perpetual-use licensing](xref:Pricing_Commercial_Models), depending on which model best suits your business models and strategy.
 
-[DataMiner Storage as a Service (STaaS)](#storage-as-a-service-staas) provides hassle-free database storage for your self-hosted DataMiner nodes. By connecting your DataMiner System to the scalable and user-friendly cloud-native storage platform, you will be able to save on infrastructure and IT maintenance costs, as storage will be fully managed for you. You will not need to estimate your storage requirements in advance, place specific VM orders, or configure complex data storage clusters with the necessary replication and backup. Instead, everything is done automatically.
+[DataMiner Storage as a Service (STaaS)](#storage-as-a-service-staas) provides hassle-free database storage for your self-managed DataMiner nodes. By connecting your DataMiner System to the scalable and user-friendly cloud-native storage platform, you will be able to save on infrastructure and IT maintenance costs, as storage will be fully managed for you. You will not need to estimate your storage requirements in advance, place specific VM orders, or configure complex data storage clusters with the necessary replication and backup. Instead, everything is done automatically.
 
-## Self-hosted DataMiner nodes
+## Self-managed DataMiner nodes
 
 To set up and maintain your DataMiner System, you can make use of the DataMiner **System Center** in DataMiner Cube. This provides an intuitive UI to manage DataMiner nodes, users, log files, and so on. System Center is also the place where the administrator can configure the DataMiner redundancy settings (i.e. high-availability or Failover nodes), and it includes an upgrade center to easily trigger a software update, regardless of the number of DataMiner nodes.
 
@@ -35,7 +35,7 @@ A default DataMiner System also comes with a set of features and capabilities th
 
 ## Storage as a Service (STaaS)
 
-With Storage as a Service, you can connect your DataMiner System to a scalable and easy-to-use storage platform, without the effort of setting up and managing your own data storage cluster. You keep your DataMiner nodes self-hosted, and you can use our redundancy/high-availability capabilities on these nodes, but we take care of the database nodes and redundancy implementation.
+With Storage as a Service, you can connect your DataMiner System to a scalable and easy-to-use storage platform, without the effort of setting up and managing your own data storage cluster. While your DataMiner nodes remain self-managed, and you can use our redundancy/high-availability capabilities on these nodes, but we take care of the database nodes and redundancy implementation.
 
 Enjoy fast, secure, and reliable storage with STaaS:
 

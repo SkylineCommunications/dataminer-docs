@@ -10,5 +10,5 @@ SRM is usually used along with the standard [Booking Manager app](xref:Booking_M
 
 > [!NOTE]
 >
-> - DataMiner SRM requires [STaaS](xref:STaaS) (recommended) or a [self-hosted DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database, as well as the necessary licenses depending on your SRM use case. For more information, contact the Skyline Sales department.
+> - DataMiner SRM requires [STaaS](xref:STaaS) (recommended) or a [self-managed DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database, as well as the necessary licenses depending on your SRM use case. For more information, contact the Skyline Sales department.
 > - DataMiner SRM log information can be found in the *SLResourceManager*, *SLServiceManager* and *SLFunctionManager* log file.

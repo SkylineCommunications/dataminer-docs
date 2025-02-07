@@ -6,14 +6,14 @@ uid: Working_with_trend_predictions
 
 > [!NOTE]
 >
-> - This feature requires [Storage as a Service](xref:STaaS) (recommended) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
+> - This feature requires [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
 > - Predictions are not available for discrete and string parameters.
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config.* However, note that the feature needs to be enabled to receive automatic notifications for predicted alarm threshold breaches by [Proactive cap detection](xref:Proactive_cap_detection).
 
 > [!TIP]
 > For a how-to video, see [Navigating Trending Graphs](https://community.dataminer.services/video/navigating-trending-graphs/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
-If the DataMiner Agent uses [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures), trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future.
+If the DataMiner Agent uses [Storage as a Service](xref:STaaS) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures), trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future.
 
 The current point in time is displayed with a vertical dashed line marked as "Now". This line is updated every 2 seconds. The trend prediction starts from the "Now" line.
 

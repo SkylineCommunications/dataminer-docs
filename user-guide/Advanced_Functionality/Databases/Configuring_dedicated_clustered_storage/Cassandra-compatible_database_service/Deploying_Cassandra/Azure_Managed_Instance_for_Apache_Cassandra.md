@@ -5,7 +5,7 @@ uid: Azure_Managed_Instance_for_Apache_Cassandra
 # Setting up an Azure Managed Instance for Apache Cassandra
 
 > [!IMPORTANT]
-> This setup is deprecated. If you want to use cloud storage, we recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, [install the Cassandra nodes on Linux machines](xref:Installing_Cassandra).
+> This setup is deprecated. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead.
 
 Using an Azure Managed Instance for Apache Cassandra as an alternative to a Cassandra cluster hosted on premises is supported from DataMiner 10.3.5 up to 10.3.11.<!-- RN 35830 -->
 

@@ -130,6 +130,6 @@ No, only outbound HTTPS traffic needs to be allowed. When a DataMiner Agent is c
 
 ### Will my data be stored in the cloud?
 
-Unless you use Storage as a Service, all data that is collected and processed by your DataMiner System remains stored in your self-hosted databases. Some configuration and analytics data is offloaded or stored in the cloud.
+Unless you use Storage as a Service, all data that is collected and processed by your DataMiner System remains stored in your self-managed databases. Some configuration and analytics data is offloaded or stored in the cloud.
 
 For an exact overview of which data is stored in the cloud, see [Cloud data storage policies](xref:Cloud_data_storage_policies).

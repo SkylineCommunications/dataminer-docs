@@ -6,7 +6,7 @@ uid: Backing_up_a_DataMiner_Agent
 
 You can back up a DataMiner Agent using [DataMiner Taskbar Utility](xref:Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility) or [DataMiner Cube](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube).
 
-If you use self-hosted storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS), please take the following information into account:
+If you use self-managed storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS), please take the following information into account:
 
 - For systems using **Cassandra**:
 

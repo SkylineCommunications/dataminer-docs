@@ -27,7 +27,7 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 ## Setting up STaaS
 
-For a self-hosted DataMiner System, follow the steps below to set up STaaS.
+For a self-managed DataMiner System, follow the steps below to set up STaaS.
 
 > [!NOTE]
 >

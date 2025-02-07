@@ -14,7 +14,7 @@ Estimated duration: 20 minutes.
 
 ## Prerequisites
 
-- DataMiner 10.3.8 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
+- DataMiner 10.3.8 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
 
 - Pattern matching is enabled (in DataMiner Cube: *System Center* > *System settings* > *analytics config*).
 

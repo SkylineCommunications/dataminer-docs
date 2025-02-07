@@ -478,7 +478,7 @@ items:
         items:
 #          - name: Lockbox service for DaaS and STaaS systems
 #            topicUid: Lockbox
-          - name: Securing self-hosted DataMiner storage
+          - name: Securing self-managed DataMiner storage
             items:
               - name: Securing the Cassandra general database
                 items:

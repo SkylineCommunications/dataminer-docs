@@ -12,11 +12,11 @@ Skyline Communications offers the following hosting possibilities, each with its
 
   ![DaaS](~/user-guide/images/DaaS.svg)
 
-- [Self-hosted DataMiner nodes with Storage as a Service](xref:DM_selfhosted_and_StaaS).
+- [Self-managed DataMiner nodes with Storage as a Service](xref:DM_selfhosted_and_StaaS).
 
   ![Hybrid](~/user-guide/images/Hybrid.svg)
 
 > [!NOTE]
-> If this is really necessary, you can also host both the DataMiner nodes and the storage nodes yourself. However, this is a complex setup that we do not recommend. See [Self-hosted DataMiner nodes and storage nodes](xref:DM_and_storage_selfhosted).
+> If this is really necessary, you can also host both the DataMiner nodes and the storage nodes yourself. However, this is a complex setup that we do not recommend. See [Self-managed DataMiner nodes and storage nodes](xref:DM_and_storage_selfhosted).
 >
-> ![Self-hosted](~/user-guide/images/Self-hosted.svg)
+> ![Self-managed](~/user-guide/images/Self-managed.svg)

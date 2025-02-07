@@ -4,14 +4,14 @@ uid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
 
 # Manually connecting a DMA to an indexing database
 
-If you choose self-hosted storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, you can connect a DataMiner Agent to an existing OpenSearch or Elasticsearch cluster.
+If you choose self-managed storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, you can connect a DataMiner Agent to an existing OpenSearch or Elasticsearch cluster.
 
 If you are using a [dedicated clustered storage](xref:Dedicated_clustered_storage) setup, from 10.3.0/10.3.3 onwards, you should do so in DataMiner Cube, as detailed under [Configuring the general database settings in Cube](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
 
 If you are using an older DataMiner version or a setup with storage per DMA, follow the steps below.
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. As a consequence, if you want to use self-hosted storage instead of the recommended [Storage as a Service](xref:STaaS), we recommend using [OpenSearch](xref:OpenSearch_database) instead.
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. As a consequence, if you want to use self-managed storage instead of the recommended [Storage as a Service](xref:STaaS), we recommend using [OpenSearch](xref:OpenSearch_database) instead.
 
 > [!CAUTION]
 > Make sure the DataMiner Agent has an available connection to each node of the OpenSearch or Elasticsearch cluster. You can for example verify this for Elasticsearch by entering `http://elasticnodeip:9200/` in your browser's address bar to access the general server information.

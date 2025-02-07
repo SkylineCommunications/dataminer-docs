@@ -4,7 +4,7 @@ uid: Cassandra_database
 
 # Cassandra Cluster
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, typically, you will need to [deploy a Cassandra Cluster setup](xref:Installing_Cassandra) (supported from DataMiner 10.1.0/10.1.2 onwards). This is the first step in configuring self-hosted dedicated clustered storage.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-managed storage, typically, you will need to [deploy a Cassandra Cluster setup](xref:Installing_Cassandra) (supported from DataMiner 10.1.0/10.1.2 onwards). This is the first step in configuring self-managed dedicated clustered storage.
 
 For information on how to **configure the settings** for your Cassandra Cluster setup in DataMiner Cube, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube). For more information on how to **monitor your database, keep your nodes repaired, and keep your software up to date**, see [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster).
 

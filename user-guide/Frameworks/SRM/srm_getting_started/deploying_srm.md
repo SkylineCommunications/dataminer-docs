@@ -7,7 +7,7 @@ uid: deploying_srm
 1. Ensure that a DataMiner version is installed that is compatible with the SRM version you want to deploy. Check the SRM release notes to see which minimum DataMiner version is required. Contact Skyline Communications to check if any additional components need to be installed in your system.
 
    > [!NOTE]
-   > The SRM framework requires [STaaS](xref:STaaS) (recommended) or a [self-hosted DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database.
+   > The SRM framework requires [STaaS](xref:STaaS) (recommended) or a [self-managed DataMiner storage setup](xref:Supported_system_data_storage_architectures) with Cassandra-compatible database and indexing database.
 
 1. Download the SRM package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 

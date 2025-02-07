@@ -4,7 +4,7 @@ uid: replication_and_consistency_configuration
 
 # Data replication and consistency configuration
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you can choose between different flavors of [Cassandra clusters](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster), from 1-node clusters or 2-node clusters to clusters with many nodes.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-managed storage, you can choose between different flavors of [Cassandra clusters](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster), from 1-node clusters or 2-node clusters to clusters with many nodes.
 
 Regardless of the number of machines in a Cassandra cluster, it is always possible that a node might go down. If this happens, it may still be possible to query your data using Cassandra's built-in data replication and consistency mechanism.
 

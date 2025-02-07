@@ -19,7 +19,7 @@ Estimated duration: 20 minutes.
 ## Prerequisites
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-- DataMiner 10.4.4 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-hosted Cassandra database with indexing](xref:Supported_system_data_storage_architectures).
+- DataMiner 10.4.4 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-managed Cassandra database with indexing](xref:Supported_system_data_storage_architectures).
 - Pattern matching is enabled (in DataMiner Cube: *System Center* > *System settings* > *analytics config*).
 
 ## Overview
