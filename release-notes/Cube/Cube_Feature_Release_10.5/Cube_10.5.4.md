@@ -80,3 +80,9 @@ From now on, shapes that display the name of an object using an asterisk in the 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 In some cases, an exception could be thrown when you closed an element card.
+
+#### DataMiner Cube desktop app: Configuration files would incorrectly be updated when the app was closed [ID 42101]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you closed the DataMiner Cube desktop app, the configuration files would incorrectly be updated.
