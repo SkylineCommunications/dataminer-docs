@@ -4,9 +4,9 @@ uid: DOM_Using_DOM_Viewer
 
 # Using the Dom Viewer
 
-In this tutorial, you will learn the purpose of the Dom Viewer by getting a guided tour through the application.
+In this guide, you will learn the purpose of the Dom Viewer by walking through the application.
 
-This tutorial is broken down in the following topics, each correspinding to a page in the app:
+This guide is broken down in the following topics, each correspinding to a page in the app:
 
 - SDM Modules: View the Standard Data Model (SDM) modules in an interactive graph.
 
@@ -19,7 +19,7 @@ This tutorial is broken down in the following topics, each correspinding to a pa
 Estimated duration: 5 minutes.
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created in DataMiner version 10.5.1.
+> The content and screenshots for this guide have been created in DataMiner version 10.5.1.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Estimated duration: 5 minutes.
 
 - Basic knowledge of DataMiner Object Models (DOM)
 
-- The package [Tutorial - Dom Viewer](https://catalog.dataminer.services/details/fea99fc7-63fc-40da-85fb-db1ca914986a) (version 1.0.7 or higher) installed. Includes  the DOM Viewer app and the DOM modules showcased in this tutorial
+- The package [Tutorial - Dom Viewer](https://catalog.dataminer.services/details/fea99fc7-63fc-40da-85fb-db1ca914986a) (version 1.0.7 or higher) installed. Includes  the DOM Viewer app and the DOM modules showcased in this guide.
 
 ## Overview
 

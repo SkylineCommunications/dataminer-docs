@@ -98,8 +98,6 @@ items:
                   topicUid: Overview_MediaOps_Resource_Studio
             - name: Supported connectors
               topicUid: Overview_MediaOps_supported_connectors
-        - name: DOM Viewer
-          topicUid: domviewer_about
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:

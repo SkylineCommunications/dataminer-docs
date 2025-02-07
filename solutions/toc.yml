@@ -311,3 +311,9 @@ items:
         topicUid: Remote_PHY_Monitoring_components
       - name: Restricting access to Remote PHY Monitoring
         topicUid: Remote_PHY_Monitoring_Access_Restriction
+  - name: Dom Viewer
+    items:
+    - name: DOM Viewer
+      topicUid: domviewer_about
+    - name: Using DOM Viewer
+      topicUid: DOM_Using_DOM_Viewer

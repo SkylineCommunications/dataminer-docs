@@ -923,8 +923,6 @@ items:
             topicUid: DOM_Remove_FieldDescriptor_Definition
           - name: Generating code with the DOM editor
             topicUid: DOM_Generating_code_with_the_DOM_editor
-          - name: Using DOM Viewer
-            topicUid: DOM_Using_DOM_Viewer
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:
