@@ -44,6 +44,17 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### Low-Code Apps: Enhanced URL data support [ID 42031]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+Up to now, low-code apps would only support using URL data to pass default values to components. For example, to select a particular default value in a dropdown box. From now on, low-code apps will also be able to consume data passed via their URL using either the JSON syntax or the legacy syntax. For example, you will now be able to use an element specified in the URL to filter a GQI query.
+
+For more information regarding the above-mentioned JSON syntax and legacy syntax, see [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL).
+
+> [!NOTE]
+> Contrary to dashboards, low-code apps will not push data to the URL. In other words, the URL will not change when data is selected in a component.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
