@@ -36,6 +36,10 @@ To enable the use of the GQI DxM in the DataMiner web apps, add the following co
 
 The WebAPI process will automatically restart when you save the file. Once this setting is applied, web applications accessed through the configured server will utilize the GQI DxM. For web applications accessed via other servers, the SLHelper process will continue to be used unless the same configuration is applied to those servers.
 
+From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 42003-->, to verify that the GQI DxM is enabled for a web app, open the user menu in the top-right corner and select *About*. If the version of the GQI DxM is displayed next to *GQI*, the web app is using the GQI DxM. If `No DxM` is displayed, the web app is still using the SLHelper process.
+
+![No DxM](~/user-guide/images/NoDxM.png)<br>*About DataMiner pop-up window in DataMiner 10.5.3*
+
 ## Architecture
 
 The GQI DxM comprises multiple processes that work together to handle GQI requests and execute these efficiently. This architecture ensures modularity, scalability, and efficient communication between the different components.
