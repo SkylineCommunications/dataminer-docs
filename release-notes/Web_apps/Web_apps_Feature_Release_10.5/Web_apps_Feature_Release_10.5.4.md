@@ -127,3 +127,9 @@ When, while configuring a *Parameter table* component, you opened the *Parameter
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When you wanted to delete an operator in the flow editor, up to now, you incorrectly had to delete it twice before it got removed from the flow.
+
+#### Dashboards/Low-Code Apps - Time range component: Changing the 'Granularity' setting could produce an invalid time range [ID 42145]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you changed the *Granularity* setting of a *Time range* component from *Date & time* to *Date* or vice versa, in some cases, the specified time range would become invalid.
