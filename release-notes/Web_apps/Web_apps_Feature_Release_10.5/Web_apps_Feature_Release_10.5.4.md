@@ -121,3 +121,9 @@ When, while configuring a component, you opened the *Components* data set on the
 When, while configuring a *Parameter table* component, you opened the *Parameter table filters*\* section on the *Data* pane and clicked the information icon on the right, the main page of [docs.dataminer.services](xref:docs_dataminer_services) would incorrectly be opened. From now on, the correct page, i.e. [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax), will be opened instead.
 
 \**The *Parameter table filters* section is only available if you add the `showAdvancedSettings=true` option to the URL of the dashboard or the low-code app.*
+
+#### Dashboards/Low-Code Apps: Problem when deleting an operator from a flow [ID 42125]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you wanted to delete an operator in the flow editor, up to now, you incorrectly had to delete it twice before it got removed from the flow.
