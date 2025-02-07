@@ -199,7 +199,7 @@ Up to now, if you wanted to have separate SLScripting processes created for ever
 </DataMiner>
 ```
 
-If you only want a single SLScripting process for all SLScripting processes that are used, then set the `scriptingProcesses` attribute to "1".
+If you only want a single SLScripting process for all SLProtocol processes that are used, then set the `scriptingProcesses` attribute to "1".
 
 ### Enhancements
 
