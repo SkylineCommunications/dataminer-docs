@@ -18,8 +18,8 @@ Data replication is set using the **replication factor**.
 
 DataMiner sets this replication factor when it creates the Cassandra keyspaces. As such, the value for the replication factor is controlled by DataMiner.
 
-- If the Cassandra cluster consists of **3 nodes or less**, the default replication factor is **1**. This means that only one copy of the data exists in the Cassandra cluster. In this case, you do not benefit from data replication.
-- If the Cassandra cluster consists of **at least 4 nodes**, the default replication factor is **3**. This means that three copies of the data exist in the Cassandra cluster. In this case, you benefit from data replication.
+- If the Cassandra cluster consists of **2 nodes or less**, the default replication factor is set to the number of nodes. Whilst 2 nodes offer data replication in this scenario, a 2 node cluster is not recommended due to the default consistency level of quorum.
+- If the Cassandra cluster consists of **at least 3 nodes**, the default replication factor is **3**. This means that three copies of the data exist in the Cassandra cluster. In this case, you benefit from data replication and redundancy against a node outage with consistency level quorum or local quorum.
 
 If a **custom replication factor** is required, you can configure this manually. However, as this involves altering the Cassandra keyspaces used for crucial DataMiner data, we recommend doing this **only in coordination with a Cassandra expert or with Skyline Communications**.
 
