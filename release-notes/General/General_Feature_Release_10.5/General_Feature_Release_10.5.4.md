@@ -66,4 +66,8 @@ Because of a number of enhancements, overall performance has increased when upda
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When an alarm template was updated, in some cases, the alarm focus manager could receive a excessive number of messages, causing SLAnalytics to leak memory.
