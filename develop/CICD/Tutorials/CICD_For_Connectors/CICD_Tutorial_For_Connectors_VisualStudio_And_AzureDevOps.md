@@ -2,7 +2,7 @@
 uid: CICD_Tutorial_For_Connectors_VisualStudio_And_AzureDevOps
 ---
 
-# Developing Connectors using Azure DevOps
+# Setting up basic CI/CD for connector deployment in AzureDevops
 
 In this tutorial, you will learn how to develop, (pre-)release, and optionally deploy Connectors with a CI/CD pipeline in Azure Devops, though this can be applied to any CI/CD technology. These processes do not necessarily follow the same quality standards that developers within Skyline Communications adhere to but can be tweaked and configured to personal preferences.
 
@@ -63,11 +63,27 @@ Expected duration: 10 minutes.
 > [!TIP]
 > For more information, refer to the [GitHubToCatalogYaml readme](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab).
 
-### Step 3: Creating a dataminer.services key
+## Step 3: Creating a dataminer.services key
 
-A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
+To securely upload and/or deploy you'll need a secret key:
 
-For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
+1. Create an [organization key](xref:Managing_DCP_keys#organization-keys) token to authenticate the register version call from the Catalog API:
+
+   1. In the [Admin app](https://admin.dataminer.services/), under *Organization* in the sidebar on the left, select the *Keys* page.
+
+   1. At the top of the page, click *New Key*.
+
+   1. Configure the key with a label of your choice and the permission *Register catalog items*.
+
+      ![Organization Key](~/user-guide/images/tutorial_catalog_registration_create_org_key.png)
+
+   1. Copy the key so you can use it later.
+
+   > [!IMPORTANT]
+   > You need to have the *Owner* role in order to access/create organization keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
+
+> [!NOTE]
+> In case using an organization key results in issues, you can try using a [system key](xref:Managing_DCP_keys#system-keys) instead.
 
 ### Step 4: Create and run a Workflow
 
@@ -75,19 +91,23 @@ For more information on how to create a dataminer.services key, refer to [Managi
     1. When Asked, Where is my code? Select *Azure Repos Git*
     1. Select the repository you just added
     1. Select *Starter pipeline*
+
 1. Select, Install and run the required dotnet tools.
     1. Go to [Azure DevOps Example](xref:CICD_Azure_DevOps_Examples)
     1. Copy the example and paste it into your new Starter pipeline
+
 1. Configure Secrets and Variables (This will be different for each CI/CD Technology)
     1. Select Variables on the top right.
     1. Select New Variable
         1. Call it DATAMINER_DEPLOY_KEY
         1. Check *Keep this value secret*
-        1. Go to admin.dataminer.services and select/create a key from a specific DataMiner Agent.
+        1. Use the key you created in [Step 3: Creating a dataminer.services key](xref:step-3-creating-a-dataminer.services-key)
     1. Click + and add another variable
         1. Call it uploadOutput
         1. Check *Let users override this value when running this pipeline*
+
 1. Click Save and Run
+
 1. You should now see your new connector on your specified specific DataMiner Agent.
 
 ### Step 5 (Optional) Validation

@@ -19,7 +19,63 @@ A dataminer.services key is scoped to the specific DMS for which it was created 
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-### GitLab workflow
+## Basic upload for non-connector items
+
+You will need *DATAMINER_TOKEN* as a secret. This will be the key for the DataMiner Organization as provided through the [DataMiner Admin app](xref:CloudAdminApp).
+
+>[!IMPORTANT]
+> Deployment to an agent from the CI/CD is currently not possible, but we're working on it!
+
+On a **Ubuntu** runner:
+
+```yml
+stages:
+  - build
+  - publish
+
+variables:
+  DATAMINER_TOKEN: ${DATAMINER_TOKEN}  # GitLab environment variable or secrets vault
+
+# Ubuntu Runner Job
+basic_upload_ubuntu:
+  stage: publish
+  tags:
+    - ubuntu  # Requires a runner with the "windows" tag
+  script:
+    - git clone https://github.com/your-repo.git
+    - cd your-repo
+    - dotnet publish `
+        -p:Version="0.0.${CI_PIPELINE_IID}-prerelease" `
+        -p:VersionComment="This is just a pre-release version." `
+        -p:CatalogPublishKeyName="${DATAMINER_TOKEN}"
+
+```
+
+On a **Windows** runner:
+
+```yml
+stages:
+  - build
+  - publish
+
+variables:
+  DATAMINER_TOKEN: ${DATAMINER_TOKEN}  # GitLab environment variable or secrets vault
+
+# Windows Runner Job
+basic_upload_windows:
+  stage: publish
+  tags:
+    - windows  # Requires a runner with the "windows" tag
+  script:
+    - git clone https://github.com/your-repo.git
+    - cd your-repo
+    - dotnet publish `
+        -p:Version="0.0.${CI_PIPELINE_IID}-prerelease" `
+        -p:VersionComment="This is just a pre-release version." `
+        -p:CatalogPublishKeyName="${DATAMINER_TOKEN}"
+```
+
+### GitLab workflow For Connector
 
 ```yml
 stages:
@@ -45,9 +101,9 @@ deploy:
     - dotnet restore
     - dotnet build
     
-    - dataminer-package-create dmapp $CI_PROJECT_DIR --name $ARTIFACT_NAME --output $CI_PROJECT_DIR --type automation
+    - dataminer-package-create dmprotocol $CI_PROJECT_DIR --name $ARTIFACT_NAME --output $CI_PROJECT_DIR
     
-    - export UPLOAD_OUTPUT=$(dataminer-catalog-upload --path-to-artifact "$CI_PROJECT_DIR/$ARTIFACT_NAME.dmapp" --dm-catalog-token $CI_JOB_TOKEN)
+    - export UPLOAD_OUTPUT=$(dataminer-catalog-upload --path-to-artifact "$CI_PROJECT_DIR/$ARTIFACT_NAME.dmprotocol" --dm-catalog-token $CI_JOB_TOKEN)
     
     - echo "Upload output: $UPLOAD_OUTPUT"
     

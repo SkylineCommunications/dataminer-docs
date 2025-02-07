@@ -19,7 +19,90 @@ A dataminer.services key is scoped to the specific DMS for which it was created 
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-### Jenkins pipeline
+## Basic upload for non-connector items
+
+You will need *DATAMINER_TOKEN* as a secret. This will be the key for the DataMiner Organization as provided through the [DataMiner Admin app](xref:CloudAdminApp).
+
+>[!IMPORTANT]
+> Deployment to an agent from the CI/CD is currently not possible, but we're working on it!
+
+On a **Ubuntu** runner:
+
+```groovy
+pipeline
+{
+    agent any
+    options
+    {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        disableConcurrentBuilds()
+        timeout(time: 60, unit: 'MINUTES')
+    }
+
+    environment {
+        DATAMINER_TOKEN = credentials('DATAMINER_TOKEN')  // Use Jenkins credentials
+    }
+
+    stages {
+        stage('Register to Catalog') {
+            when {
+                expression {
+                    env.GIT_BRANCH == 'main' || env.GIT_BRANCH == 'master'
+                }
+            }
+            steps {
+                sh '''
+                    dotnet publish \
+                        -p:Version="0.0.${BUILD_NUMBER}-prerelease" \
+                        -p:VersionComment="This is just a pre-release version." \
+                        -p:CatalogPublishKeyName="${DATAMINER_TOKEN}"
+                '''
+            }
+        }
+    }
+}
+
+```
+
+On a **Windows** runner:
+
+```groovy
+pipeline
+{
+    agent any
+    options
+    {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        disableConcurrentBuilds()
+        timeout(time: 60, unit: 'MINUTES')
+    }
+
+    environment {
+        DATAMINER_TOKEN = credentials('DATAMINER_TOKEN')  // Use Jenkins credentials
+    }
+
+    stages {
+        stage('Register to Catalog') {
+            when {
+                expression {
+                    env.GIT_BRANCH == 'main' || env.GIT_BRANCH == 'master'
+                }
+            }
+            steps {
+                bat '''
+                    dotnet publish `
+                        -p:Version="0.0.%BUILD_NUMBER%-prerelease" `
+                        -p:VersionComment="This is just a pre-release version." `
+                        -p:CatalogPublishKeyName="%DATAMINER_TOKEN%"
+                '''
+            }
+        }
+    }
+}
+
+```
+
+## Basic upload for Connector
 
 In the example below, the Jenkins server is on a fixed Windows machine, and local caching is used to avoid re-downloading the tools:
 
@@ -37,12 +120,6 @@ pipeline
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         disableConcurrentBuilds()
         timeout(time: 120, unit: 'MINUTES')
-    }
-
-
-    environment
-    {
-        dotnettoolsfolder = 'C:\\dotnet-tools\\'
     }
 
     stages
@@ -75,7 +152,7 @@ pipeline
         {
             steps
             {
-                bat "dotnet dataminer-package-create dmapp \"${WORKSPACE}\" --name HelloFromJenkins --output \"${WORKSPACE}\" --type automation"
+                bat "dotnet dataminer-package-create dmprotocol \"${WORKSPACE}\" --name HelloFromJenkins --output \"${WORKSPACE}\""
             }
         }
 
@@ -87,7 +164,7 @@ pipeline
               {
                 script
                 {
-                    uploadOutput = bat(returnStdout: true, script: "@dotnet dataminer-catalog-upload --path-to-artifact \"${WORKSPACE}\\HelloFromJenkins.dmapp\"")
+                    uploadOutput = bat(returnStdout: true, script: "@dotnet dataminer-catalog-upload --path-to-artifact \"${WORKSPACE}\\HelloFromJenkins.dmprotocol\"")
                     uploadOutput = uploadOutput.trim()
                 }
               }

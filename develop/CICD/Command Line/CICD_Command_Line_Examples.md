@@ -19,6 +19,55 @@ A dataminer.services key is scoped to the specific DMS for which it was created 
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
+## Basic upload for non-connector items
+
+You need a Visual Studio Solution with projects inside that are using the Skyline.DataMiner.Sdk.
+You will need *DATAMINER_TOKEN* as a secret. This will be the key for the DataMiner Organization as provided through the [DataMiner Admin app](xref:CloudAdminApp).
+
+>[!IMPORTANT]
+> Deployment to an agent from the CI/CD is currently not possible, but we're working on it!
+
+### Windows PowerShell
+
+```powershell
+$env:DATAMINER_TOKEN = "MyOrgKey"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="$DATAMINER_TOKEN"
+```
+
+### Ubuntu terminal
+
+Prerequisites on Ubuntu/Linux: you need dotnet-sdk-6.0.
+
+```bash
+# Get Ubuntu version
+declare repo_version=$(if command -v lsb_release &> /dev/null; then lsb_release -r -s; else grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"'; fi)
+
+# Download Microsoft signing key and repository
+wget https://packages.microsoft.com/config/ubuntu/$repo_version/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+
+# Install Microsoft signing key and repository
+sudo dpkg -i packages-microsoft-prod.deb
+
+# Clean up
+rm packages-microsoft-prod.deb
+
+# Update packages
+sudo apt update
+
+sudo apt install dotnet-sdk-6.0
+```
+
+You will need to restart your session or log out and back in before the next part.
+
+Below you can find the actual code for creation and deployment, assuming you have a Visual Studio solution with projects using Skyline.DataMiner.Sdk.
+
+```bash
+export DATAMINER_TOKEN="MyOrgKey"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="$DATAMINER_TOKEN"
+```
+
+## Example for Connector
+
 ### Windows PowerShell
 
 ```powershell

@@ -2,7 +2,7 @@
 uid: CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub
 ---
 
-# Developing Connectors using GitHub
+# Setting up complete quality control in CI/CD for connector deployment
 
 This tutorial is divided into two parts.
 

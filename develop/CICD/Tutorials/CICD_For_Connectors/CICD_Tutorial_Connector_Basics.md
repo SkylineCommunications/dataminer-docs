@@ -2,7 +2,7 @@
 uid: CICD_Tutorial_Connector
 ---
 
-# Setting up basic CI/CD for connector deployment
+# Setting up basic CI/CD for connector deployment in GitHub
 
 In this tutorial, you will learn how to create a custom pipeline from scratch. This pipeline will establish basic quality control and automate the deployment of a DataMiner connector to a staging system through a CI/CD pipeline. This setup can function with or without the staging system being connected to dataminer.services. The tutorial uses a DataMiner Agent hosted on an internet-accessible virtual machine.
 

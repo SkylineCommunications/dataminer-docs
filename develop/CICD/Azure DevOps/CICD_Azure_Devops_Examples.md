@@ -19,6 +19,74 @@ A dataminer.services key is scoped to the specific DMS for which it was created 
 
 For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
+## Basic upload for non-connector items
+
+You will need *DATAMINER_TOKEN* as a secret. This will be the key for the DataMiner Organization as provided through the [DataMiner Admin app](xref:CloudAdminApp).
+
+>[!IMPORTANT]
+> Deployment to an agent from the CI/CD is currently not possible, but we're working on it!
+
+On a **Ubuntu** runner:
+
+```yml
+trigger:
+  branches:
+    include:
+      - master
+      - main
+
+variables:
+  DATAMINER_TOKEN: $(DATAMINER_TOKEN)  # Secret from Azure DevOps Library or Pipeline variables
+
+jobs:
+ - job: UbuntuBuildAndUpload
+    displayName: 'Ubuntu: Build and Register to Catalog'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - checkout: self
+
+      - script: |
+          dotnet publish \
+            -p:Version="0.0.$(Build.BuildId)-prerelease" \
+            -p:VersionComment="This is just a pre-release version." \
+            -p:CatalogPublishKeyName="$(DATAMINER_TOKEN)"
+        displayName: 'Publish and Register to Catalog'
+        env:
+          DATAMINER_TOKEN: $(DATAMINER_TOKEN)
+
+```
+
+On a **Windows** runner:
+
+```yml
+trigger:
+  branches:
+    include:
+      - master
+      - main
+
+variables:
+  DATAMINER_TOKEN: $(DATAMINER_TOKEN)  # Secret from Azure DevOps Library or Pipeline variables
+
+jobs:
+  - job: WindowsBuildAndUpload
+    displayName: 'Windows: Build and Register to Catalog'
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+      - checkout: self
+
+      - script: |
+          dotnet publish `
+            -p:Version="0.0.$(Build.BuildId)-prerelease" `
+            -p:VersionComment="This is just a pre-release version." `
+            -p:CatalogPublishKeyName="$(DATAMINER_TOKEN)"
+        displayName: 'Publish and Register to Catalog'
+        env:
+          DATAMINER_TOKEN: $(DATAMINER_TOKEN)
+```
+
 ### Azure DevOps pipeline for Connectors
 
 You need a secret variable DATAMINER_DEPLOY_KEY.

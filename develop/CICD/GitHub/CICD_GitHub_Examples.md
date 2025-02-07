@@ -16,6 +16,73 @@ If you are interested in reusing Skyline's pre-made pipelines, which include qua
 > [!TIP]
 > For information on creating a new pipeline in GitHub, see [GitHub Tutorial](https://docs.github.com/en/actions/quickstart).
 
+## Basic upload for non-connector items
+
+You will need *DATAMINER_TOKEN* as a secret. This will be the key for the DataMiner Organization as provided through the [DataMiner Admin app](xref:CloudAdminApp). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+
+>[!IMPORTANT]
+> Deployment to an agent from the CI/CD is currently not possible, but we're working on it!
+
+On a **Ubuntu** runner:
+
+```yml
+name: BasicUploadUbuntu
+
+on:
+  push:
+    branches: [ "master","main" ]
+
+jobs:
+
+  deployment:
+    runs-on: ubuntu-latest 
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Register To Catalog
+      env:
+        DATAMINER_TOKEN: ${{ secrets.DATAMINER_TOKEN }}
+      run: |
+        dotnet publish `
+          -p:Version="0.0.${{ github.run_number }}-prerelease" `
+          -p:VersionComment="This is just a pre-release version." `
+          -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+```
+
+On a **Windows** runner:
+
+```yml
+name: BasicUploadWindows
+
+on:
+  push:
+    branches: [ "master","main" ]
+
+jobs:
+
+  deployment:
+    runs-on: ubuntu-latest 
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Register To Catalog
+      env:
+        DATAMINER_TOKEN: ${{ secrets.DATAMINER_TOKEN }}
+      run: |
+        dotnet publish `
+          -p:Version="0.0.${{ github.run_number }}-prerelease" `
+          -p:VersionComment="This is just a pre-release version." `
+          -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+```
+
 ## Basic deployment for connectors
 
 ### GitHub workflow
@@ -51,21 +118,21 @@ jobs:
     - name: Install DataMiner Deploy
       run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.DataMinerDeploy
 
-    - name: Create DMAPP
-      run: dataminer-package-create dmapp ${{ github.workspace }} --name HelloFromGithubUbuntu --output ${{ github.workspace }} --type automation
+    - name: Create DMPROTOCOL
+      run: dataminer-package-create dmprotocol ${{ github.workspace }} --name HelloFromGithubUbuntu --output ${{ github.workspace }}
 
-    - name: Upload DMAPP
-      id: UploadDMAPP
+    - name: Upload DMPROTOCOL
+      id: UploadDMPROTOCOL
       run: |
-        echo "uploadOutput=$(dataminer-catalog-upload --path-to-artifact "${{ github.workspace }}/HelloFromGithubUbuntu.dmapp" --dm-catalog-token ${{ secrets.DATAMINER_DEPLOY_KEY }})" >> $GITHUB_OUTPUT
+        echo "uploadOutput=$(dataminer-catalog-upload --path-to-artifact "${{ github.workspace }}/HelloFromGithubUbuntu.dmprotocol" --dm-catalog-token ${{ secrets.DATAMINER_DEPLOY_KEY }})" >> $GITHUB_OUTPUT
       shell: bash
       
     - name: Check Output
       run: |
-        echo "${{ steps.UploadDMAPP.outputs.uploadOutput }}"
+        echo "${{ steps.UploadDMPROTOCOL.outputs.uploadOutput }}"
         
     - name: Deploy DMAPP
-      run: dataminer-package-deploy from-catalog --artifact-id "${{ steps.UploadDMAPP.outputs.uploadOutput }}" --dm-catalog-token "${{ secrets.DATAMINER_DEPLOY_KEY }}"
+      run: dataminer-package-deploy from-catalog --artifact-id "${{ steps.UploadDMPROTOCOL.outputs.uploadOutput }}" --dm-catalog-token "${{ secrets.DATAMINER_DEPLOY_KEY }}"
       shell: bash
 ```
 
@@ -98,16 +165,20 @@ jobs:
     - name: Install DataMiner Deploy
       run: dotnet tool install -g Skyline.DataMiner.CICD.Tools.DataMinerDeploy
 
-    - name: Create DMAPP
-      run: dataminer-package-create dmapp ${{ github.workspace }} --name HelloFromGithubWindows --output ${{ github.workspace }} --type automation
+    - name: Create DMPROTOCOL
+      run: dataminer-package-create dmprotocol ${{ github.workspace }} --name HelloFromGithubUbuntu --output ${{ github.workspace }}
 
-    - name: Upload DMAPP
-      id: UploadDMAPP
+    - name: Upload DMPROTOCOL
+      id: UploadDMPROTOCOL
       run: |
-        echo "uploadOutput=$(dataminer-catalog-upload --path-to-artifact "${{ github.workspace }}\HelloFromGithubWindows.dmapp" --dm-catalog-token ${{ secrets.DATAMINER_DEPLOY_KEY }})" >> $GITHUB_OUTPUT
+        echo "uploadOutput=$(dataminer-catalog-upload --path-to-artifact "${{ github.workspace }}/HelloFromGithubUbuntu.dmprotocol" --dm-catalog-token ${{ secrets.DATAMINER_DEPLOY_KEY }})" >> $GITHUB_OUTPUT
       shell: bash
+      
+    - name: Check Output
+      run: |
+        echo "${{ steps.UploadDMPROTOCOL.outputs.uploadOutput }}"
         
     - name: Deploy DMAPP
-      run: dataminer-package-deploy from-catalog --artifact-id "${{ steps.UploadDMAPP.outputs.uploadOutput }}" --dm-catalog-token "${{ secrets.DATAMINER_DEPLOY_KEY }}"
+      run: dataminer-package-deploy from-catalog --artifact-id "${{ steps.UploadDMPROTOCOL.outputs.uploadOutput }}" --dm-catalog-token "${{ secrets.DATAMINER_DEPLOY_KEY }}"
       shell: bash
 ```

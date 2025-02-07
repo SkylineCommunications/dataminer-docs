@@ -2,11 +2,11 @@
 uid: CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces
 ---
 
-# Developing a User-Defined API Using GitHub Codespaces
+# Registering a new version of a User-Defined API to the Catalog Using GitHub Codespaces
 
 In this tutorial, you will learn how to develop, (pre-)release, and upload a User Defined API to the DataMiner Catalog with a CI/CD pipeline using GitHub Workspaces. You can however utilize this tutorial for **any artifact type** except for connectors (e.g. Automation Script, Automation Script Library, Package Project, ...).
 
-Expected duration: 5 minutes
+Expected duration: 10 minutes
 
 ## Prerequisites
 
@@ -17,7 +17,7 @@ Expected duration: 5 minutes
 - [Step 1: Create a GitHub Repository](#step-1-create-a-github-repository)
 - [Step 2: Create a GitHub Codespaces Environment](#step-2-create-a-github-codespaces-environment)
 - [Step 3: Install DataMiner Templates](#step-3-install-dataminer-templates)
-- [Step 4: Add Project Content](#step-4-add-project-content)
+- [Step 4: Add Project Content And Solution File](#step-4-add-project-content-and-solution-file)
 - [Step 5: Check GitHub Actions](#step-5-check-github-actions)
 - [Step 6: Create and add secret](#step-6-create-and-add-secret)
 - [Step 7: Check The Results](#step-7-check-the-results)
@@ -69,14 +69,16 @@ Expected duration: 5 minutes
       dotnet new install skyline.dataminer.visualstudiotemplates
     ```
 
-### Step 4: Add Project Content
+### Step 4: Add Project Content and Solution File
 
 1. Inside your Terminal (Control + Shift + C)
 
     1. Add the DataMiner User Defined API Project Template inside a new project folder
 
     ```cmd
-      dotnet new dataminer-user-defined-api-project -o MyUserDefinedApiFromGithub -auth JanS -I Basic
+      dotnet new dataminer-user-defined-api-project -o MyUserDefinedApiFromGithub -auth JanS -cdp true -I Basic
+      dotnet new sln
+      dotnet sln add MyUserDefinedApiFromGithub
     ```
 
 1. Click on the Source Control button on the left-hand side
