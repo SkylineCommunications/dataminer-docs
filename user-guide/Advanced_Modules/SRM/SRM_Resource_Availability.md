@@ -23,7 +23,7 @@ An availability window consists of three properties:
 | AvailableUntil             	| DateTimeOffset             	| Defines the end of the availability window. The default value is 'DateTimeOffset.MaxValue', which means there is no end time. Must be greater than the 'AvailableFrom' property.    	|
 | RollingWindowConfiguration 	| RollingWindowConfiguration 	| Specifies a rolling window of availability relative to the current time. For example, setting the rolling window to 30 days means the resource is available for booking until "now + 30 days."                                                                                                                                                                               	|
 
-If both a fixed end time (`AvailableUntil`) and a rolling window are set, the earlier end time is used to determine the end of the availability. For instance: if `AvailableUntil` is 15 days from now, but the rolling window is 30 days, the resource will only be available for the next 15 days.
+If both a fixed end time (`AvailableUntil`) and a rolling window are set, the earlier end time is used to determine the end of the availability. For instance: if `AvailableUntil` is 15 days from now, but the rolling window is 30 days, the resource will only be available for the next 15 days. If a fixed start time (`AvailableFrom`) and a rolling window are set, the resource needs to be available according to both conditions before it can be included in a booking. For instance: if the fixed start time is 30 days from now, and the rolling window is 10 days, the resource is not bookable yet, because the rolling window ends before the fixed start time. 
 
 ## Code examples
 
