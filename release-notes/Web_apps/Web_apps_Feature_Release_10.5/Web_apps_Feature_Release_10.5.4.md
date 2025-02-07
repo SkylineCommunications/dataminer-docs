@@ -78,6 +78,12 @@ The following settings of a *Column & bar chart* component now have new default 
 
 Existing components will not be affected.
 
+#### Dashboards/Low-Code Apps: Reordering the columns in a Select operator by dragging and dropping [ID 42122]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In a *Select* operator of a GQI query, you can now reorder the columns by dragging and dropping them.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
