@@ -4,7 +4,7 @@ uid: DM_selfhosted_and_StaaS
 
 # Self-managed DataMiner nodes with Storage as a Service (STaaS)
 
-If you choose to [manage the DataMiner nodes yourself](#self-hosted-dataminer-nodes), you can host them on premises, in a private cloud, or in a hybrid setup, or you could also decide to run them in a public cloud. Different license models are available. You can make use of [usage-based services or perpetual-use licensing](xref:Pricing_Commercial_Models), depending on which model best suits your business models and strategy.
+If you choose to [manage the DataMiner nodes yourself](#self-managed-dataminer-nodes), you can host them on premises, in a private cloud, or in a hybrid setup, or you could also decide to run them in a public cloud. Different license models are available. You can make use of [usage-based services or perpetual-use licensing](xref:Pricing_Commercial_Models), depending on which model best suits your business models and strategy.
 
 [DataMiner Storage as a Service (STaaS)](#storage-as-a-service-staas) provides hassle-free database storage for your self-managed DataMiner nodes. By connecting your DataMiner System to the scalable and user-friendly cloud-native storage platform, you will be able to save on infrastructure and IT maintenance costs, as storage will be fully managed for you. You will not need to estimate your storage requirements in advance, place specific VM orders, or configure complex data storage clusters with the necessary replication and backup. Instead, everything is done automatically.
 

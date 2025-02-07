@@ -19,4 +19,4 @@ Skyline Communications offers the following hosting possibilities, each with its
 > [!NOTE]
 > If this is really necessary, you can also host both the DataMiner nodes and the storage nodes yourself. However, this is a complex setup that we do not recommend. See [Self-managed DataMiner nodes and storage nodes](xref:DM_and_storage_selfhosted).
 >
-> ![Self-managed](~/user-guide/images/Self-hosted.svg)
+> ![Self-managed](~/user-guide/images/Self-managed.svg)
