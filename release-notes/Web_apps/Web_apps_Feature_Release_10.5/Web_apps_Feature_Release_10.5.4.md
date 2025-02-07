@@ -89,3 +89,9 @@ When the following actions were executed, up to now, they would incorrectly not 
 - *Set viewport* action on a *Line & area chart* component with parameter data
 - *Set value* action on a *Time range* component
 - *Set value* action on a *Numeric input* component
+
+#### Dashboards/Low-Code Apps - Table component: Problem when loading data from a partial table [ID 42107]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, when new data from a partial table was being loaded into a *Table* component, the loading would get stuck.
