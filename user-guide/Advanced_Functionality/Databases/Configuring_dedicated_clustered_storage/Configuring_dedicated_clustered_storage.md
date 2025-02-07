@@ -7,7 +7,7 @@ uid: Configuring_dedicated_clustered_storage
 > [!IMPORTANT]
 > This architecture is supported but not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS).
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, typically, you will need to configure a dedicated clustered storage setup.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-managed storage, typically, you will need to configure a dedicated clustered storage setup.
 
 For this setup, both a Cassandra Cluster and indexing database (also known as Search Cluster) are required. This setup can be either on premises or in the cloud, or a mix of both.
 

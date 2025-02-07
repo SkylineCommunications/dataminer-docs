@@ -5,7 +5,7 @@ keywords: local database
 
 # Migrating the general database to a DMS Cassandra cluster
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead have a self-hosted storage setup with **SQL databases or Cassandra databases per DMA** and want to switch to a Cassandra cluster setup, you can use the **Cassandra Cluster Migrator** for this. In DataMiner versions prior to 10.2.0/10.2.2, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.3.0 [CU11]/10.4.2 or higher and use the Cassandra Cluster Migrator instead.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead have a self-managed storage setup with **SQL databases or Cassandra databases per DMA** and want to switch to a Cassandra cluster setup, you can use the **Cassandra Cluster Migrator** for this. In DataMiner versions prior to 10.2.0/10.2.2, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.3.0 [CU11]/10.4.2 or higher and use the Cassandra Cluster Migrator instead.
 
 The migration can be done while the DMAs are active; however, a **DataMiner restart** will be required after all data has been migrated.
 

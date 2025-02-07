@@ -1093,7 +1093,7 @@ Support for Amazon Keyspaces Service is now officially end-of-life.
 
 When you run the DataMiner installer or install a DataMiner upgrade package, the *VerifyNoAmazonKeyspaces* prerequisite will check whether the DataMiner Agent is configured to use a database of type *Amazon Keyspaces*. If so, the upgrade process will not be allowed to continue.
 
-We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-managed storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
 
 For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
 

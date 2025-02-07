@@ -5,7 +5,7 @@ uid: Installing_Elasticsearch_via_DataMiner
 # Installing Elasticsearch on a DMA via DataMiner
 
 > [!IMPORTANT]
-> From DataMiner 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0]/10.4.2 onwards<!-- RN 38145 -->, it is no longer possible to install Elasticsearch in the manner described below. We recommend switching to [Storage as a Service (STaaS)](xref:STaaS) or, if you want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database) instead. DataMiner only supports Elasticsearch up to version 6.8, which is no longer supported by Elastic.
+> From DataMiner 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0]/10.4.2 onwards<!-- RN 38145 -->, it is no longer possible to install Elasticsearch in the manner described below. We recommend switching to [Storage as a Service (STaaS)](xref:STaaS) or, if you want to continue using self-managed storage even though this is not recommended, using [OpenSearch](xref:OpenSearch_database) instead. DataMiner only supports Elasticsearch up to version 6.8, which is no longer supported by Elastic.
 
 If you have a setup with [storage per DMA](xref:Configuring_storage_per_DMA) instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, prior to DataMiner 10.2.0 [CU22]/10.3.0 [CU11]/10.4.0 [CU0]/10.4.2, you can install Elasticsearch via DataMiner as detailed below in order to get access to more DataMiner features.
 

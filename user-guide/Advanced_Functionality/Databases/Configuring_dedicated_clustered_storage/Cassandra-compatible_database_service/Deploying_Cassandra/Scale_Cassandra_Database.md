@@ -4,7 +4,7 @@ uid: Scale_Cassandra_Database
 
 # Adding and removing nodes in a Cassandra cluster database
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you need to take care of the scaling of the database yourself. With a self-hosted Cassandra cluster database, this involves adding and removing nodes when necessary.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-managed storage, you need to take care of the scaling of the database yourself. With a self-managed Cassandra cluster database, this involves adding and removing nodes when necessary.
 
 ## Adding nodes
 

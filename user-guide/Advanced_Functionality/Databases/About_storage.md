@@ -10,7 +10,7 @@ The recommended system data storage architecture is **Storage as a Service** [(S
 
 <br/>
 
-| | self-hosted | Skyline-hosted (SaaS) | all features available | scalable | easy installation | automatic backups | effortless maintenance |
+| | self-managed | Skyline-hosted (SaaS) | all features available | scalable | easy installation | automatic backups | effortless maintenance |
 |--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | **Storage as a Service (STaaS)** | | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | **Dedicated clustered storage** | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | | |
