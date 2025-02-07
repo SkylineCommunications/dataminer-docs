@@ -1,7 +1,7 @@
 ---
 uid: Dedicated_clustered_storage
 keywords: Cassandra Cluster
-description: Exceptionally, DataMiner can be used with self-managed dedicated clustered storage using Cassandra and OpenSearch.
+description: Though this is not recommended, DataMiner supports self-managed dedicated clustered storage using Cassandra and OpenSearch.
 ---
 
 # Dedicated clustered storage
