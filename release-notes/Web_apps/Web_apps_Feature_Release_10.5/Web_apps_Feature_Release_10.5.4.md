@@ -101,3 +101,17 @@ In some cases, when new data from a partial table was being loaded into a *Table
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 In some cases, scroll bars would appear on a *Grid* component, even though there was sufficient screen real estate to display all items.
+
+#### Dashboards/Low-Code Apps: Letter descenders would incorrectly be cut off in Components data set [ID 42118]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When, while configuring a component, you opened the *Components* data set on the *Data* pane, all portions of letters that extended below the font's baseline (i.e. the descenders of letters like e.g. g, j, q, p, and y) would incorrectly be cut off.
+
+#### Dashboards/Low-Code Apps - Parameter table component: Clicking the info icon of the 'Parameter table filters' section would not open the correct help page [ID 42123]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When, while configuring a *Parameter table* component, you opened the *Parameter table filters*\* section on the *Data* pane and clicked the information icon on the right, the main page of [docs.dataminer.services](xref:docs_dataminer_services) would incorrectly be opened. From now on, the correct page, i.e. [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax), will be opened instead.
+
+\**The *Parameter table filters* section is only available if you add the `showAdvancedSettings=true` option to the URL of the dashboard or the low-code app.*
