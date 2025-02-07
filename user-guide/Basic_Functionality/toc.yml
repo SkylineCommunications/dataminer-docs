@@ -237,6 +237,8 @@ items:
               topicUid: Customizing_alarm_grouping_rules
           - name: Monitoring of trend patterns
             topicUid: Monitoring_of_trend_patterns
+          - name: Relational anomaly detection
+            topicUid: Relational_anomaly_detection
           - name: Providing user feedback
             topicUid: Providing_user_feedback
           - name: Tutorials

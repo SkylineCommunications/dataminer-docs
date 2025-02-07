@@ -22,3 +22,5 @@ The following advanced analytics features **generate suggestion events** that in
 - [Proactive cap detection](xref:Proactive_cap_detection).
 
 - [Pattern matching](xref:Monitoring_of_trend_patterns).
+
+- [Relational anomaly detection](xref:Relational_anomaly_detection) (from DataMiner 10.5.3/10.6.0 onwards).
