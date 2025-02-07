@@ -4,7 +4,7 @@ uid: Resource_availability
 
 # Resource availability
 
-The **Resource availability** feature, available from DataMiner version 10.5.3 onwards, allows you to define a specific period during which a resource is available for booking. This can be useful in several scenarios. Some examples:
+The **Resource availability** feature, available from DataMiner version 10.5.3/10.6.0 <!-- RN 41894 --> onwards, allows you to define a specific period during which a resource is available for booking. This can be useful in several scenarios. Some examples:
 
 - A resource will be commissioned at a specific date, and as such can only be used in bookings after that date. An availability window can be defined on the resource that makes it possible
  to add the resource to the system, but makes sure it can only be included in bookings after the commission date.
