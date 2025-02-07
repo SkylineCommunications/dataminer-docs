@@ -222,3 +222,5 @@ Within the dashboard URL, the following data objects can be specified:
   For example, to add a query row with two columns to the URL, of which the first column, *ID*, contains string values, and the second column, *Value*, contains numbers:
 
   `v:1\u001FIDColumn\u000EID\u000Estring\u001FValueColumn\u000EValue\u000Enumber\u001Evalue1\u000EValue 1\u001F5\u000EFive\u001ERowKey`
+
+- *booleans*: Supported from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41845-->. Used to specify whether a boolean value is set to "true" or "false" when the dashboard is loaded.
