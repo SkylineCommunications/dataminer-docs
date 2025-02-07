@@ -124,7 +124,7 @@ If necessary, users can force RAD to retrain its internal model by sending a `Re
 
 From now on, DataMiner will by default start a separate SLScripting process for every SLProtocol process.
 
-Up to now, if you wanted to have separate SLScripting processes created for every SLProtocol being used, you had to explicitly configure this in `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
+Up to now, if you wanted to have a separate SLScripting process created for every SLProtocol process being used, you had to explicitly configure this in the `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
 
 ```xml
 <DataMiner>
