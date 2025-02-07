@@ -95,3 +95,9 @@ When the following actions were executed, up to now, they would incorrectly not 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 In some cases, when new data from a partial table was being loaded into a *Table* component, the loading would get stuck.
+
+#### Dashboards/Low-Code Apps - Grid component: Scroll bars would appear even though all items could be displayed [ID 42108]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, scroll bars would appear on a *Grid* component, even though there was sufficient screen real estate to display all items.

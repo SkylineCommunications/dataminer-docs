@@ -75,6 +75,12 @@ Up to now, when the name of a service or a view was updated, shapes displaying t
 
 From now on, shapes that display the name of an object using an asterisk in the shape text and a shape data field of type *Info* set to "NAME" will automatically be updated when the name of that object changes, as will any [Name], [this service] and [this view] placeholders.
 
+#### Spectrum analysis: Problem when trying to open the trace recording of a history alarm [ID 42062]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you right-clicked a history alarm in the Alarm Console and selected *Show alarm trace recording*, in some cases, the trend graph of the parameter in question would incorrectly be opened instead of the trace recording.
+
 #### Problem when closing an element card [ID 42063]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
