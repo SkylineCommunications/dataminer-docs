@@ -24,7 +24,7 @@ The time range component allows you to specify a time range, which can then be u
 
   - Prior to DataMiner 10.4.0 [CU12]/10.5.3, click the ![Clock](~/user-guide/images/Clock_Icon.png) icon and specify the start and end time manually.
 
-When you select a preset or quick pick, the time range will be updated immediately. If the time range is used as a filter, the component data will also update immediately. When you manually enter a custom time range in the input box, the data will be updated based on the *Emit value on* setting (*Enter*, *Focus lost*, or *Value change*). When you set a custom time range using the calendar interface or the custom time range editor (prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42082-->), the data will only be updated after clicking the *Apply* button. If you have not yet clicked this button, you can revert any changes by clicking *Cancel*. Prior to DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11<!--RN 40622-->, the data is always updated immediately after the time range is changed.
+When you select a preset or quick pick, the time range will be updated immediately. If the time range is used as a filter, the component data will also update immediately. When you manually enter a custom time range in the input box, the data will be updated based on the *Emit value on* setting (*Enter*, *Focus lost*, or *Value change*). When you set a custom time range using the calendar interface or the custom time range editor (prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42082-->), the data will only be updated after you click the *Apply* button. If you have not yet clicked this button, you can revert any changes by clicking *Cancel*. Prior to DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11<!--RN 40622-->, the data is always updated immediately after the time range is changed.
 
 ## Configuring the component
 
@@ -44,7 +44,7 @@ To configure the component:
 
    - *Granularity*: Available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 42082-->. Determines the level of detail required when setting a time range:
 
-     - *Date & time*: Both dates and times must be specified for the start and end times, e.g. `05/02/2025 12:05 to 06/02/2025 13:15`. The start and end times cannot be identical. This is the default setting.
+     - *Date & time* (default): Both dates and times must be specified for the start and end times, e.g. `05/02/2025 12:05 to 06/02/2025 13:15`. The start and end times cannot be identical.
 
      - *Date*: Only the dates must be specified for the start and end times, e.g. `05/02/2025 to 06/02/2025`. If the same date  is entered for both the start and end time, the time range will cover the full 24 hours (from midnight to midnight).
 
