@@ -84,6 +84,9 @@ To have separate SLProtocol processes created for every protocol being used, do 
 
 ## Configuring a separate SLScripting process for every protocol used
 
+> [!IMPORTANT]
+> From DataMiner 10.5.3/10.6.0 onwards<!--RN 41713-->, DataMiner will by default start a separate SLScripting process for every protocol used. If you only want a single SLScripting process for all protocols that are used, set the *scriptingProcesses* attribute to "1" in the *DataMiner.xml* file.
+
 If you suspect that a particular protocol is causing a problem in the SLScripting process, then you can have separate SLScripting processes created for every protocol being used. This will then allow you to pinpoint the protocol that is causing the problem.
 
 > [!WARNING]
