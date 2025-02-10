@@ -49,12 +49,14 @@ To run a prerequisites check using SLNetClientTest tool:
 
 > [!NOTE]
 > Obsolete Engine methods are only included in the prerequisites check from DataMiner 10.5.3 onwards<!--RN 42073-->. If you are using DataMiner 10.5.1 or 10.5.2, these obsolete methods may still be present even if the prerequisite check does not report any issues.
-> The following Engine methods are obsolete and should not be used:
+> The following Engine methods are obsolete and should not be used. Instead, use the corresponding new methods:
 >
-> - GetAlarmProperty
-> - SetAlarmProperty
-> - SetAlarmProperties
-> - AcknowledgeAlarm
+> | Obsolete method | New method |
+> |--|--|
+> | GetAlarmProperty (int, int, string) | GetAlarmProperty (AlarmTreeID, string) |
+> | SetAlarmProperty (int, int, string, string) | SetAlarmProperty (AlarmTreeID, string, string) |
+> | SetAlarmProperties (int, int, string[], string[]) | SetAlarmProperties (AlarmTreeID, string[], string[]) |
+> | AcknowledgeAlarm (int, int, string) | AcknowledgeAlarm (AlarmTreeID, string) |
 
 ## Enabling Swarming
 
