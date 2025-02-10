@@ -82,7 +82,7 @@ By linking a *Trigger* component to a *Query filter* component, it is now possib
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-When, on the root page of a DataMiner Agent (i.e. `https://myDMA/root/tools`), you click the user icon and then select *Tools*, a *Tools* page will open.
+When, on the root page of a DataMiner Agent (i.e. `https://myDMA/root/`), you click the user icon and then select *Tools*, a *Tools* page will open.
 
 Up to now, this page would still contain links to the XBAP version of DataMiner Cube and to the legacy *Reports & Dashboards* app. As both are now deprecated, the links to both those apps as well as the *Clean DataMiner Cube XBAP Cache* link have now been removed.
 
