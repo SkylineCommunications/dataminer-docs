@@ -53,10 +53,10 @@ To run a prerequisites check using SLNetClientTest tool:
 >
 > | Obsolete method | New method |
 > |--|--|
-> | GetAlarmProperty (int, int, string) | GetAlarmProperty (AlarmTreeID, string) |
-> | SetAlarmProperty (int, int, string, string) | SetAlarmProperty (AlarmTreeID, string, string) |
-> | SetAlarmProperties (int, int, string[], string[]) | SetAlarmProperties (AlarmTreeID, string[], string[]) |
-> | AcknowledgeAlarm (int, int, string) | AcknowledgeAlarm (AlarmTreeID, string) |
+> | GetAlarmProperty(int, int, string) | GetAlarmProperty(AlarmID, string) |
+> | SetAlarmProperty(int, int, string, string) | SetAlarmProperty(AlarmTreeID, string, string) |
+> | SetAlarmProperties(int, int, string[], string[]) | SetAlarmProperties(AlarmTreeID, string[], string[]) |
+> | AcknowledgeAlarm(int, int, string) | AcknowledgeAlarm(AlarmTreeID, string) |
 
 ## Enabling Swarming
 
