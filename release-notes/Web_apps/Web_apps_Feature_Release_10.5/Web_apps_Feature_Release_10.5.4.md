@@ -136,6 +136,12 @@ When, while configuring a *Parameter table* component, you opened the *Parameter
 
 When you wanted to delete an operator in the flow editor, up to now, you incorrectly had to delete it twice before it got removed from the flow.
 
+#### Low-Code Apps: Variables in a flow would not correctly push the latest value through the flow [ID 42133]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, variables merged with components inside a flow would not correctly push the latest value through the flow.
+
 #### Dashboards/Low-Code Apps - Time range component: Changing the 'Granularity' setting could produce an invalid time range [ID 42145]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
