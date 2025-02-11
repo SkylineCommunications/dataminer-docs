@@ -54,6 +54,14 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### Low-Code Apps - Interactive Automation scripts: Read-only and/or disabled legacy UI components will be disabled when using URL argument '?useNewIASInputComponents=true' [ID 42009]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you add the following argument to the URL of a low-code app, all UI components that have not yet been redesigned will be disabled when they are set to read-only and/or disabled:
+
+`?useNewIASInputComponents=true`
+
 #### Low-Code Apps: Enhanced URL data support [ID 42031]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->

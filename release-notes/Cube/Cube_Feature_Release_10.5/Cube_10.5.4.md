@@ -22,7 +22,7 @@ uid: Cube_Feature_Release_10.5.4
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-At start-up, the DataMiner Cube desktop app will now show a splash screen when the URL does not include any arguments except `/Hostname` and `/Display`.
+At start-up, the DataMiner Cube desktop app will now show a splash screen when the URL does not include any arguments except possibly `/Hostname` and `/Display`.
 
 #### Elements can now be configured to run in isolation mode [ID 41758]
 
