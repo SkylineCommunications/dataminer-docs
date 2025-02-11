@@ -20,7 +20,7 @@ uid: General_Main_Release_10.2.0_new_features_1
 
 ### DMS core functionality
 
-#### SLAnalytics - Automatic incident tracking: Enhanced configuration of property-based incident tracking \[ID_28083\]
+#### SLAnalytics - Automatic incident tracking: Enhanced configuration of property-based incident tracking \[ID 28083\]
 
 In the *C:\\Skyline DataMiner\\Analytics\\configuration.xml* file, it is now possible to indicate which of the following properties will be used to group alarms by:
 
@@ -33,7 +33,7 @@ In the *C:\\Skyline DataMiner\\Analytics\\configuration.xml* file, it is now pos
 
 Note that, from now on, alarms will only be grouped on location or view if the proportion of elements with an alarm at that location or in that view exceeds a certain threshold (by default 75% for location and 25% for views). Elements in a view will be counted recursively.
 
-#### DataMiner Object Model \[ID_28096\]\[ID_28392\]\[ID_28460\]\[ID_28635\]\[ID_28703\]\[ID_28709\] \[ID_28739\] \[ID_30302\]
+#### DataMiner Object Model \[ID 28096\]\[ID 28392\]\[ID 28460\]\[ID 28635\]\[ID 28703\]\[ID 28709\] \[ID 28739\] \[ID 30302\]
 
 The DataMiner Object Model (DOM) is a collection of generic objects and a generic DomManager that can be used to perform a series of operations.
 
@@ -168,7 +168,7 @@ domHelper.DomInstances.Attachments.Delete(domInstanceId, "filename");
 > - Manipulating DomInstance attachments requires the same user permissions as normal DomInstance management operations: Read permission to view and download attachments and Edit permission to add and delete attachments.
 > - All DomInstance attachments are synchronized throughout the DataMiner System. To include them in a backup, select the “All documents located on this DMA” backup option.
 
-#### Amazon Elasticsearch Service now supported \[ID_28104\]
+#### Amazon Elasticsearch Service now supported \[ID 28104\]
 
 DataMiner now supports Amazon Elasticsearch Service.
 
@@ -182,7 +182,7 @@ See the example below, showing how this can be configured in the *DB.xml* file.
 </DataBase>
 ```
 
-#### Video thumbnails: Authentication header can now be specified in an 'auth=' option \[ID_28116\]
+#### Video thumbnails: Authentication header can now be specified in an 'auth=' option \[ID 28116\]
 
 In a video thumbnail URL, you can now specify an authorization header in an “auth=” option when requesting a thumbnail image from a video server using type “Generic Images”.
 
@@ -194,7 +194,7 @@ This option has to be used when the video server expects an authentication token
 > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 > - It is now also possible to request thumbnails from video servers that only accept TLS 1.2.
 
-#### Failover: PowerShell scripts can now be triggered when a Failover Agent claims or releases a virtual IP address \[ID_28236\]
+#### Failover: PowerShell scripts can now be triggered when a Failover Agent claims or releases a virtual IP address \[ID 28236\]
 
 When a Failover Agent claims or releases a virtual IP address, the following PowerShell scripts will now be triggered (if they exist):
 
@@ -206,7 +206,7 @@ When a Failover Agent claims or releases a virtual IP address, the following Pow
 > - The VIPAcquired script will also be triggered when the online Agent starts, but the VIPReleased script will not be triggered when the offline Agent starts.
 > - The content of the Failover scripts can be read and modified using the FailoverScriptManagerHelper.
 
-#### Elasticsearch: Multi-cluster offload \[ID_28295\]\[ID_28384\]\[ID_28473\]
+#### Elasticsearch: Multi-cluster offload \[ID 28295\]\[ID 28384\]\[ID 28473\]
 
 It is now possible to have data offloaded to multiple Elasticsearch clusters, i.e. a main cluster and a number of replicated clusters.
 
@@ -225,7 +225,7 @@ At DataMiner startup, when the *DBConfiguration.xml* file exists and an Elastics
 > - The cluster with the lowest “priorityOrder” value is considered the main cluster. All other clusters are considered the replicated clusters.
 > - The *DBConfiguration.xml* file is not synchronized among the DMAs in a DMS.
 
-#### Message throttling configuration in MaintenanceSettings.xml \[ID_28335\] \[ID_32426\]
+#### Message throttling configuration in MaintenanceSettings.xml \[ID 28335\] \[ID 32426\]
 
 It is now possible to fine-tune message throttling, i.e. a mechanism that avoids an excessive number of parameter update messages getting sent to a client at the same time, using the following settings in *MaintenanceSettings.xml*:
 
@@ -251,7 +251,7 @@ Example:
 > [!NOTE]
 > This throttling mechanism is not applied to parameter changes originating from SLSpectrum, as spectrum traces are intended to mimic the actual front-panel display of a spectrum analyzer.
 
-#### All alarms will now be published on the NATS bus \[ID_28441\]
+#### All alarms will now be published on the NATS bus \[ID 28441\]
 
 On DataMiner Agents that contain an SLCloud.xml configuration file and are able to connect to a NATS instance, all new real-time alarms will now be published on the NATS bus.
 
@@ -266,11 +266,11 @@ Example: alarm.162.951.102.AMP33_SLC
 > [!NOTE]
 > Currently, the alarm only contains the IDs of the views containing the parent object of the alarm (e.g. element, service, etc.). It does not yet contain the IDs of the views containing all the parents of that parent object.
 
-#### Failover: Connecting to the online Agent using a DNS record with 2 IP addresses \[ID_28634\]
+#### Failover: Connecting to the online Agent using a DNS record with 2 IP addresses \[ID 28634\]
 
 It is now possible to connect to the online Agent in a Failover setup when that setup only has a single DNS record containing 2 IP addresses (i.e. one for the online agent and one for the offline agent).
 
-#### Deletion history of services and service templates \[ID_28664\]
+#### Deletion history of services and service templates \[ID 28664\]
 
 From now on, each time a service or a service template is deleted, a service history record will be written to the database. Each record will contain the following information:
 
@@ -293,7 +293,7 @@ var historyRecords = historyHelper.ServiceDeletionHistory.Read(recordsPastDay);
 > - Service history records are stored in Elasticsearch. This means that an Elasticsearch database has to be available for this feature to work.
 > - If you want the service history records to be included in a DataMiner backup, select the *Include service history data in backup* option. In case of a full backup, this option will be selected by default.
 
-#### Improved average trending \[ID_28684\]
+#### Improved average trending \[ID 28684\]
 
 The following improvements have been implemented to average trending:
 
@@ -400,7 +400,7 @@ Let’s start from the example of a protocol with the following exception values
 
   Note that exception values are always interpreted as discrete values.
 
-#### SLAnalytics - Automatic incident tracking: Grouping on generic alarm, element, service and view properties \[ID_28820\]
+#### SLAnalytics - Automatic incident tracking: Grouping on generic alarm, element, service and view properties \[ID 28820\]
 
 Automatic incident tracking attempts to group alarms that belong to the same incident. To do so, by default, it takes into account the following alarm properties:
 
@@ -471,7 +471,7 @@ To add a service property, add the following \<item> tag inside the \<value> tag
 </item>
 ```
 
-#### LogHelper API: New FlushToDatabaseAfterUpsert option \[ID_28837\]
+#### LogHelper API: New FlushToDatabaseAfterUpsert option \[ID 28837\]
 
 The LogHelper API now has a FlushToDatabaseAfterUpsert option.
 
@@ -481,7 +481,7 @@ The LogHelper API now has a FlushToDatabaseAfterUpsert option.
 > [!NOTE]
 > If you set this option to false, there are no guarantees that all log entries will get stored in the database, especially in case of e.g. connection issues or exceptions.
 
-#### Masked alarms will no longer be automatically unmasked when cleared \[ID_29007\]\[ID_29138\]
+#### Masked alarms will no longer be automatically unmasked when cleared \[ID 29007\]\[ID 29138\]
 
 Up to now, when a masked alarm was cleared, it would automatically be unmasked. From now on, when a masked alarm is cleared, it will stay masked as long as the element associated with the alarm is masked.
 
@@ -490,14 +490,14 @@ In DataMiner Cube, the mask status (“Masked” or “Not masked”) will now b
 > [!NOTE]
 > This change will cause a small increase in latency when retrieving alarms from the database.
 
-#### Configuration of credentials for Elasticsearch backup location \[ID_29024\]
+#### Configuration of credentials for Elasticsearch backup location \[ID 29024\]
 
 It is now possible to configure specific credentials for the Elasticsearch backup location. To do so, send a *SetElasticBackupPath* message with the credentials using the SLNetClientTest tool. This will create a Windows scheduled task "elasticbackupwithcredentials", which is triggered on startup, and which makes it possible to access the backup path location.
 
 > [!WARNING]
 > Always be extremely careful when using SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Failover without virtual IP address [ID_29189] [ID_29911]
+#### Failover without virtual IP address [ID 29189] [ID 29911]
 
 In a Failover system, which consists of two redundant DataMiner Agents, the offline Agent will stand by, waiting to take over as soon as the online Agent goes offline. Up to now, a Failover system always made use of a so-called "virtual IP address", an IP address that is shared by the two Agents and that the online Agent assigns to itself. However, in certain situations, it is very hard or even impossible to share a virtual IP address. In those situations, it is now possible to set up a Failover system using a shared hostname instead.
 
@@ -532,14 +532,14 @@ When you set up a Failover system using a shared hostname, in IIS, a URL Rewrite
 > [!NOTE]
 > In order for this URL Rewrite rule to be created and enabled/disable automatically, the IIS extension "Application Request Routing" needs to be installed manually on both Failover agents. See <https://www.iis.net/downloads/microsoft/application-request-routing>.
 
-#### External alarms can now also have general alarm properties \[ID_29231\]
+#### External alarms can now also have general alarm properties \[ID 29231\]
 
 External alarms (e.g. anomaly detection alarms, etc.) can now also have general alarm properties such as “System Name” or “System Type”.
 
 > [!NOTE]
 > DataMiner automatically evaluates and populates the “System Name” and “System Type” alarm properties. If you want external alarms to overwrite the values in those properties, make sure new property values are passed along with those external alarms.
 
-#### Mobile Gateway: SMSEagle device can now send Unicode messages \[ID_29369\]
+#### Mobile Gateway: SMSEagle device can now send Unicode messages \[ID 29369\]
 
 When using an SMSEagle device to send text messages, it is now possible to configure that device to use Unicode characters.
 
@@ -550,7 +550,7 @@ To do so, proceed as follows:
 
 Default setting: unicode=”false”
 
-#### New alarm table field on MySQL and SQL Server databases: ExtraStatusId \[ID_29374\]
+#### New alarm table field on MySQL and SQL Server databases: ExtraStatusId \[ID 29374\]
 
 On MySQL and Microsoft SQL Server databases, the alarm table now has an extra field of type BIGINT: ExtraStatusId.
 
@@ -559,7 +559,7 @@ On MySQL and Microsoft SQL Server databases, the alarm table now has an extra fi
 > - This change will cause a small increase in latency when retrieving alarms from the database.
 > - From now on, using a filter with an AlarmFilterItemExtraStatus in the GetAlarmDetailsFromDbMessage from within an Automation script will not work correctly in conjunction with a MySQL or Microsoft SQL Server database.
 
-#### SimulationHelper API now allows loading, enabling and disabling element simulations at run-time \[ID_29517\]
+#### SimulationHelper API now allows loading, enabling and disabling element simulations at run-time \[ID 29517\]
 
 Up to now, loading new element simulations always required a DataMiner restart. Now, the SimulationHelper API will allow you to load, enable and disable element simulations at run-time from within protocol QActions or Automation scripts.
 
@@ -594,7 +594,7 @@ var simulationHelper = new SimulationHelper(Engine.SLNet.SendMessages);
 simulationHelper.LoadSimulations();
 ```
 
-#### Alarm storm mode for clearable alarms \[ID_29637\]
+#### Alarm storm mode for clearable alarms \[ID 29637\]
 
 A protection has been added to avoid reduced performance of the system when an alarm storm happens that causes a large number of clearable alarms at the same time. By default, when there are more than 1000 clearable alarm trees on a DMA, the newly generated clearable alarms will be closed instead of clearable. Once the number of clearable alarm trees has dropped to less than 100, this protection mode is lifted and newly generated alarms will be clearable again.
 
@@ -602,7 +602,7 @@ A protection has been added to avoid reduced performance of the system when an a
 > In *DataMiner.xml*, you can customize the above-mentioned default values for the minimum and maximum threshold with the min and max attributes of the DataMiner.ClearableAlarmStormProtection tag.
 > If you change these settings, you must do so on every DMA in a cluster, as they are not automatically synchronized.
 
-#### EPM: Aliases for topology cells, chains and search chains can now be specified in EPMConfig.xml \[ID_29766\]\[ID_29841\]
+#### EPM: Aliases for topology cells, chains and search chains can now be specified in EPMConfig.xml \[ID 29766\]\[ID 29841\]
 
 In an EPM environment, it is now possible to override the names of topology cells, chains and search chains specified in a protocol with aliases specified in a separate file.
 

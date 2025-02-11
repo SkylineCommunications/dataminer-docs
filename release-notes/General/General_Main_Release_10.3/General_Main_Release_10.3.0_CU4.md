@@ -8,11 +8,14 @@ uid: General_Main_Release_10.3.0_CU4
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.3.0 CU4](xref:Cube_Main_Release_10.3.0_CU4).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.3.0 CU4](xref:Web_apps_Main_Release_10.3.0_CU4).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 
-#### Cassandra: gc_grace_seconds will now be set to 1 day by default and to 4 hours for records with TTL set [ID_34763]
+#### Cassandra: gc_grace_seconds will now be set to 1 day by default and to 4 hours for records with TTL set [ID 34763]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -20,19 +23,19 @@ In Cassandra databases, the table property `gc_grace_seconds` will now be set to
 
 For tables containing data with TTL set, this property will be set to 4 hours.
 
-#### Cassandra Cluster Migrator tool now supports TLS [ID_34852]
+#### Cassandra Cluster Migrator tool now supports TLS [ID 34852]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
 The Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) is now able to establish TLS connections towards the databases.
 
-#### Enhanced performance when retrieving resources [ID_36129]
+#### Enhanced performance when retrieving resources [ID 36129]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
 Because of a number of enhancements, overall performance has increased when retrieving resources.
 
-#### Failover: Obsolete CheckVIPs thread has been removed [ID_36253]
+#### Failover: Obsolete CheckVIPs thread has been removed [ID 36253]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -40,7 +43,7 @@ In Failover setups using virtual IP addresses, once every minute the CheckVIPs t
 
 This obsolete thread has now been removed.
 
-#### Service & Resource Management: Enhanced logic to determine which function DVEs to deactivate [ID_36299]
+#### Service & Resource Management: Enhanced logic to determine which function DVEs to deactivate [ID 36299]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -48,7 +51,7 @@ Up to now, when the function manager needed to deactivate function DVEs because 
 
 From now on, function DVEs will no longer be deactivated when they are part of a booking that is either confirmed or ongoing with a start time (minus hysteresis) in the past and an end time in the future.
 
-#### DataMiner tasks in Windows Task Scheduler will now return 0 instead of error code 1 [ID_36393]
+#### DataMiner tasks in Windows Task Scheduler will now return 0 instead of error code 1 [ID 36393]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -58,7 +61,7 @@ The following scheduled tasks will now by default return 0 instead of error code
 - Skyline DataMiner Database Optimization (OptimizeDB.js)
 - Skyline DataMiner LDAP Resync (ReloadLDAP.js)
 
-#### SSH settings saved in parameters are now passed to SLPort together instead of separately [ID_36404]
+#### SSH settings saved in parameters are now passed to SLPort together instead of separately [ID 36404]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -78,7 +81,7 @@ Up to now, when an element with an SSH connection was started, these values woul
 
 ### Fixes
 
-#### Service & Resource Management: Contributing resources of which the contributing booking had ended would not be marked available [ID_35757]
+#### Service & Resource Management: Contributing resources of which the contributing booking had ended would not be marked available [ID 35757]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -86,7 +89,7 @@ When updating an ongoing main booking that made use of a contributing resource o
 
 Also, a *GetEligibleResources* call would not return the contributing resource.
 
-#### Business Intelligence: Secondary index of certain SLA logger tables would not be created correctly [ID_36245]
+#### Business Intelligence: Secondary index of certain SLA logger tables would not be created correctly [ID 36245]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -98,7 +101,7 @@ SLDataGateway.Types.DBGatewayException: CassandraConnection ExecuteQuery - excep
 
 When SLAs were stored in a Cassandra cluster, none of their rows would get cleaned up.
 
-#### Service & Resource Management: Problem when updating a booking while actions were being performed [ID_36268]
+#### Service & Resource Management: Problem when updating a booking while actions were being performed [ID 36268]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -106,7 +109,7 @@ When a booking was updated while actions were being performed, in some cases, it
 
 For example, when a booking was rescheduled while it was being started, it could end up in an *Ongoing* status with a start time somewhere in the future.
 
-#### Client connection would be dropped because an SLNet request handled by SLHelper took too long to process [ID_36296]
+#### Client connection would be dropped because an SLNet request handled by SLHelper took too long to process [ID 36296]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -114,7 +117,7 @@ When it took SLHelper more than 15 minutes to process an SLNet request received 
 
 From now on, NATS exceptions returned to a client following an SLHelper timeout will always be serialized.
 
-#### Protocols: QAction syntax errors did not refer to the correct lines [ID_36301]
+#### Protocols: QAction syntax errors did not refer to the correct lines [ID 36301]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -122,7 +125,7 @@ Up to now, before a QAction was compiled, three compiler directives were added t
 
 From now on, the compiler directives will no longer be added to the source code. Instead, they will be passed to the compiler directly.
 
-#### SLNetClientTest: Problem when trying to set up a connection using gRPC [ID_36322]
+#### SLNetClientTest: Problem when trying to set up a connection using gRPC [ID 36322]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -131,13 +134,13 @@ When the *SLNetClientTest* tool tried to set up a connection using gRPC, a `Miss
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Exported DVE child protocols would no longer be set as production after re-uploading a main DVE protocol version used as production version [ID_36334]
+#### Exported DVE child protocols would no longer be set as production after re-uploading a main DVE protocol version used as production version [ID 36334]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When you re-uploaded a main DVE protocol with the same version as the one that was being used as production version, the exported child protocols would incorrectly no longer be set as production.
 
-#### SNMP tables using the 'subtable' option no longer received any data when a single-value filter was applied [ID_36370]
+#### SNMP tables using the 'subtable' option no longer received any data when a single-value filter was applied [ID 36370]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
@@ -151,7 +154,7 @@ Also, it is now possible to use a "\*" wildcard in a filter. See the following e
 - "1.*" will accept values like "1.1" and "1.2.3", but will reject "1" and "2.1.2".
 - "*.1" will accept values like "2.1" and "2.1.2", but will reject "1.1" and "1.2.1".
 
-#### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID_36400]
+#### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID 36400]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 

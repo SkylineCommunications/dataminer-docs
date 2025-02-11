@@ -4,18 +4,17 @@ uid: DashboardTrendStatistics
 
 # Trend statistics
 
-This component displays the minimum, average and maximum value of one or more trended parameters. Available from DataMiner 9.6.13 onwards.
+This component displays the minimum, average and maximum value of one or more trended parameters.
+
+![Trend statistics](~/user-guide/images/Trend_Statistics.png)<br>*Trend statistics component in DataMiner 10.4.5*
 
 To configure the component:
 
-1. Add a (multiple) parameter data feed.
-
-   > [!NOTE]
-   > Column parameters from tables that use advanced naming are supported from DataMiner 10.0.9 onwards.
+1. Add (multiple) parameter data sources.
 
 1. In case a table parameter has been added, optionally add an index filter.
 
-1. Optionally, customize the following component options in the *Component* > *Settings* tab:
+1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
@@ -23,7 +22,7 @@ To configure the component:
 
    - *Group by*: In case the component displays trend statistics for multiple parameters, this box allows you to specify how the statistics should be grouped.
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 

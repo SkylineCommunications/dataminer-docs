@@ -40,14 +40,14 @@ The structure of an entry in the result array is as follows:
 
 - In case you want to retrieve the alarm info of a single standalone parameter, you can specify an int instead of an uint[] for the second parameter. For example:
 
-```csharp
-int parameterId = 1000;
+  ```csharp
+  int parameterId = 1000;
 
-object[] result = (object[]) protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, parameterId);
-```
+  object[] result = (object[]) protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, parameterId);
+  ```
 
-•In case you want to retrieve the alarm info of all monitored standalone parameters, you can specify a null reference for the second argument. For example:
+- In case you want to retrieve the alarm info of all monitored standalone parameters, you can specify a null reference for the second argument. For example:
 
-```csharp
-object[] result = (object[]) protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, null);
-```
+  ```csharp
+  object[] result = (object[]) protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, null);
+  ```

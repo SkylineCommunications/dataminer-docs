@@ -33,28 +33,32 @@ The icons of sample applications are not marked with a DataMiner icon.
 These are the main solutions that are currently available:
 
 - [dataminer.MediaOps](xref:Overview_dataminer_MediaOps)
+- [DOM Viewer](xref:domviewer_about)
 
-## Common data model
+## Standard Data Model
 
 ***The backbone model for your business and operation.***
 
-The DataMiner Solutions leverage shared metadata, known as the DataMiner Common Data Model (CDM), which facilitates interoperability across multiple solutions. For instance, solutions involving scheduled jobs or planned maintenance schedules utilize common data sets defining resources. Consequently, the CDM encompasses DataMiner Object Model (DOM) definitions for various entities, such as jobs, maintenance schedules, and resources, along with the relationships between them. For example, a trouble ticketing DOM object can reference the resources object model, reflecting the attachment of tickets to specific resources.
+The DataMiner Solutions leverage shared metadata, known as the DataMiner Standard Data Model (SDM), which facilitates interoperability across multiple solutions. For instance, solutions involving scheduled jobs or planned maintenance schedules utilize common data sets defining resources. Consequently, the SDM encompasses DataMiner Object Model (DOM) definitions for various entities, such as jobs, maintenance schedules, and resources, along with the relationships between them. For example, a trouble ticketing DOM object can reference the resources object model, reflecting the attachment of tickets to specific resources.
 
-The CDM serves as the **central repository for managing and organizing your business and operational metadata** in the DataMiner digital twin. It provides a unified structure for capturing various aspects of your organization, including resources, personnel, transponder slot details, jobs, workflows, rate cards, media signals, assets, and more. Designed with flexibility and scalability in mind, the CDM ensures that your data management efforts remain streamlined and future-proof.
+The SDM serves as the **central repository for managing and organizing your business and operational metadata** in the DataMiner digital twin. It provides a unified structure for capturing various aspects of your organization, including resources, personnel, transponder slot details, jobs, workflows, rate cards, media signals, assets, and more. Designed with flexibility and scalability in mind, the SDM ensures that your data management efforts remain streamlined and future-proof.
 
 Key features:
 
-- **Comprehensive data capture**: The CDM captures a wide range of business and operational metadata, covering essential components such as resources, people, transponders, jobs, workflows, rate cards, services, trouble tickets, assets, and more.
+- **Comprehensive data capture**: The SDM captures a wide range of business and operational metadata, covering essential components such as resources, people, transponders, jobs, workflows, rate cards, services, trouble tickets, assets, and more.
 
-- **Single unified model**: With only one Common Data Model in existence, your organization benefits from a standardized approach to data management that continues to evolve and grow over time.
+- **Single unified model**: With only one Standard Data Model in existence, your organization benefits from a standardized approach to data management that continues to evolve and grow over time.
 
-- **Based on DataMiner Object Models (DOM) technology**: Leveraging DataMiner Object Model technology, the CDM combines data with states to provide a comprehensive understanding of your organization's dynamics.
+- **Based on DataMiner Object Models (DOM) technology**: Leveraging DataMiner Object Model technology, the SDM combines data with states to provide a comprehensive understanding of your organization's dynamics.
 
-- **Relationship descriptions**: The CDM describes relationships between various DataMiner Object Models, unifying all data into a single model.
+- **Relationship descriptions**: The SDM describes relationships between various DataMiner Object Models, unifying all data into a single model.
 
-- **Backwards compatibility**: Data sets (instances) within the Common Data Model are designed to be backwards compatible, ensuring smooth transitions and minimal disruptions during updates or migrations.
+- **Backwards compatibility**: Data sets (instances) within the Standard Data Model are designed to be backwards compatible, ensuring smooth transitions and minimal disruptions during updates or migrations.
 
-- **Extendable and customizable**: Users can extend the Common Data Model by linking custom DataMiner Object Models into the CDM, tailoring the framework to their specific organizational needs and requirements
+- **Extendable and customizable**: Users can extend the Standard Data Model by linking custom DataMiner Object Models into the SDM, tailoring the framework to their specific organizational needs and requirements
+
+> [!TIP]
+> For an overview of the complete SDM, see [Standard Data Model](xref:SDM).
 
 ### High-level overview
 

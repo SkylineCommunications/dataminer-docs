@@ -14,7 +14,7 @@ One column of table 2 has to contain references (keys) to information stored in 
 <ColumnOption idx="9" pid="2010" type="custom" value="" options=";foreignKey=1000"/>
 ```
 
-Since DataMiner version 8, it is possible to implement recursive linking. The table will have a column with a foreign key to itself. This can be required for specific aggregate actions in EPM (formerly known as CPE) environments. For example, there is a list of amplifiers in a table but all amplifiers are connected to each other and a count needs to be done for the number of amplifiers connected from a certain starting point.
+It is possible to implement recursive linking, in which case the table will have a column with a foreign key to itself. This can be required for specific aggregate actions in EPM environments, for example in case there is a list of amplifiers in a table, but all amplifiers are connected to each other, and a count needs to be done for the number of amplifiers connected from a certain starting point.
 
 ```xml
 <Param id="300" trending="false">
@@ -33,4 +33,4 @@ Please keep the following guidelines in mind for foreign keys:
 
 - Do not add multiple foreign keys on one column. A column needs to be created for each link. Also, do not put a foreign key on the index of a table, or use foreign keys in a table that contains a column of type "index", because the foreign key will not work then.
 - A foreign key must not have leading or trailing whitespace.
-- Semicolons (“;”), question marks (“?”) and asterisks (“*”) must be avoided in foreign keys as these characters have a special meaning in the dynamic table filter syntax and could therefore cause table filter queries to be interpreted incorrectly. (Refer to [Dynamic Table Filter Syntax](xref:Dynamic_table_filter_syntax).)
+- Semicolons (`;`), question marks (`?`) and asterisks (`*`) must be avoided in foreign keys as these characters have a special meaning in the dynamic table filter syntax and could therefore cause table filter queries to be interpreted incorrectly. (Refer to [Dynamic Table Filter Syntax](xref:Dynamic_table_filter_syntax).)

@@ -4,7 +4,7 @@ uid: Generating_the_connectivity_chain_for_an_SRM_service_instance
 
 # Generating the connectivity chain for an SRM service instance
 
-From DataMiner 9.5.3 onwards, it is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview.
+It is possible to have the connectivity chain of a service instance (from the Service & Resource Management module) drawn automatically in Visual Overview.
 
 To have a service instance chain drawn automatically, define the following shapes in Visio:
 
@@ -16,8 +16,8 @@ To have a service instance chain drawn automatically, define the following shape
 
   | Shape data field | Description |
   |--|--|
-  | ServiceInstance | Set this shape data field to either of the following values:<br> -  The GUID of the service instance, or<br> -  A reference to a DataMiner service. This reference can be configured in the same way as any other reference to a service, i.e. by ID, by name (optionally using wildcard characters), or using placeholders such as \[this service\]. |
-  | Options | Optional. Available from DataMiner 10.0.0/10.0.2 onwards.<br> To avoid gaps in the visualization of the service, add this shape data field and set it to the following value: *CollapseEmptyRowsAndColumns=True* |
+  | ServiceInstance | Set this shape data field to either of the following values:<br> - The GUID of the service instance, or<br> - A reference to a DataMiner service. This reference can be configured in the same way as any other reference to a service, i.e. by ID, by name (optionally using wildcard characters), or using placeholders such as \[this service\]. |
+  | Options | Optional. To avoid gaps in the visualization of the service, add this shape data field and set it to the following value: *CollapseEmptyRowsAndColumns=True* |
 
 - Placeholder shapes, representing the different possible elements in the service chain. These are child shapes within the service instance parent shape. These child shapes will be converted into element shapes and placed in the correct position according to the service definition.
 
@@ -46,13 +46,13 @@ To have a service instance chain drawn automatically, define the following shape
 
 ## Displaying connection property shapes for a service connectivity chain
 
-From DataMiner 9.5.12 onwards, you can have a connection property displayed on top of every connection of the service definition that contains that property.
+You can have a connection property displayed on top of every connection of the service definition that contains that property.
 
 To do so:
 
 1. Add a shape to the drawing, to be used as the template shape.
 
-1. Add a shape data field of type **Options** with the value “*ServiceDefinitionConnectionProperty:*”, followed by the name of the property.
+1. Add a shape data field of type **Options** with the value `ServiceDefinitionConnectionProperty:`, followed by the name of the property.
 
    | Shape data field | Value |
    |--|--|

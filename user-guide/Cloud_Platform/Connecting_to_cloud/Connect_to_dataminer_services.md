@@ -1,5 +1,7 @@
 ---
 uid: Connect_to_dataminer_services
+description: With an account with sufficient permissions, in Cube, go to System Center > Cloud, and click Connect. Then enter your organization, DMS name, and URL.
+keywords: cloud connection, connect to the cloud, connecting to the cloud
 ---
 
 # Connecting to dataminer.services
@@ -18,8 +20,6 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
 1. Verify that your DataMiner System meets all [requirements](xref:Connect_to_cloud_requirements).
 
 1. Download the latest DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/dataminer-cloud-pack/) and install it on **one or more DMAs** in the cluster.
-
-   If you are on the Feature Release track, .NET 6 is included in DataMiner from version 10.3.3 onwards, so select the package without .NET 6. If you are on the Main Release track, .NET 6 is included from version 10.3.0 [CU3] onwards, so for earlier versions, you will need to select the package with .NET 6<!--RN 35363/37137-->.
 
    > [!NOTE]
    >

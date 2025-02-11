@@ -1,5 +1,6 @@
 ---
 uid: Part3AdvancedFunctionalities
+description: Discover everything you need to know as a DataMiner administrator, from the basic setup of your system to the most complex configurations.
 ---
 
 # Advanced DataMiner functionality for administrators
@@ -21,7 +22,7 @@ uid: Part3AdvancedFunctionalities
     <a href="/user-guide/Advanced_Functionality/Failover/failover.html" title="Failover" target="_self"><img src="~/user-guide/images/Failover.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Advanced_Functionality/Databases/Databases_about.html" title="Databases" target="_self"><img src="~/user-guide/images/Databases.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Functionality/Databases/About_storage.html" title="Storage" target="_self"><img src="~/user-guide/images/Storage.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Advanced_Functionality/Security/About_security.html" title="Security" target="_self"><img src="~/user-guide/images/Security.svg" style="width:100%"></a>

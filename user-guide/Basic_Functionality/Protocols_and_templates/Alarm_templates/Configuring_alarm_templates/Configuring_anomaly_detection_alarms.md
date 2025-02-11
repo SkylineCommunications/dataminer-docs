@@ -2,20 +2,22 @@
 uid: Configuring_anomaly_detection_alarms
 ---
 
-# Configuring anomaly detection alarms for specific parameters
+# Configuring Augmented Operations alarm settings
 
-From DataMiner 10.0.3 onwards, you can enable alarm monitoring on specific types of anomalies for parameters in an alarm template. If you enable this, an alarm is generated whenever an anomaly of the relevant type is detected for those parameters.
+In an alarm template, you can select to have alarms generated based on Augmented Operations features. You can enable alarm monitoring on specific types of behavioral anomalies for specific parameters, so that an alarm is generated whenever an anomaly of the relevant type is detected for those parameters, and you can configure alarms that should be triggered based on proactive cap detection.
 
 > [!NOTE]
-> Suggestion events are cleared two hours after their creation time or their last update time. You can view them by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
+> These settings are not available for [general parameters](xref:General_parameters)<!--RN 40086-->.
 
 ## [From DataMiner 10.3.12/10.4.0 onwards](#tab/tabid-1)
 
-To configure anomaly detection alarms for specific parameters<!--RN 37171 + 37148-->:
+To configure the Augmented Operations alarm settings for specific parameters<!--RN 37171 + 37148-->:
 
-1. In the alarm template editor, click the button in the *Anomalies* column for the parameter in question. By default, this is set to *Disabled*.
+1. In the alarm template editor, click the button in the *Analytics* or *Anomalies* column for the parameter in question, depending on your DataMiner version.
 
-1. In the *Anomaly Alarm Settings* pop-up window, you can select one of the preset options or configure the anomaly alarm settings according to your preference.
+   Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!-- RN 40837 -->, this column is named *Anomalies*. By default, the button is set to *Disabled*.
+
+1. In the pop-up window, you can select one of the preset options or configure the anomaly alarm settings according to your preference.
 
    > [!NOTE]
    > The configured anomaly alarm settings only take effect for trended parameters<!--RN 37670-->.
@@ -68,19 +70,32 @@ To configure anomaly detection alarms for specific parameters<!--RN 37171 + 3714
         > [!NOTE]
         > Any customized behavioral anomaly monitoring setup containing relative or absolute thresholds will be lost if you downgrade to DataMiner version 10.3.11 or older. These versions do not support this extended anomaly configuration, and the thresholds will be automatically determined by DataMiner Analytics, similar to the default *Smart* option<!--RN 37434-->.
 
-1. Click *Close* in the lower right corner to exit the *Anomaly Alarm Settings* pop-up window.
+1. From DataMiner 10.4.12/10.5.0 onwards<!-- RN 40837+41017 -->, in the *Proactive alarm setting* section, optionally configure the alarms that should be triggered based on [proactive cap detection](xref:Proactive_cap_detection):
 
-   In the alarm template editor, depending on your changes, the button in the *Anomalies* column will now indicate the level of anomaly monitoring that has been configured:
+   1. Select the checkbox.
 
-   - **Disabled**: No anomaly alarms are generated for this parameter.
+   1. Select the severity of the generated alarms.
 
-   - **Customized**: You have customized the anomaly alarm settings for this parameter.
+   1. Select the trend prediction range that will trigger the alarms.
 
-   - **Smart**: Anomaly alarms are generated for this parameter based on what DataMiner Analytics determines to be an anomaly.
+      The following ranges will be available for selection:
+
+      - Ranges corresponding with the thresholds that have been configured in the alarm template itself. For example, if a Critical High alarm threshold of 100 Kbps is configured in the alarm template for an *Audio Bit Rate* parameter, here you will be able to select the option *Critical High (100 Kbps)* for that parameter.
+      - An upper and a lower range, if these are specified in the protocol. In case no upper and lower range are specified in the protocol, but the parameter shows a percentage, 100% will be available as the upper range and 0% as the lower range.
+
+1. Click *Close* in the lower right corner to return to the alarm template editor.
+
+   In the alarm template editor, the button in the *Analytics* or *Anomalies* column will be adjusted as follows depending on the configuration:
+
+   - *Disabled*: No Augmented Operations alarms are generated for this parameter.
+
+   - *Customized*: Custom Augmented Operations settings have been configured for this parameter.
+
+   - *Smart*: Anomaly alarms are generated for this parameter based on what DataMiner Analytics determines to be an anomaly, and proactive alarms are generated.
 
 1. To save your changes, click *OK* or *Apply* in the lower right corner of the alarm template editor.
 
-## [DataMiner versions using automatic client updates, prior to DataMiner 10.3.12/10.4.0](#tab/tabid-2)
+## [Prior to DataMiner 10.3.12/10.4.0, with automatic client updates](#tab/tabid-2)
 
 To configure anomaly detection alarms for specific parameters<!--RN 37171 + 37148-->:
 
@@ -119,7 +134,7 @@ To configure anomaly detection alarms for specific parameters<!--RN 37171 + 3714
 
 1. To save your changes, click *OK* or *Apply* in the lower right corner of the alarm template editor.
 
-## [Prior to DataMiner 10.3.12/10.4.0](#tab/tabid-3)
+## [Prior to DataMiner 10.3.12/10.4.0, without automatic client updates](#tab/tabid-3)
 
 To enable or disable different types of anomaly alarm monitoring:
 
@@ -148,4 +163,7 @@ To enable or disable different types of anomaly alarm monitoring:
 > - Prior to DataMiner 10.2.6/10.3.0, a behavioral change in the trend data of a parameter is only considered an anomaly if it is sufficiently significant with respect to other behavioral changes in the recent history of the parameter.
 
 > [!TIP]
-> For more information on behavioral anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+> See also:
+>
+> - [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
+> - [Proactive cap detection](xref:Proactive_cap_detection)

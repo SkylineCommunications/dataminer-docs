@@ -8,15 +8,15 @@ uid: DIS_2.15
 
 ### IDE
 
-#### DIS Tree: New button to open tree node at cursor position \[ID_20677\]
+#### DIS Tree: New button to open tree node at cursor position \[ID 20677\]
 
-When working in the XML editor or the C# editor, you can press a key combination (default: CTRL+1) to move the cursor to the DIS Tree tool window and select the DIS tree node representing the element you are editing.
+When working in the XML editor or the C# editor, you can press a key combination (default: Ctrl+1) to move the cursor to the DIS Tree tool window and select the DIS tree node representing the element you are editing.
 
 From now on, instead of pressing this key combination, you can also click the following button, which is situated in the top-left corner of the DIS Tree tool window:
 
 ![Sync arrow button](~/release-notes/images/SyncArrow_16x.jpg)
 
-#### DIS Tree: Pin XML nodes \[ID_20690\]
+#### DIS Tree: Pin XML nodes \[ID 20690\]
 
 It is now possible to pin XML nodes to a special pin section at the top of the DIS Tree tool window.
 
@@ -26,7 +26,7 @@ It is now possible to pin XML nodes to a special pin section at the top of the D
 
 When you hover over a pinned node in the pin section, a tooltip will appear, showing you more information about the node in question.
 
-#### XML editor: Shortcut menu option 'Add QAction Reference' renamed to 'DLL Imports' \[ID_20702\]
+#### XML editor: Shortcut menu option 'Add QAction Reference' renamed to 'DLL Imports' \[ID 20702\]
 
 Up to now, when you clicked the small Down arrow in front of a \<QAction> element, you could select the *Add QAction Reference* menu option to insert references to pre-compiled QActions into the *dllImport* attribute of the \<QAction> element. That *Add QAction Reference* menu option has now been renamed to *DLL Imports*.
 
@@ -48,7 +48,7 @@ When you select the *DLL Imports* menu option, a submenu will now list
 > [!NOTE]
 > In the submenu, all DLL files already inserted into the *dllimport* attribute of the \<QAction> element will be indicated by a check mark.
 
-#### XML editor: Enhanced protocol comparison \[ID_20971\]
+#### XML editor: Enhanced protocol comparison \[ID 20971\]
 
 Since DIS v.2.13, it is possible to compare two protocols and have the major changes displayed in the DIS Validator pane. The following additional checks will now be executed when you launch a protocol comparison:
 
@@ -89,7 +89,7 @@ Since DIS v.2.13, it is possible to compare two protocols and have the major cha
 
 ### Validator
 
-#### New and updated checks and error messages \[ID_20402\]\[ID_20582\]\[ID_20716\]\[ID_20747\]
+#### New and updated checks and error messages \[ID 20402\]\[ID 20582\]\[ID 20716\]\[ID 20747\]
 
 The following checks and error messages have been added or updated.
 
@@ -121,7 +121,7 @@ The *Param.CheckWidthAttribute* check replaces the legacy Validator return codes
 
 ### XML Schema
 
-#### Protocol Schema: Updated element and attribute rules \[ID_20800\]
+#### Protocol Schema: Updated element and attribute rules \[ID 20800\]
 
 The syntax rules for the following elements and/or attributes have been updated:
 
@@ -131,7 +131,7 @@ The syntax rules for the following elements and/or attributes have been updated:
 | PortSettings.TimeoutTime | Range: 10 - 120,000 |
 | PortSettings.TimeoutTimeElement | \- Range: 1000 - 120,000<br> - Value must be a multiple of 1000. |
 
-#### Protocol Schema: New elements and attributes \[ID_20802\]
+#### Protocol Schema: New elements and attributes \[ID 20802\]
 
 The Protocol XML schema now supports the following elements and/or element attributes:
 
@@ -140,7 +140,7 @@ The Protocol XML schema now supports the following elements and/or element attri
 | Protocol.Params.Param.Replication.Element   | dynamic   |
 | Protocol.Params.Param.Replication.Parameter | dynamic   |
 
-#### Protocol Schema: Attributes of ArrayOptions element changed/removed \[ID_20975\]\[ID_20976\]
+#### Protocol Schema: Attributes of ArrayOptions element changed/removed \[ID 20975\]\[ID 20976\]
 
 The following changes have been made to attributes of the ArrayOptions element.
 
@@ -151,7 +151,7 @@ The following changes have been made to attributes of the ArrayOptions element.
 | partial         | Type was changed from xs:string to regex. The regular expression must match either “false” or “true”. “true” can optionally be followed by a semicolon and a number (e.g. “true:200”). |
 | processingOrder | Removed. This is an option to be added to the value of the options attribute.                                                                                                              |
 
-#### UOM Schema: New unit added \[ID_20977\]
+#### UOM Schema: New unit added \[ID 20977\]
 
 The following unit has been added to the UOM Schema:
 
@@ -161,15 +161,15 @@ The following unit has been added to the UOM Schema:
 
 ### Enhancements
 
-#### IDE - XML editor: Enhanced analysis rules for QAction projects \[ID_20566\]
+#### IDE - XML editor: Enhanced analysis rules for QAction projects \[ID 20566\]
 
 A number of enhancements have been made to the default set of analysis rules for QAction projects. These rules can be used by Visual Studio extensions like e.g. SonarLint to analyze the code.
 
-#### IDE - XML editor: When an imported XML/JSON node does not contain any value, a parameter of type ‘string’ is now created \[ID_20674\]
+#### IDE - XML editor: When an imported XML/JSON node does not contain any value, a parameter of type ‘string’ is now created \[ID 20674\]
 
 Up to now, when parameters were created by importing XML/JSON code, no parameter was created when a node did not contain a value. From now on, when an XML/JSON node does not contain a value, a parameter of type ‘string’ will be created, and a warning icon will appear next to the node in the XML/JSON source file.
 
-#### IDE - XML editor: Enhanced item linking, additional virtual comments and more information in DIS Tree \[ID_20776\]
+#### IDE - XML editor: Enhanced item linking, additional virtual comments and more information in DIS Tree \[ID 20776\]
 
 A number of improvements have been made with regard to item linking, virtual comments and DIS Tree information.
 
@@ -212,13 +212,13 @@ From now on, the DIS Tree will show more information on the following elements:
 - Protocol.SeverityBubbleUp
 - Protocol.VersionHistory
 
-#### Automation script schema: Enhanced ID constraints \[ID_20799\]
+#### Automation script schema: Enhanced ID constraints \[ID 20799\]
 
 Up to now, the Automation script schema contained ID uniqueness constraints for each element type. All those ID constraints have now been replaced by a single constraint that forces an ID in an id attribute to be unique regardless of the type of XML element in which it is used.
 
 Also, the type of the Exe@id attribute has been changed to “xs:positiveInteger”.
 
-#### XML editor: Enhanced 'Title Begin' snippet \[ID_20967\]
+#### XML editor: Enhanced 'Title Begin' snippet \[ID 20967\]
 
 The ‘Title Begin’ snippet now contains two placeholders:
 
@@ -241,7 +241,7 @@ See the following example:
 </Param>
 ```
 
-#### XML editor: Enhanced import of table parameters when dragging from the DIS MIB Browser tool window \[ID_21021\]
+#### XML editor: Enhanced import of table parameters when dragging from the DIS MIB Browser tool window \[ID 21021\]
 
 From now on, when you drag a table parameter from the DIS MIB Browser tool window onto a protocol.xml file, the table name will only be added in front of the name of the column parameter when it is not already included in the latter. Also, when the SNMP name of a table contains “Table”, this string will be excluded from column parameters names and descriptions.
 
@@ -249,14 +249,14 @@ This will prevent table names from being included twice in column parameter name
 
 ### Fixes
 
-#### IDE - Grid view: Horizontal scrollbar was missing when grid was empty \[ID_20629\]
+#### IDE - Grid view: Horizontal scrollbar was missing when grid was empty \[ID 20629\]
 
 When no rows were shown in the *DIS Grid View* tool window, in some cases, the horizontal scrollbar would be missing. As a result, users were unable to adapt filters defined on columns that were not visible.
 
-#### IDE - XML editor: IntelliSense listed session names incorrectly \[ID_20779\]
+#### IDE - XML editor: IntelliSense listed session names incorrectly \[ID 20779\]
 
 When adding a new \<Session> element inside a group’s \<Content> element, IntelliSense lists all the sessions you can add to that particular group. Up to now, all listed sessions would incorrectly be named “Session”.
 
-#### IDE - Display editor: Units selection box did not correctly list the units defined in the UOM Schema \[ID_20928\]
+#### IDE - Display editor: Units selection box did not correctly list the units defined in the UOM Schema \[ID 20928\]
 
 When you configured a parameter in the Display editor, in some cases, the *Units* selection box would not correctly list the units defined in the UOM Schema.

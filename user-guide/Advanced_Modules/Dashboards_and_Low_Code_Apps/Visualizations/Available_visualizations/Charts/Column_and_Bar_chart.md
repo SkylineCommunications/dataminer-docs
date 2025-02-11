@@ -4,20 +4,26 @@ uid: ColumnAndBarChart
 
 # Column & Bar chart
 
-This chart can be used to display the elements or services in a view that caused the most or the least alarms in a selected time range and were in an alarm state for the longest or the shortest period of time. From DataMiner 10.0.13 onwards, it can also be used to represent any data based on a data query in the form of a bar chart. In that case the bars can represent any number of variables for any set of categories.
+This chart can be used to display the elements or services in a view that caused the most or the least alarms in a selected time range and were in an alarm state for the longest or the shortest period of time.
+
+![Bar chart](~/user-guide/images/Bar_Chart.png)<br>*Bar chart component in DataMiner 10.4.5*
+
+It can also be used to represent any data based on a data query in the form of a bar chart. In that case the bars can represent any number of variables for any set of categories.
 
 > [!NOTE]
-> Negative values are only supported in bar chart components from DataMiner 10.1.0/10.1.3 onwards.
+>
+> - Negative values are only supported in bar chart components from DataMiner 10.1.0/10.1.3 onwards.
+> - From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, only the first 1000 items in a column & bar chart are shown.
 
 To configure the component:
 
-1. Apply a view data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. [Add data to the component](xref:Adding_data_to_component).
 
-   From DataMiner 10.0.13 onwards, this component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
+   This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. to do so, hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *parameters* section of the data pane.
+1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. To do so, hover the mouse pointer over the component, click the filter icon, and then add a filter from the *parameters* section of the *Data* pane.
 
-1. Optionally, customize the following component options in the *Settings* tab:
+1. Optionally, customize the following component options in the *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
@@ -27,11 +33,11 @@ To configure the component:
 
    - *General* \> *Select*: Determines whether the top items (i.e. the items that had the most alarms or were in an alarm state for the longest time) or the bottom items (i.e. the items that had the least alarms or were in an alarm state for the shortest time) are displayed.
 
-   - *General* \> *Limit*: Determines how many elements or services are included in the chart.
+   - *General* \> *Limit*: Determines how many elements or services are included in the chart. From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, regardless of this setting, only the first 1000 parameters can be rendered in a single chart.
 
    - *General* \> *Time span*: Determines the time range for which the information is retrieved.
 
-   From DataMiner 10.0.13 onwards, if query data input is used, the following settings are available instead:
+   If query data input is used, the following settings are available instead:
 
    - *Label*: Allows you to select which data should be used as a label. Depending on how many different variables are displayed in the chart, several labels can be selected.
 
@@ -40,7 +46,7 @@ To configure the component:
    > [!NOTE]
    > From DataMiner 10.3.7/10.4.0 onwards, when you add a query to the component, the label and bars will automatically be configured. <!-- RN 36229 -->
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available if the chart is not used with queries data input:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available if the chart is not used with queries data input:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -49,6 +55,8 @@ To configure the component:
    - *Chart* > *Reverse data*: By default, the graph displays the number of alarm events or the alarm duration per element. This option allows you to instead display the number of alarm events or the alarm duration per alarm state.
 
    - *Chart* > *Stack bars*: Determines whether the bars for one particular element or service are stacked in the chart.
+
+     ![Stack bars](~/user-guide/images/Stack_Bars.png)<br>*Stacked bar chart in DataMiner 10.4.5*
 
    - *Chart* > *Legend*: Determines whether a legend can be displayed. If this option is selected, an arrow icon is displayed in the top right corner of the chart. Clicking this icon will display the legend.
 
@@ -62,7 +70,7 @@ To configure the component:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-   - *Advanced \> Chart layout*: Available from DataMiner 10.0.13 onwards. Allows you to choose how the dimensions of the bars are determined. Possible values:
+   - *Advanced \> Chart layout*: Allows you to choose how the dimensions of the bars are determined. Possible values:
 
      - *Absolute*: The dimension of each bar is shown as an absolute numeric value.
 
@@ -72,21 +80,21 @@ To configure the component:
 
      - *Relative total*: The dimension of each bar is shown as a percentage of the sum of all values. (Available from DataMiner 10.1.0/10.1.2 onwards.)
 
-   - *Advanced \> Chart orientation*: Available from DataMiner 10.0.13 onwards. Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top.
+   - *Advanced \> Chart orientation*: Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top.
 
    - *Advanced* \> *Stack bars:* Available from DataMiner 10.1.0/10.1.2 onwards. Stacks the bars on top of each other instead of showing them side by side. This can be especially useful when combined with the *Relative per category* layout.
 
-   - *Legend \> Show Legend*: Available from DataMiner 10.0.13 onwards. Determines whether the legend is displayed.
+   - *Legend \> Show Legend*: Determines whether the legend is displayed.
 
-   - *Legend \> Position*: Available from DataMiner 10.0.13 onwards. If the legend is set to be displayed, this option determines whether it is displayed on the left, on the right, at the top or at the bottom of the visualization.
+   - *Legend \> Position*: If the legend is set to be displayed, this option determines whether it is displayed on the left, on the right, at the top or at the bottom of the visualization.
 
-   - *Tooltips* > *Show Tooltips*: Available from DataMiner 10.0.13 onwards. Determines whether tooltips are displayed.
+   - *Tooltips* > *Show Tooltips*: Determines whether tooltips are displayed.
 
-   - *Tooltips* > *Include label*: Available from DataMiner 10.0.13 onwards. Determines whether the label is included in tooltips.
+   - *Tooltips* > *Include label*: Determines whether the label is included in tooltips.
 
-   - *Tooltips* > *Include dimension*: Available from DataMiner 10.0.13 onwards. Determines whether the dimensions are indicated in tooltips.
+   - *Tooltips* > *Include dimension*:  Determines whether the dimensions are indicated in tooltips.
 
-   - *Tooltips* > *Include value*: Available from DataMiner 10.0.13 onwards. Determines whether values are indicated in tooltips.
+   - *Tooltips* > *Include value*: Determines whether values are indicated in tooltips.
 
    - *Advanced* \> *Empty Result message*: Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Allows you to specify a custom message that is displayed when a query returns no results.
 

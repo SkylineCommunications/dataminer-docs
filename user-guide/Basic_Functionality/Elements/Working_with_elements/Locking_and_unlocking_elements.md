@@ -6,6 +6,8 @@ uid: Locking_and_unlocking_elements
 
 If a DataMiner element is locked, only the user who locked the element is able to implement any parameter changes on it. In some cases, an element lock can be applied automatically, in particular by the DataMiner Automation module, but elements can also be locked manually by a user.
 
+![Locked element](~/user-guide/images/Locked_Element.png)<br>*Locked element in DataMiner 10.4.6*
+
 > [!NOTE]
 > Locking an element only protects against parameter updates. Users who have the appropriate permissions to do so will still be able to delete an element or edit the element configuration of an element while it is locked by another user.
 

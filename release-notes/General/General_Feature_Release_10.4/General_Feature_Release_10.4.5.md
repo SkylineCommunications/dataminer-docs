@@ -18,12 +18,12 @@ uid: General_Feature_Release_10.4.5
 
 ## Highlights
 
-- [GQI: Implementing a custom sort order for GQI columns using a custom operator [ID_39136]](#gqi-implementing-a-custom-sort-order-for-gqi-columns-using-a-custom-operator-id_39136)
-- [Storage as a Service: Proxy support [ID_39221]](#storage-as-a-service-proxy-support-id_39221)
+- [GQI: Implementing a custom sort order for GQI columns using a custom operator [ID 39136]](#gqi-implementing-a-custom-sort-order-for-gqi-columns-using-a-custom-operator-id-39136)
+- [Storage as a Service: Proxy support [ID 39221]](#storage-as-a-service-proxy-support-id-39221)
 
 ## Breaking changes
 
-#### DOM string fields will now be filtered case-insensitively [ID_38950]
+#### DOM string fields will now be filtered case-insensitively [ID 38950]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -38,7 +38,7 @@ Up to now, DOM string fields were filtered case-sensitively. From now on, these 
 
 ## New features
 
-#### New SLTimeToLive.txt log file containing all changes made to the TTL settings [ID_38851]
+#### New SLTimeToLive.txt log file containing all changes made to the TTL settings [ID 38851]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -47,7 +47,7 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 > [!NOTE]
 > The contents of this folder will not be deleted during either a DataMiner restart or a DataMiner upgrade. However, in the *SLTimeToLive.txt* file, the oldest entries will be removed when the maximum log file size is exceeded.
 
-#### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID_39021]
+#### SLNetTypes: New requests GetLogTextFileStringContentRequestMessage and GetLogTextFileBinaryContentRequestMessage [ID 39021]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
@@ -71,13 +71,13 @@ Restrictions:
 - The file name passed in the requests must be the name of an existing file.
 - The file path passed in the requests must be a valid, existing path.
 
-#### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID_39043]
+#### GQI: Ad hoc data sources and custom operators can now log messages and exceptions within GQI [ID 39043]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 When configuring an ad hoc data source or a custom operator, you can now use the new `Logger` property of the `OnInitInputArgs` class to log messages and exceptions within GQI.
 
-#### STaaS: SLDataGateway will now periodically check the health of the storage service [ID_39068]
+#### STaaS: SLDataGateway will now periodically check the health of the storage service [ID 39068]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -88,7 +88,7 @@ When Storage as a Service (STaaS) is used, SLDataGateway will now periodically c
 > - When the current status is "yellow", SLDataGateway will not switch to file offload mode.
 > - Whenever the health of the storage service changes, an alarm mentioning the current health status is generated.
 
-#### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID_39088]
+#### GQI: The IGQIOnInit and IGQIOnDestroy interfaces can now also be used in custom operators [ID 39088]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
 
@@ -99,7 +99,7 @@ For more information on these interfaces, see:
 - [IGQIOnInit interface](xref:GQI_IGQIOnInit)
 - [IGQIOnDestroy interface](xref:GQI_IGQIOnDestroy)
 
-#### GQI: Metrics for requests, first session pages and all session pages [ID_39098]
+#### GQI: Metrics for requests, first session pages and all session pages [ID 39098]
 
 <!-- MR 10.4.0 [CU3] - FR 10.4.5 -->
 
@@ -149,7 +149,7 @@ The following requests now have an optional `QueryName` property:
 > - When the GQI log level is set to "Debug", the full query will be logged instead of the query name.
 > - When an exception is thrown during a request, and the GQI log level is set to at least "Error" (which is the case by default), the query (if any) will also be logged alongside the error.
 
-#### GQI: Implementing a custom sort order for GQI columns using a custom operator [ID_39136]
+#### GQI: Implementing a custom sort order for GQI columns using a custom operator [ID 39136]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
@@ -169,7 +169,7 @@ New features added to allow this include:
   - a new `IGQISortField`
   - a new `IGQISortOperator`
 
-#### Storage as a Service: Proxy support [ID_39221]
+#### Storage as a Service: Proxy support [ID 39221]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
@@ -200,13 +200,13 @@ Example of a *Db.xml* file in which a proxy server has been configured:
 
 ### Enhancements
 
-#### Enhanced performance when editing properties in bulk [ID_38255]
+#### Enhanced performance when editing properties in bulk [ID 38255]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 Performance has increased when properties of elements, services, or views are edited in bulk.
 
-#### 'Database Security' BPA test has been replaced by the 'Security Advisory' BPA test [ID_38632]
+#### 'Database Security' BPA test has been replaced by the 'Security Advisory' BPA test [ID 38632]
 
 <!-- MR 10.3.0 [CU15]/10.4.0 [CU3] - FR 10.4.5 -->
 
@@ -214,13 +214,13 @@ The *Database Security* BPA test has been replaced by the *Security Advisory* BP
 
 For more information on this new BPA test, see [Security Advisory](xref:BPA_Security_Advisory).
 
-#### Service & Resource Management: Enhanced performance of volume license check [ID_38705]
+#### Service & Resource Management: Enhanced performance of volume license check [ID 38705]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, overall performance has increased when performing volume license checks.
 
-#### APIGateway now runs on .NET 8 and allows you to enable kernel response buffering [ID_38710]
+#### APIGateway now runs on .NET 8 and allows you to enable kernel response buffering [ID 38710]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -235,7 +235,7 @@ This service now allows you to enable kernel response buffering, which should im
    { "HostingOptions": { "EnableKernelResponseBuffering": true } }
    ```
 
-#### Automation: Cassandra Ready check will now only be performed on DataMiner Systems using a MySQL database [ID_38760]
+#### Automation: Cassandra Ready check will now only be performed on DataMiner Systems using a MySQL database [ID 38760]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -243,25 +243,25 @@ Up to now, Automation scripts would always be checked whether they were Cassandr
 
 From now on, this Cassandra ready check will only be performed on DataMiner Systems using a MySQL database. When the DataMiner System is using a type of database other than MySQL, Automation scripts will always be considered Cassandra ready.
 
-#### Enhanced performance when starting up a DataMiner Agent with a large number of virtual elements [ID_38780]
+#### Enhanced performance when starting up a DataMiner Agent with a large number of virtual elements [ID 38780]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, overall performance has increased when starting up a DataMiner Agent with a large number of virtual elements.
 
-#### Security enhancements [ID_38904]
+#### Security enhancements [ID 38904]
 
 <!-- RN 38904: MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 A number of security enhancements have been made.
 
-#### Grouping of GQI event messages [ID_38913]
+#### Grouping of GQI event messages [ID 38913]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 From now on, GQI event messages sent by the same GQI session within a time frame of 100 ms will be grouped into one single message.
 
-#### SLLogCollector: Enhancements [ID_38966]
+#### SLLogCollector: Enhancements [ID 38966]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -269,7 +269,7 @@ SLLogCollector now uses Microsoft .NET 4.8.0.
 
 Also, an number of enhancements have been made to improve overall exception handling and to prevent the tool from timing out on servers without internet access.
 
-#### SLLogCollector: Enhancements [ID_38975]
+#### SLLogCollector: Enhancements [ID 38975]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -277,19 +277,19 @@ From now on, SLLogCollector will also log when it was not able to find any DataM
 
 Also, it will no longer attempt to read log files when it was not able to find the `C:\Skyline DataMiner\` folder.
 
-#### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID_39017]
+#### Protocols: Enhanced performance when filling an array using the QActionTableRow objects in a QAction [ID 39017]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, overall performance has increased when filling an array using the `QActionTableRow` objects in a QAction.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhancements [ID_39024]
+#### SLAnalytics - Behavioral anomaly detection: Enhancements [ID 39024]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 A number of enhancements have been made with regard to the behavioral anomaly detection feature.
 
-#### Enhanced performance when loading DVEs and virtual functions, changing production protocols and uploading protocols [ID_39034]
+#### Enhanced performance when loading DVEs and virtual functions, changing production protocols and uploading protocols [ID 39034]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -300,13 +300,13 @@ Because of a number of enhancements, overall performance has increased in the fo
 
 Also, when DataMiner Cube is connecting to a DataMiner Agent that is starting up or going online, users will now receive more detailed information on the progress of virtual elements being loaded.
 
-#### Service & Resource Management: Enhanced performance when starting the Resource Manager module [ID_39037]
+#### Service & Resource Management: Enhanced performance when starting the Resource Manager module [ID 39037]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, overall performance has increased when starting the Resource Manager module, especially on systems with a large number of permanent bookings.
 
-#### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID_39092]
+#### Factory reset tool SLReset.exe will now remove the NodeId.txt files [ID 39092]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
@@ -317,19 +317,19 @@ When the factory reset tool (*SLReset.exe*) is run, from now on, it will also re
 
 These files will be recreated with a new identifier when DataMiner or any of its extension modules is restarted.
 
-#### SLAnalytics: Enhanced performance when processing database operations [ID_39109]
+#### SLAnalytics: Enhanced performance when processing database operations [ID 39109]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, overall performance of SLAnalytics has increased when processing database operations, especially small insert or update operations.
 
-#### SLNet: Enhanced task processing [ID_39131]
+#### SLNet: Enhanced task processing [ID 39131]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, overall processing of tasks in SLNet has been optimized.
 
-#### MySql.Data.dll updated to version 8.3.0 [ID_39152]
+#### MySql.Data.dll updated to version 8.3.0 [ID 39152]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -337,19 +337,19 @@ The *MySql.Data.dll* file, stored in the `C:\Skyline DataMiner\Files` and `C:\Sk
 
 The connection string will now include `allowloadlocalinfile=True` as this required setting needs to be enabled on both the client side and the server side of the database connection.
 
-#### STaaS: Text of storage service health status alarm has been made clearer [ID_39154]
+#### STaaS: Text of storage service health status alarm has been made clearer [ID 39154]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 Whenever the health of the storage service changes, an alarm mentioning the current health status is generated. The text of this health status alarm has now been made clearer.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhanced flatline detection accuracy [ID_39160]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced flatline detection accuracy [ID 39160]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, the accuracy of the flatline detection algorithm has improved.
 
-#### No more DataMiner startup beep [ID_39176]
+#### No more DataMiner startup beep [ID 39176]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -357,25 +357,25 @@ The DataMiner startup beep has been removed.
 
 On virtual machines, beep commands are bypassed, and on physical machines, this beep would cause a delay of 1.25 seconds during startup.
 
-#### OpenSearch: Enhanced performance when fetching alarm distribution data during DataMiner startup [ID_39177]
+#### OpenSearch: Enhanced performance when fetching alarm distribution data during DataMiner startup [ID 39177]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, on systems using an OpenSearch database, overall performance has increased when fetching alarm distribution data during DataMiner startup.
 
-#### STaaS: Enhanced performance when fetching alarm distribution data [ID_39197]
+#### STaaS: Enhanced performance when fetching alarm distribution data [ID 39197]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 Because of a number of enhancements, overall performance has increased when fetching alarm distribution data from the database, especially on Failover systems using Storage as a Service.
 
-#### Enhanced performance when executing an NT_SNMP_RAW_SET notify type on multiple sources simultaneously [ID_39213]
+#### Enhanced performance when executing an NT_SNMP_RAW_SET notify type on multiple sources simultaneously [ID 39213]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Because of a number of enhancements, overall performance has increased when executing an `NT_SNMP_RAW_SET` notify type on multiple sources simultaneously.
 
-#### GQI: Enhanced error handling [ID_39226]
+#### GQI: Enhanced error handling [ID 39226]
 
 <!-- MR 10.5.0 - FR 10.4.5 [CU0] -->
 
@@ -403,7 +403,7 @@ As to logging, behavior has changed with respect to exceptions:
 - `GenIfSecurityException` will be logged as a warning without stack trace.
 - Any other error will be logged as error with stack trace.
 
-#### SLAnalytics - Behavioral anomaly detection: Open suggestion events related to anomalies will now be limited to 500 [ID_39256]
+#### SLAnalytics - Behavioral anomaly detection: Open suggestion events related to anomalies will now be limited to 500 [ID 39256]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -411,7 +411,7 @@ The number of open suggestion events related to behavioral anomalies will now be
 
 In other words, you will no longer have more than 500 suggestion events related to behavioral anomalies in the suggestion events tab of the Alarm Console.
 
-#### DxMs upgraded [ID_39278]
+#### DxMs upgraded [ID 39278]
 
 <!-- RN 39278: MR 10.5.0 - FR 10.4.5 -->
 
@@ -425,7 +425,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
 
-#### GQI: Maximum number of concurrent queries has been increased from 20 to 100 [ID_39293]
+#### GQI: Maximum number of concurrent queries has been increased from 20 to 100 [ID 39293]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -433,7 +433,7 @@ The maximum number of concurrent GQI queries has now been increased from 20 to 1
 
 ### Fixes
 
-#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID_38292]
+#### Correlation: Alarm buckets would not get cleaned up when alarms were cleared before the end of the time frame specified in the 'Collect events for ... after first event, then evaluate conditions and execute actions' setting [ID 38292]
 
 <!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -441,19 +441,19 @@ Up to now, when alarms were cleared before the end of the time frame specified i
 
 From now on, when a correlation rule is configured to use the *Collect events for ... after first event, then evaluate conditions and execute actions* trigger mechanism, all alarm buckets will be properly cleaned up so that no lingering buckets are left.
 
-#### Problem when migrating SLAnalytics data, DOM data or SRM data to STaaS [ID_38884]
+#### Problem when migrating SLAnalytics data, DOM data or SRM data to STaaS [ID 38884]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 When being migrated to STaaS, SLAnalytics data, DOM data or SRM data would incorrectly not be replicated. This could cause data created during the migration to be missing after the migration.
 
-#### Not possible to delete a service created via an SRM booking when it had been assigned a name that was already being used [ID_38914]
+#### Not possible to delete a service created via an SRM booking when it had been assigned a name that was already being used [ID 38914]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When a service created via an SRM booking got into an error state because it had been assigned a name that was already being used by another object, it would not be possible to delete it as it would be considered invalid.
 
-#### Service & Resource Management: Problem when the function manager was not able to read the functions.xml file in C:\\Skyline DataMiner\\ServiceManager [ID_38925]
+#### Service & Resource Management: Problem when the function manager was not able to read the functions.xml file in C:\\Skyline DataMiner\\ServiceManager [ID 38925]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -461,7 +461,7 @@ Up to now, in some cases, a run-time error could occur when the function manager
 
 From now on, if an error occurs when the function manager was not able to read that file, an entry will be added to the *SLFunctionManager.txt* log file, and if the error occurred because the file was locked by another process, the log entry will include the name of the process.
 
-#### GQI: Problem when loading extensions [ID_38998]
+#### GQI: Problem when loading extensions [ID 38998]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
@@ -470,21 +470,21 @@ When GQI extensions (i.e. ad hoc data sources or custom operators) were being lo
 This type of exceptions will be now be properly caught and logged as warnings so that other extensions will no longer be prevented from being loaded.
 
 > [!TIP]
-> See also: [GQI: Full logging [ID_38870]](xref:General_Feature_Release_10.4.4#gqi-full-logging-id_38870)
+> See also: [GQI: Full logging [ID 38870]](xref:General_Feature_Release_10.4.4#gqi-full-logging-id-38870)
 
-#### Problem while checking whether the DataMiner System was licensed to use the ModelHost DxM [ID_39001]
+#### Problem while checking whether the DataMiner System was licensed to use the ModelHost DxM [ID 39001]
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
 A *ModelHostException* could be thrown while checking whether the DataMiner System was licensed to use the ModelHost DxM.
 
-#### STaaS: Database queries could time out [ID_39081]
+#### STaaS: Database queries could time out [ID 39081]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 
 When a database query was performed against a STaaS database, in some cases, the query could time out, leading to no results being returned.
 
-#### Protocols: Compliancies element would not get parsed correctly when it contained comments [ID_39085]
+#### Protocols: Compliancies element would not get parsed correctly when it contained comments [ID 39085]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -492,31 +492,31 @@ Up to now, the `<Compliancies>` element of a *protocol.xml* file would not get p
 
 As a result, DataMiner would fail to open the protocol and create elements with it.
 
-#### Visual Overview: 'Connection could not be fully established' error when viewing visual overviews in a web app [ID_39133]
+#### Visual Overview: 'Connection could not be fully established' error when viewing visual overviews in a web app [ID 39133]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When you opened a visual overview in a web app, in some cases, a `Connection could not be fully established` error would appear.
 
-#### No emails could be sent as long as SLASPConnection was not fully initialized [ID_39137]
+#### No emails could be sent as long as SLASPConnection was not fully initialized [ID 39137]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 Up to now, an error would occur when a DataMiner module (e.g. Automation, Scheduler, etc.) tried to send an email while *SLASPConnection* was still initializing. From now on, all DataMiner modules will be able to send emails, even when *SLASPConnection* is still initializing.
 
-#### SNMP: Timeout time of commands would incorrectly be doubled when using SNMP++ [ID_39164]
+#### SNMP: Timeout time of commands would incorrectly be doubled when using SNMP++ [ID 39164]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 When SNMP++ was being used to communicate with a device, commands would incorrectly have their configured timeout time doubled.
 
-#### Problem with SLProtocol when processing a matrix parameter update [ID_39178]
+#### Problem with SLProtocol when processing a matrix parameter update [ID 39178]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
 In some cases, an error could occur in SLProtocol when processing a matrix parameter update.
 
-#### The 'Communication Info' table would incorrectly not get loaded into the element [ID_39181]
+#### The 'Communication Info' table would incorrectly not get loaded into the element [ID 39181]
 
 <!-- MR 10.3.0 [CU14] / 10.4.0 [CU2] - FR 10.4.5 -->
 
@@ -534,7 +534,7 @@ Example of the `<Connections>` syntax that caused the *Communication Info* table
 </Connections>
 ```
 
-#### SLDMS would incorrectly stop loading elements when it failed to load one of them [ID_39184]
+#### SLDMS would incorrectly stop loading elements when it failed to load one of them [ID 39184]
 
 <!-- MR 10.4.0 [CU2] - FR 10.4.5 -->
 

@@ -125,11 +125,15 @@ For example:
 #### Third sublevel: heading level 4.
 
 ##### Fourth sublevel: heading level 5.
+
+Paragraph text.
 ```
 
 Do not skip heading levels. For example, do not use heading level 3 right after heading level 1 while there is no heading level 2 in between.
 
 You can use up to five heading levels on a single page. If you need more levels, you will need to divide your content over several pages.
+
+Headings should always be surrounded by empty lines, so make sure there is an empty line above and below each heading, like in the example above.
 
 ## Tables
 
@@ -223,6 +227,9 @@ For example:
 > [!NOTE]
 > To upload images, use GitHub Desktop. See [Getting started with your documentation tools](xref:CTB_Documentation_Tools).
 
+> [!IMPORTANT]
+> Make sure image names do not contain any spaces; otherwise, the images will not be shown correctly.
+
 ## Video
 
 To embed a video, use the following syntax:
@@ -277,6 +284,19 @@ These alerts are displayed as follows:
 
 > [!WARNING]
 > Information about dangerous consequences of an action.
+
+## Keywords
+
+It is possible to add keywords in the metadata at the top of a page to ensure that the page will be found when a user enters such a keyword in a search query.
+
+To do so, add a "keywords:" line below the "uid:" line in the metadata, and then specify the keywords, separated by commas. For example:
+
+```txt
+---
+uid: Configuring_multiple_datacenter_Elasticsearch_cluster
+keywords: allocation awareness, elasticsearch
+---
+```
 
 ## Reserved characters
 

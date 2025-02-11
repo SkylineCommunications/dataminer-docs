@@ -10,7 +10,7 @@ This file is located in the following folder: *C:\\Skyline DataMiner\\Files*
 
 It contains among others the following settings:
 
-- DMA communication settings. See [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-the-ports-for-net-remoting-andor-xml-web-services).
+- DMA communication settings. See [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-the-port-for-net-remoting).
 
 - The number of log files generated for the SLNet process, determined by the value for the *LogFileRotateAmount* key in the *appSettings* section. For example:
 
@@ -34,4 +34,3 @@ It contains among others the following settings:
 
 > [!NOTE]
 > Any changes to these settings only take effect after a full DMA restart.
->

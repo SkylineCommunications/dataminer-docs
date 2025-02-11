@@ -14,17 +14,17 @@ uid: General_Feature_Release_10.2.5
 
 ### DMS core functionality
 
-#### DataMiner Object Model: New event message for DomInstance status transitions \[ID_32418\]
+#### DataMiner Object Model: New event message for DomInstance status transitions \[ID 32418\]
 
 With the introduction of the DomInstanceStatusChangedEventMessage, it is now possible to subscribe to DomInstance status transitions. This message contains the DomInstanceId, the FromState, the ToState and the Username (i.e. the name of the user who changed the status).
 
 IModuleEvents are now filtered by IModuleEventSubscriptionFilter first, before any other filter is applied.
 
-#### Elasticsearch: Casing will now be ignored when sorting fields of type string \[ID_32437\]
+#### Elasticsearch: Casing will now be ignored when sorting fields of type string \[ID 32437\]
 
 From now on, Elasticsearch will ignore casing when sorting fields of type string.
 
-#### Running memory-intensive elements in separate SLProtocol and SLScripting instances \[ID_32742\] \[ID_32917\]
+#### Running memory-intensive elements in separate SLProtocol and SLScripting instances \[ID 32742\] \[ID 32917\]
 
 As some element protocols have QActions that require a large amount of memory to execute, they can cause SLScripting to run out of memory when they run together with other elements. From now on, elements that require a large amount of memory can be run in their own SLProtocol and SLScripting instance.
 
@@ -60,13 +60,13 @@ Example:
 >
 > - *DataMiner.xml* files are not synchronized among the different Agents in a DataMiner System. If your DMS includes different Agents, then you will need to edit the *DataMiner.xml* file on each of the Agents.
 
-#### DataMiner Object Model: FieldDescriptors of type DomInstanceValueFieldDescriptor can now be configured to allow multiple values \[ID_32904\]
+#### DataMiner Object Model: FieldDescriptors of type DomInstanceValueFieldDescriptor can now be configured to allow multiple values \[ID 32904\]
 
 From now on, FieldDescriptors of type DomInstanceValueFieldDescriptor can be configured to allow multiple values.
 
 ### DMS Security
 
-#### SLSSH: Enhanced HMAC support \[ID_32786\]
+#### SLSSH: Enhanced HMAC support \[ID 32786\]
 
 DataMiner now supports the following HMAC algorithms when setting up a connection with an SSH server (in order of preference):
 
@@ -77,11 +77,11 @@ DataMiner now supports the following HMAC algorithms when setting up a connectio
 
 ### DMS Protocols
 
-#### NT_UPDATE_DESCRIPTION_XML (127) now supports overriding parameter units \[ID_32891\]
+#### NT_UPDATE_DESCRIPTION_XML (127) now supports overriding parameter units \[ID 32891\]
 
 Using NT_UPDATE_DESCRIPTION_XML (127), it is now possible to override parameter units.
 
-#### New \<ProcessAutomation> element to pass parameter values to the Service Definition component of the Dashboards app \[ID_32910\]
+#### New \<ProcessAutomation> element to pass parameter values to the Service Definition component of the Dashboards app \[ID 32910\]
 
 The new \<ProcessAutomation> element allows you to pass parameter values to the Service Definition component of the Dashboards app.
 
@@ -107,7 +107,7 @@ Example:
 
 ### DMS Cube
 
-#### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' \[ID_32660\]
+#### Visual Overview - Edit in Visio: New options 'Add theming' and 'Add pretty hover' \[ID 32660\]
 
 When, in DataMiner Cube, you right-click a visual overview and select “Edit in Visio”, an advanced edit panel will appear. When no shape is selected, you can now click an ellipsis button (“...”) in the top-right corner of the panel. This will open a menu with the following options.
 
@@ -122,7 +122,7 @@ When, in DataMiner Cube, you right-click a visual overview and select “Edit in
 > [!NOTE]
 > If no page-level “Options” data field exists, one will be created.
 
-#### Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups and rename alarm groups \[ID_32729\] \[ID_32819\] \[ID_32875\] \[ID_32914\] \[ID_32940\] \[ID_32957\] \[ID_33027\]
+#### Alarm Console - Automatic incident tracking: Manually add/remove alarms to/from alarm groups and rename alarm groups \[ID 32729\] \[ID 32819\] \[ID 32875\] \[ID 32914\] \[ID 32940\] \[ID 32957\] \[ID 33027\]
 
 When, in the Alarm Console, you enable the “Automatic incident tracking” option, from now on, you will be able to manually add/remove alarms to/from alarm groups and to rename alarm groups.
 
@@ -138,7 +138,7 @@ When, in the Alarm Console, you enable the “Automatic incident tracking” opt
 > [!NOTE]
 > From the moment a user manually adds or removes an alarm to or from an alarm group or renames an alarm group, that group will no longer be updated automatically.
 
-#### Trending - Behavioral anomaly detection: New type of change point 'flatline' \[ID_32839\] \[ID_32856\] \[ID_32950\]
+#### Trending - Behavioral anomaly detection: New type of change point 'flatline' \[ID 32839\] \[ID 32856\] \[ID 32950\]
 
 The DataMiner Analytics software can detect a number of changes in the behavior of a trend, also known as “change points”. From now on, it will also be able to detect change points of type “flatline”. A flatline is detected when a fluctuating value suddenly remains constant.
 
@@ -148,11 +148,11 @@ A new flatline trend icon will be used to indicate when a parameter has flatline
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app - GQI: Linking feeds to arguments of external data sources \[ID_32658\]
+#### Dashboards app - GQI: Linking feeds to arguments of external data sources \[ID 32658\]
 
 When you build a GQI query that uses an external data source, it is now possible to link feeds to arguments of that external source.
 
-#### Dashboards - Data panel: Enhanced element selection \[ID_32769\]
+#### Dashboards - Data panel: Enhanced element selection \[ID 32769\]
 
 A number of enhancements have been made to the *Elements* section of the Data panel.
 
@@ -165,26 +165,26 @@ Also, there is now an element search box as well as a number of element filter o
 - an *EPM managers* checkbox to only show EPM Manager elements, and
 - a *Spectrum analyzers* checkbox to only show Spectrum elements.
 
-#### Dashboards app: Live sharing no longer requires users to have permission to edit the dashboards they are sharing \[ID_32812\]
+#### Dashboards app: Live sharing no longer requires users to have permission to edit the dashboards they are sharing \[ID 32812\]
 
 Up to now, when users wanted to share a dashboard, they also needed to have permission to edit the dashboard in question. From now on, users who want to share a dashboard will no longer need permission to edit that dashboard.
 
 > [!NOTE]
 > When you do not have *General \> Live sharing \> UI available* permission, you will not see anything related to live sharing. So, make sure to always use this permission in conjunction with the Share permission.
 
-#### Dashboards app - Service definition component: Arrows will now automatically be drawn when a Process Automation definition was added \[ID_32960\]
+#### Dashboards app - Service definition component: Arrows will now automatically be drawn when a Process Automation definition was added \[ID 32960\]
 
 When a Process Automation definition is added to the Service definition component, the component will now automatically draw the necessary arrows to indicate the connections between the different blocks/nodes in the diagram.
 
-#### Dashboards app: Using the script output of an interactive Automation script as a feed \[ID_32977\]
+#### Dashboards app: Using the script output of an interactive Automation script as a feed \[ID 32977\]
 
 When building a GQI query, you can now also use the script output of an interactive Automation script as a feed.
 
-#### Dashboards app - Service definition component: Function shapes will now reflect the function type \[ID_32995\]
+#### Dashboards app - Service definition component: Function shapes will now reflect the function type \[ID 32995\]
 
 When a Process Automation definition is added to the Service definition component, the added function shapes will now reflect the function type (UserTask, ScriptTask, ResourceTask, Gateway, NoneStartEvent, TimeStartEvent or EndEvent).
 
-#### Dashboards app - Service definition component: Function nodes will now display the number of Process Automation tokens in queue or in progress \[ID_33025\]
+#### Dashboards app - Service definition component: Function nodes will now display the number of Process Automation tokens in queue or in progress \[ID 33025\]
 
 When a Process Automation definition is added to the Service definition component, all function nodes will now display the number of tokens currently in queue or in progress.
 
@@ -192,7 +192,7 @@ The token counters will be updated every 10 seconds.
 
 ### DMS web apps
 
-#### Application framework \[ID_33002\] \[ID_33040\]
+#### Application framework \[ID 33002\] \[ID 33040\]
 
 The DataMiner application framework allows you to create custom low-code applications that interact with data from a DataMiner System or an external source.
 
@@ -259,7 +259,7 @@ Access to a specific application can be configured in the application itself. Pe
 
 ### DMS Service & Resource Management
 
-#### Retrieving bookings in a paged way and sorted by property \[ID_31982\]
+#### Retrieving bookings in a paged way and sorted by property \[ID 31982\]
 
 It is now possible to retrieve bookings in a paged way and sorted by one of the following properties:
 
@@ -276,7 +276,7 @@ It is now possible to retrieve bookings in a paged way and sorted by one of the 
 > - v10.1.0 (CU0)
 > - v10.1.1 (CU0)
 
-#### ResourceUsageInfoManager \[ID_32512\]
+#### ResourceUsageInfoManager \[ID 32512\]
 
 SLNet now includes a ResourceUsageInfoManager, which will keep track of the Resources being used by ReservationInstances. Each time a change is detected as to Resource usage, this manager will send out a ResourceUsageStatusEventMessage containing the DMA ID and a list of UpdatedResourceUsageStatuses.
 
@@ -286,7 +286,7 @@ Normally, a ResourceUsageStatusEventMessage will be sent out the moment a Resour
 
 ResourceUsageStatus objects can be retrieved by means of a GetResourceUsageStatusList (FilterElement\<Resource> filter) call on the ResourceManagerHelper. This call will return all status objects for the resources that match the filter and that are currently being used by ongoing reservations.
 
-#### ResourceManagerEventMessage: New LostInterestReservationInstances property \[ID_32801\]
+#### ResourceManagerEventMessage: New LostInterestReservationInstances property \[ID 32801\]
 
 When, for example, a table is populated with ReservationInstances using ResourceManagerEventMessages with a SubscriptionFilter, you can now use the LostInterestReservationInstances property to retrieve the IDs of the ReservationInstances that no longer match the current filter after an update.
 
@@ -294,7 +294,7 @@ When, for example, a table is populated with ReservationInstances using Resource
 > This list will only contain ReservationInstances to which the user has access.
 > To retrieve the IDs of the ReservationInstances to which the user no longer has access, you can call the GetHiddenReservationInstances method.
 
-#### Functions.xml file: Assigning a function type to a function \[ID_32851\]
+#### Functions.xml file: Assigning a function type to a function \[ID 32851\]
 
 It is now possible to assign a function type to each function defined in a functions.xml file.
 
@@ -327,7 +327,7 @@ Example:
 
 ### DMS Mobile Gateway
 
-#### Additional logging after sending a 'send SMS' request to an SMSEagle device \[ID_32785\] \[ID_32911\]
+#### Additional logging after sending a 'send SMS' request to an SMSEagle device \[ID 32785\] \[ID 32911\]
 
 When an HTTP request of type “send SMS” is sent to an SMSEagle device, the following information will now be logged in the SLGSMGateway log file:
 
@@ -351,56 +351,56 @@ When an HTTP request of type “send SMS” is sent to an SMSEagle device, the f
 
 ### Enhancements
 
-#### Security enhancements \[ID_32849\] \[ID_32954\] \[ID_32992\] \[ID_33014\] \[ID_33052\]
+#### Security enhancements \[ID 32849\] \[ID 32954\] \[ID 32992\] \[ID 33014\] \[ID 33052\]
 
 A number of security enhancements have been made.
 
-#### Analytics: Prefetching mechanism for trend icons \[ID_32300\] \[ID_32882\]
+#### Analytics: Prefetching mechanism for trend icons \[ID 32300\] \[ID 32882\]
 
 During the first few minutes that DataMiner Analytics is running, it is still calculating which trend icons should be displayed. Previously, during this initial period, the trend icons to be displayed were retrieved from the Cassandra database. However, because of changes to the database, this is no longer possible. For this reason, a prefetching mechanism has now been implemented, so that when a trend icon is requested, it is calculated based on prefetched trend data. As there are safeguards in place to ensure that not too many database requests are done at the same time, this does mean that not all trend icons may be displayed immediately.
 
-#### Enhanced performance with regard to the processing of system performance indicators \[ID_32574\]
+#### Enhanced performance with regard to the processing of system performance indicators \[ID 32574\]
 
 Because of a number of enhancements, overall performance has increased with regard to the processing of system performance indicators.
 
-#### Dashboards app: Improved loading indicator for bar and pie chart with GQI data \[ID_32806\]
+#### Dashboards app: Improved loading indicator for bar and pie chart with GQI data \[ID 32806\]
 
 The loading indicator when GQI data are loaded for a bar or pie chart component has been improved to be more in line with the usual dashboard style. Instead of a spinner, now a loading bar is shown at the top of the component.
 
-#### Dashboards app - GQI: Enhanced visualization of queries \[ID_32823\]
+#### Dashboards app - GQI: Enhanced visualization of queries \[ID 32823\]
 
 A number of enhancements have been made with regard to the visualization of GQI queries. For example, raw values (e.g. column IDs, GUIDs, etc.) will be translated to display values when possible.
 
-#### Cassandra Cluster Migrator tool: Increased write timeout \[ID_32829\]
+#### Cassandra Cluster Migrator tool: Increased write timeout \[ID 32829\]
 
 When it is migrating data, basically, the Cassandra Cluster Migrator tool reads a page of data from the original database (Cassandra or SQL) and then writes that page to the target database (Cassandra Cluster or Elasticsearch). The timeout for the write operations has now been increased from 2 minutes to 30 minutes.
 
-#### Dashboards app - GQI: Queries must now all have a unique name \[ID_32836\]
+#### Dashboards app - GQI: Queries must now all have a unique name \[ID 32836\]
 
 From now on, when you create, update or import a GQI query, a unique query name will be mandatory. Up to now, query names were optional.
 
 - When you create a new query, the system will suggest “New query” as default name. If that name already exists, then a counter will be added (e.g. “New query (1)”, “New query (2)”, etc.
 - When you import a query that has no name, the system will suggest “Imported query” as default name. If that name already exists, then a counter will be added (e.g. “Imported query (1)”, “Imported query (2)”, etc.
 
-#### DataMiner upgrade packages: Obsolete upgrade/downgrade actions removed \[ID_32861\]
+#### DataMiner upgrade packages: Obsolete upgrade/downgrade actions removed \[ID 32861\]
 
 Obsolete upgrade and downgrade actions for DataMiner versions older than DataMiner 9.6 have now been removed from the DataMiner upgrade packages
 
-#### Dashboards app - GQI: Node placeholders now have a clearer name \[ID_32866\]
+#### Dashboards app - GQI: Node placeholders now have a clearer name \[ID 32866\]
 
 In the GQI query builder, the node placeholders now have a clearer name. For example, the name of the first node has been changed from “Filter” to “Select data source” and all subsequent nodes will now be named “Select operator”.
 
-#### SLMessageBroker: Default connection timeout is now 10 minutes \[ID_32884\]
+#### SLMessageBroker: Default connection timeout is now 10 minutes \[ID 32884\]
 
 The Connect() and Publish() methods of SLMessageBroker now have a default connection timeout of 10 minutes.
 
 Also, the interval at which another reconnect is attempted has been increased from 1 second to 10 seconds.
 
-#### Web Services API: Enhanced handling of errors thrown when processing asynchronous requests \[ID_32933\]
+#### Web Services API: Enhanced handling of errors thrown when processing asynchronous requests \[ID 32933\]
 
 A number of enhancements have been made with regard to the handling of errors thrown when processing asynchronous requests.
 
-#### DataMiner upgrade packages: New prerequisite check that verifies whether the ports used by DataMiner can be reached in between DataMiner Agents \[ID_32944\]
+#### DataMiner upgrade packages: New prerequisite check that verifies whether the ports used by DataMiner can be reached in between DataMiner Agents \[ID 32944\]
 
 From now on, upgrade packages will perform a prerequisite check that verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. This will prevent situations where a DataMiner System becomes non-functional after an upgrade that uses more or different ports.
 
@@ -412,13 +412,13 @@ Ports currently checked:
 
 If this check fails, you will need to execute the VerifyClusterPorts.dmupgrade package ([download](https://community.dataminer.services/download/verifyclusterports-dmupgrade/)). VerifyClusterPorts.dmupgrade will run the same tests as the DataMiner upgrade package, but it will make sure that temporary listening ports are open for the required ports and a temporary local firewall rule is configured. This way, if a firewall or other configuration issue is causing the problem, this will become clear. If no failing ports are reported when you run this package, the regular upgrade package will use this stored result to continue with the upgrade.
 
-#### Enhanced setup of serial connections with SSL/TLS enabled \[ID_32969\]
+#### Enhanced setup of serial connections with SSL/TLS enabled \[ID 32969\]
 
 A number of enhancements have been made with regard to the setup of serial connections with SSL/TLS enabled.
 
 ### Fixes
 
-#### Alarm templates: Miscellaneous fixes \[ID_32462\]
+#### Alarm templates: Miscellaneous fixes \[ID 32462\]
 
 A number of issues have been fixed with regard to alarm templates.
 
@@ -427,35 +427,35 @@ A number of issues have been fixed with regard to alarm templates.
 
 Also, a number of enhancements have been made with regard to the calculation of smart baselines.
 
-#### Cassandra Cluster Migrator tool would incorrectly not allow multiple IP addresses in the 'Cassandra IP(s)' field \[ID_32554\]
+#### Cassandra Cluster Migrator tool would incorrectly not allow multiple IP addresses in the 'Cassandra IP(s)' field \[ID 32554\]
 
 When configuring the Cassandra settings in the Cassandra Cluster Migrator tool, it would incorrectly not be possible to specify multiple IP addresses in the *Cassandra IP(s)* field.
 
-#### SLAnalytics - Pattern matching: No 'suggestion event' type alarm would be triggered in case of DVE elements \[ID_32671\]
+#### SLAnalytics - Pattern matching: No 'suggestion event' type alarm would be triggered in case of DVE elements \[ID 32671\]
 
 From DataMiner 10.0.13 onwards, you can activate alarm monitoring of trend patterns, so that a “suggestion event” type alarm is triggered whenever a specific pattern is detected. In case of dynamic virtual elements, in some cases, no “suggestion event” type alarm would be triggered.
 
-#### SLAnalytics: Inaccurate short-term trend predictions \[ID_32731\]
+#### SLAnalytics: Inaccurate short-term trend predictions \[ID 32731\]
 
 If the DataMiner Agent uses a Cassandra database, trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future. Up to now, in some cases, short-term trend predictions could be inaccurate due to a longer seasonality being detected on a higher level.
 
-#### Service & Resource Management: GetEligibleResources would ignore the time range passed to it \[ID_32763\]
+#### Service & Resource Management: GetEligibleResources would ignore the time range passed to it \[ID 32763\]
 
 Up to now, when GetEligibleResources was called, the eligible resources would incorrectly be calculated based on the time range of the ReservationInstance to be ignored. From now on, when the context passed to GetEligibleResources includes a time range, the time range of the ReservationInstance will be ignored.
 
-#### DataMiner Cube: Problem when opening the Ticketing app \[ID_32775\]
+#### DataMiner Cube: Problem when opening the Ticketing app \[ID 32775\]
 
 Up to now, in some cases, the Cube UI could become unresponsive when you opened the Ticketing app.
 
-#### DataMiner Cube - Visual Overview: SET command linked to a shape would not be executed when the page was displayed in a VdxPage window of type 'Popup' \[ID_32780\]
+#### DataMiner Cube - Visual Overview: SET command linked to a shape would not be executed when the page was displayed in a VdxPage window of type 'Popup' \[ID 32780\]
 
 When a page that was displayed in a VdxPage window of type “Popup” contained a shape linked to a SET command, clicking that shape would incorrectly not execute the SET command.
 
-#### DataMiner Cube - Resources app: No resources or resource pools would be loaded when opening the Resources app \[ID_32790\]
+#### DataMiner Cube - Resources app: No resources or resource pools would be loaded when opening the Resources app \[ID 32790\]
 
 When you opened the Resources app, in some cases, no resources or resource pools would be loaded.
 
-#### Dashboards app - GQI: GUIDs of DOM reference fields would be displayed incorrectly \[ID_32807\]
+#### Dashboards app - GQI: GUIDs of DOM reference fields would be displayed incorrectly \[ID 32807\]
 
 Up to now, the GUIDs of the following types of DOM reference fields would be displayed incorrectly:
 
@@ -464,37 +464,37 @@ Up to now, the GUIDs of the following types of DOM reference fields would be dis
 - DOM instances
 - Resources
 
-#### MessageBroker: Timeout value would incorrectly be ignored when using RequestResponse(Async) [ID_32810]
+#### MessageBroker: Timeout value would incorrectly be ignored when using RequestResponse(Async) [ID 32810]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
 When, in the MessageBroker, RequestResponse(Async) was used when NATS was not yet connected, the specified timeout value would incorrectly be ignored. The timeout value would only be applied to the actual NATS communication and not to the potential reconnection logic.
 
-#### Dashboards app: Problem when sorting a table component populated by means of a GQI query \[ID_32814\]
+#### Dashboards app: Problem when sorting a table component populated by means of a GQI query \[ID 32814\]
 
 When you sorted a table component populated by means of a GQI query, in some cases, the sorting would be incorrect.
 
-#### Processes would not get registered correctly when a DataMiner upgrade included a reboot \[ID_32818\]
+#### Processes would not get registered correctly when a DataMiner upgrade included a reboot \[ID 32818\]
 
 When a DataMiner upgrade included a reboot (either explicitly requested, or e.g. after installing Microsoft .NET 4.8), in some cases, services would not get registered correctly, especially when the new DataMiner version included services that did not previously exist.
 
-#### Dashboards app: Problem when sharing a dashboard with a node edge component \[ID_32822\]
+#### Dashboards app: Problem when sharing a dashboard with a node edge component \[ID 32822\]
 
 When viewing a shared dashboard with a node edge component that had its nodes configured to use either analytical or alarm colors, the node edge component could not be rendered.
 
-#### Problem with SLDMS hosting agent cache \[ID_32827\]
+#### Problem with SLDMS hosting agent cache \[ID 32827\]
 
 In some rare cases, the SLDMS hosting agent cache could get corrupted. As a result, it would no longer contain the correct data when processing element updates.
 
-#### Dashboards app: Query name reset when query is edited \[ID_32832\]
+#### Dashboards app: Query name reset when query is edited \[ID 32832\]
 
 In some cases, when the content of a query in a dashboard was changed, it could occur that the name of the query was reset to a previous value.
 
-#### Dashboards app: Display value that was used to refer to an unnamed query would incorrectly contain HTML tags \[ID_32833\]
+#### Dashboards app: Display value that was used to refer to an unnamed query would incorrectly contain HTML tags \[ID 32833\]
 
 When a query had not been assigned a name, up to now, the display value that was used to refer to that unnamed query would incorrectly contain HTML tags. From now on, the name “(query)” will be used to refer to an unnamed query.
 
-#### Exception logged in SLNet.txt during startup \[ID_32835\]
+#### Exception logged in SLNet.txt during startup \[ID 32835\]
 
 Since DataMiner 10.2.0 \[CU0\] and DataMiner 10.2.2, the following exception could be generated in the SLNet.txt log file during DataMiner startup:
 
@@ -518,11 +518,11 @@ Since DataMiner 10.2.0 \[CU0\] and DataMiner 10.2.2, the following exception cou
    at Skyline.DataMiner.Net.Config.Init()
 ```
 
-#### NAS: Incorrect default settings in nas.config file \[ID_32840\]
+#### NAS: Incorrect default settings in nas.config file \[ID 32840\]
 
 The default settings in the nas.config file would be incorrect.
 
-#### SLNet would incorrectly log XmlSerializer exceptions \[ID_32859\]
+#### SLNet would incorrectly log XmlSerializer exceptions \[ID 32859\]
 
 Up to now, SLNet would incorrectly log the following exception each time it was thrown:
 
@@ -530,58 +530,58 @@ Up to now, SLNet would incorrectly log the following exception each time it was 
 SLNet tried to load DataMinerInstallerCommunication.XmlSerializers
 ```
 
-#### Dashboards app - GQI: Problem when exporting table data to CSV \[ID_32865\]
+#### Dashboards app - GQI: Problem when exporting table data to CSV \[ID 32865\]
 
 When you exported GQI data from a table component to a CSV file, up to now, only the currently loaded page would get exported. From now on, all data in the table will be exported.
 
 > [!NOTE]
 > While the export operation is progress, an “exporting to CSV” notification will be shown in the bottom-right corner of the screen.
 
-#### Memory leak in SLElement \[ID_32885\]
+#### Memory leak in SLElement \[ID 32885\]
 
 In some cases, a problem with subscriptions on views with remote data would cause SLElement to leak memory, which could eventually lead to run-time errors in the parameter thread.
 
-#### Filtered tables could incorrectly receive updates for rows that did not match the applied filter \[ID_32915\]
+#### Filtered tables could incorrectly receive updates for rows that did not match the applied filter \[ID 32915\]
 
 In some cases, a filtered table could incorrectly receive updates for rows that did not match the applied filter. On EPM setups, this would cause performance issues and run-time errors.
 
-#### DataMiner Cube - Alarm Console: Focus icon would not be displayed when a new alarm was added to an alarm group \[ID_32931\]
+#### DataMiner Cube - Alarm Console: Focus icon would not be displayed when a new alarm was added to an alarm group \[ID 32931\]
 
 When an alarm was added to an alarm group while that group was expanded, the focus icon would incorrectly not be displayed.
 
-#### Web Services API: Problem when opening the soap.asmx page \[ID_32939\]
+#### Web Services API: Problem when opening the soap.asmx page \[ID 32939\]
 
 In some cases, an exception could be thrown when you tried to open the following page: `http://DmaNameOrIpAddress/API/v1/soap.asmx`
 
-#### Online SLA window would not get properly closed \[ID_32946\]
+#### Online SLA window would not get properly closed \[ID 32946\]
 
 In some cases, an online SLA window would not get properly closed.
 
-#### Dashboards app - GQI: Queries using different custom data sources from the same library would incorrectly be considered the same query when fetching results \[ID_32965\]
+#### Dashboards app - GQI: Queries using different custom data sources from the same library would incorrectly be considered the same query when fetching results \[ID 32965\]
 
 Up to now, queries using different custom data sources from the same library would incorrectly be considered the same query when fetching results.
 
-#### Memory leak in SLSpiHost \[ID_32970\]
+#### Memory leak in SLSpiHost \[ID 32970\]
 
 In some cases, the SLSpiHost process could leak memory.
 
-#### DataMiner Cube - Alarm Console: Incident alarms were incorrectly shown twice \[ID_32981\]
+#### DataMiner Cube - Alarm Console: Incident alarms were incorrectly shown twice \[ID 32981\]
 
 When, upon opening DataMiner Cube, the Alarm Console had an active alarms tab page with “Automatic incident tracking” enabled, in some cases, the incident alarms would incorrectly be shown twice.
 
-#### DataMiner Cube: No longer possible to move DVE elements to another view \[ID_32984\]
+#### DataMiner Cube: No longer possible to move DVE elements to another view \[ID 32984\]
 
 In some cases, it would incorrectly no longer be possible to move DVE elements to another view.
 
-#### NATS issue could cause a DataMiner Agent to not start up correctly \[ID_33026\]
+#### NATS issue could cause a DataMiner Agent to not start up correctly \[ID 33026\]
 
 In some cases, a NATS issue could cause a DataMiner Agent to not start up correctly.
 
-#### Dashboards app - GQI: Problem while creating or updating a query when users did not have permission to view objects retrieved by a data source \[ID_33029\]
+#### Dashboards app - GQI: Problem while creating or updating a query when users did not have permission to view objects retrieved by a data source \[ID 33029\]
 
 When users were creating or modifying a GQI query, in some cases, an exception could be thrown when those users did not have permission to view objects retrieved by a data source.
 
-#### Problem when starting up SLNet \[ID_33033\]
+#### Problem when starting up SLNet \[ID 33033\]
 
 In some cases, the following error would be logged in SLNet.txt with XYZ being the word “AUTHORITY” in a language other than English:
 
@@ -591,7 +591,7 @@ Connection did not authenticate. Computer: COMPUTERNAME Application: SLDataGatew
 
 The problem would occur on systems installed in a language other than English and was caused by code looking for the NT-AUTHORITY\\SYSTEM user, which on these systems, was named differently.
 
-#### Problem with SLLog when a log file was closed \[ID_33191\]
+#### Problem with SLLog when a log file was closed \[ID 33191\]
 
 In some cases, an error could occur in the SLLog process when a log file was closed.
 
@@ -599,6 +599,6 @@ In some cases, an error could occur in the SLLog process when a log file was clo
 
 ### CU1 fixes
 
-#### Remote direct views would no longer work when the DirectViewRemoteDataUpdates soft-launch option was disabled \[ID_33326\]
+#### Remote direct views would no longer work when the DirectViewRemoteDataUpdates soft-launch option was disabled \[ID 33326\]
 
 Remote direct views would no longer work when the DirectViewRemoteDataUpdates soft-launch option was disabled.

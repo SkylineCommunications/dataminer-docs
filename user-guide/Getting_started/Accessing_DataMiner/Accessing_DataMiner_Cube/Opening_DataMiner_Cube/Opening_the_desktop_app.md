@@ -15,4 +15,5 @@ For more information on how to manage the start window of the Cube desktop app, 
 > [!NOTE]
 >
 > - If you want to open DataMiner Cube for multiple DataMiner Systems without closing the start window, keep the Ctrl key pressed while you click the tiles.
+> - In most cases, you will be logged in automatically after you have clicked a tile. If you do not want this to happen, hold the `Shift` key during DataMiner Cube startup.
 > - If you have multiple monitors and want DataMiner Cube to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*

@@ -1,5 +1,6 @@
 ---
 uid: DB_xml
+keywords: central database, local database, general database, offload database
 ---
 
 # DB.xml
@@ -15,7 +16,7 @@ In the file *DB.xml*, you can specify the configuration data for several databas
 - [CMDB settings](#cmdb-settings)
 
   > [!TIP]
-  > See also: [Inventory & Asset Management](xref:AssetManagement)
+  > See also: [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management)
 
 This file is located in the folder *C:\\Skyline DataMiner\\*.
 
@@ -38,7 +39,7 @@ The following configuration is possible for the general database:
 
 - [Keeping a database table from being checked during an upgrade](#keeping-a-database-table-from-being-checked-during-an-upgrade)
 
-- [Configuring how long parameter data are kept in the database for DMS Reporter](#configuring-how-long-parameter-data-are-kept-in-the-database-for-dms-reporter)
+- [Configuring how long parameter data are kept in the database for DMS Reporter](#configuring-how-long-parameter-data-are-kept-in-the-database-for-dms-reporter-legacy)
 
 - [Keeping a separate log for slow database queries](#keeping-a-separate-log-for-slow-database-queries)
 
@@ -80,15 +81,15 @@ In the example below, two tables will be kept from being checked:
 > [!NOTE]
 > Instead of adding a *\<SkipTableUpdate>* instruction to the file *DB.xml*, you can also add a comment to a database table in order to keep that table from being checked during a DataMiner software upgrade. For example, to add a 'DataMiner Customized' comment to a MySQL table, run the following SQL command (in which you replace “xxx” by the actual table name): `ALTER TABLE xxx COMMENT = 'DataMiner Customized'`
 >
-> However, note that this causes that that entire table to be copied to a temporary table, which has a negative impact on query duration, so this is not recommended.
+> However, note that this causes that entire table to be copied to a temporary table, which has a negative impact on query duration, so this is not recommended.
 
-### Configuring how long parameter data are kept in the database for DMS Reporter
+### Configuring how long parameter data are kept in the database for DMS Reporter (legacy)
 
 In order to make sure that parameter data is not removed from the database too early, two additional attributes are available in the *Maintenance* tag:
 
-- **initialLoadDays**: The number of days that parameter data will be kept in the rep_pd_info database table on first request. Default: 62.
+- **initialLoadDays**: The number of days that parameter data will be kept in the *rep_pd_info* database table on first request. Default: 62.
 
-- **paramMaxUnusedDays** The maximum number of days between each request for the parameter data to be kept in the rep_pd_info database.
+- **paramMaxUnusedDays** The maximum number of days between each request for the parameter data to be kept in the *rep_pd_info* database.
 
 This configuration can for instance be of use to ensure that a report with data for the past month will contain all parameter information for the entire month, as otherwise data might already have been removed during database maintenance.
 
@@ -98,7 +99,7 @@ Example:
 <Maintenance monthsToKeep="12" initialLoadDays="30" paramMaxUnusedDays="15"> </Maintenance>
 ```
 
-In the example above, the parameter data will be kept in the rep_pd_info table for 30 days. If the parameter data is not requested for 15 consecutive days, all data older than 30 days will be removed.
+In the example above, the parameter data will be kept in the *rep_pd_info* table for 30 days. If the parameter data is not requested for 15 consecutive days, all data older than 30 days will be removed.
 
 ### Keeping a separate log for slow database queries
 
@@ -120,7 +121,7 @@ In the above example, the slowquery attribute is set to “5”, so all database
 
 ### Configuring how alarm history slider data are kept in a Cassandra database
 
-In a Cassandra general database, the timetrace table among others contains “snapshots”, which are used to visualize history alarm information in the DataMiner Cube history slider.
+In a Cassandra general database, the timetrace table among others contains "snapshots", which are used to visualize history alarm information in the DataMiner Cube history slider.
 
 - By default, timetrace snapshots are saved every 100 rows. To change this setting, set a different value in the *\<SnapshotInterval>* tag for the Cassandra database.
 
@@ -134,7 +135,7 @@ In a Cassandra general database, the timetrace table among others contains “sn
 In order to optimize the writing speed to a Cassandra database, an option can be specified that will skip the writing of the commit log.
 
 > [!CAUTION]
-> This option should only be used if performance of disk writes is an issue. It should never be used when two disks are in use or in a Failover setup. In general, we advise not to use this option. We are not responsible for any data loss caused if you do.
+> This option should only be used if performance of disk writes is an issue. It should never be used when two disks are in use or in a Failover setup. In general, we advise you not to use this option. We are not responsible for any data loss caused if you do.
 
 To add this option, In *DB.xml*, add a *\<SkipCommitLog>* tag to the currently active Cassandra database. For example:
 
@@ -205,7 +206,7 @@ If your DMS uses the Cassandra Cluster database type (i.e. one Cassandra cluster
 
 ### Example of a general database configuration
 
-The following example illustrates the configuration of a general database of type Cassandra cluster (i.e. one Cassandra cluster for the entire DMS, also known as the “Cassandra cluster” feature, available from DataMiner 10.1.0/10.1.2 onwards). As this also requires an OpenSearch or Elasticsearch database (see [Indexing database settings](#indexing-database-settings)), the configuration for this database is included in the example:
+The following example illustrates the configuration of a general database of type "CassandraCluster" (i.e. one Cassandra cluster for the entire DMS, see [Dedicated clustered storage](xref:Dedicated_clustered_storage)). As this also requires an OpenSearch or Elasticsearch database (see [Indexing database settings](#indexing-database-settings)), the configuration for this database is included in the example:
 
 ```xml
 <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
@@ -254,7 +255,7 @@ To configure this size limit:
 
 ## Offload database settings
 
-The configuration data for the offload or “central” database has to be specified in a *\<Database>* tag of which the *local* attribute is set to “false”.
+The configuration data for the offload or "central" database has to be specified in a *\<Database>* tag of which the *local* attribute is set to "false".
 
 > [!NOTE]
 > The *type* attribute of the *\<Database>* tag indicates whether a MySQL, MSSQL or Oracle database is used. If no *type* attribute is specified, MySQL is used as type.
@@ -332,7 +333,7 @@ In the following example, “1;TRUE” means that the real-time trend data recor
   <DataBase>
     <Offloads>
       ...
-      <Offload state="active" local="data" rate="5;FALSE" />
+      <Offload state="active" local="data" rate="1;TRUE" />
       ...
     </Offloads>
   </DataBase>
@@ -346,7 +347,7 @@ In the following example, “1;TRUE” means that the real-time trend data recor
 
 ### Configuring the collation for an MSSQL database
 
-In the Database.Collation tag, you can specify the collation for an offload database of type Microsoft SQL Server. The default collation is “SQL_Latin1_General_CP1_CI_AS”.
+In the Database.Collation tag, you can specify the collation for an offload database of type Microsoft SQL Server. The default collation is "SQL_Latin1_General_CP1_CI_AS".
 
 Example:
 
@@ -395,7 +396,7 @@ If the offload database is an Oracle Database, then add a *RemoteFileShare* tag 
 
 ### Offloading trend data even if no parameter values change
 
-From DataMiner 8.0.5 onwards, average trend information is only saved to the offload database when a parameter value changes. However, from DataMiner 9.0.0 CU10 onwards, you can add an option to the offload database configuration to revert to the behavior of older DataMiner versions, so that average trend information is offloaded regardless of whether parameter values have changed.
+By default, average trend information is only saved to the offload database when a parameter value changes. However, you can add an option to the offload database configuration to have average trend information offloaded regardless of whether parameter values have changed.
 
 To do so:
 
@@ -405,25 +406,23 @@ To do so:
 
 1. In the offload database's *\<offload>* tag containing *local="dataavg"*, add the option *oldstyle="true"*.
 
-    Example:
+   Example:
 
-    ```xml
-    <DataBase active="true" local="false" type="MSSQL">
-      ...
-      <Offloads>
-        ...
-        <Offload state="active" local="dataavg" remote="DataAvg" oldstyle="true" />
-      </Offloads>
-    </DataBase>
-    ```
+   ```xml
+   <DataBase active="true" local="false" type="MSSQL">
+     ...
+     <Offloads>
+       ...
+       <Offload state="active" local="dataavg" remote="DataAvg" oldstyle="true" />
+     </Offloads>
+   </DataBase>
+   ```
 
 1. Save and close *DB.xml*, and restart the DMA.
 
 ### Offloading files to a file cache
 
-To support the offload of files to a file cache instead of to a MySQL, MSSQL or Oracle offload database, a *FileCache* tag is supported in the DB.xml from DataMiner 10.0.11 onwards.
-
-To configure this:
+To support the offload of files to a file cache instead of to a MySQL, MSSQL, or Oracle offload database, the *FileCache* tag can be configured in the DB.xml:
 
 1. Stop the DMA.
 
@@ -433,20 +432,20 @@ To configure this:
 
 1. Set the *enabled* attribute of the tag to *true* and specify the maximum size of the cache in the *\<MaxSizeKB>* subtag (default = 10 GB).
 
-    For example:
+   For example:
 
-    ```xml
-    <DataBase active="true" local = "false">
-     <FileCache enabled="true">
-     <MaxSizeKB>10000</MaxSizeKB>
-     </FileCache>
-    </DataBase>
-    ```
+   ```xml
+   <DataBase active="true" local = "false">
+    <FileCache enabled="true">
+    <MaxSizeKB>10000</MaxSizeKB>
+    </FileCache>
+   </DataBase>
+   ```
 
 1. Save and close *DB.xml*, and restart the DMA.
 
 > [!NOTE]
-> In DataMiner 10.0.11, this can only be configured in *DB.xml*. However, from DataMiner 10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offload database](xref:Offload_database).
+> From DataMiner 10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offloading data](xref:Offload_database).
 
 ### Example of an offload database configuration
 
@@ -500,7 +499,7 @@ To configure this:
 
 ## Indexing database settings
 
-If a Cassandra database is used, an additional indexing database can be installed. In a setup with storage per DMA, only Elasticsearch is supported, but this setup is not recommended. In a clustered storage setup, you can use OpenSearch, Amazon OpenSearch Services, or Elasticsearch. This indexing database will also be added to *DB.xml*.
+In a self-managed storage setup with Cassandra, usually an indexing database is also installed, which can be OpenSearch or Elasticsearch. In a setup with storage per DMA, only Elasticsearch is supported, but this setup is not recommended. The indexing database will also be added to *DB.xml*.
 
 The *\<Database>* tag for an indexing database has the following attributes:
 
@@ -508,13 +507,11 @@ The *\<Database>* tag for an indexing database has the following attributes:
 
 - **search**: If set to true, indicates that the database is an indexing database.
 
-- **type**: Currently only “Elasticsearch” is supported. This same value is used For OpenSearch and Amazon OpenSearch Service databases.
+- **type**: Currently only "Elasticsearch" is supported. This same value is also used for OpenSearch.
 
 > [!NOTE]
 >
 > - There can only be one active indexing database on a DMA. However, that database can consist of multiple nodes. In that case, the IP addresses for these nodes are all added in the DBServer tag, separated by commas. For example: `<DBServer>10.10.10.1,10.10.10.2,10.10.10.3</DBServer>`
-> - From DataMiner 10.2.0/10.1.1 until DataMiner 10.3.0/10.3.3, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
-> - DataMiner 10.3.0 [CU0] up to 10.3.0 [CU8] and from DataMiner 10.3.3 up to 10.3.11, OpenSearch and Amazon OpenSearch Services can be used.
 > - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters) or [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
 > [!TIP]
@@ -522,7 +519,7 @@ The *\<Database>* tag for an indexing database has the following attributes:
 
 ### Defining a custom port for an indexing database
 
-From DataMiner 10.0.7 onwards, you can define a custom port for an indexing database. By default, port 9200 is used.
+You can define a custom port for an indexing database. By default, port 9200 is used.
 
 To define a different port:
 
@@ -532,20 +529,20 @@ To define a different port:
 
 1. In the \<DBServer> element for the indexing database, add a colon after the hostname or IP and specify the port.
 
-    For example:
+   For example:
 
-    ```xml
-    <DBServer>10.11.3.57:9201</DBServer>
-    ```
+   ```xml
+   <DBServer>10.11.3.57:9201</DBServer>
+   ```
 
-    > [!NOTE]
-    > The port specified in *DB.xml* must always be the same as the port defined in the configuration of the indexing database. For Elasticsearch, this configuration is by default located in the folder *C:\\Program Files\\Elasticsearch\\config\\elasticsearch.yml*.
+   > [!NOTE]
+   > The port specified in *DB.xml* must always be the same as the port defined in the configuration of the indexing database. For Elasticsearch, this configuration is by default located in the folder *C:\\Program Files\\Elasticsearch\\config\\elasticsearch.yml*.
 
 1. Save the file and restart the DMA.
 
 ### Specifying a custom prefix for the indexes
 
-To support the possibility to have two independent DataMiner Systems using the same indexing database cluster, from DataMiner 10.0.11 onwards, you can specify a custom prefix for the indices, instead of the default "dms" prefix.
+To support the possibility to have two independent DataMiner Systems using the same indexing database cluster, you can specify a custom prefix for the indices, instead of the default "dms" prefix.
 
 To do so:
 
@@ -559,7 +556,7 @@ To do so:
 
 ### Specifying custom credentials for OpenSearch or Elasticsearch
 
-From DataMiner 10.0.11 onwards, it is possible to configure a custom username and password for OpenSearch or Elasticsearch in *DB.xml*.
+It is possible to configure a custom username and password for OpenSearch or Elasticsearch in *DB.xml*.
 
 To do so:
 
@@ -569,15 +566,15 @@ To do so:
 
 1. In the *UID* and *PWD* elements below the Elasticsearch *Database* tag (which is also used for OpenSearch), specify the username and password, respectively.
 
-    For example:
+   For example:
 
-    ```xml
-    <DataBase active="true" search="true" type="Elasticsearch">
-     <DBServer>10.11.51.58</DBServer>
-     <UID>username</UID>
-     <PWD>password123</PWD>
-    </DataBase>
-    ```
+   ```xml
+   <DataBase active="true" search="true" type="Elasticsearch">
+    <DBServer>10.11.51.58</DBServer>
+    <UID>username</UID>
+    <PWD>password123</PWD>
+   </DataBase>
+   ```
 
 1. Save the file and restart the DMA.
 

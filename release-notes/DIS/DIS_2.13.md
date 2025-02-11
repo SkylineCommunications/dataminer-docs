@@ -8,11 +8,11 @@ uid: DIS_2.13
 
 ### IDE
 
-#### C# editor: DIS Inject functionality now supports debugging of code related to enhanced services \[ID_18342\]
+#### C# editor: DIS Inject functionality now supports debugging of code related to enhanced services \[ID 18342\]
 
 The DIS Inject functionality now also supports debugging of code related to enhanced services.
 
-#### XML editor: New snippets \[ID_19147\]\[ID_19273\]
+#### XML editor: New snippets \[ID 19147\]\[ID 19273\]
 
 When editing a protocol XML file or QAction code block, you can now insert the following new snippets:
 
@@ -31,15 +31,17 @@ When editing a protocol XML file or QAction code block, you can now insert the f
     bool IsLoadedInSLElement = MyClass.Retry(() => protocol.IsElementLoadedInSLElement(dmaId, elementId), new TimeSpan(0, 0, 2));
     ```
 
-#### XML editor: Checking two protocols for major changes \[ID_19288\]\[ID_19290\]
+#### XML editor: Checking two protocols for major changes \[ID 19288\]\[ID 19290\]
 
 It is now possible to compare two protocols and have the major changes displayed in the *DIS Validator* pane.
 
 To compare two protocols, do the following:
 
 1. Open both protocols in Visual Studio.
-2. At the top of the XML editor tab containing one of the protocols, open the *Validator* drop-down menu, and click *Compare*.
-3. In the *Major Change Check* window, select the two protocols to be compared, and click *Check*.
+
+1. At the top of the XML editor tab containing one of the protocols, open the *Validator* drop-down menu, and click *Compare*.
+
+1. In the *Major Change Check* window, select the two protocols to be compared, and click *Check*.
 
 > [!NOTE]
 >
@@ -51,7 +53,7 @@ At present, the following checks will be performed when you compare two protocol
 - Have parameter IDs been changed?
 - Have parameters been removed?
 
-#### Enhanced 'Generate Write Parameters' window \[ID_19588\]
+#### Enhanced 'Generate Write Parameters' window \[ID 19588\]
 
 The *Generate Write Parameters* window, which allows you to automatically generate parameters of type "write" for existing parameters of type “read”, now has two additional columns:
 
@@ -71,7 +73,7 @@ The *Generate Write Parameters* window, which allows you to automatically genera
 
 Also, when in the *Write ID* column a suggested parameter ID is not available, you can now click a "search for next available Write ID" button in the form of an arrow to replace the non-available ID by an available one.
 
-#### Analysis rules for QAction projects \[ID_19726\]
+#### Analysis rules for QAction projects \[ID 19726\]
 
 DIS will now define a default set of analysis rules for QAction projects. These rules can then be used by Visual Studio extensions like e.g. SonarLint to analyze the code.
 
@@ -80,7 +82,7 @@ DIS will now define a default set of analysis rules for QAction projects. These 
 > - When, in Visual Studio, your solution is in release mode, analysis is disabled for performance reasons.
 > - Analysis is always disabled for the QAction_Helper and QAction_Library projects.
 
-#### Display editor: Enhanced visualization of Data Display pages \[ID_19753\]
+#### Display editor: Enhanced visualization of Data Display pages \[ID 19753\]
 
 The *Pages* section of the display editor now visualizes data pages and popup windows in a tree view, similar to the way in which they are displayed in DataMiner Cube. Popup windows are shown as child items of the data pages in which they are defined.
 
@@ -89,13 +91,13 @@ Additional changes:
 - When you select a web interface page, the URL defined on that page can now be edited in the *Layout* section.
 - Warning icons will now appear next to pages that are empty and popup windows in which other popup windows are defined.
 
-#### C# editor: Additional hyperlink in file tab header to return to QAction or Exe code block in protocol or Automation script \[ID_19776\]
+#### C# editor: Additional hyperlink in file tab header to return to QAction or Exe code block in protocol or Automation script \[ID 19776\]
 
 Up to now, in the header of a file tab containing the C# code of a QAction or Exe code block, you could click a link to return to the file tab containing the associated protocol XML file or Automation script XML file at the location where the cursor was positioned when you last viewed the file.
 
 Now, an additional link will allow you to return to the associated protocol XML file or Automation script XML file at the location where the QAction or Exe code block is found.
 
-#### DIS Tree: Element breadcrumbs & enhanced DIS.JumpToDisTree keyboard shortcut \[ID_19810\]
+#### DIS Tree: Element breadcrumbs & enhanced DIS.JumpToDisTree keyboard shortcut \[ID 19810\]
 
 At the top of the DIS Tree window, there is now a breadcrumb control that allows you to quickly navigate to a particular location inside a protocol.xml file.
 
@@ -104,11 +106,11 @@ This control always shows the path towards the node that is currently selected i
 - If you click a breadcrumb (e.g. “Params”), the corresponding (parent) node will be selected in the tree view (e.g. “Params”).
 - If you click an arrow next to a breadcrumb, a drop-down list will open, allowing you to immediately navigate to one of the child nodes.
 
-Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. CTRL+1) has been enhanced. Up to now, this shortcut allowed you to select the DIS tree node representing the element you were editing in the XML editor. From now on, it will also allow you to select the DIS tree node representing the QAction you are editing in the C# editor.
+Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. Ctrl+1) has been enhanced. Up to now, this shortcut allowed you to select the DIS tree node representing the element you were editing in the XML editor. From now on, it will also allow you to select the DIS tree node representing the QAction you are editing in the C# editor.
 
 ### Validator
 
-#### Automatic error fixing \[ID_19712\]
+#### Automatic error fixing \[ID 19712\]
 
 The Validator is now able to automatically fix a number of common errors: replace all invalid characters in a parameter name with an underscore, trimming tag contents, etc.
 
@@ -127,7 +129,7 @@ If, instead of fixing just one error, you want to fix all errors of one particul
 - To fix all errors of a particular type, right-click an error, and select *Fix \> All errors of this type.*
 - To fix all errors of a particular severity, right-click that severity, and select *Fix \> All errors in this category.*
 
-#### Next-generation Validator \[ID_19714\]\[ID_19715\]\[ID_19976\]
+#### Next-generation Validator \[ID 19714\]\[ID 19715\]\[ID 19976\]
 
 From now on, the existing Validator and a new, next-generation Validator will run side by side until the former is retired at a later stage.
 
@@ -198,7 +200,7 @@ Also, the error messages shown in the UI have been redesigned. These now include
 
 ### XML Schema
 
-#### UOM Schema: New units added \[ID_19174\]
+#### UOM Schema: New units added \[ID 19174\]
 
 The following units have been added to the UOM Schema:
 
@@ -224,11 +226,11 @@ The following units have been added to the UOM Schema:
 - var
 - W/m^2
 
-#### UOM Schema: Updated units \[ID_19175\]
+#### UOM Schema: Updated units \[ID 19175\]
 
 Following a review of the UOM Schema, the following units have been updated for reasons of consistency.
 
-If you want to update these units in an existing protocol, open the protocol, click *Validate* at the top of the XML editor, and have these replaced automatically. See also [Automatic error fixing \[ID_19712\]](#automatic-error-fixing-id_19712).
+If you want to update these units in an existing protocol, open the protocol, click *Validate* at the top of the XML editor, and have these replaced automatically. See also [Automatic error fixing \[ID 19712\]](#automatic-error-fixing-id-19712).
 
 | Original unit   | Updated unit     |
 |-----------------|------------------|
@@ -394,7 +396,7 @@ If you want to update these units in an existing protocol, open the protocol, cl
 | words           | Words            |
 | Year(s)         | Years            |
 
-#### UOM Schema: New units added \[ID_19176\]
+#### UOM Schema: New units added \[ID 19176\]
 
 The following units have been added to the UOM Schema:
 
@@ -417,14 +419,14 @@ The following units have been added to the UOM Schema:
 - cmAq, cmHg, mmHg
 - Gy, ha, ft^2, ft^3, deg R, kat, m^2, m^3, Np, R, rad, sr, yd, yd/h, yd/s, gal
 
-#### Protocol Schema: Elements added \[ID_19865\]\[ID_19866\]\[ID_19867\]\[ID_19868\]
+#### Protocol Schema: Elements added \[ID 19865\]\[ID 19866\]\[ID 19867\]\[ID 19868\]
 
 The following elements have been added to the protocol Schema:
 
 - Protocol.PortSettings.SSH
 - Protocol.VersionHistory
 
-#### Protocol schema: Updated attribute rules \[ID_19869\]
+#### Protocol schema: Updated attribute rules \[ID 19869\]
 
 The following attribute now has a fixed value “credentials”:
 
@@ -438,11 +440,11 @@ The following attribute now has to refer to an existing parameter:
 
 ### Enhancements
 
-#### IDE - Table editor: ‘disable...’ column options no longer removed when alarm monitoring is disabled \[ID_18825\]
+#### IDE - Table editor: ‘disable...’ column options no longer removed when alarm monitoring is disabled \[ID 18825\]
 
 From now on, ‘disable...’ column options (e.g. ‘disableHistogram’) will no longer be removed when alarm monitoring is disabled.
 
-#### IDE - XML editor: Snippet enhancements \[ID_19148\]\[ID_19730\]\[ID_19912\]
+#### IDE - XML editor: Snippet enhancements \[ID 19148\]\[ID 19730\]\[ID 19912\]
 
 A number of snippets have been enhanced:
 
@@ -470,12 +472,12 @@ A number of snippets have been enhanced:
   - IsElementLoadedInSLElement
   - IsElementLoadedInSLNet
 
-#### SLNetTypes.dll updated to version 9.5.13 \[ID_19948\]
+#### SLNetTypes.dll updated to version 9.5.13 \[ID 19948\]
 
 The SLNetTypes.dll file has been updated to version 9.5.13. This will prevent compatibility issues when communicating with DataMiner Agents that run a newer DataMiner feature release.
 
 ### Fixes
 
-#### IDE: Problem with ‘Check for updates’ \[ID_19564\]
+#### IDE: Problem with ‘Check for updates’ \[ID 19564\]
 
 When you clicked *Check for updates...* in the *DCP* tab of the *DIS Settings* window, in some cases, the incorrect update package would be downloaded (insider build instead of main build, or vice versa).

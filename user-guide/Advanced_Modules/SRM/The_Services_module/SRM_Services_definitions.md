@@ -16,10 +16,7 @@ The navigation pane consists of two tabs:
 
   At the bottom of this pane, there are also two buttons, which can be used to delete a selected service definition or add a new service definition.
 
-  From DataMiner 9.6.6 onwards, the icon in the top-right corner of the tab allows you to toggle grouping of template service definitions and regular service definitions. This option is also available via the context menu of the tab.
-
-  > [!NOTE]
-  > Deleting service definitions is not possible until DataMiner 9.5.11.
+  The icon in the top-right corner of the tab allows you to toggle grouping of template service definitions and regular service definitions. This option is also available via the context menu of the tab.
 
 - The *All* tab allows you to filter the list of service definitions by specifying a time range and a filter. In the filter box, you can enter the following:
 
@@ -52,7 +49,7 @@ In the header section of the service definition panel, you can specify the follo
 - **Visio**: Allows you to select the Visio file that will be used for services generated for this service definition. Either select one of the available files in the drop-down list, or click *New upload* to add a new file.
 
   > [!NOTE]
-  > If a default Visio file has been specified for a service definition, assigning a different Visio file to a specific generated service is only possible from DataMiner 9.5.7 onwards. Customizing the Visio file for a specific generated service is only possible after a different Visio file has been assigned to the service.
+  > Customizing the Visio file for a specific generated service is only possible after a different Visio file has been assigned to the service.
 
 ## Configuration tab
 
@@ -73,7 +70,7 @@ To do so:
 
 1. You can then further refine the created setup if necessary:
 
-   - To further refine parameters for a particular node, select the node, and, in the lower right corner, specify a label and optionally specify a default profile instance, the profile instance assignment mode (from DataMiner 10.0.9 onwards), and parameter values. See [Service Orchestration profile instances configuration](xref:Service_Orchestration_profile_instances).
+   - To further refine parameters for a particular node, select the node, and, in the lower right corner, specify a label and optionally specify a default profile instance, the profile instance assignment mode, and parameter values. See [Service Orchestration profile instances configuration](xref:Service_Orchestration_profile_instances).
 
      > [!NOTE]
      > Parameter profiles are created in the *Profiles* module. See [Configuring profile parameters](xref:Configuring_profile_parameters).
@@ -81,7 +78,7 @@ To do so:
    - To add properties to a particular node, interface or connection, select the node, interface or connection in the diagram, and, in the *properties* tab in the lower right corner, click the *Add* button and specify the property.
 
      > [!NOTE]
-     > From DataMiner 9.5.5 onwards, when you add properties to service definition objects in Cube, these properties are also added in *PropertyConfiguration.xml*. Only properties in that file are visible in the UI. If you add properties via Automation scripts, these will remain hidden from the user if they are not defined in *PropertyConfiguration.xml*.
+     > When you add properties to service definition objects in Cube, these properties are also added in *PropertyConfiguration.xml*. Only properties in that file are visible in the UI. If you add properties via Automation scripts, these will remain hidden from the user if they are not defined in *PropertyConfiguration.xml*.
 
    - To define logical groups of nodes:
 
@@ -120,7 +117,7 @@ To remove one of the added scripts, select it and click the *Delete* button in t
 
 ## Profiles tab
 
-This tab is available from DataMiner 9.6.5 onwards. It allows you to link profile definitions to the selected service definition.
+This tab allows you to link profile definitions to the selected service definition.
 
 In the *Add service profile* drop-down box, all profile definitions configured in the *Profiles* module are available.
 

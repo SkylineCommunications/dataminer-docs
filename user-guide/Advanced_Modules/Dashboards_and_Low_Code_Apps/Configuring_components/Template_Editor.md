@@ -1,5 +1,6 @@
 ---
 uid: Template_Editor
+keywords: table templates
 ---
 
 # Using the Template Editor
@@ -20,7 +21,7 @@ The Template Editor is currently supported for the following components:
 
 - For the **grid** and **timeline** components:
 
-  1. Select the component and go to the *Layout* tab on the right.
+  1. Select the component and go to the *Layout* pane on the right.
 
   1. In the *Item templates* section, click *Edit*.
 
@@ -29,7 +30,7 @@ The Template Editor is currently supported for the following components:
 
 - For the **table** component:
 
-  1. Select the component and go to the *Layout* tab on the right.
+  1. Select the component and go to the *Layout* pane on the right.
 
   1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to create a template for.
 
@@ -37,7 +38,7 @@ The Template Editor is currently supported for the following components:
 
 - For the **maps** component:
 
-  1. Select the component and go to the *Layout* tab on the right.
+  1. Select the component and go to the *Layout* pane on the right.
 
   1. Under the *Layer settings* for a specific layer of the map, click *Edit* in the template section.
 
@@ -361,7 +362,7 @@ This is the behavior that will result from this configuration:
 
 If you have already configured a template for a component of the same type in the same dashboard or low-code app you are working on, you can reuse a template<!--RN 34948-->. Only available for the grid and timeline components.
 
-1. Select the component and go the *Layout* tab on the right.
+1. Select the component and go the *Layout* pane on the right.
 
 1. Under *Item templates*, click *Reuse template*.
 
@@ -375,7 +376,7 @@ If you have already configured a template for a component of the same type in th
 
 - For the **maps** component:
 
-  1. Select the component and go to the *Layout* tab on the right.
+  1. Select the component and go to the *Layout* pane on the right.
 
   1. Under the *Layer settings* for a specific layer of the map, click *Reuse template* in the template section.
 

@@ -5,7 +5,7 @@ keywords: Azure AD, AzureAD, Microsoft Entra ID, SAML, Okta, Azure B2C
 
 # Configuring SAML settings
 
-If you want to configure your DataMiner System to use external authentication, the best way to do so is using SAML (Security Assertion Markup Language). This is supported from DataMiner 9.6.11 onwards.
+If you want to configure your DataMiner System to use external authentication, the best way to do so is using SAML (Security Assertion Markup Language).
 
 To configure SAML, you will first need to set up authentication. For this, you need to generate a metadata file for the service provider (i.e. DataMiner) and a metadata file for the identity provider, and DataMiner and the identity provider need to exchange metadata files. This way, a trust relationship between the two is established. The following metadata must be shared between DataMiner and the identity provider service: Entity ID, Cryptographic Keys, Protocol Endpoints (bindings, locations). Once this is done, you then need to configure user provisioning.
 

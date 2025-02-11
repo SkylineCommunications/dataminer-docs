@@ -24,13 +24,7 @@ Add a shape data field of type **InitVar** to the page, and set its value to:
 VariableName:Value
 ```
 
-Depending on the DataMiner version, different placeholders are supported for this shape data field:
-
-| Minimum DataMiner version | Supported placeholders |
-| ------------------------- | ---------------------- |
-| 9.0.0  | \[Guid\], \[thisusername\], \[thisuserfullname\] and \[thismac\] |
-| 9.5.1  | \[ThisGroup\] |
-| 9.5.13 | From this version onwards, dynamic content in general is supported in this shape data. This means the following placeholders are supported: \[This Service\], \[This ServiceID\], \[This EnhancedServiceID\], \[This View\], \[This ViewID\], \[This Element\], \[This ElementID\], \[This Card Object\], \[This Card ObjectID\], \[FirstMac\]. |
+Dynamic content is supported in this shape data. You can use the placeholders [\[Guid\]](xref:Placeholders_for_variables_in_shape_data_values#guid), [\[thisusername\]](xref:Placeholders_for_variables_in_shape_data_values#thisusername), [\[thisuserfullname\]](xref:Placeholders_for_variables_in_shape_data_values#thisuserfullname), [\[ThisGroup\]](xref:Placeholders_for_variables_in_shape_data_values#thisgroup), [\[thismac\]](xref:Placeholders_for_variables_in_shape_data_values#thismac), [\[This Service\]](xref:Placeholders_for_variables_in_shape_data_values#this-service), [\[This ServiceID\]](xref:Placeholders_for_variables_in_shape_data_values#this-serviceid), [\[This EnhancedServiceID\]](xref:Placeholders_for_variables_in_shape_data_values#this-enhancedserviceid), [\[This View\]](xref:Placeholders_for_variables_in_shape_data_values#this-view), [\[This ViewID\]](xref:Placeholders_for_variables_in_shape_data_values#this-viewid), [\[This Element\]](xref:Placeholders_for_variables_in_shape_data_values#this-element), [\[This ElementID\]](xref:Placeholders_for_variables_in_shape_data_values#this-elementid), [\[This Card Object\]](xref:Placeholders_for_variables_in_shape_data_values#this-card-object), [\[This Card ObjectID\]](xref:Placeholders_for_variables_in_shape_data_values#this-card-objectid), or [\[FirstMac\]](xref:Placeholders_for_variables_in_shape_data_values#firstmac).
 
 > [!NOTE]
 > If you want to initialize multiple values, separate the entries by pipe characters.

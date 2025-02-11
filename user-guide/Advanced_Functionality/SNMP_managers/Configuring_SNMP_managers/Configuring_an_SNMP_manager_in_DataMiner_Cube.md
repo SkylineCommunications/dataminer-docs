@@ -14,13 +14,13 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
 1. In the *general* tab, specify the following properties, and click *Next*.
 
-   - **Name**: The name of the SNMP manager (e.g. “HP OpenView”, “IBM Tivoli Netcool”, etc.).
+   - **Name**: The name of the SNMP manager (e.g. "HP OpenView", "IBM Tivoli Netcool", etc.).
 
    - **IP address**: The IP address of the SNMP manager, i.e. the address to which the SNMP notifications will be sent.
 
    - **Get community string**: The community string to be used in all SNMP notifications toward the SNMP manager you are configuring.
 
-   - **Custom notification description**: The notification description that will appear in the default “trap description” binding.
+   - **Custom notification description**: The notification description that will appear in the default "trap description" binding.
 
    - **SNMP version**: The SNMP version: *SNMPv1*, *SNMPv2* (default), or *SNMPv3*.
 
@@ -46,9 +46,9 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
    - **Authoritative engine ID**: A hexadecimal string of maximum 64 characters. If left empty, DataMiner will automatically generate an ID.
 
-   - **Authentication algorithm**: Not available if *NoAuth_NoPriv* is selected. Up to DataMiner 9.6.11, either *HMAC-SHA* or *HMAC-MD5*. From DataMiner 9.6.12 onwards, you can choose between *MD5*, *SHA-1*28, *SHA-224*, *SHA-256*, *SHA-384* and *SHA-512*.
+   - **Authentication algorithm**: Not available if *NoAuth_NoPriv* is selected. Supported algorithms: *MD5*, *SHA-128*, *SHA-224*, *SHA-256*, *SHA-384*, and *SHA-512*.
 
-   - **Encryption algorithm**: Only available if *Auth_Priv* is selected. Up to DataMiner 9.6.11, either *DES* or *AES128*. From DataMiner 9.6.12 onwards, you can choose between *AES-128*, *AES-192*, *AES-256* and *DES*.
+   - **Encryption algorithm**: Only available if *Auth_Priv* is selected. Supported algorithms: *AES-128*, *AES-192*, *AES-256*, and *DES*.
 
    > [!NOTE]
    > The following combinations of authentication and encryption algorithm are not supported:
@@ -56,11 +56,9 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
    > - MD5/SHA128 and AES192
    > - MD5/SHA128/SHA224 and AES256
    >
-   > We recommend that you use SHA-512 and AES-256, since this is the most secure combination.
+   > We recommend using SHA-512 and AES-256, since this is the most secure combination.
 
-1. Prior to DataMiner 10.0.0 CU11/10.1.3 only: In the *General* section of the *notification* tab, make sure *Support international characters (Unicode)* is selected if the notifications will contain international characters.
-
-1. From DataMiner 10.0.0 CU11/10.1.3 onwards: At the top of the *notification* tab, select a different encoding type if necessary.
+1. At the top of the *notification* tab, select a different encoding type if necessary.
 
 1. In the *OID* section of the *notification* tab, specify the following options, depending on the SNMP version selected in the *general* tab:
 
@@ -78,13 +76,12 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
      - **Use custom bindings with OID: ...**: Select this option to use custom bindings.
 
-     - **Custom bindings**: To configure custom bindings, use the *Add*, *Delete*, *Up* and *Down* buttons in this section.
+     - **Custom bindings**: To configure custom bindings, use the *Add*, *Delete*, *Up*, and *Down* buttons in this section.
 
    > [!NOTE]
    >
    > - Custom bindings cannot be used if you use the default OID.
    > - For more information on custom bindings, see [Custom DataMiner notification](xref:Custom_DataMiner_notification).
-   > - If custom bindings are used, it is possible to export a MIB file for the SNMP manager. From DataMiner 10.0.10 onwards, click the *Generate MIB file* button below the custom bindings to do so. In DataMiner 10.0.9, use the SLNetClientTest tool to do so (see [Generating SMIv2 MIB files](xref:SLNetClientTest_generating_mib_files)).
 
 1. In the *resend* tab, specify the following options:
 
@@ -103,7 +100,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
      > [!NOTE]
      > You may need to expand the *Advanced* section to see some of these options.
 
-   - In addition, for notification type “Inform messages” only:
+   - In addition, for notification type "Inform messages" only:
 
      - **Retry every ...**:** The period of time DataMiner will wait for an acknowledgment after sending an inform message.
 
@@ -151,9 +148,9 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
 1. Click *Next* to go the *alarm storm* tab, and specify the necessary options for alarm storm prevention:
 
-   - **Enable alarm storm prevention**: Select this option to activate alarm storm prevention. In that case, when a large number of alarms occur immediately after one another, only two notifications are sent to the SNMP manager: “AlarmStorm started”, with the highest severity of the occurring alarms, and “AlarmStorm stopped”, with severity Normal. Prior to DataMiner 10.0.8, these alarms must occur on the same parameter.
+   - **Enable alarm storm prevention**: Select this option to activate alarm storm prevention. In that case, when a large number of alarms occur immediately after one another, only two notifications are sent to the SNMP manager: "AlarmStorm started", with the highest severity of the occurring alarms, and "AlarmStorm stopped", with severity Normal.
 
-   - **Group alarms with the same parameter name**: Available from DataMiner 10.0.8 onwards. If this option is selected, alarm storm prevention happens based on the number of alarms occurring per parameter; otherwise, it happens based on the number of alarms across parameters. By default, this option is selected.
+   - **Group alarms with the same parameter name**: If this option is selected, alarm storm prevention happens based on the number of alarms occurring per parameter; otherwise, it happens based on the number of alarms across parameters. By default, this option is selected.
 
    - **Minimum number of alarms to lead to an alarm storm**: The minimum number of alarms that must occur on the parameter before the alarm storm starts. This value must be between 5 and 1000.
 

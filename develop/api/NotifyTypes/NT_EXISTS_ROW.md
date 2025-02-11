@@ -24,4 +24,4 @@ bool rowExists = Convert.ToBoolean(protocol.NotifyProtocol(265/*NT_EXISTS_ROW*/,
 
 ## See also
 
-- Exists
+- [Exists (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.Exists(System.Int32,System.String)) method

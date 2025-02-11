@@ -8,23 +8,25 @@ uid: Web_apps_Main_Release_10.3.0_CU5
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU5](xref:General_Main_Release_10.3.0_CU5).
+>
+> - For release notes related to the general DataMiner release, see [General Main Release 10.3.0 CU5](xref:General_Main_Release_10.3.0_CU5).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.3.0 CU5](xref:Cube_Main_Release_10.3.0_CU5).
 
 ### Enhancements
 
-#### Low-Code Apps - Action editor: 'Which scheduler?' button has now been renamed to 'Which timeline?' [ID_36530]
+#### Low-Code Apps - Action editor: 'Which scheduler?' button has now been renamed to 'Which timeline?' [ID 36530]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 In the action editor, the *Which scheduler?* button has now been renamed to *Which timeline?*.
 
-#### Dashboards app & Low-Code Apps: Enhanced error handling while exporting trend data to a CSV file [ID_36627]
+#### Dashboards app & Low-Code Apps: Enhanced error handling while exporting trend data to a CSV file [ID 36627]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 A number of enhancements have been made with regard to error handling while exporting trend data to a CSV file.
 
-#### GQI session recording: Time and disk space limits [ID_36642]
+#### GQI session recording: Time and disk space limits [ID 36642]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
@@ -53,7 +55,7 @@ As a precaution against these recordings taking too much disk space, the followi
 > - These enhancements will now prevent the following known issue from occurring: [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size).
 > - See also [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
 
-#### GQI - 'Get parameters for elements where' data source: columnInfo object of columns of type 'discrete' will now contain the possible values [ID_36702]
+#### GQI - 'Get parameters for elements where' data source: columnInfo object of columns of type 'discrete' will now contain the possible values [ID 36702]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
@@ -61,61 +63,61 @@ For each of the columns of type "discrete" in the *Get parameters for elements w
 
 ### Fixes
 
-#### Dashboards app & Low-Code Apps: Feed would not be cleared when data was refetched [ID_36478]
+#### Dashboards app & Low-Code Apps: Feed would not be cleared when data was refetched [ID 36478]
 
 <!-- MR 10.3.0 [CU5] - FR TBD -->
 
 Up to now, when the data of a GQI component was refetched, the selection was cleared, but the feed would not. From now on, the feed will also be cleared when the data is refetched.
 
-#### Low-Code Apps: Application would be updated each time you hit a key after changing a page name [ID_36479]
+#### Low-Code Apps: Application would be updated each time you hit a key after changing a page name [ID 36479]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When you changed the name of a low-code app page, the application would incorrectly be updated each time you hit a key. From now on, the application will be updated 250 ms after the last keystroke.
 
-#### Dashboards app & Low-Code Apps: Problem when migrating a query to the current GQI version [ID_36552]
+#### Dashboards app & Low-Code Apps: Problem when migrating a query to the current GQI version [ID 36552]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When you opened a query that was created using an older GQI version, and that query was configured to start from another query recursively in combination with joins, in some cases, it would incorrectly be migrated to the current GQI version.
 
-#### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID_36571]
+#### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID 36571]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
 
 When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.
 
-#### Dashboards app: Problem when a pie or bar chart was updated in the background on a volatile dashboard [ID_36576]
+#### Dashboards app: Problem when a pie or bar chart was updated in the background on a volatile dashboard [ID 36576]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.
 
-#### Dashboards app & Low-Code Apps: Pie chart components would not update properly [ID_36612]
+#### Dashboards app & Low-Code Apps: Pie chart components would not update properly [ID 36612]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 Pie chart components would not update properly while visualizing data from a query with variable input, especially when the number of rows returned by the query changed.
 
-#### Dashboards app & Low-Code Apps: Changes in grouped feed data would not get detected [ID_36615]
+#### Dashboards app & Low-Code Apps: Changes in grouped feed data would not get detected [ID 36615]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When the feed data linked to a query was grouped, changes to that feed data would not get detected by the query. In other words, the GQI components showing the result of the query would not update when data selection changed in the feed.
 
-#### Dashboards app & Low-Code Apps: Problem with large tables in PDF reports [ID_36616]
+#### Dashboards app & Low-Code Apps: Problem with large tables in PDF reports [ID 36616]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
 
 When you generated a PDF report of a dashboard that contained a large table, in the PDF report, the table would incorrectly not contain all rows. Moreover, the rows in the table would all show a loading state.
 
-#### Low-Code Apps: Problem when immediately deleting a newly created app [ID_36648]
+#### Low-Code Apps: Problem when immediately deleting a newly created app [ID 36648]
 
 <!-- MR 10.3.0 [CU5] - FR TBD -->
 
 When you immediately deleted a newly created low-code app, in some cases, a `Cannot read properties of undefined` error message would appear.
 
-#### Dashboards app & Low-Code Apps - Numeric input component: Input field would incorrectly be set to the minimum value after a refresh [ID_36677]
+#### Dashboards app & Low-Code Apps - Numeric input component: Input field would incorrectly be set to the minimum value after a refresh [ID 36677]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 

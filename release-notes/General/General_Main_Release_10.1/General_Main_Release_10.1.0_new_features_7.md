@@ -21,21 +21,21 @@ uid: General_Main_Release_10.1.0_new_features_7
 
 ### DMS Spectrum Analysis
 
-#### DataMiner Cube - Spectrum Analysis: Button to apply all settings at once \[ID_25242\]
+#### DataMiner Cube - Spectrum Analysis: Button to apply all settings at once \[ID 25242\]
 
 On a spectrum analyzer element card, an "Apply all" button is now available in the settings pane, so that you can configure several settings and then apply them all at the same time.
 
-#### DataMiner Cube - Spectrum Analysis: Y axis of spectrum graph will no longer show values with 3 decimals if the reference level is shown in dBm and no decimal accuracy is being used \[ID_25250\]
+#### DataMiner Cube - Spectrum Analysis: Y axis of spectrum graph will no longer show values with 3 decimals if the reference level is shown in dBm and no decimal accuracy is being used \[ID 25250\]
 
 If the reference level is shown in dBm and no decimal accuracy is being used, from now on, the Y axis of a spectrum graph will no longer show values with 3 decimals.
 
-#### DataMiner Cube - Spectrum Analysis: A preset will now also include the decimals to be used when displaying DBm values in spectrum graphs \[ID_25871\]
+#### DataMiner Cube - Spectrum Analysis: A preset will now also include the decimals to be used when displaying DBm values in spectrum graphs \[ID 25871\]
 
 When you save a spectrum preset, from now on, that preset will also include the amount of decimals to be used when displaying DBm values on the Y axis of a spectrum graph.
 
 ### DMS tools
 
-#### SLLogCollector: New tool to collect log files and memory dumps and send them to Skyline support \[ID_25346\]\[ID_25631\]
+#### SLLogCollector: New tool to collect log files and memory dumps and send them to Skyline support \[ID 25346\]\[ID 25631\]
 
 From now on, the SLLogCollector tool will be available on all DataMiner Agents.
 
@@ -51,7 +51,7 @@ When you launch the tool, the following options will be selected by default:
 
 - Save to SLLogCollector folder on desktop
 
-#### SLReset: Factory reset tool \[ID_26026\]\[ID_26408\]\[ID_27227\]
+#### SLReset: Factory reset tool \[ID 26026\]\[ID 26408\]\[ID 27227\]
 
 SLReset.exe is a new tool that can be used to fully reset a DataMiner Agent to its state immediately after installation. It is located in the C:\\Skyline DataMiner\\Files\\ folder.
 
@@ -165,7 +165,7 @@ This tool, when run with the factory-reset argument, resets the currently active
 > - When you perform a factory reset, no backup of the DataMiner Agent will be taken.
 > - SLReset must be run with administrative privileges.
 
-#### SLNetClientTest tool: Generating SMIv2 MIB files \[ID_26320\]
+#### SLNetClientTest tool: Generating SMIv2 MIB files \[ID 26320\]
 
 In the SLNetClientTest tool, you can now generate SMIv2 MIB files for SNMP managers of type SNMPv2 and SNMPv3.
 
@@ -174,18 +174,18 @@ To do so, go to *Advanced \> Tests \> Generate MIB for SNMP Manager*, select an
 > [!WARNING]
 > The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe).
 
-#### DMS Alerter: New 'Set the alarm as read in Cube after the alarm has been acknowledged' setting \[ID_26579\]
+#### DMS Alerter: New 'Set the alarm as read in Cube after the alarm has been acknowledged' setting \[ID 26579\]
 
 When, in DMS Alerter, the new *Set the alarm as read in Cube after the alarm has been acknowledged* setting is enabled, each time you acknowledge an alarm in DMS Alerter, that same alarm will automatically be marked as “read” in DataMiner Cube.
 
 > [!NOTE]
 > This feature will only work if one and the same user is running both DMS Alerter and DataMiner Cube on the same client machine.
 
-#### DMS Alerter: New 'Hide the comment window when acknowledging an alarm' setting \[ID_26621\]
+#### DMS Alerter: New 'Hide the comment window when acknowledging an alarm' setting \[ID 26621\]
 
 A new setting, *Hide the comment window when acknowledging an alarm*, is available in the Alerter app. If this setting is enabled, you can take ownership of an alarm in an Alerter pop-up balloon without having to add a comment.
 
-#### StandaloneElasticBackup tool \[ID_27683\]
+#### StandaloneElasticBackup tool \[ID 27683\]
 
 The StandaloneElasticBackup.exe tool allows you to back up and restore Elasticsearch database clusters.
 
@@ -257,14 +257,14 @@ Run StandaloneElasticBackup.exe with the following two (mandatory) arguments to 
 > - If, before restoring a backup, you notice that all data was deleted from the database, then re-initialize the repository.
 > - It is advised to disable security when restoring a backup with security enabled. To do so, comment the security setting in the yaml file.
 
-#### SLNetClientTest: Viewing and deleting trend data patterns \[ID_28098\]
+#### SLNetClientTest: Viewing and deleting trend data patterns \[ID 28098\]
 
 In the SLNetClientTest program, it is now possible to view and delete trend data patterns.
 
 > [!WARNING]
 > The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe).
 
-#### SLNetClientTest: Viewing and editing SLNet configuration options with regard to NATS \[ID_28683\]
+#### SLNetClientTest: Viewing and editing SLNet configuration options with regard to NATS \[ID 28683\]
 
 In the SLNetClientTest program, it is now possible to view and edit the following SLNet configuration options with regard to NATS, which are stored in the MaintenanceSettings.xml file:
 

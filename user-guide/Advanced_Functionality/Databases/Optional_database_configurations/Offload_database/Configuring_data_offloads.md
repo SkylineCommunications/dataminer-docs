@@ -1,22 +1,26 @@
 ---
 uid: Configuring_data_offloads
+keywords: central database
 ---
 
 # Configuring data offloads
 
-In this section:
+> [!NOTE]
+> This feature is not available if [Swarming](xref:Swarming) is enabled.
 
-- [Configuring the offload rate](#configuring-the-offload-rate)
+## Configuring offloads to files
 
-- [Disabling data offloads to the offload database on element level](#disabling-data-offloads-to-the-offload-database-on-element-level)
+Offloading data to files is supported from DataMiner 10.2.0/10.1.1 onwards. To do so:
 
-- [Configuring trend templates to exclude/include data in offloads](#configuring-trend-templates-to-excludeinclude-data-in-offloads)
+1. Go to System Center > *Database* > *Offload* and select *File* in the drop-down box at the top.
+
+1. Configure the data offloads as detailed below and set a maximum size for the combined offload files.
 
 ## Configuring the offload rate
 
 The offload rate for trend data and alarm data can be configured in System Center.
 
-1. In DataMiner Cube, go to *System Center \>* *Database \> Central* (prior to DataMiner 10.0.13) or *System Center \>* *Database \> Offload* (from DataMiner 10.0.13 onwards).
+1. In DataMiner Cube, go to *System Center \>* *Database \> Offload*.
 
 1. To set a custom offload interval, at the top of the *Offloads* section, specify a different interval between 1 and 1440 minutes (i.e. 1 day).
 
@@ -37,15 +41,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
    - The interval at which these offloads are generated: A number of minutes between 1 and 1440 (i.e. 1 day), or instantly.
 
-     > [!NOTE]
-     > Though the offload rate can be customized with this option, the forwarding rate, i.e. the rate at which trend data is actually forwarded to the offload database, is fixed at every 5 minutes up to DataMiner 9.6.0. From DataMiner 9.6.1 onwards, this rate can be configured at the top of the *Offloads* section.
-
    - The time when the offload to the database first begins, in the format hh:mm:ss. This setting is only implemented at startup, so if you change the setting while the DMA is running, it will need to be restarted for the change to take effect.
-
-   - *Snapshot mode*: When this mode is selected, only parameters for which the snapshot option has been set in the protocol are offloaded.
-
-     > [!NOTE]
-     > From DataMiner 9.5.4 onwards, snapshot mode is activated with a separate option below. In addition, from this version onwards, information templates allow you to select whether parameters should be included in offload database snapshots. See [Creating an information template](xref:Creating_an_information_template).
 
    - *Remote table name*: Allows you to customize the name of the table containing this data in the offload database. The default name is *Data*.
 
@@ -60,7 +56,7 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
    - *Remote table name*: Allows you to customize the name of the table containing this data in the offload database. The default name is *DataAvg*.
 
-1. From DataMiner 9.5.4 onwards, to offload snapshots (i.e. parameter information for parameters for which the snapshot option has been set in the protocol), select *Parameter value* and *Enable snapshot offload*. The snapshot offloads can then be further fine-tuned as follows:
+1. To offload snapshots (i.e. parameter information for parameters for which the snapshot option has been set in the protocol), select *Parameter value* and *Enable snapshot offload*. The snapshot offloads can then be further fine-tuned as follows:
 
    - Select to offload *All parameter values* or only *All changed parameter values*.
 
@@ -73,7 +69,10 @@ The offload rate for trend data and alarm data can be configured in System Cente
    - If all previous values should be removed from the database each time a new snapshot is offloaded, make sure the option *Only keep the latest parameter value in the database* is selected. If this option is not selected, all values will be kept.
 
      > [!NOTE]
-     > This option corresponds with the `clean="true"` configuration in the Offload tag in DB.xml. If it is activated, DataMiner will truncate the data table in the offload database before new information is added. This way, the table always contains the latest snapshot information only.
+     > This option corresponds with the `clean="true"` configuration in the *Offload* tag in *DB.xml*. If it is activated, DataMiner will truncate the data table in the offload database before new information is added. This way, the table always contains the latest snapshot information only.
+
+   > [!TIP]
+   > In an information template, you can configure specific parameters to be included in offload database snapshots. See [Creating an information template](xref:Creating_an_information_template).
 
 ## Disabling data offloads to the offload database on element level
 
@@ -109,11 +108,11 @@ If, for a particular element, you want to disable data offloads to the offload d
 
 ## Configuring trend templates to exclude/include data in offloads
 
-From DataMiner 9.5.4 onwards, it is possible to configure whether real-time and/or average trending for particular parameters should be included in offloads. This can be done directly in the trend template containing these parameters:
+It is possible to configure whether real-time and/or average trending for particular parameters should be included in offloads. This can be done directly in the trend template containing these parameters:
 
 1. Open the appropriate trend template in the Protocols & Templates module in Cube.
 
-1. Click the options button in the top right corner and select *Allow central database offload configuration* (prior to DataMiner 10.1.0/10.1.1) or *Allow offload database configuration* (from DataMiner 10.1.0/10.1.1 onwards).
+1. Click the options button in the top right corner and select *Allow offload database configuration*.
 
 1. For each parameter, in the *Offload real-time* and *Offload average* columns, click the buttons until the correct configuration is displayed.
 

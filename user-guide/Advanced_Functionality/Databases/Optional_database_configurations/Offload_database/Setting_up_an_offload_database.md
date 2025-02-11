@@ -1,12 +1,16 @@
 ---
 uid: Setting_up_an_offload_database
+keywords: central database
 ---
 
 # Setting up an offload database
 
+> [!NOTE]
+> This feature is not available if [Swarming](xref:Swarming) is enabled.
+
 ## Server configuration
 
-The first step in setting up an offload or “central” database is the configuration of the server that will host the offload database.
+The first step in setting up an offload or "central" database is the configuration of the server that will host the offload database.
 
 Depending on the type of database, the procedure is slightly different.
 
@@ -16,8 +20,7 @@ Depending on the type of database, the procedure is slightly different.
 
      > [!NOTE]
      >
-     > - For DataMiner versions up to DataMiner 9.6.5, MySQL versions 4.1.1 to 5.7 are supported (using connector version 5.2.7). From DataMiner 9.6.5 onwards, versions up to 8.0 are supported (using connector version 6.9.12).
-     > - To use MySQL 8.0, an additional change is needed within the database. You need to set the *local_infile* variable to 1. In previous versions, this was not a default version, but this has changed. To do this in the database, you can use the command `SET GLOBAL local_infile=1;`.
+     > - MySQL versions up to 8.0 are supported (using connector version 6.9.12). However, to use MySQL 8.0, an additional change is needed within the database. You need to set the *local_infile* variable to 1. In previous versions, this was not a default version, but this has changed. To do this in the database, you can use the command `SET GLOBAL local_infile=1;`.
      > - For MySQL, do not activate strict mode (STRICT_TRANS_TABLES) during installation. If you do so, the database offloads will fail.
 
    - MSSQL Server
@@ -52,11 +55,11 @@ Depending on the type of database, the procedure is slightly different.
    > [!NOTE]
    >
    > - The user accounts should at least be granted the following rights:
-   >     - SELECT
-   >     - INSERT
+   >   - SELECT
+   >   - INSERT
    > - Make sure the user account has access to the database server from the DMA, so that it can reach the offload database.
 
-1. Create a database (e.g. named “sldmsdb”) and tables:
+1. Create a database (e.g. named "sldmsdb") and tables:
 
    - In MySQL:
 
@@ -64,7 +67,7 @@ Depending on the type of database, the procedure is slightly different.
 
      1. In the right-click menu, select *Make new \> Database*.
 
-     1. Fill in “sldmsdb” as the database name, make sure *Collation* is set to *utf8 - default collation* and click *OK*.
+     1. Fill in "sldmsdb" as the database name, make sure *Collation* is set to *utf8 - default collation* and click *OK*.
 
      1. From the *C:\\Skyline DataMiner\\Tools* directory, run the following script to create the tables: *CentralTabledef.txt*.
 
@@ -79,7 +82,7 @@ Depending on the type of database, the procedure is slightly different.
 
      1. Right-click *Databases* and select *New Database*.
 
-     1. Fill in “SLDMSDB” as *Database name*, and click *OK*.
+     1. Fill in "SLDMSDB" as *Database name*, and click *OK*.
 
      1. From the *C:\\Skyline DataMiner\\Tools* directory, run the following script to create the tables: *CentralTableDefSQLServer.sql*.
 
@@ -88,7 +91,7 @@ Depending on the type of database, the procedure is slightly different.
    > [!TIP]
    > See also: [Automatic creation and verification of the offload database](#automatic-creation-and-verification-of-the-offload-database)
 
-1. For an Oracle Database, create a shared folder on the database server and give it an appropriate name (e.g. “DataMinerOffload”).
+1. For an Oracle Database, create a shared folder on the database server and give it an appropriate name (e.g. "DataMinerOffload").
 
    Also grant the following permission to the database user:
 
@@ -149,14 +152,7 @@ The final step is the configuration of the DMS.
    1. Click the *Share* button.
 
    > [!NOTE]
-   > It is important that “Everyone” has read/write permissions. Otherwise, the DMA will not be able to store data in the CSV files.
-
-1. For DMAs using a legacy DataMiner version prior to 9.0.0, if the offload database is an Oracle database, install the Oracle Data Access Component (ODAC). The Oracle Client must be at least version 12.
-
-   Download: [http://www.oracle.com/tecbhnetwork/topics/dotnet/utilsoft-086879.html](http://www.oracle.com/technetwork/topics/dotnet/utilsoft-086879.html)
-
-   > [!NOTE]
-   > From DataMiner 9.0.0 onwards, the SLDatabase process uses the managed Oracle Database accessor to connect to an Oracle database, so that additional tools like Oracle Client are no longer needed.
+   > It is important that "Everyone" has read/write permissions. Otherwise, the DMA will not be able to store data in the CSV files.
 
 1. For MSSQL only, activate TCP/IP:
 
@@ -176,11 +172,9 @@ The final step is the configuration of the DMS.
 
    1. Close the SQL Server Configuration Manager.
 
-1. In Cube, configure the offload or “central” database settings for each DMA in the DMS.
+1. In Cube, configure the offload or "central" database settings for each DMA in the DMS.
 
-   1. Go to *System Center \>* *Database \> Offload* (from DataMiner 10.0.13 onwards) or *System Center \>* *Database \> Central* (prior to DataMiner 10.0.13).
-
-   1. Prior to DataMiner 10.0.13 only: In the column on the left, select any of the Agents in the DMS. The offload database will always be synced with the entire DMS, so it is irrelevant which Agent is selected.
+   1. Go to *System Center \>* *Database \> Offload*.
 
    1. Prior to DataMiner 10.1.1/10.2.0 only: Select the *Activate this database* checkbox to activate the offload database.
 
@@ -194,11 +188,11 @@ The final step is the configuration of the DMS.
 
       - **DB server**: The network location of the offload database.
 
-        - For an MSSQL database, this can be an IP address and a port, separated by a comma, e.g. “10.10.18.1,1433”.
+        - For an MSSQL database, this can be an IP address and a port, separated by a comma, e.g. "10.10.18.1,1433".
 
         - For a MySQL database, only fill in the IP address. If a port needs to be specified, do so in the *Connection string* field (e.g. *PORT=3306*).
 
-      - **DSN**: “SkySQL”
+      - **DSN**: "SkySQL"
 
       - **Connection string**: Depending on the type of database, you can fill in this field to connect through a connection string instead. If this field is filled in, it will always take precedence over all other fields.
 
@@ -226,4 +220,4 @@ When you install or upgrade a DataMiner Agent using an upgrade package, the offl
 Also, when you upgrade a DataMiner Agent using an upgrade package, the offload database is automatically verified (and altered if necessary).
 
 > [!NOTE]
-> This only applies to databases of type “MySQL” and “Microsoft SQL Server”. Oracle databases have to be created manually.
+> This only applies to databases of type "MySQL" and "Microsoft SQL Server". Oracle databases have to be created manually.

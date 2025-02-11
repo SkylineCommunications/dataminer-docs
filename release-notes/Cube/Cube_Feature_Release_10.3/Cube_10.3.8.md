@@ -8,11 +8,13 @@ uid: Cube_Feature_Release_10.3.8
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.8](xref:General_Feature_Release_10.3.8).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.3.8](xref:General_Feature_Release_10.3.8).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.8](xref:Web_apps_Feature_Release_10.3.8).
 
 ## Highlights
 
-#### Visual Overview: New BookingData component [ID_33215] [ID_36489]
+#### Visual Overview: New BookingData component [ID 33215] [ID 36489]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -61,7 +63,7 @@ To be able to use the *BookingData* component, you will need
   - Modules > Resources > UI Available
   - Modules > Services > UI Available
 
-#### Trending - Pattern matching: Multivariate trend data patterns [ID_35010] [ID_35301] [ID_36327] [ID_36454] [ID_36628] [ID_36731]
+#### Trending - Pattern matching: Multivariate trend data patterns [ID 35010] [ID 35301] [ID 36327] [ID 36454] [ID 36628] [ID 36731]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -77,7 +79,7 @@ As with single-parameter patterns (i.e. univariate patterns), a number of option
 
 If you are viewing a trend graph that shows trend information for multiple parameters in which multivariate patterns were detected, these will be highlighted in orange when you hover the mouse pointer over the button representing a pattern, or if the option *Expand tags* is selected in the right-click menu. Also, a special icon will indicate that this is a pattern that combines trend information from different parameters. If you click that icon, all trend graphs of all parameters that are part of the pattern will be loaded.
 
-#### Trending: Time-scoped relations [ID_36434]
+#### Trending: Time-scoped relations [ID 36434]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -92,7 +94,7 @@ For more information, see [Adding time-scoped related parameters to a trend grap
 
 ## Other new features
 
-#### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
+#### Open element cards will immediately show any changes made with regard to parameters [ID 36286]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -102,13 +104,13 @@ When an element card is open, each time a new parameter is added to the element 
 
 ### Enhancements
 
-#### Visual Overview: External connectivity updates for dynamically positioned shapes will now be applied in real time [ID_36333]
+#### Visual Overview: External connectivity updates for dynamically positioned shapes will now be applied in real time [ID 36333]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 Up to now, external connectivity updates for dynamically positioned shapes would not be applied in real time. To see the changes, you had to close the visual overview and open it again. From now on, any external connectivity updates for dynamically positioned shapes will immediately be visible.
 
-#### Visual Overview: TextWrapping should now default to the correct value "Wrap" [ID_36363]
+#### Visual Overview: TextWrapping should now default to the correct value "Wrap" [ID 36363]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
@@ -116,7 +118,7 @@ When a shape did not have a *TextStyle* shape data field, up to now, the *TextWr
 
 Also, because of a number of enhancements, overall performance has increased when rendering shapes without a *TextStyle* shape data field.
 
-#### Visual Overview: Subtract placeholder now also supports numerics [ID_36636]
+#### Visual Overview: Subtract placeholder now also supports numerics [ID 36636]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -128,7 +130,7 @@ Examples:
 
 - Subtracting multiple numbers from the first number: `[Subtract:10.1,3.3,2.6]`
 
-#### DataMiner Cube - Alarm Console: Enhanced retrieval of history alarms [ID_36653]
+#### DataMiner Cube - Alarm Console: Enhanced retrieval of history alarms [ID 36653]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
@@ -136,7 +138,7 @@ Up to now, when you requested the alarms of a certain time span, Cube would alwa
 
 ### Fixes
 
-#### Visual Overview: Problem with element or view scope of Children shapes [ID_36354]
+#### Visual Overview: Problem with element or view scope of Children shapes [ID 36354]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
@@ -144,25 +146,25 @@ In some cases, when a placeholder was used in the *Element* or *View* shape data
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
 
-#### ListView column configuration data could incorrectly get replaced by default values on the Cube client [ID_36420]
+#### ListView column configuration data could incorrectly get replaced by default values on the Cube client [ID 36420]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When you opened a Cube session and connected to a DataMiner System running a version from 9.6.3 onwards that had an SRM license, in some cases, the ListView column configuration data fetched from the server could incorrectly get replaced by default values on the Cube client.
 
-#### DataMiner Cube desktop app: False positive warnings involving a number of DLL files [ID_36424]
+#### DataMiner Cube desktop app: False positive warnings involving a number of DLL files [ID 36424]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 The log file of the DataMiner Cube desktop app would report false positive warnings involving a number of DLL files.
 
-#### Workspaces: Problem opening cards that showed a visual overview [ID_36438]
+#### Workspaces: Problem opening cards that showed a visual overview [ID 36438]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When you opened a workspace in which one or more cards showed a page with a visual overview, in some cases, the visual overview would be empty.
 
-#### System Center: Problem with 'Show agent alarms' link [ID_36463]
+#### System Center: Problem with 'Show agent alarms' link [ID 36463]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
@@ -170,13 +172,13 @@ When you selected an agent in the *Agents* section of *System Center*, in some c
 
 Also, when you clicked that *Show agent alarms* link, the alarm tab listing the alarms of the selected agent would incorrectly be empty.
 
-#### Trending: Related parameters returned by the DMA would incorrectly be empty [ID_36511]
+#### Trending: Related parameters returned by the DMA would incorrectly be empty [ID 36511]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When you opened a trend graph containing related parameters, in some cases, the related parameters returned by the DataMiner Agent would incorrectly be empty.
 
-#### Visual Overview: Problem when using '[property:]' placeholders in shape data fields of type 'Element' and 'View' [ID_36553]
+#### Visual Overview: Problem when using '[property:]' placeholders in shape data fields of type 'Element' and 'View' [ID 36553]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
@@ -184,31 +186,31 @@ Up to now, when a property was updated, `[property:]` placeholders in shape data
 
 Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.
 
-#### Alarm Console: Problem when opening a history tab [ID_36603]
+#### Alarm Console: Problem when opening a history tab [ID 36603]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When, in the Alarm Console, you opened a history tab on a system with a large number of masked alarms and a number of active correlation rules, that history tab would load rather slowly and would be missing some alarms.
 
-#### Trending: Problem when exporting real-time trend data to a CSV file [ID_36630]
+#### Trending: Problem when exporting real-time trend data to a CSV file [ID 36630]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When you exported more than a week's worth of real-time trend data to a CSV file, only the trend data of the last week (i.e. "week to date") would be exported.
 
-#### Settings: Suggestion tab added to a group setting would not show any suggestion alarms [ID_36666]
+#### Settings: Suggestion tab added to a group setting would not show any suggestion alarms [ID 36666]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When, in the *Settings* window, you added a suggestion tab to a group setting for the Alarm Console, users who were a member of that group would see the suggestion tab, but it would not show any suggestion alarms.
 
-#### Problem when removing DCF connections [ID_36676]
+#### Problem when removing DCF connections [ID 36676]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When you removed a connection between an active element and an element that was stopped/paused, the connection would be removed from the active element but not from the stopped/paused element. When you started that element again and tried to remove the connection, the action would fail.
 
-#### DataMiner Cube - Alarm Console: Problem with alarm tabs of type 'sliding window' [ID_36687]
+#### DataMiner Cube - Alarm Console: Problem with alarm tabs of type 'sliding window' [ID 36687]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 

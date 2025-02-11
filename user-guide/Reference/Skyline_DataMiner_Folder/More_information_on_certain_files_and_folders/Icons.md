@@ -13,8 +13,7 @@ The icons and the icon rules are specified in the following XML files:
 - *C:\\Skyline DataMiner\\Icons\\IconSelectionRules.xml*
 
 > [!NOTE]
-> - Using custom icons is possible from DataMiner 9.0.5 onwards.
-> - If you have made any changes to these files, restart DataMiner to implement your changes.
+> If you have made any changes to these files, restart DataMiner to implement your changes.
 
 ## CustomIcons.xml
 
@@ -35,9 +34,7 @@ The icon tag can have the following attributes:
 
 - **ref**: Name of the image file, which must be located in the folder *C:\\Skyline DataMiner\\Icons\\Refs\\*.
 
-  - Preferred format: PNG.
-  
-  - From DataMiner 10.0.5 onwards, SVG is also supported
+  - Preferred format: PNG. SVG is also supported
   
   - Size: 16x16 px
 
@@ -100,7 +97,7 @@ Attributes:
   > [!NOTE]
   > - “elementtype” can only be used if SelectIcon type is “element”.
   > - “protocol” can only be used if SelectIcon type is “element” or “service” and if the element or service has a protocol assigned.
-  > - “functionguid” can be used from DataMiner 9.5.14 onwards. It allows icons to be configured for specific elements linked to protocol functions.
+  > - “functionguid” allows icons to be configured for specific elements linked to protocol functions.
 
 - **operator**: If field type is “operator”, field operator can be set to “)”, “(“, “and”, “or”, or “not”.
 
@@ -115,4 +112,4 @@ Attributes:
   - A regular expression (syntax identical to that of the regular expressions used in service template definitions)
   
     > [!NOTE]
-    >  In case of values with wildcards or regular expressions, a full match is expected. Example: “A?C” will not match “XXX.ABC.YYY”
+    > In case of values with wildcards or regular expressions, a full match is expected. Example: “A?C” will not match “XXX.ABC.YYY”

@@ -11,8 +11,13 @@ This is where you'll find all essential information on how to use DataMiner and 
 
 Can't find what you need here? Go to our [DataMiner Community website](https://community.dataminer.services/) for questions, use cases, additional resources, etc.
 
-> [!TIP]
-> Want to contribute? Go to [Contributing to the DataMiner docs](xref:contributing) for more info.
+<div style="display: flex; align-items: center;">
+  <img src="~/images/SkyeHP.svg" alt="Skye" style="width: 100px; margin-right: 8px;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    Want to contribute? Go to <a href="xref:contributing" style="color: #657AB7;">Contributing to the DataMiner docs</a> for more info.
+    </div>
+</div>
 
 <div class="row">
   <div class="columnhome">
@@ -22,7 +27,7 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
     <a href="/user-guide/Getting_started/Getting_Started.html" title="User Guide" target="_self"><img src="images/Docs_UserGuide.svg" style="width:100%"></a>
   </div>  
   <div class="columnhome">
-    <a href="/develop/index.html" title="Developer Documentation" target="_self"><img src="images/Docs_DeveloperDocumentation.svg" style="width:100%"></a>
+    <a href="/solutions/solution_index.html" title="DataMiner Solutions" target="_self"><img src="images/Docs_DMSolutions.svg" style="width:100%"></a>
   </div>
 </div>
 
@@ -31,9 +36,18 @@ Can't find what you need here? Go to our [DataMiner Community website](https://c
     <a href="/release-notes/DataMiner_General_RNs_index.html" title="DataMiner Release Notes" target="_self"><img src="images/Docs_DataminerReleaseNotes.svg" style="width:100%"></a>
   </div>
   <div class="columnhome">
-    <a href="/tutorials/Tutorials.html" title="DataMiner Tutorials" target="_self"><img src="images/Docs_DataMinerTutorials.svg" style="width:100%"></a>
-  </div>
-  <div class="columnhome">
     <a href="https://docs.dataminer.services/connector/index.html" title="Connector Documentation" target="_self"><img src="images/Docs_ConnectorDocumentation.svg" style="width:100%"></a>
   </div>
+  <div class="columnhome">
+    <a href="/develop/index.html" title="Developer Documentation" target="_self"><img src="images/Docs_DeveloperDocumentation.svg" style="width:100%"></a>
+  </div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; margin-top: 20px; max-width: 59.6%; ">
+  <a class="xref" href="/tutorials/Tutorials.html" style="flex: 1; min-width: 250px; text-decoration: none;">
+    <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; background-color: #DEF7FF; color: #000000; display: flex; align-items: center; justify-content: center; gap: 10px;">
+      <b style="font-size: 30px; color: #00517e;">DATAMINER TUTORIALS</b>
+      <img src="images/Docs_Tutorials.svg" alt="DataMiner tutorials" style="width: 50px;">
+    </div>
+  </a>
 </div>

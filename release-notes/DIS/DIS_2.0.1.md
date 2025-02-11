@@ -8,7 +8,7 @@ uid: DIS_2.0.1
 
 ### IDE
 
-#### Enhanced way of connecting to DataMiner Agents \[ID_12067\]\[ID_12403\]
+#### Enhanced way of connecting to DataMiner Agents \[ID 12067\]\[ID 12403\]
 
 From now on, when DIS connects to a DataMiner Agent, it will always use polling.
 
@@ -25,17 +25,17 @@ Also, a number of changes have been made to the *DMA* tab page of the *DIS Setti
 > [!NOTE]
 > When you change the host name, the user name and/or the password, the current connection will be closed.
 
-#### Protocols are now saved in UTF-8 with signature \[ID_12126\]
+#### Protocols are now saved in UTF-8 with signature \[ID 12126\]
 
 From now on, after informing the user by means of a message box, DIS will automatically save protocol.xml files using the following encoding:
 
 - Unicode (UTF-8 with signature) - Codepage 65001
 
-#### DIS user guide now in HTML5 format \[ID_12250\]
+#### DIS user guide now in HTML5 format \[ID 12250\]
 
 DIS now ships with a user guide in HTML5 format instead of in PDF format.
 
-#### Protocol tag shortcut menus \[ID_12253\]
+#### Protocol tag shortcut menus \[ID 12253\]
 
 In the protocol editor, you can now click a small *Down* arrow in front of certain protocol tags to open a shortcut menu. See the table below for an overview of all available commands per protocol tag.
 
@@ -76,13 +76,13 @@ In case of a group, the listed items will depend on the type of the group, e.g. 
 
 ### XML Schema
 
-#### RTDisplay tag: New onAppLevel attribute \[ID_12249\]
+#### RTDisplay tag: New onAppLevel attribute \[ID 12249\]
 
 The *Protocol.Params.Param.Display.RTDisplay* tag now has a new *onAppLevel* attribute.
 
 Set this attribute to “true” if the parameter needs to be accessible on Application Level, i.e. outside the protocol. In a Visio drawing for instance.
 
-#### HTTP header types \[ID_12252\]
+#### HTTP header types \[ID 12252\]
 
 The *EnumHttpHeaderField* enumeration now contains all HTTP headers listed on the following pages:
 
@@ -94,7 +94,7 @@ This new enum is used by the following two attributes:
 - Http.Session.Request.Headers.Header@key
 - Http.Session.Response.Headers.Header@key
 
-#### New HTTP request verb: DELETE \[ID_12255\]
+#### New HTTP request verb: DELETE \[ID 12255\]
 
 It is now possible to use the HTTP request verb “DELETE”.
 
@@ -115,11 +115,11 @@ See the following example.
 </Session>
 ```
 
-#### Interprete tag: New DefaultValue subtag \[ID_12256\]
+#### Interprete tag: New DefaultValue subtag \[ID 12256\]
 
 The *Protocol.Params.Param.Interprete* tag now has a new *DefaultValue* subtag.
 
-#### Command tag: New ascii attribute \[ID_12258\]
+#### Command tag: New ascii attribute \[ID 12258\]
 
 The *Protocol.Commands.Command* tag now has a new *ascii* attribute.
 
@@ -127,11 +127,11 @@ This attribute allows you to specify that parameters should be sent as ASCII eve
 
 The type of this new attribute is the new type *TypeTrueOrSemicolonSeparatedNumbers*.
 
-#### Discreet.Display tag: state attribute now uses type EnumEnabledDisabled \[ID_12259\]
+#### Discreet.Display tag: state attribute now uses type EnumEnabledDisabled \[ID 12259\]
 
 The type of the *state* attribute of the *Protocol.Params.Param.Measurement.Discreets.Discreet.Display* tag is now *EnumEnabledDisabled*.
 
-#### Database tag \[ID_12260\]
+#### Database tag \[ID 12260\]
 
 In the new *Params.Param.Database* tag, you can now group a number of database-related settings for a particular parameter.
 
@@ -160,7 +160,7 @@ Example:
 </Param>
 ```
 
-#### New XML tags and attributes \[ID_12261\]
+#### New XML tags and attributes \[ID 12261\]
 
 When writing a protocol.xml file, you can now replace a number of legacy tags and attributes by new counterparts.
 
@@ -218,20 +218,20 @@ See the following tables for an overview of the new tags and attributes.
 
 ## Bug fixes
 
-#### Error when re-attaching after an element restart \[ID_11806\]
+#### Error when re-attaching after an element restart \[ID 11806\]
 
 In some cases, an error message would appear when re-attaching to an element that had been restarted while Microsoft Visual Studio was being attached to the SLScripting process.
 
 When the error message was closed, Microsoft Visual Studio would automatically restart, and the SLScripting process on the DataMiner Agent would encounter a problem.
 
-#### XML tooltips difficult to read when Visual Studio is set to Dark Theme \[ID_11857\]
+#### XML tooltips difficult to read when Visual Studio is set to Dark Theme \[ID 11857\]
 
 When in Visual Studio, the color theme was set to “Dark”, the tooltips in the XML editor would be hard to read. Now, all parts of the DIS user interface have been made compatible with the available color themes in Visual Studio.
 
-#### Problem with XML/C# synchronization \[ID_12131\]
+#### Problem with XML/C# synchronization \[ID 12131\]
 
 In some cases, the QAction code in the protocol.xml file would no longer match the code in the C# project. A number of enhancements have now been made to the way in which the protocol.xml file and the C# project are synchronized.
 
-#### Problem when opening the display editor \[ID_12402\]
+#### Problem when opening the display editor \[ID 12402\]
 
 In some cases, an error could be thrown when you opened the display editor.

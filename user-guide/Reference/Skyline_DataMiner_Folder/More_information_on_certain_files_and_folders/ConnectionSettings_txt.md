@@ -44,7 +44,7 @@ This file contains default connection settings to be used by DataMiner client ap
   
   - *LegacyRemotingConnection*: .NET Remoting. Use this to explicitly use .NET Remoting.
 
-  - *WSConnection*: Web Services - deprecated from DataMiner 10.0.11 onwards.
+  - *WSConnection*: Web Services - deprecated.
 
 - **polling=**
 
@@ -83,7 +83,7 @@ This file contains default connection settings to be used by DataMiner client ap
 
   The type of data that has to be cached on the client machine.
   
-  When this option is set to its default value (“objects”), a number of objects (e.g. DataMiner Protocols) are cached on the client machine. Once these objects are present on the client, data traffic between DMA and client drops substantially.
+  When this option is set to its default value ("objects"), a number of objects (e.g. DataMiner Protocols) are cached on the client machine. Once these objects are present on the client, data traffic between DMA and client drops substantially.
 
   Possible values:
 
@@ -112,7 +112,7 @@ This file contains default connection settings to be used by DataMiner client ap
 > [!NOTE]
 >
 > - The file lists the most specific ranges first. When looking up the settings for an IP address, the first matching IP range defines the settings.
-> - Lines starting with a “#” character are considered to be comments and are ignored.
+> - Lines starting with a "#" character are considered to be comments and are ignored.
 > - If a client connects to a DataMiner Agent via a load-balancing URL (i.e. a hostname redirecting to different IP addresses when resolved), by default the hostname will be explicitly resolved before the connection is set up. If, for some IP addresses, you want to prevent this from happening, in *ConnectionSettings.txt* specify `"resolve=false"` next to those IP addresses.
 
 ## Examples

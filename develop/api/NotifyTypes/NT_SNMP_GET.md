@@ -72,7 +72,7 @@ if (response.Length == 1)
   - elementInfo[2] (int): multipleGet: 0=False, 1=True. When set to True, the OIDs specified in oidInfo will be combined in a single SNMP getRequest that contains multiple variable bindings. If set to False, each OID results in a separate getRequest with a single variable binding.
   - elementInfo[3] (string): Instance.
   - elementInfo[4] (int): Connection ID (default 0).
-  - elementInfo[5] (string): Get community string (Feature introduced in DataMiner 7.5.0 RN 4048)
+  - elementInfo[5] (string): Get community string<!-- RN 4048 -->
   - elementInfo[6] (bool): Split errors from values. Default: False.
   - elementInfo[7] (int): DataMiner Agent ID. Default: local DataMiner Agent ID.
   - elementInfo[8] (int): Dynamic poll type. Default: 2 (SingleGets).
@@ -108,14 +108,12 @@ if (response.Length == 1)
       - 3: N/A, deprecated
       - 4: AES128
     - [5] (string): Encryption passphrase. Default: empty string ("")
-  - elementInfo[13]: (int) Specifies the value for the max-repetitions field in the BulkPDU. Default: 6. Should be a value of at least 1. (If no value is specified, or if the specified value is 0 or less, the default number of repetitions (6) will be passed along.
-
-    Supported from DataMiner 10.0.2 onwards (RN 23888).
+  - elementInfo[13]: (int) Specifies the value for the max-repetitions field in the BulkPDU. Default: 6. Should be a value of at least 1. If no value is specified, or if the specified value is 0 or less, the default number of repetitions (6) will be passed along.<!-- RN 23888 -->
 
     > [!NOTE]
     > Apart from the maximum value of an Int32 (2^31-1), there are no constraints as to the maximum value you can specify. You should therefore use this option with caution. The higher this value is set, the higher the stress on the network and the device in question.
 
-  - elementInfo[14] (string): Optional. GUID of entry in credentials library. Supported from DataMiner 10.0.11 (RN 27275) onwards.
+  - elementInfo[14] (string): Optional. GUID of entry in credentials library.<!-- RN 27275 -->
 
     If you pass a GUID, you do not need to pass any credentials.
 
@@ -335,5 +333,6 @@ string sysNameOidValue = Convert.ToString(result[0]);
 - For SNMPv2, in case the variable binding could not be retrieved, one of the following values can be returned:
   - 128: noSuchObject
   - 129: noSuchInstance
-- From DataMiner 9.6.3 (RN 20727) onwards, if the “multiple get” flag (elementInfo[2]) is 0, separate SNMP messages will be used to poll each OID, and if the “multiple get” flag (elementInfo[2]) is 1, a single SNMP message will be used to poll the OIDs.
+- If the "multiple get" flag (elementInfo[2]) is 0, separate SNMP messages will be used to poll each OID, and if the "multiple get" flag (elementInfo[2]) is 1, a single SNMP message will be used to poll the OIDs.<!-- RN 20727 -->
 - To perform an SNMP Get request in protocol that has no SNMP connection defined, refer to <xref:NT_SNMP_RAW_GET>.
+- Retrieving SNMP data using this method does not affect the timeout state of the element.

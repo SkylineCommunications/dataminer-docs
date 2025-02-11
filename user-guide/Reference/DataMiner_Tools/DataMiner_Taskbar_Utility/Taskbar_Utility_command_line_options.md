@@ -4,7 +4,7 @@ uid: Taskbar_Utility_command_line_options
 
 # Taskbar Utility command line options
 
-From DataMiner 9.0.1 onwards, it is possible to make the SLTaskbarUtility perform actions using the command prompt, without any further user interaction.
+It is possible to make the SLTaskbarUtility perform actions using the command prompt, without any further user interaction.
 
 To do so:
 
@@ -18,13 +18,13 @@ To do so:
    cd c:\Program Files (x86)\Skyline Communications\Skyline Taskbar Utility
    ```
 
-1. Enter “*start /wait SLTaskbarUtility.exe*”, followed by one of the commands and the necessary arguments listed under [List of possible commands](#list-of-possible-commands).
+1. Enter `start /wait SLTaskbarUtility.exe`, followed by one of the commands and the necessary arguments listed under [List of possible commands](#list-of-possible-commands).
 
    ```txt
    start /wait SLTaskbarUtility.exe [command] [arguments]
     ```
 
-   “start /wait” is used to await the return code of the command, which can be checked using the *%errorlevel%* environment variable.
+   "start /wait" is used to await the return code of the command, which can be checked using the *%errorlevel%* environment variable.
 
    > [!NOTE]
    > It is still possible to open the SLTaskbarUtility user interface by either double-clicking a file with a DataMiner extension (e.g. dmupgrade, dmbackup, etc.) or entering the path to such a file in a *Command Prompt* window.
@@ -34,7 +34,6 @@ To do so:
 | Command&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Function |
 |--|--|
 | -uploadprotocol | Upload a DataMiner protocol package.<br> Mandatory argument: File path to a *dmprotocol* file. |
-| -rollback | Roll back the local DataMiner Agent to the previous DataMiner software version using the most recent valid rollback package found on the DataMiner Agent.<br> Note that this is no longer supported from DataMiner 10.0.0/10.0.3 onwards. |
 | -restore | Restore a DataMiner backup package.<br> Mandatory argument: File path to a *dmbackup* file. |
 | -backup | Make a backup of the local DataMiner Agent.<br> Mandatory arguments:<br> -  File path to a *BackupSettings.xml* file.<br> -  ID of a predefined backup setting in the *BackupSettings.xml* file. |
 | -stop | Stop the local DataMiner Agent. |

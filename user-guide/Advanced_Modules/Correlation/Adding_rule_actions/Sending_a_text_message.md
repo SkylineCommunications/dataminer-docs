@@ -14,6 +14,9 @@ In the *Actions* section of the details pane:
 
    Alternatively, you can also click *To* to select users and/or groups from the DMS.
 
+   > [!NOTE]
+   > You can combine multiple users, groups, and/or numbers, using a semicolon as separator between each entry. However, make sure there is no whitespace between the different entries.
+
 1. In the *Message* field, enter the message that is to be sent.
 
 1. Optionally, to also send the message when the conditions are no longer fulfilled, select *Execute on clear*.

@@ -21,7 +21,7 @@ uid: General_Main_Release_10.1.0_new_features_3
 
 ### DMS Cube (Visual Overview)
 
-#### Visual Overview: Number groups in numeric parameter values displayed on element shapes will now be separated by a thin space / New DynamicUnits option \[ID_18321\]\[ID_26318\]\[ID_26330\]\[ID_26697\]\[ID_27544\]
+#### Visual Overview: Number groups in numeric parameter values displayed on element shapes will now be separated by a thin space / New DynamicUnits option \[ID 18321\]\[ID 26318\]\[ID 26330\]\[ID 26697\]\[ID 27544\]
 
 In Visual Overview, three-digit number groups in numeric parameter values displayed on shapes with an *Element* and/or *Parameter* data field and a “\*” in the shape text will now by default be separated by a thin space. This will make large numbers more legible.
 
@@ -96,7 +96,7 @@ It is also possible to factor in decimals defined in the dynamic units of a prot
 > [!NOTE]
 > If parameter values of parameters with “decimals” set to 1 or less are converted to a bigger unit, these will be displayed with such a number of decimals that there are at least 3 significant figures. For example, 1320 MB will be displayed as 1.32 GB, even if the parameter has 0 decimals defined.
 
-#### Visual Overview - Trend component: Filtering the legend’s element list and collapsing or expanding the legend by default \[ID_24349\]
+#### Visual Overview - Trend component: Filtering the legend’s element list and collapsing or expanding the legend by default \[ID 24349\]
 
 When a shape is showing a trend component, it is now possible to
 
@@ -113,7 +113,7 @@ Example:
 | ParametersOptions | CollapseLegend:true                                                  |
 | Filter            | Property:*PropertyName=PropertyValue* |
 
-#### Visual Overview: Linking a shape to an alarm via the root alarm ID \[ID_24367\]
+#### Visual Overview: Linking a shape to an alarm via the root alarm ID \[ID 24367\]
 
 From now on, a shape can also be linked to an alarm via the root alarm ID.
 
@@ -133,7 +133,7 @@ Example:
 > - If a shape is linked to an alarm, you can now also use the Info keywords in the shape text (enclosed in square brackets). For example: “The value of the alarm is \[value\].”
 > - Note that, when you link shapes to alarms, only active alarms can currently be shown.
 
-#### Visual Overview: Filtering an alarm tab by clicking an AlarmSummary shape \[ID_24380\]
+#### Visual Overview: Filtering an alarm tab by clicking an AlarmSummary shape \[ID 24380\]
 
 By linking a shape to an alarm filter using an *AlarmSummary* data item, you can show statistical information about the alarms that match the filter. From now on, it is also possible to have the alarms displayed in an alarm tab, filtered according to the filter specified in the shape.
 
@@ -146,7 +146,7 @@ When you click the shape, Cube will open the specified alarm tab (if it has a fi
 | AlarmSummary     | type\|sharedfiltername\|ApplyLinkedViewServiceOrElementFilter\|Alarm |
 | AlarmTab         | Name=AlarmTabName                                                    |
 
-#### Visual Overview: Adding a search box to a SetVar selection box control \[ID_24448\]
+#### Visual Overview: Adding a search box to a SetVar selection box control \[ID 24448\]
 
 Using a *SetVar* data field, you can turn a shape or a page into a selection box control that allows users to update a session variable. From now on, it is possible to add a search box to such a selection box.
 
@@ -160,7 +160,7 @@ To do so, specify “Control=FilterComboBox” in a *SetVarOptions* data field.
 > [!NOTE]
 > HTML5 mobile apps do not support selection boxes with a search box. Selection boxes that have a search box configured will be displayed as regular selection boxes without search box.
 
-#### Visual Overview: Using 'info keywords' in all data items of a shape linked to an alarm \[ID_24485\]
+#### Visual Overview: Using 'info keywords' in all data items of a shape linked to an alarm \[ID 24485\]
 
 Up to now, there were two ways to have a shape linked to an alarm show information about that alarm:
 
@@ -182,7 +182,7 @@ Example:
 > - To prevent infinite loops, do not specify alarm keywords in a shape data item of type *Alarm*.
 > - Currently, it is not yet possible to use these keywords inside other keywords.
 
-#### Visual Overview: Displaying a Visio page when the shape is not linked to an element, a view or a service \[ID_24507\]
+#### Visual Overview: Displaying a Visio page when the shape is not linked to an element, a view or a service \[ID 24507\]
 
 Up to now, it was only possible to display a page of a Visio file associated with an object linked to a shape. To have a page named “Details” of a Visio file associated with an element named “MyElement” displayed in a separate window, for example, you had to add two data items to a shape: one of type *Element* set to “MyElement”, and one of type *VdxPage* set to “Details\|Window”.
 
@@ -195,7 +195,7 @@ From now on, it is also possible to display a page from the current Visio file b
 > [!NOTE]
 > If you do not specify a window type suffix (“Window”, “Popup” or “ToolTip”), the Visio page will be displayed inside the shape.
 
-#### Visual Overview: New option to disable path highlighting when clicking a connection line \[ID_24544\]
+#### Visual Overview: New option to disable path highlighting when clicking a connection line \[ID 24544\]
 
 Up to now, when you clicked a connection line between shapes, the path connected to that line was highlighted by default.
 
@@ -206,7 +206,7 @@ This default behavior can now be changed by adding a *SelectionHighlighting* op
 | Connection       | Connectivity                |
 | Options          | SelectionHighlighting=False |
 
-#### Visual Overview: New FilterContext option for shape linked to alarm filter \[ID_24577\]
+#### Visual Overview: New FilterContext option for shape linked to alarm filter \[ID 24577\]
 
 When a shape is linked to an alarm filter, you can now add an additional element, service or view filter to the *AlarmSummary* shape data, using a pipe symbol ("\|") as separator. The syntax of this filter is "*FilterContext=*" followed by the name or ID of the element, service or view.
 
@@ -217,7 +217,7 @@ If you have configured the shape to open an alarm tab in the Alarm Console when 
 | AlarmSummary     | active\|MyFilterName\|false\|Alarm\|FilterContext=MyService |
 | AlarmTab         | Name=MyFilteredTab                                          |
 
-#### Visual Overview: New Set option 'SetTrigger=Event' & additional IOClicked event arguments \[ID_24582\]
+#### Visual Overview: New Set option 'SetTrigger=Event' & additional IOClicked event arguments \[ID 24582\]
 
 ##### New Set option 'SetTrigger=Event'
 
@@ -243,7 +243,7 @@ The following additional arguments can now be specified when configuring the rou
 | Type     | “input” or “output”, depending on the type of the interface.      |
 | Matrix   | The name of the matrix that contains the clicked input or output. |
 
-#### Visual Overview: New MinChartHeight parameter option for trend component \[ID_24706\]
+#### Visual Overview: New MinChartHeight parameter option for trend component \[ID 24706\]
 
 It is now possible to configure the minimum height of the chart area of a trend component. Previously, this was always set to 200 pixels. To make sure this height is reached, the legend of the trend component will become smaller when necessary, or it may even be hidden.
 
@@ -257,7 +257,7 @@ For example, with the configuration below, the minimum height of the chart area 
 | ParametersOptions | ShowLegend:true\|MinChartHeight=400 |
 | Parameters        | 1/20:500:\*                         |
 
-#### Visual Overview: Shapes linked to views can now have an 'AlarmLevel' shape data field \[ID_24952\]
+#### Visual Overview: Shapes linked to views can now have an 'AlarmLevel' shape data field \[ID 24952\]
 
 To a shape linked to a view, you can now add a shape data field of type “AlarmLevel” to configure which of the view’s alarm levels you want the shape’s background color to display.
 
@@ -265,7 +265,7 @@ To a shape linked to a view, you can now add a shape data field of type “Alarm
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AlarmLevel       | Instance/BubbleUp/Summary<br> -  Instance: Alarm level of the monitored aggregation rules on the view.<br> -  BubbleUp: Highest alarm level of any child element or child view.<br> -  Summary: Highest of the Instance and BubbleUp alarm levels. |
 
-#### Visual Overview - ListView: Enhanced filter capabilities \[ID_25114\]
+#### Visual Overview - ListView: Enhanced filter capabilities \[ID 25114\]
 
 ##### View filters
 
@@ -342,11 +342,11 @@ From now on, if you set the *Source* shape data field to “Elements” or “S
 > [!NOTE]
 > The filters are not case-sensitive. For example, a service with the name "MyName" will be found when the filter *Service.Name == 'myname'* is used
 
-#### Visual Overview: SetVar controls 'ListBox' and 'FilterComboBox' now use virtualization \[ID_25436\]
+#### Visual Overview: SetVar controls 'ListBox' and 'FilterComboBox' now use virtualization \[ID 25436\]
 
 The SetVar controls “ListBox” and “FilterComboBox” now both use virtualization. This will allow those controls to load large data sets without major performance loss.
 
-#### Visual Overview: Retrieving a booking ID using the \[Reservation:\] placeholder \[ID_25447\]
+#### Visual Overview: Retrieving a booking ID using the \[Reservation:\] placeholder \[ID 25447\]
 
 Using the following syntax, it is now possible to retrieve the ID of a booking by means of a \[Reservation:\] placeholder.
 
@@ -354,7 +354,7 @@ Using the following syntax, it is now possible to retrieve the ID of a booking b
 [reservation:<bookingID/service>,ID]
 ```
 
-#### Service & Resource Management - Visual Overview: Dynamically generating booking shapes \[ID_26154\]
+#### Service & Resource Management - Visual Overview: Dynamically generating booking shapes \[ID 26154\]
 
 It is now possible to automatically generate booking shapes. To implement this feature, do the following:
 
@@ -376,7 +376,7 @@ By default, all bookings in the Cube cache will be shown. If that cache does not
 > [!NOTE]
 > Dynamically generated booking shapes are functionally identical to shapes linked to bookings using a *Reservation* data field. For example, they support the same placeholders.
 
-#### Visual Overview: New parameter control option 'ClientSidePollingInterval' \[ID_26223\]
+#### Visual Overview: New parameter control option 'ClientSidePollingInterval' \[ID 26223\]
 
 When you have turned a shape into a table control that displays a direct view table, you can now use the *ClientSidePollingInterval* option to specify that this table should be refreshed at regular intervals.
 
@@ -386,7 +386,7 @@ When you have turned a shape into a table control that displays a direct view ta
 
 Minimum interval: 1 second
 
-#### Visual Overview: Element-level Visio files \[ID_26648\]\[ID_27376\]
+#### Visual Overview: Element-level Visio files \[ID 26648\]\[ID 27376\]
 
 Up to now, when you assigned a Visio file to an element, it was assigned on protocol-level, i.e. to all elements sharing the same protocol. Now, it is also possible to assign a Visio file to one particular element. If you do so, the element-level Visio file will override the element’s protocol-level Visio file.
 
@@ -412,17 +412,17 @@ If you pick the element Visio file option, the following options are available:
 | New upload | Opens the *Open* dialog box, which allows you to upload a new drawing to the DMS and automatically assign it to the current element. |
 | Existing | Opens the *Custom* dialog box, which allows you to assign a previously uploaded drawing to the current element:<br> - Click a drawing in the list, set the default page, and click *OK*.<br> - Click *Other File...* to upload additional drawings to the DMS. |
 
-#### Visual Overview / Service & Resource Management: Reservation placeholder now supports Status field \[ID_26859\]
+#### Visual Overview / Service & Resource Management: Reservation placeholder now supports Status field \[ID 26859\]
 
 Using the syntax “\[Reservation:\<id>,\<fieldName>\]”, it is possible to resolve a booking field based on the ID and the name of that field.
 
 The Status field has now been added to the list of possible fields. This field indicates the current status of the booking (e.g. “Ended”, “Pending”, “Ongoing”, etc.).
 
-#### Visual Overview: New AllowInheritance option to keep child shape from automatically inheriting parent shape data \[ID_27084\]
+#### Visual Overview: New AllowInheritance option to keep child shape from automatically inheriting parent shape data \[ID 27084\]
 
 It is now possible to configure a child shape of a *View* or *Element* shape to not automatically inherit the *View* or *Element* shape data of the parent shape. To do so, add the option *AllowInheritance=False*. Note that this renders the existing option *NoCopyElementProperty* obsolete, since this did the same thing for *Element* shapes only.
 
-#### Visual Overview: Conditional shape manipulation actions no longer require the shape to be linked to an element, service or view \[ID_27569\]
+#### Visual Overview: Conditional shape manipulation actions no longer require the shape to be linked to an element, service or view \[ID 27569\]
 
 Up to now, the following conditional shape manipulation actions could only be configured on shapes linked to an element, service or view. From now on, these actions will no longer require the shape to be linked to an element, service or view.
 
@@ -435,7 +435,7 @@ Up to now, the following conditional shape manipulation actions could only be co
 > [!NOTE]
 > In case of “Enabled”, the shape in question needs to be clickable.
 
-#### Visual Overview: New icons added to DataMiner stencils \[ID_27571\]
+#### Visual Overview: New icons added to DataMiner stencils \[ID 27571\]
 
 ##### New icons
 
@@ -509,7 +509,7 @@ In the DataMiner stencils, the following existing icons have been renamed:
 
 All icon names are now in capital case.
 
-#### Visual Overview: Linking the view range of a trend graph component to session variables & specifying a custom view range \[ID_27779\]
+#### Visual Overview: Linking the view range of a trend graph component to session variables & specifying a custom view range \[ID 27779\]
 
 A Visio shape showing a trend graph component can now be made to update session variables with its view range (i.e. start time and end time). To do so, add a shape data field of type SetVar, and set its value to “RangeStart:\<VariableA>\|RangeEnd:\<VariableB>”
 
@@ -535,7 +535,7 @@ Example:
 > - You do not have to specify two time values. You can specify a start time, an end time or both (separated by a comma).
 > - The datetime text strings need to be formatted according to the current or invariant culture.
 
-#### Visual Overview: Info keywords can now be used as dynamic placeholders in other shape data fields \[ID_27880\]
+#### Visual Overview: Info keywords can now be used as dynamic placeholders in other shape data fields \[ID 27880\]
 
 All keywords that can be specified in shape data fields of type “Info” can now also be used as dynamic placeholders in shape data fields of other types.
 
@@ -543,7 +543,7 @@ When using one of those keywords in a shape data field of type other that “Inf
 
 Example: \[var:\[NAME\]\]
 
-#### Visual Overview: Automation script session variables & OnClosing shape data field \[ID_27895\]
+#### Visual Overview: Automation script session variables & OnClosing shape data field \[ID 27895\]
 
 In Visual Overview, it is now possible to pass Automation script output to session variables. Also, you can now use the page-level shape data field OnClosing to configure whether a Visual Overview window should automatically be closed or not.
 
@@ -585,7 +585,7 @@ Note that, in the session variable named ClosingWindow_Message, you can specify 
 > - The OnClosing and OnClose shape data fields do not influence each other. Both function independently from each other.
 > - If you want to combine OnClosing and OnClose, then in Visual Overview, you can pass session variable X to the OnClosing script and make it return session variable Y. That variable can then be passed to the OnClose script, which can optionally be made to return session variable Z.
 
-#### Visual Overview: New AutoIgnoreExternalChanges option when embedding a Service Manager component \[ID_27899\]
+#### Visual Overview: New AutoIgnoreExternalChanges option when embedding a Service Manager component \[ID 27899\]
 
 Up to now, when embedding a Service Manager component in Visual Overview, you could specify the AutoLoadExternalChanges option if you wanted external changes to be loaded automatically when there were no local changes. From now on, you can also specify the AutoIgnoreExternalChanges option if you want external changes to be discarded automatically.
 
@@ -597,7 +597,7 @@ Both options will keep the information bar from being displayed at the bottom of
 > - As long as there are no (unsaved) client-side changes, external changes will be loaded automatically.
 > - As soon as there are (unsaved) client-side changes, external changes will be discarded.
 
-#### Visual Overview: KPI stencil and Button stencil have been restyled \[ID_28691\]
+#### Visual Overview: KPI stencil and Button stencil have been restyled \[ID 28691\]
 
 The KPI stencil and the Button stencil have been restyled.
 
@@ -645,7 +645,7 @@ The KPI stencil and the Button stencil have been restyled.
 >
 > *#000000=ThemeForeground\|#FF0000=ThemeAccentColor\|#FFFFFF=ThemeBackground*
 
-#### Visual Overview: New icon added to Icons stencils \[ID_28696\]
+#### Visual Overview: New icon added to Icons stencils \[ID 28696\]
 
 The following icon has been added to the Icons stencil:
 

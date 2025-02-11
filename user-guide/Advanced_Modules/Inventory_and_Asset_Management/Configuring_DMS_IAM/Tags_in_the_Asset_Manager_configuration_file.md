@@ -13,8 +13,7 @@ While the configuration file itself can have a random name, its root tag must be
 In this mandatory tag, specify the name of the database configuration (as specified in the *DB.xml* file).
 
 > [!TIP]
-> See also:
-> [DB.xml](xref:DB_xml#dbxml)
+> See also: [DB.xml](xref:DB_xml#dbxml)
 
 ## AssetManagerConfig.Schema
 
@@ -36,7 +35,7 @@ This tag is optional. If it is left empty, if it contains 0 or if it is not used
 
 In this mandatory tag, specify the database tables that have to appear in the root of the table tree.
 
-If you specify more than one table, separate the table names by semicolons (”;”).
+If you specify more than one table, separate the table names by semicolons (";").
 
 ## AssetManagerConfig.Security
 
@@ -75,30 +74,31 @@ In this mandatory tag, you can configure how the different tables will be displa
 
 If you want to change something to the appearance of a table, then add a *\<Table>* tag, and specify the following attributes:
 
-| Attribute     | Mandatory? | Description                                                                                                                                                                                                                                                                                                                                                                                                             |
-|---------------|------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| name          | Yes        | The actual name of the table.                                                                                                                                                                                                                                                                                                                                                                                           |
-| displayName   | Yes        | The name of the table as it has to appear in the user interface.                                                                                                                                                                                                                                                                                                                                                        |
-| displayColumn | Yes        | The name of the column of which the values have to replace the table’s primary keys.<br> It is possible to define a display name for a record that combines several columns. To do so, specify a display name containing column names, separated by a space, a dot, brackets, a backslash, a forward slash, parentheses or square brackets. E.g. *displayColumn="column1 (column2:column3)"* |
-| skip          | No         | If this table has to be hidden in the *Logical View*, then set this attribute to “true”.                                                                                                                                                                                                                                                                                                 |
+| Attribute | Mandatory? | Description |
+|--|--|--|
+| name | Yes | The actual name of the table. |
+| displayName | Yes | The name of the table as it has to appear in the user interface. |
+| displayColumn | Yes | The name of the column of which the values have to replace the table’s primary keys. It is possible to define a display name for a record that combines several columns. To do so, specify a display name containing column names, separated by a space, a dot, brackets, a backslash, a forward slash, parentheses, or square brackets. E.g. `displayColumn="column1 (column2:column3)"`. |
+| skip | No | If this table has to be hidden in the *Logical View*, then set this attribute to "true". |
 
 ### Columns
 
 If you want to change something to the appearance of a specific table column, then, inside a *\<Table>* tag, add a *\<Columns>* tag containing a *\<Column>* tag for every column of which you want to change the appearance. For each column, you can specify the following attributes:
 
-| Attribute      | Mandatory? | Description                                                                                                                                                                           |
-|----------------|------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| name           | Yes        | The actual name of the column.                                                                                                                                                        |
-| displayName    | No         | The name of the column as it has to appear in the user interface.                                                                                                                     |
-| dmSelect       | No         | A particular element protocol. If this attribute is used, the column will only accept IDs of elements with that protocol.                                                             |
-| orderWeight    | No         | The position of the column when a fixed column order is applied.                                                                                                                      |
-| width          | No         | The width of the column in the user interface (in pixels).                                                                                                                            |
-| RegExValidator | No         | A regular expression. It will not be possible to specify values in the column that do not match this regular expression.<br> This attribute can be used from DataMiner 9.0.3 onwards. |
+| Attribute | Mandatory? | Description |
+|--|--|--|
+| name | Yes | The actual name of the column. |
+| displayName | No | The name of the column as it has to appear in the user interface. |
+| dmSelect | No | A particular element protocol. If this attribute is used, the column will only accept IDs of elements with that protocol. |
+| orderWeight | No | The position of the column when a fixed column order is applied. |
+| width | No | The width of the column in the user interface (in pixels). |
+| RegExValidator | No | A regular expression. It will not be possible to specify values in the column that do not match this regular expression. |
 
 > [!NOTE]
+>
 > - To hide a column, you can set the width to 0. The columns will then not be shown when you edit or add a row, except if they contain a primary key or a foreign key or if they cannot be left empty.
-> - If the order of the columns is not fixed by means of the “orderWeight” attribute, then the order of the *\<Columns>* tags will define the order in which columns are displayed.
-> - If the columns have a fixed order, this order will also be applied when you fix or edit a row, except that the columns will be divided into “Required fields” and “Optional fields”.
+> - If the order of the columns is not fixed by means of the "orderWeight" attribute, then the order of the *\<Columns>* tags will define the order in which columns are displayed.
+> - If the columns have a fixed order, this order will also be applied when you fix or edit a row, except that the columns will be divided into "Required fields" and "Optional fields".
 
 Example:
 
@@ -126,9 +126,9 @@ To configure advanced deletion behavior of database records, inside a *\<Table>*
 
 | Attribute                      | Description                                                                                                                             |
 |--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| onDelete=”PromptLinkedRemoval” | The user will be asked for confirmation before the selected record and linked records are deleted.                                      |
-| onDelete=”DenyLinkedRemoval”   | The user will be denied permission to delete the record and its linked records. It will also be impossible to delete the parent record. |
-| onDelete=”AllowLinkedRemoval”  | Default behavior: only the selected record will be deleted, no linked records.                                                          |
+| onDelete="PromptLinkedRemoval" | The user will be asked for confirmation before the selected record and linked records are deleted.                                      |
+| onDelete="DenyLinkedRemoval"   | The user will be denied permission to delete the record and its linked records. It will also be impossible to delete the parent record. |
+| onDelete="AllowLinkedRemoval"  | Default behavior: only the selected record will be deleted, no linked records.                                                          |
 
 ### Filter
 
@@ -145,7 +145,7 @@ E.g. for ascending order: *definition="columnName ASC"* or for descending order:
 
 ### Icon
 
-To give a table a custom icon in the tree view, inside the *\<Table>* tag, add an *\<Icon>* tag. The icon can either be defined by means of XAML code in a CDATA tag, or by using a “key” attribute that refers to an icon defined in the *Icons.xml* file.
+To give a table a custom icon in the tree view, inside the *\<Table>* tag, add an *\<Icon>* tag. The icon can either be defined by means of XAML code in a CDATA tag, or by using a "key" attribute that refers to an icon defined in the *Icons.xml* file.
 
 - Example of icon using XAML code:
 
@@ -175,15 +175,15 @@ To give a table a custom icon in the tree view, inside the *\<Table>* tag, add a
 
 For every table, you can specify which table links you want to visualize in the table hierarchy. In some cases, you will have to restrict table linking to prevent possible endless loops.
 
-Inside a *\<Table>* tag, add a *\<PathsToFollow>* tag containing a *\<Path>* tag for every “path” you allow.
+Inside a *\<Table>* tag, add a *\<PathsToFollow>* tag containing a *\<Path>* tag for every "path" you allow.
 
 A *\<Path>* tag can contain the following:
 
-| Contents                                  | Description                                                                                                                                                                         |
-|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| NONE                                      | The hierarchy stops at the given table. The table node will not have any subnodes.                                                                                                  |
-| NO_OUT                                    | Only incoming links will be visualized. In other words, the table node will have a subnode for every table that has a link towards the given table.                                 |
-| NO_IN                                     | Only outgoing links will be visualized. In other words, the table node will have a subnode for every table to which it links.                                                       |
+| Contents | Description |
+|--|--|
+| NONE | The hierarchy stops at the given table. The table node will not have any subnodes. |
+| NO_OUT | Only incoming links will be visualized. In other words, the table node will have a subnode for every table that has a link towards the given table. |
+| NO_IN | Only outgoing links will be visualized. In other words, the table node will have a subnode for every table to which it links. |
 | table\[.FKColumn\],table\[.FKColumn\],... | You can specify a fixed table hierarchy by entering a comma-separated series of tables. That way, when you open the table node, you will only be able to follow the specified path. |
 
 By default, all possible table links will be visualized in the table hierarchy.

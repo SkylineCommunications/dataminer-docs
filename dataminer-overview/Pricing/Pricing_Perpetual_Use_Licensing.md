@@ -1,5 +1,6 @@
 ---
 uid: Pricing_Perpetual_Use_Licensing
+description: Depending on the application, server-based or volume-based licenses are used, with connector licenses per object type, and optional added functions.
 ---
 
 # Perpetual-Use Licensing

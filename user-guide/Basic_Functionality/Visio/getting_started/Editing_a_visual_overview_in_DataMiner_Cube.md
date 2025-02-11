@@ -12,7 +12,7 @@ This menu provides access to the options detailed below.
 
 Edit mode allows you to edit the currently assigned drawing within DataMiner Cube, without downloading it to your client computer.
 
-In edit mode, all “linked” objects have a gray border. Objects are considered “linked” if they have at least one shape data field that is known to DataMiner.
+In edit mode, all "linked" objects have a gray border. Objects are considered "linked" if they have at least one shape data field that is known to DataMiner.
 
 To modify shapes in edit mode:
 
@@ -37,7 +37,7 @@ When you have made all necessary modifications, save the drawing. The new versio
 
 This option allows you to assign a different Visio file in several ways. Different possibilities are available depending on whether the visual overview you right-clicked is assigned to a service, a view or an element.
 
-On the visual overview of an **element**, two options are available (from DataMiner 10.0.11 onwards):
+On the visual overview of an **element**, two options are available:
 
 - **Set as active \[protocol name\] protocol Visio file**: Assigns a different Visio file to all elements using this protocol.
 
@@ -85,21 +85,6 @@ On the visual overview of a **service or view**, the context menu can contain th
   - Click a drawing in the list, set the default page, and click *OK*.
 
   - Click *Other File...* to upload additional drawings to the DMS.
-
-**Prior to DataMiner 10.0.11**: On the visual overview of an **element**, the context menu can contain the following further options:
-
-- **Custom**: Assigns the available custom protocol drawing to all elements using this protocol.
-
-- **Protocol default**: Assigns the protocol default drawing to all element using this protocol. Protocol default drawings are Visio drawings that are included in certain protocol packages. For more information, see [Managing Visio files linked to protocols](xref:Managing_Visio_files_linked_to_protocols).
-
-- **General default**: Assigns the general default drawing to all elements using this protocol. This is the drawing shipped with the DataMiner software.
-
-- **New blank**: Opens a new, blank drawing in Microsoft Visio, which will be used as the new custom drawing for the protocol and assigned to all elements using the protocol.
-
-  > [!NOTE]
-  > The format of the blank drawing depends on the SkylineNewDrawing template. See [Overview of the default Visio templates supplied by Skyline](xref:DataMiner_Visio_templates#overview-of-the-default-visio-templates-supplied-by-skyline).
-
-- **New upload**: Opens the *Open* dialog box, where you can upload a new drawing that will be used as the custom drawing for the protocol and assigned to all elements using the protocol.
 
 > [!TIP]
 > See also:

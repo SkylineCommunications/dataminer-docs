@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.Type-options
 
 # options attribute
 
-Specifies a number of options separated by semicolons (”;”).
+Specifies a number of options separated by semicolons (`;`).
 
 ## Content Type
 
@@ -16,7 +16,7 @@ string
 
 ## Remarks
 
-In the options attribute, you can specify a combination of the following options, separated by semicolons (”;”).
+In the options attribute, you can specify a combination of the following options, separated by semicolons (`;`).
 
 ### columnTypes
 
@@ -27,7 +27,7 @@ Each column type has the following format: Parameterid:column indexes
 - First part: ID of the parameter containing the column type
 - Second part: columns identified by their 0-based column index
 
-If you specify multiple column types, separate them by means of pipe characters (“|”).
+If you specify multiple column types, separate them by means of pipe characters (`|`).
 
 If you specify multiple column indexes, separate them by commas.
 
@@ -76,7 +76,7 @@ options="dimensions=128,1"
 
 In a protocol, you can dynamically assign an IP address and an IP port to an advanced port of a serial device.
 
-In the example below, the IP address/port combination specified in parameter 400 is assigned to advanced port 1. To overrule the default connection, specify “dynamic ip” or “dynamic ip 0”. To overrule a specific connection, you can for example specify “dynamic ip 2”.
+In the example below, the IP address/port combination specified in parameter 400 is assigned to advanced port 1. To overrule the default connection, specify "dynamic ip" or "dynamic ip 0". To overrule a specific connection, you can for example specify "dynamic ip 2".
 
 ```xml
 <Param id="400" trending="false" save="true">
@@ -94,16 +94,20 @@ In the example below, the IP address/port combination specified in parameter 400
 
 Parameter syntax: IP:PORT
 
-If, in the parameter, you specify the value “10.12.0.63:4000”, all communication will go via port 4000 of address 10.12.0.63.
+If, in the parameter, you specify the value "10.12.0.63:4000", all communication will go via port 4000 of address 10.12.0.63.
 
 If you do not specify a port, then the last port set will be used. If no port has been set yet, the port configured during element creation will be used.
 
 Only applicable for parameters of type read.
 
 > [!NOTE]
-> For smart-serial connections, [dynamic polling](xref:ConnectionsSmartSerialDynamicPolling) is supported from DataMiner 10.3.11/10.4.0 onwards<!--RN 37404-->.
+>
+> - For smart-serial connections, [dynamic polling](xref:ConnectionsSmartSerialDynamicPolling) is supported from DataMiner 10.3.11/10.4.0 onwards<!--RN 37404-->.
+> - For HTTP connections, to poll an HTTPS server on a different port than 443, the "https://" prefix needs to be specified before the IP address as parameter value. The prefix that was configured during element creation will not be taken into account.
 
 ### dynamic snmp get
+
+<!-- RN 4734 -->
 
 With this option, an SNMP Get can be triggered dynamically when a parameter value changes.
 
@@ -116,9 +120,9 @@ Example:
 In an SNMP protocol, you define the following two parameters:
 
 - Parameter 1, identified with OID 1.3.6.2
-- Parameter 2, defined as “dynamic snmp get”
+- Parameter 2, defined as "dynamic snmp get"
 
-When the value of parameter 2 changes to “1.3.6.2”, a group like the following one is created in memory:
+When the value of parameter 2 changes to "1.3.6.2", a group like the following one is created in memory:
 
 ```xml
 <Group id="1">
@@ -129,7 +133,7 @@ When the value of parameter 2 changes to “1.3.6.2”, a group like the followi
 </Group>
 ```
 
-When, later on, the value of parameter 2 changes to “1.3.6.”, that same group is triggered again.
+When, later on, the value of parameter 2 changes to "1.3.6.", that same group is triggered again.
 
 In the communication stream, you will notice the following entry:
 
@@ -137,14 +141,14 @@ In the communication stream, you will notice the following entry:
 Dynamic group for parameter 1 [triggered by 1.3.6.]
 ```
 
-*Feature introduced in DataMiner 7.5.2.0 (RN 4734).*
-
 > [!NOTE]
 >
 > - Only applicable for parameters of type read.
 > - This option is rendered obsolete by the dedicated dynamicSnmpGet attribute.
 
 ### headerTrailerLink
+
+<!-- RN 6115 -->
 
 This option is only applicable for smart-serial connections. It defines a link between a header and a trailer
 parameter (see [Data forwarding from SLPort to SLProtocol](xref:ConnectionsSmartSerialDataForwarding)).
@@ -160,13 +164,11 @@ Example:
 <Type options="headerTrailerLink=1">trailer</Type>
 ```
 
-*Feature introduced in DataMiner 8.0.3 (RN 6115).*
-
 > [!IMPORTANT]
 > Headers and trailers are by default applicable to all connections. We strongly recommend always using the headerTrailerLink option in combination with a specified connection. This will make sure those headers and trailers only apply to the specified defined smart-serial connection, because otherwise this can quickly cause unintended bugs and behavior.
 >
 > ```xml
-> <Type options="headerTrailerLink=1;connection=0>header</Type>"
+> <Type options="headerTrailerLink=1;connection=0">header</Type>"
 > ```
 
 ### linkAlarmValue=TRUE

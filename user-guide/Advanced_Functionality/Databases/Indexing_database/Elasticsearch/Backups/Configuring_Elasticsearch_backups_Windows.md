@@ -5,17 +5,16 @@ uid: Configuring_Elasticsearch_backups_Windows
 # Restoring backups using the Standalone Elastic Backup Tool
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-managed storage, using [OpenSearch](xref:OpenSearch_database).
 
 If your Elasticsearch database does not contain any remote Elasticsearch nodes, you can use database backups created by DataMiner:
 
-- These will be placed in the backup location specified during [Elasticsearch installation](xref:Installing_Elasticsearch_via_DataMiner). From DataMiner 9.6.11 onwards, you can also modify this location in System Center on the *Backup* page, in the section *Indexing Engine location*.
+- These will be placed in the backup location specified during [Elasticsearch installation](xref:Installing_Elasticsearch_via_DataMiner). You can also modify this location in System Center on the *Backup* page, in the section *Indexing Engine location*.
 
   > [!NOTE]
   >
   > - Restrictions apply for this backup path. See [Restrictions for the backup path](#restrictions-for-the-backup-path).
   > - After you change the path in System Center, it is possible that the UI is temporarily disabled while the Indexing nodes are restarted to implement the change. As such, we recommend that you only change the backup path if this is absolutely necessary.
-  > - In DataMiner 9.6.10, the backup path may need to be [specified manually](#manually-specifying-the-backup-path).
 
 - To restore such a backup, use the [Standalone Elastic Backup tool](xref:Standalone_Elastic_Backup_Tool).
 
@@ -45,17 +44,3 @@ Keep the following restrictions in mind for the backup path:
 
   > [!NOTE]
   > From DataMiner 10.2.0/10.1.8 onwards, it is possible to instead configure specific credentials for the network location via SLNetClientTest tool. See [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_credentials_shared_backup_Elasticsearch).
-
-## Manually specifying the backup path
-
-In DataMiner 9.6.10, in case there is an Elasticsearch node in the cluster that does not have a DataMiner Agent installed, or in case Elasticsearch was installed on a DataMiner Agent prior to DataMiner 9.6.9, the backup path must be specified manually.
-
-To do so:
-
-1. Open the file *C:\\Program Files\\Elasticsearch\\config\\elasticsearch.yml*.
-
-1. In this file, set "path.repo" to the desired backup path.
-
-1. Close the file.
-
-1. Restart the service *elasticsearch-service-x64.exe*.

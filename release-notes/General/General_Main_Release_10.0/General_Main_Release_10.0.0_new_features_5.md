@@ -12,23 +12,23 @@ uid: General_Main_Release_10.0.0_new_features_5
 
 ### DMS Web Services
 
-#### Web Services API v1: New method 'GetDocuments' \[ID_19348\]
+#### Web Services API v1: New method 'GetDocuments' \[ID 19348\]
 
 The method *GetDocuments* has been added to the Web Services API v1. This method makes it possible to retrieve a list of general and protocol documents from within a particular documents folder.
 
-#### Web Services API v1: New method 'GetTrendDataForTableParameter' \[ID_19532\]
+#### Web Services API v1: New method 'GetTrendDataForTableParameter' \[ID 19532\]
 
 The method *GetTrendDataForTableParameter* has been added to the Web Services API v1. This method makes it possible to retrieve trend data for a parameter by primary key within a custom timespan.
 
-#### Web Services API v1: New method 'GetAlarmPageWithAlarms' \[ID_19540\]
+#### Web Services API v1: New method 'GetAlarmPageWithAlarms' \[ID 19540\]
 
 The method *GetAlarmPageWithAlarms* has been added to the Web Services API v1. This method combines the functionality of the *GetAlarmPage* and *GetAlarms* methods, so that the actual alarms only need to be fetched once.
 
-#### Web Services API v1: Response of GetAggregationQueryResultAsync method now also includes the sublevel aggregation \[ID_20330\]
+#### Web Services API v1: Response of GetAggregationQueryResultAsync method now also includes the sublevel aggregation \[ID 20330\]
 
 From now on, the response of the *GetAggregationQueryResultAsync* method will also include the sublevel aggregation.
 
-#### Job Manager API: Job template management methods \[ID_21380\]\[ID_23055\]
+#### Job Manager API: Job template management methods \[ID 21380\]\[ID 23055\]
 
 The Job Manager app now allows you to use job templates. Those templates can be managed using either the app’s HTML5 user interface or the following API methods:
 
@@ -59,7 +59,7 @@ Errors that can be returned in TraceData:
 
     *The current user does not have permission to complete the action.*
 
-#### Job Manager API: Enhancements \[ID_21683\]
+#### Job Manager API: Enhancements \[ID 21683\]
 
 A number of enhancements have been made to the Job Manager API.
 
@@ -94,7 +94,7 @@ When a job template is applied, the default section will be ignored. In other wo
 
 When a job template is applied, both the target job and the JobTemplate#TemplateData job should be stitched.
 
-#### Ticketing API: Removing a masked TicketFieldResolver and all linked tickets \[ID_22403\]
+#### Ticketing API: Removing a masked TicketFieldResolver and all linked tickets \[ID 22403\]
 
 It is now possible to remove a masked TicketFieldResolver along with all linked tickets.
 
@@ -107,7 +107,7 @@ An error will be returned in the following cases:
 - If the user has not been granted the “Ticketing Gateway/Configure” permission.
 - If something went wrong while deleting the TicketFieldResolver or any of the linked tickets.
 
-#### WebSockets input buffer can now expand automatically \[ID_22931\]
+#### WebSockets input buffer can now expand automatically \[ID 22931\]
 
 Up to now, the WebSockets input buffer had a fixed size of 1024 bytes. Now, this input buffer will be able to automatically expand when receiving messages larger than 1024 bytes.
 
@@ -118,7 +118,7 @@ When a message is received that does not fit the buffer (which, by default, has 
 > - The size of the input buffer will not be decreased automatically. Once the input buffer has expanded, it will keep that size.
 > - Maximum input buffer size: 1 MB
 
-#### Web Services API v1: 'GetTableForParameterV2' method has new 'as-kpi' table filter option \[ID_23928\]
+#### Web Services API v1: 'GetTableForParameterV2' method has new 'as-kpi' table filter option \[ID 23928\]
 
 The GetTableForParameterV2 method now supports filtering based on the following table column KPI options:
 
@@ -133,7 +133,7 @@ To enable KPI option filtering when calling the *GetTableForParameterV2* method
 
 ### DMS Mobile apps
 
-#### Monitoring & Control app: Contacts list \[ID_21560\]\[ID_22754\]
+#### Monitoring & Control app: Contacts list \[ID 21560\]\[ID 22754\]
 
 In the Monitoring & Control app, you can now view the list of users who are currently logged on to the DataMiner System.
 
@@ -146,19 +146,19 @@ For each user, the list displays the name of the user, the name of the computer,
 > - If available, the name of the application shown in the details pane (“\[APP\]”) will be a user-friendly description of the application that person is using to connect to the DMS.
 > - Only users who have been granted the “General \> Collaboration \> UI available” permission are able to access the Contacts list.
 
-#### New Monitoring & Control app \[ID_21736\]\[ID_22023\]\[ID_22209\]\[ID_22750\]\[ID_22801\]\[ID_22888\] \[ID_22943\]\[ID_23025\]\[ID_23036\]\[ID_23090\]\[ID_23387\]\[ID_23798\]\[ID_23874\]\[ID_24017\]\[ID_24059\] \[ID_24072\]\[ID_24080\]\[ID_24114\]\[ID_24134\]\[ID_24180\]\[ID_24192\]
+#### New Monitoring & Control app \[ID 21736\]\[ID 22023\]\[ID 22209\]\[ID 22750\]\[ID 22801\]\[ID 22888\] \[ID 22943\]\[ID 23025\]\[ID 23036\]\[ID 23090\]\[ID 23387\]\[ID 23798\]\[ID 23874\]\[ID 24017\]\[ID 24059\] \[ID 24072\]\[ID 24080\]\[ID 24114\]\[ID 24134\]\[ID 24180\]\[ID 24192\]
 
 The DataMiner HTML5 app has now been replaced by the new Monitoring & Control app, of which the overall look and feels closely resembles that of the newly redesigned Cube X.
 
 - Redesigned header bar:
 
-  - The app title is now a button that redirects the user to the app’s homepage.
+  - The app title is now a button that redirects the user to the app’s home page.
   - Like in Cube X, the Search box has now been moved from the side panel to the middle of the header bar.
   - On the right, there is now one single user icon, which, when clicked, opens a menu that allows users to access to the settings window and the About box.
 
     Currently, the settings window allows you to specify the default pages for element and view cards.
 
-- A new homepage similar to the Cube X homepage, listing recently used items.
+- A new home page similar to the Cube X home page, listing recently used items.
 - Redesigned (collapsible) side panel, on which alarm states are now indicated by colored circles.
 - Redesigned element, service, view and alarm cards, which can be accessed directly using the following URLs:
 
@@ -174,29 +174,29 @@ The DataMiner HTML5 app has now been replaced by the new Monitoring & Control ap
 >
 > Alternatively, you can go to the landing page of the DataMiner Agent (by entering its IP address), and then click the *Monitoring & Control* button.
 
-#### Mobile DataMiner apps can now be added to a device’s home screen and be used as an app \[ID_21754\]
+#### Mobile DataMiner apps can now be added to a device’s home screen and be used as an app \[ID 21754\]
 
 The mobile DataMiner apps can now be added to a mobile device’s home screen and be used as an app. This will allow users to use those apps in full-screen mode.
 
-#### Default time zone can now be specified in ClientSettings.json \[ID_22762\]
+#### Default time zone can now be specified in ClientSettings.json \[ID 22762\]
 
 Time notations displayed in DataMiner mobile apps will now all be based on the time zone specified in the following setting, located in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file:
 
 - commonServer.ui.DefaultTimeZone
 
-#### Ticketing app: Concatenation of alarm fields and static text in ticket fields \[ID_23894\]
+#### Ticketing app: Concatenation of alarm fields and static text in ticket fields \[ID 23894\]
 
 It is now possible to combine multiple alarm fields and static text in a ticket field. When you have added an alarm field in the field configuration, you can now click *Add concatenation* to add an additional alarm field or static text. You can do so several times to combine multiple alarm fields and/or static text fields in one field. When a ticket is generated based on an alarm, the concatenated fields will be combined into a single string.
 
-#### Legacy Monitoring & Control app: New settings to specify the default page for element, service and view cards \[ID_24017\]
+#### Legacy Monitoring & Control app: New settings to specify the default page for element, service and view cards \[ID 24017\]
 
 In the *Settings* window of the legacy Monitoring & Control app, it is now possible to specify the default pages for element, service and view cards.
 
-#### Jobs app: UI adapted to new DataMiner X style \[ID_24157\]
+#### Jobs app: UI adapted to new DataMiner X style \[ID 24157\]
 
 The header and login screen of the Jobs app have now been adapted to the new DataMiner X style.
 
-#### New DataMiner landing page \[ID_24239\]\[ID_25017\]
+#### New DataMiner landing page \[ID 24239\]\[ID 25017\]
 
 When you open a browser window and enter the IP address or host name of a DataMiner Agent, you are now directed to a new DataMiner landing page (“/root”).
 
@@ -206,7 +206,7 @@ Clicking the user menu in the upper-right corner will allow you to open the Tool
 
 ### DMS Service & Resource Management
 
-#### New methods related to function definitions in ProtocolFunctionHelper class \[ID_19405\] \[ID_19571\]
+#### New methods related to function definitions in ProtocolFunctionHelper class \[ID 19405\] \[ID 19571\]
 
 The following new methods are now available in the *ProtocolFunctionHelper* class:
 
@@ -216,7 +216,7 @@ The following new methods are now available in the *ProtocolFunctionHelper* clas
 | GetSystemFunctionDefinitions            | Returns the currently active function definitions.                                                                                                                                                                                                             |
 | GetFunctionDefinition                   | Retrieves function definition objects by ID.                                                                                                                                                                                                                   |
 
-#### Service & Resource Management: Possibility to generate protocols and function definitions based on service definitions and enhanced services based on reservations \[ID_19330\]\[ID_19359\]\[ID_19385\]\[ID_19386\]\[ID_19415\]\[ID_19431\]\[ID_19450\] \[ID_19491\]\[ID_19498\]\[ID_19556\]\[ID_19632\]\[ID_19789\]\[ID_23201\]
+#### Service & Resource Management: Possibility to generate protocols and function definitions based on service definitions and enhanced services based on reservations \[ID 19330\]\[ID 19359\]\[ID 19385\]\[ID 19386\]\[ID 19415\]\[ID 19431\]\[ID 19450\] \[ID 19491\]\[ID 19498\]\[ID 19556\]\[ID 19632\]\[ID 19789\]\[ID 23201\]
 
 It is now possible to generate an enhanced service protocol based on a service definition. The enhanced service will detect changes in the resource usage of the service booking instance and reconfigure the dynamic replication accordingly.
 
@@ -230,13 +230,13 @@ The new method *GetSrmGeneratedProtocolFunctionsInfo* in the *ProtocolFunctionH
 
 Information on the protocols generated via SRM is also synchronized throughout the DMS.
 
-#### Service & Resource Management: New EnhancedServiceElementID property for service booking definitions \[ID_19942\]
+#### Service & Resource Management: New EnhancedServiceElementID property for service booking definitions \[ID 19942\]
 
 Service booking definitions now have an *EnhancedServiceElementID* property. If this property is filled in with a particular element ID, this ID will be copied to every service booking instance for that definition, so that these instances can use that ID to create the corresponding enhanced service. This allows trending of the enhanced services to be available for the same element for each occurrence of the booking definition.
 
 If no ID is filled in for the new property, the server will automatically provide one.
 
-#### DataMiner Cube: New 'Migrate booking data to Indexing Engine' wizard \[ID_21935\]\[ID_23674\] \[ID_24410\]\[ID_24424\]
+#### DataMiner Cube: New 'Migrate booking data to Indexing Engine' wizard \[ID 21935\]\[ID 23674\] \[ID 24410\]\[ID 24424\]
 
 In DataMiner Cube, a new wizard has been added to the *Search & Indexing* section of *System Center*. This wizard allows you to migrate booking data from the Cassandra database to the Indexing database.
 
@@ -251,7 +251,7 @@ When you have successfully migrated all booking data, the button to start the wi
 > - An Indexing database takes about twice as much disk space to store booking data compared to a Cassandra database.
 > - A number of methods in the *ServiceManagerHelper* and *ResourceManagerHelper* classes have been adapted to allow them to manage booking data stored in an Indexing database.
 
-#### Services app: New 'Services' tab \[ID_20459\]\[ID_20962\]\[ID_21203\]\[ID_23460\]\[ID_23785\]
+#### Services app: New 'Services' tab \[ID 20459\]\[ID 20962\]\[ID 21203\]\[ID 23460\]\[ID 23785\]
 
 In the *Services* app, the *Recent* and *All* tabs have now been grouped into a *Definitions* tab, and a new *Services* tab has been added.
 
@@ -296,7 +296,7 @@ When you right-click the list header, and select *Add/remove column \> More*, th
 
 - In the *Filter by type* section, indicate which type of columns you want to choose from (services, properties and/or service profiles). It is also possible to add additional service profile columns.
 
-#### Service & Resource Management: New 'Resources' and 'Bookings' apps \[ID_20525\]\[ID_21686\] \[ID_20715\]
+#### Service & Resource Management: New 'Resources' and 'Bookings' apps \[ID 20525\]\[ID 21686\] \[ID 20715\]
 
 In the *Apps* tab of the DataMiner Cube navigation pane, you can now find the following new applications:
 
@@ -307,11 +307,11 @@ In the *Apps* tab of the DataMiner Cube navigation pane, you can now find the f
 > [!NOTE]
 > Up to DataMiner 9.6.3, the *Resources* app was available as an additional resources tab page in the *Scheduler* app.
 
-#### Service & Resource Management: Filter API Profile Manager objects updated \[ID_20761\]
+#### Service & Resource Management: Filter API Profile Manager objects updated \[ID 20761\]
 
 In Automation scripts, Profile Manager objects (parameters, profile instances and profile definitions) now allow the same filter style as Resource Manager objects.
 
-#### Service & Resource Management/Automation: Profile parameter capabilities and resource capabilities \[ID_20891\]\[ID_20926\]\[ID_20958\]\[ID_21093\]\[ID_21178\]
+#### Service & Resource Management/Automation: Profile parameter capabilities and resource capabilities \[ID 20891\]\[ID 20926\]\[ID 20958\]\[ID 21093\]\[ID 21178\]
 
 In profile parameters and resources, you can now define so-called capabilities. This will allow you to configure the capabilities of the different resources as well as the resource capabilities required when reserving a resource.
 
@@ -353,7 +353,7 @@ Depending on the type of capability, the following data is expected in ProfilePa
 | CapabilityUsageParameterValue<br> (parameter value)                       | The minimum and maximum value of the range | A subset of the discreet values defined in ProfileParameter |
 | ResourceCapabilityUsage<br> (resource capability required by the booking) | A single value within the defined range    | One of the values from the list                                |
 
-#### Service & Resource Management/Automation: Profile parameter capacities and resource capacities \[ID_20218\]\[ID_20996\]\[ID_21085\]\[ID_21194\]
+#### Service & Resource Management/Automation: Profile parameter capacities and resource capacities \[ID 20218\]\[ID 20996\]\[ID 21085\]\[ID 21194\]
 
 In profile parameters and resources, you can now define capacities. This will allow you to configure the capacities of the different resources as well as the resource capacities required when reserving a resource.
 
@@ -395,7 +395,7 @@ The following changes have been implemented to profile parameters, profile insta
 >   - GetAvailableResources
 >   - GetResourceUsage
 
-#### Services app: Service profiles \[ID_20635\]
+#### Services app: Service profiles \[ID 20635\]
 
 In a service definition, it is now possible to organize parameter configurations into groups called service profiles.
 
@@ -412,7 +412,7 @@ To add a profile to the service definition:
 
 1. Link the necessary node parameters to the selected profile.
 
-#### New 'GetEligibleResources' method in ResourceManagerHelper class \[ID_21107\]
+#### New 'GetEligibleResources' method in ResourceManagerHelper class \[ID 21107\]
 
 The following new method is now available in the *ResourceManagerHelper* class:
 
@@ -420,7 +420,7 @@ The following new method is now available in the *ResourceManagerHelper* class:
 |----------------------|----------------------------------------------------------------------------------------------|
 | GetEligibleResources | Retrieves resources based on capabilities and capacities available in a specific time range. |
 
-#### Updating a resource can cause ReservationInstances to get quarantined \[ID_21277\]
+#### Updating a resource can cause ReservationInstances to get quarantined \[ID 21277\]
 
 When, after being updated, a resource is no longer able to support all ReservationInstances, the resource update will not be saved and an error will be returned in tracedata. That error will contain a list of ResourceUsageDefinitions that should be quarantined before the resource update can be saved.
 
@@ -486,13 +486,13 @@ Limitations:
 > [!NOTE]
 > The resource property “ResourceMode” has been deprecated.
 
-#### Service & Resource Management: Update Resources & Profiles apps with capacity and capability support \[ID_21457\]
+#### Service & Resource Management: Update Resources & Profiles apps with capacity and capability support \[ID 21457\]
 
 Resources in the Resources app can now be configured with one or more capabilities and one or more capacities. The latter replace the capacity configuration that was previously available for resources.
 
 In the Profiles app, the parameter definition now indicates that the optional default value is intended for the configuration of the parameter. Also, in case a parameter is not in the category "Configuration", it will no longer be possible to configure a default configuration value for the parameter or to configure a link to a protocol.
 
-#### Checks performed when updating a resource on systems using only legacy Reservation objects \[ID_21535\]
+#### Checks performed when updating a resource on systems using only legacy Reservation objects \[ID 21535\]
 
 On systems using only legacy Reservation objects, the following checks are performed when editing a resource:
 
@@ -505,7 +505,7 @@ If any of these checks fail, an error will be returned in the tracedata.
 > [!NOTE]
 > If both ReservationInstance objects and legacy Reservation objects and being used, the ResourceManager will use the quarantine mechanism and ignore all legacy Reservation objects. Mixing legacy Reservation objects and ReservationInstance objects on one system is not supported.
 
-#### Updating a ReservationInstance can cause resources to get quarantined \[ID_21557\]
+#### Updating a ReservationInstance can cause resources to get quarantined \[ID 21557\]
 
 When a ReservationInstance is updated, scheduling conflicts can now be resolved by quarantining ResourceUsageDefinitions.
 
@@ -558,11 +558,11 @@ Those objects contain a ResourceManagerWarningData and a ResourceManagerErrorDat
 - If any ReservationInstances derived from ReservationDefinitions are affected, the update will be blocked and an error of type ResourceUsedByReservationDefinition will be returned.
 - If any ReservationInstances using legacy capacity would need to be quarantined to resolve concurrency/capacity overflows, the quarantining will be skipped and the ResourceManager will fall back on the old mechanism of returning errors. If this happens, a warning will be returned with the reason “LegacyCapacitiesUsed”, along with any conflicts found by the ResourceManager in the error data.
 
-#### Service Manager: New definition grouping toggle button \[ID_21632\]
+#### Service Manager: New definition grouping toggle button \[ID 21632\]
 
 In the Service Manager module, a button is now available in the top-right corner of the tree view pane that allows you to toggle grouping of template definitions and regular definitions in this pane. This template grouping feature is also available via the context menu of the tree view pane.
 
-#### DataMiner Cube - Surveyor: Service & Resource Management apps now in 'Modules' section of 'Apps' tab \[ID_21688\]
+#### DataMiner Cube - Surveyor: Service & Resource Management apps now in 'Modules' section of 'Apps' tab \[ID 21688\]
 
 In the *Apps* tab of the Cube navigation pane, all Service & Resource Management apps can now be found in the *Modules* section.
 
@@ -573,7 +573,7 @@ In the *Apps* tab of the Cube navigation pane, all Service & Resource Managemen
 >   - if they have been granted the necessary user permissions.
 > - The user permission *Reservations \> Timeline UI available* has been renamed to *Bookings \> UI available*.
 
-#### Bookings can now have 'pre-events' \[ID_21751\]
+#### Bookings can now have 'pre-events' \[ID 21751\]
 
 It is now possible to add so-called “pre-events” to a booking, i.e. events that will take place before the start of the booking.
 
@@ -582,11 +582,11 @@ It is now possible to add so-called “pre-events” to a booking, i.e. events t
 > - All configured pre-events will be executed before the start actions are run.
 > - If a pre-event could not be executed because the DataMiner Agent was down or because the ReservationInstance was configured in such a way that the pre-event was set in the past, then that pre-event will still be executed.
 
-#### Resources app: Updating a capacity/capability can now cause reservations to be quarantined \[ID_21780\]
+#### Resources app: Updating a capacity/capability can now cause reservations to be quarantined \[ID 21780\]
 
 Updating a capacity or a capability of a resource can now cause certain reservations to be quarantined. When conflicting reservations are detected, those will now be shown in a popup, and users will have to indicate whether they want to save the resource or discard the changes.
 
-#### Visual Overview - Profile Manager component: Extra options & new dynamic placeholder for booking properties \[ID_21843\]
+#### Visual Overview - Profile Manager component: Extra options & new dynamic placeholder for booking properties \[ID 21843\]
 
 If you want to embed a Profile Manager component on a Visio page, then add a shape with a shape data item of type “Component” set to either “Profile Manager” or “Profiles”.
 
@@ -634,7 +634,7 @@ The property to be retrieved can be specified as follows:
 >
 > Example: NodeID=15
 
-#### Decimal capacity values \[ID_22022\]
+#### Decimal capacity values \[ID 22022\]
 
 The CapacityParameterValue, CapacityUsageParameterValue, MultiResourceCapacity and MultiResourceCapacityUsage objects can now contain decimal capacity values.
 
@@ -650,11 +650,11 @@ If the long capacity value of one of the above-mentioned objects is updated, the
 > - When you try to add or edit ReservationInstances using long capacity values while some ReservationInstances are using decimal capacity values, then ReservationInstances with long capacity values might be quarantined and will have to have their capacity values (automatically) converted to decimal values.
 > - It is not recommended to have a system that uses both decimal and long capacities values as it is not always possible to correctly convert decimal capacity values to long capacity values.
 
-#### Quarantine check when changing a profile instance \[ID_22274\]
+#### Quarantine check when changing a profile instance \[ID 22274\]
 
 DataMiner will now also do a booking quarantine check when you update a profile instance. When conflicts are found after a profile instance update, a dialog box will appear, asking you whether the bookings should be quarantined (i.e. set to a pending state).
 
-#### Checks added when regenerating contributing service protocol \[ID_22605\]
+#### Checks added when regenerating contributing service protocol \[ID 22605\]
 
 When the protocol for a contributing service is generated again, the following checks will now be executed:
 
@@ -668,7 +668,7 @@ When the protocol for a contributing service is generated again, the following c
 
 In addition, the *SrmProtocolGenerationInfo* object has been expanded with the complete profile parameter that was used to generate each protocol parameter.
 
-#### Service & Resource Management - Automation: New GetEligibleResourcesForServiceNode method \[ID_23576\]
+#### Service & Resource Management - Automation: New GetEligibleResourcesForServiceNode method \[ID 23576\]
 
 A new method, *GetEligibleResourcesForServiceNode*, is now available in the *ResourceManagerHelper* class. It can be used to replace a resource for a specific node of a service booking that has already been scheduled. The method requires a ReservationID, a nodeID and a set of capacities and capabilities. It retrieves all eligible resources for the specified node that can provide the specified capacities and capabilities within the time range of the specified booking.
 
@@ -680,7 +680,7 @@ public Resource[] GetEligibleResourcesForServiceNode(
     List<ResourceCapabilityUsage> requiredCapabilities)
 ```
 
-#### Service & Resource Management: SRM_QuarantineHandling script triggered when booking is quarantined \[ID_23589\]
+#### Service & Resource Management: SRM_QuarantineHandling script triggered when booking is quarantined \[ID 23589\]
 
 When a booking enters into quarantined state because of a change in the system, the script titled *SRM_QuarantineHandling* will now be run. The entry point for this script should be configured as follows:
 
@@ -696,7 +696,7 @@ If there is a quarantine trigger in the system and this script is not present or
 
 It is currently not possible to replace this script by a script with a different name. The script will also always run when a booking enters the quarantined state, regardless of whether it has been in this state before.
 
-#### Service & Resource Management: Modified context menu options for dynamic booking, service and resource lists \[ID_23607\]
+#### Service & Resource Management: Modified context menu options for dynamic booking, service and resource lists \[ID 23607\]
 
 Different context menu options are now available for dynamic booking, service and resource lists, depending on whether these are viewed in Visual Overview (using a *ListView* component) or in the Services/Bookings app:
 
@@ -710,17 +710,17 @@ The custom column configuration for a *ListView* component can now be saved via
 
 In the Bookings app and Services app, it is now possible to save the preferred set of columns and to load the default set of columns based on the source type.
 
-#### Service & Resource Management: Bookings list can now display colors configured in Visual.Background property of bookings \[ID_23681\]
+#### Service & Resource Management: Bookings list can now display colors configured in Visual.Background property of bookings \[ID 23681\]
 
 If colors are defined using the *Visual.Background* property of bookings, these can now be displayed in the *Color* column of a dynamic list showing bookings, for instance in the Bookings app or in Visual Overview. The same colors and color formats are supported as when this property is used to determine the background color of the blocks on the Resources timeline.
 
-#### DataMiner will now generated an error when it detects a ServiceManager license but no ElasticSearch instance \[ID_24329\]
+#### DataMiner will now generated an error when it detects a ServiceManager license but no ElasticSearch instance \[ID 24329\]
 
 From now on, a DataMiner Agent will generated the following DataMiner run-time error when it detects a ServiceManager license but no Elasticsearch instance:
 
 *The Service Manager is licensed, but no ElasticSearch database is active on the system. Therefore, Resource Manager and Service Manager will not initialize.*
 
-#### DataMiner upgrade: Additional action to correct default value types of profile parameters \[ID_24937\]
+#### DataMiner upgrade: Additional action to correct default value types of profile parameters \[ID 24937\]
 
 As it is no longer allowed for profile parameters with a type set to a value other than “Undefined” to have a default value of type “Undefined”, when upgrading to DataMiner 10.0.0/10.0.4, an additional action will be performed to correct all incorrect default value types.
 
@@ -739,14 +739,14 @@ Whenever a profile parameter with a type set to a value other than “Undefined�
 
 ### DMS Spectrum Analysis
 
-#### Users will now get more information when a spectrum script fails \[ID_21036\]
+#### Users will now get more information when a spectrum script fails \[ID 21036\]
 
 When a spectrum script fails, a pop-up window will now clearly show
 
 - the name of the script, and
 - the error message returned by the script.
 
-#### 'Follow device settings' option \[ID_22615\]\[ID_23009\]
+#### 'Follow device settings' option \[ID 22615\]\[ID 23009\]
 
 When configuring a spectrum element, you can now select the *Follow device settings* option.
 
@@ -757,7 +757,7 @@ When you open a spectrum element that has this option enabled, regardless of the
 
 ### DMS tools
 
-#### SLNetClientTest: Checking whether protocol buffer serialization is enabled \[ID_20495\]
+#### SLNetClientTest: Checking whether protocol buffer serialization is enabled \[ID 20495\]
 
 Using the SLNetClientTest tool, you can now check whether a client connection is using protocol buffer serialization.
 
@@ -770,14 +770,14 @@ Using the SLNetClientTest tool, you can now check whether a client connection is
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### DataMiner Taskbar Utility: Option to abort an upgrade operation \[ID_20925\]
+#### DataMiner Taskbar Utility: Option to abort an upgrade operation \[ID 20925\]
 
 If an upgrade is started using the DataMiner Taskbar Utility, a button will now be available that allows you to abort the upgrade in progress.
 
 > [!NOTE]
 > Be very careful with this functionality, as aborting an upgrade can potentially cause a DataMiner Agent to no longer start up.
 
-#### DataMiner Taskbar Utility: 'Summary' tab in upgrade window & 'Forced stop' option in right-click menu \[ID_20944\]
+#### DataMiner Taskbar Utility: 'Summary' tab in upgrade window & 'Forced stop' option in right-click menu \[ID 20944\]
 
 The following enhancements have been made to the DataMiner Taskbar Utility:
 
@@ -785,7 +785,7 @@ The following enhancements have been made to the DataMiner Taskbar Utility:
 
 - When you right-click the taskbar icon of the DataMiner Taskbar Utility, you can now click *Forced stop* to have all Skyline processes stopped immediately.
 
-#### SLNetClientTest: History tab added to QueryTable window \[ID_21386\]
+#### SLNetClientTest: History tab added to QueryTable window \[ID 21386\]
 
 In the *QueryTable* window (which you can open via *Advanced \> Dynamic Table Query*), a *History* tab has now been added. This tab will keep track of all queries executed during the current session.
 
@@ -793,7 +793,7 @@ In the *QueryTable* window (which you can open via *Advanced \> Dynamic Table Q
 
 - For a specific query, it is possible to generate C# Automation script code that executes the query and provides access to the results.
 
-#### SLNetClientTest: Viewing the connection timeout states of an element \[ID_23573\]
+#### SLNetClientTest: Viewing the connection timeout states of an element \[ID 23573\]
 
 Using the SLNetClientTest tool, you can now view the connection timeout states of a specific element.
 

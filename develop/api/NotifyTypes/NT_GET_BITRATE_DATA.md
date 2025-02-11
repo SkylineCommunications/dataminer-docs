@@ -4,7 +4,7 @@ uid: NT_GET_BITRATE_DATA
 
 # NT_GET_BITRATE_DATA (270)
 
-Retrieves the raw counter information of the last two iterations.
+Retrieves the raw counter information of the last two iterations.<!-- RN 2906 -->
 
 ```csharp
 int groupID = 10;
@@ -39,10 +39,6 @@ object[] currentData = (object[]) rawData[1];
     - details[9] (uint): Bytes received (B).
     - details[10] (uint): Total RTT (ms).
     - details[11] (uint): Number of timeouts.
-
-## Remarks
-
-- Supported since DataMiner 6.5.4 (RN 2906).
 
 ## Example
 

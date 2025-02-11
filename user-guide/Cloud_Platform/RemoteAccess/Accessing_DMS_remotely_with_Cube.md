@@ -1,5 +1,6 @@
 ---
 uid: Accessing_DMS_remotely_with_Cube
+keywords: cloud connection
 ---
 
 # Accessing your DMS remotely with DataMiner Cube
@@ -10,15 +11,12 @@ From DataMiner 10.3.0/10.3.2 onwards, you can use DataMiner Cube to access your 
 
 - The DataMiner System uses DataMiner 10.3.0/10.3.2 or higher and is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - The DataMiner System has been [configured to use HTTPS](xref:Setting_up_HTTPS_on_a_DMA).
-- The DataMiner Cube connection settings have been configured to use gRPC (see [ConnectionSettings.txt](xref:ConnectionSettings_txt)).
+- Prior to DataMiner 10.3.0 [CU2] and 10.3.5<!-- RN 35779 -->, the DataMiner Cube connection settings must be configured to use gRPC (see [ConnectionSettings.txt](xref:ConnectionSettings_txt)). This is no longer required in later DataMiner versions.
 - The [APIGateway DxM](xref:DataMinerExtensionModules#apigateway) is installed and running on the DMA you are connecting to.
-- [Remote access is enabled](xref:Controlling_remote_access) for the DMS.
+- [Remote access to Cube is enabled](xref:Controlling_remote_access) for the DMS.
 - You have been [granted access to dataminer.services features](xref:Giving_users_access_to_cloud_features).
-- You [have the DataMiner Cube desktop application installed](xref:Installing_configuring_the_DataMiner_Cube_software).
+- You [have the DataMiner Cube desktop application installed](xref:Installing_configuring_the_DataMiner_Cube_software) and all [client requirements](xref:DataMiner_Client_Requirements) are met.
 - Your user account has been granted access to the DataMiner System.
-
-> [!IMPORTANT]
-> At present, the following **limitation** applies: If a DMS has **SAML** authentication configured, you will not be able to access the DMS remotely with Cube.
 
 ## Starting a remote access session with DataMiner Cube
 
@@ -37,6 +35,6 @@ You can start the Cube session in different ways:
   > [!NOTE]
   > If your DMS is not listed, check if the correct organization is selected in the top-right corner.
 
-- **With the button on admin.dataminer.services**: Open a browser, navigate to [admin.dataminer.services](https://admin.dataminer.services), and go to the overview of your system. Here you will find the button *Open Desktop Application*. This works in the same way as the button on dataminer.services.
+- **With the button on admin.dataminer.services**: Open a browser, navigate to [admin.dataminer.services](https://admin.dataminer.services), and go to the overview of your system. Here you will find the button *Open in desktop app*. This works in the same way as the button on dataminer.services.
 
   ![Remote Cube in the admin app](~/user-guide/images/RemoteCubeAdminApp.png)

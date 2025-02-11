@@ -38,7 +38,7 @@ When you get an HTTP error 401.3 ("Unauthorized") when trying to browse to any w
 1. Make sure that the *Users* group has been added, and has "Read" rights.
 
 > [!TIP]
-> See also [How do I manually configure DCOM?](#how-do-i-manually-configure-dcom)
+> See also: [How do I manually configure DCOM?](#how-do-i-manually-configure-dcom)
 
 ## What do I do if get HTTP error 500.19?
 

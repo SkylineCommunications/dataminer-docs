@@ -10,6 +10,6 @@ uid: DMS_element_names
 
     - No empty names.
 
-    - Disallowed characters: \\  ;  /  :  \*  ?  "  \<  > \| ; °
+    - Disallowed characters: \\  ;  /  :  \*  ?  "  \<  > \| °
 
     - No duplicate names: an element must be unique in the DMS.

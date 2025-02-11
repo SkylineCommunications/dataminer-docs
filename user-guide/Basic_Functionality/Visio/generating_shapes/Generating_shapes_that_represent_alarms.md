@@ -14,7 +14,6 @@ To implement this feature, do the following:
 > [!NOTE]
 >
 > - The shape created in step 1 can itself be a group that contains a number of subshapes, each with their own **Alarm** and **Info** data fields. That way, you can e.g. visualize different details of one particular alarm.
-> - From DataMiner 9.5.3 onwards, by default the shapes representing the alarms are ordered according to the time of the alarms.
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[children > ALARMS]* page.
 
 ## Child-level shape data
@@ -76,11 +75,11 @@ The following shape data fields can be added to the group containing the alarm s
   - **Center**: Use this option to have the generated shapes centered.
   - **LazyLoading**: If the child shapes will be generated in a scrollable container shape (stack panel, wrap panel, etc.), use this option to configure lazy loading. Though the child shapes will then be generated immediately, they will only be initialized the moment they come into view.
 
-- **ChildrenSort**: In this optional shape data field, you can specify how the different child item shapes should be sorted:
+- **ChildrenSort**: In this optional shape data field, you can specify how the different child item shapes should be sorted. By default, the shapes representing the alarms are ordered based on the time of the alarms.
 
   | Value | Description |
   | ----- | ----------- |
-  | Column name | Sorts alarms by the name of an Alarm Console column (which does not actually need to be displayed in the Alarm Console).<br>This is usually a property of the alarm, represented as "Alarm.PropertyName". |
+  | Column name | Sorts alarms by the name of an Alarm Console column (which does not actually need to be displayed in the Alarm Console). This is usually a property of the alarm, represented as "Alarm.PropertyName". |
 
   Also, you can specify a sort order by adding one of the following suffixes:
 
@@ -118,8 +117,8 @@ The following shape data fields can be added to the group containing the alarm s
 
 - **ChildrenFilter**: In this optional shape data field, you can specify the name of a shared alarm filter. If you do so, a shape will be generated for every alarm matching that particular shared alarm filter.
 
-  > [!NOTE]
-  > Using placeholders such as "\[var:\]" and "\[param:\]" within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards.
+  > [!TIP]
+  > You can use placeholders such as [\[var:\]](xref:Placeholders_for_variables_in_shape_data_values#varvariablename) and [\[param:\]](xref:Placeholders_for_variables_in_shape_data_values#paramdmaidelementidparameterid) within **ChildrenFilter** shape data.
 
 - **Options**: In this optional shape data field, you can specify the option "HideAlarmsThatAreCurrentlyCorrelated" if you do not want shapes to be generated for correlated alarms.
 

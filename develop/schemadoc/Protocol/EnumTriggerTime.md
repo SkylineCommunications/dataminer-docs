@@ -19,4 +19,4 @@ Specifies the time the trigger is triggered.
 |&nbsp;&nbsp;Enumeration|link file change||
 |&nbsp;&nbsp;Enumeration|succeeded||
 |&nbsp;&nbsp;Enumeration|timeout||
-|&nbsp;&nbsp;Enumeration|timeout after retries|Specifies that the trigger will go off after the last retry. Feature introduced in DataMiner 8.5.2 (RN 8573).|
+|&nbsp;&nbsp;Enumeration|timeout after retries|Specifies that the trigger will go off after the last retry.<!-- RN 8573 -->|

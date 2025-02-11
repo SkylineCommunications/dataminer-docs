@@ -8,7 +8,7 @@ uid: DIS_2.0.3
 
 ### Validator
 
-#### RTDisplay check: Additional error messages \[ID_13215\]\[ID_13855\]
+#### RTDisplay check: Additional error messages \[ID 13215\]\[ID 13855\]
 
 The RTDisplay check can now throw a number of additional errors and warnings.
 
@@ -36,7 +36,7 @@ Overview of all possible error and warning messages:
 | 4421 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which is used in a relation. |
 | 4422 | Error | RTDisplay=”true” is required. Parameter \[Parameter ID\] is an exported table. |
 
-#### Trend/Alarm check: Additional error messages \[ID_13855\]
+#### Trend/Alarm check: Additional error messages \[ID 13855\]
 
 The Trend/Alarm check can now throw the following additional warnings:
 
@@ -45,7 +45,7 @@ The Trend/Alarm check can now throw the following additional warnings:
 | 2403 | Warning | Parameter \[Parameter ID\] has trending=”true”, but is not displayed on any page. This is not consistent. Please verify. |
 | 2404 | Warning | Parameter \[Parameter ID\] is monitored, but is not displayed on any page. This is not consistent. Please verify. |
 
-#### New check: Check whether all parameter IDs in the \<Measurement> tag of a table have a corresponding \<ColumnOption> tag \[ID_13219\]
+#### New check: Check whether all parameter IDs in the \<Measurement> tag of a table have a corresponding \<ColumnOption> tag \[ID 13219\]
 
 A new check has been added that will throw an error whenever the \<Measurement> tag of a table contains a parameter ID that doesn’t have a corresponding \<ColumnOption> tag.
 
@@ -53,7 +53,7 @@ A new check has been added that will throw an error whenever the \<Measurement> 
 |-------------|-------|---------------------------------------------------------------------------------------------------------|
 | 1705        | Error | Parameter \[Column parameter ID\] is included in the table measurement but not in the table definition. |
 
-#### New check: Check whether all table parameters have a correct measurement type \[ID_13220\]
+#### New check: Check whether all table parameters have a correct measurement type \[ID 13220\]
 
 A new check has been added that will throw an error whenever a parameter of type “array” doesn’t have its measurement type set to either “table” or “matrix”.
 
@@ -63,7 +63,7 @@ A new check has been added that will throw an error whenever a parameter of type
 
 ### XML Schema
 
-#### New units of measure \[ID_13216\]
+#### New units of measure \[ID 13216\]
 
 The XML Schema will now accept the following additional units of measure:
 
@@ -90,7 +90,7 @@ The XML Schema will now accept the following additional units of measure:
 
 ### Enhancements
 
-#### IDE - MIB browser enhancements \[ID_12972\]
+#### IDE - MIB browser enhancements \[ID 12972\]
 
 A number of enhancements have been made to the MIB browser:
 
@@ -105,24 +105,24 @@ A number of enhancements have been made to the MIB browser:
 
 Up to now, in some cases, the SNMP type of an imported SNMP parameter was incorrect. This has now also been fixed.
 
-#### Validator - No 'No range defined on numeric parameter' warning for parameters with RTDisplay=false \[ID_13217\]
+#### Validator - No 'No range defined on numeric parameter' warning for parameters with RTDisplay=false \[ID 13217\]
 
 From now on, the “No range defined on numeric parameter” warning will no longer appear for parameters of which the RTDisplay setting is set to false.
 
-#### Validator - No 'Multiple Table Keys with \[IDX\] in the description' warning if same column is used for both index and display key \[ID_13218\]
+#### Validator - No 'Multiple Table Keys with \[IDX\] in the description' warning if same column is used for both index and display key \[ID 13218\]
 
 From now on, the “Multiple Table Keys with \[IDX\] in the description” warning will no longer appear if the same column is used for both index and display key.
 
-#### Validator - Range of numeric parameters only checked when they are displayed \[ID_13851\]
+#### Validator - Range of numeric parameters only checked when they are displayed \[ID 13851\]
 
 Up to now, the validator checked the range of all numeric parameters. Now, it will only check the range of numeric parameters that are displayed.
 
 ### Fixes
 
-#### IDE - Problem when importing a protocol \[ID_12971\]
+#### IDE - Problem when importing a protocol \[ID 12971\]
 
 In some cases, especially when Microsoft Visio Studio was installed in a language other than English, an error occurred when you tried to import a protocol because the “New XML File” template could not be found.
 
-#### Validator - No 'Unexpected RTDisplay = true' error for trended read parameters without position tag \[ID_13221\]
+#### Validator - No 'Unexpected RTDisplay = true' error for trended read parameters without position tag \[ID 13221\]
 
 In some cases, no “Unexpected RTDisplay = true” error was thrown when the RTDisplay setting of a trended read parameter without position tag was set to true.

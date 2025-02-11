@@ -4,7 +4,7 @@ uid: ChangeToPartialTable
 
 # Change to partial table
 
-Changing a table to a partial table is considered a major change.
+Changing a table to a [partial table](xref:Protocol.Params.Param.ArrayOptions-partial) is considered a major change.
 
 ## Impact
 

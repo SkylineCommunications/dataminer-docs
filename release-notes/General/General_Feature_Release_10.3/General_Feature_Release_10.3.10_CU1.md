@@ -20,7 +20,7 @@ uid: General_Feature_Release_10.3.10_CU1
 
 ### Enhancements
 
-#### STaaS: Enhanced performance when sending data to the cloud [ID_37141]
+#### STaaS: Enhanced performance when sending data to the cloud [ID 37141]
 
 <!-- MR 10.4.0 - FR 10.3.10 [CU1] -->
 
@@ -28,14 +28,14 @@ Because of a number of enhancements, overall performance has increased when send
 
 ### Fixes
 
-#### Problem when migrating average trend data from Cassandra Cluster to STaaS [ID_37410]
+#### Problem when migrating average trend data from Cassandra Cluster to STaaS [ID 37410]
 
 <!-- MR 10.4.0 - FR 10.3.10 [CU1] -->
 <!-- Not added to MR 10.4.0 -->
 
 When migrating data from a Cassandra Cluster setup to STaaS, average trend data would be migrated incorrectly.
 
-#### STaaS: Problem when assigning/removing an alarm template to/from a DVE child element [ID_37443]
+#### STaaS: Problem when assigning/removing an alarm template to/from a DVE child element [ID 37443]
 
 <!-- MR 10.4.0 - FR 10.3.10 [CU1] -->
 <!-- Not added to MR 10.4.0 -->

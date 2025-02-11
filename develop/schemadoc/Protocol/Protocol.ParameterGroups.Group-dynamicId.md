@@ -18,7 +18,7 @@ Specifies the ID of the table parameter.
 
 See also [dynamicIndex](xref:Protocol.ParameterGroups.Group-dynamicIndex).
 
-From DataMiner version 8.5.8.5 onward, it is possible to define 2 parameter groups using in and out type, for a matrix. This is illustrated in the example below, where dynamicId 50 is a matrix parameter.
+It is also possible to define 2 parameter groups using in and out type for a matrix. This is illustrated in the example below, where dynamicId 50 is a matrix parameter.
 
 ```xml
 <ParameterGroups>

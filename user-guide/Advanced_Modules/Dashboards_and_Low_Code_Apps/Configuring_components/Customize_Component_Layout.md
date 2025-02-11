@@ -6,9 +6,7 @@ uid: Customize_Component_Layout
 
 Each component in a dashboard or low-code app has a number of default options. By default, the configuration of these options is determined by the layout of the [dashboard](xref:Configuring_the_dashboard_layout) or [low-code app](xref:LowCodeApps_Layout) on the whole. However, it is possible to override this. The way this can be done depends on the DataMiner version.
 
-## [From DataMiner 10.0.8 onwards](#tab/tabid-1)
-
-1. Select the component and go to the ***Layout*** tab on the right.
+1. Select the component and go to the ***Layout*** pane on the right.
 
 1. In the ***Styles*** section, you can then change the component theme in different ways:
 
@@ -26,9 +24,23 @@ Each component in a dashboard or low-code app has a number of default options. B
 
        You can also further customize your title with *Bold*, *Italics*, and *Underline*.
 
-     - In the *Colors* section, specify a custom background color and/or font color, either by specifying the color in RGB format or by using the color picker box on the right.
+     - In the *Colors* section, specify a custom background color and/or font color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
-       From DataMiner 10.0.12 onwards, under *Colors* > *Color palette*, you can customize additional component colors, e.g. for the lines in a line chart.
+       Under *Colors* > *Accent color* (available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41859-->), you can specify an accent color. If a component supports an accent color (e.g. the [toggle component](xref:Toggle)), it will inherit the selected color. By default, this is set to *Default*, meaning the accent color will match the theme of the dashboard or low-code app.
+
+       Under *Colors* > *Data colors* or *Colors* > *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can customize additional component colors, e.g. for the lines in a line chart.
+
+       From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, under *Colors* > *Data colors*, you can specify conditional colors. If a display label of the data matches the specified text, that data will inherit the conditional color. These conditional colors override the normal data colors.
+
+       To add a conditional color:
+
+       1. Expand the *Conditional colors* section below *Data colors*.
+
+       1. Select *Add conditional color*.
+
+       1. Enter a regular expression to match the display label. For example, entering `Tot` will match data labeled `Total`, while entering `^Tot$` will only match data labeled `Tot`.
+
+       1. Choose a custom color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
      - In the *Spacing* section, specify the following:
 
@@ -57,46 +69,13 @@ Each component in a dashboard or low-code app has a number of default options. B
 
          - Dots
 
-       - *Sides*: Select which sides of the component border should be shown (from DataMiner 10.0.9 onwards).
+       - *Sides*: Select which sides of the component border should be shown.
 
        - *Thickness*: The thickness (in pixels) of the border that should be displayed around the components.
 
-       - *Color*: Specify a custom border color, either by specifying the color in RGB format or by using the color picker box on the right.
+       - *Color*: Specify a custom border color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
 
      - In the *Shadow* section, select the size of the shadow displayed behind the components.
 
      > [!NOTE]
      > When you have customized a component theme, you can also save it, so that it becomes available with the other component themes for the current dashboard or low-code app theme. To do so, click *Save as component theme* and specify the name of the theme. However, note that this is only possible if the dashboard or low-code app is currently using a saved theme. If it is not, you will first need to save the dashboard or low-code app theme before you can save the component theme.
-
-## [Prior to DataMiner 10.0.8](#tab/tabid-2)
-
-1. Select the component and go to the *Layout* tab on the right.
-
-1. Clear the checkbox *Inherit from dashboard*.
-
-1. Configure the following options in the expandable sections according to your preference:
-
-    - In the *Title* section, select the alignment for the component title and specify whether a border should be displayed around the title.
-
-    - In the *Colors* section specify a custom background color and/or font color, either by specifying the color in RGB format or by using the color picker box on the right.
-
-    - In the *Container* section, specify the following:
-
-        - *Vertical margin*: The amount of space (in pixels) above the component.
-
-        - *Horizontal margin*: The amount of space (in pixels) next to the component.
-
-        - *Vertical padding*: The amount of space (in pixels) that should be left free at the top of the bottom inside the component.
-
-        - *Horizontal padding*: The amount of space (in pixels) that should be left free on the left and right side of the component.
-
-        > [!NOTE]
-        > If a smaller value than the dashboard's or low code app's default value is configured for these settings, it will not be taken into account.
-
-    - In the *Borders* section, select the type of border that should be displayed around the components.
-
-    - In the *Shadow* section, select the size of the shadow displayed behind the components.
-
-Depending on the visualization, additional layout options may be available. For more information, refer to the relevant section in [Available visualizations](xref:Available_visualizations).
-
-***

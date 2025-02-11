@@ -4,34 +4,83 @@ uid: Support_Level_Roles
 
 # Support level roles
 
-## First Line Support
+The responsibilities as a partner when providing DataMiner Support Services are similar to those of Skyline staff members: offering both proactive and reactive support.
 
-When **providing DataMiner Support Services as a partner**, the responsibilities of First Line Support include:
+Within reactive support, there are two major levels that can be executed either by the same or by different members.
 
-- Acting as a first responder to calls and requests.
+Key responsibilities:
 
-- Logging call details and capturing all relevant information (e.g. contact person, M&S status, problem specifics, software versions, steps to replicate/simulate issues, assessment of severity level/impact on customer operations, etc.).
+- **Ensure cloud connectivity**: Make sure that the end customer DMA(s) are properly connected to the cloud.
 
-- Addressing common inquiries, including FAQs, basic troubleshooting related to software usage, and checking against known issues identified and already documented by Second and Third Line Support.
+- **Maintain remote access**: Ensure that, as a partner, you have remote access to the customer's system for effective troubleshooting and support.
 
-- Ensuring thorough follow-up on all open tickets, serving as a SPOC for customers, and managing the case life cycle.
+## Proactive support
 
-## Second Line Support
+- Keep setups healthy and up to date.
+- Guide and motivate end users to resolve any setup-specific problems.
 
-Second Line Support consists of **specialized, fully trained DataMiner experts**. Their responsibilities include:
+  > [!TIP]
+  > Running the [DataMiner BPAs](xref:Running_BPA_tests) can assist in this process.
 
-- Dealing with more advanced user inquiries and system architecture questions, including basic analysis of underlying TCP/IP infrastructure issues (e.g. firewall configuration) and OS-related configuration issues (e.g. domain integration).
+## Reactive support
 
-- Identifying whether reported issues are likely related to system deficiencies, bugs, and/or conflicts with third-party software components.
+### Level 1 - Identification
 
-## Third Line Support
+- Determine the impact and severity of the issue.
+- Determine (as much as possible) whether the issue is not the result of a configuration change, an infrastructure issue or an external issue (e.g. network connection, external data source no longer sending expected data, etc.).
+- Determine the general health of the setup. Is there enough disk space? Is there something that is consuming the processing time? Etc.
+- Determine (as much as possible) when the problem occurred. What actions were taken? At what frequency does the problem occur? Have any changes been made recently? Etc.
+- Define (as much as possible) how the issue can be reproduced.
+- Determine the type of the issue. Is the issue integration-specific (custom) or related to a DataMiner component provided by Skyline?
+- Collect basic information/logs based on the type of issue and component.
 
-Third Line Support is provided by **senior system experts** with several years of system experience and a proven track record capable of performing detailed system-wide diagnostics on all relevant levels (application, OS, network infrastructure, etc.).
+#### Minimum required skills and knowledge for Level 1
 
-Their responsibilities include:
+- DataMiner knowledge:
 
-- Interpreting low-level system logs.
+  - Certification – [DataMiner Fundamentals](https://community.dataminer.services/learning/certification/dataminer-operator/)
+  - Certification – [DataMiner Configurator](https://community.dataminer.services/learning/certification/dataminer-administrator/)
 
-- Establishing a direct communication channel with the involved development team for code feedback.
+- Guides:
+  
+  - [Collecting data to report an issue to Technical Support](xref:Collecting_data_to_report_an_issue_to_TechSupport)
+  - Health check: [Troubleshooting: Where to start?](xref:Troubleshooting_Where_to_Start)
 
-- Analyzing bugs and patch definitions.
+- Extra tools:
+
+  - [DataMiner Collaboration](https://collaboration.dataminer.services/)
+  - [DataMiner Dojo community - Q&A](https://community.dataminer.services/questions/)
+  - Log collector: [Collecting data to report an issue to Technical Support](xref:Collecting_data_to_report_an_issue_to_TechSupport)
+
+### Level 2 - Investigation
+
+- Check whether the latest version is being used.
+- Check whether the issue is known and/or already solved in a newer version.
+- Navigate through the log files associated with the solution or DataMiner component.
+- Determine what is still working and what fails. Follow any clues you find in the log files.
+- ...
+- When required, and when a support contract exists, report what has already been investigated and hand over the investigation to Skyline.
+
+  - A good and effective communication flow is expected between the different parties in order to get to a solution as fast as possible.
+  - When applicable, provide documentation on the usage and architecture (i.e. inner workings) of the custom solution.
+
+#### Minimum required skills and knowledge for Level 2
+
+All [minimum required skills and knowledge for Level 1](#minimum-required-skills-and-knowledge-for-level-1), with the addition of the following:
+
+- DataMiner Knowledge:
+
+  - Keep up to date with the DataMiner documentation and the DataMiner Community. For example, use the Q&A section on Dojo to reach out to an expert.
+  - High level knowledge of the DataMiner architecture (What is the purpose of the different modules and processes?)
+  - High level knowledge of the advanced functionalities of DataMiner. See [Advanced DataMiner functionality for administrators](xref:Part3AdvancedFunctionalities)
+
+- Guides:
+
+  - [Consulting the DataMiner logs in DataMiner Cube](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube)
+  - [Troubleshooting flowcharts](xref:Troubleshooting_Flowcharts)
+  - [Troubleshooting procedures](xref:Troubleshooting_procedures)
+  - [Known issues](xref:Known_issues)
+
+- (Custom) Solution:
+
+  - High level (custom) solution architecture and usage

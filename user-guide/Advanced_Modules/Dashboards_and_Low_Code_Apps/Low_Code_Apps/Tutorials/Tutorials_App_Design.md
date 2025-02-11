@@ -53,7 +53,7 @@ Expected duration: 30 minutes.
 
 1. Select the *Best Practices in Low-Code App Design* app.
 
-   You now see the homepage of the application. Since the initial package does not contain any contacts, no contacts are listed on this page yet.
+   You now see the home page of the application. Since the initial package does not contain any contacts, no contacts are listed on this page yet.
 
    ![Initial app](~/user-guide/images/tutorial_app_design_intial_app.png)
 
@@ -71,7 +71,9 @@ The app's primary color results in low contrast between the text and the backgro
 
 Additionally, the app does not have a customized, identifiable icon. These are the first two aspects you will look into.
 
-1. Click your user icon in the top-right corner of the app and select *Edit*.
+1. Click the user icon in the top-right corner of the app and select *Edit*.
+
+   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards or higher<!--RN 40077-->), click the pencil icon in the top-right corner instead.
 
 1. Click the clipboard icon in the top-left corner to open the app's theme editor. Here you can change your app's icon and color.
 
@@ -112,13 +114,15 @@ The different pages currently still have generic icons, which makes them hard to
 
 To ensure an aesthetically pleasing app, start with an appealing theme, which determines default styling for pages and components. Applying a good theme can make your app look a lot better with limited effort.
 
-1. Click your user icon in the top-right corner, and select *View published app* to temporarily leave edit mode.
+1. Click the user icon in the top-right corner, and select *View published app* to temporarily leave edit mode.
+
+   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 or higher<!--RN 40077-->), click the ellipsis button ("...") in the top-right corner instead, and select *View published app*.
 
 1. Click the ![Waffle](~/user-guide/images/Waffle_icon.png) icon in the top-left corner, and select *Dashboards*.
 
    ![Switch to Dashboards](~/user-guide/images/tutorial_app_design_switch_to_dashboards.gif)
 
-1. Click your user icon in the top-right corner, and select *Settings*.
+1. Click the user icon in the top-right corner, and select *Settings*.
 
 1. Click *+ New theme*.
 
@@ -200,11 +204,15 @@ Now that you have created a theme, you can apply it to your low-code app.
 
 1. Click the ![Waffle](~/user-guide/images/Waffle_icon_Dashboards.png) icon in the top-left corner, and select the *Best Practices in Low-Code App Design* application.
 
-1. Click your user icon in the top-right corner, and select *Edit*.
+1. Click the user icon in the top-right corner, and select *Edit*.
 
-1. Make sure the *Contacts* page is selected in the leftmost pane of the app editor, and click the pencil icon.
+   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 or higher<!--RN 40077-->), click the pencil button in the top-right corner instead.
 
-1. Make sure no components are selected, and navigate to the *Layout* tab in the pane to the right.
+1. Make sure the *Contacts* page is selected in the leftmost pane of the app editor.
+
+   Depending on your DataMiner version, you may need to click the pencil icon next to "Contacts".
+
+1. Make sure no components are selected, and navigate to the *Layout* pane on the right.
 
 1. Click the box indicating the currently used theme.
 
@@ -230,9 +238,11 @@ Now that you have created a theme, you can apply it to your low-code app.
 
 To ensure the page adapts to different screen sizes and avoids scroll bars, set it to *Fit to view*:
 
-1. Click your user icon in the top-right corner, and click *Edit*.
+1. Click the user icon in the top-right corner, click *Edit*, and click the pencil icon in the pane to the left.
 
-1. Click the pencil icon, and navigate to *Settings > Page/Panel configuration* in the configuration pane to the right.
+   If you are using a more recent DataMiner version (DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 or higher<!--RN 40077-->), click the pencil icon in the top-right corner instead.
+
+1. Navigate to *Settings > Page/Panel configuration* in the configuration pane to the right.
 
 1. Enable the *Fit to view* setting.
 
@@ -256,7 +266,7 @@ Here is an example of a rearrangement for a visually appealing result:
 
 Titles can be more than simple text boxes. To make them a little more interesting, use a [web component](xref:DashboardWeb) and incorporate HTML. In the app, a web component is already used to display the title. However, the HTML is rather basic.
 
-1. Select the web component that displays the *Contacts* title, and go to the *Settings* tab in the pane to the right.
+1. Select the web component that displays the *Contacts* title, and go to the *Settings* pane on the right.
 
 1. Paste the following HTML in the *HTML* field:
 
@@ -281,11 +291,11 @@ You may have noticed earlier, but the form used for creating new contacts also h
 
 1. In the *panels* section to the left, select the pencil icon next to *Contact Form*.
 
-1. Go to the *Layout* tab in the pane to the right, and click the box indicating the currently used theme.
+1. Go to the *Layout* pane on the right, and click the box indicating the currently used theme.
 
 1. Select the theme you created earlier, which ended in "- Panel".
 
-1. In the *Settings* tab, enable the *Fit to view* setting to take on the full panel height.
+1. In the *Settings* pane, enable the *Fit to view* setting to take on the full panel height.
 
 1. Hover your mouse pointer over the *+Add* button component and select the trash icon.
 
@@ -298,7 +308,7 @@ You may have noticed earlier, but the form used for creating new contacts also h
    > [!TIP]
    > See also: [Configuring components](xref:Configuring_components)
 
-1. Go to the *Settings* tab in the pane to the right, and paste the following HTML in the *HTML* field:
+1. Go to the *Settings* pane on the right, and paste the following HTML in the *HTML* field:
 
 ```html
 <div style="height:100%;display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin:0;margin:0 4%;"><H1 style="color: rgb(0,9,54); font-family:'Segoe UI Light','Segoe UI Web Light','Segoe UI Web Regular','Segoe UI','Segoe UI Symbol',HelveticaNeue-Light,'Helvetica Neue',Arial,sans-serif;margin:0;font-weight:100;font-size:20px">

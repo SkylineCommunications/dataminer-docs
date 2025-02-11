@@ -16,8 +16,6 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 - To create a new dashboard theme, see [Creating a new dashboard theme](#creating-a-new-dashboard-theme).
 
-- To override a dashboard theme, see [Overriding a dashboard theme](#overriding-a-dashboard-theme).
-
 - To apply an existing theme, see [Applying an existing theme to a dashboard](#applying-an-existing-theme-to-a-dashboard).
 
 > [!NOTE]
@@ -30,15 +28,17 @@ The theme of the dashboard determines which colors are used in the dashboard.
 1. In the *Dashboards settings* window, click the *New theme* button.
 
    > [!NOTE]
-   > You can also create a new theme directly from the Layout pane of a dashboard, using the *New theme* button there. The available options will be the same as described below.
+   >
+   > - You can also create a new theme directly from the *Layout* pane of a dashboard, using the *New theme* button there. The available options will be the same as described below.
+   > - If a theme already exists that looks similar to what you have in mind, use the duplicate button to start from a duplicate of that theme.
+   >
+   >   ![Duplicate theme button](~/user-guide/images/Dashboards_duplicate_theme.png)
 
 1. In the *Theme* name box, specify a unique name for the new theme.
 
 1. Configure the theme:
 
-   - Set a background color in RGB format.
-
-   - Add and configure the other colors of the theme (in RGB format).
+   - Set a background color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
 
    - Configure the component layout:
 
@@ -56,11 +56,19 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
      - In the *Title* section, you can configure the default layout for component titles, including the font, font size, alignment, and basic formatting options.
 
-     - In the *Colors* section, you can set the default background color and font color for the components. Under *Color palette*, you can configure additional columns, e.g. for the lines in a line chart component.
+     - In the *Colors* section, you can set the default background color and font color for the components. Under *Data colors* or *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can configure additional colors, e.g. for the lines in a line chart component.
+
+       From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, components displaying the same data use the same data color by default. Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, each component independently takes the next color from the theme's assigned color palette.
+
+       > [!NOTE]
+       >
+       > - To determine if data is considered identical, compare the display labels. If multiple components display the same labeled data, they will all use the same color for this label.
+       > - Data may vary across different sessions. Refreshing the dashboard may result in different colors being used for the same data. To ensure consistent colors across multiple sessions, you can define conditional colors in a [component theme's color palette](xref:Customize_Component_Layout) by binding colors to specific regular expressions that match the display labels of the data.
+       > - If you want a single color to be used across all components, include only one color in the component theme's data colors/color palette.
 
      - In the *Spacing* section (formerly called the *Containers* section), you can configure the margins, i.e. the amount of space (in pixels) around the components, as well as the padding, i.e. the amount of space (in pixels) that should be left free within the components.
 
-     - In the *Borders* section, you can select the type of border that should be displayed around the components. From DataMiner 10.0.9 onwards, you can also select for which sides of a component a border should be displayed, e.g. at the top and bottom only.
+     - In the *Borders* section, you can select the type of border that should be displayed around the components. You can also select for which sides of a component a border should be displayed, e.g. at the top and bottom only.
 
      - In the *Shadow* section, you can select the size of the shadow displayed behind the components.
 
@@ -71,30 +79,15 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
 1. When the theme is fully configured, click *Create* or *Save*, depending on your DataMiner version<!--RN 38278-->.
 
-### Overriding a dashboard theme
-
-It is possible to customize the theme for one dashboard by overriding the applied theme, without creating or applying a new theme. Note that this is no longer possible from DataMiner 10.0.12 onwards.
-
-1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
-
-1. In the panel on the right, select the *Layout* tab.
-
-1. Select the *Override* checkbox.
-
-1. Specify the colors and component layout according to your preference. See [Creating a new dashboard theme](#creating-a-new-dashboard-theme).
-
-> [!NOTE]
-> If you do want to save the modified dashboard theme as a new theme, click *Save as new theme*. However, if you only want to customize the theme for a single dashboard, there is no need to click this button.
-
 ### Applying an existing theme to a dashboard
 
 1. Make sure the dashboard is in edit mode and no components are selected. See [Editing a dashboard](xref:Editing_a_dashboard).
 
-1. In the panel on the right, select the *Layout* tab.
+1. In the panel on the right, select the *Layout* pane.
 
-1. Click the box *Search for a theme*. From DataMiner 10.0.12 onwards, just click the box indicating the currently used theme.
+1. Click the box indicating the currently used theme.
 
-   A list of available themes will be displayed below the box. Enter a term in the box to filter the displayed themes (prior to DataMiner 10.0.12 only).
+   A list of available themes will be displayed below the box.
 
 1. Select the theme you wish to use.
 

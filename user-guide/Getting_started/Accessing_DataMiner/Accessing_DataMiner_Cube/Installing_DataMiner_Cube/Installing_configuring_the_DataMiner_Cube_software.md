@@ -1,5 +1,6 @@
 ---
 uid: Installing_configuring_the_DataMiner_Cube_software
+description: To use the DataMiner Cube desktop application, browse to the IP or name of your DMA using a modern browser and download Cube from the landing page.
 ---
 
 # Installing & configuring the DataMiner Cube software

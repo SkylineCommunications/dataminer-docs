@@ -8,36 +8,41 @@ In the DataMiner Cube Surveyor, you can right-click a view in order to export it
 
 1. In the Surveyor right-click menu, select *Actions \> Export*.
 
-    > [!NOTE]
-    > - This option is also available from a card’s header menu.
-    > - If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
-    > - If you export from a list of items on a view card, only the item you right-clicked will be included in the export to a .dmimport file.
+   > [!NOTE]
+   >
+   > - This option is also available from a card’s header menu.
+   > - If you do not have the *Config* permission for a particular view, export and import actions will not be available for this view.
+   > - If you export from a list of items on a view card, only the item you right-clicked will be included in the export to a .dmimport file.
 
-2. From DataMiner 9.6.3 onwards, in the *Export* window, select *Export to DataMiner package*.
+1. In the *Export* window, select *Export to DataMiner package*.
 
-3. In the *Export* window, clear the selection from any items you do not want to include in the export.
+1. Clear the selection from any items you do not want to include in the export.
 
-    > [!NOTE]
-    > If you have selected to include a redundancy group, any elements within that group will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
+   > [!NOTE]
+   >
+   > - If you have selected to include a redundancy group, any elements within that group will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
+   > - From DataMiner 10.4.9/10.5.0 onwards<!--RN 39356-->, if you have selected to include SNMPv3 elements, importing this package on DataMiner Systems prior to DataMiner 10.4.9/10.5.0 will result in the loss of all SNMPv3 credentials, which will need to be re-entered manually. If you used the [DataMiner Cube Credentials Library](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication) to configure the SNMPv3 credentials, you will always need to re-enter the credentials manually after an import on a different DMS, regardless of your DataMiner version.
 
-4. Specify which additional information should be included (if any) using the checkboxes below this:
+1. Specify which additional information should be included (if any) using the checkboxes below this:
 
-    - Trend and alarm data (can be selected separately from DataMiner 9.6.3 onwards)
+   - Trend data
 
-    - Documents (from DataMiner 9.5.11 onwards)
+   - Alarm data
 
-    - Information events (from DataMiner 9.5.0 onwards)
+   - Documents
 
-        > [!NOTE]
-        > - Including information events is only possible if alarm data are also exported.
-        > - Including information events can make the export take significantly longer.
+   - Information events
 
-5. Click *Export*.
+     > [!NOTE]
+     >
+     > - Including information events is only possible if alarm data are also exported.
+     > - Including information events can make the export take significantly longer.
 
-6. In the *Save As* window, browse to the location where you want to save the export and click *Save*.
+1. Click *Export*.
 
-7. In the *Export* window, check the progress messages until the export is ready, and click *Finish*.
+1. In the *Save As* window, browse to the location where you want to save the export and click *Save*.
+
+1. In the *Export* window, check the progress messages until the export is ready, and click *Finish*.
 
 > [!NOTE]
 > If any invalid items are encountered during the export, these will be skipped and a log entry will be created in the SLNet log file.
->

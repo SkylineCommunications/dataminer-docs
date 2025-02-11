@@ -15,7 +15,7 @@ Defines a link between a parameter of a base protocol and a parameter of this pr
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
 |[description](xref:Protocol.Params.Param.Mediation.LinkTo-description)|string||Allows you to provide a description of the defined link.|
-|[ops](xref:Protocol.Params.Param.Mediation.LinkTo-ops)|string||Specifies one or more conversion operations separated by semicolons (";").|
+|[ops](xref:Protocol.Params.Param.Mediation.LinkTo-ops)|string||Specifies one or more conversion operations separated by semicolons ").|
 |[pid](xref:Protocol.Params.Param.Mediation.LinkTo-pid)|unsignedInt||Specifies the ID of the parameter this parameter is linked to.|
 |[protocol](xref:Protocol.Params.Param.Mediation.LinkTo-protocol)|string||Specifies the name of the protocol that contains the parameter this parameter is linked to.|
 

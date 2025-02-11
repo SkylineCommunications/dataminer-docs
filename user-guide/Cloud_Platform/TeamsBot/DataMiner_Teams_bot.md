@@ -92,6 +92,9 @@ You can use the following out-of-the-box commands to interact with the DataMiner
 
 - **run *command name***: Runs the matching command on the active DataMiner System. When necessary, the user will be asked for input and/or confirmation. See [Adding commands for the Teams bot to a DMS](#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
+  > [!NOTE]
+  > To skip the confirmation message when running a custom command, add `--skipconfirmation`, or in short `--sc`, at the end of your command. For example, for a custom command Automation script named "toggle switch", you could use the command `run toggle switch --sc`.<!-- RN 39736 -->
+
 - **help**: Shows more detailed help information, if available.
 
 - **cancel**: Cancels the current action.

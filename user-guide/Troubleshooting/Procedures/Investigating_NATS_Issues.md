@@ -1,8 +1,10 @@
 ---
 uid: Investigating_NATS_Issues
+keywords: VerifyNatsIsRunning
+description: Start by checking the logging, then check your installation and SLCloud.xml configuration, check if NAS and NATs are running, check the configs, …
 ---
 
-# Investigating NATS issues
+# Troubleshooting – NATS
 
 To investigate NATS issues, follow the actions detailed below, in the specified order:
 
@@ -17,10 +19,10 @@ To investigate NATS issues, follow the actions detailed below, in the specified 
 1. [Check if port is already in use](#check-if-port-is-already-in-use)
 1. [Remaining steps](#remaining-steps)
 
-
 It may also be useful to understand the [algorithms used by DataMiner to configure NATS](#algorithms-used-by-dataminer-to-configure-nats).
 
 > [!NOTE]
+>
 > - These are advanced procedures that are only meant for administrators. If you do not feel confident applying any of these procedures, contact Skyline Communications.
 > - Some steps may refer to interfaces/classes of SLMessageBroker.dll, the wrapper for the NATS interface. These will likely only be useful for developers.
 
@@ -122,7 +124,34 @@ A few details to pay attention to:
 
 This is an example of **nats-server.config** in a NATS cluster of 3 or more Agents:
 
-##### [From DataMiner 10.2.0(CU6)/10.2.8 onwards](#tab/tabid-1)
+##### [From DataMiner 10.4.0 (CU3)/10.4.6 onwards](#tab/tabid-1)
+
+```JSON
+{
+  "port": 4222,
+  "max_payload": 30000000,
+  "http_port": 8222,
+  "operator": "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt",
+  "resolver": "URL(http://0.0.0.0:9090/jwt/v1/accounts/)",
+  "debug": false,
+  "trace": false,
+  "logtime": true,
+  "log_file": "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log",
+  "streaming": {
+    "cluster_id": "10.10.73.10",
+    "credentials": "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds"
+  },
+  "cluster": {
+    "routes": [
+      "nats://10.10.73.20:6222/",
+      "nats://10.10.73.30:6222/"
+    ],
+    "listen": "0.0.0.0:6222"
+  }
+}
+```
+
+##### [From DataMiner 10.2.0(CU6)/10.2.8 onwards](#tab/tabid-2)
 
 ```txt
 port: 4222 # Port for client connections
@@ -143,7 +172,7 @@ cluster: {
 }
 ```
 
-##### [Prior to DataMiner 10.2.0(CU6)/10.2.8](#tab/tabid-2)
+##### [Prior to DataMiner 10.2.0(CU6)/10.2.8](#tab/tabid-3)
 
 ```txt
 port: 4222 # Port for client connections
@@ -196,7 +225,33 @@ The following values can vary in each DMS:
 
 This is an example of **nats-server.config** in a NATS cluster of exactly 2 Agents. In DataMiner versions prior to 10.2.0 [CU17]/10.3.0 [CU5]/10.3.8, this constituted a special type of configuration. From DataMiner 10.2.0 [CU17]/10.3.0 [CU5]/10.3.8 onwards, an identical configuration as for [a cluster of 3 or more DMAs](#cluster-of-3-or-more-dmas) is required.
 
-##### [From DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9 onwards](#tab/tabid-4)
+#### [From DataMiner 10.4.0 [CU3]/10.4.6 onwards](#tab/tabid-4)
+
+```JSON
+{
+  "port": 4222,
+  "max_payload": 30000000,
+  "http_port": 8222,
+  "operator": "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt",
+  "resolver": "URL(http://0.0.0.0:9090/jwt/v1/accounts/)",
+  "debug": false,
+  "trace": false,
+  "logtime": true,
+  "log_file": "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log",
+  "streaming": {
+    "cluster_id": "10.10.73.10",
+    "credentials": "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds"
+  },
+  "cluster": {
+    "routes": [
+      "nats://10.10.73.20:6222/"
+    ],
+    "listen": "0.0.0.0:6222"
+  }
+}
+```
+
+##### [From DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9 onwards](#tab/tabid-5)
 
 ```txt
 port: 4222 # Port for client connections
@@ -218,7 +273,7 @@ cluster: {
 }
 ```
 
-##### [DataMiner 10.2.0 [CU6]/10.2.8 to 10.2.0 [CU17]/10.3.0 [CU5]/10.3.8](#tab/tabid-5)
+##### [DataMiner 10.2.0 [CU6]/10.2.8 to 10.2.0 [CU17]/10.3.0 [CU5]/10.3.8](#tab/tabid-6)
 
 ```txt
 port: 4222 # Port for client connections
@@ -238,7 +293,7 @@ streaming: {
 server_name: MyServerName
 ```
 
-##### [Prior to DataMiner 10.2.0 [CU6]/10.2.8](#tab/tabid-3)
+##### [Prior to DataMiner 10.2.0 [CU6]/10.2.8](#tab/tabid-7)
 
 ```txt
 port: 4222 # Port for client connections
@@ -276,6 +331,30 @@ The only difference between this config and a config of an Agent that has a stan
 
 This is an example of **nats-server.config** for a standalone Agent.
 
+##### [From DataMiner 10.4.0 [CU3]/10.4.6 onwards](#tab/tabid-8)
+
+```JSON
+{
+  "port": 4222,
+  "max_payload": 30000000,
+  "http_port": 8222,
+  "operator": "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt",
+  "resolver": "URL(http://0.0.0.0:9090/jwt/v1/accounts/)",
+  "debug": false,
+  "trace": false,
+  "logtime": true,
+  "logfile_size_limit": 10485760,
+  "log_file": "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log",
+  "streaming": {
+    "cluster_id": "SLUMS",
+    "credentials": "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds"
+  },
+  "server_name": "MyServerName"
+}
+```
+
+##### [Prior to DataMiner 10.4.0 [CU3]/10.4.6](#tab/tabid-9)
+
 ```txt
 port: 4222 # Port for client connections
 max_payload: 30000000 # maximum number of bytes in a message payload
@@ -293,6 +372,8 @@ streaming: {
 }
 server_name: MyServerName
 ```  
+
+***
 
 > [!NOTE]
 >
@@ -316,6 +397,29 @@ Prior to DataMiner 10.3.0 [CU11]/10.4.0/10.4.2, DataMiner configures a single pr
 
 #### Primary NAS
 
+##### [From DataMiner 10.4.0 [CU3]/10.4.6 onwards](#tab/tabid-10)
+
+```JSON
+{
+  "http": {
+    "host": "0.0.0.0",
+    "port": 9090
+  },
+  "nats": {
+    "servers": [
+      "localhost:4222"
+    ],
+    "usercredentials": "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\NASAccount\\NASUser.creds"
+  },
+  "store": {
+    "dir": "C:\\Skyline DataMiner\\NATS\\nsc\\JWTs",
+    "readonly": true
+  }
+}
+```
+
+##### [Prior to DataMiner 10.4.0 [CU3]/10.4.6](#tab/tabid-11)
+
 ```txt
 http: {
     host: 0.0.0.0 # Interface to listen for requests on
@@ -330,6 +434,8 @@ store: {
     readonly: True # Host the store as read-only. No changes through POST requests allowed.
 }
 ```
+
+***
 
 #### Secondary NAS
 

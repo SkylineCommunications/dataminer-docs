@@ -6,6 +6,9 @@ uid: Backing_up_a_DataMiner_Agent_in_DataMiner_Cube
 
 In the *System Center* module, you can configure automatic backups that will run at regular intervals, and execute an immediate backup when necessary.
 
+> [!IMPORTANT]
+> Backups are automatically configured as part of [DaaS](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Backup* tab in System Center is therefore no longer available when you are using a DaaS system.
+
 ## Configuring the DataMiner backups
 
 The following steps can be taken to configure the backups for a DMA:
@@ -43,14 +46,14 @@ The following steps can be taken to configure the backups for a DMA:
 
      - *Full Backup*: Backup containing all data necessary to restore the entire DataMiner Agent (default).
 
-     - *Full Backup without Database*: Similar to the full backup, but does not include the database. If you are using [STaaS](xref:STaaS), you can choose this option, as you do not have a self-hosted database in that case.
+     - *Full Backup without Database*: Similar to the full backup, but does not include the database. If you are using [STaaS](xref:STaaS), you can choose this option, as you do not have to manage the database yourself in that case.
 
      - *Configuration Backup*: Backup containing all data necessary to restore the configuration of the DataMiner Agent. This also contains parameter values saved in the database, but not alarm or trending data.
 
        > [!NOTE]
        > The configuration backup does not include DataMiner Files and Logging.
 
-     - *Configuration Backup without Database*: Similar to the configuration backup, but does not include any information from the database. If you are using [STaaS](xref:STaaS), you can choose this option, as you do not have a self-hosted database in that case.
+     - *Configuration Backup without Database*: Similar to the configuration backup, but does not include any information from the database. If you are using [STaaS](xref:STaaS), you can choose this option, as you do not have to manage the database yourself in that case.
 
      - *Visual Configuration Backup*: Backup containing all protocols (including Visio files, WFMs, and the production protocol), all Visio files linked to views, and the contents of the folder *C:\\Skyline DataMiner\\Webpages*.
 

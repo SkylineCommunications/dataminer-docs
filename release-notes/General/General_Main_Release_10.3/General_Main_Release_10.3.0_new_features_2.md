@@ -12,7 +12,7 @@ uid: General_Main_Release_10.3.0_new_features_2
 
 ### DMS Service & Resource Management
 
-#### Retrieving bookings in a paged way and sorted by property [ID_31982]
+#### Retrieving bookings in a paged way and sorted by property [ID 31982]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -31,7 +31,7 @@ It is now possible to retrieve bookings in a paged way and sorted by one of the 
 > - v10.1.0 (CU0)
 > - v10.1.1 (CU0)
 
-#### ProfileInstances: New parameter property 'InheritIsHidden' [ID_32131]
+#### ProfileInstances: New parameter property 'InheritIsHidden' [ID 32131]
 
 <!-- MR 10.3.0 - FR 10.2.3 -->
 
@@ -42,7 +42,7 @@ A few examples:
 - If a parameter of profile definition A is hidden, and you want profile instance A to inherit the “IsHidden” setting of that parameter, then set “InheritIsHidden” to true.
 - If a parameter of profile definition A is hidden, and you want profile instance B to not inherit the “IsHidden” setting of that parameter, then set “InheritIsHidden” to false and “IsHidden” to true.
 
-#### ResourceUsageInfoManager [ID_32512]
+#### ResourceUsageInfoManager [ID 32512]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -54,7 +54,7 @@ Normally, a ResourceUsageStatusEventMessage will be sent out the moment a Resour
 
 ResourceUsageStatus objects can be retrieved by means of a GetResourceUsageStatusList (FilterElement\<Resource> filter) call on the ResourceManagerHelper. This call will return all status objects for the resources that match the filter and that are currently being used by ongoing reservations.
 
-#### ReservationInstances now have a ReservationInstanceType [ID_32624]
+#### ReservationInstances now have a ReservationInstanceType [ID 32624]
 
 <!-- MR 10.3.0 - FR 10.2.4 -->
 
@@ -69,7 +69,7 @@ When configuring a ReservationInstance, you now have to specify a ReservationIns
 > - In case of a ServiceReservationInstance, the type of the instance must be identical to the type of the ServiceDefinition. Otherwise, the ResourceManager will throw a “ServiceDefinitionTypeDoesNotMatch” error.
 > - A new exposer has been added to allow filter ReservationInstanceType.
 
-#### ResourceManagerEventMessage: New LostInterestReservationInstances property [ID_32801]
+#### ResourceManagerEventMessage: New LostInterestReservationInstances property [ID 32801]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -79,13 +79,13 @@ When, for example, a table is populated with ReservationInstances using Resource
 > This list will only contain ReservationInstances to which the user has access.
 > To retrieve the IDs of the ReservationInstances to which the user no longer has access, you can call the GetHiddenReservationInstances method.
 
-#### Subscribing to ResourceUsageStatusEvents for specific resources [ID_32979]
+#### Subscribing to ResourceUsageStatusEvents for specific resources [ID 32979]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
 From now on, it is possible to only receive ResourceUsageEventMessages for a specific resource. Using ResourceUsageStatusEventExposers, you can now filter by ResourceId.
 
-#### ReservationInstanceType and ServiceDefinitionType: New values 'ResourceScheduling' and 'ResourceOrchestration' [ID_33390]
+#### ReservationInstanceType and ServiceDefinitionType: New values 'ResourceScheduling' and 'ResourceOrchestration' [ID 33390]
 
 <!-- MR 10.3.0 - FR 10.2.7 -->
 
@@ -94,7 +94,7 @@ ReservationInstanceType and ServiceDefinitionType can now be set to the followin
 - ResourceScheduling
 - ResourceOrchestration
 
-#### Resource migration to Elasticsearch [ID_33797] [ID_33946] [ID_34105] [ID_34207] [ID_34296] [ID_34522] [ID_34568] [ID_34784] [ID_35067] [ID_35155]
+#### Resource migration to Elasticsearch [ID 33797] [ID 33946] [ID 34105] [ID 34207] [ID 34296] [ID 34522] [ID 34568] [ID 34784] [ID 35067] [ID 35155]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
@@ -140,7 +140,7 @@ Note that there are differences when resources and resource pools are stored in 
 
 - If XML storage is used, all Resource Manager instances in the cluster will sync the resources in their XML file on startup and during the midnight sync. If Elasticsearch storage is used, DataMiner relies on Elasticsearch to do the syncing, so this does not happen during the midnight sync or on startup. However, Resource Manager will refresh the cached resources during the midnight sync by reading all resources and resource pools again from Elasticsearch.
 
-#### BREAKING CHANGE: Capacity property will no longer be initialized on new Resources [ID_34856]
+#### BREAKING CHANGE: Capacity property will no longer be initialized on new Resources [ID 34856]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
@@ -168,7 +168,7 @@ This change in behavior will impact results for both *GetAvailableResources* and
 
 ### DMS Mobile Gateway
 
-#### Additional logging after sending a 'send SMS' request to an SMSEagle device [ID_32785] [ID_32911]
+#### Additional logging after sending a 'send SMS' request to an SMSEagle device [ID 32785] [ID 32911]
 
 <!-- MR 10.3.0 - FR 10.2.5 -->
 
@@ -192,7 +192,7 @@ When an HTTP request of type “send SMS” is sent to an SMSEagle device, the f
 
 ### DMS tools
 
-#### Standalone Elasticsearch Cluster Installer: New RepoPath setting [ID_33055]
+#### Standalone Elasticsearch Cluster Installer: New RepoPath setting [ID 33055]
 
 <!-- MR 10.3.0 - FR 10.2.6 -->
 
@@ -222,7 +222,7 @@ When you run the installer with the “generate” option (run-stand-alone -g), 
 </ElasticConfiguration>
 ```
 
-#### QA Device Simulator renamed to Skyline Device Simulator [ID_33680] [ID_34530] [ID_34555]
+#### QA Device Simulator renamed to Skyline Device Simulator [ID 33680] [ID 34530] [ID 34555]
 
 <!-- RN 33680: MR 10.3.0 - FR 10.2.7 -->
 <!-- RN 34530/34555: MR 10.3.0 - FR 10.2.12 -->
@@ -242,7 +242,7 @@ Also, the following command-line parameters have been added:
 > [!CAUTION]
 > This tool is provided "As Is" with no representation or warranty whatsoever. Skyline Communications will not provide any maintenance or support for this tool.
 
-#### SLNetClientTest tool - 'Connect' window: Enhanced 'Connection Type' and 'Authentication' sections [ID_34712]
+#### SLNetClientTest tool - 'Connect' window: Enhanced 'Connection Type' and 'Authentication' sections [ID 34712]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 

@@ -4,7 +4,11 @@ uid: Table_parameters
 
 # Table parameters
 
-Different types of table parameters exist in DataMiner Cube, detailed in the sections below. Regardless of the type of table parameter, the following applies:
+Different types of table parameters exist in DataMiner Cube, detailed in the sections below.
+
+![Table parameter](~/user-guide/images/Table_Parameter.png)<br>*Table parameter in DataMiner 10.4.5*
+
+Regardless of the type of table parameter, the following applies:
 
 - In most tables, the leftmost column will show a **key icon** in the header. This indicates that this column contains the display key for each row, a unique identifier for the row. The display key is the human-readable counterpart of the row’s primary key.
 
@@ -14,7 +18,7 @@ Different types of table parameters exist in DataMiner Cube, detailed in the sec
 
 - Columns with a **width of 0 are not displayed** by default. To display such a column, right-click the table header, and select the column in the context menu. This context menu also allows you to hide columns in the same manner.
 
-- With the **Save layout** option in the right-click menu of a table header, you can save a custom column layout. This includes the width, position, and visibility of the columns. The layout will be saved in your personal settings and applied to all elements using this same protocol. The **Reset layout** option in the same right-click menu allows you to reset the current column layout to the default layout.
+- From DataMiner 10.4.0 [CU11]/10.5.0/10.5.2 onwards<!--RN 41608-->, changes to the column layout are saved automatically. In earlier versions, you can manually save a custom column layout with the **Save layout** option in the right-click menu of a table header. This includes the width, position, and visibility of the columns. The layout will be saved in your personal settings and applied to all elements using this same protocol. The **Reset layout** option in the same right-click menu allows you to reset the current column layout to the default layout.
 
 - You can **export a table** by selecting the *Export table* option in the right-click menu. From DataMiner 10.1.5/10.2.0 onwards, a dialog box is then displayed that can have the following options, depending on the table configuration:
 

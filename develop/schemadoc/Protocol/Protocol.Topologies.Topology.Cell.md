@@ -6,6 +6,9 @@ uid: Protocol.Topologies.Topology.Cell
 
 Specifies a cell within a CPE topology.
 
+> [!TIP]
+> See also: [EPM topology configuration](xref:EPMManagerTopology)
+
 ## Parent
 
 [Topology](xref:Protocol.Topologies.Topology)

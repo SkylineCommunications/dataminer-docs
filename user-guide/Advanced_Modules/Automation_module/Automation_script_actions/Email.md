@@ -14,13 +14,17 @@ Use this action to send a notification via email.
 
 1. To send a plain text email, select *Plain text*.
 
-1. To include a report or dashboard in the email, select *Include report or dashboard*, select an existing report template or dashboard, and add any required elements, parameters, etc.
+1. To include a (legacy) report or a dashboard in the email, select *Include report or dashboard*, select an existing report template or dashboard, add any required elements, parameters, etc.
+
+![Email](~/user-guide/images/Automation_Email.png)<br>*Automation module in DataMiner 10.4.5*
 
    > [!NOTE]
    >
    > - If you want to specify multiple indices for one table parameter, use a semicolon ";" as separator.
    > - If you want to specify multiple parameters for one element, service, or protocol version, assign them all within a single line.
-   > - From DataMiner 9.6.13 onwards, you can select to include a dashboard from the new Dashboards app. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
+   > - The icon in front of each item in the drop-down list shows whether the item is a dashboard or a report.
+
+1. If you have selected a report or dashboard to include, optionally click the *Configure* button to further configure it. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
 
 > [!NOTE]
 > It is also possible to add this action within a C# block in a script. For more information, see [SendEmail](xref:Skyline.DataMiner.Automation.Engine.SendEmail(Skyline.DataMiner.Automation.EmailOptions)), [PrepareMailReport](xref:Skyline.DataMiner.Automation.Engine.PrepareMailReport(System.String)) and [SendReport](xref:Skyline.DataMiner.Automation.Engine.SendReport(Skyline.DataMiner.Automation.MailReportOptions)).

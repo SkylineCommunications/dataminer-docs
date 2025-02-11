@@ -5,7 +5,7 @@ uid: Creating_custom_apps
 # Creating low-code applications
 
 > [!NOTE]
-> To view, add, edit, delete, or publish low-code applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps--dataminer-cube-mobile-access) user permission.
+> To view, add, edit, delete, or publish low-code applications, you need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission.
 
 ## Creating a new low-code app
 
@@ -53,6 +53,29 @@ The newly created duplicate will be assigned a unique name and will automaticall
 
 ### Duplicating an app from the app page itself
 
+#### [From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40077-->](#tab/tabid-1)
+
+1. Open the version you want to duplicate:
+
+   - To duplicate the most recently published version of the app, open the app.
+
+   - To duplicate the current draft version of an app, open the app and go to edit mode.
+
+   - To duplicate a different version:
+
+     1. In the top-right corner, click the ellipsis button ("...") and select *Versions*.
+
+     1. Select the desired version.
+
+     > [!NOTE]
+     > You can only duplicate an older version of an app if you have permission to edit the app in question.
+
+1. In the top-right corner, click the ellipsis button ("..."), and select *Duplicate app*.
+
+   The low-code app will be copied and the newly created app will automatically be opened in a new browser tab.
+
+#### [Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9](#tab/tabid-2)
+
 1. Open the version you want to duplicate:
 
    - To duplicate the most recently published version of the app, open the app.
@@ -71,3 +94,5 @@ The newly created duplicate will be assigned a unique name and will automaticall
 1. In the top-right corner, click the user icon, and select *Duplicate* in the user menu.
 
    The current draft version will be copied and the newly created app will automatically be opened in a new browser tab.
+
+***

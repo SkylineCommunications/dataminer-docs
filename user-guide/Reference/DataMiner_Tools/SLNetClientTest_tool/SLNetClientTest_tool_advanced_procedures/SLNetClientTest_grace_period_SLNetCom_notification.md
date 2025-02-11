@@ -4,7 +4,7 @@ uid: SLNetClientTest_grace_period_SLNetCom_notification
 
 # Changing the grace period for the SLNetCom Notification thread
 
-When the SLNetCom notification thread reaches a certain threshold, DataMiner assumes something is wrong and stops processing messages. A DMA restart is then required. However, to make sure this does not happen when it is not needed in setups where the threshold is only briefly reached, there is a grace period where the DMA does not start ignoring messages for a short time (by default 1 minute). This feature is available from DataMiner 9.6.0 \[CU23\]/10.0.0\[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards.
+When the SLNetCom notification thread reaches a certain threshold, DataMiner assumes something is wrong and stops processing messages. A DMA restart is then required. However, to make sure this does not happen when it is not needed in setups where the threshold is only briefly reached, there is a grace period where the DMA does not start ignoring messages for a short time (by default 1 minute). This feature is available from DataMiner 10.1.0 \[CU3\]/10.1.6 onwards.
 
 If necessary, you can change the duration of this grace period using the SLNetClientTest tool.
 

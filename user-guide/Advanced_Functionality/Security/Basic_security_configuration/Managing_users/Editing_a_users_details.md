@@ -10,8 +10,6 @@ To edit a user's details:
 
    Alternatively, you can also open the user card for the user in question. See [Opening a user card](xref:Opening_a_user_card).
 
-1. If you are using a version of DataMiner prior to 9.5.4, in the lower right corner of the *details* tab, click the *Edit* button.
-
 1. Fill in the new data in the applicable fields.
 
 1. Click the *Apply* button in the lower right corner.

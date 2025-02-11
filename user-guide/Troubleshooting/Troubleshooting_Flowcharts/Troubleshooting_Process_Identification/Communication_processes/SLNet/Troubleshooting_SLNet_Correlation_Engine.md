@@ -23,15 +23,15 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
 %% flowchart structure
 %% -------------------------------------------------------------------------
 HOME([Start page])
-START([Correlation engine <br />issues in SLNet])
-BACK([Back to SLNet <br/>troubleshooting])
-CONTACT([Send all information<br/>to tech support.])
+START([Correlation engine issues in SLNet])
+BACK([Back to SLNet troubleshooting])
+CONTACT([Send all information to tech support.])
 ENDING([End])
 PRESENT{{Issue still present?}}
-PRESENTYES[[Check SLNetClientTest tool<br/>Diagnostics > SLNet > Stacksizes <br/>for high Correlation thread.]]
-PRESENTNO{{Investigate gathered data: <br/>Found anything?}}
-FOUNDYES[[Refactor the relevant<br/>Correlation rules and/or<br/>Automation scripts.]]
-GATHER[[Gather a LogCollector package.<br/>Include memory dumps for<br/>SLNet and SLCorrelation.]]
+PRESENTYES[[Check SLNetClientTest tool Diagnostics > SLNet > Stacksizes >for high Correlation thread.]]
+PRESENTNO{{Investigate gathered data: Found anything?}}
+FOUNDYES[[Refactor the relevant Correlation rules and/or Automation scripts.]]
+GATHER[[Gather a LogCollector package. Include memory dumps for SLNet and SLCorrelation.]]
 START ---  GATHER
 GATHER --- PRESENT
 PRESENT --- |Yes| PRESENTYES

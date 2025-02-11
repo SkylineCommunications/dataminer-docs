@@ -11,7 +11,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
 ## Uninstalling a DMA using the Installer
 
-1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
+1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/dataminer-installer/).
 
 1. Make sure you are logged into Windows with the Administrator account. (Do not use a regular user account with administrative rights.)
 
@@ -55,7 +55,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    - *UnRegister DataMiner.bat*
 
-   - *UnRegister DLLs of DataMiner.bat*
+   - *UnRegister dll's of DataMiner.bat*
 
    - *RemoveEventLog.exe*
 
@@ -91,7 +91,19 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    1. Delete the folder C:\\Program Files\\Cassandra.
 
+      If you want, you can do so within the same command window by entering the following command:
+
+      ```txt
+      rmdir "C:\Program Files\Cassandra" /s
+      ```
+
    1. Delete the folder C:\\ProgramData\\Cassandra.
+
+      If you want, you can do so within the same command window by entering the following command:
+
+      ```txt
+      rmdir "C:\ProgramData\Cassandra" /s
+      ```
 
       > [!NOTE]
       > The *ProgramData* folder is not displayed by default, so you may need to select to display hidden items in order to access this folder.

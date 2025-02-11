@@ -10,6 +10,6 @@ To access these settings:
 
 1. In DataMiner Cube, go to *Apps* > *System Center.*
 
-2. In the overview panel, click the *Users / Groups* field.
+1. In the overview panel, click the *Users / Groups* field.
 
-    The *Users / Groups* section opens, with two tabs: *users* and *groups*.
+   The *Users / Groups* section opens, with two tabs: *users* and *groups*.

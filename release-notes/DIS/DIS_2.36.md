@@ -8,7 +8,7 @@ uid: DIS_2.36
 
 ### IDE
 
-#### New tool window: DIS protocol diagram \[ID_31913\]
+#### New tool window: DIS protocol diagram \[ID 31913\]
 
 The new *DIS Protocol diagram* tool window shows a graphical representation of a protocol. It allows you to see how a protocol is built, navigate through its logic and investigate flow issues.
 
@@ -22,27 +22,27 @@ In the diagram itself, each item (parameter, QAction, session, response, group, 
 
 In the top-left corner of the diagram, you also have a number of zoom options: a slider to adjust to zoom factor, a “1:1” button (to switch to zoom factor 1) and a “Fill” button to automatically adjust the zoom factor to the current size of the diagram window.
 
-#### New command to save all compiled Automation scripts in a solution to a zip file \[ID_32166\]
+#### New command to save all compiled Automation scripts in a solution to a zip file \[ID 32166\]
 
 When developing Automation scripts as part of a Visual Studio solution, up to now, it was possible to save a compiled script to a file using the *File \> Save Compiled Script As...* command.
 
 From now on, you can use the *File \> Save All Compiled Scripts As...* command to save all compiled scripts in a solution to a zip file in one go.
 
-#### DIS Comparer: Suppressing errors \[ID_32223\]
+#### DIS Comparer: Suppressing errors \[ID 32223\]
 
 In the *DIS Comparer* tool window, it is now also possible to suppress errors after having compared two protocol.xml files. To do so, select one or more errors, right-click, and select *Suppress*.
 
-#### Import Protocol and Import Automation Script windows now have a filter box \[ID_32396\]
+#### Import Protocol and Import Automation Script windows now have a filter box \[ID 32396\]
 
 Both the *Import Protocol* and *Import Automation Script* windows now have a filter box in the top-right corner. This will allow you to filter the list of protocols or Automation scripts.
 
-#### DIS Validator and DIS Comparer windows now have a filter box \[ID_32407\]
+#### DIS Validator and DIS Comparer windows now have a filter box \[ID 32407\]
 
 Both the *DIS Validator* and *DIS Comparer* tool windows now have a filter box in the top-right corner. This will allow you to filter the validation or comparison results.
 
 ### Validator
 
-#### New checks and error messages \[ID_32143\]
+#### New checks and error messages \[ID 32143\]
 
 The following checks and error messages have been added.
 
@@ -115,13 +115,13 @@ The following checks and error messages have been added.
 
 ### XML Schema
 
-#### Installation Package Manifest Schema: SignDevelopmentVersion is now a required element \[ID_31643\]
+#### Installation Package Manifest Schema: SignDevelopmentVersion is now a required element \[ID 31643\]
 
 The Manifest.Content.Protocols.Protocol.SignDevelopmentVersion is now a required element.
 
 Default value: true
 
-#### UOM Schema: New units added \[ID_31649\]
+#### UOM Schema: New units added \[ID 31649\]
 
 The following units have been added to the UOM Schema:
 
@@ -129,7 +129,7 @@ The following units have been added to the UOM Schema:
 - SCMH (Standard Cubic Meter per Hour)
 - SCMM (Standard Cubic Meter per Minute)
 
-#### Protocol Schema: Types of elements and attributes set or changed \[ID_32144\]
+#### Protocol Schema: Types of elements and attributes set or changed \[ID 32144\]
 
 The types of the following elements and/or attributes have been set or changed.
 
@@ -146,7 +146,7 @@ The types of the following elements and/or attributes have been set or changed.
 
 ### Enhancements
 
-#### Protocol version editor: Enhancements \[ID_29861\]
+#### Protocol version editor: Enhancements \[ID 29861\]
 
 A number of enhancements have been made to the protocol version editor.
 
@@ -161,7 +161,7 @@ A number of enhancements have been made to the protocol version editor.
 - When you create a new version, the *Based On* field will now automatically be populated when possible.
 - Tabbing from one field to another has been improved.
 
-#### Function editor: Enhancements \[ID_32389\]
+#### Function editor: Enhancements \[ID 32389\]
 
 Up to now, page names would incorrectly be compared in a case-sensitive way. From now on, they will be compared in a case-insensitive way.
 
@@ -169,13 +169,13 @@ When a page is renamed or when the casing of a page is changed, the export rules
 
 When a parameter is moved onto a page, and its new location matches its location specified in the protocol, any export rules for that parameter will now be removed.
 
-#### Automation scripts: DLL references added via an Exe or Param tag will now be disregarded when identical references were added via the solution explorer \[ID_32422\]
+#### Automation scripts: DLL references added via an Exe or Param tag will now be disregarded when identical references were added via the solution explorer \[ID 32422\]
 
 When developing Automation scripts as Visual Studio solutions, it is good practice to add DLL references to the C# project via the solution explorer rather than to add them via Exe and/or Param tags.
 
 In cases where the same DLL was referenced both via the solution explorer and via an Exe or Param tag, up to now, a script would end up containing duplicate references when compiled. From now on, when the compiler finds duplicate references, it will disregard the ones added via an Exe or Param tag and only keep the ones added via the solution explorer.
 
-#### Protocols: Enhanced 'Add New Column' command \[ID_32465\]
+#### Protocols: Enhanced 'Add New Column' command \[ID 32465\]
 
 When editing a protocol.xml file, in front of every \<Param> element that defines a table parameter, you can click the small *Down* arrow and select the *Add New Column* command to add a column to that table parameter. That command has now been enhanced.
 
@@ -189,7 +189,7 @@ From now on, when you add a new column to a table parameter, the following will 
 
 ### Fixes
 
-#### Validator: Condition members without an operator would be considered invalid \[ID_32138\]
+#### Validator: Condition members without an operator would be considered invalid \[ID 32138\]
 
 In some cases, the *DIS Validator* could report a false positive when a member of a condition did not contain an operator. Conditions like “id:100 == id:12” would be considered invalid.
 

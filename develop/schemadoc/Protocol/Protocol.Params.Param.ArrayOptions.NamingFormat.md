@@ -4,7 +4,7 @@ uid: Protocol.Params.Param.ArrayOptions.NamingFormat
 
 # NamingFormat element
 
-Defines the structure of the display key.
+Defines the structure of the display key.<!-- RN 6343 -->
 
 ## Type
 
@@ -24,12 +24,10 @@ It is not necessary to put static text in between the separators. You can just s
 <NamingFormat>,1512,1514,1516</NamingFormat>
 ```
 
-If you want to use characters like “<”, “>” and “&” in the naming format, enclose the format in a CDATA block.
+If you want to use characters like "<", ">" and "&" in the naming format, enclose the format in a CDATA block.
 
 > [!NOTE]
-> If you use this NamingFormat tag, it will override any naming rules specified in the options attribute of the ArrayOptions tag (`options=”;naming=/1512,1514”`). Using the NamingFormat tag is preferred over the use of the naming option.
-
-*Feature introduced in DataMiner 8.0.5 (RN 6343)*
+> If you use this NamingFormat tag, it will override any naming rules specified in the options attribute of the ArrayOptions tag (`options=";naming=/1512,1514"`). Using the NamingFormat tag is preferred over the use of the naming option.
 
 ## Examples
 

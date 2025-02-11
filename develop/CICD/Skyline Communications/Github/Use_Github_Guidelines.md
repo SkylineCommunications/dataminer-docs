@@ -51,7 +51,7 @@ If the repository is private, the name should look like this (using "-" as separ
 
   | Syntax | Description |
   |--|--|
-  | AS | Automation Scripts. Note that specific types of Automation scripts, such as GQI data sources, user-definable APIs, regression tests, etc., have their own syntax. |
+  | AS | Automation Scripts. Note that specific types of Automation scripts, such as GQI data sources, User-Defined APIs, regression tests, etc., have their own syntax. |
   | C | Connectors |
   | CF | Companion Files |
   | CHATOPS | ChatOps extension |
@@ -61,6 +61,7 @@ If the repository is private, the name should look like this (using "-" as separ
   | F | Functions |
   | GQIDS | GQI data source |
   | GQIO | GQI operator |
+  | LCA | Low-Code App |
   | LSO | Life cycle Service Orchestration |
   | PA | Process Automation |
   | PLS | Profile-Load Scripts |

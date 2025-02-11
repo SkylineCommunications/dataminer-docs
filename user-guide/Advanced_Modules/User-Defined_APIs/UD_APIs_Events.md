@@ -12,7 +12,7 @@ The User-Defined API manager will send out an event whenever an `ApiToken` or `A
 | ApiDefinitionChangedEventMessage  | Generated when an [ApiDefinition](xref:UD_APIs_Objects_ApiDefinition) is created, updated, or deleted. |
 
 > [!NOTE]
-> These event messages are available from DataMiner 10.4.6/10.5.0 onwards.<!-- RN 39117 -->
+> These event messages are available from DataMiner 10.4.6/10.5.0 onwards.<!-- RN 39117 --> From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, Cube will subscribe to these events and update the Automation module and the *System Center* > *User-Defined APIs* page with any recent changes.<!-- RN 39238 -->
 
 ## Filtering CRUD events
 

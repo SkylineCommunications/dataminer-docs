@@ -59,61 +59,15 @@ To configure a shape as an alarm timeline component:
 
 1. Optionally, you can add a shape data field of type **AlarmFilter**, so that you can pass an alarm filter to the Alarm Console by right-clicking a section of the timeline control and selecting *Show alarms in new tab*, or *Show alarms in linked tab* in case a linked Alarm Console tab is already open. The new tab page will show the alarms corresponding with the filter at the moment of the timeline where you clicked.
 
-   The following syntax is supported for this alarm filter:
-
-   - *alarmid:DMAID/AlarmID* (e.g. alarmid:420/1570635).
-   - *alarmdescription:Description* (e.g. alarmdescription:Test)
-   - *alarmtype:Type* (e.g. alarmtype:Acknowledged)
-   - *category:CategoryName* (e.g. category:Configuration)
-   - *comment:CommentText* (e.g. comment:This is a comment)
-   - *componentinfo:ComponentInfo* (e.g. componentinfo:This is the info of the component)
-   - *correctiveaction:CorrectiveAction* (correctiveaction:This is the corrective action)
-   - *datamineragent:DMAName* (e.g. datamineragent:SLC-H48-G01)
-   - *datamineragent:DMAID* (e.g. datamineragent:420)
-   - *element:ElementName* (element:Paris)
-   - *element:DMAID/ElementID* (e.g. datamineragent:420)
-   - *elementtype:Type* (e.g. elementtype:DVE)
-   - *virtualfunction:FunctionName* (e.g. virtualfunction:RT_DCF_DVE_Encoder.Encoder.1)
-   - *virtualfunction:DMAID/FunctionID* (e.g. virtualfunction:420/502)
-   - *virtualfunctionimpact:Impact* (e.g. virtualfunctionimpact:1)
-   - *interface:InterfaceName* (e.g. interface:inout01)
-   - *interfaceimpact:Impact* (e.g. interfaceimpact:1)
-   - *keypoint:KeyPoint* (e.g. keypoint:This is the key point)
-   - *offlineimpact:Impact* (e.g. offlineimpact:No Impact)
-   - *owner:Username* (e.g. owner:Skyline2/Michael)
-   - *parameterdescription:DMAID/ElementID/ParameterID* (e.g. parameterdescription:420/50119/1)
-   - *parameterdescription:ProtocolName:Version/ParameterID* (e.g. parameterdescription:MyTestProtocol:1.0.0.1/1)
-   - *protocol:ProtocolName:Version* (e.g. protocol:MyTestProtocol:Production)
-   - *rcalevel:RCALevel* (e.g. rcalevel:0.0.0)
-   - *service:ServiceName* (e.g. service:Paris)
-   - *service:DMAID/ServiceID* (e.g. service:49/1)
-   - *serviceimpact:Impact* (e.g. serviceimpact:1)
-   - *severity:SeverityLevel* (e.g. severity:Critical)
-   - *severityrange:Range* (e.g. severityrange:High)
-   - *source:Source* (e.g. source:DataMiner System)
-   - *status:Status* (e.g. status:Cleared)
-   - *userstatus:UserStatus* (e.g. userstatus:Acknowledged)
-   - *value:ParameterValue* (e.g. value:69.5)
-   - *view:ViewName* (e.g. view:Root View)
-   - *view:ViewID* (e.g. view:-1)
-   - *viewimpact:Impact* (e.g. viewimpact:1)
-   - For an alarm property: *Alarm:PropertyName:PropertyValue* (e.g. Alarm.System Type:CMC )
-   - For an element property: *Element:PropertyName:PropertyValue* (e.g. Element.Latitude:90)
-   - For a service property: *Service:PropertyName:PropertyValue* (e.g. Service.Status:Running)
-   - For a view property: *View:PropertyName:PropertyValue* (e.g. View.Location:Izegem)
-   - For a predefined alarm filter, simply specify the filter name. However, note that this is only supported for public alarm filters.
+   For detailed information about the supported syntax for the AlarmFilter shape data field, see [Making a shape filter Alarm Console tabs when clicked](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked).
 
    > [!NOTE]
    >
-   > - Prior to DataMiner 9.6.0 \[CU21\]/10.0.0 \[CU9\]/10.1.1, only filters with properties are supported.
    > - You can define a custom name for the alarm tab page by adding "TabName=", followed by the custom name to the value of the **AlarmFilter** data field, separated from the actual alarm filter with a pipe character ("\|").
    > - In certain EPM environments, filters can be specified to the left of the timeline in Visual Overview. You can insert these filters in the alarm filter by using the following placeholders:
    >   - *\[ServiceFilterName\]* refers to the left column.
    >   - *\[ServiceFilterName2\]* refers to the right column.
    >   - Example: *Alarm.Service:"\[\[ServiceFilterName\]\]" Alarm.Tx:"\[\[ServiceFilterName2\]\]"*
-
-   > [!TIP]
-   > See also: [Making a shape filter Alarm Console tabs when clicked](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)
 
 1. Normally, as long as not all configured timelines have been received by the client, Visual Overview will indicate that content is still loading. Optionally, you can disable this, by adding "EnableLoading=False" to the **Options** shape data field.
 

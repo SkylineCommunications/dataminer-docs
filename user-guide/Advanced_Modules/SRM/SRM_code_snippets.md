@@ -725,9 +725,137 @@ namespace SRM.SRM_ProfileInstance_CRUD
 
 #### Managing virtual function definitions
 
-From DataMiner 9.5.13 onwards, a ProtocolFunctionHelper class has been added to facilitate the creation of Automation scripts dealing with virtual function definitions.
+A ProtocolFunctionHelper class is available that facilitates the creation of Automation scripts dealing with virtual function definitions.
 
 The example below illustrates the use of the various methods in this class.
+
+##### [From DataMiner 10.4.6/10.5.0 onwards](#tab/tabid-1)
+
+<!--RN 39362-->
+
+```cs
+using System;
+using System.Collections.Generic;
+using Skyline.DataMiner.Automation;
+using Skyline.DataMiner.Net;
+using Skyline.DataMiner.Net.Messages;
+using Skyline.DataMiner.Net.ServiceManager.Objects;
+
+namespace SRM.SRM_FunctionDefinitions
+{
+    public class Script
+    {
+        private ProtocolFunctionHelper _helper;
+
+        public void Run(Engine engine)
+        {
+            // Initialize the ProtocolFunctionHelper
+            _helper = new ProtocolFunctionHelper();
+
+            // Handling the RequestResponseEvent gives the ProtocolFunctionHelper connection with SLNet.
+            // Any server call the Helper makes behind the scenes calls this method.
+            _helper.RequestResponseEvent += (sender, args) =>
+                args.responseMessage = engine.SendSLNetSingleResponseMessage(args.requestMessage);
+
+            // Retrieve the ProtocolFunction configuration
+            var config = _helper.GetProtocolFunctionConfig();
+
+            // Update the function hysteresis value to 12 days
+            config.FunctionHysteresis = TimeSpan.FromDays(12);
+            _helper.SetProtocolFunctionConfig(config);
+
+            // Add a function
+            var protocolName = "STA_DCF_DEVICE";
+            var newVersion = "1.1.0.0";
+            var functionDefinition = AddFunctionToFunctionsXml(protocolName, newVersion);
+
+            // Set the current functions XML to the new version
+            _helper.SetCurrentFunctionsXml(protocolName, newVersion);
+            // Get the EntryPoints of the specified function and element
+            _helper.GetFunctionEntryPoints(functionDefinition.GUID, 1337, 360);
+            
+            // Delete the functions XML
+            _helper.DeleteFunctionsXml(protocolName, newVersion);
+
+            // You can also force delete the functions XML by setting the third 'force' attribute to true
+            _helper.DeleteFunctionsXml(protocolName, newVersion, true);
+
+            // Retrieve all protocol functions
+            var functions = _helper.GetProtocolFunctions(protocolName);
+
+            // If a function definition is already present on the system, you can get it by passing the FunctionDefinitionID to GetFunctionDefinition:
+            var sysFunctionDefinition = _helper.GetFunctionDefinition(new FunctionDefinitionID(Guid.Parse("da1f3250-0e32-4584-bc4d-7595fb7a3fad")));
+            // Or if you need multiple function definitions, pass a list of FunctionDefinitionIDs to GetFunctionDefinitions:
+            var functionDefinitionIds = new List<FunctionDefinitionID>()
+            {
+                new FunctionDefinitionID(Guid.Parse("521a23f6-eb31-4e7b-b06b-3c730ee91c47")),
+                new FunctionDefinitionID(Guid.Parse("4f724aa3-b205-4d3b-a251-e9fc4eab1842"))
+            };
+            var functionDefinitions = _helper.GetFunctionDefinitions(functionDefinitionIds);
+        }
+
+        private FunctionDefinition AddFunctionToFunctionsXml(string protocolName, string newVersion)
+        {
+            var functionDefinition = new FunctionDefinition
+            {
+                GUID = Guid.NewGuid(),
+                Name = "Decoder",
+                MaxInstances = 2,
+
+                // Define the input only interfaces
+                InputInterfaces = new[]
+                {
+                    new FunctionInterface()
+                    {
+                        Name = "SD IN", InterfaceType = InterfaceType.In, ParameterGroupLink = 500, Id = 100
+                    }
+                },
+
+                // Define the input/output interfaces
+                InputOutputInterfaces = new[]
+                {
+                    new FunctionInterface()
+                    {
+                        Name = "SD IN/OUT",
+                        InterfaceType = InterfaceType.InOut,
+                        ParameterGroupLink = 502,
+                        Id = 101
+                    }
+                },
+
+                // Define the output only interfaces
+                OutputInterfaces = new[]
+                {
+                    new FunctionInterface()
+                    {
+                        Name = "SD OUT", InterfaceType = InterfaceType.Out, ParameterGroupLink = 501, Id = 102
+                    }
+                },
+
+                // Define the FunctionParameters
+                Parameters = new[] {new FunctionParameter(500), new FunctionParameter(5), new FunctionParameter(6),},
+
+                // Define the entry points
+                EntryPoints = new[] {new FunctionEntryPointDefinition {ParameterId = 500}},
+            };
+
+            // Wrap the FunctionDefinition in a ProtocolFunctionVersion
+            // and add it to the functions XML of a protocol
+            var protocolFunctionVersion = new ProtocolFunctionVersion
+            {
+                Version = newVersion,
+                ProtocolName = protocolName,
+                FunctionDefinitions = new List<FunctionDefinition> {functionDefinition}
+            };
+
+            _helper.AddFunctionsToFunctionsXml(protocolName, protocolFunctionVersion);
+            return functionDefinition;
+        }
+    }
+}
+```
+
+##### [Prior to DataMiner 10.4.6/10.5.0](#tab/tabid-2)
 
 ```cs
 using System;
@@ -857,3 +985,5 @@ namespace SRM.SRM_FunctionDefinitions
  }
 }
 ```
+
+***

@@ -8,7 +8,7 @@ You can switch from one DataMiner Maps configuration to another by means of Java
 
 This can be useful in scenarios where the maps component is an iframe inside a parent page that allows you to view multiple map configurations. Instead of switching the URL of the iframe, the parent frame can ask the maps frame to load a different configuration.
 
-#### Example:
+#### Example
 
 Suppose you have a parent HTML file that contains an iframe.
 
@@ -43,7 +43,7 @@ If the parent page contains the following script ...
 </script>
 ```
 
-... and the iframe has id “mapFrame” ...
+... and the iframe has the ID "mapFrame" ...
 
 ```xml
 <iframe width="800" height="600" id="mapFrame" src="/maps/map.aspx?config=mechelen"></iframe>

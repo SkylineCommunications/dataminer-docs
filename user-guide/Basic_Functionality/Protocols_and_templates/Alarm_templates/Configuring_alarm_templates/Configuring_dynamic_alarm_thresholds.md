@@ -6,6 +6,8 @@ uid: Configuring_dynamic_alarm_thresholds
 
 Instead of defining alarm thresholds as a fixed value, you can set them as a dynamic threshold that is compared to a certain "normal" value. This value will automatically be determined at runtime, or via a normalization procedure for each separate element.
 
+![Dynamic alarm thresholds](~/user-guide/images/Dynamic_Alarm_Thresholds.png)<br>*Alarm template in DataMiner 10.4.5*
+
 The different types of alarm thresholds can be selected in the drop-down list in the *Type* column:
 
 - **Normal**: The normal value and the different alarm thresholds are [fixed by the operator](xref:Configuring_normal_alarm_thresholds). This option is selected by default.
@@ -39,16 +41,18 @@ Both for "absolute" and "relative" alarm thresholds, the "normal" value has to b
 
 1. If you chose a smart baseline, select one of the following options:
 
-   - **To detect a continuous degradation**. This type of baseline is used in order to detect a deviation from a typically stable signal or fixed value. The median value of the average trend points during the selected trend window is calculated and kept for 24 hours. Every 15 minutes, DataMiner will check whether enough time has elapsed that the baseline value can be calculated again.
+   - **To detect a continuous degradation**. This type of baseline is used in order to detect a deviation from a typically stable signal or fixed value. The median value of the average trend points during the selected trend window is calculated and used as the baseline. The median is recalculated every day around midnight.
 
      Example of continuous degradation of a signal:
 
      ![Example of continuous signal degradation](~/user-guide/images/SmartBaselinesContinuous.png)
 
-   - **To detect a deviation in the expected daily pattern**. This type of baseline is used to detect a deviation from a signal that follows a day/night pattern. In this case, the day/night pattern is checked by calculating the median value per 15 minutes of the trend window. The baselines are calculated every 24 hours at midnight for every 15-minute timeslot of the next day (e.g. 10:00, 10:15, 10:30, …).
+   - **To detect a deviation in the expected daily pattern**. This type of baseline is designed to identify changes in signals that follow a day/night pattern. The day is divided into 288 time intervals of 5 minutes, namely 0h until 0h05, 0h05 until 0h10, and so on, up to 23h55 until 0h. If the trend window is for example set to 7 days, then for each day the value of the parameter is stored during the interval 0h until 0h05, obtaining 7 points. The same is done for every time interval, obtaining 7 data points for each of the 288 time ranges. The median value is calculated for each interval, resulting in 288 median values. Instead of storing all these values, they are summarized using a smooth curve that approximates the daily pattern. By default, every 15 minutes, the value of the curve at the current time is calculated and used as the baseline.
 
      > [!NOTE]
-     > If this option is selected, the DataMiner system will calculate the median value of all average trend points in the 15-minute time window equal to the current time window and apply a polynomial regression to these median values from the last x number of days.
+     >
+     > - If a range is defined in the protocol, the baseline value is capped to ensure it stays within the specified minimum and maximum limits.
+     > - The typical daily behavior of the signal is recalculated every day around midnight.
 
      Example of a deviation in the expected daily pattern for a signal:
 

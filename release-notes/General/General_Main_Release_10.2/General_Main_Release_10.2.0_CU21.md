@@ -12,7 +12,7 @@ uid: General_Main_Release_10.2.0_CU21
 
 ### Enhancements
 
-#### DataMiner Cube - Trending: All trend patterns will now be loaded when you open a trend graph showing data from several parameters [ID_36661]
+#### DataMiner Cube - Trending: All trend patterns will now be loaded when you open a trend graph showing data from several parameters [ID 36661]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -20,7 +20,7 @@ Up to now, when you opened a trend graph showing data from several parameters, o
 
 The SLAnalytics feature "pattern matching" has now fully been integrated in the Trending module.
 
-#### DataMiner Cube - System Center: New rule with regard to adding agents to a cluster [ID_37075]
+#### DataMiner Cube - System Center: New rule with regard to adding agents to a cluster [ID 37075]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -41,7 +41,7 @@ Up to now, it was possible to have a DataMiner System in which some DMAs had bee
   - Allowed to add DMAs either by hostname or by IP address.
   - Allowed to create Failover pairs with shared hostname or with virtual IP addresses.
 
-#### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID_37148] [ID_37171] [ID_37670]
+#### DataMiner Cube - Alarm templates: Configuration of behavioral anomaly alarms [ID 37148] [ID 37171] [ID 37670]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -79,31 +79,31 @@ To configure the behavioral anomaly detection for a particular (numeric) paramet
 > - It is not possible to have both a suggestion event and an alarm generated for the same issue. However, it is possible to have suggestion events generated for e.g. downward level shifts, even if downward level shifts are disabled in the *Anomaly alarm settings* window.
 > - Any settings configured in the *Anomaly alarm settings* window will only affect parameters that are being trended.
 
-#### Security enhancements [ID_37267]
+#### Security enhancements [ID 37267]
 
 <!-- RN 37267: MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
-#### DataMiner Cube - Alarm Console: Button to show focused alarms now shows the number of focused alarms [ID_37455]
+#### DataMiner Cube - Alarm Console: Button to show focused alarms now shows the number of focused alarms [ID 37455]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 From now on, the button to only show the focused alarms in the current alarm tab will show the number of focused alarms in the current alarm tab and will only be visible when the alarm tab actually contains focused alarms.
 
-#### DataMiner Cube - Surveyor: Enhanced processing of alarm statistics [ID_37552]
+#### DataMiner Cube - Surveyor: Enhanced processing of alarm statistics [ID 37552]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 In the Surveyor, statistical alarm data can be displayed next to elements, services and views. A number of enhancements have now been made to enhance the processing of those alarm statistics.
 
-#### DataMiner Cube: Caching enhancements [ID_37553]
+#### DataMiner Cube: Caching enhancements [ID 37553]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 A number of general enhancements have been made with regard to cache management.
 
-#### DataMiner Cube - Spectrum Analysis: RBW and VBW settings can now be modified by means of plus and minus buttons [ID_37601]
+#### DataMiner Cube - Spectrum Analysis: RBW and VBW settings can now be modified by means of plus and minus buttons [ID 37601]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -111,7 +111,7 @@ In the *View* tab of a spectrum card, you can change the *RBW* (Resolution bandw
 
 Up to now, these could be modified by means of a drop-down box. From now on, they can be modified by means of "+" (plus) and "-" (minus) buttons.
 
-#### Page size when retrieving element data from Cassandra has been set to 5000 [ID_37673]
+#### Page size when retrieving element data from Cassandra has been set to 5000 [ID 37673]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -120,7 +120,7 @@ For performance reasons, the page size when retrieving element data from a Cassa
 > [!NOTE]
 > When retrieving element data from a MySQL or Microsoft SQL Server database, the page size remains set to 50000.
 
-#### DataMiner Cube - Spectrum Analysis: New marker button 'Center to marker frequency' [ID_37705]
+#### DataMiner Cube - Spectrum Analysis: New marker button 'Center to marker frequency' [ID 37705]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -128,7 +128,7 @@ In the *View* tab of a spectrum card, up to now, each marker listed in the *Mark
 
 Also, the three buttons will now show a tooltip when you hover over them.
 
-#### DataMiner Cube - Visual Overview: Page loading times are now logged in SLClient.txt [ID_38636] [ID_38694]
+#### DataMiner Cube - Visual Overview: Page loading times are now logged in SLClient.txt [ID 38636] [ID 38694]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU12]/10.4.0 [CU0] - FR 10.4.3 [CU0] -->
 
@@ -142,13 +142,13 @@ Note that these *SLClient.txt* entries will also include the name of the page th
 
 ### Fixes
 
-#### Problem when restarting DataMiner [ID_37112]
+#### Problem when restarting DataMiner [ID 37112]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU8] - FR 10.3.10 -->
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
 
-#### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID_37312]
+#### NATSCustodian could incorrectly pick an offline DMA as NAS candidate [ID 37312]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -156,25 +156,25 @@ Up to now, when NATSCustodian had to pick a NAS candidate, in some cases, it cou
 
 From now on, it will only be possible to trigger a NATS configuration reset when all DataMiner Agents in the cluster are online/running.
 
-#### Updated dynamic IP address would incorrectly be applied to all connections of an element [ID_37445]
+#### Updated dynamic IP address would incorrectly be applied to all connections of an element [ID 37445]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When a parameter that was used to store the dynamic IP address of an element connection was updated, the dynamic IP address would incorrectly be applied to all connections of that element when the element was restarted.
 
-#### DataMiner Cube - Alarm Console: Alarm tab filter would not be re-evaluated when the focus score of an alarm was updated [ID_37475]
+#### DataMiner Cube - Alarm Console: Alarm tab filter would not be re-evaluated when the focus score of an alarm was updated [ID 37475]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When an alarm in a filtered alarm tab received a focus score update, the system would incorrectly not re-evaluate whether that alarm still matched the filter that was applied.
 
-#### Element connections would not work with destination tables that had naming configured [ID_37478]
+#### Element connections would not work with destination tables that had naming configured [ID 37478]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 Element connections would not work with destination tables that had naming configured.
 
-#### DataMiner Cube - Alarm Console: Display issues when a correlation alarm was based on another correlation alarm [ID_37497]
+#### DataMiner Cube - Alarm Console: Display issues when a correlation alarm was based on another correlation alarm [ID 37497]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -182,7 +182,7 @@ When a correlation rule was based on another correlation rule, display issues co
 
 When the main correlation alarm got cleared, the base alarm would no longer be shown in the alarm tab, and when the base alarm got updated, it would be shown twice: once as the source of the other correlation alarm and once as a regular alarm.
 
-#### DataMiner Cube: Problem when trying to display broadcast messages while being used as a service [ID_37524]
+#### DataMiner Cube: Problem when trying to display broadcast messages while being used as a service [ID 37524]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -190,7 +190,7 @@ When Cube tried to display a broadcast message it had received from the DataMine
 
 From now on, Cube will disregard broadcast messages while being used as a service (e.g. when displaying a visual overview on a mobile device).
 
-#### DataMiner Cube - Spectrum Analysis: Problem when making changes to a spectrum monitor [ID_37542]
+#### DataMiner Cube - Spectrum Analysis: Problem when making changes to a spectrum monitor [ID 37542]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -198,14 +198,14 @@ When you create a spectrum monitor, you can define a parameter and select a numb
 
 Up to now, when you made a change to a spectrum monitor, in some cases, the ID of certain parameter/measurement point combinations could change even when the parameter or the measurement points had not been changed.
 
-#### DELT export/import did not correctly include mask status [ID_37557]
+#### DELT export/import did not correctly include mask status [ID 37557]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 <!-- For 10.2.0 branch, only mask status issue was merged -->
 
 When a DELT export package was created, the mask status of elements and alarms was not correctly included in the package. The mask status was also not correctly imported when such a package was imported.
 
-#### DataMiner Cube - Alarm Console: Problem when changing the alignment of an alarm property column [ID_37574]
+#### DataMiner Cube - Alarm Console: Problem when changing the alignment of an alarm property column [ID 37574]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -213,13 +213,13 @@ When, in the Alarm Console, you add a column showing an alarm property you are a
 
 Up to now, when you changed the alignment of such a column, the pencil icons would disappear and the new alignment would not be applied. From now on, when you change the alignment of a column showing an alarm property you are allowed to edit, the new alignment will be applied correctly and the pencil icons will stay visible. However, regardless of the alignment, the pencil icons will stay on the left, and when you change a value, the text box will also be aligned to the left.
 
-#### PropertyChangeEvents would not be removed from the SLNet event cache when an element was deleted [ID_37576]
+#### PropertyChangeEvents would not be removed from the SLNet event cache when an element was deleted [ID 37576]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When an element was deleted, `PropertyChangeEvent` instances for that element would incorrectly not get removed from the SLNet event cache.
 
-#### Alerter: Problem when connecting to a DataMiner Agent using gRPC [ID_37580]
+#### Alerter: Problem when connecting to a DataMiner Agent using gRPC [ID 37580]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
@@ -227,43 +227,43 @@ When Alerter connected to a DataMiner Agent using gRPC, on each subsequent start
 
 `There is no connection available, please add one.`
 
-#### DataMiner Cube - Alarm Console: Text-to-speech button would overlap the counter showing the number of alarms with severity 'Suggestion' [ID_37590]
+#### DataMiner Cube - Alarm Console: Text-to-speech button would overlap the counter showing the number of alarms with severity 'Suggestion' [ID 37590]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 In the footer of the Alarm Console, the button to cancel the current text-to-speech operation would overlap the counter showing the number of alarms with severity "Suggestion" in the current alarm tab.
 
-#### DataMiner Cube - Alarm Console: Focus score would not be updated correctly when an alarm was duplicated [ID_37600]
+#### DataMiner Cube - Alarm Console: Focus score would not be updated correctly when an alarm was duplicated [ID 37600]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When, in the Alarm Console, an alarm was duplicated, in some cases, its focus score would not be updated correctly.
 
-#### DataMiner Cube - Relation learning: Problem when checking ModelHost DxM license [ID_37653]
+#### DataMiner Cube - Relation learning: Problem when checking ModelHost DxM license [ID 37653]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
 
 In some cases, DataMiner Cube could become unresponsive when checking the ModelHost DxM license.
 
-#### DataMiner Cube: Problem when parsing anomaly alarms [ID_37680]
+#### DataMiner Cube: Problem when parsing anomaly alarms [ID 37680]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 -->
 
 When you opened DataMiner Cube or when you opened a new alarm tab, an error could occur when parsing anomaly alarms.
 
-#### Protocol VDX files imported via a DELT package would not be displayed until a DataMiner restart [ID_37781]
+#### Protocol VDX files imported via a DELT package would not be displayed until a DataMiner restart [ID 37781]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
 
 When you imported a DELT package that contained protocol VDX files linked to elements in the package, in some rare cases, those VDX files would incorrectly not be displayed until after a DataMiner restart.
 
-#### SLNetClientTest tool would not indicate that a profile migration to Elasticsearch/OpenSearch had failed due to a profile object with an invalid name [ID_37808]
+#### SLNetClientTest tool would not indicate that a profile migration to Elasticsearch/OpenSearch had failed due to a profile object with an invalid name [ID 37808]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
 
 When, in the SLNetClientTest tool, you went to *Advanced > Migration*, the migration overview would not indicate that a migration of profiles towards Elasticsearch/OpenSearch had failed due to a profile object with a name longer than 32,766 characters.
 
-#### Profile migrations to Elasticsearch/OpenSearch will now fail when the profiles.xml file is corrupt [ID_37818]
+#### Profile migrations to Elasticsearch/OpenSearch will now fail when the profiles.xml file is corrupt [ID 37818]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU9] - FR 10.3.12 [CU0] -->
 
@@ -272,13 +272,13 @@ When you started a profile migration to an Elasticsearch/OpenSearch database whi
 > [!NOTE]
 > When, in the SLNetClientTest tool, you go to *Advanced > Migration*, all migrations in an error status will now have a red background.
 
-#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID_38331]
+#### Web apps - Visual overview: Popup window would not display a hidden page when the visual overview only contained one non-hidden page [ID 38331]
 
 <!-- MR 10.2.0 [CU21] / 10.3.0 [CU12] / 10.4.0 [CU0] - - FR 10.4.3 [CU0] -->
 
 When, in a visual overview with one non-hidden page displayed in a web app, you tried to open a popup window linked to a page marked as "hidden", the popup window would incorrectly display the non-hidden page instead of the hidden page.
 
-#### DataMiner Cube - System Center: No longer possible to add additional databases when DMA was using STaaS [ID_38399]
+#### DataMiner Cube - System Center: No longer possible to add additional databases when DMA was using STaaS [ID 38399]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU11] - FR 10.4.2 [CU0] -->
 
@@ -286,7 +286,7 @@ In *System Center*, the *Other* tab of the *Database* section allows you to conf
 
 Up to now, when Cube was connected to a DataMiner Agent configured to use STaaS, an error could occur when you tried to add an additional database.
 
-#### Visual Overview: Problem with subscription filter on 'Children' shape [ID_38537]
+#### Visual Overview: Problem with subscription filter on 'Children' shape [ID 38537]
 
 <!-- MR 10.2.0 [CU21]/10.3.0 [CU11]/10.4.0 [CU0] - FR 10.4.2 [CU0] -->
 

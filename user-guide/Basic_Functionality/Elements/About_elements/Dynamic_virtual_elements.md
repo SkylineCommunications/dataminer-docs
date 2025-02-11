@@ -37,11 +37,9 @@ New child DVEs will be added in the same view as the parent DVE, except if a vie
 
 ## Editing a dynamic virtual element
 
-The child DVEs get all characteristics, including their different protocols, from the parent DVE protocol. They cannot be edited by themselves.
+Child DVEs get most characteristics, including their different protocols, from the parent DVE protocol.
 
 As a consequence:
-
-- To edit a child DVE, the protocol of the parent DVE has to be adapted.
 
 - It is not possible to set the state of a single child DVE, only of the parent DVE and as a consequence of all child DVEs at the same time.
 
@@ -49,10 +47,10 @@ As a consequence:
 
 - A DVE child protocol cannot be deleted separately, but when the main protocol is deleted, the child protocols are deleted as well.
 
-However, it is possible to assign a separate trend template or alarm template to child DVEs, or to edit properties separately.
+- Only limited editing possibilities are available for DVE child elements: you can modify the description of the element, the alarm template, the trend template, the parent view(s), and the properties, and you can set a DVE child element to *Hidden*.
 
-> [!NOTE]
-> From DataMiner 9.5.6 onwards, limited editing possibilities are available for DVE child elements, allowing you to modify the description of the element, the alarm and trend template, the parent view(s) and the properties, and allowing you to set the DVE child element to *Hidden*.
+  > [!NOTE]
+  > By default, DVE child elements follow the alarm template of the parent DVE, if that is available. When an alarm template other than the parent DVE's alarm template is assigned to a DVE child element, the two templates will be applied in a hierarchical fashion, with the specific DVE child's template coming first, and the parent DVE's template next. When the parent DVE does not have any assigned alarm template, the DVE child's template behaves like a standard alarm template.
 
 ## Enabling or disabling the creation of DVE child elements
 
@@ -62,7 +60,7 @@ In DataMiner Cube, this can be done when the DVE is created or edited:
 
 - In the *Advanced element settings,* select or clear *Enable DVE child creation*.
 
-Alternatively, this can be done manually in the *Element.xml* file. To do so:
+Alternatively, if [Swarming](xref:Swarming) is not enabled, this can be done manually in the *Element.xml* file. To do so:
 
 1. Stop DataMiner.
 
@@ -85,4 +83,4 @@ When you disable the setting for a particular parent element, all its existing c
 > [!NOTE]
 >
 > - Only DVE main elements that have element creation disabled can be added to a redundancy group.
-> - Prior to DataMiner 10.0.8, if DVE child creation is disabled, virtual functions (used in DataMiner SRM) can also not be generated. From DataMiner 10.0.8 onwards, this setting no longer affects virtual functions.
+> - This setting does not affect the creation of virtual functions (used in DataMiner SRM).

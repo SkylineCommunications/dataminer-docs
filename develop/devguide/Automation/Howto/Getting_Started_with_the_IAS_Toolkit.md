@@ -17,7 +17,7 @@ To choose your version of the IAS Toolkit, the first thing you need to know is t
 
 In this introduction, DataMiner version 10.1.2 is used. This means that [version 2.0.x](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/2.0.0) of the toolkit can be used.
 
-Just like for protocol and regular Automation script development, our IDE of choice is [Visual Studio](xref:TOOVisualStudio) with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
+Just like for protocol and regular Automation script development, our IDE of choice is Visual Studio with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
 
 ## Creating a new script
 
@@ -70,12 +70,11 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENTED-OUT CODE OR THE SCRIPT WON'T RUN!
+        // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
         // DataMiner evaluates if the script needs to launch in interactive mode.
-        // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
+        // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
         // However, because of the toolkit NuGet package, this string cannot be found here.
         // So this comment is here as a workaround.
-        //// engine.ShowUI();
     
         try
         {
@@ -177,12 +176,11 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENTED-OUT CODE OR THE SCRIPT WON'T RUN!
+        // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
         // DataMiner evaluates if the script needs to launch in interactive mode.
-        // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
+        // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
         // However, because of the toolkit NuGet package, this string cannot be found here.
         // So this comment is here as a workaround.
-        //// engine.ShowUI();
         
         try
         {
@@ -230,12 +228,11 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENTED-OUT CODE OR THE SCRIPT WON'T RUN!
+        // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
         // DataMiner evaluates if the script needs to launch in interactive mode.
-        // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
+        // This is determined by a simple string search looking for ".FindInteractiveClient(" in the source code.
         // However, because of the toolkit NuGet package, this string cannot be found here.
         // So this comment is here as a workaround.
-        //// engine.ShowUI();
     
         try
         {

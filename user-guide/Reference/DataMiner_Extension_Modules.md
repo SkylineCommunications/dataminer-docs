@@ -1,12 +1,13 @@
 ---
 uid: DataMinerExtensionModules
+description: DxMs are modules that expand the core DataMiner software with additional capabilities. They do not require a DMA reboot for (un)installation/upgrades.
 ---
 
 # DataMiner Extension Modules (DxMs)
 
 A DataMiner Extension Module (DxM) is a service that can be installed, upgraded, and uninstalled without the need to reboot the DataMiner Agent. These modules will expand the core DataMiner software with additional features and capabilities. In most cases, DxMs will be backwards-compatible with all supported core DataMiner versions. However, this may not be possible in some cases, and then a minimum core DataMiner version will be indicated.
 
-Some DxMs are considered core modules created using the DxM technology. These are known as "DcMs" (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades. While DxMs are only updated if they have already been installed, DcMs will always be installed or updated with an upgrade.
+Some DxMs are considered core modules created using the DxM technology. These are known as "DcMs" (DataMiner Core Modules). DcMs are treated differently from DxMs during upgrades and are part of the DataMiner installer starting from DataMiner 10.3.7. While DxMs are only updated if they have already been installed, DcMs will always be installed or updated with an upgrade.
 
 DxMs depend on a minimum version of the core software. This is indicated in the Admin app. When you install updates, the latest compatible update will be automatically selected.
 
@@ -44,6 +45,12 @@ The FieldControl module is responsible for handling incoming requests from datam
 
 This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
 
+### GQI
+
+The GQI module is responsible for handling [GQI queries](xref:About_GQI). See [GQI DxM](xref:GQI_DxM).
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.2/10.5.0 onwards and web-only upgrade packages from 10.5.2 onwards.<!-- RN 41811 -->
+
 ### Orchestrator
 
 The Orchestrator module is responsible for management and upgrades of DxMs through the [Admin app](xref:Managing_cloud-connected_nodes).
@@ -74,7 +81,11 @@ The CloudGateway module is responsible for connecting a DataMiner System to data
 
 ### CloudFeed
 
-The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are SPI events and alarm events.
+The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are alarm events, change point events, SRM events, element configuration events, and feedback events.
+
+From CloudFeed version 1.4.0 onwards, the minimum required DataMiner version is DataMiner 10.4.10.<!-- RN 40413 -->
+
+From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages by default include the latest version of the CloudFeed module. If a newer version of the CloudFeed module is available but you prefer not to install an upgrade package, you can install a newer version separately via the Admin app.
 
 ### DataAggregator
 
@@ -84,7 +95,7 @@ See [Data Aggregator](xref:Data_Aggregator_DxM).
 
 The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
-The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node).
+The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
 ### CommunicationGateway
 

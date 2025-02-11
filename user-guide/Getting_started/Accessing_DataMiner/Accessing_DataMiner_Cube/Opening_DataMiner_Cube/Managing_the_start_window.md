@@ -19,12 +19,12 @@ In the Cube start window, you can select which Cube update track should be used:
 1. In the *Settings* dialog, select the update track you want to use:
 
    - **Release**: Use the latest released DataMiner Cube version, so you can enjoy all the latest and greatest features.
-   - **Release (delayed 2 weeks)**: Wait to use the latest released DataMiner Cube version until 2 weeks after the release date.
+   - **Release (delayed 2 weeks)**: Wait to use the latest released DataMiner Cube version until 2 weeks after the release date. This is the default option.
 
    > [!NOTE]
    > For Skyline employees only, two additional tracks are available for development purposes:
    >
-   > - **Preview**: Use a preview of the latest DataMiner Cube version, even if it has not been released yet.
+   > - **Preview**: Use a preview of the latest DataMiner Cube version, even if it has not been released yet. This is the default option for Skyline Employees.
    > - **Development**: Use the latest available development version.
 
 1. Click *Save*.

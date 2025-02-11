@@ -24,4 +24,4 @@ protocol.NotifyProtocol(131, parameterID, description);
 
 ## Remarks
 
-- The SLProtocol interface defines a wrapper method "SetParameterDescription" for this call. See SLProtocol.SetParameterDescription method.
+- The SLProtocol interface defines a wrapper method "SetParameterDescription" for this call. See [SLProtocol.SetParameterDescription](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterDescription*) method.

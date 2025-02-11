@@ -4,7 +4,7 @@ uid: SLNetClientTest_estimate_number_rows_for_storage_type
 
 # Requesting an estimate of the number of rows for a storage type in the database
 
-From DataMiner 9.5.13 onwards, it is possible to request an estimate of the how many rows there are for a certain storage type in the database.
+It is possible to request an estimate of the how many rows there are for a certain storage type in the database.
 
 Retrieving this information via the SLNetClientTest tool instead of via a query has the advantage that you do not risk a timeout of the query. However, for large tables, it can take a while before the estimate is returned.
 

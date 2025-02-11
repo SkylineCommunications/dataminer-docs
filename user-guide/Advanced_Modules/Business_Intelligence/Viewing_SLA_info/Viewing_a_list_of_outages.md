@@ -22,8 +22,8 @@ One or more alarms that potentially affect the SLA at a particular time are grou
 
 - **Correction** and **Motivation**: Show a possible correction on the outage, and its motivation.
 
-    > [!NOTE]
-    > - For more information on how to make corrections on outages, see [Making corrections to existing outages](xref:Making_corrections_to_existing_outages).
-    > - If there is currently an outage, but a delay time is applicable, the outage impact is not yet set to 0%. This is only done afterwards, once the outage is closed, if the outage is in fact shorter than the delay time.
-    > - Timeout alarms are only registered by SLAs from DataMiner 9.5.5 onwards. By default, they have 0% impact, but this can be modified using violation filters.
-    >
+  > [!NOTE]
+  >
+  > - For more information on how to make corrections on outages, see [Correcting an outage in the outage list](xref:Correcting_an_outage_in_the_outage_list).
+  > - If there is currently an outage, but a delay time is applicable, the outage impact is not yet set to 0%. This is only done afterwards, once the outage is closed, if the outage is in fact shorter than the delay time.
+  > - By default, timeout alarms have 0% impact, but you can change this using [violation filters](xref:Configuring_the_alarm_settings_for_an_SLA#setting-a-violation-filter).

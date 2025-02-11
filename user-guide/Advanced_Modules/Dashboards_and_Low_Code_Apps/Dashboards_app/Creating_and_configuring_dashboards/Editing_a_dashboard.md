@@ -12,7 +12,7 @@ To edit an existing dashboard:
 
    - To change one of the existing components into a different component, hover the mouse pointer over the component, click the ![Visualizations icon](~/user-guide/images/DashboardsX_visualizations.png) icon, and select a different visualization below the icon.
 
-   - To change the data input for an existing component, drag the data from the data panel to the component. For more information, see [Applying a data feed](xref:Apply_Data_Feed).
+   - To change the data input for an existing component, drag the data from the *Data* pane to the component. For more information, see [Adding data to a component](xref:Adding_data_to_component).
 
    - To duplicate one of the existing components, hover the mouse pointer over the component and click the ![Duplicate component icon](~/user-guide/images/DashboardsX_duplicate.png) icon.
 

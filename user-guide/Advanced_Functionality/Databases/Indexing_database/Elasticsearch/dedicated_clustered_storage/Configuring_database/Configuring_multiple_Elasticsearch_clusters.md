@@ -7,7 +7,7 @@ uid: Configuring_multiple_Elasticsearch_clusters
 # Configuring multiple Elasticsearch clusters
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-managed storage even though this is not recommended, using [OpenSearch](xref:OpenSearch_database).
 
 > [!NOTE]
 > This procedure can be followed both on Linux and Windows setups. However, we highly recommend using Linux.
@@ -71,7 +71,7 @@ To configure this setup:
             -->
             <FileOffloadIdentifier>cluster1</FileOffloadIdentifier>
         </DataBase>
-        <DataBase active="true" search="true" ID="0" priorityOrder="1" type="ElasticSearch">
+        <DataBase active="true" search="true" ID="1" priorityOrder="1" type="ElasticSearch">
             <DBServer>10.11.1.44,10.11.2.44,10.11.3.44</DBServer>
             <UID />
             <PWD>root</PWD>

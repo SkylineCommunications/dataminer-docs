@@ -48,9 +48,7 @@ The table definition in the connector for the *SAP Base Info Hidden* table:
         <ColumnOption idx="4" pid="4605" type="retrieved" options=""/>
     </ArrayOptions>
     <Information>
-        <Subtext>
-            <![CDATA[SAP Base Info Hidden Table used for]]>
-        </Subtext>
+        <Subtext><![CDATA[SAP Base Info Hidden Table used for]]></Subtext>
     </Information>
     <SNMP>
         <Enabled>true</Enabled>
@@ -83,9 +81,7 @@ First, you need a drop-down list containing all the different available rows. In
     <Name>sapFilterSelect</Name>
     <Description>Select SAP Filter</Description>
     <Information>
-        <Subtext>
-            <![CDATA[Selecting a SAP from this list and adding it to the filter, will add this SAP to the SAP polling filter. The SAP will then be polled in the SAP tables.]]>
-        </Subtext>
+        <Subtext><![CDATA[Selecting a SAP from this list and adding it to the filter, will add this SAP to the SAP polling filter. The SAP will then be polled in the SAP tables.]]></Subtext>
     </Information>
     <Type>read</Type>
     <Interprete>
@@ -163,11 +159,6 @@ With this in mind, your table definition should look something like this:
     <Information>
         <Subtext>A table that contains basic SAP information.</Subtext>
     </Information>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>double</Type>
-    </Interprete>
     <SNMP>
         <Enabled>true</Enabled>
         <OID type="complete" id="4682" options="instance;subtable;bulk:5">1.3.6.1.4.1.6527.3.1.2.4.3.2</OID>

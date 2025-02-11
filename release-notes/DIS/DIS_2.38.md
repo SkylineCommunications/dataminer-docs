@@ -8,13 +8,13 @@ uid: DIS_2.38
 
 ### IDE
 
-#### XML editor: Validator results now include warnings \[ID_32837\]
+#### XML editor: Validator results now include warnings \[ID 32837\]
 
 When, in the *DIS Validator* pane, you click the information icon of an error or you right-click that error and select *Show Details*, the window showing those details will now also include possible warnings.
 
 Also, when you right-click an error with warnings and select *Fix \> This error*, a popup window will now appear to draw your attention to those warnings. Only when you click *OK* in that popup window will the error be fixed.
 
-#### XML editor: Protocol comparison will now also include a validation of both protocols \[ID_33133\]
+#### XML editor: Protocol comparison will now also include a validation of both protocols \[ID 33133\]
 
 When you compare two protocols in the *DIS Comparer* tool window, apart from comparing the protocols, DIS will now also automatically validate both these protocols.
 
@@ -23,11 +23,11 @@ When comparison and validation have finished, instead of one result list, you wi
 - *Major Change*: The result of the protocol comparison.
 - *Validator*: The differences between the two protocol validations.
 
-#### Language version of the C# projects now set to 7.3 by default \[ID_33184\]
+#### Language version of the C# projects now set to 7.3 by default \[ID 33184\]
 
 As from version 2.38, by default, DIS will set the language version of the C# projects to 7.3.
 
-#### Automation Script solutions: New 'Import Automation Script' command \[ID_33411\]
+#### Automation Script solutions: New 'Import Automation Script' command \[ID 33411\]
 
 Apart from the *Existing DataMiner Automation Script...* option, which can be used to import locally stored Automation scripts into an Automation script solution, you can now use the *Import DataMiner Automation Script* option to import Automation scripts from the DataMiner Agent you are connected to.
 
@@ -43,7 +43,7 @@ Apart from the *Existing DataMiner Automation Script...* option, which can be us
 
 ### Validator
 
-#### New checks and error messages \[ID_33428\] \[ID_33477\] \[ID_33698\] \[ID_33732\] \[ID_33740\]
+#### New checks and error messages \[ID 33428\] \[ID 33477\] \[ID 33698\] \[ID 33732\] \[ID 33740\]
 
 The following checks and error messages have been added.
 
@@ -121,7 +121,7 @@ The following checks and error messages have been added.
 
 ### Enhancements
 
-#### IDE - C# editor: StyleCop.Analyzers rules disabled \[ID_33313\]
+#### IDE - C# editor: StyleCop.Analyzers rules disabled \[ID 33313\]
 
 DIS defines a default set of analysis rules for QAction projects. These rules can be used by Visual Studio extensions like e.g. SonarLint or StyleCop to analyze the code.
 
@@ -130,7 +130,7 @@ The following StyleCop.Analyzers rules have now been disabled:
 - SA1127 - GenericTypeConstraintsMustBeOnOwnLine
 - SA1128 - ConstructorInitializerMustBeOnOwnLine
 
-#### Validator: System.Xml DLL file will by default be added as a reference to QAction projects when the Validator creates a solution \[ID_33472\]
+#### Validator: System.Xml DLL file will by default be added as a reference to QAction projects when the Validator creates a solution \[ID 33472\]
 
 When a protocol.xml file is being validated, a solution is built from the XML file. Up to now, when that solution was built, the System.Xml.dll would incorrectly not be added as a reference when creating the QAction project(s). In some cases, this could result in compilation errors during validation when types from the System.Xml DLL file were being used.
 
@@ -138,6 +138,6 @@ From now on, the System.Xml DLL file will by default be added as a reference to 
 
 ### Fixes
 
-#### DIS Inject window: Automation script selection box would be empty \[ID_33473\]
+#### DIS Inject window: Automation script selection box would be empty \[ID 33473\]
 
 When you opened the *DIS Inject* window to select the Automation script to be debugged, in some cases, the selection box listing all Automation scripts would be empty.

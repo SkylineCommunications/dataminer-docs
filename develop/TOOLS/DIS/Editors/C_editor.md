@@ -70,7 +70,7 @@ DataMiner Integration Studio comes with a number of custom C# snippets.
 
 To insert a snippet while working in the C# editor:
 
-1. Press CTRL+K, followed by CTRL+X.
+1. Press Ctrl+K, followed by Ctrl+X.
 1. Open the *DIS* folder, and select a snippet.
 
 ### #If DEBUG

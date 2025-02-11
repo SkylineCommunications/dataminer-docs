@@ -9,7 +9,7 @@ In a Visio drawing, you can position shapes in a grid layout. This allows you to
 > [!NOTE]
 >
 > - When this feature is used, the Visio drawing will be displayed at 100% zoom level.
-> - From DataMiner 9.5.11 onwards, placeholders for variables can be used in Layout shape data, so that the positioning of shapes in a grid can be controlled dynamically (e.g. by using a session variable).
+> - You can use placeholders for variables in **Layout** shape data, so that the positioning of shapes in a grid can be controlled dynamically (e.g. by using a session variable).
 
 > [!TIP]
 >
@@ -20,14 +20,14 @@ In a Visio drawing, you can position shapes in a grid layout. This allows you to
 
 ### On page level
 
-On page level, use a shape data field of type Layout to define the following grid properties.
+On page level, use a shape data field of type **Layout** to define the following grid properties.
 
 | Property | Description |
 | -------- | ----------- |
 | Control=Grid | Indication that you want to create a grid. |
 | Columns= | The column definitions, separated by semicolons (";").<br>Every column definition can have the following format (*MinWidth* and *MaxWidth* are optional):<br>*Width,MinWidth,MaxWidth*<br> Possible values: See [Column and row definitions](#column-and-row-definitions). |
 | Rows= | The row definitions, separated by semicolons (";").<br>Every row definition can have the following format (*MinHeight* and *MaxHeight* are optional):<br> *Height,MinHeight,MaxHeight*<br>Possible values: See [Column and row definitions](#column-and-row-definitions). |
-| VerticalScrollBarVisibility | Whether or not there has to be a vertical scrollbar. Optional.<br>Possible values: "Auto", "Hidden", "Disabled" or "Visible"<br>See also [Column and row definitions](#column-and-row-definitions) .                                                                    |
+| VerticalScrollBarVisibility | Whether or not there has to be a vertical scrollbar. Optional.<br>Possible values: "Auto", "Hidden", "Disabled" or "Visible"<br>See also [Column and row definitions](#column-and-row-definitions) . |
 | HorizontalScrollbarVisibility | Whether or not there has to be a horizontal scrollbar. Optional.<br>Possible values: "Auto", "Hidden", "Disabled" or "Visible"<br>See also [Column and row definitions](#column-and-row-definitions). |
 
 ### On shape level
@@ -41,8 +41,8 @@ To every shape that you want to place inside the grid, add a shape data field of
 | Grid.Row= | The row in which to put the shape. |
 | Grid.RowSpan= | The number of rows the shape has to span. |
 | Margin= | The margin between the shape and the cell borders.<br>Order: left,top,right,bottom |
-| VerticalAlignment= | The vertical alignment of the shape inside the cell. Should be set to one of the following values:<br>- *Top*<br>- *Center*<br>- *Bottom*<br>- *Stretch* (from DataMiner 9.6.12 onwards) |
-| HorizontalAlignment= | The horizontal alignment of the shape inside the cell. Should be set to one of the following values:<br>- *Left*<br>- *Center*<br>- *Right*<br>- *Stretch* (from DataMiner 9.6.12 onwards) |
+| VerticalAlignment= | The vertical alignment of the shape inside the cell. Should be set to one of the following values:<br>- *Top*<br>- *Center*<br>- *Bottom*<br>- *Stretch* |
+| HorizontalAlignment= | The horizontal alignment of the shape inside the cell. Should be set to one of the following values:<br>- *Left*<br>- *Center*<br>- *Right*<br>- *Stretch* |
 | Width= | The width of the shape. |
 | MinWidth= | The minimum width of the shape. |
 | MaxWidth= | The maximum width of the shape. |

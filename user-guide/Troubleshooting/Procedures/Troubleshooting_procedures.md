@@ -4,23 +4,29 @@ uid: Troubleshooting_procedures
 
 # Troubleshooting procedures
 
-- [Cassandra does not start up after a server restart](xref:Cassandra_not_starting_up_after_server_restart)
+Troubleshooting basics:
 
 - [Collecting DataMiner Cube memory dumps](xref:Collecting_DataMiner_Cube_memory_dumps)
 
 - [Collecting data to report an issue to Technical Support](xref:Collecting_data_to_report_an_issue_to_TechSupport)
 
-- [Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup](xref:Elastic_not_starting_after_upgrade_cleanup)
+For troubleshooting related to specific topics:
 
-- [Investigating dataminer.services connection issues](xref:Cloud_Connection_Issues)
+- [Troubleshooting – Cassandra](xref:Troubleshooting_Cassandra)
 
-- [Investigating issues with dataminer.services features](xref:Investigating_Dataminerservices_Feature_Issues)
+- [Troubleshooting – dataminer.services](xref:Investigating_Dataminerservices_Feature_Issues)
 
-- [Investigating NATS issues](xref:Investigating_NATS_Issues)
+- [Troubleshooting – NATS](xref:Investigating_NATS_Issues)
 
-- [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+- [Troubleshooting – OpenSearch](xref:Investigating_OpenSearch_Issues)
 
-- [Investigating web issues](xref:Investigating_Web_Issues)
+- [Troubleshooting - SLScripting](xref:TroubleshootingSLScriptingFinalizerException)
+
+- [Troubleshooting – STaaS](xref:Troubleshooting_STaaS)
+
+- [Troubleshooting – web](xref:Investigating_Web_Issues)
+
+Other troubleshooting procedures:
 
 - [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
 

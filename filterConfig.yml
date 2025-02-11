@@ -74,7 +74,7 @@ apiRules:
 - exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.DerivedElementID$
     type: Type
-- exclude:
+- include:
     uidRegex: ^Skyline\.DataMiner\.Net\.ElementID$
     type: Type
 - exclude:
@@ -165,9 +165,6 @@ apiRules:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.DMSMessage$
     type: Type
 - exclude:
-    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.DynamicTableIndicesResponse$
-    type: Type
-- exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.ElementInfoEventMessage$
     type: Type
 - exclude:
@@ -187,9 +184,6 @@ apiRules:
     type: Type
 - exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.GetProfileManagerParameterMessage$
-    type: Type
-- exclude:
-    uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.GetProtocolInfoResponseMessage$
     type: Type
 - exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.Messages\.IProfileManagerRequestMessage$
@@ -617,3 +611,6 @@ attributeRules:
 - exclude:
     uidRegex: '^System\.Windows\.Markup\.[^.]+$'
     type: Type
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Net\.Swarming$
+    type: Namespace

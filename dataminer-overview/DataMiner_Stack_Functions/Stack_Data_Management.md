@@ -34,16 +34,15 @@ Both full and partial backups can be scheduled to run automatically, and they ca
 
 ## Data storage
 
-The recommended data storage setup for DataMiner is [Storage as a Service](xref:DM_selfhosted_and_StaaS). With this setup, Skyline Communications manages the storage for you, so you can save on infrastructure and IT maintenance costs. Alternatively, you can also choose to host the DataMiner storage databases yourself. In that case, a clustered Cassandra and OpenSearch setup is recommended.
+The recommended data storage setup for DataMiner is [Storage as a Service](xref:DM_selfhosted_and_StaaS). With this setup, Skyline Communications manages the storage for you, so you can save on infrastructure and IT maintenance costs. If this is really necessary, you can also choose to host the DataMiner storage databases yourself, though this is not recommended. In that case, a clustered Cassandra and OpenSearch setup will be required.
 
 Other data storage solutions can be added optionally.
 
 > [!TIP]
 > For more information:
 >
-> - [About databases](xref:Databases_about) in the DataMiner User Guide
+> - [About storage](xref:About_storage) in the DataMiner User Guide
 > - [Storage as a Service (STaaS)](xref:STaaS) in the DataMiner User Guide
-> - [Supported system data storage architectures](xref:Supported_system_data_storage_architectures) in the DataMiner User Guide
 
 ## Audit trailing
 

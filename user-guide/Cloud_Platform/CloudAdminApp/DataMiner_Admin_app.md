@@ -1,5 +1,6 @@
 ---
 uid: CloudAdminApp
+keywords: cloud admin, cloud administration
 ---
 
 # Admin app
@@ -16,7 +17,7 @@ The Admin app is intended for the management of DataMiner Systems connected to d
 
 - [Granting admin consent for Teams Chat Integration](xref:Granting_admin_consent)
 
-- [Controlling cloud feed data offloads](xref:Controlling_cloudfeed_data_offloads)
+- [Controlling performance and usage data offloads](xref:Controlling_cloudfeed_data_offloads)
 
 - [Consulting dataminer.services audit logs](xref:DCP_Auditing)
 
@@ -24,9 +25,13 @@ The Admin app is intended for the management of DataMiner Systems connected to d
 
 - [Managing dataminer.services keys](xref:Managing_DCP_keys)
 
+- [Viewing information on DataMiner Systems](xref:Viewing_info_on_DMS)
+
 - [Viewing information on deployments](xref:Viewing_info_on_deployments)
 
 - [Viewing information on shares](xref:Viewing_info_on_shares)
+
+- [Viewing information on system usage](xref:Viewing_info_on_system_usage)
 
 > [!WARNING]
 >

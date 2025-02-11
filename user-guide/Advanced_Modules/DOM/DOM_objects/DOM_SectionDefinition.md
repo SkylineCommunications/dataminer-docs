@@ -37,6 +37,11 @@ A `FieldDescriptor` object defines what a field of a `DomInstance` should look l
 - TimeSpan
 - bool
 
+> [!IMPORTANT]
+>
+> - When you store `DateTime` values, you can save them in either the local or UTC time zone. However, we strongly recommend always using UTC. When a `DateTime` field value is displayed in a low-code app form, the values will be converted to the time zone set by the browser. When it is updated via the form, the value will be converted and saved in UTC even if the value was originally stored in local time.
+> - When a `string` value is stored, from DataMiner 10.4.12/10.5.0 onwards, the value is limited to a maximum of 32 766 UTF-8 bytes, so the maximum number of characters will have to be lower.<!-- RN 39496 -->
+
 Below is an overview of all other important properties:
 
 | Property | Type | Description |
@@ -153,6 +158,6 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 | Reason | Description |
 |--|--|
 | FieldTypeNotSupported | A type was defined on a `FieldDescriptor` that is not supported by that descriptor.<br>Available properties: *NotSupportedType*, *SupportedTypes*. |
-| SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`.<br>Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds*. |
+| SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`.<br>Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds* (limited to the first 100 instances<!-- RN 41572 -->). |
 | SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Set the *FieldDecriptor.IsSoftDeleted* boolean for the `FieldDescriptor` you want to delete instead.<br>Available properties: *SectionDefinition*, *DomDefinitionIds*. |
-| GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`.<br>Available properties: *GenericEnumEntry*, *DomInstanceIds*. |
+| GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`.<br>Available properties: *GenericEnumEntry*, *DomInstanceIds* (limited to the first 100 instances<!-- RN 41572 -->). |

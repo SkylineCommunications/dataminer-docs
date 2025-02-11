@@ -21,13 +21,13 @@ uid: General_Main_Release_10.1.0_new_features_4
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app: Quick-pick buttons added to time range feed \[ID_23133\]
+#### Dashboards app: Quick-pick buttons added to time range feed \[ID 23133\]
 
 The time range feed can now be configured to show a list of quick-pick buttons that will allow users to enter a preset time range by clicking a single button.
 
 To configure the list of quick-pick buttons to be shown when users click a time range feed, go to edit mode, select the time range feed, open the *Layout* tab, select *Use quick picks*, and select the buttons to be shown.
 
-#### Dashboards app: Enhanced theme configuration \[ID_23258\]
+#### Dashboards app: Enhanced theme configuration \[ID 23258\]
 
 In the dashboard settings page, which is now named “*Dashboards settings*”, the dashboard theme configuration has been enhanced. On this page, you can create, copy and delete themes. When editing a theme, you can now also mark it as the default theme.
 
@@ -38,7 +38,7 @@ Per dashboard, a theme can be selected in the *Layout* tab, which has now also 
 > [!NOTE]
 > When you save a customized dashboard layout as a new theme, you will be asked to confirm this save operation as this will undo all changes you made to the layout of the dashboard you are editing.
 
-#### Dashboards app: Line chart component can now visualize resource capacity \[ID_23901\]
+#### Dashboards app: Line chart component can now visualize resource capacity \[ID 23901\]
 
 When you add a line chart component to a dashboard and drag resources onto it, it will display the resource capacity parameters as a stacked trend chart.
 
@@ -46,7 +46,7 @@ If you then click the chart and select a point in time, the legend will list all
 
 The resource capacity parameters displayed in the chart can be grouped by parameter or by resource.
 
-#### Dashboards app: Generic Query Interface \[ID_24048\]\[ID_24548\]\[ID_25898\]\[ID_25921\]\[ID_26050\] \[ID_26153\]\[ID_26448\]\[ID_26477\]\[ID_26793\]\[ID_27616\]\[ID_27678\]\[ID_27949\]\[ID_27987\]\[ID_28010\] \[ID_28071\]\[ID_28158\]\[ID_28761\]\[ID_28791\]\[ID_28831\]
+#### Dashboards app: Generic Query Interface \[ID 24048\]\[ID 24548\]\[ID 25898\]\[ID 25921\]\[ID 26050\] \[ID 26153\]\[ID 26448\]\[ID 26477\]\[ID 26793\]\[ID 27616\]\[ID 27678\]\[ID 27949\]\[ID 27987\]\[ID 28010\] \[ID 28071\]\[ID 28158\]\[ID 28761\]\[ID 28791\]\[ID 28831\]
 
 The Generic Query Interface allows you to efficiently tap into the wealth of data available in your DataMiner System. In this release, the interface is available via the *Queries* data input for Bar chart and State visualizations, as well as in the new Table and Pie Chart visualizations, which were especially created for this feature. In future releases, additional functionality using the Generic Query Interface will become available. Note that this feature is only available if DataMiner uses a Cassandra database. For some queries, an Elasticsearch database is also required.
 
@@ -166,7 +166,7 @@ In addition, the following layout options can now be configured for this visuali
 
 - *Tooltips*: Tooltips can be hidden. If they are set to be displayed, you can select whether these should include the label, dimension and/or value.
 
-#### Dashboards app: New 'Clear all' action + settings to pin actions \[ID_24356\]
+#### Dashboards app: New 'Clear all' action + settings to pin actions \[ID 24356\]
 
 In the dashboard settings, you can now "pin" actions to the header bar. When they are pinned, actions will be displayed as full buttons in the dashboard header bar, e.g. the *Start editing* button. When they are not pinned, the actions can be accessed via an arrow button in the top-right corner of the dashboard.
 
@@ -176,21 +176,21 @@ It is possible to view this new action even when the dashboard is embedded, if "
 
 For example: *http://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
 
-#### Dashboards app: Parameter feed now has a 'Selected only' toggle button \[ID_24446\]
+#### Dashboards app: Parameter feed now has a 'Selected only' toggle button \[ID 24446\]
 
 The parameter feed allows you to select multiple parameters from a predefined list. At the top of the list, a box allows you to select or deselect all items in the list at once and, from now on, a “Selected only” toggle button will also allow you to show or hide items that are not selected.
 
-#### Dashboards app: New Auto-expand parameters setting for parameter feed \[ID_24682\]
+#### Dashboards app: New Auto-expand parameters setting for parameter feed \[ID 24682\]
 
 A new setting, *Auto-expand parameters*, is now available for the parameter feed component. If this setting is selected, all tables and groups in the component will by default be expanded.
 
-#### Legacy Reporter app will now also use the CSV separator specified in Cube’s CSV separator setting \[ID_24855\]
+#### Legacy Reporter app will now also use the CSV separator specified in Cube’s CSV separator setting \[ID 24855\]
 
 Similar to the new Dashboards app, the legacy Reporter app will now also use the CSV separator specified in Cube’s “CSV separator” setting when generating CSV reports.
 
 If this setting cannot be retrieved, the system will fall back to the Windows regional settings on the DataMiner Agent.
 
-#### Dashboards app: Service definition visualization and SRM data feeds \[ID_24433\]\[ID_24480\] \[ID_25056\]\[ID_25151\]\[ID_25169\]\[ID_25178\]
+#### Dashboards app: Service definition visualization and SRM data feeds \[ID 24433\]\[ID 24480\] \[ID 25056\]\[ID 25151\]\[ID 25169\]\[ID 25178\]
 
 A new *Service definition* visualization is now available in the *Other* category in the Dashboards app. This visualization can be used to display a service definition as a node edge graph.
 
@@ -208,15 +208,15 @@ When the service definition component displays nodes that are linked to particul
 
 In the settings for the *Service definition* component, one or more actions can be defined. For each action, an Automation script and an icon need to be defined, and you need to specify to which node or nodes the action must be added. The icon will then be displayed on the specified node or nodes. When the icon is clicked, the script is launched. The booking ID or service definition ID used in the component and the node ID of the node for which the icon was clicked will be passed to the script as parameter ID 1 and parameter ID 2, respectively. The order of the specified actions can be modified in the *Settings* pane. In case there are too many actions on a node to display them all, clicking the action bar at the bottom of the node will expand the bar to display all the actions.
 
-#### BREAKING CHANGE - Dashboards app: CPE feed component now uses element data feed \[ID_25216\]
+#### BREAKING CHANGE - Dashboards app: CPE feed component now uses element data feed \[ID 25216\]
 
 To configure the data input of the *CPE feed* component in the Dashboards app, you now have to use a regular element data feed instead of specifying the element in the component settings. This change makes it possible to provide the data input of the *CPE feed* component dynamically using another feed component.
 
-#### Dashboards app: CPE feed will only pass along the deepest selected field \[ID_25304\]
+#### Dashboards app: CPE feed will only pass along the deepest selected field \[ID 25304\]
 
 From now on, a CPE feed will no longer pass along all selected fields. Instead, it will only pass along the deepest selected field.
 
-#### Dashboards app: Image component now supports more image formats \[ID_25488\]
+#### Dashboards app: Image component now supports more image formats \[ID 25488\]
 
 From now on, the image component supports the following image formats:
 
@@ -230,7 +230,7 @@ From now on, the image component supports the following image formats:
 > [!NOTE]
 > As images in bmp format should be avoided in web content, this format is not supported.
 
-#### Dashboards app: Component themes \[ID_25634\]
+#### Dashboards app: Component themes \[ID 25634\]
 
 Within a particular dashboard theme, you can now define specific themes per component.
 
@@ -257,7 +257,7 @@ You can create new component themes in the following ways:
 > - By default, a component will use the read-only default theme from the dashboard on which it is placed.
 > - For backwards compatibility, components that previously inherited their styles from the dashboard theme will now use the default component theme instead.
 
-#### Dashboards app: Linking a component to URL data without using a feed \[ID_25705\]
+#### Dashboards app: Linking a component to URL data without using a feed \[ID 25705\]
 
 In the Dashboards app, it is now possible to link a component to data in the URL without using any feeds on the dashboard.
 
@@ -266,7 +266,7 @@ To do so, after selecting the component, open the *Data* tab, go to *Feeds \> U
 > [!NOTE]
 > When the dashboard has a feed that contains the same data as the URL, the feed will overwrite the data found in the URL.
 
-#### Dashboards app - Service definition component: Options to show/hide nodes \[ID_25763\]
+#### Dashboards app - Service definition component: Options to show/hide nodes \[ID 25763\]
 
 On the *Layout* tab of the service definition component, two new options now allow you to specify which nodes you want the component to show or hide:
 
@@ -283,7 +283,7 @@ On the *Layout* tab of the service definition component, two new options now al
 > - When the service definition component does not show any node, an animation will indicate the reason why none are shown.
 > - When actions are defined on a certain node, the group labels will now be moved to the top of that node.
 
-#### Dashboards app: Embedding a single component into Visual Overview or a web page \[ID_25804\]
+#### Dashboards app: Embedding a single component into Visual Overview or a web page \[ID 25804\]
 
 It is now possible to embed an individual Dashboards app component into Visual Overview or a web page.
 
@@ -306,11 +306,11 @@ http://<DMA>/embed?component=<SERIALIZED-COMPONENT>
 > - “SERIALIZED-COMPONENT” is a serialized representation of the component in JSON format.
 > - If the component contains data, that data will automatically be included into the URL.
 
-#### Dashboards app: Minimum and maximum values shown on line chart component \[ID_26063\]
+#### Dashboards app: Minimum and maximum values shown on line chart component \[ID 26063\]
 
 When you hover the mouse pointer over a line chart component in the new Dashboards app, now the minimum and maximum values will be shown in addition to the average value that was already shown previously.
 
-#### Dashboards app - Parameter feed: New option to automatically select a specified number of indices \[ID_26080\]
+#### Dashboards app - Parameter feed: New option to automatically select a specified number of indices \[ID 26080\]
 
 In the *Settings* tab of the parameter feed component, next to the *Auto-select all indices* option, there is now a new *Auto-select number of indices* option.
 
@@ -318,7 +318,7 @@ This new option will allow you to specify the number of indices that should be s
 
 If the number of indices specified is greater than the number of indices that are being displayed, they will not be shown but selected in memory.
 
-#### Dashboards app - Line chart component: New 'Hide parameters without trend data in the legend' option \[ID_26133\]
+#### Dashboards app - Line chart component: New 'Hide parameters without trend data in the legend' option \[ID 26133\]
 
 The line chart component has a new setting: Layout \> Styling and information \> Hide parameters without trend data in the legend.
 
@@ -326,7 +326,7 @@ When you enable this setting, the legend of the line chart component will no lon
 
 Default: enabled
 
-#### Dashboards app - Parameter feed: Index filter separator \[ID_26136\]
+#### Dashboards app - Parameter feed: Index filter separator \[ID 26136\]
 
 The parameter feed component has a new (optional) setting: Index filter separator.
 
@@ -334,7 +334,7 @@ This setting allows you to specify the separator to be used when retrieving a fi
 
 For example, if only the indices with a primary key equal to “X” have to be retrieved, and the index filter separator is set to “Y”, then the indices will be retrieved using the following filter: PK == X OR PK == \*YXY\*.
 
-#### Dashboards app - Parameter page: New data/filter feed combinations \[ID_26143\]
+#### Dashboards app - Parameter page: New data/filter feed combinations \[ID 26143\]
 
 The parameter page component can now be configured to use the following data feeds and filters:
 
@@ -344,7 +344,7 @@ The parameter page component can now be configured to use the following data fee
 | Data page based on element  | \<No additional data filter feeds required>                                                                                                                                                                                                                      |
 | Data page based on protocol | Element feed                                                                                                                                                                                                                                                     |
 
-#### Dashboards app - Pivot table component: Enhancements \[ID_26316\]
+#### Dashboards app - Pivot table component: Enhancements \[ID 26316\]
 
 A number of enhancements have been made to the pivot table component, including the following:
 
@@ -352,11 +352,11 @@ A number of enhancements have been made to the pivot table component, including 
 - When using mediation protocol parameters, the data will now be shown per mediation parameter.
 - Server-side exceptions will now be handled more gracefully.
 
-#### Dashboards app: Enhanced border configuration \[ID_26346\]
+#### Dashboards app: Enhanced border configuration \[ID 26346\]
 
 When configuring a dashboard theme or a component layout, up to now, it was only possible to specify whether borders had to be displayed or hidden. From now on, it is possible to specify on which of the four sides a border has to be displayed or hidden: top, right, bottom and/or left.
 
-#### Dashboards app: New style layout options for State components \[ID_26454\]\[ID_26498\]
+#### Dashboards app: New style layout options for State components \[ID 26454\]\[ID 26498\]
 
 In the Dashboards app, the layout options for the State component have been adjusted. The options that were previously available in the *Style* section are replaced with the following options:
 
@@ -374,13 +374,13 @@ In the Dashboards app, the layout options for the State component have been adju
   - *Background*: The background of the component displays the alarm color. If this option is selected, an additional option, *Automatically adjust text color to alarm color*, can be selected to make sure the text color is adapted if necessary.
   - *None*: No alarm color is displayed.
 
-#### Dashboard app: New setting to configure number of dashboard columns \[ID_26530\]
+#### Dashboard app: New setting to configure number of dashboard columns \[ID 26530\]
 
 It is now possible to configure in how many columns components can be displayed in a dashboard. You can do so via the new *Number of columns* option in the settings of a dashboard. The maximum number of columns is 50. If you change the number of columns to a lower number and the columns currently contain components, a warning will be displayed, saying that components may be relocated.
 
 In addition, when a dashboard is being edited, a new button is now available in the dashboard header bar that allows you to show or hide the grid lines in the dashboard while you are in edit mode.
 
-#### Dashboards app: New Spectrum Analyzer component \[ID_26606\]\[ID_26675\]\[ID_26734\]\[ID_26820\] \[ID_26927\]\[ID_26970\]\[ID_27031\]\[ID_27150\]
+#### Dashboards app: New Spectrum Analyzer component \[ID 26606\]\[ID 26675\]\[ID 26734\]\[ID 26820\] \[ID 26927\]\[ID 26970\]\[ID 27031\]\[ID 27150\]
 
 When you create or update a dashboard, you can now add Spectrum Analyzer components.
 
@@ -409,13 +409,13 @@ By selecting and unselecting measurement points in this measurement point visual
 > - The Dashboards app and the Monitoring app also support combining measurement points. In DataMiner Cube, you can create spectrum presets in which you combine measurement points to have them shown together.
 > - Measurement point traces will inherit their colors from the dashboard theme.
 
-#### Dashboards app: Advanced settings \[ID_26659\]
+#### Dashboards app: Advanced settings \[ID 26659\]
 
 Component settings can now be marked as advanced. When marked as such, they will only be displayed when you opened the Dashboards app with the following URL argument:
 
 - “showAdvancedSettings=true”
 
-#### Dashboards app: Optimization of component visualizations \[ID_26751\]
+#### Dashboards app: Optimization of component visualizations \[ID 26751\]
 
 After adding a component to a dashboard, you can apply a specific visualization. The list of available visualizations has now been optimized.
 
@@ -425,7 +425,7 @@ The order of the listed visualization has also been optimized. First in the list
 
 Hovering over a visualization will preview the component.
 
-#### Dashboards app: State timeline component \[ID_26772\]
+#### Dashboards app: State timeline component \[ID 26772\]
 
 The state timeline component visualizes the alarm state changes over time of a parameter, element or service. By default, it shows a timeline for the last 24 hours, but a time range feed can be added to set the component to a different time range.
 
@@ -441,7 +441,7 @@ To configure the component:
 
 3. Optionally, add a Time range component to the dashboard and configure the state timeline component to use it as a filter feed.
 
-#### State/Gauge/Ring components now able to show multiple items for several types of feeds \[ID_26780\]
+#### State/Gauge/Ring components now able to show multiple items for several types of feeds \[ID 26780\]
 
 In the Dashboards app, it is now possible to show multiple states with the same *State*, *Ring* or *Gauge* component, even if elements, services, views or redundancy groups are used as the data feed. Previously, this was only supported for parameter feeds.
 
@@ -449,11 +449,11 @@ For the *State* component, the *Layout flow* options in the *Layout* panel al
 
 For the *Ring* and *Gauge* component, if parameter feeds are used, additional options in the layout panel allow you to configure whether the different parameters are displayed next to each other or below each other, and how many rows and columns of parameters can be displayed at the same time. These options are not available for other types of feeds; for those only one item is displayed at the same time and you need to scroll to see the next item.
 
-#### Dashboards app: Dashboards created by users will now be included in DataMiner backup packages \[ID_26836\]
+#### Dashboards app: Dashboards created by users will now be included in DataMiner backup packages \[ID 26836\]
 
 When, in DataMiner Cube, you take a backup, all dashboards created by users (i.e. all files stored in C:\\Skyline DataMiner\\Dashboards) will now be included in the backup package if you selected either “full backup” or “full backup without database”.
 
-#### Dashboards app: New Image size option for Image component \[ID_27040\]
+#### Dashboards app: New Image size option for Image component \[ID 27040\]
 
 In the Dashboards app, a new *Image size* option is now available for *Image* components. This option allows you to determine how the image is scaled, with the following three possibilities:
 
@@ -463,23 +463,23 @@ In the Dashboards app, a new *Image size* option is now available for *Image* 
 
 - *Stretch*: Scales the image to the maximum possible size without preserving the aspect ratio.
 
-#### Dashboards app: State component now supports dynamic units \[ID_27066\]
+#### Dashboards app: State component now supports dynamic units \[ID 27066\]
 
 The State component in the Dashboards app now supports dynamic units, i.e. units that can be converted to other units according to rules configured in the protocol.
 
 For this purpose, 2 new methods have been added to the web services API v1: *GetParameterWithDynamicUnits* and *GetParameterForServiceWithDynamicUnits*, which are similar to the *GetParameter* and *GetParameterForService* methods, respectively.
 
-#### Dashboards app: Spectrum buffer feeds \[ID_27092\]\[ID_27154\]
+#### Dashboards app: Spectrum buffer feeds \[ID 27092\]\[ID 27154\]
 
 It is now possible to use spectrum buffers as input for a Spectrum Analyzer visualization. These are available in the new *Spectrum Buffers* section in the *Data* pane. To select a spectrum buffer, first specify the name of a spectrum element in the box at the top if this section. The buffers are then listed in the format *MonitorName: TraceName \[MeasptName\] \[PresetName\]*.
 
 You can link a Spectrum Analyzer visualization to spectrum buffer input directly, or use feed components (e.g. drop-down or list), by adding an individual spectrum buffer to a feed component or by adding the spectrum buffers as a collection and then adding a spectrum element as a filter.
 
-#### Dashboards app: Line chart component now exposes timespan feed \[ID_27128\]
+#### Dashboards app: Line chart component now exposes timespan feed \[ID 27128\]
 
 If a line chart component is used in a dashboard, a timespan feed now becomes available in the data pane, which can be used to apply the timespan of the line chart to other components as a feed. This timespan feed is updated whenever the timespan displayed by the trend graph is adjusted, e.g. because you zoom in on a specific timespan.
 
-#### Dashboards app: Threshold state visualization in spectrum analyzer components \[ID_27169\]\[ID_27273\]
+#### Dashboards app: Threshold state visualization in spectrum analyzer components \[ID 27169\]\[ID 27273\]
 
 If a spectrum analyzer component in the Dashboards app uses a spectrum buffer feed, it is now possible to color the threshold lines from the preset based on the state of a spectrum monitor parameter. Threshold lines are now also displayed as distinct line segments, and can be hidden or shown depending on the preset.
 
@@ -494,7 +494,7 @@ Note that it does not matter in which preset the threshold is defined. For examp
 > - When the background color is changed, the marker labels and the time stamp will be updated accordingly.
 > - Changing the spectrum buffer or switching to normal mode will reset any threshold line that was linked to a monitor parameter state to its default width. Linked threshold lines are slightly thicker.
 
-#### Dashboards app: New 'Enable pinning as quick pick' option + support for timespans as input for time range feed \[ID_27357\]
+#### Dashboards app: New 'Enable pinning as quick pick' option + support for timespans as input for time range feed \[ID 27357\]
 
 In the Dashboards app, if the layout option *Use quick picks* is selected for a time range component, you can now enable the additional option *Enable pinning as quick pick*. When you do so, a pin icon is displayed next to the time summary in the component. Clicking the icon will add the current time selection as a custom quick pick button. If the current time selection matches the custom quick pick button, clicking the pin icon again will remove the button. You can also remove the button using the garbage can icon on the button itself.
 
@@ -502,7 +502,7 @@ The custom quick pick button is saved on component level, which means it will re
 
 As an additional change, the time range feed has been updated to also accept timespans as input data now. Adding a timespan as input will set the active time range in the feed.
 
-#### Dashboards app: Selecting an empty folder will now cause a 'Create dashboard' button and an 'Import dashboard' button to appear \[ID_27362\]\[ID_27579\]\[ID_27844\]
+#### Dashboards app: Selecting an empty folder will now cause a 'Create dashboard' button and an 'Import dashboard' button to appear \[ID 27362\]\[ID 27579\]\[ID 27844\]
 
 When, in the sidebar of the Dashboards app, you select an empty folder, two large buttons will now appear in the large pane on the right.
 
@@ -514,15 +514,15 @@ When, in the sidebar of the Dashboards app, you select an empty folder, two larg
 > [!NOTE]
 > The two above-mentioned options will also be available in the context menu when you right-click a folder in the navigation pane.
 
-#### Dashboards app: Support for table column parameter as input for State component \[ID_27463\]
+#### Dashboards app: Support for table column parameter as input for State component \[ID 27463\]
 
 When you use a table column parameter as input for a State component in the Dashboards app, it will now display the state for all indices of the column. Optionally, you can add an indices filter in order to display specific indices only.
 
-#### Ordering of data entries used in a dashboard component \[ID_27486\]
+#### Ordering of data entries used in a dashboard component \[ID 27486\]
 
 For dashboard components that can display multiple data entries and for which it makes sense to modify the order in which these entries are displayed (e.g. State components, Parameter table components, etc.), in the *Data* pane, a new *Data used in component* section is available. This section lists the different data entries used by the selected component, with arrow icons on the right that can be used to change the order in which the entries are displayed.
 
-#### Dashboards app: Support for quick filters of tables in visual overview components \[ID_27517\]
+#### Dashboards app: Support for quick filters of tables in visual overview components \[ID 27517\]
 
 Quick filters are now supported for tables within a visual overview component of a dashboard. The following (case-insensitive) syntax is supported for the filters:
 
@@ -545,7 +545,7 @@ The following operators are supported in this syntax:
 - \>
 - \<
 
-#### Dashboard theme configuration improvements \[ID_27553\]
+#### Dashboard theme configuration improvements \[ID 27553\]
 
 The following improvements have been implemented to dashboard themes:
 
@@ -553,7 +553,7 @@ The following improvements have been implemented to dashboard themes:
 
 - While previously, customizing the dashboard theme within a dashboard only provided limited options compared to the theme configuration in the settings of the Dashboards app, now a *New theme* button is available in the dashboard *Layout* pane, which will open a pop-up window where you can fully configure a new theme.
 
-#### Dashboard Gateway \[ID_27558\]
+#### Dashboard Gateway \[ID 27558\]
 
 A new Dashboard Gateway now gives users access to the Dashboards app as well as to all other DataMiner web applications (Monitoring, Ticketing, Jobs, etc.) even if they do not have access to DataMiner.
 
@@ -612,17 +612,17 @@ Known limitations:
 
 - The DataMiner user account used by the Dashboard Gateway web server should not have multi-factor authentication enabled.
 
-#### Dashboards app: Default themes updated \[ID_27636\]
+#### Dashboards app: Default themes updated \[ID 27636\]
 
 In the Dashboards app, the default themes have all been updated.
 
-#### Dashboards app - Line chart component: Value range \[ID_27774\]
+#### Dashboards app - Line chart component: Value range \[ID 27774\]
 
 When configuring a line chart component, you can now specify a value range for the trend graph by entering a minimum limit and/or a maximum limit.
 
 The value range you specify will apply to all trend lines displayed on the graph.
 
-#### Dashboards app - Line chart component: Show minimum, maximum and/or average trend lines \[ID_27815\]
+#### Dashboards app - Line chart component: Show minimum, maximum and/or average trend lines \[ID 27815\]
 
 When configuring a line chart component that does not show real-time trend data, you can now make the trend graph show a minimum, a maximum and/or an average trend line by switching on the following options:
 
@@ -632,7 +632,7 @@ When configuring a line chart component that does not show real-time trend data,
 
 - Show maximum (default setting: switched off)
 
-#### Dashboards app - Parameter feed: 'Auto-select all' option \[ID_27816\]\[ID_28033\]
+#### Dashboards app - Parameter feed: 'Auto-select all' option \[ID 27816\]\[ID 28033\]
 
 When configuring the Parameter feed, up to now, it was possible to either have a specific number of indices selected automatically or have all indices selected automatically.
 
@@ -646,7 +646,7 @@ Now, the above-mentioned options have been replaced by the “Auto-select all”
 
 - If you select the “Select specific number of items” option, a box is displayed below it. In this box, you should specify how many items "Select all" should select. For a partial table, these items will be selected across different pages.
 
-#### Dashboards app - Line chart component: New 'Chart limit behavior' setting \[ID_27841\]
+#### Dashboards app - Line chart component: New 'Chart limit behavior' setting \[ID 27841\]
 
 When configuring a line chart component, you can now use the *Chart limit behavior* setting to indicate what needs to happen when the number of parameters in the chart exceeds the defined chart limit:
 
@@ -655,7 +655,7 @@ When configuring a line chart component, you can now use the *Chart limit behavi
 | Disable parameters in legend | The excess parameters are disabled in the chart but remain available in the chart legend, so that they can be enabled again manually. This option is selected by default.       |
 | Create additional charts     | Additional charts are displayed that include the parameters that exceed the limit. If necessary, multiple additional charts will be displayed, each respecting the configured limit. |
 
-#### Dashboards app - Pivot table component: Sort ascending/descending \[ID_27862\]
+#### Dashboards app - Pivot table component: Sort ascending/descending \[ID 27862\]
 
 When configuring a pivot table component, you can now find the following settings in the Sort section of the Settings tab:
 
@@ -667,11 +667,11 @@ When configuring a pivot table component, you can now find the following setting
 > [!NOTE]
 > Using these sort settings in conjunction with the *Limit* setting in the *Configure indices* section, you can produce a top X or bottom X list.
 
-#### Dashboards app - GQI: Queries will now be saved in a separate JSON file and will be referred to using a GUID \[ID_28088\]
+#### Dashboards app - GQI: Queries will now be saved in a separate JSON file and will be referred to using a GUID \[ID 28088\]
 
 From now on, queries will no longer be saved in a dashboard, but in a separate file named Queries.json, located in C:\\Skyline DataMiner\\Generic Interface. Dashboards using a query will then link to it using a GUID.
 
-#### Dashboards app - GQI: Existing queries can now be reused \[ID_28102\]
+#### Dashboards app - GQI: Existing queries can now be reused \[ID 28102\]
 
 When building a query, instead of having to start a new query from scratch, it is now possible to select an existing query in the *Start from* box, and then start building a query based on the one you selected.
 
@@ -681,7 +681,7 @@ Current limitations:
 
 - If queries are running in a loop, a circular dependency error will be displayed.
 
-#### Dashboards app - GQI: Data sources now have a default column set \[ID_28103\]
+#### Dashboards app - GQI: Data sources now have a default column set \[ID 28103\]
 
 Each of the different data sources now has a default column set, which, if necessary, can be extended with every possible column in that data source by adding column selector nodes to the query.
 
@@ -695,7 +695,7 @@ Each of the different data sources now has a default column set, which, if neces
 > [!NOTE]
 > All columns, even those that are not visible in the current data table, can be used by the operators. For example, you can filter data by a column that is not visible in the data table.
 
-#### Dashboards app - Bar chart component: Enhancements \[ID_28461\]
+#### Dashboards app - Bar chart component: Enhancements \[ID 28461\]
 
 A number of enhancements have been made to the bar chart component.
 
@@ -721,7 +721,7 @@ If you select the *Stack bars* option, the bars in the graph will be displayed 
 
 Apart from highlighting all bars belonging to a specific variable, you can now also highlight a single category by hovering over the label of the category or by hovering over empty space in a stacked bar chart.
 
-#### Dashboards app - GQI: Exception values will now be processed as discrete values \[ID_28570\]
+#### Dashboards app - GQI: Exception values will now be processed as discrete values \[ID 28570\]
 
 In GQI operators, up to now, exception values were processed as regular values. From now on, they will be processed as discrete values. As a result, the TopX operator and the following aggregation methods will no longer take them into account:
 
@@ -737,18 +737,18 @@ In GQI operators, up to now, exception values were processed as regular values. 
 > - The *Count* and *Distinct count* aggregation methods will take exception values into account.
 > - Exception values will not be taken into account when calculating the minimum and maximum value for columns using GenIfColumnFetch-Requests.
 
-#### Dashboards app - Bar chart component: Negative values & Dynamic axis labels \[ID_28617\]
+#### Dashboards app - Bar chart component: Negative values & Dynamic axis labels \[ID 28617\]
 
 The bar chart component now supports negative values.
 
 Also, the number of axis labels displayed will now depend on the size of the chart. Up to now, a fixed number of axis labels would be displayed.
 
-#### Dashboards app - State component: Alignment setting \[ID_28633\]
+#### Dashboards app - State component: Alignment setting \[ID 28633\]
 
 The layout pane of a State component now has an additional setting that allows you to align its contents (left/center/right).
 
 Also, in the components pane on the left, the *States* section has now been renamed to *States and values*.
 
-#### Dashboards app - GQI: Availability of the database will first be checked before querying an Elasticsearch database \[ID_28742\]
+#### Dashboards app - GQI: Availability of the database will first be checked before querying an Elasticsearch database \[ID 28742\]
 
 From now on, when GQI queries are about to fetch data from an Elasticsearch database, the availability of that database will first be checked.

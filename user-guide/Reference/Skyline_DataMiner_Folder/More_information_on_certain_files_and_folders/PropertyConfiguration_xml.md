@@ -30,21 +30,20 @@ To do so:
 
 1. Stop the DMA.
 
-2. Open the file *PropertyConfiguration.xml*.
+1. Open the file *PropertyConfiguration.xml*.
 
-3. In the main *\<PropertyConfiguration>* tag, add the attribute *surveyorMode="ValueOnly"*.
+1. In the main *\<PropertyConfiguration>* tag, add the attribute *surveyorMode="ValueOnly"*.
 
-    For example:
+   For example:
 
-    ```xml
-    <PropertyConfiguration xmlns="http://www.skyline.be/config/propertyconfiguration" surveyorMode="ValueOnly">
-    ```
+   ```xml
+   <PropertyConfiguration xmlns="http://www.skyline.be/config/propertyconfiguration" surveyorMode="ValueOnly">
+   ```
 
-4. Start the DMA.
+1. Start the DMA.
 
 > [!TIP]
-> See also:
-> [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item)
+> See also: [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item)
 
 ## Configuring alarm properties to motivate actions
 
@@ -54,114 +53,114 @@ If you define an alarm property, you can specify that users have to motivate the
 
 If property columns are added for service or view properties in the Alarm Console, and an alarm affects more than one service or view, this can result in multiple comma-separated property values in the property columns in the Alarm Console. When you apply grouping in the Alarm Console based on property columns, by default such an entry with multiple property values is taken as a whole for the grouping.
 
-However, from DataMiner 9.5.7/9.5.0 CU4 onwards, it is possible to configure alarm properties so that a group is created per value in the column, and the alarm is added to each of the groups.
+However, it is possible to configure alarm properties so that a group is created per value in the column, and the alarm is added to each of the groups.
 
 To do so:
 
 1. Open the file *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
 
-2. In the XML file, define a *contentDescription* and *contentSeparator* attribute for each relevant property:
+1. In the XML file, define a *contentDescription* and *contentSeparator* attribute for each relevant property:
 
-    | Attribute        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-    |--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | contentDescription | Describes the content of the property field. Configure this attribute using letters separated by the separator defined in *contentSeparator*. <br> The number of letters specified should be equal to the maximum number of different property values that could occur for this property. For example, if you specify “*a,b,c,d,e,f*”, up to 6 property values can be displayed, separated by a comma. If there are more property values than specified in *contentDescription*, the last specified item will contain all the following values as well. |
-    | contentSeparator   | Describes the separator used for different property values. Set this attribute to the separator used in *contentDescription*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+   - **contentDescription**: Describes the content of the property field. Configure this attribute using letters separated by the separator defined in *contentSeparator*.
 
-    > [!NOTE]
-    > As soon as a *contentSeparator* has been specified for a particular property in *PropertyConfiguration.xml*, duplicate and empty values will no longer be displayed in the corresponding property column.
+     The number of letters specified should be equal to the maximum number of different property values that could occur for this property. For example, if you specify `a,b,c,d,e,f`, up to 6 property values can be displayed, separated by a comma. If there are more property values than specified in *contentDescription*, the last specified item will contain all the following values as well.
 
-    Example:
+   - **contentSeparator**: Describes the separator used for different property values. Set this attribute to the separator used in *contentDescription*.
 
-    ```xml
-    <Property id="36" type="Service" name="Class" filterEnabled="true" visibleInSurveyor="false" contentSeparator=";" contentDescription="a;b;c">
-      <Entry metric="0">Gold</Entry>
-      <Entry metric="0">Silver</Entry>
-      <Entry metric="0">Bronze</Entry>
-    </Property>
-    ```
+     > [!NOTE]
+     > As soon as a *contentSeparator* has been specified for a particular property in *PropertyConfiguration.xml*, duplicate and empty values will no longer be displayed in the corresponding property column.
 
-3. If the DMA is part of a cluster of several DMAs, force a synchronization of the file *PropertyConfiguration.xml* throughout your DataMiner System:
+   Example:
 
-    1. In DataMiner Cube, go to *Apps* > *System Center*.
+   ```xml
+   <Property id="36" type="Service" name="Class" filterEnabled="true" visibleInSurveyor="false" contentSeparator=";" contentDescription="a;b;c">
+     <Entry metric="0">Gold</Entry>
+     <Entry metric="0">Silver</Entry>
+     <Entry metric="0">Bronze</Entry>
+   </Property>
+   ```
 
-    2. Go to the *Tools* tab and select *synchronization*.
+1. If the DMA is part of a cluster of several DMAs, force a synchronization of the file *PropertyConfiguration.xml* throughout your DataMiner System:
 
-    3. In the drop-down list next to *Type*, select *File*.
+   1. In DataMiner Cube, go to *Apps* > *System Center*.
 
-    4. In the *File* box, specify the following path: *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
+   1. Go to the *Tools* tab and select *synchronization*.
 
-    5. Click the *Sync now* button.
+   1. In the drop-down list next to *Type*, select *File*.
 
-4. Restart DataMiner.
+   1. In the *File* box, specify the following path: *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
+
+   1. Click the *Sync now* button.
+
+1. Restart DataMiner.
 
 ## Disabling alarm updates for changes of read-only alarm properties
 
 In a DataMiner protocol, a property can be configured on a parameter to get its value from another parameter in that same protocol. This property will then be available as a read-only property in the system.
 
-To disable alarm updates on changes of such a read-only property (possible from DataMiner 9.5.13 onwards):
+To disable alarm updates on changes of such a read-only property:
 
 1. Open the file *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
 
-2. In the XML file, set the attribute *doUpdateAlarmOnValueChange* for the relevant property to "*false*".
+1. In the XML file, set the attribute *doUpdateAlarmOnValueChange* for the relevant property to `false`.
 
-    For example:
+   For example:
 
-    ```xml
-    <Property type="Alarm" name="Hidden" readOnly="true" filterEnabled="true" doUpdateAlarmOnValueChange="false" id="19"/>
-    ```
+   ```xml
+   <Property type="Alarm" name="Hidden" readOnly="true" filterEnabled="true" doUpdateAlarmOnValueChange="false" id="19"/>
+   ```
 
-3. If the DMA is part of a cluster of several DMAs, force a synchronization of the file *PropertyConfiguration.xml* throughout your DataMiner System:
+1. If the DMA is part of a cluster of several DMAs, force a synchronization of the file *PropertyConfiguration.xml* throughout your DataMiner System:
 
-    1. In DataMiner Cube, go to *Apps* > *System Center*.
+   1. In DataMiner Cube, go to *Apps* > *System Center*.
 
-    2. Go to the *Tools* tab and select *synchronization*.
+   1. Go to the *Tools* tab and select *synchronization*.
 
-    3. In the drop-down list next to *Type*, select *File*.
+   1. In the drop-down list next to *Type*, select *File*.
 
-    4. In the *File* box, specify the following path: *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
+   1. In the *File* box, specify the following path: *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
 
-    5. Click the *Sync now* button.
+   1. Click the *Sync now* button.
 
-4. Restart DataMiner.
+1. Restart DataMiner.
 
 ## Having a property value copied to an alarm field
 
-From DataMiner 9.6.1 onwards, it is possible to have the value of a property that is available for an alarm copied to a predefined field of the alarm (i.e. the *Owner*, *Comment*, *Element Name* or *Parameter Name* field) or to another property.
+It is possible to have the value of a property that is available for an alarm copied to a predefined field of the alarm (i.e. the *Owner*, *Comment*, *Element Name*, or *Parameter Name* field) or to another property.
 
 To do so:
 
 1. Open the file *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
 
-2. In the *XML* file, add the *copyToAlarmField* attribute to the *Property* tag of the property that needs to be copied, and set it to the correct keyword:
+1. In the *XML* file, add the *copyToAlarmField* attribute to the *Property* tag of the property that needs to be copied, and set it to the correct keyword:
 
-    | Field                        | Keyword                   |
-    |--------------------------------|---------------------------|
-    | Comment                        | \[COMMENT\]               |
-    | Element Name                   | \[ENAME\]                 |
-    | Owner                          | \[OWNER\]                 |
-    | Parameter Name                 | \[PNAME\]                 |
-    | Alarm property called "name"   | \[PROPERTY:ALARM:name\]   |
-    | Element property called "name" | \[PROPERTY:ELEMENT:name\] |
-    | Service property called "name" | \[PROPERTY:SERVICE:name\] |
-    | View property called "name"    | \[PROPERTY:VIEW:name\]    |
+   | Field                        | Keyword                   |
+   |--------------------------------|---------------------------|
+   | Comment                        | \[COMMENT\]               |
+   | Element Name                   | \[ENAME\]                 |
+   | Owner                          | \[OWNER\]                 |
+   | Parameter Name                 | \[PNAME\]                 |
+   | Alarm property called "name"   | \[PROPERTY:ALARM:name\]   |
+   | Element property called "name" | \[PROPERTY:ELEMENT:name\] |
+   | Service property called "name" | \[PROPERTY:SERVICE:name\] |
+   | View property called "name"    | \[PROPERTY:VIEW:name\]    |
 
-    For example:
+   For example:
 
-    ```xml
-    <Property id="21" type="Element" name="Location" copyToAlarmField="[ENAME]" />
-    ```
+   ```xml
+   <Property id="21" type="Element" name="Location" copyToAlarmField="[ENAME]" />
+   ```
 
-3. If the DMA is part of a cluster of several DMAs, force a synchronization of the file *PropertyConfiguration.xml* throughout your DataMiner System:
+1. If the DMA is part of a cluster of several DMAs, force a synchronization of the file *PropertyConfiguration.xml* throughout your DataMiner System:
 
-    1. In DataMiner Cube, go to *Apps* > *System Center*.
+   1. In DataMiner Cube, go to *Apps* > *System Center*.
 
-    2. Go to the *Tools* tab and select *synchronization*.
+   1. Go to the *Tools* tab and select *synchronization*.
 
-    3. In the drop-down list next to *Type*, select *File*.
+   1. In the drop-down list next to *Type*, select *File*.
 
-    4. In the *File* box, specify the following path:
-<br>*C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
+   1. In the *File* box, specify the following path: *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
 
-    5. Click the *Sync now* button.
+   1. Click the *Sync now* button.
 
-4. Restart DataMiner.
+1. Restart DataMiner.

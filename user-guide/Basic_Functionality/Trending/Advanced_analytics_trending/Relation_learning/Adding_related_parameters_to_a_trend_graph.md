@@ -26,14 +26,17 @@ The following prerequisites are **mandatory**. You will not be able to use this 
 
   You can [use the Admin app](xref:Managing_cloud-connected_nodes) to check if the *DataMiner CloudFeed* DxM is installed.
 
-- The option *Allow performance and usage data offload* must be enabled. See [Controlling cloud feed data offloads](xref:Controlling_cloudfeed_data_offloads).
+  > [!NOTE]
+  > From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages always include the most recent version of the *CloudFeed* DxM.
+
+- The option *Allow performance and usage data offload* must be enabled. See [Controlling performance and usage data offloads](xref:Controlling_cloudfeed_data_offloads).
 
 > [!NOTE]
 > From DataMiner 10.3.6/10.4.0 onwards, the light bulb icon is always displayed in the top-right corner of the trend graph, regardless of whether DataMiner was able to find related parameters. If no related parameters were found, the light bulb icon will not be "lit up" with an accent color as it would be otherwise. <!-- RN 35868 --> Clicking the icon will prompt a message indicating that the necessary requirements have not been met, hereby explaining why the feature could not find related parameters. <!--RN 36157-->
 
 The following prerequisites are **optional** but highly recommended, as they will unlock the full capabilities of the feature:
 
-- The DataMiner System should use [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
+- The DataMiner System should use [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
 
 - Behavioral anomaly detection should be enabled. You can enable this feature in System Center, via *System settings* > *analytics config*. Enabling this feature allows DataMiner to generate data based on what happens in your system, so that it can understand what is going on.
 

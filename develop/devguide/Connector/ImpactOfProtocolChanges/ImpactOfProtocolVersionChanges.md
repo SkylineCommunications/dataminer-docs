@@ -41,6 +41,7 @@ The impacted changes listed here are grouped based on the change that is impleme
 - [Change page name](xref:ChangePageName)
 - [Change minimum required DataMiner version](xref:ChangeMinimumRequiredDMAVersion)
 - [Change protocol name](xref:ChangeProtocolName)
+- [Change InterApp range](xref:ChangeInterAppRange)
 
 ### Parameter changes
 

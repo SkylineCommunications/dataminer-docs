@@ -7,22 +7,22 @@ uid: Embedding_a_Resource_Manager_component
 For DMAs with a Resource Manager license, it is possible to embed a Resource Manager component in Visual Overview, which will allow users to get a timeline overview of which bookings have been made.
 
 > [!NOTE]
-> In order to see this component in Visual Overview, you need to have a Resource Manager license or IDP license, as well as the user permission [Modules > Resources > UI Available](xref:DataMiner_user_permissions#modules--resources--ui-available) (or in earlier versions of DataMiner: [Modules > Resource Manager > Reservations > UI available](xref:DataMiner_user_permissions#modules--resource-manager--reservations--ui-available)).
+> In order to see this component in Visual Overview, you need to have a Resource Manager license or IDP license, as well as the user permission [Modules > Resources > UI Available](xref:DataMiner_user_permissions#modules--resources--ui-available).
 
 ## Configuring the shape data fields of the timeline component
 
-When you have created the shape that should display the Resource Manager timeline, add a shape data field of type **Component** to it, and set its value to “*Reservations*” or “*Bookings*”.
+When you have created the shape that should display the Resource Manager timeline, add a shape data field of type **Component** to it, and set its value to `Reservations` or `Bookings`.
 
-In addition, you can specify options using various other shape data fields, such as **ComponentOptions**. Different ComponentOptions can be combined with pipe characters. The following options are available:
+In addition, you can specify options using various other shape data fields, such as **ComponentOptions**. Different component options can be combined with pipe characters. The following options are available:
 
 | Shape data field | Value | Description |
 |--|--|--|
-| ComponentOptions | SessionVariablePrefix=\[prefix\] | When you specify this option, a unique prefix is assigned to the session variable names. This can be used in order to avoid any conflicts. For example, if you specify the value “*SessionVariablePrefix=RM*”, the session variable YaxisResources becomes RMYaxisResources. |
-| ComponentOptions | DefaultBandHeight= | Sets the default height of the timeline bands. This value has to be an integer greater than 10, e.g. *DefaultBandHeight=100*. Any height specified using a JSON object in a *YaxisResources* session variable will override this value. See [YAxisResources](#yaxisresources). |
+| ComponentOptions | SessionVariablePrefix=\[prefix\] | When you specify this option, a unique prefix is assigned to the session variable names. This can be used in order to avoid any conflicts. For example, if you specify the value `SessionVariablePrefix=RM`, the session variable *YaxisResources* becomes *RMYaxisResources*. |
+| ComponentOptions | DefaultBandHeight= | Sets the default height of the timeline bands. This value has to be an integer greater than 10, e.g. `DefaultBandHeight=100`. Any height specified using a JSON object in a *YaxisResources* session variable will override this value. See [YAxisResources](#yaxisresources). |
 | ComponentOptions | EnableFollowMode | Activates the follow mode. This will make the timeline move along with the current time. When you navigate away from the line that represents now while follow mode is enabled, follow mode will temporarily be paused. As soon as you navigate back in view of the line that represents now, follow mode will be activated again. |
-| ComponentOptions | AutoReEnableFollowModeTimeout= | Sets the number of seconds after which the follow mode will be reactivated each time a user jumps to another time range. This value has to be an integer greater than 0, e.g. *AutoReEnableFollowModeTimeout=5* |
-| ComponentOptions | UseCommandsForCustomActions | Available from DataMiner 9.5.6 onwards. Allows the timeline to be used in conjunction with command control shapes to select an action mode. See [Configuring command controls for a Resource Manager component](#configuring-command-controls-for-a-resource-manager-component). |
-| ComponentActions | \[{...json...}\] | Custom actions, specified with JSON objects. Available from DataMiner 9.5.4 onwards. For more information, see [Specifying custom actions in a Resource Manager component](#specifying-custom-actions-in-a-resource-manager-component). |
+| ComponentOptions | AutoReEnableFollowModeTimeout= | Sets the number of seconds after which the follow mode will be reactivated each time a user jumps to another time range. This value has to be an integer greater than 0, e.g. `AutoReEnableFollowModeTimeout=5` |
+| ComponentOptions | UseCommandsForCustomActions | Allows the timeline to be used in conjunction with command control shapes to select an action mode. See [Configuring command controls for a Resource Manager component](#configuring-command-controls-for-a-resource-manager-component). |
+| ComponentActions | \[{...json...}\] | Custom actions, specified with JSON objects. For more information, see [Specifying custom actions in a Resource Manager component](#specifying-custom-actions-in-a-resource-manager-component). |
 | Options | CardVariable | This option can be used to specify that the session variables mentioned in the other shape data fields are card variables, not page variables. It is also possible to configure a different session variable scope, as specified in [Indicating the scope of the variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable#indicating-the-scope-of-the-variable). |
 
 Please note the following regarding this component:
@@ -62,7 +62,7 @@ The following session variables can be used specifically for a Resource Manager 
 
 To allow users to specify which booking blocks are displayed on the resource bands, use the session variable *ReservationsFilter*.
 
-If, for example, you specify the value indicated in the first row of the table below, only the blocks that use the resource named “Antenna 2” will be shown in addition to the one of the resource band.
+If, for example, you specify the value indicated in the first row of the table below, only the blocks that use the resource named "Antenna 2" will be shown in addition to the one of the resource band.
 
 Use the *ALL* keyword if you want to clear the filter and display all bookings. However, note that this is not advisable on large systems with many resources and bookings, as it may have a negative impact on performance.
 
@@ -77,8 +77,8 @@ To turn separate shapes into navigation controls, use the session variable *Navi
 
 > [!NOTE]
 >
-> - After a particular action has been performed, the session variable *Navigate* will be cleared. That way, it can be set again to perform another action. You can, for example, keep clicking a “pan+day” button to slide to the right.
-> - From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, it is possible to load a specific time slot immediately when a user navigates to the page. To do so, use the **InitVar** shape data on page level instead of the SetVar shape data mentioned above.
+> - After a particular action has been performed, the session variable *Navigate* will be cleared. That way, it can be set again to perform another action. You can, for example, keep clicking a "pan+day" button to slide to the right.
+> - From DataMiner 10.1.0 \[CU3\]/10.1.6 onwards, it is possible to load a specific time slot immediately when a user navigates to the page. To do so, use the **InitVar** shape data on page level instead of the SetVar shape data mentioned above.
 
 The following *Navigate* values are supported in the **SetVar** shape data field:
 
@@ -88,7 +88,7 @@ The following *Navigate* values are supported in the **SetVar** shape data field
 
 - **Navigate:now(before X;after Y)**
 
-  Supported from DataMiner 9.6.12 onwards. Zooms to a time frame around the current time: from X hours earlier until Y hours later.
+  Zooms to a time frame around the current time: from X hours earlier until Y hours later.
 
   For example:
 
@@ -110,7 +110,7 @@ The following *Navigate* values are supported in the **SetVar** shape data field
 
 - **Navigate:yesterday(before X;after Y)**
 
-  Supported from DataMiner 9.6.12 onwards. Zooms to a time frame around noon yesterday: from X hours earlier until Y hours later.
+  Zooms to a time frame around noon yesterday: from X hours earlier until Y hours later.
 
   For example:
 
@@ -132,7 +132,7 @@ The following *Navigate* values are supported in the **SetVar** shape data field
 
 - **Navigate:today(before X;after Y)**
 
-  Supported from DataMiner 9.6.12 onwards. Zooms to a time frame around noon today: from X time earlier until Y time later.
+  Zooms to a time frame around noon today: from X time earlier until Y time later.
 
   For example:
 
@@ -154,7 +154,7 @@ The following *Navigate* values are supported in the **SetVar** shape data field
 
 - **Navigate:tomorrow(before X;after Y)**
 
-  Supported from DataMiner 9.6.12 onwards. Zooms to a time frame around noon tomorrow: from X hours earlier until Y hours later.
+  Zooms to a time frame around noon tomorrow: from X hours earlier until Y hours later.
   
   For example:
 
@@ -236,34 +236,26 @@ The following *Navigate* values are supported in the **SetVar** shape data field
 
 - **Navigate:yyyy-mm-dd hh:mm:ss**
 
-  Zooms in on a period of 24 hours, centered on the specified time. This option is often used together with a shape data field of type *SetVarOptions* set to “Control=DateTime”, which will turn the shape into a date picker. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control).
+  Zooms in on a period of 24 hours, centered on the specified time. This option is often used together with a shape data field of type *SetVarOptions* set to "Control=DateTime", which will turn the shape into a date picker. See [Creating a DateTime control](xref:Adding_options_to_a_session_variable_control#creating-a-datetime-control).
 
 ### ResourcesInSelectedReservation
 
 When a booking block is selected, this session variable will contain a comma-separated list of resource GUIDs.
 
-Available from DataMiner 9.6.3 onwards.
-
 ### TimerangeOfSelectedReservation
 
-When a booking block is selected, this session variable will contain the start-stop time range of the booking, inflated by 10%. Values in this session variable will be serialized, e.g. “5248098399646517511;5248392353962787511”.
-
-Available from DataMiner 9.6.3 onwards.
+When a booking block is selected, this session variable will contain the start-stop time range of the booking, inflated by 10%. Values in this session variable will be serialized, e.g. "5248098399646517511;5248392353962787511".
 
 ### Viewport
 
-When you pan or zoom in on the timeline, this session variable will contain the time range that is visible on the screen. From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, this session variable can also be used to zoom to a specific time range as soon as the component is loaded.
+When you pan or zoom in on the timeline, this session variable will contain the time range that is visible on the screen. From DataMiner 10.1.0 \[CU3\]/10.1.6 onwards, this session variable can also be used to zoom to a specific time range as soon as the component is loaded.
 
 When this session variable is set by an external source, the timeline component will be updated to show the new time range.
 
-The value can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “2017-08-07 9:42:01;2017-08-10 15:05:53” in UTC format "yyyy-mm-dd hh:mm:ss").
-
-Available from DataMiner 9.6.3 onwards.
+The value can be set in serialized form (e.g. "5248098399646517511;5248392353962787511") or using a "start;stop" format. In the latter case, start and stop must be timestamps that can be parsed by DateTime (e.g. "2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z" in ISO 8601 format, or "2017-08-07 9:42:01;2017-08-10 15:05:53" in UTC format "yyyy-mm-dd hh:mm:ss").
 
 > [!NOTE]
->
-> - Prior to DataMiner 9.6.11, the scope of this session variable is always global. From DataMiner 9.6.11 onwards, the card, page and workspace scope are also supported.
-> - If both *Viewport* and *Navigate* are used, the *Navigate* variable will be processed after the *Viewport* variable.
+> If both *Viewport* and *Navigate* are used, the *Navigate* variable will be processed after the *Viewport* variable.
 
 ### YAxisResources
 
@@ -273,7 +265,9 @@ To allow users to specify what is displayed on the Y-axis, use the session varia
 
 You can specify a comma-separated list of pools and/or individual resources. Use names or GUIDs.
 
-From DataMiner 9.6.7 onwards, you can also specify the DMA ID/Element ID for resources that are linked to an element. Use the *ALL* keyword if you want to clear the filter and display all known resources. However, note that this is not advisable on large systems with many resources and bookings, as it may have a negative impact on performance.
+Alternatively, you can also specify the DMA ID/Element ID for resources that are linked to an element.
+
+Use the *ALL* keyword if you want to clear the filter and display all known resources. However, note that this is not advisable on large systems with many resources and bookings, as it may have a negative impact on performance.
 
 Example values for the **SetVar** shape data field:
 
@@ -282,12 +276,12 @@ Example values for the **SetVar** shape data field:
   Creates a band for each resource in each of the specified pools. In this case the pools are specified by their names (comma-separated).
 
 - *YaxisResources:Pool={863D1545-C7B7-4D3F-BFB8-BC8EF3B15859},{B7E038EC-96DE-4EF4-8485-AD2C1C8EACCD}*
-  
+
   Creates a band for each resource in each of the specified pools, similar to the previous example. In this case the pools are specified by their GUIDs (comma-separated).
 
 - *YaxisResources:Resource=R1,R2,R3*
 
-  Creates a band for each specified resource. In this case, the resources are specified by their names, but you can also specify them by GUID or by DMA ID/element ID if they are linked to an element (from DataMiner 9.6.7 onwards). Either way, the resources should be separated by commas.
+  Creates a band for each specified resource. In this case, the resources are specified by their names, but you can also specify them by GUID or by DMA ID/element ID if they are linked to an element. Either way, the resources should be separated by commas.
 
 - *YaxisResources:ALL*
 
@@ -373,7 +367,7 @@ Do **not** use braces or parentheses. For example:
 
 #### Specifying custom bands on the timeline
 
-To specify custom bands on the timeline, from DataMiner 9.5.3 onwards, you can use the following configuration for the *YaxisResources* session variable:
+To specify custom bands on the timeline, you can use the following configuration for the *YaxisResources* session variable:
 
 | Shape data field | Value                           |
 |--------------------|---------------------------------|
@@ -439,13 +433,13 @@ Examples:
 ```
 
 > [!NOTE]
-> You can use the “Minify/Compact” function at <https://jsonformatter.org/> to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
+> You can use the "Minify/Compact" function at <https://jsonformatter.org/> to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
 
 ## Making shapes display information about objects selected on the timeline
 
 To have shapes display information about an object selected on the timeline, the following session variables can be configured in the **Variable** shape data field:
 
-- **SelectedOccurrence**: Available from DataMiner 9.5.4 onwards. Used in case there are recurring bookings.
+- **SelectedOccurrence**: Used in case there are recurring bookings.
 
 - **SelectedPool**: From DataMiner 10.2.1/10.3.0 onwards, when you select a resource band, this variable is filled in with the first pool of the selected resource.
 
@@ -461,24 +455,24 @@ To have shapes display information about an object selected on the timeline, the
 
 - **SelectedSession**
 
-- **SelectedReservationDefinition**: Available from DataMiner 9.5.7 onwards. If the selected block is a booking instance linked to a particular booking definition, this variable will be filled in with the GUID of that definition.
+- **SelectedReservationDefinition**: If the selected block is a booking instance linked to a particular booking definition, this variable will be filled in with the GUID of that definition.
 
-- **SelectedTimeRange**: Available from DataMiner 10.2.1/10.3.0 onwards. The value of this variable can be set in serialized form (e.g. “5248098399646517511;5248392353962787511”) or using a “start;stop” format. In the latter case, start and stop must be timestamps that can be parsed by datetime (e.g. “2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z” in ISO 8601 format, or “17/09/2017 9:42:01;23/08/2018 15:05:53” in local format).
+- **SelectedTimeRange**: Available from DataMiner 10.2.1/10.3.0 onwards. The value of this variable can be set in serialized form (e.g. "5248098399646517511;5248392353962787511") or using a "start;stop" format. In the latter case, start and stop must be timestamps that can be parsed by datetime (e.g. "2017-09-17T09:42:01.9129607Z;2018-08-23T15:05:53.5399607Z" in ISO 8601 format, or "17/09/2017 9:42:01;23/08/2018 15:05:53" in local format).
 
   > [!NOTE]
   > Prior to DataMiner 10.3.0/10.2.3, when a resource item is selected, the *SelectedTimeRange* session variable is cleared. From DataMiner 10.2.3 to 10.2.7, it is only cleared when the time range selection shown in the timeline area is changed. From DataMiner 10.3.0/10.2.8 onwards, the session variable is cleared when the selection is cleared.
 
-Alternatively, you can also make shapes display properties of the *SelectedReservation*, *SelectedSession*, *SelectedResource*, *SelectedOccurrence* or *SelectedPool*. For this purpose, the properties must be stored in a variable, which is then displayed by a shape.
+Alternatively, you can also make shapes display properties of the *SelectedReservation*, *SelectedSession*, *SelectedResource*, *SelectedOccurrence*, or *SelectedPool*. For this purpose, the properties must be stored in a variable, which is then displayed by a shape.
 
 To have properties of Resource Manager objects stored in a variable:
 
 - Configure the following value in the **ComponentOptions** shape data field of the Resource Manager timeline shape, depending on the type of variable you want to store the property in. To configure more than one variable, separate the configuration for each of them with pipe characters.
 
   | Type of variable | Value                                                  |
-  |--------------------|--------------------------------------------------------|
-  | Session variable   | setvar:\[VariableName\]=SelectedX.\[PropertyName\]     |
-  | Card variable      | setcardvar:\[VariableName\]=SelectedX.\[PropertyName\] |
-  | Page variable      | setpagevar:\[VariableName\]=SelectedX.\[PropertyName\] |
+  |------------------|--------------------------------------------------------|
+  | Session variable | setvar:\[VariableName\]=SelectedX.\[PropertyName\]     |
+  | Card variable    | setcardvar:\[VariableName\]=SelectedX.\[PropertyName\] |
+  | Page variable    | setpagevar:\[VariableName\]=SelectedX.\[PropertyName\] |
 
   Example:
 
@@ -520,7 +514,7 @@ The **ComponentActions** shape data field should contain a JSON object with the 
   - *Set\|DmaID/ElementID\|ParameterID:TableRowKey\|NewValue\|Options*
 
   > [!NOTE]
-  > From DataMiner 9.5.14 onwards, it is possible to omit trailing pipe characters when you specify the Automation script. For example, instead of specifying “Script:MyScript\|\|\|\|\|”, you can simply specify “Script:MyScript”.
+  > You can omit trailing pipe characters when you specify the Automation script. For example, instead of specifying "Script:MyScript\|\|\|\|\|", you can simply specify "Script:MyScript".
 
   Within this string, the following placeholders can be used:
 
@@ -552,11 +546,11 @@ Example of a JSON string with custom actions:
 ```
 
 > [!NOTE]
-> You can use the “Minify/Compact” function at <https://jsonformatter.org/> to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
+> You can use the "Minify/Compact" function at <https://jsonformatter.org/> to remove all whitespace and newlines from a JSON string before copying it to a Visio shape data item.
 
 ## Configuring command controls for a Resource Manager component
 
-From DataMiner 9.5.6 onwards, it is possible to use a Resource Manager component in conjunction with command control shapes, so that users can select a particular “mode” to determine which action is executed when they select a range on the timeline.
+It is possible to use a Resource Manager component in conjunction with command control shapes, so that users can select a particular "mode" to determine which action is executed when they select a range on the timeline.
 
 If this configuration is used, the selection behavior of the booking timeline is different from the default behavior: if the user first selects a command shape and then selects a timeline range, the corresponding command is immediately executed. If no command shape is selected first, the component will zoom in on the selected range.
 
@@ -569,7 +563,7 @@ You can configure this as follows:
     | Component      | Name of the Visio component: *Reservations* or *Bookings*. |
     | ComponentActions | Custom actions, specified with JSON objects. See [Specifying custom actions in a Resource Manager component](#specifying-custom-actions-in-a-resource-manager-component). |
     | ComponentOptions | *UseCommandsForCustomActions* |
-    | CommandPrefix    | Optional prefix added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g. “*One\_*”). |
+    | CommandPrefix    | Optional prefix added to the command name (in the shape containing the command, see below) in case multiple identical commands have to be configured for different instances of the same component (e.g. "*One\_*"). |
 
 1. Add the following shape data fields to the command control shape:
 
@@ -610,27 +604,14 @@ In that case, you can for instance define the following command control shapes:
 
 The color of a timeline booking block can be customized with the following properties of the booking:
 
-- From DataMiner 10.0.0/10.0.2 onwards:
-
-    | Property               | Description                        |
-    |--------------------------|------------------------------------|
-    | VisualForeground         | The default foreground color       |
-    | VisualBackground         | The default background color       |
-    | VisualBorder             | The default border color           |
-    | VisualSelectedForeground | The foreground color when selected |
-    | VisualSelectedBackground | The background color when selected |
-    | VisualSelectedBorder     | The border color when selected     |
-
-- Prior to DataMiner 10.0.0/10.0.2:
-
-    | Property                | Description                        |
-    |---------------------------|------------------------------------|
-    | Visual.Foreground         | The default foreground color       |
-    | Visual.Background         | The default background color       |
-    | Visual.Border             | The default border color           |
-    | Visual.SelectedForeground | The foreground color when selected |
-    | Visual.SelectedBackground | The background color when selected |
-    | Visual.SelectedBorder     | The border color when selected     |
+| Property                 | Description                        |
+|--------------------------|------------------------------------|
+| VisualForeground         | The default foreground color       |
+| VisualBackground         | The default background color       |
+| VisualBorder             | The default border color           |
+| VisualSelectedForeground | The foreground color when selected |
+| VisualSelectedBackground | The background color when selected |
+| VisualSelectedBorder     | The border color when selected     |
 
 The value of these properties can be defined as follows:
 
@@ -654,10 +635,9 @@ The value of these properties can be defined as follows:
 
   - 3 integer values separated by commas. Can be preceded by a fourth integer value (i.e. an alpha value). Each of these values must be between 0 and 255.
 
-  - Template: “R,G,B” or “A,R,G,B” - A (alpha), R (red), G (green), B (blue)
+  - Template: "R,G,B" or "A,R,G,B" - A (alpha), R (red), G (green), B (blue)
 
   - Example: *141,89,0,184*
 
 > [!NOTE]
-> If the API is used to update the color of a booking, ideally the ResourceManagerHelper calls *UpdateReservationInstanceProperties*(…) and *SafelyUpdateReservationInstanceProperties* (…) should be used. These assure the best performance when booking properties are updated and prevent possible issues when a booking is updated multiple times during its runtime.
->
+> If the API is used to update the color of a booking, ideally the ResourceManagerHelper calls *UpdateReservationInstanceProperties(...)* and *SafelyUpdateReservationInstanceProperties(...)* should be used. These assure the best performance when booking properties are updated and prevent possible issues when a booking is updated multiple times during its runtime.

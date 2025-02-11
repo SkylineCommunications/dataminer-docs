@@ -31,7 +31,7 @@ To do so:
    ```
 
    > [!NOTE]
-   > From DataMiner 9.5.3 onwards, you can also add the domain name in the *\[#Tickets\]* placeholder, in order to only show statistics for a particular domain. For example: *\[#Tickets:Internal\]*
+   > You can also add the domain name in the *\[#Tickets\]* placeholder, in order to only show statistics for a particular domain. For example: *\[#Tickets:Internal\]*
 
 1. Save and close the file, and restart the DMA.
 

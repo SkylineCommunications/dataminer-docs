@@ -1,6 +1,7 @@
 ---
 uid: DataMiner_Compute_Requirements
-keywords: system requirements
+keywords: system requirements, .NET requirements, dotnet requirements
+description: For optimal performance, make sure DataMiner has sufficient RAM, vCPUs, etc. Unless STaaS is used, minimum requirements for data storage also apply.
 ---
 
 # DataMiner Compute Requirements
@@ -8,7 +9,7 @@ keywords: system requirements
 > [!IMPORTANT]
 > If you use [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance.
 
-To make sure your DataMiner System performs optimally, it is important that sufficient resources are available. The overview below shows the requirements for a DataMiner setup using the latest version of DataMiner, with self-hosted Cassandra and OpenSearch databases. If you are using [Storage as a Service](xref:STaaS), only the requirements for DataMiner itself will be relevant for you.
+To make sure your DataMiner System performs optimally, it is important that sufficient resources are available. The overview below shows the requirements for a DataMiner setup using the latest version of DataMiner, with self-managed Cassandra and OpenSearch databases. However, we **recommend using [Storage as a Service](xref:STaaS) instead**. If you use STaaS, only the requirements for DataMiner itself will be relevant for you.
 
 Minimum requirements are displayed in gray, default requirements in light blue, and requirements for high-end applications in dark blue. Below this, you will find more detailed information on the requirements.
 
@@ -51,7 +52,7 @@ In addition, the disk throughput is of vital importance. The following minimum r
 
 DataMiner is very demanding in concurrency, as a lot of actions usually happen in parallel. Though typically the performed actions are not lengthy or bulky, heavy actions can occur in EPM/CPE environments where a lot of aggregation is needed.
 
-As a rule of thumb, a CPU passmark of >10K is OK, but >20K is needed in EPM/CPE environments. We recommend at least 4 cores, but 16 cores are preferable.
+A minimum of 4 vCPUs is required (typically for up to 100 average elements). 8 vCPUs is recommended (typically for up to 250 average elements). In very demanding environments, such as EPM/CPE environments, 16 vCPUs is preferable.
 
 ### Network
 
@@ -73,18 +74,16 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 | DataMiner version       | Required .NET (Framework) versions        |
 |-------------------------|-------------------------------------------|
-| DataMiner Feature Release 10.4.3 and higher<!--RN 37969--><br>DataMiner Main Release 10.3.0 [CU12] and higher<br>DataMiner Main Release 10.4.0 and higher | Microsoft .NET Framework 4.8, .NET 6.0 and .NET 8.0 |
-| DataMiner Feature Release 10.3.9 to 10.4.2 | Microsoft .NET Framework 4.8 and .NET 6.0 |
-| DataMiner Feature Release 10.3.3 to 10.3.8<br>DataMiner Main Release 10.3.0 CU3 to 10.3.0 CU11 | Microsoft .NET Framework 4.8, .NET 5.0, and .NET 6.0 |
-| DataMiner Feature Release 10.1.12 to 10.3.2<br>DataMiner Main Release 10.3.0 CU2 | Microsoft .NET Framework 4.8 and .NET 5.0 |
-| DataMiner 10.1.11 | Microsoft .NET Framework 4.8 |
+| DataMiner Feature Release 10.4.10 and higher<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
+| DataMiner Feature Release 10.4.3 to 10.4.9<!--RN 37969--><br>DataMiner Main Release 10.4.0 to 10.4.0 [CU6]<br>DataMiner Main Release 10.3.0 [CU12] to 10.3.0 [CU18] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
+| DataMiner Feature Release 10.3.9 to 10.4.2 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) |
+| DataMiner Feature Release 10.3.3 to 10.3.8<br>DataMiner Main Release 10.3.0 [CU3] to 10.3.0 [CU11] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-5.0.17-windows-hosting-bundle-installer), and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) |
+| DataMiner Feature Release 10.1.12 to 10.3.2<br>DataMiner Main Release 10.3.0 [CU2] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-5.0.17-windows-hosting-bundle-installer) |
+| DataMiner 10.1.11 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) |
 | DataMiner versions prior to 10.1.11 | Microsoft .NET Framework 4.6.2 |
 
 > [!NOTE]
 > We recommend always upgrading to the latest .NET Framework version.
-
-> [!IMPORTANT]
-> To be able to upgrade to 10.3.0 [CU12]/10.4.0/10.4.3 or higher, you must install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.1-windows-hosting-bundle-installer) first.
 
 ### Microsoft Visual C++
 
@@ -101,9 +100,32 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 DataMiner requires a server with a name that is **no longer than 15 characters**. Make sure the name does not contain any characters that are disallowed in NetBIOS computer names or DNS host names. For more information, refer to [learn.microsoft.com](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#netbios-computer-names).
 
+## Standalone Cloud Gateway server requirements
+
+If you want to [connect your system to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) but would prefer to use a dedicated Cloud Gateway server for this, the server will need to meet the following requirements:
+
+### Operating System
+
+See "Operating system" under [DataMiner requirements](#dataminer-requirements).
+
+### RAM
+
+A minimum of 4 GB will be required to smoothly run the necessary services on the server.
+
+### CPU
+
+The processes are not CPU-heavy and do not require a lot of parallel computing. This means that 4 vCPUs should be enough.
+
+### Network
+
+See "Network" under [DataMiner requirements](#dataminer-requirements).
+
 ## Cassandra requirements
 
-For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:Databases_about), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html). A Cassandra node can be hosted on the same server as DataMiner, or on a different server. It is also possible to use multiple Cassandra nodes with one DataMiner Agent.
+For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:About_storage), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html). A Cassandra node can be hosted on the same server as DataMiner, or on a different server. It is also possible to use multiple Cassandra nodes with one DataMiner Agent.
+
+> [!IMPORTANT]
+> Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any Cassandra nodes.
 
 ### Cassandra software
 
@@ -140,7 +162,7 @@ In addition, the disk throughput is of vital importance. The following minimum r
 
 Like DataMiner, Cassandra requires high concurrency. It also needs significant CPU power for actions like compaction and repair, and the write speed is bound to the performance of the CPU.
 
-We recommend 16 logical cores and a passmark of >10K.
+We recommend 16 vCPUs.
 
 ### Network
 
@@ -148,7 +170,7 @@ A high-speed network is required to be able to transfer the data between the dif
 
 ### Operating System
 
-We recommend installing Cassandra on Linux. In fact, from Cassandra 4.0 onwards, only Linux is supported. Older Cassandra versions also support Windows.
+We recommend installing Cassandra on Linux. In fact, from Cassandra 4.0 and DataMiner 10.4.x onwards, only Linux is supported.
 
 ### Time
 
@@ -157,6 +179,9 @@ If there is more than one Cassandra node, the time in the cluster must be synchr
 ## OpenSearch/Elasticsearch requirements
 
 Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). Ideally, this should be an OpenSearch cluster. An Elasticsearch cluster can be used instead, but this is not recommended.
+
+> [!IMPORTANT]
+> Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any openSearch or Elasticsearch nodes.
 
 ### RAM
 
@@ -176,7 +201,7 @@ In addition, the disk throughput is of vital importance. The following minimum r
 
 ### CPU
 
-A passmark of >10K is sufficient. Having an extra logical core in favor of a few extra CPU cycles is preferred.
+We recommend 16 vCPUs.
 
 ### Network
 

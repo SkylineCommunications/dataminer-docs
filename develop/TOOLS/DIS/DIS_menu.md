@@ -11,9 +11,7 @@ The following sections provide more information on the DIS menu:
 - [DMA](#dma)
 - [Administration \> Open Driver Help](#administration--open-driver-help)
 - [Protocol \> Generate QAction helper code](#protocol--generate-qaction-helper-code)
-- [Protocol \> Generate Class Library code](#protocol--generate-class-library-code) (removed from DIS v2.41 onwards)
 - [Protocol \> Convert to Solution...](#protocol--convert-to-solution)
-- [Automation script \> Generate Class Library code](#automation-script--generate-class-library-code) (removed from DIS v2.41 onwards)
 - [Plugins \> Generate driver help](xref:DisPlugins#generate-driver-help)
 - [Plugins \> Add After Startup](xref:DisPlugins#add-after-startup)
 - [Plugins \> Add matrix...](xref:DisPlugins#add-matrix)
@@ -30,7 +28,8 @@ The following sections provide more information on the DIS menu:
 - [Tool Windows \> DIS Validator](xref:DisValidatorToolWindow)
 - [Tool Windows \> DIS Comparer](xref:DisComparerToolWindow)
 - [Settings](xref:DIS_settings)
-- [Check for updates...](#check-for-updates)
+- [Send feedback](#send-feedback)
+- [Check for updates...](#check-for-updates) (removed from DIS v3.0 onwards)
 - [Help](#help)
 
 ## DMA
@@ -84,36 +83,24 @@ In the *DMA* submenu, you can find the following commands:
 
 If a connector help page is available on [DataMiner Connector Documentation](https://docs.dataminer.services/connector/index.html), selecting *Open Driver Help* will open that page in the default web browser.
 
-If no matching page can be found, you will be directed to a page explaining [how to add a new connector documentation page](xref:Connector_help_pages#adding-a-new-connector-documentation-page).
+If no matching page can be found, you will be directed to a page explaining [how to add new connector documentation pages](xref:Connector_help_pages#adding-new-connector-documentation-pages).
 
 ## Protocol \> Generate QAction helper code
 
 C# helper classes are automatically added or updated each time you switch from an XML editor tab to a C# editor tab (or vice versa). If, however, you want to force an ad hoc update of all C# helper classes, you can select *Protocol \> Generate QAction Helper Code*.
 
-## Protocol \> Generate Class Library code
-
-> [!IMPORTANT]
-> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
-
-If you want to force an ad hoc regeneration of the Class Library QAction 63000 and the Class Library EXE blocks, you can click Generate Class Library Code.
-
-DIS contains a class library with reusable C# code, such as classes and methods that can be used for e.g. creating elements and services, processing DVEs, etc. Code from this library can be used in QActions and Automation scripts without having to copy/paste code from an external source into a protocol or a script.
-
-The advantage of this approach is that no additional DLL files need to be copied to the DataMiner installation folder when a protocol or script is put into use. All necessary code is included in the protocol or script itself. By including all code in the protocol or the script, we also prevent future code library updates from rendering a protocol or script inoperable.
-
-If, in the Class Library tab of the DIS Settings window, you selected the *Automatically generate Class Library code* option, DIS will automatically detect whether you are using any code from the Class Library in a QAction or Automation script, and copy all used classes, methods, etc. (along with all dependencies) from the class library to a generic QAction (with ID 63000) or Automation script EXE block. If you want to force an ad hoc regeneration of the Class Library QAction 63000 or Class Library EXE blocks, you can select *Protocol \> Generate Class Library Code* in the main DIS menu.
-
-See also: [Class Library](xref:DIS_settings#class-library)
-
-## Protocol \> Convert to Solution...
+## Protocol \> Convert to Solution
 
 If you want to convert the standalone protocol XML file you opened in the XML editor to a protocol solution, select *Protocol \> Convert to Solution...*
 
-## Automation script \> Generate Class Library code
+## Send feedback
 
-See [Protocol \> Generate Class Library code](#protocol--generate-class-library-code).
+If you want to send feedback to Skyline Communications, for example because you have encountered an issue in DIS, select *Send Feedback*.
 
-## Check for updates...
+## Check for updates
+
+> [!IMPORTANT]
+> This feature has been removed from DIS v3.0 onwards. DIS is now available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
 
 If you click *Check for updates…*, the *DIS Update* dialog box will appear. This dialog box will indicate whether or not a new DIS version is available.
 

@@ -1,5 +1,6 @@
 ---
 uid: Part2BasicFunctionalities
+description: To work with DataMiner, you need to know how to use elements, parameters, services, views, alarms, protocols, templates, etc.
 ---
 
 # Basic DataMiner functionality

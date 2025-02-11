@@ -49,14 +49,14 @@ classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 FNS[File not syncing]
-Check{{Does a file <br/>need to be synced?}}
-Y1{{Check SLDMS log file: <br/> is there a notification <br/>that the file has changed?}}
+Check{{Does a file need to be synced?}}
+Y1{{Check SLDMS log file: Is there a notification saying that the file has changed?}}
 N1(["No issues."])
-Y2["1. On the DMA with the most <br>recent file, go to System Center.<br>2. Go to Tools > Synchronization.<br/>3. Select the type 'file'.<br/>4. Enter the file path.<br/>5. Confirm the action."]
-N2(["Check for <br>connectivity issues <br>between DMAs."])
-C{{Has the file <br>been synchronized?}}
-Y3["Verify on all DMAs <br/>in the cluster."]
-N3(["Contact tech support;<br/>this might not work <br>every time."])
+Y2["1\. On the DMA with the most recent file, go to System Center.<br>2\. Go to Tools > Synchronization.<br/>3\. Select the type 'file'.<br/>4\. Enter the file path.<br/>5\. Confirm the action."]
+N2(["Check for connectivity issues between DMAs."])
+C{{Has the file been synchronized?}}
+Y3["Verify on all DMAs in the cluster."]
+N3(["Contact tech support; this might not work every time."])
 %% Connect blocks %%
 FNS --- Check
 Check --- |YES| Y1
@@ -92,10 +92,10 @@ classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 TSI[Time server issues]
-TSI1{{Do DMAs in the cluster <br/>have different times?}}
-Y4["Sync issues <br>observed."]
-N4(["No time <br>server issues."])
-R(["Follow the instructions<br>in the DataMiner Help."])
+TSI1{{Do DMAs in the cluster have different times?}}
+Y4["Sync issues observed."]
+N4(["No time server issues."])
+R(["Follow the instructions in the DataMiner Help."])
 %% Connect blocks %%
 TSI --- TSI1
 TSI1 --- |YES| Y4
@@ -127,15 +127,15 @@ classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 CI[Connectivity issues]
-CI1{{In the SLNet/SLDMS/<br>SLDataMiner log file, <br>do you see lines like <br>'Failed to connect <br>to' or 'Failed to <br>forward clients to' ?}}
-CI2[There are <br>connectivity issues.]
+CI1{{In the SLNet/SLDMS/SLDataMiner log file, do you see lines like 'Failed to connect to' or 'Failed to forward clients to' ?}}
+CI2[There are connectivity issues.]
 CI3([No connectivity issues.])
-CI4{{Verify via ping/wireshark: <br>does the DMA have <br>network interruptions?}}
-CI5[Resolve the <br>network issues.]
-CI6{{Is the DMA <br>up and running ?}}
-CI7[Check if the <br>DMA can communicate.]
-CI8([Refer to <br>startup issues flowchart.])
-CI9[Check for <br>process crashes or <br>deadlocks in the <br>SLDMS log file.]
+CI4{{Verify via ping/wireshark: does the DMA have network interruptions?}}
+CI5[Resolve the network issues.]
+CI6{{Is the DMA up and running ?}}
+CI7[Check if the DMA can communicate.]
+CI8([Refer to startup issues flowchart.])
+CI9[Check for process crashes or deadlocks in the SLDMS log file.]
 %% Connect blocks %%
 CI --- CI1
 CI1 --- |YES| CI2

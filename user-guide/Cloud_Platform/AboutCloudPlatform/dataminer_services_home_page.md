@@ -1,5 +1,6 @@
 ---
 uid: dataminer_services_home_page
+keywords: cloud home page
 ---
 
 # The dataminer.services home page
@@ -14,7 +15,7 @@ To access the dataminer.services home page:
 
 At the top of the dataminer.services home page, you will find links to the different available dataminer.services apps:
 
-- [Project Collaboration](xref:Collaboration)
+- [Project Collaboration](xref:About_the_Project_Collaboration_module)
 
 - [DataMiner Catalog](xref:About_the_Catalog_module)
 
@@ -23,6 +24,11 @@ At the top of the dataminer.services home page, you will find links to the diffe
 - [DataMiner Community](xref:Community)
 
 - [Admin](xref:CloudAdminApp)
+
+> [!TIP]
+> Both on the dataminer.services home page and in many of the dataminer.services apps, you can provide direct feedback to Skyline via the *Feedback* option in the user menu.<!-- RN 41926 -->
+>
+> ![Feedback option](~/user-guide/images/Cloud_feedback.png)
 
 ## DataMiner Cube installation button
 
@@ -43,7 +49,7 @@ Here you can also [link your dataminer.services and DataMiner account](xref:Link
 
 In the system overview, you can see the state of the connection between your system and the dataminer.services platform. Next to the name of each DMS, an icon indicates the connection state:
 
-- **DMS is connected connection to dataminer.services**
+- **DMS is connected to dataminer.services**
 
   It is possible to access the system and all dataminer.services features are available. This is indicated by a green icon and a green bar next to the DMS information.
 

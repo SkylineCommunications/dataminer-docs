@@ -8,11 +8,13 @@ uid: Cube_Feature_Release_10.3.9
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.9](xref:General_Feature_Release_10.3.9).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.3.9](xref:General_Feature_Release_10.3.9).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.9](xref:Web_apps_Feature_Release_10.3.9).
 
 ## New features
 
-#### DataMiner Cube - Alarm Console: Special Elasticsearch search box always visible on systems with a Cassandra Cluster database [ID_36735]
+#### DataMiner Cube - Alarm Console: Special Elasticsearch search box always visible on systems with a Cassandra Cluster database [ID 36735]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -21,7 +23,7 @@ When you add a new alarm tab to the Alarm Console, that alarm tab will now alway
 > [!NOTE]
 > Currently, when you start typing in this search box, no suggestions are displayed yet.
 
-#### Visual Overview: New custom color 'bg.pressededitor' for parameter controls of type 'Lite' [ID_36779]
+#### Visual Overview: New custom color 'bg.pressededitor' for parameter controls of type 'Lite' [ID 36779]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -31,7 +33,7 @@ You can now define a new color called *bg.pressededitor*. This color will be use
 
 For more information, see [CustomColors](xref:Adding_options_to_a_parameter_control#customcolors).
 
-#### Proportional card layout: Selecting a master card [ID_36912]
+#### Proportional card layout: Selecting a master card [ID 36912]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -44,7 +46,7 @@ Once you have turned a card into the master card, each time you open a new card 
 > - At any given time, there can be only one master card.
 > - This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Master card* option, the *Pin this card* option will be disabled (and vice versa).
 
-#### Proportional card layout: Marking cards as non-closable [ID_36956]
+#### Proportional card layout: Marking cards as non-closable [ID 36956]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -57,7 +59,7 @@ When the card layout is set to "Proportional", you can now mark cards to non-clo
 
 ### Enhancements
 
-#### Errors or alarms will no longer be generated at startup when the DMS does not include an indexing engine [ID_36590]
+#### Errors or alarms will no longer be generated at startup when the DMS does not include an indexing engine [ID 36590]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -65,7 +67,7 @@ From now on, when the DataMiner System does not include an indexing engine, no r
 
 Also, when you open the *Profiles*, *Resources* or *Bookings* app in Cube, a message will now appear, saying that the DataMiner System does not include an indexing engine.
 
-#### Trending - Relation learning: Clearer log information [ID_36760]
+#### Trending - Relation learning: Clearer log information [ID 36760]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -73,55 +75,55 @@ With the introduction of time-scoped parameter relations, two different light bu
 
 When the requirements of a light bulb are not met, an entry is added to the Cube logging. From now on, these log entries will make a clearer distinction between the "relation light bulb feature" (i.e. the icon appearing in the top-right corner) and the "time-scoped relation feature" (i.e. the icon appearing when you select a trend graph section).
 
-#### Resources: Enhanced logging when function resources failed to initialize [ID_36763]
+#### Resources: Enhanced logging when function resources failed to initialize [ID 36763]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 A more detailed entry will now be added to the Cube logging when a function resource failed to initialize.
 
-#### Trending - Pattern matching: Enhanced error handling and performance [ID_36772]
+#### Trending - Pattern matching: Enhanced error handling and performance [ID 36772]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 A number of enhancements have been made to the pattern matching functionality, especially with regard to error handling and overall performance.
 
-#### Visual Overview: Warning message will now appear when you embed a visual overview assigned to a view in that same visual overview [ID_36791]
+#### Visual Overview: Warning message will now appear when you embed a visual overview assigned to a view in that same visual overview [ID 36791]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 Up to now, embedding a visual overview assigned to a view in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to a view in that same visual overview has been embedded, a warning message will be displayed.
 
-#### Services module: Enhanced linking to help pages on docs.dataminer.services [ID_36813]
+#### Services module: Enhanced linking to help pages on docs.dataminer.services [ID 36813]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 A number of enhancements have been made with regard to how help buttons in the *Services* module are linked to pages on <https://docs.dataminer.services/>.
 
-#### Trending - Behavioral anomaly detection: Alarms and suggestion events will now be displayed in the language set as UI language [ID_36828] [ID_36836]
+#### Trending - Behavioral anomaly detection: Alarms and suggestion events will now be displayed in the language set as UI language [ID 36828] [ID 36836]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 All alarms and suggestion events generated following the detection of behavioral anomalies will now appear in the language set as UI language.
 
-#### Trending - Pattern matching: Pattern occurrence values and suggestion events will now be displayed in the language set as UI language [ID_36844]
+#### Trending - Pattern matching: Pattern occurrence values and suggestion events will now be displayed in the language set as UI language [ID 36844]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 All pattern occurrence values and pattern occurrence suggestion events displayed in the Alarm Console will now appear in the language set as UI language.
 
-#### Alarm Console: Enhanced performance when loading history alarms [ID_36929]
+#### Alarm Console: Enhanced performance when loading history alarms [ID 36929]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 Because of a number of enhancements, overall performance has considerably increased when loading history alarms.
 
-#### Visual Overview: Warning message when embedding visual overview assigned to element in that same visual overview [ID_37078]
+#### Visual Overview: Warning message when embedding visual overview assigned to element in that same visual overview [ID 37078]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 Up to now, embedding a visual overview assigned to an element in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to an element in that same visual overview has been embedded, a warning message will be displayed.
 
-#### Visual Overview: Warning message when embedding visual overview assigned to service in that same visual overview [ID_37082]
+#### Visual Overview: Warning message when embedding visual overview assigned to service in that same visual overview [ID 37082]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -129,25 +131,25 @@ Up to now, embedding a visual overview assigned to a service in that same visual
 
 ### Fixes
 
-#### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID_36631]
+#### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID 36631]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 In *Automation*, *Correlation* and *Scheduler*, you can select a report of a dashboard in an *Email*, *Upload to FTP* or *Upload to shared folder* action. When such an action was initialized, in some rare cases, the report or dashboard would not be automatically selected.
 
-#### DataMiner Cube - Trending: Panning across the graph would not work [ID_36769]
+#### DataMiner Cube - Trending: Panning across the graph would not work [ID 36769]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you opened a trend graph showing trend data of a parameter that only had average trending enabled, in some cases, it would not be possible to pan across the graph.
 
-#### DataMiner Cube - Visual Overview: Problem when opening a service chain shape while element updates were being received [ID_36794] [ID_36966]
+#### DataMiner Cube - Visual Overview: Problem when opening a service chain shape while element updates were being received [ID 36794] [ID 36966]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 In some rare cases, an error could occur when, In Visual Overview, you opened a service chain shape linked to an SRM service while Resource Manager updates and DCF connection updates for the elements in that SRM service were being received.
 
-#### DataMiner Cube - Visual Overview: Problem with [this EnhancedServiceID] placeholder [ID_36808]
+#### DataMiner Cube - Visual Overview: Problem with [this EnhancedServiceID] placeholder [ID 36808]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -155,7 +157,7 @@ In some cases, the *[this EnhancedServiceID]* placeholder would not resolve corr
 
 For example, when you had specified `[param: [this EnhancedServiceID], 1]`, the parameter of the service element with parameter ID 1 would not be displayed correctly in the shape text.
 
-#### DataMiner Cube - Element cards: DataMiner Connectivity Framework tables did incorrectly not have a filter box [ID_36920]
+#### DataMiner Cube - Element cards: DataMiner Connectivity Framework tables did incorrectly not have a filter box [ID 36920]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
@@ -172,7 +174,7 @@ Symptoms:
 - The login screen would display the following error message: `Start the DataMiner software manually or contact your system administrator.`
 - The Cube logging would contain a `Login failed.` entry mentioning `Cannot accept SOAP messages (text/xml)`.
 
-#### Problems when selecting report in Automation or Scheduler module [ID_37052]
+#### Problems when selecting report in Automation or Scheduler module [ID 37052]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 

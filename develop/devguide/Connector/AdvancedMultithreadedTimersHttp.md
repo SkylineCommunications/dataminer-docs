@@ -4,13 +4,11 @@ uid: AdvancedMultiThreadedTimersHttp
 
 # HTTP
 
-Since DataMiner 8.5.4 (RN 9290), you can set up multi-threaded HTTP communication in a QAction.
+To set up multi-threaded HTTP communication in a QAction, perform the following steps:<!-- RN 9290 -->
 
-To implement this, perform the following steps:
-
-1. Build the request
-1. Processing the responses
-1. Running the QAction after the response
+1. [Build the request](#step-1-build-the-request)
+1. [Process the responses](#step-2-process-the-responses)
+1. [Run the QAction after the response](#step-3-run-the-qaction-after-the-response)
 
 ## Step 1: Build the request
 
@@ -100,6 +98,7 @@ Format of the request: httpRequestInfo (object[]):
   - requestSettings[3]: Password.
   - requestSettings[4]: Request headers. Use the pipe character ('|') to separate the header from the header value. Use a semicolon (';') to specify multiple request headers.
   - requestSettings[5]: Timeout (ms).
+  - requestSettings[6]: Specifies whether to skip the SSL/TLS certificate verification. Default: true. Feature introduced in DataMiner 10.4.12 (RN 40877, RN 41285).
 - httpRequestInfo[2] (string[]): The resource path(s).
 
   From DataMiner 10.0.12 (RN 27438) onwards, it is possible to add a message body for the HTTP request (e.g. for a POST request).
@@ -130,7 +129,7 @@ object[] httpRequestInfo = new object[3] { "http", requestSettings, resourcePath
 
 In this QAction, typically you will also set the state of the corresponding row to e.g. "Sending".
 
-## Step 2: Processing the responses
+## Step 2: Process the responses
 
 To process the responses, create a QAction that triggers on the group of the multi-threaded timer.
 
@@ -218,7 +217,7 @@ public class QAction
 
 In this QAction, you will typically also update the state column of the corresponding row.
 
-## Step 3: Running the QAction after the response
+## Step 3: Run the QAction after the response
 
 The last step runs the QAction specified in the qactionAfter option of the multi-threaded timer.
 

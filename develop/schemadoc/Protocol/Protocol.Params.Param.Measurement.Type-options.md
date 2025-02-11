@@ -18,9 +18,9 @@ string
 
 In the options attribute, you can specify a number of options (separated by semicolons) depending on the measurement type. 
 
-### Options for measurement type “analog”
+### Options for measurement type "analog"
 
-Possible options for measurement type “analog”:
+Possible options for measurement type "analog":
 
 #### hscroll
 
@@ -39,9 +39,9 @@ Allows you to specify a deviation on the command to be verified using Command Ex
 
 See also: [annalog](xref:Protocol.Params.Param.Measurement.Type#analog)
 
-### Options for measurement type “discreet”
+### Options for measurement type "discreet"
 
-Possible options for measurement type “discreet”:
+Possible options for measurement type "discreet":
 
 #### custom=disableWrite:pid=value
 
@@ -71,9 +71,9 @@ Example:
 
 See also: [discreet](xref:Protocol.Params.Param.Measurement.Type#discreet)
 
-### Options for measurement type “matrix”
+### Options for measurement type "matrix"
 
-Possible options for measurement type “matrix”:
+Possible options for measurement type "matrix":
 
 #### matrix
 
@@ -85,7 +85,7 @@ With this option, you can set the properties of the matrix (separated by commas)
 - **COMax**: Maximum number of connection for one output.
 - **CIMin**: Minimum number of connections for one input.
 - **CIMax**: Maximum number of connections for one input.
-- **pages**: By default, if you specify “pages”, the inputs and outputs are grouped per 16 ins/outs.
+- **pages**: By default, if you specify "pages", the inputs and outputs are grouped per 16 ins/outs.
 
   > [!NOTE]
   > This option is ignored if the number of visible matrix lines is less than 32 x 32.
@@ -116,21 +116,23 @@ See also:
 - [matrix](xref:Protocol.Params.Param.Measurement.Type#matrix)
 - [matrix](xref:UIComponentsMatrix)
 
-### Options for measurement type “number”
+### Options for measurement type "number"
 
-Possible options for measurement type “number”:
+Possible options for measurement type "number":
 
 #### time
 
+<!-- RN 6046 -->
+
 The parameter will be displayed as a time duration. The value represents the total number of seconds.
 
-If, for example, you specify the following, the value “123.456” will be displayed as “02m 03s”. Decimals are ignored.
+If, for example, you specify the following, the value "123.456" will be displayed as "02m 03s". Decimals are ignored.
 
 ```xml
 <Type options="time">number</Type>
 ```
 
-An extra “timeofday” option can be added to display the value as the time-of-day in local format:
+An extra "timeofday" option can be added to display the value as the time-of-day in local format:
 
 ```xml
 <Type options="time;timeofday">number</Type>
@@ -138,31 +140,29 @@ An extra “timeofday” option can be added to display the value as the time-of
 
 Internally, it works in the same way as the normal time option. The value is stored as either the total number of seconds or the total number of minutes (not an OLE Automation format).
 
-*Feature introduced in DataMiner 8.0.3 (RN 6046).*
-
 See also:
 
 - [Duration picker](xref:UIComponentsDurationPicker)
 
 #### time:minute
 
+<!-- RN 5868 -->
+
 The parameter value represents the total number of minutes. The client displays decimal values as seconds.
 
-If, for example, you specify the following, the value “123.456” will be displayed as “02h 03m 27s”.
+If, for example, you specify the following, the value "123.456" will be displayed as "02h 03m 27s".
 
 ```xml
 <Type options="time:minute;timeofday">number</Type>
 ```
 
-Read parameters with options=”time:minute” will not display seconds if their value is zero. 
-
-*Feature introduced in DataMiner 8.0.5 (RN 5868).*
+Read parameters with options="time:minute" will not display seconds if their value is zero.
 
 #### time:hour
 
 The parameter value represents the total number of hours. The client displays decimal values as minutes and seconds.
 
-If, for example, you specify the following, the value “123.456” will be displayed as “5 days 03h 27m 21s”.
+If, for example, you specify the following, the value "123.456" will be displayed as "5 days 03h 27m 21s".
 
 ```xml
 <Type options="time:hour">number</Type>
@@ -171,9 +171,11 @@ If, for example, you specify the following, the value “123.456” will be disp
 > [!NOTE]
 > Protocol.Params.Param.Measurement.Discreets cannot be used in combination with this type.
 
-Read parameters with options=”time:hour” will not display seconds if their value is zero, and not display minutes if both minutes and seconds are zero. Feature introduced in DataMiner 8.0.5 (RN 5868).
+Read parameters with options="time:hour" will not display seconds if their value is zero, and not display minutes if both minutes and seconds are zero.<!-- RN 5868 -->
 
 #### date
+
+<!-- RN 6046 -->
 
 The parameter will be displayed as a date. The value represents the total number of seconds.
 
@@ -191,9 +193,9 @@ Example:
 
 The timestamp is stored internally as an OLE Automation date: a decimal number indicating the total number of days passed since Midnight 1899-12-30. Using the .NET framework, the double value can easily be converted to/from a DateTime type using the methods DateTime.FromOADate(x) and d.ToOADate().
 
-*Feature introduced in DataMiner 8.0.3 (RN 6046).*
-
 #### datetime
+
+<!-- RN 6046 -->
 
 The parameter will be displayed as a datetime. The value represents a decimal number indicating the total number of days that have passed since midnight 1899-12-30.
 
@@ -212,15 +214,13 @@ Example:
 The timestamp is stored internally as an OLE Automation date: a decimal number indicating the total number of days passed since Midnight 1899-12-30. Using the .NET framework, the double value can easily be converted
 to/from a DateTime type using the methods DateTime.FromOADate(x) and d.ToOADate().
 
-*Feature introduced in DataMiner 8.0.3 (RN 6046).*
-
 See also:
 
 - [Datetime picker](xref:UIComponentsDateTimePicker)
 
 #### datetime:minute
 
-The “minute” option can be used to hide the seconds and to only display hours and minutes.
+The "minute" option can be used to hide the seconds and to only display hours and minutes.
 
 Example:
 
@@ -241,9 +241,9 @@ Example:
 </Measurement>
 ```
 
-### Options for measurement type “string”
+### Options for measurement type "string"
 
-Possible options for measurement type “string”:
+Possible options for measurement type "string":
 
 |Option|Description|
 |--- |--- |
@@ -251,14 +251,14 @@ Possible options for measurement type “string”:
 |tab|The tab distance (the starting position of the text in the box).|
 |fixedfont|Sets the font type of the string to a fixed font.|
 |number|If set to true, the string can only contain numbers.|
-|password|Use this option to create a password parameter. Every character entered in this parameter will be displayed as “*” (also works for dynamic table cells). When the password is used, the value is encrypted. Note that only in Cube the password option on a Read parameter will not display the value, but hide it.|
+|password|Use this option to create a password parameter. Every character entered in this parameter will be displayed as `*` (also works for dynamic table cells). When the password is used, the value is encrypted. Note that only in Cube the password option on a Read parameter will not display the value, but hide it.|
 |custom=disableWrite:pid=value|With this option you can make a column read-only based on a value of a different column in the same table. It is not possible to change this value at runtime. Example: `custom=disableWrite:102=Moxa serial port 01`|
 
 See also: [string](xref:Protocol.Params.Param.Measurement.Type#string)
 
-### Options for measurement type “table”
+### Options for measurement type "table"
 
-Possible options for measurement type “table”:
+Possible options for measurement type "table":
 
 #### tab
 
@@ -285,14 +285,14 @@ Example:
 
 See also: [table](xref:Protocol.Params.Param.Measurement.Type#table)
 
-### Options for measurement type “title”
+### Options for measurement type "title"
 
-Possible options for measurement type “title”:
+Possible options for measurement type "title":
 
-|Option|Description|
-|--- |--- |
-|begin|A single horizontal line on the user interface. Short lines go down from both ends of the line. The start of a page section.|
-|end|A single horizontal line on the user interface. Short lines go up from both ends of the line. The end of a page section.|
-|connect|Connects a “begin” and an “end” title. **NOTE**: This is only required to support the legacy System Display application.|
+| Option  | Description                                                                                                                  |
+|---------|------------------------------------------------------------------------------------------------------------------------------|
+| begin   | A single horizontal line on the user interface. Short lines go down from both ends of the line. The start of a page section. |
+| end     | A single horizontal line on the user interface. Short lines go up from both ends of the line. The end of a page section.     |
+| connect | **Obsolete**.                                                                                                                |
 
 See also: [title](xref:Protocol.Params.Param.Measurement.Type#title)

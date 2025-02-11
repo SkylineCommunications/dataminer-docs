@@ -6,36 +6,48 @@ uid: Collections
 
 - The .NET Framework defines many different types of collections, each designed for a specific purpose. Choose your collection class carefully by considering the characteristics of each collection type. The following table gives an overview of the characteristics of some commonly used collection types.
 
-	| Collection                         | Description                                                                                                    | Insertion                               |                        | Removal                                  |                        | Retrieval/Lookup             |               | Immediate access |
-	|------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------------------------------|------------------------|------------------------------------------|------------------------|------------------------------|---------------|------------------|
-	| List\<T>                           | Represents a strongly typed list of objects that can be accessed by index.                                     | Add(T)                                  | O(1)-O(n)\*            | Remove(T)                                | O(n)                   | Item\[Int32\]<br> IndexOf(T) | O(1)<br> O(n) | Index            |
-	| LinkedList\<T>                     | Represents a doubly linked list.                                                                               | AddFirst(T)<br> AddLast(T)<br> AddAfter | O(1)<br> O(1)<br> O(1) | RemoveFirst<br> RemoveLast<br> Remove(T) | O(1)<br> O(1)<br> O(n) | Find(T)                      | O(n)          | No               |
-	| HashSet\<T>                        | Represents a set of values.                                                                                    | Add(T)                                  | O(1)-O(n)\*            | Remove(T)                                | O(1)                   | Contains(T)                  | O(1)          | Key              |
-	| Dictionary<br>\<TKey,TValue>       | Represents a collection of keys and values.                                                                    | Add                                     | O(1)-O(n)\*            | Remove<br>(TKey)                         | O(1)\*\*               | Item\[TKey\]                 | O(1)\*\*      | Key              |
-	| Stack                              | Represents a last-in, first-out (LIFO) collection.                                                             | Push(T)                                 | O(1)-O(n)\*            | Pop()                                    | O(1)                   | \-                           | \-            | No               |
-	| Queue                              | Represents a first-in, first-out (FIFO) collection.                                                            | Enqueue<br>(Obj)                        | O(1)-O(n)\*            | Dequeue()                                | O(1)                   | \-                           | \-            | No               |
-	| SortedList                         | Represents a collection of key/value pairs that are sorted by the keys and are accessible by key and by index. | Add                                     | O(log n)\*\*\*         | Remove(Obj)<br> RemoveAt<br>(Int32)      | O(n)<br> O(n)          | Item\[Object\]               | O(log n)      | Key              |
-	| SortedDictionary<br>\<TKey,TValue> | Represents a collection of key/value pairs that are sorted on the key.                                         | Add                                     | O(log n)               | Remove<br>(TKey)                         | O(log n)               | Item\[Key\]                  | O(log n)      | Key              |
-	| SortedSet\<T>                      | Represents a collection of objects that is maintained in sorted order.                                         | Add(T)                                  | O(log n)               | Remove(T)                                | O(log n)               | Contains(T)                  | O(ln n)       | Key              |
+  | Collection | Description | Insertion |      | Removal |       | Retrieval/Lookup |               | Immediate access |
+  |------------|-------------|-----------|------|---------|-------|------------------|---------------|------------------|
+  | List\<T> | Represents a strongly typed list of objects that can be accessed by index. | Add(T) | O(1)-O(n)\* | Remove(T) | O(n) | Item\[Int32\]<br> IndexOf(T) | O(1)<br> O(n) | Index |
+  | LinkedList\<T> | Represents a doubly linked list. | AddFirst(T)<br> AddLast(T)<br> AddAfter | O(1)<br> O(1)<br> O(1) | RemoveFirst<br> RemoveLast<br> Remove(T) | O(1)<br> O(1)<br> O(n) | Find(T) | O(n) | No |
+  | HashSet\<T> | Represents a set of values. | Add(T) | O(1)-O(n)\* | Remove(T) | O(1) | Contains(T)  | O(1) | Key |
+  | Dictionary<br>\<TKey,TValue> | Represents a collection of keys and values. | Add | O(1)-O(n)\* | Remove<br>(TKey) | O(1)\*\*  | Item\[TKey\] | O(1)\*\*  | Key |
+  | Stack | Represents a last-in, first-out (LIFO) collection. | Push(T) | O(1)-O(n)\* | Pop() | O(1) | \-  | \- | No |
+  | Queue | Represents a first-in, first-out (FIFO) collection. | Enqueue<br>(Obj) | O(1)-O(n)\* | Dequeue() | O(1) | \-  | \- | No  |
+  | SortedList | Represents a collection of key/value pairs that are sorted by the keys and are accessible by key and by index. | Add | O(log n)\*\*\* | Remove(Obj)<br> RemoveAt<br>(Int32)  | O(n)<br> O(n) | Item\[Object\] | O(log n)  | Key |
+  | SortedDictionary<br>\<TKey,TValue> | Represents a collection of key/value pairs that are sorted on the key. | Add | O(log n) | Remove<br>(TKey) | O(log n) | Item\[Key\]  | O(log n) | Key |
+  | SortedSet\<T> | Represents a collection of objects that is maintained in sorted order. | Add(T) | O(log n) | Remove(T) | O(log n) | Contains(T) | O(ln n) | Key |
 
-	> [!NOTE]
-	> \* If Count is less than Capacity, this method is an O(1) operation. If the capacity needs to be increased to accommodate the new element, this method becomes an O(n) operation, where n is Count.
-	>
-	> \*\* Approaches O(1) operation, includes key lookup overhead.
-	>
-	> \*\*\* This method is an O(n) operation for unsorted data, where n is Count. It is an O(log n) operation if the new element is added at the end of the list. If insertion causes a resize, the operation is O(n).
+  > [!NOTE]
+  > \* If Count is less than Capacity, this method is an O(1) operation. If the capacity needs to be increased to accommodate the new element, this method becomes an O(n) operation, where n is Count.
+  >
+  > \*\* Approaches O(1) operation, includes key lookup overhead.
+  >
+  > \*\*\* This method is an O(n) operation for unsorted data, where n is Count. It is an O(log n) operation if the new element is added at the end of the list. If insertion causes a resize, the operation is O(n).
 
 - In some cases, a combination of collections can be used to obtain optimal performance (at the cost of increased memory usage). For example, suppose there are two files: a file containing 1,000,000 keys and a large CSV file (1.5 GB) where only the lines that match one of the keys in the other file should be processed. First, the key file is read and stored in a collection. Then the CSV file is read. For each line in the CSV file, the Contains() method on the collection instance is used to check if it needs to be processed.
 
-    When the keys are stored using an instance of List\<string>, reading the keys file takes 6 s. The lookup, however, takes considerably more time (> 20 min).     When an instance of Stack\<string> is used, it takes 200 ms to read out the keys file. However, the lookup still takes a long time (> 20 min).     When an instance of HashSet\<string> is used, it takes 26 s to read out the keys file. The lookup takes 26 s.
-    Performance can be optimized by using a combination of collections: The key file is first loaded in an instance of Stack\<string>. This object is then used to construct an instance of a HashSet\<string>. This takes 400 ms and the lookup takes 26 s. This results in a total processing time of 26.4s. However, note that this performance increase comes at a cost of increased memory usage.
+  When the keys are stored using an instance of List\<string>, reading the keys file takes 6 s. The lookup, however, takes considerably more time (> 20 min).
+
+  When an instance of Stack\<string> is used, it takes 200 ms to read out the keys file. However, the lookup still takes a long time (> 20 min).
+
+  When an instance of HashSet\<string> is used, it takes 26 s to read out the keys file. The lookup takes 26 s.
+
+  Performance can be optimized by using a combination of collections: The key file is first loaded in an instance of Stack\<string>. This object is then used to construct an instance of a HashSet\<string>. This takes 400 ms and the lookup takes 26 s. This results in a total processing time of 26.4s. However, note that this performance increase comes at a cost of increased memory usage.
 
 - If Count exceeds Capacity while elements are added, the capacity is increased by automatically reallocating the internal array before copying the old elements and adding the new elements. Collections can be instantiated with an initial capacity to reduce the number of reallocations. Also, when multiple items need to be added to a collection, the AddRange method is favored over multiple Add method calls.
 
 - Although the ArrayList class and List\<T> class have similar functionality, the List\<T> class performs better in most cases. Moreover, List\<T> is type safe. In case a heterogeneous collection needs to stored, an instance of List\<object> should be used instead of an instance of the ArrayList class. In case a homogeneous collection needs to be stored, a strongly typed list (List\<T>) should be used.
 
-    MSDN states the following regarding performance considerations:
-    *"In deciding whether to use the List\<T> or ArrayList class, both of which have similar functionality, remember that the List\<T> class performs better in most cases and is type safe. If a reference type is used for type T of the List\<T> class, the behavior of the two classes is identical. However, if a value type is used for type T, you need to consider implementation and boxing issues.*     *If a value type is used for type T, the compiler generates an implementation of the List\<T> class specifically for that value type. That means a list element of a List\<T> object does not have to be boxed before the element can be used, and after about 500 list elements are created, the memory saved not boxing list elements is greater than the memory used to generate the class implementation.*     *Make certain the value type used for type T implements the IEquatable\<T> generic interface. If not, methods such as Contains must call the Object.Equals(Object) method, which boxes the affected list element. If the value type implements the IComparable interface and you own the source code, also implement the IComparable\<T> generic interface to prevent the BinarySearch and Sort methods from boxing list elements. If you do not own the source code, pass an IComparer\<T> object to the BinarySearch and Sort methods.*     *It is to your advantage to use the type-specific implementation of the List\<T> class instead of using the ArrayList class or writing a strongly typed wrapper collection yourself. The reason is your implementation must do what the .NET Framework does for you already, and the common language runtime can share Microsoft intermediate language code and metadata, which your implementation cannot."*
+  MSDN states the following regarding performance considerations:
+
+  *"In deciding whether to use the List\<T> or ArrayList class, both of which have similar functionality, remember that the List\<T> class performs better in most cases and is type safe. If a reference type is used for type T of the List\<T> class, the behavior of the two classes is identical. However, if a value type is used for type T, you need to consider implementation and boxing issues.*
+
+  *If a value type is used for type T, the compiler generates an implementation of the List\<T> class specifically for that value type. That means a list element of a List\<T> object does not have to be boxed before the element can be used, and after about 500 list elements are created, the memory saved not boxing list elements is greater than the memory used to generate the class implementation.*
+
+  *Make certain the value type used for type T implements the IEquatable\<T> generic interface. If not, methods such as Contains must call the Object.Equals(Object) method, which boxes the affected list element. If the value type implements the IComparable interface and you own the source code, also implement the IComparable\<T> generic interface to prevent the BinarySearch and Sort methods from boxing list elements. If you do not own the source code, pass an IComparer\<T> object to the BinarySearch and Sort methods.*
+
+  *It is to your advantage to use the type-specific implementation of the List\<T> class instead of using the ArrayList class or writing a strongly typed wrapper collection yourself. The reason is your implementation must do what the .NET Framework does for you already, and the common language runtime can share Microsoft intermediate language code and metadata, which your implementation cannot."*
 
 > [!TIP]
 > See also:

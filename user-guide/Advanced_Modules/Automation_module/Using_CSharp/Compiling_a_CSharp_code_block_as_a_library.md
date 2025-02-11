@@ -4,7 +4,7 @@ uid: Compiling_a_CSharp_code_block_as_a_library
 
 # Compiling a C# code block as a library
 
-From DataMiner 9.6.13 onwards, it is possible to have a C# code block in an Automation script in Cube compiled as a separate library.
+It is possible to have a C# code block in an Automation script in Cube compiled as a separate library.
 
 ## Compiling the library
 
@@ -12,7 +12,7 @@ From DataMiner 9.6.13 onwards, it is possible to have a C# code block in an Auto
 
    The following restrictions apply for the library name:
 
-   - A library name must not contain a period (“.”).
+   - A library name must not contain a period (".").
 
    - Within the same Automation script, each library name must be unique.
 
@@ -87,4 +87,4 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 - When the Automation script containing a library is deleted, all files of the library will be deleted too, which will make it impossible to recompile scripts that depend on this library until a library with the same reference is added again.
 
-- From DataMiner 10.0.0 \[CU9\]/10.1.1 onwards, if any new Automation scripts containing libraries that need to be compiled are detected during DataMiner startup, these will be compiled automatically.
+- From DataMiner 10.1.1 onwards, if any new Automation scripts containing libraries that need to be compiled are detected during DataMiner startup, these will be compiled automatically.

@@ -54,6 +54,7 @@ In the *Rule condition* section of the details pane, specify one or more conditi
    1. To trigger the Correlation rule only if this situation persists during a given time span, also select the option *Require sliding window violation to persist for ... before acting*, and specify the time span.
 
 > [!NOTE]
+>
 > - In a cluster, a temporary disconnection between the Agent handling the rule and a remote Agent can cause an extra sliding window occurrence, as the base event is considered cleared when the Agent disconnects, and considered new when it reconnects.
 > - If a disconnection between the Agent handling the rule and a remote Agent occurs after actions have been executed for a persistent rule, and this causes the conditions to no longer be fulfilled, the persistent timer will start again as soon as connection between the Agents has been restored. See [Correlation in DataMiner clusters](xref:About_DMS_Correlation#correlation-in-dataminer-clusters).
-> - Hidden elements are supported in rule conditions from DataMiner 10.0.0 [CU22], 10.1.0 [CU13], 10.2.0 [CU1] and 10.2.4 onwards.
+> - Hidden elements are supported in rule conditions from DataMiner 10.1.0 [CU13], 10.2.0 [CU1], and 10.2.4 onwards.

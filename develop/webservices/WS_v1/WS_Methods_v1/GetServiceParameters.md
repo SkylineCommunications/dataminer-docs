@@ -8,11 +8,11 @@ Use this method to retrieve a list of all the parameters of a particular service
 
 ## Input
 
-| Item       | Format  | Description                                                                      |
-|------------|---------|----------------------------------------------------------------------------------|
+| Item       | Format  | Description                                           |
+|------------|---------|-------------------------------------------------------|
 | connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| dmaID      | Integer | The DataMiner Agent ID.                                                          |
-| serviceID  | Integer | The service ID.                                                                  |
+| dmaID      | Integer | The DataMiner Agent ID.                               |
+| serviceID  | Integer | The service ID.                                       |
 
 ## Output
 

@@ -9,6 +9,7 @@ When developing a GQI extension, keep the following in mind:
 - [Use DIS to create and publish extensions](#use-dis-to-create-and-publish-extensions)
 - [Do not use Skyline.DataMiner.Automation](#do-not-use-skylinedataminerautomation)
 - [Only use 64-bit assembly references](#only-use-64-bit-assembly-references)
+- [Make your ad hoc data source scalable](#make-your-ad-hoc-data-source-scalable)
 
 ## Use DIS to create and publish extensions
 
@@ -42,3 +43,10 @@ Types and methods in this namespace have no use in a GQI extension and, more imp
 ## Only use 64-bit assembly references
 
 GQI runs in a 64-bit process and cannot load any extensions that require 32-bit assemblies. You should therefore only use 64-bit assembly references.
+
+## Make your ad hoc data source scalable
+
+Each time a query is executed, a new instance of the data source is created. This makes scalability crucial, especially when building the underlying data source is time-consuming or resource-intensive. Keep in mind that the code you are writing could be executed concurrently by many users.
+
+> [!TIP]
+> For an example of how to build a highly scalable data source capable of serving many concurrent users, see [Scaling an ad hoc data source](xref:Scaling_Ad_hoc_Data_Source).

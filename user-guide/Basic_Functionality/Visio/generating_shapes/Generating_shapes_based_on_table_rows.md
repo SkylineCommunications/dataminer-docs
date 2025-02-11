@@ -76,7 +76,7 @@ The following shape data fields can be added to the group containing the table r
   > [!NOTE]
   >
   > - In this shape data field, you can use placeholders like e.g. \[this service\].
-  > - From DataMiner 9.5.5/9.5.0 CU2 onwards, it is possible to specify an element alias from a particular service instead of the actual element name.
+  > - Instead of the actual element name, you can specify an element alias from a particular service.
 
 - **ChildrenOptions**: In this optional shape data field, you can specify a number of options.
 
@@ -93,7 +93,7 @@ The following shape data fields can be added to the group containing the table r
   | Name | Sort by child item name. |
   | Property\|PropertyName | Sort by the specified child item property. |
   | Severity | Sort by alarm severity. |
-  | TableColumn\|\<ParamID> | Sort based on the values in a specific column of the table for which shapes are generated. From DataMiner 9.5.2 onwards, multiple table columns can be specified, separated by pipe characters. Optionally, you can also add the sorting direction for each table column, separated from the table column by a comma. If no sorting direction is specified, by default, the shapes will be sorted in ascending order. E.g. "TableColumn\|101\|102,desc\|103" |
+  | TableColumn\|\<ParamID> | Sort based on the values in a specific column of the table for which shapes are generated. Multiple table columns can be specified, separated by pipe characters. Optionally, you can also add the sorting direction for each table column, separated from the table column by a comma. If no sorting direction is specified, by default, the shapes will be sorted in ascending order. E.g. "TableColumn\|101\|102,desc\|103" |
 
   > [!NOTE]
   >
@@ -172,7 +172,7 @@ The following shape data fields can be added to the group containing the table r
 
     If you want to ignore the default service filter and have shapes generated for all rows in the table, add a shape data field of type **ChildrenFilter** to the container shape, and set its value to "NoServiceTableFilter".
 
-  - From DataMiner 9.5.1 onwards, it is possible to add a filter so that shapes will only be generated for rows that have a datetime within a particular time window.
+  - You can add a filter so that shapes will only be generated for rows that have a datetime within a particular time window.
 
     To configure this time window filter, add a shape data field of type **ChildrenFilter** to the **Children** shape, and configure it as follows: "TimeWindow:TimeColumn=XX,StartWindow=-XX,EndWindow=XX,UpdateTime=X".
 
@@ -190,11 +190,11 @@ The following shape data fields can be added to the group containing the table r
     > [!NOTE]
     > As the time window filter is configured on the **Children** shape itself, and not on the child templates, only one filter can be specified for all child shapes.
 
-  - Using placeholders such as "\[var:\]" and "\[param:\]" within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards. This can for instance be used to filter the child shapes using a session variable in the filter value.
+  - Within **ChildrenFilter** shape data, you can use placeholders such as "\[var:\]" and "\[param:\]", for example to filter the child shapes using a session variable in the filter value.
 
 - **Options**:
 
-  When shapes are dynamically generated in an EPM environment, a subscription filter is automatically added to the table, which depends on the current selection of the EPM environment. From DataMiner 9.5.1 onwards, it is possible to disable this automatic filter, so that not only the shapes matching the current selection are generated. To disable the automatic filter, in the **Options** shape data field, specify "NoSelectionFilters". For example:
+  When shapes are dynamically generated in an EPM environment, a subscription filter is automatically added to the table, which depends on the current selection of the EPM environment. It is possible to disable this automatic filter, so that not only the shapes matching the current selection are generated. To disable the automatic filter, in the **Options** shape data field, specify "NoSelectionFilters". For example:
 
   | Shape data field | Value              |
   | ---------------- | ------------------ |
@@ -221,7 +221,7 @@ For example, if you specify the following shape data in the main shape and the s
 > - You can also use the double asterisk inside a \[Param:...\] placeholder. Example: Parameter=65022,\[Param:\*\*,118,\[displaytableindex\]\]
 > - You can use the \[displaytableIndex\] and \[tableIndex\] placeholders to link to the original row key (see the example above).
 > - The parameter and table index can either be separated by a comma, as illustrated above, or by a colon. The first separator that is found will be used to separate the parameter from the index, and any other separators will be considered part of the index.
-> - With older versions of DataMiner, if the value of the cell you link to is empty, the display key will be shown instead. From DataMiner 9.0.0 CU15/DataMiner 9.5.3 onwards, in that case no value will be shown. However, to have the display key shown instead, you can specify the keyword "\[DisplayTableIndexValue\]" in the **Parameter** shape data field.
+> - In legacy versions of DataMiner, if the value of the cell you link to is empty, the display key will be shown instead. In recent DataMiner versions, in that case no value will be shown. However, to have the display key shown instead, you can specify the keyword "\[DisplayTableIndexValue\]" in the **Parameter** shape data field.
 
 ## Making a shape use a different index than that of the original row
 

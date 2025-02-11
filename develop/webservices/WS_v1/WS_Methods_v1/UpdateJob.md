@@ -12,7 +12,7 @@ Use this method to update a specific job.
 |--|--|--|
 | connection | String | The connection string. See [ConnectApp](xref:ConnectApp). |
 | domainID | Integer | The job domain ID. |
-| job | [DMAJobSection](xref:DMAJobSection) | The ID, name, start time and end time of the job, as well as the various job sections. |
+| job | [DMAJob](xref:DMAJob) | The ID, name, start time and end time of the job, as well as the various job sections. |
 
 ## Output
 

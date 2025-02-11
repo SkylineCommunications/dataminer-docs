@@ -117,8 +117,8 @@ The following settings are available on the *Advanced Configuration* page:
 
 - **Predictions**: Enable this setting to enable predicted availability and compliance calculation. See [Checking SLA Key Performance Indicators](xref:Checking_SLA_Key_Performance_Indicators) and [Checking the SLA compliance](xref:Checking_the_SLA_compliance).
 
-- **Show Excluded Service Element Alarms**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. If this setting is set to *Hide*, all references to excluded or 'Not used' elements will be removed from the SLA, and alarms on such elements will no longer affect the SLA.
+- **Show Excluded Service Element Alarms**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol. If this setting is set to *Hide*, all references to excluded or 'Not used' elements will be removed from the SLA, and alarms on such elements will no longer affect the SLA.
 
-- **Use Service Capping**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. When you activate this setting, if a maximum severity is configured for alarms affecting the service, this "capping" will be applied to the SLA as well.
+- **Use Service Capping**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol. When you activate this setting, if a maximum severity is configured for alarms affecting the service, this "capping" will be applied to the SLA as well.
 
-- **Affecting Alarms Level**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol and DataMiner 9.5.5. Set this parameter to a particular percentage to configure which impact alarms must have before they are considered to affect the SLA. On the *Main View* page, the *Number of Affecting Alarms* parameter will then indicate the number of alarms currently affecting the SLA according to this setting.
+- **Affecting Alarms Level**: Requires at least version 3.0.0.10 of the *Skyline SLA Definition Basic* protocol. Set this parameter to a particular percentage to configure which impact alarms must have before they are considered to affect the SLA. On the *Main View* page, the *Number of Affecting Alarms* parameter will then indicate the number of alarms currently affecting the SLA according to this setting.

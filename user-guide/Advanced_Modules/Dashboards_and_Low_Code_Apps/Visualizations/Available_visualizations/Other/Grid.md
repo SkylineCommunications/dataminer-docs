@@ -11,11 +11,13 @@ Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 34761-->. Prior to this, th
 
 This component allows you to visualize data as a grid.
 
+![Grid](~/user-guide/images/Grid.png)<br>*Grid component in DataMiner 10.4.1*
+
 ## Configuring the component
 
-1. Apply a data feed. See [Applying a data feed](xref:Apply_Data_Feed). The grid component should always be configured with *Queries* data input.
+1. [Add data to the component](xref:Adding_data_to_component). The grid component should always be configured with *Queries* data input.
 
-1. Optionally, hover the mouse pointer over the component, click the filter icon, and then add a filter feed from the *Feeds > URL > Query columns* section of the data pane. You can repeat this several times in order to filter on several query columns<!--RN 34761-->.
+1. Optionally, hover the mouse pointer over the component, click the filter icon, and then add a filter from the *URL* > *Query column* section of the *Data* pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, you can find the filter in the *Feeds* > *URL* > *Query columns* section of the *Data* pane. You can repeat this several times in order to filter on several query columns<!--RN 34761-->. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, you can find the filter in the *Feeds > URL > Query columns* section of the *Data* pane.
 
 1. Optionally, customize the following component options:
 
@@ -29,7 +31,7 @@ This component allows you to visualize data as a grid.
 
    - *Initial Selection*: If enabled, the first item is selected by default. This is the value that will be applied in the grid when the dashboard is opened, unless a custom URL is used specifying a different value. Disabled by default.
 
-1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 

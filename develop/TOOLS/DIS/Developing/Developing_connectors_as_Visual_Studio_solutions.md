@@ -40,8 +40,9 @@ To edit a QAction, you have two options:
 > [!NOTE]
 >
 > - A QAction project can contain several \*.cs files that you can organize in different folders. The files will then be combined when the protocol is assembled.
-> - It is recommended to place all "using" directives inside the namespace instead of at the top of the file.
-> - When developing connectors as a Visual Studio solution, DLL imports need to be configured by adding references on the C# project itself (instead of using the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute).
+> - We recommend placing all "using" directives inside the namespace instead of at the top of the file.
+> - When connectors are developed as a Visual Studio solution, DLL imports need to be configured by adding references on the C# project itself (instead of using the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute).
+> - You can also edit the QAction ID via the dropdown menu of the *Edit QAction* icon next to the \<QAction> tag in the protocol XML file. This will adapt both the XML and the related C# projects.
 
 To introduce a reference to another QAction, select the QAction project, right-click, and select *Add* > *Reference*. In the *Reference Manager* window, select *Projects*, and then select the checkbox for the desired QAction project(s) you want to reference. This will be translated by DIS to `[ProtocolName].[ProtocolVersion].QAction.<id>.dll` imports in the protocol XML when the connector is assembled.
 
@@ -49,13 +50,16 @@ For custom DLLs, make sure the DLL is located in the *Dlls* folder of the solut
 
 ### Removing a QAction
 
-To remove a QAction, remove the \<QAction> tag in the protocol XML file as well as the C# project.
+To remove a QAction, go to the dropdown menu of the *Edit QAction* icon and select *Delete QAction*. This will automatically remove everything that needs to be removed for you. Alternatively, you could also manually remove the \<QAction> tag in the protocol XML file as well as the C# project.
 
 ## Uploading a protocol to a DataMiner Agent
 
 Because, in a connector solution, the QActions in the protocol XML file do not contain any C# code, the protocol first needs to be compiled before it can be uploaded to a DataMiner Agent. Once the connector is assembled, the code in all QAction projects and files found in the solution will be copied to the correct \<QAction> tags in the protocol XML file.
 
 A connector will automatically be assembled when you click the *Publish* button at the top of the file tab, or when you right-click and select *Copy Protocol to Clipboard*.
+
+> [!NOTE]
+> From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you install a protocol for the first time by publishing it from within DataMiner Integration Studio, it will automatically be promoted to the production version. This action adds the following entry to the *SLNet.txt* log file: `Initial upload of protocol '{protocolName}'. Version '{protocolVersion}' will be automatically set as production.` However, when you later deploy a new version of the same protocol and want it to be set as the production version, you will need to manually [promote this protocol version](xref:Promoting_a_protocol_version_to_production_version).
 
 ## Saving an assembled connector to a file
 

@@ -8,24 +8,24 @@ To configure a cell phone modem that is physically connected to one of your Data
 
 1. Insert the SIM card in the device.
 
-2. Connect the antenna to the device.
+1. Connect the antenna to the device.
 
-3. Connect the device to the DataMiner Agent using a serial cable.
+1. Connect the device to the DataMiner Agent using a serial cable.
 
-4. Connect the device to a power source.
+1. Connect the device to a power source.
 
-5. In the *C:\\Skyline DataMiner\\Mobile Gateway* folder of the DataMiner Agent to which you have physically connected the modem, make sure that there is a *Config.xml* file similar to the one in the example below.
+1. In the *C:\\Skyline DataMiner\\Mobile Gateway* folder of the DataMiner Agent to which you have physically connected the modem, make sure that there is a *Config.xml* file similar to the one in the example below.
 
-    > [!NOTE]
-    > If the modem is connected to a DataMiner Agent through a serial gateway, then you need to configure a virtual COM port on the DataMiner Agent, and map it to the port on the serial gateway to which the modem is connected.
-    >
-    > See [Configuring a virtual COM port on a DataMiner Agent](#configuring-a-virtual-com-port-on-a-dataminer-agent)
+   > [!NOTE]
+   > If the modem is connected to a DataMiner Agent through a serial gateway, then you need to configure a virtual COM port on the DataMiner Agent, and map it to the port on the serial gateway to which the modem is connected.
+   >
+   > See [Configuring a virtual COM port on a DataMiner Agent](#configuring-a-virtual-com-port-on-a-dataminer-agent)
 
-6. After you have saved the *Config.xml* file, restart the DataMiner Agent.
+1. After you have saved the *Config.xml* file, restart the DataMiner Agent.
 
-7. In DataMiner Cube, go to *Apps* > *System Center.*
+1. In DataMiner Cube, go to *Apps* > *System Center.*
 
-8. Select the *Mobile Gateway* tab and configure the necessary settings. For more information, see [Configuring Mobile Gateway in DataMiner Cube](xref:Configuring_Mobile_Gateway_in_DataMiner_Cube).
+1. Select the *Mobile Gateway* tab and configure the necessary settings. For more information, see [Configuring Mobile Gateway in DataMiner Cube](xref:Configuring_Mobile_Gateway_in_DataMiner_Cube).
 
 ## Example of a Config.xml for a serial modem
 
@@ -66,58 +66,58 @@ The following procedure explains how to configure a virtual COM port when using 
 
 1. On the DataMiner Agent, install the latest Moxa NPort Administration Suite, and launch it.
 
-2. Configure the NPort device.
+1. Configure the NPort device.
 
-    1. In the menu bar, click *Search IP*, enter the IP address of the NPort device, and click *OK*.
+   1. In the menu bar, click *Search IP*, enter the IP address of the NPort device, and click *OK*.
 
-        If you do not know the IP address of the device, you can also click *Search* to search for any NPort devices on the network. In some network configurations, however, this may not work.
+      If you do not know the IP address of the device, you can also click *Search* to search for any NPort devices on the network. In some network configurations, however, this may not work.
 
-    2. In the left-hand *Function* pane, right-click *COM Mapping*, and click *Add Target*.
+   1. In the left-hand *Function* pane, right-click *COM Mapping*, and click *Add Target*.
 
-    3. In the *Add NPort* window, select the NPort device to which you would like to map COM ports, and click *OK*.
+   1. In the *Add NPort* window, select the NPort device to which you would like to map COM ports, and click *OK*.
 
-    4. In the *COM Mapping* list, right-click the port of the NPort device on which the Mobile Gateway is connected, and click *COM Settings*.
+   1. In the *COM Mapping* list, right-click the port of the NPort device on which the Mobile Gateway is connected, and click *COM Settings*.
 
-        > [!NOTE]
-        > If necessary, you can disable the ports which don't need to be mapped or which are used by other applications.
+      > [!NOTE]
+      > If necessary, you can disable the ports which don't need to be mapped or which are used by other applications.
 
-    5. In the *Basic Settings* tab of the *COM Port Settings* window, open the *COM Number* selection box, and select the virtual COM port.
+   1. In the *Basic Settings* tab of the *COM Port Settings* window, open the *COM Number* selection box, and select the virtual COM port.
 
-    6. In the *Serial Parameters* tab of the *COM Port Settings* window, specify the settings of the virtual COM port, and click *OK*.
+   1. In the *Serial Parameters* tab of the *COM Port Settings* window, specify the settings of the virtual COM port, and click *OK*.
 
-        > [!NOTE]
-        > How you configure the COM port will depend on the settings allowed by the Mobile Gateway device. Legacy data over voice gateways, for example, will normally allow a baud rate of 9600, while GPRS/EDGE/3G/4G gateways will allow a higher baud rate.
+      > [!NOTE]
+      > How you configure the COM port will depend on the settings allowed by the Mobile Gateway device. Legacy data over voice gateways, for example, will normally allow a baud rate of 9600, while GPRS/EDGE/3G/4G gateways will allow a higher baud rate.
 
-    7. In the *COM Mapping* list, right-click, and click *Apply Change*.
+   1. In the *COM Mapping* list, right-click, and click *Apply Change*.
 
-3. Set the operating mode of the selected COM port.
+1. Set the operating mode of the selected COM port.
 
-    1. In the left-hand *Function* pane, click *Configuration*. Then, on the right, right-click the NPort device, and click *Configure*.
+   1. In the left-hand *Function* pane, click *Configuration*. Then, on the right, right-click the NPort device, and click *Configure*.
 
-    2. Click the *Operating Mode* tab, and select the *Modify* checkbox.
+   1. Click the *Operating Mode* tab, and select the *Modify* checkbox.
 
-    3. In the list, select the COM port you selected in step 2.5, click *Settings*, set *Operating Mode* to “Real COM Mode”, and click *OK*.
+   1. In the list, select the COM port you selected in step 2.5, click *Settings*, set *Operating Mode* to “Real COM Mode”, and click *OK*.
 
-    4. Back in the *Configuration* window, click *OK*, and exit the Moxa NPort Administration Suite.
+   1. Back in the *Configuration* window, click *OK*, and exit the Moxa NPort Administration Suite.
 
-    > [!NOTE]
-    > You can also set the operating mode of a COM port using the Moxa web interface. To open this interface, open a web browser, and enter the IP address of the NPort device.
+   > [!NOTE]
+   > You can also set the operating mode of a COM port using the Moxa web interface. To open this interface, open a web browser, and enter the IP address of the NPort device.
 
-4. Set the COM port in the Mobile Gateway configuration file.
+1. Set the COM port in the Mobile Gateway configuration file.
 
-    1. Open the file *Config.xml* in the folder *C:\\Skyline DataMiner\\Mobile Gateway\\*.
+   1. Open the file *Config.xml* in the folder *C:\\Skyline DataMiner\\Mobile Gateway\\*.
 
-    2. In the *\<Port>* tag, specify the virtual COM port you selected in step 2.5 in the *\<Nr>* tag, and if the port settings differ from the default port settings, also specify those settings.
+   1. In the *\<Port>* tag, specify the virtual COM port you selected in step 2.5 in the *\<Nr>* tag, and if the port settings differ from the default port settings, also specify those settings.
 
-        ```xml
-        <Port>
-          <Nr>6</Nr>
-          <Baudrate>9600</Baudrate>
-          <Parity>no</Parity>
-          <DataBits>8</DataBits>
-          <StopBits>1</StopBits>
-          <FlowCtrl>no</FlowCtrl>
-        <Port>
-        ```
+      ```xml
+      <Port>
+        <Nr>6</Nr>
+        <Baudrate>9600</Baudrate>
+        <Parity>no</Parity>
+        <DataBits>8</DataBits>
+        <StopBits>1</StopBits>
+        <FlowCtrl>no</FlowCtrl>
+      <Port>
+      ```
 
-    3. Save the XML file.
+   1. Save the XML file.

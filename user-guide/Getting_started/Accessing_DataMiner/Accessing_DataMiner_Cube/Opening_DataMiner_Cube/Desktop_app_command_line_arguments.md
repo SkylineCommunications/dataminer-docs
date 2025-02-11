@@ -22,8 +22,6 @@ Displays a custom alias ("Xyz") instead of the cluster name in the Cube header. 
 
 Starts the DataMiner Cube desktop application in the system tray. The application will only close when you close it explicitly via the context menu of the system tray icon.
 
-Available from DataMiner 10.1.0/10.0.9 onwards.
-
 ### /Bootstrap
 
 Combines the `/Install` and `/Silent` arguments and also copies a number of files, such as *DataMinerCube.exe.config* en *CubeLauncherConfig.json*.
@@ -34,25 +32,17 @@ Available from DataMiner 10.2.0/10.1.9 onwards.
 
 Opens the DataMiner Cube start window.
 
-Available from DataMiner 10.1.0/10.0.9 onwards.
-
 ### /Hostname=xyz
 
 Adds the DataMiner System with hostname "xyz" to the list of DataMiner Systems (if it has not been added yet).
-
-Available from DataMiner 10.1.0/10.0.9 onwards.
 
 ### /Install
 
 Checks if DataMiner Cube is installed. If not, the installation wizard is opened.
 
-Available from DataMiner 10.1.0/10.0.13 onwards.
-
 ### /Install /Silent
 
 Checks if DataMiner Cube is installed. If not, it is installed with the default options. Exits afterwards.
-
-Available from DataMiner 10.1.0/10.0.13 onwards.
 
 ### /InstallOptions
 
@@ -81,25 +71,17 @@ Opens DataMiner Cube and immediately connects to the DataMiner System specified 
 
 If no hostname argument was used, DataMiner Cube will connect to the DataMiner System that was last added to the list of DataMiner Systems.
 
-Available from DataMiner 10.1.0/10.0.9 onwards.
-
 ### /Modify
 
 Opens a window that allows you to modify the installation.
-
-Available from DataMiner 10.1.0/10.0.9 onwards.
 
 ### /Modify /Silent
 
 Allows the installation to be modified without any user interaction. Must be combined with `/ModifyOptions` to specify the modifications.
 
-Available from DataMiner 10.1.0/10.0.13 onwards.
-
 ### /ModifyOptions
 
 Can be combined with `/Modify` to preselect modifications in the modify UI, or with `/Modify /Silent` to specify the desired modifications.
-
-Available from DataMiner 10.1.0/10.0.13 onwards.
 
 Supported options:
 
@@ -120,49 +102,33 @@ PathToCubeExe.exe /Modify /Silent /ModifyOptions:ClearProtocolCache,ClearVisioCa
 
 Runs the DataMiner Cube desktop application without checking whether anything needs to be installed or upgraded.
 
-Available from DataMiner 10.1.0/10.0.9 onwards.
-
 ### /NoSelfUpdate
 
 Runs the currently installed version of the DataMiner Cube desktop application. If a newer version exists, no automatic upgrade will be performed.
-
-Available from DataMiner 10.1.0/10.0.9 onwards.
 
 ### /Position=x,y
 
 Opens the DataMiner Cube desktop application at position "x,y" of the current working area.
 
-Available from DataMiner 10.1.0/10.0.9 onwards.
-
 ### /UnInstall
 
 Uninstalls the DataMiner Cube desktop application.
-
-Available from DataMiner 10.1.0/10.0.9 onwards.
 
 ### /UnInstall /Silent
 
 Uninstalls the DataMiner Cube desktop application in silent mode (without UI).
 
-Available from DataMiner 10.1.0/10.0.9 onwards.
-
 ### /Update
 
 Combines `/UpdateClients` and `/UpdateLauncher`.
-
-Available from DataMiner 10.1.0/10.0.9 onwards.
 
 ### /UpdateClients
 
 Updates the Cube versions of all the DataMiner Systems to which you have connected in the last 100 days.
 
-Available from DataMiner 10.1.0/10.0.9 onwards.
-
 ### /UpdateLauncher
 
 Checks for newer versions of the DataMiner Cube desktop application on the 10 DataMiner Systems to which you connected last. If a newer version is found, the application will be automatically upgraded.
-
-Available from DataMiner 10.1.0/10.0.9 onwards.
 
 > [!NOTE]
 > If there is internet access, <https://dataminer.services> will be checked as well.

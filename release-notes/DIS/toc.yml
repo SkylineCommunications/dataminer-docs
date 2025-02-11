@@ -1,4 +1,8 @@
 items:
+  - name: DIS 3.1
+    topicUid: DIS_3.1
+  - name: DIS 3.0
+    topicUid: DIS_3.0
   - name: DIS 2.48
     topicUid: DIS_2.48
   - name: DIS 2.47

@@ -12,13 +12,15 @@ uid: Part7Reference
 
 - [Tools](xref:DataminerTools)
 
+- [Methods of Procedure](xref:MOP_Changing_the_default_password_for_Cassandra)
+
 - [Naming of elements, services, views, etc.](xref:NamingConventions)
 
 - [Obtaining a DataMiner license](xref:DataminerLicenses)
 
 - [Software support life cycles](xref:Software_support_life_cycles)
 
-- [Support services terms](xref:Support_services_terms)
+- [Feature overview](xref:Feature_overview)
 
 - [Soft-launch options](xref:SoftLaunchOptions)
 
@@ -31,8 +33,6 @@ uid: Part7Reference
 - [Technical information](xref:Connecting_devices_using_RS_232_RS_422_RS_485)
 
 - [Frequently asked questions](xref:faq)
-
-- [Methods of Procedure](xref:MOP_Changing_the_default_password_for_Cassandra)
 
 - [Glossary](xref:glossary_a_to_l)
 

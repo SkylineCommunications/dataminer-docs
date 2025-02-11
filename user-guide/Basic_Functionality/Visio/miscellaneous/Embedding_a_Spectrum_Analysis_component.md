@@ -4,7 +4,7 @@ uid: Embedding_a_Spectrum_Analysis_component
 
 # Embedding a Spectrum Analysis component
 
-From DataMiner 9.5.11 onwards, it is possible to embed a Spectrum Analysis component in Visio.
+It is possible to embed a Spectrum Analysis component in Visio.
 
 > [!NOTE]
 > Alternatively, it is also possible to embed a spectrum thumbnail. See [Linking a shape to an element parameter](xref:Linking_a_shape_to_an_element_parameter).
@@ -34,7 +34,7 @@ Configure the following shape data fields on the shape that is to contain the Sp
 > [!NOTE]
 >
 > - These options all support dynamic placeholders. Dynamic changes to the preset or measurement points will be applied immediately. Dynamic changes to view options will only be applied when a preset is loaded.
-> - Only public presets can be used in a Visual Overview, not private presets. In addition, up to DataMiner 9.6.1, the preset must have either the “(public)” suffix or “GLOBAL:” prefix.
+> - Only public presets can be used in a Visual Overview, not private presets.
 
 For example:
 

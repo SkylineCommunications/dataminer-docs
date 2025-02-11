@@ -1,30 +1,9 @@
 ---
 uid: Structure_of_the_offload_database
+keywords: central database
 ---
 
 # Structure of the offload database
-
-In this section:
-
-- [alarm table](#alarm-table)
-
-- [alarm_property table](#alarm_property-table)
-
-- [brainlink table](#brainlink-table)
-
-- [data table](#data-table)
-
-- [dataavg table](#dataavg-table)
-
-- [info table](#info-table)
-
-- [interface_alarm table](#interface_alarm-table)
-
-- [service_alarm table](#service_alarm-table)
-
-- [slenumvalues table](#slenumvalues-table)
-
-- [iStatus values](#istatus-values)
 
 ## alarm table
 

@@ -6,6 +6,8 @@ uid: DashboardIcon
 
 This component can be used to display an icon. Available from DataMiner 10.3.1/10.4.0 onwards.
 
+![Icon](~/user-guide/images/Icon.png)<br>*Icon component in DataMiner 10.4.6*
+
 - In the *Component > Settings* tab, select the icon you want to display in the list.
 
   You can also search for an icon by typing in keywords (e.g. "arrow").

@@ -1,5 +1,6 @@
 ---
 uid: ClassLibraryIntroduction
+description: The Skyline.DataMiner.Core.DataMinerSystem namespace defines types you can use to implement DataMiner-related logic in protocols and scripts.
 ---
 
 # Class library introduction
@@ -10,7 +11,7 @@ The namespace consists of three sub-namespaces:
 
 - [Skyline.DataMiner.Core.DataMinerSystem.Common](xref:Skyline.DataMiner.Core.DataMinerSystem.Common): This namespace contains all the types that can be used in both protocols and Automation scripts.
 - [Skyline.DataMiner.Core.DataMinerSystem.Protocol](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol): This namespace contains all the types that are only relevant in protocols.
-- [Skyline.DataMiner.Core.DataMinerSystem.Automation](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol): This namespace contains all the types that are only relevant in Automation scripts.
+- [Skyline.DataMiner.Core.DataMinerSystem.Automation](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation): This namespace contains all the types that are only relevant in Automation scripts.
 
 > [!IMPORTANT]
 >

@@ -4,7 +4,7 @@ uid: SLNetClientTest_forcing_file_sync
 
 # Forcing file synchronization between DMAs
 
-Usually, when two files have the exact same timestamp, these are not synchronized, even if the contents differ. From DataMiner 9.0.0 CU12 onwards, the SLNetClientTest tool allows you to carry out an advanced synchronization between Agents in a DMS, optionally also checking for differences between files that have the same timestamp.
+Usually, when two files have the exact same timestamp, these are not synchronized, even if the contents differ. The SLNetClientTest tool allows you to carry out an advanced synchronization between Agents in a DMS, optionally also checking for differences between files that have the same timestamp.
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

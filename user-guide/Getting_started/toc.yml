@@ -17,15 +17,15 @@ items:
           topicUid: Removing_a_DaaS_system
         - name: Frequently asked questions
           topicUid: Creating_a_DaaS_system_FAQ
-    - name: Installing a self-hosted DataMiner Agent
+    - name: Installing a self-managed DataMiner Agent
       topicUid: Installing_a_DataMiner_Agent
       items:
-        - name: Installing DataMiner using the DataMiner Installer
+        - name: Using a pre-installed DataMiner Virtual Hard Disk
+          topicUid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
+        - name: Using the DataMiner Installer
           topicUid: Installing_DM_using_the_DM_installer
         - name: Unattended DataMiner installation
           topicUid: Unattended_DM_installation
-        - name: Checking the DataMiner installation
-          topicUid: Checking_the_DM_installation
         - name: Regarding virtual servers
           topicUid: Regarding_virtual_servers
         - name: Regarding antivirus software
@@ -138,3 +138,7 @@ items:
     topicUid: Getting_started_community
   - name: Ziine Demo System
     topicUid: ZiineDemoSystem
+  - name: Tutorials
+    items:
+      - name: Creating your first element on a DaaS system
+        topicUid: Creating_your_first_element_on_a_DaaS_system

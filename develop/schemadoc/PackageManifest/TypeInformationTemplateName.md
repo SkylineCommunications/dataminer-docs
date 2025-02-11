@@ -4,7 +4,7 @@ uid: Manifest-TypeInformationTemplateName
 
 # TypeInformationTemplateName simple type
 
-Information template name.
+Information template name. This represents the file name.
 
 ## Content Type
 

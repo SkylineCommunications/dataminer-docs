@@ -13,4 +13,4 @@ uid: Deleting_a_user
 1. In the confirmation window, click *OK*.
 
 > [!NOTE]
-> If you want to delete an [automatically added domain user](xref:Types_of_users#automatically-added-domain-users), you will need to remove it from the domain group outside of DataMiner.
+> If you want to delete an [automatically added domain user](xref:Types_of_users#automatically-added-domain-users), you will need to remove that user from the domain group outside of DataMiner.

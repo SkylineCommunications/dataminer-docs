@@ -22,9 +22,9 @@ In a report URL, you can combine the following parameters to directly generate a
 
 > [!NOTE]
 >
-> - A “report-element” variable has to be added for every element that has to be included in the report.
-> - From DataMiner 9.5.3 onwards, it is possible to use the element name (using URL encoding) instead of the DMAID/ElementID combination.
-> - The “report-view” and “report-protocol” variables should only be used for report templates which can have an unspecified amount of elements.
+> - A "report-element" variable has to be added for every element that has to be included in the report.
+> - Instead of the DMAID/ElementID combination, you can also use the element name.
+> - The "report-view" and "report-protocol" variables should only be used for report templates which can have an unspecified amount of elements.
 > - All URL parameter values must be URL encoded. For more information, see <http://www.w3schools.com/tags/ref_urlencode.asp>.
 
 ## Examples of a report URLs

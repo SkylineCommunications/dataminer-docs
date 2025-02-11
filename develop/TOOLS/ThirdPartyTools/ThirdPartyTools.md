@@ -22,6 +22,7 @@ The following table lists some development tools that can be very useful while d
 |[SourceTree](xref:TOOSourceTree)     |SourceTree is a free Git UI tool.         |SCM         |
 |[TCPView](xref:TCPView)     |TCPView is a Windows program that can be used to check which process is using which port.         |Network         |
 |[TortoiseSVN](xref:TOOTortoiseSVN)     |TortoiseSVN is an Subversion (SVN) client, implemented as a Windows shell extension.         |SCM         |
-|[Visual Studio](xref:TOOVisualStudio)     |Visual Studio is an integrated development environment (IDE) from Microsoft.         |IDE         |
+|[Visual Studio](xref:Installation_procedure)     |Visual Studio is an integrated development environment (IDE) from Microsoft.         |IDE         |
 |[Visual Studio Code](xref:Visual_Studio_Code)     |Visual Studio Code is a free source-code editor from Microsoft.         |IDE         |
+|[WinDbg](xref:WinDbg)     |WinDbg is a tool for debugging that can be used for analyzing crash dumps, debugging live user mode and kernel mode code, and examining CPU registers and memory.        |Debugger         |
 |[Wireshark](xref:Wireshark)     |Wireshark is a free and open-source packet analyzer.         |Network         |

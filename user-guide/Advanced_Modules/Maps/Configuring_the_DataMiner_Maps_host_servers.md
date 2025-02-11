@@ -22,15 +22,15 @@ In this file, you can specify a DataMiner Maps configuration per (virtual) host.
 
 This subtag contains the `<GoogleMaps>` subtag. See [Attributes of the GoogleMaps tag](#attributes-of-the-googlemaps-tag).
 
-From DataMiner 9.5.8 onwards, it can have the following additional subtags:
+It can have the following additional subtags:
 
 | Tag | Description |
 |-----|-------------|
-| AppVersion | Use this tag to indicate whether only the legacy features for the Maps app should be supported ("0") or whether all new features (from DataMiner 9.5.8 onwards) should be supported ("1"). |
+| AppVersion | Use this tag to indicate whether only the legacy features for the Maps app should be supported ("0") or whether all recent features should be supported ("1"). |
 | MapsProvider | Use this tag to indicate whether to use Google Maps ("gmaps") or OpenStreetMap via the MapQuest API ("osm"). |
 | MapQuest | To use OpenStreetMap, specify an API key with the *key* attribute of this tag. |
 | OWM | To use the OpenWeatherMap features in combination with OpenStreetMap, specify an additional API key with the *key* attribute of this tag. |
-| TilesServer | Available from DataMiner 10.0.8 onwards. Can be used to make Open Street Maps available offline. However, this is only possible if *AppVersion* is set to "1" and *MapsProvider* is set to "OSM". For more information on how to configure this, see [Configuration of the TilesServer tag](#configuration-of-the-tilesserver-tag). |
+| TilesServer | Use this tag to make Open Street Maps available offline. However, this is only possible if *AppVersion* is set to "1" and *MapsProvider* is set to "OSM". For more information on how to configure this, see [Configuration of the TilesServer tag](#configuration-of-the-tilesserver-tag). |
 
 > [!NOTE]
 > If app version 1 is used, custom icons must be placed in the folder *C:\\Skyline DataMiner\\Webpages\\Maps\\v1\\images\\icons*.
@@ -63,7 +63,9 @@ The *TilesServer* tag contains a *BaseLayers* tag which in turn contains a *Base
 
 ## Installation and configuration of an offline maps server
 
-From DataMiner 10.0.8 onwards, Open Street Maps can be configured to be available offline. For this purpose, the *TilesServer* tag must be correctly configured in ServerConfig.xml, as detailed in [ServerConfig.xml syntax](#serverconfigxml-syntax). In addition, the offline server must be installed and configured. To do so:
+Open Street Maps can be configured to be available offline. For this purpose, the *TilesServer* tag must be correctly configured in ServerConfig.xml, as detailed in [ServerConfig.xml syntax](#serverconfigxml-syntax). In addition, the offline server must be installed and configured.
+
+To do so:
 
 1. Download Docker according to the instructions on the following page: <https://docs.docker.com/get-docker/>
 

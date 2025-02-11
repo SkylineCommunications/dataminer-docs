@@ -5,9 +5,9 @@ uid: Standalone_Elastic_Backup_Tool
 # Standalone Elastic Backup tool
 
 > [!NOTE]
-> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-managed storage even though this is not recommended, using [OpenSearch](xref:OpenSearch_database).
 
-From DataMiner 10.0.13 onwards, this tool allows you to back up and restore Elasticsearch database clusters. By default, it is available on a DMA in the folder `C:\Skyline DataMiner\Tools`.
+This tool allows you to back up and restore Elasticsearch database clusters. By default, it is available on a DMA in the folder `C:\Skyline DataMiner\Tools`. To get a full backup of the Elasticsearch cluster, you only need to execute the tool on one of the Elasticsearch nodes.
 
 > [!IMPORTANT]
 > The standalone Elastic Backup tool is being **deprecated** in favor of Elasticsearch's own snapshot functionality. We therefore recommend that you take database backups using the [Elasticsearch snapshot functionality](xref:Configuring_Elasticsearch_backups_Windows_Linux) instead.

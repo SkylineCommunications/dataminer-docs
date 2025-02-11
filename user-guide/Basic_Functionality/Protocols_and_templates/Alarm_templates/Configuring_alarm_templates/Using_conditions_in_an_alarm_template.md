@@ -10,6 +10,7 @@ In the *Condition* column, you can add conditions for the alarm triggering of se
 >
 > - When you specify a condition for a parameter in an alarm template, that parameter will only be monitored when the condition is false.
 > - Some protocols specify default conditions, which are automatically filled in. However, it is possible to override these.
+> - Using conditions in combination with hysteresis on the same parameter is not supported.
 
 When you click in the selection box in the *Condition* column, the following actions are possible:
 
@@ -39,10 +40,9 @@ When you click in the selection box in the *Condition* column, the following act
 
   > [!NOTE]
   >
-  > - Prior to DataMiner 10.0.5, filters can only refer to columns from a different table, if these are linked to the first table via foreign key. For example, in case of two tables Table A and Table B, where the foreign key of Table B is the primary key of Table A, in the alarm template for Table B, you can specify conditional alarm filters using columns from Table A. From DataMiner 10.0.5 onwards, filters can also refer to columns from another table if the tables are not linked.
-  > - From DataMiner 10.0.5 onwards, you can configure a condition on a column parameter based on the value of a cell in the same table or a different table. However, note that this is not supported for view table columns. Note also that if the monitored table and the table used in the condition are the same or are not related, the condition will be applied to all cells in the monitored column, but only when the cell specified in the condition changes. If the two tables are related, the condition will apply to all cells in the monitored column that are linked to the row containing the cell specified in the condition.
-  > - From DataMiner 9.5.13 onwards, if you configure a condition based on the value of a string parameter, it is possible to use the wildcards "\*" and "?".
-  > - From DataMiner 10.0.7 onwards, conditions are supported that check whether a parameter value is equal or not equal to “Not Initialized”, i.e. the value of a parameter that has not yet been set. To configure such a condition, click the *Value* field in the second part of the condition and select *Not initialized*.
+  > - You can configure a condition on a column parameter based on the value of a cell in the same table or a different table. However, note that this is not supported for view table columns. Note also that if the monitored table and the table used in the condition are the same or are not related, the condition will be applied to all cells in the monitored column, but only when the cell specified in the condition changes. If the two tables are related, the condition will apply to all cells in the monitored column that are linked to the row containing the cell specified in the condition.
+  > - If you configure a condition based on the value of a string parameter, you can use the wildcards "\*" and "?".
+  > - Conditions are supported that check whether a parameter value is equal or not equal to "Not Initialized", i.e. the value of a parameter that has not yet been set. To configure such a condition, click the *Value* field in the second part of the condition and select *Not initialized*.
 
 - Select an existing condition, if any are available. If necessary, click the pencil icon next to the selected condition to modify it.
 

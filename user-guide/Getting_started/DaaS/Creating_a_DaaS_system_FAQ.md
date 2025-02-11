@@ -1,5 +1,6 @@
 ---
 uid: Creating_a_DaaS_system_FAQ
+keywords: cloud faq
 ---
 
 # Frequently asked questions related to DaaS
@@ -8,8 +9,12 @@ uid: Creating_a_DaaS_system_FAQ
 
 DataMiner credits are a form of currency used to subscribe to DataMiner software and hosting services.
 
-> [!TIP]
-> For more information, see [Usage terms](xref:Pricing_Usage_based_service#usage-terms).
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>Unfamiliar with terms like "DataMiner credits"? Take a look at our list of <a href="xref:Pricing_Usage_based_service#usage-terms" style="color: #657AB7;">usage terms</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
 
 ### Where can I check the current DataMiner credit balance of my organization?
 
@@ -17,9 +22,13 @@ The DataMiner credit balance of an organization is displayed in the [Admin app](
 
 ### How can I acquire more DataMiner credits?
 
-You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner Credits](xref:Order_DataMiner_credits).
+You can order DataMiner credits through the Azure Marketplace. See [Order DataMiner credits](xref:Order_DataMiner_credits).
 
 For more information, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
+
+### When does maintenance take place on a DaaS system?
+
+See [DaaS Planned Maintenance Policy](xref:DaaS_Planned_Maintenance_Policy).
 
 ### When does a DaaS system expire?
 
@@ -30,7 +39,7 @@ A DataMiner Community Edition DaaS system will be scheduled to expire as soon as
 
 ### What happens when my DaaS system expires or is deleted?
 
-Your DaaS system along with all its associated resources and data will be irreversibly deleted.
+Your DaaS system along with all its associated resources and data will be decommissioned. The DataMiner System will still be recoverable for a further 7 days after the expiration or deletion. To recover the system, contact [daas@dataminer.services](mailto:daas@dataminer.services). The cloud identity and shares will be lost, and the system will receive a new cloud identity within your organization upon recovery.
 
 > [!NOTE]
 > If you are an owner of the organization of a DaaS system or an owner of a DaaS system, you will get an email notification if your system is about to expire, for example because you do not have enough DataMiner credits left. Depending on how many DataMiner credits you use for other purposes, you will get this notification up to 5 days before the system expires. Another email notification will be sent when the system effectively expires.
@@ -67,13 +76,11 @@ For more information, see [Data resilience and backups](xref:STaaS#data-resilien
 
 ### Is it possible to make a local backup of all data?
 
-You can set up your own offload or "central" database in your DaaS system at no additional subscription cost. That database will contain an offline copy of all (or some of) the data in the general DMA databases.
-
-See also: [Offload database](xref:Offload_database).
+This is currently not possible. Skyline takes regular backups of all systems, which they can use to restore systems. If you want to get access to a backup of your system, please contact <daas@dataminer.services>.
 
 ### Is it possible to copy data from Azure and store it locally?
 
-You can use the DataMiner API to copy data from Azure at no additional subscription cost.
+You can use the DataMiner API to copy data from Azure at no additional subscription cost. This requires a site-to-site VPN connection. To set up this connection, contact <daas@dataminer.services>.
 
 ### How can a DaaS system connect to on-premises and cloud resources?
 
@@ -90,3 +97,9 @@ Additional query costs may be due when using e.g. Azure ExpressRoute or Amazon C
 User management on DaaS systems is similar to that on on-premises system. Although local accounts are available by default, user accounts are typically integrated by an identity provider.
 
 See also: [User management](xref:User_management).
+
+## Are there specific limitations that apply for DaaS?
+
+As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS#limitations) also apply for DaaS.
+
+In addition, because of the additional security layer used in DaaS systems, at present, it is not possible to connect to a DaaS system using the [Web Services (v1)](xref:Using_the_Web_Services_v1).

@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_database_settings_in_Cube
+keywords: local database
 ---
 
 # Configuring the general database settings
@@ -24,6 +25,9 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the general database for the entire DMS, rather than one Cassandra cluster per DMA), configure the settings as follows:
 
 1. Go to *Apps* > *System Center* > *Database*.
+
+   > [!NOTE]
+   > From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, the *Database* > *General* page is no longer available if you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), as it is not possible to customize the database configuration of a DaaS system.
 
 1. Choose **Type**: *Database per cluster*.
 

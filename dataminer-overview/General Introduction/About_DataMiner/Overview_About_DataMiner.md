@@ -1,68 +1,79 @@
 ---
 uid: Overview_About_DataMiner
+description: DataMiner is a standard, widely adopted and endorsed, modular, open, and fully independent software platform, empowering Digital Transformation.
 ---
 
 # About DataMiner
 
-DataMiner is a standard, proven and very widely adopted and endorsed, modular, open, and fully independent software platform, empowering your Digital Transformation.
+## Your answer to today's unpredictable world
 
-The success of Digital Transformation programs is the result of:
+The world is becoming more connected, data-driven, and unpredictable, with technology evolving at an ever-accelerating pace. Organizations sit on a wealth of data, yet struggle to fully capitalize on it because of fragmented technologies and inadequate solutions.
 
-- bringing together **[people](#people)** who have knowledge about the business domain and technology,
-- choosing the right DevOps **[platform](#platform)** and tooling
-- adhering to an agile deployment **[methodology](#methodology)**.
+They face two options:
 
-![People Platform Methodology](~/dataminer-overview/images/People_platform_methodology.png)
+- Build a custom data-driven architecture, only to find it prohibitively expensive, time-consuming, complex, and misaligned with their unique needs.
+- Rely on fragmented point solutions, leading to spiraling costs, stifled innovation, loss of data ownership, and integration pitfalls.
 
-## People
+Both paths ultimately fall short, leaving organizations unable to unlock the true value of their data in a secure, sustainable, scalable, and impactful way.
 
-As a company, we have broad experience in the different areas that contribute to the success of a Digital Transformation program. With over 300 ICT and DevOps engineers globally, the Skyline Communications team partners with its global user base on a daily basis to digitize operations and technical workloads. Focus is deeply embedded into our DNA, as is our commitment to continuous growth of expertise working with ICT media & entertainment, data, and broadband companies all the time.
+The solution is an **agile, data-driven platform purpose-designed to empower organizations to fully capitalize on their data and controls**. It achieves this by seamlessly consolidating and unifying data and controls from diverse sources and assets, digitizing the entire organization, enabling people with actionable insights, fostering digital collaboration with third parties, optimizing resource utilization, and unlocking untapped innovation potential — all with unmatched efficiency and speed.
 
-## Platform
+## DataMiner xOps Platform
 
-In today’s rapidly changing environment, a flexible platform and toolset are essential to **handle the highest-priority workflows first and fast**. Across all complexity, businesses and teams constantly need to adapt and improve.
+In an era of ever more rapid and unpredictable change, an agile data-driven operation is the essential cornerstone of success for any forward-looking corporation, industry, or society.
 
-Looking at modern operational environments, there are many systems in place to run services (data and control plane), manage infrastructure, orchestrate services, and manage business processes (billing, customer care, etc.). Infrastructure functions are increasingly disaggregated (e.g. SDN and NFV) and distributed across on-premises equipment, cloud platforms, and services (SaaS). New software systems and tooling are deployed at a fast speed. Consequently, it has become difficult to achieve the required availability of the services delivered while avoiding excessive and continuously growing infrastructure costs. **Automation and resource planning** have become essential capabilities to any operation.
+DataMiner is a trailblazing transformational xOps platform that:
 
-Business applications are evolving in a similar manner. As businesses continuously evolve and adapt to user needs, so do ICT teams continuously introduce additional tooling. For order processing, CRM, billing, media asset rights, and so on, the modern back office relies on a mixture of standard ICT tools such as ServiceNow, Salesforce.com, or simple Grafana dashboards, and specialist tools such as WHATS’ON for content rights management, satellite carrier planning systems, etc. Of course, every enterprise wants to **limit the number of tools** to the minimum, as each additional tool multiplies the number of interactions (API integrations) in the ecosystem, increases security concerns, and comes with additional training and maintenance costs.
+- **Enables you to fast-track your digital transformation journey** and focus on capitalizing on the strategic benefits. As a purpose-built xOps platform, DataMiner seamlessly spans your technology, operations, and business. It is the fastest and most cost-efficient solution to transform into a fully digitized organization and to start operating as an agile data-driven powerhouse.
 
-In between all infrastructure and business systems sits an **emerging category of DevOps tools**. In fact, both infrastructure and business systems are no longer "canned" products. Instead they are platforms that can be tuned to the required scale, function, and preferred deployment model (on-premises, VMs, Dockers, public cloud, etc.). As a result, DevOps engineers import an ever-growing number of DevOps tools that help build their pipelines: Jenkins, Puppet, Python, Terraform, Elasticsearch, etc. In practice, organizations have little or no configuration management in this area of the business, resulting in high dependencies on the knowledge and tooling owned by DevOps individuals.
+- **Enables you to generate unparalleled value towards the goals of your organization**, by empowering you to evolve faster and more continuously than ever before, and to excel in the quest for better, faster, and cheaper in the new emerging data-driven era. DataMiner's game-changing proposition ensures that you can easily and efficiently empower your people with data and controls, create secure digital relationships with third parties, optimize your operation across the board, and transform your products and services.
 
-While each tool in the ecosystem used to have its reason of existence, that may no longer be the case over time. In addition, different tools may not be integrated with each other as they should, creating **silos of operation and knowledge**. This is where **DataMiner comes into play as the platform of choice to connect and integrate infrastructure platforms with operational and business systems and workflows, resulting in a real agile, data-driven, and automated operation.** DataMiner is the platform of choice of many users, as it is proven to be best in class to glue together existing systems as needed, and its many powerful features can be used to digitize the overall operation in accordance with its users' preferences.
+Transform your organization quickly and effectively into an agile data-driven powerhouse with DataMiner, excel in the new xOps world, and achieve unparalleled value creation.
 
-![Platform in detail](~/dataminer-overview/images/agile_datadriven_automated_operation.png)
+## What is DataMiner going to deliver to you?
 
-DataMiner is a **modular platform**: you select your priorities and use cases, and pick the DataMiner modules you need to achieve your goals.
+Better, faster, and cheaper. And this in countless different ways across your entire organization and all conceivable aspects of it, in a continuous cycle of improvement and innovation, ensuring ever-growing value creation over time. This makes DataMiner not only a highly strategic investment but also one with unrivaled returns.
 
-1. DataMiner comes with a horizontally scalable **data acquisition and control plane, fully agnostic to data formats, data sources, protocols, event log formats, and vendors**. The acquisition ingests any data from external sources and can be enriched to create additional data sets using for example synthetic testing.
+After all, in a highly virtualized and digitized world, everything revolves around data and intelligent control of your resources. Whatever your goals and priorities are, DataMiner is your solution to make it a tangible reality, in a fast and efficient manner. Cost reduction, optimizing utilization of resources, proactively managing your operation, hardening security, reducing your footprint, and much more. In the future it all revolves around data and controls, and your ability to leverage those easily and efficiently.
 
-1. Keeping a full mirror of your operation is table stakes to create a data-driven and automated operation. The DataMiner **"digital twin"** contains all operational collected KPIs with full history, service and resource scheduling, and provisioning data, but also any business-related data such as contacts, contracts, costing and billing, etc. You can also manage administrative business-related data at scale, entirely customized to your operation, with DataMiner Object Models (DOM). While some of the data resides in the Cassandra and OpenSearch/Elasticsearch storage managed by DataMiner itself, it is also possible to access ad hoc data sources external to the DataMiner System.
+## Key qualities of DataMiner
 
-1. From the ground up, DataMiner has been engineered to be the **best-in-class NMS/EMS system, fully agnostic to the managed technologies**. Not only does DataMiner come with **full FCAPS enterprise features**, the platform also has specialist components tailored to media, data, and broadband applications: easy-to-use button panels, spectrum analysis, etc.
+DataMiner features a radically innovative and purpose-driven design, perfectly aligned with the core objectives of digital transformation. It stands out as the definitive solution for organizations aiming to unlock tangible value in a fully digitized future — outperforming any other platforms in efficiency, scalability, and strategic impact.
 
-1. **Automation and orchestration** are essential to any business today. DataMiner comes with three flavors:
+- **Empowering you to generate value**: DataMiner empowers people to seamlessly and efficiently convert data and controls into measurable value, helping them achieve their goals with precision and speed.
 
-   - A built-in scripting editor and run-time environment, true DevOps style.
-   - A Service and Resource Management (SRM) suite: scheduling, automation, and orchestration.
-   - A Process Automation (PA) module that takes care of business processes and user tasks, and that seamlessly executes service and resource technical workflows as well. This is the glue between your business activities and your infrastructure.
+- **Continuous evolution**: DataMiner fosters continuous evolution, empowering you to operate with maximum agility. It enables you to continuously reevaluate the rapidly changing landscape — technology, business, and market dynamics — and confidently navigate it with precision and insight.
 
-1. Systems and people can only act if there is an **easy and intuitive way to consume data and insights**. DataMiner comes with a broad set of capabilities to explore, analyze, and prepare data for easy consumption. Users can access and aggregate any and all data from the DataMiner digital twin in a unified and generic manner. The **DataMiner Generic Query Interface (GQI)** makes it easy for engineers, operators, and business people to access the data of their interest. **DataMiner dashboards** add a rich set of visualization snippets on top, which can be consumed on any screen, and which can be used by anyone to compose their own dashboards. The **DataMiner Low-Code Apps** take this one step further, bundling many dashboards together, and adding context, navigation, and controls, so that each team and tenant in the supply chain now has their own application they can construct, tailored to their needs, all retrieving data from that single digital twin data lake, ensuring that everybody stays in sync at all times. DataMiner is an **open platform**, so we make it easy to consume data from other tools like Power BI, Grafana, etc. **DataMiner User-Defined APIs** accommodate this in the easiest possible manner: the dynamic and tailored API does all the hard work, and the external systems get the results in a single query. Any DataMiner DevOps engineer can develop APIs and publish them in a secure manner.
+- **Dealing with challenges by design**: DataMiner is purpose-built to tackle the challenges of the present age, such as surging security risks and growing complexity. Its intentional design keeps your focus on delivering value and achieving your strategic goals without distraction.
 
-   ![Digital twin overview](~/dataminer-overview/images/DigitaL_Twin_overview.png)<br>
-   *Open this image in a new tab to view the full resolution.*
+## Key functions of DataMiner
 
-1. **Artificial intelligence (AI)** is part of our daily life, and media and broadband operations are no different. **DataMiner AI-powered augmented operations** come with an ever-growing suite of features including forecasting trend analysis, behavioral anomaly detection, pattern matching, and much more. A dedicated team of Skyline data analysts is committed to executing the most challenging AI roadmap in the industry of operational support systems.
+DataMiner features a system architecture geared towards converting data and controls from across an entire organization into value towards that organization's goals — effortlessly, efficiently, and continuously. With DataMiner in place, you are equipped to operate with unmatched efficiency and agility, thriving as a fully digitized organization.
 
-1. Collaboration and multi-tenant operations across the supply chain are essential to running a digital enabled business. **dataminer.services** (a.k.a. the DataMiner Cloud Platform or DCP) comes with a portfolio of services to facilitate just that: Teams ChatOps, data sharing, Project Collaboration, online DataMiner DevOps services such as the Catalog, etc. Much more is to come, as the vast majority of DataMiner Systems deployed today are all connected to the dataminer.services.
+- **Unsurpassed data acquisition and control**: With DataMiner, you can confidently and very efficiently integrate and ingest any imaginable type of data and controls into your digital twin, including real-time technology data and controls from hardware, software, and cloud services, as well as any business, operational, and organizational data.
 
-1. Finally, our users and community deploy the modular DataMiner platforms for a [**myriad of different uses**](https://community.dataminer.services/use-cases/):
+- **Unified real-time digital twin**: With DataMiner, you have a unified and fully standardized digital representation of your entire organization at your disposal. This game-changing digital twin seamlessly combines business processes and operational flows, as well as live technology assets including hardware, software, and cloud services.
 
-   production studio – MCR – playouts - multi-screen OTT - video headends - cloud pipelines – SaaS - cloud platforms - ICT data centers - ad insertion - VoD pipelines - Media Asset Management - EPG meta data management - IP L3 networks - IP L2 VLAN networks - CDN networks - optical networks - broadcast SNG - contribution & exchange networks - inter studio networks - core backbones - DTH - DVB-T - ISDB-T - ATSC networks - enterprise VSAT - consumer VSAT - satellite teleports - satellite downlinks - GEO networks - MEO and LEO constellations - DOCSIS networks - DSL access networks - 4G/5G fixed mobile networks - FTTx networks - 5G RAN - 5G broadcast - CDN - IoT - EPG metadata - CPE broadband gate fixed wireless - CPE mobile - WiFi networks - KQI management - ticket and incident management - incident resolution - inventory management - planned maintenance management - facility management - rack management - configuration management - software management - BPM business process management
+- **Easy-to-use transformational functions**: With DataMiner, you can leverage a plethora of sophisticated out-of-the-box functions to convert data and controls into value. Anything you can wish for, ranging from basic monitoring to cutting-edge AI functions, performance management, comprehensive fault management, hyper-automation, innovative process workflows, resource-aware orchestration, and much more.
 
-**DataMiner sample applications** are available for DevOps teams and for the community, to start from real-life examples while creating solutions. Over time, an extensive library of those apps will instantly be accessible from dataminer.services.
+- **Flexible and secure data and control consumption**: With DataMiner in place, you can empower your entire organization and far beyond with select data, comprehensive insights, and secure intuitive controls, leveraging the most optimal methods, including intuitive UIs, APIs, collaboration tools, AI agents, and much more.
 
-## Methodology
+## Connecting the dots that drive success
 
-Our engagement with you follows the **agile principles**. To ensure your success, our teams focus on what brings value to you first.
+Success in any organization depends on the ability to connect critical dots across every stage of operations — from understanding what resources are available and planning their use, to deploying them effectively, monitoring their performance, and turning insights into smarter decisions.
 
-Skyline’s **agile coaches** help out to guide and support both your and Skyline's teams so they can walk flawlessly through that process, building on the rich set of experience we have obtained to focus on essentials. Our engagement model is built on a **partnership**, so your teams will need to participate to make any project a success. Working in an agile manner avoids spending time and resources on things that do not matter to your company. In other words, agile engagement is essential to deliver at the lowest cost.
+These steps are not isolated tasks: they are part of a continuous, interconnected flow. However, all too often they remain fragmented across silos, tools, and workflows. DataMiner bridges those gaps. It creates a seamless flow of information and actions, ensuring every stage feeds into the next with precision and clarity.
+
+The result? Fewer blind spots, better decisions, and a more agile organization ready to adapt, optimize, and deliver results.
+
+Inventorying > Planning > Reserving > Scheduling > Designing > Deploying > Configuring > Validating > Controlling > Monitoring > Observing > Automating > Reporting > Analyzing > Optimizing > Forecasting
+
+## Open by design - powerful by nature
+
+Often you want the freedom of "Do it yourself", but you know it inevitably comes with an exorbitant cost, effort, and risk. Other times, you want the speed of out-of-the-box solutions but are held back by the inevitable compromises, lack of differentiation, and missed opportunities. With DataMiner, you get the best of both worlds: freedom without complexity and efficiency without compromise.
+
+- **Maximum creative freedom**: As a transformational platform, DataMiner features a pronounced open architecture. From data ingest and control, through digital twin modeling, workflows, and automation all the way up to data and control consumption, there are simply no limits to your creativity. If you can dream it, DataMiner can deliver it. Enjoy the benefits of doing things yourself, but at unsurpassed efficiency and at a fraction of the cost.
+
+- **Standard solutions**: With DataMiner, you can tap into an ever-growing abundance of standard out-of-the-box solutions, accelerating your journey. Benefit from out-of-the-box convenience, without compromising your freedom to innovate, to differentiate yourself, and to capitalize on every opportunity.
+
+- **Community power**: With DataMiner, you are not just adopting a leading platform or enjoying the backing from Skyline as a long-term strategic partner; you are also joining a vibrant, global community of innovators, experts, and forward-thinkers. Whether you are looking for inspiration, collaboration, or proven blueprints for success, the DataMiner community provides an invaluable foundation for accelerating your innovation and maximizing your outcomes.

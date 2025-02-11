@@ -6,6 +6,8 @@ uid: UsingTheCollapsibleSidePanel
 
 For each alarm tab, you can open a side panel in the Alarm Console showing the real-time value and history of a selected alarm.
 
+![Alarm Console side panel](~/user-guide/images/Alarm_Console_Side_Panel.png)<br>*Collapsible side panel of the Alarm Console in DataMiner 10.4.5*
+
 You can open the side panel of an alarm tab in three ways:
 
 - Right-click an alarm, and select *Show side panel*.
@@ -16,11 +18,13 @@ You can open the side panel of an alarm tab in three ways:
 
 In the side panel:
 
-- The top section contains the name of the element in alarm and an overview of its alarm state in the last twenty-four hours. Click this section to open the element card.
+![Side panel](~/user-guide/images/Side_Panel.png)<br>*Collapsible side panel of the Alarm Console in DataMiner 10.4.5*
 
-- Below this is the parameter section, which contains the current value of the parameter and an overview of the parameter state in the last twenty-four hours. If the parameter in alarm is trended, click this section to see the trend graph.
+- The top section contains the name of the element in alarm and an overview of its alarm state in the last twenty-four hours (1). Click this section to open the element card.
 
-- The bottom section displays more information about the alarms in the alarm tree.
+- Below this is the parameter section, which contains the current value of the parameter and an overview of the parameter state in the last twenty-four hours (2). If the parameter in alarm is trended, click this section to see the trend graph.
+
+- The bottom section displays more information about the alarms in the alarm tree (3).
 
 You can hide the side panel in three ways:
 

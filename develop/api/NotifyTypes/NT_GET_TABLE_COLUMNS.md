@@ -22,7 +22,3 @@ object[] valueColumn = (object[])columns[1];
 ## Return Value
 
 - (object[]): Array containing object arrays for each returned column. In case an error occurred, a null reference will be returned.
-
-## Remarks
-
-- Supported since DataMiner version 7.5.0.

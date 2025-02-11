@@ -12,6 +12,6 @@ None.
 
 ## Output
 
-| Item                          | Format | Description                                    |
-|-------------------------------|--------|------------------------------------------------|
+| Item                         | Format | Description                                    |
+|------------------------------|--------|------------------------------------------------|
 | GetDataMinerAPIVersionResult | String | The version of the DataMiner Web Service APIs. |

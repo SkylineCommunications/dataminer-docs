@@ -4,10 +4,11 @@ uid: ConfiguringACustomAlertSoundForAnAlarmTab
 
 # Configuring a custom alert sound for an alarm tab
 
-From DataMiner 9.5.1 onwards, it is possible to make Cube display a custom alert sound when an alarm enters an alarm tab or increases in severity while it is not yet acknowledged or read (depending on the settings). This is possible for all alarm tabs except tabs showing history alarms or alarms in a sliding window.
+It is possible to configure Cube to display a custom alert sound when an alarm enters an alarm tab or increases in severity while it is not yet acknowledged or read (depending on the settings). This is possible for all alarm tabs except tabs showing history alarms or alarms in a sliding window.
 
 > [!NOTE]
-> - If you open Cube on a client machine that does not have Windows Media Player installed, it will not be possible to use this feature.
+>
+> - If you open Cube on a client machine that does not have Windows Media Player installed, this feature will not be available.
 > - If you do not have the right to add audio files, you will not be able to select the *Audible alert* option as long as no audio files have been added yet. Cube checks for the availability of these files when you connect, so if another user adds a file, the *Audible alert* option becomes available after a reconnect.
 
 To do so:

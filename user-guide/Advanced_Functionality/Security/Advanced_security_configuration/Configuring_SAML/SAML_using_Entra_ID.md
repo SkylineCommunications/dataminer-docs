@@ -39,6 +39,9 @@ To set up external authentication, you first need to create an enterprise applic
 
    1. Click *Create your own application*.
 
+      > [!IMPORTANT]
+      > You need administrator permissions to create your own application.
+
    1. Select *Integrate another application you don’t find in the gallery* and click *Create*.
 
 1. In the pane on the left, go to *Users and groups*.
@@ -57,6 +60,8 @@ To set up external authentication, you first need to create an enterprise applic
 1. Configure the following settings for the basic SAML configuration:
 
    1. Set *Entity ID* to the IP address or the DNS name of your DataMiner System, for example ``https://dataminer.example.com/``.
+
+      If your DMS consists of DMAs accessible via different URLs or IP addresses, choose one URL or IP address to use as the entity ID.
 
    1. Under *Reply URL*, specify the following URL(s), replacing ``dataminer.example.com`` with the IP address or DNS name of your DataMiner System (note the trailing "/"):
 
@@ -88,15 +93,20 @@ To set up external authentication, you first need to create an enterprise applic
 
         - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
 
+      > [!NOTE]
+      > If your DMS consists of DMAs accessible via different URLs, specify all of those URLs under *Reply URL*, as detailed above. Otherwise, if a URL is used that is not specified there, this will result in an error.
+
       ![Editing the basic SAML configuration](~/user-guide/images/SAML_Reply_URLs.png)
 
    1. Set *Sign on URL* to the IP address or DNS name of your DataMiner System, for example ``https://dataminer.example.com/``.
+
+      If your DMS consists of DMAs accessible via different URLs, specify only the most commonly used URL here.
 
    1. In the top-left corner, click *Save*.
 
 1. Still on the *Single sign-on* page, look for the *SAML Certificates* section and copy the *App Federation Metadata Url*.
 
-   You will need this later when [configuring DataMiner.xml](#configuring-dataminerxml-to-use-external-authentication).
+   You will need this later, for the *ipMetadata* [configuration in DataMiner.xml](#configuring-dataminerxml-to-use-external-authentication).
 
 ### Creating a DataMiner metadata file
 
@@ -139,13 +149,13 @@ To set up external authentication, you first need to create an enterprise applic
      ```xml
        <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
          ...
-         <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/" index="1" isDefault="true"/>
+         <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/" index="1" isDefault="false"/>
          <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking" index="2" isDefault="false"/>
          <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/" index="3" isDefault="false"/>
        </md:SPSSODescriptor>
      ```
 
-1. Replace [ENTITYID] with the IP address or the DNS name of your DataMiner System. This must be the same as the *Entity ID* you specified while setting up the Microsoft Entra ID Enterprise application.
+1. Replace [ENTITYID] with the URL or IP address you specified as the *Entity ID* while setting up the Microsoft Entra ID Enterprise application.
 
 1. Replace ``https://dataminer.example.com`` with the IP address or the DNS name of your DataMiner System. The specified URL(s) must match the *Reply URL* you specified while setting up the Microsoft Entra ID Enterprise application.
 
@@ -220,7 +230,7 @@ Once authentication has been configured, you need to make sure users are provisi
 
    - *Object ID* (optional from 10.3.11/10.4.0 onwards<!-- RN 37162 -->)
 
-   - *Tenant ID*
+   - *Directory (tenant) ID*
 
    These GUIDs identify the application (DataMiner) in the Entra ID platform, and identify the users & groups directory on the Azure portal, respectively. You will need these later in this procedure.
 
@@ -261,6 +271,11 @@ Once authentication has been configured, you need to make sure users are provisi
      clientSecret="[the DataMiner application secret value]" />
    ```
 
+   - **tenantId**: Directory (tenant) ID from Azure.
+   - **objectId**: Object ID from Azure.
+   - **clientId**: Application (client) ID from Azure.
+   - **clientSecret**: The client secret you created earlier.
+
 1. Save the file and restart DataMiner.
 
    > [!NOTE]
@@ -280,8 +295,11 @@ Once authentication has been configured, you need to make sure users are provisi
 
    - Microsoft Graph > Application.Read.All – Application – Read applications
 
-     > [!NOTE]
-     > From DataMiner 10.3.12 onwards, the *Application.Read.All* permission is optional. However, if you do not enable this permission, you will not get a warning if your client secret is about to expire, so we **strongly recommend that you enable this**. If this is enabled, you will get the following notice in the Alarm Console when appropriate: *Your Azure AD application's client secret is expiring soon.*
+   > [!IMPORTANT]
+   > For the GroupMember.Read.All, User.Read.All and Application.Read.All permissions, administrator permissions are required.
+
+   > [!NOTE]
+   > From DataMiner 10.3.12 onwards, the *Application.Read.All* permission is optional. However, if you do not enable this permission, you will not get a warning if your client secret is about to expire, so we **strongly recommend that you enable this**. If this is enabled, you will get the following notice in the Alarm Console when appropriate: *Your Azure AD application's client secret is expiring soon.*
 
 1. Open DataMiner Cube and log in with an existing Administrator account.
 
@@ -312,9 +330,11 @@ While it is possible to use DataMiner versions prior to DataMiner 10.1.11/10.2.0
 
    - *Object ID* (optional from 10.3.11/10.4.0 onwards<!-- RN 37162 -->)
 
-   - *Tenant ID*
+   - *Directory (tenant) ID*
 
    These GUIDs identify the application (DataMiner) in the Entra ID platform, and identify the users & groups directory on the Azure portal, respectively. You will need these later in this procedure.
+
+   ![SAML application info](~/user-guide/images/SAML_application_info.png)
 
    > [!NOTE]
    > Do not use the *Object ID* under *Azure Active Directory > Enterprise applications > [your application name]*. This is a different Object ID, which will not work for this procedure.
@@ -338,6 +358,11 @@ While it is possible to use DataMiner versions prior to DataMiner 10.1.11/10.2.0
      username="[username]"
      password="[password]" />
    ```
+
+   - **tenantId**: Directory (tenant) ID from Azure.
+   - **objectId**: Object ID from Azure.
+   - **clientId**: Application (client) ID from Azure.
+   - **username/password**: The username and password of the Entra ID user account that DataMiner will use to request data from Azure.
 
 1. Save the file and restart DataMiner.
 

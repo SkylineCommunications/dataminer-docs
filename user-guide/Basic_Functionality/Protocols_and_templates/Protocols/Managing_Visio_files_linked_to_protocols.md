@@ -30,7 +30,7 @@ To set a different Visio file as the active file for a particular protocol:
 1. In the context menu, select *Set as active \[protocol name\] protocol Visio file* and then select *Custom*, *Protocol Default* or *General Default*, depending on which of the configured Visio files you wish to use.
 
 > [!NOTE]
-> From DataMiner 10.0.11 onwards, it is also possible to assign a Visio file to one element only, without affecting the Visio files available for the protocol. For more information, see [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
+> You can also assign a Visio file to one element only, without affecting the Visio files available for the protocol. For more information, see [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
 
 ### Switching between Visio files for services or views
 

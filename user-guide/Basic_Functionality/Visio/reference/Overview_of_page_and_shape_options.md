@@ -1,5 +1,6 @@
 ---
 uid: Overview_of_page_and_shape_options
+description: When you configure shape data in Visio to enrich a drawing with DataMiner functionality, you can add many different options to pages or shapes.
 ---
 
 # Overview of page and shape options
@@ -37,7 +38,9 @@ See [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_com
 
 Shape-level option.
 
-Used with an alarm timeline component in order to display custom text when no timelines are displayed. See [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component).
+Used with an alarm timeline component in order to display custom text when no timelines are displayed.
+
+See [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component).
 
 ## AllowCentralConnectivity
 
@@ -53,19 +56,25 @@ Shape-level option.
 
 Used to completely disable a parameter control shape.
 
- See [Dynamically disabling a parameter control](xref:Turning_a_shape_into_a_parameter_control#dynamically-disabling-a-parameter-control).
+See [Dynamically disabling a parameter control](xref:Turning_a_shape_into_a_parameter_control#dynamically-disabling-a-parameter-control).
+
+## AllowCustomIndex
+
+Shape-level option.
+
+See [Making a shape use a different index than that of the original row](xref:Generating_shapes_based_on_table_rows#making-a-shape-use-a-different-index-than-that-of-the-original-row).
 
 ## AllowDynamicShapeType=ParameterControl
 
 Shape-level option.
 
-Used to allow dynamic shape behavior of parameter control shapes from DataMiner 9.0.0 CU5 onwards.
+Used to allow dynamic shape behavior of parameter control shapes.
 
 See [Allowing dynamic shape behavior](xref:Turning_a_shape_into_a_parameter_control#allowing-dynamic-shape-behavior).
 
 ## AllowEmptyDynamicValues
 
-Shape-level option.
+Page- and shape-level option.
 
 Can be used as an option on any shape to show it even when some dynamic values have not yet resolved.
 
@@ -73,18 +82,18 @@ Can be used as an option on any shape to show it even when some dynamic values h
 
 Shape-level option.
 
-Available from DataMiner 10.0.11 onwards. By default, child shapes of an *Element* or *View* shape automatically inherit the shape data of the parent shape. In cases where you want to e.g. link a child shape to another service or element, you can use this option to disable this automatic inheritance.
+By default, child shapes of an *Element* or *View* shape automatically inherit the shape data of the parent shape. In cases where you want to e.g. link a child shape to another service or element, you can use this option to disable this automatic inheritance.
 
 > [!NOTE]
 >
 > - This renders the option *NoCopyElementProperty* obsolete, since this option does the same thing for *Element* shapes only.
-> - From DataMiner 10.0.0 \[CU14\]/10.1.0 \[CU3\]/10.1.6 onwards, this option can also be used for element shapes that are a child of another element shape, to ensure that these do not inherit the service context of the parent if they have no service context of their own. This inheritance does not occur prior to DataMiner 10.0.0 \[CU13\]/10.1.0 \[CU2\]/10.1.5.
+> - This option can also be used for element shapes that are a child of another element shape, to ensure that these do not inherit the service context of the parent if they have no service context of their own. This inheritance does not occur in earlier DataMiner versions.
 
 ## ArrangeMode
 
 Page-level option.
 
-When rearranging dynamically positioned shapes in a Visio drawing using drag and drop, by default you have to click the *Apply* button to save the changes. However, if you add the page-level “*ArrangeMode=Immediate*” option, the new position of a shape is saved as soon as you drop that shape onto the page.
+When rearranging dynamically positioned shapes in a Visio drawing using drag and drop, by default you have to click the *Apply* button to save the changes. However, if you add the page-level `ArrangeMode=Immediate` option, the new position of a shape is saved as soon as you drop that shape onto the page.
 
 See [Re-arranging dynamically positioned shapes](xref:Re-arranging_dynamically_positioned_shapes#re-arranging-dynamically-positioned-shapes).
 
@@ -116,15 +125,13 @@ See [Turning a shape into a control to update a session variable](xref:Turning_a
 
 Page-level option.
 
-Available from DataMiner 9.5.5 onwards. Use this option to keep the page canvas from expanding automatically when the *NoAutoScale* option has been added.
-
-See [NoAutoScale](xref:Overview_of_page_and_shape_options).
+Use this option to keep the page canvas from expanding automatically when the [NoAutoScale](xref:Overview_of_page_and_shape_options) option has been added.
 
 ## ClosePage
 
 Shape-level option.
 
-Available from DataMiner 9.6.1 onwards. Use this option to automatically close the page containing the shape after the shape’s main action has been executed.
+Use this option to automatically close the page containing the shape after the shape’s main action has been executed.
 
 See [Optional configuration](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing#optional-configuration).
 
@@ -132,7 +139,7 @@ See [Optional configuration](xref:Making_a_shape_display_a_particular_page_of_th
 
 Shape-level option.
 
-Available from DataMiner 10.0.0/10.0.2 onwards. Use this option to avoid gaps in the visualization of a service instance.
+Use this option to avoid gaps in the visualization of a service instance.
 
 See [Generating the connectivity chain for an SRM service instance](xref:Generating_the_connectivity_chain_for_an_SRM_service_instance).
 
@@ -164,7 +171,7 @@ See [Displaying connection properties](xref:Options_for_displaying_DCF_connectio
 
 Page-level option.
 
-Deprecated. Use “ActivePathHighlighting” instead.
+Deprecated. Use [ActivePathHighlighting](#activepathhighlighting) instead.
 
 See [Highlighting connections from a Connectivity.xml chain](xref:Options_for_highlighting_DCF_connections#highlighting-connections-from-a-connectivityxml-chain).
 
@@ -210,7 +217,7 @@ See [Hiding all connections of an element](xref:Options_for_displaying_DCF_conne
 
 Shape-level option.
 
-Available from DataMiner 9.5.2 onwards. Used when retrieving the value of a table parameter using a subscription filter, in order to avoid situations where this value is incorrectly resolved as a parameter ID to subscribe on.
+Used when retrieving the value of a table parameter using a subscription filter, in order to avoid situations where this value is incorrectly resolved as a parameter ID to subscribe on.
 
 See [Retrieving and showing the value of a table parameter using a subscription filter](xref:Linking_a_shape_to_an_element_parameter#retrieving-and-showing-the-value-of-a-table-parameter-using-a-subscription-filter).
 
@@ -221,13 +228,13 @@ Page-level option.
 Use this option if you do not want users to be able to zoom in or out.
 
 > [!NOTE]
-> From DataMiner 9.0 onwards, zooming is disabled by default on any Visual Overview pages that contain an embedded web browser control. However, it can be enabled again with the EnableZoom option. See [EnableZoom](xref:Linking_a_shape_to_a_webpage#enablezoom).
+> Zooming is disabled by default on any Visual Overview pages that contain an embedded web browser control. However, it can be enabled with the [EnableZoom](xref:Linking_a_shape_to_a_webpage#enablezoom) option.
 
 ## DisposeWebBrowserWhenNotSelectedPage=\[true/false\]
 
 Shape-level option.
 
-By default, DataMiner Cube disposes of embedded web browser controls when you change pages in a Visio drawing. If you want to override this default behavior, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to “*DisposeWebBrowserWhenNotSelectedPage=false*”. As a result, the web browser control will only be disposed of when you close the card.
+By default, DataMiner Cube disposes of embedded web browser controls when you change pages in a Visio drawing. If you want to override this default behavior, add a shape data field of type **Options** to the shape containing the web browser control, and set its value to `DisposeWebBrowserWhenNotSelectedPage=false`. As a result, the web browser control will only be disposed of when you close the card.
 
 See [DisposeWebBrowserWhenNotSelectedPage](xref:Linking_a_shape_to_a_webpage#disposewebbrowserwhennotselectedpage).
 
@@ -243,7 +250,7 @@ See [Triggering an action when a shape is dragged onto another shape](xref:Trigg
 
 Shape-level option.
 
-Available from DataMiner 10.0.9 onwards. Can be added to shapes displaying parameter values. Set this option to true to convert large values to more legible values with a different unit (e.g. to convert 1000 Mb to 1 Gb). The following units are converted out of the box: bytes (B), bits (b), bits per second (bps), bytes per second (Bps) and Kibibytes (kiB). For other units, the dynamic conversion must be defined in the element’s protocol.
+Can be added to shapes displaying parameter values. Set this option to true to convert large values to more legible values with a different unit (e.g. to convert 1000 Mb to 1 Gb). The following units are converted out of the box: bytes (B), bits (b), bits per second (bps), bytes per second (Bps) and Kibibytes (kiB). For other units, the dynamic conversion must be defined in the element’s protocol.
 
 From DataMiner 10.3.0/10.2.3 onwards, this feature can instead be enabled by the *DynamicUnits* [soft-launch option](xref:SoftLaunchOptions), and you can use the *DynamicUnits=\[true/false\]* option on a shape to override the default behavior determined by the soft-launch option.
 
@@ -284,6 +291,7 @@ See [Disabling the indication that a page or shape is loading](xref:Disabling_th
 Shape-level option.
 
 Used in order to connect views with DCF connections.
+
 See [Enabling view connections](xref:Options_for_displaying_DCF_connections#enabling-view-connections).
 
 ## EnableZoom
@@ -328,7 +336,7 @@ FixedWidth=<px>|MinWidth=<px>|MaxWidth=<px>|FixedHeight=<px>|MinHeight=<px>|MaxH
 >
 > - When the maximum size is reached, the content is centered on the card.
 > - When the minimum size is reached, the content is shown in a scroll viewer.
-> - When page scrollbars are visible, you can use the mouse wheel to scroll the page. Use CTRL+Scroll to zoom.
+> - When page scrollbars are visible, you can use the mouse wheel to scroll the page. Use Ctrl+Scroll to zoom.
 
 ## FollowInput
 
@@ -366,7 +374,7 @@ See [Making connections inherit alarm colors](xref:Options_for_displaying_DCF_co
 
 Shape-level option.
 
-Available from DataMiner 9.5.1 onwards. Used to override the default table loading behavior when dynamically positioning shapes.
+Used to override the default table loading behavior when dynamically positioning shapes.
 
 See [Overriding the default table loading behavior](xref:Positioning_shapes_dynamically1#overriding-the-default-table-loading-behavior).
 
@@ -404,7 +412,7 @@ Deprecated. Use [ForcePropertyFromShape](#forcepropertyfromshape) instead.
 
 Shape-level option.
 
-Available from DataMiner 9.5.3 onwards. Used in case a child element of a child service is displayed in the Visual Overview of a parent service, in order to display the full alarm state of the child element, instead of only the alarm state of the element parameters included in the child service.
+Used in case a child element of a child service is displayed in the Visual Overview of a parent service, in order to display the full alarm state of the child element, instead of only the alarm state of the element parameters included in the child service.
 
 ## Hidden
 
@@ -434,7 +442,7 @@ See [Generating shapes that represent alarms](xref:Generating_shapes_that_repres
 
 Page-level option.
 
-When connectivity has been defined in a drawing, you can use the “*HideConnectionLines*” option to hide the connections between the shapes in a connectivity chain.
+When connectivity has been defined in a drawing, you can use the *HideConnectionLines* option to hide the connections between the shapes in a connectivity chain.
 
 ## HideWhenScheduled
 
@@ -446,7 +454,7 @@ Use this option if you want a shape to be hidden when the element to which it is
 
 Shape-level option.
 
-Available from DataMiner 9.5.12 onwards. Used in order to display an animated shape on a highlighted connection.
+Used in order to display an animated shape on a highlighted connection.
 
 See [Displaying an animated shape on highlighted connections](xref:Options_for_highlighting_DCF_connections#displaying-an-animated-shape-on-highlighted-connections).
 
@@ -454,7 +462,7 @@ See [Displaying an animated shape on highlighted connections](xref:Options_for_h
 
 Page-level option.
 
-Use this option to highlight a chain when a shape or connection in the chain is clicked. Alternatively, you can also use this option along with the "ConnectivityLines" option in order to visualize connectivity using manually drawn lines.
+Use this option to highlight a chain when a shape or connection in the chain is clicked. Alternatively, you can also use this option along with the [ConnectivityLines](#connectivitylines) option in order to visualize connectivity using manually drawn lines.
 
 See [Using existing lines as connectivity lines](xref:Options_for_displaying_DCF_connections#using-existing-lines-as-connectivity-lines) and [Controlling highlighting when using physical connectors](xref:Options_for_highlighting_DCF_connections#controlling-highlighting-when-using-physical-connectors).
 
@@ -486,7 +494,7 @@ See [Conditionally applying a highlight style](xref:Options_for_highlighting_DCF
 
 Shape-level option.
 
-Available from DataMiner 9.5.1 onwards. Allows you to configure the behavior of the horizontal scrollbar of a text block control.
+Allows you to configure the behavior of the horizontal scrollbar of a text block control.
 
 See [Creating a text block control](xref:Creating_a_text_block_control).
 
@@ -494,7 +502,7 @@ See [Creating a text block control](xref:Creating_a_text_block_control).
 
 Page- and shape-level option.
 
-Available from DataMiner 9.5.14 onwards. Allows you to specify a different hover style for shapes.
+Allows you to specify a different hover style for shapes.
 
 See [Configuring the hover area of a shape](xref:Configuring_the_hover_area_of_a_shape).
 
@@ -502,7 +510,7 @@ See [Configuring the hover area of a shape](xref:Configuring_the_hover_area_of_a
 
 Page-level option.
 
-Available from DataMiner 9.5.1 onwards. Used in order to ignore the internal structure of elements for path highlighting.
+Used in order to ignore the internal structure of elements for path highlighting.
 
 See [Ignoring internal connections](xref:Options_for_highlighting_DCF_connections#ignoring-internal-connections).
 
@@ -518,7 +526,7 @@ See [Linking a shape to a calculation involving multiple parameters](xref:Linkin
 
 Shape-level option.
 
-By default, when you right-click a Visio drawing displayed in a shape, the shortcut menu of the Visio drawing containing that shape will appear. If you want a Visio drawing inside a shape to have its own shortcut menu, add a shape data field of type **Options** to the shape displaying the Visio drawing, and set its value to “*InlineVisioContextMenuVisible*”.
+By default, when you right-click a Visio drawing displayed in a shape, the shortcut menu of the Visio drawing containing that shape will appear. If you want a Visio drawing inside a shape to have its own shortcut menu, add a shape data field of type **Options** to the shape displaying the Visio drawing, and set its value to *InlineVisioContextMenuVisible*.
 
 See [Making a shape display a particular page of the current Visio drawing](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing).
 
@@ -574,7 +582,7 @@ See [Displaying connections when some interfaces are missing](xref:Options_for_d
 
 Shape-level option.
 
-Available from DataMiner 9.5.9 onwards. Used to link DCF connection properties.
+Used to link DCF connection properties.
 
 See [Linking connection properties](xref:Options_for_displaying_DCF_connections#linking-connection-properties).
 
@@ -582,7 +590,7 @@ See [Linking connection properties](xref:Options_for_displaying_DCF_connections#
 
 Shape-level option.
 
-Available from DataMiner 9.5.12 onwards. Used in order to configure the interval of an animation on a highlighted connection.
+Used in order to configure the interval of an animation on a highlighted connection.
 
 See [Displaying an animated shape on highlighted connections](xref:Options_for_highlighting_DCF_connections#displaying-an-animated-shape-on-highlighted-connections).
 
@@ -590,7 +598,7 @@ See [Displaying an animated shape on highlighted connections](xref:Options_for_h
 
 Shape-level option.
 
-Available from DataMiner 9.5.12 onwards. Used in order to configure the speed of an animation on a highlighted connection.
+Used in order to configure the speed of an animation on a highlighted connection.
 
 See [Displaying an animated shape on highlighted connections](xref:Options_for_highlighting_DCF_connections#displaying-an-animated-shape-on-highlighted-connections).
 
@@ -614,7 +622,7 @@ See [Keeping a shape from turning into a spectrum thumbnail](xref:Linking_a_shap
 
 Shape-level option.
 
-Available from DataMiner 9.5.1 onwards. Determines the maximum number of hops that are displayed when a signal path is automatically generated.
+Determines the maximum number of hops that are displayed when a signal path is automatically generated.
 
 See [Generating the DCF signal path of a particular element and interface](xref:Generating_the_DCF_signal_path_of_a_particular_element_and_interface).
 
@@ -622,7 +630,7 @@ See [Generating the DCF signal path of a particular element and interface](xref:
 
 Shape-level option.
 
-Available from DataMiner 9.5.1 onwards. Determines the maximum number of parent element shapes in a single column when a signal path is automatically generated.
+Determines the maximum number of parent element shapes in a single column when a signal path is automatically generated.
 
 See [Generating the DCF signal path of a particular element and interface](xref:Generating_the_DCF_signal_path_of_a_particular_element_and_interface).
 
@@ -665,15 +673,13 @@ If you use this option, the Visio page will not be centered on the card. Instead
 
 Shape-level option.
 
-Obsolete from DataMiner 10.0.11 onwards. Use the [AllowInheritance=False](#allowinheritancefalse) option instead.
-
-By default, child shapes of a Visio shape that is linked to a service or an element automatically inherit the element shape data of the parent shape. In cases where you want to e.g. link a child shape to another service or element, you can use the *NoCopyElementProperty* option to disable this automatic inheritance.
+Obsolete. Use the [AllowInheritance=False](#allowinheritancefalse) option instead.
 
 ## NoDefaultContextMenu
 
 Shape-level option.
 
-If you want to disable the default right-click menu of a shape, then add a shape data field of type **Options** to the shape, and set its value to “*NoDefaultContextMenu*”.
+If you want to disable the default right-click menu of a shape, then add a shape data field of type **Options** to the shape, and set its value to *NoDefaultContextMenu*.
 
 ## NoDragText
 
@@ -687,7 +693,7 @@ See [Triggering an action when a shape is dragged onto another shape](xref:Trigg
 
 Shape-level option.
 
-Available from DataMiner 9.5.1 onwards. Used to keep a shape from being duplicated when generating the DCF signal path.
+Used to keep a shape from being duplicated when generating the DCF signal path.
 
 See [Generating the DCF signal path of a particular element and interface](xref:Generating_the_DCF_signal_path_of_a_particular_element_and_interface).
 
@@ -721,20 +727,20 @@ Page- and shape-level option.
 
 When you are configuring a large number of shapes linked to different elements, but you do not need any element-specific formatting from files like *description.xml*, *informations.xml*, or *port.xml*, you can use the shape option “*NonElementProtocol*” to enhance the overall performance of the Visio drawing.
 
-This option can be used in shapes linked to elements, parameters, matrices, session variables, parameter summaries, and parameter controls. From DataMiner 9.0.1 onwards, this option can also be used on a page, so that it is applied to all shapes on that page.
+This option can be used in shapes linked to elements, parameters, matrices, session variables, parameter summaries, and parameter controls. It can also be used on a page, so that it is applied to all shapes on that page.
 
 > [!NOTE]
 >
 > - In case of grouped shapes, this property should only be specified on the main shape, except if you use dynamic placeholders in the subshapes (e.g. \[param:...\], \[property:...\], etc.).
-> - From DataMiner 9.0.2 onwards, this option can also be applied system-wide. See [Activating the NonElementProtocol option system-wide](xref:Configuration_of_DataMiner_processes#activating-the-nonelementprotocol-option-system-wide).
-> - From DataMiner 9.0.3 onwards, this option can be used with a “*=True*” or “*=False*” suffix, so that it can be easily enabled or disabled.
+> - This option can also be applied system-wide. See [Activating the NonElementProtocol option system-wide](xref:Configuration_of_DataMiner_processes#activating-the-nonelementprotocol-option-system-wide).
+> - You can use this option with a `=True` or `=False` suffix, so that it can be easily enabled or disabled.
 > - A shape-level *NonElementProtocol* option will override a page-level *NonElementProtocol* option, and a page-level *NonElementProtocol* option will override the system-level *NonElementProtocol* option in the *MaintenanceSettings.xml* file.
 
 ## NoSelectionFilters
 
 Shape-level option.
 
-Available from DataMiner 9.5.1 onwards. Used in order to disable the automatic subscription filter when using dynamic shape positioning or dynamic shape generation in an EPM environment.
+Used in order to disable the automatic subscription filter when using dynamic shape positioning or dynamic shape generation in an EPM environment.
 
 See [Disabling the automatic selection filter in an EPM environment](xref:Positioning_shapes_dynamically1#disabling-the-automatic-selection-filter-in-an-epm-environment) and [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows).
 
@@ -742,7 +748,7 @@ See [Disabling the automatic selection filter in an EPM environment](xref:Positi
 
 Shape-level option.
 
-If a shape is linked to an element, a service, a view or a redundancy group, then you can use the “*OpenInNewCard*” option to make that element, service, view or redundancy group open in a new card.
+If a shape is linked to an element, a service, a view or a redundancy group, then you can use the *OpenInNewCard* option to make that element, service, view or redundancy group open in a new card.
 
 See [Having the Visio drawing opened in a new card](xref:Linking_a_shape_to_an_element_a_service_or_a_redundancy_group#having-the-visio-drawing-opened-in-a-new-card).
 
@@ -763,7 +769,7 @@ You can for example use this to have multiple pages with the same name in DataMi
 
 Shape-level option.
 
-Available from DataMiner 9.5.4 onwards. Used in order to disable rescaling of a shape when dynamic zooming is used.
+Used in order to disable rescaling of a shape when dynamic zooming is used.
 
 See [Disabling rescaling of a particular shape](xref:Enabling_dynamic_zoom_on_dynamically_positioned_shapes#disabling-rescaling-of-a-particular-shape).
 
@@ -779,7 +785,7 @@ See [Turning a shape into a control to update a session variable](xref:Turning_a
 
 Shape-level option.
 
-Available from DataMiner 9.5.12 onwards. Used to position shapes dynamically based on the rotation center of the shape instead of the physical center.
+Used to position shapes dynamically based on the rotation center of the shape instead of the physical center.
 
 See [Positioning shapes based on their rotation point](xref:Positioning_shapes_dynamically1#positioning-shapes-based-on-their-rotation-point).
 
@@ -831,7 +837,7 @@ See [Linking a shape to an element based on DCF connections](xref:Linking_a_shap
 
 Shape-level option.
 
-Available from DataMiner 9.5.3 onwards. Used to subscribe to internal connections when dynamic positioning is used.
+Used to subscribe to internal connections when dynamic positioning is used.
 
 See [Subscribing to internal connections when using dynamic positioning](xref:Options_for_displaying_DCF_connections#subscribing-to-internal-connections-when-using-dynamic-positioning).
 
@@ -847,7 +853,7 @@ See [Making shapes selectable](xref:Making_shapes_selectable).
 
 Shape-level option.
 
-Available from DataMiner 10.0.3 onwards. Used to disable path highlighting when a connection line is clicked.
+Used to disable path highlighting when a connection line is clicked.
 
 See [Disabling path highlighting when a connection line is clicked](xref:Options_for_highlighting_DCF_connections#disabling-path-highlighting-when-a-connection-line-is-clicked).
 
@@ -855,7 +861,7 @@ See [Disabling path highlighting when a connection line is clicked](xref:Options
 
 Page-level option.
 
-Makes the text of a “Selectable” shape get copied to a session variable when that shape is clicked.
+Makes the text of a "Selectable" shape get copied to a session variable when that shape is clicked.
 
 See [Making a selectable shape get copied to a session variable](xref:Making_shapes_selectable#making-a-selectable-shape-get-copied-to-a-session-variable).
 
@@ -869,7 +875,7 @@ Use this option if you want a shape to be shown when the element to which it is 
 
 Shape-level option.
 
-Available from DataMiner 9.5.6 onwards. Used to always pass an authentication ticket to an embedded webpage, regardless of the content of the URL.
+Used to always pass an authentication ticket to an embedded webpage, regardless of the content of the URL.
 
 See [SingleSignOn](xref:Linking_a_shape_to_a_webpage#singlesignon).
 
@@ -885,7 +891,7 @@ See [Making subshapes execute parameter sets or Automation scripts on the elemen
 
 Shape-level option.
 
-Available from DataMiner 9.5.4 onwards. Up to DataMiner 9.5.4, when an asterisk ("\*") is used in shape data to refer to an element, view or service, the asterisk is replaced with the first element ID, view ID or service ID that is found from the parent shape upwards, but the current shape is not checked. From DataMiner 9.5.4 onwards, however, the current shape is checked as well. If, for reasons of backwards compatibility, you want the asterisk character to be resolved from the parent shape, add the *StartResolvingFromParent* option to the shape that has to retrieve the element, view or service reference.
+By default, when an asterisk ("\*") is used in shape data to refer to an element, view, or service, the asterisk is replaced with the first element ID, view ID, or service ID that is found, starting from the current shape. If you want the asterisk character to be resolved starting from the parent shape instead, add the *StartResolvingFromParent* option to the shape that has to retrieve the element, view, or service reference.
 
 > [!NOTE]
 > If no element or service reference can be found in either of the parent shapes, the element or service to which the Visio file is assigned will be used to resolve the asterisk.
@@ -894,7 +900,7 @@ Available from DataMiner 9.5.4 onwards. Up to DataMiner 9.5.4, when an asterisk 
 
 Shape-level option.
 
-Available from DataMiner 9.5.1 onwards. Use this option to draw connection lines using a pathing algorithm.
+Use this option to draw connection lines using a pathing algorithm.
 
 See [Using a pathing algorithm to display connection lines](xref:Options_for_displaying_DCF_connections#using-a-pathing-algorithm-to-display-connection-lines).
 
@@ -902,7 +908,7 @@ See [Using a pathing algorithm to display connection lines](xref:Options_for_dis
 
 Shape-level option.
 
-Available from DataMiner 9.5.14 onwards. Use this option to configure an alternative style for tab controls.
+Use this option to configure an alternative style for tab controls.
 
 See [Turning a shape into a tab control that displays pages of a Visio file](xref:Turning_a_shape_into_a_tab_control_that_displays_pages_of_a_Visio_file).
 
@@ -910,13 +916,13 @@ See [Turning a shape into a tab control that displays pages of a Visio file](xre
 
 Shape-level option.
 
-Available from DataMiner 9.5.8 onwards. See [Dynamically selecting shape templates for dynamically positioned shapes](xref:Positioning_shapes_dynamically1#dynamically-selecting-shape-templates-for-dynamically-positioned-shapes).
+See [Dynamically selecting shape templates for dynamically positioned shapes](xref:Positioning_shapes_dynamically1#dynamically-selecting-shape-templates-for-dynamically-positioned-shapes).
 
 ## UseIE
 
 Shape-level option.
 
-Available from DataMiner 10.0.10 onwards. Allows you to embed an Internet Explorer web browser control. However, note that this browser is **deprecated** and using this option is therefore not recommended.
+Allows you to embed an Internet Explorer web browser control. However, note that this browser is **deprecated** and using this option is therefore not recommended.
 
 See [UseIE](xref:Linking_a_shape_to_a_webpage#useie).
 
@@ -924,7 +930,7 @@ See [UseIE](xref:Linking_a_shape_to_a_webpage#useie).
 
 Shape-level option.
 
-Available from DataMiner 9.6.3 onwards. Allows you to embed a Chromium web browser control.
+Allows you to embed a Chromium web browser control.
 
 See [UseChrome](xref:Linking_a_shape_to_a_webpage#usechrome).
 
@@ -957,7 +963,7 @@ Available from DataMiner 10.2.0/10.1.10 onwards. See [Linking a shape to a resou
 
 Shape-level option.
 
-Available from DataMiner 9.5.1 onwards. Allows you to configure the behavior of the vertical scrollbar of a text block control.
+Allows you to configure the behavior of the vertical scrollbar of a text block control.
 
 See [Creating a text block control](xref:Creating_a_text_block_control).
 
@@ -973,7 +979,7 @@ See [Depending on the current value of a parameter or a property](xref:Condition
 
 Page- and shape-level option.
 
-Available from DataMiner 9.5.9 onwards. Used to limit the scope of a session variable to the current card.
+Used to limit the scope of a session variable to the current card.
 
 See [Indicating the scope of the variable](xref:Turning_a_shape_into_a_control_to_update_a_session_variable#indicating-the-scope-of-the-variable).
 

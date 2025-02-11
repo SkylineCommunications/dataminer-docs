@@ -12,11 +12,11 @@ uid: General_Main_Release_10.0.0_new_features_1
 
 ### DMS core functionality
 
-#### DataMiner Indexing \[ID_13370\]\[ID_13406\]\[ID_13504\]\[ID_13571\]\[ID_13623\]\[ID_13622\]\[ID_13629\] \[ID_13695\]\[ID_13769\]\[ID_13912\]\[ID_14001\]\[ID_14038\]\[ID_16287\]\[ID_16896\]\[ID_16915\]\[ID_16935\] \[ID_16959\]\[ID_17081\]\[ID_17166\]\[ID_17328\]\[ID_17851\]\[ID_18562\]\[ID_18714\]\[ID_19337\]\[ID_19437\] \[ID_19443\]\[ID_19691\]\[ID_20373\]\[ID_20845\]\[ID_20998\]\[ID_21205\]\[ID_21257\]\[ID_21634\]\[ID_22378\] \[ID_22927\]\[ID_23049\]\[ID_23998\]\[ID_24054\]\[ID_24158\]
+#### DataMiner Indexing \[ID 13370\]\[ID 13406\]\[ID 13504\]\[ID 13571\]\[ID 13623\]\[ID 13622\]\[ID 13629\] \[ID 13695\]\[ID 13769\]\[ID 13912\]\[ID 14001\]\[ID 14038\]\[ID 16287\]\[ID 16896\]\[ID 16915\]\[ID 16935\] \[ID 16959\]\[ID 17081\]\[ID 17166\]\[ID 17328\]\[ID 17851\]\[ID 18562\]\[ID 18714\]\[ID 19337\]\[ID 19437\] \[ID 19443\]\[ID 19691\]\[ID 20373\]\[ID 20845\]\[ID 20998\]\[ID 21205\]\[ID 21257\]\[ID 21634\]\[ID 22378\] \[ID 22927\]\[ID 23049\]\[ID 23998\]\[ID 24054\]\[ID 24158\]
 
 On DataMiner Agents running Cassandra, it is possible to install a dedicated indexing database (e.g. Elasticsearch). If this so-called Indexing Engine is installed, new search features will now become available in the Alarm Console. Additional features are also being developed that will make use of the Indexing Engine in the future.
 
-##### **Indexing system requirements**
+##### Indexing system requirements
 
 DataMiner Indexing Engine can only be installed on DataMiner Agents with the following characteristics:
 
@@ -110,13 +110,13 @@ Once DataMiner Indexing has been installed, it is possible to change the backup 
 
 Once DataMiner Indexing Engine has been installed, the *Search & Indexing* section in System Center contains an additional *Enable indexing on alarms* option. This option must be enabled in order to use the new Alarm Console features mentioned below.
 
-There is also a button available that can be used to migrate booking data to the Indexing database. For more information, see [DataMiner Cube: New 'Migrate booking data to Indexing Engine' wizard \[ID_21935\]\[ID_23674\] \[ID_24410\]\[ID_24424\]](xref:General_Main_Release_10.0.0_new_features_5#dataminer-cube-new-migrate-booking-data-to-indexing-engine-wizard-id_21935id_23674-id_24410id_24424).
+There is also a button available that can be used to migrate booking data to the Indexing database. For more information, see [DataMiner Cube: New 'Migrate booking data to Indexing Engine' wizard \[ID 21935\]\[ID 23674\] \[ID 24410\]\[ID 24424\]](xref:General_Main_Release_10.0.0_new_features_5#dataminer-cube-new-migrate-booking-data-to-indexing-engine-wizard-id-21935id-23674-id-24410id-24424).
 
 ##### Enhanced search in alarm tab pages
 
 When you open a new alarm tab page in the Alarm Console while connected to a DataMiner Agent that has indexing enabled on alarms, a search box at the top of that alarm tab page will now allow you to search for particular alarms or information events.
 
-You can also right-click text in the Alarm Console while holding the left CTRL key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select “Search for \<text> in new tab”. This will open a new tab with the text in question filled in in the search box.
+You can also right-click text in the Alarm Console while holding the left Ctrl key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select “Search for \<text> in new tab”. This will open a new tab with the text in question filled in in the search box.
 
 Next to the search box, you can select a timespan (default: last 24 hours). When you start typing in the search box, the most relevant suggestions that are returned by the server will be displayed below. If a suggestion is too large to be displayed completely, you will be able to view it completely by hovering the mouse over it. However, if it consists of multiple lines, only the first line will be displayed.
 
@@ -151,13 +151,13 @@ In the Users / Groups module, in the category *Modules* > *System configuration
 
 - *Configure*: Determines whether the user can make any changes to the Indexing Engine configuration.
 
-##### **Indexing log information**
+##### Indexing log information
 
 Log information about the Indexing Engine can be found in a new “Search” log file in the *Logging* section of *System Center*.
 
 In addition, the system will continuously monitor the connection with the Indexing database. If for some reason a node of the Indexing database goes down, an alarm will be displayed in the Alarm Console.
 
-##### **GetIndexCountRequest method**
+##### GetIndexCountRequest method
 
 A new *GetIndexCountRequest* method has been added in DataMiner, which can be used to retrieve the number of documents in the indexing database.
 
@@ -167,14 +167,14 @@ This method can for instance be used as follows for a logger table:
 GetIndexCountRequest<LoggerTableData> message = new GetIndexCountRequest<LoggerTableData>(new LoggerTableDataIndex(503,52,1000));
 ```
 
-#### DataMiner Agents upgraded to Microsoft .NET Framework 4.6 \[ID_19816\]\[ID_20005\]
+#### DataMiner Agents upgraded to Microsoft .NET Framework 4.6 \[ID 19816\]\[ID 20005\]
 
 DataMiner Agents have been upgraded to Microsoft .NET Framework 4.6. As such, this version of the Microsoft .NET Framework is now required in order to be able to upgrade DataMiner.
 
 > [!NOTE]
 > When upgrading a .NET Framework installation, it is recommended to always upgrade to the latest version.
 
-#### Enhanced services: Alarm counters per severity per element \[ID_19917\]
+#### Enhanced services: Alarm counters per severity per element \[ID 19917\]
 
 Version 1.0.0.7 of the “Skyline Service Definition Basic” protocol is now able to count the alarms in an enhanced service per severity per element.
 
@@ -190,7 +190,7 @@ For this purpose, the following columns have been added to the table with parame
 | 114 | read | double          | Service_Element_Status_Alarm_Count_Timeout  |
 | 115 | read | double          | Service_Element_Type                        |
 
-#### New Job Manager app \[ID_19964\]\[ID_20130\]\[ID_20583\]\[ID_21098\]\[ID_21180\]\[ID_21422\]\[ID_21660\] \[ID_21724\]\[ID_21767\]\[ID_21940\]\[ID_22289\]\[ID_22331\]\[ID_22772\]\[ID_22758\]\[ID_22823\]\[ID_22895\] \[ID_22909\]\[ID_22913\]\[ID_22966\] \[ID_22988\]\[ID_23007\]\[ID_23042\]\[ID_23049\]\[ID_23790\]
+#### New Job Manager app \[ID 19964\]\[ID 20130\]\[ID 20583\]\[ID 21098\]\[ID 21180\]\[ID 21422\]\[ID 21660\] \[ID 21724\]\[ID 21767\]\[ID 21940\]\[ID 22289\]\[ID 22331\]\[ID 22772\]\[ID 22758\]\[ID 22823\]\[ID 22895\] \[ID 22909\]\[ID 22913\]\[ID 22966\] \[ID 22988\]\[ID 23007\]\[ID 23042\]\[ID 23049\]\[ID 23790\]
 
 A new DataMiner Job Manager app is available, which can be used to create and manage jobs, which are then distributed to the SRM applications, so that the necessary bookings can be generated.
 
@@ -317,7 +317,7 @@ A number of new methods have been added to the Web Services API v1 to support th
 - UpdateJobTemplate
 - UpdateJobsSectionDefinition
 
-#### SLSNMPManager: A notification will now be generated when a received SNMPv3 trap cannot be processed \[ID_20340\]
+#### SLSNMPManager: A notification will now be generated when a received SNMPv3 trap cannot be processed \[ID 20340\]
 
 When an SNMP manager receives an SNMPv3 trap or inform message that cannot be processed (e.g. due to authentication problems), it will now generate a notification.
 
@@ -327,7 +327,7 @@ Note that for this feature to work, the *SNMPv3* tag in the DMA’s *DataMiner.
 <SNMPv3 trapPort="362" generateNoticeOnIncorrectTrapReceived="true" />
 ```
 
-#### DataMiner.xml: New WarningThreshold tag to configure when license limit warning messages must be generated \[ID_20714\]
+#### DataMiner.xml: New WarningThreshold tag to configure when license limit warning messages must be generated \[ID 20714\]
 
 When a DMA is approaching the limit of its element license, by default warning messages are generated. From now on, it is possible to customize when these messages are generated using the WarningThreshold tag.
 
@@ -345,7 +345,7 @@ For example, if you specify the following, warnings will only be generated once 
 <WarningThreshold>0.99</WarningThreshold>
 ```
 
-#### New alarm color defaults in SLNetTypes.dll \[ID_20862\]
+#### New alarm color defaults in SLNetTypes.dll \[ID 20862\]
 
 If the DataMiner.xml file does not contain alarm color overrides, DataMiner will use the default alarm colors that are hard-coded in the SLNetTypes.dll file. Those hard-coded default colors have now been updated. See the following list.
 
@@ -364,14 +364,14 @@ If the DataMiner.xml file does not contain alarm color overrides, DataMiner will
 | notice       | 204,204,204 |
 | information  | 204,204,204 |
 
-#### Information event will be generated when a TTL setting is changed \[ID_21265\]
+#### Information event will be generated when a TTL setting is changed \[ID 21265\]
 
 From now on, an information event will be generated when a TTL setting is changed by a user or an Automation script.
 
 > [!NOTE]
 > Information events of this type will have a description that starts with “\[TTL\]”.
 
-#### New option to disable SNMP trap distribution in DMS \[ID_21389\]
+#### New option to disable SNMP trap distribution in DMS \[ID 21389\]
 
 It is now possible to disable SNMP trap distribution in a DataMiner cluster. To do so, add the tag *SnmpTrapDistribution* in the file *DataMiner.xml* and set it to false.
 
@@ -385,7 +385,7 @@ Example:
 </DataMiner>
 ```
 
-#### Enhanced service element protocols now referred to as 'service protocols' instead of 'service definitions' \[ID_21854\]
+#### Enhanced service element protocols now referred to as 'service protocols' instead of 'service definitions' \[ID 21854\]
 
 In DataMiner, up to now, two different concepts were referred to as a “service definition”:
 
@@ -394,7 +394,7 @@ In DataMiner, up to now, two different concepts were referred to as a “service
 
 In order to avoid confusion, from now on, the first of the above-mentioned concepts will be referred to as a “service protocol”.
 
-#### Cassandra: Number of connection retries is now configurable \[ID_22194\]
+#### Cassandra: Number of connection retries is now configurable \[ID 22194\]
 
 In the *DB.xml* file, it is now possible to specify how many times you want the SLDataGateway process to try to connect to the Cassandra database at startup.
 
@@ -413,7 +413,7 @@ Default value: 60 times (with 30-second intervals)
 > [!NOTE]
 > If Cassandra is still unreachable after SLDataGateway has tried to connect for the maximum number of times specified in the \<ConnectionRetries> setting, a restart of the SLDataGateway process will be required.
 
-#### Uploading and running BPA tests \[ID_22222\]\[ID_22357\]\[ID_33793\]
+#### Uploading and running BPA tests \[ID 22222\]\[ID 22357\]\[ID 33793\]
 
 It is now possible to upload and run Best Practice Analysis (BPA) tests using the SLNetClientTest tool.
 
@@ -421,7 +421,7 @@ BPA tests, which are meant to be short checks, can be configured to run either o
 
 If a BPA test takes more than 15 minutes, the SLNet process may throw a run-time error.
 
-#### Mobile Gateway: Communicating with an SMSEagle device via HTTPS \[ID_22441\]
+#### Mobile Gateway: Communicating with an SMSEagle device via HTTPS \[ID 22441\]
 
 It is now possible to communicate with an SMSEagle device via HTTPS.
 
@@ -467,9 +467,9 @@ When, in the Config.xml file, you set \<RequireValidSsl> to “true”, you have
 
 4. Click *Next*, specify a random folder and a file name, and click *Save*.
 
-5. Open the Microsoft Management Console. To do so, press WINDOWS+R, type “mmc”, and press ENTER.
+5. Open the Microsoft Management Console. To do so, press WINDOWS+R, type “mmc”, and press Enter.
 
-6. In the Microsoft Management Console, press CTRL+M.
+6. In the Microsoft Management Console, press Ctrl+M.
 
 7. In the *Add or Remove Snap-ins* window, select “Certificate” from the *Available snap-ins* list, and click *Add*.
 
@@ -508,11 +508,11 @@ To check if the certificate was correctly installed, open an internet browser, a
 > - The SMSEagle firmware supports HTTPS as from version 2.7.
 > - When using an SMSEagle device with firmware version 3.32 it is not possible to retrieve the signal strength due to a bug in said firmware.
 
-#### DataMiner now supports NATS Streaming \[ID_22506\]
+#### DataMiner now supports NATS Streaming \[ID 22506\]
 
 DataMiner now supports NATS Streaming.
 
-#### SNMP agent function now disabled by default \[ID_22817\]
+#### SNMP agent function now disabled by default \[ID 22817\]
 
 From now on, the DataMiner SNMP agent functionality is disabled by default, so that polling of active alarms and general DataMiner information is not possible.
 
@@ -529,17 +529,17 @@ If necessary, this function can be enabled in the *DataMiner.xml* file:
 > - This change does not affect virtual SNMP agents that can be enabled for elements.
 > - When you upgrade from a DataMiner version where the SNMP agent function was enabled by default, an \<SNMP enableDataMinerAgentPolling="true"/> tag will automatically be added to the *DataMiner.xml* file. This way, no configuration changes will have to be made on systems using this feature.
 
-#### Cassandra: Automatic TTL refresh in case of average trending \[ID_22920\]
+#### Cassandra: Automatic TTL refresh in case of average trending \[ID 22920\]
 
 When, in a system with a Cassandra database, average trending for a parameter had not changed for the period of time the TTL was configured, up to now, the last trend data record would be deleted from the database. From now on, the TTL will automatically be refreshed 15 minutes before the TTL expires.
 
-#### Editing of properties of closed alarms \[ID_23067\]
+#### Editing of properties of closed alarms \[ID 23067\]
 
 It is now possible to edit properties of alarms that have already been closed. This will create a new alarm entry with the updated properties in the alarm tree of the closed alarm.
 
 To update a property of a closed alarm, in Cube, select the root alarm in the alarm tree and then edit the property. Alternatively, in an Automation script, use the *SetDataMinerInfoMessage* with NT_EDIT_PROPERTY (62).
 
-#### DBMaintenanceDMS.xml: TTL settings can now be specified for all custom data types defined in an Elastic database \[ID_24549\]\[ID_24575\]\[ID_24846\]
+#### DBMaintenanceDMS.xml: TTL settings can now be specified for all custom data types defined in an Elastic database \[ID 24549\]\[ID 24575\]\[ID 24846\]
 
 In the *DBMaintenanceDMS.xml* file, you can now configure “time to live” (TTL) settings for all custom data types defined in an Elastic database.
 
@@ -560,11 +560,11 @@ In the following example, a TTL setting was specified for job objects stored in 
 
 ### DMS Security
 
-#### DataMiner user accounts are now deleted at startup if no corresponding Windows user account can be found and if the user password is not known \[ID_20347\]
+#### DataMiner user accounts are now deleted at startup if no corresponding Windows user account can be found and if the user password is not known \[ID 20347\]
 
 From now on, DataMiner user accounts are deleted at startup if no corresponding Windows user account can be found and if the user password is not known.
 
-#### DataMiner Cube: External user authentication via SAML \[21027\]\[ID_22838\]\[23112\]
+#### DataMiner Cube: External user authentication via SAML \[21027\]\[ID 22838\]\[23112\]
 
 DataMiner Cube now supports external user authentication via Security Assertion Markup Language (SAML).
 
@@ -581,7 +581,7 @@ The DataMiner HTML5 apps (e.g. Dashboards, Jobs, etc.) now all support external 
 
 ### DMS Protocols
 
-#### Dynamic parameter replication \[ID_19311\]
+#### Dynamic parameter replication \[ID 19311\]
 
 It is now possible to configure replication on parameter level.
 
@@ -639,13 +639,13 @@ See the \<Replication> tag in the following example:
 </Param>
 ```
 
-#### Base protocols can now be linked directly to a protocol \[ID_19591\]
+#### Base protocols can now be linked directly to a protocol \[ID 19591\]
 
 From now on, it is possible to create a base protocol that is not linked to a specific element type but directly to a protocol. This means that you will now be able to link protocols with different element types to the same base protocol.
 
 In a Protocol.xml file, when a base protocol contains \<Mediation>\<LinkTo> tags with a *protocol* attribute, the element type in the *basefor* attribute of the \<Protocol> tag will now be disregarded.
 
-#### New ColumnOptions option: viewImpact \[ID_19798\]
+#### New ColumnOptions option: viewImpact \[ID 19798\]
 
 By specifying the new “viewImpact” option in a particular table column definition, you can configure a “view impact” column containing IDs\* of views that have to be put in alarm whenever there is an alarm on a cell in another column of that same table.
 
@@ -655,7 +655,7 @@ By specifying the new “viewImpact” option in a particular table column defin
 
 *Multiple view ID have to be separated by semicolons.*
 
-#### New ColumnOptions option: QueryTablePID \[ID_19897\]
+#### New ColumnOptions option: QueryTablePID \[ID 19897\]
 
 By specifying the new “QueryTablePID” option in a particular table column definition, you can configure a column containing parameter IDs of tables from which to retrieve additional information. This option will mostly be used in CPE environments.
 
@@ -665,7 +665,7 @@ Default cell value in a column of this type: -1
 <ColumnOptions options=";QueryTablePID" />
 ```
 
-#### HTTP: Support for gzip and deflate compression \[ID_20462\]
+#### HTTP: Support for gzip and deflate compression \[ID 20462\]
 
 From now on, HTTP requests executed from DataMiner protocols via SLPort will automatically include the following header:
 
@@ -680,7 +680,7 @@ Due to this enhancement, overall transfer speed and bandwidth utilization will i
 > [!NOTE]
 > This feature only works on DataMiner Agents running Windows Server 2012 R2 or a more recent Windows operating system.
 
-#### 'FillArray' and 'FillArrayWithColumn' functions now support history sets \[ID_21482\]
+#### 'FillArray' and 'FillArrayWithColumn' functions now support history sets \[ID 21482\]
 
 The *FillArray* and *FillArrayWithColumn* functions now support history sets.
 
@@ -712,7 +712,7 @@ table.FillArray(rows, <DateTime>);
 table.SetColumn(<ColumnPid>, keys, values, <DateTime>);
 ```
 
-#### Enhanced service protocols: A number of tags will automatically be filled in at protocol creation \[ID_22279\]
+#### Enhanced service protocols: A number of tags will automatically be filled in at protocol creation \[ID 22279\]
 
 When a protocol for an enhanced service is generated, the following tags will now be filled in automatically:
 
@@ -723,11 +723,11 @@ When a protocol for an enhanced service is generated, the following tags will no
 | Protocol.Vendor    | Skyline                                                                                                                   |
 | Protocol.VendorOID | 48                                                                                                                        |
 
-#### .NET Compiler Platform now used for QActions \[ID_23095\]
+#### .NET Compiler Platform now used for QActions \[ID 23095\]
 
 The .NET Compiler Platform ("Roslyn") is now used to compile QActions, so that C# version 6.0 and higher syntax is now supported in QActions.
 
-#### Possibility to refer to DLLs in subfolders of ProtocolScripts folder \[ID_23565\]
+#### Possibility to refer to DLLs in subfolders of ProtocolScripts folder \[ID 23565\]
 
 Up to now, to use a custom DLL in a protocol's QActions, it always had to be stored in the folder *C:\\Skyline DataMiner\\ProtocolScripts*. Now it is also possible to use a DLL that is stored in a subfolder of this folder. In that case, you must mention the subfolder when you specify the DLL in the protocol.
 
@@ -752,11 +752,11 @@ For example, the following QAction definitions are possible within a single prot
 > - DLL files stored in *C:\\Skyline DataMiner\\Files\\* will take precedence over DLL files in other folders if they are not strongly named (signed). This is standard Microsoft .NET assembly resolving behavior.
 > - In the details of a DLL, ‘File Version’ and ‘Product Version’ reflect the project’s file version at compilation. Other tools might be needed to check the actual assembly version.
 
-#### SLProtocol class refactored to an interface \[ID_23787\]
+#### SLProtocol class refactored to an interface \[ID 23787\]
 
 To allow for easier testing, the SLProtocol class has been refactored to an interface.
 
-#### FillArray calls now allow timestamp per cell \[ID_23815\]
+#### FillArray calls now allow timestamp per cell \[ID 23815\]
 
 When using a *FillArray* call (*NT_FILL_ARRAY*, *NT_FILL_ARRAY_NO_DELETE* or *NT_FILL_ARRAY_WITH_COLUMN*), you can now specify a timestamp per cell, so that it is now possible to do a history set on cell level. To do so, use an object array containing the value and timestamp.
 
@@ -770,7 +770,7 @@ object[] columnsWithTimeStamps = new object[] { column1, column2WithTimeStamps, 
 protocol.NotifyProtocol(220/*NT_FILL_ARRAY_WITH_COLUMN*/ , new object[] { tableId, columnIdColumn2, columnIdColumn3, new object[2] { true, null } }, columnsWithTimeStamps);
 ```
 
-#### NT_SNMP_GET (295): Possibility to specify the maximum number of repetitions \[ID_23888\]
+#### NT_SNMP_GET (295): Possibility to specify the maximum number of repetitions \[ID 23888\]
 
 When sending an NT_SNMP_GET request from within a QAction, it is now possible to pass along the maximum number of repetitions in the elementInfo array.
 
@@ -786,7 +786,7 @@ elementInfo\[13\] should contain a 32-bit integer value (Int32) of at least 1. I
 > [!NOTE]
 > Apart from the maximum value of an Int32 (2^31-1), there are no constraints as to maximum value you can specify. So, use this option with caution. The higher this value is set, the higher the stress on the network and the device in question will be.
 
-#### DataMiner Mediation Layer: Base protocols and device protocols can now contain value mappings \[ID_24127\]
+#### DataMiner Mediation Layer: Base protocols and device protocols can now contain value mappings \[ID 24127\]
 
 In base protocols and device protocols linked to base protocols, you can now specify \<ValueMapping> tags inside \<LinkTo> tags.
 

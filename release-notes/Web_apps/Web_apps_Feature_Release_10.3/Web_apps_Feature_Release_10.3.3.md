@@ -8,11 +8,13 @@ uid: Web_apps_Feature_Release_10.3.3
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.3](xref:General_Feature_Release_10.3.3).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.3.3](xref:General_Feature_Release_10.3.3).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.3](xref:Cube_Feature_Release_10.3.3).
 
 ## Highlights
 
-#### Dashboards app - GQI: New data sources [ID_34747] [ID_35027] [ID_34965] [ID_35058]
+#### Dashboards app - GQI: New data sources [ID 34747] [ID 35027] [ID 34965] [ID 35058]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -26,7 +28,7 @@ In the Generic Query Interface, the following new data sources are now available
 
 The *Get trend data pattern events* and *Get behavioral change events* data sources contain time range metadata on each row. Each time range holds the start and end time of the event in question. When a table row is selected, the time range will be exposed as a feed.
 
-#### Dashboards app & Low-Code Apps - GQI: 'Row by row' option [ID_35057] [ID_35565]
+#### Dashboards app & Low-Code Apps - GQI: 'Row by row' option [ID 35057] [ID 35565]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -43,25 +45,25 @@ When configuring a Join operator, you can now select the *Row by row* option.
 
 ## Other features
 
-#### Monitoring app: Element name added to breadcrumbs of trend card [ID_35270]
+#### Monitoring app: Element name added to breadcrumbs of trend card [ID 35270]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 As of now, the header of a trend card shows a breadcrumb trail with the element name of a parameter as a clickable item. Clicking this element name allows you to quickly navigate back to the element card.
 
-#### GQI: 'State' column added to 'Get views' data source [ID_35333]
+#### GQI: 'State' column added to 'Get views' data source [ID 35333]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 A `State` column has been added to the *Get views* data source. This column shows the alarm state of the view.
 
-#### GQI: Multiple groupBy operations can now be applied after an aggregation operation [ID_35355]
+#### GQI: Multiple groupBy operations can now be applied after an aggregation operation [ID 35355]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 After an aggregation operation, you can now apply multiple groupBy operations.
 
-#### Dashboards app - GQI: New 'Get parameter relations' data source [ID_35443]
+#### Dashboards app - GQI: New 'Get parameter relations' data source [ID 35443]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -76,7 +78,7 @@ It can be used to retrieve the parameter relationships that are stored in a mode
 
 ### Enhancements
 
-#### GQI: Enhanced performance when using Sort operators in conjunction with alarm, change point, trend pattern and trend pattern occurrence data sources [ID_35031]
+#### GQI: Enhanced performance when using Sort operators in conjunction with alarm, change point, trend pattern and trend pattern occurrence data sources [ID 35031]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -87,13 +89,13 @@ Because of a number of enhancements, overall query performance has increased whe
 - Get trend data patterns
 - Get trend data pattern events
 
-#### Web apps: Enhanced color picker [ID_35276]
+#### Web apps: Enhanced color picker [ID 35276]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 A number of enhancements have been made to the color picker.
 
-#### Dashboards - Line & area chart component: 'Show average', 'Show minimum' and 'Show maximum' options will now be taken into account when exporting trend data to CSV [ID_35311]
+#### Dashboards - Line & area chart component: 'Show average', 'Show minimum' and 'Show maximum' options will now be taken into account when exporting trend data to CSV [ID 35311]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 <!-- Timestamp format fix added to Fixes -->
@@ -105,13 +107,13 @@ When exporting trend data to CSV, from now on, the *Show average*, *Show minimum
 > - When the *Show min/max shading* option is enabled (which it is by default), minimum and maximum values will always be included when you export trend data.
 > - As the *Show min/max shading* option and the *Show average* option are both enabled by default, a CSV export of trend data will by default contain all trend data values.
 
-#### Errors received from the web API after sending a GetConnection call will now be logged in SLNet.txt [ID_35313]
+#### Errors received from the web API after sending a GetConnection call will now be logged in SLNet.txt [ID 35313]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 From now on, when SLNet receives an error from the web API after sending a *GetConnection* call, it will log the request and the response in the *SLNet.txt* log file.
 
-#### Dashboards app - EPM parameter selector: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID_35412]
+#### Dashboards app - EPM parameter selector: Data retrieved from the collector that was displayed as a table with a single row will now be displayed as single parameters [ID 35412]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
@@ -119,31 +121,31 @@ In an EPM parameter selector, in some cases, data retrieved from the collector w
 
 From now on, data retrieved from the collector that used to be displayed as a table with a single row will now be displayed as single parameters (one for every column).
 
-#### Chart components will now display GQI and configuration errors [ID_35445]
+#### Chart components will now display GQI and configuration errors [ID 35445]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 From now on, a chart component will display an error when the GQI query that retrieves data for that chart component throws an error, or when the chart component is not configured correctly.
 
-#### GQI: data sources 'Get elements' and 'Get services' will now also return alarm states [ID_35464]
+#### GQI: data sources 'Get elements' and 'Get services' will now also return alarm states [ID 35464]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 The GQI data sources *Get elements* and *Get services* will now also return alarm states.
 
-#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
+#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID 35526]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
 
-#### Enhanced performance when opening a web app [ID_35549]
+#### Enhanced performance when opening a web app [ID 35549]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Because DataMiner web apps will now be passed to client machines as compressed files, overall performance has increased when opening a web app.
 
-#### GQI: 'State' column in data sources 'Get services' and 'Get views' renamed to 'Alarm state' [ID_35557]
+#### GQI: 'State' column in data sources 'Get services' and 'Get views' renamed to 'Alarm state' [ID 35557]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -151,13 +153,13 @@ In the GQI data sources *Get services* and *Get views*, the *State* column has n
 
 ### Fixes
 
-#### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID_35242]
+#### GQI: Problem when fetching two queries using an external data source with a custom argument of which the ID was set to "Type" [ID 35242]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When two queries using an external data source with a custom argument of which the ID was set to "Type" had to be fetched, only one of the two queries would get fetched when the only difference between them was the value of the custom argument.
 
-#### Dashboards app: Problem when trying to open a shared dashboard [ID_35271]
+#### Dashboards app: Problem when trying to open a shared dashboard [ID 35271]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
 
@@ -165,14 +167,14 @@ When users tried to open a shared dashboard, in some cases, they would unexpecte
 
 Workaround: Recreate the faulty shared dashboard.
 
-#### Dashboards - Line & area chart component: Timestamps could be formatted incorrectly when exporting trend data to CSV [ID_35311]
+#### Dashboards - Line & area chart component: Timestamps could be formatted incorrectly when exporting trend data to CSV [ID 35311]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 <!-- See Enhancements for rest of 35311 -->
 
 When trend data was exported to a CSV file, up to now, timestamps could be formatted incorrectly.
 
-#### Web apps: Problems with Visual Overview components [ID_35399]
+#### Web apps: Problems with Visual Overview components [ID 35399]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
@@ -183,7 +185,7 @@ A number of issues regarding the Visual Overview component have been fixed.
 - In some cases, the dimensions of pop-up windows would be incorrect.
 - When a pop-up window was shown using a *VdxShape* property, in some cases, the default page would be shown instead of the page that was specified.
 
-#### Dashboards app & Low-Code Apps - Line & area chart component: Problems when visualizing resource availability [ID_35408]
+#### Dashboards app & Low-Code Apps - Line & area chart component: Problems when visualizing resource availability [ID 35408]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
@@ -191,13 +193,13 @@ When, in a dashboard or a low-code app, a *Line & area chart* component was used
 
 In the latter case, it will now instead show a flat line indicating that the resource is not being used.
 
-#### Dashboards app: Problem with line & area chart component when dashboard was shared [ID_35422]
+#### Dashboards app: Problem with line & area chart component when dashboard was shared [ID 35422]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 When, in a dashboard, a line & area chart component had its *Hide non-trended parameters* option selected, errors could start to appear inside that component when the dashboard was shared.
 
-#### Dashboards app: Problem with 'Preserve feed selections' option [ID_35438]
+#### Dashboards app: Problem with 'Preserve feed selections' option [ID 35438]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
@@ -205,37 +207,37 @@ When you select the *Preserve feed selections* option for a particular dashboard
 
 Up to now, in some cases, one folder would incorrectly take over feed selections from another folder.
 
-#### Low-Code Apps: Problem when creating a new draft version [ID_35446]
+#### Low-Code Apps: Problem when creating a new draft version [ID 35446]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 When, in a draft version of a low-code app, you opened the version panel and created a new draft, the previous draft version would incorrectly loaded instead of the published version.
 
-#### Dashboards app: Time range feeds would trigger components more often than required [ID_35460]
+#### Dashboards app: Time range feeds would trigger components more often than required [ID 35460]
 
 <!-- MR 10.2.0 [CU12] - FR 10.3.3 -->
 
 Time range feeds would trigger components more often than required, causing them to send an excessive number of requests.
 
-#### Web apps: An invalid value entered into a text box would incorrectly be replaced by the last valid value that was entered [ID_35489]
+#### Web apps: An invalid value entered into a text box would incorrectly be replaced by the last valid value that was entered [ID 35489]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.3 -->
 
 When you entered an invalid value into a text box, an error message would be displayed for a very short moment, and the invalid value would incorrectly be replaced by the last valid value that was entered.
 
-#### Low-Code Apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID_35542]
+#### Low-Code Apps: Panels of which the 'Fit to view' option was selected would incorrectly switch to mobile mode [ID 35542]
 
 <!-- MR 10.3.0 - FR 10.3.3 -->
 
 Panels of which the *Fit to view* option was selected would incorrectly switch to mobile mode when their width got too small. From now on, panels of which the *Fit to view* option is selected will never switch to mobile mode.
 
-#### Web apps: No longer possible to clear a radio button group [ID_35603]
+#### Web apps: No longer possible to clear a radio button group [ID 35603]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.3 [CU0] -->
 
 It would incorrectly no longer be possible to clear a radio button group.
 
-#### Web apps: Auto-complete control could clear its content while you were entering a value [ID_35623]
+#### Web apps: Auto-complete control could clear its content while you were entering a value [ID 35623]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.3 [CU0] -->
 

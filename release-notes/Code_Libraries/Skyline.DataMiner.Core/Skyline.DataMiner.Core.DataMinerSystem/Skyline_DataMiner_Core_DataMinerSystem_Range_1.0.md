@@ -95,11 +95,11 @@ This code was extracted from a popular internal community library "Utility Libra
 
 ### 1.0.0.5
 
-#### Fix - RemotingConnection replaced [ID_36324]
+#### Fix - RemotingConnection replaced [ID 36324]
 
 To prepare for the deprecation and removal of RemoteConnection, RemoteConnection has been replaced with a more secure connection type.
 
-#### Fix - Views.Elements now returns stopped and paused elements [ID_36325]
+#### Fix - Views.Elements now returns stopped and paused elements [ID 36325]
 
 Asking for all elements under a view will now return all stopped and paused elements.
 
@@ -120,7 +120,7 @@ The following calls have been added:
 
 #### Fixes to element creation
 
-Element creation through this library produced corrupt elements since DataMiner version 10.3.4 [ID_33515]. This version fixes that issue.
+Element creation through this library produced corrupt elements since DataMiner version 10.3.4 [ID 33515]. This version fixes that issue.
 
 ### 1.0.0.2
 

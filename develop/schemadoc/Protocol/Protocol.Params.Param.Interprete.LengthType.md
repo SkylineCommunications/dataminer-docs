@@ -29,7 +29,7 @@ Contains one of the following values:
 
 The parameter has a fixed length, which has to be defined in the Protocol.Params.Param.Interprete.Length tag. During parameter initialization, DataMiner does the following for parameters that have LengthType set to "fixed":
 
-1. A byte array is created with size equal to the value specified in InterPrete.Length. This array is then initialized. The initialization value depends on the RawType value:
+1. A byte array is created with size equal to the value specified in Interprete.Length. This array is then initialized. The initialization value depends on the RawType value:
 
     - If RawType is set to "text" or "other", the array is initialized with 0x20 bytes.
     - If RawType is set to "numeric text", the array is initialized with 0x30 bytes.
@@ -58,7 +58,7 @@ The parameter has a variable length, which depends on the last instance of the n
 If the expected response will contain a number with a length up to 5 digits (which can have a decimal point), followed by a fixed point, then you can define two parameters:
 
 - A first one with a LengthType equal to “last next param” to catch the number containing the decimal point (“last next param” will make sure the number is not broken off at the first point), and
-- A second one with a LengthType equal to “fixed” to catch to point.
+- A second one with a LengthType equal to “fixed” to catch the point.
 
 ### next param
 
@@ -67,7 +67,7 @@ The parameter has a variable length, which depends on the next (fixed-length) pa
 If the expected response will contain a number with a length up to 5 digits, followed by a point, you can define two parameters:
 
 - A first one with a LengthType equal to “next param” to catch the number, and
-- A second one with a LengthType equal to “fixed” to catch to point.
+- A second one with a LengthType equal to “fixed” to catch the point.
 
 ### other param
 

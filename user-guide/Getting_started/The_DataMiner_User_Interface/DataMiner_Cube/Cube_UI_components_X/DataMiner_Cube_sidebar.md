@@ -12,7 +12,7 @@ On the left-hand side of the Cube UI, a sidebar is displayed. This sidebar conta
 | ![Activity](~/user-guide/images/Activity.png) | Activity | Opens a pane listing recent items. See [Activity pane](#activity-pane). |
 | ![Apps](~/user-guide/images/Apps.png) | Apps | Opens a pane listing the different apps available in Cube. See [Apps pane](#apps-pane). |
 | ![Workspace](~/user-guide/images/Workspace.png) | Workspace | Opens a pane where you can select and manage different Cube workspaces. See [Working with workspaces](xref:Working_with_workspaces). |
-| ![Community](~/user-guide/images/Community.png) | Community | This button is displayed from DataMiner 10.0.0 \[CU12\]/10.1.0 \[CU1\]/10.1.4 onwards. Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a library of resources, a page where you can ask questions about anything related to DataMiner, and a page that allows you to suggest new features. |
+| ![Community](~/user-guide/images/Community.png) | Community | Clicking the button opens a menu with different links to the [DataMiner Dojo user community](https://community.dataminer.services/), including the blog, the learning hub, a page where you can ask questions about anything related to DataMiner, a page that allows you to suggest new features, and a page that allows you to provide feedback<!--RN 41605-->. |
 
 From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sidebar using the "..." or "+" button. This button opens a menu where you can select the buttons you want to pin.
 
@@ -23,6 +23,8 @@ From DataMiner 10.1.11/10.2.0 onwards, you can pin additional buttons to the sid
 | ... | ... |  A button representing any of the available modules, the "About" information, the Help, or the settings. |
 
 To unpin a button again, right-click the button and select *Unpin*. This is not possible for the buttons that are displayed by default.
+
+![Unpin a button](~/user-guide/images/Unpin_Button.png)<br>*DataMiner Cube sidebar in DataMiner 10.4.5*
 
 > [!NOTE]
 >
@@ -56,7 +58,7 @@ The icons that precede an item name in the tree show what kind of item it is and
   | Icon | Item description |
   |------|------------------|
   | ![View icon](~/user-guide/images/CubeXView.png) | View |
-  | ![Element icon](~/user-guide/images/CubeXElement.png) | Element or default function DVE (prior to DataMiner 10.0.5 - requires DataMiner Service & Resource Management) |
+  | ![Element icon](~/user-guide/images/CubeXElement.png) | Element |
   | ![Service icon](~/user-guide/images/CubeXService.png) | Service |
   | ![Service template icon](~/user-guide/images/CubeXServiceTemplate.png) | Service template |
   | ![Redundancy group icon](~/user-guide/images/CubeXRedunGroup.png) | Redundancy group |
@@ -65,18 +67,17 @@ The icons that precede an item name in the tree show what kind of item it is and
   | ![Parameter icon](~/user-guide/images/CubeXParameter.png) | Parameter |
   | ![Script icon](~/user-guide/images/CubeXScript.png) | Script |
   | ![Setting icon](~/user-guide/images/CubeXSetting.png) | Setting |
-  | ![Function icon](~/user-guide/images/CubeXFunction.png) | Default function DVE (from DataMiner 10.0.5 onwards – requires DataMiner Service & Resource Management) |
+  | ![Function icon](~/user-guide/images/CubeXFunction.png) | Default function DVE (requires DataMiner Service & Resource Management) |
 
 - View icons are filled with a different color, depending on their alarm state. On other icons, a colored circle is displayed when they are in a particular alarm state. In addition to the default colors indicating the alarm severity, the circle can also be displayed in purple to indicate that an item is masked.
 
-  > [!NOTE]
-  > The alarm state color is determined by the most severe of all the current alarms for the item.
-
-  > [!TIP]
-  > See also:
-  >
-  > - [Alarm severity levels](xref:Alarm_types#alarm-severity-levels)
-  > - [Changing the default alarm colors](xref:Changing_the_default_alarm_colors)
+  <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+    <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+      <b>💡 TIPS TO TAKE FLIGHT</b><br>The alarm state color is determined by the most severe of all the current alarms for the item. There are four <a href="xref:Alarm_types#alarm-severity-levels" style="color: #657AB7;">alarm severity levels</a>, each indicated by a color. These default alarm colors can be changed in the <a href="xref:Changing_the_default_alarm_colors" style="color: #657AB7;"><i>DataMiner.xml</i> file</a>.
+    </div>
+    <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+  </div>
+  <br>
 
 - There may be additional symbols on an icon to indicate a particular state:
 
@@ -87,7 +88,7 @@ The icons that precede an item name in the tree show what kind of item it is and
   | Orange X | Indicates that an element in a view or service is in timeout state. |
   | White X on red background | Indicates that an element is in error state. |
   | Upwards arrow | Displayed next to a service child in case the capped severity of the service child is lower than the actual severity. The icon has the color of the severity that will bubble up to the parent service. |
-  | Circle containing a horizontal line, for example: ![Unavailable element icon](~/user-guide/images/element_unavailable.png) | Indicates that the DMA hosting the item is currently unavailable. Though the information on the item is still available in the cache, it is not possible to execute any actions on the item. This icon is used from DataMiner 10.0.12 onwards. In this DataMiner version, it is only used for elements, and other items are not displayed when the DMA hosting them is unavailable. From DataMiner 10.0.13 onwards, it is also used for services and redundancy groups. |
+  | Circle containing a horizontal line, for example: ![Unavailable element icon](~/user-guide/images/element_unavailable.png) | Indicates that the DMA hosting the item is currently unavailable. Though the information on the item is still available in the cache, it is not possible to execute any actions on the item. |
 
 #### Special icon settings
 
@@ -123,38 +124,49 @@ In the Surveyor right-click menu, the following options are available, depending
 | Open | Any | Opens the item in a card. |
 | Open in new card | Any | Opens the item in a new card. |
 | Open in new undocked card | Any | Opens the item in a new, undocked card. |
-| Ticket | Element, service, view | Allows you to create a new ticket related to the right-clicked item. Only available on DMAs with a Ticketing license. See [Ticketing](xref:ticketing). |
-| State | Element only | Opens a shortcut that allows you to change the element state. See [Changing the state of an element](xref:Changing_the_state_of_an_element). |
-| Mask | Element only | Masks the element. See [Masking or unmasking an element](xref:Masking_or_unmasking_an_element) |
-| Unmask | Element only | Unmasks the element. This option is only available for masked elements. |
-| Multiple set | Element only | Opens the *Multiple set* dialog box. See [Setting a parameter value in multiple elements](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements). |
-| Protocols & Templates | Element, enhanced service | Opens a submenu where you can:<br> -  View the used protocol or service protocol, alarm template, and trend template.<br> -  Assign alternative templates.<br> -  View all available templates. |
-| View | Element, service generated by a service template | For an element, a shortcut menu opens that allows quick access to DataMiner logging or Stream Viewer. <br> For a service generated by a service template, this option opens a card with service creation data and an overview of the service’s child elements.<br> Note that from DataMiner 9.5.1 onwards, all options related to generated services, including this one, have been moved to the *Service template* submenu. |
-| Edit | Element, service | Opens a card where you can change the settings of the element or service. |
+| Ticket | Element, service, view | Allows you to create a new ticket related to the right-clicked item. Only available on DMAs with a Ticketing license. However, note that this functionality is being retired. See [Ticketing](xref:ticketing). |
+| State | Element only | Opens a shortcut that allows you to [change the element state](xref:Changing_the_state_of_an_element). |
+| Mask | Element only | [Masks the element](xref:Masking_or_unmasking_an_element). |
+| Unmask | Element only | [Unmasks the element](xref:Masking_or_unmasking_an_element#unmasking-an-element). This option is only available for masked elements. |
+| Multiple set | Element only | Allows you to [set a parameter value in multiple elements](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements). |
+| Protocols & Templates | Element, enhanced service | Opens a submenu where you can:<br> - View the used [protocol](xref:Protocols1) or [service protocol](xref:About_services#enhanced-services), [alarm template](xref:About_alarm_templates), and [trend template](xref:About_trend_templates).<br> - Assign alternative templates.<br> - View all available templates. |
+| View | Element | Opens a shortcut menu that allows quick access to [DataMiner logging](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube) or [Stream Viewer](xref:Connecting_to_an_element_using_Stream_Viewer). |
+| Edit | Element, service | Opens a card where you can change the configuration of the element or service. |
 | Remove from parent | Any view child item, except a child view | Moves the item from the parent view to the root view. |
 | Delete | Any except root view | Removes the item. |
 | Duplicate | Element, service | Duplicates the item. |
-| Rename | Element, service, view, redundancy group | Allows the user to rename the item |
-| New | Any | Opens a submenu where you can select to create a new element, service, service template or SLA. If you right-clicked a view, you can also select to create a new view. |
-| Actions | Element, service, view | Opens a shortcut menu with options to configure personal alerts, start Correlation analyzers, open a filtered alarm tab, and other options depending on the right-clicked item. |
+| Rename | Element, service, view, redundancy group | Allows you to rename the item. |
+| New | Any | Opens a submenu where you can select to create a new [element](xref:About_elements), [service](xref:About_services), [service template](xref:Service_templates), [redundancy group](xref:About_redundancy_groups),[redundancy group template](xref:About_redundancy_groups#redundancy-group-templates), or [SLA](xref:sla). If you right-clicked a view, you can also select to create a new view. |
+| Actions > Alert me | Element, service, view | Allows you to [configure a personal alert](xref:Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor) for alarms related to the right-clicked item. |
+| Actions > Export | Element, service, view | Allows you to export the selected item [to a DataMiner package](xref:Exporting_elements_services_etc_to_a_dmimport_file) or [to a CSV file](xref:Importing_and_exporting_elements#exporting-elements-to-a-csv-file). |
+| Actions > Import | View | Allows you to [import a DataMiner package](xref:Importing_elements_services_etc_from_a_dmimport_file) or [a CSV file](xref:Importing_and_exporting_elements) in the right-clicked view. |
+| Actions > Create simulation | Element | Allows you to [create a simulation file](xref:Creating_a_simulated_element#creating-a-simulation-file) based on the right-clicked element, which can be used to create a [simulated element](xref:Simulated_elements). |
+| Actions > Enable simulation | Element | Allows you to [create a simulated element](xref:Creating_a_simulated_element). |
+| Actions > Add tab to global Alarm Console | Element, service, view | Creates a filtered tab in the Alarm Console to show alarms for the right-clicked item only. |
+| Actions > Apply service template | View | Allows you to [apply a service template](xref:Applying_service_templates) to the right-clicked view. |
+| Actions > Upgrade to service | View without child views | Allows you to transform the right-clicked view into a service. The child elements in the view will become child elements of the new service. |
+| Actions > Analyze | Element, service, view | Allows you to [analyze the alarms](xref:Using_Correlation_analyzers) for the right-clicked item in order to create a Correlation rule based on that analysis. |
+| Actions > Add element/service to dashboard | Element, service | Allows you to add the right-clicked item to a legacy dashboard. However, note that the [legacy dashboards module](xref:dashboards) is being retired, and it is by default disabled from DataMiner 10.4.0/10.4.1 onwards. |
 | Properties | Element, service, view | Opens the item’s *Properties* window. |
-| Drag and drop editing | Any | Enables drag-and-drop view editing mode. See [Editing a view](xref:Managing_views#editing-a-view). |
+| Drag and drop editing | Any | Enables the [drag-and-drop view editing mode](xref:Managing_views#editing-a-view). |
 
 > [!NOTE]
 >
 > - For some special items, such as redundancy group templates or service templates, additional options are available.
-> - The *View* option is also available for services using a protocol, with the options to view the protocol, alarm template or trend template of such a service.
+> - The *View* option is also available for [enhanced services](xref:About_services#enhanced-services), with the options to view the protocol, alarm template, or trend template of such a service.
 > - When opening an item from the right-click menu, you can hold *Ctrl* while clicking the menu option to open the item in a new card, or hold *Shift* while clicking the option to open the item in a new undocked card.
 
 ## Activity pane
 
-The activity button displays a pane listing recently opened items, such as elements, services, views and apps.
+The activity button displays a pane listing recently opened items, such as elements, services, views, and apps.
 
 The following actions are possible with this list:
 
 - Click an item in the list to open it in a card. If you wish to open the item in a new card, use the middle mouse button.
 
 - Pin an item so that it is placed in the *Pinned* section at the top of the list: hover over the item with the mouse pointer until a pin icon appears to the right of it, then click the pin icon.
+
+  ![Pin an item](~/user-guide/images/Pin_Item.png)<br>*Activity pane in DataMiner 10.4.5*
 
 > [!NOTE]
 >

@@ -122,12 +122,12 @@ For each status, you can configure the requirements of a specific field. This is
 |--|--|--|
 | Id | DomStatusSectionDefinitionLinkId | Contains the `SectionDefinitionID` and status ID. |
 | FieldDescriptorLinks | `List<DomStatusFieldDescriptorLink>` | Contains the links to `FieldDescriptors` that are part of the `SectionDefinition`. |
-| AllowMultipleSections | bool | Defines whether a `DomInstance` can have multiple `Sections` for this `SectionDefinition` in this specific status. |
+| AllowMultipleSections | bool | Defines whether a `DomInstance` can have multiple `Sections` for this `SectionDefinition` in this specific status. See [Multiple sections](xref:DOM_MultipleSections). |
 | IsSoftDeleted | bool | Defines whether this `StatusSectionDefinitionLink` is soft-deleted or not. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects). Available from DataMiner 10.3.9/10.4.0 onwards. |
 
 > [!NOTE]
 >
-> - From DataMiner version 10.3.0/10.3.3 onwards, the `DomStatusSectionDefinitionLink` also contains the *AllowMultipleSections* boolean, which can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition` and status. In earlier DataMiner versions, it is possible to add multiple `Sections` already, but these are not checked and cannot be used in the UI. When you upgrade to DataMiner 10.3.0/10.3.3, you will need to update any existing `DomBehaviorDefinitions` with multiple `Sections`. Note that when fields are used in multiple sections, they are not available in GQI queries.
+> - From DataMiner version 10.3.0/10.3.3 onwards, the `DomStatusSectionDefinitionLink` also contains the *AllowMultipleSections* boolean. See [Multiple sections](xref:DOM_MultipleSections).
 > - Removing an existing `Section` is not allowed if that `Section` contains a field that is marked as *ReadOnly*, as you would otherwise remove a read-only value. If you want to allow this behavior, but you would like to avoid users assigning a new field value themselves, use the *ClientReadOnly* boolean, available from DataMiner 10.3.0/10.3.3 onwards (see below).
 
 A `DomStatusFieldDescriptorLink` has the following properties:
@@ -144,6 +144,7 @@ A `DomStatusFieldDescriptorLink` has the following properties:
 >
 > - If no `FieldDescriptorLink` is present for an existing `FieldDescriptor`, no values are allowed to be present for this `FieldDescriptor` when the `DomInstance` has that specific status.
 > - To prevent performance issues, when a `DomBehaviorDefinition` is saved, there is no check whether the `SectionDefinitions` and `FieldDescriptors` exist.
+> - When the *ReadOnly* or *ClientReadOnly* option is enabled, it will be possible to assign the field in a low-code app form when a new instance is created but not when an instance is edited. This behavior is consistent with the non-status system, where it would otherwise be impossible to assign a value. If a field should be hidden when an instance is created, you must set it as hidden in the initial state and make it visible in subsequent states.
 
 Examples:
 

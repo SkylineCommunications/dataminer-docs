@@ -4,7 +4,7 @@ uid: Protocol.Compliancies.MaximumSupportedVersion
 
 # MaximumSupportedVersion element
 
-Indicates the maximum supported DataMiner version that the driver is compatible with.
+Indicates the maximum supported DataMiner version that the connector is compatible with.
 
 ## Type
 
@@ -14,6 +14,6 @@ Indicates the maximum supported DataMiner version that the driver is compatible 
 
 [Compliancies](xref:Protocol.Compliancies)
 
-## Examples
+## Example
 
 10.0.7.0 - 9247

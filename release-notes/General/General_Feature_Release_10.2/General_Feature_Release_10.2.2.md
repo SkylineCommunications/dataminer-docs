@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.2.2
 
 ### DMS core functionality
 
-#### Table filters of type 'fullfilter' now support filtering by means of regular expressions \[ID_31893\]
+#### Table filters of type 'fullfilter' now support filtering by means of regular expressions \[ID 31893\]
 
 Inside a table filter of type “fullfilter”, it is now possible to filter by means of regular expressions.
 
@@ -27,11 +27,11 @@ fullfilter=(512 REGEX 'x\'y\\\\z' AND 510 == 1000)
 > [!NOTE]
 > In the example above, the regular expression contains a single quote and a backslash character that are part of the query. Since the “fullfilter” syntax requires these characters to be escaped, they have been escaped with an additional backslash character, and as a backslash character in a regular expression also needs to be escaped, four backslash characters were needed here.
 
-#### BREAKING CHANGE: GetSpectrumTrendTraceDataMessage will now always require a time range \[ID_31402\] \[ID_32016\]
+#### BREAKING CHANGE: GetSpectrumTrendTraceDataMessage will now always require a time range \[ID 31402\] \[ID 32016\]
 
 When using a GetSpectrumTrendTraceDataMessage to retrieve spectrum data, up to now, it was possible to pass an optional time range (i.e. RangeStart and RangeEnd) next to an ID (i.e. RecordID). From now on, passing a time range next to an ID will be mandatory.
 
-#### EPM: Aliases for topology cells, chains and search chains can now be specified on element level \[ID_32028\]
+#### EPM: Aliases for topology cells, chains and search chains can now be specified on element level \[ID 32028\]
 
 In an EPM environment, since DataMiner feature release version 10.1.7, it has been possible to override the names of topology cells, chains, and search chains specified in a protocol with aliases specified in a system-level *EPMConfig.xml* file stored in the C:\\Skyline DataMiner\\ folder. Now, it is also possible to add *EPMConfig.xml* files on element level.
 
@@ -42,7 +42,7 @@ If you want certain aliases for topology cells, chains and search chains to only
 
 ### DMS Cube
 
-#### Trending: New 'Fixed interval' option when exporting average trend data \[ID_31699\]
+#### Trending: New 'Fixed interval' option when exporting average trend data \[ID 31699\]
 
 When you export average trend data, selecting the new *Fixed interval* option will make sure that the data points are equally distributed and that gaps smaller than a time slot (e.g. 5 minutes) are ignored.
 
@@ -52,19 +52,19 @@ When you export average trend data, selecting the new *Fixed interval* option wi
 > - When you select the *Fixed interval* option, the *Exclude gaps* option will automatically be selected and disabled to indicate that the latter option is included in the former.
 > - When you select the *Line graph* option, from now on, that option will no longer add intermediary data points. Those will now by default be added when you select the *Fixed interval* option.
 
-#### System Center - Users/Groups: New user permission 'Monitoring web app' \[ID_31706\] \[ID_31961\]
+#### System Center - Users/Groups: New user permission 'Monitoring web app' \[ID 31706\] \[ID 31961\]
 
 In the *General* section of the user permissions list, a new “Monitoring web app” permission has now been added next to the existing “DataMiner web apps” permission. This permission can be used to control access to the Monitoring web app.
 
 This user permission is enabled by default.
 
-#### Alarm templates - Information events: Support for wildcard values \[ID_31872\] \[ID_32106\]
+#### Alarm templates - Information events: Support for wildcard values \[ID 31872\] \[ID 32106\]
 
 In the alarm template editor, you can indicate that an information event should be generated when a certain parameter reaches a certain value. To do so, you select the *Info* option and enter a value in the text box or, in case of a discreet parameter, select a value in the selection box.
 
 From now on, for parameters of type string or double, it is also possible to enter values that contain a wildcard (\* or ?).
 
-#### DataMiner Cube desktop app: Support for system-wide installation \[ID_31874\] \[ID_32154\]
+#### DataMiner Cube desktop app: Support for system-wide installation \[ID 31874\] \[ID 32154\]
 
 The DataMiner Cube desktop app now supports system-wide installation via MSI.
 
@@ -75,7 +75,7 @@ The DataMiner Cube desktop app now supports system-wide installation via MSI.
 
 ### DMS Reports & Dashboards
 
-#### Dashboards app: 'Start sharing' button replaced by 'Share' button \[ID_31822\]
+#### Dashboards app: 'Start sharing' button replaced by 'Share' button \[ID 31822\]
 
 The “Start sharing” button has been replaced by a “Share” button. Clicking that button will open a popup that allows you
 
@@ -87,7 +87,7 @@ When you choose to copy the URL of a dashboard, you can select the following opt
 - Select “Embed” to use a URL that will link to the dashboard in embedded mode (i.e. not showing headers and sidebars).
 - Select “Use uncompressed URL parameters” to use a URL in which the data in the search parameters is not compressed. This will allow you to see and, if necessary, modify the plain JSON object.
 
-#### Dashboards app: Passing JSON data in a dashboard URL \[ID_31833\] \[ID_31885\]
+#### Dashboards app: Passing JSON data in a dashboard URL \[ID 31833\] \[ID 31885\]
 
 There are now two ways of passing data in the URL of a dashboard:
 
@@ -159,7 +159,7 @@ This JSON object has to have the following structure:
 
 ### DMS web apps
 
-#### BREAKING CHANGE: End of Internet Explorer support for DataMiner web apps \[ID_31675\]
+#### BREAKING CHANGE: End of Internet Explorer support for DataMiner web apps \[ID 31675\]
 
 All DataMiner web apps have been upgraded to use Angular 12 instead of Angular 10, which means that the following DataMiner apps and functionality will no longer be available in Internet Explorer:
 
@@ -176,13 +176,13 @@ All DataMiner web apps have been upgraded to use Angular 12 instead of Angular 1
 
 ### DMS tools
 
-#### New tool to transform a DMS with separate databases into a DMS with a shared Cassandra/Elasticsearch cluster \[ID_31005\] \[ID_31280\] \[ID_31421\] \[ID_31423\] \[ID_31424\] \[ID_31505\] \[ID_31788\]
+#### New tool to transform a DMS with separate databases into a DMS with a shared Cassandra/Elasticsearch cluster \[ID 31005\] \[ID 31280\] \[ID 31421\] \[ID 31423\] \[ID 31424\] \[ID 31505\] \[ID 31788\]
 
 Using *SLCCMigrator.exe*, you can now transform a DataMiner System consisting of Agents with separate databases into a DataMiner System consisting of Agents that are all connected to a shared Cassandra/Elasticsearch cluster.
 
 For more information on this tool, see [Cassandra Cluster Migrator](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster).
 
-#### SLReset: Hostname can now be passed as an argument \[ID_32002\]
+#### SLReset: Hostname can now be passed as an argument \[ID 32002\]
 
 When running SLReset.exe, which can be used to fully reset a DataMiner Agent to its state immediately after installation, it is now possible to pass the hostname in a -ho argument, especially when resetting a DataMiner Agent that only allows you to connect via HTTPS.
 
@@ -194,45 +194,45 @@ SLReset.exe -ho hostname
 
 ### Enhancements
 
-#### Security enhancements \[ID_31169\] \[ID_32081\]
+#### Security enhancements \[ID 31169\] \[ID 32081\]
 
 A number of security enhancements have been made.
 
-#### SLElement: Enhanced service impact calculation \[ID_31163\]
+#### SLElement: Enhanced service impact calculation \[ID 31163\]
 
 A number of enhancements have been made to the service impact calculation in SLElement.
 
-#### Filtering alarms on alarm focus: Enhanced performance \[ID_31484\]
+#### Filtering alarms on alarm focus: Enhanced performance \[ID 31484\]
 
 Due to a number of enhancements, especially with regard to caching, overall performance has increased when filtering alarms on alarm focus.
 
-#### Enhanced performance when retrieving alarms and information events from the database \[ID_31494\]
+#### Enhanced performance when retrieving alarms and information events from the database \[ID 31494\]
 
 Due to a number of enhancements, overall performance has increased when retrieving alarms and information events from the database.
 
-#### NATS will now be installed during a DataMiner upgrade and re-installed during a factory reset \[ID_31568\]
+#### NATS will now be installed during a DataMiner upgrade and re-installed during a factory reset \[ID 31568\]
 
 When it has not yet been installed, NATS will now be installed during a DataMiner upgrade, and it will also be automatically re-installed when performing a factory reset using SLReset.exe.
 
 Also, when NATS is uninstalled, the SLCloud.xml file will now be deleted.
 
-#### Elasticsearch: Backup timeout increased to 15 minutes \[ID_31595\]
+#### Elasticsearch: Backup timeout increased to 15 minutes \[ID 31595\]
 
 The timeout of Elasticsearch backups has been increased from 1 minute to 15 minutes.
 
 This applies to backups taken via DataMiner as well as backup taken via the Standalone Elastic Backup tool.
 
-#### Enhanced performance when initializing elements that are included in multiple services \[ID_31611\]
+#### Enhanced performance when initializing elements that are included in multiple services \[ID 31611\]
 
 Due to a number of enhancements, overall performance has increased when initializing elements that are included in multiple services.
 
-#### Trending: Pattern matching enhancements \[ID_31668\]
+#### Trending: Pattern matching enhancements \[ID 31668\]
 
 From DataMiner 10.0.7 onwards, on systems using a Cassandra and an Elasticsearch database, DataMiner Analytics can automatically recognize recurring patterns in trend data.
 
 A number of enhancements have now been made to this pattern matching mechanism. Also, from now on, all occurrences of recognized trend data patterns will be stored in the Elasticsearch database.
 
-#### SLLogCollector: Resources to be collected can now be specified in configuration files \[ID_31674\]
+#### SLLogCollector: Resources to be collected can now be specified in configuration files \[ID 31674\]
 
 SLLogCollector will now check the C:\\Skyline DataMiner\\Tools\\SLLogCollector\\LogConfigs folder for configuration files in which you can specify the resources (i.e. objects) to be collected.
 
@@ -307,11 +307,11 @@ Collectors of type “Exe” can be configured using the following XML elements 
 | Exe.Commands.Command |  | Yes | The command to be run. |
 | Exe.Commands.Command@fileName | String | No | The name of the file in which the result has to be saved. Default: \<executable> \<command>.txt |
 
-#### Chromium web browser control: Enhancements with regard to the translations of the find and zoom commands \[ID_31755\]
+#### Chromium web browser control: Enhancements with regard to the translations of the find and zoom commands \[ID 31755\]
 
 A number of enhancements have been made with regard to the translations of the find and zoom commands of the Chromium web browser control.
 
-#### DataMiner Cube - System Center: Enhanced Failover configuration window \[ID_31787\]
+#### DataMiner Cube - System Center: Enhanced Failover configuration window \[ID 31787\]
 
 In the *Agents* section of *System Center*, a number of enhancements have been made to the Failover configuration window.
 
@@ -320,11 +320,11 @@ In the *Agents* section of *System Center*, a number of enhancements have been m
 - In the configuration window, you will only be allowed to perform one action: switch or apply.
 - After you have performed an action, the window will not close automatically. Instead, it will show a message.
 
-#### DataMiner Cube desktop app: Enhanced host detection \[ID_31829\]
+#### DataMiner Cube desktop app: Enhanced host detection \[ID 31829\]
 
 In the DataMiner Cube desktop app, a number of enhancements have been made with regard to host detection.
 
-#### CefSharp library loaded primarily from MSI installation folder \[ID_31838\]
+#### CefSharp library loaded primarily from MSI installation folder \[ID 31838\]
 
 To download the CefSharp library, DataMiner Cube will now look in the following locations, in the order specified below:
 
@@ -332,145 +332,145 @@ To download the CefSharp library, DataMiner Cube will now look in the following 
 - *%LocalAppData%\\Skyline\\DataMiner*
 - *%ProgramData%\\Skyline\\DataMiner*
 
-#### Dashboards app - Parameter feed: Enhanced performance when fetching parameter indices \[ID_31841\]
+#### Dashboards app - Parameter feed: Enhanced performance when fetching parameter indices \[ID 31841\]
 
 Due to a number of enhancements, overall performance of the parameter feed has increased when fetching parameter indices.
 
-#### Enhanced performance when editing an element \[ID_31846\]
+#### Enhanced performance when editing an element \[ID 31846\]
 
 Due to a number of enhancements, overall performance has increased when editing an element.
 
 Also, up to now, when an element was edited, all tab characters (“\\t”) in field content would be replaced by spaces. From now on, tab characters will be left untouched.
 
-#### Unclear 'version of the protocol is not correct' notice replaced by 'DataMiner version is too low to use this protocol. Please check the protocol's Compliancies tag.' notice \[ID_31855\]
+#### Unclear 'version of the protocol is not correct' notice replaced by 'DataMiner version is too low to use this protocol. Please check the protocol's Compliancies tag.' notice \[ID 31855\]
 
 When a protocol had a minimum DataMiner version that was higher than the DataMiner version of the DMA, up to now, an unclear “version of the protocol is not correct” notice would appear in the Alarm Console and the log files. From now on, that unclear notice will be replaced by a clearer “DataMiner version is too low to use this protocol. Please check the protocol's Compliancies tag.” notice.
 
-#### SLLogCollector: Process list will now also include processes of which the name starts with 'DataMiner' \[ID_31883\]
+#### SLLogCollector: Process list will now also include processes of which the name starts with 'DataMiner' \[ID 31883\]
 
 The SLLogCollector tool will now also list all processes of which the name starts with “DataMiner”. This will allow you to also take memory dumps of processes like “DataMiner CloudGateway”, “DataMiner CoreGateway”, “DataMiner FieldControl”, “DataMinerCube”, etc.
 
 Also, an issue was fixed where duplicate entries would appear in the list after a DMA restart while the tool was open.
 
-#### Service & Resource Management: Ending an ongoing booking by changing the end time will now cause all missed events to be run \[ID_31907\]
+#### Service & Resource Management: Ending an ongoing booking by changing the end time will now cause all missed events to be run \[ID 31907\]
 
 When the end time of an ongoing ReservationInstance is set to a time stamp in the past, from now on, all events that have not been run when the booking ended will be run.
 
-#### Enhanced logging when importing groups from Azure AD \[ID_31917\]
+#### Enhanced logging when importing groups from Azure AD \[ID 31917\]
 
 From now on, more detailed logging will be added to SLErrors.txt when groups are being imported from Azure AD.
 
-#### DataMiner Cube - System Center: New LDAP settings \[ID_31924\]
+#### DataMiner Cube - System Center: New LDAP settings \[ID 31924\]
 
 In *System Center*, the *LDAP* tab of the *System settings* section allows you to configure a number of LDAP settings. A number of changes have now been made to the *General* tab.
 
 - The *Use custom configuration* option has been replaced by the *Referral configured* option.
 - A new *SSL/TLS* option has been added. Enable this option if you want DataMiner to use SSL/TLS when connecting to the LDAP server.
 
-#### SLDataMiner: Enhanced locking when editing elements \[ID_31948\]
+#### SLDataMiner: Enhanced locking when editing elements \[ID 31948\]
 
 A number of enhancements have been made to SLDataMiner with regard to element locking, especially when editing elements.
 
-#### Enhanced socket cleanup after closing a serial connection \[ID_31955\]
+#### Enhanced socket cleanup after closing a serial connection \[ID 31955\]
 
 A number of enhancements have been made with regard to socket cleanup after closing a serial connection, especially in situations where the “closeConnectionOnResponse” option is enabled or when a close action is performed.
 
-#### DataMiner Cube - Service & Resource Management: Enhanced performance when opening a visual overview of a service linked to a booking and when updating a bookings list \[ID_32054\]
+#### DataMiner Cube - Service & Resource Management: Enhanced performance when opening a visual overview of a service linked to a booking and when updating a bookings list \[ID 32054\]
 
 Due to a number of enhancements, overall performance has increased when opening a visual overview of a service linked to a booking and when updating a bookings list.
 
-#### Enhanced performance when loading domain users from Azure AD \[ID_32077\]
+#### Enhanced performance when loading domain users from Azure AD \[ID 32077\]
 
 Due to a number of enhancements, overall performance has increased when loading domain users from Azure AD.
 
-#### DataMiner Taskbar Utility: Improved entering of credentials before testing the SLNet connection \[ID_32079\]
+#### DataMiner Taskbar Utility: Improved entering of credentials before testing the SLNet connection \[ID 32079\]
 
 When you right-click the Taskbar Utility icon and select *Options*, in the *SLNet* tab, you can enter your credentials and click *Test & Save Connection* to test the connection to SLNet.
 
 Up to now, in some cases, you could experience some lag while entering your credentials. From now on, entering your credentials will go much smoother.
 
-#### DataMiner Cube - Visual Overview: Spectrum Analysis component now allows combining an inline preset with one or more measurement points \[ID_32101\]
+#### DataMiner Cube - Visual Overview: Spectrum Analysis component now allows combining an inline preset with one or more measurement points \[ID 32101\]
 
 When configuring a Spectrum Analysis component, it is now possible to combine an inline preset with one or more measurement points.
 
-#### Updated BPA tests \[ID_32102\]
+#### Updated BPA tests \[ID 32102\]
 
 The following BPA tests have been updated:
 
 - Cassandra DB Size
 - Check Antivirus DLLs
 
-#### Replication: Name of the local element will now be logged in SLReplication.txt when a replication connection is set up \[ID_32109\]
+#### Replication: Name of the local element will now be logged in SLReplication.txt when a replication connection is set up \[ID 32109\]
 
 When a replication connection is set up to another DataMiner Agent, from now on, the name of the local element for which that connection is set up will be logged in the SLReplication.txt file.
 
 ### Fixes
 
-#### Cassandra: Incorrect health status \[ID_29502\]
+#### Cassandra: Incorrect health status \[ID 29502\]
 
 In some cases, the Cassandra health status was incorrect.
 
-#### Proactive cap detection: Problem with frequency of trend prediction calculations \[ID_31447\]
+#### Proactive cap detection: Problem with frequency of trend prediction calculations \[ID 31447\]
 
 The “proactive cap detection” feature predicts future issues based on trend data in the Cassandra database, using advanced techniques that consider repeating patterns, information on the rate at which a parameter value increases or decreases, etc.
 
 Up to now, in some cases, the frequency with which trend predictions were calculated would either be too low or too high.
 
-#### Problem with SLProtocol when trying to parse data received from SLPort \[ID_31676\]
+#### Problem with SLProtocol when trying to parse data received from SLPort \[ID 31676\]
 
 In some cases, an error could occur in SLProtocol when trying to parse data received from SLPort.
 
-#### Elasticsearch would keep an incorrect number of backups \[ID_31701\]
+#### Elasticsearch would keep an incorrect number of backups \[ID 31701\]
 
 Elasticsearch would incorrectly keep one backup more than was specified in the “number of backups to keep” setting.
 
 For example, when you had specified that 4 backups had to be kept, Elasticsearch would incorrectly keep 5 backups instead.
 
-#### Problem with SLDataMiner when a trigger to reload service settings was delayed & memory leak in SLElement \[ID_31711\]
+#### Problem with SLDataMiner when a trigger to reload service settings was delayed & memory leak in SLElement \[ID 31711\]
 
 When a trigger to reload service settings was delayed, in some cases, a run-time error could occur in the service thread of SLDataMiner.
 
 Also, SLElement could leak memory when services were configured with a delayed trigger or a redundancy condition that persisted for a period of time.
 
-#### Problem with SLElement after restarting an element with a subscription that had a 'resolve' or 'filter' option configured \[ID_31741\]
+#### Problem with SLElement after restarting an element with a subscription that had a 'resolve' or 'filter' option configured \[ID 31741\]
 
 When there was an active element subscription with a “resolve=x” or “sort=x” filter option configured, in some cases, an error could occur in SLElement when processing table changes after an element restart.
 
-#### SLPort could incorrectly accept a payload containing only a trailer and forward it to SLProtocol \[ID_31743\]
+#### SLPort could incorrectly accept a payload containing only a trailer and forward it to SLProtocol \[ID 31743\]
 
 In case of a serial protocol, when both a header and trailer were configured for a response, in some cases, SLPort could incorrectly accept a payload containing only a trailer and forward it to SLProtocol before the timeout of the command was reached.
 
 From now on, if a payload contains only a trailer, the socket buffer will be read until the configured timeout is reached and then the payload will be forwarded to SLProtocol.
 
-#### SLA: Problem when an update of an SLA setting coincided with a window change \[ID_31750\]
+#### SLA: Problem when an update of an SLA setting coincided with a window change \[ID 31750\]
 
 When an update of an SLA setting (e.g. Base timestamp, Monitor span, Window size, Window Unit, Window type, Validity start or Validity end) coincided with a window change, in some rare cases, the next window would incorrectly be taken instead of the window that triggered the change. This would cause calculations to incorrectly use a timestamp in the future.
 
-#### Web apps: 'Refresh now' instead of 'Reconnecting...' message after communication was interrupted \[ID_31753\]
+#### Web apps: 'Refresh now' instead of 'Reconnecting...' message after communication was interrupted \[ID 31753\]
 
 Up now on, when a web app (e.g. Dashboards, Monitoring, Ticketing, etc.) lost communication, a “Reconnecting...” message would appear in the UI. From now on, a “Refresh now” message will appear instead, prompting users to refresh the web page.
 
-#### DataMiner Cube - Alarm Console: No context menu would appear when right-clicking an instance of an alarm that impacted more than one service when the alarms were grouped by service \[ID_31764\]
+#### DataMiner Cube - Alarm Console: No context menu would appear when right-clicking an instance of an alarm that impacted more than one service when the alarms were grouped by service \[ID 31764\]
 
 When, in an alarm tab in which the alarms are grouped by service, there is an alarm that impacts more than one service, that alarm will be listed once for every impacted service. Up to now, when you right-clicked one of those duplicate alarms, the context menu would incorrectly not be opened.
 
-#### Failover: Redundancy groups containing DVE elements would not get loaded after a Failover switch or a restart of the Failover system \[ID_31765\]
+#### Failover: Redundancy groups containing DVE elements would not get loaded after a Failover switch or a restart of the Failover system \[ID 31765\]
 
 After a Failover switch or a restart of a Failover system, in some cases, redundancy groups containing DVE elements would incorrectly not get loaded.
 
-#### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables \[ID_31767\]
+#### Elasticsearch: NewPagingSearchRequest was incorrectly not able to query an alias grouping two logger tables \[ID 31767\]
 
 Up to now, a NewPagingSearchRequest was incorrectly not able to retrieve data from an alias that grouped two logger tables.
 
-#### DataMiner Cube - Alarm Console: Base alarms of a correlated alarm not shown on linked alarm tab \[ID_31789\]
+#### DataMiner Cube - Alarm Console: Base alarms of a correlated alarm not shown on linked alarm tab \[ID 31789\]
 
 When the Alarm Console had an alarm tab that was linked to an element of which an alarm was the base alarm of a correlated alarm, that alarm would incorrectly not be shown.
 
-#### 'Duplicate name detected' notice would incorrectly be generated when turning a service into an enhanced service or vice versa \[ID_31801\]
+#### 'Duplicate name detected' notice would incorrectly be generated when turning a service into an enhanced service or vice versa \[ID 31801\]
 
 When a service was turned into an enhanced service, or when an enhanced service was turned into a regular service, a “Duplicate name detected” notice would incorrectly be generated.
 
-#### DataMiner Cube: Miscellaneous small fixes \[ID_31802\]
+#### DataMiner Cube: Miscellaneous small fixes \[ID 31802\]
 
 In DataMiner Cube, a number of small fixes have been made:
 
@@ -480,29 +480,29 @@ In DataMiner Cube, a number of small fixes have been made:
 - When an element was restarted, in some cases, a table would incorrectly stay grayed out.
 - A parameter containing a disabled exception value would stay disabled after it had received a normal value.
 
-#### SLElement: Problem with invalid parameter IDs in the Generic DVE Linker Table \[ID_31805\]
+#### SLElement: Problem with invalid parameter IDs in the Generic DVE Linker Table \[ID 31805\]
 
 When creating resources, the \[Generic DVE Linker Table\] is used to link a row from the \[Generic DVE Table\] to any other table. Up to now, in some cases, invalid parameter IDs in the \[FK Table\] column would result in invalid relations being constructed in SLElement’s memory.
 
 From now on, the values from the \[FK Table\] will be checked against the protocol's parameters and a functioning link will only be made when a table with such a parameter ID exists in the element.
 
-#### Problem with SLAnalytics when a large number of element state updates were being generated \[ID_31810\]
+#### Problem with SLAnalytics when a large number of element state updates were being generated \[ID 31810\]
 
 In some rare cases, an error could occur in SLAnalytics when a large number of element state updates were being generated.
 
-#### DataMiner Cube - Settings: Filtered alarm tabs configured to show active alarms and masked alarms would incorrectly only show active alarms \[ID_31815\]
+#### DataMiner Cube - Settings: Filtered alarm tabs configured to show active alarms and masked alarms would incorrectly only show active alarms \[ID 31815\]
 
 When, in the Settings app, you had configured a filtered alarm tab to contain both active alarms and masked alarms, that alarm tab would incorrectly only show active alarms.
 
-#### Problem when SLAnalytics was stopped while it was writing to the database \[ID_31824\]
+#### Problem when SLAnalytics was stopped while it was writing to the database \[ID 31824\]
 
 When SLAnalytics was stopped while it was writing to the database, in some rare cases, caching issues could occur.
 
-#### Problem with synchronization of SLAnalytics configuration settings \[ID_31825\]
+#### Problem with synchronization of SLAnalytics configuration settings \[ID 31825\]
 
 In some cases, SLAnalytics configuration settings would be constantly synchronized among agents in a DataMiner System. From now on, automatic synchronization of SLAnalytics configuration settings will be limited to once an hour.
 
-#### Ticketing app: Problem with Ticket exposer \[ID_31826\]
+#### Ticketing app: Problem with Ticket exposer \[ID 31826\]
 
 When the Ticket exposer was used with a filter like the one below, in some cases, incorrect results would be returned:
 
@@ -510,21 +510,21 @@ When the Ticket exposer was used with a filter like the one below, in some cases
 var query = TicketingExposers.Ticket.Contains(@"7999").ToQuery();
 ```
 
-#### DataMiner Cube - Visual Overview: Connection between two shapes would incorrectly not be hidden when one of the shapes was hidden \[ID_31839\]
+#### DataMiner Cube - Visual Overview: Connection between two shapes would incorrectly not be hidden when one of the shapes was hidden \[ID 31839\]
 
 When a shape with a connection to another shape was hidden, in some cases, the connection between the two shapes would incorrectly not be hidden.
 
-#### Problem with filtered table subscriptions on DVE elements \[ID_31845\]
+#### Problem with filtered table subscriptions on DVE elements \[ID 31845\]
 
 When a subscription on a table of a DVE element had been created with a filter (e.g. a primary key filter), the client would receive the initial data but no updates.
 
-#### SLProtocol could leak memory when an enhanced service was tracking alarms that contained duplicate property names \[ID_31851\]
+#### SLProtocol could leak memory when an enhanced service was tracking alarms that contained duplicate property names \[ID 31851\]
 
 When an enhanced service was tracking alarms, SLProtocol could leak memory when an alarm contained duplicate property names.
 
 Also, the same process could leak memory when a table parameter was cleaned up after an element restart.
 
-#### Failover: Problem when setting up a Failover system with a Cassandra database \[ID_31854\]
+#### Failover: Problem when setting up a Failover system with a Cassandra database \[ID 31854\]
 
 In some cases, the following exception could be thrown when a Failover system with a Cassandra database was set up:
 
@@ -532,55 +532,55 @@ In some cases, the following exception could be thrown when a Failover system wi
 System.Exception: Unexpected error from nodetool.
 ```
 
-#### SLPhotoManager would incorrectly log 'PrincipalServerDown' exceptions in SLErrors.txt when trying to retrieve pictures of local users \[ID_31865\]
+#### SLPhotoManager would incorrectly log 'PrincipalServerDown' exceptions in SLErrors.txt when trying to retrieve pictures of local users \[ID 31865\]
 
 Up to now, when SLPhotoManager was unable to retrieve pictures of local (i.e. non-LDAP) users, it would incorrectly log “PrincipalServerDown” exceptions in the SLErrors.txt log file. From now on, it will log those exceptions in the SLPhotoManager.txt log file when the debug level is set to 5.
 
-#### Web apps - Visual Overview: Native controls inside clickable child shapes would incorrectly not be displayed \[ID_31871\]
+#### Web apps - Visual Overview: Native controls inside clickable child shapes would incorrectly not be displayed \[ID 31871\]
 
 When, in a web app, a visual overview had interactive parent shapes with clickable child shapes that contained a native control (e.g. view shapes containing an embedded browser control), that control would incorrectly not be displayed.
 
-#### Scheduled tasks configured to take a DataMiner backup, optimize the database or perform an LDAP resynchronization would incorrectly not get executed \[ID_31877\]
+#### Scheduled tasks configured to take a DataMiner backup, optimize the database or perform an LDAP resynchronization would incorrectly not get executed \[ID 31877\]
 
 In some cases, scheduled tasks configured to take a DataMiner backup, optimize the database or perform an LDAP resynchronization would incorrectly not get executed.
 
-#### Visual Overview: Hidden pages of an embedded Visio file would incorrectly be displayed when viewed in a web app \[ID_31881\]
+#### Visual Overview: Hidden pages of an embedded Visio file would incorrectly be displayed when viewed in a web app \[ID 31881\]
 
 When an embedded multi-page Visio file with hidden pages was viewed in a web app, the hidden pages would incorrectly be displayed.
 
-#### DataMiner Cube - Visual Overview: DCF signal paths would not be visualized correctly on pages with a grid layout \[ID_31888\]
+#### DataMiner Cube - Visual Overview: DCF signal paths would not be visualized correctly on pages with a grid layout \[ID 31888\]
 
 In some cases, a DCF signal path would not be visualized correctly on Visio pages with a grid layout.
 
-#### SLNet would thrown an 'Arithmetic operation resulted in an overflow' exception when performance information was being calculated \[ID_31894\]
+#### SLNet would thrown an 'Arithmetic operation resulted in an overflow' exception when performance information was being calculated \[ID 31894\]
 
 In some cases, SLNet would thrown an “Arithmetic operation resulted in an overflow” exception when performance information was being calculated.
 
-#### Exported protocols would incorrectly have the same Protocol.Description and Protocol.Type as their parent protocol \[ID_31904\]
+#### Exported protocols would incorrectly have the same Protocol.Description and Protocol.Type as their parent protocol \[ID 31904\]
 
 Up to now, the Protocol.Description and Protocol.Type values in an exported protocol would incorrectly be identical to those of the parent protocol. From now on, the Protocol.Description and Protocol.Type elements of an exported protocol will contain the export name and the virtual type instead.
 
-#### Failover: Agents not coming online after DataMiner restart \[ID_31915\]
+#### Failover: Agents not coming online after DataMiner restart \[ID 31915\]
 
 When a Failover configuration incorrectly did not have normal heartbeats defined between the two Agents, the Agents would not automatically come online after a DataMiner restart.
 
-#### Errors occurring while deleting Cassandra compaction and repair tasks could affect the DataMiner startup routine \[ID_31921\]
+#### Errors occurring while deleting Cassandra compaction and repair tasks could affect the DataMiner startup routine \[ID 31921\]
 
 When a DataMiner Agent with a Cassandra cluster configuration starts up, any scheduled task to compact or repair the Cassandra database is deleted. Up to now, when an error occurred while deleting such a task, in some cases, the DataMiner Agent would not start up correctly.
 
 From now on, any error that occurs while deleting Cassandra compaction and repair tasks will no longer affect the DataMiner startup routine.
 
-#### Dashboard Gateway was not able to access the dashboard configuration files of user accounts other than the one used to set up the Dashboard Gateway connection \[ID_31926\]
+#### Dashboard Gateway was not able to access the dashboard configuration files of user accounts other than the one used to set up the Dashboard Gateway connection \[ID 31926\]
 
 Since DataMiner version 10.0.10, a Dashboard Gateway would no longer be able to access the dashboard configuration files of user accounts other than the one used to set up the Dashboard Gateway connection.
 
 From now on, a Dashboard Gateway will be able to access the dashboard configuration files of all users when the user account that is used to set up the Dashboard Gateway connection has been granted the *Modules \> System configuration \> Tools \> Admin tools* permission.
 
-#### DataMiner Cube - Visual Overview: DCF connections incorrectly not shown when opening a second visual overview for the same element \[ID_31931\]
+#### DataMiner Cube - Visual Overview: DCF connections incorrectly not shown when opening a second visual overview for the same element \[ID 31931\]
 
 When you had opened a visual overview with DCF information for a particular element, and you opened another visual overview with DCF information for that same element, in some rare cases, the latter would incorrectly not show any DCF connections.
 
-#### Problem when reading out a parameter or element latch \[ID_31932\]
+#### Problem when reading out a parameter or element latch \[ID 31932\]
 
 When DataMiner was started or when an element was started, in some cases, the following event could appear in the Windows event viewer:
 
@@ -588,39 +588,39 @@ When DataMiner was started or when an element was started, in some cases, the fo
 Could not read element latch for DMAID/EID. 0x80131533
 ```
 
-#### Interactive Automation scripts - TreeViewItem: Selecting a tree item would not cause the corresponding valuable to be updated \[ID_31940\]
+#### Interactive Automation scripts - TreeViewItem: Selecting a tree item would not cause the corresponding valuable to be updated \[ID 31940\]
 
 When you selected an item in a tree view, in some cases, the value of the corresponding variable would not be updated, especially when the parent item was also selected and was configured to not use recursion.
 
-#### Dashboards app: 'Top X alarms' chart would incorrectly not include a graph in a PDF report \[ID_31949\]
+#### Dashboards app: 'Top X alarms' chart would incorrectly not include a graph in a PDF report \[ID 31949\]
 
 When a PDF report was generated of a dashboard containing a “top X alarms” chart based on alarm state duration, in some cases, that chart would incorrectly not include a graph when set to stacked mode.
 
-#### Information event with parameter value 'Set by \<user>...' would incorrectly be generated when an SNMP trap was processed \[ID_31953\]
+#### Information event with parameter value 'Set by \<user>...' would incorrectly be generated when an SNMP trap was processed \[ID 31953\]
 
 In some cases, an information event with parameter value “Set by \<user> ...” would incorrectly be generated when an SNMP trap was processed.
 
-#### 'Service Manager not licensed' error when synchronizing files on DataMiner Agents that do not have a Service Manager license \[ID_31958\]
+#### 'Service Manager not licensed' error when synchronizing files on DataMiner Agents that do not have a Service Manager license \[ID 31958\]
 
 In some cases, when a DataMiner Agent did not have a Service Manager license, a “Service Manager not licensed” error would be thrown when synchronizing files. From now on, when a DataMiner Agent does not have a Service Manager license, no attempt will be made to synchronize system function definitions when synchronizing files.
 
-#### Failover: Standalone BPA Executor could incorrectly not be launched from an offline agent \[ID_31959\]
+#### Failover: Standalone BPA Executor could incorrectly not be launched from an offline agent \[ID 31959\]
 
 When, in a Failover setup, the Standalone BPA Executor was launched from the offline agent, up to now, it would throw an exception, stating that the agent was offline. Because this tool must be able to run certain tests on offline agents, it has now been made possible for the Standalone BPA Executor to be launched from an offline agent.
 
-#### GetAnalogTrendDataMessage would incorrectly return 5-minute data point when more than 48 hours of trend data was requested \[ID_31970\]
+#### GetAnalogTrendDataMessage would incorrectly return 5-minute data point when more than 48 hours of trend data was requested \[ID 31970\]
 
 When a GetAnalogTrendDataMessage was used to retrieve more than 48 hours of trend data for a particular element, in some cases, the result set would incorrectly contain 5-minute data points instead of 60-minute data points.
 
-#### Service & Resource Management: Problem with SLNet when updating ReservationInstance properties \[ID_31973\]
+#### Service & Resource Management: Problem with SLNet when updating ReservationInstance properties \[ID 31973\]
 
 In some cases, an error could occur in SLNet when updating ReservationInstance properties while the status of the instance was being changed.
 
-#### DataMiner Cube - Visual Overview: Trend graph would incorrectly not be loaded when clicking a trend icon \[ID_31978\]
+#### DataMiner Cube - Visual Overview: Trend graph would incorrectly not be loaded when clicking a trend icon \[ID 31978\]
 
 When, in a visual overview that showed a table with trended columns, you opened a trend graph by clicking a trend icon, in some cases, the trend graph would incorrectly not be loaded and a “Trending is currently not enabled for this parameter” message would appear.
 
-#### Cassandra: Incorrect 'null statement' messages would be added to SLDBConnection.txt \[ID_31979\]
+#### Cassandra: Incorrect 'null statement' messages would be added to SLDBConnection.txt \[ID 31979\]
 
 In some cases, the following message would repeatedly be added to the SLDBConnection.txt log file:
 
@@ -628,61 +628,61 @@ In some cases, the following message would repeatedly be added to the SLDBConnec
 Cassandra: tried to execute null statement.
 ```
 
-#### External authentication via SAML: Problem when logging in with a user account that shared its email address with another account \[ID_31990\]
+#### External authentication via SAML: Problem when logging in with a user account that shared its email address with another account \[ID 31990\]
 
 When, on a system that used external authentication via SAML, you tried to log in with a user account that shared its email address with another user account, up to now, an exception would be thrown. From now on, an error message will be added to the SLSAML.txt log file instead.
 
-#### Failover: Initial file synchronization would incorrectly not be performed \[ID_31991\]
+#### Failover: Initial file synchronization would incorrectly not be performed \[ID 31991\]
 
 When a standalone DataMiner Agent had been added to a Failover setup, in some cases, the initial file synchronization from online agent to offline agent would incorrectly not be performed.
 
-#### Failover configuration would incorrectly only be saved on the online agent \[ID_32007\]
+#### Failover configuration would incorrectly only be saved on the online agent \[ID 32007\]
 
 When a DataMiner Failover setup was configured, in some rare cases, the configuration would incorrectly only be saved on the online agent and not on the offline agent.
 
-#### Failover: Offline agent would not execute its 'go offline' routine after a Failover setup was configured \[ID_32014\]
+#### Failover: Offline agent would not execute its 'go offline' routine after a Failover setup was configured \[ID 32014\]
 
-When a DataMiner Failover setup was configured, in some cases, the offline agent would not execute its “go offline” routine. As a result, certain clean-up actions would not be performed and active Cube clients would stay connected instead of being automatically disconnected.
+When a DataMiner Failover setup was configured, in some cases, the offline agent would not execute its “go offline” routine. As a result, certain cleanup actions would not be performed and active Cube clients would stay connected instead of being automatically disconnected.
 
-#### Problem when creating separate SLScripting processes for every protocol being used \[ID_32015\]
+#### Problem when creating separate SLScripting processes for every protocol being used \[ID 32015\]
 
 In the DataMiner.xml file, you can configure to have separate SLScripting processes created for every protocol being used. When this option was enabled, up to now, when SLScripting processes would crash, in some cases, they would either not get recreated or too many SLScripting processes would get created.
 
-#### Failover: Certain system files would incorrectly not get synchronized to the offline agent during the initial sync \[ID_32034\]
+#### Failover: Certain system files would incorrectly not get synchronized to the offline agent during the initial sync \[ID 32034\]
 
 When a Failover system was set up, certain system files (e.g. PropertyConfiguration.xml) would incorrectly not get synchronized to the offline agent during the initial sync.
 
-#### DataMiner Cube: Information templates could no longer be edited when connected to a DataMiner Agent installed on Windows Server 2016 \[ID_32035\]
+#### DataMiner Cube: Information templates could no longer be edited when connected to a DataMiner Agent installed on Windows Server 2016 \[ID 32035\]
 
 In DataMiner Cube, in some cases, it would no longer be possible to edit information templates; especially when connected to a DataMiner Agent installed on Windows Server 2016.
 
-#### Mobile apps: Clients would not immediately receive updates when items were added \[ID_32042\]
+#### Mobile apps: Clients would not immediately receive updates when items were added \[ID 32042\]
 
 When new items were added in one client, in some cases, those items would not immediately appear in other clients. For example, when a user created a ticket for a particular domain, other users viewing the list of tickets for that same domain would not immediately have their ticket list updated.
 
-#### DataMiner Cube - Alarm Console: Alarms coming in while grouping or sorting an alarm tab would incorrectly not appear in that alarm tab \[ID_32051\]
+#### DataMiner Cube - Alarm Console: Alarms coming in while grouping or sorting an alarm tab would incorrectly not appear in that alarm tab \[ID 32051\]
 
 In some rare cases, alarms coming in while you were grouping or sorting the alarms on an alarm tab would incorrectly not appear on that alarm tab, especially on heavy-duty systems.
 
-#### Legacy Dashboards: Using 'Add to dashboard' in Cube would no longer work when the DataMiner Agent was only accessible via HTTPS \[ID_32083\]
+#### Legacy Dashboards: Using 'Add to dashboard' in Cube would no longer work when the DataMiner Agent was only accessible via HTTPS \[ID 32083\]
 
 From DataMiner 9.0 onwards, it is possible to add items to a legacy dashboard directly from the Cube UI, for instance from the Surveyor or an element card.
 
 This functionality would no longer work when the DataMiner Agent was only accessible via HTTPS.
 
-#### Dashboards app: A 'not allowed' message would incorrectly appear when opening a shared dashboard containing EPM components \[ID_32093\]
+#### Dashboards app: A 'not allowed' message would incorrectly appear when opening a shared dashboard containing EPM components \[ID 32093\]
 
 When you opened a shared dashboard that contained EPM components, in some cases, a “not allowed” message would incorrectly appear.
 
-#### DataMiner upgrade: SLNet could load an incorrect version of the SLUpgrade.dll file \[ID_32094\]
+#### DataMiner upgrade: SLNet could load an incorrect version of the SLUpgrade.dll file \[ID 32094\]
 
 To be able to check the prerequisites during a DataMiner upgrade, SLNet needs to load the SLUpgrade.dll file. In some cases, it would load the 32-bit version instead of the 64-bit version or vice versa.
 
-#### DataMiner landing page: User icon no longer shown in top-right corner \[ID_32108\]
+#### DataMiner landing page: User icon no longer shown in top-right corner \[ID 32108\]
 
 On the DataMiner landing page, the user icon would incorrectly no longer be shown in the top-right corner.
 
-#### Incorrect error in logging during startup of Failover setup \[ID_32112\]
+#### Incorrect error in logging during startup of Failover setup \[ID 32112\]
 
 In a Failover setup, during startup the following incorrect error could briefly be reported in the *SLFailover.txt* log file:
 
@@ -690,14 +690,14 @@ In a Failover setup, during startup the following incorrect error could briefly 
 INVALID CONFIG: Failover is active, but no cluster is defined
 ```
 
-#### SLLogCollector will now also by default collect the most recent backup\_\*.log.txt file and all Database\\\*.xml files \[ID_32114\]
+#### SLLogCollector will now also by default collect the most recent backup\_\*.log.txt file and all Database\\\*.xml files \[ID 32114\]
 
 From now on, SLLogCollector will also by default collect the following files:
 
 - The most recent backup\_\*.log.txt file in C:\\Skyline Dataminer\\Backup
 - All \*.xml configuration files in C:\\Skyline Dataminer\\Database
 
-#### SLReset would incorrectly delete the Webpages\\root and Webpages\\monitoring folders \[ID_32139\]
+#### SLReset would incorrectly delete the Webpages\\root and Webpages\\monitoring folders \[ID 32139\]
 
 Up to now, SLReset would incorrectly delete the following folders:
 
@@ -706,10 +706,10 @@ Up to now, SLReset would incorrectly delete the following folders:
 
 From now on, SLReset will no longer delete these folders.
 
-#### Newly created elements would incorrectly be assigned an ID equal to -1 \[ID_32178\]
+#### Newly created elements would incorrectly be assigned an ID equal to -1 \[ID 32178\]
 
 In some cases, newly created elements would incorrectly be assigned an ID equal to -1.
 
-#### SLNet would no longer correctly take into account the system-level EPMConfig.xml file \[ID_32220\]
+#### SLNet would no longer correctly take into account the system-level EPMConfig.xml file \[ID 32220\]
 
 SLNet would no longer correctly take into account the system-level *EPMConfig.xml* file. As a result, the protocol information received by SLNet would contain topology and search chains with incorrect names.

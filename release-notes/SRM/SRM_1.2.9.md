@@ -6,11 +6,11 @@ uid: SRM_1.2.9
 
 ## New features
 
-#### Redesigned automatic resource selection behavior \[ID_28165\]
+#### Redesigned automatic resource selection behavior \[ID 28165\]
 
 The automatic selection of resources in the Booking Wizard has been redesigned. Previously, resources were only automatically selected when the Booking Wizard was first launched for a service definition. Now automatic resource selection can be configured with the property *Auto Select Resource* of service definition nodes, which will have an effect every time a node does not have a resource selected (unless the resource was explicitly cleared by the user).
 
-#### Possibility to trigger custom script when booking is converted to contributing booking \[ID_28243\]
+#### Possibility to trigger custom script when booking is converted to contributing booking \[ID 28243\]
 
 A custom script can now be triggered when a booking is converted to a contributing booking. This is mainly intended to make it possible to assign capabilities and capacities to contributing resources with a custom script.
 
@@ -73,7 +73,7 @@ To trigger a custom script after the creation of a transport booking, configure 
 }
 ```
 
-#### Support for V2 functions in Booking Wizard \[ID_28390\]
+#### Support for V2 functions in Booking Wizard \[ID 28390\]
 
 The Booking Wizard now supports V2 functions and resources. These will be handled in the same way as V1 functions.
 
@@ -83,17 +83,17 @@ However, note that this is currently not yet supported for bookings created base
 
 ### Enhancements
 
-#### Improved error reporting in case of issue during transport path selection \[ID_28049\]
+#### Improved error reporting in case of issue during transport path selection \[ID 28049\]
 
 Error reporting has been improved in case an issue occurs during transport path selection.
 
 When an error occurs during the preparation for the path selection, a button with an exclamation mark will now be displayed next to the *Select Path* button. Clicking the new button will display the error message with additional detailed information, if available.
 
-#### Bookings now set to Partial state if custom created booking action script fails \[ID_28213\]
+#### Bookings now set to Partial state if custom created booking action script fails \[ID 28213\]
 
 When a custom created booking action script fails, bookings will now always be set to the *Partial* state. Previously, in some cases, the booking went into *On-Hold* state instead.
 
-#### SRM_DiscoverResource script now allows update of unlinked resources \[ID_28348\]
+#### SRM_DiscoverResource script now allows update of unlinked resources \[ID 28348\]
 
 The *SRM_DiscoverResource* script has been improved so that it can be used to update unlinked resources.
 
@@ -105,15 +105,15 @@ The following other minor changes were also implemented:
 - The following characters are no longer supported in property, capability and capacity names: . ! \`
 - Capacity values will now be validated to ensure that they are within the range defined for the profile parameter.
 
-#### Progress indicator when booking is confirmed/saved \[ID_28365\]
+#### Progress indicator when booking is confirmed/saved \[ID 28365\]
 
 When a booking is being confirmed or saved, the Booking Manager will now indicate the progress of this action.
 
-#### Importing function now updates ResourceInputInterface and ResourceOutputInterface capabilities \[ID_28420\]
+#### Importing function now updates ResourceInputInterface and ResourceOutputInterface capabilities \[ID 28420\]
 
 When a function is imported, the *ResourceInputInterface* and *ResourceOutputInterface* capabilities will now automatically be updated with the relevant discrete values. If these capability parameters do not exist yet, they will be created.
 
-#### SRM_DiscoverResources script updated to support V2 functions \[ID_28567\]
+#### SRM_DiscoverResources script updated to support V2 functions \[ID 28567\]
 
 To add support for V2 functions, the following functionality has been added in the *SRM_DiscoverResources* script:
 
@@ -121,54 +121,54 @@ To add support for V2 functions, the following functionality has been added in t
 - Export of resource information linked to a virtual function definition.
 - Import of bound or unbound virtual function resources, with the possibility to rename or rebind them and update related info.
 
-#### Filtering of resources in Service Profiles Wizard \[ID_28642\]
+#### Filtering of resources in Service Profiles Wizard \[ID 28642\]
 
 In the wizard to create a booking based on a service profile the same filtering will now be applied for resources as in the regular Booking Wizard, i.e. by function, by interface capability and by resource pool. If this is enabled, resources will now also be shown with a first and second priority.
 
 ### Fixes
 
-#### Filtering criteria for node resource assignment reset to default value when booking was edited \[ID_28022\]
+#### Filtering criteria for node resource assignment reset to default value when booking was edited \[ID 28022\]
 
 If a *Resource Assignment* property is defined at node level, during booking creation, the user has to select filtering criteria for a given node. Previously, when such a booking was edited, the filtering criteria were reset to the default value. Now, to ensure that this selection is remembered when the booking is edited, it is saved in the booking property *BookingWizardAssignFilter*.
 
-#### Problem with SRM_ShowResource script \[ID_28221\]
+#### Problem with SRM_ShowResource script \[ID 28221\]
 
 If a booking was created based on service profiles, it could occur that an exception was thrown on the page showing selected resources (via the *Show Resource* button) and the wizard closed without providing any feedback to the user.
 
 In addition, if a resource was assigned based on the pool inheritance feature, an exception was also thrown. In such a case, the resource will now simply not be displayed in the UI.
 
-#### Not possible to change timing of ongoing booking \[ID_28329\]
+#### Not possible to change timing of ongoing booking \[ID 28329\]
 
 In some cases, it could occur that it was not possible the change the timing of an ongoing booking via the Booking Manager UI.
 
-#### Issues with SRM_ExportFunctions and SRM_ImportFunctions script \[ID_28354\]
+#### Issues with SRM_ExportFunctions and SRM_ImportFunctions script \[ID 28354\]
 
 Because the *SRM_ExportFunctions* script did not include parent profile definitions in an export, it could occur that an import failed. This script has been adapted, and the *SRM_ImportFunctions* script has also been adjusted to import such parent profile definitions. In addition, an issue has been resolved that could cause the link to parent functions to be lost when multiple functions were imported.
 
-#### DTR: Not possible to assign numeric value to capability parameter of type text \[ID_28383\]
+#### DTR: Not possible to assign numeric value to capability parameter of type text \[ID 28383\]
 
 When data transfer rules (DTR) were used, it could occur that numeric values could not be assigned to capability parameters of type text.
 
-#### Allowed resource type not taken into account for booking with start time in the past \[ID_28411\]
+#### Allowed resource type not taken into account for booking with start time in the past \[ID 28411\]
 
 When a booking was created with a start time in the past, it could occur that the resources available for selection in the Booking Wizard were not limited by allowed resource type.
 
-#### Booking remained locked after wizard to edit booking was aborted\[ID_28412\]
+#### Booking remained locked after wizard to edit booking was aborted\[ID 28412\]
 
 If a user aborted the wizard to edit a booking, it could occur that the booking remained locked for editing, so that it was not possible to edit it again.
 
-#### State of Convert to Contributing checkbox not saved when going back in wizard \[ID_28425\]
+#### State of Convert to Contributing checkbox not saved when going back in wizard \[ID 28425\]
 
 In some cases, when you returned to a previous page of the wizard to create a booking based on service profiles, it could occur that the selected state of the *Convert to Contributing* checkbox was not saved.
 
-#### Not possible to edit booking using resource pool inheritance \[ID_28524\]
+#### Not possible to edit booking using resource pool inheritance \[ID 28524\]
 
 If a booking used resource pool inheritance, it could occur that the booking could not be edited.
 
-#### Editing a booking briefly released its resources \[ID_28620\]
+#### Editing a booking briefly released its resources \[ID 28620\]
 
 When a booking was edited, its resources could briefly be released while their availability was being re-evaluated. This will no longer occur for confirmed and partial bookings. The resources will only be re-evaluated for quarantined bookings from now on.
 
-#### Incorrect resource assignment when creating booking based on service profile \[ID_28630\]
+#### Incorrect resource assignment when creating booking based on service profile \[ID 28630\]
 
 When a booking was created based on a service profile, it could occur that an incorrect resource was assigned to the booking.

@@ -40,7 +40,7 @@ Option to define a default value if no result was returned for a certain row.
 
 Format: Column Parameter Id , Value
 
-In the following example, the parameter with ID 1006 is set to 6:
+In the following example, the parameter with ID 1002 is set to 6:
 
 ```xml
 options="defaultValue:1002,6"
@@ -52,7 +52,7 @@ Option to define a condition when to fill in the defaultValue.
 
 Format: Column Idx (0-based) , Value
 
-In the following example, the parameter with ID 1006 is set to 6 only if value in column 3 (0-based) equals 1:
+In the following example, the parameter with ID 1002 is set to 6 only if value in column 3 (0-based) equals 1:
 
 ```xml
 options="defaultValue:1002,6;defaultIf:3,1"
@@ -70,7 +70,7 @@ Parameter ID(s) of the column(s) containing the primary key(s) of the destinatio
 
 Option to filter out certain results.
 
-Example (see DataMiner 8.0.0 – RN 5071):
+Example:<!-- RN 5071 -->
 
 ```xml
 <Type options="limitresult:x">merge</Type>
@@ -98,7 +98,7 @@ ID of the parameter that fires the trigger leading to an aggregate action on a t
 
 The type of merge (average, sum, count, percentage, etc.)
 
-Example (see DataMiner 8.0.0 – RN 5071):
+Example:<!-- RN 5071 -->
 
 ```xml
 <Type options="type:avg extended;destination:a,b,c,d">merge</Type>
@@ -139,29 +139,29 @@ Trigger 15300, found in the Class protocols, calls action 15300, which is an “
 > [!NOTE]
 >
 > - When using a write parameter on the child element that will be executing an “aggregate” action, do not set RTDisplay to true. When this is done, it will be processed by SLElement and this will generate an error in the log file even when the merge action was correctly done. The error will look like this:
+>
 >   ```bash
 >   SLElement.exe|11040|CElement::NotifyFunc|ERR|0|!! Generating alarm on an unknown parameter (0)
 >   alarm info: VT_ARRAY|VT_VARIANT (4) ~ 0 VT_UI4 : 236844 ~ 1 VT_I4 : 0 ~ 2 VT_BSTR :
 >   SLProtocol - Elementname ~ 3 VT_ARRAY|VT_BSTR (16) : 16;2014/06/19 12:08:23;13;5;;0;5;11;2910;;0;;;;16;
 >   ```
+>
 > - The type options PCT, COUNT and PCT TOTAL are not supported for actions of type merge.
 
 Only the following combinations of merge actions that trigger an aggregate action are supported:
 
 |Aggregate Type> Merge Type V|PCT|AVG|AVG EXTENDED|MAX|MIN|COUNT|SUM|PCT TOTAL|
 |--- |--- |--- |--- |--- |--- |--- |--- |--- |
-|AVG|&#10004;|&#10004;|&#10004;**|&#10004;*|&#10004;*|&#10004;*,**|&#10004;*,**|&#10004;|
-|AVG EXTENDED|&#10004;|&#10004;**|&#10004;|&#10004;*|&#10004;*|&#10004;*,**|&#10004;*,**|&#10004;|
-|MAX|&#10004;|&#10004;|&#10004;**|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|MIN|&#10004;|&#10004;|&#10004;**|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|SUM|&#10004;|&#10004;|&#10004;**|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|AVG|&#10004;|&#10004;|&#10004;|&#10004;\*|&#10004;\*|&#10004;\*|&#10004;\*|&#10004;|
+|AVG EXTENDED|&#10004;|&#10004;|&#10004;|&#10004;\*|&#10004;\*|&#10004;\*|&#10004;\*|&#10004;|
+|MAX|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|MIN|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|SUM|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 
 \*: Averaging a MIN, MAX, COUNT or SUM averages the aggregated value over the different data elements.
 
-**: Only supported from DataMiner 9.0.0 CU5/9.0.3 onwards (RN 13206).
+Please note the following:
 
-From DataMiner 9.0.0 CU5/9.0.3 onwards (RN 13206), the following improvements are implemented:
-
-- "merge" actions now support configurations that have an incorrect number of destination columns specified. If not enough columns are specified, only the specified columns are filled in. If too many columns are specified, the excess ones are left untouched. This way, you can have an "avg extended" merge action that only outputs the "avg" (by omitting the weight, min and max columns).
-- On "merge" actions other than "avg extended", it is now possible to also include the weight column next to the value. In earlier DataMiner versions, only the aggregated value can be added to the output.
-- In earlier DataMiner versions, if the group keys for a merge/aggregate action appear in multiple casing variants (e.g. upper and lower case), the aggregated result is limited to only one of these groups. Now the aggregated value takes all group values into account, regardless of the casing of the groupby fields.
+- "merge" actions support configurations that have an incorrect number of destination columns specified. If not enough columns are specified, only the specified columns are filled in. If too many columns are specified, the excess ones are left untouched. This way, you can have an "avg extended" merge action that only outputs the "avg" (by omitting the weight, min, and max columns).
+- On "merge" actions other than "avg extended", it is possible to also include the weight column next to the value.
+- The aggregated value takes all group values into account, regardless of the casing of the groupby fields.

@@ -57,7 +57,7 @@ In the Tools tab, two buttons are available:
 
 - *Clear all excess*: Clears all events that are stuck.
 
-- *Redistribute All Missing*: Forwards missing events again. This option requires at least DataMiner 9.5.0 CU3 or 9.5.6.
+- *Redistribute All Missing*: Forwards missing events again.
 
 ### Importing/exporting results
 

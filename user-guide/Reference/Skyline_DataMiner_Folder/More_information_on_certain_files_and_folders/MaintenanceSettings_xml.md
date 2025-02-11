@@ -180,7 +180,7 @@ As soon as either *MaxFreezeTime* or *MaxFreezeAlarms* is reached, the Alarm Con
 
 ### AlarmSettings.MustSquashAlarms
 
-The *MustSquashAlarms* tag is available from DataMiner 10.0.12 onwards. Set the value to *true* to enable alarm consolidation by default. In that case, consecutive alarm events without a severity change will be combined into a consolidated event. This may be useful to reduce the load on DataMiner Cube and on the SLNet process.
+The *MustSquashAlarms* tag is used to enable (*true*) or disable (*false*) alarm consolidation by default. If this is enabled, consecutive alarm events without a severity change will be combined into a consolidated event. This may be useful to reduce the load on DataMiner Cube and on the SLNet process.
 
 The following types of alarm events will not be combined in a consolidated alarm event:
 
@@ -213,6 +213,21 @@ The following types of alarm events will not be combined in a consolidated alarm
 >
 > - [Alarm linking](xref:Alarm_linking)
 > - [Declutter your alarm tree](https://community.dataminer.services/declutter-your-alarm-tree/ "Alarm squashing")
+
+### AlarmSettings.PersistParameterLatchState
+
+From DataMiner 10.4.9/10.5.0 onwards<!--RN 39495-->, parameter latch states are not persistent by default. This means they will reset after every DataMiner restart.
+
+To enable persistent parameter latch states, add the following tags and values in *MaintenanceSettings.xml*:
+
+```xml
+<AlarmSettings>
+   <PersistParameterLatchState>true</PersistParameterLatchState>
+</AlarmSettings>
+```
+
+> [!NOTE]
+> From DataMiner 10.4.9/10.5.0 onwards<!--RN 39495-->, if this tag has not been added to the *MaintenanceSettings.xml* file, or if the `PersistParameterLatchState` option is set to "false", parameter latch states will not be written to or fetched from the database.
 
 ### AlarmSettings.UseCreationTimeAsMainTime
 
@@ -266,9 +281,9 @@ The *\<DELTCache>* tag and its subtags use the following syntax:
 </DELTCache>
 ```
 
-#### Clean-up modes
+#### Cleanup modes
 
-In a *\<DELTCacheMode>* tag, you can specify one of three clean-up modes:
+In a *\<DELTCacheMode>* tag, you can specify one of three cleanup modes:
 
 | Mode | Description |
 |--|--|
@@ -519,28 +534,27 @@ In the *TimeSpan1DayRecords* tag, you can customize the interval of the 1-day "a
 Not active by default.
 
 > [!NOTE]
-> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+> If you are looking to configure how long these records need to be stored, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).
 
 ### Trending.TimeSpan1HourRecords
 
 In the *TimeSpan1HourRecords* tag, you can customize the interval of the 1-hour "average trending" records to be something other than the default 1 hour. To do so, specify a *window* attribute value in minutes.
 
 > [!NOTE]
-> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+> If you are looking to configure how long these records need to be stored, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).
 
 ### Trending.TimeSpan5MinRecords
 
 In the *TimeSpan5MinRecords* tag, you can customize the interval of the 5-minute "average trending" records to be something other than the default 5 minutes. To do so, specify a *window* attribute value in minutes.
 
 > [!NOTE]
-> If you are looking to configure how long these records need to be stored, see [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml).
+> If you are looking to configure how long these records need to be stored, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).
 
 ### Trending.WarningLevel
 
-This deprecated tag was used to specify the number of records as from which a special warning message appeared in Trend Display (Element Display) and Trend Overview (System Display).
+**Obsolete**
 
-> [!NOTE]
-> The System Display and Element Display client applications are no longer available from DataMiner 9.6.0 onwards.
+This tag was used in older DataMiner versions to configure a trending warning message in the now obsolete Element Display and System Display applications.
 
 ### WatchDog
 
@@ -548,12 +562,12 @@ In this tag, the settings of the DataMiner WatchDog process are specified. This 
 
 You can configure Watchdog to:
 
-- Initiate a Failover switch in case of a runtime error, by specifying the value “*switch*” in the tag. Optionally, to exclude certain threads from initiating a Failover switch, add the *\<FailoverOnRTE>* subtag and specify the threads in *\<SkipRTE>* subtags.
+- Initiate a Failover switch in case of a runtime error, by specifying the value "switch" in the tag. Optionally, to exclude certain threads from initiating a Failover switch, add the *\<FailoverOnRTE>* subtag and specify the threads in *\<SkipRTE>* subtags.
 
     > [!NOTE]
     >
-    > - If a Failover switched is launched, the DMA is then also restarted in order to ensure that it frees the virtual IP address. Before the restart is initiated, the DMA is marked as “offline”.
-    > - If DataMiner Watchdog is set to initiate a Failover switch in case of a runtime error, it will even do so if the Failover type is set to “Manual” in the Failover settings.
+    > - If a Failover switched is launched, the DMA is then also restarted in order to ensure that it frees the virtual IP address. Before the restart is initiated, the DMA is marked as "offline".
+    > - If DataMiner Watchdog is set to initiate a Failover switch in case of a runtime error, it will even do so if the Failover type is set to "Manual" in the Failover settings.
 
 - Initiate an element restart in case of a runtime error on an element-related SLProtocol thread, by adding the attribute *restartElementOnProtocolRTE*, and setting it to *true*.
 

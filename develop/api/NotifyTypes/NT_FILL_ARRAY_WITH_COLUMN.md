@@ -1,5 +1,6 @@
 ---
 uid: NT_FILL_ARRAY_WITH_COLUMN
+keywords: FillArrayWithColumn
 ---
 
 # NT_FILL_ARRAY_WITH_COLUMN (220)
@@ -49,7 +50,7 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
     > [!NOTE]
     >
     > - The Boolean value is only supported when a single column is set. In case you want to use protocol.Clear and protocol.Leave when setting multiple columns, use an object array as described below.
-    > - From DataMiner 9.5.0 [CU11]/9.5.14 [CU1] (RN 19707) onwards, an object array as the last value in the array containing the table and column identifier(s) can be provided. Index 0 of this array is reserved for the "use clear and leave" flag, which can be provided and should be of type boolean.
+    > - It is possible to add an object array as the last value in the array containing the table and column identifier(s). Index 0 of this array is reserved for the "use clear and leave" flag, which can be provided and should be of type boolean.<!-- RN 19707 -->
     >
     > Example:
     >
@@ -75,9 +76,10 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   <ColumnOption idx="0" pid="1001" type="retrieved" options="" />
   ```
 
-- The column data should always be wrapped in object arrays for the data to be correctly interpreted by the SLProtocol process. From DataMiner 9.0.0/9.5.9 onward, an additional safeguard is implemented to prevent access violations in case the provided data are not of the expected types (RN 14692).
-- From DataMiner 9.6.6 onwards (RN 21482), it is possible to specify a datetime that will be applied to all values passed in the parameter set.
-  
+- The column data should always be wrapped in object or string arrays for the data to be correctly interpreted by the SLProtocol process. If a type other than an object or string array is passed, the function will fail and throw an error, which will automatically be logged in the element's log file. Prior to DataMiner 10.4.0 [CU11]/10.5.2<!--RN 41511-->, the function fails silently if anything other than an object array is passed, without logging or throwing an error.
+
+- It is possible to specify a datetime that will be applied to all values passed in the parameter set.<!-- RN 21482 -->
+
   ```csharp
   protocol.NotifyProtocol(220/*NT_FILL_ARRAY_WITH_COLUMN*/ , new object[] { <TablePid>, <ColumnPid>, new object[2] { <bOverrideBehaviour_bool>,<DateTime>}}, Values);
   ```
@@ -98,7 +100,7 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   ```
 
-- From DataMiner 9.6.13 onwards (RN 23815), a timestamp can be provided per cell to perform a history set on cell level. This is done by providing an object array containing the value and timestamp.
+- A timestamp can be provided per cell to perform a history set on cell level. This is done by providing an object array containing the value and timestamp.<!-- RN 23815 -->
 
   Note that not all cells require a timestamp. If no timestamp is specified, DateTime.Now will be used.
 
@@ -116,4 +118,4 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
 
 ## See also
 
-- FillArrayWithColumn
+- [FillArrayWithColumn (SLProtocol)](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayWithColumn(System.Int32,System.Int32,System.Object[],System.Object[])) method

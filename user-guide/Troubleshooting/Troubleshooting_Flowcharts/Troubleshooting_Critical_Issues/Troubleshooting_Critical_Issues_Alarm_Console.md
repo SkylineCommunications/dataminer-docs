@@ -22,7 +22,7 @@ classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 Start[Critical issue suspected]
 Home([Start page])
-SLLogCollector([Log collector <br> usage guide])
+SLLogCollector([Log collector usage guide])
 Investigation([How to investigate])
 DataNotUpdated([Data not updated])
 Automaticrestart([Automatic restart])
@@ -65,10 +65,10 @@ classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 ErrorAlarmConsole([Errors in Alarm Console])
 RTE([How to check for RTE])
-Sticky{{"Is it a sticky alarm? <br/> "}}
-Toggling{{"Are there toggling alarms? <br/> "}}
-StickyYes["1. Check the element for the existence of the alarm.<br/> 2. Check the database for the alarm trigger and <br/>cleared alarm entries.<br/> "]
-TogglingYes["1. Monitor Stream Viewer for a <br/>group or QAction that is stuck.<br/> 2. Check the protocol for any exceptions <br/>or errors when in debug mode.<br/> "]
+Sticky{{"Is it a sticky alarm? "}}
+Toggling{{"Are there toggling alarms? "}}
+StickyYes["1\. Check the element for the existence of the alarm.<br/> 2\. Check the database for the alarm trigger and cleared alarm entries. "]
+TogglingYes["1\. Monitor Stream Viewer for a group or QAction that is stuck.<br/> 2\. Check the protocol for any exceptions or errors when in debug mode."]
 %% Connect blocks %%
 ErrorAlarmConsole --- Sticky
 ErrorAlarmConsole --- RTE

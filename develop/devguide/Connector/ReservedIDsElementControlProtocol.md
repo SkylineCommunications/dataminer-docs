@@ -10,20 +10,20 @@ In addition to the parameters defined by a protocol developer, a number of gener
 
 The configuration of these parameters for an element are displayed on the GENERAL PARAMETERS page of the element:
 
-![alt text](../../images/generalParametersPage.png "DataMiner Cube General Parameters page")
+![DataMiner Cube General Parameters page](~/develop/images/generalParametersPage.png)
 
 There are four groups of general parameters: communication, DCF, replication and verification.
 
-Since DataMiner version 9.0.1 (RN 12263), general parameters can be loaded dynamically and the following defaults apply:
+General parameters can be loaded dynamically, and the following defaults apply:<!-- RN 12263 -->
 
-- Communication: General parameters belonging to this group are not loaded for protocols of type http, websocket, opc, gpib, virtual, sla and service.
-- DCF: Are only loaded if there is at least one ParameterGroup defined in the protocol.
-- Verification: General parameters belonging to this group are not loaded when the MaintenanceSettings.xml say that the Command Execution Verification is enabled.
+- Communication: General parameters belonging to this group are not loaded for protocols of type *http*, *websocket*, *opc*, *gpib*, *virtual*, *sla*, and *service*.
+- DCF: Only loaded if there is at least one parameter group defined in the protocol.
+- Verification: General parameters belonging to this group are not loaded when *MaintenanceSettings.xml* has been configured to enable Command Execution Verification. (With the [ProtocolSettings.ExecutionVerification](xref:MaintenanceSettings_xml#protocolsettingsexecutionverification) tag.)
 - Replication: By default, general parameters belonging to this group are always loaded (because it is always possible that an element will be replicated).
 
-This default configuration can be overruled in a protocol via the ProtocolGroups tag.
+This default configuration can be overruled in a protocol via the *ProtocolGroups* tag.
 
-In addition to the General Parameters page, it is also possible to show an additional Data Display page called General Parameters DEBUG. This page contains general parameters that are only used for debug purposes and that are not usually displayed. (For more information, refer to [Debug settings](xref:Computer_settings#debug-settings).
+In addition to the *General Parameters* page, it is also possible to show an additional Data Display page called *General Parameters DEBUG*. This page contains general parameters that are only used for debug purposes and that are not usually displayed. (For more information, refer to [Debug settings](xref:Computer_settings#debug-settings).)
 
 General Parameters (DataMiner Element Control Protocol):
 
@@ -332,29 +332,16 @@ General Parameters (DataMiner Element Control Protocol):
 |66163|[New Generic DVE Link]||
 |66164|[New Generic DVE Link]||
 |66165|[Generic DVE Link delete/add]||
-|66167|[Alarm System Type]|If no topology cell is defined for a monitored parameter, the value of the alarm property "System Type" will be set to the value found in this parameter. Feature introduced in DataMiner 9.6.11 (RN 22632).|
-|66168|[Alarm System Type]|Write parameter. Feature introduced in DataMiner 9.6.11 (RN 22632).|
-|66169|[Alarm System Name]|If no topology cell is defined for a monitored parameter, the value of the alarm property "System Name" will be set to the value found in this parameter. Feature introduced in DataMiner 9.6.11 (RN 22632).|
-|66170|[Alarm System Name]|Write parameter. Feature introduced in DataMiner 9.6.11 (RN 22632).|
+|66167|[Alarm System Type]|If no topology cell is defined for a monitored parameter, the value of the alarm property "System Type" will be set to the value found in this parameter. <!-- RN 22632 -->|
+|66168|[Alarm System Type]|Write parameter.<!-- RN 22632 -->|
+|66169|[Alarm System Name]|If no topology cell is defined for a monitored parameter, the value of the alarm property "System Name" will be set to the value found in this parameter.<!-- RN 22632 -->|
+|66170|[Alarm System Name]|Write parameter.<!-- RN 22632 -->|
 
 > [!NOTE]
 > Regarding the [Alarm System Type] and [Alarm System Name] parameters:
 >
->- If the System Name and System Type properties do not exist in the system, they will not be created. Only creating an element that has a topology cell definition will automatically create these properties.
->- Setting these parameters will trigger a Property Changed update on the active alarms of the element. Even if the alarm in question is relying on the topology cell definition in the protocol rather than these newly added general parameters.
->- DVEs will not follow the values of the main element. Alarms on values that are exported to a DVE will only use that DVE's general parameter values. This is both for alarm templates set on the DVE and the main element.
->- Setting these general parameters will not overwrite the values defined by the topology cell definition.
->- Creating alarms when using virtual functions causes the alarms to be linked to the main element rather than the virtual function (virtual element). This means that the [Alarm System Type] and [Alarm System Name] parameters of the main element will be applicable for all the alarms. These parameters on the virtual functions do not have any function at the moment. However, if in the future these alarms are linked to the virtual functions instead, these parameter values will be applied.
-
-## Other
-
-For the other protocol constructs such as triggers, commands, responses, pairs, groups, timers, actions, QActions, parameter groups, etc. the following applies:
-
-|Range|Owner|Minimum DMA version|Allowed|
-|--- |--- |--- |--- |
-|[1, 63 999]|Protocol|1.0.0|Yes|
-|[64 000, 999 999]|DataMiner|1.0.0|No|
-|[1 000 000, 9 999 999]|Protocol|9.0.4|Yes|
-|10 000 000 or above|-|-|No|
-
-For parameter groups, IDs larger than or equal to 10 000 should be avoided for existing drivers, as well as for drivers intended to be used with DataMiner versions before 9.0.4 (ID range 10 000+ was used for dynamic parameter groups prior to version 9.0.4. Previously assigned IDs remain reserved for existing elements).
+> - If the System Name and System Type properties do not exist in the system, they will not be created. Only creating an element that has a topology cell definition will automatically create these properties.
+> - Setting these parameters will trigger a Property Changed update on the active alarms of the element. Even if the alarm in question is relying on the topology cell definition in the protocol rather than these newly added general parameters.
+> - DVEs will not follow the values of the main element. Alarms on values that are exported to a DVE will only use that DVE's general parameter values. This is both for alarm templates set on the DVE and the main element.
+> - Setting these general parameters will not overwrite the values defined by the topology cell definition.
+> - Creating alarms when using virtual functions causes the alarms to be linked to the main element rather than the virtual function (virtual element). This means that the [Alarm System Type] and [Alarm System Name] parameters of the main element will be applicable for all the alarms. These parameters on the virtual functions do not have any function at the moment. However, if in the future these alarms are linked to the virtual functions instead, these parameter values will be applied.

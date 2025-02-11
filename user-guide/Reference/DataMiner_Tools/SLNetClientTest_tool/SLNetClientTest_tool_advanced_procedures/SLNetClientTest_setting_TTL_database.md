@@ -41,7 +41,7 @@ The "time to live" or TTL of database records can be updated via the SLNetClient
 > To find out what the currently used TTL values are, run the *GetTTLRequest* via the message builder.
 
 > [!TIP]
-> See also: [DBMaintenance.xml and DBMaintenanceDMS.xml](xref:DBMaintenance_xml_and_DBMaintenanceDMS_xml#dbmaintenancexml-and-dbmaintenancedmsxml)
+> See also: [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml)
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

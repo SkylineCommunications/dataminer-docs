@@ -46,4 +46,3 @@ Examples:
 
 > [!NOTE]
 > The # character in front of the address will make sure the DataMiner Map is displayed inside the shape you have drawn. If you do not type the # character in front of the address, the DataMiner Map will be displayed in a new web browser window when you click the shape.
->

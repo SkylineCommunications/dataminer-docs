@@ -15,21 +15,21 @@ uid: EPM_6.1.6_D-DOCSIS
 
 ### Enhancements
 
-#### Dashboard URL enhancements [ID_34201]
+#### Dashboard URL enhancements [ID 34201]
 
 Dashboard URLs in the EPM Solution have been updated to use a new JSON structure so that they load preselected data faster. This will also prevent issues where temperature data was not preselected in the dashboards.
 
 ### Fixes
 
-#### Visual Overview: Shape linked to EPM entity had incorrect alarm severity color [ID_34535]
+#### Visual Overview: Shape linked to EPM entity had incorrect alarm severity color [ID 34535]
 
 When a shape was linked to an EPM entity via the *SystemName* and *SystemType* properties, it could occur that the alarm severity color in Visual Overview was incorrect.
 
-#### Incorrect or missing manufactory data in Inventory Table [ID_34536]
+#### Incorrect or missing manufactory data in Inventory Table [ID 34536]
 
 For the Inventory Table, the solution did not take into account that some devices report the Vendor ID while others report the Manufacturer Name. As a result, manufactory data could be missing or incorrect in the table. The information templates have been updated to prevent this.
 
-#### Exposer option overused in EPM connectors [ID_34537]
+#### Exposer option overused in EPM connectors [ID 34537]
 
 Up to now, the Exposer option was used excessively in the EPM connectors in order to display the Node/Core Leaf information, which could cause issues such as the DMA going into the "Refused" state.
 

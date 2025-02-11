@@ -8,12 +8,12 @@ Use this method to retrieve the data of all the parameters on a particular Data 
 
 ## Input
 
-| Item       | Format  | Description                                                                      |
-|------------|---------|----------------------------------------------------------------------------------|
+| Item       | Format  | Description                                           |
+|------------|---------|-------------------------------------------------------|
 | connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| dmaID      | Integer | The DataMiner Agent ID.                                                          |
-| elementID  | Integer | The element ID.                                                                  |
-| pageName   | String  | The name of the element page.                                                    |
+| dmaID      | Integer | The DataMiner Agent ID.                               |
+| elementID  | Integer | The element ID.                                       |
+| pageName   | String  | The name of the element page.                         |
 
 ## Output
 

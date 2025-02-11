@@ -29,7 +29,7 @@ The navigation pane on the left side of a view card contains a tree view with th
 
 - [VISUAL](#visual)
 
-- [BELOW THIS VIEW / DATA](#below-this-view--data)
+- [BELOW THIS VIEW](#below-this-view)
 
 - [ALARMS](#alarms)
 
@@ -54,9 +54,11 @@ Under the *VISUAL* node, one or more pages are displayed that contain a graphic 
 > [!NOTE]
 > For more information on how to change the Visio file linked to a particular view, see [Switching between different Visio files](xref:Managing_Visio_files_linked_to_protocols#switching-between-different-visio-files).
 
-### BELOW THIS VIEW / DATA
+### BELOW THIS VIEW
 
-Under the BELOW THIS VIEW (from DataMiner 9.6.7 onwards) or DATA node (prior to DataMiner 9.6.7), there is a page for each type of item that can be contained within the view. Next to the item name, a number is displayed that indicates how many of these items are in the view. Click a page in the tree view to display a list of the items in question.
+Under the BELOW THIS VIEW node, there is a page for each type of item that can be contained within the view. Next to the item name, a number is displayed that indicates how many of these items are in the view. Click a page in the tree view to display a list of the items in question.
+
+![BELOW THIS VIEW](~/user-guide/images/Below_This_View.png)<br>*BELOW THIS VIEW page in DataMiner 10.5.4*
 
 The data pages can be displayed in several ways. You can change the way they are displayed by means of the buttons in the lower right corner of the page.
 
@@ -69,6 +71,8 @@ The data pages can be displayed in several ways. You can change the way they are
 #### List view
 
 In the list view, a detailed list of the items in the view is displayed, with information such as the name, alarm state, alarm count, protocol, alarm and trend template, ID, etc. The information is automatically updated when objects in the view are added, updated or deleted.
+
+![List view](~/user-guide/images/List_View.png)<br>*List view in DataMiner 10.4.5*
 
 The list can be manipulated to display data according to your preference:
 
@@ -101,7 +105,7 @@ The list consists of the following columns:
 
 - *Timeout time*: Relevant for elements only. The timeout time for a single request for each of the element’s connections (in milliseconds). For multiple connections, the values are separated by commas.
 
-- *Element timeout time*: Relevant for elements only. The total timeout time for each of the element’s connections (in milliseconds). This is the timeout time that corresponds with the element setting *The element goes into timeout state when \[...\]* (see [Adding elements](xref:Adding_elements)). For multiple connections, the values are separated by commas. Displayed from DataMiner 10.0.8 onwards.
+- *Element timeout time*: Relevant for elements only. The total timeout time for each of the element’s connections (in milliseconds). This is the timeout time that corresponds with the element setting *The element goes into timeout state when \[...\]* (see [Adding elements](xref:Adding_elements)). For multiple connections, the values are separated by commas.
 
 - *Slow poll*: Relevant for elements only. The number of milliseconds that each of the element connections has to be in timeout before they are placed in slow poll mode. For multiple connections, the values are separated by commas. For more information on slow poll mode, see [Adding elements](xref:Adding_elements).
 
@@ -119,7 +123,7 @@ The list consists of the following columns:
 
 - *ID*: The unique ID of the item, which consists of the ID of the DMA where the item was created and the ID of the item itself, separated by a forward slash.
 
-- *Host ID*: The ID of the DMA hosting the item. Displayed from DataMiner 10.0.8 onwards.
+- *Host ID*: The ID of the DMA hosting the item.
 
 - *DataMiner*: The name of the DMA hosting the item.
 
@@ -140,6 +144,8 @@ The list consists of the following columns:
 #### Summary view
 
 In the summary view, you can choose to view one of four different lists showing limited information about the items in the view. The lists are automatically updated when items in the view are added, updated or deleted.
+
+![Summary view](~/user-guide/images/Summary_View.png)<br>*Summary view in DataMiner 10.4.5*
 
 | List                 | Description                                                   |
 |----------------------|---------------------------------------------------------------|
@@ -184,7 +190,7 @@ This page displays all alarms related to the view, in the default Alarm Console 
 
 ### REPORTS
 
-A graphic representation of the alarm distribution, alarm events and alarm states, as well as a heatmap for the view’s child items (on systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures)). You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date.
+A graphic representation of the alarm distribution, alarm events and alarm states, as well as a heatmap for the view’s child items (on systems using [Storage as a Service](xref:STaaS) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures)). You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date.
 
 > [!TIP]
 > See also: [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card)

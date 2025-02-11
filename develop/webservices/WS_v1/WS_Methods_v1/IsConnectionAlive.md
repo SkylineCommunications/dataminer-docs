@@ -14,6 +14,6 @@ Use this method to check whether the connection is intact.
 
 ## Output
 
-| Item                    | Format  | Description                              |
-|-------------------------|---------|------------------------------------------|
+| Item                    | Format  | Description                       |
+|-------------------------|---------|-----------------------------------|
 | IsConnectionAliveResult | Boolean | Whether the connection is intact. |

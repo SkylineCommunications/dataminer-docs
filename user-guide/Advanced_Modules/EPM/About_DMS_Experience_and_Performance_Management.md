@@ -4,30 +4,37 @@ uid: About_DMS_Experience_and_Performance_Management
 
 # About DataMiner Experience and Performance Management
 
-### EPM elements
+## EPM elements
 
 An EPM element (formerly known as CPE Manager) is created like any other DataMiner element, on a standard DMA with capacity license. However, unlike a regular element, it can control and monitor a large number of objects. Its specific properties depend on the protocol that is assigned to it during element creation.
 
 Many different EPM protocols exist, and often these are custom-made to match particular situations. EPM elements have a dedicated user interface, which is determined by the element protocol. As such, the user interface can be different for each EPM element.
 
-### Architecture
+## EPM architecture
 
-A typical architecture for a DMS used for Experience and Performance Management consists of:
+EPM uses the following protocols:
 
-- A front-end DMA with an EPM element:
+- **EPM Manager** protocol: Used for one front-end (FE) element and multiple back-end (BE) elements.
 
-  - Provides the user interface users connect to for Experience and Performance Management.
+- **EPM Collector** protocol(s): Used to poll all the lowest-level information and inform the FE of the topology relationships.
 
-  - Responsible for aggregation of higher level data.
+A typical EPM architecture consists of the following elements:
 
-  - Responsible for provisioning, i.e. provides a reference of all objects and their topology, the link between the objects.
+- **Front-end** element:
 
-  - Responsible for interaction with other systems.
+  - In charge of provisioning and assigning unique keys to all topology entities.
+  - Only sets tables with higher-level topology entities.
+  - In charge of aggregation at the higher level.
+  - Merges remaining topology information from all BE elements.
+  - Ideally should be on its own DMA with few or no other elements.
 
-- Several back-end DMAs:
+- **Back-end** element:
 
-  - Responsible for aggregation of lower level data.
+  - Contains the rest of the topology information.
+  - In charge of aggregating the remaining levels.
+  - In typical EPM installations, only one BE element is needed per DMA. They are the managers of the entire DMA.
 
-  - Several collector elements can be created per DMA and per type of individual object.
+- **Collector** elements:
 
-  - Each collector element polls a group of objects, with a refresh period depending on the number of objects.
+  - Poll device KPI information.
+  - As many collector elements per DMA as needed.

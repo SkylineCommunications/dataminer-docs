@@ -19,8 +19,6 @@ string
 If you specify a condition, the group will only be executed when the condition is met.
 Note that a condition can be enclosed in a CDATA tag.
 
-*Feature introduced in DataMiner 7.5.4.3.*
-
 Refer to <xref:LogicConditions> for more information about conditions.
 
 ## Examples
@@ -39,4 +37,4 @@ In the following example, the group will be executed when the value of parameter
 <Group id="200">
   <Condition><![CDATA[(id:5 == 1)]]></Condition>
 </Group>
-`````
+```

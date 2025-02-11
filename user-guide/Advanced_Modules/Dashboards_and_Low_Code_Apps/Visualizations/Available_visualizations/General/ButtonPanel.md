@@ -7,7 +7,11 @@ uid: DashboardButtonPanel
 > [!NOTE]
 > Prior to DataMiner 10.3.9/10.4.0, this feature is available in preview, if the soft-launch option *ReportsAndDashboardsButtonPanel* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-This component is available from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36775 -->. It displays a button panel with buttons representing the rows of a table parameter. Using an element with a custom button panel protocol, you can configure what kind of buttons are displayed and how the buttons are displayed. The following types of buttons can be configured:
+This component is available from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36775 -->. It displays a button panel with buttons representing the rows of a table parameter. Using an element with a custom button panel protocol, you can configure what kind of buttons are displayed and how the buttons are displayed.
+
+![Button panel](~/user-guide/images/ButtonPanel.gif)<br>*Button panel component in DataMiner 10.3.9*
+
+The following types of buttons can be configured:
 
 - Simple buttons used only to set parameters.
 
@@ -23,17 +27,17 @@ To configure the component in the Dashboards app:
 
 1. Make sure the button panel element is correctly configured. See [Configuring the button panel element](#configuring-the-button-panel-element).
 
-1. Add the table parameter from the button panel element as the data feed.
+1. Add the table parameter from the button panel element as data.
 
-1. Optionally, add a parameter feed as a filter, in order to determine which page is displayed.
+1. Optionally, add parameter data as a filter, in order to determine which page is displayed.
 
-1. In the *Component* > *Layout* tab, optionally configure the following options:
+1. In the *Component* > *Layout* pane, optionally configure the following options:
 
    - *Override number of columns*: When you select this option, the *Number of columns* option becomes available, which allows you to specify a different number of columns than is configured in the button panel element. The size and position of the buttons will then be adapted to match this configuration.
 
    - *Simple button text size*: Determines the size of the text displayed on buttons of type “Simple”.
 
-1. In case the component should be set to configuration mode, in the *Component* > *Settings* tab, select *In configuration mode*.
+1. In case the component should be set to configuration mode, in the *Component* > *Settings* pane, select *In configuration mode*.
 
    In that case, clicking a button will not execute the action of the button, but instead select the button. This selection can be linked to a button component that launches an Automation script. When that button is clicked, an interactive Automation script will be executed that can be used to configure the button of the button panel.
 
@@ -136,7 +140,7 @@ Within the *Param* tag of the protocol, the following tags can be used to config
 
   - **Button panel collection**: The parameter contains grouping information. A group is a collection of one or more button panels. Every row of this table parameter represents one group with all the necessary information for the dashboard to be able to display the button panels of that group.
 
-    This parameter can be used as a feed in the dashboard that will allow the user to easily switch between dashboard groups.
+    This parameter can be used as data in the dashboard that will allow the user to easily switch between dashboard groups.
 
 - **Param.Dashboard.DashboardOptions.DashboardOption**: These tags allow you to configure the options that will determine how the button panel is displayed. Each *DashboardOption* tag has the following **attributes**:
 

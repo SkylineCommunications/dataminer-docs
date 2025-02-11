@@ -1,10 +1,13 @@
 ---
 uid: Protocols1
+keywords: protocol, driver, connector
 ---
 
 # Protocols
 
-Protocols allow a DataMiner Agent to communicate with any data source. Commonly referred to as a “connector” or “driver”, a DataMiner protocol is an XML file that is used to communicate with a data source. It contains all the instructions on how to poll the data source and display all relevant real-time data on element cards, as well as default port settings, alarm thresholds, parameter labels, etc.
+Protocols allow a DataMiner Agent to communicate with any data source. Commonly referred to as a "connector" or "driver", a DataMiner protocol is an XML file that is used to communicate with a data source. It contains all the instructions on how to poll the data source and display all relevant real-time data on element cards, as well as default port settings, alarm thresholds, parameter labels, etc.
+
+![Protocol](~/user-guide/images/Protocol.png)<br>*Protocols & Templates module in DataMiner 10.4.5*
 
 The following sections provide more information on working with DataMiner protocols:
 

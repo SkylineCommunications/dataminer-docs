@@ -14,7 +14,7 @@ uid: General_Feature_Release_10.2.12_CU2
 
 ### Fixes
 
-#### SLNet thread leak [ID_35136]
+#### SLNet thread leak [ID 35136]
 
 <!-- MR 10.3.0 - FR 10.2.12 [CU2] -->
 <!-- Not added to MR 10.3.0 -->

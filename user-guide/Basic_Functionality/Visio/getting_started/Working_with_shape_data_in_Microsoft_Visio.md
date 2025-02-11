@@ -1,12 +1,13 @@
 ---
 uid: Working_with_shape_data_in_Microsoft_Visio
+description: In Microsoft Visio, use the Shape Data pane to add data fields to pages, shapes, or groups of shapes to enrich drawings with DataMiner functionality.
 ---
 
 # Working with shape data in Microsoft Visio
 
 Microsoft Visio drawings can be enriched with DataMiner functionality using special shape data fields.
 
-Shape data (known as “custom properties” prior to Microsoft Visio 2007) are sets of user-defined fields that hold data. They can be added to pages, shapes, and even groups of shapes.
+Shape data (known as "custom properties" prior to Microsoft Visio 2007) are sets of user-defined fields that hold data. They can be added to pages, shapes, and even groups of shapes.
 
 > [!TIP]
 > Do you prefer a hands-on approach? Try our tutorial on [Getting started with basic shapes](xref:Getting_started_with_basic_shapes).
@@ -20,7 +21,7 @@ To open this pane:
 - On the *View* tab, in the *Show* group, click *Task Panes*, and then click *Shape Data*.
 
 > [!NOTE]
-> The title of the *Shape Data* pane contains the name of the currently selected item. If you select a shape, the title will be e.g. “Shape Data - Sheet.27”. If you select a page (by clicking anywhere on that page), the title will be “Shape Data - ThePage”.
+> The title of the *Shape Data* pane contains the name of the currently selected item. If you select a shape, the title will be e.g. "Shape Data - Sheet.27". If you select a page (by clicking anywhere on that page), the title will be "Shape Data - ThePage".
 
 ## Adding a data field to a page, a shape or a group of shapes
 
@@ -36,18 +37,18 @@ To open this pane:
 
       For a complete overview of all DataMiner shape data fields, see [Overview of DataMiner shape data fields](xref:Overview_of_DataMiner_shape_data_fields).
 
-   1. In the *Type* list, select “String”.
+   1. In the *Type* list, select "String".
 
-   1. In the *Value* box, enter the value. Example: *112/1457*, *MyElement*, *Script:MyScript*, *#http://www.skyline.be*, ...
+   1. In the *Value* box, enter the value. Example: *112/1457*, *MyElement*, *Script:MyScript*, *#http://www.skyline.be*, etc.
 
    > [!NOTE]
-   > When you open the *Define Shape Data* dialog box, you might notice a data item named “Property1”. Instead of creating a new data item, you can also rename that “Property1” item that Visio has created for you.
+   > When you open the *Define Shape Data* dialog box, you might notice a data item named "Property1". Instead of creating a new data item, you can also rename that "Property1" item that Visio has created for you.
 
 1. Click OK.
 
 ## Using DataMiner features in Visio
 
-From DataMiner 9.6.9 onwards, an add-in is available in Visio that allows you to manage DataMiner-related data more easily. In addition, you can also access DataMiner stencils, allowing you to speed up the design of visually appealing Visio drawings.
+An add-in is available in Visio that allows you to manage DataMiner-related data more easily. In addition, you can also access DataMiner stencils, allowing you to speed up the design of visually appealing Visio drawings.
 
 > [!NOTE]
 > Depending on the configuration of the general user settings, this add-in may be unavailable. See [Enabling or disabling the advanced editing Visio add-in](xref:ClientSettings_json#enabling-or-disabling-the-advanced-editing-visio-add-in).
@@ -75,7 +76,7 @@ To use the DataMiner stencils in Visio:
 > [!NOTE]
 > To use the stencils in Visio, Automation events need to be enabled in the Visio options (Under *Visio Options* > *Advanced* > *General*).
 
-### Accessing the “Advanced editing” add-in
+### Accessing the 'Advanced editing' add-in
 
 1. Open a Visio drawing by right-clicking a Visio drawing in DataMiner Cube and selecting *Edit in Visio*.
 
@@ -83,7 +84,7 @@ To use the DataMiner stencils in Visio:
 
    The *Advanced editing* panel will be opened. This panel will remain available until you close the Visio application.
 
-### Using the “Advanced editing” panel
+### Using the 'Advanced editing' panel
 
 The panel can be used as follows:
 
@@ -116,7 +117,7 @@ The panel can be used as follows:
 - To change the value of an existing data item, simply specify the new value in the value box.
 
   > [!NOTE]
-  > To add a placeholder (i.e. a dynamic part) in a value, add a square bracket (“\[“), select the placeholder from the list, and press TAB.
+  > To add a placeholder (i.e. a dynamic part) in a value, add a square bracket ("\["), select the placeholder from the list, and press TAB.
 
 - To change one of the data items to a different data item, in the data box, specify a different item. If you specify a data item that is unknown to DataMiner or that is already in the list, it will be highlighted.
 

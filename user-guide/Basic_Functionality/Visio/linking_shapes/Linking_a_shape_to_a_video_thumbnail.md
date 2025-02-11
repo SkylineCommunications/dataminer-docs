@@ -10,17 +10,17 @@ When you link a shape to a video thumbnail, the video feed from the video server
 
 Please note the following:
 
-- From DataMiner 10.2.0 \[CU1]/10.2.4 onwards, HTML5 video thumbnails are **muted** by default.
+- From DataMiner 10.2.0 [CU1]/10.2.4 onwards, HTML5 video thumbnails are **muted** by default. From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41597-->, you can unmute them by clicking the sound icon in the lower right corner. When unmuted, the volume is automatically set to 100%. In earlier versions, unmuting required hovering over the sound icon and using a slider to adjust the volume.
 
 - Video servers that only accept **TLS 1.2** are supported from DataMiner 10.2.0/10.1.1 onwards.
 
 - From DataMiner 10.2.0/10.1.11 onwards, **HLS** (HTTPS Live Streaming) is supported. See [Configuring a thumbnail for HTTP Live Streaming](#configuring-a-thumbnail-for-http-live-streaming).
 
-- To display video thumbnails with the **VLC** plugin in the DataMiner Cube browser app, make sure the 32-bit version of VLC is installed, not the 64-bit version, as the latter may not run correctly. If you are using the DataMiner Cube desktop app (version 10.0.0 or higher), use the 64-bit version of VLC instead.
+- To display video thumbnails with the **VLC** plugin in the Cube desktop app, use the 64-bit version of VLC. If you use the DataMiner Cube browser app (not recommended), make sure the 32-bit version of VLC is installed instead of the 64-bit version, as the latter may not run correctly.
 
-- From DataMiner 9.0 onwards, it is possible to display video feeds from **Selenio MCP1 and MCP3** platforms. However, the Selenio modules need to have at least firmware version 6.1.
+- To display video feeds from **Selenio MCP1 and MCP3** platforms, the Selenio modules need to have at least firmware version 6.1.
 
-- In DataMiner versions up to 8.5.8, Adobe Flash is used to display video thumbnails. From DataMiner 9.0 onwards, HTML is used instead. Both **MJPEG** and **HTML5** video types are supported. The latter can be used for live video streaming. However, note that most browsers only support video streaming over TCP.
+- Both **MJPEG** and **HTML5** video types are supported. The latter can be used for live video streaming. However, note that most browsers only support video streaming over TCP.
 
 - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[linking > THUMBNAIL]* page.
 
@@ -54,13 +54,13 @@ The following image formats are supported: .png, .jpg, .bmp, and .emf.
 
 1. Select the shape. If necessary, select the *Make All Shapes Selectable* option, and select the shape from the *Selected Shape* selection box.
 
-1. In *Link Shape To*, select “Link”.
+1. In *Link Shape To*, select "Link".
 
 1. In the *Basic* tab:
 
-   1. Set *Link Type* to “Video”.
+   1. Set *Link Type* to "Video".
 
-   1. Set *Video Type* to “Generic Images”.
+   1. Set *Video Type* to "Generic Images".
 
    1. In *Image Source*, enter the URL of the image (e.g. `http://IpAddress/Folder/Picture.png`).
 
@@ -91,8 +91,7 @@ The following image formats are supported: .png, .jpg, .bmp, and .emf.
 1. Save the Visio file.
 
 > [!NOTE]
-> By default, a thumbnail of type *Generic Images* always uses the DMA as a proxy. However, from DataMiner 9.0.0 CU22/9.5.8 onwards, you can add an extra URL parameter, "proxy", in order to override this behavior.
-> For example: `http://<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>&proxy=false`
+> By default, a thumbnail of type *Generic Images* always uses the DMA as a proxy. However, you can add an extra URL parameter, "proxy", to override this behavior. For example: `http://<DMA IP>/VideoThumbnails/video.htm?type=Generic%20Images&source=<IMG URL>&proxy=false`
 
 ### Displaying images located on a DataMiner Agent
 
@@ -103,7 +102,7 @@ If you want a shape to display an image located on a DMA, then do the following:
 1. In the shape, specify the URL of the image (e.g. `http://DmaIpAddress/MyImages/Picture.png`).
 
 > [!NOTE]
-> If you get an "Invalid path" error, open the file *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config* (or *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Proxy\\Web.config* in DataMiner versions prior to 9.0), and check whether the image folder (e.g. */MyImages/*) has been added to the *ExtraAllowedPaths* key.
+> If you get an "Invalid path" error, open the file *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*, and check whether the image folder (e.g. */MyImages/*) has been added to the *ExtraAllowedPaths* key.
 > See also [Allowed paths in case of connection via DataMiner proxy](xref:Linking_a_shape_to_a_video_thumbnail#allowed-paths-in-case-of-connection-via-dataminer-proxy).
 
 ## Video server parameters
@@ -112,15 +111,15 @@ The parameters you are allowed to pass inside the URL depend on the type of the 
 
 All supported video server types and their associated parameters are defined in the file *C:\\Skyline DataMiner\\videoservers.xml*.
 
-Depending on the DataMiner version, additional configuration is possible in the URL:
+Additional configuration is possible in the URL:
 
-- From DataMiner 9.5.1 onwards, the VLC component of video thumbnails sends a **referer HTTP header** when requesting the source URL. The referer URL is by default the URL of the DMA, but you can change it by specifying the parameter "referer=" in the URL of the video thumbnail. For example:
+- The VLC component of video thumbnails sends a **referer HTTP header** when requesting the source URL. The referer URL is by default the URL of the DMA, but you can change it by specifying the parameter "referer=" in the URL of the video thumbnail. For example:
 
   ```txt
   #http://localhost/VideoThumbnails/video.htm?type=VLC&source=http%3A%2F%2Fclips.vorwaerts-gmbh.de%2Fbig_buck_bunny.mp4&referer=http%3A%2F%2Fsome%2Freferer%2F.
   ```
 
-- From DataMiner 9.5.4 onwards, you can add a **password and username** in the URL for basic HTTP authentication. However, in that case we advise to always use HTTPS, as otherwise the username and password will not be encrypted. For example:
+- You can add a **password and username** in the URL for basic HTTP authentication. However, in that case we advise to always use HTTPS, as otherwise the username and password will not be encrypted. For example:
 
   ```txt
   #https://dma/VideoThumbnails/Video.htm?type=Generic%20Images&source=http%3A%2F%2F10.0.20.101%2Fimages%2Fthumbs%2F4.jpg&user=admin&password=test&refresh=1000
@@ -139,7 +138,7 @@ Depending on the DataMiner version, additional configuration is possible in the 
   > - When the authentication token expires, the URL has to be updated with the new token.
   > - URLs that request video thumbnails should use HTTPS instead of HTTP. That way, you can prevent the authentication token from being stolen.
 
-- From DataMiner 10.2.0 \[CU1]/10.2.4 onwards, it is possible to specify the **volume for the VLC player** in the URL. The volume should be specified as a percentage, ranging from 0 (i.e. muted) to 100. For example:
+- From DataMiner 10.2.0 [CU1]/10.2.4 onwards, it is possible to specify the **volume for the VLC player** in the URL. The volume should be specified as a percentage, ranging from 0 (i.e. muted) to 100. For example:
 
   ```txt
   #https://dma.local/VideoThumbnails/Video.htm?type=VLC&source=https://videoserver/video.mp4&volume=50
@@ -168,9 +167,7 @@ http://ipaddress/images/getthumbnail/...
 
 If more URLs need to be added to the list of allowed URLs, do the following:
 
-1. On a DMA with version 8.5.8 or lower, open *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Proxy\\Web.config*.
-
-   On a DMA with version 9.0 or higher, open *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*.
+1. Open *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*.
 
 1. Go to the *appSettings* section.
 
@@ -187,7 +184,7 @@ Example: If, under *C:\\Skyline DataMiner\\Webpages*, you created your own folde
 
 ## Ignoring validation errors during HTTP parsing
 
-From DataMiner 9.5.5 onwards, you can configure the thumbnail web.config file to ignore any validation errors that occur during HTTP parsing.
+It is possible to configure the thumbnail web.config file to ignore any validation errors that occur during HTTP parsing.
 
 > [!CAUTION]
 > Ignoring validation errors has security implications, so this should only be done as a last resort to gain backward compatibility with a server. However, we recommend that in such a case the software on the server is updated instead, so that it does send valid HTTP messages.
@@ -224,6 +221,8 @@ To configure the thumbnail, add a shape data field of type **Link** to the shape
 ```txt
 #https://<DMAIP>/VideoThumbnails/Video.htm?type=HTML5-HLS&source=https://<video server>.<stream>.m3u8
 ```
+
+From DataMiner web 10.4.0 [CU10]/10.5.1 onwards<!--RN 41407-->, if the HLS stream has multiple audio tracks, you can select your preferred audio track using the dropdown menu in the top-right corner of the video thumbnail.
 
 > [!NOTE]
 >

@@ -11,9 +11,10 @@ DataMiner supports any LDAP-compatible directory (e.g. OpenLDAP) as an alternati
 
 ## Configuring LDAP settings in DataMiner Cube
 
-From DataMiner 9.5.5 onwards, most custom LDAP settings can be configured in DataMiner Cube.
+> [!NOTE]
+> Most custom LDAP settings can be configured in DataMiner Cube. However, if a DMA has not joined a Windows Active Directory domain, it is not possible to set up the initial configuration in Cube. In that case, you will first need to manually configure the `<LDAP nonDomainLDAP="true" ... >` tag in *DataMiner.xml* and restart the DMA. Afterwards, you can further edit the settings in DataMiner Cube as detailed below.
 
-To do so:
+To configure custom LDAP settings in DataMiner Cube:
 
 1. Go to *System Center* > *System settings* > *LDAP*.
 
@@ -36,7 +37,7 @@ To do so:
 
    In the *User* tab:
 
-   - **Class name**: The object class(es) that identify users. Multiple values can be separated with pipe characters (“\|”).
+   - **Class name**: The object class(es) that identify users. Multiple values can be separated with pipe characters ("\|").
    - **Account name**: The user’s account name.
    - **Display name**: The user name that will be displayed.
    - **Description**: The user’s description.
@@ -44,15 +45,15 @@ To do so:
    - **Phone**: The user’s fixed phone number.
    - **Mobile**: The user’s mobile phone number.
    - **Pager**: The user’s pager number.
-   - **Filter**: The LDAP search filter to find all users. Note that in XML ampersands must be encoded as “&amp;”.
+   - **Filter**: The LDAP search filter to find all users. Note that in XML ampersands must be encoded as `&amp;`.
 
    In the *Group* tab:
 
-   - **Class name**: The object class(es) that identify groups. Multiple values can be separated with pipe characters (“\|”).
+   - **Class name**: The object class(es) that identify groups. Multiple values can be separated with pipe characters ("\|").
    - **Name**: The name of the group.
    - **Alias**: The alias of the group.
    - **Description**: The description of the group.
-   - **Filter**: The LDAP search filter to find all groups. Note that in XML ampersands must be encoded as “&amp;”.
+   - **Filter**: The LDAP search filter to find all groups. Note that in XML ampersands must be encoded as `&amp;`.
 
    > [!NOTE]
    >
@@ -65,15 +66,15 @@ To do so:
 
 To establish a link between a DMA and an LDAP other than Active Directory, open the *DataMiner.xml* file and add or modify the *\<LDAP>* tag (which should contain all necessary LDAP server settings).
 
-> [!NOTE]
-> To apply the changes in *DataMiner.xml* in DataMiner, the DMA needs to be restarted. As such, from DataMiner 9.5.5 onwards, it is best to configure these settings in DataMiner Cube instead. See [Configuring LDAP settings in DataMiner Cube](#configuring-ldap-settings-in-dataminer-cube).
+> [!IMPORTANT]
+> We recommend configuring these settings directly in DataMiner Cube instead. See [Configuring LDAP settings in DataMiner Cube](#configuring-ldap-settings-in-dataminer-cube). Changing these settings directly in *DataMiner.xml* requires a DMA restart.
 
 > [!TIP]
-> See also: [DataMiner.xml](xref:DataMiner_xml#dataminerxml)
+> See also: [DataMiner.xml](xref:DataMiner_xml)
 
 ### OpenLDAP
 
-The following example shows how Global Telecom Company (“GTC”) has configured the LDAP tag for OpenLDAP:
+The following example shows how Global Telecom Company ("GTC") has configured the LDAP tag for OpenLDAP:
 
 ```xml
 <LDAP nonDomainLDAP="true" host="10.0.0.207"
@@ -100,7 +101,7 @@ The following example shows how Global Telecom Company (“GTC”) has configure
 
 ### Active Directory
 
-The following example shows how Global Telecom Company (“GTC”) has configured the LDAP tag for Active Directory:
+The following example shows how Global Telecom Company ("GTC") has configured the LDAP tag for Active Directory:
 
 ```xml
 <LDAP nonDomainLDAP="true" host="dc.gtc.be"
@@ -149,13 +150,13 @@ The following example shows how Global Telecom Company (“GTC”) has configure
   <LDAP namingContext="dc.gtc.local/dc=GTC,dc=local">
   ```
 
-- If the LDAP server requires authentication, enter both the user name and the password, and set the authentication type to “simple” (using the *auth* attribute in *DataMiner.xml*).
+- If the LDAP server requires authentication, enter both the user name and the password, and set the authentication type to "simple" (using the *auth* attribute in *DataMiner.xml*).
 
-- The *\<Filter>* tags contain the LDAP search filters to find all groups and users. Note that in XML ampersands must be encoded as “&”.
+- The *\<Filter>* tags contain the LDAP search filters to find all groups and users. Note that in XML ampersands must be encoded as "&".
 
-- The *\<Classname>* tags indicate the object class(es) that identify groups and users. Multiple values can be separated with pipe characters (“\|”).
+- The *\<Classname>* tags indicate the object class(es) that identify groups and users. Multiple values can be separated with pipe characters ("\|").
 
-- If you set the *useForFullName* attribute to “true” (i.e. the default setting), the full usernames will be retrieved by means of LDAP. If you set this attribute to “false”, full usernames will be retrieved by means of NetAPI instead. This attribute corresponds to the *Use fully qualified domain name (FQDN)* setting in Cube.
+- If you set the *useForFullName* attribute to "true" (i.e. the default setting), the full usernames will be retrieved by means of LDAP. If you set this attribute to "false", full usernames will be retrieved by means of NetAPI instead. This attribute corresponds to the *Use fully qualified domain name (FQDN)* setting in Cube.
 
 - DataMiner can only connect to one LDAP server, so only one LDAP tag can be specified.
 
@@ -165,9 +166,9 @@ The following example shows how Global Telecom Company (“GTC”) has configure
   <LDAP referralConfigured="false" />
   ```
 
-- To connect to the LDAP server with SSL, from DataMiner 9.5.6 onwards, specify the attribute *useSSL=true* in the LDAP tag. The password is encrypted after the first usage. (Default SSL port: 636.)
+- To connect to the LDAP server with SSL, specify the attribute *useSSL=true* in the LDAP tag. The password is encrypted after the first usage. (Default SSL port: 636.)
 
-- From DataMiner 10.0.6 onwards, an individual LDAP query will time out after 5 minutes. This timeout interval can be customized in the *\<QueryTimeout>* subtag of the *\<LDAP>* tag.
+- An individual LDAP query will time out after 5 minutes. This timeout interval can be customized in the *\<QueryTimeout>* subtag of the *\<LDAP>* tag.
 
   ```xml
   <DataMiner>
@@ -222,5 +223,5 @@ In DataMiner, do the following:
   > [!IMPORTANT]
   > Directory traversal happens top to bottom. If you do not have access to query against the top level of the forest, any parent or sibling domains of the child domain you are querying against will not be included.
 
-> [!IMPORTANT]
+> [!NOTE]
 > When existing groups are added in DataMiner, all domain groups will appear to be in the same domain as the DataMiner Agent. However, this is only a visualization issue. Functionality is not affected.

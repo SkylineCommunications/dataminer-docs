@@ -1,5 +1,6 @@
 ---
 uid: Changing_the_role_of_a_DCP_user
+keywords: cloud user roles, cloud roles
 ---
 
 # Changing the role of a dataminer.services user
@@ -14,12 +15,7 @@ Each user that has been added in the Admin app can have the role *Member*, *Admi
 
 If you have the *Owner* or *Admin* role, you can change the role of a user as follows:
 
-1. Open the Admin app.
-
-1. Check whether the correct organization is mentioned in the header bar.
-
-   > [!TIP]
-   > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
+1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
 1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 

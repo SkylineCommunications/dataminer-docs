@@ -10,9 +10,9 @@ To add a **local group**:
 
 1. In the *Users / Groups* section of the System Center module, go to the *groups* tab.
 
-2. Click *Add new group*.
+1. Click *Add new group*.
 
-    The new group will be added to the list of *Local* groups.
+   The new group will be added to the list of *Local* groups.
 
 > [!NOTE]
 > In complex systems, instead of creating a separate group for each possible set of required rights and permissions, it can be more useful to combine different groups. This way you can for example add users to an “Operator” group with basic permissions and access to the views that every operator should be able to see, and then add them to additional groups depending on the additional views and functionality they need to have access to.
@@ -21,11 +21,11 @@ To add an existing **domain group**:
 
 1. In the *Users / Groups* section of the System Center module, go to the *groups* tab.
 
-2. Click *Add existing group*.
+1. Click *Add existing group*.
 
-3. In the *Add existing group* window, select the group(s) you want to add and click *OK*.
+1. In the *Add existing group* window, select the group(s) you want to add and click *OK*.
 
-    The new groups will be added to the list of *Domain* groups.
+   The new groups will be added to the list of *Domain* groups.
 
 When you add a domain group to DataMiner, keep the following in mind:
 

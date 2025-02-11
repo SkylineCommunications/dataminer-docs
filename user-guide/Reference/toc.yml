@@ -10,7 +10,6 @@ items:
       - name: Overview of the different subfolders
         topicUid: Overview_of_the_different_subfolders
       - name: More information on certain files and folders
-        topicUid: More_information_on_certain_files_and_folders
         items:
           - name: Aggregation
             topicUid: Aggregation
@@ -26,8 +25,8 @@ items:
             topicUid: DB_xml
           - name: DBConfiguration.xml
             topicUid: DBConfiguration_xml
-          - name: DBMaintenance.xml and DBMaintenanceDMS.xml
-            topicUid: DBMaintenance_xml_and_DBMaintenanceDMS_xml
+          - name: DBMaintenanceDMS.xml
+            topicUid: DBMaintenanceDMS_xml
           - name: DMS.xml
             topicUid: DMS_xml
           - name: Elements
@@ -62,8 +61,6 @@ items:
             topicUid: System_Cache
           - name: SyncRules.xml
             topicUid: SyncRules_xml
-          - name: SLAnalytics.config
-            topicUid: SLAnalytics_config
   - name: Tools
     topicUid: DataminerTools
     items:
@@ -117,6 +114,17 @@ items:
         topicUid: Data_Aggregator_Migrator
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
+      - name: DataMiner Health Check Tool
+        topicUid: DataMiner_Health_Check_Tool
+        items:
+          - name: Installing the Health Check Tool
+            topicUid: DataMiner_Health_Check_Tool_Installation
+          - name: Configuring the Health Check Tool
+            topicUid: DataMiner_Health_Check_Tool_Configuration
+          - name: Using the Health Check Tool
+            topicUid: DataMiner_Health_Check_Usage
+          - name: Health Check Tool Dashboards
+            topicUid: DataMiner_Health_Dashboards
       - name: DataMiner Size tool
         topicUid: DataMinerSizeTool
       - name: DataMiner Taskbar Utility
@@ -246,8 +254,6 @@ items:
                 topicUid: SLNetClientTest_exporting_data_to_csv
               - name: Inspecting parameter table rows in SLProtocol and SLElement
                 topicUid: SLNetClientTest_Inspecting_parameter_table_rows
-              - name: Inspecting the active replication buffers
-                topicUid: SLNetClientTest_inspecting_active_replication_buffers
               - name: Inspecting the contents of a table parameter
                 topicUid: SLNetClientTest_Inspecting_the_contents_of_a_table_parameter
               - name: Inspecting the parameter notification queue
@@ -256,6 +262,8 @@ items:
                 topicUid: SLNetClientTest_viewing_connection_details
               - name: Inspecting the stack sizes in SLNet
                 topicUid: SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet
+              - name: Querying the assembly resolution hint paths
+                topicUid: SLNetClientTest_query_hint_paths
               - name: Requesting a list of active merge actions for a protocol
                 topicUid: SLNetClientTest_active_merge_actions_protocols
               - name: Requesting an estimate of the number of rows for a storage type in the database
@@ -268,6 +276,8 @@ items:
                 topicUid: SLNetClientTest_retrieving_connection_info
               - name: Retrieving DCF debug information
                 topicUid: SLNetClientTest_retrieving_dcf_debug_info
+              - name: Retrieving general information about elements
+                topicUid: SLNetClientTest_retrieving_element_info
               - name: Retrieving information on open GQI sessions
                 topicUid: SLNetClientTest_info_on_open_gqi_sessions
               - name: Tracking DMA communication
@@ -285,6 +295,8 @@ items:
             items:
               - name: Aborting a running Automation script
                 topicUid: SLNetClientTest_aborting_running_script
+              - name: Accessing script execution metrics
+                topicUid: SLNetClientTest_accessing_script_execution_metrics
               - name: Changing the grace period for the SLNetCom Notification thread
                 topicUid: SLNetClientTest_grace_period_SLNetCom_notification
               - name: Changing the number of records in the protocol cache
@@ -323,12 +335,12 @@ items:
                 topicUid: SLNetClientTest_finetuning_CPECollectorHelper
               - name: Forcing file synchronization between DMAs
                 topicUid: SLNetClientTest_forcing_file_sync
-              - name: Generating SMIv2 MIB files
-                topicUid: SLNetClientTest_generating_mib_files
               - name: Having RCA chains updated by the DCF engine
                 topicUid: SLNetClientTest_having_rca_chains_updated
               - name: Increasing the maximum upload size for upgrade packages in a DMS
                 topicUid: SLNetClientTest_increasing_max_upload
+              - name: Inspecting the active replication buffers
+                topicUid: SLNetClientTest_inspecting_active_replication_buffers
               - name: Making DataMiner Cube ignore view updates
                 topicUid: SLNetClientTest_making_Cube_ignore_view_updates
               - name: Managing base subscriptions
@@ -345,6 +357,8 @@ items:
                 topicUid: SLNetClientTest_removing_DOM_Manager
               - name: Removing references to items that no longer exist
                 topicUid: SLNetClientTest_removing_references
+              - name: Retraining the internal model used by RAD
+                topicUid: SLNetClientTest_retrain_rad_model
               - name: Setting the TTL for database records
                 topicUid: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
@@ -383,10 +397,14 @@ items:
         topicUid: Verify_Elastic_Storage_Type
       - name: Verify NATS is Running
         topicUid: VerifyNatsIsRunning
+      - name: Verify No Legacy Correlation
+        topicUid: VerifyNoLegacyCorrelation
       - name: Verify No Legacy Reports Dashboards
         topicUid: Verify_No_Legacy_Reports_Dashboards
       - name: Verify No Obsolete API Deployed
         topicUid: Verify_No_Obsolete_API_Deployed
+      - name: Verify No Amazon Keyspaces
+        topicUid: Verify_No_Amazon_Keyspaces
   - name: Methods of Procedure
     items:
       - name: Changing the default password for Cassandra
@@ -437,6 +455,8 @@ items:
         topicUid: Time-based_license
   - name: Software support life cycles
     topicUid: Software_support_life_cycles
+  - name: Feature overview
+    topicUid: Feature_overview
   - name: Soft-launch options
     topicUid: SoftLaunchOptions
     items:
@@ -448,7 +468,9 @@ items:
         topicUid: Activating_SLProtocol_as_a_64_Bit_Process
       - name: Activating SLProtocol as a 32-bit process
         topicUid: Activating_SLProtocol_as_a_32_Bit_Process
-  - name: DataMiner Extension Modules
+      - name: BrokerGateway migration
+        topicUid: BrokerGateway_Migration
+  - name: DataMiner Extension Modules (DxMs)
     topicUid: DataMinerExtensionModules
   - name: Custom branding
     topicUid: Custom_branding
@@ -505,6 +527,10 @@ items:
         topicUid: service_profile_benchmarks
       - name: Service & Resource Management benchmarks
         topicUid: service_resource_management_benchmarks
+      - name: Swarming bookings benchmarks
+        topicUid: swarming_bookings_benchmarks
+      - name: Swarming elements benchmarks
+        topicUid: swarming_elements_benchmarks
       - name: Trending benchmarks
         topicUid: trend_benchmarks
       - name: User-Defined APIs benchmarks
@@ -517,8 +543,8 @@ items:
     items:
       - name: Connecting devices using RS-232/RS-422/RS-485
         topicUid: Connecting_devices_using_RS_232_RS_422_RS_485
-  - name: NatsCustodian
-    topicUid: NatsCustodian
+      - name: NatsCustodian
+        topicUid: NatsCustodian
   - name: Frequently asked questions
     topicUid: faq
     items:

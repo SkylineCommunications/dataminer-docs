@@ -8,6 +8,9 @@ This tutorial, which comes after the [Chat notifications](xref:ChatOps_Tutorials
 
 Estimated duration: 15 minutes.
 
+> [!TIP]
+> See also: [Kata #27: Custom ChatOps Operator: Use buttons in Adaptive Cards](https://community.dataminer.services/courses/kata-27/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - [A DataMiner System connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
@@ -17,7 +20,7 @@ Estimated duration: 15 minutes.
 ## Overview
 
 - [Step 1: Follow the chat notifications tutorial](#step-1-follow-the-chat-notifications-tutorial)
-- [Step 2: Deploy the Custom Command Examples package from the Catalog and configure the scripts](#step-2-deploy-the-custom-command-examples-package-from-the-catalog-and-configure-the-scripts)
+- [Step 2: Deploy the Custom Command Examples package from the Catalog](#step-2-deploy-the-custom-command-examples-package-from-the-catalog)
 - [Step 3: Fetch the teams and the channels of a team](#step-3-fetch-the-teams-and-the-channels-of-a-team)
 - [Step 4: Adjust the chat notification Correlation rule to send a notification with custom buttons](#step-4-adjust-the-chat-notification-correlation-rule-to-send-a-notification-with-custom-buttons)
 - [Step 5: Use the custom buttons from the notification](#step-5-use-the-custom-buttons-from-the-notification)
@@ -26,7 +29,7 @@ Estimated duration: 15 minutes.
 
 If you have not yet done so, go to [Chat notifications](xref:ChatOps_Tutorials_Chat_Notification) and follow the tutorial. Otherwise, you can skip this step.
 
-## Step 2: Deploy the Custom Command Examples package from the Catalog and configure the scripts
+## Step 2: Deploy the Custom Command Examples package from the Catalog
 
 Later in this tutorial, you will trigger a custom command from the *Custom Command Examples* package with a button added to an Adaptive Card notification. To make this possible, this package first needs to be deployed.
 
@@ -47,47 +50,11 @@ Later in this tutorial, you will trigger a custom command from the *Custom Comma
 
    ![Take Ownership of Alarm CustomCommand Example script](~/user-guide/images/chatops_notification_part_02_02_003.png)
 
-1. Go to the [Admin app](https://admin.dataminer.services) to copy the URL for your DMS:
-
-   1. Make sure the correct organization is selected in the top-right corner.
-
-      If you need to change the selected organization, click the displayed organization name and select the correct organization in the menu.
-
-   1. In the pane on the left, select your DMS, and select *Overview*.
-
-   1. Copy the URL in the address bar of the browser.
-
-      This URL contains your system's organization ID and DMS ID.
-
-   ![How to find IDs in the Admin app](~/user-guide/images/chatops_notification_part_02_02_004.gif)
-
-1. In DataMiner Cube, open the Automation module.
-
-1. Select the *Take Ownership of Alarm* script.
-
-1. Locate the lines illustrated below, enter the organization ID and the DMS ID, and save the script:
-
-   ```csharp
-   var organizationId = Guid.Parse("");
-   var dmsId = Guid.Parse("");
-   ```
-
-   ![How to fill in the IDs in the Take Ownership of Alarm CustomCommand Example script](~/user-guide/images/chatops_notification_part_02_02_005.gif)
-
-   ![Take Ownership of Alarm CustomCommand Example script with IDs filled in](~/user-guide/images/chatops_notification_part_02_02_006.png)
-
-1. Select the *Send Channel Notification Asking To Take Ownership of an Alarm* script.
-
-1. Like for the previous script, locate the lines illustrated below, enter the organization ID and the DMS ID, and save the script:
-
-   ```csharp
-   var organizationId = Guid.Parse("");
-   var dmsId = Guid.Parse("");
-   ```
-
 ## Step 3: Fetch the teams and the channels of a team
 
 To be able to send a notification in a channel later in this tutorial, you will first need to fetch the teams and the channels of a team, or create new ones if you do not have any yet.
+
+1. In DataMiner Cube, open the Automation module.
 
 1. Fetch or create the teams:
 
@@ -175,7 +142,7 @@ In this step, you will adjust the Correlation rule from the [Chat notifications]
 
 The notification in the channel contains a few buttons. Give them a try:
 
-- **Take ownership**: Executes the custom *Take Ownership of Alarm* command that you configured in [step 2](#step-2-deploy-the-custom-command-examples-package-from-the-catalog-and-configure-the-scripts).
+- **Take ownership**: Executes the custom *Take Ownership of Alarm* command from the Custom Command Examples package.
 
   With such commands, you can easily interact with the notification. The response of the custom command can again contain an adaptive card with buttons. This enables you to create user flows, while a notification can still be sent in another channel or private chat. This functionality offers a multitude of possibilities.
 

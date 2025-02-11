@@ -238,7 +238,7 @@ fatal: empty ident name (for <>) not allowed
 **Resolution**: Install [the latest version of DocFX](xref:CTB_Local_Test_Build#installing-and-configuring-docfx).
 
 > [!TIP]
-> You can use the command `docfx help` to check which version is installed.
+> You can use the command `docfx --version` to check which version is installed.
 
 > [!NOTE]
 > If you have upgraded DocFX, but this upgrade does not seem to have taken effect, check whether you have a path parameter configured that leads to an older version. Go to *Edit the system environment variables* > *Advanced* > *Environment Variables*, select the *Path* parameter, if available, and click *Edit*. If an entry is listed that goes to a DocFX folder containing an old version of DocFX, delete that entry.

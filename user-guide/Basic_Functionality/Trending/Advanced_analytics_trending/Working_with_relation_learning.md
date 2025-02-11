@@ -10,4 +10,6 @@ This allows you to add related parameters to your trend graphs to get a better u
 
 If you do not select a section of the trend graph first, DataMiner will look for [related parameters based on the entire history of the parameter](xref:Adding_related_parameters_to_a_trend_graph).
 
-From DataMiner 10.3.8/10.4.0 onwards, if you select a section of the trend graph, DataMiner will look for [related parameters based on the behavior of the parameters during the time range of the selected section](xref:Adding_time_scoped_related_parameters_to_a_trend_graph). In this case, only parameters from the same device will be taken into account.
+From DataMiner 10.3.8/10.4.0 onwards, if you select a section of the trend graph, DataMiner will look for [related parameters based on the behavior of the parameters during the time range of the selected section](xref:Adding_time_scoped_related_parameters_to_a_trend_graph). Parameters from both the same element and other elements within the same service will be taken into account. Prior to DataMiner 10.4.11/10.5.0<!--RN 40658-->, only parameters from the same element will be taken into account.
+
+![Relation learning](~/user-guide/images/Relation_Learning.png)<br>*Light bulb feature in DataMiner 10.4.5*

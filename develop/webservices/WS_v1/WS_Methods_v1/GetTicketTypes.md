@@ -16,12 +16,12 @@ Use this method to retrieve the available ticket types (or “domains” in the 
 
 ## Input
 
-| Item       | Format | Description                                                                      |
-|------------|--------|----------------------------------------------------------------------------------|
+| Item       | Format | Description                                           |
+|------------|--------|-------------------------------------------------------|
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 
 ## Output
 
-| Item                 | Format                 | Description                                                     |
-|----------------------|------------------------|-----------------------------------------------------------------|
+| Item                 | Format                 | Description                              |
+|----------------------|------------------------|------------------------------------------|
 | GetTicketTypesResult | Array of DMATicketType | See [DMATicketType](xref:DMATicketType). |

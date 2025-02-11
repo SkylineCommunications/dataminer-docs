@@ -10,28 +10,24 @@ To override this on DMA level:
 
 1. Stop the DataMiner software.
 
-2. Open *C:\\Skyline DataMiner\\DataMiner.xml*.
+1. Open *C:\\Skyline DataMiner\\DataMiner.xml*.
 
-3. Specify the community strings in the SNMP tag:
+1. Specify the community strings in the SNMP tag:
 
-    ```xml
-    <SNMP writeCommunity="set" readCommunity="get"/>
-    ```
+   ```xml
+   <SNMP writeCommunity="set" readCommunity="get"/>
+   ```
 
-4. Save the file.
+1. Save the file.
 
-5. Restart the DataMiner software.
+1. Restart the DataMiner software.
 
 To override this on element level:
 
 1. Right-click the element in the Surveyor and click *Edit*.
 
-2. In the *Advanced element settings* section, select *Enable SNMP agent*.
+1. In the *Advanced element settings* section, select *Enable SNMP agent*.
 
-3. Specify the virtual IP address and subnet mask for the SNMP agent.
+1. Specify the virtual IP address and subnet mask for the SNMP agent.
 
-4. Select *Override defaults* and specify the custom get and set community string.
-
-    > [!NOTE]
-    > In the *Element.xml* file corresponding to the element, the community strings can be found in the *SNMPAgent* tag. For example: \<SNMPAgent readCommunity="get" writeCommunity="set">1\</SNMPAgent>. See [Element.xml](xref:Elements1#elementxml).
-    >
+1. Select *Override defaults* and specify the custom get and set community string.

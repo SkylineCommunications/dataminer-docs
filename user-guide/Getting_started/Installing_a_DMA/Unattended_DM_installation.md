@@ -4,6 +4,9 @@ uid: Unattended_DM_installation
 
 # Unattended DataMiner installation
 
+> [!IMPORTANT]
+> This feature is currently only available if the deprecated 10.2 or 10.0 DataMiner Installer is used. It is not yet available with more recent installers.
+
 The unattended installation process can be used to install a standalone DMA, but also to install a cluster, set up Failover, or even add a DMA to an existing cluster.
 
 > [!NOTE]
@@ -13,8 +16,13 @@ The unattended installation process can be used to install a standalone DMA, but
 
 To make sure the installation is executed correctly, a valid configuration file and license file must be included in the same folder as *Setup.exe*. See [Unattended installation configuration file](#unattended-installation-configuration-file).
 
-> [!TIP]
-> See also: [Obtaining a DataMiner license](xref:DataminerLicenses)
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>For more information, see <a href="xref:DataminerLicenses" style="color: #657AB7;">Obtaining a DataMiner license</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
+<br>
 
 You can then start the unattended installation by running the following command:
 
@@ -38,7 +46,7 @@ Once the installation process has started, the installer will go through the fol
    > [!NOTE]
    >
    > - The installer requires that at least .Net Framework 4.5 is already installed. If this is not the case, you will not be able to run the installer.
-   > - WinPcap can only be installed during an attended installation. For an unattended installation, make sure it is installed beforehand.
+   > - When DataMiner Failover based on virtual IP will be used, [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) can only be installed during an attended installation. For an unattended installation, make sure it is installed beforehand on both DMAs.
 
 1. Installation of the DataMiner version provided in the installer.
 

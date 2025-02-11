@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.3.9_CU2
 
 ### Fixes
 
-#### Failover: NATS servers would incorrectly use the virtual IP address of a Failover setup to establish the route to the online agent [ID_37073]
+#### Failover: NATS servers would incorrectly use the virtual IP address of a Failover setup to establish the route to the online agent [ID 37073]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 [CU2] -->
 

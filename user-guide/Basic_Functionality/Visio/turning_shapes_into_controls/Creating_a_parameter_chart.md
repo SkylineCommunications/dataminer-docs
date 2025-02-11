@@ -11,7 +11,7 @@ With the **Parameters** shape data field, you specify which parameters should be
 > [!NOTE]
 >
 > - This feature only works in DataMiner Cube.
-> - Up to DataMiner 8.5, the number of parameters that can be displayed in a Visio chart is limited to 10. From DataMiner 9.0.1/9.0.0 CU2 onwards, the maximum number of parameters has increased to 15.
+> - A maximum of 15 parameters can be displayed in a parameter chart in Visual Overview.
 > - Alternatively, you can link a shape to a trend component instead. See [Linking a shape to a trend component](xref:Linking_a_shape_to_a_trend_component).
 > - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[controls > PIE/BAR CHART]* page.
 
@@ -51,8 +51,8 @@ To configure the shapes:
    > [!NOTE]
    >
    > - In the value of the shape data field, you can use placeholders to refer to e.g. session variables. For example: "219:341:114:\[Var:MyVariable\]\|219:341:114:\[Var:MyOtherVariable\]".
-   > - From DataMiner 9.0.3 onwards, strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
-   > - From DataMiner 9.6.8 onwards, this syntax allows the use of element names, \[this element\] placeholders and keys containing forward slashes (e.g. dmaID/elementID).
+   > - Strings in table row value filters should be enclosed in single quotes to ensure correct parsing.
+   > - Instead of the element ID, you can also use the element name or a \[this element\] placeholder. Keys containing forward slashes (e.g. dmaID/elementID) are also supported.
 
 1. If there is only one shape, add a shape data field of type **ParametersOptions** to it.
 
@@ -78,7 +78,7 @@ To configure the shapes:
    >
    > - The title in the title component will only be automatically displayed if the option "Title:\<your title>" is specified in the **ParametersOptions** shape data field of the group, and an asterisk has been added in the title shape. Alternatively, you can also manually specify the title within the title shape.
    > - If the parameter description is the same for all displayed parameters in the chart, the legend will not mention the duplicate parameter descriptions.
-   > - From DataMiner 9.5.13 onwards, this shape data field supports dynamic placeholders like \[Param:...\], \[Var:...\].
+   > - This shape data field supports dynamic placeholders like \[Param:...\], \[Var:...\].
 
 > [!NOTE]
 > For more information on how the font of the chart or its components is determined, refer to [Determining the font used in the chart](#determining-the-font-used-in-the-chart).
@@ -137,7 +137,7 @@ Below, you can find the options that can be specified in the **ParametersOptions
 
 - **DisplayColumnID:ParameterID**
 
-  Use this option for a parameter chart that displays data stored in a dynamic table, if you want the text of the chart labels to be retrieved from another column in that dynamic table than the index or display key column. This option is available from DataMiner 9.0.5 onwards.
+  Use this option for a parameter chart that displays data stored in a dynamic table if you want the text of the chart labels to be retrieved from another column in that dynamic table than the index or display key column.
 
   Example:
 
@@ -229,11 +229,11 @@ Below, you can find the options that can be specified in the **ParametersOptions
 
 ## Determining the font used in the chart
 
-From DataMiner v8.5.8 onwards, parameter charts inherit the font properties of the shape by default. However, for this to be enabled, the shape must contain some text.
+By default, parameter charts inherit the font properties of the shape. However, for this to be enabled, the shape must contain some text.
 
 The following restrictions also apply:
 
-- If the configured font is not installed on the DataMiner Cube client, the default font is used instead.
+- If the configured font is not installed on the DataMiner Cube client machine, the default font is used instead.
 - The Monitoring app will use the font if it is installed on the server.
 - All basic font properties are taken from the shape, including the color. However, the option "ThemeForeground" overrides the text color. See [ThemeForeground:](xref:Creating_a_parameter_chart).
 - A shape can only use one single font. If multiple fonts are applied to different pieces of text in a particular shape, then that shape will use the first font that was applied to it.

@@ -8,11 +8,12 @@ uid: Cube_Feature_Release_10.3.1
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.1](xref:General_Feature_Release_10.3.1).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.3.1](xref:General_Feature_Release_10.3.1).
 
 ## Highlights
 
-#### System Center - Analytics config: New Pattern Matching setting 'Maximum memory usage' [ID_34803]
+#### System Center - Analytics config: New Pattern Matching setting 'Maximum memory usage' [ID 34803]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
@@ -22,7 +23,7 @@ This setting allows you to specify the maximum amount of memory that SLAnalytics
 
 Default value: 2.00 GB
 
-#### Visual Overview: New placeholders can now be added to a 'ShapeGrouping' shape [ID_34974]
+#### Visual Overview: New placeholders can now be added to a 'ShapeGrouping' shape [ID 34974]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
@@ -40,7 +41,7 @@ The placeholders `[GroupValue]` and `[Count]` can be added simultaneously as wel
 
 ## Other features
 
-#### Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID_34857]
+#### Visual Overview: Session variable YAxisResources now supports filters to pass exposers [ID 34857]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
@@ -54,9 +55,9 @@ A converter has also been created in the client that will convert a profile para
 > For examples, refer to [YAxisResource session variable examples](xref:YAxisResource_Shape_Data_Examples) in the user guide.
 
 > [!TIP]
-> See also: [Service & Resource Management: Exposers for resource capacities and capabilities](xref:General_Feature_Release_10.3.1#service--resource-management-exposers-for-resource-capacities-and-capabilities-id_34841)
+> See also: [Service & Resource Management: Exposers for resource capacities and capabilities](xref:General_Feature_Release_10.3.1#service--resource-management-exposers-for-resource-capacities-and-capabilities-id-34841)
 
-#### Visual Overview: Automatically generated shapes representing bookings can now be sorted by custom property [ID_34572] [ID_34864]
+#### Visual Overview: Automatically generated shapes representing bookings can now be sorted by custom property [ID 34572] [ID 34864]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -75,19 +76,19 @@ ChildrenSort="Property|property=End,desc"
 
 ### Enhancements
 
-#### Alarm Console: Automatic incident tracking will now make use of the parameter relationship data that is stored in a model managed by the ModelHost DxM [ID_34684]
+#### Alarm Console: Automatic incident tracking will now make use of the parameter relationship data that is stored in a model managed by the ModelHost DxM [ID 34684]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 The *automatic incident tracking* feature groups active alarms that are related to the same incident, so that the Alarm Console provides a better overview of the current issues in the system. From now on, on cloud-connected DataMiner Agents that have the DataMiner Extension Module *ModelHost* installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads), this feature will also make use of the parameter relationship data that is stored in a model managed by the *ModelHost* DxM.
 
-#### DataMiner Cube - Visual Overview: Enhanced performance when updating automatically generated shapes that represent bookings [ID_34695]
+#### DataMiner Cube - Visual Overview: Enhanced performance when updating automatically generated shapes that represent bookings [ID 34695]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 Because of a number of enhancements, overall performance has increased when updating automatically generated shapes that represent bookings.
 
-#### DataMiner Cube: Stream Viewer enhancements [ID_34837] [ID_34838]
+#### DataMiner Cube: Stream Viewer enhancements [ID 34837] [ID 34838]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -97,13 +98,13 @@ For example, in case of HTTP communication, there will now be extra levels for s
 
 **only in case of a response*
 
-#### Bookings module: Navigation panel has been improved and renamed to 'settings' panel [ID_34840]
+#### Bookings module: Navigation panel has been improved and renamed to 'settings' panel [ID 34840]
 
 <!-- MR 10.3.0 - FR 10.3.1 Also see Fixes for bug fix section-->
 
 The *Navigation* panel has been improved and renamed to *Settings* panel.
 
-#### Alarm Console: A notice will now appear when resources are being migrated from XML to Elasticsearch [ID_34845]
+#### Alarm Console: A notice will now appear when resources are being migrated from XML to Elasticsearch [ID 34845]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
@@ -114,13 +115,13 @@ When you start a resource migration in the *SLNetClientTest* tool (by selecting 
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### DataMiner Cube - Visual Overview: Enhanced performance when loading a visual overview that contains a large number of shapes linked to EPM objects [ID_34874]
+#### DataMiner Cube - Visual Overview: Enhanced performance when loading a visual overview that contains a large number of shapes linked to EPM objects [ID 34874]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
 Because of a number of enhancements, overall performance has increased when loading a visual overview that contains a large number of shapes linked to EPM objects.
 
-#### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID_34877]
+#### DataMiner Cube - Settings: 'Show the DataMiner TV section' setting has been removed [ID 34877]
 
 <!-- MR 10.1.0 [CU22] / 10.2.0 [CU10] - FR 10.3.1 -->
 
@@ -128,43 +129,43 @@ The *Show the DataMiner TV section* setting has been removed from the *User > Cu
 
 ### Fixes
 
-#### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID_34664]
+#### DataMiner Cube - Visual Overview: Tooltip of an element in a service chain would incorrectly not show values of node properties [ID 34664]
 
 <!-- MR 10.2.0 [CU10] - FR 10.3.1 -->
 
 When, in a service chain within a service context, an element shape was linked to a node property via a shape data field of type *Tooltip*, then the tooltip of that shape would incorrectly not show the value of that node property when using either a `[Service definition properties]` or a `[Service definition property:<property name>]` placeholder.
 
-#### Trending - Parameter relationships: Enhancements [ID_34832] [ID_34846] [ID_34863] [ID_34938]
+#### Trending - Parameter relationships: Enhancements [ID 34832] [ID 34846] [ID 34863] [ID 34938]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
 
 A number of enhancements have been made to the parameter relationship feature. When you hover over a light bulb icon in the top-right corner of a trend graph, a tooltip will now appear. This tooltip will suggest you add a number of related parameters. Also, when you open a histogram, no light bulb icon will be displayed anymore as parameter relationships are not really relevant when viewing histograms.
 
-#### DataMiner Cube - Visual Overview: Preset specified in a Spectrum Analysis component would incorrectly not be loaded [ID_34833]
+#### DataMiner Cube - Visual Overview: Preset specified in a Spectrum Analysis component would incorrectly not be loaded [ID 34833]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When you had specified a preset in a shape that contained a Spectrum Analysis component, the preset would incorrectly not be loaded when you opened the visual overview in Cube.
 
-#### Bookings module: Columns of type 'Date' would not get updated when you changed the time zone [ID_34840]
+#### Bookings module: Columns of type 'Date' would not get updated when you changed the time zone [ID 34840]
 
 <!-- MR 10.3.0 - FR 10.3.1 Also see enhancements-->
 
 When, in the *Navigation* panel of the *Bookings* app, you selected another time zone, columns of type `Date` would incorrectly not get updated.
 
-#### Trending - Pattern matching: Trend graph would no longer show the matches for the displayed parameter after editing a tag [ID_34870]
+#### Trending - Pattern matching: Trend graph would no longer show the matches for the displayed parameter after editing a tag [ID 34870]
 
 <!-- MR 10.3.0 - FR 10.3.1 -->
 
 When you edited the properties of a tag (e.g. name, description, etc.), the trend graph would no longer show the pattern matches for the parameter that is currently displayed in the graph. Instead, it would incorrectly show the pattern matches for the parameter for which the tag was defined.
 
-#### DataMiner Cube - EPM: Problem with topology filter [ID_34931]
+#### DataMiner Cube - EPM: Problem with topology filter [ID 34931]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 
 When you opened a topology chain and selected a field in the topology filter, in some cases, the fields above the one you selected would incorrectly not get selected automatically.
 
-#### DataMiner Cube - Visual Overview: Trend graph would incorrectly show 'No data' [ID_34955]
+#### DataMiner Cube - Visual Overview: Trend graph would incorrectly show 'No data' [ID 34955]
 
 <!-- Main Release Version 10.1.0 [CU22]/10.2.0 [CU10] - Feature Release Version 10.3.1 -->
 

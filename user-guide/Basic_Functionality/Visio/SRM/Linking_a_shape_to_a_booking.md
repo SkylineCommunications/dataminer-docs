@@ -4,7 +4,7 @@ uid: Linking_a_shape_to_a_booking
 
 # Linking a shape to a booking
 
-From DataMiner 9.6.4 onwards, it is possible to link a shape to a booking using a **Reservation** shape data field.
+It is possible to link a shape to a booking using a **Reservation** shape data field.
 
 > [!NOTE]
 > If a parent shape has *Reservation* shape data and a child shape has fields linked to the same booking (e.g. *Info* shape data, shape text placeholders), the child shape will also become a reservation shape linked to the same booking.
@@ -52,7 +52,7 @@ The following placeholders can be used in the text displayed on the *Reservation
 
   Will be replaced by the amount of time that has passed since the booking started running. If the booking is not running, it is replaced by the default value. If no default value is specified and the booking is not running, nothing is displayed.
 
-  Optionally, a colon (“:”) can be added within the placeholder, followed by the time format and a default value.
+  Optionally, a colon (":") can be added within the placeholder, followed by the time format and a default value.
 
   By default, the format is "\[x days\] hh:mm:ss", where the number of days is only displayed if it is 1 or more, and the local language is used.
 

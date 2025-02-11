@@ -4,7 +4,7 @@ uid: Monitoring_app_card_pane
 
 # Monitoring app card pane
 
-The card pane of the Monitoring app is the large pane on the right side of the app. If no cards are opened, this pane displays the app homepage, which shows a list of recent items. If a card is opened, the displayed content depends on the type of card.
+The card pane of the Monitoring app is the large pane on the right side of the app. If no cards are opened, this pane displays the app home page, which shows a list of recent items. If a card is opened, the displayed content depends on the type of card.
 
 ## Types of cards
 
@@ -25,9 +25,9 @@ The following card types are available:
 > [!NOTE]
 >
 > - If the app is used on a mobile device, to make optimal use of the available space on the screen, the app layout may be different from what is described in this section.
-> - If the app is viewed in a browser that supports fullscreen mode, for parameter tables, data pages, CPE/EPM pages and visual pages, a fullscreen button is available: ![Fullscreen button](~/user-guide/images/CubeMaximize00028.png)
+> - If the app is viewed in a browser that supports full-screen mode, for parameter tables, data pages, CPE/EPM pages and visual pages, a full-screen button is available: ![Full-screen button](~/user-guide/images/CubeMaximize00028.png)
 >
->   Click this button to view the item in fullscreen mode. To leave fullscreen mode using a keyboard, press Esc or F11, depending on the browser.
+>   Click this button to view the item in full-screen mode. To leave full-screen mode using a keyboard, press Esc or F11, depending on the browser.
 
 ## Zooming and panning
 
@@ -46,3 +46,7 @@ If the app is used on a mobile device:
 - To zoom out, place two fingers stretched apart on the screen and bring them together.
 
 - To move left or right across a visual overview, slide a finger across the screen.
+
+## Visual Overview
+
+Visual overview pages in the DataMiner web apps are a lightweight version of their DataMiner Cube counterparts. This means that some features that are available in Cube will not be available in the web apps. For more details, see [Unsupported capabilities](xref:DashboardVisualOverview#unsupported-capabilities).

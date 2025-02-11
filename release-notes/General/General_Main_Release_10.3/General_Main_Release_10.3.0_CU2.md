@@ -8,23 +8,26 @@ uid: General_Main_Release_10.3.0_CU2
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.3.0 CU2](xref:Cube_Main_Release_10.3.0_CU2).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.3.0 CU2](xref:Web_apps_Main_Release_10.3.0_CU2).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 
-#### Security enhancements [ID_35668]
+#### Security enhancements [ID 35668]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 A number of security enhancements have been made.
 
-#### Alarms generated when a database goes in offload mode will now have severity 'Notice' instead of 'Critical' [ID_35749]
+#### Alarms generated when a database goes in offload mode will now have severity 'Notice' instead of 'Critical' [ID 35749]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When a database went in offload mode, up to now, an alarm with severity *Critical* was generated. From now on, an alarm of severity *Notice* will be generated instead.
 
-#### SLAnalytics will no longer disregard first-time alarm template assignments [ID_35794]
+#### SLAnalytics will no longer disregard first-time alarm template assignments [ID 35794]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -32,7 +35,7 @@ Up to now, SLAnalytics only took into account changes to alarm templates that we
 
 From now on, SLAnalytics will also take into account first-time alarm template assignments.
 
-#### SLAnalytics: Enhanced performance [ID_35871]
+#### SLAnalytics: Enhanced performance [ID 35871]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -40,7 +43,7 @@ Overall performance of SLAnalytics has increased because of a number of enhancem
 
 ### Fixes
 
-#### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID_35617]
+#### SLLogCollector: Problem when collecting multiple memory dumps with the 'Now and when memory increases with X Mb' option [ID 35617]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -48,7 +51,7 @@ When the *SLLogCollector* tool had to collect memory dumps of multiple processes
 
 From now on, it will collect at least the "now" dump for each of the selected processes.
 
-#### NATS would incorrectly be re-installed when a WMI query error occurred while the NATS installer was being run at DMA startup [ID_35647]
+#### NATS would incorrectly be re-installed when a WMI query error occurred while the NATS installer was being run at DMA startup [ID 35647]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -59,13 +62,13 @@ From now on, the execution of the NATS installer at DMA startup will be skipped 
 > [!NOTE]
 > When an error occurs while running a WMI query, and no NATS/NAS service is running, NATS will not be installed automatically. A manual installation of NATS will be needed.
 
-#### Existing masked alarms would incorrectly affect the overall alarm severity of an element [ID_35678]
+#### Existing masked alarms would incorrectly affect the overall alarm severity of an element [ID 35678]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 Existing masked alarms would incorrectly affect the overall alarm severity of an element.
 
-#### Failover: Offline agent would incorrectly try to take a backup of the Elasticsearch database [ID_35721]
+#### Failover: Offline agent would incorrectly try to take a backup of the Elasticsearch database [ID 35721]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -79,19 +82,19 @@ From now on, only the online agent will be allowed to take a backup of the Elast
 Elastic backup will not be taken - Only active agents from a failover pair can take the backup.
 ```
 
-#### SLElement could leak memory when updating alarm templates containing conditions [ID_35728]
+#### SLElement could leak memory when updating alarm templates containing conditions [ID 35728]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.4 -->
 
 In some cases, SLElement could leak memory when updating alarm templates containing conditions.
 
-#### SLProtocol would interpret signed numbers incorrectly [ID_35796]
+#### SLProtocol would interpret signed numbers incorrectly [ID 35796]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 SLProtocol would interpret signed numbers incorrectly, causing parameters to display incorrect values.
 
-#### Problem with SLNet when serializing a ModelHost error [ID_35802]
+#### Problem with SLNet when serializing a ModelHost error [ID 35802]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -100,37 +103,37 @@ An SLNet error could occur when serializing a ModelHost error.
 > [!IMPORTANT]
 > BREAKING CHANGE: To fix this issue, the `Exception` field had to be removed from the `ManagerStoreError` class.
 
-#### SLAnalytics: Flatline events on child DVE elements would incorrectly be cleared automatically [ID_35818]
+#### SLAnalytics: Flatline events on child DVE elements would incorrectly be cleared automatically [ID 35818]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 Events generated after detecting change points of type "flatline" in trend data of child DVE elements would incorrectly be cleared automatically.
 
-#### Business Intelligence: Enhancements with regard to the retrieval of data from logger tables and to general error handling [ID_35820]
+#### Business Intelligence: Enhancements with regard to the retrieval of data from logger tables and to general error handling [ID 35820]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
 
 A number of enhancements have been made to the Business Intelligence module, especially with regard to the retrieval of data from logger tables and to general error handling.
 
-#### SLAnalytics - Behavioral anomaly detection: Every parameter included in an alarm template would incorrectly be considered a monitored parameter [ID_35832]
+#### SLAnalytics - Behavioral anomaly detection: Every parameter included in an alarm template would incorrectly be considered a monitored parameter [ID 35832]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 SLAnalytics would incorrectly consider every parameter included in an alarm template to be a monitored parameter, even it is was not being monitored.
 
-#### DataMiner Maps: Markers could disappear when a layer was enabled or disabled [ID_35838]
+#### DataMiner Maps: Markers could disappear when a layer was enabled or disabled [ID 35838]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In some cases, markers could disappear when a layer was enabled or disabled.
 
-#### SLAnalytics could keep on waiting indefinitely for large delete operations to finish [ID_35848]
+#### SLAnalytics could keep on waiting indefinitely for large delete operations to finish [ID 35848]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In some cases, SLAnalytics could keep on waiting indefinitely for large delete operations to finish.
 
-#### Business Intelligence: At SLA startup, the active alarms would no longer be in sync with the actual alarms affecting the SLA [ID_35862]
+#### Business Intelligence: At SLA startup, the active alarms would no longer be in sync with the actual alarms affecting the SLA [ID 35862]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -138,13 +141,13 @@ At SLA startup, in some cases, the active alarms would no longer be in sync with
 
 Also, a number of other minor fixes with regard to SLA management have been implemented.
 
-#### Problem when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated [ID_35892]
+#### Problem when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated [ID 35892]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 An error could occur when an SLA element was stopped or deleted while a parameter that triggered a QAction of the SLA in question was being updated.
 
-#### DataMinerException thrown the first time an InfoData message was deserialized [ID_35897]
+#### DataMinerException thrown the first time an InfoData message was deserialized [ID 35897]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -154,25 +157,25 @@ The first time a message with an object of a type that inherited from `InfoData`
 Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize message (ProtoBuf). Possible version incompatibility between client and server.  ---&gt; System.InvalidOperationException: It was not possible to prepare a serializer for: Skyline.DataMiner.Net.InfoData ---&gt; System.InvalidOperationException: Unable to resolve a suitable Add method for System.Collections.Generic.IReadOnlyList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&#xD;
 ```
 
-#### Problem with SLElement when a timed action was stopped [ID_35928]
+#### Problem with SLElement when a timed action was stopped [ID 35928]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 In some rare cases, an error could occur in SLElement when a timed action was stopped.
 
-#### SNMP: OIDs with a leading dot would incorrectly no longer be allowed [ID_35954]
+#### SNMP: OIDs with a leading dot would incorrectly no longer be allowed [ID 35954]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 OIDs with a leading dot would incorrectly no longer be allowed. From now on, OIDs with a leading dot are allowed again.
 
-#### NT Notify type NT_GET_BITRATE_DELTA would not return a valid value for a table with a single row [ID_35967]
+#### NT Notify type NT_GET_BITRATE_DELTA would not return a valid value for a table with a single row [ID 35967]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 In some rare cases, NT Notify type NT_GET_BITRATE_DELTA (269), which retrieves the time between two consecutive executions of the specified SNMP group (in ms), would not return a valid value for a table with a single row.
 
-#### Dashboards app - Line & area chart: Legend would show an incorrect number of disabled parameters [ID_35970]
+#### Dashboards app - Line & area chart: Legend would show an incorrect number of disabled parameters [ID 35970]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -180,7 +183,7 @@ When configuring a line & area chart, you can use the *Chart limit* setting to s
 
 In some cases, the number of disabled parameters shown in the legend would be incorrect.
 
-#### 'SLA Affecting' property of cleared or re-opened alarm would incorrectly contain 'Y' instead of 'Yes' [ID_35987]
+#### 'SLA Affecting' property of cleared or re-opened alarm would incorrectly contain 'Y' instead of 'Yes' [ID 35987]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 

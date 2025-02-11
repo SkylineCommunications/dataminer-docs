@@ -1,5 +1,6 @@
 ---
 uid: Overview_About_Skyline
+description: With headquarters in Belgium but present across the globe, Skyline Communications is the global leader in end-to-end digital transformation solutions.
 ---
 
 # About Skyline Communications

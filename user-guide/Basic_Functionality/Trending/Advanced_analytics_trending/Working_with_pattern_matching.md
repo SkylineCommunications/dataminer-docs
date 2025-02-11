@@ -6,7 +6,9 @@ uid: Working_with_pattern_matching
 
 ## Univariate patterns
 
-From DataMiner 10.0.7 onwards, on systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures), DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, you first need to [define the patterns](xref:Defining_a_pattern) DataMiner Analytics needs to track. This pattern definition is also known as a "tag".
+On systems using [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures), DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, you first need to [define the patterns](xref:Defining_a_pattern) DataMiner Analytics needs to track. This pattern definition is also known as a "tag".
+
+![Pattern matching](~/user-guide/images/Pattern_Matching.png)<br>*Trending: detected pattern in DataMiner 10.4.5*
 
 If you are viewing a trend graph for a single parameter, and it contains patterns matching existing tags, these will be highlighted in orange when you hover the mouse pointer over the button representing a tag, or if the option *Expand tags* is selected in the right-click menu. The matches can be highlighted in bright orange or in a lighter orange. The meaning of these colors depends on the DataMiner version:
 

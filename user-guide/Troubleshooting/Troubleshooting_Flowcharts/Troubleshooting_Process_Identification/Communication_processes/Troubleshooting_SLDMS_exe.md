@@ -22,7 +22,7 @@ classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 StartPage([Start page])
-LogCollector([Log collector <br>usage guide])
+LogCollector([Log collector usage guide])
 START[SLDMS]
 Rte[RTE]
 Leak[Memory leak]
@@ -66,16 +66,16 @@ Nt[NotificationThread]
 Rte[RTE]
 Leak[Memory leak]
 Ml[Memory leak]
-Ch[1. Check Task Manager <br>for high memory.<br/>2. Check MS Platform element <br>for gradual increase in <br> memory over a <br>period of time.]
+Ch[1\. Check Task Manager for high memory.<br/>2\. Check MS Platform element for gradual increase in memory over a period of time.]
 D1{{Are the conditions above met?}}
 N1([No memory leak])
-Y1[1. Find the time where <br> memory use started to grow.<br/>2. Check logging, info events,<br> Windows Event Viewer <br> around that time.<br/>3. Check for any NotifyThread, <br>SNMPThread RTEs.<br/>Try to single out a <br>driver or an element.<br/>4. Check for SLXml issues too.]
-Sol1[As a solution, collect all logs <br/>and restart the DMA.]
+Y1[1\. Find the time where memory use started to grow.<br/>2\. Check logging, info events, Windows Event Viewer around that time.<br/>3\. Check for any NotifyThread, SNMPThread RTEs. Try to single out a driver or an element.<br/>4\. Check for SLXml issues too.]
+Sol1[As a solution, collect all logs and restart the DMA.]
 Ch1{{Is the leak still present?}}
 N2([Issue resolved])
-Y2([Contact tech <br>support with the <br/> required logging <br>and memory dump.])
-Nt1[In the Alarm Console<br/> or SLWatchdog2 log file.]
-Nt2[Always a notification getting <br/>deadlocked or taking a long time.]
+Y2([Contact tech support with the required logging and memory dump.])
+Nt1[In the Alarm Console or SLWatchdog2 log file.]
+Nt2[Always a notification getting deadlocked or taking a long time.]
 Nt3[Take logging and restart DMA.]
 %% Connect blocks %%
 Ml -..- Leak
@@ -116,11 +116,11 @@ classDef DarkGray fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
-CrashdumpDetected{{"Crash dump found <br> at issue time? <br/>  C:\Skyline DataMiner\Logging\CrashDump"}}
-ProcessCrashed(["1. Save .high crashdump  + <br/>note timestamp. <br/>2. Check the ErrorLog.txt file <br/>for possible causes. <br/>3. Send crashdump + logging + <br/>conclusions to Create squads. "])
-Minidump{{"Minidump found <br> at issue time? <br/>  C:\Skyline DataMiner\Logging\MiniDump"}}
-MinidumpNo(["Contact tech <br> support with the <br/> required logging <br> and memory dump."])
-MinidumpYes["Identify the cause <br> in the required log file: <br>SLWatchDog2,<br/>SLDataMiner, <br>SLDMS, etc."]
+CrashdumpDetected{{"Crash dump found at issue time?  C:\Skyline DataMiner\Logging\CrashDump"}}
+ProcessCrashed(["1\. Save .high crashdump<br> + note timestamp. <br/>2\. Check the ErrorLog.txt file for possible causes. <br/>3\. Send crashdump + logging + conclusions to Create squads. "])
+Minidump{{"Minidump found at issue time? C:\Skyline DataMiner\Logging\MiniDump"}}
+MinidumpNo(["Contact tech support with the required logging and memory dump."])
+MinidumpYes["Identify the cause in the required log file: SLWatchDog2, SLDataMiner, SLDMS, etc."]
 Crash[Process crash]
 %% Connect blocks %%
 Crash --- CrashdumpDetected
@@ -141,11 +141,11 @@ class Nt Gray;
 
 **Since 2020, there have been some major changes to SLDMS:**
 
-- DataMiner 10.1.8 ([29189](xref:General_Feature_Release_10.1.8#failover-without-virtual-ip-address-id_29189-id_29911)): Failover without VIP
+- DataMiner 10.1.8 ([29189](xref:General_Feature_Release_10.1.8#failover-without-virtual-ip-address-id-29189-id-29911)): Failover without VIP
 
 - DataMiner 10.1.6 (29119): Toolset upgrade
 
-- DataMiner 10.1.6 ([28775](xref:General_Feature_Release_10.1.6#dmsxml-now-supports-using-hostnames-instead-of-ip-addresses-id_28775)): Allow hostnames in *DMS.xml*
+- DataMiner 10.1.6 ([28775](xref:General_Feature_Release_10.1.6#dmsxml-now-supports-using-hostnames-instead-of-ip-addresses-id-28775)): Allow hostnames in *DMS.xml*
 
 - DataMiner 10.1.0/10.0.10 (26221): COM impersonation security update
 
@@ -163,9 +163,11 @@ class Nt Gray;
 
 Check the entries near the time of the issue, find a suspicious thread and follow it in the logging:
 
+```txt
 2021/06/16 10:18:24.328|SLDMS.exe 10.1.2123.558|24012|10828|CDMS::NotifyFunc|DBG|-1|** Creating Scheduler
 
 \<datetime>            |\<process>              |\<pid>|\<tid>|\<message>
+```
 
 ## RTEs
 

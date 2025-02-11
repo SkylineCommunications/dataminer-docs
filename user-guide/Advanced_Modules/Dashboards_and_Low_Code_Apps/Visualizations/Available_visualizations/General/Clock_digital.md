@@ -6,7 +6,9 @@ uid: DashboardClockDigital
 
 This component displays a digital clock that indicates the current time.
 
-In the *Component* > *Settings* tab, the following settings can be configured for this component:
+![Clock (digital)](~/user-guide/images/Clock_Digital.png)<br>*Digital clock component in DataMiner 10.4.6*
+
+In the *Component* > *Settings* pane, the following settings can be configured for this component:
 
 - To use a custom polling interval for this component, in the *WebSocket settings* section, clear the checkbox and specify a different polling interval (in seconds).
 

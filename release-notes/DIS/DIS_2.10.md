@@ -8,7 +8,7 @@ uid: DIS_2.10
 
 ### IDE
 
-#### Display editor: Editing multiple parameters at once \[ID_17829\]
+#### Display editor: Editing multiple parameters at once \[ID 17829\]
 
 In the Display editor, it is now possible to enable or disable alarm monitoring and trending for multiple parameters at once.
 
@@ -17,13 +17,13 @@ Also, after selecting an option in the right-click menu (e.g. *Trending \> Enabl
 > [!NOTE]
 > Menu options that can only be used after selecting one single item will be unavailable after selecting multiple items.
 
-#### Display editor: Enhanced behavior when multiple parameters were placed at the same location \[ID_17848\]
+#### Display editor: Enhanced behavior when multiple parameters were placed at the same location \[ID 17848\]
 
 Up to now, in the Display editor, when you placed two parameters at the same location, a warning would appear when those parameters were not a valid read/write pair.
 
 From now on, when you place two parameters at the same location, a red box will be drawn around those parameters, and a warning icon will appear next to the page. You can then drag one of the parameters to another location to resolve the problem.
 
-#### DIS tree: Enhanced visualization of parameter groups \[ID_17908\]
+#### DIS tree: Enhanced visualization of parameter groups \[ID 17908\]
 
 In the DIS tree, the visualization of the Protocol.ParameterGroups tag and all its subtags has been improved.
 
@@ -34,7 +34,7 @@ In the DIS tree, the visualization of the Protocol.ParameterGroups tag and all i
 | Protocol.ParameterGroups.Group.Params       | Amount of parameters in the group |
 | Protocol.ParameterGroups.Group.Params.Param | id                                |
 
-#### DIS settings are now stored per Visual Studio instance \[ID_18256\]
+#### DIS settings are now stored per Visual Studio instance \[ID 18256\]
 
 As from Visual Studio 2017, it is possible to install multiple Visual Studio instances next to each other (Professional, Community, Enterprise), each with its own settings, extensions, modules, etc.
 
@@ -44,25 +44,25 @@ If no settings file exists yet for a particular instance, then DIS will first tr
 
 ### XML Schema
 
-#### New attribute added to schema: Protocol.SeverityBubbleUp@statePid \[ID_17950\]
+#### New attribute added to schema: Protocol.SeverityBubbleUp@statePid \[ID 17950\]
 
 The following attribute has been added to the protocol schema:
 
 - Protocol.SeverityBubbleUp@statePid
 
-#### New attribute added to schema: Protocol.Params.Param.Database.ColumnDefinition@default \[ID_17952\]
+#### New attribute added to schema: Protocol.Params.Param.Database.ColumnDefinition@default \[ID 17952\]
 
 The following attribute has been added to the protocol schema:
 
 - Protocol.Params.Param.Database.ColumnDefinition@default
 
-#### New tag added to schema: Protocol.Params.Param.ArrayOptions.ColumnOptions \[ID_17953\]
+#### New tag added to schema: Protocol.Params.Param.ArrayOptions.ColumnOptions \[ID 17953\]
 
 The following tag has been added to the protocol schema:
 
 - Protocol.Params.Param.ArrayOptions.ColumnOptions
 
-#### New tag added to schema: Protocol.Ownership \[ID_17955\]
+#### New tag added to schema: Protocol.Ownership \[ID 17955\]
 
 The following tag has been added to the protocol schema:
 
@@ -72,26 +72,26 @@ The following tag has been added to the protocol schema:
 
 ### Enhancements
 
-#### IDE: Enhanced performance during DIS startup \[ID_17769\]
+#### IDE: Enhanced performance during DIS startup \[ID 17769\]
 
 Due to a number of enhancements, overall performance has increased during DIS startup.
 
-#### Validator: Enhanced attribute checks \[ID_17853\]
+#### Validator: Enhanced attribute checks \[ID 17853\]
 
 A number of enhancements have been made with regard to attribute checks.
 
-#### Validator: List of restricted parameter names has been updated \[ID_17906\]
+#### Validator: List of restricted parameter names has been updated \[ID 17906\]
 
 The list of restricted parameter names has been updated.
 
-#### Validator: Enhanced behavior in case of non-existing trending attribute \[ID_17912\]
+#### Validator: Enhanced behavior in case of non-existing trending attribute \[ID 17912\]
 
 From now on, when a \<Param> tag does not contain a *trending* attribute, the Validator will act as follows:
 
 - If the parameter is of type “read”, the Validator will consider the value of the *trending* attribute to be equal to the value of the *RTDisplay* tag.
 - If the parameter is of type “write”, the Validator will consider the value of the *trending* attribute to be false.
 
-#### Protocol schema: Updated attribute rules \[ID_17945\]
+#### Protocol schema: Updated attribute rules \[ID 17945\]
 
 The following attribute now has to contain a non-empty string when present:
 
@@ -128,7 +128,7 @@ The following attributes are now required attributes:
 - Protocol.TreeControls.TreeControl@parameterId
 - Protocol.TreeControls.TreeControl.Hierarchy.Table@id
 
-#### Protocol schema: A number of ids can no longer start with a zero \[ID_17946\]
+#### Protocol schema: A number of ids can no longer start with a zero \[ID 17946\]
 
 The following ids can no longer start with a zero:
 
@@ -143,24 +143,24 @@ The following ids can no longer start with a zero:
 - Protocol.Timers.Timer@id
 - Protocol.Triggers.Trigger@id
 
-#### Protocol schema: SlowTime tag removed \[ID_17948\]
+#### Protocol schema: SlowTime tag removed \[ID 17948\]
 
 The following tag has been removed from the protocol schema:
 
 - Protocol.Timers.Timer.SlowTime
 
-#### Protocol schema: Trigger.On ‘element’ and Trigger.Time ‘after create’ removed \[ID_17949\]
+#### Protocol schema: Trigger.On ‘element’ and Trigger.Time ‘after create’ removed \[ID 17949\]
 
 The following values have been removed from the protocol schema:
 
 - The “element” value has been removed from the EnumTriggerOn list (which lists the values that can be used in the Protocol.Triggers.Trigger.On tag).
 - The “after create” value has been removed from the EnumTriggerTime list (which lists the values that can be used in the Protocol.Triggers.Trigger.Time tag).
 
-#### Protocol schema: Protocol.IntegrationID tag now has to contain 'DMS-DRV-XXXX' \[ID_17951\]
+#### Protocol schema: Protocol.IntegrationID tag now has to contain 'DMS-DRV-XXXX' \[ID 17951\]
 
 The Protocol.IntegrationID tag now has to contain “DMS-DRV-XXXX” (XXXX being a number).
 
-#### Protocol schema: Icon tag enhancements \[ID_17954\]
+#### Protocol schema: Icon tag enhancements \[ID 17954\]
 
 The Protocol.Icon tag is now of type “TypeNonEmptyString”.
 
@@ -168,10 +168,10 @@ Also, the Protocol.Params.Param.Icon@ref attribute is no longer required.
 
 ### Fixes
 
-#### IDE: Problem with snippets after updating or reinstalling DIS \[ID_17754\]
+#### IDE: Problem with snippets after updating or reinstalling DIS \[ID 17754\]
 
 After updating or reinstalling DIS, in some cases, it would no longer be possible to select a DIS snippet. This problem has now been fixed.
 
-#### Validator: Incorrect warning could appear when a \<Param> tag contained a dependencyId attribute \[ID_17907\]
+#### Validator: Incorrect warning could appear when a \<Param> tag contained a dependencyId attribute \[ID 17907\]
 
 When a \<Param> tag contained a *dependencyId* attribute, in some cases, an incorrect warning could appear. This problem has now been fixed.

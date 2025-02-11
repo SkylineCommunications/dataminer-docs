@@ -189,6 +189,7 @@ uid: WS_Methods_v1_overview
 | [GetDataMinerAgentAlarmColors](xref:GetDataMinerAgentAlarmColors) | Retrieves the colors for the different alarms on the DataMiner Agent. |
 | [GetDataMinerAgentTime](xref:GetDataMinerAgentTime) | Retrieves the current time of the DataMiner Agent. |
 | [GetDataMinerAgentTimeUTC](xref:GetDataMinerAgentTimeUTC) | Retrieves the current time of the DataMiner Agent (in UTC format). |
+| [GetDataMinerAgentTimeZone](xref:GetDataMinerAgentTimeZone) | Retrieves the current time zone of the DataMiner Agent. |
 | [GetDataMinerAgentsInfo](xref:GetDataMinerAgentsInfo) | Retrieves the list of the DMAs in the DMS. |
 | [GetDataMinerAgentsLicenseInfo](xref:GetDataMinerAgentsLicenseInfo) | Retrieves license info about all the DMAs in the DMS. |
 | [GetDataMinerAgentsStatistics](xref:GetDataMinerAgentsStatistics) | Retrieves statistics for every DMA in the DMS. |

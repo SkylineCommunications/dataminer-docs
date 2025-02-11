@@ -8,23 +8,26 @@ uid: General_Main_Release_10.3.0_CU3
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.3.0 CU3](xref:Cube_Main_Release_10.3.0_CU3).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.3.0 CU3](xref:Web_apps_Main_Release_10.3.0_CU3).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 
-#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
+#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID 35363]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
 
 During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
-#### DataMiner Object Models: Enhanced performance when reading DOM objects and ModuleSettings [ID_35934]
+#### DataMiner Object Models: Enhanced performance when reading DOM objects and ModuleSettings [ID 35934]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 Because of a number of enhancements, overall performance has increased when reading DOM objects and ModuleSettings.
 
-#### Improved error handling when elements go into an error state [ID_35944] [ID_36198]
+#### Improved error handling when elements go into an error state [ID 35944] [ID 36198]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -38,13 +41,13 @@ The following issues have also been fixed:
 
 - When a DVE parent element was started, the method that has to make sure that ElementInfo and ElementData are in sync would incorrectly not check all child elements.
 
-#### SLLogCollector now also collects SyncInfo files [ID_35995]
+#### SLLogCollector now also collects SyncInfo files [ID 35995]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 SLLogCollector packages will now also include all files found in `C:\Skyline DataMiner\Files\SyncInfo` relevant for troubleshooting.
 
-#### Service & Resource Management: An error will now be thrown when an SRM event has been stuck for more than 15 minutes [ID_36013]
+#### Service & Resource Management: An error will now be thrown when an SRM event has been stuck for more than 15 minutes [ID 36013]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -61,7 +64,7 @@ This error will also be added to the *SLWatchDog2.txt* log file.
 > - This run-time error will appear when a custom booking event script that was configured to run synchronously has been running for more than 15 minutes. We highly recommend configuring custom booking events to run asynchronously. For more information, see [Service Orchestration custom events configuration](xref:Service_Orchestration_custom_events).
 > - Half-open run-time errors (which are thrown after an SRM event has been stuck for more than 7.5 minutes) will also be added to the *SLWatchDog2.txt* log file.
 
-#### DataMiner upgrades and downgrades can now be performed over gRPC [ID_36023]
+#### DataMiner upgrades and downgrades can now be performed over gRPC [ID 36023]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -84,19 +87,19 @@ To make gRPC the default communication method, do the following on every DataMin
 > - *.NET Remoting* remains the default communication method for both client-server and server-server communication.
 > - Certain connectors and Automation scripts still rely on having the *.NET Remoting* port 8004 open.
 
-#### SLAnalytics: Trend data predictions displayed in trend graphs will be more accurate [ID_36038]
+#### SLAnalytics: Trend data predictions displayed in trend graphs will be more accurate [ID 36038]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 Because of a number of enhancements with regard to the detection of periodic behavior in trend data, the trend data predictions displayed in trend graphs will be more accurate.
 
-#### SLAnalytics - Trend prediction: Enhanced trend prediction verification [ID_36102]
+#### SLAnalytics - Trend prediction: Enhanced trend prediction verification [ID 36102]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 The verification of trend predictions has been enhanced.
 
-#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of behavioral changes after a gap in the trend data [ID_36186]
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of behavioral changes after a gap in the trend data [ID 36186]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -104,7 +107,7 @@ A number of enhancements have been made with regard to the automatic detection o
 
 Up to now, in some cases, level shifts and trend changes would remain unlabeled when they occurred immediately after a gap in the trend data.
 
-#### ConnectionSettings.txt: type=RemotingConnection now obsolete [ID_36196]
+#### ConnectionSettings.txt: type=RemotingConnection now obsolete [ID 36196]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -112,25 +115,25 @@ In the *ConnectionSettings.txt* file, the **type=** setting defines the default 
 
 One of its values, "RemotingConnection", is now obsolete. If you continue to use this value, we are planning to soon have DataMiner automatically switch to *GRPCConnection* when you upgrade. If you do not want to use *GRPCConnection*, use *LegacyRemotingConnection* to avoid getting automatically switched. However, note that we strongly recommend using *GRPCConnection*.
 
-#### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
+#### API Gateway module now targets Microsoft .NET 6.0 [ID 36238]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
 
-#### Element replication is now able to use gRPC [ID_36262]
+#### Element replication is now able to use gRPC [ID 36262]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 Element replication will now automatically detect the connection settings of the target DMA and will use gRPC when the connection type is set to "GPRCConnection".
 
-#### Failover on RTE now also supports DMAs that communicate using gRPC [ID_36267]
+#### Failover on RTE now also supports DMAs that communicate using gRPC [ID 36267]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 In the *MaintenanceSettings.xml* file, SLWatchDog can be configured to trigger a Failover switch when it detects a run-time error in a critical process on the active Agent of a Failover pair. From now on, this *Failover on RTE* feature will also support Agents that communicate using gRPC.
 
-#### SLNetClientTest tool now supports gRPC when it needs to establish additional connections [ID_36279]
+#### SLNetClientTest tool now supports gRPC when it needs to establish additional connections [ID 36279]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -141,39 +144,39 @@ The *SLNetClientTest* tool now supports gRPC when it needs to establish addition
 
 ### Fixes
 
-#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
+#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID 31923]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU3] - FR 10.3.3 -->
 
-At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
+At startup, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
 
-From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
+From now on, at startup, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
-#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
+#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID 35699]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.4 -->
 
 When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
 
-#### DataMiner Agent was not able to connect to the Cassandra database due to a problem with the TLS certificate [ID_35895]
+#### DataMiner Agent was not able to connect to the Cassandra database due to a problem with the TLS certificate [ID 35895]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When a DataMiner Agent was restarted after its database had been configured to use TLS, in some cases, it would not be able to connect to its Cassandra database due to a problem with the TLS certificate validation.
 
-#### Updating a Resource or ResourcePool would incorrectly cause the 'CreatedAt' and 'CreatedBy' fields to be overwritten [ID_35913]
+#### Updating a Resource or ResourcePool would incorrectly cause the 'CreatedAt' and 'CreatedBy' fields to be overwritten [ID 35913]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When a Resource or ResourcePool was updated, the *CreatedAt* and *CreatedBy* fields would incorrectly be overwritten.
 
-#### Problem after offloading element data to Elasticsearch [ID_35962]
+#### Problem after offloading element data to Elasticsearch [ID 35962]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When element data had been offloaded to Elasticsearch via a logger table, after restarting the element, the Elasticsearch table could not be populated.
 
-#### Creating or updating a function resource while its parent element was in an error state would incorrectly be allowed [ID_35963]
+#### Creating or updating a function resource while its parent element was in an error state would incorrectly be allowed [ID 35963]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -181,37 +184,37 @@ When you created or updated a function resource while its parent element was in 
 
 From now on, when you create or update a function resource while its parent element is in an error state, an error will be thrown.
 
-#### Business Intelligence: Problem when a replicated SLA was stopped or deleted [ID_35973]
+#### Business Intelligence: Problem when a replicated SLA was stopped or deleted [ID 35973]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 In some cases, an error could occur when a replicated SLA was stopped or deleted.
 
-#### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID_36002]
+#### Cassandra: Cleared alarms would incorrectly be added to the activealarms table and never removed [ID 36002]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 Cleared alarms would incorrectly be added to the activealarms table and never removed.
 
-#### Spectrum analysis: Measurement points would not be set correctly [ID_36005]
+#### Spectrum analysis: Measurement points would not be set correctly [ID 36005]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 In some cases, measurement points would not be set correctly when a trace was being displayed.
 
-#### Virtual functions linked to a parameter with a hysteresis timer could be assigned an incorrect alarm severity [ID_36024]
+#### Virtual functions linked to a parameter with a hysteresis timer could be assigned an incorrect alarm severity [ID 36024]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 When a virtual function was linked to a parameter that had a hysteresis timer running, in some cases, that virtual function would be assigned an incorrect alarm severity.
 
-#### NT Notify type NT_GET_BITRATE_DELTA would return incorrect values [ID_36025]
+#### NT Notify type NT_GET_BITRATE_DELTA would return incorrect values [ID 36025]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 In some cases, NT Notify type NT_GET_BITRATE_DELTA (269) would return incorrect bitrate counter values when an SNMPv3 element was going into or coming out of a timeout state.
 
-#### SLReset.exe would not clean an Elasticsearch database when no <DB> element was specified in DB.xml [ID_36040]
+#### SLReset.exe would not clean an Elasticsearch database when no <DB> element was specified in DB.xml [ID 36040]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -219,19 +222,19 @@ When, in the *DB.xml* file, no `<DB>` element was specified for an Elasticsearch
 
 From now on, when no `<DB>` element is specified for a Elasticsearch database, *SLReset.exe* will use the default database name "dms".
 
-#### Memory leak in SLSPIHost [ID_36041]
+#### Memory leak in SLSPIHost [ID 36041]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 In some cases, the SLSpiHost process could leak memory.
 
-#### SLAnalytics - Behavioral anomaly detection: No flatline stop events would be generated when an element was deleted [ID_36050]
+#### SLAnalytics - Behavioral anomaly detection: No flatline stop events would be generated when an element was deleted [ID 36050]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When an element was deleted, no flatline stop events would be generated for parameters of that element.
 
-#### Business Intelligence: Alarms that had to be replayed would incorrectly have their weight recalculated [ID_36051]
+#### Business Intelligence: Alarms that had to be replayed would incorrectly have their weight recalculated [ID 36051]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
@@ -242,43 +245,43 @@ Up to now, when an alarm was fetched from a logger table in order to be replayed
 > [!NOTE]
 > When you change an SLA's violation settings, offline windows, etc., we recommend resetting that SLA as the alarm weights of previously processed alarms will not be recalculated retroactively.
 
-#### New SLScripting processes would incorrectly be created when using 'SeparateProcesses' [ID_36133]
+#### New SLScripting processes would incorrectly be created when using 'SeparateProcesses' [ID 36133]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When the *DataMiner.xml* file contained `<ProcessOptions protocolProcesses="5" scriptingProcesses="protocol">` either in combination with `<SeparateProcesses>` or with `<RunInSeparateInstance>true</RunInSeparateInstance>` specified in the *protocol.xml* file, every time an element of a separate protocol restarted, a new SLScripting process would be created and the previous SLScripting process would not be stopped.
 
-#### Errors would incorrectly state that OpenSearch 2.4 and 2.5 were not supported [ID_36137]
+#### Errors would incorrectly state that OpenSearch 2.4 and 2.5 were not supported [ID 36137]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, errors stating that OpenSearch 2.4 and 2.5 were not officially supported would incorrectly be added to the *SLDBConnection.txt* and *SLSearch.txt* log files.
 
-#### Problem with BPA test 'Cassandra DB Size' [ID_36138]
+#### Problem with BPA test 'Cassandra DB Size' [ID 36138]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 Up to now, the BPA test *Cassandra DB size* would spawn a number of cmd processes meant to be executed by the Cassandra nodetool utility without checking whether nodetool was running. When nodetool was not running, these cmd processes would not get cleaned up.
 
-#### DataMiner Backup: Low-code apps would incorrectly not be restored [ID_36139]
+#### DataMiner Backup: Low-code apps would incorrectly not be restored [ID 36139]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When you restored a DataMiner backup that included low-code apps, those apps would incorrectly not be restored.
 
-#### Problem when multiple clients had subscribed to a cell of a partial table [ID_36148]
+#### Problem when multiple clients had subscribed to a cell of a partial table [ID 36148]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 When multiple clients had subscribed to a cell of a partial table, in some cases, deleting the row or renaming the row via a display key would not trigger a deletion of the cell in the subscription.
 
-#### Problem when retrieving alarm events from Cassandra Cluster after an element restart [ID_36177]
+#### Problem when retrieving alarm events from Cassandra Cluster after an element restart [ID 36177]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
 
 When an element that had more than 10,000 alarm events stored on a Cassandra cluster was restarted, those alarm events would not all get retrieved from the database. As a result, SLElement would generate additional alarm events, causing the alarm trees to become incorrect.
 
-#### Inaccessible logger table data in Elasticsearch because of incorrect casing [ID_36343]
+#### Inaccessible logger table data in Elasticsearch because of incorrect casing [ID 36343]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
 

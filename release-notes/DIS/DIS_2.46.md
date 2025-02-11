@@ -8,7 +8,7 @@ uid: DIS_2.46
 
 ### IDE
 
-#### Set Param From: Parameter update locations [ID_37831]
+#### Set Param From: Parameter update locations [ID 37831]
 
 When you right-click a parameter, you can now find a new option in the context menu: *Parameter Update Locations*
 
@@ -23,15 +23,15 @@ Currently implemented:
 
 When you double-clicking on an item, you will be directed to the location of that item. You can also use the context menu to navigate and close the window at the same time.
 
-#### Open Driver Help [ID_37964]
+#### Open Driver Help [ID 37964]
 
 When you open a protocol XML file, the *DIS menu* will now include an *Administration* submenu, containing the *Open Driver Help* command. Selecting that command will open the default web browser and go to the connector help page on [DataMiner Connector Documentation](https://docs.dataminer.services/connector/index.html).
 
-If no matching page can be found, you will be directed to a page explaining [how to add a new connector documentation page](xref:Connector_help_pages#adding-a-new-connector-documentation-page).
+If no matching page can be found, you will be directed to a page explaining [how to add new connector documentation pages](xref:Connector_help_pages#adding-new-connector-documentation-pages).
 
 ### Validator
 
-#### New checks and error messages [ID_37367]
+#### New checks and error messages [ID 37367]
 
 The following checks and error messages have been added.
 
@@ -44,7 +44,7 @@ The *InvalidConnectionName* check (1.23.2) has been extended to expect *SSH Conn
 
 ### Snippets
 
-#### New snippet: Interactive Toolkit [ID_37932]
+#### New snippet: Interactive Toolkit [ID 37932]
 
 A new snippet has been added that jump-starts the creation of interactive Automation scripts with the [IAS Toolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit).
 
@@ -57,7 +57,7 @@ It replaces the existing script class with a new one that contains boiler plate 
 
 ### Fixes
 
-#### Table editor: Selected rows would not be visualized property [ID_37728]
+#### Table editor: Selected rows would not be visualized property [ID 37728]
 
 In the Table Editor, selected rows would not be visualized properly, especially for *All Columns* and *All Displayed Columns*.
 

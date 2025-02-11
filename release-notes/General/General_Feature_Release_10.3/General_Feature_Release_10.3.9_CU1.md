@@ -18,7 +18,7 @@ uid: General_Feature_Release_10.3.9_CU1
 
 ### Fixes
 
-#### NATS configuration inconsistent in Failover setup after reconfiguring NATS [ID_37023]
+#### NATS configuration inconsistent in Failover setup after reconfiguring NATS [ID 37023]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 [CU1] -->
 
@@ -26,7 +26,7 @@ Up to now, the offline DMA in a Failover pair built its NATS configuration by fe
 
 This will now be prevented. The offline DMA will now collect all nodes locally when setting up its NATS configuration instead of fetching them from the online DMA.
 
-#### Cassandra backups would no longer work [ID_37217]
+#### Cassandra backups would no longer work [ID 37217]
 
 <!-- MR 10.4.0 - FR 10.3.9 [CU1] -->
 <!-- Not added to MR 10.4.0 -->

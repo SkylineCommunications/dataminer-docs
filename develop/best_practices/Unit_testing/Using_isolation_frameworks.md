@@ -4,7 +4,7 @@ uid: Using_isolation_frameworks
 
 # Using isolation frameworks
 
-The `SLProtocol` interface is heavily used in protocols as it acts as the interface between *SLScripting* (the process executing QActions) and *SLProtocol* (the process executing the protocol logic).
+The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface is heavily used in protocols as it acts as the interface between *SLScripting* (the process executing QActions) and *SLProtocol* (the process executing the protocol logic).
 
 Therefore, it is very likely you will end up in a situation where you want to test a method that has a dependency on the `SLProtocol` interface. Below, you can learn how to fake `SLProtocol` so you can easily create unit tests that have a dependency on this interface.
 
@@ -19,21 +19,26 @@ public string Rewrite(SLProtocol protocol, string path)
     {
         throw new ArgumentNullException(nameof(path));
     }
+
     if(String.IsNullOrWhiteSpace(path))
     {
         throw new ArgumentException("Path is empty or white space.", nameof(path));
     }
+
     string[] pathParts = path.Split('\\');
     string[] abbreviatedPath = new string[pathParts.Length];
+
     for (int i = 0; i < pathParts.Length; i++)
     {
         string part = pathParts[i];
+
         if (part == "Generic")
         {
             abbreviatedPath[i] = "SLCGeneric";
             protocol.Log("QA" + protocol.QActionID + "|Rewrite|Path '" + path + "' must not contain 'Generic'. Auto-adjusting to 'SLCGeneric'.", LogType.Error, LogLevel.NoLogging);
             continue;
         }
+
         if (itemsToAbbreviate.Contains(part))
         {
             abbreviatedPath[i] = Convert.ToString(part[0]);
@@ -43,11 +48,12 @@ public string Rewrite(SLProtocol protocol, string path)
             abbreviatedPath[i] = part;
         }
     }
+
     return String.Join(@"\", abbreviatedPath);
 }
 ```
 
-This method is very similar to the method shown in [Creating unit tests using the MSTestv2 framework in Visual Studio](xref:Unit_tests_MSTestv2_framework). However, note that the method now has an additional parameter of type *SLProtocol*.
+This method is very similar to the method shown in [Creating unit tests using the MSTestv2 framework in Visual Studio](xref:Unit_tests_MSTestv2_framework). However, note that the method now has an additional parameter of type `SLProtocol`.
 
 Suppose you now want to create a unit test for this method. When calling the `Rewrite` method in the *Act* step of your test method, you should pass along something that implements *SLProtocol*.
 
@@ -81,7 +87,7 @@ In this example, the object implementing the `SLProtocol` interface is used as a
 
 In some tests, you may want to verify or assert something on the fake object (e.g. whether a specific method was called). Whenever this is the case, your fake is referred to as a mock.
 
-For example, suppose you want to create an additional unit test to ensure that the `Log` method gets called whenever "Generic" is part of the specified path. This can be done as follows:
+For example, suppose you want to create an additional unit test to ensure that the [Log](xref:Skyline.DataMiner.Scripting.SLProtocol.Log(System.String,Skyline.DataMiner.Scripting.LogType,Skyline.DataMiner.Scripting.LogLevel)) method gets called whenever "Generic" is part of the specified path. This can be done as follows:
 
 ```csharp
 [TestMethod()]
@@ -94,7 +100,7 @@ public void AbbreviatePath_PathContainingGeneric_CallsLogMethod()
     // Act
     pathRewriter.Rewrite(slProtocolMock.Object, path);
     // Assert
-    slProtocolMock.Verify(p => p.Log(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string>()));
+    slProtocolMock.Verify(p => p.Log(It.IsAny<string>(), It.IsAny<LogType>(), It.IsAny<LogLevel>()));
 }
 ```
 
@@ -109,23 +115,17 @@ public void AbbreviatePath_PathContainingGeneric_CallsLogMethod()
     string path = @"Visios\Customers\Generic";
     var slProtocolMock = new Mock<SLProtocol>();
     slProtocolMock.Setup(p => p.QActionID).Returns(10);
-    string expectedMessage = "QA10|AbbreviatePath|Path must not contain 'Generic'. Auto-adjusting to 'SLCGeneric'.";
+    string expectedMessage = $"QA10|Rewrite|Path '{path}' must not contain 'Generic'. Auto-adjusting to 'SLCGeneric'.";
     // Act
     pathRewriter.Rewrite(slProtocolMock.Object, path);
     // Assert
-    slProtocolMock.Verify(p => p.Log(It.IsAny<int>(), It.IsAny<int>(), expectedMessage));
+    slProtocolMock.Verify(p => p.Log(expectedMessage, It.IsAny<LogType>(), It.IsAny<LogLevel>()));
 }
 ```
 
 Note the use of the `Setup` method on the mock object. This allows you to specify what should be returned when the QActionID property is called.
 
 The use of isolation frameworks like Moq allows you to easily create stubs and mocks. It allows you to perform advanced assertions on the mock objects such as verifying the number of times a method got invoked, etc.
-
-Note that you may have noticed something unusual in this example: In the `Rewrite` method, we invoke the following overload of the `Log` method: `Log(string, LogType, LogLevel)`. However, the verify call in the *Assert* step looks for an invocation of the following overload of `Log`: `Log(int, int, string)`.
-
-This is because currently the `Log(string, LogType,  LogLevel)` method is defined as an extension method. Even though this extension method extends the `SLProtocol` interface, it is not part of the interface. However, this method just calls the `Log(int, int, string)` method internally (which is defined as part of the `SLProtocol` interface). Therefore, we can verify whether the `Log(string, LogType, LogLevel)` method was called by checking whether the `Log(int, int, string)` method was called.
-
-Currently, several extension methods on the `SLProtocol` interface are defined. For more information about these methods, see [NotifyProtocol class](xref:Skyline.DataMiner.Scripting.NotifyProtocol) and [ProtocolExtenders class](xref:Skyline.DataMiner.Scripting.ProtocolExtenders).
 
 ## Useful links
 

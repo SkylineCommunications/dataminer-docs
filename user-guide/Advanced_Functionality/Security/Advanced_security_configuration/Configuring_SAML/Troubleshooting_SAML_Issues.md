@@ -182,3 +182,8 @@ AADSTS650056: Misconfigured application. This could be due to one of the followi
 AADSTS700016: Application with identifier '\<ID>' was not found in the directory '\<ID>'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.
 
 - Cause: Entity ID incorrect or not found.
+
+Certificate from identity provider has been revoked.
+
+- Application: Cube
+- Cause: On the linked enterprise application on Azure, the SAML certificate is expired.

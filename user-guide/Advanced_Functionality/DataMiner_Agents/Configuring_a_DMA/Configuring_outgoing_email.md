@@ -7,13 +7,7 @@ uid: Configuring_outgoing_email
 A DMS can be configured to send out email notifications and reports via an SMTP server.
 
 > [!NOTE]
-> For this feature, this product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (<http://www.openssl.org/>).
->
-> - From DataMiner 8.5.5 up to DataMiner 9.5.12, OpenSSL library version v1.0.2a is used.
-> - From DataMiner 9.5.13 onwards, OpenSSL library version v1.0.2m is used.
-> - From DataMiner 9.6.1 onwards, OpenSSL library version v1.1.0h is used.
-> - From DataMiner 9.6.8 onwards, OpenSSL library version v1.1.0j is used.
-> - From DataMiner 9.6.11 onwards, OpenSSL library version v1.1.1c is used.
+> For this feature, this product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (<http://www.openssl.org/>). In recent DataMiner versions, OpenSSL library version v1.1.1c is used.
 
 > [!TIP]
 > See also: [Agents – configuring an email server](https://community.dataminer.services/video/agents-configuring-an-email-server/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

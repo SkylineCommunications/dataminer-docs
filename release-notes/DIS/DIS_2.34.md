@@ -8,7 +8,7 @@ uid: DIS_2.34
 
 ### IDE
 
-#### DIS Comparer tool window now allows you to download a previous release of a selected protocol and compare both \[ID_30088\]
+#### DIS Comparer tool window now allows you to download a previous release of a selected protocol and compare both \[ID 30088\]
 
 Up to now, when you wanted to compare a protocol to one of its previous versions, you first had to download that previous version, save it in a random folder and then select both in the *DIS Comparer* tool window. From now on, after having selected a protocol on one side of the *DIS Comparer* window, on the other side of the window you can now immediately select one of its previous versions to compare it to.
 
@@ -21,7 +21,7 @@ To select a previous version of a protocol you already opened in the DIS Compare
 > [!NOTE]
 > For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to `https://api.skyline.be/`.
 
-#### Enhancements that make using the class library in a serialization/deserialization context more convenient \[ID_30205\]
+#### Enhancements that make using the class library in a serialization/deserialization context more convenient \[ID 30205\]
 
 The following enhancements will make using the class library in a serialization/deserialization context more convenient:
 
@@ -31,11 +31,11 @@ The following enhancements will make using the class library in a serialization/
 
 - The generated code will now contain all fields and properties of classes, unless they are private, even when those fields and properties are not being used.
 
-#### DIS Validator: Selecting multiple items in the result list \[ID_30492\]
+#### DIS Validator: Selecting multiple items in the result list \[ID 30492\]
 
 It is now possible to select multiple items in the result list of the *DIS Validator* tool window.
 
-To select more than one item, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the SHIFT key.
+To select more than one item, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the Shift key.
 
 Use this to do the following:
 
@@ -49,7 +49,7 @@ Use this to do the following:
 
 ### Validator
 
-#### New checks and error messages \[ID_24390\] \[ID_29543\] \[ID_30739\] \[ID_30740\] \[ID_30741\] \[ID_30742\] \[ID_30795\]
+#### New checks and error messages \[ID 24390\] \[ID 29543\] \[ID 30739\] \[ID 30740\] \[ID 30741\] \[ID 30742\] \[ID 30795\]
 
 The following checks and error messages have been added.
 
@@ -103,7 +103,7 @@ The following checks and error messages have been added.
 | 13.2.5   | MissingForeignKeyForRelation                                      | Missing foreignKey(s) detected for relation '{relationNameOrPath}'.                                                                                                        |
 | 13.2.6   | MissingForeignKeyInTable_Sub                                      | Missing foreignKey between table '{table1Pid}' and table '{table2Pid}'.                                                                                                    |
 
-#### DataMiner feature check \[ID_29542\]
+#### DataMiner feature check \[ID 29542\]
 
 The Validator will now also check whether the DataMiner version specified in the Protocol.Compliancies.MinimumRequiredVersion element supports all features used in the protocol.
 
@@ -140,21 +140,21 @@ Currently, the following features will be checked:
 
 ### XML Schema
 
-#### Protocol Schema: Protocol.Params.Param.Alarm@lowhigh attribute removed \[ID_30664\]
+#### Protocol Schema: Protocol.Params.Param.Alarm@lowhigh attribute removed \[ID 30664\]
 
 The Protocol.Params.Param.Alarm@lowhigh attribute has been removed from the Protocol XML Schema.
 
-#### Protocol Schema: Protocol.Chains.Chain.Field.Display element is no longer a mandatory element \[ID_30665\]
+#### Protocol Schema: Protocol.Chains.Chain.Field.Display element is no longer a mandatory element \[ID 30665\]
 
 From now on, the Protocol.Chains.Chain.Field.Display element is no longer is mandatory child element of the Protocol.Chains.Chain.Field element.
 
-#### Protocol Schema: New Protocol.Actions.Action.Type@regex attribute \[ID_30666\]
+#### Protocol Schema: New Protocol.Actions.Action.Type@regex attribute \[ID 30666\]
 
 The Protocol.Actions.Action.Type@regex attribute has been added to the Protocol XML Schema.
 
 ### Class Library
 
-#### Extended authentication algorithm support \[ID_30232\]
+#### Extended authentication algorithm support \[ID 30232\]
 
 The class library now supports the following authentication algorithms:
 
@@ -167,13 +167,13 @@ The class library now supports the following authentication algorithms:
 
 ### Enhancements
 
-#### Validator: Enhanced parsing of method arguments \[ID_31009\]
+#### Validator: Enhanced parsing of method arguments \[ID 31009\]
 
 A number of enhancements have been made with regard to the parsing of method arguments.
 
 ### Fixes
 
-#### Validator: False positives when checking title casing \[ID_30849\]
+#### Validator: False positives when checking title casing \[ID 30849\]
 
 In some cases, the title casing checks 2.13.8, 2.14.8, 2.22.7 and 2.40.7 could return false positives when checking the following image formats:
 
@@ -181,23 +181,23 @@ In some cases, the title casing checks 2.13.8, 2.14.8, 2.22.7 and 2.40.7 could r
 - 1080p/30
 - 1080psf/30
 
-#### Validator: False positives when checking Treecontrol.HiddenColumns elements \[ID_30850\]
+#### Validator: False positives when checking Treecontrol.HiddenColumns elements \[ID 30850\]
 
 When tables were added to tree controls using ExtraDetails@detailsTableId arguments that referred to parameter IDs of foreign key columns, in some cases, the Validator could return false positives when checking TreeControl.HiddenColumns elements.
 
-#### DIS Comparer: False positives when the casing of Param.Measurement.Discreets.Discreet.Value elements had changed \[ID_30859\]
+#### DIS Comparer: False positives when the casing of Param.Measurement.Discreets.Discreet.Value elements had changed \[ID 30859\]
 
 When checking Param.Measurement.Discreets.Discreet.Value elements, in some cases, the DIS Comparer could return false positives when the casing of the values had changed.
 
-#### DIS Comparer: False positives when values in the protocol had been trimmed by the user \[ID_30876\]
+#### DIS Comparer: False positives when values in the protocol had been trimmed by the user \[ID 30876\]
 
 In some cases, the DIS Comparer could return false positives when values in the protocol had been trimmed by the user.
 
-#### DIS Comparer: Automatic page button caption fixes would incorrectly be flagged as breaking changes \[ID_30886\]
+#### DIS Comparer: Automatic page button caption fixes would incorrectly be flagged as breaking changes \[ID 30886\]
 
 When the DIS Comparer finds a page button caption that does not end with an ellipsis (“...”), it proposes an automatic non-breaking fix. However, in some cases, those fixes could incorrectly be flagged as breaking changes.
 
-#### DIS Comparer: Some parameter description updates would incorrectly be considered as major changes \[ID_30894\]
+#### DIS Comparer: Some parameter description updates would incorrectly be considered as major changes \[ID 30894\]
 
 Typically, the DIS Comparer will consider parameter description updates as major changes. However, in the following exceptional cases, updating the parameter description is allowed. Up to now, the DIS Comparer would incorrectly also consider these updates as major changes:
 

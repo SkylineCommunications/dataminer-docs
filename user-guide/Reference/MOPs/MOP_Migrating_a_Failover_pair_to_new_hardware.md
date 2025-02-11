@@ -2,9 +2,9 @@
 uid: MOP_Migrating_a_Failover_pair_to_new_hardware
 ---
 
-# Migrating a Failover pair to new hardware
+# Migrating a Failover pair to new hardware in an existing cluster
 
-The procedure below details how you can migrate a pair of Failover DMAs to new hardware. After the procedure, both DMAs should be running just like before, but on new servers.
+The procedure below details how you can migrate a pair of Failover DMAs to new hardware in an existing cluster consisting of multiple Agents. After the procedure, both DMAs should be running just like before, but on new servers.
 
 ## Requirements
 
@@ -60,18 +60,34 @@ Access to the DMAs with administrator rights. This requires a connection dedicat
 #### Steps
 
 1. Take screenshots of the root view elements list on the old primary DMA to see the element state of each element.
+
 1. Remove the old Failover pair from the cluster and shut down the servers.
-1. Replace the IPs in the new Failover pair with those of the old pair.
-1. Add the same cluster name to the new DMAs as the old production cluster name.
+
+   See [Removing a DataMiner Agent from a DataMiner System](xref:Removing_a_DataMiner_Agent_from_a_DataMiner_System).
+
+1. Optionally, replace the IPs in the new Failover pair with those of the old pair.
+
 1. Load the backup package from the old primary DMA onto the new primary DMA.
+
+   See [Restoring a DMA using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
+
 1. Confirm that the new DMA and elements are running fine.
-1. Check with the screenshots of the root view element list that you took in the first step to ensure the elements in the new pair are in the same element states.
-1. Configure the Failover setup with the same virtual IP as before.
-1. Check if synchronization is happening correctly, by checking the *Protocols* and *Elements* folders, as well as the XML files.
-1. Test the Failover setup by switching back and forth between the online and offline DMAs, and checking if both DMAs are visually the same.
-1. Add the virtual IP of the Failover pair to the production cluster.
-1. Check if the other DMAs in the cluster can see the new Failover pair and the Surveyor structure remains the same.
+
+1. Set the DMS name in the new DMA and add it to the cluster.
+
+   See [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).
+
+1. Check if the other DMAs in the cluster can see the new Agent and if the views structure in the Surveyor remains the same.
+
 1. If you see issues with the Surveyor structure, replace the *Views.xml* files with the copies you made earlier and restart the DMAs.
+
+1. Check with the screenshots of the root view element list that you took in the first step to ensure the elements in the new pair are in the same element states.
+
+1. Configure Failover on the new Agent.
+
+   See [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
+
+1. Test the Failover setup by switching back and forth between the online and offline DMAs, and checking if both DMAs are visually the same.
 
 ## Time estimate
 

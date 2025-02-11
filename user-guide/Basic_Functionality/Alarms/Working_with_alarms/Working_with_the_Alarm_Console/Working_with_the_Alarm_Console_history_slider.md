@@ -6,6 +6,8 @@ uid: WorkingWithTheAlarmConsoleHistorySlider
 
 In the Alarm Console, you can display a timeline at the bottom of the *Active alarms* tab. To do so, click the *History slider* button in the alarm bar: ![history slider button](~/user-guide/images/History_Slider_button.png)
 
+![History slider](~/user-guide/images/History_Slider.png)<br>*The Alarm Console history slider in DataMiner 10.4.5*
+
 > [!TIP]
 > See also: [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
@@ -18,6 +20,8 @@ There are two ways to move the slider to a specific time in the past on the time
 - By dragging the slider across the timeline. The date and time where the slider is located are displayed to the right of it.
 
 - By clicking the clock icon and specifying a date and time.
+
+  ![Timestamp](~/user-guide/images/Timestamp_History_Slider.png)<br>*Specifying a timestamp in DataMiner 10.4.5*
 
 ## Advanced timeline settings
 

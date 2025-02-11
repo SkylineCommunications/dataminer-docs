@@ -74,7 +74,7 @@ items:
         items:
           - name: Read parameters versus write parameters
             topicUid: Read_parameters_versus_write_parameters
-          - name: Discrete, analog and hybrid parameters
+          - name: Discrete, analog, and hybrid parameters
             topicUid: Discrete_analog_and_hybrid_parameters
           - name: Monitored parameters versus non-monitored parameters
             topicUid: Monitored_parameters_versus_non-monitored_parameters
@@ -232,14 +232,28 @@ items:
             topicUid: Proactive_cap_detection
           - name: Automatic incident tracking
             topicUid: Automatic_incident_tracking
+            items:
+            - name: Customizing alarm grouping rules
+              topicUid: Customizing_alarm_grouping_rules
           - name: Monitoring of trend patterns
             topicUid: Monitoring_of_trend_patterns
+          - name: Relational anomaly detection
+            topicUid: Relational_anomaly_detection
+          - name: Providing user feedback
+            topicUid: Providing_user_feedback
           - name: Tutorials
             items:
             - name: Detecting anomalies with DataMiner
               topicUid: Anomaly_Tutorial
+            - name: Improving anomaly detection using feedback
+              topicUid: Anomaly_Feedback_Tutorial
+            - name: Creating an anomaly overview dashboard
+              topicUid: Creating_Anomaly_Overview_Dashboard
+            - name: Staying ahead of issues with proactive cap detection
+              topicUid: Proactive_Cap_Detection_Tutorial
+            - name: Fine-tuning incident tracking
+              topicUid: Incident_Tracking_Configuration_Tutorial
       - name: Advanced alarm functionality
-        topicUid: Advanced_alarm_functionality
         items:
           - name: Changing the default alarm colors
             topicUid: Changing_the_default_alarm_colors
@@ -283,6 +297,8 @@ items:
         items:
           - name: Working with trend predictions
             topicUid: Working_with_trend_predictions
+          - name: Working with trend icons
+            topicUid: Working_with_trend_icons
           - name: Working with behavioral anomaly detection
             topicUid: Working_with_behavioral_anomaly_detection
           - name: Working with pattern matching
@@ -296,6 +312,10 @@ items:
                 topicUid: Deleting_a_pattern_definition
               - name: Managing pattern definitions
                 topicUid: Managing_pattern_definitions
+              - name: Tutorials
+                items:
+                  - name: Using trend patterns to detect backup failures
+                    topicUid: trend_patterns_backup_failures
           - name: Working with relation learning
             topicUid: Working_with_relation_learning
             items:
@@ -303,6 +323,12 @@ items:
                 topicUid: Adding_related_parameters_to_a_trend_graph
               - name: Adding time-scoped related parameters to a trend graph
                 topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
+          - name: Tutorials
+            items:
+              - name: Gaining insights using time-scoped relation learning
+                topicUid: Time_Scoped_Relation_Learning_Tutorial
+              - name: Working with trend patterns in DataMiner Cube
+                topicUid: Pattern_Matching_Trend_Tutorial
       - name: Working with histograms
         topicUid: Viewing_trend_information_in_a_histogram
         items:
@@ -356,6 +382,10 @@ items:
             topicUid: Deleting_an_information_template
           - name: Editing the information template for one parameter
             topicUid: Editing_the_information_template_for_one_parameter
+          - name: Tutorials
+            items:
+              - name: Using information templates for enhanced parameter presentation and monitoring
+                topicUid: Information_Templates_Tutorial
       - name: Alarm templates
         items:
           - name: About alarm templates
@@ -384,7 +414,7 @@ items:
                 topicUid: Configuring_alarm_template_information_message
               - name: Using conditions in an alarm template
                 topicUid: Using_conditions_in_an_alarm_template
-              - name: Configuring anomaly detection alarms for specific parameters
+              - name: Configuring Augmented Operations alarm settings
                 topicUid: Configuring_anomaly_detection_alarms
               - name: Setting the autoclear options for alarms in an alarm template
                 topicUid: Setting_the_autoclear_option_in_alarm_template
@@ -398,6 +428,10 @@ items:
             topicUid: Alarm_template_groups
           - name: Exporting alarm template parameter data
             topicUid: Exporting_alarm_template_parameter_data
+          - name: Tutorials
+            items:
+            - name: Getting started with alarm templates
+              topicUid: Getting_started_with_alarm_templates
       - name: Trend templates
         items:
           - name: About trend templates
@@ -645,6 +679,12 @@ items:
         items:
           - name: Getting started with basic shapes
             topicUid: Getting_started_with_basic_shapes
+          - name: Embedding a connector dashboard in Visual Overview
+            topicUid: Tutorial_Embed_Connector_Dashboard_in_Visio
+          - name: Using Visual Overview to control dashboard feed components
+            topicUid: Using_visio_to_control_dashboard_feed_components
+          - name: Using Visual Overview to switch spectrum presets
+            topicUid: Using_Visual_Overview_to_switch_spectrum_presets
       - name: Miscellaneous
         topicUid: Miscellaneous
         items:

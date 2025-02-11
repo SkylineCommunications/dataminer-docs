@@ -4,7 +4,7 @@ uid: SLNetClientTest_protocol_buffer_serialization
 
 # Enabling or disabling protocol buffer serialization
 
-From DataMiner 9.5.10 onwards, it is possible to enable protocol buffer serialization, which can considerably increase overall DataMiner performance. This is enabled by default from DataMiner 9.5.14 onwards.
+It is possible to enable protocol buffer serialization, which can considerably increase overall DataMiner performance. This is enabled by default in all currently supported DataMiner versions.
 
 You can configure this as follows in the SLNetClientTest tool:
 

@@ -8,7 +8,7 @@ uid: ConnectionsSnmpProtocolInnterWorkings
 
 The illustration below shows what happens when an SNMP set request is issued by a protocol that is successfully processed by the SNMP agent of the device (i.e. the ErrorStatus field contains the value 0, indicating "noError").
 
-![alt text](../../images/DMA_-_SNMP_Device_parameter_SetRequest.svg "DataMiner Agent inner workings – altering a variable via SNMP")
+![alt text](~/develop/images/DMA_-_SNMP_Device_parameter_SetRequest.svg "DataMiner Agent inner workings – altering a variable via SNMP")
 
 When a protocol issues an SNMP set request, this request is sent to the SLSNMPManager process. This is done by a blocking call, which adds the SNMP request to a queue. The call blocks until the SNMP request has been added to the queue. This queue is a priority queue where SetRequests always receive a higher priority than GetRequests.
 
@@ -31,15 +31,15 @@ When a table enters SLProtocol, this is what happens:
 
 See the following diagram:
 
-![alt text](../../images/ProcessingTables.svg "How tables are processed internally")
+![alt text](~/develop/images/ProcessingTables.svg "How tables are processed internally")
 
 ## About SNMP tables
 
 Watch out for pitfalls when creating displayColumn for an SNMP table. When you adjust the displayColumn values using a row=true QAction triggered by the table, the values set will initially not be used.
 
-See Dynamically retrieving a value: the data from SLScripting will be overwritten when the complete table is retrieved.
+See [Dynamically retrieving a value](xref:ConnectionsSnmpDynamicallyRetrievingAVariable): the data from SLScripting will be overwritten when the complete table is retrieved.
 
-To avoid pitfalls, either follow the procedure below or use naming (“naming” option or NamingFormat).
+To avoid pitfalls, either follow the procedure below or use naming ([naming](xref:Protocol.Params.Param.ArrayOptions-options#naming) option or [NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat)).
 
 1. Use the NewRow method to set a flag (a parameter) that indicates that the values used for the displayColumn have changed. To avoid unnecessary sets, check if the flag is set before setting it. At the same time, store the keys of the changed rows in a second parameter.
 1. Following the group that retrieves the table, add a trigger with a condition tag to check the flag. When the flag is set, do a "run actions" action to force the execution of a QAction that will set the displayColumn values. Only loop through the keys of the second parameter. Clear the flag at the end of the QAction.

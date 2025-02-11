@@ -6,27 +6,21 @@ uid: DataMiner_Visio_templates
 
 On a DataMiner Agent, you can find a number of default Visio drawings. If you want to create your own default drawings, you can either make copies of the drawings supplied by Skyline and adapt those copies, or create your own default drawings from scratch.
 
-In this section:
-
-- [Overview of the default Visio templates supplied by Skyline](#overview-of-the-default-visio-templates-supplied-by-skyline)
-
-- [Creating your own Microsoft Visio templates](#creating-your-own-microsoft-visio-templates)
-
 ## Overview of the default Visio templates supplied by Skyline
 
 Every DataMiner Agent is shipped with the following default Visio files.
 
 ### C:\\Skyline DataMiner\\Views\\Templates
 
-| Type of file                               | File name(s)                                                                                                                                                                                                           |
-|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Default general-purpose drawing template   | SkylineNewDrawing.vdx<br> SkylineNewDrawing.vsdx                                                                                                                                                                       |
-| Default DataMiner stencil file             | SkylineNewDrawing.vss<br> SkylineNewDrawing.vssx                                                                                                                                                                       |
-| Stencil files containing geographical maps | United States Maps (US units).vss<br> World Maps (Metric).vss<br> World Maps (US units).vss                                                                                                                            |
-| Stencil files containing device drawings   | AppearTV DC1000.vss<br> AppearTV DC1100.vss<br> AppearTV MC3000.vss<br> AppearTV MC3100.vss<br> AppearTV SC2000.vss<br> AppearTV SC2100.vss<br> BridgeTech.vss<br> Nimbra300.vss<br> Nimbra600.vss<br> NimbraNodes.vss |
+| Type of file | File name(s) |
+|--|--|
+| Default general-purpose drawing template | SkylineNewDrawing.vdx<br> SkylineNewDrawing.vsdx |
+| Default DataMiner stencil file | SkylineNewDrawing.vss<br> SkylineNewDrawing.vssx |
+| Stencil files containing geographical maps | United States Maps (US units).vss<br> World Maps (Metric).vss<br> World Maps (US units).vss |
+| Stencil files containing device drawings | AppearTV DC1000.vss<br> AppearTV DC1100.vss<br> AppearTV MC3000.vss<br> AppearTV MC3100.vss<br> AppearTV SC2000.vss<br> AppearTV SC2100.vss<br> BridgeTech.vss<br> Nimbra300.vss<br> Nimbra600.vss<br> NimbraNodes.vss |
 
 > [!NOTE]
-> From DataMiner version 9.0 onwards, if you create a new Visual Overview, by default the .vsdx version of the template file is used.
+> When you [create a new Visio file from DataMiner Cube](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file), by default the .vsdx version of the template file is used.
 
 ### C:\\Skyline DataMiner\\Views\\Default
 
@@ -47,7 +41,7 @@ If you want to create your own set of Visio templates, you can:
 
 - create your own default drawings from scratch.
 
-Every custom Visio template must have a name identical to its Skyline-supplied counterpart, but without the “Skyline” prefix. If you create a custom template, it will overrule its “Skyline” counterpart.
+Every custom Visio template must have a name identical to its Skyline-supplied counterpart, but without the "Skyline" prefix. If you create a custom template, it will overrule its "Skyline" counterpart.
 
 | The custom template named: | will overrule the Skyline template named: |
 |----------------------------|-------------------------------------------|
@@ -58,5 +52,4 @@ Every custom Visio template must have a name identical to its Skyline-supplied c
 | DefaultService.vsdx        | SkylineDefaultService.vsdx                |
 
 > [!TIP]
-> See also:
-> [Visio – Customizing default and template drawings](https://community.dataminer.services/video/visio-customizing-default-and-template-drawings/) ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Visio – Customizing default and template drawings](https://community.dataminer.services/video/visio-customizing-default-and-template-drawings/) ![Video](~/user-guide/images/video_Duo.png)

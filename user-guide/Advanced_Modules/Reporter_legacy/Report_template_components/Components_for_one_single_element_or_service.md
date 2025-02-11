@@ -24,11 +24,9 @@ Overview of an element’s active alarms or history alarms, with the following o
 
 - It is possible to include only certain severities and alarm types.
 
-- In order to only include certain parameters, you can apply a filter.
+- In order to only include certain parameters, you can apply one of the alarm filters saved in the DMS.
 
-  Up to DataMiner 9.5.0, you can enter a filter directly, in order to filter on parameter name. Use a semicolon to combine several parameters in the filter, e.g. “Audio Output Level;CPU:SLelement.0”. For more information, see [Using quick filters](xref:Using_quick_filters).
-
-  From DataMiner 9.5.1 onwards, you can select one of the alarm filters saved in the DMS. For more information on saved alarm filters, see [Working with saved alarm filters](xref:ApplyingAlarmFiltersInTheAlarmConsole#working-with-saved-alarm-filters).
+  For more information on saved alarm filters, see [Working with saved alarm filters](xref:ApplyingAlarmFiltersInTheAlarmConsole#working-with-saved-alarm-filters).
 
 - You can choose to sort the list either by element name or by alarm time.
 
@@ -101,12 +99,19 @@ Pie graph showing the number of alarms for each alarm severity. You can choose b
 
 A parameter report with current reading and trending information for each parameter contained in the report. Each parameter will be displayed with a background color matching its alarm state.
 
-> [!NOTE]
-> Up to DataMiner 9.5.11, this component only supports element parameters, not parameters of enhanced services.
+## Bookings
 
-## Bookings / Reservations
+Requires the appropriate Service & Resource Management licenses. Allows you to select one of the following types of booking reports:
 
-Available from DataMiner 9.5.4 onwards on systems with the appropriate Service & Resource Management licenses. See [Bookings / Reservations component of custom templates](xref:Bookings_Reservations_component_of_custom_templates#bookings--reservations-component-of-custom-templates).
+- **List**: A list of bookings within a particular time span. Optionally, an extra filter and the properties that should be shown in the list can be configured.
+
+- **Details**: A list of static and variable properties
+
+- **Image**: The signal path image from a service definition
+
+- **Resources**: Affected resources
+
+- **Timeline**: timeline of alarms on the booking service during the booking time span
 
 ## SLA Historic Service Alarm List
 
@@ -136,15 +141,14 @@ The following options are available:
 
 - In order to only include certain parameters, you can filter on parameter name.
 
-    Use a semicolon to combine several parameters in the filter. For more information on using filters, see [Using quick filters](xref:Using_quick_filters).
+  Use a semicolon to combine several parameters in the filter. For more information on using filters, see [Using quick filters](xref:Using_quick_filters).
 
 - In order to keep alarms from being displayed if they have been filtered out by violation filters, select *Hide violation filtered alarms*.
 
 - In order to keep alarms from being displayed if they occur during the offline window, select *Hide alarms from the offline window without impact*. In this case, alarms that have been configured to override the offline window will still be displayed. In order to hide these as well, select *Also hide alarms from the offline window with impact*.
 
-    > [!TIP]
-    > See also:
-    > [Setting the offline window for an SLA](xref:Setting_the_offline_window_for_an_SLA)
+  > [!TIP]
+  > See also: [Setting the offline window for an SLA](xref:Setting_the_offline_window_for_an_SLA)
 
 ## Spectrum Buffers
 
@@ -193,8 +197,7 @@ Overview of parameter states of all elements using the same protocol as the curr
 - To add a pie chart for the first parameter in the status query, select *Add pie chart for first parameter*.
 
 > [!NOTE]
-> - To view parameters of multiple elements or protocols, up to DataMiner 9.5.12, add this component in an “Elements/Services container” building block, in a template type for multiple elements/services. From DataMiner 9.5.13 onwards, this component is also available in templates for multiple elements/services. See [Status Query](xref:Components_for_multiple_elements_or_services#status-query).
-> - From DataMiner 9.6.0 CU23/10.0.0 CU13/10.1.0 CU2/10.1.5 onwards, if a report containing a status query is exported to CSV/Excel, the status query result will be included as a separate CSV file or Excel table.
+> If a report containing a status query is exported to CSV/Excel, the status query result will be included as a separate CSV file or Excel table.
 
 ## Trend Graphs
 

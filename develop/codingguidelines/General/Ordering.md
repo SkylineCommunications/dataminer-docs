@@ -8,59 +8,59 @@ uid: Ordering
 
 - Elements at the file root level or within a namespace must be positioned in the following order ([SA1201](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1201)):
 
-    1. extern alias directives
+  1. extern alias directives
 
-    2. using directives
+  1. using directives
 
-    3. namespaces
+  1. namespaces
 
-    4. delegates
+  1. delegates
 
-    5. enumerations
+  1. enumerations
 
-    6. interfaces
+  1. interfaces
 
-    7. structs
+  1. structs
 
-    8. classes
+  1. classes
 
-    Within a class, struct or interface, the following positioning must be applied:
+  Within a class, struct or interface, the following positioning must be applied:
 
-    1. fields
+  1. fields
 
-    2. constructors
+  1. constructors
 
-    3. finalizers (destructors)
+  1. finalizers (destructors)
 
-    4. delegates
+  1. delegates
 
-    5. events
+  1. events
 
-    6. enumerations
+  1. enumerations
 
-    7. interfaces
+  1. interfaces
 
-    8. properties
+  1. properties
 
-    9. indexers
+  1. indexers
 
-    10. methods
+  1. methods
 
-    11. structs
+  1. structs
 
-    12. classes
+  1. classes
 
 - Elements must be ordered by accessibility ([SA1202](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1202)). Adjacent elements of the same type must adhere to the following positioning:
 
-    1. public
+  1. public
 
-    2. internal
+  1. internal
 
-    3. protected internal
+  1. protected internal
 
-    4. protected
+  1. protected
 
-    5. private
+  1. private
 
 - Constants must appear before fields ([SA1203](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1203)).
 
@@ -70,25 +70,25 @@ uid: Ordering
 
 - Declaration keywords must adhere to the following ordering scheme ([SA1206](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1206)):
 
-    1. access modifiers
+  1. access modifiers
 
-    2. static
+  1. static
 
-    3. all other keywords
+  1. all other keywords
 
 - The keyword *protected* must be positioned before the keyword *internal* when declaring a protected internal C# element ([SA1207](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1207)).
 
 - Property accessors must adhere to the following ordering scheme ([SA1212](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1212)):
 
-    1. get accessors
+  1. get accessors
 
-    2. set accessors
+  1. set accessors
 
 - Event accessors must adhere to the following ordering scheme ([SA123](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1213)):
 
-    1. add accessor
+  1. add accessor
 
-    2. remove accessor
+  1. remove accessor
 
 - Static read-only elements must appear before static non-read-only elements ([SA1214](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1214)).
 
@@ -102,8 +102,8 @@ uid: Ordering
 
 - Using alias directives must be ordered alphabetically by alias name ([SA1211](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1211)).
 
-    > [!NOTE]
-    >
-    > -  In Visual Studio, you can easily sort the using directives by positioning the cursor on a using directive in the code editor and selecting *Organize Usings* > *Sort Usings* from the context menu. In case you want to also remove unnecessary using directives, select *Organize Usings* > *Remove and Sort Usings* from the context menu.
-    > -  In order to let Visual Studio put System directives first when sorting namespaces, go to *Tools* > *Options*. In the list on the left, go to *Text Editor* > *C#* > *Advanced* and select the checkbox *Place 'System' directives first when sorting usings*.
-    > -  If "#define" preprocessor directives are used, make sure they are present and not commented out when using the above. Failing to do so can cause quick action build failures.
+  > [!NOTE]
+  >
+  > - In Visual Studio, you can easily sort the using directives by positioning the cursor on a using directive in the code editor and selecting *Organize Usings* > *Sort Usings* from the context menu. In case you want to also remove unnecessary using directives, select *Organize Usings* > *Remove and Sort Usings* from the context menu.
+  > - In order to let Visual Studio put System directives first when sorting namespaces, go to *Tools* > *Options*. In the list on the left, go to *Text Editor* > *C#* > *Advanced* and select the checkbox *Place 'System' directives first when sorting usings*.
+  > - If "#define" preprocessor directives are used, make sure they are present and not commented out when using the above. Failing to do so can cause quick action build failures.

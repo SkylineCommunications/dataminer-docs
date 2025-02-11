@@ -5,17 +5,9 @@ uid: Dashboard_URL_options
 # Dashboard URL options
 
 > [!IMPORTANT]
-> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
+> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). We recommend using the [Dashboards app](xref:newR_D) instead.
 
 When you go directly to a dashboard in a browser using a dashboard URL, you can add options to the dashboard URL to change the way the dashboard is displayed or to determine the dashboard feed. These options are simply added after the URL, and some options can also be combined.
-
-The following sections provide more information on dashboard URL options:
-
-- [UI options](#ui-options)
-
-- [Feed selection options](#feed-selection-options)
-
-- [Other options](#other-options)
 
 ## UI options
 
@@ -108,8 +100,9 @@ selection1!selection2!selection3
 When you specify only one selection without feed ID, the default feed is chosen by looking at all the feeds and selecting the first one for which client selection is required.
 
 > [!NOTE]
+>
 > - For more examples, open a dashboard and click *Feeds* > *Permanent link*.
-> - Feed IDs are GUIDs. To find a list of all feed IDs used in a particular dashboard, open the *dashboard.config* file of that dashboard, and look for IDs like the following: “\<feed id=”93098909-cda2-4f50-b936-f6ef7c0dcb97” ...>”.
+> - Feed IDs are GUIDs. To find a list of all feed IDs used in a particular dashboard, open the *dashboard.config* file of that dashboard, and look for IDs like the following: "\<feed id="93098909-cda2-4f50-b936-f6ef7c0dcb97" ...>".
 
 List of selection types (each with their own syntax):
 
@@ -132,9 +125,10 @@ viewname|name
 ```
 
 > [!NOTE]
+>
 > - In case of *elementname\|name*, the element name can contain wildcards, e.g. "elementname\|\*-MODEM\*". When an additional *?service* parameter is specified in the URL, the element will be searched for within the specified service using the name mask.
 > - *idx\|idx* refers to a row index of a dynamic table.
-> - If you specify strings containing ”!” or “\|” characters, you can encode them as ”!!” and “\|\|”.
+> - If you specify strings containing "!" or "\|" characters, you can encode them as "!!" and "\|\|".
 
 ### ?service=...
 

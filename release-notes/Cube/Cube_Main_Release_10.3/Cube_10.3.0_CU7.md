@@ -8,11 +8,13 @@ uid: Cube_Main_Release_10.3.0_CU7
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU7](xref:General_Main_Release_10.3.0_CU7).
+>
+> - For release notes related to the general DataMiner release, see [General Main Release 10.3.0 CU7](xref:General_Main_Release_10.3.0_CU7).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.3.0 CU7](xref:Web_apps_Main_Release_10.3.0_CU7).
 
 ### Fixes
 
-#### Problems when viewing a trend graph of a parameter of type string [ID_36848]
+#### Problems when viewing a trend graph of a parameter of type string [ID 36848]
 
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -21,7 +23,7 @@ When you viewed a trend graph of a parameter of type string, the following issue
 - When the trend data switched from real-time trending to average trending while you were panning, in some cases, the graph could flip.
 - The Y axis could show empty values.
 
-#### Spectrum monitoring element no longer showed all spectrum monitor parameters [ID_37009]
+#### Spectrum monitoring element no longer showed all spectrum monitor parameters [ID 37009]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -29,13 +31,13 @@ When you create a spectrum monitor, you can configure custom parameters. These p
 
 Normally, when you open a spectrum monitor element, you should be able to view all custom spectrum monitor parameters that have their *Displayed on element card* setting enabled. However, due to an issue, those parameters would no longer all be listed.
 
-#### Visual Overview: Viewport variable also set in code when set by user [ID_37011]
+#### Visual Overview: Viewport variable also set in code when set by user [ID 37011]
 
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 Up to now, when a user set the *Viewport* variable on a Resource Manager timeline component in Visual Overview, DataMiner set the variable again in the code, which caused the value to change to serialized format. While this did not cause functional changes, it could potentially cause unpredictable behavior, for example in case a condition was configured based on the value of the variable. This will now be prevented.
 
-#### Spectrum Analysis: Preset tab loading indefinitely if no presets defined [ID_37043]
+#### Spectrum Analysis: Preset tab loading indefinitely if no presets defined [ID 37043]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 

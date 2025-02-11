@@ -1,5 +1,6 @@
 ---
 uid: Getting_started_with_visual_overview
+description: To use Visio drawings in your DataMiner Solution, you need to enrich them by adding shape data to pages, shapes, or groups of shapes.
 ---
 
 # Getting started with Visual Overview

@@ -2,7 +2,9 @@
 uid: BPA_Check_Agent_Presence
 ---
 
-# Check Agent Presence Test In NATS
+# NATS connections between the DataMiner Agents
+
+Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "Check Agent Presence Test In NATS".
 
 NATS serves as an inter-DMA message broker. This means that every DataMiner Agent must be able to reach every other DataMiner Agent in the cluster over NATS.
 
@@ -14,7 +16,7 @@ This BPA test is available on demand. You can [run it in System Center](xref:Run
 
 ## Metadata
 
-- Name: Check Agent Presence In NATS
+- Name: NATS connections between the DataMiner Agents
 - Description: Polls the NATS routes, checks if every Agent is represented, and performs a NATS client connection test
 - Author: Skyline Communications
 - Default Schedule: Every day
@@ -46,7 +48,7 @@ In the message above, the exception message is included (e.g. "Access Denied"). 
 ## Impact when issues detected
 
 - Impact: RTEs and errors might occur.
-- Corrective action: Check the NATS config on all Agents. See [Investigating NATS issues](xref:Investigating_NATS_Issues).
+- Corrective action: Check the NATS config on all Agents. See [Troubleshooting – NATS](xref:Investigating_NATS_Issues).
 
 ## Limitations
 

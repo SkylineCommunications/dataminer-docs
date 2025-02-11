@@ -17,4 +17,4 @@ Use this method to retrieve a particular job section definition. Can only be use
 
 | Item | Format | Description |
 |--|--|--|
-| GetJobsSectionDefinitionResult | Array of [DMASectionDefinition](xref:DMASectionDefinition) | The requested job section definition. |
+| GetJobsSectionDefinitionResult | [DMASectionDefinition](xref:DMASectionDefinition) | The requested job section definition. |

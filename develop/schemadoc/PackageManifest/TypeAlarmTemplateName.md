@@ -4,7 +4,7 @@ uid: Manifest-TypeAlarmTemplateName
 
 # TypeAlarmTemplateName simple type
 
-Alarm template name.
+Alarm template name. This represents the file name.
 
 ## Content Type
 

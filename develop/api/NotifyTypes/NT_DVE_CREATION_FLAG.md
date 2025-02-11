@@ -29,5 +29,5 @@ protocol.NotifyDataMiner(340/*NT_DVE_CREATION_FLAG*/ , elementDetails, createDve
 ## Remarks
 
 - When the creation is disabled, all the existing DVEs will disappear from the system for the specified parent element. The existing element IDs of the DVEs will also be cleared. When the creation of DVEs is enabled again, new element IDs will be assigned for the DVEs and the DVEs will be recreated.
-- Since DataMiner version 8.0.3, the toggling of DVE creation is supported in the element wizard (in Cube only).
-- Calling this method will set the dvecreate attribute of the Name tag in the Element.xml file of the element.
+- Toggling DVE creation is also possible directly in Cube. See [Enabling or disabling the creation of DVE child elements](xref:Dynamic_virtual_elements#enabling-or-disabling-the-creation-of-dve-child-elements).
+- If [Swarming](xref:Swarming) is not enabled, calling this method will set the *dvecreate* attribute of the *Name* tag in the *Element.xml* file of the element. If it is enabled, this configuration will be stored in the database instead.

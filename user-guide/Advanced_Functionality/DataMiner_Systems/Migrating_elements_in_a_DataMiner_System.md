@@ -4,19 +4,26 @@ uid: Migrating_elements_in_a_DataMiner_System
 
 # Migrating elements in a DataMiner System
 
-In DataMiner Cube, it is possible to migrate elements from one DMA to another within a DMS.
+In DataMiner Systems where [Swarming](xref:Swarming) is not enabled, you can migrate elements from one DMA to another within a DMS. When you do so, DELT (DataMiner Element Location Transparency) will be used to export the elements from the first DMA and then import them on the other DMA.
 
-To do so:
+> [!NOTE]
+> If Swarming is enabled, elements can be [swarmed](xref:SwarmingElements) instead. Swarming is a much more robust way of moving elements between Agents, as the element configuration remains in the shared database and the element is simply unloaded from one DMA and loaded onto another. With element migration there is a greater risk of problems; for example, if the export works and the element is deleted in the original location, but the import fails for some reason, the element will end up missing. However, note that Swarming has some [limitations](xref:Swarming#limitations).
+
+To migrate elements:
 
 1. In Cube, go to *Apps* > *System Center \> Agents*.
 
 1. Go to the *Status* tab.
+
+   ![Status tab](~/user-guide/images/Status_Tab.png)<br>*System Center > Agents > Status in DataMiner 10.4.5*
 
    In the *Status* tab, you can see an overview of the DMAs in the DMS, with the number of elements per DMA and several other parameters such as the processor load and the free disk space of each DMA.
 
 1. In the lower right corner of the *Status* tab, click the *Migrate* button.
 
    This will open the *Element migration* window, which lists the available elements in a table on the left and the possible destination DMAs on the right.
+
+   ![Element migration](~/user-guide/images/Element_Migration.png)<br>*Element migration window in DataMiner 10.4.5*
 
    > [!NOTE]
    >

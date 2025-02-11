@@ -14,9 +14,6 @@ Before you report the issue or spend time trying to debug, please check the foll
 
 - Are you using the latest version of DIS?
 
-  > [!NOTE]
-  > DIS also has an [insider version](https://community.dataminer.services/dataminer-integration-studio-other-downloads/). This could already contain a fix for your issue. Do note that this version could receive more hotfix changes as this is primarily used by Skyline employees to filter out any issues before it becomes the main release.
-
 - Are all [prerequisites](xref:Prerequisites) met?
 
 When you have checked all this, and the issue persists, your next step is to [gather and check the necessary information](xref:DIS_Troubleshooting_RetrieveInformation).

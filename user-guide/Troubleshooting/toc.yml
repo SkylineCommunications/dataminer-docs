@@ -180,62 +180,81 @@ items:
                     topicUid: Troubleshooting_Run_Time_Errors
               - name: Troubleshooting - apps
                 topicUid: Troubleshooting_Apps
+              - name: Troubleshooting - Visual Overview
+                topicUid: Troubleshooting_Visual_Overview
   - name: Troubleshooting procedures
     topicUid: Troubleshooting_procedures
     items:
-      - name: Cassandra does not start up after a server restart
-        topicUid: Cassandra_not_starting_up_after_server_restart
       - name: Collecting DataMiner Cube memory dumps
         topicUid: Collecting_DataMiner_Cube_memory_dumps
       - name: Collecting data to report an issue to Technical Support
         topicUid: Collecting_data_to_report_an_issue_to_TechSupport
-      - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
-        topicUid: Elastic_not_starting_after_upgrade_cleanup
-      - name: Investigating dataminer.services issues
+      - name: Troubleshooting – Cassandra
+        topicUid: Troubleshooting_Cassandra
         items:
-        - name: Investigating dataminer.services connection issues
-          topicUid: Cloud_Connection_Issues
-        - name: Investigating dataminer.services feature issues
-          topicUid: Investigating_Dataminerservices_Feature_Issues
-      - name: Investigating NATS issues
+          - name: Expired SSTables blocking other tables from being dropped
+            topicUid: Cassandra_expired_blocking_SSTables
+      - name: Troubleshooting – dataminer.services
+        items:
+          - name: Investigating dataminer.services connection issues
+            topicUid: Cloud_Connection_Issues
+          - name: Investigating dataminer.services feature issues
+            topicUid: Investigating_Dataminerservices_Feature_Issues
+      - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
-      - name: Investigating OpenSearch issues
+      - name: Troubleshooting – OpenSearch
         topicUid: Investigating_OpenSearch_Issues
-      - name: Investigating web issues
+        items:
+          - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
+            topicUid: Elastic_not_starting_after_upgrade_cleanup
+      - name: Troubleshooting - SLScripting
+        items:
+          - name: Investigating exception occurrence on Finalizer thread
+            topicUid: TroubleshootingSLScriptingFinalizerException
+          - name: Investigating OutOfMemoryException occurrences
+            topicUid: TroubleshootingSLScriptingOutOfMemoryException
+          - name: Investigating StackOverflowException occurrences
+            topicUid: TroubleshootingSLScriptingStackOverflowException
+      - name: Troubleshooting – STaaS
+        topicUid: Troubleshooting_STaaS
+        items:
+          - name: STaaS error messages
+            topicUid: STaaS_Error_messages
+      - name: Troubleshooting – web
         topicUid: Investigating_Web_Issues
-      - name: Keeping a DMA from running out of disk space
-        topicUid: Keeping_a_DMA_from_running_out_of_disk_space
-      - name: Manually removing old alarms from an Elasticsearch cluster
-        topicUid: Manually_removing_old_alarms_from_ES
-      - name: Re-registering DataMiner services and DLLs
-        topicUid: Re-registering_DataMiner_services_and_DLLs
-      - name: Sharing dashboard window does not disappear
-        topicUid: Sharing_dashboard_window_does_not_disappear
+      - name: Troubleshooting – Miscellaneous
+        items:
+          - name: Manually removing old alarms from an Elasticsearch cluster
+            topicUid: Manually_removing_old_alarms_from_ES
+          - name: Re-registering DataMiner services and DLLs
+            topicUid: Re-registering_DataMiner_services_and_DLLs
+          - name: Sharing dashboard window does not disappear
+            topicUid: Sharing_dashboard_window_does_not_disappear
+          - name: Keeping a DMA from running out of disk space
+            topicUid: Keeping_a_DMA_from_running_out_of_disk_space
   - name: Known issues
     topicUid: Known_issues
     items:
       - name: Current issues
         items:
-          - name: Param next attribute not working correctly
-            topicUid: KI_Param_next_not_working
-          - name: Timetrace data is no longer written during Cassandra Cluster migration
-            topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
-          - name: Port exhaustion because of NATS reconnection attempts
-            topicUid: KI_port_exhaustion_because_of_NATS_reconnect_attempts
-          - name: NATS services missing after reboot
-            topicUid: KI_missing_NATS_services
+          - name: SLProtocol crash when restarting elements used by enhanced services
+            topicUid: KI_SLProtocol_Crash_Enhanced_Services
+          - name: Sticky element alarm state caused by correlation rules
+            topicUid: KI_sticky_element_alarm_state_caused_by_correlation_rules
+          - name: Inconsistent service impact of alarms after element is stopped and restarted
+            topicUid: KI_Inconsistent_service_impact
+          - name: Unable to perform a DataMiner upgrade via Update Center
+            topicUid: KI_Unable_to_perform_a_DataMiner_upgrade_via_Update_Center
+          - name: Unable to override information events TTL of 5 years
+            topicUid: KI_Information_events_TTL_five_years
           - name: Problem after removing DMA from cluster
             topicUid: KI_Problem_after_removing_DMA_from_cluster
-          - name: Corrupted low-code app after concurrent editing actions
-            topicUid: KI_app_corruption_after_editing
           - name: Elasticsearch not initialized when DataMiner starts up
             topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
           - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
             topicUid: KI_Restart_loop_when_Elasticsearch_unavailable
           - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
             topicUid: KI_Win2012R2_ignores_IP_in_SAN_field
-          - name: Local user unable to access DMA after first reboot after installation
-            topicUid: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
           - name: Various SLElement issues
             topicUid: KI_SLElement_various_issues
           - name: NATS not starting if DMS name contains special characters
@@ -250,6 +269,52 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Upgrade to DataMiner 10.5.1 or 10.5.2 is stuck
+            topicUid: KI_Upgrade_to_1051_stuck
+          - name: Reuploaded DVE protocol version is incorrectly set as production version
+            topicUid: KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version
+          - name: DataMiner incorrectly reports a Cassandra issue when another database fails
+            topicUid: KI_DataMiner_reports_Cassandra_issue_when_another_database_fails
+          - name: Offline Failover DMA not synchronized
+            topicUid: KI_offline_DMA_cannot_sync
+          - name: LDAP/ActiveDirectory domain users no longer able to log in after upgrade
+            topicUid: KI_LDAP_users_unable_to_log_in_after_upgrade
+          - name: SNMPv3 elements not loaded correctly after upgrade
+            topicUid: KI_SNMPv3_elements_broken_after_upgrade
+          - name: Inter-DMA connection issues when ExternalAuthentication is used
+            topicUid: KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used
+          - name: Problem after upgrading Window OS to Windows Server 2022
+            topicUid: KI_Problem_after_OS_upgrade_to_win_2022
+          - name: nats-server.config file not included in DataMiner backups
+            topicUid: KI_nats-server_config_file_not_included_in_backups
+          - name: Problem when DMA server is named DATAMINER
+            topicUid: KI_Problem_when_server_name_is_DATAMINER
+          - name: Web apps experience frequent disconnects
+            topicUid: KI_Web_apps_experience_frequent_disconnects
+          - name: ButtonState shapes in Visual Overview fail to hide as expected
+            topicUid: KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected
+          - name: Timetrace data is no longer written during Cassandra Cluster migration
+            topicUid: KI_Timetrace_Data_no_longer_written_during_Cassandra_Cluster_Migration
+          - name: Corrupted low-code app after concurrent editing actions
+            topicUid: KI_app_corruption_after_editing
+          - name: Local user unable to access DMA after first reboot after installation
+            topicUid: KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation
+          - name: NATS services missing after reboot
+            topicUid: KI_missing_NATS_services
+          - name: Process crashes when trying to connect to MySQL database
+            topicUid: KI_MySQL_Unhandled_Exception
+          - name: Failover switch taking a long time on systems with Cassandra setup
+            topicUid: KI_Failover_switch_Cassandra
+          - name: SLProtocol RTE caused by SNMP group with condition
+            topicUid: KI_SLProtocol_RTE_SNMP_group_condition
+          - name: Deadlock in service loading during startup
+            topicUid: KI_deadlock_service_loading
+          - name: Deadlock when forcing quarantine during booking update
+            topicUid: KI_Deadlock_when_forcing_quarantine
+          - name: Param next attribute not working correctly
+            topicUid: KI_Param_next_not_working
+          - name: Port exhaustion because of NATS reconnection attempts
+            topicUid: KI_port_exhaustion_because_of_NATS_reconnect_attempts
           - name: SLDataMiner crashes because of subgroup query failure
             topicUid: KI_SLDataMiner_crashes_because_of_subgroup_query_failure
           - name: One or multiple Analytics features fail to start
@@ -362,16 +427,12 @@ items:
             topicUid: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
           - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
             topicUid: KI_RTE_with_SLAnalytics_when_upgrading
-          - name: Incorrect RTE counts in SLWatchdog2.txt and Alarm Console
-            topicUid: KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console
           - name: NATS error message after 10.1 installation
             topicUid: KI_NATS_error_message_after_10_1_installation
           - name: Shapes in DataMiner stencils not found in Visio search
             topicUid: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
           - name: SLDataMiner addressChangeThread RTE after DMA startup
             topicUid: KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup
-          - name: Smart-serial communication no longer working
-            topicUid: KI_Smart-serial_communication_no_longer_working
           - name: SNMP SET returns a 'NO ACCESS' error
             topicUid: KI_SNMP_SET_returns_a_NO_ACCESS_error
           - name: Unavailable system database after DataMiner server reboot
@@ -380,6 +441,8 @@ items:
             topicUid: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
           - name: GenIf folder takes up too much disk space
             topicUid: KI_GenIf_Folder_Growing_In_Size
+  - name: Contacting tech support
+    topicUid: Contacting_tech_support
   - name: Customer DataMiner Reporting (CDMR)
     topicUid: CDMR
   - name: Remote Log Collection

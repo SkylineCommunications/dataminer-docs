@@ -8,7 +8,7 @@ uid: DIS_2.17
 
 ### Validator
 
-#### New and updated checks and error messages \[ID_21495\]\[ID_21496\]\[ID_21567\]\[ID_21571\]\[ID_21663\]\[ID_21729\]\[ID_21747\]\[ID_21750\]\[ID_21771\]\[ID_21772\]\[ID_21773\]
+#### New and updated checks and error messages \[ID 21495\]\[ID 21496\]\[ID 21567\]\[ID 21571\]\[ID 21663\]\[ID 21729\]\[ID 21747\]\[ID 21750\]\[ID 21771\]\[ID 21772\]\[ID 21773\]
 
 The following checks and error messages have been added or updated.
 
@@ -51,7 +51,7 @@ The following checks and error messages have been added or updated.
 
 ### XML Schema
 
-#### Protocol Schema: Updated element and attribute rules \[ID_21462\]
+#### Protocol Schema: Updated element and attribute rules \[ID 21462\]
 
 The syntax rules for the following elements and/or attributes have been updated:
 
@@ -59,7 +59,7 @@ The syntax rules for the following elements and/or attributes have been updated:
 |------------------------------|---------------------------------------------------------------------------------------|
 | Protocol.Actions.Action@id<br>Protocol.Groups.Group@id<br>Protocol.QActions.QAction@id<br>Protocol.Timers.Timer@id<br>Protocol.Triggers.Trigger@id | Allowed ID ranges:<br> \[1-64,299\]<br> \[70,000-99,999\]<br> \[1,000,000-9,999,999\] |
 
-#### Protocol Schema: New elements and attributes \[ID_21568\]
+#### Protocol Schema: New elements and attributes \[ID 21568\]
 
 The Protocol XML schema now supports the following elements and/or element attributes:
 
@@ -72,7 +72,7 @@ The Protocol XML schema now supports the following elements and/or element attri
 
 ### Enhancements
 
-#### IDE - XML editor: Automatic code indentation \[ID_20675\]
+#### IDE - XML editor: Automatic code indentation \[ID 20675\]
 
 Up to now, it was recommended to customize the tab settings in Visual Studio. From now on, DIS will automatically apply the following tab settings when it detects that you have opened a protocol or an Automation script:
 
@@ -82,6 +82,6 @@ Up to now, it was recommended to customize the tab settings in Visual Studio. Fr
 
 ### Fixes
 
-#### IDE - XML editor: Problem when trying to view the changes made in a file revision \[ID_21721\]
+#### IDE - XML editor: Problem when trying to view the changes made in a file revision \[ID 21721\]
 
 When, while viewing the history of a file under source control (e.g. SVN or GIT), you right-clicked a revision and clicked *Show Changes*, in some cases, an exception could be thrown.

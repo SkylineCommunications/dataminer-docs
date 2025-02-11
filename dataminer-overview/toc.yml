@@ -31,9 +31,9 @@ items:
       items:
         - name: DataMiner as a Service
           topicUid: DaaS_hosting
-        - name: Self-hosted DataMiner nodes with Storage as a Service
+        - name: Self-managed DataMiner nodes with Storage as a Service
           topicUid: DM_selfhosted_and_StaaS
-        - name: Self-hosted DataMiner nodes and storage nodes
+        - name: Self-managed DataMiner nodes and storage nodes (not recommended)
           topicUid: DM_and_storage_selfhosted
     - name: dataminer.services
       topicUid: Overview_DCP
@@ -98,6 +98,8 @@ items:
                   topicUid: Overview_MediaOps_Resource_Studio
             - name: Supported connectors
               topicUid: Overview_MediaOps_supported_connectors
+        - name: DOM Viewer
+          topicUid: domviewer_about
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
@@ -107,6 +109,13 @@ items:
           topicUid: Overview_Agile_Partnership_principles
         - name: Agile scope-based deployment
           topicUid: Overview_Agile_Partnership_scope_based_deployment
+        - name: Compliance statements
+          topicUid: Overview_Compliance_Statements_intro
+          items:
+            - name: Requirements vs. goals and objectives
+              topicUid: Overview_Compliance_Statements_RvsG_O
+            - name: Tender compliancy (licenses / engineering days)
+              topicUid: Overview_Compliance_Statements_Tender_Compliancy
     - name: DevOps
       topicUid: Overview_DevOps_index
       items:
@@ -175,10 +184,12 @@ items:
           topicUid: Overview_Training_videolibrary
         - name: Agile Awareness Training
           topicUid: Overview_Training_agile_aw
+        - name: Kanban workshop
+          topicUid: Overview_Kanban_workshop
     - name: Pricing
       topicUid: Pricing
       items:
-      - name: Commercial models summary
+      - name: Commercial and deploy models summary
         topicUid: Pricing_Commercial_Models
       - name: Usage-based services
         topicUid: Pricing_Usage_based_service
@@ -195,24 +206,15 @@ items:
           topicUid: Overview_Out_Of_Business_Hours_Support
         - name: Proactive Support
           topicUid: Proactive_Support
-        - name: Support services terms
-          topicUid: Support_services_terms
         - name: Partner support lines
           topicUid: Partner_support_lines
-        - name: User Operations Support application
+        - name: Support application
           topicUid: User_operations_support
-    - name: Compliance statements
-      topicUid: Overview_Compliance_Statements_intro
-      items:
-        - name: Requirements vs. goals and objectives
-          topicUid: Overview_Compliance_Statements_RvsG_O
-        - name: Tender compliancy (licenses / engineering days)
-          topicUid: Overview_Compliance_Statements_Tender_Compliancy
     - name: DataMiner Partner Program
       topicUid: Partner_Program
       items:
-        - name: Becoming a DataMiner Partner
-          topicUid: Becoming_a_DataMiner_Partner
+        - name: About the Partner Program
+          topicUid: About_Partner_Program
         - name: Getting started with the Partner Program
           topicUid: Getting_Started_with_the_Partner_Program
           items:
@@ -269,6 +271,24 @@ items:
               topicUid: Agile_Time_Materials_Methodology
             - name: Some Use Cases & Practical Examples
               topicUid: Some_Use_Cases_Practical_Examples
+    - name: Legal
+      items:
+        - name: Commercial terms
+          items:
+            - name: Terms of sale
+              topicUid: Terms_of_Sale
+            - name: Terms for online deployments
+              topicUid: Terms_Online_Deployments
+            - name: Terms for partners
+              topicUid: Terms_partners
+        - name: Support terms
+          items:
+            - name: On premises
+              topicUid: Support_Terms_On_Premises
+            - name: SaaS
+              topicUid: Support_Terms_SaaS
+        - name: DaaS Planned Maintenance Policy
+          topicUid: DaaS_Planned_Maintenance_Policy
     - name: Frequently asked questions
       topicUid: FAQs
       items:
@@ -301,6 +321,8 @@ items:
           topicUid: FAQ_Bandwidth_data_acquisition
         - name: Which languages are available in the DataMiner Cube client
           topicUid: FAQ_DataMiner_Cube_languages
+        - name: How can I view documentation in a different language
+          topicUid: FAQ_doc_change_language
       - name: Connectors
         topicUid: FAQs_Connectors
         items:
@@ -316,6 +338,8 @@ items:
           topicUid: FAQ_DIS_Training
         - name: Does technical support apply to the actual DataMiner connectors I design
           topicUid: FAQ_Support_for_own_connector
+        - name: How are third-party connectors added
+          topicUid: Overview_adding_third_party_connectors
         - name: Can I copy existing third-party DataMiner connectors or parts of them
           topicUid: FAQ_Copy_existing_connector
         - name: What if a second- or third-party DataMiner connector malfunctions

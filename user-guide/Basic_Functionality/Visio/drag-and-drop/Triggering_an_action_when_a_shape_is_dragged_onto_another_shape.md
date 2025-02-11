@@ -129,7 +129,7 @@ Result:
 - When you drop shape1 or shape2 onto shape4, Shape4 will take the table filter and the element.
 
 > [!NOTE]
-> From DataMiner 9.0 onwards, \[TableIndexFilter\] placeholders can be combined with dynamic placeholders like \[Param:...\], \[Var:...\], etc. in shape data that support this (Parameter, ParameterControl, ParameterControlOptions and Execute). However, note that they cannot be used recursively.
+> [TableIndexFilter] placeholders can be combined with dynamic placeholders like [Param:...], [Var:...], etc. in shape data that support this (*Parameter*, *ParameterControl*, *ParameterControlOptions*, and *Execute*). However, note that they cannot be used recursively.
 
 ## Configuring drag-and-drop behavior for child shapes
 
@@ -156,4 +156,4 @@ To do so:
    | \[TableDisplayIndexResolved\] | The display key of the row represented by the dragged shape. |
 
 > [!NOTE]
-> From DataMiner 9.0 onwards, \[TableIndexFilterResolved\] and \[TableDisplayIndexResolved\] placeholders can be combined with dynamic placeholders like \[Param:...\], \[Var:...\], etc. in shape data that support this (Parameter, ParameterControl, ParameterControlOptions and Execute). However, note that they cannot be used recursively.
+> [TableIndexFilterResolved] and [TableDisplayIndexResolved] placeholders can be combined with dynamic placeholders like [Param:...], [Var:...], etc. in shape data that support this (*Parameter*, *ParameterControl*, *ParameterControlOptions*, and *Execute*). However, note that they cannot be used recursively.

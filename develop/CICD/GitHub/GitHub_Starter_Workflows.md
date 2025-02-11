@@ -40,6 +40,9 @@ In the free version of GitHub, you will not see starter workflows in the UI dire
 
 1. Paste your starter workflow.
 
+> [!NOTE]
+> For most starter workflows, you will also need to configure some secrets and tokens. For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+
 ### Deployment jobs
 
 Some of the starter workflows will have commented out jobs at the bottom. These are usually jobs of type Deployment.
@@ -98,4 +101,4 @@ If you want to provide a starter workflow that can be shared across different or
 In either case, you can then start making changes and finalize them with a pull request.
 
 > [!TIP]
-> If you have any questions concerning a pull request, contact the Skyline Communications [Data Acquisition Domain](mailTo:support.data-acquisition@skyline.be?subject=Pull%20Request%20-%20GitHub%20Workflow%20Contribution&body=Hello,).
+> If you have any questions concerning a pull request, contact the Skyline Communications [BOOST team](mailTo:support.boost@skyline.be?subject=Pull%20Request%20-%20GitHub%20Workflow%20Contribution&body=Hello,).

@@ -8,7 +8,7 @@ uid: User_management
 
 DataMiner supports the following types of directories for user management:
 
-- [Active Directory](xref:Adding_a_user#to-add-an-existing-domain-user) (default)
+- [Active Directory](xref:Adding_a_user#adding-an-existing-domain-user) (default)
 - [Azure Active Directory](xref:Setting_up_Azure_Active_Directory_Domain_Services)
 - [Atlassian Crowd](xref:Configuring_Atlassian_Crowd_settings)
 - [LDAP-compatible directories](xref:Configuring_LDAP_settings) (e.g. OpenLDAP)
@@ -45,7 +45,7 @@ To **enable** the local Administrator user:
    `Get-LocalUser Administrator | Enable-LocalUser`
 
 > [!NOTE]
-> If you use self-hosted storage nodes instead of the recommended [Storage as a Service](xref:STaaS), you will need to make sure that the default users of the DataMiner **databases** are also secured. For more information, see [Securing self-hosted DataMiner storage](xref:Cassandra_authentication).
+> If you use self-managed storage nodes instead of the recommended [Storage as a Service](xref:STaaS), you will need to make sure that the default users of the DataMiner **databases** are also secured. For more information, see [Securing self-managed DataMiner storage](xref:Cassandra_authentication).
 
 ## User authentication
 

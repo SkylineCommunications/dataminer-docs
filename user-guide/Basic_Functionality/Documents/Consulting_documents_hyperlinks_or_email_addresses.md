@@ -18,4 +18,4 @@ To open a document or a hyperlink, or to send an email to an email address store
 >
 > - To download a document to your local computer, right-click it in the Documents module and select *Save*.
 > - To quickly find a specific document, you can use the filter box in the top-right corner (available from DataMiner 10.2.0/10.1.5 onwards).
-> - The *Open* and *Save* options are not available for documents in the [Elements folder](xref:Managing_the_document_folders#the-elements-folder) for a specific element.
+> - Prior to DataMiner 10.4.0 [CU5]/10.4.8, documents in the [Elements folder](xref:Managing_the_document_folders#the-elements-folder) for a specific element cannot be opened from Cube (using the *Open* or *Save* options). From DataMiner 10.4.0 [CU5]/10.4.8 onwards, you can use the *Save* option to download documents if Cube is connected to the Agent where the element is stored.<!-- RN 39876 -->

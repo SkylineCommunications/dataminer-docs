@@ -94,6 +94,8 @@ On the *Alarm Console* page, several settings are available:
 
 - **Time before alarm banner hides**: Select this setting to set a delay of 30 seconds before the alarm banner hides. In order to set a different delay, select the setting and enter a different number of seconds in the box on the right.
 
+- **Enable the sound for the alarm banner**: Available from DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 41982-->. Determines whether a sound is played when the alarm banner is shown or updated. By default, a sound is played.
+
 - **Enable alarm storm protection by grouping alarms with the same parameter name**: This setting determines whether alarms with the same parameter name are grouped when a certain number of these alarms occur at the same time. In the boxes below the setting, you can configure when to start and stop grouping. By default, this setting is enabled, with a start value of 2000 and a stop value of 1900.
 
   > [!TIP]
@@ -178,6 +180,8 @@ On the *Card* page, the settings are divided into four sections, i.e. a section 
 
   By default, this is the Visual Overview page. It is also possible to set cards to show a Data Display page or one of the default pages, to show the page that was last visible when the card was closed, or to show the Visual Overview page only if a Visio file has been assigned to it.
 
+- **Open EPM cards undocked**: Select this setting to open EPM cards in a new, undocked window. Available from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards.<!-- RN 40782 -->
+
 - **Open element cards undocked**: Select this setting to open element cards in a new, undocked window. The setting also applies to parameter cards.
 
   > [!NOTE]
@@ -237,7 +241,7 @@ On the *Cube* page, the following settings are available:
 
 - **Show the news section**: Determines whether the optional news section is displayed on the DataMiner Pulse welcome page in Cube.
 
-- **Show the DataMiner TV section**: Obsolete. Determines whether the optional DataMiner TV section is displayed on the DataMiner Pulse welcome page in Cube. Available from DataMiner 9.5.14 up to DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1.
+- **Show the DataMiner TV section**: Obsolete. Determines whether the optional DataMiner TV section is displayed on the DataMiner Pulse welcome page in Cube. No longer available since DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1.
 
 - **Display the workspace buttons in the header**: Determines whether the four squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
@@ -340,7 +344,7 @@ On the *Regional* page, the following settings are available:
 
 On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page, the following settings are available:
 
-- **Sidebar docking position**: Select *Right* or *Left* to determine at which side of the screen the Cube sidebar will be displayed. By default, it is displayed on the left. Prior to DataMiner 10.0.0/10.0.2, the similar setting *Surveyor docking position* is available instead.
+- **Sidebar docking position**: Select *Right* or *Left* to determine at which side of the screen the Cube sidebar will be displayed. By default, it is displayed on the left.
 
 - **Allow to expand/collapse service nodes**: Select this setting to enable users to expand services in the Surveyor to see the child items of the services.
 
@@ -371,7 +375,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Percentile to calculate**: Prior to DataMiner 10.3.0/10.2.4, you first need to select *Show percentile* to see this setting. In more recent DataMiner versions, you can instead select *Percentile to calculate* directly to show a percentile line on trend graphs. You can then configure which percentile is displayed. By default, this is set to *95*.
 
-- **Trend prediction range**: Select either *Manual*, if you want to manually change the trend prediction range, or *Auto*, if you want DataMiner to select the range depending on the zoom level.
+- **Trend prediction range**: Select either *Manual*, if you want to manually change the [trend prediction](xref:Working_with_trend_predictions) range, or *Auto*, if you want DataMiner to select the range depending on the zoom level.
 
 - **Left mouse button action on graph**: Select the action executed by dragging the left mouse button on a trend graph:
 

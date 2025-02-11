@@ -1,5 +1,6 @@
 ---
 uid: CloudConnectionVerification
+keywords: cloud organization, cloud connection
 ---
 
 # Getting your organization verified
@@ -10,10 +11,7 @@ Benefits include access to the licensed connectors in the Catalog for systems wi
 
 To get your organization verified on dataminer.services:
 
-1. In the Admin app, check whether the correct organization is mentioned in the header bar.
-
-   > [!TIP]
-   > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
+1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
 1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
 
@@ -21,7 +19,7 @@ To get your organization verified on dataminer.services:
 
 1. Click the *Request verification* button. This will create a pre-configured email to the Skyline verification team with all the information they need in order to verify your connection to dataminer.services.
 
-When your connection has been successfully verified, this will be displayed on this same page in the Admin app. In addition, a check mark will be displayed next to your organization name.
+When your connection has been successfully verified, this will be displayed on this same page in the Admin app.
 
 > [!NOTE]
 > You can also start the verification process by contacting the Skyline verification team directly at [verification@skyline.be](mailto:verification@skyline.be).

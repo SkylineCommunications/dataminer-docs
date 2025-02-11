@@ -6,7 +6,9 @@ uid: ColumnOptionOptionsOverview
 
 ## CPEDummyColumn
 
-EPM (formerly known as CPE) tables often contain dummy items, i.e. virtual items that merely act as a link between two actual items. Using this option, it is possible to hide these dummy items in EPM diagrams and EPM filters.
+<!-- RN 19658 -->
+
+EPM tables often contain dummy items, i.e. virtual items that merely act as a link between two actual items. Using this option, it is possible to hide these dummy items in EPM diagrams and EPM filters.
 
 To be able to mark items as dummy items in a particular EPM table, add an extra column of type "double", and specify the "CPEDummyColumn" option in its column definition, as illustrated in the following example:
 
@@ -27,8 +29,6 @@ To mark an item as a dummy item in that table in DataMiner Cube, go to the row t
 >
 > - Parents of a dummy item will be linked to its children, and children of a dummy item will be linked to its parents.
 > - There can only be one dummy item per topology level. For example, a street cannot have two parents "Dummy1" and "Dummy2". These two dummy items must be combined into one.
-
-*Feature introduced in DataMiner 9.6.4 (RN 19658).*
 
 ## delete
 
@@ -101,20 +101,22 @@ Example:
      </Discreets>
   </Measurement>
 </Param>
-```xml
+```
 
 > [!NOTE]
 > All icon references mentioned in a protocol have to refer to icons listed in the icons.xml file, located in the C:\Skyline DataMiner\Protocols folder.
 
 ## displayElementAlarm
 
+<!-- RN 14718 -->
+
 If you specify this option, you specify that the column has to indicate the alarm state of the element that is referred to by a particular row.
 
 The value of the cell should be the ID of the element in the format "DMA ID/element ID"(e.g. "169/22").
 
-*Feature introduced in DataMiner 9.5.2 (RN 14718).*
-
 ## displayServiceAlarm
+
+<!-- RN 14718 -->
 
 If you specify this option, you specify that the column has to indicate the alarm state of the service that is referred to by a particular row.
 
@@ -122,15 +124,12 @@ The value of the cell should be the ID of the service in the format "DMA ID/serv
 
 Example:
 
-
 ```xml
 <ArrayOptions index="0" displayColumn="1">
    ...
    <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayServiceAlarm"/>
 </ArrayOptions>
 ```
-
-*Feature introduced in DataMiner 9.5.2 (RN 14718).*
 
 ## displayViewAlarm
 
@@ -155,17 +154,25 @@ Result: If the value in the displayViewAlarm column is a valid view ID, then tha
 
 ## enableHeaderAvg
 
+<!-- RN 7692 -->
+
 Enables displaying the average value of all rows in the column header of a numeric and monitored column.
 
 ## enableHeaderMax
+
+<!-- RN 7692 -->
 
 Enables displaying the maximum value of all rows in the column header of a numeric and monitored column.
 
 ## enableHeaderMin
 
+<!-- RN 7692 -->
+
 Enables displaying the minimum value of all rows in the column header of a numeric and monitored column.
 
 ## disableHeaderSum / enableHeaderSum
+
+<!-- RN 7692 -->
 
 This will either disable or enable the sum of all rows in the column header of a numeric and monitored column. As enableHeaderSum is the default option, this default can be disabled by specifying disableHeaderSum.
 
@@ -174,20 +181,21 @@ This will either disable or enable the sum of all rows in the column header of a
 
 ## disableHeatmap / enableHeatmap
 
-This will either disable or enable the heatmap in all rows in the column header of a numeric and monitored column.
+<!-- RN 7692 -->
 
-> [!NOTE]
-> The six options above are features introduced in DataMiner 8.5.0 (RN 7692).
+This will either disable or enable the heatmap in all rows in the column header of a numeric and monitored column.
 
 ## disableHistogram / enableHistogram
 
+<!-- RN 8589 -->
+
 This will either disable or enable the histogram of all rows in the column header of a numeric and monitored column.
 
-When the disableHistogram option is used in an EPM (formerly known as CPE) user interface, the button to show the real-time histogram will not be visible.
-
-*Feature introduced in DataMiner 8.5.1 (RN 8589).*
+When the disableHistogram option is used in an EPM user interface, the button to show the real-time histogram will not be visible.
 
 ## dynamicData
+
+<!-- RN 9318 -->
 
 When dynamic positioning is used, it is possible to dynamically set the interfaces of each dynamically positioned element.
 
@@ -202,11 +210,9 @@ When dynamic positioning is used, it is possible to dynamically set the interfac
 
   Example: input1=5;input2=8;output1=5
 
-*Feature introduced in DataMiner 8.5.3 (RN 9318).*
-
 > [!NOTE]
 >
-> - From DataMiner 9.0.3 (RN 12886) onwards, this option can also be used for child shapes that are automatically generated based on table data. That way, automatically generated child shapes can be linked to a specified element, and can have their interfaces set dynamically.
+> - This option can also be used for child shapes that are automatically generated based on table data. That way, automatically generated child shapes can be linked to a specified element, and they can have their interfaces set dynamically.<!-- RN 12886 -->
 > - For more information, refer to [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
 ## element
@@ -220,11 +226,16 @@ If you specify this option, the DataMiner ID and Element ID of the Dynamic Virtu
 
 A special kind of indexColumn, i.e. the parameter ID of the table containing the primary keys referred to in this column.
 
+> [!NOTE]
+> The foreign key is automatically saved in the database. For more info about persistent data in tables, see [Persisting tables](xref:AdvancedDataMinerDataPersistencePersistingTables).
+
 ## groupby
 
 The index of the column by which will be grouped (only valid if type is "autoincrement").
 
 ## hidden
+
+<!-- RN 8195 -->
 
 Use this option to configure a column in which you can indicate whether or not a DVE element should be hidden.
 
@@ -235,11 +246,9 @@ Columns marked with the hidden option can have one of two values:
 
 By default, the associated column parameter is saved.
 
-*Feature introduced in DataMiner 8.5.1 (RN 8195).*
-
 ## HideKPI
 
-Use this option to keep values from being displayed in the KPI window in an EPM (formerly known as CPE) element.
+Use this option to keep values from being displayed in the KPI window in an EPM element.
 
 For example, if a protocol contains coordinates to enable dynamic positioning, use HideKPI to keep these coordinates from being displayed in the KPI window:
 
@@ -249,6 +258,8 @@ For example, if a protocol contains coordinates to enable dynamic positioning, u
 ```
 
 ## hideSummaryColumn
+
+<!-- RN 6647 -->
 
 (Service Overview Manager) This option allows you to hide the colored squares in the left-hand pane showing the aggregated service statuses.
 
@@ -265,8 +276,6 @@ Example:
      ...
 ```
 
-*Feature introduced in DataMiner 8.0.6.3 (RN6647).*
-
 ## indexColumn
 
 This option indicates that this column should be indexed. This allows you to quickly get the primary keys of the rows that have a specific value.
@@ -278,7 +287,7 @@ This option indicates that this column should be indexed. This allows you to qui
 
 #### Requesting index values from index columns
 
-In a QAction, you can use the SLProtocol.GetKeysForIndex method to retrieve the primary keys of the rows that have the specified value for the specified column that has been marked as an indexColumn or a foreignKey. See indexColumn.
+In a QAction, you can use the SLProtocol.GetKeysForIndex method to retrieve the primary keys of the rows that have the specified value for the specified column that has been marked as an indexColumn or a foreignKey.
 
 See also:
 
@@ -330,9 +339,9 @@ public static IEnumerable<string> GetKeysForValue(this SLProtocol protocol, int 
 
 ## KPIHideWrite
 
-Use this option for EPM (formerly known as CPE) elements to disable write parameters in the KPI window.
+<!-- RN 5828 -->
 
-*Feature introduced in DataMiner 8.0.6 (RN 5828).*
+Use this option for EPM elements to disable write parameters in the KPI window.
 
 ## linkElement
 
@@ -341,42 +350,42 @@ If you use this option, the value of this column will be used as a link to an el
 > [!NOTE]
 >
 > - The value of the column must be of type string and can contain the element name or DmaID/ElementID.
-> - From DataMiner 9.0.3 (RN 12886) onwards, this option can also be used for child shapes that are automatically generated based on table data. That way, automatically generated child shapes can be linked to a specified element and can have their interfaces set dynamically.
+> - This option can also be used for child shapes that are automatically generated based on table data. That way, automatically generated child shapes can be linked to a specified element and can have their interfaces set dynamically.<!-- RN 12886 -->
 > - For more information, refer to [Positioning shapes dynamically](xref:Positioning_shapes_dynamically).
 
 ## rowTextColoring
 
 If you specify this option, you indicate that the value in this column will control the row color.
 
-See also the rowTextColor option of the Discreet tag: `rowTextColor=#RRGGBB`.
+See also the [rowTextColor](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-options#rowtextcolorrrggbb) option of the Discreet tag: `rowTextColor=#RRGGBB`.
 
 ## save
 
 Specify this option if you want the column to be saved.
 
 > [!NOTE]
-> From DataMiner 9.5.5 (RN 16743) onwards, all parameters used to create the display key are saved by default (except for volatile tables).
+> All parameters used to create the display key are saved by default (except for [volatile tables](xref:AdvancedDataMinerDataPersistencePersistingTables#volatile-tables)). For guidelines on how to avoid storing unnecessary data, see [Saving parameters](xref:Saving_parameters).<!-- RN 16743 -->
 
 ## separator
 
 The interpretation of the separator value depends on the content of the type attribute
 
-- If type is “concatenation”: separator between column values.
+- If type is "concatenation": separator between column values.
 
   By default, the columns are concatenated without a separator.
-- If type is “autoincrement”: separator between column values when multiple columns make up the index (see [groupby](xref:ColumnOptionOptionsOverview#groupby)).
+- If type is "autoincrement": separator between column values when multiple columns make up the index (see [groupby](xref:ColumnOptionOptionsOverview#groupby)).
 
-  Example: “1.2” (separator is a dot)
+  Example: "1.2" (separator is a dot)
 
   By default, a dot (.) is used.
 
 ## SelectionSetVar
 
+<!-- RN 6591 -->
+
 Use this option to link the column to a Visio session variable.
 
 If you do so, selecting a table row in a Visio parameter control will trigger a set of session variable set operations on selection. Deselecting a row will clear the session variables.
-
-*Feature introduced in DataMiner 8.0.6 (RN 6591).*
 
 Example:
 
@@ -401,27 +410,27 @@ Example:
 
 ## SelectionSetCardVar
 
+<!-- RN 7912 -->
+
 Use this option to link the column to a Visio session variable, limited to the current card.
 
 For more information, see [SelectionSetVar](xref:ColumnOptionOptionsOverview#selectionsetvar).
 
-*Feature introduced in DataMiner 8.5.1 (RN 7912).*
-
 ## SelectionSetPageVar
+
+<!-- RN 7912 -->
 
 Use this option to link the column to a Visio session variable, limited to the current page.
 
 For more information, see [SelectionSetVar](xref:ColumnOptionOptionsOverview#selectionsetvar).
 
-*Feature introduced in DataMiner 8.5.1 (RN 7912).*
-
 ## SelectionSetWorkspaceVar
+
+<!-- RN 17705 -->
 
 Use this option to link the column to a Visio session variable, limited to the current workspace.
 
 For more information, see [SelectionSetVar](xref:ColumnOptionOptionsOverview#selectionsetvar).
-
-*Feature introduced in DataMiner v9.5.0 [CU6]/9.5.9 (RN 17705).*
 
 ## SetOnTable
 
@@ -431,17 +440,19 @@ See also [directView](xref:Protocol.Params.Param.ArrayOptions-options#directview
 
 ## severity
 
-(DVE) If you specify this option, the column will contain the overall element severity of the DVE element that exports the rows.
+<!-- RN 5726 -->
 
-*Feature introduced in DataMiner 8.0.0 (RN 5726).*
+(DVE) If you specify this option, the column will contain the overall element severity of the DVE element that exports the rows.
 
 ## SeverityColumn
 
+<!-- RN 5965 -->
+
 (Service Overview Manager) Use this option to define a severity column. The alarm severity of the value in this column will be displayed as a square in the Overview tab of the DataMiner Cube card.
 
-*Feature introduced in DataMiner 8.0.2 (RN 5965).*
-
 ## SeverityColumnIndex
+
+<!-- RN 5965 -->
 
 (Service Overview Manager) Use this option to define the position of the severities displayed in the Overview tab of the DataMiner Cube card.
 
@@ -513,13 +524,11 @@ Example:
 </Param>
 ```
 
-*Feature introduced in DataMiner 8.0.2 (RN 5965).*
-
 ## showReadAsKPI
 
 This option allows you to hide read parameters, so that only write parameters are shown.
 
-From DataMiner 8.5.4.3 (RN 9381) onwards, either a colon or an equals sign can be used.
+Either a colon or an equals character can be used.<!-- RN 9381 -->
 
 Examples:
 
@@ -534,11 +543,13 @@ Adds a blank space after the parameter in the KPI window.
 
 ## subTitle
 
-This option allows you to add a subtitle to the KPI window (RN 2663). This option placed the subtitle before the parameter.
+<!-- RN 2663 -->
+
+This option allows you to add a subtitle to the KPI window. This option places the subtitle before the parameter.
 
 For example:
 
-![alt text](../../images/columnoptions_SubTitle.png "subTitle")
+![subTitle](~/develop/images/columnoptions_SubTitle.png)
 
 ## volatile
 
@@ -555,9 +566,9 @@ The column marked with this option can contain any of the following:
 
 - view ID
 - view name
-- multiple view IDs, separated by semicolon (“;”)
-- multiple view names, separated by semicolon (”;”)
-- mixed view ID(s) and view name(s), separated by semicolon (“;”)
+- multiple view IDs, separated by semicolon (`;`)
+- multiple view names, separated by semicolon (`;`)
+- mixed view ID(s) and view name(s), separated by semicolon (`;`)
 
 See also [Dynamic Virtual Elements](xref:AdvancedDVEs)
 
@@ -572,7 +583,7 @@ The following syntax is supported:
 - view=baseTableFKColumn;columnPid 
   - baseTableFKColumn: The ID of the column of the base table containing foreign keys to the table that holds the column that should be included in this view table.
   - columnPid: The ID of the column parameter of which the values will be shown in this column of this view table.
-- view=linkedPid:elementKeyColumnPid:remoteDataTablePid:remoteDataColumnIdx 
+- view=linkedPid:elementKeyColumnPid:remoteDataTablePid:remoteDataColumnIdx
   - linkedPid: The column that is the starting point of the path to follow to reach the column that contains the remote element ID, mentioned in elementKeyColumnPid. Providing a value for this placeholder is supported from DataMiner 10.1.2 (RN 28448) onwards.
   - elementKeyColumnPid: Table column that contains the DMA ID/element ID keys of the remote elements.
   - remoteDataTablePid: PID of the table in the remote element.
@@ -590,11 +601,11 @@ See also: [View tables](xref:AdvancedViewTables)
 
 ## viewImpact
 
+<!-- RN 19798 -->
+
 By specifying this option in a particular table column definition, you can configure a "view impact" column containing IDs of views that have to be put in alarm whenever there is an alarm on a cell in another column of that same table.
 
 The column must be of type string. Multiple view IDs have to be separated by semicolons.
-
-*Feature introduced in DataMiner 9.6.2 (RN 19798).*
 
 Example:
 
@@ -602,7 +613,7 @@ Example:
 <ColumnOption idx="2" pid="104" type="custom" options=";save;viewImpact"/>
 ```
 
-From DataMiner 9.6.5 (RN 21401) onwards, this option is also supported for EPM (formerly known as CPE) tables.
+This option is also supported for EPM tables.<!-- RN 21401 -->
 
 - The highest alarm among all rows that affect a particular view will be copied to the DirectViewImpactsLevel property of the ViewStateEventMessage class.
 - The bubble-up level will be copied to the DirectViewImpactsBubbleupLevel property of the ViewStateEventMessage class.

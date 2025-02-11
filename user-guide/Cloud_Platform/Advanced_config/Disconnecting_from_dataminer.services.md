@@ -1,5 +1,6 @@
 ---
 uid: Disconnecting_from_dataminer.services
+keywords: disconnect from the cloud
 ---
 
 # Disconnecting from dataminer.services
@@ -46,7 +47,7 @@ To **reconnect your system**, you will need to change the startup type for the D
 > - Skyline Communications will no longer be able to provide [Proactive Support](xref:Proactive_Support) for your DMS.
 > - All data for the DMS that was saved on dataminer.services will be lost, including shares, settings, and users and permissions configured on dataminer.services.
 > - If your DMS consists of one or more fully self-hosted DataMiner Agents, these will continue to work, but you will no longer have access to dataminer.services features.
-> - If your DMS uses DataMiner **Storage as a Service** (STaaS), **all data will be permanently lost** and the system will become unusable.
+> - If your DMS uses DataMiner **Storage as a Service** (STaaS), **all data will be permanently lost** 7 days after the system is disconnected, and the system will no longer be usable.
 > - If you use **DataMiner as a Service** (DaaS), this will **delete your system**. See [Removing a DaaS system](xref:Removing_a_DaaS_system).
 
 To disconnect a DataMiner System from dataminer.services:
@@ -77,8 +78,6 @@ To disconnect a DataMiner System from dataminer.services:
 
       > [!WARNING]
       > This action is **irreversible** and can have far-reaching consequences for your DataMiner System. Always consult with a Skyline DevOps Engineer before you use this option.
-
-   1. Contact Skyline Communications to remove the remaining information for your DMS from dataminer.services.
 
 > [!NOTE]
 > Performing either of the two main steps above is already enough to disconnect the DMS. However, if you only delete the DMS on dataminer.services, the DMS will still try to reach dataminer.services, and if you only unregister the DMS, the information related to the DMS will still be displayed on dataminer.services.

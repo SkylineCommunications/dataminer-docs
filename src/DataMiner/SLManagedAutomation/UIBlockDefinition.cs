@@ -161,6 +161,19 @@ namespace Skyline.DataMiner.Automation
 		public AutomationConfigOptions ConfigOptions { get; set; }
 
 		/// <summary>
+		/// Gets or sets the debug tag to identify the component for this block in web.
+		/// </summary>
+		/// <value>The debug tag to identify the component. Leave empty when the component does not need to be identified.</value>
+		/// <remarks>
+		/// <para>Default: <see langword="null"/>.</para>
+		/// <para>Feature introduced in DataMiner 10.4.7 (RN 39365).</para>
+		/// <para>This feature allows you to assign an identifier to a UI element when it is launched in a web app.
+		///  That identifier can then be used in automated tests to explicitly refer to the UI element in question.
+		/// </para>
+		/// </remarks>
+		public string DebugTag { get; set; }
+
+		/// <summary>
 		/// Gets or sets the number of decimals to show.
 		/// </summary>
 		/// <value>The number of decimals to show.</value>

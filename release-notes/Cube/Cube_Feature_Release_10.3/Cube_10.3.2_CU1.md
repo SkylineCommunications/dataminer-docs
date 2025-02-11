@@ -8,11 +8,12 @@ uid: Cube_Feature_Release_10.3.2_CU1
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.2](xref:General_Feature_Release_10.3.2).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.3.2](xref:General_Feature_Release_10.3.2).
 
 ### Fixes
 
-#### Service & Resource Management: Problem with un-initialized Capacity property on DMAs running version 10.3.1 or 10.2.12 or earlier [ID_35854]
+#### Service & Resource Management: Problem with un-initialized Capacity property on DMAs running version 10.3.1 or 10.2.12 or earlier [ID 35854]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.2 [CU1] -->
 

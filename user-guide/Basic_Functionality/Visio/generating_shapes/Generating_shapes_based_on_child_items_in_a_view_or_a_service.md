@@ -40,7 +40,7 @@ The following shape data fields can be added to a shape that has to represent a 
 
   The space between the child shapes will always be 5 px.
 
-- **ChildType**: In this mandatory shape data field, specify the type of child item the shape has to represent: view, element, service or redundancy group.
+- **ChildType**: In this mandatory shape data field, specify the type of child item the shape has to represent: view, element, service, or redundancy group.
 
   | Value           | Description                                             |
   | --------------- | ------------------------------------------------------- |
@@ -75,7 +75,7 @@ The following shape data fields can be added to a shape that has to represent a 
     Protocol:Philips DVS3810/Production|Property:Class=^A$
     ```
 
-    - From DataMiner 9.0.5 onwards, it is possible to only have shapes generated for child objects with a specific alarm severity. To do so, specify a comma-separated list of alarm severities as the value of the **ChildrenFilter** shape data field.
+    - To only have shapes generated for child objects with a specific alarm severity, specify a comma-separated list of alarm severities as the value of the **ChildrenFilter** shape data field.
 
       For example, if you specify "AlarmSeverity:Critical,Major", shapes will only be generated for child object of which the alarm severity is either "Critical" or "Major".
 
@@ -86,23 +86,23 @@ The following shape data fields can be added to a shape that has to represent a 
       > [!NOTE]
       > The *Timeout* alarm severity is currently not supported in the **ChildrenFilter** field.
 
-    - Using placeholders such as "\[var:\]" and "\[param:\]" within **ChildrenFilter** shape data is supported from DataMiner 9.6.4 onwards. This can for instance be used to filter the child shapes using a session variable in the filter value.
+    - Placeholders such as "\[var:\]" and "\[param:\]" are supported within **ChildrenFilter** shape data. This can for instance be used to filter the child shapes using a session variable in the filter value.
 
   - From DataMiner 10.2.0/10.1.2 onwards, you can filter service, view and element children by name, by specifying a regular expression in the following format in the shape data: *Name=Regex*.
 
     For example, "Name=\[var:userSpecifiedName\]". Only objects of which the name matches the regular expression will be shown.
 
-    - From DataMiner 10.2.0/10.1.10 onwards, you can filter service children based on whether they are mapped resources, unmapped resources, or resources inherited from a resource pool. To do so, add a data field of type **ChildrenFilter** and set its value to "ResourceMapping=", followed by one or more roles (separated by commas): "mapped", "unmapped" or "inheritance". If you specify multiple roles, all shapes of which the roles match one of the specified roles will be shown. For example:
+  - From DataMiner 10.2.0/10.1.10 onwards, you can filter service children based on whether they are mapped resources, unmapped resources, or resources inherited from a resource pool. To do so, add a data field of type **ChildrenFilter** and set its value to "ResourceMapping=", followed by one or more roles (separated by commas): "mapped", "unmapped" or "inheritance". If you specify multiple roles, all shapes of which the roles match one of the specified roles will be shown. For example:
 
-      | Shape data field   | Value                                       |
-      |--------------------|---------------------------------------------|
-      | ChildrenFilter     | ResourceMapping=mapped,unmapped,inheritance |
+    | Shape data field   | Value                                       |
+    |--------------------|---------------------------------------------|
+    | ChildrenFilter     | ResourceMapping=mapped,unmapped,inheritance |
 
 ## Group-level shape data
 
 The following shape data fields can be added to the group containing the shapes that have to represent the different child items.
 
-- **Children**: In this mandatory shape data field, specify the type of child items that have to be generated: "View", "Element", "Service" and/or "RedundancyGroup". In case of multiple types, separate them by pipes.
+- **Children**: In this mandatory shape data field, specify the type of child items that have to be generated: "View", "Element", "Service", and/or "RedundancyGroup". In case of multiple types, separate them by pipes.
 
   Examples:
 
@@ -118,23 +118,22 @@ The following shape data fields can be added to the group containing the shapes 
 
   Generate a shape for every element in the view or service to which the drawing is linked.
 
-    > [!NOTE]
-    >
-    > - By default, a **Children** shape always shows the child items of the view or service to which the Visio drawing is linked. If you want a **Children** shape to show the child items of a specific view or service, then add a shape data field of type **View** or **Element** to that same shape. In that field, you can then explicitly specify the view or the service of which the shape has to show all child items.
-    > - A **Children** shape can contain another **Children** shape. That way, you can dynamically generate e.g. shapes that represent all subviews in a view, as well as shapes that represent all items in those subviews.
-    > - With the DataMiner Cube user setting *Maximum number of child shapes in a 'Children' container shape*, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](xref:User_settings#visual-overview-settings).
+  > [!NOTE]
+  >
+  > - By default, a **Children** shape always shows the child items of the view or service to which the Visio drawing is linked. If you want a **Children** shape to show the child items of a specific view or service, then add a shape data field of type **View** or **Element** to that same shape. In that field, you can then explicitly specify the view or the service of which the shape has to show all child items.
+  > - A **Children** shape can contain another **Children** shape. That way, you can dynamically generate e.g. shapes that represent all subviews in a view, as well as shapes that represent all items in those subviews.
+  > - With the DataMiner Cube user setting *Maximum number of child shapes in a 'Children' container shape*, you can control the maximum number of Visio shapes allowed in a **Children** container shape. Default: 100. See [Visual Overview settings](xref:User_settings#visual-overview-settings).
 
 - **ChildrenOptions**: In this optional shape data field, you can specify the following options:
 
-  | Value | Description |
-  | ----- | ----------- |
-  | LazyLoading | If the child shapes will be generated in a scrollable container shape (stack panel, wrap panel, etc.), use this option to configure lazy loading. Though the child shapes will then be generated immediately, they will only be initialized the moment they come into view. |
-  | Recursive | Also generate a shape for every view, element and service in all subviews and subservices of the view to which the drawing is linked. |
-  | ShowHiddenElements | From DataMiner 9.0.0 CU16/DataMiner 9.5.3 onwards, by default no shapes are displayed for hidden elements. To override this behavior, specify this option. |
+  - **LazyLoading**: If the child shapes will be generated in a scrollable container shape (stack panel, wrap panel, etc.), use this option to configure lazy loading. Though the child shapes will then be generated immediately, they will only be initialized the moment they come into view.
+
+  - **Recursive**: Also generate a shape for every view, element, and service in all subviews and subservices of the view to which the drawing is linked.
+
+  - **ShowHiddenElements**: By default, no shapes are displayed for hidden elements. To override this behavior, specify this option.
 
   > [!NOTE]
-  > When using the "Recursive" option, keep in mind that elements in services are always skipped.
-  > This is to prevent generating shapes for elements of which only certain parameters are included in the service. If shapes were generated for such elements, we would risk showing alarm states of parameters that are not included in a service.
+  > When using the "Recursive" option, keep in mind that elements in services are always skipped. This is to prevent generating shapes for elements of which only certain parameters are included in the service. If shapes were generated for such elements, we would risk showing alarm states of parameters that are not included in a service.
 
 - **ChildrenSort**: In this optional shape data field, you can specify how the different child item shapes should be sorted:
 
@@ -156,7 +155,7 @@ The following shape data fields can be added to the group containing the shapes 
   - Sort by severity, descending: `Severity,desc`
   - Sort by property "MyProperty", ascending: `Property|MyProperty,asc`
 
-  Alternatively, from DataMiner 9.0.5 onwards, for shapes that are automatically generated to represent alarms, you can specify the name of any Alarm Console column as the value to sort the shapes. Like in the Alarm Console, the shapes will then first be sorted by the specified column, and then by time. For example, if you add a shape data field of type **ChildrenSort**, and configure the following value, the shapes will be sorted by element name in descending order (i.e. Z to A): `Element Name, desc`
+  Alternatively, for shapes that are automatically generated to represent alarms, you can specify the name of any Alarm Console column as the value to sort the shapes. Like in the Alarm Console, the shapes will then first be sorted by the specified column, and then by time. For example, if you add a shape data field of type **ChildrenSort**, and configure the following value, the shapes will be sorted by element name in descending order (i.e. Z to A): `Element Name, desc`
 
   > [!NOTE]
   > From DataMiner 10.2.0/10.1.1 onwards, placeholders such as \[var:VariableName\] can be used in **ChildrenSort** shape data. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).

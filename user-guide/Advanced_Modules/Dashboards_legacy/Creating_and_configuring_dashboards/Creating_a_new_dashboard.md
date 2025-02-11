@@ -5,15 +5,15 @@ uid: Creating_a_new_dashboard
 # Creating a new dashboard
 
 > [!IMPORTANT]
-> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). For more information on the Dashboards web app available from DataMiner 9.6.9 onwards, see [Dashboards app](xref:newR_D).
+> This information is applicable to the DMS Dashboards module, which is being retired as of DataMiner version 10.4.x. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement). We recommend using the [Dashboards app](xref:newR_D) instead.
 
 To create a new dashboard in the *Dashboards* app:
 
 1. Click the *New Dashboard* button. A new dashboard will be added to the list.
 
-2. Next to *Title*, fill in a title for the dashboard.
+1. Next to *Title*, fill in a title for the dashboard.
 
-3. The following configuration options are also available:
+1. The following configuration options are also available:
 
     - Click the *...* button next to *Theme* to change the theme for the dashboard. This theme can be overruled by a personal theme.
 
@@ -26,7 +26,7 @@ To create a new dashboard in the *Dashboards* app:
         > [!NOTE]
         > Be careful when changing the layout of an existing dashboard. Components could be deleted as a result of your changes.
 
-4. At this point, there are two possibilities to save the dashboard:
+1. At this point, there are two possibilities to save the dashboard:
 
     - If you want to configure the components of the dashboard later, click *Save Configuration*. To edit the dashboard later, click the pencil icon in the dashboard list.
 

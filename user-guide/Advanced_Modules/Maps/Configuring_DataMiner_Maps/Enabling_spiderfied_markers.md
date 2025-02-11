@@ -4,22 +4,19 @@ uid: Enabling_spiderfied_markers
 
 # Enabling spiderfied markers
 
-From DataMiner 9.5.1 onwards, to make sure you can still see each individual marker in case several markers are very close together on a map, markers can be “spiderfied” into a circle or spiral, depending on the number of markers.
+To make sure you can still see each individual marker in case several markers are very close together on a map, markers can be "spiderfied" into a circle or spiral, depending on the number of markers.
 
-To enable the spiderfier, in the *\<MapConfig>* tag of the map configuration file, add the *\<SpiderfiedMarkers>* tag and configure it as follows:
+To enable the spiderfier, in the `<MapConfig>` tag of the map configuration file, add the `<SpiderfiedMarkers>` tag and configure it with the following attributes:
 
-| Attribute              | Description                                                                                                                                                                                                                                     |
-|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| enable                 | Possible values: *true* or *false*.<br> When set to *true*, the spiderfier is enabled.                                                                         |
-| nearbyDistance         | The pixel radius within which a marker is considered to be overlapping with a clicked marker.<br> Default value: 20.                                                                                                                            |
-| circleSpiralSwitchover | The lowest number of markers that will be fanned out into a spiral instead of a circle. Set this to 0 to always use spirals, or to a very large number to always use circles. <br> Default value: 9.                                            |
-| legWeight              | Determines the thickness of the lines joining spiderfied markers to their original locations.<br> Default value: 1.5.                                                                                                                           |
-| circlefootseparation   | The pixel distance between each marker in a circle shape. Available from DataMiner 9.5.4 onwards.<br> Default value: 27 px                                                                                                                      |
-| spirallengthstart      | The initial length of the spiral legs when the number of markers is greater than the value specified in the *circleSpiralSwitchOver* attribute. Available from DataMiner 9.5.4 onwards.<br> Default value: 17 px |
-
-
+- **enable**: Possible values: *true* or *false*. When set to *true*, the spiderfier is enabled.
+- **nearbyDistance**: The pixel radius within which a marker is considered to be overlapping with a clicked marker. Default value: 20.
+- **circleSpiralSwitchover**: The lowest number of markers that will be fanned out into a spiral instead of a circle. Set this to 0 to always use spirals, or to a very large number to always use circles. Default value: 9.
+- **legWeight**: Determines the thickness of the lines joining spiderfied markers to their original locations. Default value: 1.5.
+- **circlefootseparation**: The pixel distance between each marker in a circle shape. Default value: 27 px.
+- **spirallengthstart**: The initial length of the spiral legs when the number of markers is greater than the value specified in the *circleSpiralSwitchOver* attribute. Default value: 17 px.
 
 > [!NOTE]
+>
 > - If an attribute is not specified, the default value will be applied.
 > - For clustered markers, the *SpiderfyOnClick* attribute can be used. See [Attributes of the \<ClusteredMarkers> tag](xref:Grouping_markers_in_one_clustered_marker#attributes-of-the-clusteredmarkers-tag).
 
@@ -36,9 +33,9 @@ Example:
 
 ## Defining spiderfied markers per layer
 
-From DataMiner 9.5.5 onwards, it is possible to define spiderfied markers at layer level.
+Spiderfied markers can also be defined on layer level. To do so, add a `SpiderfiedMarkers` tag on layer level.
 
-To do so, add a SpiderfiedMarkers tag at layer level. However, note that only the circlefootseparation value and spirallengthstart value can be defined at this level, overriding the circlefootseparation value and spirallengthstart value defined in the SpiderfiedMarkers tag of the MapConfig.
+However, note that only the *circlefootseparation* value and *spirallengthstart* value can be defined on this level, overriding the *circlefootseparation* value and *spirallengthstart* value defined in the `SpiderfiedMarkers` tag of the MapConfig.
 
 Example:
 

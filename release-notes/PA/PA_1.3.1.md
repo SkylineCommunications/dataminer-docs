@@ -9,7 +9,7 @@ uid: PA_1.3.1
 
 ## New features
 
-#### Support for callback mechanism using DOM to transfer data between activities [ID_35671]
+#### Support for callback mechanism using DOM to transfer data between activities [ID 35671]
 
 Process Automation now supports the use of DOM to execute an activity task asynchronously by means of a callback mechanism. The new *UpdateDomInstance* method can be used for this. It allows you to update a DOM instance with a Profile-Load Script before exiting the script.
 
@@ -69,7 +69,7 @@ catch (Exception ex)
 }
 ```
 
-#### Support for configuring Max Time In Queue, Preemptive, and Priority settings for token that gets pushed into process [ID_35814]
+#### Support for configuring Max Time In Queue, Preemptive, and Priority settings for token that gets pushed into process [ID 35814]
 
 A new overload method, *PushToken*, is now available, which allows you to define the settings Max Time In Queue, Preemptive, and Priority for a token when this token gets pushed into a process. These settings are defined using the class *PushPaTokenSettings*. In case Max Time In Queue or Priority are set to zero, the default values will be used.
 
@@ -81,7 +81,7 @@ The *PushToken* method without a DOM instance ID has also been removed, as this 
 
 ### Enhancements
 
-#### Assigning tasks to a specific user or group [ID_35082]
+#### Assigning tasks to a specific user or group [ID 35082]
 
 While up to now Process Automation created user tasks without assigning them to specific users, now you can configure a process definition so that tasks are assigned or reassigned to a user or a group of users when they are created.
 
@@ -90,19 +90,19 @@ During the configuration of a process definition,you can select a Process DOM fi
 > [!NOTE]
 > This is the first step towards being able to assign user tasks to specific users or groups. For now, nothing is done with the user or user group info yet.
 
-#### Improved handling of gateway queue tokens [ID_35403]
+#### Improved handling of gateway queue tokens [ID 35403]
 
 The way gateway queues are processed has been improved to avoid a possible bottleneck in the handling of gateway queue tokens.
 
 A token for a gateway queue (except for a merge gateway) will now be handled immediately and passed to the next queue. For a merge gateway, the token will be created in the InQueue state with the waiting flag set to true if the merge is not complete.
 
-#### Skyline Queue Manager no longer sends message to itself when forwarding tokens [ID_35577]
+#### Skyline Queue Manager no longer sends message to itself when forwarding tokens [ID 35577]
 
 The *Skyline Queue Manager* connector has been adjusted so that it no longer sends a message to itself when forwarding tokens, and it adds the token directly to the database. This will improve the performance of the connector.
 
 ### Fixes
 
-#### No tokens processed if more tokens were in queue than the Concurrent Tasks parameter value [ID_35437]
+#### No tokens processed if more tokens were in queue than the Concurrent Tasks parameter value [ID 35437]
 
 If a queue had more tokens with the *InQueue* status than the number indicated by the *Concurrent Tasks* parameter, it could occur that no more tokens were processed.
 

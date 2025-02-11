@@ -20,4 +20,4 @@ Element "x", a "derived element" (i.e. a virtual element in a redundancy group),
 
 ## Resolution
 
-Check whether the correct tags were specified in the *element.xml* file of element "x".
+Check whether the settings of element "x" are correct.

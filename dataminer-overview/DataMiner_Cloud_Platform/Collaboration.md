@@ -24,7 +24,7 @@ uid: Overview_Collaboration
 
 ## Remote Access
 
-**Remote Access** consisting of **Remote app access** and **Remote Cube access** *(coming soon)* gives you the ability to access your environment from anywhere. Via Remote app access (HTML), accessible on dataminer.services, you can go to all the low-code apps created in your environment. Especially handy is the Monitoring app: a lightweight version of Cube. In addition to this, Remote Cube access *(coming soon)* is also on the horizon and will allow secure and effortless remote access to your entire Cube environment without the need for a VPN connection.
+**Remote Access**, consisting of **remote web app access**, **remote Cube access**, and **remote User-Defined API access**, gives you the ability to access your environment from anywhere. Via remote web app access (HTML), accessible on dataminer.services, you can go to all the low-code apps created in your environment. Especially handy is the Monitoring app: a lightweight version of Cube. In addition to this, remote Cube access allows secure and effortless remote access to your entire Cube environment without the need for a VPN connection.
 
 > [!TIP]
 > See also:

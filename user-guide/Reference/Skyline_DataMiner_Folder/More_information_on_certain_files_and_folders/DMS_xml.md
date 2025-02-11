@@ -18,9 +18,6 @@ Example:
 </DMS>
 ```
 
-> [!NOTE]
-> From DataMiner 10.2.0/10.1.6 onwards, the use of hostnames instead of IP addresses is supported in DMS.xml.
-
 > [!IMPORTANT]
 > Only some of the tags of DMS.xml are explained on this page, because the configuration in this file should ideally only ever be modified through DataMiner Cube (mainly via System Center > *Agents*).
 

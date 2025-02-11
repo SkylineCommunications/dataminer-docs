@@ -44,6 +44,8 @@
         "files": [
           "dataminer-overview/**.md",
           "dataminer-overview/**/toc.yml",
+          "solutions/**.md",
+          "solutions/**/toc.yml",
           "user-guide/**.md",
           "user-guide/**/toc.yml",
           "release-notes/**.md",
@@ -73,6 +75,7 @@
         "files": [
           "images/**",
           "dataminer-overview/images/**",
+          "solutions/images/**",
           "user-guide/images/**",
           "release-notes/images/**",
           "develop/images/**",
@@ -89,16 +92,19 @@
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
-      "_appFooter": "© Skyline Communications 2024",
+      "_appFooter": "© Skyline Communications 2025",
       "_enableSearch": false,
       "_enableNewTab": true,
 	  "_googleAnalyticsTagId": "GTM-WD3NQGN"
     },
     "globalMetadataFiles": [],
+    "fileMetadata": {
+      "_noindex": { "404.html": true }
+    },
     "fileMetadataFiles": [],
     "template": [
       "default",
-	  "modern",
+	    "modern",
       "templates/skyline"
     ],
     "markdownEngineName": "markdig",

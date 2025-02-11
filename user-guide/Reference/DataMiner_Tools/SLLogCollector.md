@@ -1,14 +1,15 @@
 ---
 uid: SLLogCollector
+description: SLLogCollector is available by default on each DataMiner Agent, allowing easy log and memory dump collection to troubleshoot DataMiner issues.
 ---
 
 # SLLogCollector
 
 SLLogCollector is a tool that can be used to easily collect log information and memory dumps from a DataMiner Agent. Log collection can be very useful to troubleshoot issues in DataMiner.
 
-This log collector tool is available on every DMA from DataMiner 10.0.5 onwards. It is located in the folder `C:\Skyline DataMiner\Tools\SLLogCollector`.
+This log collector tool is available on every DMA in the folder `C:\Skyline DataMiner\Tools\SLLogCollector`.
 
-From DataMiner 9.6.0 \[CU23\], 10.0.0 \[CU13\], 10.1.0 \[CU2\] and 10.1.5 onwards, you can also access SLLogCollector from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector.*
+From DataMiner 10.1.0 \[CU2\]/10.1.5 onwards, you can also access SLLogCollector from the shortcut menu of the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). To do so, right-click the taskbar utility icon and select *Launch* > *Tools* > *Log Collector*.
 
 If SLLogCollector is not installed on your DataMiner Agent, you can download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
 
@@ -16,6 +17,7 @@ If SLLogCollector is not installed on your DataMiner Agent, you can download it 
 >
 > - This tool requires .Net Framework 4.8 or higher.<!-- RN 38966 -->
 > - If our tech support team has requested that you run this tool, they will also provide a link to a secure SharePoint site where you can upload the resulting package.
+> - From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40815-->, you can no longer use the built-in Windows file archiver to open and extract the SLLogCollector archives. Use a third-party tool such as [7-Zip](https://www.7-zip.org/) instead.
 
 ## Running the tool
 
@@ -174,3 +176,61 @@ Collectors of type "Exe" can be used to run an executable file and store the out
 | Exe.Commands |  | Yes | The element containing all commands to be run. |
 | Exe.Commands.Command |  | Yes | The command to be run. |
 | Exe.Commands.Command@fileName | String | No | The name of the file in which the result has to be saved. Default: `<executable> <command>.txt` |
+
+## Troubleshooting
+
+In some cases, SLLogCollector can seem to get stuck when collecting files. This usually has one of the root causes detailed below.
+
+### Nodetool missing JAVA_HOME
+
+**Issue**: When nodetool cannot resolve a *JAVA_HOME* variable (either in the session or system-wide), it goes into an error mode without exiting, which can block SLLogCollector.
+
+**Symptoms**: In the *Details* window of the Windows Task Manager, there is a *cmd.exe* entry with the following string in the *Command line* column: `C:\WINDOWS\system32\cmd.exe /c ""C:\Program Files\Cassandra\bin\nodetool.bat" status"`
+
+**Workaround**: Either define *JAVA_HOME* in the environment variables of the PC, or replace `if NOT DEFINED JAVA_HOME goto :err` with `if NOT DEFINED JAVA_HOME set JAVA_HOME=C:\Program Files\Cassandra\Java` in *nodetool.bat*.
+
+**Solution**: Install DataMiner 10.3.0 [CU15], 10.4.0 [CU3], 10.4.6, or higher.<!-- RN 39409 -->
+
+### Large number of files
+
+**Issue**: When certain folders, e.g. the SRM debug location or the Logging\FormatterExceptions folder, contain a large number of files, it can take a long time before SLLogCollector has managed to copy these over.
+
+**Symptoms**: One core of the CPU shows high usage. Under `C:\ProgramData\Skyline\DataMiner\SL_LogCollector\Temp_<guid>`, Files are slowly being added to the `\Logs\Skyline DataMiner\Logging\FormatterExceptions` or `\Logs\Skyline DataMiner\SRM...` folder.
+
+**Workaround**: Manually clean up folders that contain an excessive number of files.
+
+<!-- **Solution**: TBD - RN 39894 -->
+
+### HTTP request timeouts
+
+**Issue**: In case of a large database cluster (usually OpenSearch or Elasticsearch), SLLogCollector takes a long time to cycle through every combination of IP/Request/Endpoint. Each of these can take up to 5 minutes.
+
+**Symptoms**: After you have waited 5 minutes, the SLLogCollector logging shows warnings containing URLs.
+
+**Workaround**: Remove the corresponding HTTP collector from the SLLogCollector default config:
+
+1. Open the file `C:\Skyline DataMiner\Tools\SLLogCollector\LogConfigs\default.xml` in a code editor (e.g. Notepad++).
+
+1. Search for the `<Http name="ElasticApi">` tag.
+
+1. Remove the content starting from that tag up to and including the closing `<\Http>` tag.
+
+1. Save the file and restart SLLogCollector.
+
+<!-- **Solution**: TBD - task 241544 -->
+
+### Other issues
+
+If SLLogCollector seems stuck, but none of the issues mentioned above apply for your situation, follow the steps below to gather information so we can investigate the issue:
+
+1. Open a command prompt as administrator.
+
+1. Enter the following command to navigate to the Procdump folder: `cd C:\Skyline DataMiner\Tools\Procdump`.
+
+1. Enter the following command to create a dump file: `procdump -ma <PID of SL_LogCollector>`.
+
+   In the command above, replace `<PID of SL_LogCollector>` with the PID indicated in the *PID* column for *SL_LogCollector* in the *Details* tab of the Windows Task Manager.
+
+   The resulting file will be placed in the folder `C:\Skyline DataMiner\Tools\Procdump\`.
+
+1. Send the resulting .dmp file to <techsupport@skyline.be>.

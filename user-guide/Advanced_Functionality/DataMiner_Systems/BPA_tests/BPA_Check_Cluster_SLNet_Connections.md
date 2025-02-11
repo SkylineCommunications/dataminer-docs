@@ -2,7 +2,9 @@
 uid: BPA_Check_Cluster_SLNet_Connections
 ---
 
-# Check Cluster SLNet Connections
+# SLNet connections between the DataMiner Agents
+
+Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "Check Cluster SLNet Connections".
 
 This BPA test is executed across the cluster. It will trigger a local test on each DMA that can be reached from the DMA initiating the BPA test, to check the connections between the DMAs. It is important to know if there are issues with these connections, as they are used for communication between DMAs. The BPA will indicate if there are potential problems.
 
@@ -10,7 +12,7 @@ This BPA test is available from DataMiner 10.3.0 [CU11]<!-- RN 38201 -->/10.4.1<
 
 ## Metadata
 
-- Name: Check Cluster SLNet Connections
+- Name: SLNet connections between the DataMiner Agents
 - Description: Will run a test on each DMA to make each DMA check its own SLNet connections. Will also check if the DMA is part of a Failover pair.
 - Author: Skyline Communications
 - Default schedule: Every day
@@ -19,7 +21,11 @@ This BPA test is available from DataMiner 10.3.0 [CU11]<!-- RN 38201 -->/10.4.1<
 
 ### Success
 
-Test succeeded: From this point of view, all SLNet connections and connections between Failover pairs (if applicable) look good.
+These are the messages that can appear when the test is successful:
+
+- Test succeeded: From this point of view, all SLNet connections and connections between Failover pairs (if applicable) look good.
+
+- No issues detected: No issues with the connections between DMAs were found. Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this message appears as "No potential issues detected".
 
 ### Error
 

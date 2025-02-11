@@ -16,6 +16,6 @@ Use this method to retrieve a specific job.
 
 ## Output
 
-| Item         | Format                                       | Description        |
-|--------------|----------------------------------------------|--------------------|
+| Item         | Format                | Description        |
+|--------------|-----------------------|--------------------|
 | GetJobResult | [DMAJob](xref:DMAJob) | The requested job. |

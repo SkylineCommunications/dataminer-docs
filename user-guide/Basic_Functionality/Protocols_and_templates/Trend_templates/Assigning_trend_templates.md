@@ -4,33 +4,39 @@ uid: Assigning_trend_templates
 
 # Assigning trend templates
 
-You can either assign a trend template to an item with the Surveyor right-click menu, or in the Protocols & Templates module.
+There multiple different ways to assign a trend template.
 
-In the Surveyor:
+In the **Surveyor**:
 
-1. Right-click the item to which you want to assign a trend template and click *Edit*.
+1. Right-click the item in the Surveyor.
 
-2. In the *Edit* tab, go to *Device Details*.
+1. In the context menu, select *Protocols & Templates* > *Assign trend template*, and then select the trend template you want to assign.
 
-3. Select the trend template in the *Trend Template* selection box.
+1. In the confirmation box, click *Yes*.
 
-4. Click *Apply*.
+By **editing** the item:
 
-> [!NOTE]
-> From DataMiner 9.0.5 onwards, to quickly access the Protocols & Templates module from the Surveyor, right-click an element or enhanced service, and select *Protocols & Templates*. This opens a submenu where you can open the current template, assign a different template or view all available templates.
+1. Either right-click the item in the Surveyor, or click the hamburger button in the top-left corner of the item's card, and select *Edit*.
 
-In the Protocols & Templates module:
+1. In the *Edit* tab, go to the *Device Details* section.
+
+1. Select the trend template in the *Trend Template* selection box.
+
+1. Click *Apply*.
+
+In the **Protocols & Templates** module:
 
 1. Select the protocol and protocol version
 
-2. In the *Trend* section, select the trend template.
+1. In the *Trend* section, select the trend template.
 
-3. Right-click in the *Elements* section and select *Assign Template*. Alternatively, from DataMiner 9.0.5 onwards, you can also click the *Assign elements* button at the top of this section.
+1. Right-click in the *Elements* section and select *Assign Template*.
 
-4. In the *Assign template* window, use the *Add \>\>* and *\<\< Remove* buttons to assign the template to particular items.
+1. In the *Assign template* window, use the *Add \>\>* and *\<\< Remove* buttons to assign the template to particular items.
 
-    All items in the column on the right have been assigned this trend template.
+   All items in the column on the right have been assigned this trend template.
 
 > [!NOTE]
+>
 > - Right-click an item in the Protocols & Templates module and select *Remove* to quickly remove a trend template from an item.
 > - Assigning templates is also possible via the *elements* tab of the Protocols & Templates module. See [Working with the elements tab](xref:Working_with_the_elements_tab).

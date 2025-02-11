@@ -6,6 +6,8 @@ uid: Using_CSharp_code_in_Automation_scripts
 
 Using C# code in Automation scripts offers improved flexibility and extended possibilities for the Automation Engine.
 
+![C# code](~/user-guide/images/CSharp.png)<br>*C# code in Automation script in DataMiner 10.4.5*
+
 The following sections provide more information on using C# code in DataMiner Automation:
 
 - [Adding C# code to an Automation script](xref:Adding_CSharp_code_to_an_Automation_script)

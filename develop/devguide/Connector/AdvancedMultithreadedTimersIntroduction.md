@@ -22,7 +22,7 @@ To define a multi-threaded timer, the "ip", "each" and "threadPool" options need
 - The first part of the "ip" option defines the ID of the table that contains the rows the multi-threaded timer needs to process. The second part defines the 0-based column index that either contains the IP address or the primary key (depending on whether you want to perform a ping operation or execute a QAction).
 - The "each" option specifies the period (in ms) that each row should be executed in the table.
 - The "threadPool" option defines, among other things, the size of the thread pool.
-- For an overview of all the available options of a multi-threaded timer, see Options.
+- For an overview of all the available options of a multi-threaded timer, see [Timer options](xref:LogicTimersTimerOptions).
 
 Finally, a multi-threaded timer needs to contain a group of type "poll".
 
@@ -71,7 +71,7 @@ The items in the selected buckets are then added to a queue representing all ite
 
 The following figure illustrates how table rows get partitioned and assigned to a bucket. These buckets then get added to the processing queue.
 
-![alt text](../../images/Multi-threaded_timers_conceptual.svg "Multi-threaded timers")
+![alt text](~/develop/images/Multi-threaded_timers_conceptual.svg "Multi-threaded timers")
 
 Threads of the thread pool will then process the items in the queue. (The items in the queue denote the primary key of the row to process.)
 
@@ -85,7 +85,7 @@ The thread will perform the following steps to process a row:
    - The cell referred to in the "ip" option
    - The cell referred to in the "ignoreIf" option
    - The cell referred to in the "instance" option
-   - If the Group uses the `col:<columnIdx>:<defaultGroupId>`, notation, the value of the referred column for the row is retrieved. (For more information about this notation, see Timer.Content.Group.)
+   - If the Group uses the `col:<columnIdx>:<defaultGroupId>`, notation, the value of the referred column for the row is retrieved. (For more information about this notation, see [Timer.Content.Group](xref:AdvancedMultiThreadedTimersIntroduction#timercontentgroup).)
 1. If the Group uses the `col:<columnIdx>:<defaultGroupId>`, notation and the cell refers to a group, this group is loaded.
 1. If the "qactionBefore" option is used, the referred QAction is executed.
    > [!NOTE]
@@ -93,7 +93,7 @@ The thread will perform the following steps to process a row:
 1. If the "ignoreIf" option is used, and the ignore condition matches (i.e. the cell value matches the specified value in the "ignoreIf" option, or the cell is not initialized), no request will be performed and the QAction to process the response will also not be executed. Execution will jump to executing the QActions defined in the "qactionAfter" option.
 1. If the "ping" option is used, the ping is executed.
 
-   If the ping succeeded, or the "continueSnmpOnTimeout" option is set to "true", the request will be executed in the next step. Otherwise, no request will be executed. However, the QAction to process the response result will be executed where the result will now mention "NO POLLING OCCURRED" and the error will denote "PING FAILED". (For information on all configuration options, see ping).
+   If the ping succeeded, or the "continueSnmpOnTimeout" option is set to "true", the request will be executed in the next step. Otherwise, no request will be executed. However, the QAction to process the response result will be executed where the result will now mention "NO POLLING OCCURRED" and the error will denote "PING FAILED". (For information on all configuration options, see [ping](xref:LogicTimersTimerOptions#ping)).
 1. Depending on the type of the connection that is defined for the group (this is either by default the main connection, or a connection defined in the Group@connection attribute):
    - For serial (single) or HTTP connections, the content returned by the QAction referred to by the "qactionBefore" option is used to perform a protocol notify call that will execute the request (via the SLPort process).
    - For SNMP connections, a raw SNMP get is performed using the contents of the group (via the SLSNMPManager process).
@@ -132,7 +132,7 @@ Often, a QAction is used to perform some additional logic. This is then done by 
 
 The following figure illustrates the general concept for SNMP:
 
-![alt text](../../images/Multi-threaded_timers_SNMP.svg "Multi-threaded timers – SNMP")
+![alt text](~/develop/images/Multi-threaded_timers_SNMP.svg "Multi-threaded timers – SNMP")
 
 For serial and HTTP requests, the request is constructed in a QAction referred to by the '"qactionBefore" attribute. The group mentioned referred to by the multi-threaded timer is then empty:
 
@@ -168,7 +168,7 @@ Finally, a QAction can be used to perform some additional logic. This is then do
 
 The following figure illustrates the general concept for serial and HTTP:
 
-![alt text](../../images/Multi-threaded_timers_serial_and_HTTP.svg "Multi-threaded timers – serial and HTTP")
+![alt text](~/develop/images/Multi-threaded_timers_serial_and_HTTP.svg "Multi-threaded timers – serial and HTTP")
 
 Please note the following:
 
@@ -197,7 +197,7 @@ Please note the following:
 
 The following graph illustrates the row processing. At time 0, threads from the thread pool are used to process queued items until all items in the queue are processed. DataMiner then waits until the Timer.Time has passed before starting the processing of the next batch of items (2s in this example).
 
-![alt text](../../images/multi-threaded_timer_graph.png "Processing of a chunk of rows over time")
+![alt text](~/develop/images/multi-threaded_timer_graph.png "Processing of a chunk of rows over time")
 
 The pollingRate option can be used to spread the execution of the rows in each chunk.
 
@@ -205,7 +205,7 @@ Suppose a table contains 10 000 rows and the "each" option is set to 100 000 ms;
 
 The "pollingrate" option ensures that the processing of these rows is more equally spread over time. This is done by using a counting semaphore that limits the number of threads that can be used simultaneously.
 
-For example, “pollingRate:15,3,3” means that a counting semaphore with max count of 3 will be used, which will release at most 3 threads every 15 ms. For more information about this option, see pollingRate.
+For example, “pollingRate:15,3,3” means that a counting semaphore with max count of 3 will be used, which will release at most 3 threads every 15 ms. For more information about this option, see [pollingRate](xref:LogicTimersTimerOptions#pollingrate).
 
 > [!CAUTION]
 > Proper configuration of a multi-threaded timer is very important, as it can have a major impact on CPU usage.

@@ -39,7 +39,7 @@ A descriptive name can be provided using the [name](xref:Protocol.QActions.QActi
 
 The [encoding](xref:Protocol.QActions.QAction-encoding) attribute defines the language in which the QAction is written (this value is set to "csharp" for QActions written in C#).
 
-The triggers attribute indicates the ID(s) of the parameter(s) that trigger the QAction. A QAction is executed on a change event of one of these parameters. (For more information about change events, see [Executing a QAction](xref:LogicQActions#executing-a-qaction).)
+The [triggers](xref:Protocol.QActions.QAction-triggers) attribute indicates the ID(s) of the parameter(s) that trigger the QAction. A QAction is executed on a change event of one of these parameters. (For more information about change events, see [Executing a QAction](xref:LogicQActions#executing-a-qaction).)
 
 The default entry point of the QAction is the static Run method of the QAction class. The entry point method has a parameter of type [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol), which serves as the link with the SLProtocol process (the QAction is executed by the SLScripting process).
 
@@ -50,6 +50,7 @@ The Run method in the example above increments the execution count and writes th
 > - To access the log files of an element in DataMiner Cube, right-click the element in the Surveyor and select View > Log or click the apps button in the Cube navigation pane and select System Center > Logging > Elements and select the element.
 > - For a complete overview of the SLProtocol interface, see [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface. It is also possible to use the SLProtocolExt interface (see [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt) interface). This is an extension of the SLProtocol interface, which makes it possible to write more readable code.
 > - The following example protocols are available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/):
+>
 >   - SLC SDF QActions - Column Manipulation
 >   - SLC SDF QActions - Triggering
 
@@ -64,14 +65,14 @@ The QAction DLLs are stored in the directory `C:\Skyline DataMiner\ProtocolScrip
 
 > [!NOTE]
 >
-> - From DataMiner 9.6.11 (RN 23095) onwards, DataMiner uses the .NET Compiler Platform (version 2.9) to compile QActions, allowing the use of C# syntax up to and including version 7.3.
+> - DataMiner uses the .NET Compiler Platform (version 2.9) to compile QActions, allowing the use of C# syntax up to and including version 7.3.<!-- RN 23095 -->
 > - DataMiner detects the most recent version of the .NET Framework that is installed and uses this version in the SLScripting process. The compiled QActions will then target this version of the .NET Framework.
 
 ### Preprocessor directives
 
 DataMiner compiles QActions with the following preprocessor directives:
 
-- **DCFv1**: From DataMiner 8.5.8 onwards (RN 10061), this preprocessor directive ("#define DCFv1") is automatically added when a QAction is compiled.
+- **DCFv1**: This preprocessor directive ("#define DCFv1") is automatically added when a QAction is compiled.<!-- RN 10061 -->
 
    In QActions, all DCF-related code can then be enclosed within the following preprocessor directives:
 
@@ -81,7 +82,8 @@ DataMiner compiles QActions with the following preprocessor directives:
    #endif
    ```
 
-- **DBInfo**: From DataMiner 9.0.0 onwards (RN 10395), this preprocessor directive ("#define DBInfo") is automatically added when a QAction is compiled. The presence of this directive indicates that the GetLocalDatabaseType method (SLProtocol), which was introduced in the same DataMiner version, can be used to get the type of the local database.
+- **DBInfo**: This preprocessor directive ("#define DBInfo") is automatically added when a QAction is compiled.<!-- RN 10395 --> The presence of this directive indicates that the GetLocalDatabaseType method (SLProtocol), which was introduced in the same DataMiner version, can be used to get the type of the local database.
+
    Before this method call was used, it was good practice to use "#if DBInfo" in order to check whether the method is supported on the DataMiner Agent. However, since the minimum supported DataMiner version now already supports this method, enclosing the call as illustrated below is no longer required. For example:
 
    ```csharp
@@ -93,7 +95,7 @@ DataMiner compiles QActions with the following preprocessor directives:
    #endif
    ```
 
-- **ALARM_SQUASHING**: From DataMiner 10.1.6 onwards (RN 29549), this preprocessor directive ("#define ALARM_SQUASHING") is automatically added when a QAction is compiled.
+- **ALARM_SQUASHING**: This preprocessor directive ("#define ALARM_SQUASHING") is automatically added when a QAction is compiled.<!-- RN 29549 -->
 
    In QActions, all code related to alarm squashing (i.e. the combination of consecutive alarm events without a severity change into a single consolidated event) should be enclosed as illustrated below, to allow protocols that contain alarm squashing functionality to also be compiled on DataMiner versions that do not support alarm squashing:
 
@@ -154,7 +156,7 @@ In case you only want to keep track of the execution count on a per element basi
 
 ### Instance entry methods
 
-From DataMiner 7.5.6.2 (RN 5481) onwards, it is possible to use instance entry methods in QActions. To obtain this behavior, define the entry method as an instance method (by removing the keyword "static" of the Run method and on the QAction class).
+To use instance entry methods in QActions, define the entry method as an instance method (by removing the keyword "static" of the Run method and on the QAction class).<!-- RN 5481 -->
 
 In the QAction class, you can now define instance fields, which are available in the instance entry method.
 
@@ -184,7 +186,7 @@ The following example will count the number of times the button has been pressed
 
 ### Multiple entry methods
 
-The Run method of the QAction class is the default entry point method of a QAction. Using the entryPoint attribute, a different entry point method can be defined for every parameter that triggers the QAction.
+The Run method of the QAction class is the default entry point method of a QAction. Using the [entryPoint](xref:Protocol.QActions.QAction-entryPoint) attribute, a different entry point method can be defined for every parameter that triggers the QAction.
 
 For example, in the following QAction two parameters can trigger a QAction. However, depending on which parameter triggered the QAction execution, another entry point method is selected.
 
@@ -230,6 +232,7 @@ A change event is initiated when:
 - a value is set to a parameter of type "write", even if the value is the same as the previous value
 - an action of type "run actions" is performed on a parameter
 - a parameter is set from a QAction using an instance of the SLProtocol(Ext) class, e.g. SetParameter
+
    > [!NOTE]
    > This will also trigger the QAction even if the set value is the same as the current value.
 
@@ -237,7 +240,7 @@ A change event is initiated when:
 
 Often, when data of a row changes in a table, a QAction must be executed to process the change.
 
-You can trigger on a row change by using the row attribute when defining a QAction, setting it to "true" and specifying a write column parameter:
+You can trigger on a row change by using the [row](xref:Protocol.QActions.QAction-row) attribute when defining a QAction, setting it to `true` and specifying a write column parameter:
 
 ```xml
 <QAction id="..." encoding="..." triggers="1052" row="true">
@@ -247,7 +250,7 @@ In the example above, the triggers attribute is set to the parameter ID of the w
 
 > [!NOTE]
 >
-> - From DataMiner 9.5.1 onwards, you can use a read column parameter as a trigger on a QAction with row=true option. Prior to DataMiner 9.5.1, triggering a QAction on a change of a particular read column is not possible. (RN 15040 & 15531)
+> - In recent DataMiner versions, you can use a read column parameter as a trigger on a QAction with row=true option. In legacy versions prior to DataMiner 9.5.1, triggering a QAction on a change of a particular read column is not possible.<!-- RN 15040 & 15531 -->
 > - For SNMP tables, it is also possible to provide the ID of a table parameter. In this case, the QAction will trigger every time a row has been updated.
 
 In a QAction, the following methods are available to retrieve information about the row that triggered the execution of the QAction:
@@ -267,7 +270,7 @@ In a QAction, the following methods are available to retrieve information about 
 Often, a QAction needs to retrieve parameter values from the SLProtocol process. There are two different ways to retrieve parameter values in a Quick Action:
 
 - By including the parameter IDs in the [inputParameters](xref:Protocol.QActions.QAction-inputParameters) attribute.
-- By retrieving the values via an instance of the SLProtocol or SLProtocolExt interface (e.g. by using the GetParameter method).
+- By retrieving the values via an instance of the SLProtocol or SLProtocolExt interface (e.g. by using the [GetParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameter(System.Int32)) method).
 
 Which approach should be used to retrieve data from the SLProtocol process depends on the situation:
 
@@ -290,7 +293,7 @@ Also keep in mind that DataMiner needs to convert the parameter to an object tha
 
 A reference to the input parameters can be obtained by providing an additional parameter of type object for each input parameter defined in the inputParameters attribute.
 
-In the example below, the values of parameters with ID 200 and 201 are passed to the Quick Action via the objects errors and timespan respectively.
+In the example below, the values of parameters with ID 200 and 201 are passed to the QAction via the objects errors and timespan respectively.
 
 ```xml
 <QAction id="100" name="Process Errors" encoding="csharp" triggers="100" inputParameters="200;201">
@@ -314,7 +317,7 @@ public static class QAction
 </QAction>
 ```
 
-Alternatively, the GetInputParameter method can be used:
+Alternatively, the [GetInputParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.GetInputParameter(System.Int32)) method can be used:
 
 ```xml
 <QAction id="100" name="Process Errors" encoding="csharp" triggers="100" inputParameters="200;201">
@@ -391,13 +394,13 @@ string errors = Convert.ToString(protocol.Errors);
 
 ## Using assemblies in QActions
 
-A QAction can make use of the functionality defined in an external DLL. In order to be able to use an external DLL, the DLL must be specified in the dllImport attribute of the QAction (see [dllImport](xref:Protocol.QActions.QAction-dllImport)).
+A QAction can make use of the functionality defined in an external DLL. In order to be able to use an external DLL, the DLL must be specified in the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute of the QAction.
 
 ```xml
 <QAction id="6" name="Process Response" encoding="csharp" triggers="6" dllImport="System.xml.dll">
 ```
 
-From DataMiner version 8.0.9 onwards, it is also possible to use [ProtocolName] and [ProtocolVersion] placeholders in the dllImport attribute. With these placeholders you can avoid having to update the references every time the protocol name or version is updated.
+It is also possible to use [ProtocolName] and [ProtocolVersion] placeholders in the `dllImport` attribute. With these placeholders you can avoid having to update the references every time the protocol name or version is updated.
 
 ```xml
 <QAction id="6" name="Process Response" encoding="csharp" triggers="6" dllImport="System.xml.dll;[ProtocolName].[ProtocolVersion].QAction.1.dll">
@@ -410,7 +413,7 @@ Referencing another QAction is mainly done in case the referenced QAction contai
 > [!NOTE]
 > The generic QAction typically will not be triggered by any parameters (i.e. there is no triggers attribute present for the QAction containing the generic code) and the QAction does not have an entry point method.
 
-The QAction that is referred to by another QAction must be compiled before the referring QAction is compiled. Therefore, QActions that are referred to by other QActions must use the "precompile" option (see [precompile](xref:Protocol.QActions.QAction-options)).
+The QAction that is referred to by another QAction must be compiled before the referring QAction is compiled. Therefore, QActions that are referred to by other QActions must use the [precompile](xref:Protocol.QActions.QAction-options#precompile) option.
 
 The following code fragment shows an example of a generic QAction that is used by another QAction. The generic QAction defines a data model class "Probe", which can then be used in the other QAction.
 
@@ -460,17 +463,17 @@ public static class QAction
 
 There is an important difference between QAction DLLs and third-party DLLs. When a protocol is updated, the QActions are recompiled and the new versions of these QActions are loaded in the application domain. The protocol will then start using these new versions of the QActions. This allows the editing of QActions of protocols without the need for a restart of the SLScripting process (which requires a DataMiner restart). Restarting the elements that run the protocol suffices to start using the edited QAction. This is not the case for third-party DLLs. Once loaded in the application domain, these cannot be unloaded, so a DataMiner restart is required in order to start using an edited third-party DLL.
 
-![alt text](../../images/QAction_loading_in_SLScripting.svg "QAction DLLs")
+![alt text](~/develop/images/QAction_loading_in_SLScripting.svg "QAction DLLs")
 
 ## Queued QActions
 
-A QAction can be defined with the option "queued". Using the option "queued", the QAction will be executed asynchronously: the QAction is triggered and set in the background. This means that it will not wait until it is finished before another QAction can run.
+A QAction can be defined with the option [queued](xref:Protocol.QActions.QAction-options#queued). Using the option `queued`, the QAction will be executed asynchronously: the QAction is triggered and set in the background. This means that it will not wait until it is finished before another QAction can run.
 
 This option should only be used if really needed and care must be taken during implementation. For example, make sure to implement locking when needed.
 
 ## Starting an Automation script from a QAction
 
-To start an Automation script from a QAction, the SLNet message "ExecuteScriptMessage" can be used. You can send this message using the ExecuteScript method on SLProtocol. This is introduced in DataMiner 10.0.5 (RN 24475).
+To start an Automation script from a QAction, the SLNet message "ExecuteScriptMessage" can be used. You can send this message using the [ExecuteScript](xref:Skyline.DataMiner.Scripting.SLProtocol.ExecuteScript(System.String)) method on SLProtocol.<!-- RN 24475 -->
 
 ```csharp
 public static void Run(SLProtocol protocol)

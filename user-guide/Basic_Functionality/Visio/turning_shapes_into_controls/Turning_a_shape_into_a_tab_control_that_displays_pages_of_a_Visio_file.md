@@ -4,7 +4,7 @@ uid: Turning_a_shape_into_a_tab_control_that_displays_pages_of_a_Visio_file
 
 # Turning a shape into a tab control that displays pages of a Visio file
 
-When a shape is linked to a view, a service or an element, it can be turned into a tab control that displays all pages or specific pages of the Visio drawing linked to that view, service or element.
+When a shape is linked to a view, a service, or an element, it can be turned into a tab control that displays all pages or specific pages of the Visio drawing linked to that view, service, or element.
 
 > [!TIP]
 >
@@ -21,7 +21,7 @@ If you want to apply the background of the shape to the tab control, add the opt
 InlineVdx|ApplyShapeBackground
 ```
 
-Aside from the default style, from DataMiner 9.5.14 onwards, an alternative style is possible for tab controls. To configure this alternative style, add the option "TabControlStyle=2".
+To configure an alternative style for the tab controls, add the option "TabControlStyle=2".
 
 ```txt
 InlineVdx|TabControlStyle=2
@@ -29,7 +29,7 @@ InlineVdx|TabControlStyle=2
 
 ## Configuring a tab control that displays specific pages of a Visio drawing
 
-Create a shape, add a shape data field to it of type **VdxPage** of which the value contains the list of pages to be visualized (separated by pipe characters).
+Create a shape, and add a shape data field to it of type **VdxPage** of which the value contains the list of pages to be visualized (separated by pipe characters).
 
 In the following example, the shape will contain a tab control with three tabs (showing Page1, Page2 and Page3):
 
@@ -49,11 +49,11 @@ To fine-tune the way the tab control is displayed, a number of options can be us
 
 - If you want the tab control to inherit the background color from the shape that contains it, you can add a shape data item of type **Options** to the shape, and set its value to "ApplyShapeBackground".
 
-- From DataMiner 9.6.4 onwards, an alternative style can be configured for the tab control. To configure this alternative style, add a shape data field of type **Options** and set its value to "TabControlStyle=2".
+- To configure an alternative style for the tab control, add a shape data field of type **Options** and set its value to "TabControlStyle=2".
 
   For example:
 
-  | Shape data field | Value                     |
-  | ---------------- | ------------------------- |
+  | Shape data field | Value                   |
+  |------------------|-------------------------|
   | VdxPage          | First-Page\|Second-Page |
-  | Options          | TabControlStyle=2         |
+  | Options          | TabControlStyle=2       |

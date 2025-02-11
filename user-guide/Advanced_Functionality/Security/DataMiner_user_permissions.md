@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_user_permissions
+description: With the user permissions in the Cube System Center, you can fine-tune which users and groups have access to specific DataMiner functionality.
 ---
 
 # DataMiner user permissions
@@ -22,8 +23,6 @@ Permission to access the Surveyor.
 
 This permission allows users to access data pages of cards.
 
-Prior to DataMiner 9.6.6, it allows users to access data pages of view cards.
-
 > [!NOTE]
 > As soon as this permission or the *View data overview available* permission is granted, the user will have access to data pages of view cards. To hide access to data pages of view cards, neither of these permissions should be granted.
 
@@ -31,21 +30,12 @@ Prior to DataMiner 9.6.6, it allows users to access data pages of view cards.
 
 Permission to access data pages of view cards.
 
-### General \> DataMiner web apps / DataMiner Cube mobile access
+### General \> DataMiner web apps
 
-The *DataMiner web apps* user permission (or *DataMiner Cube mobile access* prior to DataMiner 10.1.0 \[CU5\]/10.1.8) allows users to access the DataMiner web apps.
-
-This user permission is available from DataMiner 10.1.0/10.1.2 onwards.
+Permission to access the DataMiner web apps.
 
 >[!NOTE]
 > To access the Monitoring app, from DataMiner 10.2.0/10.2.2 onwards, the permission [Modules > Monitoring web app](#modules--monitoring-web-app) is needed.
-
-### General \> Element list available
-
-Permission to access Data pages of cards. This user permission is deprecated from DataMiner 9.6.6 onwards.
-
-> [!NOTE]
-> As soon as this permission or the *Data overview available* permission is granted, the user will have access to Data pages of view cards. To hide access to Data pages of view cards, neither of these permissions should be granted.
 
 ### General \> Elements
 
@@ -144,7 +134,7 @@ Permission to access the data pages of an element card.
 
 #### General \> Elements \> Data Display \> Device webpage access
 
-Available from DataMiner 9.5.7 onwards. Permission to access the webpage of the device in the data pages.
+Permission to access the webpage of the device in the data pages.
 
 #### General \> Elements \> Data Display \> View write parameters
 
@@ -168,10 +158,7 @@ Permission to update and delete protected spectrum analyzer presets.
 
 #### General \> Elements \> Data Display \> Spectrum \> Take device from other client
 
-Permission to terminate a spectrum client sessions of another user in order to start a session yourself, in case the maximum number of concurrent client sessions is limited.
-
->[!NOTE]
-> This feature is no longer available from DataMiner 9.6.0 onwards.
+Obsolete. The feature for which this user permission is applied is no longer available.
 
 #### General \> Elements \> Data Display \> Spectrum \> Take priority over monitors
 
@@ -325,6 +312,10 @@ Permission to edit audio files that can be used for audible alerts.
 
 Permission to delete audio files that can be used for audible alerts.
 
+#### General \> Alarms \> Allow to add or update hyperlinks
+
+Available from DataMiner 10.2.6/10.3.0 onwards. Permission to ad or update custom commands in the Alarm Console context menu.
+
 ### General \> Workspaces
 
 #### General \> Workspaces \> Add
@@ -476,23 +467,23 @@ Permission to execute Automation scripts.
 
 #### Modules \> Bookings \> UI available
 
-Available from DataMiner 9.6.7 onwards. Permission to access the *Bookings* module. Prior to DataMiner 9.6.7, this module is called the *Reservations* module.
+Permission to access the *Bookings* module.
 
 #### Modules \> Bookings \> Add
 
-Available from DataMiner 9.6.7 onwards. Permission to add bookings.
+Permission to add bookings.
 
 #### Modules \> Bookings \> Edit
 
-Available from DataMiner 9.6.7 onwards. Permission to edit bookings.
+Permission to edit bookings.
 
 #### Modules \> Bookings \> Delete
 
-Available from DataMiner 9.6.7 onwards. Permission to delete bookings.
+Permission to delete bookings.
 
 #### Modules \> Bookings \> Execute
 
-Available from DataMiner 9.6.7 onwards. Permission to execute Automation scripts or parameter sets linked to bookings, e.g. scripts that are linked to booking events, or custom context menu items for bookings.
+Permission to execute Automation scripts or parameter sets linked to bookings, e.g. scripts that are linked to booking events, or custom context menu items for bookings.
 
 ### Modules \> Correlation
 
@@ -510,7 +501,7 @@ Permission to update Correlation rules.
 
 #### Modules \> Correlation \> Delete
 
-Permission to delete Correlation rules. |
+Permission to delete Correlation rules.
 
 ### Modules \> Documents
 
@@ -540,19 +531,19 @@ Permission to use view and configure element connections.
 >
 > - At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 > - When you upgrade to DataMiner version 10.1.7, these six permissions are automatically granted to all user groups that have been granted the *Modules* > *Resources* > *Configure functions* permission.
-> - These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
+> - These user permissions are only displayed if the DMA uses STaaS or a self-managed indexing database.
 
 #### Modules \> Functions \> Read
 
- Permission to view the Functions app. Available from DataMiner 10.2.0/10.1.7 onwards.
+Permission to view the Functions app. Available from DataMiner 10.2.0/10.1.7 onwards.
 
 #### Modules \> Functions \> Add
 
- Permission to add virtual functions. Available from DataMiner 10.2.0/10.1.7 onwards.
+Permission to add virtual functions. Available from DataMiner 10.2.0/10.1.7 onwards.
 
 #### Modules \> Functions \> Edit
 
- Permission to edit virtual functions. Available from DataMiner 10.2.0/10.1.7 onwards.
+Permission to edit virtual functions. Available from DataMiner 10.2.0/10.1.7 onwards.
 
 #### Modules \> Functions \> Delete
 
@@ -564,28 +555,28 @@ Permission to edit virtual functions. Available from DataMiner 10.2.0/10.1.7 onw
 
 #### Modules \> Functions \> Generate protocol
 
- Permission to generate a protocol for a virtual function. Available from DataMiner 10.2.0/10.1.7 onwards.
+Permission to generate a protocol for a virtual function. Available from DataMiner 10.2.0/10.1.7 onwards.
 
 ### Modules \> Jobs
 
 > [!NOTE]
-> These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
+> These user permissions are only displayed if the DMA uses STaaS or a self-managed indexing database.
 
 #### Modules \> Jobs \> UI available
 
- Permission to view the Jobs app in Cube. Available from DataMiner 9.6.4 onwards.
+Permission to view the Jobs app in Cube.
 
 #### Modules \> Jobs \> Add/Edit
 
-Permission to add or edit jobs. Available from DataMiner 9.6.4 onwards.
+Permission to add or edit jobs.
 
 #### Modules \> Jobs \> Delete
 
-Permission to delete jobs. Available from DataMiner 9.6.4 onwards.
+Permission to delete jobs.
 
 #### Modules \> Jobs \> Configure domains
 
- Permission to configure a domain in the Jobs app. Available from DataMiner 9.6.4 onwards.
+Permission to configure a domain in the Jobs app.
 
 ### Modules \> Monitoring web app
 
@@ -594,7 +585,7 @@ Permission to use the Monitoring app. Available from DataMiner 10.2.0/10.2.2 onw
 ### Modules \> Planned Maintenance
 
 > [!NOTE]
-> These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
+> These user permissions are only displayed if the DMA uses STaaS or a self-managed indexing database.
 
 #### Modules \> Planned Maintenance \> UI available
 
@@ -626,35 +617,19 @@ Permission to add or edit items in the Process Automation framework. Available f
 
 Permission to delete items in the Process Automation framework. Available from DataMiner 10.2.0/10.1.12 onwards.
 
-### Modules \> Profile Manager
-
-These user permissions are deprecated from DataMiner 9.6.5 onwards. Use the user permissions under [Profiles](#modules--profiles) instead.
-
-#### Modules \> Profile Manager \> UI available
-
-Permission to view the Profile Manager module in Cube.
-
-#### Modules \> Profile Manager \> Edit all
-
-Permission to edit all items in the Profile Manager.
-
-#### Modules \> Profile Manager \> Edit instances
-
-Permission to edit instances.
-
 ### Modules \> Profiles
 
 #### Modules \> Profiles \> UI available
 
-Available from DataMiner 9.6.5 onwards. Permission to view the *Profiles* module in Cube.
+Permission to view the *Profiles* module in Cube.
 
 #### Modules \> Profiles \> Edit all
 
-Available from DataMiner 9.6.5 onwards. Deprecated from DataMiner 10.2.0/10.1.12 onwards. Permission to edit all items in the *Profiles*.
+Deprecated from DataMiner 10.2.0/10.1.12 onwards. Permission to edit all items in the *Profiles*.
 
 #### Modules \> Profiles \> Edit instances
 
-Available from DataMiner 9.6.5 onwards. Deprecated from DataMiner 10.2.0/10.1.12 onwards. Permission to edit instances.
+Deprecated from DataMiner 10.2.0/10.1.12 onwards. Permission to edit instances.
 
 #### Modules \> Profiles \> All except instances \> Add/Edit
 
@@ -696,7 +671,7 @@ Permission to delete DataMiner protocols.
 
 #### Modules \> Protocols & Templates \> Protocols \> Download protocols from DCP
 
-Permission to download protocols from the DataMiner Collaboration Platform.
+Permission to download protocols via the Update Center in Cube. This permission is not required to [deploy protocols from the Catalog](xref:Deploying_a_catalog_item).
 
 #### Modules \> Protocols & Templates \> Protocols \> Generate MIB
 
@@ -758,33 +733,6 @@ Permission to update dashboards.
 
 Permission to delete dashboards.
 
-### Modules \> Reservations
-
-These user permissions are deprecated from DataMiner 9.6.7 onwards.
-
-> [!NOTE]
-> To access the *Bookings* module (formerly known as the *Reservations* module), you also need the appropriate licenses. For more information on acquiring licenses, contact the Skyline Sales department.
-
-#### Modules \> Reservations \> UI available
-
-Permission to access the *Reservations* module.
-
-#### Modules \> Reservations \> Add
-
-Permission to add bookings.
-
-#### Modules \> Reservations \> Edit
-
-Permission to edit bookings.
-
-#### Modules \> Reservations \> Delete
-
-Permission to delete bookings.
-
-#### Modules \> Reservations \> Execute
-
-Permission to execute bookings.
-
 ### Modules \> Resources
 
 > [!NOTE]
@@ -792,79 +740,27 @@ Permission to execute bookings.
 
 #### Modules \> Resources \> UI available
 
-Available from DataMiner 9.6.5 onwards. Permission to access the *Resources* module (previously known as the *Resource Manager* module).
+Permission to access the *Resources* module (previously known as the *Resource Manager* module).
 
 #### Modules \> Resources \> Add
 
-Available from DataMiner 9.6.5 onwards. Permission to add pools and resources.
+Permission to add pools and resources.
 
 #### Modules \> Resources \> Edit \> Resource status
 
-Available from DataMiner 9.6.5 onwards. Permission to edit the status of a resource.
+Permission to edit the status of a resource.
 
 #### Modules \> Resources \> Edit \> Other
 
-Available from DataMiner 9.6.5 onwards. Permission to edit pools and resources.
+Permission to edit pools and resources.
 
 #### Modules \> Resources \> Delete
 
-Available from DataMiner 9.6.5 onwards. Permission to delete pools and resources.
+Permission to delete pools and resources.
 
 #### Modules \> Resources \> Configure functions
 
-Available from DataMiner 9.6.5 onwards. Permission to add functions as resources.
-
-### Modules \> Resource Manager
-
-These user permissions are deprecated from DataMiner 9.6.7 onwards.
-
-> [!NOTE]
-> - In order to access the *Resource Manager* or *Reservations* module, you also need to have the Resource Manager license. For more information on acquiring a Resource Manager license, contact the Skyline Sales department.
-> - In DataMiner 9.6.4, the Resource Manager permissions are available under *Modules* > *Service & Resource Management* > *Resources* and *Reservations*. In later versions, the user permissions within this block are available under *Modules* > *Resources and Modules* > *Reservations/Bookings*.
-
-#### Modules \> Resource Manager \> Pools & Resources \> UI available
-
-Permission to access the *Resource Manager* module.
-
-#### Modules \> Resource Manager \> Pools & Resources \> Add
-
-Permission to add pools and resources.
-
-#### Modules \> Resource Manager \> Pools & Resources \> Edit \> Resource status
-
-Permission to edit the status of resources.
-
-#### Modules \> Resource Manager \> Pools & Resources \> Edit \> Other
-
-Permission to edit pools and resources.
-
-#### Modules \> Resource Manager \> Pools & Resources \> Delete
-
-Permission to delete pools and resources.
-
-#### Modules \> Resource Manager \> Pools & Resources \> Configure functions
-
-Available from DataMiner 9.5.4 onwards. Permission to add functions as resources.
-
-#### Modules \> Resource Manager \> Reservations \> UI available
-
-Permission to access the *Reservations* app. Prior to DataMiner 9.6.5, this permission is called *Timeline UI available*.
-
-#### Modules \> Resource Manager \> Reservations \> Add
-
-Permission to add reservations.
-
-#### Modules \> Resource Manager \> Reservations \> Edit
-
-Permission to edit reservations.
-
-#### Modules \> Resource Manager \> Reservations \> Delete
-
-Permission to delete reservations.
-
-#### Modules \> Resource Manager \> Reservations \> Execute
-
-Permission to execute reservations.
+Permission to add functions as resources.
 
 ### Modules \> Router Control
 
@@ -897,237 +793,6 @@ Permission to delete tasks.
 #### Modules \> Scheduler \> Execute
 
 Permission to execute tasks.
-
-### Modules \> Service & Resource Management \> Profiles
-
-> [!NOTE]
-> The Service & Resource Management block of user permissions is only available in DataMiner 9.6.4. In later versions, the user permissions within this block are available under *Modules* > *Profiles*.
-
-#### Modules \> Service & Resource Management \> Profiles \> UI available
-
-Permission to view the *Profiles* module in Cube.
-
-#### Modules \> Service & Resource Management \> Profiles \> Edit all
-
-Permission to edit all items in the *Profiles*.
-
-#### Modules \> Service & Resource Management \> Profiles \> Edit instances
-
-Permission to edit instances.
-
-### Modules \> Service & Resource Management \> Resources
-
-> [!NOTE]
-> The Service & Resource Management block of user permissions is only available in DataMiner 9.6.4. In later versions, the user permissions within this block are available under *Modules* > *Profiles*.
-
-#### Modules \> Service & Resource Management \> Resources \> UI available
-
-Permission to access the *Resources* tab of the *Scheduler* module in Cube.
-
-#### Modules \> Service & Resource Management \> Resources \> Add
-
-Permission to add pools and resources.
-
-#### Modules \> Service & Resource Management \> Resources \> Edit \> Resource status
-
-Permission to edit the status of resources.
-
-#### Modules \> Service & Resource Management \> Resources \> Edit \> Other
-
-Permission to edit pools and resources.
-
-#### Modules \> Service & Resource Management \> Resources \> Delete
-
-Permission to delete pools and resources.
-
-#### Modules \> Service & Resource Management \> Resources \> Configure functions
-
-Permission to add functions as resources.
-
-### Modules \> Service & Resource Management \> Reservations
-
-> [!NOTE]
-> The Service & Resource Management block of user permissions is only available in DataMiner 9.6.4. In later versions, the user permissions within this block are available directly under *Modules* > *Reservations/Bookings*.
-
-#### Modules \> Service & Resource Management \> Reservations \> Timeline UI available
-
-Permission to access the *Reservations* module.
-
-#### Modules \> Service & Resource Management \> Reservations \> Add
-
-Permission to add reservations.
-
-#### Modules \> Service & Resource Management \> Reservations \> Edit
-
-Permission to edit reservations.
-
-#### Modules \> Service & Resource Management \> Reservations \> Delete
-
-Permission to delete reservations.
-
-#### Modules \> Service & Resource Management \> Reservations \> Execute
-
-Permission to execute reservations.
-
-### Modules \> Service & Resource Management \> Services
-
-> [!NOTE]
-> The Service & Resource Management block of user permissions is only available in DataMiner 9.6.4. In later versions, the user permissions within this block are available directly under *Modules* > *Services*.
-
-#### Modules \> Service & Resource Management \> Services \> UI available
-
-Permission to view the *Services* module.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Add
-
-Permission to add definitions in the *Services* module.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Edit
-
-Permission to edit definitions in the *Services* module.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Delete
-
-Permission to delete definitions in the *Services* module.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Diagram \> Configure UI
-
-Permission to configure service definitions using the diagram user interface.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Diagram \> Configure data
-
-Permission to configure the data for items in the *Services* diagram.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Diagram \> Configure groups
-
-Permission to configure groups in the *Services* diagram.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Diagram \> Properties \> Add
-
-Permission to add properties in the *Services* diagram.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Diagram \> Properties \> Edit
-
-Permission to edit properties in the *Services* diagram.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Diagram \> Properties \> Delete
-
-Permission to delete properties in the *Services* diagram.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Properties \> Add
-
-Permission to add properties in the *Services* module.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Properties \> Edit
-
-Permission to edit properties in the *Services* module.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Properties \> Delete
-
-Permission to delete properties in the *Services* module.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Actions \> Add
-
-Permission to add actions in the *Services* module.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Actions \> Edit
-
-Permission to edit actions in the *Services* module.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Actions \> Delete
-
-Permission to delete actions in the *Services* module.
-
-#### Modules \> Service & Resource Management \> Services \> Definitions \> Force updates
-
-Available from DataMiner 9.5.14 onwards. Permission to force the execution of the following actions despite warnings:
-
-- Uploading, deleting, activating or deactivating a functions file.
-
-- Updating or deleting a service definition.
-
-- Deleting a protocol with functions.
-
-### Modules \> Service Manager
-
-> [!NOTE]
-> In DataMiner 9.6.4, the Service Manager permissions are available under *Modules* > *Service & Resource Management* > *Services*. In later versions, the user permissions within this block are available under *Modules* > *Services*.
-
-#### Modules \> Service Manager \> UI available
-
-Permission to view the Service Manager module. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Add
-
-Permission to add definitions in the Service Manager module. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Edit
-
-Permission to edit definitions in the Service Manager module. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Delete
-
-Permission to delete definitions in the Service Manager module. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Diagram \> Configure UI
-
-Permission to configure service definitions using the diagram user interface. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Diagram \> Configure data
-
-Permission to configure the data for items in the Service Manager diagram. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Diagram \> Configure groups
-
-Permission to configure groups in the Service Manager diagram. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Diagram \> Properties \> Add
-
-Permission to add properties in the Service Manager diagram. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Diagram \> Properties \> Edit
-
-Permission to edit properties in the Service Manager diagram. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Diagram \> Properties \> Delete
-
-Permission to delete properties in the Service Manager diagram. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Properties \> Add
-
-Permission to add properties in the Service Manager module. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Properties \> Edit
-
-Permission to edit properties in the Service Manager module. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Properties \> Delete
-
-Permission to delete properties in the Service Manager module. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Actions \> Add
-
-Permission to add actions in the Service Manager module. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Actions \> Edit
-
-Permission to edit actions in the Service Manager module. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Actions \> Delete
-
-Permission to delete actions in the Service Manager module. Deprecated from DataMiner 9.6.4 onwards.
-
-#### Modules \> Service Manager \> Definitions \> Force updates
-
-Available from DataMiner 9.5.14 onwards. Deprecated from DataMiner 9.6.4 onwards.
-
-Permission to force the execution of the following actions despite warnings:
-
-- Uploading, deleting, activating or deactivating a functions file.
-
-- Updating or deleting a service definition.
-
-- Deleting a protocol with functions.
 
 ### Modules \> Service templates
 
@@ -1174,23 +839,23 @@ Permission to export service templates.
 
 #### Modules \> Services \> UI available
 
-Available from DataMiner 9.6.5 onwards. Permission to view the *Services* module.
+Permission to view the *Services* module.
 
 #### Modules \> Services \> Definitions \> Add
 
-Available from DataMiner 9.6.5 onwards. Permission to add service definitions.
+Permission to add service definitions.
 
 #### Modules \> Services \> Definitions \> Edit
 
-Available from DataMiner 9.6.5 onwards. Permission to edit service definitions.
+Permission to edit service definitions.
 
 #### Modules \> Services \> Definitions \> Delete
 
-Available from DataMiner 9.6.5 onwards. Permission to delete service definitions.
+Permission to delete service definitions.
 
 #### Modules \> Services \> Definitions \> Force updates
 
-Available from DataMiner 9.6.5 onwards. Permission to force the execution of the following actions despite warnings:
+Permission to force the execution of the following actions despite warnings:
 
 - Uploading, deleting, activating or deactivating a functions file.
 
@@ -1200,51 +865,51 @@ Available from DataMiner 9.6.5 onwards. Permission to force the execution of the
 
 #### Modules \> Services \> Definitions \> Diagram \> Configure UI
 
-Available from DataMiner 9.6.5 onwards. Permission to configure service definitions using the diagram user interface.
+Permission to configure service definitions using the diagram user interface.
 
 #### Modules \> Services \> Definitions \> Diagram \> Configure data
 
-Available from DataMiner 9.6.5 onwards. Permission to configure the data for items in a service definition.
+Permission to configure the data for items in a service definition.
 
 #### Modules \> Services \> Definitions \> Diagram \> Configure groups
 
-Available from DataMiner 9.6.5 onwards. Permission to configure groups in a service definition.
+Permission to configure groups in a service definition.
 
 #### Modules \> Services \> Definitions \> Diagram \> Properties \> Add
 
-Available from DataMiner 9.6.5 onwards. Permission to add properties to a node or interface of a service definition.
+Permission to add properties to a node or interface of a service definition.
 
 #### Modules \> Services \> Definitions \> Diagram \> Properties \> Edit
 
-Available from DataMiner 9.6.5 onwards. Permission to edit properties of a node or interface of a service definition.
+Permission to edit properties of a node or interface of a service definition.
 
 #### Modules \> Services \> Definitions \> Diagram \> Properties \> Delete
 
-Available from DataMiner 9.6.5 onwards. Permission to delete properties of a node or interface of a service definition.
+Permission to delete properties of a node or interface of a service definition.
 
 #### Modules \> Services \> Definitions \> Properties \> Add
 
-Available from DataMiner 9.6.5 onwards. Permission to add properties to a service definition.
+Permission to add properties to a service definition.
 
 #### Modules \> Services \> Definitions \> Properties \> Edit
 
-Available from DataMiner 9.6.5 onwards. Permission to edit properties of a service definition.
+Permission to edit properties of a service definition.
 
 #### Modules \> Services \> Definitions \> Properties \> Delete
 
-Available from DataMiner 9.6.5 onwards. Permission to delete properties of a service definition.
+Permission to delete properties of a service definition.
 
 #### Modules \> Services \> Definitions \> Actions \> Add
 
-Available from DataMiner 9.6.5 onwards. Permission to add actions in the *Services* app. Obsolete from DataMiner 10.2.0/10.2.1 onwards.
+Permission to add actions in the *Services* app. Obsolete from DataMiner 10.2.0/10.2.1 onwards.
 
 #### Modules \> Services \> Definitions \> Actions \> Edit
 
-Available from DataMiner 9.6.5 onwards. Permission to edit actions in the *Services* app. Obsolete from DataMiner 10.2.0/10.2.1 onwards.
+Permission to edit actions in the *Services* app. Obsolete from DataMiner 10.2.0/10.2.1 onwards.
 
 #### Modules \> Services \> Definitions \> Actions \> Delete
 
-Available from DataMiner 9.6.5 onwards. Permission to delete actions in the *Services* app. Obsolete from DataMiner 10.2.0/10.2.1 onwards.
+Permission to delete actions in the *Services* app. Obsolete from DataMiner 10.2.0/10.2.1 onwards.
 
 #### Modules \> Services \> Definitions \> Configure actions
 
@@ -1252,15 +917,15 @@ Available from DataMiner 10.2.0/10.2.1 onwards. Combines and replaces the previo
 
 #### Modules \> Services \> Profiles \> UI available
 
-Permissions to access the *profiles* tab in the Services module. Available from DataMiner 10.0.9 onwards.
+Permissions to access the *profiles* tab in the Services module.
 
 #### Modules \> Services \> Profiles \> Edit definitions
 
-Permission to edit service profile definitions. Available from DataMiner 10.0.9 onwards. Deprecated from DataMiner 10.2.0/10.1.12 onwards.
+Permission to edit service profile definitions. Deprecated from DataMiner 10.2.0/10.1.12 onwards.
 
 #### Modules \> Services \> Profiles \> Edit instances
 
-Permission to edit service profile instances. Available from DataMiner 10.0.9 onwards. Deprecated from DataMiner 10.2.0/10.1.12 onwards.
+Permission to edit service profile instances. Deprecated from DataMiner 10.2.0/10.1.12 onwards.
 
 #### Modules \> Services \> Profiles \> Definitions \> Add/Edit
 
@@ -1277,6 +942,10 @@ Available from DataMiner 10.2.0/10.1.12 onwards. Permission to add or edit servi
 #### Modules \> Services \> Instances \> Delete
 
 Available from DataMiner 10.2.0/10.1.12 onwards. Permission to delete profile instances.
+
+#### Modules \> Swarming
+
+Available from DataMiner 10.5.1/10.6.0 onwards.<!-- RN 41490 --> Permission to trigger [swarming](xref:Swarming).
 
 ### Modules \> System configuration \> Agents
 
@@ -1300,6 +969,9 @@ Permission to initiate a manual Failover.
 
 Permission to configure a pair of Failover DataMiner Agents.
 
+> [!NOTE]
+> If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your DMS is fully hosted and maintained by Skyline Communications. As such, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40013-->, the *Configure Failover* user permission is no longer available for DaaS.
+
 #### Modules \> System configuration \> Agents \> Change operator info
 
 Permission to change the *System info* for a DataMiner Agent.
@@ -1312,13 +984,22 @@ Permission to (re)start DataMiner Agents.
 
 Permission to stop the DataMiner Agent software on DataMiner Agents.
 
+> [!NOTE]
+> If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your DMS is fully hosted and maintained by Skyline Communications. As such, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40013-->, the *Stop* user permission is no longer available for DaaS.
+
 #### Modules \> System configuration \> Agents \> Shut down
 
 Permission to shut down DataMiner Agents.
 
+> [!NOTE]
+> If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your DMS is fully hosted and maintained by Skyline Communications. As such, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40013-->, the *Shut down* user permission is no longer available for DaaS.
+
 #### Modules \> System configuration \> Agents \> Reboot
 
 Permission to reboot DataMiner Agents.
+
+> [!NOTE]
+> If you are using a [DaaS system](xref:Creating_a_DMS_in_the_cloud), your DMS is fully hosted and maintained by Skyline Communications. As such, from DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40013-->, the *Reboot* user permission is no longer available for DaaS.
 
 #### Modules \> System configuration \> Agents \> Change IP settings
 
@@ -1346,6 +1027,9 @@ Permission to upgrade DMAs (.dmupgrade, .zip) and to restore backups (.dmbackup)
 
 ### Modules \> System configuration \> Backup
 
+> [!NOTE]
+> These user permissions are not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, they are no longer displayed in such a system.<!-- RN 39870 -->
+
 #### Modules \> System configuration \> Backup \> UI available
 
 Permission to access the Backup page in System Center.
@@ -1358,11 +1042,11 @@ Permission to configure the backup settings.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Connect to cloud/DCP
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to connect a DMA to dataminer.services.
+Permission to connect a DMA to dataminer.services.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Disconnect from cloud/DCP
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to disconnect a DMA from dataminer.services.
+Permission to disconnect a DMA from dataminer.services.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Configure gateway service
 
@@ -1370,25 +1054,25 @@ Available from DataMiner 10.2.0/10.1.4 onwards. Allows you to configure the gate
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> View shared items
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to view items that have been shared via dataminer.services.
+Permission to view items that have been shared via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Update shared items
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to make changes to items that have been shared via dataminer.services.
+Permission to make changes to items that have been shared via dataminer.services.
 
-From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*. |
+From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Share item
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to share items via dataminer.services.
+Permission to share items via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*.
 
 #### Modules \> System configuration \> Cloud sharing/gateway \> Unshare item
 
-Available from DataMiner 10.1.0/10.0.9 onwards. Permission to stop sharing items via dataminer.services.
+Permission to stop sharing items via dataminer.services.
 
 From DataMiner 10.2.0/10.1.4 onwards, this permission is instead available under *General* > *Live sharing*.
 
@@ -1406,19 +1090,21 @@ Permission to access the Database page in System Center.
 
 Permission to change the settings of the general database. Prior to DataMiner 10.1.0/10.1.2, this is called the local database.
 
+> [!NOTE]
+> This user permission is not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, it is no longer displayed in such a system.<!-- RN 39870 -->
+
 #### Modules \> System configuration \> Database \> Configure central/offload DB
 
 Permission to change the settings of the offload database. Prior to DataMiner 10.1.0/10.1.1, this is called the central database.
 
 ### Modules \> System configuration \> Indexing engine
 
+> [!NOTE]
+> These user permissions are not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, they are no longer displayed in such a system.<!-- RN 39870 -->
+
 #### Modules \> System configuration \> Indexing engine \> Configure
 
 Permission to change the Indexing Engine configuration.
-
-#### Modules \> System configuration \> Indexing engine \> UI available
-
-Permission to access Indexing-specific features, such as the search tab in the Alarm Console. Only displayed if *?EnableFeature=Indexing* is added to the Cube URL. Obsolete from DataMiner 10.0.7 onwards.
 
 ### Modules \> System configuration \> Logging
 
@@ -1476,13 +1162,9 @@ Permission to reset the Mobile Gateway.
 
 Permission to send ad hoc text messages.
 
-#### Modules \> System configuration \> Mobile Gateway \> Allow access to Mobile UI
-
-Permission to access the DataMiner web apps. Obsolete from DataMiner 10.1.0/10.1.2 onwards, where it is replaced by the permission [General > DataMiner web apps / DataMiner Cube mobile access](#general--dataminer-web-apps--dataminer-cube-mobile-access).
-
 ### Modules \> System configuration \> Object Manager \> Module Settings
 
-Available from DataMiner 10.1.5 onwards. Permission to change settings of the DataMiner Object Manager. Requires the DOMManager [soft-launch option](xref:SoftLaunchOptions).
+Permission to change settings of the DataMiner Object Manager. Requires the DOMManager [soft-launch option](xref:SoftLaunchOptions).
 
 ### Modules \> System configuration \> Security
 
@@ -1562,21 +1244,21 @@ Permission to resend history alarms to a particular SNMP Manager.
 
 ### Modules \> System configuration \> System settings \> System settings available
 
-Available from DataMiner 9.6.2 onwards. Permission to access the *System settings* page in System Center.
+Permission to access the *System settings* page in System Center.
 
 ### Modules \> System configuration \> System settings \> Credentials library
 
 #### Modules \> System configuration \> System settings \> Credentials library \> Add library credentials
 
-Available from DataMiner 9.5.4 onwards. Permissions to add predefined credentials in the credentials library.
+Permissions to add predefined credentials in the credentials library.
 
 #### Modules \> System configuration \> System settings \> Credentials library \> Edit library credentials
 
-Available from DataMiner 9.5.4 onwards. Permissions to edit credentials in the credentials library.
+Permissions to edit credentials in the credentials library.
 
 #### Modules \> System configuration \> System settings \> Credentials library \> Delete library credentials
 
-Available from DataMiner 9.5.4 onwards. Permissions to delete credentials from the credentials library.
+Permissions to delete credentials from the credentials library.
 
 ### Modules \> System configuration \> System settings \> Manage client versions
 
@@ -1584,13 +1266,9 @@ Available from DataMiner 10.2.0 \[CU3]/10.2.6 onwards. Permission to configure t
 
 ### Modules \> System configuration \> Tools
 
-#### Modules \> System configuration \> Tools \> Synchronization / clean up unused
-
-Permission to access the *Tools* page in System Center. From DataMiner 10.1.0/10.1.1 onwards., this user permission is replaced by the *Admin tools* user permission.
-
 #### Modules \> System configuration \> Tools \> Admin tools
 
-Available from DataMiner 10.1.0/10.1.1 onwards. Permission to use administrator tools such as synchronization, cleaning up unused protocols, alarm filters, or Visio files, NATS management, and (de)initializing Resource Manager.
+Permission to use administrator tools such as synchronization, cleaning up unused protocols, alarm filters, or Visio files, NATS management, and (de)initializing Resource Manager.
 
 #### Modules \> System configuration \> Tools \> Control background tasks of all users
 
@@ -1600,25 +1278,28 @@ Permission to see and control the background tasks of all users.
 
 Permission to execute SQL queries against the general or offload database.
 
+> [!NOTE]
+> This user permission is not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, it is no longer displayed in such a system.<!-- RN 39870 -->
+
 #### Modules \> System configuration \> Tools \> Best practices analyzer \> UI Available
 
-Permission to read a BPA test. Available from DataMiner 10.0.9 onwards. Prior to DataMiner 10.2.0/10.2.3, this user permission is called "Read".
+Permission to read a BPA test. Prior to DataMiner 10.2.0/10.2.3, this user permission is called "Read".
 
 #### Modules \> System configuration \> Tools \> Best practices analyzer \> Add/Edit
 
-Permission to add or edit a BPA test. Available from DataMiner 10.0.9 onwards.
+Permission to add or edit a BPA test.
 
 #### Modules \> System configuration \> Tools \> Best practices analyzer \> Delete
 
-Permission to delete a BPA test. Available from DataMiner 10.0.9 onwards.
+Permission to delete a BPA test.
 
 #### Modules \> System configuration \> Tools \> Best practices analyzer \> Execute
 
-Permission to execute a BPA test. Available from DataMiner 10.0.9 onwards.
+Permission to execute a BPA test.
 
 #### Modules \> System configuration \> Tools \> Best practices analyzer \> Get test results
 
-Permission to retrieve the results of a BPA test. Available from DataMiner 10.0.9 onwards.
+Permission to retrieve the results of a BPA test.
 
 ### Modules \> Ticketing Gateway
 

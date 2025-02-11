@@ -6,6 +6,8 @@ uid: UsingTheRCASlider
 
 Alarms on elements, parameters or services included in a connectivity chain have an RCA level. This indicates how far the element, parameter or service is away from the most probable cause of the alarm. In the Alarm Console, it is possible to filter alarms based on Root Cause Analysis (RCA). This way, you can for instance filter out alarms with high RCA levels to get an overview of the root problems only.
 
+![RCA Filter](~/user-guide/images/RCA_Filter.png)<br>*Alarm Console and RCA filter in DataMiner 10.4.5*
+
 The levels are indicated as three values, separated by commas. The values represent, in sequence, the RCA level for services, elements, and parameters. Each value has the following meaning:
 
 - none: not part of a connectivity chain.

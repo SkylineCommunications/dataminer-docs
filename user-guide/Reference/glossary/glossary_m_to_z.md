@@ -16,7 +16,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Main Release | The Main Release of DataMiner is the upgrade track of the DataMiner software that has one major upgrade per year as well as regular Cumulative Updates (CUs) with all the latest fixes. In general, no new features are added in this track, except for specific isolated cases that do not affect existing functionality. Using this upgrade track is recommended for production environments that do not require specific features only available in the Feature Release. |
 | MAM | Media Asset Management. Management of typically large-sized video and media files. |
 | Managed inventory | In the context of DataMiner IDP, this represents the elements in a DMS that are managed by IDP.<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
-| Maps | DataMiner module that allows you to visualize real-time data from the DMS on top of geographical maps provided by online map services.<br>See [Maps](xref:maps). |
+| Maps | DataMiner module that allows you to visualize real-time data from the DMS on top of geographical maps provided by online map services.<br>See [Maps](xref:About_DMS_Maps). |
 | Masking | Marking a DataMiner object as to be ignored for alarm monitoring. |
 | Matrix parameter | A parameter that combines a series of inputs and outputs in a matrix, allowing users to connect inputs and outputs using the crosspoints in the matrix.<br>See [Matrix parameters](xref:Matrix_parameters). |
 | MCPC | Multiple Channels Per Carrier. Technology where multiple broadcasting streams are multiplexed together into a single bit stream. |
@@ -33,8 +33,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | MIB | Management Information Base. A virtual information store managing objects, which is typically accessed using the Simple Network Management Protocol (SNMP).<br>See [Terminology related to the SNMP protocol](xref:Terminology_related_to_the_SNMP_protocol). |
 | MIME | Multipurpose Internet Mail Extension. Internet standard that extends the format of email messages to support text in character sets other than ASCII, as well as attachments of audio, video, images, and application programs. |
 | Mobile Gateway | DataMiner module that allows two-way communication with a DMS via SMS text messages.<br>See [Mobile Gateway](xref:MobileGateway). |
-| Monitoring app | The main web application to monitor a DataMiner System from DataMiner 10.0.0/10.0.2 onwards. |
-| Monitoring & Control app | HTML5 application to interact with DataMiner using a mobile device prior to DataMiner 10.0.0/10.0.2. |
+| Monitoring app | Web application used to monitor a DataMiner System. |
 | MOTS | Military Off-The-Shelf. Term used for off-the shelf products that have been developed or customized by a commercial vendor to respond to specific military requirements. |
 | MPEG | Moving Picture Experts Group. Working group formed by ISO and IEC to set standards for audio and video compression and transmission, such as MPEG-2 and MPEG-4 AVC. |
 | MPLS | Multi-Protocol Label Switching. Routing technique in telecommunications networks that directs data based on short path labels instead of long network addresses, which avoids complex lookups in a routing table and speeds up traffic flows. |
@@ -63,13 +62,13 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | OFDM | Orthogonal Frequency Division Multiplexing. Method of digital signal modulation that splits a single data stream across different narrowband channels at different frequencies to reduce interference and crosstalk. |
 | OFDMA | Orthogonal Frequency Division Multiple Access. Multi-user extension of the OFDM architecture. |
 | Offline impact | Indication of whether a parameter will have an impact during the offline window of an SLA.<br>See [Creating an information template](xref:Creating_an_information_template). |
-| Offload database | Dedicated MySQL, MSSQL or Oracle database for a DataMiner System, to which information is offloaded from the local DMA databases. Previously also called central database.<br>See [Offload database](xref:Offload_database). |
+| Offload database | Dedicated MySQL, MSSQL, or Oracle database for a DataMiner System, to which information is offloaded from the DataMiner System. Previously also called central database.<br>See [Offloading data](xref:Offload_database). |
 | OID | Object Identifier. Value uniquely identifying a managed object in a MIB hierarchy. |
 | OLT | Optical Line Termination. Device that serves as the service provider endpoint of a passive optical network. |
 | ONT | Optical Network Terminal. Device used to terminate a fiber-optic line, demultiplex the signal into its component parts and provide power to customer telephones. Also known as ONU (Optical Network Unit). |
 | OpenSearch | Open-source search and analytics engine, which can be used as the DataMiner Indexing database.<br>See [OpenSearch database](xref:OpenSearch_database). |
 | OPEX | Operating expense. The ongoing cost to run a product, system or business. |
-| OSM | OpenStreetMap. Free community-built map application, which can be integrated with DataMiner Maps from DataMiner 9.5.8 onwards.<br>See [Maps](xref:maps). |
+| OSM | OpenStreetMap. Free community-built map application, which can be integrated with DataMiner Maps.<br>See [Maps](xref:About_DMS_Maps). |
 | OSPF | Open Shortest Path First. Routing protocol for IP networks used to find the best path between the source and destination router within an autonomous system. |
 | OSS | Operations Support System. Software system that allows service providers to monitor, control, analyze and manage their network. |
 | OTA | Over-The-Air. Refers to wireless transmission, typically in the context of software updates distributed to mobile devices or TV and radio broadcasts transmitted wirelessly. |
@@ -77,7 +76,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | OU | Occasional Use. Refers to services that are not used continuously, for example satellite capacity that is offered to broadcasters for ad hoc and periodic demands. |
 | Outage | In the context of DataMiner Business Intelligence, the temporary unavailability of the service monitored by an SLA.<br>See [Business Intelligence](xref:sla). |
 | Outlier | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly spikes upwards or downwards and then returns to its previous, normal behavior.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection) |
-| OWM | OpenWeatherMap. Online service that provides weather data, which can be integrated in DataMiner Maps from DataMiner 9.5.8 onwards.<br>See [Maps](xref:maps). |
+| OWM | OpenWeatherMap. Online service that provides weather data and that can be integrated in DataMiner Maps.<br>See [Maps](xref:About_DMS_Maps). |
 
 ## P
 
@@ -108,7 +107,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Protocol package | Package containing all files necessary to install a particular DataMiner protocol on an existing DataMiner System. |
 | PSK | Phase-Shift Keying. Digital modulation process that conveys data by changing the phase of a transmitted signal. |
 | PTP | Precision Time Protocol. Protocol used to synchronize clocks throughout a network.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
-| Pulse | DataMiner Cube homepage, displayed when no cards are open in the workspace.<br>See [DataMiner Pulse](xref:Working_with_cards_in_DataMiner_Cube#dataminer-pulse). |
+| Pulse | DataMiner Cube home page, displayed when no cards are open in the workspace.<br>See [DataMiner Pulse](xref:Working_with_cards_in_DataMiner_Cube#dataminer-pulse). |
 
 ## Q
 
@@ -134,9 +133,8 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Regular expression | Sequence of characters resulting in a pattern that can be used to find and manage matching text. |
 | Relative alarm threshold | Dynamic alarm threshold that is configured as a percentage representing the delta with the baseline value.<br>See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds). |
 | Replicated element/service | An element or service that is shown in a DMS, but managed by a different DMS. It inherits all parameter values from its counterpart in the other DMS. |
-| Report | Document with specific information on the DataMiner System, based on a report template in the DMS Reporter module.<br>See [DMS Reporter](xref:reporter). |
-| Reporter | DataMiner application that allows you to generate graphical reports showing statistical data and operational metrics of the DMS.<br>See [DMS Reporter](xref:reporter). |
-| Reservation | Alternative name for booking in earlier DataMiner versions.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Reporter | Legacy DataMiner application used to generate graphical reports with statistical data and operational metrics of the DMS.<br>See [DMS Reporter](xref:reporter). |
+| Reservation | Alternative name for booking in legacy DataMiner versions.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Resource | Any thing that can be used and reserved in a booking instance.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Resource Manager | Legacy name for the Resources module in DataMiner Cube.<br>See [The Resources module](xref:The_Resources_module). |
 | Resource pool | Logical collection of resources. For example, microphone, headphones and audio mixer could be resources in an "Audio" resource pool.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
@@ -188,7 +186,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Service profile | Profile for one or more service definitions that makes it possible to preconfigure profile instances for the service definitions, so that these no longer need to be selected during booking creation. In DataMiner, this is available in the form of service profile definitions with corresponding service profile instances.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
 | Service profile definition | Definition of a service profile that includes the service definitions to which the service profile applies and the mapping of the service profile nodes to the service definition nodes.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
 | Service profile instance | Instance of a service profile definition with specific profile instances linked to it.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
-| Service protocol | Protocol that can be assigned to a service when the service is created or edited. Such a service is known as an "enhanced service" and allows alarm monitoring and trending. <br> Note that in earlier DataMiner versions the term "service definition" was used instead, but this term is now exclusively used for the definition of how the various functions in a service are linked to each other, in the context of DataMiner SRM. |
+| Service protocol | Protocol that can be assigned to a service when the service is created or edited. Such a service is known as an "enhanced service" and allows alarm monitoring and trending. <br>Note that in earlier DataMiner versions the term "service definition" was used instead, but this term is now exclusively used for the definition of how the various functions in a service are linked to each other, in the context of DataMiner SRM. |
 | Service state | In the context of DataMiner SRM, this is the state that is defined for each phase in the life cycle of the service representing a booking, e.g. start, stop, pause, standby, etc. When there is a change in the life cycle of the booking, the resources used in the booking will be configured according the settings for the corresponding service state.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service template | Template that can be used to easily create many similar services at the same time.<br>See [Service templates](xref:Service_templates). |
 | Service Templates | DataMiner Cube module that allows easy management of service templates.<br>See [Using the Service Templates module](xref:Managing_service_templates#using-the-service-templates-module). |
@@ -254,7 +252,6 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Sweeptime | The time that a spectrum analyzer takes to tune across the displayed frequency span.<br>See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
 | SWR | Standing Wave Ratio. Ratio of the maximum and minimum amplitudes in a standing wave, i.e. a wave that oscillates in time but has a peak amplitude profile that does not move in space. |
 | System Center | A module that contains most of the administrator functionalities in DataMiner, such as management of databases and DMAs. |
-| System Display | Deprecated client application to connect to a DMA. No longer available from DataMiner 9.6.0 onwards. |
 | System function definition | Virtual function definition that is not linked to a specific protocol. System function definitions exist permanently in the system and are modified at runtime.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 
 ## T
@@ -294,6 +291,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | UHF | Ultra High Frequency. Refers to radio frequencies between 300 MHz and 3 GHz. |
 | UI | User Interface. |
 | Unmanaged inventory | In the context of DataMiner IDP, this represents the elements in a DMS that are not yet managed by IDP. Also known as "pending inventory".<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
+| UOSA | [Support application](xref:User_operations_support) (formerly known as User Operations Support Application). |
 | Update Center | Application in DataMiner Cube that allows you to check for DataMiner protocol and software updates and download these.<br>See [Upgrading a DataMiner Agent in the Update Center](xref:Upgrading_a_DataMiner_Agent_in_the_Update_Center). |
 | Update package | Package containing minor updates for an existing DataMiner release. |
 | Upgrade package | DataMiner package containing all files necessary to upgrade a DMA to a new version of the DataMiner software. |

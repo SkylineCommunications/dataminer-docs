@@ -1,5 +1,7 @@
 ---
 uid: Cloud_connectivity_and_security
+description: Security is built into the core design of the DataMiner Cloud Connectivity framework, so you can securely access the wealth of cloud features.
+keywords: cloud security
 ---
 
 # Cloud connectivity and security
@@ -22,10 +24,12 @@ dataminer.services is hosted in Microsoft Azure on the following endpoints:
 At present, the following IP addresses are used to connect to dataminer.services:
 
 - 52.149.106.174
-- 20.50.2.35
 - 20.50.217.191
-- 20.103.147.5
 - 20.31.240.20
+
+In addition, the following backup address should also be accessible, as this may be required in the future:
+
+- 20.103.147.5
 
 When emails are sent from dataminer.services, these come from the `dataminer.services` domain.
 
@@ -37,7 +41,7 @@ At the end of this flow, a **secure JSON Web Token** is delivered directly from 
 
 - Every JSON web token is only valid for 1 week, after which it is automatically renewed using a single-use refresh key.
 
-All communication between the DataMiner System and dataminer.services happens using HTTPS and WSS protocols, both using encrypted TLS connections. Currently, **only TLS 1.2 is supported**.
+All communication between the DataMiner System and dataminer.services happens using HTTPS and WSS protocols, both using encrypted TLS connections. TLS version 1.2 or higher is required for all connections.
 
 Only outgoing traffic needs to be allowed through for the domain *.dataminer.services.
 

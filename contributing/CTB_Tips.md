@@ -59,4 +59,4 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 - *You can find more information on DataMiner Dojo.* (Instead of *The user can find more information on DataMiner Dojo.*)
 
-- *When you add a feed component to a dashboard, the user of the dashboard will be able to select a feed.*
+- *When you add a text input component to a dashboard, the user of the dashboard will be able to select data.*

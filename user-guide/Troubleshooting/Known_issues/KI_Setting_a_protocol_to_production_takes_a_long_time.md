@@ -1,5 +1,6 @@
 ---
 uid: KI_Setting_a_protocol_to_production_takes_a_long_time
+keywords: protocol, driver, connector
 ---
 
 # Setting a protocol to production takes a long time

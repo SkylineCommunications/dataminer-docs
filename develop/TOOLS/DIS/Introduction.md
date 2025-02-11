@@ -1,34 +1,58 @@
 ---
 uid: Overall_concept_of_the_DataMiner_Integration_Studio
+description: The free DIS Visual Studio extension allows you to import, create, and deploy connectors to establish connections between DataMiner and data sources.
 ---
 
-# Introduction
+# About DataMiner Integration Studio
 
-DataMiner Integration Studio (DIS) is a free [Visual Studio IDE extension](https://visualstudio.microsoft.com/vs/features/extend/). It facilitates navigating, editing, developing, troubleshooting, testing and deploying DataMiner connectors and Automation scripts.
+DataMiner Integration Studio (DIS) is a valuable extension for Microsoft Visual Studio that simplifies the process of interacting with and developing for your DataMiner System. DataMiner Integration Studio is available for download **free of charge**.
 
-## Features
+With this extension, you can seamlessly **import, create, and deploy connectors** to establish connections between your DataMiner System (DMS) and new data sources. Additionally, the DIS extension allows you to **import Automation scripts and SRM functions**, which can be easily created and deployed to your DMS as well.
 
-After installation of the DataMiner Integration Studio extension, Microsoft Visual Studio turns into a full-blown DataMiner IDE with the following editors:
+![DIS overview](https://docs.dataminer.services/develop/images/DataMinerIntegrationStudio.png)
 
-- An [XML editor](xref:XML_editor), which features on-the-fly XML Schema validation and IntelliSense.
-- A [C# editor](xref:C_editor), which features full C# editing and debugging capabilities.
-- A [display editor](xref:Display_editor), which allows you to design Data Display pages using simple drag-and-drop operations.
-- A [function editor](xref:Function_editor), which allows you to manage the functions defined in a function XML file and design function pages using simple drag-and-drop operations.
-- A [table editor](xref:Table_editor), which allows you to design parameter tables using simple drag-and-drop operations.
-- A [version editor](xref:Version_editor), which allows editing the version history.
+> [!TIP]
+> See also: [Kata #37: Getting started with DIS](https://community.dataminer.services/courses/kata-37/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
-Additionally, the following tool windows are available:
+## Benefits
 
-- [Tree view](xref:DisTreeViewToolWindow): This tool window acts as a table of contents, allowing you to easily navigate to a particular location in the connector or Automation script you are working on.
-- [Mapping view](xref:DisMappingViewToolWindow): This tool window allows you to visualize relationships between items in the connector you are working on.
-- [Grid view](xref:DisGridViewToolWindow): This tool window allows you to manage and configure all parameters in the protocol using a spreadsheet-like view.
-- [Diagram](xref:DisDiagramToolWindow): This window shows a graphical representation of a protocol. It allows you to see how a protocol is built, navigate through its logic and investigate flow issues.
-- [Validator](xref:DisValidatorToolWindow): This window lists the results of the latest protocol validation in a tree structure, grouped by severity and category.
-- [Comparer](xref:DisComparerToolWindow):This tool window allows you to compare two connector versions.
-- [Macros](xref:DisMacrosToolWindow): This tool window allows you to create C# scripts that can be used to make changes to e.g. a protocol XML file.
-- [Inject](xref:DisInjectToolWindow): This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or Automation script C# Exe block(s) you are editing.
-- [MIB Browser](xref:DisMibBrowserToolWindow): This tool window allows you to build [Param](xref:Protocol.Params.Param) tags in a connector based on OID data in MIB files.
+### Enhanced efficiency
 
-An top of this, it includes snippets and XML schemas to assist and speed up your development of connectors and Automation scripts.
+Streamline your integration workflow and save time with **seamless connector and script loading with pushback functionality**. Connect to your live DataMiner System, pull in the connector or script with a single click, start working, and push it back effortlessly. Experience a truly seamless integration process.
 
-![DIS Overview](~/develop/images/DataMinerIntegrationStudio.svg)
+### Simplified navigation
+
+Navigate through complex scripts and connectors effortlessly. Our intuitive tools provide **a clear overview of the structure**, allowing you to follow the logic of the programming code. Inline linking and the DIS tree structure enable quick access to specific parameters and related code segments.
+
+### Effortless editing
+
+Say goodbye to manual coding and embrace a more intuitive approach. DataMiner Integration Studio offers custom-designed UIs that allow you to **switch between raw code and graphical views**. Benefit from code completion and generation shortcuts, and leverage code snippets for increased productivity and consistency.
+
+### Seamless import methods
+
+Simplify integration by importing definition files in SNMP, XML, JSON, and WSDL format. Automatically **generate code based on the imported information**, saving time and effort. The hierarchical structure allows for easy selection of metrics and data elements to include in your connector or script.
+
+### Real-time debugging
+
+Validate your code and examine its performance with C# injection. Connect to your live DataMiner System, **step through your code, and interact with real devices**. Ensure the accuracy of data processing and gain confidence in the reliability of your connectors and scripts.
+
+### Quality Assurance Validator
+
+Deliver high-quality, dependable connectors with our built-in QA Validator. With automated tests covering best practices, formatting, and syntax errors, the QA Validator acts as a critical checkpoint. **Validate your code with a single click**, minimizing the risk of errors and ensuring top-notch connectors.
+
+## Getting started with DIS
+
+Discover the power of DataMiner Integration Studio. Install and configure the extension, delve into connector development concepts, and enroll in our comprehensive course to maximize your DataMiner System's potential.
+
+- [Installing and configuring DataMiner Integration Studio](xref:Installing_and_configuring_the_software)
+- [Connector development - Concepts](https://community.dataminer.services/courses/dataminer-connector-integration-http-basics/)
+- [DataMiner Integration Studio course](https://community.dataminer.services/courses/dataminer-integration-studio/)
+
+## Questions
+
+Do you still have some unanswered questions? Explore our extensive Q&A section, brimming with insightful answers contributed by our vibrant community. In the overview below, you can find questions related to:
+
+- [DataMiner Integration Studio](https://community.dataminer.services/questions/?qtag%5B%5D=883&order_by=newest)
+- [DataMiner connectors](https://community.dataminer.services/questions/?qtag%5B%5D=794&qtag%5B%5D=152&qtag%5B%5D=812&qtag%5B%5D=601&qtag%5B%5D=638&qtag%5B%5D=640&order_by=newest&qtag%5B%5D=126)
+- [Automation scripts](https://community.dataminer.services/questions/?qtag%5B%5D=804&qtag%5B%5D=576&order_by=newest)
+- [SRM functions](https://community.dataminer.services/questions/?qtag%5B%5D=302&order_by=newest&qtag%5B%5D=146)

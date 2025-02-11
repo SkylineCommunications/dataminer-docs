@@ -22,7 +22,7 @@ To implement a logger table, perform the following steps:
     </Param>
     ```
 
-    In case the logger table persists in Cassandra, also provide a [Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag. From DataMiner version 9.0.0 onwards, if the Param.Database.CQLOptions.Clustering tag is used, the primary key (i.e. index) set in the ArrayOptions tag will be replaced by the primary key defined in the Clustering tag.
+    In case the logger table persists in Cassandra, also provide a [Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag. If the [Param.Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag is used, the primary key (i.e. index) set in the ArrayOptions tag will be replaced by the primary key defined in the Clustering tag.
 
     ```xml
     <Param id="5200" trending="false">
@@ -43,11 +43,11 @@ To implement a logger table, perform the following steps:
     </Param>
     ```
 
-    The Clustering tag contains a semicolon-separated list of column idx references. (From DataMiner 9.0.0 onwards, a colon is also allowed as separator).
+    The Clustering tag contains a semicolon- or colon-separated list of column idx references.
 
     In Cassandra, the primary key consists of two parts: the partitioning key and the clustering key. In the example above, the partitioning key is the column referred to by idx 25 (i.e. the first item in the semicolon-separated list) and the remaining columns form the clustering key (2;0).
 
-    From DataMiner 9.0.0 onwards, parentheses can be used to form composite partitioning keys (RN12170).
+    To form composite partitioning keys, you can use parentheses.<!-- RN 12170 -->
 
 1. For every column parameter, define the database type to be used. This is done via the [Database.ColumnDefinition](xref:Protocol.Params.Param.Database.ColumnDefinition) tag.
 
@@ -120,6 +120,7 @@ To implement a logger table, perform the following steps:
     The length of column names has a major influence on performance in Cassandra. Therefore, it is always advised to use very short names (preferably 1 or 2 characters). Also, it is advised to use lowercase characters only, no spaces and no 'special' characters.
 
     In order to keep a protocol compatible with both SQL and Cassandra, it is advised to use names that are supported by both SQL and Cassandra.
+
 1. One column should be of type "DATETIME". This column also specifies the number of partitions to keep (defined using the Partition tag).
 
     ```xml
@@ -161,9 +162,7 @@ To implement a logger table, perform the following steps:
     - DateTime values should be inserted in UTC.
     - It is not strictly necessary to include a column in a logger table used for partitioning. However, it is strongly advised to do so, as otherwise the table will not automatically remove old data.
 
-    - Partitioning in Cassandra is supported from DataMiner version 9.0.0 (RN12170) onwards. If ColumnDefinition is set to "DATETIME" and the Partition tag is set, Cassandra will use a TTL with the specified time. (See [Time to live](xref:AdvancedDataMinerDataPersistenceNoSqlCassandra#time-to-live).)
-
-      From DataMiner version 9.5.7 (RN 16738) onwards, you can specify the TTL of a logger table column via the Partition tag on any column. This is also supported for the indexing database.
+    - You can specify the [time to live](xref:AdvancedDataMinerDataPersistenceNoSqlCassandra#time-to-live) of a logger table column via the [Partition](xref:Protocol.Params.Param.Database.Partition) tag on any column. This is also supported for the indexing database.<!-- RN 12170 --><!-- RN 16738 -->
 
       ```xml
       <Param id="1003">
@@ -175,7 +174,7 @@ To implement a logger table, perform the following steps:
       </Param>
       ```
 
-      However, in order to preserve compatibility with a RDBMS (SQL) database, it is advised to still define a column of type DATETIME that specifies the partitions to keep.
+      However, in order to preserve compatibility with an RDBMS (SQL) database, we still recommend defining a column of type DATETIME that specifies the partitions to keep.
 
     The logger table defined in the steps above will result in the creation of a table with name elementdata_[DMA ID]_[element ID]_[table parameter ID].
 
@@ -202,7 +201,7 @@ To implement a logger table, perform the following steps:
 
 ## Indexed logger tables
 
-From DataMiner 9.6.4 (RN 13552) onwards, it is possible to store a logger table in the indexing database instead of Cassandra.
+It is possible to store a logger table in the indexing database instead of Cassandra.<!-- RN 13552 -->
 
 To indicate that a logger table should be stored in the indexing database instead of Cassandra, set the [IndexingOptions@enabled](xref:Protocol.Params.Param.Database.IndexingOptions-enabled) attribute to true:
 
@@ -212,7 +211,7 @@ To indicate that a logger table should be stored in the indexing database instea
 </Database>
 ```
 
-When logger tables are stored the indexing database, the following restrictions apply:
+When logger tables are stored in the indexing database, the following restrictions apply:
 
 - The columnName must not start with `-`, `_`, or `+`.
 - The columnName must not include `\`, `/`, `*`, `?`, `"`, `<`, `>`, " " (space character), `,`, `#`, `.`, or `:`.
@@ -224,7 +223,7 @@ When logger tables are stored the indexing database, the following restrictions 
 
 ### Infinite TTL
 
-From DataMiner 9.6.4 (RN 19993) onwards, in order to prevent indices from rolling over in the indexing database, it is possible to specify an infinite TTL.
+In order to prevent indices from rolling over in the indexing database, it is possible to specify an infinite TTL.<!-- RN 19993 -->
 
 ```xml
 <Database>
@@ -235,7 +234,7 @@ From DataMiner 9.6.4 (RN 19993) onwards, in order to prevent indices from rollin
 
 > [!NOTE]
 >
-> - The partitionsToKeep attribute value is ignored when Partition is set to “infinite”.
+> - The partitionsToKeep attribute value is ignored when Partition is set to "infinite".
 > - The column does not need to be a datetime column. Any column type is supported.
 > - The value "infinite" only works on tables with IndexingOptions@enabled = true (i.e. logger tables stored in the indexing database).
 

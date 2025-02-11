@@ -19,9 +19,9 @@ Using a shape data field of type **Info**, you can make shapes display informati
 
 - If a shape is linked to a view, a service or an element, an **Info** field can be used to display the number of tickets linked to that same view, service or element. See [Element statistics, service statistics, view statistics, etc](#element-statistics-service-statistics-view-statistics-etc).
 
-- If a shape is [linked to a virtual function resource](xref:Linking_a_shape_to_a_resource), from DataMiner 9.5.13 onwards, an **Info** field can be used to display the name of the virtual function resource, the name of the main element generating the virtual function resource, the resource name or the name of the virtual function definition.
+- If a shape is [linked to a virtual function resource](xref:Linking_a_shape_to_a_resource), an **Info** field can be used to display the name of the virtual function resource, the name of the main element generating the virtual function resource, the resource name or the name of the virtual function definition.
 
-- If a shape is [linked to an EPM object](xref:Linking_a_shape_to_an_EPM_object), from DataMiner 10.1.0/10.0.4 onwards, an **Info** field can be used to display the system name or system type, and from DataMiner 10.3.2/10.4.0 onwards, it can be used to display statistics related to the EPM object.
+- If a shape is [linked to an EPM object](xref:Linking_a_shape_to_an_EPM_object), an **Info** field can be used to display the system name or system type, and from DataMiner 10.3.2/10.4.0 onwards, it can be used to display statistics related to the EPM object.
 
 > [!TIP]
 > For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[data > PROPERTIES]* page.
@@ -31,7 +31,7 @@ Using a shape data field of type **Info**, you can make shapes display informati
 Add a shape data field of type **Info** to the shape, and set its value to one of the keywords listed below.
 
 > [!NOTE]
-> From DataMiner 10.0.2 onwards, these keywords (wrapped in square brackets) can be used as placeholders in the value of other shape data fields. From DataMiner 10.0.13 onwards, these can also be used within other placeholders. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
+> These keywords (wrapped in square brackets) can be used as placeholders in the value of other shape data fields and within other placeholders. See [Placeholders for variables in shape data values](xref:Placeholders_for_variables_in_shape_data_values).
 
 - **Elements**:
 
@@ -153,7 +153,7 @@ The info specified in the **Info** field will only appear on the shape if you ad
 To add text to a shape, just double-click the shape, and enter the text.
 
 > [!NOTE]
-> From DataMiner 9.0 onwards, if an **Info** shape data field is set to *DATAMINER*, the placeholder is replaced by the name of the DMA that is currently hosting the element, service or redundancy group. In DataMiner versions up to DataMiner 9.0, the placeholder is replaced by the name of the DMA where the element, service or redundancy group was created.
+> If an **Info** shape data field is set to *DATAMINER*, the placeholder is replaced by the name of the DMA that is currently hosting the element, service, or redundancy group.
 
 ## Element statistics, service statistics, view statistics, etc.
 

@@ -6,6 +6,8 @@ uid: scheduler
 
 DataMiner Scheduler allows you to manage a list of scheduled tasks that are to be executed by DataMiner.
 
+![Scheduler](~/user-guide/images/Scheduler.png)<br>*DataMiner Scheduler in DataMiner 10.4.5*
+
 Find out more in the following topics:
 
 - [About the Scheduler module](xref:About_the_Scheduler_module)
@@ -17,6 +19,3 @@ Find out more in the following topics:
 - [Manually starting and stopping a scheduled event](xref:Manually_starting_and_stopping_a_scheduled_event)
 
 - [Creating a Scheduler template](xref:Creating_a_Scheduler_template)
-
-> [!NOTE]
-> In systems with an appropriate license, from DataMiner 8.5.8 to DataMiner 9.6.3, the Scheduler module contains an additional *resources* tab. This tab is part of the Service & Resource Management module. For more information, see [Service and Resource Management](xref:SRM).

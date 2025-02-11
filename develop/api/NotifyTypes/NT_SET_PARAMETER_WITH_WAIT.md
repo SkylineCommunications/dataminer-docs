@@ -26,7 +26,7 @@ protocol.NotifyDataMiner(167 /*NT_SET_PARAMETER_WITH_WAIT*/ , ids, value);
   - ids[2]: parameter ID
 - value (object): Value to set, depending on the type of set (standalone parameter, matrix, table cell)
   - Standalone parameter: Value is the value that needs to be set (e.g. a string).
-  - Matrix: Value contains the input, output and the crosspoint that needs to be set (e.g. value = input + "," + output + "," + crosspoint;
+  - Matrix: Value contains the input, output and the crosspoint that needs to be set (e.g. value = input + "," + output + "," + crosspoint;)
   - Table cell: Value is object array identifying the cell that needs to be set.
 
   > [!NOTE]
