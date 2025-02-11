@@ -112,3 +112,9 @@ When you closed the DataMiner Cube desktop app, the configuration files would in
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 In the *Documents* module, up to now, it would incorrectly not be possible to open a document of which the URI contained special characters like "#" or spaces.
+
+#### Alarm Console: Problem when Cube received a CorrelationDetailsEventMessage without ever receiving the associated correlated alarm [ID 42152]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When DataMiner Cube received a `CorrelationDetailsEventMessage` without ever receiving the associated correlated alarm, up to now, an exception could be thrown.
