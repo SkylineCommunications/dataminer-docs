@@ -492,6 +492,15 @@ When you tried to update the GQI DxM by means of the MSI installer, in some case
 
 A number of enhancements have now been made to prevent any problems from occurring while updating the GQI DxM.
 
+#### SLA window change records would not properly be removed from the database [ID 41995]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+<!-- Not added to MR 10.5.0 -->
+
+Since DataMiner feature version 10.4.12, SLA window change records would not properly be removed from the database.
+
+Also, attempts to clean up those records would potentially lead to thread problems in SLProtocol.
+
 #### Swarming: Problems with information events [ID 41999]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
