@@ -51,7 +51,13 @@ If you are using DataMiner Installer v10.4, follow the steps below to install Da
    Once the installation is complete, the configuration window will be displayed.
 
    > [!IMPORTANT]
-   > If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](#restoring-a-backup-onto-the-new-installed-dataminer-agent).
+   > At this point, DataMiner itself is fully installed, but the license and data storage still need to be configured.
+   >
+   > - The procedure below takes care of the automatic license and data storage configuration; however, this requires a connection to the internet. If you need to install DataMiner **offline**, **skip the configuration below**. Instead, the license and data storage configuration will need to be done manually:
+   >   - For the license, see [Permanent license](xref:Permanent_license).
+   >   - For the data storage configuration, please [contact tech support](xref:Contacting_tech_support).
+   > - The procedure below will deploy DataMiner in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. To switch to a [perpetual license](xref:Pricing_Perpetual_Use_Licensing), see [Switching from subscription mode to perpetual license](#switching-from-subscription-mode-to-perpetual-license). To immediately install DataMiner with a perpetual license, you will need to configure the license and data storage manually, similar to an offline installation.
+   > - If you intend to **restore a backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip the configuration below** and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](#restoring-a-backup-onto-the-new-installed-dataminer-agent).
 
 1. Click *Start*.
 
