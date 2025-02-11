@@ -5348,6 +5348,7 @@ items:
   items:
   - name: Skyline DataMiner Software Development Kit
     topicUid: skyline_dataminer_sdk
+    items:  
     - name: Skyline DataMiner SDK
       topicUid: skyline_dataminer_sdk
     - name: DataMiner Package Project
@@ -5393,6 +5394,7 @@ items:
     - name: Tutorials
       items:
       - name: For Connectors
+        items:
         - name: Setting up basic CI/CD for connector deployment in GitHub
           topicUid: CICD_Tutorial_Connector
         - name: Registering a new version of a connector in the Catalog using a GitHub Action
@@ -5400,6 +5402,7 @@ items:
         - name: Setting up complete quality control in CI/CD for connector deployment
           topicUid: CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub
       - name: For Other Items
+        items:
         - name: Registering a new version of a User-Defined API to the Catalog Using Visual Studio and GitHub
           topicUid: CICD_Tutorial_For_Other_Items_User_Defined_API_VisualStudio_And_GitHub
         - name: Registering a new version of a User-Defined API to the Catalog Using GitHub Codespaces
@@ -5423,6 +5426,7 @@ items:
     - name: Tutorials
       items:
       - name: For Other Items
+        items:
         - name: Setting up basic CI/CD for connector deployment in AzureDevops
           topicUid: CICD_Tutorial_For_Connectors_VisualStudio_And_AzureDevOps
   - name: CI/CD using Concourse
