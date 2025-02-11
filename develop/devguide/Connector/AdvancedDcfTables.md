@@ -17,9 +17,9 @@ The Interfaces table contains the DCF interfaces of the element.
 
 For standalone interfaces, the key used in the Interfaces table corresponds with the ID of the corresponding Group.
 
-The key of dynamic interfaces is an autoincremented value starting from 10 001 (prior DataMiner 9.0.4) or 100 001 (since DataMiner 9.0.4).
+The key of dynamic interfaces is an autoincremented value starting from 100 001.
 
-![alt text](../../images/DcfInterfacesTable.png "DataMiner Connectivity Framework - Interfaces table.")
+![alt text](~/develop/images/DcfInterfacesTable.png "DataMiner Connectivity Framework - Interfaces table.")
 
 Note that it is also possible to give a custom name to an interface.
 
@@ -38,7 +38,7 @@ The Interfaces table parameter has ID 65049.
 
 The Interface Properties table contains the DCF interface properties of the element.
 
-![alt text](../../images/DcfInterfacePropertiesTable.png "DataMiner Connectivity Framework - Interface Properties table.")
+![alt text](~/develop/images/DcfInterfacePropertiesTable.png "DataMiner Connectivity Framework - Interface Properties table.")
 
 The Interface Properties table parameter has ID 65054.
 
@@ -54,7 +54,7 @@ The Interface Properties table parameter has ID 65054.
 
 The Connections table contains the DCF connections of the element.
 
-![alt text](../../images/DcfConnectionsTable.png "DataMiner Connectivity Framework - Connections table.")
+![alt text](~/develop/images/DcfConnectionsTable.png "DataMiner Connectivity Framework - Connections table.")
 
 The Connections table parameter has ID 65060.
 
@@ -71,7 +71,7 @@ The Connections table parameter has ID 65060.
 
 The Connection Properties table contains the DCF connection properties of the element.
 
-![alt text](../../images/DcfConnectionPropertiesTable.png "DataMiner Connectivity Framework - Connection Properties table.")
+![alt text](~/develop/images/DcfConnectionPropertiesTable.png "DataMiner Connectivity Framework - Connection Properties table.")
 
 The Connection Properties table parameter has ID 65068.
 

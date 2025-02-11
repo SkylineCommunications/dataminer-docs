@@ -17,7 +17,9 @@ Expected duration: 25 minutes
 > The content and screenshots for this tutorial were created using DataMiner version 10.4.10 and Microsoft Visio Standard 2016. If you use different software versions, you may encounter some differences.
 
 > [!TIP]
-> For more information about the capabilities of the Skyline Spectrum Simulator connector, refer to the connector documentation [Skyline Spectrum Simulation](https://docs.dataminer.services/connector/doc/Skyline_Spectrum_Simulation.html) and the KATA video [Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/).
+>
+> - See also: [Kata #40: Create a visual workflow for the spectrum analyzer](https://community.dataminer.services/courses/kata-40/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - For more information about the capabilities of the Skyline Spectrum Simulator connector, refer to the connector documentation [Skyline Spectrum Simulation](https://docs.dataminer.services/connector/doc/Skyline_Spectrum_Simulation.html) and the KATA video [Kata #32: Using the spectrum analyzer](https://community.dataminer.services/courses/kata-32/).
 
 ## Overview
 

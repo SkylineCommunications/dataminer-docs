@@ -1,5 +1,6 @@
 ---
 uid: DB_xml
+keywords: central database, local database, general database, offload database
 ---
 
 # DB.xml
@@ -15,7 +16,7 @@ In the file *DB.xml*, you can specify the configuration data for several databas
 - [CMDB settings](#cmdb-settings)
 
   > [!TIP]
-  > See also: [Inventory & Asset Management](xref:AssetManagement)
+  > See also: [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management)
 
 This file is located in the folder *C:\\Skyline DataMiner\\*.
 
@@ -444,7 +445,7 @@ To support the offload of files to a file cache instead of to a MySQL, MSSQL, or
 1. Save and close *DB.xml*, and restart the DMA.
 
 > [!NOTE]
-> From DataMiner 10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offload database](xref:Offload_database).
+> From DataMiner 10.2.0/10.1.1 onwards, you can configure this directly in DataMiner Cube. See [Offloading data](xref:Offload_database).
 
 ### Example of an offload database configuration
 
@@ -498,7 +499,7 @@ To support the offload of files to a file cache instead of to a MySQL, MSSQL, or
 
 ## Indexing database settings
 
-In a self-hosted setup with Cassandra, usually an indexing database is also installed, which can be OpenSearch or Elasticsearch. In a setup with storage per DMA, only Elasticsearch is supported, but this setup is not recommended. The indexing database will also be added to *DB.xml*.
+In a self-managed storage setup with Cassandra, usually an indexing database is also installed, which can be OpenSearch or Elasticsearch. In a setup with storage per DMA, only Elasticsearch is supported, but this setup is not recommended. The indexing database will also be added to *DB.xml*.
 
 The *\<Database>* tag for an indexing database has the following attributes:
 

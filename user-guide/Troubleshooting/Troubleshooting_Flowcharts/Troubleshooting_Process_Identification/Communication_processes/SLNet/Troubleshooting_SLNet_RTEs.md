@@ -26,17 +26,17 @@ classDef classActionNonClickable fill:#dddddd,stroke:#dddddd,color:#1E5179,strok
 %% flowchart structure
 %% -------------------------------------------------------------------------
   HOME([Start page])
-  START([SLNetCom is experiencing thread issues<br/>])
-  BACK([Back to SLNet <br/>troubleshooting])
-  MODULES{{Which issue is affecting<br/> the DMA ?}}
+  START([SLNetCom is experiencing thread issues])
+  BACK([Back to SLNet troubleshooting])
+  MODULES{{Which issue is affecting the DMA ?}}
     IssueFound{{Is the issue identified?}}
     IsStackIssue{{What does the stack size look like?}}
     StartupGuide[[Follow the generic DMA startup troubleshooting guide]]
-    CheckAlarmsAndLogs[[Inspect the alarms, notifications <br/>and logs of the affected processes.<br/>Also check SLErrors and SLNet logs.]]
-    CheckJobSize[[Check job queue size<br/> via ClientTestTool]]
-    HighStack[[Plot the stack size every 5 minutes:<br/> Diagnostics>SLNet>StackSizes<br/>Export]]
-    SearchLine[[Turn auto-refresh on and<br/> search for the 'slnetcom' string]]
-    LogSize[[Increase SLNet log size<br/> C:\Skyline DataMiner\Files\SLNet.exe.config]]
+    CheckAlarmsAndLogs[[Inspect the alarms, notifications and logs of the affected processes. Also check SLErrors and SLNet logs.]]
+    CheckJobSize[[Check job queue size via ClientTestTool]]
+    HighStack[[Plot the stack size every 5 minutes: Diagnostics>SLNet>StackSizes Export]]
+    SearchLine[[Turn auto-refresh on and search for the 'slnetcom' string]]
+    LogSize[[Increase SLNet log size C:\Skyline DataMiner\Files\SLNet.exe.config]]
   START --- MODULES
     MODULES --- |Abnormal DMA startup| StartupGuide
     StartupGuide --- END
@@ -45,7 +45,7 @@ classDef classActionNonClickable fill:#dddddd,stroke:#dddddd,color:#1E5179,strok
     IssueFound --- |No| CheckJobSize
     IssueFound --- |Yes| END
     CheckJobSize --- IsStackIssue
-    IsStackIssue --- |High and stagnating<br/> or high and growing| HighStack
+    IsStackIssue --- |High and stagnating or high and growing| HighStack
     HighStack --- SearchLine
     IsStackIssue --- |Normal| LogSize
 %% -------------------------------------------------------------------------

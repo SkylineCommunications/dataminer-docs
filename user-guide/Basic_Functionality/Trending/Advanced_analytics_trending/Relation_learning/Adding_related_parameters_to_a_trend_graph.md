@@ -26,6 +26,9 @@ The following prerequisites are **mandatory**. You will not be able to use this 
 
   You can [use the Admin app](xref:Managing_cloud-connected_nodes) to check if the *DataMiner CloudFeed* DxM is installed.
 
+  > [!NOTE]
+  > From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages always include the most recent version of the *CloudFeed* DxM.
+
 - The option *Allow performance and usage data offload* must be enabled. See [Controlling performance and usage data offloads](xref:Controlling_cloudfeed_data_offloads).
 
 > [!NOTE]
@@ -33,7 +36,7 @@ The following prerequisites are **mandatory**. You will not be able to use this 
 
 The following prerequisites are **optional** but highly recommended, as they will unlock the full capabilities of the feature:
 
-- The DataMiner System should use [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
+- The DataMiner System should use [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
 
 - Behavioral anomaly detection should be enabled. You can enable this feature in System Center, via *System settings* > *analytics config*. Enabling this feature allows DataMiner to generate data based on what happens in your system, so that it can understand what is going on.
 

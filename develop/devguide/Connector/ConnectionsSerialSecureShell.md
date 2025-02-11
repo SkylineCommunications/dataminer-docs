@@ -229,9 +229,7 @@ There are a number of differences between implementing serial communication and 
 
 ## Selecting a local port
 
-Up to DataMiner 7.0.3, DataMiner uses the same SSH connection if the polling IP is the same (RN 3859), which can cause problems. A workaround is to specify a different local IP port in the element wizard.
-
-By default, it is not possible to change the local IP port in the element wizard. You therefore need to define the following in the protocol:
+In legacy DataMiner versions prior to 7.0.3 (RN 3859), DataMiner uses the same SSH connection if the polling IP is the same, which can cause problems. Because of this, in older protocols, a workaround may be used that allows the user to specify a different local IP port in the element wizard, by defining the following in the protocol:
 
 ```xml
 <PortSettings>
@@ -242,7 +240,7 @@ By default, it is not possible to change the local IP port in the element wizard
 </PortSettings>
 ```
 
-![alt text](../../images/Connection_Types_-_SshlocalIPPort.png "DataMiner Cube local IP port configuration")
+![DataMiner Cube local IP port configuration](~/develop/images/Connection_Types_-_SshlocalIPPort.png)
 
 ## SSH logging
 
@@ -323,8 +321,8 @@ DataMiner will propose the following key exchange algorithms to the server in th
 
 1. diffie-hellman-group-exchange-sha1
 1. diffie-hellman-group1-sha1
-1. diffie-hellman-group14-sha1 (introduced in DataMiner 9.5.2 - RN14766)
-1. ecdh-sha2-nistp256 (introduced in DataMiner 9.5.2 - RN14877)
+1. diffie-hellman-group14-sha1<!-- RN 14766 -->
+1. ecdh-sha2-nistp256<!-- RN 14877 -->
 
 #### Ciphers
 
@@ -332,7 +330,7 @@ DataMiner will propose the following ciphers to the server in the following orde
 
 1. 3des-cbc
 1. aes128-cbc
-1. aes128-ctr (Introduced in DataMiner 9.5.2 - RN 14766)
+1. aes128-ctr<!-- RN 14766 -->
 
 #### Hash-based Message Authentication Codes (HMAC)
 
@@ -340,8 +338,7 @@ DataMiner will propose the following hash-based message authentication algorithm
 
 1. HMAC-MD5
 1. HMAC-SHA1
-1. HMAC-SHA2-256 (Introduced in DataMiner 9.5.2 - RN 14877)
-
+1. HMAC-SHA2-256<!-- RN 14877 -->
 
 #### Host key types
 
@@ -352,9 +349,7 @@ DataMiner will propose the following hash-based message authentication algorithm
 
 ## Selecting the key exchange algorithm
 
-From DataMiner 9.5.1 (RN 13897) onwards, it is possible to specify the key exchange algorithm to be used when connecting to an SSH server.
-
-You can do so by defining a serial connection that specifies the key exchange algorithm in the KexAlgorithms tag.
+To specify the key exchange algorithm to be used when connecting to an SSH server, define a serial connection that specifies the key exchange algorithm in the KexAlgorithms tag.<!-- RN 13897 -->
 
 ```xml
 <Connection id="1" name="SSH Connection">

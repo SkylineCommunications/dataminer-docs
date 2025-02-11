@@ -26,7 +26,7 @@ One of the following predefined values:
 - Counter64string
 
   > [!NOTE]
-  > This type can be used to receive the SNMP counter64 as a string, where the counter64 uses double and may therefore lose definition. *Feature introduced in DataMiner 8.5.4.2, RN 9284.*
+  > This type can be used to receive the SNMP counter64 as a string, where the counter64 uses double and may therefore lose definition.<!-- RN 9284 -->
 
 - Gauge32
 - Integer
@@ -60,7 +60,7 @@ One of the following predefined values:
 - Opaque
 
   > [!NOTE]
-  > When used in a trap it is processed the same way as the type octetstring. *Feature introduced in DataMiner 8.0.8.4, RN 7249.*
+  > When used in a trap, it is processed the same way as the type OctetString.<!-- RN 7249 -->
 
 - TimeTicks
 - UInteger32

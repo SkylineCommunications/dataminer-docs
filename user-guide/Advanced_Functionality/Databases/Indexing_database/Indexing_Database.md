@@ -4,7 +4,10 @@ uid: Indexing_Database
 
 # Configuring an indexing database
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you also need to set up an OpenSearch or Elasticsearch indexing database in your DMS.
+> [!IMPORTANT]
+> Using a self-managed storage setup with indexing database is supported but not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS).
+
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-managed storage, you also need to set up an OpenSearch or Elasticsearch indexing database in your DMS.
 
 An indexing database is required for many DataMiner features, including:
 
@@ -19,6 +22,8 @@ An indexing database is required for many DataMiner features, including:
 - [DataMiner User-Defined APIs](xref:UD_APIs)
 
 - [Specific GQI data sources](xref:Query_data_sources)
+
+A [dedicated clustered storage setup](#dedicated-clustered-storage-setup) always requires indexing, among others to store active and historical alarms and information events. 
 
 > [!IMPORTANT]
 > Elasticsearch is only supported up to version 6.8. As this version is no longer supported by Elastic, we recommend using OpenSearch instead.
@@ -45,7 +50,7 @@ In a dedicated clustered storage setup, an indexing database is **required**. On
 
 ## Storage per DMA
 
-While this is no longer recommended, it is still possible to use a self-hosted storage setup with a Cassandra database per DataMiner Agent. In such a setup, you should also install an OpenSearch or Elasticsearch indexing database in order to get access to additional DataMiner features, including User-Defined APIs, DOM, and SRM.
+While this is no longer recommended, it is still possible to use a self-managed storage setup with a Cassandra database per DataMiner Agent. In such a setup, you should also install an OpenSearch or Elasticsearch indexing database in order to get access to additional DataMiner features, including User-Defined APIs, DOM, and SRM.
 
 - [OpenSearch](xref:OpenSearch_database) is supported from DataMiner 10.3.0/10.3.3 onwards. To install OpenSearch, first [install an OpenSearch database](xref:Installing_OpenSearch_database) (ideally on a separate Linux server), and then [connect your DMS to the OpenSearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster).
 

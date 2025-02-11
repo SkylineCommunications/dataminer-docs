@@ -24,4 +24,4 @@ By default, the KeepAlive option of smart IP client sockets is set to the follow
 
 - interval: 1 s
 
-This means, that every second a KeepAlive probe is sent to the socket to check if the connection is still alive. If the timeout time has passed without one successful keepalive probe, all the applications are notified that the socket is disconnected.
+This means that every second a KeepAlive probe is sent to the socket to check if the connection is still alive. If the timeout time has passed without one successful keepalive probe, all the applications are notified that the socket is disconnected.

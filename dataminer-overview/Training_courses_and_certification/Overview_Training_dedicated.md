@@ -18,10 +18,12 @@ In case DataMiner training is needed for a large group of people, this option br
 
 DataMiner Open Training sessions are open public sessions offering a complete training program with four separate tracks:
 
-- DataMiner Fundamentals
-- DataMiner Configurator Level 1
-- DataMiner Configurator Level 2
-- DataMiner Sys Admin
+| Track | Learning objectives |
+|-------|--------------------|
+| DataMiner Fundamentals | - Understand the basic layout of a DataMiner System.<br>- Understand basic DataMiner concepts such as connectors, elements, services, etc.<br>- Access the main dataminer.services apps.<br>- Work with the main DataMiner Cube UI features.<br>- View and set parameter data in DataMiner Cube.<br>- Track performance data in DataMiner Cube.<br>- Work with Visual Overview and with DataMiner views.<br>- View and manage active and historical alarms.<br>- Use the basic features of DataMiner dashboards and low-code apps.<br>- Configure notifications by email or with Alerter, and interact with the DataMiner Teams bot. |
+| DataMiner Configurator Level 1 | - Add, edit, and delete DataMiner connectors.<br>- Configure information templates.<br>- Create and manage elements.<br>- Create, configure, and assign trend and alarm templates.<br>- Configure alarm template groups.<br>- Create and configure views, services, and SLAs. |
+| DataMiner Configurator Level 2 | - Create your own basic Visual Overview ages using Microsoft Visio.<br>- Create DataMiner dashboards.<br>- Integrate basic GQI data  sources in dashboards.<br>- Configure DataMiner dashboard security.<br>- Create and manage basic low-code apps.<br>- Manage DataMiner users and user groups.<br>- Create and run Automation scripts. |
+| DataMiner Sys Admin | - Upgrade, back up, and manage DataMiner Agents.<br>- Configure DataMiner Failover.<br>- Consult and manage DataMiner logging.<br>- Understand DataMiner data storage and configure the TTL of database records.<br>- Configure data offloads.<br>- Configure SNMP forwarding.<br>- Work with scripted connectors.<br>- Configure advanced Automation scripts.<br>- Create custom APIs based on Automation scripts.<br>- Configure custom commands for the Teams bot.<br>- Create Correlation rules and work with correlated alarms. |
 
 Each track includes theoretical presentations, demonstrations, and hands-on exercises. You can follow the entire program or specific tracks, depending on your level of experience.
 

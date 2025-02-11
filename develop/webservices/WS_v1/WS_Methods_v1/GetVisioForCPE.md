@@ -15,8 +15,8 @@ All images are in PNG format, and are base64 encoded.
 | connection | String | The connection ID. See [ConnectApp](xref:ConnectApp). |
 | dmaID | Integer | The DataMiner Agent ID. |
 | elementID | Integer | The element ID. |
-| chain | String | The currently selected chain, which can be retrieved using the GetTopologyChainsForCPE method. See [GetTopologyChainsForCPE](xref:GetTopologyChainsForCPE). |
-| fieldName | String | The name of the currently selected field, which can be retrieved using the GetTopologyFieldsForCPEChain method. See [GetTopologyFieldsForCPEChain](xref:GetTopologyFieldsForCPEChain). |
+| chain | String | The currently selected chain, which can be retrieved using the [GetTopologyChainsForCPE](xref:GetTopologyChainsForCPE) method. |
+| fieldName | String | The name of the currently selected field, which can be retrieved using the [GetTopologyFieldsForCPEChain](xref:GetTopologyFieldsForCPEChain) method. |
 | width | Integer | The width of the image to be returned. |
 | height | Integer | The height of the image to be returned. |
 | page | Integer | The page of the Visio file to be returned. |

@@ -8,7 +8,10 @@ uid: General_Main_Release_10.3.0_CU11
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.3.0 CU11](xref:Cube_Main_Release_10.3.0_CU11).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.3.0 CU11](xref:Web_apps_Main_Release_10.3.0_CU11).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 
@@ -239,11 +242,11 @@ After a Failover switch, in some cases, DVE elements or virtual function element
 
 When you retrieved the trace data after performing a create, update or delete action using the ServiceManagerHelper, in some cases, an error could be returned although the action that was performed had succeeded.
 
-#### SLAnalytics could stop working when it lost its connection to SLNet during start-up [ID 38268]
+#### SLAnalytics could stop working when it lost its connection to SLNet during startup [ID 38268]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-Up to now, when SLAnalytics lost its connection to SLNet at a particular moment during start-up, it would stop working because it was not able to reach the database. From now on, when SLAnalytics loses its connection to SLNet at that particular moment during start-up, it will continue working and will try to connect to the database again as soon as its connection to SLNet has been re-established.
+Up to now, when SLAnalytics lost its connection to SLNet at a particular moment during startup, it would stop working because it was not able to reach the database. From now on, when SLAnalytics loses its connection to SLNet at that particular moment during startup, it will continue working and will try to connect to the database again as soon as its connection to SLNet has been re-established.
 
 #### Correlation alarms with incorrect severity after a DataMiner restart [ID 38286]
 

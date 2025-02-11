@@ -13,7 +13,15 @@ items:
       - name: dataminer.services release notes
         items:
           - name: dataminer.services change log
-            topicUid: DCP_change_log
+            items:
+            - name: 2025
+              topicUid: DCP_change_log_2025
+            - name: 2024
+              topicUid: DCP_change_log
+            - name: 2023
+              topicUid: DCP_change_log_2023
+            - name: 2022
+              topicUid: DCP_change_log_2022
           - name: Cloud Pack release notes
             topicUid: Cloud_Pack_change_log
       - name: DxM release notes

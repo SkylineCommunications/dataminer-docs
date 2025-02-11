@@ -26,7 +26,7 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:0px;
 classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0px;
 %% Define blocks %%
 START([Trend issue])
-GetDELT{{Get a .dmimport package with trend data,\nunzip it and check the 'Database' folder.}}
+GetDELT{{Get a .dmimport package with trend data, unzip it and check the 'Database' folder.}}
 TrendDataInspector{{"Check the data with the trend data inspector."}}
 QueryDatabase{{Query the database directly.}}
 DataPresent([Is the data there?])
@@ -70,9 +70,9 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 %% Define blocks %%
 ReadIssue([Read issue])
 FollowCTT{{Follow your session with the client test tool and open the trend graph.}}
-ClientExport{{1. Turn on computer setting for trend debug\n2. Open trend\n3. On the trend timeline, do CTRL + ALT + SHIFT + Right click}}
-ReadIssueChecks{{"1. Check trend template flags (find your parameter in the element protocol)\n2. Check the export and/or GetTrendDataMessage requests and responses\n3.Check user settings ('show most detailed data', range settings...)"}}
-NotFixed{{"If your issue is not fixed,\ncontact support.data-core@skyline.be,\nincluding all info gathered and steps taken."}}
+ClientExport{{1\. Turn on computer setting for trend debug<br>2\. Open trend<br>3\. On the trend timeline, press Ctrl + Alt + Shift + Right-click}}
+ReadIssueChecks{{"1\. Check trend template flags (find your parameter in the element protocol)<br>2\. Check the export and/or GetTrendDataMessage requests and responses<br>3\. Check user settings ('show most detailed data', range settings...)"}}
+NotFixed{{"If your issue is not fixed, contact <a href="mailto:support.data-core@skyline.be">support.data-core@skyline.be</a>, including all info gathered and steps taken."}}
 %% Connect blocks %%
 ReadIssue --- FollowCTT
 ReadIssue --- ClientExport
@@ -108,8 +108,8 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:0px;
 classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0px;
 %% Define blocks %%
 WriteIssue([Write issue])
-NotFixed{{"If your issue is not fixed,\ncontact support.data-core@skyline.be,\nincluding all info gathered and steps taken."}}
-WriteIssueActionLogging{{"Check Logging: SLDBConnection, SLNet, <br>NATS, SLMessageBroker_SLNet.\nLook for errors/exceptions/status messages."}}
+NotFixed{{"If your issue is not fixed, contact <a href="mailto:support.data-core@skyline.be">support.data-core@skyline.be</a>, including all info gathered and steps taken."}}
+WriteIssueActionLogging{{"Check Logging: SLDBConnection, SLNet, NATS, SLMessageBroker_SLNet. Look for `errors/exceptions/status messages`."}}
 WriteIssueActionDBXML{{"Check DB.xml."}}
 WriteIssueActionTrendTemplate{{"Check trend template flags."}}
 WriteIssueActionParameter{{"Check if parameter value is updating."}}
@@ -131,3 +131,6 @@ class GetDELT,TrendDataInspector,QueryDatabase,FollowCTT,ReadIssueChecks,ClientE
 class DataPresent classDecision;
 class NotFixed classSolution;
 ```
+
+> [!NOTE]
+> If the Windows setting "fast startup" is activated on the DataMiner server, trend graphs for the server will not show a gap when it is turned off. We recommend disabling this option to make sure trending is displayed correctly.

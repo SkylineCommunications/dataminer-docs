@@ -4,7 +4,7 @@ uid: CO_Metadata
 
 # Modifying links to DataMiner objects
 
-In a custom operator, you can modify the metadata that links DataMiner objects to a row. This metadata allows you to feed the objects in Dashboards and Low-Code Apps to other components.
+In a custom operator, you can modify the metadata that links DataMiner objects to a row. This metadata allows you to pass the objects in Dashboards and Low-Code Apps to other components.
 
 To add, remove, or modify a DataMiner object link, use the [Metadata property](xref:GQI_GQIRow#properties) of the editable row.
 

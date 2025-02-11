@@ -180,7 +180,7 @@ As soon as either *MaxFreezeTime* or *MaxFreezeAlarms* is reached, the Alarm Con
 
 ### AlarmSettings.MustSquashAlarms
 
-The *MustSquashAlarms* tag is available from DataMiner 10.0.12 onwards. Set the value to *true* to enable alarm consolidation by default. In that case, consecutive alarm events without a severity change will be combined into a consolidated event. This may be useful to reduce the load on DataMiner Cube and on the SLNet process.
+The *MustSquashAlarms* tag is used to enable (*true*) or disable (*false*) alarm consolidation by default. If this is enabled, consecutive alarm events without a severity change will be combined into a consolidated event. This may be useful to reduce the load on DataMiner Cube and on the SLNet process.
 
 The following types of alarm events will not be combined in a consolidated alarm event:
 
@@ -281,9 +281,9 @@ The *\<DELTCache>* tag and its subtags use the following syntax:
 </DELTCache>
 ```
 
-#### Clean-up modes
+#### Cleanup modes
 
-In a *\<DELTCacheMode>* tag, you can specify one of three clean-up modes:
+In a *\<DELTCacheMode>* tag, you can specify one of three cleanup modes:
 
 | Mode | Description |
 |--|--|

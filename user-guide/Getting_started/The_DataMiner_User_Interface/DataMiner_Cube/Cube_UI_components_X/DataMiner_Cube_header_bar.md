@@ -20,7 +20,7 @@ In the header bar of DataMiner Cube, you can find the following items:
 
   - *Show server time*: Determines whether the DMS time is displayed.
 
-  - *Show cluster name*: Determines whether the name of the cluster is displayed. (Available from DataMiner 10.0.12 onwards.)
+  - *Show cluster name*: Determines whether the name of the cluster is displayed.
 
   - *Show search box*: Determines whether the search box is displayed. (Available from DataMiner 10.3.5/10.4.0 onwards).
 
@@ -28,28 +28,20 @@ In the header bar of DataMiner Cube, you can find the following items:
 
   - *Account details*: Opens your user card.
 
-  - *X online contacts*: Displays the contacts that are currently online. Right-click a contact in the list to access a menu that allows you to exchange chat messages with them or to disconnect them (if you have the necessary permissions to do so).
-
-    > [!TIP]
-    > See also: [Chat collaboration](xref:chat#chat-collaboration)
+  - *X online contacts*: Displays the contacts that are currently online. Right-click a contact in the list to access a menu that allows you to exchange [chat messages](xref:chat) with them or to disconnect them (if you have the necessary permissions to do so).
 
   - *Settings*: Opens the *Settings* window.
 
-    > [!TIP]
-    > See also:
-    >
-    > - [User settings](xref:User_settings)
-    > - [Computer settings](xref:Computer_settings)
+    <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+      <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+        <b>💡 TIPS TO TAKE FLIGHT</b><br>In the <i>Settings</i> window, you will find two types of settings: <a href="xref:User_settings" style="color: #657AB7;">user settings</a> and <a href="xref:Computer_settings" style="color: #657AB7;">computer settings</a>.
+      </div>
+      <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+    </div>
 
-  - *Change layout*: Allows you to select a different layout for the cards in the Cube workspace.
+  - *Change layout*: Allows you to [select a different layout](xref:Working_with_cards_in_DataMiner_Cube#changing-the-card-layout) for the cards in the Cube workspace.
 
-    > [!TIP]
-    > See also: [Changing the card layout](xref:Working_with_cards_in_DataMiner_Cube#changing-the-card-layout)
-
-  - *System Center*: Opens the System Center, where you can among others configure the DMS setup, backups, the database and DataMiner security, if you have the necessary permissions to do so. The System Center also provides access to all DataMiner log files.
-
-    > [!TIP]
-    > See also: [Logging](xref:logging)
+  - *System Center*: Opens the System Center, where you can among others configure the DMS setup, backups, the database, and DataMiner security, if you have the necessary permissions to do so. The System Center also provides access to all [DataMiner log files](xref:logging).
 
   - *Agents*: Opens the *Agents* page in System Center, where you can view information on the DMS and configure the DMS, if you have the necessary permissions to do so.
 
@@ -77,6 +69,6 @@ In the header bar of DataMiner Cube, you can find the following items:
     > [!TIP]
     > See also: [Updating protocols with the Update Center](xref:Adding_a_protocol_or_protocol_version_to_your_DataMiner_System#updating-protocols-with-the-update-center)
 
-  - *Open Cube Mobile*/*Open web apps*: Opens the DataMiner landing page, with access to the various DataMiner web apps. This option is renamed from DataMiner 10.0.0 \[CU16\] /10.1.0 \[CU5\]/10.1.8 onwards to better reflect the actual usage of these apps.
+  - *Open DataMiner web apps*: Opens the DataMiner landing page, with access to the various DataMiner web apps.
 
   - *Sign out*: Ends your current DataMiner Cube session and returns you to the logon screen. If you are using a desktop app, you can click then the arrow button next to the DMA name or IP to go back to the start window and select a different DMS to connect to.

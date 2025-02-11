@@ -8,14 +8,14 @@ Use this method to retrieve an existing service template. Available from DataMin
 
 ## Input
 
-| Item              | Format  | Description                                                                          |
-|-------------------|---------|--------------------------------------------------------------------------------------|
+| Item              | Format  | Description                                               |
+|-------------------|---------|-----------------------------------------------------------|
 | connection        | String  | The connection string. See [ConnectApp](xref:ConnectApp). |
-| dmaID             | Integer | The DataMiner Agent ID.                                                              |
-| serviceTemplateID | Integer | The service template ID.                                                             |
+| dmaID             | Integer | The DataMiner Agent ID.                                   |
+| serviceTemplateID | Integer | The service template ID.                                  |
 
 ## Output
 
-| Item                      | Format                   | Description                                                               |
-|---------------------------|--------------------------|---------------------------------------------------------------------------|
+| Item                     | Format                                        | Description                     |
+|--------------------------|-----------------------------------------------|---------------------------------|
 | GetServiceTemplateResult | [DMAServiceTemplate](xref:DMAServiceTemplate) | The requested service template. |

@@ -29,7 +29,7 @@ Tables generating DCF interfaces should not be updated or changed often, as this
 For large SNMP tables, it is recommended to that you use a custom table and copy the information needed to the custom table. This allows for full control over the table rows and information. Larger tables will have a greater impact on DMA performance. Filtering via bandwidth or otherwise is advised (consult the TAM and/or customer on what the best option is).
 
 > [!NOTE]
-> From DataMiner 10.1.5 onwards (RN29326), the [Group@isInternal](xref:Protocol.ParameterGroups.Group-isInternal) attribute can be used to specify that a DCF interface is internal. These interfaces will not be shown to the user and will only be available internally, limiting what is shown.
+> The [Group@isInternal](xref:Protocol.ParameterGroups.Group-isInternal) attribute can be used to specify that a DCF interface is internal.<!-- RN 29326 --> These interfaces will not be shown to the user and will only be available internally, limiting what is shown.
 
 ### Interface alarm monitoring
 

@@ -238,7 +238,7 @@ From now on, when you drag several elements or services from a view card onto a 
 - **the items in that view will be moved** to the view in Surveyor, and
 - **the items in any of its sub-views will be copied** to the view in the Surveyor.
 
-If you want to the items in the view to be **copied** to the view in the Surveyor instead of moved, keep the CTRL key pressed while dragging them.
+If you want to the items in the view to be **copied** to the view in the Surveyor instead of moved, keep the Ctrl key pressed while dragging them.
 
 #### Low-Code Apps: Page names and panel names could incorrectly be empty [ID 35960]
 

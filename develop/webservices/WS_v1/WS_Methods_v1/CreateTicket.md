@@ -23,6 +23,6 @@ Use this method to create a new ticket.
 
 ## Output
 
-| Item               | Format            | Description                                                                                                        |
-|--------------------|-------------------|--------------------------------------------------------------------------------------------------------------------|
+| Item | Format | Description |
+|------|--------|-------------|
 | CreateTicketResult | Array of integers | The DataMiner ID and ticket ID of the new ticket. From DataMiner 10.0.13 onwards, the ticket UID is also returned. |

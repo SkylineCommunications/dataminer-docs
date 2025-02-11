@@ -18,9 +18,11 @@ To change element states using this tool:
 
    By default, the *Elements by Name* tab is displayed, where you can see all the elements on the DMA, listed by name. The state of an element is displayed in parentheses next to the name. There is also an *Elements by Protocol* tab, with a tree structure that allows you to drill down to elements using specific protocol and protocol version.
 
+1. From DataMiner 10.5.0/10.5.3 onwards<!--RN 41341-->, if you want to see service elements as well, enable the *Show advanced elements* option on the right. Prior to DataMiner 10.5.0/10.5.3, service elements are included in the list by default.
+
 1. Indicate for which elements the state should change:
 
-   - In the *Elements by Name* tab, move the elements for which you want to change the state from the column on the left to the column on the right using the arrow buttons in between the columns. To quickly select all elements in a column, press CTRL + A. To filter the displayed elements, add a filter value in the box on the right.
+   - In the *Elements by Name* tab, move the elements for which you want to change the state from the column on the left to the column on the right using the arrow buttons in between the columns. To quickly select all elements in a column, press Ctrl + A. To filter the displayed elements, add a filter value in the box on the right.
 
    - In the *Elements by Protocol* tab, select the checkboxes in front of the elements for which you want to change the state. If you select the checkbox in front of a protocol or protocol version, the state of all elements using that protocol or protocol version will be changed. To search for specific items in the tree view, add a search term in the box on the right.
 

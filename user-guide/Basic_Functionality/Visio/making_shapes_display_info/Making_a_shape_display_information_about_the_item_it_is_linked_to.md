@@ -21,7 +21,7 @@ Using a shape data field of type **Info**, you can make shapes display informati
 
 - If a shape is [linked to a virtual function resource](xref:Linking_a_shape_to_a_resource), an **Info** field can be used to display the name of the virtual function resource, the name of the main element generating the virtual function resource, the resource name or the name of the virtual function definition.
 
-- If a shape is [linked to an EPM object](xref:Linking_a_shape_to_an_EPM_object), from DataMiner 10.1.0/10.0.4 onwards, an **Info** field can be used to display the system name or system type, and from DataMiner 10.3.2/10.4.0 onwards, it can be used to display statistics related to the EPM object.
+- If a shape is [linked to an EPM object](xref:Linking_a_shape_to_an_EPM_object), an **Info** field can be used to display the system name or system type, and from DataMiner 10.3.2/10.4.0 onwards, it can be used to display statistics related to the EPM object.
 
 > [!TIP]
 > For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[data > PROPERTIES]* page.

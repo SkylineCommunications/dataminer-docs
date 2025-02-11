@@ -4,7 +4,9 @@ uid: Protocol.Params.Param-confirmPopup
 
 # confirmPopup attribute
 
-Overrides the "*Never ask for confirmation after setting parameter value*" setting in DataMiner Cube.
+<!-- RN 11133 -->
+
+Overrides the *Never ask for confirmation after setting parameter value* setting in DataMiner Cube. (See [Cube settings](xref:User_settings#cube-settings).)
 
 ## Content Type
 
@@ -13,10 +15,6 @@ Overrides the "*Never ask for confirmation after setting parameter value*" setti
 ## Parent
 
 [Param](xref:Protocol.Params.Param)
-
-## Remarks
-
-*Feature introduced in DataMiner 9.0.0 (RN 11133).*
 
 ## Examples
 

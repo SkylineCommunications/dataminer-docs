@@ -118,7 +118,7 @@ In order to define properties for all resources in a pool, and optionally limit 
    - *Capability*: Allows you to select and configure a profile parameter defining the capability of the resource.
 
      > [!NOTE]
-     > To support time-dependent capabilities that are filled in by a script when necessary, from DataMiner 10.0.6 onwards, you can select *Use time-dependent* and not specify a value for the capability. In addition, string capabilities are supported from this version onwards.
+     > To support time-dependent capabilities that are filled in by a script when necessary, you can select *Use time-dependent* and not specify a value for the capability. In addition, string capabilities are supported from this version onwards.
 
 1. If any resource property definitions have been defined, fill in the values required for the additional properties.
 
@@ -172,7 +172,7 @@ From DataMiner 10.2.10/10.3.0 onwards, you can remove a resource from a pool as 
 
 ### Duplicating a resource from a pool
 
-From DataMiner 10.3.7/10.3.4 onwards, you can duplicate a resource from a pool as follows: <!-- RN 36308 -->
+From DataMiner 10.3.7/10.4.0 onwards, you can duplicate a resource from a pool as follows: <!-- RN 36308 -->
 
 1. Select the resource pool.
 

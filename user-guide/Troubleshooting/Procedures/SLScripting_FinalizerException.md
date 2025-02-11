@@ -2,7 +2,7 @@
 uid: TroubleshootingSLScriptingFinalizerException
 ---
 
-# Investigate exception occurrence on Finalizer thread
+# Investigating exception occurrence on Finalizer thread
 
 This section illustrates how to investigate a crash of the SLScripting process in case an exception occurred on the Finalizer thread.
 

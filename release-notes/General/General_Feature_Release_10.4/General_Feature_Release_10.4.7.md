@@ -145,7 +145,7 @@ Also, the mechanism used to associate severities with anomaly thresholds has bee
 
 #### SLLogCollector packages will now include nslookup output for hostnames [ID 39526]
 
-<!-- MR 10.5.0 - FR 10.4.7 -->
+<!-- MR 10.4.0 [CU9] - FR 10.4.7 -->
 
 From now on, SLLogCollector packages will also include the *nslookup* output for the hostname configured in
 

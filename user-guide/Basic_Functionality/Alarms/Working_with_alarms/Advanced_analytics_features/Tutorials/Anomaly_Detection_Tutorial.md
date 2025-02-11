@@ -10,6 +10,9 @@ By default, behavioral anomaly detection is active on trended parameters. It wil
 
 Estimated duration: 45 minutes.
 
+> [!NOTE]
+> The content and screenshots for this tutorial were created in **DataMiner 10.3.12**.
+
 > [!TIP]
 >
 > - For more information, such as technical limitations of anomaly detection, see [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
@@ -17,7 +20,7 @@ Estimated duration: 45 minutes.
 
 ## Prerequisites
 
-- DataMiner 10.3.12 or higher with [Storage as a Service (STaaS)](xref:STaaS) or a [self-hosted Cassandra database](xref:Supported_system_data_storage_architectures).
+- DataMiner 10.3.12 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-managed Cassandra database](xref:Supported_system_data_storage_architectures).
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
@@ -209,7 +212,7 @@ In some cases, it can be useful to only generate alarms for certain types of ano
    ![Trend graph of the "Audio Bit Rate Channel 1" parameter](~/user-guide/images/Audio_Bit_Rate_CBR_Trending_Variance_Increase.png)
 
 > [!TIP]
-> It would be very difficult to configure similar alarm monitoring behavior using static alarm thresholds. This shows the power of anomaly alarm monitoring for detecting sudden unexpected behavior. For a complete list of all options related to alarm monitoring of anomalies, see [Configuring anomaly detection alarms for specific parameters](xref:Configuring_anomaly_detection_alarms).
+> It would be very difficult to configure similar alarm monitoring behavior using static alarm thresholds. This shows the power of anomaly alarm monitoring for detecting sudden unexpected behavior. For a complete list of all options related to alarm monitoring of anomalies, see [Configuring Augmented Operations alarm settings](xref:Configuring_anomaly_detection_alarms).
 
 ## Step 6: Set custom alarm thresholds
 
@@ -313,7 +316,7 @@ In the previous steps, DataMiner determined autonomously whether certain behavio
       ![Trend graph of 'Cable Modems Out of Service' with relative thresholds configured for level shifts](~/user-guide/images/CMOOS_Trend_Graph_With_Relative_Alarming.png)
 
 > [!TIP]
-> In exactly the same way, you can configure alarm monitoring of *outlier* anomalies. See [Configuring anomaly detection alarms](xref:Configuring_anomaly_detection_alarms).
+> In exactly the same way, you can configure alarm monitoring of *outlier* anomalies. See [Configuring Augmented Operations alarm settings](xref:Configuring_anomaly_detection_alarms).
 
 ## Step 7: Final exercise
 

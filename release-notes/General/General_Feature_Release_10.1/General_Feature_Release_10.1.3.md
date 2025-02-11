@@ -223,12 +223,12 @@ In the service diagram, it is now possible to change the end points of connectio
 
 #### DataMiner Cube start window: Opening a Cube instance without closing the start window \[ID 28608\]
 
-It is now possible to connect to a DMA without closing the start window. To do so, in the start window, click a tile while holding the CTRL button.
+It is now possible to connect to a DMA without closing the start window. To do so, in the start window, click a tile while holding the Ctrl key.
 
 This will allow you to open multiple instances of DataMiner Cube, each connected to a different DMA.
 
 > [!NOTE]
-> If you press ENTER while holding the CTRL button, a Cube instance will open and connect to the DMA specified in the currently selected tile.
+> If you press Enter while holding the Ctrl key, a Cube instance will open and connect to the DMA specified in the currently selected tile.
 
 #### DataMiner Cube: Option to return to the start window after logging out \[ID 28648\]
 
@@ -324,7 +324,7 @@ The layout pane of a State component now has an additional setting that allows y
 
 Also, in the components pane on the left, the *States* section has now been renamed to *States and values*.
 
-#### Dashboards app - Table component: GQI query result can now be export to a CSV file \[ID 28637\]
+#### Dashboards app - Table component: GQI query result can now be exported to a CSV file \[ID 28637\]
 
 When a table component displays the result of a GQI query, it is now possible to export that result to a CSV file.
 
@@ -446,7 +446,7 @@ Due to a number of enhancements, overall performance has increased when simultan
 
 When building a GQI query, it is now possible to click the up and down arrows on the right to make a column swap places with the column above or below it.
 
-Also, by clicking the up and down arrows while holding the CTRL key, you can make a column swap places with the nearest selected column above or below it.
+Also, by clicking the up and down arrows while holding the Ctrl key, you can make a column swap places with the nearest selected column above or below it.
 
 > [!NOTE]
 >

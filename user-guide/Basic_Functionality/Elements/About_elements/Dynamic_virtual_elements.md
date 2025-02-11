@@ -60,7 +60,7 @@ In DataMiner Cube, this can be done when the DVE is created or edited:
 
 - In the *Advanced element settings,* select or clear *Enable DVE child creation*.
 
-Alternatively, this can be done manually in the *Element.xml* file. To do so:
+Alternatively, if [Swarming](xref:Swarming) is not enabled, this can be done manually in the *Element.xml* file. To do so:
 
 1. Stop DataMiner.
 
@@ -83,4 +83,4 @@ When you disable the setting for a particular parent element, all its existing c
 > [!NOTE]
 >
 > - Only DVE main elements that have element creation disabled can be added to a redundancy group.
-> - Prior to DataMiner 10.0.8, if DVE child creation is disabled, virtual functions (used in DataMiner SRM) can also not be generated. From DataMiner 10.0.8 onwards, this setting no longer affects virtual functions.
+> - This setting does not affect the creation of virtual functions (used in DataMiner SRM).

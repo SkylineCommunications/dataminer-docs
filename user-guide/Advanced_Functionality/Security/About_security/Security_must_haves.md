@@ -20,7 +20,7 @@ This page provides an overview of the security-related requirements that new pro
 
   - Ability to limit access for critical element controls to a limited set of users within the group of users that can access those elements in read/write mode (e.g. users A, B, and C can fully access, read, and control element X, but the reboot and reset function of element X can only be controlled by user A and not by users B and C).
 
-- **Audit trailing**: Each product introduced in the environment must provide continuous real-time audit trailing, easily accessible via both an intuitive UI (supporting real-time updates, time-stamping, easy sorting, filtering, exporting, etc.) and an API (to feed into a SIEM solution), which provides detailed insights on all relevant activities in the product. This must in the very least include the following:
+- **Audit trailing**: Each product introduced in the environment must provide continuous real-time audit trailing, easily accessible via both an intuitive UI (supporting real-time updates, time-stamping, easy sorting, filtering, exporting, etc.) and an API (to pass to a SIEM solution), which provides detailed insights on all relevant activities in the product. This must in the very least include the following:
 
   - All user authentication and authorization activities, e.g. which user logged in, any failed log-in attempts, from which client machine, etc.
 

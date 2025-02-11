@@ -24,7 +24,7 @@ In the *Logging* section of *System Center*, it is now possible to set log level
 
 > [!NOTE]
 >
-> - If you want to set the same non-default log levels for multiple log files, then note that you can select more than one file in step 1. To select more than one file, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the SHIFT key.
+> - If you want to set the same non-default log levels for multiple log files, then note that you can select more than one file in step 1. To select more than one file, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive files, click the first one in the list and then click the last one while holding down the Shift key.
 > - In the left-hand pane, the current log levels for each of the DataMiner log files are displayed next to the name of the file.
 >   - If a file inherits the system-wide log levels, the log levels displayed next to the file will appear in gray.
 >   - If a file has specific log levels defined (i.e. if the system-wide levels are overridden), the log levels displayed next to the file will appear in black.

@@ -4,6 +4,8 @@ uid: Protocol.VersionHistory
 
 # VersionHistory element
 
+<!-- RN 17697, RN 18360 -->
+
 Contains an overview of the version history of this protocol.
 
 ## Parent
@@ -15,10 +17,6 @@ Contains an overview of the version history of this protocol.
 |Name|Occurrences|Description|
 |--- |--- |--- |
 |&nbsp;&nbsp;[Branches](xref:Protocol.VersionHistory.Branches)||Contains the different branches of this protocol.|
-
-## Remarks
-
-*Feature introduced in DataMiner 9.5.11 (RN 17697, RN 18360).*
 
 ## Examples
 
@@ -71,7 +69,7 @@ Contains an overview of the version history of this protocol.
                     <Author>SVD</Author>
                   </Provider>
                   <Changes>
-                    <Change>Made the code more robust and dynamic to allow changing the Nimbra driver columns without having to adapt the manager every time.</Change>
+                    <Change>Made the code more robust and dynamic to allow changing the Nimbra connector columns without having to adapt the manager every time.</Change>
                   </Changes>
                 </MinorVersion>
                 <MinorVersion id="5">
@@ -114,7 +112,7 @@ Contains an overview of the version history of this protocol.
                   </Provider>
                   <Changes>
                     <Fix>Deleting a service was not nicely showing feedback in case of removing the last TTP of a node.</Fix>
-                    <Fix>Corrected a few misspelling mistakes in the driver.</Fix>
+                    <Fix>Corrected a few spelling mistakes in the connector.</Fix>
                   </Changes>
                 </MinorVersion>
                 <MinorVersion id="9">

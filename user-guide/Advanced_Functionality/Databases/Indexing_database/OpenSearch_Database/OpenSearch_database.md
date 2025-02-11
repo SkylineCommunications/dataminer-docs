@@ -4,7 +4,7 @@ uid: OpenSearch_database
 
 # OpenSearch database
 
-If you choose self-hosted storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, OpenSearch is the recommended indexing database. This is supported from DataMiner 10.3.0/10.3.3 onwards. In earlier DataMiner versions, [Elasticsearch](xref:Elasticsearch_database) is used, but as Elasticsearch is only supported up to version 6.8, which is no longer supported by Elastic, this is not recommended.
+If you choose self-managed storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, OpenSearch is the recommended indexing database. This is supported from DataMiner 10.3.0/10.3.3 onwards. In earlier DataMiner versions, [Elasticsearch](xref:Elasticsearch_database) is used, but as Elasticsearch is only supported up to version 6.8, which is no longer supported by Elastic, this is not recommended.
 
 In a **dedicated clustered storage** setup, once you have configured a Cassandra-compatible database service, you need to set up the indexing database cluster to complete your setup. In a setup with **storage per DMA**, setting up an indexing database is not mandatory, but it is highly recommended, as otherwise you will not have access to several DataMiner features.
 

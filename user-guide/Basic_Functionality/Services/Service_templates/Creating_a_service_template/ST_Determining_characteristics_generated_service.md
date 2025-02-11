@@ -20,7 +20,7 @@ The following settings can be configured in this tab:
 - To determine which Visio file will be used on the Visual Overview pages of the service card, specify the file under *Visio File*. If necessary, click the downward triangle to the right of the box to enter placeholders.
 
   > [!NOTE]
-  > To upload a ZIP or VDX file, simply fill in the file name, without the file extension. To use a VSDX file, specify the file name with the .vsdx extension.
+  > To upload a file, make sure it is located in the folder `C:\Skyline DataMiner\Views` of the DataMiner Agent. To upload a VSDX file, specify the file name with the .vsdx extension. To upload a legacy ZIP or VDX file (no longer supported from Visio 2013 onwards), fill in the file name without the file extension.
 
 - To determine the default page of the service’s Visio file, specify the page under *Default Page*. If necessary, click the downward triangle to the right of the box to enter placeholders.
 

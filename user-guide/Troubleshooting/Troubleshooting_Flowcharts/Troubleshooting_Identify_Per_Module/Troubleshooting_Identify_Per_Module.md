@@ -25,18 +25,21 @@ ModuleDefinition{{Which module are you having trouble with? }}
 Apps([Apps])
 Surveyor([Surveyor])
 AlarmConsole([Alarm Console])
+VisualOverview([Visual Overview])
 %% Connect blocks %%
 START --- ModuleDefinition
 ModuleDefinition --- Surveyor
 ModuleDefinition --- Apps
 ModuleDefinition --- AlarmConsole
+ModuleDefinition --- VisualOverview
 %% Define hyperlinks %%
 click Apps "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Apps/Troubleshooting_Apps.html" "Apps"
 click Surveyor "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Surveyor/Troubleshooting_Surveyor.html" "Surveyor"
 click AlarmConsole "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Alarm_Console.html" "Alarm Console"
+click VisualOverview "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Visual_Overview/Troubleshooting_Visual_Overview.html" "Visual Overview"
 %% Apply styles to blocks %%
 class START classTerminal;
-class AlarmConsole,Surveyor,Apps classExternalRef;
+class AlarmConsole,Surveyor,Apps,VisualOverview classExternalRef;
 %%class classActionClickable;
 class ModuleDefinition classDecision;
 ```

@@ -13,7 +13,7 @@ In setups with self-hosted storage, DataMiner uses Cassandra as its NoSQL ("Not 
 
 The Cassandra architecture consists of a cluster of nodes that form a masterless ring. This means that all nodes in the ring are equal, i.e. there is no concept of a master node or slave nodes. Because of this architecture and data replication, there is no single point of failure. Additional nodes can easily be added for increased performance (allowing linear scale performance).
 
-![alt text](../../images/cassandra_structure.png "Cassandra architecture")
+![Cassandra architecture](~/develop/images/cassandra_structure.png)
 
 ### Data distribution
 
@@ -23,7 +23,7 @@ Cassandra automatically distributes data across the nodes of the cluster. This i
 
 Data is typically replicated on multiple nodes allowing high availability and reliability. Cassandra performs data replication automatically according to the configured replication factor and strategy. For example, when a replication factor of three is defined, three copies of the data will exist in three different nodes in the cluster.
 
-The replication factor is a setting that is configured at keyspace level (See Keyspace). Next to the replication factor, the replication strategy can be defined for a keyspace. The replication strategy determines the selection of the replica nodes, i.e. the nodes other than the one that owns the row.
+The replication factor is a setting that is configured at keyspace level (See [Keyspace](#keyspace)). Next to the replication factor, the replication strategy can be defined for a keyspace. The replication strategy determines the selection of the replica nodes, i.e. the nodes other than the one that owns the row.
 
 ## Data model
 
@@ -54,7 +54,7 @@ It should be clear that the definition of the primary key is a very important as
 - The size of the partitions.
 - The order of the data within partitions.
 - The distribution of the partitions among the nodes of the cluster.
-- The queries that can be executed (see Performing SELECT statements).
+- The queries that can be executed (see [Performing SELECT statements](#performing-select-statements)).
 
 > [!NOTE]
 > When a row is added to a table, not all columns have to be filled in (except for columns that are part of the row key). This is different from a row in an RDBMS, where a null value is typically provided for empty cells.
@@ -104,11 +104,11 @@ For a complete overview of CQL, refer to http://docs.datastax.com/en/cql/3.3/.
 
 A client can send write requests to any node in the cluster. A node receiving a client request is called the coordinator node, and the coordinator is responsible for handling the client request. When a write request is received, the coordinator will send a write request to all replica nodes for a given row key. However, the specified consistency level (specified as part of the write request) defines the number of nodes that need to respond back with an indication that the write is completed. For example, in case the consistency level is one, and the replication factor is 3, only one replica will respond.
 
-![alt text](../../images/Cassandra_client_request.png "Write request")
+![Write request](~/develop/images/Cassandra_client_request.png)
 
 In a node, when a write operation is performed, it is recorded in a commit log (used for crash recovery) and afterwards in a memory-based structure, the so-called memtable. There is one memTable per column family. Once the memTable grows beyond a configurable size, this data is written to a file on the disk (a so-called SSTable).
 
-![alt text](../../images/Cassandra_memtable.jpg "Write request recorded in commit log and memtable")
+![Write request recorded in commit log and memtable](~/develop/images/Cassandra_memtable.jpg)
 
 > [!NOTE]
 >
@@ -135,6 +135,9 @@ The following sections describe the main tables of the DataMiner Cassandra gener
 - [Trend data](#trend-data)
 - [Ticketing data](#ticketing-data)
 - [Analytics data](#analytics-data)
+
+> [!IMPORTANT]
+> These sections describe the database structure for Cassandra when used for storage per DMA. For [dedicated clustered storage](xref:Dedicated_clustered_storage), the database structure is different and some data is only stored in the indexing database.
 
 > [!WARNING]
 > The tables and their structure are subject to change. Therefore, it is not supported to directly communicate with the database.
@@ -358,7 +361,7 @@ This table contains all the alarms, including the active alarms.
 |ct|timestamp|No|No|Date/time when the alarm was created.|
 |d|text|No|No|Display key.|
 |de|text|No|No|Alarm description (Param/Information/AlarmDescription).|
-|di|int|No|No|DataMiner agent ID.|
+|di|int|No|No|DataMiner Agent ID.|
 |dv|text|No|No|Display value of the alarm.|
 |ei|int|No|No|Element ID.|
 |en|text|No|No|Element name.|
@@ -409,7 +412,7 @@ An alarm will therefore appear at least three times in this table (one entry usi
 |a|frozen\<alarmid\>|No|Alarm ID|
 |d|int|No|DataMiner Agent ID|
 |e|int|No|Element ID|
-|na|boolean|No|New Alarm State: true for new alarms (AlarmID == RootID), otherwiser false.|
+|na|boolean|No|New Alarm State: true for new alarms (AlarmID == RootID), otherwise false.|
 |p|int|No|Parameter ID|
 |s|int|No|Severity. See [slenumvalues table](xref:Structure_of_the_offload_database#slenumvalues-table).|
 |ss|list\<int\>|No|Severities|

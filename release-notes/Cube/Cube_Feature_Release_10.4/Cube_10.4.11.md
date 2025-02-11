@@ -2,31 +2,80 @@
 uid: Cube_Feature_Release_10.4.11
 ---
 
-# DataMiner Cube Feature Release 10.4.11 – Preview
+# DataMiner Cube Feature Release 10.4.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.11](xref:General_Feature_Release_10.4.11).
-
-## Highlights
-
-*No highlights have been selected yet.*
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.11](xref:General_Feature_Release_10.4.11).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.11](xref:Web_apps_Feature_Release_10.4.11).
 
 ## New features
 
-*No new features have been added yet.*
+#### Alarm Console - Behavioral anomaly detection: User feedback [ID 39480] [ID 39640] [ID 39666] [ID 39729] [ID 39809] [ID 39945]
+
+<!-- RN 39480: MR 10.5.0 - FR 10.4.7 -->
+<!-- RN 39640: MR 10.3.0 [CU16] / 10.4.0 [CU4] - FR 10.4.7 -->
+<!-- RN 39666: MR 10.5.0 - FR 10.4.9 -->
+<!-- RN 39729: MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+<!-- RN 39809: MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
+<!-- RN 39945: MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In the *Suggestion events* and *Anomalies* tabs of the Alarm Console, a new column now allows you to give feedback on any of the listed anomalies.
+
+> [!IMPORTANT]
+> This feature will only work when connected to a DataMiner Agent running at least main release 10.5.0 or feature release 10.4.11.
+
+##### Thumbs up or thumbs down
+
+In this new column, you can find two buttons to evaluate an anomaly:
+
+- a "thumbs up" button you can click to indicate that you like the anomaly, and
+- a "thumbs down" button you can click to indicate that you do not like the anomaly.
+
+Any feedback users give will be used by the behavioral anomaly detection feature to tailor the anomaly detection on system level.
+
+When you click one of the two buttons, it will be pinned in the column as a black icon, and if you change your mind, you can click the other one. Buttons that have not been clicked will stay hidden and will only be visible when you hover over the alarm or suggestion event. Also, you will only see the icons you have clicked yourself. You will not be able to see feedback given by other users.
+
+Feedback given for active alarms will be saved in the user settings and will re-appear after closing Cube and opening it again. Feedback given for history alarms will disappear after restarting Cube. However, it will not be deleted. It will be used by SLAnalytics to improve the detection of future anomalies.
+
+> [!NOTE]
+> Instead of clicking the "thumbs up" or "thumbs down" button, you can also right-click the alarm or suggestion event and select *Like* or *Dislike*.
+
+##### Taking action
+
+When you click either the "thumbs up" or "thumbs down" button, in some cases, a light bulb icon will appear. In the context menu under that icon, you can then find the action you are suggested to take:
+
+| Action | Description |
+|--------|-------------|
+| Clear event            | When you select this action, the suggestion event will be cleared immediately. No confirmation box will appear. |
+| Improve alarm template | When you select this action, a pop-up window will appear, suggesting a number of alarm template changes.<br>These suggested changes, which will be based on all feedback that was given in the past for the parameter in question, should help you to configure the alarm template in such a way that you get to see the anomaly alarms you want to see.<br>At the bottom of the pop-up window, you will also see a list of elements using the same alarm template that will also be affected when you decide to make the suggested template changes.<br>A button will allow you to view the current anomaly template configuration. |
+| Create alarm template | When you select this action, a card will open, allowing you to create a new alarm template from scratch. |
+
+When you gave feedback on multiple alarms and/or suggestions related to the same parameter, an action will only be suggested for the last alarm or suggestion you gave feedback on.
+
+> [!NOTE]
+>
+> - The actions listed above will only appear if you are allowed to perform them. For example, the system will not suggest you update the alarm template if you are not allowed to do so.
+> - The *Improve alarm template* and *Create alarm template* actions will not appear if the element in question has an alarm template group assigned.
+
+##### Adding a feedback column to other alarm tabs
+
+The new feedback column will only be visible by default in the *Suggestion events* and *Anomalies* tabs. If you want this column to also be visible in another alarm tab listing either alarms or suggestion events, do the following:
+
+1. Go to the alarm tab to which you want to add a feedback column.
+1. Right-click the column headers, and select *Add or remove columns* > *Actions*.
+
+> [!NOTE]
+>
+> - The "thumbs up" and "thumbs down" buttons will only be shown for alarm or suggestion events generated by the behavioral anomaly detection feature.
+> - On systems that do not use either STaaS or dedicated clustered storage, the "thumbs up" and "thumbs down" buttons will not be shown in alarm tabs listing history alarms.
 
 ## Changes
 
 ### Enhancements
-
-#### Visual Overview: All dynamic text in the KPI stencil will now automatically be truncated [ID 40545]
-
-<!-- MR 10.4.0 [CU8] - FR 10.4.11 -->
-
-All dynamic text in the KPI stencil will now automatically be truncated with "..." to prevent it from exceeded the dimensions of a shape.
 
 #### System Center - Logging: Additional log files available in DataMiner tab [ID 40676]
 
@@ -41,7 +90,32 @@ In the *Logging* section of *System Center*, a number of additional log files ca
 - Spectrum Manager
 - UI Provider
 
+#### Adding or changing arguments in cube:// URLs of running Cube instances [ID 40795]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Up to now, whenever you entered a `cube://` URL of a running Cube instance in a browser window, a new instance would be started. From now on, it will be possible to add or update the following arguments in a `cube://` URL of Cube instance that is already running:
+
+- `alarm=`
+- `app=`
+- `element=`
+- `service=`
+- `view=`
+
+For example, if you wanted to open an element named "Parameter Controls" in an open Cube that is connected to "myDMS.myCompany.com", you could enter the following URL: `cube://myDMS.myCompany.com?element=%22Parameter%20Controls%22`
+
+> [!NOTE]
+>
+> - If, instead of updating the arguments of an open Cube, you want to open a new Cube instance, then add the following additional argument to the URL: `forcenewsession=true`
+> - For an overview of all DataMiner Cube arguments, see [Arguments for DataMiner Cube](xref:Options_for_opening_DataMiner_Cube)
+
 ### Fixes
+
+#### Visual Overview - DCF: Connection lines would not correctly connect the interfaces of dynamically positioned shapes [ID 40552]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When, in a visual overview, you used dynamic positioning with DCF in combination with dynamic placeholders, in some cases, the connection lines would not correctly connect the interfaces of the dynamically positioned shapes.
 
 #### Services: Alarm color of a service card page would be incorrect when the service contained a partially included table of an element [ID 40597]
 
@@ -88,3 +162,33 @@ DataMiner Cube could leak memory each time you opened the *Reports* page of a ca
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you opened a card page that contained a visual overview, in some rare cases, the page could remain empty, showing a "Loading" message.
+
+#### Home page: Multiple unnecessary lines would show up in 'Did you know?' list [ID 40775]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+On Cube's home page, in some cases, multiple unnecessary lines would show up in the *Did you know?* list.
+
+#### Information templates: A number of properties would not be copied when duplicating an information template parameter [ID 40799]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When an information template parameter was duplicated, a number of properties (e.g. *Hide parameter*, *Part of snapshot*) would incorrectly not be copied to the newly created duplicate.
+
+#### Trending: Problem when exporting trend data to a CSV file [ID 40844]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some rare cases, DataMiner could stop working while exporting trend data to a CSV file.
+
+#### Visual Overview: Problem when subscribing to properties due to subscriptions incorrectly being case sensitive [ID 40878]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, problems could occur when subscribing to properties due to subscriptions incorrectly being case sensitive. From now on, property subscriptions will be case insensitive.
+
+#### Alarm Console: 'NotSupportedException' errors would cause alarms to get stuck in alarm tabs [ID 41050]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 [CU0] -->
+
+In some cases, `NotSupportedException` errors would be added to the Cube logging, causing alarms to get stuck in alarm tabs, especially when a delay or a refresh rate had been specified.

@@ -8,7 +8,9 @@ uid: Web_apps_Feature_Release_10.4.6
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.6](xref:General_Feature_Release_10.4.6).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.6](xref:General_Feature_Release_10.4.6).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.4.6](xref:Cube_Feature_Release_10.4.6).
 
 ## New features
 
@@ -86,7 +88,7 @@ In the *Layout* tab, you can find the following settings to configure this:
 
 It is now also possible to pan and zoom inside a *Line & area chart* component:
 
-- To zoom, scroll while keep the CTRL key pressed (maximum 10,000 times).
+- To zoom, scroll while keep the Ctrl key pressed (maximum 10,000 times).
 - To pan, drag while keeping the right mouse button pressed (Only works when zoomed in since the default viewport shows all the data).
 
 ## Changes
@@ -261,7 +263,7 @@ The following minor issues regarding the *Time range* component have been fixed:
 
 - The option *Layout > Advanced > Layout & Alignment > Show refresh timer* would always be visible, but would have no effect when the option *Settings > General > Allow refresh* was disabled.
 
-  From now on, the option *Layout > Advanced > Layout & Alignment > Show refresh timer* wil only be visible when *Settings > General > Allow refresh* is enabled.
+  From now on, the option *Layout > Advanced > Layout & Alignment > Show refresh timer* will only be visible when *Settings > General > Allow refresh* is enabled.
 
 - When, in the *Layout > Advanced* section, you had only selected quick picks from the *Starting from now*, **Near future* and *Distant future* categories, the *Time range* component would incorrectly show `No quick picks have been selected`.
 

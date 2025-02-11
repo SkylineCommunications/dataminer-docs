@@ -1,5 +1,7 @@
 ---
 uid: Cloud_Connection_Issues
+description: In the specified order, check the connection status on dataminer.services, the status of the DMS, the CloudGateway status, and the cloud session.
+keywords: cloud connection, connect to the cloud, connecting to the cloud
 ---
 
 # Investigating dataminer.services connection issues
@@ -93,4 +95,4 @@ When this is done, you can reconnect the system to dataminer.services in Cube un
 
 ## Contact support
 
-If the connection issues still persist, contact [tech support](https://skyline.be/contact/tech-support).
+If the connection issues still persist, [contact tech support](xref:Contacting_tech_support).

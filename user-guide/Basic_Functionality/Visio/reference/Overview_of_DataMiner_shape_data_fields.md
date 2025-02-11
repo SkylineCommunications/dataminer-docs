@@ -12,9 +12,9 @@ Below, you find an alphabetical overview of all shape data fields that can be sp
 | Aggregation | [Linking a shape to an aggregation rule](xref:Linking_a_shape_to_an_aggregation_rule) |
 | Alarm | [Linking a shape to an alarm](xref:Linking_a_shape_to_an_alarm) |
 | AlarmFilter | [Making a shape filter Alarm Console tabs when clicked](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)<br> [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component) |
-| AlarmLevel | Available from DataMiner 10.1.0/10.0.4 onwards.<br> [Customizing the displayed view alarm level](xref:Linking_a_shape_to_a_view#customizing-the-displayed-view-alarm-level)<br> [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object) |
+| AlarmLevel | [Customizing the displayed view alarm level](xref:Linking_a_shape_to_a_view#customizing-the-displayed-view-alarm-level)<br> [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object) |
 | AlarmSummary | [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter) |
-| AlarmTab | Available from DataMiner 10.0.2 onwards.<br> [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter) |
+| AlarmTab | [Linking a shape to an alarm filter](xref:Linking_a_shape_to_an_alarm_filter) |
 | Annotations | [Showing or hiding a shape based on the existence of annotations](xref:Showing_or_hiding_a_shape_based_on_the_existence_of_annotations) |
 | AssetConfig | [Linking a shape to an Asset Manager table](xref:Linking_a_shape_to_an_Asset_Manager_table) |
 | BackgroundColor | Available from DataMiner 10.1.11/10.2.0 onwards.<br> [Setting the background color of a static shape](xref:Setting_the_background_color_of_a_static_shape) |
@@ -73,7 +73,7 @@ Below, you find an alphabetical overview of all shape data fields that can be sp
 | Navigate | [Preventing navigation to the EPM interface when a shape is clicked](xref:Preventing_navigation_to_the_EPM_interface_when_a_shape_is_clicked) |
 | NavigatePage | [Creating a button to navigate to a page of the current Visio drawing](xref:Creating_a_button_to_navigate_to_a_page_of_the_current_Visio_drawing)<br> [Navigation options for automatically drawn connections](xref:Positioning_shapes_dynamically1#navigation-options-for-automatically-drawn-connections) |
 | OnClose | [Specifying a script to be executed when the page is closed](xref:Linking_a_shape_to_an_Automation_script#specifying-a-script-to-be-executed-when-the-page-is-closed) |
-| OnClosing | Available from DataMiner 10.0.13 onwards.<br> [Configuring what should happen when a window is closed](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing#configuring-what-should-happen-when-a-window-is-closed) |
+| OnClosing | [Configuring what should happen when a window is closed](xref:Making_a_shape_display_a_particular_page_of_the_current_Visio_drawing#configuring-what-should-happen-when-a-window-is-closed) |
 | Options | [Overview of page and shape options](xref:Overview_of_page_and_shape_options) |
 | OrderBy | [Optional grouping configuration](xref:Enabling_grouping_of_dynamically_positioned_shapes#optional-grouping-configuration) |
 | OuterBackground | [Specifying the background of Visual Overview pages](xref:Specifying_the_background_of_Visual_Overview_pages) |
@@ -104,8 +104,8 @@ Below, you find an alphabetical overview of all shape data fields that can be sp
 | Source | [Creating a list view](xref:Creating_a_list_view) |
 | Stretch | [Stretching a shape across an entire card](xref:Stretching_a_shape_across_an_entire_card) |
 | SubscriptionFilter | [Retrieving and showing the value of a table parameter using a subscription filter](xref:Linking_a_shape_to_an_element_parameter#retrieving-and-showing-the-value-of-a-table-parameter-using-a-subscription-filter)<br> [Specifying an EPM parameter that can be used to filter](xref:Specifying_an_EPM_parameter_that_can_be_used_to_filter)<br> [Restricting the use of line objects to specific connections](xref:Restricting_the_use_of_line_objects_to_specific_connections)<br> [Positioning shapes dynamically](xref:Positioning_shapes_dynamically1#positioning-shapes-dynamically)<br> [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows)<br> [Creating a tree control](xref:Adding_options_to_a_session_variable_control#creating-a-tree-control)<br> [Embedding an alarm timeline component](xref:Embedding_an_alarm_timeline_component) |
-| SystemName | Available from DataMiner 10.1.0/10.0.4 onwards.<br> [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object) |
-| SystemType | Available from DataMiner 10.1.0/10.0.4 onwards.<br> [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object) |
+| SystemName | [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object) |
+| SystemType | [Linking a shape to an EPM object](xref:Linking_a_shape_to_an_EPM_object) |
 | Table | [Linking a shape to an Asset Manager table](xref:Linking_a_shape_to_an_Asset_Manager_table) |
 | Tag | [Highlighting connections based on the source and target of the connection](xref:Options_for_highlighting_DCF_connections#highlighting-connections-based-on-the-source-and-target-of-the-connection) |
 | TextStyle | Available from DataMiner 10.3.0/10.2.3 onwards.<br>[Configuring a shape's text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming) |

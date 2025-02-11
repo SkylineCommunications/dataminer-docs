@@ -8,7 +8,8 @@ uid: Cube_Feature_Release_10.3.2_CU1
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.2](xref:General_Feature_Release_10.3.2).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.3.2](xref:General_Feature_Release_10.3.2).
 
 ### Fixes
 

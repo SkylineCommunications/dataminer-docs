@@ -35,7 +35,7 @@ To execute a BPA test using the *Standalone BPA Executor* tool:
 
      1. Once the test has run, the *BPA Test Results* window will be displayed. To save the results of the test, you can copy them to the clipboard or export them to a file using the buttons at the bottom of the window.
 
-   - In the *Run from DMA* tab, you can run one or more BPA tests that were previously installed on the DMA. This will only work on a DMA using DataMiner version 10.0.10 or higher.
+   - In the *Run from DMA* tab, you can run BPA tests that have been installed on the DMA.
 
      1. Select the BPA test(s) you want to run. If a test is not listed yet, you can upload it using the *Upload* button at the bottom of the window, or by right-clicking the list and selecting *Upload* (depending on the version of the tool).
 

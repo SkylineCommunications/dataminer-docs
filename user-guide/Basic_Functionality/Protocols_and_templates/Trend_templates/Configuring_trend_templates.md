@@ -50,9 +50,7 @@ To configure a trend template:
        ![Changing filter order](~/user-guide/images/Change_Order_Filters.png)<br>*Trend template in DataMiner 10.4.5*
 
        > [!NOTE]
-       >
-       > - For dynamic table parameters, each column of the dynamic table that has trending enabled is represented by one row in the trend template.
-       > - Trending of column parameters of type string is only supported from DataMiner 10.0.9 onwards.
+       > For dynamic table parameters, each column of the dynamic table that has trending enabled is represented by one row in the trend template.
 
 1. When ready, click *Apply* to apply the trend template, or *OK* to apply the trend template and exit the editor.
 

@@ -44,7 +44,7 @@ At this point, your Microsoft Visio application should start up automatically, a
 
 ## Step 2: Set up an element alarm color LED shape
 
-1. Press CTRL+A followed by the delete button to remove all shapes from your Visio page.
+1. Press Ctrl+A followed by the delete button to remove all shapes from your Visio page.
 
 1. Navigate to the *Home* tab of the ribbon and select the downward arrow next to the rectangle in the *Tools* section.
 

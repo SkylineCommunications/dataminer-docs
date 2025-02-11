@@ -8,7 +8,9 @@ uid: Cube_Feature_Release_10.3.4
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.4](xref:General_Feature_Release_10.3.4).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.3.4](xref:General_Feature_Release_10.3.4).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.4](xref:Web_apps_Feature_Release_10.3.4).
 
 ## New features
 
@@ -16,7 +18,7 @@ uid: Cube_Feature_Release_10.3.4
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
-By default, you can select multiple rows in a list view (e.g. using the CTRL or SHIFT key). With the new component option *SingleSelectionMode*, you can now set the selection mode of a list view to single instead, so that only one row can be selected at a time.
+By default, you can select multiple rows in a list view (e.g. using the Ctrl or Shift key). With the new component option *SingleSelectionMode*, you can now set the selection mode of a list view to single instead, so that only one row can be selected at a time.
 
 #### Visual Overview: Re-arranging grouped shapes [ID 35323]
 

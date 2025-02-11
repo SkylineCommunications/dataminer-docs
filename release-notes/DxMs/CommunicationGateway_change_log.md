@@ -4,6 +4,32 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 28 January 2025 - Enhancement - CommunicationGateway 5.1.0 - Node ID has a fixed value [ID 41784]
+
+The node ID of a CommunicationGateway instance is now assigned a fixed value, enabling middleware to target a specific instance of its choice. This enhancement was introduced to allow middleware to prioritize the CommunicationGateway instance running on the same machine as where the middleware is hosted.
+
+> [!NOTE]
+> For this to work as intended, connectors need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 6.1.0](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x#prioritize-connection-to-the-local-communicationgateway-instance-id-41784) or higher.
+
+#### 25 November 2024 - Enhancement - CommunicationGateway 4.0.0 - MessageBroker version 3.0.3 [ID 41467]
+
+The CommunicationGateway DxM has been updated so that from now on it uses MessageBroker version 3.0.3.
+
+> [!IMPORTANT]
+> From CommunicationGateway 4.0.0 onwards, connectors that use the [Skyline.DataMiner.DataSources.OpenConfig.Gnmi](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x) NuGet package need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 6.x](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x) or higher.
+
+#### 13 November 2024 - Enhancement - CommunicationGateway 3.2.3 - SLLogCollector config file deployed with installation of CommunicationGateway DxM [ID 41004]
+
+Up until recently, SLLogCollector was configured by default (with the *Collector-xml* configuration file) to collect the log files of the CommunicationGateway DxM, even when the DxM was not installed. This default configuration has been removed from DataMiner (see [General Feature Release 10.4.12](xref:General_Feature_Release_10.4.12#sllogcollector-will-no-longer-be-configured-by-default-to-collect-the-log-files-of-the-communicationgateway-dxm-id-41004)), and the CommunicationGateway installer will instead create the log configuration file upon installation.
+
+#### 23 September 2024 - Enhancement - CommunicationGateway 3.2.2 - PDB files removed from installer [ID 40557]
+
+To improve security, the CommunicationGateway installer has been updated so that it will no longer install PDB files.
+
+#### 23 September 2024 - Fix - CommunicationGateway 3.2.2 - Incorrect version info in middleware NuGet packages [ID 40541]
+
+Previously, it could occur that the assembly version of the middleware NuGet packages did not correspond with the release version. This has been fixed, and the file and product version info of these assemblies will now specify the release version.
+
 #### 13 August 2024 - Enhancement - CommunicationGateway 3.2.1 - Upgrade to .NET 8 [ID 40424]
 
 DataMiner CommunicationGateway has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.

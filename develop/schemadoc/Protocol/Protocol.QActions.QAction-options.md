@@ -4,7 +4,7 @@ uid: Protocol.QActions.QAction-options
 
 # options attribute
 
-Allows you to specify a number of options, separated by semicolons.
+Allows you to specify a number of options, separated by semicolons.<!-- RN 6457 -->
 
 ## Content Type
 
@@ -20,15 +20,13 @@ The following options are available:
 
 ### binary
 
-If specified, all values in “inputParameters” are forwarded to the QAction as a byte array holding the raw content of the parameter.
+If specified, all values in "inputParameters" are forwarded to the QAction as a byte array holding the raw content of the parameter.
 
 ### debug
 
 By default, the DataMiner compilation engine compiles with the optimization level option set to Release. When the debug option is specified, the compilation engine compiles with the optimization level option set to Debug, which disables all optimizations, and instruments the generated code to improve the debugging experience.
 
 In addition, when this option is used, next to the DLL, a program database file (.pdb) will be generated. This way, you get more information when exceptions occur (e.g. the line number).
-
-*Feature introduced in DataMiner 8.0.5 (RN 6457).*
 
 ### dllname=name.dll
 
@@ -58,21 +56,21 @@ This name will then replace the QAction.[QActionID] part:
 > [!NOTE]
 >
 > - It is not required to include the .dll extension. If it is not provided as part of the custom name, DataMiner will add this extension automatically.
-> -When you use the dllName option, no DLLs per process will be generated when the
+> - When you use the dllName option, no DLLs per process will be generated when the
 > /DataMiner/ProcessOptions@scriptingProcesses attribute in the DataMiner.xml configuration file has been set to "protocol".
-> - If you specify “*” or “\<No Name\>” (i.e. options="dllName=&lt;No Name&gt;"), no DLL file will be compiled.
+> - If you specify `*` or `<No Name>` (i.e. `options="dllName=<No Name>"`), no DLL file will be compiled.
 > - The DLL will be refreshed when the QAction that creates this DLL is run. This means that when something changes in the QAction it does not immediately change in the (running) DLL. When the QAction is triggered, the (running) DLL is updated and run with the new data.
 
 ### group
 
-When you specify this option, the “OldRow()” method will return the values retrieved by that group.
+When you specify this option, the "OldRow()" method will return the values retrieved by that group.
 
 > [!CAUTION]
 > This option can be used in case of high-volume polling. Use with care!
 
 ### precompile
 
-Feature introduced in DataMiner 8.0.5 (RN 6457).
+<!-- RN 6457 -->
 
 Compile the QAction immediately. Do not wait for a trigger.
 
@@ -93,7 +91,7 @@ Please note the following:
   </QAction>
   ```
 
-- From DataMiner 9.6.5 (RN 21645) onwards, compilation errors for QActions that are marked with the "precompile" option will be logged in both the element log file and the SLErrorsInProtocol.txt log file at compilation time.
+- Compilation errors for QActions that are marked with the "precompile" option will be logged in both the element log file and the SLErrorsInProtocol.txt log file at compilation time.<!-- RN 21645 -->
 
 ### queued
 

@@ -18,11 +18,10 @@ Specifies the default parity.
 
 Each time a user adds an element using the element wizard, the parity will by default be set to this value.
 
-
 > [!NOTE]
 > For an SNMPv3 connection, this tag can be used to specify the default authentication algorithm (e.g. "SHA128").
 >
->The following authentication algorithms are supported:
+> The following authentication algorithms are supported:
 >
 > - MD5
 > - SHA128

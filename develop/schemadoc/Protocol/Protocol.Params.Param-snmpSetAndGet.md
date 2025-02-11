@@ -4,7 +4,7 @@ uid: Protocol.Params.Param-snmpSetAndGet
 
 # snmpSetAndGet attribute
 
-Performs a set and get on a "write" parameter.
+Performs a set and get on a "write" parameter.<!-- RN 6962 -->
 
 ## Content Type
 
@@ -20,22 +20,18 @@ When defined on columns with the default value true, cells are retrieved via an 
 
 For a list of possible values, see [dynamicSnmpGet](xref:Protocol.Params.Param.Type-dynamicSnmpGet).
 
-*Feature introduced in DataMiner 8.0.7 (RN 6962).*
-
 > [!NOTE]
 >
-> - From DataMiner 9.0.1 (RN 12017) onwards, the SnmpSetAndGet method can be triggered by means of a button inside a table cell. When the button is clicked, the value of the button will be sent along with an SNMP Set command.
->
-> - From DataMiner 9.0.2 (RN 12409) onwards, you can specify a multipleGet option when retrieving table data using dynamicSnmpGet or snmpSetAndGet, allowing a reduction of the number of SNMP requests. For more information see dynamicSnmpGet.
->
+> - The SnmpSetAndGet method can be triggered by means of a button inside a table cell. When the button is clicked, the value of the button will be sent along with an SNMP Set command.<!-- RN 12017 -->
+> - To reduce the number of SNMP requests, you can specify a multipleGet option when retrieving table data using dynamicSnmpGet or snmpSetAndGet, allowing a reduction of the number of SNMP requests. For more information, see [dynamicSnmpGet](xref:Protocol.Params.Param.Type-dynamicSnmpGet).<!-- RN 12409 -->
 > - In case the SNMP connection through which this set and get operation must be performed is not the main connection, make sure to specify the connection ID in the "connection" options:
 >
->    ```xml
->    <Param id="1282" snmpSetAndGet="executeNext">
->      ...
->      <Type options="connection=1">write</Type>
->    </Param>
->     ```
+>   ```xml
+>   <Param id="1282" snmpSetAndGet="executeNext">
+>     ...
+>     <Type options="connection=1">write</Type>
+>   </Param>
+>    ```
 
 ## Examples
 

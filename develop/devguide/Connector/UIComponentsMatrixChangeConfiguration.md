@@ -4,7 +4,7 @@ uid: UIComponentsMatrixChangeConfiguration
 
 # Dynamically changing matrix configuration
 
-Using the NotifyDataMinerQueued type 128 (NT_UPDATE_PORTS_XML) call, the configuration of a matrix can dynamically be changed. For a detailed description on how to dynamically change the matrix options from a QAction, see NT_UPDATE_PORTS_XML (128).
+Using the NotifyDataMinerQueued type 128 (NT_UPDATE_PORTS_XML) call, the configuration of a matrix can dynamically be changed. For a detailed description on how to dynamically change the matrix options from a QAction, see [NT_UPDATE_PORTS_XML (128)](xref:NT_UPDATE_PORTS_XML).
 
 When a configuration change is performed using this method, the change is stored in the XML file that is referred to in the link attribute of the Measurement.Type tag.
 

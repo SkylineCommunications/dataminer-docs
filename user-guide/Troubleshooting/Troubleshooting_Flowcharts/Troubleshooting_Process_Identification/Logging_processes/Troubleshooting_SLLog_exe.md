@@ -21,11 +21,11 @@ flowchart TD
 %% Define blocks %%
 LinkRootCause([To root cause flowchart])
 LinkProcessList([To process identification])
-Start([SLLog problem <br/>suspected])
+Start([SLLog problem suspected])
 CheckIssueType{{RTEs or crashes present?}}
 Rte([Follow RTE investigation flowchart])
-Crash([Follow Critical Issues -<br/>Automatic Restart flowchart])
-EndReportIssue([Describe the issue in detail and<br/>contact Software Development])
+Crash([Follow Critical Issues - Automatic Restart flowchart])
+EndReportIssue([Describe the issue in detail and contact Software Development])
 %% Connect blocks %%
 Start --- CheckIssueType
 CheckIssueType --- |No| EndReportIssue

@@ -138,7 +138,7 @@ Examples:
 > - Parameter table filters can only be configured when you have started the Dashboards app with the *showAdvancedSettings* URL parameter set to true.
 > - When you update a filter, you have to re-add it to the component.
 
-#### Dashboards app - Table component: GQI query result can now be export to a CSV file \[ID 28637\]
+#### Dashboards app - Table component: GQI query result can now be exported to a CSV file \[ID 28637\]
 
 When a table component displays the result of a GQI query, it is now possible to export that result to a CSV file.
 

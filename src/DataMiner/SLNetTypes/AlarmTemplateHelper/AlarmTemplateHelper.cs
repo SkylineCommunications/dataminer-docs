@@ -97,7 +97,7 @@ namespace Skyline.DataMiner.Net.AlarmTemplateHelper
 		/// <exception cref="RetrievingAlarmTemplateFromServerException">The AlarmTemplate could not be retrieved from the server.</exception>
 		/// <exception cref="ConditionDoesNotExistException">The condition is not in the condition list.</exception>
 		/// <exception cref="ParameterDoesNotExistException">The parameter is not in the parameter list.</exception>
-		/// <exception cref="DataMinerException">The GetAlarmTemplateRow returns a parameter that can not be found in the list.</exception>
+		/// <exception cref="DataMinerException">The GetAlarmTemplateRow returns a parameter that cannot be found in the list.</exception>
 		/// <exception cref="InvalidAlarmTemplateRowException">The provided AlarmTemplateRow contains data does not match with the ID in it.</exception>
 		/// <exception cref="ArgumentNullException"><paramref name="alarmTemplateID"/> or <paramref name="alarmTemplateRows"/> is <see langword="null"/>.</exception>
 		/// <remarks>
@@ -115,7 +115,7 @@ namespace Skyline.DataMiner.Net.AlarmTemplateHelper
 		/// <param name="alarmTemplateRows">The alarm template rows.</param>
         /// <exception cref="ConditionDoesNotExistException">The condition is not in the condition list.</exception>
         /// <exception cref="ParameterDoesNotExistException">The parameter is not in the parameter list.</exception>
-        /// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that can not be found in the list.</exception>
+        /// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that cannot be found in the list.</exception>
         /// <exception cref="InvalidAlarmTemplateRowException">The provided AlarmTemplateRow contains data that does not match with the ID in it.</exception>
         /// <exception cref="ArgumentNullException"><paramref name="alarmTemplate"/> or <paramref name="alarmTemplateRows"/> is <see langword="null"/>.</exception>
         public AlarmTemplateEventMessage DeleteAlarmTemplateRows(AlarmTemplateEventMessage alarmTemplate, List<AlarmTemplateRow> alarmTemplateRows)
@@ -131,7 +131,7 @@ namespace Skyline.DataMiner.Net.AlarmTemplateHelper
 		/// <returns>An <see cref="AlarmTemplateEventMessage"/> where the parameter defined by the <see cref="AlarmTemplateRow"/> is removed.</returns>
 		/// <exception cref="ConditionDoesNotExistException">The condition is not in the condition list.</exception>
 		/// <exception cref="ParameterDoesNotExistException">The parameter is not in the parameter list.</exception>
-		/// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that can not be found in the list.</exception>
+		/// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that cannot be found in the list.</exception>
 		/// <exception cref="InvalidAlarmTemplateRowException">The provided AlarmTemplateRow contains data that does not match with the ID in it.</exception>
 		/// <exception cref="ArgumentNullException"><paramref name="alarmTemplate"/> or <paramref name="alarmTemplateRow"/> is <see langword="null"/>.</exception>
 		/// <remarks>
@@ -167,7 +167,7 @@ namespace Skyline.DataMiner.Net.AlarmTemplateHelper
 		/// <returns>An <see cref="AlarmTemplateEventMessage"/> where the parameters defined by the <see cref="AlarmTemplateRow"/> are merged.</returns>
 		/// <exception cref="ConditionMergeException">A condition used in a merge call has the same name as an existing condition with a different content.</exception>
 		/// <exception cref="ConditionDoesNotExistException">The condition specified in the AlarmTemplateRow could not be found in the alarm template.</exception>
-		/// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that can not be found in the list.</exception>
+		/// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that cannot be found in the list.</exception>
 		/// <exception cref="InvalidAlarmTemplateRowException">The provided AlarmTemplateRow contains data that does not match with the ID in it</exception>
 		/// <exception cref="ArgumentNullException"><paramref name="alarmTemplate"/> or <paramref name="alarmTemplateRows"/> is <see langword="null"/>.</exception>
 		public AlarmTemplateEventMessage MergeAlarmTemplateRows(AlarmTemplateEventMessage alarmTemplate, List<AlarmTemplateRow> alarmTemplateRows)
@@ -184,7 +184,7 @@ namespace Skyline.DataMiner.Net.AlarmTemplateHelper
 		/// <exception cref="ConditionMergeException">A condition with an equal name is found, but the contents are different.</exception>
 		/// <exception cref="ConditionDoesNotExistException">The condition that is linked to the parameter is not found in the target AlarmTemplate.</exception>
 		/// <exception cref="NoAlarmTemplateRowToUpdateException"><paramref name="onlyAllowUpdate"/> is <c>true</c> and no data to update is found.</exception>
-		/// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that can not be found in the list.</exception>
+		/// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that cannot be found in the list.</exception>
 		/// <exception cref="InvalidAlarmTemplateRowException">The provided AlarmTemplateRow contains data that does not match with the ID in it.</exception>
 		/// <exception cref="ArgumentNullException"><paramref name="alarmTemplate"/>, <paramref name="alarmTemplateRow"/> or <paramref name="onlyAllowUpdate"/> is <see langword="null"/>.</exception>
 		public AlarmTemplateEventMessage MergeAlarmTemplateRow(AlarmTemplateEventMessage alarmTemplate, AlarmTemplateRow alarmTemplateRow, bool onlyAllowUpdate = false)
@@ -202,7 +202,7 @@ namespace Skyline.DataMiner.Net.AlarmTemplateHelper
 		/// <exception cref="RetrievingAlarmTemplateFromServerException">The AlarmTemplate could not be retrieved from the server.</exception>
 		/// <exception cref="NoAlarmTemplateRowToUpdateException">No data to update is found in the AlarmTemplate.</exception>
 		/// <exception cref="ConditionDoesNotExistException">The condition that is linked to the parameter is not found in the target AlarmTemplate.</exception>
-		/// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that can not be found in the list.</exception>
+		/// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that cannot be found in the list.</exception>
 		/// <exception cref="InvalidAlarmTemplateRowException">The provided AlarmTemplateRow contains data that does not match with the ID in it.</exception>
 		/// <exception cref="ArgumentNullException"><paramref name="alarmTemplateID"/> or <paramref name="alarmTemplateRows"/> is <see langword="null"/>.</exception>
 		/// <remarks>
@@ -220,7 +220,7 @@ namespace Skyline.DataMiner.Net.AlarmTemplateHelper
 		/// <returns>The updated alarm template.</returns>
 		/// <exception cref="NoAlarmTemplateRowToUpdateException">No data to update is found in the AlarmTemplate.</exception>
 		/// <exception cref="ConditionDoesNotExistException">The condition that is linked to the parameter is not found in the target alarmTemplate.</exception>
-		/// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that can not be found in the list.</exception>
+		/// <exception cref="DataMinerException">GetAlarmTemplateRow returns a parameter that cannot be found in the list.</exception>
 		/// <exception cref="InvalidAlarmTemplateRowException">The provided AlarmTemplateRow contains data that does not match with the ID in it.</exception>
 		/// <exception cref="ArgumentNullException"><paramref name="alarmTemplate"/> or <paramref name="alarmTemplateRows"/> is <see langword="null"/>.</exception>
 		/// <remarks>
@@ -239,7 +239,7 @@ namespace Skyline.DataMiner.Net.AlarmTemplateHelper
 		/// <returns>The updated alarm template.</returns>
         /// <exception cref="NoAlarmTemplateRowToUpdateException">When no data to update is found in the AlarmTemplate</exception>
         /// <exception cref="ConditionDoesNotExistException">If the condition that is linked to the parameter is not found in the target alarmTemplate</exception>
-        /// <exception cref="DataMinerException">When GetAlarmTemplateRow returns a parameter that can not be found in the list</exception>
+        /// <exception cref="DataMinerException">When GetAlarmTemplateRow returns a parameter that cannot be found in the list</exception>
         /// <exception cref="InvalidAlarmTemplateRowException">When the provided AlarmTemplateRow contains data that does not match with the ID in it</exception>
         /// <exception cref="ArgumentNullException">When passing null values to the method</exception>
         public AlarmTemplateEventMessage UpdateAlarmTemplateRow(AlarmTemplateEventMessage alarmTemplate, AlarmTemplateRow alarmTemplateRow)

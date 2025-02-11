@@ -33,7 +33,7 @@ Up to now, in some cases, service chains could get redrawn too often, or shapes 
 It is now possible to zoom inside a spectrum window:
 
 - To zoom horizontally, scroll up and down. This has the same effect as altering the frequency span.
-- To zoom vertically, scroll up and down while pressing the CTRL key. This has the same effect as altering the amplitude scale.
+- To zoom vertically, scroll up and down while pressing the Ctrl key. This has the same effect as altering the amplitude scale.
 
 When you stop scrolling, the new zoom dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
 

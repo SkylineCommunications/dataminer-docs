@@ -53,7 +53,7 @@ object[] result = (object[]) protocol.NotifyDataMiner(225 /*NT_SET_ROW*/, rowDet
 ```
 
 - rowDetails (object[]): The details specifying the row.
-  - rowDetails[0]: (int) DataMiner agent ID.
+  - rowDetails[0]: (int) DataMiner Agent ID.
   - rowDetails[1]: (string) element ID.
   - rowDetails[2]: (int) table parameter ID.
   - rowDetails[3]: (string) primary key.
@@ -66,6 +66,4 @@ object[] result = (object[]) protocol.NotifyDataMiner(225 /*NT_SET_ROW*/, rowDet
 ## Remarks
 
 - The SLProtocol interface defines a wrapper method "SetRow" for this call. See [SLProtocol.SetRow](xref:Skyline.DataMiner.Scripting.SLProtocol.SetRow(System.Int32,System.Int32,System.Object)) method.
-- Prior to DataMiner 9.5.0 [CU11]/9.5.14 [CU1] (RN 19707), on a table with the AutoAdd option would get rejected when the row did not exist yet and the key was not provided in the rowData object array. The row will now be created with the key provided in the rowDetails.
-- From DataMiner 9.5.0 [CU11]/9.5.14 [CU1] (RN 19707) onwards, NT_SET_ROW (225) on a table with the AutoAdd option with a key that does not exist yet will ignore protocol.Leave and protocol.Clear values rather than set positive or negative infinity. The "use clear and leave" flag must be set to true.
-- From DataMiner 9.5.0 [CU11]/9.5.14 [CU1] (RN 19707) onwards, NT_SET_ROW (225) supports string values when the "use clear and leave" flag is set to true.
+- On a table with the *AutoAdd* option with a key that does not exist yet, NT_SET_ROW (225) will ignore protocol.Leave and protocol.Clear values. The "use clear and leave" flag must be set to true.<!-- RN 19707 -->

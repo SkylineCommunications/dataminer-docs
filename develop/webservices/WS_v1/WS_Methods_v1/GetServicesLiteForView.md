@@ -10,11 +10,11 @@ This method is a faster alternative to the method *GetServicesForView*, as it re
 
 ## Input
 
-| Item            | Format  | Description                                                                      |
-|-----------------|---------|----------------------------------------------------------------------------------|
-| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp). |
-| viewID          | Integer | The view ID.                                                                     |
-| includeSubViews | Boolean | Whether the subviews of the specified view should be included in the search.     |
+| Item            | Format  | Description                                                                  |
+|-----------------|---------|------------------------------------------------------------------------------|
+| connection      | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                        |
+| viewID          | Integer | The view ID.                                                                 |
+| includeSubViews | Boolean | Whether the subviews of the specified view should be included in the search. |
 
 ## Output
 

@@ -12,12 +12,12 @@ The upgrade currently performs the following actions:
 
 - Adding additional .gitignore rules that will make sure you are not pushing unnecessary files to the server, such as StyleCop result files and other such files.
 
-- Adding a new *DefaultTemplates* folder, where you can add exported alarm templates, trend templates and information templates that could be used as a default with this driver.
+- Adding a new *DefaultTemplates* folder, where you can add exported alarm templates, trend templates, and information templates that could be used as a default with this connector.
 
   > [!NOTE]
   > Make sure to check the included readme file as it provides some information about naming conventions that are used.
 
 - Adding a versioning TXT file, so the repo manager knows if the current config files of your active branch and repo are up to date.
 
-![](~/develop/images/SLC_SE_Repo_Manager_updating.png)<br>
+![SLC SE Repository Manager updating .gitignore and Jenkins file](~/develop/images/SLC_SE_Repo_Manager_updating.png)<br>
 *SLC SE Repository Manager updating .gitignore and Jenkins file*

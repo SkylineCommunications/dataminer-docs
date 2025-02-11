@@ -8,7 +8,10 @@ uid: General_Main_Release_10.3.0_CU3
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.3.0 CU3](xref:Cube_Main_Release_10.3.0_CU3).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.3.0 CU3](xref:Web_apps_Main_Release_10.3.0_CU3).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 
@@ -145,9 +148,9 @@ The *SLNetClientTest* tool now supports gRPC when it needs to establish addition
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU3] - FR 10.3.3 -->
 
-At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
+At startup, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
 
-From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
+From now on, at startup, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID 35699]
 

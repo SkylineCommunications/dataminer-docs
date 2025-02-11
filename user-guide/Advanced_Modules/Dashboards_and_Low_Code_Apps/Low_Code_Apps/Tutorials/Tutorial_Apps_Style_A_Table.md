@@ -1,5 +1,6 @@
 ---
 uid: Tutorial_Apps_Style_A_Table
+keywords: table templates
 ---
 
 # Styling a table component
@@ -354,7 +355,7 @@ You can now create the query using the *Orders.json* file as the data source.
 
 1. Create a new low-code app. See [Creating low-code applications](xref:Creating_custom_apps).
 
-1. In the data pane, select *Queries* and click the + icon to add a new query.
+1. In the *Data* pane, select *Queries* and click the + icon to add a new query.
 
 1. Provide the necessary information:
 
@@ -523,7 +524,7 @@ To add a column indicating the currently selected row, follow these steps using 
 
 Add a new column using GQI:
 
-1. In the *Data* tab, go to *Queries*.
+1. In the *Data* pane, go to *Queries*.
 
 1. Click the pencil icon next to *Orders*. Configure as follows:
 
@@ -636,7 +637,7 @@ To conclude this tutorial, incorporate a context menu into the table.
            > IntelliSense will only provide suggestions if a table row was selected in the low-code app edit mode.
 
            > [!TIP]
-           > For more information on how to create feed references inside textual settings, see [Dynamically referencing feed values in text](xref:Feed_Link).
+           > For more information on how to create feed references inside textual settings, see [Dynamically referencing feed values in text](xref:Dynamically_Referencing_Data_in_Text).
 
    - Add a menu item to google the order ID:
 

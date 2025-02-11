@@ -8,7 +8,10 @@ uid: General_Main_Release_10.4.0_CU6
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Main Release 10.4.0 CU6](xref:Cube_Main_Release_10.4.0_CU6).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.4.0 CU6](xref:Web_apps_Main_Release_10.4.0_CU6).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 
@@ -25,67 +28,6 @@ Also, error handling when loading virtual elements has been improved.
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
 When, in the scope of behavioral anomaly detection, proactive cap detection or pattern matching, SLAnalytics has to generate alarms or suggestion events for virtual functions, from now on, it will generate them on the parent element. However, it will continue to generate alarms and suggestion events for all other kinds of DVEs on the child element.
-
-#### Table sizes will now be limited [ID 39836]
-
-<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
-
-Table sizes will now be limited to protect DataMiner against ever-growing tables in elements.
-
-> [!NOTE]
-> These limits do not apply to logger tables, partial tables, and general parameter tables.
-
-##### Row count limit for non-partial tables
-
-If a table reaches 85&thinsp;000 rows:
-
-- A notice alarm will be generated, and a banner will be displayed on the affected element to notify users.
-
-If a table reaches 105&thinsp;000 rows:
-
-- The system will prevent users from adding more rows to the table. However, they will still be able to update or delete rows.
-- An error alarm will be generated, and a banner will be displayed on the affected element to notify users.
-- The following entry will be added to the log file of the element:
-
-  `Table [<table description> [table id]]: Reached maximum number of rows, adding new rows is not allowed. Current number of rows [<row count>]`
-
-If the row count of a table drops:
-
-- If the row count of a table drops below 100&thinsp;000, the error alarm will revert to a notice alarm, and the notice alarm banner will be displayed. Also, users will again be allowed to add new rows.
-- If the row count of a table drops below 80&thinsp;000, both the notice alarm and the notice alarm banner will be removed.
-
-##### Alarms for volatile tables with RTDisplay set to false
-
-If a table reaches 805&thinsp;000 rows:
-
-- A notice alarm will be generated, and a banner will be displayed on the affected element to notify users.
-
-if a table reaches 1&thinsp;005&thinsp;000 rows:
-
-- The system will prevent users from adding more rows to the table. However, they will still be able to update or delete rows.
-- An error alarm will be generated, and a banner will be displayed on the affected element to notify users.
-- The following entry will be added to the log file of the element:
-
-  `Table [<table description> [table id]]: Reached maximum number of rows, adding new rows is not allowed. Current number of rows [<row count>]`
-
-If the row count of a table drops:
-
-- If the row count of a table drops below 1&thinsp;000&thinsp;000, the error alarm will revert to a notice alarm, and the notice alarm banner will be displayed. Also, users will again be allowed to add new rows.
-- If the row count of a table drops below 800&thinsp;000, both the notice alarm and the notice alarm banner will be removed.
-
-##### Format of alarms and banner messages
-
-The notice alarm and banner message will have the following format:
-
-`Table [<table description> [table id]] on page [<page name>] contains over [80K or 800K] rows. While there is no operational impact now, no more rows will be added once the table contains over [100K or 1000K] rows.`
-
-The error alarm and banner message will have the following format:
-
-`Table [<table description> [table id]] on page [<page name>] contains over [100K or 1000K] rows. No more rows will be added to this table until the number of rows drops below [100K or 1000K].`
-
-When multiple tables generate an alarm for the same element, the banner will display the following message:
-
-`Multiple tables have exceeded the row limit. Please check the alarms.`
 
 #### NATS configuration can now be reset by calling an endpoint of SLEndpointTool.dll [ID 39871]
 
@@ -265,9 +207,9 @@ To avoid such run-time errors, from now on, when SLSNMPManager is polling an SNM
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-On Failover systems with a Cassandra Cluster setup, a Failover switch would take significantly longer than usual due to blocking calls in the SLASPConnection process.
+On Failover systems with a Cassandra setup, a Failover switch would take significantly longer than usual due to blocking calls in the SLASPConnection process.
 
-See also: [Failover switch taking a long time on systems with Cassandra Cluster setup](xref:KI_Failover_switch_Cassandra_Cluster)
+See also: [Failover switch taking a long time on systems with Cassandra setup](xref:KI_Failover_switch_Cassandra)
 
 #### Problem due to the protobuf-net framework in SLNetTypes being initialized on multiple threads [ID 39807]
 

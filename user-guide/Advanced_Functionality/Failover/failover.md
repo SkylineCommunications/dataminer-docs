@@ -8,3 +8,6 @@ Each DataMiner Agent in a DataMiner system can be teamed up with a dedicated bac
 
 ![Failover](~/user-guide/images/Failover10_4_10.png)<br>
 *The Failover Config window in DataMiner 10.4.10*
+
+> [!NOTE]
+> This feature is not available if [Swarming](xref:Swarming) is enabled.

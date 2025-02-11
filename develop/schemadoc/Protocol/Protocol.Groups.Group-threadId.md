@@ -20,4 +20,4 @@ If you try to execute a group on a thread that does not exist, the group will be
 
 As a specific thread can have multiple connections linked to it, you will also need to specify the [connection](xref:Protocol.Groups.Group-connection). If this is omitted, the thread will use the main connection with ID 0.
 
-*Feature introduced in DataMiner 10.4.9 (RN 38887).*
+*Feature introduced in DataMiner 10.4.9/10.5.0 (RN 38887).*

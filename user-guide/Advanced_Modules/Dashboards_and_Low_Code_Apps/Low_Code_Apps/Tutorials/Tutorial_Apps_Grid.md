@@ -41,7 +41,7 @@ You can now create the query using the *Orders.json* file as the data source.
 
 1. Create a new low-code app. See [Creating low-code applications](xref:Creating_custom_apps).
 
-1. In the data pane, expand *Queries*.
+1. In the *Data* pane, expand *Queries*.
 
 1. Click the + icon to add a new query.
 

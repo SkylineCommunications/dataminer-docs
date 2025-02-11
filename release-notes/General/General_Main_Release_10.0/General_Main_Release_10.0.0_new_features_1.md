@@ -16,7 +16,7 @@ uid: General_Main_Release_10.0.0_new_features_1
 
 On DataMiner Agents running Cassandra, it is possible to install a dedicated indexing database (e.g. Elasticsearch). If this so-called Indexing Engine is installed, new search features will now become available in the Alarm Console. Additional features are also being developed that will make use of the Indexing Engine in the future.
 
-##### **Indexing system requirements**
+##### Indexing system requirements
 
 DataMiner Indexing Engine can only be installed on DataMiner Agents with the following characteristics:
 
@@ -116,7 +116,7 @@ There is also a button available that can be used to migrate booking data to the
 
 When you open a new alarm tab page in the Alarm Console while connected to a DataMiner Agent that has indexing enabled on alarms, a search box at the top of that alarm tab page will now allow you to search for particular alarms or information events.
 
-You can also right-click text in the Alarm Console while holding the left CTRL key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select “Search for \<text> in new tab”. This will open a new tab with the text in question filled in in the search box.
+You can also right-click text in the Alarm Console while holding the left Ctrl key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select “Search for \<text> in new tab”. This will open a new tab with the text in question filled in in the search box.
 
 Next to the search box, you can select a timespan (default: last 24 hours). When you start typing in the search box, the most relevant suggestions that are returned by the server will be displayed below. If a suggestion is too large to be displayed completely, you will be able to view it completely by hovering the mouse over it. However, if it consists of multiple lines, only the first line will be displayed.
 
@@ -151,13 +151,13 @@ In the Users / Groups module, in the category *Modules* > *System configuration
 
 - *Configure*: Determines whether the user can make any changes to the Indexing Engine configuration.
 
-##### **Indexing log information**
+##### Indexing log information
 
 Log information about the Indexing Engine can be found in a new “Search” log file in the *Logging* section of *System Center*.
 
 In addition, the system will continuously monitor the connection with the Indexing database. If for some reason a node of the Indexing database goes down, an alarm will be displayed in the Alarm Console.
 
-##### **GetIndexCountRequest method**
+##### GetIndexCountRequest method
 
 A new *GetIndexCountRequest* method has been added in DataMiner, which can be used to retrieve the number of documents in the indexing database.
 
@@ -467,9 +467,9 @@ When, in the Config.xml file, you set \<RequireValidSsl> to “true”, you have
 
 4. Click *Next*, specify a random folder and a file name, and click *Save*.
 
-5. Open the Microsoft Management Console. To do so, press WINDOWS+R, type “mmc”, and press ENTER.
+5. Open the Microsoft Management Console. To do so, press WINDOWS+R, type “mmc”, and press Enter.
 
-6. In the Microsoft Management Console, press CTRL+M.
+6. In the Microsoft Management Console, press Ctrl+M.
 
 7. In the *Add or Remove Snap-ins* window, select “Certificate” from the *Available snap-ins* list, and click *Add*.
 

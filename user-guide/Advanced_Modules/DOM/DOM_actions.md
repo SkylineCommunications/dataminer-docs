@@ -31,6 +31,15 @@ This action can be used to execute a specified script. This has the following pr
 >
 > - The *ScriptOptions* property can contain the option strings you would put in the *Options* property of an [ExecuteScriptMessage](xref:Skyline.DataMiner.Net.Messages.ExecuteScriptMessage). This can be used to for example pass along a parameter (e.g. "PARAMETER:1:SomeValue"). Note that you should not add the "DEFER" option as this will be added automatically depending on the value of the *Async* property.
 > - If no condition is defined (null), the action can always be executed.
+> - Prior to DataMiner versions 10.5.0/10.5.2<!-- RN 41536 -->, a "Script started" information event is generated when the configured script is launched. To reduce the load on the database, this no longer happens from those DataMiner versions onwards.
+
+> [!CAUTION]
+> To prevent deadlock situations in the SLAutomation module, avoid triggering DOM actions of this kind from other Automation scripts. A deadlock can occur in the following scenario:
+>
+> - A DOM action script is configured to run synchronously (`Async` property set to `false`).
+> - That DOM action script needs to interact with the SLNet API (this is the case when using most helpers, sending SLNet messages, etc.).
+>
+> If triggering a DOM action from a script is necessary, try to trigger it asynchronously or ensure that the DOM action script does not need to interact with the SLNet API. It may also be better to trigger the script directly as a subscript.
 
 The scripts that will be executed using this action require a custom entry point of type "OnDomAction". This entry point method should have the `IEngine` object as it first argument, and an `ExecuteScriptDomActionContext` object as its second object. A script with this entry point can look like this:
 

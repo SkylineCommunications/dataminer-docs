@@ -1,10 +1,14 @@
 ---
 uid: GQI_Extensions_Logging
+keywords: GQI logging
 ---
 
-# Logging
+# GQI extensions logging
 
 From DataMiner 10.4.5/10.5.0 onwards<!-- RN 39043 -->, [ad hoc data sources](xref:Configuring_an_ad_hoc_data_source_in_a_query) and [custom operators](xref:GQI_Custom_Operator) can log their own messages and exceptions within GQI, complementing the existing [GQI core logging functionality](xref:GQI_Logging) (available from DataMiner 10.4.0/10.4.4).
+
+> [!TIP]
+> For information about general GQI logging, see [GQI logging](xref:GQI_Logging).
 
 ## Enabling logging
 
@@ -21,9 +25,17 @@ Throughout its lifespan, the extension can use the [IGQILogger](xref:GQI_IGQILog
 
 Log files are created for both types of extensions, each within their respective subfolders:
 
-- For ad hoc data sources: *C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources*
+- If the [GQI DxM](xref:GQI_DxM) is used:
 
-- For custom operators: *C:\Skyline DataMiner\Logging\GQI\Custom operators*
+  - For ad hoc data sources: *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Ad hoc data sources*
+
+  - For custom operators: *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Custom operators*
+
+- If GQI runs in the SLHelper process:
+
+  - For ad hoc data sources: *C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources*
+
+  - For custom operators: *C:\Skyline DataMiner\Logging\GQI\Custom operators*
 
 Log file names adhere to the following format: *Script_Library_Type.txt*.
 

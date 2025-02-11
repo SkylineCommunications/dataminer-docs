@@ -6,7 +6,7 @@ uid: Application_framework
 
 With the DataMiner Low-Code Apps module, you can create custom applications that interact with data from a DataMiner System or from an external source.
 
-The DataMiner Low-Code Apps module is fully available from DataMiner 10.2.5/10.3.0 onwards. Prior to this, starting from DataMiner 10.0.8, you can preview it if the *Applications* [soft-launch option](xref:SoftLaunchOptions) is enabled.
+The DataMiner Low-Code Apps module is fully available from DataMiner 10.2.5/10.3.0 onwards. Prior to this, you can preview it if the *Applications* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
 ![Low-Code App example](~/user-guide/images/Low-Code_App.png)<br>*Low-Code Apps module in DataMiner 10.4.9*
 

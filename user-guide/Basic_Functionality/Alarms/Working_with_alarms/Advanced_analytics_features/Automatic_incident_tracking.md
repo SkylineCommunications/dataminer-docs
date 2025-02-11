@@ -29,7 +29,7 @@ The following factors, in order, are taken into account for the grouping:
 
 - Element information
 
-- Alarm, element, service or view properties, if these have been configured for incident tracking (see [Advanced Configuration](#advanced-configuration)).
+- Alarm, element, service or view properties, if these have been configured for incident tracking (see [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules)).
 
 If a single factor is used, it is mentioned in the value of the created alarm group.
 
@@ -51,6 +51,10 @@ The grouping of alarms into incidents is updated in real time whenever appropria
 >
 > - Using automatic incident tracking with history sets is supported; however, keep in mind that this may trigger the creation and immediate clearing of a large number of alarm groups.
 > - When an element is stopped or paused, the alarms associated with that element will not be taken into account when grouping alarms. Also, alarms associated with elements that are stopped or paused will be removed from any existing alarm group.
+> - After a [DataMiner Agent is added to a DMS](xref:Adding_a_DataMiner_Agent_to_a_DataMiner_System), incidents created by automatic incident tracking will temporarily be shown incorrectly. This issue will automatically be resolved within 30 minutes, but you can also manually fix this sooner by changing the *Leader DataMiner ID* in the [automatic incident tracking configuration in System Center](xref:Automatic_incident_tracking#automatic-incident-tracking-configuration-in-system-center).
+
+> [!TIP]
+> It is possible to manually customize alarm grouping. See [Customizing alarm grouping rules](xref:Customizing_alarm_grouping_rules).
 
 ## Automatic incident tracking configuration in System Center
 
@@ -61,7 +65,7 @@ In DataMiner Cube, you can enable this feature in System Center, via *System set
 
 The following settings are available in System Center:
 
-- *Enabled*: Allows you to activate or deactivate this feature. Note that when you upgrade to DataMiner 10.0.11, the feature is automatically disabled, unless it has previously been activated as a soft-launch feature.
+- *Enabled*: Allows you to activate or deactivate this feature.
 
 - *Leader DataMiner ID*: The DMA performing all incident tracking calculations. By default, this is the DMA with the lowest DataMiner ID at the time when alarm grouping is enabled.
 
@@ -77,127 +81,6 @@ When this feature has been enabled in System Center as detailed above, it still 
 
 > [!NOTE]
 > Automatic incident tracking is only shown for active alarms, not for history alarms. Consequently, from DataMiner 10.2.0 [CU12]/10.3.3 onwards, the *Automatic incident tracking* option is not available for a history tab in the Alarm Console. <!-- RN 35556 -->
-
-## Advanced configuration
-
-Automatic incident tracking strives to maximize the amount of information used for grouping alarms.
-
-By default, all [available source of information](#automatic-incident-tracking) are taken into account. However, in some cases, it can be beneficial to tweak this configuration by disabling specific grouping reasons or defining custom ones.
-
-This can be achieved by modifying the *configuration.xml* file, located in the *C:\\Skyline DataMiner\\analytics\\* folder.
-
-Every source of information that can be used for grouping alarms is called a "Property". The feature includes a set of predefined properties, each identified by an XML block in the *configuration.xml* file.
-
-For example:
-
-```xml  
-    <item type="skyline::dataminer::analytics::workers::configuration::XMLConfigurationProperty&lt;class std::shared_ptr&lt;class skyline::dataminer::analytics::workers::configuration::VisitorConfiguration&gt; &gt;">
-        <Value type="skyline::dataminer::analytics::workers::configuration::VisitorConfiguration">
-            <enable>true</enable>
-        </Value>
-        <Accessibility>2</Accessibility>
-        <Name>ElementProperty</Name>
-    </item>
-```
-
-- The \<Name> tag indicates the source of information used for grouping. In the example above, the above property allows grouping alarms on the same element.
-
-- The \<enable> tag indicates whether a source of information should be used. It can be set to *false* if no alarm group of that type is desired.
-
-- Some properties include an additional \<threshold> tag. This configuration allows calibration of the statistical significance of the property when grouping alarms:
-
-  ```xml
-    <item type="skyline::dataminer::analytics::workers::configuration::XMLConfigurationProperty&lt;class std::shared_ptr&lt;class skyline::dataminer::analytics::workers::configuration::StatisticalVisitorConfiguration&gt; &gt;">
-        <Value type="skyline::dataminer::analytics::workers::configuration::StatisticalVisitorConfiguration">
-            <enable>true</enable>
-            <threshold>0.5</threshold>
-        </Value>
-        <Accessibility>2</Accessibility>
-        <Name>ViewProperty</Name>
-    </item>
-  ```
-
-  In the example above, Automatic Incident Tracking is configured to group alarms under the same view, but only if the proportion of elements in alarm among all elements under that view exceeds the configured threshold of 50%.
-
-  Generally, a lower threshold results in quicker but less reliable alarm group triggering, while a higher threshold results in slower triggering with higher confidence.
-
-From DataMiner 10.2.0/10.1.4 onwards, it is also possible to define custom properties. Alarm, element, service, or view properties can be taken into account when grouping alarms, if these have been configured as detailed below. Alarms are grouped as soon as they have the same value for one of the configured alarm, service, or view properties, the same focus value, and approximately the same timestamp. For element properties, alarm grouping also depends on a statistical threshold as explained above.
-
-The following basic configuration is needed in Cube:
-
-- For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
-
-In addition, the following configuration is needed in the *configuration.xml* file:
-
-- For each custom-defined alarm, element, view, or service property, add an \<item> tag within the \<Properties> tag of the Automatic Incident Tracking XML configuration group as shown below. Make sure the \<Name> tag is set to *GenericProperties*, as using any other name will result in a reading error.
-
-  ```xml
-  <item type="skyline::dataminer::analytics::workers::configuration::XMLConfigurationProperty&lt;class std::vector&lt;class std::shared_ptr&lt;class skyline::dataminer::analytics::workers::configuration:: IGenericPropertyVisitorConfiguration&gt;,class std::allocator&lt;class std::shared_ptr&lt;class skyline::dataminer::analytics::workers::configuration:: IGenericPropertyVisitorConfiguration&gt; &gt; &gt; &gt;">
-    <Value>
-      [One <item> tag per property that has to be taken into account. See below for details.]
-    </Value>
-    <Accessibility>2</Accessibility>
-    <Name>GenericProperties</Name>
-  </item>
-  ```
-
-  Make sure to replace the placeholder in the \<Value> section with the appropriate information. Each item type specifies the corresponding type of property, so you do not need to include the property type suffix in the \<name> tag.
-
-  For example, when grouping alarms on the *Alarm.Node* property, make sure to select the `GenericAlarmPropertyVisitorConfiguration` type and use only *Node* in the \<name> tag.
-
-- For an **element property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the element property and \[THRESHOLD\] with the desired threshold.
-
-  ```xml
-  <item type="skyline::dataminer::analytics::workers::configuration::GenericElementPropertyVisitorConfiguration">
-    <enable>true</enable>
-    <threshold>[THRESHOLD]</threshold>
-    <name>[PROPERTY_NAME]</name>
-  </item>
-  ```
-
-- For an **alarm property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the alarm property.
-
-  ```xml
-  <item type="skyline::dataminer::analytics::workers::configuration::GenericAlarmPropertyVisitorConfiguration">
-    <enable>true</enable>
-    <name>[PROPERTY_NAME]</name>
-  </item>
-  ```
-
-- For a **view property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the view property.
-
-  ```xml
-  <item type="skyline::dataminer::analytics::workers::configuration::GenericViewPropertyVisitorConfiguration">
-    <enable>true</enable>
-    <name>[PROPERTY_NAME]</name>
-  </item>
-  ```
-
-- For a **service property**, configure this \<item> tag as illustrated below. Make sure to replace \[PROPERTY_NAME\] with the name of the service property.
-
-  ```xml
-  <item type="skyline::dataminer::analytics::workers::configuration::GenericServicePropertyVisitorConfiguration">
-    <enable>true</enable>
-    <name>[PROPERTY_NAME]</name>
-  </item>
-  ```
-
-After editing and saving the configuration file, **restart the SLAnalytics process on the leader Agent** to make sure the desired changes take effect. To find out which DMA is the leader Agent, see [Automatic incident tracking configuration in System Center](#automatic-incident-tracking-configuration-in-system-center).
-
-> [!TIP]
-> The *configuration.xml* files are not synced across a DataMiner cluster. For this reason, it is important to always edit the file on the leader Agent. If possible, it is good practice to manually replace the file on all Agents in the cluster at the same time. This way, no unwanted behavior will occur when the leader Agent is changed at a later moment.
-
-### Troubleshooting advanced configuration
-
-If changes in grouping behavior are not observed after following the above configuration steps:
-
-- Check that the edited file is located on the Agent specified in the configuration under *Leader DataMiner ID*.
-
-- Check that the SLAnalytics process was restarted on that Agent.
-
-- If the *configuration.xml* file gets overwritten after an SLAnalytics restart, check the logs for deserialization errors that may have caused a fallback to the default configuration. Review the edited parts of the file to make sure they comply with the XML structure described above.
-
-Because of compatibility issues, systems that previously operated on certain older versions of DataMiner may not reflect changes in grouping behavior, even if all steps were executed correctly. This may happen when all settings are correct, and the logs show no errors, yet the expected change in grouping behavior does not take effect. As a workaround, you can delete the XML file, restart the SLAnalytics process, wait for a new default file to be generated, and then start the process again.
 
 ## Alarm groups in the Alarm Console
 

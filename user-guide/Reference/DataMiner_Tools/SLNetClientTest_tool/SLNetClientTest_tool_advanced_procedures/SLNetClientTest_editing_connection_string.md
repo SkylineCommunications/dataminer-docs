@@ -23,7 +23,7 @@ To do so:
      > [!NOTE]
      >
      > - For a DMA connecting to a Failover pair, this will be the virtual IP address of that destination pair. For a main Failover DMA connecting to its backup or vice versa, this will be the sync IP of that target machine.
-     > - From DataMiner 10.0.0 CU15/10.1.0 CU4/10.1.7 onwards, wildcards are supported in this field. If there is no exact match, the connection string will be set for all matching destinations.
+     > - Wildcards are supported in this field. If there is no exact match, the connection string will be set for all matching destinations.
 
    - *Update All Connections To This Agent*: Select this option if you want to update all connection strings to the DataMiner Agent specified in *To*.
 
@@ -39,10 +39,10 @@ To do so:
 1. If no further connection strings need to be configured, click *Done*.
 
 > [!NOTE]
-> From DataMiner 10.0.0 CU15/10.1.0 CU4/10.1.7 onwards, if DataMiner fails to automatically detect the SLNet target port (via port 80 or 443), the connection attempt will continue on the default port 8004. To skip this auto-detection and immediately use the default port 8004, you can set the connection string to *auto://nodetect*. This can for instance be useful in case port 80 is blocked between the DMAs.
+> If DataMiner fails to automatically detect the SLNet target port (via port 80 or 443), the connection attempt will continue on the default port 8004. To skip this auto-detection and immediately use the default port 8004, you can set the connection string to *auto://nodetect*. This can for instance be useful in case port 80 is blocked between the DMAs.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 > [!TIP]
-> To verify if your DataMiner cluster is working correctly, you can run the [Check Cluster SLNet Connections BPA test](xref:BPA_Check_Cluster_SLNet_Connections).
+> To verify if your DataMiner cluster is working correctly, you can run the [*SLNet connections between the DataMiner Agents* BPA test](xref:BPA_Check_Cluster_SLNet_Connections).

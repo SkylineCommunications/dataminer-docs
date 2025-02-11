@@ -4,6 +4,8 @@ uid: Protocol.HTTP.Session-timeout
 
 # timeout attribute
 
+<!-- RN 12542 -->
+
 Specifies that DataMiner must use this timeout value instead of the default one.
 
 > [!NOTE]
@@ -20,8 +22,6 @@ unsignedInt
 ## Remarks
 
 The timeout value must be expressed in ms.
-
-*Feature introduced in DataMiner 9.0.2 (RN 12542).*
 
 ## Examples
 

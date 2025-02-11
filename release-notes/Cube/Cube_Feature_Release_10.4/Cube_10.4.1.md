@@ -8,7 +8,9 @@ uid: Cube_Feature_Release_10.4.1
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.4.1](xref:General_Feature_Release_10.4.1).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.1](xref:General_Feature_Release_10.4.1).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.4.1](xref:Web_apps_Feature_Release_10.4.1).
 
 ## Highlights
 
@@ -26,7 +28,7 @@ uid: Cube_Feature_Release_10.4.1
 It is now possible to zoom inside a spectrum window:
 
 - To zoom horizontally, scroll up and down. This has the same effect as altering the frequency span.
-- To zoom vertically, scroll up and down while pressing the CTRL key. This has the same effect as altering the amplitude scale.
+- To zoom vertically, scroll up and down while pressing the Ctrl key. This has the same effect as altering the amplitude scale.
 
 When you stop scrolling, the new zoom dimensions will be set on the spectrum analyzer device and the screen will be updated with the new data.
 

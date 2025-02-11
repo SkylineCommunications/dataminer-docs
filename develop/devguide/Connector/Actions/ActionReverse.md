@@ -19,7 +19,7 @@ The ID of the parameter(s) to be reversed.
 
 ### On@nr
 
-(Optional.) In case a parameter is used multiple times in the definition of a command/response, this attribute can be used to indicate which occurrence(s) of this parameter in the command/response should be reversed. By default, the first occurrence is reversed. Separate multiple positions by semicolons (";"). Occurrences are 0-based: to reverse the second occurrence, specify `nr="1"`.
+(Optional.) In case a parameter is used multiple times in the definition of a command/response, this attribute can be used to indicate which occurrence(s) of this parameter in the command/response should be reversed. By default, the first occurrence is reversed. Separate multiple positions by semicolons (`;`). Occurrences are 0-based: to reverse the second occurrence, specify `nr="1"`.
 
 ## Examples
 

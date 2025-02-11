@@ -33,7 +33,7 @@ If you want to use existing lines to visualize connectivity, then add a shape da
 > [!NOTE]
 >
 > - Make sure the manually drawn lines are connected to the correct interfaces. If a line is connected to the parent shape of an interface instead of the interface itself, the path will not be used.
-> - If you draw a connection line to a shape that is not linked to a DataMiner object, you will need to make sure a connection point is configured on the shape, as otherwise it will not be clickable and highlightable in DataMiner. To add a connection point, in Visio, select the connection point tool in the ribbon (displayed as a blue X in the *Home* tab), select the shape, and then click the shape again while keeping the *CTRL* key pressed.
+> - If you draw a connection line to a shape that is not linked to a DataMiner object, you will need to make sure a connection point is configured on the shape, as otherwise it will not be clickable and highlightable in DataMiner. To add a connection point, in Visio, select the connection point tool in the ribbon (displayed as a blue X in the *Home* tab), select the shape, and then click the shape again while keeping the Ctrl key pressed.
 
 ## Enabling view connections
 

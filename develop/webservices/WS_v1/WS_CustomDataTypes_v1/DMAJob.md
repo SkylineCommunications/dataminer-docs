@@ -11,4 +11,4 @@ uid: DMAJob
 | Name         | String                 | The name of the job.                                                                       |
 | TimeStartUTC | Long integer           | The start time of the job in UTC format (milliseconds since midnight January 1, 1970 GMT). |
 | TimeEndUTC   | Long integer           | The end time of the job in UTC format (milliseconds since midnight January 1, 1970 GMT).   |
-| Sections     | Array of DMAJobSection | See [DMAJobSection](xref:DMAJobSection).                                                     |
+| Sections     | Array of [DMAJobSection](xref:DMAJobSection) | The sections of the job.                                             |

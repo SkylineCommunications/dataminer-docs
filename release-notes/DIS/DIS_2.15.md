@@ -10,7 +10,7 @@ uid: DIS_2.15
 
 #### DIS Tree: New button to open tree node at cursor position \[ID 20677\]
 
-When working in the XML editor or the C# editor, you can press a key combination (default: CTRL+1) to move the cursor to the DIS Tree tool window and select the DIS tree node representing the element you are editing.
+When working in the XML editor or the C# editor, you can press a key combination (default: Ctrl+1) to move the cursor to the DIS Tree tool window and select the DIS tree node representing the element you are editing.
 
 From now on, instead of pressing this key combination, you can also click the following button, which is situated in the top-left corner of the DIS Tree tool window:
 

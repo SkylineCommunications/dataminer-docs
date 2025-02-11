@@ -39,11 +39,11 @@ Expected duration: 10 minutes
 
 1. [Create a new dashboard](xref:Creating_a_completely_new_dashboard).
 
-1. Add a [Text input](xref:DashboardTextInputFeed) component so the user can enter a search term:
+1. Add a [Text input](xref:DashboardTextInput) component so the user can enter a search term:
 
    1. In edit mode, drag and drop the *Text input* visualization from the pane on the left on to the main dashboard area.
 
-   1. Select the input and go to the layout pane where you can configure additional options to style the input.
+   1. Select the input and go to the *Layout* pane where you can configure additional options to style the input.
 
    1. Fill in "VLAN name" as the placeholder for the text input.
 
@@ -75,17 +75,17 @@ Your text input should look like this:
 
 1. Edit the GQI query again and open the filter operator.
 
-1. In the *Value* box, click the "Link to feed" icon.
+1. In the *Value* box, click the "Link to feed" icon (or the "Link to data" icon in DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 or higher).
 
-   This icon is used everywhere a user can link a value to a feed.
+   This icon is used everywhere a user can link a value to data.
 
-   ![Link to feed icon](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Link.jpg)
+   !["Link to feed" icon in DataMiner 10.4.1](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Link.jpg)
 
-   Clicking the icon opens the *Link to feed* dialog, which will ask for a specific feed, type, and property.
+   Clicking the icon opens the *Link to feed* dialog (or *Link to data* in recent DataMiner versions), which will ask for a specific feed or data, the type, and a property.
 
 1. Specify the necessary info in the dialog:
 
-   1. Select "Text input 1" for the feed.
+   1. In the first box, select "Text input 1".
 
       You will notice that the type and property are automatically filled in if only one possible value is available.
 
@@ -93,7 +93,7 @@ Your text input should look like this:
 
       This determines what will happen when the user does not fill in any value in the text input. Selecting *everything* ensures that all data is retrieved in this case.
 
-      ![Link to feed configuration](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Popup.jpg)
+      !["Link to feed" configuration in DataMiner 10.4.1](~/user-guide/images/Dashboards_Tutorial_Controls_Feeds_Query_Popup.jpg)
 
       > [!TIP]
       > If you want the text input to behave like a search engine, you can select *nothing* instead. This will not retrieve any data until the user fills in a value in the text input.
@@ -105,7 +105,7 @@ Your text input should look like this:
    As soon as you press Enter or click outside the textbox, the filter will be applied in the table.
 
    > [!NOTE]
-   > This is the default behavior for the text input. You can customize this in the *Settings* tab of the text input, so that this for instance happens as soon as the value changes, or only if Enter is pressed.
+   > This is the default behavior for the text input. You can customize this in the *Settings* pane of the text input, so that this for instance happens as soon as the value changes, or only if Enter is pressed.
 
 ## Learning paths
 
@@ -115,4 +115,4 @@ This tutorial is part of the following learning path:
 
 ## Related documentation
 
-- [Feeds](xref:Using_dashboard_feeds)
+- [Component data](xref:Component_Data)

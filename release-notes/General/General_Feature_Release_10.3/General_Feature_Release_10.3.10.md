@@ -135,13 +135,13 @@ In addition, a write parameter is no longer needed in this scenario. Previously,
 
 Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
 
-#### Automatic clean-up of C:\\Skyline DataMiner\\Upgrades\\Packages folder [ID 37033]
+#### Automatic cleanup of C:\\Skyline DataMiner\\Upgrades\\Packages folder [ID 37033]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 After each DataMiner upgrade, up to now, the DataMiner upgrade package would be kept indefinitely in the `C:\Skyline DataMiner\Upgrades\Packages` folder.
 
-From now on, after each DataMiner upgrade or DataMiner start-up, this folder will be cleaned up.
+From now on, after each DataMiner upgrade or DataMiner startup, this folder will be cleaned up.
 
 - When a DataMiner upgrade was successful, only the `progress.log` file for that particular upgrade will be kept.
 - When a DataMiner upgrade failed, apart from the `progress.log` file, the [prerequisite checks](xref:Preparing_to_upgrade_a_DataMiner_Agent#prerequisite-checks) will also be kept for debugging purposes.
@@ -175,7 +175,7 @@ This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
 Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
 
 > [!IMPORTANT]
-> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Advanced configuration](xref:Automatic_incident_tracking#advanced-configuration).
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 ### Fixes
 
@@ -215,7 +215,7 @@ A number of issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notif
 
 When you perform a factory reset by running *SLReset.exe*, NATS will automatically be re-installed.
 
-Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file clean-up.
+Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file cleanup.
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID 37083]
 

@@ -2,12 +2,296 @@
 uid: DCP_change_log
 ---
 
-# dataminer.services change log
+# dataminer.services change log - 2024
 
-The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
+This change log can help you trace when specific features and changes became available on the dataminer.services platform in 2024.
 
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
+
+### 17 December 2024 - Enhancement - Admin app - Improved audit export [ID 41694]
+
+From now on, when you export the audit information from the *Audit* page in the [Admin app](https://admin.dataminer.services), the export file will have a better name, which will include the organization name and a readable timestamp.
+
+### 11 December 2024 - Enhancement - Admin app - Improved usage export file [ID 41695]
+
+From now on, when you export the usage information from the *Usage* page in the [Admin app](https://admin.dataminer.services), the export file will have a better name, which will include the organization name and a readable timestamp. The metrics in the file itself will now also contain the organization and DMS name, and if the option to include column titles was selected, there will be better column titles at the the top.
+
+### 9 December 2024 - Enhancement - Home/Admin/Catalog/Marketplace/Sharing - App title now works as link that can be opened in new tab [ID 41524]
+
+When you click the title of the Admin, Catalog, Home, Marketplace, or Sharing apps with the middle mouse button, this will now open the app again in a new tab. In addition, you can now also right-click the title to among others open the app in a new tab or in a new window.
+
+### 9 December 2024 - Enhancement - Home - Updated terms of service and conditions for DaaS deployments [ID 41651]
+
+The link to the terms of service and conditions for DaaS deployments has been updated.
+
+### 9 December 2024 - Enhancement - Remote Access - Improved upload speed [ID 41662]
+
+The upload speed for remote access requests has been improved. This will mainly affect file uploads, for example in Cube when uploading a protocol or upgrade package.
+
+### 1 December 2024 - New feature - Admin app - Connector usage [ID 41580]
+
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about the used connectors when available. This usage is shown as an average over the selected month.
+
+### 26 November 2024 - New feature - Admin app - Automation usage [ID 41554]
+
+From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about Automation script runs when available.
+
+### 26 November 2024 - New feature - Usage API - Usage API with API key [ID 41554]
+
+From now on, you can create an API key on organization level with the "Retrieve usage data" permission. This API key can be used with the new Key Usage API, in combination with the new Public Usage API, to retrieve usage data about your DataMiner Systems in an automated way.
+
+The swagger documentation pages about the available Usage API calls are available in the following locations:
+
+- [Public Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Public+Usage+Api+v1.0)
+  - Get the features for which usage data might be available. Example features: `Automation`, `Storage as a Service`.
+  - Get the metrics of a feature. Example metrics: `Script Runs` for the Automation feature, `Operations` for the Storage as a Service feature.
+- [Key Usage API swagger documentation](https://api.dataminer.services/swagger/usageapi/index.html?urls.primaryName=Key+Usage+Api+v1.0)
+  - Get the data in a given time range, for a given feature, a given metric, and a given granularity, with the option to filter the data and split up the data based on specific properties or based on DataMiner System. These "splitters" can for example be `Script Name` or `Succeeded` for Automation, and `Category` or `SubCategory` for Storage as a Service.
+
+### 26 November 2024 - Enhancement - Admin app - Usage and audit export email layout [ID 41554]
+
+From now on, the emails with the download link for usage exports or audit exports will use the same template as other emails sent from dataminer.services.
+
+### 25 November 2024 - Fix - Catalog API - Registration with invalid manifest returned internal server error [ID 41516]
+
+When you registered a Catalog item using a manifest that contained invalid syntax for the owner, up to now an HTTP 500 internal server error was returned. Now an HTTP 400 Bad Request result will be returned instead, which will detail which field is invalid.
+
+### 25 November 2024 - Fix - Catalog API - Registration with existing ID from other organization returned internal server error [ID 41515]
+
+When you registered a Catalog item with an ID that already existed in another organization, up to now an internal server error was returned. Now an HTTP 409 Conflict result will be returned instead.
+
+### 25 November 2024 - New feature - Catalog API - Changing the publishing state of Catalog items using an organization key [ID 41491]
+
+It is now possible to set a Catalog item to public or private using an organization key with permission *Update Catalog publishing state*.
+
+### 25 November 2024 - Enhancement - Catalog - Deployment warning for items that have external publisher [ID 41486]
+
+On the Catalog details page, when a user tries to deploy an item from an external publisher, a warning will now be shown.
+
+### 25 November 2024 - Enhancement - Admin - Warning in case DataMiner version dependency is not met for DxM [ID 41459]
+
+On the *DxMs* page in the Admin app, when a DataMiner version dependency is not met for a DxM, a warning will now be shown.
+
+### 25 November 2024 - Enhancement - Catalog - 'Type' filter improvements [ID 41452]
+
+On the Catalog browse page, the *Type* filter will now group its available values by category.
+
+The following Catalog types have been updated or introduced:
+
+ Category               | Type (before)      | Type (new)         |
+------------------------|--------------------|--------------------|
+ Data Ingest            | Connector          | Connector          |
+ Data Ingest            | Scripted Connector | Scripted Connector |
+ Data Processing        | Ad Hoc Data Source | Ad Hoc Data Source |
+ Data Processing        | Automation Script  | Automation         |
+ Data Processing        | Data Transformer   | Data Transformer   |
+ Data Processing        | Data Query         | Data Query         |
+ Data Consumption       | ChatOps Extension  | ChatOps Extension  |
+ Data Consumption       | Dashboard          | Dashboard          |
+ Data Consumption       | User-Defined API   | User-Defined API   |
+ Data Consumption       | Visual Overview    | Visual Overview    |
+ Solutions              | /                  | Product Solution   |
+ Solutions              | Standard Solution  | Standard Solution  |
+ Solutions              | Solution           | Custom Solution    |
+ Productivity & Utility | /                  | DevTool           |
+ Productivity & Utility | /                  | System Health      |
+
+The following types have been removed:
+
+- Best Practices Analyzer
+- Enhanced Service Model
+- Function Definition
+- Life Cycle Service Orchestration
+- Low-Code App
+- Process Activity
+- Profile-Load Script (now considered Automation)
+- Sample Solution
+- SLA Model
+- Testing Solution
+
+### 25 November 2024 - Enhancement - Catalog - Changing the publishing state of Catalog items [ID 41418]
+
+On the Catalog details page, items can now be made public or private by an Owner or Admin from the publishing organization.
+
+### 25 November 2024 - New feature - Catalog API - Get Catalog item categories [ID 41411]
+
+The user, service, and public Catalog APIs have been extended with a categories call to obtain all categories supported in Catalog:
+
+- "/api/user-catalog/v2-0/catalogs/categories"
+- "/api/public-catalog/v2-0/catalogs/categories"
+- "/api/service-catalog/v1-0/catalogs/categories"
+
+### 25 November 2024 - Enhancement - Catalog - Items from external publishers now labeled [ID 41402]
+
+On the Catalog details page, if the publisher is not from your currently selected organization or Skyline Communications, the tag "External" will be shown next to the publisher in the side panel.
+
+### 25 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
+
+On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
+
+### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
+
+Up to now, when you opened the versions section of an item without any versions, it would stay in a loading state. This has now been fixed: an info message will be shown saying this item does not have any versions.
+
+### 7 November 2024 - Enhancement - Catalog - Permalinks shown for titles of a Catalog description [ID 41322]
+
+The description of an item will now show a link next to the titles in the form of a "#". This link can be copied and shared with other users and will open the current page at the selected title.
+
+### 7 November 2024 - Enhancement - Catalog - Support for relative (local) links in the description of an item [ID 41319]
+
+On the Catalog details page, headings can now be linked to. You can link to the heading using the relative link from their markdown source. If a fragment link (indicated by # in the URL) is detected, the details page will scroll to the corresponding heading.
+
+### 7 November 2024 - Enhancement - Sharing - Email now set when user leaves input field [ID 41244]
+
+After a user fills in the email input field and leaves it, the email will now be saved and the share button will be enabled.
+
+### 7 November 2024 - Fix - Sharing - Share button not enabled after setting expiration date [ID 41244]
+
+Previously, when you enabled the expiration date for a share and then set a date, the share button would still be disabled. This has now been fixed: as soon as you set an expiration date, the share button will be enabled.
+
+### 7 November 2024 - Enhancement - Admin app - Audit export rephrased [ID 41234]
+
+From now on, the audit export entry will have a better title, e.g. "Usage export by ...".
+
+#### 7 November 2024 - Fix - Catalog API - Missing search results [ID 41226]
+
+When items had no reference to a vendor, it could occur that they were not included in search results.
+
+#### 7 November 2024 - Enhancement - Catalog - Catalog versioning format updated [ID 41225]
+
+​The Catalog API now allows all formats when registering a version of a Catalog item.
+
+- Versions following semantic version A.B.C.D will be displayed in an A.B.C range.
+- Versions following semantic version A.B.C will be displayed in an A range
+- All other version formats will be displayed in the "Other" range.
+
+#### 28 October 2024 - Enhancement - Admin app - Audit export file download with a trusted dataminer.services URL [ID 41239]
+
+From now on, the audit export emails will contain a trusted dataminer.services URL for the file download.
+
+#### 28 October 2024 - Enhancement - Admin app - Enhanced stability and performance of the Audit page [ID 41238]
+
+Enhancements have been implemented to the *Audit* page in the [Admin app](https://admin.dataminer.services), improving the stability, availability, and performance with immediate effect.
+
+#### 24 October 2024 - Enhancement - Catalog API - Catalog registration using a DMS key [ID 41215]
+
+The Catalog API can now be used with a DMS key for authentication providing compatibility with existing pipelines that deployed a Catalog item on a DMS.
+
+#### 24 October 2024 - Enhancement - Catalog - Improved the way tags of a Catalog item are displayed [ID 41182]
+
+Tags of a Catalog item will now be shown based on the available space. If a tag is too large, it will be grouped in a "+x" tag that will show the values of the grouped tags when hovered over.
+
+#### 24 October 2024 - Enhancement - Catalog - Updated heading styles [ID 41145]
+
+The style of the headings in the Catalog has been adjusted to match the overall style of the application.
+
+#### 24 October 2024 - Enhancement - Catalog - Catalog description supports markdown alert styling [ID 41053]
+
+Alert styling in the Catalog description readme.md is now supported. The currently supported types are "Caution", "Important", "Note", "Tip", and "Warning".
+
+#### 22 October 2024 - Enhancement - Admin app - Irrelevant modules no longer shown on DxMs page [ID 41187]
+
+Modules for which no updates are provided on the DxMs page in the [Admin app](https://admin.dataminer.services) will no longer be shown.
+
+#### 18 October 2024 - Enhancement - ChatOps - Enhanced stability and performance of Teams Chat Integration [ID 41149]
+
+Enhancements have been implemented to the Teams Chat Integration feature, ensuring improvements in stability, availability, and performance with immediate effect.
+
+#### 16 October 2024 - Enhancement - Admin app - Usage export to CSV [ID 41117]
+
+In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Usage* page, allowing users to export usage metrics to a CSV file. Clicking the *Export usage* button will initiate the export process. A pop-up window will appear, where you can choose the separator for the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
+
+#### 16 October 2024 - Fix - Sharing - Missing emails [ID 41110]
+
+When you edited a share, the email addresses of the people with access to the share were not filled in. Now the email addresses will be shown correctly.
+
+#### 16 October 2024 - Enhancement - Web apps - Colors web apps adjusted [ID 41100]
+
+​The dataminer.services web apps have been updated to make use of new colors, which will provide better contrast and make the UI easier to read.
+
+#### 16 October 2024 - Enhancement - Account linking & Catalog - 'Logout' changed to 'Sign out' [ID 41024]
+
+In the account linking and Catalog UI, the term "Logout" has been replaced with "Sign out".
+
+#### 16 October 2024 - Fix - Catalog - Deploy trial licensed issues [ID 41024]
+
+When you used the *Deploy (trial)* button on the Catalog details page, it could occur that a "not licensed" message was shown, even though this should not happen.
+
+#### 16 October 2024 - Enhancement - Catalog - Description styling [ID 40965]
+
+The styling of alerts in ​Catalog descriptions has been adjusted so it matches the styling of [docs.dataminer.services](https://docs.dataminer.services). The currently supported alert types are caution, important, note, tip, and warning.
+
+#### 16 October 2024 - Enhancement - Catalog - Design improvements [ID 40965]
+
+The card layout in the Catalog has been redesigned to be more concise. The detail page header section, search results, and home page sections have been updated to match the new card design.
+
+#### 10 October 2024 - Enhancement - Catalog - 'Deploy trial' button also available for non-authenticated users [ID 41011]
+
+Non-authenticated users can now also click the *Deploy trial* button in the header of an item or for a specific version. They will then need to log in first, after which the details page will be shown again where they can continue to deploy the given item.
+
+#### 10 October 2024 - Enhancement - Catalog API - Possibility to obtain Catalog item using organization key [ID 40976]
+
+Using the Catalog API, it is now possible to obtain a Catalog item via its ID (GUID) or legacy DPC ID using an organization key for authorization.
+
+#### 10 October 2024 - Enhancement - Catalog - Vendor and market shown in the side panel [ID 40966]
+
+On the details page of a connector Catalog item, the vendor and market are no longer displayed as tags but are instead shown in the side panel.
+
+#### 10 October 2024 - Enhancement - Catalog API - Registering Catalog item version now allows version message of up to 1500 characters [ID 40956]
+
+When you register a version of a Catalog item using the Catalog API, a version message of up to 1500 characters will now be accepted.
+
+#### 10 October 2024 - Enhancement - Catalog API - Search results now include short description property of Catalog item [ID 40955]
+
+When a search is performed in the Catalog, the search result items will now contain a *shortDescription* property containing a small description of the Catalog item.
+
+#### 10 October 2024 - Fix - Catalog - Search included virtual connectors (DVE) when searching in public and private scope [ID 40948]
+
+When you searched or browsed in the Catalog using the visibility setting "All", DVE connectors were included in the results, while this should not happen because these do not have versions that can be deployed.
+
+#### 8 October 2024 - Enhancement - Catalog API - V1 APIs removed [ID 41016]
+
+The following APIs are no longer available:
+
+- PublicCatalog V1
+- UserCatalog V1
+
+Instead, the V2 versions of these APIs should now be used.
+
+#### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
+
+Uploading images used in the README.md file of a Catalog item registration call could fail with the message "The archive entry was compressed using an unsupported compression method".
+
+This was caused by a concurrency issue when processing the files in parallel and has been fixed.
+
+#### 27 September 2024 - Fix - Admin - Node name not shown in DxM upgrade warning message [ID 40880]
+
+Up to now, in the warning message that was shown to inform users of the node where requirements for a DxM upgrade had to be checked, the entire DataMiner System was mentioned. Now, only the name of the relevant node will be shown instead.
+
+#### 27 September 2024 - Enhancement - Admin - DMS opened in new tab from overview page [ID 40861]
+
+In the Admin app, when you click the DMS URL on the DMS overview page, this will now open in a new tab.
+
+#### 27 September 2024 - Enhancement - Home - Input fields disabled when DaaS deployment is submitted [ID 40860] [ID 41056]
+
+When you deploy a DaaS system, all input fields are now disabled after you click *Deploy*.
+
+#### 27 September 2024 - Fix - Catalog - Recommended version could show a private version [ID 40849]
+
+Previously, when a Catalog item had a public range but private versions, it could incorrectly show or recommend a private version of that range.
+
+#### 23 September 2024 - Enhancement - Catalog API - Enhanced image path format support when registering Catalog item [ID 40862]
+
+When you register a Catalog item with a readme.md file, in that file you can now reference to an image using the home directory path "~" syntax or using a relative path. In addition, the casing of the image directory mentioned in the markdown file no longer matters, while previously this always had to be lower case.
+
+#### 23 September 2024 - Fix - Catalog - Duplicate Catalog items [ID 40839]
+
+A duplicate Catalog item could be introduced in the Catalog after the register item call from the Catalog API was used on an existing item that was not originally registered via the Catalog API.
+
+#### 23 September 2024 - Fix - Catalog - Incorrect description shown for Catalog item for an authenticated user [ID 40825]
+
+When a Catalog item uses the same name as another connector Catalog item that was not registered via the Catalog API, the wrong description could be shown when you viewed the item as an authenticated user.
 
 #### 17 September 2024 - Enhancement - Admin - Improved message when no usage data is found [ID 40796]
 
@@ -24,6 +308,10 @@ It is now possible to register your DataMiner System for STaaS through the Admin
 #### 17 September 2024 - Fix - Admin - Incorrect notation usage number [ID 40781]
 
 The notation of the number 400,000 has been changed from 0,4M to 400K.
+
+#### 17 September 2024 - Fix - Caching issues index file dataminer.services web apps [ID 40777]
+
+It could occur that an old version of the site was shown when a newer version was available. To prevent this, caching headers for dataminer.services web apps have been adjusted to avoid caching when a new version is available.
 
 #### 17 September 2024 - Enhancement - Catalog - Catalog registration now only possible via API [ID 40772]
 
@@ -122,23 +410,23 @@ In the Admin app, it is now possible to restrict remote access to the web apps a
 > [!TIP]
 > See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
 
-### 08 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID 40423]
+#### 08 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID 40423]
 
 Up to now, the vendor and market name of a connector were among the tags of a Catalog item and therefore visible in the search results. This has been changed so that vendor and market name are properties that can be seen on the details page of a Catalog item.
 
-### 08 August 2024 - New feature - Catalog - Case-insensitive searching on tags [ID 40368]
+#### 08 August 2024 - New feature - Catalog - Case-insensitive searching on tags [ID 40368]
 
 Search results on tags are now case insensitive.
 
-### 08 August 2024 - New feature - Catalog - Search supports sorting by name and type of a Catalog item [ID 40368]
+#### 08 August 2024 - New feature - Catalog - Search supports sorting by name and type of a Catalog item [ID 40368]
 
 On the browse page, you can now sort by the name and type of the items in ascending or descending order. By default, items will be sorted by name in ascending order.
 
-### 08 August 2024 - New feature - Limit of 5 tags implemented for Catalog items [ID 40349]
+#### 08 August 2024 - New feature - Limit of 5 tags implemented for Catalog items [ID 40349]
 
 When you try to register a Catalog item with more than 5 tags, this will now fail, as this is not supported.
 
-### 08 August 2024 - Enhancement - Catalog - Recommended versions shown for all Catalog item types [ID 40346]
+#### 08 August 2024 - Enhancement - Catalog - Recommended versions shown for all Catalog item types [ID 40346]
 
 Recommended versions are now shown for all Catalog item types. Previously, only connector Catalog items had a recommended version available.
 
@@ -179,11 +467,11 @@ Users can now view documentation for all items, if provided.
 
 The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
 
-#### 23 July 2024 - New Feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
+#### 23 July 2024 - New feature - Catalog - Catalog allows searching on Catalog tags [ID 40259]
 
 It is now possible to search using Catalog tags. The list of all search results will display which tags are present on each Catalog item.
 
-#### 23 July 2024 - New Feature - Catalog - Support for more Catalog types [ID 40144]
+#### 23 July 2024 - New feature - Catalog - Support for more Catalog types [ID 40144]
 
 The following new Catalog types are now supported:
 
@@ -277,7 +565,7 @@ An enhancement has been done to the way timed out requests are handled when the 
 
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID 40121]
 
-When you deploy a DaaS system from the dataminer.services homepage, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
+When you deploy a DaaS system from the dataminer.services home page, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
 
 #### 9 July 2024 - Fix - Catalog - Main ranges incorrectly filtered out in version history [ID 40147]
 
@@ -733,328 +1021,3 @@ In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https:
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
 
 After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
-
-#### 20 December 2023 - Enhancement - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID 38235]
-
-From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to both the owners of the organization and the owners of the DMS, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
-
-A notification will also be sent when an organization owns multiple DaaS systems and it will not be possible to extend one or more of these systems because the organization will not have enough DataMiner credits, as predicted based on the current usage.
-
-#### 13 December 2023 - New feature - Email notifications for expiring and expired DataMiner Community Edition DaaS systems [ID 38183]
-
-From now onwards, when a DataMiner Community Edition DaaS system is about to expire, an email notification will be sent to the owners of the organization and the person who deployed the DaaS system, so that they can take action if they want to prevent deletion. Another email notification will be sent when the DataMiner Community Edition DaaS system has been deleted.
-
-#### 6 December 2023 - New feature - Remote Access setting is now checked for user-defined API access [ID 38102]
-
-Users will now only be able to access a user-defined API using the remote access URL if the Remote Access setting is enabled in the Admin app.
-
-#### 4 December 2023 - New feature - DataMiner as a Service for staging systems [ID 38087]
-
-It is now possible to create a [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) system on dataminer.services for staging systems.
-
-Our [Pay-per-Use](xref:Pricing_Commercial_Models) model is used for this: When you deploy such a DaaS system, 3 DataMiner credits will be deducted from your organization every week. In case your organization runs out of DataMiner credits, the DaaS system will be deleted. By default, every organization is provided with 3 DataMiner credits, so you can try out a DaaS system for one week free of charge.
-
-> [!TIP]
-> See also:
->
-> - [DataMiner Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition)
-> - [Creating a DaaS system](xref:Creating_a_DMS_in_the_cloud)
-
-When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
-
-You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
-
-#### 28 November 2023 - Enhancement - Deploying multiple DaaS systems simultaneously
-
-It is now possible to create more than one DaaS system simultaneously on [dataminer.services](https://dataminer.services).
-
-#### 24 November 2023 - Fix - Improved username validation when deploying a DaaS system
-
-The username validation has been improved to prevent the deployment from failing when the given username is not a valid. This fixes an issue introduced on 10 November 2023.
-
-#### 24 November 2023 - Enhancement - Improved login system for Admin app
-
-The [Admin app](https://admin.dataminer.services) now has an improved login system. This should prevent login redirect loops that could be experienced before.
-
-#### 24 November 2023 - New feature - Introducing the new Catalog user interface
-
-A new user interface has been introduced for [catalog.dataminer.services](https://catalog.dataminer.services).
-
-#### 22 November 2023 - Enhancement - Warning to link account before doing a DxM or Catalog deployment
-
-From now on, the [Admin app](https://admin.dataminer.services) and [Catalog](https://catalog.dataminer.services) will prevent users from doing a deployment if they do not have a linked DataMiner account for the relevant DataMiner System, because in such a case the deployment is not possible. A warning to link the accounts will be displayed instead.
-
-#### 22 November 2023 - Enhancement - Improved login system for dataminer.services home page
-
-The [dataminer.services](https://dataminer.services) home page now has an improved login system. This should prevent login redirect loops that could be experienced before.
-
-#### 21 November 2023 - New feature - Remote access using DataMiner Cube [ID 37841]
-
-It is now possible to connect to a DataMiner System via remote access using DataMiner Cube. If remote access is enabled for a DMS and you have been granted access to dataminer.services features, you can access the DMS remotely via Cube using the same URL as for remote access to the web pages, but without the protocol prefix `https://`. A button is also available on dataminer.services and in the Admin app that can be used to open Cube with the correct remote access filled in as the host.
-
-> [!NOTE]
-> At present, there is still a limitation to this feature: if the DMS has SAML authentication configured, users will not be able to access the DMS remotely with Cube.
-
-#### 10 November 2023 - Fix - Grant admin consent linking button unresponsive
-
-Users were no longer able to grant admin consent for the Teams Chat Integration because the button was no longer functional. This issue has now been resolved.
-
-#### 10 November 2023 - Enhancement - Provide a custom username and password when deploying a DaaS system
-
-From now on, you will be able to provide your own username and password for your admin account when deploying a DaaS system.
-
-#### 9 November 2023 - Enhancement - Improved login system for sharing
-
-The live sharing feature, including the [Shares app](https://shares.dataminer.services), now has an improved login system. This should prevent login redirect loops that could be experienced before.
-
-#### 9 November 2023 - Enhancement - Improved login system for connection to the dataminer.services
-
-When a DMS is connected to dataminer.services, an improved login system will now be used. This should prevent login redirect loops that could be experienced before.
-
-#### 26 September 2023 - Fix - Remote Access automatic login now works with special characters in DataMiner account configuration [ID 37438]
-
-If your DataMiner account contained one or more special characters, for example in the full name field, and you used Remote Access (e.g. the Monitoring app via dataminer.services), it was not possible to log in. Now you can log in automatically with your linked DataMiner account.
-
-> [!NOTE]
-> If you log in manually, you will still encounter this issue: This will not work when you have one or more special characters configured in your DataMiner account. To resolve this, [link your DataMiner account to your dataminer.services account](https://aka.dataminer.services/account-linking). The automatic login will allow you to use Remote Access without requiring any further actions.
-
-#### 20 September 2023 - Enhancement - Admin app - Nodes page responsiveness improved [ID 37403]
-
-Performance has improved when node and DxM information is retrieved on the *Nodes* page of a DataMiner System in the Admin app.
-
-#### 22 August 2023 - Enhancement - Admin app - Audit Record Export (CSV) [ID 37164]
-
-In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Audit* page, allowing users to export audit records in a CSV file. Clicking *Export* in the top-left corner will initiate the export process. A pop-up window will appear, where you can choose the separator to be used in the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
-
-#### 3 July 2023 - Fix - Admin app - Organization user overview will display all DMSs of each user correctly [ID 36795]
-
-In the Admin app, when an organization user had more than one DMS, only the last DMS would be shown in the organization user overview and its details overlay. This issue has now been resolved.
-
-#### 16 June 2023 - Fix - Chat Integration with Microsoft Teams: Improved consistency for email inputs [ID 36643]
-
-Consistency for the Chat Integration email input has been improved.
-
-Previously, some features were using the email input as the actual email address of the user, and some were using it as the service principal name of the user. This was not an issue if both had the same value in the linked tenant. However, if the values differed, some features like "Create Team" and "Add Team Member or Owner" did not work unless the actual service principal name was given.
-
-This is now no longer the case. All email input for all Chat Integration features behaves the same as the email address set for the user in the tenant.
-
-#### 30 May 2023 - Enhancement - Catalog - Notification when deploying from the catalog [ID 36543]
-
-When you deploy something (e.g. a connector) from the catalog to a DMA, a notification will now indicate if the deployment has started properly. The notification also contains a link to the Admin page, where you can view the status of the deployment.
-
-#### 11 May 2023 - Enhancement - Easier sharing of deployment records [ID 36398]
-
-When you select a deployment record on the *Deployments* page of the Admin app, the URL of the app is now updated with a query parameter referencing the ID of the deployment. This allows you to share this URL with someone to immediately show them that deployment.
-
-#### 3 April 2023 - New feature - Chat Integration with Microsoft Teams now includes fetching teams and channels [ID 35983]
-
-The following Chat Integration features have been added:
-
-- Fetching all teams
-- Fetching all channels of a team, so you can send channel notifications in them
-
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
-
-To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
-
-After you have made sure that the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
-
-> [!NOTE]
-> To enable these additional features, you **must grant Skyline admin consent to your Microsoft tenant with certain permissions, even if you have already granted admin consent before.** See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
-
-#### 30 March 2023 - Fix - Sharing app: Confirmation pop-up window not visible [ID 36029]
-
-In the Sharing app, depending on the position of the scrollbar, it could occur that the confirmation pop-up window for the deletion of an incoming share was displayed outside the boundaries of the screen, so that it was not possible to confirm the deletion.
-
-#### 2 March 2023 - Integrate your DataMiner System with Microsoft Teams using DataMiner Automation [ID 35799]
-
-You can now easily integrate your DataMiner System with Microsoft Teams using DataMiner Automation.
-
-The following features are available:
-
-- Creating teams
-- Creating channels
-- Adding members or owners to your teams
-- Sending notifications in the created channels in the name of the DataMiner Teams bot
-- Creating a private chat between someone and the DataMiner Teams bot
-- Fetching a private chat between someone and the DataMiner Teams bot
-- Sending notifications in those private chats in the name of the DataMiner Teams bot
-
-In an Automation script, you can use [the DcpChatIntegrationHelper NuGet](https://www.nuget.org/packages/Skyline.DataMiner.DcpChatIntegrationHelper) to easily interact with Microsoft Teams.
-
-To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples).
-
-After you have made sure the [prerequisites](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#usage) are in place, you can deploy [the Chat Integration examples](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
-
-> [!NOTE]
-> You must grant Skyline admin consent to your Microsoft tenant with certain permissions to enable these features. See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
-
-#### 9 February 2023 - Fix - Remote access actions incorrectly blocked [ID 35594]
-
-In some cases, it could occur that requests were incorrectly blocked as unsafe when you used the remote access feature. For example, this could occur when you clicked the Home button in the top-left corner of a web app.
-
-#### 13 January 2023 - Enhancement - Auditing of protocol and script deployments [ID 35392]
-
-The *Audit* page of the Admin app will now also contain records for protocol and script deployments, while previously it only showed records for DxM artifact deployments.
-
-Deploying protocols can be done via the [DataMiner Catalog](https://catalog.dataminer.services/), deploying scripts can be done with a GitHub or GitLab CI/CD pipeline, and deploying DxMs can be done with the Admin app.
-
-#### 10 January 2023 - Enhancement - Audit log whenever Skyline's Support team uses Remote Log Collection [ID 35165]
-
-Every time Skyline's Support Team uses the Remote Log Collection feature on a DataMiner Agent, an audit log will now be created on dataminer.services. You can view these logs on the *Audit* page of the [Admin app](https://admin.dataminer.services).
-
-#### 8 December 2022 - Enhancement - New endpoints for dataminer.services connection and sharing [ID 35127]
-
-For connection and share management, new endpoints will now be used instead of the `https://admin.dataminer.services/*` endpoint:
-
-- Connecting a DMS to dataminer.services will use the endpoint `https://connection.dataminer.services/*`.
-- Creating and managing shares will use the endpoint `https://sharing.dataminer.services/*`.
-
-#### 8 December 2022 - Enhancement - MSAL 2.0 implementation [ID 35126]
-
-A new version of MSAL has been implemented. This will result in faster and more stable authentication, which will also be updated more frequently.
-
-In addition, when the Admin app is authenticating, it will now display a loading icon.
-
-#### 6 December 2022 - Enhancement - Improved audit events for dashboard shares [ID 35087]
-
-When shares are created, accessed, updated, or deleted, the audit events on the Audit page of the Admin app will now include the name of the shared dashboard and a link to the dashboard. To navigate to the dashboard, users will need to have access to the dashboard.
-
-#### 6 December 2022 - Enhancement - Audit events for DMS and organization user CUD actions [ID 35086]
-
-When DMS or organization users are created, updated, or deleted, audit events will now be added on the Audit page of the Admin app.
-
-#### 18 October 2022 - Enhancement - Notification in case deployment fails because account is not linked [ID 34699]
-
-When a deployment fails because the user does not have a linked account, they will now get a notification that will allow them to correct the situation and retry.
-
-#### 18 October 2022 - Enhancement - Admin app supports additional audit events [ID 34697]
-
-The Admin app now also includes the following audit events on the *Audit* page:
-
-- A user created a dashboard share.
-- A user performed an updated to an existing share.
-- A user deleted an existing share.
-
-Up to now, only accessing a share was logged in the audit events.
-
-#### 27 September 2022 - New feature - DataMiner Teams bot support for custom commands [ID 34518]
-
-If CoreGateway version 2.11.0 or higher and FieldControl version 2.8.1 or higher are installed (included in Cloud Pack version 2.8.2), the DataMiner Teams bot now allows you to display and run custom commands with dynamic user input configured in a DataMiner System connected to dataminer.services.
-
-You can do so using the Teams bot commands *show command \<command name\>*, *show command*, and *run command \<command name\>*.
-
-To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
-
-The commands allow dynamic input, such as dummies, parameters, parameters with value files, and memory files. They support the following output: key values, adaptive card body elements, and JSON.
-
-A command will only be visible for users of the bot if they have the appropriate rights in DataMiner Cube. If users have the necessary rights to view a command, but they do not have the rights needed for certain input for the command, the bot will inform them that the command cannot be executed.
-
-The following limitations also apply:
-
-- Interactive Automation scripts are not supported.
-- Commands that run longer than 30 seconds are currently not supported.
-- Issues with the adaptive card output will not result in proper error feedback.
-
-For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
-
-#### 19 September 2022 - Enhancement - Improvements on Audit page in Admin app [ID 34457]
-
-A number of improvements have been implemented on the *Audit* page in the Admin app:
-
-- You can now filter on subject name and initiator.
-- A search box is now available for each filter so you can quickly search for a specific item to filter on.
-- Some filters allow you to manually specify custom values. For example, for the *Initiator* filter, which is automatically populated with the organization users, you can manually specify a user that has been deleted.
-- The column order has been adjusted.
-- Automatic loading of audit records has been improved to prevent possible issues with different screen sizes.
-
-#### 1 September 2022 - Enhancement - Filter functionality for Audit log in Admin app [ID 34322]
-
-The Audit log in the Admin app now allows filtering on operation type, subject type, DataMiner System name, and time span. In addition, the loading of records has been optimized.
-
-#### 18 August 2022 - New feature - Audit and license information added in Admin app [ID 34216]
-
-In the Admin app, the license expiration date for an organization is now displayed on that organization's *Overview* page.
-
-In addition, a new *Audit* page is available in the app, which contains auditing logs for sharing dashboards and dataminer.services keys.
-
-#### 17 June 2022 - Enhancement - Admin app opens to Overview page [ID 33772]
-
-When you open the Admin app, it will now immediately show the *Overview* page of the selected organization. Previously, it showed a page that only contained "Home".
-
-#### 17 June 2022 - Enhancement - Admin icon available for all users [ID 33770]
-
-The icon to access the Admin app is now available for all users on the `dataminer.services` home page. Previously, this was only available for admins and owners.
-
-#### 10 June 2022 10 - New feature - New 'Outgoing Shares' page in Admin app [ID 33723]
-
-In the Admin app, a new *Outgoing Shares* page is now available for each DataMiner System connected to dataminer.services. This page lists all items that have been shared via dataminer.services from the selected DMS.
-
-When you click a shared item in the overview, more detailed information will be displayed, including the time when it was shared and when the share will expire.
-
-#### 10 June 2022 10 - Enhancement - Pages in Admin app sidebar not shown for users without required permissions [ID 33708]
-
-If you do not have the required permissions to use a specific page for a DMS in the Admin app, this page will no longer be shown when you select a DMS in the sidebar of the app.
-
-#### 10 June 2022 10 - New feature - New 'Deployments' page in Admin app [ID 33707] [ID 33709] [ID 33724]
-
-In the Admin app, a new *Deployments* page is now available for each DataMiner System connected to dataminer.services. This page provides information about all the deployments that have been done to the DataMiner System via the Nodes page, via the Catalog, or using a GitHub pipeline with our GitHub action. It details what has been deployed, when and by whom, and whether the deployment succeeded, is pending, or failed.
-
-When you click a deployment in the overview, more detailed information will be displayed, including version information and event information that can be used for debugging. For example, in case a pending deployment is queued because of other deployments, you will be able to see this in the event information.
-
-#### 3 June 2022 - New feature - dataminer.services keys [ID 33606]
-
-You can now use dataminer.services keys. At present, these can be used with the [GitHub action to deploy Automation scripts](https://github.com/marketplace/actions/skyline-dataminer-deploy-action) to a DMS connected to dataminer.services. However, more functionality requiring a dataminer.services key is expected to be implemented in the future.
-
-In the Admin app, you can manage the dataminer.services keys on the *Keys* page for each DataMiner System connected to dataminer.services. Each set of keys consists of a (user-defined) label, a primary key, and a secondary key. Inline buttons are available that allow you to view or copy a key. Simply clicking a key entry in the list will open a side panel with detailed information, including when the keys were created and by whom.
-
-For each set of keys, the *...* button on the right opens a menu where you can regenerate the primary key, regenerate the secondary key, or revoke (i.e. delete) the key. With the *New Key* option at the top of the page, you can add more keys.
-
-#### 3 June 2022 - New feature - Admin app sidebar redesigned [ID 33599]
-
-The layout of the Admin app has been improved. The blue icon bar on the left has been removed and the sidebar has been redesigned into two sections: *Organization* and *DataMiner Systems*. In the *DataMiner Systems* section, you can expand and collapse each connected DMS to view the available pages for that DMS.
-
-#### 19 May 2022 - Fix - Notification when removing user showed placeholder [ID 33383]
-
-When a user was removed in the Admin app, the displayed notification contained a placeholder instead of the relevant email address.
-
-#### 6 May 2022 - New feature - DataMiner Teams bot v1.2 [ID 33422]
-
-A new version of the DataMiner Teams bot is now available. If you use the command *show view [View name]* with this new version, the DataMiner Teams bot will display the visual overview of the specified view, as well as the alarm status and the number of active alarms. With the buttons in the response, you can request the alarms of the view or open the view in the Monitoring app via remote access.
-
-In addition, all links to documentation in the app have been adjusted to link to <https://docs.dataminer.services/>.
-
-#### 2 May 2022 - Fix - Not possible to delete share without users [ID 33366]
-
-If a share was not valid because all users had removed themselves from it, it could occur that it was not possible to delete that share. This issue has now been resolved.
-
-#### 14 Apr. 2022 - New feature - Managing nodes connected to dataminer.services [ID 33081] [ID 33127]
-
-In the Admin app, you can now manage the nodes of DataMiner Systems that are connected to dataminer.services. You can upgrade the installed DxM versions on the nodes and remove nodes that have become obsolete. In case a node has a higher DxM version installed than the current version, it is also possible to downgrade that node.
-
-Note that DataMiner Cloud Pack version 2.5.0 or higher must be installed on the nodes, as otherwise they will not be listed in the Admin app.
-
-> [!IMPORTANT]
-> If you are using an IP-based firewall, from now on you will need to add `20.31.240.20` to the allowed IP addresses to be able to connect to dataminer.services.
-
-#### 5 Apr. 2022 - New feature - Admin app no longer shown by default on home page [ID 33090]
-
-The Admin app will now only be shown on the dataminer.services home page for users who are the owner/admin of an organization and/or of a DataMiner System.
-
-#### 5 Apr. 2022 - New feature - Non-dataminer.services users now notified about needing to connect to dataminer.services [ID 33089]
-
-When a user of a DMS that is not yet connected to dataminer.services goes to <https://dataminer.services/>, they will now be informed that they are not yet connected, and a link will be provided to more information about dataminer.services.
-
-#### 28 Feb. 2022 - New feature - dataminer.services connection verification [ID 32741]
-
-In the Admin app, on the *Organization > Manage* page, users can now click a button to send an email to Skyline to have their dataminer.services connection verified. This verification ensures access to the latest dataminer.services features, including the ability to install protocols directly from the dataminer.services catalog.
-
-When the verification has been successful, this will be indicated on this same page.
-
-#### 23 Feb. 2022 - New feature - Removing a share [ID 32695]
-
-In the *Sharing* module, you can now remove a share. When you do so, you indicate that you no longer wish to have access to the shared item. The item will no longer be available to you, unless it is shared with you again.
-
-#### 12 Jan. 2022 - New feature - Support for app package deployment [ID 32210]
-
-Support has been added for the deployment of app packages to a specific DMS connected to dataminer.services. However, note that the UI to deploy app packages is not yet available at this point.

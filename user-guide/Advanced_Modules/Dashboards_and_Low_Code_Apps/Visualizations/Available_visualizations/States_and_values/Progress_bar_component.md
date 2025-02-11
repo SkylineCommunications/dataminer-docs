@@ -10,24 +10,24 @@ This component shows the value of one or more analog parameters with a progress 
 
 To configure the component:
 
-1. Apply a parameter data feed. See [Applying a data feed](xref:Apply_Data_Feed).
+1. Apply parameter data. See [Adding data to a component](xref:Adding_data_to_component).
 
-   - Column parameter feeds are supported.
+   - Column parameter data is supported.
 
      > [!NOTE]
-     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter feed](xref:DashboardParameterFeed) and link this to the state component.
+     > If no filter is specified, the number of parameter rows that can be displayed by this component is limited to 100. To display more rows or filter out specific rows, you can use a [Parameter picker](xref:DashboardParameterPicker) and link this to the state component.
 
-   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
+   - In case parameter data included a parameter based on a protocol, a filter can be used to filter on a specific element.
 
 1. Optionally, customize the following component options:
 
    - To customize the polling interval for this component, expand the *Settings* \> *WebSocket settings* section, clear the checkbox in this section, and specify the custom polling interval.
 
-   - In case the component displays more than one item, in the *Settings* tab, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all the above together.
+   - In case the component displays more than one item, in the *Settings* pane, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all the above together.
 
-   - To customize the value range of the component, in the *Settings* tab, select *Fixed minimum* and/or *Fixed maximum* and specify the custom minimum and/or maximum.
+   - To customize the value range of the component, in the *Settings* pane, select *Fixed minimum* and/or *Fixed maximum* and specify the custom minimum and/or maximum.
 
-1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 

@@ -35,7 +35,7 @@ Contains one of the following values:
 
 ### analog
 
-The numeric value of the parameter will be displayed in accordance to the “graphic presentation” settings on the user interface:
+The numeric value of the parameter will be displayed in accordance to the "graphic presentation" settings on the user interface:
 
 - LED bar
 - Color tube
@@ -47,17 +47,17 @@ In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag c
 See also:
 
 - [Analog](xref:UIComponentsAnalog)
-- [Options for measurement type “analog”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-analog)
+- [Options for measurement type "analog"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-analog)
 
 ### button
 
 Only applicable for parameters of type "write".
 
-When type is “button”, the parameter will be visualized as a button that, when clicked, will cause an action to be performed.
+When type is "button", the parameter will be visualized as a button that, when clicked, will cause an action to be performed.
 
 In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag has to be used to define the label of the button (Discreet/Display) and the value to be set (Discreet/Value). Multiple discrete entries can be defined to show multiple buttons.
 
-From DataMiner version 7.5 onwards, a button can be used in a column. When you define multiple discreets, multiple buttons will be added in the same column. The same options as in a single button discreet can be used.
+A button can also be used in a column. When you define multiple discreets, multiple buttons will be added in the same column. The same options as in a single button discreet can be used.
 
 Example:
 
@@ -90,9 +90,9 @@ Obsolete. Was used to interpret an analog signal as a digital signal by assignin
 
 Can be used to map discrete parameter values to a more meaningful display text.
 
-In case of a parameter of type “read”, this measurement type allows you to display a user-defined string when the parameter contains a certain value.
+In case of a parameter of type "read", this measurement type allows you to display a user-defined string when the parameter contains a certain value.
 
-In case of a parameter of type “write”, this measurement type allows you to display a drop-down box with predefined strings masking underlying values. In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag has to be used to define the various discreet values.
+In case of a parameter of type "write", this measurement type allows you to display a drop-down box with predefined strings masking underlying values. In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag has to be used to define the various discreet values.
 
 For example:
 
@@ -114,17 +114,17 @@ For example:
 
 See also:
 
-- [Options for measurement type “discreet”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-discreet)
+- [Options for measurement type "discreet"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-discreet)
 - [Drop-down list](xref:UIComponentsDropDownList)
 - [Protocol.Params.Param.Measurement.Discreets](xref:Protocol.Params.Param.Measurement.Discreets)
 
 ### matrix
 
-Used for visualizing a matrix. Only applicable for parameters of type “array” or “write”.
+Used for visualizing a matrix. Only applicable for parameters of type "array" or "write".
 
 See also:
 
-- [Options for measurement type “matrix”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-matrix)
+- [Options for measurement type "matrix"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-matrix)
 - [Matrix](xref:UIComponentsMatrix)
 
 ### number
@@ -133,17 +133,17 @@ The parameter will be displayed as a number.
 
 See also:
 
-- [Options for measurement type “number”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-number)
+- [Options for measurement type "number"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-number)
 
 ### pagebutton
 
 Only applicable for parameters of type "write".
 
-When measurement type is “pagebutton”, the parameter will be visualized as a button giving access to a popup page.
+When measurement type is "pagebutton", the parameter will be visualized as a button giving access to a popup page.
 
 In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag has to be used to define the label of the button. Multiple Protocol.Params.Param.Measurement.Discreets.Discreet tags can be specified to allow the parameter to have multiple page buttons, meaning to allow multiple page buttons on the same row and column.
 
-Labels of page buttons must end with ”...”. So, inside a Protocol.Params.Param. Measurement.Discreets.Discreet tag, the Protocol.Params.Param.Measurement.Discreets.Discreet.Display tag must contain a button label ending with ”...”.
+Labels of page buttons must end with "...". So, inside a Protocol.Params.Param. Measurement.Discreets.Discreet tag, the Protocol.Params.Param.Measurement.Discreets.Discreet.Display tag must contain a button label ending with "...".
 
 See also:
 
@@ -176,15 +176,15 @@ Example:
 
 See also:
 
-- [Options for measurement type “string”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string)
+- [Options for measurement type "string"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string)
 
 ### table
 
-Only applicable to parameters of type “array”, which will, in this case, be displayed as a table.
+Only applicable to parameters of type "array", which will, in this case, be displayed as a table.
 
 See also
 
-- [Options for measurement type “table”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-table)
+- [Options for measurement type "table"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-table)
 
 ### title
 
@@ -200,17 +200,16 @@ Example:
 >
 > - Protocol.Params.Param.Measurement.Discreets cannot be used in combination with this type.
 > - The measurement type "title" is only used with parameters of type "read".
-> - To include support for the legacy System Display application, add the “connect” option (`options="end;connect"`).
 
 See also:
 
-- [Options for measurement type “title”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-title)
+- [Options for measurement type "title"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-title)
 - [Title](xref:UIComponentsTitle)
 - [Group box](xref:UIComponentsGroupBox)
 
 ### togglebutton
 
-When a parameter of type “write” includes only two discreet values, it can be represented by a toggle button. When the “read” parameter associated with the “write” parameter contains the first discreet value, the second discreet value will be used in the set command when the toggle button is clicked.
+When a parameter of type "write" includes only two discreet values, it can be represented by a toggle button. When the "read" parameter associated with the "write" parameter contains the first discreet value, the second discreet value will be used in the set command when the toggle button is clicked.
 
 See also:
 

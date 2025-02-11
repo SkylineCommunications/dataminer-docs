@@ -62,7 +62,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | OFDM | Orthogonal Frequency Division Multiplexing. Method of digital signal modulation that splits a single data stream across different narrowband channels at different frequencies to reduce interference and crosstalk. |
 | OFDMA | Orthogonal Frequency Division Multiple Access. Multi-user extension of the OFDM architecture. |
 | Offline impact | Indication of whether a parameter will have an impact during the offline window of an SLA.<br>See [Creating an information template](xref:Creating_an_information_template). |
-| Offload database | Dedicated MySQL, MSSQL or Oracle database for a DataMiner System, to which information is offloaded from the local DMA databases. Previously also called central database.<br>See [Offload database](xref:Offload_database). |
+| Offload database | Dedicated MySQL, MSSQL, or Oracle database for a DataMiner System, to which information is offloaded from the DataMiner System. Previously also called central database.<br>See [Offloading data](xref:Offload_database). |
 | OID | Object Identifier. Value uniquely identifying a managed object in a MIB hierarchy. |
 | OLT | Optical Line Termination. Device that serves as the service provider endpoint of a passive optical network. |
 | ONT | Optical Network Terminal. Device used to terminate a fiber-optic line, demultiplex the signal into its component parts and provide power to customer telephones. Also known as ONU (Optical Network Unit). |
@@ -107,7 +107,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Protocol package | Package containing all files necessary to install a particular DataMiner protocol on an existing DataMiner System. |
 | PSK | Phase-Shift Keying. Digital modulation process that conveys data by changing the phase of a transmitted signal. |
 | PTP | Precision Time Protocol. Protocol used to synchronize clocks throughout a network.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
-| Pulse | DataMiner Cube homepage, displayed when no cards are open in the workspace.<br>See [DataMiner Pulse](xref:Working_with_cards_in_DataMiner_Cube#dataminer-pulse). |
+| Pulse | DataMiner Cube home page, displayed when no cards are open in the workspace.<br>See [DataMiner Pulse](xref:Working_with_cards_in_DataMiner_Cube#dataminer-pulse). |
 
 ## Q
 
@@ -291,6 +291,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | UHF | Ultra High Frequency. Refers to radio frequencies between 300 MHz and 3 GHz. |
 | UI | User Interface. |
 | Unmanaged inventory | In the context of DataMiner IDP, this represents the elements in a DMS that are not yet managed by IDP. Also known as "pending inventory".<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
+| UOSA | [Support application](xref:User_operations_support) (formerly known as User Operations Support Application). |
 | Update Center | Application in DataMiner Cube that allows you to check for DataMiner protocol and software updates and download these.<br>See [Upgrading a DataMiner Agent in the Update Center](xref:Upgrading_a_DataMiner_Agent_in_the_Update_Center). |
 | Update package | Package containing minor updates for an existing DataMiner release. |
 | Upgrade package | DataMiner package containing all files necessary to upgrade a DMA to a new version of the DataMiner software. |

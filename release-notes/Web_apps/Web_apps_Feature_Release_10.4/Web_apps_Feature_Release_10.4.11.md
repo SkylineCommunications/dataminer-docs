@@ -2,19 +2,34 @@
 uid: Web_apps_Feature_Release_10.4.11
 ---
 
-# DataMiner web apps Feature Release 10.4.11 – Preview
+# DataMiner web apps Feature Release 10.4.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.11](xref:General_Feature_Release_10.4.11).
-
-## Highlights
-
-*No highlights have been selected yet.*
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.11](xref:General_Feature_Release_10.4.11).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.4.11](xref:Cube_Feature_Release_10.4.11).
 
 ## New features
+
+#### Web API: New methods capable of dealing with new alarm IDs [ID 40240]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+On a DataMiner System with Swarming enabled (from DataMiner 10.6.0/10.5.1 onwards), the following new methods will have to be used instead of their existing counterpart:
+
+|New method | Existing counterpart |
+|---|---|
+| AddCommentToAlarmV2 | AddCommentToAlarm |
+| GetAlarmDetailsV2   | GetAlarmDetails   |
+| GetAlarmHistoryV2   | GetAlarmHistory   |
+| GetCurrentAlarmByRootIDV3 | GetCurrentAlarmByRootIDV2 |
+| MaskAlarmV2               | MaskAlarm |
+| ReleaseOwnershipAlarmV2 | ReleaseOwnershipAlarm |
+| TakeOwnershipAlarmV2    | TakeOwnershipAlarm    |
+| UnmaskAlarmV2           | UnmaskAlarm           |
 
 #### Low-Code Apps - Time range component: New 'Set value' action [ID 40569]
 
@@ -35,6 +50,12 @@ The *Security* selection box offers the following preset options:
 - Public, anyone can edit (default option)
 - Protected, only you can edit
 - Private, only you have access
+
+#### Dashboards/Low-Code Apps - Table component: Applying a filter by feeding a string to the component [ID 40793]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+It is now possible to apply a filter to a Table component by feeding it a string. That string will then automatically be entered into the component's search box.
 
 ## Changes
 
@@ -93,6 +114,18 @@ From now on, the *Preserve feed selections* option will only be visible when you
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 From now on, the queries configured to fetch items to be displayed on a particular *Timeline* component will no longer be allowed to fetch more than 100,000 items in total. When this limit has been reached, a message will be displayed at the bottom of the component.
+
+#### Dashboards/Low-Code Apps - Table component: New setting to show or hide the table filter [ID 40818]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In the *Layout* tab of a *Table* component, it is now possible to indicate whether the table filter should be visible or not.
+
+#### Low-Code Apps: Enhanced performance when creating a new draft of an existing low-code application [ID 40866]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Because of a number of enhancements, overall performance has increased when creating a new draft of an existing low-code application.
 
 ### Fixes
 
@@ -226,3 +259,69 @@ When a default timezone had been set in the *C:\\Skyline DataMiner\\Users\\Clien
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
 When you changed the name of several dashboard folders in rapid succession, in some cases, the Dashboards app could stop working.
+
+#### Dashboards app: Users without permission to edit dashboard folders would incorrectly be able to create or import a dashboard [ID 40778]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you did not have permission to edit the dashboards root folder or any other dashboard folder, up to now, you would incorrectly have permission to create or import a dashboard. However, you would get an error and the web API would deny your request.
+
+From now on, when you do not have permission to edit the dashboards root folder or any other dashboard folder, you will no longer be able to create or import a dashboard.
+
+#### Dashboards app: Problems when attaching CSV files to email reports [ID 40813]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+A number of problems could occur when attaching CSV files to email reports:
+
+- When a CSV file was larger than 10 Mb, the generation of that file could get stuck. As this would cause the file to remain locked, it was not possible to attach it to the email message.
+- When you toggled the *Include CSV* option in the report preview, the data would incorrectly already be fetched. From now on, the data will only be fetched when you click *Send*.
+- When multiple components were spread over different pages of the PDF file, only the components on the last page of the PDF file would have their CSV file attached. From now on, all CSV files will get attached correctly.
+
+#### Dashboards app: Alarm table components in a report could be empty due to a caching problem [ID 40819]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+Due to a caching problem, when a report with *Alarm table* components was generated, in some cases, those components could be empty although alarms were present on the system.
+
+#### Dashboards/Low-Code Apps - Timeline component: Events of updated items would not be processed correctly when a custom timezone was configured [ID 40827]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a custom timezone was configured, up to now, a *Timeline* component with the *Update data* option enabled would not correctly process the events of items that had been updated.
+
+#### Dashboards app: Problem when importing a dashboard into a dashboard subfolder [ID 40828]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When you imported a dashboard into a dashboard subfolder, the Dashboards app would navigate to an incorrect URL, causing an error to occur.
+
+#### Dashboards/Low-Code Apps: Problem when a large amount of feed data was requested at the same time [ID 40835]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a large amount of feed data was requested at the same time (e.g. when you clicked Ctrl+A in a node edge graph component), in some cases, the Dashboards app could slow down and eventually stop working.
+
+#### Low-Code Apps - GQI: Problem with persistent client subscriptions [ID 40852]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a client closed a GQI session, in some cases, the associated subscription would not get terminated. This would eventually lead to an excessive amount of obsolete subscriptions being left on the system, causing it to slow down.
+
+#### Low-Code Apps: Components could incorrectly trigger updates in components to which they were not linked [ID 40875]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+In some cases, components could incorrectly trigger updates in other components, even though they were not linked.
+
+#### Dashboards/Low-Code Apps - Timeline component: Highlighting issue when zooming [ID 40890]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
+
+When a query filter is applied in a *Timeline* component, by default, all items that are not part of the query result are shown in a lighter color. However, up to now, when zooming in or out, all items would incorrectly have the same color, whether they were part of the query result or not.
+
+#### Low-Code Apps: Grid component that was fed with data would not create any grid items [ID 40957]
+
+<!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 [CU0] -->
+
+When you opened a panel containing a Grid component that was fed with data, in some cases, that component would not create any grid items.

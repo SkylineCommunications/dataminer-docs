@@ -8,7 +8,9 @@ uid: Web_apps_Feature_Release_10.4.9
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.9](xref:General_Feature_Release_10.4.9).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.9](xref:General_Feature_Release_10.4.9).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.4.9](xref:Cube_Feature_Release_10.4.9).
 
 ## New features
 
@@ -51,11 +53,11 @@ If the component does not have this option enabled, the value will only be passe
 
 Because of a number of enhancements, from now on, all components that retrieve element/protocol parameters will do so more efficiently.
 
-#### Dashboards app & Low-Code Apps: Several components now support zooming in/out using CTRL+Scroll [ID 40017]
+#### Dashboards app & Low-Code Apps: Several components now support zooming in/out using Ctrl+Scroll [ID 40017]
 
 <!-- MR 10.3.0 [CU18] / 10.4.0 [CU6] - FR 10.4.9 -->
 
-From now on, you will be able to zoom in and out using CTRL+Scroll on the following components:
+From now on, you will be able to zoom in and out using Ctrl+Scroll on the following components:
 
 - Line & area chart
 

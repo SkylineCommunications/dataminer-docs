@@ -116,7 +116,7 @@ There is also a button available that can be used to migrate booking data to the
 
 When you open a new alarm tab page in the Alarm Console while connected to a DataMiner Agent that has indexing enabled on alarms, a search box at the top of that alarm tab page will now allow you to search for particular alarms or information events.
 
-You can also right-click text in the Alarm Console while holding the left CTRL key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select *Search for \<text> in new tab*. This will open a new tab with the text in question filled in in the search box.
+You can also right-click text in the Alarm Console while holding the left Ctrl key (or a different key depending on the *Mouse word highlighting in Alarm Console* user setting), and select *Search for \<text> in new tab*. This will open a new tab with the text in question filled in in the search box.
 
 Next to the search box, you can select a timespan (default: last 24 hours). When you start typing in the search box, the most relevant suggestions that are returned by the server will be displayed below. If a suggestion is too large to be displayed completely, you will be able to view it completely by hovering the mouse over it. However, if it consists of multiple lines, only the first line will be displayed.
 
@@ -771,13 +771,13 @@ The DataMiner HTML5 app has now been replaced by the new Monitoring & Control ap
 
 - Redesigned header bar:
 
-  - The app title “Monitoring & Control” is now a button that redirects the user to the app’s homepage.
+  - The app title “Monitoring & Control” is now a button that redirects the user to the app’s home page.
   - Like in Cube X, the Search box has now been moved from the side panel to the middle of the header bar.
   - On the right, there is now one single user icon, which, when clicked, opens a menu that allows users to access to the settings window and the About box.
 
     Currently, the settings window allows you to specify the default pages for element and view cards.
 
-- A new homepage similar to the Cube X homepage, listing recently used items.
+- A new home page similar to the Cube X home page, listing recently used items.
 - Redesigned (collapsible) side panel, on which alarm states are now indicated by colored circles.
 - Redesigned element, service, view and alarm cards, which can be accessed directly using the following URLs:
 

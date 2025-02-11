@@ -13,4 +13,4 @@ From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36789 -->, this data source support
 > [!NOTE]
 >
 > - Real-time updates are not yet supported for views that are deleted. This means that rows for deleted views will not be removed automatically until the query is executed again.
-> - There is no metadata yet for views added through real-time updates, so you will not be able to use those as a view feed.
+> - There is no metadata yet for views added through real-time updates, so you will not be able to use those as view data.

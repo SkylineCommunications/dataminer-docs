@@ -1,5 +1,6 @@
 ---
 uid: Cassandra_Cluster_Migrator
+keywords: local database
 ---
 
 # Cassandra Cluster Migrator

@@ -261,10 +261,9 @@ uid: ErrorCodeTable
 |SL_FAILOVER_NOT_CONFIGURED|0x8004030D|Failover has not been configured|
 |SL_ELEMENT_STARTING|0x8004030E|Element is starting up.|
 |SL_CERTIFICATE_FAILURE|0x8004030F|The SSL certificate on the server cannot be trusted. It might have expired or is not valid for the given hostname.|
-|SL_MG_INVALID_IP|0x80040310|The given IP address can not be used as Mobile Gateway. For a Failover Agent, please use the virtual IP address.|
+|SL_MG_INVALID_IP|0x80040310|The given IP address cannot be used as Mobile Gateway. For a Failover Agent, please use the virtual IP address.|
 |SL_UPGRADE_IN_PROGRESS|0x80040311|A software upgrade is currently in progress.|
-|SL_UNKNOWN_DESTINATION|0x80040312|Unknown destination DataMiner specified.
-   From DataMiner 10.0.8 (RN 25976) onwards, the corresponding message is "Unable to find hosting agent. The agent might still be starting up"|
+|SL_UNKNOWN_DESTINATION|0x80040312|Unknown destination DataMiner specified. In recent DataMiner versions, the corresponding message is "Unable to find hosting agent. The agent might still be starting up."<!-- RN 25976 -->|
 |SL_PROTOCOL_NOT_LICENSED|0x80040313|This protocol is not licensed.|
 |SL_AUTOMATION_DETACHED|0x80040314|User interaction was aborted by client.|
 |SL_PROTOCOL_CHILD_IN_USE|0x80040315|Child protocol is used by another parent protocol.|

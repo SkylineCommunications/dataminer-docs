@@ -29,13 +29,15 @@ int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, e
 ## Remarks
 
 - Instead of providing elementDetails (object[), it is also possible to only specify the element name:
+
   ```csharp
   string elementName = "CISCO Meraki Main";
   string elementSettings = "…";
 
   int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, elementName, elementSettings);
   ```
-- Before DVE functionality existed, elements were created from within a QAction using different protocols. To create an element, you can pass several element options to the NotifyDataMinerQueued type 160 method call as a pipe-separated  ('|') string. The following table contains an overview of the different settings that can be provided along with the position in the string.
+
+- Before DVE functionality existed, elements were created from within a QAction using different protocols. To create an element, you can pass several element options to the NotifyDataMinerQueued type 160 method call as a pipe-separated (`|`) string. The following table contains an overview of the different settings that can be provided along with the position in the string.
 
     |Position|Description|
     |--- |--- |
@@ -49,9 +51,9 @@ int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, e
     |7|Port type*: None, IP, UDP or Serial|
     |8|Port number*|
     |9|Port baud rate*|
-    |10|Port parity* (In case of an SNMPv3 connection, this field denotes the authentication algorithm e.g. "HMAC-SHA".)|
+    |10|Port parity* (In case of an SNMPv3 connection, this field denotes the authentication algorithm, e.g. "HMAC-SHA".)|
     |11|Port data bits* (In case of an SNMPv3 connection, this field denotes the user name.)|
-    |12|Port stop bits* (In case of an SNMPv3 connection, this field denotes whether authentication and privacy is enabled e..g. "authPriv".)|
+    |12|Port stop bits* (In case of an SNMPv3 connection, this field denotes whether authentication and privacy is enabled, e.g. "authPriv".)|
     |13|Port flow control* (In case of an SNMPv3 connection, this field denotes the privacy algorithm.)|
     |14|Port bus*|
     |15|Retries*|
@@ -93,7 +95,7 @@ int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, e
     |51|Protocol type*, **|
     |52|Library credential*|
 
-  \*:  Indicates a connection setting field. When an element is created from a protocol that has multiple connections defined, these fields contain multiple values separated by tabs (“\t”).
+  \*:  Indicates a connection setting field. When an element is created from a protocol that has multiple connections defined, these fields contain multiple values separated by tabs ("\t").
 
   \*\*: Protocol types:
   - 1: SNMP
@@ -111,7 +113,7 @@ int result = (int) protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, e
   - 13: Smart-serial single
   - 16: WebSocket
 
-  E.g. creating an element with 2 HTTP connections will require a protocol type field value of "10\t10".
+  E.g. creating an element with two HTTP connections will require a protocol type field value of "10\t10".
 
   The following example creates an element running an SNMPv3 protocol:
 

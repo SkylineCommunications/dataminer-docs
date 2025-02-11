@@ -65,8 +65,15 @@ items:
     topicUid: Looking_up_an_item_in_the_catalog
   - name: Registering a Catalog item
     topicUid: Register_Catalog_Item
+    items:
+    - name: Best practices when documenting Catalog items
+      topicUid: Best_Practices_When_Documenting_Catalog_Items
+  - name: Changing the publishing state of a Catalog item
+    topicUid: Change_Catalog_Publishing_State
   - name: Deploying a Catalog item
     topicUid: Deploying_a_catalog_item
+  - name: Downloading a Catalog item with the API
+    topicUid: Downloading_a_catalog_item
   - name: Tutorials
     items:
     - name: Registering a new connector in the Catalog
@@ -158,4 +165,3 @@ items:
     topicUid: Disconnecting_from_dataminer.services
   - name: Enabling kernel response buffering for DataMiner APIGateway
     topicUid: Enabling_kernel_response_buffering
-

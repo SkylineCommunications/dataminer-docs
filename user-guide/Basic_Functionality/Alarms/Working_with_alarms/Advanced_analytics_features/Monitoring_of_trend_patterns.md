@@ -4,7 +4,7 @@ uid: Monitoring_of_trend_patterns
 
 # Monitoring of trend patterns
 
-From DataMiner 10.0.7 onwards, DataMiner can recognize patterns in trend graphs. From DataMiner 10.0.13 onwards, you can also activate alarm monitoring of trend patterns, so that a "suggestion event" type alarm is triggered whenever a specific pattern is detected (see [Suggestion events](xref:Proactive_cap_detection#suggestion-events)).
+You can activate alarm monitoring of the patterns DataMiner detects in trend graphs, so that a "suggestion event" type alarm is triggered whenever a specific pattern is detected (see [Suggestion events](xref:Proactive_cap_detection#suggestion-events)).
 
 You can activate this type of monitoring by selecting a pattern in a trend graph, creating a tag for it, and activating the option *Continuously detect patterns in the background* (or *Generate an alarm when detected* in DataMiner versions prior to 10.3.6/10.4.0<!-- RN 36114 -->). For more detailed information on how to do this, see [Defining a pattern](xref:Defining_a_pattern).
 

@@ -26,12 +26,17 @@ protocol.NotifyProtocol(193/*NT_FILL_ARRAY*/ , tableID, tableContent);
 
 ## Remarks
 
-- Only the provided content will be present in the table after this call. In case the provided content should only be added to the table, use the NT_FILL_ARRAY_NO_DELETE call. See NT_FILL_ARRAY_NO_DELETE (194).
+- Only the provided content will be present in the table after this call. In case the provided content should only be added to the table, use the [NT_FILL_ARRAY_NO_DELETE (194)](xref:NT_FILL_ARRAY_NO_DELETE) call.
+
 - In case the column data contains null references, the corresponding cells will be cleared.
+
 - When NT_FILL_ARRAY is used, the column type must be set to "retrieved". In case other column types are present between the specified columns (e.g. columns of type "custom"), these other columns will be skipped.
+
 - The primary key should always be a string value. Even if it is an integer, you should still cast it to a string before calling FillArray.
+
 - The FillArray method cannot be used together with the "autoincrement" column option.
-- From DataMiner 8.0.9 onwards (RN7351), it is possible to set an additional flag indicating that some cells should be cleared (using protocol.Clear) or preserved (using protocol.Leave). To enable this, set the second entry of the tableInfo to true as indicated below:
+
+- To set an additional flag indicating that some cells should be cleared (using protocol.Clear) or preserved (using protocol.Leave), set the second entry of the tableInfo to true as indicated below:<!-- RN 7351 -->
 
   ```csharp
   object tableInfo = new object[] { 10, true }; // Setting the second entry to true enables the use of the protocol.Clear and protocol.Leave functionality.
@@ -45,7 +50,7 @@ protocol.NotifyProtocol(193/*NT_FILL_ARRAY*/ , tableID, tableContent);
   protocol.NotifyProtocol(193, tableInfo, tableData);
   ```
 
-- From DataMiner 9.6.6 onwards (RN 21482), it is possible to specify a datetime that will be applied to all values passed in the parameter set. To enable this, set the third entry of tableInfo as indicated below:
+- It is possible to specify a datetime that will be applied to all values passed in the parameter set. To enable this, set the third entry of tableInfo as indicated below:<!-- RN 21482 -->
 
   ```csharp
   object tableInfo = new object[] { 10, false, DateTime.Now };
@@ -59,7 +64,7 @@ protocol.NotifyProtocol(193/*NT_FILL_ARRAY*/ , tableID, tableContent);
   protocol.NotifyProtocol(193, tableInfo, tableData);
   ```
 
-- From DataMiner 9.6.13 onwards (RN 23815), a timestamp can be provided per cell to perform a history set on cell level. This is done by providing an object array containing the value and timestamp.
+- A timestamp can be provided per cell to perform a history set on cell level. This is done by providing an object array containing the value and timestamp.<!-- RN 23815 -->
 
   Note that not all cells require a timestamp. If no timestamp is specified, DateTime.Now will be used.
 
@@ -75,4 +80,4 @@ protocol.NotifyProtocol(193/*NT_FILL_ARRAY*/ , tableID, tableContent);
 
 ## See also
 
-- FillArray
+- [FillArray](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArray*)

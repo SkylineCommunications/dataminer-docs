@@ -19,5 +19,4 @@ For **TCP/IP** or **UDP/IP** connections, you can specify the following connecti
   > [!NOTE]
   >
   > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
-  > - This feature is supported from DataMiner 10.0.2 onwards for smart-serial elements acting as server. However, note that the system must be configured to support this encryption. See [Enabling TLS encryption](xref:Enabling_TLS_encryption).
-  > - From DataMiner 10.0.3 onwards, this feature is also supported in case DataMiner acts as the serial client. No further configuration is required in this case.
+  > - To use this feature for smart-serial elements acting as server, the system must be configured to support this encryption. See [Enabling TLS encryption](xref:Enabling_TLS_encryption).

@@ -180,6 +180,8 @@ items:
                     topicUid: Troubleshooting_Run_Time_Errors
               - name: Troubleshooting - apps
                 topicUid: Troubleshooting_Apps
+              - name: Troubleshooting - Visual Overview
+                topicUid: Troubleshooting_Visual_Overview
   - name: Troubleshooting procedures
     topicUid: Troubleshooting_procedures
     items:
@@ -207,14 +209,17 @@ items:
             topicUid: Elastic_not_starting_after_upgrade_cleanup
       - name: Troubleshooting - SLScripting
         items:
-          - name: Investigate exception occurrence on Finalizer thread
+          - name: Investigating exception occurrence on Finalizer thread
             topicUid: TroubleshootingSLScriptingFinalizerException
           - name: Investigating OutOfMemoryException occurrences
             topicUid: TroubleshootingSLScriptingOutOfMemoryException
-          - name: Investigate StackOverflowException occurrences
+          - name: Investigating StackOverflowException occurrences
             topicUid: TroubleshootingSLScriptingStackOverflowException
       - name: Troubleshooting – STaaS
-        topicUid: Troubleshooting_STaaS_Issues
+        topicUid: Troubleshooting_STaaS
+        items:
+          - name: STaaS error messages
+            topicUid: STaaS_Error_messages
       - name: Troubleshooting – web
         topicUid: Investigating_Web_Issues
       - name: Troubleshooting – Miscellaneous
@@ -232,8 +237,10 @@ items:
     items:
       - name: Current issues
         items:
-          - name: Problem when DMA server is named DATAMINER
-            topicUid: KI_Problem_when_server_name_is_DATAMINER
+          - name: SLProtocol crash when restarting elements used by enhanced services
+            topicUid: KI_SLProtocol_Crash_Enhanced_Services
+          - name: Sticky element alarm state caused by correlation rules
+            topicUid: KI_sticky_element_alarm_state_caused_by_correlation_rules
           - name: Inconsistent service impact of alarms after element is stopped and restarted
             topicUid: KI_Inconsistent_service_impact
           - name: Unable to perform a DataMiner upgrade via Update Center
@@ -262,6 +269,28 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Upgrade to DataMiner 10.5.1 or 10.5.2 is stuck
+            topicUid: KI_Upgrade_to_1051_stuck
+          - name: Reuploaded DVE protocol version is incorrectly set as production version
+            topicUid: KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version
+          - name: DataMiner incorrectly reports a Cassandra issue when another database fails
+            topicUid: KI_DataMiner_reports_Cassandra_issue_when_another_database_fails
+          - name: Offline Failover DMA not synchronized
+            topicUid: KI_offline_DMA_cannot_sync
+          - name: LDAP/ActiveDirectory domain users no longer able to log in after upgrade
+            topicUid: KI_LDAP_users_unable_to_log_in_after_upgrade
+          - name: SNMPv3 elements not loaded correctly after upgrade
+            topicUid: KI_SNMPv3_elements_broken_after_upgrade
+          - name: Inter-DMA connection issues when ExternalAuthentication is used
+            topicUid: KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used
+          - name: Problem after upgrading Window OS to Windows Server 2022
+            topicUid: KI_Problem_after_OS_upgrade_to_win_2022
+          - name: nats-server.config file not included in DataMiner backups
+            topicUid: KI_nats-server_config_file_not_included_in_backups
+          - name: Problem when DMA server is named DATAMINER
+            topicUid: KI_Problem_when_server_name_is_DATAMINER
+          - name: Web apps experience frequent disconnects
+            topicUid: KI_Web_apps_experience_frequent_disconnects
           - name: ButtonState shapes in Visual Overview fail to hide as expected
             topicUid: KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected
           - name: Timetrace data is no longer written during Cassandra Cluster migration
@@ -274,8 +303,8 @@ items:
             topicUid: KI_missing_NATS_services
           - name: Process crashes when trying to connect to MySQL database
             topicUid: KI_MySQL_Unhandled_Exception
-          - name: Failover switch taking a long time on systems with Cassandra Cluster setup
-            topicUid: KI_Failover_switch_Cassandra_Cluster
+          - name: Failover switch taking a long time on systems with Cassandra setup
+            topicUid: KI_Failover_switch_Cassandra
           - name: SLProtocol RTE caused by SNMP group with condition
             topicUid: KI_SLProtocol_RTE_SNMP_group_condition
           - name: Deadlock in service loading during startup
@@ -398,16 +427,12 @@ items:
             topicUid: KI_SNMP_polling_issues_with_wildcards_in_param_OIDs
           - name: SLAnalytics RTEs after upgrading DMS with Cassandra Cluster
             topicUid: KI_RTE_with_SLAnalytics_when_upgrading
-          - name: Incorrect RTE counts in SLWatchdog2.txt and Alarm Console
-            topicUid: KI_Incorrect_RTE_counts_in_SLWatchdog2txt_and_Alarm_Console
           - name: NATS error message after 10.1 installation
             topicUid: KI_NATS_error_message_after_10_1_installation
           - name: Shapes in DataMiner stencils not found in Visio search
             topicUid: KI_Shapes_in_DataMiner_stencils_not_found_in_Visio_search
           - name: SLDataMiner addressChangeThread RTE after DMA startup
             topicUid: KI_SLDataMiner_addressChangeThread_RTE_after_DMA_startup
-          - name: Smart-serial communication no longer working
-            topicUid: KI_Smart-serial_communication_no_longer_working
           - name: SNMP SET returns a 'NO ACCESS' error
             topicUid: KI_SNMP_SET_returns_a_NO_ACCESS_error
           - name: Unavailable system database after DataMiner server reboot
@@ -416,6 +441,8 @@ items:
             topicUid: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
           - name: GenIf folder takes up too much disk space
             topicUid: KI_GenIf_Folder_Growing_In_Size
+  - name: Contacting tech support
+    topicUid: Contacting_tech_support
   - name: Customer DataMiner Reporting (CDMR)
     topicUid: CDMR
   - name: Remote Log Collection

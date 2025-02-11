@@ -8,7 +8,9 @@ uid: Web_apps_Feature_Release_10.4.5
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.4.5](xref:General_Feature_Release_10.4.5).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.4.5](xref:General_Feature_Release_10.4.5).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.4.5](xref:Cube_Feature_Release_10.4.5).
 
 ## Highlights
 
@@ -37,7 +39,7 @@ A number of new features have been added to the *Node edge graph* component:
 
 - In low-code apps, a new node edge graph action can now be used: *Clear the data*. When executed, this action will clear the feed status of the node edge graph in question.
 - Similar to other GQI components, a node edge graph is now able to recover selections (coming from the URL or when navigating between pages in low-code apps).
-- You can now force edge labels to become fully visible by pressing *CTRL+SPACE*.
+- You can now force edge labels to become fully visible by pressing *Ctrl+Space*.
 
 Also, because of a number of enhancements, overall node edge graph performance has increased.
 
@@ -55,7 +57,7 @@ In case of a *Web* component:
 In case of a *Text* component, the feed syntax can be inserted in the text.
 
 > [!TIP]
-> For more information on feeds, see [Feeds](xref:Using_dashboard_feeds).
+> For more information on feeds, see [Component data](xref:Component_Data).
 
 > [!NOTE]
 >

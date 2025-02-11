@@ -10,38 +10,39 @@ This component can be used to display a trend graph.
 
 > [!NOTE]
 >
-> - If this type of component is added, the time span displayed by the component is available as a feed in the data pane, so that this can be applied to other components.
+> - If this type of component is added, the time span displayed by the component is available as an output in the *Data* pane, so that this can be applied to other components.
 > - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, this component also supports line graphs for string parameters.
+> - From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, only the first 1000 items in a line & area chart are shown.
 
 ## Configuring the component
 
 To configure the component:
 
-1. Apply one or more parameter data feeds. See [Applying a data feed](xref:Apply_Data_Feed).
+1. [Add data to the component](xref:Adding_data_to_component).
 
    > [!NOTE]
    >
-   > - If a query is used as the data feed, additional configuration is required. See [Configuration with query data feed](#configuration-with-query-data-feed).
-   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to feed a line chart by linking the *Parameters* feed and the *Indices* feed. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* feed of the table to the line chart in order to see the data, similar to when you use a [parameter feed component](xref:DashboardParameterFeed).
+   > - If a query is used as data, additional configuration is required. See [Configuration with query data](#configuration-with-query-data).
+   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to pass a line chart by linking *Parameters* and *Indices* data, available in the *Data* pane. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* data of the table to the line chart in order to see the data, similar to when you use a [parameter picker component](xref:DashboardParameterPicker).
 
-1. Optionally, apply a filter feed:
+1. Optionally, apply a filter:
 
-   - In case a parameter data feed included a parameter based on a protocol, a filter feed can be used to filter on a specific element.
+   - In case parameter data included a parameter based on a protocol, a filter can be used to filter on a specific element.
 
-   - For a table parameter, an *indices* filter feed is supported.
+   - For a table parameter, an *indices* filter is supported.
 
-   - In a system using Service & Resource Management, you can add resources as a feed to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+   - In a system using Service & Resource Management, you can add resources as data to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](xref:SRM#service-and-resource-management).
 
-   - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter feed is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
+   - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
      > [!NOTE]
      >
      > - When you update a filter that is already used in the component, re-add the filter in order to update it in the component.
-     > - From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use feeds found either on the same low-code app page/panel or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, you can only use feeds found on the same low-code app page/panel.
+     > - From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39335-->, you can use data found either on the same low-code app page/panel or on another page/panel. Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6, you can only use data found on the same low-code app page/panel.
 
    - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view trending for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
 
-1. Optionally, customize the following component options in the *Component* > *Settings* tab:
+1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
@@ -70,7 +71,15 @@ To configure the component:
 
    - *Use percentage based values*: This option is only displayed if the component displays resource capacity information. If you select this option, the chart will display percentage values instead of absolute values.
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+   - *Advanced* > *Hold Ctrl to zoom*: Available from DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->. Determines whether pressing the Ctrl key is required to zoom in or out.
+
+     - Enabled: Hold Ctrl while scrolling up or down.
+
+     - Disabled: Scroll up or down.
+
+     This setting is disabled by default. See also: [Zooming and panning](#zooming-and-panning).
+
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -82,7 +91,7 @@ To configure the component:
 
      - *Maximum columns per page*: Determines how many charts can at most be displayed next to each other on a single page.
 
-     - *Chart limit*: Determines how many parameters can at most be displayed in one chart. By default, this is set to 16 parameters.
+     - *Chart limit*: Determines how many parameters can at most be displayed in one chart. By default, this is set to 16 parameters. From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, regardless of this setting, only the first 1000 parameters can be rendered in a single chart.
 
      - *Chart limit behavior*: Determines what happens when the number of parameters in the chart exceeds the defined chart limit:
 
@@ -132,17 +141,17 @@ To configure the component:
      > [!TIP]
      > See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message).
 
-## Configuration with query data feed
+## Configuration with query data
 
-Query results are supported as a data feed for this component from DataMiner 10.2.9/10.3.0 onwards. To configure the component to use a GQI query as its data feed:
+Query results are supported as data for this component from DataMiner 10.2.9/10.3.0 onwards. To configure the component to use a GQI query as its data:
 
 ### [From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6 onwards](#tab/tabid-1)
 
 <!--RN 39509-->
 
-1. Create a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).
+1. Create query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. In the *Component* > *Layout* tab, configure the following fields in the *Lines* section:
+1. In the *Component* > *Layout* pane, configure the following fields in the *Lines* section:
 
    - *X-axis column*: The numeric column that should be used for the X-axis data.
 
@@ -185,11 +194,11 @@ Query results are supported as a data feed for this component from DataMiner 10.
 
 ### [Prior to DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6](#tab/tabid-2)
 
-1. Create a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).
+1. Create query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. In the *Component* > *Settings* tab, configure the following fields in the *Dimensions* section:
+1. In the *Component* > *Settings* pane, configure the following fields in the *Dimensions* section:
 
-   - *Query*: The query data feed you want to use.
+   - *Query*: The query data you want to use.
 
    - *X axis*: The column that should be used for the X-axis data.
 
@@ -215,23 +224,29 @@ It is possible to export the trend data to CSV. To do so, click the ... icon in 
 
 From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/ 10.4.6 onwards<!--RN 39509-->, zooming and panning functionalities are available for the line & area chart component.
 
-- To zoom in, press CTRL while scrolling up (up to 10,000 times).
+### Zooming
 
-- To zoom out, press CTRL while scrolling down (up to 10,000 times).
+- From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the [*Advanced* > *Hold Ctrl to zoom* setting](#configuring-the-component):
+
+  - When this setting is enabled: Hold the Ctrl key while scrolling up or down (up to 10,000 times) to zoom in or out.
+
+  - When this setting is disabled: Scroll up or down (up to 10,000 times) to zoom in or out. This is the default option.
+
+- In versions prior to DataMiner 10.4.0 [CU10]/10.5.1, hold the Ctrl key while scrolling up or down (up to 10,000 times) to zoom in or out.
+
+- When visualized on a mobile device<!--RN 39586-->: Zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
+
+> [!NOTE]
+> From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when you zoom in on a chart [using query data](#configuration-with-query-data), the Y-axis range is dynamically adjusted. As a result, the minimum and maximum Y values change depending on the visible data.
+
+### Panning
 
 - To move left or right across the component, right-click the chart and drag your mouse.
 
   > [!NOTE]
   > Panning is only possible when the chart is zoomed in, as the default viewport shows all available data.
 
-When visualized on a mobile device<!--RN 39586-->:
-
-- You can zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
-
-- You can move left or right by sliding one finger across the component.
-
-> [!NOTE]
-> From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39586-->, when you zoom in on a chart [using a query data feed](#configuration-with-query-data-feed), the Y-axis range is dynamically adjusted. As a result, the minimum and maximum Y values change depending on the visible data.
+- When visualized on a mobile device<!--RN 39586-->: Move left or right by sliding one finger across the component.
 
 ## Examples
 
@@ -241,9 +256,9 @@ To add a component to a dashboard to show a basic trend graph with several DMA K
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
-1. Click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the *Data* pane.
 
-1. Expand the *Parameters* section in the data pane and specify the element representing the DMA in the *Element* box.
+1. Expand the *Parameters* section in the *Data* pane and specify the element representing the DMA in the *Element* box.
 
 1. Select a parameter you want to display in the graph, and drag it to the graph. Repeat this for each parameter that should be displayed in the graph.
 
@@ -252,7 +267,7 @@ To add a component to a dashboard to show a basic trend graph with several DMA K
    >
    > ![Parameters section with filter](~/user-guide/images/dashboard_parameter_filter_icon.png)<br>*Parameters section with filter in DataMiner 10.3.11*
 
-1. In the *Settings* tab, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
+1. In the *Settings* pane, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
 
 ![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart1.png)
 
@@ -262,14 +277,14 @@ To add a component to a dashboard to show a basic trend graph using profile para
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
-1. Click the ![Data feed icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the *Data* pane.
 
-1. Expand the *Profile parameters* section in the data pane.
+1. Expand the *Profile parameters* section in the *Data* pane.
 
    If you have configured it correctly in DataMiner Cube, there should be a profile parameter linked with a protocol and a trended parameter of the data you want to see.
 
 1. Select the profile parameter you want to display in the graph, and drag it to the graph.
 
-1. Expand the *Elements* section in the data pane, select the element you want to display in the graph, and drag it to the graph.
+1. Expand the *Elements* section in the *Data* pane, select the element you want to display in the graph, and drag it to the graph.
 
 ![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart2.png)

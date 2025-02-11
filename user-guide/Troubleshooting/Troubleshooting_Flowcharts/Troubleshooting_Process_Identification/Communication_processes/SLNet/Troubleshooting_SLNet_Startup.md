@@ -26,33 +26,33 @@ classDef classActionNonClickable fill:#dddddd,stroke:#dddddd,color:#1E5179,strok
 %% flowchart structure
 %% -------------------------------------------------------------------------
   HOME([Start page])
-  START([DMA has trouble <br>starting up correctly<br/>])
-  BACK([Back to SLNet <br>troubleshooting])
-  MODULES{{Which issue <br> is affecting<br/> the DMA ?}}
-    IsRunning{{Is the<br/>DMA running?}}
-    IsConnected{{Is the<br/>connection <br>successful?}}
-    IsRTEorCrash{{Are there RTEs <br>or crashes?}}
-    IsGenericIssueFound{{Is the issue <br> identified?}}
-    IsSLNetPresent{{Is the SLNet <br>service present?}}
-    IsProcessSuspended{{Is the <br> SLNet process <br>suspended?}}
-    IsAv[[Is any software <br>interfering with <br>the process?<br>For example: <br> antivirus.]]
-    OpenCube[[Open Cube<br/>and connect<br/>to the DMA.]]
-    GenericCases[[Follow the <br>generic startup <br>issues flowchart.]]
-    RTEChart[[Follow the RTE <br/>troubleshooting <br>flowchart.]]
-    CrashChart[[Follow the <br>crash troubleshooting <br>flowchart.]]
-    EventsAndLogs[[Check Windows <br>events and <br>DataMiner logs <br>for errors.]]
-    RegisterDlls[[Register the DLLs <br> and recreate <br> the missing services.]]
-    RestartAgent[[Restart <br>DataMiner.]]
-    RestartMachine[[Restart <br>the machine.]]
-    ManualStart[[Start the <br>DMA manually.]]
-    SysAdmin[[Ask admin to <br>exclude DataMiner <br>files and services <br>from the antivirus <br>watchlist.]]
+  START([DMA has trouble starting up correctly])
+  BACK([Back to SLNet troubleshooting])
+  MODULES{{Which issue is affecting the DMA ?}}
+    IsRunning{{Is the DMA running?}}
+    IsConnected{{Is the connection successful?}}
+    IsRTEorCrash{{Are there RTEs or crashes?}}
+    IsGenericIssueFound{{Is the issue identified?}}
+    IsSLNetPresent{{Is the SLNet service present?}}
+    IsProcessSuspended{{Is the SLNet process suspended?}}
+    IsAv[[Is any software interfering with the process? For example: antivirus.]]
+    OpenCube[[Open Cube and connect to the DMA.]]
+    GenericCases[[Follow the generic startup issues flowchart.]]
+    RTEChart[[Follow the RTE troubleshooting flowchart.]]
+    CrashChart[[Follow the crash troubleshooting flowchart.]]
+    EventsAndLogs[[Check Windows events and DataMiner logs for errors.]]
+    RegisterDlls[[Register the DLLs and recreate the missing services.]]
+    RestartAgent[[Restart DataMiner.]]
+    RestartMachine[[Restart the machine.]]
+    ManualStart[[Start the DMA manually.]]
+    SysAdmin[[Ask admin to exclude DataMiner files and services from the antivirus watchlist.]]
     IsRunning --- |Yes| OpenCube
     OpenCube --- IsConnected
     IsConnected --- |Yes, started correctly| END
     IsConnected --- |Yes, not started correctly| IsRTEorCrash
     IsConnected --- |No| GenericCases
     GenericCases --- IsGenericIssueFound
-    IsGenericIssueFound --- |Yes, identified, fixed, <br>and started correctly| END
+    IsGenericIssueFound --- |Yes, identified, fixed, and started correctly| END
     IsGenericIssueFound --- |No| IsRTEorCrash
     IsRTEorCrash --- |RTE| RTEChart
     IsRTEorCrash --- |Crash| CrashChart
@@ -84,7 +84,6 @@ classDef classActionNonClickable fill:#dddddd,stroke:#dddddd,color:#1E5179,strok
  click BACK "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/Troubleshooting_SLNet_exe.html"
  click GenericCases "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html"
  click RTEChart "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html"
- click CrashChart "http://"
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks
 %% -------------------------------------------------------------------------

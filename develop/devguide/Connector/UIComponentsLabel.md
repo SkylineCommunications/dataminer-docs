@@ -30,9 +30,9 @@ A label displays the current value of a standalone parameter. The text provided 
 </Param>
 ```
 
-![alt text](../../images/uilabel.png "DataMiner Cube label")
+![alt text](~/develop/images/uilabel.png "DataMiner Cube label")
 
-The way a label is visualized can be customized in many ways. For the available options, see Options for measurement type “string”.
+The way a label is visualized can be customized in many ways. For the available options, see [Options for measurement type "string"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string).
 
 The following example displays a numeric parameter:
 
@@ -55,12 +55,12 @@ The following example displays a numeric parameter:
 </Param>
 ```
 
-By default, 6 decimals are stored. In case more decimals are required to avoid rounding errors, this can be specified via the Decimals tag. See Protocol/Params/Param/Interprete/Decimals. (This is for example the case for the DateTime picker UI component, mentioned in the section Datetime picker.)
+By default, 6 decimals are stored. In case more decimals are required to avoid rounding errors, this can be specified via the Decimals tag. See [Protocol.Params.Param.Interprete.Decimals](xref:Protocol.Params.Param.Interprete.Decimals). (This is for example the case for the DateTime picker UI component, mentioned in the section Datetime picker.)
 
 > [!NOTE]
 >
-> - A unit can be specified using the Units tag. See Protocol/Params/Param/Display/Units.
-> - Since DataMiner version 9.0.1 (RN 1205), when the value of the parameter is a string starting with a "file", "ftp", "http", "https" or "mailto" URI scheme, the parameter value will be displayed as a clickable link.
+> - A unit can be specified using the Units tag. See [Protocol.Params.Param.Display.Units](xref:Protocol.Params.Param.Display.Units).
+> - When the value of the parameter is a string starting with a "file", "ftp", "http", "https", or "mailto" URI scheme, the parameter value will be displayed as a clickable link.
 
 ## Creating an editable label
 
@@ -102,7 +102,7 @@ In order to make a label editable, create a parameter of type "write" that has t
 </Param>
 ```
 
-![DataMiner Cube editable label](../../images/uieditablelabel.png "DataMiner Cube editable label")
+![DataMiner Cube editable label](~/develop/images/uieditablelabel.png "DataMiner Cube editable label")
 
 There are multiple ways to copy a value set in the write parameter to its read counterpart:
 
@@ -164,7 +164,7 @@ It is possible to visualize a check box by providing a discrete entry on the wri
 </Param>
 ```
 
-![alt text](../../images/uieditablelabelwithcheckbox.png "DataMiner Cube editable label with check box")
+![DataMiner Cube editable label with check box](~/develop/images/uieditablelabelwithcheckbox.png)
 
 ## See also
 

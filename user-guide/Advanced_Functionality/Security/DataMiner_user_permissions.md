@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_user_permissions
+description: With the user permissions in the Cube System Center, you can fine-tune which users and groups have access to specific DataMiner functionality.
 ---
 
 # DataMiner user permissions
@@ -530,7 +531,7 @@ Permission to use view and configure element connections.
 >
 > - At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 > - When you upgrade to DataMiner version 10.1.7, these six permissions are automatically granted to all user groups that have been granted the *Modules* > *Resources* > *Configure functions* permission.
-> - These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
+> - These user permissions are only displayed if the DMA uses STaaS or a self-managed indexing database.
 
 #### Modules \> Functions \> Read
 
@@ -559,7 +560,7 @@ Permission to generate a protocol for a virtual function. Available from DataMin
 ### Modules \> Jobs
 
 > [!NOTE]
-> These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
+> These user permissions are only displayed if the DMA uses STaaS or a self-managed indexing database.
 
 #### Modules \> Jobs \> UI available
 
@@ -584,7 +585,7 @@ Permission to use the Monitoring app. Available from DataMiner 10.2.0/10.2.2 onw
 ### Modules \> Planned Maintenance
 
 > [!NOTE]
-> These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
+> These user permissions are only displayed if the DMA uses STaaS or a self-managed indexing database.
 
 #### Modules \> Planned Maintenance \> UI available
 
@@ -941,6 +942,10 @@ Available from DataMiner 10.2.0/10.1.12 onwards. Permission to add or edit servi
 #### Modules \> Services \> Instances \> Delete
 
 Available from DataMiner 10.2.0/10.1.12 onwards. Permission to delete profile instances.
+
+#### Modules \> Swarming
+
+Available from DataMiner 10.5.1/10.6.0 onwards.<!-- RN 41490 --> Permission to trigger [swarming](xref:Swarming).
 
 ### Modules \> System configuration \> Agents
 

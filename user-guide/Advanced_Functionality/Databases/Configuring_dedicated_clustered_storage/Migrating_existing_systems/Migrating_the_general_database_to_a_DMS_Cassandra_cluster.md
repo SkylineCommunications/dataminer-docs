@@ -1,10 +1,11 @@
 ---
 uid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+keywords: local database
 ---
 
 # Migrating the general database to a DMS Cassandra cluster
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead have a self-hosted storage setup with **SQL databases or Cassandra databases per DMA** and want to switch to a Cassandra cluster setup, you can use the **Cassandra Cluster Migrator** for this. In DataMiner versions prior to 10.2.0/10.2.2, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.3.0 [CU11]/10.4.2 or higher and use the Cassandra Cluster Migrator instead.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead have a self-managed storage setup with **SQL databases or Cassandra databases per DMA** and want to switch to a Cassandra cluster setup, you can use the **Cassandra Cluster Migrator** for this. In DataMiner versions prior to 10.2.0/10.2.2, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.3.0 [CU11]/10.4.2 or higher and use the Cassandra Cluster Migrator instead.
 
 The migration can be done while the DMAs are active; however, a **DataMiner restart** will be required after all data has been migrated.
 
@@ -53,7 +54,7 @@ During the migration, each DMA will go through the following stages:
 
 ### [Running a regular migration](#tab/tabid-1)
 
-If your system does not use an indexing database yet or if it already uses a OpenSearch or Elasticsearch cluster connected to the DMS, you can run a regular migration as described below. However, if your system uses an Elasticsearch database installed on a DMA, follow the procedure in the next tab, "Running a migration with bespoke Elasticsearch data".
+If your system does not use an indexing database yet or if it already uses an OpenSearch or Elasticsearch cluster connected to the DMS, you can run a regular migration as described below. However, if your system uses an Elasticsearch database installed on a DMA, follow the procedure in the next tab, "Running a migration with bespoke Elasticsearch data".
 
 1. If there are Failover pairs in the DataMiner System, make sure the currently active Agent in each pair is the top Agent in the Failover configuration screen.
 
@@ -62,7 +63,7 @@ If your system does not use an indexing database yet or if it already uses a Ope
 
 1. On one of the DMAs in your cluster, go to `C:\Skyline DataMiner\Tools\`, and run *SLCCMigrator.exe*.
 
-1. Initialize all the DMAs in the list. You can initialize all DMAs at once using the *Initialize all agents* button or initialize them one at a time with the *Initialize* button for each DMA.
+1. Initialize all the DMAs in the list using the *Initialize all agents* button.
 
    > [!NOTE]
    > If one or more DMAs fail to be initialized, please contact your Skyline Technical Account Manager to resolve this issue, or refer to the [Troubleshooting](#troubleshooting) section below for the solution.
@@ -160,7 +161,7 @@ In case your DataMiner System contains bespoke Elasticsearch data or SRM data, u
 
 1. Navigate to `C:\Skyline DataMiner\Tools\\`, and run *SLCCMigrator.exe*.
 
-1. Initialize all the DMAs in the list. You can initialize all DMAs at once using the *Initialize all agents* button or initialize them one at a time with the *Initialize* button for each DMA.
+1. Initialize all the DMAs in the list using the *Initialize all agents* button.
 
    > [!NOTE]
    > If one or more DMAs fail to be initialized, contact your Skyline Technical Account Manager to resolve this issue, or refer to the [Troubleshooting](#troubleshooting) section below for the solution.
@@ -232,23 +233,7 @@ Any errors that occur during a migration process will be displayed in a pop-up w
 
 - To check the migration server logging, go to `C:\Skyline DataMiner\Logging` and open *SLDBConnection.txt*.
 
-- If you encounter **issues when you start a migration** (e.g. “No connection with DataMiner”), check the following NATS message broker log files:
-
-  - `C:/Skyline DataMiner/Logging/SLMessageBroker.txt`
-  - `C:/Skyline DataMiner/Logging/SLMessageBroker.Crash.txt`
-
-- If you encounter an **issue initializing all the Agents**, check whether the logging of the *SLCCMigrator.exe* tool contains a line mentioning "*No responders are available for the request.*". Alternatively, you can also identify this issue by going to `http://<ip>:8222/varz` and checking if the "cluster" tag mentions all the IPs in the cluster. To resolve this issue:
-
-  1. Make sure all Agents are online.
-
-  1. Open the [SLNetClientTest tool](xref:SLNetClientTest_tool), and connect to the Agent that is not initialized.
-
-  1. In the *Build Message* tab, send a *NatsCustodianResetNatsRequest* (leaving the *IsDistributed* property set to false).
-
-  1. Initialize the Agents again and continue with the migration procedure, as detailed above.
-
-  > [!CAUTION]
-  > Always be very careful when you use the SLNetClientTest tool, as it allows actions that can have far-reaching consequences for a DataMiner System. Always ask for support in case you need to use this tool and something is not clear.
+- If you encounter **issues when you start a migration** (e.g. "No connection with DataMiner"), check if there are any [NATS issues](xref:Investigating_NATS_Issues).
 
 - If **TLS** is enabled on the Elasticsearch or OpenSearch nodes and **some Agents do not initialize**, you can check the connection to the Elasticsearch/OpenSearch nodes as follows:
 

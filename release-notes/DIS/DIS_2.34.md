@@ -35,7 +35,7 @@ The following enhancements will make using the class library in a serialization/
 
 It is now possible to select multiple items in the result list of the *DIS Validator* tool window.
 
-To select more than one item, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the SHIFT key.
+To select more than one item, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the Shift key.
 
 Use this to do the following:
 

@@ -62,8 +62,8 @@ To do so:
 
       This name **should also be configured in the DNS server** pointing to the IP address of the DMA, so that the DMA can be reached using the configured name.
 
-      > [!WARNING]
-      > Do not use wildcard configurations if you want to use your DataMiner Agent to connect your system to dataminer.services, as this is not supported. In that case, use the FQDN (e.g. "dma01.skyline.be") instead.
+      > [!IMPORTANT]
+      > Do not use wildcard certificates if you want to use your DataMiner Agent to connect your system to dataminer.services, as this is not supported. In that case, the certificate should be for the FQDN (e.g. "dma01.skyline.be").
 
 1. Save the file and restart the DMA.
 
@@ -80,11 +80,6 @@ To do so:
 This is **optional**.
 
 Redirecting HTTP traffic to HTTPS is recommended when external systems (or clients) are still connecting to DataMiner over HTTP and cannot be updated easily. A redirect enables a smooth transition to HTTPS without breaking external systems or compromising on security.
-
-1. Install URL Rewrite 2.0 from the following website: <http://www.iis.net/downloads/microsoft/url-rewrite>
-
-   > [!NOTE]
-   > From DataMiner 10.0.0/10.0.2 onwards, this step is no longer required. This module is included all DataMiner upgrades as from DataMiner 10.0.0/10.0.2.
 
 1. Update the default website bindings in IIS to have both HTTP and HTTPS bindings:
 

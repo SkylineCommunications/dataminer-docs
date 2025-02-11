@@ -1,18 +1,29 @@
 ---
 uid: Creating_a_DMS_on_dataminer_services
+keywords: dms in the cloud
 ---
 
 # Creating a new DMS on dataminer.services
 
-> [!IMPORTANT]
-> You must be a member of an [organization](xref:Pricing_Usage_based_service#organization) to create a new DaaS instance and have sufficient [DataMiner credits](xref:Order_DataMiner_credits).
+Watch this short video to learn how to create a new DataMiner System hosted on dataminer.services, or follow the steps below:
 
-1. Log on to [dataminer.services](https://dataminer.services).
+<video width="800" height="450" controls>
+  <source src="~/user-guide/images/DaaS.mp4" type="video/mp4">
+</video>
 
-   > [!TIP]
-   > For more detailed information, see [Logging on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
-   >
-   > See also: [Kata #11: Create a DMS on dataminer.services](https://community.dataminer.services/courses/kata-11/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+<br />
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%; margin-top: 20px;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DFF6DD; margin-right: 20px; color: black;">
+    <b><span style="color: #2A7661;">💡 TIP</span></b><br>
+    You can also watch our interactive exercise on DataMiner Dojo: 
+    <a href="https://community.dataminer.services/courses/kata-11/">Kata #11: Create a DMS on dataminer.services</a>.
+  </div>
+</div>
+
+<br />
+
+1. [Log on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
 
 1. Next to *DataMiner Systems*, click *Add a DataMiner System*.
 
@@ -46,3 +57,10 @@ uid: Creating_a_DMS_on_dataminer_services
 >
 > - It is possible to create a DaaS system as a staging system. Our Pay-per-Use model is used for this. For detailed information, see [DataMiner Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition).
 > - When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>Now that you have created your DataMiner System, it may be a good idea to <a href="xref:Installing_the_DataMiner_Cube_desktop_application">install DataMiner Cube</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>

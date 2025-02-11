@@ -8,55 +8,36 @@ To add a DataMiner Agent to a DMS running STaaS:
 
 1. Make sure that the DMA you are adding is a clean DMA, meaning that it is a newly installed DMA or a DMA that has been [fully reset](xref:Factory_reset_tool).
 
-   > [!IMPORTANT]
-   > If the CloudGateway DxM is installed on the DMA you are adding, the data folder `C:\ProgramData\Skyline Communications\DataMiner CloudGateway\Data` must be empty.
+1. Install the [DataMiner Cloud Pack](xref:CloudPackages) on the new DMA.
 
-1. Stop the DMA that will be added.
+1. Stop DataMiner and stop CloudGateway on the new DMA.
 
-1. On the DMA that will be added, stop CloudGateway if it is installed.
+1. From a DMA in the cluster where CloudGateway is running, copy the folder `C:\ProgramData\Skyline Communications\DataMiner CloudGateway\Data\CcaGatewayPersisted` and place it in the same location on the new DMA.
 
-1. On the DMA that will be added, stop both the NAS and NATS services.
+1. Remove the following files from the folder you just copied to the new DMA:
 
-1. Go to the `C:\Skyline DataMiner\` folder of an existing DMA in the cluster, and follow the steps below:
+   - DmsAccessToken.data
+   - DmsAccessTokenExpiration.data
+   - DmsRefreshToken.data
+   - DmsRefreshTokenExpiration.data
 
-   1. Copy the `C:\Skyline DataMiner\NATS\nsc` folder and place it in the same location on the new DMA.
+1. Start CloudGateway on the new DMA.
 
-   1. Copy the `C:\Skyline DataMiner\SLCloud.xml` file to the same location on the new DMA.
+1. Configure *DB.xml* to use STaaS:
 
-1. Configure the new DMA:
+   1. In the `C:\Skyline DataMiner` folder, open *DB.xml*.
 
-   1. Open `C:\Skyline DataMiner\SLCloud.xml` and modify the `<ClientID>` to match the name of the server.
-
-   1. Open `C:\Skyline DataMiner\MaintenanceSettings.xml` and add the following tag under the `<SLNet>` section:
+   1. Configure the *Database* tag with *type="CloudStorage"* as illustrated below:
 
       ```xml
-      <NATSForceManualConfig>true</NATSForceManualConfig>
+      <?xml version="1.0"?>
+      <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
+         <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
+      </DataBases>
       ```
 
-      > [!NOTE]
-      > This will temporarily disable automatic NATS configuration. Make sure to follow all steps in the procedure below so that automatic NATS configuration is enabled again later.
-
-   1. Configure *DB.xml* with STaaS:
-
-      1. In the `C:\Skyline DataMiner` folder, open *DB.xml*.
-
-      1. Configure the *Database* tag with *type="CloudStorage"* as illustrated below:
-
-         ```xml
-         <?xml version="1.0"?>
-         <DataBases xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/config/db">
-            <DataBase active="true" local="true" search="true" cloud="true" type="CloudStorage"/>
-         </DataBases>
-         ```
-
-1. Start the new DMA.
+1. Start DataMiner on the new DMA.
 
 1. Join the DMA to the cluster using the steps described under [Adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent) or [Failover configuration in Cube](xref:Failover_configuration_in_Cube) for a Failover Agent.
-
-1. Open `C:\Skyline DataMiner\MaintenanceSettings.xml` on the newly added DMA and remove the `<NATSForceManualConfig>` tag.
-
-1. Restart the newly added DMA.
-
-1. Start CloudGateway on the newly added DMA if it is installed.
 
 The DMA should now be connected to the DMS running STaaS.

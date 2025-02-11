@@ -631,11 +631,11 @@ When, while automatic incident tracking was running, you manually created an inc
 
 When you retrieved the trace data after performing a create, update or delete action using the ServiceManagerHelper, in some cases, an error could be returned although the action that was performed had succeeded.
 
-#### SLAnalytics could stop working when it lost its connection to SLNet during start-up [ID 38268]
+#### SLAnalytics could stop working when it lost its connection to SLNet during startup [ID 38268]
 
 <!-- MR 10.3.0 [CU11] - FR 10.4.2 -->
 
-Up to now, when SLAnalytics lost its connection to SLNet at a particular moment during start-up, it would stop working because it was not able to reach the database. From now on, when SLAnalytics loses its connection to SLNet at that particular moment during start-up, it will continue working and will try to connect to the database again as soon as its connection to SLNet has been re-established.
+Up to now, when SLAnalytics lost its connection to SLNet at a particular moment during startup, it would stop working because it was not able to reach the database. From now on, when SLAnalytics loses its connection to SLNet at that particular moment during startup, it will continue working and will try to connect to the database again as soon as its connection to SLNet has been re-established.
 
 #### Correlation alarms with incorrect severity after a DataMiner restart [ID 38286]
 

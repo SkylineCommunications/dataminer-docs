@@ -8,7 +8,9 @@ uid: Cube_Feature_Release_10.3.11
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.11](xref:General_Feature_Release_10.3.11).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.3.11](xref:General_Feature_Release_10.3.11).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.11](xref:Web_apps_Feature_Release_10.3.11).
 
 ## New features
 
@@ -41,9 +43,9 @@ In the Credentials Library in DataMiner Cube (available via *System Center* > *S
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
-It is now possible to pan vertically inside a spectrum window by CTRL+clicking and dragging.
+It is now possible to pan vertically inside a spectrum window by Ctrl+clicking and dragging.
 
-When, after pressing the CTRL key and clicking the left mouse button, you start dragging, the following will happen:
+When, after pressing the Ctrl key and clicking the left mouse button, you start dragging, the following will happen:
 
 - The spectrum trace will move up or down while being refreshed at a rate equal to the original rate.
 - The amplitude labels on the Y axis will continuously update to reflect the ongoing change.

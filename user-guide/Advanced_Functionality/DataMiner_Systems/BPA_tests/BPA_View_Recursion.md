@@ -2,15 +2,17 @@
 uid: BPA_View_Recursion
 ---
 
-# View Recursion
+# View Recursive Loops
+
+Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "View Recursion".
 
 This BPA will check the *Views.xml* file to see if any loops are present.
 
-This BPA test is available by default from DataMiner 10.1.0 [CU4]/10.1.7 onwards.
+This BPA test is available on demand. From DataMiner 10.1.0 [CU4]/10.1.7 up to DataMiner 10.4.11/10.4.0 [CU9], it is available in System Center.<!--RN 40751-->
 
 ## Metadata
 
-- Name: View Recursion BPA
+- Name: View Recursive Loops
 - Description: Checks if there are loops in Views.xml
 - Author: Skyline Communications
 - Default schedule: None

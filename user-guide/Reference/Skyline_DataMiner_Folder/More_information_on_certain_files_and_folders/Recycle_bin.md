@@ -18,10 +18,9 @@ For example, if a view is renamed or moved in the Surveyor, a zip file will be c
 
 1. Copy the file from the *Recycle Bin* folder back to its original location.
 
-2. Restart the DMA.
+1. Restart the DMA.
 
-3. Force a synchronization of the file in the DMS. See [Forcing synchronization of a file with the DMS](xref:Synchronizing_data_between_DataMiner_Agents#forcing-synchronization-of-a-file-with-the-dms).
+1. Force a synchronization of the file in the DMS. See [Forcing synchronization of a file with the DMS](xref:Synchronizing_data_between_DataMiner_Agents#forcing-synchronization-of-a-file-with-the-dms).
 
 > [!NOTE]
 > Always be extremely careful when using this functionality, as it can have far-reaching consequences on your DataMiner System.
->

@@ -15,7 +15,7 @@ Available from DataMiner 10.0.7 onwards.
 
 | Item           | Format  | Description                                                                         |
 |----------------|---------|-------------------------------------------------------------------------------------|
-| connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                                |
+| connection     | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                               |
 | withAlarmState | String  | The alarm severity.                                                                 |
 | index          | Integer | The point from which to start returning alarms.                                     |
 | count          | Integer | The number of alarms to be returned.                                                |

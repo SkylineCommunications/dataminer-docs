@@ -82,12 +82,14 @@ Select this option to give all alarm records a background color indicating the c
 
 ## Show in banner
 
-Select this option to display a banner at the top of the Cube window when new alarms enter the tab. The banner shows the number of new alarms, the color of the most severe among them, and service impact information. When you click the banner, the Alarm Console tab will open and the new alarm(s) will be selected.
+Select this option to display a banner at the top of the Cube window when new alarms enter the tab. The banner shows the number of new alarms, the color of the most severe among them, and service impact information. By default, a sound is played whenever the alarm banner is shown or updated. When you click the banner, the Alarm Console tab will open and the new alarm(s) will be selected.
 
 ![Banner](~/user-guide/images/Banner.png)<br>*Banner in header bar displaying incoming alarms in DataMiner 10.4.5*
 
 > [!NOTE]
-> It is possible to set a delay timer on when the alarm banner hides. For more information, see [User settings](xref:User_settings).
+>
+> - It is possible to set a delay timer on when the alarm banner hides. For more information, see [User settings](xref:User_settings).
+> - From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 41982-->, it is possible to disable the sound that plays when the alarm banner is shown or updated. For more information, see [Alarm Console settings](xref:User_settings#alarm-console-settings).
 
 ## Statistical view
 

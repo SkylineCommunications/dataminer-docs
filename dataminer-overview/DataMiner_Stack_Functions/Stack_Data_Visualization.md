@@ -50,8 +50,6 @@ This particular stack function keeps track of detailed historical key performanc
 
 DataMiner allows the user to define exactly for which parameters trending information has to be logged in the trending database and which kind of trending information has to be included. In a trend template, you can define both the scope (which parameters) and the type (real-time data, average trending, or a combination of both) of the trend information to be stored in the trending database.
 
-In systems using [Storage as a Service](xref:STaaS) or a [self-hosted setup with indexing database](xref:Databases_about), DataMiner’s [Augmented Operations](xref:Stack_Augmented_Operations) are enabled, including AI features such as trend prediction, pattern matching and much more.
-
 > [!TIP]
 > For more information:
 >
@@ -162,7 +160,7 @@ Moreover, dashboards adhere to DevOps principles and can easily evolve over time
 > [!TIP]
 > See [Dashboard Share](xref:Overview_Collaboration#dashboard-share) for more information.
 
-The DataMiner Dashboards app offers a wide range of visualizations that can make use of various data feeds, including **GQI-based query feeds**. This "Queries" data item allows you to [construct queries](xref:Creating_GQI_query) to access the wealth of data available in your DataMiner System. See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi)
+The DataMiner Dashboards app offers a wide range of visualizations that can make use of various data, including **GQI-based queries**. This "Queries" data item allows you to [construct queries](xref:Creating_GQI_query) to access the wealth of data available in your DataMiner System. See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi)
 
 > [!TIP]
 > For more information:

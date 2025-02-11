@@ -13,7 +13,7 @@ Use this method to retrieve a specific number of masked element alarms.
 
 | Item       | Format  | Description                                                                         |
 |------------|---------|-------------------------------------------------------------------------------------|
-| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).    |
+| connection | String  | The connection ID. See [ConnectApp](xref:ConnectApp).                               |
 | dmaID      | Integer | The DMA ID.                                                                         |
 | elementID  | Integer | The element ID.                                                                     |
 | index      | Integer | The point from which to start returning alarms.                                     |

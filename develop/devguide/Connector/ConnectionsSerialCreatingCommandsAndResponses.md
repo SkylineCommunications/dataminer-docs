@@ -10,7 +10,7 @@ The first step is to implement all the needed parameters that will be used in th
 
 For example, consider the following implementation of a GET request as defined in the Hypertext Transfer Protocol (HTTP).
 
-![alt text](../../images/Example_command.jpg "Example command")
+![Example command](~/develop/images/Example_command.jpg)
 
 > [!NOTE]
 >
@@ -28,8 +28,8 @@ A fixed field is defined using a parameter of type "fixed". The content of fixed
 
 ```xml
 <Param id="100">
-   <Name>Space</Name>
-   <Description>Space</Description>
+   <Name>Fixed_Space</Name>
+   <Description>Fixed Space</Description>
    <Type>fixed</Type>
    <Interprete>
       <RawType>other</RawType>
@@ -63,7 +63,7 @@ The following example defines a command implementing an HTTP GET request:
 ```xml
 <Command id="2">
    <Name>HTTP_getSysConfig</Name>
-   <Description>HTTP_getSysConfig</Description>
+   <Description>HTTP - Get System Config</Description>
    <Content>
       <Param>10000</Param><!-- GET-->
       <Param>10001</Param><!-- 0x20 -->
@@ -79,37 +79,37 @@ The following example defines a command implementing an HTTP GET request:
 
 ### makeCommandByProtocol
 
-By default, the following behavior is applicable in serial drivers:
+By default, the following behavior is applicable in serial connectors:
 
 - For "execute group" actions (i.e., actions of type "execute" on group(s)), a "make" action is automatically performed for the command in the pair(s) referred to by the group(s).
 - "before command" triggers are executed just before the command is sent to SLPort.
 
 For example, consider the following logic being implemented in a protocol. In this case, the command is composed of 2 parameters: one fixed ("Get") and one with dynamic content.
 
-![alt text](../../images/Connection_Types_-_makeCommandByProtocol_Building_Blocks.png "Executing a command via a timer")
+![Executing a command via a timer](~/develop/images/Connection_Types_-_makeCommandByProtocol_Building_Blocks.png)
 
 When the timer goes off, group 1 will be added to the group execution queue. Now suppose parameter 2 holds value "A" at this time.
 
-![alt text](../../images/Protocol_Explained_-_Insertion_of_a_timer_group.svg "Insertion of a timer group in the group execution queue")
+![Insertion of a timer group in the group execution queue](~/develop/images/Protocol_Explained_-_Insertion_of_a_timer_group.svg)
 
 The group travels through the queue until it reaches the front and is processed. At this point, the command that will be sent to the SLPort process is composed based on the current values of the parameters that make up the command. At this point in time, it is possible that the value of parameter 2 has changed already (e.g. the content of parameter 2 is now 'B'). In this case, the command "Get B" will be sent to SLPort instead of "Get A". This could be undesired.
 
-![alt text](../../images/Protocol_Explained_-_Default_command_construction.svg "Default command construction")
+![Default command construction](~/develop/images/Protocol_Explained_-_Default_command_construction.svg)
 
-By using the "makeCommandByProtocol" communication option (see CommunicationOptions), commands will be composed the moment the corresponding group is added to the group execution queue. In the example, this means the command that will be sent is "Get A".
+When the [makeCommandByProtocol](xref:Protocol.Type-communicationOptions#makecommandbyprotocol) communication option is used, commands will be composed the moment the corresponding group is added to the group execution queue. In the example, this means the command that will be sent is "Get A".
 
 If this option is enabled, the following behavior is applicable:
 
 - No automatic "make" commands are executed.
 - "before command" triggers are executed before the group is added to the queue. This means a "before command" trigger is now executed prior to a "before group" trigger, while this was previously the other way around.
 
-![alt text](../../images/Protocol_Explained_-_Default_command_construction_with_makeCommandByProtocol.svg "Command construction when using makeCommandByProtocol")
+![Command construction when using makeCommandByProtocol](~/develop/images/Protocol_Explained_-_Default_command_construction_with_makeCommandByProtocol.svg)
 
 As in this case no automatic "make" action is performed, the protocol should define a "make command" action which triggers before each command.
 
 ```xml
 <Trigger id="11">
-   <Name>Before Command</Name>
+   <Name>Before Command Each</Name>
    <On id="each">command</On>
    <Time>before</Time>
    <Type>action</Type>
@@ -119,7 +119,7 @@ As in this case no automatic "make" action is performed, the protocol should def
 </Trigger>
 
 <Action id="10">
-   <Name>Make Command Action</Name>
+   <Name>Make Command</Name>
    <On>command</On>
    <Type>make</Type>
 </Action>
@@ -138,8 +138,8 @@ Defining a response is very similar to defining a command: specify which paramet
 
 ```xml
 <Response id="2">
-   <Name>setSysConfigResponse</Name>
-   <Description>Set System Configuration Response</Description>
+   <Name>setSysConfig</Name>
+   <Description>Set System Configuration</Description>
    <Content>
       <Param>10030</Param>
       <Param>10002</Param>
@@ -157,7 +157,7 @@ In case a response contains parameters that have LengthType set to "next param",
 
 ```xml
 <Trigger id="12">
-   <Name>Before Response</Name>
+   <Name>Before Response Each</Name>
    <On id="each">response</On>
    <Time>before</Time>
    <Type>action</Type>
@@ -167,7 +167,7 @@ In case a response contains parameters that have LengthType set to "next param",
 </Trigger>
 
 <Action id="12">
-   <Name>Read Response Action</Name>
+   <Name>Read Response</Name>
    <On>response</On>
    <Type>read</Type>
 </Action>
@@ -199,7 +199,7 @@ For example:
 ```xml
 <Response id="300">
   <Name>responseCWithLengthAndDataAtEndWithoutTrailer</Name>
-  <Description>ResponseC With Length And Data At End Without Trailer</Description>
+  <Description>Response C With Length And Data at End Without Trailer</Description>
   <Content>
      <Param>300</Param><!-- ResponseC Key Field -->
      <Param>301</Param><!-- ResponseC Variable Data -->
@@ -213,10 +213,9 @@ For example:
 The length parameter (ID 303) contains a definition as shown below.
 
 ```xml
-<Param id="303" trending="false">
+<Param id="303">
   <Name>ResponseCLengthField</Name>
-  <Description>ResponseC Length Field</Description>
-  <Information>...</Information>
+  <Description>Response C Length Field</Description>
   <Type>length</Type>
   <Interprete>
      <RawType>numeric text</RawType>
@@ -229,10 +228,6 @@ The length parameter (ID 303) contains a definition as shown below.
         <Param>4</Param>
      </Content>
   </Length>
-   <!--- SuppressValidator 2.11.1 Range not applicable -->
-   <!--- SuppressValidator 2.9.7 Unit not applicable -->
-  <Display>...</Display>
-  <Measurement>...</Measurement>
 </Param>
 ```
 
@@ -249,16 +244,17 @@ When the number of bytes is larger or smaller than defined, the response process
 ```xml
 <Trigger id="13">
    <Name>beforeResponse300</Name>
-   <On id="300">response</On> <!-- ResponseC With Length and Data At End Without Trailer -->
+   <On id="300">response</On> <!-- ResponseC With Length and Data at End Without Trailer -->
    <Time>before</Time>
    <Type>action</Type>
    <Content>
-      <Id>3</Id> <!-- On Response: Read --> 
+      <Id>3</Id> <!-- Response Read --> 
       <Id>4</Id> <!-- Response Length --> 
    </Content>
 </Trigger>
+
 <Action id="3">
-   <Name>On Response: Read</Name>
+   <Name>Response Read</Name>
    <On>response</On>
    <Type>read</Type>
 </Action>
@@ -295,10 +291,11 @@ The trigger to read the response will fail but the parameters of the response wi
 
 The reason is that only the last action in a trigger can cause a definitive cancel of the response. When the length action is not the last action, SLProtocol will try to parse the response up to the length parameter and this causes parameters before the length to be processed.
 
-#### See also
-
-- [Protocol.Actions.Action.Type](xref:Protocol.Actions.Action.Type)
-- [Protocol.Params.Param.Type](xref:Protocol.Params.Param.Type)
+> [!TIP]
+> See also:
+>
+> - [Protocol.Actions.Action.Type](xref:Protocol.Actions.Action.Type)
+> - [Protocol.Params.Param.Type](xref:Protocol.Params.Param.Type)
 
 ### Responses with dynamically defined length
 
@@ -314,7 +311,7 @@ In the example below, the Interprete.Length will be defined at runtime by the co
 ```xml
 <Response id="500">
   <Name>ResponseEWithOtherParam</Name>
-  <Description>ResponseEWithOtherParam</Description>
+  <Description>Response E With Other Param</Description>
   <Content>
      <Param>500</Param><!-- ResponseE Key Field -->
      <Param>501</Param><!-- ResponseE Variable Data -->
@@ -323,10 +320,10 @@ In the example below, the Interprete.Length will be defined at runtime by the co
      <Param>504</Param><!-- ResponseE Variable Length Data Field -->
   </Content>
 </Response>
-<Param id="503" trending="false">
+
+<Param id="503">
   <Name>ResponseELengthField</Name>
-  <Description>ResponseE Length Field</Description>
-  <Information>...</Information>
+  <Description>Response E Length Field</Description>
   <Type>read</Type>
   <Interprete>
      <RawType>numeric text</RawType>
@@ -334,14 +331,10 @@ In the example below, the Interprete.Length will be defined at runtime by the co
      <Length>2</Length>
      <Type>double</Type>
   </Interprete>
-   <!--- SuppressValidator 2.11.1 Range not applicable -->
-   <!--- SuppressValidator 2.9.7 Unit not applicable -->
-  <Display>...</Display>
-  <Measurement>...</Measurement>
 </Param>
-<Param id="504" trending="false">
+<Param id="504">
   <Name>responseEVariableLengthDataField</Name>
-  <Description>ResponseE Variable Length Data Field</Description>
+  <Description>Response E Variable Length Data Field</Description>
   <Type>read</Type>
   <Information>...</Information>
   <Interprete>
@@ -356,13 +349,13 @@ In the example below, the Interprete.Length will be defined at runtime by the co
 </Param>
 ```
 
-From DataMiner 10.0.3 (RN 24442) onwards, it is possible for the field that specifies the length to have a variable length. The following restrictions apply:
+The field that specifies the length can have a variable length.<!-- RN 24442 --> The following restrictions apply:
 
 - The response must contain a trailer that is set before the data parameter. (It does not have to contain a header.)
 - The length parameter should be located before the data parameter. It should be of length type "next param" and raw type "numeric text".
 - The length parameter must be located between two fixed parameters.
 
-![alt text](../../images/RN24442.svg "Responses with dynamically defined length")
+![Responses with dynamically defined length](~/develop/images/RN24442.svg)
 
 > [!NOTE]
 > An example protocol "Skyline Example Serial Response Matching" is available in the [SkylineCommunications/SLC-C-Example_Serial-Response-Matching](https://github.com/SkylineCommunications/SLC-C-Example_Serial-Response-Matching) GitHub repository.
@@ -397,7 +390,7 @@ This parameter has a CRC child tag, where CRC.Type defines how the CRC is calcul
 </Param>
 ```
 
-In the example below, the CRC calculation is done with parameter 0, 2, 6, 5 and 1.
+In the example below, the CRC calculation is done with parameter 0, 2, 6, 5, and 1.
 
 ```xml
 <Command id="1">
@@ -420,7 +413,7 @@ The following protocol fragment triggers a "crc response" action:
 
 ```xml
 <Trigger id="4">
-  <Name>CalculateCRC</Name>
+  <Name>BeforeResponse_410</Name>
   <On id="410">response</On>
   <Time>before</Time>
   <Type>action</Type>
@@ -430,7 +423,7 @@ The following protocol fragment triggers a "crc response" action:
 </Trigger>
 
 <Action id="410">
-  <Name>CalculateCRC</Name>
+  <Name>Response CRC</Name>
   <On>response</On>
   <Type>crc</Type>
 </Action>
@@ -487,7 +480,7 @@ The byte or bytes in question need to be stored in a parameter of type "group" w
 
 ```xml
 <Param id="1000">
-  <Name>status Bytes</Name>
+  <Name>statusBytes</Name>
   <Description>Status Bytes</Description>
   <Type>group</Type>
   <Interprete>
@@ -532,7 +525,7 @@ A parameter of type "write bit" can be used to change a bit from a byte that is 
 
 ```xml
 <Param id="147">
-  <Name>log tx power mask</Name>
+  <Name>logTxPowerMask</Name>
   <Description>Log Tx Power Mask</Description>
   <Type id="179">write bit</Type>
   <Interprete>
@@ -574,7 +567,7 @@ Note that a protocol will typically define 2 parameters of type "group"; one use
 
 ```xml
 <Param id="113">
-  <Name>fault history mask binary</Name>
+  <Name>faultHistoryMaskBinary</Name>
   <Description>Fault history Mask Binary</Description>
   <Type>group</Type>
   <Interprete>
@@ -585,7 +578,7 @@ Note that a protocol will typically define 2 parameters of type "group"; one use
   </Interprete>
 </Param>
 <Param id="179">
-  <Name>fault history mask binary write</Name>
+  <Name>faultHistoryMaskBinaryWrite</Name>
   <Description>Fault history Mask Binary Write</Description>
   <Type>group</Type>
   <Interprete>
@@ -654,8 +647,8 @@ Parameter 100 is now defined as follows:
 
 ```xml
 <Param id="100">
-   <Name>audio gain response parameter</Name>
-   <Description>audio gain response parameter</Description>
+   <Name>audioGain_ResponseParameter</Name>
+   <Description>Audio Gain - Response Parameter</Description>
    <Type id="3000">response</Type>
    <Interprete>
       <RawType>other</RawType>
@@ -671,8 +664,8 @@ This is a response that is not used in a pair, but is used to define the structu
 
 ```xml
 <Response id="3000">
-   <Name>response parameter audio gain</Name>
-   <Description>response parameter audio gain</Description>
+   <Name>Audio gain</Name>
+   <Description>Audio gain</Description>
    <Content optional="0+++;4">
       <Param>67</Param>
       <Param>62</Param>
@@ -686,12 +679,13 @@ This is a response that is not used in a pair, but is used to define the structu
 This allows the content of the different fields to be read without the use of a QAction.
 
 > [!NOTE]
-> For more information about the optional attribute, see optional.
+> For more information about the optional attribute, see [optional attribute](xref:Protocol.Responses.Response.Content-optional).
 
 A "read response" action is needed that must be triggered on this response.
 
 ```xml
 <Trigger id="58">
+   <Name>BeforeResponse_3000</Name>
    <On id="3000">response</On>
    <Time>before</Time>
    <Type>action</Type>

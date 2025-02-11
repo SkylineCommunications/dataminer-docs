@@ -94,6 +94,8 @@ On the *Alarm Console* page, several settings are available:
 
 - **Time before alarm banner hides**: Select this setting to set a delay of 30 seconds before the alarm banner hides. In order to set a different delay, select the setting and enter a different number of seconds in the box on the right.
 
+- **Enable the sound for the alarm banner**: Available from DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 41982-->. Determines whether a sound is played when the alarm banner is shown or updated. By default, a sound is played.
+
 - **Enable alarm storm protection by grouping alarms with the same parameter name**: This setting determines whether alarms with the same parameter name are grouped when a certain number of these alarms occur at the same time. In the boxes below the setting, you can configure when to start and stop grouping. By default, this setting is enabled, with a start value of 2000 and a stop value of 1900.
 
   > [!TIP]
@@ -177,6 +179,8 @@ On the *Card* page, the settings are divided into four sections, i.e. a section 
 - **Default view/element/EPM/service card page**: With these settings you can choose which page of view, element, EPM, and service cards will be shown when you open them.
 
   By default, this is the Visual Overview page. It is also possible to set cards to show a Data Display page or one of the default pages, to show the page that was last visible when the card was closed, or to show the Visual Overview page only if a Visio file has been assigned to it.
+
+- **Open EPM cards undocked**: Select this setting to open EPM cards in a new, undocked window. Available from DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards.<!-- RN 40782 -->
 
 - **Open element cards undocked**: Select this setting to open element cards in a new, undocked window. The setting also applies to parameter cards.
 

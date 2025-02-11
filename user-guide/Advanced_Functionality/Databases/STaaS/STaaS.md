@@ -1,6 +1,7 @@
 ---
 uid: STaaS
 description: With DataMiner Storage as a Service, you can connect your DataMiner System to a scalable, easy-to-use cloud-native storage platform.
+keywords: cloud storage, storage in the cloud
 ---
 
 # Storage as a Service (STaaS)
@@ -26,17 +27,17 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 
 ## Setting up STaaS
 
-For a self-hosted DataMiner System, follow the steps below to set up STaaS.
+For a self-managed DataMiner System, follow the steps below to set up STaaS.
 
 > [!NOTE]
 >
 > - This setup is not needed for [DataMiner as a Service (DaaS) systems](xref:Creating_a_DMS_in_the_cloud), as these automatically use STaaS.
 > - If you want to add a DMA to an existing DMS that uses STaaS, refer to [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
-1. [Upgrade your DataMiner System](xref:Upgrading_a_DataMiner_Agent) to version 10.4.0 [CU0] or higher.
+1. [Upgrade your DataMiner System](xref:Upgrading_a_DataMiner_Agent) to DataMiner 10.4.0 [CU0]/10.4.1 or higher.
 
    > [!NOTE]
-   > To be able to use non-indexed logger tables, upgrade to DataMiner version 10.4.0 [CU5]/10.4.8 or higher. <!-- RN 40066 -->
+   > To be able to use non-indexed logger tables, upgrade to DataMiner 10.4.0 [CU5]/10.4.8 or higher. <!-- RN 40066 -->
 
    > [!IMPORTANT]
    > We recommend always upgrading DataMiner to the latest available version to get the latest features and performance updates.
@@ -47,6 +48,7 @@ For a self-hosted DataMiner System, follow the steps below to set up STaaS.
 
    - STaaS West Europe: 20.76.71.123
    - STaaS UK South: 20.162.131.128
+   - STaaS Southeast Asia: 20.247.192.226
 
    > [!NOTE]
    > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
@@ -148,6 +150,7 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 | Average trending (long)  | 10 years     |
 | State changes            | 5 years      |
 | Spectrum traces          | 1 year       |
+| Alarm events             | 1 year       |
 
 ## Cost estimation
 
@@ -192,7 +195,10 @@ To request a cost estimation, follow the procedure below:
 If you have any questions regarding this cost estimation, please contact <staas@dataminer.services>.
 
 > [!IMPORTANT]
-> Cost estimations can currently only be performed for the West Europe and UK South regions.
+> Cost estimations can currently only be performed for the West Europe, UK South, and Southeast Asia regions.
+
+> [!TIP]
+> To optimize the cost efficiency of a STaaS solution, adhere to the best practices to prevent storing unnecessary data [with Automation scripts](xref:Automation_best_practices) or [with connectors](xref:Saving_parameters).
 
 ## Migrating existing data to STaaS
 
@@ -237,6 +243,10 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 > [!NOTE]
 > In case of issues during or after the migration, revert the `DB.xml` file to its previous state and re-trigger the migration process. If you want to be certain no data inconsistencies are possible, contact [STaaS support](mailto:staas@dataminer.services).
 
+## Deleting a system
+
+When you [disconnect a system from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices) or [remove a DaaS system](xref:Removing_a_DaaS_system), all STaaS data for that specific system, including backups, will be removed 7 days after you take this action. Upon request, all STaaS data can be recovered within those 7 days.
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:
@@ -267,6 +277,8 @@ In addition, the following **other limitations** currently apply:
 
 - DMZ setups are currently not supported.
 
+- Adding a DataMiner Agent to a DMS using STaaS requires [additional manual configuration steps](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
+
 - Regarding logger tables:
 
   - The [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement) tag is not supported.
@@ -277,7 +289,7 @@ In addition, the following **other limitations** currently apply:
 
 ## Troubleshooting
 
-For troubleshooting information related to STaaS, see [Troubleshooting – STaaS](xref:Troubleshooting_STaaS_Issues).
+For troubleshooting information related to STaaS, see [Troubleshooting – STaaS](xref:Troubleshooting_STaaS).
 
 > [!NOTE]
 > If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these using the available troubleshooting information, contact <staas@dataminer.services>.

@@ -51,9 +51,9 @@ Depends on the value of the infoID parameter:
   - result[6] (string): Current IP address (string)
     - For a normal Agent or a Failover Agent that is offline: primary IP address of first NIC.
     - For a Failover Agent that is online: virtual IP address (first NIC).
-  - result[7] (int[]): Version info (e.g. representing 9.0.5.6-1234)
-    - 0 = Major (e.g. 9)
-    - 1 = Minor  (e.g. 0)
+  - result[7] (int[]): Version info (e.g. representing 10.2.5.6-1234)
+    - 0 = Major (e.g. 10)
+    - 1 = Minor  (e.g. 2)
     - 2 = Sub 1 (e.g. 5)
     - 3 = Sub 2 (e.g. 6)
     - 4 = Build number (if available)

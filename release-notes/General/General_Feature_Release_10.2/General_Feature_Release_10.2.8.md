@@ -108,7 +108,7 @@ In the *Failover Config* window as well as the *Status* dialog box, the current 
 
 In the timeline of an embedded Resource Manager component, it is now possible to select multiple resource bands.
 
-To select more than one resource band, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive resource bands, click the first one and then click the last one while holding down the SHIFT key.
+To select more than one resource band, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive resource bands, click the first one and then click the last one while holding down the Shift key.
 
 When you select more than one resource band, the SelectedResource session variable will contain the GUIDs of all selected resources, separated by commas.
 
@@ -148,7 +148,7 @@ See the following examples:
 
 ### DMS Automation
 
-#### Added the option to skip the 'script started' information event \[ID 33666\]
+#### Added the option to skip the 'script started' information event [ID 33666]
 
 When sending an ExecuteScriptMessage, you can now specify that no “Script started” information event should be generated when the script is executed. To do so, add the SKIP_STARTED_INFO_EVENT:TRUE option to the string array as shown in the following example.
 
@@ -287,9 +287,9 @@ Up to now, each time a state component linked to a GQI query received an update,
 
 Also, when a query error occur, from now on, the actual error will be displayed instead of “No data”.
 
-#### Business Intelligence: Enhancements made to the automatic SLA data clean-up mechanism \[ID 33663\]
+#### Business Intelligence: Enhancements made to the automatic SLA data cleanup mechanism \[ID 33663\]
 
-A number of enhancements have been made to the automatic SLA data clean-up mechanism.
+A number of enhancements have been made to the automatic SLA data cleanup mechanism.
 
 #### GQI: Enhanced performance when running a GQI query with a filter applied to it \[ID 33664\]
 

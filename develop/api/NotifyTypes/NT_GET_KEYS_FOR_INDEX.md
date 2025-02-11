@@ -25,11 +25,11 @@ string[] primaryKeys = (string[])protocol.NotifyProtocol(196/*NT_GET_KEYS_FOR_IN
 
 ## Remarks
 
-- The use of the wrapper method SLProtocol.GetKeysForIndex is preferred over this notify call. See SLProtocol.GetKeysForIndex method.
-- In order for this method to work, the column must either be a foreign key column or it must have the option “indexColumn”.
-- Since DataMiner 9.0.0 [CU14]/9.0.5 [CU1] (RN 15333), this call no longer performs a case-sensitive lookup. In case a case-sensitive lookup is required, use the NT_GET_KEYS_FOR_INDEX_CASED notify type. See NT_GET_KEYS_FOR_INDEX_CASED (411).
+- The use of the wrapper method [SLProtocol.GetKeysForIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.GetKeysForIndex*) is preferred over this notify call.
+- In order for this method to work, the column must either be a foreign key column or it must have the option "indexColumn".
+- This call does not perform a case-sensitive lookup.<!-- RN 15333 --> In case a case-sensitive lookup is required, use the [NT_GET_KEYS_FOR_INDEX_CASED (411)](xref:NT_GET_KEYS_FOR_INDEX_CASED) notify type.
 
 ## See also
 
-- Requesting index values from index columns
+- [Requesting index values from index columns](xref:Protocol.Params.Param.ArrayOptions.ColumnOption#requesting-index-values-from-index-columns)
 - [GetKeysForIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.GetKeysForIndex(System.Int32,System.String)) method

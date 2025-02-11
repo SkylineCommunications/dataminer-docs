@@ -4,6 +4,14 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 5 November 2024 - Fix - ArtifactDeployer 1.8.2 - Fix memory leak [ID 41335]
+
+A NuGet dependency used by ArtifactDeployer could cause a memory leak. The dependencies have been updated to resolve this.
+
+#### 30 October 2024 - Enhancement - ArtifactDeployer 1.8.1 - Dependencies updated [ID 41283]
+
+Several dependencies have been updated.
+
 #### 8 August 2024 - Enhancement - ArtifactDeployer 1.8.0 - Upgrade to .NET 8 [ID 40441]
 
 DataMiner ArtifactDeployer has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.

@@ -5,7 +5,7 @@ uid: MOP_Upgrading_Elasticsearch_from_one_minor_version_to_another
 # Upgrading Elasticsearch from one minor version to another
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-managed storage even though this is not recommended, using [OpenSearch](xref:OpenSearch_database).
 
 ## Introduction
 

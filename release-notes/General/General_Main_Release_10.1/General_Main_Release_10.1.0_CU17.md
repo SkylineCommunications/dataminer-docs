@@ -16,9 +16,9 @@ uid: General_Main_Release_10.1.0_CU17
 
 A number of security enhancements have been made.
 
-#### Business Intelligence: Enhancements made to the automatic SLA data clean-up mechanism \[ID 33663\]
+#### Business Intelligence: Enhancements made to the automatic SLA data cleanup mechanism \[ID 33663\]
 
-A number of enhancements have been made to the automatic SLA data clean-up mechanism.
+A number of enhancements have been made to the automatic SLA data cleanup mechanism.
 
 ### Fixes
 

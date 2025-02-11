@@ -4,6 +4,10 @@ uid: fieldcontrol_change_log
 
 # Field Control change log
 
+#### 30 October 2024 - Enhancement - FieldControl 2.11.1 - Dependencies updated [ID 41280]
+
+Several dependencies have been updated.
+
 #### 8 August 2024 - Enhancement - FieldControl 2.11.0 - Upgrade to .NET 8 [ID 40436]
 
 DataMiner FieldControl has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.

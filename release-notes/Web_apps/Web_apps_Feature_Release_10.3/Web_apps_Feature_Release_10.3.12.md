@@ -8,7 +8,9 @@ uid: Web_apps_Feature_Release_10.3.12
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.12](xref:General_Feature_Release_10.3.12).
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.3.12](xref:General_Feature_Release_10.3.12).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.12](xref:Cube_Feature_Release_10.3.12).
 
 ## Changes
 
@@ -150,7 +152,7 @@ This issue would also occur when a visual overview had been embedded in a *Visua
 
 <!-- MR 10.3.0 [CU9] - FR 10.3.12 -->
 
-When, while editing a panel in a low-code app, you used CTRL+a to select all components on that panel and pressed DELETE to delete them, this would not only delete the components on the panel but also the other components on the rest of the page.
+When, while editing a panel in a low-code app, you used Ctrl+A to select all components on that panel and pressed DELETE to delete them, this would not only delete the components on the panel but also the other components on the rest of the page.
 
 #### Dashboards app & Low-Code Apps: Node keys would be omitted when converting a query to a JSON string [ID 37627]
 

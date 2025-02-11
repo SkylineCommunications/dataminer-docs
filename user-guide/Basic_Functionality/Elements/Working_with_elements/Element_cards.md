@@ -32,7 +32,7 @@ Element cards can look quite different depending on the element protocol. Howeve
 
   - **VISUAL**: One or more Visual Overview pages, which show a graphic representation of the element. These pages can be completely customized in Visio.
 
-  - **DATA**: One or more data display pages, determined by the element protocol.
+  - **DATA**: One or more Data Display pages, determined by the element protocol.
 
   - **ALARMS**: An overview of the alarms for this element, displayed in the default Alarm Console layout. See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console).
 

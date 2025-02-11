@@ -15,6 +15,6 @@ Use this method to retrieve the current alarm state of several specified objects
 
 ## Output
 
-| Item                           | Format          | Description                                        |
-|--------------------------------|-----------------|----------------------------------------------------|
+| Item                          | Format          | Description                                        |
+|-------------------------------|-----------------|----------------------------------------------------|
 | GetAlarmStateForObjectsResult | Array of string | The current alarm states of the specified objects. |

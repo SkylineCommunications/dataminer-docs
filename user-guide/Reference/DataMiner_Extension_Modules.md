@@ -45,6 +45,12 @@ The FieldControl module is responsible for handling incoming requests from datam
 
 This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
 
+### GQI
+
+The GQI module is responsible for handling [GQI queries](xref:About_GQI). See [GQI DxM](xref:GQI_DxM).
+
+This DxM is included in DataMiner upgrade packages from DataMiner 10.5.2/10.5.0 onwards and web-only upgrade packages from 10.5.2 onwards.<!-- RN 41811 -->
+
 ### Orchestrator
 
 The Orchestrator module is responsible for management and upgrades of DxMs through the [Admin app](xref:Managing_cloud-connected_nodes).
@@ -78,6 +84,8 @@ The CloudGateway module is responsible for connecting a DataMiner System to data
 The CloudFeed module is responsible for offloading data towards dataminer.services. This setting can be controlled in the [Admin app](xref:Controlling_cloudfeed_data_offloads). Among the data that is offloaded are alarm events, change point events, SRM events, element configuration events, and feedback events.
 
 From CloudFeed version 1.4.0 onwards, the minimum required DataMiner version is DataMiner 10.4.10.<!-- RN 40413 -->
+
+From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages by default include the latest version of the CloudFeed module. If a newer version of the CloudFeed module is available but you prefer not to install an upgrade package, you can install a newer version separately via the Admin app.
 
 ### DataAggregator
 

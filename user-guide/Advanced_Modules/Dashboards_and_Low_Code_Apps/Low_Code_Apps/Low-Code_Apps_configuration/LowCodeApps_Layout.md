@@ -30,7 +30,7 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
 1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing a low-code application](xref:Editing_custom_apps).
 
-1. In the panel on the right, select the *Layout* tab.
+1. In the panel on the right, select the *Layout* pane.
 
 1. Click the box indicating the currently used theme.
 
@@ -42,7 +42,7 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
 1. Make sure the low-code app page is in edit mode and no components are selected. See [Editing a low-code application](xref:Editing_custom_apps).
 
-1. In the panel on the right, select the *Layout* tab.
+1. In the panel on the right, select the *Layout* pane.
 
 1. Click *+ New theme*.
 
@@ -126,7 +126,7 @@ To create a new theme, see [Creating a new theme for a low-code app page](#creat
 
          - Dots
 
-       - *Sides*: Select which sides of the component border should be shown (from DataMiner 10.0.9 onwards).
+       - *Sides*: Select which sides of the component border should be shown.
 
        - *Thickness*: The thickness (in pixels) of the border that should be displayed around the components.
 

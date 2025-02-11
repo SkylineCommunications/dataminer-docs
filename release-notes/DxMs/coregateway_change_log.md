@@ -4,6 +4,14 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 30 October 2024 - Enhancement - CoreGateway 2.14.11 - Dependencies updated [ID 41282]
+
+Several dependencies have been updated.
+
+#### 30 October 2024 - Enhancement - CoreGateway 2.14.11 - Timeouts increased for GQI GenIfOpenSessionRequest [ID 41066]
+
+For GQI requests of type *GenIfOpenSessionRequest*, the timeout has been increased from 50 seconds to 15 minutes. This will give extensions like ad hoc data sources and custom operators more time to initialize.
+
 #### 25 July 2024 - Enhancement - CoreGateway 2.14.10 - Dependencies updated [ID 40312]
 
 Several dependencies have been updated.

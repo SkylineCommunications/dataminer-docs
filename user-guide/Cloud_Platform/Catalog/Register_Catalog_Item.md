@@ -11,18 +11,52 @@ When you register a new Catalog item, it will only become available for the regi
 A Catalog item is identified by a unique ID (GUID), which you will need to provide yourself.
 
 > [!IMPORTANT]
-> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Register Catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**. Also, note that you need to have the *Owner* role in order to access or create organization keys.
+> The API calls are authenticated using [organization keys](xref:Managing_DCP_keys#organization-keys). Make sure you use a key that has the *Register Catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**. Also, note that you need to have the *Owner* role in order to access or create organization keys. The API calls use the following rate limiting policy:
+>
+> - Partition key: IP address or host name of connection
+> - Burst limit: 100 requests
+> - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
+> - No queueing for extra requests beyond the token bucket
 
 > [!TIP]
 > For practical examples, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version), and [Registering a new version of a connector in the Catalog using GitHub Actions](xref:Tutorial_Register_Catalog_Version_GitHub_Actions).
+
+## Registering a Catalog item with workflows and tooling
+
+1. Create a *catalog.yml* or *manifest.yml* file as outlined under [Manifest file](#manifest-file) below.
+
+1. Generate an [organization key](xref:Managing_DCP_keys#organization-keys) with the *Register Catalog items* permission.
+
+1. Either use our pre-made workflows on GitHub or platform-independent tooling.
+
+   - If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+
+   - If you would prefer not to use Postman and HTTPS directly, try out our [platform-independent](xref:Platform_independent_CICD) *Catalog Uploader* tool: [Catalog Uploader README](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab).
+
+     To install and use the tool in any command line or bash:
+
+     ```bash
+     dotnet tool install -g Skyline.DataMiner.CICD.Tools.CatalogUpload
+     dataminer-catalog-upload update-catalog-details --path-to-catalog-yml "catalog.yml" --path-to-readme "README.md" --path-to-images "resources/images" --dm-catalog-token "abc123"
+     ```
+
+> [!IMPORTANT]
+> Unlike the API, the platform-independent tooling can operate without a predefined unique ID (GUID). If no ID is provided, it will create a new Catalog record and return the Catalog ID. For subsequent uploads, it is essential to use this returned Catalog ID to avoid creating duplicate records.
 
 ## Registering a Catalog item with the API
 
 The register API call allows you to create or update a Catalog item. To add a version after you have successfully registered an item, see [Registering a new version with the API](#registering-a-new-version-with-the-api).
 
-### URL
+### API Definition
 
-`https://api.dataminer.services/api/key-catalog/v1-0/catalog/register`
+For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
+
+This page also provides a quick way to execute the call: Expand the "catalog/register" item, and click the *Try it out* button.
+
+> [!IMPORTANT]
+> Clicking the *Try it out* button will execute the register call on the production Catalog.
+
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -34,15 +68,21 @@ The body of the request should be of type **multipart/form-data** and must conta
 
 The value of this key should be a .zip file containing the following items:
 
-- A [manifest.yml](xref:Register_Catalog_Item#manifest-file) file (required).
+- A [manifest.yml](#manifest-file) file (required).
 
 - A *README.md* file containing the description of the Catalog item (optional).
+
+  > [!TIP]
+  > See also: [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
 
 - An *images* folder containing any image referenced in the readme file (optional). Supported image extensions are .jpg, .jpeg, .png, .gif, .bmp, .tif, .tiff, and .webp.
 
 ```json
 file: <the zip file containing manifest, README and optional images>
 ```
+
+> [!NOTE]
+> To reference images in the README.md file, you can use the home directory (~/images) or relative path syntax (./images).
 
 #### Manifest file
 
@@ -51,34 +91,28 @@ This file will contain all the necessary information to register a Catalog item 
 ```yml
 # [Required]
 # Possible values for the Catalog item that can be deployed on a DataMiner System:
-#   - automationscript: If the Catalog item is a general-purpose DataMiner Automation script.
-#   - lifecycleserviceorchestration: If the Catalog item is a DataMiner Automation script designed to manage the life cycle of a service.
-#   - profileloadscript: If the Catalog item is a DataMiner Automation script designed to load a standard DataMiner profile.
-#   - userdefinedapi: If the Catalog item is a DataMiner Automation script designed as a user-defined API.
-#   - adhocdatasource: If the Catalog item is a DataMiner Automation script designed for an ad hoc data source integration.
-#   - chatopsextension: If the Catalog item is a DataMiner Automation script designed as a ChatOps extension.
-#   - connector: If the Catalog item is a DataMiner XML connector.
-#   - slamodel: If the Catalog item is a DataMiner XML connector designed as DataMiner Service Level Agreement model.
-#   - enhancedservicemodel: If the Catalog item is a DataMiner XML connector designed as DataMiner enhanced service model.
-#   - visio: If the Catalog item is a Microsoft Visio design.
-#   - solution: If the Catalog item is a DataMiner Solution.
-#   - testingsolution: If the Catalog item is a DataMiner Solution designed for automated testing and validation.
-#   - samplesolution: If the Catalog item is a DataMiner Solution used for training and education.
-#   - standardsolution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific use case or application.
-#   - dashboard: If the Catalog item is a DataMiner dashboard.
-#   - lowcodeapp: If the Catalog item is a DataMiner low-code app.
-#   - datatransformer: If the Catalog item is a Data Transformer.
-#   - dataquery: If the Catalog item is a GQI data query.
-#   - functiondefinition: If the Catalog item is a DataMiner function definition.
-#   - scriptedconnector: If the Catalog item is a DataMiner scripted connector.
-#   - bestpracticesanalyzer: If the Catalog item is a DataMiner Best Practices Analysis file.
-
+#   - Automation: If the Catalog item is a general-purpose DataMiner Automation script.
+#   - Ad Hoc Data Source: If the Catalog item is a DataMiner Automation script designed for an ad hoc data source integration.
+#   - ChatOps Extension: If the Catalog item is a DataMiner Automation script designed as a ChatOps extension.
+#   - Connector: If the Catalog item is a DataMiner XML connector.
+#   - Custom Solution: If the Catalog item is a DataMiner Solution.
+#   - Data Query: If the Catalog item is a GQI data query.
+#   - Data Transformer: Includes a data transformer that enables you to modify data using a GQI data query before making it available to users in low-code apps or dashboards.
+#   - Dashboard: If the Catalog item is a DataMiner dashboard.
+#   - DevTool: If the Catalog item is a DevTool.
+#   - Learning & Sample: If the Catalog item is a sample.
+#   - Product Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific product.
+#   - Scripted Connector: If the Catalog item is a DataMiner scripted connector.
+#   - Standard Solution: If the Catalog item is a DataMiner Solution that is an out-of-the-box solution for a specific use case or application.
+#   - System Health: If the Catalog item is intended to monitor the health of a system.
+#   - User-Defined API: If the Catalog item is a DataMiner Automation script designed as a user-defined API.
+#   - Visual Overview: If the Catalog item is a Microsoft Visio design.
 type: '<fill in type here>'
 
 # [Required] 
 # The ID of the Catalog item.
 # All registered versions for the same ID are shown together in the Catalog.
-# This ID can not be changed. 
+# This ID cannot be changed. 
 # If the ID is not filled in, the registration will fail with HTTP status code 500. 
 # If the ID is filled in but does not exist yet, a new Catalog item will be registered with this ID.
 # If the ID is filled in but does exist, properties of the item will be overwritten.
@@ -129,7 +163,8 @@ owners:
 #   Cannot contain newlines.
 #   Cannot contain leading or trailing whitespace characters.
 tags:
-  - '<fill in tag here>'
+  - '<fill in tag 1 here>'
+  - '<fill in tag 2 here>'
 ```
 
 ## Registering a new version with the API
@@ -139,15 +174,20 @@ The register version API call allows you to create a new version for a Catalog i
 > [!NOTE]
 > A version can only be registered once. Registration will fail if you try to register an existing version number of a Catalog item.
 
-### URL
-
-`https://api.dataminer.services/api/key-catalog/v1-0/catalog/{catalogId:GUID}/register/version`
-
 Route parameter "catalogId" is the ID of the Catalog item of which a new version is registered, which is the same as the ID used to [register the Catalog item](#registering-a-catalog-item-with-the-api). This must be a valid GUID.
 
 To obtain this ID for an existing Catalog item, navigate to its details page in the [Catalog](https://catalog.dataminer.services/). The ID is the last part of the URL.
 
-`https://catalog.dataminer.services/details/{CatalogId}`
+### API Definition
+
+For a complete definition of the API, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
+
+This page also provides a quick way to execute the call: Expand the "catalog/{catalogId}/register/version" item, and click the *Try it out* button.
+
+> [!IMPORTANT]
+> Clicking the *Try it out* button will execute the register call on the production Catalog.
+
+The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
 ### HTTP method
 
@@ -164,4 +204,7 @@ versionDescription: <The description of the version you want to register>
 ```
 
 > [!NOTE]
-> Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication).
+>
+> - Supported types are a DataMiner protocol package (.dmprotocol) and a DataMiner application package (.dmapplication).
+> - The version description must not exceed 1500 characters. The call will fail with a `Bad Request` error if the length exceeds the maximum allowed limit.<!-- RN 40956 -->
+> - Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.<!-- RN 41225 -->

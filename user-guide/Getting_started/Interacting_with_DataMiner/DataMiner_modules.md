@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_modules
+description: A DataMiner System can have several additional modules or apps, e.g. Automation, Dashboards, etc. Some require a specific type of DataMiner license.
 ---
 
 # DataMiner modules
@@ -15,7 +16,11 @@ A DataMiner System can have several additional modules or apps. Depending on the
 | [Scheduler](xref:About_the_Scheduler_module) | A module that can schedule certain actions in the DataMiner System. It works in close relation with the Automation module. |
 | [Spectrum Analysis](xref:SpectrumAnalysis) | A module that allows the integration of spectrum analyzers in a DataMiner System. |
 | System Center | A DataMiner Cube module that contains many DataMiner administrator functionalities, such as management of [users](xref:About_DMS_Security) and [DataMiner Agents](xref:DataminerAgents). |
-| [Apps](xref:Part5StandardApps) | DataMiner can have countless custom-made apps, designed specifically for a particular vendor or technology. There are also standard apps available, which combine different DataMiner features into a ready-made package that can easily be deployed on a DataMiner System. The package contains all the necessary components and default configurations, including protocols, views, Automation scripts, etc. Certain DataMiner features and licenses can be required as prerequisites, depending on the app. |
+| [Solutions](xref:solution_index) | DataMiner can have countless custom-made solutions, designed specifically for a particular vendor or technology. There are also standard solutions available, which combine different DataMiner features into a ready-made package that can easily be deployed on a DataMiner System. The package contains all the necessary components and default configurations, including protocols, views, Automation scripts, etc. Certain DataMiner features and licenses can be required as prerequisites, depending on the solution. |
 
-> [!NOTE]
-> For information on the other modules, refer to the module in question in the section [DataMiner modules](xref:Part4AdvancedModules).
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>For more information about other modules, take a look at our <a href="xref:Part4AdvancedModules" style="color: #657AB7;">DataMiner modules section</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>

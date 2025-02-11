@@ -1,5 +1,6 @@
 ---
 uid: dnSpy
+description: With the dnSpy tool, you can debug any assembly when developing DataMiner Automation scripts or connectors, even without the matching code.
 ---
 
 # dnSpy
@@ -19,6 +20,7 @@ To use this tool to debug Automation scripts or QActions on a remote system, fol
 1. Select *Debug > Attach to Process*, and select the process you want to debug (e.g. *SLAutomation.exe*, *SLScripting.exe*).
 
 1. Select *Debug > Windows > Modules*, and sort by timestamp in descending order to find the right module.
+
    This can be tricky, because every time you upload an Automation script or protocol, new assemblies are built, but the old ones remain in memory.
 
    > [!NOTE]

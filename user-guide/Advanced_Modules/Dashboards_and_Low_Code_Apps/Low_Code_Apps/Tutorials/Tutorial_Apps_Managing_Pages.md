@@ -75,7 +75,7 @@ Expected duration: 5 minutes.
 
    ![Web component](~/user-guide/images/WebComponent.png)
 
-1. Select the component you have added, go to the *Settings* tab on the right-hand side, and add HTML content in the *HTML* box:
+1. Select the component you have added, go to the *Settings* pane on the right-hand side, and add HTML content in the *HTML* box:
 
    ![HTML content](~/user-guide/images/WebComponentContent.png)
 
@@ -87,7 +87,7 @@ Expected duration: 5 minutes.
    </H2>
    ```
 
-1. In the *Layout* tab, set the theme of the component to "Transparent".
+1. In the *Layout* pane, set the theme of the component to "Transparent".
 
    ![Transparent theme](~/user-guide/images/ComponentTransparentTheme.png)
 
@@ -101,7 +101,7 @@ Expected duration: 5 minutes.
 
 ## Step 5: Duplicate a page
 
-You can quickly create a duplicate of an existing page, resulting in a new page that is identical to the original. The entire configuration, including feed references, will be preserved in this duplicated page.
+You can quickly create a duplicate of an existing page, resulting in a new page that is identical to the original. The entire configuration, including data references, will be preserved in this duplicated page.
 
 1. In the navigation sidebar, click the ... icon next to the page name of your new page and select *Duplicate*.
 

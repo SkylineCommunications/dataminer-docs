@@ -86,7 +86,7 @@ For now, creating multiple threads for the same connection is **only supported f
 
 #### Table sizes will now be limited [ID 39836]
 
-<!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
+<!-- MR 10.5.0 - FR 10.4.9 -->
 
 Table sizes will now be limited to protect DataMiner against ever-growing tables in elements.
 
@@ -526,9 +526,9 @@ To avoid such run-time errors, from now on, when SLSNMPManager is polling an SNM
 
 <!-- MR 10.3.0 [CU18]/10.4.0 [CU6] - FR 10.4.9 -->
 
-On Failover systems with a Cassandra Cluster setup, a Failover switch would take significantly longer than usual due to blocking calls in the SLASPConnection process.
+On Failover systems with a Cassandra setup, a Failover switch would take significantly longer than usual due to blocking calls in the SLASPConnection process.
 
-See also: [Failover switch taking a long time on systems with Cassandra Cluster setup](xref:KI_Failover_switch_Cassandra_Cluster)
+See also: [Failover switch taking a long time on systems with Cassandra setup](xref:KI_Failover_switch_Cassandra)
 
 #### Problem due to the protobuf-net framework in SLNetTypes being initialized on multiple threads [ID 39807]
 

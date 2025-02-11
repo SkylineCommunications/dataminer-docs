@@ -44,7 +44,7 @@ flowchart TD
     class Error classActionClickable;
 ```
 
-| **Flow item** | **Meaning** |
+| Flow item | Description |
 |--|--|
 | Error | Referenced by white cross in red circle. <br> Signifies a significant problem. |
 | Notice | Referenced by a black exclamation mark in a yellow triangle. <br> Signifies a potential problem or misconfiguration requiring attention. |
@@ -54,36 +54,36 @@ flowchart TD
 
 ## RTE
 
-| **Issue** | **Plan of attack** |
+| Issue | Plan of attack |
 |--|--|
 | Protocol Thread RTE | [Check Protocol thread run-time errors: use cases](xref:Protocol_thread_run_time_errors_use_cases) |
 
 ## Database Error
 
-| **Issue** | **Plan of attack** |
+| Issue | Plan of attack |
 |--|--|
 | Failed to Initialize Database tables | DMA cannot reach database <br> Refer to Database Flowchart |
 | The Service Manager is licensed, but no Elasticsearch database is active on the system. Therefore, Resource Manager and Service Manager will not initialize. |Elasticsearch has not been installed - verify with Skyline if an Elasticsearch setup is required and install [Elasticsearch](xref:Elasticsearch_database) if necessary. |
 
 ## Notice
 
-| **Issue** | **Plan of attack** |
+| Issue | Plan of attack |
 |--|--|
 | Alarm history exceeded 100 alarms. It is advised to revise your alarm threshold definitions. | 1. Preferably: stop toggling of alarm per parameter. <br> 2. If not possible, change [AlarmsPerParameter](xref:MaintenanceSettings_xml). |
 
 ## Information Event
 
-| **Issue** | **Plan of attack** |
+| Issue | Plan of attack |
 |--|--|
 | Automation script failed | Check the exception |
 
 ## Timeout
 
-| **Issue** | **Plan of attack** |
+| Issue | Plan of attack |
 |--|--|
 | SNMPv1,v2 Element in timeout | Refer to [SLSNMPManager flowchart](xref:Troubleshooting_SLSNMPManager_exe) |
 
 ## Alarms
-| **Issue** | **Plan of attack** |
+| Issue | Plan of attack |
 |--|--|
 | Alarms delayed | Refer to [SLElement Flowchart](xref:Troubleshooting_SLElement_exe) |

@@ -4,6 +4,18 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 30 October 2024 - Enhancement - SupportAssistant 1.7.1 - Include SLAutomation_BAK.txt in file offloads [ID 41281]
+
+From now on, the SLAutomation_BAK.txt file is also included in the file offloads.
+
+#### 30 October 2024 - Enhancement - SupportAssistant 1.7.1 - Temporary file location changed [ID 41281]
+
+From now on, the `%Temp%` folder will be used instead of `C:\Skyline_Data` for temporary files like remote log collection packages or file offloads for proactive support.
+
+#### 30 October 2024 - Enhancement - SupportAssistant 1.7.1 - Dependencies updated [ID 41281]
+
+Several dependencies have been updated.
+
 #### 8 August 2024 - Enhancement - SupportAssistant 1.7.0 - Upgrade to .NET 8 [ID 40440]
 
 DataMiner SupportAssistant has been upgraded to .NET 8. **Make sure .NET 8 is installed** before you upgrade to this version.

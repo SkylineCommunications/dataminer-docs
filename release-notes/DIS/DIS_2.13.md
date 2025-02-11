@@ -38,8 +38,10 @@ It is now possible to compare two protocols and have the major changes displayed
 To compare two protocols, do the following:
 
 1. Open both protocols in Visual Studio.
-2. At the top of the XML editor tab containing one of the protocols, open the *Validator* drop-down menu, and click *Compare*.
-3. In the *Major Change Check* window, select the two protocols to be compared, and click *Check*.
+
+1. At the top of the XML editor tab containing one of the protocols, open the *Validator* drop-down menu, and click *Compare*.
+
+1. In the *Major Change Check* window, select the two protocols to be compared, and click *Check*.
 
 > [!NOTE]
 >
@@ -104,7 +106,7 @@ This control always shows the path towards the node that is currently selected i
 - If you click a breadcrumb (e.g. “Params”), the corresponding (parent) node will be selected in the tree view (e.g. “Params”).
 - If you click an arrow next to a breadcrumb, a drop-down list will open, allowing you to immediately navigate to one of the child nodes.
 
-Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. CTRL+1) has been enhanced. Up to now, this shortcut allowed you to select the DIS tree node representing the element you were editing in the XML editor. From now on, it will also allow you to select the DIS tree node representing the QAction you are editing in the C# editor.
+Also, the *DIS.JumpToDisTree* keyboard shortcut (i.e. Ctrl+1) has been enhanced. Up to now, this shortcut allowed you to select the DIS tree node representing the element you were editing in the XML editor. From now on, it will also allow you to select the DIS tree node representing the QAction you are editing in the C# editor.
 
 ### Validator
 

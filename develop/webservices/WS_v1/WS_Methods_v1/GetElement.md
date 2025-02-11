@@ -16,6 +16,6 @@ Use this method to retrieve the data of a particular element.
 
 ## Output
 
-| Item             | Format                                               | Description                        |
-|------------------|------------------------------------------------------|------------------------------------|
+| Item             | Format                        | Description                        |
+|------------------|-------------------------------|------------------------------------|
 | GetElementResult | [DMAElement](xref:DMAElement) | The data of the specified element. |

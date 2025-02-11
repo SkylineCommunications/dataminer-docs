@@ -10,9 +10,9 @@ uid: Setting_up_a_new_DMS_in_DataMiner_Cube
 
    1. Go to *Apps* > *System Center* > *Agents.*
 
-   1. In the *Manage* tab, select the DataMiner Agent to which you are connected (it is marked by an icon with a small “1”).
+   1. In the *Manage* tab, select the DataMiner Agent to which you are connected (it is marked by an icon with a small "1").
 
-   1. In the pane on the right, next to *Cluster*, enter the name of the DMS, and then click *Add Cluster* (prior to DataMiner 10.0.13) or *Join cluster* (from DataMiner 10.0.13 onwards).
+   1. In the pane on the right, next to *Cluster*, enter the name of the DMS, and then click *Join cluster*.
 
       > [!IMPORTANT]
       > Avoid starting the name of your DMS with a special character whose Base64 encoding begins with a number to prevent issues with NATS. For more details, see [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars). You can verify if a special character begins with a number in Base64 format by using an [online encoder](https://www.base64encode.org/). For example, "♣" translates to "4pmj".

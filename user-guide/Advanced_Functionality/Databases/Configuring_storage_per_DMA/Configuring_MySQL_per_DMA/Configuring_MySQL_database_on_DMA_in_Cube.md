@@ -1,5 +1,6 @@
 ---
 uid: Configuring_MySQL_database_in_Cube
+keywords: local database
 ---
 
 # Configuring the SQL database settings

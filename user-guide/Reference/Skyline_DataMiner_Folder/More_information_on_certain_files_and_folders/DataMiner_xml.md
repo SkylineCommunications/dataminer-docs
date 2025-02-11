@@ -54,7 +54,7 @@ This tag can have the following attributes:
 
 - **protocolVisioLnk**: When set to "1", this tag indicates that DataMiner has attempted to create all the *Visio.lnk* files that indicate the current Visio file for a protocol. This is used for troubleshooting purposes.
 
-- **readProperties**: Automatically generated attribute, indicating that existing properties that were previously saved in the info database table are now saved in *Element.xml*.
+- **readProperties**: Automatically generated attribute. Deprecated.
 
 - **readElementData**: Automatically generated attribute, indicating that previously configured element data that was saved in *DataMiner.xml* has been moved to the element data database tables.
 

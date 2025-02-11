@@ -22,25 +22,26 @@ classDef DarkBlue fill:#1E5179,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef DarkGray fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
-Start[SLDataMiner problem]
-StartPage([Start page])
-RTE{{"Is there an RTE<br> or memory leak?"}}
-Watchdog[Check SLWatchdog2.txt log to <br>see when the RTE started.]
-Threads{{Which SLDataMiner <br>thread is affected?}}
-ThreadsDB[DBThread<br/>ReplicationDBThread<br/>Database Cleaning Thread<br/>Database Forwarding<br/>Database Offload Thread<br/>DatagatewayElementData Thread]
-Offload[- Check Offload DB folder <br> for new files.<br>- Confirm DB connection <br> is healthy.<br>- Check if there are <br> big tables that <br>might be slowing <br> down queries.]
-CassandraTb([Cassandra troubleshooting])
-ThreadsSecondary[ExecuteThread<br/>LDAP NotificationThread<br/>AlarmStackThread<br/>ActionThread<br/>RedundancyThread]
-CheckLogs[- Check SLErrors and <br> SLDataMiner logs <br>around the time <br> of the RTE.<br>- Run SLLogCollector <br> and send the <br>package to the <br> software team.]
-InfoEvents{{Check information events <br>around the time of the RTE.<br>Is there an action that might <br>have triggered the RTE?}}
-Revert[Revert the action <br> and check if <br> the RTE goes away.]
-LogCollector1[Run SLLogCollector <br> and send the <br>package to the <br> software team.]
-MemoryLeak[Check the trending <br> on the Microsoft <br>element when the <br> memory leak started.]
-LinkLeak{{Can you link an <br> event/action on <br>the DMA to when <br> the leak started?}}
-ElementActive{{Was an element activated?}}
-LogCollector2[Run SLLogCollector and select <br>SLDataMiner memory to be <br>collected now and when it <br>increases by at least 100 MB.]
-StopElement[Stop the element and check<br/> if the issue is on the device.]
-InfoEventsAlternative[Check information events <br> on the DMA to see <br> what else it could be.]
+%% Define blocks %%
+Start["SLDataMiner problem"]
+StartPage([" Start page "])
+RTE{{"Is there an RTE or memory leak?"}}
+Watchdog[" Check SLWatchdog2.txt log to see when the RTE started. "]
+Threads{{" Which SLDataMiner thread is affected?" }}
+ThreadsDB[" DBThread<br/>ReplicationDBThread<br/>Database Cleaning Thread<br/>Database Forwarding<br/>Database Offload Thread<br/>DatagatewayElementData Thread "]
+Offload[" \- Check Offload DB folder for new files.<br>\- Confirm DB connection is healthy.<br>\- Check if there are big tables that might be slowing down queries. "]
+CassandraTb([" Cassandra troubleshooting "])
+ThreadsSecondary[" ExecuteThread<br/>LDAP NotificationThread<br/>AlarmStackThread<br/>ActionThread<br/>RedundancyThread "]
+CheckLogs[" \- Check SLErrors and SLDataMiner logs around the time of the RTE.<br>\- Run SLLogCollector and send the package to the software team. "]
+InfoEvents{{" Check information events around the time of the RTE. Is there an action that might have triggered the RTE?"}}
+Revert[" Revert the action and check if the RTE goes away. "]
+LogCollector1[" Run SLLogCollector and send the package to the software team. "]
+MemoryLeak[" Check the trending on the Microsoft element when the memory leak started. "]
+LinkLeak{{" Can you link an event/action on the DMA to when the leak started? "}}
+ElementActive{{" Was an element activated? "}}
+LogCollector2[" Run SLLogCollector and select SLDataMiner memory to be collected now and when it increases by at least 100 MB. "]
+StopElement[" Stop the element and check if the issue is on the device. "]
+InfoEventsAlternative[" Check information events on the DMA to see what else it could be. "]
 %% Connect blocks %%
 Start ---- RTE
 RTE ---|RTE|Watchdog

@@ -8,7 +8,9 @@ uid: Cube_Main_Release_10.3.0_CU2
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU2](xref:General_Main_Release_10.3.0_CU2).
+>
+> - For release notes related to the general DataMiner release, see [General Main Release 10.3.0 CU2](xref:General_Main_Release_10.3.0_CU2).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.3.0 CU2](xref:Web_apps_Main_Release_10.3.0_CU2).
 
 ### Enhancements
 
@@ -100,7 +102,7 @@ From now on, when you drag several elements or services from a view card onto a 
 - **the items in that view will be moved** to the view in Surveyor, and
 - **the items in any of its sub-views will be copied** to the view in the Surveyor.
 
-If you want to the items in the view to be **copied** to the view in the Surveyor instead of moved, keep the CTRL key pressed while dragging them.
+If you want to the items in the view to be **copied** to the view in the Surveyor instead of moved, keep the Ctrl key pressed while dragging them.
 
 #### Trending - Pattern matching: Miscellaneous issues fixed [ID 35961]
 

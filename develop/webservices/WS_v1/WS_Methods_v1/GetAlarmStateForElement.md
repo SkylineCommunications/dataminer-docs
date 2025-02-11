@@ -16,6 +16,6 @@ Use this method to retrieve the current alarm state of an element.
 
 ## Output
 
-| Item                           | Format | Description                                       |
-|--------------------------------|--------|---------------------------------------------------|
+| Item                          | Format | Description                                       |
+|-------------------------------|--------|---------------------------------------------------|
 | GetAlarmStateForElementResult | String | The current alarm state of the specified element. |

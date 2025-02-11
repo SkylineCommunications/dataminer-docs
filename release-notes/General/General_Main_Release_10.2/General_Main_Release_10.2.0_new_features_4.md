@@ -169,12 +169,12 @@ In the service diagram, it is now possible to change the end points of connectio
 
 #### DataMiner Cube start window: Opening a Cube instance without closing the start window \[ID 28608\]
 
-It is now possible to connect to a DMA without closing the start window. To do so, in the start window, click a tile while holding the CTRL button.
+It is now possible to connect to a DMA without closing the start window. To do so, in the start window, click a tile while holding the Ctrl key.
 
 This will allow you to open multiple instances of DataMiner Cube, each connected to a different DMA.
 
 > [!NOTE]
-> If you press ENTER while holding the CTRL button, a Cube instance will open and connect to the DMA specified in the currently selected tile.
+> If you press ENTER while holding the Ctrl key, a Cube instance will open and connect to the DMA specified in the currently selected tile.
 
 #### DataMiner Cube: Option to return to the start window after logging out \[ID 28648\]
 

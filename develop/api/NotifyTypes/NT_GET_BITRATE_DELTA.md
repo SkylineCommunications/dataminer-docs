@@ -4,7 +4,7 @@ uid: NT_GET_BITRATE_DELTA
 
 # NT_GET_BITRATE_DELTA (269)
 
-Retrieves the time between two consecutive executions of the specified SNMP group (in ms).
+Retrieves the time between two consecutive executions of the specified SNMP group (in ms).<!-- RN 2906 -->
 
 ```csharp
 int groupID = 10;
@@ -22,11 +22,11 @@ int delta = Convert.ToInt32(protocol.NotifyProtocol(269/*NT_GET_BITRATE_DELTA*/,
 
 ## Remarks
 
-- Supported since DataMiner version 6.5.4 (RN 2906).
 - When a retry is performed because of a timeout, this will be considered a new execution of the group.
-- From DataMiner 10.1.6 (RN 29445) onwards, you can retrieve the time delta per row when polling an SNMP table. This will only work for the multipleGetNext and multipleGetBulk polling schemes, since only these polling schemes retrieve entire rows per request.
 
-  It is advised to enable this feature at startup using the notify protocol command NT_SET_BITRATE_DELTA_INDEX_TRACKING (see [NT_SET_BITRATE_DELTA_INDEX_TRACKING (448)](xref:NT_SET_BITRATE_DELTA_INDEX_TRACKING)) with either a single parameter ID or multiple parameter IDs. This information will not be saved and will only be kept as long as the element is running.
+- While it possible to retrieve the time delta per row when polling an SNMP table, this will only work for the multipleGetNext and multipleGetBulk polling schemes, since only these polling schemes retrieve entire rows per request.<!-- RN 29445 -->
+
+  We recommend enabling this feature at startup using the notify protocol command NT_SET_BITRATE_DELTA_INDEX_TRACKING (see [NT_SET_BITRATE_DELTA_INDEX_TRACKING (448)](xref:NT_SET_BITRATE_DELTA_INDEX_TRACKING)) with either a single parameter ID or multiple parameter IDs. This information will not be saved and will only be kept as long as the element is running.
 
   Once tracking has been enabled, the information can be retrieved by using the notify protocol command NT_GET_BITRATE_DELTA with a string as the second argument. In the following example, the command will return the delta value for the specified key ("1") of the specified parameter (100).
 

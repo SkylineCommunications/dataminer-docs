@@ -4,6 +4,8 @@ uid: Protocol.HTTP.Session.Connection-ignoreTimeout
 
 # ignoreTimeout attribute
 
+<!-- RN 10543 -->
+
 If the HTTP connection should ignore timeout, set this attribute to *true*.
 
 ## Content Type
@@ -19,5 +21,3 @@ If the HTTP connection should ignore timeout, set this attribute to *true*.
 This works in a similar way as the serial pair [ignoreTimeout](xref:Protocol.Pairs.Pair-options#ignoretimeout) option.
 
 Default value: false.
-
-*Feature introduced in DataMiner 9.0.2 (RN 10543).*

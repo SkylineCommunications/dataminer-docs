@@ -6,22 +6,21 @@ uid: Configuring_the_necessary_tags_in_DataMiner_xml
 
 1. If you want the DMA to forward alarm events via a particular TCP/IP socket, then add an *\<AlarmSocket>* tag and specify the socket in the *port* attribute.
 
-    Example:
+   Example:
 
-    ```xml
-    <AlarmSocket port="5000"/>
-    ```
+   ```xml
+   <AlarmSocket port="5000"/>
+   ```
 
-2. If you want to allow the DMA to forward information about elements and parameters when it receives a request on a particular TCP/IP socket, then add a *\<PollSocket>* tag and specify the socket in the *port* attribute.
+1. If you want to allow the DMA to forward information about elements and parameters when it receives a request on a particular TCP/IP socket, then add a *\<PollSocket>* tag and specify the socket in the *port* attribute.
 
-    Example:
+   Example:
 
-    ```xml
-    <PollSocket port="5025"/>
-    ```
+   ```xml
+   <PollSocket port="5025"/>
+   ```
 
-3. Save the *DataMiner.xml* file and restart the DataMiner software.
+1. Save the *DataMiner.xml* file and restart the DataMiner software.
 
 > [!NOTE]
 > The *DataMiner.xml* file is not synchronized throughout the DataMiner System. It is unique for each DMA. As a result, you can have different socket configurations on each of your DMAs.
->

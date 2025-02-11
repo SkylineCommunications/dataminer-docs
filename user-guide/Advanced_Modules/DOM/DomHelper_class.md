@@ -137,7 +137,9 @@ These are the supported comparers when filtering on `DomInstance` values using t
 *Only supported for [STaaS](xref:STaaS)
 
 > [!NOTE]
-> From DataMiner 10.4.5/10.4.0 [CU2] onwards, `string` filters are handled as case-insensitive when using the OpenSearch database (which is how STaaS has handled `string` reads since its introduction). Prior to DataMiner version 10.4.5/10.4.0 [CU2], `string` filters are handled as case-sensitive.
+>
+> - From DataMiner 10.4.5/10.4.0 [CU2] onwards, `string` filters are handled as case-insensitive when using the OpenSearch database (which is how STaaS has handled `string` reads since its introduction). Prior to DataMiner version 10.4.5/10.4.0 [CU2], `string` filters are handled as case-sensitive.
+> - When multiple sections of one `SectionDefinition` are allowed, filtering on a `FieldValue` scoped to a single section is not possible. See [Multiple sections](xref:DOM_MultipleSections#filtering).
 
 **Examples:**
 
@@ -184,6 +186,36 @@ var combinedResult = domHelper.DomInstances.Read(andFilter);
 >
 > For STaaS, there is no such hard limit, but we do recommend keeping the queries short.
 
+#### Sorting
+
+It is also possible to sort your results based on a specific field of a DOM instance (both core fields and `FieldValues`). This sorting is done in the database, which should result in good performance. To apply this sorting, call the `OrderBy` or `OrderByDescending` methods on a filter. This will return a query object that can be passed to the read method of the helper.
+
+**Examples:**
+
+```csharp
+var domHelper = new DomHelper(engine.SendSLNetMessages, "vehicles_app");
+
+// Build a filter
+var filter = DomInstanceExposers.StatusId.Equal("maintenance");
+
+// Sort ascending on name
+var onNameQuery = filter.OrderBy(DomInstanceExposers.Name);
+var orderedOnName = domHelper.DomInstances.Read(onNameQuery);
+
+// Sort descending on last modified
+var onModifiedQuery = filter.OrderByDescending(DomInstanceExposers.LastModified);
+var orderedOnModified = domHelper.DomInstances.Read(onModifiedQuery);
+
+// Sort on certain field (e.g. 'Vehicle mass')
+var fieldDescriptorId = new FieldDescriptorID(Guid.Parse("253700a1-1293-4dfa-997b-86efb601d894")); // Vehicle mass
+var field = DomInstanceExposers.FieldValues.DomInstanceField(fieldDescriptorId);
+var onFieldQuery = filter.OrderBy(field);
+var orderedOnField = domHelper.DomInstances.Read(onFieldQuery);
+```
+
+> [!NOTE]
+> Natural sorting is not supported. Enabling this option on the sorting API could result in poor performance since this will be executed in memory and requires all data to be loaded from the database.
+
 ### Multiple instances
 
 When multiple `DomInstances` need to get created, updated, or deleted, we recommend calling the *CreateOrUpdate* or *Delete* methods on a `DomInstance` CRUD helper component with a list of those `DomInstances`. This feature is available from DataMiner 10.4.2/10.5.0 onwards<!-- RN 37891 -->.
@@ -198,7 +230,7 @@ var createResult = helper.DomInstances.CreateOrUpdate(domInstances);
 *CreateOrUpdate* will consider the provided `DomInstances` that already exist as updates. The other `DomInstances` will be created. Providing a mix of both is supported.
 
 > [!TIP]
-> For more information and best practices for using these calls, see [Processing multiple DomInstances — examples](xref:DOM_BulkProcessing_Example).
+> For more information and best practices for using these calls, see [Processing multiple DomInstances — examples](xref:DOM_BulkProcessing_Examples).
 
 > [!IMPORTANT]
 > When designing the object model, consider if a high number of `DomInstances` might need to be processed quickly or need to be provisioned. If this is the case, we recommend avoiding related actions such as [launching script actions](xref:ExecuteScriptOnDomInstanceActionSettings) and [history tracking](xref:DOM_history).
@@ -207,22 +239,33 @@ var createResult = helper.DomInstances.CreateOrUpdate(domInstances);
 
 #### Call result
 
-When the operation fails for one of the `DomInstances`, the result of those calls will contain the necessary information.
+The result of the bulk methods will contain:
 
-- When `CreateOrUpdate` is called, the result will contain a list of `DomInstances` that were successfully created or updated. The trace data is available per `DomInstance` ID.
-- When `Delete` is called with a list of `DomInstances`, the result will contain a list of `DomInstance` IDs that were successfully deleted. The trace data is also available per `DomInstance` ID.
+- A list of `DomInstances` that were successfully created or updated, when `CreateOrUpdate` is called.
 
-If an issue occurs when an item gets created, updated, or deleted (e.g. validation), no exception will be thrown (even when `ThrowExceptionsOnErrorData` is *true*). The result of the call can be used to check for which `DomInstances` the call succeeded or failed. In addition, the trace data of that call is available and will contain the trace data for all processed `DomInstances`.
+- A list of `DomInstance` IDs that were successfully deleted, when `Delete` is called.
 
-In case the entire operation fails (e.g. when the storage layer fails while storing the data) a `CrudFailedException` is thrown. If, in that case, `ThrowExceptionsOnErrorData` was set to false, these calls will return `null` and the `TraceData` of the last call should be checked to get more details about the issue. For information on how to implement this flow, refer to the [Unexpected issue example](xref:DOM_BulkProcessing_Example#unexpected-issue).
+From DataMiner 10.5.0/10.5.2 onwards<!-- RN 41546 -->, if an issue occurs for any of the items that are getting created, updated, or deleted in bulk (e.g. validation), a `BulkCrudFailedException<DomInstanceId>` will be thrown. The `Result` property in the exception can be used to check for which `DomInstances` the call succeeded or failed. For information on how to implement this flow, refer to the [Checking issues example](xref:DOM_BulkProcessing_Examples#checking-issues).
+
+As an alternative, the `TryCreateOrUpdate` or `TryDelete` methods can be used. When the operation fails for one of the `DomInstances`, those calls will return false. The `result` output parameter will contain:
+
+- The list of successfully processed items, as is the case for `CreateOrUpdate` and `Delete`.
+
+- A list of `DomInstance` IDs that failed to be created, updated, or deleted.
+
+- The trace data per `DomInstance` ID.
+
+For each of these methods, the trace data of that call is still available and will contain the trace data for all processed `DomInstances`.
+
+In DataMiner versions prior to DataMiner Feature Release 10.5.0/10.5.2<!-- RN 37891 -->, when any validation issue occurs, no exception is thrown (even when `ThrowExceptionsOnErrorData` is true) when calling the `CreateOrUpdate` or `Delete` methods. Instead, the result of the call should be used to check for which `DomInstances` the call succeeded or failed.
 
 #### Maximum number of instances
 
 Since these calls might trigger related actions (such as [launching script actions](xref:ExecuteScriptOnDomInstanceActionSettings)), this could cause a high load on the system when a lot of instances are involved. A limit of 100 `DomInstances` is set, to make sure those bulk operations are implemented with scalability in mind. When a higher number of instances need processing, these actions will need to be performed in batches.
 
-You can also find this maximum number of instances for the `CreateOrUpdate` or `Delete` calls in the `MaxAmountBulkOperation` property on a `DomInstance` CRUD helper component.
+You can also find this maximum number of instances for the `CreateOrUpdate`, `TryCreateOrUpdate`, `Delete`, or `TryDelete` calls in the `MaxAmountBulkOperation` property on a `DomInstance` CRUD helper component.
 
-If more items get passed, `CreateOrUpdate` or `Delete` calls will fail with a `DomInstanceCrudMaxAmountExceededArgumentException`, and the message of the exception will state how many items were passed.
+If more items get passed, `CreateOrUpdate`, `TryCreateOrUpdate`, `Delete`, or `TryDelete` calls will fail with a `DomInstanceCrudMaxAmountExceededArgumentException`, and the message of the exception will state how many items were passed.
 
 ## Special methods
 

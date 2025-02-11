@@ -14,7 +14,7 @@ Defines an additional thread.
 
 |Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
-|[connection](xref:Protocol.Threads.Thread-connection)|[TypeSemicolonSeparatedNumbers](xref:Protocol-TypeSemicolonSeparatedNumbers)|Yes|Specifies the connection ID, or a comma-separated list of different connection IDs.|
+|[connection](xref:Protocol.Threads.Thread-connection)|[TypeCommaSeparatedNumbers](xref:Protocol-TypeCommaSeparatedNumbers)|Yes|Specifies the connection ID, or a comma-separated list of different connection IDs.|
 |[id](xref:Protocol.Threads.Thread-id)|[TypeNonLeadingZeroUnsignedInt](xref:Protocol-TypeNonLeadingZeroUnsignedInt)|No|Specifies a unique ID that can be used as a target for group execution.|
 |[name](xref:Protocol.Threads.Thread-name)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|No|Specifies a name for the thread.|
 

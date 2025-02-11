@@ -31,22 +31,22 @@ description: DataMiner tutorials are step-by-step guides that teach you how to u
 
 <div class="row"> 
   <div class="column">
+    <a href="/tutorials/DCF_tutorials.html" title="DCF tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DCF.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/tutorials/Correlation_Tutorials.html" title="Correlation tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Correlation.svg" style="width:100%"></a>
   </div>  
   <div class="column">
     <a href="/tutorials/Dashboards_Low_Code_Apps.html" title="Dashboards and Low-Code Apps tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Dashboards_Low_Code_Apps.svg" style="width:100%"></a>
   </div>
-  <div class="column">
-    <a href="/tutorials/Data_sources_tutorials.html" title="Data Sources tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Data_Sources.svg" style="width:100%"></a>
-  </div>
 </div>
 
 <div class="row"> 
   <div class="column">
-    <a href="/tutorials/EPM_tutorials.html" title="EPM tutorials" target="_self"><img src="~/tutorials/images/Tutorials_EPM.svg" style="width:100%"></a>
+    <a href="/tutorials/Data_sources_tutorials.html" title="Data Sources tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Data_Sources.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/tutorials/IDP_Tutorials.html" title="IDP tutorials" target="_self"><img src="~/tutorials/images/Tutorials_IDP.svg" style="width:100%"></a>
+    <a href="/tutorials/Frameworks_and_Solutions_Tutorials.html" title="Frameworks & Solutions tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Frameworks_Solutions.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/tutorials/DIS_Tutorials.html" title="DIS tutorials" target="_self"><img src="~/tutorials/images/Tutorials_DIS.svg" style="width:100%"></a>

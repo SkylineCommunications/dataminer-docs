@@ -9,7 +9,7 @@ uid: General_Feature_Release_10.3.2
 
 > [!TIP]
 >
-> - For release notes related to DataMiner Cube, see [DataMiner Cube 10.3.2](xref:Cube_Feature_Release_10.3.2).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.2](xref:Cube_Feature_Release_10.3.2).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ## Features
@@ -666,8 +666,8 @@ Up to now, the following keyboard shortcuts would not work in the dashboard edit
 
 | Shortcut | Action                          |
 |----------|---------------------------------|
-| CTRL+a   | Select all components.          |
-| DELETE   | Delete the selected components. |
+| Ctrl+A   | Select all components.          |
+| Delete   | Delete the selected components. |
 
 #### GQI: Metadata would incorrectly be removed when a custom operator was applied [ID 35283]
 

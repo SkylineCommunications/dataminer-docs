@@ -18,7 +18,7 @@ An action is executed because it is referred to by a trigger or because it is pa
 
 A trigger gets executed because it is triggered by a specified parameter, command, response, pair, group, timer or protocol. A trigger can also be forced to execute from a Quick Action (using the CheckTrigger method of the SLProtocol interface), by another trigger, or because it is part of a group being executed. This is indicated by a green dashed line.
 
-![alt text](../../images/Protocol_Explained_-_Overview_Interprocess_Communication.svg "Protocol execution inner workings overview")
+![alt text](~/develop/images/Protocol_Explained_-_Overview_Interprocess_Communication.svg "Protocol execution inner workings overview")
 
 ## See also
 

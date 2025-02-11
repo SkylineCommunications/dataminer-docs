@@ -1,8 +1,20 @@
 ---
 uid: Configuring_data_offloads
+keywords: central database
 ---
 
 # Configuring data offloads
+
+> [!NOTE]
+> This feature is not available if [Swarming](xref:Swarming) is enabled.
+
+## Configuring offloads to files
+
+Offloading data to files is supported from DataMiner 10.2.0/10.1.1 onwards. To do so:
+
+1. Go to System Center > *Database* > *Offload* and select *File* in the drop-down box at the top.
+
+1. Configure the data offloads as detailed below and set a maximum size for the combined offload files.
 
 ## Configuring the offload rate
 

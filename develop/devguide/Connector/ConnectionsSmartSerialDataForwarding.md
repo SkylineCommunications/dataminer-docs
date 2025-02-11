@@ -8,9 +8,9 @@ The SLPort process creates a socket to communicate with the data source. Incomin
 
 There are multiple configuration options for a smart-serial connection that influence how/when SLPort forwards incoming data to the SLProtocol process:
 
-1. Using stuffing (see stuffing)
-1. Using the packetInfo option (see packetInfo)
-1. Using a header/trailer without the headerTrailerLink option (see headerTrailerLink) Note that this is not recommended.
+1. Using [stuffing](xref:Protocol.Advanced-stuffing)
+1. Using the [packetInfo](xref:Protocol.Type-communicationOptions#packetinfo) option
+1. Using a header/trailer without the [headerTrailerLink](xref:Protocol.Params.Param.Type-options#headertrailerlink) option. Note that this is not recommended.
 1. Using headers/trailers with the headerTrailerLink option
 1. Using none of the above options
 
@@ -35,7 +35,8 @@ When multiple packets are received in the SLPort process, these are now transfer
 
 When SLProtocol wants to connect to a smart-serial port in SLPort, it will first gather some information (among other things) about header and trailer parameters found in the protocol for that smart-serial connection. It does this by iterating over all protocol parameters and verifying whether these are of type "header" or "trailer". While iterating over the protocol parameters, it verifies the following:
 
-- Whether the connection option was used (see connection=[x]). If the connection option is used and it refers to another connection than this smart-serial connection, this header or trailer parameter is disregarded. If the connection option is not used, this header/trailer is assumed to relate to all connections and it will therefore be taken into account for this smart-serial connection.
+- Whether the connection option was used (see [connection=[x]](xref:Protocol.Params.Param.Type-options#connectionx)). If the connection option is used, and it refers to another connection than this smart-serial connection, this header or trailer parameter is disregarded. If the connection option is not used, this header/trailer is assumed to relate to all connections, and it will therefore be taken into account for this smart-serial connection.
+
     > [!NOTE]
     >
     > - If you use a smart-serial connection in combination with other connections that make use of headers/trailers (e.g. serial), make sure to always use the connection attribute to denote to which connection this header/trailer belongs.
@@ -59,12 +60,12 @@ When SLProtocol wants to connect to a smart-serial port in SLPort, it will first
     </Param>
     ```
 
-- Whether the headerTrailerLink option was used (see headerTrailerLink). If this is not the case, then SLPort will only use this header/trailer in SLPort. This means that if you want to use multiple headers/trailers in a smart-serial connection, you must use the headerTrailerLink option on each header/trailer parameter for the smart-serial connection.
+- Whether the [headerTrailerLink](xref:Protocol.Params.Param.Type-options#headertrailerlink) option was used.<!-- RN 6115 --> If this is not the case, then SLPort will only use this header/trailer in SLPort. This means that if you want to use multiple headers/trailers in a smart-serial connection, you must use the headerTrailerLink option on each header/trailer parameter for the smart-serial connection.
+
     > [!NOTE]
     >
     > - We strongly recommend that you always use the headerTrailerLink option when using headers/trailers with smart-serial communication (even when only one header/trailer is used for the smart-serial connection).
-    > - The headerTrailerLink option is introduced in DataMiner version 8.0.3.3 (RN 6115). Prior to DataMiner 8.0.3, a header and trailer can only be used in case they are the same for all responses. Using the headerTrailerLink option, it is possible to define more than one header/trailer pair in a smart serial driver.
-    > - From DataMiner 8.0.3 (RN 6115) onwards, it is possible to specify only a trailer. Header only is not supported.
+    > - It is possible to specify only a trailer, but specifying a header only is not supported.
 
 The headerTrailerLink option allows you to use multiple headers/trailers. This option links a trailer with the corresponding header (if present). This allows the SLPort process to know which header and trailer belong together.
 

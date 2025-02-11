@@ -21,7 +21,7 @@ For SNMP connections, locking is based on the polling IP and is performed in the
 For serial connections, locking is based on the IP and port and is performed within the SLPort process (by locking the SendThread).
 
 > [!NOTE]
-> 
+>
 > - Lock/unlock is currently not supported with redundant polling.
 > - Sets and gets performed via a QAction will not be locked.
 > - Suppose you have a serial connection and a "serial single" connection connecting to the same IP:port as the serial connection. In this case, the serial single connection will not be blocked when a lock is taken on the serial connection as "serial single" introduces a dedicated socket.
