@@ -47,6 +47,17 @@ To run a prerequisites check using SLNetClientTest tool:
 
    For each prerequisite, the tool will indicate whether the prerequisite is met (*True*) or not (*False*). If you hover over the *Summary* item, you will get a detailed overview of which items cause prerequisites not to be met (e.g. specific scripts, enhanced service connectors, connectors using the obsolete alarm ID format, etc.).
 
+> [!NOTE]
+> Obsolete Engine methods are only included in the prerequisites check from DataMiner 10.5.3 onwards<!--RN 42073-->. If you are using DataMiner 10.5.1 or 10.5.2, these obsolete methods may still be present even if the prerequisite check does not report any issues.
+> The following Engine methods are obsolete and should not be used. Instead, use the corresponding new methods:
+>
+> | Obsolete method | New method |
+> |--|--|
+> | GetAlarmProperty(int, int, string) | GetAlarmProperty(AlarmID, string) |
+> | SetAlarmProperty(int, int, string, string) | SetAlarmProperty(AlarmTreeID, string, string) |
+> | SetAlarmProperties(int, int, string[], string[]) | SetAlarmProperties(AlarmTreeID, string[], string[]) |
+> | AcknowledgeAlarm(int, int, string) | AcknowledgeAlarm(AlarmTreeID, string) |
+
 ## Enabling Swarming
 
 When you have made sure prerequisites are met, and you are ready to enable Swarming, you can do so using the SLNet message *EnableSwarmingRequest* (with the default parameters) in SLNetClientTest tool or an Automation script. Enabling Swarming via DataMiner Cube is currently not yet possible.
