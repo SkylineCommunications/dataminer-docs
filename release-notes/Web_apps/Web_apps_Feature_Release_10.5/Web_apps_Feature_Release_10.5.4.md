@@ -92,6 +92,12 @@ Existing components will not be affected.
 
 In a *Select* operator of a GQI query, you can now reorder the columns by dragging and dropping them.
 
+#### Dashboards/Low-Code Apps - Time range component: Enhanced readability of Apply button [ID 42155]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In the *Time range* component, up to now, the color of the *Apply* button would, in some cases, be too close to the color of the component background. As a result, the text on the button would be barely readable.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
