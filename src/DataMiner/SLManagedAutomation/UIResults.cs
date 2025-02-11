@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Skyline.DataMiner.Automation
 {
@@ -93,56 +93,80 @@ namespace Skyline.DataMiner.Automation
 		public DateTime GetDateTime(string key) { return DateTime.Now; }
 
 		/// <summary>
-		/// Gets the date/time that was selected in the specified destination variable, in the time zone of the client, which is linked to a Calendar and Time item.
+		/// Gets the date/time that was selected for the specified destination variable, as displayed in the client, which is linked to a Calendar and Time item.
+		/// If the client date/time isn't available, e.g. when <see cref="UIBlockDefinition.ClientTimeInfo"/> is set to <see cref="UIClientTimeInfo.Disabled"/>,
+		///  the returned value will be <see cref="DateTimeOffset.MinValue"/>.
 		/// </summary>
 		/// <param name="key">The name of the destination variable.</param>
-		/// <returns>The date/time that was selected in the specified destination variable, in the time zone of the client, which is linked to a Calendar and Time item.</returns>
+		/// <returns>The date/time that was selected for the specified destination variable, as displayed in the client, which is linked to a Calendar and Time item.</returns>
 		/// <example>
 		/// <code>
-		/// UIResults uir = null;
-		/// DateTime selection = DateTime.Now;
+		/// var selection = DateTime.Now;
 		/// ...
-		/// UIBlockDefinition blockCalendar = new UIBlockDefinition();
-		/// blockCalendar.Type = UIBlockType.Calendar;
-		/// blockCalendar.InitialValue = selection.ToString(AutomationConfigOptions.GlobalDateTimeFormat);
-		/// blockCalendar.DestVar = "calendar";
-		/// blockCalendar.WantsOnChange = true;
-		/// ...
+		/// var blockCalendar = new UIBlockDefinition
+		/// {
+		///   Type = UIBlockType.Calendar,
+		///   InitialValue = selection.ToString(AutomationConfigOptions.GlobalDateTimeFormat),
+		///   DestVar = "calendar",
+		///   WantsOnChange = true,
+		///   ClientTimeInfo = UIClientTimeInfo.Return,
+		/// };
 		/// uib.AppendBlock(blockCalendar);
 		/// ...
-		/// uir = engine.ShowUI(uib);
-		/// selection = uir.GetClientDateTime("calendar").DateTime;
+		/// var uir = engine.ShowUI(uib);
+		/// ...
+		/// var clientDateTime = uir.GetClientDateTime(blockCalendar.DestVar);
+		/// var displayedDateTime = clientDateTime.DateTime;
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <note type="note">Available since DataMiner 10.5.4.</note>
+		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note>
+		/// <note type="tip">
+		/// To get the date as displayed in the client, use the <see cref="DateTimeOffset.Date"/> property on the returned value.
+		/// To get the time as displayed in the client, use the <see cref="DateTimeOffset.TimeOfDay"/> property on the returned value.
+		/// The returned date/time includes the offset to UTC. If possible the value is stored, including the offset.
+		/// If not, <see cref="DateTimeOffset.UtcDateTime"/> can be stored instead.
+		/// </note>
 		/// </remarks>
 		public DateTimeOffset GetClientDateTime(string key) { return DateTimeOffset.Now; }
 
 		/// <summary>
-		/// Gets the time zone info that was entered for the specified destination variable, which is linked to a Calendar and Time item.
+		/// Gets the time zone info related to the specified destination variable, which is linked to a Calendar and Time item.
+		/// If the client time zone info isn't available, e.g. when <see cref="UIBlockDefinition.ClientTimeInfo"/> is set to <see cref="UIClientTimeInfo.Disabled"/>,
+		///  the returned value will be <see langword="null"/>.
 		/// </summary>
 		/// <param name="key">The name of the destination variable.</param>
-		/// <returns>The time zone info that was entered for the specified destination variable, which is linked to a Calendar and Time item.</returns>
+		/// <returns>The time zone info related to the specified destination variable, which is linked to a Calendar and Time item.</returns>
+		/// <exception cref="System.Runtime.Serialization.SerializationException">The time zone info provided by the client cannot be deserialized back into a <see cref="TimeZoneInfo"/> object.</exception>
 		/// <example>
 		/// <code>
-		/// UIResults uir = null;
-		/// string timeZoneId;
+		/// var selection = DateTime.Now;
 		/// ...
-		/// UIBlockDefinition blockCalendar = new UIBlockDefinition();
-		/// blockCalendar.Type = UIBlockType.Calendar;
-		/// blockCalendar.InitialValue = selection.ToString(AutomationConfigOptions.GlobalDateTimeFormat);
-		/// blockCalendar.DestVar = "calendar";
-		/// blockCalendar.WantsOnChange = true;
-		/// ...
+		/// var blockCalendar = new UIBlockDefinition
+		/// {
+		///   Type = UIBlockType.Calendar,
+		///   InitialValue = selection.ToString(AutomationConfigOptions.GlobalDateTimeFormat),
+		///   DestVar = "calendar",
+		///   WantsOnChange = true,
+		///   ClientTimeInfo = UIClientTimeInfo.Return,
+		/// };
 		/// uib.AppendBlock(blockCalendar);
 		/// ...
-		/// uir = engine.ShowUI(uib);
-		/// timeZoneId = uir.GetClientTimeZoneInfo("calendar").Id;
+		/// var uir = engine.ShowUI(uib);
+		/// ...
+		/// var timeZoneInfoToStore = uir.GetClientTimeZoneInfo(blockCalendar.DestVar)?.ToSerializedString();
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <note type="note">Available since DataMiner 10.5.4.</note>
+		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note>
+		/// <note type="important">
+		/// To store this information, to reuse it for later calculations, consider using:
+		///   - the <see cref="TimeZoneInfo.ToSerializedString"/> method to get a string containing all details. The info can be restored using <see cref="TimeZoneInfo.FromSerializedString"/>.
+		///     Be aware that the time zone info might not be the latest, resulting in incorrect DST interpretations. 
+		///   - the <see cref="TimeZoneInfo.Id"/> property. The info can be restored using <see cref="TimeZoneInfo.FindSystemTimeZoneById"/>.
+		///     Be aware that the ID of the TimeZoneInfo might not (or no longer) be available on the DataMiner agent executing the automation script.
+		/// More info is available here: <see href="https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones">Saving and restoring time zones - .NET @ Microsoft Learn</see>.
+		/// </note>
 		/// </remarks>
 		public TimeZoneInfo GetClientTimeZoneInfo(string key) { return null; }
 
