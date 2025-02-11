@@ -6,9 +6,9 @@ uid: CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub
 
 This tutorial is divided into two parts.
 
-In the first part you'll see how to setup a [GitHub Development Environment](xref:Part_1_CICD_Tutorial_GitHub_Setting_Up_Organization). This is optional if you already have a GitHub and SonarCloud Organization you can skip to the second part (Skyline employees can use <https://github.com/SkylineCommunicationsSandbox> and skip to the second part.)
+In the first part you'll see how to setup a [GitHub Development Environment](xref:part-1-setting-up-your-development-environment-in-github). This is optional if you already have a GitHub and SonarCloud Organization you can skip to the second part (Skyline employees can use <https://github.com/SkylineCommunicationsSandbox> and skip to the second part.)
 
-In the second part you'll see how to [create a new Connector Solution on GitHub](xref:Part_2_Creating_And_Publishing_Your_Connector_To_The_Catalog) and utilize the CI/CD workflows from your Development Environment to publish it to the catalog.
+In the second part you'll see how to [create a new Connector Solution on GitHub](xref:part-2-creating-and-publishing-your-connector-to-the-catalog) and utilize the CI/CD workflows from your Development Environment to publish it to the catalog.
 
 Total Expected duration: 20 to 30 minutes.
 
@@ -16,7 +16,7 @@ Total Expected duration: 20 to 30 minutes.
 
 In this part, you will learn how to set up an organization in GitHub and SonarCloud so that you and your development team can collaboratively develop DataMiner artifacts while maintaining high-quality standards. This tutorial sets up the framework to achieve the same quality standards that developers at Skyline Communications adhere to. It will also add starter workflows provided by Skyline to improve efficiency. Additionally, you will learn how to set up SonarCloud, a mandatory static analysis tool used in all GitHub workflows provided by Skyline.
 
-Expected duration: 10 minutes.
+Expected duration: 20 minutes.
 
 > [!TIP]
 > See also: [Kata #49: Set up your development environment in GitHub](https://community.dataminer.services/courses/kata-49/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

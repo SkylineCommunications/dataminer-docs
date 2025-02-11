@@ -75,7 +75,7 @@ Expected duration: 10 minutes
 
     1. Add the DataMiner User Defined API Project Template inside a new project folder
 
-    ```cmd
+    ```bash
       dotnet new dataminer-user-defined-api-project -o MyUserDefinedApiFromGithub -auth JanS -cdp true -I Basic
       dotnet new sln
       dotnet sln add MyUserDefinedApiFromGithub
@@ -95,7 +95,7 @@ Expected duration: 10 minutes
 
 1. Click the "build" step that failed and read the failing error.
 
-   ``` text
+   ```text
    Error: DATAMINER_TOKEN is not set. Release not possible!
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
    Navigate to the right Organization then go to Keys and create/find a key with permissions to Register Catalog Items.
