@@ -122,10 +122,9 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note> <!-- RN 42064 -->
 		/// <note type="tip">
+		/// The returned date/time includes the offset to UTC.
 		/// To get the date as displayed in the client, use the <see cref="DateTimeOffset.Date"/> property on the returned value.
 		/// To get the time as displayed in the client, use the <see cref="DateTimeOffset.TimeOfDay"/> property on the returned value.
-		/// The returned date/time includes the offset to UTC. If possible the value is stored, including the offset.
-		/// If not, <see cref="DateTimeOffset.UtcDateTime"/> can be stored instead.
 		/// </note>
 		/// </remarks>
 		public DateTimeOffset GetClientDateTime(string key) { return DateTimeOffset.Now; }
