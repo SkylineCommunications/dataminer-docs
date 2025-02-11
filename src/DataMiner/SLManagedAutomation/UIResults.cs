@@ -120,7 +120,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note>
+		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note> <!-- RN 42064 -->
 		/// <note type="tip">
 		/// To get the date as displayed in the client, use the <see cref="DateTimeOffset.Date"/> property on the returned value.
 		/// To get the time as displayed in the client, use the <see cref="DateTimeOffset.TimeOfDay"/> property on the returned value.
@@ -158,7 +158,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note>
+		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note> <!-- RN 42064 -->
 		/// <note type="important">
 		/// To store this information, to reuse it for later calculations, consider using:
 		///   - the <see cref="TimeZoneInfo.ToSerializedString"/> method to get a string containing all details. The info can be restored using <see cref="TimeZoneInfo.FromSerializedString"/>.

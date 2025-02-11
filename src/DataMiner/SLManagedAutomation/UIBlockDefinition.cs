@@ -106,7 +106,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note>
+		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note> <!-- RN 42064 -->
 		/// </remarks>
 		public UIClientTimeInfo ClientTimeInfo { get; set; }
 
