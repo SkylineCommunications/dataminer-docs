@@ -111,6 +111,10 @@ The following example defines an application package that consists of an Automat
 </Manifest>
 ```
 
+> [!NOTE]
+> GitHub repositories are also supported for Automation Scripts.
+> To use them, you will need to substitute the content of ```RepoPath``` with a respository url.
+
 ### Install script
 
 The installation script is an Automation script with an [AutomationEntryPoint type](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types) attribute of type `AutomationEntryPointType.Types.InstallAppPackage`. For more information, refer to [Creating application package scripts](xref:Creating_app_package_scripts).
