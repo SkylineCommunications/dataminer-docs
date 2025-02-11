@@ -98,6 +98,18 @@ In a *Select* operator of a GQI query, you can now reorder the columns by draggi
 
 In the *Time range* component, up to now, the color of the *Apply* button would, in some cases, be too close to the color of the component background. As a result, the text on the button would be barely readable.
 
+#### Dashboards app: Default Skyline dashboard themes have been updated [ID 42179]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In the following default Skyline dashboards themes, the colors have been updated:
+
+- Skyline Light - White
+- Skyline Light - Gray
+- Skyline Dark
+
+These new colors will be applied to all existing and new dashboards, as well as to all pages and panels of low-code apps that are using one of the above-mentioned themes.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
