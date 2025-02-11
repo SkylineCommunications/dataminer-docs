@@ -106,3 +106,9 @@ In some cases, an exception could be thrown when you closed an element card.
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When you closed the DataMiner Cube desktop app, the configuration files would incorrectly be updated.
+
+#### Documents: Not possible to open documents of which the URI contained special characters [ID 42138]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In the *Documents* module, up to now, it would incorrectly not be possible to open a document of which the URI contained special characters like "#" or spaces.
