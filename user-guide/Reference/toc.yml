@@ -403,6 +403,8 @@ items:
         topicUid: Verify_No_Legacy_Reports_Dashboards
       - name: Verify No Obsolete API Deployed
         topicUid: Verify_No_Obsolete_API_Deployed
+      - name: Verify No Amazon Keyspaces
+        topicUid: Verify_No_Amazon_Keyspaces
   - name: Methods of Procedure
     items:
       - name: Changing the default password for Cassandra
