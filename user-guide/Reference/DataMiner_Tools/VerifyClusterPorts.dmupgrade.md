@@ -4,7 +4,7 @@ uid: VerifyClusterPortsdmupgrade
 
 # VerifyClusterPorts.dmupgrade
 
-In DataMiner 10.2.0 CU2 and 10.2.5, a prerequisite check is added to upgrade packages. It verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. This prevents situations where a DataMiner System becomes non-functional after an upgrade that uses more or different ports. If this check fails, you will need to execute the *VerifyClusterPorts.dmupgrade* package, which can be downloaded from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterports-dmupgrade/).
+From DataMiner 10.2.0 [CU2]/10.2.5 onwards, the *VerifyClusterPorts.dmupgrade* prerequisite check is included in upgrade packages. This check verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. This prevents situations where a DataMiner System becomes non-functional after an upgrade that uses more or different ports. If this check fails, you will need to execute the *VerifyClusterPorts.dmupgrade* package, which can be downloaded from [DataMiner Dojo](https://community.dataminer.services/download/verifyclusterports-dmupgrade/).
 
 *VerifyClusterPorts.dmupgrade* will run the same tests as the DataMiner upgrade package, but it will make sure that temporary listening ports are open for the required ports and a temporary local firewall rule is configured. This way, if a firewall or other configuration issue is causing the problem, this will become clear. If no failing ports are reported when you run this package, the regular upgrade package will use this stored result to continue with the upgrade.
 
