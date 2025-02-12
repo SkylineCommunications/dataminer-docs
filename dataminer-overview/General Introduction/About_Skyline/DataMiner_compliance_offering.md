@@ -27,3 +27,7 @@ Similarly, we are also working on compliance with the more recent European Cyber
 ## ISO/IEC 27001 compliance
 
 In 2025, Skyline is planning to take the next step and aim towards attaining full ISO/IEC 27001 compliance as well. Initially, we are planning an extensive gap analysis, and based on this we are aiming to fully comply by the end of 2025 or early 2026.
+
+## GDPR compliance
+
+See [Does DataMiner process personal data in a GDPR-compliant manner?](xref:FAQ_GDPR)
