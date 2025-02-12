@@ -25,9 +25,9 @@ Expected duration: 10 minutes
 
 ## Step 1: Create a GitHub Repository
 
-1. Go to [github.com](https://github.com/)
+1. Go to [github.com](https://github.com/) and select the colored [*New* button](https://github.com/new).
 
-1. Select the colored [*New* button](https://github.com/new).
+![New Button](~/develop/images/CodeSpaceTutorial_NewButton.png)
 
 1. Enter a repository name, for example *MyUserDefinedApiFromGithub*
 
@@ -56,7 +56,10 @@ Expected duration: 10 minutes
         dotnet nuget list source 
     ```
 
-    Check that the result contain *nuget.org*
+    Check that the result contain *nuget.org \[Enabled\]*
+
+    > [!NOTE]
+    > The first time you run a dotnet command on any computer you'll first get a welcome text. Check below that to see the output of your command.
 
     1. If your sources do not contain *nuget.org* call the following, otherwise skip this step
 
@@ -82,6 +85,9 @@ Expected duration: 10 minutes
       dotnet sln add MyUserDefinedApiFromGithub
     ```
 
+    > [!NOTE]
+    > If you receive a warning about pasting a multi-line, you can click on 'Paste'. Double check that it ran all 3 commands in the end, you may need to press an additional time on *enter* for the last command to execute.
+
 1. Click on the Source Control button on the left-hand side
 1. Enter a message (e.g. *Added Initial Project*)
 1. Click the button *Commit*, if asked to stage all your changes select *Yes*
@@ -92,7 +98,15 @@ Expected duration: 10 minutes
 
 1. In GitHub, go to the *Actions* tab.
 
-1. Click the workflow run that failed (usually called the same as the commit message you filled in earlier).
+![Actions Tab](~/develop/images/CodeSpaceTutorial_ActionsTab.png)
+
+You'll find all the automatic CI/CD here called workflow runs and their status:
+
+- A brown dot means the run is Ongoing.
+- A white X in a red circle means the run failed.
+- A white V in a green circle means the run succeeded.
+
+1. Click the run that failed (usually called the same as the commit message you filled in earlier).
 
 1. Click the "build" step that failed and read the failing error.
 
@@ -114,7 +128,9 @@ Expected duration: 10 minutes
 
 1. Add the key as a secret in your GitHub repository, by navigating to **Settings > Secrets and variables > Actions** and creating a secret named `DATAMINER_TOKEN`.
 
-1. Re-run the workflow.
+1. Re-run the workflow by going back to the failing run and selecting Re-run jobs at the top right
+
+![Re-run job](~/develop/images/CodeSpaceTutorial_ReRunJobs.png)
 
 With this setup, any push with new content (including the initial creation) to the main/master branch will generate a new pre-release version, using the latest commit message as the version description.
 
