@@ -9,6 +9,22 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 11 February 2025 - Enhancement - Catalog - Deployment status shown on details page [ID 42131]
+
+When an item is deployed, the deployment status is now shown next to the *Deploy* button both in the item version section and at the top of the details page. The status is automatically updated for up to 10 seconds, and you will get a notification when the deployment finishes or fails.
+
+### 11 February 2025 - Fix - Share Management - Incorrect message after sharing dashboard [ID 42121]
+
+When a dashboard was shared, the incorrect message "A share has been updated" was shown instead of the message "Item has successfully been shared.". This issue has been resolved.
+
+### 11 February 2025 - Enhancement - Catalog - New version statuses [ID 42078]
+
+The Catalog now uses the following statuses for versions:
+
+- **Pre-release** (previously "development")
+- **Stable** (previously "active")
+- **Unlisted** (previously "known issues" or "deprecated")
+
 ### 6 February 2025 - Fix - Random failures when sharing, deploying DxMs or Catalog items, or using the DataMiner Teams bot [ID 42178]
 
 The Remote Access and Live Sharing performance and stability improvements released on the 4th of February introduced a specific issue that only occurred if a CloudGateway version older than 2.17.0 was restarted or updated. The issue could cause random failures while creating or updating shares, deploying DxM updates from the Admin app, deploying Catalog items, or using the DataMiner Teams Bot. This issue has now been resolved with immediate effect.
