@@ -3915,14 +3915,6 @@ items:
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsActive
               - name: SetAsDefault
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
-      - name: DeploymentOptions
-        topicUid: Manifest.DeploymentOptions
-        items: 
-        - name: OrganizationCatalogAccess
-          topicUid: Manifest.DeploymentOptions.OrganizationCatalogAccess
-          items: 
-          - name: Organization
-            topicUid: Manifest.DeploymentOptions.OrganizationCatalogAccess.Organization
       - name: MinimumRequiredVersions
         topicUid: Manifest.MinimumRequiredVersions
         items:
