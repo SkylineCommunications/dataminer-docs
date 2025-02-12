@@ -8,7 +8,7 @@ This project is designed to create multi-artifact packages in a straightforward 
 Note that the below information assumes access to Visual Studio and DIS.
 
 There is also limited support for Visual Studio Code without DIS.
-You can do most of the things defined below except for [Importing from DataMiner](xref:importing-from-dataminer) which is currently handled by DIS.
+You can do most of the things defined below except for [Importing from DataMiner](#importing-from-dataminer) which is currently handled by DIS.
 
 ## Creating a DataMiner Application Package
 

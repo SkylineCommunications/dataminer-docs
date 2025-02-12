@@ -23,25 +23,9 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 
 ## Registering a Catalog item with workflows and tooling
 
-1. Create a *catalog.yml* or *manifest.yml* file as outlined under [Manifest file](#manifest-file) below.
+If you would prefer not to use Postman and HTTPS directly, try out our [platform-independent](xref:Platform_independent_CICD) tool support or check out our IaC (Infrastructure as Code) solutions using the [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk) that has catalog publishing directly integrated.
 
-1. Generate an [organization key](xref:Managing_DCP_keys#organization-keys) with the *Register Catalog items* permission.
-
-1. Either use our pre-made workflows on GitHub or platform-independent tooling.
-
-   - If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
-
-   - If you would prefer not to use Postman and HTTPS directly, try out our [platform-independent](xref:Platform_independent_CICD) *Catalog Uploader* tool: [Catalog Uploader README](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload#readme-body-tab).
-
-     To install and use the tool in any command line or bash:
-
-     ```bash
-     dotnet tool install -g Skyline.DataMiner.CICD.Tools.CatalogUpload
-     dataminer-catalog-upload update-catalog-details --path-to-catalog-yml "catalog.yml" --path-to-readme "README.md" --path-to-images "resources/images" --dm-catalog-token "abc123"
-     ```
-
-> [!IMPORTANT]
-> Unlike the API, the platform-independent tooling can operate without a predefined unique ID (GUID). If no ID is provided, it will create a new Catalog record and return the Catalog ID. For subsequent uploads, it is essential to use this returned Catalog ID to avoid creating duplicate records.
+If you are interested in setting up CI/CD to handle registration automatically please consider our [CI/CD Tutorials](xref:CICD_Tutorials).
 
 ## Registering a Catalog item with the API
 

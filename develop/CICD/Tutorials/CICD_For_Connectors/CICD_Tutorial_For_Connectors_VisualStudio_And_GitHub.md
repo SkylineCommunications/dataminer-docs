@@ -6,9 +6,9 @@ uid: CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub
 
 This tutorial is divided into two parts.
 
-In the first part you'll see how to setup a [GitHub Development Environment](xref:part-1-setting-up-your-development-environment-in-github). This is optional if you already have a GitHub and SonarCloud Organization you can skip to the second part (Skyline employees can use <https://github.com/SkylineCommunicationsSandbox> and skip to the second part.)
+In the first part you'll see how to setup a [GitHub Development Environment](#part-1-setting-up-your-development-environment-in-github). This is optional if you already have a GitHub and SonarCloud Organization you can skip to the second part (Skyline employees can use <https://github.com/SkylineCommunicationsSandbox> and skip to the second part.)
 
-In the second part you'll see how to [create a new Connector Solution on GitHub](xref:part-2-creating-and-publishing-your-connector-to-the-catalog) and utilize the CI/CD workflows from your Development Environment to publish it to the catalog.
+In the second part you'll see how to [create a new Connector Solution on GitHub](#part-2-creating-and-publishing-your-connector-to-the-catalog) and utilize the CI/CD workflows from your Development Environment to publish it to the catalog.
 
 Total Expected duration: 20 to 30 minutes.
 

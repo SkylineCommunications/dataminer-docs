@@ -8,8 +8,6 @@ In this tutorial, you will learn how to create a custom pipeline from scratch. T
 
 You can also apply the instructions in this tutorial (with limited syntax changes) to use other CI/CD technology, such as Jenkins, GitLab, Concourse, Azure DevOps, etc. You can find a quick overview of specific CI/CD tooling offered by Skyline Communications in our [CI/CD documentation](xref:Platform_independent_CICD).
 
-If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
-
 > [!TIP]
 > See also:
 >
