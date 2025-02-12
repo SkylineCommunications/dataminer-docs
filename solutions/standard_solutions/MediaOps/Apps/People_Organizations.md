@@ -1,5 +1,5 @@
 ---
-uid: MediaOps_People_Organizations
+uid: People_Organizations
 ---
 
 # People & Organizations

@@ -38,7 +38,7 @@ The following items can be configures on resource pools:
 - **Domain**: Pools can be grouped into domains for filtering purposes.
 - **Resource pool cost**: TODO CHECK WITH REINOUT WHY WE HAVE COST CARDS ON POOLS => CAN BE DELETED
 - **Resource pool links**: When a linked resource pool is configured, a resource from the linked resource pool must also be booked (automatically or manually).
-- **Icon image**: To make it easier to differentiate resource pools from each other in workflows/jobs you can [change the icon](xref:MO_RS_Changing_Icons).
+- **Icon image**: To make it easier to differentiate resource pools from each other in workflows/jobs you can [change the icon](xref:RS_Changing_Icons).
 - **URL**: Link that can be used to get more information on the resource pool.
 - **Profile Definition Name**: The profile definition linked to the pool. The linked profile definition contains configuration parameters that can be used to define the capabilities and capacities needed.
 
@@ -83,10 +83,6 @@ Typical examples of capacities are bandwidths, bit rates, symbol rates, etc. Whe
 ## Properties
 
 Apart from capabilities and capacities, there is sometimes extra information that is relevant to list but that does not influence the decision as to which specific resource can be used to execute a job. This type of information can be stored in properties. This could for example be a contact person, the name of the equipment vendor, a reference to its geolocation, etc.
-
-## Optimize
-
-The optimize page is designed to get the most value out of your resources. It gives you an overview of some statistics that help to identify which resources are underused or which resources might be very valuable for your organization.
 
 ## Sync
 

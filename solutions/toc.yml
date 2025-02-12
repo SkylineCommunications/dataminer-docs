@@ -7,11 +7,29 @@ items:
     - name: dataminer.MediaOps
       topicUid: MediaOps
       items:
-      - name: Installing dataminer.MediaOps
-        topicUid: Installing_MediaOps
       - name: MediaOps applications
         topicUid: MediaOps_apps
         items:
+        - name: Resource Studio
+          topicUid: MO_Resource_Studio
+          items: 
+          - name: Resource Icons
+            topicUid: RS_Resource_Icons
+          - name: Linking resource pools
+            topicUid: RS_Linking_Pools
+        - name: Scheduling
+          topicUid: MO_Scheduling
+          items:
+            - name: Creating a Job
+              topUid: SCH_Create_Job
+            - name: Editing a Job
+              topicUid: SCH_Edit_Job
+            - name: Job states
+              topicUid: MO_S_Job_States
+            - name: Job Locking
+              topicUid: MO_S_Job_Locking
+        - name: Workflow Designer
+          topicUid: MO_Workflow_Designer
         - name: People & Organizations
           topicUid: People_Organizations
           items:

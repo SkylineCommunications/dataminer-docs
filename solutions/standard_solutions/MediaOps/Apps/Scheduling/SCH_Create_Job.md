@@ -1,5 +1,5 @@
 ---
-uid: SCH_Create_Jobs
+uid: SCH_Create_Job
 ---
 
 # Creating a Job
@@ -17,12 +17,15 @@ The first way to create a new Job is by clicking the 'New' button on the 'Job Vi
 
 ## Starting from a predefined workflow
 
-It's also possible to create a Job start from a workflow that has been predefined in the [Workflow Designer](xref:MO_Workflow_Designer) app. This is done similarly to creating a Job from scratch, but instead selecting the desired workflow from the dropdown in the 'Create job' pop-up. 
+It's also possible to create a Job starting from a workflow that has been predefined in the [Workflow Designer](xref:MO_Workflow_Designer) app. This is done similarly to creating a Job from scratch, but instead selecting the desired workflow from the dropdown in the 'Create job' pop-up. 
+
+INCLUDE SCREENSHOT
 
  > [!NOTE]
 > Only workflows that have been marked as 'Complete' in the Workflow Designer will appear for selection in the Scheduling app. 
 
-
-
-
 ## By selecting a specific resource
+
+A third option is to create a Job directly on one specfic resource. This can be useful when a user wants to quickly reserve a specific resource. This is done by first selecting a resource pool, then selecting the resource that needs to be booked and then clicking the 'New' button above the timeline. This will trigger the same pop-up to create a Job as described in the previous two options. The Job will then be created immediatly in 'Tentative' state, so that the resource is immediatly reserver in the background. After creating the Job, the user can still edit the Job in order to add more resources to it if needed.
+
+INCLUDE SCREENSHOT

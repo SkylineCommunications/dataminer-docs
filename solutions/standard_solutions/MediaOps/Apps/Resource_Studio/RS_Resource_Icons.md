@@ -1,12 +1,10 @@
 ---
-uid: MO_RS_Changing_Icons
+uid: RS_Resource_Icons
 ---
 
-# Changing icons
+# Resource icons
 
-The *Changing Icons* feature allows end users to select an icon for a specific *Resource* or *Resource Pool*. This feature can be used to assign an icon to an already created Resource or Resource Pool, or to add an icon to a new one.
-
-The *Changing Icons* feature helps users to customize created *Resources* and *Resource Pools* and to add more graphical context and sense to end users when it comes to creating different workflows.
+The *Resource Icons* feature allows end users to select an icon for a specific *Resource* or *Resource Pool*. This feature can be used to assign an icon to a Resource or Resource Pool which will be shown in workflow visualization in the [Scheduling](xref:MO_Scheduling) and [Worfklow Designer](xref:MO_Workflow_Designer) apps. This helps users by adding more graphical context when inspecting different workflows.
 
 ## How to Use the Changing Icons Feature
 
