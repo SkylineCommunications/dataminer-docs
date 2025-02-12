@@ -27,7 +27,7 @@ Expected duration: 10 minutes
 
 1. Go to [github.com](https://github.com/) and select the colored [*New* button](https://github.com/new).
 
-![New Button](~/develop/images/CodeSpaceTutorial_NewButton.png)
+   ![New Button](~/develop/images/CodeSpaceTutorial_NewButton.png)
 
 1. Enter a repository name, for example *MyUserDefinedApiFromGithub*
 
@@ -98,7 +98,7 @@ Expected duration: 10 minutes
 
 1. In GitHub, go to the *Actions* tab.
 
-![Actions Tab](~/develop/images/CodeSpaceTutorial_ActionsTab.png)
+   ![Actions Tab](~/develop/images/CodeSpaceTutorial_ActionsTab.png)
 
 You'll find all the automatic CI/CD here called workflow runs and their status:
 
@@ -130,7 +130,7 @@ You'll find all the automatic CI/CD here called workflow runs and their status:
 
 1. Re-run the workflow by going back to the failing run and selecting Re-run jobs at the top right
 
-![Re-run job](~/develop/images/CodeSpaceTutorial_ReRunJobs.png)
+   ![Re-run job](~/develop/images/CodeSpaceTutorial_ReRunJobs.png)
 
 With this setup, any push with new content (including the initial creation) to the main/master branch will generate a new pre-release version, using the latest commit message as the version description.
 
