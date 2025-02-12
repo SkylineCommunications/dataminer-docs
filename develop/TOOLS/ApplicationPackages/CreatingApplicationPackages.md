@@ -112,8 +112,7 @@ The following example defines an application package that consists of an Automat
 ```
 
 > [!NOTE]
-> GitHub repositories are also supported for Automation Scripts.
-> To use them, you will need to substitute the content of ```RepoPath``` with a respository url.
+> GitHub repositories are also supported for Automation scripts. To use them, you will need to substitute the content of `RepoPath` with a repository URL.
 
 ### Install script
 
