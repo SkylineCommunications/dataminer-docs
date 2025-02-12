@@ -5,6 +5,7 @@ uid: Connector_technical_template
 # Connector technical documentation template
 
 ## About
+
 [Short description of the data source and of the function of the connector.]
 
 ## Configuration
