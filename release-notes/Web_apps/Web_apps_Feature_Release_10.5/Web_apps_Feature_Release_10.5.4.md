@@ -92,6 +92,16 @@ Existing components will not be affected.
 
 In a *Select* operator of a GQI query, you can now reorder the columns by dragging and dropping them.
 
+#### Dashboards/Low-Code Apps - Query builder: Dragging and dropping operators [ID 42127]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When building a query, it is now possible to drag and drop operators from one location to another. However, this will only be allowed within the same level, not from e.g. a joined query to the parent query or vice versa.
+
+If an operator shows a red error state after you have dragged it to a new location, this means that the operator in question cannot be used at that location and that the query has become invalid as a result.
+
+Also, it is now possible to insert new operators in between existing ones by clicking a "+" button.
+
 #### Dashboards/Low-Code Apps - Time range component: Enhanced readability of Apply button [ID 42155]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
