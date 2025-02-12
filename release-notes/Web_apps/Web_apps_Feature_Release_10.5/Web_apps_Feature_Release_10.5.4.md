@@ -187,3 +187,9 @@ In some cases, variables merged with components inside a flow would not correctl
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When you changed the *Granularity* setting of a *Time range* component from *Date & time* to *Date* or vice versa, in some cases, the specified time range would become invalid.
+
+#### Web apps: About box would incorrectly no longer show any OEM information [ID 42190]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The *About* box of the DataMiner web apps would incorrectly no longer show any OEM information. This information has now been added again.
