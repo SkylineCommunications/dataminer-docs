@@ -199,3 +199,9 @@ The *About* box of the DataMiner web apps would incorrectly no longer show any O
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When a component had tried to fetch a number of non-existing objects (e.g. elements, parameter, etc.), in some cases, it would stop responding.
+
+#### Dashboards app: 'Link to data' popup would not contain any data when the query had a filter node linked to a variable or a flow [ID 42201]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When, after you had refreshed a dashboard, you opened a *Link to data* popup of an existing data link while configuring a query in which a filter node was linked to a variable or a flow, that popup would not contain any data.
