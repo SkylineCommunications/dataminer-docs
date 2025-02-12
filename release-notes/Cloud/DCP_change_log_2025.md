@@ -9,22 +9,21 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 11 February 2025 - Enhancement - Catalog - New version states [ID 42078]
+### 11 February 2025 - Enhancement - Catalog - Deployment status shown on details page [ID 42131]
+
+When an item is deployed, the deployment status is now shown next to the *Deploy* button both in the item version section and at the top of the details page. The status is automatically updated for up to 10 seconds, and you will get a notification when the deployment finishes or fails.
+
+### 11 February 2025 - Fix - Share Management - Incorrect message after sharing dashboard [ID 42121]
+
+When a dashboard was shared, the incorrect message "A share has been updated" was shown instead of the message "Item has successfully been shared.". This issue has been resolved.
+
+### 11 February 2025 - Enhancement - Catalog - New version statuses [ID 42078]
 
 The Catalog now uses the following statuses for versions:
 
 - **Pre-release** (previously "development")
 - **Stable** (previously "active")
 - **Unlisted** (previously "known issues" or "deprecated")
-
-### 11 February 2025 - Enhancement - Catalog - Deployment status shown on details page [ID 42131]
-
-When an item is deployed, the deployment status now appears next to the deploy button on both the item version section and at the top of the details page.  
-The status updates automatically for up to 10 seconds, and you’ll get a notification when the deployment finishes or fails.
-
-### 11 February 2025 - Fix - Share-Management - Share message updated [ID 42121]
-
-After sharing a dashboard, a message "Item has successfully been shared." will be shown, before it incorrectly mentioned a share was updated.
 
 ### 6 February 2025 - Fix - Random failures when sharing, deploying DxMs or Catalog items, or using the DataMiner Teams bot [ID 42178]
 
