@@ -102,6 +102,12 @@ If an operator shows a red error state after you have dragged it to a new locati
 
 Also, it is now possible to insert new operators in between existing ones by clicking a "+" button.
 
+#### Dashboards/Low-Code Apps - Grid component: Using browser menu commands [ID 42128]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+From now on, the *Grid* component will allow you to use browser menu commands. It will now be possible to e.g. select text in a *Grid* component and copy it to another application by means of the *Copy* command of your browser.
+
 #### Dashboards/Low-Code Apps - Time range component: Enhanced readability of Apply button [ID 42155]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
