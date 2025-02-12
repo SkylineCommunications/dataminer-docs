@@ -114,6 +114,12 @@ From now on, the *Grid* component will allow you to use browser menu commands. I
 
 In the *Time range* component, up to now, the color of the *Apply* button would, in some cases, be too close to the color of the component background. As a result, the text on the button would be barely readable.
 
+#### Dashboards/Low-Code Apps: Selected items will be passed from one component to another in the order in which they were selected [ID 42163]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+Items selected in *Node edge graph*, *Grid*, *Maps*, *Timeline* or *Table* components will now be passed to another components in the order in which they have been selected.
+
 #### Dashboards app: Default Skyline dashboard themes have been updated [ID 42179]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
