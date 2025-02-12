@@ -4,7 +4,7 @@ uid: DM_and_storage_selfhosted
 
 # Self-managed DataMiner nodes and storage nodes
 
-If this is really necessary, instead of going for a standard DataMiner deployment model, you can manage both the DataMiner nodes and the storage nodes yourself. However, this is a **complex setup that we do not recommend** and that will involve additional costs (for hardware, engineering services, and maintenance).
+If this is really necessary, instead of going for a standard DataMiner deployment model, you can manage both the DataMiner nodes and the storage nodes yourself. However, note that this is a **deviation from our advised deployment** path, and it is a **complex setup that we do not recommend**. As such, it will involve additional costs (e.g. procurement of additional hardware for hosting the databases and associated running and maintenance costs, mandatory Skyline Communications engineering services for the deployment and configuration of the database cluster, as well as for database-related tickets, etc.).
 
 ![Self-managed](~/user-guide/images/Self-managed.svg)
 
