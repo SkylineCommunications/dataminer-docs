@@ -18,8 +18,9 @@ Data replication is set using the **replication factor**.
 
 DataMiner sets this replication factor when it creates the Cassandra keyspaces. As such, the value for the replication factor is controlled by DataMiner.
 
-- If the Cassandra cluster consists of **3 nodes or less**, the default replication factor is **1**. This means that only one copy of the data exists in the Cassandra cluster. In this case, you do not benefit from data replication.
-- If the Cassandra cluster consists of **at least 4 nodes**, the default replication factor is **3**. This means that three copies of the data exist in the Cassandra cluster. In this case, you benefit from data replication.
+- If the Cassandra cluster consists of **two nodes or less**, the default replication factor is set to the number of nodes. While two nodes offer data replication in this scenario, a two-node cluster is not recommended because of the default consistency level of *Quorum*.
+
+- If the Cassandra cluster consists of **at least three nodes**, the default replication factor is **3**. This means that three copies of the data exist in the Cassandra cluster. In this case, you benefit from data replication and redundancy against a node outage with consistency level *Quorum* or *LocalQuorum*.
 
 If a **custom replication factor** is required, you can configure this manually. However, as this involves altering the Cassandra keyspaces used for crucial DataMiner data, we recommend doing this **only in coordination with a Cassandra expert or with Skyline Communications**.
 
@@ -44,7 +45,7 @@ DataMiner uses the same consistency level for all its queries to the Cassandra d
    The following consistency levels are supported: One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOne. The default setting is "Quorum".
 
    > [!NOTE]
-   > Together with the replication factor, the consistency level determines the maximum number of nodes that can be down before data unavailability occurs. For more information, see [Data replication and consistency configuration](xref:replication_and_consistency_configuration).
+   > Together with the replication factor, the consistency level determines the maximum number of nodes that can be down before data unavailability occurs. See [Examples](#examples).
 
 1. Restart DataMiner.
 
