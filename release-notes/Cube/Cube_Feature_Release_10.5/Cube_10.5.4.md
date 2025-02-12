@@ -118,3 +118,9 @@ In the *Documents* module, up to now, it would incorrectly not be possible to op
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When DataMiner Cube received a `CorrelationDetailsEventMessage` without ever receiving the associated correlated alarm, up to now, an exception could be thrown.
+
+#### Trending: Trend graph legend would show the same current value for all parameters [ID 42184]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When, in a trend graph showing trend data of two parameters, the value of the first parameter changed, the trend graph legend would incorrectly show the same current value for both parameters until the value of the second parameter also changed.
