@@ -6,157 +6,45 @@ uid: CreatingApplicationPackages
 
 There are multiple ways to create application packages:
 
-- Infrastructure as Code (IaC)
-- Using the application package builder API
-- Using the Packager .NET tool
-- Using the Low-Code-App-Extensions
+- [Using Infrastructure as Code (IaC)](#infrastructure-as-code-iac)
+- [Using The DataMiner Package Composer](#the-dataminer-package-composer)
+- [Using the application package builder API](#application-package-builder-api)
+- [Using the Packager .NET tool](#packager-net-tool)
+- [Using the Low-Code-App-Extensions](#low-code-app-extensions)
 
 > [!TIP]
 > [DataMiner Integration Studio](xref:Overall_concept_of_the_DataMiner_Integration_Studio) supports creating application packages for Automation scripts solutions.
 
 ## Infrastructure as Code (IaC)
 
-> [!IMPORTANT]
-> This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
+Infrastructure as Code (IaC) is the practice of managing and provisioning infrastructure through machine-readable configuration files rather than manual processes. It enables automation, consistency, and version control, reducing human error and improving scalability.
 
-Infrastructure as Code is the practice of using a descriptive model (i.e. code) for provisioning and deploying resources. This enables using version control and linking it with CI/CD pipelines just like any other codebase. IaC also makes it possible to have a repeatable way of provisioning and deploying resources.
+You can leverage our Visual Studio Templates to create a [Skyline DataMiner Package Project](xref:skyline_dataminer_sdk_dataminer_package_project) that will automatically make an Application Package when compiling and place it in the *bin* folder of your project. When you create this project you'll get a *GettingStarted.md* documentation file that you can follow.
 
-Skyline employees can use the SLC SE Repository Manager tool to create a repository for an application install package. For more information, refer to [Creating a repository for an install package](xref:Creating_a_repository_for_an_install_package).
+### How to install?
 
-The repository contains a Visual Studio solution that consists of the following components:
+As of version 2.42, [DataMiner Integration Studio (DIS)](https://community.dataminer.services/exphub-dis/) automatically installs the latest template package when you open Visual Studio. If you don't have this version of DIS, then follow these steps:
 
-- A **manifest**. The manifest provides information about the install package, such as its name, version, and content.
-- An **install script**. This is an Automation script that gets executed when the application package is installed on DataMiner. This install script can perform custom actions (e.g. creating an element that runs a connector that is included in the application package).
+Install the latest .NET
+Run 'dotnet new install Skyline.DataMiner.VisualStudioTemplates' to install the templates.
 
-The repository is linked to a CI/CD pipeline that will create the application package as an artifact. For more information about this pipeline, refer to [Pipeline stages for install packages](xref:Pipeline_stages_for_install_packages).
+### CI/CD Tutorial
 
-> [!NOTE]
-> The IaC approach currently only supports install scripts and therefore does not support uninstall or configuration scripts.
+If you're interested in combining this with automatic registration to the catalog you can try out our CI/CD Tutorial that uses this Skyline DataMiner Package Project:
 
-### Manifest
+[Registering a new version of a Multi-Artifact DataMiner Package to the Catalog using Visual Studio and GitHub](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub)
 
-In addition to the metadata, the manifest specifies the content to be included in the application package. The manifest can refer to protocols, Automation scripts, dashboards, functions, etc. to be included in the application package. It can even refer to other application packages to be included (which in turn can contain other application packages). In case you want to include custom files, you can create a [CompanionFiles repository](xref:Repository_types#files) and reference it in the application package manifest.
+## The DataMiner Package Composer
 
-The manifest is an XML file. More info about the manifest XML schema can be found under [Package manifest schema](xref:SchemaPackageManifest).
+The DataMiner Package Composer is an experimental low-code application aimed at providing a simple, code-free solution for moving DataMiner objects (such as low-code apps, dashboards, Automation scripts, and DOM modules) between DataMiner Agents (DMAs). This tool prioritizes ease of use and requires no coding, making it accessible for users looking to streamline DataMiner operations without technical complexities.
 
-The following example defines an application package that consists of an Automation script and companion files:
+Key highlights:
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<Manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/packageManifest">
-   <Name>Incident Manager</Name>
-   <Version>1.0.2-CU0</Version>
-   <Content>
-      <AutomationScripts>
-         <AutomationScript>
-            <RepoPath>Automation\Generic\Sample apps\Incident Manager</RepoPath>
-            <Version>
-               <Selection>
-                  <Range rangeSelection="latestRelease">1.0.0.X</Range>
-               </Selection>
-            </Version>
-         </AutomationScript>
-      </AutomationScripts>
-      <CompanionFiles>
-         <CompanionFile>
-            <RepoPath>CompanionFiles\Generic\Sample apps\Incident Manager</RepoPath>
-            <Version>
-               <Selection>
-                  <Range rangeSelection="latestRelease">1.0.0.X</Range>
-               </Selection>
-            </Version>
-         </CompanionFile>
-      </CompanionFiles>
-   </Content>
-   <VersionHistory>
-      <Branches>
-         <Branch id="1">
-            <MajorVersions>
-               <MajorVersion id="0">
-                  <MinorVersions>
-                     <MinorVersion id="1">
-                        <CUVersions>
-                           <CU id="0">
-                              <Changes>
-                                 <NewFeature>Initial Version</NewFeature>
-                              </Changes>
-                              <Date>2023-04-14</Date>
-                              <Provider>
-                                 <Company>Skyline Communications</Company>
-                                 <Author>JVW</Author>
-                              </Provider>
-                           </CU>
-                        </CUVersions>
-                     </MinorVersion>
-                     <MinorVersion id="2">
-                        <CUVersions>
-                           <CU id="0">
-                              <Changes>
-                                 <NewFeature>Add Incidents API</NewFeature>
-                              </Changes>
-                              <Date>2023-06-09</Date>
-                              <Provider>
-                                 <Company>Skyline Communications</Company>
-                                 <Author>AVV</Author>
-                              </Provider>
-                           </CU>
-                        </CUVersions>
-                     </MinorVersion>
-                  </MinorVersions>
-               </MajorVersion>
-            </MajorVersions>
-         </Branch>
-      </Branches>
-   </VersionHistory>
-</Manifest>
-```
+- Low-code simplicity: Accessible for non-developers.
+- Modular packages: Bundle components like dashboards and DOM modules.
+- Version management: Track updates with ease.
 
-### Install script
-
-The installation script is an Automation script with an [AutomationEntryPoint type](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types) attribute of type `AutomationEntryPointType.Types.InstallAppPackage`. For more information, refer to [Creating application package scripts](xref:Creating_app_package_scripts).
-
-```csharp
-namespace Script
-{
-   using System;
-
-   using Skyline.AppInstaller;
-   using Skyline.DataMiner.Automation;
-   using Skyline.DataMiner.Net.AppPackages;
-
-   /// <summary>
-   /// DataMiner Script Class.
-   /// </summary>
-   internal class Script
-   {
-      /// <summary>
-      /// The script entry point.
-      /// </summary>
-      /// <param name="engine">Provides access to the Automation engine.</param>
-      /// <param name="context">Provides access to the installation context.</param>
-      [AutomationEntryPoint(AutomationEntryPointType.Types.InstallAppPackage)]
-      public void Install(Engine engine, AppInstallContext context)
-      {
-         try
-         {
-            engine.Timeout = new TimeSpan(0, 10, 0);
-            engine.GenerateInformation("Starting installation");
-            var installer = new AppInstaller(Engine.SLNetRaw, context);
-            installer.InstallDefaultContent();
-
-            // Custom installation logic can be added here for each individual install package.
-            var subScript = engine.PrepareSubScript("Incidents_Dependencies_Import");
-            subScript.Synchronous = true;
-            subScript.StartScript();
-         }
-         catch (Exception e)
-         {
-            engine.ExitFail("Exception encountered during installation: " + e);
-         }
-      }
-   }
-}
-```
+You can find how to install and use this described on its [DataMiner Catalog Record](https://catalog.dataminer.services/details/10aeaf2a-2e6c-4841-a49e-5e3dfcd655ba).
 
 ## Application package builder API
 

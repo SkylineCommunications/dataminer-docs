@@ -48,8 +48,11 @@ It can also be used to upload private artifacts to the DataMiner Catalog that wi
 - Name: DATAMINER_DEPLOY_KEY
 - Value: See [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-## dataminer.services organization key
+## DATAMINER_TOKEN dataminer.services organization key
 
 A dataminer.services organization key is scoped to the specific organization for which it was created and can **only be used to perform uploads to the DataMiner Catalog**. This includes uploading private artifacts to the DataMiner Catalog that will only be accessible for the organization that your DMS belongs to.
 
 For more information on how to create a dataminer.services key, see [Managing dataminer.services keys](xref:Managing_DCP_keys).
+
+- Name: DATAMINER_TOKEN
+- Value: See [Managing dataminer.services keys](xref:Managing_DCP_keys).
