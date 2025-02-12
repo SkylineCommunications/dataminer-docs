@@ -6,7 +6,7 @@ uid: Disabling_the_Loading_message_for_a_page_or_shape
 
 When data linked to a page or shape is retrieved in Visual Overview, an indication can be displayed that the page is loading. In some cases, this can be inconvenient, for example when a shape is linked to a parameter that may or may not exist. Therefore, it is possible to use the *EnableLoading* option to determine whether this is indicated for a page or for a particular shape.
 
-From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 41517-->, child shapes inherit the *EnableLoading* setting that was set on shape or page level, unless explicitly overridden at the child shape level.
+If set at the page level, the *EnableLoading* setting will be inherited by all top-level shapes, unless explicitly overridden at the shape level. From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 41517-->, child shapes will also inherit this setting when applied at the page level or on a top-level shape, unless overridden.
 
 To configure this setting, add a shape data field of type **Options** to the page or to the shape, and set its value either to *EnableLoading=True* to enable the indication that it is loading or to *EnableLoading=False* to disable it.
 
