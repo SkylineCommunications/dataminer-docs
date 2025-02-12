@@ -284,8 +284,6 @@ Page- and shape-level option.
 
 Used in order to determine whether DataMiner should indicate if a page or shape is loading.
 
-If set at the page level, the *EnableLoading* setting will be inherited by all top-level shapes, unless explicitly overridden at the shape level. From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 41517-->, child shapes will also inherit this setting when applied at the page level or on a top-level shape, unless overridden.
-
 See [Disabling the indication that a page or shape is loading](xref:Disabling_the_Loading_message_for_a_page_or_shape).
 
 ## EnableViewConnectivity
