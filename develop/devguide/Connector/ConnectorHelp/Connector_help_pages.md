@@ -82,7 +82,7 @@ However, note that the Marketing page of a connector should always have a **Tech
 In the **About** section, add a short paragraph explaining the **function of the connector**. Try to also include some **information about the data source**. If you copy this information from somewhere else, make sure it fits the informative context of documentation (e.g. remove meaningless praise like "best-of-breed", "top-of-the-line", etc.).
 
 > [!NOTE]
-> **OBSOLETE**: Older connector documentation will contain, within this *About* section, tables with version info, product info, and system info, but this is no longer required as this information is now included directly within the protocol.xml via the various [VersionHistory](xref:Protocol.VersionHistory) tags.
+> In this *About* section, older connector documentation will contain **tables** with version info, product info, and system info, but these are **no longer required** as this information is now included directly within the *Protocol.xml* via the various [VersionHistory](xref:Protocol.VersionHistory) tags.
 
 #### 'Configuration' section
 
