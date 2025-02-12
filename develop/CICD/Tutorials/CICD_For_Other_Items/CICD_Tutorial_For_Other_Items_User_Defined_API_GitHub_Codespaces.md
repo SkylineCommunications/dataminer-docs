@@ -11,6 +11,7 @@ Expected duration: 10 minutes
 ## Prerequisites
 
 - A [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
+- An [organization key](xref:Managing_DCP_keys#organization-keys) or [system key](xref:Managing_DCP_keys#system-keys) or account with dataminer.services with the *Owner* role in order to access/create keys.
 
 ## Overview
 
@@ -91,7 +92,7 @@ Expected duration: 10 minutes
 
 1. In GitHub, go to the *Actions* tab.
 
-1. Click the workflow run that failed (usually called *Add project files*).
+1. Click the workflow run that failed (usually called the same as the commit message you filled in earlier).
 
 1. Click the "build" step that failed and read the failing error.
 
