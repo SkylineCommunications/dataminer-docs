@@ -132,6 +132,15 @@ In the following default Skyline dashboards themes, the colors have been updated
 
 These new colors will be applied to all existing and new dashboards, as well as to all pages and panels of low-code apps that are using one of the above-mentioned themes.
 
+#### Web Services API: Enhanced performance of the GetRegionalSettings method [ID 42202]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+Up to now, each time the *GetRegionalSettings* method was called, it would retrieve the time zone and the list separator from the *ClientSettings.json* file. From now on, it will only retrieve the time zone and list separator the first time it is called after an API connection was set up, and will cache that data for as long as the API connection is up and running.
+
+> [!NOTE]
+> As a result of this change, any changes made to the time zone and/or list separator in *ClientSettings.json* will no longer be applied when you refresh the web app. From now on, changes made to the time zone and/or list separator will require an IIS reset.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
