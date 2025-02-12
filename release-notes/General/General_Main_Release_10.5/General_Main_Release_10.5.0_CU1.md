@@ -88,6 +88,12 @@ Up to now, when no user context was needed in mobile visual overviews, an attemp
 
 To make sure the user context is always correct and that it get passed correctly to popups, from now on, mobile visual overviews will always use a separate card for each user and create a new card whenever a user requests a new visual overview in a web app.
 
+#### SLAnalytics - Behavioral anomaly detection: Problem when trying to retrieve incorrect INF values from the database [ID 42069]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, INF (infinity) values would incorrectly get stored in the database. Attempts to retrieve those values would then result in the *Behavioral anomaly detection* feature not starting up.
+
 #### Mobile Visual Overview: Child shapes would incorrectly remain clickable when hidden [ID 42090]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
