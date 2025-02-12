@@ -101,7 +101,7 @@ To securely upload and/or deploy you'll need a secret key:
     1. Select New Variable
         1. Call it DATAMINER_DEPLOY_KEY
         1. Check *Keep this value secret*
-        1. Use the key you created in [Step 3: Creating a dataminer.services key](xref:step-3-creating-a-dataminer.services-key)
+        1. Use the key you created in [Step 3: Creating a dataminer.services key](#step-3-creating-a-dataminerservices-key))
     1. Click + and add another variable
         1. Call it uploadOutput
         1. Check *Let users override this value when running this pipeline*

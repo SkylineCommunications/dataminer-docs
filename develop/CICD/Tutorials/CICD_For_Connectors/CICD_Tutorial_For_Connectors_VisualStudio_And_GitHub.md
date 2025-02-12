@@ -130,7 +130,7 @@ For real-world scenarios, you will likely need at least a paid SonarCloud licens
 
 ### Prerequisites
 
-- A GitHub and SonarCloud Organization set up as detailed under [Setting up your development environment in GitHub](xref:Part_1_CICD_Tutorial_GitHub_Setting_Up_Organization) (Skyline employees can use <https://github.com/SkylineCommunicationsSandbox>)
+- A GitHub and SonarCloud Organization set up as detailed under [Setting up your development environment in GitHub](#part-1-setting-up-your-development-environment-in-github) (Skyline employees can use <https://github.com/SkylineCommunicationsSandbox>)
 - A staging DataMiner Agent that is accessible from your pipeline and that uses DataMiner version 10.3.0/10.3.2 or higher
 - [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
 - (Sometimes already included with VS2022) [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
