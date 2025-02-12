@@ -193,3 +193,9 @@ When you changed the *Granularity* setting of a *Time range* component from *Dat
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 The *About* box of the DataMiner web apps would incorrectly no longer show any OEM information. This information has now been added again.
+
+#### Dashboards/Low-Code Apps: Components would stop responding after trying to fetch non-existing objects [ID 42192]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When a component had tried to fetch a number of non-existing objects (e.g. elements, parameter, etc.), in some cases, it would stop responding.
