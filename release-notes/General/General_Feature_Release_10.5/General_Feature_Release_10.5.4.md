@@ -64,6 +64,12 @@ For more information on how to configure elements to run in isolation mode in Da
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### Security enhancements [ID 42104]
+
+<!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]

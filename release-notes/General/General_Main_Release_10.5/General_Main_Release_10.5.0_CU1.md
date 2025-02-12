@@ -66,6 +66,12 @@ Additional logging with regard to visual overview load balancing will be availab
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### Security enhancements [ID 42104]
+
+<!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
