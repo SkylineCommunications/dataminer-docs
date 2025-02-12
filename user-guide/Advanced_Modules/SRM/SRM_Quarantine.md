@@ -116,8 +116,8 @@ foreach (var error in errors)
             {
                 errorBuilder.Append($"\t\t{trigger.QuarantineReason}. ");
 
-                // From DMA 10.5.2 onwards the 'ReservationConflictType' can provide more detailed information 
-                // when a booking update causes quarantine.
+                // From DataMiner 10.5.2/10.6.0 onwards (RN 41399), the 'ReservationConflictType' can provide more detailed information 
+                // when a booking update causes a quarantine.
                 if (trigger.ReservationConflictType != ReservationConflictReason.None)
                 {
                     errorBuilder.Append($"Conflict reason: {trigger.ReservationConflictType}");
@@ -130,8 +130,8 @@ foreach (var error in errors)
     // Example value of 'errorBuilder.ToString()':
     // Scheduling conflict. The following bookings need to be moved to quarantine::
     //     Test Booking 1 (54add931-66fc-44f5-a76e-95ad0317f6af):
-    // 	       resource with ID 'a250cffb-7054-4704-aa58-96200b0c49b3' will be quarantined because:
-    // 		       ReservationInstanceUpdated. Conflict reason: ConcurrencyOverflow
+    //         resource with ID 'a250cffb-7054-4704-aa58-96200b0c49b3' will be quarantined because:
+    //            ReservationInstanceUpdated. Conflict reason: ConcurrencyOverflow
 }
 ```
 
@@ -227,8 +227,8 @@ foreach (var error in errors)
     // Example value of 'errorBuilder.ToString()' when a booking is moved to quarantine because we decreased the 'MaxConcurrency' property of a resource:
     // Scheduling conflict. The following bookings need to be moved to quarantine::
     //     Test Booking 1 (54add931-66fc-44f5-a76e-95ad0317f6af):
-    // 	       resource with ID 'a250cffb-7054-4704-aa58-96200b0c49b3' will be quarantined because:
-    // 		       ConcurrencyDowngraded
+    //         resource with ID 'a250cffb-7054-4704-aa58-96200b0c49b3' will be quarantined because:
+    //            ConcurrencyDowngraded
 }
 ```
 
@@ -254,19 +254,19 @@ These are the possible values for the *QuarantineReason* field:
 | MovedToMaintenance  | The resource was moved to the *Maintenance* state. |
 | ReservationInstanceUpdated  | A booking was added or updated and caused a scheduling conflict. |
 | ContributingResourceNotAvailable  | A contributing resource is not available. This can happen when contributing bookings are interrupted, or when trying to assign an unavailable contributing resource to a booking. |
-| ResourceAvailabilityWindowChanged  | The availability of a resource changed. This can happen when updating the availability window resource in such a way that existing bookings fall outside of the availability. See also [Resource availability](xref:Resource_availability). |
+| ResourceAvailabilityWindowChanged  | The availability of a resource changed. This can happen when the availability window resource is updated in such a way that existing bookings fall outside of the availability. See [Resource availability](xref:Resource_availability). |
 
 ### Overview of possible *ReservationConflictType* values
 
-The script example in [Quarantine on booking updates](#quarantine-on-booking-updates) shows that from DataMiner version 10.5.2 onwards, the *QuarantineTrigger* will have a *ReservationConflictType* field if the conflict was caused by a booking update. The table below shows the possible values for the *ReservationConflictType* field.
+The script example for [Quarantine on booking updates](#quarantine-on-booking-updates) shows that from DataMiner 10.5.2/10.6.0 onwards<!-- RN 41399 -->, the *QuarantineTrigger* will have a *ReservationConflictType* field if the conflict was caused by a booking update. The table below shows the possible values for the *ReservationConflictType* field.
 
-|*ReservationConflictType* value   | Used when  |
+|*ReservationConflictType* value | Reason |
 |---|---|
 | ConcurrencyOverflow  | The resource does not have enough concurrency to support all bookings. |
-| CapacityOverflow  | The booked resource does not have enough capacity to support all bookings. |
-| UnavailableCapability  |  The booked resource does not provide the requested capability value. |
-| UnavailableTimeDependentCapability  | The booked time-dependent capability on the resource has a conflict with a different booking. |
-| OutsideResourceAvailabilityWindow  | The resource has an availability window defined and is not available in the time range of the booking. See also [Resource availability](xref:Resource_availability). |
+| CapacityOverflow | The booked resource does not have enough capacity to support all bookings. |
+| UnavailableCapability | The booked resource does not provide the requested capability value. |
+| UnavailableTimeDependentCapability | The booked time-dependent capability on the resource has a conflict with a different booking. |
+| OutsideResourceAvailabilityWindow | The resource has an availability window defined and is not available in the time range of the booking. See also [Resource availability](xref:Resource_availability). |
 
 ## Moving bookings out of the quarantine state
 

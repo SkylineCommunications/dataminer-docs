@@ -4,32 +4,33 @@ uid: Resource_availability
 
 # Resource availability
 
-The **Resource availability** feature, available from DataMiner version 10.5.3/10.6.0 <!-- RN 41894 --> onwards, allows you to define a specific period during which a resource is available for booking. This can be useful in several scenarios. Some examples:
+The **resource availability** feature, available from DataMiner 10.5.3/10.6.0 onwards<!-- RN 41894 -->, allows you to define a specific period during which a resource is available for booking. This can be useful in several scenarios. Some examples:
 
-- A resource will be commissioned at a specific date, and as such can only be used in bookings after that date. An availability window can be defined on the resource that makes it possible
- to add the resource to the system, but makes sure it can only be included in bookings after the commission date.
+- A resource will be commissioned at a specific date and as such can only be used in bookings after that date. An availability window can be defined on the resource that makes it possible to add the resource to the system but makes sure it can only be included in bookings after the commission date.
 - A resource will be decommissioned at a specific date. An availability window can be defined on the resource that makes it impossible to book the booking after that decommission date.
 - A resource always needs to be available within 30 days. An availability window can be defined on the resource that makes it impossible to book it further than 30 days in the future.
 
-Trying to book a resource outside its availability window will move that booking to quarantine. Likewise, adjusting the availability window of an existing resource in such a way that existing bookings are no longer supported will quarantine those bookings (see [Quarantine](xref:SRM_Quarantine)). Requesting available resources in a certain time range (see [Getting available resources](xref:srm_using_resourcemanagerhelper#getting-available-resources)) will also not return resources that are not available in that time range.
+Trying to book a resource outside its availability window will move that booking to quarantine. Likewise, adjusting the availability window of an existing resource in such a way that existing bookings are no longer supported will quarantine those bookings (see [Quarantine](xref:SRM_Quarantine)). If the available resources in a certain time range are requested (see [Getting available resources](xref:srm_using_resourcemanagerhelper#getting-available-resources)), resources that are configured to not be available during that time range will also not be returned.
 
-## Availability Window Properties
+## Availability window properties
 
 An availability window consists of three properties:
 
-| **Property**               	| **Type**                   	| **Description**                                                                                                                                                                     	|
-|----------------------------	|----------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|
-| AvailableFrom              	| DateTimeOffset             	| Defines the start of the availability window. The default value is 'DateTimeOffset.MinValue', which means there is no start time. Must be lower than the 'AvailableUntil' property. 	|
-| AvailableUntil             	| DateTimeOffset             	| Defines the end of the availability window. The default value is 'DateTimeOffset.MaxValue', which means there is no end time. Must be greater than the 'AvailableFrom' property.    	|
-| RollingWindowConfiguration 	| RollingWindowConfiguration 	| Specifies a rolling window of availability relative to the current time. For example, setting the rolling window to 30 days means the resource is available for booking until "now + 30 days."                                                                                                                                                                               	|
+| Property | Type | Description |
+|--|--|--|
+| AvailableFrom | DateTimeOffset | Defines the start of the availability window. The default value is *DateTimeOffset.MinValue*, which means there is no start time. Must be lower than the *AvailableUntil* property. |
+| AvailableUntil | DateTimeOffset | Defines the end of the availability window. The default value is *DateTimeOffset.MaxValue*, which means there is no end time. Must be greater than the *AvailableFrom* property. |
+| RollingWindowConfiguration | RollingWindowConfiguration | Specifies a rolling window of availability relative to the current time. For example, setting the rolling window to 30 days means the resource is available for booking until "now + 30 days". |
 
-If both a fixed end time (`AvailableUntil`) and a rolling window are set, the earlier end time is used to determine the end of the availability. For instance: if `AvailableUntil` is 15 days from now, but the rolling window is 30 days, the resource will only be available for the next 15 days. If a fixed start time (`AvailableFrom`) and a rolling window are set, the resource needs to be available according to both conditions before it can be included in a booking. For instance: if the fixed start time is 30 days from now, and the rolling window is 10 days, the resource is not bookable yet, because the rolling window ends before the fixed start time. 
+If both a fixed end time (`AvailableUntil`) and a rolling window are set, the earlier end time is used to determine the end of the availability. For instance, if `AvailableUntil` is 15 days from now, but the rolling window is 30 days, the resource will only be available for the next 15 days.
+
+If a fixed start time (`AvailableFrom`) and a rolling window are set, the resource needs to be available according to both conditions before it can be included in a booking. For instance, if the fixed start time is 30 days from now, and the rolling window is 10 days, the resource is not bookable yet, because the rolling window ends before the fixed start time.
 
 ## Code examples
 
-### Example of Configuring Availability Window
+### Example of configuring an availability window
 
-Here’s a code example showing how to configure the availability window for a resource:
+Here is a code example showing how to configure the availability window for a resource:
 
 ```csharp
 var resource = _rmHelper.GetResource(...);
@@ -77,4 +78,4 @@ foreach (var range in availableRanges)
 }
 ```
 
-The ``AvailabilityContext`` includes a ``Now`` property that allows you to override the "current time" when determining the end of a rolling window. However, when reusing a context, be cautious not to use one with an outdated ``Now`` property, as this could lead to incorrect rolling window end times. On the other hand, reusing the same context can be useful when calculating the (un)available time ranges for multiple resources, as it ensures consistent rolling window calculations across all resources.
+The `AvailabilityContext` includes a `Now` property that allows you to override the "current time" when determining the end of a rolling window. However, when reusing a context, be cautious not to use one with an outdated `Now` property, as this could lead to incorrect rolling window end times. Nevertheless, reusing the same context can be useful when calculating the (un)available time ranges for multiple resources, as it ensures consistent rolling window calculations across all resources.
