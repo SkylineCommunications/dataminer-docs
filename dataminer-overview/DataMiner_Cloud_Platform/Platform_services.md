@@ -48,10 +48,4 @@ And DataMiner as a Service comes with our Storage as a Service (STaaS) solution,
 In a nutshell: **You operate the platform, we build and maintain the platform for you.**
 
 > [!TIP]
-> See also:
->
-> - [DataMiner as a Service: DataMiner nodes and storage nodes as a service](xref:DaaS_hosting)
-
-## DataMiner Node as a Service *(coming soon)*
-
-To enhance convenience further, our next step is to provide **DataMiner node as a Service**, which simplifies the deployment of DataMiner nodes in on-premises and private cloud environments. This will greatly ease the installation and integration process.
+> See also: [DataMiner as a Service: DataMiner nodes and storage nodes as a service](xref:DaaS_hosting)
