@@ -66,6 +66,17 @@ Additional logging with regard to visual overview load balancing will be availab
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### NATS: NatsCustodianResetNatsRequest will now be blocked when the NATSForceManualConfig option is enabled [ID 42074]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.xml* file, the `NatsCustodianResetNatsRequest` message will now be blocked. Instead of performing a NATS reset, it will now return an error with the following message:
+
+`Resetting NATS is blocked while the system is running a Manual Config. See https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_disabling_automatic_nats_config.html for more information.`
+
+> [!NOTE]
+> The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
+
 #### Security enhancements [ID 42104]
 
 <!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
