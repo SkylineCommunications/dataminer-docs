@@ -11,4 +11,3 @@ DVEs are by default not set into timeout when the main element is set into timeo
 ```
 
 It is also possible to set the timeout state in a QAction using the change communication state notify NT_CHANGE_COMMUNICATION_STATE (249). See [NT_CHANGE_COMMUNICATION_STATE (249)](xref:NT_CHANGE_COMMUNICATION_STATE).
-
