@@ -155,4 +155,8 @@ Up to now, history entries for booking instances and resources would be processe
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
