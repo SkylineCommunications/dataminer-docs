@@ -73,6 +73,16 @@ For more information regarding the above-mentioned JSON syntax and legacy syntax
 > [!NOTE]
 > Contrary to dashboards, low-code apps will not push data to the URL. In other words, the URL will not change when data is selected in a component.
 
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'RadioButtonList' [ID 42032]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The UI component `UIBlockType.RadioButtonList` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
 #### Dashboards/Low-Code Apps - Column & bar chart component: Settings now have new default values [ID 42106]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
