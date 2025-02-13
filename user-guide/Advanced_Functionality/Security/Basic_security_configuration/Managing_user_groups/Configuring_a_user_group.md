@@ -68,7 +68,7 @@ In addition to these default presets, from DataMiner 10.4.0 [CU12]/10.5.0 [CU1]/
 |--|--|
 | ![Reset button](~/user-guide/images/Security_preset_reset.png) | Reverts all changes made to the rights of the currently selected user group. |
 | ![Export button](~/user-guide/images/Security_preset_export.png) | Exports the currently selected rights/preset to a preset file (in JSON format). |
-| ![Import button](~/user-guide/images/Security_preset_import.png) | Imports a preset file. |
+| ![Import button](~/user-guide/images/Security_preset_import.png) | Imports a preset file. The imported preset is added to the list of presets and immediately applied to the currently selected group. |
 | ![Delete button](~/user-guide/images/Security_preset_delete.png) | Deletes the currently selected custom preset. |
 
 To **add a new preset**, first configure the rights you want to add to the preset, then click the *Save rights as preset* button and specify the name for the preset.
