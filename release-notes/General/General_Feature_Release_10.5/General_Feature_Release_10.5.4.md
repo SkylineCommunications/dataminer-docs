@@ -86,6 +86,15 @@ If you do want such information events to be generated, you can add the `SkipInf
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### Credentials library is now fully aware of all supported SNMPv3 authentication and encryption algorithms [ID 41923]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- Reverted by RN 42136 and reinstated by RN 42153 -->
+
+Up to now, the credentials library would only be aware of a subset of all SNMPv3 authentication and encryption algorithms.
+
+Because of a number of enhancements, it will now be fully aware of all supported algorithms.
+
 #### Suggestion events created by Relational anomaly detection for a group of parameters will now be grouped into a single incident [ID 41983]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
