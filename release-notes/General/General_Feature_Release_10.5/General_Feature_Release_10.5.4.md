@@ -123,7 +123,7 @@ After a Cassandra Cluster migration had been initialized, it would no longer be 
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate instance of that visual overview would incorrectly be created for each of those users, potentially causing the creation of one instance to block the creation of another instance.
+When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
 
 #### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]
 
