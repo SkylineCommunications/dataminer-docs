@@ -4,60 +4,120 @@ uid: Tutorial_Apps_Variables
 
 # Using variables in a low-code app
 
-In this tutorial, you will learn how to create a [variable](xref:Variables), and dynamically change its value through a headerbar, so that it can be used as an element state filter inside a query.
+In this tutorial, you will learn how to create a [variable](xref:Variables) and dynamically change its value through a header bar, allowing it to be used as an element state filter within a query.
 
-By the end of this tutorial, you will have a functional low-code app that allows users to filter elements dynamically based on their state.
+By the end of this tutorial, you will have a functional low-code app that allows users to dynamically filter elements based on their state.
 
 > [!NOTE]
-> This tutorial uses DataMiner web version 10.5.1. DataMiner web version 10.4.12 introduced variable creation, while 10.5.1 added support for dynamic value changes.
+> This tutorial uses DataMiner web version 10.5.1.
+>
+> Variables have been available since DataMiner web version 10.4.12, and support for dynamic value changes was introduced in version 10.5.1.
 
 ## Prerequisites
 
-- DataMiner server 10.4.0 or higher and DataMiner web 10.5.1 or higher.
+- DataMiner server version 10.4.0 or higher
+
+- DataMiner web version 10.5.1 or higher
 
 ## Overview
 
-- [Using variables in a low-code app](#using-variables-in-a-low-code-app)
-  - [Prerequisites](#prerequisites)
-  - [Overview](#overview)
-  - [Step 1: Create a variable](#step-1-create-a-variable)
-  - [Step 2: Create an Element query filtered by the variable](#step-2-create-an-element-query-filtered-by-the-variable)
-  - [Step 3: Change the value of the variable to dynamically filter the list of elements](#step-3-change-the-value-of-the-variable-to-dynamically-filter-the-list-of-elements)
+- [Step 1: Create a variable](#step-1-create-a-variable)
+
+- [Step 2: Create a 'Get elements' query filtered by the variable](#step-2-create-a-get-elements-query-filtered-by-the-variable)
+
+- [Step 3: Add buttons to modify the variable and filter elements](#step-3-add-buttons-to-modify-the-variable-and-filter-elements)
 
 ## Step 1: Create a variable
 
-1. [Create an app](xref:Tutorial_Apps_Creating_And_Publishing#step-1-create-an-app).
+1. [Create a low-code app](xref:Tutorial_Apps_Creating_And_Publishing#step-1-create-an-app).
 
-1. Open the *Data* pane on the right, expand the *Variables* item and click the "+" icon to start creating a new variable.
+1. In the *Data* pane on the right, expand the *Variables* item and click the "+" icon to start creating a new variable.
 
-1. Enter a meaningful name for the variable in the *Name* box.
+1. In the *Name* box, enter a descriptive name for the variable.
 
-1. Select "Text" as the *Type* of the variable.
+1. Select *Text* from the *Type* dropdown list.
 
-1. Ensure the *Read-only* flag remains unchecked so that its value can be changed over time.
+1. Ensure the *Read-only* option is disabled so the variable can be changed later.
 
-1. Leave the *Default value* empty or enter an initial value to filter on.
+1. Click the ![Stop editing](~/user-guide/images/Stop_Editing.png) button to stop editing the variable.
 
-## Step 2: Create an Element query filtered by the variable
+## Step 2: Create a 'Get elements' query filtered by the variable
 
-In this step, you will create and visualize a query that shows the elements in your system that are filtered through the variable created in [step 1](#step-1-create-a-variable).
+In this step, you will create a query that retrieves elements in your DataMiner System filtered by the variable created in [step 1](#step-1-create-a-variable).
 
-1. [Create a query](xref:Creating_GQI_query).
+1. Create a query:
 
-1. Select the *[Get elements](xref:Get_elements)* data source.
+   1. In the *Data* pane, Expand the *Queries* item and click the "+" icon to start creating a new query.
 
-1. Add a *[Filter](xref:GQI_Filter)* operator on the *State* column and [link it to the variable](xref:Tutorial_Dashboards_Controls_And_Feeds_Query#step-4-replace-the-static-filter-value-with-a-feed).
+   1. In the *Name* box, enter a name for the query.
 
-1. Create a *[Table](xref:DashboardTable)* to [visualize the query](xref:Configuring_components).
+   1. Select *Get elements* as the data source.
 
-## Step 3: Change the value of the variable to dynamically filter the list of elements
+   1. Apply a [*Filter* query operator](xref:GQI_Filter):
 
-This final step will add an entry point to the app where the value of the variable can be overwritten so that the query automatically applies a new value for the filter.
+      1. Select *Filter* from the *Operator* dropdown list.
 
-1. [Add a headerbar](xref:Tutorial_Apps_Headerbar) with two buttons.
+      1. Choose *State* as the column to filter.
 
-1. Configure the first button to [change the variable](xref:LowCodeApps_event_config) to "Active".
+      1. Select *equals* as the filter method.
 
-1. Configure the second button to set the variable to "Stopped".
+      1. Under *Value*, click the ![Link to data](~/user-guide/images/Link_to_Data.png) button.
 
-That's it! After [publishing the app](xref:Tutorial_Apps_Creating_And_Publishing#step-2-publish-the-app), it will display an overview of the elements in your system. Clicking one button will narrow the list to active elements, while clicking the other will show only stopped elements.
+      1. From the *Data* dropdown list, select the variable you created in step 1.
+
+      1. Under *Empty data shows*, select *everything*.
+
+      1. Click *Link* in the lower right corner.
+
+         > [!TIP]
+         > See also: [Replace the static filter value with a feed](xref:Tutorial_Dashboards_Controls_And_Feeds_Query#step-4-replace-the-static-filter-value-with-a-feed)
+
+   1. Click the ![Stop editing](~/user-guide/images/Stop_Editing.png) button to stop editing the query.
+
+1. Add a [table component](xref:DashboardTable) to the app.
+
+1. Drag the newly created query from the *Data* pane onto the table component.
+
+   The table now displays an overview of all elements in your DataMiner System.
+
+## Step 3: Add buttons to modify the variable and filter elements
+
+Currently, all elements are displayed in the table. To allow filtering, you will add buttons to the header bar that modify the variable's value, thereby updating the query dynamically.
+
+1. Click the *header bar* toggle button.
+
+1. Add a button to filter for active elements:
+
+   1. Click the "+" on the left side of the header bar.
+
+   1. Enter `Active` as the button label.
+
+   1. Expand the *Events* item and select *Configure actions*.
+
+   1. Select *Change variable* from the dropdown list.
+
+   1. From the *Variable* dropdown list, select the variable you created in step 1.
+
+   1. Enter `Active` as the new value.
+
+   1. Click *Ok*.
+
+1. Add a button to filter for stopped elements:
+
+   1. Click the "+" on the left side of the header bar.
+
+   1. Enter `Stopped` as the button label.
+
+   1. Expand the *Events* item and select *Configure actions*.
+
+   1. Select *Change variable* from the dropdown list.
+
+   1. From the *Variable* dropdown list, select the variable you created in step 1.
+
+   1. Enter `Stopped` as the new value.
+
+   1. Click *Ok*.
+
+1. Publish the app by clicking the ![Publish](~/user-guide/images/AppPublishIcon.png) button in the top-right corner of the low-code app header bar.
+
+   Your app is now functional. By default, it displays all elements in your DataMiner System, but you can use the buttons in the header bar to filter the list to show only active or stopped elements.
