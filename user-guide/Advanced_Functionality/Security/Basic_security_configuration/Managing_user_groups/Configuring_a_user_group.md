@@ -73,13 +73,15 @@ In addition to these default presets, from DataMiner 10.4.0 [CU12]/10.5.0 [CU1]/
 
 To **add a new preset**, first configure the rights you want to add to the preset, then click the *Save rights as preset* button and specify the name for the preset.
 
-Updating an existing custom preset can be done as follows:
+**Updating** an existing custom preset can be done as follows:
 
 - To rename a preset, select the preset, delete it, and then save it with another name.
 - To change the rights configured for a preset, save it as a new preset using the same name.
 
+To **save changes** to the selected rights that you have applied using presets, remember to always click the **Apply** button at the bottom of the page.
+
 > [!NOTE]
-> Any changes to the presets will not automatically be reflected in other places.
+> If you make changes to an existing preset, these are only applied to the currently selected group (after you click *Apply*). Other groups using that preset will only be updated if a manual change is applied to them. In addition, other users who are looking at the presets at the same time will only be able to see the updated preset if they close and reopen the System Center card so that the updated preset is retrieved from the server.
 
 > [!TIP]
 > See also:
