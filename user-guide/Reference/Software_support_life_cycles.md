@@ -47,7 +47,7 @@ Important announcements about the latest changes to DataMiner core functionality
 | Jobs app | End of Engineering | Module is being retired. | End of Life as of DataMiner version 10.5.x (Q4 2024) |
 | Child bookings | End of Engineering | Child bookings are being retired, as the same functionality is supported with contributing bookings | End of Life as of DataMiner version 10.5.x (Q4 2024) |
 | Recurring bookings | End of Engineering | Recurring bookings are being retired. Instead, we suggest duplicating the previous occurrence of the booking. | End of Life as of DataMiner version 10.5.x (Q4 2024) |
-| Legacy Reporter & Dashboards | End of Life | Module has been retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner version 10.4.x (Q4 2023) |
+| Legacy Reporter & Dashboards | End of Support | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner version 10.6.x (Q4 2025) |
 | Annotations | End of Life | From DataMiner version 10.3.x (Q4 2022) onwards, Annotations should no longer be used. | End of Life |
 | Web Services API v0 | End of Life | From DataMiner version 10.1.5 onwards, version 0 of the DataMiner Web Services API is disabled. Users will be required to port any reliant applications to use Web Services API v1. | End of Life |
 | XML storage of SRM resources and profiles | End of Life | From DataMiner 10.4.0/10.4.1 onwards, SRM resources and profiles must be stored in the indexing database instead of in XML. | End of Life |
