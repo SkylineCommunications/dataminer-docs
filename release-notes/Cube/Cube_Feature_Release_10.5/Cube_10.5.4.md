@@ -139,3 +139,9 @@ When DataMiner Cube received a `CorrelationDetailsEventMessage` without ever rec
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When, in a trend graph showing trend data of two parameters, the value of the first parameter changed, the trend graph legend would incorrectly show the same current value for both parameters until the value of the second parameter also changed.
+
+#### Alarm Console: Placeholders in alarm filters would not get resolved when those filters contained brackets [ID 42214]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+Up to now, when placeholders (e.g. `[thisusername]`) were used in alarm filters made up of different segments enclosed in brackets (e.g. [...] OR [...]), in some cases, those placeholders would not get resolved.
