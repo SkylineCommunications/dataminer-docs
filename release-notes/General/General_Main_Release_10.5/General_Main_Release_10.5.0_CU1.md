@@ -66,6 +66,12 @@ Additional logging with regard to visual overview load balancing will be availab
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### Service & Resource Management: Enhanced handling of locked files when activating or deactivating functions [ID 41978]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of enhancements have been made to the ProtocolFunctionManager with regard to the handling of locked files when activating or deactivating functions.
+
 #### NATS: NatsCustodianResetNatsRequest will now be blocked when the NATSForceManualConfig option is enabled [ID 42074]
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->

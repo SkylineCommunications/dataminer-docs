@@ -95,6 +95,12 @@ Up to now, the credentials library would only be aware of a subset of all SNMPv3
 
 Because of a number of enhancements, it will now be fully aware of all supported algorithms.
 
+#### Service & Resource Management: Enhanced handling of locked files when activating or deactivating functions [ID 41978]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of enhancements have been made to the ProtocolFunctionManager with regard to the handling of locked files when activating or deactivating functions.
+
 #### Suggestion events created by Relational anomaly detection for a group of parameters will now be grouped into a single incident [ID 41983]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
