@@ -9,7 +9,7 @@ description: For optimal performance, make sure DataMiner has sufficient RAM, vC
 > [!IMPORTANT]
 > If you use [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud), your entire DataMiner setup is automatically configured for optimal performance.
 
-To make sure your DataMiner System performs optimally, it is important that sufficient resources are available. The overview below shows the requirements for a DataMiner setup using the latest version of DataMiner, with self-hosted Cassandra and OpenSearch databases. If you are using [Storage as a Service](xref:STaaS), only the requirements for DataMiner itself will be relevant for you.
+To make sure your DataMiner System performs optimally, it is important that sufficient resources are available. The overview below shows the requirements for a DataMiner setup using the latest version of DataMiner, with self-managed Cassandra and OpenSearch databases. However, we **recommend using [Storage as a Service](xref:STaaS) instead**. If you use STaaS, only the requirements for DataMiner itself will be relevant for you.
 
 Minimum requirements are displayed in gray, default requirements in light blue, and requirements for high-end applications in dark blue. Below this, you will find more detailed information on the requirements.
 
@@ -74,8 +74,8 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 | DataMiner version       | Required .NET (Framework) versions        |
 |-------------------------|-------------------------------------------|
-| DataMiner Feature Release 10.4.10 and higher<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.11-windows-hosting-bundle-installer) |
-| DataMiner Feature Release 10.4.3 to 10.4.9<!--RN 37969--><br>DataMiner Main Release 10.4.0 to 10.4.0 [CU6]<br>DataMiner Main Release 10.3.0 [CU12] to 10.3.0 [CU18] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) and [.NET 8.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.11-windows-hosting-bundle-installer) |
+| DataMiner Feature Release 10.4.10 and higher<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
+| DataMiner Feature Release 10.4.3 to 10.4.9<!--RN 37969--><br>DataMiner Main Release 10.4.0 to 10.4.0 [CU6]<br>DataMiner Main Release 10.3.0 [CU12] to 10.3.0 [CU18] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
 | DataMiner Feature Release 10.3.9 to 10.4.2 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) |
 | DataMiner Feature Release 10.3.3 to 10.3.8<br>DataMiner Main Release 10.3.0 [CU3] to 10.3.0 [CU11] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-5.0.17-windows-hosting-bundle-installer), and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) |
 | DataMiner Feature Release 10.1.12 to 10.3.2<br>DataMiner Main Release 10.3.0 [CU2] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-5.0.17-windows-hosting-bundle-installer) |
@@ -122,7 +122,10 @@ See "Network" under [DataMiner requirements](#dataminer-requirements).
 
 ## Cassandra requirements
 
-For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:Databases_about), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html). A Cassandra node can be hosted on the same server as DataMiner, or on a different server. It is also possible to use multiple Cassandra nodes with one DataMiner Agent.
+For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:About_storage), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html). A Cassandra node can be hosted on the same server as DataMiner, or on a different server. It is also possible to use multiple Cassandra nodes with one DataMiner Agent.
+
+> [!IMPORTANT]
+> Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any Cassandra nodes.
 
 ### Cassandra software
 
@@ -176,6 +179,9 @@ If there is more than one Cassandra node, the time in the cluster must be synchr
 ## OpenSearch/Elasticsearch requirements
 
 Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). Ideally, this should be an OpenSearch cluster. An Elasticsearch cluster can be used instead, but this is not recommended.
+
+> [!IMPORTANT]
+> Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any openSearch or Elasticsearch nodes.
 
 ### RAM
 

@@ -10,7 +10,7 @@ This component (available from DataMiner 10.2.0/10.1.1 onwards) allows you to tr
 
 At present, this component can only be used as a filter for a component displaying a [GQI query](xref:Creating_GQI_query) result. It will function as a refresh trigger for that query.
 
-You can for example use this in a low-code app or a dashboard to refresh a [table component](xref:DashboardTable) based on a timer.
+You can for example use this in a low-code app or a dashboard to refresh a [table component](xref:DashboardTable) based on a timer. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41799-->, you can also use this component to refresh a [query filter component](xref:DashboardQueryFilter).
 
 To configure the trigger:
 

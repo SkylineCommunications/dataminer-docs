@@ -3,9 +3,9 @@ uid: Installing_a_DataMiner_Agent
 description: Use the DataMiner Installer and then upgrade to the latest feature or main release, connect to dataminer.services, and set up data storage.
 ---
 
-# Installing a self-hosted DataMiner Agent
+# Installing a self-managed DataMiner Agent
 
-If you want to take care of hosting your DataMiner System yourself, you can manually install the DataMiner Agents instead of [creating the DMS in the cloud](xref:Creating_a_DMS_in_the_cloud).
+If you want to take care of hosting and managing your DataMiner System yourself, you can manually install the DataMiner Agents instead of [creating the DMS in the cloud](xref:Creating_a_DMS_in_the_cloud).
 
 > [!IMPORTANT]
 >

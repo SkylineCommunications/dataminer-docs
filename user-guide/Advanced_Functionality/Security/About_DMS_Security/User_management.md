@@ -45,7 +45,7 @@ To **enable** the local Administrator user:
    `Get-LocalUser Administrator | Enable-LocalUser`
 
 > [!NOTE]
-> If you use self-hosted storage nodes instead of the recommended [Storage as a Service](xref:STaaS), you will need to make sure that the default users of the DataMiner **databases** are also secured. For more information, see [Securing self-hosted DataMiner storage](xref:Cassandra_authentication).
+> If you use self-managed storage nodes instead of the recommended [Storage as a Service](xref:STaaS), you will need to make sure that the default users of the DataMiner **databases** are also secured. For more information, see [Securing self-managed DataMiner storage](xref:Cassandra_authentication).
 
 ## User authentication
 

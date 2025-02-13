@@ -504,6 +504,8 @@ items:
                 topicUid: DashboardTextInput
               - name: Time range
                 topicUid: TimeRange
+              - name: Toggle
+                topicUid: Toggle
       - name: Component data
         topicUid: Component_Data
       - name: URL data
@@ -927,7 +929,7 @@ items:
             topicUid: DOM_Remove_Enum_Entry
           - name: Removing a field descriptor from a definition
             topicUid: DOM_Remove_FieldDescriptor_Definition
-          - name: Generating code with the DOM editor
+          - name: Generating code with the DOM Editor
             topicUid: DOM_Generating_code_with_the_DOM_editor
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
@@ -1258,6 +1260,8 @@ items:
         items:
           - name: Function resource settings
             topicUid: Function_resource_settings
+          - name: Resource availability
+            topicUid: Resource_availability
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:

@@ -11,21 +11,21 @@ uid: General_Main_Release_10.6.0_changes
 
 ### Breaking changes
 
-#### Protocols: Separate SLScripting process for every protocol used [ID 41713]
+#### Protocols: Separate SLScripting process for every SLProtocol process [ID 41713]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
 From now on, DataMiner will by default start a separate SLScripting process for every SLProtocol process.
 
-Up to now, if you wanted to have separate SLScripting processes created for every protocol being used, you had to explicitly configure this in `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
+Up to now, if you wanted to have a separate SLScripting process created for every SLProtocol process being used, you had to explicitly configure this in the `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
 
 ```xml
 <DataMiner>
-  <ProcessOptions protocolProcesses="protocol" scriptingProcesses="protocol" />
+  <ProcessOptions protocolProcesses="18" scriptingProcesses="protocol" />
 </DataMiner>
 ```
 
-If you only want a single SLScripting process for all protocols that are used, then set the `scriptingProcesses` attribute to "1".
+If you only want a single SLScripting process for all SLProtocol processes that are used, then set the `scriptingProcesses` attribute to "1".
 
 ### Enhancements
 
@@ -155,4 +155,28 @@ Up to now, history entries for booking instances and resources would be processe
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
+
+#### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
+
+#### Mobile Visual Overview: Problem with user context [ID 42061]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
+
+Up to now, when no user context was needed in mobile visual overviews, an attempt would be made to reuse server-side cards among users. However, in some cases, this could cause problems, especially when handling popups or embedded visual overviews.
+
+To make sure the user context is always correct and that it get passed correctly to popups, from now on, mobile visual overviews will always use a separate card for each user and create a new card whenever a user requests a new visual overview in a web app.
+
+#### Mobile Visual Overview: Child shapes would incorrectly remain clickable when hidden [ID 42090]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
+
+When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.

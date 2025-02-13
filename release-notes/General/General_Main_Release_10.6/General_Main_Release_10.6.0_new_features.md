@@ -276,6 +276,32 @@ When the above-mentioned upgrade action is executed, it will log the name and th
 > [!NOTE]
 > From now on, newly generated service protocols will by default have a parameter with ID 7.
 
+#### Elements can now be configured to run in isolation mode [ID 41757]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+Up to now, the *ProcessOptions* section of the *DataMiner.xml* file allowed you to configure that an element had to run in its own SLProtocol and SLScripting processes, and in a *protocol.xml* file, the *RunInSeparateInstance* tag allowed you to do the same. However, it was only possible to configure this for all elements using a particular protocol.
+
+From now on, the new *Run in isolation mode* feature will allow you to also configure this for one single element.
+
+As creating additional SLProtocol processes has an impact on the resource usage of a DataMiner Agent, a hard limit of 50 SLProtocol processes has been introduced. If, when an element starts, an attempt to create a new SLProtocol process fails because 50 processes are already running, the element will be hosted by an existing SLProtocol process and its matching SLScripting process, regardless of how the *Run in isolation mode* was configured.
+
+From those 50 SLProtocol processes, 10 processes will be reserved for elements that are not running in isolation mode. This means, that only 40 elements will be able to run in isolation mode at any given time. However, the notice that will appear each time an attempt is made to start an additional element in isolation mode will mention the 50-element limit.
+
+Reducing the number of SLProtocol processes in the *DataMiner.xml* file will reduce the number of reserved processes. However, increasing the number of SLProtocol processes to above 50 will keep the reserved number of SLProtocol processes to 50 (i.e. the maximum number of SLProtocol processes).
+
+For example, if 15 SLProtocol processes are configured in the *DataMiner.xml* file, and 45 elements are configured to run in isolation mode, then:
+
+- 10 SLProtocol processes will be used for elements that are not running in isolation mode,
+- 35 SLProtocol processes will be used to host an element in isolation mode, and
+- the remaining 5 SLProtocol processes will be used for elements running either in isolation mode or not, depending on which elements starts first.
+
+This means, that some elements will not be able to run in isolation mode, and some SLProtocol processes will not be able to host elements that are not running in isolation mode. In each of those cases, an alarm will be generated.
+
+In the DataMiner.xml file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
+
+For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
+
 #### DataMiner Object Models: Configuring trigger conditions for CRUD scripts [ID 41780]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
@@ -309,11 +335,102 @@ moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new
 };
 ```
 
-#### Relational anomaly detection [ID 42034]
+#### Service & Resource Management: Defining an availability window for a resource [ID 41894]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
-Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related. Whenever the relation is broken, RAD will detect this and generate suggestion events. A suggestion event will be generated for each parameter instance in the group where a broken relation was detected.
+For each resource, you can now define an availability window, i.e. a period during which the resource is available.
+
+An availability window has the following (optional) properties:
+
+| Property | Description |
+|----------|-------------|
+| AvailableFrom  | The start time of the availability window. Default value: `DateTimeOffset.MinValue` (i.e. no start time). |
+| AvailableUntil | The end time of the availability window. Default value: `DateTimeOffset.MaxValue` (i.e. no end time). |
+| RollingWindowConfiguration | The size of the availability window relative to the current time.<br>For example, if you set this property to 30 days, the resource will be available for booking until 30 days from now.<br>If both a fixed end time and a rolling window are set, the earlier time of the two will be used. For example, if the fixed end time is 15 days from now, but the rolling window is 30 days, the resource will no longer be available after the 15-day mark, even though the rolling window would extend to 30 days. |
+
+When you use the *GetEligibleResources* API call to retrieve resources available during a specific time range, resources that are not available for the entire requested range will not be returned.
+
+Example showing how to configure the above-mentioned properties:
+
+```csharp
+var resource = _rmHelper.GetResource(...);
+resource.AvailabilityWindow = new BasicAvailabilityWindow()
+{
+    AvailableFrom = DateTimeOffset.Now.AddHours(1),
+    AvailableUntil = DateTimeOffset.Now.AddDays(30),
+    // RollingWindow can be left as 'null' if no rolling window needs to be configured
+    RollingWindowConfiguration = new RollingWindowConfiguration(TimeSpan.FromHours(5))
+};
+resource = _rmHelper.AddOrUpdateResources(resource)?.FirstOrDefault();
+var td = _rmHelper.GetTraceDataLastCall();
+if (!td.HasSucceeded())
+{
+    // Handle the error
+}
+```
+
+Setting `AvailableFrom` to a date after `AvailableUntil`, or `AvailableUntil` to a date before `AvailableFrom` will throw an `ArgumentOutOfRangeException`. Also, passing a zero or negative `TimeSpan` to the `RollingWindowConfiguration` will throw an `ArgumentOutOfRangeException`.
+
+Adding an availability window to an existing resource, or adding a resource to a booking that runs outside the availability window of the resource will trigger quarantine. The following errors will be returned when quarantine is triggered:
+
+- When you add an availability window to a resource, an error of type `ResourceManagerError` with reason `ResourceUpdateCausedReservationsToGoToQuarantine` will be returned. The quarantine reason in the trigger will be `ResourceAvailabilityWindowChanged`.
+
+- When you try to book a resource that is not available in the requested time range, an error of type `ResourceManagerError` with reason `ReservationUpdateCausedReservationsToGoToQuarantine` will be returned. The quarantine reason in the trigger will be `ReservationInstanceUpdated`. The `ReservationConflictType` will be `OutsideResourceAvailabilityWindow`.
+
+The availability window provides a method to retrieve the time ranges in which the resource is available:
+
+```csharp
+AvailabilityResult result = resource.AvailabilityWindow.GetAvailability(new AvailabilityContext());
+List<ResourceWindowTimeRange> availableRanges = result.AvailableTimeRanges;
+foreach (var range in availableRanges)
+{
+    DateTimeOffset start = range.Start;
+    DateTimeOffset end = range.Stop;
+    
+    // A corresponding details property 'StopDetails' exists for the stop;
+    TimeRangeBoundaryDetails startDetails = range.StartDetails;
+
+    // Indicates if this boundary was defined by a fixed point (start/stop) or by a rolling window
+    BoundaryDefinition startDefinition = startDetails.BoundaryDefinition;
+    if (startDefinition == BoundaryDefinition.RollingWindow)
+    {
+        // ...
+    }
+}
+```
+
+The `AvailabilityContext` parameter has a property `Now`, which can be used to override the "now" timestamp in order to calculate e.g. the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
+
+#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Scheduler app [ID 41970]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Scheduler app.
+
+In other words, when an Automation script is triggered by the Scheduler app, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
+
+If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
+
+```xml
+<MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+    ...
+    <SLNet>
+        ...
+        <SkipInformationEvents>false</SkipInformationEvents>
+        ...
+    </SLNet>
+    ...
+</MaintenanceSettings>
+```
+
+#### Relational anomaly detection [ID 41983] [ID 42034]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
+
+Whenever the relation is broken, RAD will detect this and generate suggestion events for each parameter instance in the group where a broken relation was detected. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
 
 ##### Configuration file
 
@@ -356,7 +473,7 @@ If necessary, users can force RAD to retrain its internal model by sending a `Re
 
 ##### Limitations
 
-- RAD is only able to monitor parameters on the local DataMiner Agent. This means, that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
+- RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
 
 - RAD does not support history sets.
 

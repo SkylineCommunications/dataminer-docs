@@ -49,11 +49,22 @@ To create component references inside textual settings, use the following syntax
 > - Any parts of this syntax that contain spaces should be enclosed in double quotation marks.
 > - All parts of this syntax are case-sensitive.
 
-Example: If the linked component provided the element name "Localhost" and the protocol name "Microsoft Platform", the following example would result in the text "*The element Localhost uses the protocol Microsoft Platform*":
+Examples:
 
-```txt
-The element `{COMPONENT."Page 1"."Dropdown 3"."Selected item".Elements.Name}` uses the protocol `{COMPONENT."Page 1"."Dropdown 3"."Selected item".Elements."Protocol Name"}`.
-```
+- If the linked component provided the element name "Localhost" and the protocol name "Microsoft Platform", the following example would result in the text "*The element Localhost uses the protocol Microsoft Platform*":
+
+  ```txt
+  The element `{COMPONENT."Page 1"."Dropdown 3"."Selected item".Elements.Name}` uses the protocol `{COMPONENT."Page 1"."Dropdown 3"."Selected item".Elements."Protocol Name"}`.
+  ```
+
+- If the linked component represents a toggle switch, where "Toggle 1" is either enabled (`true`) or disabled (`false`), the following example would result in the text "*Toggle state: true*" when Toggle 1 is enabled and "*Toggle state: false*" when Toggle 1 is disabled:
+
+  ```txt
+  Toggle state: {COMPONENT."Current view"."Toggle 1".Value.Booleans.Value}.
+  ```
+
+  > [!NOTE]
+  > Dynamically referencing boolean values is supported from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41845-->.
 
 #### URLs
 

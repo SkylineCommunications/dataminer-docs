@@ -60,6 +60,29 @@ The following new messages can now be used to  which you can target to be sent t
 
 Additional logging with regard to visual overview load balancing will be available in the web logs located in the *C:\\Skyline DataMiner\\Logging\\Web* folder.
 
+#### Enhanced performance when updating subscriptions and when checking events against the set of active subscriptions [ID 41822]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
+
+#### NATS: NatsCustodianResetNatsRequest will now be blocked when the NATSForceManualConfig option is enabled [ID 42074]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.xml* file, the `NatsCustodianResetNatsRequest` message will now be blocked. Instead of performing a NATS reset, it will now return an error with the following message:
+
+`Resetting NATS is blocked while the system is running a Manual Config. See https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_disabling_automatic_nats_config.html for more information.`
+
+> [!NOTE]
+> The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
+
+#### Security enhancements [ID 42104]
+
+<!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
@@ -67,3 +90,15 @@ Additional logging with regard to visual overview load balancing will be availab
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.2 -->
 
 Because of an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
+
+#### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When an alarm template was updated, in some cases, the alarm focus manager could receive a excessive number of messages, causing SLAnalytics to leak memory.
+
+#### SLAnalytics - Behavioral anomaly detection: Problem when trying to retrieve incorrect INF values from the database [ID 42069]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, INF (infinity) values would incorrectly get stored in the database. Attempts to retrieve those values would then result in the *Behavioral anomaly detection* feature not starting up.

@@ -63,4 +63,4 @@ You can modify the behavior of an app by adding specific parameters to the URL.
 
   - [Parameter picker > *Index filter separator* setting](xref:DashboardParameterPicker#configuring-the-component)
 
-- `useNewIASInputComponent=true`: Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41495-->. Allows you to control whether the latest version of the interactive Automation script UI is used for IAS components or when launching an interactive Automation script via the *Launch a script* event. When this parameter is set to "false" or omitted, the app uses the old UI.
+- `useNewIASInputComponent=true`: Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41495-->. Allows you to control whether the latest version of the interactive Automation script UI is used for IAS components or when launching an interactive Automation script via the *Launch a script* event. When this parameter is set to "false" or omitted, the app uses the old UI. <!--RN 41529-->

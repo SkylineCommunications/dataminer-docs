@@ -275,6 +275,12 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
     <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardTextInput.html" title="Text Input" target="_self"><img src="~/user-guide/images/Text_Input.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/TimeRange.html" title="Time Range" target="_self"><img src="~/user-guide/images/Time_Range.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/Timerange.html" title="Time Range" target="_self"><img src="~/user-guide/images/Time_Range.svg" style="width:100%"></a>
+  </div>
+</div>
+
+<div class="row"> 
+  <div class="column">
+    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/Toggle.html" title="Toggle" target="_self"><img src="~/user-guide/images/Toggle.svg" style="width:100%"></a>
   </div>
 </div>

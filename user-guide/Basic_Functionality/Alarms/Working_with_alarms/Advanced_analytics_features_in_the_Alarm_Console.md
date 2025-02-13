@@ -5,7 +5,7 @@ keywords: alarm focus, AI
 
 # Advanced analytics features in the Alarm Console
 
-A number of features in the Alarm Console make use of the artificial intelligence capabilities provided by DataMiner Analytics. These features are only available on systems using [Storage as a Service](xref:STaaS) or using a self-hosted Cassandra-compatible database. For systems with self-hosted DataMiner storage, pattern matching is only available if this includes an [indexing database](xref:Indexing_Database).
+A number of features in the Alarm Console make use of the artificial intelligence capabilities provided by DataMiner Analytics. These features are only available on systems using [Storage as a Service](xref:STaaS) (recommended) or using a self-managed Cassandra-compatible database. For systems with self-managed DataMiner storage, pattern matching is only available if this includes an [indexing database](xref:Indexing_Database).
 
 All features can be activated or deactivated in System Center, via *System Center* > *System settings* > *analytics config*.
 
@@ -22,3 +22,5 @@ The following advanced analytics features **generate suggestion events** that in
 - [Proactive cap detection](xref:Proactive_cap_detection).
 
 - [Pattern matching](xref:Monitoring_of_trend_patterns).
+
+- [Relational anomaly detection](xref:Relational_anomaly_detection) (from DataMiner 10.5.3/10.6.0 onwards).

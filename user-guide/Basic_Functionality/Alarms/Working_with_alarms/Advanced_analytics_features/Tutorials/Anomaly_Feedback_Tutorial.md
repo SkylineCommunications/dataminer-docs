@@ -25,7 +25,7 @@ Estimated duration: 25 minutes.
 
 ## Prerequisites
 
-- DataMiner 10.4.11 or higher with [Storage as a Service (STaaS)](xref:STaaS) or an [indexing database](xref:Supported_system_data_storage_architectures).
+- DataMiner 10.4.11 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or an [indexing database](xref:Supported_system_data_storage_architectures).
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 

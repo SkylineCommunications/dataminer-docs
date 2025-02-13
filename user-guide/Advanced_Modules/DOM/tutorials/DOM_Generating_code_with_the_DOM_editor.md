@@ -2,9 +2,9 @@
 uid: DOM_Generating_code_with_the_DOM_editor
 ---
 
-# Generating code with the DOM editor
+# Generating code with the DOM Editor
 
-In this tutorial, you will learn how to use the DOM editor to generate code from your DOM module. You can then use this code to interact with your DOM modules, definitions, and instances more easily.
+In this tutorial, you will learn how to use the DOM Editor to generate code from your DOM module. You can then use this code to interact with your DOM modules, definitions, and instances more easily.
 
 Expected duration: 10 minutes.
 
@@ -33,7 +33,7 @@ This tutorial consists of the following steps:
 
 ## Step 1: Install the example package from the Catalog
 
-1. Go to the [Tutorial - Generating code with the DOM editor](https://catalog.dataminer.services/details/6a8c3f13-db15-46a4-931d-96e7c187fa6a) package in the DataMiner Catalog.
+1. Go to the [Tutorial - Generating code with the DOM Editor](https://catalog.dataminer.services/details/6a8c3f13-db15-46a4-931d-96e7c187fa6a) package in the DataMiner Catalog.
 
 1. Deploy the package to your DataMiner System by clicking the *Deploy* button.
 
@@ -96,7 +96,7 @@ To create an Automation script solution:
 
 1. Enter *DomIds* as the name.
 
-1. Replace the content of the *DomIds.cs* file with the code you copied from the DOM editor.
+1. Replace the content of the *DomIds.cs* file with the code you copied from the DOM Editor.
 
 1. Open the *Generate Kata Dom Instances_1.cs* file to edit the main script code.
 

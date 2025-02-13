@@ -5,7 +5,7 @@ uid: Amazon_OpenSearch_Service
 # Amazon OpenSearch Service
 
 > [!IMPORTANT]
-> This setup is deprecated. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, use [OpenSearch](xref:OpenSearch_database) as the indexing database.
+> This setup is deprecated. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead.
 
 Using the Amazon OpenSearch Service on AWS as the DataMiner indexing database is supported from DataMiner 10.3.0 [CU0] up to 10.3.0 [CU8] and from DataMiner 10.3.3 up to 10.3.11. Although the service is named after OpenSearch, it offers both OpenSearch and Elasticsearch clusters. However, note that DataMiner only supports Elasticsearch version 6.8, so using Elasticsearch is not recommended.
 

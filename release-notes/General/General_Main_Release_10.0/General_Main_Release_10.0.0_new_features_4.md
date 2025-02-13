@@ -732,7 +732,7 @@ The following CPECollectorHelper function allows client apps to retrieve table r
 
 Note that this function requires that, in the protocols of the CPE collector elements, the Topology.Cell tags map to names of table cells on the CPE Manager elements that have to be polled, and that each of those Topology.Cell tags also contains an Exposer tag.
 
-In the example below, the “Amplifier” cell has been exposed to the CPE crawler, which will retrieve the data. This means, that table 500 can be searched using the above-mentioned function.
+In the example below, the “Amplifier” cell has been exposed to the CPE crawler, which will retrieve the data. This means that table 500 can be searched using the above-mentioned function.
 
 Also note that, inside the Exposer element, you can add linked tables. In the example below, table 1000 is linked to table 500 using column parameter ID 1001.
 

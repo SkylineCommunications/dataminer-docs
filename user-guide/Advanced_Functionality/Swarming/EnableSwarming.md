@@ -12,7 +12,7 @@ uid: EnableSwarming
 - DataMiner 10.5.1/10.6.0 or higher.
 - [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) setup.
 - No [Failover Agents](xref:About_DMA_Failover) are present in the cluster.
-- No [offload database](xref:Offload_database) is configured.
+- No [data offloads](xref:Offload_database) are configured.
 - Enhanced services in the cluster (if any) use only [compatible connectors](xref:SwarmingPrepare).
 - Scripts (Automation/GQI) and QActions in connectors have all been [made compatible](xref:SwarmingPrepare), i.e. they do not use obsolete or incompatible SLNet calls/properties that handle Alarm IDs as "DmaID/AlarmID".
 - For the user account that will be used to enable Swarming, the [Admin Tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is enabled.
@@ -46,6 +46,17 @@ To run a prerequisites check using SLNetClientTest tool:
 1. In the *Properties* tab, make sure the top message is selected, and check the summary in the pane on the right.
 
    For each prerequisite, the tool will indicate whether the prerequisite is met (*True*) or not (*False*). If you hover over the *Summary* item, you will get a detailed overview of which items cause prerequisites not to be met (e.g. specific scripts, enhanced service connectors, connectors using the obsolete alarm ID format, etc.).
+
+> [!NOTE]
+> Obsolete Engine methods are only included in the prerequisites check from DataMiner 10.5.3 onwards<!--RN 42073-->. If you are using DataMiner 10.5.1 or 10.5.2, these obsolete methods may still be present even if the prerequisite check does not report any issues.
+> The following Engine methods are obsolete and should not be used. Instead, use the corresponding new methods:
+>
+> | Obsolete method | New method |
+> |--|--|
+> | GetAlarmProperty(int, int, string) | GetAlarmProperty(AlarmID, string) |
+> | SetAlarmProperty(int, int, string, string) | SetAlarmProperty(AlarmTreeID, string, string) |
+> | SetAlarmProperties(int, int, string[], string[]) | SetAlarmProperties(AlarmTreeID, string[], string[]) |
+> | AcknowledgeAlarm(int, int, string) | AcknowledgeAlarm(AlarmTreeID, string) |
 
 ## Enabling Swarming
 

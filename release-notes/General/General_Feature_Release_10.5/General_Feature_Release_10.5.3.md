@@ -61,6 +61,73 @@ moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new
 };
 ```
 
+#### Service & Resource Management: Defining an availability window for a resource [ID 41894]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+For each resource, you can now define an availability window, i.e. a period during which the resource is available.
+
+An availability window has the following (optional) properties:
+
+| Property | Description |
+|----------|-------------|
+| AvailableFrom  | The start time of the availability window. Default value: `DateTimeOffset.MinValue` (i.e. no start time). |
+| AvailableUntil | The end time of the availability window. Default value: `DateTimeOffset.MaxValue` (i.e. no end time). |
+| RollingWindowConfiguration | The size of the availability window relative to the current time.<br>For example, if you set this property to 30 days, the resource will be available for booking until 30 days from now.<br>If both a fixed end time and a rolling window are set, the earlier time of the two will be used. For example, if the fixed end time is 15 days from now, but the rolling window is 30 days, the resource will no longer be available after the 15-day mark, even though the rolling window would extend to 30 days. |
+
+When you use the *GetEligibleResources* API call to retrieve resources available during a specific time range, resources that are not available for the entire requested range will not be returned.
+
+Example showing how to configure the above-mentioned properties:
+
+```csharp
+var resource = _rmHelper.GetResource(...);
+resource.AvailabilityWindow = new BasicAvailabilityWindow()
+{
+    AvailableFrom = DateTimeOffset.Now.AddHours(1),
+    AvailableUntil = DateTimeOffset.Now.AddDays(30),
+    // RollingWindow can be left as 'null' if no rolling window needs to be configured
+    RollingWindowConfiguration = new RollingWindowConfiguration(TimeSpan.FromHours(5))
+};
+resource = _rmHelper.AddOrUpdateResources(resource)?.FirstOrDefault();
+var td = _rmHelper.GetTraceDataLastCall();
+if (!td.HasSucceeded())
+{
+    // Handle the error
+}
+```
+
+Setting `AvailableFrom` to a date after `AvailableUntil`, or `AvailableUntil` to a date before `AvailableFrom` will throw an `ArgumentOutOfRangeException`. Also, passing a zero or negative `TimeSpan` to the `RollingWindowConfiguration` will throw an `ArgumentOutOfRangeException`.
+
+Adding an availability window to an existing resource, or adding a resource to a booking that runs outside the availability window of the resource will trigger quarantine. The following errors will be returned when quarantine is triggered:
+
+- When you add an availability window to a resource, an error of type `ResourceManagerError` with reason `ResourceUpdateCausedReservationsToGoToQuarantine` will be returned. The quarantine reason in the trigger will be `ResourceAvailabilityWindowChanged`.
+
+- When you try to book a resource that is not available in the requested time range, an error of type `ResourceManagerError` with reason `ReservationUpdateCausedReservationsToGoToQuarantine` will be returned. The quarantine reason in the trigger will be `ReservationInstanceUpdated`. The `ReservationConflictType` will be `OutsideResourceAvailabilityWindow`.
+
+The availability window provides a method to retrieve the time ranges in which the resource is available:
+
+```csharp
+AvailabilityResult result = resource.AvailabilityWindow.GetAvailability(new AvailabilityContext());
+List<ResourceWindowTimeRange> availableRanges = result.AvailableTimeRanges;
+foreach (var range in availableRanges)
+{
+    DateTimeOffset start = range.Start;
+    DateTimeOffset end = range.Stop;
+    
+    // A corresponding details property 'StopDetails' exists for the stop;
+    TimeRangeBoundaryDetails startDetails = range.StartDetails;
+
+    // Indicates if this boundary was defined by a fixed point (start/stop) or by a rolling window
+    BoundaryDefinition startDefinition = startDetails.BoundaryDefinition;
+    if (startDefinition == BoundaryDefinition.RollingWindow)
+    {
+        // ...
+    }
+}
+```
+
+The `AvailabilityContext` parameter has a property `Now`, which can be used to override the "now" timestamp in order to calculate e.g. the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
+
 #### Relational anomaly detection [ID 42034]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
@@ -108,7 +175,7 @@ If necessary, users can force RAD to retrain its internal model by sending a `Re
 
 ##### Limitations
 
-- RAD is only able to monitor parameters on the local DataMiner Agent. This means, that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
+- RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
 
 - RAD does not support history sets.
 
@@ -118,21 +185,21 @@ If necessary, users can force RAD to retrain its internal model by sending a `Re
 
 ### Breaking changes
 
-#### Protocols: Separate SLScripting process for every protocol used [ID 41713]
+#### Protocols: Separate SLScripting process for every SLProtocol process [ID 41713]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
 From now on, DataMiner will by default start a separate SLScripting process for every SLProtocol process.
 
-Up to now, if you wanted to have separate SLScripting processes created for every protocol being used, you had to explicitly configure this in `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
+Up to now, if you wanted to have a separate SLScripting process created for every SLProtocol process being used, you had to explicitly configure this in the `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
 
 ```xml
 <DataMiner>
-  <ProcessOptions protocolProcesses="protocol" scriptingProcesses="protocol" />
+  <ProcessOptions protocolProcesses="18" scriptingProcesses="protocol" />
 </DataMiner>
 ```
 
-If you only want a single SLScripting process for all protocols that are used, then set the `scriptingProcesses` attribute to "1".
+If you only want a single SLScripting process for all SLProtocol processes that are used, then set the `scriptingProcesses` attribute to "1".
 
 ### Enhancements
 
@@ -424,6 +491,24 @@ Also, the Mobile Gateway process would only be aware of elements that were hoste
 When you tried to update the GQI DxM by means of the MSI installer, in some cases, the update would either not entirely succeed or even fail.
 
 A number of enhancements have now been made to prevent any problems from occurring while updating the GQI DxM.
+
+#### SLA window change records would not properly be removed from the database [ID 41995]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+<!-- Not added to MR 10.5.0 -->
+
+Since DataMiner feature version 10.4.12, SLA window change records would not properly be removed from the database.
+
+Also, attempts to clean up those records would potentially lead to thread problems in SLProtocol.
+
+#### Swarming: Problems with information events [ID 41999]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element was being swarmed, in some cases, the final information event that was generated would have an incorrect alarm ID.
+
+Also, in some rare cases, the *Activated By* information event could have a duplicate alarm tree key.
 
 #### BPA tests would fail to load the necessary DLL files [ID 42000]
 

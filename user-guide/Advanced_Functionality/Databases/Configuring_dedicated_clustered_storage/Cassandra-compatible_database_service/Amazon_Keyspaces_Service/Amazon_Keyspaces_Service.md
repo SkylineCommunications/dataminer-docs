@@ -5,7 +5,7 @@ uid: Amazon_Keyspaces_Service
 # Amazon Keyspaces Service
 
 > [!IMPORTANT]
-> This setup is deprecated. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+> This setup is deprecated. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead.
 
 Using the Amazon Keyspaces Service on AWS as an alternative for a Cassandra Cluster setup is supported from DataMiner 10.3.0 [CU0] up to 10.3.0 [CU8] and from DataMiner 10.3.3 up to 10.3.11.
 
@@ -22,4 +22,4 @@ In this section of the documentation, you can find instructions on [how to deplo
 > - The only replication strategy supported is the Amazon Keyspaces specific `Single-Region strategy`, which is not configurable.
 
 > [!TIP]
-> See also: [Supported system data storage architectures](xref:Supported_system_data_storage_architectures)
+> See also: [Storage options overview](xref:Supported_system_data_storage_architectures)

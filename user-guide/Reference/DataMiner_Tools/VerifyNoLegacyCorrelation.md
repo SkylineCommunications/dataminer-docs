@@ -4,7 +4,7 @@ uid: VerifyNoLegacyCorrelation
 
 # Verify No Legacy Correlation
 
-In DataMiner 10.5.1/10.6.0<!--RN 40834-->, the *VerifyNoLegacyCorrelation* prerequisite check is added to upgrade packages. This check verifies that no legacy Correlation rules still exist on your DataMiner System before upgrading, as these will no longer work after the upgrade.
+From DataMiner 10.5.1/10.6.0 onwards<!--RN 40834-->, the *VerifyNoLegacyCorrelation* prerequisite check is included in upgrade packages. This check verifies that no legacy Correlation rules still exist on your DataMiner System before upgrading, as these will no longer work after the upgrade.
 
 From DataMiner 10.5.x onwards, Correlation rules created using the legacy System Display engine are *End of Life*. These are Correlation rules that were either created in System Display or in Cube via *Advanced* > *Old engine* > *Add rule*.
 
