@@ -86,6 +86,14 @@ If you do want such information events to be generated, you can add the `SkipInf
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### Suggestion events created by Relational anomaly detection for a group of parameters will now be grouped into a single incident [ID 41983]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When Relational anomaly detection (RAD) detects that a group of parameters deviates from its normal behavior, it will create a suggestion event for each of the parameters in that group. These suggestion events will now be grouped into a single incident so that it is shown on a single line in the Alarm Console.
+
+When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
+
 #### NATS: NatsCustodianResetNatsRequest will now be blocked when the NATSForceManualConfig option is enabled [ID 42074]
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
