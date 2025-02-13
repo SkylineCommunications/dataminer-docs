@@ -150,13 +150,9 @@ If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing
 
 ### Switching from subscription mode to an offline demo license
 
-When you deploy a DataMiner Agent using the installer, your system will run in subscription mode and get licensed automatically.
+When you deploy a DataMiner Agent using the installer, your system will automatically be licensed and run in subscription mode. A DataMiner Agent running in subscription mode **has to remain connected** to [dataminer.services](xref:AboutCloudPlatform) to keep it licensed. If for some reason you cannot keep your Agent connected to [dataminer.services](xref:AboutCloudPlatform), it will automatically shut down after 1 month.
 
-A DataMiner Agent running in subcription mode should remain connected to [dataminer.services](xref:AboutCloudPlatform) to keep it licensed.
-
-If for some reason you cannot keep your agent connected to [dataminer.services](xref:AboutCloudPlatform), it will automatically shut down after 1 month.
-
-If after this period you want to extend usage of the system, it is possible to convert your subscription installation to an offline demo one:
+If after this period you want to extend the usage of the system, you can convert your subscription installation to an offline demo installation:
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
