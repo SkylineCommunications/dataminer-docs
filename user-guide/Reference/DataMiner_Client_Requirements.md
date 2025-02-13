@@ -50,6 +50,7 @@ To install the Skyline certificates:
 
 > [!NOTE]
 >
+> - From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41844-->, this tool is no longer available.
 > - Running this tool is an optional security precaution.
 > - The tool will try to install the certificates for all users of the computer. If this is not possible because of insufficient rights, it will try to install the certificates for the current user only.
 > - When the installation is complete, a message "Certificates have been installed (current user)" or "Certificates have been installed (all users)" will be displayed.

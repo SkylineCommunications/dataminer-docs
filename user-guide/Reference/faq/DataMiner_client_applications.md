@@ -44,6 +44,9 @@ In case of problems, Skyline Technical Support may ask you to provide version in
 
 ## How do I reinstall the DataMiner Cube browser app?
 
+> [!IMPORTANT]
+> As of DataMiner 10.3.x, the DataMiner Cube browser app is *End of Life*. Up to DataMiner 10.4.0 [CU11]/10.5.2, the application's existing features will continue to function, but no new features will be added. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873-->, the browser app is completely deprecated and can no longer be installed.
+
 If the security policy of your company or computer allows it, the DataMiner Cube browser app is automatically downloaded and installed onto your computer the first time you try to open the user interface in Microsoft Edge in IE compatibility mode.
 
 To reinstall the browser app, you need to clean the XBAP cache:
