@@ -92,7 +92,7 @@ From now on, SLAs will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up 
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
-Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well Virtual Functions.From now on, this option will only apply to DVE elements.
+Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well as Virtual Functions. From now on, this option will only apply to DVE elements.
 
 In order to override the timeout for a Virtual Function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
 

@@ -3176,8 +3176,6 @@ items:
           topicUid: Protocol.Type-options
         - name: '@overrideTimeoutDVE'
           topicUid: Protocol.Type-overrideTimeoutDVE
-        - name: '@overrideTimeoutVF'
-          topicUid: Protocol.Type-overrideTimeoutVF
         - name: '@relativeTimers'
           topicUid: Protocol.Type-relativeTimers
       - name: Vendor

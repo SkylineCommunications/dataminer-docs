@@ -29,7 +29,6 @@ DataMiner Protocol Markup Language:
 - [Protocol.Type](xref:Protocol.Type):
   - [options](xref:Protocol.Type-options)
   - [overrideTimeoutDVE](xref:Protocol.Type-overrideTimeoutDVE)
-  - [overrideTimeoutVF](xref:Protocol.Type-overrideTimeoutVF)
 - [Protocol.ExportRules](xref:Protocol.ExportRules)
 - [Protocol.Params.Param.ArrayOptions.ColumnOption@options](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-options):
   - [element](xref:ColumnOptionOptionsOverview#element)
