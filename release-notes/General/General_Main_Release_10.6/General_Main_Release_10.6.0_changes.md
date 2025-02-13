@@ -161,6 +161,12 @@ Up to now, history entries for booking instances and resources would be processe
 
 After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
 
+#### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate instance of that visual overview would incorrectly be created for each of those users, potentially causing the creation of one instance to block the creation of another instance.
+
 #### Mobile Visual Overview: Problem with user context [ID 42061]
 
 <!-- MR 10.6.0 [CU0] - FR 10.5.4 -->

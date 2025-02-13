@@ -54,6 +54,28 @@ In the DataMiner.xml file, it is possible to configure a separate SLProtocol pro
 
 For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
+#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Scheduler app [ID 41970]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Scheduler app.
+
+In other words, when an Automation script is triggered by the Scheduler app, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
+
+If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
+
+```xml
+<MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+    ...
+    <SLNet>
+        ...
+        <SkipInformationEvents>false</SkipInformationEvents>
+        ...
+    </SLNet>
+    ...
+</MaintenanceSettings>
+```
+
 ## Changes
 
 ### Enhancements
@@ -88,6 +110,12 @@ A number of security enhancements have been made.
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
 After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
+
+#### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate instance of that visual overview would incorrectly be created for each of those users, potentially causing the creation of one instance to block the creation of another instance.
 
 #### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]
 
