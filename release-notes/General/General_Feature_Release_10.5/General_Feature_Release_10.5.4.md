@@ -97,7 +97,7 @@ When an alarm template was updated, in some cases, the alarm focus manager could
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
 
-<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
 
 Up to now, when no user context was needed in mobile visual overviews, an attempt would be made to reuse server-side cards among users. However, in some cases, this could cause problems, especially when handling popups or embedded visual overviews.
 
@@ -111,6 +111,6 @@ In some cases, INF (infinity) values would incorrectly get stored in the databas
 
 #### Mobile Visual Overview: Child shapes would incorrectly remain clickable when hidden [ID 42090]
 
-<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
 
 When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.

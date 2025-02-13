@@ -160,3 +160,17 @@ Up to now, history entries for booking instances and resources would be processe
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
 After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
+
+#### Mobile Visual Overview: Problem with user context [ID 42061]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
+
+Up to now, when no user context was needed in mobile visual overviews, an attempt would be made to reuse server-side cards among users. However, in some cases, this could cause problems, especially when handling popups or embedded visual overviews.
+
+To make sure the user context is always correct and that it get passed correctly to popups, from now on, mobile visual overviews will always use a separate card for each user and create a new card whenever a user requests a new visual overview in a web app.
+
+#### Mobile Visual Overview: Child shapes would incorrectly remain clickable when hidden [ID 42090]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
+
+When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.
