@@ -120,8 +120,9 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 > [!NOTE]
 > The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
 
-#### Security enhancements [ID 42104]
+#### Security enhancements [ID 41425] [ID 42104]
 
+<!-- 41425: MR 10.6.0 - FR 10.5.4 -->
 <!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of security enhancements have been made.
