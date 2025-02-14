@@ -144,4 +144,4 @@ When, in a trend graph showing trend data of two parameters, the value of the fi
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-Up to now, when placeholders (e.g. `[thisusername]`) were used in alarm filters made up of different segments enclosed in brackets (e.g. [...] OR [...]), in some cases, those placeholders would not get resolved.
+Up to now, when placeholders (e.g. `[thisusername]`) were used in alarm filters made up of different segments enclosed in brackets (e.g. [...] OR [...]), the placeholders in the first segment would not get resolved.
