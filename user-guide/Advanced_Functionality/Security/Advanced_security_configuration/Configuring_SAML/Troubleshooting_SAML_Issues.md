@@ -38,7 +38,7 @@ On the **Service Provider** (DataMiner):
 - *SAML response*: To collect this, see [Using the SAML-tracer extension](#using-the-saml-tracer-extension)
 
 > [!NOTE]
-> When contacting Skyline Techsupport, please collect aforementioned files, [logs](logs-to-check) as well as a [LogCollector](xref:SLLogCollector) package.
+> When contacting Skyline Techsupport, please collect aforementioned files, [logs](#logs-to-check) as well as a [LogCollector](xref:SLLogCollector) package.
 
 ## Troubleshooting
 
