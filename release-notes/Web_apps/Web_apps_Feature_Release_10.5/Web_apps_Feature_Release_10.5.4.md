@@ -236,3 +236,11 @@ When, after you had refreshed a dashboard, you opened a *Link to data* popup of 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When you removed the most recently added component data from a component, all data would be removed from the *Components* section of the *Data* pane, including the predefined component data.
+
+#### Low-Code Apps: 'Open an app' action would open an incorrect version of the specified app [ID 42224]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, an *Open an app* action would open an incorrect version of the app that was specified. From now on, an *Open an app* action will always open the most recently published version of the app.
+
+When the app that is specified in the action has never been published yet, an error message will appear.
