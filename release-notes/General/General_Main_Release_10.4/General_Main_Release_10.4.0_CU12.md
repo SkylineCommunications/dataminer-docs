@@ -138,3 +138,9 @@ SLProtocol could stop working when, in a protocol, a condition was used to check
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 In some cases, BPAs tests would fail to load the necessary DLL files.
+
+#### No more logging would be added to SLWatchDog2.txt after a DataMiner upgrade [ID 42180]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+After a DataMiner upgrade, in some cases, no new entries would be added to the *SLWatchDog2.txt* log file anymore.

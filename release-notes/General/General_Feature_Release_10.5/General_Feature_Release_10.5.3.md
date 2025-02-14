@@ -522,3 +522,15 @@ In some cases, BPAs tests would fail to load the necessary DLL files.
 <!-- Not added to MR 10.6.0 -->
 
 When an element was being swarmed, not all data would be flushed when the element was unloaded.
+
+#### No more logging would be added to SLWatchDog2.txt after a DataMiner upgrade [ID 42180]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+After a DataMiner upgrade, in some cases, no new entries would be added to the *SLWatchDog2.txt* log file anymore.
+
+#### SLSNMPManager process could stop working when an SNMPv3 element was stopped [ID 42195]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When an SNMPv3 element was stopped, in some rare cases, the SLSNMPManager process could stop working.

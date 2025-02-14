@@ -108,9 +108,3 @@ When an alarm template was updated, in some cases, the alarm focus manager could
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
 In some cases, INF (infinity) values would incorrectly get stored in the database. Attempts to retrieve those values would then result in the *Behavioral anomaly detection* feature not starting up.
-
-#### SLSNMPManager process could stop working when an SNMPv3 element was stopped [ID 42195]
-
-<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
-
-When an SNMPv3 element was stopped, in some rare cases, the SLSNMPManager process could stop working.

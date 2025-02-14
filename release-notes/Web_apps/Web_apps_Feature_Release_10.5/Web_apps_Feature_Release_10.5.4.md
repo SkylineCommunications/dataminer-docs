@@ -224,3 +224,9 @@ When a component had tried to fetch a number of non-existing objects (e.g. eleme
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When, after you had refreshed a dashboard, you opened a *Link to data* popup of an existing data link while configuring a query in which a filter node was linked to a variable or a flow, that popup would not contain any data.
+
+#### Dashboards/Low-Code Apps: Removing component data would incorrectly remove all data from the 'Components' section [ID 42216]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you removed the most recently added component data from a component, all data would be removed from the *Components* section of the *Data* pane, including the predefined component data.

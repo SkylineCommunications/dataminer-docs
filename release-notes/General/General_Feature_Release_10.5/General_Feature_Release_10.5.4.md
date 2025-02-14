@@ -165,9 +165,3 @@ In some cases, INF (infinity) values would incorrectly get stored in the databas
 <!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
 
 When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.
-
-#### SLSNMPManager process could stop working when an SNMPv3 element was stopped [ID 42195]
-
-<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
-
-When an SNMPv3 element was stopped, in some rare cases, the SLSNMPManager process could stop working.
