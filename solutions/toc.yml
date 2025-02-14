@@ -261,10 +261,12 @@ items:
           topicUid: Monitoring_Processed_Traps
       - name: Getting started tutorial
         topicUid: Smart_Trap_Processor_Tutorial
-    - name: Dom Viewer
+    - name: DOM Viewer
       topicUid: domviewer_about
       items:
-      - name: Using DOM Viewer
+      - name: Installing the DOM Viewer
+        topicUid: domviewer_installation
+      - name: Using the DOM Viewer
         topicUid: DOM_Using_DOM_Viewer
   - name: Custom Solutions
     items:

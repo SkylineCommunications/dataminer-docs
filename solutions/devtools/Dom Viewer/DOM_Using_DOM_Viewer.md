@@ -2,101 +2,67 @@
 uid: DOM_Using_DOM_Viewer
 ---
 
-# Using the Dom Viewer
+# Using the DOM Viewer
 
-In this guide, you will learn the purpose of the Dom Viewer by walking through the application.
+> [!TIP]
+> To get to know this tool, you can [follow Kata #54 on DataMiner Dojo](https://community.dataminer.services/courses/kata-54/) and deploy the tutorial package [Tutorial - DOM Viewer](https://catalog.dataminer.services/details/fea99fc7-63fc-40da-85fb-db1ca914986a) from the DataMiner Catalog. This package includes the DOM Viewer itself as well as the example modules used in Kata #54.
 
-This guide is broken down in the following topics, each correspinding to a page in the app:
+The DOM Viewer application consists of several pages:
 
-- SDM Modules: View the Standard Data Model (SDM) modules in an interactive graph.
+- [SDM Modules](#sdm-modules): Displays the Standard Data Model (SDM) modules in an interactive graph.
 
-- All Modules: View all modules found in the DataMiner System in an interactive graph.
+- [All Modules](#all-modules): Displays all modules found in the DataMiner System in an interactive graph.
 
-- Field Descriptors: Easily find and visualize field descriptors across any module, definition or section.
+- [All Descriptors](#all-descriptors): Allows you to easily find and visualize field descriptors across any module, definition, or section.
 
-- Generating Markup code to document a DOM Module.
-
-Estimated duration: 5 minutes.
-
-> [!NOTE]
-> The content and screenshots for this guide have been created in DataMiner version 10.5.1.
-
-## Prerequisites
-
-- DataMiner version 10.3.10 or higher
-
-- A DataMiner System with an [indexing database](xref:Indexing_Database)
-
-- Basic knowledge of DataMiner Object Models (DOM)
-
-- The package [Tutorial - Dom Viewer](https://catalog.dataminer.services/details/fea99fc7-63fc-40da-85fb-db1ca914986a) (version 1.0.7 or higher) installed. Includes  the DOM Viewer app and the DOM modules showcased in this guide.
-
-## Overview
-
-- [What is?](#what-is)
-
-- [SDM Modules](#sdm-modules)
-
-- [All Modules](#all-modules)
-
-- [Field Descriptors](#field-descriptors)
-
-- [Generate Markup](#generate-markup)
-
-
-## What is?
-
-Unlike Dom Editor that lets you build the model through dialog forms or DataMiner Objects Tool that comprehensively focuses on querying instances, the Dom Viewer quickly displays definitions and their relationships through an interactive graph. After that, you can drill down on it if necessary. It is designed to help you not just see, but also to understand the model through visualization.
+- [Tools](#generating-markup): Allows you to generate markup code to document a DOM module.
 
 ## SDM Modules
 
-This page shows the Standard Data Model if it's present in your dataminer system.
-The Standard Data Model is a single unified DOM model to capture a wide range of business and operational data. 
-It is the model on top of which DataMiner Standard Apps are built on.
+This page shows the [Standard Data Model](xref:SDM) if it is present in your DataMiner System. The Standard Data Model is a single unified DOM model to capture a wide range of business and operational data. Several low-code apps available in the DataMiner Catalog, including all [MediaOps applications](xref:MediaOps), are built on this model.
 
 > [!NOTE]
-> The SDM Modules first need to be present in your Dataminer System in order to be displayed by the DOM Viewer.
+> The DOM Viewer will only be able to display the SDM information if the Standard Data Model is present in your DataMiner System.
 
+### Working with the module overview graph
 
-### DOM Definitions
+In the node-edge graph, **DOM definitions** are represented as nodes. If you hover over a node, general information will be displayed such as the DOM module and the number of sections and field descriptors.
 
-In the node-edge graph, DOM definitions are represented as nodes. When you select a node, a hover menu will appear displaying general information like DOM module, amount of sections and amount of field descriptors. 
+![Definition Hover Panel](~/solutions/images/DOM_Viewer_Definition_Hover_Menu.png)
 
-![Definition Hover Panel](~/user-guide/images/DOM_Viewer_Definition_Hover_Menu.png)
+The displayed pop-up panel contains two buttons:
 
-Furthermore, there will be two buttons available: "Open definition table" and "Open behavior definition":
+| Button | Description |
+|--|--|
+| ![Open Definition Table button](~/solutions/images/DOM_Viewer_Open_Definition_Table.png) | Open Definition Table button. Displays a table with all field descriptors that are part of that definition, grouped by sections displayed as tabs at the top. For example:<br> ![Table Definition](~/solutions/images/DOM_Viewer_Definition_Table_Definition.png) |
+| ![Open State Transitions button](~/solutions/images/DOM_Viewer_Open_State_Transitions.png) | Open State Transitions button. Displays a state transitions graph, which shows which states an instance of the definition can move through (i.e. the behavior definition). For example:<br> ![Behavior Definition](~/solutions/images/DOM_Viewer_Definition_Behavior_Definition.png) |
 
-- Open Definition Table: Displays a table with all Field Descriptors that are part of that definition, grouped by sections displayed as tabs on top.
+The edges in the graph show the relationships between the definitions. If you hover over an edge, a pop-up panel will show which field descriptor is referencing the other DOM definition.
 
-![Table Definition](~/user-guide/images/DOM_Viewer_Definition_Table_Definition.png)
-
-- Open Behavior Definition: Displays a window with the state machine graph that describes the different states that an instance from that definition can move through.
-
-![Behavior Definition](~/user-guide/images/DOM_Viewer_Definition_Behavior_Definition.png)
-
-### Relationships
-
-By hovering over the relationships (edges in the interactive graph) and hover panel will appear indicating which field descriptor is referrencing the other DOM definition.
-
-![Relationship Hover Panel](~/user-guide/images/DOM_Viewer_Definition_Relationship_Hover_Menu.png)
+![Relationship Hover Panel](~/solutions/images/DOM_Viewer_Definition_Relationship_Hover_Menu.png)
 
 ## All Modules
 
-The "All Modules" page contains another interactive graph that operates similarly to the "SDM Modules" page, except it will display all DOM modules found in your DataMiner System. Additionally, it contains a couple of filters. This allows you to filter on DOM Modules and/or DOM Definitions that you're interested in seeing at that time.
+The *All Modules* page contains an interactive graph similar to that on the *SDM Modules* page, which can be used in [the same way](#working-with-the-module-overview-graph). This graph will display all DOM modules found in your DataMiner System.
 
-![All Modules](~/user-guide/images/DOM_Viewer_All_Modules.png)
+You can also filter on specific DOM modules and/or DOM definitions with the filter boxes on the left, so that only these are displayed in the graph.
 
-## Field Descriptors
+![All Modules](~/solutions/images/DOM_Viewer_All_Modules.png)
 
-This page immediately shows all field descriptors. 
-You can filter by Module, Definition and Section to reach at the field descriptor you're looking for.
-You can view different field descriptors simultaneously across different modules even.
-If you don't know where the field descriptor is, you can use the table's extensive filtering capabilities to quickly find it.
+## All Descriptors
 
-![Field Descriptors](~/user-guide/images/DOM_Viewer_Field_Descriptors.png)
+This page lists all the available field descriptors.
 
-## Generate Markup
+You can filter the list by module, definition, and section using the filter boxes on the left, in order to quickly reach the field descriptor you are looking for.
 
-The DOM Viewer application was also designed to aid with documentation. As models grow and change, documentation needs to keep up which  can be challenging, specially if done manually. You can automatically generate markup tables by selecting whichever modules you want to document. 
+Different field descriptors can be viewed simultaneously across different modules.
 
-![Generate Markup](~/user-guide/images/DOM_Viewer_Markup.png)
+![Field Descriptors](~/solutions/images/DOM_Viewer_Field_Descriptors.png)
+
+## Generating markup
+
+The DOM Viewer application was also designed to aid with documentation. As models grow and change, documentation needs to keep up, which can be challenging, especially if you need to do this manually.
+
+This is why on the *Tools* page of the DOM Viewer, you can have markup tables generated automatically by selecting the modules you want to document and clicking the *Generated .md tables* button.
+
+![Generate Markup](~/solutions/images/DOM_Viewer_Markup.png)
