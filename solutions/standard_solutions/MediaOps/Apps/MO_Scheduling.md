@@ -4,13 +4,9 @@ uid: MO_Scheduling
 
 # Scheduling
 
-The scheduling app allows you to manage and configure all jobs in the system. Using a job, users can easily schedule specific resources, request a resource for a given pool of resources, schedule an entire workflow, or a combination of each of the options. At start and at end of the job a script can be triggered to allow you to do orchestration. When a resource is added to a job it will be reserved for the time span of the job except if the job is still in draft state. All the possible states are described in the [Job States](xref:MO_S_Job_States). [Configuration parameters](xref:MO_S_Configuration) can be added on job and node level. Configuration parameters are intended to provide information on how the job can be (automatically) commissioned and decommissioned. In addition to configuration parameters, properties can be used on job and node level for additional information. To avoid that any misconfiguration could lead to a job failing during the orchestration process, there is a [validation mechanism](xref:MO_S_Job_Validation) that will validate all jobs in the near future.
+The scheduling app allows users to build up a schedule of planned Jobs in the system, representing a planned activity that will have to be run. With a Job, users can easily schedule specific resources, request a resource from a given pool of resources or even schedule an entire workflow for this planned activity. The system will make sure that in the background, the availability of all resources is managed so that no resource conflicts occur. 
 
-ADD SCREENSHOT
-
-## Obsolete?
-
-TBD: Should we keep a list of pages in the apps?
+Next to that administrative metadata to a Job, such as a description, and owner or the organization for which the Job will be carried out. It's also possible to add technical information on how the Job should be executed. This can be done by describing a 'workflow', detailing how the resources in the Job should be interconnected, and by specifying configuration parameters on a Job or on an individual resource in the Job.
 
 The following pages are available in the app:
 

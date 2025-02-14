@@ -24,12 +24,7 @@ An organization represents a company in your supply chain, like customers, suppl
 Teams are used to group together a smaller number of people. After creating a Team, users can add People to it and assign them a role in the team, like 'member', 'supervisor' etc. People can be part of multiple teams at the same time.
 Teams can be converted into pools of bookable people resources that will show up in the Resource Studio, Scheduling and Workflow Designer apps. People from different organizations can be part of the same team.
 
-
-
-
-## OBSOLETE?
-
-You can assign [skills](xref:PO_Managing_Contacts#managing-skills) and [experience levels](xref:PO_Managing_Contacts#managing-experience) to contacts, [areas of expertise](xref:PO_Managing_Teams#managing-areas-of-expertise) and [roles](xref:PO_Managing_Teams#managing-roles) to teams, and [categories](xref:PO_Managing_Organizations#managing-organization-categories) to organizations, to easily match the right person, team, or organization with a task.
+## App overview 
 
 The People & Organizations app consists of four main pages:
 

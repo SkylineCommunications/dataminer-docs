@@ -5,7 +5,7 @@ uid: MediaOps_apps
 # MediaOps applications
 
 > [!NOTE]
-> We are working on adding more applications to this section soon, so check back for updates frequently.
+> We are working on adding more information to this section soon, so check back for updates frequently.
 
 When the below standard MediaOps apps are insufficient to meet the needs of the users it is possible to create your own custom apps or duplicates of the apps that use MediaOps under the hood. More information can be found under the [Integration Notes](xref:MediaOps_Integration).
 
@@ -21,4 +21,4 @@ When the below standard MediaOps apps are insufficient to meet the needs of the 
     <div class="column">
     <a href="/user-guide/Standard_Apps/MediaOps/Apps/MO_Workflow_Designer.html" title="Workflow Designer" target="_self"><img src="~/user-guide/images/mo_WorkflowDesigner.svg" style="width:100%"></a>
   </div>
-  </div>
+</div>
