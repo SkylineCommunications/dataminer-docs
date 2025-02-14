@@ -62,7 +62,7 @@ For more information, please contact <sales@skyline.be>.
 
 By default, a DaaS system has zone-redundant storage (ZRS). Geo-redundant storage (GRS) is optional at an additional subscription cost.
 
-See also: [Data location and redundancy](xref:STaaS#data-location-and-redundancy).
+See also: [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
 
 ### What system redundancy policy does a DaaS system have?
 
@@ -72,7 +72,7 @@ See also: [Swarming](xref:Swarming).
 
 ### What backup policy does a DaaS system have?
 
-For more information, see [Data resilience and backups](xref:STaaS#data-resilience-and-backups).
+For more information, see [Data resilience and backups](xref:STaaS_features#data-resilience-and-backups).
 
 ### Is it possible to make a local backup of all data?
 
@@ -100,6 +100,6 @@ See also: [User management](xref:User_management).
 
 ## Are there specific limitations that apply for DaaS?
 
-As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS#limitations) also apply for DaaS.
+As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS_features#limitations) also apply for DaaS.
 
 In addition, because of the additional security layer used in DaaS systems, at present, it is not possible to connect to a DaaS system using the [Web Services (v1)](xref:Using_the_Web_Services_v1).
