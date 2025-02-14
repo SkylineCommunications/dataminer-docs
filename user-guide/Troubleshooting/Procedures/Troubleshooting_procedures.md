@@ -26,6 +26,8 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting – web](xref:Investigating_Web_Issues)
 
+- [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)
+
 Other troubleshooting procedures:
 
 - [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
@@ -35,6 +37,3 @@ Other troubleshooting procedures:
 - [Re-registering DataMiner services and DLLs](xref:Re-registering_DataMiner_services_and_DLLs)
 
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
-
-> [!TIP]
-> See also: [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)

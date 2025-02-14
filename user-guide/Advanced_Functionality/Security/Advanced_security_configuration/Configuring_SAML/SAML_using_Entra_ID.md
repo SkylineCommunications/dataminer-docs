@@ -414,6 +414,7 @@ There are two ways to configure this setup: with or without group claims.
 1. In the pane on the left on your DataMiner application page, click *Single sign-on*.
 
 1. Next to *Attributes & Claims*, click *Edit*.
+   Assert that the claims "givenname", "surname", "emailaddress", "name" and "Unique User Identifier" are present, matching the following configuration:
 
    ![Edit attributes & claims](~/user-guide/images/SAML_Edit_claim.png)
 
@@ -450,7 +451,10 @@ There are two ways to configure this setup: with or without group claims.
 
 1. Go to the `C:\Skyline DataMiner` folder and open the *DataMiner.xml* file.
 
-1. In *DataMiner.xml*, add the `<AutomaticUserCreation>` tag as illustrated in the example below:
+1. In *DataMiner.xml*, add the `<AutomaticUserCreation>` tag as illustrated in the example below.
+   The tags  `<EmailClaim>`,`<Givenname>`,`<Surname>` define the names of the *claims* on the *Service Provider's* side.
+   Ensure that within the aforementioned tags, the claim is defined using the appropriate XML prefix as per below example. (e.g.`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/`).
+   Furthermore, assert that the name of the claim (i.e. the part after the XML prefix e.g. *emailaddress*, *givenname*, *surname*) matches the names of the attributes in Microsoft Entra ID (i.e. the *Identity Provider claims*) as indicated in step 5.
 
    ```xml
    <DataMiner ...>
@@ -471,11 +475,27 @@ There are two ways to configure this setup: with or without group claims.
    </DataMiner>
    ```
 
+   > [!IMPORTANT]
+   > Mind the capitalization! XML is case-sensitive, so adding the *claim* *givenName* in step 4. then setting the `<Givenname>` tag to `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` in the current step (11) will ensure you are unable to log in as there is a difference in casing.
+
 1. Save the *DataMiner.xml* file.
 
 1. Restart the DataMiner Agent.
 
 #### [Without group claims](#tab/tabid-4)
+
+1. Navigate to ``portal.azure.com`` and log in.
+
+1. In the search box at the top, enter *Enterprise applications* to go to the Enterprise Applications page.
+
+1. Select the application you created for DataMiner.
+
+1. In the pane on the left on your DataMiner application page, click *Single sign-on*.
+
+1. Next to *Attributes & Claims*, click *Edit*.
+   Assert that the claims "givenname", "surname", "emailaddress", "name" and "Unique User Identifier" are present, matching the following configuration:
+
+   ![Edit attributes & claims](~/user-guide/images/SAML_Edit_claim.png)
 
 1. Make sure a group has been added in DataMiner that can be used to automatically add users to. See [Adding a user group](xref:Adding_a_user_group).
 
@@ -483,7 +503,10 @@ There are two ways to configure this setup: with or without group claims.
 
 1. Go to the `C:\Skyline DataMiner` folder and open the *DataMiner.xml* file.
 
-1. In *DataMiner.xml*, add the `<AutomaticUserCreation>` tag as illustrated in the example below:
+1. In *DataMiner.xml*, add the `<AutomaticUserCreation>` tag as illustrated in the example below.
+   The tags  `<EmailClaim>`,`<Givenname>`,`<Surname>` define the names of the *claims* on the *Service Provider's* side.
+   Ensure that within the aforementioned tags, the claim is defined using the appropriate XML prefix as per below example. (e.g.`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/`).
+   Furthermore, assert that the name of the claim (i.e. the part after the XML prefix e.g. *emailaddress*, *givenname*, *surname*) matches the names of the attributes in Microsoft Entra ID (i.e. the *Identity Provider claims*) as indicated in step 5.
 
    ```xml
    <DataMiner ...>
@@ -503,6 +526,9 @@ There are two ways to configure this setup: with or without group claims.
      ...
    </DataMiner>
    ```
+
+   > [!IMPORTANT]
+   > Mind the capitalization! XML is case-sensitive, so adding the *claim* *givenName* in step 4. then setting the `<Givenname>` tag to `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` in the current step (9) will ensure you are unable to log in as there is a difference in casing.
 
 1. Save the *DataMiner.xml* file.
 
