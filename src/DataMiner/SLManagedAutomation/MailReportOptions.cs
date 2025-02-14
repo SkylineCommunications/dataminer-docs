@@ -17,7 +17,7 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Gets or sets the name of the report template to be used.
 		/// </summary>
-		/// <value>The name of the report template to be used.</value>
+		/// <value>The full name of the dashboard (including all parent folders separted with '/') or the name of the report template (legacy Reporter) to be used.</value>
 		public string ReportName { get; set; }
 
 		/// <summary>
