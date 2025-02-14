@@ -11,7 +11,7 @@ A DataMiner Agent hosts a number of separate but interacting processes. In order
 
 The following diagram gives an overview of the processes running in a DataMiner Agent.
 
-![alt text](~/develop/images/ProcessOverview.svg "DataMiner process overview")
+![DataMiner process overview](~/develop/images/ProcessOverview.svg)
 
 The <xref:InnerWorkingsSLDataMiner> process is the central process of a DataMiner Agent (DMA). It is responsible for starting, stopping and configuring elements, services and redundancy groups, and manages all traffic from and to those items. SLDataMiner also performs database offloads toward the offload database (if one exists). This process is not aware of any other DMAs in the DataMiner System (DMS).
 

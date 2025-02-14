@@ -25,7 +25,7 @@ Specifies the local IP port configuration.
 
 The local IP port refers to the port of the client socket used by DataMiner to set up a connection with the server. The server (e.g. Data Source) listens on a specific port, which is configured in the element edit wizard (and for which a default value can be provided using the IpPort tag).
 
-![alt text](~/develop/schemadoc/Protocol/images/LocalIpPort.svg "Local IP port")
+![Local IP port](~/develop/schemadoc/Protocol/images/LocalIpPort.svg)
 
 By default, an available port number is automatically selected for the client socket. This setting is therefore by default not configurable when you create or edit an element. However, in case you do need to specify a specific client port number to be used, you can use the *LocalIpPort.DefaultValue* tag to provide a default local port to be used and enable the setting by setting *LocalIpPort.Disabled* to false. Now, when you create or edit an element, you will see an additional configuration setting "Local IP port" (under "more TCP/IP settings" or "more UDP/IP settings").
 

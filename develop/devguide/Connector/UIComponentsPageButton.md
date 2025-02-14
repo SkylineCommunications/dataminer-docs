@@ -40,7 +40,7 @@ To define a page button:
 </Param>
 ```
 
-![alt text](~/develop/images/uipagebutton.png "DataMiner Cube page button")
+![DataMiner Cube page button](~/develop/images/uipagebutton.png)
 
 > [!NOTE]
 >

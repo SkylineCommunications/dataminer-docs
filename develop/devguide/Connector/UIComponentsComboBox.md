@@ -62,4 +62,4 @@ To define a combo box, set Type to "string" and also provide a list of discrete 
 </Param>
 ```
 
-![alt text](~/develop/images/uicombobox.png "DataMiner Cube combo box")
+![DataMiner Cube combo box](~/develop/images/uicombobox.png)

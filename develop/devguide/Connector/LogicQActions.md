@@ -463,7 +463,7 @@ public static class QAction
 
 There is an important difference between QAction DLLs and third-party DLLs. When a protocol is updated, the QActions are recompiled and the new versions of these QActions are loaded in the application domain. The protocol will then start using these new versions of the QActions. This allows the editing of QActions of protocols without the need for a restart of the SLScripting process (which requires a DataMiner restart). Restarting the elements that run the protocol suffices to start using the edited QAction. This is not the case for third-party DLLs. Once loaded in the application domain, these cannot be unloaded, so a DataMiner restart is required in order to start using an edited third-party DLL.
 
-![alt text](~/develop/images/QAction_loading_in_SLScripting.svg "QAction DLLs")
+![QAction DLLs](~/develop/images/QAction_loading_in_SLScripting.svg)
 
 ## Queued QActions
 

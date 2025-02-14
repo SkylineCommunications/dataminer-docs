@@ -12,13 +12,13 @@ In addition, a trigger is defined that triggers on a change of parameter A. This
 
 As illustrated below, in the QAction, a SetParameter method call is used to set the value of parameter A to 5. As a trigger is defined on a change of parameter A, this trigger gets executed before the remaining code in the QAction. The trigger initiates an action and this action must also complete.
 
-![alt text](~/develop/images/SLScripting_example_QAction1.svg "QAction execution")
+![QAction execution](~/develop/images/SLScripting_example_QAction1.svg)
 
 The resulting value in the variable "result" in the example above will therefore be 55.
 
 Now consider what will happen if the trigger does not immediately trigger the increment action, but instead adds a group to the group execution queue that holds the increment action.
 
-![alt text](~/develop/images/SLScripting_example_QAction2.svg "QAction execution (continued)")
+![QAction execution (continued)](~/develop/images/SLScripting_example_QAction2.svg)
 
 The trigger will run an action that will add a group to the group execution queue. Once the group has been added to the queue, the action is considered finished. At this point the QAction resumes execution. In this case, the variable "result" will hold the value 50.
 
