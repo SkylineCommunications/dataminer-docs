@@ -151,6 +151,12 @@ Up to now, each time the *GetRegionalSettings* method was called, it would retri
 > [!NOTE]
 > As a result of this change, any changes made to the time zone and/or list separator in *ClientSettings.json* will no longer be applied when you refresh the web app. From now on, changes made to the time zone and/or list separator will require an IIS reset.
 
+#### Low-Code Apps: Names of apps, pages and panels are now limited to 150 characters [ID 42220]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+Up to now, the length of app, page and panel names was not limited. As this could cause issues with very long URLs, those names have now been limited to 150 characters.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
