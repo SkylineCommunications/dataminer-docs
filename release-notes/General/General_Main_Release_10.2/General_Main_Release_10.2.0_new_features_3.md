@@ -470,7 +470,7 @@ Example:
 
 #### View table columns with options like 'view=:x:y:z' or 'view=a:b:c:z' can now be filtered by means of a 'VALUE=' filter \[ID 30237\] \[ID 30809\]
 
-View tables containing a column with view options like “view=:x:y:z” or “view=a:b:c:z” now allow that column to be filtered by means of a “VALUE=” filter (e.g. VALUE=5 == abc).
+View tables containing a column with view options like "view=:x:y:z" or "view=a:b:c:z" now allow that column to be filtered by means of a "VALUE=" filter (e.g. VALUE=5 == abc).
 
 > [!NOTE]
 >

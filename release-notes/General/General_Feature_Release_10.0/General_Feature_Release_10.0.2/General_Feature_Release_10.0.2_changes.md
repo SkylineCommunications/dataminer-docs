@@ -686,7 +686,7 @@ On legacy dashboard, in some cases, tables containing data would incorrectly be 
 
 #### DataMiner Cube: Not possible to connect to another DMA after starting Cube with a 'host=' argument \[ID 24322\]
 
-When DataMiner Cube was started with a “host=” argument, in some cases, the user would not be able to connect to another DataMiner Agent.
+When DataMiner Cube was started with a "host=" argument, in some cases, the user would not be able to connect to another DataMiner Agent.
 
 #### HTML5 apps: Selecting the month value in a datetime control would incorrectly clear that value \[ID 24323\]
 

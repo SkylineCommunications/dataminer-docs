@@ -42,7 +42,7 @@ The following actions are possible in the *Workspaces* pane:
    1. Exceptionally, if the workspace is to be used for elements, services or views that do not necessarily always have the same ID, but do always have the same name, select *Save the name of the open cards*.
 
 > [!NOTE]
-> With certain kinds of elements, it is possible to make a workspace that appears as an app in the *Apps* list. To do so, when you create a workspace, enter the description “\[Workspace for xxx\]”, where xxx is the name of an element using a protocol with the tag \<App type=”...”>, specifically created for this purpose.
+> With certain kinds of elements, it is possible to make a workspace that appears as an app in the *Apps* list. To do so, when you create a workspace, enter the description "\[Workspace for xxx\]", where xxx is the name of an element using a protocol with the tag \<App type="...">, specifically created for this purpose.
 
 > [!TIP]
 > See also:
