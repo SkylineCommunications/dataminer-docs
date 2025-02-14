@@ -8,7 +8,7 @@ When dealing with SAML-related issues, follow the steps listed on this page and 
 
 ## Logs to check
 
-When you encounter SAML issues, investigate the logs detailed below, in the specified order:
+When you encounter SAML issues, investigate the logs detailed below, in the specified order.
 
 1. SLSAML.txt: `C:\Skyline DataMiner\logging\SLSAML.txt`
 
@@ -17,6 +17,28 @@ When you encounter SAML issues, investigate the logs detailed below, in the spec
 1. [Cube logging](xref:Cube_logging): *DataMiner Cube > Apps > System Center > Logging > cube*
 
 1. [SLDataMiner.txt](xref:DataMiner_processes#sldataminer): `C:\Skyline DataMiner\logging\SLDataMiner.txt`
+
+> [!NOTE]
+> When contacting Skyline Techsupport, please collect aforementioned logs, [files](#files-to-check) as well as a [LogCollector](xref:SLLogCollector) package.
+
+## Files to check
+
+When troubleshooting SAML, the following configuration files hold the information needed to assess the configuration.
+
+On the **Identity Provider** (Okta, Entra ID, Azure B2C):
+
+- *IpMetadata.xml* as per [Entra ID, Azure B2C](xref:SAML_using_Entra_ID) or [Okta](xref:SAML_using_Okta)
+
+On the **Service Provider** (DataMiner):
+
+- *SpMetadata.xml* as defined in [Entra ID, Azure B2C](xref:SAML_using_Entra_ID) or [Okta](xref:SAML_using_Okta)
+
+- *C:\Skyline DataMiner\DataMiner.xml* also see [Entra ID, Azure B2C](xref:SAML_using_Entra_ID) or [Okta](xref:SAML_using_Okta)
+
+- *SAML response*: To collect this, see [Using the SAML-tracer extension](#using-the-saml-tracer-extension)
+
+> [!NOTE]
+> When contacting Skyline Techsupport, please collect aforementioned files, [logs](logs-to-check) as well as a [LogCollector](xref:SLLogCollector) package.
 
 ## Troubleshooting
 
@@ -29,7 +51,7 @@ This troubleshooting section addresses the following common SAML issues:
 
 - [SAML authentication issues in Cube/online](#saml-authentication-issues-in-cubeonline)
 
-- [Missing or incorrect attribute statements](#missing-or-incorrect-attribute-statements)
+- [Missing or incorrect attribute statements](#missing-or-incorrect-claims-and-attribute-statements)
 
 - [Other frequent issues](#other-frequent-issues)
 
@@ -85,17 +107,43 @@ When using SAML with a proxy, use the following configuration to avoid authentic
 
   Replace placeholders with the correct IP addresses, ports, and addresses.
 
-### Missing or incorrect attribute statements
+### Missing or incorrect claims and attribute statements
 
-The SAML attribute names must always match those in the identity provider and the *DataMiner.xml* file.
+The following goes for any *Identity Provider*, be it [Entra ID, Azure B2C](xref:SAML_using_Entra_ID) or [Okta](xref:SAML_using_Okta).
+
+The SAML attribute names, also known as *claims* must be exactly the same for the *Identity Provider* and the *Service Provider*, i.e. in the *DataMiner.xml* file.
+To check whether the *claims* or *attributes* match, do the following:
 
 1. Go to the *C:\Skyline DataMiner* folder and open the *DataMiner.xml* file.
 
 1. Verify that the `<ExternalAuthentication>` tag is configured correctly and the tag name for your attribute matches the definition.
 
    For example, if the claim name is "email," your *DataMiner.xml* emailClaim tag should be `<EmailClaim>email</EmailClaim>`.
+   Please check the guide of your specified *Identity Provider* to see which specific claims are required.
+   See [Entra ID, Azure B2C](xref:SAML_using_Entra_ID) or [Okta](xref:SAML_using_Okta).
 
-1. If issues persist, use the *SAML-tracer* tool, a browser extension available for Google Chrome and Firefox, designed to capture SAML traffic.
+1. If issues persist, capture SAML traffic as specified in [Collecting the SAML response](#collecting-the-saml-response)
+
+1. Compare the attribute names in the response collected in the previous point to those in the identity provider and the *DataMiner.xml* file.
+
+> [!IMPORTANT]
+> Note that XML and as such SAML is case-sensitive and mismatches may lead to the behavior associated with a missing or incorrect attributes or claims.  
+> See [Capitalization errors](#capitalization-errors)
+
+### Collecting the SAML response
+
+#### Using the SLNetClientTest tool
+
+Starting from DataMiner 10.5.4.0, it is possible to collect the SAML response using the [SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+This has the advantage over SAML tracer that the tool sees the SAML response in exactly the same way as DataMiner does before parsing it.
+To use this, you need to install [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH) and reboot the server.
+
+> [!NOTE]
+> Between DataMiner 10.3.11/10.4.0 and 10.5.4 (feature release), the option is also available, but the following DLL files are missing:  
+> `C:\Skyline DataMiner\Files\runtimes\win-x64\native\WebView2Loader.dll` and `C:\Skyline DataMiner\Files\runtimes\win-x86\native\WebView2Loader.dll`.
+> If you would like to use this version, contact your Skyline representative, who can provide these files.
+
+#### Using the SAML-tracer extension
 
    1. Add the SAML-tracer extension to your chosen web browser:
 
@@ -111,9 +159,17 @@ The SAML attribute names must always match those in the identity provider and th
 
       ![SAML-tracer](~/user-guide/images/SAML_Tracer.png)
 
-   1. In the pane on the bottom, select *SAML*. Now compare the attribute names in the response to those in the identity provider and the *DataMiner.xml* file.
+   1. In the pane on the bottom, select *SAML*.
 
       ![SAML-tracer tabs](~/user-guide/images/SAML_Tracer_Tabs.png)
+
+### Capitalization errors
+
+Keep in mind that XML and therefore also SAML is case-sensitive.
+This goes for all xml elements and attributes configured on the Service Provider as well as all fields configured on the Identity Provider.If capitalization is incorrect, you can expect errors in above log files mentioning that a specific item could not be found.
+
+e.g. When matching claim names in DataMiner.xml to your setup in the Identity provider (see [Configuring SAML with Okta as the identity provider](xref:SAML_using_Okta)), ensure that both names have the same casing.
+i.e. EMailAddress does not equal emailAddress
 
 ### Other frequent issues
 
