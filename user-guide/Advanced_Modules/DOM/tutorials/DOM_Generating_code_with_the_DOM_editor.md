@@ -10,6 +10,10 @@ Expected duration: 10 minutes.
 
 > [!TIP]
 > If you are new to DOM, take a look at the [Getting Started with DOM tutorial](xref:DOM_Generating_code_with_the_DOM_editor).
+>
+> >[!TIP]
+>See also: [Kata #57: Generating Code with the DOM Editor](https://community.dataminer.services/courses/kata-8/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)![image](https://github.com/user-attachments/assets/c3182cb2-92b5-4e2b-9d91-964ee44fff58)
+
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created in DataMiner 10.4.12 with DOM Editor version 10.4.4.3.
