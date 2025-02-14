@@ -13,6 +13,3 @@ You can also dive deeper by opening definition tables, where you can see a list 
 For a broad overview, the DOM Viewer’s powerful table functionality lists all field descriptors across all definitions in every module, complete with extensive filtering options. The same features apply to all DOM instances, providing you with a holistic view of your entire DataMiner System.
 
 Unlike the [DOM Editor](xref:DOM_Editor) tool, the DOM Viewer allows you to build a model through dialog forms. While it has similarities with the [DataMiner Objects Tool](xref:DataMiner_Objects_Tool), the DOM Viewer focuses on querying instances, quickly displaying definitions and their relationships through an interactive graph and allowing you to easily drill down when necessary. It is designed to help you not just see but also understand object models through visualization.
-
-> [!TIP]
-> To get to know this tool, you can [follow Kata #54 on DataMiner Dojo](https://community.dataminer.services/courses/kata-54/) and deploy the tutorial package [Tutorial - DOM Viewer](https://catalog.dataminer.services/details/fea99fc7-63fc-40da-85fb-db1ca914986a) from the DataMiner Catalog. This package includes the DOM Viewer itself as well as the example modules used in Kata #54.
