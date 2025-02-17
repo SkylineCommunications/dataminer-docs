@@ -122,40 +122,12 @@ This extension is available for Google Chrome or any Chromium-based browser.
 
 When investigating issues related to a specific element or service, DELT (DataMiner Element Location Transparency) export packages are invaluable sources of information. This functionality allows you to export and import elements, services, and more to/from a *.dmimport* file.
 
+To export an element or service, refer to [Exporting elements, services, etc. to a .dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file).
+
+Note that unless otherwise requested, we recommend **not including trend data, alarm data, documents, and information events** in the export to reduce the package size and export time.
+
 > [!TIP]
 > For more information on DELT export and import packages, see [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA).
-
-To export an element or service:
-
-1. In the Surveyor, right-click the item and select *Actions > Export*.
-
-   ![Export element](~/user-guide/images/Export_Element.png)<br/>*DataMiner Cube version 10.3.10*
-
-1. In the *Export* pop-up window, choose *Export to DataMiner package (\*.dmimport)*.
-
-1. Select the items you want to export. If you have selected to include a service, any elements within that group will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
-
-1. Specify which additional information should be included (if any) using the checkboxes below this:
-
-   - Trend and alarm data
-
-   - Documents
-
-   - Information events
-
-   Unless requested otherwise, we recommend disabling these options to reduce the package size and export time.
-
-1. Select *Export* in the lower right corner.
-
-   ![Exporting an SLA](~/user-guide/images/SLA_Export.png)<br/>*DataMiner Cube version 10.3.10*
-
-> [!IMPORTANT]
-> 
-> If the export fails due to package size, consider excluding trend and alarm data. Also, try connecting directly to the DMA hosting the item to be exported.
-
-> [!NOTE]
-> 
-> - It is not possible to export spectrum analyzer elements, SLA elements or separate DVE child elements.
 
 ## Stream Viewer traces
 
