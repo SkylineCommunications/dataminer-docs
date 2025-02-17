@@ -67,9 +67,15 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 1. If the server has the nats-server service installed:
 
-   1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*.
+   1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\\*.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
+  
+   1. Open the *nats-server.config* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\\*.
+
+   1. Replace any references to the old IP address with the new IP address, and save the file.
+
+   1. Restart the nats-server service.
 
    1. Restart the DataMiner BrokerGateway service.
 
@@ -144,11 +150,21 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
          This will install both NAS and NATS.
 
-1. If the server has the nats-server service installed:
+1. If the server has the nats-server service installed, perform these actions on all agents of the DMS:
 
    1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*.
 
+   1. Replace any references to the old IP address with the new IP address, and save the file. 
+
+   1. Open the *nats-server.config* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\\*.
+
    1. Replace any references to the old IP address with the new IP address, and save the file.
+      The places to replace the IP in the file:
+      1. cluster.routes
+      2. cluster.advertise (only on the server where the IP was changed)
+      3. client_advertise (only on the server where the IP was changed)
+     
+   1. Restart the nats-server service.
 
    1. Restart the DataMiner BrokerGateway service.
 
@@ -231,6 +247,16 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
    1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
+  
+   1. Open the *nats-server.config* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\\*.
+
+   1. Replace any references to the old IP address with the new IP address, and save the file.
+      The places to replace the IP in the file:
+      1. cluster.routes
+      2. cluster.advertise (only on the server where the IP was changed)
+      3. client_advertise (only on the server where the IP was changed)
+     
+   1. Restart the nats-server service.
 
    1. Restart the DataMiner BrokerGateway service.
 
@@ -334,11 +360,21 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. Open the file *DB.xml* for all other DMAs in the DMS, and replace the old IP address with the new IP address for both Cassandra and OpenSearch/Elasticsearch.
 
-1. If the server has the nats-server service installed:
+1. If the server has the nats-server service installed, perform these actions on all agents of the DMS:
 
    1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
+  
+   1. Open the *nats-server.config* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\\*.
+
+   1. Replace any references to the old IP address with the new IP address, and save the file.
+      The places to replace the IP in the file:
+      1. cluster.routes
+      2. cluster.advertise (only on the server where the IP was changed)
+      3. client_advertise (only on the server where the IP was changed)
+     
+   1. Restart the nats-server service.
 
    1. Restart the DataMiner BrokerGateway service.
 
