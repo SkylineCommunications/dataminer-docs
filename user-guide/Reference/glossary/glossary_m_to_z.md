@@ -115,7 +115,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 |------|-------------|
 | QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. |
 | QAM | Quadrature Amplitude Modulation. Transmission technique for digital signals that combines phase modulation and amplitude modulation. |
-| Query executer | DataMiner tool that allows users to connect to an SQL database and query it using SQL statements.<br>See [Querying an SQL database](xref:Querying_an_SQL_database). |
+| Query executer | Obsolete DataMiner tool that allows users to connect to an SQL database and query it using SQL statements.<br>See [Querying an SQL database](xref:Querying_an_SQL_database). |
 | QuickMenu | Shortcut menu in DataMiner Cube that allows quick navigation between UI sections. Accessible via the keyboard shortcut Ctrl + Q. |
 
 ## R
