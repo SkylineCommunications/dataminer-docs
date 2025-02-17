@@ -67,7 +67,7 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 1. If the server has the nats-server service installed:
 
-   1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\\*.
+   1. Open the *appsettings.runtime.json* file, located in the folder *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\\*.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
   
