@@ -64,6 +64,8 @@ The examiner will use a predefined exam plan to ask different questions per modu
 >
 > - If you do not pass the exam, you have one free retake.
 > - Exams are recorded to ensure the integrity of the process and to provide a reference for review if needed.
+> - After successfully passing the Fundamentals exam you will receive 500 DevOps points.
+> - After successfully passing the Configurator exam you will receive 750 DevOps points.
 
 ### Preparation tips
 
