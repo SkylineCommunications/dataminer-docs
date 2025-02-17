@@ -217,13 +217,13 @@ From now on, the *Change Element States Offline* tool will hide service elements
 
 If you do want service elements to be visible, select the *Advanced* checkbox.
 
-#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a Virtual Function [ID 41388]
+#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a virtual function [ID 41388]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
-Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well Virtual Functions.From now on, this option will only apply to DVE elements.
+Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well as virtual functions. From now on, this option will only apply to DVE elements.
 
-In order to override the timeout for a Virtual Function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
+In order to override the timeout for a virtual function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
 
 #### Swarming: Clearer exception will now be thrown when the state of an element is changed while the element is being swarmed [ID 41634]
 
