@@ -9,9 +9,9 @@ In this tutorial, you will learn how to create a [variable](xref:Variables) and 
 By the end of this tutorial, you will have a functional low-code app that allows users to dynamically filter elements based on their state.
 
 > [!NOTE]
-> This tutorial uses DataMiner web version 10.5.1.
->
-> Variables have been available since DataMiner web version 10.4.12, and support for dynamic value changes was introduced in version 10.5.1.
+> 
+> - This tutorial uses DataMiner web version 10.5.1.
+> - Variables have been available since DataMiner web version 10.4.12, and support for dynamic value changes was introduced in version 10.5.1.
 
 ## Prerequisites
 
