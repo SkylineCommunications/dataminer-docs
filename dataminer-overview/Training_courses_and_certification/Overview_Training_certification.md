@@ -64,6 +64,7 @@ The examiner will use a predefined exam plan to ask different questions per modu
 >
 > - If you do not pass the exam, you have one free retake.
 > - Exams are recorded to ensure the integrity of the process and to provide a reference for review if needed.
+> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded DevOps Points after you successfully pass the Fundamentals and Configurator exams. For passing the Fundamentals exam, 500 points are awarded, and for passing the Configurator exam, 750 points are awarded.
 
 ### Preparation tips
 
