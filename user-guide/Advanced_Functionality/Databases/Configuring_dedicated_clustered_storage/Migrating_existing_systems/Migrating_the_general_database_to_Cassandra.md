@@ -5,7 +5,7 @@ keywords: local database
 
 # Migrating the SQL general database to Cassandra
 
-In legacy DataMiner Systems, a MySQL or MSSQL general database (also known as "local" database) can be used. However, with such a setup you will not have access to many recent DataMiner features. In addition, while older features will continue to work with MySQL up to DataMiner 10.4.0, MSSQL is no longer supported as from DataMiner 10.3.0.
+In legacy DataMiner Systems, a MySQL or MSSQL general database (also known as "local" database) can be used. However, with such a setup you will not have access to many recent DataMiner features. In addition, while older features will continue to work with MySQL up to DataMiner 10.6.0, MSSQL is no longer supported as from DataMiner 10.3.0.
 
 To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. For this, you first need to migrate to Cassandra. If you choose to keep using self-managed storage even though this is not recommended, you will also need to migrate to Cassandra and then [migrate to a dedicated clustered storage](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) setup in order to have access to all the latest features.
 

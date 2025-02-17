@@ -4,6 +4,9 @@ uid: Querying_an_SQL_database
 
 # Querying an SQL database
 
+> [!NOTE]
+> This feature is no longer supported.
+
 To query an SQL database, do the following:
 
 1. Go to *System Center \>* *Tools* \> *query executer*.

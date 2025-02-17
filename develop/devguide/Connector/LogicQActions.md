@@ -8,7 +8,7 @@ uid: LogicQActions
 
 Quick Actions (often referred to as "QActions") are used to implement custom functionality that cannot be implemented by other protocol constructs (e.g. parsing a JSON response received from the device, etc.).
 
-In the past, QActions were written in C#, JScript or VBScript. However, recent protocols are written exclusively in C#, so this chapter only considers C# QActions.
+In the past, QActions were written in C#, JScript or VBScript. However, recent protocols are written exclusively in C# (and VBScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)), so this chapter only considers C# QActions.
 
 A QAction is executed by the SLScripting process (see <xref:InnerWorkingsSLScripting>) and is defined in a connector using the [QAction](xref:Protocol.QActions.QAction) tag.
 

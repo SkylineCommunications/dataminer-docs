@@ -17,13 +17,7 @@ In case you use a self-managed storage setup with [Cassandra storage per DMA](xr
 
 To verify this:
 
-1. On the online DMA, open DataMiner Cube.
-
-1. Go to *Apps* > *System Center* > *Tools* > *Query executor*.
-
-1. Make sure the Failover DMA is selected in the *Execute query on* box.
-
-1. Copy and paste the following query and click *Execute*.
+1. Execute the following query on the database (e.g. using [DevCenter](xref:DataStax_DevCenter)):
 
    `Select keyspace_name, replication from system_schema.keyspaces where keyspace_name IN('SLDMADB','system_auth');`
 

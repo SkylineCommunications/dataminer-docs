@@ -37,7 +37,8 @@ The actual script code of a QAction must be placed inside a CDATA section. By pl
 
 In order to interact with the SLProtocol process (e.g. to access parameters or to notify DataMiner of certain events)
 
-- in Jscript or VBScript code, use the SLScript object.
+- in Jscript or VBScript code, use the SLScript object. (Note the VBScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).)
+
 - in C# code, use the Skyline.DataMiner.Scripting namespace.
 
 For information on how to use C# in protocols, see <xref:LogicQActions>.

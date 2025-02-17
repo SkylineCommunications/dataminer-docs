@@ -61,7 +61,7 @@ If an advanced search returns several kinds of items, it is possible to filter w
 
 | Search type | Description |
 |--|--|
-| Application      | DataMiner applications, including custom applications and DataMiner tools, such as the Query Executer. |
+| Application      | DataMiner applications, including custom applications and DataMiner tools. |
 | Document         | DataMiner documents. See [Documents](xref:About_the_Documents_module). |
 | Element          | All elements. An additional filter allows you to limit the search to elements that are monitored, in alarm, masked, or in a particular alarm state. |
 | Matrix           | Matrix elements. An additional filter allows you to limit the search to elements that are monitored, in alarm, masked, or in a particular alarm state. |

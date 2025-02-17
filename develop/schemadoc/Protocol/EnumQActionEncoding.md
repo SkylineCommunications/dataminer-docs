@@ -14,3 +14,6 @@ Specifies the language used in the QAction.
 |&nbsp;&nbsp;Enumeration|jscript|JScript|
 |&nbsp;&nbsp;Enumeration|vbscript|VBScript|
 |&nbsp;&nbsp;Enumeration|csharp|C#|
+
+> [!NOTE]
+> VBScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).

@@ -23,7 +23,7 @@ In the type attribute, you can specify one of the following options:
 Used to automatically create a unique value. Only applicable for primary key columns.
 
 > [!NOTE]
-> The use of this type is deprecated for logger tables for the following reasons:
+> The use of this type is **no longer supported** for logger tables for the following reasons:
 >
 > - MySQL supports auto-increment, but Cassandra does not have this functionality by default. DataMiner supports auto-increment on a Cassandra database by walking over the table to determine the maximum ID to determine the next value. However, it is not advised to use this for logger tables as a logger table can be very large.
 > - It is not supported with an indexing database or [Storage as a Service (STaaS)](xref:STaaS).
