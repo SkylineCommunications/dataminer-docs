@@ -40,6 +40,7 @@ Important announcements about the latest changes to DataMiner core functionality
 
 | Item | <div style="width: 150px;">Current status</div> | Detail | Future status |
 |---------|---------|---------|---------|
+| Use of VBScript in QActions | End of Support | | End of Life to be confirmed |
 | Asset Manager | End of Engineering | Module is being retired. | End of Life to be confirmed |
 | Pivot table and Group components | End of Engineering | These components are being retired in the Dashboards app and Low-Code Apps. | End of Life to be confirmed |
 | Ticketing app | End of Engineering | Skyline is researching a replacement for this module. | End of Life as of DataMiner version 10.6.x (Q4 2025) |
