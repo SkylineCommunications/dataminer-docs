@@ -149,8 +149,13 @@ To export an element or service:
 
    ![Exporting an SLA](~/user-guide/images/SLA_Export.png)<br/>*DataMiner Cube version 10.3.10*
 
-   > [!IMPORTANT]
-   > If the export fails due to package size, consider excluding trend and alarm data. Also, try connecting directly to the DMA hosting the item to be exported.
+> [!IMPORTANT]
+> 
+> If the export fails due to package size, consider excluding trend and alarm data. Also, try connecting directly to the DMA hosting the item to be exported.
+
+> [!NOTE]
+> 
+> - It is not possible to export spectrum analyzer elements, SLA elements or separate DVE child elements.
 
 ## Stream Viewer traces
 
@@ -170,7 +175,7 @@ To save a Stream Viewer trace:
 
    ![Stream Sniffer](~/user-guide/images/Stream_Sniffer.png)<br/>*DataMiner Cube version 10.3.10*
 
-   > [!NOTE]
-   >
-   > - We recommend setting the capture duration to 5 minutes.
-   > - Closing the *Stream Sniffer* and *Stream Viewer* windows will not interrupt the capture. However, closing or disconnecting Cube will stop the capture.
+> [!NOTE]
+>
+> - We recommend setting the capture duration to 5 minutes.
+> - Closing the *Stream Sniffer* and *Stream Viewer* windows will not interrupt the capture. However, closing or disconnecting Cube will stop the capture.
