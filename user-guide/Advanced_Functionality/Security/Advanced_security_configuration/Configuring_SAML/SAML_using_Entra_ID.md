@@ -414,9 +414,11 @@ There are two ways to configure this setup: with or without group claims.
 1. In the pane on the left on your DataMiner application page, click *Single sign-on*.
 
 1. Next to *Attributes & Claims*, click *Edit*.
-   Assert that the claims "givenname", "surname", "emailaddress", "name" and "Unique User Identifier" are present, matching the following configuration:
 
    ![Edit attributes & claims](~/user-guide/images/SAML_Edit_claim.png)
+
+   > [!NOTE]
+   > Make sure that the identity provider claims "givenname", "surname", "emailaddress", "name", and "Unique User Identifier" are present, matching the screenshot above.
 
 1. Click *Add a group claim*.
 
@@ -452,9 +454,10 @@ There are two ways to configure this setup: with or without group claims.
 1. Go to the `C:\Skyline DataMiner` folder and open the *DataMiner.xml* file.
 
 1. In *DataMiner.xml*, add the `<AutomaticUserCreation>` tag as illustrated in the example below.
-   The tags  `<EmailClaim>`,`<Givenname>`,`<Surname>` define the names of the *claims* on the *Service Provider's* side.
-   Ensure that within the aforementioned tags, the claim is defined using the appropriate XML prefix as per below example. (e.g.`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/`).
-   Furthermore, assert that the name of the claim (i.e. the part after the XML prefix e.g. *emailaddress*, *givenname*, *surname*) matches the names of the attributes in Microsoft Entra ID (i.e. the *Identity Provider claims*) as indicated in step 5.
+
+   - The tags `<EmailClaim>`,`<Givenname>`, and`<Surname>` define the names of the claims on the service provider's side. Make sure that in these tags, the claim is defined using the appropriate XML prefix illustrated below (e.g.`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/`).
+
+   - Make sure that the name of each claim (i.e. the part after the XML prefix, e.g. *emailaddress*, *givenname*, *surname*) matches the identity provider claims that were shown under *Attributes & Claims* in the Azure portal earlier.
 
    ```xml
    <DataMiner ...>
@@ -476,7 +479,7 @@ There are two ways to configure this setup: with or without group claims.
    ```
 
    > [!IMPORTANT]
-   > Mind the capitalization! XML is case-sensitive, so adding the *claim* *givenName* in step 4. then setting the `<Givenname>` tag to `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` in the current step (11) will ensure you are unable to log in as there is a difference in casing.
+   > XML is **case-sensitive**, so make sure the capitalization from the identity provider matches that in DataMiner.xml. If you for example add the claim *givenName* in the Azure portal but then set the `<Givenname>` tag to `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` here, the difference in casing will make it impossible to log in.
 
 1. Save the *DataMiner.xml* file.
 
@@ -493,9 +496,11 @@ There are two ways to configure this setup: with or without group claims.
 1. In the pane on the left on your DataMiner application page, click *Single sign-on*.
 
 1. Next to *Attributes & Claims*, click *Edit*.
-   Assert that the claims "givenname", "surname", "emailaddress", "name" and "Unique User Identifier" are present, matching the following configuration:
 
    ![Edit attributes & claims](~/user-guide/images/SAML_Edit_claim.png)
+
+   > [!NOTE]
+   > Make sure that the identity provider claims "givenname", "surname", "emailaddress", "name", and "Unique User Identifier" are present, matching the screenshot above.
 
 1. Make sure a group has been added in DataMiner that can be used to automatically add users to. See [Adding a user group](xref:Adding_a_user_group).
 
@@ -504,9 +509,10 @@ There are two ways to configure this setup: with or without group claims.
 1. Go to the `C:\Skyline DataMiner` folder and open the *DataMiner.xml* file.
 
 1. In *DataMiner.xml*, add the `<AutomaticUserCreation>` tag as illustrated in the example below.
-   The tags  `<EmailClaim>`,`<Givenname>`,`<Surname>` define the names of the *claims* on the *Service Provider's* side.
-   Ensure that within the aforementioned tags, the claim is defined using the appropriate XML prefix as per below example. (e.g.`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/`).
-   Furthermore, assert that the name of the claim (i.e. the part after the XML prefix e.g. *emailaddress*, *givenname*, *surname*) matches the names of the attributes in Microsoft Entra ID (i.e. the *Identity Provider claims*) as indicated in step 5.
+
+   - The tags `<EmailClaim>`,`<Givenname>`, and`<Surname>` define the names of the claims on the service provider's side. Make sure that in these tags, the claim is defined using the appropriate XML prefix illustrated below (e.g.`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/`).
+
+   - Make sure that the name of each claim (i.e. the part after the XML prefix, e.g. *emailaddress*, *givenname*, *surname*) matches the identity provider claims that were shown under *Attributes & Claims* in the Azure portal earlier.
 
    ```xml
    <DataMiner ...>
@@ -528,7 +534,7 @@ There are two ways to configure this setup: with or without group claims.
    ```
 
    > [!IMPORTANT]
-   > Mind the capitalization! XML is case-sensitive, so adding the *claim* *givenName* in step 4. then setting the `<Givenname>` tag to `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` in the current step (9) will ensure you are unable to log in as there is a difference in casing.
+   > XML is **case-sensitive**, so make sure the capitalization from the identity provider matches that in DataMiner.xml. If you for example add the claim *givenName* in the Azure portal but then set the `<Givenname>` tag to `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname` here, the difference in casing will make it impossible to log in.
 
 1. Save the *DataMiner.xml* file.
 
