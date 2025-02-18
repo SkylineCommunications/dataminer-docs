@@ -89,14 +89,6 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 
 A number of security enhancements have been made.
 
-#### Failover: Virtual IP address check will no longer execute an arp command to double-check whether an IP address is free [ID 42280]
-
-<!-- MR 10.4.0 [CU12]/10.5.0 [CU1] - FR 10.5.3 [CU0] -->
-
-When the virtual IP address check concluded that the IP address was free after having executed the required number of ping commands, since DataMiner main release 10.3.0 [CU20]/10.4.0 [CU8] and feature release 10.4.11, it would double-check by executing an arp command.
-
-From now on, it will no longer execute an arp command.
-
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
