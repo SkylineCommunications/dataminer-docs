@@ -184,6 +184,16 @@ Also, the *Then sort by* operator will now be a child node of the *Sort by* oper
 
 The *Maps* component now has a redesigned icon.
 
+#### Dashboards app: Updated component data colors [ID 42272]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The default data colors have been updated. These are the colors that are used for e.g. the lines in a line & area chart, the bars in a column & bar chart, the slices in a pie & donut chart, etc.
+
+These updated colors will automatically be applied to all existing dashboards and low-code apps that use one of the default Skyline themes (i.e. Skyline Light - White, Skyline Light - Gray, and Skyline Dark).
+
+Also, the icon of the *Column & bar chart* component has been redesigned.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]

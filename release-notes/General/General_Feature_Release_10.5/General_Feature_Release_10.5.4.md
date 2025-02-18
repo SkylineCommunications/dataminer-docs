@@ -127,6 +127,17 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 
 A number of security enhancements have been made.
 
+#### Disabling an SLAnalytics feature will now clear all open alarms and suggestion events associated with that feature [ID 42096]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When, in DataMiner Cube, you go to *System Center > System settings > Analytics config*, and you explicitly disable one of the following SLAnalytics features, all open alarms and suggestion events associated with that feature will now automatically be cleared:
+
+- Behavioral anomaly detection
+- Pattern matching
+- Proactive cap detection
+- Relational anomaly detection
+
 ### Fixes
 
 #### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
