@@ -5,8 +5,6 @@ keywords: Common Data Model, CDM
 
 # Standard Data Model (SDM)
 
-TODO CHECK WITH LEANDER WHAT TO DO WITH THESE PAGES
-
 Several low-code apps available in the DataMiner Catalog, including all MediaOps applications, are built on the Common Data Model (CDM). In this model, each object is described by a definition.
 
 Definitions that are functionally related are grouped into modules to enhance data management, interoperability, and efficiency. Below, you can find an overview of the different modules.

@@ -6,19 +6,17 @@ uid: People_Organizations
 
 The People & Organizations app allows you to create, edit, and organize People, Teams, and Organizations.
 
-![People & Organizations app](~/user-guide/images/People_Organizations.gif)
-
 
 ## People
 People can be created to store administrative data on persons that are relevant in your operation, such as operators, management, contractors, customers, ... The stored administrative data includes for example contact details, skills and org chart information. The People that are created in the People & Organizations app will show up in different places throughout other DataMiner apps:
 * As contact persons that can be linked to a Job in the Scheduling app 
 * As bookable resources in the Resource Studio, Scheduling and Workflow apps
 
-The P&O app also allows to define a list of Skills, that can then be assigned to people. These Skills will show up on the resources created for these people, allowing to easily match the right person to a task for users scheduling Jobs.
+The P&O app also allows to define a list of Skills, that can then be assigned to people. These Skills will show up on the resources created for these people as capabilities, allowing to easily match the right person to a task for users scheduling Jobs.
 
 
 ## Organizations
-An organization represents a company in your supply chain, like customers, suppliers or partners. Every person created in the People & Organizations app can be part of up to one Organization. The organizations created here can be used in the Scheduling app for the customer field on a Job.
+An organization represents a company in your supply chain, like customers, suppliers or partners. Every person created in the People & Organizations app can be part of up to one Organization. The organizations created here can be used in the Scheduling app for the Organization field on a Job, which can for example be used to specify for which external or internal customer a Job is being carried out. 
 
 ## Teams
 Teams are used to group together a smaller number of people. After creating a Team, users can add People to it and assign them a role in the team, like 'member', 'supervisor' etc. People can be part of multiple teams at the same time.
