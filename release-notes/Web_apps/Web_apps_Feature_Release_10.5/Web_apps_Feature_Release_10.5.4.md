@@ -283,3 +283,9 @@ When a low-code app was published, its description would incorrectly not get upd
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When you saved a low-code app with an empty name, an exception could be thrown.
+
+#### Low-Code Apps: Icon of newly created low-code app would only be visible after refreshing the root page [ID 42264]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you created a new low-code app, the icon of that app would incorrectly only be visible on the root page (i.e. `https://myDMA/root/`) after you had refreshed that page.
