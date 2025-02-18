@@ -252,3 +252,11 @@ In some cases, it would not be possible to transfer data from a table to a form 
 <!-- MR 10.4.0 [CU12]/10.5.0 [CU0] - FR 10.5.3 [CU0] -->
 
 When you opened a shared dashboards, any GQI component on that dashboard would not get loaded and would as a result not show any data.
+
+#### Dashboards/Low-Code Apps - Alarm table component: Problem when showing alarms in a sliding window [ID 42273]
+
+<!-- MR 10.4.0 [CU12]/10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When an *Alarm table* component was configured to show alarms in a sliding window, it would incorrectly not show any alarms.
+
+Also, when you applied a view filter, a parameter index filter or a saved filter, an exception would be thrown and no alarms would be shown.
