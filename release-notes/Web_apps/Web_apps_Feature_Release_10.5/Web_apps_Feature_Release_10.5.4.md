@@ -157,6 +157,19 @@ Up to now, each time the *GetRegionalSettings* method was called, it would retri
 
 Up to now, the length of app, page and panel names was not limited. As this could cause issues with very long URLs, those names have now been limited to 150 characters.
 
+#### Dashboards/Low-Code Apps: 'Reuse template' button renamed to 'Browse template' [ID 42226]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In the following components, the *Reuse template* button has now been renamed to *Browse template*:
+
+- Grid
+- Maps
+- Table
+- Timeline
+
+As soon as at least two templates are being used on the dashboard or low-code app, this button will allow you to open a window in which you will be able to import a template from another component to override the template of the component you are configuring.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]

@@ -63,6 +63,14 @@ Because of a number of enhancements, overall performance of SLNet has increased 
 
 Because of a number of enhancements made to SLProtocol, overall CPU usage has been reduced when converting data from String to Double.
 
+#### Failover: Virtual IP address check will no longer execute an arp command to double-check whether an IP address is free [ID 42280]
+
+<!-- MR 10.4.0 [CU12]/10.5.0 [CU1] - FR 10.5.3 [CU0] -->
+
+When the virtual IP address check concluded that the IP address was free after having executed the required number of ping commands, since DataMiner main release 10.3.0 [CU20]/10.4.0 [CU8] and feature release 10.4.11, it would double-check by executing an arp command.
+
+From now on, it will no longer execute an arp command.
+
 ### Fixes
 
 #### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41339]
