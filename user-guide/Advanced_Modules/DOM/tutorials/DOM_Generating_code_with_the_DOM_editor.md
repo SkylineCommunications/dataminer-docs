@@ -80,6 +80,10 @@ To create an Automation script solution:
 
 1. Search for *DataMiner Automation Script Solution (Skyline Communications)* in the template search box and click *Next*.
 
+> [!IMPORTANT]
+> *DataMiner Automation Script Solution (Skyline Communications)* project template is no longer available, please use *DataMiner Automation Script Project (Skyline Communications)* instead.
+
+
 1. Use `Generate Kata DOM` as the name for your solution.
 
 1. Choose a location to save the Automation script solution and click *Next*.
