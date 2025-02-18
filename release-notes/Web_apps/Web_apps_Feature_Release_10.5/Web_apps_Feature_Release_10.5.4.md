@@ -170,6 +170,20 @@ In the following components, the *Reuse template* button has now been renamed to
 
 As soon as at least two templates are being used on the dashboard or low-code app, this button will allow you to open a window in which you will be able to import a template from another component to override the template of the component you are configuring.
 
+#### Dashboards/Low-Code Apps - Query builder: Shorter node descriptions [ID 42229]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The node descriptions in the query builder have been rewritten. They are now more concise.
+
+Also, the *Then sort by* operator will now be a child node of the *Sort by* operator. This means that, when you drag a *Sort by* node to another location, all its *Then sort by* child nodes will be taken along.
+
+#### Dashboards/Low-Code Apps - Maps component: Redesigned icon [ID 42239]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The *Maps* component now has a redesigned icon.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
