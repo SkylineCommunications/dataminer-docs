@@ -277,3 +277,9 @@ When the app that is specified in the action has never been published yet, an er
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When a low-code app was published, its description would incorrectly not get updated.
+
+#### Low-Code Apps: Problem when saving an app with an empty name [ID 42259]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you saved a low-code app with an empty name, an exception could be thrown.
