@@ -21,7 +21,7 @@ items:
           topicUid: MO_Scheduling
           items:
             - name: Creating a Job
-              topUid: SCH_Create_Job
+              topicUid: SCH_Create_Job
             - name: Editing a Job
               topicUid: SCH_Edit_Job
             - name: Job states

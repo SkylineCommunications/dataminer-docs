@@ -2,7 +2,7 @@
 uid: RS_Linking_Pools
 ---
 
-# Linking pools
+# Linking resource pools
 
 The Resource Studio app also allows you to "link" a resource pool to other resource pools. When a resource of that pool is then added to a job, the system will automatically also add resources from its linked pools to the same job. The same applies also when adding the pool to a workflow in the Workflow Designer app.
 

@@ -12,6 +12,7 @@ When the below standard MediaOps apps are insufficient to meet the needs of the 
 <div class="row">
   <div class="column">
     <a href="/user-guide/Standard_Apps/MediaOps/Apps/People_Organizations.html" title="People & Organizations" target="_self"><img src="~/user-guide/images/mo_PeopleOrganizations.svg" style="width:100%"></a>
+    </div>
     <div class="column">
     <a href="/user-guide/Standard_Apps/MediaOps/Apps/MO_Resource_Studio.html" title="Resource Studio" target="_self"><img src="~/user-guide/images/mo_ResourceStudio.svg" style="width:100%"></a>
   </div>
