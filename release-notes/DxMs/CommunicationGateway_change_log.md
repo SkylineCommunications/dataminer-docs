@@ -4,6 +4,10 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 13 February 2025 - Enhancement - CommunicationGateway 5.2.0 - Circuit breaker for repeated gRPC stream failures [ID 41971]
+
+A circuit breaker mechanism has been implemented to prevent excessive resource consumption when a gRPC stream repeatedly fails. Previously, the system would continuously attempt to restore a stream, even if failures were caused by persistent issues such as invalid UTF-8 characters in messages. With this update, if a stream fails 5 times within 60 seconds, the circuit breaker will activate, halting further reconnection attempts. This enhancement improves system stability and reduces unnecessary processing.
+
 #### 28 January 2025 - Enhancement - CommunicationGateway 5.1.0 - Node ID has a fixed value [ID 41784]
 
 The node ID of a CommunicationGateway instance is now assigned a fixed value, enabling middleware to target a specific instance of its choice. This enhancement was introduced to allow middleware to prioritize the CommunicationGateway instance running on the same machine as where the middleware is hosted.
