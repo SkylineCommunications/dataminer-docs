@@ -209,3 +209,9 @@ When an *AlarmSummary* shape was linked to a function, the shape would not show 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
 
 When, while a number of elements were selected in the *Element Swarming* window, an element was created or deleted in either the same client or another client, up to now, the element selection in the *Element Swarming* window would incorrectly be cleared.
+
+#### Automation, Correlation & Scheduler apps - 'Send email' action: 'Configure' button would incorrectly not appear after a dashboard was selected [ID 42240]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When, while configuring a *Send email* action, you had attached a dashboard, the *Configure* button would incorrectly not appear.
