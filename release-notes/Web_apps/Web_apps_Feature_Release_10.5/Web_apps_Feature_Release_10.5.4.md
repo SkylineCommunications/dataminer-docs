@@ -271,3 +271,9 @@ When you removed the most recently added component data from a component, all da
 In some cases, an *Open an app* action would open an incorrect version of the app that was specified. From now on, an *Open an app* action will always open the most recently published version of the app.
 
 When the app that is specified in the action has never been published yet, an error message will appear.
+
+#### Low-Code Apps: The description would not get updated when an app was published [ID 42257]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When a low-code app was published, its description would incorrectly not get updated.
