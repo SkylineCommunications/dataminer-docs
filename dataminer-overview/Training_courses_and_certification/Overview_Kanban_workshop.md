@@ -4,7 +4,7 @@ uid: Overview_Kanban_workshop
 
 # Kanban workshop
 
-This workshop offers a comprehensive dive into the Kanban methodology. You'll gain knowledge and tools to optimize workflows, enhance team collaboration, and maximize value delivery. Through hands-on exercises and interactive discussions, you will create actionable metrics, visualize workflows, and build a functional Kanban board tailored to your team's needs. This practical training ensures you can immediately implement Kanban practices in your daily work.
+This workshop offers a comprehensive dive into the Kanban methodology. You will gain knowledge and tools to optimize workflows, enhance team collaboration, and maximize value delivery. Through hands-on exercises and interactive discussions, you will create actionable metrics, visualize workflows, and build a functional Kanban board tailored to your team's needs. This practical training ensures you can immediately implement Kanban practices in your daily work.
 
 ## What you will learn
 
@@ -34,7 +34,7 @@ The goals reached by the end of the workshop include:
 
 - Teams looking to become more predictable.
 
-- Teams looking to become more productive and improve collaboration and transparency towards customers & stakeholders.
+- Teams looking to become more productive and improve collaboration and transparency towards customers and stakeholders.
 
 ## Workshop content
 
