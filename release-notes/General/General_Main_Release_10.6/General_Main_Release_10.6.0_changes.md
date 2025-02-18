@@ -9,24 +9,6 @@ uid: General_Main_Release_10.6.0_changes
 
 ## Changes
 
-### Breaking changes
-
-#### Protocols: Separate SLScripting process for every SLProtocol process [ID 41713]
-
-<!-- MR 10.6.0 - FR 10.5.3 -->
-
-From now on, DataMiner will by default start a separate SLScripting process for every SLProtocol process.
-
-Up to now, if you wanted to have a separate SLScripting process created for every SLProtocol process being used, you had to explicitly configure this in the `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
-
-```xml
-<DataMiner>
-  <ProcessOptions protocolProcesses="18" scriptingProcesses="protocol" />
-</DataMiner>
-```
-
-If you only want a single SLScripting process for all SLProtocol processes that are used, then set the `scriptingProcesses` attribute to "1".
-
 ### Enhancements
 
 #### DataMiner installer has been updated [ID 40409] [ID 41299]
