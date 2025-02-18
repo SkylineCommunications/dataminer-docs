@@ -20,7 +20,7 @@ The recommended system data storage architecture is **Storage as a Service** [(S
 
 Though this is **not recommended**, you can also host and manage the DataMiner storage yourself. In that case, you will need to configure a **dedicated clustered storage** setup, using a [Cassandra-compatible database service](xref:Cassandra_database) and an [indexing database](xref:Indexing_Database) (i.e. a Search Cluster). While all features are also available with this setup, managing and maintaining it is a great deal **more complex**.
 
-Instead of a dedicated clustered storage setup, older systems often still use **storage per DMA** with [Cassandra](xref:Migrating_the_general_database_to_Cassandra) or (prior to DataMiner 10.3) [MySQL](xref:MySQL_database), but this is **not recommended and not all DataMiner features** are available in such a setup. We highly recommend [migrating to a STaaS setup](xref:STaaS#migrating-existing-data-to-staas) instead. To migrate a MySQL setup to STaaS, you will first need to [migrate to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
+Instead of a dedicated clustered storage setup, older systems often still use **storage per DMA** with [Cassandra](xref:Migrating_the_general_database_to_Cassandra) or (prior to DataMiner 10.3) [MySQL](xref:MySQL_database), but this is **not recommended and not all DataMiner features** are available in such a setup. We highly recommend [migrating to a STaaS setup](xref:Migrating_existing_data_to_STaaS) instead. To migrate a MySQL setup to STaaS, you will first need to [migrate to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
 
 > [!TIP]
 > See also:
