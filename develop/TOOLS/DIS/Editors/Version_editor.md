@@ -76,7 +76,7 @@ Clicking a version number will open the *All Versions* tab to allow you to edit 
 
 In this tab, you can find an overview of all versions of the current protocol.
 
-- In the tree structure on the left, you can add and delete branches representing branch versions, system versions, major versions and minor versions by right-clicking a node and selecting the appropriate menu command. On the bottom of the pane, you can also find a button to add a minor version.
+- In the tree structure on the left, you can add and delete branches representing branch versions, system versions, major versions and minor versions by right-clicking a node and selecting the appropriate menu command. At the bottom of the pane, you can also find a button to add a minor version.
 - In the edit pane on the right, you can edit the properties of the version selected on the left.
 
   - To a branch version, you can add a list of branch features.

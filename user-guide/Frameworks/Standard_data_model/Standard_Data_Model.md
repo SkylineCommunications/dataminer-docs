@@ -580,7 +580,7 @@ Definitions that are functionally related are grouped into modules to enhance da
 		<tr>
 			<td>Relative start frequency</td>
 			<td>Double</td>
-			<td>This value provides an offset from the transponder's start frequency for slot generation. For example, to create slots only on the bottom half of a 36 MHz transponder, the relative start frequency would be 18.</td>
+			<td>This value provides an offset from the transponder's start frequency for slot generation. For example, to create slots only in the bottom half of a 36 MHz transponder, the relative start frequency would be 18.</td>
 			<td>Read/Write</td>
 			<td>Mandatory</td>
 		</tr>
