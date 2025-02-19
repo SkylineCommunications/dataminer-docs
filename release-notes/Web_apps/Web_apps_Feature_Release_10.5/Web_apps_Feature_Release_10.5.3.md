@@ -12,6 +12,11 @@ uid: Web_apps_Feature_Release_10.5.3
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.3](xref:General_Feature_Release_10.5.3).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.5.3](xref:Cube_Feature_Release_10.5.3).
 
+## Highlights
+
+- [Dashboards/Low-Code Apps: New Toggle component [ID 41903] [ID 41911] [ID 41915]](#dashboardslow-code-apps-new-toggle-component-id-41903-id-41911-id-41915)
+- [Dashboards/Low-Code Apps: Updated Time range component [ID 42082]](#dashboardslow-code-apps-updated-time-range-component-id-42082)
+
 ## New features
 
 #### Dashboards/Low-Code Apps: Support for variables of type Boolean [ID 41845]
@@ -41,6 +46,43 @@ When creating or updating a dashboard or a low-code app, you can now add *Toggle
 When configuring a *Toggle* component, you can link it to a variable of type Boolean, set its default value, and specify a label and an icon. The font color, background color and accent color of the component will automatically be adapted to those specified in the theme of the dashboard or app.
 
 When you add a *Toggle* component to a low-code app, you can also configure a *Set value* action for it. This action will allow users to either set the current value of the component in question to either a static value (True, False, or Empty) or link the component to a variable of type Boolean.
+
+#### Dashboards/Low-Code Apps: Updated Time range component [ID 42082]
+
+<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
+
+The *Time range* component has been updated. It now has a calendar display that allows you to enter one or two date or datetime values without having to open the picker. The latter will now include a filterable list of all presets configured in the layout settings. Selecting a preset will cause a value to be updated instantly, while the selected date and time from the calendar will only be applied when you click the *Apply* button. Also, the component now follows the colors defined in the theme (font, background and accent color).
+
+*Time range* components that were already added to a dashboard or low-code app will by default be in *Calendar* mode, showing the configured time as text, and will open the new picker when clicked. This way, the former behavior is mimicked. To change the mode, use the new *Edit using* setting explained below. New *Time range* components added as from now will automatically have the new layout (i.e. calendar and keyboard).
+
+From now on, the *Time range* component will no longer output relative time spans. It will now always output absolute time spans. For example, selecting "last 5 minutes" will no longer output "last 5 minutes" but "DD/MM/YYYY HH:MM - DD/MM/YYYY HH:MM".
+
+As to layout, the following has changed:
+
+- *Horizontal alignment* has been renamed to *Quick pick alignment* and *Align current time position* has been renamed to *Input alignment*.
+- *Input alignment* now has a new *Justify* option. Selecting this option will make the input of the component take the full width.
+
+New settings:
+
+- *Granularity*, with the following possible values:
+
+  | Option | Description |
+  |--------|-------------|
+  | Date & time | Component and picker will expect you to input values that include both a date and a time. |
+  | Date        | Component and picker will expect you to input values that only include a date. |
+
+  > [!NOTE]
+  > When *Granularity* is set to "Date":
+  >
+  > - Specifying an input like e.g. "20/01/2025 - 20/01/2025" will be considered valid. A time span like this will include the entire 24 hours, midnight to midnight.
+  > - Specifying an input like e.g. "20/01/2025 00:00 - 20/01/2025 00:00" will be considered invalid as the start time is equal to the end time.
+
+- *Edit using*, with the following possible values:
+
+  | Option | Description |
+  |--------|-------------|
+  | Keyboard & Calendar | The component will allow you to specify a time range using multiple number boxes and a picker. |
+  | Calendar            | The component will mimic the former behavior. The time range will be represented as text, and a picker will allow you to change the value. |
 
 ## Changes
 
@@ -127,43 +169,6 @@ From now on, *On open* events will be triggered as expected, without delay.
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
 When a *Grid* component without a fixed page size received new data, in some cases, the current scroll position would not be retained. From now on, the scroll position will be left untouched when new data is received.
-
-#### Dashboards/Low-Code Apps: Updated Time range component [ID 42082]
-
-<!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
-
-The *Time range* component has been updated. It now has a calendar display that allows you to enter one or two date or datetime values without having to open the picker. The latter will now include a filterable list of all presets configured in the layout settings. Selecting a preset will cause a value to be updated instantly, while the selected date and time from the calendar will only be applied when you click the *Apply* button. Also, the component now follows the colors defined in the theme (font, background and accent color).
-
-*Time range* components that were already added to a dashboard or low-code app will by default be in *Calendar* mode, showing the configured time as text, and will open the new picker when clicked. This way, the former behavior is mimicked. To change the mode, use the new *Edit using* setting explained below. New *Time range* components added as from now will automatically have the new layout (i.e. calendar and keyboard).
-
-From now on, the *Time range* component will no longer output relative time spans. It will now always output absolute time spans. For example, selecting "last 5 minutes" will no longer output "last 5 minutes" but "DD/MM/YYYY HH:MM - DD/MM/YYYY HH:MM".
-
-As to layout, the following has changed:
-
-- *Horizontal alignment* has been renamed to *Quick pick alignment* and *Align current time position* has been renamed to *Input alignment*.
-- *Input alignment* now has a new *Justify* option. Selecting this option will make the input of the component take the full width.
-
-New settings:
-
-- *Granularity*, with the following possible values:
-
-  | Option | Description |
-  |--------|-------------|
-  | Date & time | Component and picker will expect you to input values that include both a date and a time. |
-  | Date        | Component and picker will expect you to input values that only include a date. |
-
-  > [!NOTE]
-  > When *Granularity* is set to "Date":
-  >
-  > - Specifying an input like e.g. "20/01/2025 - 20/01/2025" will be considered valid. A time span like this will include the entire 24 hours, midnight to midnight.
-  > - Specifying an input like e.g. "20/01/2025 00:00 - 20/01/2025 00:00" will be considered invalid as the start time is equal to the end time.
-
-- *Edit using*, with the following possible values:
-
-  | Option | Description |
-  |--------|-------------|
-  | Keyboard & Calendar | The component will allow you to specify a time range using multiple number boxes and a picker. |
-  | Calendar            | The component will mimic the former behavior. The time range will be represented as text, and a picker will allow you to change the value. |
 
 ### Fixes
 

@@ -24,6 +24,7 @@ uid: General_Feature_Release_10.5.3
 
 ## Highlights
 
+- [Service & Resource Management: Defining an availability window for a resource [ID 41894]](#service--resource-management-defining-an-availability-window-for-a-resource-id-41894)
 - [Relational anomaly detection [ID 42034]](#relational-anomaly-detection-id-42034)
 
 ## New features
