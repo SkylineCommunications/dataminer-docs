@@ -84,6 +84,14 @@ Note that these suggestion events are not editable. Clearing one of them will cl
 
 Up to now, when you closed a card in which a Visio page was used a background page, an SPI entry containing the loading time of the background page would be logged in the *SLClient.txt* log file. From now on, background page loading times will no longer be logged.
 
+#### System Center - Database: No longer possible to migrate the general database to Cassandra [ID 42305]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+As Cassandra on Windows OS and Cassandra Single are no longer supported, it is no longer possible to migrate the general database to Cassandra. Hence, the *Cassandra preparation/migration* button, found in the bottom-left corner of the *Database* section, has been removed.
+
+See also: [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
+
 ### Fixes
 
 #### Visual Overview: Problem when updating element shapes that are linked to service elements via aliases [ID 41730]
