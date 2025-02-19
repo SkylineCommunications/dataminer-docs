@@ -25,9 +25,8 @@ Expected duration: 30 minutes
 - [Step 2: Explore the app and data-sets](#step-2-explore-the-app-and-data-sets)
 - [Step 3: Duplicate the app and let's begin](#step-3-duplicate-the-app-and-lets-begin)
 - [Step 4: Create the GQI query to fetch the history location data](#step-4-create-the-gqi-query-to-fetch-the-history-location-data)
-- [Step 5: Create a custom alarm template for the Animal Shelter protocol (optional)](#step-5-create-a-custom-alarm-template-for-the-animal-shelter-protocol-optional)
-- [Step 6: Take ownership of an alarm](#step-6-take-ownership-of-an-alarm)
-- [Step 7: Add a new customized page to the Alarms Filtering app](#step-7-add-a-new-customized-page-to-the-alarms-filtering-app)
+- [Step 5: Test the GQI result by a table](#step-5-test-the-gqi-result-by-a-table)
+- [Step 6: Visualize the history data on the maps component](#step-6-visualize-the-history-data-on-the-maps-component)
 
 ## Step 1: Install the Starlink Enterprise package
 
@@ -67,153 +66,107 @@ To get to a good starting point for the rest of this tutorial, you ideally start
 1. Edit your app and start of by duplicating the *Statistics* page.
 Let's leave the new page as being *hidden*, as the page will only be useful if you made a user terminal selection.
    ![Duplicate Statistics page](~/user-guide/images/Tutorial_Starlink_History_Locations_duplicate-page.png)
-1. Let's rename the page and give it a nice icon.
+
+1. Let's rename the page to *Location Tracking* and give it a nice icon.
    ![Page renaming](~/user-guide/images/Tutorial_Starlink_History_Locations_renamedPage.png)
-Duplicating the page to get to this point has the advantage that you now already have the default title and header KPIs available for our selected *User terminal*, keeping the app layout uniform.
+Duplicating the page to get to this point has the advantage that you now already have the default title and header KPIs available for our selected *User terminal* (as visualized here above). Keeping the app layout uniform.
 
 1. Remove the other components from that page as we don't need these.
-1. Add a *Time range* component onto your page. This will be necessary to instruct the time window of interest to visualize the location tracking.
+
+1. Add a *Time range* component onto your page. This will be necessary in a later step to provide the GQI query the time window of interest to visualize the location tracking.
    ![Add Time Range](~/user-guide/images/Tutorial_Starlink_History_Locations_TimeRangeComponent.png)
 
+1. Add a button to navigate to our newly created page. Go onto the *Overview* page and edit the panel *Terminal Info*.
+   ![Edit Overview Side Panel](~/user-guide/images/Tutorial_Starlink_History_Locations_editPanel.png)
+
+1. Duplicate one of the buttons at the bottom that brings you to the *Statistics* or *Data Usage* pages.
+Configure via the settings on the button to open the newly created page *Location Tracking*.
+   ![Edit Overview Side Panel](~/user-guide/images/Tutorial_Starlink_History_Locations_openPageButton.png)
+
 > [!NOTE]
-> In case you don't see the KPIs being loaded, most likely you did not yet select a terminal on the map from the *Overview* page (or selected a row from the *User Terminals* page.)
+> In case you don't see the KPIs being loaded while editing, most likely you did not yet select a terminal on the map from the *Overview* page (or selected a row from the *User Terminals* page.)
 
 ## Step 4: Create the GQI query to fetch the history location data
 
-1. Go to the Dashboards app, and open the Alarm Report dashboard.
+In the next step you will configure the GQI query that will fetch the trended datapoints.
+
+> [!NOTE]
+> Before you create the new GQI query, make sure you select a terminal while being in edit mode. If the query can't resolve into a valid result, you won't be able to save the query.
+
+1. Select the terminal *Skyline demo cruise_UT***74d101* on the map. You can find the terminal on the map docked in the harbour of Barcelona (Spain).
+1. Navigate to the *QUERIES* and *Add* a new query.
+1. Provide a name (example: *Location History AVG 5M*).
+1. Select *Get ad hoc data* and choose *Starlink - Get History GEO Locations - AVG.5M*.
+1. Link The *Element ID* to *Dropdown 29 (Overview)* containing the dynamic element reference. Select Type *Elements* and Property *Element ID*.
+1. Link the *User Terminal Device ID* with the flow *Link User Terminal ID selection*, Property *Primary Key*.
+1. Link the *History Time Range Start* with your new Time Range component, Property *From*.
+1. Repeat the same for *History Time Range End*, Property *To*.
 
 1. In the top-right corner, click *Start editing*.
 
-   ![Start editing the dashboard](~/user-guide/images/Tutorial_Alarm_Dashboard_StartEditing.png)
+   ![GQI: Ad hoc data](~/user-guide/images/Tutorial_Starlink_History_Locations_GQI_result.png)
 
-1. Add a dropdown component where users will be able to select a view in the DataMiner System:
+## Step 5: Test the GQI result by a table
 
-   1. Drag and drop the edge of the components to create free space in the top-right corner of the dashboard.
+As a best practice, lets validate if our query functions correctly by taking a look via the table view.
 
-   1. In the *Data* pane on the right, select the *Views* data source and drag it to the empty space on your dashboard.
+1. Add a new component on the page of type *Table*
+1. Select your new GQI (*Location History AVG 5M*) and drag it onto the table.
+1. Make sure you selected the *cruise test terminal* and validate if you see data appearing in the table.
+1. Changing the time span with your component should increase/decrease the number of results in the table as there could be more or less data points returned.
 
-   1. in the component, click *Pick a visualization*, and then select the *Dropdown* visualization.
+![GQI: Test the results](~/user-guide/images/Tutorial_Starlink_History_Locations_GQI_dataTest.png)
 
-      ![Pick the Dropdown visualization](~/user-guide/images/Tutorial_Alarm_Dashboard_PickAVisualization.png)
+## Step 6: Visualize the history data on the maps component
 
-      This should result in a dropdown box where all views are available for selection:
+In this final step, you will now visualize the data points on the maps component.
 
-      ![Dropdown box with all views](~/user-guide/images/Tutorial_Alarm_Dashboard_EndResultOfDropdown.png)
+1. Add a new component on the page of type *Maps*
+   ![Add Maps component](~/user-guide/images/Tutorial_Starlink_History_Locations_MapsComponent.png)
 
-1. Link the *Distribution* query in the dashboard to the dropdown component for its view filter:
+1. Select your new GQI (*Location History AVG 5M*) and drag it onto the map.
 
-   1. In the *Data* pane on the right, expand the *Queries* node and click the pencil icon next to the *Distribution* query.
+1. Double check the *Layer Settings* (Component Layout). *Identifier, Latitude, Longitude* should be automatically linked with your GQI outputs with similar namings.
+   ![Configure the layer](~/user-guide/images/Tutorial_Starlink_History_Locations_MapsLayerSettings.png)
 
-   1.Click the dot next to the second item in the query to view its detailed configuration:
+1. Configure the template to customize the shape and add conditional formatting: change colors and add condition for last data point to be green:
+    1. The Ad Hoc data source is sampling the results to avoid too many data being displayed. The last result in the dataset will always have ID 1000.
+    1. Change the color of the Ellipse to blue.
+    1. Add a new conditional case: When *ID* has the value *1000*, change the color to green.
+    ![Configure the layer](~/user-guide/images/Tutorial_Starlink_History_Locations_ConditinalCaseLastDataPoint.png)
 
-      ![Expand the query](~/user-guide/images/Tutorial_Alarm_Dashboard_Expand_Query.png)
+1. Display a notification showing the Time stamp when a point is selected:
+    1. Configure the *On click* actions
+    1. Select *Show a notification*
+    1. Title: *Time stamp at this location*
+    1. Message: *{TimeStamp}*
+    Any output columns of the GQI could be used in the placeholder.
+1. Visualize the selected location when pressed:
+    1. Configure a new Conditional case
+    1. Criteria:  *When Is selected*
+    1. Value: *Yes*
+    1. Change the color of the icon.
+    ![Maps Notification message](~/user-guide/images/Tutorial_Starlink_History_Locations_MapsNotifications.png)
 
-   1. Click the link icon next to the input field of the view filter.
+1. Center the map to your preference by moving it to your preference and click *Save current view* in the Maps Settings.
+   ![Configure the colors](~/user-guide/images/Tutorial_Starlink_History_Locations_CenterMap.png)
 
-      ![Click the view filter link icon](~/user-guide/images/Tutorial_Alarm_Dashboard_ChangeOfDistributionQueryStep1.png)
+1. Lets take a look at the end result:
 
-   1. In the *Data* box, select the dropdown component you have just created (*Dropdown 14* in the example below, but the number in your dashboard can be different).
+   If you have published the app, let's enjoy and take a look at the history tracking in action! Setting the time span to cover the last *8 full days*, you will now be see the whole cruise trip where our *Skyline demo cruise* sailed by. During the whole trip, the Starlink terminal was providing internet services to all people on board, while also allowing site seeing in Europe.
+   When selecting a specific location of the history track, the notification will show you the time stamp when the cruise was on that exact location.
 
-      ![Distribution Query Step 2](~/user-guide/images/Tutorial_Alarm_Dashboard_ChangeOfDistributionQueryStep2.png)
+   ![Starlink Location History in DataMiner](~/user-guide/images/Tutorial_Starlink_History_Locations_Result.png)
 
-      In case the dropdown is not among the available options you can select, close and reopen the Dashboards app to reload the UI.
+## 🛳️ Cruise Route: Mediterranean Journey (8 Days)**
 
-   1. The *Property* box, select *ID*.
+- Barcelona departure (Day 1)
+- Marseille (Day 2)
+- Monaco overnight (Day 2-3)
+- Genoa (Day 3)
+- Rome/Civitavecchia extended stay (Day 4)
+- Naples (Day 5)
+- Cagliari (Sardinian) (Day 6-7)
+- Barcelona arrival (Day 8)
 
-      This way, the view ID will be passed to the ad hoc data source, which will lead to the wanted result.
-
-1. Also link the *Alarm Events* and *States* queries to the dropdown component for their view filter, in the same way as detailed above.
-
-The dashboard will now give you an overview of the alarm distribution and the main alarms for the selected view (similar to the *Reports* page from the previous step), so that you can easily check the health of your DMS. You can also [share the dashboard with other users as a PDF or via dataminer.services](xref:Sharing_a_dashboard).
-
-## Step 5: Create a custom alarm template for the Animal Shelter protocol (optional)
-
-In the next step, you will need to be able to take ownership of an alarm. If you have installed the Animal Shelter package to have alarms in your system, you will first need to fine-tune the alarm template so that an active alarm will be created:
-
-1. In DataMiner Cube, open the Protocols & Templates module.
-
-1. In the *Protocols* column, select *Skyline Animal Shelter*.
-
-1. in the *Versions* column, select *1.0.0.1*.
-
-1. Right-click the *Default3* alarm template and select *Duplicate*.
-
-1. Specify the name `Default3 - Labradors` and click *OK*.
-
-   ![Duplicate an existing alarm template for Animal Shelter](~/user-guide/images/Tutorial_Alarm_Dashboard_DuplicateExistingAlarmTemplateForAnimalShelter.png)
-
-1. Double-click the duplicated alarm template to open it.
-
-1. Configure the alarm thresholds for the *Shelter Temperature* parameter as indicated below.
-
-   ![Fine-tune the alarm template for Animal Shelter](~/user-guide/images/Tutorial_Alarm_Dashboard_FinetuneAlarmTemplateForAnimalShelter.png)
-
-   This will make the alarm thresholds more strict, so that it is more likely that an alarm will be triggered.
-
-1. Click *OK* to apply and close the window.
-
-1. In the *Elements* column, click the *Assign Elements* button, assign the newly created alarm template to the *Labrador* elements, and click *Close*.
-
-   ![Assign the template to the Labrador elements](~/user-guide/images/Tutorial_Alarm_Dashboard_AssingTemplateToLabradors.png)
-
-## Step 6: Take ownership of an alarm
-
-1. In the Alarm Console in DataMiner Cube, open the tab *Active Alarms*.
-
-1. Right-click an alarm and select *Take ownership*
-
-   This can for example be an alarm for a *Labrador* element that you forced by assigning the custom alarm template in the previous step.
-
-   ![Taking ownership of an alarm](~/user-guide/images/Tutorial_Alarm_Dashboard_TakingOwnership.png)
-
-1. In the message box, write a message (for example, `We will open a window.` for the *Shelter Temperature* alarm).
-
-   ![Write an ownership message](~/user-guide/images/Tutorial_Alarm_Dashboard_OwnershipMessage.png)
-
-1. Click *Take ownership* to close the dialog.
-
-## Step 7: Add a new customized page to the Alarms Filtering app
-
-1. Open the Alarm Filtering app that you installed in [step 2](#step-2-install-the-alarm-filtering-app).
-
-1. Click the pencil icon in the top-right corner to start editing the app.
-
-1. Click the + icon in the bar all the way on the left to add a new page, and name it `My Alarm Overview`.
-
-1. In the *Data* pane on the right, expand the *Queries* node and click the + icon to add a query.
-
-1. Configure the new query as follows:
-
-   1. Enter the name `My own alarms`.
-
-   1. Add the data source *Get alarms*.
-
-   1. Add a *Filter* operator.
-
-   1. Configure the filter with the column *Is Active* and select the *Value* check box.
-
-      This way, the filter will be applied for alarms for which the *Is Active* property is equal to true.
-
-   1. Add another *Filter* operator.
-
-   1. Configure the second filter with the column *Owner*, filter method *equals*, and your username as the value.
-
-      In the example below, the username is *joachim*.
-
-   ![My Own Alarms query](~/user-guide/images/Tutorial_Alarm_Dashboard_MyOwnAlarmsQuery.png)
-
-1. Click the pencil icon next to the query name to stop editing the query.
-
-1. Drag the query onto the page.
-
-1. Click *Pick a visualization* and select the *Table* visualization.
-
-   ![Select the table visualization](~/user-guide/images/Tutorial_Alarm_Dashboard_Select_Table_Visualization.png)
-
-1. Take a look at the end result:
-
-   The table should now list any alarms that you have taken ownership of, including the alarm from the previous step.
-
-   ![Table listing the alarms](~/user-guide/images/Tutorial_Alarm_Dashboard_EndResultAlarmsThatITookOwnershipOf.png)
-
-This is just one of the possible changes you can do to the Alarm Filtering app in order to get a custom filtered overview of the alarms in your system. Check out the other [tutorials related to Dashboards and Low-Code Apps](xref:Dashboards_Low-Code_Apps_Tutorials) to get inspiration as to how you can further customize this app to your needs.
+We hope we have sparked your creativity to apply even more customizations covering your use-cases and workflows. Check out the other [tutorials related to Dashboards and Low-Code Apps](xref:Dashboards_Low-Code_Apps_Tutorials) to get inspiration as to how you can further customize this app to your needs.
