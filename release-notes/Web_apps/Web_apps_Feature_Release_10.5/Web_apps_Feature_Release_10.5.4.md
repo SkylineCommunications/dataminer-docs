@@ -307,3 +307,9 @@ When you created a new low-code app, the icon of that app would incorrectly only
 If, on the root page (i.e. `https://myDMA/root/`), a low-code app has a long name, that name will by default be ellipsed (i.e. only the first part of the name will be displayed, followed by "..."), and hovering over the name should make a tooltip appear, showing the full name. However, up to now, no tooltip showing the full name would appear when you hovered over an ellipsed name.
 
 From now on, a tooltip showing the full name will appear when you hover either over the name of the app or the icon of the app.
+
+#### Dashboards/Low-Code Apps - Timeline component: Groups would incorrectly disappear when the data was refreshed [ID 42289]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When, in a *Timeline* component, items had been grouped, in some cases, all groups would disappear when the data was refreshed and would reappear when you scrolled inside the timeline. From now on, all groups will remain visible when the data is refreshed.
