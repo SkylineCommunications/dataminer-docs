@@ -45,7 +45,7 @@ To do so, proceed as follows:
 1. In the C:\\Skyline DataMiner\\Mobile Gateway\\Config.xml file, add `unicode="true"` to the \<SMSEagle> element, and save the file.
 1. Restart the SLGSMGateway process.
 
-Default setting: unicode=”false”
+Default setting: unicode="false"
 
 ### DMS Security
 

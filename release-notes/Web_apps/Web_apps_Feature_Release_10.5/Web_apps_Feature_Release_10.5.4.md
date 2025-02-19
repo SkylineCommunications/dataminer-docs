@@ -151,6 +151,49 @@ Up to now, each time the *GetRegionalSettings* method was called, it would retri
 > [!NOTE]
 > As a result of this change, any changes made to the time zone and/or list separator in *ClientSettings.json* will no longer be applied when you refresh the web app. From now on, changes made to the time zone and/or list separator will require an IIS reset.
 
+#### Low-Code Apps: Names of apps, pages and panels are now limited to 150 characters [ID 42220]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+Up to now, the length of app, page and panel names was not limited. As this could cause issues with very long URLs, those names have now been limited to 150 characters.
+
+#### Dashboards/Low-Code Apps: 'Reuse template' button renamed to 'Browse template' [ID 42226]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In the following components, the *Reuse template* button has now been renamed to *Browse template*:
+
+- Grid
+- Maps
+- Table
+- Timeline
+
+As soon as at least two templates are being used on the dashboard or low-code app, this button will allow you to open a window in which you will be able to import a template from another component to override the template of the component you are configuring.
+
+#### Dashboards/Low-Code Apps - Query builder: Shorter node descriptions [ID 42229]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The node descriptions in the query builder have been rewritten. They are now more concise.
+
+Also, the *Then sort by* operator will now be a child node of the *Sort by* operator. This means that, when you drag a *Sort by* node to another location, all its *Then sort by* child nodes will be taken along.
+
+#### Dashboards/Low-Code Apps - Maps component: Redesigned icon [ID 42239]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The *Maps* component now has a redesigned icon.
+
+#### Dashboards app: Updated component data colors [ID 42272]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The default data colors have been updated. These are the colors that are used for e.g. the lines in a line & area chart, the bars in a column & bar chart, the slices in a pie & donut chart, etc.
+
+These updated colors will automatically be applied to all existing dashboards and low-code apps that use one of the default Skyline themes (i.e. Skyline Light - White, Skyline Light - Gray, and Skyline Dark).
+
+Also, the icon of the *Column & bar chart* component has been redesigned.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
@@ -230,3 +273,37 @@ When, after you had refreshed a dashboard, you opened a *Link to data* popup of 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When you removed the most recently added component data from a component, all data would be removed from the *Components* section of the *Data* pane, including the predefined component data.
+
+#### Low-Code Apps: 'Open an app' action would open an incorrect version of the specified app [ID 42224]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, an *Open an app* action would open an incorrect version of the app that was specified. From now on, an *Open an app* action will always open the most recently published version of the app.
+
+When the app that is specified in the action has never been published yet, an error message will appear.
+
+#### Low-Code Apps: The description would not get updated when an app was published [ID 42257]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When a low-code app was published, its description would incorrectly not get updated.
+
+#### Low-Code Apps: Problem when saving an app with an empty name [ID 42259]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you saved a low-code app with an empty name, an exception could be thrown.
+
+#### Low-Code Apps: Icon of newly created low-code app would only be visible after refreshing the root page [ID 42264]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you created a new low-code app, the icon of that app would incorrectly only be visible on the root page (i.e. `https://myDMA/root/`) after you had refreshed that page.
+
+#### Low-Code Apps: No tooltip showing the full name would appear when hovering over an ellipsed name of a low-code app [ID 42269]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+If, on the root page (i.e. `https://myDMA/root/`), a low-code app has a long name, that name will by default be ellipsed (i.e. only the first part of the name will be displayed, followed by "..."), and hovering over the name should make a tooltip appear, showing the full name. However, up to now, no tooltip showing the full name would appear when you hovered over an ellipsed name.
+
+From now on, a tooltip showing the full name will appear when you hover either over the name of the app or the icon of the app.

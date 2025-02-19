@@ -14,15 +14,21 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting – Cassandra](xref:Troubleshooting_Cassandra)
 
+- [Troubleshooting – Dashboard Gateway](xref:Dashboard_Gateway_troubleshooting)
+
 - [Troubleshooting – dataminer.services](xref:Investigating_Dataminerservices_Feature_Issues)
 
 - [Troubleshooting – NATS](xref:Investigating_NATS_Issues)
 
 - [Troubleshooting – OpenSearch](xref:Investigating_OpenSearch_Issues)
 
+- [Troubleshooting – SAML issues](xref:Troubleshooting_SAML_Issues)
+
 - [Troubleshooting - SLScripting](xref:TroubleshootingSLScriptingFinalizerException)
 
 - [Troubleshooting – STaaS](xref:Troubleshooting_STaaS)
+
+- [Troubleshooting – User-Defined APIs](xref:UD_APIs_Troubleshooting)
 
 - [Troubleshooting – web](xref:Investigating_Web_Issues)
 
@@ -35,6 +41,3 @@ Other troubleshooting procedures:
 - [Re-registering DataMiner services and DLLs](xref:Re-registering_DataMiner_services_and_DLLs)
 
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
-
-> [!TIP]
-> See also: [Troubleshooting SAML issues](xref:Troubleshooting_SAML_Issues)

@@ -120,11 +120,23 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 > [!NOTE]
 > The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
 
-#### Security enhancements [ID 42104]
+#### Security enhancements [ID 41425] [ID 42104]
 
+<!-- 41425: MR 10.6.0 - FR 10.5.4 -->
 <!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of security enhancements have been made.
+
+#### Disabling an SLAnalytics feature will now clear all open alarms and suggestion events associated with that feature [ID 42096]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When, in DataMiner Cube, you go to *System Center > System settings > Analytics config*, and you explicitly disable one of the following SLAnalytics features, all open alarms and suggestion events associated with that feature will now automatically be cleared:
+
+- Behavioral anomaly detection
+- Pattern matching
+- Proactive cap detection
+- Relational anomaly detection
 
 ### Fixes
 
@@ -139,6 +151,12 @@ After a Cassandra Cluster migration had been initialized, it would no longer be 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
 When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
+
+#### Problem when trying to update the protocol version of an element in error [ID 41962]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When you tried to update the protocol version of an element in error via DataMiner Cube, in some rare cases, a message would incorrectly appear, stating that it was not possible to update the element.
 
 #### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]
 
@@ -165,3 +183,15 @@ In some cases, INF (infinity) values would incorrectly get stored in the databas
 <!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
 
 When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.
+
+#### DataMiner Taskbar Utility would incorrectly show a pop-up window when made to perform a DataMiner upgrade using the command prompt [ID 42135]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When you made SLTaskbarUtility perform a DataMiner upgrade using the command prompt, up to now, a pop-up window would appear when the DataMiner Agent was not running. As pop-up windows are only expected to appear when running in interactive mode, from now on, pop-up windows will no longer appear when you make SLTaskbarUtility perform actions using the command prompt.
+
+#### Not possible to simultaneously update multiple TTL settings [ID 42139]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, it would not be possible to simultaneously update multiple TTL settings.

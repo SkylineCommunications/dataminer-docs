@@ -299,7 +299,7 @@ Using the option "instance", the OIDs corresponding with the rows can be retriev
 </SNMP>
 ```
 
-![alt text](~/develop/images/Table_SNMP_instance_option.png "SNMP table using instance option")
+![SNMP table using instance option](~/develop/images/Table_SNMP_instance_option.png)
 
 > [!NOTE]
 > In case the instance option is used with the GetNext + MultipleGet table retrieval method, the same remark applies in case the optional OID is specified on the table parameter:

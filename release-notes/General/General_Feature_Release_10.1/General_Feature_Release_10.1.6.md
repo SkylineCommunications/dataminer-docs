@@ -193,8 +193,8 @@ Example:
 ```xml
 <Chain>
   <Display>
-    <Visibility default=”false”>
-      <Standalone pid=”8”>
+    <Visibility default="false">
+      <Standalone pid="8">
         <Value>1</Value>
         <Value>2</Value>
       </Standalone>
@@ -217,8 +217,8 @@ Example:
   <Field>
     <Display>
       <Selection>
-        <Visibility default=”false”>
-          <Standalone pid=”18”>
+        <Visibility default="false">
+          <Standalone pid="18">
             <Value>1</Value>
             <Value>2</Value>
           </Standalone>
@@ -241,8 +241,8 @@ Example:
 ```xml
 <SearchChain>
   <Display>
-    <Visibility default=”false”>
-      <Standalone pid=”8”>
+    <Visibility default="false">
+      <Standalone pid="8">
         <Value>1</Value>
         <Value>2</Value>
       </Standalone>

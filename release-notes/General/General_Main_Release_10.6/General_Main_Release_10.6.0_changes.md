@@ -9,24 +9,6 @@ uid: General_Main_Release_10.6.0_changes
 
 ## Changes
 
-### Breaking changes
-
-#### Protocols: Separate SLScripting process for every SLProtocol process [ID 41713]
-
-<!-- MR 10.6.0 - FR 10.5.3 -->
-
-From now on, DataMiner will by default start a separate SLScripting process for every SLProtocol process.
-
-Up to now, if you wanted to have a separate SLScripting process created for every SLProtocol process being used, you had to explicitly configure this in the `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
-
-```xml
-<DataMiner>
-  <ProcessOptions protocolProcesses="18" scriptingProcesses="protocol" />
-</DataMiner>
-```
-
-If you only want a single SLScripting process for all SLProtocol processes that are used, then set the `scriptingProcesses` attribute to "1".
-
 ### Enhancements
 
 #### DataMiner installer has been updated [ID 40409] [ID 41299]
@@ -39,9 +21,10 @@ When the configuration window appears, it will now be possible to either continu
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
-#### Security enhancements [ID 40632] [ID 41475]
+#### Security enhancements [ID 40632] [ID 41425] [ID 41475]
 
 <!-- 40632: MR 10.6.0 - FR 10.5.3 -->
+<!-- 41425: MR 10.6.0 - FR 10.5.4 -->
 <!-- 41475: MR 10.6.0 - FR 10.5.2 -->
 
 A number of security enhancements have been made.
@@ -88,13 +71,13 @@ From now on, when you click *Launch > Download DataMiner Cube*, the DataMiner Cu
 
 From now on, SLAs will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up to now, they used alarm IDs with the syntax DMAID/AlarmID.
 
-#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a Virtual Function [ID 41388]
+#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a virtual function [ID 41388]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
-Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well Virtual Functions.From now on, this option will only apply to DVE elements.
+Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well as virtual functions. From now on, this option will only apply to DVE elements.
 
-In order to override the timeout for a Virtual Function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
+In order to override the timeout for a virtual function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
 
 #### DataMiner upgrade: No longer possible to perform a 10.5.x web-only upgrade on DMAs running a version older than 10.4.x [ID 41395]
 
@@ -161,6 +144,17 @@ Up to now, history entries for booking instances and resources would be processe
 Up to now, the credentials library would only be aware of a subset of all SNMPv3 authentication and encryption algorithms.
 
 Because of a number of enhancements, it will now be fully aware of all supported algorithms.
+
+#### Disabling an SLAnalytics feature will now clear all open alarms and suggestion events associated with that feature [ID 42096]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When, in DataMiner Cube, you go to *System Center > System settings > Analytics config*, and you explicitly disable one of the following SLAnalytics features, all open alarms and suggestion events associated with that feature will now automatically be cleared:
+
+- Behavioral anomaly detection
+- Pattern matching
+- Proactive cap detection
+- Relational anomaly detection
 
 ### Fixes
 

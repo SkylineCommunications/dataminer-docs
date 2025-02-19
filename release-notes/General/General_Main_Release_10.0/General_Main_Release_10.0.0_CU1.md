@@ -715,7 +715,7 @@ When SLGSMGateway updated its cache after an element had been added, updated or 
 
 #### Problem when the view column of a table containing DVE child elements to be created contained single view IDs \[ID 25255\]
 
-A table containing DVE child elements to be created can have a column that contains the view(s) the child element has to be created in (i.e. a column with option=”view”). In the cells of this column, you can enter a single view ID, a single view name, a list of view IDs separated by semicolons, a list of view names separated by semicolons or a mixed list of view IDs and view names separated by semicolons.
+A table containing DVE child elements to be created can have a column that contains the view(s) the child element has to be created in (i.e. a column with option="view"). In the cells of this column, you can enter a single view ID, a single view name, a list of view IDs separated by semicolons, a list of view names separated by semicolons or a mixed list of view IDs and view names separated by semicolons.
 
 In some cases, a problem could occur when single view IDs had been entered in this column.
 

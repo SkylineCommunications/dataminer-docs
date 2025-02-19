@@ -2,19 +2,15 @@
 uid: Cube_Feature_Release_10.5.3
 ---
 
-# DataMiner Cube Feature Release 10.5.3 – Preview
+# DataMiner Cube Feature Release 10.5.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.3](xref:General_Feature_Release_10.5.3).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.3](xref:Web_apps_Feature_Release_10.5.3).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -213,3 +209,9 @@ When an *AlarmSummary* shape was linked to a function, the shape would not show 
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
 
 When, while a number of elements were selected in the *Element Swarming* window, an element was created or deleted in either the same client or another client, up to now, the element selection in the *Element Swarming* window would incorrectly be cleared.
+
+#### Automation, Correlation & Scheduler apps - 'Send email' action: 'Configure' button would incorrectly not appear after a dashboard was selected [ID 42240]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When, while configuring a *Send email* action, you had attached a dashboard, the *Configure* button would incorrectly not appear.

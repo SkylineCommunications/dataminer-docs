@@ -416,7 +416,7 @@ For this feature to work, the following permissions must be set in Azure AD:
 
 #### Enhanced view table filtering [ID 30809]
 
-As from DataMiner feature release version 10.1.9, view tables containing a column with view options like “view=:x:y:z” or “view=a:b:c:z” allow that column to be filtered by means of a “VALUE=” filter (e.g. VALUE=5 == abc). From now on, these filters will also work when filtering on a column of a view table that refers to a column of another view table.
+As from DataMiner feature release version 10.1.9, view tables containing a column with view options like "view=:x:y:z" or "view=a:b:c:z" allow that column to be filtered by means of a "VALUE=" filter (e.g. VALUE=5 == abc). From now on, these filters will also work when filtering on a column of a view table that refers to a column of another view table.
 
 > [!NOTE]
 > When a directview table links to a view table with remote columns (i.e. view=:x:y:z), it is not yet possible to filter on those columns.
