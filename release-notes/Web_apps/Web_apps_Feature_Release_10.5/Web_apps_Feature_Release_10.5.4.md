@@ -299,3 +299,11 @@ When you saved a low-code app with an empty name, an exception could be thrown.
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When you created a new low-code app, the icon of that app would incorrectly only be visible on the root page (i.e. `https://myDMA/root/`) after you had refreshed that page.
+
+#### Low-Code Apps: No tooltip showing the full name would appear when hovering over an ellipsed name of a low-code app [ID 42269]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+If, on the root page (i.e. `https://myDMA/root/`), a low-code app has a long name, that name will by default be ellipsed (i.e. only the first part of the name will be displayed, followed by "..."), and hovering over the name should make a tooltip appear, showing the full name. However, up to now, no tooltip showing the full name would appear when you hovered over an ellipsed name.
+
+From now on, a tooltip showing the full name will appear when you hover either over the name of the app or the icon of the app.
