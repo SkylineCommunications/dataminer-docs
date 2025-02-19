@@ -78,7 +78,10 @@ To create an Automation script solution:
 
 1. In Visual Studio, select *File > New > Project*.
 
-1. Search for *DataMiner Automation Script Solution (Skyline Communications)* in the template search box and click *Next*.
+1. Search for *DataMiner Automation Script Project (Skyline Communications)* in the template search box and click *Next*.
+
+   > [!NOTE]
+   > If you follow [Kata #57](https://community.dataminer.services/courses/kata-57/), the project template *DataMiner Automation Script Solution (Skyline Communications)* will be mentioned instead, but this project template is no longer available and has been replaced with the above-mentioned template.
 
 1. Use `Generate Kata DOM` as the name for your solution.
 
