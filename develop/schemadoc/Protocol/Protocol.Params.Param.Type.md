@@ -73,7 +73,7 @@ If you do want to display the information in one of these parameters in the user
 
 ### discreet info
 
-A parameter of type DISCREET INFO will receive the changed data (locking, labeling, pages, follow mode, etc.) each time a change was made on the matrix.
+A parameter of type DISCREET INFO will receive the changed data (locking, labeling, pages, follow mode, etc.) each time a change was made on the matrix. There can only be one parameter of this type in the protocol.
 
 Format: "a;b;c;d;" or "b;a;c;d"
 
