@@ -182,3 +182,9 @@ To make sure the user context is always correct and that it get passed correctly
 <!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
 
 When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.
+
+#### Scheduler: Dashboard exported via an email action would incorrectly be displayed as plain text instead of HTML [ID 42117]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When, in the *Scheduler* app, a dashboard was exported via an email action, up to now, HTML-formatted text in the email body would incorrectly be sent as plain text, even when the *Plain text* option was not selected. From now on, when the *Plain text* option is not selected, the text in the email body will be marked as HTML, and will be parsed and displayed correctly.
