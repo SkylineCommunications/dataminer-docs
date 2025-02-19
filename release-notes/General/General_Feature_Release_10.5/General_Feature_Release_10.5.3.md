@@ -186,12 +186,6 @@ If necessary, users can force RAD to retrain its internal model by sending a `Re
 
 ### Enhancements
 
-#### Security enhancements [ID 40632]
-
-<!-- 40632: MR 10.6.0 - FR 10.5.3 -->
-
-A number of security enhancements have been made.
-
 #### Change Element States Offline tool: Service elements will now be hidden by default [ID 41341]
 
 <!-- MR 10.5.0 - FR 10.5.3 -->
