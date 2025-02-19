@@ -17,11 +17,9 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
 
 1. Make sure your DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-1. Make sure that all Agents in your DataMiner System have internet access and are able to reach the following endpoints, depending on the data location that will be used:
+1. Make sure that all Agents in your DataMiner System have internet access, either directly or through a proxy.
 
-   - STaaS West Europe: 20.76.71.123
-   - STaaS UK South: 20.162.131.128
-   - STaaS Southeast Asia: 20.247.192.226
+   For specific endpoints or IPs to whitelist, contact <staas@dataminer.services>. The configuration depends on the region you will register your system for.
 
    > [!NOTE]
    > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
