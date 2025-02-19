@@ -35,7 +35,7 @@ When troubleshooting SAML, the following configuration files contain the informa
 
   - *DataMiner.xml*: The DataMiner configuration file, located in the folder `C:\Skyline DataMiner\` on the DMA.
 
-  - *SAML response*: To collect this, [use the SAML-tracer extension](#using-the-saml-tracer-extension).
+  - *SAML response*: To collect this, [use the SAML-tracer extension](#collecting-the-saml-response).
 
 > [!NOTE]
 > If you contact tech support for a SAML issue, please collect these files and the [logs](#logs-to-check) mentioned above, as well as a [LogCollector](xref:SLLogCollector) package.
