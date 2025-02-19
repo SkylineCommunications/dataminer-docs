@@ -101,9 +101,6 @@ See also:
 
 - [Discreet info](xref:UIComponentsMatrixDiscreetInfo)
 
-> [!NOTE]
-> There can only be one parameter of this type in the protocol.
-
 ### dummy
 
 Dummy parameters can be used to catch non-significant symbols during the course of a communication session.
