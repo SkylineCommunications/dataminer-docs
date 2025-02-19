@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.3
 ---
 
-# General Feature Release 10.5.3 – Preview
+# General Feature Release 10.5.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -24,7 +24,8 @@ uid: General_Feature_Release_10.5.3
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Service & Resource Management: Defining an availability window for a resource [ID 41894]](#service--resource-management-defining-an-availability-window-for-a-resource-id-41894)
+- [Relational anomaly detection [ID 42034]](#relational-anomaly-detection-id-42034)
 
 ## New features
 
@@ -183,24 +184,6 @@ If necessary, users can force RAD to retrain its internal model by sending a `Re
 
 ## Changes
 
-### Breaking changes
-
-#### Protocols: Separate SLScripting process for every SLProtocol process [ID 41713]
-
-<!-- MR 10.6.0 - FR 10.5.3 -->
-
-From now on, DataMiner will by default start a separate SLScripting process for every SLProtocol process.
-
-Up to now, if you wanted to have a separate SLScripting process created for every SLProtocol process being used, you had to explicitly configure this in the `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
-
-```xml
-<DataMiner>
-  <ProcessOptions protocolProcesses="18" scriptingProcesses="protocol" />
-</DataMiner>
-```
-
-If you only want a single SLScripting process for all SLProtocol processes that are used, then set the `scriptingProcesses` attribute to "1".
-
 ### Enhancements
 
 #### Security enhancements [ID 40632]
@@ -217,13 +200,13 @@ From now on, the *Change Element States Offline* tool will hide service elements
 
 If you do want service elements to be visible, select the *Advanced* checkbox.
 
-#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a Virtual Function [ID 41388]
+#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a virtual function [ID 41388]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
-Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well Virtual Functions.From now on, this option will only apply to DVE elements.
+Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well as virtual functions. From now on, this option will only apply to DVE elements.
 
-In order to override the timeout for a Virtual Function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
+In order to override the timeout for a virtual function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
 
 #### Swarming: Clearer exception will now be thrown when the state of an element is changed while the element is being swarmed [ID 41634]
 
@@ -364,6 +347,14 @@ The redundant `Logging` section (see example below) has now been removed from th
   }
 },
 ```
+
+#### Failover: Virtual IP address check will no longer execute an arp command to double-check whether an IP address is free [ID 42280]
+
+<!-- MR 10.4.0 [CU12]/10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When the virtual IP address check concluded that the IP address was free after having executed the required number of ping commands, since DataMiner main release 10.3.0 [CU20]/10.4.0 [CU8] and feature release 10.4.11, it would double-check by executing an arp command.
+
+From now on, it will no longer execute an arp command.
 
 ### Fixes
 
@@ -522,3 +513,15 @@ In some cases, BPAs tests would fail to load the necessary DLL files.
 <!-- Not added to MR 10.6.0 -->
 
 When an element was being swarmed, not all data would be flushed when the element was unloaded.
+
+#### No more logging would be added to SLWatchDog2.txt after a DataMiner upgrade [ID 42180]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+After a DataMiner upgrade, in some cases, no new entries would be added to the *SLWatchDog2.txt* log file anymore.
+
+#### SLSNMPManager process could stop working when an SNMPv3 element was stopped [ID 42195]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When an SNMPv3 element was stopped, in some rare cases, the SLSNMPManager process could stop working.

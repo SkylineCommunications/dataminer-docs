@@ -100,9 +100,9 @@ A *\<Link>* tag can have the following attributes:
 
   This attribute can have the following values:
 
-  - The name of a protocol (If *type=”Protocol”*).
+  - The name of a protocol (If *type="Protocol"*).
 
-  - A random service identifier (If *type*=*”Service”*).
+  - A random service identifier (If *type="Service"*).
 
   You can use an asterisk ("\*") wildcard in this attribute, for instance to specify a rule for all encountered protocols.
 

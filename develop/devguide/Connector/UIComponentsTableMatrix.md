@@ -20,7 +20,7 @@ To manipulate the inputs and outputs, you can use the [Matrix Helper](xref:UICom
 > [!TIP]
 > For information on how to configure the standard matrix supported prior to DataMiner 10.3.1/10.4.0, see [Standard matrix](xref:UIComponentsMatrix)
 
-![alt text](~/develop/images/uimatrix.png "DataMiner Cube matrix")
+![DataMiner Cube matrix](~/develop/images/uimatrix.png)
 
 ## See also
 

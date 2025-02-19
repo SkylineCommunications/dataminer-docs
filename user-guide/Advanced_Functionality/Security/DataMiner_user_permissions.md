@@ -1276,7 +1276,7 @@ Permission to see and control the background tasks of all users.
 
 #### Modules \> System configuration \> Tools \> Allow access to query executor
 
-Permission to execute SQL queries against the general or offload database.
+Permission to execute SQL queries against the general or offload database (obsolete).
 
 > [!NOTE]
 > This user permission is not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, it is no longer displayed in such a system.<!-- RN 39870 -->

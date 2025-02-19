@@ -208,6 +208,9 @@ The following types of alarm events will not be combined in a consolidated alarm
 
 - Flipped
 
+> [!NOTE]
+> This is enabled by default in new DataMiner installations using the latest installer and in DaaS systems.
+
 > [!TIP]
 > See also:
 >

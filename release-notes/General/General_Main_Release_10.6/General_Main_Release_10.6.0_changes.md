@@ -9,24 +9,6 @@ uid: General_Main_Release_10.6.0_changes
 
 ## Changes
 
-### Breaking changes
-
-#### Protocols: Separate SLScripting process for every SLProtocol process [ID 41713]
-
-<!-- MR 10.6.0 - FR 10.5.3 -->
-
-From now on, DataMiner will by default start a separate SLScripting process for every SLProtocol process.
-
-Up to now, if you wanted to have a separate SLScripting process created for every SLProtocol process being used, you had to explicitly configure this in the `ProcessOptions` element of the *DataMiner.xml* file. See the example below.
-
-```xml
-<DataMiner>
-  <ProcessOptions protocolProcesses="18" scriptingProcesses="protocol" />
-</DataMiner>
-```
-
-If you only want a single SLScripting process for all SLProtocol processes that are used, then set the `scriptingProcesses` attribute to "1".
-
 ### Enhancements
 
 #### DataMiner installer has been updated [ID 40409] [ID 41299]
@@ -39,9 +21,10 @@ When the configuration window appears, it will now be possible to either continu
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
-#### Security enhancements [ID 40632] [ID 41475]
+#### Security enhancements [ID 40632] [ID 41425] [ID 41475]
 
 <!-- 40632: MR 10.6.0 - FR 10.5.3 -->
+<!-- 41425: MR 10.6.0 - FR 10.5.4 -->
 <!-- 41475: MR 10.6.0 - FR 10.5.2 -->
 
 A number of security enhancements have been made.
@@ -88,13 +71,13 @@ From now on, when you click *Launch > Download DataMiner Cube*, the DataMiner Cu
 
 From now on, SLAs will use alarm IDs with the syntax DMAID/ELEMENTID/ROOTID. Up to now, they used alarm IDs with the syntax DMAID/AlarmID.
 
-#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a Virtual Function [ID 41388]
+#### Protocols: New 'overrideTimeoutVF' option to override the timeout for a virtual function [ID 41388]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
-Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well Virtual Functions.From now on, this option will only apply to DVE elements.
+Up to now, when the `overrideTimeoutDVE` option was enabled in a *protocol.xml* file, the timeout would apply to DVE elements as well as virtual functions. From now on, this option will only apply to DVE elements.
 
-In order to override the timeout for a Virtual Function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
+In order to override the timeout for a virtual function, you will now be able to specify the new *overrideTimeoutVF* option in a *Functions.xml* file.
 
 #### DataMiner upgrade: No longer possible to perform a 10.5.x web-only upgrade on DMAs running a version older than 10.4.x [ID 41395]
 
@@ -153,6 +136,50 @@ From now on, a maximum of 100 DomInstances will be included in the error data. F
 
 Up to now, history entries for booking instances and resources would be processed individually. From now on, they will be processed in batches of 100 entries. This will considerably enhance overall performance when processing these history entries.
 
+#### Credentials library is now fully aware of all supported SNMPv3 authentication and encryption algorithms [ID 41923]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- Reverted by RN 42136 and reinstated by RN 42153 -->
+
+Up to now, the credentials library would only be aware of a subset of all SNMPv3 authentication and encryption algorithms.
+
+Because of a number of enhancements, it will now be fully aware of all supported algorithms.
+
+#### Disabling an SLAnalytics feature will now clear all open alarms and suggestion events associated with that feature [ID 42096]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When, in DataMiner Cube, you go to *System Center > System settings > Analytics config*, and you explicitly disable one of the following SLAnalytics features, all open alarms and suggestion events associated with that feature will now automatically be cleared:
+
+- Behavioral anomaly detection
+- Pattern matching
+- Proactive cap detection
+- Relational anomaly detection
+
 ### Fixes
 
-*No fixes have been added yet.*
+#### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
+
+#### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
+
+#### Mobile Visual Overview: Problem with user context [ID 42061]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
+
+Up to now, when no user context was needed in mobile visual overviews, an attempt would be made to reuse server-side cards among users. However, in some cases, this could cause problems, especially when handling popups or embedded visual overviews.
+
+To make sure the user context is always correct and that it get passed correctly to popups, from now on, mobile visual overviews will always use a separate card for each user and create a new card whenever a user requests a new visual overview in a web app.
+
+#### Mobile Visual Overview: Child shapes would incorrectly remain clickable when hidden [ID 42090]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
+
+When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.

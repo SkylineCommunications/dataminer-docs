@@ -33,4 +33,4 @@ string
 </Param>
 ```
 
-![alt text](~/develop/schemadoc/Protocol/images/confirmationMessageBox.png "Confirmation message box")
+![Confirmation message box](~/develop/schemadoc/Protocol/images/confirmationMessageBox.png)

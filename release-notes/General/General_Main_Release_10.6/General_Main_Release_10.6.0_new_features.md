@@ -402,11 +402,35 @@ foreach (var range in availableRanges)
 
 The `AvailabilityContext` parameter has a property `Now`, which can be used to override the "now" timestamp in order to calculate e.g. the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
 
-#### Relational anomaly detection [ID 42034]
+#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Scheduler app [ID 41970]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Scheduler app.
+
+In other words, when an Automation script is triggered by the Scheduler app, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
+
+If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
+
+```xml
+<MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+    ...
+    <SLNet>
+        ...
+        <SkipInformationEvents>false</SkipInformationEvents>
+        ...
+    </SLNet>
+    ...
+</MaintenanceSettings>
+```
+
+#### Relational anomaly detection [ID 41983] [ID 42034]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
 
-Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related. Whenever the relation is broken, RAD will detect this and generate suggestion events. A suggestion event will be generated for each parameter instance in the group where a broken relation was detected.
+Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
+
+Whenever the relation is broken, RAD will detect this and generate suggestion events for each parameter instance in the group where a broken relation was detected. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
 
 ##### Configuration file
 

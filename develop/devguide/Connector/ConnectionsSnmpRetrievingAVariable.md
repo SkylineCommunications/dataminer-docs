@@ -74,11 +74,11 @@ Finally, a timer is defined which has the defined group as its content. This tim
 
 In conclusion, periodically polling an SNMP parameter can be implemented using the following protocol building blocks:
 
-![alt text](~/develop/images/Connection_Types_-_SNMP_Parameter_Get_Building_Blocks.jpg "Retrieving a variable via SNMP")
+![Retrieving a variable via SNMP](~/develop/images/Connection_Types_-_SNMP_Parameter_Get_Building_Blocks.jpg)
 
 The following illustration shows what happens when an SNMP GET request is issued by a protocol.
 
-![alt text](~/develop/images/DMA_-_SNMP_Device_parameter_GetRequest.svg "SNMP Get request")
+![SNMP Get request](~/develop/images/DMA_-_SNMP_Device_parameter_GetRequest.svg)
 
 When a protocol issues an SNMP request (a Get request in this case), the SLProtocol process sends this request to the SLSNMPManager process. This is done by a blocking call, which adds the SNMP request to a queue. The call blocks until the SNMP request has been added to the queue.
 

@@ -35,15 +35,15 @@ To install this tool:
 
    We recommend the following settings:
 
-   - winrm set winrm/config/winrs ‘@{IdleTimeout=”7200000″}
+   - winrm set winrm/config/winrs ‘@{IdleTimeout="7200000"}
 
-   - winrm set winrm/config/winrs ‘@{MaxConcurrentUsers=”10″}
+   - winrm set winrm/config/winrs ‘@{MaxConcurrentUsers="10"}
 
-   - winrm set winrm/config/winrs ‘@{MaxProcessesPerShell=”25″}
+   - winrm set winrm/config/winrs ‘@{MaxProcessesPerShell="25"}
 
-   - winrm set winrm/config/winrs ‘@{MaxMemoryPerShellMB=”1024″}
+   - winrm set winrm/config/winrs ‘@{MaxMemoryPerShellMB="1024"}
 
-   - winrm set winrm/config/winrs ‘@{MaxShellsPerUser=”30″}
+   - winrm set winrm/config/winrs ‘@{MaxShellsPerUser="30"}
 
    ![Windows PowerShell](~/user-guide/images/Windows_PowerShell.png)
 

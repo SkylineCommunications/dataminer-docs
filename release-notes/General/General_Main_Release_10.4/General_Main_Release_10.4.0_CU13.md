@@ -21,6 +21,12 @@ uid: General_Main_Release_10.4.0_CU13
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### Service & Resource Management: Enhanced handling of locked files when activating or deactivating functions [ID 41978]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of enhancements have been made to the ProtocolFunctionManager with regard to the handling of locked files when activating or deactivating functions.
+
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
@@ -29,22 +35,26 @@ Because of a number of enhancements, overall performance has increased when upda
 
 Because of an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
 
+#### Problem when trying to update the protocol version of an element in error [ID 41962]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When you tried to update the protocol version of an element in error via DataMiner Cube, in some rare cases, a message would incorrectly appear, stating that it was not possible to update the element.
+
 #### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 When an alarm template was updated, in some cases, the alarm focus manager could receive a excessive number of messages, causing SLAnalytics to leak memory.
 
-#### Mobile Visual Overview: Problem with user context [ID 42061]
+#### DataMiner Taskbar Utility would incorrectly show a pop-up window when made to perform a DataMiner upgrade using the command prompt [ID 42135]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
-Up to now, when no user context was needed in mobile visual overviews, an attempt would be made to reuse server-side cards among users. However, in some cases, this could cause problems, especially when handling popups or embedded visual overviews.
+When you made SLTaskbarUtility perform a DataMiner upgrade using the command prompt, up to now, a pop-up window would appear when the DataMiner Agent was not running. As pop-up windows are only expected to appear when running in interactive mode, from now on, pop-up windows will no longer appear when you make SLTaskbarUtility perform actions using the command prompt.
 
-To make sure the user context is always correct and that it get passed correctly to popups, from now on, mobile visual overviews will always use a separate card for each user and create a new card whenever a user requests a new visual overview in a web app.
-
-#### Mobile Visual Overview: Child shapes would incorrectly remain clickable when hidden [ID 42090]
+#### Not possible to simultaneously update multiple TTL settings [ID 42139]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
-When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.
+In some cases, it would not be possible to simultaneously update multiple TTL settings.

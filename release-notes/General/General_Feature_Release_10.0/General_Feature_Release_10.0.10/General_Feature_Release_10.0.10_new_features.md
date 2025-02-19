@@ -166,8 +166,8 @@ From now on, when using the *DynamicUnits* option, it is also possible to factor
   <Units>m</Units>
   <DynamicUnits>
     <Unit>mm</Unit>
-    <Unit decimals=”1”>cm</Unit>
-    <Unit decimals=”3”>km</Unit>
+    <Unit decimals="1">cm</Unit>
+    <Unit decimals="3">km</Unit>
   </DynamicUnits>
   <Decimals>2</Decimals>
   ..

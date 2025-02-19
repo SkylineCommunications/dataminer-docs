@@ -6,7 +6,7 @@ uid: ConnectionsHttpImplementing
 
 Periodically requesting information from a device via HTTP can be done as follows:
 
-![alt text](~/develop/images/Connection_Types_-_HTTP_Session_Building_Blocks.svg "Implementing HTTP communication")
+![Implementing HTTP communication](~/develop/images/Connection_Types_-_HTTP_Session_Building_Blocks.svg)
 
 The approach is very similar to serial communication: with HTTP, the content of the group will be a session, whereas with serial communication a pair is used.
 

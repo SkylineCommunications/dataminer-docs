@@ -912,7 +912,7 @@ namespace Skyline.DataMiner.Automation
 		/// <summary>
 		/// Returns a <see cref="MailReportOptions" /> object, which you can use to configure and launch an email report.
 		/// </summary>
-		/// <param name="mailReport">The mail report to prepare.</param>
+		/// <param name="mailReport">The full name of the dashboard (including all parent folders separated with '/') or the name of the report template (legacy Reporter) to be used.</param>
 		/// <returns>The <see cref="MailReportOptions" /> object.</returns>
 		/// <exception cref="ArgumentException"><paramref name="mailReport"/> is <see langword="null"/> or the empty string ("").</exception>
 		/// <example>

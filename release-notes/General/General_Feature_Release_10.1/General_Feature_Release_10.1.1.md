@@ -42,7 +42,7 @@ See the example below, showing how this can be configured in the Db.xml file.
 
 #### Video thumbnails: Authentication header can now be specified in an 'auth=' option \[ID 28116\]
 
-In a video thumbnail URL, you can now specify an authorization header in an “auth=” option when requesting a thumbnail image from a video server using type “Generic Images”.
+In a video thumbnail URL, you can now specify an authorization header in an "auth=" option when requesting a thumbnail image from a video server using type “Generic Images”.
 
 This option has to be used when the video server expects an authentication token (e.g. OAuth2).
 

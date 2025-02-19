@@ -54,6 +54,28 @@ In the DataMiner.xml file, it is possible to configure a separate SLProtocol pro
 
 For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
+#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Scheduler app [ID 41970]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Scheduler app.
+
+In other words, when an Automation script is triggered by the Scheduler app, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
+
+If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
+
+```xml
+<MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+    ...
+    <SLNet>
+        ...
+        <SkipInformationEvents>false</SkipInformationEvents>
+        ...
+    </SLNet>
+    ...
+</MaintenanceSettings>
+```
+
 ## Changes
 
 ### Enhancements
@@ -64,7 +86,77 @@ For more information on how to configure elements to run in isolation mode in Da
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### Credentials library is now fully aware of all supported SNMPv3 authentication and encryption algorithms [ID 41923]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- Reverted by RN 42136 and reinstated by RN 42153 -->
+
+Up to now, the credentials library would only be aware of a subset of all SNMPv3 authentication and encryption algorithms.
+
+Because of a number of enhancements, it will now be fully aware of all supported algorithms.
+
+#### Service & Resource Management: Enhanced handling of locked files when activating or deactivating functions [ID 41978]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of enhancements have been made to the ProtocolFunctionManager with regard to the handling of locked files when activating or deactivating functions.
+
+#### Suggestion events created by Relational anomaly detection for a group of parameters will now be grouped into a single incident [ID 41983]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When Relational anomaly detection (RAD) detects that a group of parameters deviates from its normal behavior, it will create a suggestion event for each of the parameters in that group. These suggestion events will now be grouped into a single incident so that it is shown on a single line in the Alarm Console.
+
+When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
+
+#### NATS: NatsCustodianResetNatsRequest will now be blocked when the NATSForceManualConfig option is enabled [ID 42074]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.xml* file, the `NatsCustodianResetNatsRequest` message will now be blocked. Instead of performing a NATS reset, it will now return an error with the following message:
+
+`Resetting NATS is blocked while the system is running a Manual Config. See https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_disabling_automatic_nats_config.html for more information.`
+
+> [!NOTE]
+> The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
+
+#### Security enhancements [ID 41425] [ID 42104]
+
+<!-- 41425: MR 10.6.0 - FR 10.5.4 -->
+<!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of security enhancements have been made.
+
+#### Disabling an SLAnalytics feature will now clear all open alarms and suggestion events associated with that feature [ID 42096]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When, in DataMiner Cube, you go to *System Center > System settings > Analytics config*, and you explicitly disable one of the following SLAnalytics features, all open alarms and suggestion events associated with that feature will now automatically be cleared:
+
+- Behavioral anomaly detection
+- Pattern matching
+- Proactive cap detection
+- Relational anomaly detection
+
 ### Fixes
+
+#### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
+
+#### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
+
+#### Problem when trying to update the protocol version of an element in error [ID 41962]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When you tried to update the protocol version of an element in error via DataMiner Cube, in some rare cases, a message would incorrectly appear, stating that it was not possible to update the element.
 
 #### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]
 
@@ -74,14 +166,32 @@ When an alarm template was updated, in some cases, the alarm focus manager could
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
 
-<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
 
 Up to now, when no user context was needed in mobile visual overviews, an attempt would be made to reuse server-side cards among users. However, in some cases, this could cause problems, especially when handling popups or embedded visual overviews.
 
 To make sure the user context is always correct and that it get passed correctly to popups, from now on, mobile visual overviews will always use a separate card for each user and create a new card whenever a user requests a new visual overview in a web app.
 
+#### SLAnalytics - Behavioral anomaly detection: Problem when trying to retrieve incorrect INF values from the database [ID 42069]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, INF (infinity) values would incorrectly get stored in the database. Attempts to retrieve those values would then result in the *Behavioral anomaly detection* feature not starting up.
+
 #### Mobile Visual Overview: Child shapes would incorrectly remain clickable when hidden [ID 42090]
+
+<!-- MR 10.6.0 [CU0] - FR 10.5.4 -->
+
+When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.
+
+#### DataMiner Taskbar Utility would incorrectly show a pop-up window when made to perform a DataMiner upgrade using the command prompt [ID 42135]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
-When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.
+When you made SLTaskbarUtility perform a DataMiner upgrade using the command prompt, up to now, a pop-up window would appear when the DataMiner Agent was not running. As pop-up windows are only expected to appear when running in interactive mode, from now on, pop-up windows will no longer appear when you make SLTaskbarUtility perform actions using the command prompt.
+
+#### Not possible to simultaneously update multiple TTL settings [ID 42139]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, it would not be possible to simultaneously update multiple TTL settings.

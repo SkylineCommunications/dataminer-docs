@@ -202,3 +202,7 @@ In some situations, resources for specific nodes can be selected automatically, 
 ## Configuring resource pool inheritance for a profile instance
 
 See [Configuring resource pool inheritance for a profile instance](xref:Service_Orchestration_profile_instances#configuring-resource-pool-inheritance-for-a-profile-instance).
+
+## Configuring an availability window for a resource
+
+See [Resource availability](xref:Resource_availability).

@@ -54,11 +54,11 @@ Any change in behavior is called a change point. At present, there are five type
 
 Some change points are more significant or unexpected than others. The stranger the current change point is compared to past change points, the higher its significance will be.
 
-Of every new change point, its significance is calculated based on its characteristics (change point type, direction, absolute or relative change size, etc.), taking into account the parameter's change point history of the last month. The change points that are considered the most significant, i.e. the most “surprising”, are labeled “anomalous”.
+Of every new change point, its significance is calculated based on its characteristics (change point type, direction, absolute or relative change size, etc.), taking into account the parameter's change point history of the last month. The change points that are considered the most significant, i.e. the most "surprising", are labeled "anomalous".
 
-Level shifts which are higher or which have a different direction than previous recent jumps, or which jump to a previously unseen level, will typically be labeled “anomalous”. Similarly, trend or variance changes will be labeled “anomalous” when no earlier trend or variance changes in the same direction appeared during the last weeks.
+Level shifts which are higher or which have a different direction than previous recent jumps, or which jump to a previously unseen level, will typically be labeled "anomalous". Similarly, trend or variance changes will be labeled "anomalous" when no earlier trend or variance changes in the same direction appeared during the last weeks.
 
-Currently, no change points of type “outlier” or “unlabeled” will be labeled “anomalous”.
+Currently, no change points of type "outlier" or "unlabeled" will be labeled "anomalous".
 
 ##### Change points visible in trend graphs
 
@@ -66,7 +66,7 @@ On a trend graph, a change point is indicated by a bar below the graph. The leng
 
 When you hover the mouse pointer over a change point bar, a semi-transparent ribbon will appear over the entire height of the trend graph, showing more information about the change point.
 
-Labels of change points of type “trend change” will indicate the level of increase or decrease in seconds, minutes, hours or days depending on the value. If, for example, the value increases by 0.01 per second (i.e. 0.6 per minute, 36 per hour or 864 per day), the label will show an increase of 36 per hour as it is the smallest amount greater than 1.
+Labels of change points of type "trend change" will indicate the level of increase or decrease in seconds, minutes, hours or days depending on the value. If, for example, the value increases by 0.01 per second (i.e. 0.6 per minute, 36 per hour or 864 per day), the label will show an increase of 36 per hour as it is the smallest amount greater than 1.
 
 ##### Trend state icons next to parameters in DATA pages
 
@@ -110,16 +110,16 @@ DataMiner will do the following to select a trend state icon for a particular pa
 
 ##### Suggestion events
 
-By default, a so-called “suggestion event” is generated whenever an anomalous level shift, trend change or variance change is detected for a particular parameter.
+By default, a so-called "suggestion event" is generated whenever an anomalous level shift, trend change or variance change is detected for a particular parameter.
 
-In case of a level shift, for example, the value of the suggestion event will be either “Level increased by X (from Y to Z)” or “Level decreased by X (from Y to Z)”. X will be the size of the jump, Y will be an estimation of the previous level and Z will be an estimation of the new data level.
+In case of a level shift, for example, the value of the suggestion event will be either "Level increased by X (from Y to Z)" or "Level decreased by X (from Y to Z)". X will be the size of the jump, Y will be an estimation of the previous level and Z will be an estimation of the new data level.
 
 To view these suggestion events, you can create a new tab in the Alarm Console and select to display suggestion events. This is possible for tabs displaying current alarms, history alarms and alarms in a sliding window.
 
 > [!NOTE]
 >
 > - Currently, no suggestion events are generated for outliers and unlabeled change points.
-> - Suggestion events have severity “Information” and source “Suggestion Engine”.
+> - Suggestion events have severity "Information" and source "Suggestion Engine".
 > - Suggestion events generated to indicate a behavioral anomaly are automatically cleared 2 hours after their creation time or their last update time.
 
 #### SNMP forwarding: Enhanced authentication and encryption algorithm support \[ID 19471\]\[ID 19693\]\[ID 23031\]\[ID 23322\]\[ID 23586\]
@@ -162,7 +162,7 @@ A new setting is available in the Cube user settings app: *Keep track of the ful
 
 Up to now, it was possible to configure a DataMiner Cube URL or an Alarm Console hyperlink to open an element, service or view card either in Visual Overview mode or in Data Display mode. From now on, it is also possible to specify the exact page that has to be opened.
 
-In the following examples, we open an element in Data Display mode and go directly to subpage “Ping” of page “Performance”:
+In the following examples, we open an element in Data Display mode and go directly to subpage "Ping" of page "Performance":
 
 - Using a DataMiner Cube URL:
 
@@ -172,7 +172,7 @@ In the following examples, we open an element in Data Display mode and go direct
 
   `<HyperLink type="OpenElement" name="Open Ping page" version="2" id="4">[EID]:Data:Performance/Ping</HyperLink>`
 
-All pages shown in a card’s side panel can be selected. If you want to select a page that is grouped neither under VISUAL nor under DATA, then omit the “visual” (“v”) or “data” (“d”) argument (without omitting any “:” separators). See the following examples:
+All pages shown in a card’s side panel can be selected. If you want to select a page that is grouped neither under VISUAL nor under DATA, then omit the "visual" ("v") or "data" ("d") argument (without omitting any ":" separators). See the following examples:
 
 - `http://myDma/DataMinerCube/DataMinerCube.xbap?element=48/70::help`
 - `http://myDma/DataMinerCube/DataMinerCube.xbap?element=48/70::alarms`
@@ -188,11 +188,11 @@ All pages shown in a card’s side panel can be selected. If you want to select 
 
 It is now possible to force a refresh of a (direct) view table displayed in DataMiner Cube from within a protocol.
 
-- To configure this, create a string parameter named “\[TableName\]\_REFRESHVIEWFORKEY”, and set its RTDisplay property to “True”.
+- To configure this, create a string parameter named "\[TableName\]\_REFRESHVIEWFORKEY", and set its RTDisplay property to "True".
 
-When values in a particular row have changed due to a forced poll by the user (i.e. a user clicking a row’s *Update*, *Force poll* or *Refresh* button), then set the “\[TableName\]\_REFRESHVIEWFORKEY” parameter to the following value: the primary key of the row in question, followed by a pipe character (“\|”) and a random value (e.g. the current time).
+When values in a particular row have changed due to a forced poll by the user (i.e. a user clicking a row’s *Update*, *Force poll* or *Refresh* button), then set the "\[TableName\]\_REFRESHVIEWFORKEY" parameter to the following value: the primary key of the row in question, followed by a pipe character ("\|") and a random value (e.g. the current time).
 
-If, for example, you have a direct view table named “View_Cable Modems”, and the protocol has a parameter named “View_Cable Modems_REFRESHVIEWFORKEY”, then you can force an immediate update of that table in DataMiner Cube by setting that parameter to the following value: “ABCDEF\|124831898” (in which ABCDEF is the primary key of the row and 124831898 is a random value).
+If, for example, you have a direct view table named "View_Cable Modems", and the protocol has a parameter named "View_Cable Modems_REFRESHVIEWFORKEY", then you can force an immediate update of that table in DataMiner Cube by setting that parameter to the following value: "ABCDEF\|124831898" (in which ABCDEF is the primary key of the row and 124831898 is a random value).
 
 > [!NOTE]
 >
@@ -209,11 +209,11 @@ If you want DataMiner Cube to automatically poll these tables, then do the follo
 
     A negative or zero value will disable view table polling (which is the default behavior).
 
-If, for example, you set this setting to “900”, all (direct) view tables opened in DataMiner Cube will be refreshed every 15 minutes.
+If, for example, you set this setting to "900", all (direct) view tables opened in DataMiner Cube will be refreshed every 15 minutes.
 
 > [!NOTE]
 >
-> - If, in DataMiner Cube, you hover over the “last updated on” box in the top-right corner of a (direct) view table, the polling interval will be shown in a tooltip.
+> - If, in DataMiner Cube, you hover over the "last updated on" box in the top-right corner of a (direct) view table, the polling interval will be shown in a tooltip.
 > - A number of enhancements have been made to the automatic (direct) view table polling mechanism. It will now, for example, also apply to direct view tables and view tables displayed in CPE KPI windows and in Visual Overview.
 
 #### DataMiner Cube - Data display: Table columns can now be shown or hidden using the table header’s right-click menu \[ID 20466\]
@@ -245,7 +245,7 @@ On the *Cube* tab of System Center’s *Logging* section:
 
 ##### New values for computer setting 'Level of logging'
 
-From now on, the *Level of logging* setting (*Settings \> Computer \> Advanced \> Logging*) will only have two values: “Log everything (5)” and “No logging (0)”.
+From now on, the *Level of logging* setting (*Settings \> Computer \> Advanced \> Logging*) will only have two values: "Log everything (5)" and "No logging (0)".
 
 ##### Two types of log entries
 
@@ -283,9 +283,9 @@ These are the new log entry categories:
   > [!NOTE]
   > These entries will always be forwarded to the DataMiner Agent to which Cube is connected.
 
-- **ForwardDebug**: Entries of category “Debug” that will always be forwarded to the DataMiner Agent to which Cube is connected.
+- **ForwardDebug**: Entries of category "Debug" that will always be forwarded to the DataMiner Agent to which Cube is connected.
 
-- **ForwardInfo** Entries of category “Info” that will always be forwarded to the DataMiner Agent to which Cube is connected.
+- **ForwardInfo** Entries of category "Info" that will always be forwarded to the DataMiner Agent to which Cube is connected.
 
 - **Freeze**: Entries indicating that Cube became unresponsive at some point.
 
@@ -294,7 +294,7 @@ These are the new log entry categories:
   Examples: connection time, load time, fetch time, etc.
 
   > [!NOTE]
-  > The log entry category “Default” no longer exists and has been replaced by “Info”.
+  > The log entry category "Default" no longer exists and has been replaced by "Info".
 
 - **Warning**: Entries generated due to events that had an unexpected outcome, but which did not have an impact on overall Cube functionality.
 
@@ -394,15 +394,15 @@ When you upload a document and link it to an element:
 
 #### All Cube clients will now display 'broadcast popups' sent from QActions, Automation scripts, etc. \[ID 21733\]\[ID 21928\]\[ID 22089\]
 
-When a QAction, an Automation script, etc. sends a BroadCastPopupRequestMessage with the following arguments, a BroadCastPopupEventMessage will now be sent to all recipients specified in the UserNames and GroupNames arguments, causing a so-called “broadcast popup” to appear.
+When a QAction, an Automation script, etc. sends a BroadCastPopupRequestMessage with the following arguments, a BroadCastPopupEventMessage will now be sent to all recipients specified in the UserNames and GroupNames arguments, causing a so-called "broadcast popup" to appear.
 
 | Argument | Format | Description |
 |--|--|--|
 | Source | GUID | A GUID indicating the entity that sent the message. |
 | Title | String | The title of the message. |
 | Message | String | The contents of the message. |
-| UserNames | List\<string> | The list of users who will receive the message.<br> User name format:<br> - Domain users: “domainname\\username”<br> - Local users: “username” |
-| GroupNames | List\<string> | The list of user groups of which the members will receive the message.<br> Group name format:<br> - Domain groups: “domainname\\groupname”<br> - Local groups: “groupname” |
+| UserNames | List\<string> | The list of users who will receive the message.<br> User name format:<br> - Domain users: "domainname\\username"<br> - Local users: "username" |
+| GroupNames | List\<string> | The list of user groups of which the members will receive the message.<br> Group name format:<br> - Domain groups: "domainname\\groupname"<br> - Local groups: "groupname" |
 | Expiration | DateTime | The date/time until which the message will be shown.<br> Note:<br> - If no Expiration argument is specified, the message will never expire.<br> - If you set Expiration to DateTime.MinValue (default setting) or DateTime.MaxValue, the message will never expire.<br> - If you set Expiration to a date more than one year into the future, the expiration date of the message will not be displayed. |
 
 - All messages received in a BroadCastPopupEventMessage will be listed in the same message box.
@@ -440,7 +440,7 @@ For example:
 
 In a \<Hyperlink> tag, from now on, the filterElement attribute supports alarm property names that contain spaces.
 
-If, in a filterElement attribute, you specify a property name that contains spaces (e.g. “System Type”, “System Name”, etc.), then you must enclose it in XML-encoded double quotes. See the following example.
+If, in a filterElement attribute, you specify a property name that contains spaces (e.g. "System Type", "System Name", etc.), then you must enclose it in XML-encoded double quotes. See the following example.
 
 ```txt
 filterElement="AlarmEventMessage.PropertiesDict.&quot;System Type&quot;[String] == 'OLT'"
@@ -454,12 +454,12 @@ In the following example, a tooltip was defined that displays data found in othe
 
 ```xml
 <Discreets>
-  <Discreet iconRef=”CAT”>
+  <Discreet iconRef="CAT">
     <Display>Two</Display>
     <Value>2</Value>
     <Tooltip>
-      Number ‘{pid:1003}’\n
-      dateTime ‘{pid:1004}’
+      Number '{pid:1003}'\n
+      dateTime '{pid:1004}'
     </Tooltip>
   </Discreet>
   ...
@@ -469,12 +469,12 @@ In the following example, a tooltip was defined that displays data found in othe
 > [!NOTE]
 >
 > - When you define tooltips for discrete values, note that, within a given \<Discreets> tag, all \<Discreet> tags should have a \<Tooltip> tag. If no value should be defined for a particular \<Discreet> tag, leave the \<Tooltip> tag empty.
-> - If you defined a tooltip for a particular discrete value, you cannot set the displayIconAndLabel attribute to “true”.
-> - For the list of placeholders that can be used inside the text of a tooltip, refer to the “Protocol.Params.Param.Measurement.Discreets.Discreet” section in the Protocol Development Library.
+> - If you defined a tooltip for a particular discrete value, you cannot set the displayIconAndLabel attribute to "true".
+> - For the list of placeholders that can be used inside the text of a tooltip, refer to the "Protocol.Params.Param.Measurement.Discreets.Discreet" section in the Protocol Development Library.
 
 #### Alarm Console: New 'Keep active alarms' option to prevent active alarms from disappearing from a sliding window alarm tab \[ID 23056\]
 
-Up to now, when you created an alarm tab of type “sliding window”, it would only display active alarms as long as they occurred within the sliding window. From now on, when you create an alarm tab of type “sliding window”, you can enable the *Keep active alarms* option to prevent the active alarms from disappearing from the alarm tab the moment they are no longer within the sliding window.
+Up to now, when you created an alarm tab of type "sliding window", it would only display active alarms as long as they occurred within the sliding window. From now on, when you create an alarm tab of type "sliding window", you can enable the *Keep active alarms* option to prevent the active alarms from disappearing from the alarm tab the moment they are no longer within the sliding window.
 
 #### Data Display: Full-screen button on Data pages \[ID 23187\]
 
@@ -561,17 +561,17 @@ From now on, for each of their smart-serial server ports of type TCP, elements c
 
 - When, for a particular smart-serial server port, an element does not have a list of allowed IP addresses configured, it will from now on
 
-  - accept messages from all IP addresses that have not been added to an “allowed IP addresses” list linked to that port, and
-  - forward messages only to IP addresses that have not been added to an “allowed IP addresses” list linked to that port.
+  - accept messages from all IP addresses that have not been added to an "allowed IP addresses" list linked to that port, and
+  - forward messages only to IP addresses that have not been added to an "allowed IP addresses" list linked to that port.
 
 > [!NOTE]
 >
 > - If none of the elements that use a particular smart-serial server port have allowed IP addresses configured for that port, they will behave as before.
-> - By default, this “allowed IP addresses” functionality is disabled. For more information on how to enable it, see below.
+> - By default, this "allowed IP addresses" functionality is disabled. For more information on how to enable it, see below.
 
 ##### Enabling the 'allowed IP addresses' functionality in the Protocol.xml file
 
-In the Protocol.xml file of a smart-serial element, you can enable or disable the AllowedIPAddresses functionality by setting AllowedIPAddresses.Disabled to “false” in the user settings of the smart-serial connection. In the following example, it has been enabled.
+In the Protocol.xml file of a smart-serial element, you can enable or disable the AllowedIPAddresses functionality by setting AllowedIPAddresses.Disabled to "false" in the user settings of the smart-serial connection. In the following example, it has been enabled.
 
 ```xml
 <Connections>
@@ -611,7 +611,7 @@ The focus score that is assigned to an alarm is a combination of likelihood, fre
 
 ##### New column in Alarm Console: Focus
 
-In the *Active alarms* tab page, for each alarm that can be considered “unexpected”, an icon will be displayed in the new *Focus* column, which is located between the *Icon* column and the *Element name* column.
+In the *Active alarms* tab page, for each alarm that can be considered "unexpected", an icon will be displayed in the new *Focus* column, which is located between the *Icon* column and the *Element name* column.
 
 Also, in the blue footer of the *Active alarms* tab page, you will notice a new focus icon. If you click this icon, the current tab page will only display the alarms with a focus icon in the *Focus* column.
 

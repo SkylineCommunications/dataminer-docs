@@ -63,7 +63,7 @@ To define a toggle button, set Type to "togglebutton", and provide a discrete li
 </Param>
 ```
 
-![alt text](~/develop/images/uitogglebutton.png "DataMiner Cube toggle button")
+![DataMiner Cube toggle button](~/develop/images/uitogglebutton.png)
 
 > [!NOTE]
 > A toggle button is typically preferred over a drop-down list containing two entries when it is clear what the second entry will be from reading the first entry (e.g. On/Off, Enabled/Disabled, etc.).

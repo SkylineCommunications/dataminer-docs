@@ -374,6 +374,8 @@ items:
                 topicUid: Tutorial_App_Design
               - name: Using flows in a low-code app
                 topicUid: Tutorial_Apps_Flows
+              - name: Using variables in a low-code app
+                topicUid: Tutorial_Apps_Variables
               - name: Creating a custom event scheduler low-code app
                 topicUid: Tutorial_Custom_Event_Scheduler_LCA
       - name: Configuring components
@@ -1258,6 +1260,8 @@ items:
         items:
           - name: Function resource settings
             topicUid: Function_resource_settings
+          - name: Resource availability
+            topicUid: Resource_availability
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:
