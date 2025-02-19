@@ -7,6 +7,12 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 9 January 2025 - Fix - DataAPI 1.2.7 - Address issue where Parameter ID would get reset incorrectly [ID 41886]
+
+An issue has been fixed where maxParamId would reset to the default initial parameter ID when adding new parameters.
+
+This ensures that newly added parameters will continue to use the expected incremental IDs without reverting to the default starting value.
+
 ### 11 December 2024 - Enhancement - DataAPI 1.2.6 - Validation added on parameter type for existing connector [ID 41684]
 
 New validation has been added to verify the parameter type before modifying an existing connector to ensure types have not been changed (e.g. pushing string data to a numeric parameter). In case a wrong parameter type is identified, an error message is logged and the request is rejected.
