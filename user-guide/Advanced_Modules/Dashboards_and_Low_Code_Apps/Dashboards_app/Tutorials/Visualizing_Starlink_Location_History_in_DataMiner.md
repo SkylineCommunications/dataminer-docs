@@ -1,93 +1,84 @@
 ---
-uid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
+uid: Tutorial_Visualizing_Starlink_Location_History_in_DataMiner
 ---
 
-# Creating an alarm dashboard for a daily DMS health check
+# Visualizing Starlink Location History in DataMiner
 
-In this tutorial, you will learn how to create an alarm report dashboard that will provide a user-friendly overview of everything you need for your daily DMS health check. The tutorial will also dive into the Alarm Filtering app, which is a great tool to tackle even the worst alarm storms with a clear overview.
+In this tutorial, you will explore how to leverage the Starlink Enterprise product solution to monitor and visualize real-time data as well as visualize historical location data.
 
-Expected duration: 20 minutes
+Expected duration: 30 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created with the DataMiner 10.4.12 web apps.
+> The content and screenshots for this tutorial have been created with the DataMiner 10.5.2 web apps.
 
 > [!TIP]
-> See also: [Kata #52: Alarm Dashboards for your daily DMS Health Check](https://community.dataminer.services/courses/kata-52/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Kata #59: Visualizing Starlink Location History in DataMiner](https://community.dataminer.services/courses/kata-59/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-- Version 10.3.5 or higher of the DataMiner web apps.
+- Version 10.4.12 or higher of the DataMiner web apps.
 
 ## Overview
 
-- [Step 1: Install the Alarm Report package](#step-1-install-the-alarm-report-package)
-- [Step 2: Install the Alarm Filtering app](#step-2-install-the-alarm-filtering-app)
-- [Step 3: Install the Animal Shelter package (optional)](#step-3-install-the-animal-shelter-package-optional)
-- [Step 4: Adapt the Alarm Report dashboard to filter on views](#step-4-adapt-the-alarm-report-dashboard-to-filter-on-views)
+- [Step 1: Install the Starlink Enterprise package](#step-1-install-the-starlink-enterprise-package)
+- [Step 2: Explore the app and data-sets](#step-2-explore-the-app-and-data-sets)
+- [Step 3: Duplicate the app and let's begin](#step-3-duplicate-the-app-and-lets-begin)
+- [Step 4: Create the GQI query to fetch the history location data](#step-4-create-the-gqi-query-to-fetch-the-history-location-data)
 - [Step 5: Create a custom alarm template for the Animal Shelter protocol (optional)](#step-5-create-a-custom-alarm-template-for-the-animal-shelter-protocol-optional)
 - [Step 6: Take ownership of an alarm](#step-6-take-ownership-of-an-alarm)
 - [Step 7: Add a new customized page to the Alarms Filtering app](#step-7-add-a-new-customized-page-to-the-alarms-filtering-app)
 
-## Step 1: Install the Alarm Report package
+## Step 1: Install the Starlink Enterprise package
 
-1. Go to <https://catalog.dataminer.services/details/5d795a13-814e-4ece-91da-049c3e8e9f38>.
+1. Go to <https://catalog.dataminer.services/details/66a4c259-0fb1-4c27-aede-8bbd3a4925d0>.
 
-1. Click the *Deploy* button to deploy the *Alarm Report* package on your DMA.
+1. Click the *Deploy* button to deploy the *Starlink Enterprise* package on your DMA.
 
    While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
 
-1. [Open the Dashboards app](xref:Accessing_the_Dashboards_app) and check if you can see the *Alarm Report* dashboard.
-
-   When the deployment is complete, this dashboard is added in the root view of your dashboards folder structure.
-
-1. Optionally, move the dashboard to another folder:
-
-   1. Right-click the dashboard in the pane on the left and select *Settings* in the context menu.
-
-   1. Specify a new location and click *Apply*.
-
-   > [!TIP]
-   > For more detailed information, see [Moving a dashboard to a different folder](xref:Managing_dashboard_folders#moving-a-dashboard-to-a-different-folder)
-
-## Step 2: Install the Alarm Filtering app
-
-1. Go to <https://catalog.dataminer.services/details/9794badc-d191-4f36-9b96-08c415e620a4>.
-
-1. Click the *Deploy* button to deploy the *Alarm Filtering App* package on your DMA.
-
 1. Go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
 
-1. Check if you can see the *Alarm Filtering* app listed under *Other Apps*.
+1. Check if you can see the *Starlink Enterprise* app listed under *SatOps*.
+   ![Apps Overview: SatOps](~/user-guide/images/Tutorial_Starlink_History_Locations_LCA.png)
 
-   ![Alarm Filtering app](~/user-guide/images/Tutorial_Alarm_Dashboard_AlarmFilteringAppLogo.png)
+   When the One-click-deployment is complete, the environment will already have the DEMO data readily available.
 
-## Step 3: Install the Animal Shelter package (optional)
+> [!TIP]
+> In case you have a Starlink Enterprise business account: Start exploring **your own data** right-away.
+>
+>Follow the step-by-step guide to help you get started: [Starlink Enterprise Connector Documentation](https://docs.dataminer.services/connector/doc/Starlink_Enterprise.html#initialization).
 
-To get to a good starting point for the rest of this tutorial, you ideally need a DataMiner System with a history of multiple alarms. If you already have an existing system available with multiple elements and views, you could use this for this tutorial, which means that you can skip this step in that case.
+## Step 2: Explore the app and data-sets
 
-However, if you are for example using a **brand-new [DaaS system](xref:Creating_a_DMS_in_the_cloud)**, you will need to install a package that helps you create this starting point. You can use the **Animal Shelter** package for this, which is a Learning & Sample Solution designed specifically for this type of use case.
+1. Go to DataMiner Cube and open the element *STRLE Starlink Enterprise*.
+1. On the User Terminals page filter down on the terminal *Skyline demo cruise_UT***74d101*
+ ![Cube: STRLE Starlink Enterprise - User Terminals](~/user-guide/images/Tutorial_Starlink_History_Locations_dataset-Cube.png)
 
-1. Go to <https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f>.
+1. Opening up the trend window you should see history data for the past 8-9 days.
+Remember this data is only here for this use-case to work with on the terminal *Skyline demo cruise_UT*74d101*. Once operating with live data from your own Starlink Enterprise account you will of course have history data on all your mobile terminals.
 
-1. Click the *Deploy* button to deploy the *Animal Shelter* package on your DMA.
+ ![Cube: Trending - Latitude and Longitude](~/user-guide/images/Tutorial_Starlink_History_Locations_dataset-Trending.png)
 
-   Six elements will be created on the DMA, as mentioned in the description of the Catalog package.
+## Step 3: Duplicate the app and let's begin
 
-   ![Overview of animals And parameters](~/user-guide/images/Tutorial_Alarm_Dashboard_OverviewOfAnimalsAndParameters.png)
+To get to a good starting point for the rest of this tutorial, you ideally start by working in a duplicate version of the app. This way you allow compatibility for the standard product solution track. (Alowing to deploy newer versions of the product solution that will come over time via the catalog), while still maintaining your own custom version of the app.
 
-1. If you are installing this package on a brand-new DaaS system, restart DataMiner to make sure the historical alarms are loaded correctly: In DataMiner Cube, go to *System Center* > *Agents*, and click the *(Re)start* button.
+1. Edit your app and start of by duplicating the *Statistics* page.
+Let's leave the new page as being *hidden*, as the page will only be useful if you made a user terminal selection.
+   ![Duplicate Statistics page](~/user-guide/images/Tutorial_Starlink_History_Locations_duplicate-page.png)
+1. Let's rename the page and give it a nice icon.
+   ![Page renaming](~/user-guide/images/Tutorial_Starlink_History_Locations_renamedPage.png)
+Duplicating the page to get to this point has the advantage that you now already have the default title and header KPIs available for our selected *User terminal*, keeping the app layout uniform.
 
-   > [!IMPORTANT]
-   > Only restart DataMiner if you are using a brand-new DaaS system. In other cases, do not restart DataMiner, as this could affect other ongoing operations on your DataMiner System. For detailed information, refer to the deployment details in the *Technical Reference* section of the [package description](https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f).
+1. Remove the other components from that page as we don't need these.
+1. Add a *Time range* component onto your page. This will be necessary to instruct the time window of interest to visualize the location tracking.
+   ![Add Time Range](~/user-guide/images/Tutorial_Starlink_History_Locations_TimeRangeComponent.png)
 
-1. In DataMiner Cube, navigate to the *DataMiner Catalog* > *Alarm Dashboard* view, and select the *REPORTS* page.
+> [!NOTE]
+> In case you don't see the KPIs being loaded, most likely you did not yet select a terminal on the map from the *Overview* page (or selected a row from the *User Terminals* page.)
 
-   When everything is loaded correctly, the alarm distribution will look like this:
-
-   ![Report summary](~/user-guide/images/Tutorial_Alarm_Dashboard_ReportSummaryOnDaasAfterRestart.png)
-
-## Step 4: Adapt the Alarm Report dashboard to filter on views
+## Step 4: Create the GQI query to fetch the history location data
 
 1. Go to the Dashboards app, and open the Alarm Report dashboard.
 
