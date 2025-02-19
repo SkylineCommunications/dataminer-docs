@@ -54,9 +54,9 @@ For its data storage, DataMiner as a Service makes use of DataMiner Storage as a
 > [!TIP]
 > See also:
 >
-> - [Data location and redundancy](xref:STaaS#data-location-and-redundancy)
-> - [Data resilience and backups](xref:STaaS#data-resilience-and-backups)
-> - [Data security and availability](xref:STaaS#data-security-and-availability)
+> - [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy)
+> - [Data resilience and backups](xref:STaaS_features#data-resilience-and-backups)
+> - [Data security and availability](xref:STaaS_features#data-security-and-availability)
 
 ## DataMiner as a Service: a complete cloud-native experience
 

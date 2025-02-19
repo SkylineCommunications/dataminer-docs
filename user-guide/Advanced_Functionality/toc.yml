@@ -231,6 +231,15 @@ items:
         topicUid: About_storage
       - name: Storage as a Service (STaaS)
         topicUid: STaaS
+        items:
+          - name: STaaS features
+            topicUid: STaaS_features
+          - name: Setting up STaaS
+            topicUid: Setting_up_StaaS
+          - name: Requesting a cost estimation
+            topicUid: STaaS_cost_estimation
+          - name: Migrating existing data to STaaS
+            topicUid: Migrating_existing_data_to_STaaS
       - name: Other storage options (not recommended)
         items:
           - name: Storage options overview
