@@ -145,3 +145,9 @@ When, in a trend graph showing trend data of two parameters, the value of the fi
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 Up to now, when placeholders (e.g. `[thisusername]`) were used in alarm filters made up of different segments enclosed in brackets (e.g. [...] OR [...]), the placeholders in the first segment would not get resolved.
+
+#### DataMiner Cube desktop app: Problem when using both the '/Modify' and the '/Silent 'command-line arguments [ID 42267]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you started the DataMiner Cube desktop app with both the `/Modify` and the  `/Silent` command-line arguments, the app would incorrectly not start in *Modify* mode.
