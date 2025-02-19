@@ -130,9 +130,7 @@ To check whether the claims and attributes match:
 
 ### Collecting the SAML response
 
-#### Using the SAML-tracer extension
-
-If you cannot use SLNetClientTest tool to collect the SAML response, you can instead use the SAML-tracer extension:
+To collect the SAML response, use the SAML-tracer extension:
 
 1. Add the SAML-tracer extension to your chosen web browser:
 
