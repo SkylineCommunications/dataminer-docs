@@ -130,15 +130,6 @@ To check whether the claims and attributes match:
 
 ### Collecting the SAML response
 
-#### Using the SLNetClientTest tool
-
-Starting from DataMiner 10.5.4, you can collect the SAML response using the [SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool). This way, you can see the SAML response in exactly the same way as DataMiner does before parsing it.
-
-To use this, you need to install [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/?form=MA13LH) and reboot the server.
-
-> [!NOTE]
-> In earlier DataMiner versions starting from 10.3.11/10.4.0, this option is also available in SLNetClientTest tool, but the following DLL files are missing in those versions: `C:\Skyline DataMiner\Files\runtimes\win-x64\native\WebView2Loader.dll` and `C:\Skyline DataMiner\Files\runtimes\win-x86\native\WebView2Loader.dll`. If you would like to use this feature in such a DataMiner version, contact your Skyline representative to request these files.
-
 #### Using the SAML-tracer extension
 
 If you cannot use SLNetClientTest tool to collect the SAML response, you can instead use the SAML-tracer extension:

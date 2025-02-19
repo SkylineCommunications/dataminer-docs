@@ -34,10 +34,13 @@ Before you can use any of the SLNetClientTest tool functions, you must first con
 
    - Ticket
 
-   - Debug SAML (Available from DataMiner 10.3.11/10.4.0 onwards<!--RN 37370-->)
+   - Debug SAML (Work in progress- started by <!--RN 37370-->)
 
-     > [!NOTE]
-     > When you select this option before connecting to a DMA that uses external authentication via SAML, two pop-up windows will appear, displaying the SAML requests and SAML responses respectively.
+     > [!IMPORTANT]
+     > Because the option *Debug SAML* is a work in progress, it is only to be  used when recommended by a contact from e.g. Skyline Techsupport.
+     > In that case, your Skyline contact will provide what is needed to ensure the tool functions as expected.
+     > After that, when you select this option before connecting to a DMA that uses external authentication via SAML, two pop-up windows will appear, displaying the SAML requests and SAML responses respectively.
+     > For now, you can use the alternative procedure in [Collecting the SAML response](xref:Troubleshooting_SAML_Issues#collecting-the-saml-response).
 
 ## [Prior to DataMiner 10.3.1/10.4.0](#tab/tabid-2)
 
