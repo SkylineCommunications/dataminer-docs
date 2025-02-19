@@ -18,7 +18,13 @@ uid: Web_apps_Feature_Release_10.5.4
 
 ## New features
 
-*No features have been added yet.*
+#### Dashboards/Low-Code Apps: Maps component is now fully released [ID 42309]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+If you have a valid Maps license, from now on, you can use the *Maps* component without having to enable the *ReportsAndDashboardsGQIMaps* soft-launch option.
+
+For all information about this component, see [Maps](xref:DashboardMaps).
 
 ## Changes
 
