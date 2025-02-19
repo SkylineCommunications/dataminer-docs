@@ -320,13 +320,13 @@ From now on, a tooltip showing the full name will appear when you hover either o
 
 When, in a *Timeline* component, items had been grouped, in some cases, all groups would disappear when the data was refreshed and would reappear when you scrolled inside the timeline. From now on, all groups will remain visible when the data is refreshed.
 
-#### Dashboards/Low-Code Apps - Parameter table & Interactive Automation script components: Problems with duration input boxes [ID 42293]
+#### Dashboards/Low-Code Apps: Problems with duration input boxes [ID 42293]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-A number of issues regarding the duration input boxes in the *Parameter table* and *Interactive Automation script* components have been fixed:
+A number of issues regarding duration input boxes have been fixed:
 
 - The current value would not be validated after you had changed the minimum and/or maximum value.
 - When a positive value was replaced by an invalid negative value, the input fields as well as the sign button would not be updated properly.
-- When the day field contained 999, the value would not be entirely readable. Also, when the day field contained a number smaller than 10, there would be too much space the input field and the sign button.
-- When the granularity was changed, the current duration value would contain hidden fields.
+- When the day field contained a value with more than three digits, the value would not be entirely readable. Also, when the day field contained a number smaller than 10, there would be too much space the input field and the sign button.
+- When the granularity was changed, hidden fields would be taken into account when calculating the current value.
