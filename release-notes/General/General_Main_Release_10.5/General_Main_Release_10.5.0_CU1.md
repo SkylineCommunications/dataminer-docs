@@ -103,6 +103,17 @@ Because of an issue in SLNet, after a restart of a DataMiner Agent, "not support
 
 When you tried to update the protocol version of an element in error via DataMiner Cube, in some rare cases, a message would incorrectly appear, stating that it was not possible to update the element.
 
+#### Problems with SNMP managers [ID 42014]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+In the following cases, an SNMP manager configured to send SNMPv3 Inform messages would get stuck in a timeout:
+
+- When multiple SNMP managers were sending information to the same IP address and port.
+- When "time window" errors were thrown after the SNMP manager (configured with *authnopriv* or *authpriv*) had been restarted.
+
+Also, "out of time window" errors could be thrown when an SNMP manager received SNMPv3 traps. From now on, in SNMPv3 mode, the first alarm sent by DataMiner to the SNMP manager will always be a PING alarm. This will allow an SNMP manager to clean up time table information, which will prevent "out of time window" errors from being thrown when receiving subsequent alarms.
+
 #### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
