@@ -201,6 +201,12 @@ When a parent shape with a conditional show/hide setting was hidden, up to now, 
 
 When, in the *Scheduler* app, a dashboard was exported via an email action, up to now, HTML-formatted text in the email body would incorrectly be sent as plain text, even when the *Plain text* option was not selected. From now on, when the *Plain text* option is not selected, the text in the email body will be marked as HTML, and will be parsed and displayed correctly.
 
+#### SLAnalytics - Behavioral anomaly detection: Change points could incorrectly be labeled as a level shift [ID 42119]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When a trend graph seemed to increase or decrease, in some cases, change points could incorrectly be labeled as a level shift.
+
 #### DataMiner Taskbar Utility would incorrectly show a pop-up window when made to perform a DataMiner upgrade using the command prompt [ID 42135]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
