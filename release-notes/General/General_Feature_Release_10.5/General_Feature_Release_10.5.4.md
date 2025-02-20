@@ -247,3 +247,10 @@ In some cases, it would not be possible to simultaneously update multiple TTL se
 When the SLASPConnection process failed to connect to NATS, in some cases, run-time errors could be thrown.
 
 A number of enhancements have now been made to avoid run-time errors to be thrown when SLASPConnection process fails to connect to NATS.
+
+#### Problem with SLAnalytics due to MessageBroker reconfiguring itself [ID 42207]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- Not added to MR 10.6.0 -->
+
+After a DataMiner Agent was added to or removed from a DMS, in some cases, SLAnalytics could stop working due to Message Broker reconfiguring itself.
