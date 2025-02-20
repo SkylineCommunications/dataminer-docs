@@ -76,6 +76,20 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
+#### Relational anomaly detection: New messages to add, update or remove parameter groups in the configuration file [ID 42181]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+The following messages can be used to add, update or remove a parameter group from the configuration file, or to retrieve information for a particular parameter group from that configuration file:
+
+- `AddMADParameterGroupMessage` allows you to add a parameter group to the Relational Anomaly Detection configuration file.
+
+  If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated.
+
+- `RemoveMADParameterGroupMessage` allows you to remove a parameter group from the Relational Anomaly Detection configuration file.
+
+- `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
+
 ## Changes
 
 ### Enhancements

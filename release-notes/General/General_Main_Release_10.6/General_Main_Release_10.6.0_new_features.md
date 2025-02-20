@@ -228,7 +228,7 @@ In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular D
 
 ##### New server messages
 
-The following new messages can now be used to  which you can target to be sent to other DMAs in the cluster:
+The following new messages can now be used to which you can target to be sent to other DMAs in the cluster:
 
 - `TargetedGetVisualOverviewDataMessage` allows you to retrieve a Visual Overview data message containing the image and the content of a visual overview.
 
@@ -424,9 +424,11 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181]
 
-<!-- MR 10.6.0 - FR 10.5.3 -->
+<!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
+<!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
+<!-- RNs 42181: MR 10.6.0 - FR 10.5.4 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -478,3 +480,15 @@ If necessary, users can force RAD to retrain its internal model by sending a `Re
 - RAD does not support history sets.
 
 - Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
+
+##### Messages
+
+The following messages can be used to add, update or remove a parameter group from the configuration file, or to retrieve information for a particular parameter group from that configuration file:
+
+- `AddMADParameterGroupMessage` allows you to add a parameter group to the Relational Anomaly Detection configuration file.
+
+  If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated.
+
+- `RemoveMADParameterGroupMessage` allows you to remove a parameter group from the Relational Anomaly Detection configuration file.
+
+- `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
