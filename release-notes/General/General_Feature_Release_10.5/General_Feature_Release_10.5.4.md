@@ -254,3 +254,12 @@ A number of enhancements have now been made to avoid run-time errors to be throw
 <!-- Not added to MR 10.6.0 -->
 
 After a DataMiner Agent was added to or removed from a DMS, in some cases, SLAnalytics could stop working due to Message Broker reconfiguring itself.
+
+#### Relational anomaly detection: Response of GetMADDataMessage did not contain the anomaly score and the parameter values associated with the last trend data entry [ID 42238]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- Not added to MR 10.6.0 -->
+
+The `GetMADDataMessage` allows you to request anomaly scores during a specified time range for a particular RAD parameter group.
+
+However, up to now, the response would not contain the anomaly score and the parameter values associated with the last trend data entry.
