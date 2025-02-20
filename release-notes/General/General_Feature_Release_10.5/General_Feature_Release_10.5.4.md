@@ -138,6 +138,13 @@ When, in DataMiner Cube, you go to *System Center > System settings > Analytics 
 - Proactive cap detection
 - Relational anomaly detection
 
+#### Relational anomaly detection: First anomaly score of a RAD group will now be calculated faster [ID 42141]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- Not added to MR 10.6.0 -->
+
+Because of a number of enhancements, after a RAD parameter group is configured, the first anomaly score for that group will be calculated faster than before.
+
 ### Fixes
 
 #### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
