@@ -5,9 +5,14 @@ uid: Service_tutorial
 # Providing a customer-centric system view with services
 
 In this tutorial, you will learn how to create a service for a television channel.
-In a first setup, this service will take its input from 2 different receiver elements and depending on the position of a switch, pick one or the other to include in the service.
-Afterwards we will reconfigure the service so it will always include both elements, but will limit the influence the element alarm states have on the overall alarm severity of the service based on the switch position.
+
+In a first setup, this service will take its input from two different receiver elements. Depending on the position of a switch, one or the other will be picked to include in the service.
+
+Afterwards, you will reconfigure the service so it will always include both elements but will limit the influence the element alarm states have on the overall alarm severity of the service based on the switch position.
+
 In both situations, your service will indicate how it is performing towards your customers, regardless of the underlying infrastructure.
+
+The content and screenshots for this tutorial have been created using DataMiner 10.5.2.
 
 Expected duration: 20 minutes
 
@@ -53,7 +58,7 @@ At this point, you should have the following view structure:
 
 At this point you have created a service that includes 2 elements:
 
-![BBC Sports service](~\user-guide\images\tutorial_services_step2_new.png)
+![BBC Sports service](~/user-guide/images/tutorial_services_step2_new.png)
 
 ## Step 3: Configure your service for dynamic element inclusion
 
@@ -77,7 +82,7 @@ In this step, we will configure our service to dynamically include the element p
 
     1. Leave the rest of the options as is.
 
-    ![Element configuration for ird-uk-lon-01](~\user-guide\images\tutorial_services_step3_ird-uk-lon-01.png)
+    ![Element configuration for ird-uk-lon-01](~/user-guide/images/tutorial_services_step3_ird-uk-lon-01.png)
 
 1. Select the **ird-uk-man-01** element and on the right side, configure the following details:
 
@@ -93,7 +98,7 @@ In this step, we will configure our service to dynamically include the element p
 
     1. Leave the rest of the options as is.
 
-    ![Element configuration for ird-uk-man-01](~\user-guide\images\tutorial_services_step3_ird-uk-man-01.png)
+    ![Element configuration for ird-uk-man-01](~/user-guide/images/tutorial_services_step3_ird-uk-man-01.png)
 
 1. Click *Apply* to save the changes.
 
@@ -101,9 +106,9 @@ Now your service will only include the element that is active based on the **Swi
 Toggling that parameter will change the included element.
 This gives you a live status of your service, regardless of the source of your signal.
 
-![BBC Sports service with dynamic inclusion](~\user-guide\images\tutorial_services_step3_service.png)
+![BBC Sports service with dynamic inclusion](~/user-guide/images/tutorial_services_step3_service.png)
 
-![Switch position](~\user-guide\images\tutorial_services_step3_switch-position.png)
+![Switch position](~/user-guide/images/tutorial_services_step3_switch-position.png)
 
 ## Step 4: Reconfigure your service for dynamic service alarm influencing
 
@@ -126,7 +131,7 @@ Let us see how we can adapt our service so we can have an early warning on poten
 
     1. Under *ADVANCED*, configure the option *Maximum severity on element not used* and set it to **Warning**.
 
-    ![Element configuration for ird-uk-lon-01](~\user-guide\images\tutorial_services_step4_ird-uk-lon-01.png)
+    ![Element configuration for ird-uk-lon-01](~/user-guide/images/tutorial_services_step4_ird-uk-lon-01.png)
 
 1. Select the **ird-uk-man-01** element and on the right side, configure the following details:
 
@@ -137,8 +142,8 @@ Let us see how we can adapt our service so we can have an early warning on poten
     1. Add a condition **Is Parameter Value sw-uk-01 Switch Site Selection Equal to value Site 2**.
 
     1. Under *ADVANCED*, configure the option *Maximum severity on element not used* and set it to **Warning**.
-    
-    ![Element configuration for ird-uk-man-01](~\user-guide\images\tutorial_services_step4_ird-uk-man-01.png)
+
+    ![Element configuration for ird-uk-man-01](~/user-guide/images/tutorial_services_step4_ird-uk-man-01.png)
 
 1. Click *Apply* to save the changes.
 
@@ -149,4 +154,4 @@ The source that is not active will influence the service with a maximum of a War
 In this case, you have a warning alarm on the service, coming from the signal from Site 1, while the Site 2 signal is working fine.
 This will let you spot early on if there are problems with the other signal before you need to use it.
 
-![BBC Sports service with dynamic service alarm influencing](~\user-guide\images\tutorial_services_step4_service.png)
+![BBC Sports service with dynamic service alarm influencing](~/user-guide/images/tutorial_services_step4_service.png)
