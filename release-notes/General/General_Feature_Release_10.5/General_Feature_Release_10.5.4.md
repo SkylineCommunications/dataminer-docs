@@ -269,6 +269,12 @@ When the SLASPConnection process failed to connect to NATS, in some cases, run-t
 
 A number of enhancements have now been made to avoid run-time errors to be thrown when SLASPConnection process fails to connect to NATS.
 
+#### MessageBroker: Subscriptions that had been disposed of would incorrectly get recreated [ID 42164]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
+
 #### Problem with SLAnalytics due to MessageBroker reconfiguring itself [ID 42207]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
