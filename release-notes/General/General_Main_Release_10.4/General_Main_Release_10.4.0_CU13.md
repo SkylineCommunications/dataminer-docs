@@ -83,6 +83,12 @@ When the SLASPConnection process failed to connect to NATS, in some cases, run-t
 
 A number of enhancements have now been made to avoid run-time errors to be thrown when SLASPConnection process fails to connect to NATS.
 
+#### MessageBroker: Subscriptions that had been disposed of would incorrectly get recreated [ID 42164]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
+
 #### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
