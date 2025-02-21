@@ -14,10 +14,9 @@ Estimated duration: 15 minutes.
 >
 > - This tutorial uses DataMiner web version 10.5.1.
 > - Variables have been available since DataMiner web version 10.4.12, and support for dynamic value changes was introduced in version 10.5.1.
->
-> - >See also: [Kata #58: Low-Code Apps - Introducing Variables](https://community.dataminer.services/courses/kata-58/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-![image](https://github.com/user-attachments/assets/ef2c1bb3-c849-447f-9b85-3e06aff599ec)
 
+> [!TIP]
+> See also: [Kata #58: Low-Code Apps - Introducing Variables](https://community.dataminer.services/courses/kata-58/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
