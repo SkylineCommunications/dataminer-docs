@@ -104,6 +104,32 @@ The following messages can be used to add, update or remove a parameter group fr
 > [!NOTE]
 > Names of RAD parameter groups will be processed case-insensitive.
 
+#### Relational anomaly detection: New group argument 'minimumAnomalyDuration' [ID 42283]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+Per DataMiner Agent, the RAD parameter groups must be configured in the *C:\\Skyline DataMiner\\Analytics\\RelationalAnomalyDetection.xml* file, which must be formatted as follows.
+
+```xml
+<?xml version="1.0" ?>
+  <RelationalAnomalyDetection>
+    <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]" minimumAnomalyDuration="[THRESHOLD2]">
+      <Instance>[INSTANCE1]</Instance>
+      <Instance>[INSTANCE2]</Instance>
+      [... one <Instance> tag per parameter in the group]
+    </Group>
+    [... one <Group> tag per group of parameters that should be monitored by RAD]
+</RelationalAnomalyDetection>
+```
+
+Each `<Group>` tag can now have an additional `minimumAnomalyDuration` argument.
+
+This optional argument will specify the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. Default value: 5
+
+- When `minimumAnomalyDuration` is set to a value greater than 5, the deviating behavior will need to last longer before an anomaly event is triggered.
+- `minimumAnomalyDuration` can be set to a non-default value, for example, to filter out noise events caused by a single, short, harmless outlying value in the data.
+- If `minimumAnomalyDuration` is either not set or set to a value less than or equal to 5, an anomaly event will be generated as soon as values deviate sufficiently from the RAD model.
+
 ## Changes
 
 ### Enhancements
