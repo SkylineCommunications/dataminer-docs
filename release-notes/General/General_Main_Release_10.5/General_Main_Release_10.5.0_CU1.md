@@ -97,6 +97,16 @@ A number of security enhancements have been made.
 
 Because of an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
 
+#### Cassandra: Problem with incorrect gc_grace_seconds values [ID 41939]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+On systems with a Cassandra or Cassandra Cluster database, a number of issues have been fixed with regard to the `gc_grace_seconds` setting:
+
+- The `gc_grace_seconds` values will no longer be updated during a DataMiner restart.
+- The `gc_grace_seconds` value for trend data will now by default be set to 0.
+- The `gc_grace_seconds` value for logger tables will now by default be set to 4 hours (with TTL) or to 1 day (without TTL).
+
 #### Problem when trying to update the protocol version of an element in error [ID 41962]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->

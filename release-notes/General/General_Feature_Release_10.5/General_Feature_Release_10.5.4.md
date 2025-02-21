@@ -173,6 +173,16 @@ After a Cassandra Cluster migration had been initialized, it would no longer be 
 
 When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
 
+#### Cassandra: Problem with incorrect gc_grace_seconds values [ID 41939]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+On systems with a Cassandra or Cassandra Cluster database, a number of issues have been fixed with regard to the `gc_grace_seconds` setting:
+
+- The `gc_grace_seconds` values will no longer be updated during a DataMiner restart.
+- The `gc_grace_seconds` value for trend data will now by default be set to 0.
+- The `gc_grace_seconds` value for logger tables will now by default be set to 4 hours (with TTL) or to 1 day (without TTL).
+
 #### Problem when trying to update the protocol version of an element in error [ID 41962]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
