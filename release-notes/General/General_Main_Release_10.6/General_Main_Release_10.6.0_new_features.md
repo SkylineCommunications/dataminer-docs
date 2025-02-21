@@ -492,3 +492,14 @@ The following messages can be used to add, update or remove a parameter group fr
 - `RemoveMADParameterGroupMessage` allows you to remove a parameter group from the Relational Anomaly Detection configuration file.
 
 - `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
+
+#### SLNetClientTest tool: Element process ID information [ID 42013]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+In the *SLNetClientTest* tool, you can now retrieve live information about the mapping between elements running on a DataMiner Agent and the processes they use, including SLProtocol and SLScripting. To do so, go to *Diagnostics > DMA > Element Process ID Info*.
+
+The information provided is similar to the information found in the *SLElementInProtocol.txt* log file. It will allow you to monitor and troubleshoot process usage in real time.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
