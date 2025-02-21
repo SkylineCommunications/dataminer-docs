@@ -76,3 +76,16 @@ In some cases, it would not be possible to simultaneously update multiple TTL se
 When the SLASPConnection process failed to connect to NATS, in some cases, run-time errors could be thrown.
 
 A number of enhancements have now been made to avoid run-time errors to be thrown when SLASPConnection process fails to connect to NATS.
+
+#### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When, in the *SLNetClientTest* tool, you tried to connect to a DataMiner Agent using external authentication via SAML, the following error message would appear:
+
+`Unable to load DLL 'WebView2Loader.dll': The specified module could not be found.`
+
+The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packages.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

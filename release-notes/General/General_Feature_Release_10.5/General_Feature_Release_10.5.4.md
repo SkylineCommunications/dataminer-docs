@@ -87,7 +87,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection: New messages to add, update or remove parameter groups in the configuration file [ID 42181]
+#### Relational anomaly detection: New messages to add, update or remove parameter groups in the configuration file [ID 42181] [ID 42276]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
@@ -100,6 +100,9 @@ The following messages can be used to add, update or remove a parameter group fr
 - `RemoveMADParameterGroupMessage` allows you to remove a parameter group from the Relational Anomaly Detection configuration file.
 
 - `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
+
+> [!NOTE]
+> Names of RAD parameter groups will be processed case-insensitive.
 
 ## Changes
 
@@ -298,3 +301,16 @@ After a DataMiner Agent was added to or removed from a DMS, in some cases, SLAna
 The `GetMADDataMessage` allows you to request anomaly scores during a specified time range for a particular RAD parameter group.
 
 However, up to now, the response would not contain the anomaly score and the parameter values associated with the last trend data entry.
+
+#### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When, in the *SLNetClientTest* tool, you tried to connect to a DataMiner Agent using external authentication via SAML, the following error message would appear:
+
+`Unable to load DLL 'WebView2Loader.dll': The specified module could not be found.`
+
+The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packages.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

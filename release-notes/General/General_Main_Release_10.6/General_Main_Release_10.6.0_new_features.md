@@ -424,11 +424,12 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42181: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42276: MR 10.6.0 - FR 10.5.4 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -492,6 +493,9 @@ The following messages can be used to add, update or remove a parameter group fr
 - `RemoveMADParameterGroupMessage` allows you to remove a parameter group from the Relational Anomaly Detection configuration file.
 
 - `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
+
+> [!NOTE]
+> Names of RAD parameter groups will be processed case-insensitive.
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]
 
