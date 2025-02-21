@@ -2,13 +2,11 @@
 uid: CICD_Tutorial_Connector
 ---
 
-# Setting up basic CI/CD for connector deployment
+# Setting up basic CI/CD for connector deployment in GitHub
 
 In this tutorial, you will learn how to create a custom pipeline from scratch. This pipeline will establish basic quality control and automate the deployment of a DataMiner connector to a staging system through a CI/CD pipeline. This setup can function with or without the staging system being connected to dataminer.services. The tutorial uses a DataMiner Agent hosted on an internet-accessible virtual machine.
 
 You can also apply the instructions in this tutorial (with limited syntax changes) to use other CI/CD technology, such as Jenkins, GitLab, Concourse, Azure DevOps, etc. You can find a quick overview of specific CI/CD tooling offered by Skyline Communications in our [CI/CD documentation](xref:Platform_independent_CICD).
-
-If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
 
 > [!TIP]
 > See also:
