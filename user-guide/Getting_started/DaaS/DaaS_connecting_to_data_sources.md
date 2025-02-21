@@ -14,7 +14,9 @@ Your DaaS system is able to connect to three types of data sources:
 
 ## Cloud services
 
-DaaS can communicate with any cloud service as long as it has a public endpoint and a secure way of connecting. This could for example be an Azure App Service, AWS S3, Azure Blob Storage, etc. Each DaaS instance also has a public IP so it can receive SNMP traps.
+DaaS can communicate with any cloud service as long as it has a public endpoint and a secure way of connecting. This could for example be an Azure App Service, AWS S3, Azure Blob Storage, etc.
+
+Each DaaS instance also has a public IP so it can receive SNMP traps.
 
 ## Publicly available data sources
 
