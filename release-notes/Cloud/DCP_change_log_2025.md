@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 24 February 2025 - New Feature - CatalogAPI - Public call to get all types [ID_42340]
+
+A new call was added that allows users to get all the catalog types without the need to authenticate.
+
 ### 11 February 2025 - Enhancement - Catalog - Deployment status shown on details page [ID 42131]
 
 When an item is deployed, the deployment status is now shown next to the *Deploy* button both in the item version section and at the top of the details page. The status is automatically updated for up to 10 seconds, and you will get a notification when the deployment finishes or fails.
