@@ -56,7 +56,7 @@ The theme of the dashboard determines which colors are used in the dashboard.
 
      - In the *Title* section, you can configure the default layout for component titles, including the font, font size, alignment, and basic formatting options.
 
-     - In the *Colors* section, you can set the default background color and font color for the components. Under *Data colors* or *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can configure additional colors, e.g. for the lines in a line chart component.
+     - In the *Colors* section, you can set the default background color and font color for the components. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41859-->, you can also set the accent color. If a component supports an accent color (e.g. the toggle component), it will inherit the selected color. By default, this is set to *Default*, meaning the accent color will match the theme of the dashboard. Under *Data colors* or *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can configure additional colors, e.g. for the lines in a line chart component.
 
        From DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--RN 39739-->, components displaying the same data use the same data color by default. Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7, each component independently takes the next color from the theme's assigned color palette.
 
