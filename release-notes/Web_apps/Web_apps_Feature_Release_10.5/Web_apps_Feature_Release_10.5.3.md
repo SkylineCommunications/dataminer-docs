@@ -138,11 +138,11 @@ The *Allow refresh* option has now been removed. In order to have *Time range* c
 
 The *Time range* component has been moved from the *General* category to the *Basic controls* category. Also, its icon has now been updated to better represent a range.
 
-#### GQI DxM: Web applications will now use the GQI DxM installed on the local DMA to build and run GQI queries [ID 41949] [ID 42010]
+#### GQI DxM improvements [ID 41949] [ID 42010]
 
 <!-- MR 10.4.0 [CU12] - FR 10.5.3 -->
 
-From now on, the DataMiner web applications will by default use the GQI DxM installed on the local DataMiner Agent when building and running GQI queries.
+If the GQI DxM is installed and enabled on the local DataMiner Agent, the DataMiner web applications will now always use the GQI DxM running on the same node as the web API when building and running GQI queries. This accounts for custom logic that could be present in ad hoc data sources, requiring a configuration that is only available on a specific DMA.
 
 #### Low-Code Apps: Default set of icon files will be created when you create a new low-code app [ID 42004]
 

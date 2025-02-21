@@ -49,7 +49,7 @@ This DxM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 
 
 The GQI module is responsible for handling [GQI queries](xref:About_GQI). See [GQI DxM](xref:GQI_DxM).
 
-This DxM is included in DataMiner upgrade packages from DataMiner 10.5.2/10.5.0 onwards and web-only upgrade packages from 10.5.2 onwards.<!-- RN 41811 -->
+A preview version of this DxM is included in DataMiner upgrade packages from DataMiner 10.5.2/10.5.0 onwards and web-only upgrade packages from 10.5.2 onwards.<!-- RN 41811 --> From DataMiner 10.5.0 [CU1]/10.5.4 onwards, the DxM is fully supported.
 
 ### Orchestrator
 
