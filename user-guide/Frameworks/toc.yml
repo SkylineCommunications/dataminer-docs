@@ -140,6 +140,8 @@ items:
             items:
               - name: Quarantine
                 topicUid: SRM_Quarantine
+              - name: Stages of bookings
+                topicUid: srm_stages_of_bookings
       - name: Getting started with SRM
         topicUid: srm_getting_started
         items:
