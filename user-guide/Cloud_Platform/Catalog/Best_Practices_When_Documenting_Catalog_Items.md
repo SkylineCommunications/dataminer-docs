@@ -1,6 +1,6 @@
 ---
 uid: Best_Practices_When_Documenting_Catalog_Items
-keywords: documentation, catalog, item, catalog item, description
+keywords: documentation, catalog item, description, connector help, solution help
 ---
 
 # Best practices when documenting Catalog items
