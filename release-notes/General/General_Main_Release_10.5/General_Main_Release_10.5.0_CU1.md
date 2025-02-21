@@ -66,6 +66,13 @@ Additional logging with regard to visual overview load balancing will be availab
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### Security enhancements [ID 41913] [ID 42104]
+
+<!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of security enhancements have been made.
+
 #### Service & Resource Management: Enhanced handling of locked files when activating or deactivating functions [ID 41978]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
@@ -82,12 +89,6 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 
 > [!NOTE]
 > The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
-
-#### Security enhancements [ID 42104]
-
-<!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
-
-A number of security enhancements have been made.
 
 ### Fixes
 

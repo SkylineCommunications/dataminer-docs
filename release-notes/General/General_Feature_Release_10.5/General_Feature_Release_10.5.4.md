@@ -134,6 +134,14 @@ This optional argument will specify the minimum duration (in minutes) that devia
 
 ### Enhancements
 
+#### Security enhancements [ID 41425] [ID 41913] [ID 42104]
+
+<!-- 41425: MR 10.6.0 - FR 10.5.4 -->
+<!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of security enhancements have been made.
+
 #### Enhanced performance when updating subscriptions and when checking events against the set of active subscriptions [ID 41822]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
@@ -173,13 +181,6 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 
 > [!NOTE]
 > The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
-
-#### Security enhancements [ID 41425] [ID 42104]
-
-<!-- 41425: MR 10.6.0 - FR 10.5.4 -->
-<!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
-
-A number of security enhancements have been made.
 
 #### Disabling an SLAnalytics feature will now clear all open alarms and suggestion events associated with that feature [ID 42096]
 
