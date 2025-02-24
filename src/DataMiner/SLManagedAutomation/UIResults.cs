@@ -121,7 +121,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note> <!-- RN 42064 -->
+		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note> <!-- RN 42064 / RN 42097 / RN 42110 -->
 		/// <note type="tip">
 		/// The returned date/time includes the offset to UTC.
 		/// To get the date as displayed in the client, use the <see cref="DateTimeOffset.Date"/> property on the returned value.
@@ -158,7 +158,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note> <!-- RN 42064 -->
+		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note> <!-- RN 42064 / RN 42097 / RN 42110 -->
 		/// <note type="important">
 		/// To store this information, to reuse it for later calculations, consider using:
 		/// <list type="bullet">
