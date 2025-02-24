@@ -8,9 +8,7 @@ To connect to data sources so that you can see their information in DataMiner, y
 
 Your DaaS system is able to connect to three types of data sources:
 
-![Connecting to different data sources with DaaS](~/user-guide/images/DaaS_Connection_draft.png)
-
-<!-- todo: replace image with improved version -->
+![Connecting to different data sources with DaaS](~/user-guide/images/DataSources.png)
 
 ## Cloud services
 
