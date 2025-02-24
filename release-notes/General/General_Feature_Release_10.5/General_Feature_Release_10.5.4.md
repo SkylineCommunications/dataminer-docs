@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.4
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- Elements can now be configured to run in isolation mode [ID 41757]
 
 ## New features
 
@@ -34,7 +34,7 @@ uid: General_Feature_Release_10.5.4
 
 Up to now, the *ProcessOptions* section of the *DataMiner.xml* file allowed you to configure that an element had to run in its own SLProtocol and SLScripting processes, and in a *protocol.xml* file, the *RunInSeparateInstance* tag allowed you to do the same. However, it was only possible to configure this for all elements using a particular protocol.
 
-From now on, the new *Run in isolation mode* feature will allow you to also configure this for one single element.
+From now on, the new *Run in isolation mode* feature will allow you to also configure this for one single element. For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
 As creating additional SLProtocol processes has an impact on the resource usage of a DataMiner Agent, a hard limit of 50 SLProtocol processes has been introduced. If, when an element starts, an attempt to create a new SLProtocol process fails because 50 processes are already running, the element will be hosted by an existing SLProtocol process and its matching SLScripting process, regardless of how the *Run in isolation mode* was configured.
 
@@ -51,8 +51,6 @@ For example, if 15 SLProtocol processes are configured in the *DataMiner.xml* fi
 This means, that some elements will not be able to run in isolation mode, and some SLProtocol processes will not be able to host elements that are not running in isolation mode. In each of those cases, an alarm will be generated.
 
 In the DataMiner.xml file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
-
-For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]
 
