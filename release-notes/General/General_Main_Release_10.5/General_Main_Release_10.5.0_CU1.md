@@ -98,6 +98,12 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 
 Because of an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
 
+#### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
+
 #### Cassandra: Problem with incorrect gc_grace_seconds values [ID 41939]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->

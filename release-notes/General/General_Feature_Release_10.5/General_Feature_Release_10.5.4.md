@@ -212,7 +212,7 @@ For example, if you want to migrate only the SLAnalytics data, you can now speci
 
 #### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
 
-<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
 

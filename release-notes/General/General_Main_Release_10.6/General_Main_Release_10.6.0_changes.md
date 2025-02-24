@@ -165,12 +165,6 @@ For example, if you want to migrate only the SLAnalytics data, you can now speci
 
 ### Fixes
 
-#### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
-
-<!-- MR 10.6.0 - FR 10.5.4 -->
-
-After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
-
 #### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
