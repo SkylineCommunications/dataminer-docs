@@ -4,14 +4,12 @@ uid: Tutorial_Register_Catalog_Version_GitHub_Actions
 
 # Registering a new version of a connector in the Catalog using a GitHub Action
 
-This tutorial demonstrates how to add a new version to a Catalog item using the [Catalog API](xref:Register_Catalog_Item) and [GitHub Actions](https://docs.github.com/en/actions). In the tutorial, you will register your own version of an [example connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom). The tutorial builds on the example from the tutorial [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), so unless you already know how to register a new Catalog item and have done so already, we recommend that you follow that tutorial first.
-
-While this tutorial uses the example of a connector, registering a new version for a different type of Catalog item is very similar.
+This tutorial demonstrates how to add a new version of a connector using the [Catalog API](xref:Register_Catalog_Item) and [GitHub Actions](https://docs.github.com/en/actions). In the tutorial, you will register your own version of an [example connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom).
 
 Expected duration: 10 minutes
 
 > [!NOTE]
-> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [Setting up complete quality control in CI/CD for connector deployment](xref:CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub) tutorial.
 
 ## Prerequisites
 
