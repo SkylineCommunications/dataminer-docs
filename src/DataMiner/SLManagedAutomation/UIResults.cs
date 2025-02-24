@@ -89,6 +89,7 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		/// <remarks>
 		/// <note type="note">Prior to DataMiner 10.0.12, this method only supports the parsing of datetimes in the format dd/MM/yyyy HH:mm:ss. From DataMiner 10.0.12 onwards, ISO format is supported.</note>
+		/// <note type="tip">Depending on the client platform, the kind of the returned date/time might differ. Since DataMiner 10.5.4 / 10.6.0<!-- RN 42064 / RN 42097 / RN 42110 -->, <see cref="GetClientDateTime"/> can be used to get the date/time as it is displayed. Enable <see cref="UIBlockDefinition.ClientTimeInfo"/> on the item, to make sure the info is available.</note>
 		/// </remarks>
 		public DateTime GetDateTime(string key) { return DateTime.Now; }
 
