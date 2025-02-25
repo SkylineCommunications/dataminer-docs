@@ -21,8 +21,9 @@ When the configuration window appears, it will now be possible to either continu
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
-#### Security enhancements [ID 41475]
+#### Security enhancements [ID 41425] [ID 41475]
 
+<!-- 41425: MR 10.6.0 - FR 10.5.4 -->
 <!-- 41475: MR 10.6.0 - FR 10.5.2 -->
 
 A number of security enhancements have been made.
