@@ -247,6 +247,21 @@ In the following cases, an SNMP manager configured to send SNMPv3 Inform message
 
 Also, "out of time window" errors could be thrown when an SNMP manager received SNMPv3 traps. From now on, in SNMPv3 mode, the first alarm sent by DataMiner to the SNMP manager will always be a PING alarm. This will allow an SNMP manager to clean up time table information, which will prevent "out of time window" errors from being thrown when receiving subsequent alarms.
 
+#### Problem when deleting elements with logger tables [ID 42029]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When an element with a logger table was deleted, some items would not be removed from Cassandra and from OpenSearch/Elasticsearch:
+
+- SLDataGateway still contained the table definitions.
+
+- When the `databaseName` option was used, the table that had been created in a separate table schema would not be deleted.
+
+- In case of a Cassandra Cluster, the logger table is by default stored in the sldmadb_elementdata_<dmaid>_<elementid>_<tableid> keyspace. When an element with a logger table was deleted, the database table would correctly be removed, but the empty keyspace would still exist.
+
+> [!NOTE]
+> When an element with a logger table is deleted, the logger table will not be deleted when it has the `customDatabaseName` or `databaseNameProtocol` option.
+
 #### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
