@@ -95,6 +95,9 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 uiBuilder.AppendBlock(blockItem);
 ```
 
+> [!TIP]
+> The kind of the returned date/time might differ, depending whether the script is executed in a Web or Cube environment. Since DataMiner 10.5.4 / 10.6.0<!-- RN 42064 / RN 42097 / RN 42110 -->, [GetClientDateTime](xref:Skyline.DataMiner.Automation.UIResults.GetClientDateTime(System.String)) can be used to get the date/time as it is displayed. Enable the [ClientTimeInfo](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ClientTimeInfo) property, to make sure the info is available.
+
 ## CheckBox
 
 Allows you to define a checkbox.
@@ -502,6 +505,9 @@ uiBuilder.AppendBlock(blockItem);
 > - From DataMiner 10.3.0 [CU1]/10.3.4 onwards, the `ShowTimeUnits` property is available. When this property is set to *true*, the component will display labels indicating the days, hours, minutes and seconds. By default, this property is set to *false*. The `ShowTimeUnits` property is only supported in the DataMiner web apps and not in DataMiner Cube. <!-- RN 35435 -->
 > - When the initial value is set to an empty string or null, a default value of one hour will be displayed in Cube. In the Low-Code Apps, zero (00:00:00) will be displayed.
 > - The time span values are returned in the constant invariant format (e.g. "3.17:25:30.5569124").
+
+> [!TIP]
+> The kind of the returned date/time might differ, depending whether the script is executed in a Web or Cube environment. Since DataMiner 10.5.4 / 10.6.0<!-- RN 42064 / RN 42097 / RN 42110 -->, [GetClientDateTime](xref:Skyline.DataMiner.Automation.UIResults.GetClientDateTime(System.String)) can be used to get the date/time as it is displayed. Enable the [ClientTimeInfo](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ClientTimeInfo) property, to make sure the info is available.
 
 ## TreeView
 
