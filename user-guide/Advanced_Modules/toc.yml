@@ -312,7 +312,7 @@ items:
                 topicUid: Creating_a_parameter_table_connected_to_an_element_feed
               - name: Creating an alarm dashboard for a daily DMS health check
                 topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
-              - name: Visualizing Starlink Location History in DataMiner
+              - name: Visualizing the Starlink location history in DataMiner
                 topicUid: Tutorial_Visualizing_Starlink_Location_History_in_DataMiner
       - name: Low-Code Apps
         topicUid: Application_framework

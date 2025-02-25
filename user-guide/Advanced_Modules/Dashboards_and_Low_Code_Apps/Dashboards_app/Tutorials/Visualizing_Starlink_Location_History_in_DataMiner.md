@@ -2,17 +2,17 @@
 uid: Tutorial_Visualizing_Starlink_Location_History_in_DataMiner
 ---
 
-# Visualizing Starlink Location History in DataMiner
+# Visualizing the Starlink location history in DataMiner
 
-In this tutorial, you will explore how to leverage the Starlink Enterprise product solution to monitor and visualize real-time data as well as visualize historical location data.
+In this tutorial, you will explore how to leverage the Starlink Enterprise solution to monitor and visualize both real-time data and historical location data, by means of ad hoc data sources in a DataMiner dashboard.
 
 Expected duration: 30 minutes
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created with the DataMiner 10.5.2 web apps.
 
-> [!TIP]
-> See also: [Kata #59: Visualizing Starlink Location History in DataMiner](https://community.dataminer.services/courses/kata-59/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+<!-- > [!TIP]
+> See also: [Kata #59: Visualizing Starlink Location History in DataMiner](https://community.dataminer.services/courses/kata-59/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) -->
 
 ## Prerequisites
 
@@ -22,69 +22,84 @@ Expected duration: 30 minutes
 ## Overview
 
 - [Step 1: Install the Starlink Enterprise package](#step-1-install-the-starlink-enterprise-package)
-- [Step 2: Explore the app and data-sets](#step-2-explore-the-app-and-data-sets)
-- [Step 3: Duplicate the app and let's begin](#step-3-duplicate-the-app-and-lets-begin)
+- [Step 2: Explore the app and data sets](#step-2-explore-the-app-and-data-sets)
+- [Step 3: Create a duplicate app with custom components](#step-3-create-a-duplicate-app-with-custom-components)
 - [Step 4: Create the GQI query to fetch the history location data](#step-4-create-the-gqi-query-to-fetch-the-history-location-data)
 - [Step 5: Test the GQI result by a table](#step-5-test-the-gqi-result-by-a-table)
 - [Step 6: Visualize the history data on the maps component](#step-6-visualize-the-history-data-on-the-maps-component)
 
 ## Step 1: Install the Starlink Enterprise package
 
-1. Go to <https://catalog.dataminer.services/details/66a4c259-0fb1-4c27-aede-8bbd3a4925d0>.
+1. Go to the [Starlink Enterprise](https://catalog.dataminer.services/details/66a4c259-0fb1-4c27-aede-8bbd3a4925d0) solution in the DataMiner Catalog.
 
-1. Click the *Deploy* button to deploy the *Starlink Enterprise* package on your DMA.
+1. Click the *Deploy* button to deploy the package on your DMA.
 
    While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
 
 1. Go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
 
 1. Check if you can see the *Starlink Enterprise* app listed under *SatOps*.
+
    ![Apps Overview: SatOps](~/user-guide/images/Tutorial_Starlink_History_Locations_LCA.png)
 
-   When the One-click-deployment is complete, the environment will already have the DEMO data readily available.
-
 > [!TIP]
-> In case you have a Starlink Enterprise business account: Start exploring **your own data** right-away.
->
->Follow the step-by-step guide to help you get started: [Starlink Enterprise Connector Documentation](https://docs.dataminer.services/connector/doc/Starlink_Enterprise.html#initialization).
+> The deployed app will include demo data, but in case you have a Starlink Enterprise business account, you can already start exploring **your own data** right-away. Refer to the [Starlink Enterprise Connector documentation](https://docs.dataminer.services/connector/doc/Starlink_Enterprise.html#initialization) to get started.
 
-## Step 2: Explore the app and data-sets
+## Step 2: Explore the app and data sets
 
-1. Go to DataMiner Cube and open the element *STRLE Starlink Enterprise*.
-1. On the User Terminals page filter down on the terminal *Skyline demo cruise_UT***74d101*
- ![Cube: STRLE Starlink Enterprise - User Terminals](~/user-guide/images/Tutorial_Starlink_History_Locations_dataset-Cube.png)
+1. In the DataMiner Cube Surveyor, navigate to *DataMiner Catalog* > *Apps & Solutions* > *Starlink Enterprise* > *Starlink API (STRLE)* and open the element *STRLE Starlink Enterprise*.
 
-1. Opening up the trend window you should see history data for the past 8-9 days.
-Remember this data is only here for this use-case to work with on the terminal *Skyline demo cruise_UT*74d101*. Once operating with live data from your own Starlink Enterprise account you will of course have history data on all your mobile terminals.
+1. On the *User Terminals* page, use the filter box at the top to filter the table so that only the terminal *Skyline demo cruise_UT\*74d101* is shown.
 
- ![Cube: Trending - Latitude and Longitude](~/user-guide/images/Tutorial_Starlink_History_Locations_dataset-Trending.png)
+   ![Cube: STRLE Starlink Enterprise - User Terminals](~/user-guide/images/Tutorial_Starlink_History_Locations_dataset-Cube.png)
 
-## Step 3: Duplicate the app and let's begin
+1. Click the trend icon in the *Latitude* column.
 
-To get to a good starting point for the rest of this tutorial, you ideally start by working in a duplicate version of the app. This way you allow compatibility for the standard product solution track. (Alowing to deploy newer versions of the product solution that will come over time via the catalog), while still maintaining your own custom version of the app.
+   This will show history data for the past 8 to 9 days.
 
-1. Edit your app and start of by duplicating the *Statistics* page.
-Let's leave the new page as being *hidden*, as the page will only be useful if you made a user terminal selection.
-   ![Duplicate Statistics page](~/user-guide/images/Tutorial_Starlink_History_Locations_duplicate-page.png)
+Note that the data for the *Skyline demo cruise_UT\*74d101* terminal is demo data meant for testing purposes. If you start working with live data from your own Starlink Enterprise account, you will be able to view actual history data for your own mobile terminals.
 
-1. Let's rename the page to *Location Tracking* and give it a nice icon.
-   ![Page renaming](~/user-guide/images/Tutorial_Starlink_History_Locations_renamedPage.png)
-Duplicating the page to get to this point has the advantage that you now already have the default title and header KPIs available for our selected *User terminal* (as visualized here above). Keeping the app layout uniform.
+![Cube: Trending - Latitude and Longitude](~/user-guide/images/Tutorial_Starlink_History_Locations_dataset-Trending.png)
 
-1. Remove the other components from that page as we don't need these.
+## Step 3: Create a duplicate app with custom components
+
+To get to a good starting point for the rest of this tutorial, you will first need to create a duplicate version of the app. This way, you allow compatibility with the standard product solution track, so that you will be able to deploy newer versions of the product solution when they become available in the Catalog, while still maintaining your own custom version of the app.
+
+1. On the root page of your DataMiner System, hover over the Starlink Enterprises icon and click *...* > *Duplicate*.
+
+   ![Duplicate the Starlink Enterprises app](~/user-guide/images/Tutorial_Starlink_History_Locations_duplicate_app.png)
+
+   This will create a duplicate and immediately open it in edit mode.
+
+1. Click the *...* button for the *Statistics* page, and select *Duplicate*.
+
+   By default, this page will be set to be hidden (i.e. not shown in the sidebar). You can leave it that way, as the page will only be useful a user terminal selection has been made.
+
+   ![Duplicate the Statistics page](~/user-guide/images/Tutorial_Starlink_History_Locations_duplicate-page.png)
+
+1. At the top of the page configuration pane to the right of the sidebar, rename the page to *Location Tracking*, and then select a suitable icon.
+
+   ![Rename the page](~/user-guide/images/Tutorial_Starlink_History_Locations_renamedPage.png)
+
+   Because you duplicated the page, it already contains the default title and header KPIs available for the selected user terminal (as shown above), keeping the app layout uniform.
+
+1. Remove the other components (i.e. the line & area chart and gauge components) from the page, as these will not be needed.
 
 1. Add a *Time range* component onto your page. This will be necessary in a later step to provide the GQI query the time window of interest to visualize the location tracking.
+
    ![Add Time Range](~/user-guide/images/Tutorial_Starlink_History_Locations_TimeRangeComponent.png)
 
 1. Add a button to navigate to our newly created page. Go onto the *Overview* page and edit the panel *Terminal Info*.
    ![Edit Overview Side Panel](~/user-guide/images/Tutorial_Starlink_History_Locations_editPanel.png)
 
 1. Duplicate one of the buttons at the bottom that brings you to the *Statistics* or *Data Usage* pages.
-Configure via the settings on the button to open the newly created page *Location Tracking*.
+
+   Configure via the settings on the button to open the newly created page *Location Tracking*.
+
    ![Edit Overview Side Panel](~/user-guide/images/Tutorial_Starlink_History_Locations_openPageButton.png)
 
 > [!NOTE]
-> In case you don't see the KPIs being loaded while editing, most likely you did not yet select a terminal on the map from the *Overview* page (or selected a row from the *User Terminals* page.)
+> In case you do not see the KPIs being loaded while editing, most likely you did not yet select a terminal on the map from the *Overview* page (or selected a row from the *User Terminals* page.)
 
 ## Step 4: Create the GQI query to fetch the history location data
 
