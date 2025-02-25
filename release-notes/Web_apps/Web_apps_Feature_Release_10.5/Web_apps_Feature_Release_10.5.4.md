@@ -207,6 +207,12 @@ These updated colors will automatically be applied to all existing dashboards an
 
 Also, the icon of the *Column & bar chart* component has been redesigned.
 
+#### Dashboards/Low-Code Apps - Maps, Timeline & Grid components: Templates have been updated [ID 42322]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The default templates of the *Maps*, *Timeline* and *Grid* components have been updated.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
