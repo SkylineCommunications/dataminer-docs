@@ -305,3 +305,16 @@ Some characters, such as angle brackets and backslashes, are used as part of the
 For example, to make sure `<script name>` is displayed correctly, specify `\<script name>` instead.
 
 This is not necessary in text that is formatted as inline code or as a code block (using backquotes).
+
+## Adding Comments
+
+To add a comment in Markdown, you can use the following syntax:
+```md
+<!-- This is a comment and will not be displayed in the rendered output -->
+```
+
+### When is this useful?
+- Adding notes for future edits without showing them in the final document.
+- Temporarily hiding content without deleting it.
+- Leaving comments for collaboration when working on shared Markdown files.
+  
