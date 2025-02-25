@@ -215,3 +215,9 @@ When, while a number of elements were selected in the *Element Swarming* window,
 <!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
 
 When, while configuring a *Send email* action, you had attached a dashboard, the *Configure* button would incorrectly not appear.
+
+#### Visual Overview: DataMiner Cube could stop working when Children shapes were being updated [ID 42304]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When *Children* shapes were being updated, in some cases, DataMiner Cube could stop working.
