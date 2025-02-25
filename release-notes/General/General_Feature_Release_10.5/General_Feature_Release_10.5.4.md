@@ -299,6 +299,15 @@ In some cases, INF (infinity) values would incorrectly get stored in the databas
 
 When a parent shape with a conditional show/hide setting was hidden, up to now, the clickable regions of its hidden child shapes would incorrectly remain active. In other words, users would incorrectly be able to still click child shapes after they had been hidden.
 
+#### GQI DxM: Killed child processes would not automatically start up again [ID 42091]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- Not added to MR 10.6.0 -->
+
+When the GQI DxM is being used, ad hoc data sources and custom operators each run in their own child process. Up to now, when such a child process was killed, it would incorrectly not automatically start up again when a query needed it. The entire GQI DxM had to be restarted.
+
+From now on, when a child process is killed, it will automatically start up again as soon as a new query request is received that wants to use it.
+
 #### Scheduler: Dashboard exported via an email action would incorrectly be displayed as plain text instead of HTML [ID 42117]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
