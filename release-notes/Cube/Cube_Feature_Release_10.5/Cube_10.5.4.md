@@ -95,6 +95,21 @@ Note that these suggestion events are not editable. Clearing one of them will cl
 
 Up to now, when you closed a card in which a Visio page was used a background page, an SPI entry containing the loading time of the background page would be logged in the *SLClient.txt* log file. From now on, background page loading times will no longer be logged.
 
+#### A number of UI text strings have been made more translation-friendly [ID 42285]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In the Cube UI, the following text strings have been adjusted to allow a more natural translation to other languages:
+
+- In the right-click menu of the Surveyor, and in the menu and confirmation boxes that allow you to select a new alarm template:
+
+  - `<No Monitoring>`
+  - `<New alarm template>`
+
+- The title of the dialog box that allows you to add an element to a service or to a group of a service:
+
+  - `Add element to service xxx`
+
 #### System Center - Database: No longer possible to migrate the general database to Cassandra [ID 42305]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
