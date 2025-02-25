@@ -45,6 +45,7 @@ keywords: low-code, low code, lowcode
 | [Using flows in a low-code app](xref:Tutorial_Apps_Flows) | Use flows to only load items inside of the timeline viewport and reuse panels. |
 | [Using variables in a low-code app](xref:Tutorial_Apps_Variables) | Use a variable to dynamically filter elements in a low-code app based on their state. |
 | [Creating a custom event scheduler low-code app](xref:Tutorial_Custom_Event_Scheduler_LCA) | Create an event scheduler app. |
+| [Visualizing the Starlink location history in DataMiner](xref:Tutorial_Visualizing_Starlink_Location_History_in_DataMiner) | Visualize the location history of Starlink terminals on a map, leveraging ad hoc data sources. |
 
 ### GQI tutorials
 
