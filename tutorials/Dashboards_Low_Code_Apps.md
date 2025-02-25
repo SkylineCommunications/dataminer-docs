@@ -16,7 +16,6 @@ keywords: low-code, low code, lowcode
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
 | [Creating an anomaly overview dashboard](xref:Creating_Anomaly_Overview_Dashboard) | Create a dashboard that shows an overview of behavioral change event data. |
 | [Creating an alarm dashboard for a daily DMS health check](xref:Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check) | Create an alarm overview dashboard that can be used for a daily check of health of your DataMiner System. |
-| [Visualizing the Starlink location history in DataMiner](xref:Tutorial_Visualizing_Starlink_Location_History_in_DataMiner) | Visualize the location history of Starlink terminals on a map, leveraging ad hoc data sources. |
 
 > [!NOTE]
 > Most of the content in the Dashboards tutorials also applies for Low-Code Apps, as the functionality of these modules overlaps. Components that can be used in a dashboard can usually be used in exactly the same way in a low-code app. Consequently, it can occur that a low-code app is used as an example within a Dashboards tutorial.
@@ -46,6 +45,7 @@ keywords: low-code, low code, lowcode
 | [Using flows in a low-code app](xref:Tutorial_Apps_Flows) | Use flows to only load items inside of the timeline viewport and reuse panels. |
 | [Using variables in a low-code app](xref:Tutorial_Apps_Variables) | Use a variable to dynamically filter elements in a low-code app based on their state. |
 | [Creating a custom event scheduler low-code app](xref:Tutorial_Custom_Event_Scheduler_LCA) | Create an event scheduler app. |
+| [Visualizing the Starlink location history in DataMiner](xref:Tutorial_Visualizing_Starlink_Location_History_in_DataMiner) | Visualize the location history of Starlink terminals on a map, leveraging ad hoc data sources. |
 
 ### GQI tutorials
 

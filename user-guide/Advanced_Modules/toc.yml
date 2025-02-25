@@ -312,8 +312,6 @@ items:
                 topicUid: Creating_a_parameter_table_connected_to_an_element_feed
               - name: Creating an alarm dashboard for a daily DMS health check
                 topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
-              - name: Visualizing the Starlink location history in DataMiner
-                topicUid: Tutorial_Visualizing_Starlink_Location_History_in_DataMiner
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
@@ -380,6 +378,8 @@ items:
                 topicUid: Tutorial_Apps_Variables
               - name: Creating a custom event scheduler low-code app
                 topicUid: Tutorial_Custom_Event_Scheduler_LCA
+              - name: Visualizing the Starlink location history in DataMiner
+                topicUid: Tutorial_Visualizing_Starlink_Location_History_in_DataMiner
       - name: Configuring components
         topicUid: Configuring_components
         items:

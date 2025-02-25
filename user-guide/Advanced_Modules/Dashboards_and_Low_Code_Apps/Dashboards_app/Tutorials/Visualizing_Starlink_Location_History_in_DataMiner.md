@@ -4,7 +4,7 @@ uid: Tutorial_Visualizing_Starlink_Location_History_in_DataMiner
 
 # Visualizing the Starlink location history in DataMiner
 
-In this tutorial, you will explore how to leverage the Starlink Enterprise solution to monitor and visualize both real-time data and historical location data, by means of ad hoc data sources in a DataMiner dashboard.
+In this tutorial, you will explore how to leverage the Starlink Enterprise solution to monitor and visualize both real-time data and historical location data, by means of ad hoc data sources in a DataMiner low-code app.
 
 Expected duration: 30 minutes
 
@@ -73,11 +73,11 @@ To get to a good starting point for the rest of this tutorial, you will first ne
 
 1. Click the *...* button for the *Statistics* page, and select *Duplicate*.
 
-   By default, this page will be set to be hidden (i.e. not shown in the sidebar). You can leave it that way, as the page will only be useful a user terminal selection has been made.
+   By default, this page will be set to be hidden (just like the *Statistics* page). You can leave it that way, as the page will only be useful when a user terminal selection has been made.
 
    ![Duplicate the Statistics page](~/user-guide/images/Tutorial_Starlink_History_Locations_duplicate-page.png)
 
-1. At the top of the page configuration pane to the right of the sidebar, rename the page to *Location Tracking*, and then select a suitable icon.
+1. At the top of the page configuration pane (to the right of the sidebar), rename the page to *Location Tracking*, and then select a suitable icon.
 
    ![Rename the page](~/user-guide/images/Tutorial_Starlink_History_Locations_renamedPage.png)
 
@@ -85,21 +85,32 @@ To get to a good starting point for the rest of this tutorial, you will first ne
 
 1. Remove the other components (i.e. the line & area chart and gauge components) from the page, as these will not be needed.
 
-1. Add a *Time range* component onto your page. This will be necessary in a later step to provide the GQI query the time window of interest to visualize the location tracking.
+1. Add a *Time range* component onto your page.
+
+   This will be necessary in a later step to provide the GQI query with the time window of interest to visualize the location tracking.
 
    ![Add Time Range](~/user-guide/images/Tutorial_Starlink_History_Locations_TimeRangeComponent.png)
 
-1. Add a button to navigate to our newly created page. Go onto the *Overview* page and edit the panel *Terminal Info*.
-   ![Edit Overview Side Panel](~/user-guide/images/Tutorial_Starlink_History_Locations_editPanel.png)
+1. Add a button to navigate to the newly created page:
 
-1. Duplicate one of the buttons at the bottom that brings you to the *Statistics* or *Data Usage* pages.
+   1. Go to the *Overview* page, expand the *Panels* section, and click the pencil icon to edit the panel *Terminal Info*.
 
-   Configure via the settings on the button to open the newly created page *Location Tracking*.
+      ![Edit Overview Side Panel](~/user-guide/images/Tutorial_Starlink_History_Locations_editPanel.png)
 
-   ![Edit Overview Side Panel](~/user-guide/images/Tutorial_Starlink_History_Locations_openPageButton.png)
+   1. Duplicate one of the buttons at the bottom of the panel, and move the new button to be next to the existing buttons.
+
+      ![Duplicate a button](~/user-guide/images/Tutorial_Starlink_History_Locations_duplicate_button.png)
+
+   1. While the button is selected, go to the *Layout* pane, change *Label* to *Location Tracking*, and select a suitable icon.
+
+   1. While the button is selected, go to the *Settings* pane and click *Configure actions*.
+
+   1. In the *Page* box, select the new *Location Tracking* page, and then click *Ok*.
+
+      ![Edit Overview Side Panel](~/user-guide/images/Tutorial_Starlink_History_Locations_openPageButton.png)
 
 > [!NOTE]
-> In case you do not see the KPIs being loaded while editing, most likely you did not yet select a terminal on the map from the *Overview* page (or selected a row from the *User Terminals* page.)
+> If no terminal is selected on the map on the *Overview* page or on the *User Terminals* page, no KPIs will be displayed in the panel while you edit it.
 
 ## Step 4: Create the GQI query to fetch the history location data
 
