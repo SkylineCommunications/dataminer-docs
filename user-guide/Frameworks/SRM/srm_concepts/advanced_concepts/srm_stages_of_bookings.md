@@ -16,7 +16,7 @@ Note that a distinction must be made between the booking stages in the core soft
 1. [Running of booking events](#running-of-booking-events)
 1. [Booking end](#booking-end)
 
-For what happens when a booking is updated after the start actions have run, see [Updating bookings that are already running](#updating-bookings-that-are-already-running)
+For what happens when a booking is updated after the start actions have run, see [Updating bookings that are already running](#updating-bookings-that-are-already-running).
 
 ## Booking creation
 
@@ -25,7 +25,7 @@ When a booking is created, a value is assigned to the `HostingAgentID` property,
 In order to update the hosting Agent of a booking after it has been created, the booking must be [swarmed](xref:SwarmingBookings) to a different Agent. A booking can be swarmed while the currently configured hosting Agent is offline, but any other update to a booking requires its hosting Agent to be online.
 
 > [!IMPORTANT]
-> If the hosting Agent is offline when any orchestration must happen, such as the start actions, stop actions, or the triggering of a booking event, the orchestration will not happen. The hosting Agent will move the booking to the `Interrupted` state when it comes back online, and any remaining events will not be run.
+> If the hosting Agent is offline when any orchestration must happen, such as the start actions, stop actions, or the triggering of a booking event, the orchestration will not happen. The hosting Agent will move the booking to the *Interrupted* state when it comes back online, and any remaining events will not be run.
 
 ## Registration of events and actions
 
@@ -48,42 +48,44 @@ The hosting Agent by default waits for one minute for the activation of the reso
 
 If there are any events configured with a start time before the booking start time, these events will run before the booking is started.
 
-If the SRM framework has been deployed, there are no such events, unless an event is configured in the [custom events tab](xref:Service_Orchestration_custom_events) that needs to run before the booking start.
+If the SRM framework has been deployed, there are no such events unless an event is configured in the [custom events tab](xref:Service_Orchestration_custom_events) that needs to run before the booking start.
 
 > [!NOTE]
 > If the pre-event is configured at a time before the function resource activation, the pre-event will run before the function resources are active.
 
 ## Booking start
 
-After the functions have either been successfully activated or the activation has timed out, the hosting Agent attempts to start the booking. If the function resources are not yet activated, the start of the booking will fail.
+After the functions have either been successfully activated or the activation has timed out, the hosting Agent attempts to start the booking.
 
-In such cases, the Resource Manager keeps the booking in the `Confirmed` status and triggers the script configured to run when the booking start fails (if any). See also [this page](xref:Service_Orchestration_service_states#configuring-a-custom-script-in-case-orchestration-fails) for details on how to configure this script if the SRM solution is used. When using the SRM solution, the booking lifecycle will also transition to the failed state.
+If the function resources have not been activated yet, the start of the booking will fail. In such cases, the Resource Manager keeps the booking in the *Confirmed* state and triggers the script configured to run when the booking start fails (if any). For details on how to configure this script when you use the SRM framework, see [Configuring a custom script in case orchestration fails](xref:Service_Orchestration_service_states#configuring-a-custom-script-in-case-orchestration-fails). When the SRM framework is used, the booking life cycle will also transition to the failed state.
 
-The start of a booking can fail if:
+The start of a booking can also fail if:
 
 - A required service already exists with the same name.
 - The creation of the DCF links fails. The function manager creates DCF links between resources based on the DCF information in the parent element and the service definition associated with the booking. This behavior can be disabled in the [function resource settings](xref:Function_resource_settings#function-resource-settings).
-- An unexpected exception occurs during the start. For example if saving the booking with the ongoing status fails because there is no connection to the database.
+- An unexpected exception occurs during the start, for example if saving the booking with the ongoing status fails because there is no connection to the database.
 
 ## Running of booking events
 
-Once the booking transitions to the `Ongoing` state, the hosting Agent will trigger event scripts at the specified timings. If the timing of multiple events is in the past by the time the booking becomes ongoing, the event scripts will run in the order of their configured time. By default, these event scripts run asynchronously, meaning the hosting Agent will trigger them without waiting for completion.
-This asynchronous behavior means multiple scripts will run concurrently. After triggering the script, the `HasRun` property of the event in the `ReservationInstance` object is set to `true`, indicating the event has been triggered and will not be triggered again.
+Once the booking transitions to the *Ongoing* state, the hosting Agent will trigger event scripts at the specified timings. If the timing of multiple events is in the past by the time the booking becomes ongoing, the event scripts will run in the order of their configured time.
 
-When using the SRM solution, some events are added by default to transition the booking lifecycle state. Any configured [custom events](xref:Service_Orchestration_custom_events) will also be event scripts on the booking.
+By default, these event scripts run asynchronously, which means that the hosting Agent will trigger them without waiting for completion.
+This asynchronous behavior means multiple scripts will run concurrently. After a script is triggered, the `HasRun` property of the event in the `ReservationInstance` object is set to `true`, indicating that the event has been triggered and will not be triggered again.
+
+When the SRM framework is used, some events are added by default to transition the booking life cycle state. Any configured [custom events](xref:Service_Orchestration_custom_events) will also be event scripts on the booking.
 
 ## Booking end
 
 When the booking reaches its configured end time, the hosting Agent will stop the booking. During this process:
 
 - The DCF links are removed, if DCF link creation is enabled in the [function resource settings](xref:Function_resource_settings#function-resource-settings).
-- Function DVEs may be disabled depending on the threshold set in the [function resource settings](xref:Function_resource_settings#function-resource-settings), if these DVEs are not in use by a different booking.
-  
+- Function DVEs may be disabled depending on the threshold set in the [function resource settings](xref:Function_resource_settings#function-resource-settings), and if these DVEs are not in use by a different booking.
+
 The hosting Agent will then update the status of the `ReservationInstance` object to `Ended`.
 
 ## Updating bookings that are already running
 
-If a booking is updated after the start actions have already been run, the booking may go back to the confirmed state and start again. Such a booking restart occurs if any of the following conditions are true:
+If a booking is updated after the start actions have already been run, the booking may go back to the confirmed state and start again. Such a booking restart occurs if any of the following conditions is true:
 
 - The timing of the booking is adjusted.
 - There are new resources in the booking.
