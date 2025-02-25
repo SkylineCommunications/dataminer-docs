@@ -38,6 +38,17 @@ For more information about running elements in isolation mode, see [Elements can
 
 ## Changes
 
+### Breaking changes
+
+#### Legacy InterClient feature has been removed [ID 42263]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The legacy *InterClient* feature has now been removed from DataMiner Cube.
+
+> [!IMPORTANT]
+> Existing Automation scripts or connectors that are currently still using InterClient calls will no longer work. They should be updated as soon as possible.
+
 ### Enhancements
 
 #### System Center: Credentials library is now fully aware of all supported SNMPv3 authentication and encryption algorithms [ID 41945]
