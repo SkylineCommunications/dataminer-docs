@@ -12,6 +12,10 @@ This action will perform an SNMP set operation.
 
 ### Attributes
 
+#### On@id
+
+Specifies the ID(s) of the parameters.
+
 #### Type@nr
 
 (optional): Specifies the connection. Default: 0.
@@ -19,6 +23,10 @@ This action will perform an SNMP set operation.
 ## On group
 
 ### Attributes
+
+#### On@id
+
+Specifies the ID of the group.
 
 #### Type@nr (optional)
 

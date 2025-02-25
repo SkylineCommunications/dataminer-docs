@@ -21,6 +21,12 @@ uid: General_Main_Release_10.4.0_CU13
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### Security enhancements [ID 41913]
+
+<!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of security enhancements have been made.
+
 #### Service & Resource Management: Enhanced handling of locked files when activating or deactivating functions [ID 41978]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
@@ -34,6 +40,12 @@ A number of enhancements have been made to the ProtocolFunctionManager with rega
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.2 -->
 
 Because of an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
+
+#### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
 
 #### Cassandra: Problem with incorrect gc_grace_seconds values [ID 41939]
 
@@ -76,3 +88,22 @@ In some cases, it would not be possible to simultaneously update multiple TTL se
 When the SLASPConnection process failed to connect to NATS, in some cases, run-time errors could be thrown.
 
 A number of enhancements have now been made to avoid run-time errors to be thrown when SLASPConnection process fails to connect to NATS.
+
+#### MessageBroker: Subscriptions that had been disposed of would incorrectly get recreated [ID 42164]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
+
+#### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When, in the *SLNetClientTest* tool, you tried to connect to a DataMiner Agent using external authentication via SAML, the following error message would appear:
+
+`Unable to load DLL 'WebView2Loader.dll': The specified module could not be found.`
+
+The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packages.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

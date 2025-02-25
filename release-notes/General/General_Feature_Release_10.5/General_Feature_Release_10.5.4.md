@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.4
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
 
 ## New features
 
@@ -34,7 +34,7 @@ uid: General_Feature_Release_10.5.4
 
 Up to now, the *ProcessOptions* section of the *DataMiner.xml* file allowed you to configure that an element had to run in its own SLProtocol and SLScripting processes, and in a *protocol.xml* file, the *RunInSeparateInstance* tag allowed you to do the same. However, it was only possible to configure this for all elements using a particular protocol.
 
-From now on, the new *Run in isolation mode* feature will allow you to also configure this for one single element.
+From now on, the new *Run in isolation mode* feature will allow you to also configure this for one single element. For more information on how to configure this in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
 As creating additional SLProtocol processes has an impact on the resource usage of a DataMiner Agent, a hard limit of 50 SLProtocol processes has been introduced. If, when an element starts, an attempt to create a new SLProtocol process fails because 50 processes are already running, the element will be hosted by an existing SLProtocol process and its matching SLScripting process, regardless of how the *Run in isolation mode* was configured.
 
@@ -51,8 +51,6 @@ For example, if 15 SLProtocol processes are configured in the *DataMiner.xml* fi
 This means, that some elements will not be able to run in isolation mode, and some SLProtocol processes will not be able to host elements that are not running in isolation mode. In each of those cases, an alarm will be generated.
 
 In the DataMiner.xml file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
-
-For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]
 
@@ -87,7 +85,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection: New messages to add, update or remove parameter groups in the configuration file [ID 42181]
+#### Relational anomaly detection: New messages to add, update or remove parameter groups in the configuration file [ID 42181] [ID 42276]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
@@ -101,9 +99,46 @@ The following messages can be used to add, update or remove a parameter group fr
 
 - `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
 
+> [!NOTE]
+> Names of RAD parameter groups will be processed case-insensitive.
+
+#### Relational anomaly detection: New group argument 'minimumAnomalyDuration' [ID 42283]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+Per DataMiner Agent, the RAD parameter groups must be configured in the *C:\\Skyline DataMiner\\Analytics\\RelationalAnomalyDetection.xml* file, which must be formatted as follows.
+
+```xml
+<?xml version="1.0" ?>
+  <RelationalAnomalyDetection>
+    <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]" minimumAnomalyDuration="[THRESHOLD2]">
+      <Instance>[INSTANCE1]</Instance>
+      <Instance>[INSTANCE2]</Instance>
+      [... one <Instance> tag per parameter in the group]
+    </Group>
+    [... one <Group> tag per group of parameters that should be monitored by RAD]
+</RelationalAnomalyDetection>
+```
+
+Each `<Group>` tag can now have an additional `minimumAnomalyDuration` argument.
+
+This optional argument will specify the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. Default value: 5
+
+- When `minimumAnomalyDuration` is set to a value greater than 5, the deviating behavior will need to last longer before an anomaly event is triggered.
+- `minimumAnomalyDuration` can be set to a non-default value, for example, to filter out noise events caused by a single, short, harmless outlying value in the data.
+- If `minimumAnomalyDuration` is either not set or set to a value less than or equal to 5, an anomaly event will be generated as soon as values deviate sufficiently from the RAD model.
+
 ## Changes
 
 ### Enhancements
+
+#### Security enhancements [ID 41425] [ID 41913] [ID 42104]
+
+<!-- 41425: MR 10.6.0 - FR 10.5.4 -->
+<!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of security enhancements have been made.
 
 #### Enhanced performance when updating subscriptions and when checking events against the set of active subscriptions [ID 41822]
 
@@ -145,13 +180,6 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 > [!NOTE]
 > The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
 
-#### Security enhancements [ID 41425] [ID 42104]
-
-<!-- 41425: MR 10.6.0 - FR 10.5.4 -->
-<!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
-
-A number of security enhancements have been made.
-
 #### Disabling an SLAnalytics feature will now clear all open alarms and suggestion events associated with that feature [ID 42096]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
@@ -170,11 +198,19 @@ When, in DataMiner Cube, you go to *System Center > System settings > Analytics 
 
 Because of a number of enhancements, after a RAD parameter group is configured, the first anomaly score for that group will be calculated faster than before.
 
+#### STaaS: Enhanced granularity when migrating custom data to STaaS [ID 42219]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When you migrate data of datatype *CustomData* from either Cassandra Single or Cassandra Cluster to STaaS (using e.g. the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02)), you can now indicate exactly which data you want to have migrated.
+
+For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* datatype as well as the *Analytics* datatype.
+
 ### Fixes
 
 #### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
 
-<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
 
@@ -269,6 +305,12 @@ When the SLASPConnection process failed to connect to NATS, in some cases, run-t
 
 A number of enhancements have now been made to avoid run-time errors to be thrown when SLASPConnection process fails to connect to NATS.
 
+#### MessageBroker: Subscriptions that had been disposed of would incorrectly get recreated [ID 42164]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
+
 #### Problem with SLAnalytics due to MessageBroker reconfiguring itself [ID 42207]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
@@ -284,3 +326,16 @@ After a DataMiner Agent was added to or removed from a DMS, in some cases, SLAna
 The `GetMADDataMessage` allows you to request anomaly scores during a specified time range for a particular RAD parameter group.
 
 However, up to now, the response would not contain the anomaly score and the parameter values associated with the last trend data entry.
+
+#### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When, in the *SLNetClientTest* tool, you tried to connect to a DataMiner Agent using external authentication via SAML, the following error message would appear:
+
+`Unable to load DLL 'WebView2Loader.dll': The specified module could not be found.`
+
+The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packages.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

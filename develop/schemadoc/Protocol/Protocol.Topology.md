@@ -4,7 +4,7 @@ uid: Protocol.Topology
 
 # Topology element
 
-Defines a topology. In this element, you can specify several Cell elements, each representing a cell in the diagram displayed in the CPE Manager.
+Defines a topology. In this element, you can specify several Cell elements, each representing a cell in the diagram displayed in the EPM Manager.
 
 ## Parent
 
@@ -14,7 +14,7 @@ Defines a topology. In this element, you can specify several Cell elements, each
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Cell](xref:Protocol.Topology.Cell)|[0, *]|Specifies a cell within a CPE topology.|
+|&nbsp;&nbsp;[Cell](xref:Protocol.Topology.Cell)|[0, *]|Specifies a cell within an EPM topology.|
 
 ## Attributes
 

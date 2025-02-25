@@ -282,7 +282,7 @@ When the above-mentioned upgrade action is executed, it will log the name and th
 
 Up to now, the *ProcessOptions* section of the *DataMiner.xml* file allowed you to configure that an element had to run in its own SLProtocol and SLScripting processes, and in a *protocol.xml* file, the *RunInSeparateInstance* tag allowed you to do the same. However, it was only possible to configure this for all elements using a particular protocol.
 
-From now on, the new *Run in isolation mode* feature will allow you to also configure this for one single element.
+From now on, the new *Run in isolation mode* feature will allow you to also configure this for one single element. For more information on how to configure this in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
 As creating additional SLProtocol processes has an impact on the resource usage of a DataMiner Agent, a hard limit of 50 SLProtocol processes has been introduced. If, when an element starts, an attempt to create a new SLProtocol process fails because 50 processes are already running, the element will be hosted by an existing SLProtocol process and its matching SLScripting process, regardless of how the *Run in isolation mode* was configured.
 
@@ -424,11 +424,13 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42181: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42276: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42283: MR 10.6.0 - FR 10.5.4 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -442,13 +444,13 @@ The configuration file must be formatted as follows.
 
 ```xml
 <?xml version="1.0" ?>
-<RelationalAnomalyDetection>
-  <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]">
-    <Instance>[INSTANCE1]</Instance>
-    <Instance>[INSTANCE2]</Instance>
-    [... one <Instance> tag per parameter in the group]
-  </Group>
-  [... one <Group> tag per group of parameters that should be monitored by RAD]
+  <RelationalAnomalyDetection>
+    <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]" minimumAnomalyDuration="[THRESHOLD2]">
+      <Instance>[INSTANCE1]</Instance>
+      <Instance>[INSTANCE2]</Instance>
+      [... one <Instance> tag per parameter in the group]
+    </Group>
+    [... one <Group> tag per group of parameters that should be monitored by RAD]
 </RelationalAnomalyDetection>
 ```
 
@@ -459,6 +461,7 @@ The configuration file must be formatted as follows.
 | `name`         | The name of the parameter group.<br>This name must be unique, and will be used when a suggestion event is generated for the group in question. |
 | `updateModel`  | Indicates whether RAD should update its internal model of the relation between the parameters in the group.<br>- If set to "false", RAD will only do an initial training based on the data available at startup.<br>- If set to "true", RAD will update the model each time new data comes in. |
 | `anomalyScore` | Optional argument that can be used to specify the suggestion event generation threshold.<br>By default, this value will be set to 3. Higher values will result in less suggestion events, lower values will result in more suggestion events. |
+| `minimumAnomalyDuration` | Optional argument that specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. Default value: 5<br>- When `minimumAnomalyDuration` is set to a value greater than 5, the deviating behavior will need to last longer before an anomaly event is triggered.<br>- `minimumAnomalyDuration` can be set to a non-default value, for example, to filter out noise events caused by a single, short, harmless outlying value in the data.<br>- If `minimumAnomalyDuration` is either not set or set to a value less than or equal to 5, an anomaly event will be generated as soon as values deviate sufficiently from the RAD model. |
 
 **Parameter instance formats**
 
@@ -492,6 +495,9 @@ The following messages can be used to add, update or remove a parameter group fr
 - `RemoveMADParameterGroupMessage` allows you to remove a parameter group from the Relational Anomaly Detection configuration file.
 
 - `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
+
+> [!NOTE]
+> Names of RAD parameter groups will be processed case-insensitive.
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]
 

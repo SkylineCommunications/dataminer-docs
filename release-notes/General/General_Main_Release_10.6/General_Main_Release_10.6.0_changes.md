@@ -155,13 +155,15 @@ When, in DataMiner Cube, you go to *System Center > System settings > Analytics 
 - Proactive cap detection
 - Relational anomaly detection
 
-### Fixes
-
-#### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
+#### STaaS: Enhanced granularity when migrating custom data to STaaS [ID 42219]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
+When you migrate data of datatype *CustomData* from either Cassandra Single or Cassandra Cluster to STaaS (using e.g. the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02)), you can now indicate exactly which data you want to have migrated.
+
+For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* datatype as well as the *Analytics* datatype.
+
+### Fixes
 
 #### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
 
