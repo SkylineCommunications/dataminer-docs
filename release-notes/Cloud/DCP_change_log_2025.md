@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID_42340]
+### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
 A new call is available that allows users to get all the Catalog item types without the need to authenticate.
 
