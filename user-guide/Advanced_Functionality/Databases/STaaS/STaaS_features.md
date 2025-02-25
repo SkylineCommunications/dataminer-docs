@@ -57,7 +57,7 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 
 To **migrate existing data** to STaaS, the following limitations apply:
 
-- Migration is supported in 10.4.0 and the latest available 10.4.x feature release.
+- Migration is supported from DataMiner 10.4.0 [CU2]/10.4.5 onwards.<!-- RN 38884 -->
 
 - Migration of a setup with multiple OpenSearch/Elasticsearch clusters is not yet supported.
 
