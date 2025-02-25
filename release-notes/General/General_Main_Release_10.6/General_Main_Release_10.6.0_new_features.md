@@ -509,3 +509,14 @@ The information provided is similar to the information found in the *SLElementIn
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Service & Resource Management: Configuring the script to be executed when a reservation goes into quarantine [ID 42067]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+Up to now, when a reservation went into quarantine, the *SRM_QuarantineHandling* script would always be executed. From now on, when you create a reservation, you will be able to specify the name of the quarantine script to be executed in the `QuarantineHandlingScriptName` property.
+
+> [!NOTE]
+>
+> - If the `QuarantineHandlingScriptName` property contains Null, an empty string, white space, or "SRM_QuarantineHandling", the default *SRM_QuarantineHandling* script will be executed when the reservation goes into quarantine.
+> - If multiple reservations go into quarantine after a resource or reservation update, the scripts configured on the different reservations will each be executed once for the reservations in question.

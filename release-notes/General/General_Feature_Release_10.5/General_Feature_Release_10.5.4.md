@@ -52,17 +52,6 @@ This means, that some elements will not be able to run in isolation mode, and so
 
 In the DataMiner.xml file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
 
-#### SLNetClientTest tool: Element process ID information [ID 42013]
-
-<!-- MR 10.6.0 - FR 10.5.4 -->
-
-In the *SLNetClientTest* tool, you can now retrieve live information about the mapping between elements running on a DataMiner Agent and the processes they use, including SLProtocol and SLScripting. To do so, go to *Diagnostics > DMA > Element Process ID Info*.
-
-The information provided is similar to the information found in the *SLElementInProtocol.txt* log file. It will allow you to monitor and troubleshoot process usage in real time.
-
-> [!WARNING]
-> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
 #### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Scheduler app [ID 41970]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
@@ -84,6 +73,28 @@ If you do want such information events to be generated, you can add the `SkipInf
     ...
 </MaintenanceSettings>
 ```
+
+#### SLNetClientTest tool: Element process ID information [ID 42013]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+In the *SLNetClientTest* tool, you can now retrieve live information about the mapping between elements running on a DataMiner Agent and the processes they use, including SLProtocol and SLScripting. To do so, go to *Diagnostics > DMA > Element Process ID Info*.
+
+The information provided is similar to the information found in the *SLElementInProtocol.txt* log file. It will allow you to monitor and troubleshoot process usage in real time.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Service & Resource Management: Configuring the script to be executed when a reservation goes into quarantine [ID 42067]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+Up to now, when a reservation went into quarantine, the *SRM_QuarantineHandling* script would always be executed. From now on, when you create a reservation, you will be able to specify the name of the quarantine script to be executed in the `QuarantineHandlingScriptName` property.
+
+> [!NOTE]
+>
+> - If the `QuarantineHandlingScriptName` property contains Null, an empty string, white space, or "SRM_QuarantineHandling", the default *SRM_QuarantineHandling* script will be executed when the reservation goes into quarantine.
+> - If multiple reservations go into quarantine after a resource or reservation update, the scripts configured on the different reservations will each be executed once for the reservations in question.
 
 #### Relational anomaly detection: New messages to add, update or remove parameter groups in the configuration file [ID 42181] [ID 42276]
 
