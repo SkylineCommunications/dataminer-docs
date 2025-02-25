@@ -101,10 +101,12 @@ Up to now, when you closed a card in which a Visio page was used a background pa
 
 In the Cube UI, the following text strings have been adjusted to allow a more natural translation to other languages:
 
-- In the right-click menu of the Surveyor, and in the menu and confirmation boxes that allow you to select a new alarm template:
+- In the right-click menu of the Surveyor, and in the menu and confirmation boxes that allow you to select a new alarm template or trend template:
 
-  - `<No Monitoring>`
+  - `<No monitoring>`
   - `<New alarm template>`
+  - `<No trending>`
+  - `<New trend template>`
 
 - The title of the dialog box that allows you to add an element to a service or to a group of a service:
 
