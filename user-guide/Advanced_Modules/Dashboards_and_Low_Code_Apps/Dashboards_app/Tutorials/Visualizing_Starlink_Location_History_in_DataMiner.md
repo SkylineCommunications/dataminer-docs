@@ -9,7 +9,7 @@ In this tutorial, you will explore how to leverage the Starlink Enterprise solut
 Expected duration: 30 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created with the DataMiner 10.5.2 web apps.
+> The content and screenshots for this tutorial have been created with the DataMiner 10.5.3 web apps.
 
 <!-- > [!TIP]
 > See also: [Kata #59: Visualizing Starlink Location History in DataMiner](https://community.dataminer.services/courses/kata-59/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) -->
@@ -19,13 +19,16 @@ Expected duration: 30 minutes
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - Version 10.4.12 or higher of the DataMiner web apps.
 
+> [!NOTE]
+> Depending on your DataMiner version, you may need to activate the [ReportsAndDashboardsGQIMaps](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) soft-launch option to be able to use the maps component. See [Soft-launch options](xref:SoftLaunchOptions).
+
 ## Overview
 
 - [Step 1: Install the Starlink Enterprise package](#step-1-install-the-starlink-enterprise-package)
 - [Step 2: Explore the app and data sets](#step-2-explore-the-app-and-data-sets)
 - [Step 3: Create a duplicate app with custom components](#step-3-create-a-duplicate-app-with-custom-components)
 - [Step 4: Create the GQI query to fetch the history location data](#step-4-create-the-gqi-query-to-fetch-the-history-location-data)
-- [Step 5: Test the GQI result by a table](#step-5-test-the-gqi-result-by-a-table)
+- [Step 5: Test the GQI result using a table](#step-5-test-the-gqi-result-using-a-table)
 - [Step 6: Visualize the history data on the maps component](#step-6-visualize-the-history-data-on-the-maps-component)
 
 ## Step 1: Install the Starlink Enterprise package
@@ -40,10 +43,10 @@ Expected duration: 30 minutes
 
 1. Check if you can see the *Starlink Enterprise* app listed under *SatOps*.
 
-   ![Apps Overview: SatOps](~/user-guide/images/Tutorial_Starlink_History_Locations_LCA.png)
+   ![Apps overview: SatOps](~/user-guide/images/Tutorial_Starlink_History_Locations_LCA.png)
 
 > [!TIP]
-> The deployed app will include demo data, but in case you have a Starlink Enterprise business account, you can already start exploring **your own data** right-away. Refer to the [Starlink Enterprise Connector documentation](https://docs.dataminer.services/connector/doc/Starlink_Enterprise.html#initialization) to get started.
+> The deployed app will include demo data, but in case you have a Starlink Enterprise business account, you can already start exploring **your own data** right away. Refer to the [Starlink Enterprise Connector documentation](https://docs.dataminer.services/connector/doc/Starlink_Enterprise.html#initialization) to get started.
 
 ## Step 2: Explore the app and data sets
 
@@ -55,9 +58,10 @@ Expected duration: 30 minutes
 
 1. Click the trend icon in the *Latitude* column.
 
-   This will show history data for the past 8 to 9 days.
+   This will show history data for the past 8 to 9 days. This is the information that will be visualized in a more user-friendly way in a low-code app later in this tutorial.
 
-Note that the data for the *Skyline demo cruise_UT\*74d101* terminal is demo data meant for testing purposes. If you start working with live data from your own Starlink Enterprise account, you will be able to view actual history data for your own mobile terminals.
+> [!NOTE]
+> The data for the *Skyline demo cruise_UT\*74d101* terminal is demo data meant for testing purposes. If you start working with live data from your own Starlink Enterprise account, you will be able to view actual history data for your own mobile terminals.
 
 ![Cube: Trending - Latitude and Longitude](~/user-guide/images/Tutorial_Starlink_History_Locations_dataset-Trending.png)
 
@@ -73,7 +77,7 @@ To get to a good starting point for the rest of this tutorial, you will first ne
 
 1. Click the *...* button for the *Statistics* page, and select *Duplicate*.
 
-   By default, this page will be set to be hidden (just like the *Statistics* page). You can leave it that way, as the page will only be useful when a user terminal selection has been made.
+   By default, this page will be set to be hidden in the sidebar (just like the *Statistics* page). You can leave it that way, as the page will only be useful when a user terminal selection has been made.
 
    ![Duplicate the Statistics page](~/user-guide/images/Tutorial_Starlink_History_Locations_duplicate-page.png)
 
@@ -89,13 +93,13 @@ To get to a good starting point for the rest of this tutorial, you will first ne
 
    This will be necessary in a later step to provide the GQI query with the time window of interest to visualize the location tracking.
 
-   ![Add Time Range](~/user-guide/images/Tutorial_Starlink_History_Locations_TimeRangeComponent.png)
+   ![Add a time range component](~/user-guide/images/Tutorial_Starlink_History_Locations_TimeRangeComponent.png)
 
 1. Add a button to navigate to the newly created page:
 
    1. Go to the *Overview* page, expand the *Panels* section, and click the pencil icon to edit the panel *Terminal Info*.
 
-      ![Edit Overview Side Panel](~/user-guide/images/Tutorial_Starlink_History_Locations_editPanel.png)
+      ![Edit the Terminal Info panel](~/user-guide/images/Tutorial_Starlink_History_Locations_editPanel.png)
 
    1. Duplicate one of the buttons at the bottom of the panel, and move the new button to be next to the existing buttons.
 
@@ -107,84 +111,147 @@ To get to a good starting point for the rest of this tutorial, you will first ne
 
    1. In the *Page* box, select the new *Location Tracking* page, and then click *Ok*.
 
-      ![Edit Overview Side Panel](~/user-guide/images/Tutorial_Starlink_History_Locations_openPageButton.png)
+      ![Configure the button actions](~/user-guide/images/Tutorial_Starlink_History_Locations_openPageButton.png)
 
 > [!NOTE]
 > If no terminal is selected on the map on the *Overview* page or on the *User Terminals* page, no KPIs will be displayed in the panel while you edit it.
 
 ## Step 4: Create the GQI query to fetch the history location data
 
-In the next step you will configure the GQI query that will fetch the trended datapoints.
+In this step, you will configure the GQI query that will fetch the trended data points.
 
-> [!NOTE]
-> Before you create the new GQI query, make sure you select a terminal while being in edit mode. If the query can't resolve into a valid result, you won't be able to save the query.
+1. On the *Overview* page, select the terminal *Skyline demo cruise_UT\*74d101* on the map.
 
-1. Select the terminal *Skyline demo cruise_UT***74d101* on the map. You can find the terminal on the map docked in the harbour of Barcelona (Spain).
-1. Navigate to the *QUERIES* and *Add* a new query.
-1. Provide a name (example: *Location History AVG 5M*).
-1. Select *Get ad hoc data* and choose *Starlink - Get History GEO Locations - AVG.5M*.
-1. Link The *Element ID* to *Dropdown 29 (Overview)* containing the dynamic element reference. Select Type *Elements* and Property *Element ID*.
-1. Link the *User Terminal Device ID* with the flow *Link User Terminal ID selection*, Property *Primary Key*.
-1. Link the *History Time Range Start* with your new Time Range component, Property *From*.
-1. Repeat the same for *History Time Range End*, Property *To*.
+   You can find the terminal on the map docked in the harbor of Barcelona (Spain).
 
-1. In the top-right corner, click *Start editing*.
+   > [!NOTE]
+   > Do not skip this step. Before you start making the new GQI query, it is important that a terminal is selected. Otherwise, the query will not be able to resolve into a valid result and you will not be able to save it.
 
-   ![GQI: Ad hoc data](~/user-guide/images/Tutorial_Starlink_History_Locations_GQI_result.png)
+1. In the *Data* tab on the right, expand the *QUERIES* section and click the + button to add a new query.
 
-## Step 5: Test the GQI result by a table
+1. Specify a name for your query, e.g. *Location History AVG 5M*.
 
-As a best practice, lets validate if our query functions correctly by taking a look via the table view.
+1. Select the data source *Get ad hoc data* and select the filter *Starlink - Get History GEO Locations - AVG.5M*.
 
-1. Add a new component on the page of type *Table*
-1. Select your new GQI (*Location History AVG 5M*) and drag it onto the table.
-1. Make sure you selected the *cruise test terminal* and validate if you see data appearing in the table.
-1. Changing the time span with your component should increase/decrease the number of results in the table as there could be more or less data points returned.
+1. Link the element ID to the dropdown containing the dynamic element reference:
 
-![GQI: Test the results](~/user-guide/images/Tutorial_Starlink_History_Locations_GQI_dataTest.png)
+   1. Click the link icon next to the *Starlink Enterprise Element ID* box:
+
+   1. Select the following values and then click *Link*:
+
+      - Data: *Dropdown 29 (Overview)*
+      - Type: *Elements*
+      - Property: *Element ID*
+
+      ![Link the ID to the dropdown](~/user-guide/images/Tutorial_Starlink_History_Locations_Link_to_dropdown_29.png)
+
+1. Similarly, link the *User Terminal Device ID* to the terminal ID selection:
+
+   - Data: *Link User Terminal ID selection*
+   - Property: *Primary Key*
+
+1. Link *History Time Range Start* to the new time range component:
+
+   - Data: *Time range X* ("X" can be different number depending on your setup; pick the one matching the component on your *Location Tracking* page)
+   - Property: *From*.
+
+1. Do the same for *History Time Range End*, with the property *To*.
+
+1. In the top-right corner of the query, click the pencil icon to stop editing it.
+
+   ![GQI query using ad hoc data](~/user-guide/images/Tutorial_Starlink_History_Locations_GQI_result.png)
+
+## Step 5: Test the GQI result using a table
+
+As a best practice, you should validate if your query works correctly. In this step, you will do so by taking a look at it in a table.
+
+1. Make sure the cruise test terminal is still selected on the map.
+
+1. Add a new component to the page of type *Table*.
+
+1. Drag your new query (*Location History AVG 5M*) from the data pane onto the table.
+
+   If no data is shown in the table at this point, double-check whether the cruise test terminal is still selected.
+
+1. Use the time range component to change the timespan shown in the table.
+
+   This should increase or decrease the number of results in the table, depending on your changes.
+
+![GQI results in a table](~/user-guide/images/Tutorial_Starlink_History_Locations_GQI_dataTest.png)
 
 ## Step 6: Visualize the history data on the maps component
 
 In this final step, you will now visualize the data points on the maps component.
 
-1. Add a new component on the page of type *Maps*
-   ![Add Maps component](~/user-guide/images/Tutorial_Starlink_History_Locations_MapsComponent.png)
+1. Add a new component to the page of type *Maps*:
 
-1. Select your new GQI (*Location History AVG 5M*) and drag it onto the map.
+   ![Add a maps component](~/user-guide/images/Tutorial_Starlink_History_Locations_MapsComponent.png)
 
-1. Double check the *Layer Settings* (Component Layout). *Identifier, Latitude, Longitude* should be automatically linked with your GQI outputs with similar namings.
+1. Drag your new query (*Location History AVG 5M*) from the data pane onto the map.
+
+1. While the map component is selected, check the *Layer Settings* in the *Layout* pane: *Identifier*, *Latitude*, and *Longitude* should be automatically linked to your GQI outputs with similar names.
+
    ![Configure the layer](~/user-guide/images/Tutorial_Starlink_History_Locations_MapsLayerSettings.png)
 
-1. Configure the template to customize the shape and add conditional formatting: change colors and add condition for last data point to be green:
-    1. The Ad Hoc data source is sampling the results to avoid too many data being displayed. The last result in the dataset will always have ID 1000.
-    1. Change the color of the Ellipse to blue.
-    1. Add a new conditional case: When *ID* has the value *1000*, change the color to green.
-    ![Configure the layer](~/user-guide/images/Tutorial_Starlink_History_Locations_ConditinalCaseLastDataPoint.png)
+1. Configure the template to customize the shape and add conditional formatting, using custom colors and a condition for the last data point to be green:
 
-1. Display a notification showing the Time stamp when a point is selected:
-    1. Configure the *On click* actions
-    1. Select *Show a notification*
-    1. Title: *Time stamp at this location*
-    1. Message: *{TimeStamp}*
-    Any output columns of the GQI could be used in the placeholder.
-1. Visualize the selected location when pressed:
-    1. Configure a new Conditional case
-    1. Criteria:  *When Is selected*
-    1. Value: *Yes*
-    1. Change the color of the icon.
-    ![Maps Notification message](~/user-guide/images/Tutorial_Starlink_History_Locations_MapsNotifications.png)
+   1. Still in the *Layer Settings* section, in the *Template* box, click *Edit* to open the [template editor](xref:Template_Editor).
 
-1. Center the map to your preference by moving it to your preference and click *Save current view* in the Maps Settings.
-   ![Configure the colors](~/user-guide/images/Tutorial_Starlink_History_Locations_CenterMap.png)
+   1. In the pane on the right, set the color for the default ellipse layer to blue.
 
-1. Lets take a look at the end result:
+      ![Configure a custom color](~/user-guide/images/Tutorial_Starlink_History_Locations_template_custom_color.png)
 
-   If you have published the app, let's enjoy and take a look at the history tracking in action! Setting the time span to cover the last *8 full days*, you will now be see the whole cruise trip where our *Skyline demo cruise* sailed by. During the whole trip, the Starlink terminal was providing internet services to all people on board, while also allowing site seeing in Europe.
-   When selecting a specific location of the history track, the notification will show you the time stamp when the cruise was on that exact location.
+   1. Under *Conditional cases* in the pane on the right, click *+ Add case* to start configuring a condition.
 
-   ![Starlink Location History in DataMiner](~/user-guide/images/Tutorial_Starlink_History_Locations_Result.png)
+   1. Configure the condition so that when *ID* has the value *1000*, the color changes to green.
 
-## 🛳️ Cruise Route: Mediterranean Journey (8 Days)**
+      The ad hoc data sources samples the results to avoid too much data being displayed. The last result in the dataset will always have ID 1000, which is why this is the value you should use here.
+
+      ![Configure the layer](~/user-guide/images/Tutorial_Starlink_History_Locations_ConditinalCaseLastDataPoint.png)
+
+1. Configure the template to visualize the selected location:
+
+   1. Go to the *Tools* tab on the left, select *Icon*, and then drag and drop in the central pane to draw the area where the icon should be displayed.
+
+   1. In the pane on the right, select the icon you want to display, e.g. a spiral.
+
+   1. Under *Conditional cases*, click *+ Add case*.
+
+   1. Configure the following condition:
+
+      - Criteria:  *When Is selected*
+      - Value: *Yes*
+      - Result: Show icon, with a custom color (e.g. purple).
+
+1. Display a notification showing the timestamp when a point is selected:
+
+   1. While your additional layer is selected, in the pane on the right, click *Configure actions*, and then configure the action as follows:
+
+      - Action: *Show a notification*
+      - Title: *Timestamp at this location*
+      - Message: *{TimeStamp}*
+
+      The message uses a placeholder that can contain any of the output columns of the query.
+
+      ![Maps notification message](~/user-guide/images/Tutorial_Starlink_History_Locations_MapsNotifications.png)
+
+   1. Click *OK*.
+
+1. Click *Save* to close the template editor.
+
+1. Center the map to your preference, then go to the *Map Settings* in the *Layout* pane, and click *Save current view*.
+
+   ![Save the current map view](~/user-guide/images/Tutorial_Starlink_History_Locations_CenterMap.png)
+
+1. Publish the app so you can take a look at the end result.
+
+Now you can take a look at the history tracking in action! If you set the timespan to cover the last 8 full days, you will now see the whole cruise trip of our *Skyline demo cruise*. During the whole trip, the Starlink terminal was providing internet services to all people on board, while also allowing site seeing in Europe.
+
+When you select a specific location of the history track, the notification will show you the timestamp when the cruise was on that exact location.
+
+![Starlink location history in DataMiner](~/user-guide/images/Tutorial_Starlink_History_Locations_Result.png)
+
+As result, you should be able to trace the cruise route of the 8-day mediterranean journey:
 
 - Barcelona departure (Day 1)
 - Marseille (Day 2)
@@ -195,4 +262,4 @@ In this final step, you will now visualize the data points on the maps component
 - Cagliari (Sardinian) (Day 6-7)
 - Barcelona arrival (Day 8)
 
-We hope we have sparked your creativity to apply even more customizations covering your use-cases and workflows. Check out the other [tutorials related to Dashboards and Low-Code Apps](xref:Dashboards_Low-Code_Apps_Tutorials) to get inspiration as to how you can further customize this app to your needs.
+Hopefully, this will have sparked your creativity to apply even more customizations covering your use cases and workflows. Check out the other [tutorials related to Dashboards and Low-Code Apps](xref:Dashboards_Low-Code_Apps_Tutorials) to get inspiration as to how you can further customize this app to your needs.
