@@ -202,6 +202,17 @@ items:
             topicUid: Investigating_Dataminerservices_Feature_Issues
       - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
+      - name: Troubleshooting – Indexing database
+        topicUid: Troubleshooting_Indexing_Database
+        items:
+          - name: Troubleshooting tools
+            topicUid: ID_Troubleshooting_Tools
+          - name: Diagnostic procedures
+            topicUid: ID_Diagnostic_Procedures
+          - name: Common issues
+            topicUid: ID_Common_Issues
+          - name: Are you still experiencing issues?
+            topicUid: ID_Still_Experiencing_Issues
       - name: Troubleshooting – OpenSearch
         topicUid: Investigating_OpenSearch_Issues
         items:
