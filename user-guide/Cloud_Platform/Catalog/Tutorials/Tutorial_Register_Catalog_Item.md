@@ -81,7 +81,7 @@ The Catalog item register API call is authenticated using an [organization key](
 
    - A *manifest.yml* file describing the properties of the Catalog item.
 
-     Copy the snippet below, changing the fields as you see fit using your favorite editor, and save the file as `manifest.yaml`.
+     Copy the snippet below, changing the fields as you see fit using your favorite editor, and save the file as `manifest.yml`.
 
      > [!NOTE]
      > Make sure to obtain a new GUID to uniquely store and identify the Catalog item. To do so, you can for instance navigate to [GUID generator](https://guidgenerator.com/) and create a new GUID using the format *hyphens*, or you can use your own preferred method.
