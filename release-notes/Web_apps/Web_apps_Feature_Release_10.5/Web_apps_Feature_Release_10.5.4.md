@@ -351,3 +351,11 @@ A number of issues regarding duration input boxes have been fixed:
 - When a positive value was replaced by an invalid negative value, the input fields as well as the sign button would not be updated properly.
 - When the day field contained a value with more than three digits, the value would not be entirely readable. Also, when the day field contained a number smaller than 10, there would be too much space the input field and the sign button.
 - When the granularity was changed, hidden fields would be taken into account when calculating the current value.
+
+#### Dashboards/Low-Code Apps - Query filter component: Problem after being retriggered by a linked Trigger component [ID 42367]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When a *Query filter* component was linked to a *Trigger* component as well as to one or more columns as a filter, the following error would be thrown after it was retriggered via the *Trigger* component:
+
+`Cannot read properties of null (Reading 'Discreets')`
