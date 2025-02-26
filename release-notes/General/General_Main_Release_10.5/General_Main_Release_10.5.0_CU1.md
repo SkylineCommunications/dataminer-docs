@@ -182,6 +182,16 @@ In some cases, it would not be possible to simultaneously update multiple TTL se
 
 After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
 
+#### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When a query using ad hoc data sources was executed with real-time updates enabled, up to now, the following message could incorrectly appear:
+
+```txt
+Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.
+```
+
 #### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->

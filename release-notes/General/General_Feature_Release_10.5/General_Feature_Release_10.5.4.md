@@ -360,6 +360,16 @@ The `GetMADDataMessage` allows you to request anomaly scores during a specified 
 
 However, up to now, the response would not contain the anomaly score and the parameter values associated with the last trend data entry.
 
+#### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When a query using ad hoc data sources was executed with real-time updates enabled, up to now, the following message could incorrectly appear:
+
+```txt
+Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.
+```
+
 #### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
