@@ -238,6 +238,16 @@ When Swarming is enabled, a file named *Where are my elements.txt* will now be p
 
 In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
 
+#### Relational anomaly detection is now able to process data from history set parameters [ID 42319]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+Under certain conditions, Relational anomaly detection (RAD) is now able to detect relational anomalies on history set parameters:
+
+- If there is at least one history set parameter in a RAD parameter group, that parameter group will only be processed when all data from all parameters in the group has been received. In other words, if a history set parameter receives data 30 minutes later than the real-time parameters, possible anomalies will only be detected after 30 minutes.
+
+- RAD will only process data received within the last hour. If a history set parameter receives data more than an hour later than the real-time parameters, that data will be disregarded.
+
 #### GQI DxM: Logging can now be viewed in DataMiner Cube [ID 42352]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
