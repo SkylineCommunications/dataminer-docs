@@ -306,15 +306,16 @@ For example, to make sure `<script name>` is displayed correctly, specify `\<scr
 
 This is not necessary in text that is formatted as inline code or as a code block (using backquotes).
 
-## Adding Comments
+## Comments
 
 To add a comment in Markdown, you can use the following syntax:
+
 ```md
 <!-- This is a comment and will not be displayed in the rendered output -->
 ```
 
-### When is this useful?
-- Adding notes for future edits without showing them in the final document.
-- Temporarily hiding content without deleting it.
-- Leaving comments for collaboration when working on shared Markdown files.
-  
+Adding comments can for instance be useful in the following cases:
+
+- To add notes for future edits without showing them in the final document.
+- To temporarily hide content without deleting it.
+- To leave comments for collaboration when working on shared Markdown files.
