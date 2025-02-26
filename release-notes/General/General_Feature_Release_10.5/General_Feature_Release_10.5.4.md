@@ -224,6 +224,14 @@ When you migrate data of datatype *CustomData* from either Cassandra Single or C
 
 For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* datatype as well as the *Analytics* datatype.
 
+#### Swarming: 'Where are my elements.txt' file added to the 'C:\\Skyline DataMiner\\Elements\\' folder [ID 42314]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When Swarming is enabled, a file named *Where are my elements.txt* will now be present in the *C:\\Skyline DataMiner\\Elements\\* folder.
+
+In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the Swarming documentation in [docs.dataminer.services](https://docs.dataminer.services/).
+
 #### GQI DxM: Logging can now be viewed in DataMiner Cube [ID 42352]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->

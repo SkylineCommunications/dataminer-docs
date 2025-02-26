@@ -13,9 +13,10 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -26,6 +27,8 @@ Note that when Swarming is enabled, this will result in some major changes to th
 - Alarm identifiers will be generated on a per-element basis instead of per Agent to make them unique within the cluster. Because of this change, you will need to make sure [your system is prepared](xref:SwarmingPrepare) before you can enable Swarming.
 
 - Element configuration will be stored in the cluster-wide database instead of in the element XML files on the disk of the DataMiner Agent hosting each element.
+
+  When Swarming is enabled, a file named *Where are my elements.txt* will be present in the *C:\\Skyline DataMiner\\Elements\\* folder. In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the Swarming documentation in [docs.dataminer.services](https://docs.dataminer.services/).
 
 > [!IMPORTANT]
 >
