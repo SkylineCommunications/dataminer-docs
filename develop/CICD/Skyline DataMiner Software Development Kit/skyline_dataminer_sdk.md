@@ -41,14 +41,14 @@ The Skyline DataMiner SDK hooks into the compilation and publishing processes to
 
 ### Compilation: creating DataMiner application packages
 
-During the compilation of a **Skyline.DataMiner.SDK** project, the SDK checks whether the project property `GenerateDataMinerPackage` is set to `true`. If enabled, it uses the `DataMinerType` property to generate additional output files specific to the project type:
+During the compilation of a **Skyline.DataMiner.SDK** project, the SDK checks whether the project property `GenerateDataMinerPackage` is set to `true`. If this is the case, it uses the `DataMinerType` property to generate additional output files specific to the project type:
 
 - **\*.dmapp file**: Represents a DataMiner application package containing the content of your project, ready to be installed on a DataMiner System.
 - **\*.zip file**: Represents Catalog information used for publishing the package to the DataMiner Catalog.
 
 ### Publishing: uploading to the DataMiner Catalog
 
-When you publish a **Skyline.DataMiner.SDK** project, the SDK checks whether the `GenerateDataMinerPackage` property is set to `true`. If enabled, it considers the `CatalogPublishKeyName` property, which specifies the name of an environment variable or Visual Studio secret containing a [system key](xref:Managing_DCP_keys#system-keys) or [organization key](xref:Managing_DCP_keys#organization-keys).
+When you publish a **Skyline.DataMiner.SDK** project, the SDK checks whether the `GenerateDataMinerPackage` property is set to `true`. If this is the case, it checks the `CatalogPublishKeyName` property for the name of an environment variable or Visual Studio secret containing a [system key](xref:Managing_DCP_keys#system-keys) or [organization key](xref:Managing_DCP_keys#organization-keys).
 
 The publishing process uploads the following artifacts to the DataMiner Catalog:
 
