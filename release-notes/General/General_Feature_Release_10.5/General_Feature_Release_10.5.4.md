@@ -224,6 +224,12 @@ When you migrate data of datatype *CustomData* from either Cassandra Single or C
 
 For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* datatype as well as the *Analytics* datatype.
 
+#### Connection enhancements [ID 42233]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of enhancements have been made with regard to the connections made among DataMiner Agents as well as the connections made between DataMiner Agents and client applications.
+
 #### Swarming: 'Where are my elements.txt' file added to the 'C:\\Skyline DataMiner\\Elements\\' folder [ID 42314]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->

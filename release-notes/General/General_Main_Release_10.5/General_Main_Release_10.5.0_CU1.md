@@ -96,6 +96,12 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 
 Because of a number of enhancements, overall performance has increased when executing multiple queries simultaneously.
 
+#### Connection enhancements [ID 42233]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of enhancements have been made with regard to the connections made among DataMiner Agents as well as the connections made between DataMiner Agents and client applications.
+
 #### GQI DxM: Logging can now be viewed in DataMiner Cube [ID 42352]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
