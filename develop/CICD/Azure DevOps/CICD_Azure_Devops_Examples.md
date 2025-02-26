@@ -120,6 +120,6 @@ steps:
     echo "##vso[task.setvariable variable=uploadOutput]$uploadOutput"
   displayName: 'Upload Package'
 
-- script: dataminer-package-deploy from-catalog --artifact-id "$(uploadOutput)" --dm-catalog-token $(DATAMINER_DEPLOY_KEY)
+- script: dataminer-package-deploy from-volatile --artifact-id "$(uploadOutput)" --dm-system-token $(DATAMINER_DEPLOY_KEY)
   displayName: 'Deploy Package'
 ```

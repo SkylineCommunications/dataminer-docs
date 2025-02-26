@@ -164,7 +164,7 @@ pipeline
               {
                 script
                 {
-                    uploadOutput = bat(returnStdout: true, script: "@dotnet dataminer-catalog-upload --path-to-artifact \"${WORKSPACE}\\HelloFromJenkins.dmprotocol\"")
+                    uploadOutput = bat(returnStdout: true, script: "@dotnet dataminer-catalog-upload --path-to-artifact \"${WORKSPACE}\\HelloFromJenkins.dmprotocol\" --dm-catalog-token %DATAMINER_CATALOG_TOKEN%")
                     uploadOutput = uploadOutput.trim()
                 }
               }
@@ -177,7 +177,7 @@ pipeline
             {
               withCredentials([string(credentialsId: 'DeployExampleToken', variable: 'DATAMINER_CATALOG_TOKEN')])
               {
-                bat "dotnet dataminer-package-deploy from-catalog --artifact-id \"${uploadOutput}\""
+                bat "dotnet dataminer-package-deploy from-volatile --artifact-id \"${uploadOutput}\" --dm-system-token %DATAMINER_CATALOG_TOKEN%"
               }
             }
        }

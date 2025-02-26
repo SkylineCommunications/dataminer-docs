@@ -112,5 +112,5 @@ Below you can find the actual code for creation and deployment, assuming you hav
 ```bash
 dataminer-package-create dmapp AS-JANS-ExampleDeployment --name HelloFromUbuntu --output AS-JANS-ExampleDeployment --type automation
 id=$(dataminer-catalog-upload --path-to-artifact "AS-JANS-ExampleDeployment/HelloFromUbuntu.dmapp" --dm-catalog-token 12345)
-dataminer-package-deploy from-catalog --artifact-id "$id" --dm-catalog-token 12345
+dataminer-package-deploy from-volatile --artifact-id "$id" --dm-system-token 12345
 ```

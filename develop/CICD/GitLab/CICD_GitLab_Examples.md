@@ -107,5 +107,5 @@ deploy:
     
     - echo "Upload output: $UPLOAD_OUTPUT"
     
-    - dataminer-package-deploy from-catalog --artifact-id "$UPLOAD_OUTPUT" --dm-catalog-token "$CI_JOB_TOKEN"
+    - dataminer-package-deploy from-volatile --artifact-id "$UPLOAD_OUTPUT" --dm-system-token "$CI_JOB_TOKEN"
 ```

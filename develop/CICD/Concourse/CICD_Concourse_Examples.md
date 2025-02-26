@@ -141,5 +141,5 @@ jobs:
           dotnet tool install -g Skyline.DataMiner.CICD.Tools.DataMinerDeploy
           dataminer-package-create dmprotocol example-deployment-repo --name HelloFromConcourse --output example-deployment-repo
           id=$(dataminer-catalog-upload --path-to-artifact "example-deployment-repo/HelloFromConcourse.dmprotocol" --dm-catalog-token 12345)
-          dataminer-package-deploy from-catalog --artifact-id "$id" --dm-catalog-token 12345
+          dataminer-package-deploy from-volatile --artifact-id "$id" --dm-system-token 12345
 ```
