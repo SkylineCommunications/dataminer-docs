@@ -79,7 +79,7 @@ When an element with a logger table was deleted, some items would not be removed
 
 - When the `databaseName` option was used, the table that had been created in a separate table schema would not be deleted.
 
-- In case of a Cassandra Cluster, the logger table is by default stored in the sldmadb_elementdata_<dmaid>_<elementid>_<tableid> keyspace. When an element with a logger table was deleted, the database table would correctly be removed, but the empty keyspace would still exist.
+- In case of a Cassandra Cluster, the logger table is by default stored in the `sldmadb_elementdata_<dmaid>_<elementid>_<tableid>` keyspace. When an element with a logger table was deleted, the database table would correctly be removed, but the empty keyspace would still exist.
 
 > [!NOTE]
 > When an element with a logger table is deleted, the logger table will not be deleted when it has the `customDatabaseName` or `databaseNameProtocol` option.
@@ -107,6 +107,12 @@ In some cases, it would not be possible to simultaneously update multiple TTL se
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
+
+#### Problem when exporting an element to a .dmimport file [ID 42320]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+In some rare cases, exporting an element to a *.dmimport* file could fail.
 
 #### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
 

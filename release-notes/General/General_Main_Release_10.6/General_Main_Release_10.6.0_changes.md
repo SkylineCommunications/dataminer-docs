@@ -197,9 +197,3 @@ When, in the *Scheduler* app, a dashboard was exported via an email action, up t
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
 When a trend graph seemed to increase or decrease, in some cases, change points could incorrectly be labeled as a level shift.
-
-#### Problem when exporting an element to a .dmimport file [ID 42320]
-
-<!-- MR 10.6.0 - FR 10.5.4 -->
-
-In some rare cases, exporting an element to a *.dmimport* file could fail.

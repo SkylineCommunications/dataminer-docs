@@ -164,7 +164,7 @@ When an element with a logger table was deleted, some items would not be removed
 
 - When the `databaseName` option was used, the table that had been created in a separate table schema would not be deleted.
 
-- In case of a Cassandra Cluster, the logger table is by default stored in the sldmadb_elementdata_<dmaid>_<elementid>_<tableid> keyspace. When an element with a logger table was deleted, the database table would correctly be removed, but the empty keyspace would still exist.
+- In case of a Cassandra Cluster, the logger table is by default stored in the `sldmadb_elementdata_<dmaid>_<elementid>_<tableid>` keyspace. When an element with a logger table was deleted, the database table would correctly be removed, but the empty keyspace would still exist.
 
 > [!NOTE]
 > When an element with a logger table is deleted, the logger table will not be deleted when it has the `customDatabaseName` or `databaseNameProtocol` option.
@@ -208,6 +208,12 @@ When a query using ad hoc data sources was executed with real-time updates enabl
 ```txt
 Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.
 ```
+
+#### Problem when exporting an element to a .dmimport file [ID 42320]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+In some rare cases, exporting an element to a *.dmimport* file could fail.
 
 #### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
 
