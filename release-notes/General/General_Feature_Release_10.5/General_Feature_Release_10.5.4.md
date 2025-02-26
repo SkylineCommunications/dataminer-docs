@@ -50,7 +50,7 @@ For example, if 15 SLProtocol processes are configured in the *DataMiner.xml* fi
 
 This means, that some elements will not be able to run in isolation mode, and some SLProtocol processes will not be able to host elements that are not running in isolation mode. In each of those cases, an alarm will be generated.
 
-In the DataMiner.xml file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
+In the *DataMiner.xml* file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
 
 #### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Scheduler app [ID 41970]
 
@@ -389,6 +389,12 @@ When a query using ad hoc data sources was executed with real-time updates enabl
 ```txt
 Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.
 ```
+
+#### Problem when exporting an element to a .dmimport file [ID 42320]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+In some rare cases, exporting an element to a *.dmimport* file could fail.
 
 #### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
 
