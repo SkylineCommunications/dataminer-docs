@@ -96,6 +96,17 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 
 Because of a number of enhancements, overall performance has increased when executing multiple queries simultaneously.
 
+#### GQI DxM: Logging can now be viewed in DataMiner Cube [ID 42352]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+From now on, you can view the logging of the GQI DxM in DataMiner Cube.
+
+Also, a new log file will now be started as soon as the size of the existing file reaches 5 MB. Up to now, a new log file would be started every day.
+
+> [!NOTE]
+> Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e. the logging of the ad hoc data sources and the operators).
+
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
