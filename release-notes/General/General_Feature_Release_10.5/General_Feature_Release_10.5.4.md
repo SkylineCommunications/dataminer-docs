@@ -230,7 +230,7 @@ For example, if you want to migrate only the SLAnalytics data, you can now speci
 
 When Swarming is enabled, a file named *Where are my elements.txt* will now be present in the *C:\\Skyline DataMiner\\Elements\\* folder.
 
-In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the Swarming documentation in [docs.dataminer.services](https://docs.dataminer.services/).
+In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
 
 #### GQI DxM: Logging can now be viewed in DataMiner Cube [ID 42352]
 
