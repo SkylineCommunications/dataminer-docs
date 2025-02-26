@@ -4,20 +4,18 @@ uid: skyline_dataminer_sdk_dataminer_package_project
 
 # Skyline DataMiner Package Project
 
-This project is designed to create multi-artifact packages in a straightforward manner.
-Note that the below information assumes access to Visual Studio and DIS.
+The Skyline DataMiner Package Project is designed to create multi-artifact packages in a straightforward manner.
 
-There is also limited support for Visual Studio Code without DIS.
-You can do most of the things defined below except for [Importing from DataMiner](#importing-from-dataminer) which is currently handled by DIS.
+Note that the information below assumes that you have access to Visual Studio and [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). However, for most of what is mentioned below there is also limited support for Visual Studio Code without DIS. Only [importing from DataMiner](#importing-from-dataminer) can only be handled by DIS at present.
 
-## Creating a DataMiner Application Package
+## Creating a DataMiner application package
 
 This project is by default configured to create a `.dmapp` file every time you build the project.  
 When you compile or build the project, you will find the generated `.dmapp` in the standard output folder, typically the `bin` folder of your project.
 
 When you publish the project, a corresponding item will be created in the online DataMiner Catalog.
 
-## Adding Extra Artifacts in the Same Solution
+## Adding extra artifacts in the same solution
 
 You can right-click the solution and select **Add** and then **New Project**. This will allow you to select DataMiner project templates (e.g. adding additional Automation scripts).
 
@@ -38,7 +36,7 @@ You can customize this behavior using the **PackageContent/ProjectReferences.xml
 
 ## Importing from DataMiner
 
-You can import specific items directly from a DataMiner Agent:  
+You can import specific items directly from a DataMiner Agent:
 
 1. Connect to an Agent via **Extensions > DIS > DMA > Connect**.
 
@@ -46,13 +44,13 @@ You can import specific items directly from a DataMiner Agent:
 
 1. Once connected, you can import specific DataMiner artifacts: in your **Solution Explorer**, navigate to folders such as **PackageContent/Dashboards** or **PackageContent/LowCodeApps**, right-click, select **Add**, and select **Import DataMiner Dashboard/Low Code App** or the equivalent.
 
-## Executing Additional Code on Installation
+## Executing additional code on installation
 
 Open the **$SCRIPTNAME$.cs** file to write custom installation code. Common actions include creating elements, services, or views.
 
 **Quick tip:** Type `clGetDms` in the `.cs` file and press **Tab** twice to insert a snippet that gives you access to the **IDms** classes, making DataMiner manipulation easier.
 
-## Does Your Installation Code Need Configuration Files?
+## Does your installation code need configuration files?
 
 You can add configuration files (e.g. `.json`, `.xml`) to the **SetupContent** folder, which can be accessed during installation.
 
@@ -64,10 +62,9 @@ string setupContentPath = installer.GetSetupContentDirectory();
 
 ## Publishing to the Catalog
 
-This project is by default created with support for publishing to the DataMiner Catalog.  
-You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow.
+By default, a project is created with support for publishing to the DataMiner Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow.
 
-### Manual Publishing
+### Publishing manually
 
 1. Obtain an **Organization Key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
    - **Register Catalog items**
@@ -95,25 +92,29 @@ You can publish your artifact manually through Visual Studio or by setting up a 
 
 **Recommendation:** To safeguard the quality of your product, consider using a CI/CD setup to run **dotnet publish** only after passing quality checks.
 
-### Changing the Version
+### Changing the version of a package
 
-1. Navigate to your project in Visual Studio, right-click, and select Properties.
+There are two ways to change the version of a package.
 
-1. Search for Package Version.
+- By adjusting the package version property:
 
-1. Adjust the value as needed.
+  1. Navigate to your project in Visual Studio, right-click, and select Properties.
 
-### Changing the Version - Alternative
+  1. Search for Package Version.
 
-1. Navigate to your project in Visual Studio and double-click it.
+  1. Adjust the value as needed.
 
-1. Adjust the "Version" XML tag to the version you want to register.
+- By adjusting the "Version" XML tag:
 
-   ```xml
-   <Version>1.0.1</Version>
-   ```
+  1. Navigate to your project in Visual Studio and double-click it.
 
-## Publishing to the Catalog with Basic CI/CD Workflow
+  1. Adjust the "Version" XML tag to the version you want to register.
+
+     ```xml
+     <Version>1.0.1</Version>
+     ```
+
+### Publishing to the Catalog with the basic CI/CD workflow
 
 If you've used the Skyline.DataMiner.VisualStudioTemplates then it's possible this project includes a basic GitHub workflow for Catalog publishing.
 Follow these steps to set it up:
@@ -146,7 +147,7 @@ Follow these steps to set it up:
 
 With this setup, any push with new content (including the initial creation) to the main/master branch will generate a new pre-release version, using the latest commit message as the version description.
 
-### Releasing a Specific Version
+#### Releasing a specific version
 
 1. Navigate to the **<> Code** tab in your GitHub repository.
 
@@ -157,16 +158,15 @@ With this setup, any push with new content (including the initial creation) to t
 > [!NOTE]
 > The description will be visible in the DataMiner Catalog.
 
-## Publishing to the Catalog with Complete CI/CD Workflow
+### Publishing to the Catalog with the complete CI/CD workflow
 
-If you've used the Skyline.DataMiner.VisualStudioTemplates then it's possible this project includes a Complete GitHub workflow for Catalog publishing:
-This comprehensive GitHub workflow adheres to Skyline Communications' quality standards, including static code analysis, custom validation, and unit testing.
+If you have used the Skyline.DataMiner.VisualStudioTemplates, your project can include a complete GitHub workflow for Catalog publishing. This comprehensive GitHub workflow adheres to Skyline Communications' quality standards, including static code analysis, custom validation, and unit testing.
 
-### Prerequisite
+#### Prerequisite
 
 You need a **SonarCloud Organization**. If you don’t have one, you can create it [here](https://sonarcloud.io/create-organization).
 
-### Steps
+#### Steps
 
 1. Create a GitHub repository by going to **Git > Create Git Repository**, selecting GitHub, and filling in the wizard before clicking **Create and Push**.
 
@@ -202,7 +202,7 @@ The following secrets and variables will have been added to your repository afte
 | `SONAR_TOKEN`    | Secret  | Token for SonarCloud authentication               | Obtain from [SonarCloud Security](https://sonarcloud.io/account/security) and add it as a secret.  |
 | `SONAR_NAME`     | Variable | SonarCloud project ID                            | Visit [SonarCloud](https://sonarcloud.io/projects/create), copy the project ID, and add it as a variable. |
 
-### Releasing a Version
+#### Releasing a version
 
 1. Navigate to the **<> Code** tab in your GitHub repository.
 
@@ -213,9 +213,9 @@ The following secrets and variables will have been added to your repository afte
 > [!NOTE]
 > The description will be visible in the DataMiner Catalog.
 
-## Advanced Configuration
+## Advanced configuration
 
-### Multiple Packages
+### Multiple packages
 
 You can add multiple DataMiner Package Projects within a single solution and then have them make different packages.
 The default behavior on building or publishing this solution through CI/CD is that all of them will have the same version and upload to the same organization.
@@ -231,9 +231,9 @@ In GitHub you can make several different workflows (or different jobs) that trig
 
 This is most easily handled using Visual Studio Solution Filters
 
-#### Visual Studio Solution Filter Files
+#### Visual Studio solution filter files
 
-A **Solution Filter** (`.slnf`) file in Visual Studio 2022 is a feature designed to load a subset of projects within a larger solution (`.sln`).
+A **solution filter** (`.slnf`) file in Visual Studio 2022 is a feature designed to load a subset of projects within a larger solution (`.sln`).
 This is particularly useful for large solutions that contain many projects, as it allows developers to work with only the relevant projects, improving load times and reducing resource consumption.
 
 Within Skyline DataMiner SDK they provide an additional key benefit.
@@ -253,7 +253,7 @@ $env:DATAMINER_TOKEN = "MyOrgKey"
 dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="$DATAMINER_TOKEN"
 ```
 
-##### With Filters
+##### With filters
 
 Call that releases only packages configured with either of the provided **Solution Filter** files:
 
@@ -267,11 +267,11 @@ dotnet publish PackagesForOrganizationA.slnf -p:Version="1.0.1" -p:VersionCommen
 dotnet publish PackagesForOrganizationB.slnf -p:Version="2.0.1" -p:VersionComment="Releasing 2.0.1 for B." -p:CatalogPublishKeyName="$DATAMINER_TOKENB"
 ```
 
-#### GitHub Reusable Workflows
+#### GitHub reusable workflows
 
-When using GitHub Reusable Workflows as provided by Skyline Communications you can optionally include a Visual Studio Solution Filter File that will adjust the behavior of our pipelines so it only builds, tests and publishes the subsection defined by the filter.
+When using GitHub reusable workflows as provided by Skyline Communications you can optionally include a Visual Studio solution filter file that will adjust the behavior of the pipeline so it only builds, tests, and publishes the subsection defined by the filter.
 
-##### Default Job
+##### Default job
 
 ```yml
 jobs:
@@ -292,7 +292,7 @@ jobs:
 
 ```
 
-##### Jobs With Filters
+##### Jobs with filters
 
 Notice the addition of the extra argument below where you can define the .slnf names.
 Both jobs are using a different secrets.DATAMINER_TOKEN which allows uploading to different organizations in the same run.

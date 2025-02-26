@@ -21,7 +21,7 @@ For more information on how to create a dataminer.services key, refer to [Managi
 
 ## Basic upload for non-connector items
 
-You need a Visual Studio Solution with projects inside that are using the Skyline.DataMiner.Sdk.
+You need a Visual Studio Solution with projects inside that are using the Skyline.DataMiner.SDK.
 You will need *DATAMINER_TOKEN* as a secret. This will be the key for the DataMiner Organization as provided through the [DataMiner Admin app](xref:CloudAdminApp).
 
 >[!IMPORTANT]
@@ -59,7 +59,7 @@ sudo apt install dotnet-sdk-6.0
 
 You will need to restart your session or log out and back in before the next part.
 
-Below you can find the actual code for creation and deployment, assuming you have a Visual Studio solution with projects using Skyline.DataMiner.Sdk.
+Below you can find the actual code for creation and deployment, assuming you have a Visual Studio solution with projects using Skyline.DataMiner.SDK.
 
 ```bash
 export DATAMINER_TOKEN="MyOrgKey"

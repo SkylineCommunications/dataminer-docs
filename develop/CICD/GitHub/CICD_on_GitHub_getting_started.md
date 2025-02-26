@@ -12,7 +12,7 @@ If you are specifically looking to create a quick custom pipeline to deploy conn
 
 ## Getting started with CI/CD using GitHub for non-connector items
 
-Any artifact type beyond connectors can be packaged and deployed using our new Visual Studio Templates and the Skyline.DataMiner.Sdk.
+Any artifact type beyond connectors can be packaged and deployed using our new Visual Studio Templates and the Skyline.DataMiner.SDK.
 
 You'll find a few tutorials here that give a quick demonstration:
 
