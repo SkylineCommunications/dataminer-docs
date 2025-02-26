@@ -90,6 +90,12 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 > [!NOTE]
 > The `NatsCustodianResetNatsRequest` message will also be blocked when BrokerGateway is being used.
 
+#### GQI DxM: Enhanced performance when executing multiple queries simultaneously [ID 42191]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+Because of a number of enhancements, overall performance has increased when executing multiple queries simultaneously.
+
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]

@@ -209,6 +209,12 @@ When, in DataMiner Cube, you go to *System Center > System settings > Analytics 
 
 Because of a number of enhancements, after a RAD parameter group is configured, the first anomaly score for that group will be calculated faster than before.
 
+#### GQI DxM: Enhanced performance when executing multiple queries simultaneously [ID 42191]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+Because of a number of enhancements, overall performance has increased when executing multiple queries simultaneously.
+
 #### STaaS: Enhanced granularity when migrating custom data to STaaS [ID 42219]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
