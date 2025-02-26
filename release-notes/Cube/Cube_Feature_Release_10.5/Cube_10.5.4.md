@@ -170,6 +170,18 @@ In the *Documents* module, up to now, it would incorrectly not be possible to op
 
 When DataMiner Cube received a `CorrelationDetailsEventMessage` without ever receiving the associated correlated alarm, up to now, an exception could be thrown.
 
+#### Data display: Parameter values containing curly braces could not be displayed in the right-click menu of a table [ID 42160]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When the right-click menu of a table in e.g. an element card displayed values of dependency parameters, in some cases, parameter values containing curly braces (e.g. "{test one}") would incorrectly not be displayed.
+
+Example of how a right-click menu displaying dependency parameters can be configured in a *protocol.xml* file:
+
+```xml
+<Discreet options="table:singleselection" dependencyValues="301[value:301];302[value:302];303:[value:303]">
+```
+
 #### Trending: Trend graph legend would show the same current value for all parameters [ID 42184]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
