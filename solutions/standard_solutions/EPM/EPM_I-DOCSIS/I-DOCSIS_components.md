@@ -33,6 +33,7 @@ The Integrated DOCSIS EPM Solution uses the following Automation scripts:
 - **EPM_I_DOCSIS_EpmFeToEpmBe**: Operates within the messaging system domain taking care of simple notifications between the EPM front-end element and the back-end elements.
 - **EPM_I_DOCSIS_EpmBeToCcapPair**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and CCAP collectors.
 - **EPM_I_DOCSIS_AddNewCcapCmPair**: Allows the user to create a CCAP/CM pair from the EPM UI.
+- **EPM_I_DOCSIS_AddSpectrumCcap**: Streamlines the provisioning of spectrum monitoring elements for CCAP elements.<!-- RN 42366 -->
 - **EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA**: Used to retrieve all CM-related data in dashboards using GQI.
 - **EPM_I_DOCSIS_GQI_GET_ALL_DS_QAM_DATA**: Used to retrieve all DS QAM Channel-related data in dashboards using GQI.
 - **EPM_I_DOCSIS_GQI_GET_ALL_US_QAM_DATA**: Used to retrieve all US QAM Channel-related data in dashboards using GQI.
