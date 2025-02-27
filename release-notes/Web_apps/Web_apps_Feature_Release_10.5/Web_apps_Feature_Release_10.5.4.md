@@ -367,3 +367,9 @@ When a *Query filter* component was linked to a *Trigger* component as well as t
 In some cases, buttons would no longer correctly show their loading state.
 
 Also, dropdown boxes would no longer ellipse long values, causing a horizontal scrollbar to appear in the dropdown box.
+
+#### Dashboards/Low-Code Apps - Timeline component: Selected time range would incorrectly not get passed to other components [ID 42380]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you had selected a time range in a *Timeline* component, in some cases, that time range would incorrectly not get passed to other components.
