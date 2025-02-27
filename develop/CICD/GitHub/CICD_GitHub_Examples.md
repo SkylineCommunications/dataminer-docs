@@ -4,24 +4,21 @@ uid: CICD_GitHub_Examples
 
 # GitHub CI/CD examples
 
-## Basic deployment example
-
-This is a basic pipeline for uploading to the DataMiner Catalog and/or deploying to DMAs connected to dataminer.services. We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
+These are basic pipeline examples for uploading to the DataMiner Catalog and/or deploying to DMAs connected to dataminer.services. We recommend combining these with quality control beforehand, such as executing static code analysis and running tests.
 
 If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to:
 
-- [CI/CD For Connectors](xref:CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub) tutorial.
-- [CI/CD For Other Items](xref:github_reusable_workflows_dataminer_app_packages_master_workflow) information.
+- [CI/CD for connectors tutorial](xref:CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub).
+- [CI/CD for other items](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
 
 > [!TIP]
 > For information on creating a new pipeline in GitHub, see [GitHub Tutorial](https://docs.github.com/en/actions/quickstart).
 
 ## Basic upload for non-connector items
 
-You will need *DATAMINER_TOKEN* as a secret. This will be the key for the DataMiner Organization as provided through the [DataMiner Admin app](xref:CloudAdminApp). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+To upload an item to the Catalog, you will need *DATAMINER_TOKEN* as a secret. This will be the **key for the DataMiner organization** as provided through the [DataMiner Admin app](xref:CloudAdminApp). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
->[!IMPORTANT]
-> Deployment to an agent from the CI/CD is currently not possible, but we're working on it!
+For now, for non-connector items, **only uploading to the Catalog** is supported. Deploying directly to a DMA from CI/CD is not supported yet.
 
 On a **Ubuntu** runner:
 
@@ -85,9 +82,7 @@ jobs:
 
 ## Basic deployment for connectors
 
-### GitHub workflow
-
-You will need *DATAMINER_DEPLOY_KEY* as a secret. This will be the key for the DataMiner Agent as provided through the [DataMiner Admin app](xref:CloudAdminApp). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+To deploy a connector to a DMA, you will need *DATAMINER_DEPLOY_KEY* as a secret. This will be the **key for the DataMiner System** as provided through the [DataMiner Admin app](xref:CloudAdminApp). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 On a **Ubuntu** runner:
 
