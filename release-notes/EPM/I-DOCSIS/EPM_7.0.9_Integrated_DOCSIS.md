@@ -15,6 +15,10 @@ A new dashboard has been implemented to generate a report containing the fiber n
 
 The dashboard uses an ad hoc data source script, which in turn executes another script that obtains files provided by Data Aggregator.
 
+#### New  CISCO CBR-8 CCAP UTSC connector [ID 42045]
+
+A new connector, *CISCO CBR-8 CCAP UTSC*, is now available, which makes it possible to monitor the spectrum traces for the CISCO CBR-8. This makes use of the native feature of the CBR-8 to offload files to SFTP server. The new connector allows the user to configure and request the offload of the spectrum files, and it will ingest those files and display the spectrum trace data in the Spectrum Analysis UI.
+
 #### New spectrum monitoring elements provisioning script [ID 42366]
 
 A new script, *EPM_I_DOCSIS_AddSpectrumCcap*, is available, which streamlines the provisioning of spectrum monitoring elements for CCAP elements.
