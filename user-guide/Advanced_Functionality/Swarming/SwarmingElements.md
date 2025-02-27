@@ -66,7 +66,7 @@ As a first step, create a short Automation script that will swarm a fixed elemen
        ElementID element = ElementID.FromString("[element-key]");
        int targetAgentId = [target-agent-id];
 
-       var swarmingResults = SwarmingHelper.Create(Engine.SLNetRaw)
+       var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
            .SwarmElement(element)
            .ToAgent(targetAgentId);
 
@@ -93,7 +93,7 @@ using Skyline.DataMiner.Net.Swarming.Helper;
 This line pulls in the appropriate namespace for the [SwarmingHelper](xref:Skyline.DataMiner.Net.Swarming.Helper.SwarmingHelper) type, which is used further down.
 
 ```csharp
-var swarmingResults = SwarmingHelper.Create(Engine.SLNetRaw)
+var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
     .SwarmElement(element)
     .ToAgent(targetAgentId);
 ```
@@ -152,7 +152,7 @@ public class Script
     var element = ElementID.FromString(engine.GetScriptParam("Element Key").Value);
     int targetAgentId = Int32.Parse(engine.GetScriptParam("Target Agent ID").Value);
     
-    var swarmingResults = SwarmingHelper.Create(Engine.SLNetRaw)
+    var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
         .SwarmElement(element)
         .ToAgent(targetAgentId);
 
