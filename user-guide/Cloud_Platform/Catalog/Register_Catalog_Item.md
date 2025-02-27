@@ -23,9 +23,9 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 
 ## Registering a Catalog item with workflows and tooling
 
-If you would prefer not to use Postman and HTTPS directly, try out our [platform-independent](xref:Platform_independent_CICD) tool support or check out our IaC (Infrastructure as Code) solutions using the [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk) that has catalog publishing directly integrated.
+If you would prefer not to use Postman and HTTPS directly, try out our [platform-independent](xref:Platform_independent_CICD) tool support or check out our IaC (Infrastructure as Code) solutions using the [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk), which has publication to the Catalog directly integrated.
 
-If you are interested in setting up CI/CD to handle registration automatically please consider our [CI/CD Tutorials](xref:CICD_Tutorials).
+If you are interested in setting up CI/CD to handle registration automatically, take a look at the [CI/CD tutorials](xref:CICD_Tutorials).
 
 ## Registering a Catalog item with the API
 

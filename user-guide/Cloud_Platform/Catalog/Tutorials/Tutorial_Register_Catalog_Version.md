@@ -11,7 +11,7 @@ While the tutorial uses the example of a connector, registering a new version fo
 Expected duration: 15 minutes
 
 > [!NOTE]
-> If you would prefer not to use Postman and HTTPS directly, try out our [platform-independent](xref:Platform_independent_CICD) tool support or check out our IaC (Infrastructure as Code) solution using the [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk), which has publication to the Catalog directly integrated.
+> If you would prefer not to use Postman and HTTPS directly, try out our [platform-independent](xref:Platform_independent_CICD) tool support or check out our IaC (Infrastructure as Code) solutions using the [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk), which has publication to the Catalog directly integrated.
 >
 > If you are interested in setting up CI/CD to handle registration automatically, take a look at the [CI/CD tutorials](xref:CICD_Tutorials).
 
