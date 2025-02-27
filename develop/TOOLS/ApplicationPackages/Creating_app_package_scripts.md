@@ -4,9 +4,9 @@ uid: Creating_app_package_scripts
 
 # Creating application package scripts
 
-Application packages can contain different scripts, each used for a different purpose:
+Application packages can contain different scripts.
 
-- A script to install an application version without having to restart a DMA. This script, *Install.xml*, must always be included in an application package.
+This includes a script to install an application version without having to restart a DMA. This script, *Install.xml*, must always be included in an application package. You can find more information about this below.
 
 ## Install.xml
 
