@@ -10,20 +10,20 @@ Note that the information below assumes that you have access to Visual Studio an
 
 ## Creating a DataMiner application package
 
-This project is by default configured to create a `.dmapp` file every time you build the project.  
-When you compile or build the project, you will find the generated `.dmapp` in the standard output folder, typically the `bin` folder of your project.
+The project is by default configured to create a `.dmapp` file every time you build the project.
+
+When you compile or build the project, you will find the generated `.dmapp` in the standard output folder, which is typically the `bin` folder of your project.
 
 When you publish the project, a corresponding item will be created in the online DataMiner Catalog.
 
 ## Adding extra artifacts in the same solution
 
-You can right-click the solution and select **Add** and then **New Project**. This will allow you to select DataMiner project templates (e.g. adding additional Automation scripts).
+You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. adding additional Automation scripts).
 
 > [!NOTE]
-> Connectors are currently not supported.
+> Connectors are currently not supported for this.
 
-You can also add new projects by using the dotnet-cli.
-It's recommended for stability to always have a *sln* solution with all projects included.
+You can also add new projects by using the dotnet-cli. For the sake of stability, we recommend always using an *sln* solution with all projects included.
 
 ```bash
     dotnet new sln
@@ -31,28 +31,32 @@ It's recommended for stability to always have a *sln* solution with all projects
     dotnet sln add MyUserDefinedApiFromGithub
 ```
 
-Every **Skyline.DataMiner.SDK** project within the solution, except other DataMiner package projects, will by default be included within the `.dmapp` created by this project.  
-You can customize this behavior using the **PackageContent/ProjectReferences.xml** file. This allows you to add filters to include or exclude projects as needed.
+Every *Skyline.DataMiner.SDK* project within the solution, except other DataMiner package projects, will by default be included within the `.dmapp` created by this project. You can customize this behavior using the *PackageContent/ProjectReferences.xml* file. This allows you to add filters to include or exclude projects as needed.
 
 ## Importing from DataMiner
 
-You can import specific items directly from a DataMiner Agent:
+You can import specific items directly from a DataMiner Agent using DIS:
 
-1. Connect to an Agent via **Extensions > DIS > DMA > Connect**.
+1. In Visual Studio, connect to an Agent via *Extensions* > *DIS* > *DMA* > *Connect*.
 
-1. If your Agent is not listed, add it by going to **Extensions > DIS > Settings** and clicking **Add** on the DMA tab.
+1. If your Agent is not listed, add it by going to *Extensions* > *DIS* > *Settings* and clicking *Add* on the DMA tab.
 
-1. Once connected, you can import specific DataMiner artifacts: in your **Solution Explorer**, navigate to folders such as **PackageContent/Dashboards** or **PackageContent/LowCodeApps**, right-click, select **Add**, and select **Import DataMiner Dashboard/Low Code App** or the equivalent.
+1. Once connected, import the DataMiner artifacts you want:
+
+   1. In your *Solution Explorer*, navigate to folders such as *PackageContent/Dashboards* or *PackageContent/LowCodeApps*.
+   1. Right-click, and select *Add*.
+   1. Select e.g. *Import DataMiner Dashboard/Low-Code App*, depending on what you want to import.
 
 ## Executing additional code on installation
 
-Open the **$SCRIPTNAME$.cs** file to write custom installation code. Common actions include creating elements, services, or views.
+Open the `$SCRIPTNAME$.cs` file to write custom installation code. Common actions include creating elements, services, or views.
 
-**Quick tip:** Type `clGetDms` in the `.cs` file and press **Tab** twice to insert a snippet that gives you access to the **IDms** classes, making DataMiner manipulation easier.
+> [!TIP]
+> Type `clGetDms` in the .cs file and press Tab twice to insert a snippet that gives you access to the *IDms* classes, making DataMiner manipulation easier.
 
-## Does your installation code need configuration files?
+## Adding configuration files
 
-You can add configuration files (e.g. `.json`, `.xml`) to the **SetupContent** folder, which can be accessed during installation.
+If your installation code needs configuration files (e.g. .json, .xml), you can add these to the *SetupContent* folder, which can be accessed during installation.
 
 Access them in your code using:
 
@@ -66,13 +70,14 @@ By default, a project is created with support for publishing to the DataMiner Ca
 
 ### Publishing manually
 
-1. Obtain an **Organization Key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
-   - **Register Catalog items**
-   - **Read Catalog items**
+1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
+
+   - *Register Catalog items*
+   - *Read Catalog items*
 
 1. Securely store the key using Visual Studio User Secrets:
 
-   1. Right-click the project and select **Manage User Secrets**.
+   1. Right-click the project and select *Manage User Secrets*.
 
    1. Add the key in the following format:
 
@@ -86,29 +91,30 @@ By default, a project is created with support for publishing to the DataMiner Ca
       }
       ```
 
-1. Publish the package by right-clicking your project in Visual Studio and then selecting the **Publish** option.
+1. Publish the package by right-clicking your project in Visual Studio and then selecting the *Publish* option.
 
    This will open a new window, where you will find a Publish button and a link where your item will eventually be registered.
 
-**Recommendation:** To safeguard the quality of your product, consider using a CI/CD setup to run **dotnet publish** only after passing quality checks.
+> [!NOTE]
+> To safeguard the quality of your product, consider using a CI/CD setup to run *dotnet publish* only after passing quality checks.
 
 ### Changing the version of a package
 
-There are two ways to change the version of a package.
+There are two ways to change the version of a package:
 
 - By adjusting the package version property:
 
-  1. Navigate to your project in Visual Studio, right-click, and select Properties.
+  1. Navigate to your project in Visual Studio, right-click, and select *Properties*.
 
-  1. Search for Package Version.
+  1. Search for *Package Version*.
 
   1. Adjust the value as needed.
 
-- By adjusting the "Version" XML tag:
+- By adjusting the *Version* XML tag:
 
   1. Navigate to your project in Visual Studio and double-click it.
 
-  1. Adjust the "Version" XML tag to the version you want to register.
+  1. Adjust the *Version* XML tag to the version you want to register.
 
      ```xml
      <Version>1.0.1</Version>
@@ -116,10 +122,11 @@ There are two ways to change the version of a package.
 
 ### Publishing to the Catalog with the basic CI/CD workflow
 
-If you've used the Skyline.DataMiner.VisualStudioTemplates then it's possible this project includes a basic GitHub workflow for Catalog publishing.
+If you have used the *Skyline.DataMiner.VisualStudioTemplates*, your project can include a basic GitHub workflow for Catalog publishing.
+
 Follow these steps to set it up:
 
-1. Create a GitHub repository by going to **Git > Create Git Repository**, selecting GitHub, and filling in the wizard before clicking **Create and Push**.
+1. Create a GitHub repository by going to *Git* > *Create Git Repository*, selecting GitHub, and filling in the wizard before clicking *Create and Push*.
 
 1. In GitHub, go to the *Actions* tab.
 
