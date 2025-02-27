@@ -21,9 +21,10 @@ uid: General_Main_Release_10.4.0_CU13
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
-#### Security enhancements [ID 41913]
+#### Security enhancements [ID 41913] [ID 42343]
 
 <!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- 42343: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of security enhancements have been made.
 

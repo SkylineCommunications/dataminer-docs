@@ -148,7 +148,7 @@ This optional argument will specify the minimum duration (in minutes) that devia
 <!-- 41425: MR 10.6.0 - FR 10.5.4 -->
 <!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 <!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
-<!-- 42343: MR 10.5.0 [CU1] - FR 10.5.4 -->
+<!-- 42343: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of security enhancements have been made.
 
