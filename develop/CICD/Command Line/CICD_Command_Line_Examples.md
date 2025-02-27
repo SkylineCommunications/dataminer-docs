@@ -4,28 +4,20 @@ uid: CICD_Command_Line_Examples
 
 # Command line CI/CD examples
 
-## Basic deployment example
+These are basic pipeline examples for uploading to the DataMiner Catalog and/or deploying to DMAs connected to dataminer.services.
 
-This is a basic script for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
-
-We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
+We recommend combining these with quality control beforehand, such as executing static code analysis and running tests.
 
 > [!NOTE]
-> Our tools support both Windows and Linux. Below, you will find one example in PowerShell that you can use on a Windows machine, and another example using the terminal for Ubuntu users.
+> Our tools support both Windows and Linux. Below, you will find examples in PowerShell that you can use on a Windows machine and examples using the terminal for Ubuntu users.
 
-### Creating a dataminer.services key
+## Basic upload of non-connector items
 
-A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
+This is a basic example for uploading non-connector items to the DataMiner Catalog. Eventually, you will also be able to deploy such items to DMAs connected to dataminer.services via command line, but this is not yet supported at the moment.
 
-For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
+For this example, you need a Visual Studio solution containing projects that are using [Skyline.DataMiner.SDK](xref:skyline_dataminer_sdk).
 
-## Basic upload for non-connector items
-
-You need a Visual Studio Solution with projects inside that are using the Skyline.DataMiner.SDK.
-You will need *DATAMINER_TOKEN* as a secret. This will be the key for the DataMiner Organization as provided through the [DataMiner Admin app](xref:CloudAdminApp).
-
->[!IMPORTANT]
-> Deployment to an agent from the CI/CD is currently not possible, but we're working on it!
+You will also need *DATAMINER_TOKEN* as a secret. This will be the key for the **DataMiner organization** as provided through the [DataMiner Admin app](xref:CloudAdminApp).
 
 ### Windows PowerShell
 
@@ -59,14 +51,16 @@ sudo apt install dotnet-sdk-6.0
 
 You will need to restart your session or log out and back in before the next part.
 
-Below you can find the actual code for creation and deployment, assuming you have a Visual Studio solution with projects using Skyline.DataMiner.SDK.
+Below, you can find the actual code for creation and deployment, assuming you have a Visual Studio solution with projects using Skyline.DataMiner.SDK.
 
 ```bash
 export DATAMINER_TOKEN="MyOrgKey"
 dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="$DATAMINER_TOKEN"
 ```
 
-## Example for Connector
+## Uploading and deploying connectors
+
+For this example, you will need a dataminer.services **key for the specific DMS** to which you want to deploy the connectors. For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
 ### Windows PowerShell
 

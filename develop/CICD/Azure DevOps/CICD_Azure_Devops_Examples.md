@@ -4,27 +4,18 @@ uid: CICD_Azure_DevOps_Examples
 
 # Azure DevOps CI/CD examples
 
-## Basic deployment example
+These are basic pipeline examples for uploading to the DataMiner Catalog and/or deploying to DMAs connected to dataminer.services.
 
-This is a basic pipeline for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
-
-We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
+We recommend combining these with quality control beforehand, such as executing static code analysis and running tests.
 
 > [!TIP]
 > For information on creating a new pipeline in Azure DevOps, see [Azure Tutorial](https://learn.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops).
 
-### Creating a dataminer.services key
+## Basic upload of non-connector items
 
-A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
+This is a basic pipeline for uploading non-connector items to the DataMiner Catalog. Eventually, you will also be able to deploy such items to DMAs connected to dataminer.services using this pipeline, but this is not yet supported at the moment.
 
-For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
-
-## Basic upload for non-connector items
-
-You will need *DATAMINER_TOKEN* as a secret. This will be the key for the DataMiner Organization as provided through the [DataMiner Admin app](xref:CloudAdminApp).
-
->[!IMPORTANT]
-> Deployment to an agent from the CI/CD is currently not possible, but we're working on it!
+To upload an item to the Catalog, you will need *DATAMINER_TOKEN* as a secret. This will be the key for the **DataMiner organization** as provided through the [DataMiner Admin app](xref:CloudAdminApp).
 
 On a **Ubuntu** runner:
 
@@ -87,11 +78,11 @@ jobs:
           DATAMINER_TOKEN: $(DATAMINER_TOKEN)
 ```
 
-### Azure DevOps pipeline for Connectors
+## Azure DevOps pipeline for connectors
 
-You need a secret variable DATAMINER_DEPLOY_KEY.
+For this pipeline, you will need a dataminer.services **key for the specific DMS** to which you want to deploy the connectors. For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
-You need a variable that is allowed to change during the run: uploadOutput
+As you can see below, you will need a secret variable *DATAMINER_DEPLOY_KEY* that contains this dataminer.services key and an *uploadOutput* variable that is allowed to change during the run.
 
 ```yml
 trigger:
