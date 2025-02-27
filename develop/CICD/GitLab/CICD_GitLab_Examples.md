@@ -4,27 +4,18 @@ uid: CICD_GitLab_Examples
 
 # GitLab CI/CD examples
 
-## Basic deployment example
+These are basic pipeline examples for uploading to the DataMiner Catalog and/or deploying to DMAs connected to dataminer.services.
 
-This is a basic pipeline for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
-
-We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
+We recommend combining these with quality control beforehand, such as executing static code analysis and running tests.
 
 > [!NOTE]
 > For information on creating a new pipeline in GitLab, see [GitLab Tutorial](https://docs.gitlab.com/ee/ci/quick_start/).
 
-### Creating a dataminer.services key
-
-A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
-
-For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
-
 ## Basic upload for non-connector items
 
-You will need *DATAMINER_TOKEN* as a secret. This will be the key for the DataMiner Organization as provided through the [DataMiner Admin app](xref:CloudAdminApp).
+This is a basic pipeline for uploading non-connector items to the DataMiner Catalog. Eventually, you will also be able to deploy such items to DMAs connected to dataminer.services using this pipeline, but this is not yet supported at the moment.
 
->[!IMPORTANT]
-> Deployment to an agent from the CI/CD is currently not possible, but we're working on it!
+To upload an item to the Catalog, you will need *DATAMINER_TOKEN* as a secret. This will be the **key for the DataMiner organization** as provided through the [DataMiner Admin app](xref:CloudAdminApp).
 
 On a **Ubuntu** runner:
 
@@ -48,7 +39,6 @@ basic_upload_ubuntu:
         -p:Version="0.0.${CI_PIPELINE_IID}-prerelease" `
         -p:VersionComment="This is just a pre-release version." `
         -p:CatalogPublishKeyName="${DATAMINER_TOKEN}"
-
 ```
 
 On a **Windows** runner:
@@ -75,7 +65,9 @@ basic_upload_windows:
         -p:CatalogPublishKeyName="${DATAMINER_TOKEN}"
 ```
 
-### GitLab workflow For Connector
+### GitLab workflow for connectors
+
+For this workflow, you will need a dataminer.services **key for the specific DMS** to which you want to deploy the connectors. For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
 ```yml
 stages:
