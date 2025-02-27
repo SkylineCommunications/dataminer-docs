@@ -66,10 +66,11 @@ Additional logging with regard to visual overview load balancing will be availab
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
-#### Security enhancements [ID 41913] [ID 42104]
+#### Security enhancements [ID 41913] [ID 42104] [ID 42343]
 
 <!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 <!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
+<!-- 42343: MR 10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of security enhancements have been made.
 
