@@ -5345,7 +5345,7 @@ items:
       topicUid: skyline_dataminer_sdk
     - name: DataMiner Package Project
       topicUid: skyline_dataminer_sdk_dataminer_package_project
-    - name: Visual Studio 2022 Solution Filter (*.slnf) Files
+    - name: Visual Studio 2022 solution filter (*.slnf) files
       topicUid: skyline_dataminer_sdk_solution_filter_files
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD

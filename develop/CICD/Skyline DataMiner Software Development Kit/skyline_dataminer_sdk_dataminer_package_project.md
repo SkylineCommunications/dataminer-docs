@@ -126,13 +126,13 @@ If you have used the *Skyline.DataMiner.VisualStudioTemplates*, your project can
 
 Follow these steps to set it up:
 
-1. Create a GitHub repository by going to *Git* > *Create Git Repository*, selecting GitHub, and filling in the wizard before clicking *Create and Push*.
+1. Create a GitHub repository by going to *Git* > *Create Git Repository* in Visual Studio, selecting GitHub, and filling in the wizard before clicking *Create and Push*.
 
 1. In GitHub, go to the *Actions* tab.
 
 1. Click the workflow run that failed (usually called *Add project files*).
 
-1. Click the "build" step that failed and read the failing error.
+1. Click the "build" step that failed and read the error.
 
    ``` text
    Error: DATAMINER_TOKEN is not set. Release not possible!
@@ -144,11 +144,12 @@ Follow these steps to set it up:
 
    You can use the links from the actual error to better address the next couple of steps.
 
-1. Obtain an **Organization Key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
-   - **Register Catalog items**
-   - **Read Catalog items**
+1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
-1. Add the key as a secret in your GitHub repository, by navigating to **Settings > Secrets and variables > Actions** and creating a secret named `DATAMINER_TOKEN`.
+   - *Register Catalog items*
+   - *Read Catalog items*
+
+1. Add the key as a secret in your GitHub repository, by navigating to *Settings* > *Secrets and variables* > *Actions* and creating a secret named `DATAMINER_TOKEN`.
 
 1. Re-run the workflow.
 
@@ -156,9 +157,9 @@ With this setup, any push with new content (including the initial creation) to t
 
 #### Releasing a specific version
 
-1. Navigate to the **<> Code** tab in your GitHub repository.
+1. Navigate to the *<> Code* tab in your GitHub repository.
 
-1. In the menu on the right, select **Releases**.
+1. In the menu on the right, select *Releases*.
 
 1. Create a new release, select the desired version as a **tag**, and provide a title and description.
 
@@ -169,13 +170,11 @@ With this setup, any push with new content (including the initial creation) to t
 
 If you have used the Skyline.DataMiner.VisualStudioTemplates, your project can include a complete GitHub workflow for Catalog publishing. This comprehensive GitHub workflow adheres to Skyline Communications' quality standards, including static code analysis, custom validation, and unit testing.
 
-#### Prerequisite
+1. Make sure you have a **SonarCloud organization**.
 
-You need a **SonarCloud Organization**. If you don’t have one, you can create it [here](https://sonarcloud.io/create-organization).
+   If you do not have one yet, you can create it on [sonarcloud.io](https://sonarcloud.io/create-organization).
 
-#### Steps
-
-1. Create a GitHub repository by going to **Git > Create Git Repository**, selecting GitHub, and filling in the wizard before clicking **Create and Push**.
+1. Create a GitHub repository by going to *Git* > *Create Git Repository* in Visual Studio, selecting GitHub, and filling in the wizard before clicking *Create and Push*.
 
 1. In GitHub, go to the *Actions* tab.
 
@@ -193,27 +192,28 @@ You need a **SonarCloud Organization**. If you don’t have one, you can create 
 
    You can use the links from the actual error to better address the next couple of steps.
 
-1. Obtain an **Organization Key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
-   - **Register Catalog items**
-   - **Read Catalog items**
+1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
-1. Add the key as a secret in your GitHub repository, by navigating to **Settings > Secrets and variables > Actions** and creating secrets or variables with the required names.
+   - *Register Catalog items*
+   - *Read Catalog items*
+
+1. Add the key as a secret in your GitHub repository, by navigating to *Settings* > *Secrets and variables* > *Actions* and creating secrets or variables with the required names.
 
 1. Re-run the workflow.
 
 The following secrets and variables will have been added to your repository after all issues are resolved:
 
-| Name            | Type    | Description                                        | Setup Guide                                                                                 |
-|-----------------|---------|----------------------------------------------------|---------------------------------------------------------------------------------------------|
-| `DATAMINER_TOKEN` | Secret  | Organization key for publishing to the Catalog   | Obtain from [admin.dataminer.services](https://admin.dataminer.services/) and add it as a secret. |
-| `SONAR_TOKEN`    | Secret  | Token for SonarCloud authentication               | Obtain from [SonarCloud Security](https://sonarcloud.io/account/security) and add it as a secret.  |
-| `SONAR_NAME`     | Variable | SonarCloud project ID                            | Visit [SonarCloud](https://sonarcloud.io/projects/create), copy the project ID, and add it as a variable. |
+| Name              | Type     | Description                                    | Setup Guide                                                                                               |
+|-------------------|----------|------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| `DATAMINER_TOKEN` | Secret   | Organization key for publishing to the Catalog | Obtain from [admin.dataminer.services](https://admin.dataminer.services/) and add it as a secret.         |
+| `SONAR_TOKEN`     | Secret   | Token for SonarCloud authentication            | Obtain from [SonarCloud Security](https://sonarcloud.io/account/security) and add it as a secret.         |
+| `SONAR_NAME`      | Variable | SonarCloud project ID                          | Visit [SonarCloud](https://sonarcloud.io/projects/create), copy the project ID, and add it as a variable. |
 
 #### Releasing a version
 
-1. Navigate to the **<> Code** tab in your GitHub repository.
+1. Navigate to the *<> Code* tab in your GitHub repository.
 
-1. In the menu on the right, select **Releases**.
+1. In the menu on the right, select *Releases*.
 
 1. Create a new release, select the desired version as a **tag**, and provide a title and description.
 
@@ -224,32 +224,28 @@ The following secrets and variables will have been added to your repository afte
 
 ### Multiple packages
 
-You can add multiple DataMiner Package Projects within a single solution and then have them make different packages.
-The default behavior on building or publishing this solution through CI/CD is that all of them will have the same version and upload to the same organization.
+You can add multiple DataMiner package projects within a single solution and then have them make different packages. The default behavior on building or publishing this solution through CI/CD is that all of them will have the same version and upload to the same organization.
 
-It's possible to do some advanced setups within a single solution that can provide:
+Within a single solution, you can configure some advanced setups in order to:
 
-- Releasing Packages to different organizations
-- Releasing Packages with different versions
+- Release packages to different organizations
+- Release packages with different versions
 
-This is also supported with our reusable workflow (Offered through the Templates as the "Complete" GitHub Workflow): [DataMiner App Packages Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow)
+This is also supported with our reusable workflow (offered through the templates as the "Complete" GitHub Workflow): [DataMiner App Packages Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
 
-In GitHub you can make several different workflows (or different jobs) that trigger the reusable workflow with different arguments that can change the behavior of the Build and Publish.
+In GitHub you can make several different workflows (or different jobs) that trigger the reusable workflow with different arguments that can change the behavior of the Build and Publish steps.
 
-This is most easily handled using Visual Studio Solution Filters
+This is most easily handled using Visual Studio Solution filters.
 
 #### Visual Studio solution filter files
 
-A **solution filter** (`.slnf`) file in Visual Studio 2022 is a feature designed to load a subset of projects within a larger solution (`.sln`).
-This is particularly useful for large solutions that contain many projects, as it allows developers to work with only the relevant projects, improving load times and reducing resource consumption.
+A **solution filter** (`.slnf`) file in Visual Studio 2022 is a feature designed to load a subset of projects within a larger solution (`.sln`). This is particularly useful for large solutions that contain many projects, as it allows developers to work only with the relevant projects, improving load times and reducing resource consumption.
 
-Within Skyline DataMiner SDK they provide an additional key benefit.
-You can easily publish or build a specific subset of projects by providing those dotnet-cli commands a solution filter file.
-This can allow you to independently version or release different DataMiner Application Packages.
+Within Skyline DataMiner SDK, they provide an additional key benefit. You can easily publish or build a specific subset of projects by providing those dotnet-cli commands with a solution filter file. This can allow you to independently version or release different DataMiner application packages.
 
-You can find more information on how to make such filters [HERE](xref:skyline_dataminer_sdk_solution_filter_files).
+For more information on how to make such filters, refer to [Visual Studio 2022 solution filter (*.slnf) files](xref:skyline_dataminer_sdk_solution_filter_files).
 
-#### Dotnet-Cli
+#### dotnet-cli
 
 ##### Default
 
@@ -262,7 +258,7 @@ dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release 
 
 ##### With filters
 
-Call that releases only packages configured with either of the provided **Solution Filter** files:
+Call that releases only packages configured with either of the provided solution filter files:
 
 - PackagesForOrganizationA.slnf
 - PackagesForOrganizationB.slnf
@@ -276,7 +272,7 @@ dotnet publish PackagesForOrganizationB.slnf -p:Version="2.0.1" -p:VersionCommen
 
 #### GitHub reusable workflows
 
-When using GitHub reusable workflows as provided by Skyline Communications you can optionally include a Visual Studio solution filter file that will adjust the behavior of the pipeline so it only builds, tests, and publishes the subsection defined by the filter.
+When using GitHub reusable workflows as provided by Skyline Communications, you can optionally include a Visual Studio solution filter file that will adjust the behavior of the pipeline so it only builds, tests, and publishes the subsection defined by the filter.
 
 ##### Default job
 
@@ -301,8 +297,7 @@ jobs:
 
 ##### Jobs with filters
 
-Notice the addition of the extra argument below where you can define the .slnf names.
-Both jobs are using a different secrets.DATAMINER_TOKEN which allows uploading to different organizations in the same run.
+Notice the addition of the extra argument below where you can define the .slnf names. Both jobs are using a different secrets.DATAMINER_TOKEN, which allows uploading to different organizations in the same run.
 
 ```yml
 jobs:
