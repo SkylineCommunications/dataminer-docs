@@ -93,7 +93,9 @@ pipeline
 
 ```
 
-## Basic upload for connectors
+## Basic pipeline for connectors
+
+For this pipeline, you will need a dataminer.services **key for the specific DMS** to which you want to deploy the connectors. For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
 
 In the example below, the Jenkins server is on a fixed Windows machine, and local caching is used to avoid re-downloading the tools:
 
