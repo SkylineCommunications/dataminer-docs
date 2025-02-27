@@ -65,7 +65,7 @@ Follow the instructions specified in the [SonarCloud documentation](https://docs
 
    - Use a shared mailbox from your organization if possible. If this is not possible, for example because of 2FA, you can use a personal GitHub account with rights to create repositories.
 
-   - Add the user to your organization and ensure they have sufficient rights to create new repositories.
+   - Add the user to your organization and ensure that they have sufficient rights to create new repositories.
 
 1. Go to *User Settings* > *Developer Settings* > *Personal Access Tokens* to create a personal access token (classic) for your GitHub user.
 
@@ -122,7 +122,7 @@ Unless you have a paid GitHub subscription, these secrets will only be available
 
 ## Part 2: Creating a connector and publishing it to the Catalog
 
-In this second part, you will learn how to develop, (pre-)release, and optionally deploy Connectors with a CI/CD pipeline in GitHub. These processes follow the same quality standards that developers within Skyline Communications adhere to.
+In this second part, you will learn how to develop, (pre-)release, and optionally deploy connectors with a CI/CD pipeline in GitHub. These processes follow the same quality standards that developers within Skyline Communications adhere to.
 
 This CI/CD pipeline will ensure strict quality standards, provide you with a private item registered in the DataMiner Catalog, and give you the ability to deploy the item automatically.
 
@@ -132,9 +132,9 @@ Expected duration: 10 minutes.
 
 1. Open Visual Studio, and select *Create a new project*.
 
-1. Select the *DataMiner Connector Solution* Template, and click *Next*.
+1. Select the *DataMiner Connector Solution* template, and click *Next*.
 
-1. Enter a solution name, for example *SLC-C-MyDataSourceTest*, and click *Next*.
+1. Specify a solution name, for example *SLC-C-MyDataSourceTest*, and click *Next*.
 
    We recommend adhering to [Skyline's naming conventions](xref:Using_GitHub_for_CICD#repository-naming-convention), though this is not mandatory.
 
@@ -188,7 +188,7 @@ Expected duration: 10 minutes.
 
 1. Enter the ID of the project as shown in the SonarCloud project URL as the `sonarCloudProjectName`.
 
-1. Open a new browser window or tab, and create and add the necessary [GitHub secrets](xref:GitHub_Secrets) that you see in the workflow..
+1. Open a new browser window or tab, and create and add the necessary [GitHub secrets](xref:GitHub_Secrets) that you see in the workflow.
 
 1. Go back to your pipeline file and click *Commit Changes*.
 
