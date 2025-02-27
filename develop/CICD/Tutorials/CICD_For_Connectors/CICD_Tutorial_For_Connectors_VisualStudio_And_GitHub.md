@@ -4,15 +4,45 @@ uid: CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub
 
 # Setting up complete quality control in CI/CD for connector deployment
 
-This tutorial is divided into two parts.
+This tutorial is divided in two parts:
 
-In the first part you'll see how to setup a [GitHub Development Environment](#part-1-setting-up-your-development-environment-in-github). This is optional if you already have a GitHub and SonarCloud Organization you can skip to the second part (Skyline employees can use <https://github.com/SkylineCommunicationsSandbox> and skip to the second part.)
+- The first part will show how to set up a [GitHub development environment](#part-1-setting-up-your-development-environment-in-github). This is optional. If you already have a GitHub and SonarCloud organization, you can skip this and start immediately from [part 2](#part-2-creating-a-connector-and-publishing-it-to-the-catalog).
 
-In the second part you'll see how to [create a new Connector Solution on GitHub](#part-2-creating-and-publishing-your-connector-to-the-catalog) and utilize the CI/CD workflows from your Development Environment to publish it to the catalog.
+  If you are a Skyline employee, use <https://github.com/SkylineCommunicationsSandbox> and skip part 1.
 
-Total Expected duration: 20 to 30 minutes.
+- The second part will show how to [create a new connector solution on GitHub](#part-2-creating-a-connector-and-publishing-it-to-the-catalog) and utilize the CI/CD workflows from your development environment to publish it to the Catalog.
 
-## Part 1 Setting up your development environment in GitHub
+Total expected duration: 30 minutes.
+
+## Overview
+
+- [Part 1: Setting up your development environment in GitHub](#part-1-setting-up-your-development-environment-in-github)
+  - [Step 1: Create a GitHub organization](#step-1-create-a-github-organization)
+  - [Step 2: Create a SonarCloud organization and link it with GitHub](#step-2-create-a-sonarcloud-organization-and-link-it-with-github)
+  - [Step 3: Set up starter workflows for your organization](#step-3-set-up-starter-workflows-for-your-organization)
+  - [Step 4: Adjust permissions for GITHUB_TOKEN](#step-4-adjust-permissions-for-github_token)
+  - [Step 5: Optionally add organization-wide secrets](#step-5-optionally-add-organization-wide-secrets)
+- [Part 2: Creating a connector and publishing it to the Catalog](#part-2-creating-a-connector-and-publishing-it-to-the-catalog)
+  - [Step 1: Create a Visual Studio project](#step-1-create-a-visual-studio-project)
+  - [Step 2: Create a GitHub repository](#step-2-create-a-github-repository)
+  - [Step 3: Add the starter workflow](#step-3-add-the-starter-workflow)
+  - [Step 4: Release a private item in the DataMiner Catalog](#step-4-release-a-private-item-in-the-dataminer-catalog)
+
+## Prerequisites
+
+- A [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
+- A staging DataMiner Agent that is accessible from your pipeline and that uses DataMiner version 10.3.0/10.3.2 or higher
+- [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) (sometimes already included with VS2022)
+- Runtime .NET SDK 8.0 ([download](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) (sometimes already included with VS2022)
+- [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
+
+> [!NOTE]
+> Both SonarCloud and GitHub require paid licenses to fully support private GitHub repositories.
+>
+> For real-world scenarios, you will likely need at least a paid SonarCloud license to work with private GitHub repositories. A free GitHub version can still be used for private repositories, but this will slightly alter how you work with the product.
+
+## Part 1: Setting up your development environment in GitHub
 
 In this part, you will learn how to set up an organization in GitHub and SonarCloud so that you and your development team can collaboratively develop DataMiner artifacts while maintaining high-quality standards. This tutorial sets up the framework to achieve the same quality standards that developers at Skyline Communications adhere to. It will also add starter workflows provided by Skyline to improve efficiency. Additionally, you will learn how to set up SonarCloud, a mandatory static analysis tool used in all GitHub workflows provided by Skyline.
 
@@ -20,24 +50,6 @@ Expected duration: 20 minutes.
 
 > [!TIP]
 > See also: [Kata #49: Set up your development environment in GitHub](https://community.dataminer.services/courses/kata-49/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
-### Private versus public code
-
-Both SonarCloud and GitHub require paid licenses to fully support private GitHub repositories.
-
-For real-world scenarios, you will likely need at least a paid SonarCloud license to work with private GitHub repositories. A free GitHub version can still be used for private repositories, but this will slightly alter how you work with the product.
-
-### Prerequisites
-
-- [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
-
-### Overview
-
-- [Step 1: Create a GitHub organization](#step-1-create-a-github-organization)
-- [Step 2: Create a SonarCloud organization and link it with GitHub](#step-2-create-a-sonarcloud-organization-and-link-it-with-github)
-- [Step 3: Set up starter workflows for your organization](#step-3-set-up-starter-workflows-for-your-organization)
-- [Step 4: Adjust permissions for GITHUB_TOKEN](#step-4-adjust-permissions-for-github_token)
-- [Step 5: Optionally add organization-wide secrets](#step-5-optionally-add-organization-wide-secrets)
 
 ### Step 1: Create a GitHub Organization
 
@@ -108,42 +120,13 @@ Unless you have a paid GitHub subscription, these secrets will only be available
 
 1. On the *Actions secrets and variables* page, add a new organization secret such as `SONAR_TOKEN`, as explained under [GitHub secrets and tokens](xref:GitHub_Secrets).
 
-## Part 2 Creating And Publishing Your Connector To The Catalog
+## Part 2: Creating a connector and publishing it to the Catalog
 
 In this second part, you will learn how to develop, (pre-)release, and optionally deploy Connectors with a CI/CD pipeline in GitHub. These processes follow the same quality standards that developers within Skyline Communications adhere to.
 
 This CI/CD pipeline will ensure strict quality standards, provide you with a private item registered in the DataMiner Catalog, and give you the ability to deploy the item automatically.
 
 Expected duration: 10 minutes.
-
-> [!TIP]
-> See also: [Kata #50: Going from code to product in Github](https://community.dataminer.services/courses/kata-50/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
-> [!WARNING]
-> DEPRECATED: This Kata can still be used, but it only works for Connectors now.
-
-### Private versus public code
-
-Both SonarCloud and GitHub require paid licenses to fully support private GitHub repositories. For this tutorial, we recommend creating a public repository.
-
-For real-world scenarios, you will likely need at least a paid SonarCloud license to work with private GitHub repositories. A free GitHub version can still be used for private repositories, but it will slightly change the tutorial below.
-
-### Prerequisites
-
-- A GitHub and SonarCloud Organization set up as detailed under [Setting up your development environment in GitHub](#part-1-setting-up-your-development-environment-in-github) (Skyline employees can use <https://github.com/SkylineCommunicationsSandbox>)
-- A staging DataMiner Agent that is accessible from your pipeline and that uses DataMiner version 10.3.0/10.3.2 or higher
-- [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-- (Sometimes already included with VS2022) [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- (Sometimes already included with VS2022) Runtime .NET SDK 8.0 ([download](https://dotnet.microsoft.com/en-us/download/dotnet/8.0))
-- A [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
-- [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
-
-### Overview
-
-- [Step 1: Create a Visual Studio project](#step-1-create-a-visual-studio-project)
-- [Step 2: Create a GitHub repository](#step-2-create-a-github-repository)
-- [Step 3: Add the Starter Workflow](#step-3-add-the-starter-workflow)
-- [Step 4: Release a private item in the DataMiner Catalog](#step-4-release-a-private-item-in-the-dataminer-catalog)
 
 ### Step 1: Create a Visual Studio project
 
@@ -185,9 +168,9 @@ For real-world scenarios, you will likely need at least a paid SonarCloud licens
 > [!TIP]
 > For more information, refer to the [GitHubToCatalogYaml readme](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab).
 
-### Step 3: Add the Starter Workflow
+### Step 3: Add the starter workflow
 
-1. Go to the Starter Workflow:
+1. Go to the starter workflow:
 
    - For **public** repositories or **paid** GitHub subscriptions:
 

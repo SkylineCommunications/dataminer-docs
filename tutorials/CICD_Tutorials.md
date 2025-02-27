@@ -11,21 +11,17 @@ Different technology stacks, such as [Azure](xref:CICD_Azure_DevOps_Examples), [
 
 You can also run our tooling through [command line](xref:CICD_Command_Line_Examples) on both Windows and Ubuntu.
 
-For non-connector development (Automation Script, User Defined API, Ad-Hoc datasource, ...) we also provide a very powerful [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk) that automatically runs our tooling for you in the background, directly within the standard .NET Compilation and Publishing.
+For the development of items other than connectors (e.g. Automation scripts, user-defined APIs, ad hoc data sources, etc.) we also provide a powerful [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk), which automatically runs our tooling for you in the background, directly within the standard .NET compilation and publishing.
 
-## Tutorials
-
-### **For Non-Connector Items**
+## For non-connector items
 
 | Name | Description |
 |------|-------------|
-| [Registering a new version of a User-Defined API to the Catalog using Visual Studio and GitHub](xref:CICD_Tutorial_For_Other_Items_User_Defined_API_VisualStudio_And_GitHub) | Set up CI/CD pipelines using Visual Studio and GitHub to register new versions of User-Defined APIs to the DataMiner Catalog. |
-| [Registering a new version of a User-Defined API to the Catalog using GitHub Codespaces](xref:CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces) | Learn how to use GitHub Codespaces to set up CI/CD pipelines and register User-Defined APIs to the DataMiner Catalog. |
-| [Registering a new version of a Multi-Artifact DataMiner Package to the Catalog using Visual Studio and GitHub](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub) | Manage multi-artifact DataMiner packages by setting up CI/CD pipelines using Visual Studio and GitHub for version registration. |
+| [Registering a new version of a user-defined API in the Catalog using Visual Studio and GitHub](xref:CICD_Tutorial_For_Other_Items_User_Defined_API_VisualStudio_And_GitHub) | Set up CI/CD pipelines using Visual Studio and GitHub to register new versions of user-defined APIs in the DataMiner Catalog. |
+| [Registering a new version of a user-defined API in the Catalog using GitHub Codespaces](xref:CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces) | Learn how to use GitHub Codespaces to set up CI/CD pipelines and register user-defined APIs in the DataMiner Catalog. |
+| [Registering a new version of a multi-artifact DataMiner package in the Catalog using Visual Studio and GitHub](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub) | Manage multi-artifact DataMiner packages by setting up CI/CD pipelines using Visual Studio and GitHub for version registration. |
 
----
-
-### **For Connectors**
+## For connectors
 
 | Name | Description |
 |------|-------------|
