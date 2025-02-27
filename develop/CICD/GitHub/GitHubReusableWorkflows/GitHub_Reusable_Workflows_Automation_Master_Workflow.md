@@ -5,7 +5,7 @@ uid: github_reusable_workflows_automation_master_workflow
 # Automation Master Workflow
 
 > [!IMPORTANT]
-> For Projects that are SDK style: Skyline.DataMiner.SDK please see the [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
+> For **Skyline.DataMiner.SDK** projects, refer to the [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
 
 The Automation Master Workflow should run on repositories containing an [Automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
 
