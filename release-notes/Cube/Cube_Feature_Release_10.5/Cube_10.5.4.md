@@ -152,6 +152,12 @@ When you right-clicked a history alarm in the Alarm Console and selected *Show a
 
 In some cases, an exception could be thrown when you closed an element card.
 
+#### Problem when requesting information about file changes [ID 42076]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When DataMiner Cube asked the DataMiner Agent to which it was connected when a particular file had been last changed, in some cases, the file could not be found due to a casing issue.
+
 #### DataMiner Cube desktop app: Configuration files would incorrectly be updated when the app was closed [ID 42101]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
