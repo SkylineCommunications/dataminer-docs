@@ -4,7 +4,7 @@ uid: github_reusable_workflows_dataminer_app_packages_master_workflow
 
 # DataMiner App Packages Master Workflow
 
-The DataMiner App Package Master Workflow should run on repositories containing one or more of the following DataMiner SDK-Style Projects:
+The DataMiner App Package Master Workflow should run on repositories containing one or more of the following DataMiner SDK-style projects:
 
 - DataMiner Ad Hoc Data Source Project
 - DataMiner Automation Script Library Project
@@ -12,16 +12,16 @@ The DataMiner App Package Master Workflow should run on repositories containing 
 - Dataminer Package Project
 - Dataminer User-Defined API Project
 
-This workflow will act as a quality gate and code coverage collection, only creating and uploading one or more artifacts of your Automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
+This workflow will act as a quality gate and code coverage collection, only creating and uploading one or more artifacts of your Automation script solution to your private storage in the Catalog if it passes the Skyline quality gate job.
 
 The following actions will be performed:
 
 - [Validate inputs](#validate-inputs)
-- [Enable Skyline NuGet Sources](#enable-skyline-nuget-sources)
-- [Start Static Code Analysis](#start-static-code-analysis)
-- [Run Tests](#run-tests)
+- [Enable Skyline NuGet sources](#enable-skyline-nuget-sources)
+- [Start static code analysis](#start-static-code-analysis)
+- [Run tests](#run-tests)
 - [Build](#build)
-- [Publish To Catalog](#publish-to-catalog)
+- [Publish to Catalog](#publish-to-catalog)
 
 > [!IMPORTANT]
 > This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change to a branch. A release cycle is any run that triggered from adding a tag with format `A.B.C.D` or `A.B.C`. During a development cycle, only the quality control actions are performed and artifact uploading is ignored. During a release cycle, an actual artifact is created and uploaded to the Catalog. A release cycle can also be a pre-release with versions of format `A.B.C.D-text` or `A.B.C-text`.
@@ -87,9 +87,9 @@ jobs:
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }} # The API key for access to SonarCloud.
 ```
 
-### Using Visual Studio Templates
+### Using Visual Studio templates
 
-If you have the latest version of DIS installed then you can use the provided *DataMiner x Project* Templates which have the ability to add a *Complete* GitHub Workflow. This is the described reusable workflow on this page.
+If you have the latest version of DIS installed, you can use the *DataMiner x Project* templates, which have the ability to add a **complete** GitHub Workflow. This is the reusable workflow described on this page.
 
 ## Skyline quality gate
 
@@ -97,12 +97,13 @@ If you have the latest version of DIS installed then you can use the provided *D
 
 Checks that the provided inputs and secrets are valid.
 
-### Enable Skyline NuGet Sources
+### Enable Skyline NuGet sources
 
 Only triggers for Skyline Communications.
-Attempts to add nuget sources for Skyline Communications (azure and github private nuget). This only triggers for the SkylineCommunications GitHub Organization.
 
-### Start Static Code Analysis
+Attempts to add NuGet sources for Skyline Communications (Azure and GitHub private NuGet). This only triggers for the SkylineCommunications GitHub organization.
+
+### Start static code analysis
 
 Performs static code analysis using [SonarCloud](https://www.sonarsource.com/products/sonarcloud/). This will check for common errors and bugs found within C# code, track code coverage of your tests, and ensure clean code guidelines.
 
@@ -111,13 +112,14 @@ Performs static code analysis using [SonarCloud](https://www.sonarsource.com/pro
 
 ### Run tests
 
-Searches for any project ending with Tests or UnitTests and will then attempt to run all unit tests found. This will handle code regression and check that all content behaves as expected by the developer.
+Searches for any project ending with *Tests* or *UnitTests* and will then attempt to run all unit tests found. This will handle code regression and check whether all content behaves as expected by the developer.
 
 ### Build
 
 Attempts to compile the Visual Studio solution after restoring all NuGet packages. This will check for compilation errors.
-This step will create an application package (.dmapp), this will be provided as an artifact, which is directly downloadable from the run and can be used for manual testing
 
-### Publish To Catalog
+This step will create an application package (.dmapp). This will be provided as an artifact, which is directly downloadable from the run and can be used for manual testing.
 
-This step performs the upload to the catalog of all created application packages. Deployment is handled in other user-configured jobs.
+### Publish to Catalog
+
+This step performs the upload to the Catalog of all created application packages. Deployment is handled in other user-configured jobs.
