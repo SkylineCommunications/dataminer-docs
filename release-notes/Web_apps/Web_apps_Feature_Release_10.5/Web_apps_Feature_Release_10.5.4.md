@@ -359,3 +359,11 @@ A number of issues regarding duration input boxes have been fixed:
 When a *Query filter* component was linked to a *Trigger* component as well as to one or more columns as a filter, the following error would be thrown after it was retriggered via the *Trigger* component:
 
 `Cannot read properties of null (Reading 'Discreets')`
+
+#### Dashboards/Low-Code Apps: Problem with buttons and dropdown boxes [ID 42375]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, buttons would no longer correctly show their loading state.
+
+Also, dropdown boxes would no longer ellipse long values, causing a horizontal scrollbar to appear in the dropdown box.
