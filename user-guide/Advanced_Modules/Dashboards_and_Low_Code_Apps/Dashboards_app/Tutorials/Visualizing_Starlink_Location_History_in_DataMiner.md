@@ -35,6 +35,10 @@ Expected duration: 30 minutes
 
 1. Go to the [Starlink Enterprise](https://catalog.dataminer.services/details/66a4c259-0fb1-4c27-aede-8bbd3a4925d0) solution in the DataMiner Catalog.
 
+<!-- 1. Go to the *Versions* tab and expand version 1.0.2-CU12, so you can see the *Deploy* button for this specific version.
+
+   This version of the app contains everything you need to be able to follow this tutorial.
+ -->
 1. Click the *Deploy* button to deploy the package on your DMA.
 
    While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
