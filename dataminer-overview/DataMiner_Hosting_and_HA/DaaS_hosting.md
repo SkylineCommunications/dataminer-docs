@@ -13,7 +13,7 @@ We therefore also offer **DataMiner as a Service (DaaS)**, a DataMiner platform 
 Our DaaS model guarantees that you immediately get access to a wide range of capabilities for streamlined and worry-free solution development.
 
 > [!TIP]
-> For a sneak peek video, see [Sneak peek: DataMiner as a Service (DaaS) in action - DataMiner Dojo](https://community.dataminer.services/sneak-peek-dataminer-as-a-service-daas-in-action)
+> For more hands-on information, see [Creating a DataMiner System on dataminer.services](xref:Creating_a_DMS_on_dataminer_services).
 
 ## Benefits of DataMiner as a Service (DaaS)
 
@@ -54,9 +54,9 @@ For its data storage, DataMiner as a Service makes use of DataMiner Storage as a
 > [!TIP]
 > See also:
 >
-> - [Data location and redundancy](xref:STaaS#data-location-and-redundancy)
-> - [Data resilience and backups](xref:STaaS#data-resilience-and-backups)
-> - [Data security and availability](xref:STaaS#data-security-and-availability)
+> - [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy)
+> - [Data resilience and backups](xref:STaaS_features#data-resilience-and-backups)
+> - [Data security and availability](xref:STaaS_features#data-security-and-availability)
 
 ## DataMiner as a Service: a complete cloud-native experience
 

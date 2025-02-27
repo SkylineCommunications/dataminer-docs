@@ -4,6 +4,17 @@ uid: CommunicationGateway_change_log
 
 # CommunicationGateway change log
 
+#### 13 February 2025 - Enhancement - CommunicationGateway 5.2.0 - Circuit breaker for repeated gRPC stream failures [ID 41971]
+
+A circuit breaker mechanism has been implemented to prevent excessive resource consumption when a gRPC stream repeatedly fails. Previously, the system would continuously attempt to restore a stream, even if failures were caused by persistent issues such as invalid UTF-8 characters in messages. With this update, if a stream fails 5 times within 60 seconds, the circuit breaker will activate, halting further reconnection attempts. This enhancement improves system stability and reduces unnecessary processing.
+
+#### 28 January 2025 - Enhancement - CommunicationGateway 5.1.0 - Node ID has a fixed value [ID 41784]
+
+The node ID of a CommunicationGateway instance is now assigned a fixed value, enabling middleware to target a specific instance of its choice. This enhancement was introduced to allow middleware to prioritize the CommunicationGateway instance running on the same machine as where the middleware is hosted.
+
+> [!NOTE]
+> For this to work as intended, connectors need to reference [Skyline.DataMiner.DataSources.OpenConfig.Gnmi 6.1.0](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x#prioritize-connection-to-the-local-communicationgateway-instance-id-41784) or higher.
+
 #### 25 November 2024 - Enhancement - CommunicationGateway 4.0.0 - MessageBroker version 3.0.3 [ID 41467]
 
 The CommunicationGateway DxM has been updated so that from now on it uses MessageBroker version 3.0.3.

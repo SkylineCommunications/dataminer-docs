@@ -133,7 +133,7 @@ The variable is then saved in a separate .dat file located in the following fold
 
 In a shape data field of type ChildrenFilter, it is now possible to filter by service name, view name or child element name.
 
-To do so, in the ChildrenFilter data field of the child shape, add “Name=” following by a regular expression:
+To do so, in the ChildrenFilter data field of the child shape, add "Name=" following by a regular expression:
 
 | Shape data field | Value           |
 |------------------|-----------------|
@@ -358,8 +358,8 @@ Example:
 ```xml
 <Chain>
   <Display>
-    <Visibility default=”false”>
-      <Standalone pid=”8”>
+    <Visibility default="false">
+      <Standalone pid="8">
         <Value>1</Value>
         <Value>2</Value>
       </Standalone>
@@ -382,8 +382,8 @@ Example:
   <Field>
     <Display>
       <Selection>
-        <Visibility default=”false”>
-          <Standalone pid=”18”>
+        <Visibility default="false">
+          <Standalone pid="18">
             <Value>1</Value>
             <Value>2</Value>
           </Standalone>
@@ -406,8 +406,8 @@ Example:
 ```xml
 <SearchChain>
   <Display>
-    <Visibility default=”false”>
-      <Standalone pid=”8”>
+    <Visibility default="false">
+      <Standalone pid="8">
         <Value>1</Value>
         <Value>2</Value>
       </Standalone>
@@ -594,9 +594,9 @@ Example:
 </Measurement>
 ```
 
-The discreet value can contain the name or the ID of the object, or a reference like “{pid:530}”. In the example above, the identifier is stored in the column with parameter ID 530, which can be the read parameter of the same column or a different column.
+The discreet value can contain the name or the ID of the object, or a reference like "{pid:530}". In the example above, the identifier is stored in the column with parameter ID 530, which can be the read parameter of the same column or a different column.
 
-If you know the type of the object, you can add a type prefix (element, redundancygroup, view or service), followed by an equal sign and (a reference to) the identifier. If you refer to the name of the object, it is recommended to use “element=” as an element can have the same name as a view.
+If you know the type of the object, you can add a type prefix (element, redundancygroup, view or service), followed by an equal sign and (a reference to) the identifier. If you refer to the name of the object, it is recommended to use "element=" as an element can have the same name as a view.
 
 The \<Display> tag of the discreet can contain the same references as the \<Value> tag. One extra keyword is possible (and recommended): {linkedItemName}. This keyword will be replaced with the name of the object referred to in the \<Value> tag.
 
@@ -628,7 +628,7 @@ When editing an alarm template, it is now possible to configure alarm template c
 
 When, within a service context, child shapes are automatically generated, it is now possible to use a ResourceMapping filter. This will allow you to only show shapes that have a certain role (mapped, unmapped, inheritance) within the booking.
 
-In a child shape, add a data field of type *ChildrenFilter*, and set its value to “ResourceMapping=”, followed by one or more roles (separated by commas). If you specify multiple roles, all shapes of which the roles match one of the specified roles will be shown.
+In a child shape, add a data field of type *ChildrenFilter*, and set its value to "ResourceMapping=", followed by one or more roles (separated by commas). If you specify multiple roles, all shapes of which the roles match one of the specified roles will be shown.
 
 See the following example.
 
@@ -637,13 +637,13 @@ See the following example.
 | ChildrenFilter   | ResourceMapping=mapped,unmapped,inheritance |
 
 > [!NOTE]
-> Within a data field of type *ChildrenFilter*, you can specify multiple filters separated by pipe characters (“\|”). If you do so, only shapes matching all specified filters will be shown.
+> Within a data field of type *ChildrenFilter*, you can specify multiple filters separated by pipe characters ("\|"). If you do so, only shapes matching all specified filters will be shown.
 
 #### Visual Overview: Linking an element shape to a resource that is using that element \[ID 30752\]
 
 It is now possible to link an element shape to a resource that is using that element.
 
-To link an element shape to the last-known resource using the element in question, add a data field of type “Options” and set its value to “UseResource=True” (default value is false).
+To link an element shape to the last-known resource using the element in question, add a data field of type "Options" and set its value to "UseResource=True" (default value is false).
 
 | Shape data field | Value            |
 |------------------|------------------|
@@ -652,7 +652,7 @@ To link an element shape to the last-known resource using the element in questio
 > [!NOTE]
 >
 > - Within a service instance connectivity chain, the elements will automatically be linked to the resource.
-> - Children of an element shape in which the “UseResource” option is specified will automatically inherit this setting unless overridden.
+> - Children of an element shape in which the "UseResource" option is specified will automatically inherit this setting unless overridden.
 
 ##### Placeholders that can retrieve resource-related data
 

@@ -15,6 +15,8 @@ items:
           topicUid: Overview_Standardized_Foundation
         - name: References and use cases
           topicUid: Overview_References_and_use_cases
+        - name: Compliance offering
+          topicUid: DataMiner_compliance_offering
     - name: DataMiner platform - Empowering your digital transformation
       topicUid: Overview_Platform_intro
       items:
@@ -31,9 +33,9 @@ items:
       items:
         - name: DataMiner as a Service
           topicUid: DaaS_hosting
-        - name: Self-hosted DataMiner nodes with Storage as a Service
+        - name: Self-managed DataMiner nodes with Storage as a Service
           topicUid: DM_selfhosted_and_StaaS
-        - name: Self-hosted DataMiner nodes and storage nodes
+        - name: Self-managed DataMiner nodes and storage nodes (not recommended)
           topicUid: DM_and_storage_selfhosted
     - name: dataminer.services
       topicUid: Overview_DCP
@@ -98,8 +100,6 @@ items:
                   topicUid: Overview_MediaOps_Resource_Studio
             - name: Supported connectors
               topicUid: Overview_MediaOps_supported_connectors
-        - name: DOM Viewer
-          topicUid: domviewer_about
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
@@ -184,6 +184,8 @@ items:
           topicUid: Overview_Training_videolibrary
         - name: Agile Awareness Training
           topicUid: Overview_Training_agile_aw
+        - name: Kanban workshop
+          topicUid: Overview_Kanban_workshop
     - name: Pricing
       topicUid: Pricing
       items:

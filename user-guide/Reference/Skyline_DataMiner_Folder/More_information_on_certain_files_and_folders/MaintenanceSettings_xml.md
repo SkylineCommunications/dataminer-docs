@@ -281,9 +281,9 @@ The *\<DELTCache>* tag and its subtags use the following syntax:
 </DELTCache>
 ```
 
-#### Clean-up modes
+#### Cleanup modes
 
-In a *\<DELTCacheMode>* tag, you can specify one of three clean-up modes:
+In a *\<DELTCacheMode>* tag, you can specify one of three cleanup modes:
 
 | Mode | Description |
 |--|--|

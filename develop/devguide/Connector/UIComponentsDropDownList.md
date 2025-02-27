@@ -89,11 +89,11 @@ To define a drop-down list, create a parameter of type "write", set type to "dis
 </Param>
 ```
 
-![alt text](~/develop/images/uidropdownlist.png "DataMiner Cube Drop-Down List UI Component")
+![DataMiner Cube Drop-Down List UI Component](~/develop/images/uidropdownlist.png)
 
-## Creating a drop-down list with a check box
+## Creating a drop-down list with a checkbox
 
-When you add a drop-down list, it is possible to show a check box for one entry by using the state attribute and setting its value to disabled. Note that the corresponding read parameter should interpret this as an exceptional value.
+When you add a drop-down list, it is possible to show a checkbox for one entry by using the state attribute and setting its value to disabled. Note that the corresponding read parameter should interpret this as an exceptional value.
 
 ```xml
 <Param id="1032">
@@ -164,7 +164,7 @@ When you add a drop-down list, it is possible to show a check box for one entry 
 </Param>
 ```
 
-![alt text](~/develop/images/uidropdownlistwithcheckbox.png "DataMiner Cube drop-down list with check box")
+![DataMiner Cube drop-down list with checkbox](~/develop/images/uidropdownlistwithcheckbox.png)
 
 ## Creating a dynamic drop-down list
 
@@ -223,7 +223,7 @@ When a standard drop-down list is configured, the items to choose from are stati
 </Param>
 ```
 
-![alt text](~/develop/images/uidropdownlistdynamic.png "DataMiner Cube dynamic drop-down list")
+![DataMiner Cube dynamic drop-down list](~/develop/images/uidropdownlistdynamic.png)
 
 This also works for tables (from DataMiner 8 onwards (RN 5817)). It is not only possible to refer to a standalone parameter, another column of the same table can also be specified. This makes it possible to have a list of different items for every row.
 

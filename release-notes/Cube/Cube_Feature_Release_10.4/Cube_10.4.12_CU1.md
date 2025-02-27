@@ -16,6 +16,6 @@ uid: Cube_Feature_Release_10.4.12_CU1
 
 #### Problem when using Cube version 10.4.12 to connect to the local DMA running DataMiner version 10.2.x [ID 41936] [ID 42008]
 
-<!-- MR 10.6.0 - FR 10.4.12 CU1 -->
+<!-- MR 10.5.0 - FR 10.4.12 CU1 -->
 
-Up to now, when you used a DataMiner Cube Feature Release version 10.4.12 to connect to the local DataMiner Agent, connection issues could occur when the DataMiner Agent was running DataMiner Feature Release version 10.2.x.
+Up to now, when you used a DataMiner Cube Feature Release version 10.4.12 to connect to the local DataMiner Agent, the connection could incorrectly time out after 10 seconds when the DataMiner Agent was running DataMiner Feature Release version 10.2.x.

@@ -5,7 +5,7 @@ uid: Deploying_Amazon_Keyspaces_Service
 # Deploying the Amazon Keyspaces Service
 
 > [!IMPORTANT]
-> This setup is deprecated. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+> This setup is deprecated. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead.
 
 ## Installing the Starfield certificate
 

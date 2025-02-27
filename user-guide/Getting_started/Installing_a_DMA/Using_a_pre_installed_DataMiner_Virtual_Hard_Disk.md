@@ -10,9 +10,9 @@ When you configure this setup, you will be able to choose between different data
 
 - [STaaS](xref:STaaS), i.e. the recommended setup.
 
-- [Self-hosted dedicated clustered storage](xref:Configuring_dedicated_clustered_storage): A setup where you host the Cassandra and OpenSearch cluster required by DataMiner yourself on dedicated servers. If you choose this setup, you will need to make sure these database clusters are fully installed before you run the procedures below, so that DataMiner will be able to connect to them.
+- [Self-managed dedicated clustered storage](xref:Configuring_dedicated_clustered_storage): A setup where you host and manage the Cassandra and OpenSearch clusters required by DataMiner yourself on dedicated servers (not recommended). If you choose this setup, you will need to make sure these database clusters are fully installed before you run the procedures below, so that DataMiner will be able to connect to them.
 
-- A **staging setup** where both Cassandra and OpenSearch run **locally** on Windows Subsystem for Linux (WSL). Such a setup should only be used for **testing and staging environments**, and this will also require additional resources on the local machine. To switch such a setup to production, you will need to either migrate to [Storage as a Service (STaaS)](xref:STaaS) or switch to using Cassandra and OpenSearch clusters on separate servers, and then [decommission WSL](xref:Decommissioning_WSL).
+- A **staging setup** where both Cassandra and OpenSearch run **locally** on Windows Subsystem for Linux (WSL). Such a setup should only be used for **testing and staging environments**, and this will also require additional resources on the local machine. To switch such a setup to production, you will need to either migrate to [Storage as a Service (STaaS)](xref:STaaS) or switch to using Cassandra and OpenSearch clusters on separate servers (not recommended), and then [decommission WSL](xref:Decommissioning_WSL).
 
 Once you have downloaded the [pre-installed virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) from DataMiner Dojo, you will need to follow the steps below to use it:
 
@@ -77,8 +77,11 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 
 > [!IMPORTANT]
 >
-> - If you intend to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](#restoring-a-backup-onto-the-virtual-hard-disk).
-> - DataMiner requires a static IP to be configured. Make sure to do this before continuing with the below steps. If you have to change the IP afterwards, you can do so by following the steps described in [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA).
+> - The configuration wizard takes care of the automatic license and data storage configuration; however, this requires a connection to the internet. If you need to install DataMiner **offline**, you will not be able to use this wizard. Instead, the license and data storage configuration will need to be done manually:
+>   - For the license, see [Permanent license](xref:Permanent_license).
+>   - For the data storage configuration, please [contact tech support](xref:Contacting_tech_support).
+> - If you intend to restore a **backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip** the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](#restoring-a-backup-onto-the-virtual-hard-disk).
+> - DataMiner requires a **static IP** to be configured. Make sure to do this before continuing with the below steps. If you have to change the IP afterwards, you can do so by following the steps described in [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA).
 
 > [!NOTE]
 > If you have accidentally closed the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`. Make sure to run it with administrator privileges.
@@ -177,5 +180,31 @@ If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing
 1. Wait until you receive a *dataminer.lic* file from Skyline.
 
 1. When you have the *dataminer.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
+
+1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+## Switching from subscription mode to an offline demo license
+
+When you deploy a DataMiner Agent using the pre-installed DataMiner Virtual Hard Disk, your system will automatically be licensed and run in subscription mode. A DataMiner Agent running in subscription mode **has to remain connected** to [dataminer.services](xref:AboutCloudPlatform) to keep it licensed. If for some reason you cannot keep your Agent connected to [dataminer.services](xref:AboutCloudPlatform), it will automatically shut down after 1 month.
+
+If after this period you want to extend the usage of the system, you can convert your subscription installation to an offline demo installation:
+
+1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+1. Open the *C:\Skyline DataMiner\\* folder.
+
+1. Remove all *\*.lic* files, if any.
+
+1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
+
+1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the *Request.lic* file.
+
+   In your email, mention that it concerns a conversion from a subscription to a demo license.
+
+1. Wait until you receive a *Response.lic* file from Skyline.
+
+1. When you have the *Response.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
 
 1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).

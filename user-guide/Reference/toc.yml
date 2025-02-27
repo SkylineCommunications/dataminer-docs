@@ -357,6 +357,8 @@ items:
                 topicUid: SLNetClientTest_removing_DOM_Manager
               - name: Removing references to items that no longer exist
                 topicUid: SLNetClientTest_removing_references
+              - name: Retraining the internal model used by RAD
+                topicUid: SLNetClientTest_retrain_rad_model
               - name: Setting the TTL for database records
                 topicUid: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
@@ -401,6 +403,8 @@ items:
         topicUid: Verify_No_Legacy_Reports_Dashboards
       - name: Verify No Obsolete API Deployed
         topicUid: Verify_No_Obsolete_API_Deployed
+      - name: Verify No Amazon Keyspaces
+        topicUid: Verify_No_Amazon_Keyspaces
   - name: Methods of Procedure
     items:
       - name: Changing the default password for Cassandra

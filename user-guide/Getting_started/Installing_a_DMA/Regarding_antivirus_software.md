@@ -13,13 +13,13 @@ If you do install antivirus software on the **server**, you must:
 
   - `C:\Skyline DataMiner`
   - `C:\Program Files\Skyline Communications`
-  - In case you are using self-hosted data storage instead of [Storage as a Service](xref:STaaS), the data directories of the databases (e.g. `C:\ProgramData\Cassandra`)
+  - In case you are using self-managed storage instead of [Storage as a Service](xref:STaaS), the data directories of the databases (e.g. `C:\ProgramData\Cassandra`)
 
 - Exclude the following processes:
 
   - All DataMiner processes (process names starting with "SL" or "DataMiner").
   - The NATS processes *nats-account-server.exe* and *nats-streaming-server.exe*.
-  - In case you are using self-hosted data storage instead of [Storage as a Service](xref:STaaS), the process(es) of the database application(s) you are using with DataMiner (e.g. Cassandra).
+  - In case you are using self-managed storage instead of [Storage as a Service](xref:STaaS), the process(es) of the database application(s) you are using with DataMiner (e.g. Cassandra).
 
 - Avoid scheduled virus scans affecting the available resources for the DataMiner software at certain moments in time.
 

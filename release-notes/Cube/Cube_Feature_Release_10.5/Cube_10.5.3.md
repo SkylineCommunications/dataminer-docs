@@ -2,19 +2,15 @@
 uid: Cube_Feature_Release_10.5.3
 ---
 
-# DataMiner Cube Feature Release 10.5.3 – Preview
+# DataMiner Cube Feature Release 10.5.3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.3](xref:General_Feature_Release_10.5.3).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.3](xref:Web_apps_Feature_Release_10.5.3).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -37,6 +33,42 @@ To do so, proceed as follows:
    Users will only be able to copy rights to user groups they are allowed to edit. If you do not have permission to edit any of the user groups, a "No groups available" message will appear.
 
 1. Click *Apply*.
+
+#### System Center: Save the rights of a user group as a preset [ID 41656]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.3 [CU0] -->
+
+In *System Center > Users/Groups > Groups*, it is now possible to save the rights of a user group as a preset, which can then be exported/imported as a JSON file.
+
+Proceed as follows to grant all rights in an existing preset to a particular user group:
+
+1. Select a user group.
+1. Go to *Permissions > Rights*. On the right, you will see a list with all the available presets (including the built-in presets like *Administrators*).
+1. Select a preset to grant all rights in that preset to the user group selected in step 1.
+1. Click *Apply*.
+
+When you have selected a user group, you will now also be able to choose the following preset-related commands:
+
+| Command | Function |
+|---------|----------|
+| Save rights as preset... | Saves the currently selected rights to a preset.<br>Note: If the currently selected rights have already been saved to a preset, this command will be unavailable. |
+| Export preset            | Opens a window that will allow you to export the currently selected rights to a preset file (in JSON format).<br>If no preset is selected when you click *Export preset*, you will be asked to enter the name of the preset.<br>Note: When you export a preset to a preset file, that file will have a version number. That number will be incremented each time changes are made as to file format or syntax. |
+| Import preset            | Opens a window that will allow you to import a preset file.<br>If the name of the preset is identical to the one of an existing preset, and the currently selected rights do not entirely match the rights in the existing preset with the same name, then you will be asked whether you want to override the rights in the existing preset with the rights in the preset you are about to import. |
+| Reset                    | Reverts all changes made to the rights of the currently selected user group. |
+| Delete preset            | Deletes the currently selected preset.<br>Note: Built-in presets (e.g. *Administrators*) cannot be deleted. |
+
+When you try to import
+
+- a preset file without a version number or with version number 0, a message will appear, saying that the file version is not valid.
+- a preset file of which the version is too recent, a message will appear, indicating both the version that is expected and the version of the file you are trying to import.
+- a preset file that is not a valid JSON file, a message will appear, saying that the file could not be parsed.
+- a preset file of which the permissions field is missing or of which the permissions field does not contain any presets, a message will appear, saying that the file does not contain exactly one preset.
+
+> [!NOTE]
+>
+> - There is no command to rename a preset. To rename a preset, select it, delete it, and then save it again with another name.
+> - If you make any changes to presets, those changes will not automatically be visible in other places (e.g. other cards within the same Cube session or other Cube sessions).
+> - If you want to override a certain preset, then save it as a new preset using the same name. This way, the previously created preset with the same name will be overridden. However, note that if that preset is being used by other user groups, it will not be overridden there.
 
 #### System Center - Logging: Consulting DxM logs [ID 41674]
 
@@ -119,6 +151,23 @@ Up to now, when a correlated alarm appeared in a linked alarm tab because it mat
 
 - When the correlated alarm does not match the filter, and none of the base alarms match the filter, then neither the correlated alarm nor the base alarms will be shown.
 
+#### Alarm Console: Sound played when the alarm banner appears can now be disabled [ID 41982]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When you enable the *Show in banner* option for a particular alarm tab, a banner will appear at the top of the Cube window when new alarms enter the tab. That banner will show the number of new alarms, the color of the most severe among them, and service impact information.
+
+Up to now, each time the alarm banner appeared or was updated, a sound would be played. A new *Enable the sound for the alarm banner* setting has now been added in the *Alarm Console* section of the *Settings* window. This setting will allow you to indicate whether or not a sound should be played when the alarm banner appears or is updated. By default, a sound will be played.
+
+#### Web apps: GQI DxM version displayed in About box [ID 42003]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When a DataMiner web app is using the GQI DxM to build and run GQI queries, the version of the GQI DxM will now be displayed in the app's *About* box.
+
+> [!NOTE]
+> When the web app is using SLHelper instead of the GQI DxM, the *About* box will not display any GQI version. Instead, it will display "no DxM".
+
 ### Fixes
 
 #### DataMiner Cube desktop app: Some Cube sessions would not get closed correctly [ID 41831]
@@ -148,3 +197,27 @@ In the *User > Data Display* section of the *Settings* window, the *Parameter di
 Up to now, Cube would check the value of this setting ("Normal" or "Lite") depending on the UI language. As a result, when that language was set to a language other than English, in some cases, the value of this setting would be interpreted incorrectly.
 
 From now on, Cube will check whether the value is the default setting (i.e. "Normal") or not. In the latter case, Cube will use the lite parameter controls.
+
+#### Visual Overview: AlarmSummary shapes linked to a function would not show the correct alarm color [ID 41916]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When an *AlarmSummary* shape was linked to a function, the shape would not show the correct alarm color.
+
+#### Swarming: Element selection in 'Element Swarming' window would be cleared when an element was created or deleted [ID 42079]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 -->
+
+When, while a number of elements were selected in the *Element Swarming* window, an element was created or deleted in either the same client or another client, up to now, the element selection in the *Element Swarming* window would incorrectly be cleared.
+
+#### Automation, Correlation & Scheduler apps - 'Send email' action: 'Configure' button would incorrectly not appear after a dashboard was selected [ID 42240]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When, while configuring a *Send email* action, you had attached a dashboard, the *Configure* button would incorrectly not appear.
+
+#### Visual Overview: DataMiner Cube could stop working when Children shapes were being updated [ID 42304]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When *Children* shapes were being updated, in some cases, DataMiner Cube could stop working.

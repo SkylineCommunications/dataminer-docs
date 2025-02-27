@@ -374,6 +374,8 @@ items:
                 topicUid: Tutorial_App_Design
               - name: Using flows in a low-code app
                 topicUid: Tutorial_Apps_Flows
+              - name: Using variables in a low-code app
+                topicUid: Tutorial_Apps_Variables
               - name: Creating a custom event scheduler low-code app
                 topicUid: Tutorial_Custom_Event_Scheduler_LCA
       - name: Configuring components
@@ -500,6 +502,10 @@ items:
                 topicUid: DashboardSearchInput
               - name: Text input
                 topicUid: DashboardTextInput
+              - name: Time range
+                topicUid: TimeRange
+              - name: Toggle
+                topicUid: Toggle
       - name: Component data
         topicUid: Component_Data
       - name: URL data
@@ -923,7 +929,7 @@ items:
             topicUid: DOM_Remove_Enum_Entry
           - name: Removing a field descriptor from a definition
             topicUid: DOM_Remove_FieldDescriptor_Definition
-          - name: Generating code with the DOM editor
+          - name: Generating code with the DOM Editor
             topicUid: DOM_Generating_code_with_the_DOM_editor
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
@@ -1254,6 +1260,8 @@ items:
         items:
           - name: Function resource settings
             topicUid: Function_resource_settings
+          - name: Resource availability
+            topicUid: Resource_availability
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:

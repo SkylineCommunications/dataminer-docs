@@ -40,7 +40,7 @@ From now on, it will show the following message instead:
 
 <!-- MR 10.4.0 [CU11] / 10.5.0 [CU0] - FR 10.5.2 -->
 
-Because of a number of enhancements, overall performance of the DataMiner Cube desktop app has improved, especially at start-up.
+Because of a number of enhancements, overall performance of the DataMiner Cube desktop app has improved, especially at startup.
 
 #### Swarming: UI enhancements [ID 41589]
 

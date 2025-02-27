@@ -28,6 +28,8 @@ To create a new variable:
 
    - Text
 
+   - Boolean (available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41845-->)
+
    - Number
 
    - Table <!--RN 41132-->
@@ -54,6 +56,8 @@ To create a new variable:
      1. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41251-->, select *Apply* to confirm your chosen DOM module and instance.
 
    - Default text: Enter custom text.
+
+   - Default boolean: Choose *True* to enable the boolean variable by default, *False* to disable it, or *Empty* to leave it unset until a value is specified.
 
    - Default number: Enter a number or use the arrow icons to increase or decrease the value.
 

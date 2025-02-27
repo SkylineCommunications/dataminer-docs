@@ -1,13 +1,14 @@
 ---
 uid: Adding_elements
 description: In DataMiner Cube, right-click the Surveyor, and select New > Element. Configure the element settings, and click Create.
+keywords: element wizard
 ---
 
 # Adding elements
 
 1. [Open DataMiner Cube](xref:Using_the_desktop_app).
 
-1. Right-click in the Surveyor, and select *New \> Element*.
+1. Right-click an item in the Surveyor, and select *New \> Element*.
 
    A card will open.
 

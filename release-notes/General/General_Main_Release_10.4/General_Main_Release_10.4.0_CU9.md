@@ -93,7 +93,7 @@ Also, when you select the above-mentioned database type, the following warning m
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
 
-When, at DataMiner start-up, no GUID is present in the `<DataMinerGuid>` element in *DataMiner.xml*, DataMiner will automatically generate one.However, up to now, when a new GUID was generated, the StorageModule DcM would not be aware of it. As a result, DataMiner would fail to start.
+When, at DataMiner startup, no GUID is present in the `<DataMinerGuid>` element in *DataMiner.xml*, DataMiner will automatically generate one.However, up to now, when a new GUID was generated, the StorageModule DcM would not be aware of it. As a result, DataMiner would fail to start.
 
 From now on, when a new DataMiner GUID is generated, the StorageModule DcM will be restarted to make sure it uses the new GUID.
 
@@ -211,11 +211,11 @@ Up to now, when finalizing a migration, the Cassandra Cluster Migrator tool (*SL
 
 For more information on the above-mentioned offload options, see [Offloading files to a file cache](xref:DB_xml#offloading-files-to-a-file-cache).
 
-#### Problem with the NATS cluster configuration after a DataMiner start-up [ID 41072]
+#### Problem with the NATS cluster configuration after a DataMiner startup [ID 41072]
 
 <!-- MR 10.4.0 [CU9] - FR 10.4.12 -->
 
-After a DataMiner start-up, in some cases, the NATS cluster would be configured incorrectly and the following error message would be added to the *SLError.txt* log file:
+After a DataMiner startup, in some cases, the NATS cluster would be configured incorrectly and the following error message would be added to the *SLError.txt* log file:
 
 `ResetLocalNatsCluster|ERR|0|18|System.IO.InvalidDataException: Central Directory corrupt. ---> System.IO.IOException: An attempt was made to move the position before the beginning of the stream.`
 

@@ -48,7 +48,7 @@ See the following decision flow.
 
 ## Which user permissions are included in which security preset?
 
-In the following table, an x in a preset column indicates that the user permission in the first column is available in that preset.
+The table below shows which user permissions are available in the default security presets available in DataMiner Cube (see [Using presets to assign rights](xref:Configuring_a_user_group#using-presets-to-assign-rights)). An x in a preset column indicates that the user permission in the first column is available in that preset.
 
 > [!NOTE]
 > Some user permissions are only available in certain versions of Cube or depending on certain DataMiner licenses.

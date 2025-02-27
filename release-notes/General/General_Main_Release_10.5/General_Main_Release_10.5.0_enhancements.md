@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_enhancements
 ---
 
-# General Main Release 10.5.0 – Enhancements (preview)
+# General Main Release 10.5.0 – Enhancements
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 #### Security enhancements [ID 37349] [ID 38052] [ID 38951] [ID 39387]
 
@@ -1056,7 +1056,7 @@ The above-mentioned array will now be locked to prevent the data from getting co
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
+At DataMiner startup, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
 
 - If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
 - If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.
@@ -1085,16 +1085,6 @@ Error and exception handling has been enhanced in order to prevent duplicate or 
 
 On STaaS systems, the timeout for responses to write requests has been reduced to 10 seconds.
 
-#### SLAnalytics: New check to verify if the incident tracking leader is still a member of the current DMS [ID 41836]
-
-<!-- MR 10.5.0 - FR 10.5.3 -->
-
-At DataMiner start-up, from now on, SLAnalytics will check whether the DataMiner Agent configured as leader\* is still a member of a current DataMiner System.
-
-Also, from now on, a new leader will be elected when the former leader has left the cluster.
-
-*\* In DataMiner Cube, the leader can be configured in the *Leader DataMiner ID* box, which can be found in *System Center > System settings > Analytics config > Automatic incident tracking*.*
-
 #### Amazon Keyspaces Service is now end-of-life [ID 41874] [ID 41914]
 
 <!-- MR 10.5.0 [CU0] - FR 10.5.3 -->
@@ -1103,7 +1093,7 @@ Support for Amazon Keyspaces Service is now officially end-of-life.
 
 When you run the DataMiner installer or install a DataMiner upgrade package, the *VerifyNoAmazonKeyspaces* prerequisite will check whether the DataMiner Agent is configured to use a database of type *Amazon Keyspaces*. If so, the upgrade process will not be allowed to continue.
 
-We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-managed storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
 
 For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
 
@@ -1116,3 +1106,26 @@ SLLogCollector packages now include the following data regarding the GQI DxM:
 - *appsettings.json*
 - Log file
 - Version
+
+#### GQI DxM: Redundant Logging section removed from appsettings.custom.json file [ID 42075]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+The redundant `Logging` section (see example below) has now been removed from the `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.custom.json` file.
+
+```json
+"Logging": {
+  "LogLevel": {
+  "Default": "Debug",
+  "Microsoft": "Information"
+  }
+},
+```
+
+#### Failover: Virtual IP address check will no longer execute an arp command to double-check whether an IP address is free [ID 42280]
+
+<!-- MR 10.4.0 [CU12]/10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When the virtual IP address check concluded that the IP address was free after having executed the required number of ping commands, since DataMiner main release 10.3.0 [CU20]/10.4.0 [CU8] and feature release 10.4.11, it would double-check by executing an arp command.
+
+From now on, it will no longer execute an arp command.

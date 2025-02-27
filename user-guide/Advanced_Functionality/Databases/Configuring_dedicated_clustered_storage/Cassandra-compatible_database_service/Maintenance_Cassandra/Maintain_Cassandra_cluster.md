@@ -4,7 +4,7 @@ uid: Maintain_Cassandra_Cluster
 
 # Maintaining a Cassandra cluster
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-hosted storage, you are responsible for maintaining and monitoring the database used for DataMiner system storage. With a Cassandra cluster setup, this involves setting the heap space, monitoring the database, keeping the nodes repaired, and keeping the software up to date.
+If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-managed storage, you are responsible for maintaining and monitoring the database used for DataMiner system storage. With a Cassandra cluster setup, this involves setting the heap space, monitoring the database, keeping the nodes repaired, and keeping the software up to date.
 
 ## Setting the heap space
 

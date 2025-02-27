@@ -4,15 +4,15 @@ uid: Troubleshooting_Cassandra
 
 # Troubleshooting – Cassandra
 
-DataMiner uses Cassandra in various ways. Each way has its specific behavior and place within a DataMiner System.
+In case self-managed storage is used (not recommended), Cassandra or a Cassandra-compatible database service is needed, which DataMiner will use in various ways. Each way has its specific behavior and place within a DataMiner System.
 
-Two types of Cassandra storage are used, i.e. two distinct types of Cassandra databases:
+Self-managed storage can use two distinct types of Cassandra databases:
 
 - Dedicated clustered storage:, called *Cassandra Cluster* below.
 - Storage per DMA (with or without indexing), called *Cassandra Single* below.
 
 > [!TIP]
-> For more information on available storage options, see [About databases](xref:Databases_about).
+> For more information on available storage options, see [About storage](xref:About_storage).
 
 ## Determining the type of setup
 

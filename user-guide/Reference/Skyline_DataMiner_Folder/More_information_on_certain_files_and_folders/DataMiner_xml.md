@@ -16,8 +16,8 @@ This is an example of a *DataMiner.xml* file:
 
 ```xml
 <DataMiner id="7" disableElementIP="false">
-  <AlarmSocket port=”5024”/>
-  <PollSocket port=”5025”/>
+  <AlarmSocket port="5024"/>
+  <PollSocket port="5025"/>
   <SMTP>...</SMTP>
   <Colors>...</Colors>
   <LDAP nonDomainLDAP="true"

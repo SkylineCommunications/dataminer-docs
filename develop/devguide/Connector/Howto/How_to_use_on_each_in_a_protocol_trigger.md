@@ -59,7 +59,7 @@ To use this feature, replace the ID value with *each*:
 <On id="each">...</On>
 ```
 
-For more information on triggers, see [](xref:Protocol.Triggers).
+For more information on triggers, see [Protocol.Triggers](xref:Protocol.Triggers).
 
 ## How to
 

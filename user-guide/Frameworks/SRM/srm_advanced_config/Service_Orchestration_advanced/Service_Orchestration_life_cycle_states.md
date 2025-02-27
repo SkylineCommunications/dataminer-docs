@@ -41,6 +41,9 @@ A booking is always associated with a specific booking life cycle state. The fol
 
 - **Failed Completed**: Orchestration at the end of the post-roll phase has failed.
 
+> [!TIP]
+> See also: [Booking stages](xref:srm_stages_of_bookings)
+
 ## Configuring a custom Created Booking Action
 
 On a node in a service definition, you can configure that a script should run before the corresponding booking is set to the "Confirmed" state<!-- RN 19447 -->:

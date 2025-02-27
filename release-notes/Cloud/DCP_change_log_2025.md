@@ -9,11 +9,83 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 27 January 2025 - Enhancement - Remote Access performance and stability improvements [ID 42043]
+### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
-Several enhancements were made to improve performance and stability for all remote access features with immediate effect.
+A new call is available that allows users to get all the Catalog item types without the need to authenticate.
 
-In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further. CloudGateway will be able to benefit from this change as soon as the 2.17.0 version is released (expected soon).
+### 11 February 2025 - Enhancement - Catalog - Deployment status shown on details page [ID 42131]
+
+When an item is deployed, the deployment status is now shown next to the *Deploy* button both in the item version section and at the top of the details page. The status is automatically updated for up to 10 seconds, and you will get a notification when the deployment finishes or fails.
+
+### 11 February 2025 - Fix - Share Management - Incorrect message after sharing dashboard [ID 42121]
+
+When a dashboard was shared, the incorrect message "A share has been updated" was shown instead of the message "Item has successfully been shared.". This issue has been resolved.
+
+### 11 February 2025 - Enhancement - Catalog - New version statuses [ID 42078]
+
+The Catalog now uses the following statuses for versions:
+
+- **Pre-release** (previously "development")
+- **Stable** (previously "active")
+- **Unlisted** (previously "known issues" or "deprecated")
+
+### 6 February 2025 - Fix - Random failures when sharing, deploying DxMs or Catalog items, or using the DataMiner Teams bot [ID 42178]
+
+The Remote Access and Live Sharing performance and stability improvements released on the 4th of February introduced a specific issue that only occurred if a CloudGateway version older than 2.17.0 was restarted or updated. The issue could cause random failures while creating or updating shares, deploying DxM updates from the Admin app, deploying Catalog items, or using the DataMiner Teams Bot. This issue has now been resolved with immediate effect.
+
+### 4 February 2025 - Enhancement - Remote Access and Live Sharing performance and stability improvements [ID 42129]
+
+Several enhancements were made to improve performance and stability for all Remote Access and Live Sharing features with immediate effect.
+
+In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.
+
+### 30 January 2025 - Enhancement - Admin - Usage page improvements [ID 42054]
+
+In the Admin app, the tabs and sections of the Usage page have been reordered to allow better navigation. Improvements for smaller devices have also been implemented.
+
+### 30 January 2025 - Enhancement - Catalog - Category icons [ID 42051]
+
+Catalog items now show category icons when no vendor logo or image is available. The category icon is also shown on the browse page with the type filters.
+
+### 30 January 2025 - Enhancement - Catalog - Auto-login for returning users [ID 42041]
+
+Users of the Catalog app who were logged in previously will now be automatically logged back in, even if their session has expired.
+
+### 30 January 2025 - New feature - Catalog - Notification when new app version is available + support for installation as PWA [ID 42036]
+
+The Catalog app will now notify you when a new version is available. In addition, it can now be installed as a Progressive Web App (PWA).
+
+### 30 January 2025 - Fix - Catalog - Query parameters shown incorrectly [ID 42035]
+
+Previously, it could occur that query parameters were shown in the Catalog app when they were not needed. Now query parameters will only be added on the browse page and only if you configure any filter or sorting.
+
+### 30 January 2025 - New feature - Admin - DaaS usage [ID 42030]
+
+You can now view your DaaS usage directly on the Usage page in the Admin app and export it.
+
+### 30 January 2025 - Enhancement - Admin - Deployments - Duplicate load calls prevented [ID 41989]
+
+The efficiency of the Deployments page in the Admin app has been improved. Previously, this page would make unnecessary duplicate calls to load the data.
+
+### 29 January 2025 - Fix - Rollback of Remote Access and Live Sharing performance and stability improvements [ID 42087]
+
+The Remote Access and Live Sharing performance and stability improvements released on the 27th of January were rolled back because of an issue found in combination with CloudGateway 2.16.0 - 2.17.1. The issue has been fixed in [CloudGateway 2.17.2 - Reconnect banner shows up all the time during remote accessing](xref:cloudgateway_change_log#30-january-2025---fix---cloudgateway-2172---reconnect-banner-continually-showing-when-remote-access-is-used-id-42086).
+
+We strongly recommend updating to CloudGateway 2.17.2 as soon as possible to prevent issues when these improvements are introduced again.
+
+### 28 January 2025 - New feature - Catalog API - Deploying a Catalog item using an organization key [ID 41987]
+
+You can now use the Catalog API to deploy a Catalog item to a system connected to dataminer.services using an organization key.
+
+### 28 January 2025 - Fix - Catalog API - Registration failed because of invalid artifact references in Catalog item versions [ID 41985]
+
+A Catalog registration call could fail because existing Catalog item versions had invalid artifact references.
+
+### 27 January 2025 - Enhancement - Remote Access and Live Sharing performance and stability improvements [ID 42043]
+
+Several enhancements were made to improve performance and stability for all Remote Access and Live Sharing features with immediate effect.
+
+In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.
 
 ### 27 January 2025 - Enhancement - Admin app - Collaboration category added on usage overview page [ID 41947]
 
@@ -111,12 +183,12 @@ The number of required API calls to initially load the Catalog home page has bee
 
 On the browse page, Catalog items that are published by the selected organization or by Skyline Communications will now display a green indicator.
 
-### 13 January 2025 - Fix - Rollback of Remote Access performance and stability improvements [ID 42042]
+### 13 January 2025 - Fix - Rollback of Remote Access and Live Sharing performance and stability improvements [ID 42042]
 
-The Remote Access performance and stability improvements released on the 9th of January were rolled back because of issues found in the release.
+The Remote Access and Live Sharing performance and stability improvements released on the 9th of January were rolled back because of issues found in the release.
 
-### 9 January 2025 - Enhancement - Remote Access performance and stability improvements [ID 41897]
+### 9 January 2025 - Enhancement - Remote Access and Live Sharing performance and stability improvements [ID 41897]
 
-Several enhancements were made to improve performance and stability for all remote access features with immediate effect.
+Several enhancements were made to improve performance and stability for all Remote Access and Live Sharing features with immediate effect.
 
 In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.

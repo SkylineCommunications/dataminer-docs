@@ -45,7 +45,7 @@ This type of alarms will automatically be cleared after a DataMiner restart. The
 
 #### Web visual overviews: Load balancing [ID 41434] [ID 41728]
 
-<!-- MR 10.6.0 [CU0] - FR 10.5.2 -->
+<!-- MR 10.5.0 [CU1]/10.6.0 [CU0] - FR 10.5.2 -->
 
 It is now possible to implement load balancing among DataMiner Agents in a DMS for visual overviews shown in web apps.
 
@@ -314,9 +314,9 @@ On STaaS systems, the timeout for responses to write requests has been reduced t
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
 
-<!-- MR 10.6.0 - FR 10.5.2 -->
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.2 -->
 
-Due to an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
+Because of an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
 
 #### LDAP/ActiveDirectory domain users would no longer be able to log in [ID 41339]
 
@@ -357,17 +357,17 @@ From now on, when an invalid type is passed to one of these methods, the error t
 
 In some rare cases, SLDataMiner could stop working when a connector was deleted immediately after an element using that connector had been deleted.
 
-#### DataMiner would use an incorrect IP address when connecting to BrokerGateway during start-up [ID 41530]
+#### DataMiner would use an incorrect IP address when connecting to BrokerGateway during startup [ID 41530]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-During start-up, in some cases, DataMiner would use an incorrect IP address when connecting to BrokerGateway.
+During startup, in some cases, DataMiner would use an incorrect IP address when connecting to BrokerGateway.
 
-#### Cassandra compaction settings would incorrectly be overwritten at DataMiner start-up [ID 41551]
+#### Cassandra compaction settings would incorrectly be overwritten at DataMiner startup [ID 41551]
 
 <!-- MR 10.4.0 [CU11] - FR 10.5.2 -->
 
-Up to now, all Cassandra compaction settings would incorrectly be overwritten at DataMiner start-up.
+Up to now, all Cassandra compaction settings would incorrectly be overwritten at DataMiner startup.
 
 For example, if you had manually configured a compaction setting (e.g. *unsafe_aggressive_sstable_expiration*), this change would get overwritten by the default setting.
 
@@ -387,7 +387,7 @@ While the booking scheduler task queue was being processed, in some cases, debug
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
+At DataMiner startup, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
 
 - If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
 - If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.

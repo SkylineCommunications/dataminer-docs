@@ -15,7 +15,7 @@ Estimated duration: 30 minutes.
 
 ## Prerequisites
 
-- DataMiner 10.2.0/10.1.4 or higher with [Storage as a Service (STaaS)](xref:STaaS) or a [self-hosted Cassandra database](xref:Supported_system_data_storage_architectures).
+- DataMiner 10.2.0/10.1.4 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-managed Cassandra database](xref:Supported_system_data_storage_architectures).
 
 - Automatic incident tracking is enabled in DataMiner Cube: *System Center* > *System settings* > *analytics config* > *Automatic incident tracking*.
 

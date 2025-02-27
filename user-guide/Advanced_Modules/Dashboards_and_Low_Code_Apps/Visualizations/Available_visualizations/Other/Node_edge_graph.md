@@ -89,7 +89,9 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
    - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
 
-1. From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the Ctrl key is required to zoom in or out. To do so, in the *Settings* pane, toggle the *Advanced* > *Hold Ctrl to zoom* option:
+1. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41545-->, in case the component displays a query source and you want the data to be refreshed automatically, enable the *Update data* option in the *Settings* pane.
+
+1. From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the Ctrl key is required to zoom in or out. To do so, in the *Layout* pane, toggle the *Advanced* > *Hold Ctrl to zoom* option:
 
    - Enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
 

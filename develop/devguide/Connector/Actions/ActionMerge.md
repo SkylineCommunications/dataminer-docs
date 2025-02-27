@@ -152,18 +152,16 @@ Only the following combinations of merge actions that trigger an aggregate actio
 
 |Aggregate Type> Merge Type V|PCT|AVG|AVG EXTENDED|MAX|MIN|COUNT|SUM|PCT TOTAL|
 |--- |--- |--- |--- |--- |--- |--- |--- |--- |
-|AVG|&#10004;|&#10004;|&#10004;**|&#10004;*|&#10004;*|&#10004;*,**|&#10004;*,**|&#10004;|
-|AVG EXTENDED|&#10004;|&#10004;**|&#10004;|&#10004;*|&#10004;*|&#10004;*,**|&#10004;*,**|&#10004;|
-|MAX|&#10004;|&#10004;|&#10004;**|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|MIN|&#10004;|&#10004;|&#10004;**|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
-|SUM|&#10004;|&#10004;|&#10004;**|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|AVG|&#10004;|&#10004;|&#10004;|&#10004;\*|&#10004;\*|&#10004;\*|&#10004;\*|&#10004;|
+|AVG EXTENDED|&#10004;|&#10004;|&#10004;|&#10004;\*|&#10004;\*|&#10004;\*|&#10004;\*|&#10004;|
+|MAX|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|MIN|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|SUM|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 
 \*: Averaging a MIN, MAX, COUNT or SUM averages the aggregated value over the different data elements.
 
-**: Only supported from DataMiner 9.0.0 CU5/9.0.3 onwards (RN 13206).
+Please note the following:
 
-From DataMiner 9.0.0 CU5/9.0.3 onwards (RN 13206), the following improvements are implemented:
-
-- "merge" actions now support configurations that have an incorrect number of destination columns specified. If not enough columns are specified, only the specified columns are filled in. If too many columns are specified, the excess ones are left untouched. This way, you can have an "avg extended" merge action that only outputs the "avg" (by omitting the weight, min and max columns).
-- On "merge" actions other than "avg extended", it is now possible to also include the weight column next to the value. In earlier DataMiner versions, only the aggregated value can be added to the output.
-- In earlier DataMiner versions, if the group keys for a merge/aggregate action appear in multiple casing variants (e.g. upper and lower case), the aggregated result is limited to only one of these groups. Now the aggregated value takes all group values into account, regardless of the casing of the groupby fields.
+- "merge" actions support configurations that have an incorrect number of destination columns specified. If not enough columns are specified, only the specified columns are filled in. If too many columns are specified, the excess ones are left untouched. This way, you can have an "avg extended" merge action that only outputs the "avg" (by omitting the weight, min, and max columns).
+- On "merge" actions other than "avg extended", it is possible to also include the weight column next to the value.
+- The aggregated value takes all group values into account, regardless of the casing of the groupby fields.

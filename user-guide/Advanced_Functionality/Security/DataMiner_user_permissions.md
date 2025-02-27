@@ -531,7 +531,7 @@ Permission to use view and configure element connections.
 >
 > - At present, these permissions are used for the uploading and deleting of functions in the Protocols & Templates app, and for the use of the Functions app. However, the latter is currently still in soft launch. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 > - When you upgrade to DataMiner version 10.1.7, these six permissions are automatically granted to all user groups that have been granted the *Modules* > *Resources* > *Configure functions* permission.
-> - These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
+> - These user permissions are only displayed if the DMA uses STaaS or a self-managed indexing database.
 
 #### Modules \> Functions \> Read
 
@@ -560,7 +560,7 @@ Permission to generate a protocol for a virtual function. Available from DataMin
 ### Modules \> Jobs
 
 > [!NOTE]
-> These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
+> These user permissions are only displayed if the DMA uses STaaS or a self-managed indexing database.
 
 #### Modules \> Jobs \> UI available
 
@@ -585,7 +585,7 @@ Permission to use the Monitoring app. Available from DataMiner 10.2.0/10.2.2 onw
 ### Modules \> Planned Maintenance
 
 > [!NOTE]
-> These user permissions are only displayed if the DMA uses STaaS or a self-hosted indexing database.
+> These user permissions are only displayed if the DMA uses STaaS or a self-managed indexing database.
 
 #### Modules \> Planned Maintenance \> UI available
 
@@ -1276,7 +1276,7 @@ Permission to see and control the background tasks of all users.
 
 #### Modules \> System configuration \> Tools \> Allow access to query executor
 
-Permission to execute SQL queries against the general or offload database.
+Permission to execute SQL queries against the general or offload database (obsolete).
 
 > [!NOTE]
 > This user permission is not applicable in a [DaaS system](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU17]/10.4.0 [CU5]/10.4.8 onwards, it is no longer displayed in such a system.<!-- RN 39870 -->

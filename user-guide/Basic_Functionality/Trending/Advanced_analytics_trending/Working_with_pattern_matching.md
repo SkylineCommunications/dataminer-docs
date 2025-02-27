@@ -6,7 +6,7 @@ uid: Working_with_pattern_matching
 
 ## Univariate patterns
 
-On systems using [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures), DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, you first need to [define the patterns](xref:Defining_a_pattern) DataMiner Analytics needs to track. This pattern definition is also known as a "tag".
+On systems using [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures), DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, you first need to [define the patterns](xref:Defining_a_pattern) DataMiner Analytics needs to track. This pattern definition is also known as a "tag".
 
 ![Pattern matching](~/user-guide/images/Pattern_Matching.png)<br>*Trending: detected pattern in DataMiner 10.4.5*
 

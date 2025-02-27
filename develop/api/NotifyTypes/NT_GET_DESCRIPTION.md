@@ -18,7 +18,7 @@ if (result != null)
 
 ## Parameters
 
-- parameterID (int): ID of the element. 
+- parameterID (int): ID of the element.
 
 ## Return Value
 
@@ -26,4 +26,4 @@ if (result != null)
 
 ## Remarks
 
-- The SLProtocol interface defines a wrapper method "GetParameterDescription" for this call. See SLProtocol.GetParameterDescription method.
+- The SLProtocol interface defines a wrapper method [GetParameterDescription](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameterDescription*) for this call.

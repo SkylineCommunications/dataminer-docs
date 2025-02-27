@@ -8,7 +8,7 @@ To serially poll different devices using a single element, the element should co
 
 Information that is needed will be the polling IP/DNS name (required), and optionally the device type (when multiple types of devices are polled).
 
-![alt text](~/develop/images/Connection_types_-_serial_polling.png "Example table used to serially poll different devices")
+![Example table used to serially poll different devices](~/develop/images/Connection_types_-_serial_polling.png)
 
 In case the element already polls a device (e.g. in the case of a controller), a second connection should be defined for the serial polling functionality. This additional connection will be used to dynamically change the polling IP at runtime to be able to poll different devices that have different addresses.
 
@@ -25,7 +25,7 @@ In case the element does not need to poll a device to find out which devices to 
 ```
 
 > [!NOTE]
-> The visibleiInUI attribute should be set to "false" for the dynamic connection as the user does not need to see or be able to change the settings related to this connection. See Protocol.Ports.PortSettings.
+> The [visibleiInUI](xref:Protocol.Ports.PortSettings-visibleInUi) attribute should be set to "false" for the dynamic connection as the user does not need to see or be able to change the settings related to this connection.
 
 When the second connection is created, it takes the IP and port settings from the first connection. Because of the way connections are handled in SLPort, when dynamically changing the second connection, the first connection will then also be changed. Therefore, a default value for the IP port has to be specified. This value has to be different from the port that is used on the first connection of the element. The port will be changed at runtime, together with the IP address. It is not possible to specify a default IP address for the second connection.
 

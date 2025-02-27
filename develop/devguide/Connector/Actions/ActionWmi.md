@@ -65,7 +65,7 @@ The example above will produce the following WMI script:
 ```xml
 <Action id="1">
    <On>protocol</On>
-   <Type options="server:pollingip;where:name=&quot;SLDataMiner&quot;uname:2;pwd:3" script="Win32_PerfRawData_PerfProc_Process" arguments="VirtualBytes" returnValue="410">wmi<Type>
+   <Type options="server:pollingip;where:name=&quot;SLDataMiner&quot;uname:2;pwd:3" script="Win32_PerfRawData_PerfProc_Process" arguments="VirtualBytes" returnValue="410">wmi</Type>
 </Action>
 ```
 

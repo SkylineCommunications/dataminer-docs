@@ -19,4 +19,4 @@ From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards, these components are 
 > Feeds can be pre-configured in dashboard URLs. See [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL).
 
 > [!TIP]
-> See also: [Component data](xref:Component_Data)
+> Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, the term "feeds" is also used for [component data](xref:Component_Data) and [URL data](xref:URL_data).

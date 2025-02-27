@@ -90,4 +90,4 @@ From now on, “Unexpected RTDisplay=true” warnings will no longer be generate
 
 #### Validator - Invalid 'Unexpected RTDisplay=true' warnings \[ID 12466\]
 
-From now on, “Unexpected RTDisplay=true” warnings will no longer be generated for parameters of which the *\<Type>* tag has a *virtual=”source”* attribute.
+From now on, “Unexpected RTDisplay=true” warnings will no longer be generated for parameters of which the *\<Type>* tag has a *virtual="source"* attribute.

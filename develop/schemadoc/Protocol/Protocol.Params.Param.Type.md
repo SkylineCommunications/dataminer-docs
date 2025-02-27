@@ -73,7 +73,7 @@ If you do want to display the information in one of these parameters in the user
 
 ### discreet info
 
-A parameter of type DISCREET INFO will receive the changed data (locking, labeling, pages, follow mode, etc.) each time a change was made on the matrix.
+A parameter of type DISCREET INFO will receive the changed data (locking, labeling, pages, follow mode, etc.) each time a change was made on the matrix. There can only be one parameter of this type in the protocol.
 
 Format: "a;b;c;d;" or "b;a;c;d"
 
@@ -95,7 +95,7 @@ The type of change (b) will contain one of the following integer values:
 - 8 : master info
 - 9 : logical size (for a matrix this can be 256x256, but a DMA can only handle 128x128)
 
-This parameter type is typically used to store Element Display information, and synchronize it with the device. Use a QAction to trigger each change on that parameter. Keep in mind that the contents of the parameter can be formatted in two ways.
+This parameter type is typically used to store the information displayed in DataMiner and synchronize it with the device. Use a QAction to trigger each change on that parameter. Keep in mind that the contents of the parameter can be formatted in two ways.
 
 See also:
 

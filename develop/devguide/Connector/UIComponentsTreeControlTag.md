@@ -4,7 +4,7 @@ uid: UIComponentsTreeControlTag
 
 # TreeControl tag
 
-The initial step to compose a tree control is to create tables that will represent the data and configure the linking on them (For more information on how to link tables, see Foreign keys and Relations).
+The initial step to compose a tree control is to create tables that will represent the data and configure the linking on them (For more information on how to link tables, see [Foreign keys](xref:UIComponentsTableForeignKeys) and [Relations](xref:UIComponentsTableRelations)).
 
 The tree control itself is configured using the TreeControls.TreeControl tag.
 
@@ -44,7 +44,7 @@ The parameterId attribute refers to a regular parameter of type "read" as illust
 </Param>
 ```
 
-The Hierarchy child tag defines the relations between the (visible) tables. Rows from these tables will become items in the tree control. For more information on conditional branching, see Advanced hierarchy.
+The Hierarchy child tag defines the relations between the (visible) tables. Rows from these tables will become items in the tree control. For more information on conditional branching, see [Advanced hierarchy](xref:UIComponentsTreeControlAdvancedHierarchy).
 
 The HiddenColumns child tag can be used to hide table columns. The parameter will be hidden in both the details pane and tables in the tree control.
 

@@ -5,13 +5,13 @@ description: DataMiner is available in two commercial models, i.e. perpetual-use
 
 # Commercial & deploy models summary
 
-The DataMiner software is available in two commercial models: [**Perpetual-Use Licenses**](xref:Pricing_Perpetual_Use_Licensing) or [**usage-based services**](xref:Pricing_Usage_based_service). This can be combined with your preferred deploy model.
+The DataMiner software is available in two commercial models: [**Perpetual-Use Licenses**](xref:Pricing_Perpetual_Use_Licensing) or [**Usage-based services**](xref:Pricing_Usage_based_service). This can be combined with your preferred deploy model.
 
 | Deploy models | DataMiner nodes | Storage nodes | Commercial models available |
 |--|--|--|--|
-| Self-managed | Private/public cloud or on-premises | Private/public cloud or on-premises | Perpetual-Use Licenses<br>Usage-based services |
-| Hybrid | Private/public cloud or on-premises | Storage as a Service (STaaS) | Perpetual-Use Licenses<br>Usage-based services |
-| Managed service | DataMiner as a Service (DaaS) |  STaaS | Usage-based services |
+| Recommended: Hybrid | Self-Managed: Private/public cloud or on-premises | Storage as a Service (STaaS) | Perpetual-Use Licenses<br>Usage-based services |
+| Recommended: Managed Service | DataMiner as a Service (DaaS) |  STaaS | Usage-based services |
+| Not recommended (subject to additional engineering charges, security & availability risks): Self-Managed | Self-Managed: Private/public cloud or on-premises | Self-Managed: Private/public cloud or on-premises | Perpetual-Use Licenses<br>Usage-based services |
 
 ## Perpetual-Use Licenses
 
@@ -71,7 +71,7 @@ Usage-based services are charged based on the actual monthly usage of services, 
 |---------|----------------------------|----------------------|
 | System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 , 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
 | Failover | Server-based license. | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
-| Optional functions | Licensed per node: Correlation and Automation engines, Dashboard app, No-Code Apps, Low-Code Apps, Process Automation, DataMiner Object Models (DOM), and Spectrum Analysis. | Not applicable. All optional modules are included. |
+| Optional functions | Licensed per node: Correlation and Automation engines, Dashboard app, Low-Code Apps, Process Automation, DataMiner Object Models (DOM), and Spectrum Analysis. | Not applicable. All optional modules are included. |
 | Automation & orchestration | Based on the volume of concurrent services running. | Based on the volume of script runs. |
 | Connectors | Single connector license fee for new and existing connectors. One connector license per different, interfaced product, per DataMiner System (DMS). | Charged per connector used per month. |
 | Custom applications (e.g. PTP app) | Licensed per app. | Charged as engineering services. |

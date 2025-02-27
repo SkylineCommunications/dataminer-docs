@@ -34,7 +34,7 @@ This is a powerful option where we manage the storage for you, so you can save o
 > - [DataMiner STaaS: shifting the responsibility and financial burden of managing data storage infrastructure and technology to a highly professional cloud provider](https://community.dataminer.services/storage-as-a-service/)
 > - [DataMiner STaaS: a game-changer for your storage needs](https://community.dataminer.services/dataminer-staas-a-game-changer-for-your-storage-needs/)
 > - [Storage as a Service (STaaS) User Guide](xref:STaaS)
-> - [Self-hosted DataMiner nodes with Storage as a Service (STaaS)](xref:DM_selfhosted_and_StaaS)
+> - [Self-managed DataMiner nodes with Storage as a Service (STaaS)](xref:DM_selfhosted_and_StaaS)
 > - [FAQ about Storage as a Service (STaaS)](xref:FAQ_DCP)
 
 ## DataMiner as a Service (DaaS)
@@ -48,10 +48,4 @@ And DataMiner as a Service comes with our Storage as a Service (STaaS) solution,
 In a nutshell: **You operate the platform, we build and maintain the platform for you.**
 
 > [!TIP]
-> See also:
->
-> - [DataMiner as a Service: DataMiner nodes and storage nodes as a service](xref:DaaS_hosting)
-
-## DataMiner Node as a Service *(coming soon)*
-
-To enhance convenience further, our next step is to provide **DataMiner node as a Service**, which simplifies the deployment of DataMiner nodes in on-premises and private cloud environments. This will greatly ease the installation and integration process.
+> See also: [DataMiner as a Service: DataMiner nodes and storage nodes as a service](xref:DaaS_hosting)

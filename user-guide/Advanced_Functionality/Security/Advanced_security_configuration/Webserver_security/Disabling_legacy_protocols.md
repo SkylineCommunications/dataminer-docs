@@ -1,5 +1,6 @@
 ---
 uid: Disabling_legacy_protocols
+keywords: protocol, driver, connector
 ---
 
 # Disabling legacy protocols

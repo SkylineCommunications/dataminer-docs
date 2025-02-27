@@ -20,4 +20,4 @@ uid: ConnectionsSnmpExercise
 1. Alter the "sysContact" (OID 1.3.6.1.2.1.1.4.0) variable via SNMP and check the result.
 1. Create a protocol that polls the following columns of the interface table ("ifTable", OID "1.3.6.1.2.1.2.2" defined in IF-MIB (RFC 2863)) using the different table retrieval methods described previously.
 
-![alt text](~/develop/images/ifTable_exercise_SNMP_table.png "Required columns of ifTable to implement in exercise")
+![Required columns of ifTable to implement in exercise](~/develop/images/ifTable_exercise_SNMP_table.png)

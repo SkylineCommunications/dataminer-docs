@@ -9,13 +9,14 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## Highlights
 
-- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490)
+- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314)
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -26,6 +27,8 @@ Note that when Swarming is enabled, this will result in some major changes to th
 - Alarm identifiers will be generated on a per-element basis instead of per Agent to make them unique within the cluster. Because of this change, you will need to make sure [your system is prepared](xref:SwarmingPrepare) before you can enable Swarming.
 
 - Element configuration will be stored in the cluster-wide database instead of in the element XML files on the disk of the DataMiner Agent hosting each element.
+
+  When Swarming is enabled, a file named *Where are my elements.txt* will be present in the *C:\\Skyline DataMiner\\Elements\\* folder. In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
 
 > [!IMPORTANT]
 >
@@ -195,7 +198,7 @@ From now on, users will be allowed to give feedback (positive or negative) on al
 
 #### Web visual overviews: Load balancing [ID 41434] [ID 41728]
 
-<!-- MR 10.6.0 [CU0] - FR 10.5.2 -->
+<!-- MR 10.5.0 [CU1]/10.6.0 [CU0] - FR 10.5.2 -->
 
 It is now possible to implement load balancing among DataMiner Agents in a DMS for visual overviews shown in web apps.
 
@@ -228,7 +231,7 @@ In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular D
 
 ##### New server messages
 
-The following new messages can now be used to  which you can target to be sent to other DMAs in the cluster:
+The following new messages can now be used to which you can target to be sent to other DMAs in the cluster:
 
 - `TargetedGetVisualOverviewDataMessage` allows you to retrieve a Visual Overview data message containing the image and the content of a visual overview.
 
@@ -276,6 +279,32 @@ When the above-mentioned upgrade action is executed, it will log the name and th
 > [!NOTE]
 > From now on, newly generated service protocols will by default have a parameter with ID 7.
 
+#### Elements can now be configured to run in isolation mode [ID 41757]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+Up to now, the *ProcessOptions* section of the *DataMiner.xml* file allowed you to configure that an element had to run in its own SLProtocol and SLScripting processes, and in a *protocol.xml* file, the *RunInSeparateInstance* tag allowed you to do the same. However, it was only possible to configure this for all elements using a particular protocol.
+
+From now on, the new *Run in isolation mode* feature will allow you to also configure this for one single element. For more information on how to configure this in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
+
+As creating additional SLProtocol processes has an impact on the resource usage of a DataMiner Agent, a hard limit of 50 SLProtocol processes has been introduced. If, when an element starts, an attempt to create a new SLProtocol process fails because 50 processes are already running, the element will be hosted by an existing SLProtocol process and its matching SLScripting process, regardless of how the *Run in isolation mode* was configured.
+
+From those 50 SLProtocol processes, 10 processes will be reserved for elements that are not running in isolation mode. This means, that only 40 elements will be able to run in isolation mode at any given time. However, the notice that will appear each time an attempt is made to start an additional element in isolation mode will mention the 50-element limit.
+
+Reducing the number of SLProtocol processes in the *DataMiner.xml* file will reduce the number of reserved processes. However, increasing the number of SLProtocol processes to above 50 will keep the reserved number of SLProtocol processes to 50 (i.e. the maximum number of SLProtocol processes).
+
+For example, if 15 SLProtocol processes are configured in the *DataMiner.xml* file, and 45 elements are configured to run in isolation mode, then:
+
+- 10 SLProtocol processes will be used for elements that are not running in isolation mode,
+- 35 SLProtocol processes will be used to host an element in isolation mode, and
+- the remaining 5 SLProtocol processes will be used for elements running either in isolation mode or not, depending on which elements starts first.
+
+This means, that some elements will not be able to run in isolation mode, and some SLProtocol processes will not be able to host elements that are not running in isolation mode. In each of those cases, an alarm will be generated.
+
+In the *DataMiner.xml* file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
+
+For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
+
 #### DataMiner Object Models: Configuring trigger conditions for CRUD scripts [ID 41780]
 
 <!-- MR 10.6.0 - FR 10.5.3 -->
@@ -308,3 +337,196 @@ moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new
    new FieldValueUpdatedTriggerCondition(insuranceId)
 };
 ```
+
+#### Service & Resource Management: Defining an availability window for a resource [ID 41894]
+
+<!-- MR 10.6.0 - FR 10.5.3 -->
+
+For each resource, you can now define an availability window, i.e. a period during which the resource is available.
+
+An availability window has the following (optional) properties:
+
+| Property | Description |
+|----------|-------------|
+| AvailableFrom  | The start time of the availability window. Default value: `DateTimeOffset.MinValue` (i.e. no start time). |
+| AvailableUntil | The end time of the availability window. Default value: `DateTimeOffset.MaxValue` (i.e. no end time). |
+| RollingWindowConfiguration | The size of the availability window relative to the current time.<br>For example, if you set this property to 30 days, the resource will be available for booking until 30 days from now.<br>If both a fixed end time and a rolling window are set, the earlier time of the two will be used. For example, if the fixed end time is 15 days from now, but the rolling window is 30 days, the resource will no longer be available after the 15-day mark, even though the rolling window would extend to 30 days. |
+
+When you use the *GetEligibleResources* API call to retrieve resources available during a specific time range, resources that are not available for the entire requested range will not be returned.
+
+Example showing how to configure the above-mentioned properties:
+
+```csharp
+var resource = _rmHelper.GetResource(...);
+resource.AvailabilityWindow = new BasicAvailabilityWindow()
+{
+    AvailableFrom = DateTimeOffset.Now.AddHours(1),
+    AvailableUntil = DateTimeOffset.Now.AddDays(30),
+    // RollingWindow can be left as 'null' if no rolling window needs to be configured
+    RollingWindowConfiguration = new RollingWindowConfiguration(TimeSpan.FromHours(5))
+};
+resource = _rmHelper.AddOrUpdateResources(resource)?.FirstOrDefault();
+var td = _rmHelper.GetTraceDataLastCall();
+if (!td.HasSucceeded())
+{
+    // Handle the error
+}
+```
+
+Setting `AvailableFrom` to a date after `AvailableUntil`, or `AvailableUntil` to a date before `AvailableFrom` will throw an `ArgumentOutOfRangeException`. Also, passing a zero or negative `TimeSpan` to the `RollingWindowConfiguration` will throw an `ArgumentOutOfRangeException`.
+
+Adding an availability window to an existing resource, or adding a resource to a booking that runs outside the availability window of the resource will trigger quarantine. The following errors will be returned when quarantine is triggered:
+
+- When you add an availability window to a resource, an error of type `ResourceManagerError` with reason `ResourceUpdateCausedReservationsToGoToQuarantine` will be returned. The quarantine reason in the trigger will be `ResourceAvailabilityWindowChanged`.
+
+- When you try to book a resource that is not available in the requested time range, an error of type `ResourceManagerError` with reason `ReservationUpdateCausedReservationsToGoToQuarantine` will be returned. The quarantine reason in the trigger will be `ReservationInstanceUpdated`. The `ReservationConflictType` will be `OutsideResourceAvailabilityWindow`.
+
+The availability window provides a method to retrieve the time ranges in which the resource is available:
+
+```csharp
+AvailabilityResult result = resource.AvailabilityWindow.GetAvailability(new AvailabilityContext());
+List<ResourceWindowTimeRange> availableRanges = result.AvailableTimeRanges;
+foreach (var range in availableRanges)
+{
+    DateTimeOffset start = range.Start;
+    DateTimeOffset end = range.Stop;
+    
+    // A corresponding details property 'StopDetails' exists for the stop;
+    TimeRangeBoundaryDetails startDetails = range.StartDetails;
+
+    // Indicates if this boundary was defined by a fixed point (start/stop) or by a rolling window
+    BoundaryDefinition startDefinition = startDetails.BoundaryDefinition;
+    if (startDefinition == BoundaryDefinition.RollingWindow)
+    {
+        // ...
+    }
+}
+```
+
+The `AvailabilityContext` parameter has a property `Now`, which can be used to override the "now" timestamp in order to calculate e.g. the current end of a rolling window. For regular use cases, there is no need to override this. This is mainly used for testing purposes and to ensure a consistent timestamp when performing internal checks.
+
+#### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Scheduler app [ID 41970]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+From now on, by default, information events of type "script started" will no longer be generated when an Automation script is triggered by the Scheduler app.
+
+In other words, when an Automation script is triggered by the Scheduler app, the SKIP_STARTED_INFO_EVENT:TRUE option will automatically be added to the `ExecuteScriptMessage`. See also [Release note 33666](xref:General_Main_Release_10.3.0_new_features_1#added-the-option-to-skip-the-script-started-information-event-id-33666).
+
+If you do want such information events to be generated, you can add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to false:
+
+```xml
+<MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+    ...
+    <SLNet>
+        ...
+        <SkipInformationEvents>false</SkipInformationEvents>
+        ...
+    </SLNet>
+    ...
+</MaintenanceSettings>
+```
+
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319]
+
+<!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
+<!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
+<!-- RNs 42181: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42276: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42283: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42319: MR 10.6.0 - FR 10.5.4 -->
+
+Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
+
+Whenever the relation is broken, RAD will detect this and generate suggestion events for each parameter instance in the group where a broken relation was detected. These suggestion events will then be grouped into a single incident so that it is shown on a single line in the Alarm Console. When you clear such an incident, all its base alarms (i.e. the suggestion events created by Relational anomaly detection) will also be cleared.
+
+##### Configuration file
+
+Per DataMiner Agent, the above-mentioned parameter groups must be configured in the *C:\\Skyline DataMiner\\Analytics\\RelationalAnomalyDetection.xml* file. This file will be read when SLAnalytics starts up, when RAD is enabled or re-enabled, or when a *ReloadMadConfigurationMessage* is sent.
+
+The configuration file must be formatted as follows.
+
+```xml
+<?xml version="1.0" ?>
+  <RelationalAnomalyDetection>
+    <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]" minimumAnomalyDuration="[THRESHOLD2]">
+      <Instance>[INSTANCE1]</Instance>
+      <Instance>[INSTANCE2]</Instance>
+      [... one <Instance> tag per parameter in the group]
+    </Group>
+    [... one <Group> tag per group of parameters that should be monitored by RAD]
+</RelationalAnomalyDetection>
+```
+
+**Group arguments**
+
+| Argument | Description |
+|---|---|
+| `name`         | The name of the parameter group.<br>This name must be unique, and will be used when a suggestion event is generated for the group in question. |
+| `updateModel`  | Indicates whether RAD should update its internal model of the relation between the parameters in the group.<br>- If set to "false", RAD will only do an initial training based on the data available at startup.<br>- If set to "true", RAD will update the model each time new data comes in. |
+| `anomalyScore` | Optional argument that can be used to specify the suggestion event generation threshold.<br>By default, this value will be set to 3. Higher values will result in less suggestion events, lower values will result in more suggestion events. |
+| `minimumAnomalyDuration` | Optional argument that specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. Default value: 5<br>- When `minimumAnomalyDuration` is set to a value greater than 5, the deviating behavior will need to last longer before an anomaly event is triggered.<br>- `minimumAnomalyDuration` can be set to a non-default value, for example, to filter out noise events caused by a single, short, harmless outlying value in the data.<br>- If `minimumAnomalyDuration` is either not set or set to a value less than or equal to 5, an anomaly event will be generated as soon as values deviate sufficiently from the RAD model. |
+
+**Parameter instance formats**
+
+In each `Instance`, you can specify either a single-value parameter or a table parameter by using one of the following formats:
+
+- Single-value parameter: [DataMinerID]/[ElementID]/[ParameterID]
+- Table parameter: [DataMinerID]/[ElementID]/[ParameterID]/[PrimaryKey]
+
+##### Average trending
+
+RAD requires parameter instances to have at least one week of five-minute average trend data. If at least one parameter instance has less than a week of trend data available, monitoring will only start after this one week becomes available. In particular, this means that average trending has to be enabled for each parameter instance used in a RAD group and that the TTL for five-minute average trend data has to be set to more than one week (recommended setting: 1 month). Also, RAD only works for numeric parameters.
+
+If necessary, users can force RAD to retrain its internal model by sending a `RetrainMadModelMessage`. In this message, they can indicate the periods during which the parameters were behaving as expected. This will help RAD to identify when the parameters deviate from that expected behavior in the future.
+
+#### History set parameters
+
+Under certain conditions, Relational anomaly detection (RAD) is able to detect relational anomalies on history set parameters:
+
+- If there is at least one history set parameter in a RAD parameter group, that parameter group will only be processed when all data from all parameters in the group has been received. In other words, if a history set parameter receives data 30 minutes later than the real-time parameters, possible anomalies will only be detected after 30 minutes.
+
+- RAD will only process data received within the last hour. If a history set parameter receives data more than an hour later than the real-time parameters, that data will be disregarded.
+
+##### Limitations
+
+- RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
+
+- Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
+
+##### Messages
+
+The following messages can be used to add, update or remove a parameter group from the configuration file, or to retrieve information for a particular parameter group from that configuration file:
+
+- `AddMADParameterGroupMessage` allows you to add a parameter group to the Relational Anomaly Detection configuration file.
+
+  If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated.
+
+- `RemoveMADParameterGroupMessage` allows you to remove a parameter group from the Relational Anomaly Detection configuration file.
+
+- `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
+
+> [!NOTE]
+> Names of RAD parameter groups will be processed case-insensitive.
+
+#### SLNetClientTest tool: Element process ID information [ID 42013]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+In the *SLNetClientTest* tool, you can now retrieve live information about the mapping between elements running on a DataMiner Agent and the processes they use, including SLProtocol and SLScripting. To do so, go to *Diagnostics > DMA > Element Process ID Info*.
+
+The information provided is similar to the information found in the *SLElementInProtocol.txt* log file. It will allow you to monitor and troubleshoot process usage in real time.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Service & Resource Management: Configuring the script to be executed when a reservation goes into quarantine [ID 42067]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+Up to now, when a reservation went into quarantine, the *SRM_QuarantineHandling* script would always be executed. From now on, when you create a reservation, you will be able to specify the name of the quarantine script to be executed in the `QuarantineHandlingScriptName` property.
+
+> [!NOTE]
+>
+> - If the `QuarantineHandlingScriptName` property contains Null, an empty string, white space, or "SRM_QuarantineHandling", the default *SRM_QuarantineHandling* script will be executed when the reservation goes into quarantine.
+> - If multiple reservations go into quarantine after a resource or reservation update, the scripts configured on the different reservations will each be executed once for the reservations in question.

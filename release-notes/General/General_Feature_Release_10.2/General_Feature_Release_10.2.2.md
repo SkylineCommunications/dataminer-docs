@@ -642,7 +642,7 @@ When a DataMiner Failover setup was configured, in some rare cases, the configur
 
 #### Failover: Offline agent would not execute its 'go offline' routine after a Failover setup was configured \[ID 32014\]
 
-When a DataMiner Failover setup was configured, in some cases, the offline agent would not execute its “go offline” routine. As a result, certain clean-up actions would not be performed and active Cube clients would stay connected instead of being automatically disconnected.
+When a DataMiner Failover setup was configured, in some cases, the offline agent would not execute its “go offline” routine. As a result, certain cleanup actions would not be performed and active Cube clients would stay connected instead of being automatically disconnected.
 
 #### Problem when creating separate SLScripting processes for every protocol being used \[ID 32015\]
 

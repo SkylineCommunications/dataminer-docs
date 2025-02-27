@@ -109,32 +109,32 @@ The Validator will now also check whether the DataMiner version specified in the
 
 Currently, the following features will be checked:
 
-- Chains.Chain.Field@options=”SkipInDiagram”
+- Chains.Chain.Field@options="SkipInDiagram"
 - Chains.Chain@defaultSelectionField and Chains.Chain@groupingName
 - Display.Pages.Page.Visibility@overridePID
 - “ElementManagerType” parameter
 - Engine property UserCookie
-- HTTP.Session@loginMethod=”certificate”
+- HTTP.Session@loginMethod="certificate"
 - InternalLicenses.InternalLicense
-- Notify type NT_DELETE_FOLDER (182): “recycle” parameter
+- Notify type NT_DELETE_FOLDER (182): "recycle" parameter
 - Notify type NT_FILL_ARRAY (193), NT_FILL_ARRAY_NO_DELETE (194) and NT_FILL_ARRAY_WITH_COLUMN (220): datetime parameter
 - Notify type NT_UPDATE_PORTS_XML (128): ChangeType 10
 - Notify types NT_GET_TABLE_ID_BY_COLUMN_ID (393) and NT_GET_PK_ID_BY_TABLE_ID (394)
 - NotifyProtocol methods FillArray, FillArrayNoDelete and FillArrayWithColumn: “timeInfo” parameter
 - Params.Param.Dashboard
-- Params.Param.Database.Partition set to ”infinite”
+- Params.Param.Database.Partition set to "infinite"
 - Params.Param.Display.DynamicUnits
 - Params.Param.Interprete.Defaultvalue
 - Params.Param.Measurement.Discreets.Discreet.Tooltip
 - Params.Param.Measurement.Discreets@matrixLayout
-- Params.Param.Measurement.Type@options=”date” and Params.Param.Measurement.Type@options =”datetime”
+- Params.Param.Measurement.Type@options="date" and Params.Param.Measurement.Type@options ="datetime"
 - Params.Param.Mediation.LinkTo.ValueMapping
 - Params.Param.Replication
 - Params.Param.SNMP.InvalidResponseHandling.InfiniteLoop
 - Params.Param@saveInterval
 - Portsettings.FlushPerDatagram
 - ProfileHelper class
-- QActionTable methods FillArray, FillArrayNoDelete and SetColumn: “timeInfo” parameter
+- QActionTable methods FillArray, FillArrayNoDelete and SetColumn: "timeInfo" parameter
 - SLProtocol method SLProtocol.ExecuteScript
 - Topologies.Topology.Cell.Exposer
 

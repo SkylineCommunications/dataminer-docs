@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_database_settings_in_Cube
+keywords: local database
 ---
 
 # Configuring the general database settings

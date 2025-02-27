@@ -1,5 +1,6 @@
 ---
 uid: Change_email_cloud_account
+keywords: cloud email, cloud account
 ---
 
 # Changing the email address associated with your dataminer.services account

@@ -138,7 +138,7 @@ For example:
 
   This URL opens a dashboard in which the elements 1/1 and 1/2, view 1 and parameters 1/1/1 and 1/1/2/myIndex are selected by default.
 
-- ``https://myDma/Dashboard/#/myDashboard?time%20spans=1549753200000/1549835265007``
+- ``https://myDma/Dashboard/#/myDashboard?timespans=1549753200000/1549835265007``
 
   This URL opens a dashboard with a time range filter from 1549753200000 to 1549835265007.
 
@@ -172,7 +172,7 @@ Within the dashboard URL, the following data objects can be specified:
 
 - *indices*: Requires the index.
 
-- *time spans*: Requires the start and/or end time stamp. If you leave out the start time stamp, the time span will be interpreted as starting at midnight. If you leave out the end time stamp, the time span will be interpreted as ending at the current time.
+- *timespans*: Requires the start and/or end time stamp. If you leave out the start time stamp, the time span will be interpreted as starting at midnight. If you leave out the end time stamp, the time span will be interpreted as ending at the current time.
 
   > [!NOTE]
   > From DataMiner 10.2.0/10.1.1 onwards, for a predefined time span in a time range component, the URL can contain the name of that time span (e.g. today, yesterday, etc.) instead of the start time and end time of the time span.
@@ -222,3 +222,5 @@ Within the dashboard URL, the following data objects can be specified:
   For example, to add a query row with two columns to the URL, of which the first column, *ID*, contains string values, and the second column, *Value*, contains numbers:
 
   `v:1\u001FIDColumn\u000EID\u000Estring\u001FValueColumn\u000EValue\u000Enumber\u001Evalue1\u000EValue 1\u001F5\u000EFive\u001ERowKey`
+
+- *booleans*: Supported from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41845-->. Used to specify whether a boolean value is set to "true" or "false" when the dashboard is loaded.

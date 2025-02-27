@@ -6,7 +6,7 @@ uid: UIComponentsTreeControlIcons
 
 Custom icons can be used for the nodes in a tree control to enhance the visual experience:
 
-![alt text](~/develop/images/uiicons.png "Example tree control with icons")
+![Example tree control with icons](~/develop/images/uiicons.png)
 
 A global icon set can be found in C:\Skyline DataMiner\Protocols\Icons.xml. All protocols can link to icons from this file.
 
@@ -33,82 +33,82 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
 
 |Icon|Icon Key|Description|
 |--- |--- |--- |
-|![alt text](~/develop/images/ANALYZERCARDS.png "Analyzer card")|ANALYZERCARDS|Analyzer card.|
-|![alt text](~/develop/images/APPLICATION.png "Application")|APPLICATION|Application.|
-|![alt text](~/develop/images/arrowDown.png "Arrow pointing down")|arrowDown|Arrow pointing down|
-|![alt text](~/develop/images/arrowUp.png "Arrow pointing up")|arrowUp|Arrow pointing up|
-|![alt text](~/develop/images/ASIPort.png "ASI port")|ASIPort|ASI port.|
-|![alt text](~/develop/images/ATSC.png "ATSC")|ATSC|ATSC.|
-|![alt text](~/develop/images/Backup.png "Backup")|Backup|Backup (See also “Main”).|
-|![alt text](~/develop/images/Carrier.png "Carrier")|Carrier|Carrier.|
-|![alt text](~/develop/images/CAT.png "Conditional Access Table, contains EMM PID")|CAT|Conditional Access Table, contains EMM PID.|
-|![alt text](~/develop/images/DATA.png "Data PID")|DATA|Data PID.|
-|![alt text](~/develop/images/DATACAROUSEL.png "Data carousel")|DATACAROUSEL|Data carousel.|
-|![alt text](~/develop/images/Device.png "Device")|Device|Device.|
-|![alt text](~/develop/images/DirectConnection.png "Direct connection")|DirectConnection|Direct connection.|
-|![alt text](~/develop/images/DVBSCard.png "DVBS card")|DVBSCard|DVBS card.|
-|![alt text](~/develop/images/ECM.png "ECM")|ECM|Contains encrypted key for EMM.|
-|![alt text](~/develop/images/EIT.png "EIT")|EIT|Event Information Table.|
-|![alt text](~/develop/images/EMM.png "EMM")|EMM|Encrypted Message.|
-|![alt text](~/develop/images/FixedInput.png "Fixed input")|FixedInput|Fixed input.|
-|![alt text](~/develop/images/FixedOutput.png "Fixed output")|FixedOutput|Fixed output.|
-|![alt text](~/develop/images/GBEPort.png "GBE port")|GBEPort|GBE port.|
-|![alt text](~/develop/images/General.png "General")|General|General|
-|![alt text](~/develop/images/GeneralInput.png "General input")|GeneralInput|General input.|
-|![alt text](~/develop/images/GeneralPID.png "General PID")|GeneralPID|General PID.|
-|![alt text](~/develop/images/GeneralService.png "General service")|GeneralService|General service.|
-|![alt text](~/develop/images/GeneralTransportStream.png "General transport stream")|GeneralTransportStream|Obsolete: Use GT instead.|
-|![alt text](~/develop/images/GT.png "General transport stream")|GT|General transport stream|
-|![alt text](~/develop/images/IDP-NOK.png "IDP not OK")|IDP-NOK|IDP not OK. Available from DataMiner 9.6.11 onwards.|
-|![alt text](~/develop/images/IDP-OK.png "IDP OK")|IDP-OK|IDP OK. Available from DataMiner 9.6.11 onwards.|
-|![alt text](~/develop/images/IDP-Running.png "IDP-Running")|IDP-Running|IDP running. Available from DataMiner 9.6.11 onwards.|
-|![alt text](~/develop/images/IDP-Unknown.png "IDP-Unknown")|IDP-Unknown|IDP unknown. Available from DataMiner 9.6.11 onwards.|
-|![alt text](~/develop/images/Input.png "Input")|Input|Input.|
-|![alt text](~/develop/images/InputAndOutput.png "Input and output")|InputAndOutput|Input and output.|
-|![alt text](~/develop/images/InputTransportStream.png "Input transport stream")|InputTransportStream|Input transport stream.|
-|![alt text](~/develop/images/LED-Blue.png "Blue LED")|LED-Blue|Blue LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![alt text](~/develop/images/LED-Cyan.png "Cyan LED")|LED-Cyan|Cyan LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![alt text](~/develop/images/LED-Lime.png "Lime green LED")|LED-Lime|Lime green LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![alt text](~/develop/images/LED-Red.png "Red LED")|LED-Red|Red LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![alt text](~/develop/images/LED-Silver.png "Silver LED")|LED-Silver|Silver LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![alt text](~/develop/images/LED-Yellow.png "Yellow LED")|LED-Yellow|Yellow LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
-|![alt text](~/develop/images/Main.png "Main")|Main|Main (See also “Backup”)|
-|![alt text](~/develop/images/Matrix.png "Matrix")|Matrix|Matrix.|
-|![alt text](~/develop/images/MIP.png "MIP")|MIP|MIP.|
-|![alt text](~/develop/images/MPE.png "MPE")|MPE|MPE.|
-|![alt text](~/develop/images/MPEG2_AUDIO.png "Audio PID")|MPEG2_AUDIO|Audio PID.|
-|![alt text](~/develop/images/MPEG2_VIDEO.png "Video PID")|MPEG2_VIDEO|Video PID.|
-|![alt text](~/develop/images/newItem.png "New item")|New-Item|New item. Available from DataMiner 10.0.13 (RN 28060) onwards.|
-|![alt text](~/develop/images/NIT.png "Network Information Table")|NIT|Network Information Table: Info about muxes and TS, private stream info, e.g. Teletext.|
-|![alt text](~/develop/images/OBJECTCAROUSEL.png "Object carousel")|OBJECTCAROUSEL|Object carousel.|
-|![alt text](~/develop/images/Output.png "Output")|Output|Output.|
-|![alt text](~/develop/images/OutputTransportStream.png "Output Transport Stream")|OutputTransportStream|Output Transport Stream.|
-|![alt text](~/develop/images/PAT.png "Program Association Table")|PAT|Program Association Table: All programs available in TS.|
-|![alt text](~/develop/images/PCR.png "Program Clock Reference")|PCR|Program Clock Reference.|
-|![alt text](~/develop/images/PD.png "PD")|PD|PD.|
-|![alt text](~/develop/images/PES.png "Packetized elementary stream")|PES|Packetized elementary stream.|
-|![alt text](~/develop/images/PMT.png "Program Map Table")|PMT|Program Map Table: Info about program.|
-|![alt text](~/develop/images/Primary.png "Primary")|Primary|Primary (See also “Secondary”)|
-|![alt text](~/develop/images/Processor.png "Processor")|Processor|Processor.|
-|![alt text](~/develop/images/RADIO.png "Radio")|RADIO|Service of type Radio.|
-|![alt text](~/develop/images/RECT-AliceBlue.png "Rectagnle")|RECT-\[ColorName\]|Filled rectangle, where \[ColorName\] is a color name (e.g. RECT-AliceBlue). For a full list of the available color names, refer to https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.colors?view=netframework-4.8. Available from DataMiner 9.6.11 onwards.|
-|![alt text](~/develop/images/RST.png "RST")|RST|RST.|
-|![alt text](~/develop/images/Satellite.png "Satellite")|Satellite|Satellite.|
-|![alt text](~/develop/images/SDT.png "Service Description Table")|SDT|Service Description Table.|
-|![alt text](~/develop/images/Secondary.png "Secondary")|Secondary|Secondary (See also “Primary”)|
-|![alt text](~/develop/images/SI.png "SI")|SI|SI.|
-|![alt text](~/develop/images/StorageCellEmpty.png "Empty storage cell")|StorageCellEmpty|Empty storage cell.|
-|![alt text](~/develop/images/StorageCellFull.png "Full storage cell")|StorageCellFull|Full storage cell.|
-|![alt text](~/develop/images/StorageTape.png "Storage tape")|StorageTape|Storage tape.|
-|![alt text](~/develop/images/SUBTITLE.png "Subtitle")|SUBTITLE|Subtitle.|
-|![alt text](~/develop/images/TDT.png "Time and date Table")|TDT|Time and date Table.|
-|![alt text](~/develop/images/TELETEXT.png "Teletext PID")|TELETEXT|Teletext PID.|
-|![alt text](~/develop/images/Transponder.png "Transponder")|Transponder|Transponder.|
-|![alt text](~/develop/images/TransponderLeased.png "Leased transponder")|TransponderLeased|Leased transponder.|
-|![alt text](~/develop/images/Trash.png "Trash can")|Trash|Trash can. Available from DataMiner 10.0.13 (RN 28060) onwards.|
-|![alt text](~/develop/images/TV.png "Service of type Television")|TV|Service of type Television.|
-|![alt text](~/develop/images/Unknown.png "Unknown")|Unknown|Unknown.|
-|![alt text](~/develop/images/VSAT.png "VSAT")|VSAT|VSAT.|
+|![Analyzer card](~/develop/images/ANALYZERCARDS.png)|ANALYZERCARDS|Analyzer card.|
+|![Application](~/develop/images/APPLICATION.png)|APPLICATION|Application.|
+|![Arrow pointing down](~/develop/images/arrowDown.png)|arrowDown|Arrow pointing down|
+|![Arrow pointing up](~/develop/images/arrowUp.png)|arrowUp|Arrow pointing up|
+|![ASI port](~/develop/images/ASIPort.png)|ASIPort|ASI port.|
+|![ATSC](~/develop/images/ATSC.png)|ATSC|ATSC.|
+|![Backup](~/develop/images/Backup.png)|Backup|Backup (See also "Main").|
+|![Carrier](~/develop/images/Carrier.png)|Carrier|Carrier.|
+|![Conditional Access Table, contains EMM PID](~/develop/images/CAT.png)|CAT|Conditional Access Table, contains EMM PID.|
+|![Data PID](~/develop/images/DATA.png)|DATA|Data PID.|
+|![Data carousel](~/develop/images/DATACAROUSEL.png)|DATACAROUSEL|Data carousel.|
+|![Device](~/develop/images/Device.png)|Device|Device.|
+|![Direct connection](~/develop/images/DirectConnection.png)|DirectConnection|Direct connection.|
+|![DVBS card](~/develop/images/DVBSCard.png)|DVBSCard|DVBS card.|
+|![ECM](~/develop/images/ECM.png)|ECM|Contains encrypted key for EMM.|
+|![EIT](~/develop/images/EIT.png)|EIT|Event Information Table.|
+|![EMM](~/develop/images/EMM.png)|EMM|Encrypted Message.|
+|![Fixed input](~/develop/images/FixedInput.png)|FixedInput|Fixed input.|
+|![Fixed output](~/develop/images/FixedOutput.png)|FixedOutput|Fixed output.|
+|![GBE port](~/develop/images/GBEPort.png)|GBEPort|GBE port.|
+|![General](~/develop/images/General.png)|General|General|
+|![General input](~/develop/images/GeneralInput.png)|GeneralInput|General input.|
+|![General PID](~/develop/images/GeneralPID.png)|GeneralPID|General PID.|
+|![General service](~/develop/images/GeneralService.png)|GeneralService|General service.|
+|![General transport stream](~/develop/images/GeneralTransportStream.png)|GeneralTransportStream|Obsolete: Use GT instead.|
+|![General transport stream](~/develop/images/GT.png)|GT|General transport stream|
+|![IDP not OK](~/develop/images/IDP-NOK.png)|IDP-NOK|IDP not OK. Available from DataMiner 9.6.11 onwards.|
+|![IDP OK](~/develop/images/IDP-OK.png)|IDP-OK|IDP OK. Available from DataMiner 9.6.11 onwards.|
+|![IDP-Running](~/develop/images/IDP-Running.png)|IDP-Running|IDP running. Available from DataMiner 9.6.11 onwards.|
+|![IDP-Unknown](~/develop/images/IDP-Unknown.png)|IDP-Unknown|IDP unknown. Available from DataMiner 9.6.11 onwards.|
+|![Input](~/develop/images/Input.png)|Input|Input.|
+|![Input and output](~/develop/images/InputAndOutput.png)|InputAndOutput|Input and output.|
+|![Input transport stream](~/develop/images/InputTransportStream.png)|InputTransportStream|Input transport stream.|
+|![Blue LED](~/develop/images/LED-Blue.png)|LED-Blue|Blue LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
+|![Cyan LED](~/develop/images/LED-Cyan.png)|LED-Cyan|Cyan LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
+|![Lime green LED](~/develop/images/LED-Lime.png)|LED-Lime|Lime green LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
+|![Red LED](~/develop/images/LED-Red.png)|LED-Red|Red LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
+|![Silver LED](~/develop/images/LED-Silver.png)|LED-Silver|Silver LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
+|![Yellow LED](~/develop/images/LED-Yellow.png)|LED-Yellow|Yellow LED. Available from DataMiner 10.1.2 onwards (RN 28566).|
+|![Main](~/develop/images/Main.png)|Main|Main (See also “Backup”)|
+|![Matrix](~/develop/images/Matrix.png)|Matrix|Matrix.|
+|![MIP](~/develop/images/MIP.png)|MIP|MIP.|
+|![MPE](~/develop/images/MPE.png)|MPE|MPE.|
+|![Audio PID](~/develop/images/MPEG2_AUDIO.png)|MPEG2_AUDIO|Audio PID.|
+|![Video PID](~/develop/images/MPEG2_VIDEO.png)|MPEG2_VIDEO|Video PID.|
+|![New item](~/develop/images/newItem.png)|New-Item|New item. Available from DataMiner 10.0.13 (RN 28060) onwards.|
+|![Network Information Table](~/develop/images/NIT.png)|NIT|Network Information Table: Info about muxes and TS, private stream info, e.g. Teletext.|
+|![Object carousel](~/develop/images/OBJECTCAROUSEL.png)|OBJECTCAROUSEL|Object carousel.|
+|![Output](~/develop/images/Output.png)|Output|Output.|
+|![Output Transport Stream](~/develop/images/OutputTransportStream.png)|OutputTransportStream|Output Transport Stream.|
+|![Program Association Table](~/develop/images/PAT.png)|PAT|Program Association Table: All programs available in TS.|
+|![Program Clock Reference](~/develop/images/PCR.png)|PCR|Program Clock Reference.|
+|![PD](~/develop/images/PD.png)|PD|PD.|
+|![Packetized elementary stream](~/develop/images/PES.png)|PES|Packetized elementary stream.|
+|![Program Map Table](~/develop/images/PMT.png)|PMT|Program Map Table: Info about program.|
+|![Primary](~/develop/images/Primary.png)|Primary|Primary (See also “Secondary”)|
+|![Processor](~/develop/images/Processor.png)|Processor|Processor.|
+|![Radio](~/develop/images/RADIO.png)|RADIO|Service of type Radio.|
+|![Rectangle](~/develop/images/RECT-AliceBlue.png)|RECT-\[ColorName\]|Filled rectangle, where \[ColorName\] is a color name (e.g. RECT-AliceBlue). For a full list of the available color names, refer to https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.colors?view=netframework-4.8. Available from DataMiner 9.6.11 onwards.|
+|![RST](~/develop/images/RST.png)|RST|RST.|
+|![Satellite](~/develop/images/Satellite.png)|Satellite|Satellite.|
+|![Service Description Table](~/develop/images/SDT.png)|SDT|Service Description Table.|
+|![Secondary](~/develop/images/Secondary.png)|Secondary|Secondary (See also “Primary”)|
+|![SI](~/develop/images/SI.png)|SI|SI.|
+|![Empty storage cell](~/develop/images/StorageCellEmpty.png)|StorageCellEmpty|Empty storage cell.|
+|![Full storage cell](~/develop/images/StorageCellFull.png)|StorageCellFull|Full storage cell.|
+|![Storage tape](~/develop/images/StorageTape.png)|StorageTape|Storage tape.|
+|![Subtitle](~/develop/images/SUBTITLE.png)|SUBTITLE|Subtitle.|
+|![Time and date Table](~/develop/images/TDT.png)|TDT|Time and date Table.|
+|![Teletext PID](~/develop/images/TELETEXT.png)|TELETEXT|Teletext PID.|
+|![Transponder](~/develop/images/Transponder.png)|Transponder|Transponder.|
+|![Leased transponder](~/develop/images/TransponderLeased.png)|TransponderLeased|Leased transponder.|
+|![Trash can](~/develop/images/Trash.png)|Trash|Trash can. Available from DataMiner 10.0.13 (RN 28060) onwards.|
+|![Service of type Television](~/develop/images/TV.png)|TV|Service of type Television.|
+|![Unknown](~/develop/images/Unknown.png)|Unknown|Unknown.|
+|![VSAT](~/develop/images/VSAT.png)|VSAT|VSAT.|
 
 ```xml
 <Param id="1000" trending="false">

@@ -33,4 +33,4 @@ if (result != null)
 
 ## Remarks
 
-- This method call is only intended for the creation of a service on the local DMA. In case a service must be created on a remote DMA, the NT_SERVICE_REMOTE (282) call should be used. See NT_SERVICE_REMOTE (282).
+- This method call is only intended for the creation of a service on the local DMA. In case a service must be created on a remote DMA, the [NT_SERVICE_REMOTE (282)](xref:NT_SERVICE_REMOTE) call should be used.

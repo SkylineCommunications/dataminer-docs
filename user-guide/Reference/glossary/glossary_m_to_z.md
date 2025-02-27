@@ -62,7 +62,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | OFDM | Orthogonal Frequency Division Multiplexing. Method of digital signal modulation that splits a single data stream across different narrowband channels at different frequencies to reduce interference and crosstalk. |
 | OFDMA | Orthogonal Frequency Division Multiple Access. Multi-user extension of the OFDM architecture. |
 | Offline impact | Indication of whether a parameter will have an impact during the offline window of an SLA.<br>See [Creating an information template](xref:Creating_an_information_template). |
-| Offload database | Dedicated MySQL, MSSQL or Oracle database for a DataMiner System, to which information is offloaded from the local DMA databases. Previously also called central database.<br>See [Offload database](xref:Offload_database). |
+| Offload database | Dedicated MySQL, MSSQL, or Oracle database for a DataMiner System, to which information is offloaded from the DataMiner System. Previously also called central database.<br>See [Offloading data](xref:Offload_database). |
 | OID | Object Identifier. Value uniquely identifying a managed object in a MIB hierarchy. |
 | OLT | Optical Line Termination. Device that serves as the service provider endpoint of a passive optical network. |
 | ONT | Optical Network Terminal. Device used to terminate a fiber-optic line, demultiplex the signal into its component parts and provide power to customer telephones. Also known as ONU (Optical Network Unit). |
@@ -115,7 +115,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 |------|-------------|
 | QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. |
 | QAM | Quadrature Amplitude Modulation. Transmission technique for digital signals that combines phase modulation and amplitude modulation. |
-| Query executer | DataMiner tool that allows users to connect to an SQL database and query it using SQL statements.<br>See [Querying an SQL database](xref:Querying_an_SQL_database). |
+| Query executer | Obsolete DataMiner tool that allows users to connect to an SQL database and query it using SQL statements.<br>See [Querying an SQL database](xref:Querying_an_SQL_database). |
 | QuickMenu | Shortcut menu in DataMiner Cube that allows quick navigation between UI sections. Accessible via the keyboard shortcut Ctrl + Q. |
 
 ## R

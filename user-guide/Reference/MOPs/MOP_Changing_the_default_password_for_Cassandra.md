@@ -62,7 +62,7 @@ The previous requirements are met.
 
 #### Steps
 
-1. In DataMiner Cube, go to *System Center > Tools > query executer*, make sure the correct database is selected at the top, and execute the following query:
+1. Execute the following query on the database (e.g. using [DevCenter](xref:DataStax_DevCenter)):
 
     ```txt
     select * from system_schema.tables where keyspace_name='SLDMADB';

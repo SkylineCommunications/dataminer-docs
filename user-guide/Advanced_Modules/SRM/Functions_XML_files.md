@@ -33,6 +33,7 @@ A functions XML file has the following basic file structure:
   <Protocol>
     <Name>MyProtocolName</Name>
   </Protocol>
+  <OverrideTimeoutVF>true</OverrideTimeoutVF>
   <Function id=" ..." name =" ..." maxInstances =" ..." profile="...">
     <Parameters>
       <Parameter id="..."/>
@@ -63,6 +64,11 @@ The file includes the following tags:
 - **Protocol.Name**: Indicates the name of the protocol that the functions file depends on. This tag must be specified in order to make it possible to upload the file via the Protocols & Templates module.
 
 - **Version**: Contains the version number of the functions file.
+
+- **OverrideTimeoutVF**: Available from DataMiner 10.5.3/10.6.0 onwards<!--RN 41388-->. When set to "true", this tag allows the timeout override for a virtual function.
+
+  > [!NOTE]
+  > Prior to DataMiner 10.5.3/10.6.0, when the [`overrideTimeoutDVE` option](xref:Protocol.Type-overrideTimeoutDVE) is enabled in a *protocol.xml* file, the timeout will apply to DVE elements as well as virtual functions. From DataMiner 10.5.3/10.6.0 onwards<!--RN 41388-->, this option will only apply to DVE elements, and the *OverrideTimeoutVF* tag in a *Functions.xml* file can be used to override the timeout for virtual functions.
 
 - **Function**: Defines a function for the protocol. This tag can have the following attributes:
 

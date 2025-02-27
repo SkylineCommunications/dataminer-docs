@@ -17,24 +17,24 @@ Overview of all possible error and warning messages:
 | Result code | Class | Description |
 |-------------|-------|-------------|
 | 4400 | Information | RTDisplay tags OK. |
-| 4401 | Error | Param \[Parameter ID\] has an unexpected RTDisplay=”true” value. |
-| 4402 | Error | RTDisplay=”true” required on parameter \[Parameter ID\], which is used as dependency ID in parameter \[Parameter ID\]. |
-| 4404 | Error | RTDisplay=”true” required. Parameter is used as dependency value in parameter \[Parameter ID\]. |
-| 4405 | Error | RTDisplay=”true” required on write parameter \[Parameter ID\], which has a related read parameter \[Parameter ID\] dependency value in ContextMenu parameter \[Parameter ID\]. |
-| 4406 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which is used in treecontrol(s) \[comma-separated list of tree control IDs\]. |
-| 4408 | Error | RTDisplay=”true” required on parameter \[Parameter ID\], which is used in a tree control ExtraTabs parameter attribute on line \[Line number\]. |
-| 4409 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which is used in alarm option properties on parameter \[Parameter ID\]. |
-| 4410 | Error | RTDisplay=”true” required on parameter \[Parameter ID\], which is used in the pageOrder option Webinterface. |
-| 4411 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which is used as a context menu. |
-| 4412 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which is used as QAction feedback. |
-| 4413 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which has mapAlarm=”true”. |
-| 4414 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which is used by DMS Spectrum. |
-| 4417 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which has a virtual source defined. |
-| 4418 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which is used in Params loadSequence. |
-| 4419 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which is displayed on table \[Parameter ID\]. |
-| 4420 | Error | RTDisplay=”true” required. ColumnOption for table \[Parameter ID\] uses option \[Option\]. |
-| 4421 | Error | RTDisplay=”true” is required on parameter \[Parameter ID\], which is used in a relation. |
-| 4422 | Error | RTDisplay=”true” is required. Parameter \[Parameter ID\] is an exported table. |
+| 4401 | Error | Param \[Parameter ID\] has an unexpected RTDisplay="true" value. |
+| 4402 | Error | RTDisplay="true" required on parameter \[Parameter ID\], which is used as dependency ID in parameter \[Parameter ID\]. |
+| 4404 | Error | RTDisplay="true" required. Parameter is used as dependency value in parameter \[Parameter ID\]. |
+| 4405 | Error | RTDisplay="true" required on write parameter \[Parameter ID\], which has a related read parameter \[Parameter ID\] dependency value in ContextMenu parameter \[Parameter ID\]. |
+| 4406 | Error | RTDisplay="true" is required on parameter \[Parameter ID\], which is used in treecontrol(s) \[comma-separated list of tree control IDs\]. |
+| 4408 | Error | RTDisplay="true" required on parameter \[Parameter ID\], which is used in a tree control ExtraTabs parameter attribute on line \[Line number\]. |
+| 4409 | Error | RTDisplay="true" is required on parameter \[Parameter ID\], which is used in alarm option properties on parameter \[Parameter ID\]. |
+| 4410 | Error | RTDisplay="true" required on parameter \[Parameter ID\], which is used in the pageOrder option Webinterface. |
+| 4411 | Error | RTDisplay="true" is required on parameter \[Parameter ID\], which is used as a context menu. |
+| 4412 | Error | RTDisplay="true" is required on parameter \[Parameter ID\], which is used as QAction feedback. |
+| 4413 | Error | RTDisplay="true" is required on parameter \[Parameter ID\], which has mapAlarm="true". |
+| 4414 | Error | RTDisplay="true" is required on parameter \[Parameter ID\], which is used by DMS Spectrum. |
+| 4417 | Error | RTDisplay="true" is required on parameter \[Parameter ID\], which has a virtual source defined. |
+| 4418 | Error | RTDisplay="true" is required on parameter \[Parameter ID\], which is used in Params loadSequence. |
+| 4419 | Error | RTDisplay="true" is required on parameter \[Parameter ID\], which is displayed on table \[Parameter ID\]. |
+| 4420 | Error | RTDisplay="true" required. ColumnOption for table \[Parameter ID\] uses option \[Option\]. |
+| 4421 | Error | RTDisplay="true" is required on parameter \[Parameter ID\], which is used in a relation. |
+| 4422 | Error | RTDisplay="true" is required. Parameter \[Parameter ID\] is an exported table. |
 
 #### Trend/Alarm check: Additional error messages \[ID 13855\]
 
@@ -42,7 +42,7 @@ The Trend/Alarm check can now throw the following additional warnings:
 
 | Result code | Class | Description |
 |-------------|-------|-------------|
-| 2403 | Warning | Parameter \[Parameter ID\] has trending=”true”, but is not displayed on any page. This is not consistent. Please verify. |
+| 2403 | Warning | Parameter \[Parameter ID\] has trending="true", but is not displayed on any page. This is not consistent. Please verify. |
 | 2404 | Warning | Parameter \[Parameter ID\] is monitored, but is not displayed on any page. This is not consistent. Please verify. |
 
 #### New check: Check whether all parameter IDs in the \<Measurement> tag of a table have a corresponding \<ColumnOption> tag \[ID 13219\]

@@ -26,11 +26,9 @@ In order to improve readability (and type safety) of code in QActions, the follo
 
 - In case a wrapper method is available for a NotifyProtocol call, the use of the wrapper method is favored.
 
-- With DataMiner versions prior to DataMiner 9.0, the use of the GetKeys method to retrieve the primary keys (NotifyProtocol.KeyType.Index) should be avoided, as up to DataMiner 9.0 the implementation to retrieve the primary keys is based on the SLElement process (an NT_GET_INDEXES call is executed, which retrieves both the primary keys and the display keys.). As it is possible that there is a delay in SLElement (e.g. due to a large number of calls that it is processing), it is possible that the returned data is not up to date.
-
-    Since DataMiner 9.0, the implementation of the GetKeys method has been updated. Retrieving the primary keys no longer involves the SLElement process. However, note that obtaining the display keys (NotifyProtocol.KeyType.DisplayKey) is still based on SLElement.
+- In legacy DataMiner versions, the use of the GetKeys method to retrieve the primary keys (NotifyProtocol.KeyType.Index) had to be avoided as this was based on the SLElement process, which could cause a delay that could result in returned data not being up to date. This is no longer the case in the currently supported DataMiner versions. However, note that obtaining the display keys (NotifyProtocol.KeyType.DisplayKey) is still based on SLElement.
 
 > [!NOTE]
 >
-> - The implementation of the Keys property of the QActionTable class also makes use of the GetKeys method. Therefore, the use of the Keys property should also be avoided prior to DataMiner 9.0.
+> - The implementation of the Keys property of the QActionTable class also makes use of the GetKeys method.
 > - The ClearAllKeys() method still uses the NT_GET_INDEXES call, so for this reason the use of this method should be avoided.

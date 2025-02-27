@@ -23,7 +23,7 @@ Cassandra automatically distributes data across the nodes of the cluster. This i
 
 Data is typically replicated on multiple nodes allowing high availability and reliability. Cassandra performs data replication automatically according to the configured replication factor and strategy. For example, when a replication factor of three is defined, three copies of the data will exist in three different nodes in the cluster.
 
-The replication factor is a setting that is configured at keyspace level (See Keyspace). Next to the replication factor, the replication strategy can be defined for a keyspace. The replication strategy determines the selection of the replica nodes, i.e. the nodes other than the one that owns the row.
+The replication factor is a setting that is configured at keyspace level (See [Keyspace](#keyspace)). Next to the replication factor, the replication strategy can be defined for a keyspace. The replication strategy determines the selection of the replica nodes, i.e. the nodes other than the one that owns the row.
 
 ## Data model
 
@@ -54,7 +54,7 @@ It should be clear that the definition of the primary key is a very important as
 - The size of the partitions.
 - The order of the data within partitions.
 - The distribution of the partitions among the nodes of the cluster.
-- The queries that can be executed (see Performing SELECT statements).
+- The queries that can be executed (see [Performing SELECT statements](#performing-select-statements)).
 
 > [!NOTE]
 > When a row is added to a table, not all columns have to be filled in (except for columns that are part of the row key). This is different from a row in an RDBMS, where a null value is typically provided for empty cells.

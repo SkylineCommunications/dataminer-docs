@@ -225,175 +225,184 @@ items:
             topicUid: Failover_FAQ_connection_issues
           - name: What if one of the Agents cannot be started or restarted?
             topicUid: Failover_FAQ_cannot_start
-  - name: Databases
+  - name: Storage
     items:
-      - name: About databases
-        topicUid: Databases_about
-      - name: Supported system data storage architectures
-        topicUid: Supported_system_data_storage_architectures
-        items:
-          - name: Dedicated clustered storage
-            topicUid: Dedicated_clustered_storage
-          - name: Separate Cassandra setup with indexing
-            topicUid: Separate_Cassandra_setup_with_Elasticsearch
-          - name: Separate Cassandra setup without indexing
-            topicUid: Separate_Cassandra_setup_without_Elasticsearch
-          - name: Legacy setup with MySQL or MSSQL database
-            topicUid: Legacy_setup_with_MySQL_or_MSSQL_database
+      - name: About storage
+        topicUid: About_storage
       - name: Storage as a Service (STaaS)
         topicUid: STaaS
-      - name: Database configuration
         items:
-          - name: Configuring dedicated clustered storage
-            topicUid: Configuring_dedicated_clustered_storage
+          - name: STaaS features
+            topicUid: STaaS_features
+          - name: Setting up STaaS
+            topicUid: Setting_up_StaaS
+          - name: Requesting a cost estimation
+            topicUid: STaaS_cost_estimation
+          - name: Migrating existing data to STaaS
+            topicUid: Migrating_existing_data_to_STaaS
+      - name: Other storage options (not recommended)
+        items:
+          - name: Storage options overview
+            topicUid: Supported_system_data_storage_architectures
             items:
-              - name: Cassandra-compatible database service
+              - name: Dedicated clustered storage
+                topicUid: Dedicated_clustered_storage
+              - name: Separate Cassandra setup with indexing
+                topicUid: Separate_Cassandra_setup_with_Elasticsearch
+              - name: Separate Cassandra setup without indexing
+                topicUid: Separate_Cassandra_setup_without_Elasticsearch
+              - name: Legacy setup with MySQL or MSSQL database
+                topicUid: Legacy_setup_with_MySQL_or_MSSQL_database
+          - name: Storage configuration
+            items:
+              - name: Configuring dedicated clustered storage
+                topicUid: Configuring_dedicated_clustered_storage
                 items:
-                  - name: Cassandra Cluster
-                    topicUid: Cassandra_database
+                  - name: Cassandra-compatible database service
                     items:
-                      - name: Deploying a Cassandra database
+                      - name: Cassandra Cluster
+                        topicUid: Cassandra_database
                         items:
-                          - name: Installing Cassandra on a Linux machine
-                            topicUid: Installing_Cassandra
-                          - name: Installing Cassandra Reaper
-                            topicUid: Installing_Cassandra_Reaper
-                          - name: Adding and removing nodes in a Cassandra cluster database
-                            topicUid: Scale_Cassandra_Database
-                          - name: Making Cassandra nodetool accessible remotely
-                            topicUid: Making_Cassandra_nodetool_accessible_remotely
-                          - name: Configuring the replication factor and consistency level
-                            topicUid: replication_and_consistency_configuration
-                          - name: Setting up an Azure Managed Instance for Apache Cassandra
-                            topicUid: Azure_Managed_Instance_for_Apache_Cassandra
-                      - name: Maintaining a Cassandra cluster
-                        topicUid: Maintain_Cassandra_Cluster
-                      - name: Backing up and restoring a Cassandra cluster using Medusa
-                        topicUid: Backup_Restore_Cassandra_Cluster_Medusa
-                  - name: Amazon Keyspaces Service
-                    topicUid: Amazon_Keyspaces_Service
-                    items:
-                      - name: Deploying the Amazon Keyspaces Service
-                        topicUid: Deploying_Amazon_Keyspaces_Service
-              - name: Configuring the general database settings
-                topicUid: Configuring_the_database_settings_in_Cube
-              - name: Migrating existing systems to dedicated clustered storage
-                topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
-              - name: Decommissioning WSL
-                topicUid: Decommissioning_WSL
-          - name: Configuring storage per DMA
-            topicUid: Configuring_storage_per_DMA
-            items:
-              - name: Cassandra per DMA
+                          - name: Deploying a Cassandra database
+                            items:
+                              - name: Installing Cassandra on a Linux machine
+                                topicUid: Installing_Cassandra
+                              - name: Installing Cassandra Reaper
+                                topicUid: Installing_Cassandra_Reaper
+                              - name: Adding and removing nodes in a Cassandra cluster database
+                                topicUid: Scale_Cassandra_Database
+                              - name: Making Cassandra nodetool accessible remotely
+                                topicUid: Making_Cassandra_nodetool_accessible_remotely
+                              - name: Configuring the replication factor and consistency level
+                                topicUid: replication_and_consistency_configuration
+                              - name: Setting up an Azure Managed Instance for Apache Cassandra
+                                topicUid: Azure_Managed_Instance_for_Apache_Cassandra
+                          - name: Maintaining a Cassandra cluster
+                            topicUid: Maintain_Cassandra_Cluster
+                          - name: Backing up and restoring a Cassandra cluster using Medusa
+                            topicUid: Backup_Restore_Cassandra_Cluster_Medusa
+                      - name: Amazon Keyspaces Service
+                        topicUid: Amazon_Keyspaces_Service
+                        items:
+                          - name: Deploying the Amazon Keyspaces Service
+                            topicUid: Deploying_Amazon_Keyspaces_Service
+                  - name: Configuring the general database settings
+                    topicUid: Configuring_the_database_settings_in_Cube
+                  - name: Migrating existing systems to dedicated clustered storage
+                    topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+                  - name: Decommissioning WSL
+                    topicUid: Decommissioning_WSL
+              - name: Configuring storage per DMA
+                topicUid: Configuring_storage_per_DMA
                 items:
-                  - name: Migrating a legacy setup to Cassandra
-                    topicUid: Migrating_the_general_database_to_Cassandra
-                  - name: Configuring the Cassandra database per DMA settings
-                    topicUid: Configuring_Cassandra_per_DMA_in_Cube
-                  - name: Maintaining a Cassandra database on DMA
+                  - name: Cassandra per DMA
                     items:
-                      - name: Configuring Cassandra backups
-                        topicUid: Configuring_Cassandra_Backups
-                      - name: Moving the Cassandra database to a different disk drive
-                        topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
-              - name: MySQL database
-                topicUid: MySQL_database
-                items:
-                  - name: Deleting element data from a MySQL database
-                    topicUid: Deleting_element_data_from_a_MySQL_database
-                  - name: Moving MySQL data to another location
-                    topicUid: Moving_MySQL_data_to_another_location
-                  - name: Configuring the SQL database settings
-                    topicUid: Configuring_MySQL_database_in_Cube
-          - name: Configuring an indexing database
-            topicUid: Indexing_Database
-            items:
-              - name: OpenSearch database
-                topicUid: OpenSearch_database
-                items:
-                  - name: Installing an OpenSearch database
-                    topicUid: Installing_OpenSearch_database
-                  - name: Configuring multiple OpenSearch clusters
-                    topicUid: Configuring_multiple_OpenSearch_clusters
-                  - name: Configuring a multiple data center OpenSearch cluster
-                    topicUid: Configuring_multiple_datacenter_OpenSearch_cluster
-                  - name: Configuring OpenSearch backups
-                    topicUid: Configuring_OpenSearch_Backups
-              - name: Amazon OpenSearch Service
-                topicUid: Amazon_OpenSearch_Service
-              - name: Elasticsearch
-                topicUid: Elasticsearch_database
-                items:
-                  - name: Installing Elasticsearch on a separate Linux machine
-                    topicUid: Installing_Elasticsearch_on_separate_Linux_machine
-                  - name: Installing Elasticsearch on a DMA via DataMiner (storage per DMA only)
-                    topicUid: Installing_Elasticsearch_via_DataMiner
-                  - name: Configuring an Elasticsearch database on a separate machine
-                    topicUid: Configuring_Elasticsearch_Database
+                      - name: Migrating a legacy setup to Cassandra
+                        topicUid: Migrating_the_general_database_to_Cassandra
+                      - name: Configuring the Cassandra database per DMA settings
+                        topicUid: Configuring_Cassandra_per_DMA_in_Cube
+                      - name: Maintaining a Cassandra database on DMA
+                        items:
+                          - name: Configuring Cassandra backups
+                            topicUid: Configuring_Cassandra_Backups
+                          - name: Moving the Cassandra database to a different disk drive
+                            topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
+                  - name: MySQL database
+                    topicUid: MySQL_database
                     items:
-                      - name: Configuring the master nodes
-                        topicUid: Configuring_master_Elasticsearch_nodes
-                      - name: Adding an Elasticsearch cluster node
-                        topicUid: Configuring_Elasticsearch_node_add
-                      - name: Configuring a multiple data center Elasticsearch cluster
-                        topicUid: Configuring_multiple_datacenter_Elasticsearch_cluster
-                      - name: Removing an Elasticsearch cluster node
-                        topicUid: Configuring_Elasticsearch_node_remove
-                  - name: Configuring multiple Elasticsearch clusters
-                    topicUid: Configuring_multiple_Elasticsearch_clusters
-                    items:
-                      - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
-                        topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
-                      - name: Verifying Elasticsearch synchronization
-                        topicUid: Verifying_Elasticsearch_Synchronization
-                  - name: Configuring Elasticsearch backups
-                    topicUid: Configuring_Elasticsearch_backups
-                    items:
-                      - name: Taking and restoring snapshots
-                        topicUid: Configuring_Elasticsearch_backups_Windows_Linux
-                      - name: Restoring backups using the Standalone Elastic Backup Tool
-                        topicUid: Configuring_Elasticsearch_backups_Windows
-                  - name: Uninstalling Elasticsearch from a DMA (storage per DMA only)
-                    topicUid: Uninstalling_Elasticsearch_from_a_DMA
-              - name: Manually connecting a DMA to an indexing database
-                topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
-              - name: Configuring indexing settings in DataMiner Cube
-                topicUid: Configuring_DataMiner_Indexing
-              - name: Migrating SRM resources to the indexing database
-                topicUid: Resources_migration_to_elastic
-              - name: Migrating SRM profiles to the indexing database
-                topicUid: Profile_migration_to_elastic
-              - name: Migrating from Elasticsearch to OpenSearch
-                topicUid: Migrating_from_Elasticsearch_to_OpenSearch
-          - name: Common database settings
-            items:
-              - name: Specifying TTL overrides
-                topicUid: Specifying_TTL_overrides
-          - name: Optional database configuration
-            items:
-              - name: Offload database
-                topicUid: Offload_database
+                      - name: Deleting element data from a MySQL database
+                        topicUid: Deleting_element_data_from_a_MySQL_database
+                      - name: Moving MySQL data to another location
+                        topicUid: Moving_MySQL_data_to_another_location
+                      - name: Configuring the SQL database settings
+                        topicUid: Configuring_MySQL_database_in_Cube
+              - name: Configuring an indexing database
+                topicUid: Indexing_Database
                 items:
-                  - name: Setting up an offload database
-                    topicUid: Setting_up_an_offload_database
-                  - name: Structure of the offload database
-                    topicUid: Structure_of_the_offload_database
-                  - name: Configuring data offloads
-                    topicUid: Configuring_data_offloads
-                  - name: How DataMiner offloads data
-                    topicUid: How_DataMiner_offloads_data
+                  - name: OpenSearch database
+                    topicUid: OpenSearch_database
+                    items:
+                      - name: Installing an OpenSearch database
+                        topicUid: Installing_OpenSearch_database
+                      - name: Configuring multiple OpenSearch clusters
+                        topicUid: Configuring_multiple_OpenSearch_clusters
+                      - name: Configuring a multiple data center OpenSearch cluster
+                        topicUid: Configuring_multiple_datacenter_OpenSearch_cluster
+                      - name: Configuring OpenSearch backups
+                        topicUid: Configuring_OpenSearch_Backups
+                  - name: Amazon OpenSearch Service
+                    topicUid: Amazon_OpenSearch_Service
+                  - name: Elasticsearch
+                    topicUid: Elasticsearch_database
+                    items:
+                      - name: Installing Elasticsearch on a separate Linux machine
+                        topicUid: Installing_Elasticsearch_on_separate_Linux_machine
+                      - name: Installing Elasticsearch on a DMA via DataMiner (storage per DMA only)
+                        topicUid: Installing_Elasticsearch_via_DataMiner
+                      - name: Configuring an Elasticsearch database on a separate machine
+                        topicUid: Configuring_Elasticsearch_Database
+                        items:
+                          - name: Configuring the master nodes
+                            topicUid: Configuring_master_Elasticsearch_nodes
+                          - name: Adding an Elasticsearch cluster node
+                            topicUid: Configuring_Elasticsearch_node_add
+                          - name: Configuring a multiple data center Elasticsearch cluster
+                            topicUid: Configuring_multiple_datacenter_Elasticsearch_cluster
+                          - name: Removing an Elasticsearch cluster node
+                            topicUid: Configuring_Elasticsearch_node_remove
+                      - name: Configuring multiple Elasticsearch clusters
+                        topicUid: Configuring_multiple_Elasticsearch_clusters
+                        items:
+                          - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
+                            topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
+                          - name: Verifying Elasticsearch synchronization
+                            topicUid: Verifying_Elasticsearch_Synchronization
+                      - name: Configuring Elasticsearch backups
+                        topicUid: Configuring_Elasticsearch_backups
+                        items:
+                          - name: Taking and restoring snapshots
+                            topicUid: Configuring_Elasticsearch_backups_Windows_Linux
+                          - name: Restoring backups using the Standalone Elastic Backup Tool
+                            topicUid: Configuring_Elasticsearch_backups_Windows
+                      - name: Uninstalling Elasticsearch from a DMA (storage per DMA only)
+                        topicUid: Uninstalling_Elasticsearch_from_a_DMA
+                  - name: Manually connecting a DMA to an indexing database
+                    topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+                  - name: Configuring indexing settings in DataMiner Cube
+                    topicUid: Configuring_DataMiner_Indexing
+                  - name: Migrating SRM resources to the indexing database
+                    topicUid: Resources_migration_to_elastic
+                  - name: Migrating SRM profiles to the indexing database
+                    topicUid: Profile_migration_to_elastic
+                  - name: Migrating from Elasticsearch to OpenSearch
+                    topicUid: Migrating_from_Elasticsearch_to_OpenSearch
               - name: Configuring an additional database
                 topicUid: Configuring_an_additional_database
-      - name: Database queries
+              - name: Common storage settings
+                items:
+                  - name: Specifying TTL overrides
+                    topicUid: Specifying_TTL_overrides
+              - name: Database queries
+                items:
+                  - name: Examples of database queries
+                    topicUid: Examples_of_database_queries
+                  - name: Querying an Elasticsearch database
+                    topicUid: Querying_an_Elasticsearch_database
+                  - name: Querying an SQL database
+                    topicUid: Querying_an_SQL_database
+                  - name: Querying a Cassandra database compared to MySQL
+                    topicUid: Querying_Cassandra_vs_MySQL
+      - name: Offloading data
+        topicUid: Offload_database
         items:
-          - name: Examples of database queries
-            topicUid: Examples_of_database_queries
-          - name: Querying an Elasticsearch database
-            topicUid: Querying_an_Elasticsearch_database
-          - name: Querying an SQL database
-            topicUid: Querying_an_SQL_database
-          - name: Querying a Cassandra database compared to MySQL
-            topicUid: Querying_Cassandra_vs_MySQL
+          - name: Setting up an offload database
+            topicUid: Setting_up_an_offload_database
+          - name: Structure of an offload database
+            topicUid: Structure_of_the_offload_database
+          - name: Configuring data offloads
+            topicUid: Configuring_data_offloads
+          - name: How DataMiner offloads data
+            topicUid: How_DataMiner_offloads_data
   - name: Security
     items:
       - name: About security
@@ -478,7 +487,7 @@ items:
         items:
 #          - name: Lockbox service for DaaS and STaaS systems
 #            topicUid: Lockbox
-          - name: Securing self-hosted DataMiner storage
+          - name: Securing self-managed DataMiner storage
             items:
               - name: Securing the Cassandra general database
                 items:
@@ -593,6 +602,8 @@ items:
         items:
           - name: Getting started with DCF
             topicUid: getting_started_dataminer_connectivity_framework
+          - name: Working with DCF interface properties in GQI queries
+            topicUid: working_with_dcf_interface_properties_gqi
   - name: TCP-IP sockets
     items:
       - name: About TCP-IP sockets
