@@ -200,6 +200,12 @@ In some cases, it would not be possible to simultaneously update multiple TTL se
 
 After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
 
+#### Problem when NATS sessions were disposed [ID 42281]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some rare cases, an exception could be thrown when NATS sessions were disposed.
+
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->

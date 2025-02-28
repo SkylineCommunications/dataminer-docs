@@ -396,6 +396,12 @@ The `GetMADDataMessage` allows you to request anomaly scores during a specified 
 
 However, up to now, the response would not contain the anomaly score and the parameter values associated with the last trend data entry.
 
+#### Problem when NATS sessions were disposed [ID 42281]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some rare cases, an exception could be thrown when NATS sessions were disposed.
+
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
