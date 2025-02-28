@@ -87,7 +87,7 @@ The information provided is similar to the information found in the *SLElementIn
 
 #### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now request the time zone and date/time settings of the client [ID 42064]
 
-<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
 When UI component of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the format of the entered date and time would depend on the platform and the configured settings. From now on, when an interactive Automation script is being run, the client will be able to set the time zone used to format the entered date and time.
 
@@ -129,7 +129,7 @@ The returned value will be `DateTimeOffset.MinValue` if the component does not e
 
 #### Service & Resource Management: Configuring the script to be executed when a reservation goes into quarantine [ID 42067]
 
-<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
 Up to now, when a reservation went into quarantine, the *SRM_QuarantineHandling* script would always be executed. From now on, when you create a reservation, you will be able to specify the name of the quarantine script to be executed in the `QuarantineHandlingScriptName` property.
 
