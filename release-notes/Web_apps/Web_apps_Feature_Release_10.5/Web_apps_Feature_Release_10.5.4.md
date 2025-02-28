@@ -18,6 +18,16 @@ uid: Web_apps_Feature_Release_10.5.4
 
 ## New features
 
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the web session [ID 42097]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run within a web app, the UI components of type *Calendar* and *Time* will be able to retrieve the time zone and date/time settings of the web session, and use those settings to format the time and date entered by the user.
+
+When a default time zone is defined for DataMiner web apps, that default time zone will be used instead of the time zone of the client. See also [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps).
+
+For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+
 #### Dashboards/Low-Code Apps: Maps component is now fully released [ID 42309]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
@@ -359,3 +369,17 @@ A number of issues regarding duration input boxes have been fixed:
 When a *Query filter* component was linked to a *Trigger* component as well as to one or more columns as a filter, the following error would be thrown after it was retriggered via the *Trigger* component:
 
 `Cannot read properties of null (Reading 'Discreets')`
+
+#### Dashboards/Low-Code Apps: Problem with buttons and dropdown boxes [ID 42375]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, buttons would no longer correctly show their loading state.
+
+Also, dropdown boxes would no longer ellipse long values, causing a horizontal scrollbar to appear in the dropdown box.
+
+#### Dashboards/Low-Code Apps - Timeline component: Selected time range would incorrectly not get passed to other components [ID 42380]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you had selected a time range in a *Timeline* component, in some cases, that time range would incorrectly not get passed to other components.

@@ -85,9 +85,51 @@ The information provided is similar to the information found in the *SLElementIn
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run, the UI components of type *Calendar* and *Time* will be able to retrieve the time zone and date/time settings of the client, and use those settings to format the time and date entered by the user.
+
+To allow the client to set the time zone, on the `UIBlockDefinition`, set the `ClientTimeInfo` option to `UIClientTimeInfo.Return`. This option is intended to be used for UI components of type *Calendar* or *Time* (the latter with either `AutomationDateTimeUpDownOptions`, `AutomationDateTimeUpDownOptions` or `AutomationDateTimePickerOptions`).
+
+The ShowUI command now include the following new methods that can be used to request the time zone and date/time settings of the client:
+
+- `TimeZoneInfo GetClientTimeZoneInfo(string destVar)`
+- `DateTimeOffset GetClientDateTime(string destVar)`
+
+##### TimeZoneInfo GetClientTimeZoneInfo(string destVar)
+
+This method will return the time zone of the client for the UI component with the specified *destVar*.
+
+It will return null if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information. If the time zone information provided by the client cannot be deserialized into a `TimeZoneInfo` object, a `SerializationException` will be thrown.
+
+If this time zone information has to be stored for later use, consider the following:
+
+- Use the `ToSerializedString()` method to get a string containing all details. Later, this information can then be restored by using `TimeZoneInfo.FromSerializedString(storedInfo)`.
+
+  > [!NOTE]
+  > The time zone information that is returned might not be the most recent and could result in incorrect time interpretations.
+
+- Use the `Id` property, which can then be restored by using `TimeZoneInfo.FindSystemTimeZoneById(storedId)`.
+
+  > [!NOTE]
+  > The ID that is returned might not be available (anymore) on the DataMiner Agent that is executing the Automation script.
+
+For more info, see [Saving and restoring time zones](https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones)
+
+##### DateTimeOffset GetClientDateTime(string destVar)
+
+This method will return the date and time as it was entered in the UI block with the specified *destVar*, in the time zone of the client (taking into account the client's UTC offset). The `DateTime` property of the returned value will contain the the date and/or time in the user's time zone.
+
+The returned value will be `DateTimeOffset.MinValue` if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information.
+
+> [!NOTE]
+> Components that have `ClientTimeInfo` enabled should not have a *destVar* that contains "_DateTimeComponentClient". The identifier should be unique.
+
 #### Service & Resource Management: Configuring the script to be executed when a reservation goes into quarantine [ID 42067]
 
-<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
 Up to now, when a reservation went into quarantine, the *SRM_QuarantineHandling* script would always be executed. From now on, when you create a reservation, you will be able to specify the name of the quarantine script to be executed in the `QuarantineHandlingScriptName` property.
 
@@ -148,7 +190,7 @@ This optional argument will specify the minimum duration (in minutes) that devia
 <!-- 41425: MR 10.6.0 - FR 10.5.4 -->
 <!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 <!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
-<!-- 42343: MR 10.6.0 - FR 10.5.4 -->
+<!-- 42343: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of security enhancements have been made.
 
@@ -224,6 +266,12 @@ When you migrate data of datatype *CustomData* from either Cassandra Single or C
 
 For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* datatype as well as the *Analytics* datatype.
 
+#### Connection enhancements [ID 42233]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of enhancements have been made with regard to the connections made among DataMiner Agents as well as the connections made between DataMiner Agents and client applications.
+
 #### Swarming: 'Where are my elements.txt' file added to the 'C:\\Skyline DataMiner\\Elements\\' folder [ID 42314]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
@@ -231,6 +279,16 @@ For example, if you want to migrate only the SLAnalytics data, you can now speci
 When Swarming is enabled, a file named *Where are my elements.txt* will now be present in the *C:\\Skyline DataMiner\\Elements\\* folder.
 
 In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
+
+#### Relational anomaly detection is now able to process data from history set parameters [ID 42319]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+Under certain conditions, Relational anomaly detection (RAD) is now able to detect relational anomalies on history set parameters:
+
+- If there is at least one history set parameter in a RAD parameter group, that parameter group will only be processed when all data from all parameters in the group has been received. In other words, if a history set parameter receives data 30 minutes later than the real-time parameters, possible anomalies will only be detected after 30 minutes.
+
+- RAD will only process data received within the last hour. If a history set parameter receives data more than an hour later than the real-time parameters, that data will be disregarded.
 
 #### GQI DxM: Logging can now be viewed in DataMiner Cube [ID 42352]
 
@@ -294,7 +352,7 @@ When an element with a logger table was deleted, some items would not be removed
 
 - When the `databaseName` option was used, the table that had been created in a separate table schema would not be deleted.
 
-- In case of a Cassandra Cluster, the logger table is by default stored in the sldmadb_elementdata_<dmaid>_<elementid>_<tableid> keyspace. When an element with a logger table was deleted, the database table would correctly be removed, but the empty keyspace would still exist.
+- In case of a Cassandra Cluster, the logger table is by default stored in the `sldmadb_elementdata_<dmaid>_<elementid>_<tableid>` keyspace. When an element with a logger table was deleted, the database table would correctly be removed, but the empty keyspace would still exist.
 
 > [!NOTE]
 > When an element with a logger table is deleted, the logger table will not be deleted when it has the `customDatabaseName` or `databaseNameProtocol` option.
@@ -380,6 +438,12 @@ The `GetMADDataMessage` allows you to request anomaly scores during a specified 
 
 However, up to now, the response would not contain the anomaly score and the parameter values associated with the last trend data entry.
 
+#### Problem when NATS sessions were disposed [ID 42281]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some rare cases, an exception could be thrown when NATS sessions were disposed.
+
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
@@ -392,7 +456,7 @@ Operations that change non-concurrent collections must have exclusive access. A 
 
 #### Problem when exporting an element to a .dmimport file [ID 42320]
 
-<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 In some rare cases, exporting an element to a *.dmimport* file could fail.
 

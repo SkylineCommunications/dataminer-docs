@@ -378,6 +378,8 @@ items:
                 topicUid: Tutorial_Apps_Variables
               - name: Creating a custom event scheduler low-code app
                 topicUid: Tutorial_Custom_Event_Scheduler_LCA
+              - name: Visualizing the Starlink location history in DataMiner
+                topicUid: Tutorial_Visualizing_Starlink_Location_History_in_DataMiner
       - name: Configuring components
         topicUid: Configuring_components
         items:

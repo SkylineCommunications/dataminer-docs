@@ -36,6 +36,14 @@ When, in either the *protocol.xml* file or the *DataMiner.xml* file, the element
 
 For more information about running elements in isolation mode, see [Elements can now be configured to run in isolation mode [ID 41757]](xref:General_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757).
 
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the Cube session [ID 42110]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run within DataMiner Cube, the UI components of type *Calendar* and *Time* will be able to retrieve the time zone and date/time settings of the Cube session, and use those settings to format the time and date entered by the user.
+
+For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+
 ## Changes
 
 ### Breaking changes
@@ -151,6 +159,12 @@ When you right-clicked a history alarm in the Alarm Console and selected *Show a
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 In some cases, an exception could be thrown when you closed an element card.
+
+#### Problem when requesting information about file changes [ID 42076]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When DataMiner Cube asked the DataMiner Agent to which it was connected when a particular file had been last changed, in some cases, the file could not be found due to a casing issue.
 
 #### DataMiner Cube desktop app: Configuration files would incorrectly be updated when the app was closed [ID 42101]
 

@@ -21,11 +21,10 @@ When the configuration window appears, it will now be possible to either continu
 
 For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
-#### Security enhancements [ID 41425] [ID 41475] [ID 42343]
+#### Security enhancements [ID 41425] [ID 41475]
 
 <!-- 41425: MR 10.6.0 - FR 10.5.4 -->
 <!-- 41475: MR 10.6.0 - FR 10.5.2 -->
-<!-- 42343: MR 10.6.0 - FR 10.5.4 -->
 
 A number of security enhancements have been made.
 
@@ -197,9 +196,3 @@ When, in the *Scheduler* app, a dashboard was exported via an email action, up t
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
 When a trend graph seemed to increase or decrease, in some cases, change points could incorrectly be labeled as a level shift.
-
-#### Problem when exporting an element to a .dmimport file [ID 42320]
-
-<!-- MR 10.6.0 - FR 10.5.4 -->
-
-In some rare cases, exporting an element to a *.dmimport* file could fail.

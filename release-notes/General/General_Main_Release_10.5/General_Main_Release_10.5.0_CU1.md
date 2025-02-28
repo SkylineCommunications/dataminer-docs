@@ -66,10 +66,11 @@ Additional logging with regard to visual overview load balancing will be availab
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
-#### Security enhancements [ID 41913] [ID 42104]
+#### Security enhancements [ID 41913] [ID 42104] [ID 42343]
 
 <!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 <!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
+<!-- 42343: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of security enhancements have been made.
 
@@ -78,6 +79,59 @@ A number of security enhancements have been made.
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of enhancements have been made to the ProtocolFunctionManager with regard to the handling of locked files when activating or deactivating functions.
+
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run, the UI components of type *Calendar* and *Time* will be able to retrieve the time zone and date/time settings of the client, and use those settings to format the time and date entered by the user.
+
+To allow the client to set the time zone, on the `UIBlockDefinition`, set the `ClientTimeInfo` option to `UIClientTimeInfo.Return`. This option is intended to be used for UI components of type *Calendar* or *Time* (the latter with either `AutomationDateTimeUpDownOptions`, `AutomationDateTimeUpDownOptions` or `AutomationDateTimePickerOptions`).
+
+The ShowUI command now include the following new methods that can be used to request the time zone and date/time settings of the client:
+
+- `TimeZoneInfo GetClientTimeZoneInfo(string destVar)`
+- `DateTimeOffset GetClientDateTime(string destVar)`
+
+##### TimeZoneInfo GetClientTimeZoneInfo(string destVar)
+
+This method will return the time zone of the client for the UI component with the specified *destVar*.
+
+It will return null if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information. If the time zone information provided by the client cannot be deserialized into a `TimeZoneInfo` object, a `SerializationException` will be thrown.
+
+If this time zone information has to be stored for later use, consider the following:
+
+- Use the `ToSerializedString()` method to get a string containing all details. Later, this information can then be restored by using `TimeZoneInfo.FromSerializedString(storedInfo)`.
+
+  > [!NOTE]
+  > The time zone information that is returned might not be the most recent and could result in incorrect time interpretations.
+
+- Use the `Id` property, which can then be restored by using `TimeZoneInfo.FindSystemTimeZoneById(storedId)`.
+
+  > [!NOTE]
+  > The ID that is returned might not be available (anymore) on the DataMiner Agent that is executing the Automation script.
+
+For more info, see [Saving and restoring time zones](https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones)
+
+##### DateTimeOffset GetClientDateTime(string destVar)
+
+This method will return the date and time as it was entered in the UI block with the specified *destVar*, in the time zone of the client (taking into account the client's UTC offset). The `DateTime` property of the returned value will contain the the date and/or time in the user's time zone.
+
+The returned value will be `DateTimeOffset.MinValue` if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information.
+
+> [!NOTE]
+> Components that have `ClientTimeInfo` enabled should not have a *destVar* that contains "_DateTimeComponentClient". The identifier should be unique.
+
+#### Service & Resource Management: Configuring the script to be executed when a reservation goes into quarantine [ID 42067]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+Up to now, when a reservation went into quarantine, the *SRM_QuarantineHandling* script would always be executed. From now on, when you create a reservation, you will be able to specify the name of the quarantine script to be executed in the `QuarantineHandlingScriptName` property.
+
+> [!NOTE]
+>
+> - If the `QuarantineHandlingScriptName` property contains Null, an empty string, white space, or "SRM_QuarantineHandling", the default *SRM_QuarantineHandling* script will be executed when the reservation goes into quarantine.
+> - If multiple reservations go into quarantine after a resource or reservation update, the scripts configured on the different reservations will each be executed once for the reservations in question.
 
 #### NATS: NatsCustodianResetNatsRequest will now be blocked when the NATSForceManualConfig option is enabled [ID 42074]
 
@@ -95,6 +149,12 @@ When the `NATSForceManualConfig` option is enabled in the *MaintenanceSettings.x
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
 Because of a number of enhancements, overall performance has increased when executing multiple queries simultaneously.
+
+#### Connection enhancements [ID 42233]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of enhancements have been made with regard to the connections made among DataMiner Agents as well as the connections made between DataMiner Agents and client applications.
 
 #### GQI DxM: Logging can now be viewed in DataMiner Cube [ID 42352]
 
@@ -158,7 +218,7 @@ When an element with a logger table was deleted, some items would not be removed
 
 - When the `databaseName` option was used, the table that had been created in a separate table schema would not be deleted.
 
-- In case of a Cassandra Cluster, the logger table is by default stored in the sldmadb_elementdata_<dmaid>_<elementid>_<tableid> keyspace. When an element with a logger table was deleted, the database table would correctly be removed, but the empty keyspace would still exist.
+- In case of a Cassandra Cluster, the logger table is by default stored in the `sldmadb_elementdata_<dmaid>_<elementid>_<tableid>` keyspace. When an element with a logger table was deleted, the database table would correctly be removed, but the empty keyspace would still exist.
 
 > [!NOTE]
 > When an element with a logger table is deleted, the logger table will not be deleted when it has the `customDatabaseName` or `databaseNameProtocol` option.
@@ -193,6 +253,12 @@ In some cases, it would not be possible to simultaneously update multiple TTL se
 
 After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
 
+#### Problem when NATS sessions were disposed [ID 42281]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some rare cases, an exception could be thrown when NATS sessions were disposed.
+
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
@@ -202,6 +268,12 @@ When a query using ad hoc data sources was executed with real-time updates enabl
 ```txt
 Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.
 ```
+
+#### Problem when exporting an element to a .dmimport file [ID 42320]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+In some rare cases, exporting an element to a *.dmimport* file could fail.
 
 #### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
 
