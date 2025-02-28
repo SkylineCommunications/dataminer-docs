@@ -6,21 +6,21 @@ uid: WFD_Creating_Workflows
 
 ## Adding nodes to a workflow
 
-In order to be of use, each workflow has to consist of at least one node. Two different types of nodes are currently already supported:
+In order to be of use, a workflow has to consist of node(s). Nodes are used to indicate something is needed in the workflow. When adding a node you will be able to select a class or a specific entity. At the moment we have **Resource pool** as class and **Resource** as entity:
 
-- **Resource**: Resource nodes define everything that happens in a workflow between source and destination. Resources are defined in the resource studio and can represent network inventory managed with an element in DataMiner or any other real-world entities that are not managed by DataMiner, such as people, vehicles, rooms, etc.
+- **Resource pool**: Resource pools indicates that a resource is needed from a specific pool without having to already define a specific resource instance. As the workflow can be reused for multiple jobs, it is not yet possible to understand which resources in the pool will be available. The resource pool node allows you to configure the node before selecting an available resource.
 
-- **Resource pool**: Resource pools have the same purpose as resource nodes, but without the need to specify a specific resource instance. Instead they refer to a pool only, so that it is possible to select the specific resources at a later point in the workflow execution stage.
+- **Resource**: When we know upfront what resource has to be used, we can select a specific resource as node. As the resource can be part of multiple resource pools, we still have to select within what pool (context) we want to use the resource. When creating a job from the workflow, the resource will automatically be added as node to the job.
 
 More node types will be supported in a later version. Each node that is part of a workflow also has several configuration options:
 
-- Optional **alias** for the node in the workflow. This can be useful if there are multiple nodes of the same type in a workflow
+- Optional **alias** for the node in the workflow. This can be useful if there are multiple nodes of the same type in a workflow.
 
 - **Include in booking**: For resource or resource pool nodes, this determines whether node resources should be reserved when the workflow is executed.
 
 ## Creating connections between nodes
 
-Between workflow nodes that represent network inventory, connectivity may need to be set up in order to execute the workflow. For this, connections between the nodes can be defined. Each of these connections has a single source node and a single destination node. 
+Between workflow nodes that represent network inventory, connectivity may need to be set up in order to execute the workflow. For this, connections between the nodes can be defined. Each of these connections has a single source node and a single destination node.
 
 ## Describing workflow execution behavior
 
@@ -31,7 +31,6 @@ Workflows can be executed a by planning a Job based on the Workflow in the Sched
   The dataminer.MediaOps installation package comes with a default workflow execution script called *Workflow.Default*. This script will iterate over the connections of the workflow in the "execution order" and trigger the "execution script" defined on the connections. Additional or different logic can be specified in the workflow execution script in order to automate anything that needs to happen when the Job starts.
 
 - **Connection execution script**: This is an optional property of all connections in a workflow. It can be used to describe what exactly needs to happen when the source of the connection is connected to its destination.
-
 
   > [!NOTE]
   > Contrary to the workflow execution script, there is no guarantee that the system will always execute the connection execution script. If you change the content of the workflow execution script, it is your responsibility to make sure the connection execution script is still executed for every connection in the workflow if needed.

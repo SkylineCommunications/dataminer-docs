@@ -34,8 +34,6 @@ The Ops Board shows the Jobs in the system in a list view, filtered on the state
 
 The Search Jobs page gives you the tools to easily find back any job in the system. This includes also canceled Jobs, which are hidden on all other pages.
 
-
-
 ## Apps Configuration
 
 On the Apps Configuration page you can configure how the ID of the jobs should look like. Note that this ID is a user-friendly identifier, the real ID is a GUID which is not visible to the user.
