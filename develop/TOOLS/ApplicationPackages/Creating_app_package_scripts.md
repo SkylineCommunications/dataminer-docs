@@ -4,10 +4,9 @@ uid: Creating_app_package_scripts
 
 # Creating application package scripts
 
-Application packages can contain different scripts, each used for a different purpose:
+Application packages can contain different scripts.
 
-- A script to install an application version without having to restart a DMA. This script, *Install.xml*, must always be included in an application package.
-- A script to uninstall an application version. This script, *Uninstall.xml*, is optional.
+This includes a script to install an application version without having to restart a DMA. This script, *Install.xml*, must always be included in an application package. You can find more information about this below.
 
 ## Install.xml
 
@@ -77,31 +76,3 @@ Note that DIS will always include the latest version of the `SLAppPackageInstall
 In case you require specific files that you only need during the installation of the package, you can configure this by putting these files in the `SetupContent` directory of the solution. These files will only be available during the installation.
 
 To obtain the path to this directory from the install script, you can use `installer.GetSetupContentDirectory()`. If the package contains a `SetupContent` directory, this method will return the full path to this directory, so you can use the files in this folder to perform custom operations during installation of the package. If the folder does not exist, this method will return `null`.
-
-## Uninstall.xml
-
-As a first step, a method indicated as *Uninstall Automation entry point* needs to be created. The default Run method can never be executed during the uninstallation of an app package.
-
-You can define an Automation entry point using the `AutomationEntryPoint` attribute by defining it as `AutomationEntryPointType.Types.UnInstallApp`.
-
-The method needs to have 2 arguments.
-
-- The `Engine` object.
-- The `AppUninstallContext` object.
-
-Both arguments will obtain their value automatically during runtime and therefore do not need to be defined in the script. The content of the method should consist of all actions needed to uninstall the application, e.g. to delete elements.
-
-Example:
-
-```csharp
-[AutomationEntryPoint(AutomationEntryPointType.Types.UnInstallApp)]
-public void Uninstall(Engine engine, AppUninstallContext context)
-{
-   ...
-}
-```
-
-> [!NOTE]
->
-> - The namespace `Skyline.DataMiner.Net.AppPackages` needs to be included to provide access to `AppUninstallContext`.
-> - An example is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).

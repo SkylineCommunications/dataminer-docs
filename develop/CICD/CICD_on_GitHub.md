@@ -14,10 +14,12 @@ We use a combination of:
 - Dotnet tooling within workflows to provide reusable and well-tested scripting
 - DIS extension within Visual Studio
 - Visual Studio templates
+- Skyline DataMiner Software Development Kit (SDK)
 
 For more information, refer to:
 
 - [Getting started with CI/CD using GitHub](xref:CICD_on_GitHub_getting_started)
+- [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk)
 - [CI/CD starter workflows](xref:github_starter_workflows)
 - [CI/CD reusable workflows](xref:github_reusable_workflows)
 - [CI/CD GitHub Examples](xref:CICD_GitHub_Examples)
