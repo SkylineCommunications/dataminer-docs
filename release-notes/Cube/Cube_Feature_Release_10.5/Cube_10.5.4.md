@@ -36,13 +36,13 @@ When, in either the *protocol.xml* file or the *DataMiner.xml* file, the element
 
 For more information about running elements in isolation mode, see [Elements can now be configured to run in isolation mode [ID 41757]](xref:General_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757).
 
-#### Interactive Automation scripts: UI components of type 'Calendar' and 'Time' can now display date and time values in the time zone of the Cube session [ID 42110]
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the Cube session [ID 42110]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-In interactive Automation scripts executed within DataMiner Cube, the UI components of type *Calendar* and *Time* can now display date and time values in the time zone of the Cube session.
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run within DataMiner Cube, the UI components of type *Calendar* and *Time* will be able to retrieve the time zone and date/time settings of the Cube session, and use those settings to format the time and date entered by the user.
 
-For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now request the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-request-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
 
 ## Changes
 

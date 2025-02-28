@@ -85,11 +85,11 @@ The information provided is similar to the information found in the *SLElementIn
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now request the time zone and date/time settings of the client [ID 42064]
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
-When UI component of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the format of the entered date and time would depend on the platform and the configured settings. From now on, when an interactive Automation script is being run, the client will be able to set the time zone used to format the entered date and time.
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run, the UI components of type *Calendar* and *Time* will be able to retrieve the time zone and date/time settings of the client, and use those settings to format the time and date entered by the user.
 
 To allow the client to set the time zone, on the `UIBlockDefinition`, set the `ClientTimeInfo` option to `UIClientTimeInfo.Return`. This option is intended to be used for UI components of type *Calendar* or *Time* (the latter with either `AutomationDateTimeUpDownOptions`, `AutomationDateTimeUpDownOptions` or `AutomationDateTimePickerOptions`).
 
