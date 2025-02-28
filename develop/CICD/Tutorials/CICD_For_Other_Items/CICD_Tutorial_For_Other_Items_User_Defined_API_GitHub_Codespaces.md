@@ -150,7 +150,7 @@ With this setup, any push with new content (including the initial creation) to t
 
 1. Check in the top-right corner if the correct organization is selected.
 
-1. Search for the name of your package (in this case: *MyUserDefinedApiFromGithub*)
+1. Search for the name of your package (in this case: *MyUserDefinedApiFromGithub*).
 
 1. Go to the *VERSIONS* tab.
 
