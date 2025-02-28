@@ -60,7 +60,7 @@ Watch this short video to learn how to create a new DataMiner System hosted on d
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 TIPS TO TAKE FLIGHT</b><br>Now that you have created your DataMiner System, it may be a good idea to <a href="xref:Installing_the_DataMiner_Cube_desktop_application">install DataMiner Cube</a>.
+    <b>💡 UP NEXT</b><br><a href="xref:Accessing_a_new_DMS"></a>
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>

@@ -18,3 +18,6 @@ uid: Changing_group_membership_of_a_user
 >
 > - In DataMiner, you cannot add users to domain groups. Membership of domain groups is managed on the domain.
 > - To make it easier to manage permissions in complex systems, it can be useful to add users to more than one group. This way you can for example add an “Operator” group with basic permissions and access to the views that every operator should be able to see, and then add users to additional groups depending on the additional views and functionality they need to have access to.
+
+> [!TIP]
+> See also: [Adding a user group](xref:Adding_a_user_group)

@@ -95,6 +95,7 @@
       "_appFooter": "© Skyline Communications 2025",
       "_enableSearch": false,
       "_enableNewTab": true,
+      "_disableNextArticle": true,
 	    "_googleAnalyticsTagId": "GTM-WD3NQGN"
     },
     "globalMetadataFiles": [],

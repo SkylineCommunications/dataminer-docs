@@ -14,6 +14,10 @@ uid: Accessing_a_new_DMS
    </div>
    <br>
 
+1. If DataMiner Cube is not installed on your computer yet, click *Desktop installation* to install it.
+
+   For more detailed info about the Cube installation, refer to [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application).
+
 1. Under *DataMiner Systems*, click *Open in desktop app*.
 
    ![Open in desktop app on dataminer.services](~/user-guide/images/daas_access_001.png "Open dekstop app")
@@ -30,4 +34,9 @@ uid: Accessing_a_new_DMS
 
    ![Logging into Cube](~/user-guide/images/daas_access_004.png)
 
-Now that you are logged in, you can configure your DataMiner System to your specific preferences.
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 UP NEXT</b><br>Now that you are logged in, you can start <a href="xref:DaaS_connecting_to_data_sources">adding elements to monitor data sources</a> or, if you just want to discover some of the things DataMiner can do, <a href="xref:DaaS_deploying_solution_demos">deploy some demo solutions</a>. If you want other users to be able to use your DaaS system, <a href="xref:Managing_users">add these users and configure their rights in System Center</a>.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
