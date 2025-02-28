@@ -36,6 +36,14 @@ When, in either the *protocol.xml* file or the *DataMiner.xml* file, the element
 
 For more information about running elements in isolation mode, see [Elements can now be configured to run in isolation mode [ID 41757]](xref:General_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757).
 
+#### Interactive Automation scripts: UI components of type 'Calendar' and 'Time' can now display date and time values in the time zone of the Cube session [ID 42110]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In interactive Automation scripts executed within DataMiner Cube, the UI components of type *Calendar* and *Time* can now display date and time values in the time zone of the Cube session.
+
+For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now request the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-request-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+
 ## Changes
 
 ### Breaking changes
