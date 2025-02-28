@@ -161,8 +161,6 @@ In this step, you will focus on the extra code that should be executed when the 
 
 ## Step 4: Check the GitHub Actions
 
-1. Create a GitHub repository by going to **Git > Create Git Repository**, selecting GitHub, and filling in the wizard before clicking **Create and Push**.
-
 1. In GitHub, go to the *Actions* tab.
 
 1. Click the workflow run that failed (usually called *Add project files*).
