@@ -19,4 +19,4 @@ To get started with this, refer to the following tutorials:
 
 - [Using Visual Studio and DIS](xref:CICD_Tutorial_For_Other_Items_User_Defined_API_VisualStudio_And_GitHub)
 - [Using GitHub Codespaces](xref:CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces)
-- [Creating Multi-Artifact Packages](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub)
+- [Creating multi-artifact packages](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub)

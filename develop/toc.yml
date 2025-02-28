@@ -5395,11 +5395,11 @@ items:
           topicUid: CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub
       - name: For other items
         items:
-        - name: Registering a new version of a User-Defined API to the Catalog Using Visual Studio and GitHub
+        - name: Registering a new version of a user-defined API to the Catalog using Visual Studio and GitHub
           topicUid: CICD_Tutorial_For_Other_Items_User_Defined_API_VisualStudio_And_GitHub
-        - name: Registering a new version of a User-Defined API to the Catalog Using GitHub Codespaces
+        - name: Registering a new version of a user-defined API to the Catalog using GitHub Codespaces
           topicUid: CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces
-        - name: Registering a new version of a Multi-Artifact DataMiner Package to the Catalog Using Visual Studio and GitHub
+        - name: Registering a new version of a multi-artifact DataMiner package to the Catalog using Visual Studio and GitHub
           topicUid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub
   - name: CI/CD using GitLab
     items:

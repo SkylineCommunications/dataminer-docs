@@ -37,7 +37,7 @@ Expected duration: 10 minutes.
 
 1. Click *Create*.
 
-### Step 2: Create an Azure DevOps repository
+## Step 2: Create an Azure DevOps repository
 
 1. In the menu bar of Visual Studio, select *GIT* > *Create GIT Repository*.
 
@@ -67,7 +67,7 @@ Expected duration: 10 minutes.
 
 To securely upload and/or deploy a connector, you will need a secret key.
 
-This means that you will need to create an [system key](xref:Managing_DCP_keys#system-keys) token to authenticate the register version call from the Catalog API:
+This means that you will need to create a [system key](xref:Managing_DCP_keys#system-keys) token to authenticate the register version call from the Catalog API:
 
 1. In the [Admin app](https://admin.dataminer.services/), under *DataMiner Systems* in the sidebar on the left, select the DMS to which you want to deploy connectors and go to the *Keys* page.
 
@@ -82,48 +82,48 @@ This means that you will need to create an [system key](xref:Managing_DCP_keys#s
 > [!IMPORTANT]
 > You need to have the *Owner* role in order to access/create system keys. See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_DCP_user) for information on how to change a role for a user.
 
-### Step 4: Create and run a workflow
+## Step 4: Create and run a workflow
 
-1. Go to *Pipelines* and select *Create Pipeline*.
+1. On your Azure DevOps repository page, go to *Pipelines* and select *Create Pipeline*.
 
-    1. If you are asked *Where is my code?*, select *Azure Repos Git*.
+   1. If you are asked *Where is my code?*, select *Azure Repos Git*.
 
-    1. Select the repository you have just added.
+   1. Select the repository you have just added.
 
-    1. Select *Starter pipeline*.
+   1. Select *Starter pipeline*.
 
 1. Select, install, and run the required dotnet tools:
 
-    1. Go to [Azure DevOps Example](xref:CICD_Azure_DevOps_Examples).
+   1. Go to [Azure DevOps Example](xref:CICD_Azure_DevOps_Examples).
 
-    1. Copy the example and paste it into your new starter pipeline.
+   1. Copy the example and paste it into your new starter pipeline.
 
 1. Configure secrets and variables:
 
    > [!NOTE]
    > This step can be different for each CI/CD technology.
 
-    1. Select *Variables* in the top-right corner.
+   1. Select *Variables* in the top-right corner.
 
-    1. Select *New Variable*, and configure the new variable as follows:
+   1. Select *New Variable*, and configure the new variable as follows:
 
-        1. Specify the name *DATAMINER_DEPLOY_KEY*.
+      1. Specify the name *DATAMINER_DEPLOY_KEY*.
 
-        1. Select *Keep this value secret*.
+      1. Select *Keep this value secret*.
 
-        1. Use the key you created in [step 3](#step-3-create-a-dataminerservices-key).
+      1. Use the key you created in [step 3](#step-3-create-a-dataminerservices-key).
 
-    1. Click + to add another variable, and configure it as follows:
+   1. Click + to add another variable, and configure it as follows:
 
-        1. Specify the name *uploadOutput*.
+      1. Specify the name *uploadOutput*.
 
-        1. Select *Let users override this value when running this pipeline*.
+      1. Select *Let users override this value when running this pipeline*.
 
 1. Click *Save and Run*.
 
 1. You should now see your new connector on your specified specific DataMiner Agent.
 
-### Step 5: Validation (optional)
+## Step 5: Validation (optional)
 
 You can now tweak and adjust your workflow using other validation steps such as static code analysis, running unit testing, or running the DataMiner Validator.
 

@@ -2,18 +2,16 @@
 uid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub
 ---
 
-# Registering a new version of a Multi-Artifact DataMiner Package to the Catalog Using Visual Studio and GitHub
+# Registering a new version of a multi-artifact DataMiner package to the Catalog using Visual Studio and GitHub
 
-In this tutorial, you will learn how to develop, (pre-)release, and upload a DataMiner Package to the DataMiner Catalog with a Basic CI/CD pipeline using Visual Studio and GitHub.
-This Package will be named TutorialPackage and contain multiple artifacts:
+In this tutorial, you will learn how to develop, (pre-)release, and upload a DataMiner package to the DataMiner Catalog with a basic CI/CD pipeline using Visual Studio and GitHub. This package will contain multiple artifacts:
 
 - Automation Script: TutorialScript1
 - Automation Script: TutorialScript2
 - Automation Script Library: TutorialLibrary
 - Ad Hoc Data Source: TutorialDataSource
 
-In addition,
-During the installation of this package we also want to read out a simple *.txt* file we provide and generate an information event with this information.
+The package will include a simple .txt file that will be read out during installation, generating an information event with the information from the file.
 
 Expected duration: 15 minutes
 
@@ -26,125 +24,125 @@ Expected duration: 15 minutes
 
 ## Overview
 
-- [Step 1: Add Code-Based Content](#step-1-add-code-based-content)
-- [Step 2: Add Installation Specific Code](#step-2-add-installation-specific-code)
+- [Step 1: Add code-based content](#step-1-add-code-based-content)
+- [Step 2: Add installation-specific code](#step-2-add-installation-specific-code)
 - [Step 3: Create a GitHub repository](#step-3-create-a-github-repository)
-- [Step 4: Check GitHub Actions](#step-4-check-github-actions)
-- [Step 5: Create and add secret](#step-5-create-and-add-secret)
-- [Step 6: Check The Results](#step-6-check-the-results)
+- [Step 4: Check the GitHub Actions](#step-4-check-the-github-actions)
+- [Step 5: Create and add a secret](#step-5-create-and-add-a-secret)
+- [Step 6: Check the results](#step-6-check-the-results)
 
-## Step 1: Add Code-Based Content
+## Step 1: Add code-based content
 
-We'll start by adding all code-based content into a Visual Studio Solution:
+Start by adding all code-based content into a Visual Studio solution:
 
-### Step 1a: Create a DataMiner Package project
+1. Create a DataMiner package project:
 
-1. Open Visual Studio, and select *Create a new project*.
+   1. Open Visual Studio, and select *Create a new project*.
 
-1. Select the *Dataminer Package Project* Template, and click *Next*.
+   1. Select the *DataMiner Package Project* template, and click *Next*.
 
-1. Enter the project name, *TutorialPackage*
+   1. Enter the project name `TutorialPackage`.
 
-1. Make sure *Place solution and project in the same directory* is **unchecked**, and click *Next*.
+   1. Make sure *Place solution and project in the same directory* is **not selected**, and click *Next*.
 
-1. Fill in the Author with your name and leave the *Create DataMiner Package* box checked.
+   1. Fill in your name as the author and keep *Create DataMiner Package* selected.
 
-1. Select *Basic* under *Add GitHub CI/CD Workflow (Overwrite Existing)*
+   1. Under *Add GitHub CI/CD Workflow (Overwrite Existing)*, select *Basic*.
 
-1. Click *Create*.
+   1. Click *Create*.
 
-### Step 1b: Add a first DataMiner Automation Script project
+1. Add a first DataMiner Automation script project:
 
-1. In the Solution Explorer, at the very top, right click the *Solution 'TutorialPackage'* and select *Add > new project*.
+   1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 
-1. Select the *Dataminer Automation Script Project* Template, and click *Next*.
+   1. Select the *DataMiner Automation Script Project* template, and click *Next*.
 
-1. Enter the project name, *TutorialScript1*
+   1. Enter the project name `TutorialScript1`.
 
-1. Fill in the Author with your name and leave the default *Create DataMiner Package* box unchecked.
+   1. Fill in your name as the author and make sure *Create DataMiner Package* is not selected.
 
-1. Leave the default *None* under *Add GitHub CI/CD Workflow (Overwrite Existing)*
+   1. Under *Add GitHub CI/CD Workflow (Overwrite Existing)*, keep the default *None* selected.
 
-1. Click *Create*.
+   1. Click *Create*.
 
-### Step 1c: Add a second DataMiner Automation Script project
+1. Add a second DataMiner Automation script project:
 
-1. In the Solution Explorer, at the very top, right click the *Solution 'TutorialPackage'* and select *Add > new project*.
+   1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 
-1. Select the *Dataminer Automation Script Project* Template, and click *Next*.
+   1. Select the *DataMiner Automation Script Project* template, and click *Next*.
 
-1. Enter the project name, *TutorialScript2*
+   1. Enter the project name `TutorialScript2`.
 
-1. Fill in the Author with your name
+   1. Fill in your name as the author.
 
-1. Click *Create*.
+   1. Click *Create*.
 
-### Step 1d: Add a DataMiner Automation Script Library project
+1. Add a DataMiner Automation Script Library project:
 
-1. In the Solution Explorer, at the very top, right click the *Solution 'TutorialPackage'* and select *Add > new project*.
+   1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 
-1. Select the *Dataminer Automation Script Library Project* Template, and click *Next*.
+   1. Select the *DataMiner Automation Script Library Project* template, and click *Next*.
 
-1. Enter the project name, *TutorialLibrary*
+   1. Enter the project name `TutorialLibrary`.
 
-1. Fill in the Author with your name
+   1. Fill in your name as the author.
 
-1. Click *Create*.
+   1. Click *Create*.
 
-### Step 1e:  Add a DataMiner Ad Hoc Data Source project
+1. Add a DataMiner Ad Hoc Data Source project:
 
-1. In the Solution Explorer, at the very top, right click the *Solution 'TutorialPackage'* and select *Add > new project*.
+   1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 
-1. Select the *Dataminer Ad Hoc Data Source Project* Template, and click *Next*.
+   1. Select the *DataMiner Ad Hoc Data Source Project* template, and click *Next*.
 
-1. Enter the project name, *TutorialDataSource*
+   1. Enter the project name `TutorialDataSource`.
 
-1. Fill in the Author with your name
+   1. Fill in your name as the author.
 
-1. Click *Create*.
+   1. Click *Create*.
 
-## Step 2: Add Installation Specific Code
+## Step 2: Add installation-specific code
 
-We'll now focus on extra code we want to execute during installation alongside installing our content.
+In this step, you will focus on the extra code that should be executed when the content is installed.
 
-## Step 2a: Add Setup Content
+1. Add the **setup content**:
 
-1. In the Solution Explorer, navigate to the Project *TutorialPackage* and right click on the *SetupContent* folder.
+   1. In the Solution Explorer, navigate to the project *TutorialPackage* and right-click the *SetupContent* folder.
 
-1. Select *Add > New Item*
+   1. Select *Add > New Item*.
 
-1. Choose a new Text file *(.txt)* call it "MyConfig.txt"
+   1. Select to a new text file (.txt), and give it the name `MyConfig.txt`.
 
-1. Write Hello World! as the content and save the file.
+   1. Write `Hello World!` as the content and save the file.
 
-## Step 2b: Write Installation Code
+1. Write the **installation code**:
 
-1. In the Solution Explorer, navigate to the Project *TutorialPackage* and double click to open the TutorialPackage.cs file.
+   1. In the Solution Explorer, navigate to the project *TutorialPackage* and double-click to open the *TutorialPackage.cs* file.
 
-1. Change the content of the Install method to the following:
+   1. Change the content of the *Install* method to the following:
 
-   ```csharp
-      try
-      {
-         engine.Timeout = new TimeSpan(0, 10, 0);
-         engine.GenerateInformation("Starting installation");
-         var installer = new AppInstaller(Engine.SLNetRaw, context);
-         installer.InstallDefaultContent();
+      ```csharp
+         try
+         {
+            engine.Timeout = new TimeSpan(0, 10, 0);
+            engine.GenerateInformation("Starting installation");
+            var installer = new AppInstaller(Engine.SLNetRaw, context);
+            installer.InstallDefaultContent();
    
-         string setupContentPath = installer.GetSetupContentDirectory();
+            string setupContentPath = installer.GetSetupContentDirectory();
    
-         // Custom installation logic can be added here for each individual install package.
-         string pathToConfig = System.IO.Path.Combine(setupContentPath, "MyConfig.txt");
-         var config = System.IO.File.ReadAllText(pathToConfig);
-         engine.GenerateInformation($"Tutorial installation ran with config: {config}");
-      }
-      catch (Exception e)
-      {
-         engine.ExitFail($"Exception encountered during installation: {e}");
-      }
-   ```
+            // Custom installation logic can be added here for each individual install package.
+            string pathToConfig = System.IO.Path.Combine(setupContentPath, "MyConfig.txt");
+            var config = System.IO.File.ReadAllText(pathToConfig);
+            engine.GenerateInformation($"Tutorial installation ran with config: {config}");
+         }
+         catch (Exception e)
+         {
+            engine.ExitFail($"Exception encountered during installation: {e}");
+         }
+      ```
 
-1. Save the changes
+   1. Save the changes
 
 ## Step 3: Create a GitHub repository
 
@@ -161,7 +159,7 @@ We'll now focus on extra code we want to execute during installation alongside i
    > [!TIP]
    > In Visual Studio 2022, you can open the *GIT* menu and select *GitHub/View Pull Requests* to quickly access the correct repository.
 
-### Step 4: Check GitHub Actions
+## Step 4: Check the GitHub Actions
 
 1. Create a GitHub repository by going to **Git > Create Git Repository**, selecting GitHub, and filling in the wizard before clicking **Create and Push**.
 
@@ -176,33 +174,41 @@ We'll now focus on extra code we want to execute during installation alongside i
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
    Navigate to the right Organization then go to Keys and create/find a key with permissions to Register Catalog Items.
    Copy the value of the token.
-   Then set a DATAMINER_TOKEN secret in your repository settings: **Dynamic Link**
+   Then set a DATAMINER_TOKEN secret in your repository settings: <Dynamic Link>
    ```
 
-   You can use the links from the actual error to better address the next couple of steps.
+   You can use the links from the actual error in the next couple of steps.
 
-### Step 5: Create and add secret
+## Step 5: Create and add a secret
 
-1. Obtain an **Organization Key** from [admin.dataminer.services](https://admin.dataminer.services/) with the required scopes:
-   - **Register catalog items**
-   - **Read catalog items**
+1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the required scopes:
 
-1. Add the key as a secret in your GitHub repository, by navigating to **Settings > Secrets and variables > Actions** and creating a secret named `DATAMINER_TOKEN`.
+   - *Register catalog items*
+   - *Read catalog items*
+
+   > [!TIP]
+   > See also: [dataminer.services keys](xref:GitHub_Secrets#dataminerservices-keys)
+
+1. Add the key as a secret in your GitHub repository, by navigating to *Settings* > *Secrets and variables* > *Actions* and creating a secret named `DATAMINER_TOKEN`.
 
 1. Re-run the workflow.
 
 With this setup, any push with new content (including the initial creation) to the main/master branch will generate a new pre-release version, using the latest commit message as the version description.
 
-### Step 6: Check The Results
+## Step 6: Check the results
 
 1. Go to the [DataMiner Catalog](https://catalog.dataminer.services/)
 
-1. Make sure you are within the correct organization on the top right-hand side.
+1. Check in the top-right corner if the correct organization is selected.
 
-1. Search for the name of your package, this is default your Visual Studio Project name (e.g. *MyUserDefinedApi*)
+1. Search for the name of your package.
+
+   By default, this is your Visual Studio project name (e.g. *MyUserDefinedApi*).
 
 1. Go to the *VERSIONS* tab.
 
-1. See your new version of the User Defined API which is now available for deployment from the Catalog.
+   This tab should contain the new version of your user-Defined API, which is now available for deployment from the Catalog.
 
-1. If you have an available non-production DataMiner Agent you can now deploy this. You should notice an information event saying *Tutorial installation ran with config: Hello World!* alongside an installation of all artifacts.
+1. If you have an available non-production DataMiner Agent, use the *Deploy* button to deploy the new version to the DMA.
+
+   All artifacts will be installed, and you should see an information event saying *Tutorial installation ran with config: Hello World!*.
