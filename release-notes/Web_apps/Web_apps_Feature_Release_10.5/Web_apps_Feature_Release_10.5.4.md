@@ -18,7 +18,7 @@ uid: Web_apps_Feature_Release_10.5.4
 
 ## New features
 
-#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the Cube session [ID 42097]
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the web session [ID 42097]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
