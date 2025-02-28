@@ -213,11 +213,6 @@ items:
             topicUid: ID_Common_Issues
           - name: Are you still experiencing issues?
             topicUid: ID_Still_Experiencing_Issues
-      - name: Troubleshooting – OpenSearch
-        topicUid: Investigating_OpenSearch_Issues
-        items:
-          - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
-            topicUid: Elastic_not_starting_after_upgrade_cleanup
       - name: Troubleshooting - SLScripting
         items:
           - name: Investigating exception occurrence on Finalizer thread
