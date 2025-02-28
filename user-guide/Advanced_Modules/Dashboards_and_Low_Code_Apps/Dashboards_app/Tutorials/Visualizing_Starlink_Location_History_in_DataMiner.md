@@ -11,8 +11,8 @@ Expected duration: 30 minutes
 > [!NOTE]
 > The content and screenshots for this tutorial have been created with the DataMiner 10.5.3 web apps.
 
-<!-- > [!TIP]
-> See also: [Kata #59: Visualizing Starlink Location History in DataMiner](https://community.dataminer.services/courses/kata-59/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) -->
+> [!TIP]
+> See also: [Kata #59: Visualizing Starlink location history in DataMiner](https://community.dataminer.services/courses/kata-59/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
