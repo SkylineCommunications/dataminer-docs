@@ -180,11 +180,9 @@ Verify the following:
 
 - Confirm that the firewall allows traffic through port 443.
 
-- Verify that the following endpoints are reachable:
+- Verify that the necessary endpoints are reachable.
 
-  - STaaS West Europe: 20.76.71.123
-
-  - STaaS UK South: 20.162.131.128
+  These depend on the region you have registered your system for. During the [STaaS setup](xref:Setting_up_StaaS), you should have received information from <staas@dataminer.services> about the specific endpoints or IPs to whitelist.
 
 ## Common pitfalls
 
