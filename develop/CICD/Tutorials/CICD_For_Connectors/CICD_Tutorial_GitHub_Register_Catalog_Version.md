@@ -4,14 +4,12 @@ uid: Tutorial_Register_Catalog_Version_GitHub_Actions
 
 # Registering a new version of a connector in the Catalog using a GitHub Action
 
-This tutorial demonstrates how to add a new version to a Catalog item using the [Catalog API](xref:Register_Catalog_Item) and [GitHub Actions](https://docs.github.com/en/actions). In the tutorial, you will register your own version of an [example connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom). The tutorial builds on the example from the tutorial [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), so unless you already know how to register a new Catalog item and have done so already, we recommend that you follow that tutorial first.
-
-While this tutorial uses the example of a connector, registering a new version for a different type of Catalog item is very similar.
+This tutorial demonstrates how to add a new version of a connector using the [Catalog API](xref:Register_Catalog_Item) and [GitHub Actions](https://docs.github.com/en/actions). In the tutorial, you will register your own version of an [example connector](https://github.com/SkylineCommunications/SLC-C-Example_Rates-Custom).
 
 Expected duration: 10 minutes
 
 > [!NOTE]
-> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [From code to product](xref:CICD_Tutorial_GitHub_Code_To_Product) tutorial.
+> If you are interested in reusing Skyline's pre-made pipelines, which include quality-of-life features and a robust quality gate, refer to the [Setting up complete quality control in CI/CD for connector deployment](xref:CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub) tutorial.
 
 ## Prerequisites
 
@@ -44,53 +42,53 @@ Expected duration: 10 minutes
    > [!IMPORTANT]
    > Make sure to change the *CATALOG_ID* environment variable to the Catalog ID of the item for which you will register a new version. If you followed the tutorial [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), this is the ID that was returned in the last step. If you are registering a new version for a different Catalog item, you can find it by navigating to its details page in the [Catalog](https://catalog.dataminer.services/) and checking the last part of the URL.
 
-```yaml
+   ```yaml
 
-name: Build and Register a Catalog version
+   name: Build and Register a Catalog version
 
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:  # Add this line to enable manual triggering
+   on:
+     push:
+       branches:
+         - main
+     workflow_dispatch:  # Add this line to enable manual triggering
 
-jobs:
-  build_and_upload:
-    runs-on: ubuntu-latest
+   jobs:
+     build_and_upload:
+       runs-on: ubuntu-latest
 
-    steps:
-      # Checkout the repository
-      - name: Checkout repository
-        uses: actions/checkout@v4
+       steps:
+         # Check out the repository
+         - name: Checkout repository
+           uses: actions/checkout@v4
 
-      - name: Use GitHub run number for versioning
-        run: echo "VERSION=1.0.0.${{ github.run_number }}" >> $GITHUB_ENV
+         - name: Use GitHub run number for versioning
+           run: echo "VERSION=1.0.0.${{ github.run_number }}" >> $GITHUB_ENV
 
-      - name: Use GitHub environment variable to store Catalog ID
-        run: echo "CATALOG_ID=1742495c-9231-4eeb-a56e-1fec8189246e" >> $GITHUB_ENV
+         - name: Use GitHub environment variable to store Catalog ID
+           run: echo "CATALOG_ID=1742495c-9231-4eeb-a56e-1fec8189246e" >> $GITHUB_ENV
 
-      # Install the Skyline DataMiner Tooling
-      - name: Install .NET Tools
-        run: |
-          dotnet tool install -g Skyline.DataMiner.CICD.Tools.Packager              
-          dotnet tool install -g Skyline.DataMiner.CICD.Tools.CatalogUpload
+         # Install the Skyline DataMiner Tooling
+         - name: Install .NET Tools
+           run: |
+             dotnet tool install -g Skyline.DataMiner.CICD.Tools.Packager              
+             dotnet tool install -g Skyline.DataMiner.CICD.Tools.CatalogUpload
 
-      # Create the DataMiner Protocol package
-      - name: Create DataMiner Protocol Package
-        run: dataminer-package-create dmprotocol "${{ github.workspace }}" --name catalog_registration_tutorial --output "${{ github.workspace }}/Packages"
+         # Create the DataMiner protocol package
+         - name: Create DataMiner Protocol Package
+           run: dataminer-package-create dmprotocol "${{ github.workspace }}" --name catalog_registration_tutorial --output "${{ github.workspace }}/Packages"
 
-      # Upload the DataMiner Protocol package
-      - name: Upload DataMiner Protocol Package to Catalog
-        id: upload_to_catalog
-        shell: bash
-        run: |
-          dataminer-catalog-upload with-registration \
-            --path-to-artifact "${{ github.workspace }}/Packages/catalog_registration_tutorial.dmprotocol" \
-            --artifact-version "${{ env.VERSION }}" \
-            --dm-catalog-token "${{ secrets.API_TOKEN }}" \
-            --catalog-identifier "${{ env.CATALOG_ID }}"
+         # Upload the DataMiner protocol package
+         - name: Upload DataMiner Protocol Package to Catalog
+           id: upload_to_catalog
+           shell: bash
+           run: |
+             dataminer-catalog-upload with-registration \
+               --path-to-artifact "${{ github.workspace }}/Packages/catalog_registration_tutorial.dmprotocol" \
+               --artifact-version "${{ env.VERSION }}" \
+               --dm-catalog-token "${{ secrets.API_TOKEN }}" \
+               --catalog-identifier "${{ env.CATALOG_ID }}"
 
-```
+   ```
 
 ## Step 2: Add a GitHub secret
 
