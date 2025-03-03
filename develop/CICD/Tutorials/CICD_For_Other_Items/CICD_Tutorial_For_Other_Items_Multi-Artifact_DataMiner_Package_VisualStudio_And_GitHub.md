@@ -209,4 +209,4 @@ With this setup, any push with new content (including the initial creation) to t
 
 1. If you have an available non-production DataMiner Agent, use the *Deploy* button to deploy the new version to the DMA.
 
-   All artifacts will be installed, and you should see an information event saying *Tutorial installation ran with config: Hello World!*.
+   All artifacts will be installed. In DataMiner Cube, you should see an information event in the Alarm Console saying *Tutorial installation ran with config: Hello World!*.
