@@ -11,43 +11,56 @@ When an Agent hosts a booking, it will register the booking and execute the star
 > [!NOTE]
 > To find out where a booking is currently hosted, you can check the *HostingAgentID* property of the booking.
 
-## Triggering swarming for a booking
+## Triggering swarming for bookings 
 
-To trigger the swarming of a booking, send a *SwarmingRequestMessage* with the new hosting Agent ID and the booking ID. This can be done as follows:
+To trigger the swarming of bookings, create a *SwarmingHelper* with the new hosting Agent ID and the booking IDs. See also [Swarming elements](xref:SwarmingElements) for examples on how to use the swarming helper to swarm elements. This can be done as follows:
 
 ```csharp
 using System;
 using System.Linq;
-using System.Collections.Generic;
 using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.Net.Swarming;
+using Skyline.DataMiner.Net.Swarming.Helper;
 
 public class Script
 {
     public void Run(Engine engine)
     {
         var newHostingAgent = 123;
-        var bookingIds = new List<Guid>()
+
+        // This example parses the booking IDs from strings. The script could for example also obtain the IDs via an input parameter,
+        // or by retrieving bookings using the Resource Manager helper.
+        var bookingIds = new[]
         {
             Guid.Parse("..."),
-            Guid.Parse("..."),
+            Guid.Parse("...")
         };
 
+        var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
+                                            .SwarmBookings(bookingIds)
+                                            .ToAgent(newHostingAgent);
 
-        var request = SwarmingRequestMessage.ForBookings(newHostingAgent, bookingIds.ToArray());
-        var response = engine.SendSLNetMessage(request)?.First() as SwarmingResponseMessage;
-
-        if (response == null)
+        if (swarmingResults == null)
         {
-            engine.ExitFail($"Response was null, which was not expected.");
+            engine.ExitFail("Swarming failed: result was null");
         }
 
-        foreach (var result in response.SwarmingResults)
+        // There should be a result for each booking.
+        if (swarmingResults.Length != bookingIds.Length)
         {
-            if (!result.Success)
-            {
-                engine.ExitFail($"Swarming failed: {result?.Message}.");
-            }
+            var sentIds = string.Join(", ", bookingIds.OrderBy(b => b));
+
+            // 'ToString' of a SwarmingResult will contain the ID of the object, the message, and whether swarming succeeded for the object or not.
+            var results = string.Join(", ", swarmingResults.Select(s => s.ToString()));
+
+            engine.ExitFail($"Did not receive enough swarming responses. Requested to swarm {bookingIds.Length} bookings, but got {swarmingResults.Length} responses.{Environment.NewLine}" +
+                            $"Sent ids: {sentIds}{Environment.NewLine}Results: {results}");
+        }
+
+        var unsuccessfulResults = swarmingResults.Where(s => !s.Success).ToList();
+        if (unsuccessfulResults.Count != 0)
+        {
+            var failedBookings = string.Join(", ", unsuccessfulResults.Select(s => s.ToString()));
+            engine.ExitFail($"Failed to swarm some bookings. Failed results: {failedBookings}");
         }
     }
 }
@@ -57,85 +70,3 @@ public class Script
 >
 > - To swarm a booking, the new hosting Agent must be up and running. In case the current hosting Agent is unreachable, swarming will still take place, but an error will be logged in the *SLResourceManager* log file.
 > - If you swarm a booking to a new Agent, the linked resources and/or services will **not** be swarmed to that new Agent.
-
-## Swarming bookings asynchronously and in bulk
-
-Bookings can also be swarmed asynchronously and in bulk. When this happens, progress events will be sent out to the client every time the swarming of a booking is completed.
-
-You can trigger this as follows:
-
-```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.Net.Async;
-using Skyline.DataMiner.Net.Messages;
-using Skyline.DataMiner.Net.Swarming;
-
-public class Script
-{
-    public void Run(Engine engine)
-    {
-        // The DMA that should host the bookings after swarming them
-        var targetDmaId = 123;
-
-        // The IDs of the bookings that need to be swarmed
-        var bookingIds = new List<Guid>() { ... };
-
-        var swarmingRequest = SwarmingRequestMessage.ForBookings(targetDmaId, bookingIds.ToArray());
-
-        // TODO: provide your connection here
-        var asyncConnection = connection.Async;
-
-        // Event that will be set in the complete handler
-        var completeEvent = new ManualResetEventSlim(false);
-
-        var asyncReference = asyncConnection.Launch(
-            swarmingRequest,
-            onCompleteHandler: (o, args) => completeEvent.Set(),
-            onProgressHandler: HandleProgressEvent
-        );
-
-        void HandleProgressEvent(object sender, AsyncProgressArgs args)
-        {
-            if (!(args.Progress is AsyncProgressResponseEvent responseEvent))
-            {
-                // This should not happen, progress event sent out for booking swarming will always be of type 'AsyncProgressResponseEvent'
-                return;
-            }
-
-            if (responseEvent.Response == null || responseEvent.Response.Length == 0)
-            {
-                // This should not happen either, there should always be at least one response in the event.
-                return;
-            }
-
-            // The response messages in the progress event will always be of type 'SwarmingResponseMessage'
-            var typedResponses = responseEvent.Response.OfType<SwarmingResponseMessage>().ToList();
-            var resultBuilder = new StringBuilder();
-            foreach (var oneResponse in typedResponses)
-            {
-                foreach (var result in oneResponse.SwarmingResults)
-                {
-                    // Handle the progress for the booking. In this case generate an information event
-                    var resultDetails = result.Success ? "completed successfully" : $"failed with error: {result.Message}";
-                    resultBuilder.AppendLine($"Swarming booking with id {result.DmaObjectRef} {resultDetails}");
-                }
-            }
-
-            // Example value of 'resultBuilder.ToString()':
-            //      Swarming booking with id 54add931-66fc-44f5-a76e-95ad0317f6af completed successfully
-            //      Swarming booking with id a250cffb-7054-4704-aa58-96200b0c49b3 failed with error: Could not swarm booking with id 'a250cffb-7054-4704-aa58-96200b0c49b3': ResourceManager is not initialized
-        }
-    }
-}
-
-// Swarming request can be aborted on the asyncReference:
-// asyncReference.Abort();
-```
-
-> [!NOTE]
-> Currently, progress events do not work when sent via the impersonated connection in Automation scripts (engine.GetUserConnection().Async).
