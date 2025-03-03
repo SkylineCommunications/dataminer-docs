@@ -6,11 +6,19 @@ uid: ID_Diagnostic_Procedures
 
 ## Troubleshooting
 
-In case of a problem with the indexing database, these are the steps to localize the problem.
+If an issue occurs with the indexing database, follow these steps to identify the cause:
 
-### Confirm that the indexing database is up and running
+- [Step 1: Verify that the indexing database is running](#verify-that-the-indexing-database-is-running)
+- 
 
-Cluster health status can be requested via the API call `GET /_cluster/health`. This query can be sent to the database node via a query tool, or by opening the URL <http://node_address:9200/_cluster/health?pretty> (or `https:` instead of `http:` if TLS is enabled).
+### Verify that the indexing database is running
+
+The cluster health status can be checked using the following API call: `GET /_cluster/health`.
+
+This query can be sent to the database node using a query tool or by accessing the following URL in a browser: `http://node_address:9200/_cluster/health?pretty`.
+
+> [!NOTE]
+> Use `https:` instead of `http:` if TLS is enabled.
 
 An example output is shown below:
 

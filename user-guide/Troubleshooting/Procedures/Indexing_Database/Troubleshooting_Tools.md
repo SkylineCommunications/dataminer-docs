@@ -4,74 +4,98 @@ uid: ID_Troubleshooting_Tools
 
 # Troubleshooting tools
 
-## Available DataMiner drivers
+## DataMiner connectors
 
-We have multiple connectors available that allow you to actively monitor your indexing DB and its hosting servers.
+There are several DataMiner connectors available for download from the DataMiner Catalog that can assist you in actively monitoring your indexing database and its hosting servers:
+
+- [*Elasticsearch Cluster Monitor* connector](#elasticsearch-cluster-monitor)
+
+- [*Skyline SSL Certificate Monitor* connector](#skyline-ssl-certificate-monitor)
+
+- [*Linux Platform* connector](#linux-platform)
 
 ### Elasticsearch Cluster Monitor
 
-At the indexing DB level we have the [Elastic ElasticSearch Cluster Monitor](https://catalog.dataminer.services/details/afe7853b-2784-467c-8cd9-71be79d9ca50) to monitor the health of the indexing DB. This connector works for both ElasticSearch and OpenSearch.
+The [*Elasticsearch Cluster Monitor* connector](https://catalog.dataminer.services/details/afe7853b-2784-467c-8cd9-71be79d9ca50) can be used to monitor the health of an Elasticsearch or OpenSearch cluster.
 
-Key parameters to monitor:
+Key parameters that can be monitored using this connector include:
 
-- Several parameters on the General page:
+- *Data > General* page:
 
-  - Connection Status: the expected value is "Success".
+  - *Cluster Health* > *Connection Status*: Indicates whether DataMiner can successfully communicate with the cluster. The expected value is `Success`. If the status is different, it may indicate a connectivity issue.
 
-  - Cluster Status: the expected value is "All Primary and Replica Shards Are Active."
+  - *Cluster Health* > *Cluster Status*: Displays the current state of the cluster. The expected value is `All Primary and Replica Shards Are Active`.
 
-  - Cluster Nodes, Data Nodes: the count of nodes in the cluster. Numbers lower than normal indicate loss of a node.
+  - *Cluster Health* > *Cluster Nodes*/*Data Nodes*: Displays the number of nodes in the cluster. A lower-than-expected number could mean that one or more nodes are unavailable.
 
-  - Relocating Shards, Initializing Shards, Unassigned Shards: should be 0 during normal cluster operation.
+  - *Cluster Health* > *Relocating Shards*/*Initializing Shards*/*Unassigned Shards*: Under normal circumstances, these values should be 0.
 
-  - Failed node communications: should be 0.
+  - *Cluster Health* > *Failed Node Communications*: Displays the number of node communication failures detected by DataMiner. A value greater than 0 indicates that DataMiner has been unable to communicate with one or more nodes in the cluster.
 
-- JVM Heap Memory: parameters Heap Memory Usage Percent, Heap Memory Max Space in the table JVM Memory Statistics, page Node Stats - JVM.
+- *Data* > *Cluster Stats - Nodes* page:
 
-- Disk Space: parameter Available Space in the table File System Statistics, page Node Stats - File System.
+  - *Java Virtual Machine* > *Heap Memory Used Space*: Displays the percentage of allocated heap memory that is currently in use.
 
-- CPU Usage: parameter CPU Usage, table Operating System Statistics, page Node Stats – OS / Processes.
+  - *Java Virtual Machine* > *Heap Memory Max Space*: Displays the maximum heap memory available to the JVM. This value is useful for determining how much memory the system can allocate.
 
-- Index Size: parameters Store Size, Documents Count.
+- *Data* > *Cluster Stats - Nodes* > *Nodes - Operating/File System* page:
 
-### SSL Certificate Monitor
+  - *File System* > *File System Available Space*: Indicates how much disk space is available on the node.
 
-If the communication between the DataMiner software and the indexing DB is secure, i.e., it uses SSL/TLS, you can use the [Skyline SSL Certificate Monitor](https://catalog.dataminer.services/details/382d6771-5162-47ce-aa2a-0f4a0d7ecd6d) to track the status of the SSL/TLS certificates that authenticate the connection and enable encryption.
+  - *Operating System* > *CPU Usage*: Displays the percentage of CPU resources being used by the node.
 
-Key parameters to monitor:
+- *Data* > *Cluster Stats - Indices* page:
 
-- General page, Sites table:
+  - *Docs, Storage and Field Data* > *Stored Indices Size*: Displays the total storage size of the indices in the cluster.
 
-  - Status: the expected value is “Success”. If the status is “Error”, the certificate is not valid or connection could not be established due to another reason.
+  - *Docs, Storage and Field Data* > *Number of Documents*: Displays the total number of documents stored in the cluster.
 
-  - Remaining Days: the number of days the certificate remains valid. We advise to create an alarm when Remaining Days value is lower than 30.
+### Skyline SSL Certificate Monitor
+
+If the communication between DataMiner and the indexing database is secure, i.e. it uses SSL/TLS, you can use the [*Skyline SSL Certificate Monitor* connector](https://catalog.dataminer.services/details/382d6771-5162-47ce-aa2a-0f4a0d7ecd6d) to track the status of the SSL/TLS certificates that authenticate the connection and enable encryption.
+
+Key parameters that can be monitored using this connector include:
+
+- *Data* > *General* page:
+
+  - *Sites* > *Status*: Displays the current state of the certificate. The expected value is `Success`. If the value is `Error`, the certificate is not valid, or the connection could not be established for another reason.
+
+  - *Sites* > *Remaining Days*: Displays the number of days the certificate remains valid. We strongly recommend configuring an alarm to trigger when this value drops below 30.
 
 ### Linux Platform
 
-[Linux Platform](https://catalog.dataminer.services/details/33a5c495-60c9-4409-aecc-91f1876dacf1) is a generic connector for monitoring servers with Linux OS. It does not have parameters specific to monitoring an indexing database, however, some general parameters may be used to assess the status of database nodes:
+The [*Linux Platform* connector](https://catalog.dataminer.services/details/33a5c495-60c9-4409-aecc-91f1876dacf1) is a generic solution for monitoring servers running a Linux operating system. While it does not include parameters specifically for monitoring an indexing database, some general parameters can be used to assess the status of database nodes:
 
-- Total Processor Load in the General page.
+- *Data* > *General* > *Total Processor Load*: Displays the overall CPU load on the server.
 
-- Actual Physical Memory Usage in the Memory Info page.
+- *Data* > *Memory Info* > *Actual Physical Memory Usage*: Displays the amount of physical memory currently in use.
 
 ## Elasticsearch/OpenSearch tools
 
-Our focus in this document is troubleshooting. For that, several tools are available that can help you by interacting with indexing DB for example.
+When troubleshooting, several tools are available to help interact with the indexing database and diagnose issues.
 
-Which tool is the best depends on your specific needs and the complexity of your indexing DB Setup.
+The best tool depends on your specific needs and the complexity of your indexing database setup.
 
-### Kibana/OpenSearch Dashboards
+### Visualization tools
 
-These are visualization tools that allow you to explore and interact with large volumes of data stored in indexing DBs. They help you build insightful visualizations, analyze logs, and set up dashboards for monitoring purposes.
+These visualization tools allow you to explore and interact with large volumes of data stored in indexing databases. They help you build insightful visualizations, analyze logs, and set up dashboards for monitoring purposes.
 
-[Kibana](https://www.elastic.co/pt/kibana) works with ElasticSearch and, as the name suggests, [OpenSearch Dashboards](https://opensearch.org/docs/latest/dashboards/) is compatible with OpenSearch.
+- [Kibana](https://www.elastic.co/pt/kibana) is designed for use with ElasticSearch.
+
+- [OpenSearch Dashboards](https://opensearch.org/docs/latest/dashboards/) is compatible with OpenSearch.
 
 ### ElasticVue
 
-This is a free and open-source GUI for interacting primarily with Elasticsearch, but it also supports OpenSearch. [ElasticVue](https://elasticvue.com/) provides a user-friendly way to explore, query, and visualize data stored in search clusters.
+[ElasticVue](https://elasticvue.com/) is a free, open-source graphical user interface (GUI) primarily for Elasticsearch, though it also supports OpenSearch. It provides a user-friendly way to explore, query, and visualize data stored in search clusters.
 
 ### Elasticsearch/OpenSearch APIs
 
-These are REST APIs that can be helpful during troubleshooting to know the cluster health, node statistics, index statistics, and more. To have a detailed overview of the available APIs refer to [ElasticSearch REST APIs](https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html) and [OpenSearch REST APIs](https://opensearch.org/docs/latest/api-reference/).
+Elasticsearch and OpenSearch provide REST APIs that can be useful for troubleshooting. These APIs offer insights into cluster health, node statistics, index statistics, and more.
 
-These APIs can be accessed using a variety of tools, including popular options like Postman and cURL.
+For a detailed overview of the available APIs, see:
+
+- [Elasticsearch REST APIs](https://www.elastic.co/guide/en/elasticsearch/reference/current/rest-apis.html)
+
+- [OpenSearch REST APIs](https://opensearch.org/docs/latest/api-reference/)
+
+These APIs can be accessed using various tools, including Postman and cURL.

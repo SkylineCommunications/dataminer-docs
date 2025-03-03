@@ -38,21 +38,21 @@ Indexing databases create indexes, data structures that organize and store infor
 > - [Intro to OpenSearch - OpenSearch Documentation](https://opensearch.org/docs/latest/getting-started/intro/)
 > - [Elasticsearch basics | Elasticsearch Guide [8.15] | Elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html)
 
-## Common problems associated with the indexing database
+## Symptoms of indexing database health issues
 
-Since DataMiner data is stored in an indexing database when using dedicated clustered storage, the following symptoms may indicate that the health of the indexing database needs to be checked:
+When you are using a dedicated clustered storage setup, DataMiner data is stored in an indexing database. In this case, the following symptoms may indicate that the health of the indexing database needs to be checked:
 
-- **DataMiner does not start up**: The Agent may fail to start if the indexing database is unavailable.
+- The DataMiner Agent may fail to start if the indexing database is unavailable.
 
-- **Element does not start up**: At startup, elements read active alarm information from the indexing database. Failure to read this data will cause the element to enter an error state.
+- At startup, elements read active alarm information from the indexing database. Failure to read this data will cause the element to enter an error state and not start up.
 
-- **Data stored in the indexing database cannot be retrieved**, including:
+- Data stored in the indexing database cannot be retrieved, including:
 
-  - Active or historical alarms.
+  - Active or historical alarms
 
-  - SRM data (e.g. bookings, resources, service definitions).
+  - SRM data (e.g. bookings, resources, service definitions)
 
-  - DOM data (e.g. a low-code app that uses DOM data is unable to display it).
+  - DOM data (e.g. a low-code app that uses DOM data is unable to display it)
 
 - User-Defined APIs are unavailable.
 
@@ -60,8 +60,8 @@ Since DataMiner data is stored in an indexing database when using dedicated clus
 
 - Some DataMiner modules cannot be initialized, such as:
 
-  - Resource Manager.
+  - Resource Manager
 
-  - UserDefinableApiManager.
+  - UserDefinableApiManager
 
-  - ProcessAutomationManager.
+  - ProcessAutomationManager
