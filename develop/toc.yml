@@ -5550,6 +5550,8 @@ items:
               topicUid: DisInjectToolWindow
             - name: DIS MIB Browser
               topicUid: DisMibBrowserToolWindow
+            - name: DIS Parameter Update Locations
+              topicUid: DisParameterUpdateLocationsToolWindow
         - name: Plugins
           topicUid: DisPlugins
         - name: Development using DIS
