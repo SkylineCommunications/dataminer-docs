@@ -28,7 +28,7 @@ public class Script
         var newHostingAgent = 123;
 
         // This example parses the booking IDs from strings. The script could for example also obtain the IDs via an input parameter,
-        // or by retrieving bookings using the resource manager helper.
+        // or by retrieving bookings using the Resource Manager helper.
         var bookingIds = new[]
         {
             Guid.Parse("..."),
@@ -49,7 +49,7 @@ public class Script
         {
             var sentIds = string.Join(", ", bookingIds.OrderBy(b => b));
 
-            // 'ToString' of a SwarmingResult will contain the ID of the object, the message, and if the swarm for the object succeeded or not.
+            // 'ToString' of a SwarmingResult will contain the ID of the object, the message, and whether swarming succeeded for the object or not.
             var results = string.Join(", ", swarmingResults.Select(s => s.ToString()));
 
             engine.ExitFail($"Did not receive enough swarming responses. Requested to swarm {bookingIds.Length} bookings, but got {swarmingResults.Length} responses.{Environment.NewLine}" +
