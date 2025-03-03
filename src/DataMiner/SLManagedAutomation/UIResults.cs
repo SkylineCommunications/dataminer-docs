@@ -88,15 +88,13 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <note type="note">Prior to DataMiner 10.0.12, this method only supports the parsing of datetimes in the format dd/MM/yyyy HH:mm:ss. From DataMiner 10.0.12 onwards, ISO format is supported.</note>
-		/// <note type="tip">Depending on the client platform, the kind of the returned date/time might differ. Since DataMiner 10.5.4 / 10.6.0<!-- RN 42064 / RN 42097 / RN 42110 -->, <see cref="GetClientDateTime"/> can be used to get the date/time as it is displayed. Enable <see cref="UIBlockDefinition.ClientTimeInfo"/> on the item, to make sure the info is available.</note>
+		/// <note type="note">The kind of returned date/time may be different depending on the client platform. From DataMiner 10.5.4/10.6.0 onwards, <see cref="GetClientDateTime"/> can be used to get the date/time as it is displayed. Enable <see cref="UIBlockDefinition.ClientTimeInfo"/> on the item to make sure the info is available.</note><!-- RN 42064 / RN 42097 / RN 42110 -->
 		/// </remarks>
 		public DateTime GetDateTime(string key) { return DateTime.Now; }
 
 		/// <summary>
 		/// Gets the date/time that was selected for the specified destination variable, as displayed in the client, which is linked to a Calendar and Time item.
-		/// If the client date/time isn't available, e.g. when <see cref="UIBlockDefinition.ClientTimeInfo"/> is set to <see cref="UIClientTimeInfo.Disabled"/>,
-		///  the returned value will be <see cref="DateTimeOffset.MinValue"/>.
+		/// If the client date/time is not available, e.g. when <see cref="UIBlockDefinition.ClientTimeInfo"/> is set to <see cref="UIClientTimeInfo.Disabled"/>, the returned value will be <see cref="DateTimeOffset.MinValue"/>.
 		/// </summary>
 		/// <param name="key">The name of the destination variable.</param>
 		/// <returns>The date/time that was selected for the specified destination variable, as displayed in the client, which is linked to a Calendar and Time item.</returns>
@@ -121,7 +119,7 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note> <!-- RN 42064 / RN 42097 / RN 42110 -->
+		/// <note type="note">Available from DataMiner 10.5.4/10.6.0 onwards.</note><!-- RN 42064 / RN 42097 / RN 42110 -->
 		/// <note type="tip">
 		/// The returned date/time includes the offset to UTC.
 		/// To get the date as displayed in the client, use the <see cref="DateTimeOffset.Date"/> property on the returned value.
@@ -132,8 +130,7 @@ namespace Skyline.DataMiner.Automation
 
 		/// <summary>
 		/// Gets the time zone info related to the specified destination variable, which is linked to a Calendar and Time item.
-		/// If the client time zone info isn't available, e.g. when <see cref="UIBlockDefinition.ClientTimeInfo"/> is set to <see cref="UIClientTimeInfo.Disabled"/>,
-		///  the returned value will be <see langword="null"/>.
+		/// If the client time zone info is not available, e.g. when <see cref="UIBlockDefinition.ClientTimeInfo"/> is set to <see cref="UIClientTimeInfo.Disabled"/>, the returned value will be <see langword="null"/>.
 		/// </summary>
 		/// <param name="key">The name of the destination variable.</param>
 		/// <returns>The time zone info related to the specified destination variable, which is linked to a Calendar and Time item.</returns>
@@ -158,17 +155,17 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <note type="note">Available since DataMiner 10.5.4 / 10.6.0.</note> <!-- RN 42064 / RN 42097 / RN 42110 -->
+		/// <note type="note">Available from DataMiner 10.5.4/10.6.0 onwards.</note><!-- RN 42064 / RN 42097 / RN 42110 -->
 		/// <note type="important">
-		/// To store this information, to reuse it for later calculations, consider using:
+		/// To store this information to reuse it for later calculations, consider using:
 		/// <list type="bullet">
 		///   <item>
-		///		the <see cref="TimeZoneInfo.ToSerializedString"/> method to get a string containing all details. The info can be restored using <see cref="TimeZoneInfo.FromSerializedString"/>.
-		///     Be aware that the time zone info might not be the latest, resulting in incorrect DST interpretations.
+		///		The <see cref="TimeZoneInfo.ToSerializedString"/> method to get a string containing all details. The info can be restored using <see cref="TimeZoneInfo.FromSerializedString"/>.
+		///     However, keep in mind that the time zone info might not be the latest, resulting in incorrect DST interpretations.
 		///   </item>
 		///   <item>
-		///		the <see cref="TimeZoneInfo.Id"/> property. The info can be restored using <see cref="TimeZoneInfo.FindSystemTimeZoneById"/>.
-		///     Be aware that the ID of the TimeZoneInfo might not (or no longer) be available on the DataMiner agent executing the automation script.
+		///		The <see cref="TimeZoneInfo.Id"/> property. The info can be restored using <see cref="TimeZoneInfo.FindSystemTimeZoneById"/>.
+		///     However, keep in mind that the ID of the TimeZoneInfo might not (or no longer) be available on the DataMiner Agent executing the Automation script.
 		///   </item>
 		/// </list>
 		/// More info is available here: <see href="https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones">Saving and restoring time zones - .NET @ Microsoft Learn</see>.
