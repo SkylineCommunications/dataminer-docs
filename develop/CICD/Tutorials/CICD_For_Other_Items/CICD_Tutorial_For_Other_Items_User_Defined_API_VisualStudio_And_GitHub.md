@@ -4,7 +4,7 @@ uid: CICD_Tutorial_For_Other_Items_User_Defined_API_VisualStudio_And_GitHub
 
 # Registering a new version of a user-defined API to the Catalog using Visual Studio and GitHub
 
-In this tutorial, you will learn how to develop, (pre-)release, and upload a user-defined API to the DataMiner Catalog with a CI/CD pipeline using Visual Studio and GitHub. However, this tutorial can be used for **any artifact type** except for connectors (e.g. Automation script, Automation script library, package project, etc.).
+In this tutorial, you will learn how to develop, (pre-)release, and upload a user-defined API to the DataMiner Catalog with a CI/CD pipeline using Visual Studio and GitHub. However, note that you can use similar steps for **any artifact type** except for connectors (e.g. Automation script, Automation script library, package project, etc.).
 
 Expected duration: 10 minutes
 
@@ -100,4 +100,4 @@ With this setup, any push with new content (including the initial creation) to t
 
 1. Go to the *VERSIONS* tab.
 
-   This tab should contain the new version of your user-Defined API, which is now available for deployment from the Catalog.
+   This tab should contain the new version of your user-defined API, which is now available for deployment from the Catalog.

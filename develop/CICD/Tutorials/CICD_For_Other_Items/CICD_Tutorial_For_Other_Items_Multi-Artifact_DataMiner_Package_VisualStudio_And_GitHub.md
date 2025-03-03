@@ -6,10 +6,10 @@ uid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio
 
 In this tutorial, you will learn how to develop, (pre-)release, and upload a DataMiner package to the DataMiner Catalog with a basic CI/CD pipeline using Visual Studio and GitHub. This package will contain multiple artifacts:
 
-- Automation Script: TutorialScript1
-- Automation Script: TutorialScript2
-- Automation Script Library: TutorialLibrary
-- Ad Hoc Data Source: TutorialDataSource
+- Automation script: TutorialScript1
+- Automation script: TutorialScript2
+- Automation script library: TutorialLibrary
+- Ad hoc data source: TutorialDataSource
 
 The package will include a simple .txt file that will be read out during installation, generating an information event with the information from the file.
 
@@ -77,7 +77,7 @@ Start by adding all code-based content into a Visual Studio solution:
 
    1. Click *Create*.
 
-1. Add a DataMiner Automation Script Library project:
+1. Add a DataMiner Automation script library project:
 
    1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 
@@ -89,7 +89,7 @@ Start by adding all code-based content into a Visual Studio solution:
 
    1. Click *Create*.
 
-1. Add a DataMiner Ad Hoc Data Source project:
+1. Add a DataMiner ad hoc data source project:
 
    1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
 
@@ -111,7 +111,7 @@ In this step, you will focus on the extra code that should be executed when the 
 
    1. Select *Add > New Item*.
 
-   1. Select to a new text file (.txt), and give it the name `MyConfig.txt`.
+   1. Select to add a new text file (.txt), and give it the name `MyConfig.txt`.
 
    1. Write `Hello World!` as the content and save the file.
 
@@ -201,11 +201,11 @@ With this setup, any push with new content (including the initial creation) to t
 
 1. Search for the name of your package.
 
-   By default, this is your Visual Studio project name (e.g. *MyUserDefinedApi*).
+   By default, this is your Visual Studio project name (e.g. *TutorialPackage*).
 
 1. Go to the *VERSIONS* tab.
 
-   This tab should contain the new version of your user-Defined API, which is now available for deployment from the Catalog.
+   This tab should contain the new version of the package, which is now available for deployment from the Catalog.
 
 1. If you have an available non-production DataMiner Agent, use the *Deploy* button to deploy the new version to the DMA.
 
