@@ -11,7 +11,7 @@ When an Agent hosts a booking, it will register the booking and execute the star
 > [!NOTE]
 > To find out where a booking is currently hosted, you can check the *HostingAgentID* property of the booking.
 
-## Triggering swarming for bookings
+## Triggering swarming for bookings 
 
 To trigger the swarming of bookings, create a *SwarmingHelper* with the new hosting Agent ID and the booking IDs. See also [Swarming elements](xref:SwarmingElements) for examples on how to use the swarming helper to swarm elements. This can be done as follows:
 
