@@ -4,11 +4,11 @@ uid: ID_Common_Issues
 
 # Common issues
 
-Below, we have listed some [known issues related to the configuration of the OpenSearch database](#common-opensearch-related-issues).
+Below, we have listed some [common issues related to the configuration of the OpenSearch database](#known-opensearch-related-issues).
 
 Additionally, we recommend checking the [known issues overview](xref:Known_issues) to see if the issue you are experiencing is a known software issue that is already documented. For resolved issues, you will find details on the affected software versions and their resolution status. For unresolved issues, potential mitigation steps or workarounds may be available.
 
-## Common OpenSearch-related issues
+## Known OpenSearch-related issues
 
 Search the OpenSearch logging for exceptions: `/var/log/opensearch/[cluster.name].log`
 

@@ -146,4 +146,4 @@ If this happens, you need to alter the *priorityOrder* (see above) so that the b
 > If the main OpenSearch cluster goes down, it will need to be restored afterwards. Make sure you have a backup set up to restore. To restore the backup, stop DataMiner completely and then restore the backup to the node that is out of sync. For more detailed information, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
 
 > [!TIP]
-> For more troubleshooting information, see [Common OpenSearch-related issues](xref:ID_Common_Issues#common-opensearch-related-issues).
+> For more troubleshooting information, see [Common OpenSearch-related issues](xref:ID_Common_Issues#known-opensearch-related-issues).

@@ -1,18 +1,20 @@
 ---
-uid: ID_Still_Experiencing_Issues
+uid: ID_Contact_TechSupport
 ---
 
-# Are you still experiencing issues?
+# Contacting TechSupport
 
 If you are still experiencing issues, please report them to [techsupport@skyline.be](mailto:techsupport@skyline.be).
 
-When reporting an issue that may be related to the indexing database, please include the following information:
+When reporting an issue that may be related to the indexing database, include the following information:
 
-- **A clear description of the issue**: If possible, provide screenshots to illustrate the problem and its impact.
+- **A clear description of the issue**: Provide a detailed explanation of the problem, including its impact. If possible, attach screenshots to illustrate the issue.
 
-- **A [Log Package](xref:Collecting_data_to_report_an_issue_to_TechSupport#log-collector-packages)**: Include a memory dump of SLDataGateway from the DataMiner Agent where the issue occurs.
+- **A [Log Package](xref:Collecting_data_to_report_an_issue_to_TechSupport#log-collector-packages)**: Attach a memory dump of SLDataGateway from the affected DataMiner Agent.
 
-- **Indexing database configuration and logs files**: On Linux systems, provide the following files based on your database type:
+- **Indexing database configuration and logs files** (Only for Linux systems):
+
+  Provide the following files based on your indexing database type:
 
   - For OpenSearch:
 

@@ -211,8 +211,8 @@ items:
             topicUid: ID_Diagnostic_Procedures
           - name: Common issues
             topicUid: ID_Common_Issues
-          - name: Are you still experiencing issues?
-            topicUid: ID_Still_Experiencing_Issues
+          - name: Contacting TechSupport
+            topicUid: ID_Contact_TechSupport
       - name: Troubleshooting - SLScripting
         items:
           - name: Investigating exception occurrence on Finalizer thread
