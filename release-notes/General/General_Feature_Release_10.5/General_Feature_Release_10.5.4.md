@@ -312,7 +312,7 @@ Example:
 - *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library A.txt*
 - *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library B.txt*
 
-The log entries added to those files will now each include the name of the extension. The log entry format will now be the following:
+The log entries added to those files will now each include the name of the extension as well as the name of the user. The log entry format will now be the following:
 
 `[Timestamp][Level][Extension][User][SessionId][NodeId] Message`
 
