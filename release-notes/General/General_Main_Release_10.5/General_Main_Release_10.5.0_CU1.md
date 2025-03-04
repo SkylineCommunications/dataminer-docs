@@ -167,6 +167,14 @@ Also, no new log file will be started every day anymore. From now on, a new log 
 > [!NOTE]
 > Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e. the logging of the ad hoc data sources and the operators).
 
+#### SLLogCollector now collects the logging of the GQI DxM extensions from the Extensions folder [ID 42379]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+SLLogCollector will now look for GQI DxM extension logging in the following folder:
+
+- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions*
+
 ### Fixes
 
 #### Issue in SLNet could cause errors to be thrown in low-code apps [ID 40978]
