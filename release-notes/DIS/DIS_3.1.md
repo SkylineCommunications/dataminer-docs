@@ -14,16 +14,16 @@ uid: DIS_3.1
 
 The new *DIS Parameter Update Locations* tool window allows you to select a parameter and check where it is (possibly) updated. It can be opened either via the DIS menu (*Tool Windows > DIS Parameter Update Locations*) or via a parameter in the *protocol.xml* file you are editing.
 
-After you select one of the parameters of the connector, the *Confirmed update locations* pane will list the locations where that parameter is updated.
+After you select one of the parameters of the connector, the *Confirmed Update Locations* pane will list the locations where that parameter is updated.
 
 For example:
 
 - If the pane lists an Action, this means that the Action will perform a set on the parameter when executed.
 - If the pane lists a QAction, this means that the QAction invokes e.g. a method that will cause the parameter to get updated. The line on which you will find that invocation within the QAction will be mentioned in the result window.
 
-In the *Possible update locations* pane, you will find an overview of possible locations where this parameter might get updated.
+In the *Possible Update Locations* pane, you will find an overview of possible locations where this parameter might get updated.
 
-- For example, if a QAction contains a `protocol.SetParameter()` call, but it could not be determined which parameter gets updated (e.g. because the parameter ID is calculated at run-time), then that QAction will be listed in the *Possible update locations* pane.
+- For example, if a QAction contains a `protocol.SetParameter()` call, but it could not be determined which parameter gets updated (e.g. because the parameter ID is calculated at run-time), then that QAction will be listed in the *Possible Update Locations* pane.
 
 - Also, the *Confirmed Update Locations* will mark incorrect update locations in red. For example, if the connector calls a method that should be executed on a table parameter is incorrectly executed on a standalone parameter.
 
