@@ -11,7 +11,7 @@ uid: EPM_7.0.9_Integrated_DOCSIS
 
 #### New downstream dashboard for fiber node utilization reporting [ID 40110]
 
-A new dashboard has been implemented to generate a report containing the fiber node name, the maximum utilization of SC-QAM channels within a specific time range, the maximum utilization of OFDM channels within a specific time range, and the number of CMs belonging to that fiber node. Each column in the dashboard can be filtered using a query filter. The time range for the dashboard can be specified with a time range selector.
+A new dashboard, named *DS FN Peak Utilization*, has been implemented to generate a report containing the fiber node name, the maximum utilization of SC-QAM channels within a specific time range, the maximum utilization of OFDM channels within a specific time range, and the number of CMs belonging to that fiber node. Each column in the dashboard can be filtered using a query filter. The time range for the dashboard can be specified with a time range selector.
 
 The dashboard uses an ad hoc data source script, which in turn executes another script that obtains files provided by Data Aggregator.
 
