@@ -29,26 +29,27 @@ In the *Possible update locations* pane, you will find an overview of possible l
 
 To trigger a recalculation of the update locations, click the *Refresh* button at the top of the tool window.
 
-##### DIS Support Skyline.DataMiner.Sdk Projects [ID 42072]
+##### DIS now supports Skyline.DataMiner.Sdk projects [ID 42072]
 
-​With the introduction of the Skyline.DataMiner.Sdk projects, DIS has been adapted to support new projects.
+DIS now supports the newly introduced *Skyline.DataMiner.Sdk* projects.
 
-With the package project, new context menu options are available on the project or the *PackageContent* > *Dashboards* and *PackageContent* > *Low Code Apps* folder to import dashboards and Low Code Apps from DataMiner agents.
+New context menu options to import dashboards and low-code apps from DataMiner Agents are available on the project as well as on the *PackageContent* > *Dashboards* and *PackageContent* > *Low Code Apps* folders.
 
-Other changes are that the Import Protocol & Import Automation Script menu items under *DIS* > *DMA* are now only visible when it can be used. Previously it would throw an error when it was not possible to use them after clicking on them.
+Also, the *Import Protocol* and *Import Automation script* menu items under *DIS* > *DMA* are now only visible when they can be used. Previously, when you clicked those options when it was not possible to use them, an error would be thrown.
 
-##### Validator tool window check links [ID 42396]
+##### DIS Validator tool window now links to documentation [ID 42396]
 
-The DIS Validator tool window now provides a link to online documentation about a check.
-This replaces the custom window that was shown when pressing the information icon for a check for which additional details were available.
+In the *DIS Validator* tool window, the results pane will now allow you to open online documentation about the checks that were performed.
+
+This will replace the custom window that was opened when you clicked the information icon of a particular check.
 
 ### Changes
 
 #### Enhancements
 
-##### Update for 10.3 Minimum Supported Version [ID 42399]
+##### DIS will now indicate that DataMiner 10.3 is the minimum supported version [ID 42399]
 
-DIS has been updated so that it is now aware that DataMiner version 10.3 has become the minimum supported version.
+DIS will now indicate that DataMiner version 10.3 is the minimum supported version.
 
 ## DIS 3.1.5
 
