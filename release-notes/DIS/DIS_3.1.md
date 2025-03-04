@@ -19,7 +19,7 @@ After you select one of the parameters of the connector, the *Confirmed update l
 For example:
 
 - If the pane lists an Action, this means that the Action will perform a set on the parameter when executed.
-- If the pane lists a QAction, this means that the QAction invokes a method that will cause the parameter to get updated. The line on which you will find that QAction will be mentioned in the result window.
+- If the pane lists a QAction, this means that the QAction invokes e.g. a method that will cause the parameter to get updated. The line on which you will find that invocation within the QAction will be mentioned in the result window.
 
 In the *Possible update locations* pane, you will find an overview of possible locations where this parameter might get updated.
 
