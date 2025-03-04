@@ -167,6 +167,21 @@ Also, no new log file will be started every day anymore. From now on, a new log 
 > [!NOTE]
 > Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e. the logging of the ad hoc data sources and the operators).
 
+#### GQI DxM: Separate log file per extension library in Extensions folder [ID 42355]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+From now on, a separate log file will be created per GQI DxM extension library in the *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions* folder.
+
+Example:
+
+- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library A.txt*
+- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library B.txt*
+
+The log entries added to those files will now each include the name of the extension. The log entry format will now be the following:
+
+`[Timestamp][Level][Extension][User][SessionId][NodeId] Message`
+
 #### SLLogCollector now collects the logging of the GQI DxM extensions from the Extensions folder [ID 42379]
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
