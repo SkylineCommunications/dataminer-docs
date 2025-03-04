@@ -12,11 +12,11 @@ When selecting a parameter, in the *Confirmed Update locations* pane, the locati
 For example, if the pane lists an Action, this means that the action, when executed, performs a set on this parameter.
 When a QAction is listed, it means that the QAction invokes a method (the line number is mentioned in the result window) that results in the update of the parameter.
 
+The *Confirmed Update locations* will also mark an update location in red in case an update location is wrong.
+For example, in case a method is called that should be executed on a table parameter but is executed on a standalone parameter.
+
 The *Possible Update locations* gives an overview of possible locations where this parameter **might** be updated.
 For example, a QAction contains a `protocol.SetParameter()` call but it could not be determined which parameter gets updated. This is for example the case when the ID of the parameter that is set is calculated at runtime.
-
-The *Possible Update locations* will also mark an update location in red in case an update location is wrong.
-For example, in case a method is called that should be executed on a table parameter but is executed on a standalone parameter.
 
 To trigger a recalculation of the update locations, press the *Refresh* button above the parameter dropdown at the top of the window.
 
