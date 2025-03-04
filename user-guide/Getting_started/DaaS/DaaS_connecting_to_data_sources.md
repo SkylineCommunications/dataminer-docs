@@ -14,13 +14,13 @@ Your DaaS system is able to connect to three types of data sources:
 
 DaaS can communicate with any cloud service as long as it has a public endpoint and a secure way of connecting. This could for example be an Azure App Service, AWS S3, Azure Blob Storage, etc.
 
+DaaS can also communicate with any public APIs such as Slack API, Open Weather Map API, Trello API, YouTube API, GitHub API, etc.
+
 Each DaaS instance also has a public IP so it can receive SNMP traps.
 
 ## Publicly available data sources
 
-DaaS can communicate with any public APIs such as Slack API, Open Weather Map API, Trello API, YouTube API, GitHub API, etc.
-
-It can also connect to any of your on-premises resources that are publicly available. Make sure that these are published in a secure fashion to ensure that DataMiner can connect to them securely.
+DaaS can connect to any of your on-premises resources that are publicly available. Make sure that these are published in a secure fashion to ensure that DataMiner can connect to them securely.
 
 ## Private data sources
 
