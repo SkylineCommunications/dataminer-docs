@@ -6,6 +6,9 @@ uid: DOM_Using_DOM_Viewer
 
 > [!TIP]
 > To get to know this tool, you can [follow Kata #54 on DataMiner Dojo](https://community.dataminer.services/courses/kata-54/) and deploy the tutorial package [Tutorial - DOM Viewer](https://catalog.dataminer.services/details/fea99fc7-63fc-40da-85fb-db1ca914986a) from the DataMiner Catalog. This package includes the DOM Viewer itself as well as the example modules used in Kata #54.
+>
+>[!TIP]
+>See also: [Kata #54: DataMiner Object Model (DOM) viewer](https://community.dataminer.services/courses/kata-54/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 The DOM Viewer application consists of several pages:
 
