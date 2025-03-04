@@ -25,7 +25,7 @@ In the *Possible update locations* pane, you will find an overview of possible l
 
 - For example, if a QAction contains a `protocol.SetParameter()` call, but it could not be determined which parameter gets updated (e.g. because the parameter ID is calculated at run-time), then that QAction will be listed in the *Possible update locations* pane.
 
-- Also, the *Possible Update locations* will mark incorrect update locations in red. For example, if the connector calls a method that should be executed on a table parameter is incorrectly executed on a standalone parameter.
+- Also, the *Confirmed Update Locations* will mark incorrect update locations in red. For example, if the connector calls a method that should be executed on a table parameter is incorrectly executed on a standalone parameter.
 
 To trigger a recalculation of the update locations, click the *Refresh* button at the top of the tool window.
 
