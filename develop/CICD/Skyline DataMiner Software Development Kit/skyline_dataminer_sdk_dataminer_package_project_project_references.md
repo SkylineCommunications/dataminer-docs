@@ -5,7 +5,7 @@ keywords: Skyline.DataMiner.Sdk, Package Project, ProjectReferences
 
 # Skyline DataMiner Package Project - ProjectReferences.xml
 
-Inside the Skyline DataMiner Package Project, you can find the ProjectReferences.xml file. This file is being used to decide which DataMiner projects are included in the package. This is based on the ProjectReference tags that you find in csproj files.
+Inside the Skyline DataMiner Package Project, under the *PackageContent* directory, you can find the *ProjectReferences.xml* file. This file is being used to decide which DataMiner projects are included in the package. This is based on the ProjectReference tags that you find in csproj files.
 
 Normally this file is enough for most scenarios. In case you want to create multiple packages by adding multiple Package projects, you will need to tweak this file to get the correct content for each package.
 
@@ -96,7 +96,7 @@ We have the following scenario where we want to only include projects that have 
 
 ### Option 1: Specify each project
 
-The first option, which is also the most maintenance heavy during development, is to specify each project specifically:
+The first option is to specify each project:
 
 ```xml
 <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
@@ -117,7 +117,7 @@ Another way is to include all projects, but exclude the ones that you don't want
 </ProjectReferences>
 ```
 
-As you can imagine, this is quite mainentance-heavy as each time you add another project to the solution, you need to adapt the ProjectReferences.xml file.
+As you can imagine, this is quite troublesome as each time you add another project to the solution, you need to adapt the *ProjectReferences.xml* file.
 
 ### Option 2: Specify prefix with wildcard
 

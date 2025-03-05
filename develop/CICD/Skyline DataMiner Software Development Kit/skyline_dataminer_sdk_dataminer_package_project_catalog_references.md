@@ -5,7 +5,7 @@ keywords: Skyline.DataMiner.Sdk, Package Project, CatalogReferences
 
 # Skyline DataMiner Package Project - CatalogReferences.xml
 
-Inside the Skyline DataMiner Package Project, you can find the CatalogReferences.xml file. This file is being used to include artifacts from the Catalog in the package.
+Inside the Skyline DataMiner Package Project, under the *PackageContent* directory, you can find the *CatalogReferences.xml* file. This file is being used to include artifacts from the Catalog in the package.
 
 > [!NOTE]
 > When using the CatalogReferences, credentials are needed to access the Catalog. More information can be found on [Adding content from the Catalog](xref:skyline_dataminer_sdk_dataminer_package_project#adding-content-from-the-catalog).
@@ -57,4 +57,4 @@ More information about the range can be found on [versioning of catalog items](x
 
 In case you want prereleases as well, you can use the **allowPrerelease** attribute.
 
-A prerelease is defined as having a '-' (dash) in the version.
+A prerelease is defined as having a '-' (dash) in the version with the exception for the old versioning of InstallPackages (A.B.C-CUx).
