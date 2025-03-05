@@ -84,11 +84,11 @@ A number of enhancements have been made to the ProtocolFunctionManager with rega
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
-When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run, the UI components of type *Calendar* and *Time* will be able to retrieve the time zone and date/time settings of the client, and use those settings to format the time and date entered by the user.
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
 
-To allow the client to set the time zone, on the `UIBlockDefinition`, set the `ClientTimeInfo` option to `UIClientTimeInfo.Return`. This option is intended to be used for UI components of type *Calendar* or *Time* (the latter with either `AutomationDateTimeUpDownOptions`, `AutomationDateTimeUpDownOptions` or `AutomationDateTimePickerOptions`).
+To allow the client to return the time zone and client time and date, on the `UIBlockDefinition`, set the `ClientTimeInfo` option to `UIClientTimeInfo.Return`. This option is intended to be used for UI components of type *Calendar* or *Time* (the latter with either `AutomationDateTimeUpDownOptions`, `AutomationDateTimeUpDownOptions` or `AutomationDateTimePickerOptions`).
 
-The ShowUI command now include the following new methods that can be used to request the time zone and date/time settings of the client:
+The result of the ShowUI command now includes the following new methods that can be used to request the time zone and date/time settings of the client:
 
 - `TimeZoneInfo GetClientTimeZoneInfo(string destVar)`
 - `DateTimeOffset GetClientDateTime(string destVar)`
@@ -109,7 +109,7 @@ If this time zone information has to be stored for later use, consider the follo
 - Use the `Id` property, which can then be restored by using `TimeZoneInfo.FindSystemTimeZoneById(storedId)`.
 
   > [!NOTE]
-  > The ID that is returned might not be available (anymore) on the DataMiner Agent that is executing the Automation script.
+  > The ID that is returned might not be available on the DataMiner Agent that is executing the Automation script.
 
 For more info, see [Saving and restoring time zones](https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones)
 
@@ -119,8 +119,8 @@ This method will return the date and time as it was entered in the UI block with
 
 The returned value will be `DateTimeOffset.MinValue` if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information.
 
-> [!NOTE]
-> Components that have `ClientTimeInfo` enabled should not have a *destVar* that contains "_DateTimeComponentClient". The identifier should be unique.
+> [!IMPORTANT]
+> Components that have `ClientTimeInfo` enabled should not have components with a *destVar* that contains "_DateTimeComponentClient".
 
 #### Service & Resource Management: Configuring the script to be executed when a reservation goes into quarantine [ID 42067]
 
