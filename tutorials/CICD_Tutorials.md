@@ -20,6 +20,7 @@ For the development of items other than connectors (e.g. Automation scripts, use
 | [Registering a new version of a user-defined API in the Catalog using Visual Studio and GitHub](xref:CICD_Tutorial_For_Other_Items_User_Defined_API_VisualStudio_And_GitHub) | Set up CI/CD pipelines using Visual Studio and GitHub to register new versions of user-defined APIs in the DataMiner Catalog. |
 | [Registering a new version of a user-defined API in the Catalog using GitHub Codespaces](xref:CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces) | Learn how to use GitHub Codespaces to set up CI/CD pipelines and register user-defined APIs in the DataMiner Catalog. |
 | [Registering a new version of a multi-artifact DataMiner package in the Catalog using Visual Studio and GitHub](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub) | Manage multi-artifact DataMiner packages by setting up CI/CD pipelines using Visual Studio and GitHub for version registration. |
+| [Registering new version of multiple DataMiner packages to the Catalog using Visual Studio and GitHub](xref:CICD_Tutorial_For_Other_Items_Multi-Package_VisualStudio_And_GitHub) | Manage multiple DataMiner packages by setting up CI/CD pipelines using Visual Studio and GitHub for version registration. |
 
 ## For connectors
 

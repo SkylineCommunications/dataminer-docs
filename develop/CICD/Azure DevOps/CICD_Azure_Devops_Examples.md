@@ -41,7 +41,8 @@ jobs:
           dotnet publish \
             -p:Version="0.0.$(Build.BuildId)-prerelease" \
             -p:VersionComment="This is just a pre-release version." \
-            -p:CatalogPublishKeyName="$(DATAMINER_TOKEN)"
+            -p:CatalogPublishKeyName="DATAMINER_TOKEN" \
+            -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
         displayName: 'Publish and Register to Catalog'
         env:
           DATAMINER_TOKEN: $(DATAMINER_TOKEN)
@@ -72,7 +73,8 @@ jobs:
           dotnet publish `
             -p:Version="0.0.$(Build.BuildId)-prerelease" `
             -p:VersionComment="This is just a pre-release version." `
-            -p:CatalogPublishKeyName="$(DATAMINER_TOKEN)"
+            -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+            -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
         displayName: 'Publish and Register to Catalog'
         env:
           DATAMINER_TOKEN: $(DATAMINER_TOKEN)
