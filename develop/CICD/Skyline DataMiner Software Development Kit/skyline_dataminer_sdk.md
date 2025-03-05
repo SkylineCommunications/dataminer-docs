@@ -1,5 +1,6 @@
 ---
 uid: skyline_dataminer_sdk
+keywords: Skyline.DataMiner.Sdk, Software Development Kit
 ---
 
 # Skyline DataMiner SDK

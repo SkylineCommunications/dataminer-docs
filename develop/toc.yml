@@ -5355,6 +5355,8 @@ items:
           topicUid: skyline_dataminer_sdk_dataminer_package_project_catalog_references
     - name: Visual Studio 2022 solution filter (*.slnf) files
       topicUid: skyline_dataminer_sdk_solution_filter_files
+    - name: Frequently Asked Questions
+      topicUid: skyline_dataminer_sdk_frequently_asked_questions
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
   - name: CI/CD using command line
