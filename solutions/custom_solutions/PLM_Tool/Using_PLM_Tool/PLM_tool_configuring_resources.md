@@ -40,5 +40,10 @@ To configure a new PLM resource subscriber:
    - Enter a valid **protocol version** that is in use. Ensure this version matches the protocol version in Cube exactly.
 
    - Enter the **parameter ID** (PID) for the parameter that correlates to the resource being created.
+     
+   > [!NOTE]
+   > The PID can refer to a **Table PID, a Column PID, or a standalone parameter**.  
+   > - If a **Table PID** is provided, the resource name is validated as a **primary key or display key**.  
+   > - If a **Column PID** is used, the validation checks for matching values within the specified column.  
 
 1. Select *OK*.
