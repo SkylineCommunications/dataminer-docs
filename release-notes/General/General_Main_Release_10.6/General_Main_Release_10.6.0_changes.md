@@ -163,6 +163,14 @@ When you migrate data of datatype *CustomData* from either Cassandra Single or C
 
 For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* datatype as well as the *Analytics* datatype.
 
+#### SLAnalytics - Pattern matching: Multivariate pattern suggestion events will now be grouped into a single incident [ID 42274]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When a multivariate pattern is detected in new trend data, suggestion events are generated for every instance in the linked pattern.
+
+From now on, those suggestion events will be grouped into a single incident, which will be shown as a single line in the Alarm Console.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]

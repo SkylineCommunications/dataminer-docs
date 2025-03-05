@@ -272,6 +272,14 @@ For example, if you want to migrate only the SLAnalytics data, you can now speci
 
 A number of enhancements have been made with regard to the connections made among DataMiner Agents as well as the connections made between DataMiner Agents and client applications.
 
+#### SLAnalytics - Pattern matching: Multivariate pattern suggestion events will now be grouped into a single incident [ID 42274]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When a multivariate pattern is detected in new trend data, suggestion events are generated for every instance in the linked pattern.
+
+From now on, those suggestion events will be grouped into a single incident, which will be shown as a single line in the Alarm Console.
+
 #### Swarming: 'Where are my elements.txt' file added to the 'C:\\Skyline DataMiner\\Elements\\' folder [ID 42314]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
