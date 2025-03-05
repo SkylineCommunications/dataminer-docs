@@ -303,6 +303,8 @@ This means, that some elements will not be able to run in isolation mode, and so
 
 In the *DataMiner.xml* file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
 
+See also [RunInIsolationModeConfig property added to SLNet messages ElementInfoEventMessage and LiteElementInfoEvent [ID 42247]](#runinisolationmodeconfig-property-added-to-slnet-messages-elementinfoeventmessage-and-liteelementinfoevent-id-42247)
+
 For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
 #### DataMiner Object Models: Configuring trigger conditions for CRUD scripts [ID 41780]
@@ -519,3 +521,25 @@ The information provided is similar to the information found in the *SLElementIn
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### RunInIsolationModeConfig property added to SLNet messages ElementInfoEventMessage and LiteElementInfoEvent [ID 42247]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+A new `RunInIsolationModeConfig` property has been added to the SLNet messages `ElementInfoEventMessage` and `LiteElementInfoEvent`. This property will allow client applications to indicate if and how an element is configured to run in isolation mode.
+
+The property can have one of the following values:
+
+| Value    | Description |
+|----------|-------------|
+| None     | The element is not running in isolation mode. |
+| Dma      | In the `ProcessOptions` section of the *DataMiner.xml* file, it has been specified that all elements using the protocol in question should be running in isolation mode. |
+| Protocol | In the *protocol.xml* file, the `RunInSeparateInstance` tag specifies that all elements using the protocol in question should be running in isolation mode. |
+| Element  | The element has been individually configured to run in isolation mode. |
+
+If multiple settings indicate that the element should be running in isolation mode, the `RunInIsolationModeConfig` property will be set to one of the above-mentioned values in the following order of precedence: "Protocol", "Element", "Dma".
+
+> [!NOTE]
+>
+> - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
+> - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
