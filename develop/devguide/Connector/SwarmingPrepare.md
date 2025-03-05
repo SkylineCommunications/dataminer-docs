@@ -2,7 +2,7 @@
 uid: SwarmingPrepare
 ---
 
-# Preparing your system for Swarming
+# Preparing scripts and connectors for Swarming
 
 When the Swarming feature is enabled, alarm references need to be globally unique within the cluster. For that reason, alarm IDs will be generated in a different way than in a system without Swarming. It is important to make sure that scripts and connectors are compatible with this to be able to successfully work with a Swarming-enabled setup.
 

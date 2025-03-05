@@ -70,3 +70,4 @@ public class Script
 >
 > - To swarm a booking, the new hosting Agent must be up and running. In case the current hosting Agent is unreachable, swarming will still take place, but an error will be logged in the *SLResourceManager* log file.
 > - If you swarm a booking to a new Agent, the linked resources and/or services will **not** be swarmed to that new Agent.
+> - To be able to trigger swarming for a booking, you need the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission.
