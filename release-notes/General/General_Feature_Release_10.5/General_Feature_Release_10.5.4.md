@@ -93,7 +93,7 @@ When UI components of type *Calendar* or *Time* are used in interactive Automati
 
 To allow the client to return the time zone and client time and date, on the `UIBlockDefinition`, set the `ClientTimeInfo` option to `UIClientTimeInfo.Return`. This option is intended to be used for UI components of type *Calendar* or *Time* (the latter with either `AutomationDateTimeUpDownOptions`, `AutomationDateTimeUpDownOptions` or `AutomationDateTimePickerOptions`).
 
-The result of ShowUI command now includes the following new methods that can be used to request the time zone and date/time settings of the client:
+The result of the ShowUI command now includes the following new methods that can be used to request the time zone and date/time settings of the client:
 
 - `TimeZoneInfo GetClientTimeZoneInfo(string destVar)`
 - `DateTimeOffset GetClientDateTime(string destVar)`
