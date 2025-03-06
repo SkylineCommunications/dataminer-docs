@@ -11,20 +11,26 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 6 March 2025 - Fix - Catalog - Deploy button state when not authenticated [ID 42439]
 
-When users are not authenticed, the state of the deploy button will now be applied correctly if their issues with the version you want to deploy.
+The deploy button of a catalog version will now be disabled if there are any issues with the version.
+Before the button would always be enabled if the user was not authenticated.
+Note: the button can remain disabled after logging in when the user does not have a working cloud connected DMS
 
 ### 6 March 2025 - Fix - Catalog - Increased polling duration for deployment status [ID 42405]
 
-When deploying an item from the Catalog, the duration for checking the status of the active deployment has been increased to around 5 minutes.
-If the deployment would still be pending after a certain amount of polling tries, it will result in a timeout state.
+When deploying an item from the Catalog, the duration for checking the status of the active deployment has been increased to around 5 minutes, before this was only 10 seconds.
+If the deployment would still be pending after a certain amount of polling tries, it will result in a timeout state, before it would remain on pending after 10 seconds.
 
 ### 6 March 2025 - Fix - Catalog API - Sorting catalog items by name [ID 42398]
 
-Newly registered items will now be sorted correctly.
+Items registerd on the Catalog were not correctly setting a property which was being used for sorting.
+When sorting on Name ascending, this would result in all the new items to be on top.
+This issue has been resolved.
 
 ### 6 March 2025 - Fix - Admin - State of settings page when switching dms [ID 42338]
 
-Changing to another dms settings page while editting a dms setting will now correctly reset the state of the settings page.
+When changing a settings on the dms settings page, the section would go in edit mode allowing the user to save the changes.
+If the user would change to another dms settings page, the state of the pase would not be reset resulting in the edit mode actions to be displayed.
+This issue has been resolved.
 
 ### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
