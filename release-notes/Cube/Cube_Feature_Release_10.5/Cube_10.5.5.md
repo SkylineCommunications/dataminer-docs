@@ -32,6 +32,14 @@ In the DataMiner Cube desktop app, a number of enhancements have been made with 
 
 Also, the drag-and-drop functionality has been revised. For example, it is now possible to re-order tile groups and to remove tiles by dragging them onto the recycle bin.
 
+#### Alarm Console: Multivariate pattern suggestion events will now be grouped into a single incident [ID 42287]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a multivariate pattern is detected in new trend data, suggestion events are generated for every parameter in the linked pattern.
+
+From now on, those suggestion events will be grouped into a single incident, which will be shown as a single line in both the *Suggestion events* tab and the *Patterns* tab of the Alarm Console.
+
 ### Fixes
 
 *No fixes have been added yet.*
