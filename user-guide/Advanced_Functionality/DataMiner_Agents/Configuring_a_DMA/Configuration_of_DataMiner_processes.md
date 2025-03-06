@@ -736,11 +736,11 @@ Example:
 > [!CAUTION]
 > Do not use this feature in networks where a firewall drops TCP keep-alive packets. Using it in such a network could cause the connection to be closed while it is actually still working.
 
-### Enabling information events when scripts are started by Correlation rules
+### Enabling information events when scripts are started by Correlation rules or scheduled tasks
 
-From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when Automation scripts are triggered by the Correlation engine.
+From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when Automation scripts are triggered by the Correlation engine. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41970-->, this also applies to Automation scripts triggered by the Scheduler module.
 
-If you do want information events to be generated when scripts are triggered by Correlation rules, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to "false":
+If you do want information events to be generated when scripts are triggered by Correlation rules or scheduled tasks, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to "false":
 
 ``` xml
 <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
