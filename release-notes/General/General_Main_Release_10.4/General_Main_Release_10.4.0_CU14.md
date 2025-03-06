@@ -15,7 +15,11 @@ uid: General_Main_Release_10.4.0_CU14
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security enhancements [ID 42307]
+
+<!-- 42307: MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
