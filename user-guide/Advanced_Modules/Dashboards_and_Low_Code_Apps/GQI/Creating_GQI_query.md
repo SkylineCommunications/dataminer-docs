@@ -31,7 +31,7 @@ The "Queries" data item allows you to construct a query in order to tap into the
 
    - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42127-->, you can insert new operators anywhere in the sequence, including between existing operators, by clicking the "+" button.
 
-   - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42127-->, you can rearrange operators by dragging and dropping them to a different position within the same level. If an operator turns red after being moved, it indicates that it cannot be used at that location and the query has become invalid. The *Then sort by* operator is a child node of the *Sort by* operator, so if you move a *Sort by* node, all its *Then sort by* child nodes will move with it<!--RN 42229-->.
+   - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42127-->, you can rearrange operators by dragging and dropping them to a different position on the same level. If an operator turns red after being moved, this indicates that it cannot be used at that location and the query has become invalid. The *Then sort by* operator is a child node of the *Sort by* operator, so if you move a *Sort by* node, all its *Then sort by* child nodes will move with it<!--RN 42229-->.
 
 1. Drag the configured query to the component in order to use it.
 
