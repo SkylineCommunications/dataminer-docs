@@ -6,7 +6,7 @@ uid: STaaS_cost_estimation
 
 To request a cost estimation, follow the procedure below:
 
-1. Follow the [setup procedure](xref:Setting_up_StaaS) to register your system to use STaaS and stop after step 5.
+1. Follow the [STaaS setup procedure](xref:Setting_up_StaaS), but only up to the point where your system is registered to use STaaS.
 
 1. Deploy the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02) from the DataMiner Catalog.
 
