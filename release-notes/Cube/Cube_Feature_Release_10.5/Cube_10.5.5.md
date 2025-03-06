@@ -24,7 +24,13 @@ uid: Cube_Feature_Release_10.5.5
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner Cube desktop app: Enhanced configuration file management and revised drag-and-drop functionality [ID 41203]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the DataMiner Cube desktop app, a number of enhancements have been made with regard to configuration file management.
+
+Also, the drag-and-drop functionality has been revised. For example, it is now possible to re-order tile groups and to remove tiles by dragging them onto the recycle bin.
 
 ### Fixes
 
