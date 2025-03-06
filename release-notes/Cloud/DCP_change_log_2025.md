@@ -9,6 +9,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 6 March 2025 - Fix - Catalog - Deploy button state when not authenticated [ID 42439]
+
+When users are not authenticed, the state of the deploy button will now be applied correctly if their issues with the version you want to deploy.
+
+### 6 March 2025 - Fix - Catalog API - Sorting catalog items by name [ID 42398]
+
+Newly registered items will now be sorted correctly.
+
 ### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
 A new call is available that allows users to get all the Catalog item types without the need to authenticate.
