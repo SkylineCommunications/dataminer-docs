@@ -42,4 +42,8 @@ A number of security enhancements have been made.
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem with aggregation alarms on Cassandra Cluster and STaaS [ID 42095]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, aggregation alarms would not work as intended on DataMiner Systems using a Cassandra Cluster database or Storage as a Service (STaaS).
