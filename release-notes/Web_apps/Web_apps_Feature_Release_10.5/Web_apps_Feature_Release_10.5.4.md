@@ -384,7 +384,7 @@ Also, dropdown boxes would no longer ellipse long values, causing a horizontal s
 
 When you had selected a time range in a *Timeline* component, in some cases, that time range would incorrectly not get passed to other components.
 
-#### Low-Code Apps: Problem when entering edit mode when the app contained a component without visualization [ID 42832]
+#### Low-Code Apps: Problem when entering edit mode when the app contained a component without visualization [ID 42382]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
