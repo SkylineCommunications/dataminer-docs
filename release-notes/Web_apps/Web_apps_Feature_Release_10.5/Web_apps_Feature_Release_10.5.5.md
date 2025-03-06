@@ -35,3 +35,9 @@ uid: Web_apps_Feature_Release_10.5.5
 When a *Close a panel* event was linked to a component action, the panel would not get closed when the component in question was a lazy loaded component that was not loaded yet.
 
 From now on, in cases like this, the component will be forced to render and the component action will be executed. As a result, the *Close a panel* event will be processed.
+
+#### Dashboards/Low-Code Apps: Migration warning would incorrectly appear when the dashboard or low-code app was up to date [ID 42312]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a check was performed to determine whether a dashboard or a low-code app had to be migrated to the latest version, and the dashboard or low-code was already up to date, in some cases, the migration warning popup would incorrectly appear.
