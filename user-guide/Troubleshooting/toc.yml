@@ -237,6 +237,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Failed getting progress notices during upgrade
+            topicUid: KI_SLNetIPC_Errors_During_Upgrade
           - name: SLProtocol crash when restarting elements used by enhanced services
             topicUid: KI_SLProtocol_Crash_Enhanced_Services
           - name: Sticky element alarm state caused by correlation rules

@@ -7,7 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| ["Failed getting progress from http://slnetipc:8004/UpgradeService..." notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
+| ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
 | [Inconsistent service impact of alarms after element is stopped and restarted](xref:KI_Inconsistent_service_impact) | All currently supported versions | | August 9, 2024 |
@@ -24,7 +24,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| ["Failed getting progress from http://slnetipc:8004/UpgradeService..." notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
+| ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
 | [Inconsistent service impact of alarms after element is stopped and restarted](xref:KI_Inconsistent_service_impact) | All currently supported versions | | August 9, 2024 |
@@ -66,7 +66,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| ["Failed getting progress from http://slnetipc:8004/UpgradeService..." notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
+| ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
