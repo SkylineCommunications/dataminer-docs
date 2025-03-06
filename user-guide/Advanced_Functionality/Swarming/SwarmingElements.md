@@ -4,22 +4,16 @@ uid: SwarmingElements
 
 # Swarming elements
 
-With DataMiner Swarming, you can swarm basic elements from one DataMiner Agent to another within a cluster. You can do so in DataMiner Cube or via an Automation script.
+With DataMiner Swarming, you can swarm basic elements from one DataMiner Agent to another within a cluster. You can do so [in DataMiner Cube](#swarming-elements-in-dataminer-cube) or [via an Automation script](#swarming-elements-via-automation).
 
-When you are swarming an element so it gets hosted on a different DataMiner Agent, a temporary transition occurs. To indicate this, the following message will be displayed:
+When you are swarming an element so it gets hosted on a different DataMiner Agent, a temporary transition occurs. While this happens, a message will be displayed to inform users that the element is currently swarming. The ability to open element cards or change the element configuration for the involved element will be temporarily suspended. Once the element migration is complete, it will become accessible again.
 
-```txt
-'ElementName' is currently swarming.
-           More info
-```
+At present, Swarming is only possible with **regular elements**. Refer to [Upcoming features](xref:Swarming#upcoming-features) for information on which other types of elements will be supported in the future.
 
-During this transition, the ability to open element cards or change element configuration for the involved element will be temporarily suspended. Once the element migration is complete, it will become accessible again.
+Because of the way swarming functions, it is not possible to swarm smart-serial elements in server mode, elements polling localhost, and elements receiving SNMP traps in a DMS with trap distribution disabled on at least one DMA.
 
 > [!NOTE]
->
-> - To be able to trigger swarming for an element, you need the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission as well as config rights on the element. Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded from a version that does not support Swarming to a version that does support it.
-> - Because of the way swarming functions, it is not possible to swarm elements polling localhost, smart-serial elements in server mode, and elements receiving SNMP traps in a DMS with trap distribution disabled on at least one DMA.
-> - Swarming is currently only possible with regular elements. See [Upcoming features](xref:Swarming#upcoming-features).
+> To be able to trigger swarming for an element, you need the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission as well as config rights on the element. Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded from a version that does not support Swarming to a version that does support it.
 
 ## Swarming elements in DataMiner Cube
 
@@ -35,7 +29,7 @@ To swarm elements in DataMiner Cube:
 
 ## Swarming elements via Automation
 
-To swarm elements via an Automation script, call the SwarmingHelper.Create method and indicate the elements that need to be swarmed and ID of the node they need to be swarmed to.
+To swarm elements via an Automation script, call the SwarmingHelper.Create method and indicate the elements that need to be swarmed and the ID of the node they need to be swarmed to.
 
 For example:
 
@@ -45,7 +39,7 @@ swarmingResult[] swarmingResults = SwarmingHelper.Create(engine.GetUserConnectio
            .ToAgent(789);
 ```
 
-For more examples refer to [Configuring a script to swarm elements](xref:SwarmingScript).
+For more detailed examples, refer to [Configuring a script to swarm elements](xref:SwarmingScriptElement).
 
 > [!TIP]
 > You can also find a ready-to-use [Swarm Elements](https://catalog.dataminer.services/details/ffb0166d-9394-4f14-abd0-48e2175484a0) script in the Catalog or have a look at the [SLC-AS-SwarmElements code](https://github.com/SkylineCommunications/SLC-AS-SwarmElements) on GitHub.

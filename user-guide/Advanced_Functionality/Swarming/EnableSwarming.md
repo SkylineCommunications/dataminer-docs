@@ -66,6 +66,8 @@ To run a prerequisites check using SLNetClientTest tool:
 > | SetAlarmProperty(int, int, string, string) | SetAlarmProperty(AlarmTreeID, string, string) |
 > | SetAlarmProperties(int, int, string[], string[]) | SetAlarmProperties(AlarmTreeID, string[], string[]) |
 > | AcknowledgeAlarm(int, int, string) | AcknowledgeAlarm(AlarmTreeID, string) |
+>
+> For detailed info, refer to [Preparing scripts and connectors for Swarming](xref:SwarmingPrepare).
 
 ## Enabling Swarming
 
@@ -73,9 +75,9 @@ When you have made sure prerequisites are met, and you are ready to enable Swarm
 
 To enable Swarming using SLNetClientTest tool:
 
-1. Optionally (but highly recommended), [take a backup](xref:Backing_up_a_DataMiner_Agent) of your DataMiner Agents.
+1. Optionally (but highly recommended), first [take a backup](xref:Backing_up_a_DataMiner_Agent) of your DataMiner Agents.
 
-   > [!IMPORTANT]
+   > [!NOTE]
    > When you enable swarming, the element configuration will be moved from disk to database. While you can [roll back this change](xref:SwarmingRollback), only a partial rollback is possible. The sooner you decide to roll back, the smaller the impact of the rollback will be. This is why we highly recommend taking a backup before enabling Swarming.
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
@@ -97,18 +99,23 @@ To enable Swarming using SLNetClientTest tool:
 
    If SLNetClientTest tool is unable to reach any of the Agents at the time of the check, for example because an Agent is stopped, Swarming will not be enabled.<!-- RN 41217 -->
 
-   After Swarming is enabled, when DataMiner starts up again for the first time, the existing element XML files will be moved from the disk to the database. This can also take several minutes. While this is happening, a message will be displayed on any clients that are trying to connect.
+1. Restart DataMiner.
 
-1. Make sure that the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission is enabled for users that need to be able to swarm DataMiner objects.
+   During the DataMiner startup, the existing element XML files will be moved from the disk to the database. This can take several minutes. While this is happening, a message will be displayed on any clients that are trying to connect.
+
+   > [!TIP]
+   > In case you encounter DataMiner startup issues after you have enabled Swarming, refer to [Troubleshooting - DataMiner startup issues](xref:Troubleshooting_Startup_Issues#swarming-issue).
+
+1. Make sure that the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission is enabled for users that need to be able to swarm DataMiner objects (see [Configuring a user group](xref:Configuring_a_user_group)).
 
    Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded to version 10.5.1/10.6.0 or higher.
 
-> [!NOTE]
+> [!IMPORTANT]
 > The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g. *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](wref:SwarmingRollback).
 
 ## Verifying that the feature is active
 
-Once all Agents have been restarted, you can verify whether the Swarming feature has been activated by checking if the following line is present in the *SLSwarming.txt* log file:
+You can verify whether the Swarming feature has been activated by checking if the following line is present in the *SLSwarming.txt* log file:
 
 `SwarmingManager::SwarmingManager|INF|-1|Swarming enabled`
 
@@ -118,6 +125,3 @@ Once Swarming is enabled, you can go to *System Center* > *Agents* > *Status* > 
 
 > [!NOTE]
 > Elements for which swarming is not supported will not be shown in this UI.
-
-> [!TIP]
-> In case you encounter DataMiner startup issues after you have enabled Swarming, refer to [Troubleshooting - DataMiner startup issues](xref:Troubleshooting_Startup_Issues#swarming-issue).

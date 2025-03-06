@@ -1,5 +1,5 @@
 ---
-uid: SwarmingScript
+uid: SwarmingScriptElement
 ---
 
 # Configuring a script to swarm elements

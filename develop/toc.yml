@@ -5893,7 +5893,9 @@ items:
         - name: Preparing scripts and connectors for Swarming
           topicUid: SwarmingPrepare
         - name: Configuring a script to swarm elements
-          topicUid: SwarmingScript
+          topicUid: SwarmingScriptElement
+        - name: Configuring a script to swarm bookings
+          topicUid: SwarmingScriptBooking
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:
