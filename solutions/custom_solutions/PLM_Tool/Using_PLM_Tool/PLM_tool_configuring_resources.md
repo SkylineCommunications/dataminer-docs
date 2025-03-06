@@ -41,4 +41,10 @@ To configure a new PLM resource subscriber:
 
    - Enter the **parameter ID** (PID) for the parameter that correlates to the resource being created.
 
+     > [!NOTE]
+     > You can use a **table PID**, a **column PID**, or a the ID of a **standalone parameter**.
+     >
+     > - If a **table PID** is provided, the resource name is validated as a **primary key or display key**.
+     > - If a **column PID** is used, the validation looks for matching values within the specified column.
+
 1. Select *OK*.
