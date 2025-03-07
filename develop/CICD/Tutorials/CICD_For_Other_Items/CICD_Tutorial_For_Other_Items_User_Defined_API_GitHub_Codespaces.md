@@ -1,5 +1,6 @@
 ---
 uid: CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces
+keywords: Skyline.DataMiner.Sdk, Tutorial
 ---
 
 # Registering a new version of a user-defined API to the Catalog using GitHub Codespaces
@@ -119,7 +120,7 @@ Expected duration: 10 minutes
    ```text
    Error: DATAMINER_TOKEN is not set. Release not possible!
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
-   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register Catalog Items.
+   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register catalog items, Download catalog versions and Read catalog items.
    Copy the value of the token.
    Then set a DATAMINER_TOKEN secret in your repository settings: <Dynamic Link>
    ```
@@ -132,6 +133,7 @@ Expected duration: 10 minutes
 
    - *Register catalog items*
    - *Read catalog items*
+   - *Download catalog versions*
 
    > [!TIP]
    > See also: [dataminer.services keys](xref:GitHub_Secrets#dataminerservices-keys)

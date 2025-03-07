@@ -1,18 +1,18 @@
 ---
-uid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub
+uid: CICD_Tutorial_For_Other_Items_Multi-Package_VisualStudio_And_GitHub
 keywords: Skyline.DataMiner.Sdk, Tutorial
 ---
 
-# Registering a new version of a multi-artifact DataMiner package to the Catalog using Visual Studio and GitHub
+# Registering a new version of multiple DataMiner packages to the Catalog using Visual Studio and GitHub
 
-In this tutorial, you will learn how to develop, (pre-)release, and upload a DataMiner package to the DataMiner Catalog with a basic CI/CD pipeline using Visual Studio and GitHub. This package will contain multiple artifacts:
+In this tutorial, you will learn how to develop, (pre-)release, and upload multiple DataMiner packages to the DataMiner Catalog with a basic CI/CD pipeline using Visual Studio and GitHub. This package will contain multiple artifacts:
 
-- Automation script: TutorialScript1
-- Automation script: TutorialScript2
-- Automation script library: TutorialLibrary
-- Ad hoc data source: TutorialDataSource
+- TutorialPackage1:
+  - Automation script: TutorialScript1
 
-The package will include a simple .txt file that will be read out during installation, generating an information event with the information from the file.
+- TutorialPackage2:
+  - Automation script: TutorialScript1
+  - Automation script: TutorialScript2
 
 Expected duration: 15 minutes
 
@@ -21,12 +21,12 @@ Expected duration: 15 minutes
 - A [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 - [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
 - [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-- An [organization key](xref:Managing_DCP_keys#organization-keys) or [system key](xref:Managing_DCP_keys#system-keys) or account with the *Owner* role in order to access/create keys.
+- An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create keys.
 
 ## Overview
 
 - [Step 1: Add code-based content](#step-1-add-code-based-content)
-- [Step 2: Add installation-specific code](#step-2-add-installation-specific-code)
+- [Step 2: Specify what needs to be in the package](#step-2-specify-what-needs-to-be-in-the-package)
 - [Step 3: Create a GitHub repository](#step-3-create-a-github-repository)
 - [Step 4: Check the GitHub Actions](#step-4-check-the-github-actions)
 - [Step 5: Create and add a secret](#step-5-create-and-add-a-secret)
@@ -36,19 +36,35 @@ Expected duration: 15 minutes
 
 Start by adding all code-based content into a Visual Studio solution:
 
-1. Create a DataMiner package project:
+1. Create a first DataMiner package project:
 
    1. Open Visual Studio, and select *Create a new project*.
 
    1. Select the *DataMiner Package Project* template, and click *Next*.
 
-   1. Enter the project name `TutorialPackage`.
+   1. Enter the project name `TutorialPackage1`.
 
    1. Make sure *Place solution and project in the same directory* is **not selected**, and click *Next*.
 
    1. Fill in your name as the author and keep *Create DataMiner Package* selected.
 
    1. Under *Add GitHub CI/CD Workflow (Overwrite Existing)*, select *Basic*.
+
+   1. Click *Create*.
+
+1. Create a second DataMiner package project:
+
+   1. Open Visual Studio, and select *Create a new project*.
+
+   1. Select the *DataMiner Package Project* template, and click *Next*.
+
+   1. Enter the project name `TutorialPackage2`.
+
+   1. Make sure *Place solution and project in the same directory* is **not selected**, and click *Next*.
+
+   1. Fill in your name as the author and keep *Create DataMiner Package* selected.
+
+   1. Under *Add GitHub CI/CD Workflow (Overwrite Existing)*, select *None*.
 
    1. Click *Create*.
 
@@ -78,72 +94,55 @@ Start by adding all code-based content into a Visual Studio solution:
 
    1. Click *Create*.
 
-1. Add a DataMiner Automation script library project:
+## Step 2: Specify what needs to be in the package
 
-   1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
+In this step, you will focus on the way to specify what needs to be in the package. This can be done in multiple ways but we will focus on using [Visual Studio solution filters](xref:skyline_dataminer_sdk_solution_filter_files).
 
-   1. Select the *DataMiner Automation Script Library Project* template, and click *Next*.
+### Create solution filters
 
-   1. Enter the project name `TutorialLibrary`.
+#### TutorialPackage1
 
-   1. Fill in your name as the author.
+1. In the Solution Explorer, unload *TutorialPackage2* and *TutorialScript2* (right-click a project and select *Unload Project*).
 
-   1. Click *Create*.
+1. Right-click the solution and select *Save As Solution Filter* and specify a name (e.g. `TutorialPackage1.slnf`).
 
-1. Add a DataMiner ad hoc data source project:
+#### TutorialPackage2
 
-   1. In the Solution Explorer, at the very top, right-click the solution *TutorialPackage* and select *Add > new project*.
+1. In the Solution Explorer, reload *TutorialPackage2* and *TutorialScript2* (right-click a project and select *Reload Project*)
 
-   1. Select the *DataMiner Ad Hoc Data Source Project* template, and click *Next*.
+1. Unload *TutorialPackage1* (right-click a project and select *Unload Project*).
 
-   1. Enter the project name `TutorialDataSource`.
+1. Right-click the solution and select *Save As Solution Filter* and specify a name (e.g. `TutorialPackage2.slnf`).
 
-   1. Fill in your name as the author.
+### Update package projects
 
-   1. Click *Create*.
+#### TutorialPackage1
 
-## Step 2: Add installation-specific code
+1. In the Solution Explorer, navigate to the project *TutorialPackage1*, open the directory *PackageContent* and double-click to open the *ProjectReferences.xml* file.
 
-In this step, you will focus on the extra code that should be executed when the content is installed.
+1. Modify the **project references**:
 
-1. Add the **setup content**:
+    1. Replace ProjectReference with new SolutionFilter:
 
-   1. In the Solution Explorer, navigate to the project *TutorialPackage* and right-click the *SetupContent* folder.
+       ```xml
+       <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
+         <SolutionFilter Include="..\TutorialPackage1.slnf" />
+       </ProjectReferences>
+       ```
 
-   1. Select *Add > New Item*.
+#### TutorialPackage2
 
-   1. Select to add a new text file (.txt), and give it the name `MyConfig.txt`.
+1. In the Solution Explorer, navigate to the project *TutorialPackage2*, open the directory *PackageContent* and double-click to open the *ProjectReferences.xml* file.
 
-   1. Write `Hello World!` as the content and save the file.
+1. Modify the **project references**:
 
-1. Write the **installation code**:
+    1. Replace ProjectReference with new SolutionFilter:
 
-   1. In the Solution Explorer, navigate to the project *TutorialPackage* and double-click to open the *TutorialPackage.cs* file.
-
-   1. Change the content of the *Install* method to the following:
-
-      ```csharp
-         try
-         {
-            engine.Timeout = new TimeSpan(0, 10, 0);
-            engine.GenerateInformation("Starting installation");
-            var installer = new AppInstaller(Engine.SLNetRaw, context);
-            installer.InstallDefaultContent();
-   
-            string setupContentPath = installer.GetSetupContentDirectory();
-   
-            // Custom installation logic can be added here for each individual install package.
-            string pathToConfig = System.IO.Path.Combine(setupContentPath, "MyConfig.txt");
-            var config = System.IO.File.ReadAllText(pathToConfig);
-            engine.GenerateInformation($"Tutorial installation ran with config: {config}");
-         }
-         catch (Exception e)
-         {
-            engine.ExitFail($"Exception encountered during installation: {e}");
-         }
-      ```
-
-   1. Save the changes
+       ```xml
+       <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
+         <SolutionFilter Include="..\TutorialPackage2.slnf" />
+       </ProjectReferences>
+       ```
 
 ## Step 3: Create a GitHub repository
 

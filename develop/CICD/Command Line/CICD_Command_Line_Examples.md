@@ -23,7 +23,7 @@ You will also need *DATAMINER_TOKEN* as a secret. This will be the key for the *
 
 ```powershell
 $env:DATAMINER_TOKEN = "MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="$DATAMINER_TOKEN"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
 
 ### Ubuntu terminal
@@ -55,7 +55,7 @@ Below, you can find the actual code for creation and deployment, assuming you ha
 
 ```bash
 export DATAMINER_TOKEN="MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="$DATAMINER_TOKEN"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
 
 ## Uploading and deploying connectors

@@ -56,7 +56,8 @@ jobs:
                 dotnet publish \
                   -p:Version="0.0.$BUILD_ID-prerelease" \
                   -p:VersionComment="This is just a pre-release version." \
-                  -p:CatalogPublishKeyName="$DATAMINER_TOKEN"
+                  -p:CatalogPublishKeyName="DATAMINER_TOKEN" \
+                  -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
 
 On a **Windows** runner:
@@ -94,7 +95,8 @@ jobs:
                 dotnet publish `
                   -p:Version="0.0.$BUILD_ID-prerelease" `
                   -p:VersionComment="This is just a pre-release version." `
-                  -p:CatalogPublishKeyName="$env:DATAMINER_TOKEN";
+                  -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+                  -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN";
 ```
 
 ### Concourse pipeline for connectors
