@@ -40,6 +40,12 @@ When a multivariate pattern is detected in new trend data, suggestion events are
 
 From now on, those suggestion events will be grouped into a single incident, which will be shown as a single line in both the *Suggestion events* tab and the *Patterns* tab of the Alarm Console.
 
+#### System Center - System settings: 'Time to live' section will no longer be available when Cube is connected to a DMS using STaaS [ID 42333]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In *System Center > System settings*, the *Time to live* section will no longer be available when Cube is connected to a DMS using STaaS.
+
 ### Fixes
 
 *No fixes have been added yet.*
