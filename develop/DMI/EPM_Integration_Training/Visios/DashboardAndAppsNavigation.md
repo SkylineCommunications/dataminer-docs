@@ -12,7 +12,7 @@ To do so, use a **Link** shape data field. The value has to be the dashboard or 
 http://<DMAIP>/dashboard/#/db/Training/Station/01.%20Device%20Overview.dmadb?data={"version":1,"feed":null,"components":[{"cid":1,"select":{"epm-selections":["[param:[cardVar: _elementInfo],901]/5502/[fieldId]"]}}],"feedAndSelect":{}}
 ```
 
-For detailed information about the JSON syntax, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
+For detailed information about the JSON syntax, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_URL).
 
 To link to EPM objects in this JSON syntax, you will need to use the **epm-selections** field, with the DMA ID, element ID, field PID and primary key value, separated by forward slashes. This field has to be used within a component field, which means you will need to find the ID of the component. You can do so by editing the dashboard or low-code app and looking up the number in the lower right corner of the component:
 
@@ -30,4 +30,4 @@ Here is an example of what this will look like in a live system:
 > See also:
 >
 > - [Linking a shape to a dashboard component](xref:Linking_a_shape_to_a_dashboard_component)
-> - [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL)
+> - [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_URL)
