@@ -547,6 +547,14 @@ article ul li, article ol li {
     }
 }
 
+.navbar-brand {
+  width: 150px;
+}
+
+.nav-item {
+  display: none;
+}
+
 a.backtotoplink
 {
 	text-decoration: none;
