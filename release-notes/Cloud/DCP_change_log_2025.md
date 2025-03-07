@@ -17,8 +17,7 @@ Note: the button can remain disabled after logging in when the user does not hav
 
 ### 6 March 2025 - Fix - Catalog - Increased polling duration for deployment status [ID 42405]
 
-When deploying an item from the Catalog, the duration for checking the status of the active deployment has been increased to around 5 minutes, before this was only 10 seconds.
-If the deployment would still be pending after a certain amount of polling tries, it will result in a timeout state, before it would remain on pending after 10 seconds.
+When an item was deployed from the Catalog, it could occur that the status of the deployment was not updated correctly, showing that the deployment was still pending even though this was no longer the case. To resolve this issue, the duration for checking the status of the active deployment has been increased to around 5 minutes, while before this was only 10 seconds. If the deployment is still pending after a certain amount of polling tries, this will result in a timeout state.
 
 ### 6 March 2025 - Fix - Catalog API - Sorting catalog items by name [ID 42398]
 
