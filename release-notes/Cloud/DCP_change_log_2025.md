@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 7 March 2025 - Enhancement - Improved export of usage data [ID 42378]
+
+Export of usage data to a csv file would fail if there was a large amount of data to be retrieved. Export has been made more performant and is able to handle large amount of data now.
+
 ### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
 A new call is available that allows users to get all the Catalog item types without the need to authenticate.
