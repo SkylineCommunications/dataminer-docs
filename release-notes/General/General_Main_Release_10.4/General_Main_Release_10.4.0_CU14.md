@@ -28,3 +28,13 @@ A number of security enhancements have been made.
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 Up to now, aggregation alarms would not work as intended on DataMiner Systems using a Cassandra Cluster database or Storage as a Service (STaaS).
+
+#### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When a query using ad hoc data sources was executed with real-time updates enabled, up to now, the following message could incorrectly appear:
+
+```txt
+Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.
+```
