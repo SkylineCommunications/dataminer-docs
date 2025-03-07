@@ -6,7 +6,8 @@
   --color-toc-hover: #4c4c4c;
   --color-background: #ffffff;
   --color-background-subnav: #f2f2f2;
-  --color-background-dark: #00517D;
+  --color-background-dark: #2563eb;
+  /* --color-background-dark: #00517D; */
   --color-background-table-alt: #f9f9f9;
   /* --color-background-quote: #69696e; */
   --color-background-quote: #747474;
@@ -124,6 +125,7 @@ h2,
 .h2,
 h3,
 .h3 {
+  font-family: "SkylineSans", sans-serif;
   font-weight: 600;
 }
 
@@ -133,6 +135,7 @@ h5,
 .h5,
 h6,
 .h6 {
+  font-family: "SkylineSans", sans-serif;
   font-weight: 600;
 }
 
@@ -487,14 +490,14 @@ article ul li, article ol li {
 
 @font-face {
   font-family: "Inter";
-  src: url("../fonts/Inter-VariableFont_opsz,wght.ttf");
+  src: url("/fonts/Inter-VariableFont_opsz,wght.ttf");
   font-weight: 400 800;
   font-display: swap;
 }
  
 @font-face {
   font-family: "SkylineSans";
-  src: url("../fonts/SkylineSans-Black.ttf");
+  src: url("/fonts/SkylineSans-Black.ttf");
   font-weight: 900;
 }
 
