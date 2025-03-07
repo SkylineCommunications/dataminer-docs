@@ -19,11 +19,13 @@ classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width
 %% Define blocks %%
 DMAStartupIssues([DMA startup issues])
 AgentNotLicensed{{"Agent not licensed message in Cube? <br/>"}}
+SwarmingEnabled{{"Swarming recently enabled? <br/>"}}
 SLNetComFailure{{"SLNetCom failure logged in SLDataMiner.txt? <br/>"}}
 IncorrectIPAddresses{{"Incorrect IP addresses in DMS.xml? <br/>"}}
 NATSErrors{{"Errors related to NATS in SLDataMiner.txt + SLWatchdog2.txt? <br/>"}}
 CassandraErrors{{"Errors related to Cassandra in SLErrors.txt? <br/> "}}
 LicensingIssue["Licensing issue"]
+SwarmingIssue["Swarming issue"]
 IPChangeIssue["IP change issue"]
 NATSIssue["NATS issue"]
 CassandraIssue["Cassandra issue"]
@@ -32,7 +34,9 @@ ContactTechSupport["Contact tech support"]
 DMAStartupIssues --- AgentNotLicensed
 Home([Start page])
 AgentNotLicensed --- |YES| LicensingIssue
-AgentNotLicensed --- |NO| SLNetComFailure
+AgentNotLicensed --- |NO| SwarmingEnabled
+SwarmingEnabled --- |YES| SwarmingIssue
+SwarmingEnabled --- |NO| SLNetComFailure
 SLNetComFailure --- |YES| IPChangeIssue
 SLNetComFailure --- |NO| IncorrectIPAddresses
 IncorrectIPAddresses --- |YES| IPChangeIssue
@@ -44,14 +48,15 @@ CassandraErrors --- |NO| ContactTechSupport
 %% Define hyperlinks %%
 click Home "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click LicensingIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#licensing-issue"
+click SwarmingIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#swarming-issue"
 click IPChangeIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#ip-change-issue"
 click NATSIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#nats-issue"
 click CassandraIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#cassandra-issue"
 click ContactTechSupport "/user-guide/Troubleshooting/Contacting_tech_support.html"
 %% Apply styles to blocks %%
 class DMAStartupIssues,ContactTechSupport DarkBlue;
-class LicensingIssue,IPChangeIssue,NATSIssue,CassandraIssue classExternalRef;
-class AgentNotLicensed,SLNetComFailure,IncorrectIPAddresses,NATSErrors,CassandraErrors Blue;
+class LicensingIssue,SwarmingIssue,IPChangeIssue,NATSIssue,CassandraIssue classExternalRef;
+class AgentNotLicensed,SwarmingEnabled,SLNetComFailure,IncorrectIPAddresses,NATSErrors,CassandraErrors Blue;
 class Home LightBlue;
 ```
 
@@ -93,6 +98,18 @@ DataMiner cannot find a valid license to run the Agent. This issue may be caused
 ## IP change issue
 
 Two different DataMiner startup issues are related to IP changes: DataMiner may be trying to [connect to an old IP address](#dataminer-is-trying-to-connect-to-an-old-ip-address), or there may be [incorrect IP addresses in *DMS.xml*](#incorrect-ip-addresses-in-dmsxml-cause-ip-conflicts).
+
+### Swarming issue
+
+If you have just enabled the [Swarming](xref:Swarming) feature and DataMiner does not startup:
+
+- Double-check whether the DataMiner System uses a database compatible with Swarming. See [Prerequisites](xref:EnableSwarming#prerequisites).
+
+- Check the *SLErrors.txt* and *SLSwarming.txt* log files for swarming-related errors.
+
+- Double-check the *Swarming.xml* configuration file for errors.
+
+- Check *SLDataMiner.txt* and *SLNet.txt* for any critical exceptions (e.g. an invalid setup is detected).
 
 ### DataMiner is trying to connect to an old IP address
 
