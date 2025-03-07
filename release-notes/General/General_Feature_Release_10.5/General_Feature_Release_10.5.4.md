@@ -529,3 +529,10 @@ The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packa
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Problem when performing actions involving migrated elements [ID 42400]
+
+<!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element had been migrated from one DataMiner Agent to another, in some rare cases, certain actions involving that migrated element (e.g. a deletion of the element) would fail until the DataMiner Agent was restarted.
