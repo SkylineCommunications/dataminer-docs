@@ -10,6 +10,9 @@ The content and screenshots for this tutorial have been created using DataMiner 
 
 Expected duration: 20 minutes
 
+>[!TIP]
+>See also: [Kata #60: Building a customer-centric system view with services](https://community.dataminer.services/courses/kata-60/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
