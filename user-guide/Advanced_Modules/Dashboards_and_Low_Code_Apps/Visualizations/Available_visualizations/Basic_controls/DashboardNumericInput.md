@@ -33,7 +33,7 @@ In the *Settings* pane, you can also configure the following optional settings:
 - *Maximum*: The maximum value for the numeric input.
 
 > [!NOTE]
-> From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37736 -->, you can drag data to the component to link it to that data, or [specify data input in the URL](xref:Specifying_data_input_in_a_dashboard_URL). This way, the component will be filled in based on the linked data, but users will still be able to modify the value.
+> From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37736 -->, you can drag data to the component to link it to that data, or [specify data input in the URL](xref:Specifying_data_input_in_URL). This way, the component will be filled in based on the linked data, but users will still be able to modify the value.
 
 ## Component actions
 

@@ -243,5 +243,5 @@ For each table row that was added in [step 1](#step-1-create-a-new-virtual-conne
 - [Visio drawings](xref:visio)
 - [Getting started with basic shapes](xref:Getting_started_with_basic_shapes)
 - [Component data](xref:Component_Data)
-- [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL)
+- [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_URL)
 - [Generating shapes based on table rows](xref:Generating_shapes_based_on_table_rows)

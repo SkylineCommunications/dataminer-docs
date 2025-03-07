@@ -6,7 +6,7 @@ uid: DashboardSearchInput
 
 Available from DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 onwards<!--  RN 39555 -->. This basic control allows users to enter text that will then be available as text data in the dashboard or low-code app. The text data can be used by queries and by script parameters in low-code app actions. This text data can also be cleared with an "x" button available in the input.
 
-You can drag data to the component to link it to that data, or [specify data input in the dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL). This way, the component will be filled in based on the data, but users will still be able to modify the value.
+You can drag data to the component to link it to that data, or [specify data input in the dashboard URL](xref:Specifying_data_input_in_URL). This way, the component will be filled in based on the data, but users will still be able to modify the value.
 
 The following options are available to fine-tune the component layout:
 

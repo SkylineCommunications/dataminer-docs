@@ -16,7 +16,7 @@ From DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 onwards, these components are 
 - Other: [List](xref:DashboardList), [tree](xref:DashboardTree), [parameter picker](xref:DashboardParameterPicker), and [EPM picker](xref:DashboardEPMPicker) components.
 
 > [!NOTE]
-> Feeds can be pre-configured in dashboard URLs. See [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL).
+> Feeds can be pre-configured in dashboard URLs. See [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_URL).
 
 > [!TIP]
 > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12, the term "feeds" is also used for [component data](xref:Component_Data) and [URL data](xref:URL_data).
