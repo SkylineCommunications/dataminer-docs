@@ -11,9 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 6 March 2025 - Fix - Catalog - Deploy button state when not authenticated [ID 42439]
 
-The deploy button of a catalog version will now be disabled if there are any issues with the version.
-Before the button would always be enabled if the user was not authenticated.
-Note: the button can remain disabled after logging in when the user does not have a working cloud connected DMS
+The *Deploy* button for a Catalog version was always enabled when the user was not authenticated, even if the version had issues. This occurred because certain checks could not be performed before logging in. This issue has now been resolved. The *Deploy* button will be correctly disabled if there are any issues with the version, regardless of authentication status. If a user is not logged in, the button may still appear enabled initially, but once they log in, additional checks will be performed. If any issues are detected, such as the absence of a working DMS connected to dataminer.services, the *Deploy* button will remain disabled.
 
 ### 6 March 2025 - Fix - Catalog - Increased polling duration for deployment status [ID 42405]
 
