@@ -115,7 +115,7 @@ Before you can actually use the URL you have copied, some manual adjustments are
     <code>https://<span style="background-color: #FFFF00">\<DMAIP\></span>/dashboard/#/db/Generic Dummy.dmadb?data=%7B%22version%22%3A1,%22feed%22%3Anull,%22components%22%3A%5B%7B%22cid%22%3A1,%22select%22%3A%7B%22elements%22%3A%5B%22[EscapeDataString:[this elementID]]%22%5D%7D%7D%5D,%22feedAndSelect%22%3A%7B%7D%7D&embed=true</code>
 
 > [!TIP]
-> See also: [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_URL)
+> See also: [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL)
 
 ## Step 3: Create a Visio file and embed the dashboard
 
