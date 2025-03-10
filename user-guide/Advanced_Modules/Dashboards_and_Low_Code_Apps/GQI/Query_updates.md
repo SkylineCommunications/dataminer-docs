@@ -42,11 +42,11 @@ A GQI query can offer various levels of support for updates, depending on the da
 
 The overview below lists all data sources that currently have update support. If a data source is not listed here, this means that there is no update support for it yet.
 
-| Data source | Support level | Support Since Version |
+| Data source | Support level | Supported since |
 | ----------- | -------- | -------- |
-| [Get ad hoc data](xref:Get_ad_hoc_data) | [Real-time events](#query-update-support) |  10.4.4/10.5.0 |
-| [Get parameter table by ID](xref:Get_parameter_table_by_ID) | [Real-time events](#query-update-support) | 10.2.0/10.2.1 |
-| [Get views](xref:Get_views) | [Real-time events](#query-update-support) | 10.3.10/10.4.0 |
+| [Get ad hoc data](xref:Get_ad_hoc_data) | [Real-time events](#query-update-support) | DataMiner 10.4.4/10.5.0 |
+| [Get parameter table by ID](xref:Get_parameter_table_by_ID) | [Real-time events](#query-update-support) | DataMiner 10.2.0/10.2.1 |
+| [Get views](xref:Get_views) | [Real-time events](#query-update-support) | DataMiner 10.3.10/10.4.0 |
 
 > [!NOTE]
 > These updates may have specific limitations. Check the data source documentation for more details.
