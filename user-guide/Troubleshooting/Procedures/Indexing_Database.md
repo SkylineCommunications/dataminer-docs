@@ -65,3 +65,15 @@ When you are using a dedicated clustered storage setup, DataMiner data is stored
   - UserDefinableApiManager
 
   - ProcessAutomationManager
+
+## Further troubleshooting steps
+
+For detailed guidance on diagnosing and resolving indexing database issues, refer to the following pages:
+
+- [Troubleshooting tools](xref:ID_Troubleshooting_Tools): An overview of the tools available for monitoring and diagnosing issues related to the indexing database.
+
+- [Diagnostic procedures](xref:ID_Diagnostic_Procedures): A guide to verifying the health and connectivity of the indexing database, troubleshooting common issues, and resolving shard allocation problems.
+
+- [Common issues](xref:ID_Common_Issues): A list of frequently encountered problems related to OpenSearch database configuration and their potential solutions.
+
+- [Known issues](xref:Known_issues): An overview of known issues, where you may find indexing database problems that have already been documented, along with potential workarounds or fixes.
