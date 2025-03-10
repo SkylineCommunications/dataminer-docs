@@ -10,7 +10,6 @@ The **benefits** of the DataMiner Support Services include:
 - **Unlimited remote technical support** during business hours.
 - [Proactive Support](xref:Proactive_Support) services
 
-  
 > [!TIP]
 > For more information about our regular business hours, refer to our [Support Services Terms](xref:Support_Terms_On_Premises).
 
