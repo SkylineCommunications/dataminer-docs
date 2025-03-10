@@ -18,8 +18,8 @@ In this tutorial, you will learn how to enable Swarming in your DMS and swarm yo
 
 - [Step 1: Deploy the tutorial package from the Catalog](#step-1-deploy-the-tutorial-package-from-the-catalog)
 - [Step 2: Create a dummy element](#step-2-create-a-dummy-element)
-- [Step 3: Enabling Swarming](#step-3-enabling-swarming)
-- [Step 4: Swarming your first element](#step-4-swarming-your-first-element)
+- [Step 3: Enable Swarming](#step-3-enable-swarming)
+- [Step 4: Swarm your first element](#step-4-swarm-your-first-element)
 
 ## Step 1: Deploy the tutorial package from the Catalog
 
@@ -41,13 +41,13 @@ To deploy the package:
 
    ![Package Content](~/user-guide/images/Swarming_Tutorial_Enable_Package_Content.png)
 
-## Step 2: Create a dummy element
+## Step 2: Create a basic test element
 
 In this tutorial we will Swarm an element.
 
-To not impact any ongoing operation, you can create a new basic element.
+To not impact any ongoing operation, you can create a new basic test element.
 
-## Step 3: Enabling Swarming
+## Step 3: Enable Swarming
 
 Swarming has its own set of prerequisites.
 You can use the **Enable Swarming** script deployed with the Catalog package to go through them dynamically.
@@ -73,7 +73,8 @@ You can use the **Enable Swarming** script deployed with the Catalog package to 
 
    In order for Swarming to work, this alarm identifier has been updated which is a breaking change.
    To prevent possible issues as much as possible, there is a check to analyze your scripts automatically for problems.
-   This is not perfect and does not scan everything but will already catch some obvious problems.
+   Unfortunately it's not possible to scan dependencies (e.g. nugets), so these might still contain outdated references.
+   If this would be the case, running these scripts on a Swarming system would throw a clear error message.
 
    Press the **Analyze** and wait for a bit until the results appear. This can take a while, up to several minutes depending on how many scripts and protocols you have.
 
@@ -118,12 +119,14 @@ You can use the **Enable Swarming** script deployed with the Catalog package to 
 
 1. Enabling Swarming
 
-   Once the static requirements are met and there are no AlarmID usage problems detected. A button will appear that you can enable Swarming.
-   Pressing this button will send the enable command to your DMS and will **restart the whole DMS**. Afterwards, Swarming will be enabled.
+   Once the static requirements are met and there are no AlarmID usage problems detected, a button will appear that you can enable Swarming.
+   Pressing this button will send the enable command to your DMS and will **restart the whole DMS**.
+   This process will check the requirements again, so this will take the same time as the step above.
+   After the DataMiner System restart, Swarming will be enabled.
 
    ![AlarmID Usage Problem Fix](~/user-guide/images/Swarming_Tutorial_Enable_No_Problems.png)
 
-## Step 4: Swarming your first element
+## Step 4: Swarm your first element
 
 Now it's time to swarm your first element.
 In general, Swarming means moving the functionality from one host to another host in the same cluster.
@@ -143,7 +146,7 @@ To swarm elements in DataMiner Cube:
 
 1. On the left, select the element(s) you want to swarm.
 
-    Here you can select the dummy element you created in step 2.
+    Here you can select the test element you created in step 2.
     You can swarm more elements if you want, but keep in mind that swarming an element still involves an element restart, which means minimal downtime.
 
 1. On the right, select the destination DMA.
