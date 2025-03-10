@@ -105,3 +105,25 @@ You can use the **Enable Swarming** script deployed with the Catalog package to 
    ![AlarmID Usage Problem Fix](~/user-guide/images/Swarming_Tutorial_Enable_No_Problems.png)
 
 ## Step 4: Swarming your first element
+
+Now it's time to swarm your first element.
+In general, Swarming means moving the functionality from one host to another host in the same cluster.
+
+For elements this is more or less equivalent with a full element restart, but the stop and start are executed on different hosts.
+Swarming elements is possible via the DataMiner Cube client as well as an automation API.
+
+To swarm elements in DataMiner Cube:
+
+1. Go to *System Center* > *Agents* > *Status* and click the *Swarm* button in the lower right corner.
+
+    If you do not see any *Swarm* button here, this means you are not in a cluster environment and working with a single agent. As you cannot swarm to another host, this button is not present.
+
+    If you see a *Migrate* button here instead, this means Swarming was not successfully enabled. If you open this window, you will be using the DELT Export + Import flow instead.
+
+1. On the left, select the element(s) you want to swarm.
+
+1. On the right, select the destination DMA.
+
+1. Click *Swarm*.
+
+For more details about Swarming elements, see the [docs](xref:SwarmingElements).
