@@ -9,25 +9,23 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 6 March 2025 - Fix - Catalog - Deploy button state when not authenticated [ID 42439]
+### 6 March 2025 - Fix - Catalog - Incorrect Deploy button state when not authenticated [ID 42439]
 
-The *Deploy* button for a Catalog version was always enabled when the user was not authenticated, even if the version had issues. This occurred because certain checks could not be performed before logging in. This issue has now been resolved. The *Deploy* button will be correctly disabled if there are any issues with the version, regardless of authentication status. If a user is not logged in, the button may still appear enabled initially, but once they log in, additional checks will be performed. If any issues are detected, such as the absence of a working DMS connected to dataminer.services, the *Deploy* button will remain disabled.
+Previously, the *Deploy* button for a Catalog item version was always enabled when the user was not authenticated, even if the version had issues. This occurred because certain checks could not be performed when the user was not logged in yet. This issue has now been resolved. The *Deploy* button will now be correctly disabled if there are any issues with the version, regardless of authentication status.
 
-### 6 March 2025 - Fix - Catalog - Increased polling duration for deployment status [ID 42405]
+Note that in case the button is displayed as enabled while a user is not logged in, it may still be disabled again after they log in case further issues are detected, such as the absence of a working DMS connected to dataminer.services.
+
+### 6 March 2025 - Fix - Catalog - Deployment status information not updated correctly [ID 42405]
 
 When an item was deployed from the Catalog, it could occur that the status of the deployment was not updated correctly, showing that the deployment was still pending even though this was no longer the case. To resolve this issue, the duration for checking the status of the active deployment has been increased to around 5 minutes, while before this was only 10 seconds. If the deployment is still pending after a certain amount of polling tries, this will result in a timeout state.
 
-### 6 March 2025 - Fix - Catalog API - Sorting catalog items by name [ID 42398]
+### 6 March 2025 - Fix - Catalog API - Incorrect sorting of Catalog items by name [ID 42398]
 
-Items registerd on the Catalog were not correctly setting a property which was being used for sorting.
-When sorting on Name ascending, this would result in all the new items to be on top.
-This issue has been resolved.
+When new items were registered in the Catalog, a property used for sorting was not set correctly. As a consequence, when you sorted by name in ascending order, all new items were shown at the top. This issue has been resolved.
 
-### 6 March 2025 - Fix - Admin - State of settings page when switching dms [ID 42338]
+### 6 March 2025 - Fix - Admin - Settings page state incorrect when switching to other DMS [ID 42338]
 
-When changing a settings on the dms settings page, the section would go in edit mode allowing the user to save the changes.
-If the user would change to another dms settings page, the state of the pase would not be reset resulting in the edit mode actions to be displayed.
-This issue has been resolved.
+When a setting on the DMS settings page was changed in the Admin app, the relevant section went into edit mode, allowing the user to save the changes. However, if the user then opened another DMS settings page, the edit state of the page was not reset, resulting in edit mode actions being displayed while this should not be the case. This issue has been resolved.
 
 ### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
