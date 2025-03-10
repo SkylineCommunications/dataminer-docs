@@ -57,17 +57,7 @@ To run a prerequisites check using SLNetClientTest tool:
    For each prerequisite, the tool will indicate whether the prerequisite is met (*True*) or not (*False*). If you hover over the *Summary* item, you will get a detailed overview of which items cause prerequisites not to be met (e.g. specific scripts, enhanced service connectors, connectors using the obsolete alarm ID format, etc.).
 
 > [!NOTE]
-> Obsolete Engine methods are only included in the prerequisites check from DataMiner 10.5.3 onwards<!--RN 42073-->. If you are using DataMiner 10.5.1 or 10.5.2, these obsolete methods may still be present even if the prerequisite check does not report any issues.
-> The following Engine methods are obsolete and should not be used. Instead, use the corresponding new methods:
->
-> | Obsolete method | New method |
-> |--|--|
-> | GetAlarmProperty(int, int, string) | GetAlarmProperty(AlarmID, string) |
-> | SetAlarmProperty(int, int, string, string) | SetAlarmProperty(AlarmTreeID, string, string) |
-> | SetAlarmProperties(int, int, string[], string[]) | SetAlarmProperties(AlarmTreeID, string[], string[]) |
-> | AcknowledgeAlarm(int, int, string) | AcknowledgeAlarm(AlarmTreeID, string) |
->
-> For detailed info, refer to [Preparing scripts and connectors for Swarming](xref:SwarmingPrepare).
+> Obsolete Engine methods are only included in the prerequisites check from DataMiner 10.5.3 onwards<!--RN 42073-->. If you are using DataMiner 10.5.1 or 10.5.2, these obsolete methods may still be present even if the prerequisite check does not report any issues. For detailed info, refer to [Preparing scripts and connectors for Swarming](xref:SwarmingPrepare#obsolete-engine-methods).
 
 ## Enabling Swarming
 
@@ -99,9 +89,7 @@ To enable Swarming using SLNetClientTest tool:
 
    If SLNetClientTest tool is unable to reach any of the Agents at the time of the check, for example because an Agent is stopped, Swarming will not be enabled.<!-- RN 41217 -->
 
-1. Restart DataMiner.
-
-   During the DataMiner startup, the existing element XML files will be moved from the disk to the database. This can take several minutes. While this is happening, a message will be displayed on any clients that are trying to connect.
+   During DataMiner startup, the existing element XML files will be moved from the disk to the database. This can take several minutes. While this is happening, a message will be displayed on any clients that are trying to connect.
 
    > [!TIP]
    > In case you encounter DataMiner startup issues after you have enabled Swarming, refer to [Troubleshooting - DataMiner startup issues](xref:Troubleshooting_Startup_Issues#swarming-issue).
@@ -113,7 +101,7 @@ To enable Swarming using SLNetClientTest tool:
 > [!IMPORTANT]
 > The migrated element files will be **temporarily** backed up in the *Recycle Bin* (e.g. *2024_11_20 11_03_12_300_ElementFolder_BeforeSwarmingMigration.zip*). We recommend that you store these files somewhere safe if you ever want to access these again later or if you want to be able to [partially roll back Swarming](wref:SwarmingRollback).
 
-## Verifying that the feature is active
+## Verifying whether Swarming has been activated
 
 You can verify whether the Swarming feature has been activated by checking if the following line is present in the *SLSwarming.txt* log file:
 
