@@ -24,7 +24,7 @@ In this tutorial, you will learn how to enable Swarming in your DMS and swarm yo
 
 To deploy the package:
 
-1. Go to the [Kata Swarming package](https://catalog.dataminer.services/details/b087dd80-8a62-4ef0-9321-76964ac4e039) in the DataMiner Catalog.
+1. Go to the [Tutorial - Getting started with Swarming](https://catalog.dataminer.services/details/b087dd80-8a62-4ef0-9321-76964ac4e039) package in the DataMiner Catalog.
 
 1. Deploy the latest version of the package on your DMA using the *Deploy* button.
 
