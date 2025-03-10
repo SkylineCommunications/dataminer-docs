@@ -21,6 +21,9 @@ Normally this file is enough for most scenarios. In case you want to create mult
 </ProjectReferences>
 ```
 
+> [!WARNING]
+> When using Git, make sure that the paths are part of the Git repository as otherwise workflows could fail due to missing files.
+
 These paths are relative to the directory that the Package project is in. Within a normal Visual Studio solution, the following structure is expected:
 
 > - Solution
