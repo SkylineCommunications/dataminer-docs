@@ -301,35 +301,16 @@ UIBlockDefinition blockItem = new UIBlockDefinition
 uiBuilder.AppendBlock(blockItem);
 ```
 
-The initial value has to be a string of an integer or have the following format:
-
-```csharp
-[DoubleValue];[Boolean];[SelectedDiscreetString]
-```
-
-- DoubleValue: Value of the numeric box.
-- Boolean: Indicates whether the discrete checkbox is selected (=true) or cleared (=false).
-- SelectedDiscreetString: selects the discrete parameter with that exact name in case multiple discrete parameters are defined.
-
-Example:
-
-```csharp
-string sel_numericValue = "23.567891;true;Discreet 2";
-```
-
-If you want a checkbox with one or more discrete values, then use the *Extra* property to specify a list of discrete values (separated by semicolons). If you only want a numeric box and no checkbox, then leave the *Extra* property empty. In that case, just set the initial value to the DoubleValue.
-
-If you set the *WantsOnChange* property to "true", then both the checkbox and the discrete combo box will trigger a change.
+The initial value has to be a string of an integer.
 
 Optionally you can provide a RangeHigh (maximum value), a RangeLow (minimum value), a RangeStep (increment or decrement steps) and the number of decimals.
 
 Full example:
 
 ```csharp
-string sel_numericValue = "23.567891;true;Discreet 2";
 UIBlockDefinition numericBlock = new UIBlockDefinition();
 numericBlock.Type = UIBlockType.Numeric;
-numericBlock.InitialValue = sel_numericValue;
+numericBlock.InitialValue = "23.567891";
 numericBlock.DestVar = "num";
 numericBlock.WantsOnChange = true;
 numericBlock.Row = 0;
@@ -340,7 +321,6 @@ numericBlock.RangeHigh = 300;
 numericBlock.RangeLow = 5;
 numericBlock.RangeStep = 5;
 numericBlock.Decimals = 6;
-numericBlock.Extra = "Discreet 1;Discreet 2;Discreet 3";
 uiBuilder.AppendBlock(numericBlock);
 ```
 
