@@ -48,7 +48,7 @@ In this tutorial we will Swarm an element.
 To not impact any ongoing operation, you can create a new basic test element or you can import some demo elements from for example the [Satellite Earth Station Uplink](https://catalog.dataminer.services/details/c8adec4a-e7be-47a4-b7a4-e574e0381fe6) package.
 
 If you create a new element, you must specify the protocol.
-Since we are not doing anything except swarming the element, the protocol does not matter as long as it swarmable.
+Since we are not doing anything except swarming the element, the protocol does not matter as long as it is swarmable.
 In DataMiner 10.5.1, most protocols are swarmable, most notable exceptions are protocols exporting virtual elements and spectrum elements.
 
 See also [Adding Elements](xref:Adding_elements) on how to create a new element.
