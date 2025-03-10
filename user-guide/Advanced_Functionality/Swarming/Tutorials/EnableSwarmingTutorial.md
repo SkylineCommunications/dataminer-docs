@@ -11,6 +11,7 @@ In this tutorial, you will learn how to enable Swarming in your DMS and swarm yo
 
 - A DataMiner System that is [connected to dataminer.services](https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
 - The DataMiner version is 10.5.1/10.6.0[CU0] or higher.
+- A DataMiner System with 2 or more agents. If you are using a single agent, you can follow along, however you won't be able to do the last step (swarming an element).
 - Swarming has its own set of prerequisites, more on that later during the tutorial.
 
 ## Overview
