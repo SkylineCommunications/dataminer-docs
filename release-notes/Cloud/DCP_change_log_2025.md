@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 7 March 2025 - Enhancement - Improved export of usage data [ID 42378]
+### 7 March 2025 - Fix - Admin - Export of large amount of usage data failed [ID 42378]
 
-Export of usage data to a csv file would fail if there was a large amount of data to be retrieved. Export has been made more performant and is able to handle large amount of data now.
+In the Admin app, exporting usage data to a CSV file could fail when there was a large amount of data to be retrieved. The performance of the export has been improved, and it will now be able to handle large amounts of data.
 
 ### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
