@@ -1,6 +1,6 @@
 ---
 uid: skyline_dataminer_sdk
-keywords: Skyline.DataMiner.Sdk, Software Development Kit
+keywords: Skyline.DataMiner.Sdk, Software Development Kit, Package, Catalog, dmapp, cicd
 ---
 
 # Skyline DataMiner SDK
