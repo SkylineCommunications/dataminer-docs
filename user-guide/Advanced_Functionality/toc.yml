@@ -640,7 +640,6 @@ items:
       - name: Partially rolling back Swarming
         topicUid: SwarmingRollback
       - name: Tutorials
-        topicUid: Swarming-Tutorials
         items:
           - name: Enable Swarming Tutorial
           - topicUid: Swarming_Tutorial_Enable

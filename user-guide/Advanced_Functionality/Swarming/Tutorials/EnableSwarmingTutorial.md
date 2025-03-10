@@ -38,9 +38,12 @@ To deploy the package:
 
     Both scripts can be found under the **Kata - Swarming** folder.
 
+   ![Package Content](~/user-guide/images/Swarming_Tutorial_Enable_Package_Content.png)
+
 ## Step 2: Create a dummy element
 
 In this tutorial we will Swarm an element.
+
 To not impact any ongoing operation, you can create a new basic element.
 
 ## Step 3: Enabling Swarming
@@ -67,7 +70,7 @@ You can use the **Enable Swarming** script deployed with the Catalog package to 
 
    ![AlarmID Usage](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage.png)
 
-   In order for Swarming to work, this identifier has been updated which is a breaking change.
+   In order for Swarming to work, this alarm identifier has been updated which is a breaking change.
    To prevent possible issues as much as possible, there is a check to analyze your scripts automatically for problems.
    This is not perfect and does not scan everything but will already catch some obvious problems.
 
@@ -79,9 +82,24 @@ You can use the **Enable Swarming** script deployed with the Catalog package to 
    This script takes as input a reference to an element and will mask all critical alarms of this element.
    It does so by using a **SetAlarmStateMessage** and includes an identifier reference to the alarm it should mask.
    This identifier still uses the old style of **DataMinerID/AlarmID** integer combination. This is no longer correct and will need a **TreeID** instead.
-   If you were to open this script via DIS in Visual Studio, you would see the obsolete warnings.
+   If you were to open this script via DIS in Visual Studio, you would see an obsolete warning.
+   You can also see this if you open the script via the Automation app and press the **Validate** button to check for errors and warnings.
+
+   ![AlarmID Usage Problem Warning](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage_Problem_Warning.png)
 
    Update the code in the foreach block (Line 85) as follows:
+
+    Before:
+
+    ```csharp
+        var maskRequest = new SetAlarmStateMessage();
+        maskRequest.DataMinerID = alarm.DataMinerID;
+        maskRequest.AlarmId = alarm.AlarmID;
+        maskRequest.DesiredStatus = AlarmUserStatus.Mask;
+        maskRequests.Add(maskRequest);
+    ```
+
+    After:
 
     ```csharp
         var maskRequest = new SetAlarmStateMessage(alarm.TreeID, AlarmUserStatus.Mask, "");
@@ -120,10 +138,19 @@ To swarm elements in DataMiner Cube:
 
     If you see a *Migrate* button here instead, this means Swarming was not successfully enabled. If you open this window, you will be using the DELT Export + Import flow instead.
 
+    ![Cube Status](~/user-guide/images/Swarming_Tutorial_Enable_Cube_Status.png)
+
 1. On the left, select the element(s) you want to swarm.
+
+    Here you can select the dummy element you created in step 2.
+    You can swarm more elements if you want, but keep in mind that swarming an element still involves an element restart, which means minimal downtime.
 
 1. On the right, select the destination DMA.
 
+    ![Cube Swarm](~/user-guide/images/Swarming_Tutorial_Enable_Cube_Swarm.png)
+
 1. Click *Swarm*.
+
+    ![Cube Success](~/user-guide/images/Swarming_Tutorial_Enable_Cube_Success.png)
 
 For more details about Swarming elements, see the [docs](xref:SwarmingElements).
