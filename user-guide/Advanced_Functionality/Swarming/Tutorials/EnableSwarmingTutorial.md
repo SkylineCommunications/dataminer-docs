@@ -17,7 +17,7 @@ In this tutorial, you will learn how to enable Swarming in your DMS and swarm yo
 ## Overview
 
 - [Step 1: Deploy the tutorial package from the Catalog](#step-1-deploy-the-tutorial-package-from-the-catalog)
-- [Step 2: Create a dummy element](#step-2-create-a-dummy-element)
+- [Step 2: Create a basic test element](#step-2-create-a-basic-test-element)
 - [Step 3: Enable Swarming](#step-3-enable-swarming)
 - [Step 4: Swarm your first element](#step-4-swarm-your-first-element)
 
@@ -45,7 +45,13 @@ To deploy the package:
 
 In this tutorial we will Swarm an element.
 
-To not impact any ongoing operation, you can create a new basic test element.
+To not impact any ongoing operation, you can create a new basic test element or you can import some demo elements from for example the [Satellite Earth Station Uplink](https://catalog.dataminer.services/details/c8adec4a-e7be-47a4-b7a4-e574e0381fe6) package.
+
+If you create a new element, you must specify the protocol.
+Since we are not doing anything except swarming the element, the protocol does not matter as long as it swarmable.
+In DataMiner 10.5.1, most protocols are swarmable, most notable exceptions are protocols exporting virtual elements and spectrum elements.
+
+See also [Adding Elements](xref:Adding_elements) on how to create a new element.
 
 ## Step 3: Enable Swarming
 
@@ -119,7 +125,7 @@ You can use the **Enable Swarming** script deployed with the Catalog package to 
 
 1. Enabling Swarming
 
-   Once the static requirements are met and there are no AlarmID usage problems detected, a button will appear that you can enable Swarming.
+   Once the static requirements are met and there are no AlarmID usage problems detected, a button will appear that you can press to enable Swarming.
    Pressing this button will send the enable command to your DMS and will **restart the whole DMS**.
    This process will check the requirements again, so this will take the same time as the step above.
    After the DataMiner System restart, Swarming will be enabled.
