@@ -9,7 +9,16 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 6 March 2025 - Fix - Catalog - Incorrect Deploy button state when not authenticated [ID 42439]
+### 11 March 2025 - Enhancement - Catalog - Ranges displayed for all items [ID 42426]
+
+The Catalog now displays version ranges for all item types, whereas previously only connectors would display ranges.
+A range is created when a version ID follows a semantic format (e.g., x.x.x.x or x.x.x), while others are grouped under **"other"**.
+
+### 11 March 2025 - Enhancement - Catalog API - Expose public endpoint for Recommended versions
+
+The Public Catalog API now also has an endpoint which can be used to get the recommended versions of any catalog item.
+
+### 11 March 2025 - Fix - Catalog - Incorrect Deploy button state when not authenticated [ID 42439]
 
 Previously, the *Deploy* button for a Catalog item version was always enabled when the user was not authenticated, even if the version had issues. This occurred because certain checks could not be performed when the user was not logged in yet. This issue has now been resolved. The *Deploy* button will now be correctly disabled if there are any issues with the version, regardless of authentication status.
 
