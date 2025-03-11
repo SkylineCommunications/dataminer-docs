@@ -13,9 +13,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 The Catalog now displays version ranges for all item types. Previously, ranges were only displayed for connectors. A range is created when a version ID follows a semantic format (e.g. x.x.x.x or x.x.x). Other versions are grouped under *other*.
 
-### 11 March 2025 - Enhancement - Catalog API - Public endpoint to retrieve recommended versions
+### 11 March 2025 - Fix - Catalog API - Different recommended versions shown depending on API used
 
-The Public Catalog API now also has an endpoint that can be used to get the recommended versions of any Catalog item.
+Up to now, it could occur that different recommended versions were shown based on which API was called. Now the different Catalog APIs (key, user, and public) use a shared logic to determine the recommended versions for a Catalog item, so this will no longer occur.
 
 ### 11 March 2025 - Fix - Catalog - Incorrect Deploy button state when not authenticated [ID 42439]
 
