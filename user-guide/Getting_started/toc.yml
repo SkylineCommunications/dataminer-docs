@@ -14,6 +14,8 @@ items:
           items:
             - name: Connecting to private data sources with DaaS
               topicUid: Connecting_to_private_data_sources
+        - name: Deploying solution demos
+          topicUid: DaaS_deploying_solution_demos
         - name: Ordering DataMiner credits
           topicUid: Order_DataMiner_credits
         - name: Removing a DaaS system

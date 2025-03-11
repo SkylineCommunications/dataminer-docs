@@ -23,8 +23,24 @@ A number of security enhancements have been made.
 
 ### Fixes
 
+#### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 -->
+
+When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
+
 #### Problem with aggregation alarms on Cassandra Cluster and STaaS [ID 42095]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 Up to now, aggregation alarms would not work as intended on DataMiner Systems using a Cassandra Cluster database or Storage as a Service (STaaS).
+
+#### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When a query using ad hoc data sources was executed with real-time updates enabled, up to now, the following message could incorrectly appear:
+
+```txt
+Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.
+```
