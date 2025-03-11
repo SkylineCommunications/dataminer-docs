@@ -40,9 +40,9 @@ Proceed as follows to upgrade your DataMiner Agent(s) to the latest version:
    > - To upgrade both Agents in a Failover setup, it suffices to select the entry that represents the setup.
 
     > [!WARNING]
-    > To make sure the system functions correctly, all DMAs in a cluster must run the same DataMiner version.
-    > Note that this also means that *rolling upgrades* are **not supported** outside of the *Failover options* mentioned below.
-    > i.e. upgrading a local DMA in the DMS, whilst other non-upgraded DMAs remain running is not supported and can potentially cause severe data corruption. 
+    > To make sure the system functions correctly, **all DMAs** in a cluster must run the **same DataMiner version**.
+    >
+    > This also means that, aside from the Failover options mentioned below, **rolling upgrades are not supported**. Upgrading a local DMA in the DMS while other non-upgraded DMAs remain running is not supported and can potentially cause severe data corruption.
 
 1. If you do not want to use the [default upgrade options](xref:Configuring_the_default_upgrade_options) settings, expand the *Upgrade options* section and select the necessary upgrade options.
 
