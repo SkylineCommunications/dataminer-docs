@@ -34,6 +34,12 @@ uid: General_Feature_Release_10.5.5
 
 ### Enhancements
 
+#### Protocol helper in SLNet will now read the contents of a protocol.xml file via SLXml [ID 42168]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, the protocol helper in SLNet would read the contents of a *protocol.xml* file itself. From now on, it will read the contents of a *protocol.xml* file via SLXml.
+
 #### Security enhancements [ID 42307]
 
 <!-- 42307: MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
