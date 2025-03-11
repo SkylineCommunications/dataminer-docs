@@ -5,7 +5,7 @@ uid: SwarmingScriptElement
 # Configuring a script to swarm elements
 
 > [!TIP]
-> You can find a ready-to-use [Swarm Elements](https://catalog.dataminer.services/details/ffb0166d-9394-4f14-abd0-48e2175484a0) script in the Catalog or have a look at the [SLC-AS-SwarmElements code](https://github.com/SkylineCommunications/SLC-AS-SwarmElements) on GitHub.
+> See also: [Swarming](xref:Swarming)
 
 ## Script with fixed info
 

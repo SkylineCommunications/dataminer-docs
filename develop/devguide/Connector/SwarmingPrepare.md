@@ -33,7 +33,7 @@ This means that code in Automation scripts and connectors may need updates to ac
 
 > [!NOTE]
 >
-> - Keep in mind that you will need to have access to the DataMiner 10.5.1 or 10.5.0 code base to apply these changes, as otherwise the updated/extended requests will not be available yet. However, in most cases, these updated/extended requests can be used to communicate with older server versions.
+> - Keep in mind that you will need to have access to the DataMiner 10.5.1 or 10.5.0 code base to apply these changes, as otherwise the updated/extended requests will not be available yet. You will be able to use these updated/extended requests to communicate with older server versions.
 > - As long as Swarming has not been enabled yet, DataMiner will still be able to deal with old-style alarm references without any risk, even if you have upgraded to a version where Swarming is supported.
 
 ## Obsolete Engine methods
