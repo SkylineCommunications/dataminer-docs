@@ -24,9 +24,7 @@ Swarming can be useful in many situations:
 
 For all of these capabilities, it is important that the different nodes in a cluster have spare capacity so that elements can be moved to them. For optimal ease of use of the Swarming feature, we therefore recommend deploying DataMiner in [subscription mode](xref:Pricing_Commercial_Models) and using as many DataMiner nodes as necessary to make sure there is plenty of capacity to move elements whenever needed.
 
-Swarming can be enabled from DataMiner 10.5.1/10.6.0 onwards<!-- RN 41490 -->. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
-
-Note that when Swarming is enabled, this will result in some major changes to the DataMiner configuration:
+Swarming can be enabled from DataMiner 10.5.1/10.6.0 onwards.<!-- RN 41490 --> Note that when it is enabled, this will result in some major changes to the DataMiner configuration:
 
 - Alarm identifiers will be generated on a per-element basis instead of per Agent to make them unique within the cluster.
 - Element configuration will be stored in the cluster-wide database instead of in the element XML files on the disk of the DataMiner Agent hosting each element.
