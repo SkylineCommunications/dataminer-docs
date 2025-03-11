@@ -293,4 +293,4 @@ Actions:
 
 ## Adding a new DMA to a DMS running STaaS
 
-Detailed guide for [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS); note that there are additional steps if you compare to the instructions for  [adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).
+For a detailed guide, refer to [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS). Note that this involves some additional steps compared to the instructions for [adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).
