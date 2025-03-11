@@ -5830,7 +5830,7 @@ items:
           topicUid: DSI_OpenConfig_Introduction
         - name: Middleware package
           topicUid: DSI_OpenConfig_Middleware
-- name: DataMiner module integrations
+- name: DataMiner feature integrations
   topicUid: DataMinerModuleIntegrations
   items:
     - name: User-Defined APIs
@@ -5888,6 +5888,14 @@ items:
           topicUid: Topology_app_configuration
         - name: DataMiner processes configuration
           topicUid: EPM_DataMiner_processes_config
+    - name: Swarming
+      items:
+        - name: Preparing scripts and connectors for Swarming
+          topicUid: SwarmingPrepare
+        - name: Configuring a script to swarm elements
+          topicUid: SwarmingScriptElement
+        - name: Configuring a script to swarm bookings
+          topicUid: SwarmingScriptBooking
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:
