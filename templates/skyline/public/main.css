@@ -172,6 +172,10 @@ h5 {
   padding: 10px 0px;
 }
 
+h5.border-bottom {
+  font-weight: 400;
+}
+
 h6 {
   font-weight: 600;
   font-size: 18px;
