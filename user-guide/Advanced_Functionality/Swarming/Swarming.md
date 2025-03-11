@@ -41,6 +41,5 @@ At present, swarming is supported for [basic elements](xref:SwarmingElements). F
 In addition, we are working on adding the following functionality soon:
 
 - Support for data offloads in Swarming-enabled systems.
-- Support for swarming of contributing bookings.<!-- RN 41706 -->
 - Support for swarming of special elements: SLA elements, enhanced services, spectrum elements, redundancy group elements, DVE and virtual function child and parent elements, EPM elements, and elements with element connections.
 - Support for automatic switchover of elements in case issues are detected.
