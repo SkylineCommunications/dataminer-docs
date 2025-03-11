@@ -40,6 +40,21 @@ When a multivariate pattern is detected in new trend data, suggestion events are
 
 From now on, those suggestion events will be grouped into a single incident, which will be shown as a single line in both the *Suggestion events* tab and the *Patterns* tab of the Alarm Console.
 
+#### Alarm templates: Warning message will now appear when you try to enable smart baselines for a history set parameter [ID 42326]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you enable smart baselines for a parameter that has its `historySet` option set to true in the connector in question, from now on, a warning message will appear, saying that historySet functionality is incompatible with smart baselines.
+
+> [!NOTE]
+> Although, in the UI, the smart baseline option will be enabled for the parameter in question, the option will have no effect as long as the parameter has its `historySet` option set to true in the connector.
+
+#### System Center - System settings: 'Time to live' section will no longer be available when Cube is connected to a DMS using STaaS [ID 42333]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In *System Center > System settings*, the *Time to live* section will no longer be available when Cube is connected to a DMS using STaaS.
+
 ### Fixes
 
 *No fixes have been added yet.*

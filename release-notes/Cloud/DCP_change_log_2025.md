@@ -24,6 +24,10 @@ Previously, the *Deploy* button for a Catalog item version was always enabled wh
 
 Note that in case the button is displayed as enabled while a user is not logged in, it may still be disabled again after they log in case further issues are detected, such as the absence of a working DMS connected to dataminer.services.
 
+### 7 March 2025 - Fix - Incorrect DataMiner System status on dataminer.services home page [ID 42445]
+
+The status of DataMiner Systems (including DaaS systems) could be shown as "unknown" for users with the "Member" role in the organization. This also resulted in an incorrect status being shown for a newly deployed DaaS system. This issue has been resolved.
+
 ### 6 March 2025 - Fix - Catalog - Deployment status information not updated correctly [ID 42405]
 
 When an item was deployed from the Catalog, it could occur that the status of the deployment was not updated correctly, showing that the deployment was still pending even though this was no longer the case. To resolve this issue, the duration for checking the status of the active deployment has been increased to around 5 minutes, while before this was only 10 seconds. If the deployment is still pending after a certain amount of polling tries, this will result in a timeout state.

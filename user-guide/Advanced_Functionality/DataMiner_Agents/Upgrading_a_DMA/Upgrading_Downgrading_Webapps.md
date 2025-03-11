@@ -4,9 +4,11 @@ uid: Upgrading_Downgrading_Webapps
 
 # Upgrading the DataMiner web apps
 
-From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are available separately from the general DataMiner upgrades. These updates include only the web API and the web apps, leaving all other DataMiner processes untouched. This way you can get access to the latest features and enhancements of the web apps without having to do a full DataMiner upgrade. The web upgrades only require a brief installation and do not necessitate a DataMiner restart, ensuring uninterrupted monitoring and orchestration.
+From DataMiner 10.3.0/10.3.3 onwards, DataMiner web upgrades are **available separately from the general DataMiner upgrades**. These updates include only the web API and the web apps, leaving all other DataMiner processes untouched. This way you can get access to the latest features and enhancements of the web apps without having to do a full DataMiner upgrade. The web upgrades only require a brief installation and do not necessitate a DataMiner restart, ensuring uninterrupted monitoring and orchestration.
 
-Note that it is not possible to upgrade the web apps to a DataMiner 10.5.x version or higher if the DataMiner Agent itself is still running a DataMiner version older than 10.4.0/10.4.1. To install a 10.5.x web upgrade, the server must first be upgraded to at least version 10.4.0.<!--RN 41395-->
+Starting from DataMiner 10.4.0, every **cumulative update of a Main Release includes the same web apps changes as the corresponding DataMiner Feature Release**. For example, all DataMiner web apps changes from Feature Release 10.5.4 are also available in Main Release 10.4.0 (CU13) and 10.5 (CU1). This means that if you are on the Main Release track, you can simply install the latest web upgrade package without having to check for a separate Main Release or Feature Release package. It also means that if you for example build a low-code app using the latest DataMiner Feature Release, your app will also be compatible with the latest Main Release cumulative updates.
+
+Note that it is not possible to upgrade the web apps to a DataMiner 10.5.x version or higher if the DataMiner Agent itself is still running a DataMiner version older than 10.4.0/10.4.1. **To install a 10.5.x web upgrade, the server must first be upgraded to at least version 10.4.0**.<!--RN 41395-->
 
 > [!NOTE]
 >
