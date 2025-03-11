@@ -11,12 +11,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 11 March 2025 - Enhancement - Catalog - Ranges displayed for all items [ID 42426]
 
-The Catalog now displays version ranges for all item types, whereas previously only connectors would display ranges.
-A range is created when a version ID follows a semantic format (e.g., x.x.x.x or x.x.x), while others are grouped under **"other"**.
+The Catalog now displays version ranges for all item types. Previously, ranges were only displayed for connectors. A range is created when a version ID follows a semantic format (e.g. x.x.x.x or x.x.x). Other versions are grouped under *other*.
 
-### 11 March 2025 - Enhancement - Catalog API - Expose public endpoint for Recommended versions
+### 11 March 2025 - Enhancement - Catalog API - Public endpoint to retrieve recommended versions
 
-The Public Catalog API now also has an endpoint which can be used to get the recommended versions of any catalog item.
+The Public Catalog API now also has an endpoint that can be used to get the recommended versions of any Catalog item.
 
 ### 11 March 2025 - Fix - Catalog - Incorrect Deploy button state when not authenticated [ID 42439]
 
