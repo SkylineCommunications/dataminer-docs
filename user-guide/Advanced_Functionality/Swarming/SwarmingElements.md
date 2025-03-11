@@ -25,6 +25,8 @@ To swarm elements in DataMiner Cube:
 
 1. On the right, select the destination DMA.
 
+   ![Swarming UI in Cube](~/user-guide/images/Swarming_Tutorial_Enable_Cube_Swarm.png)<br>*Swarming UI in DataMiner 10.5.3*
+
 1. Click *Swarm*.
 
 ## Swarming elements via Automation
