@@ -35,6 +35,12 @@ When multiple users of the same user group requested the same mobile visual over
 
 Up to now, aggregation alarms would not work as intended on DataMiner Systems using a Cassandra Cluster database or Storage as a Service (STaaS).
 
+#### Mobile Visual Overview: Problem with SLHelper when removing mobile visual overview sessions [ID 42296]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When mobile visual overview sessions were removed from a DataMiner Agent, in some cases, the SLHelper process could temporarily block other requests.
+
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU1] - FR 10.5.4 -->
