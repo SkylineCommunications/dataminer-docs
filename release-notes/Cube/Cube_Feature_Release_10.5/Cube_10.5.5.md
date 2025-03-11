@@ -40,6 +40,12 @@ When you used the *Profiles* module to create, update or delete a profile defini
 
 From now on, whenever an error occurs while a create, update or delete operation is being performed, the *Profiles* module will open a dialog box showing an error message.
 
+#### Alarm Console: Recursive loop detection in alarm trees [ID 42188]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+From now on, when you right-click an alarm in the Alarm Console and select *Show side panel*, DataMiner Cube will check whether there are loops in the alarm tree, i.e. whether the alarm tree contains any alarms that refer to themselves.
+
 #### Alarm Console: Multivariate pattern suggestion events will now be grouped into a single incident [ID 42287]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
