@@ -251,5 +251,5 @@ The following secrets and variables will have been added to your repository afte
 ## See also
 
 - [Skyline DataMiner Package Project - Advanced](xref:skyline_dataminer_sdk_dataminer_package_project_advanced)
-- [Skyline DataMiner Package Project - CatalogReferences.xml](skyline_dataminer_sdk_dataminer_package_project_catalog_references)
-- [Skyline DataMiner Package Project - ProjectReferences.xml](skyline_dataminer_sdk_dataminer_package_project_project_references)
+- [Skyline DataMiner Package Project - CatalogReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_catalog_references)
+- [Skyline DataMiner Package Project - ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references)

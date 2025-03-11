@@ -10,6 +10,9 @@ Inside the Skyline DataMiner Package Project, under the *PackageContent* directo
 > [!NOTE]
 > When using the CatalogReferences, credentials are needed to access the Catalog. More information can be found on [Adding content from the Catalog](xref:skyline_dataminer_sdk_dataminer_package_project#adding-content-from-the-catalog).
 
+> [!TIP]
+> When using the CatalogReferences, the downloaded items are stored in a cache similarly like NuGet packages. If you want to change the location, see [Change cache location of Catalog items](xref:skyline_dataminer_sdk_dataminer_package_project_advanced#change-cache-location-of-catalog-items).
+
 ```xml
 <CatalogReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/catalogReferences">
 <!--

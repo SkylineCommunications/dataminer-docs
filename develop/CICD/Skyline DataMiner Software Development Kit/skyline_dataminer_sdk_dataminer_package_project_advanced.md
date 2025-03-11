@@ -184,3 +184,9 @@ jobs:
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
       overrideCatalogDownloadToken: ${{ secrets.OVERRIDE_DATAMINER_TOKEN }}
 ```
+
+## Change cache location of Catalog items
+
+When downloading Catalog items via the CatalogReferences, the items are added to a cache (similar like NuGet). The default location is `%USERPROFILE%\.dataminer-catalog-packages\packages` for Windows and `~/.dataminer-catalog-packages/packages` for other operating systems.
+
+This cache location can be changed by setting an environment variable `DATAMINER_CATALOG_PACKAGES`.
