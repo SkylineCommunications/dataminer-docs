@@ -629,8 +629,6 @@ items:
   - name: Swarming
     topicUid: Swarming
     items:
-      - name: Preparing your system for Swarming
-        topicUid: SwarmingPrepare
       - name: Enabling the Swarming feature
         topicUid: EnableSwarming
       - name: Swarming elements

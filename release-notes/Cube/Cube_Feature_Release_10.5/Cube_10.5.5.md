@@ -32,6 +32,14 @@ In the DataMiner Cube desktop app, a number of enhancements have been made with 
 
 Also, the drag-and-drop functionality has been revised. For example, it is now possible to re-order tile groups and to remove tiles by dragging them onto the recycle bin.
 
+#### Profiles app will now show an error message when a create, update or delete operation fails [ID 41902]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you used the *Profiles* module to create, update or delete a profile definition, a profile instance, a profile parameter, or a mediation snippet, up to now, you would not get notified when the operation failed. To find out why the operation failed, you had to consult the Cube logging.
+
+From now on, whenever an error occurs while a create, update or delete operation is being performed, the *Profiles* module will open a dialog box showing an error message.
+
 #### Alarm Console: Multivariate pattern suggestion events will now be grouped into a single incident [ID 42287]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
