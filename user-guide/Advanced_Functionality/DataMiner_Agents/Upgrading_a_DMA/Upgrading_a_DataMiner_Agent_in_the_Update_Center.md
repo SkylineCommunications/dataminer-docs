@@ -114,6 +114,9 @@ To do so:
 
      > [!WARNING]
      > To make sure the system functions correctly, all DMAs in a cluster must run the same DataMiner version.
+     > Note that this also means that *rolling upgrades* are **not supported** outside of the *Failover options* mentioned below.
+     > i.e. upgrading a local DMA in the DMS, whilst other non-upgraded DMAs remain running is not supported and can potentially cause severe data corruption. 
+
 
    - In the *Advanced upgrade options* section, you can change the upgrade options if necessary. For more information on these options, see [default upgrade options](xref:Configuring_the_default_upgrade_options).
 
