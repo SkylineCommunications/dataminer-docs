@@ -640,5 +640,4 @@ items:
       - name: Tutorials
         items:
           - name: Enable Swarming Tutorial
-          - topicUid: Swarming_Tutorial_Enable
-
+            topicUid: Swarming_Tutorial_Enable
