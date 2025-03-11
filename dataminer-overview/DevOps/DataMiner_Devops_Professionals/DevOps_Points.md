@@ -34,9 +34,11 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
   Point system:
 
-  - **Correct a spelling or grammar mistake**: Spotted a typo while browsing the documentation? Click the "propose changes" button in the top-right corner and correct it yourself. **25 points**
-  
+  - **Correct a spelling or grammar mistake**: Spotted a typo while browsing the documentation? Click the "Improve this page" link in the top-right corner and correct it yourself. **25 points**
+
   - **Add missing information**: Noticed something missing halfway through reading a page on docs.dataminer.services? Add it yourself and earn up to... **300 points**
+
+  - **Adding an issue**: Create a valid issue on GitHub to let us know about a problem in the documentation. **100 points**
 
   - **Deliver documentation**: Not quite comfortable using GitHub but bursting with inspiration? Send your documentation as a Word file to [Team Documentation](mailto:documentation@skyline.be) at Skyline so they can add it to DataMiner docs. Doing this, you can earn up to... **500 points**
 
