@@ -4,26 +4,24 @@ uid: DaaS_connecting_to_data_sources
 
 # Connecting to data sources using a DaaS system
 
-To connect to data sources so that you can see their information in DataMiner, you need to [create DataMiner elements](xref:Adding_elements).
+To connect to data sources so that you can see their information in DataMiner, you need to [create DataMiner elements](xref:Adding_elements). For a quick tutorial illustrating how to do so, refer to [Creating your first element on a DaaS system](xref:Creating_your_first_element_on_a_DaaS_system).
 
-However, if you are using a DaaS system, by default you will only be able to access data sources that can be accessed from dataminer.services over the internet.
+Your DaaS system is able to connect to three types of data sources:
 
-If this is not sufficient, contact <daas@dataminer.services> to set up a site-to-site VPN connection. Skyline will enable an [Azure VPN Gateway](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways) in the virtual network of your DaaS environment. This will establish a secured connection between your DaaS system and your self-hosted network (which can be on-premises or hosted by the cloud provider of your choice).
+![Connecting to different data sources with DaaS](~/user-guide/images/DataSources.png)
 
-In order to create a connection, you will have to configure a [supported VPN device](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices). On Azure, a [Generation 1 VpnGw1](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus) gateway SKU will be used. By default, the IKEv2 protocol will be used.
+## Cloud services
 
-These are the default encryption and authentication combinations:
+DaaS can communicate with any cloud service as long as it has a public endpoint and a secure way of connecting. This could for example be an Azure App Service, AWS S3, Azure Blob Storage, etc.
 
-- For Phase 1:
+DaaS can also communicate with any public APIs such as Slack API, Open Weather Map API, Trello API, YouTube API, GitHub API, etc.
 
-  - AES256 and SHA1
-  - 3DES and SHA1
-  - AES256 and SHA256
+Each DaaS instance also has a public IP so it can receive SNMP traps.
 
-- For Phase 2:
+## Publicly available data sources
 
-  - AES256 and SHA1
-  - 3DES and SHA1
-  - AES256 and SHA256
+DaaS can connect to any of your on-premises resources that are publicly available. Make sure that these are published in a secure fashion to ensure that DataMiner can connect to them securely.
 
-If you would prefer a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq), contact <daas@dataminer.services>.
+## Private data sources
+
+To connect to resources in your private network, DaaS will connect using a VPN gateway. However, this requires additional configuration for which you will need to contact Skyline. For more details, see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources).

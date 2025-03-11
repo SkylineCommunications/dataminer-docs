@@ -6,7 +6,7 @@ uid: Preparing_the_destination_server_for_a_DMA_restoration
 
 Regardless of whether you are restoring the backup to the DMA it was taken from or to a different DMA, you must make sure that the server is clean and ready for the installation.
 
-To prepare the destination server, there are several possibilities:
+To prepare the destination server, there are **several possibilities**:
 
 - Install a blank, fully functional DataMiner Agent, as described under [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 

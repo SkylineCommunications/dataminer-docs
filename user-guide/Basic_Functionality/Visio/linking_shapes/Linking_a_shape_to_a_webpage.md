@@ -1,5 +1,6 @@
 ---
 uid: Linking_a_shape_to_a_webpage
+keywords: Visio, hyperlink
 ---
 
 # Linking a shape to a webpage

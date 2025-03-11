@@ -9,13 +9,14 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## Highlights
 
-- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490)
+- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314)
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -26,6 +27,8 @@ Note that when Swarming is enabled, this will result in some major changes to th
 - Alarm identifiers will be generated on a per-element basis instead of per Agent to make them unique within the cluster. Because of this change, you will need to make sure [your system is prepared](xref:SwarmingPrepare) before you can enable Swarming.
 
 - Element configuration will be stored in the cluster-wide database instead of in the element XML files on the disk of the DataMiner Agent hosting each element.
+
+  When Swarming is enabled, a file named *Where are my elements.txt* will be present in the *C:\\Skyline DataMiner\\Elements\\* folder. In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
 
 > [!IMPORTANT]
 >
@@ -282,7 +285,7 @@ When the above-mentioned upgrade action is executed, it will log the name and th
 
 Up to now, the *ProcessOptions* section of the *DataMiner.xml* file allowed you to configure that an element had to run in its own SLProtocol and SLScripting processes, and in a *protocol.xml* file, the *RunInSeparateInstance* tag allowed you to do the same. However, it was only possible to configure this for all elements using a particular protocol.
 
-From now on, the new *Run in isolation mode* feature will allow you to also configure this for one single element.
+From now on, the new *Run in isolation mode* feature will allow you to also configure this for one single element. For more information on how to configure this in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
 As creating additional SLProtocol processes has an impact on the resource usage of a DataMiner Agent, a hard limit of 50 SLProtocol processes has been introduced. If, when an element starts, an attempt to create a new SLProtocol process fails because 50 processes are already running, the element will be hosted by an existing SLProtocol process and its matching SLScripting process, regardless of how the *Run in isolation mode* was configured.
 
@@ -298,7 +301,9 @@ For example, if 15 SLProtocol processes are configured in the *DataMiner.xml* fi
 
 This means, that some elements will not be able to run in isolation mode, and some SLProtocol processes will not be able to host elements that are not running in isolation mode. In each of those cases, an alarm will be generated.
 
-In the DataMiner.xml file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
+In the *DataMiner.xml* file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
+
+See also [RunInIsolationModeConfig property added to SLNet messages ElementInfoEventMessage and LiteElementInfoEvent [ID 42247]](#runinisolationmodeconfig-property-added-to-slnet-messages-elementinfoeventmessage-and-liteelementinfoevent-id-42247)
 
 For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
 
@@ -424,11 +429,14 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42181: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42276: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42283: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42319: MR 10.6.0 - FR 10.5.4 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -442,13 +450,13 @@ The configuration file must be formatted as follows.
 
 ```xml
 <?xml version="1.0" ?>
-<RelationalAnomalyDetection>
-  <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]">
-    <Instance>[INSTANCE1]</Instance>
-    <Instance>[INSTANCE2]</Instance>
-    [... one <Instance> tag per parameter in the group]
-  </Group>
-  [... one <Group> tag per group of parameters that should be monitored by RAD]
+  <RelationalAnomalyDetection>
+    <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]" minimumAnomalyDuration="[THRESHOLD2]">
+      <Instance>[INSTANCE1]</Instance>
+      <Instance>[INSTANCE2]</Instance>
+      [... one <Instance> tag per parameter in the group]
+    </Group>
+    [... one <Group> tag per group of parameters that should be monitored by RAD]
 </RelationalAnomalyDetection>
 ```
 
@@ -459,6 +467,7 @@ The configuration file must be formatted as follows.
 | `name`         | The name of the parameter group.<br>This name must be unique, and will be used when a suggestion event is generated for the group in question. |
 | `updateModel`  | Indicates whether RAD should update its internal model of the relation between the parameters in the group.<br>- If set to "false", RAD will only do an initial training based on the data available at startup.<br>- If set to "true", RAD will update the model each time new data comes in. |
 | `anomalyScore` | Optional argument that can be used to specify the suggestion event generation threshold.<br>By default, this value will be set to 3. Higher values will result in less suggestion events, lower values will result in more suggestion events. |
+| `minimumAnomalyDuration` | Optional argument that specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. Default value: 5<br>- When `minimumAnomalyDuration` is set to a value greater than 5, the deviating behavior will need to last longer before an anomaly event is triggered.<br>- `minimumAnomalyDuration` can be set to a non-default value, for example, to filter out noise events caused by a single, short, harmless outlying value in the data.<br>- If `minimumAnomalyDuration` is either not set or set to a value less than or equal to 5, an anomaly event will be generated as soon as values deviate sufficiently from the RAD model. |
 
 **Parameter instance formats**
 
@@ -473,11 +482,17 @@ RAD requires parameter instances to have at least one week of five-minute averag
 
 If necessary, users can force RAD to retrain its internal model by sending a `RetrainMadModelMessage`. In this message, they can indicate the periods during which the parameters were behaving as expected. This will help RAD to identify when the parameters deviate from that expected behavior in the future.
 
+#### History set parameters
+
+Under certain conditions, Relational anomaly detection (RAD) is able to detect relational anomalies on history set parameters:
+
+- If there is at least one history set parameter in a RAD parameter group, that parameter group will only be processed when all data from all parameters in the group has been received. In other words, if a history set parameter receives data 30 minutes later than the real-time parameters, possible anomalies will only be detected after 30 minutes.
+
+- RAD will only process data received within the last hour. If a history set parameter receives data more than an hour later than the real-time parameters, that data will be disregarded.
+
 ##### Limitations
 
 - RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
-
-- RAD does not support history sets.
 
 - Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts on another parameter after a certain time, then RAD will produce less accurate results.
 
@@ -492,3 +507,39 @@ The following messages can be used to add, update or remove a parameter group fr
 - `RemoveMADParameterGroupMessage` allows you to remove a parameter group from the Relational Anomaly Detection configuration file.
 
 - `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
+
+> [!NOTE]
+> Names of RAD parameter groups will be processed case-insensitive.
+
+#### SLNetClientTest tool: Element process ID information [ID 42013]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+In the *SLNetClientTest* tool, you can now retrieve live information about the mapping between elements running on a DataMiner Agent and the processes they use, including SLProtocol and SLScripting. To do so, go to *Diagnostics > DMA > Element Process ID Info*.
+
+The information provided is similar to the information found in the *SLElementInProtocol.txt* log file. It will allow you to monitor and troubleshoot process usage in real time.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### RunInIsolationModeConfig property added to SLNet messages ElementInfoEventMessage and LiteElementInfoEvent [ID 42247]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+A new `RunInIsolationModeConfig` property has been added to the SLNet messages `ElementInfoEventMessage` and `LiteElementInfoEvent`. This property will allow client applications to indicate if and how an element is configured to run in isolation mode.
+
+The property can have one of the following values:
+
+| Value    | Description |
+|----------|-------------|
+| None     | The element is not running in isolation mode. |
+| Dma      | In the `ProcessOptions` section of the *DataMiner.xml* file, it has been specified that all elements using the protocol in question should be running in isolation mode. |
+| Protocol | In the *protocol.xml* file, the `RunInSeparateInstance` tag specifies that all elements using the protocol in question should be running in isolation mode. |
+| Element  | The element has been individually configured to run in isolation mode. |
+
+If multiple settings indicate that the element should be running in isolation mode, the `RunInIsolationModeConfig` property will be set to one of the above-mentioned values in the following order of precedence: "Protocol", "Element", "Dma".
+
+> [!NOTE]
+>
+> - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
+> - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)

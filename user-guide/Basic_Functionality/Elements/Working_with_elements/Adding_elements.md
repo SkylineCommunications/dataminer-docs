@@ -8,7 +8,7 @@ keywords: element wizard
 
 1. [Open DataMiner Cube](xref:Using_the_desktop_app).
 
-1. Right-click in the Surveyor, and select *New \> Element*.
+1. Right-click an item in the Surveyor, and select *New \> Element*.
 
    A card will open.
 

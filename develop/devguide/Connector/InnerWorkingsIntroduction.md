@@ -15,7 +15,7 @@ The following diagram gives an overview of the processes running in a DataMiner 
 
 The <xref:InnerWorkingsSLDataMiner> process is the central process of a DataMiner Agent (DMA). It is responsible for starting, stopping and configuring elements, services and redundancy groups, and manages all traffic from and to those items. SLDataMiner also performs database offloads toward the offload database (if one exists). This process is not aware of any other DMAs in the DataMiner System (DMS).
 
-The <xref:InnerWorkingsSLProtocol> process executes the logic defined in a DataMiner protocol of the active elements on the DataMiner Agent. By default, five SLProtocol processes run simultaneously and the elements of the DataMiner Agent are spread over these processes at startup.
+The <xref:InnerWorkingsSLProtocol> process executes the logic defined in a DataMiner protocol of the active elements on the DataMiner Agent. By default, several SLProtocol processes (5 prior to DataMiner 10.4.12/10.5.0, and 10 in later versions) run simultaneously, and the elements of the DataMiner Agent are distributed across them at startup.
 
 The <xref:InnerWorkingsSLScripting> process is responsible for executing Quick Actions defined in the protocol when requested by the SLProtocol process (i.e. when triggered to execute).
 

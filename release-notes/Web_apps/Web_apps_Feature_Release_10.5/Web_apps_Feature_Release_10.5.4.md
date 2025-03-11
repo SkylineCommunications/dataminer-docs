@@ -18,6 +18,16 @@ uid: Web_apps_Feature_Release_10.5.4
 
 ## New features
 
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the web session [ID 42097]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, entered date and time would be formatted depending on the platform and the configured settings. In case of a web app, the entered date and time would always be returned in UTC. From now on, when an interactive Automation script is being run within a web app, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+
+When a default time zone is defined for DataMiner web apps, that default time zone will be used instead of the time zone of the client. See also [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps).
+
+For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+
 #### Dashboards/Low-Code Apps: Maps component is now fully released [ID 42309]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
@@ -207,6 +217,12 @@ These updated colors will automatically be applied to all existing dashboards an
 
 Also, the icon of the *Column & bar chart* component has been redesigned.
 
+#### Dashboards/Low-Code Apps - Maps, Timeline & Grid components: Templates have been updated [ID 42322]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The default templates of the *Maps*, *Timeline* and *Grid* components have been updated.
+
 ### Fixes
 
 #### Low-Code Apps: Certain actions would incorrectly not use the event information passed to them [ID 41979]
@@ -230,6 +246,14 @@ In some cases, when new data from a partial table was being loaded into a *Table
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 In some cases, scroll bars would appear on a *Grid* component, even though there was sufficient screen real estate to display all items.
+
+#### Low-Code Apps - Form component: Problem when saving a form due to boolean fields not having a default value [ID 42111]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When the data in a *Form* component was saved, an error would be thrown when mandatory boolean fields without default value had not been explicitly set to either true or false.
+
+From now on, all boolean fields will have a default value (either true or false).
 
 #### Dashboards/Low-Code Apps: Letter descenders would incorrectly be cut off in Components data set [ID 42118]
 
@@ -337,3 +361,31 @@ A number of issues regarding duration input boxes have been fixed:
 - When a positive value was replaced by an invalid negative value, the input fields as well as the sign button would not be updated properly.
 - When the day field contained a value with more than three digits, the value would not be entirely readable. Also, when the day field contained a number smaller than 10, there would be too much space the input field and the sign button.
 - When the granularity was changed, hidden fields would be taken into account when calculating the current value.
+
+#### Dashboards/Low-Code Apps - Query filter component: Problem after being retriggered by a linked Trigger component [ID 42367]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When a *Query filter* component was linked to a *Trigger* component as well as to one or more columns as a filter, the following error would be thrown after it was retriggered via the *Trigger* component:
+
+`Cannot read properties of null (Reading 'Discreets')`
+
+#### Dashboards/Low-Code Apps: Problem with buttons and dropdown boxes [ID 42375]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some cases, buttons would no longer correctly show their loading state.
+
+Also, dropdown boxes would no longer ellipse long values, causing a horizontal scrollbar to appear in the dropdown box.
+
+#### Dashboards/Low-Code Apps - Timeline component: Selected time range would incorrectly not get passed to other components [ID 42380]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you had selected a time range in a *Timeline* component, in some cases, that time range would incorrectly not get passed to other components.
+
+#### Low-Code Apps: Problem when entering edit mode when the app contained a component without visualization [ID 42382]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you entered the edit mode of a low-code app, in some cases, a run-time error could occur when the app contained a component to which no visualization had been assigned.

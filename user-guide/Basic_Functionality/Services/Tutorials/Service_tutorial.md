@@ -10,6 +10,9 @@ The content and screenshots for this tutorial have been created using DataMiner 
 
 Expected duration: 20 minutes
 
+> [!TIP]
+> See also: [Kata #60: Building a customer-centric system view with services](https://community.dataminer.services/courses/kata-60/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
@@ -148,7 +151,7 @@ Having only the active element in your service can give you a false sense of sec
 
 1. Open the **sw-uk-01** element and change the **Switch Site Selection** parameter to **Site 2**.
 
-Now your service will include both elements, but the service will indicate the one that is in use. The source that is not active will at most cause a a warning alarm on the service.
+Now your service will include both elements, but the service will indicate the one that is in use. The source that is not active will at most cause a warning alarm on the service.
 
 In Cube, you will now see a warning alarm on the service coming from the signal from Site 1, while the signal from Site 2 is working fine. This way, you will be able to spot problems with the other signal early, before you need to use it.
 

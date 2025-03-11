@@ -21,11 +21,24 @@ uid: General_Main_Release_10.4.0_CU13
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
+#### Security enhancements [ID 41913] [ID 42343]
+
+<!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- 42343: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of security enhancements have been made.
+
 #### Service & Resource Management: Enhanced handling of locked files when activating or deactivating functions [ID 41978]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of enhancements have been made to the ProtocolFunctionManager with regard to the handling of locked files when activating or deactivating functions.
+
+#### Connection enhancements [ID 42233]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+A number of enhancements have been made with regard to the connections made among DataMiner Agents as well as the connections made between DataMiner Agents and client applications.
 
 ### Fixes
 
@@ -34,6 +47,12 @@ A number of enhancements have been made to the ProtocolFunctionManager with rega
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.2 -->
 
 Because of an issue in SLNet, after a restart of a DataMiner Agent, "not supported by the current server version" errors could get thrown in all low-code apps.
+
+#### DataMiner Object Models: No longer possible to query DOM after initializing a Cassandra Cluster migration [ID 40993]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+After a Cassandra Cluster migration had been initialized, it would no longer be possible to query DOM.
 
 #### Cassandra: Problem with incorrect gc_grace_seconds values [ID 41939]
 
@@ -50,6 +69,21 @@ On systems with a Cassandra or Cassandra Cluster database, a number of issues ha
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 When you tried to update the protocol version of an element in error via DataMiner Cube, in some rare cases, a message would incorrectly appear, stating that it was not possible to update the element.
+
+#### Problem when deleting elements with logger tables [ID 42029]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When an element with a logger table was deleted, some items would not be removed from Cassandra and from OpenSearch/Elasticsearch:
+
+- SLDataGateway still contained the table definitions.
+
+- When the `databaseName` option was used, the table that had been created in a separate table schema would not be deleted.
+
+- In case of a Cassandra Cluster, the logger table is by default stored in the `sldmadb_elementdata_<dmaid>_<elementid>_<tableid>` keyspace. When an element with a logger table was deleted, the database table would correctly be removed, but the empty keyspace would still exist.
+
+> [!NOTE]
+> When an element with a logger table is deleted, the logger table will not be deleted when it has the `customDatabaseName` or `databaseNameProtocol` option.
 
 #### SLAnalytics: Memory leak due to an excessive number of messages being received following an alarm template update [ID 42047]
 
@@ -69,10 +103,27 @@ When you made SLTaskbarUtility perform a DataMiner upgrade using the command pro
 
 In some cases, it would not be possible to simultaneously update multiple TTL settings.
 
-#### Problem when SLASPConnection failed to connect to NATS [ID 42158]
+#### MessageBroker: Subscriptions that had been disposed of would incorrectly get recreated [ID 42164]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
-When the SLASPConnection process failed to connect to NATS, in some cases, run-time errors could be thrown.
+After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
 
-A number of enhancements have now been made to avoid run-time errors to be thrown when SLASPConnection process fails to connect to NATS.
+#### Problem when exporting an element to a .dmimport file [ID 42320]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+In some rare cases, exporting an element to a *.dmimport* file could fail.
+
+#### SLNetClientTest tool: Problem when trying to connect to a DataMiner Agent using external authentication via SAML [ID 42341]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+
+When, in the *SLNetClientTest* tool, you tried to connect to a DataMiner Agent using external authentication via SAML, the following error message would appear:
+
+`Unable to load DLL 'WebView2Loader.dll': The specified module could not be found.`
+
+The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packages.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

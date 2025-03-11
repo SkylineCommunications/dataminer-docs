@@ -15,4 +15,4 @@ Soft-launch features are DataMiner features that have not yet been made availabl
 
 - **Hotfixes will not be provided** for soft-launch features. The only way to get a fix for them is by installing the latest feature release.
 
-If you accept these limitations, feel tree to activate the [soft-launch options of your choice](xref:Overview_of_Soft_Launch_Options). And obviously, your feedback on these preview features will be much appreciated.
+If you accept these limitations, feel free to activate the [soft-launch options of your choice](xref:Overview_of_Soft_Launch_Options). And obviously, your feedback on these preview features will be much appreciated.

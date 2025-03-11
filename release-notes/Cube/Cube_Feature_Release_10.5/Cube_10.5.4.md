@@ -36,7 +36,26 @@ When, in either the *protocol.xml* file or the *DataMiner.xml* file, the element
 
 For more information about running elements in isolation mode, see [Elements can now be configured to run in isolation mode [ID 41757]](xref:General_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757).
 
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the Cube session [ID 42110]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run within DataMiner Cube, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+
+For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+
 ## Changes
+
+### Breaking changes
+
+#### Legacy InterClient feature has been removed [ID 42263]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+The legacy *InterClient* feature has now been removed from DataMiner Cube.
+
+> [!IMPORTANT]
+> Existing Automation scripts or connectors that are currently still using InterClient calls will no longer work. They should be updated as soon as possible.
 
 ### Enhancements
 
@@ -84,6 +103,23 @@ Note that these suggestion events are not editable. Clearing one of them will cl
 
 Up to now, when you closed a card in which a Visio page was used a background page, an SPI entry containing the loading time of the background page would be logged in the *SLClient.txt* log file. From now on, background page loading times will no longer be logged.
 
+#### A number of UI text strings have been made more translation-friendly [ID 42285]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+In the Cube UI, the following text strings have been adjusted to allow a more natural translation to other languages:
+
+- In the right-click menu of the Surveyor, and in the menu and confirmation boxes that allow you to select a new alarm template or trend template:
+
+  - `<No monitoring>`
+  - `<New alarm template>`
+  - `<No trending>`
+  - `<New trend template>`
+
+- The title of the dialog box that allows you to add an element to a service or to a group of a service:
+
+  - `Add element to service xxx`
+
 #### System Center - Database: No longer possible to migrate the general database to Cassandra [ID 42305]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
@@ -124,6 +160,12 @@ When you right-clicked a history alarm in the Alarm Console and selected *Show a
 
 In some cases, an exception could be thrown when you closed an element card.
 
+#### Problem when requesting information about file changes [ID 42076]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When DataMiner Cube asked the DataMiner Agent to which it was connected when a particular file had been last changed, in some cases, the file could not be found due to a casing issue.
+
 #### DataMiner Cube desktop app: Configuration files would incorrectly be updated when the app was closed [ID 42101]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
@@ -141,6 +183,18 @@ In the *Documents* module, up to now, it would incorrectly not be possible to op
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When DataMiner Cube received a `CorrelationDetailsEventMessage` without ever receiving the associated correlated alarm, up to now, an exception could be thrown.
+
+#### Data display: Parameter values containing curly braces could not be displayed in the right-click menu of a table [ID 42160]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When the right-click menu of a table in e.g. an element card displayed values of dependency parameters, in some cases, parameter values containing curly braces (e.g. "{test one}") would incorrectly not be displayed.
+
+Example of how a right-click menu displaying dependency parameters can be configured in a *protocol.xml* file:
+
+```xml
+<Discreet options="table:singleselection" dependencyValues="301[value:301];302[value:302];303:[value:303]">
+```
 
 #### Trending: Trend graph legend would show the same current value for all parameters [ID 42184]
 
