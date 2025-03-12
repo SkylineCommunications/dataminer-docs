@@ -173,12 +173,6 @@ From now on, those suggestion events will be grouped into a single incident, whi
 
 ### Fixes
 
-#### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
-
-<!-- MR 10.6.0 - FR 10.5.4 -->
-
-When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
-
 #### Mobile Visual Overview: Problem with user context [ID 42061]
 
 <!-- MR 10.6.0 [CU0] - FR 10.5.4 -->

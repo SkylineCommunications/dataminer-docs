@@ -23,8 +23,20 @@ A number of security enhancements have been made.
 
 ### Fixes
 
+#### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 -->
+
+When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
+
 #### Problem with aggregation alarms on Cassandra Cluster and STaaS [ID 42095]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 Up to now, aggregation alarms would not work as intended on DataMiner Systems using a Cassandra Cluster database or Storage as a Service (STaaS).
+
+#### Mobile Visual Overview: Problem with SLHelper when removing mobile visual overview sessions [ID 42296]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When mobile visual overview sessions were removed from a DataMiner Agent, in some cases, the SLHelper process could temporarily block other requests.
