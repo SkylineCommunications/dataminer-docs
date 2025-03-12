@@ -124,7 +124,7 @@ Example `global.json` file:
 }
 ```
 
-Ensure the version is the **latest stable release** (i.e., without `"*-test"` suffix).
+Ensure the version is the **latest stable release** (i.e., without `"*-abc"` suffix).
 
 ---
 
