@@ -78,7 +78,7 @@ To implement a logger table, perform the following steps:
 
     In the example above, this will result in a column with name "sip" of type VARCHAR(20) (in case of a MySQL database). The name of the parameter is used as the name of the corresponding column in the database (Note that it is therefore not allowed to change this name in an existing protocol).
 
-    In case the logger table persists in Cassandra, the specified datatype will automatically be mapped to the corresponding Cassandra datatype.
+    In case the logger table persists in Cassandra, the specified data type will automatically be mapped to the corresponding Cassandra datatype.
 
     Note the following restrictions:
 

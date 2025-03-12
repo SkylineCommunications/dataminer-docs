@@ -415,9 +415,9 @@ namespace Skyline.DataMiner.Net.Ticketing.Objects
         public bool FromMigration { get; set; }
 
 		/// <summary>
-		/// Gets the datatype ID.
+		/// Gets the data type ID.
 		/// </summary>
-		/// <value>The datatype ID.</value>
+		/// <value>The data type ID.</value>
         [JsonIgnore]
 		public string DataTypeID { get; }
 
