@@ -9,4 +9,4 @@ keywords: swarming tutorials
 
 | Name | Description|
 |--|--|
-| [Enabling swarming](xref:Swarming_Tutorial_Enable) | Learn how to enable swarming in your DMS and swarm your first element. |
+| [Enabling swarming](xref:Swarming_Tutorial_Enable) | Learn how to enable Swarming in your DMS and swarm your first element. |
