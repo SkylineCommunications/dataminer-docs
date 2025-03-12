@@ -24,7 +24,7 @@ No fix is available yet.
 
 ## Description
 
-When using DIS 3.1.6, connecting to a DataMiner Agent fails with an error message similar to the following example:
+When using DIS 3.1.6, connecting to a DataMiner Agent fails with an error message similar to one of the following examples:
 
 ```txt
 System.ServiceModel.FaultException: 
@@ -32,4 +32,10 @@ System.Net.Http.HttpRequestException: An error occurred
 while sending the request. —> System.Net.WebException: 
 The underlying connection was closed: Could not establish 
 trust relationship for the SSL/TLS secure channel.
+```
+
+```txt
+Could not connect to DMA! : System.ServiceModel.FaultException: System.ServiceModel.FaultException: System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at SLDisDMAComm.SLDisDmaCommService.ConnectToWebApi() in D:\a\DIS\DIS\ProtocolEditor\SLDisDMAComm\SLDisDmaCommService.cs:line
 ```
