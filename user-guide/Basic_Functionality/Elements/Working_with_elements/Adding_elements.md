@@ -145,6 +145,8 @@ keywords: element wizard
 
      If an element is read-only, its parameters cannot be updated.
 
+   - **Run in isolation mode**: Available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->. Select this checkbox if you want the element to be run in isolation mode. See [Adding elements in isolation mode](#adding-elements-in-isolation-mode).
+
    - **Element state**: Select the initial state of the element in this selection box. By default this will be set to “Active”.
 
 1. Click *Next* and specify the view(s) to which you want to link the element.
@@ -158,3 +160,24 @@ keywords: element wizard
 
 > [!TIP]
 > See also: [Locating devices in your system to add to your DMS](xref:Locating_devices_in_your_system_to_add_to_your_DMS)
+
+## Adding elements in isolation mode
+
+From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->, you can configure an element to run in isolation mode using the *Run in isolation mode* option. If this option is activated, a separate SLProtocol and SLScripting process will be started only for this element. See [Adding elements in isolation mode](#adding-elements-in-isolation-mode).
+
+By default, a maximum of 50 SLProtocol processes can run at the same time, of which 10 are reserved for elements that are not running in isolation mode. This means a maximum of 40 elements can be run in isolation mode at any given time. If the maximum has been reached and you attempt to start an additional element in isolation mode, a message will appear to alert you of the 50-process limit, and the element will be hosted by an existing SLProtocol process and its matching SLScripting process.
+
+In the *DataMiner.xml* file, you can [adjust the number of simultaneously running SLProtocol processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slprotocol-processes)<!--RN 41757-->. Lowering this number will reduce the processes reserved for elements not running in isolation mode. However, if you increase the number of reserved processes and cause the total SLProtocol processes to exceed 50, the system will cap the total at 50. This may result in some elements being unable to run in isolation mode, and some SLProtocol processes not being able to host non-isolation mode elements. In such cases, an alarm will be generated.
+
+For example, if 15 SLProtocol processes are configured in the *DataMiner.xml* file, and 45 elements are configured to run in isolation mode, then:
+
+- 10 SLProtocol processes will be used for elements that are not running in isolation mode,
+
+- 5 SLProtocol processes will be used for elements running either in isolation mode or not, depending on which elements starts first, and
+
+- 35 SLProtocol processes will be used to host an element in isolation mode.
+
+> [!NOTE]
+>
+> - Isolation mode consumes more resources and should only be activated when really necessary.
+> - Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, you can only configure an element to run in isolation mode by configuring this for all elements using a particular protocol in the [*ProcessOptions* section](xref:Configuration_of_DataMiner_processes#configuring-separate-slprotocol-and-slscripting-instances-for-a-specific-protocol) of the *DataMiner.xml* file or the [*RunInSeparateInstance* tag](xref:Protocol.SystemOptions.RunInSeparateInstance) of the *protocol.xml* file. From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->, when you have forced an element to run in isolation mode via the *protocol.xml* or *DataMiner.xml* file, the *Run in isolation mode* option will be selected automatically, and clearing the option will not be possible when editing the element.
