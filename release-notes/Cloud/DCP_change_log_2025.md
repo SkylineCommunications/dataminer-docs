@@ -9,6 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 11 March 2025 - Fix - Catalog - Incorrect Deploy button state when not authenticated [ID 42439]
+
+Previously, the *Deploy* button for a Catalog item version was always enabled when the user was not authenticated, even if the version had issues. This occurred because certain checks could not be performed when the user was not logged in yet. This issue has now been resolved. The *Deploy* button will now be correctly disabled if there are any issues with the version, regardless of authentication status.
+
+Note that in case the button is displayed as enabled while a user is not logged in, it may still be disabled again after they log in case further issues are detected, such as the absence of a working DMS connected to dataminer.services.
+
 ### 11 March 2025 - Enhancement - Catalog - Ranges displayed for all items [ID 42426]
 
 The Catalog now displays version ranges for all item types. Previously, ranges were only displayed for connectors. A range is created when a version ID follows a semantic format (e.g. x.x.x.x or x.x.x). Other versions are grouped under *other*.
@@ -17,15 +23,13 @@ The Catalog now displays version ranges for all item types. Previously, ranges w
 
 Up to now, it could occur that different recommended versions were shown based on which API was called. Now the different Catalog APIs (key, user, and public) use a shared logic to determine the recommended versions for a Catalog item, so this will no longer occur.
 
-### 11 March 2025 - Fix - Catalog - Incorrect Deploy button state when not authenticated [ID 42439]
-
-Previously, the *Deploy* button for a Catalog item version was always enabled when the user was not authenticated, even if the version had issues. This occurred because certain checks could not be performed when the user was not logged in yet. This issue has now been resolved. The *Deploy* button will now be correctly disabled if there are any issues with the version, regardless of authentication status.
-
-Note that in case the button is displayed as enabled while a user is not logged in, it may still be disabled again after they log in case further issues are detected, such as the absence of a working DMS connected to dataminer.services.
-
 ### 7 March 2025 - Fix - Incorrect DataMiner System status on dataminer.services home page [ID 42445]
 
 The status of DataMiner Systems (including DaaS systems) could be shown as "unknown" for users with the "Member" role in the organization. This also resulted in an incorrect status being shown for a newly deployed DaaS system. This issue has been resolved.
+
+### 7 March 2025 - Fix - Admin - Export of large amount of usage data failed [ID 42378]
+
+In the Admin app, exporting usage data to a CSV file could fail when there was a large amount of data to be retrieved. The performance of the export has been improved, and it will now be able to handle large amounts of data.
 
 ### 6 March 2025 - Fix - Catalog - Deployment status information not updated correctly [ID 42405]
 
