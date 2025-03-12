@@ -241,6 +241,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: DIS unable to connect to DataMiner Agent
+            topicUid: KI_DIS_unable_to_connect
           - name: Failed getting progress notices during upgrade
             topicUid: KI_SLNetIPC_Errors_During_Upgrade
           - name: SLProtocol crash when restarting elements used by enhanced services
