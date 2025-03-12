@@ -78,11 +78,17 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
 
    ![Static requirements](~/user-guide/images/Swarming_Tutorial_Enable_Static_Requirements.png)
 
-1. In case *No incompatible enhanced services* is *Not Ok*, follow the instructions to [prepare enhanced service connectors for Swarming](xref:SwarmingPrepare#enhanced-service-connectors), and then run the script again.
+1. In case *No incompatible enhanced services* is *Not Ok*:
+
+   1. Check in the DataMiner Catalog if a more recent version of the enhanced service connectors is available and upgrade to the latest version if possible.
+
+   1. If upgrading to a more recent version is not possible, follow the instructions to [prepare enhanced service connectors for Swarming](xref:SwarmingPrepare#enhanced-service-connectors)
+
+   1. Run the *Enable Swarming* script again.
 
 1. Click the *Analyze* button to start checking the alarm ID usage.
 
-   This button will only be available once all static requirements are met. It will analyze the use of the unique identifiers of alarms in scripting (Automation scripts and QActions), as this has been modified to support Swarming. (See [About the Alarm ID changes](xref:SwarmingPrepare#about-the-alarm-id-changes).)
+   This button will only be available once all static requirements are met. It will analyze the use of the unique identifiers of alarms in scripting (Automation scripts and QActions), as this has been modified to support Swarming. (See [About the alarm ID changes](xref:SwarmingPrepare#about-the-alarm-id-changes).)
 
    This check can take up to several minutes, depending on the number of scripts and connectors in the system.
 
@@ -95,7 +101,7 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
 
    ![Alarm ID usage problem](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage_Problem.png)
 
-   The *Mask Critical Alarms* script will be displayed as one of the problems that have been found. This script takes as input a reference to an element and will mask all critical alarms of this element. It does so by using a *SetAlarmStateMessage* and includes an identifier reference to the alarm it should mask, but this identifier still uses the old style of referring to an alarm, i.e. a **DataMiner ID/Alarm ID** integer combination. This is must be changed to a **tree ID** instead.
+   The *Mask Critical Alarms* script will be displayed as one of the problems that have been found. This script takes as input a reference to an element and will mask all critical alarms of this element. It does so by using a *SetAlarmStateMessage* and includes an identifier reference to the alarm it should mask, but this identifier still uses the old style of referring to an alarm, i.e. a **DataMiner ID/alarm ID** integer combination. This is must be changed to a **tree ID** instead.
 
 1. Open the *Mask Critical Alarms* script in the Automation app, scroll down, and click *Validate* to check for errors and warnings.
 
