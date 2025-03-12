@@ -4,6 +4,9 @@ uid: EnableSwarming
 
 # Enabling the Swarming feature
 
+> [!TIP]
+> Instead of following the procedure detailed below, you can also follow the [Enabling Swarming tutorial](xref:Swarming_Tutorial_Enable). This tutorial uses a script to check whether prerequisites are met and provides an example of how to adjust other scripts and protocols in order to prepare your system for Swarming.
+
 ## Prerequisites
 
 - DataMiner 10.5.1/10.6.0 or higher.
