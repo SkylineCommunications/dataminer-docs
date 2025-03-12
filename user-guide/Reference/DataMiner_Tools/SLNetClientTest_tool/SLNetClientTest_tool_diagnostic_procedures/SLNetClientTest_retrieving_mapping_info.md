@@ -4,7 +4,7 @@ uid: SLNetClientTest_retrieving_mapping_info
 
 # Retrieving live information about the mapping between elements and the processes they use
 
-From DataMiner 10.5.4/10.6.0 onwards<!--RN 42013-->, it is possible to retrieve live information about the mapping between elements running on a DataMiner Agent and the processes they use, including SLProtocol and SLScripting. This can for instance be useful to monitor and troubleshoot process usage in real time.
+From DataMiner 10.5.4/10.6.0 onwards<!--RN 42013-->, it is possible to retrieve live information about the mapping between elements running on a DataMiner Agent and the processes they use, including SLProtocol and SLScripting. The information provided is similar to the information found in the *SLElementInProtocol.txt* log file. This can for instance be useful to monitor and troubleshoot process usage in real time.
 
 To do so:
 
