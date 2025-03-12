@@ -4,14 +4,14 @@ uid: MediaOps
 
 # dataminer.MediaOps
 
-The dataminer.MediaOps solution comes with a set of low-code apps designed to simplify operations within a media environment. You can use these apps as they are, or use them as a starting point to develop a custom user interfaces for specific needs.
+The dataminer.MediaOps solution comes with a set of low-code apps designed to simplify and automate operations within a media environment. The apps can be used as-is or customized to fit specific needs.
 
 Main features within the MediaOps applications:
 
 - Resource Management
-- Building workflows
+- Create and manage workflows
 - Schedule jobs
-- Manage People & Organizations
+- Manage teams and contacts
 
 ## MediaOps applications
 
@@ -34,7 +34,7 @@ Following applications are part of the MediaOps package:
 
 ## Getting started with MediaOps
 
-In order to install and get started with MediaOps, deploy the package from the [DataMiner Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) on your DataMiner System.
+To install and get started with MediaOps, deploy the package from the [DataMiner Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) on your DataMiner System.
 
 [For later]: ## Building upon the standard applications
 
