@@ -9,7 +9,7 @@ When the [Swarming](xref:Swarming) feature is enabled, alarm references need to 
 > [!NOTE]
 > The changes mentioned on this page require **DataMiner 10.5.1/10.5.0 or higher**. Note that while legacy alarm references may still be used in DataMiner 10.5.1 or higher, they must not be used on systems where the Swarming feature is enabled.
 
-## About the Alarm ID changes
+## About the alarm ID changes
 
 In order to implement the necessary changes to prepare for Swarming, you first need to understand what the alarm ID changes are that get introduced with Swarming and what their consequences are.
 
