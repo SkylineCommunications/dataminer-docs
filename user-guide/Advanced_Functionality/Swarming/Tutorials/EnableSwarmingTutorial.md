@@ -3,16 +3,24 @@ uid: Swarming_Tutorial_Enable
 keywords: swarming, swarming tutorial
 ---
 
-# Enabling Swarming Tutorial
+# Enabling Swarming
 
-In this tutorial, you will learn how to enable Swarming in your DMS and swarm your first element.
+In this tutorial, you will learn how to enable [Swarming](xref:Swarming) in your DMS and swarm your first element. The tutorial makes use of an example Automation script to demonstrate how you need to adjust scripts to make sure you can enable Swarming.
+
+The content and screenshots for this tutorial have been created using DataMiner version 10.5.3.
 
 ## Prerequisites
 
-- A DataMiner System that is [connected to dataminer.services](https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
-- The DataMiner version is 10.5.1/10.6.0[CU0] or higher.
-- A DataMiner System with 2 or more agents. If you are using a single agent, you can follow along, however you won't be able to do the last step (swarming an element).
-- Swarming has its own set of prerequisites, more on that later during the tutorial.
+For this tutorial, you will need a DataMiner System that meets the following requirements:
+
+- [Connected to dataminer.services](https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
+- Using DataMiner 10.5.1/10.6.0 [CU0] or higher.
+- Containing two or more Agents, but no Failover Agents. If you are using a single Agent, you can follow along, but you will not be able to do the last step (swarming an element).
+- Using [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) setup.
+- Without [data offloads](xref:Offload_database) configured.
+- The [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards) is not enabled.
+
+Other prerequisites for Swarming will be addressed later in this tutorial.
 
 ## Overview
 
@@ -29,138 +37,128 @@ To deploy the package:
 
 1. Deploy the latest version of the package on your DMA using the *Deploy* button.
 
-    While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
+1. When the package has been deployed, open DataMiner Cube and check whether you can see the following scripts in the *Kata - Swarming* folder of the Automation module:
 
-    The package will deploy the following components:
+   - *Mask Critical Alarms*: This is a demo script to mask the critical alarms of some elements.
 
-    - The **Mask Critical Alarms** Automation script, which is a demo script to mask the critical alarms of some elements.
-
-    - The **Enable Swarming** Automation script, which is an interactive automation script to go through the enabling procedure for Swarming.
-
-    Both scripts can be found under the **Kata - Swarming** folder.
+   - *Enable Swarming*: This interactive Automation script takes you through the enabling procedure for Swarming.
 
    ![Package Content](~/user-guide/images/Swarming_Tutorial_Enable_Package_Content.png)
 
 ## Step 2: Create a basic test element
 
-In this tutorial we will Swarm an element.
+In this tutorial, you will swarm an element. To avoid impacting ongoing operations, start by adding a new test element.
 
-To not impact any ongoing operation, you can create a new basic test element or you can import some demo elements from for example the [Satellite Earth Station Uplink](https://catalog.dataminer.services/details/c8adec4a-e7be-47a4-b7a4-e574e0381fe6) package.
+You can either [create a new basic test element](xref:Adding_elements) yourself or import a demo element, e.g. by deploying the [Satellite Earth Station Uplink](https://catalog.dataminer.services/details/c8adec4a-e7be-47a4-b7a4-e574e0381fe6) package.
 
-If you create a new element, you must specify the protocol.
-Since we are not doing anything except swarming the element, the protocol does not matter as long as it is swarmable.
-In DataMiner 10.5.1, most protocols are swarmable, most notable exceptions are protocols exporting virtual elements and spectrum elements.
-
-See also [Adding Elements](xref:Adding_elements) on how to create a new element.
+If you choose to create a new element yourself, you can select any protocol of your choice for it, except for a spectrum protocol or a DVE protocol, as these would not result in a swarmable element.
 
 ## Step 3: Enable Swarming
 
-Swarming has its own set of prerequisites.
-You can use the **Enable Swarming** script deployed with the Catalog package to go through them dynamically.
+Swarming has its own set of prerequisites. In this step, you will use a script from the deployed package to make sure these are met and then enable Swarming.
 
-1. Static requirements:
+1. In the Automation module in DataMiner Cube, select the *Enable Swarming* script and click the *Execute* button.
 
-   Launch the script for the first time and it will quickly verify the static requirements.
-   These are requirements not easily changed in your DMS such as database type or failover configuration.
+   ![Execute the Enable Swarming script](~/user-guide/images/Swarming_Tutorial_Run_script.png)
+
+1. In the pop-up window, click *Execute now*.
+
+   Information about the Swarming prerequisites will be displayed.
+
+1. Take a look at the mentioned static requirements.
+
+   These are the DMS requirements that are more difficult to change, such as the database type or Failover configuration. Based on the prerequisites for this tutorial, all prerequisites should be met, except possibly the requirement for compatible enhanced services.
 
    ![Static requirements](~/user-guide/images/Swarming_Tutorial_Enable_Static_Requirements.png)
 
-   You will see the status for your DMS and which requirements are met.
-   If not all requirements are met, you will not be able to enable Swarming.
-   If you are using a Skyline protocol for enhanced services, you will need to update it to use the latest version.
+1. In case *No incompatible enhanced services* is *Not Ok*, follow the instructions to [prepare enhanced service connectors for Swarming](xref:SwarmingPrepare#enhanced-service-connectors), and then run the script again.
 
-1. AlarmID usage:
+1. Click the *Analyze* button to start checking the alarm ID usage.
 
-   Once the static requirements are met, we can move on to the AlarmID usage.
-   This section will automatically appear when above requirements are met.
-   The AlarmID usage refers to the unique identifier of alarms and their usage in scripting (Automation/QActions).
+   This button will only be available once all static requirements are met. It will analyze the use of the unique identifiers of alarms in scripting (Automation scripts and QActions), as this has been modified to support Swarming. (See [About the Alarm ID changes](xref:SwarmingPrepare#about-the-alarm-id-changes).)
 
-   ![AlarmID Usage](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage.png)
+   This check can take up to several minutes, depending on the number of scripts and connectors in the system.
 
-   In order for Swarming to work, this alarm identifier has been updated which is a breaking change.
-   To prevent possible issues as much as possible, there is a check to analyze your scripts automatically for problems.
-   Unfortunately it's not possible to scan dependencies (e.g. nugets), so these might still contain outdated references.
-   If this would be the case, running these scripts on a Swarming system would throw a clear error message.
+   ![Alarm ID usage](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage.png)
 
-   Press the **Analyze** and wait for a bit until the results appear. This can take a while, up to several minutes depending on how many scripts and protocols you have.
+   > [!NOTE]
+   > It is not possible to scan dependencies (e.g. NuGets) with this script, so these may still contain outdated references. However, if this should be the case, running these scripts on a system where Swarming is enabled will throw a clear error message.
 
-   ![AlarmID Usage Problem](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage_Problem.png)
+1. Take a look at the results of the analysis.
 
-   After analysis is done, the **Mask Critical Alarms** script should appear as one of the found problems.
-   This script takes as input a reference to an element and will mask all critical alarms of this element.
-   It does so by using a **SetAlarmStateMessage** and includes an identifier reference to the alarm it should mask.
-   This identifier still uses the old style of **DataMinerID/AlarmID** integer combination. This is no longer correct and will need a **TreeID** instead.
-   If you were to open this script via DIS in Visual Studio, you would see an obsolete warning.
-   You can also see this if you open the script via the Automation app and press the **Validate** button to check for errors and warnings.
+   ![Alarm ID usage problem](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage_Problem.png)
+
+   The *Mask Critical Alarms* script will be displayed as one of the problems that have been found. This script takes as input a reference to an element and will mask all critical alarms of this element. It does so by using a *SetAlarmStateMessage* and includes an identifier reference to the alarm it should mask, but this identifier still uses the old style of referring to an alarm, i.e. a **DataMiner ID/Alarm ID** integer combination. This is must be changed to a **tree ID** instead.
+
+1. Open the *Mask Critical Alarms* script in the Automation app, scroll down, and click *Validate* to check for errors and warnings.
+
+   You will see that a warning is detected. If you were to open this script via DIS in Visual Studio, you would also see an obsolete warning.
 
    ![AlarmID Usage Problem Warning](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage_Problem_Warning.png)
 
-   Update the code in the foreach block (Line 85) as follows:
+1. Update the code in the *foreach* block (line 85) as follows:
 
-    Before:
+   Before:
 
-    ```csharp
-        var maskRequest = new SetAlarmStateMessage();
-        maskRequest.DataMinerID = alarm.DataMinerID;
-        maskRequest.AlarmId = alarm.AlarmID;
-        maskRequest.DesiredStatus = AlarmUserStatus.Mask;
-        maskRequests.Add(maskRequest);
+   ```csharp
+      var maskRequest = new SetAlarmStateMessage();
+      maskRequest.DataMinerID = alarm.DataMinerID;
+      maskRequest.AlarmId = alarm.AlarmID;
+      maskRequest.DesiredStatus = AlarmUserStatus.Mask;
+      maskRequests.Add(maskRequest);
     ```
 
-    After:
+   After:
 
-    ```csharp
-        var maskRequest = new SetAlarmStateMessage(alarm.TreeID, AlarmUserStatus.Mask, "");
-        maskRequests.Add(maskRequest);
-    ```
+   ```csharp
+      var maskRequest = new SetAlarmStateMessage(alarm.TreeID, AlarmUserStatus.Mask, "");
+      maskRequests.Add(maskRequest);
+   ```
 
-   Press the **validate** button to see if all warnings and errors are gone.
+1. Click *Validate* again to see if all warnings and errors are gone.
 
-   ![AlarmID Usage Problem Fix](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage_Problem_Fix.png)
+   ![Alarm ID usage problem fix](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage_Problem_Fix.png)
 
-   If any other scripts or protocols appear, this will also need an update.
-   There will always be an overload or constructor you can use instead, which will refer to the **TreeID** or **AlarmTreeID**.
+1. If any other scripts or protocols are shown in the alarm ID usage summary, update these in a similar way to make sure they refer to the tree ID or alarm tree ID and validate them.
 
-   Please verify any updated script or protocol still works.
+   For detailed information, refer to [Preparing scripts and connectors for Swarming](xref:SwarmingPrepare)
 
-1. Enabling Swarming
+1. Run the the *Enable Swarming* script again and click the *Analyze* button again.
 
-   Once the static requirements are met and there are no AlarmID usage problems detected, a button will appear that you can press to enable Swarming.
-   Pressing this button will send the enable command to your DMS and will **restart the whole DMS**.
-   This process will check the requirements again, so this will take the same time as the step above.
-   After the DataMiner System restart, Swarming will be enabled.
+   If you have indeed correctly updated all scripts and protocols, a new button will be displayed at the bottom of the window. If you do not see this button, check which scripts or protocols still need to be updated and adjust them as mentioned above.
 
    ![AlarmID Usage Problem Fix](~/user-guide/images/Swarming_Tutorial_Enable_No_Problems.png)
 
+1. Click *Restart DMS and enable Swarming*.
+
+   The script will now double-check the requirements (which will again take some time), enable Swarming, and restart DataMiner.
+
+   > [!IMPORTANT]
+   > This will restart all DataMiner Agents in your DMS.
+
 ## Step 4: Swarm your first element
 
-Now it's time to swarm your first element.
-In general, Swarming means moving the functionality from one host to another host in the same cluster.
-
-For elements this is more or less equivalent with a full element restart, but the stop and start are executed on different hosts.
-Swarming elements is possible via the DataMiner Cube client as well as an automation API.
-
-To swarm elements in DataMiner Cube:
+Once DataMiner has restarted, you can test the Swarming functionality by moving an element from one host to another host in your DMS. You will only be able to follow these steps if you are using a DataMiner System consisting of multiple Agents.
 
 1. Go to *System Center* > *Agents* > *Status* and click the *Swarm* button in the lower right corner.
 
-    If you do not see any *Swarm* button here, this means you are not in a cluster environment and working with a single agent. As you cannot swarm to another host, this button is not present.
+   If you see a *Migrate* button here instead, this means Swarming has not been successfully enabled.
 
-    If you see a *Migrate* button here instead, this means Swarming was not successfully enabled. If you open this window, you will be using the DELT Export + Import flow instead.
+   ![Cube Status](~/user-guide/images/Swarming_Tutorial_Enable_Cube_Status.png)
 
-    ![Cube Status](~/user-guide/images/Swarming_Tutorial_Enable_Cube_Status.png)
+1. On the left, select the test element you created in [step 2](#step-2-create-a-basic-test-element).
 
-1. On the left, select the element(s) you want to swarm.
-
-    Here you can select the test element you created in step 2.
-    You can swarm more elements if you want, but keep in mind that swarming an element still involves an element restart, which means minimal downtime.
+   Note that you can select more elements to swarm if you want, but keep in mind that swarming an element involves an element restart, which will result in a brief downtime of the element.
 
 1. On the right, select the destination DMA.
 
-    ![Cube Swarm](~/user-guide/images/Swarming_Tutorial_Enable_Cube_Swarm.png)
+   ![Cube Swarm](~/user-guide/images/Swarming_Tutorial_Enable_Cube_Swarm.png)
 
 1. Click *Swarm*.
 
-    ![Cube Success](~/user-guide/images/Swarming_Tutorial_Enable_Cube_Success.png)
+   A message will be displayed when the element has been successfully swarmed:
 
-For more details about Swarming elements, see the [docs](xref:SwarmingElements).
+   ![Cube Success](~/user-guide/images/Swarming_Tutorial_Enable_Cube_Success.png)
+
+> [!TIP]
+> For more details about Swarming elements, see [Swarming elements](xref:SwarmingElements).

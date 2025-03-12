@@ -41,9 +41,7 @@ Expected duration: 30 minutes
  -->
 1. Click the *Deploy* button to deploy the package on your DMA.
 
-   While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
-
-1. Go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
+1. When the package has been deployed, go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
 
 1. Check if you can see the *Starlink Enterprise* app listed under *SatOps*.
 
