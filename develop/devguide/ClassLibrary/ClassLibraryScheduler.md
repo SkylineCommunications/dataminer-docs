@@ -19,7 +19,7 @@ To install the Scheduler package, follow these steps:
    ```
 
 > [!NOTE]
-> This package is currently released as a prerelease. When installing the package in Visual Studio via the NuGet Package Manager, make sure to enable the *Include prerelease* checkbox.
+> This package is currently available as a prerelease. When installing the package in Visual Studio via the NuGet Package Manager, make sure to select *Include prerelease*.
 
 ## Using the Skyline.DataMiner.Core.Scheduler.Automation library
 
