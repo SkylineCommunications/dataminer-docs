@@ -250,7 +250,7 @@ To configure this setting:
 1. Perform an IIS restart to apply the time zone changes.
 
    > [!NOTE]
-   > Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4<!--RN 42202-->, changes made to the time zone in *ClientSettings.json* take effect immediately after refreshing the web app.
+   > Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4<!--RN 42202-->, an IIS restart is not necessary, and changes made to the time zone in *ClientSettings.json* will take effect immediately as soon as the web app is refreshed.
 
 ## Configuring settings for Cube UI freezing
 
