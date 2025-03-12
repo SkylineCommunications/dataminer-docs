@@ -26,8 +26,9 @@ Other prerequisites for Swarming will be addressed later in this tutorial.
 
 - [Step 1: Deploy the tutorial package from the Catalog](#step-1-deploy-the-tutorial-package-from-the-catalog)
 - [Step 2: Create a basic test element](#step-2-create-a-basic-test-element)
-- [Step 3: Enable Swarming](#step-3-enable-swarming)
-- [Step 4: Swarm your first element](#step-4-swarm-your-first-element)
+- [Step 3: Create a DataMiner backup (optional)](#step-3-create-a-dataminer-backup-optional)
+- [Step 4: Enable Swarming](#step-4-enable-swarming)
+- [Step 5: Swarm your first element](#step-5-swarm-your-first-element)
 
 ## Step 1: Deploy the tutorial package from the Catalog
 
@@ -39,7 +40,7 @@ To deploy the package:
 
 1. When the package has been deployed, open DataMiner Cube and check whether you can see the following scripts in the *Kata - Swarming* folder of the Automation module:
 
-   - *Mask Critical Alarms*: This is a demo script to mask the critical alarms of some elements.
+   - *Mask Critical Alarms*: This is a demo script to mask the critical alarms of an element.
 
    - *Enable Swarming*: This interactive Automation script takes you through the enabling procedure for Swarming.
 
@@ -53,7 +54,13 @@ You can either [create a new basic test element](xref:Adding_elements) yourself 
 
 If you choose to create a new element yourself, you can select any protocol of your choice for it, except for a spectrum protocol or a DVE protocol, as these would not result in a swarmable element.
 
-## Step 3: Enable Swarming
+## Step 3: Create a DataMiner backup (optional)
+
+Once you enable Swarming, the element configuration of the DMS will be moved from disk to database, which is a change that cannot easily be rolled back. This is why taking a backup of your DataMiner Agents before you enable Swarming is highly recommended.
+
+For detailed steps, refer to [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent).
+
+## Step 4: Enable Swarming
 
 Swarming has its own set of prerequisites. In this step, you will use a script from the deployed package to make sure these are met and then enable Swarming.
 
@@ -92,9 +99,11 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
 
 1. Open the *Mask Critical Alarms* script in the Automation app, scroll down, and click *Validate* to check for errors and warnings.
 
-   You will see that a warning is detected. If you were to open this script via DIS in Visual Studio, you would also see an obsolete warning.
+   You will see that a warning is detected.
 
    ![AlarmID Usage Problem Warning](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage_Problem_Warning.png)
+
+   Note that you could also open the script via DIS in Visual Studio instead, if you have this installed. In that case, if you target the *Skyline.DataMiner.Dev.Automation* package version 10.5.1 or higher, you will also see an obsolete warning for this script.
 
 1. Update the code in the *foreach* block (line 85) as follows:
 
@@ -119,7 +128,9 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
 
    ![Alarm ID usage problem fix](~/user-guide/images/Swarming_Tutorial_Enable_AlarmID_Usage_Problem_Fix.png)
 
-1. If any other scripts or protocols are shown in the alarm ID usage summary, update these in a similar way to make sure they refer to the tree ID or alarm tree ID and validate them.
+1. Click *Execute* to run the script and test if it still works correctly.
+
+1. If any other scripts or protocols are shown in the alarm ID usage summary, update these in a similar way to make sure they refer to the tree ID or alarm tree ID and validate and test them.
 
    For detailed information, refer to [Preparing scripts and connectors for Swarming](xref:SwarmingPrepare)
 
@@ -136,7 +147,7 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
    > [!IMPORTANT]
    > This will restart all DataMiner Agents in your DMS.
 
-## Step 4: Swarm your first element
+## Step 5: Swarm your first element
 
 Once DataMiner has restarted, you can test the Swarming functionality by moving an element from one host to another host in your DMS. You will only be able to follow these steps if you are using a DataMiner System consisting of multiple Agents.
 
