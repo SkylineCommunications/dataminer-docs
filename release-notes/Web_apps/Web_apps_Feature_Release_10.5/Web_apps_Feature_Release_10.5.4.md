@@ -217,6 +217,12 @@ These updated colors will automatically be applied to all existing dashboards an
 
 Also, the icon of the *Column & bar chart* component has been redesigned.
 
+#### Dashboards/Low-Code Apps - Dropdown component: Enhanced behavior [ID 42298]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+Up to now, a *Dropdown* component would open upwards as soon as it was positioned in the bottom half of the screen, even when there was enough room to open downwards. From now on, a *Dropdown* component will only open upwards if there is not enough room below it to open downwards.
+
 #### Dashboards/Low-Code Apps - Maps, Timeline & Grid components: Templates have been updated [ID 42322]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->

@@ -24,11 +24,7 @@ uid: Web_apps_Feature_Release_10.5.5
 
 ### Enhancements
 
-#### Dashboards/Low-Code Apps - Dropdown component: Enhanced behavior [ID 42298]
-
-<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
-
-Up to now, a *Dropdown* component would open upwards as soon as it was positioned in the bottom half of the screen, even when there was enough room to open downwards. From now on, a *Dropdown* component will only open upwards if there is not enough room below it to open downwards.
+*No enhancements have been added yet.*
 
 ### Fixes
 
