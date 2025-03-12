@@ -4,12 +4,13 @@ uid: Specifying_data_input_in_a_URL
 
 # Specifying data input in a dashboard or app URL
 
-If a dashboard has been configured with one or more components, it is possible to specify data input for this data in a dashboard URL. This way, you can immediately make the dashboard display specific data when it is opened. From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, you can pass the data using a [JSON object](#json-syntax) in the URL. Prior to DataMiner 10.2.0/10.2.2, you can use the [legacy syntax](#legacy-syntax), which continues to be supported in recent DataMiner versions for now.
+It is possible to specify data input for a dashboard using the dashboard URL. This way, you can immediately make the dashboard display specific data when it is opened. From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, you can pass the data using a [JSON object](#json-syntax) in the URL. Prior to DataMiner 10.2.0/10.2.2, you can use the [legacy syntax](#legacy-syntax), which continues to be supported in recent DataMiner versions for now.
 
-From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42031-->, low-code apps also support specifying data input in an app URL, using either the JSON syntax or the legacy syntax. Prior to this, the low-code app URL can only be used to set a component's default value, such as selecting a default element in a dropdown.
+From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42031-->, low-code apps also support specifying data input in an app URL, using either the JSON syntax or the legacy syntax. Prior to this, the low-code app URL can only be used to set a component's default value, for example to select a default element in a dropdown.
 
 > [!NOTE]
 >
+> - From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter `d` is used instead of `data`.
 > - To only display a dashboard without the rest of the app, add the argument "*embed=true*". To display the *Clear all* button for an embedded dashboard, add "*subheader=true*" as well. For example: *https://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
 > - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 > - When data is selected in a component, the URL of a dashboard changes. However, unlike dashboards, low-code apps will not push data to the URL.
@@ -22,8 +23,6 @@ From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42031-->, low-cod
 You can pass the data using a JSON object in the URL:
 
 ``url?data=<URL-encoded JSON object>``
-
-From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter `d` is used instead of `data`.
 
 This JSON object has to have the following structure:
 
