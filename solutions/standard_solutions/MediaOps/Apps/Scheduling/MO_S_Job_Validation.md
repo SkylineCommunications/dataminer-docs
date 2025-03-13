@@ -12,7 +12,7 @@ When the MediaOps package is installed a scheduled task will be added or updated
 
 ## Validation Script
 
-By default the scheduled task will trigger the default validation script 'Scheduling_Validate Upcoming'. This script contains validation tests that covers the most common use-cases. It is possible to customize the validation script (e.g. to add ChatOps notifications or to add additional tests). To customize you duplicate the script with a new name and update the scheduled task to execute the custom script instead (don't forget to add 'customized' in the description of the scheduled task).
+By default the scheduled task will trigger the default validation script 'Scheduling_Validate Upcoming'. This script contains validation tests that covers the most common use-cases. It is possible to customize the validation script (e.g. to add ChatOps notifications or to add additional tests). To customize you duplicate the script with a new name and update the scheduled task to execute the custom script instead (remember to add 'customized' in the description of the scheduled task).
 
 Below tests are part of the default script:
 

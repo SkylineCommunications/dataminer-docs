@@ -4,7 +4,7 @@ uid: MO_S_Configuration
 
 # Configuration Parameters
 
-For operators (or automatic orchestration scripts) to configure resources correctly, it is possible to save configuration parameters values on jobs and/or nodes. Depending on the type of resource (or resource pool) added it is possible to define what type of parameters are expected. This can be defined on the resource (pool) from the [Resource Studio](MO_Resource_Studio). Once the resource (pool) is added it can further be customized in the workflow or job. Once a job is created, it will be needed to provide a value for every parameter that is not optional before it can be moved to the confirmed state. When you have configuration parameters on different nodes that have to match the same value, it is possible to use placeholders on those to point to a parameter value on job level.
+For operators (or automatic orchestration scripts) to configure resources correctly, it is possible to save configuration parameters values on jobs and/or nodes. Depending on the type of resource (or resource pool) added it is possible to define what type of parameters are expected. This can be defined on the resource (pool) from the [Resource Studio](xref:MO_Resource_Studio). Once the resource (pool) is added it can further be customized in the workflow or job. Once a job is created, it will be needed to provide a value for every parameter that is not optional before it can be moved to the confirmed state. When you have configuration parameters on different nodes that have to match the same value, it is possible to use placeholders on those to point to a parameter value on job level.
 
 ## Profile parameters and definitions
 
