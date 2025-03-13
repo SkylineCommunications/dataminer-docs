@@ -635,7 +635,7 @@ items:
         topicUid: SwarmingElements
       - name: Swarming bookings
         topicUid: SwarmingBookings
-      - name: Partially rolling back Swarming
+      - name: Rolling back Swarming
         topicUid: SwarmingRollback
       - name: Tutorials
         items:

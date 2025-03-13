@@ -17,7 +17,7 @@ uid: EnableSwarming
 
   Swarming [will eventually support automatic switchover](xref:Swarming#upcoming-features) of elements in case issues are detected, so that it will replace Failover functionality.
 
-- No [data offloads](xref:Offload_database) are configured.
+- No [data offloads](xref:Offload_database) are configured (note that this prerequisite will no longer be needed soon).
 
 - The [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards) is not enabled.
 
@@ -93,6 +93,8 @@ To enable Swarming using SLNetClientTest tool:
    If SLNetClientTest tool is unable to reach any of the Agents at the time of the check, for example because an Agent is stopped, Swarming will not be enabled.<!-- RN 41217 -->
 
    During DataMiner startup, the existing element XML files will be moved from the disk to the database. This can take several minutes. While this is happening, a message will be displayed on any clients that are trying to connect.
+
+   ![Swarming message](~/user-guide/images/Swarming_message.jpg)
 
    > [!TIP]
    > In case you encounter DataMiner startup issues after you have enabled Swarming, refer to [Troubleshooting - DataMiner startup issues](xref:Troubleshooting_Startup_Issues#swarming-issue).
