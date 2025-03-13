@@ -6,11 +6,7 @@ uid: MediaOps_Integration
 
 ## Customizing the visualization
 
-When you want to customize any of the [MediaOps apps](xref:MediaOps_apps) it is advised to make a duplicate of the app. This way when a new version of MediaOps is deployed and the MediaOps apps are updated it will not update your duplicated app.
+When building your own custom applications on top of MediaOps, we advise to always use the [xxx NuGet package](https://todo.be) to interact with MediaOps. This will ensure that your custom applications keeps on working when upgrading to the next version of MediaOps.
 
 > [!IMPORTANT]
-> We don't guarantee that any customized apps remain compatible with newer versions of MediaOps as the ad-hoc data sources used can change in the future.
-
-## Creating custom applications
-
-The helper classes/library (TODO PROVIDE DOCS) provide an API that is backwards compatible. By making custom applications that do not make use of any of the MediaOps scripts except for the helper classes it is possible to guarantee your applications will keep working for all versions of MediaOps within the same major range. TODO CHECK WITH SQUAD AND ADD VERSIONING INFO
+> We don't guarantee that duplicates of the apps remain compatible with newer versions of MediaOps. The ad-hoc data sources that are part of the solution can change in the future and hence break anything using those ad-hoc data sources.

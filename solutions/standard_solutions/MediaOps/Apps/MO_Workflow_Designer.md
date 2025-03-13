@@ -4,22 +4,18 @@ uid: MO_Workflow_Designer
 
 # Workflow Designer
 
-The workflow designer app allows you to manage and configure Workflows. They describe a set of resources and how they are interconnected. These workflows can then be used as templates for Jobs that can be created from the [Scheduling app](xref:MO_Scheduling).
+The workflow designer app allows you to manage and configure Workflows. A workflow describes what resources are needed and how they are interconnected. Workflows can be used as templates for Jobs in the [Scheduling app](xref:MO_Scheduling).
 
+The main features of the app:
 
-The main actions that users can do in the app include:
+- Manage workflows by define which workflows are currently available (Complete) for job creation.
 
-- Adding nodes to a workflow. When a user creates a new workflow, the first thing they will typically do is add nodes representing the different types of resources that will contribute to the execution of the workflow.
+- Define the resources needed for the workflow and how the resources are linked to each other.
 
-- Defining booking behavior. When workflows get executed, users can opt to create bookings on the nodes in the workflow or not.
+- Provide default configuration settings for certain resources (e.g. required capacities).
 
-- Creating connections between nodes. The workflow designer allows users to define connectivity between nodes that need to have a network connection set up between them for the execution of the workflow.
+- Define a custom workflow execution script.
 
-- Describing what should happen when a workflow gets executed.
+More details on creating workflows can be found [here](xref:WFD_Creating_Workflows).
 
-
-More details on creating workflows can be found [here](xref:WFD_Creating_Workflows). 
-
-
-
-
+[Example workflow](~/solutions/images/WFD_Example_WF.png)
