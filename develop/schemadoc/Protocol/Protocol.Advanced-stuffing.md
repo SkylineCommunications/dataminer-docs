@@ -32,7 +32,7 @@ string
 
     First, the data of the message between the start and end offset is checked for any occurrences of the sequence provided in the "stuffing" attribute. If any occurrences are detected, then for each occurrence, it is verified whether the occurrence is immediately followed by one of the entries specified in the "allowed" attribute. If this is the case, the entry will not be escaped. If it is not the case, an escape sequence (specified in the "escape" attribute) will be included just before the occurrence of the stuffing sequence.
 
-    ![alt text](~/develop/schemadoc/Protocol/images/ProtocolAdvancedStuffing.svg "start and end offset")
+    ![Start and end offset](~/develop/schemadoc/Protocol/images/ProtocolAdvancedStuffing.svg)
 
     Examples
 

@@ -30,7 +30,7 @@ A label displays the current value of a standalone parameter. The text provided 
 </Param>
 ```
 
-![alt text](~/develop/images/uilabel.png "DataMiner Cube label")
+![DataMiner Cube label](~/develop/images/uilabel.png)
 
 The way a label is visualized can be customized in many ways. For the available options, see [Options for measurement type "string"](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string).
 

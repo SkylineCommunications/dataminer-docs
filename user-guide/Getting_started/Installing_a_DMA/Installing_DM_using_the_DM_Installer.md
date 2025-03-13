@@ -152,6 +152,32 @@ If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing
 
 1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
+### Switching from subscription mode to an offline demo license
+
+When you deploy a DataMiner Agent using the installer, your system will automatically be licensed and run in subscription mode. A DataMiner Agent running in subscription mode **has to remain connected** to [dataminer.services](xref:AboutCloudPlatform) to keep it licensed. If for some reason you cannot keep your Agent connected to [dataminer.services](xref:AboutCloudPlatform), it will automatically shut down after 1 month.
+
+If after this period you want to extend the usage of the system, you can convert your subscription installation to an offline demo installation:
+
+1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+1. Open the *C:\Skyline DataMiner\\* folder.
+
+1. Remove all *\*.lic* files, if any.
+
+1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
+
+1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the *Request.lic* file.
+
+   In your email, mention that it concerns a conversion from a subscription to a demo license.
+
+1. Wait until you receive a *Response.lic* file from Skyline.
+
+1. When you have the *Response.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
+
+1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
 ## Older DataMiner installers (deprecated)
 
 If you are using an older installer, follow the steps below to install DataMiner. However, keep in mind that installers prior to the 10.4 installer are considered deprecated.
@@ -240,7 +266,7 @@ If you are using an older, deprecated DataMiner installer, follow the steps belo
      > [!NOTE]
      > By default, a DataMiner Agent installed with the deprecated DataMiner installer uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [Storage options overview](xref:Supported_system_data_storage_architectures), or check with your Technical Account Manager.
 
-   - If you are using an older DataMiner installer, you can select to install *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench). However, as MySQL support is **End of Life** as of DataMiner version 10.4.X (Q4 2023), this option is **not recommended**.
+   - If you are using an older DataMiner installer, you can select to install *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench). However, as MySQL support is [scheduled to end soon](xref:Software_support_life_cycles#third-party-software-support-life-cycle), this option is **not recommended**.
 
      > [!NOTE]
      >

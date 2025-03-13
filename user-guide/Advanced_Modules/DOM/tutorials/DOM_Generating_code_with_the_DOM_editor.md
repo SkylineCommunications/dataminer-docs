@@ -9,7 +9,7 @@ In this tutorial, you will learn how to use the DOM Editor to generate code from
 Expected duration: 10 minutes.
 
 > [!TIP]
-> If you are new to DOM, take a look at the [Getting Started with DOM tutorial](xref:DOM_Generating_code_with_the_DOM_editor).
+> See also: [Kata #57: Generating code with the DOM Editor](https://community.dataminer.services/courses/kata-57/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created in DataMiner 10.4.12 with DOM Editor version 10.4.4.3.
@@ -21,6 +21,9 @@ Expected duration: 10 minutes.
 - [DOM Editor](https://catalog.dataminer.services/details/11674850-aeac-48c4-9f35-03c387ebcf18) (version 10.4.4.3 or higher) is installed.
 - Visual Studio and [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
 - Basic knowledge of DataMiner Object Models (DOM).
+
+  > [!TIP]
+  > If you are new to DOM, take a look at the [Getting Started with DOM tutorial](xref:DOM_Generating_code_with_the_DOM_editor).
 
 ## Overview
 
@@ -75,7 +78,10 @@ To create an Automation script solution:
 
 1. In Visual Studio, select *File > New > Project*.
 
-1. Search for *DataMiner Automation Script Solution (Skyline Communications)* in the template search box and click *Next*.
+1. Search for *DataMiner Automation Script Project (Skyline Communications)* in the template search box and click *Next*.
+
+   > [!NOTE]
+   > If you follow [Kata #57](https://community.dataminer.services/courses/kata-57/), the project template *DataMiner Automation Script Solution (Skyline Communications)* will be mentioned instead, but this project template is no longer available and has been replaced with the above-mentioned template.
 
 1. Use `Generate Kata DOM` as the name for your solution.
 

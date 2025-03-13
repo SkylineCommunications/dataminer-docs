@@ -46,4 +46,4 @@ The info of this parameter is then copied to a parameter in the protocol, which 
 </Measurement>
 ```
 
-![alt text](~/develop/images/SmartSerialTCP.svg "Smart-serial behavior after a physical device disconnect")
+![Smart-serial behavior after a physical device disconnect](~/develop/images/SmartSerialTCP.svg)

@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_fixes
 ---
 
-# General Main Release 10.5.0 – Fixes (preview)
+# General Main Release 10.5.0 – Fixes
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]
 
@@ -315,3 +315,15 @@ Also, the Mobile Gateway process would only be aware of elements that were hoste
 When you tried to update the GQI DxM by means of the MSI installer, in some cases, the update would either not entirely succeed or even fail.
 
 A number of enhancements have now been made to prevent any problems from occurring while updating the GQI DxM.
+
+#### No more logging would be added to SLWatchDog2.txt after a DataMiner upgrade [ID 42180]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+After a DataMiner upgrade, in some cases, no new entries would be added to the *SLWatchDog2.txt* log file anymore.
+
+#### SLSNMPManager process could stop working when an SNMPv3 element was stopped [ID 42195]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When an SNMPv3 element was stopped, in some rare cases, the SLSNMPManager process could stop working.

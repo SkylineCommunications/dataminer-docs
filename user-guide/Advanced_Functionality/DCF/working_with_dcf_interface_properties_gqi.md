@@ -6,6 +6,8 @@ uid: working_with_dcf_interface_properties_gqi
 
 In this tutorial, you will learn how to work with GQI queries that contain DCF interface information. By way of example, the tutorial will show how you can display information about the DCF interface properties using a grid visualization. Using GQI query filter components, you will then be able to filter the displayed interfaces.
 
+Estimated duration: 20 minutes.
+
 > [!TIP]
 > See also: [Kata #45: DataMiner Connectivity Framework](https://community.dataminer.services/courses/kata-45/) and [Kata #55: Advanced Features of the DataMiner Connectivity Framework](https://community.dataminer.services/courses/kata-55/), available on DataMiner Dojo.
 
@@ -30,8 +32,6 @@ To deploy the package:
 1. Go to the [Kata DCF package](https://catalog.dataminer.services/details/1b2baca9-9fa6-4a62-84c1-69e836612a8e) in the DataMiner Catalog.
 
 1. Deploy the latest version of the package on your DMA using the *Deploy* button.
-
-   While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
 
    The package will deploy the following components:
 

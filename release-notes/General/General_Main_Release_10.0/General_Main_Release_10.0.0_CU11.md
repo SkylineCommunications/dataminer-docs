@@ -123,7 +123,7 @@ In a Failover setup, up to now, the offline agent would not be aware of any chan
 
 #### Problem when compiling QActions when 'System.xxxx' and 'Microsoft.xxx' DLL files could not be found in the Windows System Assemblies folders \[ID 28653\]
 
-When a QAction was defined with dllImport=”System.xxxxx.dll” or dllImport=”Microsoft.xxxx.dll”, in some cases, the QAction would fail to compile when the referenced DLL file could not be found in the Windows System Assemblies folders.
+When a QAction was defined with dllImport="System.xxxxx.dll" or dllImport="Microsoft.xxxx.dll", in some cases, the QAction would fail to compile when the referenced DLL file could not be found in the Windows System Assemblies folders.
 
 Also, the compilation error would not be added to the log file.
 

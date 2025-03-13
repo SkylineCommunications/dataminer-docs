@@ -202,11 +202,15 @@ items:
             topicUid: Investigating_Dataminerservices_Feature_Issues
       - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
-      - name: Troubleshooting – OpenSearch
-        topicUid: Investigating_OpenSearch_Issues
+      - name: Troubleshooting – Indexing database
+        topicUid: Troubleshooting_Indexing_Database
         items:
-          - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
-            topicUid: Elastic_not_starting_after_upgrade_cleanup
+          - name: Troubleshooting tools
+            topicUid: ID_Troubleshooting_Tools
+          - name: Diagnostic procedures
+            topicUid: ID_Diagnostic_Procedures
+          - name: Common issues
+            topicUid: ID_Common_Issues
       - name: Troubleshooting - SLScripting
         items:
           - name: Investigating exception occurrence on Finalizer thread
@@ -237,6 +241,10 @@ items:
     items:
       - name: Current issues
         items:
+          - name: DIS unable to connect to DataMiner Agent
+            topicUid: KI_DIS_unable_to_connect
+          - name: Failed getting progress notices during upgrade
+            topicUid: KI_SLNetIPC_Errors_During_Upgrade
           - name: SLProtocol crash when restarting elements used by enhanced services
             topicUid: KI_SLProtocol_Crash_Enhanced_Services
           - name: Sticky element alarm state caused by correlation rules

@@ -32,7 +32,7 @@ Set the Type of the Measurement tag to "analog".
 </Param>
 ```
 
-![alt text](~/develop/images/uianalog.png "DataMiner Cube analog")
+![DataMiner Cube analog](~/develop/images/uianalog.png)
 
 ## See also
 

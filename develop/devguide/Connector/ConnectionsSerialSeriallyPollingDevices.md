@@ -8,7 +8,7 @@ To serially poll different devices using a single element, the element should co
 
 Information that is needed will be the polling IP/DNS name (required), and optionally the device type (when multiple types of devices are polled).
 
-![alt text](~/develop/images/Connection_types_-_serial_polling.png "Example table used to serially poll different devices")
+![Example table used to serially poll different devices](~/develop/images/Connection_types_-_serial_polling.png)
 
 In case the element already polls a device (e.g. in the case of a controller), a second connection should be defined for the serial polling functionality. This additional connection will be used to dynamically change the polling IP at runtime to be able to poll different devices that have different addresses.
 

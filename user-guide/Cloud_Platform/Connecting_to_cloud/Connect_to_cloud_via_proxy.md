@@ -25,7 +25,7 @@ To configure this:
    ```
 
    - **Enabled**: Set this to `true`.
-   - **Address**: Specify the address of the proxy server. Example: `127.0.0.1` or `localhost`.
+   - **Address**: Specify the address of the proxy server. Example: `127.0.0.1:8080` or `localhost:5000`.
 
 1. Restart the CloudGateway service for the changes to take effect.
 

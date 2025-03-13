@@ -112,7 +112,7 @@ The scenarios where these messages cannot be serialized will now be handled bett
 
 #### DataMiner Cube: Problem with table filters \[ID 30658\]
 
-In Data Display and Visual Overview, in some cases, table filters could yield incorrect results when they contained numeric column filters with a “\<=”, “=”, or “=>” operator.
+In Data Display and Visual Overview, in some cases, table filters could yield incorrect results when they contained numeric column filters with a "\<=", "=", or "=>" operator.
 
 #### DataMiner Cube: No reports or alarm heatlines shown for view table parameters \[ID 30667\]
 

@@ -22,7 +22,7 @@ To define a title, create a parameter of type "fixed". In the Measurement tag, s
 </Param>
 ```
 
-![alt text](~/develop/images/uititle.png "DataMiner Cube title")
+![DataMiner Cube title](~/develop/images/uititle.png)
 
 ## See also
 

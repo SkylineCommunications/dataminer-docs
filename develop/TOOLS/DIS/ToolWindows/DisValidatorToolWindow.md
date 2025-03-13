@@ -21,7 +21,7 @@ The validator results are listed in a tree grid that groups the validation resul
 | Column | Description |
 |--|--|
 | Description | A description of the issue. |
-| Information icon | This icon is shown in case more information is available about this validator check. Clicking the information icon will open a pop-up window showing this information. |
+| Information icon | This icon is shown in case more information is available about this validator check. Click the icon to view this information. Starting from DIS 3.1.6, instead a link to the online documentation of the validator is provided. <!-- RN 42396 -->|
 | Auto-fix icon | If this icon is displayed, an auto-fix is available. To execute the fix, from the context menu, select either *Fix* > *This error* or *Fix* > *All errors of this type*. |
 | State | Shows the state of this validation result (*Active*, *Postponed*, or *Suppressed*). |
 | Certainty | Specifies whether the validator is certain or uncertain about the validity of the detected issue. If a result is uncertain, we recommend that you check the result and either fix the issue or [suppress the result](#suppressing-or-postponing-a-validation-result). |

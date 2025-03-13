@@ -452,7 +452,7 @@ Due to a serialization error, in some cases, the following Web Services API v0 m
 
 #### Interactive Automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
 
-In some cases, equals signs (“=”) could not be used in UI block values.
+In some cases, equals signs ("=") could not be used in UI block values.
 
 #### Failover: Configuration issues \[ID 28378\]
 

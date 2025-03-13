@@ -8,7 +8,7 @@ When dealing with SAML-related issues, follow the steps listed on this page and 
 
 ## Logs to check
 
-When you encounter SAML issues, investigate the logs detailed below, in the specified order:
+When you encounter SAML issues, investigate the logs detailed below, in the specified order.
 
 1. SLSAML.txt: `C:\Skyline DataMiner\logging\SLSAML.txt`
 
@@ -17,6 +17,28 @@ When you encounter SAML issues, investigate the logs detailed below, in the spec
 1. [Cube logging](xref:Cube_logging): *DataMiner Cube > Apps > System Center > Logging > cube*
 
 1. [SLDataMiner.txt](xref:DataMiner_processes#sldataminer): `C:\Skyline DataMiner\logging\SLDataMiner.txt`
+
+> [!NOTE]
+> If you contact tech support for a SAML issue, please collect the logs mentioned above, the [files mentioned below](#files-to-check), as well as a [LogCollector](xref:SLLogCollector) package.
+
+## Files to check
+
+When troubleshooting SAML, the following configuration files contain the information needed to assess the configuration:
+
+- On the **identity provider** (Okta, Entra ID, or Azure B2C):
+
+  - *IpMetadata.xml*: The identity provider's metadata file (see [Configuring SAML with Entra ID/Azure B2C](xref:SAML_using_Entra_ID) or [Okta](xref:SAML_using_Okta)).
+
+- On the **service provider** (DataMiner):
+
+  - *SpMetadata.xml*: The service provider's metadata file (see [Configuring SAML with Entra ID/Azure B2C](xref:SAML_using_Entra_ID) or [Okta](xref:SAML_using_Okta)).
+
+  - *DataMiner.xml*: The DataMiner configuration file, located in the folder `C:\Skyline DataMiner\` on the DMA.
+
+  - *SAML response*: To collect this, [use the SAML-tracer extension](#collecting-the-saml-response).
+
+> [!NOTE]
+> If you contact tech support for a SAML issue, please collect these files and the [logs](#logs-to-check) mentioned above, as well as a [LogCollector](xref:SLLogCollector) package.
 
 ## Troubleshooting
 
@@ -29,7 +51,7 @@ This troubleshooting section addresses the following common SAML issues:
 
 - [SAML authentication issues in Cube/online](#saml-authentication-issues-in-cubeonline)
 
-- [Missing or incorrect attribute statements](#missing-or-incorrect-attribute-statements)
+- [Missing or incorrect claims and attribute statements](#missing-or-incorrect-claims-and-attribute-statements)
 
 - [Other frequent issues](#other-frequent-issues)
 
@@ -85,9 +107,11 @@ When using SAML with a proxy, use the following configuration to avoid authentic
 
   Replace placeholders with the correct IP addresses, ports, and addresses.
 
-### Missing or incorrect attribute statements
+### Missing or incorrect claims and attribute statements
 
-The SAML attribute names must always match those in the identity provider and the *DataMiner.xml* file.
+The SAML attribute names, also known as **claims**; must be exactly the **same** for the identity provider and the service provider, i.e. in the *DataMiner.xml* file. This applies for **any identity provider**, be it Entra ID, Azure B2C, or Okta.
+
+To check whether the claims and attributes match:
 
 1. Go to the *C:\Skyline DataMiner* folder and open the *DataMiner.xml* file.
 
@@ -95,25 +119,42 @@ The SAML attribute names must always match those in the identity provider and th
 
    For example, if the claim name is "email," your *DataMiner.xml* emailClaim tag should be `<EmailClaim>email</EmailClaim>`.
 
-1. If issues persist, use the *SAML-tracer* tool, a browser extension available for Google Chrome and Firefox, designed to capture SAML traffic.
+   To see which specific claims are required, refer to the configuration info for [Entra ID and Azure B2C](xref:SAML_using_Entra_ID) or [Okta](xref:SAML_using_Okta).
 
-   1. Add the SAML-tracer extension to your chosen web browser:
+1. If issues persist, capture SAML traffic as specified under [Collecting the SAML response](#collecting-the-saml-response)
 
-      - For Google Chrome, visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch).
+1. Compare the attribute names in the collected response with those in the identity provider and the *DataMiner.xml* file.
 
-      - For Firefox, visit the [Firefox Add-ons page](https://addons.mozilla.org/nl/firefox/addon/saml-tracer/).
+> [!IMPORTANT]
+> Note that XML and as such SAML is **case-sensitive**, and mismatches may lead to the behavior associated with missing or incorrect attributes or claims. See [Capitalization errors](#capitalization-errors).
 
-   1. Go to `http(s)://[DMA name]/`.
+### Collecting the SAML response
 
-   1. Click the puzzle icon in the top-right corner of your browser and select *SAML-tracer* from the list of available extensions.
+To collect the SAML response, use the SAML-tracer extension:
 
-   1. Click any received SAML response marked with an orange bubble labeled "SAML".
+1. Add the SAML-tracer extension to your chosen web browser:
 
-      ![SAML-tracer](~/user-guide/images/SAML_Tracer.png)
+   - For Google Chrome, visit the [Chrome Web Store](https://chrome.google.com/webstore/detail/saml-tracer/mpdajninpobndbfcldcmbpnnbhibjmch).
 
-   1. In the pane on the bottom, select *SAML*. Now compare the attribute names in the response to those in the identity provider and the *DataMiner.xml* file.
+   - For Firefox, visit the [Firefox Add-ons page](https://addons.mozilla.org/nl/firefox/addon/saml-tracer/).
 
-      ![SAML-tracer tabs](~/user-guide/images/SAML_Tracer_Tabs.png)
+1. Go to `http(s)://[DMA name]/`.
+
+1. Click the puzzle icon in the top-right corner of your browser and select *SAML-tracer* from the list of available extensions.
+
+1. Click any received SAML response marked with an orange bubble labeled "SAML".
+
+   ![SAML-tracer](~/user-guide/images/SAML_Tracer.png)
+
+1. In the pane at the bottom, select *SAML*.
+
+   ![SAML-tracer tabs](~/user-guide/images/SAML_Tracer_Tabs.png)
+
+### Capitalization errors
+
+XML, and therefore also SAML, is case-sensitive. This goes for all XML elements and attributes configured for the service provider as well as all fields configured for the identity provider. If capitalization is incorrect, you can expect errors in the [log files](#logs-to-check) mentioning that a specific item could not be found.
+
+For example, when you are matching claim names in *DataMiner.xml* to your setup in the identity provider (see [Configuring SAML with Okta as the identity provider](xref:SAML_using_Okta)), ensure that both names have the same casing, e.g. *EMailAddress* does not equal *emailAddress*.
 
 ### Other frequent issues
 

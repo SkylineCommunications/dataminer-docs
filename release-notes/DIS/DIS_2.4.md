@@ -80,20 +80,20 @@ The ‘Check Trend Alarm’ check can now thrown two additional errors:
 
 #### 'Check RTDisplay True' check: New return code \[ID 15136\]
 
-The ‘Check RTDisplay True’ check can now thrown the following additional error when a table without export attribute and without ‘RTDisplay=”true”’ setting has a column with an export attribute.
+The ‘Check RTDisplay True’ check can now thrown the following additional error when a table without export attribute and without ‘RTDisplay="true"’ setting has a column with an export attribute.
 
 | Result code | Class | Description                                                                                           |
 |-------------|-------|-------------------------------------------------------------------------------------------------------|
 | 4424        | Error | RTDisplay="true" is required on table \[Parameter ID\]. Column with pid \[Parameter ID\] is exported. |
 
-#### Triggers: \<on id=”each”> allowed when contents of \<on> tag is command, response, pair or group \[ID 15244\]
+#### Triggers: \<on id="each"> allowed when contents of \<on> tag is command, response, pair or group \[ID 15244\]
 
 When a \<Trigger>\<On>...\</On>\</Trigger> tag contains “command”, “response”, “pair” or “group”, then the id attribute of the \<on> tag can now be set to “each”. See the following example:
 
 ```xml
-<Trigger id=”200”>
+<Trigger id="200">
   ...
-  <On id=”each”>response</On>
+  <On id="each">response</On>
   ...
 </Trigger>
 ```

@@ -154,7 +154,7 @@ Enables or disables the legacy Annotations module.
 - **Minimum version**: 10.1.10/10.2.0
 
 > [!NOTE]
-> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id-37786)). If you want to keep on using this legacy module, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)), then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
+> The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id-37786)). If you want to keep on using this legacy module, before upgrading or uploading a 10.4.x upgrade package, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)), then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
 
 ### LegacyReportsAndDashboards
 
@@ -163,7 +163,7 @@ Enables or disables the legacy Reports and Dashboards modules.
 - **Minimum version**: 10.1.10/10.2.0
 
 > [!NOTE]
-> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id-37786)). If you want to keep on using these legacy modules, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)) before upgrading or uploading a 10.4.x upgrade package.
+> The legacy Reports and Dashboards modules are disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id-37786)). If you want to keep on using these legacy modules, before upgrading or uploading a 10.4.x upgrade package, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)), then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent.
 
 ### ReportsAndDashboardsAlarmList
 
@@ -214,7 +214,7 @@ Enables the export to PDF button within the Dashboards app itself. Creating PDFs
 Enables a new Maps component in the Dashboards app and the Low-Code Apps.
 
 - **Minimum version**: 10.3.2
-- **Estimated release version**: 10.5.2
+- **Release version**: 10.5.4
 
 ### ReportsAndDashboardsPTP
 

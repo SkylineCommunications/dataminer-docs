@@ -4,6 +4,53 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.6
+
+### New features
+
+#### IDE
+
+##### New tool window: DIS Parameter Update Locations [ID 41277]
+
+The new *DIS Parameter Update Locations* tool window allows you to select a parameter and check where it is (possibly) updated. It can be opened either via the DIS menu (*Tool Windows > DIS Parameter Update Locations*) or via a parameter in the *protocol.xml* file you are editing.
+
+After you select one of the parameters of the connector, the *Confirmed Update Locations* pane will list the locations where that parameter is updated.
+
+For example:
+
+- If the pane lists an Action, this means that the Action will perform a set on the parameter when executed.
+- If the pane lists a QAction, this means that the QAction invokes e.g. a method that will cause the parameter to get updated. The line on which you will find that invocation within the QAction will be mentioned in the result window.
+
+In the *Possible Update Locations* pane, you will find an overview of possible locations where this parameter might get updated.
+
+- For example, if a QAction contains a `protocol.SetParameter()` call, but it could not be determined which parameter gets updated (e.g. because the parameter ID is calculated at run-time), then that QAction will be listed in the *Possible Update Locations* pane.
+
+- Also, the *Confirmed Update Locations* will mark incorrect update locations in red. For example, if the connector calls a method that should be executed on a table parameter is incorrectly executed on a standalone parameter.
+
+To trigger a recalculation of the update locations, click the *Refresh* button at the top of the tool window.
+
+##### DIS now supports Skyline.DataMiner.Sdk projects [ID 42072]
+
+DIS now supports the newly introduced *Skyline.DataMiner.Sdk* projects.
+
+New context menu options to import dashboards and low-code apps from DataMiner Agents are available on the project as well as on the *PackageContent* > *Dashboards* and *PackageContent* > *Low Code Apps* folders.
+
+Also, the *Import Protocol* and *Import Automation script* menu items under *DIS* > *DMA* are now only visible when they can be used. Previously, when you clicked those options when it was not possible to use them, an error would be thrown.
+
+##### DIS Validator tool window now links to documentation [ID 42396]
+
+In the *DIS Validator* tool window, the results pane will now allow you to open online documentation about the checks that were performed.
+
+This will replace the custom window that was opened when you clicked the information icon of a particular check.
+
+### Changes
+
+#### Enhancements
+
+##### DIS will now indicate that DataMiner 10.3 is the minimum supported version [ID 42399]
+
+DIS will now indicate that DataMiner version 10.3 is the minimum supported version.
+
 ## DIS 3.1.5
 
 ### New features
