@@ -91,7 +91,7 @@ When you click the *Provision* button, this will now open a wizard instead of im
 
 ​IDP has been updated to use the *Skyline.DataMiner.Core.DataMinerSystem* and *Skyline.DataMiner.Core.InterAppCall* NuGet packages. In addition, a new NuGet (*Skyline.DataMiner.ConnectorAPI.IDP*) has been created for the inter-app communication between the scripts and connectors of IDP.
 
-#### Generic Rack Layout Manage: New option to disable subscriptions [ID 38480]
+#### Generic Rack Layout Manager: New option to disable subscriptions [ID 38480]
 
 In the Generic Rack Layout Manager element, you can now disable subscriptions with a new toggle button, in order to reduce the load on SLNet. When you disable subscriptions, changes to the element properties will not update the Rack Layout Manager.
 
