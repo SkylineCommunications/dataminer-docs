@@ -9,24 +9,22 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 13 March 2025 - Improvement - Admin - Tooltips for long node names [ID 42510]
+### 13 March 2025 - Enhancement - Admin - Tooltips for long node names [ID 42510]
+
 On the overview page of a DataMiner system, the labels of a system, and it's fail-over pair will now have a tooltip.
 Before longer node names would be clipped, causing users unable to see the last part of the node names.
 
-### 13 March 2025 - Improvement - Improved initial load of cloud applications [ID 42510]
-Improved the initial load times of applications under .dataminer.services by enabling caching of font with the .woff and .woff2 extension.
-The font files have also been updated to leave a smaller footprint.
+### 13 March 2025 - Enhancement - Improved initial loading of dataminer.services applications [ID 42510] [ID 42476]
 
-### 11 March 2025 - Improvement - Improved initial load of cloud applications [ID 42476]
-Improved initial load times of applications under .dataminer.services by enabling gzip compression.
+The initial load times of applications under .dataminer.services have been improved. This has been done by enabling gzip compression and enabling caching of fonts with the .woff and .woff2 extension. The font files have also been updated to leave a smaller footprint.
 
-### 11 March 2025 - Fix - Catalog - Deployments on multiple DataMiner systems [ID 42474]
-Deploying a Catalog item to multiple systems at once will no longer cancel earlier deployment requests.
-Before only the last deployment would execute and the other would be cancelled.
+### 11 March 2025 - Fix - Catalog - Deployment on multiple DataMiner Systems at once not working correctly [ID 42474]
 
-### 11 March 2025 - Fix - Catalog - Hide context menu on version and ranges when not authenticated [ID 42459]
-On the details page of a Catalog item, the button to open the actions of a version or range will no longer be visible when the user is not authenticated.
-Before the button to open the actions menu would be visible for not authenticated users.
+Up to now, if a Catalog item was deployed to multiple systems at once, only the last deployment was executed and the others were canceled. This will no longer occur.
+
+### 11 March 2025 - Enhancement - Catalog - Context menu on version and ranges hidden when not authenticated [ID 42459]
+
+When a user is not authenticated, they will now no longer be able to see the button to open the actions for a version or range in the Catalog.
 
 ### 11 March 2025 - Fix - Catalog - Incorrect Deploy button state when not authenticated [ID 42439]
 
