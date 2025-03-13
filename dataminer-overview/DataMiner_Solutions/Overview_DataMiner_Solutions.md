@@ -57,9 +57,6 @@ Key features:
 
 - **Extendable and customizable**: Users can extend the Standard Data Model by linking custom DataMiner Object Models into the SDM, tailoring the framework to their specific organizational needs and requirements
 
-> [!TIP]
-> For an overview of the complete SDM, see [Standard Data Model](xref:SDM).
-
 ### High-level overview
 
 ![MediaOps high-level data model](~/dataminer-overview/images/common_data_model_high_level.png)
