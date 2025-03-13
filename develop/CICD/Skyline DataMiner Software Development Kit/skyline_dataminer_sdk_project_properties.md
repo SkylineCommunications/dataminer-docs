@@ -3,9 +3,9 @@ uid: skyline_dataminer_sdk_project_properties
 keywords: Skyline.DataMiner.Sdk, DataMinerType, GenerateDataMinerPackage, MinimumRequiredDmVersion, VersionComment, CatalogPublishKeyName, CatalogDefaultDownloadKeyName, UserSecretsId
 ---
 
-# Skyline DataMiner SDK - Project Properties
+# Skyline DataMiner SDK project properties
 
-The Skyline DataMiner SDK uses several project properties to be able to generate and publish a DataMiner application package.
+The Skyline DataMiner SDK uses several project properties to be able to generate and publish a DataMiner application package. Below, you can find an overview of these properties.
 
 ## DataMinerType
 
@@ -25,35 +25,35 @@ When the value is set to `true`, it will generate a DataMiner application packag
 
 Expected format: `A.B.C.D` or `A.B.C.D - buildNumber`
 
-This will ensure that when installing a DataMiner application package on a DataMiner with a lower version, the installation will fail.
+This will ensure that when a DataMiner application package is installed on a DataMiner Agent with a lower version, the installation will fail.
 
 ## Version
 
 The version for the package. Needs to be a valid semantic version.
 
 > [!NOTE]
-> This will be overwritten during a workflow run when using the GitHub workflows.
+> This will be overwritten during a workflow run when the GitHub workflows are used.
 
 ## VersionComment
 
-The content of this is used for the version comment when publishing a DataMiner application package to the Catalog.
+The content of this is used for the version comment when a DataMiner application package is published to the Catalog.
 
 > [!NOTE]
-> This will be overwritten during a workflow run when using the GitHub workflows.
+> This will be overwritten during a workflow run when the GitHub workflows are used.
 
 ## CatalogPublishKeyName
 
 This is the name of the key defined either in Visual Studio User Secrets or as an environment variable. This key is used for publishing the DataMiner application package to the Catalog.
 
 > [!NOTE]
-> This will be overwritten during a workflow run when using the GitHub workflows.
+> This will be overwritten during a workflow run when the GitHub workflows are used.
 
 ## CatalogDefaultDownloadKeyName
 
 This is the name of the key defined either in Visual Studio User Secrets or as an environment variable. This key is used for downloading versions from the Catalog that are defined in the CatalogReferences.xml in the Package Project.
 
 > [!NOTE]
-> This will be overwritten during a workflow run when using the GitHub workflows.
+> This will be overwritten during a workflow run when the GitHub workflows are used.
 
 ## UserSecretsId
 
