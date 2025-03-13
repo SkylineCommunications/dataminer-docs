@@ -59,3 +59,13 @@ When the topology was updated while you were moving a block from one location to
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 In some cases, when a browser tab was idle, the Web API would incorrectly drop the connection with that tab. When you then went back to that tab, you would be asked to log on again.
+
+#### DataMiner Comparison app: Problem when using the tool in embedded mode [ID 42409]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, the DataMiner Comparison app would not work correctly when used in embedded mode.
+
+Example: `https://myDma/comparison/#/?parameter1=935%2F152%2F30602%2F1&parameter2=935%2F108%2F5518%2F7.22&embed=true`
+
+When no connection was established yet, the query parameters would not get saved and be removed. Also, no parameters could be fetched.
