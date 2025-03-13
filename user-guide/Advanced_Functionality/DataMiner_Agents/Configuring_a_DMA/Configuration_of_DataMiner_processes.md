@@ -55,16 +55,19 @@ To set a different number:
 
 1. Save the file and restart DataMiner.
 
+> [!NOTE]
+> Adjusting the number of simultaneously running SLProtocol processes will also affect the number of elements that can run in isolation mode. See [Adding elements in isolation mode](xref:Adding_elements#adding-elements-in-isolation-mode).
+
 ## Configuring a separate SLProtocol process for every protocol used
 
-For testing purposes, you can order a DataMiner Agent to spread its elements across different SLProtocol processes based on the protocol they are using.
+For testing purposes, you can order a DataMiner Agent to spread its elements across different SLProtocol processes based on the protocol they are using. If you do so, DataMiner will start up a separate SLProtocol process for every protocol that is used. That way, each SLProtocol process will only contain elements sharing the same protocol. This will make it much easier to pinpoint any protocol-related issues that might arise.
 
-If you do so, DataMiner will start up a separate SLProtocol process for every protocol that is used. That way, each SLProtocol process will only contain elements sharing the same protocol. This will make it much easier to pinpoint any protocol-related issues that might arise.
+However, note that from DataMiner 10.5.4/10.6.0 onwards<!--RN 41757-->, there is a hard limit of maximum 50 SLProtocol processes that can run simultaneously.
+
+As soon as you have concluded the investigation for which you needed this setting to be enabled, disable it again. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41757-->, an alarm will be generated when this feature is active to remind you of this.
 
 > [!WARNING]
->
-> - Never use this option in a production environment. This feature is meant for testing/debugging purposes only. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41757-->, an alarm will be generated when this feature is active to avoid that this setting would remain active once the investigation is done.
-> - From DataMiner 10.5.4/10.6.0 onwards<!--RN 41757-->, there is a hard limit of 50 SLProtocol processes that can be running simultaneously.
+> Never use this option in a production environment. This feature is meant for testing/debugging purposes only.
 
 To have separate SLProtocol processes created for every protocol being used, do the following.
 
@@ -143,7 +146,7 @@ When a protocol is flagged to run in separate instances, every element using tha
 > [!NOTE]
 >
 > - From DataMiner 10.2.7/10.3.0 onwards, this behavior can also be configured in the protocol itself using the [RunInSeparateInstance](xref:Protocol.SystemOptions.RunInSeparateInstance) tag. In that case, no DataMiner restart is required.
-> - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->, you can configure a specific element to run in its own SLProtocol and SLScripting process using the [*Run in isolation mode* option](xref:Adding_elements). This allows you to isolate individual elements without affecting all elements using the same protocol.
+> - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->, you can configure a specific element to run in its own SLProtocol and SLScripting process using the [*Run in isolation mode* option](xref:Adding_elements#adding-elements-in-isolation-mode). This allows you to isolate individual elements without affecting all elements using the same protocol.
 
 To configure this:
 

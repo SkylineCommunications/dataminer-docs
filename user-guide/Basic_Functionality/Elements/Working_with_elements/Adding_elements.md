@@ -163,7 +163,7 @@ keywords: element wizard
 
 ## Adding elements in isolation mode
 
-From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->, you can configure an element to run in isolation mode using the *Run in isolation mode* option. If this option is activated, a separate SLProtocol and SLScripting process will be started only for this element. See [Adding elements in isolation mode](#adding-elements-in-isolation-mode).
+From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->, you can configure an element to run in isolation mode using the *Run in isolation mode* option. If this option is activated, a separate SLProtocol and SLScripting process will be started only for this element. This way, you can isolate the element so that it cannot cause issues for other elements in case something goes wrong.
 
 By default, a maximum of 50 SLProtocol processes can run at the same time, of which 10 are reserved for elements that are not running in isolation mode. This means a maximum of 40 elements can be run in isolation mode at any given time. If the maximum has been reached and you attempt to start an additional element in isolation mode, a message will appear to alert you of the 50-process limit, and the element will be hosted by an existing SLProtocol process and its matching SLScripting process.
 
