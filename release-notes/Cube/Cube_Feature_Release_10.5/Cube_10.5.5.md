@@ -71,4 +71,8 @@ In *System Center > System settings*, the *Time to live* section will no longer 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Trending: Problem when loading trend data when the trend graph contained both regular average trend data and trend data related to SLAnalytics [ID 42357]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a trend graph contained both regular average trend data and trend data related to SLAnalytics, in some rare cases, the trend graph could get stuck while loading that data.
