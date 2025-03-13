@@ -2,16 +2,17 @@
 uid: SwarmingRollback
 ---
 
-# Partially rolling back Swarming
+# Rolling back Swarming
 
-> [!IMPORTANT]
-> When you roll back Swarming, your data will only partially be recovered. The more time has passed since Swarming was enabled, the more information may be lost. If you are using a test system and you do not need to keep your data, a clean reinstall is advised.
+When Swarming is enabled, the element config XML files (e.g. `Element.xml`, `ElementData.xml`, `Description.xml`, etc.) are moved from disk to the database. There is currently no procedure to move them back to disk, so you will instead need to [restore the files from a backup](#restoring-the-element-xml-files-from-a-backup) from before Swarming was enabled. Any **changes that happened to elements or redundancy groups after Swarming was enabled will be lost**. As a consequence, if you enabled Swarming but want to switch back, e.g. to temporarily go for a Failover setup and only enable Swarming later when failure detection has been implemented, the sooner you roll back Swarming again, the better.
 
-When Swarming is enabled, the element config XML files (e.g. `Element.xml`, `ElementData.xml`, `Description.xml`, etc.) are moved from disk to the database. There is currently no procedure to move them back to disk.
+The longer you wait, the greater the impact will be. Any modifications to existing elements or redundancy groups since the backup and any new elements or redundancy groups created since the backup will be lost, and any reference to them could become invalid. This for example means that services, redundancy groups, etc. could have references to elements that no longer exist.
 
-However, there are some things you can do partially recover some data.
+For a small system, instead of restoring a backup, you can [restore elements using an export and import](#restoring-elements-using-an-export-and-import).
 
-## Partial rolling back Swarming from a backup
+If you are using a test system and do not need to keep your data, we recommend doing a clean reinstall instead.
+
+## Restoring the element XML files from a backup
 
 When DataMiner is moving the XML files from disk to database, it will take a backup first. This migration happens during the first DataMiner startup after the Swarming feature is enabled.
 
@@ -28,12 +29,15 @@ To restore this backup and roll back Swarming:
 
    This will restore both the elements and redundancy groups to be back as they were at the time of the backup, meaning that any changes or additions since the backup will be lost.
 
-1. [Manually disable Swarming](#manually-disabling-swarming-in-the-config-files).
+1. Manually disable Swarming:
+
+   1. Shut down all DMAs in the DMS.
+
+   1. On every DMA, delete the file `C:\Skyline DataMiner\Swarming.xml`.
+
+   1. Restart all DMAs.
 
 1. Restart all DMAs.
-
-> [!IMPORTANT]
-> When you restore the backup, any modifications to existing elements or redundancy groups since the backup and any new elements or redundancy groups created since the backup will be lost. Any reference to these elements could become invalid.
 
 ## Restoring elements using an export and import
 
@@ -43,17 +47,12 @@ For small systems, an alternative is to export the latest version of the element
 
    Do not include any data from the database in the export. Only the element configuration should be included.
 
-1. [Manually disable Swarming](#manually-disabling-swarming-in-the-config-files).
+1. Manually disable Swarming:
+
+   1. Shut down all DMAs in the DMS.
+
+   1. On every DMA, delete the file `C:\Skyline DataMiner\Swarming.xml`.
+
+   1. Restart all DMAs.
 
 1. [Import the elements](xref:Importing_elements_services_etc_from_a_dmimport_file) again.
-
-## Manually disabling Swarming in the config files
-
-> [!IMPORTANT]
-> This is not advised and can have big consequences for the system. For example, services, redundancy groups, etc. can have references to elements that no longer exist.
-
-1. Shut down all DMAs in the DMS.
-
-1. On every DMA, delete the file `C:\Skyline DataMiner\Swarming.xml`.
-
-1. Restart all DMAs.

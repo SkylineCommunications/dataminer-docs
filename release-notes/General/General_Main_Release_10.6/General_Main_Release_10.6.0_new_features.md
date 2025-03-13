@@ -33,7 +33,7 @@ Note that when Swarming is enabled, this will result in some major changes to th
 > [!IMPORTANT]
 >
 > - Swarming cannot be enabled on DataMiner Main Release 10.5.
-> - Once the element configuration has been moved from disk to database, there is no good way to revert this change, which means that if you were to disable Swarming again, you would lose all your elements, leaving your DMS with a lot of lingering references to non-existing elements. For instructions on how to disable Swarming and **partially** recover your elements, see [Partially rolling back Swarming](xref:SwarmingRollback).
+> - If you decide to [roll back Swarming](xref:SwarmingRollback) again, you will need to restore a backup to get the element XML files back. Any changes that have been implemented to elements after you enabled Swarming will be lost. As a consequence, the sooner you decide to roll back, the smaller the impact of the rollback will be.
 
 ##### Capabilities
 
