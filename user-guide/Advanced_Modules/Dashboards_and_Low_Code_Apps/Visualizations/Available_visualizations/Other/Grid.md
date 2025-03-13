@@ -13,6 +13,8 @@ This component allows you to visualize data as a grid.
 
 ![Grid](~/user-guide/images/Grid.png)<br>*Grid component in DataMiner 10.4.1*
 
+From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42128-->, when you right-click the grid component, you can access the browser's context menu and its options. For example, you can select text in a grid component and copy it to another application using the browser's *Copy* command.
+
 ## Configuring the component
 
 1. [Add data to the component](xref:Adding_data_to_component). The grid component should always be configured with *Queries* data input.

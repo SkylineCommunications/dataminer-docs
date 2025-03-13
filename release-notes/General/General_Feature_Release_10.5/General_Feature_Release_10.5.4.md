@@ -288,9 +288,9 @@ Because of a number of enhancements, overall performance has increased when exec
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-When you migrate data of datatype *CustomData* from either Cassandra Single or Cassandra Cluster to STaaS (using e.g. the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02)), you can now indicate exactly which data you want to have migrated.
+When you migrate data of data type *CustomData* from either Cassandra Single or Cassandra Cluster to STaaS (using e.g. the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02)), you can now indicate exactly which data you want to have migrated.
 
-For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* datatype as well as the *Analytics* datatype.
+For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* data type as well as the *Analytics* data type.
 
 #### Connection enhancements [ID 42233]
 
@@ -368,7 +368,7 @@ After a Cassandra Cluster migration had been initialized, it would no longer be 
 
 #### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
 
-<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 -->
 
 When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
 
@@ -503,7 +503,7 @@ In some rare cases, an exception could be thrown when NATS sessions were dispose
 
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
-<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU1] - FR 10.5.4 -->
 
 When a query using ad hoc data sources was executed with real-time updates enabled, up to now, the following message could incorrectly appear:
 
@@ -529,3 +529,10 @@ The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packa
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Problem when performing actions involving migrated elements [ID 42400]
+
+<!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element had been migrated from one DataMiner Agent to another, in some rare cases, certain actions involving that migrated element (e.g. a deletion of the element) would fail until the DataMiner Agent was restarted.

@@ -72,4 +72,7 @@ description: DataMiner tutorials are step-by-step guides that teach you how to u
   <div class="column">
     <a href="/tutorials/Visio_Tutorials.html" title="Visual Overview tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Visual_Overview.svg" style="width:100%"></a>
   </div>  
+  <div class="column">
+    <a href="/tutorials/Advanced_Admin_Tutorials.html" title="Advanced Admin tutorials" target="_self"><img src="~/tutorials/images/Tutorials_Advanced_Admin.svg" style="width:100%"></a>
+  </div>  
 </div>

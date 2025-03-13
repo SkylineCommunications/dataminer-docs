@@ -91,7 +91,7 @@ When you add the following argument to the URL of a low-code app, all UI compone
 
 Up to now, low-code apps would only support using URL data to pass default values to components. For example, to select a particular default value in a dropdown box. From now on, low-code apps will also be able to consume data passed via their URL using either the JSON syntax or the legacy syntax. For example, you will now be able to use an element specified in the URL to filter a GQI query.
 
-For more information regarding the above-mentioned JSON syntax and legacy syntax, see [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL).
+For more information regarding the above-mentioned JSON syntax and legacy syntax, see [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_URL).
 
 > [!NOTE]
 > Contrary to dashboards, low-code apps will not push data to the URL. In other words, the URL will not change when data is selected in a component.
@@ -216,6 +216,12 @@ The default data colors have been updated. These are the colors that are used fo
 These updated colors will automatically be applied to all existing dashboards and low-code apps that use one of the default Skyline themes (i.e. Skyline Light - White, Skyline Light - Gray, and Skyline Dark).
 
 Also, the icon of the *Column & bar chart* component has been redesigned.
+
+#### Dashboards/Low-Code Apps - Dropdown component: Enhanced behavior [ID 42298]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
+
+Up to now, a *Dropdown* component would open upwards as soon as it was positioned in the bottom half of the screen, even when there was enough room to open downwards. From now on, a *Dropdown* component will only open upwards if there is not enough room below it to open downwards.
 
 #### Dashboards/Low-Code Apps - Maps, Timeline & Grid components: Templates have been updated [ID 42322]
 
@@ -384,8 +390,14 @@ Also, dropdown boxes would no longer ellipse long values, causing a horizontal s
 
 When you had selected a time range in a *Timeline* component, in some cases, that time range would incorrectly not get passed to other components.
 
-#### Low-Code Apps: Problem when entering edit mode when the app contained a component without visualization [ID 42832]
+#### Low-Code Apps: Problem when entering edit mode when the app contained a component without visualization [ID 42382]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 When you entered the edit mode of a low-code app, in some cases, a run-time error could occur when the app contained a component to which no visualization had been assigned.
+
+#### Dashboards/Low-Code Apps - Query filter component: Problem when changing a query that contained boolean columns [ID 42442]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
+
+In some cases, a *Query filter* component could throw an error whenever you made a change to a query that contained boolean columns.

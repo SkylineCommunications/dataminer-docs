@@ -57,8 +57,6 @@ To deploy the package:
 
 1. Click the *Deploy* button to deploy the package on your DMA.
 
-   While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
-
    The package will deploy the following components:
 
    - The **Generic Data Simulator** connector, which exposes DCF interfaces and will be used by the elements created for this tutorial.
