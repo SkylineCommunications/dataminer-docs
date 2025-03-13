@@ -4,6 +4,58 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.7
+
+### New features
+
+#### IDE
+
+##### Added info bar to suggest use of Protocol.Extension NuGet  [ID 42021]
+
+A new infobar has been added to DIS to suggest the use of the [Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+
+##### Update XMLSchemas and Validators dependencies [ID 42511]
+
+DIS now uses:
+
+- [Validator version 1.2.0](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.2.0)
+- [Skyline.DataMiner.XmlSchemas.Protocol version 1.1.1](https://github.com/SkylineCommunications/Skyline.DataMiner.XmlSchemas/releases/tag/1.1.1)
+
+### Changes
+
+#### Enhancements
+
+##### SLDatabase no longer shown in reference context menu of edit QAction icon [ID 42509]
+
+The icon to edit a QAction opens a context menu where you can easily add references to some predefined assemblies.
+This list has now been updated to no longer include SLDatabase.dll and System.Xml.dll.
+
+#### Fixes
+
+##### Import of low code apps with characters in name that cannot be used in a file name [ID 42475]
+
+A LCA can have a name that contains characters that cannot be used in a file name.
+This would cause an issue when such a LCA would be imported in DIS.
+DIS is now able to import such LCAs as it will now generate a filename where such invalid characters are replaced by an underscore ('_').
+
+##### Exception caught when no connection could be made with web API of the DataMiner Agent [ID 42484]
+
+Since DataMiner 3.1.6, when DIS sets up a connection with a DataMiner Agent, it would also set up a connection with the web API. In case this connection could not be set up, an exception would be thrown which would prevent performing actions such as publishing a protocol (which do not need the web API).
+
+With this RN, if the connection with the web API cannot be set up, it will be logged in the output window (together with a message that states that importing LCAs and dashboards will not be possible because the web API connection could not be made).
+
+However, all other functionality that relies on the SLNet connection, such as publishing a protocol, should still work.
+
+##### Fix dropdown issue in Parameter Update Locations tool window [ID 42500]
+
+The Parameter Update Locations tool window had an issue where the dropdown would not be populated again when switching to another solution. This has now been fixed.
+
+Also, a race condition has been fixed which could result in the update locations and possible update locations panes to contain duplicate entries has been fixed.
+
+##### Skyline.DataMiner.Sdk - Publish - Support OutDir [ID 42497]
+
+With version 1.1.0 of the Skyline.DataMiner.Sdk, the OutDir property is being used instead of dynamically making the output path (which is error prone). DIS was using the old way and was not finding the new file location. Now the OutDir property is being used.
+
 ## DIS 3.1.6
 
 ### New features
