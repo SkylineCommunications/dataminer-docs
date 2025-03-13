@@ -53,3 +53,9 @@ In the *Table* and *Parameter table* components, up to now, the search icon woul
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When the topology was updated while you were moving a block from one location to another, up to now, the position of the mouse pointer would get out of sync with the block you were moving. From now on, the block that is being moved will always follow the mouse pointer.
+
+#### Web API would incorrectly drop the connection with an idle browser tab [ID 42407]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, when a browser tab was idle, the Web API would incorrectly drop the connection with that tab. When you then went back to that tab, you would be asked to log on again.
