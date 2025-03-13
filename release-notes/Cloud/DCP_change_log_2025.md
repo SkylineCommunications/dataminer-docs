@@ -9,6 +9,25 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 13 March 2025 - Improvement - Admin - Tooltips for long node names [ID 42510]
+On the overview page of a DataMiner system, the labels of a system, and it's fail-over pair will now have a tooltip.
+Before longer node names would be clipped, causing users unable to see the last part of the node names.
+
+### 13 March 2025 - Improvement - Improved initial load of cloud applications [ID 42510]
+Improved the initial load times of applications under .dataminer.services by enabling caching of font with the .woff and .woff2 extension.
+The font files have also been updated to leave a smaller footprint.
+
+### 11 March 2025 - Improvement - Improved initial load of cloud applications [ID 42476]
+Improved initial load times of applications under .dataminer.services by enabling gzip compression.
+
+### 11 March 2025 - Fix - Catalog - Deployments on multiple DataMiner systems [ID 42474]
+Deploying a Catalog item to multiple systems at once will no longer cancel earlier deployment requests.
+Before only the last deployment would execute and the other would be cancelled.
+
+### 11 March 2025 - Fix - Catalog - Hide context menu on version and ranges when not authenticated [ID 42459]
+On the details page of a Catalog item, the button to open the actions of a version or range will no longer be visible when the user is not authenticated.
+Before the button to open the actions menu would be visible for not authenticated users.
+
 ### 11 March 2025 - Fix - Catalog - Incorrect Deploy button state when not authenticated [ID 42439]
 
 Previously, the *Deploy* button for a Catalog item version was always enabled when the user was not authenticated, even if the version had issues. This occurred because certain checks could not be performed when the user was not logged in yet. This issue has now been resolved. The *Deploy* button will now be correctly disabled if there are any issues with the version, regardless of authentication status.
