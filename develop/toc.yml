@@ -5344,7 +5344,7 @@ items:
     - name: Skyline DataMiner SDK
       topicUid: skyline_dataminer_sdk
       items:
-        - name: Project Properties
+        - name: Project properties
           topicUid: skyline_dataminer_sdk_project_properties
     - name: DataMiner Package Project
       topicUid: skyline_dataminer_sdk_dataminer_package_project
