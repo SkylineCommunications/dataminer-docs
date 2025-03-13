@@ -59,3 +59,9 @@ When mobile visual overview sessions were removed from a DataMiner Agent, in som
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 In some cases, the `ParameterChangeEvent` or `ParameterTableUpdateEventMessage` for a primary key cell would contain an invalid `InstanceAlarmlevel` or `CellBubbleUpLevel`. As a result, when you opened an element card of a DVE or a Virtual Function, the card pages would show incorrect alarm colors.
+
+#### STaaS: Problem with logger table queries incorrectly not yielding any results [ID 42408]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When a logger table was queried, in some cases, the query would incorrectly not yield any results due to a filter conversion issue.
