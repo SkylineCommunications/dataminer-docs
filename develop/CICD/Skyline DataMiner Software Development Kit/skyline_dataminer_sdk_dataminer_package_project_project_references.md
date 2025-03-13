@@ -5,9 +5,9 @@ keywords: Skyline.DataMiner.Sdk, Package Project, ProjectReferences
 
 # Skyline DataMiner Package Project - ProjectReferences.xml
 
-Inside the Skyline DataMiner Package Project, under the *PackageContent* directory, you can find the *ProjectReferences.xml* file. This file is being used to decide which DataMiner projects are included in the package. This is based on the ProjectReference tags that you find in csproj files.
+Inside the Skyline DataMiner Package Project, under the *PackageContent* directory, you can find the *ProjectReferences.xml* file. This file is used to decide which DataMiner projects are included in the package. This is based on the *ProjectReference* tags that you can find in .csproj files.
 
-Normally this file is enough for most scenarios. In case you want to create multiple packages by adding multiple Package projects, you will need to tweak this file to get the correct content for each package.
+For most scenarios, this file can be used as it is. However, in case you want to create multiple packages by adding multiple package projects, you will need to tweak the file to get the correct content for each package.
 
 ```xml
 <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
@@ -22,9 +22,9 @@ Normally this file is enough for most scenarios. In case you want to create mult
 ```
 
 > [!WARNING]
-> When using Git, make sure that the paths are part of the Git repository as otherwise workflows could fail due to missing files.
+> When using Git, make sure that the paths are part of the Git repository as otherwise workflows could fail because of missing files.
 
-These paths are relative to the directory that the Package project is in. Within a normal Visual Studio solution, the following structure is expected:
+These paths you reference are relative to the directory that the package project is in. Within a normal Visual Studio solution, the following structure is expected:
 
 > - Solution
 >   - Solution.sln
@@ -44,37 +44,37 @@ These paths are relative to the directory that the Package project is in. Within
 >     - AdHocDataSourceProject.csproj
 >     - ...
 
-If we take the default value as an example: **..\\\*\\\*.csproj**. This can be split up in 3 parts: **..**, **\\\*\\** and **\*.csproj**.
+If you take the default value as an example, **..\\\*\\\*.csproj**, this can be split up into three parts: **..**, **\\\*\\**, and **\*.csproj**.
 
-We start at the **PackageProject** directory.
+Starting from the **PackageProject** directory, this is what this indicates:
 
 1. **..**
 
-   - This indicates to go one directory up. We are now at **Solution** directory.
+   This indicates to go one directory up, so you are now at the **Solution** directory.
 
 1. **\\\*\\**
 
-   - This is a directory with a wildcard, meaning anything directory fits here.
+   This is a directory with a wildcard, meaning any applicable directory fits here.
 
-       - Applicable directories:
+   Applicable directories:
 
-           - **AutomationScriptProject**
-           - **AutomationScriptProject2**
-           - **AdHocDataSourceProject**
+   - *AutomationScriptProject*
+   - *AutomationScriptProject2*
+   - *AdHocDataSourceProject*
 
 1. **\*.csproj**
 
-   - This is a file with a wildcard and the file needs to have *csproj* as an extension.
+   This is a file with a wildcard, and the file needs to have *.csproj* as its extension.
 
-       - Applicable files:
+   Applicable files:
 
-           - **AutomationScriptProject.csproj**
-           - **AutomationScriptProject2.csproj**
-           - **AdHocDataSourceProject.csproj**
+   - *AutomationScriptProject.csproj*
+   - *AutomationScriptProject2.csproj*
+   - *AdHocDataSourceProject.csproj*
 
 ## Example for customizations
 
-We have the following scenario where we want to only include projects that have the **PrefixB_** prefix:
+Imagine the following scenario where you want to only include projects that have the *PrefixB_* prefix:
 
 > - Solution
 >   - Solution.sln
@@ -108,7 +108,7 @@ The first option is to specify each project:
 </ProjectReferences>
 ```
 
-Another way is to include all projects, but exclude the ones that you don't want:
+Alternatively, you can include all projects, but exclude the ones that you do not want:
 
 ```xml
 <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
@@ -122,7 +122,7 @@ Another way is to include all projects, but exclude the ones that you don't want
 
 As you can imagine, this is quite troublesome as each time you add another project to the solution, you need to adapt the *ProjectReferences.xml* file.
 
-### Option 2: Specify prefix with wildcard
+### Option 2: Specify a prefix with a wildcard
 
 This option has more flexibility if you are using a naming convention:
 
@@ -132,7 +132,7 @@ This option has more flexibility if you are using a naming convention:
 </ProjectReferences>
 ```
 
-And the other way is applicable as well:
+The alternative approach can also be used:
 
 ```xml
 <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
