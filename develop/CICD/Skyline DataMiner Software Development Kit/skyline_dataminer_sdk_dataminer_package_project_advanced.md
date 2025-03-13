@@ -5,9 +5,9 @@ keywords: Skyline.DataMiner.Sdk, Package Project, overrideCatalogDownloadToken, 
 
 # Skyline DataMiner Package Project - Advanced
 
-## Multiple packages
+## Using a solution containing multiple packages
 
-You can add multiple DataMiner package projects within a single solution and then have them make different packages. The default behavior on building or publishing this solution through CI/CD is that all of them will have the same version and upload to the same organization.
+You can add multiple DataMiner package projects within a single solution and then use it to make different packages. The default behavior on building or publishing this solution through CI/CD is that all of the packages will have the same version and upload to the same organization.
 
 Within a single solution, you can configure some advanced setups in order to:
 
@@ -18,30 +18,22 @@ This is also supported with our reusable workflow (offered through the templates
 
 In GitHub you can make several different workflows (or different jobs) that trigger the reusable workflow with different arguments that can change the behavior of the Build and Publish steps.
 
-This is most easily handled using Visual Studio Solution filters.
+This is most easily handled using [Visual Studio 2022 solution filters (*.slnf)](xref:skyline_dataminer_sdk_solution_filter_files). These filters allow you to publish or build a specific subset of projects by providing the relevant dotnet-cli commands with a solution filter file.
 
-### Visual Studio solution filter files
+### Using dotnet-cli
 
-A **solution filter** (`.slnf`) file in Visual Studio 2022 is a feature designed to load a subset of projects within a larger solution (`.sln`). This is particularly useful for large solutions that contain many projects, as it allows developers to work only with the relevant projects, improving load times and reducing resource consumption.
+#### Default call
 
-Within Skyline DataMiner SDK, they provide an additional key benefit. You can easily publish or build a specific subset of projects by providing those dotnet-cli commands with a solution filter file. This can allow you to independently version or release different DataMiner application packages.
-
-For more information on how to make such filters, refer to [Visual Studio 2022 solution filter (*.slnf) files](xref:skyline_dataminer_sdk_solution_filter_files).
-
-### dotnet-cli
-
-#### Default
-
-Default call that releases every package in a solution to the same organization with the same version:
+By default, the following call is used to release every package in a solution to the same organization with the same version:
 
 ```bash
 $env:DATAMINER_TOKEN = "MyOrgKey"
 dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
 
-#### With filters
+#### Call with filters
 
-Call that releases only packages configured with either of the provided solution filter files:
+To instead release only specific packages, a call with [solution filter files](xref:skyline_dataminer_sdk_solution_filter_files) is used, like in the following example:
 
 - PackagesForOrganizationA.slnf
 - PackagesForOrganizationB.slnf
@@ -53,11 +45,13 @@ dotnet publish PackagesForOrganizationA.slnf -p:Version="1.0.1" -p:VersionCommen
 dotnet publish PackagesForOrganizationB.slnf -p:Version="2.0.1" -p:VersionComment="Releasing 2.0.1 for B." -p:CatalogPublishKeyName="DATAMINER_TOKENB" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKENB"
 ```
 
-### GitHub reusable workflows
+### Using GitHub reusable workflows
 
 When using GitHub reusable workflows as provided by Skyline Communications, you can optionally include a Visual Studio solution filter file that will adjust the behavior of the pipeline so it only builds, tests, and publishes the subsection defined by the filter.
 
 #### Default job
+
+This is the default job without filters:
 
 ```yml
 jobs:
@@ -79,7 +73,7 @@ jobs:
 
 #### Jobs with filters
 
-Notice the addition of the extra argument below where you can define the .slnf names. Both jobs are using a different secrets.DATAMINER_TOKEN, which allows uploading to different organizations in the same run.
+Below, an extra argument is added where the .slnf names can be defined. Both jobs are using a different secrets.DATAMINER_TOKEN, which allows uploading to different organizations in the same run.
 
 ```yml
 jobs:
@@ -115,11 +109,11 @@ jobs:
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }} 
 ```
 
-## Using different organization keys for downloading Catalog items and publishing package
+## Using different organization keys for downloading Catalog items and publishing a package
 
-### dotnet-cli
+### Using dotnet-cli
 
-#### Default
+#### Default call
 
 Default call that releases every package in a solution to the same organization with the same version:
 
@@ -128,7 +122,7 @@ $env:DATAMINER_TOKEN = "MyOrgKey"
 dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
 
-#### With different organization key
+#### Call with different organization key
 
 Default call that releases every package in a solution to the same organization with the same version:
 
@@ -138,9 +132,9 @@ $env:OVERRIDE_DATAMINER_TOKEN = "MyOtherOrgKey"
 dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="OVERRIDE_DATAMINER_TOKEN"
 ```
 
-### GitHub reusable workflows
+### Using GitHub reusable workflows
 
-When using GitHub reusable workflows as provided by Skyline Communications and you are including packages from one organization on Catalog but want your package in another organization on Catalog, then you can add an override Catalog download token.
+When using GitHub reusable workflows as provided by Skyline Communications, if you are including packages from one organization in the Catalog but want your package to be published in another organization on Catalog, then you can add an override Catalog download token.
 
 #### Default job
 
@@ -185,8 +179,8 @@ jobs:
       overrideCatalogDownloadToken: ${{ secrets.OVERRIDE_DATAMINER_TOKEN }}
 ```
 
-## Change cache location of Catalog items
+## Changing the cache location of Catalog items
 
-When downloading Catalog items via the CatalogReferences, the items are added to a cache (similar like NuGet). The default location is `%USERPROFILE%\.dataminer-catalog-packages\packages` for Windows and `~/.dataminer-catalog-packages/packages` for other operating systems.
+When Catalog items are downloaded via the CatalogReferences, the items are added to a cache (similar to NuGet). The default location is `%USERPROFILE%\.dataminer-catalog-packages\packages` for Windows and `~/.dataminer-catalog-packages/packages` for other operating systems.
 
-This cache location can be changed by setting an environment variable `DATAMINER_CATALOG_PACKAGES`.
+You can change this cache location by setting the environment variable *DATAMINER_CATALOG_PACKAGES*.
