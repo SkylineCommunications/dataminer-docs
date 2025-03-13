@@ -18,7 +18,16 @@ uid: Cube_Feature_Release_10.5.5
 
 ## New features
 
-*No new features have been added yet.*
+#### Sharing the link to the current Cube session with other users [ID 42389]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+If you want to share your current Cube session with another user, you can now copy the link to that session and send it to that user, who will then be able to paste it in the address box of a browser.
+
+To copy the link to the current Cube session, do the following:
+
+1. Open the user menu by clicking the user icon in the top-right corner of the screen.
+1. Click the *Copy* button next to the name of the DataMiner System.
 
 ## Changes
 
