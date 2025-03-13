@@ -24,6 +24,8 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting – SAML issues](xref:Troubleshooting_SAML_Issues)
 
+- [Troubleshooting – Skyline DataMiner SDK](xref:skyline_dataminer_sdk_troubleshooting)
+
 - [Troubleshooting - SLScripting](xref:TroubleshootingSLScriptingFinalizerException)
 
 - [Troubleshooting – STaaS](xref:Troubleshooting_STaaS)
