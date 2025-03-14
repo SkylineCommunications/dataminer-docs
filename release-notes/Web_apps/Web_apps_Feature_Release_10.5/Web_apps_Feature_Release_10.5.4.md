@@ -14,6 +14,9 @@ uid: Web_apps_Feature_Release_10.5.4
 
 ## Highlights
 
+- [Low-Code Apps: Enhanced URL data support [ID 42031]](#low-code-apps-enhanced-url-data-support-id-42031)
+- [Dashboards/Low-Code Apps - Query builder: Dragging and dropping operators [ID 42127]](#dashboardslow-code-apps---query-builder-dragging-and-dropping-operators-id-42127)
+- [Dashboards app: Default Skyline dashboard themes updated [ID 42179]](#dashboards-app-default-skyline-dashboard-themes-updated-id-42179)
 - [Dashboards/Low-Code Apps: Maps component is now fully released [ID 42309]](#dashboardslow-code-apps-maps-component-is-now-fully-released-id-42309)
 
 ## New features
@@ -27,6 +30,16 @@ When UI components of type *Calendar* or *Time* are used in interactive Automati
 When a default time zone is defined for DataMiner web apps, that default time zone will be used instead of the time zone of the client. See also [Setting the default time zone for DataMiner web apps](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps).
 
 For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
+
+#### Dashboards/Low-Code Apps - Query builder: Dragging and dropping operators [ID 42127]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When you want to rearrange the operators in a query, you can now do so by dragging and dropping operators from one location in the query to another, making this much easier than before. This will only be possible within the same level, not from e.g. a joined query to the parent query or vice versa.
+
+If an operator shows a red error state after you have dragged it to a new location, this means that the operator in question cannot be used at that location and that the query has become invalid as a result.
+
+In addition, you can now also insert new operators in between existing ones by clicking a "+" button.
 
 #### Dashboards/Low-Code Apps: Maps component is now fully released [ID 42309]
 
@@ -125,16 +138,6 @@ Existing components will not be affected.
 
 In a *Select* operator of a GQI query, you can now reorder the columns by dragging and dropping them.
 
-#### Dashboards/Low-Code Apps - Query builder: Dragging and dropping operators [ID 42127]
-
-<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
-
-When building a query, it is now possible to drag and drop operators from one location to another. However, this will only be allowed within the same level, not from e.g. a joined query to the parent query or vice versa.
-
-If an operator shows a red error state after you have dragged it to a new location, this means that the operator in question cannot be used at that location and that the query has become invalid as a result.
-
-Also, it is now possible to insert new operators in between existing ones by clicking a "+" button.
-
 #### Dashboards/Low-Code Apps - Grid component: Using browser menu commands [ID 42128]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
@@ -153,7 +156,7 @@ In the *Time range* component, up to now, the color of the *Apply* button would,
 
 Items selected in *Node edge graph*, *Grid*, *Maps*, *Timeline* or *Table* components will now be passed to another components in the order in which they have been selected.
 
-#### Dashboards app: Default Skyline dashboard themes have been updated [ID 42179]
+#### Dashboards app: Default Skyline dashboard themes updated [ID 42179]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
@@ -174,7 +177,7 @@ Up to now, each time the *GetRegionalSettings* method was called, it would retri
 > [!NOTE]
 > As a result of this change, any changes made to the time zone and/or list separator in *ClientSettings.json* will no longer be applied when you refresh the web app. From now on, changes made to the time zone and/or list separator will require an IIS reset.
 
-#### Low-Code Apps: Names of apps, pages and panels are now limited to 150 characters [ID 42220]
+#### Low-Code Apps: Names of apps, pages, and panels now limited to 150 characters [ID 42220]
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
