@@ -14,7 +14,7 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 
 1. While you are editing a page, in the page configuration pane, open the *panels* section.
 
-1. To add a new panel, click the "+" button in this section, and then specify a name for your panel.
+1. To add a new panel, click the "+" button in this section, and then specify a name for your panel. From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42220-->, panel names are limited to 150 characters.
 
 1. To configure a panel, click the pencil icon next to the panel. This will open the panel configuration pane.
 
