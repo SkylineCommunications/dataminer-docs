@@ -48,7 +48,7 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
   - When you click *Edit*, an editor window opens where you can make changes to the template.
 
-  - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42226-->, when you click *Browse templates*, you can reuse previously saved templates for components in the same dashboard or low-code app.
+  - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42226-->, when you click *Browse templates*, you can reuse saved templates for components in the same dashboard or low-code app.
 
   > [!NOTE]
   > The center of the marker template is determined by the latitude and longitude values for that marker.
