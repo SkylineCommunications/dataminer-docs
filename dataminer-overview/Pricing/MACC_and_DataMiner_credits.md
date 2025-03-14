@@ -2,19 +2,19 @@
 uid: MACC_and_DataMiner_credits
 ---
 
-# Maximizing your azure investments with MACC and DataMiner Credits
+# Maximizing your azure investments with MACC and DataMiner credits
 
-([DataMiner Credits](https://docs.dataminer.services/dataminer-overview/Pricing/Pricing_Usage_based_service.html#usage-terms)) can be conveniently obtained from the following sources:
+([DataMiner credits](xref:Pricing_Usage_based_service#usage-terms)) can be conveniently obtained from the following sources:
 
 - Skyline Communications ([contact us](https://www.skyline.be/contact/))
 - DataMiner Business Partners (see [Partners](https://community.dataminer.services/partners/) on DataMiner Dojo)
 - Microsoft Azure Marketplace ([Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skylinecommunicationsnv1644148291022.dataminer?tab=Overview))
 
-When DataMiner Credits are procured through the Microsoft Azure Marketplace, they are eligible for DataMiner Cloud Platform Services, including DataMiner as a Service (DaaS) and Storage as a Service (STaaS) services.
+When DataMiner credits are procured through the Microsoft Azure Marketplace, they are eligible for DataMiner Cloud Platform Services, including DataMiner as a Service (DaaS) and Storage as a Service (STaaS) services.
 
 ## DataMiner: your MACC-eligible partner
 
-DataMiner is an official Microsoft Internal Azure IP Co-Sell partner, having achieved MACC Eligible status. This designation means that any organization with an active Microsoft Azure Consumption Commitment (MACC) can utilize their commitment to procure DataMiner Credits. These Credits can be used for any DataMiner Cloud Platform services, such as DataMiner As a Service (DaaS) and Storage As a Service (StaaS) offerings.
+DataMiner is an official Microsoft Internal Azure IP Co-Sell partner, having achieved MACC Eligible status. This designation means that any organization with an active Microsoft Azure Consumption Commitment (MACC) can utilize their commitment to procure DataMiner credits. These credits can be used for any DataMiner Cloud Platform services, such as DataMiner As a Service (DaaS) and Storage As a Service (StaaS) offerings.
 
 ## Understanding MACC: maximizing your Azure investment
 
@@ -30,14 +30,14 @@ A Microsoft Azure Consumption Commitment (MACC) is a contractual agreement betwe
 
 As an organization with an active MACC, it is crucial to meet your commitment to avoid financial penalties, loss of discounts, impacts on future agreements, and administrative overhead.
 
-Skyline Communications can assist in meeting your agreements. By consolidating your DataMiner Credits within your MACC, you not only fulfill your commitment with Microsoft but also leverage the most flexible form of DataMiner usage today. The collaboration between DataMiner and Microsoft provides everything you need to capitalize on your data and controls, unlocking unrivaled efficiency, agility, and innovation.
+Skyline Communications can assist in meeting your agreements. By consolidating your DataMiner credits within your MACC, you not only fulfill your commitment with Microsoft but also leverage the most flexible form of DataMiner usage today. The collaboration between DataMiner and Microsoft provides everything you need to capitalize on your data and controls, unlocking unrivaled efficiency, agility, and innovation.
 
 ## Getting started
 
 1. Check if your organization has an active MACC with Microsoft.
 1. Go to the [DataMiner page on the Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skylinecommunicationsnv1644148291022.dataminer?tab=Overview).
-1. Follow the steps under [Ordering DataMiner Credits](xref:Order_DataMiner_credits).
+1. Follow the steps under [Ordering DataMiner credits](xref:Order_DataMiner_credits).
 
 ## Not a MACC user?
 
-No worries! You can also procure DataMiner Credits through the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skylinecommunicationsnv1644148291022.dataminer?tab=Overview) and benefit from simplified procurement processes, ultimate flexibility to spend based on your organization's needs and get instant access to deploy DataMiner to fast-track your digital transformation.
+No worries! You can also procure DataMiner credits through the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/skylinecommunicationsnv1644148291022.dataminer?tab=Overview) and benefit from simplified procurement processes, ultimate flexibility to spend based on your organization's needs, and instant access to deploy DataMiner to fast-track your digital transformation.
