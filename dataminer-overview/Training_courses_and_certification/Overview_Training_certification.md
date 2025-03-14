@@ -31,7 +31,7 @@ To book an appointment, you will need to use the booking link that you will find
 
 > [!NOTE]
 >
-> - An appointment can be canceled or rescheduled up to 96 hours before it starts, using the confirmation email you received when booking the appointment. If you cannot update the appointment online, please contact [Skyline Academy](mailto:academy@skyline.be) or your team of examiners.
+> - You can cancel or reschedule an appointment up to 96 hours before it starts, using the confirmation email you received when booking the appointment. If you cannot update the appointment online, please contact [Skyline Academy](mailto:academy@skyline.be) or your team of examiners.
 > - If you ordered two or more certifications, you need to complete each certification one by one. The Configurator certification process will only start after you have completed the Fundamentals exam.
 
 ### Exam format and grading
