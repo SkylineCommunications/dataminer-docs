@@ -9,8 +9,8 @@ In this tutorial, you will learn how to enable [Swarming](xref:Swarming) in your
 
 The content and screenshots for this tutorial have been created using DataMiner version 10.5.3.
 
->[!TIP]
->See also: [Kata #61: Getting started with Swarming](https://community.dataminer.services/courses/kata-61/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> [!TIP]
+> See also: [Kata #61: Getting started with Swarming](https://community.dataminer.services/courses/kata-61/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
