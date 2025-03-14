@@ -360,6 +360,44 @@ This is the behavior that will result from this configuration:
 
 ## Reusing a template
 
+### [From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42226-->](#tab/tabid-1)
+
+If you have already configured at least one other template for a component in the same dashboard or low-code app you are working on, you can reuse it for a second component that supports templates.
+
+- For the **grid and timeline** components:
+
+  1. Select the component and go the *Layout* pane on the right.
+
+  1. Under *Item templates*, click *Browse templates*.
+
+     A list of existing components and their templates is displayed, ordered by component type.
+
+  1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
+
+- For the **table** component:
+
+  1. Select the component and go to the *Layout* pane on the right.
+
+  1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to create a template for.
+
+  1. Click the ellipsis button ("...") in the top-right corner and select *Browse templates*.
+
+     A list of existing components and their templates is displayed, ordered by component type.
+
+  1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
+
+- For the **maps** component:
+
+  1. Select the component and go to the *Layout* pane on the right.
+
+  1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* in the *Template* section.
+
+     A list of existing components and their templates is displayed, ordered by component type.
+
+  1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
+
+### [Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4](#tab/tabid-2)
+
 If you have already configured a template for a component of the same type in the same dashboard or low-code app you are working on, you can reuse a template<!--RN 34948-->. Only available for the grid and timeline components.
 
 1. Select the component and go the *Layout* pane on the right.
@@ -372,16 +410,4 @@ If you have already configured a template for a component of the same type in th
 
 1. Select *Reuse*.
 
-<!-- document when issue resolved, DCP: 226720
-
-- For the **maps** component:
-
-  1. Select the component and go to the *Layout* pane on the right.
-
-  1. Under the *Layer settings* for a specific layer of the map, click *Reuse template* in the template section.
-
-  1. Click *Filter* and select a template from the dropdown list.
-
-     A preview of the template you have selected will appear.
-
-  1. Select *Reuse*. -->
+***
