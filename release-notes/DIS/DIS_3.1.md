@@ -10,11 +10,11 @@ uid: DIS_3.1
 
 #### IDE
 
-##### Added info bar to suggest use of Protocol.Extension NuGet  [ID 42021]
+##### New info bar will suggest using the Protocol.Extension NuGet [ID 42021]
 
-A new infobar has been added to DIS to suggest the use of the [Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+A new info bar has been added to suggest using the [Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
 
-##### Update XMLSchemas and Validators dependencies [ID 42511]
+##### Updated XMLSchemas and Validators dependencies [ID 42511]
 
 DIS now uses:
 
@@ -25,36 +25,37 @@ DIS now uses:
 
 #### Enhancements
 
-##### SLDatabase no longer shown in reference context menu of edit QAction icon [ID 42509]
+##### Context menu of QAction edit icon no longer lists the SLDatabase.dll and System.Xml.dll assemblies [ID 42509]
 
-The icon to edit a QAction opens a context menu where you can easily add references to some predefined assemblies.
-This list has now been updated to no longer include SLDatabase.dll and System.Xml.dll.
+The icon you can click to edit a QAction opens a context menu that allows you to easily add references to some predefined assemblies.
+
+From now on, the list of predefined assemblies will no longer include *SLDatabase.dll* and *System.Xml.dll*.
 
 #### Fixes
 
-##### Import of low code apps with characters in name that cannot be used in a file name [ID 42475]
+##### Problem when importing low-code apps of which the name contained illegal characters [ID 42475]
 
-A LCA can have a name that contains characters that cannot be used in a file name.
-This would cause an issue when such a LCA would be imported in DIS.
-DIS is now able to import such LCAs as it will now generate a filename where such invalid characters are replaced by an underscore ('_').
+Up to now, an error could occur when, in DIS, you tried to import a low-code app with a name that contained characters that are not allowed in file names.
 
-##### Exception caught when no connection could be made with web API of the DataMiner Agent [ID 42484]
+From now on, when you import a low-code app of which the name contains illegal characters, DIS will generate a new file name in which all illegal characters are replaced by an underscore character ('_').
 
-Since DataMiner 3.1.6, when DIS sets up a connection with a DataMiner Agent, it would also set up a connection with the web API. In case this connection could not be set up, an exception would be thrown which would prevent performing actions such as publishing a protocol (which do not need the web API).
+##### An exception would be thrown when DIS was not able to connect to the Web API of the DataMiner Agent [ID 42484]
 
-With this RN, if the connection with the web API cannot be set up, it will be logged in the output window (together with a message that states that importing LCAs and dashboards will not be possible because the web API connection could not be made).
+When DIS connects to a DataMiner Agent, since DataMiner 3.1.6, it would also connect to the Web API. If it was not able to connect to the Web API, up to now, an exception would be thrown, which would prevent actions such as publishing a protocol from being performed.
 
-However, all other functionality that relies on the SLNet connection, such as publishing a protocol, should still work.
+From now on, when DIS is not able to connect to the Web API, the error message will now be logged in the output window (together with a message that states that importing dashboards and low-code apps will not be possible because no Web API connection could not be set up).
 
-##### Fix dropdown issue in Parameter Update Locations tool window [ID 42500]
+All other functionality that relies on the SLNet connection, such as publishing a protocol, should no longer be affected.
 
-The Parameter Update Locations tool window had an issue where the dropdown would not be populated again when switching to another solution. This has now been fixed.
+##### Parameter Update Locations tool window: Parameter selection box would not get populated again when you had switched to another solution [ID 42500]
 
-Also, a race condition has been fixed which could result in the update locations and possible update locations panes to contain duplicate entries has been fixed.
+In the *Parameter Update Locations* tool window, the parameter selection box would not get populated again when you had switched to another solution.
 
-##### Skyline.DataMiner.Sdk - Publish - Support OutDir [ID 42497]
+Also, in some rare cases, the *Confirmed Update Locations* and *Possible Update Locations* panes could contain duplicate entries.
 
-With version 1.1.0 of the Skyline.DataMiner.Sdk, the OutDir property is being used instead of dynamically making the output path (which is error prone). DIS was using the old way and was not finding the new file location. Now the OutDir property is being used.
+##### Skyline.DataMiner.Sdk: Use of OutDir property [ID 42497]
+
+Version 1.1.0 of the *Skyline.DataMiner.Sdk* will now use the `OutDir` property instead of dynamically making the output path (which was error prone).
 
 ## DIS 3.1.6
 
