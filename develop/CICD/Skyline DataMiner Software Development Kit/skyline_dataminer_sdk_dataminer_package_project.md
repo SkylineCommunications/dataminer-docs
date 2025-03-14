@@ -48,23 +48,6 @@ You can import specific items directly from a DataMiner Agent using DIS:
    1. Right-click, and select *Add*.
    1. Select e.g. *Import DataMiner Dashboard/Low-Code App*, depending on what you want to import.
 
-## Executing additional code on installation
-
-Open the `$SCRIPTNAME$.cs` file to write custom installation code. Common actions include creating elements, services, or views.
-
-> [!TIP]
-> Type `clGetDms` in the .cs file and press Tab twice to insert a snippet that gives you access to the *IDms* classes, making DataMiner manipulation easier.
-
-## Adding configuration files
-
-If your installation code needs configuration files (e.g. .json, .xml), you can add these to the *SetupContent* folder, which can be accessed during installation.
-
-Access them in your code using:
-
-```csharp
-string setupContentPath = installer.GetSetupContentDirectory();
-```
-
 ## Adding content from the Catalog
 
 You can reference and include additional content from the Catalog using the *PackageContent/CatalogReferences.xml* file provided in this project. See [CatalogReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_catalog_references) for more information.
@@ -91,6 +74,23 @@ To be able for the SDK to download the referenced items from the Catalog, config
         }
       }
       ```
+
+## Executing additional code on installation
+
+Open the `$SCRIPTNAME$.cs` file to write custom installation code. Common actions include creating elements, services, or views.
+
+> [!TIP]
+> Type `clGetDms` in the .cs file and press Tab twice to insert a snippet that gives you access to the *IDms* classes, making DataMiner manipulation easier.
+
+## Adding configuration files
+
+If your installation code needs configuration files (e.g. .json, .xml), you can add these to the *SetupContent* folder, which can be accessed during installation.
+
+Access them in your code using:
+
+```csharp
+string setupContentPath = installer.GetSetupContentDirectory();
+```
 
 ## Publishing to the Catalog
 
@@ -177,6 +177,7 @@ Follow these steps to set it up:
 
    - *Register Catalog items*
    - *Read Catalog items*
+   - *Download catalog versions*
 
 1. Add the key as a secret in your GitHub repository, by navigating to *Settings* > *Secrets and variables* > *Actions* and creating a secret named `DATAMINER_TOKEN`.
 
