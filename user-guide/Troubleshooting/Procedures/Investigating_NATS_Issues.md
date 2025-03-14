@@ -469,8 +469,8 @@ To trigger a NATS reset:
 
 This will recalculate the NAS and NATS configs in the entire cluster, so any faulty configurations are cleaned up automatically.
 
-> [!NOTE]
-> You will only be able to send this message if automatic NATS configuration is not disabled (with the [NATSForceManualConfig option](xref:SLNetClientTest_disabling_automatic_nats_config)). If this is disabled, you will need to reset NATS manually.<!-- RN 42074 -->
+> [!IMPORTANT]
+> > Do not follow the steps above if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:SLNetClientTest_disabling_automatic_nats_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending the *NATSCustodianResetNatsRequest* message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
 
 ## Check if new NATS connections can be established
 
