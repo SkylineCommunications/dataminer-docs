@@ -75,3 +75,9 @@ When no connection was established yet, the query parameters would not get saved
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 Up to now, it would not be possible to export a low-code app of which the name contained illegal characters (e.g. question marks).
+
+#### Dashboards/Low-Code Apps - Timeline component: Not possible to edit the template [ID 42449]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a table variable was visualized as a *Timeline* component, it would not be possible to edit its template.
