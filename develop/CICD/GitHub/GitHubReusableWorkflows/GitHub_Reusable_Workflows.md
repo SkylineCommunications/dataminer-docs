@@ -25,6 +25,7 @@ For more details about what each workflow does, you can check one of the links b
 - [NuGet Solution Master Workflow](xref:github_reusable_workflows_nuget_solution_master_workflow)
 - [SRM Function Master Workflow](xref:github_reusable_workflows_srm_function_master_workflow)
 - [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow)
+- [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow)
 - [Update Catalog Details](xref:github_reusable_workflows_update_catalog_details)
 
 ### GitHub to Catalog tool

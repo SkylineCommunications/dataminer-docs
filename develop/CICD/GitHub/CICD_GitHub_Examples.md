@@ -27,7 +27,7 @@ name: BasicUploadUbuntu
 
 on:
   push:
-    branches: [ "master","main" ]
+    branches: [ "master", "main" ]
 
 jobs:
 
@@ -36,7 +36,7 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
@@ -48,6 +48,7 @@ jobs:
           -p:Version="0.0.${{ github.run_number }}-prerelease" `
           -p:VersionComment="This is just a pre-release version." `
           -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+          -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN" `
 ```
 
 On a **Windows** runner:
@@ -57,7 +58,7 @@ name: BasicUploadWindows
 
 on:
   push:
-    branches: [ "master","main" ]
+    branches: [ "master", "main" ]
 
 jobs:
 
@@ -66,7 +67,7 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
@@ -78,6 +79,7 @@ jobs:
           -p:Version="0.0.${{ github.run_number }}-prerelease" `
           -p:VersionComment="This is just a pre-release version." `
           -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+          -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN" `
 ```
 
 ## Basic deployment for connectors
@@ -91,9 +93,9 @@ name: BasicDeployUbuntu
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "master", "main" ]
 
 jobs:
 
@@ -102,7 +104,7 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
@@ -138,9 +140,9 @@ name: BasicDeploy
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "master", "main" ]
 
 jobs:
 
@@ -149,7 +151,7 @@ jobs:
     
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
         

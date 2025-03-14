@@ -72,7 +72,7 @@ on:
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@DataMinerSDKSupport
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/DataMiner App Packages Master Workflow.yml@main
     with:
       configuration: Release
       referenceName: ${{ github.ref_name }}
@@ -83,8 +83,9 @@ jobs:
       sonarCloudProjectName: ${{ vars.SONAR_NAME }} # Go to 'https://sonarcloud.io/projects/create' and create a project. Then create a SONAR_NAME variable with the ID of the project as mentioned in the SonarCloud project URL.
       # solutionFilterName: "MySolutionFilter.slnf"
     secrets:
-      dataminerToken: ${{ secrets.DATAMINER_TOKEN }} # The API key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
+      dataminerToken: ${{ secrets.DATAMINER_TOKEN }} # The API key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain organization.
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }} # The API key for access to SonarCloud.
+      # overrideCatalogDownloadToken: ${{ secrets.OVERRIDE_DATAMINER_TOKEN }} # Override on the dataminerToken for downloading Catalog items: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain organization.
 ```
 
 ### Using Visual Studio templates
