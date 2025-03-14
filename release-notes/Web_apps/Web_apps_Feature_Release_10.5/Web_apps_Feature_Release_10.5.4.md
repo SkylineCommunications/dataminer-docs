@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.5.4
 ---
 
-# DataMiner web apps Feature Release 10.5.4 – Preview
+# DataMiner web apps Feature Release 10.5.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +14,7 @@ uid: Web_apps_Feature_Release_10.5.4
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards/Low-Code Apps: Maps component is now fully released [ID 42309]](#dashboardslow-code-apps-maps-component-is-now-fully-released-id-42309)
 
 ## New features
 
