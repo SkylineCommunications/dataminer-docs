@@ -11,9 +11,9 @@ Note that the information below assumes that you have access to Visual Studio an
 
 ## Creating a DataMiner application package
 
-The project is by default configured to create a `.dmapp` file every time you build the project.
+The project is by default configured to create a .dmapp file every time you build the project.
 
-When you compile or build the project, you will find the generated `.dmapp` in the standard output folder, which is typically the `bin` folder of your project.
+When you compile or build the project, you will find the generated .dmapp in the standard output folder, which is typically the *bin* folder of your project.
 
 When you publish the project, a corresponding item will be created in the online DataMiner Catalog.
 
@@ -32,7 +32,7 @@ You can also add new projects by using the dotnet-cli. For the sake of stability
     dotnet sln add MyUserDefinedApiFromGithub
 ```
 
-Every *Skyline.DataMiner.SDK* project within the solution, except other DataMiner package projects, will by default be included within the `.dmapp` created by this project. You can customize this behavior using the *PackageContent/ProjectReferences.xml* file. This allows you to add filters to include or exclude projects as needed. See [ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references) for more information.
+Every *Skyline.DataMiner.SDK* project within the solution, except other DataMiner package projects, will by default be included within the .dmapp created by this project. You can customize this behavior using the *PackageContent/ProjectReferences.xml* file. This allows you to add filters to include or exclude projects as needed. See [ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references) for more information.
 
 ## Importing from DataMiner
 
@@ -55,6 +55,7 @@ You can reference and include additional content from the Catalog using the *Pac
 To be able for the SDK to download the referenced items from the Catalog, configure a user secret in Visual Studio:
 
 1. Obtain an *Organization Key* from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
+
    - *Register catalog items*
    - *Read catalog items*
    - *Download catalog versions*
@@ -166,7 +167,7 @@ Follow these steps to set it up:
    ``` text
    Error: DATAMINER_TOKEN is not set. Release not possible!
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
-   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register catalog items, Download catalog versions and Read catalog items.
+   Navigate to the right organization, then go to Keys and create or find a key with permission Register catalog items, Download catalog versions, and Read catalog items.
    Copy the value of the token.
    Then set a DATAMINER_TOKEN secret in your repository settings: **Dynamic Link**
    ```
@@ -175,8 +176,8 @@ Follow these steps to set it up:
 
 1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
-   - *Register Catalog items*
-   - *Read Catalog items*
+   - *Register catalog items*
+   - *Read catalog items*
    - *Download catalog versions*
 
 1. Add the key as a secret in your GitHub repository, by navigating to *Settings* > *Secrets and variables* > *Actions* and creating a secret named `DATAMINER_TOKEN`.
@@ -215,7 +216,7 @@ If you have used the Skyline.DataMiner.VisualStudioTemplates, your project can i
    ``` text
    Error: DATAMINER_TOKEN is not set. Release not possible!
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
-   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register catalog items, Download catalog versions and Read catalog items.
+   Navigate to the right organization, then go to Keys and create or find a key with permissions Register catalog items, Download catalog versions, and Read catalog items.
    Copy the value of the token.
    Then set a DATAMINER_TOKEN secret in your repository settings: **Dynamic Link**
    ```
