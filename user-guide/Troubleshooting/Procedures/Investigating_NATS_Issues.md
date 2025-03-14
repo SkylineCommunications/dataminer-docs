@@ -469,6 +469,9 @@ To trigger a NATS reset:
 
 This will recalculate the NAS and NATS configs in the entire cluster, so any faulty configurations are cleaned up automatically.
 
+> [!NOTE]
+> You will only be able to send this message if automatic NATS configuration is not disabled (with the [NATSForceManualConfig option](xref:SLNetClientTest_disabling_automatic_nats_config)). If this is disabled, you will need to reset NATS manually.
+
 ## Check if new NATS connections can be established
 
 Try restarting things one by one to see whether their functionality is restored, or whether the error changes:
