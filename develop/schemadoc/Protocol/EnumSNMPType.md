@@ -13,7 +13,7 @@ Specifies the SNMP type.
 |***string restriction***|||
 |&nbsp;&nbsp;Enumeration|counter32|Represents a non-negative integer which monotonically increases until it reaches a maximum value of 2^32-1 (4294967295 decimal), when it wraps around and starts increasing again from zero.|
 |&nbsp;&nbsp;Enumeration|counter64|Represents a non-negative integer which monotonically increases until it reaches a maximum value of 2^64-1 (18446744073709551615 decimal), when it wraps around and starts increasing again from zero.|
-|&nbsp;&nbsp;Enumeration|counter64String|Can be used to receive the SNMP counter64 as a string, where the counter64 uses double and may therefore lose definition.<!-- RN 9284 -->.|
+|&nbsp;&nbsp;Enumeration|counter64String|Can be used to receive the SNMP counter64 as a string, where the counter64 uses double and may therefore lose definition.<!-- RN 9284 -->|
 |&nbsp;&nbsp;Enumeration|gauge32|Represents a non-negative integer, which may increase or decrease, but shall never exceed a maximum value, nor fall below a minimum value. The maximum value cannot be greater than 2^32-1 (4294967295 decimal), and the minimum value cannot be smaller than 0.|
 |&nbsp;&nbsp;Enumeration|integer|Represents integer-valued information between -2^31 and 2^31-1 inclusive.|
 |&nbsp;&nbsp;Enumeration|integer32|Represents integer-valued information between -2^31 and 2^31-1 inclusive.|
