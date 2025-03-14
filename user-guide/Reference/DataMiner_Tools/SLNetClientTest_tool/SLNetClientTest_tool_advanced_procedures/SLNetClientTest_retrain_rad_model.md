@@ -21,3 +21,8 @@ In some cases, it can be useful to retrain the internal model used by [relationa
    - *EndTime*: The end time of the period during which the parameter group was behaving as expected.
 
 1. Click *Send Message*.
+
+> [!NOTE]
+>
+> - From DataMiner 10.5.2/10.6.0 onwards, other messages are also available that can be used to add a parameter group, retrieve a parameter group, or retrieve all configuration information for a particular group (*AddMADParameterGroupMessage*, *RemoveMADParameterGroupMessage*, and *GetMADParameterGroupInfoMessage*, respectively). While you can configure and view the same things directly in *RelationalAnomalyDetection.xml*, with these messages you can for example configure a [low-code app](xref:Application_framework) to visualize and manage the parameter groups.<!-- RN 42181 -->
+> - Keep in mind that the group names need to be unique. Prior to DataMiner 10.5.4/10.6.0, casing is taken into account for this, but this no longer matters in later DataMiner versions.<!-- RN 42276 -->
