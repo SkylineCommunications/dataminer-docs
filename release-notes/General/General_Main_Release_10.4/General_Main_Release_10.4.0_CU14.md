@@ -21,6 +21,16 @@ uid: General_Main_Release_10.4.0_CU14
 
 A number of security enhancements have been made.
 
+#### SLLogCollector now collects the output of the 'dotnet --list-runtimes' command [ID 42448]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+SLLogCollector packages will now include the output of the `dotnet --list-runtimes` command.
+
+The output will be stored in the following file:
+
+*\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]

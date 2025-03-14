@@ -40,6 +40,16 @@ uid: General_Feature_Release_10.5.5
 
 A number of security enhancements have been made.
 
+#### SLLogCollector now collects the output of the 'dotnet --list-runtimes' command [ID 42448]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+SLLogCollector packages will now include the output of the `dotnet --list-runtimes` command.
+
+The output will be stored in the following file:
+
+*\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
+
 ### Fixes
 
 #### Problem with aggregation alarms on Cassandra Cluster and STaaS [ID 42095]

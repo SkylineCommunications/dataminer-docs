@@ -86,8 +86,8 @@ In *System Center > System settings*, the *Time to live* section will no longer 
 
 When a trend graph contained both regular average trend data and trend data related to SLAnalytics, in some rare cases, the trend graph could get stuck while loading that data.
 
-#### DMA box of duplicated element would not be set to the correct DataMiner Agent [ID 42438]
+#### DMA selection box of duplicate element to be created would not be set to the correct DataMiner Agent [ID 42438]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-When you had duplicated a migrated or swarmed element, the *DMA* selection box of the duplicated element would not be set to the correct DataMiner Agent.
+When, in the Surveyor, you right-clicked a migrated or swarmed element, and selecting *Duplicate*, in the element card of the duplicate element to be created, the *DMA* selection box would not be set to the correct DataMiner Agent.
