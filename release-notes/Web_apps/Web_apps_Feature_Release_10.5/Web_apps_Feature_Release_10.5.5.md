@@ -69,3 +69,9 @@ In some cases, the DataMiner Comparison app would not work correctly when used i
 Example: `https://myDma/comparison/#/?parameter1=935%2F152%2F30602%2F1&parameter2=935%2F108%2F5518%2F7.22&embed=true`
 
 When no connection was established yet, the query parameters would not get saved and be removed. Also, no parameters could be fetched.
+
+#### Low-Code Apps: Exporting a low-code app would fail if the name contained illegal characters [ID 42416]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, it would not be possible to export a low-code app of which the name contained illegal characters (e.g. question marks).
