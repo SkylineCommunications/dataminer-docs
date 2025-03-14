@@ -816,7 +816,7 @@ Clicking the logo in the top-left corner of the Catalog app will now open a new 
 
 In the DMS overview in the Admin app, when applicable, a message will now be shown to notify the Admin user that both Agents in a Failover pair need to have the latest CoreGateway DxM version installed so that more information about Failover can be retrieved.
 
-#### 16 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID 39669]
+#### 16 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID 39669] [ID 39679]
 
 From now on, changing settings for an organization or DMS in the Admin app will generate audit logs. See [consulting dataminer.services audit logs](xref:DCP_Auditing).
 
