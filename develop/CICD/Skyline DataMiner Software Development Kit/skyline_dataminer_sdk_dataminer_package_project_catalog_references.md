@@ -54,7 +54,7 @@ The *Selection.Specific* element represents a specific version that you can see 
 
 ### Range
 
-The *Selection.Range* element specifies a range to take the latest released version.
+The *Selection.Range* element specifies the range where the latest released version is added.
 
 For more information about the range, see [Versioning of Catalog items](xref:About_the_Catalog_module#versioning-of-catalog-items).
 
