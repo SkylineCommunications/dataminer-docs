@@ -8,7 +8,9 @@ From DataMiner 10.5.3/10.6.0 onwards, you can use relational anomaly detection (
 
 After you have [configured one or more groups of parameters](#configuring-parameter-groups-for-rad) that should be monitored together, RAD will learn how these parameters are related.
 
-Whenever the relation is broken, RAD will detect this and generate suggestion events in the Alarm Console. A suggestion event will be generated for each parameter in the group where a broken relation was detected.
+Whenever the relation is broken, RAD will detect this and generate suggestion events in the Alarm Console.
+
+The suggestion events for the same group of parameters will be grouped into a single incident in the *Suggestion events* tab and *Relational anomalies* tab in the Alarm Console. Clearing the grouped incident will also clear all the suggestion events included in it. Other changes (e.g. taking ownership, adding comments) are not supported for grouped incidents. Note that prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4<!-- RN 41983, 42050 -->, a separate suggestion event will be generated for each parameter in the group where a broken relation is detected, and this will be shown in the *Active alarms* tab of the Alarm Console instead.
 
 ## Prerequisites
 
