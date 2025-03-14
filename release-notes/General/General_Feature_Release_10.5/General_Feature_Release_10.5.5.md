@@ -65,3 +65,11 @@ In some cases, the `ParameterChangeEvent` or `ParameterTableUpdateEventMessage` 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 When a logger table was queried, in some cases, the query would incorrectly not yield any results due to a filter conversion issue.
+
+#### Problem when deleting an element or service property [ID 42434]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When an element property or a service property was deleted, in some cases, a `KeyNotFoundException` exception could be thrown, especially when one of the elements that had a value for that property was a migrated or a swarmed element.
+
+The property would be deleted from the *PropertyConfiguration.xml* file, but not from the elements or services that had a value for the property in question.
