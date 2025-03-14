@@ -186,7 +186,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| [DIS unable to connect to DataMiner Agent](xref:KI_DIS_unable_to_connect) | DIS 3.1.6 | | March 12, 2025 |
+| [DIS unable to connect to DataMiner Agent](xref:KI_DIS_unable_to_connect) | DIS 3.1.6 | DIS 3.1.7 | March 12, 2025 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [IP address in SAN field of TLS certificate ignored in Windows 2012 R2](xref:KI_Win2012R2_ignores_IP_in_SAN_field) | Systems using Windows 2012 R2 | | March 20, 2023 |
