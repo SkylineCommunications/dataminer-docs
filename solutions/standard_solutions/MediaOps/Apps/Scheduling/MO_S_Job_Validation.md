@@ -1,21 +1,47 @@
 ---
-uid: MO_S_Job_Validation
+uid: Overview_MediaOps_Validation
 ---
 
-# Validating upcoming jobs
+# Validation
 
-When a job is created it contains configuration, resources, ... It is possible that a resource was deleted, configuration requirements changed, etc. before the booking was able to start. To avoid that these issues are only discovered at the start of the booking during the automated orchestration, it is possible to detect this with the job validation feature. The validation runs on a regular basis for a defined time window. This validation can be customized to tailor it to the needs of the use-case of the system.
+## Validation of upcoming bookings
 
-## Scheduled Task
+To ensure smooth operations, it's essential that each booking is properly configured and that all required resources are available when the booking starts. To achieve this, a scheduled task runs every hour to validate the upcoming bookings set to start within the next hour.
 
-When the MediaOps package is installed a scheduled task will be added or updated if not marked as customized. The scheduled task will be called 'MediaOps Job Validation' and will be by default enabled. It is possible to customize the Schedule to fit more the needs of the use-case. To avoid that during an update of MediaOps the scheduled task is updated again, set the description of the scheduled task to contain 'customized'.
+When an error is detected, an error flag is activated in the booking object to make it visible that something is not correct with a red color.
 
-## Validation Script
+![Job with error(s)](~/solutions/images/Scheduling_Validation_Error_Job.png)
 
-By default the scheduled task will trigger the default validation script 'Scheduling_Validate Upcoming'. This script contains validation tests that covers the most common use-cases. It is possible to customize the validation script (e.g. to add ChatOps notifications or to add additional tests). To customize you duplicate the script with a new name and update the scheduled task to execute the custom script instead (remember to add 'customized' in the description of the scheduled task).
+A detailed list of identified issues is accessible by opening the booking and clicking the error icon.
 
-Below tests are part of the default script:
+![Job error icon](~/solutions/images/Scheduling_Validation_Error_Icon.png)
 
-| Test Name | Description |
-|--|--|
-|TBD|TBD|
+This opens a popup that contains a table listing all detected errors.
+
+![Job error list](~/solutions/images/Scheduling_Validation_Error_List.png)
+
+Detected errors cannot be cleared individually by a user. Instead, any change to the booking will automatically trigger a re-validation of the entire object. Errors that are no longer detected are automatically removed from the list.
+
+### Customization of the interval and period
+
+By default, the scheduled task triggers validation every hour. You can adjust this schedule by editing the **MediaOps // Scheduling - Validate upcoming bookings** scheduled task. This task will not be touched anymore when installing an upgrade package, as long as the name hasn't changed.
+
+- **Interval**: Modify the "repeat every" setting on the Schedule tab to set how often the task runs. Default value: 60 minutes.
+- **Validation Period**: Modify the period for upcoming bookings (e.g., next x minutes) on the Actions tab. The "Scheduling_Validate Upcoming" script has a parameter that specifies the validation period in minutes. Default value: 60 minutes.
+
+These settings allow to adapt the validation timings according to your specific needs.
+
+### Current tests
+
+The following tests are being executed on job instances:
+
+- All resources exist and are valid
+- All mandatory configuration is done
+- All virtual signal groups exist and are valid (if defined on resource)
+- All flows exist and are valid (if VSG defined on resource)
+
+This is currently still very basic, but can easily be extended in the future.
+
+## Implementation of tests
+
+A flexible and extendable framework has been designed to validate various types of objects within MediaOps. This framework is capable of validating multiple object types such as jobs, resources, resource pools, and others. The result of these tests are stored in the DOM object in a standardized and generic way. Adding new validation checks or modifying existing ones can be done with minimal effort.

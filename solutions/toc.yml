@@ -25,6 +25,8 @@ items:
             topicUid: MO_S_Job_States
           - name: Job Locking
             topicUid: MO_S_Job_Locking
+          - name: Validation of (Upcoming) Jobs
+            topicUid: Overview_MediaOps_Validation
       - name: Workflow Designer
         topicUid: MO_Workflow_Designer
         items:
