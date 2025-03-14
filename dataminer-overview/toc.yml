@@ -195,6 +195,8 @@ items:
         topicUid: Pricing_Usage_based_service
       - name: Perpetual-Use Licensing
         topicUid: Pricing_Perpetual_Use_Licensing
+      - name: Maximizing your azure investments with MACC and DataMiner credits
+        topicUid: MACC_and_DataMiner_credits
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
       items:
