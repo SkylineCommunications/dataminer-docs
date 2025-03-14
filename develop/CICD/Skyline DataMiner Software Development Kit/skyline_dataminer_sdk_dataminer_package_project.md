@@ -52,7 +52,7 @@ You can import specific items directly from a DataMiner Agent using DIS:
 
 You can reference and include additional content from the Catalog using the *PackageContent/CatalogReferences.xml* file provided in this project. See [CatalogReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_catalog_references) for more information.
 
-To be able for the SDK to download the referenced items from the Catalog, configure a user secret in Visual Studio:
+For the SDK to be able to download the referenced items from the Catalog, configure a user secret in Visual Studio:
 
 1. Obtain an *Organization Key* from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
