@@ -124,7 +124,7 @@ dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release 
 
 #### Call with different organization key
 
-Default call that releases every package in a solution to the same organization with the same version:
+Default call that releases every package in a solution to the same organization with the same version, but with the difference that the referenced Catalog items will be downloaded with the other key:
 
 ```bash
 $env:DATAMINER_TOKEN = "MyOrgKey"

@@ -5,7 +5,7 @@ keywords: Skyline.DataMiner.Sdk, Tutorial
 
 # Registering a new version of multiple DataMiner packages to the Catalog using Visual Studio and GitHub
 
-In this tutorial, you will learn how to develop, (pre-)release, and upload multiple DataMiner packages to the DataMiner Catalog with a basic CI/CD pipeline using Visual Studio and GitHub. This package will contain multiple artifacts:
+In this tutorial, you will learn how to develop, (pre-)release, and upload multiple DataMiner packages to the DataMiner Catalog with a basic CI/CD pipeline using Visual Studio and GitHub.
 
 - TutorialPackage1:
   - Automation script: TutorialScript1

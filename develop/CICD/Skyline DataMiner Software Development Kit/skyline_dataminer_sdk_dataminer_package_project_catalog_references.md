@@ -58,6 +58,10 @@ The *Selection.Range* element specifies a range to take the latest released vers
 
 For more information about the range, see [Versioning of Catalog items](xref:About_the_Catalog_module#versioning-of-catalog-items).
 
+#### allowPrerelease
+
 In case you want prereleases as well, you can use the **allowPrerelease** attribute.
 
-A prerelease is defined as having a dash ("-") in the version. Note that this does not apply for the old versioning of install packages (A.B.C-CUx).
+A prerelease is defined as having a dash ("-") in the version.
+
+Versions from InstallPackages, made on Jenkins, are excluded from this definition as they contain a dash by default (A.B.C-CUx).
