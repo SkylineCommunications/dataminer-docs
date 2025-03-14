@@ -72,10 +72,10 @@ From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42128-->, when yo
        > [!TIP]
        > For more information on how to use the Template Editor to customize the appearance of component items, see [Using the Template Editor](xref:Template_Editor).
 
-     - To reuse previously saved templates for components in the same dashboard or low-code app, click *Reuse template* next to the ![reuse template](~/user-guide/images/Reuse_Template.png) button<!--RN 34948-->.
+     - To reuse previously saved templates for components in the same dashboard or low-code app, click *Browse templates* next to the ![Browse templates](~/user-guide/images/Browse_Templates.png) button<!--RN 42226-->. Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, click *Reuse template* next to the ![reuse template](~/user-guide/images/Reuse_Template.png) button instead<!--RN 34948-->.
 
        > [!NOTE]
-       > This option is only visible when another grid component in the dashboard or low-code app is configured with a custom template.
+       > Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, the option to reuse a template is only available when another grid component in the dashboard or low-code app is configured with a custom template.
 
 ## Navigating through the grid component
 
