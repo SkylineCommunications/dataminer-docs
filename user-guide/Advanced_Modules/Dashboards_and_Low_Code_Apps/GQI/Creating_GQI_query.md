@@ -11,7 +11,7 @@ The "Queries" data item allows you to construct a query in order to tap into the
 
 ## Creating a query
 
-1. In edit mode, select the dashboard component for which you want to use a query as a data input.
+1. In edit mode, select the component for which you want to use a query as a data input.
 
 1. In the *Data* pane, select *Queries* and click the + icon to add a new query.
 
