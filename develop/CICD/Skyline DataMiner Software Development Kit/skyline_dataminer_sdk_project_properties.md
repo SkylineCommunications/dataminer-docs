@@ -29,7 +29,7 @@ This will ensure that when a DataMiner application package is installed on a Dat
 
 ## Version
 
-The version for the package. Needs to be a valid semantic version. See [Versioning of Catalog items](xref:About_the_Catalog_module#versioning-of-catalog-items).
+The version for the package. This needs to be a valid semantic version. See [Versioning of Catalog items](xref:About_the_Catalog_module#versioning-of-catalog-items).
 
 > [!NOTE]
 > This will be overwritten during a workflow run when the GitHub workflows are used.
@@ -50,7 +50,7 @@ This is the name of the key defined either in Visual Studio User Secrets or as a
 
 ## CatalogDefaultDownloadKeyName
 
-This is the name of the key defined either in Visual Studio User Secrets or as an environment variable. This key is used for downloading versions from the Catalog that are defined in the CatalogReferences.xml in the Package Project.
+This is the name of the key defined either in Visual Studio User Secrets or as an environment variable. This key is used for downloading versions from the Catalog that are defined in the *CatalogReferences.xml* in the package project.
 
 > [!NOTE]
 > This will be overwritten during a workflow run when the GitHub workflows are used.

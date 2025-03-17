@@ -14,7 +14,7 @@ Within a single solution, you can configure some advanced setups in order to:
 - Release packages to different organizations
 - Release packages with different versions
 
-This is also supported with our reusable workflow (offered through the templates as the "Complete" GitHub Workflow): [DataMiner App Packages Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
+This is also supported with our reusable workflow (offered through the templates as the "complete" GitHub workflow): [DataMiner App Packages Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
 
 In GitHub you can make several different workflows (or different jobs) that trigger the reusable workflow with different arguments that can change the behavior of the Build and Publish steps.
 
@@ -124,7 +124,7 @@ dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release 
 
 #### Call with different organization key
 
-Default call that releases every package in a solution to the same organization with the same version, but with the difference that the referenced Catalog items will be downloaded with the other key:
+Call that releases every package in a solution to the same organization with the same version, but with the difference that the referenced Catalog items will be downloaded with the other key:
 
 ```bash
 $env:DATAMINER_TOKEN = "MyOrgKey"

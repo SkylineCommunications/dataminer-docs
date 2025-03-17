@@ -47,11 +47,11 @@ During the compilation of a **Skyline.DataMiner.SDK** project, the SDK checks wh
 - **\*.dmapp file**: Represents a DataMiner application package containing the content of your project, ready to be installed on a DataMiner System.
 - **\*.zip file**: Represents Catalog information used for publishing the package to the DataMiner Catalog.
 
-Only for the **DataMiner Package Project**, the SDK also checks the `CatalogDefaultDownloadKeyName` property for the name of an environment variable or Visual Studio secret containing an [organization key](xref:Managing_DCP_keys#organization-keys) to download Catalog items defined in the CatalogReferences.xml.
+Only for the **DataMiner Package Project**, the SDK also checks the *CatalogDefaultDownloadKeyName* property for the name of an environment variable or Visual Studio secret containing an [organization key](xref:Managing_DCP_keys#organization-keys) to download Catalog items defined in *CatalogReferences.xml*.
 
 ### Publishing: uploading to the DataMiner Catalog
 
-When you publish a **Skyline.DataMiner.SDK** project, the SDK checks whether the `GenerateDataMinerPackage` property is set to `true`. If this is the case, it checks the `CatalogPublishKeyName` property for the name of an environment variable or Visual Studio secret containing a [system key](xref:Managing_DCP_keys#system-keys) or [organization key](xref:Managing_DCP_keys#organization-keys).
+When you publish a **Skyline.DataMiner.SDK** project, the SDK checks whether the *GenerateDataMinerPackage* property is set to `true`. If this is the case, it checks the *CatalogPublishKeyName* property for the name of an environment variable or Visual Studio secret containing a [system key](xref:Managing_DCP_keys#system-keys) or [organization key](xref:Managing_DCP_keys#organization-keys).
 
 The publishing process uploads the following artifacts to the DataMiner Catalog:
 
@@ -66,4 +66,4 @@ The following inputs are required for successful publishing:
 
 ## See also
 
-[Skyline DataMiner SDK - Project Properties](xref:skyline_dataminer_sdk_project_properties)
+[Skyline DataMiner SDK project properties](xref:skyline_dataminer_sdk_project_properties)

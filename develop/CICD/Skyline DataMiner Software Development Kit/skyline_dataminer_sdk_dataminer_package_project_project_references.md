@@ -21,7 +21,7 @@ For most scenarios, this file can be used as it is. However, in case you want to
 </ProjectReferences>
 ```
 
-> [!WARNING]
+> [!IMPORTANT]
 > When using Git, make sure that the paths are part of the Git repository as otherwise workflows could fail because of missing files.
 
 These paths you reference are relative to the directory that the package project is in. Within a normal Visual Studio solution, the following structure is expected:

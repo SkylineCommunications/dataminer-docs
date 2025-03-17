@@ -96,53 +96,49 @@ Start by adding all code-based content into a Visual Studio solution:
 
 ## Step 2: Specify what needs to be in the package
 
-In this step, you will focus on the way to specify what needs to be in the package. This can be done in multiple ways but we will focus on using [Visual Studio solution filters](xref:skyline_dataminer_sdk_solution_filter_files).
+In this step, you will focus on the way to specify what needs to be in the package. While this can be done in multiple ways, below you will find how to do so using [Visual Studio solution filters](xref:skyline_dataminer_sdk_solution_filter_files).
 
-### Create solution filters
+1. Create a solution filter for TutorialPackage1:
 
-#### TutorialPackage1
+   1. In the Solution Explorer, unload *TutorialPackage2* and *TutorialScript2* by right-clicking the projects and selecting *Unload Project*.
 
-1. In the Solution Explorer, unload *TutorialPackage2* and *TutorialScript2* (right-click a project and select *Unload Project*).
+   1. Right-click the solution and select *Save As Solution Filter*.
 
-1. Right-click the solution and select *Save As Solution Filter* and specify a name (e.g. `TutorialPackage1.slnf`).
+   1. Specify a name (e.g. `TutorialPackage1.slnf`).
 
-#### TutorialPackage2
+1. Create a solution filter for TutorialPackage2:
 
-1. In the Solution Explorer, reload *TutorialPackage2* and *TutorialScript2* (right-click a project and select *Reload Project*)
+   1. In the Solution Explorer, reload *TutorialPackage2* and *TutorialScript2* by right-clicking the projects and selecting *Reload Project*.
 
-1. Unload *TutorialPackage1* (right-click a project and select *Unload Project*).
+   1. Unload *TutorialPackage1*, by right-clicking the project and selecting *Unload Project*.
 
-1. Right-click the solution and select *Save As Solution Filter* and specify a name (e.g. `TutorialPackage2.slnf`).
+   1. Right-click the solution and select *Save As Solution Filter*.
 
-### Update package projects
+   1. Specify a name (e.g. `TutorialPackage2.slnf`).
 
-#### TutorialPackage1
+1. Update the package project for TutorialPackage1:
 
-1. In the Solution Explorer, navigate to the project *TutorialPackage1*, open the directory *PackageContent* and double-click to open the *ProjectReferences.xml* file.
+   1. In the Solution Explorer, navigate to the project *TutorialPackage1*, open the directory *PackageContent*, and double-click to open the *ProjectReferences.xml* file.
 
-1. Modify the **project references**:
+   1. Modify the **project references** by replacing *ProjectReference* with the new *SolutionFilter*:
 
-    1. Replace ProjectReference with new SolutionFilter:
-
-       ```xml
-       <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
+      ```xml
+      <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
          <SolutionFilter Include="..\TutorialPackage1.slnf" />
-       </ProjectReferences>
-       ```
+      </ProjectReferences>
+      ```
 
-#### TutorialPackage2
+1. Update the package project for TutorialPackage2:
 
-1. In the Solution Explorer, navigate to the project *TutorialPackage2*, open the directory *PackageContent* and double-click to open the *ProjectReferences.xml* file.
+   1. In the Solution Explorer, navigate to the project *TutorialPackage2*, open the directory *PackageContent*, and double-click to open the *ProjectReferences.xml* file.
 
-1. Modify the **project references**:
+   1. Modify the **project references** by replacing *ProjectReference* with the new *SolutionFilter*:
 
-    1. Replace ProjectReference with new SolutionFilter:
-
-       ```xml
-       <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
+      ```xml
+      <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
          <SolutionFilter Include="..\TutorialPackage2.slnf" />
-       </ProjectReferences>
-       ```
+      </ProjectReferences>
+      ```
 
 ## Step 3: Create a GitHub repository
 
@@ -170,7 +166,7 @@ In this step, you will focus on the way to specify what needs to be in the packa
    ``` text
    Error: DATAMINER_TOKEN is not set. Release not possible!
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
-   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register catalog items, Download catalog versions and Read catalog items.
+   Navigate to the right organization, then go to Keys and create or find a key with the permissions Register catalog items, Download catalog versions, and Read catalog items.
    Copy the value of the token.
    Then set a DATAMINER_TOKEN secret in your repository settings: <Dynamic Link>
    ```
@@ -209,5 +205,3 @@ With this setup, any push with new content (including the initial creation) to t
    This tab should contain the new version of the package, which is now available for deployment from the Catalog.
 
 1. If you have an available non-production DataMiner Agent, use the *Deploy* button to deploy the new version to the DMA.
-
-   All artifacts will be installed. In DataMiner Cube, you should see an information event in the Alarm Console saying *Tutorial installation ran with config: Hello World!*.

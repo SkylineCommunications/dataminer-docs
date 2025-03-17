@@ -40,7 +40,7 @@ The CatalogReferences file looks like this:
 
 ## Identifier
 
-The identifier, the **id** attribute, is the GUID that represents a Catalog item. This can be retrieved from the URL, e.g.: [https://catalog.dataminer.services/details/4abcf220-c001-4ffd-bab8-559dee47088f](https://catalog.dataminer.services/details/4abcf220-c001-4ffd-bab8-559dee47088f) (Microsoft Platform)
+The identifier, the **id** attribute, is the GUID that represents a Catalog item. This can be retrieved from the URL, e.g. [https://catalog.dataminer.services/details/4abcf220-c001-4ffd-bab8-559dee47088f](https://catalog.dataminer.services/details/4abcf220-c001-4ffd-bab8-559dee47088f) (Microsoft Platform).
 
 ## Name
 
@@ -64,4 +64,4 @@ In case you want prereleases as well, you can use the **allowPrerelease** attrib
 
 A prerelease is defined as having a dash ("-") in the version.
 
-Versions from InstallPackages, made on Jenkins, are excluded from this definition as they contain a dash by default (A.B.C-CUx).
+Versions from InstallPackages made on Jenkins are excluded from this definition as they contain a dash by default (A.B.C-CUx).

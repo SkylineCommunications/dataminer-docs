@@ -54,7 +54,7 @@ You can reference and include additional content from the Catalog using the *Pac
 
 For the SDK to be able to download the referenced items from the Catalog, configure a user secret in Visual Studio:
 
-1. Obtain an *Organization Key* from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
+1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
    - *Register catalog items*
    - *Read catalog items*
