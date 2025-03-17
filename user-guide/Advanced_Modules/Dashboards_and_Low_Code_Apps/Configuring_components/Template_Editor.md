@@ -412,6 +412,6 @@ If you have already configured a template for a component of the same type in th
 
 ***
 
-In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g. {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different query IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
+In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g. {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
 
 ![Update template](~/user-guide/images/CustomerName.gif)<br>*Template Editor in DataMiner 10.5.4*
