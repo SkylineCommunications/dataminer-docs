@@ -140,6 +140,9 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
     >
     > - Custom entry points are possible. See [Custom entry points](#custom-entry-points).
 
+    > [!IMPORTANT]
+    > Check how to handle async code in Automation script. See [Handling Async Code](xref:Handling_Async_Code).
+
 ## Preprocessor directives
 
 DataMiner compiles C# blocks of Automation scripts with the following preprocessor directives:
@@ -221,6 +224,9 @@ Restrictions:
 - For reasons of backward compatibility, we recommend using the Script class as the entry point class for a script.
 
 - The script must contain the string "class Script" as otherwise DataMiner will wrap the code. See [Script class](#script-class).
+
+> [!IMPORTANT]
+> Check how to handle async code in Automation script. See [Handling Async Code](xref:Handling_Async_Code).
 
 ## Online help and user assistance
 
