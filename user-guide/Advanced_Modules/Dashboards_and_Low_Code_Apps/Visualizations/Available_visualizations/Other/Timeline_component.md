@@ -146,39 +146,37 @@ This component allows you to visualize and manage bookings, events, and other ti
        > [!NOTE]
        > Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, the option to reuse a template is only available when another timeline component in the dashboard or low-code app is configured with a custom template.
 
-## Zooming and panning
+## Navigating the timeline component in read mode
 
-In read mode, you can manipulate the timeline component to navigate through the scheduled events, bookings, or time-bound data.
+- In read mode, you can manipulate the timeline component to navigate through the scheduled events, bookings, or time-bound data.
 
-- Adjusting the displayed time range:
+  - Adjusting the **displayed time range**:
 
-  - From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
+    - From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
 
-    - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
+      - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
 
-    - When this setting is disabled: Scroll up or down to zoom in or out. This is the default option.
+      - When this setting is disabled: Scroll up or down to zoom in or out. This is the default option.
 
-  - Prior to DataMiner 10.4.0 [CU10]/10.5.1:
+    - Prior to DataMiner 10.4.0 [CU10]/10.5.1:
 
-    - To **zoom in** on the timeline component, press Ctrl while scrolling up.
+      - To **zoom in** on the timeline component, press Ctrl while scrolling up.
 
-    - To **zoom out**, press Ctrl while scrolling down.
+      - To **zoom out**, press Ctrl while scrolling down.
 
-  > [!NOTE]
-  > The component has a minimum time range of 5 milliseconds and a maximum of 10 years, setting the zoom limit<!--RN 35620-->.
+    - When visualized on a mobile device<!--RN 35619-->, you can zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
 
-- To **move left or right** across the timeline component, click the timeline and drag your mouse.
+    > [!NOTE]
+    > The component has a minimum time range of 5 milliseconds and a maximum of 10 years, setting the zoom limit<!--RN 35620-->.
 
-  > [!NOTE]
-  > If you have enabled the *Lock timeline to now* setting, you will be unable to pan past the "now" indicator.
+  - To **move left or right** across the timeline component, click the timeline and drag your mouse. When visualized on a mobile device<!--RN 35619-->, you can move left or right by sliding one finger across the component
 
-- If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to **navigate up or down** through the items.
+    > [!NOTE]
+    > If you have enabled the *Lock timeline to now* setting, you will be unable to pan past the "now" indicator.
 
-> [!NOTE]
-> When visualized on a mobile device<!--RN 35619-->:
->
-> - You can zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
-> - You can move left or right by sliding one finger across the component.
+  - If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to **navigate up or down** through the items.
+
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you select an item in the timeline, it will be highlighted with a blue border and a light blue background. This can be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Timeline #* > *Selected groups* / *Selected time ranges*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
 
 ## Configuring events and actions
 

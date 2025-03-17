@@ -70,21 +70,25 @@ From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42128-->, when yo
      - To access the Template Editor, click *Edit* next to the pencil icon.
 
        > [!TIP]
-       > For more information on how to use the Template Editor to customize the appearance of component items, see [Using the Template Editor](xref:Template_Editor).
+       >
+       > - For more information on how to use the Template Editor to customize the appearance of component items, see [Using the Template Editor](xref:Template_Editor).
+       > - You can also use the Template Editor to configure the grid to trigger actions when a cell is selected, such as opening a panel with additional information.
 
      - To reuse saved templates for components in the same dashboard or low-code app, click *Browse templates* next to the ![Browse templates](~/user-guide/images/Browse_Templates.png) button<!--RN 42226-->. Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, click *Reuse template* next to the ![reuse template](~/user-guide/images/Reuse_Template.png) button instead<!--RN 34948-->.
 
        > [!NOTE]
        > Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, the option to reuse a template is only available when another grid component in the dashboard or low-code app is configured with a custom template.
 
-## Navigating through the grid component
+## Navigating the grid component in read mode
 
-In read mode, you can manipulate the grid component to navigate through the columns and rows:
+- In read mode, you can manipulate the grid component to **navigate through the columns and rows**:
 
-- If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to navigate through the items.
+  - If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to navigate through the items.
 
-- From DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 38191-->, when you are using on a mobile device:
+  - From DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 38191-->, when you are using on a mobile device:
 
-  - You can move the grid left or right and up or down by sliding one finger across the component.
+    - You can move the grid left or right and up or down by sliding one finger across the component.
 
-  - You can select grid items by tapping them.
+    - You can select grid items by tapping them.
+
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a cell in the grid**, it will be highlighted with a blue border and a light blue background. This can be useful when the grid's [component data](xref:Component_Data) is used in another component, clearly indicating which data is driving the content in the linked component.
