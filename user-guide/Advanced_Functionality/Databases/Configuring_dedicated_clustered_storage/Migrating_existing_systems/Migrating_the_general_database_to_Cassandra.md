@@ -6,7 +6,7 @@ keywords: local database
 # Migrating the SQL general database to Cassandra
 
 > [!IMPORTANT]
-> This feature is obsolete. The migration wizard is no longer available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards.<!-- RN 42305 -->
+> This feature is obsolete. The migration wizard is no longer supported from DataMiner 10.3.0 [CU6]/10.3.6 onwards.<!-- RN 36095, 42305 -->
 
 In legacy DataMiner Systems, a MySQL or MSSQL general database (also known as "local" database) can be used. However, with such a setup you will not have access to many recent DataMiner features. In addition, while older features will continue to work with MySQL up to DataMiner 10.6.0, MSSQL is no longer supported as from DataMiner 10.3.0.
 
