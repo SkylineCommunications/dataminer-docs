@@ -347,7 +347,7 @@ The previously available Catalog API call to register a new Catalog item or vers
 
 #### 12 September 2024 - Enhancement - Catalog - Catalog item versions with no artifact available on dataminer.services will contain a message [ID 40616]
 
-When a Catalog item version is not available to deploy because its installation file is not registered, a message will now be shown to the user to inform them that the version is not available and that they can contact <support.cloud.ecosystem@skyline.be> to make it available.
+When a Catalog item version is not available to deploy because its installation file is not registered, a message will now be shown to the user to inform them that the version is not available and that they can contact <techsupport@skyline.be> to make it available.
 
 #### 12 September 2024 - New feature - Catalog - Unauthenticated access [ID 40570] [ID 40571] [ID 40572] [ID 40573] [ID 40686]
 
