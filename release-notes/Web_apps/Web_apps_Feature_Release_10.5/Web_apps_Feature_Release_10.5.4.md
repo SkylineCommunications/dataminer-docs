@@ -154,7 +154,7 @@ In the *Time range* component, up to now, the color of the *Apply* button would,
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-Items selected in *Node edge graph*, *Grid*, *Maps*, *Timeline* or *Table* components will now be passed to another components in the order in which they have been selected.
+Items selected in *Node edge graph*, *Grid*, *Maps*, *Timeline*, or *Table* components will now be passed to other components in the order in which they have been selected.
 
 #### Dashboards app: Default Skyline dashboard themes updated [ID 42179]
 
