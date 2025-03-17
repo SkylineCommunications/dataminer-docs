@@ -13,7 +13,7 @@ Expected duration: 25 minutes.
 
 ## Prerequisites
 
-- DataMiner version DataMiner 10.2.5/10.3.0 or higher.
+- DataMiner version DataMiner 10.4.0 [CU10]/10.5.1 or higher.
 - DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - Visual Studio with DIS extension. DIS extension can be download from [DataMiner Dojo](https://community.dataminer.services/dataminer-integration-studio-other-downloads/).
 - DIS extension connected to your DataMiner system.
