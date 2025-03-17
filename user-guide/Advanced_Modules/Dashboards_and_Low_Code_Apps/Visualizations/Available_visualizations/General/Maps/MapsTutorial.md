@@ -15,7 +15,7 @@ The content and screenshots for this tutorial have been created in DataMiner ver
 - A DataMiner System using DataMiner 10.4.1 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 > [!NOTE]
-> Depending on your DataMiner version, you may need to activate the [ReportsAndDashboardsGQIMaps](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) soft-launch option to be able to use the maps component. See [Soft-launch options](xref:SoftLaunchOptions).
+> If you do not use a DaaS system, and you use a DataMiner version prior to DataMiner 10.5.0 [CU1]/DataMiner 10.5.4, you will also need to activate the [ReportsAndDashboardsGQIMaps](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) soft-launch option to be able to use the maps component. See [Soft-launch options](xref:SoftLaunchOptions).
 
 ## Overview
 
