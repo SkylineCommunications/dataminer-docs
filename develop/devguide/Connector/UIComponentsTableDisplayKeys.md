@@ -63,9 +63,10 @@ The first character defines the separator and can be freely chosen. It will be r
 In the example above, the semicolon separates the static text from the dynamic parameter values. A display key for this table will look as follows: "Input2TS3".
 
 > [!NOTE]
-> When referencing a Parameter Id, pay note not to add spaces before or after the number.
-> Correct: ";Input;1005;TS;2004"
-> Incorrect: ";Input; 1005;TS;2004 "
+> When referencing a parameter ID, take care not to add spaces before or after the number. For example:
+>
+> - Correct: ";Input;1005;TS;2004"
+> - Incorrect: ";Input; 1005;TS;2004 "
 
 ## Naming
 
