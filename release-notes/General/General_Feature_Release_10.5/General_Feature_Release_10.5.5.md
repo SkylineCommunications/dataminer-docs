@@ -58,12 +58,6 @@ The output will be stored in the following file:
 
 Up to now, aggregation alarms would not work as intended on DataMiner Systems using a Cassandra Cluster database or Storage as a Service (STaaS).
 
-#### Mobile Visual Overview: Problem with SLHelper when removing mobile visual overview sessions [ID 42296]
-
-<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
-
-When mobile visual overview sessions were removed from a DataMiner Agent, in some cases, the SLHelper process could temporarily block other requests.
-
 #### Element card of a DVE or Virtual Function could show incorrect alarm colors [ID 42402]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->

@@ -47,7 +47,7 @@ Up to now, aggregation alarms would not work as intended on DataMiner Systems us
 
 #### Mobile Visual Overview: Problem with SLHelper when removing mobile visual overview sessions [ID 42296]
 
-<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 [CU0] -->
 
 When mobile visual overview sessions were removed from a DataMiner Agent, in some cases, the SLHelper process could temporarily block other requests.
 

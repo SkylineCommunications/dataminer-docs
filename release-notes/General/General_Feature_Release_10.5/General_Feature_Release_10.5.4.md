@@ -501,6 +501,12 @@ However, up to now, the response would not contain the anomaly score and the par
 
 In some rare cases, an exception could be thrown when NATS sessions were disposed.
 
+#### Mobile Visual Overview: Problem with SLHelper when removing mobile visual overview sessions [ID 42296]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 [CU0] -->
+
+When mobile visual overview sessions were removed from a DataMiner Agent, in some cases, the SLHelper process could temporarily block other requests.
+
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU1] - FR 10.5.4 -->
