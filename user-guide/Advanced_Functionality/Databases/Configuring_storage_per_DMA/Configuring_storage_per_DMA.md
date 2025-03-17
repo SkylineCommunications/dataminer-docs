@@ -11,6 +11,9 @@ If you are still using an older setup with storage per DMA instead of the recomm
 
 ## Cassandra database per DMA
 
+> [!IMPORTANT]
+> This feature is obsolete. The migration wizard from SQL to Cassandra is no longer available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards.<!-- RN 42305 -->
+
 By default, when you install a new self-managed DataMiner System, a Cassandra database per DMA is configured. If you have an existing legacy DataMiner System with SQL database, [migrating to Cassandra](xref:Migrating_the_general_database_to_Cassandra) will give you access to additional DataMiner features (depending on your DataMiner version), including:
 
 - Advanced Analytics features such as alarm focus, behavioral anomaly detection, proactive cap detection, automatic incident tracking, and pattern matching
