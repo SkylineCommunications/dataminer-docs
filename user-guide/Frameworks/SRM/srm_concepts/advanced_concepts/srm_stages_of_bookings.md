@@ -6,7 +6,13 @@ uid: srm_stages_of_bookings
 
 Once a booking has been created and is in the confirmed state, it goes through several stages in the Resource Manager until it is finished. Having a clear understanding of these steps can help in troubleshooting bookings and understanding the impact of certain configuration settings.
 
-Note that a distinction must be made between the booking stages in the core software and the [booking life cycle](xref:Service_Orchestration_life_cycle_states) when the SRM framework has been deployed. You can find an overview of the possible states in the core software in the table below:
+## Booking states
+
+A booking has a state associated with it, that tracks its progress through the different stages of the booking process. Note that a distinction must be made between the booking stages in the core software and the [booking life cycle](xref:Service_Orchestration_life_cycle_states) when the SRM framework has been deployed. 
+
+Once the booking is in the *Confirmed* state, the Resource Manager will execute the booking stages, as outlined [below](#stages-overview). Some of these will transition the booking to a different state.
+
+You can find an overview of the possible states in the core software in the table below:
 
 | **State** | **Description** |
 |--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -17,17 +23,18 @@ Note that a distinction must be made between the booking stages in the core soft
 | **Interrupted** | If a booking misses its start, stop, or any orchestration event due to the hosting agent being down, the Resource Manager will move the booking to this state. |
 | **Canceled** | Resources assigned to a booking are freed up, and orchestration will not be executed. A booking must be manually updated to this state (it will not be automatically assigned). |
 
+
+## Stages overview
+
 In the core software, a booking goes through the following changes, in the indicated order:
 
-- [Booking stages](#booking-stages)
-  - [Booking creation](#booking-creation)
-  - [Registration of events and actions](#registration-of-events-and-actions)
-  - [Activation of function resources](#activation-of-function-resources)
-  - [Running of booking pre-events](#running-of-booking-pre-events)
-  - [Booking start](#booking-start)
-  - [Running of booking events](#running-of-booking-events)
-  - [Booking end](#booking-end)
-  - [Updating bookings that are already running](#updating-bookings-that-are-already-running)
+- [Booking creation](#booking-creation)
+- [Registration of events and actions](#registration-of-events-and-actions)
+- [Activation of function resources](#activation-of-function-resources)
+- [Running of booking pre-events](#running-of-booking-pre-events)
+- [Booking start](#booking-start)
+- [Running of booking events](#running-of-booking-events)
+- [Booking end](#booking-end)
 
 For what happens when a booking is updated after the start actions have run, see [Updating bookings that are already running](#updating-bookings-that-are-already-running).
 
