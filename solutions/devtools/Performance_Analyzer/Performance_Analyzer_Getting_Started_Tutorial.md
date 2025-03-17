@@ -60,6 +60,9 @@ Expected duration: 25 minutes.
 
 ![Performance Analyzer getting started publish the GQIDS](~/user-guide/images/performance_analyzer_getting_started_publish_the_gqi.png)
 
+>[!NOTE]
+> You can follow this step by deploying the GQIDS directly from the [Catalog](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126).
+
 ## Step 4: Create a LCA
 
 1. Open the *DataMiner Web App*.
@@ -123,6 +126,12 @@ At this point you will be able to notice that the table takes a while to load an
     > [!NOTE]
     > For more details about *Performance Analyzer* NuGet, see [Performance Analyzer library](https://docs.dataminer.services/solutions/devtools/Performance_Analyzer/Performance_Analyzer_Library.html).
 
+    >[!NOTE]
+    > You can follow this step by deploying the GQIDS, version 1.0.1-exercise1, directly from the [Catalog](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126). 
+
+> [!TIP]
+> Implementation of this step can be found on *exercise_1* branch.
+
 1. Deploy the *Performance Analyzer LCA* package from the Catalog
 
     1. Go to the [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349) package in the DataMiner Catalog.
@@ -134,10 +143,6 @@ At this point you will be able to notice that the table takes a while to load an
 
     > [!NOTE]
     > For more details about *Performance Analyzer* LCA, see [Performance Analyzer app](https://docs.dataminer.services/solutions/devtools/Performance_Analyzer/Performance_Analyzer_LCA.html).
-
-
-> [!TIP]
-> Implementation of this step can be found on *exercise_1* branch.
 
 ## Step 6: Analyze the Collected Data
 
@@ -197,6 +202,9 @@ private List<Employee> Process(List<Employee> employees)
 
 1. [Publish the GQIDS](#step-3-publish-the-gqids)
 
+>[!NOTE]
+> You can follow this step by deploying the GQIDS, version 1.0.1-exercise2, directly from the [Catalog](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126). 
+
 ## Step 8: [Repeat step #7](#step-6-analyze-the-collected-data)
 
 You will now notice that the table loads significantly faster and, in the *Performance Analyzer* LCA, you can see that execution time of ```DatabaseController.Process``` method has been reduced from ~9s to ~500ms. 
@@ -208,6 +216,9 @@ Congratulations, you have successfully identified and resolved the issue with pe
 1. Pull branch *exercise_3*.
 
 1. [Publish the GQIDS](#step-3-publish-the-gqids)
+
+>[!NOTE]
+> You can follow this step by deploying the GQIDS, version 1.0.1-exercise3, directly from the [Catalog](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126). 
 
 1. Identify the user whose processing causing performance issues
 
