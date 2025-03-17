@@ -16,4 +16,4 @@ A resource pool can be in one of the following states:
 
 - **Draft**: In this stage the resource pool is not (yet) available to be scheduled in workflows and jobs. In this stage the pool can still be removed directly.
 - **Complete**: In this stage the resource pool is considered complete and can be used to create workflows and jobs.
-- **Deprecated**<!-- : TBC WITH THE TEAM WHAT THIS MEANS => KEEP CURRENT BEHAVIOR -->
+- **Deprecated**: If you do not want a resource pool with `Complete` state to be shown anymore, you can deprecate it by going to edit panel and clicking `Deprecate`. You can find all the deprecated resource pools in **Recycle Bin** in the upper right corner. There you can completely delete deprecated resources by clicking **Delete Selected**.
