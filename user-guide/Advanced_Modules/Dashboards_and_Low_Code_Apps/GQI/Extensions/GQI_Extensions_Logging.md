@@ -175,11 +175,10 @@ If Kevin is using a DataMiner version prior to 10.5.0 [CU1]/10.5.4, he can now a
 [2024-04-22 10:19:13.189 DBG] [c6a3d4bf] [71ba5588] Value for '3' is 'Carmine'
 ```
 
-With later DataMiner versions, the log message will instead be available in a file named after the extension library, located in the *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions* folder:
+With later DataMiner versions, the log message will instead be available in a file named *ExampleScript_ExampleLibrary.txt*, located in the *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions* folder:
 
 ```log
-[2024-04-22 10:19:13.143][INF][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf][71ba5588]  Column to log: Color
-[2024-04-22 10:19:13.184][DBG][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf] [71ba5588] Value for '1' is 'Alizarin'
-[2024-04-22 10:19:13.188][DBG][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf] [71ba5588] Value for '2' is 'Burgundy'
-[2024-04-22 10:19:13.189][DBG][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf] [71ba5588] Value for '3' is 'Carmine'
-```
+[2024-04-22 10:19:13.143][INF][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf][71ba5588] Column to log: Color
+[2024-04-22 10:19:13.184][DBG][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf][71ba5588] Value for '1' is 'Alizarin'
+[2024-04-22 10:19:13.188][DBG][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf][71ba5588] Value for '2' is 'Burgundy'
+[2024-04-22 10:19:13.189][DBG][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf][71ba5588] Value for '3' is 'Carmine'
