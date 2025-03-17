@@ -1,5 +1,6 @@
 ---
 uid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
+keywords: Stop,(Re)start,Shut down, Reboot, Agents, System Center, System Center/Agents
 ---
 
 # Starting or stopping a DMA in DataMiner Cube
