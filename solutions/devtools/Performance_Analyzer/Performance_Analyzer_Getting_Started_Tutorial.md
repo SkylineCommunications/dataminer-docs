@@ -13,8 +13,15 @@ Expected duration: 25 minutes.
 
 ## Prerequisites
 
-- DataMiner version DataMiner 10.4.0 [CU10]/10.5.1 or higher.
+- DataMiner version 10.5.0/10.5.2 or higher.
 - DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- DataMiner System using GQI DxM.
+
+> [!NOTE]
+> If GQI DxM is not enabled on your system refer to [GQI DxM docs](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/GQI/GQI_DxM.html?q=gqi%20dxm).
+
+> ![!TIP]
+> It is possible to follow the exercise using DataMiner version as low as 10.4.0 [CU10]/10.5.1, however, in that case you have to manually add *Skyline.DataMiner.Utils.PerformanceAnalyzer.dll* to _C:\Skyline DataMiner\Files_ folder. After building the solution you can find the required DLL in _C:\Projects\Visual Studio\SLC-GQIDS-Kata-PerformanceAnalyzerKataExercise\PerformanceAnalyzerKataExercise\bin\Debug\net48_ folder.
 
 The following are not required but strongly suggested requirements:
 - Visual Studio with DIS extension. DIS extension can be download from [DataMiner Dojo](https://community.dataminer.services/dataminer-integration-studio-other-downloads/).
