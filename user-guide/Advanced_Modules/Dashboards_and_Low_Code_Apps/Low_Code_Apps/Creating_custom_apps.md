@@ -13,7 +13,9 @@ uid: Creating_custom_apps
 
 1. If no apps exist yet, click *Create a new app*. Otherwise, hover the mouse pointer over the *Other apps* section and click the "+" button next to *Other apps*.
 
-1. Specify the name of your new app in the header bar, instead of the default name "New application". From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42220-->, app names are limited to 150 characters.
+1. Specify the name of your new app in the header bar, instead of the default name "New application".
+
+   Note that from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42220-->, app names are limited to 150 characters.
 
 1. To customize the color and icon for the app, see [Customizing the icon and color of an app](xref:LowCodeApps_Layout#customizing-the-icon-and-color-of-an-app).
 

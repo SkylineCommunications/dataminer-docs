@@ -12,7 +12,9 @@ To configure a page:
 
 1. Make sure the page is selected in the leftmost pane of the app editor. This will open the page configuration pane to the right.
 
-1. At the top of the page configuration pane, specify a name for the page. From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42220-->, page names are limited to 150 characters.
+1. At the top of the page configuration pane, specify a name for the page.
+
+   Note that from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42220-->, page names are limited to 150 characters.
 
 1. In the *icon* section, select an icon for the page.
 
