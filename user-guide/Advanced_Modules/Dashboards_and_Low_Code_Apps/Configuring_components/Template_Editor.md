@@ -396,7 +396,7 @@ If you have already configured at least one other template for a component in th
 
   1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
 
-### [Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4](#tab/tabid-2)
+### [Earlier DataMiner versions](#tab/tabid-2)
 
 If you have already configured a template for a component of the same type in the same dashboard or low-code app you are working on, you can reuse a template<!--RN 34948-->. Only available for the grid and timeline components.
 
@@ -412,6 +412,6 @@ If you have already configured a template for a component of the same type in th
 
 ***
 
-In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g. {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
+Keep in mind that when you reuse templates, you may need to **manually update column references**: In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g. {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
 
 ![Update template](~/user-guide/images/CustomerName.gif)<br>*Template Editor in DataMiner 10.5.4*
