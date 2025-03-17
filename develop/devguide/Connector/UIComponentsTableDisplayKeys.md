@@ -60,7 +60,12 @@ Another way to define a display key using naming is by using the *NamingFormat* 
 
 The first character defines the separator and can be freely chosen. It will be replaced by an empty string when the display key is formed. The use of the CDATA block allows the use of characters like "<", ">", and "&", which are otherwise encoded in XML.
 
-In the example above, the semicolon separates the static text from the dynamic parameter values. A display key for this table will look as follows: "Input 2 TS 3".
+In the example above, the semicolon separates the static text from the dynamic parameter values. A display key for this table will look as follows: "Input2TS3".
+
+> [!NOTE]
+> When referencing a Parameter Id, pay note not to add spaces before or after the number.
+> Correct: ";Input;1005;TS;2004"
+> Incorrect: ";Input; 1005;TS;2004 "
 
 ## Naming
 
