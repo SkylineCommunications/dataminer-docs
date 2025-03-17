@@ -28,3 +28,5 @@ The available interfaces are:
 - [IGQIOnPrepareFetch](xref:GQI_IGQIOnPrepareFetch): Used in order to implement optimizations when data is retrieved.
 
 - [IGQIUpdateable](xref:GQI_IGQIUpdateable): Makes it possible to provide real-time updates (available from DataMiner 10.4.4/10.5.0 onwards<!-- RN 38643 -->).
+
+- [IGQIOptimizeableDataSource](xref:GQI_IGQIOptimizeableDataSource): Can be used to optimize an ad hoc data source based on operators added to the query (available from DataMiner 10.5.5/10.6.0 onwards when using the [GQI DxM](xref:GQI_DxM)<!-- RN42528 -->).
