@@ -341,8 +341,6 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Type = UIBlockType.Parameter,
   DestVar = "Input",
   InitialValue = initialValue,
-  WantsOnChange = true,
-  DisplayFilter = true,
   Extra = $"{dmaID}/{elementID}:{parameterID}"
 };
 uiBuilder.AppendBlock(blockItem);

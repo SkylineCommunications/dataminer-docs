@@ -236,6 +236,7 @@ namespace Skyline.DataMiner.Automation
 		/// <para>Default: <c>false</c>.</para>
 		/// <para>Available from DataMiner 9.5.6 onwards.</para>
 		/// <para>Applicable only when <see cref="Type"/> is set to DropDown.</para>
+		/// <para>From DataMiner 10.X.X onwards wit the new UI of the Dropdown in Web, DisplayFilter is always enabled.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
