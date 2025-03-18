@@ -644,7 +644,10 @@ If you continue to have NATS issues, try the following steps:
 
 1. Start DataMiner.
 
-This will leave the system with a standalone NATS setup with all default settings. If the DMA is in a cluster and/or Failover pair, restart the DMA and send a *NATSCustodianResetNatsRequest* message to any DMA in the cluster that is not an offline Failover Agent (see [Try a NATS reset](#try-a-nats-reset)). This will trigger the NATS reset routine on all DMAs in the cluster, which recalculates the entire NAS and NATS configuration on the entire cluster and restarts both services.
+This will leave the system with a standalone NATS setup with all default settings. If the DMA is in a cluster and/or Failover pair, and automatic NATS configuration is **not** disabled, restart the DMA and send a *NATSCustodianResetNatsRequest* message to any DMA in the cluster that is not an offline Failover Agent (see [Try a NATS reset](#try-a-nats-reset)). This will trigger the NATS reset routine on all DMAs in the cluster, which recalculates the entire NAS and NATS configuration on the entire cluster and restarts both services.
+
+> [!NOTE]
+> Do not send the *NATSCustodianResetNatsRequest* message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:SLNetClientTest_disabling_automatic_nats_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
 
 ## Algorithms used by DataMiner to configure NATS
 
