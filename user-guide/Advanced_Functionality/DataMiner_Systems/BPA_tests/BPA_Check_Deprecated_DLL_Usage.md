@@ -6,14 +6,14 @@ uid: BPA_Check_Deprecated_DLL_Usage
 
 This BPA test checks for the use of deprecated or outdated DLLs in QActions and Automation scripts. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab).
 
-It is available from DataMiner 10.4.6/10.5.0 onwards, but prior to DataMiner 10.5.4/10.6.0 it is known as *Check Deprecated MySQL DLL* instead.
+It is available from DataMiner 10.4.6/10.5.0 onwards, but prior to DataMiner 10.5.5/10.6.0 it is known as *Check Deprecated MySQL DLL* instead.
 
 Depending on the DataMiner version, it checks for the following DLLs, in the specified folders:
 
 | Deprecated DLL | Deprecated since DataMiner version | Minimum safe DLL version | Folder                   |
 |----------------|------------------------------------|--------------------------|--------------------------|
 | MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370-->       | 8.0.0.0                  | *C:\Skyline DataMiner\ProtocolScripts* |
-| SLDatabase.dll | 10.5.4/10.6.0<!--RN 42057-->       | N/A                      | *C:\Skyline DataMiner\ProtocolScripts* or *C:\Skyline DataMiner\Files* |
+| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057-->       | N/A                      | *C:\Skyline DataMiner\ProtocolScripts* or *C:\Skyline DataMiner\Files* |
 
 Any version lower than the specified minimum version will be considered outdated, as older versions are known to pose security risks.
 
