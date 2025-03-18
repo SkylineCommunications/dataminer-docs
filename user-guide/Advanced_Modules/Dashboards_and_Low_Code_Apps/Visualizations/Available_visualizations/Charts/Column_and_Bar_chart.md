@@ -72,15 +72,15 @@ To configure the component:
 
    - *Advanced \> Chart layout*: Allows you to choose how the dimensions of the bars are determined. Possible values:
 
-     - *Absolute*: The dimension of each bar is shown as an absolute numeric value. From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42106-->, this is the default value.
+     - *Absolute*: The dimension of each bar is shown as an absolute numeric value.
 
      - *Relative per category*: The dimension of each bar is shown as a relative percentage compared to other bars representing the different variables for each separate category. (Available from DataMiner 10.1.0/10.1.2 onwards.)
 
-     - *Relative per variable:* The dimension of each bar is shown as a relative percentage compared to other bars representing this variable. Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4<!--RN 42106-->, this is the default value.
+     - *Relative per variable:* The dimension of each bar is shown as a relative percentage compared to other bars representing this variable.
 
      - *Relative total*: The dimension of each bar is shown as a percentage of the sum of all values. (Available from DataMiner 10.1.0/10.1.2 onwards.)
 
-   - *Advanced \> Chart orientation*: Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top. From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42106-->, *Bottom to top* is the default setting. Prior to this, *Left to right* is the default setting.
+   - *Advanced \> Chart orientation*: Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top.
 
    - *Advanced* \> *Stack bars:* Available from DataMiner 10.1.0/10.1.2 onwards. Stacks the bars on top of each other instead of showing them side by side. This can be especially useful when combined with the *Relative per category* layout.
 
