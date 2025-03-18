@@ -31,6 +31,12 @@ The output will be stored in the following file:
 
 *\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
 
+#### GQI recording removed from GQI DxM [ID 42470]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+GQI recording, a debugging feature that allowed you to save GQI communication and replay it in a lab environment, has now been removed from the GQI DxM.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
