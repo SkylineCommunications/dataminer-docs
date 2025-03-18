@@ -366,6 +366,13 @@ Maximum of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
 Minimum of a list of entries, e.g. X, Y, Z (which will be parsed to numbers).
 
+### \[Name\]
+
+Reference to the DataMiner object (e.g. element, service, view, etc.) to which the Visio drawing is linked.
+
+> [!NOTE]
+> From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if a \[Name\] placeholder is used to reference a service or view, the name of that service or view will update automatically when it changes.
+
 ### \[pagevar:VariableName\]
 
 Reference to a session variable (scope: current Visio page).
@@ -847,6 +854,20 @@ When drag-and-drop behavior has been configured for child shapes, this placehold
 
 > [!TIP]
 > See also: [Configuring drag-and-drop behavior for child shapes](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape#configuring-drag-and-drop-behavior-for-child-shapes)
+
+### \[This service\]
+
+Reference to the service to which the Visio drawing is linked.
+
+> [!NOTE]
+> From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if a \[This service\] placeholder is used, the name of the service will update automatically when it changes.
+
+### \[This view\]
+
+Reference to the view to which the Visio drawing is linked.
+
+> [!NOTE]
+> From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if a \[This view\] placeholder is used, the name of the view will update automatically when it changes.
 
 ### \[ThisGroup\]
 
