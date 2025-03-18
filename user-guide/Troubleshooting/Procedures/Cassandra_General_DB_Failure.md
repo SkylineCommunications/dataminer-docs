@@ -44,7 +44,7 @@ This means that the element data cannot be read out, causing the element to fail
 
 To then verify whether the issue is indeed related to a high number of tombstones, check either the *debug.log* or the *system.log* file of the Cassandra database. Check the log that matches the datetime of when the element failed to start up.
 
-Note that if you have a Cassandra database per DMA, these log files will automatically be included in an [SLLogCollector](xref:SLLogCollector) package unless the database is located on an external server. If If the DMS uses a Cassandra cluster, the element data of the affected element will be located on one of the nodes, which means that you may need to search through the logs of each node.
+Note that if you have a Cassandra database per DMA, these log files will automatically be included in an [SLLogCollector](xref:SLLogCollector) package unless the database is located on an external server. If the DMS uses a Cassandra cluster, the element data of the affected element will be located on one of the nodes, which means that you may need to search through the logs of each node.
 
 You should be able to find ERROR lines like these in the log files:
 
@@ -102,6 +102,8 @@ If the Cassandra setup was already using the increased threshold values, then th
    The solution will depend on the root cause. For example: do all columns need to be saved, can you make this a volatile table, is the table being polled too fast, etc.
 
    If the root cause appears to be connector-related, then the connector will need to receive an update. In that case, [contact tech support](#contacting-tech-support-for-this-issue) to verify the findings and to forward them to the correct team.
+
+### Other checks
 
 1. Check if there is enough free disk space on the Cassandra server.
 
