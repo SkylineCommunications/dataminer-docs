@@ -30,7 +30,7 @@ This means that the following prerequisites apply:
    ```xml
    <?xml version="1.0" ?>
    <RelationalAnomalyDetection>
-     <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]">
+     <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]" minimumAnomalyDuration="[THRESHOLD2]">
        <Instance>[INSTANCE1]</Instance>
        <Instance>[INSTANCE2]</Instance>
        [... one <Instance> tag per parameter in the group]
@@ -51,6 +51,11 @@ This means that the following prerequisites apply:
      - `anomalyScore`: Optional argument that can be used to specify the suggestion event generation threshold.
 
        Higher values will result in less suggestion events, lower values will result in more suggestion events. Default: 3.
+
+     - `minimumAnomalyDuration`: Supported from DataMiner 10.5.4/10.6.0 onwards.<!-- RN 42283 --> Optional argument that can be used to specify the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. Default value: 5.
+
+       - When `minimumAnomalyDuration` is set to a value greater than 5, the deviating behavior will need to last longer before an anomaly event is triggered. You can for instance configure this to filter out noise events caused by a single, short, harmless outlying value in the data.
+       - When `minimumAnomalyDuration` is either not set or set to a value less than or equal to 5, an anomaly event will be generated as soon as values deviate sufficiently from the RAD model.
 
    - In each `Instance` element, you can specify either a single-value parameter or a table parameter using one of the following formats:
 
