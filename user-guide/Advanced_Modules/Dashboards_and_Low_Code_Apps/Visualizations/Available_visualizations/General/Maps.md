@@ -120,7 +120,7 @@ The following actions are available:
   > [!TIP]
   > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay)
 
-## Navigating the maps component in read mode
+## Using the maps component in read mode
 
 - **Zooming functionalities** are available for the maps component.
 
@@ -142,6 +142,6 @@ The following actions are available:
 
     - To zoom out, scroll down.
 
-- To **navigate the maps component**, press and hold CTRL, then click and hold the scroll wheel while dragging the pointer in any direction.
+- To **pan the map**, press and hold CTRL, then click and hold the scroll wheel while dragging the pointer in any direction.
 
-- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a marker on the map**, it will be highlighted with a blue color. This can be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Maps #* > *Selected markers*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a marker on the map**, it will by default be highlighted with a blue color. This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Maps #* > *Selected markers*) is used in a linked component, clearly indicating which data is driving the content in the linked component.

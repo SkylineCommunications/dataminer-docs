@@ -146,7 +146,7 @@ This component allows you to visualize and manage bookings, events, and other ti
        > [!NOTE]
        > Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, the option to reuse a template is only available when another timeline component in the dashboard or low-code app is configured with a custom template.
 
-## Navigating the timeline component in read mode
+## Using the timeline component in read mode
 
 - In read mode, you can manipulate the timeline component to navigate through the scheduled events, bookings, or time-bound data.
 
@@ -164,19 +164,19 @@ This component allows you to visualize and manage bookings, events, and other ti
 
       - To **zoom out**, press Ctrl while scrolling down.
 
-    - When visualized on a mobile device<!--RN 35619-->, you can zoom in on the component by placing your thumb and index finger tips together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
+    - When you are using a mobile device<!--RN 35619-->, you can zoom in on the component by placing two fingers together on the screen and moving them apart. To zoom out, use a pinching motion, starting with your fingers apart and bringing them together.
 
     > [!NOTE]
     > The component has a minimum time range of 5 milliseconds and a maximum of 10 years, setting the zoom limit<!--RN 35620-->.
 
-  - To **move left or right** across the timeline component, click the timeline and drag your mouse. When visualized on a mobile device<!--RN 35619-->, you can move left or right by sliding one finger across the component
+  - To **move left or right** across the timeline component, click the timeline and drag the mouse. When you are using a mobile device<!--RN 35619-->, you can move left or right by sliding one finger across the component.
 
     > [!NOTE]
     > If you have enabled the *Lock timeline to now* setting, you will be unable to pan past the "now" indicator.
 
   - If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to **navigate up or down** through the items.
 
-- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select an item in the timeline**, it will be highlighted with a blue border and a light blue background. This can be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Timeline #* > *Selected groups* / *Selected time ranges*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select an item in the timeline**, it will by default be highlighted with a blue border and a light-blue background. This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Timeline #* > *Selected groups* / *Selected time ranges*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
 
 ## Configuring events and actions
 
