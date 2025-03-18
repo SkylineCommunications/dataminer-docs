@@ -48,6 +48,8 @@ From DataMiner 10.3.0 [CU10]/10.4.1 onwards, you can duplicate a query. To do so
 
 Please note the following regarding query data input:
 
+- All created queries are listed in alphabetical order in the *Queries* section of the *Data* pane. Immediately after a query is created, it may appear last in the list, but it will be displayed in alphabetical order after you collapse and expand the *Queries* section or reopen the app. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!--RN 42452-->, queries are listed in the order they have been created.
+
 - When a query has been created, the columns from the table that results from the query are available as individual data items in the *Data* pane, so that you can use them to filter or group a component.
 
 - It is not possible to retrieve data from a stopped element.
