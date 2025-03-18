@@ -764,7 +764,7 @@ The [ChatOps example scripts on GitHub](https://github.com/SkylineCommunications
 
 From now on, if Remote Access to the web apps is enabled, this also allows access to the folder `/Documents/DMA_COMMON_DOCUMENTS/`, so that it is possible to access the documents available in Cube.
 
-#### 30 May 2024 - Enhancement - Home - DaaS error messages [ID 39810]
+#### 30 May 2024 - Enhancement - Home - DaaS error messages [ID 39810] [ID 39815]
 
 The error messages that are displayed in case something goes wrong during the creation of a DaaS instance have been improved. Instead of a generic error, more specific information is now displayed.
 
