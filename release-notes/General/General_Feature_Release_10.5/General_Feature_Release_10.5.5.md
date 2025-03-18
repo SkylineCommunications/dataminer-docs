@@ -50,6 +50,12 @@ The output will be stored in the following file:
 
 *\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
 
+#### GQI recording removed from GQI DxM [ID 42470]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+GQI recording, a debugging feature that allowed you to save GQI communication and replay it in a lab environment, has now been removed from the GQI DxM.
+
 ### Fixes
 
 #### Problem with aggregation alarms on Cassandra Cluster and STaaS [ID 42095]
