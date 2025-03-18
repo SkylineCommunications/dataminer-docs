@@ -76,4 +76,4 @@ By default, your DaaS system is hosted in the Azure West Europe region. However,
 
 Geographically distributed systems with multiple nodes across different regions are also supported. If you require a *custom setup*, contact us at [daas@dataminer.services](mailto:daas@dataminer.services).
 
-The linked storage (STaaS) for your DaaS cluster is hosted at a fixed location. For more details on STaaS Azure Storage location offerings, refer to our documentation: [Data Location and Redundancy](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/STaaS/STaaS_features.html#data-location-and-redundancy)
+For information about the regional support for the linked storage (STaaS) for your DaaS cluster, refer to [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
