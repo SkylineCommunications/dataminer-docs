@@ -18,7 +18,17 @@ uid: Web_apps_Feature_Release_10.5.5
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards/Low-Code Apps - Template editor: Duplicating layers [ID 42479]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the *Layers* tab, you can now duplicate a layer. To do so, proceed as follows:
+
+1. Hover over the layer that you want to duplicate, and click the ellipsis button ("...").
+1. Select *Duplicate*.
+
+> [!NOTE]
+> Up to now, to delete a layer, you had to hover over the layer and click the *Delete* button in the top-right corner. From now on, you need to hover over the layer, click the ellipsis button, and select *Delete*.
 
 ## Changes
 
