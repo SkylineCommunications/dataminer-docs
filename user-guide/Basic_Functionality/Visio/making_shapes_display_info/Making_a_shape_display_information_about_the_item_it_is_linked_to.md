@@ -75,6 +75,9 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
   - *SERVICE DESCRIPTION*: The description of the service itself (enhanced service only).
   - *SERVICE STATISTICS:...*
 
+> [!NOTE]
+> From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if an *Info* shape data field is set to *NAME*, the shape will update automatically when the name of the service changes.
+
 - **Redundancy groups**:
 
   To display information about the redundancy group to which the shape is linked, specify:
@@ -92,6 +95,9 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
   - *NAME*
   - *VIEW NAME*
   - *VIEW STATISTICS:...*
+
+> [!NOTE]
+> From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if an *Info* shape data field is set to *NAME*, the shape will update automatically when the name of the view changes.
 
 - **Alarms**:
 
@@ -153,7 +159,9 @@ The info specified in the **Info** field will only appear on the shape if you ad
 To add text to a shape, just double-click the shape, and enter the text.
 
 > [!NOTE]
-> If an **Info** shape data field is set to *DATAMINER*, the placeholder is replaced by the name of the DMA that is currently hosting the element, service, or redundancy group.
+>
+> - If an **Info** shape data field is set to *DATAMINER*, the placeholder is replaced by the name of the DMA that is currently hosting the element, service, or redundancy group.
+> - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if an **Info** shape data field is set to *NAME* for a view or service, the shape will automatically update when the name of that view or service changes.
 
 ## Element statistics, service statistics, view statistics, etc.
 
