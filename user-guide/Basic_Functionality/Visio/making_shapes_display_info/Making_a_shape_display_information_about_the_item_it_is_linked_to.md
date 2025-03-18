@@ -75,8 +75,8 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
   - *SERVICE DESCRIPTION*: The description of the service itself (enhanced service only).
   - *SERVICE STATISTICS:...*
 
-> [!NOTE]
-> From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if an *Info* shape data field is set to *NAME*, the shape will update automatically when the name of the service changes.
+  > [!NOTE]
+  > From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if an *Info* shape data field is set to *NAME*, the shape will update automatically when the name of the service changes.
 
 - **Redundancy groups**:
 
@@ -96,8 +96,8 @@ Add a shape data field of type **Info** to the shape, and set its value to one o
   - *VIEW NAME*
   - *VIEW STATISTICS:...*
 
-> [!NOTE]
-> From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if an *Info* shape data field is set to *NAME*, the shape will update automatically when the name of the view changes.
+  > [!NOTE]
+  > From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41769-->, if an *Info* shape data field is set to *NAME*, the shape will update automatically when the name of the view changes.
 
 - **Alarms**:
 
