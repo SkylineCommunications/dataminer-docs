@@ -176,7 +176,7 @@ This component allows you to visualize and manage bookings, events, and other ti
 
   - If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to **navigate up or down** through the items.
 
-- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you select an item in the timeline, it will be highlighted with a blue border and a light blue background. This can be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Timeline #* > *Selected groups* / *Selected time ranges*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select an item in the timeline**, it will be highlighted with a blue border and a light blue background. This can be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Timeline #* > *Selected groups* / *Selected time ranges*) is used in a linked component, clearly indicating which data is driving the content in the linked component.
 
 ## Configuring events and actions
 

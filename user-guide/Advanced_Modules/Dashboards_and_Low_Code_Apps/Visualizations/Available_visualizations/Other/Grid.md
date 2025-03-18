@@ -91,4 +91,4 @@ From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42128-->, when yo
 
     - You can select grid items by tapping them.
 
-- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a cell in the grid**, it will be highlighted with a blue border and a light blue background. This can be useful when the grid's [component data](xref:Component_Data) is used in another component, clearly indicating which data is driving the content in the linked component.
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a cell in the grid**, it will be highlighted with a blue border and a light blue background. This can be useful when the grid's [component data](xref:Component_Data) (i.e. *Components* > *Grid #* > *Selected items* > *Tables*) is used in another component, clearly indicating which data is driving the content in the linked component.
