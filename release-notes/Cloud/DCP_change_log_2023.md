@@ -164,6 +164,14 @@ After you have made sure the [prerequisites](https://github.com/SkylineCommunica
 > [!NOTE]
 > You must grant Skyline admin consent to your Microsoft tenant with certain permissions to enable these features. See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
 
+#### 10 February 2023 - Improved UX for share management [ID 35519]
+
+The share management app has been improved:
+
+- Users will no longer briefly see an unexpected form before the correct form loads, thanks to a new loading screen.
+- Users without the necessary permissions will no longer see an incorrect page. Instead, an appropriate error message will now be displayed.
+- Fatal errors will now be shown via notifications, which will remain displayed until dismissed by the user.
+
 #### 9 February 2023 - Fix - Remote access actions incorrectly blocked [ID 35594]
 
 In some cases, it could occur that requests were incorrectly blocked as unsafe when you used the remote access feature. For example, this could occur when you clicked the Home button in the top-left corner of a web app.
