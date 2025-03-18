@@ -19,11 +19,11 @@ Usually this happens for one or more elements or a series of elements using the 
 
 ## Investigating the issue
 
-To investigate issue, carry out the checks below in the order mentioned.
+To investigate this issue, carry out the checks below in the order mentioned.
 
 ### Check the element log file
 
-A good start is by checking the element log file, it should resemble something like:
+When this error occurs, the element log file should look similar to this:
 
 ```txt
 ...
@@ -38,122 +38,84 @@ Setting state from 1 to 10 (RealState = 4)
 ...
 ```  
 
-The element data cannot be read out, meaning the element cannot start up.
+This means that the element data cannot be read out, causing the element to fail to start up.
 
 ### Check the Cassandra logging
 
-The best way to verify the issue is related to a high number of tombstones, is by checking either the debug.log or the system.log file. Check the log that matches the datetime of when the element failed to start up.
+To then verify whether the issue is indeed related to a high number of tombstones, check either the *debug.log* or the *system.log* file of the Cassandra database. Check the log that matches the datetime of when the element failed to start up.
 
-> **Local Cassandra vs Cassandra Cluster**  
-> The logs of a local Cassandra node are automatically put into the LogCollector package. Unless the Cassandra node is found on an external server.
-> If the DMS uses a Cassandra cluster, then the element data of the affected element will be found on 1 of these nodes. Meaning it may be necessary to search through the logs of each node.
+Note that if you have a Cassandra database per DMA, these log files will automatically be included in an [SLLogCollector](xref:SLLogCollector) package unless the database is located on an external server. If If the DMS uses a Cassandra cluster, the element data of the affected element will be located on one of the nodes, which means that you may need to search through the logs of each node.
 
-Ideally, ERROR lines like these will be found in the log files:
+You should be able to find ERROR lines like these in the log files:
 
 ```txt
 Scanned over <amount> tombstones during query 'SELECT v, vu FROM sldmadb_elementdata.elementdata WHERE d, e = <DMAID>, <ElementID> LIMIT 1000'
 ```
 
-However it is possible such ERROR log line are not present, you might also find timeouts or in general see tombstones being written to the table, like `Writing xxxx tombstones`.  
+If such ERROR log lines are not present, you may instead find timeouts or tombstones being written to the table, e.g. `Writing xxxx tombstones`.
 
-Be aware that tombstones being written to the table is normal. The amount is incremented with each update or delete action and they are cleared with each compaction. Tracking these increments could gives an idea of the updates/deletes for a given table and at a given time.  
-For example, if the amount of tombstones suddenly increases with 100K or 1M in a short period of time, then this is abnormal. This would mean that 100K or 1M records were updated or deleted.  
+Be aware that tombstones being written to the table is normal. The amount is incremented with each update or delete action, and they are cleared with each compaction. Tracking these increments could give you an idea of the updates/deletes for a given table and at a given time. For example, if the number of tombstones suddenly increases with 100K or 1M in a short period of time, this is abnormal. This would mean that 100K or 1M records were updated or deleted.
 
 ### Check the Cassandra settings
 
-Look for the 2 tombstone threshold settings within the Cassandra.yaml file:
+Look for the following tombstone threshold settings within the *Cassandra.yaml* file:
 
-- Tombstone_warn_threshold
-- Tombstone_failure_threshold
+- **tombstone_warn_threshold**: By default set to 1000, but **should be set to 1000000**.
+- **tombstone_failure_threshold**: By default set to 100000, but **should be set to 2000000**.
 
-These values are by default set to 1000 for the warning and 100K for the failure threshold.
-In a Dataminer environment, this is too limiting, these need to be set to 1M for the warning and 2M for the failure threshold.  
+The default values for these settings are too limiting for a DataMiner environment. If these have not been adjusted correctly during [Cassandra installation](xref:Installing_Cassandra), adjusting their values as mentioned above will likely be the solution for the element startup issue.
 
-In case these thresholds are still set to their low default values, then the solution will be to increase these to their recommended values. This configuration change is mentioned in step 6 in [Installing Cassandra on a Linux machine](xref:Installing_Cassandra).
-
-#### Apache Cassandra Cluster Monitor
-
-Having an [Apache Cassandra Cluster Monitor](https://docs.dataminer.services/connector/doc/Apache_Cassandra_Cluster_Monitor.html) element on the DMS is an excellent way to know the KPIs (e.g. tombstone thresholds, gc_grace_seconds,...) of the Cassandra cluster, without the need to log into these servers. Unfortunately, to retrieve the configuration and log files, access to these Cassandra servers is still needed.  
-
-> [!NOTE]
-> In order to see the most KPIs, be sure to use the latest version of this connector
+> [!TIP]
+> Having an [Apache Cassandra Cluster Monitor](https://docs.dataminer.services/connector/doc/Apache_Cassandra_Cluster_Monitor.html) element in the DMS is an excellent way to know the KPIs (e.g. tombstone thresholds, gc_grace_seconds, etc.) of the Cassandra cluster without the need to log into these servers. Make sure to use the latest version of the connector to be able to view more KPIs. Unfortunately, to retrieve the configuration and log files, access to these Cassandra servers is still needed.
 
 ### Check the element configuration
 
-If the Cassandra setup was already using the increased threshold values, then there’s a chance something needs to change in the element or connector.  
-The root cause is most often a table with saved columns.
+If the Cassandra setup was already using the increased threshold values, then there is a chance something needs to change in the element or connector instead. The root cause is usually a table with saved columns. However, note that the primary key of a table is always saved, unless it is defined as volatile.
 
-> [!NOTE]
-> The primary key of a table is always saved, unless it’s defined as volatile.
+1. Investigate the connector itself.
 
-To investigate the element, it should be able to start up first. Have a look at the mentioned workaround below to achieve this.
+   Keep an eye out for the following:
 
-#### Connector
+   - Tables with saved columns
+   - A trap table
+   - Fast timers
 
-A deep dive in the connector gives an idea on the theoretical side, keep an eye out for the following:
+1. To be able to investigate the element more easily, start it up using the [workaround](#workaround) mentioned below.
 
-- Tables with saved columns
-- A trap table
-- Fast timers
+1. To get an overview of the number of rows in the element, use the SLNetClientTest tool to [inspect the parameter table rows in SLProtocol](xref:SLNetClientTest_Inspecting_parameter_table_rows).
 
-#### Dataset
+   To estimate the full data set size, multiply the number of rows found by the number of columns in the table. Prioritize tables with a high row count, but keep in mind that a large data set may be normal depending on the table's context.
 
-To get an overview of the amount of rows in the element, open the Client Test tool (see the note for guidance).
-Go to `Diagnostics > DMA > Parameter Table Rows(SLProtocol)` and provide the dmaId/elementID.
+   A rapidly changing dataset can also contribute to a growing number of tombstones. To assess this, click the *Turn On* button next to *Auto Refresh*, and set the interval to 1 sec. Ideally, the data should update in sync with the defined timers or, if applicable, the configured polling manager table.
 
-To estimate the full dataset size, multiply the number of rows found by the number of columns in the table. Prioritize tables with a high row count, but consider that a large dataset may be normal depending on the table's context.
+1. [Increase the log level](xref:Elements_logging#changing-log-levels) of the Info, Debug and Error logging for the element to 5.
 
-A rapidly changing dataset can also contribute to a growing number of tombstones. To assess this, “Turn On” the Auto Refresh, using an interval of 1 sec. Ideally, the data should update in sync with the defined timers or, if applicable, the configured polling manager table.
+   If the log gets a multitude of entries for parameter changes for the same table, this is a good indicator of which table causes the problem. You can then verify this using the SLNetClientTest tool findings from the previous step.
 
-> [!NOTE]
-> For those unfamiliar with the Client Test Tool, the following DM Docs pages will provide guidance on:
->
-> - [Accessing it](xref:Opening_the_SLNetClientTest_tool)
-> - [Connecting to it](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool)
-> - [Inspecting table rows](xref:SLNetClientTest_Inspecting_parameter_table_rows)
+   > [!IMPORTANT]
+   > Remember to change the log level back to 0 once finished, as the higher log level puts an additional, unnecessary load on the system.
 
-#### Log level
+1. Verify that no [custom timer base](xref:Changing_the_polling_speed_of_an_element) is used, as this changes the speed of polling data.
 
-Increasing the log level of the element could reflect some fast-paced changed to the tables.
+1. If you have been able to pinpoint the issue to a specific table, address the issue as appropriate.
 
-[Increase the log level](xref:Elements_logging#changing-log-levels) of the Info, Debug and Error log to 5. Then see if the log gets spammed by parameter changes for the same table, this will be a good indicator.
+   The solution will depend on the root cause. For example: do all columns need to be saved, can you make this a volatile table, is the table being polled too fast, etc.
 
-If possible, try to verify this using the Client Test tool of previous section.
+   If the root cause appears to be connector-related, then the connector will need to receive an update. In that case, [contact tech support](#contacting-tech-support-for-this-issue) to verify the findings and to forward them to the correct team.
 
-> [!IMPORTANT]
-> Be sure to change the log level back to 0 once finished, as this puts additional and unnecessary load onto the system.
+1. Check if there is enough free disk space on the Cassandra server.
 
-#### Timer Base
+   If there is not enough disk space to perform a compaction, then tombstones cannot be removed. In this case, freeing up disk space may help you resolve this issue.
 
-Verify that no custom timer base is used, as this changes the speed of polling data.
+1. Check if Cassandra Reaper is configured correctly, as detailed under [Installing Cassandra Reaper](xref:Installing_Cassandra_Reaper).
 
-Where to find this parameter and what it does is fully explained in [Changing the polling speed of an element](xref:Changing_the_polling_speed_of_an_element).
+   If the Reaper configuration is not correct, it can happen that the Cassandra maintenance is not done properly, causing the necessary cleanup not to be triggered.
 
-### Remaining checks
-
-#### Free disk space
-
-If there is not enough disk space to perform a compaction, then tombstones can’t get removed. So be sure to check the free disk space as well.
-
-#### Reaper
-
-If reaper is not properly configured, then it can happen that the Cassandra maintenance isn’t done properly. Meaning the necessary clean-up can’t get triggered.
-
-## Solution
-
-### Threshold values
-
-If the Cassandra setup was still using the default threshold values, then simply increase these values according to our DM Docs page [Installing Cassandra on a Linux machine](xref:Installing_Cassandra).
-
-### Element
-
-If the investigation points to a certain table, then the solution will depend on the root cause. For example, do all columns need to be saved? Can we make this a volatile table? Is the table being polled too fast? Etc.
-
-If the root cause appears to be connector-related, then the connector will need to receive an update. Contact tech support to verify the findings and to forward them to the correct team.
+1. If you have been unable to solve the issue through any of the steps above, [contact tech support](#contacting-tech-support-for-this-issue).
 
 ## Workaround
 
-If the root cause of the large amount of tombstone lies within the connector, then one of the below procedures should make it possible to to start up the element again.
+If the root cause of the large number of tombstone lies within the connector, follow the appropriate procedure below to start up the element again.
 
 ### Cassandra database per Agent
 
@@ -161,15 +123,15 @@ If the root cause of the large amount of tombstone lies within the connector, th
 
 1. In the *Execute query on* box, make sure the Agent hosting the element is selected.
 
-1. Verify the current gc_grace_seconds using the following query:
+1. Verify the current *gc_grace_seconds* using the following query:
 
    `SELECT gc_grace_seconds FROM system_schema.tables WHERE keyspace_name = 'SLDMADB' AND table_name = 'elementdata';`
 
-1. Change the grace seconds to 10s, using the followin query:
+1. Change the grace seconds to 10s, using the following query:
 
    `ALTER TABLE elementdata WITH gc_grace_seconds = 10;`
 
-1. Verify whether the grace seconds were changed, using the previously mentioned query verify the current gc_grace_seconds.
+1. Verify whether the grace seconds were changed, using the previously mentioned query to verify the current *gc_grace_seconds*.
 
 1. On the server hosting Cassandra, open a command prompt and go to the folder *C:/Program Files/Cassandra/bin*.
 
@@ -181,13 +143,13 @@ If the root cause of the large amount of tombstone lies within the connector, th
 
    The element should now start up.
 
-1. In the Query Executer, revert the gc_grace_seconds to the default of 1 day using the following query:
+1. In the Query Executer, revert the *gc_grace_seconds* to the default of 1 day using the following query:
 
-  `ALTER TABLE elementdata WITH gc_grace_seconds = 86400;`
+   `ALTER TABLE elementdata WITH gc_grace_seconds = 86400;`
 
-1. Verify whether the grace seconds were changed, using the previously mentioned query verify the current gc_grace_seconds.
+1. Verify whether the grace seconds were changed, using the previously mentioned query to verify the current *gc_grace_seconds*.
 
-### Cassandra cluster
+### Cassandra cluster per DMS
 
 1. Access one of the Cassandra nodes, e.g. via PuTTy.
 
@@ -195,9 +157,9 @@ If the root cause of the large amount of tombstone lies within the connector, th
 
    `Cqlsh -u <username> -p <password>`
 
-   If **TLS** is used, append **--SSL** at the end.
+   If **TLS** is used, append `--SSL` at the end.
 
-1. Decrease the gc_grace_seconds to 10s of the table using the following command:
+1. Decrease the *gc_grace_seconds* of the table to 10s using the following command:
 
    `ALTER TABLE sldmadb_elementdata.elementdata WITH gc_grace_seconds = 10;`
 
@@ -211,11 +173,11 @@ If the root cause of the large amount of tombstone lies within the connector, th
 
    The element should now start up.
 
-1. In CQLSH, revert the gc_grace_seconds to the default of 1 day:
+1. In CQLSH, revert the *gc_grace_seconds* to the default of 1 day:
 
    `ALTER TABLE sldmadb_elementdata.elementdata WITH gc_grace_seconds = 86400;`
 
-## Tech support
+## Contacting tech support for this issue
 
 If you are unable to resolve this yourself using the information above, contact [techsupport@skyline.be](mailto:techsupport@skyline.be).
 
@@ -223,8 +185,8 @@ Please provide all data useful for the investigation. This will include the foll
 
 - The error message from the Alarm Console, including the datetime of the occurrence.
 - A LogCollector package
-- A .dmimport package containing an export of the affected element.
-- If a Cassandra cluster is used for the entire DMS, also include the system.log files of all Cassandra nodes. The logs when the error occurred are sufficient.
-- Cassandra.yaml
+- A .dmimport package containing an export of the affected element(s).
+- If a Cassandra cluster is used for the entire DMS, the *system.log* files of all Cassandra nodes. The logs when the error occurred are sufficient.
+- The *Cassandra.yaml* file.
 
 If applicable, include any relevant investigation findings and notes derived from the document above.
