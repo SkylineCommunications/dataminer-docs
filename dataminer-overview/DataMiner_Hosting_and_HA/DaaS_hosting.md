@@ -70,10 +70,10 @@ You can go to [dataminer.services](xref:Overview_DCP), where
 1. you give a name to your DataMiner System (DMS), and
 1. you can start adding elements to it, all with a couple of clicks.
 
-# Regional Support for DaaS  
+## Regional support for DaaS
 
-By default, your DaaS system is hosted in the Azure West Europe region. However, you can request deployment in [other Azure regions](https://datacenters.microsoft.com/globe/explore/).  
+By default, your DaaS system is hosted in the Azure West Europe region. However, you can request deployment in [other Azure regions](https://datacenters.microsoft.com/globe/explore/).
 
-Geographically distributed systems with multiple nodes across different regions are also supported. If you require a *custom setup*, contact us at [daas@dataminer.services](mailto:daas@dataminer.services).  
+Geographically distributed systems with multiple nodes across different regions are also supported. If you require a *custom setup*, contact us at [daas@dataminer.services](mailto:daas@dataminer.services).
 
 The linked storage (STaaS) for your DaaS cluster is hosted at a fixed location. For more details on STaaS Azure Storage location offerings, refer to our documentation: [Data Location and Redundancy](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/STaaS/STaaS_features.html#data-location-and-redundancy)
