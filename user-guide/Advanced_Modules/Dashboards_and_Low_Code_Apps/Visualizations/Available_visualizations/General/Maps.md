@@ -4,10 +4,9 @@ uid: DashboardMaps
 
 # Maps
 
-> [!IMPORTANT]
-> At present, this component is only available in preview, if the soft-launch option *ReportsAndDashboardsGQIMaps* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
-
 This component is used to display markers and/or lines on a map. It uses one or more GQI queries as data input.
+
+The Maps component is fully available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/DataMiner 10.5.4 onwards.<!-- RN 42309 --> Prior to this, it is available in preview, if the [soft-launch option](xref:SoftLaunchOptions) *ReportsAndDashboardsGQIMaps* is enabled.
 
 ![Maps](~/user-guide/images/Maps_Component.png)<br>*Maps component in DataMiner 10.4.4*
 
@@ -44,7 +43,11 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
 - **Identifier**/**Latitude**/**Longitude**: For each dimension, a dropdown box is shown where the column used for that dimension can be changed. You can only select valid options for each dimension. For markers, you need to select string-valued columns for the ID and numeric-valued columns for the latitude and longitude. For lines, you need to select a latitude and longitude for both the source and the destination.
 
-- **Template**: Only available when the query is configured as a set of markers. Allows you to change the appearance of the markers. When you click *Edit*, an editor window opens where you can make changes to the template.
+- **Template**: Only available when the query is configured as a set of markers. Allows you to change the appearance of the markers.
+
+  - When you click *Edit*, an editor window opens where you can make changes to the template.
+
+  - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42226-->, when you click *Browse templates*, you can reuse saved templates for components in the same dashboard or low-code app.
 
   > [!NOTE]
   > The center of the marker template is determined by the latitude and longitude values for that marker.

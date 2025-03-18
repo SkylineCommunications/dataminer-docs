@@ -91,7 +91,7 @@ A reverse proxy should be used to give access to these web pages on the DMA via 
 > [!NOTE]
 >
 > - When embedding the URLs in dashboards, make use of relative URLs such as `/maps/maps.aspx?config=yourmapconfig`. This way, the content will both be shown on a dashboard accessed via the Gateway server and a dashboard accessed locally via the DMA.
-> - No reverse proxy is needed for DataMiner Maps that are displayed using the new Maps component available with the [soft-launch option](xref:SoftLaunchOptions) *ReportsAndDashboardsGQIMaps*.
+> - No reverse proxy is needed for DataMiner Maps that are displayed using the [Maps component](xref:DashboardMaps) available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/DataMiner 10.5.4 onwards.
 
 ### Reverse proxy requirements
 

@@ -38,7 +38,8 @@ basic_upload_ubuntu:
     - dotnet publish `
         -p:Version="0.0.${CI_PIPELINE_IID}-prerelease" `
         -p:VersionComment="This is just a pre-release version." `
-        -p:CatalogPublishKeyName="${DATAMINER_TOKEN}"
+        -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+        -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
 
 On a **Windows** runner:
@@ -62,7 +63,8 @@ basic_upload_windows:
     - dotnet publish `
         -p:Version="0.0.${CI_PIPELINE_IID}-prerelease" `
         -p:VersionComment="This is just a pre-release version." `
-        -p:CatalogPublishKeyName="${DATAMINER_TOKEN}"
+        -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+        -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
 
 ### GitLab workflow for connectors

@@ -2,14 +2,14 @@
 uid: SwarmingPrepare
 ---
 
-# Preparing your system for Swarming
+# Preparing scripts and connectors for Swarming
 
-When the Swarming feature is enabled, alarm references need to be globally unique within the cluster. For that reason, alarm IDs will be generated in a different way than in a system without Swarming. It is important to make sure that scripts and connectors are compatible with this to be able to successfully work with a Swarming-enabled setup.
+When the [Swarming](xref:Swarming) feature is enabled, alarm references need to be globally unique within the cluster. For that reason, alarm IDs will be generated in a different way than in a system without Swarming. It is important to make sure that scripts and connectors are compatible with this to be able to successfully work with a Swarming-enabled setup.
 
 > [!NOTE]
 > The changes mentioned on this page require **DataMiner 10.5.1/10.5.0 or higher**. Note that while legacy alarm references may still be used in DataMiner 10.5.1 or higher, they must not be used on systems where the Swarming feature is enabled.
 
-## About the Alarm ID changes
+## About the alarm ID changes
 
 In order to implement the necessary changes to prepare for Swarming, you first need to understand what the alarm ID changes are that get introduced with Swarming and what their consequences are.
 
@@ -33,8 +33,19 @@ This means that code in Automation scripts and connectors may need updates to ac
 
 > [!NOTE]
 >
-> - Keep in mind that you will need to have access to the DataMiner 10.5.1 or 10.5.0 code base to apply these changes, as otherwise the updated/extended requests will not be available yet. However, in most cases, these updated/extended requests can be used to communicate with older server versions.
+> - Keep in mind that you will need to have access to the DataMiner 10.5.1 or 10.5.0 code base to apply these changes, as otherwise the updated/extended requests will not be available yet. You will be able to use these updated/extended requests to communicate with older server versions.
 > - As long as Swarming has not been enabled yet, DataMiner will still be able to deal with old-style alarm references without any risk, even if you have upgraded to a version where Swarming is supported.
+
+## Obsolete Engine methods
+
+The following Engine methods are obsolete and should not be used. Instead, use the corresponding new methods:
+
+| Obsolete method | New method |
+|--|--|
+| GetAlarmProperty(int, int, string) | GetAlarmProperty(AlarmID, string) |
+| SetAlarmProperty(int, int, string, string) | SetAlarmProperty(AlarmTreeID, string, string) |
+| SetAlarmProperties(int, int, string[], string[]) | SetAlarmProperties(AlarmTreeID, string[], string[]) |
+| AcknowledgeAlarm(int, int, string) | AcknowledgeAlarm(AlarmTreeID, string) |
 
 ## Obsolete properties in the AlarmEventMessage class
 

@@ -20,7 +20,7 @@ Expected duration: 30 minutes
 - Version 10.4.12 or higher of the DataMiner web apps.
 
 > [!NOTE]
-> Depending on your DataMiner version, you may need to activate the [ReportsAndDashboardsGQIMaps](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) soft-launch option to be able to use the maps component. See [Soft-launch options](xref:SoftLaunchOptions).
+> If you do not use a DaaS system, and you use a DataMiner version prior to DataMiner 10.5.0 [CU1]/DataMiner 10.5.4, you will also need to activate the [ReportsAndDashboardsGQIMaps](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) soft-launch option to be able to use the maps component. See [Soft-launch options](xref:SoftLaunchOptions).
 
 ## Overview
 
@@ -41,9 +41,7 @@ Expected duration: 30 minutes
  -->
 1. Click the *Deploy* button to deploy the package on your DMA.
 
-   While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
-
-1. Go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
+1. When the package has been deployed, go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
 
 1. Check if you can see the *Starlink Enterprise* app listed under *SatOps*.
 

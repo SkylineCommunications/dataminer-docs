@@ -5343,10 +5343,24 @@ items:
     items:  
     - name: Skyline DataMiner SDK
       topicUid: skyline_dataminer_sdk
+      items:
+        - name: Project properties
+          topicUid: skyline_dataminer_sdk_project_properties
     - name: DataMiner Package Project
       topicUid: skyline_dataminer_sdk_dataminer_package_project
+      items:
+        - name: Advanced
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_advanced
+        - name: CatalogReferences.xml
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_catalog_references
+        - name: ProjectReferences.xml
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_project_references
     - name: Visual Studio 2022 solution filter (*.slnf) files
       topicUid: skyline_dataminer_sdk_solution_filter_files
+    - name: Frequently asked questions
+      topicUid: skyline_dataminer_sdk_frequently_asked_questions
+    - name: Troubleshooting
+      topicUid: skyline_dataminer_sdk_troubleshooting
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
   - name: CI/CD using command line
@@ -5401,6 +5415,8 @@ items:
           topicUid: CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces
         - name: Registering a new version of a multi-artifact DataMiner package to the Catalog using Visual Studio and GitHub
           topicUid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub
+        - name: Registering a new version of multiple DataMiner packages to the Catalog using Visual Studio and GitHub
+          topicUid: CICD_Tutorial_For_Other_Items_Multi-Package_VisualStudio_And_GitHub
   - name: CI/CD using GitLab
     items:
     - name: GitLab examples
@@ -5830,7 +5846,7 @@ items:
           topicUid: DSI_OpenConfig_Introduction
         - name: Middleware package
           topicUid: DSI_OpenConfig_Middleware
-- name: DataMiner module integrations
+- name: DataMiner feature integrations
   topicUid: DataMinerModuleIntegrations
   items:
     - name: User-Defined APIs
@@ -5888,6 +5904,14 @@ items:
           topicUid: Topology_app_configuration
         - name: DataMiner processes configuration
           topicUid: EPM_DataMiner_processes_config
+    - name: Swarming
+      items:
+        - name: Preparing scripts and connectors for Swarming
+          topicUid: SwarmingPrepare
+        - name: Configuring a script to swarm elements
+          topicUid: SwarmingScriptElement
+        - name: Configuring a script to swarm bookings
+          topicUid: SwarmingScriptBooking
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:

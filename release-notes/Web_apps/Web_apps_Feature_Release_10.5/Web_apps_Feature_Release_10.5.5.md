@@ -24,11 +24,7 @@ uid: Web_apps_Feature_Release_10.5.5
 
 ### Enhancements
 
-#### Dashboards/Low-Code Apps - Dropdown component: Enhanced behavior [ID 42298]
-
-<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
-
-Up to now, a *Dropdown* component would open upwards as soon as it was positioned in the bottom half of the screen, even when there was enough room to open downwards. From now on, a *Dropdown* component will only open upwards if there is not enough room below it to open downwards.
+*No enhancements have been added yet.*
 
 ### Fixes
 
@@ -45,3 +41,43 @@ From now on, in cases like this, the component will be forced to render and the 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When a check was performed to determine whether a dashboard or a low-code app had to be migrated to the latest version, and the dashboard or low-code was already up to date, in some cases, the migration warning popup would incorrectly appear.
+
+#### Low-Code Apps - Table and Parameter table components: Search icon would block part of the table data [ID 42313]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the *Table* and *Parameter table* components, up to now, the search icon would appear at the bottom, blocking part of the table data. From now on, a search icon in the header bar will allow you to open a search bar at the top of the component.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Problem when the topology is updated while a block is being moved [ID 42372]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When the topology was updated while you were moving a block from one location to another, up to now, the position of the mouse pointer would get out of sync with the block you were moving. From now on, the block that is being moved will always follow the mouse pointer.
+
+#### Web API would incorrectly drop the connection with an idle browser tab [ID 42407]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, when a browser tab was idle, the Web API would incorrectly drop the connection with that tab. When you then went back to that tab, you would be asked to log on again.
+
+#### DataMiner Comparison app: Problem when using the tool in embedded mode [ID 42409]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, the DataMiner Comparison app would not work correctly when used in embedded mode.
+
+Example: `https://myDma/comparison/#/?parameter1=935%2F152%2F30602%2F1&parameter2=935%2F108%2F5518%2F7.22&embed=true`
+
+When no connection was established yet, the query parameters would not get saved and be removed. Also, no parameters could be fetched.
+
+#### Low-Code Apps: Exporting a low-code app would fail if the name contained illegal characters [ID 42416]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, it would not be possible to export a low-code app of which the name contained illegal characters (e.g. question marks).
+
+#### Dashboards/Low-Code Apps - Timeline component: Not possible to edit the template [ID 42449]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a table variable was visualized as a *Timeline* component, it would not be possible to edit its template.

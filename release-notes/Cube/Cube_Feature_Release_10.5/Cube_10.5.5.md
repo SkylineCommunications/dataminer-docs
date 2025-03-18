@@ -18,7 +18,16 @@ uid: Cube_Feature_Release_10.5.5
 
 ## New features
 
-*No new features have been added yet.*
+#### Sharing the link to the current Cube session with other users [ID 42389]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+If you want to share your current Cube session with another user, you can now copy the link to that session and send it to that user, who will then be able to paste it in the address box of a browser.
+
+To copy the link to the current Cube session, do the following:
+
+1. Open the user menu by clicking the user icon in the top-right corner of the screen.
+1. Click the *Copy* button next to the name of the DataMiner System.
 
 ## Changes
 
@@ -31,6 +40,20 @@ uid: Cube_Feature_Release_10.5.5
 In the DataMiner Cube desktop app, a number of enhancements have been made with regard to configuration file management.
 
 Also, the drag-and-drop functionality has been revised. For example, it is now possible to re-order tile groups and to remove tiles by dragging them onto the recycle bin.
+
+#### Profiles app will now show an error message when a create, update or delete operation fails [ID 41902]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you used the *Profiles* module to create, update or delete a profile definition, a profile instance, a profile parameter, or a mediation snippet, up to now, you would not get notified when the operation failed. To find out why the operation failed, you had to consult the Cube logging.
+
+From now on, whenever an error occurs while a create, update or delete operation is being performed, the *Profiles* module will open a dialog box showing an error message.
+
+#### Alarm Console: Recursive loop detection in alarm trees [ID 42188]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+From now on, when you right-click an alarm in the Alarm Console and select *Show side panel*, DataMiner Cube will check whether there are loops in the alarm tree, i.e. whether the alarm tree contains any alarms that refer to themselves.
 
 #### Alarm Console: Multivariate pattern suggestion events will now be grouped into a single incident [ID 42287]
 
@@ -57,4 +80,14 @@ In *System Center > System settings*, the *Time to live* section will no longer 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Trending: Problem when loading trend data when the trend graph contained both regular average trend data and trend data related to SLAnalytics [ID 42357]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a trend graph contained both regular average trend data and trend data related to SLAnalytics, in some rare cases, the trend graph could get stuck while loading that data.
+
+#### DMA selection box of duplicate element to be created would not be set to the correct DataMiner Agent [ID 42438]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in the Surveyor, you right-clicked a migrated or swarmed element, and selecting *Duplicate*, in the element card of the duplicate element to be created, the *DMA* selection box would not be set to the correct DataMiner Agent.
