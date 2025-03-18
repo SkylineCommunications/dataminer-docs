@@ -51,6 +51,14 @@ Up to now, aggregation alarms would not work as intended on DataMiner Systems us
 
 When mobile visual overview sessions were removed from a DataMiner Agent, in some cases, the SLHelper process could temporarily block other requests.
 
+#### SLDataGateway: Problem when some of the Cassandra nodes are marked as down [ID 42384]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, SLDataGateway could incorrectly get stuck in a state where some of the Cassandra nodes are marked as down.
+
+Additional polling has now been introduced that will kick in when Cassandra nodes have been marked as down for a longer period. When those nodes prove to be up and running, they will forcefully be marked as up.
+
 #### Element card of a DVE or Virtual Function could show incorrect alarm colors [ID 42402]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
