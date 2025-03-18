@@ -563,7 +563,7 @@ If the summary is not explicitly defined, the behavior will stay the same, and "
 
 An enhancement has been done to the way timed out requests are handled when the web apps are accessed remotely or when Live Sharing is used.
 
-#### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID 40121]
+#### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID 40121] [ID 40062]
 
 When you deploy a DaaS system from the dataminer.services home page, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
 
