@@ -15,5 +15,6 @@ DataMiner provides a pronounced **open architecture** enabling users to evolve e
 - [Standardized foundation](xref:Overview_Standardized_Foundation)
 - [References and use cases](xref:Overview_References_and_use_cases)
 - [Compliance offering](xref:DataMiner_compliance_offering)
+- [Evolution vs. optimization](xref:evolution_vs_optimization)
 
 ![Entire Operation](~/dataminer-overview/images/DA_entire_operation.png)
