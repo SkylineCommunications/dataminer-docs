@@ -40,6 +40,12 @@ uid: General_Feature_Release_10.5.5
 
 A number of security enhancements have been made.
 
+#### Reduced memory usage when updating a large number of parameter in bulk [ID 42385]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of row are updated due to e.g. aggregation or merge actions.
+
 #### SLLogCollector now collects the output of the 'dotnet --list-runtimes' command [ID 42448]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->

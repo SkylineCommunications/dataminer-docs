@@ -81,6 +81,15 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### Dashboards/Low-Code Apps - Timeline component: Enhanced performance [ID 42432]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, overall performance of the *Timeline* component has increased, especially when the timeline in question contains a large number of groups.
+
+> [!NOTE]
+> From now on, a *Timeline* component will only load up to 10000 items, and updates will no longer be applied in real time.
+
 ### Fixes
 
 #### Low-Code Apps: Problem when a 'Close a panel' event was linked to a component action involving a lazy loaded component [ID 42302]
