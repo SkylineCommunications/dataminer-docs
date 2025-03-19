@@ -20,7 +20,7 @@ Alternatively, if you are using DIS 3.1.6 and encounter the error message "The r
 
 ## Fix
 
-No fix is available yet.
+Install the newest DIS release (issue is fixed from DIS 3.1.7 onwards).
 
 ## Description
 
