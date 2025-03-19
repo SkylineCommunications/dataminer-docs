@@ -14,7 +14,7 @@ SLNet indexes various aspects of elements and protocols for the Cube search bar.
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet.<!-- RN 42544 -->
 
 ## Workaround
 
