@@ -4,178 +4,183 @@ uid: Performance_Analyzer_Getting_Started_Tutorial
 
 # Getting started with the Performance Analyzer
 
-In this tutorial, you will learn how to get started with the Performance Analyzer solution, how and why you should consider using it in your projects, and what value you can expect to gain from it.
+In this tutorial, you will learn how to get started with the Performance Analyzer solution based on an example solution with a simulated performance issue.
 
 Expected duration: 25 minutes.
+
+> [!NOTE]
+> The content and screenshots for this tutorial have been created using DataMiner version 10.5.4.
+
 <!-- Sections in comment below will need to be uncommented when the Kata becomes available on Dojo -->
 <!-- 
 > [!TIP]
-> See also: [Kata #62: Introduction to Performance Analyzer](https://community.dataminer.services/courses/kata-62/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
- -->
+> See also: [Kata #62: Introduction to Performance Analyzer](https://community.dataminer.services/courses/kata-62/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) -->
+
 ## Prerequisites
 
-- DataMiner version 10.5.0/10.5.2 or higher.
-- DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-- DataMiner System using GQI DxM.
+For this tutorial, you will need a DataMiner System that meets the following requirements:
 
-> [!NOTE]
-> If the GQI DxM is not enabled on your system, refer to [GQI DxM](xref:GQI_DxM).
-
-> ![!TIP]
-> It is possible to follow the exercise using DataMiner version as low as 10.4.0 [CU10]/10.5.1, however, in that case you have to manually add *Skyline.DataMiner.Utils.PerformanceAnalyzer.dll* to *C:\Skyline DataMiner\Files* folder. After building the solution you can find the required DLL in *C:\Projects\Visual Studio\SLC-GQIDS-Kata-PerformanceAnalyzerKataExercise\PerformanceAnalyzerKataExercise\bin\Debug\net48* folder.
-
-The following are not required but strongly suggested requirements:
-
-- Visual Studio with DIS extension. DIS extension can be download from [DataMiner Dojo](https://community.dataminer.services/dataminer-integration-studio-other-downloads/).
-- DIS extension connected to your DataMiner system.
-- Ability to clone [SLC-GQIDS-Kata-PerformanceAnalyzerKataExercise](https://github.com/SkylineCommunications/SLC-GQIDS-Kata-PerformanceAnalyzerKataExercise) repository.
+- DataMiner version 10.5.0 [CU1]/10.5.4 or higher.
+- [Connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- The [GQI DxM](xref:GQI_DxM) is enabled.
 
 > [!TIP]
-> If you use a [DaaS system](xref:Creating_a_DMS_on_dataminer_services), DataMiner related prerequisites are automatically met.
+> If you use a [DaaS system](xref:Creating_a_DMS_on_dataminer_services), these DataMiner-related prerequisites are automatically met.
 
-> [!NOTE]
-> If your DIS extension is not connected to DataMiner system you can read on how to do it at [Installing and configuring DataMiner Integration Studio](xref:Installing_and_configuring_DataMiner_Integration_Studio).
+In addition, the following prerequisites are optional but highly recommended:
+
+- Visual Studio with DIS extension, connected to your DataMiner System (see [DIS installation and configuration](xref:Installing_and_configuring_the_software)).
+- [Git](https://git-scm.com/) (this may be included with Visual Studio, depending on the version).
 
 ## Overview
 
-- [Step 1: Clone the Repository](#step-1-clone-the-repository)
-- [Step 2: Open the Solution](#step-2-open-the-solution)
-- [Step 3: Publish the GQIDS](#step-3-publish-the-gqids)
-- [Step 4: Create a low-code app](#step-4-create-a-low-code-app)
-- [Step 5: Implement the Performance Analyzer](#step-5-implement-the-performance-analyzer)
-- [Step 6: Analyze the Collected Data](#step-6-analyze-the-collected-data)
-- [Step 7: Improve the implementation of the Process method](#step-7-improve-the-implementation-of-the-process-method)
-- [Step 8: Repeat step #7](#step-8-repeat-step-7)
+- [Step 1: Set up the example solution](#step-1-set-up-the-example-solution)
+- [Step 2: Create a low-code app](#step-2-create-a-low-code-app)
+- [Step 3: Implement the Performance Analyzer in the solution](#step-3-implement-the-performance-analyzer-in-the-solution)
+- [Step 4: Deploy the Performance Analyzer app](#step-4-deploy-the-performance-analyzer-app)
+- [Step 5: Analyze the collected data](#step-5-analyze-the-collected-data)
+- [Step 6: Improve the implementation of the Process method](#step-6-improve-the-implementation-of-the-process-method)
+- [Step 7: Analyze the collected data again](#step-7-analyze-the-collected-data-again)
+- [Step 8: Exercise for DevOps Points (optional)](#step-8-exercise-for-devops-points-optional)
 
-## Step 1: Clone the repository
+## Step 1: Set up the example solution
 
-1. *Open Command Prompt* where you want to clone the repository to.
+To start this tutorial, you will need to follow the steps below to set up an example solution based on a GitHub repository that was specifically created for the tutorial.
 
-1. Execute the command `git clone https://github.com/SkylineCommunications/SLC-GQIDS-Kata-PerformanceAnalyzerKataExercise.git`.
+> [!NOTE]
+> If you do not have Visual Studio, you can skip the steps below and instead **deploy the example solution directly** from the Catalog, by deploying the following package to a DMA connected to dataminer.services: [Tutorial - Introduction to Performance Analyzer](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126).
 
-![Performance Analyzer getting started clone the repository](~/user-guide/images/performance_analyzer_getting_started_clone_the_repository.png)
+1. Clone the GitHub repository:
 
-## Step 2: Open the solution
+   1. Open a command prompt in the location where you want to clone the repository.
 
-1. Open the *SLC-GQIDS-Kata-PerformanceAnalyzerKataExercise solution* folder.
+   1. Execute the command `git clone https://github.com/SkylineCommunications/SLC-GQIDS-Kata-PerformanceAnalyzerKataExercise.git`.
 
-1. Open the *PerformanceAnalyzerKataExercise.sln*.
+      ![Performance Analyzer getting started clone the repository](~/user-guide/images/performance_analyzer_getting_started_clone_the_repository.png)
 
-## Step 3: Publish the GQIDS
+1. Open the solution in Visual Studio:
 
-1. Open *PerformanceAnalyzerKataExercise.xml*.
+   1. Open the *SLC-GQIDS-Kata-PerformanceAnalyzerKataExercise solution* folder.
 
-   ![Performance Analyzer getting started open GQIDS XML](~/user-guide/images/performance_analyzer_getting_started_open_gqids_xml.png)
+   1. Open the solution *PerformanceAnalyzerKataExercise.sln*.
 
-1. Click *Publish*.
+1. Publish the GQIDS:
 
-   ![Performance Analyzer getting started publish the GQIDS](~/user-guide/images/performance_analyzer_getting_started_publish_the_gqi.png)
+   1. Open *PerformanceAnalyzerKataExercise.xml*.
 
->[!NOTE]
-> You can follow this step by deploying the GQIDS directly from the [Catalog](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126).
+      ![Performance Analyzer getting started open GQIDS XML](~/user-guide/images/performance_analyzer_getting_started_open_gqids_xml.png)
 
-## Step 4: Create a low-code app
+   1. Click *Publish*.
 
-1. Open the *DataMiner Web App*.
+      ![Performance Analyzer getting started publish the GQIDS](~/user-guide/images/performance_analyzer_getting_started_publish_the_gqi.png)
 
-1. Click on *Create a new app*.
+## Step 2: Create a low-code app
 
-   ![Performance Analyzer getting started create a LCA](~/user-guide/images/performance_analyzer_getting_started_create_a_lca.png)
+In this step, you will create a low-code app to visualize the performance issue that can then be analyzed with the Performance Analyzer.
 
-1. Create a query using the new GQIDS
+1. Go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
 
-   1. Click to add query.
+1. Create a [new low-code app](xref:Creating_custom_apps#creating-a-new-low-code-app).
 
-      ![Performance Analyzer getting started add a query](~/user-guide/images/performance_analyzer_getting_started_add_query.png)
+1. Optionally, give the app a name of your choice, e.g. *Employee Overview*.
+
+1. Create a query using the new GQIDS:
+
+   1. In the *Data* pane on the right, go to *Queries* and click the "+" icon to create a query.
+
+      ![+ icon to create query](~/user-guide/images/GQI_create_query.png)
+
+   1. Optionally, specify a custom name for the query, e.g. *Employees Table*.
 
    1. Select *Get ad hoc data* and then *Employees Table*.
 
       ![Performance Analyzer getting started select a query](~/user-guide/images/performance_analyzer_getting_started_select_query.png)
 
-   1. Drag and drop the new query on to the page.
+1. Drag the new query to the page.
 
-      ![Performance Analyzer getting started add a query to page](~/user-guide/images/performance_analyzer_getting_started_add_query_to_page.png)
+   ![Performance Analyzer getting started add a query to page](~/user-guide/images/performance_analyzer_getting_started_add_query_to_page.png)
 
-   1. Visualize the query as table.
+1. [Select a table visualization](xref:Apply_Visualization) for the component.
 
-      ![Performance Analyzer getting started visualize the query as table](~/user-guide/images/performance_analyzer_getting_started_visualize_query.png)
+   ![Performance Analyzer getting started visualize the query as table](~/user-guide/images/performance_analyzer_getting_started_visualize_query.png)
 
-   > [!NOTE]
-   > Optionally, you can name the low-code app and query, and adjust the table size.
-
-   You will end up with something like this:
+1. Optionally, drag the edges of the table component to adjust its size, until it looks like this:
 
    ![Performance Analyzer getting started final edit](~/user-guide/images/performance_analyzer_getting_started_final_lca_edit.png)
 
-1. Publish the low-code app.
+1. Publish the low-code app using the button in the top-right corner.
 
    ![Performance Analyzer getting started publish the LCA](~/user-guide/images/performance_analyzer_getting_started_publish_the_app.png)
 
-At this point you will be able to notice that the table takes a while to load without an obvious reason. Trying to figure out the cause of this issue can be a daunting task, but luckily the Performance Analyzer will help you identify the issue with ease.
+At this point, you will be notice that the table takes a while to load, without any obvious reason. Trying to figure out the cause of this issue can be a daunting task, so this is where the Performance Analyzer will prove very helpful.
+
+## Step 3: Implement the Performance Analyzer in the solution
 
 > [!NOTE]
-> In this exercise, the low-code app is used only to visualize to performance issues and you will only need to focus on the `DatabaseController` class.
+> If you do not have Visual Studio , you can skip the steps below and instead deploy the *exercise_1* branch of the example solution, where the Performance Analyzer has been implemented:
+>
+> 1. Go to [Tutorial - Introduction to Performance Analyzer](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126).
+> 1. Go to the *Versions* tab and click the *Deploy* button for the *1.0.1-exercise1* branch.
 
-## Step 5: Implement the Performance Analyzer
-
-1. [Open the solution](#step-2-open-the-solution).
+1. Open the solution in the same way as in [step 1](#step-1-set-up-the-example-solution).
 
 1. Install the *Skyline.DataMiner.Utils.PerformanceAnalyzer* NuGet.
 
-1. Implement the *Performance Analyzer* NuGet in the solution.
+   > [!TIP]
+   > For more details about the *Performance Analyzer* NuGet, see [Performance Analyzer library](xref:Performance_Analyzer_Library).
+
+1. Implement the *Performance Analyzer* NuGet in the solution:
 
    1. Add a `collector` field of type `PerformanceCollector` and initialize it in the constructor of the `DatabaseController` class.
 
       ![Performance Analyzer getting started collector setup](~/user-guide/images/performance_analyzer_getting_started_collector_setup.png)
 
-   1. Wrap the bodies of all methods with `using` statement with the `PerformanceTracker` instance, using the `collector` from previous step.
+   1. Wrap the bodies of all methods with `using` statement with the `PerformanceTracker` instance, using the `collector` from the previous step.
 
       ![Performance Analyzer getting started collector setup](~/user-guide/images/performance_analyzer_getting_started_tracker_setup.png)
 
-   1. [Publish the GQIDS](#step-3-publish-the-gqids).
+1. Publish the GQIDS in the same way as in [step 1](#step-1-set-up-the-example-solution).
 
-   > [!NOTE]
-   >
-   > - You can follow this step by deploying the GQIDS, version 1.0.1-exercise1, directly from the [Catalog](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126).
-   > - For more details about the *Performance Analyzer* NuGet, see [Performance Analyzer library](xref:Performance_Analyzer_Library).
+## Step 4: Deploy the Performance Analyzer app
 
-   > [!TIP]
-   > The implementation of this step can be found on *exercise_1* branch.
+1. Go to the [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349) package in the DataMiner Catalog.
 
-1. Deploy the *Performance Analyzer LCA* package from the Catalog.
+1. [Deploy the Catalog item](xref:Deploying_a_catalog_item) to your DataMiner Agent by clicking the *Deploy* button.
 
-   1. Go to the [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349) package in the DataMiner Catalog.
+> [!TIP]
+> See also: [Performance Analyzer app](xref:Performance_Analyzer_LCA).
 
-   1. [Deploy the Catalog item](xref:Deploying_a_catalog_item) to your DataMiner Agent by clicking the *Deploy* button.
+## Step 5: Analyze the collected data
 
-   > [!TIP]
-   > See also: [Performance Analyzer app](xref:Performance_Analyzer_LCA).
+As the Performance Analyzer has now been implemented in the solution, you will now be able to use the *Performance Analyzer* app to find out why loading your app takes so long.
 
-## Step 6: Analyze the collected data
+1. Refresh the page in the low-code app from [step 2](#step-2-create-a-low-code-app).
 
-1. Refresh the page in the low-code app.
-
-1. Open *DataMiner Web App*.
-
-1. Open the *Performance Analyzer* low-code app.
+1. From the root page of your DataMiner System, open the *Performance Analyzer* low-code app.
 
    ![Performance Analyzer getting started collector setup](~/user-guide/images/performance_analyzer_getting_started_open_lca.png)
 
-   You can now analyze the performance of your low-code app. By taking a look at *Metrics* table, you can see that biggest chunk of the time is spent on `DatabaseController.Process` method.
+1. Analyze the performance of your low-code app: By taking a look at the *Metrics* table, you can see that the biggest chunk of time is spent on the *DatabaseController.Process* method.
 
    ![Performance Analyzer getting started initial investigation](~/user-guide/images/performance_analyzer_getting_started_initial_investigation.png)
 
 1. Double click the *DatabaseCollector.Process* row.
 
-![Performance Analyzer getting started sequential processing](~/user-guide/images/performance_analyzer_getting_started_sequential_processing.png)
+   You will see that the processing is happening sequentially. This means that the performance of your app could be improved by processing employees in parallel instead.
 
-You will notice that processing is happening sequentially. It is possible to improve the performance by processing employees in parallel instead.
+   ![Performance Analyzer getting started sequential processing](~/user-guide/images/performance_analyzer_getting_started_sequential_processing.png)
 
-## Step 7: Improve the implementation of the Process method
+## Step 6: Improve the implementation of the Process method
 
-1. [Open the solution](#step-2-open-the-solution).
+> [!NOTE]
+> If you do not have Visual Studio, you can skip the steps below and instead deploy the *exercise_2* branch of the example solution, where this improvement has been implemented:
+>
+> 1. Go to [Tutorial - Introduction to Performance Analyzer](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126).
+> 1. Go to the *Versions* tab and click the *Deploy* button for the *1.0.1-exercise2* branch.
 
-1. Update the `DatabaseController.Process` method
+1. Open the solution in the same way as in [step 1](#step-1-set-up-the-example-solution).
+
+1. Update the `DatabaseController.Process` method:
 
    ```c#
    private List<Employee> Process(List<Employee> employees)
@@ -204,32 +209,28 @@ You will notice that processing is happening sequentially. It is possible to imp
    }
    ```
 
-   > [!TIP]
-   > Implementation of this step can be found on *exercise_2* branch.
+1. Publish the GQIDS in the same way as in [step 1](#step-1-set-up-the-example-solution).
 
-1. [Publish the GQIDS](#step-3-publish-the-gqids)
+## Step 7: Analyze the collected data again
 
->[!NOTE]
-> You can follow this step by deploying the GQIDS, version 1.0.1-exercise2, directly from the [Catalog](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126).
+Follow the same steps as in [step 5](#step-5-analyze-the-collected-data) to analyze the collected data again.
 
-## Step 8: [Repeat step #7](#step-6-analyze-the-collected-data)
+You will notice that the table loads significantly faster now, and in the *Performance Analyzer* app you will see that the execution time of the *DatabaseController.Process* method has been reduced from ~9 s to ~500 ms.
 
-You will now notice that the table loads significantly faster and, in the *Performance Analyzer* app, you can see that execution time of `DatabaseController.Process` method has been reduced from ~9s to ~500ms.
+Congratulations, you have successfully identified and resolved the issue with the performance of your low-code app!
 
-Congratulations, you have successfully identified and resolved the issue with performance of your low-code app.
+## Step 8: Exercise for DevOps Points (optional)
 
-<!-- ## Exercise for DevOps Points
+In this step, you can do an optional exercise to earn DevOps Points.
 
-1. Pull branch *exercise_3*.
+1. Update the solution to the *exercise_3* branch:
 
-1. [Publish the GQIDS](#step-3-publish-the-gqids)
+   - If you have Visual Studio, pull branch *exercise_3*, and then publish the GQIDS like before.
+   - Otherwise, deploy branch version *1.0.1-exercise3* of the [tutorial package](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126).
 
-   >[!NOTE]
-   > You can follow this step by deploying the GQIDS, version 1.0.1-exercise3, directly from the [Catalog](https://catalog.dataminer.services/details/d59135c3-36de-43bb-af16-d649360b5126).
+1. Identify the user for which the processing causes performance issues.
 
-1. Identify the user whose processing causes performance issues.
-
-1. Send a screenshot to [devops@skyline.be](mailto:devops@skyline.be) or upload it on the [Kata page on Dojo](https://community.dataminer.services/courses/kata-62/).
+1. Send a screenshot to [devops@skyline.be](mailto:devops@skyline.be)<!--  or upload it on the [Kata page on Dojo](https://community.dataminer.services/courses/kata-62/) -->.
 
 > [!NOTE]
-> The *Performance Analyzer* NuGet is open source. If you want to contribute, you can do so by create a pull request on the [Skyline.DataMiner.Utils.PerformanceAnalyzer repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.PerformanceAnalyzer). -->
+> The *Performance Analyzer* NuGet is open source. If you want to contribute, you can do so by creating a pull request on the [Skyline.DataMiner.Utils.PerformanceAnalyzer repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.PerformanceAnalyzer).
