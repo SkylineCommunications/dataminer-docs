@@ -90,7 +90,7 @@ When a trend graph contained both regular average trend data and trend data rela
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-When you drilled down to a parameter by clicking a button on a Data Display subpage, in some cases, the trend graph would incorrectly be empty.
+When you drilled down to a parameter by clicking a button on a Data Display subpage, in some cases, the trend graph would incorrectly be empty and the title of the window would be incorrect.
 
 #### DMA selection box of duplicate element to be created would not be set to the correct DataMiner Agent [ID 42438]
 
