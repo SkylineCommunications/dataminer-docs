@@ -71,6 +71,16 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Treeview' [ID 42279]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+The UI component `UIBlockType.Treeview` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
 #### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Parameter' [ID 42401]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
