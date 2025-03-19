@@ -33,3 +33,7 @@ If you mark a parameter as a history set parameter, its last set value will not 
 ## See also
 
 - [How to use history sets on a protocol parameter](xref:How_to_use_history_sets_on_a_protocol_parameter)
+
+> [!NOTE]
+>
+> - Using historySet in combination with [alarm hysteresis](xref:Configuring_alarm_hysteresis) on the same parameter can cause unexpected behavior in alarm timestamps, as both features modify the parameter and alarm times. For this reason, we do not recommend combining them.
