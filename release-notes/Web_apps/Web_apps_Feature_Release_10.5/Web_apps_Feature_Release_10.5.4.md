@@ -404,3 +404,9 @@ When you entered the edit mode of a low-code app, in some cases, a run-time erro
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
 
 In some cases, a *Query filter* component could throw an error whenever you made a change to a query that contained boolean columns.
+
+#### Low-Code Apps: Loops in component data could cause an app to become unresponsive [ID 42531]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
+
+In some cases, a low-code app could become unresponsive due to loops in component data.
