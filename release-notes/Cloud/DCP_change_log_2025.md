@@ -27,6 +27,10 @@ Up to now, it could occur that different recommended versions were shown based o
 
 The status of DataMiner Systems (including DaaS systems) could be shown as "unknown" for users with the "Member" role in the organization. This also resulted in an incorrect status being shown for a newly deployed DaaS system. This issue has been resolved.
 
+### 7 March 2025 - Fix - Connection to dataminer.services lost after using 10.4 installer [ID 42430]
+
+If the DataMiner 10.4 installer was used to install a DataMiner Agent and connect it to dataminer.services, it could occur that the specified credentials did not allow the connection to dataminer.services and STaaS to be renewed, causing it to eventually be lost.
+
 ### 7 March 2025 - Fix - Admin - Export of large amount of usage data failed [ID 42378]
 
 In the Admin app, exporting usage data to a CSV file could fail when there was a large amount of data to be retrieved. The performance of the export has been improved, and it will now be able to handle large amounts of data.
