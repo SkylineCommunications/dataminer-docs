@@ -32,6 +32,17 @@ In the *Layers* tab, you can now duplicate a layer. To do so, proceed as follows
 
 ## Changes
 
+### Breaking changes
+
+#### Dashboards/Low-Code Apps - Timeline component: Enhanced performance [ID 42432]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, overall performance of the *Timeline* component has increased, especially when the timeline in question contains a large number of groups.
+
+> [!IMPORTANT]
+> In some cases, this change will break existing setups. A *Timeline* component will now only load up to 10000 items, timeline groups will now be sorted, and real-time updates will no longer be applied when using e.g. a DOM instances data source.
+
 ### Enhancements
 
 #### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Numeric' [ID 42132]
@@ -90,15 +101,6 @@ The UI component `UIBlockType.Parameter` has been redesigned.
 Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
 
 `?useNewIASInputComponents=true`
-
-#### Dashboards/Low-Code Apps - Timeline component: Enhanced performance [ID 42432]
-
-<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
-
-Because of a number of enhancements, overall performance of the *Timeline* component has increased, especially when the timeline in question contains a large number of groups.
-
-> [!NOTE]
-> From now on, a *Timeline* component will only load up to 10000 items, and updates will no longer be applied in real time.
 
 ### Fixes
 
