@@ -41,6 +41,11 @@ Before you start the Cassandra migration wizard, we recommend that you check the
 - Make sure you have the DataMiner permissions *System configuration* > *Database* > *Configure local DB* or *Configure general DB* (depending on your DataMiner version), and *System configuration* > *Agents* > *Upgrade / restore*, as otherwise you will not be able to run the wizard.
 
 - Do not specify the loopback IP address (127.0.0.1) as the first IP address for an Agent that is to use Cassandra.
+  
+- Increase the tombstone threshold values within the Cassandra.yaml file:
+   - **tombstone_warn_threshold**: Set to 100000. Cassandra warns in the Debug.log whenever there are more tombstones than this threshold. This provides a good indication of when the *tombstone_failure_threshold* might be exceeded.
+
+  - **tombstone_failure_threshold**: Set to 200000. Queries will fail if a record has more tombstones than the value set here. Increases of this value will slow down your reads but might be manageable depending on the use case.
 
 ## Preparing for the Cassandra migration
 
