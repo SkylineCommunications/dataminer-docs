@@ -32,7 +32,9 @@ To manually mask an alarm:
    - **Mask alarm until cleared**: This will mask the alarm until it gets cleared. It will then automatically be unmasked.
 
    > [!NOTE]
-   > Depending on the configuration of your DataMiner System, you may need to specify a motivation before you can select the masking method. See [Enforcing motivation of alarm actions](xref:Enforcing_motivation_of_alarm_actions).
+   >
+   > - Depending on the configuration of your DataMiner System, you may need to specify a motivation before you can select the masking method. See [Enforcing motivation of alarm actions](xref:Enforcing_motivation_of_alarm_actions).
+   > - If AutoClear is disabled, alarms will not be unmasked when they reach the clearable state. You have to manually clear the alarm to unmask it.
 
 1. Enter a comment, which will be stored in the *Comment* field of the new alarm record.
 
