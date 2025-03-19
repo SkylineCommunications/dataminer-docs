@@ -60,8 +60,12 @@ Be aware that tombstones being written to the table is normal. The amount is inc
 
 Look for the following tombstone threshold settings within the *Cassandra.yaml* file:
 
-- **tombstone_warn_threshold**: By default set to 1000, but **should be set to 1000000**.
-- **tombstone_failure_threshold**: By default set to 100000, but **should be set to 2000000**.
+- **tombstone_warn_threshold**: By default set to 1000.
+   - In a Linux environment, this **should be set to 1000000**.
+   - In a Windows environment, this **should be set to 100000**.
+- **tombstone_failure_threshold**: By default set to 100000. 
+   - In a Linux environment, this **should be set to 2000000**.
+   - In a Windows environment, this **should be set to 200000**.
 
 The default values for these settings are too limiting for a DataMiner environment. If these have not been adjusted correctly during [Cassandra installation](xref:Installing_Cassandra), adjusting their values as mentioned above will likely be the solution for the element startup issue.
 
