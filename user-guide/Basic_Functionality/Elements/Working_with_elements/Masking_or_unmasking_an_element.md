@@ -30,7 +30,7 @@ It is possible to mask an element, so that any alarms on that element will not s
    >
    > - Regardless of the option you have chosen, it is always possible to manually unmask the element.
    > - Elements that have been stopped cannot be masked.
-   > - If AutoClear is disabled, elements will not be unmasked when all alarms reach the clearable state. You have to manually clear the alarms to unmask the element.
+   > - If AutoClear is disabled (can be configured system-wide or per parameter as explained [here](https://docs.dataminer.services/user-guide/Basic_Functionality/Alarms/Working_with_alarms/Clearing_alarms.html?q=clearable#system-wide-autoclear-setting) or in an alarm template as explained [here](https://docs.dataminer.services/user-guide/Basic_Functionality/Protocols_and_templates/Alarm_templates/Configuring_alarm_templates/Setting_the_autoclear_option_in_alarm_template.html)), elements will not be unmasked when all alarms reach the clearable state. You have to manually clear the alarms to unmask the element.
 
 1. Optionally, fill in a comment.
 
