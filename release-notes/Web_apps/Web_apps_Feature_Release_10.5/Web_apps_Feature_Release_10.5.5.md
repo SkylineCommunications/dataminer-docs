@@ -44,6 +44,23 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### Low-Code Apps - Interactive Automation scripts: Enhancements made to redesigned UI components 'StaticText' and 'CheckBox' [ID 42210]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of enhancements have been made to the redesigned UI components `UIBlockType.StaticText` and `UIBlockType.CheckBox`.
+
+- When the text in a redesigned `UIBlockType.StaticText` component does not fit the width of the component, it will now automatically be ellipsed and when you hover over the component, the full text will be displayed in a tooltip.
+
+- A redesigned `UIBlockType.CheckBox` component will now display its label in a tooltip if no tooltip was configured in its settings.
+
+  > [!NOTE]
+  > By design, no tooltips can be shown on mobile devices.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
 #### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'FileSelector' [ID 42231]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
