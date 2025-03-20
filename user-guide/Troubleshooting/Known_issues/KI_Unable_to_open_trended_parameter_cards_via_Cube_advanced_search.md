@@ -10,7 +10,7 @@ From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards.
 
 ## Cause
 
-To facilitate communicate between different modules, a serializable `DataObject` is used to create instances from a string, relying on reflection. Because of an issue introduced in DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 (RN 42552), this reflection process is broken, preventing the correct `MethodInfo` from being located. As a result, trended parameter cards cannot be opened directly via navigation in Cube.
+To facilitate communication between different modules, a serializable `DataObject` is used to create instances from a string, relying on reflection. Because of an issue introduced in DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 (RN 42552), the reflection process for parameters is broken, preventing the correct `MethodInfo` from being located. As a result, parameter cards cannot be opened directly via navigation in Cube.
 
 ## Fix
 
