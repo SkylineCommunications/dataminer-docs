@@ -243,6 +243,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Unable to open trended parameter cards via Cube advanced search
+            topicUid: KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search
           - name: SLNet memory leak related to indexing logic for Cube search bar
             topicUid: KI_SLNet_memory_leak
           - name: Failed getting progress notices during upgrade

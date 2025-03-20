@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [Unable to open trended parameter cards via Cube advanced search](xref:KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search) | From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards | | March 20, 2025 |
 | [SLNet memory leak related to indexing logic for Cube search bar](xref:KI_SLNet_memory_leak)| From DataMiner 10.4.0 [CU11]/10.5.0 [CU0]/10.5.2 onwards | | March 18, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
@@ -25,6 +26,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [Unable to open trended parameter cards via Cube advanced search](xref:KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search) | From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards | | March 20, 2025 |
 | [SLNet memory leak related to indexing logic for Cube search bar](xref:KI_SLNet_memory_leak)| From DataMiner 10.4.0 [CU11]/10.5.0 [CU0]/10.5.2 onwards | | March 18, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
