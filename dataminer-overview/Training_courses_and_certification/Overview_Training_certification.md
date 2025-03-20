@@ -40,6 +40,12 @@ The exam consist of a verbal exam with one of our official DataMiner trainers. F
 
 The examiner will use a predefined exam plan to ask different questions per module of the training. The questions vary from strictly theoretical questions to showing things on the training DMA.
 
+> [!NOTE]
+>
+> - If you do not pass the exam, you have one free retake.
+> - Exams are recorded to ensure the integrity of the process and to provide a reference for review if needed.
+> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded DevOps Points after you successfully pass the Fundamentals and Configurator exams. For passing the Fundamentals exam, 500 points are awarded, and for passing the Configurator exam, 750 points are awarded.
+
 ### Requirements
 
 - **Exam environment**:
@@ -59,12 +65,6 @@ The examiner will use a predefined exam plan to ask different questions per modu
 - **Prohibited resources**:
 
   - The usage of DataMiner Docs or any other resource is strictly forbidden during the exam.
-
-> [!NOTE]
->
-> - If you do not pass the exam, you have one free retake.
-> - Exams are recorded to ensure the integrity of the process and to provide a reference for review if needed.
-> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded DevOps Points after you successfully pass the Fundamentals and Configurator exams. For passing the Fundamentals exam, 500 points are awarded, and for passing the Configurator exam, 750 points are awarded.
 
 ### Preparation tips
 
@@ -122,16 +122,21 @@ You will also receive an email with your user ID and password to access the trai
 To book an appointment, you will need to use the booking link that you will find in the email you received with information about the start of the certification process.
 
 > [!NOTE]
->
-> - You can cancel or reschedule an appointment up to 96 hours before it starts, using the confirmation email you received when booking the appointment. If you cannot update the appointment online, please contact [Skyline Academy](mailto:academy@skyline.be) or your team of examiners.
+> You can cancel or reschedule an appointment up to 96 hours before it starts, using the confirmation email you received when booking the appointment. If you cannot update the appointment online, please contact [Skyline Academy](mailto:academy@skyline.be) or your team of examiners.
 
 ### Exam format and grading
 
-The exam consists of a practical exercise. Before taking the exam, you must book an exam check-in via the booking page. During this check-in, your examiner will provide all necessary information about the exercise. You will then have up to 4 hours to complete the task.
+The exam consists of a practical exercise. Before taking the exam, you must book an exam check-in via the booking page. During this check-in, your examiner will provide all the necessary information about the exercise. You will then have up to 4 hours to complete the task.
 
-After submission, your examiner will evaluate your work using an exam validator. A score of 80% or higher is required to pass and earn your certification.
+When you have submitted your work, your examiner will evaluate it using an exam validator. You will need a score of 80% or higher to pass and earn your certification.
 
 You will receive your score within 5 business days. If you have any questions about your score, you can book a follow-up check-in via the booking page.
+
+> [!NOTE]
+>
+> - If you do not pass the exam, you have one free retake.
+> - Appointments are recorded to ensure the integrity of the process and to provide a reference for review if needed.
+> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded 750 DevOps Points after you successfully pass the Automation exam.
 
 ### Requirements
 
@@ -143,28 +148,21 @@ You will receive your score within 5 business days. If you have any questions ab
 
   - By default, the training DMA will be used to conduct the exam.
 
-> [!NOTE]
->
-> - If you do not pass the exam, you have one free retake.
-> - Appointments are recorded to ensure the integrity of the process and to provide a reference for review if needed.
-> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded 750 DevOps Points after you successfully pass the Automation exam.
-
 ### Preparation tips
 
 To prepare effectively for the exam:
 
 - Study materials:
   - [DataMiner Automation course](https://community.dataminer.services/courses/dataminer-automation/)
-    
-  - Interactive Tookit:
-    - [Interactive Automation Scripts Toolkit](https://docs.dataminer.services/develop/TOOLS/NuGet/Interactive_Automation_Script_Toolkit.html?q=interactive%20toolkit)
-    - [Getting started with the IAS Toolkit](https://docs.dataminer.services/develop/devguide/Automation/Howto/Getting_Started_with_the_IAS_Toolkit.html)
-    - [Example of an Interactive Automation Script Toolkit](https://github.com/SkylineCommunications/SLC-AS-Example_InteractiveAutomationScriptToolkit)
-   
+
+  - Interactive Toolkit:
+    - [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit)
+    - [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit)
+    - [Interactive Automation Script Toolkit examples](https://github.com/SkylineCommunications/SLC-AS-Example_InteractiveAutomationScriptToolkit)
+  
   - System Library:
     - [Introduction video to DIS Class Library](https://community.dataminer.services/courses/dataminer-automation/lessons/dataminer-integration-studio-dis-class-library/)
-    - [Class library introduction on DataMiner Docs](https://docs.dataminer.services/develop/devguide/ClassLibrary/ClassLibraryIntroduction.html?q=class%20library)
-    - [Class library examples](https://docs.dataminer.services/develop/devguide/ClassLibrary/ClassLibraryExamples.html)
+    - [Class library introduction on DataMiner Docs](xref:ClassLibraryIntroduction)
+    - [Class library examples](xref:ClassLibraryExamples)
 
 - Schedule check-ins with your examiner via the booking page if you have any questions.
-
