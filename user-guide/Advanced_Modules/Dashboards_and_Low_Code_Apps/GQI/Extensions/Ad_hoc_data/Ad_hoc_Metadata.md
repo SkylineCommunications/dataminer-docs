@@ -14,7 +14,13 @@ To link a GQI row to a DataMiner object, add a reference to the object in the [M
 
 The following ad hoc data source exposes a table of elements contained within a specific view.
 
-:::code language="csharp" source="./SLC-GQIDS-ViewElements.cs":::
+### [Prior to DataMiner 10.4.6/10.5.0](#tab/tabid-1)
+
+:::code language="csharp" source="./SLC-GQIDS-ViewElements_10.4.0.cs":::
+
+### [From DataMiner 10.4.6/10.5.0 onwards](#tab/tabid-2)
+
+:::code language="csharp" source="./SLC-GQIDS-ViewElements_10.4.6.cs":::
 
 ## See also
 
