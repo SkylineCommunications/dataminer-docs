@@ -51,6 +51,12 @@ When multiple users of the same user group requested the same mobile visual over
 
 Up to now, aggregation alarms would not work as intended on DataMiner Systems using a Cassandra Cluster database or Storage as a Service (STaaS).
 
+#### Web visual overviews: Incorrect load balancing when users were a member of the same groups [ID 42291]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When load balancing is implemented among DataMiner Agents in a DMS for visual overviews shown in web apps, DataMiner checks the group memberships of users to determine where to send requests to balance the load. However, when multiple connected users were a member of the same groups, updates for these users were not consistently handled by the same Agent, which could cause the load balancing to be less effective and more memory to be used.
+
 #### Mobile Visual Overview: Problem with SLHelper when removing mobile visual overview sessions [ID 42296]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 [CU0] -->
