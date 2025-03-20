@@ -11,8 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 13 March 2025 - Enhancement - Admin - Tooltips for long node names [ID 42510]
 
-On the overview page of a DataMiner system, the labels of a system, and it's fail-over pair will now have a tooltip.
-Before longer node names would be clipped, causing users unable to see the last part of the node names.
+In the Admin app, on the overview page for a DataMiner System, tooltips will now be shown for the titles of nodes in case these are too long to be displayed. Previously, long names were clipped, causing users to be unable to see the last part of the names.
 
 ### 13 March 2025 - Enhancement - Improved initial loading of dataminer.services applications [ID 42510] [ID 42476]
 
