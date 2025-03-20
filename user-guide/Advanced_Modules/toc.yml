@@ -76,8 +76,6 @@ items:
             topicUid: Building_interactive_Automation_scripts_with_CSharp
           - name: Compiling a C# code block as a library
             topicUid: Compiling_a_CSharp_code_block_as_a_library
-          - name: Handling C# code in an Automation script
-            topicUid: Handling_Async_Code
       - name: Special parameters available in Automation scripts
         topicUid: Special_parameters_available_in_DMS_Automation_scripts
       - name: Alarm level IDs for use in Automation scripts
