@@ -143,7 +143,7 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
 
    For detailed information, refer to [Preparing scripts and connectors for Swarming](xref:SwarmingPrepare)
 
-1. Run the the *Enable Swarming* script again and click the *Analyze* button again.
+1. Run the *Enable Swarming* script again and click the *Analyze* button again.
 
    If you have indeed correctly updated all scripts and protocols, a new button will be displayed at the bottom of the window. If you do not see this button, check which scripts or protocols still need to be updated and adjust them as mentioned above.
 
