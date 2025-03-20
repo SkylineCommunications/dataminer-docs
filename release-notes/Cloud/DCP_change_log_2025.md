@@ -9,6 +9,22 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 13 March 2025 - Enhancement - Admin - Tooltips for long node names [ID 42510]
+
+In the Admin app, on the overview page for a DataMiner System, tooltips will now be shown for the titles of nodes in case these are too long to be displayed. Previously, long names were clipped, causing users to be unable to see the last part of the names.
+
+### 13 March 2025 - Enhancement - Improved initial loading of dataminer.services applications [ID 42510] [ID 42476]
+
+The initial load times of applications under .dataminer.services have been improved. This has been done by enabling gzip compression and enabling caching of fonts with the .woff and .woff2 extension. The font files have also been updated to leave a smaller footprint.
+
+### 11 March 2025 - Fix - Catalog - Deployment on multiple DataMiner Systems at once not working correctly [ID 42474]
+
+Up to now, if a Catalog item was deployed to multiple systems at once, only the last deployment was executed and the others were canceled. This will no longer occur.
+
+### 11 March 2025 - Enhancement - Catalog - Context menu on version and ranges hidden when not authenticated [ID 42459]
+
+When a user is not authenticated, they will now no longer be able to see the button to open the actions for a version or range in the Catalog.
+
 ### 11 March 2025 - Fix - Catalog - Incorrect Deploy button state when not authenticated [ID 42439]
 
 Previously, the *Deploy* button for a Catalog item version was always enabled when the user was not authenticated, even if the version had issues. This occurred because certain checks could not be performed when the user was not logged in yet. This issue has now been resolved. The *Deploy* button will now be correctly disabled if there are any issues with the version, regardless of authentication status.
