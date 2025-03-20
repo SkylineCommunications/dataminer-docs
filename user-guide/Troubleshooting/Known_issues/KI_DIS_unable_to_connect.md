@@ -12,15 +12,9 @@ DIS 3.1.6
 
 DIS 3.1.6 introduces features that make use of additional web API endpoints, such as importing a dashboard or low-code app solution from a DataMiner Agent. This connection depends on a trusted certificate to establish a secure link. If the certificate cannot be validated, an exception may occur, preventing the connection from being established.
 
-## Workaround
-
-Install the previous DIS release 3.1.5 ([installation link](https://marketplace.visualstudio.com/_apis/public/gallery/publishers/skyline-communications/vsextensions/DataMinerIntegrationStudio/3.1.5/vspackage)).
-
-Alternatively, if you are using DIS 3.1.6 and encounter the error message "The remote certificate is invalid according to the validation procedure", make sure the certificate configured in IIS is trusted. The best way to do so is by installing a proper certificate issued by a domain controller or purchased from a Certificate Authority. If that is not possible, you can also install the self-signed certificate in the trusted root certificate store.
-
 ## Fix
 
-Install DIS 3.1.7.
+Install the latest DIS release (3.1.7 or higher).
 
 ## Description
 
