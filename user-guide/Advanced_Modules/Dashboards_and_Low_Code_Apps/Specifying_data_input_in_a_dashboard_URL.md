@@ -2,7 +2,7 @@
 uid: Specifying_data_input_in_a_URL
 ---
 
-# Specifying data input in a dashboard or app URL
+# Specifying data input in an app or dashboard URL
 
 It is possible to specify data input for a dashboard using the dashboard URL. This way, you can immediately make the dashboard display specific data when it is opened. From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, you can pass the data using a [JSON object](#json-syntax) in the URL. Prior to DataMiner 10.2.0/10.2.2, you can use the [legacy syntax](#legacy-syntax), which continues to be supported in recent DataMiner versions for now.
 
