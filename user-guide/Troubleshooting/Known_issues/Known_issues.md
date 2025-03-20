@@ -27,7 +27,6 @@ uid: Known_issues
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
 | [Unable to open trended parameter cards via Cube advanced search](xref:KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search) | From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards | | March 20, 2025 |
-| [SLNet memory leak related to indexing logic for Cube search bar](xref:KI_SLNet_memory_leak)| From DataMiner 10.4.0 [CU11]/10.5.0 [CU0]/10.5.2 onwards | | March 18, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
@@ -37,6 +36,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [SLNet memory leak related to indexing logic for Cube search bar](xref:KI_SLNet_memory_leak)| From DataMiner 10.4.0 [CU11]/10.5.0 [CU0]/10.5.2 onwards | DataMiner 10.5.4/10.6.0 | March 18, 2025 |
 | [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 to DataMiner 10.4.0 [CU11]/10.5.2 | DataMiner 10.4.0 [CU12]/10.5.3 | December 18, 2024 |
 | [Offline Failover DMA not synchronized](xref:KI_offline_DMA_cannot_sync) | DataMiner 10.3.0 [CU11] to 10.4.0 [CU9]<br>DataMiner 10.4.2 to 10.4.12 | DataMiner 10.4.0 [CU10] and 10.5.1 | December 18, 2024 |
 | [LDAP/ActiveDirectory domain users no longer able to log in after upgrade](xref:KI_LDAP_users_unable_to_log_in_after_upgrade) | DataMiner 10.4.0 [CU4] to 10.4.0 [CU11]<br>DataMiner 10.4.7 to 10.5.1 | DataMiner 10.4.0 [CU12]/10.5.0/10.5.2 | December 13, 2024 |
