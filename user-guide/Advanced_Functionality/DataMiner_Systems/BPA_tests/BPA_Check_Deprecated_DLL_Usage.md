@@ -36,7 +36,7 @@ Result message: `No issues detected.`
 
 ### Error
 
-The outdated DLL file was detected.
+An outdated DLL file was detected.
 
 - Result message: `Outdated X.dll (version x.x.x.x) at Y detected.`
 
@@ -53,7 +53,7 @@ The outdated DLL file was detected.
 
   1. Start the DataMiner Agent.
 
-One or multiple protocols and/or Automation scripts still use the outdated DLL file.
+One or multiple protocols and/or Automation scripts still use an outdated DLL file.
 
 - Result message: `Outdated X.dll (version x.x.x.x) detected, along with the use of the deprecated Y.dll`
 
@@ -131,7 +131,7 @@ One or multiple protocols and/or Automation scripts still use the outdated DLL f
 
 ### Warning
 
-The deprecated DLL file was detected in the ProtocolScripts folder.
+A deprecated DLL file was detected in the ProtocolScripts folder.
 
 - Result message: `Deprecated X.dll at Y detected.`
 
@@ -148,7 +148,7 @@ The deprecated DLL file was detected in the ProtocolScripts folder.
 
   1. Start the DataMiner Agent.
 
-One or multiple protocols and/or Automation scripts still use the deprecated DLL file.
+One or multiple protocols and/or Automation scripts still use a deprecated DLL file.
 
 - Result message: `Deprecated X.dll used.`
 
