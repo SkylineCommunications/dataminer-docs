@@ -21,6 +21,28 @@ uid: General_Main_Release_10.5.0_CU2
 
 A number of security enhancements have been made.
 
+#### Reduced memory usage when updating a large number of parameter in bulk [ID 42385]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of row are updated due to e.g. aggregation or merge actions.
+
+#### SLLogCollector now collects the output of the 'dotnet --list-runtimes' command [ID 42448]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+SLLogCollector packages will now include the output of the `dotnet --list-runtimes` command.
+
+The output will be stored in the following file:
+
+*\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
+
+#### GQI recording removed from GQI DxM [ID 42470]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+GQI recording, a debugging feature that allowed you to save GQI communication and replay it in a lab environment, has now been removed from the GQI DxM.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
@@ -37,9 +59,17 @@ Up to now, aggregation alarms would not work as intended on DataMiner Systems us
 
 #### Mobile Visual Overview: Problem with SLHelper when removing mobile visual overview sessions [ID 42296]
 
-<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 [CU0] -->
 
 When mobile visual overview sessions were removed from a DataMiner Agent, in some cases, the SLHelper process could temporarily block other requests.
+
+#### SLDataGateway: Problem when some of the Cassandra nodes are marked as down [ID 42384]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, SLDataGateway could incorrectly get stuck in a state where some of the Cassandra nodes are marked as down.
+
+Additional polling has now been introduced that will kick in when Cassandra nodes have been marked as down for a longer period. When those nodes prove to be up and running, they will forcefully be marked as up.
 
 #### Element card of a DVE or Virtual Function could show incorrect alarm colors [ID 42402]
 
@@ -52,3 +82,11 @@ In some cases, the `ParameterChangeEvent` or `ParameterTableUpdateEventMessage` 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 When a logger table was queried, in some cases, the query would incorrectly not yield any results due to a filter conversion issue.
+
+#### Problem when deleting an element or service property [ID 42434]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When an element property or a service property was deleted, in some cases, a `KeyNotFoundException` exception could be thrown, especially when one of the elements that had a value for that property was a migrated or a swarmed element.
+
+The property would be deleted from the *PropertyConfiguration.xml* file, but not from the elements or services that had a value for the property in question.

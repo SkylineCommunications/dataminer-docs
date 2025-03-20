@@ -85,3 +85,23 @@ In *System Center > System settings*, the *Time to live* section will no longer 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When a trend graph contained both regular average trend data and trend data related to SLAnalytics, in some rare cases, the trend graph could get stuck while loading that data.
+
+#### Trending: Problem when you drilled down to a parameter from a Data Display subpage [ID 42373]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you drilled down to a parameter by clicking a button on a Data Display subpage, in some cases, the trend graph would incorrectly be empty and the name of the parameter in both the title and the body of the window would be incorrect.
+
+#### DataMiner Cube desktop app: Problem when pressing certain keys while entering a search string in the start window [ID 42437]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in the start window of the DataMiner Cube desktop app, you entered a search string in the search box and then pressed e.g. the left arrow key to position the cursor in the text you entered, up to now, the cursor would incorrectly not stay in the filter box. Instead, the key press would cause a different tile to be selected.
+
+Also, when a certain group did no longer contain any tiles due to the filter you had entered, up to now, the empty group would incorrectly stay visible.
+
+#### DMA selection box of duplicate element to be created would not be set to the correct DataMiner Agent [ID 42438]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in the Surveyor, you right-clicked a migrated or swarmed element, and selecting *Duplicate*, in the element card of the duplicate element to be created, the *DMA* selection box would not be set to the correct DataMiner Agent.

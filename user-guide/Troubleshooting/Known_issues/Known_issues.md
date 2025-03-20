@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [SLNet memory leak related to indexing logic for Cube search bar](xref:KI_SLNet_memory_leak)| From DataMiner 10.4.0 [CU11]/10.5.0 [CU0]/10.5.2 onwards | | March 18, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
@@ -24,6 +25,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [SLNet memory leak related to indexing logic for Cube search bar](xref:KI_SLNet_memory_leak)| From DataMiner 10.4.0 [CU11]/10.5.0 [CU0]/10.5.2 onwards | | March 18, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |

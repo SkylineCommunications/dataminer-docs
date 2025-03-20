@@ -77,6 +77,8 @@ From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37522 -->, in the *Layout* pane, the
 
   For example, if you selected the *Hyperlink* preset, a rectangle layer with opacity 0%, including a *Navigate to a URL* action, will be configured. Additionally, the text color of the text layer will be set to blue (#1F68BF), and the text inside the text box will be enclosed by HTML `<u>` elements to define underlined text.
 
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42226-->, you can reuse saved templates for components in the same dashboard or low-code app by clicking the ellipsis button ("...") next to the column name and selecting *Browse templates*.
+
 ## Adding actions to a table
 
 If you add a table component to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app. <!-- RN 29394 -->

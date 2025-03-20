@@ -24,3 +24,5 @@ The following advanced analytics features **generate suggestion events** that in
 - [Pattern matching](xref:Monitoring_of_trend_patterns).
 
 - [Relational anomaly detection](xref:Relational_anomaly_detection) (from DataMiner 10.5.3/10.6.0 onwards).
+
+Note that from DataMiner 10.5.4/10.6.0 onwards, deactivating one of these features in System Center will also remove all corresponding alarms or suggestion events from the Alarm Console.<!-- RN 42096 -->

@@ -176,6 +176,8 @@ To implement a logger table, perform the following steps:
 
       However, in order to preserve compatibility with an RDBMS (SQL) database, we still recommend defining a column of type DATETIME that specifies the partitions to keep.
 
+    - When an element with a logger table is deleted, the logger table will also be deleted if it is stored in the default keyspace. However, if the [customDatabaseName](xref:Protocol.Params.Param.ArrayOptions-options#customdatabasename) or [databaseNameProtocol](xref:Protocol.Params.Param.ArrayOptions-options#databasenameprotocol) option is used, the table will not be deleted.<!-- RN 42029 -->
+
     The logger table defined in the steps above will result in the creation of a table with name elementdata_[DMA ID]_[element ID]_[table parameter ID].
 
     In MySQL, in addition to the table, a stored procedure is generated for performing a so-called "upsert" operation: this routine first performs an UPDATE to update the specified row and then checks the number or updated rows. If this equals zero, this means the row did not yet exist. In that case, an INSERT statement is executed.

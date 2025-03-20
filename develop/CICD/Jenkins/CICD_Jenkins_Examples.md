@@ -46,7 +46,8 @@ pipeline
                     dotnet publish \
                         -p:Version="0.0.${BUILD_NUMBER}-prerelease" \
                         -p:VersionComment="This is just a pre-release version." \
-                        -p:CatalogPublishKeyName="${DATAMINER_TOKEN}"
+                        -p:CatalogPublishKeyName="DATAMINER_TOKEN" \
+                        -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
                 '''
             }
         }
@@ -84,7 +85,8 @@ pipeline
                     dotnet publish `
                         -p:Version="0.0.%BUILD_NUMBER%-prerelease" `
                         -p:VersionComment="This is just a pre-release version." `
-                        -p:CatalogPublishKeyName="%DATAMINER_TOKEN%"
+                        -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+                        -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
                 '''
             }
         }

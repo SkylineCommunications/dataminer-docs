@@ -194,6 +194,8 @@ items:
         items:
           - name: Expired SSTables blocking other tables from being dropped
             topicUid: Cassandra_expired_blocking_SSTables
+          - name: Element fails to start because of database failure
+            topicUid: Cassandra_General_DB_Failure
       - name: Troubleshooting – dataminer.services
         items:
           - name: Investigating dataminer.services connection issues
@@ -241,6 +243,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLNet memory leak related to indexing logic for Cube search bar
+            topicUid: KI_SLNet_memory_leak
           - name: Failed getting progress notices during upgrade
             topicUid: KI_SLNetIPC_Errors_During_Upgrade
           - name: SLProtocol crash when restarting elements used by enhanced services

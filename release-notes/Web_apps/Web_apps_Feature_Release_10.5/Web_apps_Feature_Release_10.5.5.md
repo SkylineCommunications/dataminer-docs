@@ -18,13 +18,89 @@ uid: Web_apps_Feature_Release_10.5.5
 
 ## New features
 
-*No new features have been added yet.*
+#### Dashboards/Low-Code Apps - Template editor: Duplicating layers [ID 42479]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the *Layers* tab, you can now duplicate a layer. To do so, proceed as follows:
+
+1. Hover over the layer that you want to duplicate, and click the ellipsis button ("...").
+1. Select *Duplicate*.
+
+> [!NOTE]
+> Up to now, to delete a layer, you had to hover over the layer and click the *Delete* button in the top-right corner. From now on, you need to hover over the layer, click the ellipsis button, and select *Delete*.
 
 ## Changes
 
+### Breaking changes
+
+#### Dashboards/Low-Code Apps - Timeline component: Enhanced performance [ID 42432]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, overall performance of the *Timeline* component has increased, especially when the timeline in question contains a large number of groups.
+
+> [!IMPORTANT]
+> In some cases, this change will break existing setups. A *Timeline* component will now only load up to 10000 items, timeline groups will now be sorted, and real-time updates will no longer be applied when using e.g. a DOM instances data source.
+
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Numeric' [ID 42132]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+The UI component `UIBlockType.Numeric` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### Low-Code Apps - Interactive Automation scripts: Enhancements made to redesigned UI components 'StaticText' and 'CheckBox' [ID 42210]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of enhancements have been made to the redesigned UI components `UIBlockType.StaticText` and `UIBlockType.CheckBox`.
+
+- When the text in a redesigned `UIBlockType.StaticText` component does not fit the width of the component, it will now automatically be ellipsed and when you hover over the component, the full text will be displayed in a tooltip.
+
+- A redesigned `UIBlockType.CheckBox` component will now display its label in a tooltip if no tooltip was configured in its settings.
+
+  > [!NOTE]
+  > By design, no tooltips can be shown on mobile devices.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'FileSelector' [ID 42231]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+The UI component `UIBlockType.FileSelector` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Treeview' [ID 42279]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+The UI component `UIBlockType.Treeview` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Parameter' [ID 42401]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+The UI component `UIBlockType.Parameter` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
 
 ### Fixes
 
@@ -69,3 +145,21 @@ In some cases, the DataMiner Comparison app would not work correctly when used i
 Example: `https://myDma/comparison/#/?parameter1=935%2F152%2F30602%2F1&parameter2=935%2F108%2F5518%2F7.22&embed=true`
 
 When no connection was established yet, the query parameters would not get saved and be removed. Also, no parameters could be fetched.
+
+#### Low-Code Apps: Exporting a low-code app would fail if the name contained illegal characters [ID 42416]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, it would not be possible to export a low-code app of which the name contained illegal characters (e.g. question marks).
+
+#### Dashboards/Low-Code Apps - Timeline component: Not possible to edit the template [ID 42449]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a table variable was visualized as a *Timeline* component, it would not be possible to edit its template.
+
+#### Dashboards app: Maps component would incorrectly not reapply its previous selection when the dashboard was refreshed [ID 42496]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you refreshed a dashboard, in some cases, a *Maps* component would incorrectly not reapply its previous selection.

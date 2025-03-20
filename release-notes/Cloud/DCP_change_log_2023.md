@@ -101,6 +101,10 @@ Performance has improved when node and DxM information is retrieved on the *Node
 
 In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Audit* page, allowing users to export audit records in a CSV file. Clicking *Export* in the top-left corner will initiate the export process. A pop-up window will appear, where you can choose the separator to be used in the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
 
+#### 26 July 2023 - Enhancement - Admin app - Upgrade warnings for DxMs [ID 36801]
+
+Upgrading a DxM to a version which requires .NET 6 will now show a warning to inform the user about the requirement and how to install it on their system.
+
 #### 3 July 2023 - Fix - Admin app - Organization user overview will display all DMSs of each user correctly [ID 36795]
 
 In the Admin app, when an organization user had more than one DMS, only the last DMS would be shown in the organization user overview and its details overlay. This issue has now been resolved.
@@ -163,6 +167,14 @@ After you have made sure the [prerequisites](https://github.com/SkylineCommunica
 
 > [!NOTE]
 > You must grant Skyline admin consent to your Microsoft tenant with certain permissions to enable these features. See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
+
+#### 10 February 2023 - Improved UX for share management [ID 35519]
+
+The share management app has been improved:
+
+- Users will no longer briefly see an unexpected form before the correct form loads, thanks to a new loading screen.
+- Users without the necessary permissions will no longer see an incorrect page. Instead, an appropriate error message will now be displayed.
+- Fatal errors will now be shown via notifications, which will remain displayed until dismissed by the user.
 
 #### 9 February 2023 - Fix - Remote access actions incorrectly blocked [ID 35594]
 

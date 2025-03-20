@@ -347,7 +347,7 @@ The previously available Catalog API call to register a new Catalog item or vers
 
 #### 12 September 2024 - Enhancement - Catalog - Catalog item versions with no artifact available on dataminer.services will contain a message [ID 40616]
 
-When a Catalog item version is not available to deploy because its installation file is not registered, a message will now be shown to the user to inform them that the version is not available and that they can contact <support.cloud.ecosystem@skyline.be> to make it available.
+When a Catalog item version is not available to deploy because its installation file is not registered, a message will now be shown to the user to inform them that the version is not available and that they can contact <techsupport@skyline.be> to make it available.
 
 #### 12 September 2024 - New feature - Catalog - Unauthenticated access [ID 40570] [ID 40571] [ID 40572] [ID 40573] [ID 40686]
 
@@ -563,7 +563,7 @@ If the summary is not explicitly defined, the behavior will stay the same, and "
 
 An enhancement has been done to the way timed out requests are handled when the web apps are accessed remotely or when Live Sharing is used.
 
-#### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID 40121]
+#### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID 40121] [ID 40062]
 
 When you deploy a DaaS system from the dataminer.services home page, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
 
@@ -764,7 +764,7 @@ The [ChatOps example scripts on GitHub](https://github.com/SkylineCommunications
 
 From now on, if Remote Access to the web apps is enabled, this also allows access to the folder `/Documents/DMA_COMMON_DOCUMENTS/`, so that it is possible to access the documents available in Cube.
 
-#### 30 May 2024 - Enhancement - Home - DaaS error messages [ID 39810]
+#### 30 May 2024 - Enhancement - Home - DaaS error messages [ID 39810] [ID 39815]
 
 The error messages that are displayed in case something goes wrong during the creation of a DaaS instance have been improved. Instead of a generic error, more specific information is now displayed.
 
@@ -816,7 +816,7 @@ Clicking the logo in the top-left corner of the Catalog app will now open a new 
 
 In the DMS overview in the Admin app, when applicable, a message will now be shown to notify the Admin user that both Agents in a Failover pair need to have the latest CoreGateway DxM version installed so that more information about Failover can be retrieved.
 
-#### 16 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID 39669]
+#### 16 May 2024 - Enhancement - Admin - Organization and DMS settings audits [ID 39669] [ID 39679]
 
 From now on, changing settings for an organization or DMS in the Admin app will generate audit logs. See [consulting dataminer.services audit logs](xref:DCP_Auditing).
 
