@@ -243,6 +243,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLScripting crash when using JScript QActions
+            topicUid: KI_SLScripting_crash_JScript_QActions
           - name: SLNet memory leak related to indexing logic for Cube search bar
             topicUid: KI_SLNet_memory_leak
           - name: Failed getting progress notices during upgrade
