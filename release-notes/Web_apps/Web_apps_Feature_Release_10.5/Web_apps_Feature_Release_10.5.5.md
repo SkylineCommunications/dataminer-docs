@@ -18,6 +18,12 @@ uid: Web_apps_Feature_Release_10.5.5
 
 ## New features
 
+#### Low-Code Apps - Template editor: Configuring actions for layers of type 'Text' [ID 42473]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Layers of type *Text* now also have a *Configure actions* property. This will allow you to configure actions that are executed when a user clicks the text box.
+
 #### Dashboards/Low-Code Apps - Template editor: Duplicating layers [ID 42479]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
