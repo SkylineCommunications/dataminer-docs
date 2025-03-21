@@ -55,10 +55,7 @@ In order for Swarming to work, every Agent needs to be able to access all data o
 
 Enabling Swarming does not affect the licensing for elements.
 
-There is still a limit in play per agent and you cannot swarm elements to go over it.
-Once you swarm an element over and the limit is reached, it will move over, but not start up.
-
-This is the same behavior as if you would have created a new element instead.
+If you have a perpetual-use license, there is a limit to how many elements can be added per Agent. If you swarm an element and this causes the element limit of an Agent to be exceeded, the element will not start up. This is the same behavior as when you go over the element limit by manually creating a new element.
 
 Note that the Swarming request will return as a failure if this happens.
 
