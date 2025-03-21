@@ -62,7 +62,7 @@ As a rule, we recommend a throughput ranging from 100 Mbps to 1 Gbps and a laten
 
 ### Operating System
 
-For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports. However, we recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible. At the moment, Windows Server 2022 is the recommended version.
+For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports. <!-- However, we recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible.  -->At the moment, Windows Server 2022 is the recommended version. Testing for Windows Server 2025 is currently ongoing.
 
 ### Time
 
