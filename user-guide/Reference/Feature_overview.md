@@ -21,6 +21,7 @@ Below you can find an overview of the main features that have been added to Data
 | Augmented operations: [Manually updating an alarm group](xref:Automatic_incident_tracking#manually-updating-an-alarm-group) | DataMiner 10.2.5/10.3.0 <!-- [ID 32729] -->|
 | Augmented operations: [Multivariate trend patterns](xref:Working_with_pattern_matching#multivariate-patterns) | DataMiner Cube 10.3.8/10.4.0<!-- [ID 36731] --><br>Minimum server version: DataMiner 10.3.3/10.4.0 <!-- [ID 35301] -->|
 | Augmented operations: [Proactive cap detection feedback](xref:Providing_user_feedback) | DataMiner 10.5.1/10.6.0<!-- [ID 41371] --> |
+| Augmented operations: [Relational anomaly detection](xref:Relational_anomaly_detection) | DataMiner 10.5.3/10.6.0<!-- [ID 42034] --> |
 | Augmented operations: [Time-scoped relations](xref:Adding_time_scoped_related_parameters_to_a_trend_graph) | DataMiner 10.3.8/10.4.0 <!-- [ID 36434] --> |
 | Automation: [ExtendedErrorInfo](xref:Skyline.DataMiner.Automation.SubScriptOptions.ExtendedErrorInfo) property | DataMiner 10.2.7/10.3.0 <!-- [ID 33306] -->|
 | Automation: [HideUI](xref:Skyline.DataMiner.Automation.Engine.HideUI) method | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--  [ID 39451] [ID 39638] --> |
@@ -46,15 +47,17 @@ Below you can find an overview of the main features that have been added to Data
 | Dashboards/Low-Code Apps: [*Form* component](xref:DashboardForm) and DOM data input | DataMiner web 10.3.6/10.4.0<br>DataMiner 10.1.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#dommanager) <!-- [ID 36124] -->|
 | Dashboards/Low-Code Apps: [*Grid* component](xref:DashboardGrid) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) |
 | Dashboards/Low-Code Apps: [*Icon* component](xref:DashboardIcon) | DataMiner 10.3.1/10.4.0 <!-- [ID 34867] -->|
+| Dashboards/Low-Code Apps: [*Maps* component](xref:DashboardMaps) | DataMiner web 10.4.0 [CU13]/10.5.0 [CU1]/DataMiner 10.5.4<!-- RN 42309 --> |
 | Dashboards/Low-Code Apps: [*Numeric input* component](xref:DashboardNumericInput) | DataMiner web 10.3.5/10.4.0 <!-- [ID 35911] -->|
 | Dashboards/Low-Code Apps: [*Query filter* component](xref:DashboardQueryFilter) | DataMiner 10.3.9/10.4.0<br>DataMiner 10.0.10 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsptp) <!-- [ID 33530] --> |
 | Dashboards/Low-Code Apps: [*Search input* component](xref:DashboardSearchInput) | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 <!-- [ID 39555] -->|
 | Dashboards/Low-Code Apps: [*Stepper* component](xref:DashboardStepper) | DataMiner 10.3.10/10.4.0 <!-- [ID 37200] -->|
 | Dashboards/Low-Code Apps: [Template editor](xref:Template_Editor) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with the soft-launch options [ReportsAndDashboardsDynamicVisuals](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsdynamicvisuals) and [ReportsAndDashboardsScheduler](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsscheduler) |
+| Dashboards/Low-Code Apps: [*Table* component column customization](xref:DashboardTable#column-appearance) | DataMiner web 10.4.1/10.5.0 <!-- [ID 37522] -->|
 | Dashboards/Low-Code Apps: [*Text input* component](xref:DashboardTextInput) | DataMiner web 10.3.5/10.4.0 <!-- [ID 35902] -->|
 | Dashboards/Low-Code Apps: [Variables](xref:Variables) | DataMiner web 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12 <!-- [ID 41039] [ID 41063] [ID 41132] -->|
 | Dashboards/Low-Code Apps: [*Timeline* component](xref:DashboardTimeline) | DataMiner web 10.4.1/10.5.0 <!-- [ID 34761] --><br>DataMiner 10.2.12 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsscheduler) <!-- [ID 37812] -->|
-| Dashboards/Low-Code Apps: [*Table* component column customization](xref:DashboardTable#column-appearance) | DataMiner web 10.4.1/10.5.0 <!-- [ID 37522] -->|
+| Dashboards/Low-Code Apps: [*Toggle* component](xref:Toggle) | DataMiner web 10.4.0 [CU12]/10.5.3<!--RN 41903--> |
 | [Data Aggregator](xref:Data_Aggregator_DxM) | DataMiner 10.2.12/10.3.0 |
 | Databases: [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters) | DataMiner 10.1.3/10.2.0 <!-- [ID 28473] -->|
 | Databases: [Dedicated clustered storage](xref:Dedicated_clustered_storage) | DataMiner 10.1.2/10.2.0 <!-- [ID 28406] -->|
@@ -64,6 +67,7 @@ Below you can find an overview of the main features that have been added to Data
 | Databases: [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool) | DataMiner 10.1.8/10.2.0 <!-- [ID 29005] [ID 30234] -->|
 | DataMiner processes: [Customization of number of simultaneous SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes) | DataMiner 10.2.7/10.3.0 <!-- [ID 33358] -->|
 | DataMiner processes: [Fine-tuning message throttling](xref:Configuration_of_DataMiner_processes#fine-tuning-message-throttling) | DataMiner 10.1.3/10.2.0 <!-- [ID 28335] -->|
+| DataMiner processes: [Running elements in isolation mode](xref:Adding_elements#adding-elements-in-isolation-mode) | DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4<!-- [ID 41757] --> |
 | DataMiner processes: [Separate SLProtocol and SLScripting instances for specific protocol](xref:Configuration_of_DataMiner_processes#configuring-separate-slprotocol-and-slscripting-instances-for-a-specific-protocol) | DataMiner 10.2.5/10.3.0 |
 | DataMiner processes: [SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process) |  DataMiner 10.3.9/10.4.0<br>DataMiner 10.1.8 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#slprotocolasx64) |
 | [DMS connection to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) | DataMiner 10.1.12/10.2.0 |
@@ -93,10 +97,12 @@ Below you can find an overview of the main features that have been added to Data
 | GQI: [Sending/receiving DMS messages](xref:GQI_GQIDMS) | DataMiner web 10.3.4/10.4.0 <!-- [ID 35701] -->|
 | GQI: [Trend data patterns](xref:Get_trend_data_patterns), [Trend data pattern events](xref:Get_trend_data_pattern_events), and [behavioral change events](xref:Get_behavioral_change_events) data sources | DataMiner web 10.3.3/10.4.0 <!-- [ID 34747] [ID 35027] [ID 34965] [ID 35058] -->|
 | GQI: [View relations data source](xref:Get_view_relations) | DataMiner 10.1.4/10.2.0 <!-- [ID 28797] [ID 28877] -->|
+| [GQI DxM](xref:GQI_DxM) | DataMiner web 10.5.0 [CU1]/10.5.4 |
 | [Low-Code Apps](xref:Application_framework) | DataMiner 10.2.5/10.3.0<br>DataMiner 10.0.8 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#applications) <!-- [ID 33040] -->|
+| Low-Code Apps: [*Change variable* actions](xref:LowCodeApps_event_config#changing-a-variable) | DataMiner web 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1<!-- [ID 41253] [ID 41324] --> |
+| Low-Code Apps: [*Copy to clipboard* action](xref:LowCodeApps_event_config#copying-text-to-the-clipboard) | DataMiner web 10.4.0 [CU11]/10.5.2<!--RN 41729-->|
 | Low-Code Apps: [Duplicating an app](xref:Creating_custom_apps#duplicating-an-existing-low-code-app) | DataMiner web 10.3.0 [CU10]/10.4.1 <!-- [ID 37698] -->|
 | Low-Code Apps: [*Interactive Automation script* component](xref:InteractiveAutomationScript) | DataMiner web 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 <!-- [ID 39969] -->|
-| Low-Code Apps: [*Change variable* actions](xref:LowCodeApps_event_config#changing-a-variable) | DataMiner web 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1<!-- [ID 41253] [ID 41324] --> |
 | Low-Code Apps: [*Open monitoring card* action](xref:LowCodeApps_event_config#opening-a-monitoring-card) | DataMiner web 10.3.4/10.4.0 <!-- [ID 35661] -->|
 | Low-Code Apps: [*Show a notification* action](xref:LowCodeApps_event_config#showing-a-notification) | DataMiner 10.3.0 [CU12]/10.4.3 <!-- [ID 38548] -->|
 | Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#configuring-events-and-actions) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
@@ -106,9 +112,11 @@ Below you can find an overview of the main features that have been added to Data
 | Protocols: [Table-based matrix](xref:UIComponentsTableMatrix) | DataMiner 10.3.1/10.4.0 <!-- [ID 34645] -->|
 | Protocols: [Direct view table with table columns of different protocols](xref:Protocol.Params.Param.CrossDriverOptions) | DataMiner 10.2.9/10.3.0 <!-- [ID 33253] --> |
 | [User-defined APIs](xref:UD_APIs) | DataMiner 10.3.6/10.4.0<br>DataMiner 10.3.5 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#userdefinableapi) <!-- [ID 36273] --> |
+| Security: [Custom user group rights presets](xref:Configuring_a_user_group#using-presets-to-assign-rights) | DataMiner Cube 10.4.0 [CU12]/10.5.0 [CU1]/10.5.3<!-- RN 41656 --> |
 | Security: [External user authentication using Azure B2C](xref:SAML_using_Azure_B2C) | DataMiner 10.2.6/10.3.0 <!-- [ID 32714] -->|
 | Security: [External user authentication using Entra ID (formerly Azure AD)](xref:SAML_using_Entra_ID) | DataMiner 10.1.5/10.2.0 <!-- [ID 28444] -->|
 | Security: [External user authentication using Okta](xref:SAML_using_Okta) | DataMiner 10.1.11/10.2.0 <!-- [ID 30749]-->|
+| Service & Resource Management: [Resource availability](xref:Resource_availability) | DataMiner 10.5.3/10.6.0<!-- RN 41894 --> |
 | Spectrum Analysis: [Zooming and panning](xref:Viewing_spectrum_analyzer_traces#zooming-and-panning) | DataMiner Cube DataMiner 10.3.11/10.4.0 <!-- [ID 37284] [ID 37461] --> |
 | [Storage as a Service (STaaS)](xref:STaaS) | DataMiner 10.4.0/10.4.1 |
 | [Swarming](xref:Swarming) | DataMiner 10.5.1/10.6.0<br>DataMiner 10.3.11 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#swarming) (Feature Release only)<!-- [ID 41490] --> |
@@ -126,3 +134,4 @@ Below you can find an overview of the main features that have been added to Data
 | Visual Overview: [[this reservationID] placeholder](xref:Placeholders_for_variables_in_shape_data_values#this-reservationid) | DataMiner 10.2.8/10.3.0 <!-- [ID 33669] -->|
 | Visual Overview: [Table control with Refresh and/or Sort button](xref:Turning_a_shape_into_a_parameter_control#adding-a-refresh-andor-sort-button-to-a-table-control) | DataMiner 10.2.6/10.3.0 <!-- [ID 33346]-->|
 | Visual Overview: [Text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming) | DataMiner 10.2.3/10.3.0 <!-- [ID 32440] --> |
+| Visual Overview (web): [Load balancing](xref:Investigating_Web_Issues#load-balancing) | DataMiner 10.5.2/10.6.0 <!-- [ID 41434] [ID 41728] --> |
