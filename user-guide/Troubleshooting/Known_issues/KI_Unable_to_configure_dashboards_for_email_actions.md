@@ -6,7 +6,7 @@ uid: KI_Unable_to_configure_dashboards_included_in_email_actions
 
 ## Affected versions
 
-From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards.
+From DataMiner Cube 10.4.0 [CU10]/10.5.0/10.5.1 onwards.
 
 ## Cause
 
