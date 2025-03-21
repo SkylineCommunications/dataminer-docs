@@ -172,6 +172,14 @@ Up to now, it would not be possible to export a low-code app of which the name c
 
 When a table variable was visualized as a *Timeline* component, it would not be possible to edit its template.
 
+#### Dashboards/Low-Code Apps: Basic controls incorrectly had to layout sections named 'General' [ID 42487]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, the *Layout* pane of the *Numeric input*, *Search input* and *Toggle* component would incorrectly have two sections named *General*.
+
+The second section named *General* has now been renamed to *Advanced*.
+
 #### Dashboards app: Maps component would incorrectly not reapply its previous selection when the dashboard was refreshed [ID 42496]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
