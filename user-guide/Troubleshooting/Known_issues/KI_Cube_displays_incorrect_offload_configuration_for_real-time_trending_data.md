@@ -6,7 +6,7 @@ uid: KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_dat
 
 ## Affected versions
 
-From DataMiner 10.3.7/10.4.0 onwards.
+From DataMiner Cube 10.3.7/10.4.0 onwards.
 
 ## Cause
 
@@ -14,7 +14,7 @@ A server change introduced in DataMiner 10.3.7/10.4.0 (RN 35679) changed the def
 
 ## Fix
 
-Install DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!--RN 42469-->.
+Available from DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!--RN 42469-->.
 
 ## Description
 

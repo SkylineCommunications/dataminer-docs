@@ -6,7 +6,7 @@ uid: KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search
 
 ## Affected versions
 
-From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards.
+From DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3 onwards.
 
 ## Cause
 
