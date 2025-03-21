@@ -10,11 +10,11 @@ From DataMiner Cube 10.4.0 [CU10]/10.5.0/10.5.1 onwards.
 
 ## Cause
 
-In DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 (RN 41364), a new feature was introduced that highlights dashboards that no longer exist by displaying them in red when an *Email* action is edited. However, the user interface may not always reflect updates made in the business logic, leading to occasional inconsistencies. As a result, users might be unable to configure dashboards for the *Email* action.
+In DataMiner Cube 10.4.0 [CU10]/10.5.0/10.5.1 (RN 41364), a new feature was introduced that highlights dashboards that no longer exist by displaying them in red when an *Email* action is edited. However, the user interface may not always reflect updates made in the business logic, leading to occasional inconsistencies. As a result, users might be unable to configure dashboards for the *Email* action.
 
 ## Fix
 
-Install DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3<!--RN 42240-->.
+Available from DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3<!--RN 42240--> onwards.
 
 ## Description
 
