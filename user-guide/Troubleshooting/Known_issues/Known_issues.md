@@ -195,7 +195,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| [DIS unable to connect to DataMiner Agent](xref:KI_DIS_unable_to_connect) | DIS 3.1.6 | DIS 3.1.7 | March 12, 2025 |
+| [SLScripting crash when using JScript QActions](xref:KI_SLScripting_crash_JScript_QActions) | DataMiner Systems running on Windows 11 24H2 | | March 20, 2025 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [IP address in SAN field of TLS certificate ignored in Windows 2012 R2](xref:KI_Win2012R2_ignores_IP_in_SAN_field) | Systems using Windows 2012 R2 | | March 20, 2023 |
@@ -203,6 +203,7 @@ uid: Known_issues
 | [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails) | From DataMiner 10.1.0/10.0.13 onwards | | - |
 | [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup) | N/A | | - |
 | [Setting a protocol to production takes a long time](xref:KI_Setting_a_protocol_to_production_takes_a_long_time) | N/A | | - |
+| [DIS unable to connect to DataMiner Agent](xref:KI_DIS_unable_to_connect) | DIS 3.1.6 | DIS 3.1.7 | March 12, 2025 |
 | [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [Problem after upgrading Window OS to Windows Server 2022](xref:KI_Problem_after_OS_upgrade_to_win_2022) | Systems that have recently been upgraded to Windows Server 2022 | [Requires configuration](xref:KI_Problem_after_OS_upgrade_to_win_2022) | October 11, 2024 |
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | August 13, 2024 |

@@ -243,6 +243,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLScripting crash when using JScript QActions
+            topicUid: KI_SLScripting_crash_JScript_QActions
           - name: Unable to open trended parameter cards via Cube advanced search
             topicUid: KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search
           - name: Failed getting progress notices during upgrade
