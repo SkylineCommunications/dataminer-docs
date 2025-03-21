@@ -166,3 +166,14 @@ To prepare effectively for the exam:
     - [Class library examples](xref:ClassLibraryExamples)
 
 - Schedule check-ins with your examiner via the booking page if you have any questions.
+
+## Recertification 
+
+The earned DataMiner certifications have a standard validity of **three years**, except for DataMiner Fundamentals which has a lifetime validity.
+
+Three months before the expiration of your certification, you will receive an email notification from Skyline Academy. This email will provide the exact expiration date and detailed instructions on how to purchase your recertification exam voucher.
+
+Recertification involves a verbal exam or assignment designed to assess knowledge of updates and advancements in DataMiner since your initial certification. The exam ensures that your expertise remains up to date with the latest developments.
+
+Upon successful completion of the exam, your certification will be renewed for another three years and you will receive an updated certification badge from Skyline Academy. 
+
