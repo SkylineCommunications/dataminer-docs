@@ -121,3 +121,9 @@ When, in the Surveyor, you right-clicked a migrated or swarmed element, and sele
 In the Protocols & Templates module, you can open an information template by either double-clicking it or right-clicking it and selecting *Open*.
 
 Up to now, when you right-clicked and selected Open, Cube would incorrectly open the most recently selected alarm template or trend template instead.
+
+#### System Center - Database: Offload configuration for real-time trending data displayed incorrectly [ID 42469]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, while configuring trend data offloads, you selected *Trend data* and *Enable data offload* in the *Offloads* section, and then set the offload frequency to "permanently", this would be saved correctly, but displayed incorrectly in DataMiner Cube.
