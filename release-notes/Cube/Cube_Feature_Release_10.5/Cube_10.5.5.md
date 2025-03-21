@@ -18,7 +18,7 @@ uid: Cube_Feature_Release_10.5.5
 
 ## New features
 
-#### Sharing the link to the current Cube session with other users [ID 42389]
+#### Sharing the link to the current Cube session with other users [ID 42389] [ID 42524]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
@@ -28,6 +28,8 @@ To copy the link to the current Cube session, do the following:
 
 1. Open the user menu by clicking the user icon in the top-right corner of the screen.
 1. Click the *Copy* button next to the name of the DataMiner System.
+
+When you hover over this *Copy* button, a tooltip will appear, saying that clicking this button will copy the link to the current session to the Windows clipboard.
 
 ## Changes
 
