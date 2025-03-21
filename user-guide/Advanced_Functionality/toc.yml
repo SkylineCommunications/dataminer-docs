@@ -637,6 +637,8 @@ items:
         topicUid: SwarmingBookings
       - name: Rolling back Swarming
         topicUid: SwarmingRollback
+      - name: Frequently asked questions
+        topicUid: SwarmingFAQ
       - name: Tutorials
         items:
           - name: Enable Swarming Tutorial
