@@ -519,7 +519,7 @@ items:
             topicUid: Flow_operators
       - name: Variables
         topicUid: Variables
-      - name: Specifying data input in an app or dashboard URL
+      - name: Specifying data input in a dashboard or app URL
         topicUid: Specifying_data_input_in_a_URL
       - name: Generic Query Interface (GQI)
         items:
