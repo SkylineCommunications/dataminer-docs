@@ -40,6 +40,12 @@ The exam consist of a verbal exam with one of our official DataMiner trainers. F
 
 The examiner will use a predefined exam plan to ask different questions per module of the training. The questions vary from strictly theoretical questions to showing things on the training DMA.
 
+> [!NOTE]
+>
+> - If you do not pass the exam, you have one free retake.
+> - Exams are recorded to ensure the integrity of the process and to provide a reference for review if needed.
+> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded DevOps Points after you successfully pass the Fundamentals and Configurator exams. For passing the Fundamentals exam, 500 points are awarded, and for passing the Configurator exam, 750 points are awarded.
+
 ### Requirements
 
 - **Exam environment**:
@@ -59,12 +65,6 @@ The examiner will use a predefined exam plan to ask different questions per modu
 - **Prohibited resources**:
 
   - The usage of DataMiner Docs or any other resource is strictly forbidden during the exam.
-
-> [!NOTE]
->
-> - If you do not pass the exam, you have one free retake.
-> - Exams are recorded to ensure the integrity of the process and to provide a reference for review if needed.
-> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded DevOps Points after you successfully pass the Fundamentals and Configurator exams. For passing the Fundamentals exam, 500 points are awarded, and for passing the Configurator exam, 750 points are awarded.
 
 ### Preparation tips
 
@@ -106,3 +106,63 @@ DataMiner Configurator:
 - **Security**: How do you give additional rights to a specific user from a user group?
 - **Views**: What is the purpose of views?
 - **Services**: Create a new service, assign a service protocol, and add one element with all parameters.
+
+## DataMiner Automation exam guide
+
+Are you preparing to take the DataMiner Automation exam? Below you can find all the information you need, including the certification process, the exam format, the scoring criteria, and tips on how to prepare for the exam.
+
+### Certification process
+
+As soon as the ordering process is finalized and your certification process can be started, you will receive an automated email from Skyline Academy with information about the process and the deadline.
+
+After you have received this email, you will have at most **three months** to finalize the certification process, unless otherwise agreed. As long as the process has not been finalized yet, you will receive a reminder email every month, as well as 20, 10, and 5 days before the deadline. However, if you have already scheduled your exam, the final reminders will not be sent. If you do not complete the certification process in time, and the deadline expires, you will receive an email to inform you of this.
+
+You will also receive an email with your user ID and password to access the training DMA in order to practice and to take the exam.
+
+To book an appointment, you will need to use the booking link that you will find in the email you received with information about the start of the certification process.
+
+> [!NOTE]
+> You can cancel or reschedule an appointment up to 96 hours before it starts, using the confirmation email you received when booking the appointment. If you cannot update the appointment online, please contact [Skyline Academy](mailto:academy@skyline.be) or your team of examiners.
+
+### Exam format and grading
+
+The exam consists of a practical exercise. Before taking the exam, you must book an exam check-in via the booking page. During this check-in, your examiner will provide all the necessary information about the exercise. You will then have up to 4 hours to complete the task.
+
+When you have submitted your work, your examiner will evaluate it using an exam validator. You will need a score of 80% or higher to pass and earn your certification.
+
+You will receive your score within 5 business days. If you have any questions about your score, you can book a follow-up check-in via the booking page.
+
+> [!NOTE]
+>
+> - If you do not pass the exam, you have one free retake.
+> - Appointments are recorded to ensure the integrity of the process and to provide a reference for review if needed.
+> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded 750 DevOps Points after you successfully pass the Automation exam.
+
+### Requirements
+
+- **Language**:
+
+  - Exams are conducted in English.
+
+- **Training DMA**:
+
+  - By default, the training DMA will be used to conduct the exam.
+
+### Preparation tips
+
+To prepare effectively for the exam:
+
+- Study materials:
+  - [DataMiner Automation course](https://community.dataminer.services/courses/dataminer-automation/)
+
+  - Interactive Toolkit:
+    - [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit)
+    - [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit)
+    - [Interactive Automation Script Toolkit examples](https://github.com/SkylineCommunications/SLC-AS-Example_InteractiveAutomationScriptToolkit)
+  
+  - System Library:
+    - [Introduction video to DIS Class Library](https://community.dataminer.services/courses/dataminer-automation/lessons/dataminer-integration-studio-dis-class-library/)
+    - [Class library introduction on DataMiner Docs](xref:ClassLibraryIntroduction)
+    - [Class library examples](xref:ClassLibraryExamples)
+
+- Schedule check-ins with your examiner via the booking page if you have any questions.

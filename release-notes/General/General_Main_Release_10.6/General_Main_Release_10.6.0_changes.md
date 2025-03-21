@@ -198,3 +198,9 @@ When, in the *Scheduler* app, a dashboard was exported via an email action, up t
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
 When a trend graph seemed to increase or decrease, in some cases, change points could incorrectly be labeled as a level shift.
+
+#### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
+
+<!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
+
+In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.
