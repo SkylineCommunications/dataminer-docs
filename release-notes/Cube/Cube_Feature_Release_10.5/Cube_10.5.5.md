@@ -78,6 +78,14 @@ When you enable smart baselines for a parameter that has its `historySet` option
 
 In *System Center > System settings*, the *Time to live* section will no longer be available when Cube is connected to a DMS using STaaS.
 
+#### Trending: Miscellaneous enhancements [ID 42461]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of enhancements have been made with regard to trending.
+
+The visibility of Y-axis curves in trend graph legends has been improved, and error and lock handling has been enhanced.
+
 ### Fixes
 
 #### Trending: Problem when loading trend data when the trend graph contained both regular average trend data and trend data related to SLAnalytics [ID 42357]
@@ -105,3 +113,11 @@ Also, when a certain group did no longer contain any tiles due to the filter you
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When, in the Surveyor, you right-clicked a migrated or swarmed element, and selecting *Duplicate*, in the element card of the duplicate element to be created, the *DMA* selection box would not be set to the correct DataMiner Agent.
+
+#### Protocols & Templates module: Problem when trying to open an information template using the right-click menu [ID 42462]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the Protocols & Templates module, you can open an information template by either double-clicking it or right-clicking it and selecting *Open*.
+
+Up to now, when you right-clicked and selected Open, Cube would incorrectly open the most recently selected alarm template or trend template instead.
