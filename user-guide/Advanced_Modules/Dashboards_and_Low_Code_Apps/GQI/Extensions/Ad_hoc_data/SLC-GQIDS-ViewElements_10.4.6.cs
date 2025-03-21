@@ -37,15 +37,13 @@ public sealed class ViewElementsDataSource : IGQIDataSource, IGQIOnInit, IGQIInp
         return new GQIPage(rows);
     }
 
-    private IEnumerable<IDmsElement> GetElements()
+    private IList<IDmsElement> GetElements()
     {
         var connection = _dms.GetConnection();
         var dms = connection.GetDms();
 
         var view = dms.GetViewReference(_viewID);
-        return dms
-            .GetElements()
-            .Where(element => element.Views.Contains(view));
+        return view.Elements;
     }
 
     private GQIRow CreateElementRow(IDmsElement element)
