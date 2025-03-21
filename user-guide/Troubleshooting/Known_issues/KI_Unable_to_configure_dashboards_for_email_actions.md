@@ -14,7 +14,7 @@ In DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 (RN 41364), a new feature was introduce
 
 ## Fix
 
-Install DataMiner 10.4.0 [CU12]/10.5.0/10.5.3<!--RN 42240-->.
+Install DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3<!--RN 42240-->.
 
 ## Description
 
