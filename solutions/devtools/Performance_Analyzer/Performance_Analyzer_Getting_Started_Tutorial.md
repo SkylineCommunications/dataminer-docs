@@ -11,10 +11,8 @@ Expected duration: 25 minutes.
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.5.4.
 
-<!-- Sections in comment below will need to be uncommented when the Kata becomes available on Dojo -->
-<!-- 
 > [!TIP]
-> See also: [Kata #62: Introduction to Performance Analyzer](https://community.dataminer.services/courses/kata-62/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png) -->
+> See also: [Kata #62: Introduction to Performance Analyzer](https://community.dataminer.services/courses/kata-62/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -230,7 +228,7 @@ In this step, you can do an optional exercise to earn DevOps Points.
 
 1. Identify the user for which the processing causes performance issues.
 
-1. Send a screenshot to [devops@skyline.be](mailto:devops@skyline.be)<!--  or upload it on the [Kata page on Dojo](https://community.dataminer.services/courses/kata-62/) -->.
+1. Send a screenshot to [devops@skyline.be](mailto:devops@skyline.be) or upload it on the [Kata page on Dojo](https://community.dataminer.services/courses/kata-62/).
 
 > [!NOTE]
 > The *Performance Analyzer* NuGet is open source. If you want to contribute, you can do so by creating a pull request on the [Skyline.DataMiner.Utils.PerformanceAnalyzer repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.PerformanceAnalyzer).
