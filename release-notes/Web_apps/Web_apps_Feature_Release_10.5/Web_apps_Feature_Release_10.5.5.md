@@ -102,6 +102,14 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### Dashboards/Low-Code Apps: Queries will be sorted alphabetically whenever you close and re-open the Queries section [ID 42452]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, when you created a new query, it would always be added to the bottom of the *Queries* section. From now on, when you create a new query, it will initially be added to the bottom of that section, but when you close the *Queries* section and open it again, the queries will be sorted alphabetically.
+
+The same will now also apply for flows, variables and parameter table filters.
+
 ### Fixes
 
 #### Low-Code Apps: Problem when a 'Close a panel' event was linked to a component action involving a lazy loaded component [ID 42302]
