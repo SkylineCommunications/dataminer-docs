@@ -15,6 +15,9 @@ In case you get an error while triggering an API, defining an API, or installing
   - *UserDefinableApiEndpointInstaller.txt* contains logs from the installation of the DxM if it is installed by a DataMiner upgrade package or via the command line. This will not contain additional logs when you use the dedicated installer for the DxM. A small subset of these log lines will also be available in the *progress.log* DataMiner upgrade package log file and will be displayed during the upgrade.
 - The file *SLUserDefinableApiManager.txt* in the `C:\Skyline DataMiner\Logging\` folder contains logging related to the manager in SLNet that manages the CRUD actions on API tokens/definitions and the API triggers.
 
+> [!TIP]
+> You can also find these logfiles (with exception of the UserDefinableApiEndpointInstaller logfile) in the DataMiner page of the [Cube logging page](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube).
+
 > [!NOTE]
 > When there are more than two Agents in a DMS, the API triggers arriving on an endpoint are forwarded randomly to one of the DataMiner Agents. Keep this in mind when checking the logging. If an HTTP request was sent to the endpoint running on a specific server, there is no guarantee that this trigger will be handled by the DataMiner Agent on that same server. The JSON error responses returned by the endpoint should include a *faultingNode* field that indicates the ID of the DMA that actually handled the request.
 
