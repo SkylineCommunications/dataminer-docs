@@ -166,7 +166,7 @@ namespace Skyline.DataMiner.Scripting
 		int DeleteRow(int tableId, string rowKey);
 
 		/// <summary>
-		/// The ID of the table parameter.
+		/// Removes the specified rows from the specified table.
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
 		/// <param name="rows">The primary keys of the rows to remove.</param>
