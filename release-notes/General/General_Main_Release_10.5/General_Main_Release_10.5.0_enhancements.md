@@ -602,7 +602,7 @@ In other words, from now on, when this soft-launch option is set to true, these 
 
 #### SLNet: Enhanced performance when sending requests to SLDataGateway [ID 40023]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU14]/10.5.0 - FR 10.4.9 -->
 
 Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
 

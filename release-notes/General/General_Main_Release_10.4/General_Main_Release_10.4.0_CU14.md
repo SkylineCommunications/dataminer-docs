@@ -15,6 +15,12 @@ uid: General_Main_Release_10.4.0_CU14
 
 ### Enhancements
 
+#### SLNet: Enhanced performance when sending requests to SLDataGateway [ID 40023]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
+
 #### Security enhancements [ID 42307]
 
 <!-- 42307: MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
