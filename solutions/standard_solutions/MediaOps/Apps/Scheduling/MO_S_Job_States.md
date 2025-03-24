@@ -15,7 +15,7 @@ When a job moves into a Tentative state, the resources assigned in the job will 
 
 <div style="background-color:#348D42;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Confirmed</div>
 
-Once a job is confirmed it indicates that the job will occur and therefor all resources that are (or where) assigned to the job from this stage will be considered for [Cost & Billing](xref:MO_Cost_Billing). 
+Once a job is confirmed it indicates that the job will occur and therefor all resources that are (or where) assigned to the job from this stage will be considered for billing. 
 
 <div style="background-color:#4CEF8E;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Running</div>
 
