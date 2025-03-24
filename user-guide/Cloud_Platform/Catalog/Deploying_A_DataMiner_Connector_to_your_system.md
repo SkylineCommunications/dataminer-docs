@@ -15,6 +15,9 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
 > [!NOTE]
 > From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you install a connector for the first time by deploying it from the DataMiner Catalog, it will automatically be promoted to the production version. However, when you later deploy a new version of the same connector and want it to be set as the production version, you will need to manually [promote this protocol version](xref:Promoting_a_protocol_version_to_production_version). Prior to DataMiner 10.4.10/10.5.0, deploying a connector from the Catalog will never change the production version for that connector in the DataMiner System.
 
+> [!TIP]
+> In the Admin app, you can get an overview of all the deployments that have been done to a DMS. See [Viewing information on deployments](xref:Viewing_info_on_deployments).
+
 ## Deploying a Catalog item to your system with the UI
 
 1. Look up the item in the Catalog. See [Looking up an item in the Catalog](xref:Looking_up_an_item_in_the_catalog).
@@ -41,7 +44,7 @@ To deploy an item from the DataMiner Catalog (e.g. a connector or package) to yo
 
 1. Select the target DataMiner System.
 
-   The item will be pushed to the DataMiner System. In the Admin app, you can check the status of the deployment. See [Viewing information on deployments](xref:Viewing_info_on_deployments).
+   The item will be pushed to the DataMiner System. Next to the *Deploy* button, the status of the deployment will be shown.<!-- RN 42131 -->
 
 ## Deploying a Catalog item to your system with the API
 
