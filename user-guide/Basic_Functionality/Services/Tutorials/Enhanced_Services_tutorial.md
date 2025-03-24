@@ -32,7 +32,7 @@ This tutorial consists of the following steps:
 
 ## Step 1: Deploy tutorial materials from the DataMiner Catalog
 
-1. Go to [Providing a customer-centric system view with services](https://catalog.dataminer.services/details/62840610-072c-4316-9e04-703f7688e857).
+1. Go to [Providing a customer-centric system view with services](https://catalog.dataminer.services/details/62840610-072c-4316-9e04-703f7688e857)
 
 1. Deploy the package to your DataMiner Agent by clicking the *Deploy* button.
 
@@ -65,9 +65,9 @@ At this point, you should have a service which contains two sites. Take time to 
 1. Under *Advanced*, set *Protocol* to *Enhanced Service Tutorial*.
 1. Click apply.
 
-> **Note**
-
-- If you intend to write your own *Service Protocol*, it is recommended to use this connector [Skyline Service Definition Basic](https://catalog.dataminer.services/details/809251d6-724d-499a-9c3c-d41ae1b5492b) as the starting point. The connector already includes many of the standard features required to enhance a service.
+> [!NOTE]
+>
+> - If you intend to develop your own *Service Protocol*, it is recommended to use this connector [Skyline Service Definition Basic](https://catalog.dataminer.services/details/809251d6-724d-499a-9c3c-d41ae1b5492b) as the starting point. The connector already includes many of the standard features required to enhance a service.
 
 You should now see that your service has been enhanced with additional data cards.
 
@@ -91,7 +91,7 @@ For example, the *Elements* card contains relevant information about the managed
 
 You should now see the *Monitor Active Alarms* parameter being monitored. Toggle the parameter to *Enabled* to see the alarms impacting the managed-objects associated with the service.
 
-![BBC News Enhanced service - Alarms card](~/user-guide/images/tutorial_enhanced_services_img03.png).
+![BBC News Enhanced service - Alarms card](~/user-guide/images/tutorial_enhanced_services_img03.png)
 
 Similarly, *Trend*, *Information*, and *Visual* templates can be created to enrich the functionality of the enhanced service.
 
