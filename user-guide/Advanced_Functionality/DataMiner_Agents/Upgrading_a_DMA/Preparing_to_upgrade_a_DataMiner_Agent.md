@@ -155,7 +155,7 @@ The following prerequisite checks are currently available:
 
 - [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards): Scans the DataMiner System for any legacy reports and legacy dashboards. From DataMiner 10.4.0/10.4.1 onwards<!--RN 37922-->, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed): Verifies whether the [*APIDeployment* soft-launch option](xref:Overview_of_Soft_Launch_Options#apideployment) is enabled and obsolete APIs are deployed. From DataMiner 10.4.0 onwards<!--RN 37825-->, this prerequisite is available by default and runs automatically when you upgrade.
+- [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed): Verifies whether the obsolete *APIDeployment* [soft-launch option](xref:SoftLaunchOptions) is enabled and obsolete APIs are deployed. From DataMiner 10.4.0 onwards<!--RN 37825-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify No Amazon Keyspaces](xref:Verify_No_Amazon_Keyspaces): Verifies whether the DataMiner Agent is using the Amazon Keyspaces Service on AWS as a Cassandra-compatible database service, which is no longer supported as of DataMiner 10.3.0 [CU8]/10.3.11. From DataMiner 10.5.0/10.5.3 onwards<!--RN 41914-->, this prerequisite is available by default and runs automatically when you upgrade.
 
