@@ -7,12 +7,12 @@ description: DataMiner soft-launch options activate features that are not yet av
 
 For most soft-launch options, you will need the following file on your DataMiner server: `C:\Skyline DataMiner\SoftLaunchOptions.xml`. If this file is not present yet, you will need to create it. In this file, for each feature you want to activate, you can add a specific tag and set it to the value "true".
 
-For example, this *SoftLaunchOptions.xml* configuration activates the "AlarmSquashing" and "CloudConnectedAgents" features:
+For example, this *SoftLaunchOptions.xml* configuration activates the "BookingSwarming" and "DataAPI" features:
 
 ```xml
 <SLNet>
-   <CloudConnectedAgents>true</CloudConnectedAgents>
-   <AlarmSquashing>true</AlarmSquashing>
+   <BookingSwarming>true</BookingSwarming>
+   <DataAPI>true</DataAPI>
 </SLNet>
 ```
 
