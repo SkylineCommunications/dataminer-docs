@@ -16,7 +16,7 @@ On Windows 11 24H2, SLScripting tries to load *Jscript9Legacy.dll* instead of *J
 
 ## Fix
 
-No fix is available yet.
+As support for JScript in QActions is ending, update your Automation scripts to use C# in QActions instead.
 
 ## Workaround
 
