@@ -39,6 +39,10 @@ When you create a DaaS system, your dataminer.services account will automaticall
 
 You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
 
+#### 29 November 2023 - Enhancement - Extra validation on the username field [ID 37951]
+
+When a [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) system is deployed, the username will now be validated to ensure that no usernames can be added that are longer than 64 characters or that contain special characters.
+
 #### 28 November 2023 - Enhancement - Deploying multiple DaaS systems simultaneously
 
 It is now possible to create more than one DaaS system simultaneously on [dataminer.services](https://dataminer.services).
