@@ -139,6 +139,12 @@ The same will now also apply for flows, variables and parameter table filters.
 
 A number of minor enhancements have been made to the *Time range* component, especially with regard to design and usability.
 
+#### Dashboards/Low-Code Apps - Line & area chart component: 'Hide non-trended parameters' setting will now by default be set to true [ID 42532]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, the *Hide non-trended parameters* setting was by default set to false. From now on, it will by default be set to true.
+
 ### Fixes
 
 #### Low-Code Apps: Problem when a 'Close a panel' event was linked to a component action involving a lazy loaded component [ID 42302]
