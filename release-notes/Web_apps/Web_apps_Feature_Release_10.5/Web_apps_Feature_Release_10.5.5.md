@@ -226,3 +226,9 @@ When a component was linked to GQI table data, up to now, it could lose its GQI-
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 In some cases, the Web API would lose the permission the write to the *C:\\Skyline DataMiner\\Logging\\Web* folder. As a result, it would no longer be allowed to write log entries.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Real-time updates would not restored connections that had been removed [ID 42529]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a connection inside a node edge graph had been removed because of a real-time graph update, up to now, that connection would never re-appear after a subsequent graph update. The update process would incorrectly assume the connection already existed.
