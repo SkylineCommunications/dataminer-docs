@@ -117,7 +117,7 @@ However, you can request for it to be hosted in a different available region wit
 
 If you create a new DataMiner System via <https://dataminer.services>, the data for your system will by default be hosted in the West-Europe region.
 
-However, you can request for it to be hosted in any of the available STaaS regions. For detailed information, refer to [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
+However, you can request for it to be hosted in any of the available STaaS regions. To do so, please contact <daas@dataminer.services>. For detailed information, refer to [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
 
 > [!NOTE]
 > It is perfectly possible to host your DaaS system in one region and your data in another region.
