@@ -135,3 +135,9 @@ Up to now, when you right-clicked and selected Open, Cube would incorrectly open
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When, while configuring trend data offloads, you selected *Trend data* and *Enable data offload* in the *Offloads* section, and then set the offload frequency to "permanently", this would be saved correctly, but displayed incorrectly in DataMiner Cube.
+
+#### Alarm Console: Correlation alarms and incident alarms could appear twice in a newly created alarm tab [ID 42501]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you created a new alarm tab, in some rare cases, correlation alarms or incident alarms would incorrectly appear twice in that tab: once with the correct base alarms and once without any base alarms.

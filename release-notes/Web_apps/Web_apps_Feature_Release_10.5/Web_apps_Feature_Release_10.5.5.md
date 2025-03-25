@@ -197,3 +197,9 @@ In e.g. a *Maps* component or a *Web* component, the `onLoad` event would incorr
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When you refreshed a dashboard, in some cases, a *Maps* component would incorrectly not reapply its previous selection.
+
+#### Dashboards/Low-Code Apps: Problem when components were linked to GQI table data [ID 42499]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a component was linked to GQI table data, up to now, it could lose its GQI-related settings when columns were re-ordered or renamed in that GQI table data.
