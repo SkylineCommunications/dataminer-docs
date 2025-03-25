@@ -135,6 +135,33 @@ You can use up to five heading levels on a single page. If you need more levels,
 
 Headings should always be surrounded by empty lines, so make sure there is an empty line above and below each heading, like in the example above.
 
+## Tabs
+
+You can display content in tabs, which is useful when showing different information based on versions or categories.
+
+Tabs are created using hash symbols similar to headings. Use one more hash than the parent heading level. For example, tabs under the page title (heading level 1) use `##`, while tabs under a level 2 heading use `###`, and so on.
+
+Each tab needs a unique ID to work correctly (e.g. `#tab/tabid-1`, `tab/tabid-2`). Always end the tab section with three asterisks (`***`).
+
+For example:
+
+```md
+
+## Header
+
+### [Tab label 1](#tab/tabid-1)
+
+Content for the first tab.
+
+### [Tab label 2](#tab/tabid-2)
+
+Content for the second tab.
+
+***
+```
+
+Tab headings and ending markers (`***`) should always be surrounded by empty lines, so make sure there is an empty line above and below each heading and ending marker, like in the example above.
+
 ## Tables
 
 To create a table, use pipe characters to show the column edges. Each table should have a header row, which is followed by a row where dashes fill in the space between the pipe characters. For example:
