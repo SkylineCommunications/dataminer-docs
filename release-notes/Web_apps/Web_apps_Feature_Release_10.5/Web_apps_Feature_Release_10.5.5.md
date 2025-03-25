@@ -180,6 +180,12 @@ Up to now, the *Layout* pane of the *Numeric input*, *Search input* and *Toggle*
 
 The second section named *General* has now been renamed to *Advanced*.
 
+#### Dashboards/Low-Code Apps: 'onLoad' event would incorrectly be triggered multiple times [ID 42489]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In e.g. a *Maps* component or a *Web* component, the `onLoad` event would incorrectly be triggered multiple times. From now on, this event will only be triggered once.
+
 #### Dashboards app: Maps component would incorrectly not reapply its previous selection when the dashboard was refreshed [ID 42496]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
