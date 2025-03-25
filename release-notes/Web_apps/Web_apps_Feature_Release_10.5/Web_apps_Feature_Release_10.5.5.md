@@ -36,6 +36,14 @@ In the *Layers* tab, you can now duplicate a layer. To do so, proceed as follows
 > [!NOTE]
 > Up to now, to delete a layer, you had to hover over the layer and click the *Delete* button in the top-right corner. From now on, you need to hover over the layer, click the ellipsis button, and select *Delete*.
 
+#### Dashboards/Low-Code Apps - Template editor: Layer tooltips [ID 42503]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+It is now possible to configure a tooltip for any type of layer (*Icon*, *Text*, *Rectangle*, or *Ellipse*).
+
+When you hover over the layers, the tooltip of the layer in front will be displayed.
+
 ## Changes
 
 ### Breaking changes
@@ -116,7 +124,7 @@ Up to now, when you created a new query, it would always be added to the bottom 
 
 The same will now also apply for flows, variables and parameter table filters.
 
-#### Dashboards/Low-Code Apps - Time range component: Enhancements [ID 42493]
+#### Dashboards/Low-Code Apps - Time range component: Enhancements [ID 42493] [ID 42505]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
