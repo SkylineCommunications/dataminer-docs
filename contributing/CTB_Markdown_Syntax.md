@@ -137,7 +137,7 @@ Headings should always be surrounded by empty lines, so make sure there is an em
 
 ## Tabs
 
-You can display content in tabs, which is useful when showing different information based on versions or categories.
+You can display content in tabs, which is useful when you want to show different information based on versions or categories.
 
 Tabs are created using hash symbols similar to headings. Use one more hash than the parent heading level. For example, tabs under the page title (heading level 1) use `##`, while tabs under a level 2 heading use `###`, and so on.
 
