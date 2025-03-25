@@ -6,11 +6,11 @@ uid: KI_SLNet_memory_leak
 
 ## Affected versions
 
-From DataMiner 10.4.0 [CU11]/10.5.0 [CU0]/10.5.2 onwards.
+From DataMiner 10.5.2 onwards.
 
 ## Cause
 
-SLNet indexes various aspects of elements and protocols for the Cube search bar. By default, this includes all trended parameters. Because of an issue introduced in DataMiner 10.4.0 [CU11]/10.5.0 [CU0]/10.5.2 (RN41643), this is not cleaned up correctly, leading to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.
+SLNet indexes various aspects of elements and protocols for the Cube search bar. By default, this includes all trended parameters. Because of an issue introduced in DataMiner 10.5.2 (RN41643), this is not cleaned up correctly, leading to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.
 
 ## Fix
 
