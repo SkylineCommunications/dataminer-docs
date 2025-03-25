@@ -9,6 +9,7 @@ Via the *Follow* menu, you can activate follow mode for several aspects of DMA c
 To activate follow mode:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+1. Click on the *Follow* button which will open a new window. 
 
 1. Select which aspects of communication should be followed:
 
