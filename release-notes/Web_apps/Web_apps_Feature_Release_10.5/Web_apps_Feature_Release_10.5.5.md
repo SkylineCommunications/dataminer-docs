@@ -211,3 +211,9 @@ When you refreshed a dashboard, in some cases, a *Maps* component would incorrec
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When a component was linked to GQI table data, up to now, it could lose its GQI-related settings when columns were re-ordered or renamed in that GQI table data.
+
+#### Web API could lose the permission the write to the C:\\Skyline DataMiner\\Logging\\Web folder [ID 42513]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, the Web API would lose the permission the write to the *C:\\Skyline DataMiner\\Logging\\Web* folder. As a result, it would no longer be allowed to write log entries.
