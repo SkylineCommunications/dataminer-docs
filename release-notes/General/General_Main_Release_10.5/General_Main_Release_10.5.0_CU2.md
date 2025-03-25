@@ -104,3 +104,13 @@ When a logger table was queried, in some cases, the query would incorrectly not 
 When an element property or a service property was deleted, in some cases, a `KeyNotFoundException` exception could be thrown, especially when one of the elements that had a value for that property was a migrated or a swarmed element.
 
 The property would be deleted from the *PropertyConfiguration.xml* file, but not from the elements or services that had a value for the property in question.
+
+#### Connection issue between SLSNMPManager and SLNet [ID 42547]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When multiple SLSNMPManager processes tried to simultaneously connect to SLNet, or when an element with multiple SNMP connections tried to connect to SLNet, in some cases, the following error would be logged in the Windows log *Application*:
+
+```txt
+(SLNetCOM SLSNMPManager.exe) Failed to connect to SLNet: (Code: 0x800402CD) Skyline.DataMiner.Net.Exceptions.DataMinerCommunicationException: Connection was closed at 15:37 (There's a new connection for this module/agent.)
+```
