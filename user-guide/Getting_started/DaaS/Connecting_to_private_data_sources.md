@@ -28,7 +28,6 @@ To establish this connection:
 
 1. Contact <daas@dataminer.services> to set up a site-to-site VPN connection.
 
-   Skyline will enable an [Azure VPN Gateway](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways) in the virtual network of your DaaS environment. Skyline will use a [Generation 1 VpnGw1](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus) gateway SKU (usually VpnGw1AZ). By default, the IKEv2 protocol will be used.
-
-> [!NOTE]
-> If you would prefer a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq), contact <daas@dataminer.services>.
+   Skyline will enable an [Azure VPN Gateway](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways) in the virtual network of your DaaS environment. By default the [Generation 1 VPN Gateway SKU *VpnGw1AZ*](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus) will be used. If you require another SKU, let us know. 
+   
+   By default, the IKEv2 protocol will be used. If you would prefer a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq), let us know.

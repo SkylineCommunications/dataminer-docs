@@ -17,3 +17,6 @@ uid: Removing_a_DaaS_system
 
 > [!NOTE]
 > If you select *Delete DMS* for a self-managed DataMiner System instead of a DaaS system, this will disconnect the system from dataminer.services. See [Permanently disconnecting from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices).
+> 
+> If your self-managed DataMiner System is a Community Edition or runs in subscription mode, and you disconnect from dataminer.services, your system will stop working after 1 month, unless you convert it to a perpetual license or offline demo license.
+> See also [Switching from subscription mode to perpetual license](xref:Installing_DM_using_the_DM_installer#switching-from-subscription-mode-to-perpetual-license) and [Switching from subscription mode to an offline demo license](xref:Installing_DM_using_the_DM_installer#switching-from-subscription-mode-to-an-offline-demo-license).
