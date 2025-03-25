@@ -44,6 +44,15 @@ It is now possible to configure a tooltip for any type of layer (*Icon*, *Text*,
 
 When you hover over the layers, the tooltip of the layer in front will be displayed.
 
+#### Dashboards/Low-Code Apps - Template editor: New layer of type HTML [ID 42519]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the template editor, you can now add layers of type *HTML*. Adding a layer of type *HTML* will add a text box in which you can add HTML content. It will offer basic syntax highlighting and intellisense.
+
+> [!IMPORTANT]
+> Newly added layers of type *Text* will no longer support HTML content. If you add HTML content to new layers of type *Text*, it will be rendered as plain text instead of HTML. For backward compatibility, HTML code in existing layers of type *Text* will still be rendered as HTML.
+
 ## Changes
 
 ### Breaking changes
