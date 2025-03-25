@@ -246,3 +246,9 @@ In some cases, the Web API would lose the permission the write to the *C:\\Skyli
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When a connection inside a node edge graph had been removed because of a real-time graph update, up to now, that connection would never re-appear after a subsequent graph update. The update process would incorrectly assume the connection already existed.
+
+#### Low-Code Apps: Problem when using the TAB and ENTER keys when adding an action [ID 42539]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you added an action (e.g. *Open monitoring card*), up to now, you had to incorrectly press the TAB key twice to set the focus to the *Link to data* button, and when you then pressed the ENTER key, the picker would not load correctly.
