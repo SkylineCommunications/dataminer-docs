@@ -9,13 +9,10 @@ In this tutorial, you will learn how to enhance a television channel service to 
 The content and screenshots for this tutorial have been created using DataMiner 10.5.4.
 
 Expected duration: 20 minutes.
-
+<!-- 
 > [!TIP]
-> See also:
->
-> - [Providing a customer-centric system view with services](xref:Service_tutorial).
-> - [Kata #XX: Enhancing your service monitoring](https://community.dataminer.services/courses/kata-xx/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png).
-
+> See also: [Kata #XX: Enhancing your service monitoring](https://community.dataminer.services/courses/kata-xx/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png).
+ -->
 ## Prerequisites
 
 - A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
@@ -25,14 +22,14 @@ Expected duration: 20 minutes.
 This tutorial consists of the following steps:
 
 - [Step 1: Deploy tutorial materials from the DataMiner Catalog](#step-1-deploy-tutorial-materials-from-the-dataminer-catalog)
-- [Step 2: Duplicate an existing service and include an extra managed-object](#step-2-duplicate-an-existing-service-and-include-an-extra-managed-object)
-- [Step 3: Enhance your service with a *Service Protocol*](#step-3-enhance-your-service-with-a-service-protocol)
-- [Step 4: Leverage standard functionality, such as *templates* and *visuals*, within the enhanced service](#step-4-leverage-standard-functionality-such-as-templates-and-visuals-within-the-enhanced-service)
-- [Step 5: Monitor your services using the *Dashboards* app](#step-5-monitor-your-services-using-the-dashboards-app)
+- [Step 2: Duplicate an existing service and include an extra managed object](#step-2-duplicate-an-existing-service-and-include-an-extra-managed-object)
+- [Step 3: Enhance your service with a service protocol](#step-3-enhance-your-service-with-a-service-protocol)
+- [Step 4: Leverage standard functionality, such as templates and visuals, within the enhanced service](#step-4-leverage-standard-functionality-such-as-templates-and-visuals-within-the-enhanced-service)
+- [Step 5: Monitor your services using the Dashboards app](#step-5-monitor-your-services-using-the-dashboards-app)
 
 ## Step 1: Deploy tutorial materials from the DataMiner Catalog
 
-1. Go to [Providing a customer-centric system view with services](https://catalog.dataminer.services/details/62840610-072c-4316-9e04-703f7688e857)
+1. Go to [Providing a customer-centric system view with services](https://catalog.dataminer.services/details/62840610-072c-4316-9e04-703f7688e857) in the DataMiner Catalog.
 
 1. Deploy the package to your DataMiner Agent by clicking the *Deploy* button.
 
@@ -43,31 +40,38 @@ When the package has been fully deployed, you will see the following view struct
 
 ![Surveyor](~/user-guide/images/tutorial_services_step1_surveyor.png)
 
-## Step 2: Duplicate an existing service and include an extra managed-object
+## Step 2: Duplicate an existing service and include an extra managed object
 
 1. In the Cube Surveyor, under the *TV Channels* view, right-click the *BBC News* service and select *Duplicate*.
-1. On the *edit* page, change the *Name* to **BBC News Enhanced**.
-1. Click Next.
-1. On the *parameters* page, select the **ird-uk-lon-01** element and set the *Alias* field to **Site 1**.
-1. Click *Add element*, add **ird-uk-lon-02**, and click *OK*.
-1. Select the **ird-uk-lon-02** element and configure the following details:
-    1. Alias: *Site 2*.
-    1. Uncheck *All parameters* and select **Audio Output Level**.
+
+1. On the *edit* page, change the name to `BBC News Enhanced`, and click *Next*.
+
+1. On the *parameters* page, select the *ird-uk-lon-01* element and set the *Alias* field to `Site 1`.
+
+1. Click *Add element*, add *ird-uk-lon-02*, and click *OK*.
+
+1. Select the *ird-uk-lon-02* element and configure the following details:
+
+   1. Set the alias to `Site 2`.
+
+   1. Clear the *All parameters* checkbox and select *Audio Output Level*.
+
 1. Click *Create*.
 
-At this point, you should have a service which contains two sites. Take time to explore the available content.
+At this point, you should have a service that contains two sites. Take your time to explore the available content.
 
 ![BBC News Enhanced service](~/user-guide/images/tutorial_enhanced_services_img01.png)
 
-## Step 3: Enhance your service with a *Service Protocol*
+## Step 3: Enhance your service with a service protocol
 
-1. Right-click the **BBC News Enhanced** service and click *edit*.
-1. Under *Advanced*, set *Protocol* to *Enhanced Service Tutorial*.
-1. Click apply.
+1. Right-click the *BBC News Enhanced* service and click *edit*.
+
+1. Expand the *Advanced* section and set *Protocol* to *Enhanced Service Tutorial*.
+
+1. Click *Apply*.
 
 > [!NOTE]
->
-> - If you intend to develop your own *Service Protocol*, it is recommended to use this connector [Skyline Service Definition Basic](https://catalog.dataminer.services/details/809251d6-724d-499a-9c3c-d41ae1b5492b) as the starting point. The connector already includes many of the standard features required to enhance a service.
+> If you intend to develop your own service protocol, we recommend using [Skyline Service Definition Basic](https://catalog.dataminer.services/details/809251d6-724d-499a-9c3c-d41ae1b5492b) as your starting point. This connector already includes many of the standard features required to enhance a service.
 
 You should now see that your service has been enhanced with additional data cards.
 
@@ -80,7 +84,7 @@ For example, the *Elements* card contains relevant information about the managed
 
 ![BBC News Enhanced service - Elements card](~/user-guide/images/tutorial_enhanced_services_img02.png)
 
-## Step 4: Leverage standard functionality, such as *templates* and *visuals*, within the enhanced service
+## Step 4: Leverage standard functionality, such as templates and visuals, within the enhanced service
 
 1. Right-click the **BBC News Enhanced** service > *Protocols & Templates* > click *View available templates*
 1. In the *Alarm* section, right-click and create a *New* template.
@@ -95,20 +99,26 @@ You should now see the *Monitor Active Alarms* parameter being monitored. Toggle
 
 Similarly, *Trend*, *Information*, and *Visual* templates can be created to enrich the functionality of the enhanced service.
 
-## Step 5: Monitor your services using the *Dashboards* app
+## Step 5: Monitor your services using the Dashboards app
 
 ### Step 5.1: Visualize standard service data in *Dashboards*
 
-1. In *Cube*, go to *Apps* > *Web Apps* and click on *Dashboards*.
-1. In *Dashboards*, click on the *ellipsis* menu and select *Create dashboard*.
-1. In the *Name* field, specify **Visualize service data** and click *Create*.
+1. Create a new dashboard:
 
-You should now have an empty dashboard. Let's learn how to get service data.
+   1. In *Cube*, go to *Apps* > *Web Apps* and click *Dashboards*.
+
+   1. If you are not logged in yet, log in using the same credentials as for Cube.
+
+   1. In the Dashboards app, click on the *...* button at the top of the pane on the left and select *Create dashboard*.
+
+   1. In the *Name* field, specify `Visualize service data`, and click *Create*.
+
+      You should now have an empty dashboard. Let's learn how to get service data.
 
 1. On the right-side panel, go to *Queries* and *Add* (+) and new query with the following configuration:
-    1. Name: *Get standard service*.
-    1. Select data sources: *Get services*.
-    1. Select operator: *Select* > *Name* and *Alarm state*.
+   1. Name: *Get standard service*.
+   1. Select data sources: *Get services*.
+   1. Select operator: *Select* > *Name* and *Alarm state*.
 1. Click *Done* using the pencil icon.
 1. Drag the *Get standard service* query into the dashboard.
 1. In *Visualizations*, select the *Table*.
@@ -122,12 +132,12 @@ You should now have a table displaying the name of all the service in your syste
 ### Step 5.2: Visualize enhanced service data in *Dashboards*
 
 1. Add a new query with the following configuration:
-    1. Name: *Get enhanced service*.
-    1. Select data source: *Get parameters for elements where*.
-    1. Type: *Protocol* > *Service Definition Tutorial*.
-    1. Parameters: Check *Service element status*.
-    1. Operator: *Select*.
-    1. Columns: *Alias*, *Element Name*, *Severity*, *State*, *Critical*, *Major*, *Minor*, *Warning*, *Element ID*, *Service Name*.
+   1. Name: *Get enhanced service*.
+   1. Select data source: *Get parameters for elements where*.
+   1. Type: *Protocol* > *Service Definition Tutorial*.
+   1. Parameters: Check *Service element status*.
+   1. Operator: *Select*.
+   1. Columns: *Alias*, *Element Name*, *Severity*, *State*, *Critical*, *Major*, *Minor*, *Warning*, *Element ID*, *Service Name*.
 1. Click "Done".
 1. Drag the *Get enhanced service* query into the dashboard.
 1. In *Visualizations*, select *Table*.
@@ -143,20 +153,20 @@ You should now have a table displaying the information about the managed-objects
 In this step, we will see how to retrieve data directly from the managed-objects (elements) included in an enhanced service. This is rather useful as it provides a way to build a service-focused monitoring strategy.
 
 1. Add a new query with the following configuration:
-    1. Name: *Get managed-object data*
-    1. Select data source: *Get parameters for elements where*.
-    1. Type: *Protocol*.
-    1. Protocol: *Philips DVS3810*.
-    1. Parameters: *Audio Output Level*.
-    1. Select operator: *Filter*.
-    1. Column: *Element ID*.
-    1. FIlter method: *Regex*.
-    1. Value: Click on *Link to data* and select:
-        1. Data: *Table 2*
-        1. Type: *Tables*
-        1. Property: *Element ID*
-        1. Click *Link*
-    1. Click *Done*.
+   1. Name: *Get managed-object data*
+   1. Select data source: *Get parameters for elements where*.
+   1. Type: *Protocol*.
+   1. Protocol: *Philips DVS3810*.
+   1. Parameters: *Audio Output Level*.
+   1. Select operator: *Filter*.
+   1. Column: *Element ID*.
+   1. FIlter method: *Regex*.
+   1. Value: Click on *Link to data* and select:
+      1. Data: *Table 2*
+      1. Type: *Tables*
+      1. Property: *Element ID*
+      1. Click *Link*
+   1. Click *Done*.
 1. Drag the *Get managed-object data* query into the dashboard.
 1. In *Visualizations*, select *Table*.
 1. Adjust the table size to fit the data to the best extend possible.
