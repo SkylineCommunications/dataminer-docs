@@ -94,9 +94,7 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
 1. Click the *X* to the right of the name of the tab.
 
 > [!NOTE]
-> When you have created a history or sliding window alarms tab, you can edit it afterwards, e.g. to change the applied filter and time range, by clicking the pencil icon next to the tab name.
-> 
-> When you have created a filtered active alarms tab, you can edit it afterwards, e.g. to change the applied filter.
+> When you have created a history, sliding window, or filtered active alarms tab, you can edit it afterwards by clicking the pencil icon next to the tab name. For a history or sliding window alarms tab you can for example change the applied filter and time range, and for a filtered active alarms tab, you can change the applied filter.
 
 ## Changing the column layout in an alarm tab
 
