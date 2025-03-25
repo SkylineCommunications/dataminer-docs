@@ -90,6 +90,12 @@ The visibility of Y-axis curves in trend graph legends has been improved, and er
 
 ### Fixes
 
+#### Visual Overview: Placeholders would incorrectly broadcast the same value twice [ID 42252]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, in some cases, placeholder would incorrectly broadcast the same value twice.
+
 #### Trending: Problem when loading trend data when the trend graph contained both regular average trend data and trend data related to SLAnalytics [ID 42357]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
