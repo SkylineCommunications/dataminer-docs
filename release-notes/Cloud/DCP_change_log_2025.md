@@ -63,7 +63,7 @@ When new items were registered in the Catalog, a property used for sorting was n
 
 When a setting on the DMS settings page was changed in the Admin app, the relevant section went into edit mode, allowing the user to save the changes. However, if the user then opened another DMS settings page, the edit state of the page was not reset, resulting in edit mode actions being displayed while this should not be the case. This issue has been resolved.
 
-#### 6 March 2025 - Enhancement - Catalog API -  Added public endpoint to check can-deploy of version [ID 42415]
+### 6 March 2025 - Enhancement - Catalog API -  Added public endpoint to check can-deploy of version [ID 42415]
 
 Users are now able to check if a version can be deployed without logging in by calling the "can-deploy" endpoint on the public controller.
 
