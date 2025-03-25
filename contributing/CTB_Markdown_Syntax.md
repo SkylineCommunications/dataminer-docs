@@ -141,7 +141,7 @@ You can display content in tabs, which is useful when you want to show different
 
 Tabs are created using hash symbols similar to headings. Use one more hash than the parent heading level. For example, tabs under the page title (heading level 1) use `##`, while tabs under a level 2 heading use `###`, and so on.
 
-Each tab needs a unique ID to work correctly (e.g. `#tab/Linux` or `#tab/Windows`). Always end the tab section with three asterisks (`***`).
+The hash should then be followed by a Markdown link `[]()`. The text of the link will become the text of the tab header. In order for the header to be recognized as a tab, the link itself must start with #tab/ and be followed by a unique ID (e.g. `#tab/Linux` or `#tab/Windows`). Always end the tab section with three asterisks (`***`).
 
 For example:
 
