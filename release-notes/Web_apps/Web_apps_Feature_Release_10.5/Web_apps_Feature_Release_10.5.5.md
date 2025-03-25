@@ -153,6 +153,12 @@ Because of a number of enhancements, scrolling has improved in the date pickers.
 
 For example, up to now, a month would only be focused when all weeks of that month became visible in the calendar. From now on, the month of which most days are visible will be focused.
 
+#### Security enhancements [ID 42565]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Low-Code Apps: Problem when a 'Close a panel' event was linked to a component action involving a lazy loaded component [ID 42302]
