@@ -187,6 +187,15 @@ When a check was performed to determine whether a dashboard or a low-code app ha
 
 In the *Table* and *Parameter table* components, up to now, the search icon would appear at the bottom, blocking part of the table data. From now on, a search icon in the header bar will allow you to open a search bar at the top of the component.
 
+#### DataMiner Object Models: Web API would incorrectly not allow the ModuleID property to be empty when using DomInstanceFieldDescriptor or DomInstanceValueFieldDescriptor [ID 42334]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Although it is not mandatory to specify the `ModuleID` property when using `DomInstanceFieldDescriptor` or `DomInstanceValueFieldDescriptor`, up to now, the Web API would incorrectly not allow the `ModuleID` property to be empty.
+
+> [!NOTE]
+> If no `ModuleID` property is set, only DOM instances in the same module as the `DomInstanceFieldDescriptor` or `DomInstanceValueFieldDescriptor` can be referenced.
+
 #### Dashboards/Low-Code Apps - Node edge graph component: Problem when the topology is updated while a block is being moved [ID 42372]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
