@@ -11,7 +11,7 @@ Before connecting your DataMiner System to dataminer.services, verify that the f
 - All DataMiner Agents in the DataMiner System are running DataMiner version 10.1.12 or higher.
 
   > [!Note]
-  > We recommend that you upgrade to **DataMiner 10.2.0 or higher** to optimally benefit from all dataminer.services features and capabilities. You can find the installer on [DataMiner Dojo](https://community.dataminer.services/dataminer-cloud-pack/).
+  > We recommend that you upgrade to **DataMiner 10.2.0 or higher** to optimally benefit from all dataminer.services features and capabilities. You can find the DataMiner server upgrade packages on [DataMiner Dojo](https://community.dataminer.services/dataminer-server-upgrade-packages/).
 
 - Each DMA that will be connected to dataminer.services can reach the following endpoints:
 
