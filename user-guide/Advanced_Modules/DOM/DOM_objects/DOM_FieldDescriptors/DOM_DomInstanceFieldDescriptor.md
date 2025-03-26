@@ -16,6 +16,9 @@ uid: DOM_DomInstanceFieldDescriptor
 
 Defines a DOM field that references a `DomInstance` by storing the ID of that instance in the form of a `Guid`. This `DomInstance` can exist in a different DOM module if you set the `ModuleID` property to the ID of that module. If no `ModuleID` is set, only DOM instances in the same module as the `DomInstanceFieldDescriptor` can be referenced. There is also a `DomDefinitionIds` list property that can be used to define whether `DomInstances` should be linked to the defined definitions. Both properties are intended for UIs, and their validity and existence is not checked server-side. The configuration is similar to the [`DomInstanceValueFieldDescriptor`](xref:DOM_DomInstanceValueFieldDescriptor).
 
+> [!NOTE]
+> Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!--RN 42334-->, it is mandatory to set the `ModuleID` property.
+
 ## Defining the FieldDescriptor
 
 To enable multiple values, set the `FieldType` to `List<Guid>`.
