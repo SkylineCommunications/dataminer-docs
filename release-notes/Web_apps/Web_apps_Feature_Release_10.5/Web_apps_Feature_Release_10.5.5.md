@@ -264,3 +264,21 @@ When a connection inside a node edge graph had been removed because of a real-ti
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When you added an action (e.g. *Open monitoring card*), up to now, you had to incorrectly press the TAB key twice to set the focus to the *Link to data* button, and when you then pressed the ENTER key, the picker would not load correctly.
+
+#### Dashboards/Low-Code Apps: Date/time pickers would not be reset when closed [ID 42556]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a date/time picker in e.g. a *Time range* component was closed, up to now, it would incorrectly not be reset.
+
+#### Dashboards/Low-Code Apps - Grid component: Grid items would incorrectly get resized when a trigger went off [ID 42560]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, grid items would incorrectly get resized when a trigger went off.
+
+#### Dashboards/Low-Code Apps: Problem when changing the title, style or WebSocket settings of a component [ID 42577]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in edit mode, you were changing the title, the style or the WebSocket settings of a component, the component would incorrectly get updated each time you typed a letter.
