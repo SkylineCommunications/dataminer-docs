@@ -51,17 +51,17 @@ Zooming functionalities are available for the Visual Overview component.
 
 The visual overviews shown in the DataMiner web apps are a lightweight version of their Cube counterparts. As such, not all functionality that is available in Cube will also be available in the web apps. Below, you can find a list of the main features that are not available in the web apps. However, note that this list is **not exhaustive**.
 
-- Spectrum components.
+- [Spectrum components](xref:Embedding_a_Spectrum_Analysis_component).
 
 - Interactivity features of the DataMiner Connectivity Framework (DCF), such as being able to click connection lines.
 
-- Alarm list components.
+- Alarm list components (e.g. an [alarm timeline](xref:Embedding_an_alarm_timeline_component) or [filtered Alarm Console](xref:Making_a_shape_filter_Alarm_Console_tabs_when_clicked)).
 
-- Drag/drop functionalities.
+- [Drag/drop functionalities](xref:Triggering_an_action_when_a_shape_is_dragged_onto_another_shape).
 
-- Router Control components.
+- [Router Control components](xref:Embedding_a_router_control_component).
 
-- Dynamic list components.
+- [Dynamic list components](xref:Creating_a_list_view).
 
 There are also some differences in functionality:
 
