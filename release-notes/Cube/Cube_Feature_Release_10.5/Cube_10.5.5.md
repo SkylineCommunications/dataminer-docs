@@ -141,3 +141,9 @@ When, while configuring trend data offloads, you selected *Trend data* and *Enab
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When you created a new alarm tab, in some rare cases, correlation alarms or incident alarms would incorrectly appear twice in that tab: once with the correct base alarms and once without any base alarms.
+
+#### Correlation : Correlation alarm triggered by another correlation alarm would not be shown as base alarm [ID 42541]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a correlation rule created a correlated alarm that would trigger another correlation alarm that used the first correlated alarm as a base alarm, in some cases, the alarms would incorrectly not be shown as main alarm and base alarm, but as two separate correlated alarms.
