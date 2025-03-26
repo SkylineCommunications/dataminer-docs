@@ -282,3 +282,9 @@ In some cases, grid items would incorrectly get resized when a trigger went off.
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When, in edit mode, you were changing the title, the style or the WebSocket settings of a component, the component would incorrectly get updated each time you typed a letter.
+
+#### Dashboards/Low-Code Apps: Icons of information elements would not change color [ID 42578]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In several components (e.g. the *Time range* component), information elements consisting of an icon and a text box are being used to convey messages to the user. Up to now, when the color of such an information element was changed, only the color of the text would be updated. The color of the icon would incorrectly not be updated.
