@@ -8,6 +8,9 @@ Markdown is a lightweight markup language with plain text formatting syntax. It 
 
 For more detailed info about DFM syntax, see [Docs Markdown reference](https://docs.microsoft.com/en-us/contribute/markdown-reference).
 
+> [!TIP]
+> For some of the syntax below, you can use the built-in toolbar of the *Learn Markdown* VS Code extension. If you enable the *Show Toolbar* setting for this extension in the VS Code settings, a toolbar will be displayed at the bottom of the window containing buttons that allow you to quickly create a [list](#lists), [code block](#code-blocks), [alert](#alerts), etc.
+
 ## Paragraphs
 
 Each paragraph should be separated from the next paragraph by an empty line. If you do not add this empty line, the paragraphs will be combined into one. For example, the markdown below will be generated as one single paragraph:
