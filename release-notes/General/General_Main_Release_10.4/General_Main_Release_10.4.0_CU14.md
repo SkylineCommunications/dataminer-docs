@@ -109,6 +109,14 @@ When an element property or a service property was deleted, in some cases, a `Ke
 
 The property would be deleted from the *PropertyConfiguration.xml* file, but not from the elements or services that had a value for the property in question.
 
+#### 'Unable to set the destination IP' errors would be logged in SLErrors.txt when setting up an SNMPv3 connection [ID 42453]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When an SNMPv3 connection was set up, log entries similar to the example below would be added to the *SLErrors.txt* file:
+
+`RT_QACTIONS_SNMP_v3: Unable to set the destination IP: polling IP=::1; resolved IP=::1; or=APPLY SECURITY FAILED: EMPTY USER NAME`
+
 #### Connection issue between SLSNMPManager and SLNet [ID 42547]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
