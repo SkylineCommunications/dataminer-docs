@@ -153,6 +153,12 @@ Because of a number of enhancements, scrolling has improved in the date pickers.
 
 For example, up to now, a month would only be focused when all weeks of that month became visible in the calendar. From now on, the month of which most days are visible will be focused.
 
+#### Dashboards/Low-Code Apps - Maps component: Visual enhancements [ID 42553]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of minor enhancements have been made to the *Maps* component, especially with regard to the overall look and feel of the UI elements.
+
 #### Security enhancements [ID 42565]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
