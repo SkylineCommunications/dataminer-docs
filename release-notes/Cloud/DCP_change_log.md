@@ -130,12 +130,9 @@ On the Catalog details page, if the publisher is not from your currently selecte
 
 On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
 
-#### 11 November 2024 - Enhancement - Catalog - Allow all version formats to be registered [ID 41243]
+#### 11 November 2024 - Enhancement - Catalog - All version formats supported for new item versions [ID 41243]
 
-From now on, the catalog API now allows all formats when registering a version.
-Versions that don't start with "x.x.x.x" or "x.x.x" will be put in an "other" range.
-
-Versions with suffixes (e.g. -alpha, -beta, -CUxxx, ...) will be added to their respective ranges.
+When an item version is registered, the Catalog API will now allow all version formats. If a version does not start with "x.x.x.x" or "x.x.x", it will be put in an "other" range. Versions with suffixes (e.g. -alpha, -beta, -CUxxx, etc.) will be added to their respective ranges.
 
 #### 7 November 2024 - Fix - Catalog - Version info for items without version stayed in loading state [ID 41325]
 
@@ -470,10 +467,9 @@ Numbers in the usage table are now formatted with K, M, or B suffixes to improve
 
 Users can now view documentation for all items, if provided.
 
-#### 26 July 2024 - Enhancement - Catalog API - Implement a max amount of 5 tags [ID 40306]
+#### 26 July 2024 - Enhancement - Catalog API - Maximum amount of 5 tags implemented for Catalog items [ID 40306]
 
-From now on, the catalog only allows a max of 5 tags on a catalog item.
-If more than 5 tags are specified the API will return an error saying "too many tags were supplied, a max of 5 is allowed".
+From now on, the Catalog only allows a maximum of 5 tags for a Catalog item. If more than 5 tags are specified, the API will return an error saying "Too many tags were supplied, a max of 5 is allowed".
 
 #### 23 July 2024 - Fix - Catalog - Return button spanning whole height of container [ID 40245]
 
@@ -695,10 +691,9 @@ In the Catalog, the versions and ranges shown when you view an item will now hav
 
 When you view a connector item in the Catalog, the *Versions* tab will now group all the versions by range. Ranges are defined by the first three numbers of a version.
 
-#### 3 July 2024 - Enhancement - Catalog - Show recommended version for each published range [ID 40101]
+#### 3 July 2024 - Enhancement - Catalog - Recommended version shown for each published range [ID 40101]
 
-A user will now see some recommended versions when opening the versions tab of a catalog item.
-These recommended versions are the latest (published) version of every active range.
+When you open the Versions tab for a Catalog item, recommended versions will now be shown. These are the latest (published) versions of each active range.
 
 #### 19 June 2024 - Fix - Remote Access and Live Sharing connection failing when DMA went offline [ID 39983]
 
@@ -837,9 +832,9 @@ In the DMS overview in the Admin app, when applicable, a message will now be sho
 
 From now on, changing settings for an organization or DMS in the Admin app will generate audit logs. See [consulting dataminer.services audit logs](xref:DCP_Auditing).
 
-#### 16 May 2024 - Fix - Catalog - Clarified success message after registering an item [ID 39652]
+#### 16 May 2024 - Fix - Catalog - Incorrect success message after registering an item [ID 39652]
 
-The message after registering a catalog item now specifies you are able to the returned ID in an API call instead of a GitHub workflow.
+The message that is shown when the registration of a Catalog item is successful incorrectly referred to a GitHub workflow. Now, it will instead specify that you can use the returned ID in an API call.
 
 #### 10 May 2024 - Enhancement - Admin - More information included in DMS overview [ID 39563]
 

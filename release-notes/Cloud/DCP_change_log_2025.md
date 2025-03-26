@@ -63,29 +63,27 @@ When new items were registered in the Catalog, a property used for sorting was n
 
 When a setting on the DMS settings page was changed in the Admin app, the relevant section went into edit mode, allowing the user to save the changes. However, if the user then opened another DMS settings page, the edit state of the page was not reset, resulting in edit mode actions being displayed while this should not be the case. This issue has been resolved.
 
-### 6 March 2025 - Enhancement - Catalog API -  Added public endpoint to check can-deploy of version [ID 42415]
+### 6 March 2025 - Enhancement - Catalog API - Public endpoint added to check if version can be deployed [ID 42415]
 
-Users are now able to check if a version can be deployed without logging in by calling the "can-deploy" endpoint on the public controller.
+You can now check whether a version can be deployed without logging in, using the "can-deploy" endpoint on the public controller.
 
 ### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
 A new call is available that allows users to get all the Catalog item types without the need to authenticate.
 
-### 20 February 2025 - Fix - Catalog - Deploy button will be shown even when switching views [ID 42317]
+### 20 February 2025 - Fix - Catalog - Deploy button not shown when switching pages [ID 42317]
 
-Fixed an issue that could prevent the deploy button from being shown when quickly switching to the versions view.
+When a user quickly switched to the *Versions* page, it could occur that the *Deploy* button incorrectly was not shown.
 
-### 20 February 2025 - Fix - Catalog - Vendor logo now correctly falls back to default icon [ID 42295]
+### 20 February 2025 - Fix - Catalog - Vendor logo not shown correctly [ID 42295]
 
-Fixed a bug that showed the "Vendor logo" alt text when the image could not be found.
-The image also has a nicer loading state.
+When the image for a vendor logo could not be shown, it could occur that instead the "Vendor logo" alt text was shown. Now it will instead correctly fall back to the default icon, and the loading state of the image has also been improved.
 
-### 20 February 2025 - Enhancement - DataMiner.services - Removed login barrier [ID 42246]
+### 20 February 2025 - Enhancement - DataMiner.services - Home app now accessible without login + improved authentication flow [ID 42246]
 
-Users no longer need to log in to view the home app.
-Some skeleton loaders have been added for the dms-row and its fields.
-The deploy page still requires authentication.
-When something goes wrong during the authentication flow, the user will now see a message instead of being redirected to the login.
+Users now no longer need to log in to view the home app. A default view will be loaded in that case. The deploy page will still require authentication.
+
+In addition, when something goes wrong during the authentication flow, users will now see a message instead of being redirected to the login.
 
 ### 11 February 2025 - Enhancement - Catalog - Deployment status shown on details page [ID 42131]
 
