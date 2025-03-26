@@ -16,7 +16,10 @@ DaaS can communicate with any cloud service as long as it has a public endpoint 
 
 DaaS can also communicate with any public APIs such as Slack API, Open Weather Map API, Trello API, YouTube API, GitHub API, etc.
 
-Each DaaS instance also has a public IP so it can receive SNMP traps.
+Each DaaS instance also has a public IP so it can receive SNMP traps. If your DaaS instance has to be able to receive SNMP traps on its public interface, please contact <daas@dataminer.services> to activate this.
+
+> [!CAUTION]
+> Opening up ports on a public interface poses a security risk. Consider using a VPN gateway instead. For more details, see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources).
 
 ## Publicly available data sources
 

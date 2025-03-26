@@ -29,3 +29,4 @@ uid: Frameworks_and_Solutions_Tutorials
 | Name | Description |
 |--|--|
 | [Getting started with the Smart Trap Processor](xref:Smart_Trap_Processor_Tutorial) | Learn to configure trap rules in different ways to process traps. |
+| [Getting started with the Performance Analyzer](xref:Performance_Analyzer_Getting_Started_Tutorial) | Learn how to use the Performance Analyzer app to identify and resolve performance issues in a solution. |

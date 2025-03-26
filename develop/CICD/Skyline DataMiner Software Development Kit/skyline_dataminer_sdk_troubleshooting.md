@@ -74,7 +74,7 @@ winget install Microsoft.DotNet.SDK.8
 1. If the issue still persists, manually **download the SDK** using the following command:
 
    ```sh
-   dotnet tool install --global Skyline.DataMiner.Sdk.Download --version 1.0.1
+   dotnet tool install --global Skyline.DataMiner.Sdk.Download
    dataminer-sdk-download
    ```
 

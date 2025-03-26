@@ -86,7 +86,7 @@ This issue typically resolves itself. If it persists, contact <staas@dataminer.s
 
 ## The API Deployment Manager failed to initialize
 
-If the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is enabled in *SoftLaunchOptions.xml*, the following alarm will be shown in DataMiner Cube:
+If the obsolete *APIDeployment* [soft-launch option](xref:SoftLaunchOptions) is enabled in *SoftLaunchOptions.xml*, the following alarm will be shown in DataMiner Cube:
 
 ```txt
 APIDeploymentManager failed to initialize, retrying. Check SLAPIDeploymentManager.txt for additional information.
@@ -98,7 +98,7 @@ In the *SLDBConnection.txt* log file, you will find this error:
 2023/10/10 20:30:18.308|SLDBConnection|SLDataGateway.Repositories|INF|0|354|2023-10-10T20:30:18.302|ERROR|Repository.RepositoryStorageProvider.DeployerToken|Refreshing storage [failed]: SLDataGateway.API.Types.Exceptions.StorageTypeNotFoundException: No storage type found for DataType: DeployerToken
 ```
 
-The [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is **not supported** on systems using STaaS. To resolve this issue, remove the option from *SoftLaunchOptions.xml*.
+The *APIDeployment* option is obsolete and is **not supported** on systems using STaaS. To resolve this issue, remove the option from *SoftLaunchOptions.xml*.
 
 ## Connector-specific issues
 

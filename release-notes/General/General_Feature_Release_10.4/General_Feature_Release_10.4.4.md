@@ -448,6 +448,14 @@ When a StorageModule client requests data to be stored, in some cases, a subscri
 
 From now on, only the final retry will be logged as error. All prior retries will only be logged when the log level is set to "debug".
 
+#### DataMiner Cube: 'Search for alarms' would list alarms with timestamps according to the local time zone of the client computer [ID 38899]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.4 -->
+
+Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
+
+From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e. the local time zone of the DataMiner Agent to which the Cube client is connected.
+
 #### Problem with SLLog when stopping or restarting DataMiner [ID 38902]
 
 <!-- MR 10.3.0 [CU13] / 10.4.0 [CU1] - FR 10.4.4 -->

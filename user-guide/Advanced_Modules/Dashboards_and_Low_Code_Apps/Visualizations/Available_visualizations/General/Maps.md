@@ -119,24 +119,28 @@ The following actions are available:
   > [!TIP]
   > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay)
 
-## Zooming
+## Using the maps component in read mode
 
-Zooming functionalities are available for the maps component.
+- **Zooming functionalities** are available for the maps component.
 
-- From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
+  - From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
 
-  - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
+    - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
 
-  - When this setting is disabled: Scroll up or down to zoom in or out.
+    - When this setting is disabled: Scroll up or down to zoom in or out.
 
-- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017--> up to DataMiner 10.4.0 [CU9]/10.4.12:
+  - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017--> up to DataMiner 10.4.0 [CU9]/10.4.12:
 
-  - To zoom in, press Ctrl while scrolling up.
+    - To zoom in, press Ctrl while scrolling up.
 
-  - To zoom out, press Ctrl while scrolling down.
+    - To zoom out, press Ctrl while scrolling down.
 
-- Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9:
+  - Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9:
 
-  - To zoom in, scroll up.
+    - To zoom in, scroll up.
 
-  - To zoom out, scroll down.
+    - To zoom out, scroll down.
+
+- To **pan the map**, press and hold CTRL, then click and hold the scroll wheel while dragging the pointer in any direction.
+
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a marker on the map**, it will by default be highlighted with a blue color. This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Maps #* > *Selected markers*) is used in a linked component, clearly indicating which data is driving the content in the linked component.

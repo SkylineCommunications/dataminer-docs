@@ -18,7 +18,7 @@ uid: Cube_Feature_Release_10.5.5
 
 ## New features
 
-#### Sharing the link to the current Cube session with other users [ID 42389]
+#### Sharing the link to the current Cube session with other users [ID 42389] [ID 42524]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
@@ -28,6 +28,8 @@ To copy the link to the current Cube session, do the following:
 
 1. Open the user menu by clicking the user icon in the top-right corner of the screen.
 1. Click the *Copy* button next to the name of the DataMiner System.
+
+When you hover over this *Copy* button, a tooltip will appear, saying that clicking this button will copy the link to the current session to the Windows clipboard.
 
 ## Changes
 
@@ -78,7 +80,21 @@ When you enable smart baselines for a parameter that has its `historySet` option
 
 In *System Center > System settings*, the *Time to live* section will no longer be available when Cube is connected to a DMS using STaaS.
 
+#### Trending: Miscellaneous enhancements [ID 42461]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of enhancements have been made with regard to trending.
+
+The visibility of Y-axis curves in trend graph legends has been improved, and error and lock handling has been enhanced.
+
 ### Fixes
+
+#### Visual Overview: Placeholders would incorrectly broadcast the same value twice [ID 42252]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, in some cases, placeholder would incorrectly broadcast the same value twice.
 
 #### Trending: Problem when loading trend data when the trend graph contained both regular average trend data and trend data related to SLAnalytics [ID 42357]
 
@@ -86,8 +102,54 @@ In *System Center > System settings*, the *Time to live* section will no longer 
 
 When a trend graph contained both regular average trend data and trend data related to SLAnalytics, in some rare cases, the trend graph could get stuck while loading that data.
 
+#### Trending: Problem when you drilled down to a parameter from a Data Display subpage [ID 42373]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you drilled down to a parameter by clicking a button on a Data Display subpage, in some cases, the trend graph would incorrectly be empty and the name of the parameter in both the title and the body of the window would be incorrect.
+
+#### DataMiner Cube desktop app: Problem when pressing certain keys while entering a search string in the start window [ID 42437]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in the start window of the DataMiner Cube desktop app, you entered a search string in the search box and then pressed e.g. the left arrow key to position the cursor in the text you entered, up to now, the cursor would incorrectly not stay in the filter box. Instead, the key press would cause a different tile to be selected.
+
+Also, when a certain group did no longer contain any tiles due to the filter you had entered, up to now, the empty group would incorrectly stay visible.
+
 #### DMA selection box of duplicate element to be created would not be set to the correct DataMiner Agent [ID 42438]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When, in the Surveyor, you right-clicked a migrated or swarmed element, and selecting *Duplicate*, in the element card of the duplicate element to be created, the *DMA* selection box would not be set to the correct DataMiner Agent.
+
+#### Protocols & Templates module: Problem when trying to open an information template using the right-click menu [ID 42462]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the Protocols & Templates module, you can open an information template by either double-clicking it or right-clicking it and selecting *Open*.
+
+Up to now, when you right-clicked and selected Open, Cube would incorrectly open the most recently selected alarm template or trend template instead.
+
+#### System Center - Database: Offload configuration for real-time trending data displayed incorrectly [ID 42469]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, while configuring trend data offloads, you selected *Trend data* and *Enable data offload* in the *Offloads* section, and then set the offload frequency to "permanently", this would be saved correctly, but displayed incorrectly in DataMiner Cube.
+
+#### Alarm Console: Correlation alarms and incident alarms could appear twice in a newly created alarm tab [ID 42501]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you created a new alarm tab, in some rare cases, correlation alarms or incident alarms would incorrectly appear twice in that tab: once with the correct base alarms and once without any base alarms.
+
+#### Correlation : Correlation alarm triggered by another correlation alarm would not be shown as base alarm [ID 42541]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a correlation rule created a correlated alarm that would trigger another correlation alarm that used the first correlated alarm as a base alarm, in some cases, the alarms would incorrectly not be shown as main alarm and base alarm, but as two separate correlated alarms.
+
+#### Not possible to open parameter cards from the Search pane [ID 42552]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in the *Search* pane, you right-clicked a parameter in the search results and selected e.g. *Open in new card*, the parameter card would refuse to open.

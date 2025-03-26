@@ -18,13 +18,152 @@ uid: Web_apps_Feature_Release_10.5.5
 
 ## New features
 
-*No new features have been added yet.*
+#### Low-Code Apps - Template editor: Configuring actions for layers of type 'Text' [ID 42473]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Layers of type *Text* now also have a *Configure actions* property. This will allow you to configure actions that are executed when a user clicks the text box.
+
+#### Dashboards/Low-Code Apps - Template editor: Duplicating layers [ID 42479]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the *Layers* tab, you can now duplicate a layer. To do so, proceed as follows:
+
+1. Hover over the layer that you want to duplicate, and click the ellipsis button ("...").
+1. Select *Duplicate*.
+
+> [!NOTE]
+> Up to now, to delete a layer, you had to hover over the layer and click the *Delete* button in the top-right corner. From now on, you need to hover over the layer, click the ellipsis button, and select *Delete*.
+
+#### Dashboards/Low-Code Apps - Template editor: Layer tooltips [ID 42503]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+It is now possible to configure a tooltip for any type of layer (*Icon*, *Text*, *Rectangle*, or *Ellipse*).
+
+When you hover over the layers, the tooltip of the layer in front will be displayed.
+
+#### Dashboards/Low-Code Apps - Template editor: New layer of type HTML [ID 42519]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the template editor, you can now add layers of type *HTML*. Adding a layer of type *HTML* will add a text box in which you can add HTML content. It will offer basic syntax highlighting and intellisense.
+
+> [!IMPORTANT]
+> Newly added layers of type *Text* will no longer support HTML content. If you add HTML content to new layers of type *Text*, it will be rendered as plain text instead of HTML. For backward compatibility, HTML code in existing layers of type *Text* will still be rendered as HTML.
 
 ## Changes
 
+### Breaking changes
+
+#### Dashboards/Low-Code Apps - Timeline component: Enhanced performance [ID 42432]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, overall performance of the *Timeline* component has increased, especially when the timeline in question contains a large number of groups.
+
+> [!IMPORTANT]
+> In some cases, this change will break existing setups. A *Timeline* component will now only load up to 10000 items, timeline groups will now be sorted, and real-time updates will no longer be applied when using e.g. a DOM instances data source.
+
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Numeric' [ID 42132]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+The UI component `UIBlockType.Numeric` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### Low-Code Apps - Interactive Automation scripts: Enhancements made to redesigned UI components 'StaticText' and 'CheckBox' [ID 42210]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of enhancements have been made to the redesigned UI components `UIBlockType.StaticText` and `UIBlockType.CheckBox`.
+
+- When the text in a redesigned `UIBlockType.StaticText` component does not fit the width of the component, it will now automatically be ellipsed and when you hover over the component, the full text will be displayed in a tooltip.
+
+- A redesigned `UIBlockType.CheckBox` component will now display its label in a tooltip if no tooltip was configured in its settings.
+
+  > [!NOTE]
+  > By design, no tooltips can be shown on mobile devices.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'FileSelector' [ID 42231]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+The UI component `UIBlockType.FileSelector` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Treeview' [ID 42279]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+The UI component `UIBlockType.Treeview` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'Parameter' [ID 42401]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+The UI component `UIBlockType.Parameter` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
+#### Dashboards/Low-Code Apps: Queries will be sorted alphabetically whenever you close and re-open the Queries section [ID 42452]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, when you created a new query, it would always be added to the bottom of the *Queries* section. From now on, when you create a new query, it will initially be added to the bottom of that section, but when you close the *Queries* section and open it again, the queries will be sorted alphabetically.
+
+The same will now also apply for flows, variables and parameter table filters.
+
+#### Dashboards/Low-Code Apps - Time range component: Enhancements [ID 42493] [ID 42505]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of minor enhancements have been made to the *Time range* component, especially with regard to design and usability.
+
+#### Dashboards/Low-Code Apps - Line & area chart component: 'Hide non-trended parameters' setting will now by default be set to true [ID 42532]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, the *Hide non-trended parameters* setting was by default set to false. From now on, it will by default be set to true.
+
+#### Dashboards/Low-Code Apps - Time range component: Enhanced scrolling behavior in the date pickers [ID 42537]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, scrolling has improved in the date pickers.
+
+For example, up to now, a month would only be focused when all weeks of that month became visible in the calendar. From now on, the month of which most days are visible will be focused.
+
+#### Dashboards/Low-Code Apps - Maps component: Visual enhancements [ID 42553]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of minor enhancements have been made to the *Maps* component, especially with regard to the overall look and feel of the UI elements.
+
+#### Security enhancements [ID 42565]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -81,3 +220,71 @@ Up to now, it would not be possible to export a low-code app of which the name c
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When a table variable was visualized as a *Timeline* component, it would not be possible to edit its template.
+
+#### Dashboards/Low-Code Apps: Basic controls incorrectly had to layout sections named 'General' [ID 42487]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, the *Layout* pane of the *Numeric input*, *Search input* and *Toggle* component would incorrectly have two sections named *General*.
+
+The second section named *General* has now been renamed to *Advanced*.
+
+#### Dashboards/Low-Code Apps: 'onLoad' event would incorrectly be triggered multiple times [ID 42489]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In e.g. a *Maps* component or a *Web* component, the `onLoad` event would incorrectly be triggered multiple times. From now on, this event will only be triggered once.
+
+#### Dashboards app: Maps component would incorrectly not reapply its previous selection when the dashboard was refreshed [ID 42496]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you refreshed a dashboard, in some cases, a *Maps* component would incorrectly not reapply its previous selection.
+
+#### Dashboards/Low-Code Apps: Problem when components were linked to GQI table data [ID 42499]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a component was linked to GQI table data, up to now, it could lose its GQI-related settings when columns were re-ordered or renamed in that GQI table data.
+
+#### Web API could lose the permission the write to the C:\\Skyline DataMiner\\Logging\\Web folder [ID 42513]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, the Web API would lose the permission the write to the *C:\\Skyline DataMiner\\Logging\\Web* folder. As a result, it would no longer be allowed to write log entries.
+
+#### Dashboards/Low-Code Apps - Node edge graph component: Real-time updates would not restored connections that had been removed [ID 42529]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a connection inside a node edge graph had been removed because of a real-time graph update, up to now, that connection would never re-appear after a subsequent graph update. The update process would incorrectly assume the connection already existed.
+
+#### Low-Code Apps: Problem when using the TAB and ENTER keys when adding an action [ID 42539]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you added an action (e.g. *Open monitoring card*), up to now, you had to incorrectly press the TAB key twice to set the focus to the *Link to data* button, and when you then pressed the ENTER key, the picker would not load correctly.
+
+#### Dashboards/Low-Code Apps: Pickers would not be reset when closed [ID 42556]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a picker in e.g. a *Time range* component was closed, up to now, it would incorrectly not be reset.
+
+#### Dashboards/Low-Code Apps - Grid component: Grid items would incorrectly get resized when a trigger went off [ID 42560]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, grid items would incorrectly get resized when a trigger went off.
+
+#### Dashboards/Low-Code Apps: Problem when changing the title, style or WebSocket settings of a component [ID 42577]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in edit mode, you were changing the title, the style or the WebSocket settings of a component, the component would incorrectly get updated each time you typed a letter.
+
+#### Dashboards/Low-Code Apps: Icons of information elements would not change color [ID 42578]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In several components (e.g. the *Time range* component), information elements consisting of an icon and a text box are being used to convey messages to the user. Up to now, when the color of such an information element was changed, only the color of the text would be updated. The color of the icon would incorrectly not be updated.
