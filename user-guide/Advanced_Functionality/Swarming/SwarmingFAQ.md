@@ -44,7 +44,7 @@ If you have a perpetual-use license, there is a limit to how many elements can b
 
 ## How do I know why my element is not swarmable?
 
-The only way to see this in the UI at present is to attempt to swarm the element and look at the error message.
+The only way to see this at present is to attempt to swarm the element via the Automation API and look at the error message.
 
 ## How do Agents know which elements to host when starting up?
 
