@@ -65,6 +65,12 @@ When multiple users of the same user group requested the same mobile visual over
 
 Up to now, aggregation alarms would not work as intended on DataMiner Systems using a Cassandra Cluster database or Storage as a Service (STaaS).
 
+#### Problem with SLElement when a DVE child element is deleted while the DVE main element is in a timeout state [ID 42137]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+In some rare cases, an error could occur in SLElement when a DVE child element was deleted while the DVE main element was in a timeout state.
+
 #### Web visual overviews: Incorrect load balancing when users were a member of the same groups [ID 42291]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
