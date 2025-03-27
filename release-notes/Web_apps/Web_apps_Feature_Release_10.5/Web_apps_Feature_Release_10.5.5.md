@@ -321,3 +321,9 @@ When no layers were visible or selected in a *Maps* component, it would incorrec
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 In some cases, empty query nodes (i.e. nodes that did not contain any value) would incorrectly not be marked as null.
+
+#### Low-Code Apps: 'Fetch the data' action would not always be triggered [ID 42601]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, a *Fetch the data* action would incorrectly not get triggered.
