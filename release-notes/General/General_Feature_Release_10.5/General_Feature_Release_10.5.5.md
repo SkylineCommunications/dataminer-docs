@@ -76,7 +76,7 @@ The output will be stored in the following file:
 
 GQI recording, a debugging feature that allowed you to save GQI communication and replay it in a lab environment, has now been removed from the GQI DxM.
 
-#### No notice will appear anymore when a DMA that is not using Indexing Engine has an IDP license but no ServiceManager license [ID 42574]
+#### DataMiner IDP license notice will no longer appear [ID 42574]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
@@ -86,7 +86,7 @@ Since DataMiner version 10.1.0/1.0.0.8, the following notice would appear when a
 DataMiner IDP is licensed, but no Elasticsearch database is active on the system. Therefore, scheduled workflows are not available.
 ```
 
-From now on, this notice will no longer appear.
+As DataMiner IDP no longer requires nor a separate license nor an Indexing Engine, from now on, this notice will no longer appear.
 
 ### Fixes
 

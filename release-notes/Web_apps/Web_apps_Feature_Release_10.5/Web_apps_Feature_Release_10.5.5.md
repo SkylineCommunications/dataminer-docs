@@ -303,3 +303,15 @@ When, in edit mode, you were changing the title, the style or the WebSocket sett
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 In several components (e.g. the *Time range* component), information elements consisting of an icon and a text box are being used to convey messages to the user. Up to now, when the color of such an information element was changed, only the color of the text would be updated. The color of the icon would incorrectly not be updated.
+
+#### Dashboards/Low-Code Apps - Maps component: 'Fetch the data' action could not be executed when no layers were visible or selected [ID 42579]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When no layers were visible or selected in a *Maps* component, it would incorrectly not be possible to execute a *Fetch the data* action.
+
+#### Dashboards/Low-Code Apps: Empty query nodes would incorrectly not be marked as null [ID 42588]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, empty query nodes (i.e. nodes that did not contain any value) would incorrectly not be marked as null.
