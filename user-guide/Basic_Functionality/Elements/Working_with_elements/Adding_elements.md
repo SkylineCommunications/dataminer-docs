@@ -147,6 +147,8 @@ keywords: element wizard
 
    - **Run in isolation mode**: Available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->. Select this checkbox if you want the element to be run in isolation mode. See [Adding elements in isolation mode](#adding-elements-in-isolation-mode).
 
+   - **Block Swarming**: Available from 10.5.5/10.6.0 onwards<!--RN 42535-->. See [Blocking elements from being swarmed](xref:SwarmingElements#blocking-elements-from-being-swarmed).
+
    - **Element state**: Select the initial state of the element in this selection box. By default this will be set to “Active”.
 
 1. Click *Next* and specify the view(s) to which you want to link the element.
