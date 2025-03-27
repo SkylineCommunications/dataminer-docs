@@ -76,6 +76,12 @@ The output will be stored in the following file:
 
 GQI recording, a debugging feature that allowed you to save GQI communication and replay it in a lab environment, has now been removed from the GQI DxM.
 
+#### GQI DxM: Record limit of Sort operator has been increased to 100,000 records [ID 42492]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+When the GQI DxM is being used, the record limit of the *Sort* operator will now be 100,000 instead of 10,000.
+
 #### DataMiner IDP license notice will no longer appear [ID 42574]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
