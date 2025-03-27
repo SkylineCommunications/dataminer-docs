@@ -18,6 +18,35 @@ uid: Cube_Feature_Release_10.5.5
 
 ## New features
 
+#### EPM functionality is now fully integrated in DataMiner Cube [ID 42221]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+All EPM functionality is now fully integrated in the UI of DataMiner Cube. Up to now, this required the *CPEIntegration* soft-launch option to be enabled.
+
+In the sidebar, you can now open the *Topology* pane, which allows you to select a topology chain, drill down to any of the topology level in that chain. On top of that, all EPM-related data can now also be accessed via the Surveyor or the Alarm Console.
+
+##### Configuration
+
+1. Make sure the DMS contains at least one EPM frontend manager element.
+
+   For DataMiner Cube to detect these elements, they should be active, the *type* attribute of the *Display* tag in their connector should be set to "element manager", and they should contain a parameter named *ElementManagerType* set to 1. Also, their name should preferably start with "FE".
+
+   Each EPM frontend manager element will describe a topology chain and its associated filters.
+
+1. Go to *System Center > System settings > EPM config*, and add all EPM frontend manager element(s) to the list.
+
+   In the *Topology* pane, the *Topology chain* selector will now contain all topology chains configured in each of the EPM frontend manager elements you added to the list.
+
+Up to now, it was only allowed to have one single EPM frontend manager element per DataMiner System. From now on, one DataMiner System can have multiple EPM frontend manager elements.
+
+> [!IMPORTANT]
+>
+> - Each of the frontend manager connectors must have a different *SystemType*.
+> - All frontend manager elements must use the same version of the same connector.
+> - All backend manager elements must use the same version of the same connector.
+> - All EPM objects must be linked using both *SystemName* and *SystemType*.
+
 #### Sharing the link to the current Cube session with other users [ID 42389] [ID 42524]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->

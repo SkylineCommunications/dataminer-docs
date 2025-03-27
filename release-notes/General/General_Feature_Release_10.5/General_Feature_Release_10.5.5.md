@@ -46,6 +46,12 @@ A number of security enhancements have been made.
 
 When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of row are updated due to e.g. aggregation or merge actions.
 
+#### Enhanced performance when restarting HTTP elements in a timeout state [ID 42443]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, overall performance has increased when restarting HTTP elements in a timeout state.
+
 #### Protocols: HTTP status code will only be logged when debug logging level 4 is enabled [ID 42447]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
@@ -77,6 +83,12 @@ GQI recording, a debugging feature that allowed you to save GQI communication an
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 Up to now, aggregation alarms would not work as intended on DataMiner Systems using a Cassandra Cluster database or Storage as a Service (STaaS).
+
+#### DataMiner upgrade: No progress updates when DataMiner Cube was connected to the local DataMiner Agent [ID 42114]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When you either uploaded a DataMiner upgrade package or executed a DataMiner upgrade on a DataMiner Cube that was connected to the local DataMiner Agent via localhost, up to now, you would not get any progress updates regarding the upload or upgrade process.
 
 #### Problem with SLElement when a DVE child element is deleted while the DVE main element is in a timeout state [ID 42137]
 

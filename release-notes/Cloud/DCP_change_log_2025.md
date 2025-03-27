@@ -69,7 +69,7 @@ You can now check whether a version can be deployed without logging in, using th
 
 ### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
-A new call is available that allows users to get all the Catalog item types without the need to authenticate.
+A new call is available that allows users to get all the Catalog item types without the need to authenticate. For the full API reference, go to [Public Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Public+Catalog+API+v2.0).
 
 ### 20 February 2025 - Fix - Catalog - Deploy button not shown when switching pages [ID 42317]
 
