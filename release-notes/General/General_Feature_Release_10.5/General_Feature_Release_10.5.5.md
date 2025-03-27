@@ -162,6 +162,12 @@ When an SNMPv3 connection was set up, log entries similar to the example below w
 
 `RT_QACTIONS_SNMP_v3: Unable to set the destination IP: polling IP=::1; resolved IP=::1; or=APPLY SECURITY FAILED: EMPTY USER NAME`
 
+#### Problem when creating the ClusterEndpoints.json file [ID 42481]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, an error could be thrown when the *ClusterEndpoints.json* file was created in the *C:\\Skyline DataMiner\\Configurations\\* folder.
+
 #### DVE settings could get out of sync with the element data when DataMiner or an element was restarted [ID 42515]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
