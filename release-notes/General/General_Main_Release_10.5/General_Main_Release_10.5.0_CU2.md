@@ -152,6 +152,14 @@ When DataMiner or an element was stopped while there were still DVE parameter se
 > [!NOTE]
 > Always make sure element names are unique, especially when using the `noelementprefix` option.
 
+#### Incorrect 'Detected duplicate DVE' notice would appear due to a caching issue [ID 42546]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Due to a caching issue, in some cases, the following notice could incorrectly appear in the Alarm Console:
+
+`Detected duplicate DVE, did not create DVE for {DVE name}`
+
 #### Connection issue between SLSNMPManager and SLNet [ID 42547]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
