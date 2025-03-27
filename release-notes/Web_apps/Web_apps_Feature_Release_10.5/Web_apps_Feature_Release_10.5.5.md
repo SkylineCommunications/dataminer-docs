@@ -286,6 +286,12 @@ When a picker in e.g. a *Time range* component was closed, up to now, it would i
 
 In some cases, grid items would incorrectly get resized when a trigger went off.
 
+#### Low-Code Apps - Action editor: Problem when trying to select a component using intellisense [ID 42575]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in the action editor, you tried to select a recently added component using intellisense, an error would be thrown.
+
 #### Dashboards/Low-Code Apps: Problem when changing the title, style or WebSocket settings of a component [ID 42577]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
