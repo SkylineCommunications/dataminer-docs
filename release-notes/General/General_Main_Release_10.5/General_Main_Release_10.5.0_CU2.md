@@ -57,6 +57,18 @@ The output will be stored in the following file:
 
 GQI recording, a debugging feature that allowed you to save GQI communication and replay it in a lab environment, has now been removed from the GQI DxM.
 
+#### No notice will appear anymore when a DMA that is not using Indexing Engine has an IDP license but no ServiceManager license [ID 42574]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Since DataMiner version 10.1.0/1.0.0.8, the following notice would appear when a DataMiner Agent that was not using Indexing Engine had an IDP license but no ServiceManager license:
+
+```txt
+DataMiner IDP is licensed, but no Elasticsearch database is active on the system. Therefore, scheduled workflows are not available.
+```
+
+From now on, this notice will no longer appear.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
@@ -130,6 +142,15 @@ The property would be deleted from the *PropertyConfiguration.xml* file, but not
 When an SNMPv3 connection was set up, log entries similar to the example below would be added to the *SLErrors.txt* file:
 
 `RT_QACTIONS_SNMP_v3: Unable to set the destination IP: polling IP=::1; resolved IP=::1; or=APPLY SECURITY FAILED: EMPTY USER NAME`
+
+#### DVE settings could get out of sync with the element data when DataMiner or an element was restarted [ID 42515]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When DataMiner or an element was stopped while there were still DVE parameter sets in the queue, up to now, the DVE settings would be out of sync with the element data when DataMiner or the element was restarted. From now on, the DVE settings will be re-applied in the element data.
+
+> [!NOTE]
+> Always make sure element names are unique, especially when using the `noelementprefix` option.
 
 #### Connection issue between SLSNMPManager and SLNet [ID 42547]
 
