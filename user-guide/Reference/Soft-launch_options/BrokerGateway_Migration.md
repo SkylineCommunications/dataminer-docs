@@ -4,7 +4,9 @@ uid: BrokerGateway_Migration
 
 # Migrating to BrokerGateway
 
-Starting from DataMiner 10.5.0/10.5.2, migrating from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) is possible as a [soft-launch feature](xref:SoftLaunchOptions), if the [BrokerGateway](xref:Overview_of_Soft_Launch_Options#brokergateway) soft-launch option is enabled.
+Starting from DataMiner 10.5.0/10.5.2, migrating from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) is possible as a [soft-launch feature](xref:SoftLaunchOptions), if the [BrokerGateway](xref:Overview_of_Soft_Launch_Options#brokergateway) soft-launch option is enabled. 
+
+From DataMiner 10.5.5 onwards, the soft-launch flag has been moved to a maintenance settings flag.
 
 From DataMiner 10.6.0 onwards, this migration will be done automatically during a DataMiner upgrade.
 
@@ -29,7 +31,7 @@ Currently, this migration is a manual action, which should be done as follows:
 1. On each machine, enter the `install` command and confirm.
 
    > [!IMPORTANT]
-   > This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **all DataMiner Agents, including Failover DMAs**. The migration needs to write files and restart DataMiner, because a soft-launch flag is adjusted that changes SLNet behavior at startup. As a single instance cannot remotely shut down and restart a DataMiner Agent, this action must be done on each separate Agent in the cluster.
+   > This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **all DataMiner Agents, including Failover DMAs**. The migration needs to write files and restart DataMiner, because a maintenance flag is adjusted that changes SLNet behavior at startup. As a single instance cannot remotely shut down and restart a DataMiner Agent, this action must be done on each separate Agent in the cluster.
 
    Successful installation output might look like this:
 
@@ -43,7 +45,7 @@ Currently, this migration is a manual action, which should be done as follows:
    ...
 
    (un)install BrokerGateway managed NATS server? (install/uninstall):install
-   LAURENSVG.skyline.local - BrokerGateway SoftLaunch flag is set to True.
+   LAURENSVG.skyline.local - BrokerGateway maintenance flag is set to True.
    LAURENSVG.skyline.local - Setting the MessageBrokerConfig.json...
    SLKill called for "nats" with force=False
    *** Stop services ***
@@ -93,13 +95,15 @@ The following actions will be executed during the migration, in the indicated or
 
 1. DataMiner is stopped.
 
-1. The *BrokerGateway* soft-launch flag in *C:\Skyline DataMiner\SoftLaunchOptions.xml* is set to true.
+1. The *BrokerGateway* Maintenance flag in *C:\Skyline DataMiner\MaintenanceSettings.xml* is set to true.
+   For versions older than 10.5.5, a BrokerGateway soft-launch flag is set instead.
 
    ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <SLNet>
-       <BrokerGateway>true</BrokerGateway>
-   </SLNet>
+   <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+      <SLNet>
+         <BrokerGateway>true</BrokerGateway>
+      </SLNet>
+   </MaintenanceSettings>
    ```
 
 1. The NAS and NATS services are stopped and their startup type is set to "Manual".

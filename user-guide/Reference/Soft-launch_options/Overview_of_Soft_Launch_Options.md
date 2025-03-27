@@ -45,6 +45,7 @@ Makes it possible to [swarm bookings](xref:SwarmingBookings).
 Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS configuration instead.
 
 - **Minimum version**: 10.4.1<!-- RN 37649 -->
+- **Release version**: 10.5.5<!-- RN 42573 -->
 
 > [!TIP]
 > See also: [Migrating to BrokerGateway](xref:BrokerGateway_Migration)
