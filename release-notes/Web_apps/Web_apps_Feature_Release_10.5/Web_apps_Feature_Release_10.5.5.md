@@ -165,6 +165,12 @@ A number of minor enhancements have been made to the *Maps* component, especiall
 
 A number of security enhancements have been made.
 
+#### Dashboards/Low-Code Apps: Search box in the 'Queries' section of a 'Data' pane will now only filter the query names [ID 42589]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, while configuring a component, you opened the *Queries* section of the *Data* pane, and entered a search string in the search box, up to now, both the query names and the query columns would be filtered. From now on, only the query names will be filtered.
+
 ### Fixes
 
 #### Low-Code Apps: Problem when a 'Close a panel' event was linked to a component action involving a lazy loaded component [ID 42302]
