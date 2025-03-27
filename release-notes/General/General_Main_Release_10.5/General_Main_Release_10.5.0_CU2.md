@@ -27,6 +27,12 @@ A number of security enhancements have been made.
 
 When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of row are updated due to e.g. aggregation or merge actions.
 
+#### GQI DxM will now shut down faster [ID 42428]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
+
 #### Enhanced performance when restarting HTTP elements in a timeout state [ID 42443]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
