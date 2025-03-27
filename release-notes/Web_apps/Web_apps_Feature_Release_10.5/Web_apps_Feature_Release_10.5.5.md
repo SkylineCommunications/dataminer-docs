@@ -327,3 +327,9 @@ In some cases, empty query nodes (i.e. nodes that did not contain any value) wou
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 In some cases, a *Fetch the data* action would incorrectly not get triggered.
+
+#### Dashboards/Low-Code Apps - GQI: Component data fetched by joined queries would not get refetched when a selection changed [ID 42606]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a component used joined queries to fetch data, the data would incorrectly not be refetched when a selection changed in the component.
