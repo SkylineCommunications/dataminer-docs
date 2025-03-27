@@ -54,8 +54,6 @@ To migrate the profiles, you will need to use the SLNetClientTest tool. Note tha
 
 1. Check whether in the *MigrationStatus* table, the migration of profile instances, definitions, and parameters has the status completed, and there are no error messages.
 
-   If this is the case, the migration is complete.
-
    > [!TIP]
    > If you see errors, refer to the [Troubleshooting](#troubleshooting) section below.
 
