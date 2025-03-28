@@ -15,7 +15,7 @@ uid: General_Main_Release_10.5.0_CU2
 
 ### Enhancements
 
-#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMPv3 Inform messages [ID 41884]
+#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP Inform messages [ID 41884]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 

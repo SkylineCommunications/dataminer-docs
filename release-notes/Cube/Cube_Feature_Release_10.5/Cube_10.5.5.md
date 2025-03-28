@@ -18,7 +18,7 @@ uid: Cube_Feature_Release_10.5.5
 
 ## New features
 
-#### System Center - SNMP forwarding: New option to prevent an SNMP manager from resending SNMPv3 Inform messages [ID 41885]
+#### System Center - SNMP forwarding: New option to prevent an SNMP manager from resending SNMP Inform messages [ID 41885]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
