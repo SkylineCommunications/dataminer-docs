@@ -66,6 +66,17 @@ The output will be stored in the following file:
 
 *\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
 
+#### GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+GQI extensions use the Automation engine to create DLL libraries that are then loaded by GQI to add ad hoc data sources, custom operators, etc.
+
+GQI will now look for missing dependencies in the *C:\\Skyline DataMiner\\Scripts\\Libraries* folder. This will allow GQI extension scripts to find the Automation script library at runtime.
+
+> [!IMPORTANT]
+> If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
+
 #### GQI recording removed from GQI DxM [ID 42470]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
