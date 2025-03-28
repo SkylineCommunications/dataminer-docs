@@ -182,3 +182,11 @@ When multiple SLSNMPManager processes tried to simultaneously connect to SLNet, 
 ```txt
 (SLNetCOM SLSNMPManager.exe) Failed to connect to SLNet: (Code: 0x800402CD) Skyline.DataMiner.Net.Exceptions.DataMinerCommunicationException: Connection was closed at 15:37 (There's a new connection for this module/agent.)
 ```
+
+#### Information events would incorrectly not get removed from the database when an element was stopped [ID 42604]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When an element was stopped, contrary to alarm events, information events would incorrectly not get removed in the database.
+
+On systems with Swarming enabled, this could cause problems when a hosting agent tried to retrieve the highest alarm ID from the database.
