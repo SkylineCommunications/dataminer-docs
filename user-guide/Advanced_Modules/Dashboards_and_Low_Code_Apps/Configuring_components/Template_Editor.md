@@ -65,7 +65,7 @@ The Template Editor UI consists of the following main components<!--RN 34858-->:
 
 ## Working with layers
 
-In the side pane of the Template Editor, the *Layers* tab offers an overview of all layers. Layers are used to make non-destructive edits by stacking icons, text, rectangles, and ellipses one on top of the other without compromising the pixels of individual elements.
+In the side pane of the Template Editor, the *Layers* tab offers an overview of all layers. Layers are used to make non-destructive edits by stacking icons, text, HTML content, rectangles, and ellipses one on top of the other without compromising the pixels of individual elements.
 
 The benefits of working with layers:
 
@@ -86,11 +86,19 @@ To **temporarily mask a layer** within the Template Editor, hover the mouse poin
 > [!TIP]
 > If you want to render a layer invisible in the final result, you can mask the layer by adjusting its properties in the *Settings* pane. See [Specifying layer properties](#specifying-layer-properties).
 
-To **delete a layer**, hover the mouse pointer over the layer and click the *delete* button in the top-right corner. Alternatively, select the layer in the preview and press *Delete* on your keyboard.
+To **delete a layer**:
+
+- From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->: Hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Delete*.
+
+- Earlier versions: Hover the mouse pointer over the layer and click the *delete* button in the top-right corner.
+
+Alternatively, select the layer in the preview and press *Delete* on your keyboard.
+
+To **duplicate a layer**, hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Duplicate*. Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->.
 
 To **add a new layer**, [add a new tool](#adding-new-layers) in the *Tools* tab.
 
-In the lower left corner of each layer, an icon denotes the layer type: an *icon*, *text*, *rectangle*, or *ellipse* layer.
+In the lower left corner of each layer, an icon denotes the layer type: an *icon*, *text*, *HTML*, *rectangle*, or *ellipse* layer.
 
 ## Adding new layers
 
@@ -100,13 +108,15 @@ In the *Tools* tab, you can add new layers to the template. Each tool in the *To
 
 - Text
 
+- HTML (available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42519-->)
+
 - Rectangle
 
 - Ellipse
 
-![*Tools* tab](~/user-guide/images/Tools_Tab.png)<br/>*The Template Editor in DataMiner 10.4.1*
+![*Tools* tab](~/user-guide/images/Tools_Tab.png)<br/>*The Template Editor in DataMiner 10.5.5*
 
-1. To add a new layer to the template, click the *Icon*, *Text*, *Rectangle*, or *Ellipse* button.
+1. To add a new layer to the template, click the *Icon*, *Text*, *HTML*, *Rectangle*, or *Ellipse* button.
 
 1. Within the preview, press and hold down the left mouse button to define the area for your new layer. The layer appears, enclosed by dotted lines in a frame around the selected area. Release the mouse button once you are satisfied with the size and shape of the tool.
 
@@ -168,6 +178,8 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Icon*: Allows you to select any of the available icons from the dropdown list. You can search for a specific icon using the filter box at the top.
 
+  - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the icon. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
+
   - *Configure actions*: Allows you to configure actions that are executed when a user clicks the icon. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
 
     > [!TIP]
@@ -175,14 +187,16 @@ Depending on the type of layer, you can specify different layer properties in th
 
 - For *Text* layers, you can specify the following properties:
 
-  - *Show text*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but it will not be visible in the template's end result.
+  - *Show text*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview, but it will not be visible in the template's end result.
 
-  - *Text box*: Allows you to enter custom text. HTML text formatting is supported, and you can enter a column name surrounded by curly brackets (e.g. `{my column}`) to insert the corresponding cell value inside your text.
+  - *Text box*: Allows you to enter custom text. You can enter a column name surrounded by curly brackets (e.g. `{my column}`) to insert the corresponding cell value inside your text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported.
 
-    ![HTML text formatting](~/user-guide/images/HTML_Text_Formatting.png)<br/>*Template Editor in DataMiner 10.4.1*
+  - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the text. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
+
+  - *Configure actions*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42473-->. Allows you to configure actions that are executed when a user clicks the text. Only available for DataMiner Low-Code Apps.
 
     > [!TIP]
-    > For more information on formatting elements designed to display special types of text, see [HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp).
+    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
 
   - The table below describes the remaining settings available for *Text* layers:
 
@@ -196,6 +210,24 @@ Depending on the type of layer, you can specify different layer properties in th
     | ![Vertical padding](~/user-guide/images/Text_Vertical_Padding.png) | Vertical padding | Specify the amount of space (in pixels) that should be left free underneath the text. |
     | ![Horizontal alignment](~/user-guide/images/Text_Horizontal_Alignment.png) | Horizontal alignment | Left, center, right, or justify. |
     | ![Vertical alignment](~/user-guide/images/Text_Vertical_Alignment.png) | Vertical alignment | Top, center, or bottom. |
+
+- For *HTML* layers, you can specify the following properties:
+
+  - *Show HTML*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview, but it will not be visible in the template's end result.
+
+  - *Text box*: Allows you to enter HTML code. The editor provides basic syntax highlighting and IntelliSense support.
+
+    ![HTML code example](~/user-guide/images/HTML.gif)<br>*Template Editor in DataMiner 10.5.5*
+
+    > [!TIP]
+    > See also: [HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp).
+
+  - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Allows you to configure a tooltip that appears when hovering over the HTML content. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
+
+  - *Configure actions*: Allows you to configure actions that are executed when a user clicks the HTML content. Only available for DataMiner Low-Code Apps.
+
+    > [!TIP]
+    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 - For *Rectangle* layers, you can specify the following properties:
 
@@ -212,6 +244,8 @@ Depending on the type of layer, you can specify different layer properties in th
   
   - *Link height to*: Allows you to link the height of this column to that of another column, selected from the dropdown list. Only available for table and grid components.
 
+  - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the rectangle. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
+
   - *Configure actions*: Allows you to configure actions that are executed when a user clicks the rectangle. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
 
     > [!TIP]
@@ -225,6 +259,8 @@ Depending on the type of layer, you can specify different layer properties in th
 
     > [!TIP]
     > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
+
+  - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the ellipse. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
   - *Configure actions*: Allows you to configure actions that are executed when a user clicks the ellipse. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
 
@@ -296,12 +332,13 @@ To add a condition:
 
      - *Icon*: Allows you to select a new icon from the dropdown list. You can search for a specific icon using the filter box at the top.
 
+     - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the icon. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
+
+     - *Events*: Available from <!--to add--> onwards. Allows you to configure actions that are executed when a user clicks the icon. Only available for DataMiner Low-Code Apps.
+
    - *Text* layer:
 
-     - *Text*: Allows you to enter custom text. HTML text formatting is supported.
-
-       > [!TIP]
-       > For more information on formatting elements designed to display special types of text, see [HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp).
+     - *Text*: Allows you to enter custom text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!--RN 42519-->, HTML text formatting is supported.
 
      - *Font size*: Allows you to set the font size.
 
@@ -319,6 +356,18 @@ To add a condition:
 
      - *Vertical alignment*: Determines the vertical alignment (top, center, or bottom).
 
+     - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the text. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
+
+     - *Events*: Available from <!--to add--> onwards. Allows you to configure actions that are executed when a user clicks the text. Only available for DataMiner Low-Code Apps.
+
+   - *HTML* layer:
+
+     - *HTML*: Allows you to enter custom HTML code. The editor provides basic syntax highlighting and IntelliSense support.
+
+     - *Tooltip*: Allows you to configure a tooltip that appears when hovering over the HTML content. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
+
+     - *Events*: <!--to do: check why this button doesn't work for the HTML layer & whether this button already existed for other layers prior to DataMiner 10.5.5.--> Allows you to configure actions that are executed when a user clicks the ellipse. Only available for DataMiner Low-Code Apps.
+
    - *Rectangle* layer:
 
      - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
@@ -329,9 +378,17 @@ To add a condition:
 
      - *Link height to*: Allows you to link the height of this tool to that of another column, selected from the dropdown list.
 
+     - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the rectangle. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
+
+     - *Events*: Available from <!--to add--> onwards. Allows you to configure actions that are executed when a user clicks the rectangle. Only available for DataMiner Low-Code Apps.
+
    - *Ellipse* layer:
 
      - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
+
+     - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the ellipse. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
+
+     - *Events*: Available from <!--to add--> onwards. Allows you to configure actions that are executed when a user clicks the ellipse. Only available for DataMiner Low-Code Apps.
 
    > [!TIP]
    > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
