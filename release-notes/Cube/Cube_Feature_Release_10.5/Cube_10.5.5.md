@@ -132,6 +132,12 @@ The visibility of Y-axis curves in trend graph legends has been improved, and er
 
 When a trend graph contained multiple overlapping change point areas, up to now, smaller areas could get covered by larger areas, making it impossible to select them. From now on, when you click a group of overlapping change point areas, the change point with the smallest time range will be selected.
 
+#### Data Display: Enhanced performance when opening view cards [ID 42576]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, overall performance has increased when opening view cards.
+
 ### Fixes
 
 #### Visual Overview: Placeholders would incorrectly broadcast the same value twice [ID 42252]
