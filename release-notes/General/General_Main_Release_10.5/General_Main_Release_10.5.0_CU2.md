@@ -78,6 +78,12 @@ GQI recording, a debugging feature that allowed you to save GQI communication an
 
 When the GQI DxM is being used, the record limit of the *Sort* operator will now be 100,000 instead of 10,000.
 
+#### ViewLog.asp web page replaced by ViewLog.aspx web page [ID 42533]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web page to display server-side log files. This web page has now been replaced by the *ViewLog.aspx* web page.
+
 #### DataMiner IDP license notice will no longer appear [ID 42574]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->

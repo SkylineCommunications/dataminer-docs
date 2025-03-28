@@ -333,3 +333,9 @@ In some cases, a *Fetch the data* action would incorrectly not get triggered.
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When a component used joined queries to fetch data, the data would incorrectly not be refetched when a selection changed in the component.
+
+#### Dashboards/Low-Code Apps - Generic Map component: Not possible to load the maps.asmx page [ID 42619]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, it would not be possible to load the `https://{HOSTNAME}/api/v0/maps.asmx` page due to a serialization issue.
