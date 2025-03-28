@@ -277,6 +277,12 @@ When multiple SLSNMPManager processes tried to simultaneously connect to SLNet, 
 (SLNetCOM SLSNMPManager.exe) Failed to connect to SLNet: (Code: 0x800402CD) Skyline.DataMiner.Net.Exceptions.DataMinerCommunicationException: Connection was closed at 15:37 (There's a new connection for this module/agent.)
 ```
 
+#### GQI DxM would leak memory when an SLNet connection was disconnected [ID 42592]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+When an SLNet connection created by the GQI DxM was disconnected, up to now, the associated compatibility manager would not be cleaned up correctly, causing the GQI DxM to leak memory.
+
 #### Information events would incorrectly not get flushed to the database when an element was stopped [ID 42604]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
