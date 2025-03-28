@@ -124,6 +124,32 @@ Also, a status label will now indicate whether debug logging is enabled or disab
 > - The above-mentioned status label will show "Enabled" when a level-6 override is present. If all log files have level 6 by default, the status label will show "Disabled" until you add an override.
 > - Enabling debug logging may significantly increase the amount of logging that is written to disk.
 
+#### GQI DxM: New life cycle method allows ad hoc data sources to optimize sort operators [ID 42528]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+A new optional life cycle method has been introduced for ad hoc data sources running in the GQI DxM. It will allow to optimize or modify sort operators added to the query.
+
+You can use this life cycle by implementing the `Skyline.DataMiner.Analytics.GenericInterface.IGQIOptimizeableDataSource` interface, which has one method:
+
+```csharp
+IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
+```
+
+- `currentNode` is the query node that represents the current ad hoc data source.
+- `nextOperator` represents the next operator appended to the query.
+
+This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
+
+- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this life cycle method is not implemented).
+- Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
+- Modify/add operators.
+
+> [!NOTE]
+>
+> - This life cycle method will only be called when the `nextOperator` is a filter or a sort operator.
+> - This life cycle method can be called multiple times if there is a new `nextOperator`.
+
 #### New log viewer web page [ID 42533]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
