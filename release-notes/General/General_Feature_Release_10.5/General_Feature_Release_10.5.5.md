@@ -169,11 +169,11 @@ When an SNMPv3 connection was set up, log entries similar to the example below w
 
 `RT_QACTIONS_SNMP_v3: Unable to set the destination IP: polling IP=::1; resolved IP=::1; or=APPLY SECURITY FAILED: EMPTY USER NAME`
 
-#### GQI DxM: Problem when ad hoc data sources or custom operators had to create or update SLNet subscriptions [ID 42454]
+#### GQI DxM: Ad hoc data source or custom operators would not receive SLNet events when using subscription sets [ID 42454]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
-When the GQI DxM was being used, in some cases, errors could occur when ad hoc data sources or custom operators had to create or update SLNet subscriptions.
+When the GQI DxM was being used, ad hoc data sources and custom operators would not receive any SLNet events if they added or updated a subscription for a specific subscription set.
 
 #### Problem when creating the ClusterEndpoints.json file [ID 42481]
 
