@@ -18,5 +18,19 @@ However, it is possible to increase the maximum upload size via the SLNetClientT
 
 1. Enter a new value and click *OK*.
 
+> [!NOTE]
+> When overwritten, this value is also visible in the [MaintenanceSettings.xml](xref:MaintenanceSettings_xml) file
+> For more information, see [Configuring SLNet settings in MaintenanceSettings.xml](xref:Configuration_of_DataMiner_processes#configuring-slnet-settings-in-maintenancesettingsxml)*.*
+> Example:
+> ```xml
+> <MaintenanceSettings>
+>  <SLNet>
+>    <MaxUploadSize>1300</MaxUploadSize>
+>    ...
+>  </SLNet>
+>  ...
+> </MaintenanceSettings>
+> ```
+
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
