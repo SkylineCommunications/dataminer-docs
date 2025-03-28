@@ -15,9 +15,15 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 1. Change the IP address of the DMA server in Windows.
 
-1. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+1. Go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
 
-1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
+1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+
+1. If the server hosts a local database, i.e. you are not using [Storage as a Service (STaaS)](xref:STaaS):
+
+   1. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+
+   1. Locate all occurrences of the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
 1. If the server hosts a Cassandra database:
 
@@ -79,6 +85,8 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
    1. Restart the DataMiner BrokerGateway service.
 
+1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerExtensionModules##apigateway), found in *C:\Skyline DataMiner\Tools\ModuleInstallers\\* to regenerate the SSL certificate.
+
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner.
@@ -88,7 +96,7 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 ## Single DMA in a DMS
 
-For a single DMA within a cluster that does not use the Cassandra cluster feature (i.e. one Cassandra cluster for the entire DMS):
+For a single DMA within a cluster that either uses [Storage as a Service (STaaS)](xref:STaaS) or makes use of a [Cassandra database per DMA](xref:Configuring_storage_per_DMA#cassandra-database-per-dma):
 
 1. Stop the DataMiner software on the DMA for which you want to change the IP.
 
@@ -98,9 +106,11 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+1. If the server hosts a local database, i.e. you are not using [Storage as a Service (STaaS)](xref:STaaS):
 
-1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
+   1. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+
+   1. Locate all occurrences of the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
 1. If the server hosts a Cassandra database:
 
@@ -170,6 +180,8 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
    1. Restart the DataMiner BrokerGateway service.
 
+1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerExtensionModules##apigateway), found in *C:\Skyline DataMiner\Tools\ModuleInstallers\\* to regenerate the SSL certificate.
+
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
 1. Restart DataMiner.
@@ -202,15 +214,17 @@ For a single DMA within a cluster that does not use the Cassandra cluster featur
 
 ## Failover DMA in a DMS
 
-For a Failover DMA within a cluster that does not use the Cassandra cluster feature (i.e. one Cassandra cluster for the entire DMS):
+For a Failover DMA within a cluster that either uses [Storage as a Service (STaaS)](xref:STaaS) or makes use of a [Cassandra database per DMA](xref:Configuring_storage_per_DMA#cassandra-database-per-dma):
 
 1. Stop the DataMiner software on **both** Failover DMAs.
 
 1. Change the IP address of the DMA server in Windows.
 
-1. On the DMA of which you have changed the IP, go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+1. If the server hosts a local database, i.e. you are not using [Storage as a Service (STaaS)](xref:STaaS):
 
-1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
+   1. On the DMA of which you have changed the IP, go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+
+   1. Locate all occurrences of the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
 1. On the DMA of which you have changed the IP, go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
 
@@ -266,6 +280,8 @@ For a Failover DMA within a cluster that does not use the Cassandra cluster feat
    1. Restart the nats-server service.
 
    1. Restart the DataMiner BrokerGateway service.
+
+1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerExtensionModules##apigateway), found in *C:\Skyline DataMiner\Tools\ModuleInstallers\\* to regenerate the SSL certificate.
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
@@ -363,7 +379,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
    1. Locate the *Elasticsearch.yml* files on the other DMAs in the DMS, as described above, and replace any occurrences of the old IP address in the *discovery.zen.ping.unicast.hosts* field of these files with the new IP address.
 
-1. Open the file *DB.xml* from the Skyline DataMiner folder of the DMA with the new IP, and replace the old IP in the DB tags for the Cassandra and OpenSearch/Elasticsearch databases with the new IP address.
+1. Open the file *DB.xml* from the *C:\Skyline DataMiner\\* folder of the DMA with the new IP, and replace the old IP in the DB tags for the Cassandra and OpenSearch/Elasticsearch databases with the new IP address.
 
    > [!TIP]
    > See also: [DB.xml](xref:DB_xml#dbxml)
@@ -389,6 +405,8 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
    1. Restart the nats-server service.
 
    1. Restart the DataMiner BrokerGateway service.
+
+1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerExtensionModules##apigateway), found in *C:\Skyline DataMiner\Tools\ModuleInstallers\\* to regenerate the SSL certificate.
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
