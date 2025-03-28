@@ -89,6 +89,50 @@ GQI recording, a debugging feature that allowed you to save GQI communication an
 
 When the GQI DxM is being used, the record limit of the *Sort* operator will now be 100,000 instead of 10,000.
 
+#### SLNetClientTest - DataMiner Object Model: Enabling debug logging [ID 42504]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the *DataMiner Object Model* window, which allows you to see all details of a particular DOM module, a new *Debug Logging* section has now been added to the *Maintenance* tab. In this section, you can find the following buttons:
+
+| Button | Description |
+|--------|-------------|
+| Enable | Adds or updates an override for the log file of the current DOM manager, setting all log levels to 6. |
+| Reset  | Removes the override for the log file of the current DOM manager is removed, regardless of the tool that added it. |
+
+Also, a status label will now indicate whether debug logging is enabled or disabled.
+
+> [!NOTE]
+>
+> - The above-mentioned status label will show "Enabled" when a level-6 override is present. If all log files have level 6 by default, the status label will show "Disabled" until you add an override.
+> - Enabling debug logging may significantly increase the amount of logging that is written to disk.
+
+#### GQI DxM: New life cycle method allows ad hoc data sources to optimize sort operators [ID 42528]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+A new optional life cycle method has been introduced for ad hoc data sources running in the GQI DxM. It will allow to optimize or modify sort operators added to the query.
+
+You can use this life cycle by implementing the `Skyline.DataMiner.Analytics.GenericInterface.IGQIOptimizeableDataSource` interface, which has one method:
+
+```csharp
+IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
+```
+
+- `currentNode` is the query node that represents the current ad hoc data source.
+- `nextOperator` represents the next operator appended to the query.
+
+This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
+
+- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this life cycle method is not implemented).
+- Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
+- Modify/add operators.
+
+> [!NOTE]
+>
+> - This life cycle method will only be called when the `nextOperator` is a filter or a sort operator.
+> - This life cycle method can be called multiple times if there is a new `nextOperator`.
+
 #### New log viewer web page [ID 42533]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
@@ -108,6 +152,12 @@ DataMiner IDP is licensed, but no Elasticsearch database is active on the system
 ```
 
 As DataMiner IDP no longer requires nor a separate license nor an Indexing Engine, from now on, this notice will no longer appear.
+
+#### SLAnalytics: An anomaly alarm event will now be generated when a change point with a type that is not monitored is changed to a change point with a type that is monitored [ID 42596]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+From now on, an anomaly alarm event will be generated when a change point with a change point type for which no anomaly monitoring was configured, is updated to a change point with a change point type for which anomaly monitoring is configured.
 
 ### Fixes
 
