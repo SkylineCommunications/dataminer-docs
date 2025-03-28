@@ -12,7 +12,7 @@ The Alarm Console is displayed at the bottom of the Cube workspace. It can conta
 > The Alarm Console is limited to never show more than 100,000 alarms. If there are more alarms in the DMS, they will no longer be forwarded to Cube.
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Alarm Console introduction](https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
-> [!TIP]
-> See also: [Kata #63: The power of the Alarm Console](https://community.dataminer.services/courses/kata-63/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also:
+>
+> - [Kata #63: The power of the Alarm Console](https://community.dataminer.services/courses/kata-63/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Rui’s Rapid Recap – Alarm Console introduction](https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
