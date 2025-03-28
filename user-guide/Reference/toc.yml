@@ -96,6 +96,8 @@ items:
                 topicUid: Configuring_Alerter_acknowledging_options
       - name: Analyze startup logs
         topicUid: Analyze_Startup_Logs
+      - name: BrokerGateway migration
+        topicUid: BrokerGateway_Migration
       - name: Cassandra Cleaner
         topicUid: Cassandra_Cleaner
       - name: Cassandra Clone
@@ -470,8 +472,6 @@ items:
         topicUid: Activating_SLProtocol_as_a_64_Bit_Process
       - name: Activating SLProtocol as a 32-bit process
         topicUid: Activating_SLProtocol_as_a_32_Bit_Process
-      - name: BrokerGateway migration
-        topicUid: BrokerGateway_Migration
   - name: DataMiner Extension Modules (DxMs)
     topicUid: DataMinerExtensionModules
   - name: Custom branding
