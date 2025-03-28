@@ -298,12 +298,6 @@ In some cases, grid items would incorrectly get resized when a trigger went off.
 
 When, in the action editor, you tried to select a recently added component using intellisense, an error would be thrown.
 
-#### Dashboards/Low-Code Apps: Problem when changing the title, style or WebSocket settings of a component [ID 42577]
-
-<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
-
-When, in edit mode, you were changing the title, the style or the WebSocket settings of a component, the component would incorrectly get updated each time you typed a letter.
-
 #### Dashboards/Low-Code Apps: Icons of information elements would not change color [ID 42578]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
