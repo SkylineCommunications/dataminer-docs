@@ -328,7 +328,7 @@ In some cases, a *Fetch the data* action would incorrectly not get triggered.
 
 When a component used joined queries to fetch data, the data would incorrectly not be refetched when a selection changed in the component.
 
-#### Dashboards/Low-Code Apps - Generic Map component: Not possible to load the maps.asmx page [ID 42619]
+#### DataMiner Maps: Not possible to load the maps.asmx page [ID 42619]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
