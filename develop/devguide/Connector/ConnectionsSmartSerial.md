@@ -12,6 +12,8 @@ In this section:
 - <xref:ConnectionsSmartSerialServer>
 - <xref:ConnectionsSmartSerialBehaviorAfterDisconnect>
 - <xref:ConnectionsSmartSerialLogging>
+- <xref:ConnectionsSmartSerialDynamicPolling>
+- <xref:ConnectionsSmartSerialCommonPitfalls>
 
 ## See also
 
