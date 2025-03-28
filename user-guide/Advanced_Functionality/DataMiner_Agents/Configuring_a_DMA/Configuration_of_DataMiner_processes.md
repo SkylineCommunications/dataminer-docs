@@ -743,6 +743,26 @@ Example:
 > [!CAUTION]
 > Do not use this feature in networks where a firewall drops TCP keep-alive packets. Using it in such a network could cause the connection to be closed while it is actually still working.
 
+### Configuring the maximum upload size for upgrade packages
+
+The maximum upload size for upgrade packages is determined by the `MaxUploadSize` setting in *MaintenanceSettings.xml*.
+
+To change this, you can use the SLNetClientTest tool (see [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_increasing_max_upload)), or you can directly modify *MaintenanceSettings.xml*. However, note that the latter requires a DataMiner restart.
+
+The default maximum upload size of upgrade packages is 4000 MB.
+
+Example:
+
+```xml
+<MaintenanceSettings>
+   <SLNet>
+      <MaxUploadSize>1300</MaxUploadSize>
+      ...
+   </SLNet>
+   ...
+</MaintenanceSettings>
+```
+
 ### Enabling information events when scripts are started by Correlation rules or scheduled tasks
 
 From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when Automation scripts are triggered by the Correlation engine. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41970-->, this also applies to Automation scripts triggered by the Scheduler module.
@@ -786,21 +806,3 @@ On a DMA, you can specify the port to be used for .NET Remoting.
 1. Save and close the file.
 
 1. Restart DataMiner.
-
-### MaxUploadSize
-
-Use this setting to specify the maximum upload size for upgrade packages. The default maximum upload size of upgrade packages is 4000 MB.
-
-> Example:
-> ```xml
-> <MaintenanceSettings>
->  <SLNet>
->    <MaxUploadSize>1300</MaxUploadSize>
->    ...
->  </SLNet>
->  ...
-> </MaintenanceSettings>
-> ```
-
-> [!TIP]
-> See also: [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_increasing_max_upload) 
