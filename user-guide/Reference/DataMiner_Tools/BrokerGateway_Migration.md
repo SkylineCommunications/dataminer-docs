@@ -6,7 +6,7 @@ uid: BrokerGateway_Migration
 
 Starting from DataMiner 10.5.0/10.5.2, migrating from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) is possible as a [soft-launch feature](xref:SoftLaunchOptions), if the [BrokerGateway](xref:Overview_of_Soft_Launch_Options#brokergateway) soft-launch option is enabled. 
 
-From DataMiner 10.5.5 onwards, the soft-launch flag has been moved to a maintenance settings flag.
+From DataMiner 10.5.5/10.5.0 [CU2] onwards, the soft-launch flag has been moved to a maintenance settings flag.
 
 From DataMiner 10.6.0 onwards, this migration will be done automatically during a DataMiner upgrade.
 
@@ -96,7 +96,7 @@ The following actions will be executed during the migration, in the indicated or
 1. DataMiner is stopped.
 
 1. The *BrokerGateway* Maintenance flag in *C:\Skyline DataMiner\MaintenanceSettings.xml* is set to true.
-   For versions older than 10.5.5, a BrokerGateway soft-launch flag is set instead.
+   For versions older than 10.5.5/10.5.0 [CU2], a BrokerGateway soft-launch flag is set instead.
 
    ```xml
    <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
@@ -131,7 +131,7 @@ The following actions will be executed during the migration, in the indicated or
 > The NATSMigration tool has a **hard-coded 10-minute timeout** during which the *ResetCluster* operation has to be finished. This is the same time frame you have to start the migration (i.e. enter the "install" command in the tool) on all nodes in the cluster.
 
 > [!IMPORTANT]
-> The NATS configuration (*nats-server.config*) of the NATS instance before the migration is not transferrable to the NATS instance after the migration, to it should **never be copied over**.
+> The NATS configuration (*nats-server.config*) of the NATS instance before the migration is not transferrable to the NATS instance after the migration, so it should **never be copied over**.
 
 ## Migrating back to the old system
 
