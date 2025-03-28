@@ -26,10 +26,6 @@ Each element also stores where it is hosted, and that **Host ID** field is updat
 
 To find out which Agent is hosting an element using code, use the *HostingAgentID* property.
 
-## Can I block an element from being swarmed?
-
-This feature is currently not yet available but will become available soon.
-
 ## What happens with my Elements folder on disk?
 
 When swarming is not enabled, the configuration of an element is stored in an [XML file on the DataMiner server](xref:Elements1).
@@ -44,7 +40,7 @@ If you have a perpetual-use license, there is a limit to how many elements can b
 
 ## How do I know why my element is not swarmable?
 
-The only way to see this in the UI at present is to attempt to swarm the element and look at the error message.
+The only way to see this at present is to attempt to swarm the element via the Automation API and look at the error message.
 
 ## How do Agents know which elements to host when starting up?
 

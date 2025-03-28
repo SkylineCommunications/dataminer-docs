@@ -153,11 +153,23 @@ Because of a number of enhancements, scrolling has improved in the date pickers.
 
 For example, up to now, a month would only be focused when all weeks of that month became visible in the calendar. From now on, the month of which most days are visible will be focused.
 
+#### Dashboards/Low-Code Apps - Maps component: Visual enhancements [ID 42553]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+A number of minor enhancements have been made to the *Maps* component, especially with regard to the overall look and feel of the UI elements.
+
 #### Security enhancements [ID 42565]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 A number of security enhancements have been made.
+
+#### Dashboards/Low-Code Apps: Search box in the 'Queries' section of a 'Data' pane will now only filter the query names [ID 42589]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, while configuring a component, you opened the *Queries* section of the *Data* pane, and entered a search string in the search box, up to now, both the query names and the query columns would be filtered. From now on, only the query names will be filtered.
 
 ### Fixes
 
@@ -180,6 +192,15 @@ When a check was performed to determine whether a dashboard or a low-code app ha
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 In the *Table* and *Parameter table* components, up to now, the search icon would appear at the bottom, blocking part of the table data. From now on, a search icon in the header bar will allow you to open a search bar at the top of the component.
+
+#### DataMiner Object Models: Web API would incorrectly not allow the ModuleID property to be empty when using DomInstanceFieldDescriptor or DomInstanceValueFieldDescriptor [ID 42334]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Although it is not mandatory to specify the `ModuleID` property when using `DomInstanceFieldDescriptor` or `DomInstanceValueFieldDescriptor`, up to now, the Web API would incorrectly not allow the `ModuleID` property to be empty.
+
+> [!NOTE]
+> If no `ModuleID` property is set, only DOM instances in the same module as the `DomInstanceFieldDescriptor` or `DomInstanceValueFieldDescriptor` can be referenced.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Problem when the topology is updated while a block is being moved [ID 42372]
 
@@ -258,3 +279,63 @@ When a connection inside a node edge graph had been removed because of a real-ti
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When you added an action (e.g. *Open monitoring card*), up to now, you had to incorrectly press the TAB key twice to set the focus to the *Link to data* button, and when you then pressed the ENTER key, the picker would not load correctly.
+
+#### Dashboards/Low-Code Apps: Pickers would not be reset when closed [ID 42556]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a picker in e.g. a *Time range* component was closed, up to now, it would incorrectly not be reset.
+
+#### Dashboards/Low-Code Apps - Grid component: Grid items would incorrectly get resized when a trigger went off [ID 42560]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, grid items would incorrectly get resized when a trigger went off.
+
+#### Low-Code Apps - Action editor: Problem when trying to select a component using intellisense [ID 42575]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in the action editor, you tried to select a recently added component using intellisense, an error would be thrown.
+
+#### Dashboards/Low-Code Apps: Problem when changing the title, style or WebSocket settings of a component [ID 42577]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in edit mode, you were changing the title, the style or the WebSocket settings of a component, the component would incorrectly get updated each time you typed a letter.
+
+#### Dashboards/Low-Code Apps: Icons of information elements would not change color [ID 42578]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In several components (e.g. the *Time range* component), information elements consisting of an icon and a text box are being used to convey messages to the user. Up to now, when the color of such an information element was changed, only the color of the text would be updated. The color of the icon would incorrectly not be updated.
+
+#### Dashboards/Low-Code Apps - Maps component: 'Fetch the data' action could not be executed when no layers were visible or selected [ID 42579]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When no layers were visible or selected in a *Maps* component, it would incorrectly not be possible to execute a *Fetch the data* action.
+
+#### Dashboards/Low-Code Apps: Empty query nodes would incorrectly not be marked as null [ID 42588]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, empty query nodes (i.e. nodes that did not contain any value) would incorrectly not be marked as null.
+
+#### Low-Code Apps: 'Fetch the data' action would not always be triggered [ID 42601]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, a *Fetch the data* action would incorrectly not get triggered.
+
+#### Dashboards/Low-Code Apps - GQI: Component data fetched by joined queries would not get refetched when a selection changed [ID 42606]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a component used joined queries to fetch data, the data would incorrectly not be refetched when a selection changed in the component.
+
+#### Dashboards/Low-Code Apps - Generic Map component: Not possible to load the maps.asmx page [ID 42619]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, it would not be possible to load the `https://{HOSTNAME}/api/v0/maps.asmx` page due to a serialization issue.

@@ -56,7 +56,7 @@ At present, the following types of Catalog items are supported:
 
 Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [semantic versioning](https://semver.org/) is recommended. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
 
-For Catalog items that follow semantic versioning, versions are grouped by **range**. Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.
+For Catalog items that follow semantic versioning, versions are grouped by **range**. Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.<!-- RN 41243 -->
 
 Tags can be assigned to specific versions and ranges, for instance to indicate the main range of a connector. If you are a member of the organization that published an item, you can manage these tags via the ![Context menu button](~/user-guide/images/Catalog_context_menu.png) button for each item.<!-- RN 40030 -->
 

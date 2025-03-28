@@ -10,7 +10,11 @@ To activate follow mode:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-1. Select which aspects of communication should be followed:
+1. In the menu bar at the top, select *Follow* > *Follow*.
+
+   This will open a new window.
+
+1. In the new window, select which aspects of communication should be followed:
 
    - *Events* and *Requests/Responses* are selected by default, to track events that are sent to a client and requests and responses respectively.
 

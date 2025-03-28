@@ -18,6 +18,44 @@ uid: Cube_Feature_Release_10.5.5
 
 ## New features
 
+#### System Center - SNMP forwarding: New option to prevent an SNMP manager from resending SNMP Inform messages [ID 41885]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option. If you select this option, DataMiner will track which Inform messages have been sent, and will not resend those that have already been acknowledged.
+
+> [!NOTE]
+> This new *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
+
+#### EPM functionality is now fully integrated in DataMiner Cube [ID 42221]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+All EPM functionality is now fully integrated in the UI of DataMiner Cube. Up to now, this required the *CPEIntegration* soft-launch option to be enabled.
+
+In the sidebar, you can now open the *Topology* pane, which allows you to select a topology chain, drill down to any of the topology level in that chain. On top of that, all EPM-related data can now also be accessed via the Surveyor or the Alarm Console.
+
+##### Configuration
+
+1. Make sure the DMS contains at least one EPM frontend manager element.
+
+   For DataMiner Cube to detect these elements, they should be active, the *type* attribute of the *Display* tag in their connector should be set to "element manager", and they should contain a parameter named *ElementManagerType* set to 1. Also, their name should preferably start with "FE".
+
+   Each EPM frontend manager element will describe a topology chain and its associated filters.
+
+1. Go to *System Center > System settings > EPM config*, and add all EPM frontend manager element(s) to the list.
+
+   In the *Topology* pane, the *Topology chain* selector will now contain all topology chains configured in each of the EPM frontend manager elements you added to the list.
+
+Up to now, it was only allowed to have one single EPM frontend manager element per DataMiner System. From now on, one DataMiner System can have multiple EPM frontend manager elements.
+
+> [!IMPORTANT]
+>
+> - Each of the frontend manager connectors must have a different *SystemType*.
+> - All frontend manager elements must use the same version of the same connector.
+> - All backend manager elements must use the same version of the same connector.
+> - All EPM objects must be linked using both *SystemName* and *SystemType*.
+
 #### Sharing the link to the current Cube session with other users [ID 42389] [ID 42524]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
@@ -88,6 +126,18 @@ A number of enhancements have been made with regard to trending.
 
 The visibility of Y-axis curves in trend graph legends has been improved, and error and lock handling has been enhanced.
 
+#### Trending: Enhanced selection of change points areas [ID 42488]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a trend graph contained multiple overlapping change point areas, up to now, smaller areas could get covered by larger areas, making it impossible to select them. From now on, when you click a group of overlapping change point areas, the change point with the smallest time range will be selected.
+
+#### Data Display: Enhanced performance when opening view cards [ID 42576]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, overall performance has increased when opening view cards.
+
 ### Fixes
 
 #### Visual Overview: Placeholders would incorrectly broadcast the same value twice [ID 42252]
@@ -141,3 +191,15 @@ When, while configuring trend data offloads, you selected *Trend data* and *Enab
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When you created a new alarm tab, in some rare cases, correlation alarms or incident alarms would incorrectly appear twice in that tab: once with the correct base alarms and once without any base alarms.
+
+#### Correlation : Correlation alarm triggered by another correlation alarm would not be shown as base alarm [ID 42541]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a correlation rule created a correlated alarm that would trigger another correlation alarm that used the first correlated alarm as a base alarm, in some cases, the alarms would incorrectly not be shown as main alarm and base alarm, but as two separate correlated alarms.
+
+#### Not possible to open parameter cards from the Search pane [ID 42552]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, in the *Search* pane, you right-clicked a parameter in the search results and selected e.g. *Open in new card*, the parameter card would refuse to open.

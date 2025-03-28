@@ -35,7 +35,7 @@ Note that in case the button is displayed as enabled while a user is not logged 
 
 The Catalog now displays version ranges for all item types. Previously, ranges were only displayed for connectors. A range is created when a version ID follows a semantic format (e.g. x.x.x.x or x.x.x). Other versions are grouped under *other*.
 
-### 11 March 2025 - Fix - Catalog API - Different recommended versions shown depending on API used
+### 11 March 2025 - Fix - Catalog API - Different recommended versions shown depending on API used [ID 42464]
 
 Up to now, it could occur that different recommended versions were shown based on which API was called. Now the different Catalog APIs (key, user, and public) use a shared logic to determine the recommended versions for a Catalog item, so this will no longer occur.
 
@@ -63,9 +63,27 @@ When new items were registered in the Catalog, a property used for sorting was n
 
 When a setting on the DMS settings page was changed in the Admin app, the relevant section went into edit mode, allowing the user to save the changes. However, if the user then opened another DMS settings page, the edit state of the page was not reset, resulting in edit mode actions being displayed while this should not be the case. This issue has been resolved.
 
+### 6 March 2025 - Enhancement - Catalog API - Public endpoint added to check if version can be deployed [ID 42415]
+
+You can now check whether a version can be deployed without logging in, using the "can-deploy" endpoint on the public controller.
+
 ### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
-A new call is available that allows users to get all the Catalog item types without the need to authenticate.
+A new call is available that allows users to get all the Catalog item types without the need to authenticate. For the full API reference, go to [Public Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Public+Catalog+API+v2.0).
+
+### 20 February 2025 - Fix - Catalog - Deploy button not shown when switching pages [ID 42317]
+
+When a user quickly switched to the *Versions* page, it could occur that the *Deploy* button incorrectly was not shown.
+
+### 20 February 2025 - Fix - Catalog - Vendor logo not shown correctly [ID 42295]
+
+When the image for a vendor logo could not be shown, it could occur that instead the "Vendor logo" alt text was shown. Now it will instead correctly fall back to the default icon, and the loading state of the image has also been improved.
+
+### 20 February 2025 - Enhancement - DataMiner.services - Home app now accessible without login + improved authentication flow [ID 42246]
+
+Users now no longer need to log in to view the home app. A default view will be loaded in that case. The deploy page will still require authentication.
+
+In addition, when something goes wrong during the authentication flow, users will now see a message instead of being redirected to the login.
 
 ### 11 February 2025 - Enhancement - Catalog - Deployment status shown on details page [ID 42131]
 
