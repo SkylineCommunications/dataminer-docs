@@ -13,3 +13,6 @@ The Alarm Console is displayed at the bottom of the Cube workspace. It can conta
 
 > [!TIP]
 > See also: [Rui’s Rapid Recap – Alarm Console introduction](https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
+> [!TIP]
+> See also: [Kata #63: The power of the Alarm Console](https://community.dataminer.services/courses/kata-63/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
