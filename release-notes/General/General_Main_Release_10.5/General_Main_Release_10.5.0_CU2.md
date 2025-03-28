@@ -164,6 +164,12 @@ When an SNMPv3 connection was set up, log entries similar to the example below w
 
 `RT_QACTIONS_SNMP_v3: Unable to set the destination IP: polling IP=::1; resolved IP=::1; or=APPLY SECURITY FAILED: EMPTY USER NAME`
 
+#### GQI DxM: Problem when ad hoc data sources or custom operators had to create or update SLNet subscriptions [ID 42454]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+When the GQI DxM was being used, in some cases, errors could occur when ad hoc data sources or custom operators had to create or update SLNet subscriptions.
+
 #### Problem when creating the ClusterEndpoints.json file [ID 42481]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
@@ -197,10 +203,10 @@ When multiple SLSNMPManager processes tried to simultaneously connect to SLNet, 
 (SLNetCOM SLSNMPManager.exe) Failed to connect to SLNet: (Code: 0x800402CD) Skyline.DataMiner.Net.Exceptions.DataMinerCommunicationException: Connection was closed at 15:37 (There's a new connection for this module/agent.)
 ```
 
-#### Information events would incorrectly not get removed from the database when an element was stopped [ID 42604]
+#### Information events would incorrectly not get flushed to the database when an element was stopped [ID 42604]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-When an element was stopped, contrary to alarm events, information events would incorrectly not get removed in the database.
+When an element was stopped, contrary to alarm events, information events would incorrectly not get flushed to the database.
 
 On systems with Swarming enabled, this could cause problems when a hosting agent tried to retrieve the highest alarm ID from the database.
