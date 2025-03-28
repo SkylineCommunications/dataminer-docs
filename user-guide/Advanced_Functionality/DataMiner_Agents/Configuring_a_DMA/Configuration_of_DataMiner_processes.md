@@ -786,3 +786,21 @@ On a DMA, you can specify the port to be used for .NET Remoting.
 1. Save and close the file.
 
 1. Restart DataMiner.
+
+### MaxUploadSize
+
+Use this setting to specify the maximum upload size for upgrade packages. The default maximum upload size of upgrade packages is 4000 MB.
+
+> Example:
+> ```xml
+> <MaintenanceSettings>
+>  <SLNet>
+>    <MaxUploadSize>1300</MaxUploadSize>
+>    ...
+>  </SLNet>
+>  ...
+> </MaintenanceSettings>
+> ```
+
+> [!TIP]
+> See also: [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_increasing_max_upload) 
