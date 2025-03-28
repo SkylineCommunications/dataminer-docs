@@ -47,6 +47,14 @@ Up to now, when you stopped and restarted an SNMP manager, all open alarms would
 
 A number of security enhancements have been made.
 
+#### DataMiner Object Model: An error will now be returned when a FieldValue was added for a non-existing FieldDescriptor [ID 42358]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+When, while a DOM instance was created or updated, a `FieldValue` was added for a non-existing `FieldDescriptor`, up to now, no error would be returned.
+
+From now on, the trace data will indicate that a `DomInstanceError` was thrown with error reason `FieldValueUsedInDomInstanceLinksToNonExistingFieldDescriptor`.
+
 #### Reduced memory usage when updating a large number of parameter in bulk [ID 42385]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->

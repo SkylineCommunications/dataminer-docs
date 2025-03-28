@@ -171,6 +171,14 @@ When a multivariate pattern is detected in new trend data, suggestion events are
 
 From now on, those suggestion events will be grouped into a single incident, which will be shown as a single line in the Alarm Console.
 
+#### DataMiner Object Model: An error will now be returned when a FieldValue was added for a non-existing FieldDescriptor [ID 42358]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+When, while a DOM instance was created or updated, a `FieldValue` was added for a non-existing `FieldDescriptor`, up to now, no error would be returned.
+
+From now on, the trace data will indicate that a `DomInstanceError` was thrown with error reason `FieldValueUsedInDomInstanceLinksToNonExistingFieldDescriptor`.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
