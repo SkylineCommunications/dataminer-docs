@@ -67,13 +67,7 @@ For example, to define a parameter that holds the combination DMA ID/element ID,
   <Name>GlobalElementID</Name>
   <Description>Global Element ID</Description>
   <Information>
-     <Subtext>The global element ID.</Subtext>
-     <Includes>
-        <Include>time</Include>
-        <Include>range</Include>
-        <Include>steps</Include>
-        <Include>units</Include>
-     </Includes>
+     <Subtext>The global element ID. Format: {dmaID}/{elementID}</Subtext>
   </Information>
   <Type>elementdmaid</Type>
   <Interprete>
