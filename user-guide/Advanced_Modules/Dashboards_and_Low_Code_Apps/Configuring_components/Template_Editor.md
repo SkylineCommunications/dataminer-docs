@@ -180,23 +180,17 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the icon. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
-  - *Configure actions*: Allows you to configure actions that are executed when a user clicks the icon. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
-
-    > [!TIP]
-    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
+  - *Configure actions*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the icon. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
 
 - For *Text* layers, you can specify the following properties:
 
   - *Show text*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview, but it will not be visible in the template's end result.
 
-  - *Text box*: Allows you to enter custom text. You can enter a column name surrounded by curly brackets (e.g. `{my column}`) to insert the corresponding cell value inside your text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported.
+  - *Text box*: Allows you to enter custom text. You can enter a column name surrounded by curly brackets (e.g. `{my column}`) to insert the corresponding cell value inside your text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported. Text layers containing HTML content created before these versions will still be rendered as HTML.
 
   - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the text. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
-  - *Configure actions*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42473-->. Allows you to configure actions that are executed when a user clicks the text. Only available for DataMiner Low-Code Apps.
-
-    > [!TIP]
-    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
+  - *Configure actions*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42473-->. Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the text. Only available for DataMiner Low-Code Apps.
 
   - The table below describes the remaining settings available for *Text* layers:
 
@@ -211,11 +205,11 @@ Depending on the type of layer, you can specify different layer properties in th
     | ![Horizontal alignment](~/user-guide/images/Text_Horizontal_Alignment.png) | Horizontal alignment | Left, center, right, or justify. |
     | ![Vertical alignment](~/user-guide/images/Text_Vertical_Alignment.png) | Vertical alignment | Top, center, or bottom. |
 
-- For *HTML* layers, you can specify the following properties:
+- For *HTML* layers (available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42519-->), you can specify the following properties:
 
   - *Show HTML*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview, but it will not be visible in the template's end result.
 
-  - *Text box*: Allows you to enter HTML code. The editor provides basic syntax highlighting and IntelliSense support.
+  - *Text box*: Allows you to enter HTML code. Basic syntax highlighting and IntelliSense is supported.
 
     ![HTML code example](~/user-guide/images/HTML.gif)<br>*Template Editor in DataMiner 10.5.5*
 
@@ -224,10 +218,7 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Allows you to configure a tooltip that appears when hovering over the HTML content. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
-  - *Configure actions*: Allows you to configure actions that are executed when a user clicks the HTML content. Only available for DataMiner Low-Code Apps.
-
-    > [!TIP]
-    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
+  - *Configure actions*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the HTML content. Only available for DataMiner Low-Code Apps.
 
 - For *Rectangle* layers, you can specify the following properties:
 
@@ -246,10 +237,7 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the rectangle. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
-  - *Configure actions*: Allows you to configure actions that are executed when a user clicks the rectangle. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
-
-    > [!TIP]
-    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
+  - *Configure actions*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the rectangle. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
 
 - For *Ellipse* layers, you can specify the following properties:
 
@@ -262,10 +250,7 @@ Depending on the type of layer, you can specify different layer properties in th
 
   - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the ellipse. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
-  - *Configure actions*: Allows you to configure actions that are executed when a user clicks the ellipse. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
-
-    > [!TIP]
-    > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
+  - *Configure actions*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the ellipse. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
 
 > [!NOTE]
 > When you change the color of a layer, the most recently used template colors and the theme colors are always displayed<!--RN 34876-->.
@@ -334,7 +319,7 @@ To add a condition:
 
      - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the icon. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
-     - *Events*: Available from <!--to add--> onwards. Allows you to configure actions that are executed when a user clicks the icon. Only available for DataMiner Low-Code Apps.
+     - *Events*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when the conditions are met. Only available for DataMiner Low-Code Apps.
 
    - *Text* layer:
 
@@ -358,7 +343,7 @@ To add a condition:
 
      - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the text. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
-     - *Events*: Available from <!--to add--> onwards. Allows you to configure actions that are executed when a user clicks the text. Only available for DataMiner Low-Code Apps.
+     - *Events*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42473-->. Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when the conditions are met. Only available for DataMiner Low-Code Apps.
 
    - *HTML* layer:
 
@@ -366,7 +351,7 @@ To add a condition:
 
      - *Tooltip*: Allows you to configure a tooltip that appears when hovering over the HTML content. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
-     - *Events*: <!--to do: check why this button doesn't work for the HTML layer & whether this button already existed for other layers prior to DataMiner 10.5.5.--> Allows you to configure actions that are executed when a user clicks the ellipse. Only available for DataMiner Low-Code Apps.
+     - *Events*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when the conditions are met. Only available for DataMiner Low-Code Apps.
 
    - *Rectangle* layer:
 
@@ -380,7 +365,7 @@ To add a condition:
 
      - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the rectangle. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
-     - *Events*: Available from <!--to add--> onwards. Allows you to configure actions that are executed when a user clicks the rectangle. Only available for DataMiner Low-Code Apps.
+     - *Events*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when the conditions are met. Only available for DataMiner Low-Code Apps.
 
    - *Ellipse* layer:
 
@@ -388,7 +373,7 @@ To add a condition:
 
      - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the ellipse. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
-     - *Events*: Available from <!--to add--> onwards. Allows you to configure actions that are executed when a user clicks the ellipse. Only available for DataMiner Low-Code Apps.
+     - *Events*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when the conditions are met. Only available for DataMiner Low-Code Apps.
 
    > [!TIP]
    > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
@@ -397,11 +382,6 @@ To add a condition:
    >
    > - Any visual changes made when configuring a conditional case will not show up in the preview.
    > - From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38368-->, you can reset visual changes made when configuring a conditional case by clicking the ![reset](~/user-guide/images/Reset_Button.png) button to the right of the option you want to reset. Prior to DataMiner 10.3.0 [CU12]/10.4.3, you can only reset custom text entered for a *Text* layer.
-
-1. Optionally, in a low-code app, you can configure actions that are executed when a user clicks the tool. Only available for *Icon*, *Rectangle*, and *Ellipse* layers<!--RN 34761-->.
-
-   > [!TIP]
-   > For more information on how to configure these actions, see [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 1. If you want to add another condition, go back to step 1 and repeat the steps until all the necessary conditions have been added.
 
