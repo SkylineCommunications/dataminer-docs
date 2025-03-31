@@ -55,11 +55,11 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 
 ## Throttling
 
-If your system is pushing too much load for a specific data type, that data type will be throttled. An alarm will be generated in Cube with information about the data type or types that are being throttled. For example:
+If your system is pushing too much load for a specific data type, that data type will be throttled. An alarm will be generated in Cube with information about the data type or types that are being throttled. For example: A system can be pushing too much load if you have an element which is continuously saving parameter updates.
 
 ![ThrottlingAlarmExample](~/user-guide/images/throttling_alarm_example.png)
 
-If you encounter this alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load. If the alarm persists or you are unable to find the root cause, please contact our tech support team at <techsupport@skyline.be>.
+If you encounter this alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load. If the alarm persists or you are unable to find the root cause, please contact our STaaS team at <staas@dataminer.services>.
 
 ## Limitations
 
