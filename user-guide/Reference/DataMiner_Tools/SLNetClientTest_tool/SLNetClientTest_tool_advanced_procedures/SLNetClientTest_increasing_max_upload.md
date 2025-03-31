@@ -6,7 +6,7 @@ uid: SLNetClientTest_increasing_max_upload
 
 The default maximum upload size of upgrade packages is 4000 MB.
 
-However, it is possible to increase the maximum upload size via the SLNetClientTest tool:
+However, it is possible to change the maximum upload size via the SLNetClientTest tool:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
