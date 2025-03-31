@@ -9,6 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 31 Match 2025 - New feature - Catalog API - Vendors [ID 42633]
+
+It is now possible to retrieve vendors using the Public Catalog API. For the full API reference, go to [Public Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Public+Catalog+API+v2.0).
+
+The ID of a vendor can (optionally) be used to set the vendor on any catalog using any existing create/register or update catalog API call. For the full API reference, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
+
 ### 13 March 2025 - Enhancement - Admin - Tooltips for long node names [ID 42510]
 
 In the Admin app, on the overview page for a DataMiner System, tooltips will now be shown for the titles of nodes in case these are too long to be displayed. Previously, long names were clipped, causing users to be unable to see the last part of the names.
