@@ -149,6 +149,12 @@ owners:
 tags:
   - '<fill in tag 1 here>'
   - '<fill in tag 2 here>'
+
+# [Optional]
+# The ID of the vendor.
+# This vendor ID can be retrieved using the Public Catalog API.
+#   Must be a valid GUID.
+vendor_id: '<fill in GUID here>'
 ```
 
 ## Registering a new version with the API
