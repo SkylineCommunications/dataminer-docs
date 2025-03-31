@@ -4,6 +4,11 @@ uid: GQI_IGQIOptimizableDataSource
 
 # IGQIOptimizableDataSource interface
 
+Available from DataMiner 10.3.3/10.4.0 onwards<!-- RN 35389 -->.
+
+> [!NOTE]
+> This interface is only used by the GQI framework in the life cycle for ad hoc data sources from DataMiner 10.5.0 [CU2]/10.5.5 onwards when using the [GQI DxM](xref:GQI_DxM)<!-- RN42528 -->.
+
 ## Definition
 
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`

@@ -4,6 +4,8 @@ uid: GQI_IGQICoreDataSource
 
 # IGQICoreDataSource interface
 
+Available from DataMiner 10.3.3/10.4.0 onwards<!-- RN 35389 -->.
+
 ## Definition
 
 - Namespace: `Skyline.DataMiner.Analytics.GenericInterface`
