@@ -130,6 +130,22 @@ On the Catalog details page, if the publisher is not from your currently selecte
 
 On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
 
+#### 21 November 2024 - Fix - Catalog - Backwards compatible urls [ID 38783]
+
+Catalog detail urls were originally formatted as https://catalog.dataminer.services/catalog/{id} or https://catalog.dataminer.services/driver/{id}.
+
+These urls were broken in release 09/02/2024 and resulted in a "Catalog not found" error message.
+
+This is fixed now and the urls will redirect to the proper current url format of 
+
+details/connector/{id}
+
+details/automation-script/{id}
+
+details/visio/{id}
+
+details/package/{id}
+
 #### 11 November 2024 - Enhancement - Catalog - All version formats supported for new item versions [ID 41243]
 
 When an item version is registered, the Catalog API will now allow all version formats. If a version does not start with "x.x.x.x" or "x.x.x", it will be put in an "other" range. Versions with suffixes (e.g. -alpha, -beta, -CUxxx, etc.) will be added to their respective ranges.
@@ -868,7 +884,7 @@ When a user navigates to a legacy URL of the Catalog application, it will now re
 
 From now on, if Remote Access to the web apps is enabled, this also allows access to the `/Webpages/SRM/` and `/Webpages/assets/` folders, which will be needed for future web app enhancements and features.
 
-#### 25 April 2024 - Enhancement - Settings overhaul [ID 39471]
+#### 25 April 2024 - Enhancement - Settings overhaul [ID 39471] [ID 39246]
 
 The dataminer.services settings, configurable from the Admin app, have been enhanced with the following improvements:
 
@@ -882,9 +898,21 @@ The dataminer.services settings, configurable from the Admin app, have been enha
 
 In case deploying a catalog item to a DataMiner System will fail, it will now no longer be possible for users to try to deploy the item to that system, and a documentation link will be shown so the users can resolve the issue.
 
-#### 9 April 2024 - Enhancement - Improvements for DxM deployments from the Admin app [ID 39268]
+#### 25 April 2024 - Fix - Deploying DaaS on new organization [ID 39386]
+
+When a DaaS is deployed on a newly made organization, it will now be properly loaded on dataminer.services.
+
+#### 25 April 2024 - Enhancement - Catalog API - CanDeploy call uses DXM Health information [ID 39125]
+
+The call to verify if a user can deploy a catalog item will now take into account the health of the DXMs on the system.
+
+#### 9 April 2024 - Enhancement - Improvements for DxM deployments from the Admin app [ID 39268] [ID 39116]
 
 When a user attempts to upgrade or install a DxM, a check is now performed to verify if all the system requirements are met. If missing requirements are detected, the action is disabled, and a warning is shown. Clicking the warning will show more information on how to resolve the issue.
+
+#### 5 April 2024 - Enhancement - Deploy call no longer performs a license check for connectors [ID 39149]
+
+The call to deploy a catalog item will no longer verify if a license exists for user. Every user is now allowed to try out a connector.
 
 #### 29 March 2024 - Enhancement - Admin DxM status [ID 39277]
 
@@ -938,6 +966,22 @@ The connection status information is now updated every minute on dataminer.servi
 
 In addition, a problem has been resolved that caused some characters to be invalid in the password field in the deployment form.
 
+#### 7 March 2024 - Fix - Cloud connection - Organization with invalid DNS characters resulted in incomplete DNS name [ID 38971]
+
+Creating an organization with invalid characters for DNS name creation is prevented. The user is informed by a message to remove any invalid characters.
+
+#### 29 February 2024 - Fix - Catalog search incorrect empty result [ID 38921]
+
+When performing a search in the Catalog and pressing "Enter" before a result was received, a "no results" message would be displayed in the browse page while there would be results.
+
+#### 29 February 2024 - Fix - Catalog deployment failure notifications [ID 38905]
+
+A user will now be notified when a Catalog deployment failes because it could not be sent to the DMA while it would fail silently previously.
+
+#### 29 February 2024 - Fix - Setup Cloud connection for user not in an organization [ID 38894]
+
+It was not possible before for a user to setup a cloud connection for a DMS when he was not in an organization yet. 
+
 #### 29 February 2024 - Enhancement - Admin app UI adjusted [ID 38908]
 
 The header bar and sidebar of the [Admin app](https://admin.dataminer.services) now use a light theme.
@@ -945,6 +989,10 @@ The header bar and sidebar of the [Admin app](https://admin.dataminer.services) 
 #### 29 February 2024 - New feature - Admin - Added organization keys [ID 38944]
 
 In the Admin app, you can now create DCP keys on organization level.
+
+#### 27 February 2024 - Enhancement - Pagination for search results [ID 38833]
+
+The catalog search request will return data results, taking the max requested page size by the client into account.
 
 #### 21 February 2024 - Fix - Improved catalog search performance [ID 38865]
 
@@ -957,6 +1005,11 @@ It is now possible to know the executor of a custom command executed with the Da
 To add a command to your DMS, create an Automation script in the folder "bot" in the DMS. For examples of such scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
 For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
+
+#### 16 February 2024 - Fix - Incorrect Catalog API license check [ID 38803]
+
+A user would see a "not licensed" message for a connector while having a license for it.
+The license of users for connectors are now properly verified.
 
 #### 16 February 2024 - Enhancement - Changed user role required to renew system tokens [ID 38722]
 
