@@ -22,5 +22,4 @@ Optionally, Support Services can be extended with [out-of-business-hours support
 To take full advantage of [Proactive Support](xref:Proactive_Support), your DMS must be connected to dataminer.services. This service is supplied at no extra charge with a Perpetual-Use License or with a DataMiner System running on usage-based services.
 
 > [!IMPORTANT]
-> Support Services scope is limited to DataMiner software - core software, connectors, and cloud components. It excludes any third-party components, except for tickets related with *database content* for supported databases. 
-> If you opt for [self-managed infrastructure](https://docs.dataminer.services/dataminer-overview/DataMiner_Hosting_and_HA/Overview_hosting.html) for DataMiner or storage nodes, you are responsible for configuring, maintaining, updating and patching the respective infrastructure setup.
+> The scope of DataMiner Support Services is limited to **DataMiner software**: core software, connectors, and cloud components. It excludes any third-party components, except for tickets related to **database content** for supported databases. If you opt for [self-managed infrastructure](xref:Overview_hosting) for DataMiner or storage nodes, you are responsible for configuring, maintaining, updating, and patching the respective infrastructure setup.
