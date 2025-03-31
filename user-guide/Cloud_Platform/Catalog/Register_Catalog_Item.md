@@ -153,6 +153,10 @@ tags:
 # [Optional]
 # The ID of the vendor.
 # This vendor ID can be retrieved using the Public Catalog API.
+# If the vendor ID does not exist, the registration or update will fail with HTTP status code 400. 
+# If the vendor ID is '00000000-0000-0000-0000-000000000000' the vendor will be unset. 
+# If the vendor ID is not provided during the initial registration, the vendor will be unset.
+# If the vendor ID is not provided during an update, the vendor will be unchanged and keep the previously set value.
 #   Must be a valid GUID.
 vendor_id: '<fill in GUID here>'
 ```
