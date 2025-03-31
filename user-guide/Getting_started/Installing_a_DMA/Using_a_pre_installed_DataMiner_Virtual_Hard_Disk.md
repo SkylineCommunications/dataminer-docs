@@ -127,6 +127,39 @@ Follow the below steps to configure your DataMiner Agent:
 > [!IMPORTANT]
 > For security reasons, we strongly recommend creating a second user and disabling the built-in administrator account once the setup is complete. See [Managing users](xref:Managing_users).
 
+### WSL management
+
+If you chose for the Self-hosted - Local storage you are running a WSL container for your storage. This can be managed if you like.
+To connect to the WSL you will need to open a command prompt with the Administrator user (or the user that is going through the wizard) and run the `wsl` command.
+It should log in automatically and connect to the WSL container.
+
+   > [!NOTE]
+   > WSL always runs under a user, it is not possible to reach a WSL container from another user account.
+
+#### Cassandra
+
+Cassandra is installed with the following user:
+* cassandra
+* DataMiner123!
+
+When Cassandra is running you can change the password with `cqlsh -u cassandra -p DataMiner123!` and enter the following query: `alter role cassandra with password = 'MyNewPassword123!';`
+Exit *cqlsh* with `exit`.
+
+#### Opensearch
+
+Opensearch admin user:
+* admin
+* DataMiner123!
+
+You can change the admin password by following these steps:
+
+* `cd /usr/share/opensearch/plugins/opensearch-security/tools`
+* `OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./hash.sh`
+* Type in a (strong) password.
+* Copy your `<HashedPassword>`
+* `sudo vi /etc/opensearch/opensearch-security/internal_users.yml`
+* Update the hash at the admin with your hash.
+
 ## Restoring a backup onto the virtual hard disk
 
 If you want to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, after you have created and connected the VM, instead of the configuration steps detailed above, follow the steps below:
