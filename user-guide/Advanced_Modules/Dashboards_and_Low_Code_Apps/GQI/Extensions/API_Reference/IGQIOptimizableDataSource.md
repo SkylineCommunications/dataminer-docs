@@ -2,7 +2,7 @@
 uid: GQI_IGQIOptimizableDataSource
 ---
 
-# IGQIOptimizeableDataSource interface
+# IGQIOptimizableDataSource interface
 
 ## Definition
 
@@ -18,7 +18,7 @@ The *IGQIOptimizableDataSource* interface can be used to optimize an ad hoc data
 
 ### IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
 
-Called when an optimizeable operator is appended directly to the ad hoc data source. Given the current query node that represents the ad hoc data source and the next operator, it should return the resulting query node.
+Called when an optimizable operator is appended directly to the ad hoc data source. Given the current query node that represents the ad hoc data source and the next operator, it should return the resulting query node.
 
 > [!IMPORTANT]
 >
