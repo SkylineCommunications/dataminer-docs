@@ -6,17 +6,17 @@ uid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi_6.x
 
 ## 6.2.1
 
-#### Improved encoding selection when executing a `Get` RPC [ID 42622]
+#### Improved encoding selection when executing a Get RPC [ID 42622]
 
-The API in `GnmiClient` has been improved to ensure it only uses an encoding that the target actually supports. Previously, every `Get` RPC defaulted to JSON, which could lead to `Unimplemented` exceptions if the target did not support it.
+The API in `GnmiClient` has been improved to ensure that it only uses an encoding that the target actually supports. Previously, every `Get` RPC defaulted to JSON, which could lead to `Unimplemented` exceptions if the target did not support it.
 
-Now, the API first queries the target’s capabilities to determine the available encodings and selects the most preferred one in a predefined order:
+Now, the API first queries the target's capabilities to determine the available encodings and selects the most preferred one in a predefined order:
 
 1. JSON
-2. JSON_IETF
-3. ASCII
-4. Bytes
-5. Proto
+1. JSON_IETF
+1. ASCII
+1. Bytes
+1. Proto
 
 JSON remains the default to maintain backward compatibility, but if it is not supported, the next available option is used.
 
