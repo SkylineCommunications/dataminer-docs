@@ -533,6 +533,8 @@ items:
           topicUid: AdvancedDVEsSeverityState
         - name: Toggling DVE creation
           topicUid: AdvancedDVEsTogglingCreation
+        - name: Assigning templates
+          topicUid: AdvancedDVEsTemplates
         - name: Remarks
           topicUid: AdvancedDVEsRemarks
         - name: Exercise
