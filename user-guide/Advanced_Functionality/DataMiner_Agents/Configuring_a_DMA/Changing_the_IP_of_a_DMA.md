@@ -15,49 +15,49 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
 1. Change the IP address of the DMA server in Windows.
 
-1. Go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
+1. Go to the folder *C:\Skyline DataMiner\\* and open the file *DMS.xml*.
 
 1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
 
-1. If the server hosts a local database, i.e. you are not using [Storage as a Service (STaaS)](xref:STaaS):
+1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
-   1. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+   1. Go to the folder *C:\Skyline DataMiner\\* and open the file *DB.xml*.
 
    1. Locate all occurrences of the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. If the server hosts a Cassandra database:
+   1. If the server hosts a Cassandra database:
 
-   1. Open the cassandra.yaml file (typically located in the folder *C:\\Program Files\\Cassandra\\conf\\*).
+      1. Open the cassandra.yaml file (typically located in the folder *C:\Program Files\Cassandra\conf\\*).
 
-   1. Replace any references to the old IP address with the new IP address, and save the file.
+      1. Replace any references to the old IP address with the new IP address, and save the file.
 
-   1. Restart the cassandra service.
+      1. Restart the cassandra service.
 
-1. If the server hosts an OpenSearch database:
+   1. If the server hosts an OpenSearch database:
 
-   1. Open the opensearch.yml file (typically located in the folder *C:\\Program Files\\opensearch\\config\\*).
+      1. Open the opensearch.yml file (typically located in the folder *C:\Program Files\opensearch\config\\*).
 
-   1. Replace any references to the old IP address with the new IP address, and save the file.
+      1. Replace any references to the old IP address with the new IP address, and save the file.
 
-   1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
+      1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
 
-1. If the server hosts an Elasticsearch database:
+   1. If the server hosts an Elasticsearch database:
 
-   1. Open the elasticsearch.yml file (typically located in the folder *C:\\Program Files\\Elasticsearch\\config\\*).
+      1. Open the elasticsearch.yml file (typically located in the folder *C:\Program Files\Elasticsearch\config\\*).
 
-   1. Replace any references to the old IP address with the new IP address, and save the file.
+      1. Replace any references to the old IP address with the new IP address, and save the file.
 
-   1. Restart the elasticsearch-service-x64 service.
+      1. Restart the elasticsearch-service-x64 service.
 
 1. If the server has the NATS service installed:
 
-   1. Open the file *SLCloud.xml*, located in the folder *C:\\Skyline DataMiner\\*.
+   1. Open the file *SLCloud.xml*, located in the folder *C:\Skyline DataMiner\\*.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
    1. Uninstall NAS and NATS:
 
-      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
+      1. Go to *C:\Skyline DataMiner\Files\\* and double-click *SLEndpointTool_Console.exe*.
 
       1. Press U to confirm that you want to uninstall NAS and NATS.
 
@@ -65,7 +65,7 @@ For a standalone DMA, i.e. a DMA that is not combined with other DMAs in a clust
 
    1. Install NAS and NATS again:
 
-      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
+      1. Go to *C:\Skyline DataMiner\Files\\* and double-click *SLEndpointTool_Console.exe*.
 
       1. Press I to confirm that you want to install NAS and NATS
 
@@ -102,49 +102,49 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 1. Change the IP address of the DMA server in Windows.
 
-1. Go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
+1. Go to the folder *C:\Skyline DataMiner\\* and open the file *DMS.xml*.
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. If the server hosts a local database, i.e. you are not using [Storage as a Service (STaaS)](xref:STaaS):
+1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
-   1. Go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+   1. Go to the folder *C:\Skyline DataMiner\\* and open the file *DB.xml*.
 
    1. Locate all occurrences of the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. If the server hosts a Cassandra database:
+   1. If the server hosts a Cassandra database:
 
-   1. Open the cassandra.yaml file (typically located in the folder *C:\\Program Files\\Cassandra\\conf\\*).
+      1. Open the cassandra.yaml file (typically located in the folder *C:\Program Files\Cassandra\conf\\*).
 
-   1. Replace any references to the old IP address with the new IP address, and save the file.
+      1. Replace any references to the old IP address with the new IP address, and save the file.
 
-   1. Restart the cassandra service.
+      1. Restart the cassandra service.
 
-1. If the server hosts an OpenSearch database:
+   1. If the server hosts an OpenSearch database:
 
-   1. Open the opensearch.yml file (typically located in the folder *C:\\Program Files\\opensearch\\config\\*).
+      1. Open the opensearch.yml file (typically located in the folder *C:\Program Files\opensearch\config\\*).
 
-   1. Replace any references to the old IP address with the new IP address, and save the file.
+      1. Replace any references to the old IP address with the new IP address, and save the file.
 
-   1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
+      1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
 
-1. If the server hosts an Elasticsearch database:
+   1. If the server hosts an Elasticsearch database:
 
-   1. Open the elasticsearch.yml file (typically located in the folder *C:\\Program Files\\Elasticsearch\\config\\*).
+      1. Open the elasticsearch.yml file (typically located in the folder *C:\Program Files\Elasticsearch\config\\*).
 
-   1. Replace any references to the old IP address with the new IP address, and save the file.
+      1. Replace any references to the old IP address with the new IP address, and save the file.
 
-   1. Restart the elasticsearch-service-x64 service.
+      1. Restart the elasticsearch-service-x64 service.
 
 1. If the server has the NATS service installed:
 
-   1. Open the file *SLCloud.xml*, located in the folder *C:\\Skyline DataMiner\\*.
+   1. Open the file *SLCloud.xml*, located in the folder *C:\Skyline DataMiner\\*.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
    1. Uninstall NAS and NATS:
 
-      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
+      1. Go to *C:\Skyline DataMiner\Files\\* and double-click *SLEndpointTool_Console.exe*.
 
       1. Press U to confirm that you want to uninstall NAS and NATS.
 
@@ -152,7 +152,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
    1. Install NAS and NATS again:
 
-      1. Go to *C:\\Skyline DataMiner\\Files* and double-click *SLEndpointTool_Console.exe*.
+      1. Go to *C:\Skyline DataMiner\Files\\* and double-click *SLEndpointTool_Console.exe*.
 
       1. Press I to confirm that you want to install NAS and NATS.
 
@@ -220,23 +220,23 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. Change the IP address of the DMA server in Windows.
 
-1. If the server hosts a local database, i.e. you are not using [Storage as a Service (STaaS)](xref:STaaS):
+1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
-   1. On the DMA of which you have changed the IP, go to the folder *C:\\Skyline DataMiner* and open the file *DB.xml*.
+   1. On the DMA of which you have changed the IP, go to the folder *C:\Skyline DataMiner\\* and open the file *DB.xml*.
 
    1. Locate all occurrences of the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. On the DMA of which you have changed the IP, go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
+1. On the DMA of which you have changed the IP, go to the folder *C:\Skyline DataMiner\\* and open the file *DMS.xml*.
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-1. On the other DMA of the Failover pair, go to the folder *C:\\Skyline DataMiner* and open the file *DMS.xml*.
+1. On the other DMA of the Failover pair, go to the folder *C:\Skyline DataMiner\\* and open the file *DMS.xml*.
 
 1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
 1. If the DMAs host a Cassandra database, do the following **on both DMAs**:
 
-   1. Open the cassandra.yaml file (typically located in the folder *C:\\Program Files\\Cassandra\\conf\\*).
+   1. Open the cassandra.yaml file (typically located in the folder *C:\Program Files\Cassandra\conf\\*).
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
@@ -245,17 +245,17 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
    > [!NOTE]
    > If the IP of both DMAs in the Failover pair is changed, replace both IP addresses in both cassandra.yaml files.
 
-1. If the server hosts an OpenSearch database, do the following **on both DMAs**:
+1. If the DMAs host an OpenSearch database, do the following **on both DMAs**:
 
-   1. Open the opensearch.yml file (typically located in the folder *C:\\Program Files\\opensearch\\config\\*).
+   1. Open the opensearch.yml file (typically located in the folder *C:\Program Files\opensearch\config\\*).
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
    1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
 
-1. If the DMAs hosts an Elasticsearch database, do the following **on both DMAs**:
+1. If the DMAs host an Elasticsearch database, do the following **on both DMAs**:
 
-   1. Open the elasticsearch.yml file (typically located in the folder *C:\\Program Files\\Elasticsearch\\config\\*).
+   1. Open the elasticsearch.yml file (typically located in the folder *C:\Program Files\Elasticsearch\config\\*).
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
 
@@ -329,7 +329,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. Change the IP address of the DMA server in Windows.
 
-1. Locate the file *cassandra.yaml* on the DMA. By default, it is located in the folder *C:\\Program Files\\Cassandra\\conf*.
+1. Locate the file *cassandra.yaml* on the DMA. By default, it is located in the folder *C:\Program Files\Cassandra\conf\\*.
 
 1. Open *cassandra.yaml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
 
@@ -341,7 +341,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. Restart the Cassandra service.
 
-1. In a command window, execute *nodetool status* (from the directory *C:\\Program Files\\Cassandra\\bin*), in order to check the status of the cluster. this should result in a list with your new IP, your old IP and all other Cassandra nodes on the server. For example:
+1. In a command window, execute *nodetool status* (from the directory *C:\Program Files\Cassandra\bin\\*), in order to check the status of the cluster. this should result in a list with your new IP, your old IP and all other Cassandra nodes on the server. For example:
 
    ![Example of the nodetool status resuls](~/user-guide/images/nodetoolstatus.png)
 
@@ -351,7 +351,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. If OpenSearch is used as the indexing database:
 
-   1. Locate the file *opensearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder *C:\\Program Files\\opensearch\\conf*.
+   1. Locate the file *opensearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder *C:\Program Files\opensearch\conf\\*.
 
    1. Open *opensearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
 
@@ -366,7 +366,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. If Elasticsearch is used as the indexing database:
 
-   1. Locate the file *Elasticsearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder *C:\\Program Files\\Elasticsearch\\conf*.
+   1. Locate the file *Elasticsearch.yml* on the DMA of which you have changed the IP. By default, it is located in the folder *C:\Program Files\Elasticsearch\conf\\*.
 
    1. Open *Elasticsearch.yml* in a text editor (as Administrator) and replace the IP address in the following lines with the IP of the server:
 
