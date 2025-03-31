@@ -57,7 +57,7 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 
 If your system is pushing too much load for a specific data type, that data type will be throttled. This could for example happen when you have an element that is continuously saving parameter updates.
 
-When this happens, an alarm will be generated in Cube with information about the data type or types that are being throttled. For example:
+From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42387 -->, when this happens, an alarm will be generated in Cube with information about the data type or types that are being throttled. For example:
 
 ![ThrottlingAlarmExample](~/user-guide/images/throttling_alarm_example.png)
 
