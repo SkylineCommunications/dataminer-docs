@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 31 Match 2025 - New feature - Catalog API - Ability to retrieve vendors [ID 42633]
+### 1 April 2025 - New feature - Catalog API - Ability to retrieve vendors [ID 42633]
 
 It is now possible to retrieve vendors using the public Catalog API. For the full API reference, go to [Public Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Public+Catalog+API+v2.0).
 
