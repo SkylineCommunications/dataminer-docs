@@ -4,6 +4,10 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
+#### 1 April 2025 - Enhancement - Dependencies updated [ID 42657]
+
+Several dependencies have been updated.
+
 #### 12 November 2024 - Fix - Orchestrator 1.7.4 - Installer caused Orchestrator startup issue [ID 41404]
 
 A DLL issue in the installer of Orchestrator 1.7.2 caused the service to be unable to start, which could make it impossible to still update DxMs from the [Admin app](https://admin.dataminer.services).
