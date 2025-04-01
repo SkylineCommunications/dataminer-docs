@@ -13,7 +13,8 @@ One column of table 2 has to contain references (keys) to information stored in 
 ```xml
 <ColumnOption idx="9" pid="2010" type="custom" value="" options=";foreignKey=1000"/>
 ```
-It is possible to have multiple columns in a table that are foreign keys to the same table, but referencing a different key. Based on the previous example, you can add another Column with the Foreign Key to table 1000. 
+
+It is possible to have multiple columns in a table that are foreign keys to the same table, but referencing a different key. Based on the previous example, you can add another column with a foreign key to table 1000.
 
 ```xml
 <ColumnOption idx="10" pid="2011" type="custom" value="" options=";foreignKey=1000"/>
