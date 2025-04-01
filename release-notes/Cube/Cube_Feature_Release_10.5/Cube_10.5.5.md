@@ -151,6 +151,19 @@ If you try to swarm an element of which the *Block Swarming* option is set to tr
 
 Because of a number of enhancements, overall performance has increased when opening view cards.
 
+#### Spectrum analysis: Auto-scale button at the top of a spectrum trace graph [ID 42597]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 [CU0] -->
+
+In the *Spectrum Analyzer* page of a spectrum analyzer card, you can now find an auto-scale button at the top of the spectrum trace graph.
+
+Clicking this button will center the current trace based on minimum and maximum values.
+
+This feature will only work if the spectrum element connector contains the following parameters:
+
+- *Reference Level* (both read and write parameters)
+- *Amplitude Scale* (both read and write parameters)
+
 ### Fixes
 
 #### Visual Overview: Placeholders would incorrectly broadcast the same value twice [ID 42252]
