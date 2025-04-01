@@ -144,6 +144,21 @@ Up to now, the credentials library would only be aware of a subset of all SNMPv3
 
 Because of a number of enhancements, it will now be fully aware of all supported algorithms.
 
+#### BPA test 'Check Deprecated MySQL DLL' renamed to 'Check Deprecated DLL Usage' [ID 42057]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+Up to now, the BAP test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
+
+Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending on the DataMiner version, it will checks for the following DLL files, in the specified folders:
+
+| Deprecated DLL | Deprecated since DataMiner version | Minimum safe DLL version | Folder |
+|----------------|------------------------------------|--------------------------|--------|
+| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | *C:\Skyline DataMiner\ProtocolScripts* |
+| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | *C:\Skyline DataMiner\ProtocolScripts* or *C:\Skyline DataMiner\Files* |
+
+Any version lower than the specified minimum version will be considered outdated, as older versions are known to pose security risks.
+
 #### Disabling an SLAnalytics feature will now clear all open alarms and suggestion events associated with that feature [ID 42096]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
