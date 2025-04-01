@@ -39,7 +39,9 @@ The parameter with ID 1 represents the variable that needs to be retrieved. Note
 >
 > - For more information about the meaning of all tags and attributes, see [Protocol.Params.Param](xref:Protocol.Params.Param).
 > - An example protocol "Skyline Example SNMP Stand-Alone" is available in the [SkylineCommunications/SLC-C-Example_SNMP-Stand-Alone](https://github.com/SkylineCommunications/SLC-C-Example_SNMP-Stand-Alone) GitHub repository.
-> - You may also want to read about (change-based event handling)[xref:InnerWorkingsChangeBasedEventHandling].
+
+> [!TIP]
+> See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
 
 Next, a group is defined which has the defined parameter as content.
 
