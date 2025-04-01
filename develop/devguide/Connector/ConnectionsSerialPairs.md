@@ -44,6 +44,9 @@ In order to obtain the correct behavior in this case, it is important to clear r
 > [!NOTE]
 > Typically, different responses will not reuse the same parameters.
 
+> [!TIP]
+> See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
+
 ## Defining multiple responses in a pair
 
 In case multiple responses are defined in a pair, DataMiner will try to match an incoming response with the defined responses in the order in which they are defined in the pair.
