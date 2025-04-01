@@ -116,14 +116,26 @@ namespace Skyline.DataMiner.Scripting
 		/// Removes all rows from the specified table.
 		/// </summary>
 		/// <param name="tableId">The ID of the table parameter.</param>
-		/// <returns>The number of rows left. In case the ClearAllKeys method has been invoked specifying an empty table, -1 is returned.</returns>
+		/// <returns>
+		///		<list type = "bullet">
+		///			<item>
+		///				<description>Starting from Dataminer 10.5.6/10.4 CU15/10.5 CU3: -1 In case the ClearAllKeys method has been invoked specifying an empty table, 0 if clearing succeeded, otherwise 1.</description>
+		///			</item>
+		///			<item>
+		///				<description>Prior to Dataminer 10.5.6/10.4 CU15/10.5 CU3: The number of rows left. In case the ClearAllKeys method has been invoked specifying an empty table, -1 is returned.</description>
+		///			</item>
+		///		</list>
+		/// </returns>
 		/// <remarks>
 		///		<list type = "bullet">
 		///			<item>
 		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
-		///				<description>This method first retrieves all primary keys from the table using a NotifyProtocol type 168 (<see href="xref:NT_GET_INDEXES">NT_GET_INDEXES</see>) call. If there is at least one primary key present, the method performs a NotifyProtocol type 156 <see href="xref:NT_DELETE_ROW">NT_DELETE_ROW</see> call, removing all rows.</description>
+		///				<description>Starting from Dataminer 10.5.6/10.4 CU15/10.5 CU3: This method first retrieves all primary keys from the table using a NotifyProtocol type 397 call [NT_GET_KEYS_SLPROTOCOL](xref:NT_GET_KEYS_SLPROTOCOL). If there is at least one primary key present, the method performs a NofityProtocol type 474 call [NT_CLEAR_PARAMETER](xref:NT_CLEAR_PARAMETER), removing all rows.</description>
+		///			</item>
+		///			<item>
+		///				<description>Prior to Dataminer 10.5.6/10.4 CU15/10.5 CU3: This method first retrieves all primary keys from the table using a NotifyProtocol type 168 call [NT_GET_INDEXES](xref:NT_GET_INDEXES). If there is at least one primary key present, the method performs a NofityProtocol type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW), removing all rows.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>
@@ -3545,5 +3557,17 @@ namespace Skyline.DataMiner.Scripting
 		/// </code>
 		/// </example>
 		void ShowInformationMessage(string message);
+
+		/// <summary>
+		/// Clears a parameter and also the display value of the parameter. If the parameter is saved the change also gets saved.
+		/// This works for both tables as well as single parameter, but not for table columns.
+		/// </summary>
+		/// <param name="parameterId">The ID of the parameter.</param>
+		/// <returns>HRESULT indicating success or failure of clearing. If failure occurs because of an invalid parameter ID an exception will be thrown instead.</returns>
+		/// <exception cref="ArgumentException">The provided parameter ID is invalid.</exception>
+		/// <remarks>
+		/// Performs an NotifyProtocol 474 [NT_CLEAR_PARAMETER](xref:NT_CLEAR_PARAMETER) call with wrapping to throw an argumentException if the clear cannot execute due to an invalid parameter ID (e.g. for a table column).
+		/// </remarks>
+		HRESULT ClearParameter(int parameterId);
 	}
 }
