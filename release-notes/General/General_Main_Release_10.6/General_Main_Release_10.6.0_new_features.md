@@ -436,7 +436,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -445,6 +445,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 42283: MR 10.6.0 - FR 10.5.4 -->
 <!-- RNs 42319: MR 10.6.0 - FR 10.5.4 -->
 <!-- RNs 42429: MR 10.6.0 - FR 10.5.5 -->
+<!-- RNs 42480: MR 10.6.0 - FR 10.5.5 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -509,18 +510,21 @@ Under certain conditions, Relational anomaly detection (RAD) is able to detect r
 
 ##### Messages
 
-The following messages can be used to add, update or remove a parameter group from the configuration file, or to retrieve information for a particular parameter group from that configuration file:
+The following API messages can be used to create, retrieve and remove RAD parameter groups:
 
-- `AddMADParameterGroupMessage` allows you to add a parameter group to the Relational Anomaly Detection configuration file.
-
-  If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated.
-
-- `RemoveMADParameterGroupMessage` allows you to remove a parameter group from the Relational Anomaly Detection configuration file.
-
-- `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
+| Message | Function |
+|---------|----------|
+| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
+| GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data. |
+| GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group. |
+| GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured. |
+| RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
+| RetrainRADModelMessage          | Retrains the RAD model over a specified time range. |
 
 > [!NOTE]
-> Names of RAD parameter groups will be processed case-insensitive.
+>
+> - Names of RAD parameter groups will be processed case-insensitive.
+> - The following messages have been deprecated: *AddMADParameterGroupMessage*, *GetMADParameterGroupInfoMessage*, *RemoveMADParameterGroupMessage*, and *RetrainMADModelMessage*.
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]
 

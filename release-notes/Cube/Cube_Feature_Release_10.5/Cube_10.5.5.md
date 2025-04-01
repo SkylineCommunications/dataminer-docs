@@ -157,7 +157,7 @@ Because of a number of enhancements, overall performance has increased when open
 
 In the *Spectrum Analyzer* page of a spectrum analyzer card, you can now find an auto-scale button at the top of the spectrum trace graph.
 
-Clicking this button will center the current trace based on minimum and maximum values.
+Clicking this button will maximize and center the current trace based on minimum and maximum values.
 
 This feature will only work if the spectrum element connector contains the following parameters:
 

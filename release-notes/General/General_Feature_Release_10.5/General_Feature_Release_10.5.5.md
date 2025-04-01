@@ -142,6 +142,26 @@ GQI will now look for missing dependencies in the *C:\\Skyline DataMiner\\Script
 
 GQI recording, a debugging feature that allowed you to save GQI communication and replay it in a lab environment, has now been removed from the GQI DxM.
 
+#### SLAnalytics - Relational anomaly detection: New API messages [ID 42480]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+The following messages have been added to the Relational Anomaly Detection API. These messages can be used to create, retrieve and remove RAD parameter groups:
+
+| Message | Function |
+|---------|----------|
+| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
+| GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data. |
+| GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group. |
+| GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured. |
+| RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
+| RetrainRADModelMessage          | Retrains the RAD model over a specified time range. |
+
+> [!NOTE]
+>
+> - Names of RAD parameter groups will be processed case-insensitive.
+> - The following messages have been deprecated: *AddMADParameterGroupMessage*, *GetMADParameterGroupInfoMessage*, *RemoveMADParameterGroupMessage*, and *RetrainMADModelMessage*.
+
 #### GQI DxM: Record limit of Sort operator has been increased to 100,000 records [ID 42492]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
