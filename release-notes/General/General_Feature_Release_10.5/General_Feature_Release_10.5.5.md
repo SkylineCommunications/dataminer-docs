@@ -90,6 +90,17 @@ When a large number of parameters are updated in bulk, from now on, SLProtocol w
 
 Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
 
+#### SLAnalytics - Relational anomaly detection: Input validation when adding a new parameter group [ID 42429]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+When you add a new parameter group, from now on, an error message will appear when that parameter group contains
+
+- an invalid group name,
+- an invalid number of parameters,
+- an invalid anomaly threshold, or
+- an invalid minimum anomaly duration value.
+
 #### Enhanced performance when restarting HTTP elements in a timeout state [ID 42443]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->

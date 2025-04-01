@@ -436,7 +436,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -444,6 +444,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 42276: MR 10.6.0 - FR 10.5.4 -->
 <!-- RNs 42283: MR 10.6.0 - FR 10.5.4 -->
 <!-- RNs 42319: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42429: MR 10.6.0 - FR 10.5.5 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -483,13 +484,16 @@ In each `Instance`, you can specify either a single-value parameter or a table p
 - Single-value parameter: [DataMinerID]/[ElementID]/[ParameterID]
 - Table parameter: [DataMinerID]/[ElementID]/[ParameterID]/[PrimaryKey]
 
+> [!NOTE]
+> When you add a new parameter group, an error message will appear when that parameter group contains an invalid group name, an invalid number of parameters, an invalid anomaly threshold, or an invalid minimum anomaly duration value.
+
 ##### Average trending
 
 RAD requires parameter instances to have at least one week of five-minute average trend data. If at least one parameter instance has less than a week of trend data available, monitoring will only start after this one week becomes available. In particular, this means that average trending has to be enabled for each parameter instance used in a RAD group and that the TTL for five-minute average trend data has to be set to more than one week (recommended setting: 1 month). Also, RAD only works for numeric parameters.
 
 If necessary, users can force RAD to retrain its internal model by sending a `RetrainMadModelMessage`. In this message, they can indicate the periods during which the parameters were behaving as expected. This will help RAD to identify when the parameters deviate from that expected behavior in the future.
 
-#### History set parameters
+##### History set parameters
 
 Under certain conditions, Relational anomaly detection (RAD) is able to detect relational anomalies on history set parameters:
 
