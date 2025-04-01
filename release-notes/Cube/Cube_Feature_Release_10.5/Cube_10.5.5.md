@@ -143,9 +143,7 @@ To do so, go to the *Advanced* section, and enable to *Block Swarming* option. B
 If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
 
 > [!NOTE]
->
-> - In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System.
-> - DVE child elements will inherits the *Block Swarming* option of their parent element.
+> In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System.
 
 #### Data Display: Enhanced performance when opening view cards [ID 42576]
 

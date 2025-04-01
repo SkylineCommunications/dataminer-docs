@@ -9,7 +9,7 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## Highlights
 
-- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314)
+- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535)
 
 ## New features
 
@@ -35,7 +35,7 @@ When you create or update an element in DataMiner Cube, you will be able to indi
 
 If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
 
-In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System. DVE child elements will inherits the *Block Swarming* option of their parent element.
+In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System.
 
 > [!IMPORTANT]
 >
