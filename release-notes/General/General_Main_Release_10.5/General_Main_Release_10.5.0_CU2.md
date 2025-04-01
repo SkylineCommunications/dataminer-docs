@@ -151,7 +151,7 @@ Since DataMiner version 10.1.0/1.0.0.8, the following notice would appear when a
 DataMiner IDP is licensed, but no Elasticsearch database is active on the system. Therefore, scheduled workflows are not available.
 ```
 
-As DataMiner IDP no longer requires nor a separate license nor an Indexing Engine, from now on, this notice will no longer appear.
+As DataMiner IDP no longer requires neither a separate license nor an Indexing Engine, from now on, this notice will no longer appear.
 
 #### SLAnalytics: An anomaly alarm event will now be generated when a change point with a type that is not monitored is changed to a change point with a type that is monitored [ID 42596]
 
