@@ -4,111 +4,72 @@ uid: Connection_strings
 
 # Connection strings
 
-## What are connection strings?
+## About connection strings between DataMiner Agents
 
-In most cases, when you add a DataMiner Agent to a DataMiner System, all other DataMiner Agents in the DataMiner System connect to it using its primary IP address. When that happens, the SLNet process of one DMA connects to the SLNet process of a different DataMiner agent to transfer messages.
+In most cases, when you add a DataMiner Agent to a DataMiner System, all other DataMiner Agents in the DataMiner System connect to it using its primary IP address. When that happens, the SLNet process of one DMA connects to the SLNet process of a different DMA to transfer messages.
 
-However, in certain specific cases, the aforementioned SLNet-to-SLNet connection cannot be established using the defaults supplied by DataMiner.
-That is where *connection strings* come in.
-They can clarify what SLNet needs to do in order to be able to connect to an SLNet process on a different DMA.
+However, in certain specific cases, the SLNet-to-SLNet connection cannot be established using the defaults supplied by DataMiner. This is where connection strings come in. These will clarify what SLNet needs to do in order to be able to connect to an SLNet process on a different DMA.
 
-> [!WARNING]
-> It is always preferable to use the default connection over the use of connection strings as connection strings come with certain limitations.
+> [!IMPORTANT]
+> It is always preferable to use the default connection instead of connection strings, as connection strings come with certain limitations (see below).
 
 ## When should you use connection strings?
 
-When agents have been configured to listen on non-standard ports.
+Typically, this is used in the following cases:
 
-- The standard ports are 8004 for .NET Remoting or 443 for gRPC. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
+- When you want to use a non-default communication type. For example, when you want to use gRPC but still keep .NET remoting enabled (supported from DataMiner 10.3.0/10.3.2 onwards<!-- RN 34983 -->).
 
-When you want to use a non-default communication type.
+  > [!NOTE]
+  > Configuring connection strings for gRPC allows the system to still use .NET remoting outside of the configured connection. If the former is not necessary, instead of configuring connection strings for gRPC, consider [disabling .NET remoting in *MaintenanceSettings.xml*](xref:Configuration_of_DataMiner_processes#disabling-net-remoting) to make your DataMiner server fully rely on gRPC. See [Secure server-server communication — gRPC](xref:DataMiner_hardening_guide#grpc)
 
-- E.g. You want to use gRPC, yet still keep .NET remoting enabled.
+- When the DataMiner Agents are unable to authenticate with each other and you wish to specify the credentials of a Windows user with Administrator privileges to work around this.
 
-> [!TIP]
-> Configuring connection strings for gRPC allows the system to still use .NET remoting outside of the configured connection. If the former is not necessary, instead of configuring connection strings for gRPC, consider disabling .NET remoting in case you want your DataMiner server to fully rely on gRPC.
-> See [Secure server-server communication - gRPC](xref:DataMiner_hardening_guide#grpc)
+  It will typically become clear from the *C:\Skyline DataMiner\Logging\SLNet.txt* log if DataMiner Agents are unable to authenticate between each other. This may occur in setups where the DMAs are in different domains.
 
-When agents cannot be reached directly on their primary IP address.
+In some existing setups, connection strings are also used in the cases below. However, these configurations should not be used on newer systems. Changing ports or IP addresses may also require other changes in the DMS, such as NATS tweaks or tweaks in other configuration files.
 
-- E.g. they have *Network Address Translation, a proxy, a gateway, ...* blocking access to the primary IP address.
+- When Agents have been configured to listen on non-standard ports.
 
-> [!IMPORTANT]
-> Configuring the connection strings to translate an unreachable internal IP address to a reachable external one prevents the DataMiner upgrade client from upgrading the entire DMS at once.
-> Any DMA on which this is configured will need to be upgraded separately.
-> Therefore, we recommend ensuring that the primary IP address of each DMA is reachable (e.g. by setting up a virtual network).
+  The standard ports are 8004 for .NET Remoting or 443 for gRPC. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 
-When the DataMiner agents are unable to authenticate with each other and you wish to specify the credentials of a Windows user with Administrator privileges to work around this.
+- When Agents cannot be reached directly on their primary IP address.
 
-- It will typically become clear from the C:\Skyline DataMiner\Logging\SLNet.txt log if DataMiner agents are unable to authenticate between each other. May occur in setups where the DMAs are in different domains.
+  For example: Network Address Translation, a proxy, a gateway, etc. blocks access to the primary IP address.
 
-## Where can you configure connection strings?
-
-As of now, there are two places where connection strings can be configured:
-
-1. Via *SLNetClientTest tool*.
-1. Via *Redirects* in *DMS.xml*
-
-In practice, connection strings are read and consumed by the software directly from DMS.xml.
-As such, configuring these in SLNetClientTest tool have exactly the same effect as if they were configured in DMS.xml.
-
-The advantage of using SLNetClientTest tool is that the entire DMS can be configured from one single client, whereas for a configuration in DMS.xml, each DMA needs to be configured separately. Additionally, configurations done using SLNetClientTest tool usually do not require a DataMiner restart, whereas a configuration done in DMS.xml can only be done whilst the DataMiner agent is down and thus requires a DataMiner restart for each distinct DataMiner.
-An advantage of configuring redirects in DMS.xml, however, is that DMS.xml represents the configuration as seen by DataMiner directly, whereas the UI of SLNetClientTest tool provides another layer of abstraction that may obfuscate things.
+  > [!IMPORTANT]
+  > Configuring the connection strings to translate an unreachable internal IP address to a reachable external one prevents the DataMiner upgrade client from upgrading the entire DMS at once. Any DMA on which this is configured will need to be upgraded separately. Tweaks to the default NATS configuration will also be needed. We therefore recommend ensuring that the primary IP address of each DMA is reachable instead (e.g. by setting up a virtual network).
 
 ## How can you configure connection strings?
 
-### Syntax of the connection strings
+At present, there are two places where connection strings can be configured:
 
-For more information on when you could use these connection strings, please see [Where can you configure connection strings?](#where-can-you-configure-connection-strings).
+- Via **SLNetClientTest tool**: see [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
+- Via redirects in **DMS.xml**: see [Redirects subtag](xref:DMS_xml#redirects-subtag).
 
-Please see the following example.
+In practice, connection strings are read and consumed by the software directly from *DMS.xml*. As such, configuring these in SLNetClientTest tool have exactly the same effect as if they were configured in *DMS.xml*.
 
-**Local DMA primary IP:** 148.0.10.68
+The advantage of using **SLNetClientTest** tool is that the entire DMS can be configured from **one single client**, while for a configuration directly in *DMS.xml*, each DMA needs to be configured separately (including Failover Agents, which need a redirect to each other's IP address). In addition, **no DataMiner restart** will be needed, while direct changes to *DMS.xml* always require a DataMiner restart.
 
-### By configuring redirects in DMS.xml
+However, one advantage of configuring redirects directly in **DMS.xml** is that this file represents the configuration as seen by DataMiner directly, while the UI of SLNetClientTest tool provides another layer of abstraction that may obfuscate things.
 
-For the relevant xml elements of the connection strings: see [DMS.xml](xref:DMS_xml#redirects-subtag).
-In the tables below you can match these elements/attributes to the table headers.
+### Use cases
 
-#### Typical use cases
+The use cases below show the configuration for an **example local DMA with primary IP 148.0.10.68**.
 
-| Purpose of the connection string | Redirect to | Via |  User | Password |
+The table headers in the table below match the elements/attributes you should specify in [DMS.xml](xref:DMS_xml#redirects-subtag). If you use [SLNetClientTest](xref:SLNetClientTest_editing_connection_string) tool, the *Redirect To* column matches the *To* field, the *Via* column matches the *New Connection String* field, and the *User* column matches the *Username (optional)* field.
+
+#### Current use cases
+
+| <div style="width:250px">Purpose of the connection string</div> | Redirect to | Via |  User | Password |
 |--|--|--|--|--|
-| To use gRPC, yet still keep .NET remoting enabled. | 148.0.10.68 | `http://148.0.10.68/APIGateway` | / | / |
-| To specify the credentials of a Windows user with Administrator privileges to work around authentication issues | `148.0.10.68` or `*`for all DMAs simultaneously | / | Username of local user with Admin rights | password of said user |
+| To use gRPC but still keep .NET remoting enabled. | 148.0.10.68 | `http://148.0.10.68/APIGateway` | / | / |
+| To specify the credentials of a Windows user with Administrator privileges to work around authentication issues | `148.0.10.68` or `*` for all DMAs simultaneously | / | Username of local user with admin rights | Password of that local user |
 
 #### Legacy use cases
 
-> [!IMPORTANT]
-> The legacy use cases before are only to be used as reference for existing setups.
-> Changing ports or IP addresses may require other changes to be made in the DMS, such as NATS tweaks or may require tweaks in other configuration files.
+The legacy use cases below are only to be used as a reference for existing setups. Changing ports or IP addresses may require other changes in the DMS, such as NATS tweaks or tweaks in other configuration files. **Do not use these configurations in recent DataMiner Systems**.
 
-| Purpose of the connection string | Redirect to | Via |  User | Password |
+| <div style="width:250px">Purpose of the connection string</div> | Redirect to | Via |  User | Password |
 |--|--|--|--|--|
-| To ensure agents listen on non-standard port. | 148.0.10.68 | Define port using following syntax, replacing the custom port by the one you set up earlier. e.g. `http://148.0.10.68:8004/SLNetService` | / | / |
-
-> [!WARNING]
-> This only works for .NET remoting connections and should not be done on newer systems.
-> This example is only illustrative for older systems.
-
-| Purpose of the connection string | Redirect to | Via |  User | Password |
-|--|--|--|--|--|
-| To reach DMAs which cannot be reached directly on their primary IP address | 148.0.10.68 | IP address of proxy/NAT/... via http e.g. `http://172.10.10.56`|/|/|
-
-> [!WARNING]
-> This should not be configured on newer systems.
-> Configuring the connection strings to translate an unreachable internal IP address to a reachable external one prevents the DataMiner upgrade client from upgrading the entire DMS at once.
-> Any DMA on which this is configured will need to be upgraded separately.
-> Therefore, we recommend ensuring that the primary IP address of each DMA is reachable (e.g. by setting up a virtual network).
-> Furthermore, additional tweaks to the default NATS configuration are needed.
-
-### By editing the connection strings in SLNetClientTest tool
-
-See [By configuring redirects in DMS.xml](#by-configuring-redirects-in-dmsxml), and filling in the fields:
-
-- *To* with the value found in column *Redirect To*
-- *New Connection String* with the value found in column *Via*
-- *Username (optional)* with the value found in column *User*
-- *Password:* with the value found in column *Password*
-
-Also see [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string).
+| To ensure Agents listen on non-standard port. Only applicable for .NET remoting connections. | 148.0.10.68 | In the following syntax, replace the custom port with the one you set up: `http://148.0.10.68:8004/SLNetService` | / | / |
+| To reach DMAs that cannot be reached directly on their primary IP address.<br>**Not recommended** (see [When should you use connection strings?](#when-should-you-use-connection-strings)) | 148.0.10.68 | IP address of proxy/NAT/etc. via HTTP, e.g. `http://172.10.10.56`|/|/|
