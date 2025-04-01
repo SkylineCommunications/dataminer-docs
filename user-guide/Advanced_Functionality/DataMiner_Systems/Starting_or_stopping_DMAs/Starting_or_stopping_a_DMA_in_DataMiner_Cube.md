@@ -1,5 +1,6 @@
 ---
 uid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
+keywords: start, restart, shutdown
 ---
 
 # Starting or stopping a DMA in DataMiner Cube

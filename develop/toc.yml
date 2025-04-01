@@ -435,6 +435,8 @@ items:
           topicUid: ConnectionsSmartSerialLogging
         - name: Dynamic polling
           topicUid: ConnectionsSmartSerialDynamicPolling
+        - name: Common pitfalls
+          topicUid: ConnectionsSmartSerialCommonPitfalls
       - name: HTTP
         topicUid: ConnectionsHttp
         items:
@@ -533,6 +535,8 @@ items:
           topicUid: AdvancedDVEsSeverityState
         - name: Toggling DVE creation
           topicUid: AdvancedDVEsTogglingCreation
+        - name: Assigning templates
+          topicUid: AdvancedDVEsTemplates
         - name: Remarks
           topicUid: AdvancedDVEsRemarks
         - name: Exercise
@@ -944,7 +948,11 @@ items:
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
     - name: Best practices
-      topicUid: Automation_best_practices
+      items:
+      - name: Generating information events
+        topicUid: Automation_best_practices_information_events
+      - name: Handling async code
+        topicUid: Handling_Async_Code
     - name: How-tos
       items:
       - name: Making your Automation scripts debug-ready
@@ -5343,10 +5351,22 @@ items:
     items:  
     - name: Skyline DataMiner SDK
       topicUid: skyline_dataminer_sdk
+      items:
+        - name: Project properties
+          topicUid: skyline_dataminer_sdk_project_properties
     - name: DataMiner Package Project
       topicUid: skyline_dataminer_sdk_dataminer_package_project
+      items:
+        - name: Advanced
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_advanced
+        - name: CatalogReferences.xml
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_catalog_references
+        - name: ProjectReferences.xml
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_project_references
     - name: Visual Studio 2022 solution filter (*.slnf) files
       topicUid: skyline_dataminer_sdk_solution_filter_files
+    - name: Frequently asked questions
+      topicUid: skyline_dataminer_sdk_frequently_asked_questions
     - name: Troubleshooting
       topicUid: skyline_dataminer_sdk_troubleshooting
   - name: Platform-independent CI/CD
@@ -5403,6 +5423,8 @@ items:
           topicUid: CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces
         - name: Registering a new version of a multi-artifact DataMiner package to the Catalog using Visual Studio and GitHub
           topicUid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub
+        - name: Registering a new version of multiple DataMiner packages to the Catalog using Visual Studio and GitHub
+          topicUid: CICD_Tutorial_For_Other_Items_Multi-Package_VisualStudio_And_GitHub
   - name: CI/CD using GitLab
     items:
     - name: GitLab examples

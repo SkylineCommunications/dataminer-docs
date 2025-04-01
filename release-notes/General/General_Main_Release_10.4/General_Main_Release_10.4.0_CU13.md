@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU13
 ---
 
-# General Main Release 10.4.0 CU13 - Preview
+# General Main Release 10.4.0 CU13
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,6 +14,12 @@ uid: General_Main_Release_10.4.0_CU13
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
+
+#### SLNet: Enhanced performance when sending requests to SLDataGateway [ID 40023]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
 
 #### Enhanced performance when updating subscriptions and when checking events against the set of active subscriptions [ID 41822]
 

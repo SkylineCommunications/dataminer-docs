@@ -144,6 +144,21 @@ Up to now, the credentials library would only be aware of a subset of all SNMPv3
 
 Because of a number of enhancements, it will now be fully aware of all supported algorithms.
 
+#### BPA test 'Check Deprecated MySQL DLL' renamed to 'Check Deprecated DLL Usage' [ID 42057]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+Up to now, the BAP test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
+
+Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending on the DataMiner version, it will checks for the following DLL files, in the specified folders:
+
+| Deprecated DLL | Deprecated since DataMiner version | Minimum safe DLL version | Folder |
+|----------------|------------------------------------|--------------------------|--------|
+| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | *C:\Skyline DataMiner\ProtocolScripts* |
+| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | *C:\Skyline DataMiner\ProtocolScripts* or *C:\Skyline DataMiner\Files* |
+
+Any version lower than the specified minimum version will be considered outdated, as older versions are known to pose security risks.
+
 #### Disabling an SLAnalytics feature will now clear all open alarms and suggestion events associated with that feature [ID 42096]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
@@ -154,6 +169,14 @@ When, in DataMiner Cube, you go to *System Center > System settings > Analytics 
 - Pattern matching
 - Proactive cap detection
 - Relational anomaly detection
+
+#### Service & Resource Management: UpdateReservationInstanceEventHasRun method will now first clone the reservation object before updating it [ID 42124]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+Up to now, the `UpdateReservationInstanceEventHasRun` method would directly update the cached reservation object and then save it.
+
+From now on, it will clone the reservation object in the cache, make the change, and then update the cached object.
 
 #### STaaS: Enhanced granularity when migrating custom data to STaaS [ID 42219]
 
@@ -170,6 +193,14 @@ For example, if you want to migrate only the SLAnalytics data, you can now speci
 When a multivariate pattern is detected in new trend data, suggestion events are generated for every instance in the linked pattern.
 
 From now on, those suggestion events will be grouped into a single incident, which will be shown as a single line in the Alarm Console.
+
+#### DataMiner Object Model: An error will now be returned when a FieldValue was added for a non-existing FieldDescriptor [ID 42358]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+When, while a DOM instance was created or updated, a `FieldValue` was added for a non-existing `FieldDescriptor`, up to now, no error would be returned.
+
+From now on, the trace data will indicate that a `DomInstanceError` was thrown with error reason `FieldValueUsedInDomInstanceLinksToNonExistingFieldDescriptor`.
 
 ### Fixes
 
@@ -198,3 +229,19 @@ When, in the *Scheduler* app, a dashboard was exported via an email action, up t
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
 When a trend graph seemed to increase or decrease, in some cases, change points could incorrectly be labeled as a level shift.
+
+#### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+Up to now, in some cases, behavioral anomaly detection would not be able to start up correctly due to the maximum cache size having been reached when the internal caches were being fetched after SLAnalytics had been started.
+
+From now on, if the maximum cache size is reached, old model information might get discarded to allow behavioral anomaly detection to start up correctly. If this happens, the following error will be logged:
+
+`Max cache size reached during prefetch of the cache, potential data loss`
+
+#### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
+
+<!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
+
+In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.

@@ -53,6 +53,16 @@ It is not yet possible to configure time-to-live (TTL) values for STaaS. In the 
 | Spectrum traces          | 1 year       |
 | Alarm events             | 1 year       |
 
+## Throttling
+
+If your system is pushing too much load for a specific data type, that data type will be throttled. This could for example happen when you have an element that is continuously saving parameter updates.
+
+From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42387 -->, when this happens, an alarm will be generated in Cube with information about the data type or types that are being throttled. For example:
+
+![ThrottlingAlarmExample](~/user-guide/images/throttling_alarm_example.png)
+
+If you encounter such an alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load. If the alarm persists or you are unable to find the root cause, please contact <staas@dataminer.services>.
+
 ## Limitations
 
 To **migrate existing data** to STaaS, the following limitations apply:
@@ -69,7 +79,7 @@ To **migrate existing data** to STaaS, the following limitations apply:
 
 In addition, the following **other limitations** currently apply:
 
-- [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) data are not supported.
+- [Jobs](xref:jobs), [Ticketing](xref:ticketing), and [obsolete API Deployment](xref:Verify_No_Obsolete_API_Deployed) data are not supported.
 
 - The following indexing engine functionality is not supported: Alarm Console search tab, search suggestions in the Alarm Console, aliases, and aggregation.
 

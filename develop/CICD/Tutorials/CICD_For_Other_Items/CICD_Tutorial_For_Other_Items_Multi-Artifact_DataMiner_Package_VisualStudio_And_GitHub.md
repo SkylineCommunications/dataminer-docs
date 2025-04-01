@@ -1,5 +1,6 @@
 ---
 uid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub
+keywords: Skyline.DataMiner.Sdk, Tutorial
 ---
 
 # Registering a new version of a multi-artifact DataMiner package to the Catalog using Visual Studio and GitHub
@@ -170,7 +171,7 @@ In this step, you will focus on the extra code that should be executed when the 
    ``` text
    Error: DATAMINER_TOKEN is not set. Release not possible!
    Please create or re-use an admin.dataminer.services token by visiting: https://admin.dataminer.services/.
-   Navigate to the right Organization then go to Keys and create/find a key with permissions to Register Catalog Items.
+   Navigate to the right organization, then go to Keys and create or find a key with the permissions Register catalog items, Download catalog versions, and Read catalog items.
    Copy the value of the token.
    Then set a DATAMINER_TOKEN secret in your repository settings: <Dynamic Link>
    ```
@@ -183,6 +184,7 @@ In this step, you will focus on the extra code that should be executed when the 
 
    - *Register catalog items*
    - *Read catalog items*
+   - *Download catalog versions*
 
    > [!TIP]
    > See also: [dataminer.services keys](xref:GitHub_Secrets#dataminerservices-keys)

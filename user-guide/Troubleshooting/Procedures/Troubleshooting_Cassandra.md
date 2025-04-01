@@ -102,7 +102,7 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
    In a *Cassandra Cluster* setup, on a Linux node, these files can mostly be found in */var/log/cassandra*. In a *Cassandra Single* setup, these can be found in *C:\Program Files\Cassandra\logs*.
 
-   Search for "tombstone" or "timeout" in *debug.log* and *system.log*. This is particularly relevant if elements are unable to start or if element data is missing.
+   Search for "tombstone" or "timeout" in *debug.log* and *system.log*. This is particularly relevant if elements are unable to start or if element data is missing (see [Element fails to start because of database failure](xref:Cassandra_General_DB_Failure)).
 
    Tombstones are created upon adding/updating/deleting a null value toward the database. They correspond with a "delete" in Cassandra and drastically decrease read performance. They also take up space.
 

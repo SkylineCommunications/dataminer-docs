@@ -42,3 +42,15 @@ Skyline.DataMiner.Net.Swarming.SwarmingResult[] swarmingResults = Skyline.DataMi
 ```
 
 For more detailed examples, refer to [Configuring a script to swarm elements](xref:SwarmingScriptElement).
+
+## Blocking elements from being swarmed
+
+From DataMiner 10.5.5/10.6.0 onwards<!--RN 42535-->, it is possible to block specific elements from being swarmed.
+
+To do so, when you create or edit an element in DataMiner Cube, expand the *Advanced element settings* section and select *Block Swarming*.
+
+![Block Swarming in Cube](~/user-guide/images/Swarming_Element_BlockSwarming.png)
+
+By default, this checkbox is not selected for new and existing elements.
+
+If the checkbox is selected for an element and a user tries to swarm the element, this will result in the error message *Element is not allowed to swarm (blocked)*.

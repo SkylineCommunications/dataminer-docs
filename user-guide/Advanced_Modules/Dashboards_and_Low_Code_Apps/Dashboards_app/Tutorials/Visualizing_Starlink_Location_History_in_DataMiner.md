@@ -20,7 +20,7 @@ Expected duration: 30 minutes
 - Version 10.4.12 or higher of the DataMiner web apps.
 
 > [!NOTE]
-> Depending on your DataMiner version, you may need to activate the [ReportsAndDashboardsGQIMaps](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) soft-launch option to be able to use the maps component. See [Soft-launch options](xref:SoftLaunchOptions).
+> If you do not use a DaaS system, and you use a DataMiner version prior to DataMiner 10.5.0 [CU1]/DataMiner 10.5.4, you will also need to activate the [ReportsAndDashboardsGQIMaps](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) soft-launch option to be able to use the maps component. See [Soft-launch options](xref:SoftLaunchOptions).
 
 ## Overview
 

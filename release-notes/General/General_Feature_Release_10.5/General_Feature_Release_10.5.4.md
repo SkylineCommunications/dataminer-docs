@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.4
 ---
 
-# General Feature Release 10.5.4 – Preview
+# General Feature Release 10.5.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -501,6 +501,12 @@ However, up to now, the response would not contain the anomaly score and the par
 
 In some rare cases, an exception could be thrown when NATS sessions were disposed.
 
+#### Mobile Visual Overview: Problem with SLHelper when removing mobile visual overview sessions [ID 42296]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 [CU0] -->
+
+When mobile visual overview sessions were removed from a DataMiner Agent, in some cases, the SLHelper process could temporarily block other requests.
+
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU1] - FR 10.5.4 -->
@@ -536,3 +542,9 @@ The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packa
 <!-- Not added to MR 10.6.0 -->
 
 When an element had been migrated from one DataMiner Agent to another, in some rare cases, certain actions involving that migrated element (e.g. a deletion of the element) would fail until the DataMiner Agent was restarted.
+
+#### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
+
+<!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
+
+In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.

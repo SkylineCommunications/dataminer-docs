@@ -27,7 +27,7 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 
    - Select the desired storage types for migration.
 
-     From DataMiner 10.5.4/10.6.0 onwards<!--RN 42219-->, for storage types such as *DOM*, *SRM*, and *Analytics*, you can indicate exactly which custom data to migrate. Prior to DataMiner 10.5.4/10.6.0, these types of data are grouped together under the *custom_data* storage type, and they can only be migrated as a single category.
+     Prior to DataMiner 10.5.4/10.6.0, certain custom data, such as DOM, SRM, and Analytics data, are grouped together under the *custom_data* storage type and can only be migrated as a single category. From DataMiner 10.5.4/10.6.0 onwards<!--RN 42219-->, you can select specific storage types such as *DOM*, *SRM*, and *Analytics*, allowing you to migrate this data separately.
 
      > [!NOTE]
      > For systems with a **lot of real-time trending**, we urge you to consider if you really need this data to be migrated. This data is typically only stored for 1 day, so when there is a lot of data, this gives an overhead on the rest of the types that need to be migrated, and this can cause the migration to take longer.

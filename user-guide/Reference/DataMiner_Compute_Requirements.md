@@ -62,7 +62,7 @@ As a rule, we recommend a throughput ranging from 100 Mbps to 1 Gbps and a laten
 
 ### Operating System
 
-For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports. However, we recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible. At the moment, Windows Server 2022 is the recommended version.
+For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports. <!-- However, we recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible.  -->At the moment, Windows Server 2022 is the recommended version. Testing for Windows Server 2025 is currently ongoing.
 
 ### Time
 
@@ -74,7 +74,7 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 | DataMiner version       | Required .NET (Framework) versions        |
 |-------------------------|-------------------------------------------|
-| DataMiner Feature Release 10.4.10 and higher<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
+| DataMiner Feature Release 10.4.10 and higher<br>DataMiner Main Release 10.5.0 and higher<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
 | DataMiner Feature Release 10.4.3 to 10.4.9<!--RN 37969--><br>DataMiner Main Release 10.4.0 to 10.4.0 [CU6]<br>DataMiner Main Release 10.3.0 [CU12] to 10.3.0 [CU18] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
 | DataMiner Feature Release 10.3.9 to 10.4.2 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) |
 | DataMiner Feature Release 10.3.3 to 10.3.8<br>DataMiner Main Release 10.3.0 [CU3] to 10.3.0 [CU11] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-5.0.17-windows-hosting-bundle-installer), and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) |

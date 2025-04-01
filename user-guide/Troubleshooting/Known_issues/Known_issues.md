@@ -7,6 +7,8 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [Local user not pushed to Windows](xref:KI_Local_user_not_pushed_to_windows) | From DataMiner 10.4.0 [CU4]/10.4.7 onwards | | March 27, 2025 |
+| [Unable to open trended parameter cards via Cube advanced search](xref:KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search) | From DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3 onwards | | March 20, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
@@ -16,6 +18,9 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Unable to configure dashboards for 'Email' actions in Automation scripts, scheduled tasks, and Correlation rules](xref:KI_Unable_to_configure_dashboards_included_in_email_actions) | From DataMiner Cube 10.4.0 [CU10]/10.5.0/10.5.1 onwards | DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3 | March 21, 2025 |
+| [Cube displays incorrect offload configuration for real-time trending data](xref:KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data) | From DataMiner Cube 10.3.7/10.4.0 onwards | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | March 20, 2025 |
+| [SLNet memory leak related to indexing logic for Cube search bar](xref:KI_SLNet_memory_leak)| From DataMiner 10.5.2 onwards | DataMiner 10.5.4/10.6.0 | March 18, 2025 |
 | [Upgrade to DataMiner 10.5.1 or 10.5.2 is stuck](xref:KI_Upgrade_to_1051_stuck) | DataMiner 10.5.1 and 10.5.2 | DataMiner 10.5.0/10.5.2 [CU1] | January 28, 2025 |
 | [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 to DataMiner 10.4.0 [CU11]/10.5.2 | DataMiner 10.4.0 [CU12]/10.5.3 | December 18, 2024 |
 | [LDAP/ActiveDirectory domain users no longer able to log in after upgrade](xref:KI_LDAP_users_unable_to_log_in_after_upgrade) | DataMiner 10.4.0 [CU4] to 10.4.0 [CU11]<br>DataMiner 10.4.7 to 10.5.1 | DataMiner 10.4.0 [CU12]/10.5.0/10.5.2 | December 13, 2024 |
@@ -24,6 +29,8 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [Local user not pushed to Windows](xref:KI_Local_user_not_pushed_to_windows) | From DataMiner 10.4.0 [CU4]/10.4.7 onwards | | March 27, 2025 |
+| [Unable to open trended parameter cards via Cube advanced search](xref:KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search) | From DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3 onwards | | March 20, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
@@ -33,6 +40,8 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Unable to configure dashboards for 'Email' actions in Automation scripts, scheduled tasks, and Correlation rules](xref:KI_Unable_to_configure_dashboards_included_in_email_actions) | From DataMiner Cube 10.4.0 [CU10]/10.5.0/10.5.1 onwards | DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3 | March 21, 2025 |
+| [Cube displays incorrect offload configuration for real-time trending data](xref:KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data) | From DataMiner Cube 10.3.7/10.4.0 onwards | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | March 20, 2025 |
 | [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 to DataMiner 10.4.0 [CU11]/10.5.2 | DataMiner 10.4.0 [CU12]/10.5.3 | December 18, 2024 |
 | [Offline Failover DMA not synchronized](xref:KI_offline_DMA_cannot_sync) | DataMiner 10.3.0 [CU11] to 10.4.0 [CU9]<br>DataMiner 10.4.2 to 10.4.12 | DataMiner 10.4.0 [CU10] and 10.5.1 | December 18, 2024 |
 | [LDAP/ActiveDirectory domain users no longer able to log in after upgrade](xref:KI_LDAP_users_unable_to_log_in_after_upgrade) | DataMiner 10.4.0 [CU4] to 10.4.0 [CU11]<br>DataMiner 10.4.7 to 10.5.1 | DataMiner 10.4.0 [CU12]/10.5.0/10.5.2 | December 13, 2024 |
@@ -72,6 +81,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Cube displays incorrect offload configuration for real-time trending data](xref:KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data) | From DataMiner Cube 10.3.7/10.4.0 onwards | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | March 20, 2025 |
 | [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 to DataMiner 10.4.0 [CU11]/10.5.2 | DataMiner 10.4.0 [CU12]/10.5.3 | December 18, 2024 |
 | [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [nats-server.config file not included in DataMiner backups](xref:KI_nats-server_config_file_not_included_in_backups) | From DataMiner 10.2.0 [CU6]/10.2.8 onwards | DataMiner 10.4.11/10.5.0 | October 10, 2024 |
@@ -186,7 +196,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
-| [DIS unable to connect to DataMiner Agent](xref:KI_DIS_unable_to_connect) | DIS 3.1.6 | | March 12, 2025 |
 | [Unable to override information events TTL of 5 years](xref:KI_Information_events_TTL_five_years) | Cassandra Cluster setups | | July 24, 2024 |
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [IP address in SAN field of TLS certificate ignored in Windows 2012 R2](xref:KI_Win2012R2_ignores_IP_in_SAN_field) | Systems using Windows 2012 R2 | | March 20, 2023 |
@@ -194,6 +203,8 @@ uid: Known_issues
 | [Migration of Ticketing data from Cassandra to Elasticsearch fails](xref:KI_Migration_of_Ticketing_data_from_Cassandra_to_Elasticsearch_fails) | From DataMiner 10.1.0/10.0.13 onwards | | - |
 | [DataMiner Cube freeze on startup](xref:KI_DataMiner_Cube_freeze_on_startup) | N/A | | - |
 | [Setting a protocol to production takes a long time](xref:KI_Setting_a_protocol_to_production_takes_a_long_time) | N/A | | - |
+| [SLScripting crash when using JScript QActions](xref:KI_SLScripting_crash_JScript_QActions) | DataMiner Systems running on Windows 11 24H2 | N/A | March 20, 2025 |
+| [DIS unable to connect to DataMiner Agent](xref:KI_DIS_unable_to_connect) | DIS 3.1.6 | DIS 3.1.7 | March 12, 2025 |
 | [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [Problem after upgrading Window OS to Windows Server 2022](xref:KI_Problem_after_OS_upgrade_to_win_2022) | Systems that have recently been upgraded to Windows Server 2022 | [Requires configuration](xref:KI_Problem_after_OS_upgrade_to_win_2022) | October 11, 2024 |
 | [ButtonState shapes in Visual Overview fail to hide as expected](xref:KI_ButtonState_shapes_in_Visual_Overview_fail_to_hide_as_expected) | DataMiner Cube versions prior to 10.4.2425.2536<br>DataMiner 10.4.8, if Cube client does not have internet access | DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 | August 13, 2024 |

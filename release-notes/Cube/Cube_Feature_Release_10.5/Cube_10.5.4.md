@@ -2,10 +2,10 @@
 uid: Cube_Feature_Release_10.5.4
 ---
 
-# DataMiner Cube Feature Release 10.5.4 – Preview
+# DataMiner Cube Feature Release 10.5.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +14,8 @@ uid: Cube_Feature_Release_10.5.4
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Elements can now be configured to run in isolation mode [ID 41758]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758)
+- [Legacy InterClient feature has been removed [ID 42263]](#legacy-interclient-feature-has-been-removed-id-42263)
 
 ## New features
 

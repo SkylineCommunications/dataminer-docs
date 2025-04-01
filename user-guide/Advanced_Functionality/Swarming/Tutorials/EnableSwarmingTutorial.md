@@ -9,6 +9,9 @@ In this tutorial, you will learn how to enable [Swarming](xref:Swarming) in your
 
 The content and screenshots for this tutorial have been created using DataMiner version 10.5.3.
 
+> [!TIP]
+> See also: [Kata #61: Getting started with Swarming](https://community.dataminer.services/courses/kata-61/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Prerequisites
 
 For this tutorial, you will need a DataMiner System that meets the following requirements:
@@ -140,7 +143,7 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
 
    For detailed information, refer to [Preparing scripts and connectors for Swarming](xref:SwarmingPrepare)
 
-1. Run the the *Enable Swarming* script again and click the *Analyze* button again.
+1. Run the *Enable Swarming* script again and click the *Analyze* button again.
 
    If you have indeed correctly updated all scripts and protocols, a new button will be displayed at the bottom of the window. If you do not see this button, check which scripts or protocols still need to be updated and adjust them as mentioned above.
 

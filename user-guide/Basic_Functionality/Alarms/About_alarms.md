@@ -11,4 +11,7 @@ Different [types of alarms](xref:Alarm_types) exist in DataMiner. [Hysteresis](x
 The most important tool to manage alarms in DataMiner is the [Alarm Console](xref:Working_with_the_Alarm_Console). This console is by default displayed at the bottom of the client user interface.
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Alarm Console introduction](https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also:
+>
+> - [Kata #63: The power of the Alarm Console](https://community.dataminer.services/courses/kata-63/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Rui’s Rapid Recap – Alarm Console introduction](https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
