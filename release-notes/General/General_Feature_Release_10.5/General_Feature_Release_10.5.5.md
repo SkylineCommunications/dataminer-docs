@@ -78,7 +78,7 @@ When, while a DOM instance was created or updated, a `FieldValue` was added for 
 
 From now on, the trace data will indicate that a `DomInstanceError` was thrown with error reason `FieldValueUsedInDomInstanceLinksToNonExistingFieldDescriptor`.
 
-#### Reduced memory usage when updating a large number of parameter in bulk [ID 42385]
+#### Reduced memory usage when updating a large number of parameters in bulk [ID 42385]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 

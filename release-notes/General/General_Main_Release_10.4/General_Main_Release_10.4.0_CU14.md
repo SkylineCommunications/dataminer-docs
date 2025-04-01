@@ -30,7 +30,7 @@ Up to now, when you stopped and restarted an SNMP manager, all open alarms would
 
 A number of security enhancements have been made.
 
-#### Reduced memory usage when updating a large number of parameter in bulk [ID 42385]
+#### Reduced memory usage when updating a large number of parameters in bulk [ID 42385]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
