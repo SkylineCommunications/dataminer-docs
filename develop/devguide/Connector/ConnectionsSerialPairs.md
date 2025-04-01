@@ -42,8 +42,10 @@ In addition, two triggers are defined, one after response 1 and another one afte
 In order to obtain the correct behavior in this case, it is important to clear responses via an action "clear response".
 
 > [!NOTE]
-> - Typically, different responses will not reuse the same parameters.
-> - You may also want to read about (change-based event handling)[xref:InnerWorkingsChangeBasedEventHandling].
+> Typically, different responses will not reuse the same parameters.
+
+> [!TIP]
+> See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
 
 ## Defining multiple responses in a pair
 
