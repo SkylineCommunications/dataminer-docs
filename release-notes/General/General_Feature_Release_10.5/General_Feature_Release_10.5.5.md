@@ -335,6 +335,13 @@ When the GQI DxM was being used, ad hoc data sources and custom operators would 
 
 In some cases, an error could be thrown when the *ClusterEndpoints.json* file was created in the *C:\\Skyline DataMiner\\Configurations\\* folder.
 
+#### SLAnalytics - Relational anomaly detection: GetMADParameterGroupInfoMessage would incorrectly return an empty display instance for parameters with non-advanced naming [ID 42508]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+<!-- Not added to MR 10.6.0 -->
+
+For parameters with non-advanced naming, the `GetMADParameterGroupInfoMessage` would incorrectly return an empty display instance.
+
 #### DVE settings could get out of sync with the element data when DataMiner or an element was restarted [ID 42515]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
