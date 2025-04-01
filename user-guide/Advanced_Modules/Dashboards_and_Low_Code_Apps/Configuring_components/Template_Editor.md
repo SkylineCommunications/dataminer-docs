@@ -92,7 +92,7 @@ To **delete a layer**:
 
 - Earlier versions: Hover the mouse pointer over the layer and click the *delete* button in the top-right corner.
 
-Alternatively, select the layer in the preview and press *Delete* on your keyboard.
+- Alternatively, regardless of the DataMiner version, select the layer in the preview and press *Delete* on your keyboard.
 
 To **duplicate a layer**, hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Duplicate*. Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->.
 
