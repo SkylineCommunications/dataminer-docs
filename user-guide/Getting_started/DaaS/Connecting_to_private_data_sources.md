@@ -28,6 +28,26 @@ To establish this connection:
 
 1. Contact <daas@dataminer.services> to set up a site-to-site VPN connection.
 
+   Provide the following information:
+
+   - Public IP of your VPN device
+  
+   - Pre-shared key to use for the VPN connection
+
+   - Address space of the network(s) that should be reachable by your DaaS system
+  
+   - If BGP should be enabled, the ASN and BGP Peer IP address
+  
+   - Any other information that might be relevant for your specific setup
+
    Skyline will enable an [Azure VPN Gateway](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways) in the virtual network of your DaaS environment. By default the [Generation 1 VPN Gateway SKU *VpnGw1AZ*](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus) will be used. If you require another SKU, let us know. 
    
    By default, the IKEv2 protocol will be used. If you would prefer a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq), let us know.
+
+1. Once the VPN Gateway has been enabled, Skyline will provide you with the following information:
+   
+   - Public IP of the Azure VPN Gateway
+
+   - DaaS address space (by default 172.23.12.0/22 but can differ if this would overlap with your address space)
+  
+   - BGP ASN
