@@ -166,6 +166,21 @@ Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web pa
 
 This new log viewer page has improved compatibility with Failover setups and better error handling for HTTPS certificates.
 
+#### Swarming: New 'Block Swarming' option to indicate that an element is not allowed to swarm [ID 42535]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+When you create or update an element in DataMiner Cube, you will now be able to indicate that the element is not allowed to swarm to another host.
+
+To do so, go to the *Advanced* section, and enable to *Block Swarming* option. By default, this option will be set to false.
+
+If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
+
+> [!NOTE]
+>
+> - In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System.
+> - DVE child elements will inherits the *Block Swarming* option of their parent element.
+
 #### DataMiner IDP license notice will no longer appear [ID 42574]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->

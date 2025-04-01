@@ -132,6 +132,21 @@ The visibility of Y-axis curves in trend graph legends has been improved, and er
 
 When a trend graph contained multiple overlapping change point areas, up to now, smaller areas could get covered by larger areas, making it impossible to select them. From now on, when you click a group of overlapping change point areas, the change point with the smallest time range will be selected.
 
+#### Elements: New 'Block Swarming' option to indicate that an element is not allowed to swarm [ID 42536]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you create or update an element, you will now be able to indicate that the element is not allowed to swarm to another host.
+
+To do so, go to the *Advanced* section, and enable to *Block Swarming* option. By default, this option will be set to false.
+
+If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
+
+> [!NOTE]
+>
+> - In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System.
+> - DVE child elements will inherits the *Block Swarming* option of their parent element.
+
 #### Data Display: Enhanced performance when opening view cards [ID 42576]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->

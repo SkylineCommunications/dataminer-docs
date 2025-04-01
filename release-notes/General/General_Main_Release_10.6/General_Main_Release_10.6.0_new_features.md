@@ -13,10 +13,11 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 <!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
+<!-- RN 42535: MR 10.6.0 - FR 10.5.5 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -29,6 +30,12 @@ Note that when Swarming is enabled, this will result in some major changes to th
 - Element configuration will be stored in the cluster-wide database instead of in the element XML files on the disk of the DataMiner Agent hosting each element.
 
   When Swarming is enabled, a file named *Where are my elements.txt* will be present in the *C:\\Skyline DataMiner\\Elements\\* folder. In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
+
+When you create or update an element in DataMiner Cube, you will be able to indicate that the element is not allowed to swarm to another host. To do so, go to the *Advanced* section, and enable to *Block Swarming* option. By default, this option will be set to false.
+
+If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
+
+In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System. DVE child elements will inherits the *Block Swarming* option of their parent element.
 
 > [!IMPORTANT]
 >
