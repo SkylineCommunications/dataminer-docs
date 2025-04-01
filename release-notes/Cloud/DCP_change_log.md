@@ -9,6 +9,15 @@ This change log can help you trace when specific features and changes became ava
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+
+#### 19 December 2024 - Enhancement - Catalog - Catalog type is included in audit events [ID 41746] [ID 41755] [ID 41756]
+
+Audit events related to Catalog actions now include the type of the Catalog item.
+
+#### 17 December 2024 - Fix - Audit - Organization name could not be obtained [ID 41740]
+
+The mapping of an organizationId to a name was failing for Audit events. The organization name will be correctly shown again in audit events.
+
 #### 17 December 2024 - Enhancement - Admin app - Improved audit export [ID 41694]
 
 From now on, when you export the audit information from the *Audit* page in the [Admin app](https://admin.dataminer.services), the export file will have a better name, which will include the organization name and a readable timestamp.
@@ -32,6 +41,10 @@ The upload speed for remote access requests has been improved. This will mainly 
 #### 1 December 2024 - New feature - Admin app - Connector usage [ID 41580]
 
 From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about the used connectors when available. This usage is shown as an average over the selected month.
+
+#### 29 November 2024 - New feature - Catalog API - GetCategories returns only types of which items are available for user [ID 41531]
+
+​The "api/user-catalog/v2-0/catalogs/categories" call in the user controller has been extended to only take into account the types from catalog items the user has access to.
 
 #### 26 November 2024 - New feature - Admin app - Automation usage [ID 41554]
 
@@ -361,6 +374,10 @@ As an unauthenticated user, you can now search through the publicly available Ca
 
 Catalog item registration now supports images in the provided description of the Catalog item. Any used images need to be included in a *Images* directory. Supported image formats are .jpg, .jpeg, .png, .gif, .bmp, .tif, .tiff, and .webp.
 
+#### 11 September 2024 - New feature - Catalog API - Public API to obtain a Catalog item [ID 40499]
+
+A new route has been made available on "api/public-catalog/v2-0/catalogs/{catalogId}" to allow a user that is not logged in to obtain a catalog item.
+
 #### 30 August 2024 - Enhancement - Catalog - Type filter documentation link [ID 40601]
 
 When you search for an item in the Catalog, a documentation link will now be shown next to the type filter. This link will navigate to the Catalog types information on DataMiner Docs.
@@ -471,6 +488,13 @@ Users can now view documentation for all items, if provided.
 
 From now on, the Catalog only allows a maximum of 5 tags for a Catalog item. If more than 5 tags are specified, the API will return an error saying "Too many tags were supplied, a max of 5 is allowed".
 
+#### 26 July 2024 - Fix - Catalog API - Show recommended version for multiple ranges if applicable [ID 40286]
+
+The recommended versions will now be shown in following order:
+
+    - Main versions sorted by descending version number
+    - Other versions sorted by descending version number
+
 #### 23 July 2024 - Fix - Catalog - Return button spanning whole height of container [ID 40245]
 
 The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
@@ -578,6 +602,14 @@ When you deploy a DaaS system from the dataminer.services home page, it is now p
 #### 9 July 2024 - Fix - Catalog - Main ranges incorrectly filtered out in version history [ID 40147]
 
 If all ranges of a Catalog item were either labeled as main or as deprecated, in the version history on the details page of the Catalog item, the main range could incorrectly be filtered out when the unsupported versions were set not to be shown (with the *Unsupported versions* toggle button). Now the main range will be shown correctly in the version history.
+
+#### 9 July 2024 - Fix - Catalog API - Recommended version not showing latest version of a Catalog item [ID 40153]
+
+The recommended version shown for a Catalog item could be incorrect. It was not showing the latest version of a range due to invalid sorting. This has been fixed.
+
+#### 8 July 2024 - Fix - Catalog API - Empty name for Catalog item in search results [ID 39924]
+
+It could happen that a Catalog item would be shown without name in a search result. A name will now always be shown.
 
 #### 4 July 2024 - Enhancement - Remote Access, Remote Cube, and Live Sharing stability improvements [ID 40106]
 

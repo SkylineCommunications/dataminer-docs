@@ -85,6 +85,10 @@ Users now no longer need to log in to view the home app. A default view will be 
 
 In addition, when something goes wrong during the authentication flow, users will now see a message instead of being redirected to the login.
 
+### 18 February 2025 - Fix - Incorrect DMS status for systems with large DMA version history [ID 42301]
+
+DataMiner systems with a large version history were unable to offload their system status. Only the last 10 DataMiner versions are now being offloaded.
+
 ### 11 February 2025 - Enhancement - Catalog - Deployment status shown on details page [ID 42131]
 
 When an item is deployed, the deployment status is now shown next to the *Deploy* button both in the item version section and at the top of the details page. The status is automatically updated for up to 10 seconds, and you will get a notification when the deployment finishes or fails.
@@ -110,6 +114,10 @@ The Remote Access and Live Sharing performance and stability improvements releas
 Several enhancements were made to improve performance and stability for all Remote Access and Live Sharing features with immediate effect.
 
 In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.
+
+### 4 February 2025 - Enhancement - Catalog - Deployment events contain catalog type [ID 41766]
+
+The deployment event after deploying a Catalog item will now contain the type of the Catalog item.
 
 ### 30 January 2025 - Enhancement - Admin - Usage page improvements [ID 42054]
 
@@ -254,6 +262,10 @@ The number of required API calls to initially load the Catalog home page has bee
 ### 15 January 2025 - Enhancement - Catalog - Trusted source indicator [ID 41540]
 
 On the browse page, Catalog items that are published by the selected organization or by Skyline Communications will now display a green indicator.
+
+### 15 January 2025 - Fix - Catalog API - Correctly take optional arguments into account for a Catalog registration request [ID 41788]
+
+It was required that the manfiest included all properties (even optional) for a registration to succeed. It is now possible to leave out optional properties of the manifest.
 
 ### 13 January 2025 - Fix - Rollback of Remote Access and Live Sharing performance and stability improvements [ID 42042]
 
