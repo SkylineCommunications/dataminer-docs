@@ -39,6 +39,10 @@ When you create a DaaS system, your dataminer.services account will automaticall
 
 You can manually delete a DaaS system from dataminer.services, just like any other DMS; however, note that this is irreversible, and all data of the system will be lost.
 
+#### 29 November 2023 - Enhancement - Extra validation on the username field [ID 37951]
+
+When a [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) system is deployed, the username will now be validated to ensure that no usernames can be added that are longer than 64 characters or that contain special characters.
+
 #### 28 November 2023 - Enhancement - Deploying multiple DaaS systems simultaneously
 
 It is now possible to create more than one DaaS system simultaneously on [dataminer.services](https://dataminer.services).
@@ -100,6 +104,10 @@ Performance has improved when node and DxM information is retrieved on the *Node
 #### 22 August 2023 - Enhancement - Admin app - Audit Record Export (CSV) [ID 37164]
 
 In the [Admin app](https://admin.dataminer.services), a new feature has been introduced on the *Audit* page, allowing users to export audit records in a CSV file. Clicking *Export* in the top-left corner will initiate the export process. A pop-up window will appear, where you can choose the separator to be used in the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
+
+#### 26 July 2023 - Enhancement - Admin app - Upgrade warnings for DxMs [ID 36801]
+
+Upgrading a DxM to a version which requires .NET 6 will now show a warning to inform the user about the requirement and how to install it on their system.
 
 #### 3 July 2023 - Fix - Admin app - Organization user overview will display all DMSs of each user correctly [ID 36795]
 
@@ -163,6 +171,14 @@ After you have made sure the [prerequisites](https://github.com/SkylineCommunica
 
 > [!NOTE]
 > You must grant Skyline admin consent to your Microsoft tenant with certain permissions to enable these features. See [granting admin consent](xref:Granting_admin_consent). You can revoke these permissions at any time.
+
+#### 10 February 2023 - Improved UX for share management [ID 35519]
+
+The share management app has been improved:
+
+- Users will no longer briefly see an unexpected form before the correct form loads, thanks to a new loading screen.
+- Users without the necessary permissions will no longer see an incorrect page. Instead, an appropriate error message will now be displayed.
+- Fatal errors will now be shown via notifications, which will remain displayed until dismissed by the user.
 
 #### 9 February 2023 - Fix - Remote access actions incorrectly blocked [ID 35594]
 

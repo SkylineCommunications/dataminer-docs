@@ -43,7 +43,7 @@ STaaS is a service, which means you do not need to worry about how data are stor
 
 Our solution separately replicates your storage account synchronously across three Azure availability zones (i.e. a group of data centers in a region, close enough to have a low-latency of < 2ms) in the primary region. Each availability zone is a separate physical location in one region with independent power, cooling, and networking, which means you are protected against server, rack, or driver failures and against physical disasters (such as fire or flooding) within the data center.
 
-See also [Data location and redundancy](xref:STaaS#data-location-and-redundancy).
+See also [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
 
 ### How fast does data get stored in the cloud database (with our default config)?
 
@@ -81,7 +81,7 @@ No additional cost is applicable. Our STaaS offering includes both the storage a
 
 We support auto live-migration of the data from a Cassandra cluster, a Cassandra single node, as well as from Elasticsearch. MySQL is not automatically supported and needs manual interaction.
 
-For detailed information on migration limitations, see [Limitations](xref:STaaS#limitations)
+For detailed information on migration limitations, see [Limitations](xref:STaaS_features#limitations)
 
 ### What is the TCO of on-premises versus cloud storage?
 

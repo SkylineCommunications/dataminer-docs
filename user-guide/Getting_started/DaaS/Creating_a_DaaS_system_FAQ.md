@@ -62,7 +62,7 @@ For more information, please contact <sales@skyline.be>.
 
 By default, a DaaS system has zone-redundant storage (ZRS). Geo-redundant storage (GRS) is optional at an additional subscription cost.
 
-See also: [Data location and redundancy](xref:STaaS#data-location-and-redundancy).
+See also: [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
 
 ### What system redundancy policy does a DaaS system have?
 
@@ -72,7 +72,7 @@ See also: [Swarming](xref:Swarming).
 
 ### What backup policy does a DaaS system have?
 
-For more information, see [Data resilience and backups](xref:STaaS#data-resilience-and-backups).
+For more information, see [Data resilience and backups](xref:STaaS_features#data-resilience-and-backups).
 
 ### Is it possible to make a local backup of all data?
 
@@ -98,8 +98,37 @@ User management on DaaS systems is similar to that on on-premises system. Althou
 
 See also: [User management](xref:User_management).
 
-## Are there specific limitations that apply for DaaS?
+### Are there specific limitations that apply for DaaS?
 
-As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS#limitations) also apply for DaaS.
+As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](xref:STaaS_features#limitations) also apply for DaaS.
 
 In addition, because of the additional security layer used in DaaS systems, at present, it is not possible to connect to a DaaS system using the [Web Services (v1)](xref:Using_the_Web_Services_v1).
+
+### Where is my DaaS system hosted?
+
+If you create a new DataMiner System via <https://dataminer.services>, it will by default be hosted in the West-Europe region.
+
+However, you can request for it to be hosted in a different available region without incurring any additional costs. To do so, please contact <daas@dataminer.services>.
+
+> [!NOTE]
+> When choosing a region, make sure to opt for a region that supports availability zones.
+
+### Where is the data for my DaaS system hosted?
+
+If you create a new DataMiner System via <https://dataminer.services>, the data for your system will by default be hosted in the West-Europe region.
+
+However, you can request for it to be hosted in any of the available STaaS regions. To do so, please contact <daas@dataminer.services>. For detailed information, refer to [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
+
+> [!NOTE]
+> It is perfectly possible to host your DaaS system in one region and your data in another region.
+
+### Can I add additional DataMiner nodes to my DaaS system?
+
+If you need additional nodes to be added to your DaaS system, please contact <daas@dataminer.services>.
+
+### Can I add additional DataMiner nodes in a different region to my DaaS system?
+
+Yes. Within a single DaaS system, it is possible to have different nodes running in different regions.
+
+> [!NOTE]
+> While you can have different nodes running in different regions, your data can only be in one region.

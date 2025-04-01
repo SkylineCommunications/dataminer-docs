@@ -27,7 +27,7 @@ The following error message will be present in the *SLCloudStorage.txt* log file
 CloudSettings could not be retrieved from the cloud. Retrying in 00:00:05. Exception: SLCloudStorageConnection.Repositories.Exceptions.CloudSettingsRepositoryException: Exception while doing a EndpointInfoAsync. (Failed to EndpointInfoAsync. (404))
 ```
 
-To register your system, follow the procedure to [set up STaaS](xref:STaaS#setting-up-staas).
+To register your system, follow the procedure to [set up STaaS](xref:Setting_up_StaaS).
 
 ## CloudGateway is not running correctly
 
@@ -86,7 +86,7 @@ This issue typically resolves itself. If it persists, contact <staas@dataminer.s
 
 ## The API Deployment Manager failed to initialize
 
-If the [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is enabled in *SoftLaunchOptions.xml*, the following alarm will be shown in DataMiner Cube:
+If the obsolete *APIDeployment* [soft-launch option](xref:SoftLaunchOptions) is enabled in *SoftLaunchOptions.xml*, the following alarm will be shown in DataMiner Cube:
 
 ```txt
 APIDeploymentManager failed to initialize, retrying. Check SLAPIDeploymentManager.txt for additional information.
@@ -98,7 +98,7 @@ In the *SLDBConnection.txt* log file, you will find this error:
 2023/10/10 20:30:18.308|SLDBConnection|SLDataGateway.Repositories|INF|0|354|2023-10-10T20:30:18.302|ERROR|Repository.RepositoryStorageProvider.DeployerToken|Refreshing storage [failed]: SLDataGateway.API.Types.Exceptions.StorageTypeNotFoundException: No storage type found for DataType: DeployerToken
 ```
 
-The [APIDeployment](xref:Overview_of_Soft_Launch_Options#apideployment) option is **not supported** on systems using STaaS. To resolve this issue, remove the option from *SoftLaunchOptions.xml*.
+The *APIDeployment* option is obsolete and is **not supported** on systems using STaaS. To resolve this issue, remove the option from *SoftLaunchOptions.xml*.
 
 ## Connector-specific issues
 
@@ -110,7 +110,7 @@ This issue is known to occur with the following connector versions:
 
 ## DataMiner is unable to start up after registration
 
-If you followed the procedure to [set up STaaS](xref:STaaS#setting-up-staas) and switched your *DB.xml* to use STaaS, but the same DMA was previously registered with another organization, DataMiner will not be able to start up.
+If you followed the procedure to [set up STaaS](xref:Setting_up_StaaS) and switched your *DB.xml* to use STaaS, but the same DMA was previously registered with another organization, DataMiner will not be able to start up.
 
 In the *SLError.txt* log file, you will find this error:
 

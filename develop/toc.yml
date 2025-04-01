@@ -435,6 +435,8 @@ items:
           topicUid: ConnectionsSmartSerialLogging
         - name: Dynamic polling
           topicUid: ConnectionsSmartSerialDynamicPolling
+        - name: Common pitfalls
+          topicUid: ConnectionsSmartSerialCommonPitfalls
       - name: HTTP
         topicUid: ConnectionsHttp
         items:
@@ -533,6 +535,8 @@ items:
           topicUid: AdvancedDVEsSeverityState
         - name: Toggling DVE creation
           topicUid: AdvancedDVEsTogglingCreation
+        - name: Assigning templates
+          topicUid: AdvancedDVEsTemplates
         - name: Remarks
           topicUid: AdvancedDVEsRemarks
         - name: Exercise
@@ -944,7 +948,11 @@ items:
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
     - name: Best practices
-      topicUid: Automation_best_practices
+      items:
+      - name: Generating information events
+        topicUid: Automation_best_practices_information_events
+      - name: Handling async code
+        topicUid: Handling_Async_Code
     - name: How-tos
       items:
       - name: Making your Automation scripts debug-ready
@@ -3915,14 +3923,6 @@ items:
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsActive
               - name: SetAsDefault
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
-      - name: DeploymentOptions
-        topicUid: Manifest.DeploymentOptions
-        items: 
-        - name: OrganizationCatalogAccess
-          topicUid: Manifest.DeploymentOptions.OrganizationCatalogAccess
-          items: 
-          - name: Organization
-            topicUid: Manifest.DeploymentOptions.OrganizationCatalogAccess.Organization
       - name: MinimumRequiredVersions
         topicUid: Manifest.MinimumRequiredVersions
         items:
@@ -5346,6 +5346,29 @@ items:
 - name: CI/CD
   topicUid: CICD
   items:
+  - name: Skyline DataMiner Software Development Kit
+    topicUid: skyline_dataminer_sdk
+    items:  
+    - name: Skyline DataMiner SDK
+      topicUid: skyline_dataminer_sdk
+      items:
+        - name: Project properties
+          topicUid: skyline_dataminer_sdk_project_properties
+    - name: DataMiner Package Project
+      topicUid: skyline_dataminer_sdk_dataminer_package_project
+      items:
+        - name: Advanced
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_advanced
+        - name: CatalogReferences.xml
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_catalog_references
+        - name: ProjectReferences.xml
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_project_references
+    - name: Visual Studio 2022 solution filter (*.slnf) files
+      topicUid: skyline_dataminer_sdk_solution_filter_files
+    - name: Frequently asked questions
+      topicUid: skyline_dataminer_sdk_frequently_asked_questions
+    - name: Troubleshooting
+      topicUid: skyline_dataminer_sdk_troubleshooting
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
   - name: CI/CD using command line
@@ -5370,6 +5393,8 @@ items:
     - name: GitHub reusable workflows
       topicUid: github_reusable_workflows
       items:
+      - name: DataMiner App Package Master Workflow
+        topicUid: github_reusable_workflows_dataminer_app_packages_master_workflow
       - name: Automation Master Workflow
         topicUid: github_reusable_workflows_automation_master_workflow
       - name: NuGet Solution Master Workflow
@@ -5382,12 +5407,24 @@ items:
         topicUid: github_reusable_workflows_update_catalog_details
     - name: Tutorials
       items:
-       - name: Setting up your development environment in GitHub
-         topicUid: CICD_Tutorial_GitHub_Setting_Up_Organization
-       - name: Going from code to product in GitHub
-         topicUid: CICD_Tutorial_GitHub_Code_To_Product
-       - name: Setting up basic CI/CD for connector deployment
-         topicUid: CICD_Tutorial_Connector
+      - name: For connectors
+        items:
+        - name: Setting up basic CI/CD for connector deployment in GitHub
+          topicUid: CICD_Tutorial_Connector
+        - name: Registering a new version of a connector in the Catalog using a GitHub Action
+          topicUid: Tutorial_Register_Catalog_Version_GitHub_Actions
+        - name: Setting up complete quality control in CI/CD for connector deployment
+          topicUid: CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub
+      - name: For other items
+        items:
+        - name: Registering a new version of a user-defined API to the Catalog using Visual Studio and GitHub
+          topicUid: CICD_Tutorial_For_Other_Items_User_Defined_API_VisualStudio_And_GitHub
+        - name: Registering a new version of a user-defined API to the Catalog using GitHub Codespaces
+          topicUid: CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces
+        - name: Registering a new version of a multi-artifact DataMiner package to the Catalog using Visual Studio and GitHub
+          topicUid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub
+        - name: Registering a new version of multiple DataMiner packages to the Catalog using Visual Studio and GitHub
+          topicUid: CICD_Tutorial_For_Other_Items_Multi-Package_VisualStudio_And_GitHub
   - name: CI/CD using GitLab
     items:
     - name: GitLab examples
@@ -5402,6 +5439,10 @@ items:
     items:
     - name: Azure DevOps examples
       topicUid: CICD_Azure_DevOps_Examples
+    - name: Tutorials
+      items:
+      - name: Setting up basic CI/CD for connector deployment in AzureDevops
+        topicUid: CICD_Tutorial_For_Connectors_VisualStudio_And_AzureDevOps
   - name: CI/CD using Concourse
     items:
     - name: Concourse examples
@@ -5550,6 +5591,8 @@ items:
               topicUid: DisInjectToolWindow
             - name: DIS MIB Browser
               topicUid: DisMibBrowserToolWindow
+            - name: DIS Parameter Update Locations
+              topicUid: DisParameterUpdateLocationsToolWindow
         - name: Plugins
           topicUid: DisPlugins
         - name: Development using DIS
@@ -5811,7 +5854,7 @@ items:
           topicUid: DSI_OpenConfig_Introduction
         - name: Middleware package
           topicUid: DSI_OpenConfig_Middleware
-- name: DataMiner module integrations
+- name: DataMiner feature integrations
   topicUid: DataMinerModuleIntegrations
   items:
     - name: User-Defined APIs
@@ -5869,6 +5912,14 @@ items:
           topicUid: Topology_app_configuration
         - name: DataMiner processes configuration
           topicUid: EPM_DataMiner_processes_config
+    - name: Swarming
+      items:
+        - name: Preparing scripts and connectors for Swarming
+          topicUid: SwarmingPrepare
+        - name: Configuring a script to swarm elements
+          topicUid: SwarmingScriptElement
+        - name: Configuring a script to swarm bookings
+          topicUid: SwarmingScriptBooking
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:

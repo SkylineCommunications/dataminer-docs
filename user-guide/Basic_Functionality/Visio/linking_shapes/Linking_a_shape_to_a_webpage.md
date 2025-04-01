@@ -1,5 +1,6 @@
 ---
 uid: Linking_a_shape_to_a_webpage
+keywords: Visio, hyperlink
 ---
 
 # Linking a shape to a webpage
@@ -124,7 +125,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 > - Prior to DataMiner 10.3.6/10.4.0, adding a URL fragment to a linked webpage causes the connection info to be automatically added after the fragment, rendering the URL invalid and requiring a reload of the page, which means the user may need to log in again. From DataMiner 10.3.6/10.4.0 onwards, Visual Overview can recognize if a URL fragment is added or changed and update only the necessary parts of the page, avoiding the need to recreate the browser instance. <!-- RN 36044 + 36104 -->
 
 > [!TIP]
-> If you want to pass data to a dashboard using placeholders, take a look at [how to specify data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL).
+> If you want to pass data to a dashboard using placeholders, take a look at [how to specify data input in a dashboard URL](xref:Specifying_data_input_in_a_URL).
 >
 > It can also be useful to copy the URL directly from the Dashboards app. However, some of the URL parameters may be compressed. If you need the uncompressed URL parameters to insert placeholders, [retrieve the URL via the sharing option](xref:Sharing_a_dashboard#sharing-a-dashboard-url) and select *Use uncompressed URL parameters*.
 
@@ -171,7 +172,7 @@ You can link to a dashboard or low-code app in the same way as you would link to
 In the URL of the dashboard or low-code app, you can add placeholders in order to dynamically specify data for the dashboard or low-code app.
 
 > [!TIP]
-> For more information about the URL syntax, refer to [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_dashboard_URL).
+> For more information about the URL syntax, refer to [Specifying data input in a dashboard or app URL](xref:Specifying_data_input_in_a_URL).
 
 > [!NOTE]
 > It is also possible to [link a shape to a component of a dashboard](xref:Linking_a_shape_to_a_dashboard_component) instead of the entire dashboard.

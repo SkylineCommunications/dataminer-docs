@@ -19,11 +19,13 @@ classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width
 %% Define blocks %%
 DMAStartupIssues([DMA startup issues])
 AgentNotLicensed{{"Agent not licensed message in Cube? <br/>"}}
+SwarmingEnabled{{"Swarming recently enabled? <br/>"}}
 SLNetComFailure{{"SLNetCom failure logged in SLDataMiner.txt? <br/>"}}
 IncorrectIPAddresses{{"Incorrect IP addresses in DMS.xml? <br/>"}}
 NATSErrors{{"Errors related to NATS in SLDataMiner.txt + SLWatchdog2.txt? <br/>"}}
 CassandraErrors{{"Errors related to Cassandra in SLErrors.txt? <br/> "}}
 LicensingIssue["Licensing issue"]
+SwarmingIssue["Swarming issue"]
 IPChangeIssue["IP change issue"]
 NATSIssue["NATS issue"]
 CassandraIssue["Cassandra issue"]
@@ -32,7 +34,9 @@ ContactTechSupport["Contact tech support"]
 DMAStartupIssues --- AgentNotLicensed
 Home([Start page])
 AgentNotLicensed --- |YES| LicensingIssue
-AgentNotLicensed --- |NO| SLNetComFailure
+AgentNotLicensed --- |NO| SwarmingEnabled
+SwarmingEnabled --- |YES| SwarmingIssue
+SwarmingEnabled --- |NO| SLNetComFailure
 SLNetComFailure --- |YES| IPChangeIssue
 SLNetComFailure --- |NO| IncorrectIPAddresses
 IncorrectIPAddresses --- |YES| IPChangeIssue
@@ -44,14 +48,15 @@ CassandraErrors --- |NO| ContactTechSupport
 %% Define hyperlinks %%
 click Home "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click LicensingIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#licensing-issue"
+click SwarmingIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#swarming-issue"
 click IPChangeIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#ip-change-issue"
 click NATSIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#nats-issue"
 click CassandraIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#cassandra-issue"
 click ContactTechSupport "/user-guide/Troubleshooting/Contacting_tech_support.html"
 %% Apply styles to blocks %%
 class DMAStartupIssues,ContactTechSupport DarkBlue;
-class LicensingIssue,IPChangeIssue,NATSIssue,CassandraIssue classExternalRef;
-class AgentNotLicensed,SLNetComFailure,IncorrectIPAddresses,NATSErrors,CassandraErrors Blue;
+class LicensingIssue,SwarmingIssue,IPChangeIssue,NATSIssue,CassandraIssue classExternalRef;
+class AgentNotLicensed,SwarmingEnabled,SLNetComFailure,IncorrectIPAddresses,NATSErrors,CassandraErrors Blue;
 class Home LightBlue;
 ```
 
@@ -93,6 +98,18 @@ DataMiner cannot find a valid license to run the Agent. This issue may be caused
 ## IP change issue
 
 Two different DataMiner startup issues are related to IP changes: DataMiner may be trying to [connect to an old IP address](#dataminer-is-trying-to-connect-to-an-old-ip-address), or there may be [incorrect IP addresses in *DMS.xml*](#incorrect-ip-addresses-in-dmsxml-cause-ip-conflicts).
+
+### Swarming issue
+
+If you have just enabled the [Swarming](xref:Swarming) feature and DataMiner does not startup:
+
+- Double-check whether the DataMiner System uses a database compatible with Swarming. See [Prerequisites](xref:EnableSwarming#prerequisites).
+
+- Check the *SLErrors.txt* and *SLSwarming.txt* log files for swarming-related errors.
+
+- Double-check the *Swarming.xml* configuration file for errors.
+
+- Check *SLDataMiner.txt* and *SLNet.txt* for any critical exceptions (e.g. an invalid setup is detected).
 
 ### DataMiner is trying to connect to an old IP address
 
@@ -222,9 +239,11 @@ NATS is not running as expected. As every DataMiner Agent must be able to reach 
 
   The 60 retries in the error above are the maximum number of attempts DataMiner will make to connect to the database before a DataMiner restart is required.
 
-- *SLDBConnection.txt* contains errors similar to the following example:
+- *SLDBConnection.txt* contains errors similar to the following examples:
 
-  `2024/11/14 12:02:55.247|SLDBConnection|.ctor|INF|0|1|Failed connection attempt to 10.2.5.100:9042 because NoHostAvailableException: System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.`
+  - `2024/11/14 12:02:55.247|SLDBConnection|.ctor|INF|0|1|Failed connection attempt to 10.2.5.100:9042 because NoHostAvailableException: System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.`
+
+  - `2025/03/25 14:46:01.013|SLDBConnection|.ctor|INF|0|1|Failed connection attempt to 172.16.150.19:9042 because NoHostAvailableException: Cassandra.AuthenticationException: Unable to perform authentication: Cannot achieve consistency level LOCAL_ONE`
 
 ### Root cause
 
@@ -232,11 +251,17 @@ DataMiner is unable to establish a connection to the database. This can be cause
 
 - The database is down.
 - The database credentials are incorrect.
+- Incorrect replication factor or consistency level configured.
 - The connection between DataMiner and the external database is blocked, for example by a firewall.
 
 ### Solution
 
-1. Check if you can connect with Cassandra using the DevCenter tool.
+1. Verify whether all nodes are running fine by checking their status in nodetool.
+
+   - UN (or up/normal): The node is running fine.
+   - DN: The node is down. In some cases, this can mean data loss is occurring.
+
+1. If the node is up or you do not have access to the database server, check if you can connect with Cassandra using the DevCenter tool.
 
    - You can find this tool in `C:\Program Files\Cassandra\DevCenter\Run DevCenter` (if storage per DMA is used instead of dedicated clustered storage), or it can be downloaded from the Apache or DataStax websites.
    - You can find the IP of the database in *DB.xml*, in the *DBServer* tag.
@@ -244,6 +269,7 @@ DataMiner is unable to establish a connection to the database. This can be cause
    If you can connect to Cassandra:
 
    - Check whether DataMiner is configured with the correct credentials to connect to the database.
+   - Check the configured replication factor against the consistency level. If the *system_auth* schema keyspace is not set to the correct replication factor, credentials will not be synchronized across all Cassandra nodes in the cluster. Consequently, if a node is down, DataMiner may fail to connect to nodes where the credentials have not been replicated. See [Replication and consistency configuration](xref:replication_and_consistency_configuration).
    - Check the DMA server for possible port exhaustion issues and restart if necessary.
    - Check whether a firewall is blocking the communication.
 
@@ -256,11 +282,6 @@ DataMiner is unable to establish a connection to the database. This can be cause
 
    - On **Linux**: `sudo systemctl restart Cassandra`
    - On **Windows**: Right-click the Cassandra service in the Task Manager and select *Restart*, or reboot the server if this restart fails.
-
-1. Verify whether all nodes are running fine by checking their status in nodetool.
-
-   - UN (or up/normal): The node is running fine.
-   - DN: The node is down. In some cases, this can mean data loss is occurring.
 
 1. Inspect the debug log to confirm whether the node has fully started or terminated unexpectedly:
 

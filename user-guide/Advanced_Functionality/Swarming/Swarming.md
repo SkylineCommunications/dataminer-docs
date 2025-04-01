@@ -4,80 +4,41 @@ uid: Swarming
 
 # Swarming
 
-From DataMiner 10.5.1/10.6.0 onwards<!-- RN 41490 -->, you can enable the Swarming feature in a DataMiner System in order to be able to swarm objects, such as [elements](xref:SwarmingElements) or [bookings](xref:SwarmingBookings), from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
+With the Swarming feature, you can easily **swarm DataMiner objects from one DataMiner Agent to another Agent in the same cluster**. When this feature is enabled, the DataMiner objects are no longer linked to a specific DMA, but instead their information is stored in the database. This means that switching them over to a different DMA, or "swarming" them, is suddenly very easy.
 
-The primary goal of Swarming is to eliminate downtime resulting from maintenance activities and provide a more polished user experience.
+![DataMiner objects stored in the database](~/user-guide/images/Swarming_database.png)
 
-Note that when Swarming is enabled, this will result in some major changes to the DataMiner configuration:
+Swarming can be useful in many situations:
 
-- Alarm identifiers will be generated on a per-element basis instead of per Agent to make them unique within the cluster. Because of this change, you will need to make sure [your system is prepared](xref:SwarmingPrepare) before you can enable Swarming.
+- As a System Administrator, you can **eliminate downtime** resulting from maintenance activities for a more polished user experience, by carrying out the maintenance activities (e.g. Windows updates) on a live cluster, Agent by Agent, by temporarily moving functionalities away to other Agents in the cluster.
 
+  ![Maintenance without downtime](~/user-guide/images/Swarming_maintenance.png)
+
+- With swarming, **load balancing** is easy. You can easily move elements between nodes to rebalance your cluster without effort, for example when you have added an extra node or when you want to reduce the load on a specific node.
+
+  ![Load balancing using Swarming](~/user-guide/images/Swarming_load_balance.png)
+
+- If a node in a cluster fails, you can quickly recover functionalities from the failing node by moving activities hosted on that node to the remaining nodes.
+
+- In a later iteration, the Swarming feature will also be able to assist in making rolling DataMiner software updates on live clusters possible, with limited downtime of specific functionality.
+
+For all of these capabilities, it is important that the different nodes in a cluster have spare capacity so that elements can be moved to them. For optimal ease of use of the Swarming feature, we therefore recommend deploying DataMiner in [subscription mode](xref:Pricing_Commercial_Models) and using as many DataMiner nodes as necessary to make sure there is plenty of capacity to move elements whenever needed.
+
+Swarming can be enabled from DataMiner 10.5.1/10.6.0 onwards.<!-- RN 41490 --> Note that when it is enabled, this will result in some major changes to the DataMiner configuration:
+
+- Alarm identifiers will be generated on a per-element basis instead of per Agent to make them unique within the cluster.
 - Element configuration will be stored in the cluster-wide database instead of in the element XML files on the disk of the DataMiner Agent hosting each element.
 
 > [!IMPORTANT]
-> Once the element configuration has been moved from disk to database, there is no good way to revert this change, which means that if you were to disable Swarming again, you would lose all your elements, leaving your DMS with a lot of lingering references to non-existing elements. For instructions on how to disable Swarming and **partially** recover your elements, see [Partially rolling back Swarming](xref:SwarmingRollback).
+> If you decide to [roll back Swarming](xref:SwarmingRollback) again, you will need to restore a backup to get the element XML files back. Any changes that have been implemented to elements after you enabled Swarming will be lost. As a consequence, the sooner you decide to roll back, the smaller the impact of the rollback will be.
 
-## Capabilities
+## Upcoming features
 
-The Swarming feature provides these capabilities:
+At present, swarming is supported for [basic elements](xref:SwarmingElements). For [bookings](xref:SwarmingBookings), swarming is supported if the *BookingSwarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
-- As a DataMiner System Admin, you can apply maintenance (e.g. Windows updates) on a live cluster, Agent by Agent, by temporarily moving functionalities away to other Agents in the cluster.
+In addition, we are working on adding the following functionality soon:
 
-- As a DataMiner System Admin, you can easily extend your system with an extra node and move functionalities from existing nodes to new nodes, so you can rebalance your cluster.
-
-- Swarming makes it possible to recover functionalities from failing nodes by moving activities hosted on such a node to the remaining nodes.
-
-In a later iteration, the Swarming feature will also be able to assist in making rolling DataMiner software updates on live clusters possible, with limited downtime of specific functionality.
-
-> [!NOTE]
-> The above capabilities are possible with limited downtime and as long as there is spare capacity.
-
-## Limitations
-
-Some functionality is not supported with the Swarming feature. These are the most important limitations at the moment:
-
-- Swarming is not available in DataMiner Systems with a [storage per DMA setup](xref:Configuring_storage_per_DMA) (Cassandra or MySQL).
-
-- Swarming is not available in DataMiner Systems with [Failover](xref:About_DMA_Failover).
-
-- Swarming is not available in DataMiner Systems where the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards) is enabled.
-
-- Swarming is currently limited to [basic elements](xref:SwarmingElements). For [bookings](xref:SwarmingBookings), swarming is supported if the *BookingSwarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
-
-> [!NOTE]
-> [Prerequisite checks](xref:EnableSwarming#running-a-prerequisites-check) are in place to prevent the enabling of the Swarming feature when non-supported objects are present. Where possible, you will also be prevented from configuring or creating these on a Swarming-enabled system.
-
-Below you can find a complete overview of the differences between a system using DataMiner 10.5.1 or higher with or without Swarming.
-
-|                                                  | 10.5.1+&nbsp; systems without Swarming | 10.5.1+ systems with Swarming  |
-|--------------------------------------------------|----------------------------------------|--------------------------------|
-| Element configuration                            | On disk (element.xml)                  | In database                    |
-| Alarm IDs                                        | Per DataMiner Agent                    | Per element                    |
-| Database per DMA                                 | Supported                              | Not supported                  |
-| Scripts & QActions using legacy alarm references | Supported                              | Not supported                  |
-| Legacy Reports & Dashboards                      | Supported                              | Not supported                  |
-| Failover                                         | Supported                              | Not supported                  |
-| Offload database                                 | Supported                              | Not supported*                 |
-| Contributing bookings                            | Supported                              | Supported as of DataMiner 10.5.2 <!-- RN 41706 --> but not swarmable* |
-| SLA elements                                     | Supported                              | Supported but not swarmable*   |
-| Enhanced services                                | Supported                              | Supported** but not swarmable* |
-| Spectrum elements                                | Supported                              | Supported but not swarmable*   |
-| Redundancy group elements                        | Supported                              | Supported but not swarmable*   |
-| DVE and virtual function child and parent elements            | Supported                              | Supported but not swarmable*   |
-| EPM elements                                     | Supported                              | Supported but not swarmable*   |
-| Elements polling localhost                       | Supported                              | Supported but not swarmable    |
-| Elements with element connections                | Supported                              | Supported but not swarmable*   |
-| Smart-serial elements in server mode             | Supported                              | Supported but not swarmable    |
-| Elements receiving SNMP traps in a DMS with trap distribution disabled on at least one DMA.       | Supported                              | Supported but not swarmable    |
-
-(*) To be added in later versions.
-
-(**) Enhanced service connectors may [need to be adjusted](xref:SwarmingPrepare).
-
-## Required user permissions
-
-To enable the Swarming feature, the [Admin Tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is required.
-
-Once the feature has been enabled, users will need the [Swarming](xref:DataMiner_user_permissions#modules--swarming) user permission to trigger any swarming actions. To swarm an element, users will also need config rights on the element.
-
-Users that have the [Import DELT](xref:DataMiner_user_permissions#general--elements--import-delt) and [Export DELT](xref:DataMiner_user_permissions#general--elements--import-delt) user permissions will automatically also get the *Swarming* user permission when DataMiner is upgraded from a version that does not support Swarming to a version that does support it.
+- Support for data offloads in Swarming-enabled systems.
+- Support for swarming services.
+- Support for swarming of special elements: SLA elements, enhanced services, spectrum elements, redundancy group elements, DVE and virtual function child and parent elements, EPM elements, and elements with element connections.
+- Support for automatic switchover of elements in case issues are detected.

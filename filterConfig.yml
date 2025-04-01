@@ -515,6 +515,9 @@ apiRules:
 - include:
     uidRegex: ^Skyline\.DataMiner\.Net\.Trending$
     type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Utils\.Protocol\.Extension$
+    type: Namespace
 - exclude:
     uidRegex: ^SLDataGateway\.
     type: Namespace

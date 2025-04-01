@@ -5,6 +5,9 @@ keywords: local database
 
 # Migrating the SQL general database to Cassandra
 
+> [!IMPORTANT]
+> This feature is obsolete. The migration wizard is no longer supported from DataMiner 10.3.0 [CU6]/10.3.6 onwards.<!-- RN 36095, 42305 -->
+
 In legacy DataMiner Systems, a MySQL or MSSQL general database (also known as "local" database) can be used. However, with such a setup you will not have access to many recent DataMiner features. In addition, while older features will continue to work with MySQL up to DataMiner 10.6.0, MSSQL is no longer supported as from DataMiner 10.3.0.
 
 To have access to all the latest DataMiner features, switching to [Storage as a Service (STaaS)](xref:STaaS) is highly recommended. For this, you first need to migrate to Cassandra. If you choose to keep using self-managed storage even though this is not recommended, you will also need to migrate to Cassandra and then [migrate to a dedicated clustered storage](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) setup in order to have access to all the latest features.
@@ -189,6 +192,12 @@ After you have followed the procedure above and system requirements are met, you
 ## After the migration
 
 1. To improve the security of the Cassandra database, follow the procedures mentioned under [Cassandra authentication](xref:Cassandra_authentication).
+
+1. Adjust the tombstone settings in the *Cassandra.yml* file:
+
+   - **tombstone_warn_threshold**: Set this to 100000. Cassandra warns in the *Debug.log* file whenever there are more tombstones than this threshold. This provides a good indication of when the *tombstone_failure_threshold* might be exceeded.
+
+   - **tombstone_failure_threshold**: Set this to 200000. Queries will fail if a record has more tombstones than the value set here. Increases of this value will slow down your reads but might be manageable depending on the use case.
 
 1. To ensure that your Cassandra database does not run out of memory under load, configure the heap size for Cassandra.
 

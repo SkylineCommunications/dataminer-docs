@@ -4,6 +4,106 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.7
+
+### New features
+
+#### IDE
+
+##### New info bar will suggest using the Protocol.Extension NuGet [ID 42021]
+
+A new info bar has been added to suggest using the [Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+
+##### Updated XMLSchemas and Validators dependencies [ID 42511]
+
+DIS now uses:
+
+- [Validator version 1.2.0](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.2.0)
+- [Skyline.DataMiner.XmlSchemas.Protocol version 1.1.1](https://github.com/SkylineCommunications/Skyline.DataMiner.XmlSchemas/releases/tag/1.1.1)
+
+### Changes
+
+#### Enhancements
+
+##### Context menu of QAction edit icon no longer lists the SLDatabase.dll and System.Xml.dll assemblies [ID 42509]
+
+The icon you can click to edit a QAction opens a context menu that allows you to easily add references to some predefined assemblies.
+
+From now on, the list of predefined assemblies will no longer include *SLDatabase.dll* and *System.Xml.dll*.
+
+#### Fixes
+
+##### Problem when importing low-code apps of which the name contained illegal characters [ID 42475]
+
+Up to now, an error could occur when, in DIS, you tried to import a low-code app with a name that contained characters that are not allowed in file names.
+
+From now on, when you import a low-code app of which the name contains illegal characters, DIS will generate a new file name in which all illegal characters are replaced by an underscore character ('_').
+
+##### An exception would be thrown when DIS was not able to connect to the Web API of the DataMiner Agent [ID 42484]
+
+When DIS connects to a DataMiner Agent, since DataMiner 3.1.6, it would also connect to the Web API. If it was not able to connect to the Web API, up to now, an exception would be thrown, which would prevent actions such as publishing a protocol from being performed.
+
+From now on, when DIS is not able to connect to the Web API, the error message will now be logged in the output window (together with a message that states that importing dashboards and low-code apps will not be possible because no Web API connection could not be set up).
+
+All other functionality that relies on the SLNet connection, such as publishing a protocol, should no longer be affected.
+
+##### Parameter Update Locations tool window: Parameter selection box would not get populated again when you had switched to another solution [ID 42500]
+
+In the *Parameter Update Locations* tool window, the parameter selection box would not get populated again when you had switched to another solution.
+
+Also, in some rare cases, the *Confirmed Update Locations* and *Possible Update Locations* panes could contain duplicate entries.
+
+##### Skyline.DataMiner.Sdk: Use of OutDir property [ID 42497]
+
+Version 1.1.0 of the *Skyline.DataMiner.Sdk* will now use the `OutDir` property instead of dynamically making the output path (which was error prone).
+
+## DIS 3.1.6
+
+### New features
+
+#### IDE
+
+##### New tool window: DIS Parameter Update Locations [ID 41277]
+
+The new *DIS Parameter Update Locations* tool window allows you to select a parameter and check where it is (possibly) updated. It can be opened either via the DIS menu (*Tool Windows > DIS Parameter Update Locations*) or via a parameter in the *protocol.xml* file you are editing.
+
+After you select one of the parameters of the connector, the *Confirmed Update Locations* pane will list the locations where that parameter is updated.
+
+For example:
+
+- If the pane lists an Action, this means that the Action will perform a set on the parameter when executed.
+- If the pane lists a QAction, this means that the QAction invokes e.g. a method that will cause the parameter to get updated. The line on which you will find that invocation within the QAction will be mentioned in the result window.
+
+In the *Possible Update Locations* pane, you will find an overview of possible locations where this parameter might get updated.
+
+- For example, if a QAction contains a `protocol.SetParameter()` call, but it could not be determined which parameter gets updated (e.g. because the parameter ID is calculated at run-time), then that QAction will be listed in the *Possible Update Locations* pane.
+
+- Also, the *Confirmed Update Locations* will mark incorrect update locations in red. For example, if the connector calls a method that should be executed on a table parameter is incorrectly executed on a standalone parameter.
+
+To trigger a recalculation of the update locations, click the *Refresh* button at the top of the tool window.
+
+##### DIS now supports Skyline.DataMiner.Sdk projects [ID 42072]
+
+DIS now supports the newly introduced *Skyline.DataMiner.Sdk* projects.
+
+New context menu options to import dashboards and low-code apps from DataMiner Agents are available on the project as well as on the *PackageContent* > *Dashboards* and *PackageContent* > *Low Code Apps* folders.
+
+Also, the *Import Protocol* and *Import Automation script* menu items under *DIS* > *DMA* are now only visible when they can be used. Previously, when you clicked those options when it was not possible to use them, an error would be thrown.
+
+##### DIS Validator tool window now links to documentation [ID 42396]
+
+In the *DIS Validator* tool window, the results pane will now allow you to open online documentation about the checks that were performed.
+
+This will replace the custom window that was opened when you clicked the information icon of a particular check.
+
+### Changes
+
+#### Enhancements
+
+##### DIS will now indicate that DataMiner 10.3 is the minimum supported version [ID 42399]
+
+DIS will now indicate that DataMiner version 10.3 is the minimum supported version.
+
 ## DIS 3.1.5
 
 ### New features

@@ -4,26 +4,87 @@ uid: CICD_Azure_DevOps_Examples
 
 # Azure DevOps CI/CD examples
 
-## Basic deployment example
+These are basic pipeline examples for uploading to the DataMiner Catalog and/or deploying to DMAs connected to dataminer.services.
 
-This is a basic pipeline for uploading to the catalog and/or deployment to DMAs connected to dataminer.services.
-
-We recommend combining this with quality control beforehand, such as executing static code analysis and running tests.
+We recommend combining these with quality control beforehand, such as executing static code analysis and running tests.
 
 > [!TIP]
 > For information on creating a new pipeline in Azure DevOps, see [Azure Tutorial](https://learn.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops).
 
-### Creating a dataminer.services key
+## Basic upload of non-connector items
 
-A dataminer.services key is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS.
+This is a basic pipeline for uploading non-connector items to the DataMiner Catalog. Eventually, you will also be able to deploy such items to DMAs connected to dataminer.services using this pipeline, but this is not yet supported at the moment.
 
-For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
+To upload an item to the Catalog, you will need *DATAMINER_TOKEN* as a secret. This will be the key for the **DataMiner organization** as provided through the [DataMiner Admin app](xref:CloudAdminApp).
 
-### Azure DevOps pipeline
+On a **Ubuntu** runner:
 
-You need a secret variable DATAMINER_DEPLOY_KEY.
+```yml
+trigger:
+  branches:
+    include:
+      - master
+      - main
 
-You need a variable that is allowed to change during the run: uploadOutput
+variables:
+  DATAMINER_TOKEN: $(DATAMINER_TOKEN)  # Secret from Azure DevOps Library or Pipeline variables
+
+jobs:
+ - job: UbuntuBuildAndUpload
+    displayName: 'Ubuntu: Build and Register to Catalog'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+      - checkout: self
+
+      - script: |
+          dotnet publish \
+            -p:Version="0.0.$(Build.BuildId)-prerelease" \
+            -p:VersionComment="This is just a pre-release version." \
+            -p:CatalogPublishKeyName="DATAMINER_TOKEN" \
+            -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
+        displayName: 'Publish and Register to Catalog'
+        env:
+          DATAMINER_TOKEN: $(DATAMINER_TOKEN)
+
+```
+
+On a **Windows** runner:
+
+```yml
+trigger:
+  branches:
+    include:
+      - master
+      - main
+
+variables:
+  DATAMINER_TOKEN: $(DATAMINER_TOKEN)  # Secret from Azure DevOps Library or Pipeline variables
+
+jobs:
+  - job: WindowsBuildAndUpload
+    displayName: 'Windows: Build and Register to Catalog'
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+      - checkout: self
+
+      - script: |
+          dotnet publish `
+            -p:Version="0.0.$(Build.BuildId)-prerelease" `
+            -p:VersionComment="This is just a pre-release version." `
+            -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
+            -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
+        displayName: 'Publish and Register to Catalog'
+        env:
+          DATAMINER_TOKEN: $(DATAMINER_TOKEN)
+```
+
+## Azure DevOps pipeline for connectors
+
+For this pipeline, you will need a dataminer.services **key for the specific DMS** to which you want to deploy the connectors. For more information on how to create a dataminer.services key, refer to [Managing dataminer.services keys](xref:Managing_DCP_keys).
+
+As you can see below, you will need a secret variable *DATAMINER_DEPLOY_KEY* that contains this dataminer.services key and an *uploadOutput* variable that is allowed to change during the run.
 
 ```yml
 trigger:
@@ -44,14 +105,14 @@ steps:
 - script: dotnet tool install -g Skyline.DataMiner.CICD.Tools.DataMinerDeploy
   displayName: 'Install Catalog Deploy'
 
-- script: dataminer-package-create dmapp $(Build.SourcesDirectory) --name HelloFromAzure --output $(Build.SourcesDirectory) --type automation
+- script: dataminer-package-create dmprotocol $(Build.SourcesDirectory) --name HelloFromAzure --output $(Build.SourcesDirectory)
   displayName: 'Create Package'
 
 - script: |
-    uploadOutput=$(dataminer-catalog-upload --path-to-artifact "$(Build.SourcesDirectory)/HelloFromAzure.dmapp" --dm-catalog-token $(DATAMINER_DEPLOY_KEY))
+    uploadOutput=$(dataminer-catalog-upload --path-to-artifact "$(Build.SourcesDirectory)/HelloFromAzure.dmprotocol" --dm-catalog-token $(DATAMINER_DEPLOY_KEY))
     echo "##vso[task.setvariable variable=uploadOutput]$uploadOutput"
   displayName: 'Upload Package'
 
-- script: dataminer-package-deploy from-catalog --artifact-id "$(uploadOutput)" --dm-catalog-token $(DATAMINER_DEPLOY_KEY)
+- script: dataminer-package-deploy from-volatile --artifact-id "$(uploadOutput)" --dm-system-token $(DATAMINER_DEPLOY_KEY)
   displayName: 'Deploy Package'
 ```

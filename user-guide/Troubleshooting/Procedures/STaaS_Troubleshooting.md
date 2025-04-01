@@ -180,11 +180,9 @@ Verify the following:
 
 - Confirm that the firewall allows traffic through port 443.
 
-- Verify that the following endpoints are reachable:
+- Verify that the necessary endpoints are reachable.
 
-  - STaaS West Europe: 20.76.71.123
-
-  - STaaS UK South: 20.162.131.128
+  These depend on the region you have registered your system for. During the [STaaS setup](xref:Setting_up_StaaS), you should have received information from <staas@dataminer.services> about the specific endpoints or IPs to whitelist.
 
 ## Common pitfalls
 
@@ -295,4 +293,4 @@ Actions:
 
 ## Adding a new DMA to a DMS running STaaS
 
-When adding a new DataMiner Agent to a DMS that is using STaaS, some additional steps are required compared to the instructions for [adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent). For a detailed guide, see [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
+For a detailed guide, refer to [Adding a DataMiner Agent to a DMS running STaaS](xref:Adding_a_DMA_to_a_DMS_running_STaaS). Note that this involves some additional steps compared to the instructions for [adding a regular DataMiner Agent](xref:Adding_a_regular_DataMiner_Agent).

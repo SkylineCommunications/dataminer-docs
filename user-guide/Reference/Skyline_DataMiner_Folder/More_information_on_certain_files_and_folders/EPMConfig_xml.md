@@ -40,6 +40,6 @@ This is an example of the *EPMConfig.xml* configuration:
 ```
 
 > [!NOTE]
-> - *EPMConfig.xml* is not synchronized automatically. It is also only read at DataMiner startup.
-> - Prior to DataMiner 10.2.0, when you update the system-level *EPMConfig.xml* file on a particular DMA, delete the \*.txf files on that DMA and restart DataMiner.
 >
+> - *EPMConfig.xml* is not synchronized automatically. It is also only read at DataMiner startup.
+> - For systems where some of the cell names and field names are identical, we recommend using identical overrides to avoid creating a confusing user interface.

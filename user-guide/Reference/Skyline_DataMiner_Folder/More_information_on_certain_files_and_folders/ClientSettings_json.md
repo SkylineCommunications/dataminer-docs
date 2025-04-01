@@ -247,6 +247,11 @@ To configure this setting:
 
 1. Save and close the file.
 
+1. Perform an IIS restart to apply the time zone changes.
+
+   > [!NOTE]
+   > Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4<!--RN 42202-->, an IIS restart is not necessary, and changes made to the time zone in *ClientSettings.json* will take effect immediately as soon as the web app is refreshed.
+
 ## Configuring settings for Cube UI freezing
 
 The Cube logging can display logs of type "Freeze" to indicate when the Cube UI has been frozen. In *C:\\Skyline DataMiner\\Users\\ClientSettings.json*, you can configure how long the Cube UI has to be frozen before an entry is logged in the Cube logging. In addition, you can also configure how long the UI has been frozen before a pop-up is displayed.

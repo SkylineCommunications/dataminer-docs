@@ -36,3 +36,5 @@ items:
         topicUid: User-defined_APIs_Tutorials
       - name: Visual Overview tutorials
         topicUid: Visio_Tutorials
+      - name: Advanced admin tutorials
+        topicUid: Advanced_Admin_Tutorials

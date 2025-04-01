@@ -13,4 +13,4 @@ In this section:
 > See also:
 >
 > - [Best practices for protocol development](xref:CodingGuidelines)
-> - [Best practices for Automation script development](xref:Automation_best_practices)
+> - [Best practices for Automation script development](xref:Automation_best_practices_information_events)

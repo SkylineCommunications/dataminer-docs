@@ -147,10 +147,16 @@ Do you keep getting *"We're getting things ready... This won't take long."*? Thi
 Visual Overview in web apps has limited functionality:
 
 - Visual Overview pages are rendered as images containing clickable regions. As a result, some features (e.g. embedding) and some session variable controls are not fully supported.
+
 - To render a Visual Overview page, [SLHelper](xref:Troubleshooting_SLHelper_exe) loads a virtual instance of DataMiner Cube in its memory. Initial loading of a page can take a long time because SLHelper needs to start Cube, connect to a DMA, and then generate an image.
+
 - SLHelper may use a significant amount of memory to display Visual Overview pages, especially when multiple users are connected. When Visual Overview pages are not viewed by any user, the virtual DataMiner Cube instance is terminated after a timeout of 5 minutes and the memory is released.
+
 - When multiple users with different security contexts are logged in to the same DataMiner Agent, performance can be impacted as all updates for visual overviews shown in the web apps are handled by that one Agent. From DataMiner 10.5.0 [CU1]/10.5.2 onwards<!--RN 41434-->, you can implement [load balancing](#load-balancing) to distribute these updates across multiple Agents in the DMS. This reduces the load on any single Agent, but updates for each user will still be handled by the same Agent based on their security context.
+
 - Visual Overview pages are displayed only after all images have loaded, or after a one-minute timeout. If some shapes on the page fail to load and have inherited the *EnableLoading=True* setting from a parent shape or the page itself (from DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 41517-->), the page may not appear until the one-minute timeout is reached. For more information on how to disable this setting, see [Disabling the indication that a page or shape is loading](xref:Disabling_the_Loading_message_for_a_page_or_shape).
+
+- Prior to DataMiner 10.5.4/10.6.0, if no user-specific information (i.e. user context) is required in a visual overview, the system tries to reuse server-side cards across different users. This may cause incorrect user information to be shown, especially when displaying pop-up windows or embedded visual overviews. From DataMiner 10.5.4/10.6.0 onwards<!--RN 42061-->, a separate card is created for each user. When a user opens a new visual overview in a web app, a new card is generated specifically for them, so that the correct user information is always shown.
 
 If you encounter any issues or if you notice any behavior that is different from that in Cube, then check the `SLUIProvider.txt` and `SLHelperWrapper.txt` log files. Always include the Visio file when you ask for support by email.
 
