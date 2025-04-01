@@ -56,6 +56,14 @@ Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending o
 
 Any version lower than the specified minimum version will be considered outdated, as older versions are known to pose security risks.
 
+#### Service & Resource Management: UpdateReservationInstanceEventHasRun method will now first clone the reservation object before updating it [ID 42124]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+Up to now, the `UpdateReservationInstanceEventHasRun` method would directly update the cached reservation object and then save it.
+
+From now on, it will clone the reservation object in the cache, make the change, and then update the cached object.
+
 #### Security enhancements [ID 42307]
 
 <!-- 42307: MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->

@@ -170,6 +170,14 @@ When, in DataMiner Cube, you go to *System Center > System settings > Analytics 
 - Proactive cap detection
 - Relational anomaly detection
 
+#### Service & Resource Management: UpdateReservationInstanceEventHasRun method will now first clone the reservation object before updating it [ID 42124]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+Up to now, the `UpdateReservationInstanceEventHasRun` method would directly update the cached reservation object and then save it.
+
+From now on, it will clone the reservation object in the cache, make the change, and then update the cached object.
+
 #### STaaS: Enhanced granularity when migrating custom data to STaaS [ID 42219]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
