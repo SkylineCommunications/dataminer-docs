@@ -248,7 +248,7 @@ When you install or upgrade a DataMiner Agent, the following DataMiner Extension
 
 > [!NOTE]
 >
-> - For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+> - For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 > - The above-mentioned DxMs all use .NET 6.
 
 #### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID 36809]
