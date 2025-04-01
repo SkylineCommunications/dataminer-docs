@@ -426,7 +426,13 @@ In this tag, you can specify the maximum size (in MB) of the DataMiner recycle b
 >
 > - Whatever the maximum size specified in this tag, the maximum number of files in the recycle bin is limited to 5000.
 > - The default recycle bin size is 100 MB.
-> - The recycle bin is cleaned to the maximum size and number of files every hour.
+> - From DataMiner 10.5.5/10.6.0 onwards<!--RN 40565-->, if the recycle bin size is set to 0 MB or an invalid size, it will revert to the default value of 100 MB.
+> - From DataMiner 10.5.5/10.6.0 onwards<!--RN 40565-->, the system checks every 7 minutes whether storage limits have been exceeded. If the system detects a breach, it performs a cleanup on the recycle bin to restore the storage within acceptable limits:
+>
+>   - If the number of files exceeds the limit: The system will clean up the recycle bin until it holds 80% of the lowest value between the maximum allowed number of files (default: 1000) and the current number of files.
+>   - If the folder size exceeds the limit: The system will clean up until the folder size is no longer over the configured size limit.
+>
+>   This cleanup occurs for the first time 2 minutes after DataMiner startup. Prior to DataMiner 10.5.5/10.6.0, the recycle bin is cleaned to the maximum size and number of files every hour.
 
 ### Replication.ConnectionMinDelayBeforeRetry
 
