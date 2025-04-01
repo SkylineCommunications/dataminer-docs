@@ -79,7 +79,7 @@ When you hover over this *Copy* button, a tooltip will appear, saying that click
 
 In the DataMiner Cube desktop app, a number of enhancements have been made with regard to configuration file management.
 
-Also, the drag-and-drop functionality has been revised. For example, it is now possible to re-order tile groups and to remove tiles by dragging them onto the recycle bin.
+Also, the drag-and-drop functionality has been revised. For example, it is now possible to reorder tile groups and to remove tiles by dragging them onto the recycle bin.
 
 #### Profiles app will now show an error message when a create, update or delete operation fails [ID 41902]
 
