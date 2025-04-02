@@ -23,7 +23,7 @@ When you create a new connector or Automation script using DIS, a new Visual Stu
 > - Setting up a CI/CD pipeline that builds your solution, performs SonarCloud analysis, etc.
 > - Easy transition to a full-blown package with other components
 >
-> DIS supports [converting Automation script XML files](xref:skyline_dataminer_sdk_dataminer_package_project#existing_automation_script_files) into Visual Studio projects.
+> DIS supports [converting Automation script XML files](xref:skyline_dataminer_sdk_dataminer_package_project#existing-automation-script-files) into Visual Studio projects.
 
 ## SDK-style vs. legacy-style project format
 
