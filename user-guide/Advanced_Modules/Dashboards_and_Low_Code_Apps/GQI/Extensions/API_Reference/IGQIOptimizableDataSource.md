@@ -57,7 +57,7 @@ public sealed class MyDataSource : IGQIDataSource, IGQIOptimizableDataSource, IG
         return new GQIColumn[] { _myColumn };
     }
     
-    public IGQIOperatorNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator nextOperator)
+    public IGQIOperatorNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
     {
         if (TryOptimizeSort(nextOperator))
         {
