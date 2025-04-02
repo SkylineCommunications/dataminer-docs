@@ -1,5 +1,2 @@
 # Global rule
 *       @SkylineCommunications/team-docs-reviewers
-
-# CICD
-/develop/CICD/** @SkylineCommunications/BOOST @SkylineCommunications/team-docs-reviewers
