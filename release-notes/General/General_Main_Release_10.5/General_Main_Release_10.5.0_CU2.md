@@ -15,6 +15,24 @@ uid: General_Main_Release_10.5.0_CU2
 
 ### Enhancements
 
+#### BrokerGateway files collected by SLLogCollector [ID 40299]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.9/10.5.0-->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)), SLLogCollector will now collect files related BrokerGateway.
+
+#### VerifyNatsIsRunning BPA test updated with BrokerGateway prerequisite [ID 40641]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:SLNetClientTest_disabling_automatic_nats_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+
+#### Notices generated in case local NATS server is not responding [ID 41289]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.5.0/10.5.1 -->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)), SLNet will now generate notices in case the local NATS server is not responding. The connectivity will be checked at a random interval between 3 and 10 minutes.
+
 #### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP Inform messages [ID 41884]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
@@ -29,6 +47,13 @@ Up to now, when you stopped and restarted an SNMP manager, all open alarms would
 <!-- 42307: MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 A number of security enhancements have been made.
+
+#### NATS repair tool [ID 42328]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+A repair tool, *NATSRepair.exe*, will now be included in the *C:\Skyline DataMiner\Tools\\* folder, which can be used to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
+
 
 #### Reduced memory usage when updating a large number of parameters in bulk [ID 42385]
 
@@ -148,6 +173,18 @@ This method should return the query node that represents the result of applying 
 Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web page to display server-side log files. This web page has now been replaced by the *ViewLog.aspx* web page.
 
 This new log viewer page has improved compatibility with Failover setups and better error handling for HTTPS certificates.
+
+#### Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+It is now possible to migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service). Previously, starting from DataMiner 10.5.0/10.5.2, this feature was available in [soft launch](xref:SoftLaunchOptions).
+
+BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+
+Before you start the migration, the entire cluster must have been running smoothly for some time. A BPA test is available that allows you to easily verify this ([Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites)).
+
+You can then run the migration by opening a remote desktop connection to all DMAs at the same time, opening a command prompt as administrator, and running the executable *C:\Skyline DataMiner\Tools\NATSMigration.exe*. This must happen on each DMA in the cluster within a 10-minute timeframe. For more detailed information, refer to [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
 #### DataMiner IDP license notice will no longer appear [ID 42574]
 

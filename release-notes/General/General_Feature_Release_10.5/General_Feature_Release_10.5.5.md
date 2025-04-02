@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.5
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)
 
 ## New features
 
@@ -37,9 +37,27 @@ Up to now, when you stopped and restarted an SNMP manager, all open alarms would
 > [!NOTE]
 > This new *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
 
+#### Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+It is now possible to migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service). Previously, starting from DataMiner 10.5.0/10.5.2, this feature was available in [soft launch](xref:SoftLaunchOptions).
+
+BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+
+Before you start the migration, the entire cluster must have been running smoothly for some time. A BPA test is available that allows you to easily verify this ([Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites)).
+
+You can then run the migration by opening a remote desktop connection to all DMAs at the same time, opening a command prompt as administrator, and running the executable *C:\Skyline DataMiner\Tools\NATSMigration.exe*. This must happen on each DMA in the cluster within a 10-minute timeframe. For more detailed information, refer to [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+
 ## Changes
 
 ### Enhancements
+
+#### BrokerGateway files collected by SLLogCollector [ID 40299]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.9/10.5.0-->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)), SLLogCollector will now collect files related BrokerGateway.
 
 #### DataMiner recycle bin enhancements [ID 40565]
 
@@ -93,6 +111,18 @@ For example, if a view is renamed or moved in the Surveyor, a zip file will be c
 > [!CAUTION]
 > Always be extremely careful when using this functionality, as it can have far-reaching consequences on your DataMiner System.
 
+#### VerifyNatsIsRunning BPA test updated with BrokerGateway prerequisite [ID 40641]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:SLNetClientTest_disabling_automatic_nats_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+
+#### Notices generated in case local NATS server is not responding [ID 41289]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.5.0/10.5.1 -->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)), SLNet will now generate notices in case the local NATS server is not responding. The connectivity will be checked at a random interval between 3 and 10 minutes.
+
 #### BPA test 'Check Deprecated MySQL DLL' renamed to 'Check Deprecated DLL Usage' [ID 42057]
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
@@ -121,6 +151,12 @@ From now on, it will clone the reservation object in the cache, make the change,
 <!-- 42307: MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 A number of security enhancements have been made.
+
+#### NATS repair tool [ID 42328]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+A repair tool, *NATSRepair.exe*, will now be included in the *C:\Skyline DataMiner\Tools\\* folder. You can use this to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
 
 #### DataMiner Object Model: An error will now be returned when a FieldValue was added for a non-existing FieldDescriptor [ID 42358]
 
