@@ -16,5 +16,4 @@ Specifies the language used in the QAction.
 |&nbsp;&nbsp;Enumeration|csharp|C#|
 
 > [!NOTE]
-> JScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).
-> VBScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).
+> JScript and VBScript are [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).
