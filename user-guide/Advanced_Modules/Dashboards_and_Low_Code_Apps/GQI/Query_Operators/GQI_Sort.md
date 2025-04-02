@@ -7,7 +7,7 @@ uid: GQI_Sort
 To sort data based on a specific column, three query operators are available, depending on your DataMiner version and objective.
 
 > [!NOTE]
-> If the [GQI DxM](xref:GQI_DxM) is used, the *Sort* operator supports sorting up to 100,000 records. Prior to DataMiner 10.5.0 [CU2]/10.5.5<!--RN 42492-->, the record limit is set to 10,000 records.
+> If the [GQI DxM](xref:GQI_DxM) is used, from DataMiner 10.5.0 [CU2]/10.5.5 onwards<!--RN 42492-->, the *Sort* operator supports sorting up to 100,000 records. Otherwise, the record limit is set to 10,000 records.
 
 ## Sort operators
 
