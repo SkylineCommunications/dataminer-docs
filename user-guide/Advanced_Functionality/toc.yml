@@ -120,6 +120,8 @@ items:
             topicUid: Adding_a_DMA_to_a_DMS_running_STaaS
           - name: Adding a DataMiner Probe
             topicUid: Adding_a_DataMiner_Probe
+          - name: Connection strings
+            topicUid: Connection_strings
       - name: Removing a DataMiner Agent from a DataMiner System
         topicUid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
       - name: Starting or stopping DataMiner Agents in your DataMiner System
