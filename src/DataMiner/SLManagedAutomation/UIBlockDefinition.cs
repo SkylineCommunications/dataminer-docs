@@ -347,11 +347,11 @@ namespace Skyline.DataMiner.Automation
 		public bool IsEnabled { get; set; }
 
 		/// <summary>
-		/// Gets or sets a value indicating whether users are able to enter multiple lines of text.
+		/// Gets or sets a value indicating whether users are able to enter multiple lines of text or display text on multiple lines.
 		/// </summary>
-		/// <value><c>true</c> if users are able to enter multiple lines of text; otherwise, <c>false</c>.</value>
+		/// <value><c>true</c> if users are able to enter multiple lines of text or display text on multiple lines; otherwise, <c>false</c>.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to TextBox or StaticText.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to TextBox or StaticText. For StaticText, if IsMultiline is false, but the text contains a newline, the StaticText will put the text on multiple lines.</para>
 		/// </remarks>
 		/// <example>
 		/// <code>
