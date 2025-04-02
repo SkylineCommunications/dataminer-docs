@@ -164,6 +164,15 @@ This feature will only work if the spectrum element connector contains the follo
 - *Reference Level* (both read and write parameters)
 - *Amplitude Scale* (both read and write parameters)
 
+#### Visual Overview: An element or service referenced by a service but not included in it will now always be hidden [ID 42644]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 [CU0] -->
+
+Up to now, when an element or service was referenced by a service but not included in it, a shape linked to that element or service would only be hidden when it was referenced by a wildcard (* or ?). From now on, when an element or service is referenced by a service but not included in it, it will always be hidden, regardless of how it is referenced.
+
+> [!NOTE]
+> The new behavior can be disabled by using the *elementoptions: IgnoreDynamicInclude* shape data. See [Adding options to shapes linked to elements or services](xref:Adding_options_to_shapes_linked_to_elements_or_services#options).
+
 ### Fixes
 
 #### Visual Overview: Placeholders would incorrectly broadcast the same value twice [ID 42252]
