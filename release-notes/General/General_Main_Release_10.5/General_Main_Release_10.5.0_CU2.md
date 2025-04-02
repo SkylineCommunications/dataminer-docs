@@ -52,8 +52,7 @@ A number of security enhancements have been made.
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
-A repair tool, *NATSRepair.exe*, will now be included in the *C:\Skyline DataMiner\Tools\\* folder, which can be used to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
-
+A repair tool, *NATSRepair.exe*, will now be included in the *C:\Skyline DataMiner\Tools\\* folder. You can use this to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
 
 #### Reduced memory usage when updating a large number of parameters in bulk [ID 42385]
 
