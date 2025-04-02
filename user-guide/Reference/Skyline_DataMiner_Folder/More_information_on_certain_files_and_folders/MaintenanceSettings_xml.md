@@ -422,11 +422,23 @@ Default timeout: 30000 milliseconds
 
 In this tag, you can specify the maximum size (in MB) of the DataMiner recycle bin.
 
-From DataMiner 10.5.5/10.6.0 onwards<!--RN 40565-->, the system checks every 7 minutes whether storage limits have been exceeded. If the system detects a breach, it performs a cleanup on the recycle bin to restore the storage within acceptable limits:
+From DataMiner 10.5.5/10.6.0 onwards<!--RN 40565-->, the system checks every 7 minutes whether storage limits have been exceeded. If the system detects a breach, it performs a cleanup on the recycle bin to restore the storage within acceptable limits. The cleanup continues until both of the following conditions are met:
 
-- If the number of files exceeds the limit: The system will clean up the recycle bin until it holds 80% of the lowest value between the maximum allowed number of files (default: 1000) and the current number of files.
+- The folder size is below the set limit (default: 100 MB).
 
-- If the folder size exceeds the limit: The system will clean up until the folder size is no longer over the configured size limit.
+- The number of files is below the set limit (default: 1000).
+
+If either of these conditions is breached, the system will continue to clean up until the folder size is within the configured limit and the number of files is reduced to 80% of whichever number is lower: the maximum allowed number of files or the current number of files at the time of cleanup.
+
+Examples:
+
+- Situation: The current number of files exceeds the limit (e.g. 1010 when the limit is 1000), but the folder size is within the limit.
+
+  Result: The system will clean up until only 80% of the maximum allowed number of files remain (i.e. 80% of 1000 = 800 files). Since 210 files are deleted, the folder size will automatically decrease as well.
+
+- Situation: The current number of files is within the limit (e.g. 600 when the limit is 1000), but a large file is added, causing the folder size to exceed the limit (e.g. 105 MB when the limit is 100 MB).
+
+  Result: The system will clean up until only 80% of the current number of files remain (i.e. 80% of 600 = 480 files). Additionally, the system will continue the cleanup process until the folder size is within the configured size limit of 100 MB.
 
 This cleanup occurs for the first time 2 minutes after DataMiner startup. Prior to DataMiner 10.5.5/10.6.0, the recycle bin is cleaned to the maximum size and number of files every hour.
 
