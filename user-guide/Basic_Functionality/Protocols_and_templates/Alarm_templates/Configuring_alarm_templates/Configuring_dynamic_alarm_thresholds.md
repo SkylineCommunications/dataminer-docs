@@ -37,9 +37,7 @@ Both for "absolute" and "relative" alarm thresholds, the "normal" value has to b
    - Set a smart baseline by selecting *Automatically update the baseline values*.
 
      > [!NOTE]
-     >
-     > - You can only use a smart baseline if trending has been enabled for the parameter. If it is not, you will receive a warning message, and a warning icon will be shown in the Baseline editor.
-     > - Smart baselines are incompatible with [history sets](xref:How_to_use_history_sets_on_a_protocol_parameter). If the [`historySet` attribute](xref:Protocol.Params.Param-historySet) is set to "true" for a parameter, enabling smart baselines will have no effect. From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42326-->, you will receive a warning message when attempting to enable smart baselines for a parameter with history sets enabled.
+     > You can only use a smart baseline if trending has been enabled for the parameter. If it is not, you will receive a warning message, and a warning icon will be shown in the Baseline editor.
 
 1. If you chose a smart baseline, select one of the following options:
 
