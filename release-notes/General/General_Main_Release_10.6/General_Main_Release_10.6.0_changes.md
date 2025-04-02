@@ -64,7 +64,7 @@ For example, if a view is renamed or moved in the Surveyor, a zip file will be c
 1. Copy the file from the *Recycle Bin* folder back to its original location.
 
    > [!NOTE]
-   > From now on, there is an 11-minute period during which a modified file is not updated. This means the restored file may not reflect the most recent change.
+   > From now on, the files in the *Recycle Bin* folder are only updated every 11 minutes. This means that when you restore the files, they may not contain recent changes.
 
 1. Restart the DMA.
 
