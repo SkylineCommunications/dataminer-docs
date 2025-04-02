@@ -35,7 +35,7 @@ Called when an optimizable operator is appended directly to the ad hoc data sour
 
 #### Parameters
 
-- [IGQIOperatorNode](xref:GQI_IGQIDataSourceNode) `currentNode`: A reference to the current node.
+- [IGQIDataSourceNode](xref:GQI_IGQIDataSourceNode) `currentNode`: A reference to the current node.
 
 - [IGQICoreOperator](xref:GQI_IGQICoreOperator) `nextOperator`: A reference to the next operator.
 
@@ -57,7 +57,7 @@ public sealed class MyDataSource : IGQIDataSource, IGQIOptimizableDataSource, IG
         return new GQIColumn[] { _myColumn };
     }
     
-    public IGQIOperatorNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
+    public IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
     {
         if (TryOptimizeSort(nextOperator))
         {
