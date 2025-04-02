@@ -19,13 +19,13 @@ Minimum requirements are displayed in gray, default requirements in light blue, 
 > - For all information on client requirements, see [DataMiner Client Requirements](xref:DataMiner_Client_Requirements).
 
 > [!NOTE]
-> While this is not recommended, you can run DataMiner, Cassandra, and OpenSearch on a single server. In that case, the hardware requirements in the diagram below need to be added up. For example, for RAM, you would need a minimum of 96 GB (32 GB for DataMiner, 32 GB for Cassandra, and 32 GB for OpenSearch).
+> While this is not recommended, you can run DataMiner, Cassandra, and OpenSearch on a single server. In that case, the hardware requirements mentioned below need to be added up. For example, for RAM, you would need a minimum of 96 GB (32 GB for DataMiner, 32 GB for Cassandra, and 32 GB for OpenSearch).
 
 ## DataMiner requirements
 
-![DataMiner setup](~/user-guide/images/dataminer-compute-requirements_V04_Outline.svg "DataMiner setup")
-
 To make sure you have immediate access to all the data from your system and to ensure that actions you want to perform are done instantly, sufficient hardware resources must be available and the correct software must be used.
+
+![DataMiner setup](~/user-guide/images/dataminer-compute-requirements_V04_Outline.svg "DataMiner setup")
 
 ### RAM
 
