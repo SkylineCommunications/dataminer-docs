@@ -28,4 +28,8 @@ uid: Cube_Feature_Release_10.5.6
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Visual Overview: Problem when processing shape conditions or creating shape properties [ID 42436]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+In some cases, an *Object reference not set to an instance of an object* exception could be thrown when processing shape conditions or creating shape properties.
