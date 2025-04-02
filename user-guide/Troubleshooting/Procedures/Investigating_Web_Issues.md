@@ -113,7 +113,7 @@ If you encounter issues with GQI DxM it might help to repair the service by runn
 
 1. Using Task Manager, stop the DataMiner GQI service.
    > [!NOTE]
-   > Make sure the associated DataMiner GQI process has stopped completed. If not, kill it.
+   > Make sure the associated DataMiner GQI process has stopped. If not, kill it.
 1. Navigate to `C:\Skyline DataMiner\Tools\ModuleInstallers\Web`.
 1. Run the GQI DxM installer again in Repair mode.
 1. Restart the web server using IIS Manager to reconnect the web apps with the GQI DxM. 
