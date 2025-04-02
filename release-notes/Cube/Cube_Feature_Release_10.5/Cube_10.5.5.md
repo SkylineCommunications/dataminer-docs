@@ -54,7 +54,7 @@ Up to now, it was only allowed to have one single EPM frontend manager element p
 > - Each of the frontend manager connectors must have a different *SystemType*.
 > - All frontend manager elements must use the same version of the same connector.
 > - All backend manager elements must use the same version of the same connector.
-> - All EPM objects must be linked using both *SystemName* and *SystemType*.
+> - All EPM objects must be linked using both *SystemName* and *SystemType*. For example, in Visual Overview, you can link a shape to an EPM object by means of the *SystemName* and *SystemType* data fields.
 
 #### Sharing the link to the current Cube session with other users [ID 42389] [ID 42524]
 
