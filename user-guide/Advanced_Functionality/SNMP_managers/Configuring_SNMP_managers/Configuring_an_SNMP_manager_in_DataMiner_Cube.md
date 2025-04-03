@@ -30,7 +30,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
 
    - **Port number**: The destination port of the SNMP manager. By default, this is set to 162.
 
-   - **Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)**: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 41884-->. When this option is enabled, DataMiner will track sent SNMP Inform messages and prevent resending those that have already been acknowledged by the SNMP manager. This prevents open alarms from being resent if the SNMP manager is stopped and restarted. By default, this option is disabled.
+   - **Enable tracking to avoid duplicate inform acknowledgments (ACKs)**: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 41884-->. When this option is enabled, DataMiner will track sent SNMP inform messages and prevent resending those that have already been acknowledged by the SNMP manager. This prevents open alarms from being resent if the SNMP manager is stopped and restarted. By default, this option is disabled.
 
      > [!NOTE]
      > This option is not compatible with:
@@ -98,7 +98,7 @@ uid: Configuring_an_SNMP_manager_in_DataMiner_Cube
      - **Resend all active alarms every ...**: If you want SNMP notifications for active alarms to be resent at regular intervals, select this option, and specify an interval. The default interval is 30 seconds.
 
        > [!NOTE]
-       > This option is not compatible with the *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option on the *general* tab.
+       > This option is not compatible with the *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option on the *general* tab.
 
      - **Custom OID during resend**: In this box, you can enter a custom OID to be used when resending notifications to an SNMP manager.
 
