@@ -9,6 +9,14 @@ This change log can help you trace when specific features and changes became ava
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+#### 19 December 2024 - Enhancement - Catalog - Catalog type now included in audit events [ID 41746] [ID 41755] [ID 41756]
+
+Audit events related to Catalog actions will now include the type of the Catalog item.
+
+#### 17 December 2024 - Fix - Admin - Organization name not shown for audit events [ID 41740]
+
+In the Admin app, it could occur that the name of an organization could not be shown in the audit logs.
+
 #### 17 December 2024 - Enhancement - Admin app - Improved audit export [ID 41694]
 
 From now on, when you export the audit information from the *Audit* page in the [Admin app](https://admin.dataminer.services), the export file will have a better name, which will include the organization name and a readable timestamp.
@@ -32,6 +40,10 @@ The upload speed for remote access requests has been improved. This will mainly 
 #### 1 December 2024 - New feature - Admin app - Connector usage [ID 41580]
 
 From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about the used connectors when available. This usage is shown as an average over the selected month.
+
+#### 29 November 2024 - Enhancement - Catalog API - GetCategories now returns only types available for the user [ID 41531]
+
+​The "api/user-catalog/v2-0/catalogs/categories" call in the user controller has been extended to only take into account the types from Catalog items the user has access to.
 
 #### 26 November 2024 - New feature - Admin app - Automation usage [ID 41554]
 
@@ -372,6 +384,10 @@ As an unauthenticated user, you can now search through the publicly available Ca
 
 Catalog item registration now supports images in the provided description of the Catalog item. Any used images need to be included in a *Images* directory. Supported image formats are .jpg, .jpeg, .png, .gif, .bmp, .tif, .tiff, and .webp.
 
+#### 11 September 2024 - New feature - Catalog API - Public API to retrieve a Catalog item [ID 40499]
+
+A new route has been made available on "api/public-catalog/v2-0/catalogs/{catalogId}" to allow a user that is not logged in to retrieve a Catalog item.
+
 #### 30 August 2024 - Enhancement - Catalog - Type filter documentation link [ID 40601]
 
 When you search for an item in the Catalog, a documentation link will now be shown next to the type filter. This link will navigate to the Catalog types information on DataMiner Docs.
@@ -482,6 +498,13 @@ Users can now view documentation for all items, if provided.
 
 From now on, the Catalog only allows a maximum of 5 tags for a Catalog item. If more than 5 tags are specified, the API will return an error saying "Too many tags were supplied, a max of 5 is allowed".
 
+#### 26 July 2024 - Enhancement - Catalog API - Sorting of recommended versions [ID 40286]
+
+The recommended versions will now be shown in the following order:
+
+1. Main versions, sorted by descending version number
+1. Other versions, sorted by descending version number
+
 #### 23 July 2024 - Fix - Catalog - Return button spanning whole height of container [ID 40245]
 
 The height of the return button in the top-left corner of the Catalog item details page has been adjusted. Previously, the button spanned the full height of the container. It is now sized to match the button itself.
@@ -582,13 +605,21 @@ If the summary is not explicitly defined, the behavior will stay the same, and "
 
 An enhancement has been done to the way timed out requests are handled when the web apps are accessed remotely or when Live Sharing is used.
 
-#### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID 40121] [ID 40062]
+#### 9 July 2024 - Fix - Catalog API - Recommended version not showing latest version of a Catalog item [ID 40153]
 
-When you deploy a DaaS system from the dataminer.services home page, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
+The recommended version shown for a Catalog item could be incorrect. Because of invalid sorting, it could occur that it did not show the latest version of a range. This has been fixed.
 
 #### 9 July 2024 - Fix - Catalog - Main ranges incorrectly filtered out in version history [ID 40147]
 
 If all ranges of a Catalog item were either labeled as main or as deprecated, in the version history on the details page of the Catalog item, the main range could incorrectly be filtered out when the unsupported versions were set not to be shown (with the *Unsupported versions* toggle button). Now the main range will be shown correctly in the version history.
+
+#### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID 40121] [ID 40062]
+
+When you deploy a DaaS system from the dataminer.services home page, it is now possible to select the time zone for the DataMiner System you are deploying. By default, the current time zone of the browser is selected.
+
+#### 8 July 2024 - Fix - Catalog API - Empty name for Catalog item in search results [ID 39924]
+
+It could happen that a Catalog item without name was shown in a search result. A name will now always be shown.
 
 #### 4 July 2024 - Enhancement - Remote Access, Remote Cube, and Live Sharing stability improvements [ID 40106]
 
