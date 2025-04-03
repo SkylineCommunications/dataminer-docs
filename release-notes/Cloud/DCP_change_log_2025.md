@@ -91,9 +91,9 @@ Users now no longer need to log in to view the home app. A default view will be 
 
 In addition, when something goes wrong during the authentication flow, users will now see a message instead of being redirected to the login.
 
-### 18 February 2025 - Fix - Incorrect DMS status for systems with large DMA version history [ID 42301]
+### 18 February 2025 - Fix - Incorrect DMS status for systems with large DataMiner version history [ID 42301]
 
-DataMiner systems with a large version history were unable to offload their system status. Only the last 10 DataMiner versions are now being offloaded.
+If a DataMiner System had a large version history, it could occur that its system status could not be offloaded. To prevent this issue, now only the last 10 DataMiner versions are offloaded.
 
 ### 11 February 2025 - Enhancement - Catalog - Deployment status shown on details page [ID 42131]
 
@@ -121,9 +121,9 @@ Several enhancements were made to improve performance and stability for all Remo
 
 In addition, dataminer.services now supports the creation of multiple connections instead of one by CloudGateway version 2.17.0 or higher, to increase throughput and stability even further.
 
-### 4 February 2025 - Enhancement - Catalog - Deployment events contain catalog type [ID 41766]
+### 4 February 2025 - Enhancement - Catalog - Deployment messages now contain Catalog item type [ID 41766]
 
-The deployment event after deploying a Catalog item will now contain the type of the Catalog item.
+When a Catalog item is deployed, the deployment info message will now contain the type of the Catalog item.
 
 ### 30 January 2025 - Enhancement - Admin - Usage page improvements [ID 42054]
 
@@ -269,9 +269,9 @@ The number of required API calls to initially load the Catalog home page has bee
 
 On the browse page, Catalog items that are published by the selected organization or by Skyline Communications will now display a green indicator.
 
-### 15 January 2025 - Fix - Catalog API - Correctly take optional arguments into account for a Catalog registration request [ID 41788]
+### 15 January 2025 - Fix - Catalog API - Optional arguments for Catalog registration request incorrectly considered mandatory [ID 41788]
 
-It was required that the manfiest included all properties (even optional) for a registration to succeed. It is now possible to leave out optional properties of the manifest.
+When a Catalog item was registered, optional properties in the manifest were incorrectly also considered mandatory for the registration to succeed. Now it will be possible to leave out optional properties in the manifest.
 
 ### 13 January 2025 - Fix - Rollback of Remote Access and Live Sharing performance and stability improvements [ID 42042]
 
