@@ -27,16 +27,16 @@ The easiest way to configure these parameter groups, is using the [*RAD Manager*
 
 ### Options for parameter groups
 
-For each parameter group you configure, you can set several options.
+For each parameter group you configure, you can set several options. The table below gives an overview of all available options.
 
 | Name in *RAD Manager* | Name in API and XML | Description |
 |--|-|--|
-|  Group name | `name` | The name of the parameter group. This is used when generating a suggestion event or when displaying all groups in the *RAD Manager*. |
-| Update model on new data? | `updateModel` | Indicates whether RAD should update its internal model of the relation between the parameters in the group when new trend data is available. If this is not selected, the model will only be trained immediately after creation and when you manually specify a training range. #TODO: link |
+|  Group name | `name` | The name of the parameter group. This name is used when generating a suggestion event or when displaying all groups in the *RAD Manager*. |
+| Update model on new data? | `updateModel` | Indicates whether RAD should update its internal model of the relation between the parameters in the group when new trend data is available. If this is not selected, the model will only be trained immediately after creation and when [manually specifying a training range](xref:RAD_manager#specifying-the-training-range). |
 | Anomaly threshold | `anomalyThreshold` in API, <br> `anomalyScore` in XML | The threshold that is used for suggestion event generation: suggestion events are generated when RAD detects a region with an anomaly score higher than this threshold. A higher threshold will result in less suggestion events, lower values will result in more suggestion events. Default: 3 |
-| Minimum anomaly duration | `minimumAnomalyDuration` | Supported from DataMiner 10.5.4/10.6.0 onwards.<!-- RN 42283 --> This option specifies the minimum (in minutes) that deviating behavior must persist to be considered a significant anomaly. This value should be 5 minutes or higher. If it is set to a value greater than 5, the deviating behavior will need to last longer before an anomaly event is triggered. You can for instance configure this to filter out noise events caused by a single, short, harmless outlying value in the data. Default value: 5 minutes. |
+| Minimum anomaly duration | `minimumAnomalyDuration` | Supported from DataMiner 10.5.4/10.6.0 onwards.<!-- RN 42283 --> This option specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. This duration should be 5 minutes or higher. If it is set to a value greater than 5 minutes, the deviating behavior will need to last longer before an anomaly event is triggered. You can for instance configure this to filter out noise events caused by a single, short, harmless outlying value in the data. Default value: 5 minutes. |
 
-## Relational anomalies in the alarm console
+## Relational anomalies in the Alarm Console
 
 Whenever the relation for a parameter group is broken, RAD will detect this and generate suggestion events in the Alarm Console. These events can be viewed in the *Relational Anomalies* tab opened through [the Alarm Console light bulb](xref:Light_Bulb_Feature), or in the *Suggestion events* tab (see [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console)).
 

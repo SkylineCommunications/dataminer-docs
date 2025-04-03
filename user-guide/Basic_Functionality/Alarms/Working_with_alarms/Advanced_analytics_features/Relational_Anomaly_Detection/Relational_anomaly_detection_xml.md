@@ -4,7 +4,7 @@ uid: Relational_anomaly_detection_xml
 
 # Configuring RAD through the configuration XML file
 
-The parameter groups that are monitored by *relational anomaly detection* are specified in the configuration file `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml`. Each DMA a separate configuration file specifying the groups that are monitored by that DMA. In the file on a given DMA, you can only specify parameters hosted on that DMA.
+The parameter groups that are monitored by *relational anomaly detection* are specified in the configuration file `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml`. Each DMA has a separate configuration file specifying the groups that are monitored by that DMA. In the file on a given DMA, you can only specify parameters hosted on that DMA.
 
 To add a new parameter group, follow these steps.
 
@@ -34,4 +34,4 @@ To add a new parameter group, follow these steps.
 1. To make sure the changes take effect, in DataMiner Cube, go to *System Center* > *System settings* > *analytics config*, and disable and re-enable *Relational anomaly detection*.
 
 > [!NOTE]
-> In some cases, it can be useful to retrain the internal model used by RAD. This allows you to indicate the periods during which a parameter group was behaving as expected, so that RAD can better identify when the parameters deviate from that expected behavior in the future. To do so, either use the [RAD Manager](xref:RAD_manager#specifying-the-training-range) or the [SLNetClientTest tool](xref:SLNetClientTest_retrain_rad_model).
+> In some cases, it can be useful to retrain the internal model used by RAD. This allows you to indicate the periods during which a parameter group was behaving as expected, so that RAD can better identify when the parameters deviate from that expected behavior in the future. To do so, either use the [*RAD Manager*](xref:RAD_manager#specifying-the-training-range) or the [SLNetClientTest tool](xref:SLNetClientTest_retrain_rad_model).
