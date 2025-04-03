@@ -16,8 +16,10 @@ items:
             items:
             - name: 2025
               topicUid: DCP_change_log_2025
-            - name: 2024
-              topicUid: DCP_change_log
+            - name: 2024 (July-December)
+              topicUid: DCP_change_log_2024_07to12
+            - name: 2024 (January-June)
+              topicUid: DCP_change_log_2024_01to06
             - name: 2023
               topicUid: DCP_change_log_2023
             - name: 2022

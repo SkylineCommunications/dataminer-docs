@@ -361,7 +361,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.7.1
 - DataMiner SupportAssistant: version 1.7.1
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### SNMPv3 elements will now go into an error state when the user name is missing [ID 41312]
 

@@ -14,7 +14,7 @@ To configure the default size:
 1. Go to System Center \> *System settings* > *time to live*
 
    > [!NOTE]
-   > TTL settings are automatically configured if you use [DaaS](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, these settings are no longer available for manual adjustment on the *System settings* > *time to live* tab in System Center when you are using a DaaS system.
+   > If your DMS uses [Storage as a Service](xref:STaaS), TTL settings are automatically configured and may not be available for manual adjustment on the *System settings* > *time to live* tab in System Center, depending on your DataMiner version<!--RN 39173 + 42333-->.
 
 1. Under *Trending*, in the *Real-time* box, specify the new window size.
 

@@ -15,17 +15,34 @@ uid: General_Main_Release_10.4.0_CU14
 
 ### Enhancements
 
+#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP Inform messages [ID 41884]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option. If you select this option, DataMiner will track which Inform messages have been sent, and will not resend those that have already been acknowledged.
+
+> [!NOTE]
+> This new *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
+
 #### Security enhancements [ID 42307]
 
 <!-- 42307: MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 A number of security enhancements have been made.
 
-#### Reduced memory usage when updating a large number of parameter in bulk [ID 42385]
+#### Reduced memory usage when updating a large number of parameters in bulk [ID 42385]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of row are updated due to e.g. aggregation or merge actions.
+When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to e.g. aggregation or merge actions.
+
+#### STaaS: An alarm will now be generated when a data type is being throttled [ID 42387]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+If your system is pushing too much load for a specific data type, that data type will be throttled. This could for example happen when you have an element that is continuously saving parameter updates.
+
+From now on, when this happens, an alarm will be generated with information about the data type or types that are being throttled.
 
 #### Enhanced performance when restarting HTTP elements in a timeout state [ID 42443]
 
@@ -50,6 +67,32 @@ SLLogCollector packages will now include the output of the `dotnet --list-runtim
 The output will be stored in the following file:
 
 *\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
+
+#### New log viewer web page [ID 42533]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web page to display server-side log files. This web page has now been replaced by the *ViewLog.aspx* web page.
+
+This new log viewer page has improved compatibility with Failover setups and better error handling for HTTPS certificates.
+
+#### DataMiner IDP license notice will no longer appear [ID 42574]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Since DataMiner version 10.1.0/1.0.0.8, the following notice would appear when a DataMiner Agent that was not using Indexing Engine had an IDP license but no ServiceManager license:
+
+```txt
+DataMiner IDP is licensed, but no Elasticsearch database is active on the system. Therefore, scheduled workflows are not available.
+```
+
+As DataMiner IDP no longer requires neither a separate license nor an Indexing Engine, from now on, this notice will no longer appear.
+
+#### SLAnalytics: An anomaly alarm event will now be generated when a change point with a type that is not monitored is changed to a change point with a type that is monitored [ID 42596]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+From now on, an anomaly alarm event will be generated when a change point with a change point type for which no anomaly monitoring was configured, is updated to a change point with a change point type for which anomaly monitoring is configured.
 
 ### Fixes
 
@@ -135,6 +178,23 @@ When an SNMPv3 connection was set up, log entries similar to the example below w
 
 `RT_QACTIONS_SNMP_v3: Unable to set the destination IP: polling IP=::1; resolved IP=::1; or=APPLY SECURITY FAILED: EMPTY USER NAME`
 
+#### DVE settings could get out of sync with the element data when DataMiner or an element was restarted [ID 42515]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When DataMiner or an element was stopped while there were still DVE parameter sets in the queue, up to now, the DVE settings would be out of sync with the element data when DataMiner or the element was restarted. From now on, the DVE settings will be re-applied in the element data.
+
+> [!NOTE]
+> Always make sure element names are unique, especially when using the `noelementprefix` option.
+
+#### Incorrect 'Detected duplicate DVE' notice would appear due to a caching issue [ID 42546]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Due to a caching issue, in some cases, the following notice could incorrectly appear in the Alarm Console:
+
+`Detected duplicate DVE, did not create DVE for {DVE name}`
+
 #### Connection issue between SLSNMPManager and SLNet [ID 42547]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
@@ -144,3 +204,11 @@ When multiple SLSNMPManager processes tried to simultaneously connect to SLNet, 
 ```txt
 (SLNetCOM SLSNMPManager.exe) Failed to connect to SLNet: (Code: 0x800402CD) Skyline.DataMiner.Net.Exceptions.DataMinerCommunicationException: Connection was closed at 15:37 (There's a new connection for this module/agent.)
 ```
+
+#### Information events would incorrectly not get flushed to the database when an element was stopped [ID 42604]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When an element was stopped, contrary to alarm events, information events would incorrectly not get flushed to the database.
+
+On systems with Swarming enabled, this could cause problems when a hosting agent tried to retrieve the highest alarm ID from the database.

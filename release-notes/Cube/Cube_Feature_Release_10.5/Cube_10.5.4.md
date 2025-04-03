@@ -129,6 +129,15 @@ As Cassandra on Windows OS and Cassandra Single are no longer supported, it is n
 
 See also: [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
 
+#### Visual Overview: An element or service referenced by a service but not included in it will now always be hidden [ID 42644]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.4 [CU0] -->
+
+Up to now, when an element or service was referenced by a service but not included in it, a shape linked to that element or service would only be hidden when it was referenced by a wildcard (* or ?). From now on, when an element or service is referenced by a service but not included in it, it will always be hidden, regardless of how it is referenced.
+
+> [!NOTE]
+> The new behavior can be disabled by using the *elementoptions: IgnoreDynamicInclude* shape data. See [Adding options to shapes linked to elements or services](xref:Adding_options_to_shapes_linked_to_elements_or_services#options).
+
 ### Fixes
 
 #### Visual Overview: Problem when updating element shapes that are linked to service elements via aliases [ID 41730]

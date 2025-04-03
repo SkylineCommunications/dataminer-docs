@@ -79,6 +79,7 @@ Business skills:
 | Digital presence | Website presence | 10 |
 | Digital presence | Dojo profile | 10 |
 | Digital presence | # blog posts and PRs | 10 |
+| Digital presence | LinkedIn posts (excluding reposts) | 5 per 2 posts per month (max. 5 credits per month) |
 | Sales | Achieving the yearly sales target | 50 |
 | Sales | Per new deal registered with Partner Management* |  50 |
 | Sales | Per new customer added | 100 |

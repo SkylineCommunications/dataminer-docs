@@ -18,6 +18,15 @@ uid: Cube_Feature_Release_10.5.5
 
 ## New features
 
+#### System Center - SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41885]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option. If you select this option, DataMiner will track which inform messages have been sent, and will not resend those that have already been acknowledged.
+
+> [!NOTE]
+> This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of System Center.
+
 #### EPM functionality is now fully integrated in DataMiner Cube [ID 42221]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
@@ -45,7 +54,7 @@ Up to now, it was only allowed to have one single EPM frontend manager element p
 > - Each of the frontend manager connectors must have a different *SystemType*.
 > - All frontend manager elements must use the same version of the same connector.
 > - All backend manager elements must use the same version of the same connector.
-> - All EPM objects must be linked using both *SystemName* and *SystemType*.
+> - All EPM objects must be linked using both *SystemName* and *SystemType*. For example, in Visual Overview, you can link a shape to an EPM object by means of the *SystemName* and *SystemType* data fields.
 
 #### Sharing the link to the current Cube session with other users [ID 42389] [ID 42524]
 
@@ -70,7 +79,7 @@ When you hover over this *Copy* button, a tooltip will appear, saying that click
 
 In the DataMiner Cube desktop app, a number of enhancements have been made with regard to configuration file management.
 
-Also, the drag-and-drop functionality has been revised. For example, it is now possible to re-order tile groups and to remove tiles by dragging them onto the recycle bin.
+Also, the drag-and-drop functionality has been revised. For example, it is now possible to reorder tile groups and to remove tiles by dragging them onto the recycle bin.
 
 #### Profiles app will now show an error message when a create, update or delete operation fails [ID 41902]
 
@@ -122,6 +131,38 @@ The visibility of Y-axis curves in trend graph legends has been improved, and er
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When a trend graph contained multiple overlapping change point areas, up to now, smaller areas could get covered by larger areas, making it impossible to select them. From now on, when you click a group of overlapping change point areas, the change point with the smallest time range will be selected.
+
+#### Elements: New 'Block Swarming' option to indicate that an element is not allowed to swarm [ID 42536]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When you create or update an element, you will now be able to indicate that the element is not allowed to swarm to another host.
+
+To do so, go to the *Advanced* section, and enable to *Block Swarming* option. By default, this option will be set to false.
+
+If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
+
+> [!NOTE]
+> In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System.
+
+#### Data Display: Enhanced performance when opening view cards [ID 42576]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, overall performance has increased when opening view cards.
+
+#### Spectrum analysis: Auto-scale button at the top of a spectrum trace graph [ID 42597]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 [CU0] -->
+
+In the *Spectrum Analyzer* page of a spectrum analyzer card, you can now find an auto-scale button at the top of the spectrum trace graph.
+
+Clicking this button will maximize and center the current trace based on minimum and maximum values.
+
+This feature will only work if the spectrum element connector contains the following parameters:
+
+- *Reference Level* (both read and write parameters)
+- *Amplitude Scale* (both read and write parameters)
 
 ### Fixes
 

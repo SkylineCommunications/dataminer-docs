@@ -17,6 +17,8 @@ items:
           topicUid: Overview_References_and_use_cases
         - name: Compliance offering
           topicUid: DataMiner_compliance_offering
+        - name: Evolution vs. optimization in software development
+          topicUid: evolution_vs_optimization
     - name: DataMiner platform - Empowering your digital transformation
       topicUid: Overview_Platform_intro
       items:

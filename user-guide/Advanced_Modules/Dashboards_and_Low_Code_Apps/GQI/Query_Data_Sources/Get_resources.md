@@ -12,4 +12,4 @@ Available in soft launch from DataMiner 10.2.8/10.3.0 onwards<!--RN 33553-->. Th
 From DataMiner 10.3.11/10.4.0 onwards<!--RN 36970-->, the *Get resources* data source also allows you to filter resources by resource pool ID or booking ID.
 
 > [!NOTE]
-> The *Get resources* data source is only available on DataMiner Systems with a *ResourceManager* license and/or an *IDP* license.
+> The *Get resources* data source is only available on DataMiner Systems with the appropriate license.

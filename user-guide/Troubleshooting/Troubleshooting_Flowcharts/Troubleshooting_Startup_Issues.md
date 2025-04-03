@@ -239,9 +239,11 @@ NATS is not running as expected. As every DataMiner Agent must be able to reach 
 
   The 60 retries in the error above are the maximum number of attempts DataMiner will make to connect to the database before a DataMiner restart is required.
 
-- *SLDBConnection.txt* contains errors similar to the following example:
+- *SLDBConnection.txt* contains errors similar to the following examples:
 
-  `2024/11/14 12:02:55.247|SLDBConnection|.ctor|INF|0|1|Failed connection attempt to 10.2.5.100:9042 because NoHostAvailableException: System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.`
+  - `2024/11/14 12:02:55.247|SLDBConnection|.ctor|INF|0|1|Failed connection attempt to 10.2.5.100:9042 because NoHostAvailableException: System.Net.Sockets.SocketException (0x80004005): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.`
+
+  - `2025/03/25 14:46:01.013|SLDBConnection|.ctor|INF|0|1|Failed connection attempt to 172.16.150.19:9042 because NoHostAvailableException: Cassandra.AuthenticationException: Unable to perform authentication: Cannot achieve consistency level LOCAL_ONE`
 
 ### Root cause
 
@@ -249,11 +251,17 @@ DataMiner is unable to establish a connection to the database. This can be cause
 
 - The database is down.
 - The database credentials are incorrect.
+- Incorrect replication factor or consistency level configured.
 - The connection between DataMiner and the external database is blocked, for example by a firewall.
 
 ### Solution
 
-1. Check if you can connect with Cassandra using the DevCenter tool.
+1. Verify whether all nodes are running fine by checking their status in nodetool.
+
+   - UN (or up/normal): The node is running fine.
+   - DN: The node is down. In some cases, this can mean data loss is occurring.
+
+1. If the node is up or you do not have access to the database server, check if you can connect with Cassandra using the DevCenter tool.
 
    - You can find this tool in `C:\Program Files\Cassandra\DevCenter\Run DevCenter` (if storage per DMA is used instead of dedicated clustered storage), or it can be downloaded from the Apache or DataStax websites.
    - You can find the IP of the database in *DB.xml*, in the *DBServer* tag.
@@ -261,6 +269,7 @@ DataMiner is unable to establish a connection to the database. This can be cause
    If you can connect to Cassandra:
 
    - Check whether DataMiner is configured with the correct credentials to connect to the database.
+   - Check the configured replication factor against the consistency level. If the *system_auth* schema keyspace is not set to the correct replication factor, credentials will not be synchronized across all Cassandra nodes in the cluster. Consequently, if a node is down, DataMiner may fail to connect to nodes where the credentials have not been replicated. See [Replication and consistency configuration](xref:replication_and_consistency_configuration).
    - Check the DMA server for possible port exhaustion issues and restart if necessary.
    - Check whether a firewall is blocking the communication.
 
@@ -273,11 +282,6 @@ DataMiner is unable to establish a connection to the database. This can be cause
 
    - On **Linux**: `sudo systemctl restart Cassandra`
    - On **Windows**: Right-click the Cassandra service in the Task Manager and select *Restart*, or reboot the server if this restart fails.
-
-1. Verify whether all nodes are running fine by checking their status in nodetool.
-
-   - UN (or up/normal): The node is running fine.
-   - DN: The node is down. In some cases, this can mean data loss is occurring.
 
 1. Inspect the debug log to confirm whether the node has fully started or terminated unexpectedly:
 
