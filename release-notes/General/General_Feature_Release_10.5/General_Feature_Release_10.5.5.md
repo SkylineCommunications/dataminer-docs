@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.5
 
 ## Highlights
 
-- [Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)
+- [Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)
 
 ## New features
 
@@ -37,7 +37,7 @@ Up to now, when you stopped and restarted an SNMP manager, all open alarms would
 > [!NOTE]
 > This new *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
 
-#### Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]
+#### Migration from SLNet-managed NATS solution to BrokerGateway [ID 42019] [ID 42020] [ID 42573]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
@@ -49,6 +49,8 @@ Before you start the migration, the entire cluster must have been running smooth
 
 You can then run the migration by opening a remote desktop connection to all DMAs at the same time, opening a command prompt as administrator, and running the executable *C:\Skyline DataMiner\Tools\NATSMigration.exe*. This must happen on each DMA in the cluster within a 10-minute timeframe. For more detailed information, refer to [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
+Note that when you add a DataMiner Agent to a DataMiner System, it will have to use the same NATS solution as the DataMiner System. This means that if the DMS has been migrated to BrokerGateway, the DMA you add also needs to be migrated to BrokerGateway, but if the DMS still uses the SLNet-managed NATS solution, the DMA you add also has to use this solution.
+
 ## Changes
 
 ### Enhancements
@@ -57,7 +59,7 @@ You can then run the migration by opening a remote desktop connection to all DMA
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.9/10.5.0-->
 
-In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)), SLLogCollector will now collect files related BrokerGateway.
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), SLLogCollector will now collect files related BrokerGateway.
 
 #### DataMiner recycle bin enhancements [ID 40565]
 
@@ -115,13 +117,19 @@ For example, if a view is renamed or moved in the Surveyor, a zip file will be c
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
 
-In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:SLNetClientTest_disabling_automatic_nats_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:SLNetClientTest_disabling_automatic_nats_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+
+#### Factory reset tool: New ResetBrokerGatewayNATS action [ID 40759]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
+
+The *SLReset* factory reset tool will now also reset the DataMiner Agent to use the SLNet-managed NATS solution in case it had been migrated to BrokerGateway (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)).
 
 #### Notices generated in case local NATS server is not responding [ID 41289]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.5.0/10.5.1 -->
 
-In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42573)), SLNet will now generate notices in case the local NATS server is not responding. The connectivity will be checked at a random interval between 3 and 10 minutes.
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), SLNet will now generate notices in case the local NATS server is not responding. The connectivity will be checked at a random interval between 3 and 10 minutes.
 
 #### BPA test 'Check Deprecated MySQL DLL' renamed to 'Check Deprecated DLL Usage' [ID 42057]
 
