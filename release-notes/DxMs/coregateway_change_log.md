@@ -4,6 +4,10 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
+#### 1 April 2025 - Enhancement - Dependencies updated [ID 42655]
+
+Several dependencies have been updated.
+
 #### 30 October 2024 - Enhancement - CoreGateway 2.14.11 - Dependencies updated [ID 41282]
 
 Several dependencies have been updated.

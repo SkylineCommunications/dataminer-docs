@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 1 April 2025 - Enhancement - Dependencies updated [ID 42658]
+
+Several dependencies have been updated.
+
 #### 30 October 2024 - Enhancement - SupportAssistant 1.7.1 - Include SLAutomation_BAK.txt in file offloads [ID 41281]
 
 From now on, the SLAutomation_BAK.txt file is also included in the file offloads.
