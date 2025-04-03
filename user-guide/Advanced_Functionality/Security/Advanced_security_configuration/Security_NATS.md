@@ -7,7 +7,7 @@ keywords: NATS security, NATS TLS
 
 By default, NATS does **not** employ TLS encryption, leaving communication susceptible to eavesdropping. Consequently, we **strongly recommend enabling TLS encryption** for enhanced security within your NATS cluster.
 
-Starting from DataMiner 10.5.0/10.5.2, it is possible to [**migrate to BrokerGateway**](xref:BrokerGateway_Migration) (available as a [soft-launch feature](xref:SoftLaunchOptions)), which will **configure TLS automatically**. If BrokerGateway is not in use, you can manually configure TLS as detailed below.
+Starting from DataMiner 10.5.0 [CU2]/10.5.5, it is possible to [**migrate to BrokerGateway**](xref:BrokerGateway_Migration), which will **configure TLS automatically**. Prior to this, starting from DataMiner 10.5.0/10.5.2, this is available as a [soft-launch feature](xref:SoftLaunchOptions). If BrokerGateway is not in use, you can manually configure TLS as detailed below.
 
 ## Manual TLS configuration
 
