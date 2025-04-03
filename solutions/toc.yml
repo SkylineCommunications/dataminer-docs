@@ -207,6 +207,21 @@ items:
         topicUid: Ping_Monitoring_managing_groups_destinations
       - name: Getting started tutorial
         topicUid: Tutorial_Apps_Ping_Monitoring_App
+    - name: Smart Trap Processor
+      topicUid: Smart_Trap_Processor_Overview
+      items:
+      - name: Installing the Smart Trap Processor
+        topicUid: Installing_Smart_Trap_Processor
+      - name: Using the Smart Trap Processor
+        items:
+        - name: The Smart Trap Processor user interface
+          topicUid: The_SmartTrapProcessor_user_interface
+        - name: Configuring processing rules
+          topicUid: Processor_configuration
+        - name: Monitoring processed traps
+          topicUid: Monitoring_Processed_Traps
+      - name: Getting started tutorial
+        topicUid: Smart_Trap_Processor_Tutorial
   - name: Product Solutions
     items:
     - name: EVS Cerebrum application
@@ -248,21 +263,6 @@ items:
         topicUid: Performance_Analyzer_LCA
       - name: Getting started tutorial
         topicUid: Performance_Analyzer_Getting_Started_Tutorial
-    - name: Smart Trap Processor
-      topicUid: Smart_Trap_Processor_Overview
-      items:
-      - name: Installing the Smart Trap Processor
-        topicUid: Installing_Smart_Trap_Processor
-      - name: Using the Smart Trap Processor
-        items:
-        - name: The Smart Trap Processor user interface
-          topicUid: The_SmartTrapProcessor_user_interface
-        - name: Configuring processing rules
-          topicUid: Processor_configuration
-        - name: Monitoring processed traps
-          topicUid: Monitoring_Processed_Traps
-      - name: Getting started tutorial
-        topicUid: Smart_Trap_Processor_Tutorial
     - name: DOM Viewer
       topicUid: domviewer_about
       items:

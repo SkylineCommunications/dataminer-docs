@@ -41,7 +41,7 @@ If you want to create chat integration Automation scripts, you will need to make
 - [Admin consent must be granted](xref:Granting_admin_consent) in the [Admin app](https://admin.dataminer.services). You can revoke this consent at any time.
 
 > [!NOTE]
-> You may need to regrant admin consent to enable new released features. This will be indicated in [the dataminer.services change log](xref:DCP_change_log).
+> You may need to regrant admin consent to enable new released features. This will be indicated in [the dataminer.services change log](xref:DCP_change_log_2025).
 
 ## Using chat integration
 
@@ -76,4 +76,4 @@ By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Te
 You can revoke this access at any time. See [Granting admin consent for Teams Chat Integration](xref:Granting_admin_consent).
 
 > [!NOTE]
-> You may need to regrant admin consent to enable new released features. This will be indicated in [the dataminer.services change log](xref:DCP_change_log).
+> You may need to regrant admin consent to enable new released features. This will be indicated in [the dataminer.services change log](xref:DCP_change_log_2025).

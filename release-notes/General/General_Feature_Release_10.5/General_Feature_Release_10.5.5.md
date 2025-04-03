@@ -28,18 +28,93 @@ uid: General_Feature_Release_10.5.5
 
 ## New features
 
-#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP Inform messages [ID 41884]
+#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option. If you select this option, DataMiner will track which Inform messages have been sent, and will not resend those that have already been acknowledged.
+Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option. If you select this option, DataMiner will track which inform messages have been sent and will not resend those that have already been acknowledged.
 
 > [!NOTE]
-> This new *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
+> This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
 
 ## Changes
 
 ### Enhancements
+
+#### DataMiner recycle bin enhancements [ID 40565]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+The *C:\\Skyline DataMiner\\Recycle Bin\\* folder contains backup copies of modified configuration files and folders, stored as zip files. Each zip file includes the modified file or folder along with a *Cause.txt* file, which details the reason for the change and its timestamp. These backup copies help you restore previous configurations if needed.
+
+Up to now, a separate zip file would be created for each configuration change that had been implemented in the system.
+
+From now on, the contents of the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder will be zipped and moved to the *C:\\Skyline DataMiner\\Recycle Bin\\* folder every 11 minutes. This process will first occur 3 minutes after DataMiner startup.
+
+When a configuration change occurs, two scenarios are possible:
+
+- If the file or folder has not been modified after the most recent move to the *Recycle Bin* folder (which happens every 11 minutes), a new entry is created in the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder with the name of the changed file or folder.
+
+- If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
+
+##### RecycleBinSize setting in MaintenanceSettings.xml
+
+In the *MaintenanceSettings.xml* file, you can specify the maximum size (in MB) of the DataMiner recycle bin in the *RecycleBinSize* tag.
+
+From now on, the system will check every 7 minutes whether storage limits have been exceeded. If the system detects a breach, it will perform a cleanup on the recycle bin to restore the storage within acceptable limits:
+
+- If the number of files exceeds the limit, the system will clean up the recycle bin until it holds 80% of the lowest value between the maximum allowed number of files (default: 1000) and the current number of files.
+
+- If the folder size exceeds the limit, the system will clean up until the folder size is no longer over the configured size limit.
+
+This cleanup will occur for the first time 2 minutes after DataMiner startup. Up to now, the recycle bin was cleaned to the maximum size and number of files every hour.
+
+> [!NOTE]
+>
+> - Whatever the maximum size specified in the *RecycleBinSize* tag, the maximum number of files in the recycle bin is limited to 5000.
+> - The default recycle bin size is 100 MB.
+> - From now on, if the recycle bin size is set to 0 MB or an invalid size, it will revert to the default value of 100 MB.
+
+##### Restoring a previous configuration
+
+If an incorrect configuration change is implemented in the system, in some cases, it is possible to use the recycle bin to restore the original configuration.
+
+For example, if a view is renamed or moved in the Surveyor, a zip file will be created containing the *Views.xml* file and a cause file, which details why the change occurred. It is then possible to restore the *Views.xml* file as follows:
+
+1. Copy the file from the *Recycle Bin* folder back to its original location.
+
+   > [!NOTE]
+   > From now on, the files in the *Recycle Bin* folder are only updated every 11 minutes. This means that when you restore the files, they may not contain recent changes.
+
+1. Restart the DMA.
+
+1. Force a synchronization of the file in the DMS.
+
+> [!CAUTION]
+> Always be extremely careful when using this functionality, as it can have far-reaching consequences on your DataMiner System.
+
+#### BPA test 'Check Deprecated MySQL DLL' renamed to 'Check Deprecated DLL Usage' [ID 42057]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+Up to now, the BAP test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
+
+Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending on the DataMiner version, it will checks for the following DLL files, in the specified folders:
+
+| Deprecated DLL | Deprecated since DataMiner version | Minimum safe DLL version | Folder |
+|----------------|------------------------------------|--------------------------|--------|
+| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | *C:\Skyline DataMiner\ProtocolScripts* |
+| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | *C:\Skyline DataMiner\ProtocolScripts* or *C:\Skyline DataMiner\Files* |
+
+Any version lower than the specified minimum version will be considered outdated, as older versions are known to pose security risks.
+
+#### Service & Resource Management: UpdateReservationInstanceEventHasRun method will now first clone the reservation object before updating it [ID 42124]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+Up to now, the `UpdateReservationInstanceEventHasRun` method would directly update the cached reservation object and then save it.
+
+From now on, it will clone the reservation object in the cache, make the change, and then update the cached object.
 
 #### Security enhancements [ID 42307]
 
@@ -55,17 +130,36 @@ When, while a DOM instance was created or updated, a `FieldValue` was added for 
 
 From now on, the trace data will indicate that a `DomInstanceError` was thrown with error reason `FieldValueUsedInDomInstanceLinksToNonExistingFieldDescriptor`.
 
-#### Reduced memory usage when updating a large number of parameter in bulk [ID 42385]
+#### Reduced memory usage when updating a large number of parameters in bulk [ID 42385]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of row are updated due to e.g. aggregation or merge actions.
+When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to e.g. aggregation or merge actions.
+
+#### STaaS: An alarm will now be generated when a data type is being throttled [ID 42387]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+If your system is pushing too much load for a specific data type, that data type will be throttled. This could for example happen when you have an element that is continuously saving parameter updates.
+
+From now on, when this happens, an alarm will be generated with information about the data type or types that are being throttled.
 
 #### GQI DxM will now shut down faster [ID 42428]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
+
+#### SLAnalytics - Relational anomaly detection: Input validation when adding a new parameter group [ID 42429]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+When you add a new parameter group, from now on, an error message will appear when that parameter group contains
+
+- an invalid group name,
+- an invalid number of parameters,
+- an invalid anomaly threshold, or
+- an invalid minimum anomaly duration value.
 
 #### Enhanced performance when restarting HTTP elements in a timeout state [ID 42443]
 
@@ -107,6 +201,26 @@ GQI will now look for missing dependencies in the *C:\\Skyline DataMiner\\Script
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 GQI recording, a debugging feature that allowed you to save GQI communication and replay it in a lab environment, has now been removed from the GQI DxM.
+
+#### SLAnalytics - Relational anomaly detection: New API messages [ID 42480]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+The following messages have been added to the Relational Anomaly Detection API. These messages can be used to create, retrieve and remove RAD parameter groups:
+
+| Message | Function |
+|---------|----------|
+| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
+| GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data. |
+| GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group. |
+| GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured. |
+| RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
+| RetrainRADModelMessage          | Retrains the RAD model over a specified time range. |
+
+> [!NOTE]
+>
+> - Names of RAD parameter groups will be processed case-insensitive.
+> - The following messages have been deprecated: *AddMADParameterGroupMessage*, *GetMADParameterGroupInfoMessage*, *RemoveMADParameterGroupMessage*, and *RetrainMADModelMessage*.
 
 #### GQI DxM: Record limit of Sort operator has been increased to 100,000 records [ID 42492]
 
@@ -166,6 +280,19 @@ Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web pa
 
 This new log viewer page has improved compatibility with Failover setups and better error handling for HTTPS certificates.
 
+#### Swarming: New 'Block Swarming' option to indicate that an element is not allowed to swarm [ID 42535]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+When you create or update an element in DataMiner Cube, you will now be able to indicate that the element is not allowed to swarm to another host.
+
+To do so, go to the *Advanced* section, and enable to *Block Swarming* option. By default, this option will be set to false.
+
+If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
+
+> [!NOTE]
+> In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System.
+
 #### DataMiner IDP license notice will no longer appear [ID 42574]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
@@ -176,7 +303,7 @@ Since DataMiner version 10.1.0/1.0.0.8, the following notice would appear when a
 DataMiner IDP is licensed, but no Elasticsearch database is active on the system. Therefore, scheduled workflows are not available.
 ```
 
-As DataMiner IDP no longer requires nor a separate license nor an Indexing Engine, from now on, this notice will no longer appear.
+As DataMiner IDP no longer requires neither a separate license nor an Indexing Engine, from now on, this notice will no longer appear.
 
 #### SLAnalytics: An anomaly alarm event will now be generated when a change point with a type that is not monitored is changed to a change point with a type that is monitored [ID 42596]
 
@@ -230,6 +357,16 @@ In some cases, the `ParameterChangeEvent` or `ParameterTableUpdateEventMessage` 
 
 When a logger table was queried, in some cases, the query would incorrectly not yield any results due to a filter conversion issue.
 
+#### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+Up to now, in some cases, behavioral anomaly detection would not be able to start up correctly due to the maximum cache size having been reached when the internal caches were being fetched after SLAnalytics had been started.
+
+From now on, if the maximum cache size is reached, old model information might get discarded to allow behavioral anomaly detection to start up correctly. If this happens, the following error will be logged:
+
+`Max cache size reached during prefetch of the cache, potential data loss`
+
 #### Problem when deleting an element or service property [ID 42434]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
@@ -257,6 +394,13 @@ When the GQI DxM was being used, ad hoc data sources and custom operators would 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 In some cases, an error could be thrown when the *ClusterEndpoints.json* file was created in the *C:\\Skyline DataMiner\\Configurations\\* folder.
+
+#### SLAnalytics - Relational anomaly detection: GetMADParameterGroupInfoMessage would incorrectly return an empty display instance for parameters with non-advanced naming [ID 42508]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+<!-- Not added to MR 10.6.0 -->
+
+For parameters with non-advanced naming, the `GetMADParameterGroupInfoMessage` would incorrectly return an empty display instance.
 
 #### DVE settings could get out of sync with the element data when DataMiner or an element was restarted [ID 42515]
 

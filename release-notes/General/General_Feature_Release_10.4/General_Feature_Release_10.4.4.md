@@ -196,7 +196,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.5.6
 - DataMiner SupportAssistant: version 1.6.6
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### Security enhancements [ID 38756] [ID 38650] [ID 38951]
 

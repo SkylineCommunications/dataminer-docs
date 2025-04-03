@@ -411,7 +411,7 @@ In addition, the DataMiner installer will now also add a firewall rule allowing 
 
 > [!NOTE]
 >
-> - For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+> - For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 > - The above-mentioned DxMs all use .NET 6.
 
 #### DataMiner Object Models: Caching of DOM configuration data [ID 36412]

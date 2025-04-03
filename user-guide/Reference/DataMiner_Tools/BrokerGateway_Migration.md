@@ -4,9 +4,9 @@ uid: BrokerGateway_Migration
 
 # Migrating to BrokerGateway
 
-Starting from DataMiner 10.5.0/10.5.2, migrating from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) is possible as a [soft-launch feature](xref:SoftLaunchOptions), if the [BrokerGateway](xref:Overview_of_Soft_Launch_Options#brokergateway) soft-launch option is enabled.
+From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the "NATSMigration" tool. Prior to this, starting from DataMiner 10.5.0/10.5.2, this feature is available in [soft launch](xref:SoftLaunchOptions).
 
-From DataMiner 10.6.0 onwards, this migration will be done automatically during a DataMiner upgrade.
+From DataMiner 10.6.0 onwards, this migration will happen automatically during a DataMiner upgrade.
 
 ## Prerequisites
 
@@ -15,8 +15,6 @@ Before you start the migration, the entire cluster must have been running smooth
 If the BPA succeeds, the system is all set to migrate.
 
 ## Running the migration
-
-Currently, this migration is a manual action, which should be done as follows:
 
 1. Make sure the [prerequisites](#prerequisites) are met.
 
@@ -29,7 +27,7 @@ Currently, this migration is a manual action, which should be done as follows:
 1. On each machine, enter the `install` command and confirm.
 
    > [!IMPORTANT]
-   > This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **all DataMiner Agents, including Failover DMAs**. The migration needs to write files and restart DataMiner, because a soft-launch flag is adjusted that changes SLNet behavior at startup. As a single instance cannot remotely shut down and restart a DataMiner Agent, this action must be done on each separate Agent in the cluster.
+   > This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **all DataMiner Agents, including Failover DMAs**. The migration needs to write files and restart DataMiner, because a flag is adjusted that changes SLNet behavior at startup. As a single instance cannot remotely shut down and restart a DataMiner Agent, this action must be done on each separate Agent in the cluster.
 
    Successful installation output might look like this:
 
@@ -43,7 +41,7 @@ Currently, this migration is a manual action, which should be done as follows:
    ...
 
    (un)install BrokerGateway managed NATS server? (install/uninstall):install
-   LAURENSVG.skyline.local - BrokerGateway SoftLaunch flag is set to True.
+   LAURENSVG.skyline.local - BrokerGateway maintenance flag is set to True.
    LAURENSVG.skyline.local - Setting the MessageBrokerConfig.json...
    SLKill called for "nats" with force=False
    *** Stop services ***
@@ -87,19 +85,23 @@ Currently, this migration is a manual action, which should be done as follows:
    (c) Skyline Communications                     www.skyline.be
    ```
 
+   > [!NOTE]
+   > If you run this executable prior to DataMiner 10.5.0 [CU2]/10.5.5 as a soft-launch feature, the output will be slightly different, indicating the "BrokerGateway SoftLaunch flag" instead of the "BrokerGateway maintenance flag".
+
 ## Actions during the migration
 
 The following actions will be executed during the migration, in the indicated order:
 
 1. DataMiner is stopped.
 
-1. The *BrokerGateway* soft-launch flag in *C:\Skyline DataMiner\SoftLaunchOptions.xml* is set to true.
+1. The *BrokerGateway* flag in *C:\Skyline DataMiner\MaintenanceSettings.xml* is set to true, or, if you are using a DataMiner version prior to 10.5.5/10.5.0 [CU2], a *BrokerGateway* soft-launch flag is set instead.
 
    ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <SLNet>
-       <BrokerGateway>true</BrokerGateway>
-   </SLNet>
+   <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
+      <SLNet>
+         <BrokerGateway>true</BrokerGateway>
+      </SLNet>
+   </MaintenanceSettings>
    ```
 
 1. The NAS and NATS services are stopped and their startup type is set to "Manual".
@@ -124,10 +126,10 @@ The following actions will be executed during the migration, in the indicated or
    ```
 
 > [!NOTE]
-> The NATSMigration tool has a **hard-coded 10-minute timeout** during which the *ResetCluster* operation has to be finished. This is the same time frame you have to start the migration (i.e. enter the "install" command in the tool) on all nodes in the cluster.
+> The NATSMigration tool has a **hard-coded 10-minute timeout** during which the *ResetCluster* operation has to be finished. This is the same time frame you have to start the migration (i.e. enter the "install" command in the tool) on all nodes in the cluster. If for some reason the migration cannot be completed within 10 minutes, or if something goes wrong during the migration, all Agents will revert back to using the SLNet-managed NATS solution.<!-- RN 41115 -->
 
 > [!IMPORTANT]
-> The NATS configuration (*nats-server.config*) of the NATS instance before the migration is not transferrable to the NATS instance after the migration, to it should **never be copied over**.
+> The NATS configuration (*nats-server.config*) of the NATS instance before the migration is not transferrable to the NATS instance after the migration, so it should **never be copied over**.
 
 ## Migrating back to the old system
 
@@ -143,16 +145,20 @@ This is not possible. Both NATS installations use the same network ports, so the
 
 ### Why should I migrate to BrokerGateway? What are the advantages of this?
 
-BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. A newer version of NATS will also be used that has better performance and is easier to upgrade.
+BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
 
 ## Troubleshooting
 
 ### ERROR: {machineName} was not able to remove itself from its current cluster in order to join the new cluster
 
-When calling *ResetCluster*, BrokerGateway will first try to remove itself from any cluster it is part of, in order to set up a new cluster with all the endpoints specified in *ClusterEndpoints.json*.
+When calling *ResetCluster*, BrokerGateway will first try to remove itself from any cluster it is part of, in order to set up a new cluster with all the endpoints specified in *C:\Skyline DataMiner\Configurations\ClusterEndpoints.json*.
 
 The endpoints BrokerGateway is currently clustered with are listed in the ClusterInfo in *C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json*. If one of those IPs cannot be reached, the error message above is generated.
 
 You will be asked if the node may be forcibly removed. If you agree to this, the current machine can free itself from the cluster to cluster with the new setup instead. However, because it forcibly removes itself, it no longer informs any of the unreachable endpoints of its removal. These may still attempt to contact the current machine, which will no longer be reachable for them. If you choose to not allow the forcible removal, this will cancel the migration process and revert back to the previous configuration.<!-- RN 40991 -->
 
 If you do want to migrate to BrokerGateway but you do not want this forced removal, make sure all endpoints specified in *appsettings.runtime.json* can be reached by the current machine.
+
+### NATSRepair.exe
+
+If you encounter issues with your NATS cluster and you have migrated to BrokerGateway, you can run the *NATSRepair.exe* tool from the *C:\Skyline DataMiner\Tools\\* folder. This will perform a repair on the cluster.<!-- RN 42328 -->
