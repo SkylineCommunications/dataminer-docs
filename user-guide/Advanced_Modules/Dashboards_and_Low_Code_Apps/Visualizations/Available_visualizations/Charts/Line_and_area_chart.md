@@ -114,7 +114,7 @@ To configure the component:
 
    - *Styling and Information* > *Expand legend initially*: Select this option to immediately show the trend legend in the component. Otherwise, the legend section is initially collapsed, and you can display it using the arrow icon next to the graph.
 
-   - *Styling and Information* > *Hide non-trended parameters*: Determines whether parameters are shown in the legend of the graph if they have no trend data available. If the option is selected, these parameters are hidden. This option is enabled by default. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!--RN 42532-->, this option is disabled by default. Prior to DataMiner 10.3.9/10.4.0<!-- RN 36869 -->, this option is enabled by default. Prior to DataMiner 10.3.0/10.2.12, this option is named *Hide parameters without trend data in the legend*.
+   - *Styling and Information* > *Hide non-trended parameters*: Determines whether parameters are shown in the legend of the graph if they have no trend data available. If the option is selected, these parameters are hidden. This option is enabled by default. However, note that it is disabled by default from DataMiner 10.3.9/10.4.0 up to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4.<!--RN 36869 + 42532--> Prior to DataMiner 10.3.0/10.2.12, this option is named *Hide parameters without trend data in the legend*.
 
      > [!NOTE]
      > Prior to DataMiner 10.3.9/10.4.0, when a line chart component used element table column parameters as data and indices as filter, it would cross-match indices across the unique elements associated with the table column parameters. This behavior is prevented by disabling the *Hide non-trended parameters* option, enhancing the performance of these visualizations.
