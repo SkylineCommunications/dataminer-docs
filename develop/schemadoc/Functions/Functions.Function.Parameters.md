@@ -14,4 +14,4 @@ Contains a Parameter subtag for each parameter of the function. These are the pa
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Parameter](xref:Functions.Function.Parameters.Parameter)|[0, *]||
+|&nbsp;&nbsp;[Parameter](xref:Functions.Function.Parameters.Parameter)|[0, *]|A parameter that will be exported to the function.|

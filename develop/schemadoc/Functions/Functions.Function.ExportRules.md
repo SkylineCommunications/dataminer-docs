@@ -4,7 +4,7 @@ uid: Functions.Function.ExportRules
 
 # ExportRules element
 
-Specifies the export rules. This tag functions similarly to the ExportRules tag for a DVE element.
+Specifies the export rules. This tag functions similarly to the [ExportRules](xref:Protocol.ExportRules) tag for a DVE element.
 
 ## Parent
 

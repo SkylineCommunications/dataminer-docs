@@ -4,7 +4,7 @@ uid: Functions.Function.Parameters.Parameter
 
 # Parameter element
 
-
+A parameter that will be exported to the function.
 
 ## Parent
 

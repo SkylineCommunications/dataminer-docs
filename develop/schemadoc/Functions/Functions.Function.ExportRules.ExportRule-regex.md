@@ -4,7 +4,7 @@ uid: Functions.Function.ExportRules.ExportRule-regex
 
 # regex attribute
 
-Allows you to specify regular expression to find particular tag values.
+Allows you to specify a regular expression to find particular tag values.
 
 ## Content Type
 

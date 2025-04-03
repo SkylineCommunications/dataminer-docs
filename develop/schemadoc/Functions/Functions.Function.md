@@ -26,6 +26,6 @@ Defines a function for the protocol.
 |***Sequence***|||
 |&nbsp;&nbsp;[Parameters](xref:Functions.Function.Parameters)|[0, 1]|Contains a Parameter subtag for each parameter of the function. These are the parameters that will be exported to the function from the main protocol.|
 |&nbsp;&nbsp;[EntryPoints](xref:Functions.Function.EntryPoints)|[0, 1]|Specifies the entry points.|
-|&nbsp;&nbsp;[ExportRules](xref:Functions.Function.ExportRules)|[0, 1]|Specifies the export rules. This tag functions similarly to the ExportRules tag for a DVE element.|
+|&nbsp;&nbsp;[ExportRules](xref:Functions.Function.ExportRules)|[0, 1]|Specifies the export rules. This tag functions similarly to the [ExportRules](xref:Protocol.ExportRules) tag for a DVE element.|
 |&nbsp;&nbsp;[Interfaces](xref:Functions.Function.Interfaces)|[0, 1]|Specifies the interfaces available on the function.|
 |&nbsp;&nbsp;[Graphical](xref:Functions.Function.Graphical)|[0, 1]|Contains a CDATA tag with the configuration of the function's icon. Both XAML and SVG format are supported.|
