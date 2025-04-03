@@ -14,7 +14,7 @@ The *Recycle Bin* folder contains backup copies of modified configuration files 
 
   - If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in *C:\Skyline DataMiner\System Cache\Recyclable* is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
 
-- Prior to DataMiner 10.5.5/10.6.0, a separate zip file is created **for each configuration change** that has been implemented in the system.
+- Prior to DataMiner 10.5.5/10.6.0, a separate zip file is created **for each configuration change** that is implemented in the system.
 
 The total number of stored zip files is limited by the [*RecycleBinSize* setting](xref:MaintenanceSettings_xml#recyclebinsize) in *MaintenanceSettings.xml*. From DataMiner 10.5.5/10.6.0 onwards<!--RN 40565-->, if no value is provided, the default limit is 100 MB.
 
