@@ -31,7 +31,7 @@ To add a new parameter group, select *Add Group* in the header bar at the top le
 Under *What to add?*, you have two options:
 
 - [*Add single group*](#adding-a-single-group): allows you to add a single group of parameters.
-- [*Add group for each element with given connector*](#adding-groups-for-each-element-with-a-given-connector): allows you to add a group for each element using a specified connector.
+- [*Add group for each element with given connector*](#adding-groups-for-each-element-with-a-given-connector): allows you to add a group for each element that uses a specified connector.
 
 ### Adding a single group
 
@@ -41,20 +41,20 @@ To add a single group, specify the name of the group and add at least two parame
 
 To add a parameter instance, first select the correct element from the dropdown under *Element*, then select the parameter and, in case of a table parameter, specify the display key of the parameter instance under *Display key filter*. Finally, press the *Add* button. Repeat the process to add additional parameters. You can specify multiple instances for the same parameter by using wildcards characters \* and ? under *Display key filter*. See also [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters).
 
-In addition to the name and parameter instances, you can also specify several other options. For more information, see [Options for Parameter Groups](xref:Relational_anomaly_detection#options-for-parameter-groups). When finished, press *Add Group*.
+In addition to the name and parameter instances, you can also specify several other options. For more information, see [Options for parameter groups](xref:Relational_anomaly_detection#options-for-parameter-groups). When finished, press *Add Group*.
 
 > [!NOTE]
 > Only parameters that meet the limitations and prerequisites mentioned [here](xref:Relational_anomaly_detection) are shown in the pop-up.
 
 ### Adding groups for each element with a given connector
 
-The *Add group for each element with given connector* option allows you to create similar groups for each element using a specified connector and connector version. After selecting the connector, connector version, and relevant parameters, the app will create a group with the specified parameters for each element in your DataMiner System that uses the given connector and version.
+The *Add group for each element with given connector* option allows you to create similar groups for each element that uses a specified connector and connector version. After selecting the connector, connector version, and relevant parameters, the app will create a group with the specified parameters for each element in your DataMiner System that uses the given connector and version.
 
 ![Pop-up to add a new parameter group for each element with a given connector](~/user-guide/images/RAD_Manager_AddParameterGroupPerProtocol.png)
 
 Next to *Group Name Prefix*, specify a prefix that will be used to generate the names of the resulting parameter groups. Each element will have a parameter group named `[PREFIX] ([ELEMENT_NAME])`. As before, these names will be used when listing configured groups in the main window and in suggestion events generated for detected anomalies.
 
-Under the *Group name prefix*, you can specify the connector and connector version. Once you have selected these, you must add at least two parameter instances to the group. As before, you can specify multiple instances for the same parameter by using wildcards characters \* and ? under *Display key filter*, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters). Press *Add* to add the parameter instance to the group. Note that if a particular instance only exists on certain elements, the corresponding instance will only be added to the parameter groups of those elements.
+Below, you can specify the connector and connector version. Once you have selected these, you must add at least two parameter instances to the group. As before, you can specify multiple instances for the same parameter by using wildcards characters \* and ? under *Display key filter*, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters). Press *Add* to add the parameter instance to the group. Note that if a particular instance only exists on certain elements, the corresponding instance will only be added to the parameter groups of those elements.
 
 In addition to the name and the parameter instances, you can also specify several other options. For more information on these options, see [Options for parameter groups](xref:Relational_anomaly_detection#options-for-parameter-groups).
 
@@ -74,4 +74,4 @@ In some cases, retraining RAD's internal model can be beneficial. This allows yo
 
 ![Pop-up to specify the training range for a given parameter group](~/user-guide/images/RAD_Manager_SpecifyTrainingRange.png)
 
-To retrain a model of a group, select the group in the table under *Your Relational Anomaly Groups* and click *Specify Training Range* in the header bar. A pop-up will open where you can specify one or more time ranges that will be used to retrain the selected parameter group. To add a time range, select the desired start and end time in the pickers near *From* and *to*, and then press *Add*. Repeat the process to add additional time ranges. Once you have added the desired time ranges, you can press *Retrain*. This will immediately retrain the parameter group, and you will see the resulting anomaly scores in the main window under *Inspect the anomaly score of your group*.
+To retrain the model of a group, select the group in the table under *Your Relational Anomaly Groups* and click *Specify Training Range* in the header bar. A pop-up will open where you can specify one or more time ranges that will be used to retrain the selected parameter group. To add a time range, select the desired start and end time in the pickers near *From* and *to*, and then press *Add*. Repeat the process to add additional time ranges. Once you have added the desired time ranges, you can press *Retrain*. This will immediately retrain the parameter group, and you will see the resulting anomaly scores in the main window under *Inspect the anomaly score of your group*.
