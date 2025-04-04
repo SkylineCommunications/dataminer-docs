@@ -34,7 +34,11 @@ uid: General_Feature_Release_10.5.6
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Cassandra Cluster: Enhanced performance when importing DELT packages [ID 42613]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+Because of a number of enhancements, overall performance has increased when importing DELT packages on systems with a Cassandra Cluster, especially when those packages contain a large amount of trend data.
 
 ### Fixes
 
