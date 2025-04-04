@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.5
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)
 
 ## New features
 
@@ -37,9 +37,66 @@ Up to now, when you stopped and restarted an SNMP manager, all open alarms would
 > [!NOTE]
 > This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
 
+#### Migration from SLNet-managed NATS solution to BrokerGateway [ID 42019] [ID 42020] [ID 42573]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+It is now possible to migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service). Previously, starting from DataMiner 10.5.0/10.5.2, this feature was available in [soft launch](xref:SoftLaunchOptions).
+
+BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+
+Before you start the migration, the entire cluster must have been running smoothly for some time. A BPA test is available that allows you to easily verify this ([Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites)).
+
+You can then run the migration by opening a remote desktop connection to all DMAs at the same time, opening a command prompt as administrator, and running the executable *C:\Skyline DataMiner\Tools\NATSMigration.exe*. This must happen on each DMA in the cluster within a 10-minute timeframe. For more detailed information, refer to [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+
+Note that when you add a DataMiner Agent to a DataMiner System, it will have to use the same NATS solution as the DataMiner System. This means that if the DMS has been migrated to BrokerGateway, the DMA you add also needs to be migrated to BrokerGateway, but if the DMS still uses the SLNet-managed NATS solution, the DMA you add also has to use this solution.
+
+#### GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+GQI extensions use the Automation engine to create DLL libraries that are then loaded by GQI to add ad hoc data sources, custom operators, etc.
+
+GQI will now look for missing dependencies in the *C:\\Skyline DataMiner\\Scripts\\Libraries* folder. This will allow GQI extension scripts to find the Automation script library at runtime.
+
+> [!IMPORTANT]
+> If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
+
+#### GQI DxM: New life cycle method allows ad hoc data sources to optimize sort operators [ID 42528]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+A new optional life cycle method has been introduced for ad hoc data sources running in the GQI DxM. It will allow to optimize or modify sort operators added to the query.
+
+You can use this life cycle by implementing the `Skyline.DataMiner.Analytics.GenericInterface.IGQIOptimizeableDataSource` interface, which has one method:
+
+```csharp
+IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
+```
+
+- `currentNode` is the query node that represents the current ad hoc data source.
+- `nextOperator` represents the next operator appended to the query.
+
+This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
+
+- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this life cycle method is not implemented).
+- Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
+- Modify/add operators.
+
+> [!NOTE]
+>
+> - This life cycle method will only be called when the `nextOperator` is a filter or a sort operator.
+> - This life cycle method can be called multiple times if there is a new `nextOperator`.
+
 ## Changes
 
 ### Enhancements
+
+#### BrokerGateway files collected by SLLogCollector [ID 40299]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.9/10.5.0-->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), SLLogCollector will now collect files related BrokerGateway.
 
 #### DataMiner recycle bin enhancements [ID 40565]
 
@@ -93,6 +150,24 @@ For example, if a view is renamed or moved in the Surveyor, a zip file will be c
 > [!CAUTION]
 > Always be extremely careful when using this functionality, as it can have far-reaching consequences on your DataMiner System.
 
+#### VerifyNatsIsRunning BPA test updated with BrokerGateway prerequisite [ID 40641]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:SLNetClientTest_disabling_automatic_nats_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+
+#### Factory reset tool: New ResetBrokerGatewayNATS action [ID 40759]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
+
+The *SLReset* factory reset tool will now also reset the DataMiner Agent to use the SLNet-managed NATS solution in case it had been migrated to BrokerGateway (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)).
+
+#### Notices generated in case local NATS server is not responding [ID 41289]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.5.0/10.5.1 -->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), SLNet will now generate notices in case the local NATS server is not responding. The connectivity will be checked at a random interval between 3 and 10 minutes.
+
 #### BPA test 'Check Deprecated MySQL DLL' renamed to 'Check Deprecated DLL Usage' [ID 42057]
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
@@ -121,6 +196,12 @@ From now on, it will clone the reservation object in the cache, make the change,
 <!-- 42307: MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 A number of security enhancements have been made.
+
+#### NATS repair tool [ID 42328]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+A repair tool, *NATSRepair.exe*, will now be included in the *C:\Skyline DataMiner\Tools\\* folder. You can use this to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
 
 #### DataMiner Object Model: An error will now be returned when a FieldValue was added for a non-existing FieldDescriptor [ID 42358]
 
@@ -185,17 +266,6 @@ The output will be stored in the following file:
 
 *\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
 
-#### GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]
-
-<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
-
-GQI extensions use the Automation engine to create DLL libraries that are then loaded by GQI to add ad hoc data sources, custom operators, etc.
-
-GQI will now look for missing dependencies in the *C:\\Skyline DataMiner\\Scripts\\Libraries* folder. This will allow GQI extension scripts to find the Automation script library at runtime.
-
-> [!IMPORTANT]
-> If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
-
 #### GQI recording removed from GQI DxM [ID 42470]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
@@ -245,32 +315,6 @@ Also, a status label will now indicate whether debug logging is enabled or disab
 >
 > - The above-mentioned status label will show "Enabled" when a level-6 override is present. If all log files have level 6 by default, the status label will show "Disabled" until you add an override.
 > - Enabling debug logging may significantly increase the amount of logging that is written to disk.
-
-#### GQI DxM: New life cycle method allows ad hoc data sources to optimize sort operators [ID 42528]
-
-<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
-
-A new optional life cycle method has been introduced for ad hoc data sources running in the GQI DxM. It will allow to optimize or modify sort operators added to the query.
-
-You can use this life cycle by implementing the `Skyline.DataMiner.Analytics.GenericInterface.IGQIOptimizeableDataSource` interface, which has one method:
-
-```csharp
-IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
-```
-
-- `currentNode` is the query node that represents the current ad hoc data source.
-- `nextOperator` represents the next operator appended to the query.
-
-This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
-
-- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this life cycle method is not implemented).
-- Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
-- Modify/add operators.
-
-> [!NOTE]
->
-> - This life cycle method will only be called when the `nextOperator` is a filter or a sort operator.
-> - This life cycle method can be called multiple times if there is a new `nextOperator`.
 
 #### New log viewer web page [ID 42533]
 
