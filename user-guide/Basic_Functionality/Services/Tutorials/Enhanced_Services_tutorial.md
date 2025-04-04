@@ -11,7 +11,7 @@ The content and screenshots for this tutorial have been created using DataMiner 
 Expected duration: 20 minutes.
 <!-- 
 > [!TIP]
-> See also: [Kata #XX: Enhancing your service monitoring](https://community.dataminer.services/courses/kata-xx/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png).
+> See also: [Kata #64: Enhancing your service monitoring](https://community.dataminer.services/courses/kata-64/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png).
  -->
 ## Prerequisites
 
