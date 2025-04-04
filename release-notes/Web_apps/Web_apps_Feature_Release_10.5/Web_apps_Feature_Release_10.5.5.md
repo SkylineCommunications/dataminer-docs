@@ -333,3 +333,9 @@ When a component used joined queries to fetch data, the data would incorrectly n
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 In some cases, it would not be possible to load the `https://{HOSTNAME}/api/v0/maps.asmx` page due to a serialization issue.
+
+#### Dashboards/Low-Code Apps - Query builder: Not possible to scroll up or down after selecting the 'Get object manager instances' data source [ID 42648]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 [CU0] -->
+
+Up to now, when you had selected the *Get object manager instances* data source while building a GQI query, in some cases, the scrollbar would incorrectly not appear when you hovered over the object manager instances in the list, making it impossible to scroll up or down in the list.

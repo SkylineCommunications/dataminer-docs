@@ -32,13 +32,13 @@ In the *C:\\Skyline DataMiner\\NotifyMail.html* file, i.e. the email report temp
 
 ### Fixes
 
-#### Dashboards app: Dashboard would incorrectly be updated before a newly added component had been loaded [ID 42593]
+#### Dashboards/Low-Code Apps: Dashboard or low-code app would incorrectly be updated before a newly added component had been loaded [ID 42593]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
-Up to now, when you had added a component to a dashboard, in some cases, the dashboard would be updated before the new component had been loaded.
+Up to now, when you had added a component to a dashboard or a low-code app, in some cases, the dashboard would be updated before the new component had been loaded.
 
-From now on, the dashboard will only be updated when the component has been loaded.
+From now on, the dashboard or the low-code app will only be updated when the component has been loaded.
 
 #### Dashboards/Low-Code Apps: Problem when a Dropdown component was linked to a query that received its data from another component [ID 42609]
 
