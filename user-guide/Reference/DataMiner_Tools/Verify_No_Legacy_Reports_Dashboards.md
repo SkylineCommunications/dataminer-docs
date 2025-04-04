@@ -15,7 +15,7 @@ From DataMiner 10.4.0 onwards, the [legacy Reporter](xref:reporter) and [legacy 
 
 If the *VerifyNoLegacyReportsDashboards* check fails, there are still legacy reports and dashboards on your system.
 
-- If you no longer need the legacy Reporter and Dashboards modules, remove any existing legacy reports and legacy dashboards by deleting the "C:\Skyline DataMiner\Webpages\Dashboards\db" folder as well as "C:\Skyline DataMiner\Webpages\Reports\Templates\Templates.xml".
+- If you no longer need the legacy Reporter and Dashboards modules, remove any existing legacy reports and legacy dashboards by deleting the *C:\Skyline DataMiner\Webpages\Dashboards\db\\* folder as well as *C:\Skyline DataMiner\Webpages\Reports\Templates\Templates.xml*.
 
   > [!NOTE]
   > Other DataMiner modules, such as Automation, Scheduler, and Visual Overview, may also make use of these.
