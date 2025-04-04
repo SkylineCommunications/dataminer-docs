@@ -4,9 +4,21 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 4 April 2025 - Enhancement - CloudGateway 2.17.4 - Dependencies updated [ID 42682]
+
+Several dependencies have been updated.
+
+#### 4 April 2025 - Enhancement - CloudGateway 2.17.4 - Improved token refresh [ID 42627]
+
+The tokens to authenticate towards dataminer.services no longer rely on NATS to refresh. This means the tokens will now continue to refresh even when NATS is unavailable.
+
+#### 4 April 2025 - Fix - CloudGateway 2.17.4 - TCP port leak [ID 42458]
+
+A TCP port leak could occur in the CloudGateway, especially when there was an issue with the connection to dataminer.services.
+
 #### 30 January 2025 - Fix - CloudGateway 2.17.2 - Reconnect banner continually showing when remote access is used [ID 42086]
 
-With the Remote Access and Live Sharing performance and stability improvements released on the 27th of January (rolled back on the 29th of January), if CloudGateway version 2.16.0 - 2.17.1 was used, the reconnect banner showed up all the time while remote access was used. This issue has been fixed. 
+With the Remote Access and Live Sharing performance and stability improvements released on the 27th of January (rolled back on the 29th of January), if CloudGateway version 2.16.0 - 2.17.1 was used, the reconnect banner showed up all the time while remote access was used. This issue has been fixed.
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Access tokens instantly refreshed when cloud session is manually renewed [ID 42081]
 
