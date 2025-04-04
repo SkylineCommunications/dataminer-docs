@@ -10,32 +10,6 @@ An important aspect of the OpenConfig initiative is the creation of a set of ven
 
 In addition to data models, OpenConfig also defines communication protocols such as [gNMI](#gnmi) and [gNOI](#gnoi).
 
-> [!TIP]
-> Useful links:
->
-> - The official OpenConfig website: [openconfig.net](https://www.openconfig.net/)
-> - The OpenConfig GitHub page: [github.com/openconfig](https://github.com/openconfig)
->
-> Related articles on DataMiner Dojo:
->
-> - Blog: [DataMiner now natively supports OpenConfig](https://community.dataminer.services/dataminer-now-natively-supports-openconfig)
-> - Blog: [Simplify Network Operations With Streaming Telemetry Data](https://community.dataminer.services/simplify-network-operations-with-telemetry-streaming-data)
-> - Blog: [Proactively monitoring and analyzing media flow in real-time](https://community.dataminer.services/proactively-monitoring-and-analyzing-media-flows-in-real-time/?hilite=%27media%27%2C%27flow%27)
-> - Blog: [Monitoring high-traffic networks the easy way](https://community.dataminer.services/monitoring-high-traffic-networks-the-easy-way/)
-> - Blog: [Multicast flow monitoring and path visualization for ALL-IP Broadcast Infrastructures](https://community.dataminer.services/multicast-flow-monitoring-and-path-visualization-for-all-ip-broadcast-infrastructures/?hilite=%27flow%27%2C%27monitoring%27)
-> - Use Case: [Media flow tracking & analytics](https://community.dataminer.services/use-case/media-flow-tracking/?hilite=%27flow%27%2C%27monitoring%27) (TPC Truck APP)
-> - Use Case Video: [Integrations - TPC: Overview OB UHD truck-app](https://community.dataminer.services/video/integrations-tpc-overview-ob-uhd-truck-app/)
-> - Use Case: [Flow Monitoring - DataMiner Dojo](https://community.dataminer.services/use-case/flow-monitoring/) (DataMiner Dashboards)
-> - Use Case: [SFlow Manager](https://community.dataminer.services/use-case/sflow-manager/) (Cisco / Arista / etc.)
-> - Use Case: [NetFlow](https://community.dataminer.services/use-case/netflow/)
-> - Use Case: [Network Topology](https://community.dataminer.services/use-case/network-topology/) (Multicast Flow Tracking)
-> - Use Case: [TAP Aggregation, Wireshark and EBU List Tool](https://community.dataminer.services/use-case/tap-aggregation-wireshark-and-ebu-list-tool/)
-> - Use Case: [Cisco Nexus](https://community.dataminer.services/use-case/cisco-nexus/) (Multicast Routing Tables)
-> - Use Case: [Arista Manager Connector](https://community.dataminer.services/use-case/arista-manager-connector/) (Routing Tables)
-> - Example use case: [OpenConfig](https://community.dataminer.services/use-case/openconfig/)
-> - Exhibition Video: [NAB 2019 - PTP management and media flow monitoring](https://community.dataminer.services/video/nab-2019-ptp-management-and-media-flow-monitoring/?hilite=%27flow%27%2C%27monitoring%27)
-> - Webinar 2019: [All-IP SMPTE-2110 infrastructure and media-over-IP monitoring](https://community.dataminer.services/webinars/all-ip-smpte-2110-infrastructure-and-media-over-ip-monitoring/?hilite=%27flow%27%2C%27monitoring%27)
-
 > [!NOTE]
 > To get started with OpenConfig, you should be aware that not all devices with telemetry actually support OpenConfig, or more specifically, gNMI. They may use different gRPC services, which will be defined by one or more .proto files. With this in mind, we recommend that you read the sections below before heading over to the [middleware page](xref:DSI_OpenConfig_Middleware) and implementing a client.
 
@@ -227,3 +201,30 @@ gNMI allows dial-in streaming telemetry. First, the client connects with the tar
 gNOI is another gRPC service defined by OpenConfig. "gNOI" stands for “gRPC Network Operator Interface”.
 
 You can find more information related to gNOI in the [gNOI repository](https://github.com/openconfig/gnoi).
+
+## Reference
+
+Useful links:
+
+- The official OpenConfig website: [openconfig.net](https://www.openconfig.net/)
+- The OpenConfig GitHub page: [github.com/openconfig](https://github.com/openconfig)
+
+Related articles on DataMiner Dojo:
+
+- Blog: [DataMiner now natively supports OpenConfig](https://community.dataminer.services/dataminer-now-natively-supports-openconfig)
+- Blog: [Simplify Network Operations With Streaming Telemetry Data](https://community.dataminer.services/simplify-network-operations-with-telemetry-streaming-data)
+- Blog: [Proactively monitoring and analyzing media flow in real-time](https://community.dataminer.services/proactively-monitoring-and-analyzing-media-flows-in-real-time/?hilite=%27media%27%2C%27flow%27)
+- Blog: [Monitoring high-traffic networks the easy way](https://community.dataminer.services/monitoring-high-traffic-networks-the-easy-way/)
+- Blog: [Multicast flow monitoring and path visualization for ALL-IP Broadcast Infrastructures](https://community.dataminer.services/multicast-flow-monitoring-and-path-visualization-for-all-ip-broadcast-infrastructures/?hilite=%27flow%27%2C%27monitoring%27)
+- Use Case: [Media flow tracking & analytics](https://community.dataminer.services/use-case/media-flow-tracking/?hilite=%27flow%27%2C%27monitoring%27) (TPC Truck app)
+- Use Case Video: [Integrations - TPC: Overview OB UHD truck-app](https://community.dataminer.services/video/integrations-tpc-overview-ob-uhd-truck-app/)
+- Use Case: [Flow Monitoring - DataMiner Dojo](https://community.dataminer.services/use-case/flow-monitoring/) (DataMiner Dashboards)
+- Use Case: [SFlow Manager](https://community.dataminer.services/use-case/sflow-manager/) (Cisco / Arista / etc.)
+- Use Case: [NetFlow](https://community.dataminer.services/use-case/netflow/)
+- Use Case: [Network Topology](https://community.dataminer.services/use-case/network-topology/) (Multicast Flow Tracking)
+- Use Case: [TAP Aggregation, Wireshark and EBU List Tool](https://community.dataminer.services/use-case/tap-aggregation-wireshark-and-ebu-list-tool/)
+- Use Case: [Cisco Nexus](https://community.dataminer.services/use-case/cisco-nexus/) (Multicast Routing Tables)
+- Use Case: [Arista Manager Connector](https://community.dataminer.services/use-case/arista-manager-connector/) (Routing Tables)
+- Example use case: [OpenConfig](https://community.dataminer.services/use-case/openconfig/)
+- Exhibition Video: [NAB 2019 - PTP management and media flow monitoring](https://community.dataminer.services/video/nab-2019-ptp-management-and-media-flow-monitoring/?hilite=%27flow%27%2C%27monitoring%27)
+- Webinar 2019: [All-IP SMPTE-2110 infrastructure and media-over-IP monitoring](https://community.dataminer.services/webinars/all-ip-smpte-2110-infrastructure-and-media-over-ip-monitoring/?hilite=%27flow%27%2C%27monitoring%27)
