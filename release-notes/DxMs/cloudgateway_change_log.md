@@ -14,7 +14,7 @@ The tokens to authenticate towards dataminer.services no longer rely on NATS to 
 
 #### 4 April 2025 - Fix - CloudGateway 2.17.4 - TCP port leak [ID 42458]
 
-A TCP port leak could occur in the CloudGateway i.e. when not being cloud connected.
+A TCP port leak could occur in the CloudGateway, especially when there was an issue with the connection to dataminer.services.
 
 #### 30 January 2025 - Fix - CloudGateway 2.17.2 - Reconnect banner continually showing when remote access is used [ID 42086]
 
