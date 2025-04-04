@@ -17,3 +17,11 @@ For more information on how to manage the start window of the Cube desktop app, 
 > - If you want to open DataMiner Cube for multiple DataMiner Systems without closing the start window, keep the Ctrl key pressed while you click the tiles.
 > - In most cases, you will be logged in automatically after you have clicked a tile. If you do not want this to happen, hold the `Shift` key during DataMiner Cube startup.
 > - If you have multiple monitors and want DataMiner Cube to open on a specific monitor, you can open the app using a command with the *screen* argument. For example: *DataMinerCube.exe screen=\\\\.\\DISPLAY2*
+
+## Opening DataMiner Cube from a session link
+
+From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42389-->, you can open DataMiner Cube directly using a session link.
+
+If another user shares a session link with you, paste it into the address box of a web browser. This will automatically launch DataMiner Cube and connect to the shared session.
+
+To copy your own session link, open the user menu in the [Cube header bar](xref:DataMiner_Cube_header_bar) and click the ![Copy](~/user-guide/images/Copy.png) icon to the right of the DataMiner System name. You can then share this link with other users so they can open the same Cube session.
