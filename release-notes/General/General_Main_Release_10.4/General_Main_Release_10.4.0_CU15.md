@@ -19,7 +19,7 @@ uid: General_Main_Release_10.4.0_CU15
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 
-Because of a number of enhancements, overall performance has increased when importing DELT packages on systems with a Cassandra Cluster, especially when those packages contain a large amount of trend data.
+Because of a number of enhancements, overall performance has increased when importing DELT packages on systems with a database of type *Cassandra Cluster*, especially when those packages contain a large amount of trend data.
 
 ### Fixes
 
