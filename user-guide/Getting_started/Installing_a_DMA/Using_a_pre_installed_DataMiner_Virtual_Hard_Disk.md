@@ -79,7 +79,7 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 >
 > - The configuration wizard takes care of the automatic license and data storage configuration; however, this requires a connection to the internet. If you need to install DataMiner **offline**, you will not be able to use this wizard. Instead, the license and data storage configuration will need to be done manually:
 >   - For the license, see [Permanent license](xref:Permanent_license).
->   - For the data storage configuration, please [contact tech support](xref:Contacting_tech_support).
+>   - For the data storage configuration, please refer to [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
 > - If you intend to restore a **backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip** the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](#restoring-a-backup-onto-the-virtual-hard-disk).
 > - DataMiner requires a **static IP** to be configured. Make sure to do this before continuing with the below steps. If you have to change the IP afterwards, you can do so by following the steps described in [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA).
 

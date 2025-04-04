@@ -13,6 +13,13 @@ uid: General_Main_Release_10.5.0_CU2
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.5.0 CU2](xref:Web_apps_Main_Release_10.5.0_CU2).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+### Highlights
+
+- [New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]](#snmp-forwarding-new-option-to-prevent-an-snmp-manager-from-resending-snmp-inform-messages-id-41884)
+- [GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]](#gqi-dxm-will-now-look-for-missing-dependencies-in-the-automation-script-libraries-folder-id-42468)
+- [GQI DxM: New life cycle method allows ad hoc data sources to optimize sort operators [ID 42528]](#gqi-dxm-new-life-cycle-method-allows-ad-hoc-data-sources-to-optimize-sort-operators-id-42528)
+- [Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)
+
 ### Enhancements
 
 #### BrokerGateway files collected by SLLogCollector [ID 40299]
@@ -39,14 +46,14 @@ The *SLReset* factory reset tool will now also reset the DataMiner Agent to use 
 
 In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), SLNet will now generate notices in case the local NATS server is not responding. The connectivity will be checked at a random interval between 3 and 10 minutes.
 
-#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP Inform messages [ID 41884]
+#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option. If you select this option, DataMiner will track which Inform messages have been sent, and will not resend those that have already been acknowledged.
+Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option. If you select this option, DataMiner will track which inform messages have been sent and will not resend those that have already been acknowledged.
 
 > [!NOTE]
-> This new *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
+> This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
 
 #### Security enhancements [ID 42307]
 

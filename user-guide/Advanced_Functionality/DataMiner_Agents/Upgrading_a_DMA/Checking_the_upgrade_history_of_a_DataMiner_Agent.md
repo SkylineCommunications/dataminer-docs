@@ -13,8 +13,8 @@ Go to the *C:\\Skyline DataMiner\\Upgrades\\* folder of the DataMiner Agent and 
 Example:
 
 ```txt
-2014-04-22 11:22:52;8.0.6.3-2304-20140407-release
-2014-05-09 11:05:10;8.0.7.4-2365-20140508-release
+2025-03-25 14:27:23;10.4.0.0-14772-20240821-release
+2025-03-27 11:16:35;10.5.4.0-15588-20250319-release
 ```
 
 In that same *C:\\Skyline DataMiner\\Upgrades\\* folder, you can also find a log file for every upgrade that was performed.
@@ -36,6 +36,6 @@ Example:
 ```txt
 Upgrade History
 ---------------
-2014-05-09 11:05:10 => 8.0.7.4-2365-20140508-release
-2014-04-22 11:22:52 => 8.0.6.3-2304-20140407-release
+2025-03-27 11:16:35 => 10.5.4.0-15588-20250319-release
+2025-03-25 14:27:23 => 10.4.0.0-14772-20240821-release
 ```
