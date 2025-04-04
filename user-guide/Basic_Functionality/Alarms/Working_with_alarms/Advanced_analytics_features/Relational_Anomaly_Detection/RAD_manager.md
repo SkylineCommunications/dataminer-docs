@@ -44,7 +44,7 @@ To add a parameter instance, first select the correct element from the dropdown 
 In addition to the name and parameter instances, you can also specify several other options. For more information, see [Options for parameter groups](xref:Relational_anomaly_detection#options-for-parameter-groups). When finished, press *Add Group*.
 
 > [!NOTE]
-> Only parameters that meet the limitations and prerequisites mentioned [here](xref:Relational_anomaly_detection) are shown in the pop-up.
+> Only parameters that meet the limitations and prerequisites mentioned [here](xref:Relational_anomaly_detection) are shown in the *Add Group* pop-up.
 
 ### Adding groups for each element with a given connector
 
@@ -54,7 +54,7 @@ The *Add group for each element with given connector* option allows you to creat
 
 Next to *Group Name Prefix*, specify a prefix that will be used to generate the names of the resulting parameter groups. Each element will have a parameter group named `[PREFIX] ([ELEMENT_NAME])`. As before, these names will be used when listing configured groups in the main window and in suggestion events generated for detected anomalies.
 
-Below, you can specify the connector and connector version. Once you have selected these, you must add at least two parameter instances to the group. As before, you can specify multiple instances for the same parameter by using wildcards characters \* and ? under *Display key filter*, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters). Press *Add* to add the parameter instance to the group. Note that if a particular instance only exists on certain elements, the corresponding instance will only be added to the parameter groups of those elements.
+Below, you can specify the connector and connector version. Once you have selected these, you must add at least two parameter instances to the group. To do this, select the parameter you want to add from the dropdown under *Parameter* and, in case of a table parameter, specify the display key of the parameter instance under *Display key filter*. Then, press *Add*. Repeat the process to add additional parameters. As before, you can specify multiple instances for the same parameter by using wildcards characters \* and ? under *Display key filter*, see [Searching with wildcard characters](xref:Searching_in_DataMiner_Cube#searching-with-wildcard-characters). Note that if a particular instance only exists on certain elements, the corresponding instance will only be added to the parameter groups of those elements.
 
 In addition to the name and the parameter instances, you can also specify several other options. For more information on these options, see [Options for parameter groups](xref:Relational_anomaly_detection#options-for-parameter-groups).
 

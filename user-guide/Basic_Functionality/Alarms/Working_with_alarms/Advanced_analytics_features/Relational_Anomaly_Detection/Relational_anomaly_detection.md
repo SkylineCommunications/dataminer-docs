@@ -34,7 +34,7 @@ For each parameter group, several configuration options are available. The table
 | Group name | `name` | The name of the parameter group. This name is used when generating a suggestion event or displaying all groups in the *RAD Manager*. |
 | Update model on new data? | `updateModel` | Indicates whether RAD should update its internal model of the relationships between the parameters in the group when new trend data is available. If this is not selected, the model will only be trained immediately after creation and when [manually specifying a training range](xref:RAD_manager#specifying-the-training-range). |
 | Anomaly threshold | `anomalyThreshold` in API, <br> `anomalyScore` in XML | The threshold used for suggestion event generation. Suggestion events are generated when RAD detects a region with an anomaly score higher than this threshold. A higher threshold results in fewer suggestion events, while a lower threshold results in more. Default: 3 |
-| Minimum anomaly duration | `minimumAnomalyDuration` | Supported from DataMiner 10.5.4/10.6.0 onwards. <!-- RN 42283 --> This option specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. This value must be 5 minutes or higher. If set to a value greater than 5 minutes, the deviating behavior must persist longer before triggering an anomaly event. You can for instance configure this to filter out noise events caused by a single, short, harmless outlier. Default: 5 minutes. |
+| Minimum anomaly duration | `minimumAnomalyDuration` | Supported from DataMiner 10.5.4/10.6.0 onwards. <!-- RN 42283 --> This option specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. This value must be 5 minutes or higher. If set to a value greater than 5 minutes, the deviating behavior must persist longer before triggering an anomaly event. You can configure this to filter out noise events due to a single, short, harmless outlier, for instance caused by a planned maintenance or a device restart. Default: 5 minutes. |
 
 ## Relational anomalies in the Alarm Console
 
@@ -46,7 +46,7 @@ Suggestion events for the same group of parameters are grouped into a single inc
 
 - RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
 
-- Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts to another parameter after a certain time, RAD will produce less accurate results.
+- Some parameter behavior will cause RAD to work less accurately. For example, if a parameter responds to another parameter with a delay, such as a door opening gradually lowering a room's temperature, RAD may generate less precise results.
 
 - Parameters on DVE children cannot be monitored directly by RAD. Instead, you should monitor the corresponding parameter instance on the DVE parent.
 
