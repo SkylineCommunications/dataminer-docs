@@ -165,6 +165,12 @@ A number of minor enhancements have been made to the *Maps* component, especiall
 
 A number of security enhancements have been made.
 
+#### Dashboards/Low-Code Apps: Search box in the 'Queries' section of a 'Data' pane will now only filter the query names [ID 42589]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When, while configuring a component, you opened the *Queries* section of the *Data* pane, and entered a search string in the search box, up to now, both the query names and the query columns would be filtered. From now on, only the query names will be filtered.
+
 ### Fixes
 
 #### Low-Code Apps: Problem when a 'Close a panel' event was linked to a component action involving a lazy loaded component [ID 42302]
@@ -286,14 +292,50 @@ When a picker in e.g. a *Time range* component was closed, up to now, it would i
 
 In some cases, grid items would incorrectly get resized when a trigger went off.
 
-#### Dashboards/Low-Code Apps: Problem when changing the title, style or WebSocket settings of a component [ID 42577]
+#### Low-Code Apps - Action editor: Problem when trying to select a component using intellisense [ID 42575]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-When, in edit mode, you were changing the title, the style or the WebSocket settings of a component, the component would incorrectly get updated each time you typed a letter.
+When, in the action editor, you tried to select a recently added component using intellisense, an error would be thrown.
 
 #### Dashboards/Low-Code Apps: Icons of information elements would not change color [ID 42578]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 In several components (e.g. the *Time range* component), information elements consisting of an icon and a text box are being used to convey messages to the user. Up to now, when the color of such an information element was changed, only the color of the text would be updated. The color of the icon would incorrectly not be updated.
+
+#### Dashboards/Low-Code Apps - Maps component: 'Fetch the data' action could not be executed when no layers were visible or selected [ID 42579]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When no layers were visible or selected in a *Maps* component, it would incorrectly not be possible to execute a *Fetch the data* action.
+
+#### Dashboards/Low-Code Apps: Empty query nodes would incorrectly not be marked as null [ID 42588]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, empty query nodes (i.e. nodes that did not contain any value) would incorrectly not be marked as null.
+
+#### Low-Code Apps: 'Fetch the data' action would not always be triggered [ID 42601]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, a *Fetch the data* action would incorrectly not get triggered.
+
+#### Dashboards/Low-Code Apps - GQI: Component data fetched by joined queries would not get refetched when a selection changed [ID 42606]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+When a component used joined queries to fetch data, the data would incorrectly not be refetched when a selection changed in the component.
+
+#### DataMiner Maps: Not possible to load the maps.asmx page [ID 42619]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, it would not be possible to load the `https://{HOSTNAME}/api/v0/maps.asmx` page due to a serialization issue.
+
+#### Dashboards/Low-Code Apps - Query builder: Not possible to scroll up or down after selecting the 'Get object manager instances' data source [ID 42648]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 [CU0] -->
+
+Up to now, when you had selected the *Get object manager instances* data source while building a GQI query, in some cases, the scrollbar would incorrectly not appear when you hovered over the object manager instances in the list, making it impossible to scroll up or down in the list.

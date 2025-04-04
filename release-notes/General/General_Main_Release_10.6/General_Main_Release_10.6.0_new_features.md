@@ -9,14 +9,15 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## Highlights
 
-- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314)
+- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535)
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 <!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
+<!-- RN 42535: MR 10.6.0 - FR 10.5.5 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -29,6 +30,12 @@ Note that when Swarming is enabled, this will result in some major changes to th
 - Element configuration will be stored in the cluster-wide database instead of in the element XML files on the disk of the DataMiner Agent hosting each element.
 
   When Swarming is enabled, a file named *Where are my elements.txt* will be present in the *C:\\Skyline DataMiner\\Elements\\* folder. In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
+
+When you create or update an element in DataMiner Cube, you will be able to indicate that the element is not allowed to swarm to another host. To do so, go to the *Advanced* section, and enable to *Block Swarming* option. By default, this option will be set to false.
+
+If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
+
+In DataMiner Cube, this *Block Swarming* option will only be visible if Swarming is enabled in the DataMiner System.
 
 > [!IMPORTANT]
 >
@@ -429,7 +436,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -437,6 +444,8 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 42276: MR 10.6.0 - FR 10.5.4 -->
 <!-- RNs 42283: MR 10.6.0 - FR 10.5.4 -->
 <!-- RNs 42319: MR 10.6.0 - FR 10.5.4 -->
+<!-- RNs 42429: MR 10.6.0 - FR 10.5.5 -->
+<!-- RNs 42480: MR 10.6.0 - FR 10.5.5 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -476,13 +485,16 @@ In each `Instance`, you can specify either a single-value parameter or a table p
 - Single-value parameter: [DataMinerID]/[ElementID]/[ParameterID]
 - Table parameter: [DataMinerID]/[ElementID]/[ParameterID]/[PrimaryKey]
 
+> [!NOTE]
+> When you add a new parameter group, an error message will appear when that parameter group contains an invalid group name, an invalid number of parameters, an invalid anomaly threshold, or an invalid minimum anomaly duration value.
+
 ##### Average trending
 
 RAD requires parameter instances to have at least one week of five-minute average trend data. If at least one parameter instance has less than a week of trend data available, monitoring will only start after this one week becomes available. In particular, this means that average trending has to be enabled for each parameter instance used in a RAD group and that the TTL for five-minute average trend data has to be set to more than one week (recommended setting: 1 month). Also, RAD only works for numeric parameters.
 
 If necessary, users can force RAD to retrain its internal model by sending a `RetrainMadModelMessage`. In this message, they can indicate the periods during which the parameters were behaving as expected. This will help RAD to identify when the parameters deviate from that expected behavior in the future.
 
-#### History set parameters
+##### History set parameters
 
 Under certain conditions, Relational anomaly detection (RAD) is able to detect relational anomalies on history set parameters:
 
@@ -498,18 +510,21 @@ Under certain conditions, Relational anomaly detection (RAD) is able to detect r
 
 ##### Messages
 
-The following messages can be used to add, update or remove a parameter group from the configuration file, or to retrieve information for a particular parameter group from that configuration file:
+The following API messages can be used to create, retrieve and remove RAD parameter groups:
 
-- `AddMADParameterGroupMessage` allows you to add a parameter group to the Relational Anomaly Detection configuration file.
-
-  If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated.
-
-- `RemoveMADParameterGroupMessage` allows you to remove a parameter group from the Relational Anomaly Detection configuration file.
-
-- `GetMADParameterGroupInfoMessage` allows you to retrieve all configuration information for a particular group.
+| Message | Function |
+|---------|----------|
+| AddRADParameterGroupMessage     | Creates a new RAD parameter group.<br>If a group with the same name already exists, no new group will be added. Instead, the existing group will be updated. |
+| GetRADDataMessage               | Retrieves the anomaly scores over a specified time range of historical data. |
+| GetRADParameterGroupInfoMessage | Retrieves all configuration information for a particular RAD parameter group. |
+| GetRADParameterGroupsMessage    | Retrieves a list of all RAD parameter groups that have been configured. |
+| RemoveRADParameterGroupMessage  | Deletes a RAD parameter group. |
+| RetrainRADModelMessage          | Retrains the RAD model over a specified time range. |
 
 > [!NOTE]
-> Names of RAD parameter groups will be processed case-insensitive.
+>
+> - Names of RAD parameter groups will be processed case-insensitive.
+> - The following messages have been deprecated: *AddMADParameterGroupMessage*, *GetMADParameterGroupInfoMessage*, *RemoveMADParameterGroupMessage*, and *RetrainMADModelMessage*.
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]
 

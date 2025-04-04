@@ -17,6 +17,8 @@ items:
           topicUid: Overview_References_and_use_cases
         - name: Compliance offering
           topicUid: DataMiner_compliance_offering
+        - name: Evolution vs. optimization in software development
+          topicUid: evolution_vs_optimization
     - name: DataMiner platform - Empowering your digital transformation
       topicUid: Overview_Platform_intro
       items:
@@ -237,42 +239,40 @@ items:
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:
-        - name: DataMiner Solution Deployment Methodology
+        - name: About Digital Transformation
+          topicUid: DeploymentMethodology
+        - name: Managing technology deployments
           items:
-            - name: About Digital Transformation
-              topicUid: DeploymentMethodology
-            - name: Managing technology deployments
-              items:
-                - name: Methodology is key to success
-                  topicUid: Managing_technology_deployments
-                - name: Methodology is not a choice
-                  topicUid: Methodology_is_not_a_choice
-                - name: Methodology needs to be practiced
-                  topicUid: Methodology_needs_to_be_practiced
-            - name: Deployment methodologies in summary
-              topicUid: Deployment_methodologies_in_summary
-            - name: Turnkey Methodology
-              topicUid: Turnkey_Methodology
-              items:
-                - name: Typical phases of a Turnkey Project deployment
-                  topicUid: Typical_phases_of_a_Turnkey_Project_deployment
-                - name: Terms & Conditions for a Turnkey Project deployment
-                  topicUid: Terms_Conditions_for_a_Turnkey_Project_deployment
-                - name: Change Request Procedure
-                  topicUid: Change_Request_Procedure
-            - name: Agile Scope-Based Methodology
-              topicUid: Agile_Scope-Based_Methodology
-              items:
-                - name: Key Values & Principles
-                  topicUid: Key_Values_Principles
-                - name: Formal roles for Agile Scope-Based deployment
-                  topicUid: Formal_roles_for_Agile_Scope-Based_deployment
-                - name: Typical Phases for Agile Scope-Based projects
-                  topicUid: Typical_Phases_for_Agile_Scope-Based_projects
-            - name: Agile Time & Materials Methodology
-              topicUid: Agile_Time_Materials_Methodology
-            - name: Some Use Cases & Practical Examples
-              topicUid: Some_Use_Cases_Practical_Examples
+            - name: Methodology is key to success
+              topicUid: Managing_technology_deployments
+            - name: Methodology is not a choice
+              topicUid: Methodology_is_not_a_choice
+            - name: Methodology needs to be practiced
+              topicUid: Methodology_needs_to_be_practiced
+        - name: Deployment methodologies in summary
+          topicUid: Deployment_methodologies_in_summary
+        - name: Turnkey Methodology
+          topicUid: Turnkey_Methodology
+          items:
+            - name: Typical phases of a Turnkey Project deployment
+              topicUid: Typical_phases_of_a_Turnkey_Project_deployment
+            - name: Terms & Conditions for a Turnkey Project deployment
+              topicUid: Terms_Conditions_for_a_Turnkey_Project_deployment
+            - name: Change Request Procedure
+              topicUid: Change_Request_Procedure
+        - name: Agile Scope-Based Methodology
+          topicUid: Agile_Scope-Based_Methodology
+          items:
+            - name: Key Values & Principles
+              topicUid: Key_Values_Principles
+            - name: Formal roles for Agile Scope-Based deployment
+              topicUid: Formal_roles_for_Agile_Scope-Based_deployment
+            - name: Typical Phases for Agile Scope-Based projects
+              topicUid: Typical_Phases_for_Agile_Scope-Based_projects
+        - name: Agile Time & Materials Methodology
+          topicUid: Agile_Time_Materials_Methodology
+        - name: Use Cases & Practical Examples
+          topicUid: Some_Use_Cases_Practical_Examples
     - name: Legal
       items:
         - name: Commercial terms

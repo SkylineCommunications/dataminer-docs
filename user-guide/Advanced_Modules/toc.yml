@@ -659,10 +659,14 @@ items:
                     topicUid: GQI_IGQIColumnOperator
                   - name: IGQICoreBlock
                     topicUid: GQI_IGQICoreBlock
+                  - name: IGQICoreDataSource
+                    topicUid: GQI_IGQICoreDataSource
                   - name: IGQICoreOperator
                     topicUid: GQI_IGQICoreOperator
                   - name: IGQIDataSource
                     topicUid: GQI_IGQIDataSource
+                  - name: IGQIDataSourceNode 
+                    topicUid: GQI_IGQIDataSourceNode 
                   - name: IGQIFactory
                     topicUid: GQI_IGQIFactory
                   - name: IGQIFilterOperator
@@ -671,8 +675,6 @@ items:
                     topicUid: GQI_IGQIInputArguments
                   - name: IGQILogger
                     topicUid: GQI_IGQILogger
-                  - name: IGQIOptimizableOperator
-                    topicUid: GQI_IGQIOptimizableOperator
                   - name: IGQIOnDestroy
                     topicUid: GQI_IGQIOnDestroy
                   - name: IGQIOnInit
@@ -683,6 +685,10 @@ items:
                     topicUid: GQI_IGQIOperator
                   - name: IGQIOperatorNode
                     topicUid: GQI_IGQIOperatorNode
+                  - name: IGQIOptimizableDataSource
+                    topicUid: GQI_IGQIOptimizableDataSource
+                  - name: IGQIOptimizableOperator
+                    topicUid: GQI_IGQIOptimizableOperator
                   - name: IGQIQueryNode
                     topicUid: GQI_IGQIQueryNode
                   - name: IGQIRowOperator

@@ -4,6 +4,14 @@ uid: Deploying_a_catalog_item
 
 # Deploying a Catalog item to your system
 
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    Prefer a visual guide? Watch <a href="xref:Adding_elements" style="color: #657AB7;">this short video</a> on how to deploy a connector from the Catalog.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
+
 To deploy an item from the DataMiner Catalog (e.g. a connector or package) to your DataMiner System, make sure the following requirements are met:
 
 - Your DataMiner System is connected to dataminer.services. See [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).

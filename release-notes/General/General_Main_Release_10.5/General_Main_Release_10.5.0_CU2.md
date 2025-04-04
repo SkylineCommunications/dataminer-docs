@@ -13,7 +13,47 @@ uid: General_Main_Release_10.5.0_CU2
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.5.0 CU2](xref:Web_apps_Main_Release_10.5.0_CU2).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
+### Highlights
+
+- [New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]](#snmp-forwarding-new-option-to-prevent-an-snmp-manager-from-resending-snmp-inform-messages-id-41884)
+- [GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]](#gqi-dxm-will-now-look-for-missing-dependencies-in-the-automation-script-libraries-folder-id-42468)
+- [GQI DxM: New life cycle method allows ad hoc data sources to optimize sort operators [ID 42528]](#gqi-dxm-new-life-cycle-method-allows-ad-hoc-data-sources-to-optimize-sort-operators-id-42528)
+- [Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)
+
 ### Enhancements
+
+#### BrokerGateway files collected by SLLogCollector [ID 40299]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.9/10.5.0-->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), SLLogCollector will now collect files related BrokerGateway.
+
+#### VerifyNatsIsRunning BPA test updated with BrokerGateway prerequisite [ID 40641]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:SLNetClientTest_disabling_automatic_nats_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+
+#### Factory reset tool: New ResetBrokerGatewayNATS action [ID 40759]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
+
+The *SLReset* factory reset tool will now also reset the DataMiner Agent to use the SLNet-managed NATS solution in case it had been migrated to BrokerGateway (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)).
+
+#### Notices generated in case local NATS server is not responding [ID 41289]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.5.0/10.5.1 -->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), SLNet will now generate notices in case the local NATS server is not responding. The connectivity will be checked at a random interval between 3 and 10 minutes.
+
+#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option. If you select this option, DataMiner will track which inform messages have been sent and will not resend those that have already been acknowledged.
+
+> [!NOTE]
+> This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
 
 #### Security enhancements [ID 42307]
 
@@ -21,11 +61,31 @@ uid: General_Main_Release_10.5.0_CU2
 
 A number of security enhancements have been made.
 
-#### Reduced memory usage when updating a large number of parameter in bulk [ID 42385]
+#### NATS repair tool [ID 42328]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+A repair tool, *NATSRepair.exe*, will now be included in the *C:\Skyline DataMiner\Tools\\* folder. You can use this to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
+
+#### Reduced memory usage when updating a large number of parameters in bulk [ID 42385]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of row are updated due to e.g. aggregation or merge actions.
+When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to e.g. aggregation or merge actions.
+
+#### STaaS: An alarm will now be generated when a data type is being throttled [ID 42387]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+If your system is pushing too much load for a specific data type, that data type will be throttled. This could for example happen when you have an element that is continuously saving parameter updates.
+
+From now on, when this happens, an alarm will be generated with information about the data type or types that are being throttled.
+
+#### GQI DxM will now shut down faster [ID 42428]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
 
 #### Enhanced performance when restarting HTTP elements in a timeout state [ID 42443]
 
@@ -51,11 +111,112 @@ The output will be stored in the following file:
 
 *\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
 
+#### GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+GQI extensions use the Automation engine to create DLL libraries that are then loaded by GQI to add ad hoc data sources, custom operators, etc.
+
+GQI will now look for missing dependencies in the *C:\\Skyline DataMiner\\Scripts\\Libraries* folder. This will allow GQI extension scripts to find the Automation script library at runtime.
+
+> [!IMPORTANT]
+> If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
+
 #### GQI recording removed from GQI DxM [ID 42470]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 GQI recording, a debugging feature that allowed you to save GQI communication and replay it in a lab environment, has now been removed from the GQI DxM.
+
+#### GQI DxM: Record limit of Sort operator has been increased to 100,000 records [ID 42492]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+When the GQI DxM is being used, the record limit of the *Sort* operator will now be 100,000 instead of 10,000.
+
+#### SLNetClientTest - DataMiner Object Model: Enabling debug logging [ID 42504]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+In the *DataMiner Object Model* window, which allows you to see all details of a particular DOM module, a new *Debug Logging* section has now been added to the *Maintenance* tab. In this section, you can find the following buttons:
+
+| Button | Description |
+|--------|-------------|
+| Enable | Adds or updates an override for the log file of the current DOM manager, setting all log levels to 6. |
+| Reset  | Removes the override for the log file of the current DOM manager is removed, regardless of the tool that added it. |
+
+Also, a status label will now indicate whether debug logging is enabled or disabled.
+
+> [!NOTE]
+>
+> - The above-mentioned status label will show "Enabled" when a level-6 override is present. If all log files have level 6 by default, the status label will show "Disabled" until you add an override.
+> - Enabling debug logging may significantly increase the amount of logging that is written to disk.
+
+#### GQI DxM: New life cycle method allows ad hoc data sources to optimize sort operators [ID 42528]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+A new optional life cycle method has been introduced for ad hoc data sources running in the GQI DxM. It will allow to optimize or modify sort operators added to the query.
+
+You can use this life cycle by implementing the `Skyline.DataMiner.Analytics.GenericInterface.IGQIOptimizeableDataSource` interface, which has one method:
+
+```csharp
+IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
+```
+
+- `currentNode` is the query node that represents the current ad hoc data source.
+- `nextOperator` represents the next operator appended to the query.
+
+This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
+
+- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this life cycle method is not implemented).
+- Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
+- Modify/add operators.
+
+> [!NOTE]
+>
+> - This life cycle method will only be called when the `nextOperator` is a filter or a sort operator.
+> - This life cycle method can be called multiple times if there is a new `nextOperator`.
+
+#### New log viewer web page [ID 42533]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, client applications like DataMiner Cube used the *ViewLog.asp* web page to display server-side log files. This web page has now been replaced by the *ViewLog.aspx* web page.
+
+This new log viewer page has improved compatibility with Failover setups and better error handling for HTTPS certificates.
+
+#### Migration from SLNet-managed NATS solution to BrokerGateway [ID 42019] [ID 42020] [ID 42573]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+It is now possible to migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service). Previously, starting from DataMiner 10.5.0/10.5.2, this feature was available in [soft launch](xref:SoftLaunchOptions).
+
+BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+
+Before you start the migration, the entire cluster must have been running smoothly for some time. A BPA test is available that allows you to easily verify this ([Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites)).
+
+You can then run the migration by opening a remote desktop connection to all DMAs at the same time, opening a command prompt as administrator, and running the executable *C:\Skyline DataMiner\Tools\NATSMigration.exe*. This must happen on each DMA in the cluster within a 10-minute timeframe. For more detailed information, refer to [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+
+Note that when you add a DataMiner Agent to a DataMiner System, it will have to use the same NATS solution as the DataMiner System. This means that if the DMS has been migrated to BrokerGateway, the DMA you add also needs to be migrated to BrokerGateway, but if the DMS still uses the SLNet-managed NATS solution, the DMA you add also has to use this solution.
+
+#### DataMiner IDP license notice will no longer appear [ID 42574]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Since DataMiner version 10.1.0/1.0.0.8, the following notice would appear when a DataMiner Agent that was not using Indexing Engine had an IDP license but no ServiceManager license:
+
+```txt
+DataMiner IDP is licensed, but no Elasticsearch database is active on the system. Therefore, scheduled workflows are not available.
+```
+
+As DataMiner IDP no longer requires neither a separate license nor an Indexing Engine, from now on, this notice will no longer appear.
+
+#### SLAnalytics: An anomaly alarm event will now be generated when a change point with a type that is not monitored is changed to a change point with a type that is monitored [ID 42596]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+From now on, an anomaly alarm event will be generated when a change point with a change point type for which no anomaly monitoring was configured, is updated to a change point with a change point type for which anomaly monitoring is configured.
 
 ### Fixes
 
@@ -131,6 +292,35 @@ When an SNMPv3 connection was set up, log entries similar to the example below w
 
 `RT_QACTIONS_SNMP_v3: Unable to set the destination IP: polling IP=::1; resolved IP=::1; or=APPLY SECURITY FAILED: EMPTY USER NAME`
 
+#### GQI DxM: Ad hoc data source or custom operators would not receive SLNet events when using subscription sets [ID 42454]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+When the GQI DxM was being used, ad hoc data sources and custom operators would not receive any SLNet events if they added or updated a subscription for a specific subscription set.
+
+#### Problem when creating the ClusterEndpoints.json file [ID 42481]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+In some cases, an error could be thrown when the *ClusterEndpoints.json* file was created in the *C:\\Skyline DataMiner\\Configurations\\* folder.
+
+#### DVE settings could get out of sync with the element data when DataMiner or an element was restarted [ID 42515]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When DataMiner or an element was stopped while there were still DVE parameter sets in the queue, up to now, the DVE settings would be out of sync with the element data when DataMiner or the element was restarted. From now on, the DVE settings will be re-applied in the element data.
+
+> [!NOTE]
+> Always make sure element names are unique, especially when using the `noelementprefix` option.
+
+#### Incorrect 'Detected duplicate DVE' notice would appear due to a caching issue [ID 42546]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Due to a caching issue, in some cases, the following notice could incorrectly appear in the Alarm Console:
+
+`Detected duplicate DVE, did not create DVE for {DVE name}`
+
 #### Connection issue between SLSNMPManager and SLNet [ID 42547]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
@@ -140,3 +330,17 @@ When multiple SLSNMPManager processes tried to simultaneously connect to SLNet, 
 ```txt
 (SLNetCOM SLSNMPManager.exe) Failed to connect to SLNet: (Code: 0x800402CD) Skyline.DataMiner.Net.Exceptions.DataMinerCommunicationException: Connection was closed at 15:37 (There's a new connection for this module/agent.)
 ```
+
+#### GQI DxM would leak memory when an SLNet connection was disconnected [ID 42592]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+When an SLNet connection created by the GQI DxM was disconnected, up to now, the associated compatibility manager would not be cleaned up correctly, causing the GQI DxM to leak memory.
+
+#### Information events would incorrectly not get flushed to the database when an element was stopped [ID 42604]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+When an element was stopped, contrary to alarm events, information events would incorrectly not get flushed to the database.
+
+On systems with Swarming enabled, this could cause problems when a hosting agent tried to retrieve the highest alarm ID from the database.

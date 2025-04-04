@@ -23,7 +23,8 @@
             "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit.dll",
             "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageCreator.dll",
             "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.dll",
-            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.SRM.dll"
+            "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageInstaller.SRM.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Protocol.Extension.dll"
           ],
           "exclude": [
             "**/obj/**",
