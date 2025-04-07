@@ -5,7 +5,7 @@ uid: Developing_Automation_scripts_as_Visual_Studio_solutions
 # Developing Automation scripts as Visual Studio solutions
 
 > [!IMPORTANT]
-> As of [v2](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates/releases/tag/2.0.0) of the Visual Studio Templates, the *DataMiner Automation Script Solution* template has been removed in favor of the project templates using the [Skyline.DataMiner.Sdk](xref:skyline_dataminer_sdk).
+> As of [v2](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates/releases/tag/2.0.0) of the Visual Studio Templates, the *DataMiner Automation Script Solution* template has been removed in favor of the project templates using the [Skyline.DataMiner.SDK](xref:skyline_dataminer_sdk).
 
 - An Automation script solution can contain multiple scripts, whereas a connector solution can only contain one single connector.
 

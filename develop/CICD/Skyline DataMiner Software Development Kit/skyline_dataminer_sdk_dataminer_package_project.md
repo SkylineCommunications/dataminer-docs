@@ -21,7 +21,7 @@ When you publish the project, a corresponding item will be created in the online
 
 ### New artifacts
 
-You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. adding additional Automation scripts).
+You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. to add additional Automation scripts).
 
 > [!NOTE]
 > Connectors are currently not supported for this.
@@ -38,7 +38,7 @@ Every *Skyline.DataMiner.SDK* project within the solution, except other DataMine
 
 ### Existing Automation script files
 
-You can right-click the solution and select *Add* > *Add Existing DataMiner Automation Script...*. This will allow you to add existing Automation scripts files to the solution.
+You can right-click the solution and select *Add* > *Add Existing DataMiner Automation Script*. This will allow you to add existing Automation scripts files to the solution.
 
 ## Importing from DataMiner
 
@@ -48,29 +48,29 @@ You can import specific items directly from a DataMiner Agent using DIS:
 
 1. If your Agent is not listed, add it by going to *Extensions* > *DIS* > *Settings* and clicking *Add* on the DMA tab.
 
-1. Once connected, import the DataMiner artifacts you want.
+1. Once connected, import the DataMiner artifacts you want:
 
-### Import Dashboards
+   - To import **dashboards**:
 
-1. In your *Solution Explorer*, navigate in the Package project to *PackageContent/Dashboards*.
+     1. In your *Solution Explorer*, navigate in the Package project to *PackageContent/Dashboards*.
 
-1. Right-click, and select *Add*.
+     1. Right-click, and select *Add*.
 
-1. Select *Import DataMiner Dashboard*.
+     1. Select *Import DataMiner Dashboard*.
 
-### Import Low-Code Apps
+   - To import **low-code apps**:
 
-1. In your *Solution Explorer*, navigate in the Package project to *PackageContent/LowCodeApps*.
+     1. In your *Solution Explorer*, navigate in the Package project to *PackageContent/LowCodeApps*.
 
-1. Right-click, and select *Add*.
+     1. Right-click, and select *Add*.
 
-1. Select *Import DataMiner Low-Code App*.
+     1. Select *Import DataMiner Low-Code App*.
 
-### Import Automation script
+   - To import an **Automation script**:
 
-1. In your *Solution Explorer*, right-click the solution, and select *Add*.
+     1. In your *Solution Explorer*, right-click the solution, and select *Add*.
 
-1. Select *Import DataMiner Automation Script*.
+     1. Select *Import DataMiner Automation Script*.
 
 ## Adding content from the Catalog
 

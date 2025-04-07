@@ -6,24 +6,22 @@ uid: DisVisualStudioSolutionsIntroduction
 
 When you create a new connector or Automation script using DIS, a new Visual Studio solution is created. DIS supports adding additional projects to the solution. For example, you can add a project for a QAction to a connector solution or a project for a C# Exe block to an Automation script solution.
 
-> [!NOTE]
-> DIS also supports developing connectors as XML files, but we strongly recommend using the solution-based approach because of its numerous advantages:
->
-> - Making use of NuGet packages
-> - Adding unit test projects to your solution
-> - Setting up a CI/CD pipeline that builds your solution, performs SonarCloud analysis, etc.
->
-> DIS supports [converting connector XML files](xref:Developing_connectors_as_Visual_Studio_solutions) into Visual Studio solutions.
+DIS also supports developing **connectors** as XML files, but we strongly recommend using the **solution-based approach** because of its numerous advantages:
 
-> [!NOTE]
-> DIS also supports developing Automation script as XML files, but we strongly recommend using the project-based approach because of its numerous advantages:
->
-> - Making use of NuGet packages
-> - Adding unit test projects to your solution
-> - Setting up a CI/CD pipeline that builds your solution, performs SonarCloud analysis, etc.
-> - Easy transition to a full-blown package with other components
->
-> DIS supports [converting Automation script XML files](xref:skyline_dataminer_sdk_dataminer_package_project#existing-automation-script-files) into Visual Studio projects.
+- Making use of NuGet packages
+- Adding unit test projects to your solution
+- Setting up a CI/CD pipeline that builds your solution, performs SonarCloud analysis, etc.
+
+DIS supports [converting connector XML files](xref:Developing_connectors_as_Visual_Studio_solutions) into Visual Studio solutions.
+
+Similarly, DIS also supports developing **Automation scripts** as XML files, but we strongly recommend using the **project-based approach** because of its numerous advantages:
+
+- Making use of NuGet packages
+- Adding unit test projects to your solution
+- Setting up a CI/CD pipeline that builds your solution, performs SonarCloud analysis, etc.
+- Easy transition to a full-blown package with other components
+
+DIS supports [converting Automation script XML files](xref:skyline_dataminer_sdk_dataminer_package_project#existing-automation-script-files) into Visual Studio projects.
 
 ## SDK-style vs. legacy-style project format
 
