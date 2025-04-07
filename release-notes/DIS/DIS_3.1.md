@@ -4,6 +4,16 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.8
+
+### New features
+
+#### IDE
+
+##### Support for nested SAML [ID 42690]
+
+DIS has now support for nested SAML operations.
+
 ## DIS 3.1.7
 
 ### New features
