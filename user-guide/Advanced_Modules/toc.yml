@@ -154,6 +154,12 @@ items:
         items:
           - name: Using an SLA to monitor a power service
             topicUid: SLA_tutorial
+  - name: Copilot
+    items:
+      - name: Copilot DxM
+        topicUid: Copilot_DxM
+      - name: Natural language to GQI
+        topicUid: NL2GQI
   - name: Correlation
     items:
       - name: About DataMiner Correlation
