@@ -31,7 +31,7 @@ To configure the component:
 
    - For a table parameter, an *indices* filter is supported.
 
-   - In a system using Service & Resource Management, you can add resources as data to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+   - In a system using [Service and Resource Management](xref:About_SRM), you can add resources as data to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time.
 
    - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 

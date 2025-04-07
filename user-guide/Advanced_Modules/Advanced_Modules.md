@@ -79,17 +79,11 @@ description: A DataMiner System can have several additional modules or apps, e.g
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/SRM/SRM.html" title="SRM" target="_self"><img src="~/user-guide/images/SRM.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
     <a href="/user-guide/Advanced_Modules/Spectrum_Analysis/Spectrum_Analysis.html" title="Spectrum Analysis" target="_self"><img src="~/user-guide/images/Spectrum_Analysis.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Advanced_Modules/Ticketing/Ticketing.html" title="Ticketing" target="_self"><img src="~/user-guide/images/Ticketing.svg" style="width:100%"></a>
   </div>  
-</div>
-
-<div class="row"> 
   <div class="column">
     <a href="/user-guide/Advanced_Modules/User-Defined_APIs/UD_APIs.html" title="User-Defined APIs" target="_self"><img src="~/user-guide/images/User_Defined_APIs.svg" style="width:100%"></a>
   </div>

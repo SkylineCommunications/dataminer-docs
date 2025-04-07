@@ -2,9 +2,11 @@
 uid: The_Services_module
 ---
 
-# The Services module
+# About the Services module
 
-On a system with the proper licenses, the *Services* module is available in the apps list in Cube. This module is used to configure service definitions, which determine the number and type of virtual functions included in a service and the way these virtual functions are connected within that service.
+The Services module is usually used as part of the [Service & Resource Management Framework](xref:About_SRM). It is used to configure [service definitions](xref:srm_definitions#service-definition), which determine the number and type of virtual functions included in a service and the way these virtual functions are connected within that service.
+
+You can find this module in DataMiner Cube by selecting *Apps* > *Modules* > *Services* in the sidebar.
 
 The module consists of the following tabs:
 

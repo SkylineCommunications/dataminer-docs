@@ -4,7 +4,7 @@ uid: Configuring_profile_instances
 
 # Configuring profile instances
 
-In a profile instance, you can assign specific values to each of the parameters in a linked profile definition. Those values can then be used to configure actual devices.
+In a [profile instance](xref:srm_instantiations#profile-instance), you can assign specific values to each of the parameters in a linked profile definition. Those values can then be used to configure actual devices.
 
 To configure a profile instance, first select it in the *Instances* tab of the list pane.
 
