@@ -40,6 +40,9 @@ From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 42003-->, to verify tha
 
 ![No DxM](~/user-guide/images/NoDxM.png)<br>*About DataMiner pop-up window in DataMiner 10.5.3*
 
+> [!NOTE]
+> If you encounter issues when trying to enable the GQI DxM, refer to [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair)
+
 ## Architecture
 
 The GQI DxM comprises multiple processes that work together to handle GQI requests and execute these efficiently. This architecture ensures modularity, scalability, and efficient communication between the different components.
