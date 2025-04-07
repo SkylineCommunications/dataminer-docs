@@ -90,7 +90,8 @@ GQI runs as an extension module ([GQI DxM](xref:GQI_DxM)) or inside the [SLHelpe
 - Are data sources missing? Check whether the DMA has the necessary licenses and soft-launch options.
 - Are there no errors, but invalid data? Check the origin of the invalid data.
 - Are ad-hoc data sources or operators failing? Contact the person who created the data source or the operator (check [GitHub](https://github.com/orgs/SkylineCommunications/repositories?q=gqi&type=all)).
-- Error messages, no data, no response, or slow performance? Then record the GQI session and include the ad-hoc data scripts (if any) when asking support.
+- Error messages, no data, no response, or slow performance? Then [record the GQI session](#record-gqi-session) and include the ad hoc data scripts (if any) when asking support.
+- GQI DxM not working? Try to [repair the service](#gqi-dxm-repair).
 
 #### Record GQI session
 
@@ -107,16 +108,20 @@ GQI recording is a debugging feature that allows you to save GQI communication a
 > [!NOTE]
 > Recording might impact performance as data is written to the disk. Once the recording has been made, stop the recording by deleting the folder.
 
-#### GQI DxM installation
+#### GQI DxM repair
 
-If you encounter issues with GQI DxM it might help to repair the service by running GQI DxM installer. For example if you follow the steps described in [Enabling the use of the GQI DxM](xref:GQI_DxM#enabling-the-use-of-the-gqi-dxm) but are unable to see GQI DxM version in the _About_ page.
+If you encounter issues with GQI DxM, for example, if you have [enabled the GQI DxM](xref:GQI_DxM#enabling-the-use-of-the-gqi-dxm) but are unable to see GQI DxM version on the *About* page, try repairing the service by running the GQI DxM installer:
 
 1. Using Task Manager, stop the DataMiner GQI service.
+
    > [!NOTE]
-   > Make sure the associated DataMiner GQI process has stopped. If not, kill it.
+   > Make sure the associated DataMiner GQI process is stopped as well.
+
 1. Navigate to `C:\Skyline DataMiner\Tools\ModuleInstallers\Web`.
-1. Run the GQI DxM installer again in Repair mode.
-1. Restart the web server using IIS Manager to reconnect the web apps with the GQI DxM. 
+
+1. Run the *DataMiner GQI* DxM installer in Repair mode.
+
+1. Restart the web server using IIS Manager to reconnect the web apps with the GQI DxM.
 
 ### PDF
 
