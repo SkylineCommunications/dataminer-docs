@@ -4,23 +4,15 @@ uid: RS_Resource_Icons
 
 # Resource icons
 
-The *Resource Icons* feature allows end users to select an icon for a specific *Resource* or *Resource Pool*. This feature can be used to assign an icon to a Resource or Resource Pool which will be shown in workflow visualization in the [Scheduling](xref:MO_Scheduling) and [Worfklow Designer](xref:MO_Workflow_Designer) apps. This helps users by adding more graphical context when inspecting different workflows.
+It is possible to change the visual representation for a *Resource* or *Resource Pool* used in workflows shown in the [Scheduling](xref:MO_Scheduling) and [Worfklow Designer](xref:MO_Workflow_Designer) apps. This helps users by adding more graphical context when inspecting different workflows.
 
-## How to Use the Changing Icons Feature
+To change icon, navigate to Resource Studio:
 
-To use the Changing Icons feature, simply follow these steps:
+1. Open the **Edit** option for *Resource* or *Resource Pool*.
 
-1. Open the edit option for *Resource* or *Resource Pool* that you want to change the icon for.
+1. Click on the **Change icon** button.
 
-1. Click on the "Change icon" button.
-
-1. Select the icon that you want to use from the list of available icons.
-    > [!NOTE]
-    > To see the list of all available icons check [*Node Icons table*](#node-icons-table).
-
-1. Click on *Confirm* button at the bottom of the panel.
-
-   - The new icon is now applied and name of the icon will be visible on Icon image field.
+1. Select the icon you want to use and **Confirm** your choice.
 
 > [!IMPORTANT]
 > Icons will be visible only on *Nodes* added to workflow after an icon is assigned to a *Resource* or *Resource pool*.

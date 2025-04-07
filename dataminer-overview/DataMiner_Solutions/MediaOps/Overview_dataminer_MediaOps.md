@@ -69,4 +69,4 @@ For an overview of the different applications available in the package, see [Med
 
 ## Getting started with MediaOps
 
-Instructions how to install and get started with MediaOps can be found on in the catalog item description.
+Instructions on how to install and get started with MediaOps can be found in the catalog item description.

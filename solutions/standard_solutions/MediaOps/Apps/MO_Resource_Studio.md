@@ -16,15 +16,17 @@ The Resource Studio app allows you to create and manage resources. A resource ca
 
 - Anything with limited availability that is not managed by DataMiner, such as **rooms**, **people**, **vehicles**, **satellite transponder slots**, **IP addresses**, etc.
 
-Each resource has a _concurrency_ setting, which defines how many bookings of the resource can be made at the same time. By default, this is set to one. 
+Each resource has a _concurrency_ setting, which defines how many bookings of the resource can be made at the same time. By default, this is set to **1**. 
 
 ## Resource Pools
 
-A resource pool can be created to group a set of interchangeable resources. This allows users who utilize resources in other apps to refer to a pool instead of a specific resource, which allows deferring resource selection until it's actually needed, rather than at booking creation. Resources can be added to multiple pools, making them eligible for multiple purposes while keeping a single availability timeline and preventing resource conflicts.
+A _resource pool_ can be created to group a set of **interchangeable resources**. This allows users who utilize resources in other apps to refer to a pool instead of a specific resource, which allows _deferring_ resource selection until it's actually needed, rather than at booking creation.
+
+Resources can be added to multiple pools, making them eligible for multiple purposes while keeping a single availability timeline and preventing resource conflicts.
 
 ## Capability Management
 
-Capabilities give a qualitative description of a resource or pool, making it clear what they can be used for. When creating a workflow or job, users can specify the required capabilities for the resource to be used, and they can filter the resources in the system with these capability requirements in order to easily find a suitable one.
+_Capabilities_ give a **qualitative description** of a resource or pool, making it clear what they can be used for. When creating a workflow or job, users can specify the required capabilities for the resource to be used, and they can filter the resources in the system with these capability requirements in order to easily find a suitable one.
 
 Each capability has a name and a list of values. Users can assign one or more values to a resource or a pool. Examples of capabilities include:
 
@@ -34,11 +36,11 @@ Each capability has a name and a list of values. Users can assign one or more va
 
 - Modulation type: DVB-S, NS3, NS4
 
-Capabilities can be assigned either to a resource or to a pool. If they are assigned to a pool, all resources in that pool will inherit the capabilities of the pool, but extra capabilities can also be added to individual resources.
+Capabilities can be assigned either to a resource or to a resource pool. If they are assigned to a resource pool, all resources in that pool will inherit the capabilities of the pool, but extra capabilities can also be added to individual resources.
 
 ## Capacity Management
 
-Capacities, like capabilities, define how a resource can be used, but they are measured numerically. The following settings can be configured for capabilities:
+_Capacities_, like capabilities, define how a resource can be used, but they are measured **numerically**. The following settings can be configured for capabilities:
 
 - Units: The unit for the values of this capacity (MHz, Gbps, kBd, etc.).
 
