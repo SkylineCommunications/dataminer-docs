@@ -121,7 +121,12 @@ If you encounter issues with GQI DxM, for example, if you have [enabled the GQI 
 
 1. Run the *DataMiner GQI* DxM installer in Repair mode.
 
+![GQI installer repair mode](~/user-guide/images/repair_gqi_installer.png)
+
 1. Restart the web server using IIS Manager to reconnect the web apps with the GQI DxM.
+
+> [!NOTE]
+> You can follow [this guide](https://www.ipserverone.info/knowledge-base/how-to-restart-internet-information-services-iis-for-a-website-in-windows-server/) in order to restart IIS.
 
 ### PDF
 
