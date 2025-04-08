@@ -349,6 +349,8 @@ items:
                 topicUid: SLNetClientTest_making_Cube_ignore_view_updates
               - name: Managing base subscriptions
                 topicUid: SLNetClientTest_managing_base_subscriptions
+              - name: Managing parameter groups for RAD
+                topicUid: SLNetClientTest_managing_RAD_parameter_groups
               - name: Managing scheduled tasks for maintenance of a Cassandra database
                 topicUid: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
               - name: Managing trend patterns
