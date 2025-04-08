@@ -135,8 +135,6 @@ These are the main steps of the setup:
   discovery.type: single-node
   ```
 
-
-
 #### TLS and user configuration
 
 You should configure TLS in order to have a layer of security between your nodes and your DataMiner client. In addition, the default password of the *admin* user must be changed, and all the other users should be removed.
