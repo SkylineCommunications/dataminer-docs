@@ -436,7 +436,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -446,6 +446,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 42319: MR 10.6.0 - FR 10.5.4 -->
 <!-- RNs 42429: MR 10.6.0 - FR 10.5.5 -->
 <!-- RNs 42480: MR 10.6.0 - FR 10.5.5 -->
+<!-- RNs 42602: MR 10.6.0 - FR 10.5.6 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -524,6 +525,7 @@ The following API messages can be used to create, retrieve and remove RAD parame
 > [!NOTE]
 >
 > - Names of RAD parameter groups will be processed case-insensitive.
+> - When a Relational Anomaly Detection (RAD) parameter group is deleted, all open suggestion events associated with that parameter group will automatically be cleared.
 > - The following messages have been deprecated: *AddMADParameterGroupMessage*, *GetMADParameterGroupInfoMessage*, *RemoveMADParameterGroupMessage*, and *RetrainMADModelMessage*.
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]

@@ -34,6 +34,12 @@ uid: General_Feature_Release_10.5.6
 
 ### Enhancements
 
+#### SLAnalytics - Relational anomaly detection: Upon deletion of a parameter group all open suggestion events associated with that group will be cleared [ID 42602]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+When you delete a Relational Anomaly Detection (RAD) parameter group, from now on, all open suggestion events associated with that parameter group will automatically be cleared.
+
 #### Cassandra Cluster: Enhanced performance when importing DELT packages [ID 42613]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
