@@ -53,3 +53,9 @@ From now on, the dashboard or the low-code app will only be updated when the com
 When you had linked a *Dropdown* component to a query that received its data from another component, in some cases, the *Dropdown* component would execute the query even when the query was configured to show nothing when no data is being passed to it.
 
 Also, when you had linked a *Dropdown* component to a query that received its data from another component, in some cases, the *Dropdown* component could get stuck in a loading state.
+
+#### Dashboards/Low-Code Apps - Image component: Problem when trying to upload an image file of which the extension contained one or more uppercase letters [ID 42638]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When, in an *Image* component, you tried to upload an image file of which the extension contained one or more uppercase letters, an error would be thrown.
