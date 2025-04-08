@@ -201,19 +201,6 @@ items:
         topicUid: MACC_and_DataMiner_credits
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
-      items:
-        - name: Support plans
-          topicUid: Overview_Support_Plans
-        - name: Software updates and upgrades
-          topicUid: Overview_Support_upgrade_policy
-        - name: Out-of-business-hours support
-          topicUid: Overview_Out_Of_Business_Hours_Support
-        - name: Proactive Support
-          topicUid: Proactive_Support
-        - name: Partner support lines
-          topicUid: Partner_support_lines
-        - name: Support application
-          topicUid: User_operations_support
     - name: DataMiner Partner Program
       topicUid: Partner_Program
       items:
