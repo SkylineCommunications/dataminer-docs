@@ -450,13 +450,6 @@ items:
         topicUid: Forbidden_characters
       - name: Examples of element names
         topicUid: Examples_of_element_names
-  - name: Obtaining a DataMiner license
-    topicUid: DataminerLicenses
-    items:
-      - name: Permanent license
-        topicUid: Permanent_license
-      - name: Time-based license
-        topicUid: Time-based_license
   - name: Software support life cycles
     topicUid: Software_support_life_cycles
   - name: Feature overview

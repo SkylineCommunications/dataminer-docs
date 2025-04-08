@@ -75,6 +75,13 @@ items:
             topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
           - name: Configuring the default upgrade options
             topicUid: Configuring_the_default_upgrade_options
+      - name: Obtaining a DataMiner license
+        topicUid: DataminerLicenses
+        items:
+          - name: Permanent license
+            topicUid: Permanent_license
+          - name: Time-based license
+            topicUid: Time-based_license
       - name: Health assessment guidelines for DataMiner Agents
         topicUid: Health_Assessment_Guidelines_for_DataMiner_Agent
       - name: Uninstalling a DataMiner Agent
