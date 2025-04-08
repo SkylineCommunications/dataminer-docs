@@ -62,7 +62,7 @@ This type of notification will first go to Skyline Tech Support for verification
 
   1. Follow the same steps as mentioned under [As the responsible person](#as-the-responsible-person).
 
-  1. Triage the notification with your findings to the main customer stakeholder configured in the Maintenance & Support contract and/or parent project
+  1. Send the notification with your findings to the main customer stakeholder configured in the Maintenance & Support contract and/or parent project so they can take the necessary actions to prevent issues.
 
 - Verify the CDMR processing flow:
 
@@ -70,7 +70,7 @@ This type of notification will first go to Skyline Tech Support for verification
 
   1. Verify whether mail-only reporting is used.
 
-  1. Triage the notification to the Platform-Delivery team with your findings to verify why the reports are not processed.
+  1. Send the notification to the Platform-Delivery team with your findings to verify why the reports are not processed.
 
 - In case the main customer stakeholder is not configured, make sure the following is done or delegated:
 
@@ -78,4 +78,4 @@ This type of notification will first go to Skyline Tech Support for verification
 
   1. Configure the main customer stakeholder in the Maintenance & Support contract and/or parent project.
 
-  1. Triage the notification to the customer.
+  1. Send the notification to the customer so they can take the necessary actions to prevent issues.

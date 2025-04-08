@@ -24,4 +24,4 @@ In case the flow cannot determine the main customer stakeholder of the linked Ma
 
 1. Configure the main customer stakeholder in the Maintenance & Support contract and/or parent project.
 
-1. Triage the notification to the customer.
+1. Send the notification to the customer so they can take the necessary actions to prevent issues.
