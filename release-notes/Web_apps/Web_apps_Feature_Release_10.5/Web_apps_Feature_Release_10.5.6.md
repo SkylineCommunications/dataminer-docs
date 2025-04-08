@@ -32,6 +32,12 @@ In the *C:\\Skyline DataMiner\\NotifyMail.html* file, i.e. the email report temp
 
 ### Fixes
 
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI components 'Calendar' and 'Time' would incorrectly disregard the configured default time zone [ID 42440]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+Up to now, when a default time zone was configured for the web apps, the redesigned UI components `UIBlockType.Calendar` and `UIBlockType.Time` would incorrectly disregard that default time zone. Instead, they would show the time in the time zone of the web session, and when they returned the client date/time, the time would not match the time they displayed.
+
 #### Dashboards/Low-Code Apps: Dashboard or low-code app would incorrectly be updated before a newly added component had been loaded [ID 42593]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
