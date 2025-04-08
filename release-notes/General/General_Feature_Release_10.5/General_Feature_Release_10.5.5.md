@@ -355,6 +355,12 @@ As DataMiner IDP no longer requires neither a separate license nor an Indexing E
 
 From now on, an anomaly alarm event will be generated when a change point with a change point type for which no anomaly monitoring was configured, is updated to a change point with a change point type for which anomaly monitoring is configured.
 
+#### Enhanced performance when logging in using external authentication via SAML [ID 42668]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.5 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when logging in using external authentication via SAML.
+
 ### Fixes
 
 #### Problem with aggregation alarms on Cassandra Cluster and STaaS [ID 42095]

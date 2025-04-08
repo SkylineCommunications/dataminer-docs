@@ -21,6 +21,12 @@ uid: General_Main_Release_10.4.0_CU15
 
 Because of a number of enhancements, overall performance has increased when importing DELT packages on systems with a database of type *Cassandra Cluster*, especially when those packages contain a large amount of trend data.
 
+#### Enhanced performance when logging in using external authentication via SAML [ID 42668]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.5 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when logging in using external authentication via SAML.
+
 ### Fixes
 
 #### Problem with SLProtocol when a protocol version was overwritten while an element using that protocol version was starting up [ID 42344]
