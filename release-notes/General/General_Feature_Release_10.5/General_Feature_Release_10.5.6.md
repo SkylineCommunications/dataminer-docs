@@ -42,4 +42,10 @@ Because of a number of enhancements, overall performance has increased when impo
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem with SLProtocol when a protocol version was overwritten while an element using that protocol version was starting up [ID 42344]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+When a protocol version was overwritten while an element using that protocol version was starting up, in some cases, the SLProtocol process could stop working. Also, this could result in alarms like the following being generated:
+
+`Unexpected Exception [Exception from HRESULT: 0x8004024C]: The element is unknown.`
