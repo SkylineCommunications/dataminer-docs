@@ -435,7 +435,7 @@ To support the offload of files to a file cache instead of to a MySQL, MSSQL, or
    For example:
 
    ```xml
-   <DataBase active="true" local = "false">
+   <DataBase active="true" local="false" type="MySQL">
     <FileCache enabled="true">
     <MaxSizeKB>10000</MaxSizeKB>
     </FileCache>
