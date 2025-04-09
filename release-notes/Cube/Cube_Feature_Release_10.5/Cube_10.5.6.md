@@ -18,13 +18,41 @@ uid: Cube_Feature_Release_10.5.6
 
 ## New features
 
-*No new features have been added yet.*
+#### View cards: New 'Isolation mode' column in element list [ID 42562]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+In view cards, the element list now has a new *Isolation mode* column, which displayed the isolation mode of each element in the list.
+
+By default, this column will be hidden. To add this column to the list, right-click a column header, and *select Add/Remove setting column > Isolation Mode*.
+
+These are the possible values that can be displayed in the *Isolation mode* column:
+
+| Value | Description |
+|-------|-------------|
+| None               | Not applicable. E.g. When viewing the *All* page of a service. |
+| Disabled           | The element is not running in isolation mode. |
+| Enabled (protocol) | The element is running in isolation mode because of a setting configured in the *protocol.xml* file, which applies to all elements that are using this protocol version. |
+| Enabled (element)  | The element is running in isolation mode because of a setting configured in the element itself. |
+| Enabled (DMA)      | The element is running in isolation mode because of a setting configured on DMA level, which applied to all elements that are using this protocol. |
 
 ## Changes
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Trending: SPI log entry containing the loading times of the trend graph labels will be added to SLClient.txt [ID 42514]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When you open a trend graph, from now on, an SPI entry containing the loading times of the trend graph labels (including metadata like loaded trend data points, etc.) will be added to the *SLClient.txt* log file.
+
+#### Matrices: All input and output options will now be reset before a matrix update is applied [ID 42585]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When a matrix was updated, up to now, only input and output options included in the updated would be changed. Options not included in the updated would be left unchanged.
+
+From now on, when a matrix is updated, all input and output options will first be reset to their default values before the changes included in the update are applied.
 
 ### Fixes
 

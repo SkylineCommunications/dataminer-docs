@@ -138,7 +138,7 @@ When a trend graph contained multiple overlapping change point areas, up to now,
 
 When you create or update an element, you will now be able to indicate that the element is not allowed to swarm to another host.
 
-To do so, go to the *Advanced* section, and enable to *Block Swarming* option. By default, this option will be set to false.
+To do so, go to the *Advanced* section, and enable the *Block Swarming* option. By default, this option will be set to false.
 
 If you try to swarm an element of which the *Block Swarming* option is set to true, then the error message *Element is not allowed to swarm (blocked)* will be displayed.
 

@@ -45,7 +45,7 @@ For more detailed examples, refer to [Configuring a script to swarm elements](xr
 
 ## Blocking elements from being swarmed
 
-From DataMiner 10.5.5/10.6.0 onwards<!--RN 42535-->, it is possible to block specific elements from being swarmed.
+From DataMiner 10.5.5/10.6.0 onwards<!--RN 42535 + 42536-->, it is possible to block specific elements from being swarmed.
 
 To do so, when you create or edit an element in DataMiner Cube, expand the *Advanced element settings* section and select *Block Swarming*.
 

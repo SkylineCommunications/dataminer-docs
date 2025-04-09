@@ -225,11 +225,13 @@ If your system is pushing too much load for a specific data type, that data type
 
 From now on, when this happens, an alarm will be generated with information about the data type or types that are being throttled.
 
-#### GQI DxM will now shut down faster [ID 42428]
+#### GQI DxM will now shut down faster [ID 42428] [ID 42621]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
+
+Also, before the GQI DxM gets installed or upgraded, the DataMiner GQI service and all its child processes will now be stopped to prevent issues due to certain files being locked.
 
 #### SLAnalytics - Relational anomaly detection: Input validation when adding a new parameter group [ID 42429]
 
@@ -354,6 +356,12 @@ As DataMiner IDP no longer requires neither a separate license nor an Indexing E
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 From now on, an anomaly alarm event will be generated when a change point with a change point type for which no anomaly monitoring was configured, is updated to a change point with a change point type for which anomaly monitoring is configured.
+
+#### Enhanced performance when logging in using external authentication via SAML [ID 42668]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.5 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when logging in using external authentication via SAML.
 
 ### Fixes
 

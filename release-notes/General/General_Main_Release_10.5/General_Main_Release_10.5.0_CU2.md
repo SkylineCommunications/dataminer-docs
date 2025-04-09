@@ -81,11 +81,13 @@ If your system is pushing too much load for a specific data type, that data type
 
 From now on, when this happens, an alarm will be generated with information about the data type or types that are being throttled.
 
-#### GQI DxM will now shut down faster [ID 42428]
+#### GQI DxM will now shut down faster [ID 42428] [ID 42621]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
+
+Also, before the GQI DxM gets installed or upgraded, the DataMiner GQI service and all its child processes will now be stopped to prevent issues due to certain files being locked.
 
 #### Enhanced performance when restarting HTTP elements in a timeout state [ID 42443]
 
