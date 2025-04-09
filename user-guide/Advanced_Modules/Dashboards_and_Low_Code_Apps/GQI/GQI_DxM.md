@@ -12,10 +12,6 @@ Running GQI as an extension module has several advantages:
 - **Load balancing**: With the DxM, GQI operations can distribute system load more effectively across multiple DataMiner Agents within a DataMiner System (DMS).
 - **Resource visibility**: Running each extension in a separate process provides greater insight into its resource consumption, allowing you to monitor every extension individually.
 - **Improved dependency resolving**: Using the DxM simplifies and optimizes the resolution of DLL dependencies, preventing conflicts.
-
-  > [!NOTE]
-  > From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!--RN 42468-->, GQI extension scripts can also resolve dependencies from the *C:\Skyline DataMiner\Scripts\Libraries* folder. If an Automation script library has its own dependencies, these must be explicitly included as dependencies in the GQI extension script.
-
 - **Performance enhancements**: The GQI DxM leverages the latest advancements in .NET 8 for improved speed and efficiency, uses proto-first communication, prevents SLNet throttling, etc.
 
 ## Installation
