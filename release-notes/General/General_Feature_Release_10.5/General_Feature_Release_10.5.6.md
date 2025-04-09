@@ -62,6 +62,12 @@ When a protocol version was overwritten while an element using that protocol ver
 
 When, within a redundancy group, a matrix parameter in a derived element was updated, in some cases, that same matrix parameter would incorrectly not get updated in the source element (and vice versa).
 
+#### Problem with CloudFeed module during startup [ID 42599]
+
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+
+When, during startup, the *CloudFeed* module was not able to contact the *CloudGateway* module, in some cases, it would stop working.
+
 #### Problem when starting an element with DCF connections towards a previously deleted element [ID 42632]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
