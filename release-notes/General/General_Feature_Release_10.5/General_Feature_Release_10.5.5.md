@@ -225,7 +225,7 @@ If your system is pushing too much load for a specific data type, that data type
 
 From now on, when this happens, an alarm will be generated with information about the data type or types that are being throttled.
 
-#### GQI DxM will now shut down faster [ID 42428]
+#### GQI DxM will now shut down faster [ID 42428] [ID 42621]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 

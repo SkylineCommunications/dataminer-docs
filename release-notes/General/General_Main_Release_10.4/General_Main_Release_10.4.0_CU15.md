@@ -48,3 +48,13 @@ When, within a redundancy group, a matrix parameter in a derived element was upd
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 
 When an element that had DCF connections towards a previously deleted element was started, in some cases, an "unhandled exception" notice could appear in the Alarm Console. Also, as a result of the exception, the element's connection information would not be available in SLNet and DataMiner Cube, and no connection lines would be displayed for the connections in question.
+
+#### SNMP forwarding: Inconsistent messages in alarm storm information events [ID 42642]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+SNMP managers generate an information event each time an alarm storm starts and ends.
+
+Up to now, the word "SNMP manager" would not be spelled consistently in both messages. The information event announcing the start of an alarm storm would start with `Alarmstorm for SNMP Manager: ...`, while the information event announcing the end of an alarm storm would start with `Alarmstorm for SNMPManager: ...`
+
+From now on, both information events will start with `Alarmstorm for SNMP Manager: ...`
