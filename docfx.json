@@ -75,7 +75,6 @@
       {
         "files": [
           "images/**",
-          "fonts/**",
           "dataminer-overview/images/**",
           "solutions/images/**",
           "user-guide/images/**",
