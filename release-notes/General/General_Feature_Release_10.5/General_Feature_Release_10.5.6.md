@@ -56,6 +56,19 @@ When a protocol version was overwritten while an element using that protocol ver
 
 `Unexpected Exception [Exception from HRESULT: 0x8004024C]: The element is unknown.`
 
+#### Problem when an element was swarmed immediately after being created or after having its state changed to Active, Stopped, Paused, etc. [ID 42381]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element was swarmed immediately after being created or after having its state changed to "Active", "Stopped", "Paused", etc., in some rare cases, SLNet modules could end up being confused about where the element was being hosted.
+
+#### Problem with SLAutomation when a Notify method was called shortly after an Automation script had finished [ID 42465]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+When a Notify method was called shortly after an Automation script had finished, in some cases, the SLAutomation process could stop working.
+
 #### Redundancy groups: Matrix parameter updates in a derived element would incorrectly not get applied in the source element (and vice versa) [ID 42598]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->

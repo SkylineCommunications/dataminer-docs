@@ -292,6 +292,12 @@ From now on, if the maximum cache size is reached, old model information might g
 
 `Max cache size reached during prefetch of the cache, potential data loss`
 
+#### Problem with SLAutomation when a Notify method was called shortly after an Automation script had finished [ID 42465]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+When a Notify method was called shortly after an Automation script had finished, in some cases, the SLAutomation process could stop working.
+
 #### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
 
 <!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
