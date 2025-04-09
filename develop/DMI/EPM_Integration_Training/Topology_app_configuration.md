@@ -4,8 +4,16 @@ uid: Topology_app_configuration
 
 # Topology app configuration
 
-> [!IMPORTANT]
-> The Topology app is currently only available in preview. To enable this feature, activate the *CPEIntegration* soft-launch option. See [Soft-launch options](xref:SoftLaunchOptions).
+> [!NOTE]
+> The Topology app is available from DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards.<!-- RN 42221 --> In earlier DataMiner versions, it is available in preview if the *CPEIntegration* soft-launch option is enabled. See [Soft-launch options](xref:SoftLaunchOptions).
+
+## Prerequisites
+
+From DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards, multiple front-end EPM Manager elements are supported within one DataMiner System. However, because of this, the following prerequisites apply if you want to use the Topology app from this version onwards:
+
+- The system type for each front-end manager must be unique, as it is the system type that will be used to trace EPM objects back to their respective front-end managers. If you for example have an "HFC" and an "IOT" front-end EPM Manager in your system, these cannot both have a "Location" cell. Instead, you can prefix this, e.g. "HFC_Location" and "IOT_Location", respectively.
+
+- The front-end and back-end EPM Manager elements for the same technology must use the same DataMiner protocol and version.
 
 ## Front-end element configuration
 
@@ -13,7 +21,7 @@ To have an EPM tab in the Surveyor in Cube, the DMS must know which element is t
 
 To configure this, add a parameter of type "double" named "ElementManagerType" to the protocol of the front-end manager, and set its value to "1".
 
-This feature is supported from DataMiner 9.6.7 onwards<!-- RN 21711 -->.
+<!-- Supported from DataMiner 9.6.7 onwards - RN 21711 -->.
 
 > [!NOTE]
 > This parameter check will only be done on elements that are running a protocol where the Protocol.Display@type attribute has been set to "element manager".

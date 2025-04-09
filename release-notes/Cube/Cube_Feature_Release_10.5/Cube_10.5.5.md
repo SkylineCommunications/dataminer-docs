@@ -14,7 +14,7 @@ uid: Cube_Feature_Release_10.5.5
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [EPM integration now fully available in DataMiner Cube [ID 42221]](#epm-integration-now-fully-available-in-dataminer-cube-id-42221)
 
 ## New features
 
@@ -27,34 +27,64 @@ Up to now, when you stopped and restarted an SNMP manager, all open alarms would
 > [!NOTE]
 > This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of System Center.
 
-#### EPM functionality is now fully integrated in DataMiner Cube [ID 42221]
+#### EPM integration now fully available in DataMiner Cube [ID 42221]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-All EPM functionality is now fully integrated in the UI of DataMiner Cube. Up to now, this required the *CPEIntegration* soft-launch option to be enabled.
+All EPM integration functionality that previously required the *CPEIntegration* soft-launch option is now fully available in DataMiner Cube. This allows you to access EPM data directly through the Cube UI, instead of only via an EPM Manager element. The data is available via a dedicated app, but can also be accessed via the Surveyor or the Alarm Console.
 
-In the sidebar, you can now open the *Topology* pane, which allows you to select a topology chain, drill down to any of the topology level in that chain. On top of that, all EPM-related data can now also be accessed via the Surveyor or the Alarm Console.
+#### Topology app
 
-##### Configuration
+The most prominent new EPM integration feature is the **Topology app**. If your system contains at least one correctly configured EPM Manager element, this app becomes available via a button in the Cube sidebar. Clicking the button will open a pane where you can select the front-end EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the selection in the Topology app will also be updated to match the displayed card.
 
-1. Make sure the DMS contains at least one EPM frontend manager element.
+![Topology app](~/user-guide/images/EPMIntegration_Topology_app.png)
+
+To make sure this app is available, the following configuration is needed:
+
+1. Make sure the DMS contains at least one front-end EPM Manager element.
 
    For DataMiner Cube to detect these elements, they should be active, the *type* attribute of the *Display* tag in their connector should be set to "element manager", and they should contain a parameter named *ElementManagerType* set to 1. Also, their name should preferably start with "FE".
 
-   Each EPM frontend manager element will describe a topology chain and its associated filters.
+   Each front-end EPM Manager element will describe a topology chain and its associated filters.
 
-1. Go to *System Center > System settings > EPM config*, and add all EPM frontend manager element(s) to the list.
+1. Go to *System Center* > *System settings* > *EPM config*, and add the front-end EPM Manager elements to the list.
 
-   In the *Topology* pane, the *Topology chain* selector will now contain all topology chains configured in each of the EPM frontend manager elements you added to the list.
+   In the Topology app, you will now be able to select the front-end managers and the corresponding topology chains.
 
-Up to now, it was only allowed to have one single EPM frontend manager element per DataMiner System. From now on, one DataMiner System can have multiple EPM frontend manager elements.
+##### System type and system name configuration
+
+For much of the EPM integration functionality, the system type and system name must be configured in EPM Manager protocols. The system type is configured with the name attribute of the *Topologies.Topology.Cell* tag, and the system name is configured with the *columnPid* attribute of the *Topologies.Topology.Cell.Exposer.LinkedIds.LinkedId* tag. For example, in the configuration below, *Amplifier* is the system type, and the system name is indicated by the specified column PID:
+
+```xml
+<Topologies>
+   <Topology>
+      <Cell name="Amplifier" table="500">
+         <Exposer enabled="true">
+            <LinkedIds>
+               <LinkedId columnPid="1001">1000</LinkedId>
+            </LinkedIds>
+         </Exposer>
+      </Cell>
+   </Topology>
+</Topologies>
+```
+
+This makes the *System Type* and *System Name* properties available in the system for e.g. alarm filtering, and it also allows you to link Visio shapes to EPM objects based on these properties using the *SystemType* and *SystemName* shape data fields.
+
+In addition, you can link views to EPM rows by using the [viewImpact](xref:ColumnOptionOptionsOverview#viewimpact) table column option in the view tables of the EPM Manager protocol, and setting the *System Type* and *System Name* properties on the views. In the Surveyor, a circle will be added to the alarm icon for the view, showing the highest alarm severity of objects within the view:
+
+![View impact icon in the Surveyor](~/develop/images/EPM_Surveyor_alarm_icon.png)
+
+##### Configuration of multiple front-end manager elements
+
+Previously, the *CPEIntegration* soft-launch feature only allowed one front-end manager element. Now, multiple front-end elements are supported in one DataMiner System.
+
+To configure this, **make sure the system type for each front-end manager is unique**, as it is the system type that now will be used to trace EPM objects back to their respective front-end managers. If you for example have an "HFC" and an "IOT" front-end EPM Manager in your system, these cannot both have a "Location" cell. Instead, you can prefix this, e.g. "HFC_Location" and "IOT_Location", respectively.
+
+In addition, the front-end and back-end elements for the **same technology** must use the **same DataMiner protocol and version**, as otherwise this may result in incorrect linking in the DataMiner Cube UI.
 
 > [!IMPORTANT]
->
-> - Each of the frontend manager connectors must have a different *SystemType*.
-> - All frontend manager elements must use the same version of the same connector.
-> - All backend manager elements must use the same version of the same connector.
-> - All EPM objects must be linked using both *SystemName* and *SystemType*. For example, in Visual Overview, you can link a shape to an EPM object by means of the *SystemName* and *SystemType* data fields.
+> Because of this change, some **configuration changes may be required in systems that were previously using the *CPEIntegration* soft-launch option**. Some existing solutions may not have a unique system type per EPM Manager protocol, or they may have front-end and back-end manager elements with different protocols or protocol versions, which will no longer work correctly.
 
 #### Sharing the link to the current Cube session with other users [ID 42389] [ID 42524]
 
