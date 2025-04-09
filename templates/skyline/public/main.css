@@ -6,8 +6,7 @@
   --color-toc-hover: #4c4c4c;
   --color-background: #ffffff;
   --color-background-subnav: #f2f2f2;
-  --color-background-dark: #172554;
-  /* --color-background-dark: #00517D; */
+  --color-background-dark: #00517D;
   --color-background-table-alt: #f9f9f9;
   /* --color-background-quote: #69696e; */
   --color-background-quote: #747474;
@@ -58,8 +57,7 @@ html[data-bs-theme='dark'] {
   --color-toc-hover: #fff;
   --color-background: #2d2d30;
   --color-background-subnav: #3a3a3e;
-  --color-background-dark: #172554;
-  /* --color-background-dark: #013c5c; */
+  --color-background-dark: #013c5c;
   --color-background-table-alt: #212123;
   /* --color-background-quote: #69696e; */
   --color-background-quote: #bbb;
@@ -105,8 +103,7 @@ html[data-bs-theme='dark'] {
 
 html,
 body {
-  font-family: "Inter", sans-serif;
-  /* font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif; */
+  font-family: Segoe UI, SegoeUI, Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -126,7 +123,6 @@ h2,
 .h2,
 h3,
 .h3 {
-  font-family: "SkylineSans", sans-serif;
   font-weight: 600;
 }
 
@@ -136,7 +132,6 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "SkylineSans", sans-serif;
   font-weight: 600;
 }
 
@@ -171,10 +166,6 @@ h5 {
   font-weight: 600;
   font-size: 20px;
   padding: 10px 0px;
-}
-
-h5.border-bottom {
-  font-weight: 400;
 }
 
 h6 {
@@ -493,19 +484,6 @@ article ul li, article ol li {
   margin-bottom: 1px;
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/Inter-VariableFont_opsz,wght.ttf");
-  font-weight: 400 800;
-  font-display: swap;
-}
- 
-@font-face {
-  font-family: "SkylineSans";
-  src: url("/fonts/SkylineSans-Black.ttf");
-  font-weight: 900;
-}
-
 @media (min-width: 769px) and (max-width: 991px) {
 	.sidefilter {
 	  width: 33.3%;
@@ -550,14 +528,6 @@ article ul li, article ol li {
     .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
         max-width: 1768px;
     }
-}
-
-.navbar-brand {
-  width: 200px; 
-}
-
-.nav-item {
-  display: none;
 }
 
 a.backtotoplink
