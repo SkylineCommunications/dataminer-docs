@@ -21,21 +21,24 @@ string
 
   Example: When the Minor High tag contains 50, the alarm limit will be the nominal value increased with 50% of its value.
 
-  You can normalize an alarm by (optionally) adding two parameters, separated by a comma.
+  You can normalize an alarm by (optionally) adding three parameters, formatted as `<Alarm type="absolute/relative:NOMINAL_VALUE_PID,FACTOR_PID,OVERRIDE_PID">`.
 
   - First parameter: The ID of the parameter that holds the nominal value. This can be a dynamic table parameter or a normal parameter. In case of a dynamic table parameter, each row will be compared with the nominal value found in the same row of the specified column.
   - Second parameter (optional): The ID of the parameter that holds the value by which to multiply the nominal value.
+  - Third parameter (optional): From DataMiner 10.5.6/10.5.0(CU3)/10.4.0(CU15) onwards an override parameter ID can be specified which is used in combination with smart baseline, the value of the override parameter will be copied to the nominal parameter when smart baseline calculation happens. This parameter ID can be a column in the same table as the parameter for this tag or a standalone parameter. Is is advised to apply the same ranges to the override parameter as the nominal value parameter to avoid surprises.
 
 Prior to DataMiner 10.1.9, when a parameter has a (smart) baseline value specified in the protocol, it is not possible to update that (smart) baseline value in Cube's alarm template baseline editor. However, from DataMiner 10.1.9 (RN 30388, RN 30461) onwards, the alarm template baseline editor allows you to configure (smart) baselines specified in protocols.
 
 > [!NOTE]
 >
 > - The alarm template baseline editor will not allow you to change the monitoring type (Normal, Relative, Absolute, or Rate).
-> - When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. Although you should specify a read parameter (e.g. `<Alarm type="absolute:NOMINAL_VALUE_PID,FACTOR_PID">`), make sure that read parameter has an associated write parameter. Otherwise, it will not be possible to update the baseline value stored in that parameter. Also, the parameter in which the baseline value is stored must not have any restrictions (e.g. step size, number of decimals, high/low range, etc.), and the Interprete.RawType tag should not be set to [unsigned number](xref:Protocol.Params.Param.Interprete.RawType#unsigned-number).
+> - When a baseline is specified in a protocol, the baseline value is stored in a separate parameter. The parameter in which the baseline value is stored must not have any restrictions (e.g. step size, number of decimals, high/low range, etc.), and the Interprete.RawType tag should not be set to [unsigned number](xref:Protocol.Params.Param.Interprete.RawType#unsigned-number).
 > - The smart baseline algorithm may sometimes produce unexpected results with respect to parameter ranges. For example, consider a parameter that consistently fluctuates between 0 and 100. The baseline is an approximation of your data, so it might sometimes slightly dip below 0 or slightly exceed 100. To address this, we recommend configuring appropriate ranges for the parameter within the protocol. The algorithm will respect these limits during baseline calculations. For instance, if a lower range of 0 is defined in the protocol, any baseline value calculated below 0 will automatically be capped at 0.
 
 ## Examples
 
 ```xml
 <Alarm Type="absolute:2214,108">
+<Alarm Type="absolute:2214,108,2311">
+<Alarm Type="absolute:2214,,2311">
 ```
