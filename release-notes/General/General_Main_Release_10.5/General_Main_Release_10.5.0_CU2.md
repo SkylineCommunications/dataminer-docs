@@ -87,6 +87,8 @@ From now on, when this happens, an alarm will be generated with information abou
 
 Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
 
+Also, before the GQI DxM gets installed or upgraded, the DataMiner GQI service and all its child processes will now be stopped to prevent issues due to certain files being locked.
+
 #### Enhanced performance when restarting HTTP elements in a timeout state [ID 42443]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->

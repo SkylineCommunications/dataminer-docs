@@ -231,6 +231,8 @@ From now on, when this happens, an alarm will be generated with information abou
 
 Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
 
+Also, before the GQI DxM gets installed or upgraded, the DataMiner GQI service and all its child processes will now be stopped to prevent issues due to certain files being locked.
+
 #### SLAnalytics - Relational anomaly detection: Input validation when adding a new parameter group [ID 42429]
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
