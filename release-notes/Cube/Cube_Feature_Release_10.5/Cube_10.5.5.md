@@ -12,11 +12,121 @@ uid: Cube_Feature_Release_10.5.5
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.5](xref:General_Feature_Release_10.5.5).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.5](xref:Web_apps_Feature_Release_10.5.5).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
+
+#### EPM integration now fully available in DataMiner Cube [ID 22125] [ID 24896] [ID 26002] [ID 26232] [ID 29748] [ID 42221]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
+
+All EPM integration functionality that previously required the *CPEIntegration* soft-launch option is now fully available in DataMiner Cube. This allows you to access EPM data directly through the Cube UI, instead of only via an EPM Manager element. The data is available via a dedicated app, but can also be accessed via the Surveyor or the Alarm Console.
+
+##### Topology app
+
+The most prominent new EPM integration feature is the Topology app. If your system contains at least one correctly configured EPM Manager element (as detailed below), this app becomes available via a button in the Cube sidebar. Clicking the button will open a pane where you can select the front-end EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the filter selection will be updated to match the displayed card.
+
+![Topology app](~/user-guide/images/EPMIntegration_Topology_app.png)
+
+To make sure the Topology app is available, the following configuration is needed:
+
+1. Make sure the DMS contains at least one front-end EPM Manager element.
+
+   For DataMiner Cube to detect these elements, they should be active, the *type* attribute of the *Display* tag in their connector should be set to "element manager", and they should contain a parameter named *ElementManagerType* set to 1. Also, their name should preferably start with "FE".
+
+   Each front-end EPM Manager element will describe a topology chain and its associated filters.
+
+1. Go to *System Center* > *System settings* > *EPM config*, and add the front-end EPM Manager elements to the list.
+
+   In the Topology app, you will now be able to select the front-end managers and the corresponding topology chains.
+
+##### EPM masking info<!-- 26002 -->
+
+If an EPM object in the topology is masked, you can get information on who masked it and when via the *Masking info* option in the hamburger menu of the Topology app:
+
+![Masking info option](~/user-guide/images/EPMIntegration_Masking_info.png)
+
+##### System Type and System Name properties
+
+For much of the EPM integration functionality, the system type and system name must be configured in EPM Manager protocols. The system type is configured with the name attribute of the *Topologies.Topology.Cell* tag, and the system name is configured with the *columnPid* attribute of the *Topologies.Topology.Cell.Exposer.LinkedIds.LinkedId* tag. For example, in the configuration below, *Amplifier* is the system type, and the system name is indicated by the specified column PID:
+
+```xml
+<Topologies>
+   <Topology>
+      <Cell name="Amplifier" table="500">
+         <Exposer enabled="true">
+            <LinkedIds>
+               <LinkedId columnPid="1001">1000</LinkedId>
+            </LinkedIds>
+         </Exposer>
+      </Cell>
+   </Topology>
+</Topologies>
+```
+
+This makes the *System Type* and *System Name* properties available in the system for e.g. alarm filtering, and it also allows you to link Visio shapes to EPM objects based on these properties using the *SystemType* and *SystemName* shape data fields.<!-- 24896 -->
+
+In addition, you can link views to EPM rows by using the [viewImpact](xref:ColumnOptionOptionsOverview#viewimpact) table column option in the view tables of the EPM Manager protocol, and setting the *System Type* and *System Name* properties on the views. In the Surveyor, a circle will be added to the alarm icon for the view, showing the highest alarm severity of objects within the view:
+
+![View impact icon in the Surveyor](~/develop/images/EPM_Surveyor_alarm_icon.png)
+
+##### Support for multiple front-end manager elements
+
+Previously, the *CPEIntegration* soft-launch feature only allowed one front-end manager element. Now, multiple front-end elements are supported in one DataMiner System.
+
+To configure this, **make sure the system type for each front-end manager is unique**, as it is the system type that now will be used to trace EPM objects back to their respective front-end managers. If you for example have an "HFC" and an "IOT" front-end EPM Manager in your system, these cannot both have a "Location" cell. Instead, you can prefix this, e.g. "HFC_Location" and "IOT_Location", respectively.
+
+In addition, the front-end and back-end elements for the **same technology** must use the **same DataMiner protocol and version**, as otherwise this may result in incorrect linking in the DataMiner Cube UI.
+
+If these conditions are met, to start using the front-end EPM Managers, first define them in System Center via *System settings* > *EPM config* or via the cogwheel icon in the Topology app.
+
+> [!IMPORTANT]
+> Because of this change, some **configuration changes may be required in systems that were previously using the *CPEIntegration* soft-launch option**. Some existing solutions may not have a unique system type per EPM Manager protocol, or they may have front-end and back-end manager elements with different protocols or protocol versions, which will no longer work correctly.
+
+##### Customization of EPM integration data pages
+
+By default, the table and column parameters linked to an EPM object will automatically be positioned on data pages. The name of a page will match the description of the table, and the parameters will be displayed in the order defined in the column definitions of the table, in two columns.
+
+You can change the name of a page by giving the table a position on a page that has a name prefixed with `CPEIntegration_`, e.g. *CPEIntegration_MyCustomPage*. To hide a complete table, add a table position on the special page *CPEIntegration_Hidden*. Note that pages with the `CPEIntegration_` prefix will not be shown on regular element cards.
+
+If the `CPEIntegration_` prefix is added to data pages in an EPM protocol, you can also apply a custom order for these pages in the *pageOrder* attribute of the *Display* tag in the protocol. For example:<!-- 29748 -->
+
+```xml
+<Display type="element manager" pageOptions="*;CPEOnly" defaultPage="General" pageOrder="General;Configurations;----------;CPEIntegration_Data/General;CPEIntegration_Data/Fiber;CPEIntegration_Data/Household;CPEIntegration_Data/Service Usage"/>
+```
+
+##### Custom Alarm Console hyperlinks to EPM object cards<!-- 22125 -->
+
+It is now possible to configure custom hyperlinks for the Alarm Console context menu that will open EPM object cards. This is configured in *Hyperlinks.xml*, a similar way to the existing hyperlinks feature to open element, view, or service cards. However, the type for these new hyperlinks should be set to "OpenCPE".
+
+For example, to add an "Open OLT" hyperlink to the Alarm Console context menu to open the EPM card of the object that generated the selected alarm, you can add the following configuration in the file:
+
+`<HyperLink  name="Open OLT" menu="root" type="OpenCPE" version="2" id="18">:visual:pagename</HyperLink>`.
+
+Hyperlinks of this type can also be shown or hidden based on a filter configured with the *filterElement* attribute. For example:
+
+`<HyperLink filterElement="AlarmEventMessage.PropertiesDict.&quot;System Type&quot;[String] == 'OLT'" name="Open OLT" menu="root" type="OpenCPE" version="2" id="18">[EID]:visual:qam ds</HyperLink>`.
+
+##### Agent caching configuration<!-- 26232 -->
+
+Typically, when an exposed topology item is requested, every Agent in the cluster is requested to verify whether it contains data for that topology item, while typically only two to three Agents will actually contain that item. In a cluster with many Agents, this increases unnecessary remote calls and adds an unnecessary load on the Agents.
+
+In such a case, you can now make an Agent store a full cache of where topology items are stored in the cluster, so that when this Agent (or an Agent connected to this Agent) receives a request for a topology item, only the Agents actually containing the data for the item will need to be contacted.
+
+There is no limit as to how many Agents can hold such a cache, but keep in mind that depending on how many topology items are exposed in the system, this may increase the memory footprint of SLNet, and it will also add some extra syncing between Agents and forwarding of data from SLElement to SLNet when provisioning occurs.
+
+This configuration will be stored in the *TopologyItemHostingCacheState* element of *DataMiner.xml*, for example:
+
+```xml
+<DataMiner>
+...
+   <TopologyItemHostingCacheState>true</TopologyItemHostingCacheState>
+...
+</DataMiner>
+```
+
+To enable this cache, in SLNetClientTest tool, after you have connected to the DMA, go to *Advanced* > *CPE* > *TopologyItemHostingCache*. You can then right-click any of the listed Agents to enable or disable the cache.
+
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 #### System Center - SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41885]
 
@@ -26,35 +136,6 @@ Up to now, when you stopped and restarted an SNMP manager, all open alarms would
 
 > [!NOTE]
 > This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of System Center.
-
-#### EPM functionality is now fully integrated in DataMiner Cube [ID 42221]
-
-<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
-
-All EPM functionality is now fully integrated in the UI of DataMiner Cube. Up to now, this required the *CPEIntegration* soft-launch option to be enabled.
-
-In the sidebar, you can now open the *Topology* pane, which allows you to select a topology chain, drill down to any of the topology level in that chain. On top of that, all EPM-related data can now also be accessed via the Surveyor or the Alarm Console.
-
-##### Configuration
-
-1. Make sure the DMS contains at least one EPM frontend manager element.
-
-   For DataMiner Cube to detect these elements, they should be active, the *type* attribute of the *Display* tag in their connector should be set to "element manager", and they should contain a parameter named *ElementManagerType* set to 1. Also, their name should preferably start with "FE".
-
-   Each EPM frontend manager element will describe a topology chain and its associated filters.
-
-1. Go to *System Center > System settings > EPM config*, and add all EPM frontend manager element(s) to the list.
-
-   In the *Topology* pane, the *Topology chain* selector will now contain all topology chains configured in each of the EPM frontend manager elements you added to the list.
-
-Up to now, it was only allowed to have one single EPM frontend manager element per DataMiner System. From now on, one DataMiner System can have multiple EPM frontend manager elements.
-
-> [!IMPORTANT]
->
-> - Each of the frontend manager connectors must have a different *SystemType*.
-> - All frontend manager elements must use the same version of the same connector.
-> - All backend manager elements must use the same version of the same connector.
-> - All EPM objects must be linked using both *SystemName* and *SystemType*. For example, in Visual Overview, you can link a shape to an EPM object by means of the *SystemName* and *SystemType* data fields.
 
 #### Sharing the link to the current Cube session with other users [ID 42389] [ID 42524]
 

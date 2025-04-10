@@ -18,7 +18,7 @@ To deploy the xPON branch of the EPM Solution:
 
    - You have access to the server with the built-in Administrator account. This is required to be able to install the solution.
 
-1. Make sure the **CPEIntegration** [soft-launch option](xref:SoftLaunchOptions) is enabled.
+1. If you are using a DataMiner Cube version prior to DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->, make sure the **CPEIntegration** [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
 1. Place the **EPM package** somewhere on the server (in a different folder than C:\\Skyline DataMiner) and unzip it.
 
