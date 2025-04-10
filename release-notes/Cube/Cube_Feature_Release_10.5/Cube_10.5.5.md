@@ -51,7 +51,7 @@ To make sure this app is available, the following configuration is needed:
 
    In the Topology app, you will now be able to select the front-end managers and the corresponding topology chains.
 
-##### System type and system name configuration
+##### System Type and System Name properties
 
 For much of the EPM integration functionality, the system type and system name must be configured in EPM Manager protocols. The system type is configured with the name attribute of the *Topologies.Topology.Cell* tag, and the system name is configured with the *columnPid* attribute of the *Topologies.Topology.Cell.Exposer.LinkedIds.LinkedId* tag. For example, in the configuration below, *Amplifier* is the system type, and the system name is indicated by the specified column PID:
 
@@ -75,7 +75,7 @@ In addition, you can link views to EPM rows by using the [viewImpact](xref:Colum
 
 ![View impact icon in the Surveyor](~/develop/images/EPM_Surveyor_alarm_icon.png)
 
-##### Configuration of multiple front-end manager elements
+##### Support for multiple front-end manager elements
 
 Previously, the *CPEIntegration* soft-launch feature only allowed one front-end manager element. Now, multiple front-end elements are supported in one DataMiner System.
 
