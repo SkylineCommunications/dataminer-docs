@@ -560,3 +560,16 @@ If multiple settings indicate that the element should be running in isolation mo
 >
 > - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
 > - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
+
+#### New NotifyProtocol call NT_CLEAR_PARAMETER can now be used instead of ClearAllKeys() [ID 42397]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+A new NotifyProtocol call *NT_CLEAR_PARAMETER* can now be used to clear tables and single parameters.
+
+Up to now, in order to clear a table, you had to use the SLProtocol method `ClearAllKeys()`. That method would first retrieve all primary keys from the table using an *NT_GET_INDEXES* (NotifyProtocol 168) call, and when there was at least one primary key present, it would then perform an *NT_DELETE_ROW* (NotifyProtocol 156) call to remove all rows.
+
+> [!NOTE]
+>
+> - *NT_CLEAR_PARAMETER* cannot be used to clear table columns.
+> - This new NotifyProtocol method can be invoked from within a QAction by using the protocol.ClearParameter(<paramId>) function.

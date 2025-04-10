@@ -34,6 +34,20 @@ uid: General_Feature_Release_10.5.6
 
 ### Enhancements
 
+#### New NotifyProtocol call NT_CLEAR_PARAMETER can now be used instead of ClearAllKeys() [ID 42368] [ID 42397]
+
+<!-- RN 42368: MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+<!-- RN 42397: MR 10.6.0 - FR 10.5.6 -->
+
+A new NotifyProtocol call *NT_CLEAR_PARAMETER* can now be used to clear tables and single parameters.
+
+Up to now, in order to clear a table, you had to use the SLProtocol method `ClearAllKeys()`. That method would first retrieve all primary keys from the table using an *NT_GET_INDEXES* (NotifyProtocol 168) call, and when there was at least one primary key present, it would then perform an *NT_DELETE_ROW* (NotifyProtocol 156) call to remove all rows.
+
+> [!NOTE]
+>
+> - *NT_CLEAR_PARAMETER* cannot be used to clear table columns.
+> - This new NotifyProtocol method can be invoked from within a QAction by using the protocol.ClearParameter(<paramId>) function.
+
 #### SLAnalytics - Relational anomaly detection: Upon deletion of a parameter group all open suggestion events associated with that group will be cleared [ID 42602]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
