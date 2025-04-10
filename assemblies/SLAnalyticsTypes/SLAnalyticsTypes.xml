@@ -1,0 +1,2381 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SLAnalyticsTypes</name>
+    </assembly>
+    <members>
+        <member name="M:Skyline.DataMiner.Analytics.Aggregation.AggregationRecordExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.AlarmFocus.AlarmFocusEvent.CacheKey">
+            <summary>
+            Key used when maintaining a cache of event messages
+            </summary>
+            <value>[hostingAgentID]/[dmaid]/[elementid]/[rootkey]</value>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.AlarmFocus.AlarmFocusEvent.ToCacheKey(System.Int32,System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Generates a cache key with the given parameters
+            </summary>
+            <param name="hostingAgentID">ID of the agent hosting the alarm</param>
+            <param name="dataminerID">DataMiner Agent ID of element.</param>
+            <param name="elementID">Element ID.</param>
+            <param name="alarmRootID">Alarm rootkey.</param>
+            <returns>a string representing the cache key</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.AlarmFocus.AlarmFocusEvent.ToCacheKey(System.Int32,Skyline.DataMiner.Net.AlarmTreeID)">
+            <summary>
+            Generates a cache key with the given parameters
+            </summary>
+            <param name="hostingAgentID">ID of the agent hosting the alarm</param>
+            <param name="treeID">treeID of the alarm</param>
+            <returns></returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.AlarmFocus.AlarmFocusEvent.ToCacheKey(System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Generates a cache key with the given parameters
+            </summary>
+            <param name="hostingAgentID">ID of the agent hosting the alarm</param>
+            <param name="dataMinerID">DataMinerID of the element on which the alarm was generated</param>
+            <param name="alarmRootKey">Alarm rootkey.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.AlarmFocus.AlarmFocusRecordExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Analysis.AnalysisQuery">
+            <summary>
+            Represents a data aggregation as a result of a generic analysis
+            </summary> 
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Analysis.GetAnalysisMessage">
+            <summary>
+            Request for a generic analytics analysis of data, can be sent synchronously or asynchronously (recommended for Correlation Rules Analysis)
+            Returns a GetAnalysisResponseMessage
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Analysis.GetAnalysisMessage.Query">
+            <summary>
+            The data on which the analysis must be run
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Analysis.GetAnalysisMessage.AnalysisInfo">
+            <summary>
+            The type of analysis to be run and possible additional input
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Analysis.GetAnalysisResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Analytics.Analysis.GetAnalysisMessage"/>. 
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Arrows.ArrowWindowRecordExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Arrows.NotifyStateIconChangesMessage">
+            <summary>
+            SLAnalytics sends this message to SLNet to inject new StateIconChangeEvents
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Arrows.SetAnalyticsStateIconSubscriptionMessage">
+            <summary>
+            Request to manage subscriptions <see cref="T:Skyline.DataMiner.Analytics.Arrows.SetAnalyticsStateIconSubscriptionMessage"/> in order to 
+            register to get Analytics Icon updates.
+            
+            Note:
+                SLAnalytics always expects a vector string[] of keys, so not just a string Instance.
+                1) If the dmaid,eid or pid are negative, then only the instance "" is used. So for example,
+                if we receive (1,-1,-1,{"hello"}), then we interpret it as (1,-1,-1,{""}) (or equivalently (1,-1,-1,{}) and we will send arrows 
+                for dmaid==1, and all parameters with instance "" of all elements.
+                2) Else, if dmaid, eid and pid are all positive, then we send arrows for all the parameters
+                having those dmaid,eid and pid and having an instance mentioned in the Instances vector. If the
+                Instances vector however is empty, then all instances are allowed. So, if we get e.g. (1,1,1,{}),
+                we will send arrows for all instances of the parameter 1/1/1. If we get (1,1,1,{"Hello"}), we only send
+                an arrow for 1/1/1/"Hello".
+            
+            Todo:
+                SLNet sends a setanalyticsstateiconsubscriptionmessage for parameterid 127 when
+                I open the microsoft element. This parameter is a string...
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Arrows.SetAnalyticsStateIconSubscriptionMessage.Instances">
+            <summary>
+            Instance of the record (= Primary Key)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Arrows.SetAnalyticsStateIconSubscriptionMessage.Enabled">
+            <summary>
+             Specifies whether the subscription is set or not.
+             When set to true, one will start receiving .
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Arrows.SetAnalyticsStateIconSubscriptionResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Analytics.Arrows.SetAnalyticsStateIconSubscriptionMessage"/>. 
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Arrows.StateIconChangeEvent">
+            <summary>
+            Notification of change in the current state icons.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.State.Normal">
+            <summary>
+            Either a trend was correctly determined or we have a changepoint which was not anomalous. Draw in black.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.State.Deviating">
+            <summary>
+            Only in the case of a changepoint which was anomalous.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.State.Unavailable">
+            <summary>
+            Show no arrow as trend could not be correctly determined.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.Direction.Increase">
+            <summary>
+            Draw an arrow based on the type and direction.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.Direction.Decrease">
+            <summary>
+            Draw an arrow based on the type and direction.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.Direction.Stable">
+            <summary>
+            Draw a flat arrow.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.Type.Current">
+            <summary>
+            Trend icon with increase/decrease/stable. Hidden when state = unavailable.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.Type.Outlier">
+            <summary>
+            Changepoint.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.Type.LevelShift">
+            <summary>
+            Changepoint.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.Type.TrendChange">
+            <summary>
+            Changepoint.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.Type.VarianceChange">
+            <summary>
+            Changepoint.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Arrows.Type.FlatLine">
+            <summary>
+            Changepoint.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Arrows.StateIconInfo.ParameterKey">
+            <summary>
+            The parameter key associated to the state icon. Note that the display instance of the ParameterKey is never filled in.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointAlarmEntryRecord.ChangePointTime">
+            <summary>
+            EndTime of the change point
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointAlarmEntryRecordID.Source">
+            <summary>
+            Time when the changepoint was created (usually this is when it was first detected)
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.ChangePoints.ChangePointAlarmEntryRecordExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.ParameterKey">
+            <summary>
+            Parameter key (dmai,eid,pid,instance) on which the changepoint was detected
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.Source">
+            <summary>
+            the modelling approach which detected the changepoint
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.CreationTime">
+            <summary>
+            Time when the changepoint was created (usually this is when it was first detected)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.IDRef">
+            <summary>
+            identifier which is part of the (Cassandra) ChangePointRecordID
+            note: use the GUID ChangePointID to uniquely identify the ChangePointESRecord, the IDRef field was only 
+            added into the ChangePointESRecord to be able to link a ChangePointESRecord to its ChangePointRecord and
+            ChangePointEvent counterpart
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.ChangeType">
+            <summary>
+            Type of the Changepoint
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.StartTime">
+            <summary>
+            begin of the time interval in which the changepoint appears
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.EndTime">
+            <summary>
+            end of the time interval in which the changepoint appears
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.LastUpdate">
+            <summary>
+            time when the changepoint was last updated
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.Anomalous">
+            <summary>
+            Specifies whether the changepoint is considered anomalous
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.Severity">
+            <summary>
+            A score that defines how strong a certain change is classified according to the data model
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.AnomalySignificance">
+            <summary>
+            A score that defines how significant a certain change is w.r.t. the changepoint history of the parameter
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.StartValue">
+            <summary>
+            Depends on the type of changepoint (e.g., levelshift: actual value before the level shift)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.EndValue">
+            <summary>
+            Depends on the type of changepoint (e.g., levelshift: actual value after the level shift)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointESRecord.IsIncrease">
+            <summary>
+            True for level increase, trend increase, variance increase, upwards outlier spike
+            False for level decrease, trend decreasee, variance decrease, downwards outlier spike
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointRecordID.CreationTime">
+            <summary>
+            Time when the changepoint was created (usually this is when it was first detected)
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.ChangePoints.ChangePointRecordExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.ChangePointRecordv1ID.CreationTime">
+            <summary>
+            Time when the changepoint was created (usually this is when it was first detected)
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.ChangePoints.ChangePointRecordv1Exposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.ChangePoints.ChangePointType">
+            <summary>
+            The type of trend data change point
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.ChangePoints.AnomalyType">
+            <summary>
+            The type of trend data anomaly
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.ChangePoints.GetChangePointsResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Analytics.ChangePoints.GetChangePointsMessage"/>. 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackBaseMessage.ChangePointGuid">
+            <summary>
+            The Guid of the elastic change point entry that received feedback
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackDeleteMessage">
+            <summary>
+            Message which clears historal user feedback on a (protocol or specific) parameter for a given change point type
+            This message is intended to be only used during testing or to force a reset of the anomaly feedback loop after some experimenting with it
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackDeleteMessage.ParameterKey">
+            <summary>
+            Parameter on which the feedback should be cleared: 
+            If ProtocolWide = true, only the parameterID will be used
+            If ProtocolWide = false, the feedback will only be cleared on the specific parameter instance
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackDeleteMessage.ChangeType">
+            <summary>
+            Change type for which the historical user feedback can be cleared
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackDeleteMessage.ProtocolWide">
+            <summary>
+            True if all feedback on the ChangeType should be removed for the protocol parameter
+            False if only feedback on the ChangeType for the specific parameter instance given by ParameterKey should be removed
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackDeleteResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackDeleteMessage"/>. 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackMessage.IsConfirmed">
+            <summary>
+            True if the user gives positive feedback on this alarm/suggestion
+            False if the user indicates he doesn't like this alarm/suggestion
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackMessage.PromoteToAlarm">
+            <summary>
+            True if and only if the user indicates he wants an alarm instead of a suggestion event
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.Time">
+            <summary>
+            Time when the feedback was created
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.ParameterKey">
+            <summary>
+            Parameter key (dmai,eid,pid,instance,displayInstance) on which the anomaly was detected
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.IsConfirmed">
+            <summary>
+            True when the user confirmed the anomaly event as a true positive
+            False when the user marked the anomaly event as a false positive
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.ChangePointID">
+            <summary>
+            ID of the anomaly change point in the Elastic change point table
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.UserFullName">
+            <summary>
+            The full name of the user (e.g. 'John Doe')
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.UserDomainName">
+            <summary>
+            User name with the domain (if applicable). The format is [domainName]/[userName] (e.g. SKYLINE/JohnD)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.ChangeType">
+            <summary>
+            Type of the anomaly change point which received feedback
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.StartValue">
+            <summary>
+            Start value of the anomaly change point which received feedback
+            Depends on the type of changepoint (e.g., levelshift: actual value before the level shift)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.EndValue">
+            <summary>
+            End value of the anomaly change point which received feedback
+            Depends on the type of changepoint (e.g., levelshift: actual value after the level shift)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.ProtocolName">
+            <summary>
+            ProtocolName of the device on which the cp was detected
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackRecord.ProtocolVersion">
+            <summary>
+            The version of the protocol that the device, on which the cp was detected, was using.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackMessage"/>. 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackResponseMessage.SuggestedAnomalyAlarmSetting">
+            <summary>
+            Contains the newly proposed anomaly configuration settings for this cp type (up or down)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackResponseMessage.ElementKey">
+            <summary>
+            This field contains the key of the element whose alarm template should be updated/created
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ChangePoints.AnomalyFeedbackResponseMessage.WildCardFilter">
+            <summary>
+            In case of a table column parameter, specifies the display key filter for which the
+            anomaly configuration should be updated
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Clustering.Cluster">
+            <summary>
+            The information comprising a single cluster
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Clustering.Cluster.Fields">
+            <summary>
+            Describes the fields that specify the cluster and their values
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Clustering.HdbscanCluster.Stability">
+            <summary>
+            Stability score of the cluster: the higher this score the lesser the cluster is an outlier.
+            Might be a NAN if impossible to compute, it should be ignored in that case.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Clustering.HdbscanCluster.OutlierScores">
+            <summary>
+            Outlier scores of the records contained in the cluster.
+            Might be NANs if impossible to compute, they should be ignored in that case.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Clustering.ClusteringInfo.MinimumSize">
+            <summary>
+            Minimum number of records (alarms, elements, ...) that form a cluster 
+            default: 2
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Clustering.ClusteringInfo.Fields">
+            <summary>
+            Optional fields to be used for the clustering
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Skyline.DataMiner.Analytics.Communication.Events.ISubscribableAnalyticsType" -->
+        <member name="T:Skyline.DataMiner.Analytics.Communication.Events.AnalyticsEventMessage">
+            <summary>
+            General Base Class for all Analytics Events
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Communication.Events.AnalyticsEventMessage`1">
+            <summary>
+            Typed Base class for Analytics Events
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Communication.GetAnalyticsMessage">
+            <summary>
+            Request to receive a <see cref="T:Skyline.DataMiner.Analytics.Communication.GetAnalyticsResponseMessage"/>.
+            Every requestMessage that is sent to analytics needs to inherit from this class.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Communication.GetAnalyticsMessage.OriginalHostingDataMinerID">
+            <summary>
+            Represents the original DataMiner hosting ID when a requestMessage of analytics is forwarded to another agent.
+            -1 means that the message was not forwarded.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Communication.GetAnalyticsResponseMessage">
+            <summary>
+            Request to receive a <see cref="T:Skyline.DataMiner.Analytics.Communication.GetAnalyticsResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Communication.GetSessionedAnalyticsMessage">
+            <summary>
+            Request to receive a <see cref="T:Skyline.DataMiner.Analytics.Communication.GetAnalyticsResponseMessage"/>.
+            Every request that is sent to Analytics, that needs to have a sessionID should inherit from this class.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Communication.IParameterTarget.HostingDataMinerID">
+            <summary>
+            Enforce having a hostingDmaId set.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Control.AnalyticsControlMessage">
+            <summary>
+            Request to control the SLAnalytics process.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Control.AnalyticsControlResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Net.Messages.GetCorrelationRuleMessage"/>.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Control.ForceSpiFlushMessage">
+            <summary>
+            Request to write a performance report into the pending reports folder
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Control.GeneralStatusExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Control.Group.GroupStateUpdate">
+            <summary>
+            Subscribable Analytics type that is created every time a group processing state changes
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Control.Group.GroupStateUpdateExposer.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.DataTypes.AnalyticsDataTypeID`1.ParameterKey">
+            <summary>
+            The parameter key associated with the record. Note that the display key is never filled in!
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.DataTypes.MetaObjectExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.AnomalyFeedbackWrapperMessage.AllowedToCreateAlarmTemplate">
+            <summary>
+            True if the user has permission to create alarm templates for this element
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.AnomalyFeedbackWrapperMessage.AllowedToChangeAlarmTemplate">
+            <summary>
+            True if the user has permission to modify alarm templates for this element
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Feedback.FeedbackWrapperMessage">
+            <summary>
+            Wrapper message for <see cref="T:Skyline.DataMiner.Analytics.Feedback.AnalyticsFeedbackMessage"/>. 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.FeedbackWrapperMessage.UserFullName">
+            <summary>
+            The full name of the user (e.g. 'John Doe')
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.FeedbackWrapperMessage.UserDomainName">
+            <summary>
+            User name with the domain (if applicable). The format is [domainName]/[userName] (e.g. SKYLINE/JohnD)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackRecord.Time">
+            <summary>
+            Time when the feedback was created
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackRecord.ParameterKey">
+            <summary>
+            Parameter key (dmai,eid,pid,instance,displayInstance) on which the proactive event was generated
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackRecord.IsConfirmed">
+            <summary>
+            True when the user confirmed the proactive event as a true positive
+            False when the user marked the proactive event as a false positive
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackRecord.UserFullName">
+            <summary>
+            The full name of the user (e.g. 'John Doe')
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackRecord.UserDomainName">
+            <summary>
+            User name with the domain (if applicable). The format is [domainName]/[userName] (e.g. SKYLINE/JohnD)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackRecord.ProtocolName">
+            <summary>
+            ProtocolName of the device on which the proactive detection event was detected
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackRecord.ProtocolVersion">
+            <summary>
+            The version of the protocol that the device, on which the proactive event was detected, was using.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackRecord.Threshold">
+            <summary>
+            Type of proactive detection on which feedback was given
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackRecord.Value">
+            <summary>
+            Value of the cap value which was breached (the value of an alarm threshold might differ accross alarm templates and versions)
+            Note that this value has been rounded to the parameter precision.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackRecord.RootAlarmID">
+            <summary>
+             Identifier for the alarm tree. Guaranteed to be unique within the element context.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackWrapperMessage.AllowedToCreateAlarmTemplate">
+            <summary>
+            True if the user has permission to create alarm templates for this element
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Feedback.ProactiveFeedbackWrapperMessage.AllowedToChangeAlarmTemplate">
+            <summary>
+            True if the user has permission to modify alarm templates for this element
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackDeleteMessage">
+            <summary>
+            Message which clears historal user feedback on a (protocol or specific) parameter for proactive cap detection
+            This message is intended to be only used during testing or to force a reset of the proactive cap feedback loop after some experimenting with it
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackDeleteMessage.ParameterKey">
+            <summary>
+            Parameter on which the feedback should be cleared: 
+            If ProtocolWide = true, only the parameterID will be used
+            If ProtocolWide = false, the feedback will only be cleared on the specific parameter instance
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackDeleteMessage.Threshold">
+            <summary>
+            Set to null, if you want to delete all feedback, irrespective of severity.
+            Else, it deletes feedback given on proactive events triggered based on the severity stored in this variable (e.g. clear all feedback on proactive events that were triggered by a future crossing of a critical high threshold) 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackDeleteMessage.ProtocolWide">
+            <summary>
+            True if all feedback triggered based on the ProactiveCrossedThreshold should be removed for the protocol parameter
+            False if only feedback triggered based on the ProactiveCrossedThreshold for the specific parameter instance given by ParameterKey should be removed
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackDeleteResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackDeleteMessage"/>. 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackMessage.IsConfirmed">
+            <summary>
+            True if the user gives positive feedback on this alarm/suggestion
+            False if the user indicates he doesn't like this alarm/suggestion
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackMessage.PromoteToAlarm">
+            <summary>
+            True if and only if the user indicates he wants an alarm instead of a suggestion event
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackMessage.Threshold">
+            <summary>
+            The severity and direction (high/low) of the threshold that caused triggering of the proactive event.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackMessage.TreeID">
+            <summary>
+            The AlarmTreeID will allow us to verify if multiple feedbacks are given on the same event or not
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackMessage.AlarmValue">
+            <summary>
+            Actual value of the alarm limit or data limit which is predicted to get breached in the future (a critical value on alarm template X version Y might be different on other template or version)
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackMessage"/>. 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackResponseMessage.ProactiveCapConfiguration">
+            <summary>
+            Proposed configuration for alarming
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.ProactiveFeedbackResponseMessage.ElementKey">
+            <summary>
+            The key of the element whose alarm template should be updated/created (might differ from the ElementKey on which feedback was given in case of DVE child alarm templates)
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.ForecastedAlarms.TrendAlarmRecord">
+             <summary>
+            contains info on a trend alarm (=forecasted alarm)
+             </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.TrendAlarmRecord.Time">
+            <summary>
+            predicted alarm time, i.e. timestamp at which a problem is expected to occur
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.TrendAlarmRecord.ConfidenceTimeStart">
+            <summary>
+            Confidence interval around the predicted alarm time
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.ForecastedAlarms.TrendAlarmRecord.TimeScale">
+            <summary>
+            time scale at which the alarm was detected
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.ForecastedAlarms.TrendAlarmRecordExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.ColumnInfo`1">
+            <summary>
+            Contains all the information needed of a column.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.ColumnInfo`1.ID">
+            <summary>
+            ID of the column which is unique for a query.
+            Is never null.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.ColumnInfo`1.Name">
+            <summary>
+            Header of the column.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfCellDisplayValueExposer.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+             This special constructor is used to deserialize values.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfCellExposer.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+             This special constructor is used to deserialize values.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfCellValueExposer`1.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+             This special constructor is used to deserialize values.
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfOptionList.ChooseOption(Skyline.DataMiner.Analytics.GenericInterface.AGenIfQueryOption,Skyline.DataMiner.Net.SLConfiguration.IValue)">
+            <summary>
+            The most generic method to assign a value to an option.
+            If possible, use the more specific ChooseOption methods.
+            </summary>
+            <param name="option">Selected option of the list of mandatory options</param>
+            <param name="value">The chosen value for the selected option</param>
+            <exception cref="T:Skyline.DataMiner.Analytics.GenericInterface.OptionNotAvailableException">Thrown when the given option is not in the list of possible options in the <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfOptionList"/> object.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfOptionList.ChooseOption(Skyline.DataMiner.Analytics.GenericInterface.DropDownOption,Skyline.DataMiner.Analytics.GenericInterface.SingleOption)">
+            <summary>
+            Method to assign the selected value from a dropdown list for a <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.DropDownOption"/>.
+            </summary>
+            <param name="option">Selected <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.DropDownOption"/> of the list of mandatory options</param>
+            <param name="value">The chosen <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.SingleOption"/> for the selected <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.DropDownOption"/></param>
+            <exception cref="T:Skyline.DataMiner.Analytics.GenericInterface.OptionNotAvailableException">Thrown when the given option is not in the list of possible options in the <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfOptionList"/> object.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfOptionList.ChooseOption(Skyline.DataMiner.Analytics.GenericInterface.ListOption,System.Collections.Generic.List{Skyline.DataMiner.Analytics.GenericInterface.SingleOption})">
+            <summary>
+            Method to assign the selected values from a list for a <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.ListOption"/>.
+            </summary>
+            <param name="option">Selected <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.ListOption"/> of the list of mandatory options</param>
+            <param name="values">The chosen <see cref="T:System.Collections.Generic.List`1"/> for the selected <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.ListOption"/></param>
+            <exception cref="T:Skyline.DataMiner.Analytics.GenericInterface.OptionNotAvailableException">Thrown when the given option is not in the list of possible options in the <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfOptionList"/> object.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfOptionList.ChooseOption``1(Skyline.DataMiner.Analytics.GenericInterface.SingleValueOption{``0},``0)">
+            <summary>
+            Method to assign a value of type <typeparamref name="T"/> to an <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.SingleValueOption`1"/>.
+            </summary>
+            <typeparam name="T">the value type</typeparam>
+            <param name="option">Selected option of the list of mandatory options</param>
+            <param name="value">The chosen value for the selected option</param>
+            <exception cref="T:Skyline.DataMiner.Analytics.GenericInterface.OptionNotAvailableException">Thrown when the given option is not in the list of possible options in the <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfOptionList"/> object.</exception>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfOptionList.AllMandatoryOptionsAreFilledIn">
+            <summary>
+            Checks if all mandatory options are filled in.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.GenIfQuery.NodeIdx">
+            <summary>
+            1 based, starting from the data source
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfQuery.#ctor(Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.Node,Skyline.DataMiner.Analytics.GenericInterface.GenIfQuery,System.Collections.Generic.List{Skyline.DataMiner.Analytics.GenericInterface.AGenIfQueryOption},System.Double,System.Boolean,System.String)">
+            <summary>
+            Constructor to make a query for the Generic Interface.
+            This should NOT be called manually. (Generic Interface will generate these objects.)
+            </summary>
+            <param name="nodeID">The node that will be queried.</param>
+            <param name="parent">The proceeding steps in the query.</param>
+            <param name="options">The options provided by the node that will be queried.</param>
+            <param name="version">The version </param>
+            <param name="isFetchable"></param>
+            <param name="tooltip"></param>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfQuery.Validate">
+            <summary>
+            Indicates if the current query can be used to fetch data. Throws an exception if not valid.
+            </summary>
+            <returns>A boolean indicating if the current query is valid.</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.ANDJoinFilter`1.GetLambda">
+            <summary>
+            Returns the lambda predicate/functor which will decide whether the 2 given elements match (true) or not (false)
+            </summary>
+            <returns>The lambda of this filter</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.ANDJoinFilter`1.GetExtendedLambda">
+            <summary>
+            Returns the lambda TripleState predicate/functor which will decide whether the 2 given elements match (true) or not (false) or resulted in an exception (and cannot be fully resolved yet) 
+            </summary>
+            <returns>The lambda of this filter</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.ANDJoinFilter`1.TranslateToFailSafe``1(System.Func{``0,``0,System.Boolean},``0,``0)">
+            <summary>
+            Translates a regular lambda predicate on T1 and T2 into a Triple-function on T1 and T2 with an exception translating into an EXCEPTION output
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="original">Lambda predicate</param>
+            <param name="t1">First argument for lamda predicate</param>
+            <param name="t2">Second argument for lamda predicate</param>
+            <returns></returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.ANDJoinFilter`1.checkFunctionsExtended(System.Collections.Generic.List{System.Func{`0,`0,Skyline.DataMiner.Net.Messages.SLDataGateway.TripleState}},`0,`0)">
+            <summary>
+            The method for checking all functions in the extended lambda for the filter
+            </summary>
+            <param name="functions">Lambda predicate</param>
+            <param name="t1">First argument for lamda predicate</param>
+            <param name="t2">Second argument for lamda predicate</param>
+            <returns></returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterElement`1.GetLambda">
+            <summary>
+            Returns the lambda predicate/functor which will decide whether the 2 given elements match (true) or not (false)
+            </summary>
+            <returns>The lambda of this filter</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterElement`1.GetExtendedLambda">
+            <summary>
+            Returns the lambda TripleState predicate/functor which will decide whether the 2 given elements match (true) or not (false) or resulted in an exception (and cannot be fully resolved yet) 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterElement`1.GetRecursiveFilters">
+            <summary>
+            Returns the managed filters recursively.
+            </summary>
+            <returns>Recursively used filters</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterElement`1.CloneDeep">
+            <summary>
+            Clones the filter and all of it's properties.
+            </summary>
+            <returns>Deep clone of the filter</returns>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterExtensions">
+            <summary>
+            This adds extension functions for the AND, OR and NOT logical combinators
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterExtensions.AND``1(Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterElement{``0},Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterElement{``0}[])">
+            <summary>
+            Calling AND on a JoinFilter will return a new ANDJoinFilterElement with this element and all elements enclosed in the call as its subFilters combined with a logical AND
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterExtensions.Combine``1(Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterElement{``0},Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterElement{``0}[])">
+            <summary>
+            Small private function for combining the arrays of JoinFilterElements
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.JoinFilterExtensions.UncheckedEqual``2(Skyline.DataMiner.Net.Messages.SLDataGateway.Exposer{``0,``1},Skyline.DataMiner.Net.Messages.SLDataGateway.Exposer{``0,``1})">
+            <summary>
+            Creates a new ManagedFilter in which there is no compiler time check for the type of value being Equatable and/or Comparable
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.ManagedJoinFilter`2._stitched">
+            <summary>
+            The final function which can be used in the filtering directly
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.ManagedJoinFilter`2.GetLambda">
+            <summary>
+            Returns the function which can be used for the filtering directly
+            </summary>
+            <returns>The function</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.ManagedJoinFilter`2.GetExtendedLambda">
+            <summary>
+            Translates the normal lambda into a triplestate analysis
+            </summary>
+            <returns>The function</returns>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.JoinFilter.ManagedJoinFilter`2.Create">
+            <summary>
+            Creates a new ManagedFilter according to the given name, comparer and value and using the generic type T
+            WARNING: this should be used with care as it only generates a ManagedFilter and will not check whether the comparison is consistent with the value
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfAddedRowsEventMessage">
+            <summary>
+            Event to signal newly added rows to a Generic Interface session result.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfAddedRowsEventMessage.Rows">
+            <summary>
+            The rows that were added.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfBulkEventMessage" -->
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfBulkEventMessage.Events">
+            <summary>
+            The events that were bulked
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfDataUpdateEventMessage">
+            <summary>
+            Notifies when the result of a query has been potentially changed.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfDeletedRowsEventMessage">
+            <summary>
+            Event to signal row deletions from a Generic Interface session result.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfDeletedRowsEventMessage.RowKeys">
+            <summary>
+            Keys of the rows that were deleted.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfSessionUpdateEventMessage">
+            <summary>
+            Represents an update that belongs to a specific Generic Interface session.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfUpdatedRowsEventMessage">
+            <summary>
+            Event to signal updated rows for a Generic Interface session result.
+            The updates can be organized in 4 different ways depending on the format <see cref="P:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfUpdatedRowsEventMessage.Format"/>.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfUpdatedRowsEventMessage.Format">
+            <summary>
+            Determines how the updates are organized.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfUpdatedRowsEventMessage.Terminators">
+            <summary>
+            Indicators that determine at which index in <see cref="P:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfUpdatedRowsEventMessage.CellValues"/> a row or column ends.
+            Only required for <see cref="F:Skyline.DataMiner.Analytics.GenericInterface.Messages.UpdateFormat.ByRow"/> and <see cref="F:Skyline.DataMiner.Analytics.GenericInterface.Messages.UpdateFormat.ByColumn"/>. 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfUpdatedRowsEventMessage.RowKeys">
+            <summary>
+            Keys of the rows that were updated.
+            They link updates to rows via <see cref="P:Skyline.DataMiner.Analytics.GenericInterface.GenIfContainerRecord.Key"/>.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfUpdatedRowsEventMessage.ColumnIndices">
+            <summary>
+            Column indices of the columns that were updated.
+            They index into <see cref="P:Skyline.DataMiner.Analytics.GenericInterface.GenIfOpenSessionResponse.Columns"/> and <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfContainerRecord"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.Messages.GenIfUpdatedRowsEventMessage.CellValues">
+            <summary>
+            The updated cell values.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.Messages.UpdateFormat">
+            <summary>
+            Specifies how row updates are structured.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfCapabilitiesRequest">
+            <summary>
+            The basis of querying capabilities to the Generic Interface.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.GenIfCapabilitiesRequest.#ctor(Skyline.DataMiner.Analytics.GenericInterface.GenIfQuery)">
+            <summary>
+            Constructor to make a request message. A filled in <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfQuery"/> from a <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfCapabilitiesResponse"/> can be passed as argument.
+            </summary>
+            <param name="query">Contains information about the previous steps in the query process.<para>With the first query, the parameter is allowed to be <see langword="null"/></para></param>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfColumnFetchRequest">
+            <summary>
+            Message to retrieve the columns for a Generic Interface query. Will return a <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfColumnFetchResponse"/> containing the resulting columns of the query.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.GenericInterface.GenIfColumnFetchResponse.Statistics">
+            <summary>
+            Can be null when no statistics are requested
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfDataFetchRequest">
+            <summary>
+            Message to execute query in the Generic Interface. Will return a <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfDataFetchResponse"/> containing the result of the query.
+            </summary>
+            
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfContainerRecord">
+            <summary>
+            A single row of data. Is usually contained by a <see cref="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfDataContainer"/>.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.AGenIfQueryOption">
+            <summary>
+            Abstract class representing any possible kind of option.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.SingleValueOption`1">
+            <summary>
+            Represents an option where a certain field needs to be filled in, with a specific type T determined by dataminer.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.SingleOption">
+            <summary>
+            SingleOption is an empty placeholder class that can enforce certain lists to only contain simple options.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.DropDownOption">
+            <summary>
+            DropDownOption contains a list of simple options were only one option can be selected from.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.ListOption">
+            <summary>
+            ListOption contains a list of simple options were multiple options can be selected
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.GenIfJoinFilterOption">
+            <summary>
+            GenIfJoinFilterOption contains all info to create a GenIfJoinFilter.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.RecurrencePattern.GetRanges(System.DateTime,System.DateTime,Skyline.DataMiner.Analytics.GenericInterface.LocalInfo)">
+            <summary>
+            Gets the matching UTC ranges for the current occurrence pattern.
+            </summary>
+            <param name="utcStart">Utc start time</param>
+            <param name="utcStop">Utc stop time</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.QueryBuilder.BuildOption(Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.StaticQueryOption{Skyline.DataMiner.Net.SLConfiguration.IValue},Skyline.DataMiner.Net.SLConfiguration.IValue)" -->
+        <member name="M:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.QueryBuilder.Clone">
+            <inheritdoc />
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.StaticQueryDataTree">
+            <summary>
+            Contains all possible data sources (Properties sorted alphabetically)
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.StaticQueryNodes">
+            <summary>
+            Contains all possible nodes (Properties sorted alphabetically), these are potentially used in multiple other nodes.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.StaticQueryOptions">
+            <summary>
+            Contains all possible options, these are potentially used in multiple nodes.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.AggregationNode">
+            <summary>
+            Node 1 of 3 to aggregate data
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.AggregationMethodNode">
+            <summary>
+            Node 2 of 3 to aggregate data
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.GroupByNode">
+            <summary>
+            Node 3 of 3 to aggregate data
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.FilterNode">
+            <summary>
+            Node 1 of 2 to filter data
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.ComparisonNode">
+            <summary>
+            node 2 of 2 to filter data
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.ColumnManipulationsNode">
+            <summary>
+            Node 1 of 2 to manipulate one or more columns.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.RegexMatchManipulationNode">
+            <summary>
+            Node 2 of 2 to create a column that contains the match of a Regex.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.ConcatenateManipulationNode">
+            <summary>
+            Node 2 of 2 to create a column that concatenates the values of multiple columns.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.JoinNode">
+            <summary>
+            1/2
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.JoinDetailsNode">
+            <summary>
+            2/2
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.BucketNode">
+            <summary>
+            1/2 Choose column that needs to be bucketed.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.GenericInterface.QueryBuilder.BucketCutOffNode">
+            <summary>
+            2/2 How should column be bucketed?
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupClearRequest.Comment">
+            <summary>
+            A possible comment
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupClearRequest.AlarmGroupData">
+            <summary>
+            The metadata of the alarm group
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupCommentRequest">
+            <summary>
+            Request to modify the comments field of an alarm group
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupCommentRequest.Comment">
+            <summary>
+            The comment
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupCommentRequest.AlarmGroupData">
+            <summary>
+            The metadata of the alarm group
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupCreateRequest">
+            <summary>
+            Request to create an alarm group with specified base alarms
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupCreateRequest.BaseAlarms">
+            <summary>
+            The base alarms of the new group
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupCreateRequest.DisplayValue">
+            <summary>
+            The display value of the newly created group, or an empty string for the default display value
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupManipulationRequest">
+            <summary>
+            Base class for all client requests to manipulate alarm groups
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupManipulationRequest.Time">
+            <summary>
+            The time of the request
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupManipulationResponse">
+            <summary>
+            Response for all types of alarm group manipulation requests. 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupManipulationResponse.DelayedProcessing">
+            <summary>
+            True if the processing of the request is delayed. This can happen when Incident Tracking is still starting up, or we are still
+            waiting on the provided alarms. If false, the request was processed immediately 
+            before the response was sent.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupManipulationWrapper.UserFullName">
+            <summary>
+            The full name of the user (e.g. 'John Doe')
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupManipulationWrapper.UserDomainName">
+            <summary>
+            User name with the domain (if applicable). The format is [domainName]/[userName] (e.g. SKYLINE/JohnD)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupOwnershipReleasingBaseRequest.Comment">
+            <summary>
+            A possible comment
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupOwnershipReleasingBaseRequest.AlarmGroupData">
+            <summary>
+            The metadata of the alarm group
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupOwnershipTakingRequest">
+            <summary>
+            Request to take ownership of an alarm group
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupOwnershipTakingRequest.Comment">
+            <summary>
+            A possible comment
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AlarmGroupOwnershipTakingRequest.AlarmGroupData">
+            <summary>
+            The metadata of the alarm group
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.AnalyticsAlarmGroupCreateRequest">
+            <summary>
+            Create a new alarm group with the given base alarms. The group type can also be specified. This message is intended to
+            be used internally by SLAnalytics
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AnalyticsAlarmGroupCreateRequest.BaseAlarmIDs">
+            <summary>
+            The alarm tree IDs of the base alarms of the new group
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AnalyticsAlarmGroupCreateRequest.Value">
+            <summary>
+            The value of the group. The final display value will be "{AlarmGroupType}: {Value}"
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AnalyticsAlarmGroupCreateRequest.AlarmGroupType">
+            <summary>
+            The type of the alarm group
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.AnalyticsAlarmGroupManipulationRequest">
+            <summary>
+            Base class for all Analytics alarm group requests.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.AnalyticsAlarmGroupManipulationRequest.Time">
+            <summary>
+            The time of the request
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.BaseAlarmAddRequest">
+            <summary>
+            Request to add a certain active alarm to an existing alarm group
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.BaseAlarmAddRequest.AlarmGroupData">
+            <summary>
+            The metadata from the alarm group event message
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.BaseAlarmAddRequest.BaseAlarm">
+            <summary>
+            The base alarm to be added
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.BaseAlarmRemoveRequest">
+            <summary>
+            Request to remove a certain base alarm from an existing alarm group
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.BaseAlarmRemoveRequest.AlarmGroupData">
+            <summary>
+            The metadata from the alarm group event message
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.BaseAlarmRemoveRequest.BaseAlarm">
+            <summary>
+            The base alarm to be removed
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.BaseAlarmsChangeRequest">
+            <summary>
+            Request to change the base alarms of an existing alarm group
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.BaseAlarmsChangeRequest.AlarmGroupData">
+            <summary>
+            The metadata from the alarm group event message
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.BaseAlarmsChangeRequest.ToBeAdded">
+            <summary>
+            All base alarms to be added
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.BaseAlarmsChangeRequest.ToBeRemoved">
+            <summary>
+            All base alarms to be removed
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.IncidentTracking.DisplayValueChangeRequest">
+            <summary>
+            Request to change the display value of an alarm group
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.DisplayValueChangeRequest.AlarmGroupData">
+            <summary>
+            The metadata from the alarm group event message
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.IncidentTracking.DisplayValueChangeRequest.DisplayValue">
+            <summary>
+            The display value of the group
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.AddMADParameterGroupMessage">
+            <summary>
+            Message to start monitoring a parameter group with Relational Anomaly Detection. If a group with the same name already exists on the same agent, it will be overwritten.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.AddMADParameterGroupMessage.GroupInfo">
+            <summary>
+            The group information.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.AddMADParameterGroupMessage.#ctor(Skyline.DataMiner.Analytics.Mad.MADGroupInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.Analytics.Mad.AddMADParameterGroupMessage"/> class.
+            </summary>
+            <param name="groupInfo">The group information.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.AddMADParameterGroupMessage.#ctor(System.Guid,Skyline.DataMiner.Analytics.Mad.MADGroupInfo)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.Analytics.Mad.AddMADParameterGroupMessage"/> class.
+            </summary>
+            <param name="sessionID">The session ID of the message.</param>
+            <param name="groupInfo">The group information.</param>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.AddMADParameterGroupResponseMessage">
+            <summary>
+            Response message for AddMADParameterGroupMessage.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.GetMADDataMessage">
+            <summary>
+            Message to retrieve the relational anomaly scores for a given time range of historical trend data values
+            Results in a <see cref="T:Skyline.DataMiner.Analytics.Mad.GetMADDataResponseMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MADDataPoint.Values">
+            <summary>
+            5Min average trend data point
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MADDataPoint.Timestamp">
+            <summary>
+            time stamp of the data point
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MADDataPoint.AnomalyScore">
+            <summary>
+            anomaly score of the data point according to the MAD model
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupInfoMessage">
+            <summary>
+            Message to get information about a parameter group with Relational Anomaly Detection.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupInfoMessage.GroupName">
+            <summary>
+            The name of the group.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupInfoMessage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupInfoMessage"/> class.
+            </summary>
+            <param name="groupName">The name of the group.</param>
+            <param name="sessionID">The session ID.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupInfoMessage.#ctor(System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupInfoMessage"/> class.
+            </summary>
+            <param name="groupName">The name of the group.</param>
+            <param name="sessionID">The session ID.</param>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupInfoResponseMessage">
+            <summary>
+            Response message for GetMADParameterGroupInfoMessage.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupInfoResponseMessage.GroupInfo">
+            <summary>
+            The group information.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupsMessage">
+            <summary>
+            Message to retrieve the relational anomaly detection parameter group names 
+            Results in a <see cref="T:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupsResponseMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupsResponseMessage.GroupNames">
+            <summary>
+            Names of the relational anomaly detection parameter groups available on the targeted agent
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.MADGroupInfo">
+            <summary>
+            Represents information about a parameter group of Relational Anomaly Detection.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MADGroupInfo.Name">
+            <summary>
+            The name of the group.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MADGroupInfo.Parameters">
+            <summary>
+            The list of parameters in the group
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MADGroupInfo.UpdateModel">
+            <summary>
+            Whether the model is updated automatically on new data
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MADGroupInfo.AnomalyThreshold">
+            <summary>
+            The threshold for anomaly detection, or null to use the default setting.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MADGroupInfo.MinimumAnomalyDuration">
+            <summary>
+            The minimum duration in number of minutes for deviating behavior to be considered relevant anomalous behavior, or null to use the default system-wide setting.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.MADGroupInfo.#ctor(System.String,System.Collections.Generic.List{Skyline.DataMiner.Analytics.DataTypes.ParameterKey},System.Boolean,System.Nullable{System.Double},System.Nullable{System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.Analytics.Mad.MADGroupInfo"/> class.
+            </summary>
+            <param name="name">The name of the group.</param>
+            <param name="parameters">The list of parameters in the group.</param>
+            <param name="updateModel">Whether the model is updated automatically on new data.</param>
+            <param name="anomalyThreshold">The threshold for anomaly detection, or null to use the default setting.</param>
+            <param name="minimumAnomalyDuration">The minumum duration in number of minutes for deviating behavior to be considered relevant anomalous behavior, or null to use the default system-wide setting.</param>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MadModelRecord.GroupName">
+            <summary>
+            Name of the group
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MadModelRecord.UpdateModel">
+            <summary>
+            Is true if we should update the model with incoming points, else false.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MadModelRecord.AnomalyThreshold">
+            <summary>
+            The threshold used to detect anomalies. A value of 0 means the default anomaly threshold
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.MadModelRecord.MinimumAnomalyDuration">
+            <summary>
+            The minimum duration for behavior deviating from the model to be considered a relevant anomaly (in minutes)
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.ReloadMadConfigurationMessage">
+            <summary>
+            Force a reload of the Relational Anomaly Detection xml configuration file
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.RemoveMADParameterGroupMessage">
+            <summary>
+            Stop monitoring a parameter group with Relational Anomaly Detection.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.RemoveMADParameterGroupMessage.GroupName">
+            <summary>
+            The name of the group.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.RemoveMADParameterGroupMessage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="!:RemoveParameterGroupMessage"/> class.
+            </summary>
+            <param name="groupName">The name of the parameter group.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.RemoveMADParameterGroupMessage.#ctor(System.Guid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="!:RemoveParameterGroupMessage"/> class with a specified session ID.
+            </summary>
+            <param name="sessionID">The session ID of the message.</param>
+            <param name="groupName">The name of the parameter group.</param>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.RemoveMADParameterGroupResponseMessage">
+            <summary>
+            Response message for RemoveMADParameterGroupMessage.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.TimeRange">
+            <summary>
+            Represents a time range with a start and end time.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage">
+            <summary>
+            Message class for triggering a retraining of the Relational Anomaly Detection (RAD) model.
+            Results in a <see cref="T:Skyline.DataMiner.Analytics.Mad.RetrainMADModelResponseMessage"/>
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.#ctor">
+            <summary>
+            Initializes a new instance with a new session ID.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.#ctor(System.Guid)">
+            <summary>
+            Initializes a new instance with the specified session ID.
+            </summary>
+            <param name="sessionID">The session ID.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.#ctor(System.Guid,System.String,System.Collections.Generic.List{Skyline.DataMiner.Analytics.Mad.TimeRange})">
+            <summary>
+            Initializes a new instance with the specified parameters.
+            </summary>
+            <param name="sessionID">The session ID.</param>
+            <param name="groupName">The name of the group whose mad model needs to be retrained.</param>
+            <param name="correctBehaviorTimeRanges">A list of time ranges representing correct behavior.</param>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.#ctor(System.String,System.Collections.Generic.List{Skyline.DataMiner.Analytics.Mad.TimeRange})">
+            <summary>
+            Initializes a new instance with the specified parameters.
+            </summary>
+            <param name="groupName">The name of the group whose mad model needs to be retrained.</param>
+            <param name="correctBehaviorTimeRanges">A list of time ranges representing correct behavior.</param>        
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.#ctor(System.Guid,System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Initializes a new instance with the specified parameters.
+            </summary>
+            <param name="sessionID">The session ID.</param>
+            <param name="groupName">The name of the group whose mad model needs to be retrained.</param>
+            <param name="startTime">start time of the time range with correct behavior.</param>
+            <param name="endTime">end time of the time range with correct behavior.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.#ctor(System.String,System.DateTime,System.DateTime)" -->
+        <member name="P:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.GroupName">
+            <summary>
+            Gets or sets the name of the group for which MAD retraining is triggered.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.CorrectBehaviorTimeRanges">
+            <summary>
+            Gets or sets a list of time ranges representing ranges of correct behavior.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.startTime_">
+            <summary>
+            The internal storage for the start time of the range.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.endTime_">
+            <summary>
+            The internal storage for the end time of the range.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.StartTime">
+            <summary>
+            Gets or sets the start time of the range of normal behavior used for retraining.
+            When set, the corresponding time range is added or updated in CorrectBehaviorTimeRanges.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.EndTime">
+            <summary>
+            Gets or sets the end time of the range of normal behavior used for retraining.
+            When set, the corresponding time range is added or updated in CorrectBehaviorTimeRanges.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.SetTimeRange">
+            <summary>
+            Updates the time range in the CorrectBehaviorTimeRanges list.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage.ToString">
+            <summary>
+            Returns a string representation of the current object.
+            </summary>
+            <returns>A string representation of the RetrainMADModelMessage.</returns>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Mad.RetrainMADModelResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Analytics.Mad.RetrainMADModelMessage"/>. 
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.CreateLinkedPatternMessage">
+            <summary>
+            Sends information to analyze and add a new trend data pattern for pattern recognition
+            Results in <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchResponseMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.CreateLinkedPatternMessage.PatternInfos">
+            <summary>
+            the pattern definitions 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.CreateLinkedPatternMessage.StartMatchRange">
+            <summary>
+            if one does not only want to create a pattern from a piece of trend data but also immediately match it on the history of trend data, StartMatchRange contains the start time of the time range over which matches will be computed and returned
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.CreateLinkedPatternMessage.EndMatchRange">
+            <summary>
+            if one does not only want to create a pattern from a piece of trend data but also immediately match it on the history of trend data, EndMatchRange contains the end time of the time range over which matches will be computed and returned
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.CreateLinkedPatternMessage.ParameterKey">
+            <summary>
+            the parameter one wants to do the matching on
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.CreatePatternMessage">
+            <summary>
+            Sends information to analyze and add a new trend data pattern for pattern recognition
+            Results in <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchResponseMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.CreatePatternMessage.PatternInfo">
+            <summary>
+            the pattern definition 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.CreatePatternMessage.StartMatchRange">
+            <summary>
+            if one does not only want to create a pattern from a piece of trend data but also immediately match it on the history of trend data, StartMatchRange contains the start time of the time range over which matches will be computed and returned
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.CreatePatternMessage.EndMatchRange">
+            <summary>
+            if one does not only want to create a pattern from a piece of trend data but also immediately match it on the history of trend data, EndMatchRange contains the end time of the time range over which matches will be computed and returned
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.CreatePatternMessage.LinkedPatterns">
+            <summary>
+            link all patterns together to a linked pattern
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.DeletePatternMessage">
+            <summary>
+            Sends the id of a pattern from the database to delete it
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.DeletePatternMessage.PatternID">
+            <summary>
+            pattern ID
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.EditLinkedPatternMessage">
+            <summary>
+            Sends the pattern information(s) to update a (linked)pattern
+            Results in <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchResponseMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.EditLinkedPatternMessage.PatternInfos">
+            <summary>
+            the pattern definitions 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.EditLinkedPatternMessage.ParameterKey">
+            <summary>
+            Enforce having a hostingDmaId set
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.EditPatternMessage">
+            <summary>
+            Sends the pattern information to update a pattern together with a matching range to get new matches from the updated state
+            Results in <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchResponseMessage"/>
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.GetAllPatternsMessage">
+            <summary>
+            Get all the available patterns in the system
+            Results in <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternsResponseMessage"/>
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.GetLinkedPatternParametersMessage">
+            <summary>
+            Given the trend graph of a parameter where a multivariate pattern is clicked, this message
+            requests the parameterKeys relevant to the parameter and the multivariate pattern so that Cube can then display all
+            trend graphs related to the multivariate pattern. 
+            The results are in <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetLinkedPatternParametersResponseMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetLinkedPatternParametersMessage.LinkedPatternID">
+            <summary>
+            The Guid of the linked (ie multivariate) pattern
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetLinkedPatternParametersMessage.ParameterKey">
+            <summary>
+            The parameter whose subPattern is clicked to request the other parameters related to the multivariate pattern
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.GetLinkedPatternParametersResponseMessage">
+            <summary>
+            Sends all the parameterkeys that cube should display to make sure 
+            the whole multivariate pattern (ie with all its subpatterns) can be shown.
+            Response for <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetLinkedPatternParametersMessage"/>
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.GetLinkedPatternsMessage">
+            <summary>
+            Sends the linkedpatternid to get all applicable patterns linked with the id (i.e. all patterns that make up a multivariate pattern) 
+            Results in <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternsResponseMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetLinkedPatternsMessage.LinkedPatternID">
+            <summary>
+            The Guid of the linked (ie multivariate) pattern
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternDataMessage">
+            <summary>
+            Sends a pattern to match and a match range to find matches in
+            Results in <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternDataResponseMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetPatternDataMessage.PatternInfo">
+            <summary>
+            the pattern definition 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetPatternDataMessage.MaxNumberOfPoints">
+            <summary>
+            The max number of points that will get returned, some averaging will be done
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternDataResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternDataMessage"/>. 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetPatternDataResponseMessage.PatternInfo">
+            <summary>
+            the pattern definition 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetPatternDataResponseMessage.PatternData">
+            <summary>
+            Time series subsequence values
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetPatternDataResponseMessage.State">
+            <summary>
+            The response state
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchMessage">
+            <summary>
+            Sends a pattern to match and a match range to find matches in
+            Results in <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchResponseMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchMessage.PatternID">
+            <summary>
+            the id of the pattern to be matched
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchMessage.Version">
+            <summary>
+            the version of the pattern to be matched
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchMessage.ParameterKey">
+            <summary>
+            the parameterkey (dmai,eid,pid,TableIndex) of the parameter on whose trend data, matches will be computed
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchMessage.StartMatchRange">
+            <summary>
+            start time of the time range to compute matches over
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchMessage.EndMatchRange">
+            <summary>
+            end time of the time range to compute matches over
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchResponseMessage">
+            <summary>
+            Sends the match ranges from a specific pattern
+            Response for <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.CreatePatternMessage"/>, <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternMatchMessage"/> and <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.EditPatternMessage"/>
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternsMessage">
+            <summary>
+            Sends the parameter key to get all applicable patterns on
+            Results in <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternsResponseMessage"/>
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternsResponseMessage">
+            <summary>
+            Sends all the applicable patterns for a parameter key or linkedpatternId
+            Response for <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetPatternsMessage"/> and <see cref="T:Skyline.DataMiner.Analytics.PatternMatching.GetLinkedPatternsMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.ILinkedPatternMessage.PatternInfos">
+            <summary>
+            the pattern definition 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.IPatternMessage.PatternInfo">
+            <summary>
+            the pattern definition 
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation">
+            <summary>
+            All the information related to a trend data pattern that might be useful for cube or the user
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.PatternID">
+            <summary>
+            a unique identifier 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.PatternVersion">
+            <summary>
+            Pattern Version
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.ParamKey">
+            <summary>
+            the (dmaid,eid,pid,TableIndex) of the parameter of which one wants to extract/create a pattern from its trend data
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.ProtocolName">
+            <summary>
+            the protocolname of the element the pattern was extracted/created on 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.PatternName">
+            <summary>
+            The name tag given to the pattern
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.PatternDescription">
+            <summary>
+            Pattern description
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.StartPatternRange">
+            <summary>
+            The start time of the trend data time range containing the pattern
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.EndPatternRange">
+            <summary>
+            The end time of the trend data time range containing the pattern
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.InstancePartOfIdentity">
+            <summary>
+            this boolean specifies whether the instance (= primary key) is an identifier for the table parameter you want to search patterns for
+            So if this is set to true, this pattern will not be matched on the same parameterID/protocolname if the instance is not the same as the extracted pattern
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.ElementSpecific">
+            <summary>
+            This boolean specifies whether the pattern has an element-specific scope or a protocol-wide scope.
+            If True, this pattern will only be matched on the element on which the pattern was extracted
+            If False, this pattern will be matched on all parameters which share parameterID/protocolname with the extracted pattern
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.TriggerSuggestionEvent">
+            <summary>
+            alarming will be active for this pattern if TriggerSuggestionEvent is true:
+            when the pattern occurs, analytics will detect it automatically and generate a suggestion event for it
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternInformation.LinkedPatternID">
+            <summary>
+            Identifier of the parent multivariate pattern (each univariate subpattern of the multivariate pattern has the same LinkedPatternID)
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.PatternMatching.PatternOccurrenceEvent">
+            <summary>
+            Represents the detection of a new trend data pattern occurrence
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternOccurrenceEvent.PatternID">
+            <summary>
+            ID of the pattern which was matched 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternOccurrenceEvent.PatternVersion">
+            <summary>
+             Version of the pattern which was matched
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternOccurrenceEvent.LinkedPatternID">
+            <summary>
+            ID of the linked pattern which was matched
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternOccurrenceEvent.PatternOccurrenceID">
+            <summary>
+            ID which uniquely identifies the pattern occurrence: all updates for a pattern occurrence receive the same PatternOccurenceID
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternOccurrenceEvent.Start">
+            <summary>
+            Start time of the pattern occurrence
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternOccurrenceEvent.End">
+            <summary>
+            End time of the pattern occurrence 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternOccurrenceEvent.FullPattern">
+            <summary>
+            True when occurrence of a univariate pattern or when a multivariate pattern occurrence in which all subpatterns of the multivariate pattern match
+            False when this is only an occurrence of a subpattern of a multivariate pattern for which other subpatterns still need to be verified [For internal inter-dma analytics syncing, events with FullPattern==false can be ignored by client]
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.PatternOccurrenceEvent.IsNew">
+            <summary>
+            True for a new pattern occurrence
+            False for occurrence updates, i.e. events indicating an updated time range for an already earlier detected occurrence
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.PatternVersion">
+            <summary>
+            Pattern version
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.ParamKey">
+            <summary>
+            Parameter key of parameter on which the pattern was tagged
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.ProtocolName">
+            <summary>
+            Protocol name of the driver associated with the ParamKey
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.ProtocolVersion">
+            <summary>
+            Protocol version of the driver associated with the ParamKey
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.PatternName">
+            <summary>
+            Tag given to the pattern
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.PatternDescription">
+            <summary>
+            Description given to the pattern
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.StartTime">
+            <summary>
+            Start time of the selected time range on which the tag was defined
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.EndTime">
+            <summary>
+            End time of the selected time range on which the tag was defined
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.InstancePartOfIdentity">
+            <summary>
+            True when the pattern is only valid for a specific instance in a table
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.ElementSpecific">
+            <summary>
+            True when the pattern has element-specific scope instead of protocol-wide scope
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.TriggerSuggestionEvent">
+            <summary>
+            True if monitoring of the pattern is enabled
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.PatternData">
+            <summary>
+            Time series subsequence values
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.TimeStep">
+            <summary>
+            Timeseries subsequence time step
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.PatternBehavior">
+            <summary>
+            Matching behavior 
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.PatternMatching.TrendDataPatternRecord.LinkedPatternID">
+            <summary>
+            Identifier of the parent multivariate pattern (each univariate subpattern of the multivariate pattern has the same LinkedPatternID
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Preprocessing.ParameterInfoRecordExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Rad.AddRADParameterGroupMessage">
+            <summary>
+            Message to start monitoring a parameter group with Relational Anomaly Detection. If a group with the same name already exists on the same agent, it will be overwritten.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Rad.AddRADParameterGroupMessage.ParameterGroupInfo">
+            <summary>
+            The group information.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Skyline.DataMiner.Analytics.Rad.AddRADParameterGroupMessage.#ctor(Skyline.DataMiner.Analytics.Rad.RADGroupInfo)" -->
+        <member name="T:Skyline.DataMiner.Analytics.Rad.AddRADParameterGroupResponseMessage">
+            <summary>
+            Response message for AddRADParameterGroupMessage.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Rad.GetRADDataMessage">
+            <summary>
+            Message to retrieve the relational anomaly scores for a given time range of historical trend data values
+            Results in a <see cref="T:Skyline.DataMiner.Analytics.Mad.GetMADDataResponseMessage"/>
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Rad.GetRADDataMessage.#ctor(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.Analytics.Rad.GetRADDataMessage"/> class.
+            </summary>
+            <param name="groupName">Name of the RAD parameter group</param>
+            <param name="startTime">Start time of the historical time range over which anomaly scores need to be retrieved</param>
+            <param name="endTime">End time of the historical time range over which anomaly scores need to be retrieved</param>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Rad.GetRADDataResponseMessage">
+            <summary>
+            Response message for GetRADDataMessage.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupInfoMessage">
+            <summary>
+            Message to get information about a parameter group with Relational Anomaly Detection.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupInfoMessage.#ctor(System.String)" -->
+        <member name="T:Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupInfoResponseMessage">
+            <summary>
+            Response message for GetRADParameterGroupInfoMessage.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupInfoResponseMessage.ParameterGroupInfo">
+            <summary>
+            The requested group information.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupsMessage">
+            <summary>
+            Message to retrieve the relational anomaly detection parameter group names 
+            Results in a <see cref="T:Skyline.DataMiner.Analytics.Mad.GetMADParameterGroupsResponseMessage"/>
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupsResponseMessage">
+            <summary>
+            Response message for GetRADParameterGroupsMessage.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Rad.RADGroupInfo">
+            <summary>
+            Represents information about a parameter group of Relational Anomaly Detection.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Rad.RADGroupInfo.#ctor(System.String,System.Collections.Generic.List{Skyline.DataMiner.Analytics.DataTypes.ParameterKey},System.Boolean,System.Nullable{System.Double},System.Nullable{System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.Analytics.Rad.RADGroupInfo"/> class.
+            </summary>
+            <param name="name">The name of the group.</param>
+            <param name="parameters">The list of parameters in the group.</param>
+            <param name="updateModel">Whether the model is updated automatically on new data.</param>
+            <param name="anomalyThreshold">The threshold for anomaly detection, or null to use the default setting.</param>
+            <param name="minimumAnomalyDuration">The minumum duration in number of minutes for deviating behavior to be considered relevant anomalous behavior, or null to use the default system-wide setting.</param>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Rad.RemoveRADParameterGroupMessage">
+            <summary>
+            Message to stop monitoring a parameter group with Relational Anomaly Detection.
+            Results in a <see cref="T:Skyline.DataMiner.Analytics.Rad.RemoveRADParameterGroupResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Rad.RemoveRADParameterGroupMessage.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Skyline.DataMiner.Analytics.Rad.RemoveRADParameterGroupMessage"/> class.
+            </summary>
+            <param name="groupName">The name of the parameter group.</param>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Rad.RemoveRADParameterGroupResponseMessage">
+            <summary>
+            Response message for RemoveRADParameterGroupMessage.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.Rad.RetrainRADModelMessage">
+            <summary>
+            Message class for triggering a retraining of the Relational Anomaly Detection (RAD) model.
+            Results in a <see cref="T:Skyline.DataMiner.Analytics.Mad.RetrainMADModelResponseMessage"/>
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Rad.RetrainRADModelMessage.#ctor">
+            <summary>
+            Initializes a new instance with a new session ID.
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Rad.RetrainRADModelMessage.#ctor(System.String,System.Collections.Generic.List{Skyline.DataMiner.Analytics.Mad.TimeRange})">
+            <summary>
+            Initializes a new instance with the specified parameters.
+            </summary>
+            <param name="groupName">The name of the group whose RAD model needs to be retrained.</param>
+            <param name="correctBehaviorTimeRanges">A list of time ranges representing correct behavior = the training data.</param>        
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Skyline.DataMiner.Analytics.Rad.RetrainRADModelMessage.#ctor(System.String,System.DateTime,System.DateTime)" -->
+        <member name="T:Skyline.DataMiner.Analytics.Rad.RetrainRADModelResponseMessage">
+            <summary>
+            Response for <see cref="T:Skyline.DataMiner.Analytics.Rad.RetrainRADModelMessage"/>.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.RCA.RCAAnalysisResult">
+            <summary>
+            The result of a Root Cause Analysis
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.RCA.RCAQuery">
+            <summary>
+            Represents a data aggregation as a result of a RCA analysis
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.RCA.RCAQuery.Confidence">
+            <summary>
+            A measure of goodness: it is computed as the number of targets identified by the aggregation divided by the total number of records identified by the rule
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.RCA.RCAQuery.Significance">
+            <summary>
+            A measure of coverage: it is computed as the number of targets identified by the aggregation divided by the total number of targets in the data
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.RCA.RCAType.CorrelationRulesAnalysis">
+            <summary>
+            An accurate analysis of the correlations present in the data, it provides a <see cref="!:Ranking"/> containing a list of rules ranked by score.
+            </summary>
+        </member>
+        <member name="F:Skyline.DataMiner.Analytics.RCA.RCAType.FeatureSubsetSelection">
+            <summary>
+            A quicker and less accurate analysis that provides one or more subsets of correlated parameters. 
+            This analysis does not provide any information about parameters' values.
+            It should only be used when timing is much more important than accuracy.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.RCA.RCAInfo.Target">
+            <summary>
+            Defines the name of the column of the table to analyze
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.RCA.RCAInfo.MinConfidence">
+            <summary>
+            Defines the minimum amount of certainty for a certain rule to be returned by the algorithm, 
+            can be set higher or lower in order to get less or more rules respectively.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.RCA.RCAInfo.MinSignificance">
+            <summary>
+            Defines the minimum amount of targets covered by a certain rule to be returned by the algorithm, 
+            can be set higher or lower in order to get less or more rules respectively.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.RCA.RCAInfo.MaxNrOfSuggestions">
+            <summary>
+            Defines the maximum number of different ranking scores allowed in the resulting <see cref="!:Ranking"/>, 
+            can be set higher or lower in order to get more or less rules respectively.
+            Note: the number of <see cref="!:RuleSet"/> returned might be higher than this, because different rules can have the same score.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.RCA.RCAInfo.TargetValues">
+            <summary>
+            Defines the values of interest for the Target
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Relations.AnalyticsRelation.Confidence">
+            <summary>
+            value to indicate how related a parameter <see cref="P:Skyline.DataMiner.Analytics.Relations.AnalyticsRelation.ParameterB"/> is to parameter <see cref="P:Skyline.DataMiner.Analytics.Relations.AnalyticsRelation.ParameterA"/>, where the type of "relation" is defined by the UsedModel. 
+            1 is strong confidence in a relation, 0 is unrelated according to the UsedModel.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.Relations.AnalyticsRelation.UsedModel">
+            <summary>
+            Indicates which model generated this relation
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.Relations.AnalyticsRelation.#ctor">
+            <summary>
+            Don't use this constructor; needed for serialization
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.TimeScopedRelationDetection.GetTimeScopedRelationsMessage">
+            <summary>
+            Sends a time range and a parameterkey P and asks which other parameters of the element are related to P based on the given time interval
+            Results in <see cref="T:Skyline.DataMiner.Analytics.TimeScopedRelationDetection.GetTimeScopedRelationsResponseMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TimeScopedRelationDetection.GetTimeScopedRelationsMessage.ParameterKey">
+            <summary>
+             The parameterkey for which we're requesting related parameters
+             </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TimeScopedRelationDetection.GetTimeScopedRelationsMessage.StartTimeRange">
+            <summary>
+             Start time of the time range on which the returned relations should be based
+             </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TimeScopedRelationDetection.GetTimeScopedRelationsMessage.EndTimeRange">
+            <summary>
+            End time of the time range on which the returned relations should be based
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TimeScopedRelationDetection.GetTimeScopedRelationsMessage.NrOfTopResults">
+            <summary>
+            We return the top "nrOfTopResults" most strongly related parameters. Set to 10 by default
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TimeScopedRelationDetection.GetTimeScopedRelationsMessage.MinimalRelationStrength">
+            <summary>
+            Parameters whose time scoped relation with ParameterKey is less than "minimalRelationStrength" are never returned to the user.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.TimeScopedRelationDetection.GetTimeScopedRelationsResponseMessage">
+            <summary>
+            Sends time scoped relations
+            Response for <see cref="T:Skyline.DataMiner.Analytics.TimeScopedRelationDetection.GetTimeScopedRelationsMessage"/>
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.TrendPrediction.GetAnalyticsTrendDataMessage">
+            <summary>
+            Requests analytics data from a DataMiner agent. Use this message to execute queries on the 
+            analytics data tables for a certain element.
+            Results in a <see cref="T:Skyline.DataMiner.Analytics.TrendPrediction.GetAnalyticsTrendDataResponseMessage"/> response.
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.TrendPrediction.AnalyticsTrendState">
+            <summary>
+            Prediction State info
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.TrendPrediction.GetAnalyticsTrendDataResponseMessage">
+            <summary>
+            Response to a <see cref="T:Skyline.DataMiner.Analytics.TrendPrediction.GetAnalyticsTrendDataMessage"/>
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TrendPrediction.GetAnalyticsTrendDataResponseMessage.Points">
+            <summary>
+            baseline + prediction in tilted/unequidistant time frame
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TrendPrediction.GetAnalyticsTrendDataResponseMessage.Prediction">
+            <summary>
+            prediction only, list of predictions each on different time scale, from coarse to fine
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TrendPrediction.GetAnalyticsTrendDataResponseMessage.FutureCertainties">
+            <summary>
+            probabilities (%) associated to the prediction intervals
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TrendPrediction.GetAnalyticsTrendDataResponseMessage.PredictionInformation">
+            <summary>
+            list of forecasted alarms
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TrendPrediction.GetAnalyticsTrendDataResponseMessage.Status">
+            <summary>
+            status code
+            </summary>
+        </member>
+        <member name="T:Skyline.DataMiner.Analytics.TrendPrediction.GetTrendDataPredictionMessage">
+            <summary>
+            Request for a trend data prediction
+            Results in a <see cref="T:Skyline.DataMiner.Analytics.TrendPrediction.GetAnalyticsTrendDataResponseMessage"/> response.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TrendPrediction.GetTrendDataPredictionMessage.TrendingType">
+            <summary>
+            Average or realtime trending
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TrendPrediction.GetTrendDataPredictionMessage.AverageTrendIntervalType">
+            <summary>
+            Average trend interval
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.TrendPrediction.ModelRecordExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TrendPrediction.PredictedAlarm.Severity">
+            <summary>
+            Predicted Alarm type description as string
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Skyline.DataMiner.Analytics.TrendPrediction.PredictedAlarm.SeverityID" -->
+        <member name="P:Skyline.DataMiner.Analytics.TrendPrediction.PredictedAlarm.SeverityRangeID">
+            <summary>
+            Severity Range: "Normal" (5), "High" (6), "Low" (7)
+            </summary>
+        </member>
+        <member name="P:Skyline.DataMiner.Analytics.TrendPrediction.PredictedAlarm.Type">
+            <summary>
+            Predicted alarm type (alarm limit violation, data range violation)
+            </summary>
+        </member>
+        <member name="M:Skyline.DataMiner.Analytics.WaveStream.WaveletLevelRecordExposers.Initialize">
+            <summary>
+            Guarantee that all static fields are initialized.
+            Since C# makes use of the laziest initialization.
+            </summary>
+        </member>
+    </members>
+</doc>
