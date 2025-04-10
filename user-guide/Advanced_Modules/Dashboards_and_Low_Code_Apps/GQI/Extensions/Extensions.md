@@ -4,11 +4,11 @@ uid: GQI_Extensions
 
 # GQI extensions
 
-As of this moment, there are two ways to extend the Generic Query Interface:
+There are currently two ways to extend the Generic Query Interface:
 
 - An [ad hoc data source](xref:Configuring_an_ad_hoc_data_source_in_a_query) is an external data source that can be used to create a GQI query. The *Get ad hoc data* data source retrieves external data based on an Automation script that is compiled as a library.
 
-- A [custom operator](xref:GQI_Custom_Operator) (available from DataMiner 10.3.0 [CU10]/10.4.1 onwards) can be created to perform specific tasks on data within a query. These tasks might be unique to your needs and cannot be done with the standard query operators available.
+- A [custom operator](xref:GQI_Custom_Operator) (supported from DataMiner 10.3.0 [CU10]/10.4.1 onwards) can be created to perform specific tasks on data within a query. These tasks might be unique to your needs and cannot be done with the standard query operators available.
 
 > [!TIP]
 > See also:
