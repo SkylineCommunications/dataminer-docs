@@ -18,8 +18,6 @@ This app allows users to:
 
 - **Attach metadata to resources** to store additional information relevant to resources as properties.
 
-- **Analyze resource utilization** metrics for resource pools, aiding in optimizing resource inventory management.
-
 ![Resource Studio UI](~/dataminer-overview/images/resource_studio1.png)
 
 ## Resources
@@ -77,19 +75,3 @@ Typical examples of capacities are bandwidths, bit rates, symbol rates, etc. Whe
 ## Properties
 
 Apart from capabilities and capacities, there is sometimes extra information that is relevant to list but that does not influence the decision as to which specific resource can be used to execute a job. This type of information can be stored in properties. This could for example be a contact person, the name of the equipment vendor, a reference to its geolocation, etc.
-
-## Utilization metrics
-
-The Resource Studio app also provides certain utilization metrics about the pools in the system, helping people that manage the resource inventory to optimize the number of deployed resources. The following metrics are reported for pools:
-
-- The number of resources in a pool
-
-- The average number of bookings per resource
-
-- The average time per booking
-
-- The total time booked in a pool
-
-- The total usage of a pool
-
-- The total calculated cost of a pool (see also [Cost and Billing app](xref:Overview_MediaOps_Cost_and_Billing))
