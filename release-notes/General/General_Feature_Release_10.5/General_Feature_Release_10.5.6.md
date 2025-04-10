@@ -46,6 +46,20 @@ When you delete a Relational Anomaly Detection (RAD) parameter group, from now o
 
 Because of a number of enhancements, overall performance has increased when importing DELT packages on systems with a database of type *Cassandra Cluster*, especially when those packages contain a large amount of trend data.
 
+#### DxMs upgraded [ID 42688]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer 1.8.3
+- DataMiner CoreGateway 2.14.12
+- DataMiner FieldControl 2.11.2
+- DataMiner Orchestrator 1.7.5
+- DataMiner SupportAssistant 1.7.3
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
 ### Fixes
 
 #### Problem with SLProtocol when a protocol version was overwritten while an element using that protocol version was starting up [ID 42344]
