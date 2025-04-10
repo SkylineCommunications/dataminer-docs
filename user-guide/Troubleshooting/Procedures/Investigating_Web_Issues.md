@@ -93,6 +93,9 @@ GQI runs as an extension module ([GQI DxM](xref:GQI_DxM)) or inside the [SLHelpe
 - Error messages, no data, no response, or slow performance? Then [record the GQI session](#record-gqi-session) and include the ad hoc data scripts (if any) when asking support.
 - GQI DxM not working? Try to [repair the service](#gqi-dxm-repair).
 
+> [!NOTE]
+> The troubleshooting procedures below require access to the DataMiner server. If you are using a DaaS system, this is not possible, and you will need to contact <daas@dataminer.services> instead.
+
 #### Record GQI session
 
 > [!NOTE]
