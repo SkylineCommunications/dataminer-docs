@@ -94,3 +94,5 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/user-guide/Advanced_Modules/User-Defined_APIs/UD_APIs.html" title="User-Defined APIs" target="_self"><img src="~/user-guide/images/User_Defined_APIs.svg" style="width:100%"></a>
   </div>
 </div>
+
+<!--I have added Copilot under Advanced Modules as it seems the most suitable place to me. However, I do not have any nice picture to add here-->

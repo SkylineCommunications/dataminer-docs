@@ -87,6 +87,10 @@ From CloudFeed version 1.4.0 onwards, the minimum required DataMiner version is 
 
 From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages by default include the latest version of the CloudFeed module. If a newer version of the CloudFeed module is available but you prefer not to install an upgrade package, you can install a newer version separately via the Admin app.
 
+### Copilot
+
+The Copilot module extends DataMiner with conversational AI: see [Copilot](xref:Copilot_DxM).
+
 ### DataAggregator
 
 See [Data Aggregator](xref:Data_Aggregator_DxM).
