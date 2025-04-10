@@ -571,9 +571,9 @@ a.backtotoplink:hover
   display: none;
 }
 
-.navbar-brand {
-  /* Make room for larger logo */
-  width: 200px; 
+.logo_main {
+  /* Resize logo.png */
+  height: 50px;
 }
 
 #search-query {
