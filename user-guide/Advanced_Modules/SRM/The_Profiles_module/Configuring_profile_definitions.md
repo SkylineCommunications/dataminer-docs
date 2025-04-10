@@ -4,7 +4,7 @@ uid: Configuring_profile_definitions
 
 # Configuring profile definitions
 
-Profile definitions combine a number of parameters and scripts that are needed to fully configure a certain device.
+[Profile definitions](xref:srm_definitions#profile-definition) combine a number of parameters and scripts that are needed to fully configure a certain device.
 
 To configure a profile definition, first select it in the *Definitions* tab of the list pane.
 

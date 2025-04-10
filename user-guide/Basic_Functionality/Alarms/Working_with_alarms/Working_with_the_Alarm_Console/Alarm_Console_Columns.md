@@ -140,9 +140,9 @@ For more information on changing the column layout, see [Changing the column lay
 
 - **Trend**: If average trending is activated on the parameter in alarm, this column displays the trend graph for the last 24 hours.
 
-- **Function impact**: The number of functions the alarm has an impact on. This functionality is part of the Service & Resource Management module. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+- **Function impact**: The number of functions the alarm has an impact on. This functionality is part of the [Service and Resource Management](xref:About_SRM) framework.
 
-- **Functions**: The functions the alarm has an impact on. This functionality is part of the Service & Resource Management module. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+- **Functions**: The functions the alarm has an impact on. This functionality is part of the [Service and Resource Management](xref:About_SRM) framework.
 
 - **Heatlines \> Element heatline**: This column displays a heatline depicting the element alarm state over the last 24 hours. Available on systems using [STaaS](xref:STaaS) or a self-managed Cassandra-compatible database.
 

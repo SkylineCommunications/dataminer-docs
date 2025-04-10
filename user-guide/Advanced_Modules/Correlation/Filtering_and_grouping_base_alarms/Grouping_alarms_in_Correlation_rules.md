@@ -20,7 +20,7 @@ In the Correlation module, the *Alarm Grouping* section of the details pane allo
 
    - by element
 
-   - by function. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+   - by function. See [Service and Resource Management](xref:About_SRM).
 
    - by key point. See [Creating an information template](xref:Creating_an_information_template).
 

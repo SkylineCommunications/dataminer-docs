@@ -17,7 +17,7 @@ An indexing database is required for many DataMiner features, including:
 
 - [DataMiner Object Models (DOM)](xref:DOM)
 
-- [DataMiner Service & Resource Management (SRM)](xref:SRM)
+- [DataMiner Service & Resource Management (SRM)](xref:About_SRM)
 
 - [DataMiner User-Defined APIs](xref:UD_APIs)
 

@@ -2,7 +2,11 @@
 uid: The_Bookings_module
 ---
 
-# The Bookings module
+# About the Bookings module
+
+The Bookings module is usually used as part of the [Service & Resource Management Framework](xref:About_SRM).
+
+You can find this module in DataMiner Cube by selecting *Apps* > *Modules* > *Bookings* in the sidebar.
 
 This module consists of two main areas:
 
