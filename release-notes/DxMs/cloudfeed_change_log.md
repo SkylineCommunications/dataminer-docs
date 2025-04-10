@@ -4,7 +4,7 @@ uid: cloudfeed_change_log
 
 # Cloud Feed change log
 
-#### 2 April 2025 - Fix - CloudFeed 1.4.2 - Problem during startup caused by inability to contact CloudGateway [ID 42599]
+#### 2 April 2025 - Fix - CloudFeed 1.4.4 - Problem during startup caused by inability to contact CloudGateway [ID 42599]
 
 <!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
 
