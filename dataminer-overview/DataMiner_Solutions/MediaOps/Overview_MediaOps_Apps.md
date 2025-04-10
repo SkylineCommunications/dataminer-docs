@@ -4,7 +4,7 @@ uid: Overview_MediaOps_Apps
 
 # MediaOps apps
 
-dataminer.MediaOps is available on the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
+dataminer.MediaOps is available in the [DataMiner Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
 
 Below is an overview of the out-of-the-box DataMiner applications included in the dataminer.MediaOps installation package.
 
@@ -49,7 +49,7 @@ For more detailed information about this application, see: [Flow Engineering app
 
 The goal of the Flow Monitoring app is to provide visibility on the path of all flows going through the media network. The app makes a distinction between as-engineered flow paths and as-is flow paths. For both, the path of a flow over DataMiner elements is shown, from the flow source to its destination, with everything in between. The exact information shown for as-engineered and as-is paths is a different, though.
 
-- **As-engineered paths** represent the expected state of flows in the network, as they have been set up by DataMiner. Whenever DataMiner is instructed to set up a connection between a source and a destination, it documents the result of its path calculation in the as-engineered flow database (see [Flow Engineering](#flow-engineering)). This as-engineered flow path documentation is independent of the connector used by the elements in the path, and therefore works with any element.
+- **As-engineered paths** represent the expected state of flows in the network, as they have been set up by DataMiner. Whenever DataMiner is instructed to set up a connection between a source and a destination, it documents the result of its path calculation in the as-engineered flow database. This as-engineered flow path documentation is independent of the connector used by the elements in the path, and therefore works with any element.
 
 - **As-is flow paths** show the flows as reported by the elements in the DataMiner System. These therefore reflect the actual current state of the flows in the network. These can then be compared to the as-engineered paths to see if the actual state of the network corresponds to the desired state. To be able to reconstruct the as-is path, elements in the path need to report the incoming and outgoing flows on the underlying product in a standardized format. This is therefore only supported for elements that are integrated with the MediaOps solution.
 
@@ -79,7 +79,7 @@ The workflow designer is an operator-level DevOps environment to create technica
 
 Additionally, a workflow describes:
 
-- How the nodes in the workflow need to be connected by [Flow Engineering](#flow-engineering).
+- How the nodes in the workflow need to be connected.
 - What automation is run as part of the workflow execution.
 - Whether or not resources and capacity are reserved.
 - If and how the service needs to be monitored.
