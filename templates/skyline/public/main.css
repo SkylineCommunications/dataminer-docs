@@ -566,7 +566,13 @@ a.backtotoplink:hover
 	color: var(--color-foreground-hyperlink-hover);
 }
 
+.navbar .navbar-nav {
+  /* Needed because _disableNavbar does not work in Modern template  */
+  display: none;
+}
+
 .navbar-brand {
+  /* Make room for larger logo */
   width: 200px; 
 }
 
