@@ -98,6 +98,7 @@
       "_enableSearch": false,
       "_enableNewTab": true,
       "_disableNextArticle": true,
+      "_disableNavbar": true,
 	    "_googleAnalyticsTagId": "GTM-WD3NQGN"
     },
     "globalMetadataFiles": [],
