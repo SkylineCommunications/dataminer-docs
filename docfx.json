@@ -74,6 +74,7 @@
   "resource": [
       {
         "files": [
+          "fonts/**",
           "images/**",
           "dataminer-overview/images/**",
           "solutions/images/**",
