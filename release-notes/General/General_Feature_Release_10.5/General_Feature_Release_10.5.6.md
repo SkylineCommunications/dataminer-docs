@@ -67,7 +67,7 @@ When an element was swarmed immediately after being created or after having its 
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-When a Notify method was called shortly after an Automation script had finished, in some cases, the SLAutomation process could stop working.
+When a Notify method was called from a thread created within an Automation script shortly after that Automation script had finished, in some cases, the SLAutomation process could stop working.
 
 #### Redundancy groups: Matrix parameter updates in a derived element would incorrectly not get applied in the source element (and vice versa) [ID 42598]
 

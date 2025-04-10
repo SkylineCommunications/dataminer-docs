@@ -296,7 +296,7 @@ From now on, if the maximum cache size is reached, old model information might g
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-When a Notify method was called shortly after an Automation script had finished, in some cases, the SLAutomation process could stop working.
+When a Notify method was called from a thread created within an Automation script shortly after that Automation script had finished, in some cases, the SLAutomation process could stop working.
 
 #### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
 
