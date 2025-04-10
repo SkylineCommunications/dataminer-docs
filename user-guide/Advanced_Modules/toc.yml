@@ -949,6 +949,8 @@ items:
         items:
           - name: Accessing the Experience and Performance Management user interface
             topicUid: Accessing_the_Experience_and_Performance_Management_user_interface
+          - name: Using the EPM Topology app
+            topicUid: EPM_Topology_app
           - name: EPM user interface components
             topicUid: EPM_user_interface_components
           - name: Using the EPM filter section

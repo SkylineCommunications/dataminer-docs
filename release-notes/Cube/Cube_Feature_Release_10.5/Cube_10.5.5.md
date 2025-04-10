@@ -14,19 +14,19 @@ uid: Cube_Feature_Release_10.5.5
 
 ## New features
 
-#### EPM integration now fully available in DataMiner Cube [ID 22125] [ID 24896] [ID 26232] [ID 29748] [ID 42221]
+#### EPM integration now fully available in DataMiner Cube [ID 22125] [ID 24896] [ID 26002] [ID 26232] [ID 29748] [ID 42221]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 All EPM integration functionality that previously required the *CPEIntegration* soft-launch option is now fully available in DataMiner Cube. This allows you to access EPM data directly through the Cube UI, instead of only via an EPM Manager element. The data is available via a dedicated app, but can also be accessed via the Surveyor or the Alarm Console.
 
-#### Topology app
+##### Topology app
 
-The most prominent new EPM integration feature is the **Topology app**. If your system contains at least one correctly configured EPM Manager element, this app becomes available via a button in the Cube sidebar. Clicking the button will open a pane where you can select the front-end EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the selection in the Topology app will also be updated to match the displayed card.
+The most prominent new EPM integration feature is the Topology app. If your system contains at least one correctly configured EPM Manager element (as detailed below), this app becomes available via a button in the Cube sidebar. Clicking the button will open a pane where you can select the front-end EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the filter selection will be updated to match the displayed card.
 
 ![Topology app](~/user-guide/images/EPMIntegration_Topology_app.png)
 
-To make sure this app is available, the following configuration is needed:
+To make sure the Topology app is available, the following configuration is needed:
 
 1. Make sure the DMS contains at least one front-end EPM Manager element.
 
@@ -37,6 +37,12 @@ To make sure this app is available, the following configuration is needed:
 1. Go to *System Center* > *System settings* > *EPM config*, and add the front-end EPM Manager elements to the list.
 
    In the Topology app, you will now be able to select the front-end managers and the corresponding topology chains.
+
+##### EPM masking info<!-- 26002 -->
+
+If an EPM object in the topology is masked, you can get information on who masked it and when via the *Masking info* option in the hamburger menu of the Topology app:
+
+![Masking info option](~/user-guide/images/EPMIntegration_Masking_info.png)
 
 ##### System Type and System Name properties
 
@@ -99,7 +105,7 @@ Hyperlinks of this type can also be shown or hidden based on a filter configured
 
 `<HyperLink filterElement="AlarmEventMessage.PropertiesDict.&quot;System Type&quot;[String] == 'OLT'" name="Open OLT" menu="root" type="OpenCPE" version="2" id="18">[EID]:visual:qam ds</HyperLink>`.
 
-##### Configuration of cache of where exposed topology items are hosted<!-- 26232 -->
+##### Agent caching configuration<!-- 26232 -->
 
 Typically, when an exposed topology item is requested, every Agent in the cluster is requested to verify whether it contains data for that topology item, while typically only two to three Agents will actually contain that item. In a cluster with many Agents, this increases unnecessary remote calls and adds an unnecessary load on the Agents.
 
@@ -117,33 +123,10 @@ This configuration will be stored in the *TopologyItemHostingCacheState* element
 </DataMiner>
 ```
 
-The following methods have been introduced to the CPECollectorHelper API for this:
+To enable this cache, in SLNetClientTest tool, after you have connected to the DMA, go to *Advanced* > *CPE* > *TopologyItemHostingCache*. You can then right-click any of the listed Agents to enable or disable the cache.
 
-- To retrieve whether an Agent is configured to host such a cache:
-
-  ```
-  bool GetTopologyItemHostingCacheState()
-  bool GetTopologyItemHostingCacheState(int dataMinerId)
-  ```
-
-- To enable or disable the hosting of such a cache on an Agent:
-
-  ```
-  void SetTopologyItemHostingCacheState(bool isCacheEnabled)
-  void SetTopologyItemHostingCacheState(int dataMinerId, bool isCacheEnabled)
-  ```
-
-- To retrieve the number of items in the cache for a specific Agent:
-
-  ```
-  int GetTopologyItemHostingCacheCount(int dataMinerId)
-  ```
-
-- To get the hosting Agents for specific topology items:
-
-  ```
-  IEnumerable<HashSet<int>> GetHostingAgentsForTopologyItems(int dataMinerId, IEnumerable<CPETopologyItem> items)
-  ```
+> [!CAUTION]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 #### System Center - SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41885]
 

@@ -6006,6 +6006,8 @@ items:
               topicUid: EpmIntegrationTrainingLowCodeApp
         - name: Topology app configuration
           topicUid: Topology_app_configuration
+        - name: Agent caching configuration
+          topicUid: EPMIntegration_Agent_cache_config
         - name: DataMiner processes configuration
           topicUid: EPM_DataMiner_processes_config
     - name: Swarming
