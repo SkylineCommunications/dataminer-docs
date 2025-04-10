@@ -26,6 +26,12 @@ Up to now, in order to clear a table, you had to use the SLProtocol method `Clea
 > [!NOTE]
 > NT_CLEAR_PARAMETER* cannot be used to clear table columns.
 
+#### SLAnalytics: Enhanced caching of DVE element information [ID 42555]
+
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+
+A number of enhancements have been made with regard to the caching of DVE element information.
+
 #### Cassandra Cluster: Enhanced performance when importing DELT packages [ID 42613]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->

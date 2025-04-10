@@ -48,6 +48,12 @@ Up to now, in order to clear a table, you had to use the SLProtocol method `Clea
 > - *NT_CLEAR_PARAMETER* cannot be used to clear table columns.
 > - This new NotifyProtocol method can be invoked from within a QAction by using the protocol.ClearParameter(<paramId>) function.
 
+#### SLAnalytics: Enhanced caching of DVE element information [ID 42555]
+
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+
+A number of enhancements have been made with regard to the caching of DVE element information.
+
 #### SLAnalytics - Relational anomaly detection: Upon deletion of a parameter group all open suggestion events associated with that group will be cleared [ID 42602]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
