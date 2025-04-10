@@ -17,56 +17,60 @@ From DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards, multiple front-en
 
 ## Front-end element configuration
 
-To have an EPM tab in the Surveyor in Cube, the DMS must know which element is the front end of the system.
+<!-- Supported for one front-end element from DataMiner 9.6.7 onwards (RN 21711); multiple front-end support added with RN 42221 -->
 
-To configure this, add a parameter of type "double" named "ElementManagerType" to the protocol of the front-end manager, and set its value to "1".
+To have an EPM tab in the Surveyor in Cube, the DMS must be able to recognize the front-end elements. To configure this:
 
-<!-- Supported from DataMiner 9.6.7 onwards - RN 21711 -->.
+1. Add a parameter of type "double" named "ElementManagerType" to the protocol of the front-end manager, and set its value to "1".
+
+   > [!NOTE]
+   > This parameter check will only be done on elements that are running a protocol where the Protocol.Display@type attribute has been set to "element manager".
+
+   ```xml
+   <Param id="1" save="true" trending="false">
+      <Name>ElementManagerType</Name>
+      <Description>Element Manager Type</Description>
+      <Information>
+         <Subtext>Element Manager Type: Front-End or Back-End</Subtext>
+      </Information>
+      <Type>read</Type>
+      <Interprete>
+         <RawType>numeric text</RawType>
+         <Type>double</Type>
+         <LengthType>next param</LengthType>
+      </Interprete>
+      <Display>
+         <RTDisplay>true</RTDisplay>
+         <Positions>
+            <Position>
+               <Page>General Configuration</Page>
+               <Row>0</Row>
+               <Column>0</Column>
+            </Position>
+         </Positions>
+      </Display>
+      <Measurement>
+         <Type>discreet</Type>
+         <Discreets>
+            <Discreet>
+               <Display>Front-End</Display>
+               <Value>1</Value>
+            </Discreet>
+            <Discreet>
+               <Display>Back-End</Display>
+               <Value>2</Value>
+            </Discreet>
+         </Discreets>
+      </Measurement>
+   </Param>
+   ```
+
+1. Go to *System Center* > *System settings* > *EPM config*, and add the front-end EPM Manager elements to the list.
+
+   In the Topology app, you will now be able to select the front-end managers and the corresponding topology chains.
 
 > [!NOTE]
-> This parameter check will only be done on elements that are running a protocol where the Protocol.Display@type attribute has been set to "element manager".
-
-```xml
-<Param id="1" save="true" trending="false">
-   <Name>ElementManagerType</Name>
-   <Description>Element Manager Type</Description>
-   <Information>
-      <Subtext>Element Manager Type: Front-End or Back-End</Subtext>
-   </Information>
-   <Type>read</Type>
-   <Interprete>
-      <RawType>numeric text</RawType>
-      <Type>double</Type>
-      <LengthType>next param</LengthType>
-   </Interprete>
-   <Display>
-      <RTDisplay>true</RTDisplay>
-      <Positions>
-         <Position>
-            <Page>General Configuration</Page>
-            <Row>0</Row>
-            <Column>0</Column>
-         </Position>
-      </Positions>
-   </Display>
-   <Measurement>
-      <Type>discreet</Type>
-      <Discreets>
-         <Discreet>
-            <Display>Front-End</Display>
-            <Value>1</Value>
-         </Discreet>
-         <Discreet>
-            <Display>Back-End</Display>
-            <Value>2</Value>
-         </Discreet>
-      </Discreets>
-   </Measurement>
-</Param>
-```
-
-> [!TIP]
-> On startup, the DMS will crawl through the system to find which element has these conditions met to establish it as the front end. When the DMS finds the element, it will register its DMA and element ID in the DMS cache. This cache is wiped when the DMS is shut down or restarted. To avoid having to do this crawl, you can register the element using an Automation script. You can use the [EpmConfig](https://catalog.dataminer.services/details/automation-script/3713) script to register the element after inputting the DataMiner and element ID of the front end.
+> If you are using a DataMiner version prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5, only one front-end element is supported, and it is not possible to configure this element in System Center. Instead, on startup, the DMS will crawl through the system to find which element meets the conditions mentioned in the first step above to establish it as the front end. When the DMS finds the element, it will register its DMA and element ID in the DMS cache. This cache is wiped when the DMS is shut down or restarted. To avoid having to do this crawl, you can register the element using an Automation script. You can use the [EpmConfig](https://catalog.dataminer.services/details/automation-script/3713) script to register the element after inputting the DataMiner and element ID of the front end.
 
 ## Data section configuration
 

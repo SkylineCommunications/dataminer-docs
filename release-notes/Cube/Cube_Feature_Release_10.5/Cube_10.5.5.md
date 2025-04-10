@@ -12,22 +12,9 @@ uid: Cube_Feature_Release_10.5.5
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.5](xref:General_Feature_Release_10.5.5).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.5](xref:Web_apps_Feature_Release_10.5.5).
 
-## Highlights
-
-- [EPM integration now fully available in DataMiner Cube [ID 42221]](#epm-integration-now-fully-available-in-dataminer-cube-id-42221)
-
 ## New features
 
-#### System Center - SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41885]
-
-<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
-
-Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option. If you select this option, DataMiner will track which inform messages have been sent, and will not resend those that have already been acknowledged.
-
-> [!NOTE]
-> This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of System Center.
-
-#### EPM integration now fully available in DataMiner Cube [ID 42221]
+#### EPM integration now fully available in DataMiner Cube [ID 22125] [ID 24896] [ID 26232] [ID 29748] [ID 42221]
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
@@ -69,7 +56,7 @@ For much of the EPM integration functionality, the system type and system name m
 </Topologies>
 ```
 
-This makes the *System Type* and *System Name* properties available in the system for e.g. alarm filtering, and it also allows you to link Visio shapes to EPM objects based on these properties using the *SystemType* and *SystemName* shape data fields.
+This makes the *System Type* and *System Name* properties available in the system for e.g. alarm filtering, and it also allows you to link Visio shapes to EPM objects based on these properties using the *SystemType* and *SystemName* shape data fields.<!-- 24896 -->
 
 In addition, you can link views to EPM rows by using the [viewImpact](xref:ColumnOptionOptionsOverview#viewimpact) table column option in the view tables of the EPM Manager protocol, and setting the *System Type* and *System Name* properties on the views. In the Surveyor, a circle will be added to the alarm icon for the view, showing the highest alarm severity of objects within the view:
 
@@ -83,8 +70,89 @@ To configure this, **make sure the system type for each front-end manager is uni
 
 In addition, the front-end and back-end elements for the **same technology** must use the **same DataMiner protocol and version**, as otherwise this may result in incorrect linking in the DataMiner Cube UI.
 
+If these conditions are met, to start using the front-end EPM Managers, first define them in System Center via *System settings* > *EPM config* or via the cogwheel icon in the Topology app.
+
 > [!IMPORTANT]
 > Because of this change, some **configuration changes may be required in systems that were previously using the *CPEIntegration* soft-launch option**. Some existing solutions may not have a unique system type per EPM Manager protocol, or they may have front-end and back-end manager elements with different protocols or protocol versions, which will no longer work correctly.
+
+##### Customization of EPM integration data pages
+
+By default, the table and column parameters linked to an EPM object will automatically be positioned on data pages. The name of a page will match the description of the table, and the parameters will be displayed in the order defined in the column definitions of the table, in two columns.
+
+You can change the name of a page by giving the table a position on a page that has a name prefixed with `CPEIntegration_`, e.g. *CPEIntegration_MyCustomPage*. To hide a complete table, add a table position on the special page *CPEIntegration_Hidden*. Note that pages with the `CPEIntegration_` prefix will not be shown on regular element cards.
+
+If the `CPEIntegration_` prefix is added to data pages in an EPM protocol, you can also apply a custom order for these pages in the *pageOrder* attribute of the *Display* tag in the protocol. For example:<!-- 29748 -->
+
+```xml
+<Display type="element manager" pageOptions="*;CPEOnly" defaultPage="General" pageOrder="General;Configurations;----------;CPEIntegration_Data/General;CPEIntegration_Data/Fiber;CPEIntegration_Data/Household;CPEIntegration_Data/Service Usage"/>
+```
+
+##### Custom Alarm Console hyperlinks to EPM object cards<!-- 22125 -->
+
+It is now possible to configure custom hyperlinks for the Alarm Console context menu that will open EPM object cards. This is configured in *Hyperlinks.xml*, a similar way to the existing hyperlinks feature to open element, view, or service cards. However, the type for these new hyperlinks should be set to "OpenCPE".
+
+For example, to add an "Open OLT" hyperlink to the Alarm Console context menu to open the EPM card of the object that generated the selected alarm, you can add the following configuration in the file:
+
+`<HyperLink  name="Open OLT" menu="root" type="OpenCPE" version="2" id="18">:visual:pagename</HyperLink>`.
+
+Hyperlinks of this type can also be shown or hidden based on a filter configured with the *filterElement* attribute. For example:
+
+`<HyperLink filterElement="AlarmEventMessage.PropertiesDict.&quot;System Type&quot;[String] == 'OLT'" name="Open OLT" menu="root" type="OpenCPE" version="2" id="18">[EID]:visual:qam ds</HyperLink>`.
+
+##### Configuration of cache of where exposed topology items are hosted<!-- 26232 -->
+
+Typically, when an exposed topology item is requested, every Agent in the cluster is requested to verify whether it contains data for that topology item, while typically only two to three Agents will actually contain that item. In a cluster with many Agents, this increases unnecessary remote calls and adds an unnecessary load on the Agents.
+
+In such a case, you can now make an Agent store a full cache of where topology items are stored in the cluster, so that when this Agent (or an Agent connected to this Agent) receives a request for a topology item, only the Agents actually containing the data for the item will need to be contacted.
+
+There is no limit as to how many Agents can hold such a cache, but keep in mind that depending on how many topology items are exposed in the system, this may increase the memory footprint of SLNet, and it will also add some extra syncing between Agents and forwarding of data from SLElement to SLNet when provisioning occurs.
+
+This configuration will be stored in the *TopologyItemHostingCacheState* element of *DataMiner.xml*, for example:
+
+```xml
+<DataMiner>
+...
+   <TopologyItemHostingCacheState>true</TopologyItemHostingCacheState>
+...
+</DataMiner>
+```
+
+The following methods have been introduced to the CPECollectorHelper API for this:
+
+- To retrieve whether an Agent is configured to host such a cache:
+
+  ```
+  bool GetTopologyItemHostingCacheState()
+  bool GetTopologyItemHostingCacheState(int dataMinerId)
+  ```
+
+- To enable or disable the hosting of such a cache on an Agent:
+
+  ```
+  void SetTopologyItemHostingCacheState(bool isCacheEnabled)
+  void SetTopologyItemHostingCacheState(int dataMinerId, bool isCacheEnabled)
+  ```
+
+- To retrieve the number of items in the cache for a specific Agent:
+
+  ```
+  int GetTopologyItemHostingCacheCount(int dataMinerId)
+  ```
+
+- To get the hosting Agents for specific topology items:
+
+  ```
+  IEnumerable<HashSet<int>> GetHostingAgentsForTopologyItems(int dataMinerId, IEnumerable<CPETopologyItem> items)
+  ```
+
+#### System Center - SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41885]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option. If you select this option, DataMiner will track which inform messages have been sent, and will not resend those that have already been acknowledged.
+
+> [!NOTE]
+> This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of System Center.
 
 #### Sharing the link to the current Cube session with other users [ID 42389] [ID 42524]
 
