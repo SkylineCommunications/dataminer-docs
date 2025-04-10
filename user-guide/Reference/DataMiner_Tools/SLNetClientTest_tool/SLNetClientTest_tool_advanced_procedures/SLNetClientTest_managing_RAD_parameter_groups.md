@@ -10,15 +10,15 @@ From DataMiner 10.5.4/10.6.0 onwards<!--RN 42181-->, it is possible to manage [r
 
 1. Go to the *Build Message* tab of the main window of the SLNetCLientTest tool.
 
-1. In the *Message Type* drop-down list, choose one of the following messages:
+1. In the *Message Type* dropdown list, choose one of the following messages. All message names start with the `Skyline.DataMiner.Analytics.Rad.` prefix:
 
    | Message | Function |
    |--|--|
-   | Skyline.DataMiner.Analytics.Rad.AddRADParameterGroupMessage | Creates a new RAD parameter group. If a group with the same name already exists, the group will be updated instead. |
-   | Skyline.DataMiner.Analytics.Rad.GetRADDataMessage | Retrieves anomaly scores over a specified time range. |
-   | Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupInfoMessage | Retrieves the configuration information for a specific RAD parameter group. |
-   | Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupsMessage | Retrieves a list of all configured RAD parameter groups. |
-   | Skyline.DataMiner.Analytics.Rad.RemoveRADParameterGroupMessage | Deletes a RAD parameter group. |
+   | AddRADParameterGroupMessage | Creates a new RAD parameter group. If a group with the same name already exists, the group will be updated instead. |
+   | GetRADDataMessage | Retrieves anomaly scores over a specified time range. Note that anomaly scores can only be retrieved for past time periods where 5-minute averaged trend data is available. |
+   | GetRADParameterGroupInfoMessage | Retrieves the configuration information for a specific RAD parameter group. |
+   | GetRADParameterGroupsMessage | Retrieves a list of all configured RAD parameter groups. |
+   | RemoveRADParameterGroupMessage | Deletes a RAD parameter group. |
 
    > [!NOTE]
    > In DataMiner 10.5.4, some of these messages may include "MAD" instead of "RAD", e.g. *Skyline.DataMiner.Analytics.MAD.AddMADParameterGroupMessage*. In this message, "MAD" stands for "multivariate anomaly detection", which is another name for RAD.
@@ -27,21 +27,32 @@ From DataMiner 10.5.4/10.6.0 onwards<!--RN 42181-->, it is possible to manage [r
 
    - *AddRADParameterGroupMessage*:
 
+     - *GroupInfo* > *AnomalyThreshold*: Optional. Defines the threshold for suggestion event generation. A higher value results in fewer suggestion events, a lower value results in more. If not specified, the default value 3 is used.
+
+     - *GroupInfo* > *MinimumAnomalyDuration*: Optional. The minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. If not specified, the default value 5 is used.
+
+     - *GroupInfo* > *Name*: The name of the parameter group.
+
+     - *GroupInfo* > *Parameters*: A list of parameter instances (DataMiner ID, Element ID, Parameter ID, Primary Key) that will be monitored together by a RAD model.
+
+     - *GroupInfo* > *UpdateModel*: Indicates whether the model should be updated continuously as new data becomes available (*true*), or only be trained initially based on available data at startup (*false*).
+
    - *GetRADDataMessage*:
 
-     - *GroupName*: The name of the parameter group as configured in *RelationalAnomalyDetection.xml*.
+     - *EndTime*: The end time of the period for which you want to retrieve anomaly scores.
 
-     - *StartTime*: The start time of the period during which the parameter group was behaving as expected.
+     - *GroupName*: The name of the parameter group.
 
-     - *EndTime*: The end time of the period during which the parameter group was behaving as expected.
+     - *StartTime*: The start time of the period for which you want to retrieve anomaly scores.
 
-   - *GetRADParameterGroupInfoMessage*:
+     > [!NOTE]
+     > Anomaly scores can only be retrieved for past time periods where 5-minute averaged trend data is available.
 
-     - *GroupName*: The name of the parameter group as configured in *RelationalAnomalyDetection.xml*.
+   - *GetRADParameterGroupInfoMessage* and *RemoveRADParameterGroupMessage*:
 
-   - *GetRADParameterGroupsMessage*:
+     - *GroupName*: The name of the parameter group.
 
-   - *RemoveRADParameterGroupMessage*:
+   - *GetRADParameterGroupsMessage*: No additional fields need to be configured.
 
 1. Click *Send Message*.
 
