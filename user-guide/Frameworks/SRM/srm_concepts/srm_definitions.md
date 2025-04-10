@@ -64,7 +64,7 @@ A single profile definition will not contain the parameters for both the virtual
 Another example of a profile definition could be a profile definition "IP Interface", which groups all profile parameters that are required to orchestrate and manage an IP interface of a virtual function.
 
 > [!TIP]
-> See also: [Configuring profile parameters](xref:Configuring_profile_definitions)
+> See also: [Configuring profile definitions](xref:Configuring_profile_definitions)
 
 ## Service definition
 
