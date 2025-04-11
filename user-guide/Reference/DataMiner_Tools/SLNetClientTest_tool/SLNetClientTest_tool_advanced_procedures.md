@@ -23,6 +23,7 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
 - [Disabling replication buffering](xref:SLNetClientTest_disabling_replication_buffering)
 - [Editing the connection string between two DataMiner Agents](xref:SLNetClientTest_editing_connection_string)
+- [Enabling or disabling debug logging for a DOM manager](xref:SLNetClientTest_debug_logging_DOM_manager)
 - [Enabling or disabling protocol buffer serialization](xref:SLNetClientTest_protocol_buffer_serialization)
 - [Fine-tuning NATS settings](xref:SLNetClientTest_finetuning_nats_settings)
 - [Fine-tuning the CPECollectorHelper API timeout](xref:SLNetClientTest_finetuning_CPECollectorHelper)
