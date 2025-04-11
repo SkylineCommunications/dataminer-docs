@@ -213,6 +213,9 @@ Depending on the type of layer, you can specify different layer properties in th
 
     ![HTML code example](~/user-guide/images/HTML.gif)<br>*Template Editor in DataMiner 10.5.5*
 
+    > [!NOTE]
+    > Certain HTML tags, such as `<iframe>` and `<object>`, are not supported in HTML layers because embedded content is currently restricted in templates. If you want to use these tags, consider using the [web component](xref:DashboardWeb) instead. To display content like video thumbnails in a template, you can convert the content to a base64-encoded image and display it using an `<img>` tag.
+
   - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Allows you to configure a tooltip that appears when hovering over the HTML content. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
   - *Configure actions*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the HTML content. Only available for DataMiner Low-Code Apps.
