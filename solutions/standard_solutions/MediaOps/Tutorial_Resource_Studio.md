@@ -1,5 +1,5 @@
 ---
-uid: Tutorial_Resource_Studio
+uid: Tutorial_MediaOps_Resource_Studio
 ---
 
 # Getting started with the Resource Studio
