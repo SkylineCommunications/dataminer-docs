@@ -28,25 +28,23 @@ uid: General_Feature_Release_10.5.6
 
 ## New features
 
-*No new features have been added yet.*
+#### New NotifyProtocol call NT_CLEAR_PARAMETER [ID 42368] [ID 42397]
 
-## Changes
-
-### Enhancements
-
-#### New NotifyProtocol call NT_CLEAR_PARAMETER can now be used instead of ClearAllKeys() [ID 42368] [ID 42397]
-
-<!-- RN 42368: MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 <!-- RN 42397: MR 10.6.0 - FR 10.5.6 -->
+<!-- RN 42368: MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 
-A new NotifyProtocol call *NT_CLEAR_PARAMETER* can now be used to clear tables and single parameters.
+A new NotifyProtocol call *NT_CLEAR_PARAMETER* (474) can now be used to clear tables and single parameters. When used, it will also clear the parameter's display value and save any changes when the parameter is saved.
 
-Up to now, in order to clear a table, you had to use the SLProtocol method `ClearAllKeys()`. That method would first retrieve all primary keys from the table using an *NT_GET_INDEXES* (NotifyProtocol 168) call, and when there was at least one primary key present, it would then perform an *NT_DELETE_ROW* (NotifyProtocol 156) call to remove all rows.
+Internally, this new *NT_CLEAR_PARAMETER* call will now also be used by the existing SLProtocol function `ClearAllKeys()`. As a result, the latter will now be able to clear tables of which the RTDisplay setting was not set to true.
 
 > [!NOTE]
 >
 > - *NT_CLEAR_PARAMETER* cannot be used to clear table columns.
 > - This new NotifyProtocol method can be invoked from within a QAction by using the protocol.ClearParameter(<paramId>) function.
+
+## Changes
+
+### Enhancements
 
 #### SLAnalytics: Enhanced caching of DVE element information [ID 42555]
 
