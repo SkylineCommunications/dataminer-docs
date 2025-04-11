@@ -213,9 +213,6 @@ Depending on the type of layer, you can specify different layer properties in th
 
     ![HTML code example](~/user-guide/images/HTML.gif)<br>*Template Editor in DataMiner 10.5.5*
 
-    > [!TIP]
-    > See also: [HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp).
-
   - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Allows you to configure a tooltip that appears when hovering over the HTML content. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
 
   - *Configure actions*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the HTML content. Only available for DataMiner Low-Code Apps.
