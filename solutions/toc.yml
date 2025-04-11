@@ -41,6 +41,10 @@ items:
           topicUid: PO_Managing_Teams
         - name: Managing organizations
           topicUid: PO_Managing_Organizations
+      - name: Tutorials
+        items: 
+        - name: Getting started with the Resource Studio
+          topicUid: Tutorial_MediaOps_Resource_Studio
     - name: DataMiner PTP
       topicUid: SolPTP
       items:
