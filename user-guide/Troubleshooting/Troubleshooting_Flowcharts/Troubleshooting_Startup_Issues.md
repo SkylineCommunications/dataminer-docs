@@ -256,7 +256,7 @@ DataMiner is unable to establish a connection to the database. This can be cause
 
 ### Solution
 
-1. Verify whether all nodes are running fine by checking their status in nodetool.
+1. Connect to the database server and verify whether all nodes are running fine by checking their status in nodetool.
 
    - UN (or up/normal): The node is running fine.
    - DN: The node is down. In some cases, this can mean data loss is occurring.
@@ -273,7 +273,7 @@ DataMiner is unable to establish a connection to the database. This can be cause
    - Check the DMA server for possible port exhaustion issues and restart if necessary.
    - Check whether a firewall is blocking the communication.
 
-1. Connect to the database server and verify whether the Cassandra service is running:
+1. If the node is down, verify whether the Cassandra service is running:
 
    - On **Linux**: `sudo systemctl status Cassandra`
    - On **Windows**: Look for the Cassandra service in the Task Manager.
