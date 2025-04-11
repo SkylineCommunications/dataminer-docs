@@ -11,6 +11,7 @@ The Alarm Console light bulb feature supports the following advanced analytics f
 - Alarm focus
 - Automatic incident tracking
 - Behavioral anomaly detection
+- Relational anomaly detection
 - Proactive cap detection
 - Pattern matching
 
@@ -29,6 +30,7 @@ The Alarm Console light bulb feature supports the following advanced analytics f
   | Also show alarms not requiring focus <!--RN 37057-->| Clears the above-mentioned filter, listing all alarms in the current tab. |
   | X incidents are present on the system <!--RN 36918--> <!--RN 37145--> | Opens a new tab listing all active incidents. |
   | X anomalies were found in your trend data <!--RN 37145--> | Opens a new tab listing all anomaly suggestions/alarms. |
+  | X relational anomalies were found | Opens a new tab listing all relational anomaly suggestions |
   | X alarms are predicted in the near future <!--RN 37145--> | Opens a new tab listing all prediction suggestions/alarms. |
   | X recent pattern occurrence detected <!--RN 37145--> | Opens a new tab listing all trend pattern suggestions. |
 
