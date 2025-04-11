@@ -65,3 +65,9 @@ Also, when you had linked a *Dropdown* component to a query that received its da
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
 When, in an *Image* component, you tried to upload an image file of which the extension contained one or more uppercase letters, an error would be thrown.
+
+#### Visual Overview in the web apps: Problem when using load balancing [ID 42650]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When load balancing was being used for Visual Overview in the web apps, in some cases, a particular user session could request a visual overview from an incorrect DataMiner Agent.
