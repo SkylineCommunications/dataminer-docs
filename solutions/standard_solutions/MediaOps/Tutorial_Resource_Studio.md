@@ -4,53 +4,112 @@ uid: Tutorial_Resource_Studio
 
 # Getting started with the Resource Studio
 
-> [!NOTE]
-> The content and screenshots for this tutorial have been created using DataMiner version 10.4.8 and Ping Monitoring version 1.0.1-CU12.
+In this tutorial, you will learn how to create and configure resource pools and resources using the Resource Studio.
+
+Expected duration: 15 minutes
+
+> [!NOTE]  
+> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.2.5-CU0.
+
+> [!TIP]  
+> See also: [Resource Studio documentation](xref:MO_Resource_Studio)
 
 ## Prerequisites
 
+- A DataMiner System using DataMiner 10.5.5 or higher.
+- Access to the **Resource Studio** application.
+
 ## Overview
 
-Say we have a set of devices that can convert signals between [SDI](https://en.wikipedia.org/wiki/Serial_digital_interface) and [IP](https://en.wikipedia.org/wiki/Internet_Protocol), SDI-to-IP being an **encoder** and IP-to-SDI converter being a **decoder**. To represent these 2 types of devices, we can create 2 matching resource pools. First open the **New** resource pool popup:
+- [Step 1: Create resource pools](#step-1-create-resource-pools)
+- [Step 2: Create resources](#step-2-create-resources)
+- [Step 3: Mark resources complete](#step-3-mark-resources-complete)
+- [Step 4: Assign resources to pools](#step-4-assign-resources-to-pools)
 
-![New Resource Pool](~/solutions/images/Resource_Studio_New_Resource_Pool.png)
+## Step 1: Create resource pools
 
-Next, fill in the form with appropriate names (**Encoder** and **Decoder**) for the resource pools. For now you don't have to change anything else in this form:
+Assume that you have a set of devices you would like to add to the Resource Studio app. The devices convert signals between [SDI](https://en.wikipedia.org/wiki/Serial_digital_interface) and [IP](https://en.wikipedia.org/wiki/Internet_Protocol). SDI-to-IP devices act as **encoders**, and IP-to-SDI devices as **decoders**.
 
-![New Resource Pool Form](~/solutions/images/Resource_Studio_New_Resource_Pool_Form.png)
+To represent these device types in the Resource Studio app, you can create two matching resource pools:
 
-After you **Save** both resource pools, you can see them listed in the **Resource Pools** table:
+1. Open the `+ New` Resource Pool window.
 
-![New Resource Pool Created](~/solutions/images/Resource_Studio_New_Resource_Pools_Created.png)
+   ![New Resource Pool](~/solutions/images/Resource_Studio_New_Resource_Pool.png)
 
-Now that the resource pools are created, we can proceed with creating the resources and assigning them to the resource pools. The procedure is similar to creating resource pools, only this time we navigate to the **Resources** page.
+1. Fill in the form with the names "Encoder" and "Decoder" for the respective pools.
 
-![New Resource](~/solutions/images/Resource_Studio_New_Resource.png)
+   ![New Resource Pool Form](~/solutions/images/Resource_Studio_New_Resource_Pool_Form.png)
 
-Name the resources "Video Solutions 001" and "NewTek 001", set the **Type** to `Unmanaged` and **Save** them. Also, let's assume that the first resource is just an **Encoder**, while the second one can be used either as an **Encoder** or **Decoder**, but it can act as only one of those at a time.
+   > [!TIP]  
+   > You don’t need to modify other fields in this form for this tutorial.
 
-![New Resource Form](~/solutions/images/Resource_Studio_New_Resource_Form.png)
+1. Click **Save as Completed**.
 
-To make both resources available for assigninment to resource pools, open up their respective **Edit** panels and **Mark complete** both of the resources.
+   > [!NOTE]
+   > `Complete` is one of the states a resource pool can be in. If you choose to save it in the `Draft` state (on the bottom left) instead, you will be able to finish the tutorial, but the resource pools won't be available for use in the other apps like [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
 
-![Mark Complete](~/solutions/images/Resource_Studio_Resource_Mark_Complete.png)
+1. Confirm both resource pools are listed in the **Resource Pools** table.
 
-Now that both the resources are created and available for usage, we can proceed with assigning them to the pools.
+   ![New Resource Pool Created](~/solutions/images/Resource_Studio_New_Resource_Pools_Created.png)
 
-![Assign Resources](~/solutions/images/Resource_Studio_Assign_Resources.png)
+## Step 2: Create resources
 
-In the assign resources panel, at the top of the screen you can see which resource pool you're assigning to. Below you can find all the resources, which you can also filter by their name. Once you find the resource you want to add to the pool, **select** it and click the **ADD** button on the top right.
+Now that the resource pools are set up, you can proceed to create resources and assign them.
 
-![Assign Resources Panel](~/solutions/images/Resource_Studio_Assign_Resources_Panel.png)
+1. Go to the **Resources** page.
 
-> [!TIP]
-> If you can't find your resource in the above panel, double check if it has been "marked complete".
+   ![New Resource](~/solutions/images/Resource_Studio_New_Resource.png)
 
-You should add the "Video Solutions 001" and "NewTek 001" resources to the "Encoders" resource pool. If all went well, now you should see your resources have moved to the column on the right, which means they are  part of the resource pool. After that is done, open up the "Decoders" resource pool and add only "NewTek 001" resource to it. Now you have your resources and resource pools neatly organized and ready for use in other apps such as [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
+1. Create two resources:
+   - *Video Solutions 001*
+   - *NewTek 001*
 
-One final step is to navigate to the **Edit** panel of both resource pools and **Mark complete** each of them. These resources and resource pools now can be assigned to jobs, as you will see in other examples in the the documentation.
+1. For both, set the **Type** to `Unmanaged` and click **Save**.
+
+   ![New Resource Form](~/solutions/images/Resource_Studio_New_Resource_Form.png)
+
+> [!NOTE]  
+> In this example, *Video Solutions 001* is an **Encoder** only, while *NewTek 001* can act as either an **Encoder** or **Decoder**, but only one at a time.
+
+## Step 3: Mark resources complete
+
+Before resources can be assigned to pools, they must be marked complete.
+
+1. Open the **Edit** panel for each resource.
+
+1. Click **Mark complete**.
+
+   ![Mark Complete](~/solutions/images/Resource_Studio_Resource_Mark_Complete.png)
+
+## Step 4: Assign resources to pools
+
+1. Go to the **Assign Resources** screen.
+
+   ![Assign Resources](~/solutions/images/Resource_Studio_Assign_Resources.png)
+
+1. At the top, confirm the resource pool you are assigning to.
+
+1. Use the filter box to locate the resource.
+
+1. Select the resource and click `+ ADD`.
+
+   ![Assign Resources Panel](~/solutions/images/Resource_Studio_Assign_Resources_Panel.png)
+
+1. Assign the resources as follows:
+   - Add *Video Solutions 001* and *NewTek 001* to the **Encoders** pool.
+   - Add only *NewTek 001* to the **Decoders** pool.
+
+> [!TIP]  
+> If your resource doesn’t show up, make sure it has been **marked complete**.
+
+You should now see the resources listed in the right-hand column of each pool. This brings us to the end of this tutorial. By now, if all went well, you should have some resources and resource pools ready for use in other applications such as [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
+
+> [!NOTE]
+> In case your resources or resource pools are in `Draft` state, you can change the state to `Complete` as follows:
+> 1. Open the **Edit** panel of each instance you want to change.
+> 1. Click **Mark complete**.
 
 ![Mark Complete](~/solutions/images/Resource_Studio_Mark_Complete.png)
 
-> [!TIP]
-> You can also **Change icon** of the resource pools and make them convey more visual information when used in other apps.
+> [!TIP]  
+> You can also **Change icon** of the resource pools to add visual context in other applications.
