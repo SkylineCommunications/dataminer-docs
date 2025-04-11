@@ -43,6 +43,35 @@ Internally, this new *NT_CLEAR_PARAMETER* call will now also be used by the exis
 > - This new NotifyProtocol method can be invoked from within a QAction by using the protocol.ClearParameter(<paramId>) function.
 > - When using `ProtocolExt`, you can now use e.g. `protocol.getRequests.Clear()` to clear a table parameter named *getRequests*. Internally, this new `Clear()` function will then execute a `protocol.ClearAllKeys(<getRequests parameter ID>)` call.
 
+#### Automation: Separate log file for every Automation script that is run [ID 42572]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+From now on, when an Automation script is run, every entry that is logged in the *SLAutomation.txt* file by the `Engine.Log` method will also be logged in a separate log file located in *C:\\Skyline DataMiner\\Logging\\Automation\\*. That log file will have a name that is identical to that of the Automation script.
+
+- The first time an Automation script is run, a log file will be created in *C:\\Skyline DataMiner\\Logging\\Automation\\* for that particular script.
+- After a DataMiner restart, the first time a script is executed, its existing log file will get the "_Bak" suffix and a new log file will be created.
+- If an Automation script is renamed, a new log file will be created with a name identical to that of the renamed script. The old file will be kept.
+- If you want to configure a custom log level for a particular Automation script, send an `UpdateLogfileSettingMessage` in which *Name* is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.
+- These new Automation script log files will also be included in SLLogCollector packages.
+- Each time a DataMiner upgrade package is installed, all Automation script log files will be deleted.
+
+Log entry format: `1|2|3|4|5|6|7|8`
+
+1. Date/time
+1. "SLManagedAutomation"
+1. Method that created the log entry
+1. Log type
+1. Log level
+1. Thread ID
+1. Script run ID
+1. Message
+
+Example: `2025/04/01 16:31:31.813|SLManagedAutomation|RunSafe|INF|0|959|473|Example message`
+
+> [!NOTE]
+> In the Automation script log file, you will find an indication of when the script execution started and stopped. However, this indication will be slightly different from the one you will find in the *SLAutomation.txt* log file. The one in the *SLAutomation.txt* log file will represent the total time it took for the script to run, while the one in the script log file will only take into account the C# blocks in the Automation script.
+
 ## Changes
 
 ### Enhancements

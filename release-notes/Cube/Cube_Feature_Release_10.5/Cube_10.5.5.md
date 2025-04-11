@@ -230,3 +230,9 @@ When a correlation rule created a correlated alarm that would trigger another co
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When, in the *Search* pane, you right-clicked a parameter in the search results and selected e.g. *Open in new card*, the parameter card would refuse to open.
+
+#### DataMiner Cube desktop app: Problem when updating the configuration file [ID 42689]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 [CU0] -->
+
+In some cases, the DataMiner Cube desktop app could stop working when its configuration file was being updated.

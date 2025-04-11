@@ -66,7 +66,7 @@ If already installed on your system, the app will open. If not, you will be refe
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
-A number of minor enhancements have been made, especially with regard to calculating durations.
+A number of minor enhancements have been made, especially with regard to calculating durations included in SPI logging.
 
 ### Fixes
 
@@ -75,9 +75,3 @@ A number of minor enhancements have been made, especially with regard to calcula
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
 In some cases, an *Object reference not set to an instance of an object* exception could be thrown when processing shape conditions or creating shape properties.
-
-#### DataMiner Cube desktop app: Problem when updating the configuration file [ID 42689]
-
-<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
-
-In some cases, the DataMiner Cube desktop app could stop working when its configuration file was being updated.
