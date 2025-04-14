@@ -21,7 +21,7 @@ From DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards, multiple front-en
 
 To have an EPM tab in the Surveyor in Cube, the DMS must be able to recognize the front-end elements. To configure this:
 
-1. Add a parameter of type "double" named "ElementManagerType" to the protocol of the front-end manager, and set its value to "1".
+1. Add a parameter of type "double" named "ElementManagerType" to the EPM Manager protocol.
 
    > [!NOTE]
    > This parameter check will only be done on elements that are running a protocol where the Protocol.Display@type attribute has been set to "element manager".
@@ -64,6 +64,8 @@ To have an EPM tab in the Surveyor in Cube, the DMS must be able to recognize th
       </Measurement>
    </Param>
    ```
+
+1. When the front-end manager element has been created, set the value of the parameter you added in the previous step to 1.
 
 1. Go to *System Center* > *System settings* > *EPM config*, and add the front-end EPM Manager elements to the list.
 
