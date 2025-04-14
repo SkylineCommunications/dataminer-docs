@@ -133,6 +133,14 @@ To enable this cache, in SLNetClientTest tool, after you have connected to the D
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+##### Enhanced view configuration
+
+It is now also possible to enhance a view so that it displays all the data pages of a specific element. This will for example allow you to create a view representing a particular EPM object, which will have the data pages for that object. Each view can only be combined with one element, which does not have to be included within that view.
+
+To configure this, either use SLNetClientTest tool to send a *EnhanceViewWithElementRequestMessage* with the view ID and element ID you want to combine, or add the *enhancedElement* attribute to the view in *Views.xml* and set it to the relevant element ID. However, note that the latter requires a DataMiner restart.
+
+To link all alarms of the enhancing element to the system object, fill in the general parameters *Alarm System Type* and *Alarm System Name* of this element with the correct system type and name. These values will then be set in the *System Type* and *System Name* properties of all alarms of this element.
+
 #### System Center - SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41885]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
