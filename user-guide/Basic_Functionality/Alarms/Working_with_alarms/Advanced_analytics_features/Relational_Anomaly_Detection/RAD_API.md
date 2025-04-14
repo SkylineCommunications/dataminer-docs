@@ -84,9 +84,9 @@ namespace AddRADParameterGroupWithAPI
                 // Create a list of parameter instances to include in the group
                 var parameters = new List<ParameterKey>
                 {
-                    new ParameterKey(element.DmaId, element.ElementId, element.FindParameterID("Output Power"), "PA 1"),
-                    new ParameterKey(element.DmaId, element.ElementId, element.FindParameterID("Output Power"), "PA 2"),
-                    new ParameterKey(element.DmaId, element.ElementId, element.FindParameterID("Output Power"), "PA 3"),
+                    new ParameterKey(element.DmaId, element.ElementId, element.FindParameterID("Output Power"), "PA1"),
+                    new ParameterKey(element.DmaId, element.ElementId, element.FindParameterID("Output Power"), "PA2"),
+                    new ParameterKey(element.DmaId, element.ElementId, element.FindParameterID("Output Power"), "PA3"),
                     new ParameterKey(element.DmaId, element.ElementId, element.FindParameterID("Tx Amplifier Output Power")),
                 };
 
