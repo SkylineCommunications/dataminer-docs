@@ -14,6 +14,6 @@ When validating element properties, IDP will now bypass Class Library and call S
 
 ### Fixes
 
-#### Connectivity: Multiple copies of the same connection could incorrectly get created [ID 42614]
+#### Same connection created multiple times [ID 42614]
 
-Up to now, when multiple connectivity discoveries were run, in some cases, multiple copies of the same connection could incorrectly get created.
+When connectivity discovery and provisioning was run multiple times, this could lead to multiple copies of the same connection being created. This will now be prevented. IDP will check if a connection exists and update it if needed. The same also applies for connection properties and interface properties.
