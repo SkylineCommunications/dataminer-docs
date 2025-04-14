@@ -6006,6 +6006,8 @@ items:
               topicUid: EpmIntegrationTrainingLowCodeApp
         - name: Topology app configuration
           topicUid: Topology_app_configuration
+        - name: Enhanced view configuration
+          topicUid: Enhanced_view_configuration
         - name: Agent caching configuration
           topicUid: EPMIntegration_Agent_cache_config
         - name: DataMiner processes configuration
