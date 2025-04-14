@@ -25,3 +25,7 @@ The table below provides a quick summary of the three methodologies, which will 
 | **Documentation:** | Comprehensive documentation and specifications | Continuously evolving high-level documentation and maximum focus on working software | Delivering working solutions early on |
 | **Decision-Making:** | Contract- and specification-driven | Collaboration-driven towards an agreed well-defined goal within a set time frame | Collaboration-driven |
 | **Execution:** | Executing the plan | Working towards the goal, with flexibility to easily respond to change, with time constraints in mind | Responding to change |
+
+
+> [!TIP]
+> See also [this quiz](https://community.dataminer.services/quizzes/agile-deployment-methodologies/) on deployment methodologies.
