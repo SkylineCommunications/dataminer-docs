@@ -23,11 +23,11 @@ uid: Cube_Feature_Release_10.5.5
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-All EPM integration functionality that previously required the *CPEIntegration* soft-launch option is now fully available in DataMiner Cube. This allows you to access EPM data directly through the Cube UI, instead of only via an EPM Manager element. The data is available via a dedicated app, but can also be accessed via the Surveyor or the Alarm Console.
+All EPM integration functionality that previously required the *CPEIntegration* soft-launch option is now fully available in DataMiner Cube. This allows you to access EPM data directly through the Cube UI, instead of only via an EPM Manager element. The data is available via a dedicated Topology pane in the Cube sidebar but can also be accessed via the Surveyor or the Alarm Console.
 
-##### Topology app
+##### Topology pane
 
-The most prominent new EPM integration feature is the Topology app. If your system contains at least one correctly configured EPM Manager element (as detailed below), this app becomes available via a button in the Cube sidebar. Clicking the button will open a pane where you can select the front-end EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the filter selection will be updated to match the displayed card.
+The most prominent new EPM integration feature is the Topology pane, which is also known as the **Topology app**. It is available via a new *Topology* button in the Cube sidebar, if the system contains at least one correctly configured EPM Manager element (as detailed below). Clicking the button will open a pane where you can select the front-end EPM Manager (in case more than one is available), select the topology chain, drill down to any of the topology levels in that chain, and open a card representing the data of the selected item. When you navigate between (docked) EPM cards, the filter selection will be updated to match the displayed card.
 
 ![Topology app](~/user-guide/images/EPMIntegration_Topology_app.png)
 
@@ -35,9 +35,9 @@ To make sure the Topology app is available, the following configuration is neede
 
 1. Make sure the DMS contains at least one front-end EPM Manager element.
 
-   For DataMiner Cube to detect these elements, they should be active, the *type* attribute of the *Display* tag in their connector should be set to "element manager", and they should contain a parameter named *ElementManagerType* set to 1. Also, their name should preferably start with "FE".
+   For DataMiner Cube to detect these elements, they should be active, the *type* attribute of the *Display* tag in their connector should be set to "element manager", and they should contain a parameter named *ElementManagerType* set to 1.
 
-   Each front-end EPM Manager element will describe a topology chain and its associated filters.
+   The protocol of this element (which should be the same as for the corresponding back-end elements) will describe a topology chain and its associated filters.
 
 1. Go to *System Center* > *System settings* > *EPM config*, and add the front-end EPM Manager elements to the list.
 
@@ -51,12 +51,12 @@ If an EPM object in the topology is masked, you can get information on who maske
 
 ##### System Type and System Name properties
 
-For much of the EPM integration functionality, the system type and system name must be configured in EPM Manager protocols. The system type is configured with the name attribute of the *Topologies.Topology.Cell* tag, and the system name is configured with the *columnPid* attribute of the *Topologies.Topology.Cell.Exposer.LinkedIds.LinkedId* tag. For example, in the configuration below, *Amplifier* is the system type, and the system name is indicated by the specified column PID:
+For much of the EPM integration functionality, the system type and system name must be configured in EPM Manager protocols. The system type is configured with the name attribute of the *Topologies.Topology.Cell* tag, and the system name is configured with the *columnPid* attribute of the *Topologies.Topology.Cell.Exposer.LinkedIds.LinkedId* tag. For example, in the configuration below, *Location* is the system type, and the system name is the value from a cell in the column indicated by the specified column PID, which could for example be *Miami*:
 
 ```xml
 <Topologies>
    <Topology>
-      <Cell name="Amplifier" table="500">
+      <Cell name="Location" table="500">
          <Exposer enabled="true">
             <LinkedIds>
                <LinkedId columnPid="1001">1000</LinkedId>
