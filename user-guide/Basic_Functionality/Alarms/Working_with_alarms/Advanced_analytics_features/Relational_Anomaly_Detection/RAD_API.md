@@ -4,14 +4,14 @@ uid: RAD_API
 
 # Working with the RAD API
 
-The *RAD API* is a set of messages that allows you to configure [Relational Anomaly Detection](xref:Relational_anomaly_detection) through an [automation script](xref:automation). Compared to using the [RAD Manager](xref:RAD_manager), the *RAD API* offers more flexibility, but comes with a steeper learning curve. It is particularly useful when your use case deviates from the default options provided by the RAD Manager.
+The *RAD API* is a set of messages that allows you to configure [Relational Anomaly Detection](xref:Relational_anomaly_detection) through an [automation script](xref:automation). Compared to using the [RAD Manager](xref:RAD_manager), the *RAD API* offers more flexibility,  making it particularly useful for use case that deviate from the default options provided by the RAD Manager.
 
 All messages in the *RAD API* reside in the `Skyline.DataMiner.Analytics.Rad` namespace. The following messages are available:
 
 | Message | Response message | Description |
 |------|-----|-------------|
 | [AddRADParameterGroupMessage](xref:Skyline.DataMiner.Analytics.Rad.AddRADParameterGroupMessage) | [AddRADParameterGroupResponseMessage](xref:Skyline.DataMiner.Analytics.Rad.AddRADParameterGroupResponseMessage) | Adds a new parameter group to the RAD configuration or overwrites an existing one. See [Options for parameter groups](xref:Relational_anomaly_detection#options-for-parameter-groups) for details on the available options. |
-| [GetRADDataMessage](xref:Skyline.DataMiner.Analytics.Rad.GetRADDataMessage) |[GetRADDataResponseMessage](xref:Skyline.DataMiner.Analytics.Rad.GetRADDataResponseMessage) | Retrieves historical anomaly scores for a specified group within a given time range. |
+| [GetRADDataMessage](xref:Skyline.DataMiner.Analytics.Rad.GetRADDataMessage) |[GetRADDataResponseMessage](xref:Skyline.DataMiner.Analytics.Rad.GetRADDataResponseMessage) | Retrieves historical anomaly scores for a specified parameter group within a given time range. |
 | [GetRADParameterGroupInfoMessage](xref:Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupInfoMessage) |[GetRADParameterGroupInfoResponseMessage](xref:Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupInfoResponseMessage) | Fetches the configuration of a specific parameter group. |
 | [GetRADParameterGroupsMessage](xref:Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupsMessage) |[GetRADParameterGroupsResponseMessage](xref:Skyline.DataMiner.Analytics.Rad.GetRADParameterGroupsResponseMessage) | Returns a list of all configured parameter groups. |
 | [RemoveRADParameterGroupMessage](xref:Skyline.DataMiner.Analytics.Rad.RemoveRADParameterGroupMessage) |[RemoveRADParameterGroupResponseMessage](xref:Skyline.DataMiner.Analytics.Rad.RemoveRADParameterGroupResponseMessage) | Removes a parameter group from the RAD configuration. |
