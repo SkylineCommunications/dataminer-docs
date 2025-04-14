@@ -21,7 +21,9 @@ Please also note the following:
 - In most cases, when you add a DataMiner Agent to a DataMiner System, all other DataMiner Agents in the DataMiner System will connect to it using its primary IP address. However, in some cases, you may need to configure the connection strings by hand. See [Connection strings](xref:Connection_strings).
 
 > [!WARNING]
-> If you add a DataMiner Agent to a DataMiner System, please make sure that it is a **new DataMiner Agent** that has not yet been put into use and that uses the **same software version** as the other Agents in the system.
+>
+> - If you add a DataMiner Agent to a DataMiner System, please make sure that it is a **new DataMiner Agent** that has not yet been put into use and that uses the **same software version** as the other Agents in the system.
+> - It's recommended to only add one DataMiner Agent at a time and to wait until it got synchronized with the cluster (indicated by the information event with parameter description "Synchronization finished") before adding another agent.
 
 > [!TIP]
 > See also: [Setting up a new DataMiner System](xref:Before_you_begin_to_set_up_a_new_DMS).
