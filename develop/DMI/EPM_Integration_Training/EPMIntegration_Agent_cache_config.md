@@ -32,5 +32,8 @@ To enable or disable this cache:
 
 1. Right-click an Agent in the list and select *Enable Cache* or *Disable Cache*.
 
+> [!NOTE]
+> In the same window, you can also check whether all caches are in sync using the *Lookup* pane. If you specify a System Type and System Name in this pane and then click *Search*, you will get an overview of where the specified object can be found. If it is not included in every one of the caches, an error will be displayed.
+
 > [!CAUTION]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
