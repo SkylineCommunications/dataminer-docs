@@ -44,7 +44,7 @@ This type of notification will first go to Skyline Tech Support for verification
 
   1. Verify whether the system is reporting via dataminer.services by opening the CDMR Agent element and navigating to the *General* page.
 
-  1. Verify whether the system has a valid dataminer.services connection by navigating to [Skyline Admin](https://eur04.safelinks.protection.outlook.com/?url=https%3A%2F%2Fskyline-admin.dataminer.services%2Fcoordinations&data=05%7C02%7Cmarieke.goethals%40skyline.be%7C0e64dc567284407a156608dd75e0226d%7C5f1756918d1c4932b7c8ce990839ac40%7C0%7C0%7C638796327746366190%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=tFq4LkZvZ4B7gAwci7huOgyclqrOy5CiNDOs1w5sHQ4%3D&reserved=0).
+  1. Verify whether the system has a valid dataminer.services connection by navigating to [Skyline Admin](http://skyline-admin.dataminer.services/).
 
      Click the eye icon to view the DMS, and then check the status under *Cloud connection*. This should look like this:
 
