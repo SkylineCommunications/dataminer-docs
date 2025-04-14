@@ -586,6 +586,7 @@ items:
               - name: Top X
                 topicUid: GQI_Top_X
           - name: Extensions
+            topicUid: GQI_Extensions
             items:
               - name: Configuring an ad hoc data source
                 topicUid: Configuring_an_ad_hoc_data_source_in_a_query

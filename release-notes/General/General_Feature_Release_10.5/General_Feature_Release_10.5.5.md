@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.5
 ---
 
-# General Feature Release 10.5.5 – Preview
+# General Feature Release 10.5.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -24,6 +24,7 @@ uid: General_Feature_Release_10.5.5
 
 ## Highlights
 
+- [SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]](#snmp-forwarding-new-option-to-prevent-an-snmp-manager-from-resending-snmp-inform-messages-id-41884)
 - [Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)
 
 ## New features
@@ -225,11 +226,13 @@ If your system is pushing too much load for a specific data type, that data type
 
 From now on, when this happens, an alarm will be generated with information about the data type or types that are being throttled.
 
-#### GQI DxM will now shut down faster [ID 42428]
+#### GQI DxM will now shut down faster [ID 42428] [ID 42621]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
+
+Also, before the GQI DxM gets installed or upgraded, the DataMiner GQI service and all its child processes will now be stopped to prevent issues due to certain files being locked.
 
 #### SLAnalytics - Relational anomaly detection: Input validation when adding a new parameter group [ID 42429]
 

@@ -18,7 +18,23 @@ uid: Cube_Feature_Release_10.5.6
 
 ## New features
 
-*No new features have been added yet.*
+#### View cards: New 'Isolation mode' column in element list [ID 42562]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+In view cards, the element list now has a new *Isolation mode* column, which displayed the isolation mode of each element in the list.
+
+By default, this column will be hidden. To add this column to the list, right-click a column header, and *select Add/Remove setting column > Isolation Mode*.
+
+These are the possible values that can be displayed in the *Isolation mode* column:
+
+| Value | Description |
+|-------|-------------|
+| None               | Not applicable. E.g. When viewing the *All* page of a service. |
+| Disabled           | The element is not running in isolation mode. |
+| Enabled (protocol) | The element is running in isolation mode because of a setting configured in the *protocol.xml* file, which applies to all elements that are using this protocol version. |
+| Enabled (element)  | The element is running in isolation mode because of a setting configured in the element itself. |
+| Enabled (DMA)      | The element is running in isolation mode because of a setting configured on DMA level, which applied to all elements that are using this protocol. |
 
 ## Changes
 
@@ -37,6 +53,20 @@ When you open a trend graph, from now on, an SPI entry containing the loading ti
 When a matrix was updated, up to now, only input and output options included in the updated would be changed. Options not included in the updated would be left unchanged.
 
 From now on, when a matrix is updated, all input and output options will first be reset to their default values before the changes included in the update are applied.
+
+#### Relational anomaly detection: Link to RAD Manager app in Augmented Operations alarm settings window [ID 42645]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+In the *Augmented Operations alarm settings* window, which you can access in the alarm template editor by clicking the button in the *Analytics* or *Anomalies* column for a given parameter, you can now find a link to the *RAD Manager* app.
+
+If already installed on your system, the app will open. If not, you will be referred to the [RAD Manager page in the DataMiner Catalog](https://catalog.dataminer.services/details/174b9848-43c8-470d-afc2-1b1722f05e74).
+
+#### Miscellaneous enhancements [ID 42730]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+A number of minor enhancements have been made, especially with regard to calculating durations included in SPI logging.
 
 ### Fixes
 
