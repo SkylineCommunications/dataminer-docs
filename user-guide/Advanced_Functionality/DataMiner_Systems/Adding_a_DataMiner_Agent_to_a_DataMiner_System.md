@@ -23,7 +23,7 @@ Please also note the following:
 > [!WARNING]
 >
 > - If you add a DataMiner Agent to a DataMiner System, please make sure that it is a **new DataMiner Agent** that has not yet been put into use and that uses the **same software version** as the other Agents in the system.
-> - It's recommended to only add one DataMiner Agent at a time and to wait until it got synchronized with the cluster (indicated by the information event with parameter description "Synchronization finished") before adding another agent.
+> - When you add more than one DataMiner Agent, add them one at a time and wait until each Agent is synchronized with the cluster (indicated by an information event with parameter description "Synchronization finished") before adding another Agent.
 
 > [!TIP]
 > See also: [Setting up a new DataMiner System](xref:Before_you_begin_to_set_up_a_new_DMS).
