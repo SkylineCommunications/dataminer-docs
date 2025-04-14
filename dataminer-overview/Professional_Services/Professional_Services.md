@@ -5,7 +5,7 @@ keywords: solution deployment methodology, solution deployment methodologies
 
 # DataMiner Professional Services
 
-There are three distinct deployment models for a DataMiner project, each with its own distinct set of terms and conditions, both commercially and from a practical or process point of view. 
+There are three distinct deployment models for a DataMiner project, each with its own distinct set of terms and conditions, both commercially and from a practical or process point of view.
 
 The table below provides a quick summary of the three methodologies, which will be explained in more detail further in this documentation.
 
@@ -26,6 +26,5 @@ The table below provides a quick summary of the three methodologies, which will 
 | **Decision-Making:** | Contract- and specification-driven | Collaboration-driven towards an agreed well-defined goal within a set time frame | Collaboration-driven |
 | **Execution:** | Executing the plan | Working towards the goal, with flexibility to easily respond to change, with time constraints in mind | Responding to change |
 
-
 > [!TIP]
-> See also [this quiz](https://community.dataminer.services/quizzes/agile-deployment-methodologies/) on deployment methodologies.
+> Want to test your knowledge and take a quiz about our deployment methodologies? Go to [DataMiner Dojo](https://community.dataminer.services/quizzes/agile-deployment-methodologies/).
