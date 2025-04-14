@@ -4,7 +4,7 @@ uid: RAD_manager
 
 # Working with the RAD Manager
 
-The *RAD Manager* is a low-code app, available in the DataMiner Catalog, that allows you to easily configure relational anomaly detection and visualize the anomaly scores it calculates. The app requires DataMiner 10.5.4/10.6.0 or higher.
+The *RAD Manager* is a low-code app, available in the DataMiner Catalog, that allows you to easily configure [relational anomaly detection](xref:Relational_anomaly_detection) and visualize the anomaly scores it calculates. The app requires DataMiner 10.5.4/10.6.0 or higher.
 
 ## Installing the RAD Manager
 

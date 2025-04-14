@@ -23,7 +23,7 @@ This means that the following prerequisites apply:
 
 RAD only monitors parameters that have been added to one or more parameter groups in its configuration. Each parameter group represents a set of parameters that should be monitored together. RAD will learn how these parameters are related and notify you through a suggestion event when the relationship is broken.
 
-The easiest way to configure these parameter groups is by using the [*RAD Manager*](xref:RAD_manager) app from the DataMiner Catalog. Alternatively, you can use the RAD API (TODO: document this) or directly configure the parameter groups in the [RAD configuration XML file](xref:Relational_anomaly_detection_xml).
+The easiest way to configure these parameter groups is by using the [*RAD Manager*](xref:RAD_manager) app from the DataMiner Catalog. Alternatively, you can use the [*RAD API*](xref:RAD_API) or directly configure the parameter groups in the [RAD configuration XML file](xref:Relational_anomaly_detection_xml).
 
 ### Options for parameter groups
 

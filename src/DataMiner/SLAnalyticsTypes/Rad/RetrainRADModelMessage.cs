@@ -39,7 +39,7 @@ namespace Skyline.DataMiner.Analytics.Rad
     public class RetrainRADModelMessage : GetSessionedAnalyticsMessage
     {
         /// <summary>
-        /// Gets or sets the name of the group for which MAD retraining is triggered.
+        /// Gets or sets the name of the group for which RAD retraining is triggered.
         /// </summary>
         public string GroupName { get; set; }
 
