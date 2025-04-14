@@ -13,6 +13,9 @@ From DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42221 -->, 
 
 In the filter pane on the left, you can select the front-end EPM Manager (in case more than one is available), select the topology chain, and drill down to any of the topology levels in that chain. You can then click the ">" button next to that level to open the corresponding page.
 
+> [!NOTE]
+> In the [Cube user settings](xref:User_settings#surveyorsidebar-settings), you can use the *Launch EPM card on filter selection* setting to have an EPM card opened as soon as an item is selected in the filter pane.
+
 ![Topology app navigation](~/user-guide/images/EPMIntegration_Open_card.png)<br>
 *Topology app in DataMiner Cube 10.5.5*
 
@@ -23,7 +26,7 @@ If a topology level has child items, you can find these on the *Below this [EPM 
 ![Topology app child items](~/user-guide/images/EPMIntegration_Below_this_page.png)<br>
 *Topology app in DataMiner Cube 10.5.5*
 
-On the *Topology* page, you can find an overview of the topology for the selected level:
+On the *Topology* page, you can find an overview of the topology for the selected level. Double-clicking a block in this overview will navigate to that level and update the filters in the filter pane.
 
 ![Topology app topology page](~/user-guide/images/EPMIntegration_Topology_page.png)<br>
 *Topology app in DataMiner Cube 10.5.5*
