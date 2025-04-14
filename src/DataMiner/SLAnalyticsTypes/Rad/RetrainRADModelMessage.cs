@@ -45,15 +45,20 @@ namespace Skyline.DataMiner.Analytics.Rad
 
         /// <summary>
         /// Gets or sets the start time of the range of normal behavior used for retraining.
-        /// When set, the corresponding time range is added or updated in CorrectBehaviorTimeRanges.
+        /// When set, the corresponding time range is added or updated in <see cref="RetrainTimeRanges" />.
         /// </summary>
         public DateTime StartTime { get; set; }
 
         /// <summary>
         /// Gets or sets the end time of the range of normal behavior used for retraining.
-        /// When set, the corresponding time range is added or updated in CorrectBehaviorTimeRanges.
+        /// When set, the corresponding time range is added or updated in <see cref="RetrainTimeRanges" />.
         /// </summary>
         public DateTime EndTime { get; set; }
+
+        /// <summary>
+        /// Gets or sets a list of time ranges that will be used to retrain the RAD model.
+        /// </summary>
+        public List<TimeRange> RetrainTimeRanges { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RetrainRADModelMessage"/> class.
