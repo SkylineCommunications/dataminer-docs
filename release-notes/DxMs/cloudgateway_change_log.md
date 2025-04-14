@@ -16,11 +16,11 @@ The tokens to authenticate towards dataminer.services no longer rely on NATS to 
 
 A TCP port leak could occur in the CloudGateway, especially when there was an issue with the connection to dataminer.services.
 
-#### 4 April 2025 - Fix - CloudGateway 2.17.4 - Cloud Connection Improvement [ID 42383]
+#### 4 April 2025 - Fix - CloudGateway 2.17.4 - Connection issue caused by hibernation mode [ID 42383]
 
-​When running DataMiner CloudGateway DxM on a machine that goes into hibernation mode (laptop, desktop, ...), the process to create the connection to the cloud could get stuck as a side effect of the hibernation mode. This will now time out after 30 seconds and a new attempt will be made.
+​When the DataMiner CloudGateway DxM was run on a machine that goes into hibernation mode (e.g. a laptop or desktop computer), the process to create the connection to dataminer.services could get stuck as a side effect of the hibernation mode. To prevent this, this process will now time out after 30 seconds, and a new attempt will be made.
 
-This does not affect machines that don't go into hibernation mode (servers, ...)
+This does not affect machines that do not go into hibernation mode (e.g. servers).
 
 #### 30 January 2025 - Fix - CloudGateway 2.17.2 - Reconnect banner continually showing when remote access is used [ID 42086]
 
