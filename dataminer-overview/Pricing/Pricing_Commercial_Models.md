@@ -27,11 +27,11 @@ Perpetual-Use Licenses are a one-off expenditure.
 > [!TIP]
 > See also: [Usage-based services](xref:Pricing_Usage_based_service)
 
-DataMiner's usage-based services offers a flexible and transparent software utilization offering. The utilization of the different services is measured in **DataMiner credits**. These credits, allocated to an organization, can be used across various services, adapting monthly to meet evolving needs and priorities.
+DataMiner's usage-based services offers a flexible and transparent software utilization offering. The utilization of the different services is measured in **DataMiner credits**, a single product and price. These credits, allocated to an organization, can be used across various services, adapting monthly to meet evolving needs and priorities. 
 
-By default, it works on a Pay-per-Use model, where the number of credits consumed matches the actual utilization measured or recorded in any given month.
+By default, it works on a Pay-per-Use model, where prepaid credits are deducted monthly based on the actual service consumptions, on any given month.
 
-In addition, you also have the option to subscribe to certain services, by reserving a fixed number of units per month, for the duration of 1 or 3 years, resulting in a well-defined and controlled expenditure and in potential savings on the number of credits consumed.
+In addition, you also have the option to subscribe to certain services, by reserving a fixed number of units per month (Monthly Utilization Allowances or MUA), for the duration of 1 or 3 years, resulting in a well-defined and controlled expenditure and substantial savings on the number of credits consumed.
 
 ### DataMiner Community Edition
 
@@ -41,7 +41,7 @@ This is the perfect way to get started, allowing anyone to use the platform and 
 
 - **Self-managed**: Community Edition systems deployed on your own infrastructure (on-premises or in a private/public cloud) are free, but must be renewed every 12 months.
 
-- **DataMiner as a Service**: Community Edition systems [deployed as a service](xref:Creating_a_DMS_in_the_cloud) are free for the first 7 days, with a subscription after that.
+- **DataMiner as a Service**: Community Edition systems easily deployed as a service with [just a few clicks](xref:Creating_a_DMS_in_the_cloud) are free for the first 7 days. After this trial period, a monthly subscription costs 480 EUR or 660 USD (depending on End User region). Users who opt for an annual subscription can enjoy 12 months of access while only paying for 10 months.
 
 The DataMiner Community Edition is a flavor of the usage-based services, but with a fixed allowance per service type.
 
@@ -51,15 +51,20 @@ Limitations of DataMiner Community Edition:
 
 - Community support only
 
-- Limited to 20 managed objects and 2000 script runs. Number of connectors is unlimited.
+- Service limits per month:
+  - 8 credits for Standard Managed Objects
+  - 4 credits for Light Managed Objects
+  - 8 credits for Automation
+  - 2 credits for Collaboration
+  - 2 credits for STaaS (not available for Self-managed)
+  - 2 credits for DaaS (not available for Self-managed)
+  - Number of connectors is unlimited.
 
-Once the above-mentioned limits have been reached, users have the option to transition to the standard usage-based model.
+There might come a time when you need to increase your system's capacity to go above the limits mentioned above. If that happens, you have two options: you can either create a new system while keeping your Community Edition separate, or you can transition your existing Community Edition to a subscription or pay-per-use (PPU) credits. 
+In either case, a system cannot remain on the Community Edition while it continues exceeding the limits.
 
 > [!TIP]
-> See also:
->
-> - [Usage-based services](xref:Pricing_Usage_based_service)
-> - [DataMiner usage-based pricing](https://community.dataminer.services/usage-based-pricing/) on DataMiner Dojo
+> See also [Usage-based services](xref:Pricing_Usage_based_service)
 
 ## DataMiner Perpetual-Use Licenses vs Usage-based services
 
@@ -72,7 +77,7 @@ Usage-based services are charged based on the actual monthly usage of services, 
 | System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500 , 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
 | Failover | Server-based license. | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
 | Optional functions | Licensed per node: Correlation and Automation engines, Dashboard app, Low-Code Apps, Process Automation, DataMiner Object Models (DOM), and Spectrum Analysis. | Not applicable. All optional modules are included. |
-| Automation & orchestration | Based on the volume of concurrent services running. | Based on the volume of script runs. |
+| Automation & orchestration | Based on the volume of concurrent services running. | Based on the automation volume. |
 | Connectors | Single connector license fee for new and existing connectors. One connector license per different, interfaced product, per DataMiner System (DMS). | Charged per connector used per month. |
 | Custom applications (e.g. PTP app) | Licensed per app. | Charged as engineering services. |
 | Sample applications | Included. | Included. |
