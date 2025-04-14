@@ -1032,6 +1032,8 @@ items:
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Automation
     - name: Skyline.DataMiner.Core.DataMinerSystem.Protocol
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
+    - name: Skyline.DataMiner.Analytics.Rad
+      topicUid: Skyline.DataMiner.Analytics.Rad
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
     - name: Skyline.DataMiner.Net.Swarming

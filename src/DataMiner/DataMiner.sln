@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1300
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLNetTypes", "SLNetTypes\SLNetTypes.csproj", "{90D02A1F-5580-4CC6-8E88-43BB53F8D01B}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLManagedAutomation", "SLManagedAutomation\SLManagedAutomation.csproj", "{A1E0D82D-F1C4-48BF-A398-DC8B1A965939}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLSSH", "SLSSH\SLSSH.csproj", "{D0E8B5C3-F095-4164-A503-572FC93BA075}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLAnalyticsTypes", "SLAnalyticsTypes\SLAnalyticsTypes.csproj", "{4522FBB9-751D-4DB7-A395-A7747376D773}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{D0E8B5C3-F095-4164-A503-572FC93BA075}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0E8B5C3-F095-4164-A503-572FC93BA075}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0E8B5C3-F095-4164-A503-572FC93BA075}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4522FBB9-751D-4DB7-A395-A7747376D773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4522FBB9-751D-4DB7-A395-A7747376D773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4522FBB9-751D-4DB7-A395-A7747376D773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4522FBB9-751D-4DB7-A395-A7747376D773}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
