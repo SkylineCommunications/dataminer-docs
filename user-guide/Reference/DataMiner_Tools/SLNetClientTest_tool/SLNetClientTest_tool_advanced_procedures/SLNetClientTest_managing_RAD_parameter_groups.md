@@ -21,7 +21,7 @@ From DataMiner 10.5.4/10.6.0 onwards<!--RN 42181-->, it is possible to manage [r
    | RemoveRADParameterGroupMessage | Deletes a RAD parameter group. |
 
    > [!NOTE]
-   > In DataMiner 10.5.4, some of these messages may include "MAD" instead of "RAD", e.g. *Skyline.DataMiner.Analytics.MAD.AddMADParameterGroupMessage*. In this message, "MAD" stands for "multivariate anomaly detection", which is another name for RAD.
+   > In DataMiner 10.5.4<!--RN 42480-->, some of these messages may include "MAD" instead of "RAD", e.g. *Skyline.DataMiner.Analytics.MAD.AddMADParameterGroupMessage*. In this message, "MAD" stands for "multivariate anomaly detection", which is another name for RAD.
 
 1. Configure the necessary fields:
 
