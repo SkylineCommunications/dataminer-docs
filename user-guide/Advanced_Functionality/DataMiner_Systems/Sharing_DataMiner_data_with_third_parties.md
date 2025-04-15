@@ -6,9 +6,9 @@ uid: Sharing_DataMiner_data_with_third_parties
 
 There are many ways in which you can make your DataMiner System share information (real-time device readings, fault data, performance data, etc.) with third parties.
 
-## DataMiner Sharing
+## Sharing
 
-DataMiner Sharing allows you to share live data via dataminer.services. For more information, see [DataMiner Sharing](xref:Sharing).
+The Sharing app allows you to share live data via dataminer.services. For more information, see [Sharing](xref:Sharing).
 
 ## DataMiner Cube
 

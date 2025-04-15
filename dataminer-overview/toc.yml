@@ -40,7 +40,7 @@ items:
         - name: Self-managed DataMiner nodes and storage nodes (not recommended)
           topicUid: DM_and_storage_selfhosted
     - name: dataminer.services
-      topicUid: Overview_DCP
+      topicUid: Overview_dataminer_services
       items:
         - name: DevOps
           topicUid: Overview_DevOps
@@ -326,4 +326,4 @@ items:
       - name: Support Services
         topicUid: FAQs_Support_Services
       - name: dataminer.services
-        topicUid: FAQ_DCP
+        topicUid: FAQ_

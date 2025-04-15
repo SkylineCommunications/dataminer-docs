@@ -73,7 +73,8 @@ uid: glossary_a_to_l
 | Capacity | Used in the context of DataMiner SRM as the measurable availability instances of a resource. For example, if the maximum capacity of a resource is 10 units, no more than 10 units can be scheduled at the same time in the system.<br>See [Service and Resource Management](xref:SRM). |
 | Card | A window within DataMiner Cube and the DataMiner Monitoring app. |
 | Cassandra | Apache Cassandra is an open-source, high-performance, distributed, NoSQL database system designed to handle large amounts of data, which is used in [dedicated clustered storage](xref:Dedicated_clustered_storage) setups. |
-| CCA  | Cloud-Connected Agents. DataMiner Agents connected to [dataminer.services](xref:AboutCloudPlatform). |
+| Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [Catalog](xref:About_Catalog). |
+| CCA  | Cloud-Connected Agents. DataMiner Agents connected to [dataminer.services](xref:about_dataminer_services). |
 | CCAP | Converged Cable Access Platform. Platform combining the functionality of a CMTS with that of an edge QAM, providing high-density services to cable subscribers. |
 | CCU | Camera Control Unit. Device used to monitor and control camera functions, for example in live video broadcasting. |
 | CDN | Content Delivery Network. Network of servers in different locations that work together to allow fast delivery of internet content. |
@@ -87,6 +88,7 @@ uid: glossary_a_to_l
 | CM | Cable Modem. |
 | CMDB | Configuration Management Database. A database containing information about the hardware and software assets of an organization.<br>See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
 | CMTS | Cable Modem Termination System. Piece of equipment used to provide high-speed data services to cable subscribers. |
+| Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. [Collaboration](xref:About_Collaboration). |
 | Concurrency | Used in the context of DataMiner SRM to indicate the number of times a resource can be used at the same time.<br>See [Service and Resource Management](xref:SRM). |
 | Connectivity chain | Definition of how interfaces are connected on one or more elements, in the context of the DataMiner Connectivity Framework.<br>See [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files). Also used in the context of Root Cause Analysis, as a chain of elements, services or parameters that is configured to make it possible to analyze the distance to the most probable root cause of an alarm.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
 | Connectivity editor | Application in DataMiner Cube that allows you to manage topology chains to allow root cause analysis of alarms.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
@@ -120,27 +122,25 @@ uid: glossary_a_to_l
 | Data Display | Legacy term referring to the data pages of cards in DataMiner Cube. |
 | DataMiner Agent | A piece of hardware running the DataMiner software. Abbreviated as DMA. |
 | DataMiner Analytics | Artificial intelligence technology built into DataMiner, which among others provides trend predictions.<br>See [Working with trend predictions](xref:Working_with_trend_predictions). |
-| DataMiner Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [DataMiner Catalog](xref:About_the_Catalog_module). |
 | DataMiner Certification Program | Program that allows you to test your DataMiner knowledge and skills and prove your expertise with our official certificates. |
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
-| DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See [dataminer.services](xref:AboutCloudPlatform). |
+| DataMiner Cloud Platform | Former name of dataminer.services. Abbreviated as DCP. See [dataminer.services](xref:about_dataminer_services). |
 | DataMiner Comparison tool | Web application that allows you to compare the values of two string parameters.<br>See [DataMiner Comparison tool](xref:DataMinerComparisonTool). |
 | DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF.<br>See [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework). |
 | DataMiner Cube | The main client application used to connect to a DMA. Exists both as a desktop app and a browser app. |
 | DataMiner Dojo | Community website where both people from the Skyline community, and people from the worldwide DataMiner community exchange experiences and knowledge, both about DataMiner and about general hot topics in the ICT, broadband and media industry.<br>See [DataMiner Community](xref:Community#dataminer-community). |
 | DataMiner Driver | An XML file that allows a DMA to communicate with a data source in the system. Also known as connector or protocol.<br>See [Protocols](xref:Protocols1#protocols). |
 | DataMiner ID | The unique ID of a DataMiner Agent. |
-| DataMiner Live Data Sharing Service | Service included in dataminer.services that allows DataMiner users to share specific live operational data with third parties.<br>See [DataMiner Sharing](xref:Sharing#dataminer-sharing). |
+| DataMiner Live Data Sharing Service | Former name of our Sharing app. <br>See [Sharing](xref:Sharing#sharing). |
 | DataMiner package | Archive file that contains all the files necessary to make a modification to a DataMiner System, for example to upgrade, downgrade or restore a DataMiner Agent, or to install a DataMiner app or DataMiner protocol.<br>See [DataMiner packages](xref:DataMiner_packages). |
-| DataMiner Project Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. [Project Collaboration](xref:About_the_Project_Collaboration_module). |
-| dataMiner.services | Online platform that provides many additional services related to the DataMiner software and DataMiner projects. See [dataminer.services](xref:AboutCloudPlatform). |
+| dataMiner.services | Online platform that provides many additional services related to the DataMiner software and DataMiner projects. See [dataminer.services](xref:about_dataminer_services). |
 | DataMiner System | One or more DMAs, integrated into one cluster via an IP network. Abbreviated as DMS. |
 | DataMiner Taskbar Utility | System tray application on a DataMiner Agent that can be used to manage the Agent.<br>See [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). |
 | DB | Database. |
 | DBS | Direct Broadcast Satellite. Broadcasting transmissions where end users receive signals directly from geostationary satellites. |
 | DCF | DataMiner Connectivity Framework. Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure.<br>See [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework). |
 | DCL | DataMiner Class Library. |
-| DCP | DataMiner Cloud Platform. Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. See [dataminer.services](xref:AboutCloudPlatform). |
+| DCP | DataMiner Cloud Platform. Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. See [dataminer.services](xref:about_dataminer_services). |
 | DELT | DataMiner Element Location Transparency. DataMiner feature that allows the exporting and importing of packages and the migration of elements across DMAs in a cluster. |
 | DIS | DataMiner Integration Studio. Microsoft Visual Studio extension that turns Visual Studio into a DataMiner protocol IDE. |
 | Discovery identifier | Identifier used by DataMiner IDP in order to specify how a CI Type can be identified. Consists of a link to a discovery action, a match condition and a value, e.g. "*sysDescr contains JUNOS*". Multiple discovery identifiers can be combined in a CI Type with AND, OR, and NOT statements.<br>See [CI Types](xref:CI_Types) |

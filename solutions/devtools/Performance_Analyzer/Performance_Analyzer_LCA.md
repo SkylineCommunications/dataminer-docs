@@ -10,7 +10,7 @@ To use this app, the [Performance Analyzer library](xref:Performance_Analyzer_Li
 
 ## Installing the Performance Analyzer app
 
-To install the Performance Analyzer app, deploy the [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349) package from the DataMiner Catalog.
+To install the Performance Analyzer app, deploy the [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349) package from the Catalog.
 
 > [!TIP]
 > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item).

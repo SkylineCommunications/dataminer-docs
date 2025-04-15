@@ -42,7 +42,7 @@ The tutorial consists of the following steps:
 
 1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create several DataMiner elements in your system that will be used throughout the rest of this tutorial. The elements will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Proactive Cap Detection Tutorial*.
+   This will create several DataMiner elements in your system that will be used throughout the rest of this tutorial. The elements will be located in the view *Catalog* > *Augmented Operations* > *Proactive Cap Detection Tutorial*.
 
    ![Elements](~/user-guide/images/Proactive_Cap_Detection_Tutorial_Elements.png)
 

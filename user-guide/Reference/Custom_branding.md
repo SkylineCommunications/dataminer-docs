@@ -235,7 +235,7 @@ In a custom brand theme, the contact information in the General tab page of the 
 | TechSupport address (line 3) | Belgium                                       |
 | TechSupport website          | `www.skyline.be/Contact/TechnicalSupport.htm` |
 | TechSupport email            | `techsupport@skyline.be`                      |
-| Extranet link                | `dcp.skyline.be`                              |
+| Extranet link                | `dataminer.services`                              |
 | Online collaboration link    | `www.skyline.be/meeting.exe`                  |
 
 > [!NOTE]

@@ -31,12 +31,12 @@ The DataMiner System used for this tutorial has to meet the following requiremen
 
 ## Overview
 
-- [Step 1: Deploy IDP from the DataMiner Catalog](#step-1-deploy-idp-from-the-dataminer-catalog)
+- [Step 1: Deploy IDP from the Catalog](#step-1-deploy-idp-from-the-dataminer-catalog)
 - [Step 2: Configure the scan range](#step-2-configure-the-scan-range)
 - [Step 3: Run the discovery](#step-3-run-the-discovery)
 - [Step 4: Provision the discovered element(s)](#step-4-provision-the-discovered-elements)
 
-## Step 1: Deploy IDP from the DataMiner Catalog
+## Step 1: Deploy IDP from the Catalog
 
 1. [Deploy the IDP package from the Catalog](xref:Installing_DataMiner_IDP#deploying-the-idp-package).
 

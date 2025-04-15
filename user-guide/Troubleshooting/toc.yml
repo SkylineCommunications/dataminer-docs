@@ -221,7 +221,7 @@ items:
           - name: Investigating dataminer.services connection issues
             topicUid: Cloud_Connection_Issues
           - name: Investigating dataminer.services feature issues
-            topicUid: Investigating_Dataminerservices_Feature_Issues
+            topicUid: investigating_dataminer_services_feature_issues
       - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
       - name: Troubleshooting – Indexing database

@@ -40,7 +40,7 @@ The tutorial consists of the following steps:
 
 1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create four DataMiner elements, named "PM Video Server 1", "PM Video Server 2", "PM Tables", and "PM Event Creator" in your system, which will be used throughout the rest of the tutorial. The elements will be located in the view *DataMiner Catalog* > *KATA Working with Pattern Matching in Trend Graphs*.
+   This will create four DataMiner elements, named "PM Video Server 1", "PM Video Server 2", "PM Tables", and "PM Event Creator" in your system, which will be used throughout the rest of the tutorial. The elements will be located in the view *Catalog* > *KATA Working with Pattern Matching in Trend Graphs*.
 
 ## Step 2: Add context to a trend graph
 

@@ -254,7 +254,7 @@ items:
   - name: Dashboards and Low-Code Apps
     topicUid: Dashboards_and_Low_Code_Apps
     items:
-      - name: Dashboards app
+      - name: Dashboards
         topicUid: newR_D
         items:
           - name: Accessing the Dashboards app

@@ -60,7 +60,7 @@ From now on, when a matrix is updated, all input and output options will first b
 
 In the *Augmented Operations alarm settings* window, which you can access in the alarm template editor by clicking the button in the *Analytics* or *Anomalies* column for a given parameter, you can now find a link to the *RAD Manager* app.
 
-If already installed on your system, the app will open. If not, you will be referred to the [RAD Manager page in the DataMiner Catalog](https://catalog.dataminer.services/details/174b9848-43c8-470d-afc2-1b1722f05e74).
+If already installed on your system, the app will open. If not, you will be referred to the [RAD Manager page in the Catalog](https://catalog.dataminer.services/details/174b9848-43c8-470d-afc2-1b1722f05e74).
 
 #### DataMiner Cube desktop app: Enhanced behavior when selecting "HTTP or HTTPS" [ID 42716]
 

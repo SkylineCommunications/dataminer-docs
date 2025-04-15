@@ -72,7 +72,7 @@ The three levels mentioned above are available for usage-based services. However
 | Evolve | MUA >= 200 DataMiner credits <br>  **50,000 DevOps Points** | Active Support Services agreement <br> **50,000 DevOps Points**  |
 
 > [!IMPORTANT]
-> All support plans require an active connection to [dataminer.services](xref:Overview_DCP).
+> All support plans require an active connection to [dataminer.services](xref:Overview_dataminer_services).
 
 ## Professional Service Credits included
 

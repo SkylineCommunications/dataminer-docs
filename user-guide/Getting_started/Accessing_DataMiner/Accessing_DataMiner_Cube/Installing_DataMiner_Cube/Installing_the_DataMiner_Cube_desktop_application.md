@@ -16,7 +16,7 @@ You can follow the installation steps below or watch this short video, which wal
 
 ## Standard installation
 
-1. Log on to [dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+1. Log on to [dataminer.services](xref:Logging_on_to_dataminer_services).
 
    > [!NOTE]
    > Alternatively, you can also browse to the IP or hostname of your DMA or to `https://[Your DMA]/root` and log in there, depending on your [configuration](xref:Configuring_the_landing_page).

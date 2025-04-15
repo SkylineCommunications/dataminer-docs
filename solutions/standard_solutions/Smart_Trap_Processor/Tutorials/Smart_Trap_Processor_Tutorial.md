@@ -32,7 +32,7 @@ This tutorial consists of the following steps:
 
 ## Step 1: Deploy the Smart Trap Processor Training package from the Catalog
 
-1. Go to the [Smart Trap Processor Training](https://catalog.dataminer.services/details/24f3c73d-2926-48a4-9486-cc34ddfca901) package in the DataMiner Catalog.
+1. Go to the [Smart Trap Processor Training](https://catalog.dataminer.services/details/24f3c73d-2926-48a4-9486-cc34ddfca901) package in the Catalog.
 
 1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 

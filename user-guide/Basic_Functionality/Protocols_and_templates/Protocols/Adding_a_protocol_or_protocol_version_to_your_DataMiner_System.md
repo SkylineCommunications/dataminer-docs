@@ -20,7 +20,7 @@ You can upload:
 > When you replace a protocol version (i.e. when you add a protocol version that was already available on your DataMiner System), all elements using that protocol version will restart automatically.
 
 > [!NOTE]
-> From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you install a protocol for the first time by [uploading a protocol package](#uploading-a-protocol-package) or by [deploying a protocol from the DataMiner Catalog](#deploying-a-protocol-from-the-catalog), this protocol version will automatically be promoted to the production version.
+> From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you install a protocol for the first time by [uploading a protocol package](#uploading-a-protocol-package) or by [deploying a protocol from the Catalog](#deploying-a-protocol-from-the-catalog), this protocol version will automatically be promoted to the production version.
 >
 > You will need to manually [promote the protocol version to production version](xref:Promoting_a_protocol_version_to_production_version) in the following cases:
 >
@@ -108,7 +108,7 @@ To do so:
 
    ![Updating protocols](~/user-guide/images/Updating_Protocols.png)<br>*Update Center in DataMiner 10.4.5*
 
-1. Enter your DCP credentials, and click *OK*.
+1. Enter your dataminer.services credentials, and click *OK*.
 
 1. In the list of available protocols, select the protocols you want to install or update, and click *Install*.
 

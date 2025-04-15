@@ -6,7 +6,7 @@ keywords: element wizard
 
 # Adding elements
 
-You can follow the steps below or watch this short video, which shows you how to [deploy a connector](xref:Deploying_a_catalog_item) from the DataMiner Catalog and provides instructions on creating an example element:
+You can follow the steps below or watch this short video, which shows you how to [deploy a connector](xref:Deploying_a_catalog_item) from the Catalog and provides instructions on creating an example element:
 
 <video width="800" height="450" controls>
   <source src="~/user-guide/images/CreatingaDataMinerElement.mp4" type="video/mp4">

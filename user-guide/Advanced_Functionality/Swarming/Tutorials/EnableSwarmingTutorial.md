@@ -16,7 +16,7 @@ The content and screenshots for this tutorial have been created using DataMiner 
 
 For this tutorial, you will need a DataMiner System that meets the following requirements:
 
-- [Connected to dataminer.services](https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
+- [Connected to dataminer.services](https://docs.dataminer.services/user-guide/dataminer_services/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
 - Using DataMiner 10.5.1/10.6.0 [CU0] or higher.
 - Containing two or more Agents, but no Failover Agents. If you are using a single Agent, you can follow along, but you will not be able to do the last step (swarming an element).
 - Using [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) setup.
@@ -37,7 +37,7 @@ Other prerequisites for Swarming will be addressed later in this tutorial.
 
 To deploy the package:
 
-1. Go to the [Tutorial - Getting started with Swarming](https://catalog.dataminer.services/details/b087dd80-8a62-4ef0-9321-76964ac4e039) package in the DataMiner Catalog.
+1. Go to the [Tutorial - Getting started with Swarming](https://catalog.dataminer.services/details/b087dd80-8a62-4ef0-9321-76964ac4e039) package in the Catalog.
 
 1. Deploy the latest version of the package on your DMA using the *Deploy* button.
 
@@ -83,7 +83,7 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
 
 1. In case *No incompatible enhanced services* is *Not Ok*:
 
-   1. Check in the DataMiner Catalog if a more recent version of the enhanced service connectors is available and upgrade to the latest version if possible.
+   1. Check in the Catalog if a more recent version of the enhanced service connectors is available and upgrade to the latest version if possible.
 
    1. If upgrading to a more recent version is not possible, follow the instructions to [prepare enhanced service connectors for Swarming](xref:SwarmingPrepare#enhanced-service-connectors)
 

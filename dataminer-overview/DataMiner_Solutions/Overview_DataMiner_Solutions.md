@@ -6,7 +6,7 @@ uid: Overview_DataMiner_Solutions
 
 DataMiner solutions represent **pre-configured implementations that operate on top of the DataMiner stack**. Leveraging the extensive suite of DataMiner functionalities, these solutions are designed to seamlessly integrate into your system, offering the flexibility to be **utilized as-is or fine-tuned** to suit specific requirements.
 
-Accessible through the [DataMiner Catalog](xref:About_the_Catalog_module), these solutions encompass a diverse array of configured DataMiner functions, including connectors, alarm and trend templates, visual summaries, Automation scripts, dashboards, low-code apps, and user-defined APIs, among others. The composition of components varies across different solutions.
+Accessible through the [Catalog](xref:About_Catalog), these solutions encompass a diverse array of configured DataMiner functions, including connectors, alarm and trend templates, visual summaries, Automation scripts, dashboards, low-code apps, and user-defined APIs, among others. The composition of components varies across different solutions.
 
 ## Solution apps
 
@@ -22,7 +22,7 @@ The icons of DataMiner applications are marked with a DataMiner icon to distingu
 
 ### Sample applications
 
-Sample applications are primarily utilized for use cases requiring extensive customization in media operations, such as customer-facing applications. As the name suggests, these applications are merely DevOps examples available in the DataMiner Catalog, and these are not intended for direct deployment in production environments.
+Sample applications are primarily utilized for use cases requiring extensive customization in media operations, such as customer-facing applications. As the name suggests, these applications are merely DevOps examples available in the Catalog, and these are not intended for direct deployment in production environments.
 
 The icons of sample applications are not marked with a DataMiner icon.
 
@@ -59,6 +59,6 @@ Key features:
 
 ## Updates
 
-Continually evolving along a roadmap, the DataMiner solutions are subject to updates, ensuring compatibility with newer versions while preserving backward compatibility. Updates are facilitated by deploying updated solution packages from the DataMiner Catalog. You have full autonomy over solution implementations, so you can modify visuals, Automation scripts, and more, according to your preferences.
+Continually evolving along a roadmap, the DataMiner solutions are subject to updates, ensuring compatibility with newer versions while preserving backward compatibility. Updates are facilitated by deploying updated solution packages from the Catalog. You have full autonomy over solution implementations, so you can modify visuals, Automation scripts, and more, according to your preferences.
 
 However, keep in mind that if you modify components of a solution, these will be overwritten when you deploy an update of the solution. Consequently, if you intend to tailor solutions to your unique context, we recommend that you **create customized versions** by copying (or branching) them and then applying necessary adjustments, thereby preserving the original solution for future updates.

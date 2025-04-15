@@ -7,7 +7,7 @@ uid: Proactive_Support
 By [connecting your DataMiner Agents to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), you gain access to a wealth of additional functionality, including the powerful technical support capabilities offered by the Operations team at Skyline.
 
 > [!TIP]
-> To learn more about all available dataminer.services functionality, see [dataminer.services](xref:Overview_DCP).
+> To learn more about all available dataminer.services functionality, see [dataminer.services](xref:Overview_dataminer_services).
 
 These technical support capabilities include the following:
 

@@ -22,21 +22,21 @@ Expected duration: 15 minutes
 
 This tutorial consists of the following steps:
 
-- [Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the DataMiner Catalog](#step-1-deploy-the-correlation-kata-switch-timeout-item-from-the-dataminer-catalog)
+- [Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the Catalog](#step-1-deploy-the-correlation-kata-switch-timeout-item-from-the-dataminer-catalog)
 - [Step 2: Create the Correlation rule](#step-2-create-the-correlation-rule)
 - [Step 3: Generate a timeout alarm](#step-3-generate-a-timeout-alarm)
 - [Step 4: Verify whether the rule actions have been executed](#step-4-verify-whether-the-rule-actions-have-been-executed)
 
-## Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the DataMiner Catalog
+## Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the Catalog
 
-1. Look up the [Correlation_KATA_Switch_Timeout](https://catalog.dataminer.services/details/22cd5be6-c814-4ed8-a122-670f6c6b7934) package in the DataMiner Catalog.
+1. Look up the [Correlation_KATA_Switch_Timeout](https://catalog.dataminer.services/details/22cd5be6-c814-4ed8-a122-670f6c6b7934) package in the Catalog.
 
 1. Deploy the latest version of the package to your DataMiner Agent by clicking the *Deploy* button.
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)
 
-When the package has been deployed, the Automation script *Correlation KATA switch timeout Script* and the element *Correlation KATA Switch Timeout - Network Switch* will become available in the DataMiner System. You can find the element in the Surveyor under *DataMiner Catalog* > *Correlation KATA* > *Network Switch Timeout*.
+When the package has been deployed, the Automation script *Correlation KATA switch timeout Script* and the element *Correlation KATA Switch Timeout - Network Switch* will become available in the DataMiner System. You can find the element in the Surveyor under *Catalog* > *Correlation KATA* > *Network Switch Timeout*.
 
 ## Step 2: Create the Correlation rule
 

@@ -6,13 +6,15 @@ keywords: cloud connection, connect to the cloud, connecting to the cloud
 
 # Investigating dataminer.services connection issues
 
-If you encounter issues with [dataminer.services](xref:AboutCloudPlatform) features that may be caused by connection issues, follow the actions below in the specified order:
+If you encounter issues with [dataminer.services](xref:about_dataminer_services) features that may be caused by connection issues, follow the actions below in the specified order:
 
-1. [Check the connection status on dataminer.services](#check-the-status-on-dataminerservices)
-1. [Check the status of the DMS](#check-the-status-of-the-dms)
-1. [Check the status of the CloudGateway DxM](#check-the-status-of-the-cloudgateway-dxm)
-1. [Check the cloud session](#check-the-cloud-session)
-1. [Contact support](#contact-support)
+- [Investigating dataminer.services connection issues](#investigating-dataminerservices-connection-issues)
+  - [Check the status on dataminer.services](#check-the-status-on-dataminerservices)
+  - [Check the status of the DMS](#check-the-status-of-the-dms)
+  - [Check the status of the CloudGateway DxM](#check-the-status-of-the-cloudgateway-dxm)
+  - [Check the cloud session](#check-the-cloud-session)
+    - [Handling 'Renew session' failures](#handling-renew-session-failures)
+  - [Contact support](#contact-support)
 
 ## Check the status on dataminer.services
 
@@ -28,7 +30,7 @@ When you navigate to [dataminer.services](https://dataminer.services/), you can 
 
 - A **green** status indicates that the dataminer.services connection is valid.
 
-  If the status is green, but you are still encountering issues with [dataminer.services](xref:AboutCloudPlatform) features, refer to [Investigating dataminer.services feature issues](xref:Investigating_Dataminerservices_Feature_Issues).
+  If the status is green, but you are still encountering issues with [dataminer.services](xref:about_dataminer_services) features, refer to [Investigating dataminer.services feature issues](xref:investigating_dataminer_services_feature_issues).
 
 > [!IMPORTANT]
 > If your system is not listed here, make sure that you are in the correct organization and that you are a member of this DMS. See [Check the status of the DMS](#check-the-status-of-the-dms).
@@ -83,7 +85,7 @@ Manually renewing the cloud identity can be necessary if dataminer.services coul
 1. If it is no longer valid, click the *Renew Session* button.
 
    > [!NOTE]
-   > This button is only available if the cloud identity has expired. It is also only available for users who have the [*Owner* or *Admin* role](xref:Changing_the_role_of_a_DCP_user) in the DMS.
+   > This button is only available if the cloud identity has expired. It is also only available for users who have the [*Owner* or *Admin* role](xref:Changing_the_role_of_a_dataminer_services_user) in the DMS.
 
 ### Handling 'Renew session' failures
 

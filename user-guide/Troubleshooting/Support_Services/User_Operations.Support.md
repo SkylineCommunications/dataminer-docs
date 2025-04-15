@@ -6,7 +6,7 @@ uid: User_operations_support
 
 With the Support application, you can both keep track of existing tickets and create new ones.
 
-The application is available at <https://supportpreview.dataminer.services/>. You can log in in the [same way as for dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+The application is available at <https://supportpreview.dataminer.services/>. You can log in in the [same way as for dataminer.services](xref:Logging_on_to_dataminer_services).
 
 ## Ticket Overview page
 

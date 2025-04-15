@@ -99,7 +99,7 @@ A new Data Aggregator module is now available as a DxM (DataMiner Extension Modu
 
 1. Make sure CoreGateway 2.12.0 or higher (included in Cloud Pack 2.8.4) is installed on the DataMiner Agents you want to use Data Aggregator with.
 
-1. In the [Admin app](xref:CloudAdminApp), install the *DataMiner DataAggregator* DxM on the relevant node. See [Managing the nodes of a cloud-connected DMS](xref:Managing_cloud-connected_nodes).
+1. In the [Admin app](xref:Admin), install the *DataMiner DataAggregator* DxM on the relevant node. See [Managing the nodes of a cloud-connected DMS](xref:Managing_cloud-connected_nodes).
 
 1. On the server where you installed Data Aggregator, open the folder `C:\Program Files\Skyline Communications\DataMiner DataAggregator`.
 

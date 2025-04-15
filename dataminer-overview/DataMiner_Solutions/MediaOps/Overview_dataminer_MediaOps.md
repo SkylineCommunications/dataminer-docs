@@ -33,7 +33,7 @@ In essence, dataminer.MediaOps revolutionizes media operations by combining mode
 
 ## What can you do with dataminer.MediaOps?
 
-dataminer.MediaOps simplifies and automates your media supply chain. It comes with a [set of ready-made applications](xref:Overview_MediaOps_Apps), which will soon be available in the DataMiner Catalog<!-- TBD: update when available -->. These can be extended with your own customized applications to tailor the UEx (User Experience) to the user's role. It can also be extended with workflows, automation, and even user-defined APIs to integrate with your existing systems.
+dataminer.MediaOps simplifies and automates your media supply chain. It comes with a [set of ready-made applications](xref:Overview_MediaOps_Apps), which will soon be available in the Catalog<!-- TBD: update when available -->. These can be extended with your own customized applications to tailor the UEx (User Experience) to the user's role. It can also be extended with workflows, automation, and even user-defined APIs to integrate with your existing systems.
 
 The use cases offered by dataminer.MediaOps are listed below. The solution's focus spans from inventory management to planning and reservation, to live operations, up to finishing events and managing costs and billing.
 

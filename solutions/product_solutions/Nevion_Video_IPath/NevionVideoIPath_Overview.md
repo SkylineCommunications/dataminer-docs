@@ -10,7 +10,7 @@ The Nevion Video IPath app allows you to control Sony's (Nevion) VideoIPath SDN 
 
 The Nevion Video IPath app retrieves all data from the Nevion VideoIPath system using the [Nevion Video iPath connector](https://catalog.dataminer.services/details/7b986cbc-a29e-44e5-b3b7-003e639acfac), using Nevion’s modern services API calls. It then allows you to schedule, execute, and view connections between endpoints. This will not only establish a routing path but also configures a service that could be set up as point-to-point or point-to-multipoint.
 
-The [*Nevion Video IPath* package](https://catalog.dataminer.services/details/ec97a934-679e-42c2-ac4b-f33a3d9f8d2c), available for download from the DataMiner Catalog, contains the following items:
+The [*Nevion Video IPath* package](https://catalog.dataminer.services/details/ec97a934-679e-42c2-ac4b-f33a3d9f8d2c), available for download from the Catalog, contains the following items:
 
 - The Nevion Video IPath low-code app
 
