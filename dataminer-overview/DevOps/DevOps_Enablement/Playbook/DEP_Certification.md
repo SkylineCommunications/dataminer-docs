@@ -29,4 +29,5 @@ During this intake session, candidates will meet their examiner, who will outlin
 When the candidate has completed the certification process, their examiner will share the results during a final debriefing session.
 
 > [!TIP]
-> For more information, have a look at some [frequently asked questions about the DataMiner Certification Program](https://community.dataminer.services/learning/certification/#faq_certification).
+> - For more information, have a look at some [frequently asked questions about the DataMiner Certification Program](https://community.dataminer.services/learning/certification/#faq_certification).
+> - See also the [exam guide](https://docs.dataminer.services/dataminer-overview/Training_courses_and_certification/Overview_Training_certification.html) per certification track. 
