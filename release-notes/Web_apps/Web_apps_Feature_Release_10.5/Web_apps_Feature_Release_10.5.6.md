@@ -82,6 +82,12 @@ When, in an *Image* component, you tried to upload an image file of which the ex
 
 When load balancing was being used for Visual Overview in the web apps, in some cases, a particular user session could request a visual overview from an incorrect DataMiner Agent.
 
+#### Low-Code Apps: Users without edit permission would incorrectly have access to edit and delete options in the right-click menu of an app [ID 42660]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+Up to now, when you did not have permission to edit a low-code app, on the DataMiner root page, the app's right-click menu would incorrectly include options to edit or delete that app. From now on, only people with edit permission will have access to those options.
+
 #### Low-Code Apps: Not possible to pass data from a Trigger component on one panel to a component on another panel [ID 42714]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
@@ -93,3 +99,9 @@ When a *Trigger* component on one panel was linked to a component on another pan
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
 In some cases, a null reference exception could be thrown after a PDF report had been generated.
+
+#### Low-Code Apps: Problem when passing multiple types of data to components on another panel [ID 42742]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When a component passed different types of data to components located on another panel, not all types of data would get consumed correctly.
