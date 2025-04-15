@@ -10,7 +10,7 @@ You can configure actions for different types of events in DataMiner Low-Code Ap
 
   > [!NOTE]
   > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39604 + 39682 + 39636-->, this type of event is only available for low-code app pages and is called "On page load".
-  > Prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42039-->, this type of event only executed its actions when all components are done loading. This also included the components that would need scrolling down to load in.
+  > Prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42039-->, this type of event only executes its actions when all components are done loading. This also includes the components that need scrolling down to be loaded.
 
 - *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
 
