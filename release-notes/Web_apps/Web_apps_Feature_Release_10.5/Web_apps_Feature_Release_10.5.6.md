@@ -81,3 +81,9 @@ When, in an *Image* component, you tried to upload an image file of which the ex
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
 When load balancing was being used for Visual Overview in the web apps, in some cases, a particular user session could request a visual overview from an incorrect DataMiner Agent.
+
+#### Dashboards app: Problem after generating a PDF report [ID 42732]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+In some cases, a null reference exception could be thrown after a PDF report had been generated.

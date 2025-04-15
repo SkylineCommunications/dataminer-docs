@@ -152,3 +152,9 @@ SNMP managers generate an information event each time an alarm storm starts and 
 Up to now, the word "SNMP manager" would not be spelled consistently in both messages. The information event announcing the start of an alarm storm would start with `Alarmstorm for SNMP Manager: ...`, while the information event announcing the end of an alarm storm would start with `Alarmstorm for SNMPManager: ...`
 
 From now on, both information events will start with `Alarmstorm for SNMP Manager: ...`
+
+#### SLNet protocol cache would incorrectly retain the names of deleted protocols [ID 42710]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+In some rare cases, the SLNet protocol cache would incorrectly retain the names of deleted protocols.
