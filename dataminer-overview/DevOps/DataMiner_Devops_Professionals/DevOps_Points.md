@@ -52,7 +52,7 @@ In general, the more active you are in the DataMiner Dojo community and the more
   > [!TIP]
   > Not really sure how to get started? Take a look at our [blog post template](https://community.dataminer.services/download/blog-post-template/)!
 
-- **Submitting a use case**: You can choose to submit a [use case](https://community.dataminer.services/use-cases/) for the community, and upon acceptance, this will result in 250 up to 2500 points. Use cases could focus on a new product integration that you have completed for DataMiner, or on any other type of solution that you have implemented with DataMiner.
+- **Submitting a use case**: You can choose to submit a [use case](https://community.dataminer.services/use-cases/) for the community, and upon acceptance, this will result in 250 up to 5000 points. Use cases could focus on a new product integration that you have completed for DataMiner, or on any other type of solution that you have implemented with DataMiner.
 
   > [!TIP]
   > Not really sure how to get started? Take a look at our [use case template](https://community.dataminer.services/download/use-case-template/)!
