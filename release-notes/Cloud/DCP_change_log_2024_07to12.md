@@ -25,7 +25,7 @@ From now on, when you export the audit information from the *Audit* page in the 
 
 From now on, when you export the usage information from the *Usage* page in the [Admin app](https://admin.dataminer.services), the export file will have a better name, which will include the organization name and a readable timestamp. The metrics in the file itself will now also contain the organization and DMS name, and if the option to include column titles was selected, there will be better column titles at the the top.
 
-#### 9 December 2024 - Enhancement - Home/Admin/Catalog/Marketplace/Sharing - App title now works as link that can be opened in new tab [ID 41524]
+#### 9 December 2024 - Enhancement - Home/Admin/Catalog/Marketplace/Sharing - App title now works as link that can be opened in new tab [ID 41518] [ID 41524]
 
 When you click the title of the Admin, Catalog, Home, Marketplace, or Sharing apps with the middle mouse button, this will now open the app again in a new tab. In addition, you can now also right-click the title to among others open the app in a new tab or in a new window.
 
@@ -121,6 +121,12 @@ The following types have been removed:
 - Sample Solution
 - SLA Model
 - Testing Solution
+
+#### 25 November 2024 - Catalog - Improved retrieving mechanism for Catalog item types [ID 41431]
+
+The way Catalog item types are retrieved has been improved to ensure that when the name of a type changes, no changes to the UI will be needed.
+
+If any API calls currently use the value of a type, these will need to be updated to use the new available string values for the types.
 
 #### 25 November 2024 - Enhancement - Catalog - Changing the publishing state of Catalog items [ID 41418]
 
@@ -285,6 +291,10 @@ The following APIs are no longer available:
 - UserCatalog V1
 
 Instead, the V2 versions of these APIs should now be used.
+
+#### 3 October 2024 - Fix - Problem using remote access with SAML authentication [ID 40971]
+
+If SAML authentication was used, it could occur that remote access did not work correctly.
 
 #### 27 September 2024 - Fix - Catalog API - Image upload failure during Catalog registration [ID 40885]
 
