@@ -119,10 +119,10 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns>
 		///		<list type = "bullet">
 		///			<item>
-		///				<description>Starting from Dataminer 10.5.6/10.4 CU15/10.5 CU3: -1 In case the ClearAllKeys method has been invoked specifying an empty table, 0 if clearing succeeded, otherwise 1.</description>
+		///				<description>Starting from DataMiner 10.5.6/10.4.0 [CU15]/10.5.0 [CU3] (RN 42368): -1 In case the ClearAllKeys method has been invoked specifying an empty table, 0 if clearing succeeded, otherwise 1.</description>
 		///			</item>
 		///			<item>
-		///				<description>Prior to Dataminer 10.5.6/10.4 CU15/10.5 CU3: The number of rows left. In case the ClearAllKeys method has been invoked specifying an empty table, -1 is returned.</description>
+		///				<description>Prior to DataMiner 10.5.6/10.4.0 [CU15]/10.5.0 [CU3]: The number of rows left. In case the ClearAllKeys method has been invoked specifying an empty table, -1 is returned.</description>
 		///			</item>
 		///		</list>
 		/// </returns>
@@ -132,10 +132,10 @@ namespace Skyline.DataMiner.Scripting
 		///				<description>Prior to DataMiner 10.1.1 (RN 27995), this method was defined as an SLProtocol extension method in the NotifyProtocol class.</description>
 		///			</item>
 		///			<item>
-		///				<description>Starting from Dataminer 10.5.6/10.4 CU15/10.5 CU3: This method first retrieves all primary keys from the table using a NotifyProtocol type 397 (<see href="xref:NT_GET_KEYS_SLPROTOCOL">NT_GET_KEYS_SLPROTOCOL</see>) call. If there is at least one primary key present, the method performs a NotifyProtocol type 474 (<see href="xref:NT_CLEAR_PARAMETER">NT_CLEAR_PARAMETER</see>) call, removing all rows.</description>
+		///				<description>Starting from DataMiner 10.5.6/10.4.0 [CU15]/10.5.0 [CU3] (RN 42368): This method first retrieves all primary keys from the table using a NotifyProtocol type 397 call (<see href="xref:NT_GET_KEYS_SLPROTOCOL">NT_GET_KEYS_SLPROTOCOL</see>). If there is at least one primary key present, the method performs a NotifyProtocol type 474 (<see href="xref:NT_CLEAR_PARAMETER">NT_CLEAR_PARAMETER</see>) call, removing all rows.</description>
 		///			</item>
 		///			<item>
-		///				<description>Prior to Dataminer 10.5.6/10.4 CU15/10.5 CU3: This method first retrieves all primary keys from the table using a NotifyProtocol type 168 (<see href="xref:NT_GET_INDEXES">NT_GET_INDEXES</see>) call. If there is at least one primary key present, the method performs a NotifyProtocol type 156 (<see href="xref:NT_DELETE_ROW">NT_DELETE_ROW</see>) call, removing all rows.</description>
+		///				<description>Prior to DataMiner 10.5.6/10.4.0 [CU15]/10.5.0 [CU3]: This method first retrieves all primary keys from the table using a NotifyProtocol type 168 call (<see href="xref:NT_GET_INDEXES">NT_GET_INDEXES</see>). If there is at least one primary key present, the method performs a NotifyProtocol type 156 call (<see href="xref:NT_DELETE_ROW">NT_DELETE_ROW</see>), removing all rows.</description>
 		///			</item>
 		///		</list>
 		/// </remarks>

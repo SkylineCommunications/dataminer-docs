@@ -4,8 +4,9 @@ uid: NT_CLEAR_PARAMETER
 
 # NT_CLEAR_PARAMETER (474)
 
-Clears a parameter and its display value.
-If the parameter is saved the change is also saved.
+<!-- RN 42397 -->
+
+Clears a parameter and its display value. If the parameter is saved, the change is also saved.
 
 This notify cannot clear the contents of a column of a table.
 
@@ -21,7 +22,7 @@ protocol.NotifyProtocol(474 /*NT_CLEAR_PARAMETER*/, parameterId, null);
 
 ## Return Value
 
-- A string if with an error message if the parameterId was invalid (e.g. a table column, or the parameter does not exist), otherwise null.
+- A string with an error message if *parameterId* was an invalid parameter ID (e.g. a table column, or the parameter does not exist), otherwise null.
 
 ## Remarks
 
