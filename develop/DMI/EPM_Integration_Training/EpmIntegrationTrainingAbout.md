@@ -6,6 +6,9 @@ uid: EpmIntegrationTrainingAbout
 
 To get started with EPM integration, you can install the EPM Integration Training package. This package contains all the necessary components to understand, navigate, and get hands-on with an EPM solution.
 
+> [!TIP]
+> See also: [Getting started with EPM](xref:EPM_Introduction_Tutorial)
+
 ## Installation
 
 If your DataMiner System is connected to dataminer.services, you can deploy the package directly from the [Catalog](https://catalog.dataminer.services/details/b661f936-d6e7-447c-baee-f0a5503e75b4). Otherwise, reach out to your Skyline contact so they can provide you with the package.

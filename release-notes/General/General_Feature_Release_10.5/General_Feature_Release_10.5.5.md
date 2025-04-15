@@ -173,7 +173,7 @@ In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
 
-Up to now, the BAP test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
+Up to now, the BPA test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
 
 Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending on the DataMiner version, it will checks for the following DLL files, in the specified folders:
 
