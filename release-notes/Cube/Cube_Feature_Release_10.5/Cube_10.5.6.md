@@ -83,6 +83,12 @@ Also, a number of additional enhancements have been made to improve overall conn
 
 A number of minor enhancements have been made, especially with regard to calculating durations included in SPI logging.
 
+#### Enhancements with regard to retrieving data from EPM element managers [ID 42731]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+A number of enhancements have been made with regard to retrieving data from EPM element managers.
+
 ### Fixes
 
 #### Visual Overview: Problem when processing shape conditions or creating shape properties [ID 42436]
