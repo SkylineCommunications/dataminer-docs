@@ -27,9 +27,9 @@ Perpetual-Use Licenses are a one-off expenditure.
 > [!TIP]
 > See also: [Usage-based services](xref:Pricing_Usage_based_service)
 
-DataMiner's usage-based services offers a flexible and transparent software utilization offering. The utilization of the different services is measured in **DataMiner credits**, a single product and price. These credits, allocated to an organization, can be used across various services, adapting monthly to meet evolving needs and priorities. 
+DataMiner's usage-based services offers a flexible and transparent software utilization offering. The utilization of the different services is measured in **DataMiner credits**, a single product and price. These credits, allocated to an organization, can be used across various services, adapting monthly to meet evolving needs and priorities.
 
-By default, it works on a Pay-per-Use model, where prepaid credits are deducted monthly based on the actual service consumptions, on any given month.
+By default, it works on a Pay-per-Use model, where prepaid credits are deducted monthly based on the actual service consumptions, in any given month.
 
 In addition, you also have the option to subscribe to certain services, by reserving a fixed number of units per month (Monthly Utilization Allowances or MUA), for the duration of 1 or 3 years, resulting in a well-defined and controlled expenditure and substantial savings on the number of credits consumed.
 
@@ -41,30 +41,28 @@ This is the perfect way to get started, allowing anyone to use the platform and 
 
 - **Self-managed**: Community Edition systems deployed on your own infrastructure (on-premises or in a private/public cloud) are free, but must be renewed every 12 months.
 
-- **DataMiner as a Service**: Community Edition systems easily deployed as a service with [just a few clicks](xref:Creating_a_DMS_in_the_cloud) are free for the first 7 days. After this trial period, a monthly subscription costs 480 EUR or 660 USD (depending on End User region). Users who opt for an annual subscription can enjoy 12 months of access while only paying for 10 months.
+- **DataMiner as a Service**: Community Edition systems, easily deployed as a service with [just a few clicks](xref:Creating_a_DMS_in_the_cloud), are free for the first 7 days. After this trial period, a monthly subscription costs 480 EUR or 660 USD (depending on the end user region). Users who opt for an annual subscription can enjoy 12 months of access while only paying for 10 months.
 
-The DataMiner Community Edition is a flavor of the usage-based services, but with a fixed allowance per service type.
+The DataMiner Community Edition is a flavor of the usage-based services, but with a fixed allowance per service type. It has the following limitations:
 
-Limitations of DataMiner Community Edition:
+- Only for standalone systems (without the option to expand).
 
-- Only for standalone systems (without the option to expand)
-
-- Community support only
+- Community support only.
 
 - Service limits per month:
-  - 8 credits for Standard Managed Objects
-  - 4 credits for Light Managed Objects
-  - 8 credits for Automation
-  - 2 credits for Collaboration
-  - 2 credits for STaaS (not available for Self-managed)
-  - 2 credits for DaaS (not available for Self-managed)
+
+  - 8 credits for Standard Managed Objects.
+  - 4 credits for Light Managed Objects.
+  - 8 credits for Automation.
+  - 2 credits for Collaboration.
+  - 2 credits for STaaS (not available for self-managed).
+  - 2 credits for DaaS (not available for self-managed).
   - Number of connectors is unlimited.
 
-There might come a time when you need to increase your system's capacity to go above the limits mentioned above. If that happens, you have two options: you can either create a new system while keeping your Community Edition separate, or you can transition your existing Community Edition to a subscription or pay-per-use (PPU) credits. 
-In either case, a system cannot remain on the Community Edition while it continues exceeding the limits.
+There might come a time when you need to increase your system's capacity to go above the limits mentioned above. If that happens, you have two options: you can either create a new system while keeping your Community Edition separate, or you can transition your existing Community Edition to a subscription or to pay-per-use (PPU) credits. In either case, a system cannot remain on the Community Edition while it continues to exceed the limits.
 
 > [!TIP]
-> See also [Usage-based services](xref:Pricing_Usage_based_service)
+> See also: [Usage-based services](xref:Pricing_Usage_based_service)
 
 ## DataMiner Perpetual-Use Licenses vs Usage-based services
 
