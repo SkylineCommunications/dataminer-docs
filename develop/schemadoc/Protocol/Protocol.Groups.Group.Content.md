@@ -41,6 +41,7 @@ The content of a group has to consist of items the same type.
 > Do not include more than 10 parameters, pairs, actions or triggers in one Protocol.Groups.Group.Content tag.
 
 > [!IMPORTANT]
-> Depending on the content type, the behavior might differ regarding when the polling request/command is built.
-> For serial, see [explanations about makeCommandByProtocol feature](xref:ConnectionsSerialCreatingCommandsAndResponses#makecommandbyprotocol)
-> For HTTP, the requests will be built and buffered when the group is added to the SLProtocol queue. This means that if some request parameters are updated by the time the groups gets executed, you are sure that the sent request will still contain the values from when the group was added to the queue allowing to avoid race condition issues.
+> Depending on the content type, the behavior regarding when the polling request/command is built might differ:
+>
+> - For serial, see [makeCommandByProtocol](xref:ConnectionsSerialCreatingCommandsAndResponses#makecommandbyprotocol).
+> - For HTTP, the requests will be built and buffered when the group is added to the SLProtocol queue. This means that if some request parameters are updated by the time the group gets executed, the sent request will still contain the values from when the group was added to the queue, avoiding race condition issues.
