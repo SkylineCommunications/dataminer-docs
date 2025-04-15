@@ -76,6 +76,18 @@ Example: `2025/04/01 16:31:31.813|SLManagedAutomation|RunSafe|INF|0|959|473|Exam
 
 ### Enhancements
 
+#### VerifyNatsIsRunning prerequisite check has now been replaced by the VerifyNatsCluster check [ID 42206]
+
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+
+The *VerifyNatsIsRunning* prerequisite check has now been replaced by the *VerifyNatsCluster* check.
+
+This check, which is included in upgrade packages, verifies whether the crucial NATS service used by DataMiner is running on all required DataMiner Agents and whether communication between all NATS nodes is possible.
+
+The same prerequisite is also available as a BPA test in System Center.
+
+This prerequisite check prevents situations where a DataMiner System becomes non-functional after an upgrade because of pre-existing issues with NATS. If this check fails, [troubleshoot NATS](xref:Investigating_NATS_Issues) before continuing the upgrade.
+
 #### SLAnalytics: Enhanced caching of DVE element information [ID 42555]
 
 <!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
