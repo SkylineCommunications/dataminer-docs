@@ -61,6 +61,8 @@ items:
             topicUid: System_Cache
           - name: SyncRules.xml
             topicUid: SyncRules_xml
+          - name: Views.xml
+            topicUid: Views_xml
   - name: Tools
     topicUid: DataminerTools
     items:
