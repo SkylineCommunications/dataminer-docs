@@ -1283,6 +1283,8 @@ items:
         topicUid: NT_SET_BITRATE_DELTA_INDEX_TRACKING
       - name: NT_ADD_VIEWS
         topicUid: NT_ADD_VIEWS
+      - name: NT_CLEAR_PARAMETER
+        topicUid: NT_CLEAR_PARAMETER
     - name: DMS notify types
       topicUid: SLDmsNotifyTypes
       items:
