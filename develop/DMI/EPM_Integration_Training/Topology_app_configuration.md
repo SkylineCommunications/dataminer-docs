@@ -76,11 +76,17 @@ To have an EPM tab in the Surveyor in Cube, the DMS must be able to recognize th
 
 ## Data section configuration
 
-The native look of the Data section of an EPM entity is two columns filled with all the information related to the row of the entity in the column order of the table. All columns that are configured to be shown are also shown in the Data section. If a column has width=0, it will not show in this section, and it will be impossible to be view this column.
+The native look of the Data section of an EPM entity is two columns filled with all the information related to the row of the entity in the column order of the table. All columns that are configured to be shown are also shown in the Data section. If a column has a width of 0, it will not show in this section, and it will be impossible to view this column.
 
-To further configure the look of the Data section and also add title boxes, you need to create a page called *CPEIntegration/[EPM System Type]*, e.g. *CPEIntegration/Region*.
+To further configure the look of the Data section and also add title boxes, you can put the parameters on one or more pages with the *CPEIntegration/[CustomPageName]* name, e.g. *CPEIntegration/Region* or *CPEIntegration/Region Ping Stats*.
 
-On this page, you can add parameters as you would on any other page, but you can also add individual column parameters associated with the entity. If you use the [duplicateAs](xref:Protocol.Params.Param-duplicateAs) option, both the native and view table column will occupy the same space, but this will not cause issues in DataMiner.
+On these pages, you can add parameters as you would on any other page, but you can also add individual column parameters associated with the entity. If you use the [duplicateAs](xref:Protocol.Params.Param-duplicateAs) option, both the native and view table column will occupy the same space, but this will not cause issues in DataMiner.
+
+If the `CPEIntegration_` prefix is added to data pages in an EPM protocol, you can also apply a custom order for these pages in the *pageOrder* attribute of the *Display* tag in the protocol. For example:<!-- 29748 -->
+
+```xml
+<Display type="element manager" pageOptions="*;CPEOnly" defaultPage="General" pageOrder="General;Configurations;----------;CPEIntegration_Data/General;CPEIntegration_Data/Fiber;CPEIntegration_Data/Household;CPEIntegration_Data/Service Usage"/>
+```
 
 ![EPM Data layout](~/develop/images/EPM_Data_Layout.png)
 

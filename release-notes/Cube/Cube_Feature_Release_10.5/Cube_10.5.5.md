@@ -88,9 +88,11 @@ If these conditions are met, to start using the front-end EPM Managers, first de
 
 ##### Customization of EPM integration data pages
 
-By default, the table and column parameters linked to an EPM object will automatically be positioned on data pages. The name of a page will match the description of the table, and the parameters will be displayed in the order defined in the column definitions of the table, in two columns.
+The native look of the Data section of an EPM entity is two columns filled with all the information related to the row of the entity in the column order of the table. All columns that are configured to be shown are also shown in the Data section. If a column has a width of 0, it will not show in this section, and it will be impossible to view this column.
 
-You can change the name of a page by giving the table a position on a page that has a name prefixed with `CPEIntegration_`, e.g. *CPEIntegration_MyCustomPage*. To hide a complete table, add a table position on the special page *CPEIntegration_Hidden*. Note that pages with the `CPEIntegration_` prefix will not be shown on regular element cards.
+To further configure the look of the Data section and also add title boxes, you can put the parameters on one or more pages with the *CPEIntegration/[CustomPageName]* name, e.g. *CPEIntegration/Region* or *CPEIntegration/Region Ping Stats*.
+
+On these pages, you can add parameters as you would on any other page, but you can also add individual column parameters associated with the entity. If you use the [duplicateAs](xref:Protocol.Params.Param-duplicateAs) option, both the native and view table column will occupy the same space, but this will not cause issues in DataMiner.
 
 If the `CPEIntegration_` prefix is added to data pages in an EPM protocol, you can also apply a custom order for these pages in the *pageOrder* attribute of the *Display* tag in the protocol. For example:<!-- 29748 -->
 
