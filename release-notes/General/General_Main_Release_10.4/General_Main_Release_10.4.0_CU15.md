@@ -15,6 +15,12 @@ uid: General_Main_Release_10.4.0_CU15
 
 ### Enhancements
 
+#### Enhanced ClearAllKeys() function [ID 42368]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+Because of a number of enhancements, overall performance of the SLProtocol function `ClearAllKeys()` has increased.
+
 #### Cassandra Cluster: Enhanced performance when importing DELT packages [ID 42613]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->

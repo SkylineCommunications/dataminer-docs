@@ -32,6 +32,7 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Inspecting the active replication buffers](xref:SLNetClientTest_inspecting_active_replication_buffers)
 - [Making DataMiner Cube ignore view updates](xref:SLNetClientTest_making_Cube_ignore_view_updates)
 - [Managing base subscriptions](xref:SLNetClientTest_managing_base_subscriptions)
+- [Managing parameter groups for RAD](xref:SLNetClientTest_managing_RAD_parameter_groups)
 - [Managing scheduled tasks for maintenance of a Cassandra database](xref:SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra)
 - [Managing trend patterns](xref:SLNetClientTest_managing_trend_patterns)
 - [Modifying the engine ID of a DMA](xref:SLNetClientTest_modifying_engine_id)

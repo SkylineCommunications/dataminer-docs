@@ -254,6 +254,20 @@ When, while a DOM instance was created or updated, a `FieldValue` was added for 
 
 From now on, the trace data will indicate that a `DomInstanceError` was thrown with error reason `FieldValueUsedInDomInstanceLinksToNonExistingFieldDescriptor`.
 
+#### DxMs upgraded [ID 42688]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer 1.8.3
+- DataMiner CoreGateway 2.14.12
+- DataMiner FieldControl 2.11.2
+- DataMiner Orchestrator 1.7.5
+- DataMiner SupportAssistant 1.7.3
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

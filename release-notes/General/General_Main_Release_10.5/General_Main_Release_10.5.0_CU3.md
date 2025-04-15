@@ -15,6 +15,18 @@ uid: General_Main_Release_10.5.0_CU3
 
 ### Enhancements
 
+#### Enhanced ClearAllKeys() function [ID 42368]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+Because of a number of enhancements, overall performance of the SLProtocol function `ClearAllKeys()` has increased.
+
+#### SLAnalytics: Enhanced caching of DVE element information [ID 42555]
+
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+
+A number of enhancements have been made with regard to the caching of DVE element information.
+
 #### Cassandra Cluster: Enhanced performance when importing DELT packages [ID 42613]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->

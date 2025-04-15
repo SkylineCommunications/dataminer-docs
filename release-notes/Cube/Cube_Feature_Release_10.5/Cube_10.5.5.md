@@ -2,10 +2,10 @@
 uid: Cube_Feature_Release_10.5.5
 ---
 
-# DataMiner Cube Feature Release 10.5.5 – Preview
+# DataMiner Cube Feature Release 10.5.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +14,8 @@ uid: Cube_Feature_Release_10.5.5
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [System Center - SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41885]](#system-center---snmp-forwarding-new-option-to-prevent-an-snmp-manager-from-resending-snmp-inform-messages-id-41885)
+- [EPM functionality is now fully integrated in DataMiner Cube [ID 42221]](#epm-functionality-is-now-fully-integrated-in-dataminer-cube-id-42221)
 
 ## New features
 
@@ -229,3 +230,9 @@ When a correlation rule created a correlated alarm that would trigger another co
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 When, in the *Search* pane, you right-clicked a parameter in the search results and selected e.g. *Open in new card*, the parameter card would refuse to open.
+
+#### DataMiner Cube desktop app: Problem when updating the configuration file [ID 42689]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 [CU0] -->
+
+In some cases, the DataMiner Cube desktop app could stop working when its configuration file was being updated.
