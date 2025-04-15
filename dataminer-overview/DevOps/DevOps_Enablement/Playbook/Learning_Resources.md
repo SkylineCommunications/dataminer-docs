@@ -28,7 +28,7 @@ On [DataMiner Dojo](https://community.dataminer.services/learning/courses/), you
 >   - [Expert Hub - DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
 > - Visualization:
 >
->   - [Expert Hub - DataMiner Visual Overview](https://community.dataminer.services/exphub-visualoverview/)
+>   - [DataMiner Visual Overview Course](https://community.dataminer.services/courses/visio/)
 >   - [The latest and greatest of Visual Overview](https://community.dataminer.services/video/the-latest-and-greatest-of-visual-overview/)
 >   - [DataMiner Inspire - The New DataMiner Stencils & Style Guide](https://community.dataminer.services/video/dataminer-inspire-the-new-dataminer-stencils-style-guide/)
 >   - [Query any data using GQI](https://community.dataminer.services/video/query-any-data-using-gqi/)
