@@ -62,6 +62,21 @@ In the *Augmented Operations alarm settings* window, which you can access in the
 
 If already installed on your system, the app will open. If not, you will be referred to the [RAD Manager page in the DataMiner Catalog](https://catalog.dataminer.services/details/174b9848-43c8-470d-afc2-1b1722f05e74).
 
+#### DataMiner Cube desktop app: Enhanced behavior when selecting "HTTP or HTTPS" [ID 42716]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+In the DataMiner Cube desktop app, you can configure whether Cube should connect to a specific DMS using HTTPS only ("HTTPS only") or whether it can fall back to HTTP if HTTPS is not available ("HTTP or HTTPS").
+
+Up to now, when you had selected "HTTP or HTTPS", first, an HTTP request would be sent with a default timeout of 100 seconds. If that request failed, an HTTPS request would then be sent.
+
+From now on, both an HTTP request and an HTTPS request will be sent in parallel, each with a timeout of 60 seconds.
+
+- When the request that completes first is successful, the remaining request will be canceled.
+- When the request that completes first returns an empty response, the system will fall back on the remaining request.
+
+Also, a number of additional enhancements have been made to improve overall connection stability.
+
 #### Miscellaneous enhancements [ID 42730]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
