@@ -143,6 +143,12 @@ When a protocol version was overwritten while an element using that protocol ver
 
 When an element was swarmed immediately after being created or after having its state changed to "Active", "Stopped", "Paused", etc., in some rare cases, SLNet modules could end up being confused about where the element was being hosted.
 
+#### DataMiner not able to start up after installation [ID 42431]
+
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+
+After installation, in some cases, DataMiner would not be able to start up because the *MessageBrokerConfig.json* file could not be found in the *C:\\ProgramData\\Skyline Communications\\DataMiner\\* folder.
+
 #### Problem with SLAutomation when a Notify method was called shortly after an Automation script had finished [ID 42465]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->

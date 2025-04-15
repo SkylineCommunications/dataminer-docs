@@ -61,6 +61,12 @@ When a protocol version was overwritten while an element using that protocol ver
 
 `Unexpected Exception [Exception from HRESULT: 0x8004024C]: The element is unknown.`
 
+#### DataMiner not able to start up after installation [ID 42431]
+
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+
+After installation, in some cases, DataMiner would not be able to start up because the *MessageBrokerConfig.json* file could not be found in the *C:\\ProgramData\\Skyline Communications\\DataMiner\\* folder.
+
 #### Redundancy groups: Matrix parameter updates in a derived element would incorrectly not get applied in the source element (and vice versa) [ID 42598]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
