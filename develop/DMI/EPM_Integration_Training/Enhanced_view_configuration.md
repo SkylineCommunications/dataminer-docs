@@ -4,7 +4,7 @@ uid: Enhanced_view_configuration
 
 # Enhanced view configuration
 
-It is possible to enhance a view so that it displays all the data pages of a specific element. This is usually used within an EPM setup so that a view representing a particular EPM object will also have the data pages for that object. This is supported from DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards.<!-- RN 42221 --> In earlier DataMiner versions, it is available in preview if the *CPEIntegration* [soft-launch option](xref:SoftLaunchOptions) is enabled.
+It is possible to enhance a view so that it displays all the data pages of a specific element. In cases where an EPM object represented by a view also has an element representation, you can use this feature to enhance the view so that all the data pages of that element are added to it, merging the EPM and element data pages into one view.
 
 Each view can only be combined with one element, which does not have to be included within that view.
 
