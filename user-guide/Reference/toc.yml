@@ -333,6 +333,8 @@ items:
                 topicUid: SLNetClientTest_disabling_replication_buffering
               - name: Editing the connection string between two DataMiner Agents
                 topicUid: SLNetClientTest_editing_connection_string
+              - name: Enabling or disabling debug logging for a DOM manager
+                topicUid: SLNetClientTest_debug_logging_DOM_manager
               - name: Enabling or disabling protocol buffer serialization
                 topicUid: SLNetClientTest_protocol_buffer_serialization
               - name: Fine-tuning NATS settings
