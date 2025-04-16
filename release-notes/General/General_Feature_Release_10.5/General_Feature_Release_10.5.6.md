@@ -112,6 +112,8 @@ In the *C:\\Skyline DataMiner\\NotifyMail.html* file, i.e. the email report temp
 
 As the MessageBroker prefers to set up NATS connections using local IP addresses, up to now, it would request the local IP addresses from the DNS for every item in the list of NATS endpoints. From now on, it will request the local IP addresses from the DNS only once.
 
+The IP addresses returned by the DNS will be cached for one minute only. This will prevent providing outdated information when connections have to be set up later on.
+
 #### Cassandra Cluster: Enhanced performance when importing DELT packages [ID 42613]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
