@@ -4,6 +4,27 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.9
+
+### New features
+
+#### IDE
+
+##### Redesigned version history editor [ID 42674]
+
+The version history editor has been redesigned:
+
+- The *Current Version* page has been replaced by the *All Versions* page. Adding a new minor and major version will now be more intuitive.
+
+- The *Current Range* page has been renamed to *Changes Overview*. It shows the full history of the connector, created by checking the *Based On* parameter of each connector version. Note that the newest version is on top.
+
+  - If you enter a search string in the search box, that search string will be highlighted and the rows will be filtered to only show the ones containing that string.
+  - The width of the last column will be adjusted dynamically to better accommodate its contents.
+
+Also, a number of changes have been made as to layout in order to enhance overall readability.
+
+![Version editor](~/develop/images/DIS_VersionHistoryEditor.png)
+
 ## DIS 3.1.8
 
 ### New features
