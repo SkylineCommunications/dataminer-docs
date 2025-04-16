@@ -39,6 +39,12 @@ Because of a number of enhancements, overall performance of the SLProtocol funct
 
 A number of enhancements have been made with regard to the caching of DVE element information.
 
+#### MessageBroker: Enhanced performance when checking for local IP addresses [ID 42570]
+
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+
+As the MessageBroker prefers to set up NATS connections using local IP addresses, up to now, it would request the local IP addresses from the DNS for every item in the list of NATS endpoints. From now on, it will request the local IP addresses from the DNS only once.
+
 #### Cassandra Cluster: Enhanced performance when importing DELT packages [ID 42613]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
