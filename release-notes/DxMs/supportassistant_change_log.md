@@ -4,9 +4,16 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
-#### 1 April 2025 - Enhancement - Dependencies updated [ID 42658]
+#### 1 April 2025 - Enhancement - SupportAsistant 1.7.3 - Dependencies updated [ID 42658]
 
 Several dependencies have been updated.
+
+#### 20 February 2025 - Enhancement - SupportAssistant 1.7.2 - Offloading of logs/metrics of the GQI DxM [ID 41893]
+
+The files from the following folders will now also be added to the offloads zip package:
+
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Metrics`
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs`
 
 #### 30 October 2024 - Enhancement - SupportAssistant 1.7.1 - Include SLAutomation_BAK.txt in file offloads [ID 41281]
 
