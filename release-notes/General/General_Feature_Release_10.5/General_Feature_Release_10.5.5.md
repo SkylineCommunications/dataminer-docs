@@ -310,7 +310,7 @@ In the *DataMiner Object Model* window, which allows you to see all details of a
 | Button | Description |
 |--------|-------------|
 | Enable | Adds or updates an override for the log file of the current DOM manager, setting all log levels to 6. |
-| Reset  | Removes the override for the log file of the current DOM manager is removed, regardless of the tool that added it. |
+| Reset  | Removes the override for the log file of the current DOM manager, regardless of the tool that added it. |
 
 Also, a status label will now indicate whether debug logging is enabled or disabled.
 
