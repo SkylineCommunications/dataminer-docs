@@ -185,6 +185,12 @@ Up to now, the word "SNMP manager" would not be spelled consistently in both mes
 
 From now on, both information events will start with `Alarmstorm for SNMP Manager: ...`
 
+#### Problem with trend windows after switching from daylight saving time to standard time [ID 42685]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+In some rare cases, trend windows could get stuck in SLDataGateway after switching from daylight saving time to standard time.
+
 #### SLNet protocol cache would incorrectly retain the names of deleted protocols [ID 42710]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
