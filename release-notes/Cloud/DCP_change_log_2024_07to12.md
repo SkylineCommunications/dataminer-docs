@@ -743,6 +743,10 @@ In the Catalog, the versions and ranges shown when you view an item will now hav
 
 When you view a connector item in the Catalog, the *Versions* tab will now group all the versions by range. Ranges are defined by the first three numbers of a version.
 
+#### 3 July 2024 - Enhancement - Catalog - Improved alignment of tags and dates on Versions tab [ID 40103]
+
+The layout of the *Versions* tab of Catalog items has been improved so that the tags and dates will now be aligned.
+
 #### 3 July 2024 - Enhancement - Catalog - Recommended version shown for each published range [ID 40101]
 
 When you open the Versions tab for a Catalog item, recommended versions will now be shown. These are the latest (published) versions of each active range.
