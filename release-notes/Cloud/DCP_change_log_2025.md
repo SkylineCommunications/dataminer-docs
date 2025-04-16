@@ -133,6 +133,10 @@ In the Admin app, the tabs and sections of the Usage page have been reordered to
 
 Catalog items now show category icons when no vendor logo or image is available. The category icon is also shown on the browse page with the type filters.
 
+### 30 January 2025 - Enhancement - Catalog API - API calls returning Catalog items will now include the CategoryId property [ID 42044]
+
+API calls that return one or more Catalog items will now include the *CategoryId* property.
+
 ### 30 January 2025 - Enhancement - Catalog - Auto-login for returning users [ID 42041]
 
 Users of the Catalog app who were logged in previously will now be automatically logged back in, even if their session has expired.
