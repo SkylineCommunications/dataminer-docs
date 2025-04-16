@@ -214,3 +214,11 @@ In some rare cases, trend windows could get stuck in SLDataGateway after switchi
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 
 In some rare cases, the SLNet protocol cache would incorrectly retain the names of deleted protocols.
+
+#### 'Register DataMiner as Service.bat' would incorrectly register services as 32-bit services [ID 42713]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+In some cases, the Windows batch file *Register DataMiner as Service.bat* would incorrectly assume that a machine was running a 32-bit operating system. As a result, it would incorrectly register services as 32-bit services.
+
+As 32-bit Windows systems are no longer supported, from now on, the *Register DataMiner as Service.bat* file will no longer check the architecture of the operating system.
