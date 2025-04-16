@@ -27,7 +27,7 @@ To configure this, you can either use SLNetClientTest tool, or make a direct cha
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\Skyline DataMiner\Views.xml*.
+1. Open the file `C:\Skyline DataMiner\Views.xml`.
 
 1. In the *View* tag of the view you want to enhance, add the *enhancedElement* attribute and set it to the ID of the element.
 

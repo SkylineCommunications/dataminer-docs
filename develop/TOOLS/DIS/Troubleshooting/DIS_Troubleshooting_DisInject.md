@@ -41,7 +41,7 @@ Run Microsoft Visual Studio as an administrator.
 
 1. Exit Microsoft Visual Studio.
 
-1. In Windows Explorer, go to *C:\\Program Files (x86)\\Common Files\\microsoft shared\\MSEnv*.
+1. In Windows Explorer, go to `C:\Program Files (x86)\Common Files\microsoft shared\MSEnv`.
 
 1. Right-click *VSLauncher.exe* and select *Properties*.
 
@@ -57,6 +57,6 @@ Run Microsoft Visual Studio as an administrator.
 
 1. In the *Open With* dialog box, click *Browse.*
 
-1. Go to *C:\\Program Files (x86)\\Common Files\\microsoft shared\\MSEnv*, select *VSLauncher.exe* and click *Open*.
+1. Go to `C:\Program Files (x86)\Common Files\microsoft shared\MSEnv`, select *VSLauncher.exe* and click *Open*.
 
 1. Select the checkbox *Always use the selected program to open this kind of file* and click *OK*.
