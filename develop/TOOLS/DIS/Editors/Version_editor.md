@@ -81,8 +81,7 @@ In this tab, you can also find an overview of all versions of the current protoc
 > - When you create a new version, the *Based On* field will now automatically be populated when possible.
 > - When you add a minor version, this new version will automatically inherit all data from the current version and become itself the new current version.
 
-
-## Changes Overview
+## Changes overview
 
 In this tab, you can find an overview of all versions in the current range.
 
