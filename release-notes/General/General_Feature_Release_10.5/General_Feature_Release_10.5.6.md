@@ -28,6 +28,27 @@ uid: General_Feature_Release_10.5.6
 
 ## New features
 
+#### Tracking DataMiner app package contents via SLNet [ID 42353]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+`AppPackageContent` classes have now been added to SLNet. These classes can be accessed via `AppPackageContentHelper`, and will allow you to track which items (e.g. connectors, Automation scripts, etc.) were installed using a *.dmapp* package.
+
+Using these classes, you can add, update and delete AppPackageContent records in bulk. Each record will contain the following fields:
+
+- ID (GUID)
+- DmappName (string)
+- DmappVersion (string)
+- DmappCatalogGuid (GUID)
+- ContentType (type of installed item)
+- ContentName (unique identifier per type)
+- ContentHash (hash of the content at installation, which will allow tracking changes)
+
+By default, all users will have read access to these records, but only users with *Install Application Package* permission will be able to edit them.
+
+> [!IMPORTANT]
+> This functionality will only work on systems using STaaS or systems using an OpenSearch/Elasticsearch indexing database. It will not work on systems using a Cassandra database.
+
 #### New NotifyProtocol call NT_CLEAR_PARAMETER [ID 42368] [ID 42397]
 
 <!-- RN 42397: MR 10.6.0 - FR 10.5.6 -->
