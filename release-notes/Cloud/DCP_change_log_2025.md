@@ -117,7 +117,7 @@ In some cases, calls to retrieve the recommended versions of Catalog items could
 
 ### 20 February 2025 - Enhancement - Catalog - Removal of private versions [ID 42084] [ID 42243]
 
-It is now no longer possible to have private versions of Catalog items.
+It is now no longer possible to have private versions of Catalog items. While a Catalog item itself can still be private, it is no longer possible to have specific versions of an item that are private.
 
 Consequently, versions can no longer have the *IsPublished* property, and, in the User Catalog API, the `/api/user/catalog/v2-0/catalogs/connectors/publishing-state` call is now considered obsolete and the `/api/user/catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/publishing-state` call is no longer available.
 
