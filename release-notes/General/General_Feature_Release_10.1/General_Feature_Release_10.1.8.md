@@ -198,7 +198,7 @@ The trended trace record from right before the specified time will be displayed.
 
 To configure this:
 
-1. Configure the shape in the same way as for a regular spectrum thumbnail, but as the parameter ID, specify the ID of the spectrum monitor trace parameter (which is always in the range 50000 - 59999). You can find this ID in the file *SpectrumMonitors.xml* in the folder *C:\\Skyline DataMiner*.
+1. Configure the shape in the same way as for a regular spectrum thumbnail, but as the parameter ID, specify the ID of the spectrum monitor trace parameter (which is always in the range 50000 - 59999). You can find this ID in the file *SpectrumMonitors.xml* in the folder `C:\Skyline DataMiner`.
 
 2. Add the *HistoryMode* shape data field to the shape, and configure its value as follows:
 

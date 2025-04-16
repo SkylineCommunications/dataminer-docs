@@ -124,7 +124,7 @@ There are two ways to configure this setup: with or without group claims. If gro
 
 1. Stop DataMiner.
 
-1. Go to the *C:\\Skyline DataMiner* folder and open the *DataMiner.xml* file.
+1. Go to the `C:\Skyline DataMiner` folder and open the *DataMiner.xml* file.
 
 1. In *DataMiner.xml*, configure the *\<ExternalAuthentication>* tag as detailed below:
 

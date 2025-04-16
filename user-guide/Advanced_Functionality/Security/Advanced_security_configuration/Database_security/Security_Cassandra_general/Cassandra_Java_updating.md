@@ -24,7 +24,7 @@ To update the Java version:
 
 1. Rename the *C:\Program Files\Cassandra\Java* folder to *C:\Program Files\Cassandra\Java_bak*.
 
-1. Create a new *Java* folder in *C:\Program Files\Cassandra*.
+1. Create a new *Java* folder in `C:\Program Files\Cassandra`.
 
 1. Extract the OpenJDK archive you downloaded and copy the binaries to *C:\Program Files\Cassandra\Java*.
 

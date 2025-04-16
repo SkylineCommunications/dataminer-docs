@@ -118,13 +118,13 @@ To prepare the destination server, there are **several possibilities**:
 
   1. Delete the Windows user accounts on the server that have a corresponding DataMiner account.
 
-  1. In the *C:\\Skyline DataMiner* folder, replace the content of the file *Views.xml* with the following content:
+  1. In the `C:\Skyline DataMiner` folder, replace the content of the file *Views.xml* with the following content:
 
      ```xml
      <Views xmlns="http://www.skyline.be/config/views"/>
      ```
 
-  1. In the *C:\\Skyline DataMiner* folder, clear the content of the *Security.xml* file. In addition, we recommend that you also remove the DataMiner users in Windows (by running compmgmt.msc), as DataMiner will not remove them.
+  1. In the `C:\Skyline DataMiner` folder, clear the content of the *Security.xml* file. In addition, we recommend that you also remove the DataMiner users in Windows (by running compmgmt.msc), as DataMiner will not remove them.
 
   1. Remove the file *C:\\Skyline DataMiner\\files\\SyncInfo\\{DO_NOT_REMOVE_68EE4388-7EF6-4cb4-B38F-5E0045175340}.xml*.
 

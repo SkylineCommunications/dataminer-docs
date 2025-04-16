@@ -16,7 +16,7 @@ uid: General_Feature_Release_10.0.5
 
 #### Support for icons in SVG format \[ID 24841\]
 
-In function protocols and the *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml* file, icons can now also be defined in SVG format.
+In function protocols and the `C:\Skyline DataMiner\Icons\CustomIcons.xml` file, icons can now also be defined in SVG format.
 
 Also, the default function icon has been updated.
 
@@ -858,7 +858,7 @@ If there were multiple trend points in the same second, it could occur that thes
 
 #### DataMiner Cube: Problem when clicking several times in rapid succession or when a log folder was created on a clean client computer \[ID 25099\]
 
-In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the *C:\\ProgramData\\Skyline\\DataMiner\\DataMinerCube\\CubeLogging* folder was created on a clean client computer.
+In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the `C:\ProgramData\Skyline\DataMiner\DataMinerCube\CubeLogging` folder was created on a clean client computer.
 
 #### Monitoring app: Severity color indication not displayed in Alarm Console and on alarms pages \[ID 25106\]
 

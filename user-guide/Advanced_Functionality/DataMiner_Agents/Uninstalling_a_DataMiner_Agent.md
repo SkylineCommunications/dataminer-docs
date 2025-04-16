@@ -77,7 +77,7 @@ There are two possibilities to uninstall a DataMiner Agent:
    > sc stop NATS && sc stop NAS && sc delete NATS && sc delete NAS
    > ```
 
-1. Delete the folder *C:\\Skyline DataMiner*.
+1. Delete the folder `C:\Skyline DataMiner`.
 
 1. In case a **Cassandra** database was installed on the server:
 

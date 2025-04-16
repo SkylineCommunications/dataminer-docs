@@ -38,7 +38,7 @@ DataMiner uses the same consistency level for all its queries to the Cassandra d
 
 1. Shut down the DMA.
 
-1. Open the file *DB.xml* from the directory *C:\\Skyline DataMiner* in a text editor.
+1. Open the file *DB.xml* from the directory `C:\Skyline DataMiner` in a text editor.
 
 1. In the `<Database>` tag, add the *consistencyLevel="x"* attribute, and set it to the consistency level you want, e.g. *two*.
 

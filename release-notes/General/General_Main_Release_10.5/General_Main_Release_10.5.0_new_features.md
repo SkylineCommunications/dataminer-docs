@@ -53,7 +53,7 @@ Up to now, the labeling of behavioral anomalies was purely based on the change p
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
+SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the `C:\Skyline DataMiner\Logging` folder or one of its subfolders:
 
 | Type of file to be retrieved | Request | Response |
 |---|---|---|

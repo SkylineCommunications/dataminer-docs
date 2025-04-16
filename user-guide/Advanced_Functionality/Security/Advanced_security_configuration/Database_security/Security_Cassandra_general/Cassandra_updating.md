@@ -25,7 +25,7 @@ Doing a rolling upgrade basically means:
 
 We recommend that you periodically update your Cassandra database. This will ensure that all known vulnerabilities are fixed.
 
-To check the Cassandra version, go to *C:\Program Files\Cassandra\bin* and execute the following *nodetool* command:
+To check the Cassandra version, go to `C:\Program Files\Cassandra\bin` and execute the following *nodetool* command:
 
    `.\nodetool version`
 
@@ -54,28 +54,28 @@ To update the Cassandra version:
    These will contain a `.tar` file called `apache-cassandra-3.11.8-bin.tar.gz`.
 
 1. Stop the DataMiner Agent.
-1. Go to the *C:\Program Files\Cassandra\bin* folder and run the following command to push all data from memory to disk and stop processing new requests:
+1. Go to the `C:\Program Files\Cassandra\bin` folder and run the following command to push all data from memory to disk and stop processing new requests:
 
    `.\nodetool drain`
 
 1. Stop the Cassandra service.
-1. Rename the *C:\Program Files\Cassandra* folder to *Cassandra_bak*.
-1. Create a new folder named *Cassandra* in *C:\Program Files*.
+1. Rename the `C:\Program Files\Cassandra` folder to *Cassandra_bak*.
+1. Create a new folder named *Cassandra* in `C:\Program Files`.
 1. Extract the contents of the `apache-cassandra-3.11.8-bin.tar.gz` file into a temporary folder.
 
    > [!NOTE]
    > You will need to extract the file twice, first to get a `.tar` file and then to obtain an *apache-cassandra-3.11.14* folder with additional subfolders.
 
-1. Copy the contents of the *apache-cassandra-3.11.14* folder to *C:\Program Files\Cassandra*.
+1. Copy the contents of the *apache-cassandra-3.11.14* folder to `C:\Program Files\Cassandra`.
 
-   You should now see folders such as *C:\Program Files\Cassandra\bin* and *C:\Program Files\Cassandra\lib*.
+   You should now see folders such as `C:\Program Files\Cassandra\bin` and `C:\Program Files\Cassandra\lib`.
 
 1. Delete the temporary folder.
-1. Copy the **old** *Java* folder from *C:\Program Files\Cassandra_bak\Java* to *C:\Program Files\Cassandra*.
-1. Copy the **old** *cassandra.yaml* file from *C:\Program Files\Cassandra_bak\conf\cassandra.yaml* to *C:\Program Files\Cassandra\conf*.
-1. Copy the **old** *daemon* folder from *C:\Program Files\Cassandra_bak\bin\daemon* to *C:\Program Files\Cassandra\bin*.
-1. Copy the **old** *DevCenter* folder from *C:\Program Files\Cassandra_bak\DevCenter* to *C:\Program Files\Cassandra*.
-1. Create a new folder named *logs* in *C:\Program Files\Cassandra*.
+1. Copy the **old** *Java* folder from `C:\Program Files\Cassandra_bak\Java` to `C:\Program Files\Cassandra`.
+1. Copy the **old** *cassandra.yaml* file from `C:\Program Files\Cassandra_bak\conf\cassandra.yaml` to `C:\Program Files\Cassandra\conf`.
+1. Copy the **old** *daemon* folder from `C:\Program Files\Cassandra_bak\bin\daemon` to `C:\Program Files\Cassandra\bin`.
+1. Copy the **old** *DevCenter* folder from `C:\Program Files\Cassandra_bak\DevCenter` to `C:\Program Files\Cassandra`.
+1. Create a new folder named *logs* in `C:\Program Files\Cassandra`.
 1. To enable the use of *nodetool*, set the system-wide environment variables *JAVA_HOME* and *CASSANDRA_HOME* to the correct locations by executing the following PowerShell commands:
 
    `[System.Environment]::SetEnvironmentVariable('CASSANDRA_HOME','C:\progra~1\Cassandra\',[System.EnvironmentVariableTarget]::Machine)`
@@ -100,7 +100,7 @@ To update the Cassandra version:
 
 1. Verify that the *Cassandra* service has been created and that it can be started from the Task Manager (or the Services Manager).
 
-1. After a Cassandra upgrade, it is (sometimes) necessary to execute *nodetool upgradesstables* on your nodes to convert sstables to the new Cassandra version. Go to the *C:\Program Files\Cassandra\bin* folder and run the following command:
+1. After a Cassandra upgrade, it is (sometimes) necessary to execute *nodetool upgradesstables* on your nodes to convert sstables to the new Cassandra version. Go to the `C:\Program Files\Cassandra\bin` folder and run the following command:
 
    `.\nodetool upgradesstables`
 
@@ -110,7 +110,7 @@ To update the Cassandra version:
 1. Start the DataMiner Agent and make sure that no error alarms are visible in the Alarm Console.
 
 > [!TIP]
-> After starting the Cassandra service, verify that the expected Cassandra version is logged in *C:\Program Files\Cassandra\Logs\system.log*. For example: *Cassandra version: 3.11.12*
+> After starting the Cassandra service, verify that the expected Cassandra version is logged in `C:\Program Files\Cassandra\Logs\system.log`. For example: *Cassandra version: 3.11.12*
 > If the service does not start and no logs are created, make sure that the *Jvm* registry key refers to the correct location.
 > Execute `nodetool status` to check whether the system is running stable.
 
