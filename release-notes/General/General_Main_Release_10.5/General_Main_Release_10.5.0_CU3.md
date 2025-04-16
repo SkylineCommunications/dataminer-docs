@@ -41,7 +41,7 @@ A number of enhancements have been made with regard to the caching of DVE elemen
 
 #### MessageBroker: Enhanced performance when checking for local IP addresses [ID 42570]
 
-<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 
 As the MessageBroker prefers to set up NATS connections using local IP addresses, up to now, it would request the local IP addresses from the DNS for every item in the list of NATS endpoints. From now on, it will request the local IP addresses from the DNS only once.
 
@@ -89,7 +89,7 @@ When a protocol version was overwritten while an element using that protocol ver
 
 #### DataMiner not able to start up after installation [ID 42431]
 
-<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 
 After installation, in some cases, DataMiner would not be able to start up because the *MessageBrokerConfig.json* file could not be found in the `C:\ProgramData\Skyline Communications\DataMiner\` folder.
 
@@ -120,6 +120,14 @@ From now on, both information events will start with `Alarmstorm for SNMP Manage
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 
 In some rare cases, trend windows could get stuck in SLDataGateway after switching from daylight saving time to standard time.
+
+#### VerifyClusterPorts: Log entries would incorrectly always ask you to check the DMS.xml file [ID 42701]
+
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
+
+When the *VerifyClusterPorts* prerequisite failed, up to now, its log entries would incorrectly always ask you to check the *DMS.xml* file.
+
+From now on, when necessary, the *VerifyClusterPorts* log entries will ask you to check *ClusterEndpoints.json* instead.
 
 #### SLNet protocol cache would incorrectly retain the names of deleted protocols [ID 42710]
 

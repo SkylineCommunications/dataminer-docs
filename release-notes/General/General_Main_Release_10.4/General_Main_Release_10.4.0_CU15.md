@@ -21,6 +21,14 @@ uid: General_Main_Release_10.4.0_CU15
 
 Because of a number of enhancements, overall performance of the SLProtocol function `ClearAllKeys()` has increased.
 
+#### MessageBroker: Enhanced performance when checking for local IP addresses [ID 42570]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+As the MessageBroker prefers to set up NATS connections using local IP addresses, up to now, it would request the local IP addresses from the DNS for every item in the list of NATS endpoints. From now on, it will request the local IP addresses from the DNS only once.
+
+The IP addresses returned by the DNS will be cached for one minute only. This will prevent providing outdated information when connections have to be set up later on.
+
 #### Cassandra Cluster: Enhanced performance when importing DELT packages [ID 42613]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
@@ -60,6 +68,12 @@ Because of a number of enhancements, overall performance has increased when logg
 When a protocol version was overwritten while an element using that protocol version was starting up, in some cases, the SLProtocol process could stop working. Also, this could result in alarms like the following being generated:
 
 `Unexpected Exception [Exception from HRESULT: 0x8004024C]: The element is unknown.`
+
+#### DataMiner not able to start up after installation [ID 42431]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+After installation, in some cases, DataMiner would not be able to start up because the *MessageBrokerConfig.json* file could not be found in the `C:\ProgramData\Skyline Communications\DataMiner\` folder.
 
 #### Redundancy groups: Matrix parameter updates in a derived element would incorrectly not get applied in the source element (and vice versa) [ID 42598]
 
