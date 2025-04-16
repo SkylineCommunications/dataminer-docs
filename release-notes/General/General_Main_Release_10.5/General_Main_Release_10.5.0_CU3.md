@@ -53,6 +53,24 @@ The IP addresses returned by the DNS will be cached for one minute only. This wi
 
 Because of a number of enhancements, overall performance has increased when importing DELT packages on systems with a database of type *Cassandra Cluster*, especially when those packages contain a large amount of trend data.
 
+#### Additional SLNet log files [ID 42625]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+From now on, SLNet logging will not only be kept in the *SLNet.txt* log file. Certain entries will now also be kept in one of the following new log files, which will all be located in the `C:\Skyline DataMiner\Logging\SLNet\` folder.
+
+| Log file | Contents |
+|----------|----------|
+| FacadeHandleMessage.txt | All SLNet log entries created by the `Facade.HandleMessage` method. |
+| ReducedLog.txt          | All SLNet log entries that have not been added to any of the other new log files. |
+| RepositoriesMessage.txt | All SLNet log entries created by the `SLNet.Repositories` method. |
+| StartupLog.txt          | The first 1000 SLNet log entries added to the *SLNet.txt* log file after SLNet was started. |
+
+> [!NOTE]
+>
+> - The existing *SLNet.txt* log file will remain unchanged.
+> - Contrary to the *SLNet.txt* log file, which can have up to 3 rollover files (*[logfile]0.txt*), the above-mentioned new log files can only have one single rollover file each.
+
 #### Enhanced performance when logging in using external authentication via SAML [ID 42668]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.5 [CU0] -->
@@ -73,7 +91,7 @@ When a protocol version was overwritten while an element using that protocol ver
 
 <!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
 
-After installation, in some cases, DataMiner would not be able to start up because the *MessageBrokerConfig.json* file could not be found in the *C:\\ProgramData\\Skyline Communications\\DataMiner\\* folder.
+After installation, in some cases, DataMiner would not be able to start up because the *MessageBrokerConfig.json* file could not be found in the `C:\ProgramData\Skyline Communications\DataMiner\` folder.
 
 #### Redundancy groups: Matrix parameter updates in a derived element would incorrectly not get applied in the source element (and vice versa) [ID 42598]
 
