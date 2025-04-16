@@ -8,6 +8,10 @@ uid: supportassistant_change_log
 
 Several dependencies have been updated.
 
+#### 20 February 2025 - Fix - SupportAssistant 1.7.2 - Reports not uploaded when reports and notifications folder was missing [ID 42197]
+
+Up to now, if the reports and notifications folder did not exist when Support Assistant started, new reports were never uploaded until the service was restarted. The folder will now be created to ensure that reports can be uploaded immediately.
+
 #### 20 February 2025 - Enhancement - SupportAssistant 1.7.2 - Offloading of logs/metrics of the GQI DxM [ID 41893]
 
 The files from the following folders will now also be added to the offloads zip package:
