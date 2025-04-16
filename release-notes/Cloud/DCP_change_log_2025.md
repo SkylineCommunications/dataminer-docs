@@ -73,6 +73,18 @@ When a setting on the DMS settings page was changed in the Admin app, the releva
 
 You can now check whether a version can be deployed without logging in, using the "can-deploy" endpoint on the public controller.
 
+### 6 March 2025 - Enhancement - Catalog - Improved message in case no description is available for a Catalog item [ID 42342]
+
+In case no description has been added for a Catalog item, the displayed message to inform the user of this has been improved.
+
+### 25 February 2025 - Fix - Catalog - Search results of Catalog showed non-user-friendly name instead of display name [ID 42347]
+
+Up to now, it could occur that the results of a Catalog search showed the non-user-friendly name of an item instead of the display name.
+
+### 25 February 2025 - Fix - Catalog - Duplicate owners [ID 42346]
+
+In some cases, when a Catalog object was retrieved, duplicate owners could be returned. In addition, when a Catalog item was registered, it was possible to specify an owner in the manifest that was not unique, even though owners should always be unique. These issues have been resolved.
+
 ### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
 A new call is available that allows users to get all the Catalog item types without the need to authenticate. For the full API reference, go to [Public Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Public+Catalog+API+v2.0).
@@ -85,11 +97,29 @@ When a user quickly switched to the *Versions* page, it could occur that the *De
 
 When the image for a vendor logo could not be shown, it could occur that instead the "Vendor logo" alt text was shown. Now it will instead correctly fall back to the default icon, and the loading state of the image has also been improved.
 
+### 20 February 2025 - Fix - Catalog - Problem viewing unsupported versions in case no supported versions were available for a Catalog item [ID 42254]
+
+On the *Versions* tab of a Catalog item, it could occur that it was not possible to view unsupported versions in case no supported versions were available.
+
 ### 20 February 2025 - Enhancement - DataMiner.services - Home app now accessible without login + improved authentication flow [ID 42246]
 
 Users now no longer need to log in to view the home app. A default view will be loaded in that case. The deploy page will still require authentication.
 
 In addition, when something goes wrong during the authentication flow, users will now see a message instead of being redirected to the login.
+
+### 20 February 2025 - Fix - Catalog - Problem with sorting on type on the Browse page [ID 42242]
+
+Because of a possible problem with the sorting on type of the Browse page, this option has now temporarily been removed.
+
+### 20 February 2025 - Fix - Catalog - IndexOutOfBoundsException when retrieving recommended versions [ID 42237]
+
+In some cases, calls to retrieve the recommended versions of Catalog items could result in an IndexOutOfBoundsException.
+
+### 20 February 2025 - Enhancement - Catalog - Removal of private versions [ID 42084] [ID 42243]
+
+It is now no longer possible to have private versions of Catalog items.
+
+Consequently, versions can no longer have the *IsPublished* property, and, in the User Catalog API, the `/api/user/catalog/v2-0/catalogs/connectors/publishing-state` call is now considered obsolete and the `/api/user/catalog/v2-0/catalogs/{catalogId}/versions/{versionId}/publishing-state` call is no longer available.
 
 ### 18 February 2025 - Fix - Incorrect DMS status for systems with large DataMiner version history [ID 42301]
 
@@ -132,6 +162,10 @@ In the Admin app, the tabs and sections of the Usage page have been reordered to
 ### 30 January 2025 - Enhancement - Catalog - Category icons [ID 42051]
 
 Catalog items now show category icons when no vendor logo or image is available. The category icon is also shown on the browse page with the type filters.
+
+### 30 January 2025 - Enhancement - Catalog API - API calls returning Catalog items will now include the CategoryId property [ID 42044]
+
+API calls that return one or more Catalog items will now include the *CategoryId* property.
 
 ### 30 January 2025 - Enhancement - Catalog - Auto-login for returning users [ID 42041]
 

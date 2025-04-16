@@ -37,6 +37,10 @@ The link to the terms of service and conditions for DaaS deployments has been up
 
 The upload speed for remote access requests has been improved. This will mainly affect file uploads, for example in Cube when uploading a protocol or upgrade package.
 
+#### 9 December 2024 - Enhancement - Catalog API -  IsTrustedSource property now included in search API calls [ID 41541]
+
+The *IsTrustedSource* property is now included in search API calls, allowing a green shield icon to be shown for Catalog items with a trusted publisher.
+
 #### 1 December 2024 - New feature - Admin app - Connector usage [ID 41580]
 
 From now on, the usage page in the [Admin app](https://admin.dataminer.services) will also provide usage data about the used connectors when available. This usage is shown as an average over the selected month.
@@ -132,6 +136,10 @@ If any API calls currently use the value of a type, these will need to be update
 
 On the Catalog details page, items can now be made public or private by an Owner or Admin from the publishing organization.
 
+#### 25 November 2024 - Enhancement - Catalog - Ability for users within an organization to change the publishing state of the organization's Catalog items [ID 41413]
+
+When users are a member of a specific organization, they will now be able to change the publishing state of Catalog items that are owned by that organization to public or private.
+
 #### 25 November 2024 - New feature - Catalog API - Get Catalog item categories [ID 41411]
 
 The user, service, and public Catalog APIs have been extended with a categories call to obtain all categories supported in Catalog:
@@ -140,6 +148,10 @@ The user, service, and public Catalog APIs have been extended with a categories 
 - "/api/public-catalog/v2-0/catalogs/categories"
 - "/api/service-catalog/v1-0/catalogs/categories"
 
+#### 25 November 2024 - Enhancement - Catalog API - Improved security for calls to change Catalog item publishing state [ID 41406]
+
+Additional user role checks have been added to the calls to change the publishing state of a Catalog item, so that now only people with the Owner or Admin role will be able to do so.
+
 #### 25 November 2024 - Enhancement - Catalog - Items from external publishers now labeled [ID 41402]
 
 On the Catalog details page, if the publisher is not from your currently selected organization or Skyline Communications, the tag "External" will be shown next to the publisher in the side panel.
@@ -147,6 +159,10 @@ On the Catalog details page, if the publisher is not from your currently selecte
 #### 25 November 2024 - Enhancement - Catalog - Documentation link shown for Catalog items [ID 41397]
 
 On the Catalog details page, the side panel will now include a *Documentation* button to go to the external documentation.
+
+#### 25 November 2024 - Enhancement - Catalog - Retrieving a Catalog item by ID now also returns a documentation link [ID 41394]
+
+When a Catalog item is retrieved by ID, it will now also return a documentation link if one is defined.
 
 #### 21 November 2024 - Fix - Catalog - Backwards-compatible URLs [ID 38783]
 
@@ -424,6 +440,10 @@ When you install the DataAggregator DxM version 3.0.6, a warning will now be sho
 
 Up to now, when a user switched organizations prior to registering an item, the organization field would not be filled in. This has now been fixed, so that the organization field is now always filled in based on the selected organization.
 
+#### 25 August 2024 - Enhancement - Catalog - Updated overlay headings [ID 41184]
+
+Headings for the Organization and Notification overlays have been updated to match the updated Catalog heading style.
+
 #### 16 August 2024 - Fix - Admin - Not possible to remove users from organization [ID 40506]
 
 It could occur that it was not possible to remove users from their organization in the Admin app even though you had the necessary rights to do so.
@@ -451,23 +471,27 @@ In the Admin app, it is now possible to restrict remote access to the web apps a
 > [!TIP]
 > See also: [Controlling the remote access settings of a DMS in your organization](xref:Controlling_remote_access#controlling-the-remote-access-settings-of-a-dms-in-your-organization)
 
-#### 08 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID 40423]
+#### 9 August 2024 - New feature - Catalog - Sorting option and grid/list view buttons on Browse page [ID 40331]
+
+When browsing through the items in the Catalog, users can now sort the items using a dropdown box at the top. Buttons are also available in the top-right corner that allow users to switch between a grid view and a list view.
+
+#### 8 August 2024 - Enhancement - Vendor and market name of connector now considered dedicated properties [ID 40423]
 
 Up to now, the vendor and market name of a connector were among the tags of a Catalog item and therefore visible in the search results. This has been changed so that vendor and market name are properties that can be seen on the details page of a Catalog item.
 
-#### 08 August 2024 - New feature - Catalog - Case-insensitive searching on tags [ID 40368]
+#### 8 August 2024 - New feature - Catalog - Case-insensitive searching on tags [ID 40368]
 
 Search results on tags are now case insensitive.
 
-#### 08 August 2024 - New feature - Catalog - Search supports sorting by name and type of a Catalog item [ID 40368]
+#### 8 August 2024 - New feature - Catalog - Search supports sorting by name and type of a Catalog item [ID 40368]
 
 On the browse page, you can now sort by the name and type of the items in ascending or descending order. By default, items will be sorted by name in ascending order.
 
-#### 08 August 2024 - New feature - Limit of 5 tags implemented for Catalog items [ID 40349]
+#### 8 August 2024 - New feature - Limit of 5 tags implemented for Catalog items [ID 40349]
 
 When you try to register a Catalog item with more than 5 tags, this will now fail, as this is not supported.
 
-#### 08 August 2024 - Enhancement - Catalog - Recommended versions shown for all Catalog item types [ID 40346]
+#### 8 August 2024 - Enhancement - Catalog - Recommended versions shown for all Catalog item types [ID 40346]
 
 Recommended versions are now shown for all Catalog item types. Previously, only connector Catalog items had a recommended version available.
 
@@ -593,9 +617,28 @@ When a search request was initiated from the home page of the DataMiner Catalog,
 
 Caching has been introduced for vendor logos, which will make Catalog search results load faster.
 
+#### 18 July 2024 - Fix - Catalog - Versions of Catalog item not correctly shown [ID 40258]
+
+In some cases, it could occur that the versions of a Catalog item could not be correctly shown.
+
+#### 18 July 2024 - Enhancement - Catalog - Improved search [ID 40185]
+
+When you search for Catalog items, partial matches on tags of a Catalog item will now be included in the search results.
+
+For this purpose, the following routes have been updated:
+
+- **api/user-catalog/v1-0/catalog/search**
+- **api/user-catalog/v2-0/catalogs/search**
+
+These will no longer have the market and vendor filters as query parameters, and the returned objects will now also include the tags.
+
 #### 15 July 2024 - Enhancement - Remote Cube support for SAML [ID 40176]
 
 From now on, SAML can be used to access Cube remotely.
+
+#### 12 July 2024 - Enhancement - Organization selection saved [ID 40199]
+
+In the dataminer.services UI, the organization selection will now be saved for at most one year using a cookie. Previously, this selection was only saved for the duration of the session.
 
 #### 12 July 2024 - New feature - Admin - Usage page to view STaaS consumption [ID 40172]
 
@@ -622,6 +665,31 @@ The recommended version shown for a Catalog item could be incorrect. Because of 
 #### 9 July 2024 - Fix - Catalog - Main ranges incorrectly filtered out in version history [ID 40147]
 
 If all ranges of a Catalog item were either labeled as main or as deprecated, in the version history on the details page of the Catalog item, the main range could incorrectly be filtered out when the unsupported versions were set not to be shown (with the *Unsupported versions* toggle button). Now the main range will be shown correctly in the version history.
+
+#### 9 July 2024 - Enhancement - Catalog - Extended support for Catalog item types [ID 40143]
+
+The support for different Catalog item types has been extended. The following types are now supported:
+
+- *AdHocDataSource*
+- *UserDefinedApi*
+- *TestingSolution*
+- *StandardSolution*
+- *Solution*
+- *ScriptedConnector*
+- *SlaModel*
+- *SampleSolution*
+- *ProfileLoadScript*
+- *LowCodeApp*
+- *LifeCycleServiceOrchestration*
+- *FunctionDefinition*
+- *EnhancedServiceModel*
+- *DataTransformer*
+- *DataQuery*
+- *Dashboard*
+- *ChatOpsExtension*
+- *BestPracticesAnalyzer*
+
+To support this change, the search method in the User Catalog API V2 has been updated to a V2 version.
 
 #### 9 July 2024 - Enhancement - Home - Adding time zone when deploying a DaaS system [ID 40121] [ID 40062]
 
@@ -742,6 +810,10 @@ In the Catalog, the versions and ranges shown when you view an item will now hav
 #### 3 July 2024 - New feature - Catalog - Versions rework [ID 39846]
 
 When you view a connector item in the Catalog, the *Versions* tab will now group all the versions by range. Ranges are defined by the first three numbers of a version.
+
+#### 3 July 2024 - Enhancement - Catalog - Improved alignment of tags and dates on Versions tab [ID 40103]
+
+The layout of the *Versions* tab of Catalog items has been improved so that the tags and dates will now be better aligned.
 
 #### 3 July 2024 - Enhancement - Catalog - Recommended version shown for each published range [ID 40101]
 
