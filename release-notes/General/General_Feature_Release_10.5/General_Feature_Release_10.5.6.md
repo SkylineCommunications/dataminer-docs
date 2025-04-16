@@ -224,6 +224,12 @@ Up to now, the word "SNMP manager" would not be spelled consistently in both mes
 
 From now on, both information events will start with `Alarmstorm for SNMP Manager: ...`
 
+#### ModelHost DxM would stop working when it failed to retrieve a proxy endpoint [ID 42651]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
+
 #### Problem with trend windows after switching from daylight saving time to standard time [ID 42685]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->

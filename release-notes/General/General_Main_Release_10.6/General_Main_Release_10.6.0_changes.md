@@ -323,3 +323,9 @@ When a Notify method was called from a thread created within an Automation scrip
 <!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
 
 In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.
+
+#### ModelHost DxM would stop working when it failed to retrieve a proxy endpoint [ID 42651]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
