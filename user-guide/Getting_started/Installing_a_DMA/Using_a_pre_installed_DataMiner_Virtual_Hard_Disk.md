@@ -127,16 +127,18 @@ Follow the below steps to configure your DataMiner Agent:
 > [!IMPORTANT]
 > For security reasons, we strongly recommend creating a second user and disabling the built-in administrator account once the setup is complete. See [Managing users](xref:Managing_users).
 
-### WSL management
+## WSL management
 
-If you chose for the Self-hosted - Local storage you are running a WSL container for your storage. This can be managed if you like.
+If you chose for the Self-hosted - Local storage, you are running a WSL container for your storage.
+For users that optionally want to manage the configuration of either Cassandra or OpenSearch can connect to the container.
+
 To connect to the WSL you will need to open a command prompt with the Administrator user (or the user that is going through the wizard) and run the `wsl` command.
 It should log in automatically and connect to the WSL container.
 
    > [!NOTE]
    > WSL always runs under a user, it is not possible to reach a WSL container from another user account.
 
-#### Cassandra
+### Cassandra
 
 Cassandra is installed with the following user:
 * cassandra
@@ -145,7 +147,7 @@ Cassandra is installed with the following user:
 When Cassandra is running you can change the password with `cqlsh -u cassandra -p DataMiner123!` and enter the following query: `alter role cassandra with password = 'MyNewPassword123!';`
 Exit *cqlsh* with `exit`.
 
-#### Opensearch
+### Opensearch
 
 Opensearch admin user:
 * admin
@@ -153,12 +155,12 @@ Opensearch admin user:
 
 You can change the admin password by following these steps:
 
-* `cd /usr/share/opensearch/plugins/opensearch-security/tools`
-* `OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./hash.sh`
-* Type in a (strong) password.
-* Copy your `<HashedPassword>`
-* `sudo vi /etc/opensearch/opensearch-security/internal_users.yml`
-* Update the hash at the admin with your hash.
+1. First go to the correct directory with this command: `cd /usr/share/opensearch/plugins/opensearch-security/tools`
+2. Run the following command: `OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./hash.sh`
+   * Type in a (strong) password and confirm with ENTER.
+   * A hashed password is generated, you can copy your `<HashedPassword>`
+   * Now we will update the user account file: `sudo vi /etc/opensearch/opensearch-security/internal_users.yml`
+   * Update the hash at the admin user account with your hashed password.
 
 ## Restoring a backup onto the virtual hard disk
 
