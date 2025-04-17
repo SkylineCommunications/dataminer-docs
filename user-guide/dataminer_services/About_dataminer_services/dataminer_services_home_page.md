@@ -15,15 +15,15 @@ To access the dataminer.services home page:
 
 At the top of the dataminer.services home page, you will find links to the different available dataminer.services apps:
 
-- [Collaboration](xref:About_Collaboration)
+- [Collaboration](xref:About_the_Collaboration_app)
 
-- [Catalog](xref:About_Catalog)
+- [Catalog](xref:About_the_Catalog_app)
 
-- [Sharing](xref:Sharing)
+- [Sharing](xref:About_the_Sharing_app)
 
 - [Community](xref:Community)
 
-- [Admin](xref:Admin)
+- [Admin](xref:About_the_Admin_app)
 
 > [!TIP]
 > Both on the dataminer.services home page and in many of the dataminer.services apps, you can provide direct feedback to Skyline via the *Feedback* option in the user menu.<!-- RN 41926 -->
@@ -41,7 +41,7 @@ You can install DataMiner Cube from the dataminer.services home page. To do so, 
 
 Below the apps overview, the home page lists the DataMiner Systems within your organization that have been [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-For each of the DataMiner Systems, the URLs are displayed that can be used for [remote access](xref:Cloud_Remote_Access).
+For each of the DataMiner Systems, the URLs are displayed that can be used for [remote access](xref:About_Remote_Access).
 
 Here you can also [link your dataminer.services and DataMiner account](xref:Linking_your_DataMiner_and_dataminer_services_account).
 

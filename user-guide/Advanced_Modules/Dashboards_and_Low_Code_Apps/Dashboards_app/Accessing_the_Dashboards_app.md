@@ -26,7 +26,7 @@ From DataMiner 10.2.9/10.3.0 onwards, you can also access the Dashboards app fro
 
 If you have been granted remote access to a DataMiner System via dataminer.services, you can connect as follows:
 
-1. Go to the public URL of the remote DataMiner System. See [Remote access](xref:Cloud_Remote_Access).
+1. Go to the public URL of the remote DataMiner System. See [Remote access](xref:About_Remote_Access).
 
 1. Log on to dataminer.services. See [Logging on](xref:Logging_on_to_dataminer_services#logging-on).
 

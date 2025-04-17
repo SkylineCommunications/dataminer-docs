@@ -28,9 +28,9 @@ items:
 - name: Collaboration
   items:
   - name: About the Collaboration app
-    topicUid: About_Collaboration
-  - name: Accessing Collaboration
-    topicUid: Accessing_Collaboration
+    topicUid: About_the_Collaboration_app
+  - name: Accessing the Collaboration app
+    topicUid: Accessing_the_Collaboration_app
   - name: Overview of the user interface
     topicUid: Overview_of_the_user_interface
   - name: My projects
@@ -60,7 +60,7 @@ items:
 - name: Catalog
   items:
   - name: About the Catalog app
-    topicUid: About_Catalog
+    topicUid: About_the_Catalog_app
   - name: Looking up an item in the Catalog
     topicUid: Looking_up_an_item_in_the_catalog
   - name: Registering a Catalog item
@@ -85,14 +85,15 @@ items:
 - name: Sharing
   items:
   - name: About the Sharing app
-    topicUid: Sharing
+    topicUid: About_the_Sharing_app
   - name: Accessing the Sharing app
     topicUid: Accessing_the_Sharing_app
   - name: Managing your shares
     topicUid: Managing_your_shares
 - name: Remote access
-  topicUid: Cloud_Remote_Access
   items:
+  - name: About remote access
+    topicUid: About_Remote_Access
   - name: Finding the remote access URL
     topicUid: Cloud_Remote_Access_URL
   - name: Accessing DataMiner web apps remotely
@@ -104,7 +105,7 @@ items:
 - name: Admin
   items:
   - name: About the Admin app
-    topicUid: Admin
+    topicUid: About_the_Admin_app
   - name: Accessing the Admin app
     topicUid: Accessing_the_Admin_app
   - name: Getting your organization verified
@@ -136,9 +137,10 @@ items:
     topicUid: Viewing_info_on_shares
   - name: Viewing information on system usage
     topicUid: Viewing_info_on_system_usage
-- name: DataMiner ChatOps
-  topicUid: ChatOps
+- name: ChatOps
   items:
+  - name: About ChatOps
+    topicUid: About_ChatOps
   - name: DataMiner Teams bot
     topicUid: DataMiner_Teams_bot
   - name: Chat integration

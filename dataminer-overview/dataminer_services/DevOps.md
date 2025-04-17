@@ -37,7 +37,7 @@ The Collaboration app is always available to assist with time and budget trackin
 > [!TIP]
 > See also:
 >
-> - For more detailed information about the Collaboration app, refer to [About the Collaboration app](xref:About_Collaboration).
+> - For more detailed information about the Collaboration app, refer to [About the Collaboration app](xref:About_the_Collaboration_app).
 > - Direct link to the app: [Collaboration](https://collaboration.dataminer.services/)
 > - [Course about the Collaboration app](https://community.dataminer.services/courses/dataminer-cloud-platform/lessons/project-collaboration/)
 > - Blog: [Prioritizing and risk management with Collaboration](https://community.dataminer.services/prioritizing-and-risk-management-with-project-collaboration)

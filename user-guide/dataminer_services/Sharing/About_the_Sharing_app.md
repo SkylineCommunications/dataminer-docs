@@ -1,5 +1,5 @@
 ---
-uid: Sharing
+uid: About_the_Sharing_app
 keywords: cloud shares, cloud sharing
 ---
 

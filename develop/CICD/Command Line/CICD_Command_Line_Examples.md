@@ -17,7 +17,7 @@ This is a basic example for uploading non-connector items to the Catalog. Eventu
 
 For this example, you need a Visual Studio solution containing projects that are using [Skyline.DataMiner.SDK](xref:skyline_dataminer_sdk).
 
-You will also need *DATAMINER_TOKEN* as a secret. This will be the key for the **DataMiner organization** as provided through the [Admin app](xref:Admin).
+You will also need *DATAMINER_TOKEN* as a secret. This will be the key for the **DataMiner organization** as provided through the [Admin app](xref:About_the_Admin_app).
 
 ### Windows PowerShell
 

@@ -15,7 +15,7 @@ We recommend combining these with quality control beforehand, such as executing 
 
 This is a basic pipeline for uploading non-connector items to the Catalog. Eventually, you will also be able to deploy such items to DMAs connected to dataminer.services using this pipeline, but this is not yet supported at the moment.
 
-To upload an item to the Catalog, you will need *DATAMINER_TOKEN* as a secret. This will be the key for the **DataMiner organization** as provided through the [Admin app](xref:Admin).
+To upload an item to the Catalog, you will need *DATAMINER_TOKEN* as a secret. This will be the key for the **DataMiner organization** as provided through the [Admin app](xref:About_the_Admin_app).
 
 On a **Ubuntu** runner:
 

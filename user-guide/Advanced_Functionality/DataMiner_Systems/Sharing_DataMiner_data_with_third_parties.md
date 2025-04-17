@@ -8,7 +8,7 @@ There are many ways in which you can make your DataMiner System share informatio
 
 ## Sharing app
 
-The Sharing app allows you to share live data via dataminer.services. For more information, see [About the Sharing app](xref:Sharing).
+The Sharing app allows you to share live data via dataminer.services. For more information, see [About the Sharing app](xref:About_the_Sharing_app).
 
 ## DataMiner Cube
 

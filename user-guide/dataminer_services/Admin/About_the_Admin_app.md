@@ -1,5 +1,5 @@
 ---
-uid: Admin
+uid: About_the_Admin_app
 keywords: cloud admin, cloud administration
 ---
 

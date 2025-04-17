@@ -1,5 +1,5 @@
 ---
-uid: About_Collaboration
+uid: About_the_Collaboration_app
 ---
 
 # About the Collaboration app

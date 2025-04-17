@@ -57,5 +57,5 @@ These users are automatically added when content is shared via dataminer.service
 > [!TIP]
 > See also:
 >
-> - [Sharing](xref:Sharing)
+> - [Sharing](xref:About_the_Sharing_app)
 > - [Cloud connectivity and security](xref:Cloud_connectivity_and_security)

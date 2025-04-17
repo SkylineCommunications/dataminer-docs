@@ -9,7 +9,7 @@ Remote access can be controlled both on organization level and on DMS level. If 
 
 ## Controlling the remote access settings of your organization
 
-If you have the Owner or Admin role on dataminer.services for an organization, you can enable or disable the [remote access](xref:Cloud_Remote_Access) features.
+If you have the Owner or Admin role on dataminer.services for an organization, you can enable or disable the [remote access](xref:About_Remote_Access) features.
 
 1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 
@@ -28,7 +28,7 @@ If you have the Owner or Admin role on dataminer.services for an organization, y
 
 ## Controlling the remote access settings of a DMS in your organization
 
-If you have the Owner or Admin role on dataminer.services for a DMS, you can enable or disable the [remote access](xref:Cloud_Remote_Access) features.
+If you have the Owner or Admin role on dataminer.services for a DMS, you can enable or disable the [remote access](xref:About_Remote_Access) features.
 
 1. In the [Admin app](xref:Accessing_the_Admin_app), check whether the correct organization is mentioned in the header bar.
 

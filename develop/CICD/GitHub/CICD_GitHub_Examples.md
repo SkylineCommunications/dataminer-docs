@@ -16,7 +16,7 @@ If you are interested in reusing Skyline's pre-made pipelines, which include qua
 
 ## Basic upload for non-connector items
 
-To upload an item to the Catalog, you will need *DATAMINER_TOKEN* as a secret. This will be the **key for the DataMiner organization** as provided through the [Admin app](xref:Admin). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+To upload an item to the Catalog, you will need *DATAMINER_TOKEN* as a secret. This will be the **key for the DataMiner organization** as provided through the [Admin app](xref:About_the_Admin_app). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 For now, for non-connector items, **only uploading to the Catalog** is supported. Deploying directly to a DMA from CI/CD is not supported yet.
 
@@ -84,7 +84,7 @@ jobs:
 
 ## Basic deployment for connectors
 
-To deploy a connector to a DMA, you will need *DATAMINER_DEPLOY_KEY* as a secret. This will be the **key for the DataMiner System** as provided through the [Admin app](xref:Admin). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+To deploy a connector to a DMA, you will need *DATAMINER_DEPLOY_KEY* as a secret. This will be the **key for the DataMiner System** as provided through the [Admin app](xref:About_the_Admin_app). For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 On a **Ubuntu** runner:
 

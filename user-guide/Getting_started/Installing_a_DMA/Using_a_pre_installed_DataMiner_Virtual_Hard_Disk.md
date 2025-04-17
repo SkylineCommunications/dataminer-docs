@@ -46,7 +46,7 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 1. Connect to a virtual switch that has internet access (either the default switch or a custom one).
 
    > [!NOTE]
-   > If you choose the default virtual switch, you will only be able to use [remote access](xref:Cloud_Remote_Access) through dataminer.services to access the system outside of the virtual machine environment.
+   > If you choose the default virtual switch, you will only be able to use [remote access](xref:About_Remote_Access) through dataminer.services to access the system outside of the virtual machine environment.
 
 1. Connect the virtual hard disk that you have just downloaded.
 

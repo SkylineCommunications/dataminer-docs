@@ -6,7 +6,7 @@ uid: Overview_DataMiner_Solutions
 
 DataMiner solutions represent **pre-configured implementations that operate on top of the DataMiner stack**. Leveraging the extensive suite of DataMiner functionalities, these solutions are designed to seamlessly integrate into your system, offering the flexibility to be **utilized as-is or fine-tuned** to suit specific requirements.
 
-Accessible through the [Catalog](xref:About_Catalog), these solutions encompass a diverse array of configured DataMiner functions, including connectors, alarm and trend templates, visual summaries, Automation scripts, dashboards, low-code apps, and user-defined APIs, among others. The composition of components varies across different solutions.
+Accessible through the [Catalog](xref:About_the_Catalog_app), these solutions encompass a diverse array of configured DataMiner functions, including connectors, alarm and trend templates, visual summaries, Automation scripts, dashboards, low-code apps, and user-defined APIs, among others. The composition of components varies across different solutions.
 
 ## Solution apps
 

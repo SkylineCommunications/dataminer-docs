@@ -73,7 +73,7 @@ uid: glossary_a_to_l
 | Capacity | Used in the context of DataMiner SRM as the measurable availability instances of a resource. For example, if the maximum capacity of a resource is 10 units, no more than 10 units can be scheduled at the same time in the system.<br>See [Service and Resource Management](xref:SRM). |
 | Card | A window within DataMiner Cube and the DataMiner Monitoring app. |
 | Cassandra | Apache Cassandra is an open-source, high-performance, distributed, NoSQL database system designed to handle large amounts of data, which is used in [dedicated clustered storage](xref:Dedicated_clustered_storage) setups. |
-| Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [Catalog](xref:About_Catalog). |
+| Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [Catalog](xref:About_the_Catalog_app). |
 | CCA  | Cloud-Connected Agents. DataMiner Agents connected to [dataminer.services](xref:about_dataminer_services). |
 | CCAP | Converged Cable Access Platform. Platform combining the functionality of a CMTS with that of an edge QAM, providing high-density services to cable subscribers. |
 | CCU | Camera Control Unit. Device used to monitor and control camera functions, for example in live video broadcasting. |
@@ -88,7 +88,7 @@ uid: glossary_a_to_l
 | CM | Cable Modem. |
 | CMDB | Configuration Management Database. A database containing information about the hardware and software assets of an organization.<br>See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
 | CMTS | Cable Modem Termination System. Piece of equipment used to provide high-speed data services to cable subscribers. |
-| Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. See [About the Collaboration app](xref:About_Collaboration). |
+| Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. See [About the Collaboration app](xref:About_the_Collaboration_app). |
 | Concurrency | Used in the context of DataMiner SRM to indicate the number of times a resource can be used at the same time.<br>See [Service and Resource Management](xref:SRM). |
 | Connectivity chain | Definition of how interfaces are connected on one or more elements, in the context of the DataMiner Connectivity Framework.<br>See [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files). Also used in the context of Root Cause Analysis, as a chain of elements, services or parameters that is configured to make it possible to analyze the distance to the most probable root cause of an alarm.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
 | Connectivity editor | Application in DataMiner Cube that allows you to manage topology chains to allow root cause analysis of alarms.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
@@ -131,7 +131,7 @@ uid: glossary_a_to_l
 | DataMiner Dojo | Community website where both people from the Skyline community, and people from the worldwide DataMiner community exchange experiences and knowledge, both about DataMiner and about general hot topics in the ICT, broadband and media industry.<br>See [DataMiner Community](xref:Community#dataminer-community). |
 | DataMiner Driver | An XML file that allows a DMA to communicate with a data source in the system. Also known as connector or protocol.<br>See [Protocols](xref:Protocols1#protocols). |
 | DataMiner ID | The unique ID of a DataMiner Agent. |
-| DataMiner Live Data Sharing Service | Former name of the Sharing app. <br>See [Sharing](xref:Sharing). |
+| DataMiner Live Data Sharing Service | Former name of the Sharing app. <br>See [Sharing](xref:About_the_Sharing_app). |
 | DataMiner package | Archive file that contains all the files necessary to make a modification to a DataMiner System, for example to upgrade, downgrade or restore a DataMiner Agent, or to install a DataMiner app or DataMiner protocol.<br>See [DataMiner packages](xref:DataMiner_packages). |
 | dataminer.services | Online platform that provides many additional services related to the DataMiner software and DataMiner projects. See [dataminer.services](xref:about_dataminer_services). |
 | DataMiner System | One or more DMAs, integrated into one cluster via an IP network. Abbreviated as DMS. |

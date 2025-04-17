@@ -31,7 +31,7 @@ When you open up the Catalog, a search box is displayed.
    From here, you can also [deploy the item to your DataMiner System](xref:Deploying_a_catalog_item).
 
    > [!TIP]
-   > See also: [Versioning of Catalog items](xref:About_Catalog#versioning-of-catalog-items)
+   > See also: [Versioning of Catalog items](xref:About_the_Catalog_app#versioning-of-catalog-items)
 
 ## Looking up an item using the Catalog API
 

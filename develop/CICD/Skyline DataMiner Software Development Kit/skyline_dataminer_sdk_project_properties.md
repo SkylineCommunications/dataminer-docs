@@ -29,7 +29,7 @@ This will ensure that when a DataMiner application package is installed on a Dat
 
 ## Version
 
-The version for the package. This needs to be a valid semantic version. See [Versioning of Catalog items](xref:About_Catalog#versioning-of-catalog-items).
+The version for the package. This needs to be a valid semantic version. See [Versioning of Catalog items](xref:About_the_Catalog_app#versioning-of-catalog-items).
 
 > [!NOTE]
 > This will be overwritten during a workflow run when the GitHub workflows are used.

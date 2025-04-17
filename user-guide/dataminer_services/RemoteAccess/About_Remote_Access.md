@@ -1,9 +1,9 @@
 ---
-uid: Cloud_Remote_Access
+uid: About_Remote_Access
 keywords: remote access to the cloud, cloud connection
 ---
 
-# Remote access
+# About remote access
 
 When a DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), administrators can [enable remote access](xref:Controlling_remote_access) so that users can access the DataMiner System from anywhere.
 

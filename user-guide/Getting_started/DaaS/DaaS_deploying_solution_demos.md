@@ -4,7 +4,7 @@ uid: DaaS_deploying_solution_demos
 
 # Deploying solution demos
 
-If you have created a new DaaS system and you quickly want to get a feel for what you can do with DataMiner, the quickest way you can do so is by deploying some solution demos. You can find and deploy these from the [Catalog](xref:About_Catalog). Below you can find some examples of solution demos we recommend.
+If you have created a new DaaS system and you quickly want to get a feel for what you can do with DataMiner, the quickest way you can do so is by deploying some solution demos. You can find and deploy these from the [Catalog](xref:About_the_Catalog_app). Below you can find some examples of solution demos we recommend.
 
 ## Starlink Enterprise
 
