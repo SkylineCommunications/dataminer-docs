@@ -20,7 +20,7 @@ In most spectrum elements, the following settings are available, though this dep
 
 - **Amplitude scale**: The scale used in the real-time display. Select a different value to change the size of each square in the grid.
 
-  From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42597-->, you can auto-scale the amplitude scale (together with the reference level) using the ![auto-scale](~/user-guide/images/Auto-scale.png) button next to the reference level Y-axis label in the real-time display section of the spectrum analyzer card.
+  From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42597-->, you can auto-adjust the amplitude scale (together with the reference level) using the ![auto-adjust](~/user-guide/images/Auto-adjust.png) button next to the reference level Y-axis label in the real-time display section of the spectrum analyzer card.
 
 - **Start frequency**: The start frequency of the displayed frequency span. Different units can be selected for the value you enter, e.g. kHz, GHz.
 
