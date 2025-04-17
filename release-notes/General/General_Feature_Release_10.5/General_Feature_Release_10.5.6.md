@@ -260,6 +260,13 @@ From now on, both information events will start with `Alarmstorm for SNMP Manage
 
 At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
 
+#### Swarming: Certain alarm event messages would be logged incorrectly in SLDataMiner.txt [ID 42671]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+<!-- Not added to MR 10.6.0 -->
+
+On swarming-enabled systems with information log level set to 2 or above, certain alarm event messages would be logged incorrectly in the *SLDataMiner.txt* log file.
+
 #### Problem with trend windows after switching from daylight saving time to standard time [ID 42685]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
