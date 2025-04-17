@@ -10,7 +10,7 @@ To view detailed information on a user:
 
 1. In the details pane on the right:
 
-   - Check the *Details* tab to view the user’s contact details, security level, dataminer.services username and last login.
+   - Check the *Details* tab to view the user’s contact details, security level, dataminer.services credentials (indicated as *DCP username* and *DCP password*), and last login.
 
    - Check the *Group membership* tab to view what group(s) the user is a member of.
 
