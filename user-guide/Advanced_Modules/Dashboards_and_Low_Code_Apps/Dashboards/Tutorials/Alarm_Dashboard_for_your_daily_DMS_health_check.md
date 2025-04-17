@@ -79,7 +79,7 @@ However, if you are for example using a **brand-new [DaaS system](xref:Creating_
    > [!IMPORTANT]
    > Only restart DataMiner if you are using a brand-new DaaS system. In other cases, do not restart DataMiner, as this could affect other ongoing operations on your DataMiner System. For detailed information, refer to the deployment details in the *Technical Reference* section of the [package description](https://catalog.dataminer.services/details/e3e335a6-76c3-4254-90cb-3b2335300b0f).
 
-1. In DataMiner Cube, navigate to the *Catalog* > *Alarm Dashboard* view, and select the *REPORTS* page.
+1. In DataMiner Cube, navigate to the *DataMiner Catalog* > *Alarm Dashboard* view, and select the *REPORTS* page.
 
    When everything is loaded correctly, the alarm distribution will look like this:
 

@@ -52,7 +52,7 @@ Expected duration: 30 minutes
 
 ## Step 2: Explore the app and data sets
 
-1. In the DataMiner Cube Surveyor, navigate to *Catalog* > *Apps & Solutions* > *Starlink Enterprise* > *Starlink API (STRLE)* and open the element *STRLE Starlink Enterprise*.
+1. In the DataMiner Cube Surveyor, navigate to *DataMiner Catalog* > *Apps & Solutions* > *Starlink Enterprise* > *Starlink API (STRLE)* and open the element *STRLE Starlink Enterprise*.
 
 1. On the *User Terminals* page, use the filter box at the top to filter the table so that only the terminal *Skyline demo cruise_UT\*74d101* is shown.
 

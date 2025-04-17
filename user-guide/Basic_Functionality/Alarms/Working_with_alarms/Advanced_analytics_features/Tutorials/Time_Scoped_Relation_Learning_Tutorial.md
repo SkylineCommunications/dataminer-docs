@@ -45,7 +45,7 @@ The tutorial consists of the following steps:
 
 1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create a DataMiner element named "Relation Learning Tutorial - Kata Relation Learning" in your system, which will be used throughout the rest of the tutorial. The element will be located in the view *Catalog* > *Augmented Operations* > *Relation Learning Tutorial*.
+   This will create a DataMiner element named "Relation Learning Tutorial - Kata Relation Learning" in your system, which will be used throughout the rest of the tutorial. The element will be located in the view *DataMiner Catalog* > *Augmented Operations* > *Relation Learning Tutorial*.
 
 ## Step 2: Discover anomaly detection in trend graphs
 
