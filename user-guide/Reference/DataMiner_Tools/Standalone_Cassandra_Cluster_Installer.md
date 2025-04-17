@@ -54,7 +54,7 @@ By default this should be `./cassandra_installer_dependencies`.
 
 #### CassandraTargetDirectory
 
-This is the location where Cassandra will be installed. In most cases this is *C:\Program Files\Cassandra*.
+This is the location where Cassandra will be installed. In most cases this is `C:\Program Files\Cassandra`.
 
 #### CqlNativeTransportPort
 

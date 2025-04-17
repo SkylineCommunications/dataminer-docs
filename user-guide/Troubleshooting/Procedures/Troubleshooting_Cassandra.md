@@ -82,12 +82,12 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
 ### Basic debugging
 
-1. Check *SLCassandraHealth.txt* in *C:\\Skyline DataMiner\\Logging*.
+1. Check *SLCassandraHealth.txt* in `C:\Skyline DataMiner\Logging`.
 
    - Green: All is well.
    - Red: The database is down and needs to be looked at.
 
-1. Check the *SLDBConnection.txt* log in *C:\\Skyline DataMiner\\Logging*.
+1. Check the *SLDBConnection.txt* log in `C:\Skyline DataMiner\Logging`.
 
    Look for a line saying `Failed to fetch max alarm ID`.
 

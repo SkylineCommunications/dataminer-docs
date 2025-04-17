@@ -32,7 +32,7 @@ To specify the default “From” address to be used in outgoing email messages,
 
 ## DataMiner.xml configuration
 
-If a DataMiner Agent has to be able to send out email messages, then the *DataMiner.xml* file located in the *C:\\Skyline DataMiner* directory of that DataMiner Agent has to have an *\<SMTP>* section containing the necessary email settings.
+If a DataMiner Agent has to be able to send out email messages, then the *DataMiner.xml* file located in the `C:\Skyline DataMiner` directory of that DataMiner Agent has to have an *\<SMTP>* section containing the necessary email settings.
 
 You can either configure this directly in *DataMiner.xml* or use the SLNetClientTest tool. To configure it directly in *DataMiner.xml*, a DataMiner restart is required.
 

@@ -268,7 +268,7 @@ string uploadedFilePath = results.GetUploadedFilePath("varUserUploadedFile");
 
 When you have selected a file, the actual upload will only start after you click a button to make the script continue (e.g. *Close*, *Next*, etc.). Once the upload has started, a *Cancel* option will be available.
 
-All files uploaded by users will by default be placed in the *C:\\Skyline DataMiner\\TempDocuments* folder, which is automatically cleared at every DataMiner startup.
+All files uploaded by users will by default be placed in the `C:\Skyline DataMiner\TempDocuments` folder, which is automatically cleared at every DataMiner startup.
 
 > [!TIP]
 > See also: [GetUploadedFilePath](xref:Skyline.DataMiner.Automation.UIResults.GetUploadedFilePath(System.String))

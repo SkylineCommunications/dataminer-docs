@@ -207,7 +207,7 @@ This tag has the following subtags:
 
 This tag has three subtags indicating the logging level for Info logging, Debug logging, and Error logging. See [Consulting the DataMiner logs in DataMiner Cube](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube).
 
-An additional **DaysToKeep** subtag can be specified, which determines for how many days log files are kept in the folder *C:\\Skyline DataMiner\\Logging*. If this tag is not specified or if its value is 0, log files will be kept for 100 days.
+An additional **DaysToKeep** subtag can be specified, which determines for how many days log files are kept in the folder `C:\Skyline DataMiner\Logging`. If this tag is not specified or if its value is 0, log files will be kept for 100 days.
 
 Example:
 

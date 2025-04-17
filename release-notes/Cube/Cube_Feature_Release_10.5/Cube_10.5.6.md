@@ -77,6 +77,14 @@ From now on, both an HTTP request and an HTTPS request will be sent in parallel,
 
 Also, a number of additional enhancements have been made to improve overall connection stability.
 
+#### Logging: All Cube log entries sent to a DataMiner Agent will now include the ConnectionID dimension [ID 42721]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+Up to now, all SPI log entries sent to a DataMiner Agent included the *ConnectionID* dimension, which allows the corresponding connection to be traced.
+
+From now on, apart from the SPI log entries, all other Cube log entries sent to a DataMiner Agent will also include the *ConnectionID* dimension.
+
 #### Miscellaneous enhancements [ID 42730]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
@@ -96,3 +104,9 @@ A number of enhancements have been made with regard to retrieving data from EPM 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
 In some cases, an *Object reference not set to an instance of an object* exception could be thrown when processing shape conditions or creating shape properties.
+
+#### 'Augmented operations alarm settings' window would not open in popped-out alarm template editor window [ID 42749]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When the alarm template editor was shown in a separate window (e.g. after you had click the pop-out icon in the top-right corner of an alarm template), up to now, when you clicked the button in the *Analytics* or *Anomalies* column, the *Augmented Operations alarm settings* window would incorrectly open inside the main window instead of the alarm template editor window.

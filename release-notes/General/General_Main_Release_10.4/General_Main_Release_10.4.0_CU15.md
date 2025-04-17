@@ -21,11 +21,37 @@ uid: General_Main_Release_10.4.0_CU15
 
 Because of a number of enhancements, overall performance of the SLProtocol function `ClearAllKeys()` has increased.
 
+#### MessageBroker: Enhanced performance when checking for local IP addresses [ID 42570]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+As the MessageBroker prefers to set up NATS connections using local IP addresses, up to now, it would request the local IP addresses from the DNS for every item in the list of NATS endpoints. From now on, it will request the local IP addresses from the DNS only once.
+
+The IP addresses returned by the DNS will be cached for one minute only. This will prevent providing outdated information when connections have to be set up later on.
+
 #### Cassandra Cluster: Enhanced performance when importing DELT packages [ID 42613]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 
 Because of a number of enhancements, overall performance has increased when importing DELT packages on systems with a database of type *Cassandra Cluster*, especially when those packages contain a large amount of trend data.
+
+#### Additional SLNet log files [ID 42625]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+From now on, SLNet logging will not only be kept in the *SLNet.txt* log file. Certain entries will now also be kept in one of the following new log files, which will all be located in the `C:\Skyline DataMiner\Logging\SLNet\` folder.
+
+| Log file | Contents |
+|----------|----------|
+| FacadeHandleMessage.txt | All SLNet log entries created by the `Facade.HandleMessage` method. |
+| ReducedLog.txt          | All SLNet log entries that have not been added to any of the other new log files. |
+| RepositoriesMessage.txt | All SLNet log entries created by the `SLNet.Repositories` method. |
+| StartupLog.txt          | The first 1000 SLNet log entries added to the *SLNet.txt* log file after SLNet was started. |
+
+> [!NOTE]
+>
+> - The existing *SLNet.txt* log file will remain unchanged.
+> - Contrary to the *SLNet.txt* log file, which can have up to 3 rollover files (*[logfile]0.txt*), the above-mentioned new log files can only have one single rollover file each.
 
 #### Enhanced performance when logging in using external authentication via SAML [ID 42668]
 
@@ -42,6 +68,12 @@ Because of a number of enhancements, overall performance has increased when logg
 When a protocol version was overwritten while an element using that protocol version was starting up, in some cases, the SLProtocol process could stop working. Also, this could result in alarms like the following being generated:
 
 `Unexpected Exception [Exception from HRESULT: 0x8004024C]: The element is unknown.`
+
+#### DataMiner not able to start up after installation [ID 42431]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+After installation, in some cases, DataMiner would not be able to start up because the *MessageBrokerConfig.json* file could not be found in the `C:\ProgramData\Skyline Communications\DataMiner\` folder.
 
 #### Redundancy groups: Matrix parameter updates in a derived element would incorrectly not get applied in the source element (and vice versa) [ID 42598]
 
@@ -65,8 +97,22 @@ Up to now, the word "SNMP manager" would not be spelled consistently in both mes
 
 From now on, both information events will start with `Alarmstorm for SNMP Manager: ...`
 
+#### Problem with trend windows after switching from daylight saving time to standard time [ID 42685]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+In some rare cases, trend windows could get stuck in SLDataGateway after switching from daylight saving time to standard time.
+
 #### SLNet protocol cache would incorrectly retain the names of deleted protocols [ID 42710]
 
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 
 In some rare cases, the SLNet protocol cache would incorrectly retain the names of deleted protocols.
+
+#### 'Register DataMiner as Service.bat' would incorrectly register services as 32-bit services [ID 42713]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+In some cases, the Windows batch file *Register DataMiner as Service.bat* would incorrectly assume that a machine was running a 32-bit operating system. As a result, it would incorrectly register services as 32-bit services.
+
+As 32-bit Windows systems are no longer supported, from now on, the *Register DataMiner as Service.bat* file will no longer check the architecture of the operating system.

@@ -6,13 +6,13 @@ uid: Recycle_bin
 
 The *Recycle Bin* folder contains backup copies of modified configuration files and folders, stored as zip files. Each zip file includes the modified file or folder along with a *Cause.txt* file, which details the reason for the change and its timestamp. These backup copies help you [restore previous configurations](#restoring-a-previous-configuration) if needed.
 
-- From DataMiner 10.5.5/10.6.0 onwards, the contents of *C:\Skyline DataMiner\System Cache\Recyclable* are zipped and moved to *C:\Skyline DataMiner\Recycle Bin* **every 11 minutes**. This process first occurs 3 minutes after DataMiner startup.
+- From DataMiner 10.5.5/10.6.0 onwards, the contents of `C:\Skyline DataMiner\System Cache\Recyclable` are zipped and moved to `C:\Skyline DataMiner\Recycle Bin` **every 11 minutes**. This process first occurs 3 minutes after DataMiner startup.
 
   When a configuration change occurs, two scenarios are possible:
 
-  - If the file or folder has not been modified after the most recent move to the *Recycle Bin* folder (which happens every 11 minutes), a new entry is created in *C:\Skyline DataMiner\System Cache\Recyclable* with the name of the changed file or folder.
+  - If the file or folder has not been modified after the most recent move to the *Recycle Bin* folder (which happens every 11 minutes), a new entry is created in `C:\Skyline DataMiner\System Cache\Recyclable` with the name of the changed file or folder.
 
-  - If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in *C:\Skyline DataMiner\System Cache\Recyclable* is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
+  - If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in `C:\Skyline DataMiner\System Cache\Recyclable` is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
 
 - Prior to DataMiner 10.5.5/10.6.0, a separate zip file is created **for each configuration change** that is implemented in the system.
 

@@ -252,7 +252,7 @@ When you discarded a draft of a published low-code app, and then created a new d
 
 <!-- MR 10.3.0 [CU20] / 10.4.0 [CU8] - FR 10.4.11 -->
 
-When a default timezone had been set in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file, in some cases, executing *Highlight time range* actions or *Set viewport* actions would have unexpected results.
+When a default timezone had been set in the `C:\Skyline DataMiner\users\ClientSettings.json` file, in some cases, executing *Highlight time range* actions or *Set viewport* actions would have unexpected results.
 
 #### Dashboards app: Problem when changing the name of several dashboard folders in rapid succession [ID 40752]
 

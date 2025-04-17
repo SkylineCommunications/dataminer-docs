@@ -32,7 +32,7 @@ The following settings are available:
 
 > [!NOTE]
 >
-> - The indexing configuration is saved in the file *Indexing.xml* in the folder *C:\\Skyline DataMiner\\Database*.
+> - The indexing configuration is saved in the file *Indexing.xml* in the folder `C:\Skyline DataMiner\Database`.
 > - To include booking data from the indexing database in a custom backup, select *Include SRM in backup* in the content tab of the *Backup* page. See [Configuring the DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups).
 > - Resources are not automatically migrated to the indexing database as well. For more information on how to migrate these, see [Migrating SRM resources to the indexing database](xref:Resources_migration_to_elastic).
 
