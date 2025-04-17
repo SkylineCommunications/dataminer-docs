@@ -2,7 +2,7 @@
 uid: About_Collaboration
 ---
 
-# About Collaboration
+# About the Collaboration app
 
 As part of dataminer.services, the Collaboration app allows Skyline customers and DataMiner Strategic Partners to keep track of all their ongoing projects ordered from Skyline.
 

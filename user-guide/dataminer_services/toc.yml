@@ -27,7 +27,7 @@ items:
     topicUid: Connect_to_cloud_with_DMZ
 - name: Collaboration
   items:
-  - name: About Collaboration
+  - name: About the Collaboration app
     topicUid: About_Collaboration
   - name: Accessing Collaboration
     topicUid: Accessing_Collaboration
@@ -59,7 +59,7 @@ items:
       topicUid: Statuses
 - name: Catalog
   items:
-  - name: About Catalog
+  - name: About the Catalog app
     topicUid: About_Catalog
   - name: Looking up an item in the Catalog
     topicUid: Looking_up_an_item_in_the_catalog

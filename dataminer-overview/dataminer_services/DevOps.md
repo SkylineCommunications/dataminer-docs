@@ -27,17 +27,17 @@ The Catalog serves as a central location to access and manage all your DataMiner
 > [!TIP]
 > See also:
 >
-> - Direct link: [ Catalog](https://catalog.dataminer.services/)
+> - Direct link: [Catalog app](https://catalog.dataminer.services/)
 > - [Course about the Catalog](https://community.dataminer.services/courses/dataminer-cloud-platform/lessons/dataminer-catalog/)
 
 ## Collaboration
 
-Collaboration is always available to assist with time and budget tracking when managing a project. The agile project deployment function includes backlog management and user-friendly views.
+The Collaboration app is always available to assist with time and budget tracking when managing a project. The agile project deployment function includes backlog management and user-friendly views.
 
 > [!TIP]
 > See also:
 >
-> - For more detailed information about the Collaboration app, see [Collaboration](xref:About_Collaboration) in our user guide.
+> - For more detailed information about the Collaboration app, refer to [About the Collaboration app](xref:About_Collaboration).
 > - Direct link to the app: [Collaboration](https://collaboration.dataminer.services/)
 > - [Course about the Collaboration app](https://community.dataminer.services/courses/dataminer-cloud-platform/lessons/project-collaboration/)
 > - Blog: [Prioritizing and risk management with Collaboration](https://community.dataminer.services/prioritizing-and-risk-management-with-project-collaboration)
@@ -59,7 +59,7 @@ This process includes using **Git for push and pull requests** and utilizing a C
 > - [CI-CD – Our technical implementation & choice of tools](https://community.dataminer.services/ci-cd-our-technical-implementation-choice-of-tools/)
 > - [CI/CD and the Agile Principles](https://community.dataminer.services/ci-cd-and-the-agile-principles/)
 > - [Empower your DevOps engineers with the DataMiner CI/CD infrastructure](https://community.dataminer.services/empower-your-devops-engineers-with-the-dataminer-ci-cd-infrastructure/)
-> - [CI/CD using DIS, dataminer.services and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
+> - [CI/CD using DIS, dataminer.services, and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
 > - [CI/CD User Guide](xref:CICD)
 
 ## DataMiner Integration Studio (DIS)
@@ -84,6 +84,6 @@ Key benefits of DataMiner Integration Studio (DIS):
 > See also:
 >
 > - [DIS Expert Hub](https://community.dataminer.services/exphub-dis/)
-> - [Video: CI/CD using DIS, dataminer.services and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
+> - [Video: CI/CD using DIS, dataminer.services, and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
 > - [Kata #1: DIS Validator](https://community.dataminer.services/video/kata1/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - [DIS User Guide](xref:Overall_concept_of_the_DataMiner_Integration_Studio)

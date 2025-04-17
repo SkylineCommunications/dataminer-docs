@@ -9,7 +9,7 @@ The [Catalog](https://catalog.dataminer.services/) allows users to quickly look 
 This platform is constantly getting improved. At present, several workarounds are still needed to get certain items to show up in the Catalog. Below, you can find more information about how to publish specific kinds of items.
 
 > [!TIP]
-> See also: [Catalog](xref:About_Catalog)
+> See also: [About the Catalog app](xref:About_Catalog)
 
 ## Publishing connectors
 
