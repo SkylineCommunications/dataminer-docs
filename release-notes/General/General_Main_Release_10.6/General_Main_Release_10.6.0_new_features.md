@@ -593,7 +593,7 @@ Internally, this new *NT_CLEAR_PARAMETER* call will now also be used by the exis
 > [!NOTE]
 >
 > - *NT_CLEAR_PARAMETER* cannot be used to clear table columns.
-> - This new NotifyProtocol method can be invoked from within a QAction by using the protocol.ClearParameter(<paramId>) function.
+> - This new NotifyProtocol method can be invoked from within a QAction by using the `protocol.ClearParameter(<paramId>`) function.
 > - When using `ProtocolExt`, you can now use e.g. `protocol.getRequests.Clear()` to clear a table parameter named *getRequests*. Internally, this new `Clear()` function will then execute a `protocol.ClearAllKeys(<getRequests parameter ID>)` call.
 
 #### Automation: Separate log file for every Automation script that is run [ID 42572]

@@ -61,7 +61,7 @@ Internally, this new *NT_CLEAR_PARAMETER* call will now also be used by the exis
 > [!NOTE]
 >
 > - *NT_CLEAR_PARAMETER* cannot be used to clear table columns.
-> - This new NotifyProtocol method can be invoked from within a QAction by using the protocol.ClearParameter(<paramId>) function.
+> - This new NotifyProtocol method can be invoked from within a QAction by using the `protocol.ClearParameter(<paramId>`) function.
 > - When using `ProtocolExt`, you can now use e.g. `protocol.getRequests.Clear()` to clear a table parameter named *getRequests*. Internally, this new `Clear()` function will then execute a `protocol.ClearAllKeys(<getRequests parameter ID>)` call.
 
 #### Automation: Separate log file for every Automation script that is run [ID 42572]
@@ -218,6 +218,12 @@ When a Notify method was called from a thread created within an Automation scrip
 <!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
 
 When, within a redundancy group, a matrix parameter in a derived element was updated, in some cases, that same matrix parameter would incorrectly not get updated in the source element (and vice versa).
+
+#### SLHelper - GQI: Log entry of caught exception would incorrectly not include all details [ID 42608]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+On systems using the SLHelper process for GQI-related operations, up to now, an exception thrown when using a custom implementation of an ad hoc data source would be caught, but the log entry would incorrectly not include the full message. From now on, the log entry will include all details of the exception that was thrown.
 
 #### Problem when starting an element with DCF connections towards a previously deleted element [ID 42632]
 
