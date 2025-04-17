@@ -196,6 +196,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SFP | Small Form-factor Pluggable. Compact, hot-pluggable network interface module used for both telecommunication and data communication applications. |
 | SHA | Secure Hash Algorithm. |
 | Shape data | Custom fields with data assigned to a shape or group of shapes in Visio.<br>See [Working with shape data in Microsoft Visio](xref:Working_with_shape_data_in_Microsoft_Visio). |
+| Sharing | Service included in dataminer.services that allows DataMiner users to share specific live operational data with third parties.<br>See [Sharing](xref:About_the_Sharing_app). |
 | SHF | Super High Frequency. Indicates radio frequencies in the range between 3 and 30 gigahertz. |
 | Simulated element | An element that displays data from a simulation file instead of communicating with an actual device.<br>See [Simulated elements](xref:Simulated_elements). |
 | SLA | Service Level Agreement. In the context of DataMiner Business Intelligence, this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer.<br>See [Business Intelligence](xref:sla). |

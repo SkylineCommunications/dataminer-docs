@@ -44,7 +44,7 @@ Cloud Gateway will now offload error information in case the running state of a 
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Cloud connection performance and stability improvements [ID 41733]
 
-From now on, the CloudGateway DxM will create multiple connections to dataminer.services instead of one, which is possible since the recent [Remote Access and Live Sharing performance and stability improvements](xref:DCP_change_log_2025#27-january-2025---enhancement---remote-access-and-live-sharing-performance-and-stability-improvements-id-42043).
+From now on, the CloudGateway DxM will create multiple connections to dataminer.services instead of one, which is possible since the recent [Remote Access and Live Sharing performance and stability improvements](xref:dataminer_services_change_log_2025#27-january-2025---enhancement---remote-access-and-live-sharing-performance-and-stability-improvements-id-42043).
 
 This enhancement improves **performance** because it allows a higher request throughput.
 

@@ -42,14 +42,14 @@ Several provided workflows may require static code analysis through SonarCloud i
 
 ## dataminer.services keys
 
-In the [DataMiner Admin app](xref:CloudAdminApp), two different types of keys can be created: system keys and organization keys. It is important that you use the correct key for specific actions.
+In the [Admin app](xref:About_the_Admin_app), two different types of keys can be created: system keys and organization keys. It is important that you use the correct key for specific actions.
 
-- A dataminer.services **system key** is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS. It can also be used to upload private artifacts to the DataMiner Catalog that will only be accessible for the organization that your DMS belongs to. To deploy connectors, you will need this key.
+- A dataminer.services **system key** is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS. It can also be used to upload private artifacts to the Catalog that will only be accessible for the organization that your DMS belongs to. To deploy connectors, you will need this key.
 
   - Name: DATAMINER_DEPLOY_KEY
-  - Value: See [Managing dataminer.services keys](xref:Managing_DCP_keys).
+  - Value: See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
 
-- A dataminer.services **organization key** is scoped to the specific organization for which it was created and can **only be used to perform uploads to the DataMiner Catalog**. This includes uploading private artifacts to the DataMiner Catalog that will only be accessible for the organization that your DMS belongs to. To upload non-connector items, you will need this key.
+- A dataminer.services **organization key** is scoped to the specific organization for which it was created and can **only be used to perform uploads to the Catalog**. This includes uploading private artifacts to the Catalog that will only be accessible for the organization that your DMS belongs to. To upload non-connector items, you will need this key.
 
   - Name: DATAMINER_TOKEN
-  - Value: See [Managing dataminer.services keys](xref:Managing_DCP_keys).
+  - Value: See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).

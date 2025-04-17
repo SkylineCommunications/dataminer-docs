@@ -24,7 +24,7 @@ When you upgrade to this PTP version, the existing custom Visio file will stay i
 
 The version of the mediation connector *Standard DataMiner PTP Device* included in the PTP package has been incremented from 1.0.0.20 to 1.0.0.22.
 
-For detailed information about the changes in this version, refer to the [change log for this connector in the DataMiner Catalog](https://catalog.dataminer.services/details/59d8a85e-5ee6-4203-a7c4-2b06ad665d96).
+For detailed information about the changes in this version, refer to the [change log for this connector in the Catalog](https://catalog.dataminer.services/details/59d8a85e-5ee6-4203-a7c4-2b06ad665d96).
 
 > [!NOTE]
 > New versions of the mediation connector can be deployed independently of the PTP app.

@@ -18,12 +18,12 @@ When you develop a connector using DIS, you can pre-generate the connector docum
 
 ### File names and folder
 
-To make sure your pages can be automatically included in the [DataMiner Catalog](https://catalog.dataminer.services/), it is important that you use the correct file names and place the files in the correct folder:
+To make sure your pages can be automatically included in the [Catalog](https://catalog.dataminer.services/), it is important that you use the correct file names and place the files in the correct folder:
 
 - Marketing page: make sure the **file name** of your marketing page is the **exact name of the connector in the Catalog**, but with **underscores instead of spaces**. For example, the file name of the *Microsoft Platform* marketing page has to be *Microsoft_Platform.md*. Make sure the casing is the same, and do not replace any other characters with underscores. Any mismatch between the file name and the connector name will make the documentation **unavailable** in the Catalog.
 
   > [!IMPORTANT]
-  > It is very important that the file name **does not contain any spaces**. If the file name contains spaces, this will cause an error when the new file is pushed to the DataMiner Catalog.
+  > It is very important that the file name **does not contain any spaces**. If the file name contains spaces, this will cause an error when the new file is pushed to the Catalog.
 
 - Technical page: make sure the **file name** follows the same rules as mentioned above for the Marketing page but is followed by a **_Technical** suffix. For example, the file name of the *Microsoft Platform* technical page has to be *Microsoft_Platform_Technical.md*.
 
@@ -62,7 +62,7 @@ Use DocFX Flavored Markdown (DFM). See [Markdown syntax](xref:CTB_Markdown_Synta
 
 ### Title
 
-The title of both pages should be the name of the connector in the [DataMiner Catalog](https://catalog.dataminer.services/).
+The title of both pages should be the name of the connector in the [Catalog](https://catalog.dataminer.services/).
 
 ### Marketing page
 

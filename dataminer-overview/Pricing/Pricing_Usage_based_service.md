@@ -39,7 +39,7 @@ By default, DataMiner credits are deducted monthly based on the metered usage (p
 
 ### New connector development and changes to existing connectors
 
-In general, a system running as a usage-based service can use any of the existing connectors available in the [DataMiner Catalog](https://catalog.dataminer.services/) as is, regardless of whether they have active subscriptions or are just on PPU. This also includes new connector versions as they become available.
+In general, a system running as a usage-based service can use any of the existing connectors available in the [Catalog](https://catalog.dataminer.services/) as is, regardless of whether they have active subscriptions or are just on PPU. This also includes new connector versions as they become available.
 
 Organizations with 200+ MUA can request changes to existing connectors as well as new connectors, with no additional costs, **subject to a fair use policy**. However, for organizations under 200 MUA, these services are charged as professional service credit.
 

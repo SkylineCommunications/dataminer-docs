@@ -21,7 +21,7 @@ Expected duration: 20 minutes.
 
 This tutorial consists of the following steps:
 
-- [Step 1: Deploy tutorial materials from the DataMiner Catalog](#step-1-deploy-tutorial-materials-from-the-dataminer-catalog)
+- [Step 1: Deploy tutorial materials from the Catalog](#step-1-deploy-tutorial-materials-from-the-catalog)
 - [Step 2: Duplicate an existing service and include an extra managed object](#step-2-duplicate-an-existing-service-and-include-an-extra-managed-object)
 - [Step 3: Enhance your service with a service protocol](#step-3-enhance-your-service-with-a-service-protocol)
 - [Step 4: Configure an alarm template for the service](#step-4-configure-an-alarm-template-for-the-service)
@@ -29,9 +29,9 @@ This tutorial consists of the following steps:
 - [Step 6: Visualize enhanced service data in your dashboard](#step-6-visualize-enhanced-service-data-in-your-dashboard)
 - [Step 7: Visualize data for managed objects from a service perspective in your dashboard](#step-7-visualize-data-for-managed-objects-from-a-service-perspective-in-your-dashboard)
 
-## Step 1: Deploy tutorial materials from the DataMiner Catalog
+## Step 1: Deploy tutorial materials from the Catalog
 
-1. Go to [Providing a customer-centric system view with services](https://catalog.dataminer.services/details/62840610-072c-4316-9e04-703f7688e857) in the DataMiner Catalog.
+1. Go to [Providing a customer-centric system view with services](https://catalog.dataminer.services/details/62840610-072c-4316-9e04-703f7688e857) in the Catalog.
 
 1. Deploy the package to your DataMiner Agent by clicking the *Deploy* button.
 

@@ -33,7 +33,7 @@ Expected duration: 30 minutes
 
 ## Step 1: Install the Starlink Enterprise package
 
-1. Go to the [Starlink Enterprise](https://catalog.dataminer.services/details/66a4c259-0fb1-4c27-aede-8bbd3a4925d0) solution in the DataMiner Catalog.
+1. Go to the [Starlink Enterprise](https://catalog.dataminer.services/details/66a4c259-0fb1-4c27-aede-8bbd3a4925d0) solution in the Catalog.
 
 <!-- 1. Go to the *Versions* tab and expand version 1.0.2-CU12, so you can see the *Deploy* button for this specific version.
 

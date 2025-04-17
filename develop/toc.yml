@@ -5552,7 +5552,7 @@ items:
       items:
       - name: GitHub quality gate
         topicUid: CICD_Quality_Gate_Github
-    - name: Publishing items in the DataMiner Catalog
+    - name: Publishing items in the Catalog
       topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
       items:

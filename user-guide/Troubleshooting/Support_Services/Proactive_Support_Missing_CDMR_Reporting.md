@@ -20,7 +20,7 @@ If your system is [connected to dataminer.services](xref:Connecting_your_DataMin
 
 1. In the [Admin app](https://admin.dataminer.services/), go to the *DxMs* page for the DataMiner System and verify the DxM status of the DataMiner Agent node.
 
-   The *SupportAssistant* and *CoreGateway* DxMs are the most important for CDMR reporting, so check whether a green check mark is shown for these. If there is an issue with the DxMs, refer to [dataminer.services troubleshooting](xref:Investigating_Dataminerservices_Feature_Issues#check-if-all-dxms-are-running-and-up-to-date).
+   The *SupportAssistant* and *CoreGateway* DxMs are the most important for CDMR reporting, so check whether a green check mark is shown for these. If there is an issue with the DxMs, refer to [dataminer.services troubleshooting](xref:investigating_dataminer_services_feature_issues#check-if-all-dxms-are-running-and-up-to-date).
 
    ![DxMs overview](~/user-guide/images/DxMs_overview_Admin_app.png)
 

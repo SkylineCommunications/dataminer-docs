@@ -8,7 +8,7 @@ The Dojo DataMiner Community platform allows you to actively participate in the 
 
 To access the Dojo DataMiner Community platform, go to <https://community.dataminer.services/>.
 
-For some features of the platform, you will need to [log on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+For some features of the platform, you will need to [log on to dataminer.services](xref:Logging_on_to_dataminer_services).
 
 To get started, visit the following sections:
 

@@ -30,7 +30,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
 1. In case the DataMiner Agent used an **Elasticsearch** database, follow the procedure related to Elasticsearch from [Uninstalling a DMA using a manual procedure](#uninstalling-a-dma-using-a-manual-procedure).
 
-1. In case the [DataMiner Cloud Pack](xref:CloudPackages) was installed on the DataMiner Agent, uninstall it in Windows via *Control Panel* > *Programs* > *Programs and Features*.
+1. In case the [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack) was installed on the DataMiner Agent, uninstall it in Windows via *Control Panel* > *Programs* > *Programs and Features*.
 
    > [!NOTE]
    > Multiple programs are installed as part of the DataMiner Cloud Pack: *DataMiner APIGateway*, *DataMiner ArtifactDeployer*, *DataMiner CloudGateway*, etc. Uninstalling *DataMiner Cloud Pack* in the *Programs and Features* window will remove the cloud pack including all of its related components.
@@ -131,7 +131,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    1. If any Elasticsearch firewall rule exists, delete it.
 
-1. In case the [DataMiner Cloud Pack](xref:CloudPackages) was installed on the DataMiner Agent, uninstall it in Windows via *Control Panel* > *Programs* > *Programs and Features*.
+1. In case the [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack) was installed on the DataMiner Agent, uninstall it in Windows via *Control Panel* > *Programs* > *Programs and Features*.
 
    > [!NOTE]
    > Multiple programs are installed as part of the DataMiner Cloud Pack: *DataMiner APIGateway*, *DataMiner ArtifactDeployer*, *DataMiner CloudGateway*, etc. Uninstalling *DataMiner Cloud Pack* in the *Programs and Features* window will remove the cloud pack including all of its related components.

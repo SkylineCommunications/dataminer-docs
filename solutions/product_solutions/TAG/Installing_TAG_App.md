@@ -26,7 +26,7 @@ uid: Installing_TAG_App
 
 ## Deploying the DataMiner TAG Management app
 
-1. Look up the [*TAG Management* package](https://catalog.dataminer.services/details/package/6076) in the DataMiner Catalog.
+1. Look up the [*TAG Management* package](https://catalog.dataminer.services/details/package/6076) in the Catalog.
 
 1. Click the *Deploy* button.
 

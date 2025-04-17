@@ -12,7 +12,7 @@ To be able to implement DITT functionality, such as initiating ping and tracerou
 
    - The DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-1. Look up the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959) in the DataMiner Catalog.
+1. Look up the [*DataMiner IT Tools* package](https://catalog.dataminer.services/details/package/5959) in the Catalog.
 
 1. Click *Deploy*.
 
