@@ -89,7 +89,7 @@ To do so:
    > - *Modules* > *System* *configuration* > *Agents* > *Upgrade / restore*
    > - *Modules* > *System* *configuration* > *Agents* > *Stop*
 
-1. Enter your dataminer.services credentials when you are prompted to do so.
+1. When you are prompted to enter DCP credentials, enter your credentials for dataminer.services.
 
    At this point, the window will mention whether your system is up to date, and if it is not, it will show which update or upgrade is available (depending on whether you follow the Main Release track or the Feature Release track, respectively).
 
