@@ -102,8 +102,9 @@ items:
 - name: Community
   topicUid: Community
 - name: Admin
-  topicUid: Admin
   items:
+  - name: About the Admin app
+    topicUid: Admin
   - name: Accessing the Admin app
     topicUid: Accessing_the_Admin_app
   - name: Getting your organization verified
