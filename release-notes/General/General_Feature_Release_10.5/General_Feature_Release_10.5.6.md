@@ -177,6 +177,12 @@ From now on, SLNet logging will not only be kept in the *SLNet.txt* log file. Ce
 
 Up to now, when you created a new Relational Anomaly Detection (RAD) parameter group, the system would wait until the group was active for 5 minutes before training the model. From now on, when a new Relational Anomaly Detection (RAD) parameter group is created, the system will immediately start to train the model.
 
+#### DataMiner upgrade packages will now automatically install or upgrade the ModelHost DxM [ID 42664]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+From now on, DataMiner upgrade packages will automatically install or upgrade the ModelHost DxM.
+
 #### DxMs upgraded [ID 42688]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
