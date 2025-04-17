@@ -82,10 +82,7 @@ However, note that the Marketing page of a connector should always have a **Tech
 In the **About** section, add a short paragraph explaining the **function of the connector**. Try to also include some **information about the data source**. If you copy this information from somewhere else, make sure it fits the informative context of documentation (e.g. remove meaningless praise like "best-of-breed", "top-of-the-line", etc.).
 
 > [!NOTE]
-> In this *About* section, older connector documentation will contain **tables** with version info, product info, and system info, but these are **no longer required** as this information is now included directly within the *Protocol.xml* via the various [VersionHistory](xref:Protocol.VersionHistory) tags.
-
-> [!IMPORTANT]
-> Before removing the version history info from the driver help pages, make sure **all necessary info is properly added to the revelevant [VersionHistory](xref:Protocol.VersionHistory) tags** and make sure this is done **on every non-deprecated ranges** of the connector.
+> In this *About* section, older connector documentation will contain **tables** with version info, product info, and system info, but these are **no longer required** as this information is now included directly within the *Protocol.xml* via the various [VersionHistory](xref:Protocol.VersionHistory) tags. However, before you remove the version history info from existing connector help pages, **make sure all the necessary info is properly added to the relevant [VersionHistory](xref:Protocol.VersionHistory) tags** and make sure this is done **for every non-deprecated range** of the connector.
 
 #### 'Configuration' section
 
