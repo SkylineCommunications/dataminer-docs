@@ -83,8 +83,9 @@ items:
     - name: Registering a new version of a connector in the Catalog using a GitHub Action
       topicUid: Tutorial_Register_Catalog_Version_GitHub_Actions
 - name: Sharing
-  topicUid: Sharing
   items:
+  - name: About the Sharing app
+    topicUid: Sharing
   - name: Accessing the Sharing app
     topicUid: Accessing_the_Sharing_app
   - name: Managing your shares
