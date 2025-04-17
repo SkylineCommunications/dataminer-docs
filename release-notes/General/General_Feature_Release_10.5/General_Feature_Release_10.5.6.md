@@ -93,6 +93,36 @@ Example: `2025/04/01 16:31:31.813|SLManagedAutomation|RunSafe|INF|0|959|473|Exam
 > [!NOTE]
 > In the Automation script log file, you will find an indication of when the script execution started and stopped. However, this indication will be slightly different from the one you will find in the *SLAutomation.txt* log file. The one in the *SLAutomation.txt* log file will represent the total time it took for the script to run, while the one in the script log file will only take into account the C# blocks in the Automation script.
 
+#### SNMPv3: Parameter value can now be used as context name or context ID when executing an SNMP get or set command [ID 42676]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+In a connector of an SNMPv3 element, it is now possible to indicate that the value of a specific parameter should be used as context name or context ID whenever an SNMP get command or an SNMP set command is executed on the particular connection.
+
+To define that the value of a particular parameter should be used as context name for connection 0, specify the following:
+
+```xml
+<Param ...>
+    ...
+    <SNMP options="ContextName:0"/>
+    ...
+</Param>
+```
+
+To define that the value of a particular parameter should be used as context ID for connection 0, specify the following:
+
+```xml
+<Param ...>
+    ...
+    <SNMP options="ContextID:0"/>
+    ...
+</Param>
+```
+
+If the parameter is not initialized or is set to an empty string, the default parameter value will be used (i.e. an empty string).
+
+The context name and context ID can be changed at run-time, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
+
 ## Changes
 
 ### Enhancements
