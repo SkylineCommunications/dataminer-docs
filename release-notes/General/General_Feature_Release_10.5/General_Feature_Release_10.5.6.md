@@ -229,6 +229,19 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### SLAnalytics - Relational anomaly detection: No more references to 'MAD' in RAD API [ID 42738]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+<!-- Not added to MR 10.6.0 -->
+
+In all messages of the Relational Anomaly Detection API, the term "MAD" has now been replaced by "RAD". For example:
+
+- A new `TimeRange` class has now been added to the `Skyline.DataMiner.Analytics.Rad` namespace, and in `RetrainRADModelMessage`, a field using that type has been added.
+
+- A new `RadDataPoint` class has been added, and in `GetRADDataResponseMessage`, a field using that type has been added.
+
+Also, all objects that referred to items containing "MAD" have now been deprecated.
+
 ### Fixes
 
 #### Problem with SLProtocol when a protocol version was overwritten while an element using that protocol version was starting up [ID 42344]
