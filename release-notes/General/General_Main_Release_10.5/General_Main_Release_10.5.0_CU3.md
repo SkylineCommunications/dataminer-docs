@@ -121,13 +121,18 @@ From now on, both information events will start with `Alarmstorm for SNMP Manage
 
 In some rare cases, trend windows could get stuck in SLDataGateway after switching from daylight saving time to standard time.
 
-#### VerifyClusterPorts: Log entries would incorrectly always ask you to check the DMS.xml file [ID 42701]
+#### VerifyClusterPorts: Log entries would incorrectly ask you to check the DMS.xml file when using the BrokerGateway-managed NATS solution [ID 42701]
 
 <!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
 
-When the *VerifyClusterPorts* prerequisite failed, up to now, its log entries would incorrectly always ask you to check the *DMS.xml* file.
+When the *VerifyClusterPorts* prerequisite failed, up to now, its log entries would incorrectly always ask you to check the *DMS.xml* file, regardless of whether the system was using the legacy SLNet-managed NATS solution or the BrokerGateway-managed NATS solution introduced in DataMiner 10.5.0 [CU2]/10.5.5.
 
-From now on, when necessary, the *VerifyClusterPorts* log entries will ask you to check *ClusterEndpoints.json* instead.
+From now on, the *VerifyClusterPorts* log entries will ask you to check the following file, depending on the NATS solution the system is using:
+
+| NATS solution being used | File mentioned in VerifyClusterPorts log entries |
+|---|---|
+| SLNet-managed NATS solution         | DMS.xml               |
+| BrokerGateway-managed NATS solution | ClusterEndpoints.json |
 
 #### SLNet protocol cache would incorrectly retain the names of deleted protocols [ID 42710]
 

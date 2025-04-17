@@ -25,17 +25,17 @@ For more information on the installer, see [Installing DataMiner using the DataM
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
 
-The *C:\\Skyline DataMiner\\Recycle Bin\\* folder contains backup copies of modified configuration files and folders, stored as zip files. Each zip file includes the modified file or folder along with a *Cause.txt* file, which details the reason for the change and its timestamp. These backup copies help you restore previous configurations if needed.
+The `C:\Skyline DataMiner\Recycle Bin\` folder contains backup copies of modified configuration files and folders, stored as zip files. Each zip file includes the modified file or folder along with a *Cause.txt* file, which details the reason for the change and its timestamp. These backup copies help you restore previous configurations if needed.
 
 Up to now, a separate zip file would be created for each configuration change that had been implemented in the system.
 
-From now on, the contents of the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder will be zipped and moved to the *C:\\Skyline DataMiner\\Recycle Bin\\* folder every 11 minutes. This process will first occur 3 minutes after DataMiner startup.
+From now on, the contents of the `C:\Skyline DataMiner\System Cache\Recyclable\` folder will be zipped and moved to the `C:\Skyline DataMiner\Recycle Bin\` folder every 11 minutes. This process will first occur 3 minutes after DataMiner startup.
 
 When a configuration change occurs, two scenarios are possible:
 
-- If the file or folder has not been modified after the most recent move to the *Recycle Bin* folder (which happens every 11 minutes), a new entry is created in the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder with the name of the changed file or folder.
+- If the file or folder has not been modified after the most recent move to the *Recycle Bin* folder (which happens every 11 minutes), a new entry is created in the `C:\Skyline DataMiner\System Cache\Recyclable\` folder with the name of the changed file or folder.
 
-- If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
+- If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in the `C:\Skyline DataMiner\System Cache\Recyclable\` folder is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
 
 ##### RecycleBinSize setting in MaintenanceSettings.xml
 
@@ -98,7 +98,7 @@ The checks with regard to database compatibility have now been enhanced.
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
-Up to now, when you had made changes to a *C:\\Skyline DataMiner\\Analytics\\configuration.xml* file on the leader Agent, you had to manually replace the file on all Agents in the cluster. From now on, you can force the synchronization of this file via Cube.
+Up to now, when you had made changes to a `C:\Skyline DataMiner\Analytics\configuration.xml` file on the leader Agent, you had to manually replace the file on all Agents in the cluster. From now on, you can force the synchronization of this file via Cube.
 
 See also [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_between_DataMiner_Agents)
 
@@ -167,11 +167,11 @@ From now on, SLLogCollector packages will also include the log files of the *Mod
 
 *\*The Copilot feature is currently still being developed. It is not yet available for non-Skyline users*
 
-#### DataMiner upgrade: '.dmapp' and '.dmprotocol' will now by default be added to the list of MIME types in 'C:\\Skyline DataMiner\\Webpages\\web.config' [ID 41469]
+#### DataMiner upgrade: '.dmapp' and '.dmprotocol' will now by default be added to the list of MIME types in 'C:\Skyline DataMiner\Webpages\web.config' [ID 41469]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will now by default be added to the list of MIME types in the *C:\\Skyline DataMiner\\Webpages\\web.config* file.
+During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will now by default be added to the list of MIME types in the `C:\Skyline DataMiner\Webpages\web.config` file.
 
 #### DataMiner Object Models: Number of DomInstanceIds in SectionDefinitionErrors now limited to 100 [ID 41572]
 
@@ -254,11 +254,22 @@ When, while a DOM instance was created or updated, a `FieldValue` was added for 
 
 From now on, the trace data will indicate that a `DomInstanceError` was thrown with error reason `FieldValueUsedInDomInstanceLinksToNonExistingFieldDescriptor`.
 
+#### Service & Resource Management: Enhanced locking mechanism in ID cache and Time range cache [ID 42463]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+Because of a number of enhancements, the locking mechanism in the following Resource Manager caches has been improved.
+
+| Cache | Description |
+|---|---|
+| ID cache | When a specific ReservationInstance is requested by ID, the result is cached in this ID cache. When an internal request is made for a specific ID, the cached ReservationInstance will be returned. Used when adding or editing ReservationInstances and when executing start/stop actions and ReservationEvents. |
+| Time range cache | When ReservationInstances within a specific time range are requested, all instances in that time range will be cached in this cache. Used when new bookings are created or when eligible resources are requested. |
+
 #### NotifyMail.html: Updated report footer [ID 42567]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
-In the *C:\\Skyline DataMiner\\NotifyMail.html* file, i.e. the email report template, the report footer has been updated to `Generated by DataMiner`.
+In the `C:\Skyline DataMiner\NotifyMail.html` file, i.e. the email report template, the report footer has been updated to `Generated by DataMiner`.
 
 #### DxMs upgraded [ID 42688]
 

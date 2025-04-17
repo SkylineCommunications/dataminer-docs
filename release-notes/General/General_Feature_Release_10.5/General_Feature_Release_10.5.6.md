@@ -109,6 +109,17 @@ The same prerequisite is also available as a BPA test in System Center.
 
 This prerequisite check prevents situations where a DataMiner System becomes non-functional after an upgrade because of pre-existing issues with NATS. If this check fails, [troubleshoot NATS](xref:Investigating_NATS_Issues) before continuing the upgrade.
 
+#### Service & Resource Management: Enhanced locking mechanism in ID cache and Time range cache [ID 42463]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+Because of a number of enhancements, the locking mechanism in the following Resource Manager caches has been improved.
+
+| Cache | Description |
+|---|---|
+| ID cache | When a specific ReservationInstance is requested by ID, the result is cached in this ID cache. When an internal request is made for a specific ID, the cached ReservationInstance will be returned. Used when adding or editing ReservationInstances and when executing start/stop actions and ReservationEvents. |
+| Time range cache | When ReservationInstances within a specific time range are requested, all instances in that time range will be cached in this cache. Used when new bookings are created or when eligible resources are requested. |
+
 #### SLAnalytics: Enhanced caching of DVE element information [ID 42555]
 
 <!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
@@ -236,13 +247,18 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 
 In some rare cases, trend windows could get stuck in SLDataGateway after switching from daylight saving time to standard time.
 
-#### VerifyClusterPorts: Log entries would incorrectly always ask you to check the DMS.xml file [ID 42701]
+#### VerifyClusterPorts: Log entries would incorrectly ask you to check the DMS.xml file when using the BrokerGateway-managed NATS solution [ID 42701]
 
 <!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
 
-When the *VerifyClusterPorts* prerequisite failed, up to now, its log entries would incorrectly always ask you to check the *DMS.xml* file.
+When the *VerifyClusterPorts* prerequisite failed, up to now, its log entries would incorrectly always ask you to check the *DMS.xml* file, regardless of whether the system was using the legacy SLNet-managed NATS solution or the BrokerGateway-managed NATS solution introduced in DataMiner 10.5.0 [CU2]/10.5.5.
 
-From now on, when necessary, the *VerifyClusterPorts* log entries will ask you to check *ClusterEndpoints.json* instead.
+From now on, the *VerifyClusterPorts* log entries will ask you to check the following file, depending on the NATS solution the system is using:
+
+| NATS solution being used | File mentioned in VerifyClusterPorts log entries |
+|---|---|
+| SLNet-managed NATS solution         | DMS.xml               |
+| BrokerGateway-managed NATS solution | ClusterEndpoints.json |
 
 #### SLNet protocol cache would incorrectly retain the names of deleted protocols [ID 42710]
 
