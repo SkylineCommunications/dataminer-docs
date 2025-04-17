@@ -1,5 +1,5 @@
 ---
-uid: Change_email_cloud_account
+uid: Change_email_dataminer_services_account
 keywords: cloud email, cloud account
 ---
 

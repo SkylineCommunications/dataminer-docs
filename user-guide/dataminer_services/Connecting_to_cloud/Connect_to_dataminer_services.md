@@ -27,7 +27,7 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
    > - Installing the Cloud Pack on more than one DMA has [several advantages](xref:FAQ_dataminer_services#do-all-agents-in-a-dms-have-to-be-connected-to-dataminerservices). However, make sure that the Cloud Pack is only installed on DMAs that allow network traffic towards *.dataminer.services.
 
    > [!TIP]
-   > For more information on the Cloud Pack contents, see [DataMiner Cloud Pack](xref:CloudPackages).
+   > For more information on the Cloud Pack contents, see [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack).
 
 ## Connecting to dataminer.services in System Center
 

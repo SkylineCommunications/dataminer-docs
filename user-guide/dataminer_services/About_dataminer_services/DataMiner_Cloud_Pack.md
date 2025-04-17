@@ -1,5 +1,5 @@
 ---
-uid: CloudPackages
+uid: DataMiner_Cloud_Pack
 keywords: dxm
 ---
 

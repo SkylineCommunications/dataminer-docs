@@ -21,7 +21,7 @@ Expected duration: 20 minutes.
 
 This tutorial consists of the following steps:
 
-- [Step 1: Deploy tutorial materials from the Catalog](#step-1-deploy-tutorial-materials-from-the-dataminer-catalog)
+- [Step 1: Deploy tutorial materials from the Catalog](#step-1-deploy-tutorial-materials-from-the-catalog)
 - [Step 2: Duplicate an existing service and include an extra managed object](#step-2-duplicate-an-existing-service-and-include-an-extra-managed-object)
 - [Step 3: Enhance your service with a service protocol](#step-3-enhance-your-service-with-a-service-protocol)
 - [Step 4: Configure an alarm template for the service](#step-4-configure-an-alarm-template-for-the-service)

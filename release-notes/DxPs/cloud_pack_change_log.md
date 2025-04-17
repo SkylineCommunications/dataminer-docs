@@ -8,7 +8,7 @@ uid: Cloud_Pack_change_log
 > You can find the specific change logs for the DxM versions included in the Cloud Pack under [DxM release notes](xref:DxM_RNs_index).
 
 > [!TIP]
-> For more information about the Cloud Pack, see [DataMiner Cloud Pack](xref:CloudPackages).
+> For more information about the Cloud Pack, see [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack).
 
 #### 07 April 2025 - DataMiner Cloud Pack 3.3.1.0
 

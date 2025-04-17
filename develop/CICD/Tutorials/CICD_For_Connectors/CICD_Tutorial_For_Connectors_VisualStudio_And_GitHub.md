@@ -26,7 +26,7 @@ Total expected duration: 30 minutes.
   - [Step 1: Create a Visual Studio project](#step-1-create-a-visual-studio-project)
   - [Step 2: Create a GitHub repository](#step-2-create-a-github-repository)
   - [Step 3: Add the starter workflow](#step-3-add-the-starter-workflow)
-  - [Step 4: Release a private item in the Catalog](#step-4-release-a-private-item-in-the-dataminer-catalog)
+  - [Step 4: Release a private item in the Catalog](#step-4-release-a-private-item-in-the-catalog)
 
 ## Prerequisites
 

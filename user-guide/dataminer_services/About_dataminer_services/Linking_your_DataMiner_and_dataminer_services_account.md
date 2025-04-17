@@ -1,5 +1,5 @@
 ---
-uid: Linking_your_DataMiner_and_dataminer.services_account
+uid: Linking_your_DataMiner_and_dataminer_services_account
 keywords: cloud account
 ---
 

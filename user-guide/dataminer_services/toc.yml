@@ -1,6 +1,6 @@
 items:
 - name: About dataminer.services
-  topicUid: Aboutdataminer_services
+  topicUid: about_dataminer_services
   items:
   - name: Logging on to dataminer.services
     topicUid: Logging_on_to_dataminer_services
@@ -13,7 +13,7 @@ items:
   - name: Cloud data storage policies
     topicUid: Cloud_data_storage_policies
   - name: DataMiner Cloud Pack
-    topicUid: CloudPack
+    topicUid: DataMiner_Cloud_Pack
 - name: Connecting your DataMiner System to dataminer.services
   topicUid: Connecting_your_DataMiner_System_to_the_cloud
   items:

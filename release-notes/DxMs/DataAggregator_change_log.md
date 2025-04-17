@@ -93,7 +93,7 @@ A new Data Aggregator module is now available as a DxM (DataMiner Extension Modu
 
 ##### Installation and setup
 
-1. Make sure [DataMiner Cloud Pack](xref:CloudPackages) 2.8.4 or higher is installed on the server where you want to install Data Aggregator.
+1. Make sure [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack) 2.8.4 or higher is installed on the server where you want to install Data Aggregator.
 
 1. Make sure DataMiner 10.2.12 or higher is installed on the DataMiner Agents you want to use Data Aggregator with.
 

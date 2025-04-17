@@ -22,7 +22,7 @@ Expected duration: 15 minutes
 
 This tutorial consists of the following steps:
 
-- [Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the Catalog](#step-1-deploy-the-correlation-kata-switch-timeout-item-from-the-dataminer-catalog)
+- [Step 1: Deploy the 'Correlation KATA Switch Timeout' item from the Catalog](#step-1-deploy-the-correlation-kata-switch-timeout-item-from-the-catalog)
 - [Step 2: Create the Correlation rule](#step-2-create-the-correlation-rule)
 - [Step 3: Generate a timeout alarm](#step-3-generate-a-timeout-alarm)
 - [Step 4: Verify whether the rule actions have been executed](#step-4-verify-whether-the-rule-actions-have-been-executed)
