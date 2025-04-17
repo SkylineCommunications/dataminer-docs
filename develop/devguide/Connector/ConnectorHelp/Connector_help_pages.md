@@ -84,6 +84,9 @@ In the **About** section, add a short paragraph explaining the **function of the
 > [!NOTE]
 > In this *About* section, older connector documentation will contain **tables** with version info, product info, and system info, but these are **no longer required** as this information is now included directly within the *Protocol.xml* via the various [VersionHistory](xref:Protocol.VersionHistory) tags.
 
+> [!IMPORTANT]
+> Before removing the version history info from the driver help pages, make sure **all necessary info is properly added to the revelevant [VersionHistory](xref:Protocol.VersionHistory) tags** and make sure this is done **on every non-deprecated ranges** of the connector.
+
 #### 'Configuration' section
 
 In the **Configuration** section, add the information needed to create a DataMiner element with the connector. This section will need to have one or more subsections, depending on the connector. You can find more information about these below.
