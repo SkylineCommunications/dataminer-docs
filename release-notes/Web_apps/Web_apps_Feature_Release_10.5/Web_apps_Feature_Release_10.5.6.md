@@ -88,6 +88,12 @@ When load balancing was being used for Visual Overview in the web apps, in some 
 
 Up to now, when you did not have permission to edit a low-code app, on the DataMiner root page, the app's right-click menu would incorrectly include options to edit or delete that app. From now on, only people with edit permission will have access to those options.
 
+#### Dashboards/Low-Code Apps - Timeline component: Scrollbar would incorrectly cause timeline items to move to the left [ID 42681]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When a scrollbar was displayed in a *Timeline* component, the timeline items would incorrectly move a few pixels to the left, causing them to show an incorrect start time and end time.
+
 #### Low-Code Apps: Not possible to pass data from a Trigger component on one panel to a component on another panel [ID 42714]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
