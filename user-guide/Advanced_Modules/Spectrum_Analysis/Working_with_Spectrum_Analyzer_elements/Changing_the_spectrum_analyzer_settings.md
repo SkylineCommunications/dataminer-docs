@@ -16,7 +16,7 @@ In most spectrum elements, the following settings are available, though this dep
 
   From DataMiner 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 onwards<!--RN 37821-->, you can also change the reference level using the pencil next to the reference level Y-axis label in the real-time display section of the spectrum analyzer card.
 
-  From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42597-->, you can auto-scale the reference level (together with the amplitude scale) using the ![auto-scale](~/user-guide/images/Auto-scale.png) button next to the reference level Y-axis label in the real-time display section of the spectrum analyzer card.
+  From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42597-->, you can auto-adjust the reference level (together with the amplitude scale) using the ![auto-adjust](~/user-guide/images/Auto-scale.png) button next to the reference level Y-axis label in the real-time display section of the spectrum analyzer card.
 
 - **Amplitude scale**: The scale used in the real-time display. Select a different value to change the size of each square in the grid.
 
