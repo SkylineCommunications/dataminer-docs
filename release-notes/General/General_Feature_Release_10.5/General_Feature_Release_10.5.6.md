@@ -170,6 +170,13 @@ From now on, SLNet logging will not only be kept in the *SLNet.txt* log file. Ce
 > - The existing *SLNet.txt* log file will remain unchanged.
 > - Contrary to the *SLNet.txt* log file, which can have up to 3 rollover files (*[logfile]0.txt*), the above-mentioned new log files can only have one single rollover file each.
 
+#### SLAnalytics - Relational anomaly detection: Model training will start immediately after a parameter group was created [ID 42661]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+<!-- Not added to MR 10.6.0 -->
+
+Up to now, when you created a new Relational Anomaly Detection (RAD) parameter group, the system would wait until the group was active for 5 minutes before training the model. From now on, when a new Relational Anomaly Detection (RAD) parameter group is created, the system will immediately start to train the model.
+
 #### DxMs upgraded [ID 42688]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
