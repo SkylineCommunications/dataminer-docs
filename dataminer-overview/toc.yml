@@ -172,7 +172,7 @@ items:
           topicUid: Overview_Training_certification
         - name: Video library
           topicUid: Overview_Training_videolibrary
-        - name: Agile Awareness Training
+        - name: Agile Fundamentals Training
           topicUid: Overview_Training_agile_aw
         - name: Kanban workshop
           topicUid: Overview_Kanban_workshop
