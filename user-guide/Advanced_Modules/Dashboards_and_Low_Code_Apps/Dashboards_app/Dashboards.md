@@ -2,7 +2,7 @@
 uid: newR_D
 ---
 
-# Dashboards
+# Dashboards app
 
 With the Dashboards app, you can make, manage, and view dashboards that can display a wealth of information about the monitored system. You can [share your dashboards](xref:Sharing_a_dashboard) with just about anyone via dataminer.services, or [create a PDF report](xref:Generating_a_report_based_on_a_dashboard_Cube) based on them.
 
