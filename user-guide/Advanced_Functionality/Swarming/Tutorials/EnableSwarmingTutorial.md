@@ -16,7 +16,7 @@ The content and screenshots for this tutorial have been created using DataMiner 
 
 For this tutorial, you will need a DataMiner System that meets the following requirements:
 
-- [Connected to dataminer.services](https://docs.dataminer.services/user-guide/dataminer_services/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
+- [Connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - Using DataMiner 10.5.1/10.6.0 [CU0] or higher.
 - Containing two or more Agents, but no Failover Agents. If you are using a single Agent, you can follow along, but you will not be able to do the last step (swarming an element).
 - Using [STaaS](xref:STaaS) or a [dedicated clustered storage](xref:Configuring_dedicated_clustered_storage) setup.

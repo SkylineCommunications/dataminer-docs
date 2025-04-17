@@ -13,7 +13,7 @@ Estimated duration: 20 minutes.
 
 ## Prerequisites
 
-- A DataMiner System that is [connected to dataminer.services](https://docs.dataminer.services/user-guide/dataminer_services/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - Make sure the [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface) soft-launch option is enabled. See [Soft-launch options](xref:SoftLaunchOptions).
 
 > [!TIP]
