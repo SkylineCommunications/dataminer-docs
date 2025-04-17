@@ -111,3 +111,9 @@ In some cases, a null reference exception could be thrown after a PDF report had
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
 When a component passed different types of data to components located on another panel, not all types of data would get consumed correctly.
+
+#### Dashboards app: Problem when clicking the 'Start with example dashboard' button [ID 42771]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When, after opening the Dashboards app, you clicked the *Start with an example dashboard* button, that button would get stuck in a loading state.
