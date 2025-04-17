@@ -6,11 +6,10 @@ uid: Types_of_users
 
 DataMiner distinguishes the following types of users:
 
-- [Types of users](#types-of-users)
-  - [Local users](#local-users)
-  - [Manually added domain users](#manually-added-domain-users)
-  - [Automatically added domain users](#automatically-added-domain-users)
-  - [dataminer.services users](#dataminerservices-users)
+- [Local users](#local-users)
+- [Manually added domain users](#manually-added-domain-users)
+- [Automatically added domain users](#automatically-added-domain-users)
+- [dataminer.services users](#dataminerservices-users)
 
 ## Local users
 
