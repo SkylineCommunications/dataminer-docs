@@ -231,6 +231,25 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### Protocols: Configuring an override parameter to replace the nominal smart baseline value of a column parameter [ID 42712]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+In the [type](xref:Protocol.Params.Param.Alarm-type) attribute of the *Protocol.Params.Param.Alarm* tag, it is now possible to configure an override parameter for a column parameter.
+
+If an override parameter is configured in the protocol, the smart baseline calculation will first check if a value is configured in the override parameter and if a value is present. If that value is not an exception value, it will take this value and copy it to the nominal value parameter instead of trying to calculate a nominal value whenever the smart baseline timer elapses.
+
+To configure an override parameter, use the following syntax:
+
+```xml
+<Alarm type="absolute:NOMINAL_VALUE_PID,FACTOR_PID,OVERRIDE_PID">
+```
+
+> [!NOTE]
+>
+> - The `FACTOR_PID` is optional and can be left empty.
+> - The ID of the override parameter (`OVERRIDE_PID`) is the third value in the comma-separated list. The `OVERRIDE_PID` value must be (a) the parameter ID of a column in the same table as the source column or (b) the parameter ID of a standalone column. Any other parameter ID will not work.
+
 #### SLAnalytics - Relational anomaly detection: No more references to 'MAD' in RAD API [ID 42738]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->

@@ -59,6 +59,25 @@ From now on, SLNet logging will not only be kept in the *SLNet.txt* log file. Ce
 
 Because of a number of enhancements, overall performance has increased when logging in using external authentication via SAML.
 
+#### Protocols: Configuring an override parameter to replace the nominal smart baseline value of a column parameter [ID 42712]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 -->
+
+In the [type](xref:Protocol.Params.Param.Alarm-type) attribute of the *Protocol.Params.Param.Alarm* tag, it is now possible to configure an override parameter for a column parameter.
+
+If an override parameter is configured in the protocol, the smart baseline calculation will first check if a value is configured in the override parameter and if a value is present. If that value is not an exception value, it will take this value and copy it to the nominal value parameter instead of trying to calculate a nominal value whenever the smart baseline timer elapses.
+
+To configure an override parameter, use the following syntax:
+
+```xml
+<Alarm type="absolute:NOMINAL_VALUE_PID,FACTOR_PID,OVERRIDE_PID">
+```
+
+> [!NOTE]
+>
+> - The `FACTOR_PID` is optional and can be left empty.
+> - The ID of the override parameter (`OVERRIDE_PID`) is the third value in the comma-separated list. The `OVERRIDE_PID` value must be (a) the parameter ID of a column in the same table as the source column or (b) the parameter ID of a standalone column. Any other parameter ID will not work.
+
 ### Fixes
 
 #### Problem with SLProtocol when a protocol version was overwritten while an element using that protocol version was starting up [ID 42344]
