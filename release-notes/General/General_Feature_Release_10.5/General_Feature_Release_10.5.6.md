@@ -300,7 +300,7 @@ When, within a redundancy group, a matrix parameter in a derived element was upd
 
 #### SLHelper - GQI: Log entry of caught exception would incorrectly not include all details [ID 42608]
 
-<!-- MR 10.6.0 - FR 10.5.6 -->
+<!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
 
 On systems using the SLHelper process for GQI-related operations, up to now, an exception thrown when using a custom implementation of an ad hoc data source would be caught, but the log entry would incorrectly not include the full message. From now on, the log entry will include all details of the exception that was thrown.
 

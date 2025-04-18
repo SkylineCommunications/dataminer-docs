@@ -343,12 +343,6 @@ When a Notify method was called from a thread created within an Automation scrip
 
 In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.
 
-#### SLHelper - GQI: Log entry of caught exception would incorrectly not include all details [ID 42608]
-
-<!-- MR 10.6.0 - FR 10.5.6 -->
-
-On systems using the SLHelper process for GQI-related operations, up to now, an exception thrown when using a custom implementation of an ad hoc data source would be caught, but the log entry would incorrectly not include the full message. From now on, the log entry will include all details of the exception that was thrown.
-
 #### ModelHost DxM would stop working when it failed to retrieve a proxy endpoint [ID 42651]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
