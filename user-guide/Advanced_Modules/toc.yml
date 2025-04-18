@@ -807,6 +807,8 @@ items:
   - name: DataMiner Object Models (DOM)
     topicUid: DOM
     items:
+      - name: DOM managers
+        topicUid: DOM_managers
       - name: DOM objects
         topicUid: DOM_objects
         items:
@@ -846,18 +848,8 @@ items:
             topicUid: DomTemplate
           - name: DomBehaviorDefinition object
             topicUid: DomBehaviorDefinition
-      - name: DOM managers
-        topicUid: DOM_managers
       - name: DOM helper class
         topicUid: DomHelper_class
-      - name: DOM events
-        topicUid: DOM_events
-      - name: DOM history
-        topicUid: DOM_history
-      - name: DOM status system
-        topicUid: DOM_status_system
-      - name: DOM actions
-        topicUid: DOM_actions
       - name: DOM module settings
         topicUid: DOM_ModuleSettings
         items:
@@ -881,10 +873,16 @@ items:
             topicUid: DOM_DomInstanceHistorySettings
           - name: StorageSettings
             topicUid: DOM_StorageSettings
+      - name: DOM events
+        topicUid: DOM_events
+      - name: DOM history
+        topicUid: DOM_history
+      - name: DOM status system
+        topicUid: DOM_status_system
+      - name: DOM actions
+        topicUid: DOM_actions
       - name: DOM data storage
         topicUid: DOM_data_storage
-      - name: Best practices
-        topicUid: DOM_best_practices
       - name: DOM examples
         items:
           - name: Invoice app example
@@ -926,6 +924,8 @@ items:
                 topicUid: DOM_editor_deleting_section
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
+      - name: Best practices
+        topicUid: DOM_best_practices
       - name: Tutorials
         items:
           - name: Getting started with DOM
