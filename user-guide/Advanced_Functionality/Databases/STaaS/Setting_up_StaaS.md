@@ -4,6 +4,16 @@ uid: Setting_up_StaaS
 
 # Setting up STaaS
 
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    Don't have an existing DataMiner System yet? Watch <a href="xref:Installing_DM_using_the_DM_installer" style="color: #657AB7;">this short video</a> to see how to install a self-managed DataMiner System with STaaS from scratch.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
+
+<br>
+
 For a self-managed DataMiner System, follow the steps below to set up STaaS.
 
 > [!NOTE]
