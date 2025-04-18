@@ -7,7 +7,7 @@ keywords: cloud, dataminer cloud
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/dataminer_services/about_dataminer_services/about_dataminer_services.html" title="About dataminer.services" target="_self"><img src="~/user-guide/images/about_dataMiner_services.svg" style="width:100%"></a>
+    <a href="/user-guide/dataminer_services/About_dataminer_services/About_dataminer_services.html" title="About dataminer.services" target="_self"><img src="~/user-guide/images/about_dataMiner_services.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/dataminer_services/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html" title="Connecting to dataminer.services" target="_self"><img src="~/user-guide/images/Connecting_To_DataMiner_Services.svg" style="width:100%"></a>
