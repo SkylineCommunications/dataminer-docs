@@ -211,10 +211,10 @@ You can also keep your CRUD scripts fast by using the ['FullCrudMeta' variant](x
 
 ### Watch out for race conditions when updating DOM instances
 
-Since updates to a DOM instance can be executed on any agent in the cluster, it is possible for the same DOM instance to be modified at nearly the same time by different agents. This can lead to a race condition, where one agent's updates may unintentionally overwrite changes made by another. To minimize the risk of this happening:
+Since updates to a DOM instance can be executed on any Agent in a cluster, it is possible for the same DOM instance to be modified at nearly the same time by different Agents. This can lead to a race condition, where one Agent's updates may unintentionally overwrite changes made by another. To minimize the risk of this happening:
 
-- Restrict updates to a single agent per module. e.g., by implementing this logic in an element or by ensuring these requests are only sent to the same agent.
-- Reduce the time between retrieving and updating a DOM instance to narrow the window in which another conflicting update could occur.
+- Restrict updates to a single Agent per module, for example by implementing this logic in an element or by ensuring these requests are only sent to the same Agent.
+- Reduce the time between retrieving and updating a DOM instance to narrow the window in which another, conflicting update could occur.
 
 ## UI and GQI
 

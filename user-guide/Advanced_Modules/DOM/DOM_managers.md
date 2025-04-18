@@ -11,11 +11,11 @@ The DOM manager handles every request related to a specific set of models, logic
 > [!NOTE]
 >
 > - Logging for each DOM manager is done in a separate log file with the name "SLDomManager_{moduleId}", e.g. "SLDomManager_my_module.txt".
-> - See the [DOM storage](xref:DOM_data_storage#backups) page for more info on backing up the data of a DOM manager.
+> - For more information on backing up the data of a DOM manager, refer to [DOM data storage](xref:DOM_data_storage#backups).
 
 ## Module ID
 
-To create a DOM manager, you first need to create a [ModuleSettings](xref:DOM_ModuleSettings) object, which includes a **unique module ID** that is used to identify the DOM manager instance in the DMS. In the module settings, you can also configure the behavior of the DOM manager. You can for example define the scripts that will be executed on every create action, or you can enable information events. See the different sub pages under the ModuleSettings page for more info on these different features.
+To create a DOM manager, you first need to create a [ModuleSettings](xref:DOM_ModuleSettings) object, which includes a **unique module ID** that is used to identify the DOM manager instance in the DMS. In the module settings, you can also configure the behavior of the DOM manager. You can for example define the scripts that will be executed on every create action, or you can enable information events. For more information on these different features, refer to the subpages under [DOM module settings](xref:DOM_ModuleSettings).
 
 ## Creation and startup logic
 
