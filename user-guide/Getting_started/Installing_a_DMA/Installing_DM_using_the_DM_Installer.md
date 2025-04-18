@@ -7,8 +7,15 @@ description: When all prerequisites are met, download the installer from DataMin
 
 The DataMiner installer allows you to run a DataMiner installation and perform the initial configuration.
 
-> [!NOTE]
-> The DataMiner software can only be installed on the C: drive. It is currently not possible to select another drive for the installation of DataMiner.
+The DataMiner software can only be installed on the C: drive. It is currently not possible to select another drive for the installation of DataMiner.
+
+You can follow the steps below or watch this short video, which shows you how to install a self-managed system using the DataMiner Installer with the [Storage as a Service](xref:STaaS) database type:
+
+<video width="800" height="450" controls>
+  <source src="~/user-guide/images/Self-managed_with_STaaS.mp4" type="video/mp4">
+</video>
+
+<p><br></p>
 
 > [!IMPORTANT]
 > Avoid using duplicates of existing VMs to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
