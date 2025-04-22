@@ -33,9 +33,9 @@ From DataMiner 10.3.9/10.4.0 onwards<!-- RN 36412 -->, a full cache of the DOM c
 ## Cleaning up DOM data from the database
 
 To clean up a DOM manager and remove all DOM data, each DOM object needs to be deleted. This can be done in a custom script using the DOM helper, or via the ["Delete DOM Manager" feature](xref:SLNetClientTest_removing_DOM_Manager) in the DOM window of SLNetClientTest tool. This tool can be used to delete managers with up to 10&thinsp;000 instances. To clean up larger DOM managers, use the script approach first to remove the DOM instances.
-
+<!-- 
 > [!NOTE]
-> From DataMiner 10.5.6/10.6.0 onwards<!-- RN TBD -->, it is possible to use the SLNetClientTest tool to clean up larger managers with up to 100&thinsp;000 DOM instances.
+> From DataMiner 10.5.6/10.6.0 onwards, it is possible to use the SLNetClientTest tool to clean up larger managers with up to 100&thinsp;000 DOM instances. -->
 
 When using a self-managed database (Elasticsearch or OpenSearch), you will need to remove the indices in the database as well. This is not needed for a DMS using STaaS.
 
