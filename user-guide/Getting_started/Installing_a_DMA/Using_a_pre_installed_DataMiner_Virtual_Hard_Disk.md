@@ -104,7 +104,7 @@ Follow the below steps to configure your DataMiner Agent:
    - *Self-hosted - Local storage*: A clustered storage setup where both Cassandra and OpenSearch run locally on WSL.
 
      > [!IMPORTANT]
-     > Do not select this option for production systems. This option should only be used for testing and staging environments, and only if you have made sure the necessary resources will be available for the WSL storage container. See [Creating the VM](#creating-the-vm).
+     > This option should only be used for **testing and staging environments**. Do not select this option for production systems. Furthermore, make sure the necessary resources will be available for the WSL storage container. See [Creating the VM](#creating-the-vm).
 
 1. Fill in the required details to connect your DataMiner Agent to dataminer.services and click *Next*:
 
