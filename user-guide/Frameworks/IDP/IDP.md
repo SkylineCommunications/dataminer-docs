@@ -33,7 +33,6 @@ More than ever, it is crucial to keep track of the network implementation and ne
 > [!TIP]
 > For more information:
 >
-> - [Product sheet](https://skyline.be/downloads/SLC_ProductSheet_IDP.pdf)
 > - [Webinar](https://community.dataminer.services/video/experts-insights-dataminer-infrastructure-discovery-and-provisioning-idp/)
 > - [Introduction video](https://www.youtube.com/watch?v=DdrSfUBzfOI)
 
