@@ -59,7 +59,6 @@ This process includes using **Git for push and pull requests** and utilizing a C
 > - [CI-CD – Our technical implementation & choice of tools](https://community.dataminer.services/ci-cd-our-technical-implementation-choice-of-tools/)
 > - [CI/CD and the Agile Principles](https://community.dataminer.services/ci-cd-and-the-agile-principles/)
 > - [Empower your DevOps engineers with the DataMiner CI/CD infrastructure](https://community.dataminer.services/empower-your-devops-engineers-with-the-dataminer-ci-cd-infrastructure/)
-> - [CI/CD using DIS, dataminer.services, and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
 > - [CI/CD User Guide](xref:CICD)
 
 ## DataMiner Integration Studio (DIS)
@@ -84,6 +83,5 @@ Key benefits of DataMiner Integration Studio (DIS):
 > See also:
 >
 > - [DIS Expert Hub](https://community.dataminer.services/exphub-dis/)
-> - [Video: CI/CD using DIS, dataminer.services, and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
 > - [Kata #1: DIS Validator](https://community.dataminer.services/video/kata1/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - [DIS User Guide](xref:Overall_concept_of_the_DataMiner_Integration_Studio)
