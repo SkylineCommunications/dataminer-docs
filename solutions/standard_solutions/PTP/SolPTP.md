@@ -24,6 +24,9 @@ Unfamiliar with PTP? Refer to [About PTP](#about-ptp) below.
 
 Based on the DataMiner Mediation functionality, any PTP-aware node can be added to the PTP app easily. DataMiner Mediation maps vendor-specific PTP MIB files, API calls, naming conventions, and metrics into an IEEE1588-2 compatible data model. This allows the PTP app to provide a uniform look and feel for the PTP environment, even if different vendors expose the same metric in different ways (e.g. with a different name or with a different type of value).
 
+> [!TIP]
+> For a list of all supported connectors, refer to [Standard DataMiner PTP Device](https://docs.dataminer.services/connector/doc/Standard_DataMiner_PTP_Device.html).
+
 ## Out-of-the-box deployment
 
 The DataMiner PTP app:
@@ -31,38 +34,6 @@ The DataMiner PTP app:
 - Comes with a [deployment wizard](xref:Installing_the_DataMiner_PTP_app) that allows easy configuration of your PTP domain(s).
 - Includes a predefined set of [alarm templates](xref:About_alarm_templates) and [trend templates](xref:About_trend_templates) that can be quickly adapted to a specific PTP environment.
 - Uses the DataMiner Connectivity Framework (DCF) to visualize how the PTP devices are connected. The DCF information can be specified manually or retrieved automatically using [DataMiner IDP](xref:SolIDP).
-
-## Supported connectors
-
-The devices listed below are currently supported out of the box. Other vendors and models can be added at any time.
-
-Grandmaster clocks:
-
-- DirectOut montone.42
-- Evertz 5700MSC
-- Meinberg LANTIME IMS-HPS
-- Meinberg Lantime M3000
-- Seiko PTP GM
-- Tektronix SPG8000
-
-Boundary/transparent clocks:
-
-- Arista switches
-- Cisco Nexus switches
-- Hirschmann MAR 1040
-
-PTP slave devices/analyzers:
-
-- DirectOut montone.42
-- Lawo Power Core
-- Lawo HD Core Ravenna
-- Imagine Communications SNP
-- Pebble Beach Dolphin
-- Riedel FusioN
-- Riedel VirtU
-- Ross Iggy AES16.16
-- Ross Newt-IPR-3G-4S
-- Tektronix Prism
 
 ## Supported KPIs
 
