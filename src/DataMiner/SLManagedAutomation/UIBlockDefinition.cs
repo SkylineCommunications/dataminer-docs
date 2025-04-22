@@ -81,6 +81,36 @@ namespace Skyline.DataMiner.Automation
 		public bool AllowMultipleFiles { get; set; }
 
 		/// <summary>
+		/// Gets or sets if client time info will be requested from the client.
+		/// </summary>
+		/// <value>The <see cref="UIClientTimeInfo"/> option.</value>
+		/// <example>
+		/// <code>
+		/// var selection = DateTime.Now;
+		/// ...
+		/// var blockCalendar = new UIBlockDefinition
+		/// {
+		///   Type = UIBlockType.Calendar,
+		///   InitialValue = selection.ToString(AutomationConfigOptions.GlobalDateTimeFormat),
+		///   DestVar = "calendar",
+		///   WantsOnChange = true,
+		///   ClientTimeInfo = UIClientTimeInfo.Return,
+		/// };
+		/// uib.AppendBlock(blockCalendar);
+		/// ...
+		/// var uir = engine.ShowUI(uib);
+		/// ...
+		/// var timeZoneInfoToStore = uir.GetClientTimeZoneInfo(blockCalendar.DestVar)?.ToSerializedString();
+		/// var clientDateTime = uir.GetClientDateTime(blockCalendar.DestVar);
+		/// var displayedDateTime = clientDateTime.DateTime;
+		/// </code>
+		/// </example>
+		/// <remarks>
+		/// <note type="note">Available from DataMiner 10.5.4/10.6.0 onwards.</note> <!-- RN 42064 -->
+		/// </remarks>
+		public UIClientTimeInfo ClientTimeInfo { get; set; }
+
+		/// <summary>
 		/// Gets or sets the zero-based index of the column in which the dialog box item has to be placed.
 		/// </summary>
 		/// <value>The zero-based index of the column in which the dialog box item has to be placed.</value>

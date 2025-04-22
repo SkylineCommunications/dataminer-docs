@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_enhancements
 ---
 
-# General Main Release 10.5.0 – Enhancements (preview)
+# General Main Release 10.5.0 – Enhancements
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 #### Security enhancements [ID 37349] [ID 38052] [ID 38951] [ID 39387]
 
@@ -138,7 +138,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.7.1
 - DataMiner SupportAssistant: version 1.7.1
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### GQI: Ad hoc data source now supports real-time updates [ID 38643]
 
@@ -602,7 +602,7 @@ In other words, from now on, when this soft-launch option is set to true, these 
 
 #### SLNet: Enhanced performance when sending requests to SLDataGateway [ID 40023]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU13]/10.5.0 - FR 10.4.9 -->
 
 Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
 
@@ -1121,3 +1121,11 @@ The redundant `Logging` section (see example below) has now been removed from th
   }
 },
 ```
+
+#### Failover: Virtual IP address check will no longer execute an arp command to double-check whether an IP address is free [ID 42280]
+
+<!-- MR 10.4.0 [CU12]/10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When the virtual IP address check concluded that the IP address was free after having executed the required number of ping commands, since DataMiner main release 10.3.0 [CU20]/10.4.0 [CU8] and feature release 10.4.11, it would double-check by executing an arp command.
+
+From now on, it will no longer execute an arp command.

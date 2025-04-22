@@ -47,7 +47,7 @@ If a Cassandra node goes down or when a node is down when DataMiner starts up, a
 - If the Cassandra cluster feature is used, alarm and information event information is always migrated to Elasticsearch. It is not possible to use this feature without enabling indexing on alarms.
 
 > [!NOTE]
-> If a database of type Cassandra cluster is used, the soft-launch feature [NewAverageTrending](xref:Overview_of_Soft_Launch_Options#newaveragetrending) is automatically enabled.
+> If a database of type Cassandra cluster is used, the soft-launch feature *NewAverageTrending* is automatically enabled.
 
 #### DataMiner Object Model \[ID 28096\]\[ID 28392\]\[ID 28460\]
 
@@ -214,7 +214,7 @@ The variable is then saved in a separate .dat file located in the following fold
 
 In a shape data field of type ChildrenFilter, it is now possible to filter by service name, view name or child element name.
 
-To do so, in the ChildrenFilter data field of the child shape, add “Name=” following by a regular expression:
+To do so, in the ChildrenFilter data field of the child shape, add "Name=" following by a regular expression:
 
 | Shape data field | Value           |
 |------------------|-----------------|
@@ -521,7 +521,7 @@ When offloading data to SLDataGateway, in some cases, a CPU leak could occur.
 
 #### Interactive Automation scripts: Equals signs not accepted in UI block values \[ID 28324\]
 
-In some cases, equals signs (“=”) could not be used in UI block values.
+In some cases, equals signs ("=") could not be used in UI block values.
 
 #### SLWatchDog was not able to detect problems occurring in SLSNMPAgent \[ID 28330\]
 

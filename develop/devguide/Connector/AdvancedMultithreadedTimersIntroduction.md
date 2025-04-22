@@ -71,7 +71,7 @@ The items in the selected buckets are then added to a queue representing all ite
 
 The following figure illustrates how table rows get partitioned and assigned to a bucket. These buckets then get added to the processing queue.
 
-![alt text](~/develop/images/Multi-threaded_timers_conceptual.svg "Multi-threaded timers")
+![Multi-threaded timers](~/develop/images/Multi-threaded_timers_conceptual.svg)
 
 Threads of the thread pool will then process the items in the queue. (The items in the queue denote the primary key of the row to process.)
 
@@ -132,7 +132,7 @@ Often, a QAction is used to perform some additional logic. This is then done by 
 
 The following figure illustrates the general concept for SNMP:
 
-![alt text](~/develop/images/Multi-threaded_timers_SNMP.svg "Multi-threaded timers – SNMP")
+![Multi-threaded timers – SNMP](~/develop/images/Multi-threaded_timers_SNMP.svg)
 
 For serial and HTTP requests, the request is constructed in a QAction referred to by the '"qactionBefore" attribute. The group mentioned referred to by the multi-threaded timer is then empty:
 
@@ -168,7 +168,7 @@ Finally, a QAction can be used to perform some additional logic. This is then do
 
 The following figure illustrates the general concept for serial and HTTP:
 
-![alt text](~/develop/images/Multi-threaded_timers_serial_and_HTTP.svg "Multi-threaded timers – serial and HTTP")
+![Multi-threaded timers – serial and HTTP](~/develop/images/Multi-threaded_timers_serial_and_HTTP.svg)
 
 Please note the following:
 
@@ -197,7 +197,7 @@ Please note the following:
 
 The following graph illustrates the row processing. At time 0, threads from the thread pool are used to process queued items until all items in the queue are processed. DataMiner then waits until the Timer.Time has passed before starting the processing of the next batch of items (2s in this example).
 
-![alt text](~/develop/images/multi-threaded_timer_graph.png "Processing of a chunk of rows over time")
+![Processing of a chunk of rows over time](~/develop/images/multi-threaded_timer_graph.png)
 
 The pollingRate option can be used to spread the execution of the rows in each chunk.
 

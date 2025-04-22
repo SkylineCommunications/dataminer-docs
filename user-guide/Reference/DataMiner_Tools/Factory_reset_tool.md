@@ -35,6 +35,7 @@ It will always perform the following actions, regardless of whether the DMA is r
 - UndoFirewallConfig
 - Unregister
 - UninstallEndpoints
+- ResetBrokerGatewayNATS<!-- RN 40759 -->
 - DeleteTaskbarAppSettings
 - FileCleanup
 

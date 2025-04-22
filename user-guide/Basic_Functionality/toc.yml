@@ -18,29 +18,29 @@ items:
             topicUid: Simulated_elements
           - name: Element properties
             topicUid: Element_properties
+      - name: Element cards
+        topicUid: Element_cards
+      - name: Adding elements
+        topicUid: Adding_elements
+        items:
+          - name: SNMPv1/v2 connections
+            topicUid: SNMPv1v2_Connection
+          - name: SNMPv3 connections
+            topicUid: SNMPv3_Connection
+          - name: HTTP(s) connections
+            topicUid: HTTPS_Connection
+          - name: Serial connections
+            topicUid: Serial_Connection
+          - name: Smart-serial connections
+            topicUid: Smart_Serial_Connection
+          - name: TCP/IP or UDP/IP connections
+            topicUid: TCPIP_UDPIP_Connection
+          - name: GPIB connections
+            topicUid: GPIB_Connection
+          - name: WebSocket connections
+            topicUid: WebSocket_Connection
       - name: Working with elements in DataMiner
         items:
-          - name: Element cards
-            topicUid: Element_cards
-          - name: Adding elements
-            topicUid: Adding_elements
-            items:
-              - name: SNMPv1/v2 connections
-                topicUid: SNMPv1v2_Connection
-              - name: SNMPv3 connections
-                topicUid: SNMPv3_Connection
-              - name: HTTP(s) connections
-                topicUid: HTTPS_Connection
-              - name: Serial connections
-                topicUid: Serial_Connection
-              - name: Smart-serial connections
-                topicUid: Smart_Serial_Connection
-              - name: TCP/IP or UDP/IP connections
-                topicUid: TCPIP_UDPIP_Connection
-              - name: GPIB connections
-                topicUid: GPIB_Connection
-              - name: WebSocket connections
-                topicUid: WebSocket_Connection
           - name: Deleting elements
             topicUid: Deleting_elements
           - name: Duplicating elements
@@ -163,6 +163,12 @@ items:
             topicUid: Applying_service_templates
           - name: Managing service templates
             topicUid: Managing_service_templates
+      - name: Tutorials
+        items:
+          - name: Providing a customer-centric system view with services
+            topicUid: Service_tutorial
+          - name: Enhancing your service monitoring
+            topicUid: Enhanced_Services_tutorial
   - name: Views
     items:
       - name: About views

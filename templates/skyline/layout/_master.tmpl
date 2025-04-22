@@ -1,7 +1,7 @@
 {{!Licensed to the .NET Foundation under one or more agreements. The .NET Foundation licenses this file to you under the MIT license.}}
 {{!include(/^public/.*/)}}
 {{!include(favicon.ico)}}
-{{!include(logo.svg)}}
+{{!include(logo.png)}}
 <!DOCTYPE html>
 <html {{#_lang}}lang="{{_lang}}"{{/_lang}}>
   <head>
@@ -64,7 +64,7 @@
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
           <a class="navbar-brand" href="{{_appLogoUrl}}{{^_appLogoUrl}}{{_rel}}index.html{{/_appLogoUrl}}">
-            <img id="logo" class="svg" src="{{_rel}}{{{_appLogoPath}}}{{^_appLogoPath}}logo.svg{{/_appLogoPath}}" alt="{{_appName}}" >
+            <img id="logo" class="logo_main" src="{{_rel}}{{{_appLogoPath}}}{{^_appLogoPath}}logo.png{{/_appLogoPath}}" alt="{{_appName}}" >
             {{_appName}}
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">

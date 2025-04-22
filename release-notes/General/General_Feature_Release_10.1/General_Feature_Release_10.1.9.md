@@ -176,7 +176,7 @@ Up to now, when Active Directory was used, DataMiner would automatically receive
 
 #### View table columns with options like 'view=:x:y:z' or 'view=a:b:c:z' can now be filtered by means of a 'VALUE=' filter \[ID 30237\]
 
-View tables containing a column with view options like “view=:x:y:z” or “view=a:b:c:z” now allow that column to be filtered by means of a “VALUE=” filter (e.g. VALUE=5 == abc).
+View tables containing a column with view options like “view=:x:y:z” or “view=a:b:c:z” now allow that column to be filtered by means of a "VALUE=" filter (e.g. VALUE=5 == abc).
 
 > [!NOTE]
 > Combining filters with AND or OR is not supported.
@@ -222,7 +222,7 @@ Example:
 
 The discreet value can contain the name or the ID of the object, or a reference like “{pid:530}”. In the example above, the identifier is stored in the column with parameter ID 530, which can be the read parameter of the same column or a different column.
 
-If you know the type of the object, you can add a type prefix (element, redundancygroup, view or service), followed by an equal sign and (a reference to) the identifier. If you refer to the name of the object, it is recommended to use “element=” as an element can have the same name as a view.
+If you know the type of the object, you can add a type prefix (element, redundancygroup, view or service), followed by an equal sign and (a reference to) the identifier. If you refer to the name of the object, it is recommended to use "element=" as an element can have the same name as a view.
 
 The \<Display> tag of the discreet can contain the same references as the \<Value> tag. One extra keyword is possible (and recommended): {linkedItemName}. This keyword will be replaced with the name of the object referred to in the \<Value> tag.
 
@@ -563,7 +563,7 @@ When drawing connections between nodes in a service definition diagram, in some 
 
 #### Web apps: Problems with DefaultTimeZone setting \[ID 30301\]
 
-The time displayed in the DataMiner web apps (e.g. Jobs, Dashboards, etc.) is based on the DefaultTimeZone setting in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file.
+The time displayed in the DataMiner web apps (e.g. Jobs, Dashboards, etc.) is based on the DefaultTimeZone setting in the `C:\Skyline DataMiner\users\ClientSettings.json` file.
 
 Up to now, the following problems could occur with regard to this setting:
 

@@ -4,6 +4,9 @@ uid: github_reusable_workflows_automation_master_workflow
 
 # Automation Master Workflow
 
+> [!IMPORTANT]
+> For **Skyline.DataMiner.SDK** projects, refer to the [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
+
 The Automation Master Workflow should run on repositories containing an [Automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
 
 It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeline_stages_for_Automation_scripts) to handle automation and quality assurance within Skyline Communications.
@@ -39,7 +42,7 @@ Only when the actions above and the "Artifact Creation" job have been successful
 
 - Part of our quality control involves static code analysis through SonarCloud as a mandatory step. If you want to use this reusable workflow, you will need to have a SonarCloud organization setup, linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
 
-- Creating a GitHub release or tag will attempt to register your item as a private item in the DataMiner Catalog. For this, the repository must have access to a DATAMINER_DEPLOY_KEY. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+- Creating a GitHub release or tag will attempt to register your item as a private item in the Catalog. For this, the repository must have access to a DATAMINER_DEPLOY_KEY. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 ## How to use
 
@@ -72,7 +75,7 @@ jobs:
       repository: ${{ github.repository }}
       owner: ${{ github.repository_owner }}
       sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
-      # The API-key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
+      # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
       api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}

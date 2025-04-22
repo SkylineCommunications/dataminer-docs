@@ -51,6 +51,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | NBI | North-Bound Interface. Interface that allows a component to communicate with a component at a higher level. |
 | Network orchestration | Automated configuration, coordination and management of a network. |
 | NFV | Network Functions Virtualization. Network architecture where functions such as network address translation (NAT), intrusion detection, caching, etc. are virtualized as building blocks of communication services. |
+| NIC | Network Interface Card. A component that enables a device to connect to a network. |
 | NMS | Network Management System. Software system that allows monitoring and management of the software and hardware components of a network. |
 | NOC | Network Operations Center. Centralized location from which technicians monitor, manage and maintain client networks. |
 | NTLM | NT Lan Manager. |
@@ -115,7 +116,8 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 |------|-------------|
 | QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. |
 | QAM | Quadrature Amplitude Modulation. Transmission technique for digital signals that combines phase modulation and amplitude modulation. |
-| Query executer | DataMiner tool that allows users to connect to an SQL database and query it using SQL statements.<br>See [Querying an SQL database](xref:Querying_an_SQL_database). |
+| QoS | Quality of Service. |
+| Query executer | Obsolete DataMiner tool that allows users to connect to an SQL database and query it using SQL statements.<br>See [Querying an SQL database](xref:Querying_an_SQL_database). |
 | QuickMenu | Shortcut menu in DataMiner Cube that allows quick navigation between UI sections. Accessible via the keyboard shortcut Ctrl + Q. |
 
 ## R
@@ -194,6 +196,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SFP | Small Form-factor Pluggable. Compact, hot-pluggable network interface module used for both telecommunication and data communication applications. |
 | SHA | Secure Hash Algorithm. |
 | Shape data | Custom fields with data assigned to a shape or group of shapes in Visio.<br>See [Working with shape data in Microsoft Visio](xref:Working_with_shape_data_in_Microsoft_Visio). |
+| Sharing | Service included in dataminer.services that allows DataMiner users to share specific live operational data with third parties.<br>See [Sharing](xref:About_the_Sharing_app). |
 | SHF | Super High Frequency. Indicates radio frequencies in the range between 3 and 30 gigahertz. |
 | Simulated element | An element that displays data from a simulation file instead of communicating with an actual device.<br>See [Simulated elements](xref:Simulated_elements). |
 | SLA | Service Level Agreement. In the context of DataMiner Business Intelligence, this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer.<br>See [Business Intelligence](xref:sla). |
@@ -238,6 +241,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SRM Core | Suite of DataMiner core software modules that are the basis of DataMiner Service & Resource Management (SRM). Consists of seven DataMiner software modules: DataMiner Service Manager, Virtualization Engine, Resource Manager, Profile Manager, Connectivity Framework, Automation Engine and Scheduling Engine. |
 | SRM Standard Solution | DataMiner blueprint configuration that facilitates and accelerates the design and deployment of application-specific SRM solutions. This includes an installation and upgrade package of the required DataMiner components, a pre-built user interface to configure and operate SRM solutions, and ready-made workflows for booking and life cycle orchestration of services (LSO). |
 | SSH | Secure Shell. Protocol for secure remote login and other secure network services over an insecure network. |
+| SSL | Secure Sockets Layer. |
 | SSPA | Solid-State Power Amplifier. Amplifier that uses field-effect transistors to amplify radio frequency signals. |
 | STaaS | Storage as a Service. Cloud-native storage platform that allows users to connect their DMS to a scalable storage platform. |
 | StatMux | Statistical Multiplexing. Multiplexing technique where a communication channel is divided into an arbitrary number of variable bitrate data streams. |
@@ -296,6 +300,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Update package | Package containing minor updates for an existing DataMiner release. |
 | Upgrade package | DataMiner package containing all files necessary to upgrade a DMA to a new version of the DataMiner software. |
 | URL | Uniform Resource Locator. The address of a web resource. |
+| USM | User-based Security Model. A security framework used in SNMPv3. |
 | UTF-8 | Unicode Transformation Formats-8. |
 
 ## V

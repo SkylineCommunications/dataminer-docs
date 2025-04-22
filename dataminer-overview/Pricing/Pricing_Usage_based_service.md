@@ -39,7 +39,7 @@ By default, DataMiner credits are deducted monthly based on the metered usage (p
 
 ### New connector development and changes to existing connectors
 
-In general, a system running as a usage-based service can use any of the existing connectors available in the [DataMiner Catalog](https://catalog.dataminer.services/) as is, regardless of whether they have active subscriptions or are just on PPU. This also includes new connector versions as they become available.
+In general, a system running as a usage-based service can use any of the existing connectors available in the [Catalog](https://catalog.dataminer.services/) as is, regardless of whether they have active subscriptions or are just on PPU. This also includes new connector versions as they become available.
 
 Organizations with 200+ MUA can request changes to existing connectors as well as new connectors, with no additional costs, **subject to a fair use policy**. However, for organizations under 200 MUA, these services are charged as professional service credit.
 
@@ -95,7 +95,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Connector Services* | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [Catalog](https://catalog.dataminer.services/).<br>Connectors developed by the user or another third party are not counted. |
 | *Script Runs* | Every time Automation scripts are [triggered](xref:Running_Automation_scripts).<br>Amongst others, this includes Life cycle Service Orchestration (LSO) scripts, Profile-Load Scripts (PLS), Process Automation activities, and DOM instance state transitions. |
 | *Collaboration Services* | Services consumed as part of [dataminer.services](xref:Overview_Collaboration), charged per volume. |
-| *Storage as a Service (STaaS)* | Charged based solely on data ingress (i.e. data going into the cloud). No charges apply for data egress (i.e. consumption of data from the cloud).<br>This includes Zone-Redundant Storage (ZRS) in one of the available [regions](xref:STaaS#data-location-and-redundancy), as well as automatic backup every 24 hours with a sliding window of 30 days. Other regions as well as Geo-Redundant Storage (GRS) are available at an additional charge. |
+| *Storage as a Service (STaaS)* | Charged based solely on data ingress (i.e. data going into the cloud). No charges apply for data egress (i.e. consumption of data from the cloud).<br>This includes Zone-Redundant Storage (ZRS) in one of the available [regions](xref:STaaS_features#data-location-and-redundancy), as well as automatic backup every 24 hours with a sliding window of 30 days. Other regions as well as Geo-Redundant Storage (GRS) are available at an additional charge. |
 | *DataMiner as a Service (DaaS)* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
 
 > [!NOTE]

@@ -25,7 +25,7 @@ Allows the user to select a duration.
 </Param>
 ```
 
-![alt text](~/develop/images/uidurationpicker.png "DataMiner Cube duration picker")
+![DataMiner Cube duration picker](~/develop/images/uidurationpicker.png)
 
 ## See also
 

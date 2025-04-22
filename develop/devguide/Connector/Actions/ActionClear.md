@@ -12,8 +12,13 @@ This action erases the memory of the specified parameter, causing an incoming va
 
 A trigger set to go off when that cleared parameter is changed, will always go off when the parameter is set to a new value, even if that value is equal to the previous value.
 
+> [!TIP]
+> See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
+
 > [!NOTE]
-> If you perform a "clear" action on a parameter, you must also perform a "clear" action on the response in which that parameter is used. In case of a table parameter, the memory is also cleared client-side. There is no need to add a "clear on display" to see the result. If the parameter is not a table parameter, the memory is not cleared client-side. In that case, the extra action will be needed.
+>
+> - In the scope of (smart-)serial communication, if you perform a "clear" action on a parameter to make sure a trigger on parameter change or a QAction goes off, you must also perform a "clear" action on the response the parameter is part of.
+> - For a table parameter, the memory is also cleared client-side. There is no need to add a "clear on display" to see the result. If the parameter is not a table parameter, the memory is not cleared client-side. In that case, the extra action will be needed.
 
 ### Attributes
 

@@ -40,7 +40,7 @@ In order to render a column chart, set the type attribute of the ParametersView 
 </Param>
 ```
 
-![alt text](~/develop/images/uipiechart.png "DataMiner Cube Pie Chart UI Component")
+![DataMiner Cube Pie Chart UI Component](~/develop/images/uipiechart.png)
 
 In the example above, the parameter with ID 99 is a column parameter. In case of column parameters, the tableIndex attribute can be used to filter which rows should be included in the chart. The tableIndex attribute specifies the primary key of a specific row or a wildcard (`*`) can be used to include all matching rows (similar as filtering an alarm template).
 
@@ -75,7 +75,7 @@ In order to render a column chart, set the type attribute of the ParametersView 
 </Param>
 ```
 
-![alt text](~/develop/images/uicolumnchart.png "DataMiner Cube Column Chart UI Component")
+![DataMiner Cube Column Chart UI Component](~/develop/images/uicolumnchart.png)
 
 ## Row chart
 
@@ -105,7 +105,7 @@ In order to render a row chart, set the type attribute of the ParametersView tag
 </Param>
 ```
 
-![alt text](~/develop/images/uirowchart.png "DataMiner Cube Row Chart UI Component")
+![DataMiner Cube Row Chart UI Component](~/develop/images/uirowchart.png)
 
 ## See also
 

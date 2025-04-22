@@ -1,4 +1,24 @@
 items:
+  - name: Support Services
+    topicUid: Support_Services
+    items:
+      - name: Support plans
+        topicUid: Overview_Support_Plans
+      - name: Software updates and upgrades
+        topicUid: Overview_Support_upgrade_policy
+      - name: Out-of-business-hours support
+        topicUid: Overview_Out_Of_Business_Hours_Support
+      - name: Proactive Support
+        topicUid: Proactive_Support
+        items:
+          - name: Proactive Support - Low Disk Space
+            topicUid: Proactive_Support_Low_Disk_Space
+          - name: Proactive Support - Missing CDMR Reporting
+            topicUid: Proactive_Support_Missing_CDMR_Reporting
+      - name: Partner support lines
+        topicUid: Partner_support_lines
+      - name: Support application
+        topicUid: User_operations_support
   - name: Error messages
     topicUid: ErrorMessages
     items:
@@ -194,19 +214,25 @@ items:
         items:
           - name: Expired SSTables blocking other tables from being dropped
             topicUid: Cassandra_expired_blocking_SSTables
+          - name: Element fails to start because of database failure
+            topicUid: Cassandra_General_DB_Failure
       - name: Troubleshooting – dataminer.services
         items:
           - name: Investigating dataminer.services connection issues
             topicUid: Cloud_Connection_Issues
           - name: Investigating dataminer.services feature issues
-            topicUid: Investigating_Dataminerservices_Feature_Issues
+            topicUid: investigating_dataminer_services_feature_issues
       - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
-      - name: Troubleshooting – OpenSearch
-        topicUid: Investigating_OpenSearch_Issues
+      - name: Troubleshooting – Indexing database
+        topicUid: Troubleshooting_Indexing_Database
         items:
-          - name: Elasticsearch/OpenSearch does not start up after upgrade or disk cleanup
-            topicUid: Elastic_not_starting_after_upgrade_cleanup
+          - name: Troubleshooting tools
+            topicUid: ID_Troubleshooting_Tools
+          - name: Diagnostic procedures
+            topicUid: ID_Diagnostic_Procedures
+          - name: Common issues
+            topicUid: ID_Common_Issues
       - name: Troubleshooting - SLScripting
         items:
           - name: Investigating exception occurrence on Finalizer thread
@@ -237,6 +263,12 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Local user not pushed to Windows
+            topicUid: KI_Local_user_not_pushed_to_windows
+          - name: Unable to open trended parameter cards via Cube advanced search
+            topicUid: KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search
+          - name: Failed getting progress notices during upgrade
+            topicUid: KI_SLNetIPC_Errors_During_Upgrade
           - name: SLProtocol crash when restarting elements used by enhanced services
             topicUid: KI_SLProtocol_Crash_Enhanced_Services
           - name: Sticky element alarm state caused by correlation rules
@@ -269,6 +301,18 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Higher CPU usage and connection issues when using SAML with automatic groups
+            topicUid: KI_SAML_with_automatic_groups
+          - name: SLScripting crash when using JScript QActions
+            topicUid: KI_SLScripting_crash_JScript_QActions
+          - name: Unable to configure dashboards for 'Email' actions in Automation scripts, scheduled tasks, and Correlation rules
+            topicUid: KI_Unable_to_configure_dashboards_included_in_email_actions
+          - name: Cube displays incorrect offload configuration for real-time trending data
+            topicUid: KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data
+          - name: SLNet memory leak related to indexing logic for Cube search bar
+            topicUid: KI_SLNet_memory_leak
+          - name: DIS unable to connect to DataMiner Agent
+            topicUid: KI_DIS_unable_to_connect
           - name: Upgrade to DataMiner 10.5.1 or 10.5.2 is stuck
             topicUid: KI_Upgrade_to_1051_stuck
           - name: Reuploaded DVE protocol version is incorrectly set as production version

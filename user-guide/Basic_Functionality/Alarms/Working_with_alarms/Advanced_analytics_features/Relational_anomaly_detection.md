@@ -8,7 +8,9 @@ From DataMiner 10.5.3/10.6.0 onwards, you can use relational anomaly detection (
 
 After you have [configured one or more groups of parameters](#configuring-parameter-groups-for-rad) that should be monitored together, RAD will learn how these parameters are related.
 
-Whenever the relation is broken, RAD will detect this and generate suggestion events in the Alarm Console. A suggestion event will be generated for each parameter in the group where a broken relation was detected.
+Whenever the relation is broken, RAD will detect this and generate suggestion events in the Alarm Console.
+
+The suggestion events for the same group of parameters will be grouped into a single incident in the *Suggestion events* tab and *Relational anomalies* tab in the Alarm Console. Clearing the grouped incident will also clear all the suggestion events included in it. Other changes (e.g. taking ownership, adding comments) are not supported for grouped incidents. Note that prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4<!-- RN 41983, 42050 -->, a separate suggestion event will be generated for each parameter in the group where a broken relation is detected, and this will be shown in the *Active alarms* tab of the Alarm Console instead.
 
 ## Prerequisites
 
@@ -28,7 +30,7 @@ This means that the following prerequisites apply:
    ```xml
    <?xml version="1.0" ?>
    <RelationalAnomalyDetection>
-     <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]">
+     <Group name="[GROUP_NAME]" updateModel="[true/false]" anomalyScore="[THRESHOLD]" minimumAnomalyDuration="[THRESHOLD2]">
        <Instance>[INSTANCE1]</Instance>
        <Instance>[INSTANCE2]</Instance>
        [... one <Instance> tag per parameter in the group]
@@ -50,6 +52,11 @@ This means that the following prerequisites apply:
 
        Higher values will result in less suggestion events, lower values will result in more suggestion events. Default: 3.
 
+     - `minimumAnomalyDuration`: Supported from DataMiner 10.5.4/10.6.0 onwards.<!-- RN 42283 --> Optional argument that can be used to specify the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly. Default value: 5.
+
+       - When `minimumAnomalyDuration` is set to a value greater than 5, the deviating behavior will need to last longer before an anomaly event is triggered. You can for instance configure this to filter out noise events caused by a single, short, harmless outlying value in the data.
+       - When `minimumAnomalyDuration` is either not set or set to a value less than or equal to 5, an anomaly event will be generated as soon as values deviate sufficiently from the RAD model.
+
    - In each `Instance` element, you can specify either a single-value parameter or a table parameter using one of the following formats:
 
      - Single-value parameter: [DataMinerID]/[ElementID]/[ParameterID]
@@ -64,6 +71,9 @@ This means that the following prerequisites apply:
 
 - RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.
 
-- RAD does not support history sets.
-
 - Some parameter behavior will cause RAD to work less accurately. For example, if a parameter only reacts to another parameter after a certain time, RAD will produce less accurate results.
+
+- Relational anomalies on history set parameters can only be detected from DataMiner 10.5.4/10.6.0 onwards, and only under certain conditions:<!-- RN 42319 -->
+
+  - If there is at least one history set parameter in a RAD parameter group, that parameter group will only be processed when all data from all parameters in the group has been received. In other words, if a history set parameter receives data 30 minutes later than the real-time parameters, possible anomalies will only be detected after 30 minutes.
+  - RAD will only process data received within the last hour. If a history set parameter receives data more than an hour later than the real-time parameters, that data will be disregarded.

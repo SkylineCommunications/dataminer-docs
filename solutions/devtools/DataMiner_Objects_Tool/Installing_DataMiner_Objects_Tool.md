@@ -12,7 +12,7 @@ uid: Installing_DataMiner_Objects_Tool
 
 ## Deploying the DataMiner Objects Tool
 
-1. Look up the [*DataMiner Objects Tool* package](https://catalog.dataminer.services/details/467295a9-3ea0-416a-a440-ad327c6c1b9d) in the DataMiner Catalog.
+1. Look up the [*DataMiner Objects Tool* package](https://catalog.dataminer.services/details/467295a9-3ea0-416a-a440-ad327c6c1b9d) in the Catalog.
 
 1. Click the *Deploy* button.
 

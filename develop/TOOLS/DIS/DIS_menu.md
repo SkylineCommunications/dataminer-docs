@@ -27,6 +27,7 @@ The following sections provide more information on the DIS menu:
 - [Tool Windows \> DIS Diagram](xref:DisDiagramToolWindow)
 - [Tool Windows \> DIS Validator](xref:DisValidatorToolWindow)
 - [Tool Windows \> DIS Comparer](xref:DisComparerToolWindow)
+- [Tool Windows \> DIS Parameter Update Locations](xref:DisParameterUpdateLocationsToolWindow)
 - [Settings](xref:DIS_settings)
 - [Send feedback](#send-feedback)
 - [Check for updates...](#check-for-updates) (removed from DIS v3.0 onwards)

@@ -6,7 +6,7 @@ uid: ConnectionsHttpImplementing
 
 Periodically requesting information from a device via HTTP can be done as follows:
 
-![alt text](~/develop/images/Connection_Types_-_HTTP_Session_Building_Blocks.svg "Implementing HTTP communication")
+![Implementing HTTP communication](~/develop/images/Connection_Types_-_HTTP_Session_Building_Blocks.svg)
 
 The approach is very similar to serial communication: with HTTP, the content of the group will be a session, whereas with serial communication a pair is used.
 
@@ -161,6 +161,9 @@ Using the statusCode attribute, you can specify the ID of the parameter in which
 >
 > - HTTP communication logging can be enabled by setting information logging to level 3 (RN 14439).
 > - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e. upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e. upon reception of the ERROR_WINHTTP_CANNOT_CONNECT error).<!-- RN 13111 -->
+
+> [!TIP]
+> See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
 
 The value of a header can be captured by defining a header (see [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header)) and specifying the name of the header and the ID of the parameter in which the value should be put.
 

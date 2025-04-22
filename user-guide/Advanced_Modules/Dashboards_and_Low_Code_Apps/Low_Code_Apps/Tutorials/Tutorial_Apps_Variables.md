@@ -8,10 +8,15 @@ In this tutorial, you will learn how to create a [variable](xref:Variables) and 
 
 By the end of this tutorial, you will have a functional low-code app that allows users to dynamically filter elements based on their state.
 
+Estimated duration: 15 minutes.
+
 > [!NOTE]
-> This tutorial uses DataMiner web version 10.5.1.
 >
-> Variables have been available since DataMiner web version 10.4.12, and support for dynamic value changes was introduced in version 10.5.1.
+> - This tutorial uses DataMiner web version 10.5.1.
+> - Variables have been available since DataMiner web version 10.4.12, and support for dynamic value changes was introduced in version 10.5.1.
+
+> [!TIP]
+> See also: [Kata #58: Low-Code Apps - Introducing Variables](https://community.dataminer.services/courses/kata-58/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 

@@ -8,7 +8,7 @@ uid: LogicQActions
 
 Quick Actions (often referred to as "QActions") are used to implement custom functionality that cannot be implemented by other protocol constructs (e.g. parsing a JSON response received from the device, etc.).
 
-In the past, QActions were written in C#, JScript or VBScript. However, recent protocols are written exclusively in C#, so this chapter only considers C# QActions.
+In the past, QActions were written in C#, JScript or VBScript. However, recent protocols are written exclusively in C# (and VBScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)), so this chapter only considers C# QActions.
 
 A QAction is executed by the SLScripting process (see <xref:InnerWorkingsSLScripting>) and is defined in a connector using the [QAction](xref:Protocol.QActions.QAction) tag.
 
@@ -463,7 +463,7 @@ public static class QAction
 
 There is an important difference between QAction DLLs and third-party DLLs. When a protocol is updated, the QActions are recompiled and the new versions of these QActions are loaded in the application domain. The protocol will then start using these new versions of the QActions. This allows the editing of QActions of protocols without the need for a restart of the SLScripting process (which requires a DataMiner restart). Restarting the elements that run the protocol suffices to start using the edited QAction. This is not the case for third-party DLLs. Once loaded in the application domain, these cannot be unloaded, so a DataMiner restart is required in order to start using an edited third-party DLL.
 
-![alt text](~/develop/images/QAction_loading_in_SLScripting.svg "QAction DLLs")
+![QAction DLLs](~/develop/images/QAction_loading_in_SLScripting.svg)
 
 ## Queued QActions
 

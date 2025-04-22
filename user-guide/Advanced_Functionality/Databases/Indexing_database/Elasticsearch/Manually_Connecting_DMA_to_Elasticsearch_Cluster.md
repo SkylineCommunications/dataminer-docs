@@ -23,7 +23,7 @@ If you are using an older DataMiner version or a setup with storage per DMA, fol
 
 1. Stop the DataMiner Agent. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube).
 
-1. In the *C:\\Skyline DataMiner* directory, find the *DB.xml* file and copy this to your local machine as a backup.
+1. In the `C:\Skyline DataMiner` directory, find the *DB.xml* file and copy this to your local machine as a backup.
 
 1. Open the original *DB.xml* file.
 

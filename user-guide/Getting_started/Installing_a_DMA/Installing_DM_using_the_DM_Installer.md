@@ -7,8 +7,15 @@ description: When all prerequisites are met, download the installer from DataMin
 
 The DataMiner installer allows you to run a DataMiner installation and perform the initial configuration.
 
-> [!NOTE]
-> The DataMiner software can only be installed on the C: drive. It is currently not possible to select another drive for the installation of DataMiner.
+The DataMiner software can only be installed on the C: drive. It is currently not possible to select another drive for the installation of DataMiner.
+
+You can follow the steps below or watch this short video, which shows you how to install a self-managed system using the DataMiner Installer with the [Storage as a Service](xref:STaaS) database type:
+
+<video width="800" height="450" controls>
+  <source src="~/user-guide/images/Self-managed_with_STaaS.mp4" type="video/mp4">
+</video>
+
+<p><br></p>
 
 > [!IMPORTANT]
 > Avoid using duplicates of existing VMs to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
@@ -55,7 +62,7 @@ If you are using DataMiner Installer v10.4, follow the steps below to install Da
    >
    > - The procedure below takes care of the automatic license and data storage configuration; however, this requires a connection to the internet. If you need to install DataMiner **offline**, **skip the configuration below**. Instead, the license and data storage configuration will need to be done manually:
    >   - For the license, see [Permanent license](xref:Permanent_license).
-   >   - For the data storage configuration, please [contact tech support](xref:Contacting_tech_support).
+   >   - For the data storage configuration, please refer to [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
    > - The procedure below will deploy DataMiner in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. To switch to a [perpetual license](xref:Pricing_Perpetual_Use_Licensing), see [Switching from subscription mode to perpetual license](#switching-from-subscription-mode-to-perpetual-license). To immediately install DataMiner with a perpetual license, you will need to configure the license and data storage manually, similar to an offline installation.
    > - If you intend to **restore a backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip the configuration below** and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](#restoring-a-backup-onto-the-new-installed-dataminer-agent).
 
@@ -74,7 +81,7 @@ If you are using DataMiner Installer v10.4, follow the steps below to install Da
 
 1. Fill in the required details to connect your DataMiner Agent to dataminer.services and click *Next*:
 
-   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_DCP_keys).
+   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
    - *System Name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
    - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
    - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
@@ -154,7 +161,7 @@ If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing
 
 ### Switching from subscription mode to an offline demo license
 
-When you deploy a DataMiner Agent using the installer, your system will automatically be licensed and run in subscription mode. A DataMiner Agent running in subscription mode **has to remain connected** to [dataminer.services](xref:AboutCloudPlatform) to keep it licensed. If for some reason you cannot keep your Agent connected to [dataminer.services](xref:AboutCloudPlatform), it will automatically shut down after 1 month.
+When you deploy a DataMiner Agent using the installer, your system will automatically be licensed and run in subscription mode. A DataMiner Agent running in subscription mode **has to remain connected** to [dataminer.services](xref:about_dataminer_services) to keep it licensed. If for some reason you cannot keep your Agent connected to [dataminer.services](xref:about_dataminer_services), it will automatically shut down after 1 month.
 
 If after this period you want to extend the usage of the system, you can convert your subscription installation to an offline demo installation:
 
@@ -266,7 +273,7 @@ If you are using an older, deprecated DataMiner installer, follow the steps belo
      > [!NOTE]
      > By default, a DataMiner Agent installed with the deprecated DataMiner installer uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [Storage options overview](xref:Supported_system_data_storage_architectures), or check with your Technical Account Manager.
 
-   - If you are using an older DataMiner installer, you can select to install *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench). However, as MySQL support is **End of Life** as of DataMiner version 10.4.X (Q4 2023), this option is **not recommended**.
+   - If you are using an older DataMiner installer, you can select to install *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench). However, as MySQL support is [scheduled to end soon](xref:Software_support_life_cycles#third-party-software-support-life-cycle), this option is **not recommended**.
 
      > [!NOTE]
      >

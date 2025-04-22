@@ -15,13 +15,15 @@ items:
           - name: dataminer.services change log
             items:
             - name: 2025
-              topicUid: DCP_change_log_2025
-            - name: 2024
-              topicUid: DCP_change_log
+              topicUid: dataminer_services_change_log_2025
+            - name: 2024 (July-December)
+              topicUid: dataminer_services_change_log_2024_07to12
+            - name: 2024 (January-June)
+              topicUid: dataminer_services_change_log_2024_01to06
             - name: 2023
-              topicUid: DCP_change_log_2023
+              topicUid: dataminer_services_change_log_2023
             - name: 2022
-              topicUid: DCP_change_log_2022
+              topicUid: dataminer_services_change_log_2022
           - name: Cloud Pack release notes
             topicUid: Cloud_Pack_change_log
       - name: DxM release notes

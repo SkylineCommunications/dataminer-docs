@@ -19,13 +19,13 @@ Minimum requirements are displayed in gray, default requirements in light blue, 
 > - For all information on client requirements, see [DataMiner Client Requirements](xref:DataMiner_Client_Requirements).
 
 > [!NOTE]
-> While this is not recommended, you can run DataMiner, Cassandra, and OpenSearch on a single server. In that case, the hardware requirements in the diagram below need to be added up. For example, for RAM, you would need a minimum of 96 GB (32 GB for DataMiner, 32 GB for Cassandra, and 32 GB for OpenSearch).
-
-![DataMiner setup](~/user-guide/images/dataminer-compute-requirements_V04_Outline.svg "DataMiner setup")
+> While this is not recommended, you can run DataMiner, Cassandra, and OpenSearch on a single server. In that case, the hardware requirements mentioned below need to be added up. For example, for RAM, you would need a minimum of 96 GB (32 GB for DataMiner, 32 GB for Cassandra, and 32 GB for OpenSearch).
 
 ## DataMiner requirements
 
 To make sure you have immediate access to all the data from your system and to ensure that actions you want to perform are done instantly, sufficient hardware resources must be available and the correct software must be used.
+
+![DataMiner setup](~/user-guide/images/dataminer-compute-requirements_V04_Outline.svg "DataMiner setup")
 
 ### RAM
 
@@ -62,7 +62,7 @@ As a rule, we recommend a throughput ranging from 100 Mbps to 1 Gbps and a laten
 
 ### Operating System
 
-For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports. However, we recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible. At the moment, Windows Server 2022 is the recommended version.
+For all supported DataMiner versions, we support all Windows versions that Microsoft currently supports. <!-- However, we recommend that you use the latest Windows Server version. This will not only allow you to make use of the latest features, but also ensures that you will get support and security patches for as long as possible.  -->At the moment, Windows Server 2022 is the recommended version. Testing for Windows Server 2025 is currently ongoing.
 
 ### Time
 
@@ -74,7 +74,7 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 | DataMiner version       | Required .NET (Framework) versions        |
 |-------------------------|-------------------------------------------|
-| DataMiner Feature Release 10.4.10 and higher<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
+| DataMiner Feature Release 10.4.10 and higher<br>DataMiner Main Release 10.5.0 and higher<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
 | DataMiner Feature Release 10.4.3 to 10.4.9<!--RN 37969--><br>DataMiner Main Release 10.4.0 to 10.4.0 [CU6]<br>DataMiner Main Release 10.3.0 [CU12] to 10.3.0 [CU18] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
 | DataMiner Feature Release 10.3.9 to 10.4.2 | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) |
 | DataMiner Feature Release 10.3.3 to 10.3.8<br>DataMiner Main Release 10.3.0 [CU3] to 10.3.0 [CU11] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 5.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-5.0.17-windows-hosting-bundle-installer), and [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) |
@@ -120,14 +120,18 @@ The processes are not CPU-heavy and do not require a lot of parallel computing. 
 
 See "Network" under [DataMiner requirements](#dataminer-requirements).
 
-## Cassandra requirements
+## Self-hosted storage
+
+![self-hosted storage](~/user-guide/images/Self-hosted_Storage.svg)
+
+### Cassandra requirements
 
 For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:About_storage), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html). A Cassandra node can be hosted on the same server as DataMiner, or on a different server. It is also possible to use multiple Cassandra nodes with one DataMiner Agent.
 
 > [!IMPORTANT]
 > Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any Cassandra nodes.
 
-### Cassandra software
+#### Cassandra software
 
 The minimum supported version for the Cassandra software is **3.11**. If a database per cluster (or "Cassandra Cluster") setup is used, 3.11 continues to be supported for existing setups, but for new setups Cassandra **4.x** is mandatory. If a database per Agent setup is used, Cassandra 4.x is also supported, and it is even recommended in case there are multiple nodes per database.
 
@@ -136,7 +140,7 @@ The minimum supported version for the Cassandra software is **3.11**. If a datab
 > - Cassandra 4.x does not support Windows, so you will need extra Linux servers to host the Cassandra database in order to use this version.
 > - Currently, Cassandra versions 4.0 and 4.1 are supported in the 4.x range.
 
-### RAM
+#### RAM
 
 While the amount of required RAM depends on the amount of hot data, the following conventions apply:
 
@@ -146,7 +150,7 @@ While the amount of required RAM depends on the amount of hot data, the followin
 
 - As a rule, 32 GB RAM is enough, with maximum 8 GB assigned to the JVM.
 
-### Disk
+#### Disk
 
 Ideally, a Cassandra server should have 2 disks. This is mandatory if you use HDD, and optional if you use SSD. This is because Cassandra has 2 write cycles, one for the commit log (which will be accessed for every write from the client application), and one for the sstables (the real storage of the data). As such, read and write speed will benefit from an SSD. There is no need to opt for RAID1, as replication should be handled by the cluster configuration.
 
@@ -158,36 +162,36 @@ In addition, the disk throughput is of vital importance. The following minimum r
 
 - The average latency should be lower than 10 ms.
 
-### CPU
+#### CPU
 
 Like DataMiner, Cassandra requires high concurrency. It also needs significant CPU power for actions like compaction and repair, and the write speed is bound to the performance of the CPU.
 
 We recommend 16 vCPUs.
 
-### Network
+#### Network
 
 A high-speed network is required to be able to transfer the data between the different nodes. The higher the replication factor, the more data needs to be transferred in the Cassandra cluster. Though there is no real minimum specification for network latency in a Cassandra cluster, it should be as low as possible.
 
-### Operating System
+#### Operating System
 
 We recommend installing Cassandra on Linux. In fact, from Cassandra 4.0 and DataMiner 10.4.x onwards, only Linux is supported.
 
-### Time
+#### Time
 
 If there is more than one Cassandra node, the time in the cluster must be synchronized (NTP).
 
-## OpenSearch/Elasticsearch requirements
+### OpenSearch/Elasticsearch requirements
 
 Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). Ideally, this should be an OpenSearch cluster. An Elasticsearch cluster can be used instead, but this is not recommended.
 
 > [!IMPORTANT]
 > Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any openSearch or Elasticsearch nodes.
 
-### RAM
+#### RAM
 
 At least 32 GB RAM is required; 64 GB is recommended. Going for 128 GB would be excessive, as heap sizing and swapping could become a problem.
 
-### Disk
+#### Disk
 
 An SSD is recommended. If you do opt for HDD, 15K RPM is advised. There is no need to opt for RAID1, as replication should be handled by the cluster configuration.
 
@@ -199,15 +203,15 @@ In addition, the disk throughput is of vital importance. The following minimum r
 
 - The average latency should be lower than 10 ms.
 
-### CPU
+#### CPU
 
 We recommend 16 vCPUs.
 
-### Network
+#### Network
 
 Gigabit Ethernet is required for throughput, and low latency is required for easy cluster communication. Latency between the different nodes in a cluster should be similar.
 
-### Operating System
+#### Operating System
 
 We recommend installing OpenSearch on Linux. While OpenSearch is compatible with Windows (see [Operating system compatibility](https://opensearch.org/docs/2.2/install-and-configure/install-opensearch/index/#operating-system-compatibility)), this setup is not covered in our testing and therefore not recommended.
 

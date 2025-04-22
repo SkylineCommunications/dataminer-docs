@@ -82,6 +82,11 @@ To remove the tile representing a DMS from the start window:
 
 1. Click the garbage can icon in the pop-up window.
 
+From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 41203-->, you can also remove tiles by dragging them onto the garbage can icon. Additionally, you can remove all DMS tiles in a group by clicking the ![drag-and-drop](~/user-guide/images/drag-and-drop.png) icon next to the group name and dragging it onto the garbage can icon.
+
+> [!NOTE]
+> The garbage can icon becomes visible only after you grab a tile or group and begin dragging it.
+
 ## Sorting tiles in groups
 
 From DataMiner 10.2.0/10.1.3 onwards, you can sort the different tiles in the start window in groups.
@@ -93,6 +98,8 @@ From DataMiner 10.2.0/10.1.3 onwards, you can sort the different tiles in the st
 - To name or rename a group, click above the group and enter the name.
 
 - To move a tile to another position or to another group, drag it to its new position.
+
+- From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 41203-->, you can reorder groups by clicking the ![drag-and-drop](~/user-guide/images/drag-and-drop.png) icon next to the group name and dragging it to its new position.
 
 ## Filtering the displayed tiles
 

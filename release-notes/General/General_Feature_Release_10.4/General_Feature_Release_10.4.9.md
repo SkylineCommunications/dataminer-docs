@@ -336,7 +336,7 @@ In other words, from now on, when this soft-launch option is set to true, these 
 
 #### SLNet: Enhanced performance when sending requests to SLDataGateway [ID 40023]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU13]/10.5.0 - FR 10.4.9 -->
 
 Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
 
@@ -432,7 +432,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner CoreGateway: version 2.14.9
 - DataMiner SupportAssistant: version 1.6.10
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### DataMiner Object Models: Enhanced storage of DOM instances [ID 40242]
 

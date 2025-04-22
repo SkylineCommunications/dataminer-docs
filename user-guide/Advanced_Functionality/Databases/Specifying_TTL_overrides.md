@@ -10,8 +10,8 @@ This page explains how to configure TTL settings to optimize your database perfo
 
 > [!NOTE]
 >
-> - If a DMS uses [Storage as a Service](xref:STaaS), the default TTL is automatically applied for most database records. The configuration in Cube is only taken into account for real-time trending.
 > - TTL settings are automatically configured if you use [DaaS](xref:Creating_a_DMS_in_the_cloud). From DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39173-->, these settings are no longer available for manual adjustment on the *System settings* > *time to live* tab in System Center when you are using a DaaS system.
+> - If a DMS uses [Storage as a Service](xref:STaaS), the default TTL is automatically applied for most database records. The configuration in Cube is only taken into account for real-time trending. From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!--RN 42333-->, the *time to live* settings are no longer available for manual adjustment.
 
 In System Center, you can configure a custom TTL for data in the database. This determines how long the data is kept in the database.
 

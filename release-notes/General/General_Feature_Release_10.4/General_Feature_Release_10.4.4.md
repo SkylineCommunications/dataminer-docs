@@ -196,7 +196,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.5.6
 - DataMiner SupportAssistant: version 1.6.6
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### Security enhancements [ID 38756] [ID 38650] [ID 38951]
 
@@ -447,6 +447,14 @@ From now on, when a DataMiner backup is executed with the database backup option
 When a StorageModule client requests data to be stored, in some cases, a subscription exception can be thrown. Those data storage requests are retried automatically. However, up to now, each retry would be logged as error.
 
 From now on, only the final retry will be logged as error. All prior retries will only be logged when the log level is set to "debug".
+
+#### DataMiner Cube: 'Search for alarms' would list alarms with timestamps according to the local time zone of the client computer [ID 38899]
+
+<!-- MR 10.3.0 [CU14]/10.4.0 [CU2] - FR 10.4.4 -->
+
+Up to now, when you opened a new alarm tab, and did a search using the *Search for alarms* box, the alarms matching the search criterion would incorrectly show timestamps according to the local time zone of the client computer.
+
+From now on, when you use the *Search of alarms* box, the alarms matching the search criterion will show timestamps according to the server time, i.e. the local time zone of the DataMiner Agent to which the Cube client is connected.
 
 #### Problem with SLLog when stopping or restarting DataMiner [ID 38902]
 

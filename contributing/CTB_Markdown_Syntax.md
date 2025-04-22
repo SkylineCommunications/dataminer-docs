@@ -8,6 +8,9 @@ Markdown is a lightweight markup language with plain text formatting syntax. It 
 
 For more detailed info about DFM syntax, see [Docs Markdown reference](https://docs.microsoft.com/en-us/contribute/markdown-reference).
 
+> [!TIP]
+> For some of the syntax below, you can use the built-in toolbar of the *Learn Markdown* VS Code extension. If you enable the *Show Toolbar* setting for this extension in the VS Code settings, a toolbar will be displayed at the bottom of the window containing buttons that allow you to quickly create a [list](#lists), [code block](#code-blocks), [alert](#alerts), etc.
+
 ## Paragraphs
 
 Each paragraph should be separated from the next paragraph by an empty line. If you do not add this empty line, the paragraphs will be combined into one. For example, the markdown below will be generated as one single paragraph:
@@ -134,6 +137,33 @@ Do not skip heading levels. For example, do not use heading level 3 right after 
 You can use up to five heading levels on a single page. If you need more levels, you will need to divide your content over several pages.
 
 Headings should always be surrounded by empty lines, so make sure there is an empty line above and below each heading, like in the example above.
+
+## Tabs
+
+You can display content in tabs, which is useful when you want to show different information based on versions or categories.
+
+Tabs are created using hash symbols similar to headings. Use one more hash than the parent heading level. For example, tabs under the page title (heading level 1) use `##`, while tabs under a level 2 heading use `###`, and so on.
+
+The hash should then be followed by a Markdown link `[]()`. The text of the link will become the text of the tab header. In order for the header to be recognized as a tab, the link itself must start with #tab/ and be followed by a unique ID (e.g. `#tab/Linux` or `#tab/Windows`). Always end the tab section with three asterisks (`***`).
+
+For example:
+
+```md
+
+## Header
+
+### [Tab label 1](#tab/tabid-1)
+
+Content for the first tab.
+
+### [Tab label 2](#tab/tabid-2)
+
+Content for the second tab.
+
+***
+```
+
+Tab headings and ending markers (`***`) should always be surrounded by empty lines, so make sure there is an empty line above and below each heading and ending marker, like in the example above.
 
 ## Tables
 
@@ -305,3 +335,17 @@ Some characters, such as angle brackets and backslashes, are used as part of the
 For example, to make sure `<script name>` is displayed correctly, specify `\<script name>` instead.
 
 This is not necessary in text that is formatted as inline code or as a code block (using backquotes).
+
+## Comments
+
+To add a comment in Markdown, you can use the following syntax:
+
+```md
+<!-- This is a comment and will not be displayed in the rendered output -->
+```
+
+Adding comments can for instance be useful in the following cases:
+
+- To add notes for future edits without showing them in the final document.
+- To temporarily hide content without deleting it.
+- To leave comments for collaboration when working on shared Markdown files.

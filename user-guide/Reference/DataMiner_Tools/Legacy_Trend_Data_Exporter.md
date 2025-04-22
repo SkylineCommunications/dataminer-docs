@@ -4,11 +4,9 @@ uid: Legacy_Trend_Data_Exporter
 
 # Legacy trend data exporter
 
-From DataMiner 10.1.4 onwards, if the NewAverageTrending [soft-launch option](xref:SoftLaunchOptions) is activated, average trending is calculated in a different way that allows better performance. However, with this change, in some specific cases, intervals between two average trend points are no longer guaranteed to be constant. In cases where trend exports are generated and a fixed interval is expected, e.g. when exporting the 5-minute average trending points, this could be an issue. For this purpose, you can use the legacy trend data exporter tool.
+Starting from DataMiner 10.0.12 if a Cassandra cluster setup is used, or otherwise from DataMiner 10.1.10/10.2.0<!-- RN 28684 -->, average trending is calculated in a different way that allows better performance. However, with this change, in some specific cases, intervals between two average trend points are no longer guaranteed to be constant. In cases where trend exports are generated and a fixed interval is expected, e.g. when exporting the 5-minute average trending points, this could be an issue. For this purpose, you can use the legacy trend data exporter tool. This standalone tool will realign the average trend points in a given .csv file to ensure fixed intervals (see example below).
 
-> You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/legacy-trend-data-exporter/).
-
-This standalone tool will realign the average trend points in a given .csv file to ensure fixed intervals (see example below).
+You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/legacy-trend-data-exporter/).
 
 To use this tool:
 
@@ -22,13 +20,13 @@ To use this tool:
 
 For example: `TrendDataLegacyExporter.exe 5 data.csv`
 
-The resulting file will have the same name, with “.new” added before the file extension. For the example above, for instance, the output filename will be “data.new.csv”.
+The resulting file will have the same name, with ".new" added before the file extension. For the example above, for instance, the output filename will be "data.new.csv".
 
 With these arguments, the example input data below could for instance be converted to the example output data below this.
 
 Example input data:
 
-| **Timestamp** | **Average** |
+| Timestamp | Average |
 |---------------|-------------|
 | 01/01/2001 00:02:00 | 1 |
 | 01/01/2001 00:07:00 | 2 |
@@ -44,7 +42,7 @@ Example input data:
 
 Example output data:
 
-| **Timestamp** | **Average** |
+| Timestamp | Average |
 |--|--|
 | 01/01/2001 00:00:00 | 1 |
 | 01/01/2001 00:05:00 | 1.6 |

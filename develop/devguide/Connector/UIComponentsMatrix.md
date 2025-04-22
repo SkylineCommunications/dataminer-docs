@@ -6,7 +6,7 @@ uid: UIComponentsMatrix
 
 A matrix is a special type of parameter typically used to represent routers and switches.
 
-![alt text](~/develop/images/uimatrix.png "DataMiner Cube matrix")
+![DataMiner Cube matrix](~/develop/images/uimatrix.png)
 
 - [Matrix parameters](xref:UIComponentsMatrixParameters)
 - [Composing crosspoints on matrix parameters](xref:UIComponentsMatrixComposingCrosspoints)

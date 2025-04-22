@@ -85,8 +85,8 @@ It is also possible to factor in decimals defined in the dynamic units of a prot
   <Units>m</Units>
   <DynamicUnits>
     <Unit>mm</Unit>
-    <Unit decimals=”1”>cm</Unit>
-    <Unit decimals=”3”>km</Unit>
+    <Unit decimals="1">cm</Unit>
+    <Unit decimals="3">km</Unit>
   </DynamicUnits>
   <Decimals>2</Decimals>
   ..
@@ -94,7 +94,7 @@ It is also possible to factor in decimals defined in the dynamic units of a prot
 ```
 
 > [!NOTE]
-> If parameter values of parameters with “decimals” set to 1 or less are converted to a bigger unit, these will be displayed with such a number of decimals that there are at least 3 significant figures. For example, 1320 MB will be displayed as 1.32 GB, even if the parameter has 0 decimals defined.
+> If parameter values of parameters with "decimals" set to 1 or less are converted to a bigger unit, these will be displayed with such a number of decimals that there are at least 3 significant figures. For example, 1320 MB will be displayed as 1.32 GB, even if the parameter has 0 decimals defined.
 
 #### Visual Overview - Trend component: Filtering the legend’s element list and collapsing or expanding the legend by default \[ID 24349\]
 
@@ -137,7 +137,7 @@ Example:
 
 By linking a shape to an alarm filter using an *AlarmSummary* data item, you can show statistical information about the alarms that match the filter. From now on, it is also possible to have the alarms displayed in an alarm tab, filtered according to the filter specified in the shape.
 
-To do so, add a data item of type *AlarmTab*, and set its value to “Name=”, followed by the name of an alarm tab. See the example below.
+To do so, add a data item of type *AlarmTab*, and set its value to "Name=", followed by the name of an alarm tab. See the example below.
 
 When you click the shape, Cube will open the specified alarm tab (if it has a filter applied) and apply the alarm filter specified in the *AlarmSummary* data item. If the alarm tab specified in the *AlarmTab* data item has no alarm filter applied or if no alarm tab exists with that name, one will first be created.
 
