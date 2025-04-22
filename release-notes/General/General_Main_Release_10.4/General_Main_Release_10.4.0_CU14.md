@@ -187,6 +187,12 @@ When DataMiner or an element was stopped while there were still DVE parameter se
 > [!NOTE]
 > Always make sure element names are unique, especially when using the `noelementprefix` option.
 
+#### Problem with Annotations module [ID 42538]
+
+<!-- MR 10.4.0 [CU14] - FR TBD -->
+
+In some cases, the *Annotations* module would not work correctly, especially on systems with multiple DataMiner Agents or on Failover setups.
+
 #### Incorrect 'Detected duplicate DVE' notice would appear due to a caching issue [ID 42546]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
