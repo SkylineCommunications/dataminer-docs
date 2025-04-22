@@ -43,7 +43,7 @@ If your dataminer.services account was previously linked to your DataMiner accou
 
 ### Access to projects via Collaboration App
 
-To maintain access to your projects and tasks via the Collaboration app, your new dataminer.services account will need to be linked to your organization.
+To maintain access to your projects and tasks via the Collaboration app, your new dataminer.services account will need to be linked to your verified organization.
 
 > [!NOTE]
 > Please note that this action can only be performed by Skyline staff upon request.
