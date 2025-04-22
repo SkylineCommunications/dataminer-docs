@@ -8,7 +8,7 @@ uid: Discrete_analog_and_hybrid_parameters
 
 These parameters can have one of a limited set of predefined values. These can for instance be different strings.
 
-![Discrete parameter](~/user-guide/images/Discrete_Parameter_Text_Box.png)<br>*Discrete parameter in DataMiner 10.4.5*
+![Discrete parameter](~/user-guide/images/Discrete_Parameter_Selection_Box_Control.png)<br>*Discrete parameter in DataMiner 10.4.5*
 
 For more information on how to update discrete parameters, see [Updating discrete parameters](xref:Updating_discrete_parameters).
 
@@ -22,7 +22,7 @@ For more information on how to update analog parameters, see [Updating analog pa
 
 ### Hybrid parameters
 
-These parameters are similar to analog parameters, but can have a so-called exceptional, discrete value (e.g. "Undefined").
+These parameters are similar to analog parameters, but can have a so-called exceptional, discrete value (e.g. "Not Used").
 
 ![Hybrid parameter](~/user-guide/images/Hybrid_Parameter.png)<br>*Hybrid parameter in DataMiner 10.4.5*
 
