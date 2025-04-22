@@ -9,18 +9,17 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 22 April 2025 - Enhancement - Catalog - Optimizations for the browse page [ID 42673]
+### 22 April 2025 - Fix - Catalog - Incorrect vendor name shown [ID 42769]
 
-Before when loading in new items on the Catalog browse page there was a chance that the UI would become unresponsive.
-Now, some optimizations have been done to minimize the unresponsiveness as much as possible.
+In some cases, it could occur that the wrong vendor name was shown.
 
-### 22 April 2025 - Fix - Catalog - Showing wrong vendor name [ID 42769]
+### 22 April 2025 - Enhancement - Catalog - 'Back' button removed from details pages [ID 42734]
 
-Fixes an issue where the wrong value for Vendor was shown.
+As the "Back" button on the details page of a Catalog item had no real value, it has been removed.
 
-### 22 April 2025 - Fix - Catalog - Remove back button on detail pages [ID 42734]
+### 22 April 2025 - Enhancement - Catalog - Browse page optimization [ID 42673]
 
-The back button on the detail page of a catalog item has been removed since it served no real value.
+Optimizations have been implemented on the Catalog browse page to prevent the page from becoming unresponsive when new items are loaded.
 
 ### 1 April 2025 - New feature - Catalog API - Ability to retrieve vendors [ID 42633]
 
