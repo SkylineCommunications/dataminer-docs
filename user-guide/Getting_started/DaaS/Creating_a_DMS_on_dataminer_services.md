@@ -23,7 +23,7 @@ Watch this short video to learn how to create a new DataMiner System hosted on d
 
 <br />
 
-1. [Log on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+1. [Log on to dataminer.services](xref:Logging_on_to_dataminer_services).
 
 1. Next to *DataMiner Systems*, click *Add a DataMiner System*.
 

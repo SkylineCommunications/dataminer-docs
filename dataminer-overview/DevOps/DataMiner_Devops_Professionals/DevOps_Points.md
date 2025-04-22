@@ -22,7 +22,7 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 - **Being active in the Q&A section on Dojo**: Asking, answering, and commenting on questions in the [Q&A section](https://community.dataminer.services/questions/) generates DevOps Points. Moreover, if your answer gets selected as the best answer by the community, you will earn extra DevOps Points. The person selecting the best answer will get something extra as well. Even voting on questions and answers will further grow your points, as does receiving votes (between 10 to 75 points).
 
-- **Enrolling in and completing online training courses**: The DataMiner Community offers a broad selection of [free online training](https://community.dataminer.services/learning/courses/). Enrolling in and completing any of those courses will again generate points (between 25 to 250 points). Note that the community also offers a variety of free self-tests to evaluate your knowledge. The successful completion of those [quizzes](https://community.dataminer.services/learning/quizzes/) will also result in points.
+- **Enrolling in and completing online training courses**: The DataMiner Community offers a broad selection of [free online training](https://community.dataminer.services/learning/courses/). Enrolling in and completing any of those courses will again generate points (between 25 to 250 points). Note that the community also offers a variety of free self-tests to evaluate your knowledge. The successful completion of those quizzes will also result in points.
 
 - **Participating in open or private on-site training sessions**: Attend DataMiner's on-site training sessions, typically spanning 2 to 5 days. Skyline regularly hosts [open training sessions](xref:Overview_Training_dedicated#open-training-sessions), welcoming individuals from different organizations. Private [on-site training sessions](xref:Overview_Training_dedicated#on-site-training-sessions) are held at your own facilities. Each day of in-person training attended earns you 250 points.
 
@@ -52,7 +52,7 @@ In general, the more active you are in the DataMiner Dojo community and the more
   > [!TIP]
   > Not really sure how to get started? Take a look at our [blog post template](https://community.dataminer.services/download/blog-post-template/)!
 
-- **Submitting a use case**: You can choose to submit a [use case](https://community.dataminer.services/use-cases/) for the community, and upon acceptance, this will result in 250 up to 2500 points. Use cases could focus on a new product integration that you have completed for DataMiner, or on any other type of solution that you have implemented with DataMiner.
+- **Submitting a use case**: You can choose to submit a [use case](https://community.dataminer.services/use-cases/) for the community, and upon acceptance, this will result in 250 up to 5000 points. Use cases could focus on a new product integration that you have completed for DataMiner, or on any other type of solution that you have implemented with DataMiner.
 
   > [!TIP]
   > Not really sure how to get started? Take a look at our [use case template](https://community.dataminer.services/download/use-case-template/)!

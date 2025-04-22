@@ -61,6 +61,8 @@ items:
             topicUid: System_Cache
           - name: SyncRules.xml
             topicUid: SyncRules_xml
+          - name: Views.xml
+            topicUid: Views_xml
   - name: Tools
     topicUid: DataminerTools
     items:
@@ -331,6 +333,8 @@ items:
                 topicUid: SLNetClientTest_disabling_replication_buffering
               - name: Editing the connection string between two DataMiner Agents
                 topicUid: SLNetClientTest_editing_connection_string
+              - name: Enabling or disabling debug logging for a DOM manager
+                topicUid: SLNetClientTest_debug_logging_DOM_manager
               - name: Enabling or disabling protocol buffer serialization
                 topicUid: SLNetClientTest_protocol_buffer_serialization
               - name: Fine-tuning NATS settings
@@ -349,6 +353,8 @@ items:
                 topicUid: SLNetClientTest_making_Cube_ignore_view_updates
               - name: Managing base subscriptions
                 topicUid: SLNetClientTest_managing_base_subscriptions
+              - name: Managing parameter groups for RAD
+                topicUid: SLNetClientTest_managing_RAD_parameter_groups
               - name: Managing scheduled tasks for maintenance of a Cassandra database
                 topicUid: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
               - name: Managing trend patterns
@@ -450,13 +456,6 @@ items:
         topicUid: Forbidden_characters
       - name: Examples of element names
         topicUid: Examples_of_element_names
-  - name: Obtaining a DataMiner license
-    topicUid: DataminerLicenses
-    items:
-      - name: Permanent license
-        topicUid: Permanent_license
-      - name: Time-based license
-        topicUid: Time-based_license
   - name: Software support life cycles
     topicUid: Software_support_life_cycles
   - name: Feature overview

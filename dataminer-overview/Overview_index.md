@@ -23,7 +23,7 @@ We are working on adding more information to this section soon, so check back fo
 
 <div class="row"> 
   <div class="column">
-    <a href="https://docs.dataminer.services/dataminer-overview/DataMiner_Cloud_Platform/Overview_DCP.html" title="dataminer.services" target="_self"><img src="~/dataminer-overview/images/DataMiner_Services.svg" style="width:100%"></a>
+    <a href="https://docs.dataminer.services/dataminer-overview/dataminer_services/Overview_dataminer_services.html" title="dataminer.services" target="_self"><img src="~/dataminer-overview/images/DataMiner_Services.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer-overview/DataMiner_Stack_Functions/Overview_stack_functions.html" title="DataMiner stack functions" target="_self"><img src="~/dataminer-overview/images/Stack_Functions.svg" style="width:100%"></a>

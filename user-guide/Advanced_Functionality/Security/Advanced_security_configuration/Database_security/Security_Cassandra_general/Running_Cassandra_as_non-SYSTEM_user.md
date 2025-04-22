@@ -40,7 +40,7 @@ To run Cassandra as a non-SYSTEM user:
    - *C:\\ProgramData\\Cassandra*
 
    > [!CAUTION]
-   > Do not grant the permissions on the entire *C:\Program Files\Cassandra* folder, as this may introduce vulnerabilities.
+   > Do not grant the permissions on the entire `C:\Program Files\Cassandra` folder, as this may introduce vulnerabilities.
 
 1. Go back to the command prompt and execute the *services.msc* command to open the Service Manager.
 

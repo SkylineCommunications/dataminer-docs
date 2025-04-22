@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.5.5
 ---
 
-# DataMiner web apps Feature Release 10.5.5 – Preview
+# DataMiner web apps Feature Release 10.5.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +14,8 @@ uid: Web_apps_Feature_Release_10.5.5
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards/Low-Code Apps - Template editor: Layer tooltips [ID 42503]](#dashboardslow-code-apps---template-editor-layer-tooltips-id-42503)
+- [Dashboards/Low-Code Apps - Template editor: New layer of type HTML [ID 42519]](#dashboardslow-code-apps---template-editor-new-layer-of-type-html-id-42519)
 
 ## New features
 

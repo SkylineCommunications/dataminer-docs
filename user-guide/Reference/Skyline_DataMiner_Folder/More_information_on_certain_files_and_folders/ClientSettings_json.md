@@ -212,7 +212,7 @@ In the shared client settings file, it is possible to enable or disable this add
 
 ## Setting the default time zone for DataMiner web apps
 
-The time displayed in the DataMiner web apps (e.g. the Dashboards app) is based on a time zone setting in the file *C:\\Skyline DataMiner\\Users\\ClientSettings.json*. If this setting is not configured, the time zone of the client browser is used instead.
+The time displayed in the DataMiner web apps (e.g. the Dashboards app) is based on a time zone setting in the file `C:\Skyline DataMiner\users\ClientSettings.json`. If this setting is not configured, the time zone of the client browser is used instead.
 
 To configure this setting:
 
@@ -254,7 +254,7 @@ To configure this setting:
 
 ## Configuring settings for Cube UI freezing
 
-The Cube logging can display logs of type "Freeze" to indicate when the Cube UI has been frozen. In *C:\\Skyline DataMiner\\Users\\ClientSettings.json*, you can configure how long the Cube UI has to be frozen before an entry is logged in the Cube logging. In addition, you can also configure how long the UI has been frozen before a pop-up is displayed.
+The Cube logging can display logs of type "Freeze" to indicate when the Cube UI has been frozen. In `C:\Skyline DataMiner\users\ClientSettings.json`, you can configure how long the Cube UI has to be frozen before an entry is logged in the Cube logging. In addition, you can also configure how long the UI has been frozen before a pop-up is displayed.
 
 1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
 

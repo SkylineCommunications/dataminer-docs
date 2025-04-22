@@ -12,10 +12,10 @@ uid: domviewer_installation
 
 ## Deploying the DOM Viewer
 
-1. Look up the [DOM Viewer](https://catalog.dataminer.services/details/08aa327a-eb86-4b6a-9fcc-c3f109a26f8a) in the DataMiner Catalog.
+1. Look up the [DOM Viewer](https://catalog.dataminer.services/details/08aa327a-eb86-4b6a-9fcc-c3f109a26f8a) in the Catalog.
 
    > [!TIP]
-   > To get to know this tool, you can instead deploy the tutorial package [Tutorial - DOM Viewer](https://catalog.dataminer.services/details/fea99fc7-63fc-40da-85fb-db1ca914986a) from the DataMiner Catalog. This package includes the DOM Viewer itself as well as the example modules used in [Kata #54: DOM Viewer](https://community.dataminer.services/courses/kata-54/).
+   > To get to know this tool, you can instead deploy the tutorial package [Tutorial - DOM Viewer](https://catalog.dataminer.services/details/fea99fc7-63fc-40da-85fb-db1ca914986a) from the Catalog. This package includes the DOM Viewer itself as well as the example modules used in [Kata #54: DOM Viewer](https://community.dataminer.services/courses/kata-54/).
 
 1. Click the *Deploy* button.
 

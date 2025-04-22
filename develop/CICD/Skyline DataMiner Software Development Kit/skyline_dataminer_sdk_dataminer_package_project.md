@@ -15,7 +15,7 @@ The project is by default configured to create a .dmapp file every time you buil
 
 When you compile or build the project, you will find the generated .dmapp in the standard output folder, which is typically the *bin* folder of your project.
 
-When you publish the project, a corresponding item will be created in the online DataMiner Catalog.
+When you publish the project, a corresponding item will be created in the online Catalog.
 
 ## Adding extra artifacts in the same solution
 
@@ -119,7 +119,7 @@ string setupContentPath = installer.GetSetupContentDirectory();
 
 ## Publishing to the Catalog
 
-By default, a project is created with support for publishing to the DataMiner Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow.
+By default, a project is created with support for publishing to the Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow.
 
 ### Publishing manually
 
@@ -219,7 +219,7 @@ With this setup, any push with new content (including the initial creation) to t
 1. Create a new release, select the desired version as a **tag**, and provide a title and description.
 
 > [!NOTE]
-> The description will be visible in the DataMiner Catalog.
+> The description will be visible in the Catalog.
 
 ### Publishing to the Catalog with the complete CI/CD workflow
 
@@ -274,7 +274,7 @@ The following secrets and variables will have been added to your repository afte
 1. Create a new release, select the desired version as a **tag**, and provide a title and description.
 
 > [!NOTE]
-> The description will be visible in the DataMiner Catalog.
+> The description will be visible in the Catalog.
 
 ## See also
 

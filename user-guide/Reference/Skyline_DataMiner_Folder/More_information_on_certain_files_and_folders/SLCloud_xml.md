@@ -4,7 +4,7 @@ uid: SLCloud_xml
 
 # SLCloud.xml
 
-This XML file determines how DataMiner connects with the NATS cluster (from DataMiner 10.1.0/10.1.1 onwards, DataMiner uses NATS for inter-process communication). It is automatically added in the folder *C:\\Skyline DataMiner*.
+This XML file determines how DataMiner connects with the NATS cluster (from DataMiner 10.1.0/10.1.1 onwards, DataMiner uses NATS for inter-process communication). It is automatically added in the folder `C:\Skyline DataMiner`.
 
 ## Increasing the timeout for the NATS connection
 
@@ -12,7 +12,7 @@ From DataMiner 10.2.0/10.1.5 onwards, you can configure the timeout of the conne
 
 1. Stop DataMiner.
 
-1. In the folder *C:\\Skyline DataMiner*, open the file *SLCloud.xml*.
+1. In the folder `C:\Skyline DataMiner`, open the file *SLCloud.xml*.
 
 1. Add and/or configure the *ConnectTimeout* element with a value in milliseconds. Minimum value: 1000. Lower values or non-numeric values will be ignored.
 

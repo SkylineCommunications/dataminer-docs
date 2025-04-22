@@ -60,7 +60,7 @@ Where:
 
 To deploy the package:
 
-1. Go to the [Kata Node Edge](https://catalog.dataminer.services/details/package/5838) package in the DataMiner Catalog.
+1. Go to the [Kata Node Edge](https://catalog.dataminer.services/details/package/5838) package in the Catalog.
 
 1. Click the *Deploy* button to deploy the package on your DMA.
 

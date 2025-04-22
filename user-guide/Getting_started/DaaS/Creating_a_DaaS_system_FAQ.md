@@ -132,3 +132,7 @@ Yes. Within a single DaaS system, it is possible to have different nodes running
 
 > [!NOTE]
 > While you can have different nodes running in different regions, your data can only be in one region.
+
+### How can I make changes to configuration files on the DataMiner server?
+
+To make changes to configuration files on the DataMiner server, for example to [enable alarm blinking](xref:Making_alarms_without_owner_blink), contact <daas@dataminer.services>.

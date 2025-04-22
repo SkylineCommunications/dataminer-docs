@@ -53,7 +53,7 @@ Up to now, the labeling of behavioral anomalies was purely based on the change p
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
+SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the `C:\Skyline DataMiner\Logging` folder or one of its subfolders:
 
 | Type of file to be retrieved | Request | Response |
 |---|---|---|
@@ -416,7 +416,7 @@ For example, when I install *MyConnector 1.0.0.1* for the first time, it will au
 A connector will only be promoted to "production version" if its first version is installed/uploaded in one of the following ways:
 
 - When it is published from within DataMiner Integration Studio (DIS).
-- When it is deployed from the [DataMiner Catalog](https://catalog.dataminer.services/).
+- When it is deployed from the [Catalog](https://catalog.dataminer.services/).
 - When its *.dmprotocol* file is uploaded from the *Protocols & Templates* app in DataMiner Cube.
 
 > [!NOTE]

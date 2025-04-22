@@ -11,7 +11,7 @@ uid: DataMiner_Health_Check_Tool_Installation
 
 ## Deploying the DataMiner Health Check Tool
 
-1. Look up the [*DataMiner Health Check* package](https://catalog.dataminer.services/details/56b1b9e0-ffe1-4bd2-b5d2-06c17d97c6b1) in the DataMiner Catalog.
+1. Look up the [*DataMiner Health Check* package](https://catalog.dataminer.services/details/56b1b9e0-ffe1-4bd2-b5d2-06c17d97c6b1) in the Catalog.
 
 1. Deploy the package to your DataMiner Agent by clicking the *Deploy* button.
 

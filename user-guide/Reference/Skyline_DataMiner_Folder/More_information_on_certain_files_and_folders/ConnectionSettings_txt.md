@@ -1,5 +1,6 @@
 ---
 uid: ConnectionSettings_txt
+keywords: enabling gRPC, gRPC configuration, disabling .Net Remoting
 ---
 
 # ConnectionSettings.txt

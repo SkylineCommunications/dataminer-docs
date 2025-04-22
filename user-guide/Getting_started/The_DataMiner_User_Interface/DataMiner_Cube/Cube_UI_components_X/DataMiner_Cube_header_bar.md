@@ -28,6 +28,8 @@ In the header bar of DataMiner Cube, you can find the following items:
 
   - *Account details*: Opens your user card.
 
+  - ![Copy session link](~/user-guide/images/Copy.png) *Copy session link* icon: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42389-->. This icon allows you to copy the current Cube session as a link, which you can then share with another user. If the copied link is pasted into the address box of a browser, DataMiner Cube will open automatically and connect to the shared session.
+
   - *X online contacts*: Displays the contacts that are currently online. Right-click a contact in the list to access a menu that allows you to exchange [chat messages](xref:chat) with them or to disconnect them (if you have the necessary permissions to do so).
 
   - *Settings*: Opens the *Settings* window.

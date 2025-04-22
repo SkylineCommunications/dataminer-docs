@@ -46,7 +46,7 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 1. Connect to a virtual switch that has internet access (either the default switch or a custom one).
 
    > [!NOTE]
-   > If you choose the default virtual switch, you will only be able to use [remote access](xref:Cloud_Remote_Access) through dataminer.services to access the system outside of the virtual machine environment.
+   > If you choose the default virtual switch, you will only be able to use [remote access](xref:About_Remote_Access) through dataminer.services to access the system outside of the virtual machine environment.
 
 1. Connect the virtual hard disk that you have just downloaded.
 
@@ -108,7 +108,7 @@ Follow the below steps to configure your DataMiner Agent:
 
 1. Fill in the required details to connect your DataMiner Agent to dataminer.services and click *Next*:
 
-   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_DCP_keys).
+   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
    - *System Name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
    - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
    - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
@@ -185,7 +185,7 @@ If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing
 
 ## Switching from subscription mode to an offline demo license
 
-When you deploy a DataMiner Agent using the pre-installed DataMiner Virtual Hard Disk, your system will automatically be licensed and run in subscription mode. A DataMiner Agent running in subscription mode **has to remain connected** to [dataminer.services](xref:AboutCloudPlatform) to keep it licensed. If for some reason you cannot keep your Agent connected to [dataminer.services](xref:AboutCloudPlatform), it will automatically shut down after 1 month.
+When you deploy a DataMiner Agent using the pre-installed DataMiner Virtual Hard Disk, your system will automatically be licensed and run in subscription mode. A DataMiner Agent running in subscription mode **has to remain connected** to [dataminer.services](xref:about_dataminer_services) to keep it licensed. If for some reason you cannot keep your Agent connected to [dataminer.services](xref:about_dataminer_services), it will automatically shut down after 1 month.
 
 If after this period you want to extend the usage of the system, you can convert your subscription installation to an offline demo installation:
 

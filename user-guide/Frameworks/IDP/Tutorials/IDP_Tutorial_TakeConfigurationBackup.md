@@ -49,7 +49,7 @@ Instead of creating the CI Type from scratch, you will generate it based on an e
 
 1. Deploy the connector to start from:
 
-   1. Deploy the latest version of the [Generic Switch](https://catalog.dataminer.services/details/connector/931) connector from the DataMiner Catalog.
+   1. Deploy the latest version of the [Generic Switch](https://catalog.dataminer.services/details/connector/931) connector from the Catalog.
 
       > [!TIP]
       > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)

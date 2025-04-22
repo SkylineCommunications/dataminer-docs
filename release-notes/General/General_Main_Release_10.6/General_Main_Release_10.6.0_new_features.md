@@ -29,7 +29,7 @@ Note that when Swarming is enabled, this will result in some major changes to th
 
 - Element configuration will be stored in the cluster-wide database instead of in the element XML files on the disk of the DataMiner Agent hosting each element.
 
-  When Swarming is enabled, a file named *Where are my elements.txt* will be present in the *C:\\Skyline DataMiner\\Elements\\* folder. In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
+  When Swarming is enabled, a file named *Where are my elements.txt* will be present in the `C:\Skyline DataMiner\Elements\` folder. In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
 
 When you create or update an element in DataMiner Cube, you will be able to indicate that the element is not allowed to swarm to another host. To do so, go to the *Advanced* section, and enable to *Block Swarming* option. By default, this option will be set to false.
 
@@ -213,7 +213,7 @@ Up to now, the DataMiner Agent to which you were connected would handle all requ
 
 ##### Configuration
 
-In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
+In the `C:\Skyline DataMiner\Webpages\API\Web.config` file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
 
 - `<add key="visualOverviewLoadBalancer" value="true" />`
 
@@ -249,7 +249,7 @@ The following new messages can now be used to which you can target to be sent to
 
 ##### Logging
 
-Additional logging with regard to visual overview load balancing will be available in the web logs located in the *C:\\Skyline DataMiner\\Logging\\Web* folder.
+Additional logging with regard to visual overview load balancing will be available in the web logs located in the `C:\Skyline DataMiner\Logging\Web` folder.
 
 #### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Correlation engine [ID 41653]
 
@@ -436,7 +436,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 </MaintenanceSettings>
 ```
 
-#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480]
+#### Relational anomaly detection [ID 41983] [ID 42034] [ID 42181] [ID 42276] [ID 42283] [ID 42319] [ID 42429] [ID 42480] [ID 42602]
 
 <!-- RNs 41983: MR 10.6.0 - FR 10.5.3 -->
 <!-- RNs 42034: MR 10.6.0 - FR 10.5.3 -->
@@ -446,6 +446,7 @@ If you do want such information events to be generated, you can add the `SkipInf
 <!-- RNs 42319: MR 10.6.0 - FR 10.5.4 -->
 <!-- RNs 42429: MR 10.6.0 - FR 10.5.5 -->
 <!-- RNs 42480: MR 10.6.0 - FR 10.5.5 -->
+<!-- RNs 42602: MR 10.6.0 - FR 10.5.6 -->
 
 Relational anomaly detection (RAD) will detect when a group of parameters deviates from its normal behavior. A user can configure one or more groups of parameter instances that should be monitored together, and RAD will then learn how the parameter instances in these groups are related.
 
@@ -453,7 +454,7 @@ Whenever the relation is broken, RAD will detect this and generate suggestion ev
 
 ##### Configuration file
 
-Per DataMiner Agent, the above-mentioned parameter groups must be configured in the *C:\\Skyline DataMiner\\Analytics\\RelationalAnomalyDetection.xml* file. This file will be read when SLAnalytics starts up, when RAD is enabled or re-enabled, or when a *ReloadMadConfigurationMessage* is sent.
+Per DataMiner Agent, the above-mentioned parameter groups must be configured in the `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml` file. This file will be read when SLAnalytics starts up, when RAD is enabled or re-enabled, or when a *ReloadMadConfigurationMessage* is sent.
 
 The configuration file must be formatted as follows.
 
@@ -524,6 +525,7 @@ The following API messages can be used to create, retrieve and remove RAD parame
 > [!NOTE]
 >
 > - Names of RAD parameter groups will be processed case-insensitive.
+> - When a Relational Anomaly Detection (RAD) parameter group is deleted, all open suggestion events associated with that parameter group will automatically be cleared.
 > - The following messages have been deprecated: *AddMADParameterGroupMessage*, *GetMADParameterGroupInfoMessage*, *RemoveMADParameterGroupMessage*, and *RetrainMADModelMessage*.
 
 #### SLNetClientTest tool: Element process ID information [ID 42013]
@@ -558,3 +560,99 @@ If multiple settings indicate that the element should be running in isolation mo
 >
 > - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
 > - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
+
+#### Tracking DataMiner app package contents via SLNet [ID 42353]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+`AppPackageContent` classes have now been added to SLNet. These classes can be accessed via `AppPackageContentHelper`, and will allow you to track which items (e.g. connectors, Automation scripts, etc.) were installed using a *.dmapp* package.
+
+Using these classes, you can add, update and delete AppPackageContent records in bulk. Each record will contain the following fields:
+
+- ID (GUID)
+- DmappName (string)
+- DmappVersion (string)
+- DmappCatalogGuid (GUID)
+- ContentType (type of installed item)
+- ContentName (unique identifier per type)
+- ContentHash (hash of the content at installation, which will allow tracking changes)
+
+By default, all users will have read access to these records, but only users with *Install Application Package* permission will be able to edit them.
+
+> [!IMPORTANT]
+> This functionality will only work on systems using STaaS or systems using an OpenSearch/Elasticsearch indexing database. It will not work on systems using a Cassandra database.
+
+#### New NotifyProtocol call NT_CLEAR_PARAMETER [ID 42397]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+A new NotifyProtocol call *NT_CLEAR_PARAMETER* (474) can now be used to clear tables and single parameters. When used, it will also clear the parameter's display value and save any changes when the parameter is saved.
+
+Internally, this new *NT_CLEAR_PARAMETER* call will now also be used by the existing SLProtocol function `ClearAllKeys()`. As a result, the latter will now be able to clear tables of which the RTDisplay setting was not set to true.
+
+> [!NOTE]
+>
+> - *NT_CLEAR_PARAMETER* cannot be used to clear table columns.
+> - This new NotifyProtocol method can be invoked from within a QAction by using the `protocol.ClearParameter(<paramId>`) function.
+> - When using `ProtocolExt`, you can now use e.g. `protocol.getRequests.Clear()` to clear a table parameter named *getRequests*. Internally, this new `Clear()` function will then execute a `protocol.ClearAllKeys(<getRequests parameter ID>)` call.
+
+#### Automation: Separate log file for every Automation script that is run [ID 42572]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+From now on, when an Automation script is run, every entry that is logged in the *SLAutomation.txt* file by the `Engine.Log` method will also be logged in a separate log file located in `C:\Skyline DataMiner\Logging\Automation\`. That log file will have a name that is identical to that of the Automation script.
+
+- The first time an Automation script is run, a log file will be created in `C:\Skyline DataMiner\Logging\Automation\` for that particular script.
+- After a DataMiner restart, the first time a script is executed, its existing log file will get the "_Bak" suffix and a new log file will be created.
+- If an Automation script is renamed, a new log file will be created with a name identical to that of the renamed script. The old file will be kept.
+- If you want to configure a custom log level for a particular Automation script, send an `UpdateLogfileSettingMessage` in which *Name* is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.
+- These new Automation script log files will also be included in SLLogCollector packages.
+- Each time a DataMiner upgrade package is installed, all Automation script log files will be deleted.
+
+Log entry format: `1|2|3|4|5|6|7|8`
+
+1. Date/time
+1. "SLManagedAutomation"
+1. Method that created the log entry
+1. Log type
+1. Log level
+1. Thread ID
+1. Script run ID
+1. Message
+
+Example: `2025/04/01 16:31:31.813|SLManagedAutomation|RunSafe|INF|0|959|473|Example message`
+
+> [!NOTE]
+>
+> - In the Automation script log file, you will find an indication of when the script execution started and stopped. However, this indication will be slightly different from the one you will find in the *SLAutomation.txt* log file. The one in the *SLAutomation.txt* log file will represent the total time it took for the script to run, while the one in the script log file will only take into account the C# blocks in the Automation script.
+> - For each entry that is logged in one of the above-mentioned script log files, an identical copy will also be logged in the *SLAutomation.txt* file. However, note that the timestamps of both entries may not be identical.
+
+#### SNMPv3: Parameter value can now be used as context name or context ID when executing an SNMP get or set command [ID 42676]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+In a connector of an SNMPv3 element, it is now possible to indicate that the value of a specific parameter should be used as context name or context ID whenever an SNMP get command or an SNMP set command is executed on the particular connection.
+
+To define that the value of a particular parameter should be used as context name for connection 0, specify the following:
+
+```xml
+<Param ...>
+    ...
+    <SNMP options="ContextName:0"/>
+    ...
+</Param>
+```
+
+To define that the value of a particular parameter should be used as context ID for connection 0, specify the following:
+
+```xml
+<Param ...>
+    ...
+    <SNMP options="ContextID:0"/>
+    ...
+</Param>
+```
+
+If the parameter is not initialized or is set to an empty string, the default parameter value will be used (i.e. an empty string).
+
+The context name and context ID can be changed at run-time, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).

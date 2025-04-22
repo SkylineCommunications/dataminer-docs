@@ -15,8 +15,8 @@ items:
   topicUid: DataMiner_Frameworks
   href: Frameworks/toc.yml
 - name: dataminer.services
-  topicUid: dataminerservices
-  href: Cloud_Platform/toc.yml
+  topicUid: dataminer_services
+  href: dataminer_services/toc.yml
 - name: Troubleshooting
   topicUid: Part6Troubleshooting
   href: Troubleshooting/toc.yml

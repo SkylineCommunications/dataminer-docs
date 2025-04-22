@@ -30,7 +30,7 @@ For more details about what each workflow does, you can check one of the links b
 
 ### GitHub to Catalog tool
 
-Most reusable workflows make use of the GitHub to Catalog tool. This tool auto-generates an *auto-generated-catalog.yml* file, which can extend an existing *catalog.yml* (or *manifest.yml*) file by adding metadata and registration details for a DataMiner Catalog item. To function, the GitHub repository must infer the Catalog item type using either naming conventions or GitHub topics.
+Most reusable workflows make use of the GitHub to Catalog tool. This tool auto-generates an *auto-generated-catalog.yml* file, which can extend an existing *catalog.yml* (or *manifest.yml*) file by adding metadata and registration details for a Catalog item. To function, the GitHub repository must infer the Catalog item type using either naming conventions or GitHub topics.
 
 For more information, refer to the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [inferring the Catalog item type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
 
@@ -65,7 +65,7 @@ jobs:
       repository: ${{ github.repository }}
       owner: ${{ github.repository_owner }}
       sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
-      # The API-key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
+      # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
       api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}

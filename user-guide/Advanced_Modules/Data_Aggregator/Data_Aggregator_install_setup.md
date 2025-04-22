@@ -8,7 +8,7 @@ Data Aggregator does not necessarily have to be installed on a server running a 
 
 ## Prerequisites
 
-- [DataMiner Cloud Pack](xref:CloudPackages) 2.8.4 or higher must be installed on the server where you want to install Data Aggregator.
+- [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack) 2.8.4 or higher must be installed on the server where you want to install Data Aggregator.
 
 - The [.NET 8](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) hosting bundle must be installed on the server where you want to install Data Aggregator.
 
@@ -17,7 +17,7 @@ Data Aggregator does not necessarily have to be installed on a server running a 
   > [!NOTE]
   > If you want to use queries with [ad hoc data sources](xref:Get_ad_hoc_data), you will need DataMiner 10.3.3/10.4.0 or higher.
 
-- CoreGateway 2.12.0 or higher (included in Cloud Pack 2.8.4) must be installed on the DataMiner Agents you want to use Data Aggregator with. To install this DxM, you can use the [DataMiner Cloud Pack](xref:CloudPackages). The DMAs do not have to be connected to dataminer.services.
+- CoreGateway 2.12.0 or higher (included in Cloud Pack 2.8.4) must be installed on the DataMiner Agents you want to use Data Aggregator with. To install this DxM, you can use the [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack). The DMAs do not have to be connected to dataminer.services.
 
 ## Installing Data Aggregator
 
