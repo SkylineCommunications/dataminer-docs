@@ -129,14 +129,12 @@ Follow the below steps to configure your DataMiner Agent:
 
 ## WSL management
 
-If you selected the option *Self-hosted - Local storage*, that means you are running a WSL container for your storage.
-For users that optionally want to manage the configuration of either Cassandra or OpenSearch can connect to the container.
+If you selected the option *Self-hosted - Local storage*, which is not recommended and should only be done for **testing and staging environments**, that means you are running a WSL container for your storage.
 
-To connect to the WSL you will need to open a command prompt with the Administrator user (or the user that is going through the wizard) and run the `wsl` command.
-It should log in automatically and connect to the WSL container.
+If you want to manage the configuration of Cassandra or OpenSearch for this setup, you should **connect to the container**. To do so, you will need to open a command prompt with the Administrator user (or the user account used for the installation) and run the `wsl` command. This way, you should automatically be logged in and connected to the WSL container.
 
-   > [!NOTE]
-   > WSL always runs under a user, it is not possible to reach a WSL container from another user account.
+> [!NOTE]
+> WSL always runs under a specific user. It is not possible to reach a WSL container from another user account.
 
 ### Cassandra
 
@@ -145,12 +143,17 @@ Cassandra is installed with the following default credentials:
 - cassandra
 - DataMiner123!
 
-When Cassandra is running you can change the password with `cqlsh -u cassandra -p DataMiner123!` and enter the following query: `alter role cassandra with password = 'MyNewPassword123!';`
-Exit *cqlsh* with `exit`.
+When Cassandra is running, you can change the password as follows:
 
-### Opensearch
+1. Use the following command: `cqlsh -u cassandra -p DataMiner123!`
 
-The Opensearch admin user has the following default credentials:
+1. Enter the following query: `alter role cassandra with password = 'MyNewPassword123!';`
+
+1. Exit *cqlsh* using the `exit` command.
+
+### OpenSearch
+
+The OpenSearch admin user has the following default credentials:
 
 - admin
 - DataMiner123!
@@ -167,7 +170,7 @@ You can change the admin password by following these steps:
 
 1. Update the user account file: `sudo vi /etc/opensearch/opensearch-security/internal_users.yml`
 
-1. Update the hash at the admin user account with your hashed password.
+1. Update the hash in the admin user account with your hashed password.
 
 ## Restoring a backup onto the virtual hard disk
 
