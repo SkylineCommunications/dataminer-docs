@@ -29,7 +29,7 @@ To configure which users can access and/or edit a folder or dashboard:
 
    The available access levels are:
 
-   - *No access*: Users cannot view or edit the dashboard folder or dashboard. The folder/dashboard will be hidden from the [Dashboards app sidebar](xref:Overview_of_the_Dashboards_app_UI#the-dashboards-app-sidebar) and will be inaccessible even with a direct link. This option is only available in the dropdown menu next to *Everyone*.
+   - *No access*: Users cannot view or edit the dashboard folder or dashboard. The folder/dashboard will be hidden from the [Dashboards app sidebar](xref:Overview_of_the_Dashboards_app_UI#the-dashboards-app-sidebar) and will be inaccessible even with a direct link. When applied to a folder, *No access* also hides all subfolders and dashboards inside it, regardless of their individual permission settings. This option is only available in the dropdown menu next to *Everyone*.
 
    - *Viewer*: Users can view the folder or dashboard. They can interact with dashboard components, but they cannot make any modifications to dashboard components or settings. For a folder, they are also unable to add new dashboards to the folder or change folder settings.
 
