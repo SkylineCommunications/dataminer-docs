@@ -4,7 +4,7 @@ uid: VerifyNatsCluster
 
 # Verify NATS Cluster
 
-From DataMiner 10.5.0 [CU1]/10.5.4 onwards, the *VerifyNatsCluster* prerequisite check is included in upgrade packages. It verifies whether the crucial NATS service used by DataMiner is running on all required DataMiner Agents and whether communication between all NATS nodes is possible.
+From DataMiner 10.5.0 [CU3]/10.5.6 onwards<!-- RN 42206 -->, the *VerifyNatsCluster* prerequisite check is included in upgrade packages. It verifies whether the crucial NATS service used by DataMiner is running on all required DataMiner Agents and whether communication between all NATS nodes is possible.
 
 The same prerequisite is also available as a BPA test in System Center.
 
