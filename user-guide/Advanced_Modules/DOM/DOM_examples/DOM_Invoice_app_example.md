@@ -14,7 +14,7 @@ The following data will be stored for individual invoices:
 
 - Invoice Date (DateTime)
 
-- Status (Enum with values *created*, *sent*, *payed*)
+- Status (Enum with values *created*, *sent*, *paid*)
 
 - Ordered Products
 
@@ -108,11 +108,11 @@ var invoiceDateFieldDescriptor = new FieldDescriptor()
     Tooltip = "Date when the invoice was sent"
 };
 
-// FieldDescriptor for the 'Status' field (Options: created, sent, payed)
+// FieldDescriptor for the 'Status' field (Options: created, sent, paid)
 var genericEnum = new GenericEnum<int>();
 genericEnum.AddEntry("Created", 0);
 genericEnum.AddEntry("Sent", 1);
-genericEnum.AddEntry("Payed", 2);
+genericEnum.AddEntry("Paid", 2);
 
 var statusFieldDescriptor = new GenericEnumFieldDescriptor()
 {
@@ -373,7 +373,7 @@ domInstance.AddOrUpdateFieldValue(generalSectionDefinition, totalAmountFieldDesc
 Once the system is fully set up, you can filter on the data.
 
 ```csharp
-// Retrieve all invoices that have not been payed for more than 14 days
+// Retrieve all invoices that have not been paid for more than 14 days
 var twoWeeksAgo = DateTime.Now.AddDays(-14);
 var dateFilter = DomInstanceExposers.FieldValues.DomInstanceField(invoiceDateFieldDescriptorId).LessThanOrEqual(twoWeeksAgo);
 var statusFilter = DomInstanceExposers.FieldValues.DomInstanceField(statusFieldDescriptorId).NotEqual(2);
