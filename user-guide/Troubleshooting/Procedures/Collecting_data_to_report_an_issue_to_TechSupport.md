@@ -53,7 +53,7 @@ When investigating issues related to DataMiner Cube, Cube Debug information is i
 
 ### Cube is connected to your DMA
 
-To export Cube debug information:
+If Cube is connected to your DMA, collect Cube debug information as follows:
 
 1. In DataMiner Cube, go to *Apps* > *About*.
 
@@ -61,9 +61,11 @@ To export Cube debug information:
 
    ![Export debug information](~/user-guide/images/Debug_information.png)<br/>*DataMiner Cube version 10.3.10*
 
+1. Open SLClientTest tool to [follow Cube and create a transcript](xref:SLNetClientTest_tracking_dma_communication#following-a-dataminer-cube-session).
+
 ### Cube is unable to connect to your DMA
 
-To export Cube debug information:
+If Cube is unable to connect to your DMA, export Cube debug information as follows:
 
 1. On the login page, click the cogwheel button in the lower right corner and select *About* in the menu.
 
@@ -71,7 +73,7 @@ To export Cube debug information:
 
 1. In the *general* tab, select *Export debug information*.
 
-To investigate why Cube could not connect to your DMA:
+In addition, investigate why Cube could not connect to your DMA:
 
 1. Go to the DataMiner Cube start window, click the cogwheel button in the lower right corner, and select *View logging*.
 
