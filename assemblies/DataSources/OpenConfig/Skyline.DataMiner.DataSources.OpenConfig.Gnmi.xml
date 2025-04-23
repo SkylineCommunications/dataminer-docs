@@ -137,7 +137,7 @@
             <param name="sampleInterval">Interval between samples. Assign zero to receive at lowest interval as possible.</param>
             <param name="paths">The model paths to subscribe to. A path should be formatted as a concatenation of node names separated by either a forward or backward slash.</param>
             <param name="suppressRedundant">When <i>true</i>, only values that changed during the interval will be sent.</param>
-            <param name="heartbeatInterval">Alters the suppress-redundant behaviour and sets an interval at which values should be sent even if they did not change. Value can't be negative and TimeSpan.Zero disables the feature.</param>
+            <param name="heartbeatInterval">Alters the suppress-redundant behavior and sets an interval at which values should be sent even if they did not change. Value cannot be negative and TimeSpan.Zero disables the feature.</param>
             <param name="action">The callback action to execute when an update is received.</param>
             <exception cref="T:System.ArgumentNullException">The action argument cannot be <see langword="null"/> when there is no DataMapper present.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">The sampleInterval argument cannot be negative.</exception>
@@ -171,7 +171,7 @@
             <param name="paths">The model paths to subscribe to. This uses the actual gNMI Path class.</param>
             <param name="action">The callback action to execute when an update is received.</param>
             <param name="suppressRedundant">When <i>true</i>, only values that changed during the interval will be sent.</param>
-            <param name="heartbeatInterval">Alters the suppress-redundant behaviour and sets an interval at which values should be sent even if they did not change. Value can't be negative and TimeSpan.Zero disables the feature.</param>
+            <param name="heartbeatInterval">Alters the suppress-redundant behavior and sets an interval at which values should be sent even if they did not change. Value cannot be negative and TimeSpan.Zero disables the feature.</param>
             <exception cref="T:System.ArgumentNullException">The action argument cannot be <see langword="null"/> when there is no DataMapper present.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">The sampleInterval argument cannot be negative.</exception>
             <exception cref="T:System.ArgumentOutOfRangeException">The heartbeatInterval argument cannot be negative.</exception>

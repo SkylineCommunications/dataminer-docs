@@ -6,7 +6,7 @@
     <members>
         <member name="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient">
              <summary>
-             A class that represents a single gRPC connection which can be used to handle a particular gRPC service's communication.
+             A class that represents a single gRPC connection that can be used to handle a particular gRPC service's communication.
              This requires the CommunicationGateway DxM to be available.
             
              'Channel' refers to a virtual connection to a conceptual endpoint in the DxM.
@@ -22,8 +22,8 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.ChannelIdentifier">
             <summary>
-            The channel ID helps identify the source when investigating logging and traces,
-            it also makes the subjects to communicate over the message broker with unique.
+            The channel ID helps identify the source when investigating logging and traces.
+            It also makes the subjects to communicate over the message broker with unique.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.ChannelId">
@@ -34,7 +34,7 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.InternalLogger">
             <summary>
-            The logger instance that won't throw exceptions.
+            The logger instance that will not throw exceptions.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.Logger">
@@ -95,7 +95,7 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient._workloadMonitor">
             <summary>
-            Allows one to retrieve a snapshot of some workload related information.
+            Allows you to retrieve a snapshot of some workload-related information.
             </summary>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.#ctor(System.UInt32,System.UInt32,System.String,Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.DataSourceConfiguration,Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.ILogger,CommunicationGateway.Grpc.Api.Subjects.Enums.ServicesGroupType)">
@@ -159,7 +159,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.AddConnectionMetadata(Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.GrpcMetadata)">
             <summary>
-            Adds metadata key-value pairs to the gRPC channel's metadata that is sent with every request. Duplicate keys will be dropped, and not be present in the return value.
+            Adds metadata key-value pairs to the gRPC channel's metadata that is sent with every request. Duplicate keys will be dropped and will not be present in the return value.
             </summary>
             <param name="metadata">The metadata to add to the existing metadata for this channel.</param>
             <returns>The values that were actually added to the channel's metadata.</returns>
@@ -168,7 +168,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.RemoveConnectionMetadata(System.String[])">
             <summary>
-            Removes metadata keys and their associated values from the gRPC channel's metadata that is sent with every request. Keys that can't be found will not be present in the return value.
+            Removes metadata keys and their associated values from the gRPC channel's metadata that is sent with every request. Keys that cannot be found will not be present in the return value.
             Note that keys for binary values (byte arrays) should end with "-bin".
             </summary>
             <param name="keys">The collection of keys that should be removed from this channel's gRPC metadata.</param>
@@ -390,7 +390,7 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.DataSourceConfiguration.IpAddress">
             <summary>
-            The IP Address or domain name of the endpoint.
+            The IP address or domain name of the endpoint.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.DataSourceConfiguration.Port">
@@ -468,7 +468,7 @@
         </member>
         <member name="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IMiddlewareClient">
              <summary>
-             A class that represents a single gRPC connection which can be used to handle a particular gRPC service's communication.
+             A class that represents a single gRPC connection that can be used to handle a particular gRPC service's communication.
              This requires the CommunicationGateway DxM to be available.
             
              'Channel' refers to a virtual connection to a conceptual endpoint in the DxM.
@@ -478,8 +478,8 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IMiddlewareClient.ChannelId">
             <summary>
-            The channel ID helps identify the source when investigating logging and traces,
-            it also makes the subjects to communicate over the message broker with unique.
+            The channel ID helps identify the source when investigating logging and traces.
+            It also makes the subjects to communicate over the message broker with unique.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IMiddlewareClient.ChannelName">
@@ -489,7 +489,7 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IMiddlewareClient.Logger">
             <summary>
-            The logger instance that is wrapped so it won't throw exceptions.
+            The logger instance that is wrapped so it will not throw exceptions.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IMiddlewareClient.IsConnected">
@@ -500,7 +500,7 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IMiddlewareClient.WorkloadMonitor">
             <summary>
-            Allows one to retrieve a snapshot of some workload related information.
+            Allows you to retrieve a snapshot of some workload-related information.
             </summary>
         </member>
         <member name="E:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IMiddlewareClient.ConnectionStateChanged">
@@ -545,7 +545,7 @@
         </member>
         <member name="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IWorkloadMonitor">
             <summary>
-            Makes it possible to retrieve a snapshot of some workload related information.
+            Makes it possible to retrieve a snapshot of some workload-related information.
             </summary>
         </member>
         <member name="E:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IWorkloadMonitor.QueueFull">
@@ -571,7 +571,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.MessageBrokerSubscriptionFailedException.#ctor(System.String)">
             <summary>
-            Builds an exception based on a message, reverts to the default behavior of the Exception class.
+            Builds an exception based on a message. Reverts to the default behavior of the Exception class.
             </summary>
             <param name="message">A description of the error and any relevant information.</param>
         </member>
@@ -601,7 +601,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.NoResponseException.#ctor(System.String)">
             <summary>
-            Builds an exception based on a message, reverts to the default behavior of the Exception class.
+            Builds an exception based on a message. Reverts to the default behavior of the Exception class.
             </summary>
             <param name="message">A description of the error and any relevant information.</param>
         </member>
@@ -636,7 +636,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException.#ctor(System.String)">
             <summary>
-            Builds an exception based on a message, reverts to the default behavior of the Exception class.
+            Builds an exception based on a message. Reverts to the default behavior of the Exception class.
             </summary>
             <param name="message">A description of the error and any relevant information.</param>
         </member>
@@ -668,7 +668,7 @@
         </member>
         <member name="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.WorkloadMonitor">
             <summary>
-            Makes it possible to retrieve a snapshot of some workload related information.
+            Makes it possible to retrieve a snapshot of some workload-related information.
             </summary>
         </member>
         <member name="E:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.WorkloadMonitor.QueueFull">
