@@ -125,7 +125,7 @@ To book an appointment, you will need to use the booking link that you will find
 > [!NOTE]
 > 
 > - You can cancel or reschedule an appointment up to 96 hours before it starts, using the confirmation email you received when booking the appointment. If you cannot update the appointment online, please contact [Skyline Academy](mailto:academy@skyline.be) or your team of examiners.
-> - In order to take the DataMiner Automation exam you must have obtained your DataMiner Fundamentals and DataMiner Configurator certificate or gained expertise through experience. 
+> - In order to take the DataMiner Automation exam you must have obtained your DataMiner Fundamentals and DataMiner Configurator certificate or gained expertise through experience.
 
 ### Exam format and grading
 
@@ -170,7 +170,7 @@ To prepare effectively for the exam:
 
 - Schedule check-ins with your examiner via the booking page if you have any questions.
 
-## Scripts & Connectors HTTP & SNPM Basics exam guide
+## Scripts & Connectors HTTP & SNMP Basics exam guide
 
 Are you preparing to take the Scripts & Connectors HTTP or SNMP Basics exam? Below you can find all the information you need, including the certification process, the exam format, the scoring criteria, and tips on how to prepare for the exam.
 
@@ -183,19 +183,19 @@ After you have received this email, you will have at most **three months** to fi
 To book an appointment, you will need to use the booking link that you will find in the email you received with information about the start of the certification process.
 
 > [!NOTE]
-> 
+>
 > - You can cancel or reschedule an appointment up to 96 hours before it starts, using the confirmation email you received when booking the appointment. If you cannot update the appointment online, please contact [Skyline Academy](mailto:academy@skyline.be) or your team of examiners.
-> - In order to take the Scripts & Connectors HTTP or SNMP basics exam you must have obtained your DataMiner Fundamentals and DataMiner Configurator certificate or gained expertise through experience. 
+> - In order to take the Scripts & Connectors HTTP or SNMP basics exam you must have obtained your DataMiner Fundamentals and DataMiner Configurator certificate or gained expertise through experience.
 
 ### Exam format and grading
 
-The exam conisists of two assignments, an offline assessment and a practical exercise.
+The exam consists of two assignments: an offline assessment and a practical exercise.
 
-1. The offline assessment is a quiz with multiple choice or true/false questions. This can be done at your own pace and you need a score of 80% or higher in order to start the second assignment. 
+- The **offline assessment** is a quiz with multiple choice or true/false questions, which you can take at your own pace. You will need a score of 80% or higher in order to start the second assignment.
 
-2 Before starting the practical exercise you must book an exam check-in via the booking page. During this check-in, your examiner will provide all the necessary information about the exercise. You will then have up to 3 hours to complete the task. When you have submitted your work, your examiner will evaluate it using an exam validator. You will need a score of 80% or higher to pass and earn your certification.
+- Before starting the **practical exercise** you must book an exam check-in via the booking page. During this check-in, your examiner will provide all the necessary information about the exercise. You will then have up to 3 hours to complete the task. When you have submitted your work, your examiner will evaluate it using an exam validator. You will need a score of 80% or higher to pass and earn your certification.
 
-Once you successfully passed the second assignment, you will receive your certification badge within 5 business days. If you have any questions about your score, you can book a follow-up check-in via the booking page.
+Once you have successfully passed the second assignment, you will receive your certification badge within 5 business days. If you have any questions about your score, you can book a follow-up check-in via the booking page.
 
 > [!NOTE]
 >
@@ -212,17 +212,19 @@ Once you successfully passed the second assignment, you will receive your certif
 
 - **Training DMA**:
 
-  - You can use your own DMA to do the exercise. Access to our training DMA can optionally be purchased via our [sales team](mailto:salesops@skyline.be)
- 
-- **Prerequisites**
-  - You need [Visual Studio](https://docs.dataminer.services/develop/TOOLS/ThirdPartyTools/TOOVisualStudio/Installation_procedure.html) with a [DIS license](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html).
-  - You should have knowledge of [GitHub](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources).
+  - You can use your own DMA to do the exercise. Access to our training DMA can optionally be purchased via our [Sales team](mailto:salesops@skyline.be)
+
+- **Prerequisites**:
+
+  - [Visual Studio](https://docs.dataminer.services/develop/TOOLS/ThirdPartyTools/TOOVisualStudio/Installation_procedure.html) with a [DIS license](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html).
+  - Knowledge of [GitHub](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources).
 
 ### Preparation tips
 
 To prepare effectively for the exam:
 
 - Study materials:
+
   - [DataMiner Connector Integration: HTTP Basics](https://community.dataminer.services/courses/dataminer-connector-integration-http-basics/)
   - [DataMiner Connector Integration: SNMP Basics](https://community.dataminer.services/courses/dataminer-connector-integration-snmp-basics/)
 
@@ -243,21 +245,21 @@ You will also receive an email with your user ID and password to access the trai
 To book an appointment, you will need to use the booking link that you will find in the email you received with information about the start of the certification process.
 
 > [!NOTE]
-> 
+>
 > - You can cancel or reschedule an appointment up to 96 hours before it starts, using the confirmation email you received when booking the appointment. If you cannot update the appointment online, please contact [Skyline Academy](mailto:academy@skyline.be) or your team of examiners.
-> - In order to take the Visual Overview Level 1 exam you must have obtained your DataMiner Fundamentals and DataMiner Configurator certificate or gained expertise through experience. 
+> - In order to take the Visual Overview Level 1 exam you must have obtained your DataMiner Fundamentals and DataMiner Configurator certificate or gained expertise through experience.
 
 ### Exam format and grading
 
 The exam consists of a practical exercise. Before taking the exam, you must book an exam check-in via the booking page. During this check-in, your examiner will provide all the necessary information about the exercise. You will then get some time to do the assignment offline.
 
-When you finished your assignment, you must book an exam check-in meeting with your examiner to evaluate your work. You will need a score of 85% or higher to pass and earn your certification.
+When you have finished your assignment, you must book an exam check-in meeting with your examiner to evaluate your work. You will need a score of 85% or higher to pass and earn your certification.
 
 > [!NOTE]
 >
 > - If you do not pass the exam, you have one free retake.
 > - Appointments are recorded to ensure the integrity of the process and to provide a reference for review if needed.
-> - After successfully completing the exam, you will receive your certification badge within 5 business days. 
+> - After successfully completing the exam, you will receive your certification badge within 5 business days.
 > - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded 500 DevOps Points after you successfully pass the Visual Overview level 1 exam.
 
 ### Requirements
@@ -275,6 +277,7 @@ When you finished your assignment, you must book an exam check-in meeting with y
 To prepare effectively for the exam:
 
 - Study materials:
+
   - [Visual Overview course](https://community.dataminer.services/courses/visio/)
   - Test your knowledge via the various Visual Overview [quizzes](https://community.dataminer.services/put-your-visual-overview-knowledge-to-the-test/).
   - Visio drawings on [DataMiner Docs](https://docs.dataminer.services/user-guide/Basic_Functionality/Visio/visio.html)
