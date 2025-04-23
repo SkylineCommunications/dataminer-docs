@@ -16,7 +16,7 @@ Script-based tests use custom Automation scripts to execute and retrieve data. T
 
 Several default tests are available related to the state of the DataMiner System, but you can also **integrate new tests using Automation scripts**. For the Health Check tool to recognize the new tests, the Automation scripts must be placed in the following folder in the Automation module: *Automation Scripts* > *Health Check* > *Health Check Tests*.
 
-![Health Check tests in the Automation module](~/user-guide/images/Health_Check_Automation_Path.png)
+![Health Check tests in the Automation module](~/solutions/images/Health_Check_Automation_Path.png)
 
 #### Adding a script-based test
 
@@ -28,7 +28,7 @@ Several default tests are available related to the state of the DataMiner System
 
 1. Right-click the *Test Configuration* table and select *Add Test* in the context menu.
 
-   ![Add Test option](~/user-guide/images/Health_Check_Add_Test.png)
+   ![Add Test option](~/solutions/images/Health_Check_Add_Test.png)
 
 1. In the pop-up window, fill in the required fields:
 
@@ -40,7 +40,7 @@ Several default tests are available related to the state of the DataMiner System
    - *Display Key Filter*: Apply this filter if you want the test to consider only certain entries for the test. This filter must be in the format of a regular expression.
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
 
-   ![Test configuration](~/user-guide/images/Health_Check_Configure_Test.png)
+   ![Test configuration](~/solutions/images/Health_Check_Configure_Test.png)
 
 1. Click *OK* to create the test.
 
@@ -50,7 +50,7 @@ Several default tests are available related to the state of the DataMiner System
 
 1. Right-click the test you want to edit and select *Edit Test* in the context menu.
 
-   ![Edit Test option](~/user-guide/images/Health_Check_Edit_Test.png)
+   ![Edit Test option](~/solutions/images/Health_Check_Edit_Test.png)
 
    A pop-up window will show the current configuration of the selected test.
 
@@ -72,7 +72,7 @@ Subscription-based tests allow you to select a specific standalone parameter or 
 
 1. Right-click the *Parameter Subscription Table* and select *Add Subscription* in the context menu.
 
-   ![Add Subscription option](~/user-guide/images/Health_Check_Add_Subscription.png)
+   ![Add Subscription option](~/solutions/images/Health_Check_Add_Subscription.png)
 
 1. In the pop-up window, configure the fields to set up the subscription:
 
@@ -82,7 +82,7 @@ Subscription-based tests allow you to select a specific standalone parameter or 
      - If you select *Standalone Parameter*, in the *Parameter* field, select the name of the parameter you want to subscribe to.
      - If you select *Table Parameter*, specify the table name in the *Table* field and the column name in the *Parameter* field.
 
-   ![Add Subscription window](~/user-guide/images/Health_Check_Configure_Subscription.png)
+   ![Add Subscription window](~/solutions/images/Health_Check_Configure_Subscription.png)
 
 1. Click *OK* to add the subscription.
 
@@ -92,7 +92,7 @@ Subscription-based tests allow you to select a specific standalone parameter or 
 
 1. Right-click the *Parameter Subscription Table* and select *Edit Subscription* in the context menu.
 
-   ![Edit Subscription](~/user-guide/images/Health_Check_Edit_Subscription.png)
+   ![Edit Subscription](~/solutions/images/Health_Check_Edit_Subscription.png)
 
    A pop-up window will show the current configuration of the selected subscription.
 
@@ -122,7 +122,7 @@ After you have created a subscription, you will still need to link it to a test:
    - *Display Key Filter*: Use this field if the test should only consider specific entries. The filter must be in the format of a regular expression.
    - *Status Checkbox*: Select this box if you want the text to be enabled as soon as it is created.
 
-   ![Link Subscription to Test](~/user-guide/images/Health_Check_Link_Subscription.png)
+   ![Link Subscription to Test](~/solutions/images/Health_Check_Link_Subscription.png)
 
 ## Configuring email reports
 
@@ -151,7 +151,7 @@ You have the flexibility to schedule when and how frequently tests will run to e
    - Select the time when the tests should run (for example, `22:00`).
    - Select how often the tests should be executed (*Daily*, *Weekly*, *Every* X *days*, etc.).
 
-   ![Test recurrence](~/user-guide/images/Health_Check_Recurrence.png)
+   ![Test recurrence](~/solutions/images/Health_Check_Recurrence.png)
 
 1. When you have configured the schedule, click *OK*.
 
