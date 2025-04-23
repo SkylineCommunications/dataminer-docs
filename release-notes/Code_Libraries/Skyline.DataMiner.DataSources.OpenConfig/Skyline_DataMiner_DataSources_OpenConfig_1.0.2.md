@@ -21,6 +21,6 @@ In the Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol library, the follo
 - *PreviousRateValue*
 - *PreviousRateTimestampUtc*
 
-These allow you to verify what the previous value was when using the rate calculator.
+These allow you to verify what the previous result was when using the rate calculator.
 
 When the rate calculator is called for the first time, *PreviousRateValue* will be null, and *PreviousRateTimestampUtc* will be *DateTime.MinValue*.
