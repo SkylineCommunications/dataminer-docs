@@ -218,6 +218,7 @@ Once you have successfully passed the second assignment, you will receive your c
 
   - [Visual Studio](https://docs.dataminer.services/develop/TOOLS/ThirdPartyTools/TOOVisualStudio/Installation_procedure.html) with a [DIS license](https://docs.dataminer.services/develop/TOOLS/DIS/Introduction.html).
   - Knowledge of [GitHub](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources).
+  - Basic C# knowledge
 
 ### Preparation tips
 
