@@ -21,7 +21,7 @@ To capture packets:
 
 1. Select the interface and specify a capture filter to limit the number of captured packets.
 
-Always try to provide a packet filter so only the required packets are captured. For example, the following capture filters can be used: 
+Always try to provide a packet filter so only the required packets are captured. For example, the following capture filters can be used:
 
 - *tcp port http*: Only capture HTTP traffic to or from TCP port 80.
 
@@ -55,6 +55,18 @@ Some extra steps can make it easier to capture traffic for a DataMiner element:
 1. Select the correct input interface. You can find the IP of an interface by expanding it in Wireshark.
 
    If the IP used by the element has no immediate link with the available interfaces, the interface that is used to route the traffic can be found using the following command in Powershell: `Test-NetConnection –ComputerName <ip/hostname> –DiagnoseRouting | Select-Object -Property RemoteAddress,SelectedSourceAddress`. The interface IP used for routing is shown as *SelectedSourceAddress*.
+
+## Useful tips
+
+### Make Wireshark recognize incoming SNMP data
+
+If a device uses a custom port to send packets of SNMP data, do the following to make Wireshark recognize that data as SNMP:
+
+1. Right-click a packet, and
+1. Select *Decode As...*.
+
+   ![Wireshark - Decode As](~/develop/images/Wireshark_DecodeAs.png)<br>
+   *Wireshark - 'Decode As...' command*
 
 ## Notes on using Wireshark
 
