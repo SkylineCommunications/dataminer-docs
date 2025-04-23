@@ -127,6 +127,51 @@ Follow the below steps to configure your DataMiner Agent:
 > [!IMPORTANT]
 > For security reasons, we strongly recommend creating a second user and disabling the built-in administrator account once the setup is complete. See [Managing users](xref:Managing_users).
 
+## WSL management
+
+If you selected the option *Self-hosted - Local storage*, which is not recommended and should only be done for **testing and staging environments**, that means you are running a WSL container for your storage.
+
+If you want to manage the configuration of Cassandra or OpenSearch for this setup, you should **connect to the container**. To do so, you will need to open a command prompt using the user account used for the installation (by default the Administrator account) and run the `wsl` command. This way, you should automatically be logged in and connected to the WSL container.
+
+> [!NOTE]
+> WSL always runs under a specific user. It is not possible to reach a WSL container from another user account.
+
+### Cassandra
+
+Cassandra is installed with the following default credentials:
+
+- cassandra
+- DataMiner123!
+
+When Cassandra is running, you can change the password as follows:
+
+1. Use the following command: `cqlsh -u cassandra -p DataMiner123!`
+
+1. Enter the following query: `alter role cassandra with password = 'MyNewPassword123!';`
+
+1. Exit *cqlsh* using the `exit` command.
+
+### OpenSearch
+
+The OpenSearch admin user has the following default credentials:
+
+- admin
+- DataMiner123!
+
+You can change the admin password by following these steps:
+
+1. First go to the correct directory with this command: `cd /usr/share/opensearch/plugins/opensearch-security/tools`
+
+1. Run the following command: `OPENSEARCH_JAVA_HOME=/usr/share/opensearch/jdk ./hash.sh`
+
+1. Specify a (strong) password and confirm with ENTER.
+
+   A hashed password will be generated. You can copy your `<HashedPassword>`.
+
+1. Update the user account file: `sudo vi /etc/opensearch/opensearch-security/internal_users.yml`
+
+1. Update the hash in the admin user account with your hashed password.
+
 ## Restoring a backup onto the virtual hard disk
 
 If you want to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, after you have created and connected the VM, instead of the configuration steps detailed above, follow the steps below:
