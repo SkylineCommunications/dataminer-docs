@@ -16,6 +16,10 @@ Changes introduced in DataMiner 10.4.0 [CU4]/10.4.7 could cause the code to push
 
 No fix is available yet.
 
+## Workaround
+
+Update the user's password in the DataMiner Cube System Center.
+
 ## Description
 
 If a local user was created on a DataMiner version prior to 10.4.0 [CU4]/10.4.7, it can occur that DataMiner fails to push this user to Windows. This can for instance happen in the following situations:
