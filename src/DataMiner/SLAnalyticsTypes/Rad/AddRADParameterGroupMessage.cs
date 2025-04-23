@@ -5,7 +5,7 @@ using System;
 namespace Skyline.DataMiner.Analytics.Rad
 {
     /// <summary>
-    /// Message to start monitoring a parameter group with Relational Anomaly Detection. If a group with the same name already exists on the same agent, it will be overwritten.
+    /// Message to start monitoring a parameter group with Relational Anomaly Detection. If a group with the same name already exists on the same Agent, it will be overwritten.
     /// </summary>
     [Serializable]
     public class AddRADParameterGroupMessage : GetSessionedAnalyticsMessage
@@ -16,7 +16,7 @@ namespace Skyline.DataMiner.Analytics.Rad
         public RADGroupInfo ParameterGroupInfo { get; set; }
 
         /// <summary>
-        /// Initialize a new instance of the <see cref="AddRADParameterGroupMessage"/> class.
+        /// Initializes a new instance of the <see cref="AddRADParameterGroupMessage"/> class.
         /// </summary>
         public AddRADParameterGroupMessage() { }
 

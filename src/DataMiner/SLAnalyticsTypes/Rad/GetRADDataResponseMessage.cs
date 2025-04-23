@@ -5,13 +5,13 @@ using System.Collections.Generic;
 namespace Skyline.DataMiner.Analytics.Rad
 {
     /// <summary>
-    /// A data point containing the 5 min average trend data values, the time stamp of the data point and the anomaly score of the data point according to the RAD model.
+    /// A data point containing the 5-min. average trend data values, the time stamp of the data point and the anomaly score of the data point according to the RAD model.
     /// </summary>
     [Serializable]
     public class RADDataPoint
     {
         /// <summary>
-        /// 5 min average trend data values.
+        /// 5-min. average trend data values.
         /// </summary>
         public List<double> Values { get; set; }
 
@@ -26,14 +26,14 @@ namespace Skyline.DataMiner.Analytics.Rad
         public double AnomalyScore { get; set; }
 
         /// <summary>
-        /// Create a new <see cref="RADDataPoint"/> instance.
+        /// Creates a new <see cref="RADDataPoint"/> instance.
         /// </summary>
         public RADDataPoint() { }
 
         /// <summary>
-        /// Create a new <see cref="RADDataPoint"/> instance with the given values, timestamp and anomaly score.
+        /// Creates a new <see cref="RADDataPoint"/> instance with the given values, timestamp, and anomaly score.
         /// </summary>
-        /// <param name="values">The 5-min average trend data values of the parameters in the RAD group.</param>
+        /// <param name="values">The 5-min. average trend data values of the parameters in the RAD group.</param>
         /// <param name="timestamp">The time of the data point.</param>
         /// <param name="anomalyScore">The anomaly score according to the RAD model.</param>
         public RADDataPoint(List<double> values, DateTime timestamp, double anomalyScore)

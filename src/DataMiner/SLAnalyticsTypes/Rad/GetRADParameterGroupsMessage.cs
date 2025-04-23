@@ -6,8 +6,8 @@ using System.Collections.Generic;
 namespace Skyline.DataMiner.Analytics.Rad
 {
     /// <summary>
-    /// Message to retrieve the relational anomaly detection parameter group names 
-    /// Results in a <see cref="GetRADParameterGroupsResponseMessage"/>
+    /// Message to retrieve the relational anomaly detection parameter group names.
+    /// Results in a <see cref="GetRADParameterGroupsResponseMessage"/>.
     /// </summary>
     [Serializable]
     public class GetRADParameterGroupsMessage : GetSessionedAnalyticsMessage

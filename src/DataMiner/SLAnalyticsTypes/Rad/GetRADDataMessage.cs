@@ -5,8 +5,8 @@ using System;
 namespace Skyline.DataMiner.Analytics.Rad
 {
     /// <summary>
-    /// Message to retrieve the relational anomaly scores for a given time range of historical trend data values
-    /// Results in a <see cref="GetRADDataResponseMessage"/>
+    /// Message to retrieve the relational anomaly scores for a given time range of historical trend data values.
+    /// Results in a <see cref="GetRADDataResponseMessage"/>.
     /// </summary>
     [Serializable]
     public class GetRADDataMessage : GetSessionedAnalyticsMessage

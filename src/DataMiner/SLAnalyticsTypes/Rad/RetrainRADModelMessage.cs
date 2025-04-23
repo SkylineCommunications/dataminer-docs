@@ -33,7 +33,7 @@ namespace Skyline.DataMiner.Analytics.Rad
 
     /// <summary>
     /// Message class for triggering a retraining of the Relational Anomaly Detection (RAD) model.
-    /// Results in a <see cref="RetrainRADModelResponseMessage"/>
+    /// Results in a <see cref="RetrainRADModelResponseMessage"/>.
     /// </summary>
     [Serializable]
     public class RetrainRADModelMessage : GetSessionedAnalyticsMessage

@@ -11,7 +11,7 @@ namespace Skyline.DataMiner.Analytics.Rad
     public class GetRADParameterGroupsResponseMessage : ResponseMessage
     {
         /// <summary>
-        /// Names of the relational anomaly detection parameter groups available on the targeted agent
+        /// Names of the relational anomaly detection parameter groups available on the targeted Agent.
         /// </summary>
         public List<string> GroupNames { get; set; }
 
