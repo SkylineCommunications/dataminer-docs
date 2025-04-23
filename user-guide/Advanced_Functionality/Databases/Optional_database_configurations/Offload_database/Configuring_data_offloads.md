@@ -16,6 +16,18 @@ Offloading data to files is supported from DataMiner 10.2.0/10.1.1 onwards. To d
 
 1. Configure the data offloads as detailed below and set a maximum size for the combined offload files.
 
+Offload files are located in the following folder: `C:\Skyline DataMiner\System Cache\Offload`.
+
+- Alarm properties are located in the subfolder `Alarm_Property`.
+- Alarms are located in the root folder (`C:\Skyline DataMiner\System Cache\Offload`).
+- Real-time trend data are located in the subfolder `Data`.
+- Average trend data are located in the subfolder `Dataavg`.
+
+Each DMA in the cluster will generate its own files. The files available on a specific DMA will contain information about the elements hosted on that DMA.
+
+> [!NOTE]
+> Offload files are typically generated with a .csv extension. However, files generated for alarm properties will have a .dat extension, even though they contain plain text.
+
 ## Configuring the offload rate
 
 The offload rate for trend data and alarm data can be configured in System Center.
