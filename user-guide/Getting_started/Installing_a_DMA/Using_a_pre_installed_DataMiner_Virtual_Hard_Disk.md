@@ -131,7 +131,7 @@ Follow the below steps to configure your DataMiner Agent:
 
 If you selected the option *Self-hosted - Local storage*, which is not recommended and should only be done for **testing and staging environments**, that means you are running a WSL container for your storage.
 
-If you want to manage the configuration of Cassandra or OpenSearch for this setup, you should **connect to the container**. To do so, you will need to open a command prompt with the Administrator user (or the user account used for the installation) and run the `wsl` command. This way, you should automatically be logged in and connected to the WSL container.
+If you want to manage the configuration of Cassandra or OpenSearch for this setup, you should **connect to the container**. To do so, you will need to open a command prompt using the user account used for the installation (by default the Administrator account) and run the `wsl` command. This way, you should automatically be logged in and connected to the WSL container.
 
 > [!NOTE]
 > WSL always runs under a specific user. It is not possible to reach a WSL container from another user account.
