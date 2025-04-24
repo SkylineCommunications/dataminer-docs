@@ -47,7 +47,7 @@ For information on how to do so, see [Linking your DataMiner account to your dat
 
 To maintain access to your projects and tasks via the Collaboration app, your new dataminer.services account will need to be linked to the correct organization. This is something that will need to be done by Skyline staff upon request.
 
-To send this request, after you have logged onto [collaboration.dataminer.services](https://collaboration.dataminer.services/) with your new account, contact [back.office@skyline.be](mailto:back.office@skyline.be) and ask them to link your new account to your verified organization.
+To have your new account linked to the correct organization, after you have logged onto [collaboration.dataminer.services](https://collaboration.dataminer.services/) with your new account, contact [back.office@skyline.be](mailto:back.office@skyline.be) to request this.
 
 > [!TIP]
 >
