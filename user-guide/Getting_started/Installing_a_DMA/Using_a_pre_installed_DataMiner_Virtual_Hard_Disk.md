@@ -196,6 +196,31 @@ If you want to restore a backup coming from another machine because of e.g. a ha
 
 1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
+## Configuring the new DataMiner Agent as a new agent in a failover pair
+
+If the new agent will be paired with an existing agent in a failover setup, after you have created and connected the VM, instead of the configuration steps detailed above, make sure both the existing and new DMA are prepared, and you have the necessary prerequisites. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
+
+> [!IMPORTANT]
+> Do not start DataMiner on the new agent before preparation is fully done.
+
+Once all configuration is done, request a license:
+
+1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
+
+1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the ID of the existing agent and the *Request.lic* file.
+
+   In your email, mention that it concerns a failover agent for an existing agent.
+
+1. Wait until you receive either a *dataminer.lic* or *response.lic* file from Skyline.
+
+1. When you have the *dataminer.lic* or *response.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
+
+1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+Once the new agent is running, continue with the [failover configuration in Cube](xref:Failover_configuration_in_Cube).
+
 ## Switching from subscription mode to perpetual license
 
 When you deploy a DataMiner Agent using the pre-installed DataMiner Virtual Hard Disk, your system will run in subscription mode and get licensed automatically. Part of this process involves getting a DataMiner ID, which uniquely identifies your DataMiner Agent.
