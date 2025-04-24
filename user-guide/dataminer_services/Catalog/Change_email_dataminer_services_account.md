@@ -57,7 +57,7 @@ To have your new account linked to the correct organization, after you have logg
 
 ### Transferring data on DataMiner Community (Dojo)
 
-Upon logging into Dojo with your new account, you will notice that a new account has been created. If you want to transfer the data from your old account, you will need to contact Skyline. However, note that if you opt for the transfer, your old account will be deleted.
+Upon logging onto Dojo with your new account, you will notice that a new account has been created. If you want to transfer the data from your old account, you will need to contact Skyline. However, note that if you opt for the transfer, your old account will be deleted.
 
 If you wish to transfer your data, after you have logged onto [community.dataminer.services](https://community.dataminer.services/) with your new account, contact [back.office@skyline.be](mailto:back.office@skyline.be?subject=Request%20to%20transfer%20my%20DataMiner%20Dojo%20data&body=Hi%2C%0D%0A%0D%0AI%20would%20like%20to%20transfer%20my%20DataMiner%20Dojo%20data.%0D%0AThe%20accounts%20involved%20are%20listed%20below%3A%0D%0A%0D%0AFrom%3A%0D%0A%3Cfill%20in%20email%20address%3E%0D%0A%0D%0ATo%20(new%20account)%3A%0D%0A%3Cfill%20in%20email%20address%3E%0D%0A) to request to transfer your existing data. However, because some limitations apply (as detailed below), you will need to confirm before the transfer goes ahead.
 
