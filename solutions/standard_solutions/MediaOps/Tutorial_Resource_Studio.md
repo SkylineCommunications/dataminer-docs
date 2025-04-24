@@ -16,7 +16,7 @@ Expected duration: 15 minutes
 
 ## Prerequisites
 
-- A DataMiner System using DataMiner 10.5.5 or higher.
+- A DataMiner System using DataMiner 10.5.4 or higher.
 - Access to the **Resource Studio** application.
 
 ## Overview

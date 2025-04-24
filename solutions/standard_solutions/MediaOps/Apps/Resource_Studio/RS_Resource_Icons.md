@@ -22,34 +22,35 @@ To change icon, navigate to Resource Studio:
 The following table contains a list of icons and their associated image files.
 
 | Icon Name | Icon |
-|--|--|
-| Audio Processor | ![Audio Processor](<~/user-guide/images/RS_Audio_Processor.svg>) |
-| Audio Shuffler | ![Audio Shuffler](<~/user-guide/images/RS_Audio_Shuffler.svg>) |
-| Channel | ![Channel](~/user-guide/images/RS_Channel.svg) |
-| Closed Caption Unit | ![Closed Caption Unit](<~/user-guide/images/RS_Closed_Caption Unit.svg>) |
-| Cloud Recording | ![Cloud Recording](<~/user-guide/images/RS_Cloud_Recording.svg>) |
-| Commentary Flypack | ![Commentary Flypack](<~/user-guide/images/RS_Commentary_Flypack.svg>) |
-| Commentary Unit | ![Commentary Unit](<~/user-guide/images/RS_Commentary_Unit.svg>) |
-| Decoder | ![Decoder](~/user-guide/images/RS_Decoder.svg) |
-| Demodulator | ![Demodulator](~/user-guide/images/RS_Demodulator.svg) |
-| Encoder | ![Encoder](~/user-guide/images/RS_Encoder.svg) |
-| Frame Converter | ![Frame Converter](<~/user-guide/images/RS_Frame_Converter.svg>) |
-| Frame Sync | ![Frame Sync](<~/user-guide/images/RS_Frame_Sync.svg>) |
-| Gallery | ![Gallery](~/user-guide/images/RS_Gallery.svg) |
-| IP Address | ![IP Address](<~/user-guide/images/RS_IP_Address.svg>) |
-| IRD | ![IRD](~/user-guide/images/RS_IRD.svg) |
-| Fiber Lines | ![Fiber Lines](<~/user-guide/images/RS_Fiber_Lines.svg>) |
-| Modulator | ![Modulator](~/user-guide/images/RS_Modulator.svg) |
-| Multiviewer | ![Multiviewer](~/user-guide/images/RS_Multiviewer.svg) |
-| OB Truck | ![OB Truck](<~/user-guide/images/RS_OB_Truck.svg>) |
-| Playout Server | ![Playout Server](<~/user-guide/images/RS_Playout_Server.svg>) |
-| Production Suite | ![Production Suite](<~/user-guide/images/RS_Production_Suite.svg>) |
-| Recording Unit | ![Recording Unit](<~/user-guide/images/RS_Recording_Unit.svg>) |
-| Remote Backpack | ![Remote Backpack](<~/user-guide/images/RS_Remote_Backpack.svg>) |
-| Replay Unit | ![Replay Unit](<~/user-guide/images/RS_Replay_Unit.svg>) |
-| Satellite | ![Satellite](~/user-guide/images/RS_Satellite.svg) |
-| Satellite Antenna | ![Satellite Antenna](<~/user-guide/images/RS_Satellite_Antenna.svg>) |
-| SNG Van | ![SNG Van](<~/user-guide/images/RS_SNG_Van.svg>) |
-| Virtual Gallery | ![Virtual Gallery](<~/user-guide/images/RS_Virtual_Gallery.svg>) |
-| Vision Mixer | ![Vision Mixer](<~/user-guide/images/RS_Vision_Mixer.svg>) |
-| Voice Over Booth | ![Voice Over Booth](<~/user-guide/images/RS_Voice_Over_Booth.svg>) |
+|:--|--:|
+| Audio Processor | <img src="~/solutions/images/RS_Audio_Processor.svg" alt="Audio Processor" style="width:70px;"/> |
+| Audio Shuffler | <img src="~/solutions/images/RS_Audio_Shuffler.svg" alt="Audio Shuffler" style="width:70px;"/> |
+| Channel | <img src="~/solutions/images/RS_Channel.svg" alt="Channel" style="width:70px;"/> |
+| Closed Caption Unit | <img src="~/solutions/images/RS_Closed_Caption_Unit.svg" alt="Closed Caption Unit" style="width:70px;"/> |
+| Cloud Recording | <img src="~/solutions/images/RS_Cloud_Recording.svg" alt="Cloud Recording" style="width:70px;"/> |
+| Commentary Flypack | <img src="~/solutions/images/RS_Commentary_Flypack.svg" alt="Commentary Flypack" style="width:70px;"/> |
+| Commentary Unit | <img src="~/solutions/images/RS_Commentary_Unit.svg" alt="Commentary Unit" style="width:70px;"/> |
+| Decoder | <img src="~/solutions/images/RS_Decoder.svg" alt="Decoder" style="width:70px;"/> |
+| Demodulator | <img src="~/solutions/images/RS_Demodulator.svg" alt="Demodulator" style="width:70px;"/> |
+| Encoder | <img src="~/solutions/images/RS_Encoder.svg" alt="Encoder" style="width:70px;"/> |
+| Frame Converter | <img src="~/solutions/images/RS_Frame_Converter.svg" alt="Frame Converter" style="width:70px;"/> |
+| Frame Sync | <img src="~/solutions/images/RS_Frame_Sync.svg" alt="Frame Sync" style="width:70px;"/> |
+| Gallery | <img src="~/solutions/images/RS_Gallery.svg" alt="Gallery" style="width:70px;"/> |
+| IP Address | <img src="~/solutions/images/RS_IP_Address.svg" alt="IP Address" style="width:70px;"/> |
+| IRD | <img src="~/solutions/images/RS_IRD.svg" alt="IRD" style="width:70px;"/> |
+| Fiber Lines | <img src="~/solutions/images/RS_Fiber_Lines.svg" alt="Fiber Lines" style="width:70px;"/> |
+| Modulator | <img src="~/solutions/images/RS_Modulator.svg" alt="Modulator" style="width:70px;"/> |
+| Multiviewer | <img src="~/solutions/images/RS_Multiviewer.svg" alt="Multiviewer" style="width:70px;"/> |
+| OB Truck | <img src="~/solutions/images/RS_OB_Truck.svg" alt="OB Truck" style="width:70px;"/> |
+| Playout Server | <img src="~/solutions/images/RS_Playout_Server.svg" alt="Playout Server" style="width:70px;"/> |
+| Production Suite | <img src="~/solutions/images/RS_Production_Suite.svg" alt="Production Suite" style="width:70px;"/> |
+| Recording Unit | <img src="~/solutions/images/RS_Recording_Unit.svg" alt="Recording Unit" style="width:70px;"/> |
+| Remote Backpack | <img src="~/solutions/images/RS_Remote_Backpack.svg" alt="Remote Backpack" style="width:70px;"/> |
+| Replay Unit | <img src="~/solutions/images/RS_Replay_Unit.svg" alt="Replay Unit" style="width:70px;"/> |
+| Satellite | <img src="~/solutions/images/RS_Satellite.svg" alt="Satellite" style="width:70px;"/> |
+| Satellite Antenna | <img src="~/solutions/images/RS_Satellite_Antenna.svg" alt="Satellite Antenna" style="width:70px;"/> |
+| SNG Van | <img src="~/solutions/images/RS_SNG_Van.svg" alt="SNG Van" style="width:70px;"/> |
+| Virtual Gallery | <img src="~/solutions/images/RS_Virtual_Gallery.svg" alt="Virtual Gallery" style="width:70px;"/> |
+| Vision Mixer | <img src="~/solutions/images/RS_Vision_Mixer.svg" alt="Vision Mixer" style="width:70px;"/> |
+| Voice Over Booth | <img src="~/solutions/images/RS_Voice_Over_Booth.svg" alt="Voice Over Booth" style="width:70px;"/> |
+
