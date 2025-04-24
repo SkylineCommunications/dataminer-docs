@@ -12,13 +12,13 @@
              'Channel' refers to a virtual connection to a conceptual endpoint in the DxM.
              'Connection' refers to an active gRPC (HTTP2) connection with an endpoint.
              'DataSource' refers to a conceptual endpoint and its identifying parameters.
-             'Node' refers to a location in the OpenConfig schema, represented by a path. A node can be a leaf, a container, a list, ...
+             'Node' refers to a location in the OpenConfig schema, represented by a path. A node can be a leaf, a container, a list, etc.
              </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._mwClient">
             <summary>
-            The middleware client instance that will handle our DXM communication.
-            We use a member defined as an interface to make unit testing easier.
+            The middleware client instance that will handle the DxM communication.
+            A member defined as an interface is used to make unit testing easier.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient._dataMapper">
@@ -94,7 +94,7 @@
             <returns>The individual response values, this is usually one value per path. Can only be iterated once.</returns>
             <exception cref="T:System.ArgumentNullException">The input argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Get(System.Collections.Generic.IEnumerable{Gnmi.Path})">
             <summary>
@@ -104,7 +104,7 @@
             <returns>The individual response values, this is usually one value per path. Can only be iterated once.</returns>
             <exception cref="T:System.ArgumentNullException">The input argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.SetDataMapper(Skyline.DataMiner.DataSources.OpenConfig.Gnmi.DataMapper.IDataMapper)">
             <summary>
@@ -119,7 +119,7 @@
             Adds a subscription with a sample interval on the endpoint for the specified paths.
             </summary>
             <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel or the request will be ignored if already active.</param>
-            <param name="sampleInterval">Interval between samples. Assign zero to receive at lowest interval as possible.</param>
+            <param name="sampleInterval">Interval between samples. Assign zero to receive at the lowest interval possible.</param>
             <param name="paths">The model paths to subscribe to. A path should be formatted as a concatenation of node names separated by either a forward or backward slash.</param>
             <param name="action">The callback action to execute when an update is received.</param>
             <exception cref="T:System.ArgumentNullException">The action argument cannot be <see langword="null"/> when there is no DataMapper present.</exception>
@@ -127,14 +127,14 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.TimeSpan,System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
             <summary>
             Adds a subscription with a sample interval on the endpoint for the specified paths.
             </summary>
             <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel or the request will be ignored if already active.</param>
-            <param name="sampleInterval">Interval between samples. Assign zero to receive at lowest interval as possible.</param>
+            <param name="sampleInterval">Interval between samples. Assign zero to receive at the lowest interval possible.</param>
             <param name="paths">The model paths to subscribe to. A path should be formatted as a concatenation of node names separated by either a forward or backward slash.</param>
             <param name="suppressRedundant">When <i>true</i>, only values that changed during the interval will be sent.</param>
             <param name="heartbeatInterval">Alters the suppress-redundant behavior and sets an interval at which values should be sent even if they did not change. Value cannot be negative and TimeSpan.Zero disables the feature.</param>
@@ -145,14 +145,14 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{Gnmi.Path},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
             <summary>
             Adds a subscription with a sample interval on the endpoint for the specified paths.
             </summary>
             <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel or the request will be ignored if already active.</param>
-            <param name="sampleInterval">Interval between samples. Assign zero to receive at lowest interval as possible.</param>
+            <param name="sampleInterval">Interval between samples. Assign zero to receive at the lowest interval possible.</param>
             <param name="paths">The model paths to subscribe to. This uses the actual gNMI Path class.</param>
             <param name="action">The callback action to execute when an update is received.</param>
             <exception cref="T:System.ArgumentNullException">The action argument cannot be <see langword="null"/> when there is no DataMapper present.</exception>
@@ -160,14 +160,14 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.TimeSpan,System.Collections.Generic.IEnumerable{Gnmi.Path},System.Boolean,System.TimeSpan,System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}})">
             <summary>
             Adds a subscription with a sample interval on the endpoint for the specified paths.
             </summary>
-            <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel or the request will be ignored if already active.</param>
-            <param name="sampleInterval">Interval between samples. Assign zero to receive at lowest interval as possible.</param>
+            <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel, or the request will be ignored if already active.</param>
+            <param name="sampleInterval">Interval between samples. Assign zero to receive at the lowest interval possible.</param>
             <param name="paths">The model paths to subscribe to. This uses the actual gNMI Path class.</param>
             <param name="action">The callback action to execute when an update is received.</param>
             <param name="suppressRedundant">When <i>true</i>, only values that changed during the interval will be sent.</param>
@@ -178,7 +178,7 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.Collections.Generic.IEnumerable{System.String},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}},System.Boolean)">
             <summary>
@@ -192,7 +192,7 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Subscribe(System.String,System.Collections.Generic.IEnumerable{Gnmi.Path},System.Action{System.Collections.Generic.IEnumerable{Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue}},System.Boolean)">
             <summary>
@@ -206,7 +206,7 @@
             <exception cref="T:System.ArgumentException">Name of the subscription cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentNullException">The paths argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">There should be at least one path present in the paths argument.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Unsubscribe(System.String)">
             <inheritdoc/>
@@ -226,19 +226,19 @@
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The string value to set. The gNMI TypedValue used will be StringVal.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.String,Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.StringValueContentType)">
             <summary>
             Sets the value for a specific path.
             </summary>
-            <param name="path">The node path to set. This should be a leaf node unless when the contentType is JSON and the datasource supports this.</param>
+            <param name="path">The node path to set. This should be a leaf node unless the contentType is JSON and the data source supports this.</param>
             <param name="value">The string value to set.</param>
             <param name="contentType">Format of the <paramref name="value"/> parameter. It can be one of the following enum values:
-            -StringValue means that the value parameter is a plain string.
-            -AsciiString means that the value parameter is a plain ASCII string.
-            -JsonUtf8 means that the value parameter is a JSON encoded string that will be sent to the data source in UTF-8 encoding.
-            -JsonIetfUtf8 means that the value parameter is a JSON encoded string that follows the RFC8259 standard and will be sent to the data source in UTF-8 encoding.</param>
+            - StringValue means that the value parameter is a plain string.
+            - AsciiString means that the value parameter is a plain ASCII string.
+            - JsonUtf8 means that the value parameter is a JSON-encoded string that will be sent to the data source in UTF-8 encoding.
+            - JsonIetfUtf8 means that the value parameter is a JSON-encoded string that follows the RFC8259 standard and will be sent to the data source in UTF-8 encoding.</param>
             <exception cref="T:System.ArgumentException">The path argument cannot be <see langword="null"/>, empty, or a whitespace.</exception>
             <exception cref="T:System.ArgumentException">Argument contentType contains a type that is not supported.</exception>
         </member>
@@ -246,16 +246,16 @@
             <summary>
             Sets the value for a specific path.
             </summary>
-            <param name="path">The node path to set. This should be a leaf node unless when the contentType is JSON and the datasource supports this.</param>
+            <param name="path">The node path to set. This should be a leaf node unless the contentType is JSON and the data source supports this.</param>
             <param name="value">The string value to set.</param>
             <param name="contentType">Format of the <paramref name="value"/> parameter. It can be one of the following enum values:
-            -StringValue means that the value parameter is a plain string.
-            -AsciiString means that the value parameter is a plain ASCII string.
-            -JsonUtf8 means that the value parameter is a JSON encoded string that will be sent to the data source in UTF-8 encoding.
-            -JsonIetfUtf8 means that the value parameter is a JSON encoded string that follows the RFC8259 standard and will be sent to the data source in UTF-8 encoding.</param>
+            - StringValue means that the value parameter is a plain string.
+            - AsciiString means that the value parameter is a plain ASCII string.
+            - JsonUtf8 means that the value parameter is a JSON-encoded string that will be sent to the data source in UTF-8 encoding.
+            - JsonIetfUtf8 means that the value parameter is a JSON-encoded string that follows the RFC8259 standard and will be sent to the data source in UTF-8 encoding.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
             <exception cref="T:System.ArgumentException">Argument contentType contains a type that is not supported.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.Boolean)">
             <summary>
@@ -272,7 +272,7 @@
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The boolean value to set. The gNMI TypedValue used will be BoolVal.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.Double)">
             <summary>
@@ -289,7 +289,7 @@
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The double value to set. The gNMI TypedValue used will be DoubleVal.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.Int64)">
             <summary>
@@ -306,7 +306,7 @@
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The Int64 value to set. The gNMI TypedValue used will be IntVal.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Set(System.String,System.UInt64)">
             <summary>
@@ -323,14 +323,14 @@
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The UInt64 value to set. The gNMI TypedValue used will be UintVal.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Capabilities">
             <summary>
             Get the capabilities of the endpoint.
             </summary>
             <returns>The gNMI CapabilityResponse object.</returns>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Delete(System.String)">
             <summary>
@@ -345,7 +345,7 @@
             </summary>
             <param name="path">The path to delete.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.Dispose">
             <summary>
@@ -373,7 +373,7 @@
             <param name="path">The node path to set. This should be a leaf node.</param>
             <param name="value">The string value to set. The gNMI TypedValue used will be StringVal.</param>
             <exception cref="T:System.ArgumentNullException">The path argument cannot be <see langword="null"/>.</exception>
-            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">There was an exception thrown by the DxM.</exception>
+            <exception cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.RequestFailedException">An exception was thrown by the DxM.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.LoadSupportedEncodings">
             <summary>
