@@ -25,6 +25,7 @@ To do so:
 
    > [!NOTE]
    > To prevent issues, if there are more than 10,000 DOM instances, you will not be able to continue with the deletion.
+   > From DataMiner 10.5.6/10.6.0 onwards, this limit has been increaded to 100&thinsp;000.
 
 1. Click *OK*.
 
