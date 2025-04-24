@@ -45,7 +45,7 @@
             <param name="dataSourceConfiguration">The details needed to find and connect to the endpoint.</param>
             <param name="logger">The interface that will be called for any logging.</param>
             <exception cref="T:System.ArgumentException">The channelName should not be <see langword="null"/> or empty or whitespace.</exception>
-            <exception cref="T:System.ArgumentException">The value should be a NATS token friendly name.</exception>
+            <exception cref="T:System.ArgumentException">The value should be a NATS token-friendly name.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.#ctor(Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.OpenConfig.Api.IOpenConfigClient)">
             <summary>
@@ -423,7 +423,7 @@
             </summary>
             <param name="path">Path of the value.</param>
             <param name="updateValue">Value that needs to be changed.</param>
-            <param name="isJsonIetf">Boolean indicating if the JSON object is coming from IETF format or not.</param>
+            <param name="isJsonIetf">Boolean indicating if the JSON object comes from IETF format or not.</param>
             <param name="timestampUtc">UTC time when the value was taken.</param>
             <param name="origin">Indication of where the data originated from.</param>
             <param name="subscriptionName">Name of the subscription in case the value came in through subscription.</param>
