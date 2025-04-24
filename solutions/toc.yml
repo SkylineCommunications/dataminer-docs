@@ -44,7 +44,7 @@ items:
       - name: Tutorials
         items: 
         - name: Getting started with the Resource Studio
-          topicUid: Tutorial_MediaOps_Resource_Studio
+          topicUid: Tutorial_MediaOps_Resource_Studio_Intro
     - name: DataMiner PTP
       topicUid: SolPTP
       items:
