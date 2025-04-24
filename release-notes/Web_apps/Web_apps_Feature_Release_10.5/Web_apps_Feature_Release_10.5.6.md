@@ -122,6 +122,12 @@ In some cases, a null reference exception could be thrown after a PDF report had
 
 When a component passed different types of data to components located on another panel, not all types of data would get consumed correctly.
 
+#### Dashboards app: Problem when a dashboard was shared for the first time [ID 42756]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+The first time a dashboard was shared, in some rare cases, the operation could fail.
+
 #### Dashboards app: 'Start with example dashboard' button could get stuck in a loading state [ID 42771]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
