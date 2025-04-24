@@ -250,7 +250,7 @@ items:
               topicUid: RAD_manager
             - name: Configuring RAD through the configuration XML file
               topicUid: Relational_anomaly_detection_xml
-            - name: Working with the RAD api
+            - name: Working with the RAD API
               topicUid: RAD_API
           - name: Providing user feedback
             topicUid: Providing_user_feedback
