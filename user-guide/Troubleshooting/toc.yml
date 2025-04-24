@@ -209,6 +209,9 @@ items:
         topicUid: Collecting_DataMiner_Cube_memory_dumps
       - name: Collecting data to report an issue to Technical Support
         topicUid: Collecting_data_to_report_an_issue_to_TechSupport
+        items:
+          - name: Web Support Assistant
+            topicUid: Web_Issues_Support_Assistant
       - name: Troubleshooting – Cassandra
         topicUid: Troubleshooting_Cassandra
         items:
@@ -362,7 +365,7 @@ items:
           - name: SLDataMiner crashes because of subgroup query failure
             topicUid: KI_SLDataMiner_crashes_because_of_subgroup_query_failure
           - name: One or multiple Analytics features fail to start
-            topicUid:  KI_Analytics_features_not_starting
+            topicUid: KI_Analytics_features_not_starting
           - name: Max Payload exceptions occur when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker_Chunking_MaxPayload
           - name: Error in SLDataMiner when generating MIB file
