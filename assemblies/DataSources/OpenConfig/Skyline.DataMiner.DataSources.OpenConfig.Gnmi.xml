@@ -519,7 +519,7 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.PathFilterResultType.PartialMatch">
             <summary>
-            The data path matches but is smaller than the entity path. There is further exploration needed of the token value to have a match. The value needed for the entity will be a child token of the token value.
+            The data path matches but is smaller than the entity path. Further exploration of the token value is needed to have a match. The value needed for the entity will be a child token of the token value.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.PathFilterResultType.LongerDataMatch">
@@ -544,12 +544,12 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.StringValueContentType.JsonUtf8">
             <summary>
-            The passed string content represents a JSON-encoded text. The text will be encoded as UTF-8 when sending to the data source.
+            The passed string content represents a JSON-encoded text. The text will be encoded as UTF-8 when it is sent to the data source.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Enums.StringValueContentType.JsonIetfUtf8">
             <summary>
-            The passed string content represents a JSON-encoded text per RFC7951. The text will be encoded as UTF-8 when sending to the data source.
+            The passed string content represents a JSON-encoded text per RFC7951. The text will be encoded as UTF-8 when it is sent to the data source.
             </summary>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Models.GnmiResponseValue">
@@ -698,15 +698,15 @@
             it will return the one of the deepest child node.
             </remarks>
             </summary>
-            <param name="path">The path in which needs to be searched.</param>
+            <param name="path">The path that needs to be searched in.</param>
             <returns>The key that is found in the path.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.MergePaths(Gnmi.Path,Gnmi.Path)">
             <summary>
-            Merges two Paths into one Path.
+            Merges two paths into one path.
             </summary>
-            <param name="prefixPath">First Path to be merged.</param>
-            <param name="suffixPath">Second Path to be merged.</param>
+            <param name="prefixPath">First path to be merged.</param>
+            <param name="suffixPath">Second path to be merged.</param>
             <returns>Path containing the merged paths.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.RemoveCommonPathElements(Gnmi.Path,Gnmi.Path,System.Boolean)">
@@ -715,7 +715,7 @@
             </summary>
             <param name="entityPath">Path as defined on the data entity.</param>
             <param name="dataPath">Path as present in the incoming data.</param>
-            <param name="isExactKeyValidation">Indication if all keys specified in the entity and data need to exactly match.</param>
+            <param name="isExactKeyValidation">Indication if all keys specified in the entity and data need to match exactly.</param>
             <returns>Result after filtering the entity path.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.HasCommonPathElements(Gnmi.Path,Gnmi.Path)">
@@ -763,7 +763,7 @@
             Converts a gNMI <see cref="T:Gnmi.SubscribeResponse"/> into a format that gets forwarded to the consumer.
             </summary>
             <param name="subscribeResponse">The gNMI subscribe response that needs to be converted.</param>
-            <returns>A list of gNMI responses in a specific format that get forwarded to a consumer.</returns>
+            <returns>A list of gNMI responses in a specific format that gets forwarded to a consumer.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.TryGetPathOrigin(System.String,System.String@,System.Int32@)">
             <summary>
@@ -780,7 +780,7 @@
             </summary>
             <param name="stringPath">Path as string.</param>
             <param name="startPosition">Position to start parsing the keys.</param>
-            <param name="pathElem">Path element where the keys and values belong to.</param>
+            <param name="pathElem">Path element that the keys and values belong to.</param>
             <returns>End position index of the keys and values in the stringPath.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.GetNextPathPosition(System.String,System.Int32)">
@@ -835,7 +835,7 @@
             </summary>
             <param name="entityKeys">Keys that are defined in the entity path.</param>
             <param name="dataKeys">Keys that are returned by the data source in the path.</param>
-            <param name="isExactKeyValidation">Indication if all keys specified in the entity and data need to exactly match.</param>
+            <param name="isExactKeyValidation">Indication if all keys specified in the entity and data need to match exactly.</param>
             <returns>Boolean indicating if a key was found and matches as expected.</returns>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.GnmiUtils.IsEntityKeysPresentInData(Google.Protobuf.Collections.MapField{System.String,System.String},Google.Protobuf.Collections.MapField{System.String,System.String})">
@@ -857,7 +857,7 @@
         </member>
         <member name="T:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ParsedTypedValue">
             <summary>
-            Object of this class are used as result after parsing a Gnmi.TypedValue into a basic System object type, such as string.
+            Objects of this class are used as result after parsing a Gnmi.TypedValue into a basic System object type, such as string.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Utils.ParsedTypedValue.Value">
@@ -921,7 +921,7 @@
             </summary>
         </member>
         <member name="T:System.Text.StringBuilderCache">
-            <summary>Provide a cached reusable instance of stringbuilder per thread.</summary>
+            <summary>Provide a cached reusable instance of StringBuilder per thread.</summary>
         </member>
         <member name="M:System.Text.StringBuilderCache.Acquire(System.Int32)">
             <summary>Get a StringBuilder for the specified capacity.</summary>
@@ -931,7 +931,7 @@
             <summary>Place the specified builder in the cache if it is not too big.</summary>
         </member>
         <member name="M:System.Text.StringBuilderCache.GetStringAndRelease(System.Text.StringBuilder)">
-            <summary>ToString() the stringbuilder, Release it to the cache, and return the resulting string.</summary>
+            <summary>ToString() the StringBuilder, release it to the cache, and return the resulting string.</summary>
         </member>
     </members>
 </doc>
