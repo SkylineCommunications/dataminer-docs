@@ -76,8 +76,8 @@ namespace Skyline.DataMiner.Analytics.Rad
         /// Initializes a new instance with the specified parameters.
         /// </summary>
         /// <param name="groupName">The name of the group whose RAD model needs to be retrained.</param>
-        /// <param name="startTime">start time of the time range with correct behavior.</param>
-        /// <param name="endTime">end time of the time range with correct behavior.</param>
+        /// <param name="startTime">Start time of the time range with correct behavior.</param>
+        /// <param name="endTime">End time of the time range with correct behavior.</param>
         public RetrainRADModelMessage(string groupName, DateTime startTime, DateTime endTime) {}
     }
 }
