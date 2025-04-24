@@ -65,7 +65,7 @@ If you wish to transfer your data, after you have logged onto [community.datamin
 > Some limitations apply to what kind of data can be transferred:
 >
 > - Any progress you have made on courses and quizzes in the [Learning module](https://community.dataminer.services/learning/) is non-transferable and will be lost, so you will need to start over in this module.
-> - Any comments you have made in the [Questions module](https://community.dataminer.services/questions/) will still be displayed as posted with your former account.
+> - Any comments you have made in the [Questions module](https://community.dataminer.services/questions/) will still be displayed as posted with your old account.
 
 > [!TIP]
 >
