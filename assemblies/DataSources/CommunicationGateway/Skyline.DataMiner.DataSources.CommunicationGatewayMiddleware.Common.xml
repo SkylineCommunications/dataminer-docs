@@ -17,7 +17,7 @@
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.MyServicesGroupType">
             <summary>
             The services group type for the instance of this base class.
-            Helps us build the correct MessageBroker subjects.
+            Helps to build the correct MessageBroker subjects.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.ChannelIdentifier">
@@ -66,19 +66,19 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient._natsHeartbeatRequiredTimer">
             <summary>
-            A watchdog timer to check if we have been silent for too long and need to send a heartbeat message to the DxM.
+            A watchdog timer to check if there has been inactivity for too long and and a heartbeat message needs to be sent to the DxM.
             When the DxM does not receive any message from us, it will forcibly close the connection.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient._emptyRequestBytes">
             <summary>
-            We often need an empty request (e.g. for heartbeats), so avoid the memory trouble and just create it once.
-            We cannot make it a value in the class definition since it is generated from a proto file.
+            Often an empty request is needed (e.g. for heartbeats), so to avoid the memory trouble it is created just once.
+            It cannot be made a value in the class definition as it is generated from a proto file.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient._isDxmConnected">
             <summary>
-            We cannot make a property volatile, so we use a private member to hold the connected state as volatile.
+            A property cannot be made volatile, so a private member is used to hold the connected state as volatile.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient._isFullyDisconnected">
@@ -103,14 +103,14 @@
             Constructs a gRPC client that will use the CommunicationGateway DxM to connect to a device.
             The connection is only set up when Connect() is called.
             </summary>
-            <param name="agentId">The DataMiner agent ID of the element if applicable. Becomes part of the channel ID and helps identify the source when investigating logging and traces.</param>
+            <param name="agentId">The DataMiner Agent ID of the element if applicable. Becomes part of the channel ID and helps identify the source when investigating logging and traces.</param>
             <param name="elementId">The element ID of the element if applicable. Becomes part of the channel ID and helps identify the source when investigating logging and traces.</param>
             <param name="channelName">A descriptive name for this channel, to differentiate the logging if multiple channels are logging to the same file.</param>
             <param name="dataSourceConfiguration">The details needed to find and connect to the endpoint.</param>
             <param name="logger">The interface that will be called for any logging.</param>
             <param name="servicesGroupType">The service group for which a middleware client needs to be created.</param>
             <exception cref="T:System.ArgumentException">The channelName should not be <see langword="null"/> or empty or whitespace.</exception>
-            <exception cref="T:System.ArgumentException">The value should be a NATS token friendly name.</exception>
+            <exception cref="T:System.ArgumentException">The value should be a NATS token-friendly name.</exception>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.#ctor(Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.ChannelId,System.String,Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.DataSourceConfiguration,Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.ILogger,Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ClientInternalSettings,CommunicationGateway.Grpc.Api.Subjects.Enums.ServicesGroupType)">
             <summary>
@@ -124,7 +124,7 @@
             <param name="internalSettings">If provided, overwrites the default internal settings, intended for unit and integration tests.</param>
             <param name="servicesGroupType">The service group for which a middleware client needs to be created.</param>
             <exception cref="T:System.ArgumentException">The channelName should not be <see langword="null"/> or empty or whitespace.</exception>
-            <exception cref="T:System.ArgumentException">The value should be a NATS token friendly name.</exception>
+            <exception cref="T:System.ArgumentException">The value should be a NATS token-friendly name.</exception>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.IsConnected">
             <inheritdoc />
@@ -183,7 +183,7 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.IsAllConnectionStateChanges">
             <summary>
-            Boolean indicating if OnConnectionStateChanged should always be called when connect state changes, even if an internal reconnect happens which briefly will call disconnect and connect.  
+            Boolean indicating if OnConnectionStateChanged should always be called when connect state changes, even if an internal reconnect happens that briefly will call disconnect and connect.  
             </summary>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.OnConnectionStateChanged(System.EventArgs)">
@@ -200,7 +200,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.PrepareResponseHandlersInternal">
             <summary>
-            Add the response handlers to the lookup table, it is called during the constructor before any subscriptions are made.
+            Add the response handlers to the lookup table. It is called during the constructor before any subscriptions are made.
             It should not be called by the inheriting class.
             </summary>
         </member>
@@ -214,7 +214,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.Subscribe(Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ASubscriptionContext)">
             <summary>
-            Subscribe to a data stream. Will store the data handler, then register the subscription and finally push the subscription details.
+            Subscribe to a data stream. Will store the data handler, then register the subscription, and finally push the subscription details.
             The subscription ID in the context must be unique.
             </summary>
             <param name="subscriptionContext">Details of the subscription.</param>
@@ -258,14 +258,14 @@
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.DisconnectInternal(System.Boolean,System.Boolean)">
             <summary>
             Disconnects from the current channel, but only removes the subscriptions when requested.
-            If the subscriptions are retained, we will keep the DxM timeout timer alive and let it trigger occasional Connect attempts.
+            If the subscriptions are retained, the DxM timeout timer will be kept alive and will trigger occasional Connect attempts.
             </summary>
             <param name="retainSubscriptionData">Boolean indicating if the DxM timeout timer needs to stay active.</param>
             <param name="isChangeConnectionState">Boolean indicating if the ConnectionStateChanged needs to be called.</param>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.ClearSubscriptionHandlers">
             <summary>
-            Clears the subscription handlers when the connection is broken and we don't need to retain the handlers.
+            Clears the subscription handlers when the connection is broken and the handlers do not need to be retained.
             </summary>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.ReconnectInternal">
@@ -322,17 +322,17 @@
             <summary>
             Processes a <see cref="T:Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.GrpcChannelStateResponse"/> that is sent when the connection between the CommunicationGateway DxM and the gRPC service changes.
             </summary>
-            <param name="responseArguments">A wrapper containing what is expected to be a massage of type <see cref="T:Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.GrpcChannelStateResponse"/>.</param>
+            <param name="responseArguments">A wrapper containing what is expected to be a message of type <see cref="T:Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.GrpcChannelStateResponse"/>.</param>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.HandleStreamStatusChange(Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ResponseArguments)">
             <summary>
             Processes a <see cref="T:Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.StreamStatus"/> message that is sent when the connection between the CommunicationGateway DxM and the gRPC service changes.
             </summary>
-            <param name="responseArguments">A wrapper containing what is expected to be a massage of type <see cref="T:Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.GrpcChannelStateResponse"/>.</param>
+            <param name="responseArguments">A wrapper containing what is expected to be a message of type <see cref="T:Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.GrpcChannelStateResponse"/>.</param>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.HandleUpdateResponse(Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ResponseArguments)">
             <summary>
-            Processes a response that we expect for a stream subscription from the CommunicationGateway DxM.
+            Processes a response that is expected for a stream subscription from the CommunicationGateway DxM.
             </summary>
             <param name="responseArguments">A wrapper containing what is expected to be the Any content and the remaining subject tokens.</param>
         </member>
@@ -346,7 +346,7 @@
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.AMiddlewareClient.TryRequestAsyncAndWait(System.String,Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.Request,Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.Response@)">
             <summary>
             Sends a request on the messageBroker, and waits for the result unless the token source is canceled.
-            The heartbeat timer is also reset since we are sending a message.
+            The heartbeat timer is also reset, as a message is being sent.
             </summary>
             <param name="subject">Subject to publish on the message broker.</param>
             <param name="request">Request to publish on the message broker.</param>
@@ -505,7 +505,7 @@
         </member>
         <member name="E:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IMiddlewareClient.ConnectionStateChanged">
             <summary>
-            Action that will be called when the connection state changed.
+            Action that will be called when the connection state has changed.
             </summary>
         </member>
         <member name="E:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.IMiddlewareClient.SubscriptionDataCleared">
@@ -697,11 +697,11 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ASubscriptionContext.#ctor(System.String,Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Api.ILogger)">
             <summary>
-            Constructs the base subscription context so that there is a nats friendly subscription ID.
+            Constructs the base subscription context so that there is a NATS-friendly subscription ID.
             </summary>
             <param name="subscriptionName">An identifying name for this subscription. The name must be unique for the channel or the request will be ignored if already active.</param>
             <param name="logger">The internal logger to write to.</param>
-            <exception cref="T:System.ArgumentException">The <paramref name="subscriptionName"/> can not be null or whitespace.</exception>
+            <exception cref="T:System.ArgumentException">The <paramref name="subscriptionName"/> cannot be null or whitespace.</exception>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ASubscriptionContext.ID">
             <summary>
@@ -739,7 +739,7 @@
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ClientInternalSettings.HeartbeatSettings">
             <summary>
             Heartbeat settings should not be adjusted for production since they need to be in sync with the CommunicationGateway.
-            But they can be altered to speed up or disable the timeout times for unit tests.
+            However, they can be altered to speed up or disable the timeout times for unit tests.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ClientInternalSettings.StaleItemCleanupTimeSpan">
@@ -749,7 +749,7 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ClientInternalSettings.WorkItemsGroupMaxSize">
             <summary>
-            The amount of items that can be queued in a thread pool collection. Each subscription has its own collection that will be capped.
+            The number of items that can be queued in a thread pool collection. Each subscription has its own collection that will be capped.
             </summary>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.GenericSubscriptionDetails`2">
@@ -785,7 +785,7 @@
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.GenericSubscriptionDetails`2.Parse(Google.Protobuf.ByteString)">
             <summary>
-            Parses the content from a ResponseMessage to the type matching the subscription as defined by the generic TResponse.
+            Parses the content from a ResponseMessage to the type matching the subscription as defined by the generic Response.
             </summary>
             <param name="data"></param>
             <returns></returns>
@@ -862,7 +862,7 @@
             Initializes a new instance of the <see cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.QueueFullEventArgs"/> class.
             </summary>
             <param name="subscriptionName">The name of the subscription associated with the full queue.</param>
-            <param name="numberDroppedMessages">The number of messages that were dropped due to the queue being full.</param>
+            <param name="numberDroppedMessages">The number of messages that were dropped because the queue was full.</param>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.QueueFullEventArgs.SubscriptionName">
             <summary>
@@ -871,12 +871,12 @@
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.QueueFullEventArgs.NumberDroppedMessages">
             <summary>
-            Gets the number of messages that were dropped due to the queue being full.
+            Gets the number of messages that were dropped because the queue was full.
             </summary>
         </member>
         <member name="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ResponseArguments">
             <summary>
-            A wrapper for a response message from the DxM that contains the parsed subject tokens that are remaining after the necessary prefix tokens are removed.
+            A wrapper for a response message from the DxM that contains the parsed subject tokens that remain after the necessary prefix tokens have been removed.
             </summary>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Models.ResponseArguments.#ctor(System.Collections.Generic.IEnumerable{System.String},Skyline.DataMiner.Protobuf.CommunicationGateway.Grpc.Api.Model.v1.Response)">
@@ -957,7 +957,7 @@
         <member name="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageProcessor">
             <summary>
             Responsible for adding the incoming NATS messages on a queue per subscription.
-            When a certain subscription is not receiving messages it is marked as idle and the worker associated with it will be cleaned up.
+            When a certain subscription is not receiving messages, it is marked as idle, and the worker associated with it will be cleaned up.
             <remarks>
             Will process both internal subscriptions (e.g. keep-alive messages) as subscriptions created by a connector.
             </remarks>
@@ -975,25 +975,25 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageProcessor._logger">
             <summary>
-            Allows to log in the log file of the middleware consumer. (e.g. element log file)
+            Allows to log in the log file of the middleware consumer (e.g. element log file).
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageProcessor._staleQueueWorkerCleanupScheduler">
             <summary>
             Responsible for periodically checking whether there are workers with a stale queue.
-            Will then mark those workers as such resulting in them being cleaned up as soon as there is no further work to be done.
+            Will then mark those workers as such, resulting in them being cleaned up as soon as there is no further work to be done.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageProcessor._timeBeforeQueueConsideredStale">
             <summary>
-            When no messages are being added to the queue for a certain period of time, it will be marked as stale.
+            When no messages are added to the queue for a certain period of time, it will be marked as stale.
             The worker thread responsible for processing that queue will be stopped.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageProcessor._boundedCapacity">
             <summary>
             The maximum number of messages that are allowed in the queue.
-            Incoming messages that can not be added to the queue will be dropped.
+            Incoming messages that cannot be added to the queue will be dropped.
             </summary>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageProcessor.AddMessage(DataMinerMessageBroker.API.IMessage,System.Action{DataMinerMessageBroker.API.IMessage})">
@@ -1020,7 +1020,7 @@
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageProcessor.NeedsMessageQueueWorker(System.String)">
             <summary>
             Checks whether a <see cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker"/> needs to be created for a certain subscription subject.
-            There are some internal subscriptions for which we actually just want to handle the messages immediately.
+            There are some internal subscriptions for which the messages actually just need to be handled immediately.
             </summary>
             <param name="subject">The subject of the subscription.</param>
             <returns>Whether a <see cref="T:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker"/> needs to be created.</returns>
@@ -1054,7 +1054,7 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker._logger">
             <summary>
-            Allows to log in the log file of the middleware consumer. (e.g. element log file)
+            Allows to log in the log file of the middleware consumer (e.g. element log file).
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker._worker">
@@ -1069,19 +1069,19 @@
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker._lastFullQueueLogTimeUtc">
             <summary>
-            The last time that was logged that the queue is full.
-            This allows us the system to keep some time in between the log occurrences.
+            The last time that the queue was logged as full.
+            This allows the system to keep some time in between the log occurrences.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker._droppedMessagesSinceLastLogAttempt">
             <summary>
-            Gives an indication on how many messages are being dropped from the queue.
+            Gives an indication of how many messages are being dropped from the queue.
             </summary>
         </member>
         <member name="F:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker._boundedCapacity">
             <summary>
             The maximum number of messages that are allowed in the queue.
-            Incoming messages that can not be added to the queue will be dropped.
+            Incoming messages that cannot be added to the queue will be dropped.
             </summary>
         </member>
         <member name="P:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker.Count">
@@ -1093,14 +1093,14 @@
             <summary>
             Checks whether the queue is considered stale, meaning that no messages have been added for a certain period of time.
             <remarks>
-            If no message has ever been added to the queue, it will not be seen as stale.
+            If no message has ever been added to the queue, it will not be considered stale.
             </remarks>
             </summary>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker.MarkQueueStale">
             <summary>
-            Marks the queue as stale which means that no new messages can be added to it.
-            The worker will continue to process all the messages that were yet in the queue.
+            Marks the queue as stale, which means that no new messages can be added to it.
+            The worker will continue to process all the messages that were still in the queue.
             </summary>
         </member>
         <member name="M:Skyline.DataMiner.DataSources.CommunicationGatewayMiddleware.Common.Utils.MessageQueueWorker.MessageDropped(DataMinerMessageBroker.API.IMessage)">
