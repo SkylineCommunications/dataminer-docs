@@ -293,6 +293,19 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### SLNetClientTest tool - DataMiner Object Model: Enhancements made to the ModuleSettings window [ID 42788]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+A number of enhancements have been made to the *ModuleSettings* window.
+
+- When, in the *ModuleSettings* window, you delete an entire DOM module, the DOM instances in that module will now be deleted in bulk, and the maximum number of DOM instances that can be deleted in one go has been increased from 10,000 to 100,000. Also, the estimation of the cleanup time will now be more accurate, and the cleanup message will now refer to the [Removing DOM indices in Elasticsearch or OpenSearch](xref:DOM_data_storage#removing-dom-indices-in-elasticsearch-or-opensearch) section in docs.dataminer.services.
+
+- When, in the *ModuleSettings* window, you click *Open* to see the details of a DOM module, and then go to the *Statistics* tab, it is now possible to sort the statistics by a particular column. Also, a number of enhancements have been made to have the data on the tab displayed more clearly.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
