@@ -62,18 +62,16 @@ Some extra steps can make it easier to capture traffic for a DataMiner element:
 
 If a device uses a custom port to send packets of SNMP data, do the following to make Wireshark recognize that data as SNMP:
 
-1. Right-click a packet, and
-1. Select *Decode As...*.
+1. Right-click a packet.
+1. Select *Decode As*.
 
-   ![Wireshark - Decode As](~/develop/images/Wireshark_DecodeAs.png)<br>
-   *Wireshark - 'Decode As...' command*
+   ![Wireshark - Decode As](~/develop/images/Wireshark_DecodeAs.png)
 
 ### Configuring SNMPv3 user credentials in Wireshark preferences
 
 To make sure that SNMPv3 packets get decrypted, configure the necessary user credentials in the Wireshark preferences.
 
-![SNMPv3 user credentials in Wireshark preferences](~/develop/images/Wireshark_Preferences_SNMP_users.png)<br>
-*SNMPv3 user credentials in Wireshark preferences*
+![SNMPv3 user credentials in Wireshark preferences](~/develop/images/Wireshark_Preferences_SNMP_users.png)
 
 ### Filtering serials packets
 
@@ -81,22 +79,20 @@ In case of a serial connector, you can use filtering to look for packets of whic
 
 `data.data[0:2] == 7b40`
 
-- `data.data[0:2]` extract the first two bytes from the data payload (starting from byte 0, with a length of 2).
+- `data.data[0:2]` extracts the first two bytes from the data payload (starting from byte 0, with a length of 2).
 - `== 7b40` compares the two above-mentioned bytes to the hexadecimal value *7b40*.
 
 ### Using 'I/O Graphs' to get an overview of traffic rates
 
 To get an overview of traffic rates, go to *Statistics > I/O Graphs*.
 
-![Statistics > I/O Graphs](~/develop/images/Wireshark_IOGraphs.png)<br>
-*Statistics > I/O Graphs*
+![Statistics > I/O Graphs](~/develop/images/Wireshark_IOGraphs.png)
 
 ### The 'delta displayed' column can reveal the response time between DataMiner and the device
 
 The *delta displayed* column shows the time between displayed packets. Adding this column can reveal the response time between DataMiner and the device.
 
-![delta displayed column](~/develop/images/Wireshark_delta_displayed_column.png)<br>
-*delta displayed column*
+![delta displayed column](~/develop/images/Wireshark_delta_displayed_column.png)
 
 ## Notes on using Wireshark
 
