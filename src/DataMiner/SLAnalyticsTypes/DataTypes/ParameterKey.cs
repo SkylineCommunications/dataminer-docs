@@ -12,7 +12,7 @@ namespace Skyline.DataMiner.Analytics.DataTypes
     public class ParameterKey : ElementKey
     {
         /// <summary>
-        /// Gets or sets the Parameter ID.
+        /// Gets or sets the parameter ID.
         /// </summary>
         public int ParameterID { get; set; }
 
@@ -36,8 +36,8 @@ namespace Skyline.DataMiner.Analytics.DataTypes
         /// The <see cref="DisplayInstance"/> is set to the same value as <paramref name="instance" /> and <paramref name="instance"/> is converted to lowercase.
         /// </summary>
         /// <param name="dataMinerID">The DataMiner ID.</param>
-        /// <param name="elementID">The Element ID.</param>
-        /// <param name="parameterID">The Parameter ID.</param>
+        /// <param name="elementID">The element ID.</param>
+        /// <param name="parameterID">The parameter ID.</param>
         /// <param name="instance">The instance.</param>
         public ParameterKey(int dataMinerID, int elementID, int parameterID, string instance = "")
             : this(dataMinerID, elementID, parameterID, instance, instance) { }
@@ -46,8 +46,8 @@ namespace Skyline.DataMiner.Analytics.DataTypes
         /// Initializes a new instance of the <see cref="ParameterKey"/> class with the specified parameters. The <paramref name="instance"/> is converted to lowercase.
         /// </summary>
         /// <param name="dataMinerID">The DataMiner ID.</param>
-        /// <param name="elementID">The Element ID.</param>
-        /// <param name="parameterID">The Parameter ID.</param>
+        /// <param name="elementID">The element ID.</param>
+        /// <param name="parameterID">The parameter ID.</param>
         /// <param name="instance">The instance.</param>
         /// <param name="displayInstance">The display instance.</param>
         public ParameterKey(int dataMinerID, int elementID, int parameterID, string instance, string displayInstance)
@@ -87,8 +87,8 @@ namespace Skyline.DataMiner.Analytics.DataTypes
         /// Deconstructs the <see cref="ParameterKey"/> into its components.
         /// </summary>
         /// <param name="dmaID">The DataMiner ID.</param>
-        /// <param name="eID">The Element ID.</param>
-        /// <param name="pID">The Parameter ID.</param>
+        /// <param name="eID">The element ID.</param>
+        /// <param name="pID">The parameter ID.</param>
         /// <param name="instance">The instance.</param>
         /// <param name="displayInstance">The display instance.</param>
         public void Deconstruct(out int dmaID, out int eID, out int pID, out string instance, out string displayInstance)

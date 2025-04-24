@@ -3,13 +3,13 @@
 namespace Skyline.DataMiner.Analytics.DataTypes
 {
     /// <summary>
-    /// Class containing the DataMiner ID and Element ID of a DataMiner element.
+    /// Class containing the DataMiner ID and element ID of a DataMiner element.
     /// </summary>
     [Serializable]
     public class ElementKey
     {
         /// <summary>
-        /// Gets or sets the DataMinerID of the element.
+        /// Gets or sets the DataMiner ID of the element.
         /// </summary>
         public int DataMinerID { get; set; }
 
@@ -19,12 +19,12 @@ namespace Skyline.DataMiner.Analytics.DataTypes
         public int ElementID { get; set; }
 
         /// <summary>
-        /// Create a new <see cref="ElementKey"/> instance.
+        /// Creates a new <see cref="ElementKey"/> instance.
         /// </summary>
         public ElementKey() : this(-1, 0) { }
 
         /// <summary>
-        /// Create a new <see cref="ElementKey"/> instance with the given DataMiner ID and element ID.
+        /// Creates a new <see cref="ElementKey"/> instance with the given DataMiner ID and element ID.
         /// </summary>
         /// <param name="dataMinerID">The DataMiner ID.</param>
         /// <param name="elementID">The Element ID.</param>
@@ -34,7 +34,7 @@ namespace Skyline.DataMiner.Analytics.DataTypes
         }
 
         /// <summary>
-        /// Get a hash code for this object.
+        /// Gets a hash code for this object.
         /// </summary>
         /// <returns></returns>
         public override int GetHashCode()
@@ -43,7 +43,7 @@ namespace Skyline.DataMiner.Analytics.DataTypes
         }
 
         /// <summary>
-        /// Whether this element ID has the same DataMiner ID and element ID as the given object.
+        /// Determines whether this element ID has the same DataMiner ID and element ID as the given object.
         /// </summary>
         /// <param name="obj">The object to compare to.</param>
         /// <returns>True if the given object equals the current object.</returns>
@@ -59,7 +59,7 @@ namespace Skyline.DataMiner.Analytics.DataTypes
         }
 
         /// <summary>
-        /// Convert to a string of the format [DataMiner ID]/[element ID].
+        /// Converts to a string of the format [DataMiner ID]/[element ID].
         /// </summary>
         /// <returns></returns>
         public override string ToString()
