@@ -19,7 +19,7 @@ To change your email address for your dataminer.services account — whether bec
 1. Create a new dataminer.services account (make sure to use the new email address), by following the instructions under [Logging on to dataminer.services](xref:Logging_on_to_dataminer_services#logging-on).
 
 > [!IMPORTANT]
-> Since this new account is not linked to the former one, please consider the instructions below to ensure continued access to services and data.
+> Since this new account is not linked to the old one, please consider the instructions below to ensure continued access to services and data.
 
 ## Ensuring continued access to services and data
 
