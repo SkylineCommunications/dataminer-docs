@@ -365,3 +365,12 @@ In some rare cases, the SLNet protocol cache would incorrectly retain the names 
 In some cases, the Windows batch file *Register DataMiner as Service.bat* would incorrectly assume that a machine was running a 32-bit operating system. As a result, it would incorrectly register services as 32-bit services.
 
 As 32-bit Windows systems are no longer supported, from now on, the *Register DataMiner as Service.bat* file will no longer check the architecture of the operating system.
+
+#### GQI DxM: Problem when using certain extensions because of issues with named pipes [ID 42782]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+<!-- Not added to MR 10.6.0 -->
+
+In order to communicate with its extension processes, the GQI DxM uses named pipes. In some cases, because a pipe would fail to connect to the core GQI process, it would no longer be possible to use a particular extension.
+
+Additionally, a number of enhancements have been made with regard to the management of named pipes.
