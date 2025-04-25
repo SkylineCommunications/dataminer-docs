@@ -40,6 +40,16 @@ Currently, by default, the legacy components will still be used by default. If y
 
 `?useNewIASInputComponents=true`
 
+#### Low-Code Apps - Interactive Automation scripts: Redesigned UI component 'CheckBoxList' [ID 42641]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+The UI component `UIBlockType.CheckBoxList` has been redesigned.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
 #### Dashboards/Low-Code Apps - Query builder: No longer possible to drag and drop items from certain data sources [ID 42652]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
