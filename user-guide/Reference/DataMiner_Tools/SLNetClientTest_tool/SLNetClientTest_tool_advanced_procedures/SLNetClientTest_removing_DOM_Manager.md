@@ -24,7 +24,7 @@ To do so:
    This will open another confirmation window, listing the data that will be deleted if you continue with the action.
 
    > [!NOTE]
-   > To prevent issues, if there are more than 100&thinsp;000 DOM instances, you will not be able to continue with the deletion. Prior to DataMiner 10.5.6/10.6.0<!-- RN 42788 -->, this is already applies when there are more than 10&thinsp;000 instances.
+   > To prevent issues, if there are more than 100&thinsp;000 DOM instances, you will not be able to continue with the deletion. Prior to DataMiner 10.5.6/10.6.0<!-- RN 42788 -->, this already applies when there are more than 10&thinsp;000 instances.
 
 1. Click *OK*.
 
