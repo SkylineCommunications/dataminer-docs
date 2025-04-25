@@ -116,3 +116,9 @@ When the alarm template editor was shown in a separate window (e.g. after you ha
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
 When information about the impacted services was displayed in an element shape, in some rare cases, DataMiner Cube could stop working when that information was updated.
+
+#### Alarm Console: Linked alarm tab with more than 50 active correlation alarms would not show all correlation alarms matching the selected card [ID 42796]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When a linked alarm tab contained more than 50 active correlation alarms, in some rare cases, not all correlation alarms matching the selected card would be shown.
