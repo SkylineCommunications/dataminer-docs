@@ -43,7 +43,7 @@ To request a cost estimation, follow the procedure below:
 If you have any questions regarding this cost estimation, please contact <staas@dataminer.services>.
 
 > [!IMPORTANT]
-> Cost estimations can currently only be performed for the West Europe, UK South, and Southeast Asia regions.
+> Cost estimations can currently only be performed for the West Europe, UK South, Southeast Asia and Central US regions.
 
 > [!TIP]
 > To optimize the cost efficiency of a STaaS solution, adhere to the best practices to prevent storing unnecessary data [with Automation scripts](xref:Automation_best_practices_information_events) or [with connectors](xref:Saving_parameters).
