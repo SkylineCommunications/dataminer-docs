@@ -143,3 +143,9 @@ The first time a dashboard was shared, in some rare cases, the operation could f
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
 In some cases, the *Start with an example dashboard* button could get stuck in a loading state.
+
+#### Low-Code Apps: Component actions would not be triggered when the panel containing the component was opened by clicking or double-clicking a node of a 'Node edge graph' component [ID 42801]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When, in a low-code app, clicking or double-clicking a node of a *Node edge graph* component opened a panel with a component on which actions were configured, those actions would incorrectly not get triggered.
