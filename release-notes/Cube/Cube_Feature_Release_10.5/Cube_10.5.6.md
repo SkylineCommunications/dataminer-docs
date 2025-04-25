@@ -110,3 +110,9 @@ In some cases, an *Object reference not set to an instance of an object* excepti
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
 When the alarm template editor was shown in a separate window (e.g. after you had click the pop-out icon in the top-right corner of an alarm template), up to now, when you clicked the button in the *Analytics* or *Anomalies* column, the *Augmented Operations alarm settings* window would incorrectly open inside the main window instead of the alarm template editor window.
+
+#### Visual Overview: Problem when information about impacted services displayed in an element shape was updated [ID 42786]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When information about the impacted services was displayed in an element shape, in some rare cases, DataMiner Cube could stop working when that information was updated.
