@@ -1,5 +1,7 @@
 ---
 uid: About_SRM
+keywords: DataMiner SRM
+description: DataMiner SRM is a versatile toolset integrating several modules and a standard app for easy creation and management of bookings.
 ---
 
 # About DataMiner Service & Resource Management
