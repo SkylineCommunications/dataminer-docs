@@ -22,12 +22,12 @@ items:
           - name: Managing organizations
             topicUid: PO_Managing_Organizations
     - name: DataMiner PTP
-      topicUid: SolPTP
       items:
+      - name: About DataMiner PTP
+        topicUid: SolPTP
       - name: Installing the DataMiner PTP app
         topicUid: Installing_the_DataMiner_PTP_app
       - name: Using the DataMiner PTP app
-        topicUid: Using_the_DataMiner_PTP_app
         items:
         - name: Types of PTP devices
           topicUid: Types_of_PTP_devices

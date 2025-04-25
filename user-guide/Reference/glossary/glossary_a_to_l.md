@@ -60,7 +60,7 @@ uid: glossary_a_to_l
 | Booking event | Action that is executed as part of a booking instance.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Booking instance | Definition of which resources are used, which capacity or capability of the resources is used, and when these are used.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Booking state | Phase in the life cycle of a booking, e.g. confirmed, on-hold, service pre-roll, service active, service post-roll, deleted, etc. Each phase is linked to specific automated actions.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Boundary clock | Device in a PTP environment that takes the time from a grandmaster clock, recreates it and acts as a clock itself.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
+| Boundary clock | Device in a PTP environment that takes the time from a grandmaster clock, recreates it and acts as a clock itself.<br>See [DataMiner PTP app](xref:SolPTP). |
 | BSS | Business Support System. Software system used by service providers to run business operations towards their customers. |
 | BUC | Block Upconverter. Converter used in the transmission of satellite signals, which converts signals to a higher frequency. |
 | Business Intelligence | DataMiner module that is used to track the parameters of a Service Level Agreement or SLA.<br>See [Business Intelligence](xref:sla). |
@@ -220,7 +220,7 @@ uid: glossary_a_to_l
 | GOTS | Government Off-The-Shelf. Term used for off-the shelf products that are created and owned by a government agency. |
 | GPIB | General Purpose Interface Bus. IEEE-488 interface used to connect sensors and programmable instruments to a computer or to other instruments. |
 | GQI | Generic Query Interface. A special type of data for DataMiner Dashboards and Low-Code Apps. See [Generic Query Interface (GQI)](xref:About_GQI). |
-| Grandmaster clock | Device from which the time is retrieved in a PTP environment.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
+| Grandmaster clock | Device from which the time is retrieved in a PTP environment.<br>See [DataMiner PTP app](xref:SolPTP). |
 
 ## H
 

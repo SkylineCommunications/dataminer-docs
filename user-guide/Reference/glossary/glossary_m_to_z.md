@@ -107,7 +107,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Protocol | An XML file that allows a DMA to communicate with a data source in the system. Also known as connector or driver.<br>See [Protocols](xref:Protocols1#protocols). |
 | Protocol package | Package containing all files necessary to install a particular DataMiner protocol on an existing DataMiner System. |
 | PSK | Phase-Shift Keying. Digital modulation process that conveys data by changing the phase of a transmitted signal. |
-| PTP | Precision Time Protocol. Protocol used to synchronize clocks throughout a network.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
+| PTP | Precision Time Protocol. Protocol used to synchronize clocks throughout a network.<br>See [DataMiner PTP app](xref:SolPTP). |
 | Pulse | DataMiner Cube home page, displayed when no cards are open in the workspace.<br>See [DataMiner Pulse](xref:Working_with_cards_in_DataMiner_Cube#dataminer-pulse). |
 
 ## Q
@@ -275,7 +275,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Timetrace data | History alarm data used to list history alarms in alarm tabs and to graphically visualize history alarm information in the Alarm Console history slider. |
 | TLS | Transport Layer Security. Cryptographic protocol designed to provide communication security over a network. |
 | Tooltip | Small pop-up window describing an object that is being pointed to, such as a button. |
-| Transparent clock | Device in a PTP environment that passes the time it retrieves from a boundary clock or grandmaster clock on to endpoint devices.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app) |
+| Transparent clock | Device in a PTP environment that passes the time it retrieves from a boundary clock or grandmaster clock on to endpoint devices.<br>See [DataMiner PTP app](xref:SolPTP) |
 | Trend change | Change in the behavior of a trend, detected by DataMiner Analytics, where the value suddenly starts to increase or decrease at an unusual rate.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
 | Trend group | A group of parameters for which trending is displayed.<br>See [Working with trend groups](xref:Working_with_trend_groups). |
 | Trend pattern | A tagged pattern in the trend data of a parameter.<br>See [Working with pattern matching](xref:Working_with_pattern_matching) and [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns). |
