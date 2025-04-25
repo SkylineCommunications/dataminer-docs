@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 28 April 2025 - Enhancement - Usage API - Performance and stability improvements [ID 42791]
 
-It was possible that an export request failed due to OOM, this has been fixed.
+It was possible that an export request failed with an out of memory exception, this has been fixed.
 
 Retrieving usage data to display in Admin app resulted in timeout when there was a large amount to be retrieved. Query performance has been improved.
 
