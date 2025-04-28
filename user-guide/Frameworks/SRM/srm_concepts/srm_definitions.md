@@ -25,7 +25,7 @@ Virtual functions also have **interfaces** defined (called "function interfaces"
 
 Virtual functions are **defined in XML**. This works in a very similar way as the way the definition for DVEs ([Dynamic Virtual Elements](xref:Dynamic_virtual_elements)) is defined in a connector. However, an important difference with DVEs is the fact that the definition of the virtual function is not defined within the connector itself but in a **separate file linked to the connector**. This provides more flexibility in case different virtual functions need to be supported. Each virtual function corresponds with an XML section describing one specific function of a connector. The virtual function definition groups all KPIs related to a specific function and its function interfaces.
 
-In practice, this means that a connector file (*Protocol.xml*) will be accompanied by a virtual functions file (*Functions.xml*), which defines all virtual functions the connector can expose. *Functions.xml* files are located within the *Functions* subfolder of each relevant protocol folder in *C:\\Skyline DataMiner\\Protocols*.
+In practice, this means that a connector file (*Protocol.xml*) will be accompanied by a virtual functions file (*Functions.xml*), which defines all virtual functions the connector can expose.
 
 In the Protocols & Templates module in DataMiner Cube, virtual function definitions are indicated in the same way as DVE child protocols, except with a different icon. This can be a default icon or a custom icon defined in the functions XML file. The same icon will also be used to display the virtual function elements in the Surveyor.
 
