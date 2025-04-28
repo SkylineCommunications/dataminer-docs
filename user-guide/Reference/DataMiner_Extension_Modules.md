@@ -89,7 +89,7 @@ From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages 
 
 ### Copilot
 
-The Copilot module extends DataMiner with conversational AI: see [Copilot](xref:Copilot_DxM).
+The Copilot module extends DataMiner with conversational AI. For more information, see [Copilot](xref:Copilot_DxM).
 
 ### DataAggregator
 
