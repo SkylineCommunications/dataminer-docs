@@ -13,7 +13,10 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 1. In the Automation module in DataMiner Cube, locate the *CloudStorageMigration* script and [execute the script](xref:Manually_executing_a_script).
 
    > [!NOTE]
-   > When you run the Automation script on a Failover pair, make sure the currently active Agent is the main Failover Agent (i.e. the first Agent in the Failover configuration). Otherwise, the Automation script will not function correctly.
+   > When you run the Automation script and there are failover pairs in the cluster, make sure the main Failover Agents (i.e. the first Agent in the Failover configuration) are the active ones. Otherwise, the Automation script will not function correctly.
+
+   > [!NOTE]
+   > To migrate a cluster, you only need to start the migration on one agent.
 
 1. Initialize the migration:
 
