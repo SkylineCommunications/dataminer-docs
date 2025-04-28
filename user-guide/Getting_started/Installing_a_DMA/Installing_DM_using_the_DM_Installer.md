@@ -11,9 +11,11 @@ The DataMiner software can only be installed on the C: drive. It is currently no
 
 You can follow the steps below or watch this short video, which shows you how to install a self-managed system using the DataMiner Installer with the [Storage as a Service](xref:STaaS) database type:
 
-<video width="800" height="450" controls>
-  <source src="~/user-guide/images/Self-managed_with_STaaS.mp4" type="video/mp4">
-</video>
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/user-guide/images/Self-managed_with_STaaS.mp4" type="video/mp4">
+  </video>
+</div>
 
 <p><br></p>
 
