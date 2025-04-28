@@ -7,11 +7,11 @@ keywords: dms in the cloud
 
 Watch this short video to learn how to create a new DataMiner System hosted on dataminer.services, or follow the steps below:
 
-<video width="800" height="450" controls>
-  <source src="~/user-guide/images/DaaS.mp4" type="video/mp4">
-</video>
-
-<br />
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/user-guide/images/DaaS.mp4" type="video/mp4">
+  </video>
+</div>
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%; margin-top: 20px;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DFF6DD; margin-right: 20px; color: black;">

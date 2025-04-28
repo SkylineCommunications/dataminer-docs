@@ -8,9 +8,11 @@ keywords: element wizard
 
 You can follow the steps below or watch this short video, which shows you how to [deploy a connector](xref:Deploying_a_catalog_item) from the Catalog and provides instructions on creating an example element:
 
-<video width="800" height="450" controls>
-  <source src="~/user-guide/images/CreatingaDataMinerElement.mp4" type="video/mp4">
-</video>
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/user-guide/images/CreatingaDataMinerElement.mp4" type="video/mp4">
+  </video>
+</div>
 
 1. [Open DataMiner Cube](xref:Using_the_desktop_app).
 
