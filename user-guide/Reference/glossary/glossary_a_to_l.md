@@ -55,11 +55,7 @@ uid: glossary_a_to_l
 | Behavioral anomaly detection | DataMiner Analytics feature that detects changes in the behavior of a trend.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
 | BER | Bit Error Rate. The percentage of bits with errors compared to the total bits received in a transmission. |
 | BGP | Border Gateway Protocol. Routing protocol used for traffic between autonomous systems over the internet. |
-| Booking | Definition of which resources are used, which capacity or capability of the resources is used, and when these are used. Usually called "booking instance" to make the distinction with a "booking definition".<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Booking definition | Blueprint for booking instances that are grouped in a recurring pattern.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Booking event | Action that is executed as part of a booking instance.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Booking instance | Definition of which resources are used, which capacity or capability of the resources is used, and when these are used.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Booking state | Phase in the life cycle of a booking, e.g. confirmed, on-hold, service pre-roll, service active, service post-roll, deleted, etc. Each phase is linked to specific automated actions.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Booking | See [Booking](xref:srm_instantiations#booking). |
 | Boundary clock | Device in a PTP environment that takes the time from a grandmaster clock, recreates it and acts as a clock itself.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
 | BSS | Business Support System. Software system used by service providers to run business operations towards their customers. |
 | BUC | Block Upconverter. Converter used in the transmission of satellite signals, which converts signals to a higher frequency. |
@@ -69,8 +65,8 @@ uid: glossary_a_to_l
 
 | Term | Description |
 |------|-------------|
-| Capability | Used in the context of DataMiner SRM as the ability of a resource to provide a particular functionality. For example, if a meeting room were available as a resource in the system, a capability of this resource could be that it has a speakerphone.<br>See [Service and Resource Management](xref:SRM). |
-| Capacity | Used in the context of DataMiner SRM as the measurable availability instances of a resource. For example, if the maximum capacity of a resource is 10 units, no more than 10 units can be scheduled at the same time in the system.<br>See [Service and Resource Management](xref:SRM). |
+| Capability | See [Profile parameter](xref:srm_definitions#profile-parameter). |
+| Capacity | See [Profile parameter](xref:srm_definitions#profile-parameter). |
 | Card | A window within DataMiner Cube and the DataMiner Monitoring app. |
 | Cassandra | Apache Cassandra is an open-source, high-performance, distributed, NoSQL database system designed to handle large amounts of data, which is used in [dedicated clustered storage](xref:Dedicated_clustered_storage) setups. |
 | Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [Catalog](xref:About_the_Catalog_app). |
@@ -89,11 +85,10 @@ uid: glossary_a_to_l
 | CMDB | Configuration Management Database. A database containing information about the hardware and software assets of an organization.<br>See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
 | CMTS | Cable Modem Termination System. Piece of equipment used to provide high-speed data services to cable subscribers. |
 | Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. See [About the Collaboration app](xref:About_the_Collaboration_app). |
-| Concurrency | Used in the context of DataMiner SRM to indicate the number of times a resource can be used at the same time.<br>See [Service and Resource Management](xref:SRM). |
+| Concurrency | Used in the context of DataMiner SRM to indicate the number of times a resource can be used at the same time.<br>See [Service and Resource Management](xref:About_SRM). |
 | Connectivity chain | Definition of how interfaces are connected on one or more elements, in the context of the DataMiner Connectivity Framework.<br>See [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files). Also used in the context of Root Cause Analysis, as a chain of elements, services or parameters that is configured to make it possible to analyze the distance to the most probable root cause of an alarm.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
 | Connectivity editor | Application in DataMiner Cube that allows you to manage topology chains to allow root cause analysis of alarms.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
 | Connector | An XML file that allows a DMA to communicate with a data source in the system. Also known as protocol or driver.<br>See [Protocols](xref:Protocols1). |
-| Contributing service | In DataMiner SRM, a contributing service is a service that is used by another "main" service. There is no limit to the number of contributing services a service can use. There is also no limit to the number of services that can use one and the same contributing service. The booking schedule of a contributing service can automatically follow the main service schedule (i.e. life cycle locked), or it can function independently (i.e. life cycle unlocked).<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | CORBA | Common Object Request Broker Architecture. Standard for communication between systems using different operating systems, programming languages and hardware. |
 | Corporate network | Used in the context of DataMiner Failover. The network where the users of the system reside (i.e. the office network).<br>See [About DMA Failover](xref:About_DMA_Failover). |
 | Corrective actions | Actions to undertake in case an alarm is generated. These can be visualized in the user interface using an information template.<br>See [Creating an information template](xref:Creating_an_information_template). |
@@ -162,7 +157,7 @@ uid: glossary_a_to_l
 | DSNG | Digital Satellite News Gathering. A type of electronic news gathering where reporters broadcast from remote locations, typically using an OB (Outside Broadcast) van. |
 | DSP | DataMiner Strategic Partner. Third party that supplies DataMiner-related software products and/or professional services. |
 | DTH | Direct to Home. Refers to satellite television that is received directly in the consumer's home. |
-| DTR | Data Transfer Rules. Set of rules within a service definition in DataMiner SRM that manage the automated assignment of parameter values to the profiles of the virtual functions in the service definition.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management) |
+| DTR | See [Data Transfer Rules](xref:srm_scripting#data-transfer-rules-dtr). |
 | DTT | Digital Terrestrial Television. Television service where signals are broadcast by a terrestrial transmitter using radio waves. |
 | Dummy | Variable within an Automation script that represents a DataMiner element.<br>See [Script variables](xref:Script_variables). |
 | DVB | Digital Video Broadcasting. Set of internationally accepted open standards for digital television. This includes DVB-C (Digital Video Broadcasting - Cable), DVB-H (Digital Video Broadcasting - Handheld), DVB-S (Digital Video Broadcasting - Satellite) and DVB-T (Digital Video Broadcasting - Terrestrial). |
@@ -185,7 +180,7 @@ uid: glossary_a_to_l
 | EMS | Element Management System. A system that manages network elements within a telecommunications network, and that typically communicates upward to higher-level network management systems. |
 | eMTA | embedded Multimedia Terminal Adapter. Cable modem with telephone capability. |
 | ENG | Electronic News Gathering. The process of collecting and reporting news from remote locations outside a studio, by means of electronic video and audio technologies. |
-| Engineered path routing | Network routing in the context of DataMiner SRM where the path between the fixed source and destination is determined via automated path routing.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Engineered path routing | Network routing in the context of DataMiner SRM where the path between the fixed source and destination is determined via automated path routing.<br>See [Service and Resource Management](xref:About_SRM). |
 | Enhanced service | A service that has been created using a service protocol. An alarm template and/or trend template can be assigned to such a service. |
 | EPM | Experience and Performance Management. Software platform specifically designed to manage very high volumes of devices in cable, telco, terrestrial and satellite environments. Previously known as CPE in legacy DataMiner versions. |
 | EPoC | EPON (Ethernet Passive Optical Network) Protocol over Coax. Extension of EPON standards over a hybrid fiber-coaxial (HFC) network. |
@@ -202,13 +197,13 @@ uid: glossary_a_to_l
 | FDS | Functional Design Specification. Document describing the functions that a software system or component must perform. |
 | Feature Release | The Feature Release of DataMiner is the upgrade track of the DataMiner software introducing new features on a regular basis. This upgrade track is fully supported in a production environment, but typically only used when a specific new feature is needed. This upgrade track has time-limited support for cumulative updates, as it is required to follow the track of the consecutive upgrades in order to get all the improvements. In other words, following this fast track implies following those upgrades in order to have an updated system. |
 | First-party DataMiner Connector | DataMiner connector developed by Skyline Communications. |
-| Fixed path routing | Network routing in the context of DataMiner SRM where the functions required in the path are statically defined in the service definition.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Fixed path routing | Network routing in the context of DataMiner SRM where the functions required in the path are statically defined in the service definition.<br>See [Service and Resource Management](xref:About_SRM). |
 | FTA | Free-To-Air. Radio and TV services that are broadcast without encryption, allowing anyone with the appropriate equipment to receive the signal and listen or view the content free of charge. |
 | FTP | File Transfer Protocol. Standard network protocol used for the transfer of files between a client and a server. |
 | FTTx | Fiber To The x. Broadband network architecture where optical fiber is used up to a certain point in the network. For example, FTTdp (Fiber To The Distribution Point) uses fiber up to a junction box close to the customer's premises, whereas FTTH (Fiber To The Home) uses fiber all the way up to the customer's premises. |
-| Function DVE | Alternative name for "virtual function".<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Function DVE | Alternative name for "virtual function".<br>See [Service and Resource Management](xref:About_SRM). |
 | Function hysteresis | Functionality of DataMiner SRM that keeps virtual function resources from being disabled if they will be used again soon.<br>See [Advanced SRM settings](xref:Function_resource_settings). |
-| Function XML | XML file containing a virtual function definition.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Function XML | XML file containing a virtual function definition.<br>See [Service and Resource Management](xref:About_SRM). |
 
 ## G
 

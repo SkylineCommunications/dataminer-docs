@@ -152,7 +152,7 @@ uid: PA_Creating_resource_tasks
 1. In the *Protocols & Templates* module, import the function into your DataMiner System and activate it.
 
    > [!TIP]
-   > See also: [Uploading a functions XML file in DataMiner Cube](xref:Functions_XML_files#uploading-a-functions-xml-file-in-dataminer-cube)
+   > See also: [Adding virtual functions to a DMS](xref:creating_virtual_functions#adding-virtual-functions-to-a-dms)
 
    ![Functions_File](~/user-guide/images/Functions_File.png)
 

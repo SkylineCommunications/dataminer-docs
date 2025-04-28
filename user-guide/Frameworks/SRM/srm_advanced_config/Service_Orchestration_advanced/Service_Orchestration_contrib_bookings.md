@@ -115,7 +115,7 @@ Like a main booking, a contributing booking can have different [life cycle state
 
 ### Basic configuration
 
-1. Create a **system function** to define the signature of the contributing resource, i.e. the name, logo, interface, and (interface) profile definition(s). To do so, you will need to add a [Functions.xml](xref:Functions_XML_files) file in the folder `C:\Skyline DataMiner\ServiceManager\` on all DMAs in the system and then restart the DMAs. Here is an example of the content of such a functions file:
+1. Create a **system function** to define the signature of the contributing resource, i.e. the name, logo, interface, and (interface) profile definition(s). To do so, you will need to add a [Functions.xml](xref:srm_definitions#functions-xml-files) file in the folder `C:\Skyline DataMiner\ServiceManager\` on all DMAs in the system and then restart the DMAs. Here is an example of the content of such a functions file:
 
    ```xml
    <Function id="b91f59c8-58f2-4422-9a28-f0a6bf815ab0" name="RXSAT" maxInstances="0" profile="e21dd094-4815-4c62-8542-f70589767b18">

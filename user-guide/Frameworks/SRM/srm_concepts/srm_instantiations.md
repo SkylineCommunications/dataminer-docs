@@ -8,14 +8,11 @@ This section explains the instantiations in the SRM framework, which are actual 
 
 ## Element
 
-A DataMiner element **represents a data source** that is monitored by the DataMiner System. An element retrieves information from a data source based on what is defined in a connector. Typically, an element is linked to a single physical device or platform.
+A [DataMiner element](xref:About_elements) **represents a data source** that is monitored by the DataMiner System. An element retrieves information from a data source based on what is defined in a connector. Typically, an element is linked to a single physical device or platform.
 
 While the connector defines how to communicate with a data source and which information should be retrieved from the data source, the element using that connector actually retrieves the information. Usually, an element is created for each data source.
 
 For example, an element could be created to represent a cloud-based server. The element will show all KPIs retrieved from that server.
-
-> [!TIP]
-> See also: [About elements](xref:About_elements)
 
 ## Virtual function resource
 
@@ -23,18 +20,18 @@ While a virtual function is a definition, a virtual function resource is the cor
 
 Both the terms "virtual function resource" and "virtual function instance" are used in the SRM framework, but these mean exactly the same thing. In the example above, the 4 encoding virtual function instances exposed by the platform are represented as 4 different resources, each based on the same virtual function. These resources are managed by DataMiner Resource Manager.
 
-The technique used by the SRM framework is very similar to the technique used to generate [Dynamic Virtual Elements](xref:Dynamic_virtual_elements) (DVEs). A virtual function is created based on a main element and only visualizes a selection of metrics of that main element, i.e. the metrics that are relevant for that particular virtual function. The main difference with DVEs is that the definition for virtual functions is not coded into the connector itself but defined in a separate *functions.xml* file.
+The technique used by the SRM framework is very similar to the technique used to generate [Dynamic Virtual Elements](xref:Dynamic_virtual_elements) (DVEs). A virtual function is created based on a main element and only visualizes a selection of metrics of that main element, i.e. the metrics that are relevant for that particular virtual function. Consequently, it is sometimes also called a "virtual function element". The main difference with DVEs is that the definition for virtual functions is not coded into the connector itself but defined in a separate [functions.xml](xref:srm_definitions#functions-xml-files) file.
 
 As a resource represents a specific virtual function, and the virtual function links to a profile definition grouping multiple profile parameters, resources can expose **capacities and capabilities** listed in that linked profile definition. For example, if an encoding instance is only capable of providing SD encoding, when a resource with HD capability is requested, this encoding instance will not be a candidate.
 
 By default, a virtual function resource is represented as a virtual element while the booking using that resource is active.
 
+> [!NOTE]
+> A **resource** can also be created manually in the [Resources module](xref:The_Resources_module) without a corresponding virtual function. As such, a resource could be any object you want to be able to schedule for use. However, note that in that case no orchestration or automation is supported in the SRM framework.
+
 ## Resource pool
 
 A resource pool is a **container that groups several resources**. One resource can be part of one or more resource pools.
-
-> [!NOTE]
-> A resource can also be created manually in the [Resources module](xref:The_Resources_module) without a corresponding virtual function. As such, a resource could be any object you want to be able to schedule for use. However, note that in that case no orchestration or automation is supported in the SRM framework.
 
 ## Profile instance
 
@@ -45,6 +42,9 @@ As a profile definition is a group of configuration, monitoring, capability, and
 For example, an "Encoding HD" instance could contain the values for each of the profile parameters required to orchestrate a resource. As a capability, the instance could contain the "HD" value, so that resources that cannot provide this specific capability are filtered out during the booking creation process.
 
 Profile instances are used in the context of Service Orchestration, Resource Automation, and Resource Orchestration.
+
+> [!TIP]
+> See also: [Configuring profile instances](xref:Configuring_profile_instances)
 
 ### State profile instance
 
@@ -62,7 +62,10 @@ While using service profile instances requires more initial configuration effort
 
 ## Booking
 
-The definition of a booking differs depending on the SRM use case, as detailed below.
+Also known as a "booking instance" or "reservation instance". The definition of a booking differs depending on the SRM use case, as detailed below.
+
+> [!TIP]
+> See also: [Booking stages](xref:srm_stages_of_bookings)
 
 ### Service Orchestration
 

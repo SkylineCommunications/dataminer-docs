@@ -8,6 +8,9 @@ The parameters in a profile definition are linked to one or more parameters of e
 
 Profile parameters can be configured in two ways. You can either [add a parameter with the 'Add parameter' button](#creating-a-profile-parameter-with-the-add-parameter-button) and then configure it, or [drag an element from the Surveyor](#configuring-profile-parameters-by-dragging-an-element-onto-the-module) onto the *Parameters* pane and then add one or more parameters from that element to an existing or a new profile parameter:
 
+> [!TIP]
+> See also: [Profile parameters](xref:srm_definitions#profile-parameter).
+
 ## Creating a profile parameter with the Add parameter button
 
 1. At the bottom of the *Parameters* tab of the list pane, click *Add parameter.*

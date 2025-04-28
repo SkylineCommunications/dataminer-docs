@@ -5,7 +5,7 @@ uid: DOM_ResourceFieldDescriptor
 # ResourceFieldDescriptor
 
 - **FieldValue type**: Guid
-- **FieldValue example**: a0623201-c157-478c-a880-d40422c40f1c (ID of an [SRM resource](xref:Concepts1))
+- **FieldValue example**: a0623201-c157-478c-a880-d40422c40f1c (ID of an [SRM resource](xref:srm_instantiations#virtual-function-resource))
 - **Multiple values supported**: :heavy_check_mark: (since DataMiner 10.2.3/10.3.0)
 - **Available since**: DataMiner 10.1.2/10.2.0
 
