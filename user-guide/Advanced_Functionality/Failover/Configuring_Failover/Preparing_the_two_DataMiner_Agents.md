@@ -8,7 +8,7 @@ Before you start the actual configuration, make sure you have the following:
 
 - A [primary DMA](#primary-dataminer-agent)
 
-- A [backup DMA](#backup-dataminer-agent) (newly installed)
+- A [backup DMA](#backup-dataminer-agent) (newly installed; see [Installation with the DataMiner Installer](xref:Installing_DM_using_the_DM_installer) or [Installation with pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk))
 
 - A [pair of additional IP addresses or a hostname](#additional-ip-addresses-or-hostname)
 

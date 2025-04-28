@@ -18,7 +18,9 @@ You can follow the steps below or watch this short video, which shows you how to
 <p><br></p>
 
 > [!IMPORTANT]
-> Avoid using duplicates of existing VMs to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
+>
+> - **Avoid using duplicates of existing VMs** to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
+> - To restore a **backup**, install a **Failover** Agent, or install an **offline** Agent, you will need to follow a **different procedure** than shown in the video above. Please read the instructions below carefully to make sure you follow the correct procedure.
 
 ## Before you run the installer
 
@@ -65,6 +67,7 @@ If you are using DataMiner Installer v10.4, follow the steps below to install Da
    >   - For the data storage configuration, please refer to [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
    > - The procedure below will deploy DataMiner in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. To switch to a [perpetual license](xref:Pricing_Perpetual_Use_Licensing), see [Switching from subscription mode to perpetual license](#switching-from-subscription-mode-to-perpetual-license). To immediately install DataMiner with a perpetual license, you will need to configure the license and data storage manually, similar to an offline installation.
    > - If you intend to **restore a backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip the configuration below** and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](#restoring-a-backup-onto-the-new-installed-dataminer-agent).
+   > - If you are installing a **Failover** Agent, **skip the configuration below**, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](#configuring-the-new-dataminer-agent-as-a-new-agent-in-a-failover-pair).
 
 1. Click *Start*.
 
@@ -127,22 +130,22 @@ If you are using the DataMiner Installer v10.4 to restore a backup coming from a
 
 1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-### Configuring the new installed DataMiner Agent as a new agent in a failover pair
+### Configuring the new DataMiner Agent as a new Agent in a Failover pair
 
-If you are using the DataMiner Installer v10.4 to install an agent that will be paired with an existing agent in a failover setup, after you have installed DataMiner, instead of clicking *Start* to configure the DataMiner Agent, make sure both the existing and new DMA are prepared, and you have the necessary prerequisites. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
+If you are using the DataMiner Installer v10.4 to install an Agent that will be paired with an existing Agent in a Failover setup, after you have installed DataMiner, instead of clicking *Start* to configure the DataMiner Agent, follow the steps below:
 
-> [!IMPORTANT]
-> Do not start DataMiner on the newly installed agent before preparation is fully done.
+1. Make sure both the existing and new DMA are prepared and the necessary prerequisites are met, as detailed under [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 
-Once all configuration is done, request a license:
+   > [!IMPORTANT]
+   > Do not start DataMiner on the newly installed DMA before this preparation is fully done.
 
 1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
 1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
 
-1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the ID of the existing agent and the *Request.lic* file.
+1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the ID of the existing DMA and the *Request.lic* file.
 
-   In your email, mention that it concerns a failover agent for an existing agent.
+   In your email, mention that it concerns a Failover Agent for an existing Agent.
 
 1. Wait until you receive either a *dataminer.lic* or *response.lic* file from Skyline.
 
@@ -150,7 +153,7 @@ Once all configuration is done, request a license:
 
 1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-Once the new agent is running, continue with the [failover configuration in Cube](xref:Failover_configuration_in_Cube).
+Once the new DMA is running, continue with the [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
 
 ### Switching from subscription mode to perpetual license
 
