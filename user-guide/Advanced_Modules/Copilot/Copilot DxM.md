@@ -6,7 +6,7 @@ uid: Copilot_DxM
 
 The DataMiner Copilot module is available as a DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)) and is responsible for bringing conversational AI into DataMiner.
 
-The [natural language to GQI](xref:NL2GQI) feature is available from Copilot 1.0.0 onwards.
+The current 1.0.0 version only supports the [natural language to GQI](xref:NL2GQI) feature, but more features will be added soon.
 
 ## Installation
 
@@ -20,3 +20,5 @@ For Copilot to run correctly, the following **prerequisites** must be met:
 ## Logging
 
 Errors and warnings are logged to log files in the `C:\ProgramData\Skyline Communications\DataMiner Copilot\Logs` folder. If this folder does not exist, it will be created automatically.
+
+This folder will only store at most two log files. A new log file is created when the current file exceeds a predefined size. In case the folder already contains two log files, the oldest will be removed to make room for the new one.

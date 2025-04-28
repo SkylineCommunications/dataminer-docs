@@ -6,7 +6,16 @@ uid: NL2GQI
 
 Starting from version 1.0.0, the [DataMiner Copilot](xref:Copilot_DxM) DxM will translate requests in human language into ready-to-execute GQI queries making use of an underlying Large Language Model (LLM).
 
-For details on how to use this feature, see [Letting Copilot create a query](xref:Creating_GQI_query#letting-copilot-create-a-query)
+You can use this feature when [configuring queries in dashboards or low-code apps](xref:Creating_GQI_query#letting-copilot-create-a-query).
+
+![NL2GQI](~/user-guide/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.5.4*
+
+Examples of such natural languages request could be:
+
+- "Show me all the critical alarms from last week"
+- "Sort elements by their name"
+
+The result will be a GQI query that you can use to fetch the requested data.
 
 ## Supported GQI operators
 
