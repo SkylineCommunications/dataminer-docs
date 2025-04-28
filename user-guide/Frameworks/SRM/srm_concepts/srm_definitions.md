@@ -29,8 +29,6 @@ In practice, this means that a connector file (*Protocol.xml*) will be accompani
 
 In the Protocols & Templates module in DataMiner Cube, virtual function definitions are indicated in the same way as DVE child protocols, except with a different icon. This can be a default icon or a custom icon defined in the functions XML file. The same icon will also be used to display the virtual function elements in the Surveyor.
 
-In addition to functions XML files, the system can also contain virtual function protocols that are automatically generated based on virtual function definitions. These are listed in the *Virtual functions* section at the bottom of the first column of the Protocols & Templates module.
-
 > [!TIP]
 > For information about the Functions XML structure, refer to [Functions schema](xref:SchemaFunctions).
 
