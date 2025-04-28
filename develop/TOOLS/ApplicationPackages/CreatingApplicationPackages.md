@@ -33,7 +33,7 @@ If you do not have this version of DIS, then follow these steps for the installa
 
 ### CI/CD tutorial
 
-If you are interested in combining this with automatic registration in the DataMiner Catalog, follow our [CI/CD tutorial that uses this Skyline DataMiner Package Project](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub).
+If you are interested in combining this with automatic registration in the Catalog, follow our [CI/CD tutorial that uses this Skyline DataMiner Package Project](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub).
 
 ## DataMiner Package Composer
 
@@ -45,7 +45,7 @@ Key highlights:
 - Modular packages: Bundle components like dashboards and DOM modules.
 - Version management: Track updates with ease.
 
-You can find how to install and use this described on its [DataMiner Catalog Record](https://catalog.dataminer.services/details/10aeaf2a-2e6c-4841-a49e-5e3dfcd655ba).
+You can find how to install and use this described on its [Catalog Record](https://catalog.dataminer.services/details/10aeaf2a-2e6c-4841-a49e-5e3dfcd655ba).
 
 ## Application package builder API
 

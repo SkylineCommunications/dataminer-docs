@@ -97,6 +97,18 @@ items:
             topicUid: How_do_I_parse_Correlation_Alarm_Info_data
           - name: How can I manage permanent memory files?
             topicUid: How_can_I_manage_permanent_memory_files
+  - name: Bookings
+    items:
+      - name: About the Bookings module
+        topicUid: The_Bookings_module
+      - name: Stages of bookings
+        topicUid: srm_stages_of_bookings
+      - name: Advanced booking configuration
+        items:
+          - name: Function resource settings
+            topicUid: Function_resource_settings
+          - name: Resource availability
+            topicUid: Resource_availability
   - name: Business Intelligence
     topicUid: sla
     items:
@@ -592,6 +604,7 @@ items:
               - name: Top X
                 topicUid: GQI_Top_X
           - name: Extensions
+            topicUid: GQI_Extensions
             items:
               - name: Configuring an ad hoc data source
                 topicUid: Configuring_an_ad_hoc_data_source_in_a_query
@@ -812,6 +825,8 @@ items:
   - name: DataMiner Object Models (DOM)
     topicUid: DOM
     items:
+      - name: DOM managers
+        topicUid: DOM_managers
       - name: DOM objects
         topicUid: DOM_objects
         items:
@@ -851,18 +866,8 @@ items:
             topicUid: DomTemplate
           - name: DomBehaviorDefinition object
             topicUid: DomBehaviorDefinition
-      - name: DOM managers
-        topicUid: DOM_managers
       - name: DOM helper class
         topicUid: DomHelper_class
-      - name: DOM events
-        topicUid: DOM_events
-      - name: DOM history
-        topicUid: DOM_history
-      - name: DOM status system
-        topicUid: DOM_status_system
-      - name: DOM actions
-        topicUid: DOM_actions
       - name: DOM module settings
         topicUid: DOM_ModuleSettings
         items:
@@ -886,10 +891,16 @@ items:
             topicUid: DOM_DomInstanceHistorySettings
           - name: StorageSettings
             topicUid: DOM_StorageSettings
+      - name: DOM events
+        topicUid: DOM_events
+      - name: DOM history
+        topicUid: DOM_history
+      - name: DOM status system
+        topicUid: DOM_status_system
+      - name: DOM actions
+        topicUid: DOM_actions
       - name: DOM data storage
         topicUid: DOM_data_storage
-      - name: Best practices
-        topicUid: DOM_best_practices
       - name: DOM examples
         items:
           - name: Invoice app example
@@ -931,6 +942,8 @@ items:
                 topicUid: DOM_editor_deleting_section
               - name: Naming a DOM instance
                 topicUid: DOM_editor_naming_instance
+      - name: Best practices
+        topicUid: DOM_best_practices
       - name: Tutorials
         items:
           - name: Getting started with DOM
@@ -955,6 +968,8 @@ items:
         items:
           - name: Accessing the Experience and Performance Management user interface
             topicUid: Accessing_the_Experience_and_Performance_Management_user_interface
+          - name: Using the EPM Topology app
+            topicUid: EPM_Topology_app
           - name: EPM user interface components
             topicUid: EPM_user_interface_components
           - name: Using the EPM filter section
@@ -1121,6 +1136,16 @@ items:
         topicUid: Command_reference
       - name: Encoding and decoding of character sets in text messages
         topicUid: Encoding_and_decoding_of_character_sets_in_text_messages
+  - name: Profiles
+    items:
+      - name: About the Profiles module
+        topicUid: The_Profiles_module
+      - name: Configuring profile parameters
+        topicUid: Configuring_profile_parameters
+      - name: Configuring profile definitions
+        topicUid: Configuring_profile_definitions
+      - name: Configuring profile instances
+        topicUid: Configuring_profile_instances
   - name: DMS Reporter
     topicUid: reporter
     items:
@@ -1192,6 +1217,14 @@ items:
             topicUid: Component_overview
           - name: Constants
             topicUid: Constants
+  - name: Resources
+    items:
+      - name: About the Resources module
+        topicUid: The_Resources_module
+      - name: Resources module UI overview
+        topicUid: Resources_module_UI_overview
+      - name: Configuring pools of resources
+        topicUid: Configuring_pools_of_resources
   - name: Router Control
     topicUid: RouterControl
     items:
@@ -1221,6 +1254,16 @@ items:
             topicUid: Overview_of_user_interface_component_properties
           - name: Creating a dynamic tab page
             topicUid: Creating_a_dynamic_tab_page
+  - name: Services
+    items:
+      - name: About the Services module
+        topicUid: The_Services_module
+      - name: Using the overview tab
+        topicUid: SRM_Services_overview
+      - name: Using the definitions tab
+        topicUid: SRM_Services_definitions
+      - name: Using the profiles tab
+        topicUid: SRM_Services_profiles
   - name: Scheduler
     topicUid: scheduler
     items:
@@ -1234,48 +1277,6 @@ items:
         topicUid: Manually_starting_and_stopping_a_scheduled_event
       - name: Creating a Scheduler template
         topicUid: Creating_a_Scheduler_template
-  - name: Service and Resource Management
-    topicUid: SRM
-    items:
-      - name: Concepts
-        topicUid: Concepts1
-      - name: Functions XML files
-        topicUid: Functions_XML_files
-      - name: The Profiles module
-        topicUid: The_Profiles_module
-        items:
-          - name: Configuring profile parameters
-            topicUid: Configuring_profile_parameters
-          - name: Configuring profile definitions
-            topicUid: Configuring_profile_definitions
-          - name: Configuring profile instances
-            topicUid: Configuring_profile_instances
-      - name: The Resources module
-        topicUid: The_Resources_module
-        items:
-          - name: Resources module UI overview
-            topicUid: Resources_module_UI_overview
-          - name: Configuring pools of resources
-            topicUid: Configuring_pools_of_resources
-      - name: The Bookings module
-        topicUid: The_Bookings_module
-      - name: The Services module
-        topicUid: The_Services_module
-        items:
-          - name: Using the overview tab
-            topicUid: SRM_Services_overview
-          - name: Using the definitions tab
-            topicUid: SRM_Services_definitions
-          - name: Using the profiles tab
-            topicUid: SRM_Services_profiles
-      - name: SRM code snippets
-        topicUid: SRM_code_snippets
-      - name: Advanced SRM settings
-        items:
-          - name: Function resource settings
-            topicUid: Function_resource_settings
-          - name: Resource availability
-            topicUid: Resource_availability
   - name: Spectrum Analysis
     topicUid: SpectrumAnalysis
     items:

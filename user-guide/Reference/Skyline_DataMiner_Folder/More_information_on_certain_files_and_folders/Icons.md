@@ -8,7 +8,7 @@ The *C:\\Skyline DataMiner\\Icons\\* directory contains any custom icons that ha
 
 The icons and the icon rules are specified in the following XML files:
 
-- *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml*
+- `C:\Skyline DataMiner\Icons\CustomIcons.xml`
 
 - *C:\\Skyline DataMiner\\Icons\\IconSelectionRules.xml*
 

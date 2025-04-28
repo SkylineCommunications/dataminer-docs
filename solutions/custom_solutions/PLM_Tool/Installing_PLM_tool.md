@@ -12,7 +12,7 @@ uid: Installing_PLM_tool
 
 ## Deploying the PLM tool
 
-1. Look up the [*DataMiner Planned Maintenance Tool* package](https://catalog.dataminer.services/details/package/6010) in the DataMiner Catalog.
+1. Look up the [*DataMiner Planned Maintenance Tool* package](https://catalog.dataminer.services/details/package/6010) in the Catalog.
 
 1. Click the *Deploy* button.
 

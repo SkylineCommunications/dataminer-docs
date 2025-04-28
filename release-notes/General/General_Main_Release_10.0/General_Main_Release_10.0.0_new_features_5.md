@@ -180,7 +180,7 @@ The mobile DataMiner apps can now be added to a mobile device’s home screen an
 
 #### Default time zone can now be specified in ClientSettings.json \[ID 22762\]
 
-Time notations displayed in DataMiner mobile apps will now all be based on the time zone specified in the following setting, located in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file:
+Time notations displayed in DataMiner mobile apps will now all be based on the time zone specified in the following setting, located in the `C:\Skyline DataMiner\users\ClientSettings.json` file:
 
 - commonServer.ui.DefaultTimeZone
 

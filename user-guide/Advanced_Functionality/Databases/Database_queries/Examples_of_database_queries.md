@@ -6,7 +6,7 @@ uid: Examples_of_database_queries
 
 ## MSSQL database queries
 
-If the offload database is an MSSQL database, then every DMA instructed to offload (some of) its data will copy that data to its local, publicly shared *C:\\Skyline DataMiner\\System Cache\\Offload* folder.
+If the offload database is an MSSQL database, then every DMA instructed to offload (some of) its data will copy that data to its local, publicly shared `C:\Skyline DataMiner\System Cache\Offload` folder.
 
 On the offload database, a query like the following one will then be run to insert that “offloaded” data into the offload database:
 

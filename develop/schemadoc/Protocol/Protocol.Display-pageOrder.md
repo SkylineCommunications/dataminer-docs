@@ -41,3 +41,11 @@ The following placeholders can be used:
 
 > [!NOTE]
 > The identifiers used for separators and web interfaces should not match the name of an existing page in the protocol. In case it does, it will not be considered a separator or web interface link.
+
+### Custom order for EPM integration data pages
+
+From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 29748+42221 -->, if the `CPEIntegration_` prefix is added to data pages in an EPM protocol, you can apply a custom order for these pages in the *pageOrder* attribute of the *Display* tag in the protocol. For example:
+
+```xml
+<Display type="element manager" pageOptions="*;CPEOnly" defaultPage="General" pageOrder="General;Configurations;----------;CPEIntegration_Data/General;CPEIntegration_Data/Fiber;CPEIntegration_Data/Household;CPEIntegration_Data/Service Usage"/>
+```

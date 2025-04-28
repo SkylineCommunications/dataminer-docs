@@ -18,7 +18,7 @@ If you want to move the MySQL data directory to another location, you cannot jus
 
 1. Copy all data in the current data directory to the folder that will become the new data directory.
 
-1. In my.ini, located in the base directory, change the datadir parameter. If your current data directory is *C:\\MySQLData*, look for the following line:
+1. In my.ini, located in the base directory, change the datadir parameter. If your current data directory is `C:\MySQLData`, look for the following line:
 
    ```txt
    datadir="C:\MySQLData\

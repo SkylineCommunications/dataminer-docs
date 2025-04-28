@@ -54,7 +54,7 @@ To create and maintain a DaaS instance, your [organization](xref:Pricing_Usage_b
    > [!NOTE]
    > You can find your organization ID on [dataminer.services](https://dataminer.services):
    >
-   > 1. [Log in using your dataminer.services account](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+   > 1. [Log in using your dataminer.services account](xref:Logging_on_to_dataminer_services).
    > 1. Select the organization you want to transfer DataMiner credits to.
    > 1. Go to the webpage URL and copy the last part of the URL after the final slash.
    >

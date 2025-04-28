@@ -155,7 +155,7 @@ DataMiner Dashboards enable operators to efficiently leverage the extensive, val
 
 With the Dashboards app, you can **create, manage, and view** dashboards that display a **wealth of information** about the managed system.
 
-Moreover, dashboards adhere to DevOps principles and can easily evolve over time at runtime. They can even be **shared with just about anybody outside of the company** through [dataminer.services](xref:Overview_DCP). Our built-in security functionality allows you control over the data you share, enabling you to determine which data is shared, with whom, and for how long.
+Moreover, dashboards adhere to DevOps principles and can easily evolve over time at runtime. They can even be **shared with just about anybody outside of the company** through [dataminer.services](xref:Overview_dataminer_services). Our built-in security functionality allows you control over the data you share, enabling you to determine which data is shared, with whom, and for how long.
 
 > [!TIP]
 > See [Dashboard Share](xref:Overview_Collaboration#dashboard-share) for more information.
@@ -203,7 +203,7 @@ First of all, DataMiner Control Panels **allow versatile control actions with th
 
 Moreover, you have the freedom to **customize the appearance and design** of each DataMiner Control Panel. This includes not only buttons but also trend charts, thumbnails, real-time metrics and KPIs, spectrum analyzers, or any other elements that align with your specific needs.
 
-And finally, the control panels **enable true multi-tenant operations**. You can create tailor-made control panels for any customer, partner, or supplier, and share them via the DataMiner Cloud Platform.
+And finally, the control panels **enable true multi-tenant operations**. You can create tailor-made control panels for any customer, partner, or supplier, and share them via the dataminer.services.
 
 > [!TIP]
 > For more information:

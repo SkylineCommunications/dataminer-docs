@@ -6,11 +6,10 @@ uid: Linking_a_shape_to_an_EPM_object
 
 It is possible to link a shape to an EPM object using its system name and system type. Clicking the shape will then navigate to that EPM object on the current card. The context menu of the shape will allow you to navigate to the object on the current card, on a new card, or on a new undocked card.
 
-> [!IMPORTANT]
-> This feature is currently only available if the *CPEIntegration* soft-launch option is enabled. See [Soft-launch options](xref:SoftLaunchOptions).
-
 > [!NOTE]
-> A shape linked to an EPM object supports inheritance, which means that child shapes will automatically be linked to the EPM object. You can disable this using the [AllowInheritance=False](xref:Overview_of_page_and_shape_options#allowinheritancefalse) option.
+>
+> - This feature is available from DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards.<!-- RN 42221 --> In earlier DataMiner versions, it is available if the *CPEIntegration* soft-launch option is enabled. See [Soft-launch options](xref:SoftLaunchOptions).
+> - A shape linked to an EPM object supports inheritance, which means that child shapes will automatically be linked to the EPM object. You can disable this using the [AllowInheritance=False](xref:Overview_of_page_and_shape_options#allowinheritancefalse) option.
 
 ## Basic shape data configuration
 

@@ -51,7 +51,7 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
+SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the `C:\Skyline DataMiner\Logging` folder or one of its subfolders:
 
 | Type of file to be retrieved | Request | Response |
 |---|---|---|

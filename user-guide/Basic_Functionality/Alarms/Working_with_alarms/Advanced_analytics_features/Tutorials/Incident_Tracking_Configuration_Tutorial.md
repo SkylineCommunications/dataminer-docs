@@ -41,7 +41,7 @@ The tutorial consists of the following steps:
 
 1. Deploy the Catalog item to your DataMiner Agent by clicking the *Deploy* button.
 
-   This will create 13 elements under the *DataMiner Catalog > Augmented Operations* > *Incident Tracking Tutorial* view. It will also create four Automation scripts. The names of all added elements and scripts starts with *Incident Tracking Tutorial*.
+   This will create 13 elements under the *DataMiner Catalog* > *Augmented Operations* > *Incident Tracking Tutorial* view. It will also create four Automation scripts. The names of all added elements and scripts starts with *Incident Tracking Tutorial*.
 
    > [!NOTE]
    > If the package has been fully deployed, but not everything mentioned above is visible in Cube, close and reopen Cube.

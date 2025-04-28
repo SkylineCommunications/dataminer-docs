@@ -16,6 +16,12 @@ The tokens to authenticate towards dataminer.services no longer rely on NATS to 
 
 A TCP port leak could occur in the CloudGateway, especially when there was an issue with the connection to dataminer.services.
 
+#### 4 April 2025 - Fix - CloudGateway 2.17.4 - Connection issue caused by hibernation mode [ID 42383]
+
+​When the DataMiner CloudGateway DxM was run on a machine that goes into hibernation mode (e.g. a laptop or desktop computer), the process to create the connection to dataminer.services could get stuck as a side effect of the hibernation mode. To prevent this, this process will now time out after 30 seconds, and a new attempt will be made.
+
+This does not affect machines that do not go into hibernation mode (e.g. servers).
+
 #### 30 January 2025 - Fix - CloudGateway 2.17.2 - Reconnect banner continually showing when remote access is used [ID 42086]
 
 With the Remote Access and Live Sharing performance and stability improvements released on the 27th of January (rolled back on the 29th of January), if CloudGateway version 2.16.0 - 2.17.1 was used, the reconnect banner showed up all the time while remote access was used. This issue has been fixed.
@@ -38,7 +44,7 @@ Cloud Gateway will now offload error information in case the running state of a 
 
 #### 29 January 2025 - Enhancement - CloudGateway 2.17.1 - Cloud connection performance and stability improvements [ID 41733]
 
-From now on, the CloudGateway DxM will create multiple connections to dataminer.services instead of one, which is possible since the recent [Remote Access and Live Sharing performance and stability improvements](xref:DCP_change_log_2025#27-january-2025---enhancement---remote-access-and-live-sharing-performance-and-stability-improvements-id-42043).
+From now on, the CloudGateway DxM will create multiple connections to dataminer.services instead of one, which is possible since the recent [Remote Access and Live Sharing performance and stability improvements](xref:dataminer_services_change_log_2025#27-january-2025---enhancement---remote-access-and-live-sharing-performance-and-stability-improvements-id-42043).
 
 This enhancement improves **performance** because it allows a higher request throughput.
 

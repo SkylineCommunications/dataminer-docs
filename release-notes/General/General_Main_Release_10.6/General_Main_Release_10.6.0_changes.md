@@ -25,17 +25,17 @@ For more information on the installer, see [Installing DataMiner using the DataM
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
 
-The *C:\\Skyline DataMiner\\Recycle Bin\\* folder contains backup copies of modified configuration files and folders, stored as zip files. Each zip file includes the modified file or folder along with a *Cause.txt* file, which details the reason for the change and its timestamp. These backup copies help you restore previous configurations if needed.
+The `C:\Skyline DataMiner\Recycle Bin\` folder contains backup copies of modified configuration files and folders, stored as zip files. Each zip file includes the modified file or folder along with a *Cause.txt* file, which details the reason for the change and its timestamp. These backup copies help you restore previous configurations if needed.
 
 Up to now, a separate zip file would be created for each configuration change that had been implemented in the system.
 
-From now on, the contents of the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder will be zipped and moved to the *C:\\Skyline DataMiner\\Recycle Bin\\* folder every 11 minutes. This process will first occur 3 minutes after DataMiner startup.
+From now on, the contents of the `C:\Skyline DataMiner\System Cache\Recyclable\` folder will be zipped and moved to the `C:\Skyline DataMiner\Recycle Bin\` folder every 11 minutes. This process will first occur 3 minutes after DataMiner startup.
 
 When a configuration change occurs, two scenarios are possible:
 
-- If the file or folder has not been modified after the most recent move to the *Recycle Bin* folder (which happens every 11 minutes), a new entry is created in the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder with the name of the changed file or folder.
+- If the file or folder has not been modified after the most recent move to the *Recycle Bin* folder (which happens every 11 minutes), a new entry is created in the `C:\Skyline DataMiner\System Cache\Recyclable\` folder with the name of the changed file or folder.
 
-- If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
+- If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in the `C:\Skyline DataMiner\System Cache\Recyclable\` folder is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
 
 ##### RecycleBinSize setting in MaintenanceSettings.xml
 
@@ -98,7 +98,7 @@ The checks with regard to database compatibility have now been enhanced.
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
-Up to now, when you had made changes to a *C:\\Skyline DataMiner\\Analytics\\configuration.xml* file on the leader Agent, you had to manually replace the file on all Agents in the cluster. From now on, you can force the synchronization of this file via Cube.
+Up to now, when you had made changes to a `C:\Skyline DataMiner\Analytics\configuration.xml` file on the leader Agent, you had to manually replace the file on all Agents in the cluster. From now on, you can force the synchronization of this file via Cube.
 
 See also [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_between_DataMiner_Agents)
 
@@ -167,11 +167,11 @@ From now on, SLLogCollector packages will also include the log files of the *Mod
 
 *\*The Copilot feature is currently still being developed. It is not yet available for non-Skyline users*
 
-#### DataMiner upgrade: '.dmapp' and '.dmprotocol' will now by default be added to the list of MIME types in 'C:\\Skyline DataMiner\\Webpages\\web.config' [ID 41469]
+#### DataMiner upgrade: '.dmapp' and '.dmprotocol' will now by default be added to the list of MIME types in 'C:\Skyline DataMiner\Webpages\web.config' [ID 41469]
 
 <!-- MR 10.6.0 - FR 10.5.2 -->
 
-During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will now by default be added to the list of MIME types in the *C:\\Skyline DataMiner\\Webpages\\web.config* file.
+During a DataMiner upgrade, the ".dmapp" and ".dmprotocol" file extensions will now by default be added to the list of MIME types in the `C:\Skyline DataMiner\Webpages\web.config` file.
 
 #### DataMiner Object Models: Number of DomInstanceIds in SectionDefinitionErrors now limited to 100 [ID 41572]
 
@@ -200,7 +200,7 @@ Because of a number of enhancements, it will now be fully aware of all supported
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
 
-Up to now, the BAP test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
+Up to now, the BPA test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
 
 Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending on the DataMiner version, it will checks for the following DLL files, in the specified folders:
 
@@ -254,6 +254,58 @@ When, while a DOM instance was created or updated, a `FieldValue` was added for 
 
 From now on, the trace data will indicate that a `DomInstanceError` was thrown with error reason `FieldValueUsedInDomInstanceLinksToNonExistingFieldDescriptor`.
 
+#### Service & Resource Management: Enhanced locking mechanism in ID cache and Time range cache [ID 42463]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+Because of a number of enhancements, the locking mechanism in the following Resource Manager caches has been improved.
+
+| Cache | Description |
+|---|---|
+| ID cache | When a specific ReservationInstance is requested by ID, the result is cached in this ID cache. When an internal request is made for a specific ID, the cached ReservationInstance will be returned. Used when adding or editing ReservationInstances and when executing start/stop actions and ReservationEvents. |
+| Time range cache | When ReservationInstances within a specific time range are requested, all instances in that time range will be cached in this cache. Used when new bookings are created or when eligible resources are requested. |
+
+#### Executing Automation scripts using a Run method or a custom entry point containing the async keyword is no longer supported [ID 42534]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+From now on, when an Automation script is executed asynchronously using either a `Run` method or a custom entry point containing the `async` keyword, an error message will appear, mentioning that this is not supported.
+
+In that error message, users will also be directed to the [documentation](https://aka.dataminer.services/AsyncAutomation) for more information on handling async code.
+
+#### NotifyMail.html: Updated report footer [ID 42567]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+In the `C:\Skyline DataMiner\NotifyMail.html` file, i.e. the email report template, the report footer has been updated to `Generated by DataMiner`.
+
+#### DxMs upgraded [ID 42688]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer 1.8.3
+- DataMiner CoreGateway 2.14.12
+- DataMiner FieldControl 2.11.2
+- DataMiner Orchestrator 1.7.5
+- DataMiner SupportAssistant 1.7.3
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### SLNetClientTest tool - DataMiner Object Model: Enhancements made to the ModuleSettings window [ID 42788]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+A number of enhancements have been made to the *ModuleSettings* window.
+
+- When, in the *ModuleSettings* window, you delete an entire DOM module, the DOM instances in that module will now be deleted in bulk, and the maximum number of DOM instances that can be deleted in one go has been increased from 10,000 to 100,000. Also, the estimation of the cleanup time will now be more accurate, and the cleanup message will now refer to the [Removing DOM indices in Elasticsearch or OpenSearch](xref:DOM_data_storage#removing-dom-indices-in-elasticsearch-or-opensearch) section in docs.dataminer.services.
+
+- When, in the *ModuleSettings* window, you click *Open* to see the details of a DOM module, and then go to the *Statistics* tab, it is now possible to sort the statistics by a particular column. Also, a number of enhancements have been made to have the data on the tab displayed more clearly.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
@@ -292,8 +344,20 @@ From now on, if the maximum cache size is reached, old model information might g
 
 `Max cache size reached during prefetch of the cache, potential data loss`
 
+#### Problem with SLAutomation when a Notify method was called shortly after an Automation script had finished [ID 42465]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+When a Notify method was called from a thread created within an Automation script shortly after that Automation script had finished, in some cases, the SLAutomation process could stop working.
+
 #### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
 
 <!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
 
 In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.
+
+#### ModelHost DxM would stop working when it failed to retrieve a proxy endpoint [ID 42651]
+
+<!-- MR 10.6.0 - FR 10.5.6 -->
+
+At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.

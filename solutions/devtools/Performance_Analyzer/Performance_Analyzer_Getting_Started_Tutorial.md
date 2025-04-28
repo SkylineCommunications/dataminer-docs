@@ -141,7 +141,7 @@ At this point, you will be notice that the table takes a while to load, without 
 
 ## Step 4: Deploy the Performance Analyzer app
 
-1. Go to the [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349) package in the DataMiner Catalog.
+1. Go to the [Performance Analyzer](https://catalog.dataminer.services/details/414894ce-21ae-48e7-b2c3-0652fff08349) package in the Catalog.
 
 1. [Deploy the Catalog item](xref:Deploying_a_catalog_item) to your DataMiner Agent by clicking the *Deploy* button.
 

@@ -30,7 +30,7 @@ For information on how to configure the connection string for each type of datab
 - [MySQL offload database](xref:Setting_up_an_offload_database)
 - [Other MySQL databases](xref:Configuring_an_additional_database)
 
-For information on how to configure the connection string for specific connectors, look up the connector information in the [DataMiner Catalog](https://catalog.dataminer.services/).
+For information on how to configure the connection string for specific connectors, look up the connector information in the [Catalog](https://catalog.dataminer.services/).
 
 ## Issue description
 

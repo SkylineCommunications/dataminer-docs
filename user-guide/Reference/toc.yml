@@ -61,6 +61,8 @@ items:
             topicUid: System_Cache
           - name: SyncRules.xml
             topicUid: SyncRules_xml
+          - name: Views.xml
+            topicUid: Views_xml
   - name: Tools
     topicUid: DataminerTools
     items:
@@ -148,6 +150,26 @@ items:
         topicUid: Legacy_Trend_Data_Exporter
       - name: Multi-threaded timer polling rate calculator
         topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
+      - name: Prerequisite checks
+        items:
+          - name: Verify .NET Version
+            topicUid: Verify_ASP_Net_Version
+          - name: VerifyClusterPorts.dmupgrade
+            topicUid: VerifyClusterPortsdmupgrade
+          - name: Verify Elastic Storage Type
+            topicUid: Verify_Elastic_Storage_Type
+          - name: Verify NATS Cluster
+            topicUid: VerifyNatsCluster
+          - name: Verify NATS is Running
+            topicUid: VerifyNatsIsRunning
+          - name: Verify No Legacy Correlation
+            topicUid: VerifyNoLegacyCorrelation
+          - name: Verify No Legacy Reports Dashboards
+            topicUid: Verify_No_Legacy_Reports_Dashboards
+          - name: Verify No Obsolete API Deployed
+            topicUid: Verify_No_Obsolete_API_Deployed
+          - name: Verify No Amazon Keyspaces
+            topicUid: Verify_No_Amazon_Keyspaces
       - name: Protocol debug tools
         topicUid: Protocol_Debug_Tools
       - name: Skyline Device Simulator
@@ -331,6 +353,8 @@ items:
                 topicUid: SLNetClientTest_disabling_replication_buffering
               - name: Editing the connection string between two DataMiner Agents
                 topicUid: SLNetClientTest_editing_connection_string
+              - name: Enabling or disabling debug logging for a DOM manager
+                topicUid: SLNetClientTest_debug_logging_DOM_manager
               - name: Enabling or disabling protocol buffer serialization
                 topicUid: SLNetClientTest_protocol_buffer_serialization
               - name: Fine-tuning NATS settings
@@ -349,6 +373,8 @@ items:
                 topicUid: SLNetClientTest_making_Cube_ignore_view_updates
               - name: Managing base subscriptions
                 topicUid: SLNetClientTest_managing_base_subscriptions
+              - name: Managing parameter groups for RAD
+                topicUid: SLNetClientTest_managing_RAD_parameter_groups
               - name: Managing scheduled tasks for maintenance of a Cassandra database
                 topicUid: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
               - name: Managing trend patterns
@@ -391,24 +417,8 @@ items:
         topicUid: Standalone_Elasticsearch_Cluster_Installer
       - name: Sync Check
         topicUid: Sync_Check
-      - name: Verify .NET Version
-        topicUid: Verify_ASP_Net_Version
       - name: Verify Cluster Events Tool
         topicUid: Verify_Cluster_Events_Tool
-      - name: VerifyClusterPorts.dmupgrade
-        topicUid: VerifyClusterPortsdmupgrade
-      - name: Verify Elastic Storage Type
-        topicUid: Verify_Elastic_Storage_Type
-      - name: Verify NATS is Running
-        topicUid: VerifyNatsIsRunning
-      - name: Verify No Legacy Correlation
-        topicUid: VerifyNoLegacyCorrelation
-      - name: Verify No Legacy Reports Dashboards
-        topicUid: Verify_No_Legacy_Reports_Dashboards
-      - name: Verify No Obsolete API Deployed
-        topicUid: Verify_No_Obsolete_API_Deployed
-      - name: Verify No Amazon Keyspaces
-        topicUid: Verify_No_Amazon_Keyspaces
   - name: Methods of Procedure
     items:
       - name: Changing the default password for Cassandra
@@ -450,13 +460,6 @@ items:
         topicUid: Forbidden_characters
       - name: Examples of element names
         topicUid: Examples_of_element_names
-  - name: Obtaining a DataMiner license
-    topicUid: DataminerLicenses
-    items:
-      - name: Permanent license
-        topicUid: Permanent_license
-      - name: Time-based license
-        topicUid: Time-based_license
   - name: Software support life cycles
     topicUid: Software_support_life_cycles
   - name: Feature overview

@@ -36,7 +36,7 @@ Only when the actions above and the "Artifact Creation" job have been successful
 
 - Part of our quality control involves static code analysis through SonarCloud as a mandatory step. If you want to use this reusable workflow, you will need to have a SonarCloud organization setup, linked to your GitHub organization as described in the [SonarCloud help files](https://docs.sonarsource.com/sonarcloud/getting-started/github/).
 
-- Creating a GitHub release or tag will attempt to register your item as a private item in the DataMiner Catalog. For this, the repository must have access to a DATAMINER_DEPLOY_KEY. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+- Creating a GitHub release or tag will attempt to register your item as a private item in the Catalog. For this, the repository must have access to a DATAMINER_DEPLOY_KEY. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
 
 ## How to use
 
@@ -69,7 +69,7 @@ jobs:
       repository: ${{ github.repository }}
       owner: ${{ github.repository_owner }}
       sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
-      # The API-key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
+      # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
       api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}

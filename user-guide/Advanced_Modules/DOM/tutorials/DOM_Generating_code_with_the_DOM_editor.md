@@ -36,7 +36,7 @@ This tutorial consists of the following steps:
 
 ## Step 1: Install the example package from the Catalog
 
-1. Go to the [Tutorial - Generating code with the DOM Editor](https://catalog.dataminer.services/details/6a8c3f13-db15-46a4-931d-96e7c187fa6a) package in the DataMiner Catalog.
+1. Go to the [Tutorial - Generating code with the DOM Editor](https://catalog.dataminer.services/details/6a8c3f13-db15-46a4-931d-96e7c187fa6a) package in the Catalog.
 
 1. Deploy the package to your DataMiner System by clicking the *Deploy* button.
 

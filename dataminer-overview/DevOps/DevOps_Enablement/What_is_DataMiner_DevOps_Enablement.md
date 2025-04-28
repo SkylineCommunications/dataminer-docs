@@ -55,7 +55,7 @@ Typical initiatives initiated and leveraged throughout the DataMiner DevOps Enab
 
   As part of the DataMiner DevOps Enablement Service, depending on the exact objectives and type of DataMiner DevOps activities required for a specific operation, the candidates will be provided with a tailored program schedule and the necessary guidance.
 
-- **Self-assessment**: Along with the training, the DataMiner Dojo Community also offers DataMiner DevOps Professionals a variety of [self-assessment tools](https://community.dataminer.services/learning/quizzes/) to test their knowledge and potential readiness for a formal certification by Skyline’s DataMiner SMEs.
+- **Self-assessment**: Along with the training, the DataMiner Dojo Community also offers DataMiner DevOps Professionals a variety of self-assessment tools linked to each e-learning course to test their knowledge and potential readiness for a formal certification by Skyline’s DataMiner SMEs.
 
 - **Certification**: DataMiner Certification Services offers a broad range of optional [certification services](xref:Overview_Training_certification), which typically consist of a series of hands-on exercises, verbal and written examinations, and a thorough final evaluation performed by Skyline’s subject-matter experts.
 

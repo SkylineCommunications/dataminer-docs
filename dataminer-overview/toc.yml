@@ -40,7 +40,7 @@ items:
         - name: Self-managed DataMiner nodes and storage nodes (not recommended)
           topicUid: DM_and_storage_selfhosted
     - name: dataminer.services
-      topicUid: Overview_DCP
+      topicUid: Overview_dataminer_services
       items:
         - name: DevOps
           topicUid: Overview_DevOps
@@ -82,26 +82,14 @@ items:
             - name: MediaOps apps
               topicUid: Overview_MediaOps_Apps
               items:
-                - name: Virtual Signal Groups
-                  topicUid: Overview_MediaOps_Virtual_Signal_Groups
-                - name: Control Surface
-                  topicUid: Overview_MediaOps_Control_Surface
-                - name: Flow Engineering
-                  topicUid: Overview_MediaOps_Flow_Engineering
-                - name: Flow Monitoring
-                  topicUid: Overview_MediaOps_Flow_Monitoring
                 - name: Scheduling
                   topicUid: Overview_MediaOps_Scheduling
                 - name: Workflow Designer
                   topicUid: Overview_MediaOps_Workflow_Designer
-                - name: Cost and Billing
-                  topicUid: Overview_MediaOps_Cost_and_Billing
                 - name: People and Organizations
                   topicUid: Overview_MediaOps_People_and_Organization
                 - name: Resource Studio
                   topicUid: Overview_MediaOps_Resource_Studio
-            - name: Supported connectors
-              topicUid: Overview_MediaOps_supported_connectors
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
@@ -184,7 +172,7 @@ items:
           topicUid: Overview_Training_certification
         - name: Video library
           topicUid: Overview_Training_videolibrary
-        - name: Agile Awareness Training
+        - name: Agile Fundamentals Training
           topicUid: Overview_Training_agile_aw
         - name: Kanban workshop
           topicUid: Overview_Kanban_workshop
@@ -201,19 +189,6 @@ items:
         topicUid: MACC_and_DataMiner_credits
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
-      items:
-        - name: Support plans
-          topicUid: Overview_Support_Plans
-        - name: Software updates and upgrades
-          topicUid: Overview_Support_upgrade_policy
-        - name: Out-of-business-hours support
-          topicUid: Overview_Out_Of_Business_Hours_Support
-        - name: Proactive Support
-          topicUid: Proactive_Support
-        - name: Partner support lines
-          topicUid: Partner_support_lines
-        - name: Support application
-          topicUid: User_operations_support
     - name: DataMiner Partner Program
       topicUid: Partner_Program
       items:
@@ -351,4 +326,4 @@ items:
       - name: Support Services
         topicUid: FAQs_Support_Services
       - name: dataminer.services
-        topicUid: FAQ_DCP
+        topicUid: FAQ_dataminer_services

@@ -1032,6 +1032,8 @@ items:
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Automation
     - name: Skyline.DataMiner.Core.DataMinerSystem.Protocol
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
+    - name: Skyline.DataMiner.Analytics.Rad
+      topicUid: Skyline.DataMiner.Analytics.Rad
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
     - name: Skyline.DataMiner.Net.Swarming
@@ -1283,6 +1285,8 @@ items:
         topicUid: NT_SET_BITRATE_DELTA_INDEX_TRACKING
       - name: NT_ADD_VIEWS
         topicUid: NT_ADD_VIEWS
+      - name: NT_CLEAR_PARAMETER
+        topicUid: NT_CLEAR_PARAMETER
     - name: DMS notify types
       topicUid: SLDmsNotifyTypes
       items:
@@ -5550,7 +5554,7 @@ items:
       items:
       - name: GitHub quality gate
         topicUid: CICD_Quality_Gate_Github
-    - name: Publishing items in the DataMiner Catalog
+    - name: Publishing items in the Catalog
       topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
       items:
@@ -6006,6 +6010,10 @@ items:
               topicUid: EpmIntegrationTrainingLowCodeApp
         - name: Topology app configuration
           topicUid: Topology_app_configuration
+        - name: Enhanced view configuration
+          topicUid: Enhanced_view_configuration
+        - name: Agent caching configuration
+          topicUid: EPMIntegration_Agent_cache_config
         - name: DataMiner processes configuration
           topicUid: EPM_DataMiner_processes_config
     - name: Swarming

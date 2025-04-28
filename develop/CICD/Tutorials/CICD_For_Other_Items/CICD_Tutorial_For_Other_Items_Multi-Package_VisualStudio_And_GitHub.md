@@ -5,7 +5,7 @@ keywords: Skyline.DataMiner.Sdk, Tutorial
 
 # Registering a new version of multiple DataMiner packages to the Catalog using Visual Studio and GitHub
 
-In this tutorial, you will learn how to develop, (pre-)release, and upload multiple DataMiner packages to the DataMiner Catalog with a basic CI/CD pipeline using Visual Studio and GitHub.
+In this tutorial, you will learn how to develop, (pre-)release, and upload multiple DataMiner packages to the Catalog with a basic CI/CD pipeline using Visual Studio and GitHub.
 
 - TutorialPackage1:
   - Automation script: TutorialScript1
@@ -21,7 +21,7 @@ Expected duration: 15 minutes
 - A [GitHub account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account)
 - [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
 - [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
-- An [organization key](xref:Managing_DCP_keys#organization-keys) or account with the *Owner* role in order to access/create keys.
+- An [organization key](xref:Managing_dataminer_services_keys#organization-keys) or account with the *Owner* role in order to access/create keys.
 
 ## Overview
 
@@ -192,7 +192,7 @@ With this setup, any push with new content (including the initial creation) to t
 
 ## Step 6: Check the results
 
-1. Go to the [DataMiner Catalog](https://catalog.dataminer.services/)
+1. Go to the [Catalog](https://catalog.dataminer.services/)
 
 1. Check in the top-right corner if the correct organization is selected.
 

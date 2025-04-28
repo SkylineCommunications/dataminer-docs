@@ -47,13 +47,15 @@ To save a Log Collector package:
 > [!TIP]
 > For more information about the Log Collector, see [SLLogCollector](xref:SLLogCollector).
 
-## Cube Debug information
+## Cube debug information
 
-When investigating issues related to DataMiner Cube, Cube Debug information is invaluable. You can access this information either through DataMiner Cube when Cube is connected to your DMA or via the Cube login page when Cube cannot connect to your DMA.
+When investigating issues related to DataMiner Cube, Cube debug information is invaluable. The way you can access this information depends on whether Cube is able to connect to your DMA.
 
 ### Cube is connected to your DMA
 
-To export Cube debug information:
+#### Exporting Cube debug info
+
+If Cube is connected to your DMA, export Cube debug information as follows:
 
 1. In DataMiner Cube, go to *Apps* > *About*.
 
@@ -61,9 +63,17 @@ To export Cube debug information:
 
    ![Export debug information](~/user-guide/images/Debug_information.png)<br/>*DataMiner Cube version 10.3.10*
 
+#### Following the Cube session
+
+In some cases, it may be necessary to follow an ongoing Cube session to get more information. This is sometimes called a "Cube follow".
+
+To do so, you will need to use SLNetClientTest tool. For detailed information, refer to [Following a DataMiner Cube session](xref:SLNetClientTest_tracking_dma_communication#following-a-dataminer-cube-session).
+
 ### Cube is unable to connect to your DMA
 
-To export Cube debug information:
+#### Exporting Cube debug info
+
+If Cube is unable to connect to your DMA, export Cube debug information as follows:
 
 1. On the login page, click the cogwheel button in the lower right corner and select *About* in the menu.
 
@@ -71,7 +81,9 @@ To export Cube debug information:
 
 1. In the *general* tab, select *Export debug information*.
 
-To investigate why Cube could not connect to your DMA:
+#### Investigating the connection issue
+
+You should also collect information to investigate why Cube could not connect to your DMA:
 
 1. Go to the DataMiner Cube start window, click the cogwheel button in the lower right corner, and select *View logging*.
 

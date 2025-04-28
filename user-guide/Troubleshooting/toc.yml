@@ -1,4 +1,24 @@
 items:
+  - name: Support Services
+    topicUid: Support_Services
+    items:
+      - name: Support plans
+        topicUid: Overview_Support_Plans
+      - name: Software updates and upgrades
+        topicUid: Overview_Support_upgrade_policy
+      - name: Out-of-business-hours support
+        topicUid: Overview_Out_Of_Business_Hours_Support
+      - name: Proactive Support
+        topicUid: Proactive_Support
+        items:
+          - name: Proactive Support - Low Disk Space
+            topicUid: Proactive_Support_Low_Disk_Space
+          - name: Proactive Support - Missing CDMR Reporting
+            topicUid: Proactive_Support_Missing_CDMR_Reporting
+      - name: Partner support lines
+        topicUid: Partner_support_lines
+      - name: Support application
+        topicUid: User_operations_support
   - name: Error messages
     topicUid: ErrorMessages
     items:
@@ -201,7 +221,7 @@ items:
           - name: Investigating dataminer.services connection issues
             topicUid: Cloud_Connection_Issues
           - name: Investigating dataminer.services feature issues
-            topicUid: Investigating_Dataminerservices_Feature_Issues
+            topicUid: investigating_dataminer_services_feature_issues
       - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
       - name: Troubleshooting – Indexing database
@@ -281,6 +301,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Higher CPU usage and connection issues when using SAML with automatic groups
+            topicUid: KI_SAML_with_automatic_groups
           - name: SLScripting crash when using JScript QActions
             topicUid: KI_SLScripting_crash_JScript_QActions
           - name: Unable to configure dashboards for 'Email' actions in Automation scripts, scheduled tasks, and Correlation rules

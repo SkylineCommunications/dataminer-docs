@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.5
 ---
 
-# General Feature Release 10.5.5 – Preview
+# General Feature Release 10.5.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -24,6 +24,7 @@ uid: General_Feature_Release_10.5.5
 
 ## Highlights
 
+- [SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]](#snmp-forwarding-new-option-to-prevent-an-snmp-manager-from-resending-snmp-inform-messages-id-41884)
 - [Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)
 
 ## New features
@@ -172,7 +173,7 @@ In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
 
-Up to now, the BAP test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
+Up to now, the BPA test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
 
 Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending on the DataMiner version, it will checks for the following DLL files, in the specified folders:
 
@@ -225,11 +226,13 @@ If your system is pushing too much load for a specific data type, that data type
 
 From now on, when this happens, an alarm will be generated with information about the data type or types that are being throttled.
 
-#### GQI DxM will now shut down faster [ID 42428]
+#### GQI DxM will now shut down faster [ID 42428] [ID 42621]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
+
+Also, before the GQI DxM gets installed or upgraded, the DataMiner GQI service and all its child processes will now be stopped to prevent issues due to certain files being locked.
 
 #### SLAnalytics - Relational anomaly detection: Input validation when adding a new parameter group [ID 42429]
 
@@ -307,7 +310,7 @@ In the *DataMiner Object Model* window, which allows you to see all details of a
 | Button | Description |
 |--------|-------------|
 | Enable | Adds or updates an override for the log file of the current DOM manager, setting all log levels to 6. |
-| Reset  | Removes the override for the log file of the current DOM manager is removed, regardless of the tool that added it. |
+| Reset  | Removes the override for the log file of the current DOM manager, regardless of the tool that added it. |
 
 Also, a status label will now indicate whether debug logging is enabled or disabled.
 
@@ -354,6 +357,12 @@ As DataMiner IDP no longer requires neither a separate license nor an Indexing E
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 From now on, an anomaly alarm event will be generated when a change point with a change point type for which no anomaly monitoring was configured, is updated to a change point with a change point type for which anomaly monitoring is configured.
+
+#### Enhanced performance when logging in using external authentication via SAML [ID 42668]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.5 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when logging in using external authentication via SAML.
 
 ### Fixes
 

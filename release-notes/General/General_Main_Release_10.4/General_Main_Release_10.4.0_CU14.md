@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU14
 ---
 
-# General Main Release 10.4.0 CU14 - Preview
+# General Main Release 10.4.0 CU14
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -186,6 +186,12 @@ When DataMiner or an element was stopped while there were still DVE parameter se
 
 > [!NOTE]
 > Always make sure element names are unique, especially when using the `noelementprefix` option.
+
+#### Problem with Annotations module [ID 42538]
+
+<!-- MR 10.4.0 [CU14] - FR TBD -->
+
+In some cases, the *Annotations* module would not work correctly, especially on systems with multiple DataMiner Agents or on Failover setups.
 
 #### Incorrect 'Detected duplicate DVE' notice would appear due to a caching issue [ID 42546]
 

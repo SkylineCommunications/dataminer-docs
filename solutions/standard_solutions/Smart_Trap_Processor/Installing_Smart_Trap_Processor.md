@@ -12,7 +12,7 @@ uid: Installing_Smart_Trap_Processor
 
 ## Deploying the Smart Trap Processor tool
 
-1. Look up the [*Smart Trap Processor* package](https://catalog.dataminer.services/details/package/5755) in the DataMiner Catalog.
+1. Look up the [*Smart Trap Processor* package](https://catalog.dataminer.services/details/package/5755) in the Catalog.
 
 1. Click the *Deploy* button.
 

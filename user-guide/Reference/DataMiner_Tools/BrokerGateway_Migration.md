@@ -143,7 +143,7 @@ The same restrictions apply as for the migration: this must happen on all DataMi
 
 This is not possible. Both NATS installations use the same network ports, so the services cannot run at the same time on a machine. The credentials these installations use are also different and not compatible with each other, so running SLNet-managed NATS on DMA1 and BrokerGateway-managed NATS on DMA2 will also not function.
 
-### Why should I migrate to BrokerGateway? What are the advantages of this?
+### Why should I migrate to BrokerGateway? What are the advantages?
 
 BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
 

@@ -16,7 +16,7 @@ Skyline Communications aims to create an agile partnership with its users. Below
 
 - The customers/users and Skyline Communications fully embrace the **key methodologies and principles** required to be successful: transparency, weighing value vs. effort, early demonstrators, the value of retrospect, stakeholder involvement, etc.
 
-- The customers/users and Skyline Communications leverage **tools and technology** to stay focused on the execution: Project Collaboration, dataminer.services, Microsoft 365, Teams, QA automation, deployment automation, etc.
+- The customers/users and Skyline Communications leverage **tools and technology** to stay focused on the execution: Collaboration, dataminer.services, Microsoft 365, Teams, QA automation, deployment automation, etc.
 
 > [!TIP]
 > DataMiner Dojo Community has a dedicated [Agile page](https://community.dataminer.services/agile-webspace/).

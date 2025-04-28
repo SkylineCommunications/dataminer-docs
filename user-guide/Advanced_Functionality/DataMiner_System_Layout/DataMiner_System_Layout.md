@@ -40,7 +40,7 @@ dataminer.services is a cloud platform hosted by Skyline that provides various s
 
 The most full use of dataminer.services is [DataMiner as a Service](xref:Creating_a_DMS_in_the_cloud), where the entire DataMiner System is hosted by Skyline in the cloud. It is also possible to only have the system data storage hosted by Skyline with [Storage as a Service](xref:STaaS). But even if you host a DataMiner System entirely on your own compute instances, being connected to dataminer.services provides a host of additional features, including dashboard sharing and ChatOps.
 
-For an overview of all dataminer.services functionality, refer to [dataminer.services](xref:Overview_DCP).
+For an overview of all dataminer.services functionality, refer to [dataminer.services](xref:Overview_dataminer_services).
 
 ## DataMiner Probes
 

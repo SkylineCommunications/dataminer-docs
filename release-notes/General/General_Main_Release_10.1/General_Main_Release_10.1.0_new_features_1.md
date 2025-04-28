@@ -411,7 +411,7 @@ recursivefullfilter=(1002 > 0)
 
 #### Support for icons in SVG format \[ID 24841\]
 
-In function protocols and the *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml* file, icons can now also be defined in SVG format.
+In function protocols and the `C:\Skyline DataMiner\Icons\CustomIcons.xml` file, icons can now also be defined in SVG format.
 
 Also, the default function icon has been updated.
 

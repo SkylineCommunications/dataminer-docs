@@ -44,7 +44,7 @@ uid: Installing_MediaOps
 
 ## Deploying the MediaOps package
 
-dataminer.MediaOps is not yet available in the DataMiner Catalog, but a package can be provided upon request.
+dataminer.MediaOps is not yet available in the Catalog, but a package can be provided upon request.
 
 If you want to try out the apps using demo data, you can then run the *Generate Demo Data* script in the Automation module in DataMiner Cube. This script is included in the MediaOps package. Keep in mind that this script will generate a significant amount of data and will take some time to complete. It will also generate a number of elements in the system. If you no longer want these later, you will need to remove them manually.
 

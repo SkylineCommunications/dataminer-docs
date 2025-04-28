@@ -8,7 +8,7 @@ For many international football games, a good live stream across the globe is of
 
 You will learn how to:
 
-- Deploy an application package from the DataMiner Catalog
+- Deploy an application package from the Catalog
 - Add and manage a spectrum preset
 - Alter the settings to get the trace window applicable for your use case
 - Add and edit thresholds

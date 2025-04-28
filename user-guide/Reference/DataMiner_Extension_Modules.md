@@ -13,7 +13,7 @@ DxMs depend on a minimum version of the core software. This is indicated in the 
 
 ## Packs
 
-For ease of installation, DxMs may be packaged together in a pack, such as the [Cloud Pack](xref:CloudPackages). These packs allow users to install several DxMs at once.
+For ease of installation, DxMs may be packaged together in a pack, such as the [Cloud Pack](xref:DataMiner_Cloud_Pack). These packs allow users to install several DxMs at once.
 
 ## Available DcMs
 

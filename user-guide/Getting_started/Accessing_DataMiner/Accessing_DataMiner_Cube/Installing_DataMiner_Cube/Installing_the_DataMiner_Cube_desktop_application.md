@@ -10,13 +10,15 @@ description: Log on to dataminer.services, select 'Desktop installation' and run
 
 You can follow the installation steps below or watch this short video, which walks you through the installation process and provides a quick overview of the Cube [user interface](xref:Cube_UI_components):
 
-<video width="800" height="450" controls>
-  <source src="~/user-guide/images/Getting_Started_With_Cube.mp4" type="video/mp4">
-</video>
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/user-guide/images/Getting_Started_With_Cube.mp4" type="video/mp4">
+  </video>
+</div>
 
 ## Standard installation
 
-1. Log on to [dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+1. Log on to [dataminer.services](xref:Logging_on_to_dataminer_services).
 
    > [!NOTE]
    > Alternatively, you can also browse to the IP or hostname of your DMA or to `https://[Your DMA]/root` and log in there, depending on your [configuration](xref:Configuring_the_landing_page).

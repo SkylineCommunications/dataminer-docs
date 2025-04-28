@@ -115,6 +115,12 @@ In some cases, it would not be possible to simultaneously update multiple TTL se
 
 After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
 
+#### No alarm would be generated when an SNMPv3 element did not have its user name filled in [ID 42244]
+
+<!-- MR 10.4.0 [CU13] - FR TBD -->
+
+As from DataMiner version 10.4.0 [CU10]/10.5.1, when an element of type SNMPv3 does not have its user name filled in, it should go into an error state and an alarm should be generated. However, up to now, although the element went into an error state, no alarm would incorrectly be generated.
+
 #### Problem when exporting an element to a .dmimport file [ID 42320]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->

@@ -64,7 +64,7 @@ With DataMiner as a Service, Skyline offers a complete cloud-native experience:
 
 ![Pillars_NMS](~/dataminer-overview/images/Hosting_DaaS_create.png)
 
-You can go to [dataminer.services](xref:Overview_DCP), where
+You can go to [dataminer.services](xref:Overview_dataminer_services), where
 
 1. you create an organization,
 1. you give a name to your DataMiner System (DMS), and

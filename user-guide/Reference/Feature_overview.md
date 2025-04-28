@@ -28,11 +28,13 @@ Below you can find an overview of the main features that have been added to Data
 | Automation: [IsReadOnly](xref:Skyline.DataMiner.Automation.UIBlockDefinition.IsReadOnly) property | DataMiner web 10.4.1/10.5.0 <!-- [ID 37659] -->|
 | Automation: [SkipAbortConfirmation](xref:Skyline.DataMiner.Automation.UIBuilder.SkipAbortConfirmation) property | DataMiner 10.4.12/10.5.0<!-- [ID 40720] --> |
 | Automation: [TriggeredByName](xref:Skyline.DataMiner.Automation.Engine.TriggeredByName) property | DataMiner 10.2.6/10.3.0 <!-- [ID 33122] -->|
+| [BrokerGateway DxM](xref:BrokerGateway_Migration) | DataMiner 10.5.0 [CU2]/10.5.5/10.6.0<br>DataMiner 10.5.0/10.5.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#brokergateway) <!-- [ID 42573] --> |
 | [Cache for SNMP inform messages](xref:Adjusting_the_SNMP_inform_message_cache_size) | DataMiner 10.1.4/10.2.0 <!-- [ID 29034] -->|
 | Client-server communication: gRPC connections between [Cube and DMAs](xref:ConnectionSettings_txt#connectionsettingstxt-options) and [between DMAs](xref:DMS_xml#redirects-subtag) | DataMiner 10.3.0/10.3.2 <!-- [ID 34797] [ID 34983] --> |
 | Cube: [BPA tests in System Center](xref:Running_BPA_tests) | DataMiner 10.1.2/10.2.0 <!-- [ID 28516] --> |
 | Cube: [Duplicating a resource](xref:Configuring_pools_of_resources#duplicating-a-resource-from-a-pool) | DataMiner Cube 10.3.7/10.4.0 <!-- [ID 36308] -->|
 | Cube: [Hiding the close button](xref:Working_with_cards_in_DataMiner_Cube#marking-cards-as-non-closable) and [Selecting a Master card](xref:Working_with_cards_in_DataMiner_Cube#selecting-a-master-card) | DataMiner Cube 10.3.9/10.4.0 <!-- [ID 36912] [ID 36956] --> |
+| Cube: [Opening Cube from a session link](xref:Using_the_desktop_app#opening-dataminer-cube-from-a-session-link) | DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 <!-- [ID 42389] --> |
 | Cube: [*UseInitialArgumentsAfterDisconnect* argument](xref:Options_for_opening_DataMiner_Cube#useinitialargumentsafterdisconnecttrue) | DataMiner Cube 10.2.0 [CU22]/10.3.0 [CU10]/10.4.1 <!-- [ID 37888] --> |
 | Dashboards: [*Alarm table* component](xref:DashboardAlarmTable) | DataMiner 10.1.5/10.2.0 |
 | Dashboards: [JSON input in URL parameters](xref:Specifying_data_input_in_a_URL) | DataMiner 10.2.0/10.2.2 <!-- [ID 31833] [ID 31885] -->|
@@ -84,6 +86,7 @@ Below you can find an overview of the main features that have been added to Data
 | DOM: [History of DOM instances](xref:DOM_history) | DataMiner 10.1.3/10.2.0 <!-- [ID 28709] --> |
 | DOM: [Interactive Automation script action](xref:DOM_actions#interactive-script) |  DataMiner 10.2.8/10.3.0 <!-- [ID 33513] -->|
 | EPM: [Aliases for topology cells, chains and search chains](xref:EPMConfig_xml) | DataMiner 10.1.7/10.2.0 <!-- [ID 29766] [ID 29841] -->|
+| [EPM integration](xref:Topology_app_configuration) | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 --> |
 | [Failover with shared hostname](xref:Failover_configuration_in_Cube) | DataMiner 10.1.8/10.2.0 |
 | GQI: [Ad hoc data sources](xref:Get_ad_hoc_data) | DataMiner 10.2.4/10.3.0 <!-- [ID 32656] [ID 32659] [ID 32930] -->|
 | GQI: [Alarms data source](xref:Get_alarms) | DataMiner 10.1.9/10.2.0 <!-- [ID 30320] --> |
