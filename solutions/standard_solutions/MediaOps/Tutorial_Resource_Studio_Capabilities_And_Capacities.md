@@ -63,7 +63,7 @@ Expected duration: 15 minutes
 
 In this step, we will be adding capabilities to the resources we created in the [Resource Studio Intro Tutorial](xref:Tutorial_MediaOps_Resource_Studio_Intro). If not done yet, It's highly recommended to do that tutorial first.
 
-1. Navigate to the ``Capability Management`` page.
+1. Navigate to the ``Resources`` page.
 
 1. Select the "**Video Solution 001**" resource.
 
@@ -87,7 +87,7 @@ In this step, we will be adding capabilities to the resources we created in the 
 
 1. Click ``Apply``.
 
-1. Repeat the steps to add both ``SDI to IP`` and ``IP to SDA`` capability discretes to the **NewTek 001** resource.
+1. Repeat the steps to add both ``SDI to IP`` and ``IP to SDA`` capability discretes to the "**NewTek 001**" resource.
  
 ## Step 4: Add resources to the pools
 
