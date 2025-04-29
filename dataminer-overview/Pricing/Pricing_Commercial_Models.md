@@ -55,8 +55,8 @@ The DataMiner Community Edition is a flavor of the usage-based services, but wit
   - 4 credits for Light Managed Objects.
   - 8 credits for Automation.
   - 2 credits for Collaboration.
-  - 2 credits for STaaS (not available for self-managed).
-  - 2 credits for DaaS (not available for self-managed).
+  - 2 credits for STaaS (not applicable to self-managed).
+  - 2 credits for DaaS (not applicable to self-managed).
   - Number of connectors is unlimited.
 
 There might come a time when you need to increase your system's capacity to go above the limits mentioned above. If that happens, you have two options: you can either create a new system while keeping your Community Edition separate, or you can transition your existing Community Edition to a subscription or to pay-per-use (PPU) credits. In either case, a system cannot remain on the Community Edition while it continues to exceed the limits.
