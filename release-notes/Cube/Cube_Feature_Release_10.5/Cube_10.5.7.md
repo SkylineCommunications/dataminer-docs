@@ -28,4 +28,8 @@ uid: Cube_Feature_Release_10.5.7
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Cube logon screen would not be fully visible after a disconnect [ID 42824]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, when the logon screen appeared after a Cube session had been disconnected, in some cases, only part of that logon screen would be visible.
