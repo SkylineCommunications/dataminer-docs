@@ -31,15 +31,15 @@ In the Param tag of the parameter that will contain the SetCommunity string to b
 > [!NOTE]
 > If a parameter configured to contain a GetCommunity or SetCommunity string is either not initialized or empty, the default GetCommunity or SetCommunity string (as specified in the Element Wizard) will be used instead. The community string is only changed at runtime. So, after a restart of the element, the parameters configured to contain the community strings will be flushed.
 
-From DataMiner 10.5.6/10.6.0 onwards, in an SNMPv3 connector, you can also use the value of a parameter as the context name or context ID for a connection. To do so, specify one of the following SNMP tags:
+From DataMiner 10.5.6/10.6.0 onwards<!--RN 42676-->, in an SNMPv3 connector, you can also use the value of a parameter as the context name or context ID for a connection.
 
-To use the parameter value as the context name for connection 0:
+To use the parameter value as the context name for connection 0, specify the following SNMP tag:
 
 ```xml
 <SNMP options="ContextName:0">
 ```
 
-To use the parameter value as the context ID for connection 0:
+To use the parameter value as the context ID for connection 0, specify the following SNMP tag:
 
 ```xml
 <SNMP options="ContextID:0">
