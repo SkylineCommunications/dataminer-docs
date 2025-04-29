@@ -9,16 +9,9 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 
 ### 1.1.3.1
 
-### Added FunctionSettings property to IDmsElement [ID 42841]
+#### New feature - API added for retrieving element and service count on each Agent [ID 41795]
 
-The IDmsElement interface now has an additional property FunctionSettings which has the following two properties:
-
-- IsFunctionElement (bool): when true is returned, this indicates the element is linked to a function resource.
-- FunctionId: The Guid of the linked function resource. If it is not linked to a function resource, Guid.Empty is returned.
-
-#### Added API for retrieving element and service count on each Agent [ID 41795]
-
-The IDms interface has been extended with the following method: `DmsInfo GetDmsInfo()`, which will return information about the DataMiner systems. It returns a DmsInfo object which has an Agents member. This member is a list of DmaInfo objects. Each DmaInfo object gives an overview of the Agent ID, the number of elements hosted on that agent and the number of services hosted by that agent.
+The IDms interface has been extended with the following method: `DmsInfo GetDmsInfo()`, which will return information about the DataMiner Agents. It returns a *DmsInfo* object, which has an *Agents* member. This member is a list of *DmaInfo* objects. Each *DmaInfo* object gives an overview of the Agent ID, the number of elements hosted on that Agent, and the number of services hosted by that Agent.
 
 Example usage:
 
@@ -30,38 +23,37 @@ IEnumerable<DmaInfo> dmaConfigs = dmsConfig.Agents;
 
 foreach (var dmaConfig in dmaConfigs)
 {
-	int elementCount = dmaConfig.ElementCount; 
+    int elementCount = dmaConfig.ElementCount;
     int serviceCount = dmaConfig.ServiceCount;
 }
 ```
 
-#### Added support for configuring and retrieving SlowPoll, SlowPollBase and PingInterval settings [ID 41797]
+#### New feature - Support added for configuring and retrieving SlowPoll, SlowPollBase, and PingInterval settings [ID 41797]
 
-Class library has now support for retrieving and configuring the slow poll settings of an element.
+The class library now includes support for retrieving and configuring the slow poll settings of an element.
 
-When creating an element, the slow poll settings can be configured under the advanced settings. Two types of configuration are supported: DurationBasedSlowPollSettings and TimeoutCountBasedSlowPollSettings. If slow polling is not configured, the property value is null;
+When an element is created, the slow poll settings can be configured under the advanced settings. Two types of configuration are supported: *DurationBasedSlowPollSettings* and *TimeoutCountBasedSlowPollSettings*. If slow polling is not configured, the property value is null.
 
-The following example of how to create an element with duration based slow poll settings:
-
+This example shows how to create an element with duration-based slow poll settings:
 
 ```csharp
 IDms dms = protocol.GetDms();
 IDma agent = dms.GetAgent(protocol.DataMinerID);
 IDmsProtocol protocol = dms.GetProtocol(
-	Settings.HttpConnectionTestProtocolName,
-	Settings.HttpConnectionTestProtocolVersion);
+   Settings.HttpConnectionTestProtocolName,
+   Settings.HttpConnectionTestProtocolVersion);
 
 ITcp port = new Tcp("127.0.0.1", 80);
 IHttpConnection myHttpConnection = new HttpConnection(port);
 
 var configuration = new ElementConfiguration(
-						dms,
-						elementName,
-						protocol,
-						new List<IElementConnection> { myHttpConnection })
+                  dms,
+                  elementName,
+                  protocol,
+                  new List<IElementConnection> { myHttpConnection })
 {
-	Description = "my test element",
-	State = ConfigurationElementState.Active
+   Description = "my test element",
+   State = ConfigurationElementState.Active
 };
 
 configuration.AdvancedSettings.Timeout = new TimeSpan(0, 0, 0, 30);
@@ -69,10 +61,13 @@ configuration.AdvancedSettings.SlowPollSettings = new DurationBasedSlowPollSetti
 DmsElementId id = agent.CreateElement(configuration);
 ```
 
-Creating an element with TimeoutCountBasedSlowPoll settings is similar but now instead provide an instance of TimeoutCountBasedSlowPollSettings for the SlowPollSettings property:
-configuration.AdvancedSettings.SlowPollSettings = new TimeoutCountBasedSlowPollSettings(TimeSpan.FromSeconds(12), 18);
+Creating an element with timeout count-based slow poll settings is similar but instead an instance of *TimeoutCountBasedSlowPollSettings* should be provided for the *SlowPollSettings* property:
 
-To retrieve the slow poll configuration of an existing element, access the SlowPollSettings under the AdvancedSettings. The value is either null (no slow polling configured) or an instance of DurationBasedSlowPollSettings or TimeoutCountBasedSlowPollSettings.
+```csharp
+configuration.AdvancedSettings.SlowPollSettings = new TimeoutCountBasedSlowPollSettings(TimeSpan.FromSeconds(12), 18);
+```
+
+To retrieve the slow poll configuration of an existing element, access the *SlowPollSettings* under the *AdvancedSettings*. The value is either null (no slow polling configured) or an instance of *DurationBasedSlowPollSettings* or *TimeoutCountBasedSlowPollSettings*.
 
 ```csharp
 slowPollSetings  = element.AdvancedSettings.SlowPollSettings;
@@ -88,45 +83,49 @@ if(slowPollSetings != null)
 }
 ```
 
-To update the slow poll settings,, create an instance of either TimeoutCountBasedSlowPollSettings or DurationBasedSlowPollSettings and assign it to he SlowPollSettings of the element and then call the Update method on the element.
+To update the slow poll settings, create an instance of either *TimeoutCountBasedSlowPollSettings* or *DurationBasedSlowPollSettings*, assign it to the *SlowPollSettings* of the element, and then call the *Update* method on the element.
 
-#### Prevent creation of elements with empty user name for elements with SNMPv3 connection and introduce support for using credential library with SNMPv3 connections [ID 41805]
+#### Enhancement - Element creation with empty user name prevented for elements with SNMPv3 connection and support added for using credential library with SNMPv3 connections [ID 41805]
 
-Until now, it was possible to create an instance of the SnmpV3SecurityConfig class with an emtpy string as user name, or a user name that only consists out of whitespace characters (e.g. spaces, tabs, newlines, etc.).
-As these are not valid SNMPv3 user names, there is now a check in place to verify that the user name is not one of those options.
+Up to now, it was possible to create an instance of the *SnmpV3SecurityConfig* class with an empty string as user name, or a user name that only consisted of whitespace characters (e.g. spaces, tabs, newlines, etc.). As these are not valid SNMPv3 user names, there is now a check in place to verify that the user name is not one of those options. When this check fails, an *ArgumentException* is thrown, and the creation of the *SnmpV3SecurityConfig* object fails.
 
-When this check fails an ArgumentException is thrown and the creaton of the SnmpV3SecurityConfig object fails.
+This means that the following restrictions now apply for the user name:
 
-This means that the user name most now meet the following restrictions:
+- `username != null` (this check was already in place; an *ArgumentNullException* is thrown on failure)
+- `username != ""` (new; an *ArgumentException* is thrown on failure)
+- The user name string does not only contain whitespace characters (an *ArgumentException* is thrown on failure).
 
-- `username != null` (this check was already in place, an ArgumentNullException is thrown on failure)
-- `username != ""` (new, an ArgumentException is thrown on failure)
-- The user name string does not only contains whitespace characters. (an ArgumentException is thrown on failure)
+In addition, support has been added to use the credential library with SNMPv3 connections.
 
-Also, support has been added to use the credential library with SNMPv3 connections.
+#### Fix - Exception when changing state of an element fails [ID 41807]
 
-#### Fix - Throw exception when changing state of an element fails [ID 41807]
+Up to now, when the *DmsElement.Delete()* method was executed and something went wrong, no exception was thrown (and no logging was generated for this). Moreover, further actions on that element object would throw an *ElementNotFoundException*, which was incorrect because the element still existed.
 
-Prior to this release note, when the DmsElement.Delete() method executed, and something went wrong, no exception was being thrown (also no logging was generated for this). Moreover, further actions on that element objects would throw an ElementNotFoundException, which was incorrect because the element would still exist.
+Similar issues could occur when *DmsElement.Start()*, *DmsElement.Stop()*, *DmsElement.Restart()*, or *DmsElement.Pause()* was executed.
 
-Similar issues existed when executing DmsElement.Start(), DmsElement.Stop(), DmsElement.Restart() and DmsElement.Pause().
+From now on, the *SetElementStateResponseMessage* will be processed, and a *DMSException* will be thrown when:
 
-Starting from this release note, the SetElementStateResponseMessage is processed and a DMSException is thrown when:
+- No response is returned from the DMS (the returned *SetElementStateMessage* is null).
+- The contents of the *SetElementStateMessage* indicates that something went wrong while performing the state change (`SetElementStateResponseMessage.HasSucceeded == false`).
 
-1. No response is returned from the DMS (the returned SetElementStateMessage is null)
-1. The contents of the SetElementStateMessage indicates that something went wrong while performing the state change (SetElementStateResponseMessage.HasSucceeded == false).
+This check is performed when *DmsElement.Delete()*, *DmsElement.Start()*, *DmsElement.Stop()*, *DmsElement.Restart()*, or *DmsElement.Pause()* is called.
 
-This check is performed when calling DmsElement.Delete(), DmsElement.Start(), DmsElement.Stop(), DmsElement.Restart() or DmsElement.Pause().
+#### Fix - Refactored logging for duplicate property detection [ID 42292]
 
-#### Fix - Refactored logginf for duplicate property detection [ID 42292]
+To improve logging efficiency, the duplicate property detection logic has been refactored. It is now executed once at the start of the *Parse* methods in *DmsElement*, *DmsService*, and *DmsView* classes, preventing unnecessary checks within loops. This reduces redundant processing and redundant logging, improving overall performance.
 
-To improve logging efficiency, the duplicate property detection logic has been refactored: It is now executed once at the start of the Parse methods in DmsElement, DmsService, and DmsView classes, preventing unnecessary checks within loops. This reduces redundant processing and redundant logging, improving overall performance.
+#### New feature - FunctionSettings property added to IDmsElement [ID 42841]
+
+The *IDmsElement* interface now has an additional *FunctionSettings* property, which has the following two properties:
+
+- *IsFunctionElement (bool)*: When true is returned, this indicates that the element is linked to a function resource.
+- *FunctionId*: The GUID of the linked function resource. If there is no linked function resource, *Guid.Empty* is returned.
 
 ### 1.1.2.2
 
 #### Fix - Cached property definitions cleared when PropertyExists is called [ID 41610]
 
-TThe property definitions are cached in the class library. However, when a server call is made to retrieve the properties again (through the PropertyExists method), the cached values should be cleared and repopulated. Until now, the cached values were not cleared, leading to the possible situation where a property that was deleted in DataMiner would still be present in the cache of the class library.
+The property definitions are cached in the class library. However, when a server call is made to retrieve the properties again (through the PropertyExists method), the cached values should be cleared and repopulated. Until now, the cached values were not cleared, leading to the possible situation where a property that was deleted in DataMiner would still be present in the cache of the class library.
 
 ### 1.1.2.1
 
