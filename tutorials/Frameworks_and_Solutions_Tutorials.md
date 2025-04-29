@@ -24,8 +24,9 @@ uid: Frameworks_and_Solutions_Tutorials
 | [Getting started with EPM](xref:EPM_Introduction_Tutorial) | Learn the basics of working with an EPM setup. DataMiner EPM is a software platform specifically designed to manage very high volumes of devices in cable, telco, terrestrial, and satellite environments. |
 | [Getting started with the Ping Monitoring tool](xref:Tutorial_Apps_Ping_Monitoring_App) | Learn how to use the Ping Monitoring tool for network monitoring and diagnostics. |
 | [Dive into MediaOps: Resource Studio](xref:Tutorial_MediaOps_Resource_Studio_Intro) | Hands-on guide for creating your first resources and resource pools. |
-| [Dive into MediaOps: Resource Studio](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) | Hands-on guide for creating your first resources and resource pools. |
-| [Dive into MediaOps: Scheduling](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder) | Schedule your first jobs. |
+| [Dive into MediaOps: Resource Studio](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) | Learn how to model a converter device as a resource using Capabilities and Capacities |
+| [Dive into MediaOps: Scheduling](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder) | Learn how to use configurations in your jobs. |
+| [Dive into MediaOps: Scheduling](xref:Tutorial_MediaOps_Scheduling_Configurations) | Schedule your first jobs. |
 
 ### DevTools tutorials
 
