@@ -75,7 +75,7 @@ To do so:
 1. Click *Save*.
 
 > [!NOTE]
-> From DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 onwards<!--RN 42716-->, if you select *HTTP or HTTPS*, Cube will send both an HTTP request and an HTTPS request in parallel, each with a timeout of 60 seconds. The first successful response will be used, and the other request will be canceled. If the first response is empty, Cube will fall back on the other request. In earlier versions, Cube will first send an HTTP request with a default timeout of 100 seconds. If that request fails, it will then send an HTTPS request.
+> From DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 onwards<!--RN 42716-->, if you select *HTTP or HTTPS*, Cube will send both an HTTP request and an HTTPS request in parallel, each with a timeout of 60 seconds. The first successful response will be used, and the other request will be canceled. If the first response is not successful, Cube will fall back on the other request. In earlier versions, Cube will first send an HTTP request with a default timeout of 100 seconds. If that request fails, it will then send an HTTPS request.
 
 ## Removing a DMS from the start window
 
