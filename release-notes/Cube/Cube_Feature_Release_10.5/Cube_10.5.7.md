@@ -33,3 +33,9 @@ uid: Cube_Feature_Release_10.5.7
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, when the logon screen appeared after a Cube session had been disconnected, in some cases, only part of that logon screen would be visible.
+
+#### Topology pane: Problem when navigating quickly through the different levels of a topology chain [ID 42825]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When, in the *Topology* pane, you navigated quickly through the different levels of a topology chain, in some cases, an exception could be thrown.
