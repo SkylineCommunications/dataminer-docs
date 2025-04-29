@@ -112,7 +112,7 @@ This will open a window where you can change the group name, add or remove param
 
 To delete one or more groups, select them in the table under *Your Relational Anomaly Groups* and click *Remove Group* in the header bar.
 
-When a group is removed, it will no longer be monitored by RAD, and all currently active suggestion events will be cleared.
+When a group is removed, it will no longer be monitored by RAD. From DataMiner 10.5.6/10.6.0 onwards<!--RN 42602-->, all active suggestion events linked to the group will automatically be cleared.
 
 ## Specifying the training range
 
