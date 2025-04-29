@@ -93,9 +93,9 @@ You should also collect information to investigate why Cube could not connect to
 
 ## Web app recordings
 
-For troubleshooting issues related to DataMiner web apps, such as DataMiner Dashboards, the Monitoring app, and DataMiner Low-Code Apps, we recommend using the DataMiner Web Support Assistant browser extension.
+For troubleshooting issues related to DataMiner web apps, such as DataMiner Dashboards, the Monitoring app, and DataMiner Low-Code Apps, we recommend using the **DataMiner Web Support Assistant browser extension**. This extension is available for Google Chrome or any Chromium-based browser.
 
-This extension is available for Google Chrome or any Chromium-based browser more info about the extension  can be found [here](xref:Exporting_elements_services_etc_to_a_dmimport_file).
+For information about how to install the extension and create a recording with it, refer to [Web Support Assistant](xref:Web_Issues_Support_Assistant).
 
 ## DELT export packages
 
