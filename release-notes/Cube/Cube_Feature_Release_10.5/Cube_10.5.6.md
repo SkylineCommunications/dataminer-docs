@@ -22,7 +22,7 @@ uid: Cube_Feature_Release_10.5.6
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
-In view cards, the element list now has a new *Isolation mode* column, which displayed the isolation mode of each element in the list.
+In view cards, the element list now has a new *Isolation mode* column, which displays the isolation mode of each element in the list.
 
 By default, this column will be hidden. To add this column to the list, right-click a column header, and *select Add/Remove setting column > Isolation Mode*.
 
