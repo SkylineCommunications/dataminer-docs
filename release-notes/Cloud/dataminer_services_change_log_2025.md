@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 30 April 2025 - Fix - Vendor logo not shown for Catalog item [ID 42837]
+
+It could occur that the vendor logo was not shown for an item even though the item was correctly linked to a vendor with logo.
+
 ### 22 April 2025 - Fix - Catalog - Incorrect vendor name shown [ID 42769]
 
 In some cases, it could occur that the wrong vendor name was shown.
