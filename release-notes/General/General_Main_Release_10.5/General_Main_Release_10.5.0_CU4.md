@@ -15,7 +15,13 @@ uid: General_Main_Release_10.5.0_CU4
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner upgrade: ModuleInstaller upgrade action timeout has been increased to 30 minutes [ID 42659]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, the ModuleInstaller upgrade action would time out after 15 minutes. As this action typically runs for more than 15 minutes, this would ofter cause a notice to be logged.
+
+From now on, the ModuleInstaller upgrade action will only time out after 30 minutes.
 
 ### Fixes
 
