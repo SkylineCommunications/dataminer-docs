@@ -28,4 +28,10 @@ uid: Web_apps_Feature_Release_10.5.7
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards app & Low-Code Apps: No error would be returned when a parameter or an element could not be fetched [ID 42584]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+When a component tried to fetch parameters or elements, up to now, null would be returned for every parameter or element that could not be found.
+
+From now on, for every parameter or element than cannot be found, a clear error message will be returned. Each of those error messages will then explain why a particular parameter or element could not be found.
