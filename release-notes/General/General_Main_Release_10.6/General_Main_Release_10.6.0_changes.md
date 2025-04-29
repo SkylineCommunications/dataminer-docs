@@ -361,3 +361,9 @@ In systems with many trended parameters, an SLNet memory leak could occur whenev
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
 At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
+
+#### LDAP users added as part of an LDAP user group would incorrectly appear as local users instead of domain users [ID 42743]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+Up to now, LDAP users who had been added to DataMiner as part of an LDAP user group would incorrectly appear as local users instead of domain users.
