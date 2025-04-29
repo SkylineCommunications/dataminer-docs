@@ -97,11 +97,11 @@ A number of enhancements have been made with regard to retrieving data from EPM 
 
 In some cases, an *Object reference not set to an instance of an object* exception could be thrown when processing shape conditions or creating shape properties.
 
-#### Matrices in virtual primary elements of redundancy groups would not display correct values [ID 42585]
+#### Matrices would not display correct values [ID 42585]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
-In some cases it could occur that a matrix in a virtual primary element in a redundancy group did not display the correct values. The way matrices are updated has been optimized to prevent this.
+In some cases it could occur that a matrix did not display the correct values. This could for example happen with a matrix shown in a virtual primary element in a redundancy group. The way matrices are updated has been optimized to prevent this.
 
 #### 'Augmented operations alarm settings' window would not open in popped-out alarm template editor window [ID 42749]
 
