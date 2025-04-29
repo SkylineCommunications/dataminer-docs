@@ -4,18 +4,23 @@ uid: srm_resource_scheduling
 
 # Resource Scheduling
 
-With Resource Scheduling, users can book resources ahead of an event, so that the service will not be interrupted by a resource shortage. This provides maximum flexibility, as any resources can be added into such a booking.
+*Assure your service delivery by avoiding resource conflicts at all times*
 
-When a booking starts, a DataMiner service is dynamically generated to aggregate the alarm state of all the resources that are part of the booking. This service also provides a single interface to access all resources in the booking.
+With Resource Scheduling, you can **book resources ahead of an event**, so that you can **avoid resource conflicts** at all times, ensuring that a service will not be interrupted because of a resource shortage. Any resources can be added into such a booking, for maximum flexibility.
 
-No automation happens when the service is generated. The users will need to manually trigger the configuration of the resources in booking. They can do so either by navigating to the relevant resource from the service card or by triggering a Resource Automation action from the same service card.
+Resource Scheduling keeps track of all **resource availability** and **booking schedules**. When a booking starts, a DataMiner service is dynamically generated to aggregate the alarm state of all the resources that are part of the booking. This service also provides a single interface to access all resources in the booking.
+
+**No automatic configuration of resources** will be executed at the start or end of the schedule. At any time, operators can go to their selected resources in DataMiner and configure them manually for the job at hand. They can do so either by navigating to the relevant resource from the service card or by triggering a Resource Automation action from that same service card.
 
 Triggering the configuration is typically done during the pre-roll phase before the booking starts. During pre-roll, all resources are already reserved for the booking. Similarly, resetting all resources is typically done during the post-roll phase.
 
-Resource Scheduling can be used to support very exotic workflows where it is not worth investing into full service orchestration.
+**Workflows that are rare or highly changeable** and workflows that require maximum flexibility benefit the most from Resource Scheduling. Some examples:
 
-Examples:
+- Reserving ad hoc cameras and CCUs for events.
+- IRD or IP gateway reservations in downlink and exchange networks to handle breaking news or late-notice OU sessions.
+- Emergency broadcast transmissions that may not be interrupted at any time.
+- Allocation of spare resources in case booked resources fail.
+- Planning of resource utilization for resources that do not require any configuration, such as rooms, editing desks, IP addresses, or even staff.
 
-- Booking staff
-- Booking rooms
-- Booking IP addresses
+> [!TIP]
+> See also: [How To Schedule your Resources using SRM](https://community.dataminer.services/video/how-to-schedule-your-resources-using-srm/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
