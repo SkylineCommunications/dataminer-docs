@@ -46,14 +46,6 @@ These are the possible values that can be displayed in the *Isolation mode* colu
 
 When you open a trend graph, from now on, an SPI entry containing the loading times of the trend graph labels (including metadata like loaded trend data points, etc.) will be added to the *SLClient.txt* log file.
 
-#### Matrices: All input and output options will now be reset before a matrix update is applied [ID 42585]
-
-<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
-
-When a matrix was updated, up to now, only input and output options included in the update would be changed. Options not included in the update would be left unchanged.
-
-From now on, when a matrix is updated, all input and output options will first be reset to their default values before the changes included in the update are applied.
-
 #### Relational anomaly detection: Link to RAD Manager app in Augmented Operations alarm settings window [ID 42645]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
@@ -107,6 +99,12 @@ A number of enhancements have been made with regard to retrieving data from EPM 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
 In some cases, an *Object reference not set to an instance of an object* exception could be thrown when processing shape conditions or creating shape properties.
+
+#### Matrices would not display correct values [ID 42585]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
+
+In some cases, it could occur that a matrix did not display the correct values. This could for example happen with a matrix shown in a virtual primary element in a redundancy group. The way matrices are updated has been optimized to prevent this.
 
 #### 'Augmented operations alarm settings' window would not open in popped-out alarm template editor window [ID 42749]
 
