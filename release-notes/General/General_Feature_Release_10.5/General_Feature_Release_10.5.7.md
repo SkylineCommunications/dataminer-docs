@@ -46,6 +46,6 @@ From now on, the ModuleInstaller upgrade action will only time out after 30 minu
 
 #### LDAP users added as part of an LDAP user group would incorrectly appear as local users instead of domain users [ID 42743]
 
-<!-- MR 10.6.0 - FR 10.5.7 -->
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, LDAP users who had been added to DataMiner as part of an LDAP user group would incorrectly appear as local users instead of domain users.
