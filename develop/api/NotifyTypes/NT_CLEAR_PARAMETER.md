@@ -8,7 +8,7 @@ uid: NT_CLEAR_PARAMETER
 
 Clears a parameter and its display value. If the parameter is saved, the change is also saved.
 
-This notify cannot clear the contents of a column of a table.
+This notify can be used on standalone as well as on table parameter, it cannot clear the contents of a column of a table.
 
 ```csharp
 int parameterId = 20;
@@ -18,7 +18,7 @@ protocol.NotifyProtocol(474 /*NT_CLEAR_PARAMETER*/, parameterId, null);
 
 ## Parameters
 
-- parameterId (int): The ID of the parameter to be cleared.
+- parameterId (int): The ID of the parameter to be cleared (table or standalone parameter).
 
 ## Return Value
 
