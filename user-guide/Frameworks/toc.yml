@@ -116,6 +116,8 @@ items:
     items:
       - name: About SRM
         topicUid: About_SRM
+      - name: SRM stack
+        topicUid: srm_stack
       - name: SRM use cases
         topicUid: srm_use_cases
         items:

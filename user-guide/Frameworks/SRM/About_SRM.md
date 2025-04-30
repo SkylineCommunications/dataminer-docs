@@ -10,11 +10,7 @@ DataMiner Service and Resource Management (SRM) is a **versatile toolset** that 
 
 **Four different [SRM use cases](xref:srm_use_cases)** are supported, which can flexibly be combined within or across workflows: [Resource Scheduling](xref:srm_resource_scheduling), [Resource Automation](xref:srm_resource_automation), [Resource Orchestration](xref:srm_resource_orchestration), and [Service Orchestration](xref:srm_service_orchestration).
 
-Each of the described DataMiner SRM use cases relies on a combination of different DataMiner modules. The SRM stack consists of seven DataMiner modules that are easily deployed on all DataMiner nodes in the system. Different SRM use cases rely on a different subset of these modules, as illustrated below.
-
-![SRM overview](~/user-guide/images/SRM_overview.svg)
-
-In DataMiner Cube, you will typically use the [Profiles](xref:The_Profiles_module), [Resources](xref:The_Resources_module), [Services](xref:The_Services_module), and [Bookings](xref:The_Bookings_module) modules to work with SRM, as well as the [Booking Manager app](xref:Booking_Manager_user_interface), for easy creation and management of bookings.
+Each of the described DataMiner SRM use cases relies on a combination of different DataMiner modules. The [SRM stack](xref:srm_stack) consists of several DataMiner modules that are easily deployed on all DataMiner nodes in the system. In DataMiner Cube, you will typically use the [Profiles](xref:The_Profiles_module), [Resources](xref:The_Resources_module), [Services](xref:The_Services_module), and [Bookings](xref:The_Bookings_module) modules to work with SRM, as well as the [Booking Manager app](xref:Booking_Manager_user_interface), for easy creation and management of bookings.
 
 To get started with SRM, first take a look at the different [SRM framework concepts](xref:srm_concepts), and then follow our [getting started guide](xref:srm_getting_started).
 

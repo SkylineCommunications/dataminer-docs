@@ -12,13 +12,10 @@ uid: Stack_Orchestration
 
 DataMiner supports **four different use cases** that can flexibly be combined within or across workflows:
 
-- [Resource Scheduling](https://community.dataminer.services/service-resource-management/#resourceScheduling): Keeping track of all resource schedules without automating actions, for maximum flexibility.
-- [Resource Automation](https://community.dataminer.services/service-resource-management/#resourceAutomation): Intelligent resource configuration with a click of a button.
-- [Resource Orchestration](https://community.dataminer.services/service-resource-management/#resourceOrchestration): The power of Resource Scheduling combined with automatic configuration actions at the start and end time of bookings.
-- [Service Orchestration](https://community.dataminer.services/service-resource-management/#serviceOrchestration): Orchestration of the complete life cycle of services.
-
-> [!TIP]
-> More information on the SRM use cases is available in the DataMiner [**Service and Resource Management user guide**](xref:About_SRM)
+- [Resource Scheduling](xref:srm_resource_scheduling): Keeping track of all resource schedules without automating actions, for maximum flexibility.
+- [Resource Automation](xref:srm_resource_automation): Intelligent resource configuration with a click of a button.
+- [Resource Orchestration](xref:srm_resource_orchestration): The power of Resource Scheduling combined with automatic configuration actions at the start and end time of bookings.
+- [Service Orchestration](xref:srm_service_orchestration): Orchestration of the complete life cycle of services.
 
 Each of the four DataMiner SRM use cases described above relies on a **combination** of different DataMiner modules, such as the **orchestration and automation stack functions**, elaborated below.
 
