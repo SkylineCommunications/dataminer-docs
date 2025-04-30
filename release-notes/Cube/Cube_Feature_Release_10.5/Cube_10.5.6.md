@@ -63,7 +63,7 @@ In the *Augmented Operations alarm settings* window, which you can access in the
 If already installed on your system, the app will open. If not, you will be referred to the [RAD Manager page in the Catalog](https://catalog.dataminer.services/details/174b9848-43c8-470d-afc2-1b1722f05e74).
 
 > [!NOTE]
-> On the Main Release track, this link is only available from DataMiner 10.6.0 onwards.
+> This link will only be available if the DataMiner server uses DataMiner 10.5.4/10.6.0 or higher.
 
 #### DataMiner Cube desktop app: Enhanced behavior when selecting "HTTP or HTTPS" [ID 42716]
 
