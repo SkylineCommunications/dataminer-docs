@@ -2,7 +2,7 @@
 uid: Tutorial_MediaOps_Scheduling_Configurations
 ---
 
-# Add node configuration
+# Schedule Job with the Help of Resource Configurations
 
 In this tutorial we will see how to add the capabilities we created in the [Resource Studio Capabilities Tutorial](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) to the jobs in the Scheduling app.
 
