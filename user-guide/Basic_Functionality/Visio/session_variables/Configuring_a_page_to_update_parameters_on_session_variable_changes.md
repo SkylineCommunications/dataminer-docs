@@ -43,3 +43,7 @@ Data =[var:LoadTime]|SetTrigger=ValueChanged-
 Set|218/652|1203|[var:Chain]|SetTrigger=ValueChanged-
 Set|218/652|1205|[var:LoadTime]|SetTrigger=ValueChanged
 ```
+
+> [!TIP]
+> Change by default separators to avoid having problems with dynamic values (such as Element and View names or properties).
+> Example: [sep:-$][sep:|@]SET@CardVariable@myElem@[Property:ViewProperty]@SetTrigger=ValueChanged$[sep:|@]SET@CardVariable@IP@[RegexMatch:[sep:,#](?:\d{1,3}\.){3}\d{1,3}(?=[^|]*$)#[param:[cardvar:myElem],1002]]@SetTrigger=ValueChanged
