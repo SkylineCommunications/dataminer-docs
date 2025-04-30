@@ -27,6 +27,7 @@ uid: Frameworks_and_Solutions_Tutorials
 | [Dive into MediaOps: Resource Studio Capabilities & Capacities](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) | Learn how to model a converter device as a resource using Capabilities and Capacities. |
 | [Dive into MediaOps: Scheduling Intro](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder) | Schedule your first jobs. |
 | [Dive into MediaOps: Scheduling Jobs With Configurations](xref:Tutorial_MediaOps_Scheduling_Configurations) | Learn how to use configurations in your jobs. |
+| [Dive into MediaOps: People & Organizations Intro](xref:Tutorial_MediaOps_People_and_Organizations_Intro) | Create and Organization with a bookable Team and Contacts. |
 
 ### DevTools tutorials
 
