@@ -4,9 +4,9 @@ uid: srm_resource_scheduling
 
 # Resource Scheduling
 
-*Assure your service delivery by avoiding resource conflicts at all times*
+*Assure your service delivery by avoiding resource conflicts at all times.*
 
-With Resource Scheduling, you can **book resources ahead of an event**, so that you can **avoid resource conflicts** at all times, ensuring that a service will not be interrupted because of a resource shortage. Any resources can be added into such a booking, for maximum flexibility.
+With Resource Scheduling, which is available **out of the box**, you can **book resources ahead of an event**, so that you can **avoid resource conflicts** at all times, ensuring that a service will not be interrupted because of a resource shortage. Any resources can be added into such a booking, for maximum flexibility.
 
 Resource Scheduling keeps track of all **resource availability** and **booking schedules**. When a booking starts, a DataMiner service is dynamically generated to aggregate the alarm state of all the resources that are part of the booking. This service also provides a single interface to access all resources in the booking.
 
@@ -23,4 +23,4 @@ Triggering the configuration is typically done during the pre-roll phase before 
 - Planning of resource utilization for resources that do not require any configuration, such as rooms, editing desks, IP addresses, or even staff.
 
 > [!TIP]
-> See also: [How To Schedule your Resources using SRM](https://community.dataminer.services/video/how-to-schedule-your-resources-using-srm/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Schedule your resources and avoid resource conflicts](https://community.dataminer.services/video/how-to-schedule-your-resources-using-srm/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
