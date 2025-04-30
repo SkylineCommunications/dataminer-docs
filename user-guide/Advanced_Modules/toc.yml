@@ -1,7 +1,8 @@
 items:
   - name: Automation
-    topicUid: automation
     items:
+      - name: About DataMiner Automation
+        topicUid: automation
       - name: Managing Automation scripts
         topicUid: Managing_Automation_scripts
       - name: Designing Automation scripts
