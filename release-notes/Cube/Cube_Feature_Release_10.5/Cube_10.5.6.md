@@ -101,7 +101,7 @@ In some cases, an *Object reference not set to an instance of an object* excepti
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 -->
 
-In some cases it could occur that a matrix did not display the correct values. This could for example happen with a matrix shown in a virtual primary element in a redundancy group. The way matrices are updated has been optimized to prevent this.
+In some cases, it could occur that a matrix did not display the correct values. This could for example happen with a matrix shown in a virtual primary element in a redundancy group. The way matrices are updated has been optimized to prevent this.
 
 #### 'Augmented operations alarm settings' window would not open in popped-out alarm template editor window [ID 42749]
 
