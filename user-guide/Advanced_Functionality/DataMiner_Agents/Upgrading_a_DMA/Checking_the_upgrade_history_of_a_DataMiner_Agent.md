@@ -8,7 +8,7 @@ You can easily check which upgrades have been performed on a particular DataMine
 
 ## In the Upgrades folder
 
-Go to the *C:\\Skyline DataMiner\\Upgrades\\* folder of the DataMiner Agent and open the file *VersionHistory.txt*. That file lists all the major upgrades that have been performed on that DataMiner Agent, each with the date at which the DataMiner Agent was first started after that particular upgrade.
+Go to the `C:\Skyline DataMiner\Upgrades` folder of the DataMiner Agent and open the file *VersionHistory.txt*. That file lists all the major upgrades that have been performed on that DataMiner Agent, each with the date at which the DataMiner Agent was first started after that particular upgrade.
 
 Example:
 
@@ -17,7 +17,7 @@ Example:
 2025-03-27 11:16:35;10.5.4.0-15588-20250319-release
 ```
 
-The *Upgrades* folder also contains a subfolder for each major upgrade that has been performed on the DataMiner Agent. Within each folder, the *progress.log* file will contain detailed information about the upgrade.
+In addition, the `C:\Skyline DataMiner\Upgrades\Packages` folder contains a subfolder for each major upgrade that has been performed on the DataMiner Agent. Within each of these folders, the *progress.log* file will contain detailed information about the upgrade.
 
 Note that the *Upgrades* folder itself may also contain *update.log* files, but these are not related to DataMiner upgrades. Instead, these are generated when .dmimport packages are imported on the DMA.
 
