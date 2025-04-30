@@ -139,7 +139,7 @@ The list consists of the following columns:
 
 - *SLA service*: Relevant for SLAs only. Indicates the service monitored by the SLA.
 
-- *Isolation mode*: Available from DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 onwards<!--RN 42562-->. Relevant for elements only. Indicates whether the element is running in isolation mode. Possible values include:
+- *Isolation mode*: Available from DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 onwards<!--RN 42562-->. Relevant for elements only. Indicates whether the element is running in [isolation mode](xref:Adding_elements#adding-elements-in-isolation-mode). Possible values include:
 
   - *None*: Not applicable. For example, when viewing the *All* page of a service.
 
