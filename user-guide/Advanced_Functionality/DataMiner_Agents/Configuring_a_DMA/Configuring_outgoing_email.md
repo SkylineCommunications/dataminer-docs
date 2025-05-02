@@ -44,7 +44,7 @@ You can either configure this directly in *DataMiner.xml* or use the SLNetClient
 
   1. Stop the DataMiner software.
 
-  1. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
+  1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
   1. Go to the *\<SMTP>* section. If this section does not exist yet, add it.
 

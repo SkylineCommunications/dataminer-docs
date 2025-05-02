@@ -24,7 +24,7 @@ snmp 161/udp #SNMP
 
 ## Changing the SNMP port used by a DataMiner Agent
 
-If you want DataMiner to use another port when acting as an SNMP agent, open the file *C:\\Skyline DataMiner\\DataMiner.xml*, and change the port specified in the SNMP tag.
+If you want DataMiner to use another port when acting as an SNMP agent, open the file `C:\Skyline Dataminer\DataMiner.xml`, and change the port specified in the SNMP tag.
 
 In the following example, DataMiner uses port 461:
 
@@ -59,7 +59,7 @@ In the file *DataMiner.xml*, you can specify a custom SNMPv3 trap reception port
 
 To specify a custom SNMPv3 trap reception port:
 
-1. Open *C:\\Skyline DataMiner\\DataMiner.xml*.
+1. Open `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Add an *\<SNMPv3>* tag in the DataMiner tag, and specify the trap reception port in the *trapPort* attribute.
 

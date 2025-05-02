@@ -24,7 +24,7 @@ In the syntax above, “ExtraData” indicates the location of the DLL file.
 | Protocol/DataMinerID/ElementID            | in the folder of the protocol version associated with the specified element. |
 
 > [!NOTE]
-> If you specify extra DLL files (see *ExtraDllFile1\\ExtraDllFile2\\...\\ExtraDllFileX* in the syntax above), these files have to be located in *C:\\Skyline Dataminer\\Files*.
+> If you specify extra DLL files (see *ExtraDllFile1\\ExtraDllFile2\\...\\ExtraDllFileX* in the syntax above), these files have to be located in `C:\Skyline DataMiner\Files`.
 
 ## Examples
 

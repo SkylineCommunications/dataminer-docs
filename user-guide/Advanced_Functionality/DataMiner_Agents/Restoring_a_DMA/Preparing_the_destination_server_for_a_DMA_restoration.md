@@ -18,9 +18,9 @@ To prepare the destination server, there are **several possibilities**:
 
   1. If necessary, take a backup of the existing configuration.
 
-  1. Go to the folder *C:\\Skyline DataMiner\\Tools* and run the *DataMiner Stop DataMiner And SLNet.bat* file. This will stop the DataMiner software.
+  1. Go to the folder `C:\Skyline DataMiner\Tools` and run the *DataMiner Stop DataMiner And SLNet.bat* file. This will stop the DataMiner software.
 
-  1. From the *C:\\Skyline DataMiner\\Backup* directory, delete all content EXCEPT *TakeBackup.exe*, *BackupSettings.xml* and all *.dll* files. If necessary, copy existing backups to another location before deleting them.
+  1. From the `C:\Skyline DataMiner\Backup` directory, delete all content EXCEPT *TakeBackup.exe*, *BackupSettings.xml* and all *.dll* files. If necessary, copy existing backups to another location before deleting them.
 
   1. From the *C:\\Skyline DataMiner\\Webpages\\Pictures* directory, delete all content EXCEPT the four files of which the name starts with *DMSPicViewer*.
 

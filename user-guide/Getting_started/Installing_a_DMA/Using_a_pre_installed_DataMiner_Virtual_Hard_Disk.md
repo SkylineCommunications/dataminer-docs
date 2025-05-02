@@ -180,7 +180,7 @@ If you want to restore a backup coming from another machine because of e.g. a ha
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-1. Open the *C:\Skyline DataMiner\\* folder.
+1. Open the `C:\Skyline DataMiner\` folder.
 
 1. Remove all *\*.lic* files, if any.
 
@@ -204,7 +204,7 @@ If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-1. Open the *C:\Skyline DataMiner\\* folder.
+1. Open the `C:\Skyline DataMiner\` folder.
 
 1. Remove all *\*.lic* files, if any.
 
@@ -236,7 +236,7 @@ If after this period you want to extend the usage of the system, you can convert
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-1. Open the *C:\Skyline DataMiner\\* folder.
+1. Open the `C:\Skyline DataMiner\` folder.
 
 1. Remove all *\*.lic* files, if any.
 
