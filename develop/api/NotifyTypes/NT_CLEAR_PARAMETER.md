@@ -8,7 +8,7 @@ uid: NT_CLEAR_PARAMETER
 
 Clears a parameter and its display value. If the parameter is saved, the change is also saved.
 
-This notify can be used on standalone as well as on table parameter, it cannot clear the contents of a column of a table.
+This notify can be used on a standalone parameter or a table parameter, but it cannot clear the contents of a column of a table.
 
 ```csharp
 int parameterId = 20;
