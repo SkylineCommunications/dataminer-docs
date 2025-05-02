@@ -40,6 +40,12 @@ From now on, users will get more feedback when a DataMiner version mismatch is d
 
 ### Fixes
 
+#### Alarm templates: Problem when duplicating a scheduled alarm template [ID 42823]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When, in the *Protocols & Templates* module, you duplicated an alarm template that was scheduled to only be active at certain times, the newly created duplicate would incorrectly be disabled, although the schedule of the original alarm template had correctly been copied.
+
 #### Cube logon screen would not be fully visible after a disconnect [ID 42824]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
