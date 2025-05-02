@@ -30,7 +30,7 @@ uid: Web_apps_Feature_Release_10.5.7
 
 When the text in a redesigned `UIBlockType.StaticText` component does not fit the width of the component, it will automatically be ellipsed, and when you hover over the component, the full text will be displayed in a tooltip.
 
-From now on, the text in a redesigned `UIBlockType.StaticText` will no longer be automatically ellipsed when it contains newline characters. In that case, the text will be split into multiple lines.
+From now on, the text in a redesigned `UIBlockType.StaticText` will no longer be automatically ellipsed when it contains newline characters. In that case, similar to the legacy `UIBlockType.StaticText` component, the text will be split into multiple lines.
 
 Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
 
