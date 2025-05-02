@@ -13,7 +13,7 @@ Expected duration: 10 minutes
 
 ## Prerequisites
 
-- An [organization key](xref:Managing_dataminer_services_keys#organization-keys) or [system key](xref:Managing_dataminer_services_keys#system-keys) or account with the *Owner* role in order to access/create keys.
+- An [organization key](xref:Managing_dataminer_services_keys#organization-keys) or account with the *Owner* role in order to access/create keys.
 
   > [!TIP]
   > See [Changing the role of a dataminer.services user](xref:Changing_the_role_of_a_dataminer_services_user)

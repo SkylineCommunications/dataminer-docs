@@ -10,7 +10,7 @@ keywords: cloud keys
 
 ## System keys
 
-System keys can be used with the [GitHub action to deploy Automation scripts](xref:Marketplace_deployment_action) to a DMS that is connected to dataminer.services.
+System keys can be used with the [DataMinerDeploy .NET tool to deploy packages](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.DataMinerDeploy/tree/main/CICD.Tools.DataMinerDeploy#deploying-from-a-volatile-upload) to a DMS that is connected to dataminer.services.
 
 To view your system keys:
 

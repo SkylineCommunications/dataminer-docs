@@ -41,3 +41,11 @@ Once the setting is disabled, run your workflow again to verify if everything is
 This happens when you run the CI before you have created the SonarCloud project. This makes a SonarCloud project without the proper configuration.
 
 Contact the BOOST team so they can remove the project. You can then recreate the project with the correct settings.
+
+## Deploy Action
+
+### Error: 'agent-destination-id' must be provided for the Deploy stage.
+
+As of version 3 of the Deploy Action, the action uses organization keys instead of system keys. This means that a new input needs to be specified to which system the package needs to be deployed.
+
+More information about the 'agent-destination-id' can be found [here](https://github.com/SkylineCommunications/Skyline-DataMiner-Deploy-Action?tab=readme-ov-file#destination-agent-id).
