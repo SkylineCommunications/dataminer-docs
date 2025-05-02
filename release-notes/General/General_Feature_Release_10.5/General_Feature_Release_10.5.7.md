@@ -44,6 +44,12 @@ From now on, the ModuleInstaller upgrade action will only time out after 30 minu
 
 ### Fixes
 
+#### Not all DCF interfaces would be listed in the Connectivity tab of an element's Properties window [ID 42591]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+When, in e.g. DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
+
 #### LDAP users added as part of an LDAP user group would incorrectly appear as local users instead of domain users [ID 42743]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
