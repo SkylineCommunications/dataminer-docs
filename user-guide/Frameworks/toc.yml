@@ -116,8 +116,6 @@ items:
     items:
       - name: About SRM
         topicUid: About_SRM
-      - name: SRM stack
-        topicUid: srm_stack
       - name: SRM use cases
         topicUid: srm_use_cases
         items:
@@ -129,6 +127,8 @@ items:
             topicUid: srm_resource_orchestration
           - name: Service Orchestration
             topicUid: srm_service_orchestration
+      - name: SRM stack
+        topicUid: srm_stack
       - name: SRM framework concepts
         topicUid: srm_concepts
         items:
