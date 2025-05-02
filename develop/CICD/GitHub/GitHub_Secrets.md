@@ -49,7 +49,7 @@ In the [Admin app](xref:About_the_Admin_app), two different types of keys can be
   - Name: DATAMINER_DEPLOY_KEY
   - Value: See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
 
-- A dataminer.services **organization key** is scoped to the specific organization for which it was created and can  be used to perform uploads to and deploy from the Catalog. This includes uploading private artifacts to the Catalog that will only be accessible for the organization that your DMS belongs to. To upload and deploy items, you will need this key.
+- A dataminer.services **organization key** is scoped to the specific organization for which it was created and can be used to upload to and deploy from the Catalog. This includes uploading private artifacts to the Catalog that will only be accessible for the organization that your DMS belongs to. To upload and deploy items, you will need this key.
 
   - Name: DATAMINER_TOKEN
   - Value: See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
