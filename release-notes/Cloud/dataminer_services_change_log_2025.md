@@ -9,6 +9,12 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 28 April 2025 - Fix - Usage API - Performance and stability improvements [ID 42791]
+
+It was possible that an export request failed with an out of memory exception. This has been fixed.
+
+In addition, retrieving usage data to display in the Admin app resulted in a timeout when a large amount of data had to be retrieved. Query performance has been improved to prevent this.
+
 ### 22 April 2025 - Fix - Catalog - Incorrect vendor name shown [ID 42769]
 
 In some cases, it could occur that the wrong vendor name was shown.
