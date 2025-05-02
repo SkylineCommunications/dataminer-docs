@@ -24,7 +24,19 @@ uid: Cube_Feature_Release_10.5.7
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner Cube desktop app: Enhanced feedback in case of DataMiner version mismatch [ID 42706]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When the DataMiner Cube desktop app is deployed using [shared MSI installation](xref:DataMiner_Cube_deployment_methods#shared-msi-installation), only one Cube version will be available system-wide, and that version must remain compatible with the DataMiner System to which the Cube clients will connect. This can eventually lead to issues when, for example, DataMiner Agents get upgraded.
+
+From now on, users will get more feedback when a DataMiner version mismatch is detected:
+
+- In the *About* box of the DataMiner Cube desktop app, the version of the app will now include either a "(shared)" or "(MSI)" suffix. This will indicate whether the app was deployed using [shared MSI installation](xref:DataMiner_Cube_deployment_methods#shared-msi-installation) or [bootstrap MSI installation](xref:DataMiner_Cube_deployment_methods#bootstrap-msi-installation).
+
+- The logging of the DataMiner Cube desktop app will now explicitly indicate when a "version not found" error was caused by a system-wide installation conflict.
+
+- The error message displayed on the screen will now explicitly say that a version mismatch was detected and that an update is required. Also, users will be referred to the [DataMiner Cube deployment methods](xref:DataMiner_Cube_deployment_methods) documentation page for more details.
 
 ### Fixes
 
