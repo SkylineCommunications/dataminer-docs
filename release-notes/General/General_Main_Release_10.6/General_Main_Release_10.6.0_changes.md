@@ -361,3 +361,9 @@ In systems with many trended parameters, an SLNet memory leak could occur whenev
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
 At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
+
+#### Problem when upgrading a DMA using BrokerGateway [ID 42853]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+While a DataMiner Agent using BrokerGateway was being upgraded, in some cases, a `nats-server could not be started` error could get thrown.

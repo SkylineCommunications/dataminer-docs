@@ -58,3 +58,9 @@ When, in the *MaintenanceSettings.xml* file, the `<SLNet>` element contained a `
 
 > [!NOTE]
 > The above-mentioned `<DefaultUpgradeOptions>` element will be added to the *MaintenanceSettings.xml* file the first time you make any changes to the default upgrade options. To change these options in DataMiner Cube, go to *System Center > System Settings > Upgrade*.
+
+#### Problem when upgrading a DMA using BrokerGateway [ID 42853]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+While a DataMiner Agent using BrokerGateway was being upgraded, in some cases, a `nats-server could not be started` error could get thrown.
