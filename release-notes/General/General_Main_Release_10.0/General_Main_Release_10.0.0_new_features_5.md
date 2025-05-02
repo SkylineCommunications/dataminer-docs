@@ -152,13 +152,13 @@ The DataMiner HTML5 app has now been replaced by the new Monitoring & Control ap
 
 - Redesigned header bar:
 
-  - The app title is now a button that redirects the user to the app’s homepage.
+  - The app title is now a button that redirects the user to the app’s home page.
   - Like in Cube X, the Search box has now been moved from the side panel to the middle of the header bar.
   - On the right, there is now one single user icon, which, when clicked, opens a menu that allows users to access to the settings window and the About box.
 
     Currently, the settings window allows you to specify the default pages for element and view cards.
 
-- A new homepage similar to the Cube X homepage, listing recently used items.
+- A new home page similar to the Cube X home page, listing recently used items.
 - Redesigned (collapsible) side panel, on which alarm states are now indicated by colored circles.
 - Redesigned element, service, view and alarm cards, which can be accessed directly using the following URLs:
 
@@ -180,7 +180,7 @@ The mobile DataMiner apps can now be added to a mobile device’s home screen an
 
 #### Default time zone can now be specified in ClientSettings.json \[ID 22762\]
 
-Time notations displayed in DataMiner mobile apps will now all be based on the time zone specified in the following setting, located in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file:
+Time notations displayed in DataMiner mobile apps will now all be based on the time zone specified in the following setting, located in the `C:\Skyline DataMiner\users\ClientSettings.json` file:
 
 - commonServer.ui.DefaultTimeZone
 

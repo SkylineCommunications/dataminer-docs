@@ -91,7 +91,7 @@ Below is a graphical representation of how an average trend graph is constructed
 
 In some cases, it is undesired that the window is automatically closed, as some data points that belong to a particular window are only received after the window has passed. For example, the window 10:35 to 10:40 closes at 10:40, but at 10:41:12 we obtain a data point with a corresponding timestamp of 10:39:00. As the window has already automatically closed, the average value has been calculated and therefore this data point was not used in the calculation of the average value of this window although this data point belongs to this window.
 
-In such cases, the historySet attribute can be used (see historySet). When this attribute is set to true, the window will no longer be automatically closed. Instead, it will be closed when either a data point is provided with a timestamp that falls outside the window or a specific request is made to close the window.
+In such cases, the [historySet](xref:Protocol.Params.Param-historySet) attribute can be used. When this attribute is set to true, the window will no longer be automatically closed. Instead, it will be closed when either a data point is provided with a timestamp that falls outside the window or a specific request is made to close the window.
 
 The DataMiner class library (DCL) provides some methods that allow the performing of a history set. The following methods defined in the SLProtocol interface allow history settings:
 

@@ -8,32 +8,32 @@ If a Service Level Agreement (SLA) exists for a particular service, you can crea
 
 1. Right-click in the Surveyor and select *New \> SLA*.
 
-2. Fill in the following fields:
+1. Fill in the following fields:
 
-    - *Name*: The name of the new SLA element.
+   - *Name*: The name of the new SLA element.
 
-    - *Service*: The service the SLA will monitor.
+   - *Service*: The service the SLA will monitor.
 
-        > [!NOTE]
-        > SLAs cannot monitor replicated services.
+     > [!NOTE]
+     > SLAs cannot monitor replicated services.
 
-    - *Description*: An optional description of the SLA.
+   - *Description*: An optional description of the SLA.
 
-    - *DMA*: The DataMiner Agent on which you want to create the SLA element.
+   - *DMA*: The DataMiner Agent on which you want to create the SLA element.
 
-    - *Protocol*: The SLA protocol, e.g. Skyline SLA Definition Basic.
+   - *Protocol*: The SLA protocol, e.g. Skyline SLA Definition Basic.
 
-    - *Version*: The protocol version.
+   - *Version*: The protocol version.
 
-    - *Alarm template*: The template used for alarm monitoring of the SLA itself.
+   - *Alarm template*: The template used for alarm monitoring of the SLA itself.
 
-    - *Trend template*: The template used for trending of SLA parameters.
+   - *Trend template*: The template used for trending of SLA parameters.
 
-    > [!NOTE]
-    > To a large extent, the SLA creation card is similar to a regular element creation card. Therefore, for more detailed information, refer to [Adding elements](xref:Adding_elements).
+   > [!NOTE]
+   > To a large extent, the SLA creation card is similar to a regular element creation card. Therefore, for more detailed information, refer to [Adding elements](xref:Adding_elements).
 
-3. Click *Next* and select the view where you wish to create the SLA.
+1. Click *Next* and select the view where you wish to create the SLA.
 
-4. Optionally, click *Next* and add properties to the SLA.
+1. Optionally, click *Next* and add properties to the SLA.
 
-5. To finish creating the SLA, click *Create*.
+1. To finish creating the SLA, click *Create*.

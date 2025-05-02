@@ -113,9 +113,9 @@ Shared presets could get lost when editing them, and, in some cases, when renami
 
 When you had selected one or more users or groups in the Add existing user or Add existing group window respectively, in some cases, the selected users or groups would incorrectly get unselected when you filtered the list.
 
-#### DataMiner Cube - Scheduler: Memory leak due to an incorrect clean-up of removed timeline items \[ID 25359\]
+#### DataMiner Cube - Scheduler: Memory leak due to an incorrect cleanup of removed timeline items \[ID 25359\]
 
-In some cases, DataMiner Cube could leak memory due to an incorrect internal clean-up of items removed from the Scheduler timeline.
+In some cases, DataMiner Cube could leak memory due to an incorrect internal cleanup of items removed from the Scheduler timeline.
 
 #### DataMiner Cube - Alarm Console: Problem when grouping or sorting the alarms on an alarm tab page with a sliding window \[ID 25390\]
 

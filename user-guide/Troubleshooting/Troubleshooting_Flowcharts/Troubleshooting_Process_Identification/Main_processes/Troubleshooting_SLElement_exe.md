@@ -27,21 +27,21 @@ Start[SLElement]
 StartPage([Start page])
 RTE{{Is there an RTE or a memory leak?}}
 Watchdog[RTE troubleshooting:<br/>- Verify RTE Count = 1.<br/>- Check memory/CPU usage of SLElement.<br/>- Run collector and include memory dump.]
-Threads{{Which SLDataMiner thread <br>is affected?}}
-ThreadsDB[DB threads:<br/>- CentralOffloadThread<br/>- DBThread<br/>- DataGatewayParameterThread<br/>- DataGatewayTableThread<br/>- DataGatewayAlarmThread<br/>- DataGatewayElementNotifyThread]
-Offload[- Check Offload DB folder for new files.<br/>- Confirm that DB connection is healthy.<br/>- Check if there are big tables that <br>might be slowing down queries.]
+Threads{{Which SLDataMiner thread is affected?}}
+ThreadsDB[" DB threads:<br/>- CentralOffloadThread<br/>- DBThread<br/>DataGatewayParameterThread<br/>- DataGatewayTableThread<br/>- DataGatewayAlarmThread<br/>DataGatewayElementNotifyThread "]
+Offload[" \- Check Offload DB folder for new files.<br/>- Confirm that DB connection is healthy.<br/>- Check if there are big tables that might be slowing down queries. "]
 IssuesAfterCheck{{Any issues after check?}}
 CassandraTb([Cassandra troubleshooting])
-DumpDb[Run Log Collector with <br> the following dumps:<br/>- SLElement<br/>- SLProtocol<br/>- SLDataGateway<br/>]
-ThreadsAlarm[Alarm threads:<br/>- AlarmThread<br/>- AlarmOffloadThread<br/>- DataMinerNotificationsThread<br/>- ClientNotificationsThread<br/>- AlarmLinkLevel]
-DumpAlarm[Run Log Collector with <br> the following dumps:<br/>- SLElement<br/>- SLDataminer<br/>- SLNet<br/>]
-Delt[If the issue is related to <br> a specific element, create a DELT export package <br> and make sure trend and alarm <br> data are not selected.]
+DumpDb[Run Log Collector with the following dumps:<br/>- SLElement<br/>- SLProtocol<br/>- SLDataGateway]
+ThreadsAlarm[Alarm threads:<br/>- AlarmThread<br/>- AlarmOffloadThread<br/>-DataMinerNotificationsThread<br/>- ClientNotificationsThread<br/>- AlarmLinkLevel]
+DumpAlarm[Run Log Collector with the following dumps:<br/>- SLElement<br/>- SLDataminer<br/>- SLNet]
+Delt[If the issue is related to a specific element, create a DELT export package and make sure trend and alarm data are not selected.]
 SendSw[Send the collected information to the software team.]
-LogCollectorSw[Run Log Collector with SLElement <br>memory dump and send <br>to the software team.]
-PendingCalls[Check pending calls on the element <br>and contact the connector developer <br>to resolve the issue in a new version]
+LogCollectorSw[Run Log Collector with SLElement memory dump and send to the software team.]
+PendingCalls[Check pending calls on the element and contact the connector developer to resolve the issue in a new version]
 RunPending([How to run pending calls])
-MemoryLeak[Check the trending on the <br>Microsoft element when <br>the memory leak started.]
-LeakStart{{Can you link an event/action on <br>the DMA to when the leak started?}}
+MemoryLeak[Check the trending on the Microsoft element when the memory leak started.]
+LeakStart{{Can you link an event/action on the DMA to when the leak started?}}
 ElementActive{{Was an element activated?}}
 %% Connect blocks %%
 Start ----- RTE

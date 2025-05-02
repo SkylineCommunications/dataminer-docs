@@ -62,7 +62,7 @@ When you opened an alarm card, in some cases, the services affected by the alarm
 
 #### Problem when SLWatchDog was copying log files to the Minidump folder \[ID 31652\]
 
-When an error of type “thread problem” occurs, the contents of the C:\\Skyline DataMiner\\Logging folder is compressed into a zip file, which is then placed in the C:\\Skyline DataMiner\\Logging\\Minidump folder. During this action, in some cases, a lock inside the SLWatchdog process would accidentally delay the start-up of elements.
+When an error of type “thread problem” occurs, the contents of the C:\\Skyline DataMiner\\Logging folder is compressed into a zip file, which is then placed in the C:\\Skyline DataMiner\\Logging\\Minidump folder. During this action, in some cases, a lock inside the SLWatchdog process would accidentally delay the startup of elements.
 
 #### DataMiner Cube - Settings: Turning an alarm tab of type 'sliding window' into a normal alarm tab would cause this change to be reverted as soon as another change was made to it \[ID 31664\]
 

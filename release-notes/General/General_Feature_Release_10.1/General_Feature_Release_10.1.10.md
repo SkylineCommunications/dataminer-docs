@@ -253,7 +253,7 @@ DataMiner Cube has now been adapted accordingly.
 
 When, within a service context, child shapes are automatically generated, it is now possible to use a ResourceMapping filter. This will allow you to only show shapes that have a certain role (mapped, unmapped, inheritance) within the booking.
 
-In a child shape, add a data field of type *ChildrenFilter*, and set its value to “ResourceMapping=”, followed by one or more roles (separated by commas). If you specify multiple roles, all shapes of which the roles match one of the specified roles will be shown.
+In a child shape, add a data field of type *ChildrenFilter*, and set its value to "ResourceMapping=", followed by one or more roles (separated by commas). If you specify multiple roles, all shapes of which the roles match one of the specified roles will be shown.
 
 See the following example.
 
@@ -621,7 +621,7 @@ In the Resources app, it is possible to create virtual function resources that a
 
 #### DataMiner Cube: Problem with table filters \[ID 30658\]
 
-In Data Display and Visual Overview, in some cases, table filters could yield incorrect results when they contained numeric column filters with a “\<=”, “=”, or “=>” operator.
+In Data Display and Visual Overview, in some cases, table filters could yield incorrect results when they contained numeric column filters with a "\<=", "=", or "=>" operator.
 
 #### DataMiner Cube: No reports or alarm heatlines shown for view table parameters \[ID 30667\]
 

@@ -8,7 +8,7 @@ With the DataMiner User-Defined APIs module, you can create custom APIs to inter
 
 ## Prerequisites
 
-- A DataMiner System using DataMiner 10.3.6 or higher with [Storage as a Service](xref:STaaS) or self-hosted storage setup with [indexing database](xref:Indexing_Database), as well as [HTTPS setup](xref:Setting_up_HTTPS_on_a_DMA)
+- A DataMiner System using DataMiner 10.3.6 or higher with [Storage as a Service](xref:STaaS) (recommended) or a self-managed storage setup with [indexing database](xref:Indexing_Database), as well as [HTTPS setup](xref:Setting_up_HTTPS_on_a_DMA)
 - [DataMiner Cube](https://community.dataminer.services/dataminer-cube-installer/)
 - [User-Defined APIs user permissions](xref:DataMiner_user_permissions#modules--user-defined-apis)
 - [Automation user permissions](xref:DataMiner_user_permissions#modules--automation)
@@ -21,7 +21,7 @@ With the DataMiner User-Defined APIs module, you can create custom APIs to inter
 - [Retrieving elements in alarm](xref:UD_APIs_Elements_in_alarm_tutorial)
 
 > [!NOTE]
-> The Automation script solution that is created and used in the tutorials is [available on GitHub](https://github.com/SkylineCommunications/SLC-UDAPI-Documentation-Tutorial-Scripts). The API scripts can also be deployed directly to a DataMiner System [connected to dataminer.services](xref:AboutCloudPlatform) using the corresponding [DataMiner Catalog item](https://catalog.dataminer.services/details/package/5162).
+> The Automation script solution that is created and used in the tutorials is [available on GitHub](https://github.com/SkylineCommunications/SLC-UDAPI-Documentation-Tutorial-Scripts). The API scripts can also be deployed directly to a DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) using the corresponding [Catalog item](https://catalog.dataminer.services/details/package/5162).
 
 > [!TIP]
 >

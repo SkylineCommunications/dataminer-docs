@@ -12,19 +12,19 @@ To implement DVE functionality, the following steps must be performed:
 
     Just like regular protocols, the automatically generated DVE protocol(s) can be found in the C:\Skyline DataMiner\Protocols\[DVE Protocol Name]\ folder.
 
-1. The table(s) that will generate DVEs must contain a column that uses the "[element](xref:ColumnOptionOptionsOverview#element)" option. This column will then automatically be filled in by DataMiner with the global element ID ("DMA/element ID") of the corresponding DVEs.
+1. The table(s) that will generate DVEs must contain a column that uses the [element](xref:ColumnOptionOptionsOverview#element) option. This column will then automatically be filled in by DataMiner with the global element ID ("DMA/element ID") of the corresponding DVEs.
 
-1. Every DVE table will result in the generation of a corresponding DVE protocol. The content of this DVE protocol is defined by exporting parameters of the parent protocol. For example, in case a parameter defined in the main protocol should also be included in the DVE protocol, set the export attribute value to "true" (see export). In case multiple DVE tables are defined, set the export attribute to the table ID(s) where the parameter should be included.
+1. Every DVE table will result in the generation of a corresponding DVE protocol. The content of this DVE protocol is defined by exporting parameters of the parent protocol. For example, in case a parameter defined in the main protocol should also be included in the DVE protocol, set the [export](xref:Protocol.Params.Param-export) attribute value to "true". In case multiple DVE tables are defined, set the export attribute to the table ID(s) where the parameter should be included.
 
-    Exporting columns of the DVE table to the corresponding DVE protocol will result in standalone parameters. It is also possible to export referenced tables. Note that in this case the table must be linked to the DVE table (See Foreign keys and Relations).
+    Exporting columns of the DVE table to the corresponding DVE protocol will result in standalone parameters. It is also possible to export referenced tables. Note that in this case the table must be linked to the DVE table (See [Foreign keys](xref:UIComponentsTableForeignKeys) and [Relations](xref:UIComponentsTableRelations)).
 
 For example, suppose a protocol contains a table (ID: 1000) that will generate DVEs (i.e. the protocol defines that table 1000 generates DVEs). In the DVE table, the columns "X", "Y" and "Z" are exported and the column "DVE ID" has the option "element". In addition, the protocol contains another table (ID: 2000) that is linked to the DVE table. This table is also exported.
 
-![alt text](~/develop/images/Advanced_Topics_-_DVE_concept.svg "A table linked to a DVE table")
+![A table linked to a DVE table](~/develop/images/Advanced_Topics_-_DVE_concept.svg)
 
 The DVE generated for the first row in the DVE table will look like this:
 
-![alt text](~/develop/images/Advanced_Topics_-_DVE_concept_-_result.svg "Resulting DVE layout")
+![Resulting DVE layout](~/develop/images/Advanced_Topics_-_DVE_concept_-_result.svg)
 
 When implementing DVE functionality, keep the following in mind:
 

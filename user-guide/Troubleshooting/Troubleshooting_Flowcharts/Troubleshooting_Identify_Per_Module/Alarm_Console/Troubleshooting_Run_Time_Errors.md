@@ -53,15 +53,15 @@ START[RTE]
 HOME([Start page])
 CHECKRTE[Identifying an RTE]
 CHECKALARM{{Are there alarms in the Alarm Console with value 'Thread problem in...'?}}
-CHECKLOGS{{Check SLWatchdog2.txt logging for recent<br/> 'RTE Count = 1'. Is there an RTE?}}
-CHECKDUMP{{Check minidump folder.<br/>Is there a recent RTE minidump?}}
+CHECKLOGS{{Check SLWatchdog2.txt logging for recent 'RTE Count = 1'. Is there an RTE?}}
+CHECKDUMP{{Check minidump folder. Is there a recent RTE minidump?}}
 NORTE([No RTE. Check for other possible issues.])
-VERIFYRTE{{Verify which process has 'RTE Count = 1'<br/> and note the 'Not signaled 1' timestamp.}}
-CHECKCRASHORDISP{{Any crashdumps or process disappearances<br/> near the time of the RTE?}}
+VERIFYRTE{{Verify which process has 'RTE Count = 1' and note the 'Not signaled 1' timestamp.}}
+CHECKCRASHORDISP{{Any crashdumps or process disappearances near the time of the RTE?}}
 CRASHORDISP([Check crash/process disappearance flows.])
 CHECKACTIVE{{Is the RTE still active?}}
-COLLECTLOGS[Run the SLLogCollector tool. Collect<br/>all logging and memory dumps of<br/>processes with active RTEs]
-RTE([Take note of SL process and time of RTE.<br/>Follow relevant process flowcharts.])
+COLLECTLOGS[Run the SLLogCollector tool. Collect all logging and memory dumps of processes with active RTEs]
+RTE([Take note of SL process and time of RTE. Follow relevant process flowcharts.])
 %% Connect blocks %%
 START --- CHECKRTE
 CHECKRTE --- CHECKALARM

@@ -36,9 +36,9 @@ When an error occurs on one of the replicated clusters, a single alarm will be g
 
 ##### Configuration
 
-The configuration of the Elasticsearch clusters can be stored in a new DBConfiguration.xml file, located in the C:\\Skyline DataMiner\\Database folder. This configuration file takes priority over the existing Db.xml file when it comes to Elasticsearch.
+The configuration of the Elasticsearch clusters can be stored in a new DBConfiguration.xml file, located in the C:\\Skyline DataMiner\\Database folder. This configuration file takes priority over the existing DB.xml file when it comes to Elasticsearch.
 
-At DataMiner startup, when the DBConfiguration.xml file exists and an Elasticsearch connection is defined in the Db.xml file, the Elasticsearch connection is commented out in the Db.xml file and an additional comment is added, indicating that the Elasticsearch configuration is taken from the DBConfiguration.xml file instead.
+At DataMiner startup, when the DBConfiguration.xml file exists and an Elasticsearch connection is defined in the DB.xml file, the Elasticsearch connection is commented out in the DB.xml file and an additional comment is added, indicating that the Elasticsearch configuration is taken from the DBConfiguration.xml file instead.
 
 > [!NOTE]
 >
@@ -506,7 +506,7 @@ It is now possible to enable TLS on Cassandra database connections.
 To enable TLS for a particular Cassandra database, do the following:
 
 1. Enable TLS in the settings of the Cassandra database.
-2. Enable TLS in the settings of that database in Db.xml. See the following example:
+2. Enable TLS in the settings of that database in DB.xml. See the following example:
 
     ```xml
     <DataBase active="true" local="true" type="Cassandra">
@@ -682,13 +682,13 @@ In a Failover setup, up to now, the offline agent would not be aware of any chan
 
 Due to a file locking issue, in some cases, it would not be possible to create new queries.
 
-#### Db.xml: Problem when the \<DBServer> element of an Elasticsearch database configuration contained multiple IP addresses separated by spaces \[ID 28649\]
+#### DB.xml: Problem when the \<DBServer> element of an Elasticsearch database configuration contained multiple IP addresses separated by spaces \[ID 28649\]
 
-If, in Db.xml, the \<DBServer> element of an Elasticsearch database configuration contained multiple IP addresses separated by spaces, in some cases, an error could occur.
+If, in DB.xml, the \<DBServer> element of an Elasticsearch database configuration contained multiple IP addresses separated by spaces, in some cases, an error could occur.
 
 #### Problem when compiling QActions when 'System.xxxx' and 'Microsoft.xxx' DLL files could not be found in the Windows System Assemblies folders \[ID 28653\]
 
-When a QAction was defined with dllImport=”System.xxxxx.dll” or dllImport=”Microsoft.xxxx.dll”, in some cases, the QAction would fail to compile when the referenced DLL file could not be found in the Windows System Assemblies folders.
+When a QAction was defined with dllImport="System.xxxxx.dll" or dllImport="Microsoft.xxxx.dll", in some cases, the QAction would fail to compile when the referenced DLL file could not be found in the Windows System Assemblies folders.
 
 Also, the compilation error would not be added to the log file.
 

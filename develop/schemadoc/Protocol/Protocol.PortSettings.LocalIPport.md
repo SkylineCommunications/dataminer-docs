@@ -25,7 +25,7 @@ Specifies the local IP port configuration.
 
 The local IP port refers to the port of the client socket used by DataMiner to set up a connection with the server. The server (e.g. Data Source) listens on a specific port, which is configured in the element edit wizard (and for which a default value can be provided using the IpPort tag).
 
-![alt text](~/develop/schemadoc/Protocol/images/LocalIpPort.svg "Local IP port")
+![Local IP port](~/develop/schemadoc/Protocol/images/LocalIpPort.svg)
 
 By default, an available port number is automatically selected for the client socket. This setting is therefore by default not configurable when you create or edit an element. However, in case you do need to specify a specific client port number to be used, you can use the *LocalIpPort.DefaultValue* tag to provide a default local port to be used and enable the setting by setting *LocalIpPort.Disabled* to false. Now, when you create or edit an element, you will see an additional configuration setting "Local IP port" (under "more TCP/IP settings" or "more UDP/IP settings").
 
@@ -35,6 +35,6 @@ By default, an available port number is automatically selected for the client so
 >
 >   For example, in case you try to create another element with a connection with the same local port specified but another destination IP:port, you will notice the following error in Stream Viewer: SOCKET ERROR : 10048
 >
->   This indicates that the address is already in use. (For more information, refer to https://docs.microsoft.com/en-us/windows/win32/winsock/windows-sockets-error-codes-2
+>   This indicates that the address is already in use. (For more information, refer to <https://docs.microsoft.com/en-us/windows/win32/winsock/windows-sockets-error-codes-2>)
 >
 > - For connections where DataMiner acts as a client, the SLPort process creates a client socket for each (destination IP, destination port, local port) tuple. This means that e.g. in case you have two elements with a serial connection that specify the same destination IP and destination port but do not specify a local port, those elements will use the same socket in SLPort.

@@ -40,10 +40,10 @@ To define a page button:
 </Param>
 ```
 
-![alt text](~/develop/images/uipagebutton.png "DataMiner Cube page button")
+![DataMiner Cube page button](~/develop/images/uipagebutton.png)
 
 > [!NOTE]
-> 
+>
 > - Typically, the description tag is left empty when a toggle button is defined.
 > - Page buttons are typically used to display a limited amount of data. A pop-up window opened by means of a page button should contain either data of less importance or data that should remain visible while users are working on other pages.
 > - A pop-up page opened by means of a page button should not contain page buttons. In other words, nesting of page buttons should be avoided.

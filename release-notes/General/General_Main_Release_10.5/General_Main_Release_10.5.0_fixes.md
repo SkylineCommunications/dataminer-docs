@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_fixes
 ---
 
-# General Main Release 10.5.0 – Fixes (preview)
+# General Main Release 10.5.0 – Fixes
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 #### Storage as a Service: Resources would not always be released correctly [ID 38058]
 
@@ -265,11 +265,11 @@ A number of issues that occurred while synchronizing files among agents in a DMS
 
 When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
 
-#### DataMiner would use an incorrect IP address when connecting to BrokerGateway during start-up [ID 41530]
+#### DataMiner would use an incorrect IP address when connecting to BrokerGateway during startup [ID 41530]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-During start-up, in some cases, DataMiner would use an incorrect IP address when connecting to BrokerGateway.
+During startup, in some cases, DataMiner would use an incorrect IP address when connecting to BrokerGateway.
 
 #### Service & Resource Management: Debug lines would incorrect get logged multiple times in SLResourceManagerScheduler.txt [ID 41568]
 
@@ -287,3 +287,43 @@ When a DataMiner Agent was upgraded from Main Release version 10.4.0 CU6 (or lat
 
 > [!NOTE]
 > See also [SNMPv3 elements not loaded correctly after upgrade](xref:KI_SNMPv3_elements_broken_after_upgrade)
+
+#### GQI: Min and Max aggregation of a datetime column would incorrectly result in a number column [ID 41789]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Up to now, when a Min or Max aggregation was performed on a datetime column, the aggregated column would incorrectly be a number column instead of datetime column.
+
+#### Fixes made with regard to the management of locally-stored element documents [ID 41882]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+A number of fixes have been made with regard to the management of locally-stored element documents that are not synchronized among the DMAs in a DataMiner System.
+
+#### Errors would be logged in SLErrors.txt and SLNet.txt when Mobile Gateway was enabled in a DMS with more than one agent [ID 41988]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Up to now, errors would be logged in the *SLErrors.txt* and *SLNet.txt* log files when Mobile Gateway was enabled in a DataMiner System with more than one DMA.
+
+Also, the Mobile Gateway process would only be aware of elements that were hosted on the same agent as the one on which it was hosted itself. As a result, actions like GET and SET on other elements via the Mobile Gateway would fail.
+
+#### Problem when updating the GQI DxM [ID 41990]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+When you tried to update the GQI DxM by means of the MSI installer, in some cases, the update would either not entirely succeed or even fail.
+
+A number of enhancements have now been made to prevent any problems from occurring while updating the GQI DxM.
+
+#### No more logging would be added to SLWatchDog2.txt after a DataMiner upgrade [ID 42180]
+
+<!-- MR 10.4.0 [CU12] / 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+After a DataMiner upgrade, in some cases, no new entries would be added to the *SLWatchDog2.txt* log file anymore.
+
+#### SLSNMPManager process could stop working when an SNMPv3 element was stopped [ID 42195]
+
+<!-- MR 10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When an SNMPv3 element was stopped, in some rare cases, the SLSNMPManager process could stop working.

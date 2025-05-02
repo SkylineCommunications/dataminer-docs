@@ -6,7 +6,7 @@ uid: UIComponentsMatrixDiscreetInfo
 
 The matrix UI allows a user to change the input/output labels, allowed inputs per output (and vice versa), and the pages on which inputs or outputs are grouped. An input or output can also be locked.
 
-It is possible to capture these changes in a protocol by defining a parameter of type "discreet info".
+It is possible to capture these changes in a protocol by defining a parameter of type "discreet info". There can only be one parameter of this type in the protocol.
 
 ```xml
 <Param id="107">

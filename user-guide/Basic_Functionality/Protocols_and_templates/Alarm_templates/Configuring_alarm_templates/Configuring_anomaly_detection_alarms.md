@@ -70,7 +70,10 @@ To configure the Augmented Operations alarm settings for specific parameters<!--
         > [!NOTE]
         > Any customized behavioral anomaly monitoring setup containing relative or absolute thresholds will be lost if you downgrade to DataMiner version 10.3.11 or older. These versions do not support this extended anomaly configuration, and the thresholds will be automatically determined by DataMiner Analytics, similar to the default *Smart* option<!--RN 37434-->.
 
-1. From DataMiner 10.4.12/10.5.0 onwards<!-- RN 40837+41017 -->, in the *Proactive alarm setting* section, optionally configure the alarms that should be triggered based on [proactive cap detection](xref:Proactive_cap_detection):
+   > [!TIP]
+   > From DataMiner 10.5.6/10.6.0 onwards<!--RN 42645-->, or from DataMiner 10.5.4/10.6.0 onwards<!--RN 42181--> if [automatic updates are enabled](xref:DMA_configuration_related_to_client_applications#managing-client-versions), a link to the [RAD Manager](xref:RAD_manager) is available at the bottom of the *Anomaly alarm settings* section. You can use this app to configure relational anomaly detection.
+
+1. From DataMiner 10.4.12/10.5.0 onwards<!-- RN 40837+41017 -->, in the *Proactive alarm settings* section, optionally configure the alarms that should be triggered based on [proactive cap detection](xref:Proactive_cap_detection):
 
    1. Select the checkbox.
 

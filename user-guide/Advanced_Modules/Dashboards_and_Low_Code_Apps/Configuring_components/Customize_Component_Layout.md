@@ -6,7 +6,7 @@ uid: Customize_Component_Layout
 
 Each component in a dashboard or low-code app has a number of default options. By default, the configuration of these options is determined by the layout of the [dashboard](xref:Configuring_the_dashboard_layout) or [low-code app](xref:LowCodeApps_Layout) on the whole. However, it is possible to override this. The way this can be done depends on the DataMiner version.
 
-1. Select the component and go to the ***Layout*** tab on the right.
+1. Select the component and go to the ***Layout*** pane on the right.
 
 1. In the ***Styles*** section, you can then change the component theme in different ways:
 
@@ -25,6 +25,8 @@ Each component in a dashboard or low-code app has a number of default options. B
        You can also further customize your title with *Bold*, *Italics*, and *Underline*.
 
      - In the *Colors* section, specify a custom background color and/or font color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box on the right.
+
+       Under *Colors* > *Accent color* (available from DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41859-->), you can specify an accent color. If a component supports an accent color (e.g. the [toggle component](xref:Toggle)), it will inherit the selected color. By default, this is set to *Default*, meaning the accent color will match the theme of the dashboard or low-code app.
 
        Under *Colors* > *Data colors* or *Colors* > *Color palette* (prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39739-->), you can customize additional component colors, e.g. for the lines in a line chart.
 

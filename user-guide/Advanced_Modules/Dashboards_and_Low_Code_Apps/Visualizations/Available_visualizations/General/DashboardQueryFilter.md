@@ -11,6 +11,8 @@ Available from DataMiner 10.3.9/10.4.0 onwards. Prior to this, the component is 
 
 This component allows the user to filter and refine data based on specific criteria. It can be used as an intermediary between the raw dataset and other components. Depending on the data type of the column, the filter can manifest as a text input field, range filter, list of checkboxes, etc. It generates an enhanced query that incorporates additional filter nodes, stemming from the original query result.
 
+From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41799-->, you can use a [trigger component](xref:DashboardTrigger) to refresh the filtered data.
+
 ![Query filter](~/user-guide/images/Query_Filter.png)<br>*Query filter component in DataMiner 10.4.5*
 
 ## Configuring the component
@@ -22,7 +24,7 @@ This component allows the user to filter and refine data based on specific crite
 
 1. Optionally, fine-tune the component layout. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-1. Optionally, customize the following component options in the *Component* > *Settings* tab:
+1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 

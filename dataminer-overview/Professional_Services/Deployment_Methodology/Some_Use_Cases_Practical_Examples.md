@@ -2,7 +2,7 @@
 uid: Some_Use_Cases_Practical_Examples
 ---
 
-# Some Use Cases & Practical Examples
+# Use Cases & Practical Examples
 
 **ACTIVITY: Leveraging the DataMiner Visual Overview graphical UI to create an intuitive and graphically appealing set of bubble-up and drill-down mimics, for operators to easily manage and navigate through their operation end to end.**
 

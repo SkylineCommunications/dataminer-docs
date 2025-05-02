@@ -28,7 +28,7 @@ Expected duration: 20 minutes
 
 ## Step 1: Deploy the DOM Editor script
 
-1. Go to <https://catalog.dataminer.services/details/automation-script/3195>.
+1. Go to <https://catalog.dataminer.services/details/11674850-aeac-48c4-9f35-03c387ebcf18>.
 
 1. Click the *Deploy* button to deploy the DOM Editor script to your DMA.
 

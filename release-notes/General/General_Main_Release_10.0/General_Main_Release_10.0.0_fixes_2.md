@@ -294,7 +294,7 @@ On legacy dashboard, in some cases, tables containing data would incorrectly be 
 
 #### DataMiner Cube: Not possible to connect to another DMA after starting Cube with a 'host=' argument \[ID 24322\]
 
-When DataMiner Cube was started with a “host=” argument, in some cases, the user would not be able to connect to another DataMiner Agent.
+When DataMiner Cube was started with a "host=" argument, in some cases, the user would not be able to connect to another DataMiner Agent.
 
 #### Exception when starting up DMAs in cluster with empty Elastic database \[ID 24325\]
 

@@ -83,13 +83,15 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
       1. *Show metric*: Available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.6 onwards<!--RN 39417-->. This setting is only available when the parameter *showAdvancedSettings=true* is added to the URL. When this option is enabled, the metric that determines the conditional color of the edge will not be displayed underneath the edge.
 
-1. From DataMiner 10.2.4/10.3.0 onwards, optionally, you can make the edges show a direction. To do so, in the *Settings* tab, activate the *Visualize directions* toggle button, and select how the direction should be shown:
+1. From DataMiner 10.2.4/10.3.0 onwards, optionally, you can make the edges show a direction. To do so, in the *Settings* pane, activate the *Visualize directions* toggle button, and select how the direction should be shown:
 
    - *Flow*: The direction is visualized by means of animated edges. This is the default option.
 
    - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
 
-1. From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the Ctrl key is required to zoom in or out. To do so, in the *Settings* pane, toggle the *Advanced* > *Hold Ctrl to zoom* option:
+1. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41545-->, in case the component displays a query source and you want the data to be refreshed automatically, enable the *Update data* option in the *Settings* pane.
+
+1. From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, you can configure whether pressing the Ctrl key is required to zoom in or out. To do so, in the *Layout* pane, toggle the *Advanced* > *Hold Ctrl to zoom* option:
 
    - Enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
 
@@ -126,7 +128,7 @@ You can configure the following [**component actions**](xref:LowCodeApps_event_c
 
 ## Layout configuration
 
-You can fine-tune the layout of the component with the following settings in the *Layout* tab:
+You can fine-tune the layout of the component with the following settings in the *Layout* pane:
 
 - *Column filters*: Only available up to DataMiner 10.1.10. Optionally, you can specify color filters for specific columns, so that these can be used for highlighting in case analytical coloring is used. Users can switch to this coloring mode via the tooltip of a node or edge. To configure a color filter:
 

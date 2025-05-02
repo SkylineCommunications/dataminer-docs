@@ -1,5 +1,6 @@
 ---
 uid: Deleting_element_data_from_a_MySQL_database
+keywords: local database
 ---
 
 # Deleting element data from a MySQL database

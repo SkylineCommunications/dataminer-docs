@@ -30,7 +30,7 @@ See the [official documentation](https://opensearch.org/docs/latest/) on how to 
 > It is also possible to [set up OpenSearch Dashboards](#setting-up-opensearch-dashboards), which is the equivalent of Kibana for Elasticsearch. However, this is optional and not required for DataMiner to function.
 
 > [!TIP]
-> For troubleshooting information, see [Troubleshooting – OpenSearch](xref:Investigating_OpenSearch_Issues)
+> For troubleshooting information, see [Common OpenSearch-related issues](xref:ID_Common_Issues#known-opensearch-related-issues).
 
 ### Example configuration
 
@@ -127,6 +127,12 @@ These are the main steps of the setup:
 
   ```yml
   node.roles: [ cluster_manager, data, ingest ]
+  ```
+
+- For a database consisting of a single node, discovery type must be set to *single-node* instead of *zen*:
+
+  ```yml
+  discovery.type: single-node
   ```
 
 #### TLS and user configuration

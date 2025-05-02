@@ -6,7 +6,7 @@ uid: Preparing_the_destination_server_for_a_DMA_restoration
 
 Regardless of whether you are restoring the backup to the DMA it was taken from or to a different DMA, you must make sure that the server is clean and ready for the installation.
 
-To prepare the destination server, there are several possibilities:
+To prepare the destination server, there are **several possibilities**:
 
 - Install a blank, fully functional DataMiner Agent, as described under [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
@@ -118,13 +118,13 @@ To prepare the destination server, there are several possibilities:
 
   1. Delete the Windows user accounts on the server that have a corresponding DataMiner account.
 
-  1. In the *C:\\Skyline DataMiner* folder, replace the content of the file *Views.xml* with the following content:
+  1. In the `C:\Skyline DataMiner` folder, replace the content of the file *Views.xml* with the following content:
 
      ```xml
      <Views xmlns="http://www.skyline.be/config/views"/>
      ```
 
-  1. In the *C:\\Skyline DataMiner* folder, clear the content of the *Security.xml* file. In addition, we recommend that you also remove the DataMiner users in Windows (by running compmgmt.msc), as DataMiner will not remove them.
+  1. In the `C:\Skyline DataMiner` folder, clear the content of the *Security.xml* file. In addition, we recommend that you also remove the DataMiner users in Windows (by running compmgmt.msc), as DataMiner will not remove them.
 
   1. Remove the file *C:\\Skyline DataMiner\\files\\SyncInfo\\{DO_NOT_REMOVE_68EE4388-7EF6-4cb4-B38F-5E0045175340}.xml*.
 

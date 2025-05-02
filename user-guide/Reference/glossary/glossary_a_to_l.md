@@ -55,11 +55,7 @@ uid: glossary_a_to_l
 | Behavioral anomaly detection | DataMiner Analytics feature that detects changes in the behavior of a trend.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
 | BER | Bit Error Rate. The percentage of bits with errors compared to the total bits received in a transmission. |
 | BGP | Border Gateway Protocol. Routing protocol used for traffic between autonomous systems over the internet. |
-| Booking | Definition of which resources are used, which capacity or capability of the resources is used, and when these are used. Usually called "booking instance" to make the distinction with a "booking definition".<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Booking definition | Blueprint for booking instances that are grouped in a recurring pattern.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Booking event | Action that is executed as part of a booking instance.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Booking instance | Definition of which resources are used, which capacity or capability of the resources is used, and when these are used.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Booking state | Phase in the life cycle of a booking, e.g. confirmed, on-hold, service pre-roll, service active, service post-roll, deleted, etc. Each phase is linked to specific automated actions.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Booking | See [Booking](xref:srm_instantiations#booking). |
 | Boundary clock | Device in a PTP environment that takes the time from a grandmaster clock, recreates it and acts as a clock itself.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
 | BSS | Business Support System. Software system used by service providers to run business operations towards their customers. |
 | BUC | Block Upconverter. Converter used in the transmission of satellite signals, which converts signals to a higher frequency. |
@@ -69,15 +65,16 @@ uid: glossary_a_to_l
 
 | Term | Description |
 |------|-------------|
-| Capability | Used in the context of DataMiner SRM as the ability of a resource to provide a particular functionality. For example, if a meeting room were available as a resource in the system, a capability of this resource could be that it has a speakerphone.<br>See [Service and Resource Management](xref:SRM). |
-| Capacity | Used in the context of DataMiner SRM as the measurable availability instances of a resource. For example, if the maximum capacity of a resource is 10 units, no more than 10 units can be scheduled at the same time in the system.<br>See [Service and Resource Management](xref:SRM). |
+| Capability | See [Profile parameter](xref:srm_definitions#profile-parameter). |
+| Capacity | See [Profile parameter](xref:srm_definitions#profile-parameter). |
 | Card | A window within DataMiner Cube and the DataMiner Monitoring app. |
-| Cassandra | Apache Cassandra is an open-source, high-performance, distributed, NoSQL database system designed to handle large amounts of data, which is used as the general database for fully self-hosted DataMiner Systems. |
-| CCA  | Cloud-Connected Agents. DataMiner Agents connected to [dataminer.services](xref:AboutCloudPlatform). |
+| Cassandra | Apache Cassandra is an open-source, high-performance, distributed, NoSQL database system designed to handle large amounts of data, which is used in [dedicated clustered storage](xref:Dedicated_clustered_storage) setups. |
+| Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [Catalog](xref:About_the_Catalog_app). |
+| CCA  | Cloud-Connected Agents. DataMiner Agents connected to [dataminer.services](xref:about_dataminer_services). |
 | CCAP | Converged Cable Access Platform. Platform combining the functionality of a CMTS with that of an edge QAM, providing high-density services to cable subscribers. |
 | CCU | Camera Control Unit. Device used to monitor and control camera functions, for example in live video broadcasting. |
 | CDN | Content Delivery Network. Network of servers in different locations that work together to allow fast delivery of internet content. |
-| Central database | Alternative name for the offload database, especially used for older DataMiner versions.<br>See [Offload database](xref:Offload_database). |
+| Central database | Alternative name for the offload database, especially used for older DataMiner versions.<br>See [Offloading data](xref:Offload_database). |
 | Change point | Point where the behavior of a parameter trend changes, detected by the DataMiner Analytics software.<br>See [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). |
 | CI/CD | Continuous Integration Continuous Delivery/Deployment. A set of practices that ensure small changes are continuously implemented to the software and made available to customers. |
 | CI Type | Configuration Item type. Definition of the behavior of elements in network implementation workflows as part of DataMiner IDP. This includes how to discover the device, provision an element, and perform software management, configuration management and more. A CI Type can be unique for a specific protocol or common for multiple element types, such as a product family.<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
@@ -87,11 +84,11 @@ uid: glossary_a_to_l
 | CM | Cable Modem. |
 | CMDB | Configuration Management Database. A database containing information about the hardware and software assets of an organization.<br>See [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management). |
 | CMTS | Cable Modem Termination System. Piece of equipment used to provide high-speed data services to cable subscribers. |
-| Concurrency | Used in the context of DataMiner SRM to indicate the number of times a resource can be used at the same time.<br>See [Service and Resource Management](xref:SRM). |
+| Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. See [About the Collaboration app](xref:About_the_Collaboration_app). |
+| Concurrency | Used in the context of DataMiner SRM to indicate the number of times a resource can be used at the same time.<br>See [Service and Resource Management](xref:About_SRM). |
 | Connectivity chain | Definition of how interfaces are connected on one or more elements, in the context of the DataMiner Connectivity Framework.<br>See [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files). Also used in the context of Root Cause Analysis, as a chain of elements, services or parameters that is configured to make it possible to analyze the distance to the most probable root cause of an alarm.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
 | Connectivity editor | Application in DataMiner Cube that allows you to manage topology chains to allow root cause analysis of alarms.<br>See [Working with the Connectivity Editor](xref:Working_with_the_Connectivity_Editor). |
 | Connector | An XML file that allows a DMA to communicate with a data source in the system. Also known as protocol or driver.<br>See [Protocols](xref:Protocols1). |
-| Contributing service | In DataMiner SRM, a contributing service is a service that is used by another "main" service. There is no limit to the number of contributing services a service can use. There is also no limit to the number of services that can use one and the same contributing service. The booking schedule of a contributing service can automatically follow the main service schedule (i.e. life cycle locked), or it can function independently (i.e. life cycle unlocked).<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | CORBA | Common Object Request Broker Architecture. Standard for communication between systems using different operating systems, programming languages and hardware. |
 | Corporate network | Used in the context of DataMiner Failover. The network where the users of the system reside (i.e. the office network).<br>See [About DMA Failover](xref:About_DMA_Failover). |
 | Corrective actions | Actions to undertake in case an alarm is generated. These can be visualized in the user interface using an information template.<br>See [Creating an information template](xref:Creating_an_information_template). |
@@ -120,27 +117,25 @@ uid: glossary_a_to_l
 | Data Display | Legacy term referring to the data pages of cards in DataMiner Cube. |
 | DataMiner Agent | A piece of hardware running the DataMiner software. Abbreviated as DMA. |
 | DataMiner Analytics | Artificial intelligence technology built into DataMiner, which among others provides trend predictions.<br>See [Working with trend predictions](xref:Working_with_trend_predictions). |
-| DataMiner Catalog | Central repository for components that can facilitate and accelerate the use of DataMiner, including the complete connector database.<br>See [DataMiner Catalog](xref:About_the_Catalog_module). |
 | DataMiner Certification Program | Program that allows you to test your DataMiner knowledge and skills and prove your expertise with our official certificates. |
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
-| DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See [dataminer.services](xref:AboutCloudPlatform). |
+| DataMiner Cloud Platform | Former name of dataminer.services. Abbreviated as DCP. See [dataminer.services](xref:about_dataminer_services). |
 | DataMiner Comparison tool | Web application that allows you to compare the values of two string parameters.<br>See [DataMiner Comparison tool](xref:DataMinerComparisonTool). |
 | DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF.<br>See [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework). |
 | DataMiner Cube | The main client application used to connect to a DMA. Exists both as a desktop app and a browser app. |
 | DataMiner Dojo | Community website where both people from the Skyline community, and people from the worldwide DataMiner community exchange experiences and knowledge, both about DataMiner and about general hot topics in the ICT, broadband and media industry.<br>See [DataMiner Community](xref:Community#dataminer-community). |
 | DataMiner Driver | An XML file that allows a DMA to communicate with a data source in the system. Also known as connector or protocol.<br>See [Protocols](xref:Protocols1#protocols). |
 | DataMiner ID | The unique ID of a DataMiner Agent. |
-| DataMiner Live Data Sharing Service | Service included in dataminer.services that allows DataMiner users to share specific live operational data with third parties.<br>See [DataMiner Sharing](xref:Sharing#dataminer-sharing). |
+| DataMiner Live Data Sharing Service | Former name of the Sharing app. <br>See [Sharing](xref:About_the_Sharing_app). |
 | DataMiner package | Archive file that contains all the files necessary to make a modification to a DataMiner System, for example to upgrade, downgrade or restore a DataMiner Agent, or to install a DataMiner app or DataMiner protocol.<br>See [DataMiner packages](xref:DataMiner_packages). |
-| DataMiner Project Collaboration | Online platform to manage projects and professional services ordered from Skyline, allowing easy and efficient collaboration with Skyline's deploy and create squads. [Project Collaboration](xref:About_the_Project_Collaboration_module). |
-| dataMiner.services | Online platform that provides many additional services related to the DataMiner software and DataMiner projects. See [dataminer.services](xref:AboutCloudPlatform). |
+| dataminer.services | Online platform that provides many additional services related to the DataMiner software and DataMiner projects. See [dataminer.services](xref:about_dataminer_services). |
 | DataMiner System | One or more DMAs, integrated into one cluster via an IP network. Abbreviated as DMS. |
 | DataMiner Taskbar Utility | System tray application on a DataMiner Agent that can be used to manage the Agent.<br>See [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). |
 | DB | Database. |
 | DBS | Direct Broadcast Satellite. Broadcasting transmissions where end users receive signals directly from geostationary satellites. |
 | DCF | DataMiner Connectivity Framework. Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure.<br>See [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework). |
 | DCL | DataMiner Class Library. |
-| DCP | DataMiner Cloud Platform. Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. See [dataminer.services](xref:AboutCloudPlatform). |
+| DCP | DataMiner Cloud Platform. Former name of dataminer.services. See [dataminer.services](xref:about_dataminer_services). |
 | DELT | DataMiner Element Location Transparency. DataMiner feature that allows the exporting and importing of packages and the migration of elements across DMAs in a cluster. |
 | DIS | DataMiner Integration Studio. Microsoft Visual Studio extension that turns Visual Studio into a DataMiner protocol IDE. |
 | Discovery identifier | Identifier used by DataMiner IDP in order to specify how a CI Type can be identified. Consists of a link to a discovery action, a match condition and a value, e.g. "*sysDescr contains JUNOS*". Multiple discovery identifiers can be combined in a CI Type with AND, OR, and NOT statements.<br>See [CI Types](xref:CI_Types) |
@@ -162,7 +157,7 @@ uid: glossary_a_to_l
 | DSNG | Digital Satellite News Gathering. A type of electronic news gathering where reporters broadcast from remote locations, typically using an OB (Outside Broadcast) van. |
 | DSP | DataMiner Strategic Partner. Third party that supplies DataMiner-related software products and/or professional services. |
 | DTH | Direct to Home. Refers to satellite television that is received directly in the consumer's home. |
-| DTR | Data Transfer Rules. Set of rules within a service definition in DataMiner SRM that manage the automated assignment of parameter values to the profiles of the virtual functions in the service definition.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management) |
+| DTR | See [Data Transfer Rules](xref:srm_scripting#data-transfer-rules-dtr). |
 | DTT | Digital Terrestrial Television. Television service where signals are broadcast by a terrestrial transmitter using radio waves. |
 | Dummy | Variable within an Automation script that represents a DataMiner element.<br>See [Script variables](xref:Script_variables). |
 | DVB | Digital Video Broadcasting. Set of internationally accepted open standards for digital television. This includes DVB-C (Digital Video Broadcasting - Cable), DVB-H (Digital Video Broadcasting - Handheld), DVB-S (Digital Video Broadcasting - Satellite) and DVB-T (Digital Video Broadcasting - Terrestrial). |
@@ -185,7 +180,7 @@ uid: glossary_a_to_l
 | EMS | Element Management System. A system that manages network elements within a telecommunications network, and that typically communicates upward to higher-level network management systems. |
 | eMTA | embedded Multimedia Terminal Adapter. Cable modem with telephone capability. |
 | ENG | Electronic News Gathering. The process of collecting and reporting news from remote locations outside a studio, by means of electronic video and audio technologies. |
-| Engineered path routing | Network routing in the context of DataMiner SRM where the path between the fixed source and destination is determined via automated path routing.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Engineered path routing | Network routing in the context of DataMiner SRM where the path between the fixed source and destination is determined via automated path routing.<br>See [Service and Resource Management](xref:About_SRM). |
 | Enhanced service | A service that has been created using a service protocol. An alarm template and/or trend template can be assigned to such a service. |
 | EPM | Experience and Performance Management. Software platform specifically designed to manage very high volumes of devices in cable, telco, terrestrial and satellite environments. Previously known as CPE in legacy DataMiner versions. |
 | EPoC | EPON (Ethernet Passive Optical Network) Protocol over Coax. Extension of EPON standards over a hybrid fiber-coaxial (HFC) network. |
@@ -202,13 +197,13 @@ uid: glossary_a_to_l
 | FDS | Functional Design Specification. Document describing the functions that a software system or component must perform. |
 | Feature Release | The Feature Release of DataMiner is the upgrade track of the DataMiner software introducing new features on a regular basis. This upgrade track is fully supported in a production environment, but typically only used when a specific new feature is needed. This upgrade track has time-limited support for cumulative updates, as it is required to follow the track of the consecutive upgrades in order to get all the improvements. In other words, following this fast track implies following those upgrades in order to have an updated system. |
 | First-party DataMiner Connector | DataMiner connector developed by Skyline Communications. |
-| Fixed path routing | Network routing in the context of DataMiner SRM where the functions required in the path are statically defined in the service definition.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Fixed path routing | Network routing in the context of DataMiner SRM where the functions required in the path are statically defined in the service definition.<br>See [Service and Resource Management](xref:About_SRM). |
 | FTA | Free-To-Air. Radio and TV services that are broadcast without encryption, allowing anyone with the appropriate equipment to receive the signal and listen or view the content free of charge. |
 | FTP | File Transfer Protocol. Standard network protocol used for the transfer of files between a client and a server. |
 | FTTx | Fiber To The x. Broadband network architecture where optical fiber is used up to a certain point in the network. For example, FTTdp (Fiber To The Distribution Point) uses fiber up to a junction box close to the customer's premises, whereas FTTH (Fiber To The Home) uses fiber all the way up to the customer's premises. |
-| Function DVE | Alternative name for "virtual function".<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Function DVE | Alternative name for "virtual function".<br>See [Service and Resource Management](xref:About_SRM). |
 | Function hysteresis | Functionality of DataMiner SRM that keeps virtual function resources from being disabled if they will be used again soon.<br>See [Advanced SRM settings](xref:Function_resource_settings). |
-| Function XML | XML file containing a virtual function definition.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Function XML | XML file containing a virtual function definition.<br>See [Service and Resource Management](xref:About_SRM). |
 
 ## G
 
@@ -253,7 +248,7 @@ uid: glossary_a_to_l
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network.<br>See [DataMiner IDP app](xref:SolIDP). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
 | Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc.<br>See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
-| Indexing Engine | Dedicated indexing database used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. GQI. See [About databases](xref:Databases_about) |
+| Indexing Engine | Dedicated indexing database used to index information from the DataMiner System to allow rapid information retrieval. In case self-managed storage is used (not recommended), this database is required to have access to certain DataMiner features, e.g. GQI. See [About storage](xref:About_storage) |
 | Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:About_SNMP_managers). |
 | Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm.<br>See [Information event](xref:Alarm_types#information-events). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself.<br>See [Information templates](xref:Information_templates). |

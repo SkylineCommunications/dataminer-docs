@@ -4,10 +4,9 @@ uid: DashboardMaps
 
 # Maps
 
-> [!IMPORTANT]
-> At present, this component is only available in preview, if the soft-launch option *ReportsAndDashboardsGQIMaps* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
-
 This component is used to display markers and/or lines on a map. It uses one or more GQI queries as data input.
+
+The Maps component is fully available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/DataMiner 10.5.4 onwards.<!-- RN 42309 --> Prior to this, it is available in preview, if the [soft-launch option](xref:SoftLaunchOptions) *ReportsAndDashboardsGQIMaps* is enabled.
 
 ![Maps](~/user-guide/images/Maps_Component.png)<br>*Maps component in DataMiner 10.4.4*
 
@@ -44,7 +43,11 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
 - **Identifier**/**Latitude**/**Longitude**: For each dimension, a dropdown box is shown where the column used for that dimension can be changed. You can only select valid options for each dimension. For markers, you need to select string-valued columns for the ID and numeric-valued columns for the latitude and longitude. For lines, you need to select a latitude and longitude for both the source and the destination.
 
-- **Template**: Only available when the query is configured as a set of markers. Allows you to change the appearance of the markers. When you click *Edit*, an editor window opens where you can make changes to the template.
+- **Template**: Only available when the query is configured as a set of markers. Allows you to change the appearance of the markers.
+
+  - When you click *Edit*, an editor window opens where you can make changes to the template.
+
+  - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42226-->, when you click *Browse templates*, you can reuse saved templates for components in the same dashboard or low-code app.
 
   > [!NOTE]
   > The center of the marker template is determined by the latitude and longitude values for that marker.
@@ -81,7 +84,7 @@ On the *Component > Layout* tab, you can configure the following settings under 
 
 - *Default Map Type* > *Show map type control*: Makes the map type setting visible in the component itself.
 
-In addition, in the *Settings* tab for this component, you can further customize the map behavior:
+In addition, in the *Settings* pane for this component, you can further customize the map behavior:
 
 - *Update data*: If you want the data in the map to be refreshed automatically (provided this is supported by the data source), set this setting to *On*.
 
@@ -116,24 +119,28 @@ The following actions are available:
   > [!TIP]
   > For more information about the different types of overlays, see [Layer types](xref:Layer_types#layers-of-sourcetype-overlay)
 
-## Zooming
+## Using the maps component in read mode
 
-Zooming functionalities are available for the maps component.
+- **Zooming functionalities** are available for the maps component.
 
-- From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
+  - From DataMiner 10.4.0 [CU10]/10.5.1 onwards<!--RN 41387-->, the zooming method depends on the *Advanced* > *Hold Ctrl to zoom* setting in the *Settings* pane:
 
-  - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
+    - When this setting is enabled: Hold the Ctrl key while scrolling up or down to zoom in or out.
 
-  - When this setting is disabled: Scroll up or down to zoom in or out.
+    - When this setting is disabled: Scroll up or down to zoom in or out.
 
-- From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017--> up to DataMiner 10.4.0 [CU9]/10.4.12:
+  - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9<!--RN 40017--> up to DataMiner 10.4.0 [CU9]/10.4.12:
 
-  - To zoom in, press Ctrl while scrolling up.
+    - To zoom in, press Ctrl while scrolling up.
 
-  - To zoom out, press Ctrl while scrolling down.
+    - To zoom out, press Ctrl while scrolling down.
 
-- Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9:
+  - Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9:
 
-  - To zoom in, scroll up.
+    - To zoom in, scroll up.
 
-  - To zoom out, scroll down.
+    - To zoom out, scroll down.
+
+- To **pan the map**, press and hold CTRL, then click and hold the scroll wheel while dragging the pointer in any direction.
+
+- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a marker on the map**, it will by default be highlighted with a blue color. This can for instance be useful when the timeline's [component data](xref:Component_Data) (i.e. *Components* > *Maps #* > *Selected markers*) is used in a linked component, clearly indicating which data is driving the content in the linked component.

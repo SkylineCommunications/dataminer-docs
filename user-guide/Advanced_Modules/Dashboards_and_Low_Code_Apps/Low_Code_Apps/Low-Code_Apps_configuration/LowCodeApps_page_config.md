@@ -14,6 +14,8 @@ To configure a page:
 
 1. At the top of the page configuration pane, specify a name for the page.
 
+   Note that from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42220-->, page names are limited to 150 characters.
+
 1. In the *icon* section, select an icon for the page.
 
 1. To configure a header bar for the page, see [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).

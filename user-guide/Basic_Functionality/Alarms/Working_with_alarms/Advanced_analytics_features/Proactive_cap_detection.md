@@ -4,7 +4,7 @@ uid: Proactive_cap_detection
 
 # Proactive cap detection
 
-This DataMiner Analytics feature monitors the global trend in the real-time incoming data of a metric and will automatically generate a notification when the metric is predicted to reach a (critical) low or high value when the trend is extended into the future. To give an accurate estimate of the timing of future issues, proactive cap detection uses a prediction model based on trend data stored in the cloud with [STaaS](xref:STaaS) or in a self-hosted Cassandra-compatible database.
+This DataMiner Analytics feature monitors the global trend in the real-time incoming data of a metric and will automatically generate a notification when the metric is predicted to reach a (critical) low or high value when the trend is extended into the future. To give an accurate estimate of the timing of future issues, proactive cap detection uses a prediction model based on trend data stored in the cloud with [STaaS](xref:STaaS) (recommended) or in a self-managed Cassandra-compatible database.
 
 > [!TIP]
 > A trend prediction can also be visualized in a trend graph. See [Working with trend predictions](xref:Working_with_trend_predictions).

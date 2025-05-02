@@ -19,7 +19,7 @@ For more information on changing the column layout, see [Changing the column lay
 
   - For updated alarm records, a second, thinner vertical line is added next to the first.
 
-- **Focus**: Available on systems using [STaaS](xref:STaaS) or a self-hosted Cassandra-compatible database. Shown by default. This column displays a focus icon if an alarm is unexpected. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
+- **Focus**: Available on systems using [STaaS](xref:STaaS) or a self-managed Cassandra-compatible database. Shown by default. This column displays a focus icon if an alarm is unexpected. See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
 
 - **Element \> Element name**: Shown by default. The name of the element.
 
@@ -140,13 +140,13 @@ For more information on changing the column layout, see [Changing the column lay
 
 - **Trend**: If average trending is activated on the parameter in alarm, this column displays the trend graph for the last 24 hours.
 
-- **Function impact**: The number of functions the alarm has an impact on. This functionality is part of the Service & Resource Management module. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+- **Function impact**: The number of functions the alarm has an impact on. This functionality is part of the [Service and Resource Management](xref:About_SRM) framework.
 
-- **Functions**: The functions the alarm has an impact on. This functionality is part of the Service & Resource Management module. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+- **Functions**: The functions the alarm has an impact on. This functionality is part of the [Service and Resource Management](xref:About_SRM) framework.
 
-- **Heatlines \> Element heatline**: This column displays a heatline depicting the element alarm state over the last 24 hours. Available on systems using [STaaS](xref:STaaS) or a self-hosted Cassandra-compatible database.
+- **Heatlines \> Element heatline**: This column displays a heatline depicting the element alarm state over the last 24 hours. Available on systems using [STaaS](xref:STaaS) or a self-managed Cassandra-compatible database.
 
-- **Heatlines \> Parameter heatline**: This column displays a heatline depicting the parameter alarm state over the last 24 hours. For a table parameter, heatlines are generated per table row. Available on systems using [STaaS](xref:STaaS) or a self-hosted Cassandra-compatible database.
+- **Heatlines \> Parameter heatline**: This column displays a heatline depicting the parameter alarm state over the last 24 hours. For a table parameter, heatlines are generated per table row. Available on systems using [STaaS](xref:STaaS) or a self-managed Cassandra-compatible database.
 
 - **Actions \> Ownership**: Action button that allows the user to take or release ownership of an alarm.
 

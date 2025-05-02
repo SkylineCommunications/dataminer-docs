@@ -63,7 +63,7 @@ The Data API translates JSON arrays from the HTTP body into a table in the corre
 }
 ```
 
-This JSON array is transformed into a table called "People" with columns *ID*, *Name*, *Age*, and *Height*. The field *Id* always serves as the primary key for the table.
+This JSON array is transformed into a table called "People" with columns *ID*, *Name*, *Age*, and *Height*. If a field named *Id* (case-insensitive) is specified, it will serve as the primary key for the table. Otherwise, an auto-increment value will be used as the primary key.
 
 The Data API also supports nested arrays, transforming them into multiple tables connected through a foreign key.
 

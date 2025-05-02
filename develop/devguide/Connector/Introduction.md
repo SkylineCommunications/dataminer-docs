@@ -9,7 +9,7 @@ A DataMiner connector (also referred to as a "driver" or "protocol") is an XML f
 
 A DataMiner protocol can be uploaded to a DataMiner Agent, so that elements can be created that will run the protocol.
 
-![alt text](~/develop/images/DataMinerAgent.svg "Conceptual overview of a DataMiner Agent")
+![Conceptual overview of a DataMiner Agent](~/develop/images/DataMinerAgent.svg)
 
 This guide provides an overview of the different components of a protocol and what happens when a protocol is executed by a DataMiner Agent:
 

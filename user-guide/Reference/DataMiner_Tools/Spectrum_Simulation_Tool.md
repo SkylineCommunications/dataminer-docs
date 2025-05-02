@@ -8,7 +8,7 @@ To test DataMiner Spectrum Analysis, a spectrum simulation protocol is available
 
 To use this protocol:
 
-1. Deploy the protocol from the [DataMiner Catalog](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7).
+1. Deploy the protocol from the [Catalog](https://catalog.dataminer.services/details/6f33ec9f-e83d-49d5-8f85-87ad66eaa5c7).
 
    > [!TIP]
    > See also: [Deploying a Catalog item to your system](xref:Deploying_a_catalog_item)

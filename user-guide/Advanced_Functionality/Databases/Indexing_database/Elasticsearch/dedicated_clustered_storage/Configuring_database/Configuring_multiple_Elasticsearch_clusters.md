@@ -7,7 +7,7 @@ uid: Configuring_multiple_Elasticsearch_clusters
 # Configuring multiple Elasticsearch clusters
 
 > [!IMPORTANT]
-> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-hosted storage, using [OpenSearch](xref:OpenSearch_database).
+> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-managed storage even though this is not recommended, using [OpenSearch](xref:OpenSearch_database).
 
 > [!NOTE]
 > This procedure can be followed both on Linux and Windows setups. However, we highly recommend using Linux.
@@ -143,7 +143,7 @@ To configure this setup:
    </DatabaseConfiguration>
    ```
 
-1. Add this file in the folder *C:\\Skyline DataMiner\\Database* on each DataMiner Agent in your DMS. This file is currently not automatically synced.
+1. Add this file in the folder `C:\Skyline DataMiner\Database` on each DataMiner Agent in your DMS. This file is currently not automatically synced.
 
 1. After the file has been added, restart DataMiner. *DBConfiguration.xml* will now take precedence over the Elasticsearch configuration defined in the file *DB.xml*.
 

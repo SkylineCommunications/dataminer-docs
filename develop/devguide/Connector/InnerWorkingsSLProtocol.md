@@ -28,7 +28,7 @@ The main protocol execution thread maintains a group execution queue and is resp
 
 Poll groups of a timer are always added to the end of the queue as illustrated in the following diagram:
 
-![alt text](~/develop/images/Protocol_Explained_-_Main_Protocol_Execution_Thread.svg "Main protocol execution thread")
+![Main protocol execution thread](~/develop/images/Protocol_Explained_-_Main_Protocol_Execution_Thread.svg)
 
 > [!NOTE]
 > These groups will only be added to the queue in case the queue does not already contain this group.
@@ -47,7 +47,7 @@ Timers are not the only way to add groups to the group execution queue. Multiple
 
 The following figure illustrates the resulting location of the added group based on the selected action type.
 
-![alt text](~/develop/images/Protocol_Explained_-_Main_Protocol_Execution_Thread_Group_Priority.svg "Group execution queue")
+![Group execution queue](~/develop/images/Protocol_Explained_-_Main_Protocol_Execution_Thread_Group_Priority.svg)
 
 The action types "execute one", "execute one now", and "execute one top" correspond to "add to execute", "execute", and "execute next", respectively. The only difference is that when "execute one", "execute one now", and "execute one top" are used, the group will only get added to the queue in case the group is not already present in the queue (i.e. the group should only be present in the queue once; hence the word "one" in the name of the action types). In the figure above, it is assumed that the group being added is not already present in the queue.
 
@@ -63,7 +63,7 @@ For example, consider the following functionality being implemented in a protoco
 
 Now suppose that there is also a trigger defined in the protocol that triggers on a value change of parameter 100 (the incremented parameter), which in turn initiates another action to increment parameter 200 (named "Parameter B"). The trigger and action are considered linked to the group item and therefore must complete before the processing of the group item is considered finished.
 
-![alt text](~/develop/images/Protocol_Explained_-_Item_Execution.svg "Item execution order")
+![Item execution order](~/develop/images/Protocol_Explained_-_Item_Execution.svg)
 
 This can be seen when development logging of an element running the protocol is enabled (in this example, the initial values of parameter A and B were set to 5 and 10, respectively):
 
@@ -89,7 +89,7 @@ On a group, it is then possible to define the connection (i.e. which protocol ex
 
 For more information on how to implement multiple protocol execution threads in a protocol, see [Multi-threading](xref:AdvancedMultiThreading).
 
-![alt text](~/develop/images/Protocol_Explained_-_Defining_Multiple_Protocol_Threads.svg "Multiple protocol execution threads")
+![Multiple protocol execution threads](~/develop/images/Protocol_Explained_-_Defining_Multiple_Protocol_Threads.svg)
 
 ## Executing groups by timer threads
 
@@ -99,7 +99,7 @@ By letting the timer thread perform some actions while the main protocol thread 
 
 For example, consider two timers, where the first timer contains a group of type "poll action" and is therefore added to the group execution queue. This group contains an action to increment a parameter value. The second timer contains a group of type "action". The action lets a QAction triggering on parameter 2 execute. The QAction will increase the value of parameter 3 every second, until it reaches 5.
 
-![alt text](~/develop/images/Protocol_Explained_-_Executing_Groups_by_Timer_Threads.svg "Executing groups by timer threads")
+![Executing groups by timer threads](~/develop/images/Protocol_Explained_-_Executing_Groups_by_Timer_Threads.svg)
 
 The following development logging illustrates what happens:
 

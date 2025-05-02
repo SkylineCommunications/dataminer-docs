@@ -26,7 +26,7 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:0px;
 classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0px;
 %% Define blocks %%
 START([Alarm issue])
-GetDELT{{Get a .dmimport package with alarm data,\nunzip it and check the 'Database' folder.}}
+GetDELT{{Get a .dmimport package with alarm data, unzip it and check the 'Database' folder.}}
 DataPresent([Is the data there?])
 CreationIssue([Creation issue])
 RetrievalIssue([Retrieval issue])
@@ -67,12 +67,12 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:0px;
 classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0px;
 %% Define blocks %%
 RetrievalIssue([Retrieval issue])
-FollowCTT{{"Follow your session with the client test tool and\ntry to retrieve the (history) alarm with your alarm console."}}
+FollowCTT{{"Follow your session with the client test tool and try to retrieve the (history) alarm with your Alarm Console."}}
 RetrievalIssueChecks{{"Do you get valid AlarmEventMessages?"}}
-ClientSide{{"Check Cube Logging for exceptions.\nLook for AlarmEventMessage in stacktrace."}}
-ServerSide{{"Check SLDBConnection / SLNet / Database logging.\nCheck if database can be reached."}}
-AlarmTTL{{"Check the Time to Live of your Alarm.\nIn MySQL & Cassandra: table 'Alarm'.\nIn Cassandra Cluster & Elastic: table 'Alarms'."}}
-NotFixed{{"If your issue is not fixed,\ncontact support.data-core@skyline.be.\nInclude all gathered information and steps taken."}}
+ClientSide{{"Check Cube Logging for exceptions. Look for AlarmEventMessage in stacktrace."}}
+ServerSide{{"Check SLDBConnection / SLNet / Database logging. Check if database can be reached."}}
+AlarmTTL{{"Check the Time to Live of your Alarm. In MySQL & Cassandra: table 'Alarm'. In Cassandra Cluster & Elastic: table 'Alarms'."}}
+NotFixed{{"If your issue is not fixed, contact <a href="mailto:support.data-core@skyline.be">support.data-core@skyline.be</a>. Include all gathered information and steps taken."}}
 %% Connect blocks %%
 RetrievalIssue --- FollowCTT
 FollowCTT --- RetrievalIssueChecks
@@ -109,12 +109,12 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 %% Define blocks %%
 CreationIssue([Creation issue])
 AlarmTemplate{{"Check alarm template configuration."}}
-ProtocolDebug{{"Use the protocol debug tool to simulate.\nClick the node to go the relevant docs page."}}
+ProtocolDebug{{"Use the protocol debug tool to simulate. Click the node to go the relevant docs page."}}
 CanSimulate{{"Managed to simulate?"}}
-ReduceFeatures{{"Reduce the number of features used to\nnarrow down the issue.\n(e.g. Hysteresis, conditional monitoring...)\nClick the node to go to a relevant docs page."}}
-VerifyConfiguration{{"Verify if you have a clear issue,\nincorrect configuration or undefined behavior."}}
-NotFixedCOPS{{"Contact techsupport@skyline.be.\nInclude all gathered information and steps taken."}}
-ExtraInfoNotFixed{{"1. Check if the behavior is the same on a\nstandalone parameter, column parameter, matrix parameter...\n2. Check the element logging.\n3. Contact support.data-core@skyline.be.\nInclude all gathered information and steps taken."}}
+ReduceFeatures{{"Reduce the number of features used to narrow down the issue. (e.g. Hysteresis, conditional monitoring...) Click the node to go to a relevant docs page."}}
+VerifyConfiguration{{"Verify if you have a clear issue, incorrect configuration or undefined behavior."}}
+NotFixedCOPS{{"Contact <a href="mailto:techsupport@skyline.be">techsupport@skyline.be</a>. Include all gathered information and steps taken."}}
+ExtraInfoNotFixed{{"1\. Check if the behavior is the same on a standalone parameter, column parameter, matrix parameter... <br>2\. Check the element logging. <br>3\. Contact <a href="mailto:support.data-core@skyline.be">support.data-core@skyline.be></a>. Include all gathered information and steps taken."}}
 %% Connect blocks %%
 CreationIssue --- AlarmTemplate
 AlarmTemplate --- ProtocolDebug

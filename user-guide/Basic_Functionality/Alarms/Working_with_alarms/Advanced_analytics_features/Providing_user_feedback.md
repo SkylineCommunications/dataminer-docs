@@ -45,7 +45,7 @@ Providing consistent feedback enables the system to improve its ability to accur
 
 - [Proactive cap detection](xref:Proactive_cap_detection) is enabled.
 
-- [Storage as a Service (STaaS)](xref:STaaS) or an [indexing database](xref:Supported_system_data_storage_architectures).
+- [Storage as a Service (STaaS)](xref:STaaS) (recommended) or an [indexing database](xref:Supported_system_data_storage_architectures).
 
 - The [time to live](xref:Specifying_TTL_overrides) for trending is at least 1 day for real-time trending and 1 month for minute records.
 

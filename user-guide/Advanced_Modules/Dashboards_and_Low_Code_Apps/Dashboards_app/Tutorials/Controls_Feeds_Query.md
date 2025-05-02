@@ -43,7 +43,7 @@ Expected duration: 10 minutes
 
    1. In edit mode, drag and drop the *Text input* visualization from the pane on the left on to the main dashboard area.
 
-   1. Select the input and go to the layout pane where you can configure additional options to style the input.
+   1. Select the input and go to the *Layout* pane where you can configure additional options to style the input.
 
    1. Fill in "VLAN name" as the placeholder for the text input.
 
@@ -105,7 +105,7 @@ Your text input should look like this:
    As soon as you press Enter or click outside the textbox, the filter will be applied in the table.
 
    > [!NOTE]
-   > This is the default behavior for the text input. You can customize this in the *Settings* tab of the text input, so that this for instance happens as soon as the value changes, or only if Enter is pressed.
+   > This is the default behavior for the text input. You can customize this in the *Settings* pane of the text input, so that this for instance happens as soon as the value changes, or only if Enter is pressed.
 
 ## Learning paths
 

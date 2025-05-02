@@ -37,4 +37,4 @@ else
 
 ## Remarks
 
-- The SLProtocol interface defines a wrapper method "GetData" for this call. See SLProtocol.GetData method and SLProtocol.IsEmpty method.
+- The SLProtocol interface defines a wrapper method "GetData" for this call. See [SLProtocol.GetData](xref:Skyline.DataMiner.Scripting.SLProtocol.GetData*) method and [SLProtocol.IsEmpty](xref:Skyline.DataMiner.Scripting.SLProtocol.IsEmpty*) method.

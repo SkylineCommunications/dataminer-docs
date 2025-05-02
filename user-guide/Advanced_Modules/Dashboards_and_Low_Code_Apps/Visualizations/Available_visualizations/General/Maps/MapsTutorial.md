@@ -15,7 +15,7 @@ The content and screenshots for this tutorial have been created in DataMiner ver
 - A DataMiner System using DataMiner 10.4.1 or higher, which is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 > [!NOTE]
-> Depending on your DataMiner version, you may need to activate the [ReportsAndDashboardsGQIMaps](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) soft-launch option to be able to use the maps component. See [Soft-launch options](xref:SoftLaunchOptions).
+> If you do not use a DaaS system, and you use a DataMiner version prior to DataMiner 10.5.0 [CU1]/DataMiner 10.5.4, you will also need to activate the [ReportsAndDashboardsGQIMaps](xref:Overview_of_Soft_Launch_Options#reportsanddashboardsgqimaps) soft-launch option to be able to use the maps component. See [Soft-launch options](xref:SoftLaunchOptions).
 
 ## Overview
 
@@ -40,7 +40,7 @@ The content and screenshots for this tutorial have been created in DataMiner ver
 
 1. [Create a new low-code app](xref:Creating_custom_apps).
 
-1. In the data pane, [create a new query](xref:Creating_GQI_query).
+1. In the *Data* pane, [create a new query](xref:Creating_GQI_query).
 
 1. Configure the query to retrieve the cell towers from the *CellTowers.json* file using the *JSON Reader* ad hoc data source.
 
@@ -50,7 +50,7 @@ The content and screenshots for this tutorial have been created in DataMiner ver
 
    The maps component will look at the columns returned by the query and will try to automatically configure the identifier, latitude, and longitude. This means that the cell towers will automatically be shown on the map. By default, the query will be in the first layer.
 
-1. Make sure the component is selected and go to the *Layout* tab on the right.
+1. Make sure the component is selected and go to the *Layout* pane on the right.
 
 1. Under *Layer settings*, rename the first layer to *Cell towers*:
 
@@ -62,7 +62,7 @@ The markers you added in the previous step are all located on a small part of th
 
 1. Zoom to the area of the map that you would like to have as the default view.
 
-1. In the *Layout* tab, go to the *Map settings* section, and click *Save current view*.
+1. In the *Layout* pane, go to the *Map settings* section, and click *Save current view*.
 
    ![Save current view](~/user-guide/images/MapsTutorialSaveCurrentView.png)
 
@@ -82,7 +82,7 @@ The markers you added in the previous step are all located on a small part of th
 
 At this point, the cell tower markers are always shown in the component, but they still look very basic. To make them stand out more and display some additional information, you can edit their template:
 
-1. In the *Layout* tab for the component, expand the *Layer settings* and then expand the *Cell towers* query.
+1. In the *Layout* pane for the component, expand the *Layer settings* and then expand the *Cell towers* query.
 
 1. In the *Template* box, click *Edit*.
 
@@ -124,7 +124,7 @@ The result should look like this:
 
 The templates you added in the previous step look good, but at this point the visualization still feels cluttered when you zoom out all the way. You can deal with this by adding grouped markers. For this, you will need to create additional queries to retrieve data from the *CellTowersGroups* and *CellTowersCities* JSON files you installed with the package in step 1.
 
-1. In the data pane, [create a new query](xref:Creating_GQI_query) named *Cell tower groups*, and configure it to retrieve the cell towers from the *CellTowersGroups.json* file using the *JSON Reader* ad hoc data source.
+1. In the *Data* pane, [create a new query](xref:Creating_GQI_query) named *Cell tower groups*, and configure it to retrieve the cell towers from the *CellTowersGroups.json* file using the *JSON Reader* ad hoc data source.
 
 1. Create another query similar to the previous one, but this time use the name *Cell tower cities* and the *CellTowersCities.json* file.
 
@@ -154,7 +154,7 @@ The templates you added in the previous step look good, but at this point the vi
 
 1. Configure the new markers to only be shown between certain zoom levels:
 
-   1. In the *Layout* tab for the component, expand the *Layer settings* and then expand the *Cell towers* layer.
+   1. In the *Layout* pane for the component, expand the *Layer settings* and then expand the *Cell towers* layer.
 
    1. Expand a query and open the *Advanced settings* section for that query.
 
@@ -304,7 +304,7 @@ As a final touch to finish the configuration, you can now add an overlay to the 
 
 1. Configure an action for the button:
 
-   1. In the *Settings* tab for the component, click the button next to *On click*.
+   1. In the *Settings* pane for the component, click the button next to *On click*.
 
    1. Select *Execute component action* and *Toggle overlay*.
 

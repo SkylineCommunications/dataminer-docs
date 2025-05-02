@@ -435,6 +435,8 @@ items:
           topicUid: ConnectionsSmartSerialLogging
         - name: Dynamic polling
           topicUid: ConnectionsSmartSerialDynamicPolling
+        - name: Common pitfalls
+          topicUid: ConnectionsSmartSerialCommonPitfalls
       - name: HTTP
         topicUid: ConnectionsHttp
         items:
@@ -533,6 +535,8 @@ items:
           topicUid: AdvancedDVEsSeverityState
         - name: Toggling DVE creation
           topicUid: AdvancedDVEsTogglingCreation
+        - name: Assigning templates
+          topicUid: AdvancedDVEsTemplates
         - name: Remarks
           topicUid: AdvancedDVEsRemarks
         - name: Exercise
@@ -944,7 +948,11 @@ items:
     - name: UIBlockType overview
       topicUid:  UIBlockTypesOverview
     - name: Best practices
-      topicUid: Automation_best_practices
+      items:
+      - name: Generating information events
+        topicUid: Automation_best_practices_information_events
+      - name: Handling async code
+        topicUid: Handling_Async_Code
     - name: How-tos
       items:
       - name: Making your Automation scripts debug-ready
@@ -1024,6 +1032,8 @@ items:
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Automation
     - name: Skyline.DataMiner.Core.DataMinerSystem.Protocol
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
+    - name: Skyline.DataMiner.Analytics.Rad
+      topicUid: Skyline.DataMiner.Analytics.Rad
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
     - name: Skyline.DataMiner.Net.Swarming
@@ -1275,6 +1285,8 @@ items:
         topicUid: NT_SET_BITRATE_DELTA_INDEX_TRACKING
       - name: NT_ADD_VIEWS
         topicUid: NT_ADD_VIEWS
+      - name: NT_CLEAR_PARAMETER
+        topicUid: NT_CLEAR_PARAMETER
     - name: DMS notify types
       topicUid: SLDmsNotifyTypes
       items:
@@ -3638,6 +3650,102 @@ items:
         topicUid: Automation-EnumTrueFalseLowerCase
       - name: NonEmptyStringType
         topicUid: Automation-NonEmptyStringType
+  - name: Functions schema
+    topicUid: SchemaFunctions
+    items:
+    - name: Functions
+      topicUid: Functions
+      items: 
+      - name: Function
+        topicUid: Functions.Function
+        items: 
+        - name: '@id'
+          topicUid: Functions.Function-id
+        - name: '@maxInstances'
+          topicUid: Functions.Function-maxInstances
+        - name: '@name'
+          topicUid: Functions.Function-name
+        - name: '@profile'
+          topicUid: Functions.Function-profile
+        - name: EntryPoints
+          topicUid: Functions.Function.EntryPoints
+          items: 
+          - name: EntryPoint
+            topicUid: Functions.Function.EntryPoints.EntryPoint
+            items: 
+            - name: '@pid'
+              topicUid: Functions.Function.EntryPoints.EntryPoint-pid
+            - name: '@type'
+              topicUid: Functions.Function.EntryPoints.EntryPoint-type
+        - name: ExportRules
+          topicUid: Functions.Function.ExportRules
+          items: 
+          - name: ExportRule
+            topicUid: Functions.Function.ExportRules.ExportRule
+            items: 
+            - name: '@attribute'
+              topicUid: Functions.Function.ExportRules.ExportRule-attribute
+            - name: '@regex'
+              topicUid: Functions.Function.ExportRules.ExportRule-regex
+            - name: '@tag'
+              topicUid: Functions.Function.ExportRules.ExportRule-tag
+            - name: '@value'
+              topicUid: Functions.Function.ExportRules.ExportRule-value
+            - name: '@whereAttribute'
+              topicUid: Functions.Function.ExportRules.ExportRule-whereAttribute
+            - name: '@whereTag'
+              topicUid: Functions.Function.ExportRules.ExportRule-whereTag
+            - name: '@whereValue'
+              topicUid: Functions.Function.ExportRules.ExportRule-whereValue
+        - name: Graphical
+          topicUid: Functions.Function.Graphical
+        - name: Interfaces
+          topicUid: Functions.Function.Interfaces
+          items: 
+          - name: Interface
+            topicUid: Functions.Function.Interfaces.Interface
+            items: 
+            - name: '@broadcast'
+              topicUid: Functions.Function.Interfaces.Interface-broadcast
+            - name: '@id'
+              topicUid: Functions.Function.Interfaces.Interface-id
+            - name: '@name'
+              topicUid: Functions.Function.Interfaces.Interface-name
+            - name: '@parameterGroupLink'
+              topicUid: Functions.Function.Interfaces.Interface-parameterGroupLink
+            - name: '@profile'
+              topicUid: Functions.Function.Interfaces.Interface-profile
+            - name: '@type'
+              topicUid: Functions.Function.Interfaces.Interface-type
+        - name: Parameters
+          topicUid: Functions.Function.Parameters
+          items: 
+          - name: Parameter
+            topicUid: Functions.Function.Parameters.Parameter
+            items: 
+            - name: '@id'
+              topicUid: Functions.Function.Parameters.Parameter-id
+      - name: OverrideTimeoutVF
+        topicUid: Functions.OverrideTimeoutVF
+      - name: Protocol
+        topicUid: Functions.Protocol
+        items: 
+        - name: Name
+          topicUid: Functions.Protocol.Name
+      - name: Version
+        topicUid: Functions.Version
+    - name: SchemaTypes
+      items:
+      - name: EnumTrueFalseLowerCase
+        topicUid: Functions-EnumTrueFalseLowerCase
+      - name: Guid
+        topicUid: Functions-TypeGuid
+      - name: InputType
+        topicUid: Functions-TypeInputType
+      - name: TypeNonEmptyString
+        topicUid: Functions-TypeNonEmptyString
+      - name: TypeParamId
+        topicUid: Functions-TypeParamId
   - name: NuGet stages schema
     topicUid: SchemaNuGetStagesConfig
     items:
@@ -3915,14 +4023,6 @@ items:
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsActive
               - name: SetAsDefault
                 topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
-      - name: DeploymentOptions
-        topicUid: Manifest.DeploymentOptions
-        items: 
-        - name: OrganizationCatalogAccess
-          topicUid: Manifest.DeploymentOptions.OrganizationCatalogAccess
-          items: 
-          - name: Organization
-            topicUid: Manifest.DeploymentOptions.OrganizationCatalogAccess.Organization
       - name: MinimumRequiredVersions
         topicUid: Manifest.MinimumRequiredVersions
         items:
@@ -4064,6 +4164,8 @@ items:
             topicUid: AddBookingAttachmentV2
           - name: AddCommentToAlarm
             topicUid: AddCommentToAlarm
+          - name: AddCommentToAlarmV2
+            topicUid: AddCommentToAlarmV2
           - name: AddElementToPinned
             topicUid: AddElementToPinned
           - name: AddElementToRecent
@@ -4314,8 +4416,12 @@ items:
             topicUid: GetAlarmCountForService
           - name: GetAlarmDetails
             topicUid: GetAlarmDetails
+          - name: GetAlarmDetailsV2
+            topicUid: GetAlarmDetailsV2
           - name: GetAlarmHistory
             topicUid: GetAlarmHistory
+          - name: GetAlarmHistoryV2
+            topicUid: GetAlarmHistoryV2
           - name: GetAlarmPages
             topicUid: GetAlarmPages
           - name: GetAlarmPageUpdates
@@ -4400,6 +4506,8 @@ items:
             topicUid: GetCurrentAlarmByRootID
           - name: GetCurrentAlarmByRootIDV2
             topicUid: GetCurrentAlarmByRootIDV2
+          - name: GetCurrentAlarmByRootIDV3
+            topicUid: GetCurrentAlarmByRootIDV3
           - name: GetDashboardsForElement
             topicUid: GetDashboardsForElement
           - name: GetDashboardsForService
@@ -4858,6 +4966,8 @@ items:
             topicUid: LogOut
           - name: MaskAlarm
             topicUid: MaskAlarm
+          - name: MaskAlarmV2
+            topicUid: MaskAlarmV2
           - name: MaskElement
             topicUid: MaskElement
           - name: PauseElement
@@ -4868,6 +4978,8 @@ items:
             topicUid: ReconnectAppAndInfo
           - name: ReleaseOwnershipAlarm
             topicUid: ReleaseOwnershipAlarm
+          - name: ReleaseOwnershipAlarmV2
+            topicUid: ReleaseOwnershipAlarmV2
           - name: RemoveElementFromPinned
             topicUid: RemoveElementFromPinned
           - name: RemoveElementFromView
@@ -4918,6 +5030,8 @@ items:
             topicUid: SwitchRedundancyGroup
           - name: TakeOwnershipAlarm
             topicUid: TakeOwnershipAlarm
+          - name: TakeOwnershipAlarmV2
+            topicUid: TakeOwnershipAlarmV2
           - name: TestElementDeviceConnectivity
             topicUid: TestElementDeviceConnectivity
           - name: ToggleMatrixCrosspoint
@@ -4934,6 +5048,8 @@ items:
             topicUid: UnhideJobSectionDefinitionField
           - name: UnmaskAlarm
             topicUid: UnmaskAlarm
+          - name: UnmaskAlarmV2
+            topicUid: UnmaskAlarmV2
           - name: UnmaskElement
             topicUid: UnmaskElement
           - name: UpdateAlarmTemplate
@@ -5330,6 +5446,29 @@ items:
 - name: CI/CD
   topicUid: CICD
   items:
+  - name: Skyline DataMiner Software Development Kit
+    topicUid: skyline_dataminer_sdk
+    items:  
+    - name: Skyline DataMiner SDK
+      topicUid: skyline_dataminer_sdk
+      items:
+        - name: Project properties
+          topicUid: skyline_dataminer_sdk_project_properties
+    - name: DataMiner Package Project
+      topicUid: skyline_dataminer_sdk_dataminer_package_project
+      items:
+        - name: Advanced
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_advanced
+        - name: CatalogReferences.xml
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_catalog_references
+        - name: ProjectReferences.xml
+          topicUid: skyline_dataminer_sdk_dataminer_package_project_project_references
+    - name: Visual Studio 2022 solution filter (*.slnf) files
+      topicUid: skyline_dataminer_sdk_solution_filter_files
+    - name: Frequently asked questions
+      topicUid: skyline_dataminer_sdk_frequently_asked_questions
+    - name: Troubleshooting
+      topicUid: skyline_dataminer_sdk_troubleshooting
   - name: Platform-independent CI/CD
     topicUid: Platform_independent_CICD
   - name: CI/CD using command line
@@ -5354,6 +5493,8 @@ items:
     - name: GitHub reusable workflows
       topicUid: github_reusable_workflows
       items:
+      - name: DataMiner App Package Master Workflow
+        topicUid: github_reusable_workflows_dataminer_app_packages_master_workflow
       - name: Automation Master Workflow
         topicUid: github_reusable_workflows_automation_master_workflow
       - name: NuGet Solution Master Workflow
@@ -5366,12 +5507,24 @@ items:
         topicUid: github_reusable_workflows_update_catalog_details
     - name: Tutorials
       items:
-       - name: Setting up your development environment in GitHub
-         topicUid: CICD_Tutorial_GitHub_Setting_Up_Organization
-       - name: Going from code to product in GitHub
-         topicUid: CICD_Tutorial_GitHub_Code_To_Product
-       - name: Setting up basic CI/CD for connector deployment
-         topicUid: CICD_Tutorial_Connector
+      - name: For connectors
+        items:
+        - name: Setting up basic CI/CD for connector deployment in GitHub
+          topicUid: CICD_Tutorial_Connector
+        - name: Registering a new version of a connector in the Catalog using a GitHub Action
+          topicUid: Tutorial_Register_Catalog_Version_GitHub_Actions
+        - name: Setting up complete quality control in CI/CD for connector deployment
+          topicUid: CICD_Tutorial_For_Connectors_VisualStudio_And_GitHub
+      - name: For other items
+        items:
+        - name: Registering a new version of a user-defined API to the Catalog using Visual Studio and GitHub
+          topicUid: CICD_Tutorial_For_Other_Items_User_Defined_API_VisualStudio_And_GitHub
+        - name: Registering a new version of a user-defined API to the Catalog using GitHub Codespaces
+          topicUid: CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces
+        - name: Registering a new version of a multi-artifact DataMiner package to the Catalog using Visual Studio and GitHub
+          topicUid: CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub
+        - name: Registering a new version of multiple DataMiner packages to the Catalog using Visual Studio and GitHub
+          topicUid: CICD_Tutorial_For_Other_Items_Multi-Package_VisualStudio_And_GitHub
   - name: CI/CD using GitLab
     items:
     - name: GitLab examples
@@ -5386,6 +5539,10 @@ items:
     items:
     - name: Azure DevOps examples
       topicUid: CICD_Azure_DevOps_Examples
+    - name: Tutorials
+      items:
+      - name: Setting up basic CI/CD for connector deployment in AzureDevops
+        topicUid: CICD_Tutorial_For_Connectors_VisualStudio_And_AzureDevOps
   - name: CI/CD using Concourse
     items:
     - name: Concourse examples
@@ -5397,7 +5554,7 @@ items:
       items:
       - name: GitHub quality gate
         topicUid: CICD_Quality_Gate_Github
-    - name: Publishing items in the DataMiner Catalog
+    - name: Publishing items in the Catalog
       topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
       items:
@@ -5534,6 +5691,8 @@ items:
               topicUid: DisInjectToolWindow
             - name: DIS MIB Browser
               topicUid: DisMibBrowserToolWindow
+            - name: DIS Parameter Update Locations
+              topicUid: DisParameterUpdateLocationsToolWindow
         - name: Plugins
           topicUid: DisPlugins
         - name: Development using DIS
@@ -5795,7 +5954,7 @@ items:
           topicUid: DSI_OpenConfig_Introduction
         - name: Middleware package
           topicUid: DSI_OpenConfig_Middleware
-- name: DataMiner module integrations
+- name: DataMiner feature integrations
   topicUid: DataMinerModuleIntegrations
   items:
     - name: User-Defined APIs
@@ -5851,8 +6010,20 @@ items:
               topicUid: EpmIntegrationTrainingLowCodeApp
         - name: Topology app configuration
           topicUid: Topology_app_configuration
+        - name: Enhanced view configuration
+          topicUid: Enhanced_view_configuration
+        - name: Agent caching configuration
+          topicUid: EPMIntegration_Agent_cache_config
         - name: DataMiner processes configuration
           topicUid: EPM_DataMiner_processes_config
+    - name: Swarming
+      items:
+        - name: Preparing scripts and connectors for Swarming
+          topicUid: SwarmingPrepare
+        - name: Configuring a script to swarm elements
+          topicUid: SwarmingScriptElement
+        - name: Configuring a script to swarm bookings
+          topicUid: SwarmingScriptBooking
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:

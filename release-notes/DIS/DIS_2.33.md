@@ -38,7 +38,8 @@ When editing a protocol in the XML editor, it is now possible to change the ID o
 To do so, proceed as follows:
 
 1. Click the small *Down* arrow in front of the \<QAction> tag, and select *Change ID...* from the shortcut menu.
-2. In the *Change QAction ID* window, enter the new QAction ID and click *OK*.
+
+1. In the *Change QAction ID* window, enter the new QAction ID and click *OK*.
 
 When you change the ID of a QAction, the following items will be updated:
 
@@ -104,8 +105,8 @@ See the following examples:
 ```xml
 <Chain>
   <Display>
-    <Visibility default=”false”>
-      <Standalone pid=”8”>
+    <Visibility default="false">
+      <Standalone pid="8">
         <Value>1</Value>
         <Value>2</Value>
       </Standalone>
@@ -119,8 +120,8 @@ See the following examples:
   <Field>
     <Display>
       <Selection>
-        <Visibility default=”false”>
-          <Standalone pid=”18”>
+        <Visibility default="false">
+          <Standalone pid="18">
             <Value>1</Value>
             <Value>2</Value>
           </Standalone>
@@ -134,8 +135,8 @@ See the following examples:
 ```xml
 <SearchChain>
   <Display>
-    <Visibility default=”false”>
-      <Standalone pid=”8”>
+    <Visibility default="false">
+      <Standalone pid="8">
         <Value>1</Value>
         <Value>2</Value>
       </Standalone>

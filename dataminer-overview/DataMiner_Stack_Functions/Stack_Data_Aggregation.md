@@ -35,4 +35,4 @@ Collect data from various sources and convert them into a uniform format.
 Collecting, parsing, and storing of data to facilitate fast and accurate information retrieval.
 
 > [!TIP]
-> For detailed information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
+> For detailed information, see [Storage options overview](xref:Supported_system_data_storage_architectures).

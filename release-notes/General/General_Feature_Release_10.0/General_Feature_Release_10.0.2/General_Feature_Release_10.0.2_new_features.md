@@ -553,7 +553,7 @@ Example:
 
 By linking a shape to an alarm filter using an *AlarmSummary* data item, you can show statistical information about the alarms that match the filter. From now on, it is also possible to have the alarms displayed in an alarm tab, filtered according to the filter specified in the shape.
 
-To do so, add a data item of type *AlarmTab*, and set its value to “Name=”, followed by the name of an alarm tab. See the example below.
+To do so, add a data item of type *AlarmTab*, and set its value to "Name=", followed by the name of an alarm tab. See the example below.
 
 When you click the shape, Cube will open the specified alarm tab (if it has a filter applied) and apply the alarm filter specified in the *AlarmSummary* data item. If the alarm tab specified in the *AlarmTab* data item has no alarm filter applied or if no alarm tab exists with that name, one will first be created.
 
@@ -771,13 +771,13 @@ The DataMiner HTML5 app has now been replaced by the new Monitoring & Control ap
 
 - Redesigned header bar:
 
-  - The app title “Monitoring & Control” is now a button that redirects the user to the app’s homepage.
+  - The app title “Monitoring & Control” is now a button that redirects the user to the app’s home page.
   - Like in Cube X, the Search box has now been moved from the side panel to the middle of the header bar.
   - On the right, there is now one single user icon, which, when clicked, opens a menu that allows users to access to the settings window and the About box.
 
     Currently, the settings window allows you to specify the default pages for element and view cards.
 
-- A new homepage similar to the Cube X homepage, listing recently used items.
+- A new home page similar to the Cube X home page, listing recently used items.
 - Redesigned (collapsible) side panel, on which alarm states are now indicated by colored circles.
 - Redesigned element, service, view and alarm cards, which can be accessed directly using the following URLs:
 

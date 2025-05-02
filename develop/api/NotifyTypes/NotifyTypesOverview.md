@@ -473,3 +473,4 @@ uid: NTNotifyTypesOverview
 |457|NT_RESERVE_DATA_COOKIES||
 |458|NT_DIRECT_VIEW_REMOTE_COOKIE||
 |459|NT_ELEMENT_DEINIT_COMPLETE||
+|474|<xref:NT_CLEAR_PARAMETER>|Clear a parameter and its display value, and save the change if the parameter is saved.|

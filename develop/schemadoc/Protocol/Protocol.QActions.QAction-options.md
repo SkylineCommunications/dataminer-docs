@@ -36,13 +36,6 @@ By default, every QAction is compiled into a DLL file at first use. This DLL fil
 
 Example: Microsoft Platform.1.5.0.36.Qaction.27.dll
 
-> [!NOTE]
-> In case the /DataMiner/ProcessOptions@scriptingProcesses attribute in the DataMiner.xml configuration file has been set to "protocol", the DLL name will be as follows:
->
-> `[ProtocolName].[ProtocolVersion].QAction.[QactionID].[ProcessID].dll`
->
-> ProcessID is the process ID of the corresponding SLProtocol process.
-
 When you want the DLL file to include a meaningful name, enter that name in this options attribute.
 
 This name will then replace the QAction.[QActionID] part:
@@ -56,7 +49,7 @@ This name will then replace the QAction.[QActionID] part:
 > [!NOTE]
 >
 > - It is not required to include the .dll extension. If it is not provided as part of the custom name, DataMiner will add this extension automatically.
-> -When you use the dllName option, no DLLs per process will be generated when the
+> - When you use the dllName option, no DLLs per process will be generated when the
 > /DataMiner/ProcessOptions@scriptingProcesses attribute in the DataMiner.xml configuration file has been set to "protocol".
 > - If you specify `*` or `<No Name>` (i.e. `options="dllName=<No Name>"`), no DLL file will be compiled.
 > - The DLL will be refreshed when the QAction that creates this DLL is run. This means that when something changes in the QAction it does not immediately change in the (running) DLL. When the QAction is triggered, the (running) DLL is updated and run with the new data.

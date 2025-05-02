@@ -94,6 +94,8 @@ On the *Alarm Console* page, several settings are available:
 
 - **Time before alarm banner hides**: Select this setting to set a delay of 30 seconds before the alarm banner hides. In order to set a different delay, select the setting and enter a different number of seconds in the box on the right.
 
+- **Enable the sound for the alarm banner**: Available from DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 41982-->. Determines whether a sound is played when the alarm banner is shown or updated. By default, a sound is played.
+
 - **Enable alarm storm protection by grouping alarms with the same parameter name**: This setting determines whether alarms with the same parameter name are grouped when a certain number of these alarms occur at the same time. In the boxes below the setting, you can configure when to start and stop grouping. By default, this setting is enabled, with a start value of 2000 and a stop value of 1900.
 
   > [!TIP]
@@ -350,7 +352,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Link the Surveyor selection to the selected card in the workspace**: If this option is selected, the Surveyor will automatically select the item displayed in the currently selected card.
 
-- **Launch EPM card on filter selection**: Available from DataMiner 10.2.0/10.1.3 onwards. Select this checkbox to have an EPM card opened when an item is selected in a filter in an EPM topology tab.
+- **Launch EPM card on filter selection**: Available from DataMiner 10.2.0/10.1.3 onwards. Select this checkbox to have an EPM card opened when an item is selected in a filter in an [EPM Topology app](xref:EPM_Topology_app).
 
 ### Trending settings
 

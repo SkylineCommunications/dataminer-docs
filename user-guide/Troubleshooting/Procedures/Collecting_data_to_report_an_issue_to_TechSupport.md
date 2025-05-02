@@ -47,13 +47,15 @@ To save a Log Collector package:
 > [!TIP]
 > For more information about the Log Collector, see [SLLogCollector](xref:SLLogCollector).
 
-## Cube Debug information
+## Cube debug information
 
-When investigating issues related to DataMiner Cube, Cube Debug information is invaluable. You can access this information either through DataMiner Cube when Cube is connected to your DMA or via the Cube login page when Cube cannot connect to your DMA.
+When investigating issues related to DataMiner Cube, Cube debug information is invaluable. The way you can access this information depends on whether Cube is able to connect to your DMA.
 
 ### Cube is connected to your DMA
 
-To export Cube debug information:
+#### Exporting Cube debug info
+
+If Cube is connected to your DMA, export Cube debug information as follows:
 
 1. In DataMiner Cube, go to *Apps* > *About*.
 
@@ -61,9 +63,17 @@ To export Cube debug information:
 
    ![Export debug information](~/user-guide/images/Debug_information.png)<br/>*DataMiner Cube version 10.3.10*
 
+#### Following the Cube session
+
+In some cases, it may be necessary to follow an ongoing Cube session to get more information. This is sometimes called a "Cube follow".
+
+To do so, you will need to use SLNetClientTest tool. For detailed information, refer to [Following a DataMiner Cube session](xref:SLNetClientTest_tracking_dma_communication#following-a-dataminer-cube-session).
+
 ### Cube is unable to connect to your DMA
 
-To export Cube debug information:
+#### Exporting Cube debug info
+
+If Cube is unable to connect to your DMA, export Cube debug information as follows:
 
 1. On the login page, click the cogwheel button in the lower right corner and select *About* in the menu.
 
@@ -71,7 +81,9 @@ To export Cube debug information:
 
 1. In the *general* tab, select *Export debug information*.
 
-To investigate why Cube could not connect to your DMA:
+#### Investigating the connection issue
+
+You should also collect information to investigate why Cube could not connect to your DMA:
 
 1. Go to the DataMiner Cube start window, click the cogwheel button in the lower right corner, and select *View logging*.
 
@@ -81,76 +93,20 @@ To investigate why Cube could not connect to your DMA:
 
 ## Web app recordings
 
-For troubleshooting issues related to DataMiner web apps, such as DataMiner Dashboards, the Monitoring app, and DataMiner Low-Code Apps, we recommend using the DataMiner Web Support Assistant browser extension.
+For troubleshooting issues related to DataMiner web apps, such as DataMiner Dashboards, the Monitoring app, and DataMiner Low-Code Apps, we recommend using the **DataMiner Web Support Assistant browser extension**. This extension is available for Google Chrome or any Chromium-based browser.
 
-This extension is available for Google Chrome or any Chromium-based browser.
-
-### Installing the DataMiner Web Support Assistant
-
-1. Look up the [*DataMiner Web Support Assistant*](https://chromewebstore.google.com/detail/dataminer-web-support-ass/nofmcbgpolhjblmafpfbffjnganhapge) extension in the Chrome Web Store.
-
-1. Click *Add to Chrome* in the top-right corner.
-
-1. Restart your browser.
-
-### Creating a recording with the DataMiner Web Support Assistant
-
-1. Navigate to the tab where you are experiencing an issue with a DataMiner web app.
-
-1. Click the puzzle icon in the top-right corner of your browser and select *DataMiner Web Support Assistant* from the list of available extensions.
-
-1. Click the large red recording button to start the recording.
-
-   ![Web Support Assistant icon and popup](~/user-guide/images/Web_Support_Assistant_icon_popup.png)
-
-   The extension will minimize, indicating that the recording has begun. The maximum duration for a recording is 10 minutes.
-
-1. Replicate the process that led to the bug or issue in the web app.
-
-1. When the issue has been successfully replicated, reopen the extension and click the red *END* button to stop the recording.
-
-1. Allow the extension to finish processing the data. This will be indicated by a loading screen. Do not close the extension during this process.
-
-   Once the recording is ready, a green checkmark will be displayed.
-
-1. Click *Download* to download the ZIP file containing all the necessary data. This concludes the recording process.
-
-> [!IMPORTANT]
-> The extension only collects data from the tab in which the recording was started. Ensure to stay within that tab to accurately recreate the issue.
+For information about how to install the extension and create a recording with it, refer to [Web Support Assistant](xref:Web_Issues_Support_Assistant).
 
 ## DELT export packages
 
 When investigating issues related to a specific element or service, DELT (DataMiner Element Location Transparency) export packages are invaluable sources of information. This functionality allows you to export and import elements, services, and more to/from a *.dmimport* file.
 
+To export an element or service, refer to [Exporting elements, services, etc. to a .dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file).
+
+Note that unless otherwise requested, we recommend **not including trend data, alarm data, documents, and information events** in the export to reduce the package size and export time.
+
 > [!TIP]
 > For more information on DELT export and import packages, see [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA).
-
-To export an element or service:
-
-1. In the Surveyor, right-click the item and select *Actions > Export*.
-
-   ![Export element](~/user-guide/images/Export_Element.png)<br/>*DataMiner Cube version 10.3.10*
-
-1. In the *Export* pop-up window, choose *Export to DataMiner package (\*.dmimport)*.
-
-1. Select the items you want to export. If you have selected to include a service, any elements within that group will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
-
-1. Specify which additional information should be included (if any) using the checkboxes below this:
-
-   - Trend and alarm data
-
-   - Documents
-
-   - Information events
-
-   Unless requested otherwise, we recommend disabling these options to reduce the package size and export time.
-
-1. Select *Export* in the lower right corner.
-
-   ![Exporting an SLA](~/user-guide/images/SLA_Export.png)<br/>*DataMiner Cube version 10.3.10*
-
-   > [!IMPORTANT]
-   > If the export fails due to package size, consider excluding trend and alarm data. Also, try connecting directly to the DMA hosting the item to be exported.
 
 ## Stream Viewer traces
 
@@ -170,7 +126,7 @@ To save a Stream Viewer trace:
 
    ![Stream Sniffer](~/user-guide/images/Stream_Sniffer.png)<br/>*DataMiner Cube version 10.3.10*
 
-   > [!NOTE]
-   >
-   > - We recommend setting the capture duration to 5 minutes.
-   > - Closing the *Stream Sniffer* and *Stream Viewer* windows will not interrupt the capture. However, closing or disconnecting Cube will stop the capture.
+> [!NOTE]
+>
+> - We recommend setting the capture duration to 5 minutes.
+> - Closing the *Stream Sniffer* and *Stream Viewer* windows will not interrupt the capture. However, closing or disconnecting Cube will stop the capture.

@@ -18,7 +18,7 @@ The following options are available to fine-tune the component layout:
 
 - *Icon*: Icon that will be displayed in the text input box.
 
-In the *Settings* tab, you can also configure the following optional settings:
+In the *Settings* pane, you can also configure the following optional settings:
 
 - *Emit value on*: Determines when the value in the box becomes available as data. This can be when the user presses Enter ("Enter"), when the focus is no longer on the box ("Focus lost"), or when the value in the box changes ("Value change"). If you select *Focus lost*, the value will also become available when the user presses Enter.
 
@@ -27,7 +27,7 @@ In the *Settings* tab, you can also configure the following optional settings:
 - *Multiline*: Determines whether the input can consist of multiple lines or not.
 
 > [!NOTE]
-> From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37736 -->, you can drag data to the component to link it to that data, or [specify data input in the dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL). This way, the component will be filled in based on the data, but users will still be able to modify the value.
+> From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37736 -->, you can drag data to the component to link it to that data, or [specify data input in the dashboard URL](xref:Specifying_data_input_in_a_URL). This way, the component will be filled in based on the data, but users will still be able to modify the value.
 
 ## Component actions
 

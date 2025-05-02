@@ -34,7 +34,7 @@ var historyRecords = historyHelper.ServiceDeletionHistory.Read(recordsPastDay);
 
 > [!NOTE]
 >
-> - Service history records are stored in ElasticSearch. This means, that an ElasticSearch database has to be available for this feature to work.
+> - Service history records are stored in ElasticSearch. This means that an ElasticSearch database has to be available for this feature to work.
 > - If you want the service history records to be included in a DataMiner backup, select the *Include service history data in backup* option. In case of a full backup, this option will be selected by default.
 
 #### SLAnalytics - Automatic incident tracking: Grouping on generic alarm, element, service and view properties \[ID 28820\]

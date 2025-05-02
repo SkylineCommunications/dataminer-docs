@@ -21,11 +21,11 @@ flowchart TD
 %% Define blocks %%
 LinkRootCause([To root cause flowchart])
 LinkProcessList([To process identification])
-Start([SLLog problem <br/>suspected])
+Start([SLLog problem suspected])
 CheckIssueType{{RTEs or crashes present?}}
 Rte([Follow RTE investigation flowchart])
-Crash([Follow Critical Issues -<br/>Automatic Restart flowchart])
-EndReportIssue([Describe the issue in detail and<br/>contact Software Development])
+Crash([Follow Critical Issues - Automatic Restart flowchart])
+EndReportIssue([Describe the issue in detail and contact Software Development])
 %% Connect blocks %%
 Start --- CheckIssueType
 CheckIssueType --- |No| EndReportIssue
@@ -52,7 +52,7 @@ class LinkRootCause,LinkProcessList,Rte,Crash classExternalRef;
 
 ## How does SLLog work?
 
-SLLog is the process responsible for all DataMiner logging with the exception of SLNet. All output is written into files in *C:\Skyline DataMiner\logging*. Various processes connect to *SLLog.exe* and pass information to be logged. It is then written to *SL\*.txt* (a separate file for each process). Separate files are also created for each element and service.
+SLLog is the process responsible for all DataMiner logging with the exception of SLNet. All output is written into files in `C:\Skyline DataMiner\Logging`. Various processes connect to *SLLog.exe* and pass information to be logged. It is then written to *SL\*.txt* (a separate file for each process). Separate files are also created for each element and service.
 
 SLNet uses its own logging mechanism. One of the reasons for this is that at DataMiner startup, SLNet starts earlier than SLLog.
 

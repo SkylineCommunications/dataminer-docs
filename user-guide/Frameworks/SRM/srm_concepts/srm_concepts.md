@@ -46,6 +46,3 @@ The tables below summarize the components and their scope.
   | [Custom events](xref:srm_scripting#custom-events) | No | No | No | Yes |
   | [Contributing conversion script](xref:srm_scripting#contributing-conversion-script) | No | No | No | Yes |
   | [Created booking script](xref:srm_scripting#created-booking-script) | No | No | No | Yes |
-
-> [!NOTE]
-> The concepts explained in this section are the main concepts used within the SRM framework, which builds on the core DataMiner SRM functionality to provide a versatile toolset to manage services and resources. For more information on SRM concepts in the context of the core SRM functionality, see [Concepts](xref:Concepts1).

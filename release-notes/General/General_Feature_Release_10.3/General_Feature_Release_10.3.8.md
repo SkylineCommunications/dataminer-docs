@@ -288,7 +288,7 @@ When a client requested large amounts of data, in some cases, a `NATSMaxPayloadE
 
 DVE properties would be cleared each time an update was sent to a database of type Cassandra Cluster.
 
-#### SLAnalytics would shut down immediately when it failed to get information from SLNet at start-up [ID 36692]
+#### SLAnalytics would shut down immediately when it failed to get information from SLNet at startup [ID 36692]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 

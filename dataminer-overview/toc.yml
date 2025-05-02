@@ -15,6 +15,10 @@ items:
           topicUid: Overview_Standardized_Foundation
         - name: References and use cases
           topicUid: Overview_References_and_use_cases
+        - name: Compliance offering
+          topicUid: DataMiner_compliance_offering
+        - name: Evolution vs. optimization in software development
+          topicUid: evolution_vs_optimization
     - name: DataMiner platform - Empowering your digital transformation
       topicUid: Overview_Platform_intro
       items:
@@ -31,12 +35,12 @@ items:
       items:
         - name: DataMiner as a Service
           topicUid: DaaS_hosting
-        - name: Self-hosted DataMiner nodes with Storage as a Service
+        - name: Self-managed DataMiner nodes with Storage as a Service
           topicUid: DM_selfhosted_and_StaaS
-        - name: Self-hosted DataMiner nodes and storage nodes
+        - name: Self-managed DataMiner nodes and storage nodes (not recommended)
           topicUid: DM_and_storage_selfhosted
     - name: dataminer.services
-      topicUid: Overview_DCP
+      topicUid: Overview_dataminer_services
       items:
         - name: DevOps
           topicUid: Overview_DevOps
@@ -78,28 +82,14 @@ items:
             - name: MediaOps apps
               topicUid: Overview_MediaOps_Apps
               items:
-                - name: Virtual Signal Groups
-                  topicUid: Overview_MediaOps_Virtual_Signal_Groups
-                - name: Control Surface
-                  topicUid: Overview_MediaOps_Control_Surface
-                - name: Flow Engineering
-                  topicUid: Overview_MediaOps_Flow_Engineering
-                - name: Flow Monitoring
-                  topicUid: Overview_MediaOps_Flow_Monitoring
                 - name: Scheduling
                   topicUid: Overview_MediaOps_Scheduling
                 - name: Workflow Designer
                   topicUid: Overview_MediaOps_Workflow_Designer
-                - name: Cost and Billing
-                  topicUid: Overview_MediaOps_Cost_and_Billing
                 - name: People and Organizations
                   topicUid: Overview_MediaOps_People_and_Organization
                 - name: Resource Studio
                   topicUid: Overview_MediaOps_Resource_Studio
-            - name: Supported connectors
-              topicUid: Overview_MediaOps_supported_connectors
-        - name: DOM Viewer
-          topicUid: domviewer_about
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
@@ -182,8 +172,10 @@ items:
           topicUid: Overview_Training_certification
         - name: Video library
           topicUid: Overview_Training_videolibrary
-        - name: Agile Awareness Training
+        - name: Agile Fundamentals Training
           topicUid: Overview_Training_agile_aw
+        - name: Kanban workshop
+          topicUid: Overview_Kanban_workshop
     - name: Pricing
       topicUid: Pricing
       items:
@@ -193,21 +185,10 @@ items:
         topicUid: Pricing_Usage_based_service
       - name: Perpetual-Use Licensing
         topicUid: Pricing_Perpetual_Use_Licensing
+      - name: Maximizing your azure investments with MACC and DataMiner credits
+        topicUid: MACC_and_DataMiner_credits
     - name: Support Services
       topicUid: Overview_Support_DMS_M_and_S
-      items:
-        - name: Support plans
-          topicUid: Overview_Support_Plans
-        - name: Software updates and upgrades
-          topicUid: Overview_Support_upgrade_policy
-        - name: Out-of-business-hours support
-          topicUid: Overview_Out_Of_Business_Hours_Support
-        - name: Proactive Support
-          topicUid: Proactive_Support
-        - name: Partner support lines
-          topicUid: Partner_support_lines
-        - name: Support application
-          topicUid: User_operations_support
     - name: DataMiner Partner Program
       topicUid: Partner_Program
       items:
@@ -233,42 +214,40 @@ items:
     - name: DataMiner Professional Services
       topicUid: Part52ProfessionalServices
       items:
-        - name: DataMiner Solution Deployment Methodology
+        - name: About Digital Transformation
+          topicUid: DeploymentMethodology
+        - name: Managing technology deployments
           items:
-            - name: About Digital Transformation
-              topicUid: DeploymentMethodology
-            - name: Managing technology deployments
-              items:
-                - name: Methodology is key to success
-                  topicUid: Managing_technology_deployments
-                - name: Methodology is not a choice
-                  topicUid: Methodology_is_not_a_choice
-                - name: Methodology needs to be practiced
-                  topicUid: Methodology_needs_to_be_practiced
-            - name: Deployment methodologies in summary
-              topicUid: Deployment_methodologies_in_summary
-            - name: Turnkey Methodology
-              topicUid: Turnkey_Methodology
-              items:
-                - name: Typical phases of a Turnkey Project deployment
-                  topicUid: Typical_phases_of_a_Turnkey_Project_deployment
-                - name: Terms & Conditions for a Turnkey Project deployment
-                  topicUid: Terms_Conditions_for_a_Turnkey_Project_deployment
-                - name: Change Request Procedure
-                  topicUid: Change_Request_Procedure
-            - name: Agile Scope-Based Methodology
-              topicUid: Agile_Scope-Based_Methodology
-              items:
-                - name: Key Values & Principles
-                  topicUid: Key_Values_Principles
-                - name: Formal roles for Agile Scope-Based deployment
-                  topicUid: Formal_roles_for_Agile_Scope-Based_deployment
-                - name: Typical Phases for Agile Scope-Based projects
-                  topicUid: Typical_Phases_for_Agile_Scope-Based_projects
-            - name: Agile Time & Materials Methodology
-              topicUid: Agile_Time_Materials_Methodology
-            - name: Some Use Cases & Practical Examples
-              topicUid: Some_Use_Cases_Practical_Examples
+            - name: Methodology is key to success
+              topicUid: Managing_technology_deployments
+            - name: Methodology is not a choice
+              topicUid: Methodology_is_not_a_choice
+            - name: Methodology needs to be practiced
+              topicUid: Methodology_needs_to_be_practiced
+        - name: Deployment methodologies in summary
+          topicUid: Deployment_methodologies_in_summary
+        - name: Turnkey Methodology
+          topicUid: Turnkey_Methodology
+          items:
+            - name: Typical phases of a Turnkey Project deployment
+              topicUid: Typical_phases_of_a_Turnkey_Project_deployment
+            - name: Terms & Conditions for a Turnkey Project deployment
+              topicUid: Terms_Conditions_for_a_Turnkey_Project_deployment
+            - name: Change Request Procedure
+              topicUid: Change_Request_Procedure
+        - name: Agile Scope-Based Methodology
+          topicUid: Agile_Scope-Based_Methodology
+          items:
+            - name: Key Values & Principles
+              topicUid: Key_Values_Principles
+            - name: Formal roles for Agile Scope-Based deployment
+              topicUid: Formal_roles_for_Agile_Scope-Based_deployment
+            - name: Typical Phases for Agile Scope-Based projects
+              topicUid: Typical_Phases_for_Agile_Scope-Based_projects
+        - name: Agile Time & Materials Methodology
+          topicUid: Agile_Time_Materials_Methodology
+        - name: Use Cases & Practical Examples
+          topicUid: Some_Use_Cases_Practical_Examples
     - name: Legal
       items:
         - name: Commercial terms
@@ -347,4 +326,4 @@ items:
       - name: Support Services
         topicUid: FAQs_Support_Services
       - name: dataminer.services
-        topicUid: FAQ_DCP
+        topicUid: FAQ_dataminer_services

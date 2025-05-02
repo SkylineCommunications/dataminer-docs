@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_enhancements
 ---
 
-# General Main Release 10.5.0 – Enhancements (preview)
+# General Main Release 10.5.0 – Enhancements
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 #### Security enhancements [ID 37349] [ID 38052] [ID 38951] [ID 39387]
 
@@ -138,7 +138,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.7.1
 - DataMiner SupportAssistant: version 1.7.1
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### GQI: Ad hoc data source now supports real-time updates [ID 38643]
 
@@ -602,7 +602,7 @@ In other words, from now on, when this soft-launch option is set to true, these 
 
 #### SLNet: Enhanced performance when sending requests to SLDataGateway [ID 40023]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU13]/10.5.0 - FR 10.4.9 -->
 
 Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
 
@@ -1015,6 +1015,14 @@ The *VerifyClusterPorts* prerequisite and the *VerifyClusterPorts.dmupgrade* pac
 
 If this JSON file cannot be found, the endpoint to be tested will be retrieved from the *DMS.xml* and *SLCloud.xml* files.
 
+#### Change Element States Offline tool: Service elements will now be hidden by default [ID 41341]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+From now on, the *Change Element States Offline* tool will hide service elements by default. This will prevent users from mistakenly stopping those elements.
+
+If you do want service elements to be visible, select the *Advanced* checkbox.
+
 #### DataMiner upgrade packages will now include the most recent version of the CloudFeed DxM [ID 41357]
 
 <!-- MR 10.5.0 - FR 10.5.1 -->
@@ -1048,7 +1056,7 @@ The above-mentioned array will now be locked to prevent the data from getting co
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
+At DataMiner startup, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
 
 - If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
 - If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.
@@ -1059,18 +1067,65 @@ At DataMiner start-up, SLDataMiner will now check the *C:\\Skyline DataMiner\\So
 
 Because of a number of enhancements, overall performance of the DataMiner Cube server-side search engine has increased.
 
+#### DataMiner Connectivity Framework: Enhanced processing of SRM services by the connectivity manager [ID 41649]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Because of a number of enhancements made to the DataMiner Connectivity Framework, overall performance of the connectivity manager has increased when processing SRM services.
+
+#### Enhanced error and exception handling when updating or clearing correlation alarms [ID 41675]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+Error and exception handling has been enhanced in order to prevent duplicate or sticky correlation alarms due to errors or exceptions thrown when updating or clearing correlation alarms.
+
 #### Storage as a Service: Timeout for responses to write requests has been reduced to 10 seconds [ID 41717]
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
 On STaaS systems, the timeout for responses to write requests has been reduced to 10 seconds.
 
-#### Amazon Keyspaces Service is now end-of-life [ID 41874]
+#### Amazon Keyspaces Service is now end-of-life [ID 41874] [ID 41914]
 
 <!-- MR 10.5.0 [CU0] - FR 10.5.3 -->
 
 Support for Amazon Keyspaces Service is now officially end-of-life.
 
-We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-hosted storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
+When you run the DataMiner installer or install a DataMiner upgrade package, the *VerifyNoAmazonKeyspaces* prerequisite will check whether the DataMiner Agent is configured to use a database of type *Amazon Keyspaces*. If so, the upgrade process will not be allowed to continue.
+
+We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. If you want to use self-managed storage, install a [Cassandra Cluster](xref:Cassandra_database) database.
 
 For more information, see [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service)
+
+#### SLLogCollector now collects data regarding the GQI DxM [ID 41880]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+SLLogCollector packages now include the following data regarding the GQI DxM:
+
+- *appsettings.json*
+- Log file
+- Version
+
+#### GQI DxM: Redundant Logging section removed from appsettings.custom.json file [ID 42075]
+
+<!-- MR 10.5.0 - FR 10.5.3 -->
+
+The redundant `Logging` section (see example below) has now been removed from the `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.custom.json` file.
+
+```json
+"Logging": {
+  "LogLevel": {
+  "Default": "Debug",
+  "Microsoft": "Information"
+  }
+},
+```
+
+#### Failover: Virtual IP address check will no longer execute an arp command to double-check whether an IP address is free [ID 42280]
+
+<!-- MR 10.4.0 [CU12]/10.5.0 [CU0] - FR 10.5.3 [CU0] -->
+
+When the virtual IP address check concluded that the IP address was free after having executed the required number of ping commands, since DataMiner main release 10.3.0 [CU20]/10.4.0 [CU8] and feature release 10.4.11, it would double-check by executing an arp command.
+
+From now on, it will no longer execute an arp command.

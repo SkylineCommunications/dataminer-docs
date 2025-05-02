@@ -40,4 +40,4 @@ Once the setting is disabled, run your workflow again to verify if everything is
 
 This happens when you run the CI before you have created the SonarCloud project. This makes a SonarCloud project without the proper configuration.
 
-Contact the Data-Acq Tools team so they can remove the project. You can then recreate the project with the correct settings.
+Contact the BOOST team so they can remove the project. You can then recreate the project with the correct settings.

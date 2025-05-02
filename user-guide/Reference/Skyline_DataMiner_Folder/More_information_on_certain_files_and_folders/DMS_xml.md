@@ -34,13 +34,11 @@ Example:
 
 ## Redirects subtag
 
-From DataMiner 10.3.0/10.3.2 onwards, this subtag can be used to make the DMAs in a DMS communicate with each other over **gRPC** instead of .NET Remoting. This uses the standard HTTPS port 443 by default. <!-- RN 34983 -->
+This subtag allows you to configure [connection strings between DataMiner Agents](xref:Connection_strings).
 
-Redirects must be added in *DMS.xml* for each DMA. Failover Agents also need a redirect to each other's IP address.
+Redirects must be added in *DMS.xml* for each DMA. Failover Agents also need a redirect to each other's IP address. For detailed information, see [How can you configure connection strings?](xref:Connection_strings#how-can-you-configure-connection-strings)
 
-You can either configure this directly in *DMS.xml*, or configure it by [implementing connection strings via the SLNetClientTest tool](xref:SLNetClientTest_editing_connection_string). If you use SLNetClientTest tool, no DataMiner restart will be needed.
-
-For example, in a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, DMS.xml can be configured as follows.
+For example, from DataMiner 10.3.0/10.3.2 onwards <!-- RN 34983 -->, this subtag can be used to make the DMAs in a DMS communicate with each other over **gRPC** instead of .NET Remoting. This uses the standard HTTPS port 443 by default. In a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, this would require the following configuration.
 
 - On the DMA with IP 10.4.2.92:
 

@@ -89,7 +89,7 @@ To do so:
    > - *Modules* > *System* *configuration* > *Agents* > *Upgrade / restore*
    > - *Modules* > *System* *configuration* > *Agents* > *Stop*
 
-1. Enter your DCP credentials when you are prompted to do so.
+1. When you are prompted to enter DCP credentials, enter your credentials for dataminer.services.
 
    At this point, the window will mention whether your system is up to date, and if it is not, it will show which update or upgrade is available (depending on whether you follow the Main Release track or the Feature Release track, respectively).
 
@@ -113,7 +113,9 @@ To do so:
    - Under *Upgrade DataMiner Agents*, you can select which Agents to upgrade. By default, *All Agents in cluster* is selected. While it is possible to select an individual Agent instead, we strongly recommend using the same version of DataMiner on all Agents in a DMS.
 
      > [!WARNING]
-     > To make sure the system functions correctly, all DMAs in a cluster must run the same DataMiner version.
+     > To make sure the system functions correctly, **all DMAs** in a cluster must run the **same DataMiner version**.
+     >
+     > This also means that, aside from the Failover options mentioned below, **rolling upgrades are not supported**. Upgrading a local DMA in the DMS while other non-upgraded DMAs remain running is not supported and can potentially cause severe data corruption.
 
    - In the *Advanced upgrade options* section, you can change the upgrade options if necessary. For more information on these options, see [default upgrade options](xref:Configuring_the_default_upgrade_options).
 

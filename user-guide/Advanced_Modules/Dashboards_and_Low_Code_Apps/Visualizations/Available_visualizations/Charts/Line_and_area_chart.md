@@ -10,7 +10,7 @@ This component can be used to display a trend graph.
 
 > [!NOTE]
 >
-> - If this type of component is added, the time span displayed by the component is available as an output in the data pane, so that this can be applied to other components.
+> - If this type of component is added, the time span displayed by the component is available as an output in the *Data* pane, so that this can be applied to other components.
 > - From DataMiner 10.2.0 [CU10]/10.3.1 onwards, this component also supports line graphs for string parameters.
 > - From DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41777-->, only the first 1000 items in a line & area chart are shown.
 
@@ -23,7 +23,7 @@ To configure the component:
    > [!NOTE]
    >
    > - If a query is used as data, additional configuration is required. See [Configuration with query data](#configuration-with-query-data).
-   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to pass a line chart by linking *Parameters* and *Indices* data, available in the data pane. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* data of the table to the line chart in order to see the data, similar to when you use a [parameter picker component](xref:DashboardParameterPicker).
+   > - Prior to DataMiner 10.2.0 [CU10]/10.3.1, you can use a table component to pass a line chart by linking *Parameters* and *Indices* data, available in the *Data* pane. From DataMiner 10.2.0 [CU10]/10.3.1 onwards, you only need to link the *Parameters* data of the table to the line chart in order to see the data, similar to when you use a [parameter picker component](xref:DashboardParameterPicker).
 
 1. Optionally, apply a filter:
 
@@ -31,7 +31,7 @@ To configure the component:
 
    - For a table parameter, an *indices* filter is supported.
 
-   - In a system using Service & Resource Management, you can add resources as data to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+   - In a system using [Service and Resource Management](xref:About_SRM), you can add resources as data to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time.
 
    - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
@@ -42,7 +42,7 @@ To configure the component:
 
    - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view trending for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
 
-1. Optionally, customize the following component options in the *Component* > *Settings* tab:
+1. Optionally, customize the following component options in the *Component* > *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
@@ -79,7 +79,7 @@ To configure the component:
 
      This setting is disabled by default. See also: [Zooming and panning](#zooming-and-panning).
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -114,7 +114,7 @@ To configure the component:
 
    - *Styling and Information* > *Expand legend initially*: Select this option to immediately show the trend legend in the component. Otherwise, the legend section is initially collapsed, and you can display it using the arrow icon next to the graph.
 
-   - *Styling and Information* > *Hide non-trended parameters*: Determines whether parameters are shown in the legend of the graph if they have no trend data available. If the option is selected, these parameters are hidden. By default, it is not selected in the most recent DataMiner versions, but it is selected by default prior to DataMiner 10.3.9/10.4.0<!-- RN 36869 -->. Prior to DataMiner 10.3.0/10.2.12, this option is named *Hide parameters without trend data in the legend*.
+   - *Styling and Information* > *Hide non-trended parameters*: Determines whether parameters are shown in the legend of the graph if they have no trend data available. If the option is selected, these parameters are hidden. This option is enabled by default. However, note that it is disabled by default from DataMiner 10.3.9/10.4.0 up to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4.<!--RN 36869 + 42532--> Prior to DataMiner 10.3.0/10.2.12, this option is named *Hide parameters without trend data in the legend*.
 
      > [!NOTE]
      > Prior to DataMiner 10.3.9/10.4.0, when a line chart component used element table column parameters as data and indices as filter, it would cross-match indices across the unique elements associated with the table column parameters. This behavior is prevented by disabling the *Hide non-trended parameters* option, enhancing the performance of these visualizations.
@@ -151,7 +151,7 @@ Query results are supported as data for this component from DataMiner 10.2.9/10.
 
 1. Create query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. In the *Component* > *Layout* tab, configure the following fields in the *Lines* section:
+1. In the *Component* > *Layout* pane, configure the following fields in the *Lines* section:
 
    - *X-axis column*: The numeric column that should be used for the X-axis data.
 
@@ -196,7 +196,7 @@ Query results are supported as data for this component from DataMiner 10.2.9/10.
 
 1. Create query data. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. In the *Component* > *Settings* tab, configure the following fields in the *Dimensions* section:
+1. In the *Component* > *Settings* pane, configure the following fields in the *Dimensions* section:
 
    - *Query*: The query data you want to use.
 
@@ -256,9 +256,9 @@ To add a component to a dashboard to show a basic trend graph with several DMA K
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
-1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the *Data* pane.
 
-1. Expand the *Parameters* section in the data pane and specify the element representing the DMA in the *Element* box.
+1. Expand the *Parameters* section in the *Data* pane and specify the element representing the DMA in the *Element* box.
 
 1. Select a parameter you want to display in the graph, and drag it to the graph. Repeat this for each parameter that should be displayed in the graph.
 
@@ -267,7 +267,7 @@ To add a component to a dashboard to show a basic trend graph with several DMA K
    >
    > ![Parameters section with filter](~/user-guide/images/dashboard_parameter_filter_icon.png)<br>*Parameters section with filter in DataMiner 10.3.11*
 
-1. In the *Settings* tab, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
+1. In the *Settings* pane, in the *Group by* box, select *Element*. This way all KPIs will be shown in the same graph.
 
 ![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart1.png)
 
@@ -277,14 +277,14 @@ To add a component to a dashboard to show a basic trend graph using profile para
 
 1. In edit mode, drag the *Line & area chart* visualization to the dashboard.
 
-1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the data pane.
+1. Click the ![Data icon](~/user-guide/images/dashboards_data.png) icon to filter the available data in the *Data* pane.
 
-1. Expand the *Profile parameters* section in the data pane.
+1. Expand the *Profile parameters* section in the *Data* pane.
 
    If you have configured it correctly in DataMiner Cube, there should be a profile parameter linked with a protocol and a trended parameter of the data you want to see.
 
 1. Select the profile parameter you want to display in the graph, and drag it to the graph.
 
-1. Expand the *Elements* section in the data pane, select the element you want to display in the graph, and drag it to the graph.
+1. Expand the *Elements* section in the *Data* pane, select the element you want to display in the graph, and drag it to the graph.
 
 ![Example of a trend graph shown with a Line & area chart component](~/user-guide/images/dashboard_example_linechart2.png)

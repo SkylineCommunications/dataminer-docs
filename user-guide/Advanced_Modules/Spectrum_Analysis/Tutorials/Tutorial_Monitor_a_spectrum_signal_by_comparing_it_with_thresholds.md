@@ -8,7 +8,7 @@ For many international football games, a good live stream across the globe is of
 
 You will learn how to:
 
-- Deploy an application package from the DataMiner Catalog
+- Deploy an application package from the Catalog
 - Add and manage a spectrum preset
 - Alter the settings to get the trace window applicable for your use case
 - Add and edit thresholds
@@ -62,7 +62,7 @@ This tutorial consists of the following steps:
 
    - Open the Automation module in DataMiner Cube and check if the Automation script *SPCTRM_AS_SkylineSpectrumSimulation* has been added.
 
-   - On the homepage of your DataMiner System, check whether the low-code app "Skyline Spectrum Simulation" has been added.
+   - On the home page of your DataMiner System, check whether the low-code app "Skyline Spectrum Simulation" has been added.
 
      > [!TIP]
      > See also: [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)

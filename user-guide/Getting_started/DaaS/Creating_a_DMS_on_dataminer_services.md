@@ -1,17 +1,29 @@
 ---
 uid: Creating_a_DMS_on_dataminer_services
+keywords: dms in the cloud
 ---
 
 # Creating a new DMS on dataminer.services
 
-<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
-  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 TIPS TO TAKE FLIGHT</b><br>Prefer to watch a video instead of reading? Watch <a href="https://community.dataminer.services/courses/kata-11/">Kata #11: Create a DMS on dataminer.services</a>.
-  </div>
-  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+Watch this short video to learn how to create a new DataMiner System hosted on dataminer.services, or follow the steps below:
+
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/user-guide/images/DaaS.mp4" type="video/mp4">
+  </video>
 </div>
 
-1. [Log on to dataminer.services](xref:Logging_on_to_the_DataMiner_Cloud_Platform).
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%; margin-top: 20px;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DFF6DD; margin-right: 20px; color: black;">
+    <b><span style="color: #2A7661;">💡 TIP</span></b><br>
+    You can also watch our interactive exercise on DataMiner Dojo: 
+    <a href="https://community.dataminer.services/courses/kata-11/">Kata #11: Create a DMS on dataminer.services</a>.
+  </div>
+</div>
+
+<br />
+
+1. [Log on to dataminer.services](xref:Logging_on_to_dataminer_services).
 
 1. Next to *DataMiner Systems*, click *Add a DataMiner System*.
 
@@ -45,3 +57,10 @@ uid: Creating_a_DMS_on_dataminer_services
 >
 > - It is possible to create a DaaS system as a staging system. Our Pay-per-Use model is used for this. For detailed information, see [DataMiner Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition).
 > - When you create a DaaS system, your dataminer.services account will automatically be linked to your DataMiner account, so you can easily access DataMiner web apps such as the Monitoring app via remote access.
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 UP NEXT</b><br><a href="xref:Accessing_a_new_DMS"></a>
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>

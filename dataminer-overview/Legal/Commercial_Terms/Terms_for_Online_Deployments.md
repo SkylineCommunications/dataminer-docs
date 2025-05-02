@@ -26,7 +26,7 @@ Please note, this Agreement supersedes any prior order or purchase terms and is 
 
 - "**Software**": The DataMiner software application provided by Skyline in object code format, including any associated drivers and software.
 
-- "**Services**": The Software offered to User on a pay-per-use basis, subscription, or free of charge, which may be self-hosted or provided as a Hosted Service.
+- "**Services**": The Software offered to User on a pay-per-use basis, subscription, or free of charge, which may be self-managed or provided as a Hosted Service.
 
 - "**Support Services**": Technical support provided by Skyline, including updates and upgrades for the Software under a perpetual license.
 

@@ -1,6 +1,7 @@
 ---
 uid: Cloud_connectivity_and_security
 description: Security is built into the core design of the DataMiner Cloud Connectivity framework, so you can securely access the wealth of cloud features.
+keywords: cloud security
 ---
 
 # Cloud connectivity and security
@@ -49,13 +50,13 @@ Only outgoing traffic needs to be allowed through for the domain *.dataminer.ser
 > - Technical details of this implementation may be subject to change, as we regularly review our security implementations.
 > - Users can disconnect their system from dataminer.services at any given time. For more information, please refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-## Live sharing
+## Live Sharing
 
 Users can share a dashboard by clicking the *Start sharing* button in the dashboard menu bar. They can then specify a list of email addresses to share the dashboard with. Those email addresses will receive a link to the shared dashboard.
 
 When the recipients open the link, they will need to authenticate by logging in with the account on dataminer.services linked to that email address, or by creating a dedicated dataminer.services account if they do not have any of the formerly mentioned accounts. After successfully authenticating, the recipient will be directed to the dashboard through the dataminer.services tunnel.
 
-No data from the private DataMiner System hosting the dashboard is stored on dataminer.services. The share can be deleted in the same way as it was created. All emailed links will then automatically become unreachable. For more information, please refer to [Sharing a dashboard](xref:Sharing_a_dashboard).
+The shared dashboard will show up to date (live) data from the system. No data from the private DataMiner System hosting the dashboard is stored on dataminer.services. The share can be deleted in the same way as it was created. All emailed links will then automatically become unreachable. For more information, please refer to [Sharing a dashboard](xref:Sharing_a_dashboard).
 
 Behind the scenes, DataMiner relies on several defense mechanisms to prevent unauthorized access to the shared dashboards.
 

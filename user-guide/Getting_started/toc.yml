@@ -11,13 +11,18 @@ items:
           topicUid: Accessing_a_new_DMS
         - name: Connecting to data sources
           topicUid: DaaS_connecting_to_data_sources
+          items:
+            - name: Connecting to private data sources with DaaS
+              topicUid: Connecting_to_private_data_sources
+        - name: Deploying solution demos
+          topicUid: DaaS_deploying_solution_demos
         - name: Ordering DataMiner credits
           topicUid: Order_DataMiner_credits
         - name: Removing a DaaS system
           topicUid: Removing_a_DaaS_system
         - name: Frequently asked questions
           topicUid: Creating_a_DaaS_system_FAQ
-    - name: Installing a self-hosted DataMiner Agent
+    - name: Installing a self-managed DataMiner Agent
       topicUid: Installing_a_DataMiner_Agent
       items:
         - name: Using a pre-installed DataMiner Virtual Hard Disk

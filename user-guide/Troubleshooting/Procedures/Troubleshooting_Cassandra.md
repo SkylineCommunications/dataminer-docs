@@ -4,15 +4,15 @@ uid: Troubleshooting_Cassandra
 
 # Troubleshooting – Cassandra
 
-DataMiner uses Cassandra in various ways. Each way has its specific behavior and place within a DataMiner System.
+In case self-managed storage is used (not recommended), Cassandra or a Cassandra-compatible database service is needed, which DataMiner will use in various ways. Each way has its specific behavior and place within a DataMiner System.
 
-Two types of Cassandra storage are used, i.e. two distinct types of Cassandra databases:
+Self-managed storage can use two distinct types of Cassandra databases:
 
 - Dedicated clustered storage:, called *Cassandra Cluster* below.
 - Storage per DMA (with or without indexing), called *Cassandra Single* below.
 
 > [!TIP]
-> For more information on available storage options, see [About databases](xref:Databases_about).
+> For more information on available storage options, see [About storage](xref:About_storage).
 
 ## Determining the type of setup
 
@@ -82,12 +82,12 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
 ### Basic debugging
 
-1. Check *SLCassandraHealth.txt* in *C:\\Skyline DataMiner\\Logging*.
+1. Check *SLCassandraHealth.txt* in `C:\Skyline DataMiner\Logging`.
 
    - Green: All is well.
    - Red: The database is down and needs to be looked at.
 
-1. Check the *SLDBConnection.txt* log in *C:\\Skyline DataMiner\\Logging*.
+1. Check the *SLDBConnection.txt* log in `C:\Skyline DataMiner\Logging`.
 
    Look for a line saying `Failed to fetch max alarm ID`.
 
@@ -102,7 +102,7 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
    In a *Cassandra Cluster* setup, on a Linux node, these files can mostly be found in */var/log/cassandra*. In a *Cassandra Single* setup, these can be found in *C:\Program Files\Cassandra\logs*.
 
-   Search for "tombstone" or "timeout" in *debug.log* and *system.log*. This is particularly relevant if elements are unable to start or if element data is missing.
+   Search for "tombstone" or "timeout" in *debug.log* and *system.log*. This is particularly relevant if elements are unable to start or if element data is missing (see [Element fails to start because of database failure](xref:Cassandra_General_DB_Failure)).
 
    Tombstones are created upon adding/updating/deleting a null value toward the database. They correspond with a "delete" in Cassandra and drastically decrease read performance. They also take up space.
 
@@ -110,7 +110,7 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
    If a tombstone problem or a timeout is detected, the query that causes this will be logged. Make a note of this.
 
-## Common configuration mistakes
+## Common configuration issues
 
 - The machines hosting the databases do not meet the **system requirements**. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
@@ -155,3 +155,5 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
       > If you do not feel confident executing these actions, contact your Skyline representative for assistance.
 
   - When you **increase** the TTL, note that old data will still expire with the old, smaller TTL, as only new data will be written with the higher TTL.
+
+- Prior to DataMiner 10.4.0 [CU11]/10.5.2<!--RN 41551-->, changes to Cassandra compaction settings, such as the *unsafe_aggressive_sstable_expiration* option, may be incorrectly overwritten by the default settings during DataMiner startup. This issue applies only to manually configured Cassandra systems.

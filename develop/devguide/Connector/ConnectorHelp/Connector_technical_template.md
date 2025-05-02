@@ -4,6 +4,8 @@ uid: Connector_technical_template
 
 # Connector technical documentation template
 
+## About
+
 [Short description of the data source and of the function of the connector.]
 
 ## Configuration
@@ -93,7 +95,7 @@ The web interface is only accessible when the client machine has network access 
 
 [If any dashboards need to be configured, indicate this in this section. Otherwise, this section can be removed.]
 
-## How to use
+## How to Use
 
 [In this section, provide a more detailed description of how the connector functions. For more information, refer to [Writing connector documentation](xref:Connector_help_pages#writing-connector-documentation).]
 

@@ -27,7 +27,7 @@ keywords: low-code, low code, lowcode
 > - [Using Visual Overview to control dashboard feed components](xref:Using_visio_to_control_dashboard_feed_components)
 
 ### Low-Code Apps tutorials
- 
+
 | Name | Description |
 |--|--|
 | [Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing) | Create and publish your first low-code app. |
@@ -42,7 +42,10 @@ keywords: low-code, low code, lowcode
 | [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
 | [Getting started with the grid component](xref:Tutorial_Apps_Grid) | Getting started with a grid component in a low-code app using GQI queries and the Template Editor. |
 | [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design) | Create an intuitive, visually appealing, and user-friendly low-code app, learning about best practices in low-code app design. |
+| [Using flows in a low-code app](xref:Tutorial_Apps_Flows) | Use flows to only load items inside of the timeline viewport and reuse panels. |
+| [Using variables in a low-code app](xref:Tutorial_Apps_Variables) | Use a variable to dynamically filter elements in a low-code app based on their state. |
 | [Creating a custom event scheduler low-code app](xref:Tutorial_Custom_Event_Scheduler_LCA) | Create an event scheduler app. |
+| [Visualizing the Starlink location history in DataMiner](xref:Tutorial_Visualizing_Starlink_Location_History_in_DataMiner) | Visualize the location history of Starlink terminals on a map, leveraging ad hoc data sources. |
 
 ### GQI tutorials
 

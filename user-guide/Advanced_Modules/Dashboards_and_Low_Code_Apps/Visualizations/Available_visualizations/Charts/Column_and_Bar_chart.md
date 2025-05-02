@@ -21,9 +21,9 @@ To configure the component:
 
    This component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
-1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. To do so, hover the mouse pointer over the component, click the filter icon, and then add a filter from the *parameters* section of the data pane.
+1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. To do so, hover the mouse pointer over the component, click the filter icon, and then add a filter from the *parameters* section of the *Data* pane.
 
-1. Optionally, customize the following component options in the *Settings* tab:
+1. Optionally, customize the following component options in the *Settings* pane:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
@@ -46,7 +46,7 @@ To configure the component:
    > [!NOTE]
    > From DataMiner 10.3.7/10.4.0 onwards, when you add a query to the component, the label and bars will automatically be configured. <!-- RN 36229 -->
 
-1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available if the chart is not used with queries data input:
+1. Optionally, fine-tune the component layout. In the *Component* > *Layout* pane, the following options are available if the chart is not used with queries data input:
 
    - The default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
@@ -72,15 +72,15 @@ To configure the component:
 
    - *Advanced \> Chart layout*: Allows you to choose how the dimensions of the bars are determined. Possible values:
 
-     - *Absolute*: The dimension of each bar is shown as an absolute numeric value.
+     - *Absolute*: The dimension of each bar is shown as an absolute numeric value. From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42106-->, this is the default value.
 
      - *Relative per category*: The dimension of each bar is shown as a relative percentage compared to other bars representing the different variables for each separate category. (Available from DataMiner 10.1.0/10.1.2 onwards.)
 
-     - *Relative per variable:* The dimension of each bar is shown as a relative percentage compared to other bars representing this variable.
+     - *Relative per variable:* The dimension of each bar is shown as a relative percentage compared to other bars representing this variable. Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4<!--RN 42106-->, this is the default value.
 
      - *Relative total*: The dimension of each bar is shown as a percentage of the sum of all values. (Available from DataMiner 10.1.0/10.1.2 onwards.)
 
-   - *Advanced \> Chart orientation*: Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top.
+   - *Advanced \> Chart orientation*: Determines how the chart is displayed, i.e. from left to right, from right to left, from top to bottom or from bottom to top. From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42106-->, *Bottom to top* is the default setting. Prior to this, *Left to right* is the default setting.
 
    - *Advanced* \> *Stack bars:* Available from DataMiner 10.1.0/10.1.2 onwards. Stacks the bars on top of each other instead of showing them side by side. This can be especially useful when combined with the *Relative per category* layout.
 

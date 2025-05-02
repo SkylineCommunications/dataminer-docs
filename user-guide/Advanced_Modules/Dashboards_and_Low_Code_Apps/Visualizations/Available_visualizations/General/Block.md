@@ -8,4 +8,4 @@ This component consists of an empty block, which can be used as a divider betwee
 
 ![Block](~/user-guide/images/Block.png)<br>*Block component in DataMiner 10.4.6*
 
-In the *Component* > *Layout* tab, only the default options are available for this component. See [Customizing the component layout](xref:Customize_Component_Layout).
+In the *Component* > *Layout* pane, only the default options are available for this component. See [Customizing the component layout](xref:Customize_Component_Layout).

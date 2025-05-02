@@ -85,7 +85,7 @@ To access and interact with your new DataMiner System, install DataMiner Cube, t
 
 Now that you have set up your staging DataMiner System and installed DataMiner Cube, add the *Generic HTTP Query* protocol (also known as connector), through which your element will communicate with your DMA.
 
-1. Look up the [*Generic HTTP Query* connector](https://catalog.dataminer.services/details/d29994e3-f2a6-4da4-972f-21cbb7b1cd62) in the DataMiner Catalog.
+1. Look up the [*Generic HTTP Query* connector](https://catalog.dataminer.services/details/d29994e3-f2a6-4da4-972f-21cbb7b1cd62) in the Catalog.
 
 1. Click the *Deploy* button.
 

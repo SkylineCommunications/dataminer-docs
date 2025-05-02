@@ -32,5 +32,5 @@ See the examples below.
 
 | Instead of writing ...   | write ...             |
 |--------------------------|-----------------------|
-| href=”styles/mail.css”   | href=”cid:mail.css”   |
-| src=”images/myimage.jpg” | src=”cid:myimage.jpg” |
+| href="styles/mail.css"   | href="cid:mail.css"   |
+| src="images/myimage.jpg" | src="cid:myimage.jpg" |

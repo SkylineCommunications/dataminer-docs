@@ -59,8 +59,10 @@ setBindings="1,250"
 > [!IMPORTANT]
 >
 > - A Trigger 'on change' on a trap receiver parameter will never trigger. Because of the way the trap data is received, stored and forwarded, the actual value of the trap receiver parameter will not change. In case you want to trigger an operation upon receiving a trap (e.g. poll a table), you need to either:
+>
 >   - map one of the bindings to a parameter and then trigger on a change of that parameter, or
 >   - trigger a QAction using 'allbindinginfo' and trigger the operation (e.g. poll a table) from that QAction (e.g. using CheckTrigger or SetParameter).
+>
 > - For a protocol to be able to capture traps, it is important that the SNMP connection that is set up during element creation is configured with the **polling IP address instead of a hostname**. Using a hostname is not supported for SNMP trap reception.
 
 ### See also
@@ -203,7 +205,7 @@ In the following example, the severity is user-definable. The severity attribute
 ```
 
 > [!IMPORTANT]
-> 
+>
 > - [RTDisplay](xref:Protocol.Params.Param.Display.RTDisplay) must be set to `true` to generate alarms.
 > - [RTDisplay](xref:Protocol.Params.Param.Display.RTDisplay) can be set to `false` if you only want to receive the trap.
 

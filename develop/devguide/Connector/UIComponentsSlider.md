@@ -56,14 +56,14 @@ To define a slider, provide a numeric range using the Range tag.
 </Param>
 ```
 
-![alt text](~/develop/images/uislider.png "DataMiner Cube slider")
+![DataMiner Cube slider](~/develop/images/uislider.png)
 
 > [!NOTE]
 > The example above also illustrates the usage of a unit (via the Units tag) and a step size (via the Steps tag).
 
-## Creating a slider with a check box
+## Creating a slider with a checkbox
 
-The following example illustrates how you can create a slider with a check box.
+The following example illustrates how you can create a slider with a checkbox.
 
 ```xml
 <Param id="170">
@@ -123,7 +123,7 @@ The following example illustrates how you can create a slider with a check box.
 </Param>
 ```
 
-![alt text](~/develop/images/uisliderwithcheckbox.png "DataMiner Cube slider with check box")
+![DataMiner Cube slider with checkbox](~/develop/images/uisliderwithcheckbox.png)
 
 ## Creating a slider with a drop-down List
 
@@ -195,7 +195,7 @@ If you provide multiple discrete entries with state "disabled", a drop-down list
 </Param>
 ```
 
-![alt text](~/develop/images/uisliderwithcheckbox2.png "DataMiner Cube slider with drop-down list")
+![DataMiner Cube slider with drop-down list](~/develop/images/uisliderwithcheckbox2.png)
 
 ## See also
 

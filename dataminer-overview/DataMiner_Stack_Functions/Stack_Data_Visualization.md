@@ -50,8 +50,6 @@ This particular stack function keeps track of detailed historical key performanc
 
 DataMiner allows the user to define exactly for which parameters trending information has to be logged in the trending database and which kind of trending information has to be included. In a trend template, you can define both the scope (which parameters) and the type (real-time data, average trending, or a combination of both) of the trend information to be stored in the trending database.
 
-In systems using [Storage as a Service](xref:STaaS) or a [self-hosted setup with indexing database](xref:Databases_about), DataMiner’s [Augmented Operations](xref:Stack_Augmented_Operations) are enabled, including AI features such as trend prediction, pattern matching and much more.
-
 > [!TIP]
 > For more information:
 >
@@ -157,7 +155,7 @@ DataMiner Dashboards enable operators to efficiently leverage the extensive, val
 
 With the Dashboards app, you can **create, manage, and view** dashboards that display a **wealth of information** about the managed system.
 
-Moreover, dashboards adhere to DevOps principles and can easily evolve over time at runtime. They can even be **shared with just about anybody outside of the company** through [dataminer.services](xref:Overview_DCP). Our built-in security functionality allows you control over the data you share, enabling you to determine which data is shared, with whom, and for how long.
+Moreover, dashboards adhere to DevOps principles and can easily evolve over time at runtime. They can even be **shared with just about anybody outside of the company** through [dataminer.services](xref:Overview_dataminer_services). Our built-in security functionality allows you control over the data you share, enabling you to determine which data is shared, with whom, and for how long.
 
 > [!TIP]
 > See [Dashboard Share](xref:Overview_Collaboration#dashboard-share) for more information.
@@ -205,7 +203,7 @@ First of all, DataMiner Control Panels **allow versatile control actions with th
 
 Moreover, you have the freedom to **customize the appearance and design** of each DataMiner Control Panel. This includes not only buttons but also trend charts, thumbnails, real-time metrics and KPIs, spectrum analyzers, or any other elements that align with your specific needs.
 
-And finally, the control panels **enable true multi-tenant operations**. You can create tailor-made control panels for any customer, partner, or supplier, and share them via the DataMiner Cloud Platform.
+And finally, the control panels **enable true multi-tenant operations**. You can create tailor-made control panels for any customer, partner, or supplier, and share them via the dataminer.services.
 
 > [!TIP]
 > For more information:

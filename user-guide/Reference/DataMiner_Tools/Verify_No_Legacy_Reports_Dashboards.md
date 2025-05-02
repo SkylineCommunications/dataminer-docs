@@ -4,7 +4,7 @@ uid: Verify_No_Legacy_Reports_Dashboards
 
 # Verify No Legacy Reports Dashboards
 
-In DataMiner 10.4.0/10.4.1<!--RN 37922-->, the *VerifyNoLegacyReportsDashboards* prerequisite check is added to upgrade packages. This check verifies that no legacy reports and legacy dashboards still exist on your DataMiner System before upgrading, as these will no longer work after the upgrade.
+From DataMiner 10.4.0/10.4.1 onwards<!--RN 37922-->, the *VerifyNoLegacyReportsDashboards* prerequisite check is included in upgrade packages. This check verifies that no legacy reports and legacy dashboards still exist on your DataMiner System before upgrading, as these will no longer work after the upgrade.
 
 From DataMiner 10.4.0 onwards, the [legacy Reporter](xref:reporter) and [legacy Dashboards](xref:dashboards) modules are *End of Life*. These have been replaced by the [Dashboards app](xref:newR_D).
 
@@ -15,7 +15,7 @@ From DataMiner 10.4.0 onwards, the [legacy Reporter](xref:reporter) and [legacy 
 
 If the *VerifyNoLegacyReportsDashboards* check fails, there are still legacy reports and dashboards on your system.
 
-- If you no longer need the legacy Reporter and Dashboards modules, remove any existing legacy reports and legacy dashboards by deleting them in the Reporter and Dashboards modules.
+- If you no longer need the legacy Reporter and Dashboards modules, remove any existing legacy reports and legacy dashboards by deleting the *C:\Skyline DataMiner\Webpages\Dashboards\db\\* folder as well as *C:\Skyline DataMiner\Webpages\Reports\Templates\Templates.xml*.
 
   > [!NOTE]
   > Other DataMiner modules, such as Automation, Scheduler, and Visual Overview, may also make use of these.

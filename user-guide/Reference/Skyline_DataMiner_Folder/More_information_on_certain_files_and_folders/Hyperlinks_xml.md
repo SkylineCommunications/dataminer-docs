@@ -100,6 +100,14 @@ In the *\<HyperLink>* tag, enter the following content, depending on the type of
   > [!NOTE]
   > It is not necessary to use the "Script:" prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an Automation script is referred to.
 
+- **Type "OpenCPE"**: The EPM card.
+
+  Supported from DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42221 -->, or with the *CPEIntegration* [soft-launch option](xref:SoftLaunchOptions) in earlier DataMiner versions.<!-- RN 22125 -->
+
+  For example, to add an "Open OLT" hyperlink to the Alarm Console context menu to open the EPM card of the object that generated the selected alarm: `<HyperLink  name="Open OLT" menu="root" type="OpenCPE" version="2" id="18">:visual:pagename</HyperLink>`.
+
+  Hyperlinks of this type can also be shown or hidden based on a filter configured with the [filterElement](#filterelement) attribute. For example: `<HyperLink filterElement="AlarmEventMessage.PropertiesDict.&quot;System Type&quot;[String] == 'OLT'" name="Open OLT" menu="root" type="OpenCPE" version="2" id="18">[EID]:visual:qam ds</HyperLink>`.
+
 - **Type "openview"**: The view ID. Alternatively, you can use the \[VID\] placeholder to open the view of the selected alarm.
 
   You can also have the view opened on a particular page, using the same syntax as in a [Cube argument](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page) (e.g. *\[VID\]::Aggregation*).

@@ -53,7 +53,7 @@ Expected duration: 30 minutes.
 
 1. Select the *Best Practices in Low-Code App Design* app.
 
-   You now see the homepage of the application. Since the initial package does not contain any contacts, no contacts are listed on this page yet.
+   You now see the home page of the application. Since the initial package does not contain any contacts, no contacts are listed on this page yet.
 
    ![Initial app](~/user-guide/images/tutorial_app_design_intial_app.png)
 
@@ -212,7 +212,7 @@ Now that you have created a theme, you can apply it to your low-code app.
 
    Depending on your DataMiner version, you may need to click the pencil icon next to "Contacts".
 
-1. Make sure no components are selected, and navigate to the *Layout* tab in the pane to the right.
+1. Make sure no components are selected, and navigate to the *Layout* pane on the right.
 
 1. Click the box indicating the currently used theme.
 
@@ -266,7 +266,7 @@ Here is an example of a rearrangement for a visually appealing result:
 
 Titles can be more than simple text boxes. To make them a little more interesting, use a [web component](xref:DashboardWeb) and incorporate HTML. In the app, a web component is already used to display the title. However, the HTML is rather basic.
 
-1. Select the web component that displays the *Contacts* title, and go to the *Settings* tab in the pane to the right.
+1. Select the web component that displays the *Contacts* title, and go to the *Settings* pane on the right.
 
 1. Paste the following HTML in the *HTML* field:
 
@@ -291,11 +291,11 @@ You may have noticed earlier, but the form used for creating new contacts also h
 
 1. In the *panels* section to the left, select the pencil icon next to *Contact Form*.
 
-1. Go to the *Layout* tab in the pane to the right, and click the box indicating the currently used theme.
+1. Go to the *Layout* pane on the right, and click the box indicating the currently used theme.
 
 1. Select the theme you created earlier, which ended in "- Panel".
 
-1. In the *Settings* tab, enable the *Fit to view* setting to take on the full panel height.
+1. In the *Settings* pane, enable the *Fit to view* setting to take on the full panel height.
 
 1. Hover your mouse pointer over the *+Add* button component and select the trash icon.
 
@@ -308,7 +308,7 @@ You may have noticed earlier, but the form used for creating new contacts also h
    > [!TIP]
    > See also: [Configuring components](xref:Configuring_components)
 
-1. Go to the *Settings* tab in the pane to the right, and paste the following HTML in the *HTML* field:
+1. Go to the *Settings* pane on the right, and paste the following HTML in the *HTML* field:
 
 ```html
 <div style="height:100%;display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin:0;margin:0 4%;"><H1 style="color: rgb(0,9,54); font-family:'Segoe UI Light','Segoe UI Web Light','Segoe UI Web Regular','Segoe UI','Segoe UI Symbol',HelveticaNeue-Light,'Helvetica Neue',Arial,sans-serif;margin:0;font-weight:100;font-size:20px">

@@ -24,8 +24,6 @@ When working with the [Data API](xref:Data_API) and [scripted connectors](xref:S
 
   - Rejects requests from external systems.
 
-  - Requires a field "Id" in JSON arrays, serving as the primary key in the element's table.
-
   - Supports a nested table structure with multiple child tables pointing to a single parent table, does not currently support a child table with foreign key relations to multiple parent tables.
 
 - Parameters in auto-generated connectors:

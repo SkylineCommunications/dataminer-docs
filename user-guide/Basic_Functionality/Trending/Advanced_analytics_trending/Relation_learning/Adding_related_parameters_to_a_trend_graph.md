@@ -36,7 +36,7 @@ The following prerequisites are **mandatory**. You will not be able to use this 
 
 The following prerequisites are **optional** but highly recommended, as they will unlock the full capabilities of the feature:
 
-- The DataMiner System should use [Storage as a Service](xref:STaaS) or a [self-hosted Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
+- The DataMiner System should use [Storage as a Service](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database](xref:Supported_system_data_storage_architectures).
 
 - Behavioral anomaly detection should be enabled. You can enable this feature in System Center, via *System settings* > *analytics config*. Enabling this feature allows DataMiner to generate data based on what happens in your system, so that it can understand what is going on.
 

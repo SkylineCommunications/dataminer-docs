@@ -6,10 +6,11 @@ uid: LowCodeApps_event_config
 
 You can configure actions for different types of events in DataMiner Low-Code Apps. These are the main types:
 
-- *On open*: This event takes place when a page or panel is opened and all components are done loading. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) and [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).)
+- *On open*: This event takes place when a page or panel is opened. (See [Configuring a page of a low-code app](xref:LowCodeApps_page_config) and [Configuring a panel of a low-code app](xref:LowCodeApps_panel_config).)
 
   > [!NOTE]
   > Prior to DataMiner 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--RN 39604 + 39682 + 39636-->, this type of event is only available for low-code app pages and is called "On page load".
+  > Prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 42039-->, this type of event only executes its actions when all components are done loading. This also includes the components that need scrolling down to be loaded.
 
 - *On click*: This event takes place when a user clicks a button. (See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).)
 
@@ -62,6 +63,26 @@ To configure an event to navigate to a URL:
    > - In the Template Editor (available from DataMiner 10.4.1/10.5.0 onwards), you can create dynamic links or pass context to a script by incorporating variables within the URL, denoted by enclosing the column name within curly brackets ("`{}`")<!--RN 34761-->. See [Dynamically referencing data in text](xref:Dynamically_Referencing_Data_in_Text).
 
 1. Optionally, to open the webpage in a new tab, enable the option *Open in new tab*.
+
+## Copying text to the clipboard
+
+Available from DataMiner 10.4.0 [CU11]/10.5.2 onwards<!--RN 41729-->.
+
+To configure an event to copy text to the clipboard:
+
+1. Select *Copy to clipboard*.
+
+1. In the text box, enter the content to be copied when the event is triggered. Alternatively, use curly brackets to insert variables dynamically.
+
+In the following example, an on-click *Copy to clipboard* action was configured for an icon added to a table column:
+
+![Copy to clipboard](~/user-guide/images/Copy_to_Clipboard.png)<br>*Copy to clipboard action configuration in DataMiner 10.5.2*
+
+When the icon is clicked, the content of the associated "Order ID" cell is copied to the clipboard.
+
+Optionally, you can configure a [*Show a notification* action](#showing-a-notification) to run after the *Copy to clipboard* action. This notification confirms that the content was successfully copied to the clipboard:
+
+![Copy to clipboard](~/user-guide/images/Copy_to_Clipboard.gif)<br>*Low-Code Apps module in DataMiner 10.5.2*
 
 ## Opening a page of the app
 

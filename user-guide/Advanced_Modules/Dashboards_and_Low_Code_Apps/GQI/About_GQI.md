@@ -36,6 +36,9 @@ To construct queries, you can use the Dashboards or Low-Code Apps modules, where
 
 ## Architecture
 
-GQI operates as a server-side process within the SLHelper process. It is only activated when it is used. Once the process has been activated, it remains operational for a duration of 30 minutes before automatically shutting down and releasing any utilized resources.
+The GQI engine can run in two different ways:
+
+- As an extension module. See [GQI DxM](xref:GQI_DxM).
+- Within the SLHelper process. In this case, it is only activated when it is used. Once the process has been activated, it remains operational for a duration of 30 minutes before automatically shutting down and releasing any utilized resources.
 
 When queries are executed, the rights and permissions of the current DataMiner user are taken into account. This way, DataMiner's security measures are enforced during data retrieval. This means that the obtained results may vary significantly for users belonging to different security groups.

@@ -25,4 +25,4 @@ If the DataMiner software version is less recent than the indicated version, the
 
 ## Example
 
-9.0.3.7 - 5687
+10.5.2.0 - 15323

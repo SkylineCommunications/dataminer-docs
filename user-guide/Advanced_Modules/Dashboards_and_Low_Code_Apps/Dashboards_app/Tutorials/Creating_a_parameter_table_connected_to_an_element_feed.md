@@ -38,11 +38,11 @@ Expected duration: 10 min.
 
 ## Step 2: Configure the dropdown component to list all elements of a specific protocol
 
-1. From the data pane, drag the *Elements* data header onto the data input of the dropdown component.
+1. From the *Data* pane, drag the *Elements* data header onto the data input of the dropdown component.
 
    ![Dragging the Elements data header onto the data input of the component](~/user-guide/images/Tutorial_Dropdown_Elements.png)
 
-1. From the data pane, drag the desired protocol onto the filter input of the dropdown component.
+1. From the *Data* pane, drag the desired protocol onto the filter input of the dropdown component.
 
    ![Dragging a protocol onto the filter input of the component](~/user-guide/images/Tutorial_Dropdown_Protocol.png)
 
@@ -50,7 +50,7 @@ The dropdown component will now list all available elements that match the proto
 
 ## Step 3: Configure a GQI query to display parameters from a specific protocol table and link it to the dropdown feed
 
-1. In the data pane, open the *QUERIES* section and click the "+" icon.
+1. In the *Data* pane, open the *QUERIES* section and click the "+" icon.
 
    ![Adding a query](~/user-guide/images/Tutorial_Add_Query.png)
 
@@ -107,7 +107,7 @@ The dropdown component will now list all available elements that match the proto
 
    ![Saving the query](~/user-guide/images/Tutorial_SavingTheQuery.png)
 
-1. Drag the query from the data pane onto the table component.
+1. Drag the query from the *Data* pane onto the table component.
 
    ![Dragging the query onto the table component](~/user-guide/images/Tutorial_query_as_table_input.png)
 

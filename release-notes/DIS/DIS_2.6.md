@@ -12,7 +12,7 @@ uid: DIS_2.6
 
 In the table editor, the *All Columns* section now has a *Foreign Key* column. In this column, you can select another table to which you want a particular table column to be linked.
 
-The table you select will be specified in the “foreignKey=” option of the \<ColumnOption> tag in question.
+The table you select will be specified in the "foreignKey=" option of the \<ColumnOption> tag in question.
 
 Default setting: “None”
 

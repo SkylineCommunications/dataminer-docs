@@ -1,5 +1,6 @@
 ---
 uid: Maintaining_cloud_connection_when_restoring
+keywords: cloud connection
 ---
 
 # Maintaining the dataminer.services connection when restoring a DMA

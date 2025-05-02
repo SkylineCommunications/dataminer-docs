@@ -84,7 +84,7 @@ Add a shape data field of type **Parameter** to the shape.
     64001|[Var:monitor]|[Var:buffer]|-1|Carrier CSG_200_000000001037 - NIT_06_R L Rx (public)|DisplayTime
     ```
 
-  - From DataMiner 10.2.0/10.1.8 onwards, you can have the spectrum thumbnail show the trace from a specific moment in the past, based on the recorded trending for a parameter in a spectrum monitor. To do so, as the parameter ID, specify the ID of the spectrum monitor trace parameter (which is always in the range 50000 - 59999). You can find this ID in the file *SpectrumMonitors.xml* in the folder *C:\\Skyline DataMiner*. Then configure the **HistoryMode** shape data in the same manner as to display the history alarm state of a parameter. See [Linking a shape to a history alarm](xref:Linking_a_shape_to_a_history_alarm).
+  - From DataMiner 10.2.0/10.1.8 onwards, you can have the spectrum thumbnail show the trace from a specific moment in the past, based on the recorded trending for a parameter in a spectrum monitor. To do so, as the parameter ID, specify the ID of the spectrum monitor trace parameter (which is always in the range 50000 - 59999). You can find this ID in the file *SpectrumMonitors.xml* in the folder `C:\Skyline DataMiner`. Then configure the **HistoryMode** shape data in the same manner as to display the history alarm state of a parameter. See [Linking a shape to a history alarm](xref:Linking_a_shape_to_a_history_alarm).
 
     > [!NOTE]
     > The trended trace record from right before the specified time will be displayed. For this purpose, the trended traces are queried with the following steps until a trace record is found, or the maximum search extent has been reached: 1 hour – 3 hours – 12 hours – 24 hours – 48 hours (maximum).

@@ -16,7 +16,8 @@ Expected duration: 30 minutes
 
 ## Prerequisites
 
-- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and where the [CPEIntegration](xref:Overview_of_Soft_Launch_Options#cpeintegration) soft-launch option is enabled.
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+- DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 --> or higher, or else a soft-launch configuration where the [CPEIntegration](xref:Overview_of_Soft_Launch_Options#cpeintegration) option is enabled.
 
 > [!TIP]
 > A [DataMiner as a Service](xref:Creating_a_DMS_on_dataminer_services) system comes with a dataminer.services connection out of the box and has most soft-launch options enabled, so it automatically meets this requirement.

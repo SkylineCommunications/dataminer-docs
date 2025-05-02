@@ -16,7 +16,7 @@ The following table provides an overview of the possible column option types:
 |[retrieved](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#retrieved)|Indicates that the content of the column will be managed in the protocol.|
 |[snmp](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#snmp)|Used for columns that contain data retrieved via SNMP.|
 |[state](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#state)|Used when retrieving SNMP or WMI tables.|
-|[viewTableKey](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#viewtablekey)|Used for direct view columns containing primary keys, so that a prefix is added to them, referring to the source element that supplied the data. See viewTableKey.|
+|[viewTableKey](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#viewtablekey)|Used for direct view columns containing primary keys, so that a prefix is added to them, referring to the source element that supplied the data.|
 
 > [!NOTE]
 > The usage of retrieved is preferred over custom. For more information, see <xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type>.
