@@ -18,7 +18,7 @@ If you do not see any network switches or only a partial topology, you can **sca
 
 1. If this is the first time you run a scan, define a **default IP scan range**.
 
-   Future scans will automatically use this range. You can update the default IP scan range at any time in the **Application Settings**.
+   Future scans will automatically use this range. You can update the default IP scan range at any time in the [application settings](xref:NetworkExplorer_UI_overview#application-settings).
 
    ![Set the default scan range](~/solutions/images/NS_manual_default-scan-range.png)
 
@@ -42,4 +42,4 @@ If you want to refresh the connections between network devices without scanning 
 
 The system will analyze the existing LLDP data from known devices and update the connection information where applicable.
 
-By default, removed connections will not be automatically deleted. You can adjust this behavior in the application settings.
+By default, removed connections will not be automatically deleted. You can adjust this behavior in the [application settings](xref:NetworkExplorer_UI_overview#application-settings).

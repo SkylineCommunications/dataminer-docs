@@ -52,5 +52,6 @@ You can filter by:
 
 ## Application settings
 
-You can access the application settings via the Settings button located in the About pop-up.
-To open the About pop-up, click the corresponding button in the upper-right corner of the Topology page.
+In the application settings window, you can update the default IP scan range and adjust the automatic removal behavior for removed connections.
+
+To access the application settings, click the *About* button in the top-right corner and then click the *Settings* button at the top of window.
