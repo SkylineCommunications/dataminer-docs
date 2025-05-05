@@ -4,9 +4,9 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 5 May 2025 - Fix - CloudGateway 2.17.5 - Crash due to racecondition [ID 42763]
+#### 5 May 2025 - Fix - CloudGateway 2.17.5 - Crash because of race condition [ID 42763]
 
-​When rapid file changes occured in DataMiner.xml or MaintenanceSettings.xml it could happen that CloudGateway crashed and restarted due to a race condition related to registering a handle.
+​When rapid file changes occurred in *DataMiner.xml* or *MaintenanceSettings.xml*, a race condition related to registering a handle could cause a problem in CloudGateway, causing the DxM to restart.
 
 #### 4 April 2025 - Enhancement - CloudGateway 2.17.4 - Dependencies updated [ID 42682]
 
