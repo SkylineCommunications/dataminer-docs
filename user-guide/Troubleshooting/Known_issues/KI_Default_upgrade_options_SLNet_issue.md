@@ -14,7 +14,7 @@ Because of changes introduced in DataMiner 10.4.1/10.5.0 [CU0], if *MaintenanceS
 
 ## Fix
 
-Install DataMiner 10.5.0 [CU4] or 10.5.7.
+Install DataMiner 10.5.0 [CU4] or 10.5.7.<!-- RN 42746 -->
 
 ## Workaround
 
