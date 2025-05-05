@@ -13,7 +13,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 If you are a member of the organization that published a specific Catalog item, you can now delete that Catalog item. When you do so, you will have to provide the reason for the deletion.
 
-### 05 May 2025 - Fix - Usage Export - Selected DMSs not respected during export [ID 42865]
+### 05 May 2025 - Fix - Usage Export - Selected DataMiner Systems not respected during export [ID 42865]
 
 Previously, export requests in the Admin app ignored the DataMiner Systems selected by the user and exported all available data instead. This issue has been resolved. Export results are now correctly limited to the selected DataMiner Systems.
 
