@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 05 May 2025 - Fix - Usage Export - Selected DMSs not respected during export
 
-Previously, export requests in the Admin Usage ignored the DMSs selected by the user and exported all available data instead. This issue has been resolved. Export results are now correctly limited to the selected DMSs.
+Previously, export requests in the admin app ignored the DMSs selected by the user and exported all available data instead. This issue has been resolved. Export results are now correctly limited to the selected DMSs.
 
 ### 05 May 2025 - New feature - Single sign-on for Catalog, Admin, and Shares
 
