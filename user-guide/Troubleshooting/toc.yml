@@ -133,6 +133,8 @@ items:
             topicUid: Troubleshooting_Services
           - name: Troubleshooting - trending
             topicUid: Troubleshooting_Trending
+          - name: Troubleshooting - web apps
+            topicUid: Troubleshooting_Webapps
           - name: Troubleshooting - process identification
             topicUid: Troubleshooting_Process_Identification
             items:
