@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 05 May 2025 - 5 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42793]
 
-Users who are part of the publishing organization are able to delete a catalog item, providing a reason why.
+If you are a member of the organization that published a specific Catalog item, you can now delete that Catalog item. When you do so, you will have to provide the reason for the deletion.
 
 ### 05 May 2025 - Fix - Usage Export - Selected DMSs not respected during export [ID 42865]
 
