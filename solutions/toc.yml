@@ -207,6 +207,15 @@ items:
         topicUid: Ping_Monitoring_managing_groups_destinations
       - name: Getting started tutorial
         topicUid: Tutorial_Apps_Ping_Monitoring_App
+    - name: Network Explorer
+      topicUid: NetworkExplorer
+      items:
+      - name: Getting started with Network Explorer
+        topicUid: NetworkExplorer_getting_started
+      - name: Network Explorer UI overview
+        topicUid: NetworkExplorer_UI_overview
+      - name: Supported devices and protocols
+        topicUid: NetworkExplorer_Supported_Devices_And_Protocols
     - name: Smart Trap Processor
       topicUid: Smart_Trap_Processor_Overview
       items:
