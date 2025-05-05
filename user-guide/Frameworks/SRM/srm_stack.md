@@ -14,11 +14,11 @@ The Scheduling Engine **executes scheduled actions precisely, reliably, and on t
 
 The Scheduler timeline can be visualized [in Visual Overview](xref:Embedding_a_Resource_Manager_component) or [in dashboards and low-code apps](xref:DashboardTimeline). The timeline components not only support rich schedule visualization options but also facilitate control surface user actions, such as selecting a time range in one click. A built-in bookings timeline is also available in the [Bookings module](xref:The_Bookings_module) in DataMiner Cube.
 
+![Bookings module](~/user-guide/images/Bookings_module.png)<br>*Bookings module in DataMiner Cube 10.5.5*
+
 To prevent alarm fatigue in operation teams, you can also apply **schedule-aware monitoring**. Alarm template configurations can be included in various [Profile-Load Scripts (PLS)](xref:srm_scripting#profile-load-script-pls) and/or [Life cycle Service Orchestration (LSO)](xref:srm_scripting#life-cycle-service-orchestration-lso-script) scripts. This way, when a profile is loaded on a resource based on the schedule, an alarm template can be loaded that only monitors the health status of the resource. Similarly, on service life cycle orchestration level, a switch to a different LSO state can go hand in hand with updated alarm monitoring.
 
 The scheduling engine supports a wide range of possibilities. Bookings can be permanent, scheduled to happen just once, or made to recur. DataMiner SRM supports a variety of LSO state transitions, including pre- and post-roll LSO state changes, as well as booking events. This allows you to streamline even the most complex event schedules.
-
-<!-- TODO: screenshot-->
 
 ## Resource Manager
 
@@ -26,9 +26,9 @@ Resources in DataMiner can represent any entity with limited **availability**, *
 
 A resource can be booked only partially or in its entirety, and it may even be booked multiple times during a given timeframe. Resource behavior can be fully customized to the needs of the operator and the managed infrastructure. To get a complete overview of all resources in the system and to easily add or manage resources, you can use the [Resources module](xref:The_Resources_module) in DataMiner Cube.
 
-DataMiner Resource Manager **controls and monitors the availability of all resources** in DataMiner SRM. This means that it prevents the use, or the booking ahead of time, of any resource that is not available in the desired time slot or time slot series. It is the central intelligence unit that ensures that not only all current services can rely on the availability of the booked resources, but also all planned modified services and new service launches in the future.
+![Resources module](~/user-guide/images/Resources_module.png)<br>*Resources module in DataMiner Cube 10.5.5*
 
-<!-- TODO: screenshot -->
+DataMiner Resource Manager **controls and monitors the availability of all resources** in DataMiner SRM. This means that it prevents the use, or the booking ahead of time, of any resource that is not available in the desired time slot or time slot series. It is the central intelligence unit that ensures that not only all current services can rely on the availability of the booked resources, but also all planned modified services and new service launches in the future.
 
 ## Automation Engine
 
@@ -38,9 +38,7 @@ Even if tasks are automated, the operator always remains in control. Not only is
 
 Automation scripts can be **developed, tested, and deployed at runtime**. Using built-in version control and quality checks during deployment (with DIS and CI/CD using our [dedicated workflows](xref:github_reusable_workflows_automation_master_workflow)), operators can easily use DevOps practices to respond to the rapid changes in today's networks, data centers, and service offerings.
 
-![Automation script example](~/user-guide/images/SRM_AutomationEngine.png)<br>*Automation module in DataMiner Cube 10.2.0*
-
-<!-- TODO: update screenshot -->
+![Automation script example](~/user-guide/images/Automation_module_example.png)<br>*Automation module in DataMiner Cube 10.5.5*
 
 ## Profile Manager
 
@@ -76,9 +74,7 @@ To allow you to **keep track of flows throughout your network**, DataMiner build
 
 DataMiner Service Manager offers a full-fledged **service layer on top of the individual network resources**. Service Manager uses DataMiner [service definitions](xref:srm_definitions#service-definition), which act as templates that enable quick service creation. Service definitions specify the required resource types and their interconnections for a certain service. In the [Services module](xref:The_Services_module) in DataMiner Cube, you can create service definitions by **dragging and dropping network functions on a canvas and connecting them as desired**.
 
-![Service definition example](~/user-guide/images/SRM_ServiceManager-1024x552.png)<br>*Service definition in the [Services module](xref:The_Services_module) in DataMiner Cube 10.2.0*
-
-<!-- TODO: update screenshot -->
+![Service definition example](~/user-guide/images/Service_definition_example.png)<br>*Service definition in the Services module in DataMiner Cube 10.5.5*
 
 In the out-of-the-box **Booking Manager app** that comes with DataMiner SRM, an operator who wants to instantiate a new service can then pick the right service definition, select the required resources and profiles, and set the time schedule. Only the resources that match the selected service type will be available for selection, and only if they have the capability and sufficient capacity to run the requested profiles, preventing any possible operational errors. Moreover, if the default Booking Manager app does not perfectly match your needs, you can create a custom booking wizard tailored to your specific workflows (e.g. simplified to the essentials).
 
@@ -88,9 +84,7 @@ Service definitions can be extended with [DTR (Data Transfer Rules)](xref:srm_sc
 
 Each service definition can be extended with a custom [Life cycle Service Orchestration (LSO)](xref:srm_scripting#life-cycle-service-orchestration-lso-script) script. This script can specify any life cycle state that the service should have, such as "paused", "standby", "switched to backup", etc. It also defines the transitions that need to happen between these states, which typically consist of a set of profile loads on the resources in the service.
 
-![Booking example](~/user-guide/images/SRM_ServiceManager_02-1024x552.png)<br>*Booking example in DataMiner Cube 10.2.0*
-
-<!-- TODO: update screenshot -->
+![Booking example](~/user-guide/images/Booking_states_example.png)<br>*Booking states example in DataMiner Cube 10.5.5*
 
 ### Enhance visibility on your service quality and SLAs
 
@@ -98,6 +92,4 @@ To monitor your services, you can build visual overviews and dashboards that can
 
 By controlling service schedules, DataMiner can also enhance all its monitoring capabilities with service awareness. This can be used to for example adapt alarm templates of inventory based on the service it is included in, automatically start and stop SLA tracking based on a the state of a service (started/paused/stopped), or dynamically spin up QoS monitoring probes as part of certain life cycle transitions.
 
-![Service visual overview example](~/user-guide/images/SRM_SLAVisibility-1024x557.png)<br>*Service visual overview example in DataMiner Cube 10.2.0*
-
-<!-- TODO: update screenshot -->
+![Service visual overview example](~/user-guide/images/SRM_SLAVisibility-1024x557.png)<br>*Service visual overview example*
