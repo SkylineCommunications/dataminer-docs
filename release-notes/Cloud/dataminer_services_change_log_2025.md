@@ -9,11 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 05 May 2025 - Fix - Usage Export - Selected DMSs not respected during export
+### 05 May 2025 - 5 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42793]
+
+Users who are part of the publishing organization are able to delete a catalog item, providing a reason why.
+
+### 05 May 2025 - Fix - Usage Export - Selected DMSs not respected during export [ID 42865]
 
 Previously, export requests in the admin app ignored the DMSs selected by the user and exported all available data instead. This issue has been resolved. Export results are now correctly limited to the selected DMSs.
 
-### 05 May 2025 - New feature - Single sign-on for Catalog, Admin, and Shares
+### 05 May 2025 - New feature - Single sign-on for Catalog, Admin, and Shares [ID 42768] [ID 42789]
 
 Single sign-on (SSO) has been implemented across the Catalog, Admin, and Shares apps on dataminer.services. Users who sign in to one of these applications will now be automatically signed in to the others, providing a more seamless user experience.
 
