@@ -210,7 +210,11 @@ items:
     - name: Network Explorer
       topicUid: NetworkExplorer
       items:
-      - name: Supported Devices and Protocols
+      - name: Getting started with Network Explorer
+        topicUid: NetworkExplorer_getting_started
+      - name: Network Explorer UI overview
+        topicUid: NetworkExplorer_UI_overview
+      - name: Supported devices and protocols
         topicUid: NetworkExplorer_Supported_Devices_And_Protocols
     - name: Smart Trap Processor
       topicUid: Smart_Trap_Processor_Overview
