@@ -49,3 +49,8 @@ You can filter by:
 - Both, using the format `source-ip/multicast-ip`. For example: `10.14.1.104/239.10.20.106`.
 
 ![Flows](~/solutions/images/NS_manual_flows.png)
+
+## Application settings
+
+You can access the application settings via the Settings button located in the About pop-up.
+To open the About pop-up, click the corresponding button in the upper-right corner of the Topology page.
