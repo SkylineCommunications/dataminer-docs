@@ -9,6 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 05 May 2025 - Fix - Usage Export - Selected DMSs not respected during export
+
+Previously, export requests in the DcpUI ignored the DMSs selected by the user and exported all available data instead. This issue has been resolved. Export results are now correctly limited to the selected DMSs.
+
+### 05 May 2025 - New feature - Single sign-on for Catalog, Admin, and Shares
+Single sign-on (SSO) has been implemented across the Catalog, Admin, and Shares apps on dataminer.services. Users who sign in to one of these applications will now be automatically signed in to the others, providing a more seamless user experience.
+
 ### 28 April 2025 - Fix - Usage API - Performance and stability improvements [ID 42791]
 
 It was possible that an export request failed with an out of memory exception. This has been fixed.
