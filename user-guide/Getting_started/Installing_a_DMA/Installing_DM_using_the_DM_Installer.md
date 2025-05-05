@@ -20,7 +20,7 @@ You can follow the steps below or watch this short video, which shows you how to
 > [!IMPORTANT]
 >
 > - **Avoid using duplicates of existing VMs** to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
-> - To restore a **backup**, install a **Failover** Agent, or install an **offline** Agent, you will need to follow a **different procedure** than shown in the video above. Please read the instructions below carefully to make sure you follow the correct procedure.
+> - To restore a **backup**, create a **Failover** Agent to pair with an existing Agent, or do an **offline** installation, you will need to follow a **different procedure** than shown in the video above. Please read the instructions below carefully to make sure you follow the correct procedure.
 
 ## Before you run the installer
 
