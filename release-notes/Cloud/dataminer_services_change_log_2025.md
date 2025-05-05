@@ -15,7 +15,7 @@ If you are a member of the organization that published a specific Catalog item, 
 
 ### 05 May 2025 - Fix - Usage Export - Selected DMSs not respected during export [ID 42865]
 
-Previously, export requests in the admin app ignored the DMSs selected by the user and exported all available data instead. This issue has been resolved. Export results are now correctly limited to the selected DMSs.
+Previously, export requests in the Admin app ignored the DataMiner Systems selected by the user and exported all available data instead. This issue has been resolved. Export results are now correctly limited to the selected DataMiner Systems.
 
 ### 05 May 2025 - New feature - Single sign-on for Catalog, Admin, and Shares [ID 42768] [ID 42789]
 
