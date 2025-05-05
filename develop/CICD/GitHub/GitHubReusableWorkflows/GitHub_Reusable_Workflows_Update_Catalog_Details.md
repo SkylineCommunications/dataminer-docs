@@ -45,7 +45,7 @@ jobs:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Update Catalog Details Workflow.yml@main
     secrets:
       # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner Organization or Agent.
-      api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
+      api-key: ${{ secrets.DATAMINER_TOKEN }}
 ```
 
 ## Create or extend catalog.yml
