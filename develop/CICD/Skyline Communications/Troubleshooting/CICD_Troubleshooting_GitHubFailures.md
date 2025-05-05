@@ -44,8 +44,8 @@ Contact the BOOST team so they can remove the project. You can then recreate the
 
 ## Deploy Action
 
-### Error: 'agent-destination-id' must be provided for the Deploy stage.
+### Error: 'agent-destination-id' must be provided for the Deploy stage
 
-As of version 3 of the Deploy Action, the action uses organization keys instead of system keys. This means that a new input needs to be specified to which system the package needs to be deployed.
+As of version 3 of the Deploy Action, the action uses organization keys instead of system keys. This means that a new input needs to be specified to determine the system to which the package needs to be deployed.
 
-More information about the 'agent-destination-id' can be found [here](https://github.com/SkylineCommunications/Skyline-DataMiner-Deploy-Action?tab=readme-ov-file#destination-agent-id).
+For more information about the *agent-destination-id*, refer to the [Deploy Action readme](https://github.com/SkylineCommunications/Skyline-DataMiner-Deploy-Action?tab=readme-ov-file#destination-agent-id).
