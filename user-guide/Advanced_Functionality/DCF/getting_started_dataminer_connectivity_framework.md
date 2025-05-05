@@ -53,11 +53,9 @@ For example, from the diagram you can infer the following:
 
 To deploy the package:
 
-1. Go to the [Kata DCF package](https://catalog.dataminer.services/details/1b2baca9-9fa6-4a62-84c1-69e836612a8e) in the DataMiner Catalog.
+1. Go to the [Kata DCF package](https://catalog.dataminer.services/details/1b2baca9-9fa6-4a62-84c1-69e836612a8e) in the Catalog.
 
 1. Click the *Deploy* button to deploy the package on your DMA.
-
-   While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
 
    The package will deploy the following components:
 

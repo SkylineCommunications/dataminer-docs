@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.4
 ---
 
-# General Feature Release 10.5.4 – Preview
+# General Feature Release 10.5.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -52,6 +52,10 @@ This means, that some elements will not be able to run in isolation mode, and so
 
 In the *DataMiner.xml* file, it is possible to configure a separate SLProtocol process for every protocol that is being used. This setting will also comply with the above-mentioned hard limit of 50 SLProtocol processes. As this type of configuration is intended for testing/debugging purposes only, an alarm will be generated when such a configuration is active to avoid that this setting would remain active once the investigation is done.
 
+See also [RunInIsolationModeConfig property added to SLNet messages ElementInfoEventMessage and LiteElementInfoEvent [ID 42247]](#runinisolationmodeconfig-property-added-to-slnet-messages-elementinfoeventmessage-and-liteelementinfoevent-id-42247)
+
+For more information on how to configure elements to run in isolation mode in DataMiner Cube, see [Elements can now be configured to run in isolation mode [ID 41758]](xref:Cube_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758).
+
 #### Information events of type 'script started' will no longer be generated when an Automation script is triggered by the Scheduler app [ID 41970]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
@@ -85,9 +89,51 @@ The information provided is similar to the information found in the *SLElementIn
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+
+To allow the client to return the time zone and client time and date, on the `UIBlockDefinition`, set the `ClientTimeInfo` option to `UIClientTimeInfo.Return`. This option is intended to be used for UI components of type *Calendar* or *Time* (the latter with either `AutomationDateTimeUpDownOptions`, `AutomationDateTimeUpDownOptions` or `AutomationDateTimePickerOptions`).
+
+The result of the ShowUI command now includes the following new methods that can be used to request the time zone and date/time settings of the client:
+
+- `TimeZoneInfo GetClientTimeZoneInfo(string destVar)`
+- `DateTimeOffset GetClientDateTime(string destVar)`
+
+##### TimeZoneInfo GetClientTimeZoneInfo(string destVar)
+
+This method will return the time zone of the client for the UI component with the specified *destVar*.
+
+It will return null if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information. If the time zone information provided by the client cannot be deserialized into a `TimeZoneInfo` object, a `SerializationException` will be thrown.
+
+If this time zone information has to be stored for later use, consider the following:
+
+- Use the `ToSerializedString()` method to get a string containing all details. Later, this information can then be restored by using `TimeZoneInfo.FromSerializedString(storedInfo)`.
+
+  > [!NOTE]
+  > The time zone information that is returned might not be the most recent and could result in incorrect time interpretations.
+
+- Use the `Id` property, which can then be restored by using `TimeZoneInfo.FindSystemTimeZoneById(storedId)`.
+
+  > [!NOTE]
+  > The ID that is returned might not be available on the DataMiner Agent that is executing the Automation script.
+
+For more info, see [Saving and restoring time zones](https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones)
+
+##### DateTimeOffset GetClientDateTime(string destVar)
+
+This method will return the date and time as it was entered in the UI block with the specified *destVar*, in the time zone of the client (taking into account the client's UTC offset). The `DateTime` property of the returned value will contain the the date and/or time in the user's time zone.
+
+The returned value will be `DateTimeOffset.MinValue` if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information.
+
+> [!IMPORTANT]
+> Components that have `ClientTimeInfo` enabled should not have components with a *destVar* that contains "_DateTimeComponentClient".
+
 #### Service & Resource Management: Configuring the script to be executed when a reservation goes into quarantine [ID 42067]
 
-<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
 Up to now, when a reservation went into quarantine, the *SRM_QuarantineHandling* script would always be executed. From now on, when you create a reservation, you will be able to specify the name of the quarantine script to be executed in the `QuarantineHandlingScriptName` property.
 
@@ -112,6 +158,28 @@ The following messages can be used to add, update or remove a parameter group fr
 
 > [!NOTE]
 > Names of RAD parameter groups will be processed case-insensitive.
+
+#### RunInIsolationModeConfig property added to SLNet messages ElementInfoEventMessage and LiteElementInfoEvent [ID 42247]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+A new `RunInIsolationModeConfig` property has been added to the SLNet messages `ElementInfoEventMessage` and `LiteElementInfoEvent`. This property will allow client applications to indicate if and how an element is configured to run in isolation mode.
+
+The property can have one of the following values:
+
+| Value    | Description |
+|----------|-------------|
+| None     | The element is not running in isolation mode. |
+| Dma      | In the `ProcessOptions` section of the *DataMiner.xml* file, it has been specified that all elements using the protocol in question should be running in isolation mode. |
+| Protocol | In the *protocol.xml* file, the `RunInSeparateInstance` tag specifies that all elements using the protocol in question should be running in isolation mode. |
+| Element  | The element has been individually configured to run in isolation mode. |
+
+If multiple settings indicate that the element should be running in isolation mode, the `RunInIsolationModeConfig` property will be set to one of the above-mentioned values in the following order of precedence: "Protocol", "Element", "Dma".
+
+> [!NOTE]
+>
+> - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
+> - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
 
 #### Relational anomaly detection: New group argument 'minimumAnomalyDuration' [ID 42283]
 
@@ -148,7 +216,7 @@ This optional argument will specify the minimum duration (in minutes) that devia
 <!-- 41425: MR 10.6.0 - FR 10.5.4 -->
 <!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 <!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
-<!-- 42343: MR 10.6.0 - FR 10.5.4 -->
+<!-- 42343: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of security enhancements have been made.
 
@@ -220,15 +288,23 @@ Because of a number of enhancements, overall performance has increased when exec
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-When you migrate data of datatype *CustomData* from either Cassandra Single or Cassandra Cluster to STaaS (using e.g. the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02)), you can now indicate exactly which data you want to have migrated.
+When you migrate data of data type *CustomData* from either Cassandra Single or Cassandra Cluster to STaaS (using e.g. the [STaaS Migration Script package](https://catalog.dataminer.services/details/46046c45-e44c-4bff-ba6e-3d0441a96f02)), you can now indicate exactly which data you want to have migrated.
 
-For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* datatype as well as the *Analytics* datatype.
+For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* data type as well as the *Analytics* data type.
 
 #### Connection enhancements [ID 42233]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of enhancements have been made with regard to the connections made among DataMiner Agents as well as the connections made between DataMiner Agents and client applications.
+
+#### SLAnalytics - Pattern matching: Multivariate pattern suggestion events will now be grouped into a single incident [ID 42274]
+
+<!-- MR 10.6.0 - FR 10.5.4 -->
+
+When a multivariate pattern is detected in new trend data, suggestion events are generated for every instance in the linked pattern.
+
+From now on, those suggestion events will be grouped into a single incident, which will be shown as a single line in the Alarm Console.
 
 #### Swarming: 'Where are my elements.txt' file added to the 'C:\\Skyline DataMiner\\Elements\\' folder [ID 42314]
 
@@ -254,10 +330,33 @@ Under certain conditions, Relational anomaly detection (RAD) is now able to dete
 
 From now on, you can view the logging of the GQI DxM in DataMiner Cube.
 
-Also, a new log file will now be started as soon as the size of the existing file reaches 5 MB. Up to now, a new log file would be started every day.
+Also, no new log file will be started every day anymore. From now on, a new log file will only be started as soon as the size of the existing file reaches 5 MB.
 
 > [!NOTE]
 > Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e. the logging of the ad hoc data sources and the operators).
+
+#### GQI DxM: Separate log file per extension library in Extensions folder [ID 42355]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+From now on, a separate log file will be created per GQI DxM extension library in the *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions* folder.
+
+Example:
+
+- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library A.txt*
+- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library B.txt*
+
+The log entries added to those files will now each include the name of the extension as well as the name of the user. The log entry format will now be the following:
+
+`[Timestamp][Level][Extension][User][SessionId][NodeId] Message`
+
+#### SLLogCollector now collects the logging of the GQI DxM extensions from the Extensions folder [ID 42379]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+SLLogCollector will now look for GQI DxM extension logging in the following folder:
+
+- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions*
 
 ### Fixes
 
@@ -269,7 +368,7 @@ After a Cassandra Cluster migration had been initialized, it would no longer be 
 
 #### Mobile Visual Overview: Problem when the same mobile visual overview was requested by multiple users of the same user group [ID 41881]
 
-<!-- MR 10.6.0 - FR 10.5.4 -->
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 -->
 
 When multiple users of the same user group requested the same mobile visual overview, in some rare cases, a separate DataMiner Cube instance would incorrectly be created on the DataMiner Agent for each of those users, potentially causing the creation of one Cube instance to block the creation of another Cube instance.
 
@@ -396,9 +495,21 @@ The `GetMADDataMessage` allows you to request anomaly scores during a specified 
 
 However, up to now, the response would not contain the anomaly score and the parameter values associated with the last trend data entry.
 
+#### Problem when NATS sessions were disposed [ID 42281]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some rare cases, an exception could be thrown when NATS sessions were disposed.
+
+#### Mobile Visual Overview: Problem with SLHelper when removing mobile visual overview sessions [ID 42296]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.4 [CU0] -->
+
+When mobile visual overview sessions were removed from a DataMiner Agent, in some cases, the SLHelper process could temporarily block other requests.
+
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
-<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU1] - FR 10.5.4 -->
 
 When a query using ad hoc data sources was executed with real-time updates enabled, up to now, the following message could incorrectly appear:
 
@@ -424,3 +535,16 @@ The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packa
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Problem when performing actions involving migrated elements [ID 42400]
+
+<!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element had been migrated from one DataMiner Agent to another, in some rare cases, certain actions involving that migrated element (e.g. a deletion of the element) would fail until the DataMiner Agent was restarted.
+
+#### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
+
+<!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
+
+In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.

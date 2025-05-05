@@ -153,7 +153,7 @@ Because client computers running a Microsoft Windows version prior to Windows 10
 
 Previously, the amount of simultaneous calls that native SLElement and SLDMS modules could make to the local SLNet process was limited to 1 and 5 respectively. This limit has now been removed. Both now use the same limit as other processes, i.e. 10 simultaneous calls.
 
-If you prefer to keep the call limits as they were, you can specify the following option in the *\<appSettings>* section of the *C:\\Skyline DataMiner\\Files\\SLNetCOM.dll.config* file:
+If you prefer to keep the call limits as they were, you can specify the following option in the *\<appSettings>* section of the `C:\Skyline DataMiner\Files\SLNetCOM.dll.config` file:
 
 ```xml
 <add key="UseLegacyThrottle" value="true" />
@@ -639,7 +639,7 @@ If there were multiple trend points in the same second, it could occur that thes
 
 #### DataMiner Cube: Problem when clicking several times in rapid succession or when a log folder was created on a clean client computer \[ID 25099\]
 
-In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the *C:\\ProgramData\\Skyline\\DataMiner\\DataMinerCube\\CubeLogging* folder was created on a clean client computer.
+In DataMiner Cube, in some cases, an exception could be thrown when clicking several times in rapid succession or when the `C:\ProgramData\Skyline\DataMiner\DataMinerCube\CubeLogging` folder was created on a clean client computer.
 
 #### HTML5 apps: Last item in drop-down lists was hidden by the collapse button \[ID 25108\]
 

@@ -2,13 +2,16 @@
 uid: General_Main_Release_10.5.0_CU1
 ---
 
-# General Main Release 10.5.0 CU1 - Preview
+# General Main Release 10.5.0 CU1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
-> For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube 10.5.0 CU1](xref:Cube_Main_Release_10.5.0_CU1).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.5.0 CU1](xref:Web_apps_Main_Release_10.5.0_CU1).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
 
@@ -66,10 +69,11 @@ Additional logging with regard to visual overview load balancing will be availab
 
 Because of a number of enhancements, overall performance has increased when updating subscriptions and when checking events against the set of active subscriptions.
 
-#### Security enhancements [ID 41913] [ID 42104]
+#### Security enhancements [ID 41913] [ID 42104] [ID 42343]
 
 <!-- 41913: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 <!-- 42104: MR 10.5.0 [CU1] - FR 10.5.4 -->
+<!-- 42343: MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of security enhancements have been made.
 
@@ -78,6 +82,59 @@ A number of security enhancements have been made.
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 A number of enhancements have been made to the ProtocolFunctionManager with regard to the handling of locked files when activating or deactivating functions.
+
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+
+To allow the client to return the time zone and client time and date, on the `UIBlockDefinition`, set the `ClientTimeInfo` option to `UIClientTimeInfo.Return`. This option is intended to be used for UI components of type *Calendar* or *Time* (the latter with either `AutomationDateTimeUpDownOptions`, `AutomationDateTimeUpDownOptions` or `AutomationDateTimePickerOptions`).
+
+The result of the ShowUI command now includes the following new methods that can be used to request the time zone and date/time settings of the client:
+
+- `TimeZoneInfo GetClientTimeZoneInfo(string destVar)`
+- `DateTimeOffset GetClientDateTime(string destVar)`
+
+##### TimeZoneInfo GetClientTimeZoneInfo(string destVar)
+
+This method will return the time zone of the client for the UI component with the specified *destVar*.
+
+It will return null if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information. If the time zone information provided by the client cannot be deserialized into a `TimeZoneInfo` object, a `SerializationException` will be thrown.
+
+If this time zone information has to be stored for later use, consider the following:
+
+- Use the `ToSerializedString()` method to get a string containing all details. Later, this information can then be restored by using `TimeZoneInfo.FromSerializedString(storedInfo)`.
+
+  > [!NOTE]
+  > The time zone information that is returned might not be the most recent and could result in incorrect time interpretations.
+
+- Use the `Id` property, which can then be restored by using `TimeZoneInfo.FindSystemTimeZoneById(storedId)`.
+
+  > [!NOTE]
+  > The ID that is returned might not be available on the DataMiner Agent that is executing the Automation script.
+
+For more info, see [Saving and restoring time zones](https://learn.microsoft.com/en-us/dotnet/standard/datetime/saving-and-restoring-time-zones)
+
+##### DateTimeOffset GetClientDateTime(string destVar)
+
+This method will return the date and time as it was entered in the UI block with the specified *destVar*, in the time zone of the client (taking into account the client's UTC offset). The `DateTime` property of the returned value will contain the the date and/or time in the user's time zone.
+
+The returned value will be `DateTimeOffset.MinValue` if the component does not exist, if `ClientTimeInfo` is not set to `UIClientTimeInfo.Return`, or if the component does not support the information.
+
+> [!IMPORTANT]
+> Components that have `ClientTimeInfo` enabled should not have components with a *destVar* that contains "_DateTimeComponentClient".
+
+#### Service & Resource Management: Configuring the script to be executed when a reservation goes into quarantine [ID 42067]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+Up to now, when a reservation went into quarantine, the *SRM_QuarantineHandling* script would always be executed. From now on, when you create a reservation, you will be able to specify the name of the quarantine script to be executed in the `QuarantineHandlingScriptName` property.
+
+> [!NOTE]
+>
+> - If the `QuarantineHandlingScriptName` property contains Null, an empty string, white space, or "SRM_QuarantineHandling", the default *SRM_QuarantineHandling* script will be executed when the reservation goes into quarantine.
+> - If multiple reservations go into quarantine after a resource or reservation update, the scripts configured on the different reservations will each be executed once for the reservations in question.
 
 #### NATS: NatsCustodianResetNatsRequest will now be blocked when the NATSForceManualConfig option is enabled [ID 42074]
 
@@ -108,10 +165,33 @@ A number of enhancements have been made with regard to the connections made amon
 
 From now on, you can view the logging of the GQI DxM in DataMiner Cube.
 
-Also, a new log file will now be started as soon as the size of the existing file reaches 5 MB. Up to now, a new log file would be started every day.
+Also, no new log file will be started every day anymore. From now on, a new log file will only be started as soon as the size of the existing file reaches 5 MB.
 
 > [!NOTE]
 > Currently, DataMiner Cube only allows you to view the logging of the parent process. It does not yet allow you to view the logging of the child processes (i.e. the logging of the ad hoc data sources and the operators).
+
+#### GQI DxM: Separate log file per extension library in Extensions folder [ID 42355]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+From now on, a separate log file will be created per GQI DxM extension library in the *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions* folder.
+
+Example:
+
+- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library A.txt*
+- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library B.txt*
+
+The log entries added to those files will now each include the name of the extension as well as the name of the user. The log entry format will now be the following:
+
+`[Timestamp][Level][Extension][User][SessionId][NodeId] Message`
+
+#### SLLogCollector now collects the logging of the GQI DxM extensions from the Extensions folder [ID 42379]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+SLLogCollector will now look for GQI DxM extension logging in the following folder:
+
+- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions*
 
 ### Fixes
 
@@ -199,9 +279,15 @@ In some cases, it would not be possible to simultaneously update multiple TTL se
 
 After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
 
+#### Problem when NATS sessions were disposed [ID 42281]
+
+<!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
+
+In some rare cases, an exception could be thrown when NATS sessions were disposed.
+
 #### GQI DxM: Problem when executing a query using ad hoc data sources with real-time updates enabled [ID 42310]
 
-<!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU1] - FR 10.5.4 -->
 
 When a query using ad hoc data sources was executed with real-time updates enabled, up to now, the following message could incorrectly appear:
 

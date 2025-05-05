@@ -392,7 +392,7 @@ If a Cassandra node goes down or when a node is down when DataMiner starts up, a
 - If the Cassandra cluster feature is used, alarm and information event information is always migrated to Elasticsearch. It is not possible to use this feature without enabling indexing on alarms.
 
 > [!NOTE]
-> If a database of type Cassandra cluster is used, the soft-launch feature [NewAverageTrending](xref:Overview_of_Soft_Launch_Options#newaveragetrending) is automatically enabled.
+> If a database of type Cassandra cluster is used, the soft-launch feature *NewAverageTrending* is automatically enabled.
 
 #### Dynamic table filters: New component type 'recursivefullfilter' \[ID 24672\] \[ID 24676\]
 
@@ -411,7 +411,7 @@ recursivefullfilter=(1002 > 0)
 
 #### Support for icons in SVG format \[ID 24841\]
 
-In function protocols and the *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml* file, icons can now also be defined in SVG format.
+In function protocols and the `C:\Skyline DataMiner\Icons\CustomIcons.xml` file, icons can now also be defined in SVG format.
 
 Also, the default function icon has been updated.
 

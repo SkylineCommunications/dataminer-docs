@@ -30,7 +30,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
 1. In case the DataMiner Agent used an **Elasticsearch** database, follow the procedure related to Elasticsearch from [Uninstalling a DMA using a manual procedure](#uninstalling-a-dma-using-a-manual-procedure).
 
-1. In case the [DataMiner Cloud Pack](xref:CloudPackages) was installed on the DataMiner Agent, uninstall it in Windows via *Control Panel* > *Programs* > *Programs and Features*.
+1. In case the [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack) was installed on the DataMiner Agent, uninstall it in Windows via *Control Panel* > *Programs* > *Programs and Features*.
 
    > [!NOTE]
    > Multiple programs are installed as part of the DataMiner Cloud Pack: *DataMiner APIGateway*, *DataMiner ArtifactDeployer*, *DataMiner CloudGateway*, etc. Uninstalling *DataMiner Cloud Pack* in the *Programs and Features* window will remove the cloud pack including all of its related components.
@@ -41,7 +41,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
 ## Uninstalling a DMA using a manual procedure
 
-1. Go to the folder *C:\\Skyline DataMiner\\Tools*.
+1. Go to the folder `C:\Skyline DataMiner\Tools`.
 
 1. Run the following scripts as Administrator:
 
@@ -64,7 +64,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
 1. From DataMiner 10.1.0/10.1.1 onwards, use SLEndpointTool_console to remove **NATS**:
 
-   1. Run *C:\\Skyline DataMiner\\Files\\SLEndpointTool_Console.exe* either directly or from *cmd.exe* as Administrator.
+   1. Run `C:\Skyline DataMiner\Files\SLEndpointTool_Console.exe` either directly or from *cmd.exe* as Administrator.
 
    1. Select *Uninstall*.
 
@@ -77,7 +77,7 @@ There are two possibilities to uninstall a DataMiner Agent:
    > sc stop NATS && sc stop NAS && sc delete NATS && sc delete NAS
    > ```
 
-1. Delete the folder *C:\\Skyline DataMiner*.
+1. Delete the folder `C:\Skyline DataMiner`.
 
 1. In case a **Cassandra** database was installed on the server:
 
@@ -122,16 +122,16 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    1. Run *regedit* as Administrator and delete *HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Apache Software Foundation\\Procrun 2.0\\elasticsearch-service-x64*.
 
-   1. Delete the Elasticsearch data folder, e.g. *C:\\ProgramData\\Elasticsearch*. If you are unsure where to find the directory, look for path.data in the elasticsearch.yml file.
+   1. Delete the Elasticsearch data folder, e.g. `C:\ProgramData\Elasticsearch`. If you are unsure where to find the directory, look for path.data in the elasticsearch.yml file.
 
       > [!NOTE]
       > The *ProgramData* folder is not displayed by default, so you may need to select to display hidden items in order to access this folder.
 
-   1. Delete the folder *C:\\Program Files\\Elasticsearch*.
+   1. Delete the folder `C:\Program Files\Elasticsearch`.
 
    1. If any Elasticsearch firewall rule exists, delete it.
 
-1. In case the [DataMiner Cloud Pack](xref:CloudPackages) was installed on the DataMiner Agent, uninstall it in Windows via *Control Panel* > *Programs* > *Programs and Features*.
+1. In case the [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack) was installed on the DataMiner Agent, uninstall it in Windows via *Control Panel* > *Programs* > *Programs and Features*.
 
    > [!NOTE]
    > Multiple programs are installed as part of the DataMiner Cloud Pack: *DataMiner APIGateway*, *DataMiner ArtifactDeployer*, *DataMiner CloudGateway*, etc. Uninstalling *DataMiner Cloud Pack* in the *Programs and Features* window will remove the cloud pack including all of its related components.

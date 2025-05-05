@@ -60,13 +60,11 @@ Where:
 
 To deploy the package:
 
-1. Go to the [Kata Node Edge](https://catalog.dataminer.services/details/package/5838) package in the DataMiner Catalog.
+1. Go to the [Kata Node Edge](https://catalog.dataminer.services/details/package/5838) package in the Catalog.
 
 1. Click the *Deploy* button to deploy the package on your DMA.
 
-   While the package is being deployed, you can follow the progress of the deployment in the [Admin app](xref:Accessing_the_Admin_app), on the *Deployments* page for your DMS. Make sure to use the *Refresh* button in the top-left corner.
-
-The package contains the following components:
+The package will deploy the following components:
 
 - Automation script [JSON Reader](https://catalog.dataminer.services/details/automation-script/5491): You will be able to find this in the Automation module, in the folder *Automation Scripts/GQI/Data sources*.
 

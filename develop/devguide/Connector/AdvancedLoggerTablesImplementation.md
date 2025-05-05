@@ -78,7 +78,7 @@ To implement a logger table, perform the following steps:
 
     In the example above, this will result in a column with name "sip" of type VARCHAR(20) (in case of a MySQL database). The name of the parameter is used as the name of the corresponding column in the database (Note that it is therefore not allowed to change this name in an existing protocol).
 
-    In case the logger table persists in Cassandra, the specified datatype will automatically be mapped to the corresponding Cassandra datatype.
+    In case the logger table persists in Cassandra, the specified data type will automatically be mapped to the corresponding Cassandra datatype.
 
     Note the following restrictions:
 
@@ -175,6 +175,8 @@ To implement a logger table, perform the following steps:
       ```
 
       However, in order to preserve compatibility with an RDBMS (SQL) database, we still recommend defining a column of type DATETIME that specifies the partitions to keep.
+
+    - When an element with a logger table is deleted, the logger table will also be deleted if it is stored in the default keyspace. However, if the [customDatabaseName](xref:Protocol.Params.Param.ArrayOptions-options#customdatabasename) or [databaseNameProtocol](xref:Protocol.Params.Param.ArrayOptions-options#databasenameprotocol) option is used, the table will not be deleted.<!-- RN 42029 -->
 
     The logger table defined in the steps above will result in the creation of a table with name elementdata_[DMA ID]_[element ID]_[table parameter ID].
 

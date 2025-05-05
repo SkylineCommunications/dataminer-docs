@@ -32,7 +32,7 @@ The BPA test *Firewall Configuration* has been altered to also check if TCP port
 In addition, the DataMiner installer will now also add a firewall rule allowing inbound TCP port 5100 communication.
 
 > [!NOTE]
-> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+> For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### Marker images can now also be generated dynamically in layers with sourceType set to objects [ID 36246]
 

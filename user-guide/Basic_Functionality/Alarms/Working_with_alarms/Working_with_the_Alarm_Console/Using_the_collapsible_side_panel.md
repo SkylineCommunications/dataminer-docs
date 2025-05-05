@@ -24,7 +24,7 @@ In the side panel:
 
 - Below this is the parameter section, which contains the current value of the parameter and an overview of the parameter state in the last twenty-four hours (2). If the parameter in alarm is trended, click this section to see the trend graph.
 
-- The bottom section displays more information about the alarms in the alarm tree (3).
+- The bottom section displays more information about the alarms in the alarm tree (3). Click any of the items in the tree to open the alarm card with the selected item highlighted. See [Alarm cards](xref:Alarm_cards).
 
 You can hide the side panel in three ways:
 

@@ -97,7 +97,7 @@ The following image formats are supported: .png, .jpg, .bmp, and .emf.
 
 If you want a shape to display an image located on a DMA, then do the following:
 
-1. Place the image in the DMA's *C:\\Skyline DataMiner\\Webpages* folder (or one of its subfolders e.g. *C:\\Skyline DataMiner\\Webpages\\MyImages\\*).
+1. Place the image in the DMA's `C:\Skyline DataMiner\Webpages` folder (or one of its subfolders e.g. *C:\\Skyline DataMiner\\Webpages\\MyImages\\*).
 
 1. In the shape, specify the URL of the image (e.g. `http://DmaIpAddress/MyImages/Picture.png`).
 
@@ -180,7 +180,7 @@ If more URLs need to be added to the list of allowed URLs, do the following:
    > [!NOTE]
    > If you just add a single slash ("/") in the value of the ExtraAllowedPaths key, all possible URLs will be allowed.
 
-Example: If, under *C:\\Skyline DataMiner\\Webpages*, you created your own folder named *MyThumbnails*, then add */MyThumbnails/* to the value of the *ExtraAllowedPaths* key.
+Example: If, under `C:\Skyline DataMiner\Webpages`, you created your own folder named *MyThumbnails*, then add */MyThumbnails/* to the value of the *ExtraAllowedPaths* key.
 
 ## Ignoring validation errors during HTTP parsing
 

@@ -16,6 +16,7 @@ More information on DVEs is detailed in the following sections:
 - <xref:AdvancedDVEsTimeoutState>
 - <xref:AdvancedDVEsSeverityState>
 - <xref:AdvancedDVEsTogglingCreation>
+- <xref:AdvancedDVEsTemplates>
 - <xref:AdvancedDVEsRemarks>
 - <xref:AdvancedDVEsExercise>
 

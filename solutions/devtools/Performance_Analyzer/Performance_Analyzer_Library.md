@@ -359,7 +359,7 @@ public static void Connect()
 }
 ```
 
-By default, the file, *results.json* in this case, will be created in the folder *C:\Skyline_Data\PerformanceAnalyzer*.
+By default, the file, *results.json* in this case, will be created in the folder `C:\Skyline_Data\PerformanceAnalyzer`.
 
 ```csharp
 public static void Solution()

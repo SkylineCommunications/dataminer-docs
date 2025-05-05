@@ -2,10 +2,10 @@
 uid: Cube_Feature_Release_10.5.4
 ---
 
-# DataMiner Cube Feature Release 10.5.4 – Preview
+# DataMiner Cube Feature Release 10.5.4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +14,8 @@ uid: Cube_Feature_Release_10.5.4
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Elements can now be configured to run in isolation mode [ID 41758]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41758)
+- [Legacy InterClient feature has been removed [ID 42263]](#legacy-interclient-feature-has-been-removed-id-42263)
 
 ## New features
 
@@ -35,6 +36,14 @@ To do so, go to *Advanced element settings*, and select the *Run in isolation mo
 When, in either the *protocol.xml* file or the *DataMiner.xml* file, the element in question is forced to run in isolation mode, the *Run in isolation mode* option will already be selected. In that case, clearing the option will not be possible.
 
 For more information about running elements in isolation mode, see [Elements can now be configured to run in isolation mode [ID 41757]](xref:General_Feature_Release_10.5.4#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757).
+
+#### Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the Cube session [ID 42110]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When UI components of type *Calendar* or *Time* are used in interactive Automation scripts, up to now, the entered date and time would be formatted depending on the platform and the configured settings. From now on, when an interactive Automation script is being run within DataMiner Cube, the UI components of type *Calendar* and *Time* will be able to return the time zone of the client and the time and date as entered by the user.
+
+For more information, see [Interactive Automation scripts: UI components 'Calendar' and 'Time' can now retrieve the time zone and date/time settings of the client [ID 42064]](xref:General_Feature_Release_10.5.4#interactive-automation-scripts-ui-components-calendar-and-time-can-now-retrieve-the-time-zone-and-datetime-settings-of-the-client-id-42064)
 
 ## Changes
 
@@ -120,6 +129,15 @@ As Cassandra on Windows OS and Cassandra Single are no longer supported, it is n
 
 See also: [Third-party software support life cycle](xref:Software_support_life_cycles#third-party-software-support-life-cycle)
 
+#### Visual Overview: An element or service referenced by a service but not included in it will now always be hidden [ID 42644]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.4 [CU0] -->
+
+Up to now, when an element or service was referenced by a service but not included in it, a shape linked to that element or service would only be hidden when it was referenced by a wildcard (* or ?). From now on, when an element or service is referenced by a service but not included in it, it will always be hidden, regardless of how it is referenced.
+
+> [!NOTE]
+> The new behavior can be disabled by using the *elementoptions: IgnoreDynamicInclude* shape data. See [Adding options to shapes linked to elements or services](xref:Adding_options_to_shapes_linked_to_elements_or_services#options).
+
 ### Fixes
 
 #### Visual Overview: Problem when updating element shapes that are linked to service elements via aliases [ID 41730]
@@ -151,6 +169,12 @@ When you right-clicked a history alarm in the Alarm Console and selected *Show a
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
 In some cases, an exception could be thrown when you closed an element card.
+
+#### Problem when requesting information about file changes [ID 42076]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
+
+When DataMiner Cube asked the DataMiner Agent to which it was connected when a particular file had been last changed, in some cases, the file could not be found due to a casing issue.
 
 #### DataMiner Cube desktop app: Configuration files would incorrectly be updated when the app was closed [ID 42101]
 

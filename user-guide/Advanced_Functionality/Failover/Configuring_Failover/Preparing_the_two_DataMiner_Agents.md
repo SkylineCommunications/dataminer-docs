@@ -8,7 +8,7 @@ Before you start the actual configuration, make sure you have the following:
 
 - A [primary DMA](#primary-dataminer-agent)
 
-- A [backup DMA](#backup-dataminer-agent) (newly installed)
+- A [backup DMA](#backup-dataminer-agent) (newly installed; see [Installation with the DataMiner Installer](xref:Installing_DM_using_the_DM_installer) or [Installation with pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk))
 
 - A [pair of additional IP addresses or a hostname](#additional-ip-addresses-or-hostname)
 
@@ -43,7 +43,7 @@ The backup DMA must be a newly installed DataMiner Agent.
 
 When Failover is configured, one or two additional IP addresses are needed, depending on the number of network interfaces of the DMAs. These will be used as the virtual IP addresses of the primary or the backup DMA, depending on which of the two is online. If the DMAs only have one network interface, only one additional IP address is needed.
 
-Alternatively, from DataMiner 10.2.0/10.1.8 onwards, a shared hostname can be used instead of the virtual IP addresses. This hostname must be configured in the network, i.e. a corresponding DNS record must exist. The hostname must resolve to both primary IP addresses of the Failover Agents. For example, this could be the output of an nslookup of such a hostname:
+Alternatively, from DataMiner 10.2.0/10.1.8 onwards, a shared hostname can be used instead of the virtual IP addresses. This hostname must be configured in the network, i.e. a corresponding DNS record must exist that can be resolved from the hostname to both primary IP addresses of the Failover Agents and vice versa with a reverse lookup. For example, this could be the output of an nslookup of such a hostname and IP:
 
 ```txt
 Name: ResetPlease.FailoverZone

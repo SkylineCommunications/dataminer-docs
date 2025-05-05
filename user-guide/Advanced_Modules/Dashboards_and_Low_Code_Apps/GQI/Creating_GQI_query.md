@@ -11,9 +11,12 @@ The "Queries" data item allows you to construct a query in order to tap into the
 
 ## Creating a query
 
-1. In edit mode, select the dashboard component for which you want to use a query as a data input.
+1. In edit mode, select the component for which you want to use a query as a data input.
 
 1. In the *Data* pane, select *Queries* and click the + icon to add a new query.
+
+   > [!TIP]
+   > If the DataMiner Copilot module has been deployed in your system, at this point you can [let Copilot create a query for you](#letting-copilot-create-a-query).
 
 1. Specify a name for the query.
 
@@ -27,6 +30,12 @@ The "Queries" data item allows you to construct a query in order to tap into the
 
 1. Select an operator. This step is optional; if you do not select an operator, the data set will be returned untouched. See [Query operators](xref:Query_operators).
 
+1. Add more operators if necessary until your query is fully configured.
+
+   - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42127-->, you can insert new operators anywhere in the sequence, including between existing operators, by clicking the "+" button.
+
+   - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42127-->, you can rearrange operators by dragging and dropping them to a different position on the same level. If an operator turns red after being moved, this indicates that it cannot be used at that location and the query has become invalid. The *Then sort by* operator is a child node of the *Sort by* operator, so if you move a *Sort by* node, all its *Then sort by* child nodes will move with it<!--RN 42229-->.
+
 1. Drag the configured query to the component in order to use it.
 
 > [!NOTE]
@@ -38,9 +47,25 @@ The "Queries" data item allows you to construct a query in order to tap into the
 
 From DataMiner 10.3.0 [CU10]/10.4.1 onwards, you can duplicate a query. To do so, click the "..." button next to the query in the *Data* pane and then select *Duplicate*.
 
+## Letting Copilot create a query
+
+From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42234-->, you can use the DataMiner Copilot [natural language to GQI feature](xref:NL2GQI) to automatically create a GQI query based on a request in natural language.
+
+To do so, in a system where Copilot has been deployed, when you click the "+" button to add a query, type your request in the textbox and click **Generate query**. Copilot will then create the desired GQI query and generate a relevant query name.
+
+![NL2GQI](~/user-guide/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.5.4*
+
+> [!TIP]
+> For more information about how to deploy this feature, see [Copilot DxM](xref:Copilot_DxM).
+
+> [!IMPORTANT]
+> Copilot can make mistakes. We recommend manually checking the resulting queries and correcting or extending them to your liking when necessary. However, keep in mind that typing a new request and clicking the button a second time will override the query, causing all manual changes to be lost.
+
 ## Notes on GQI queries
 
 Please note the following regarding query data input:
+
+- All created queries are listed in alphabetical order in the *Queries* section of the *Data* pane. Immediately after a query is created, it may appear last in the list, but it will be displayed in alphabetical order after you collapse and expand the *Queries* section or reopen the app. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!--RN 42452-->, queries are listed in the order they have been created.
 
 - When a query has been created, the columns from the table that results from the query are available as individual data items in the *Data* pane, so that you can use them to filter or group a component.
 

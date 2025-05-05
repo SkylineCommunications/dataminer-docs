@@ -16,13 +16,15 @@ For troubleshooting related to specific topics:
 
 - [Troubleshooting – Dashboard Gateway](xref:Dashboard_Gateway_troubleshooting)
 
-- [Troubleshooting – dataminer.services](xref:Investigating_Dataminerservices_Feature_Issues)
+- [Troubleshooting – dataminer.services](xref:investigating_dataminer_services_feature_issues)
 
 - [Troubleshooting – NATS](xref:Investigating_NATS_Issues)
 
-- [Troubleshooting – OpenSearch](xref:Investigating_OpenSearch_Issues)
+- [Troubleshooting – Indexing database](xref:Troubleshooting_Indexing_Database)
 
 - [Troubleshooting – SAML issues](xref:Troubleshooting_SAML_Issues)
+
+- [Troubleshooting – Skyline DataMiner SDK](xref:skyline_dataminer_sdk_troubleshooting)
 
 - [Troubleshooting - SLScripting](xref:TroubleshootingSLScriptingFinalizerException)
 

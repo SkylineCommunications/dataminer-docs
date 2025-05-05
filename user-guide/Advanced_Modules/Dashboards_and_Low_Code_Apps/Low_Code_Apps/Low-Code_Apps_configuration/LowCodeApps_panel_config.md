@@ -16,6 +16,8 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 
 1. To add a new panel, click the "+" button in this section, and then specify a name for your panel.
 
+   Note that from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42220-->, panel names are limited to 150 characters.
+
 1. To configure a panel, click the pencil icon next to the panel. This will open the panel configuration pane.
 
 1. To configure a header bar for the panel, follow the same steps as to configure this for a page. See [Configuring the header bar of a low-code app page](xref:LowCodeApps_header_config).

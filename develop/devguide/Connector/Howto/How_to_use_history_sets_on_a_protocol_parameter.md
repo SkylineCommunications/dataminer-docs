@@ -40,7 +40,9 @@ In order to make sure the sets are correctly stored and linked with the provided
 ```
 
 > [!NOTE]
-> When this attribute is not present, it is possible that the data is not stored correctly, and an incorrect result can be shown when the historical data is accessed, e.g. via a trend graph.
+>
+> - When this attribute is not present, it is possible that the data is not stored correctly, and an incorrect result can be shown when the historical data is accessed, e.g. via a trend graph.
+> - If you set `historySet` to "true" for a parameter that uses the [smart baseline option](xref:Configuring_dynamic_alarm_thresholds), the smart baseline option will no longer have effect.
 
 ### Sort the incoming data based on the timestamp
 

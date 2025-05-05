@@ -352,7 +352,7 @@ On the *Sidebar page,* or prior to DataMiner 10.2.0/10.1.3, the *Surveyor* page,
 
 - **Link the Surveyor selection to the selected card in the workspace**: If this option is selected, the Surveyor will automatically select the item displayed in the currently selected card.
 
-- **Launch EPM card on filter selection**: Available from DataMiner 10.2.0/10.1.3 onwards. Select this checkbox to have an EPM card opened when an item is selected in a filter in an EPM topology tab.
+- **Launch EPM card on filter selection**: Available from DataMiner 10.2.0/10.1.3 onwards. Select this checkbox to have an EPM card opened when an item is selected in a filter in an [EPM Topology app](xref:EPM_Topology_app).
 
 ### Trending settings
 

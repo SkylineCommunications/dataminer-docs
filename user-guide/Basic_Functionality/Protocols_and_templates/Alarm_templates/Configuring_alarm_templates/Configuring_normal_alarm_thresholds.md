@@ -18,7 +18,7 @@ Note the following:
 
 - If you want to quickly enable or disable a large number of parameters, first select them by keeping the Ctrl key pressed or by selecting the first parameter, keeping the Shift key pressed, and then selecting the last parameter. Then right-click and select *Enable selected parameters* or *Disable selected parameters*, respectively. To select all parameters at once or clear the selection for all parameters at once, right-click the column header of the list of parameters and select *Enable all parameters* or *Disable all parameters*, respectively.
 
-- For DVE elements, the parent element and child element alarm templates function as if they were part of an [alarm template group](xref:Alarm_template_groups), with the child element template getting the highest priority. This means that if a parameter is monitored in the parent element template, but not in the child element template, the parameter will not be monitored in the child element.
+- For DVE elements, the behavior of the alarm monitoring of child and parent elements can be different depending on specific circumstances. For detailed information, see [Assigning templates to DVE parent or child elements](xref:AdvancedDVEsTemplates).
 
 > [!NOTE]
 > Instead of defining alarm thresholds as a fixed value, you can also set them as a dynamic threshold. See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds).

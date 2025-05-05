@@ -1,5 +1,6 @@
 ---
 uid: Configuration_of_DataMiner_processes
+keywords: enabling gRPC, gRPC configuration
 ---
 
 # Configuring DataMiner processes
@@ -14,7 +15,7 @@ To set a different number:
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Specify a different number for the *portProcesses* attribute of the *ProcessOptions* tag.
 
@@ -41,7 +42,7 @@ To set a different number:
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Specify a different number for the *protocolProcesses* attribute of the *ProcessOptions* tag.
 
@@ -55,11 +56,16 @@ To set a different number:
 
 1. Save the file and restart DataMiner.
 
+> [!NOTE]
+> Adjusting the number of simultaneously running SLProtocol processes will also affect the number of elements that can run in isolation mode. See [Adding elements in isolation mode](xref:Adding_elements#adding-elements-in-isolation-mode).
+
 ## Configuring a separate SLProtocol process for every protocol used
 
-For testing purposes, you can order a DataMiner Agent to spread its elements across different SLProtocol processes based on the protocol they are using.
+For testing purposes, you can order a DataMiner Agent to spread its elements across different SLProtocol processes based on the protocol they are using. If you do so, DataMiner will start up a separate SLProtocol process for every protocol that is used. That way, each SLProtocol process will only contain elements sharing the same protocol. This will make it much easier to pinpoint any protocol-related issues that might arise.
 
-If you do so, DataMiner will start up a separate SLProtocol process for every protocol that is used. That way, each SLProtocol process will only contain elements sharing the same protocol. This will make it much easier to pinpoint any protocol-related issues that might arise.
+However, note that from DataMiner 10.5.4/10.6.0 onwards<!--RN 41757-->, there is a hard limit of maximum 50 SLProtocol processes that can run simultaneously.
+
+As soon as you have concluded the investigation for which you needed this setting to be enabled, disable it again. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41757-->, an alarm will be generated when this feature is active to remind you of this.
 
 > [!WARNING]
 > Never use this option in a production environment. This feature is meant for testing/debugging purposes only.
@@ -68,7 +74,7 @@ To have separate SLProtocol processes created for every protocol being used, do 
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<ProcessOptions>* tag, set the *protocolProcesses* attribute to "protocol".
 
@@ -78,7 +84,7 @@ To have separate SLProtocol processes created for every protocol being used, do 
    </DataMiner>
     ```
 
-1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Save `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Restart the DataMiner software.
 
@@ -93,7 +99,7 @@ To have separate SLScripting processes created for every protocol being used, do
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<ProcessOptions>* tag, set both the *protocolProcesses* attribute and the *scriptingProcesses* attribute to "protocol".
 
@@ -106,7 +112,7 @@ To have separate SLScripting processes created for every protocol being used, do
    > [!NOTE]
    > If scriptingProcesses is set to "protocol", an SLScripting process is initialized for every SLProtocol process (see [Configuring a separate SLScripting process for each SLProtocol process](#configuring-a-separate-slscripting-process-for-each-slprotocol-process)). As an SLProtocol process is used for every protocol when protocolProcesses is set to "protocol", combining these two attributes effectively initializes a separate SLScripting process for every protocol.
 
-1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Save `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Restart the DataMiner software.
 
@@ -116,7 +122,7 @@ In a system where the load for one particular protocol has to be spread over sev
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<ProcessOptions>* tag, set the *protocolProcesses* attribute to a fixed number and the *scriptingProcesses* attribute to "protocol".
 
@@ -128,7 +134,7 @@ In a system where the load for one particular protocol has to be spread over sev
 
    The number you specified determines the number of SLProtocol processes. Elements using the same SLProtocol process will also use the same SLScripting process.
 
-1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Save `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Restart the DataMiner software.
 
@@ -139,13 +145,15 @@ As some protocols have QActions that require a large amount of memory, elements 
 When a protocol is flagged to run in separate instances, every element using that protocol will be started in a new instance of SLProtocol and SLScripting. When the element is stopped, these instances are taken down again, and when the element restarts, new instances are created.
 
 > [!NOTE]
-> From DataMiner 10.2.7/10.3.0 onwards, this behavior can also be configured in the protocol itself using the [RunInSeparateInstance](xref:Protocol.SystemOptions.RunInSeparateInstance) tag. In that case, no DataMiner restart is required.
+>
+> - From DataMiner 10.2.7/10.3.0 onwards, this behavior can also be configured in the protocol itself using the [RunInSeparateInstance](xref:Protocol.SystemOptions.RunInSeparateInstance) tag. In that case, no DataMiner restart is required.
+> - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->, you can configure a specific element to run in its own SLProtocol and SLScripting process using the [*Run in isolation mode* option](xref:Adding_elements#adding-elements-in-isolation-mode). This allows you to isolate individual elements without affecting all elements using the same protocol.
 
 To configure this:
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<ProcessOptions>* element, specify a *\<SeparateProcesses>* element listing the protocols that should run in separate SLProtocol and SLScripting instances. For example:
 
@@ -165,7 +173,7 @@ To configure this:
    </DataMiner>
    ```
 
-1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Save `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Restart the DataMiner software.
 
@@ -182,7 +190,7 @@ To do so:
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Set the *protocolProcesses* attribute of the *\<ProcessOptions>* tag to "replicationIP":
 
@@ -200,7 +208,7 @@ From DataMiner 10.2.7/10.3.0 onwards, the number of simultaneously running SLScr
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<ProcessOptions>* tag, set the *scriptingProcesses* attribute to the desired number. For example:
 
@@ -210,7 +218,7 @@ From DataMiner 10.2.7/10.3.0 onwards, the number of simultaneously running SLScr
    </DataMiner>
    ```
 
-1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Save `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Restart the DataMiner software.
 
@@ -231,7 +239,7 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Make sure *DataMiner.xml* contains a *\<ProcessOptions>* tag and that it contains the *scriptingProcesses="\[Service\]"* attribute:
 
@@ -241,7 +249,7 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 1. Open a command window as Administrator, and do the following:
 
-   1. Go to *C:\\Skyline DataMiner\\Files*.
+   1. Go to `C:\Skyline DataMiner\Files`.
 
    1. Execute the following command: *SLScripting.exe /service*
 
@@ -251,7 +259,7 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. If *DataMiner.xml* contains a *\<ProcessOptions>* tag with a *scriptingProcesses="\[Service\]"* attribute, remove that attribute:
 
@@ -261,7 +269,7 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 1. Open a command window as Administrator, and do the following:
 
-   1. Go to *C:\\Skyline DataMiner\\Files*.
+   1. Go to `C:\Skyline DataMiner\Files`.
 
    1. Execute the following command: *SLScripting.exe /regserver*
 
@@ -736,11 +744,31 @@ Example:
 > [!CAUTION]
 > Do not use this feature in networks where a firewall drops TCP keep-alive packets. Using it in such a network could cause the connection to be closed while it is actually still working.
 
-### Enabling information events when scripts are started by Correlation rules
+### Configuring the maximum upload size for upgrade packages
 
-From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when Automation scripts are triggered by the Correlation engine.
+The maximum upload size for upgrade packages is determined by the `MaxUploadSize` setting in *MaintenanceSettings.xml*.
 
-If you do want information events to be generated when scripts are triggered by Correlation rules, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to "false":
+To change this, you can use the SLNetClientTest tool (see [Increasing the maximum upload size for upgrade packages in a DMS](xref:SLNetClientTest_increasing_max_upload)), or you can directly modify *MaintenanceSettings.xml*. However, note that the latter requires a DataMiner restart.
+
+The default maximum upload size of upgrade packages is 4000 MB.
+
+Example:
+
+```xml
+<MaintenanceSettings>
+   <SLNet>
+      <MaxUploadSize>1300</MaxUploadSize>
+      ...
+   </SLNet>
+   ...
+</MaintenanceSettings>
+```
+
+### Enabling information events when scripts are started by Correlation rules or scheduled tasks
+
+From DataMiner 10.5.2/10.6.0 onwards<!--RN 41653-->, by default no information events are generated when Automation scripts are triggered by the Correlation engine. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41970-->, this also applies to Automation scripts triggered by the Scheduler module.
+
+If you do want information events to be generated when scripts are triggered by Correlation rules or scheduled tasks, add the `SkipInformationEvents` option to the *MaintenanceSettings.xml* file and set it to "false":
 
 ``` xml
 <MaintenanceSettings xmlns="http://www.skyline.be/config/maintenancesettings">
@@ -758,7 +786,7 @@ If you do want information events to be generated when scripts are triggered by 
 
 On a DMA, you can specify the port to be used for .NET Remoting.
 
-1. Go to the *C:\\Skyline DataMiner\\Files* directory of the DMA.
+1. Go to the `C:\Skyline DataMiner\Files` directory of the DMA.
 
 1. In a text editor (e.g. Microsoft Notepad), open *SLNet.exe.config*.
 

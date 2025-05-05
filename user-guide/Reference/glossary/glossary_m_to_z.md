@@ -51,6 +51,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | NBI | North-Bound Interface. Interface that allows a component to communicate with a component at a higher level. |
 | Network orchestration | Automated configuration, coordination and management of a network. |
 | NFV | Network Functions Virtualization. Network architecture where functions such as network address translation (NAT), intrusion detection, caching, etc. are virtualized as building blocks of communication services. |
+| NIC | Network Interface Card. A component that enables a device to connect to a network. |
 | NMS | Network Management System. Software system that allows monitoring and management of the software and hardware components of a network. |
 | NOC | Network Operations Center. Centralized location from which technicians monitor, manage and maintain client networks. |
 | NTLM | NT Lan Manager. |
@@ -93,14 +94,13 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | PMR | Private Mobile Radio. Two-way radio voice communication systems using portable, mobile, base station and dispatch console radios. Also known as Professional Mobile Radio and Land Mobile Radio (LMR). |
 | PON | Passive Optical Network. Fiber-optic telecommunications technology for the delivery of broadband network to end customers. |
 | PoP | Point of Presence. Artificial demarcation point or interface point between communicating entities. |
-| Post-roll | The final stage of a booking life cycle, which contains the events that should take place after the booking has ended.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Pre-roll | The initial stage of a booking life cycle, which contains the events that should take place before the booking itself starts.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Post-roll | See [Service Orchestration: booking life cycle states configuration](xref:Service_Orchestration_life_cycle_states). |
+| Pre-roll | See [Service Orchestration: booking life cycle states configuration](xref:Service_Orchestration_life_cycle_states). |
 | Primary element | Element within a redundancy group that is operational in normal conditions.<br>See [Primary elements, backup elements and virtual primary elements](xref:About_redundancy_groups#primary-elements-backup-elements-and-virtual-primary-elements). |
 | Proactive (cap) detection | The automatic prediction of future alarm threshold breaches.<br>See [Proactive cap detection](xref:Proactive_cap_detection). |
 | Production version | The version of a protocol that is currently the main version used in the DMS. |
-| Profile | Configuration required for a function resource.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Profile definition | Definition of the configuration, monitored KPIs, capacities and capabilities of a function resource, which can contain parameters and scripts.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Profile instance | An instance of a profile with particular values assigned to each of the parameters in the corresponding profile definition.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Profile definition | See [Profile definition](xref:srm_definitions#profile-definition). |
+| Profile instance | See [Profile instance](xref:srm_instantiations#profile-instance). |
 | Profile Manager | Legacy name for the Profiles module in DataMiner Cube.<br>See [The Profiles module](xref:The_Profiles_module). |
 | Profile parameter | Parameter in a profile definition, which is linked to one or more parameters of protocols in the DMS.<br>See [The Profiles module](xref:The_Profiles_module). |
 | Protocol | An XML file that allows a DMA to communicate with a data source in the system. Also known as connector or driver.<br>See [Protocols](xref:Protocols1#protocols). |
@@ -115,6 +115,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 |------|-------------|
 | QAction | Quick action within a DataMiner protocol, which can be used to implement advanced functionality that cannot be implemented by other protocol constructs. |
 | QAM | Quadrature Amplitude Modulation. Transmission technique for digital signals that combines phase modulation and amplitude modulation. |
+| QoS | Quality of Service. |
 | Query executer | Obsolete DataMiner tool that allows users to connect to an SQL database and query it using SQL statements.<br>See [Querying an SQL database](xref:Querying_an_SQL_database). |
 | QuickMenu | Shortcut menu in DataMiner Cube that allows quick navigation between UI sections. Accessible via the keyboard shortcut Ctrl + Q. |
 
@@ -134,10 +135,10 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Relative alarm threshold | Dynamic alarm threshold that is configured as a percentage representing the delta with the baseline value.<br>See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds). |
 | Replicated element/service | An element or service that is shown in a DMS, but managed by a different DMS. It inherits all parameter values from its counterpart in the other DMS. |
 | Reporter | Legacy DataMiner application used to generate graphical reports with statistical data and operational metrics of the DMS.<br>See [DMS Reporter](xref:reporter). |
-| Reservation | Alternative name for booking in legacy DataMiner versions.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Resource | Any thing that can be used and reserved in a booking instance.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Reservation | Legacy name for "booking".<br>See [Service and Resource Management](xref:About_SRM). |
+| Resource | Any thing that can be used and reserved in a booking instance.<br>See [Virtual function resource](xref:srm_instantiations#virtual-function-resource). |
 | Resource Manager | Legacy name for the Resources module in DataMiner Cube.<br>See [The Resources module](xref:The_Resources_module). |
-| Resource pool | Logical collection of resources. For example, microphone, headphones and audio mixer could be resources in an "Audio" resource pool.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Resource pool | Logical collection of resources. For example, microphone, headphones and audio mixer could be resources in an "Audio" resource pool.<br>See [Resource pool](xref:srm_instantiations#resource-pool). |
 | RF | Radio Frequency. Rate of oscillation of electromagnetic radio waves within a range suitable for communication uses. |
 | RFC | Request For Comments. |
 | RLM | Rack Layout Manager. Component of DataMiner IDP that is used to manage and monitor the location of managed devices.<br>See [DataMiner IDP app](xref:SolIDP#dataminer-idp-app). |
@@ -176,24 +177,21 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Second-party DataMiner Connector | DataMiner connector developed by the owner of a DataMiner System. |
 | Serial Gateway | Serial server that allows you to connect multiple RS-232 ports to a DMS via the acquisition LAN of a DMA.<br>See [Serial gateways](xref:SerialGateways#serial-gateways). |
 | Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:About_services). |
-| Service booking instance | Booking instance that will create a matching DataMiner service while it is active.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Service booking definition | Blueprint for service booking instances that are grouped in a recurring pattern.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Service definition | Definition of the topology, behavior (LSO) and data exchange ruleset (DTR) of a service, in the context of DataMiner SRM.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Service definition template | Type of service definition that is typically used to define the different types of services that need to be instantiated in the Service & Resource Management module, as opposed to a service definition that is only intended for one use.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Service instance | Instance of a service definition to which the necessary profile instances and resources have been linked.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Service definition | See [Service definition](xref:srm_definitions#service-definition). |
+| Service definition template | Type of service definition that is typically used to define the different types of services that need to be instantiated in the Service & Resource Management module, as opposed to a service definition that is only intended for one use.<br>See [Service definition](xref:srm_definitions#service-definition). |
 | Service level agreement | In the context of DataMiner Business Intelligence, this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer. Abbreviated as SLA.<br>See [Business Intelligence](xref:sla). |
 | Service Manager | Legacy name for the Services module in DataMiner Cube.<br>See [The Resources module](xref:The_Resources_module). |
 | Service profile | Profile for one or more service definitions that makes it possible to preconfigure profile instances for the service definitions, so that these no longer need to be selected during booking creation. In DataMiner, this is available in the form of service profile definitions with corresponding service profile instances.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
 | Service profile definition | Definition of a service profile that includes the service definitions to which the service profile applies and the mapping of the service profile nodes to the service definition nodes.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
 | Service profile instance | Instance of a service profile definition with specific profile instances linked to it.<br>See [Using the profiles tab](xref:SRM_Services_profiles). |
 | Service protocol | Protocol that can be assigned to a service when the service is created or edited. Such a service is known as an "enhanced service" and allows alarm monitoring and trending. <br>Note that in earlier DataMiner versions the term "service definition" was used instead, but this term is now exclusively used for the definition of how the various functions in a service are linked to each other, in the context of DataMiner SRM. |
-| Service state | In the context of DataMiner SRM, this is the state that is defined for each phase in the life cycle of the service representing a booking, e.g. start, stop, pause, standby, etc. When there is a change in the life cycle of the booking, the resources used in the booking will be configured according the settings for the corresponding service state.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service template | Template that can be used to easily create many similar services at the same time.<br>See [Service templates](xref:Service_templates). |
 | Service Templates | DataMiner Cube module that allows easy management of service templates.<br>See [Using the Service Templates module](xref:Managing_service_templates#using-the-service-templates-module). |
 | SFN | Single-Frequency Network. Broadcast network where several transmitters simultaneously send the same signal over the same frequency channel. |
 | SFP | Small Form-factor Pluggable. Compact, hot-pluggable network interface module used for both telecommunication and data communication applications. |
 | SHA | Secure Hash Algorithm. |
 | Shape data | Custom fields with data assigned to a shape or group of shapes in Visio.<br>See [Working with shape data in Microsoft Visio](xref:Working_with_shape_data_in_Microsoft_Visio). |
+| Sharing | Service included in dataminer.services that allows DataMiner users to share specific live operational data with third parties.<br>See [Sharing](xref:About_the_Sharing_app). |
 | SHF | Super High Frequency. Indicates radio frequencies in the range between 3 and 30 gigahertz. |
 | Simulated element | An element that displays data from a simulation file instead of communicating with an actual device.<br>See [Simulated elements](xref:Simulated_elements). |
 | SLA | Service Level Agreement. In the context of DataMiner Business Intelligence, this refers to a specific type of element that monitors a service level agreement, i.e. an agreement between a service provider and a customer.<br>See [Business Intelligence](xref:sla). |
@@ -234,10 +232,11 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SPI | Serial Peripheral Interface. Interface for serial communication, usually used to exchange data with peripheral devices. |
 | SPTS | Single Program Transport Stream. Transport stream that carries a single program. |
 | SQL | Structured Query Language. Programming language that is typically used for relational database management. |
-| SRM | Service and Resource Management. DataMiner software allowing you to virtualize your system resources, create an overview of how resources are connected within your infrastructure, and manage which resources are booked and when.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| SRM | Service and Resource Management. DataMiner software allowing you to virtualize your system resources, create an overview of how resources are connected within your infrastructure, and manage which resources are booked and when.<br>See [Service and Resource Management](xref:About_SRM). |
 | SRM Core | Suite of DataMiner core software modules that are the basis of DataMiner Service & Resource Management (SRM). Consists of seven DataMiner software modules: DataMiner Service Manager, Virtualization Engine, Resource Manager, Profile Manager, Connectivity Framework, Automation Engine and Scheduling Engine. |
 | SRM Standard Solution | DataMiner blueprint configuration that facilitates and accelerates the design and deployment of application-specific SRM solutions. This includes an installation and upgrade package of the required DataMiner components, a pre-built user interface to configure and operate SRM solutions, and ready-made workflows for booking and life cycle orchestration of services (LSO). |
 | SSH | Secure Shell. Protocol for secure remote login and other secure network services over an insecure network. |
+| SSL | Secure Sockets Layer. |
 | SSPA | Solid-State Power Amplifier. Amplifier that uses field-effect transistors to amplify radio frequency signals. |
 | STaaS | Storage as a Service. Cloud-native storage platform that allows users to connect their DMS to a scalable storage platform. |
 | StatMux | Statistical Multiplexing. Multiplexing technique where a communication channel is divided into an arbitrary number of variable bitrate data streams. |
@@ -252,7 +251,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Sweeptime | The time that a spectrum analyzer takes to tune across the displayed frequency span.<br>See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
 | SWR | Standing Wave Ratio. Ratio of the maximum and minimum amplitudes in a standing wave, i.e. a wave that oscillates in time but has a peak amplitude profile that does not move in space. |
 | System Center | A module that contains most of the administrator functionalities in DataMiner, such as management of databases and DMAs. |
-| System function definition | Virtual function definition that is not linked to a specific protocol. System function definitions exist permanently in the system and are modified at runtime.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| System function definition | Virtual function definition that is not linked to a specific protocol. System function definitions exist permanently in the system and are modified at runtime.<br>See [Virtual function](xref:srm_definitions#virtual-function). |
 
 ## T
 
@@ -296,6 +295,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Update package | Package containing minor updates for an existing DataMiner release. |
 | Upgrade package | DataMiner package containing all files necessary to upgrade a DMA to a new version of the DataMiner software. |
 | URL | Uniform Resource Locator. The address of a web resource. |
+| USM | User-based Security Model. A security framework used in SNMPv3. |
 | UTF-8 | Unicode Transformation Formats-8. |
 
 ## V
@@ -309,11 +309,10 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | View | Folder within the DataMiner software that can contain elements, services and other DataMiner components.<br>See [Views](xref:About_views). |
 | Violation filter | Filter configured on an SLA to give a specific weight to certain alarms or to filter out alarms.<br>See [Setting a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#setting-a-violation-filter). |
 | Virtual element | Element that does not communicate directly with a device. Usually, it instead connects to one or more other elements in the DMS.<br>See [Virtual elements](xref:Virtual_elements). |
-| Virtual function | Virtual DataMiner element that represents a specific virtual function resource. Abbreviated as VF.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Virtual function definition | Definition of the parameters, interfaces, etc. of a virtual function resource.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Virtual function instance | Instantiation of a virtual function definition, consisting of both a virtual function and a virtual function resource. The virtual function is used to access the relevant virtual function parameters, while the virtual function resource is used to prevent overbooking of the virtual function.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Virtual function resource | Resource that is part of an element with a specific function, sometimes simply called "function". Virtual function resources are represented in DataMiner as a specific type of virtual elements, i.e. virtual functions.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
-| Virtual platform | Logical collection of resource pools, in the context of DataMiner SRM.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
+| Virtual function | See [Virtual function](xref:srm_definitions#virtual-function). |
+| Virtual function instance | See [Virtual function resource](xref:srm_instantiations#virtual-function-resource). |
+| Virtual function resource | See [Virtual function resource](xref:srm_instantiations#virtual-function-resource). |
+| Virtual platform | See [Virtual platform](xref:srm_instantiations#virtual-platform). |
 | Virtual primary element | Virtual element within a redundancy group that represents a primary or backup element in the group, depending on which of these is currently operational.<br>See [Primary elements, backup elements and virtual primary elements](xref:About_redundancy_groups#primary-elements-backup-elements-and-virtual-primary-elements). |
 | Virtual SNMP agent | SNMP agent functionality that can be activated for an element in Cube, so that it forwards SNMP notifications toward every activated SNMP manager defined in the DataMiner System.<br>See [Enabling the virtual SNMP agent of an element](xref:Enabling_the_virtual_SNMP_agent_of_an_element). |
 | Visio | Microsoft Visio is an application that can be used to create diagrams and vector graphics. Visio drawings can be used in DataMiner as visual overviews.<br>See [Visio drawings](xref:visio#visio-drawings). |

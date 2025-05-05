@@ -30,6 +30,7 @@ It is possible to mask an element, so that any alarms on that element will not s
    >
    > - Regardless of the option you have chosen, it is always possible to manually unmask the element.
    > - Elements that have been stopped cannot be masked.
+   > - If you select *Mask element until cleared* but automatic clearing of alarms is disabled (which can be [configured system-wide or per parameter](xref:Clearing_alarms#system-wide-autoclear-setting) or [configured in an alarm template](xref:Setting_the_autoclear_option_in_alarm_template)), elements will not be unmasked when all alarms reach the clearable state. You will have to manually clear the alarms to unmask the element.
 
 1. Optionally, fill in a comment.
 

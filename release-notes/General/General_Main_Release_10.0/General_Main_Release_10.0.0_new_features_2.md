@@ -311,7 +311,7 @@ Up to now, messages of category Warning, Error and Exception were displayed in a
 
 If DataMiner Cube remains unresponsive for a number of seconds, a pop-up window will now appear, asking you whether to keep waiting or to exit Cube.
 
-You can configure this detection mechanism by means of the following system settings in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file:
+You can configure this detection mechanism by means of the following system settings in the `C:\Skyline DataMiner\users\ClientSettings.json` file:
 
 | Setting                                            | Description                                                                                             |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------------|

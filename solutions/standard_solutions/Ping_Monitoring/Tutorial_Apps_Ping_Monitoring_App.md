@@ -30,7 +30,7 @@ Expected duration: 15 minutes
 
 ## Step 1: Deploy the Ping Monitoring package from the Catalog
 
-1. Look up the [Ping Monitoring](https://catalog.dataminer.services/details/cb1bd962-97a5-461b-80fd-a62b3799de96) package in the DataMiner Catalog.
+1. Look up the [Ping Monitoring](https://catalog.dataminer.services/details/cb1bd962-97a5-461b-80fd-a62b3799de96) package in the Catalog.
 
 1. Click the *Deploy* button.
 

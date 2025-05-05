@@ -23,25 +23,59 @@ Throughout its lifespan, the extension can use the [IGQILogger](xref:GQI_IGQILog
 
 ## Log files
 
-Log files are created for both types of extensions, each within their respective subfolders:
+Log file names adhere to the following format: *Script_Library_Type.txt*.
 
-- If the [GQI DxM](xref:GQI_DxM) is used:
+The location of the log files depends on the DataMiner version and on whether the GQI DxM is used:
+
+- From DataMiner 10.5.0 [CU1]/10.5.4 onwards, if the [GQI DxM](xref:GQI_DxM) is used, a separate log file will be created per GQI DxM extension library in the *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions* folder.
+
+- Prior to DataMiner 10.5.0 [CU1]/10.5.4, if the [GQI DxM](xref:GQI_DxM) is used, log files are created for both types of extensions, each within their respective subfolders:
 
   - For ad hoc data sources: *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Ad hoc data sources*
 
   - For custom operators: *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Custom operators*
 
-- If GQI runs in the SLHelper process:
+- If GQI runs in the SLHelper process, log files are created for both types of extensions, each within their respective subfolders:
 
   - For ad hoc data sources: *C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources*
 
   - For custom operators: *C:\Skyline DataMiner\Logging\GQI\Custom operators*
 
-Log file names adhere to the following format: *Script_Library_Type.txt*.
-
 ## Log messages
 
 Log messages adhere to the following format:
+
+### [From DataMiner 10.5.0 [CU1]/10.5.4 onwards](#tab/tabid-1)
+
+<!-- RN 42355 -->
+
+```log
+[Timestamp][Level][Extension][User][SessionId][NodeId] Message
+```
+
+By default, a log message consists of the following main parts:
+
+- **Timestamp**: The time of logging, formatted as *yyyy-MM-dd HH:mm:ss.fff*.
+
+- **Level**: An abbreviation of the [log level](xref:GQI_GQILogLevel).
+
+- **Extension**: The GQI extension for which the log message is generated.
+
+- **User**: The GQI user involved.
+
+- **SessionId**: An identifier for the current query session of the extension instance, useful for distinguishing logs from operators used in multiple, possibly concurrent query sessions.
+
+- **NodeId**: An identifier for the query node of the extension instance, useful for distinguishing logs from operators used more than once in the same query.
+
+- **Message**: Any message intended for logging by GQI or the extension.
+
+Example:
+
+```log
+[2025-02-24 17:47:53.142][INF][Demo.DataSource2][SKYLINE2\Ronald][093bf8aa][3e38c090] My message
+```
+
+### [In earlier DataMiner version](#tab/tabid-2)
 
 ```log
 [Timestamp Level] [Session] [Node] Message
@@ -67,6 +101,8 @@ Example:
 
 > [!NOTE]
 > Whenever an extension instance accesses the logger property, the current GQI user is immediately logged as a separate log message, providing additional context that would otherwise not be available for individual log messages. Refer to the logs in the [example](#example) to observe this behavior.
+
+***
 
 ## Example
 
@@ -129,7 +165,7 @@ Suppose a user named Kevin applies this operator to the following data:
 
 Kevin selects the *Color* column as the argument.
 
-He can now access the relevant log messages in the *ExampleScript_ExampleLibrary_LogOperator.txt* file, located in the *C:\Skyline DataMiner\Logging\GQI\Custom operators* directory.
+If Kevin is using a DataMiner version prior to 10.5.0 [CU1]/10.5.4, he can now access the relevant log messages in the *ExampleScript_ExampleLibrary_LogOperator.txt* file, located in the *C:\Skyline DataMiner\Logging\GQI\Custom operators* directory:
 
 ```log
 [2024-04-22 10:19:13.143 INF] [c6a3d4bf] [71ba5588] Logs for user Kevin
@@ -138,3 +174,11 @@ He can now access the relevant log messages in the *ExampleScript_ExampleLibrary
 [2024-04-22 10:19:13.188 DBG] [c6a3d4bf] [71ba5588] Value for '2' is 'Burgundy'
 [2024-04-22 10:19:13.189 DBG] [c6a3d4bf] [71ba5588] Value for '3' is 'Carmine'
 ```
+
+With later DataMiner versions, the log message will instead be available in a file named *ExampleScript_ExampleLibrary.txt*, located in the *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions* folder:
+
+```log
+[2024-04-22 10:19:13.143][INF][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf][71ba5588] Column to log: Color
+[2024-04-22 10:19:13.184][DBG][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf][71ba5588] Value for '1' is 'Alizarin'
+[2024-04-22 10:19:13.188][DBG][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf][71ba5588] Value for '2' is 'Burgundy'
+[2024-04-22 10:19:13.189][DBG][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf][71ba5588] Value for '3' is 'Carmine'

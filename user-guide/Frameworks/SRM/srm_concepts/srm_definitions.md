@@ -21,9 +21,16 @@ A virtual function is a definition. It is not yet an actual resource. A virtual 
 
 Virtual functions also have **interfaces** defined (called "function interfaces"), which will be of a specific type. A virtual function of type "Encapsulating" could for example have a function interface "SDI" on the input and a function interface "IP" on the output. This will make sure that you can only connect functions that can be interconnected. These function interfaces can also contain specific information. For example, an IP interface could typically have a multicast IP address.
 
-Virtual functions are **defined in XML**. This works in a very similar way as the way the definition for DVEs ([Dynamic Virtual Elements](xref:Dynamic_virtual_elements)) is defined in a connector. However, an important difference with DVEs is the fact that the definition of the virtual function is not defined within the connector itself but in a separate file linked to the connector. This provides more flexibility in case different virtual functions need to be supported. Each virtual function corresponds with an XML section describing one specific function of a connector. The virtual function definition groups all KPIs related to a specific function and its function interfaces.
+### Functions XML files
 
-In practice, this means that a connector file (protocol.xml) will be accompanied by a virtual functions file (functions.xml), which defines all virtual functions the connector can expose.
+Virtual functions are **defined in XML**. This works in a very similar way as the way the definition for DVEs ([Dynamic Virtual Elements](xref:Dynamic_virtual_elements)) is defined in a connector. However, an important difference with DVEs is the fact that the definition of the virtual function is not defined within the connector itself but in a **separate file linked to the connector**. This provides more flexibility in case different virtual functions need to be supported. Each virtual function corresponds with an XML section describing one specific function of a connector. The virtual function definition groups all KPIs related to a specific function and its function interfaces.
+
+In practice, this means that a connector file (*Protocol.xml*) will be accompanied by a virtual functions file (*Functions.xml*), which defines all virtual functions the connector can expose.
+
+In the Protocols & Templates module in DataMiner Cube, virtual function definitions are indicated in the same way as DVE child protocols, except with a different icon. This can be a default icon or a custom icon defined in the functions XML file. The same icon will also be used to display the virtual function elements in the Surveyor.
+
+> [!TIP]
+> For information about the Functions XML structure, refer to [Functions schema](xref:SchemaFunctions).
 
 ## Profile parameter
 
@@ -41,6 +48,9 @@ Different types of profile parameters exist:
 
 - **Capability**: A parameter that will be used to request a specific capability of a resource. For example, HD and UHD for an encoding function.
 
+> [!TIP]
+> See also: [Configuring profile parameters](xref:Configuring_profile_parameters)
+
 ## Profile definition
 
 A profile definition is a **group of profile parameters that are needed to orchestrate and manage a virtual function**. As a result, a virtual function is also linked to a profile definition. For example, a profile definition "Encoding" could group all profile parameters needed to orchestrate and manage an "Encoding" virtual function.
@@ -51,6 +61,9 @@ A single profile definition will not contain the parameters for both the virtual
 
 Another example of a profile definition could be a profile definition "IP Interface", which groups all profile parameters that are required to orchestrate and manage an IP interface of a virtual function.
 
+> [!TIP]
+> See also: [Configuring profile definitions](xref:Configuring_profile_definitions)
+
 ## Service definition
 
 Service definitions are only used in the context of Service Orchestration.
@@ -59,6 +72,9 @@ In essence, a service definition is a **definition of multiple virtual functions
 
 A service definition is a key component in the management and orchestration of services. In addition to the definition of connecting virtual functions, it contains information needed to correctly manage booking creation and orchestration. When a booking is created, this typically involves the selection of a specific service definition and of profile instances for each of the virtual functions included in that service definition. Resources can then be selected manually or automatically. The service definition itself does not contain any resource or profile configuration.
 
+> [!TIP]
+> See also: [The Services module](xref:The_Services_module)
+
 ## Service profile definition
 
 Service profile definitions are only used in the context of Service Orchestration.
@@ -66,3 +82,6 @@ Service profile definitions are only used in the context of Service Orchestratio
 A service profile definition is a **subset of the virtual function configuration of one or multiple similar service definitions**. It is used to **predefine and combine the minimum configuration** required to spin up a service.
 
 This is an optional feature that is used to ease the creation of a booking. When users create a booking using a service profile definition, they will not need to select as many things.
+
+> [!TIP]
+> See also: [The Services module](xref:The_Services_module)

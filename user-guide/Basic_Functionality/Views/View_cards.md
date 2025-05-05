@@ -139,6 +139,21 @@ The list consists of the following columns:
 
 - *SLA service*: Relevant for SLAs only. Indicates the service monitored by the SLA.
 
+- *Isolation mode*: Available from DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 onwards<!--RN 42562-->. Relevant for elements only. Indicates whether the element is running in [isolation mode](xref:Adding_elements#adding-elements-in-isolation-mode). Possible values include:
+
+  - *None*: Not applicable. For example, when viewing the *All* page of a service.
+
+  - *Disabled*: The element is not running in isolation mode.
+
+  - *Enabled (protocol)*: Isolation mode is enabled via the *protocol.xml* file and applies to all elements using this protocol version.
+
+  - *Enabled (element)*: Isolation mode is enabled via the element’s own settings.
+
+  - *Enabled (DMA)*: Isolation mode is enabled via a DMA-wide setting that applies to all elements using the protocol.
+
+  > [!NOTE]
+  > By default, this column is hidden. To display it, right-click a column header and select *Add/Remove setting column* > *Isolation mode*.
+
 - Additional columns with user-defined properties can be added or removed via the column header context menu.
 
 #### Summary view

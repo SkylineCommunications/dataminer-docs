@@ -42,8 +42,6 @@ In the following example, the second serial connection will use a different thre
 </Threads>
 ```
 
-In the following example, the second serial connection will use a different thread because it is linked to connection 1.
-
 The threads created by connections 1002 to 1004 are virtual (i.e. not linked to a real connection). They can be used if a group has to be executed in a different thread. It is advised to use larger ID (e.g. from 1000 onwards). This way, problems will be avoided if real connections are added afterwards.
 
 ```xml

@@ -93,7 +93,7 @@ function initSearch() {
   }
 
   function doGetHttpRequest(searchTerm) {
-    var url = `https://docs-srch.search.windows.net/indexes/docs-blob-index2/docs/search?api-version=2021-04-30-Preview&api-key=5630827C003AFD513AA4D8D21A0A79B7`;
+    var url = `https://docs-srch.search.windows.net/indexes/index1745835548900/docs/search?api-version=2025-03-01-preview&api-key=5630827C003AFD513AA4D8D21A0A79B7`;
     var searchTermEnhanced = searchTerm;
     var pattern = /[a-zA-Z]$/;
     if (pattern.test(searchTermEnhanced)) {

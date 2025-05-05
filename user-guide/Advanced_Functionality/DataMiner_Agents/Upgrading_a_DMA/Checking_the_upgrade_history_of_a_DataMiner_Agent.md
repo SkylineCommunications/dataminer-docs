@@ -6,24 +6,20 @@ uid: Checking_the_upgrade_history_of_a_DataMiner_Agent
 
 You can easily check which upgrades have been performed on a particular DataMiner Agent.
 
-## In the C:\\Skyline DataMiner\\Upgrades\\ folder
+## In the Upgrades folder
 
-Go to the *C:\\Skyline DataMiner\\Upgrades\\* folder of the DataMiner Agent and open the file *VersionHistory.txt*. That file lists all the major upgrades that have been performed on that DataMiner Agent, each with the date at which the DataMiner Agent was first started after that particular upgrade.
+Go to the `C:\Skyline DataMiner\Upgrades` folder of the DataMiner Agent and open the file *VersionHistory.txt*. That file lists all the major upgrades that have been performed on that DataMiner Agent, each with the date at which the DataMiner Agent was first started after that particular upgrade.
 
 Example:
 
 ```txt
-2014-04-22 11:22:52;8.0.6.3-2304-20140407-release
-2014-05-09 11:05:10;8.0.7.4-2365-20140508-release
+2025-03-25 14:27:23;10.4.0.0-14772-20240821-release
+2025-03-27 11:16:35;10.5.4.0-15588-20250319-release
 ```
 
-In that same *C:\\Skyline DataMiner\\Upgrades\\* folder, you can also find a log file for every upgrade that was performed.
+In addition, the `C:\Skyline DataMiner\Upgrades\Packages` folder contains a subfolder for each major upgrade that has been performed on the DataMiner Agent. Within each of these folders, the *progress.log* file will contain detailed information about the upgrade.
 
-Upgrade log files have a timestamp in their file name:
-
-```txt
-update.log.YYYY_MM_DD_HH_MM_SS.txt
-```
+Note that the *Upgrades* folder itself may also contain *update.log* files, but these are not related to DataMiner upgrades. Instead, these are generated when .dmimport packages are imported on the DMA.
 
 ## In DataMiner Cube
 
@@ -36,6 +32,6 @@ Example:
 ```txt
 Upgrade History
 ---------------
-2014-05-09 11:05:10 => 8.0.7.4-2365-20140508-release
-2014-04-22 11:22:52 => 8.0.6.3-2304-20140407-release
+2025-03-27 11:16:35 => 10.5.4.0-15588-20250319-release
+2025-03-25 14:27:23 => 10.4.0.0-14772-20240821-release
 ```

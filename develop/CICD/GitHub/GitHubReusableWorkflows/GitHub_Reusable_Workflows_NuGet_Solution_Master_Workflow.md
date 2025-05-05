@@ -23,21 +23,11 @@ The goal of this workflow is to automatically create and upload reusable .NET li
   - [Analyze](#analyze)
   - [Quality gate](#quality-gate)
 
-  If the library passes these checks, the job will archive the created NuGet package and provide it as an artifact. The next job will attempt to sign the package.
-
-- Sign:
-
-  This job will use a provided .pfx certification that was BASE64-encoded as a GitHub secret to sign the created NuGet package. The job consists of the following steps:
-
-  - [Download unsigned NuGet](#download-unsigned-nuget)
-  - [Decrypt signature File](#decrypt-signature-file)
-  - [Sign NuGet package](#sign-nuget-package)
-
-  If signing is successful, the next job will attempt to push the package to [nuget.org](https://nuget.org).
+  If the library passes these checks, the job will archive the created NuGet package and provide it as an artifact. The next job will attempt to push the package.
 
 - Push:
 
-  - [Push to nuget.org](#push-to-nugetorg)
+  - [Push to GitHub NuGet registry](#push-to-github-nuget-registry)
 
 > [!IMPORTANT]
 > This workflow can run for both development or release cycles. A development cycle is any run that triggered from a change on a branch. A release cycle is any run that triggered from adding a tag with format A.B.C or A.B.C-text. During the development cycle, the version of an artifact automatically includes the run number. The .nupkg is available as artifact on GitHub. During the release cycle, the version of the artifact becomes the tag provided and the .nupkg is published on nuget.org. A release cycle can also release a pre-release version of a NuGet package. To do so, simply tag with format A.B.C-text. (e.g. 1.0.1-AlphaOne).
@@ -52,7 +42,7 @@ For example:
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Internal NuGet Solution Master Workflow.yml@main
 ```
 
 For most reusable workflows, several arguments and secrets need to be provided. You can find out which arguments and secrets by opening the reusable workflow and looking at the "inputs:" and "secrets:" sections located at the top of the file.
@@ -67,7 +57,7 @@ For example:
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Internal NuGet Solution Master Workflow.yml@main
     with:
       referenceName: ${{ github.ref_name }}
       runNumber: ${{ github.run_number }}
@@ -75,10 +65,9 @@ jobs:
       repository: ${{ github.repository }}
       owner: ${{ github.repository_owner }}
       sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the sonarcloud project URL here.
-      # The API-key: generated in the DCP Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
-      api-key: ${{ secrets.DATAMINER_DEPLOY_KEY }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
+      nugetApiKey: ${{ secrets.NUGETAPIKEY_GITHUB }}
 ```
 
 ## Skyline quality gate
@@ -110,36 +99,10 @@ Performs static code analysis using [SonarCloud](https://www.sonarsource.com/pro
 
 Checks the results of all previous steps and combines them into a single result that will either block the workflow from continuing or allow it to continue to the next job.
 
-## Sign
-
-### Download unsigned NuGet
-
-Retrieves the artifact .nupkg created during the Skyline quality gate job.
-
-### Decrypt signature file
-
-Downloads a .pfx file stored as a BASE64-encrypted string, containing the certificate from the action secrets in GitHub, and decrypt this for use in signing.
-
-In order to make such a BASE64 string of a .pfx on a Windows machine:
-
-1. Run the following command in a command prompt or PowerShell prompt window:
-
-   `certutil -encode infile outfile`
-
-1. Open the "outfile" with a TXT editor and copy the string content.
-
-1. Paste that content into an action secret on GitHub called *PFX*.
-
-1. Add a second action secret on GitHub called *PFXPASSWORD*, containing the password of the PFX.
-
-### Sign NuGet package
-
-Uses the previously decrypted signature file and signs your NuGet packages.
-
 ## Push
 
-### Push to nuget.org
+### Push to GitHub NuGet registry
 
-If this is a release cycle, the NuGet packages are published to nuget.org.
+If this is a release cycle, the NuGet packages are published to the [Skyline Communications GitHub NuGet registry](https://github.com/orgs/SkylineCommunications/packages).
 
 These can be both stable releases (A.B.C) or pre-releases.(A.B.C-text).

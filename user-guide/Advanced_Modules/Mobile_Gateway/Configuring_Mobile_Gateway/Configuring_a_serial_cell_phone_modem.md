@@ -79,7 +79,7 @@ The following procedure explains how to configure a virtual COM port when using 
    1. In the *COM Mapping* list, right-click the port of the NPort device on which the Mobile Gateway is connected, and click *COM Settings*.
 
       > [!NOTE]
-      > If necessary, you can disable the ports which don't need to be mapped or which are used by other applications.
+      > If necessary, you can disable the ports which do not need to be mapped or which are used by other applications.
 
    1. In the *Basic Settings* tab of the *COM Port Settings* window, open the *COM Number* selection box, and select the virtual COM port.
 
