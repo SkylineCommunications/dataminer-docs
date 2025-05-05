@@ -67,6 +67,6 @@ When, in the *MaintenanceSettings.xml* file, the `<SLNet>` element contained a `
 
 #### Problem when upgrading a DMA using BrokerGateway [ID 42853]
 
-<!-- MR 10.6.0 - FR 10.5.7 -->
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 While a DataMiner Agent using BrokerGateway was being upgraded, in some cases, a `nats-server could not be started` error could get thrown.
