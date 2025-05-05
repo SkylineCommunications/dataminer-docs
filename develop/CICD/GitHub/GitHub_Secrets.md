@@ -44,7 +44,7 @@ Several provided workflows may require static code analysis through SonarCloud i
 
 In the [Admin app](xref:About_the_Admin_app), two different types of keys can be created: system keys and organization keys. It is important that you use the correct key for specific actions.
 
-- A dataminer.services **system key** is scoped to the specific DMS for which it was created and can only be used for deployments to that DMS. It can also be used to upload private artifacts to the Catalog that will only be accessible for the organization that your DMS belongs to. To deploy connectors, you will need this key.
+- A dataminer.services **system key** is scoped to the specific DMS for which it was created and can only be used for volatile uploads and deployments to that DMS. All other uploads and deployments need to use the organization key.
 
   - Name: DATAMINER_DEPLOY_KEY
   - Value: See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
