@@ -19,7 +19,7 @@ To securely host your DataMiner Agent, we recommend that you make sure HTTPS con
 1. In the *Connections* pane on the left, right-click the website, and select *Edit Bindings*.
 1. In the *Add Site Binding* window, add an HTTPS binding with the selected certificate.
 1. Allow *inbound* TCP port **443** through the Windows Firewall.
-1. Optionally (though **recommended**), enable [HTTP Strict Transport Security](xref:HTTP_Headers#HSTS_-_Strict_Transport_Security) (*HSTS*).
+1. Optionally (though **recommended**), enable [HTTP Strict Transport Security](xref:HTTP_Headers#hsts---strict-transport-security) (*HSTS*).
 
 > [!TIP]
 > If you do not [configure HTTP to HTTPS redirection](#configuring-http-to-https-redirection), it is good practice to completely disable **HTTP** by removing the HTTP binding, meaning that only HTTPS traffic will be accepted. Once the binding is removed, you can close port 80 in the Windows Firewall.
@@ -60,7 +60,7 @@ To do so:
 > See also:
 >
 > - [Securing the DataMiner web server](xref:HTTP_Headers)
-> - [Disabling legacy SSL/TLS protocols](xref:DataMiner_hardening_guide#TLS_versions)
+> - [Disabling legacy SSL/TLS protocols](xref:DataMiner_hardening_guide#tls-versions)
 > - [TLS encryption in Cassandra](xref:Security_Cassandra_TLS)
 > - [Securing the Elasticsearch database](xref:Security_Elasticsearch)
 
