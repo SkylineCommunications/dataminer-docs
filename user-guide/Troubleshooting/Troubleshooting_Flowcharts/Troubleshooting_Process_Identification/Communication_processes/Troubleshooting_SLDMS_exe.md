@@ -179,6 +179,8 @@ Check the entries near the time of the issue, find a suspicious thread and follo
 
 - A notification is a request that a process can send to SLDMS to do something, e.g. in case a file has changed. Usually SLNet sends many notifications to SLDMS.
 
+- If this RTE needs to be cleared, which is not always the case since sometimes an RTE can mean that the system is processing a large amount of data, you will need to restart the DMA. If you want to resolve the RTE without a DMA restart, you will need a memory dump.
+
 - This RTE could result in a memory leak. The NotificationThread slows down, causing notifications to stack up and not get handled, which can result in the SLDMS process going out of memory (memory leak). You might see this in the log file as "No more threads can be created".
 
 - There are also other RTEs associated with SLDMS, e.g. the ConnectionThread RTE, the SNMPThread RTE, etc. However, the NotificationThread RTE is the most frequently seen RTE.
