@@ -156,6 +156,14 @@ When, in a low-code app, clicking or double-clicking a node of a *Node edge grap
 
 In some cases, using the *GetAlarms* method to e.g. retrieve history alarms could cause the web services API to leak memory.
 
+#### Dashboards app & Low-Code Apps - Query filter component: Problem when filtering a query containing a numeric discreet [ID 42856]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 [CU0] -->
+
+When a *Query filter* component was used to filter a query that contained a numeric discreet, it would incorrectly show that an active filter was applied.
+
+Also, when the component's query columns would then be used to filter a table, these columns would incorrectly all be grayed out as if they were filtered.
+
 #### Dashboards/Low-Code Apps - Timeline component: Timeline items would incorrectly no longer be stuck to the edge of the timeline when grouped [ID 42860]
 
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 [CU0] -->

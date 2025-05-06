@@ -67,11 +67,3 @@ In the web API, in some cases, WebSocket connections would incorrectly not get c
 From now on, WebSocket connections will automatically get closed after 5 minutes of inactivity.
 
 Also, a number of enhancements have been made with regard to error handling, especially when a connection gets closed.
-
-#### Dashboards app & Low-Code Apps - Query filter component: Problem when filtering a query containing a numeric discreet [ID 42856]
-
-<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
-
-When a *Query filter* component was used to filter a query that contained a numeric discreet, it would incorrectly show that an active filter was applied.
-
-Also, when the component's query columns would then be used to filter a table, these columns would incorrectly all be grayed out as if they were filtered.
