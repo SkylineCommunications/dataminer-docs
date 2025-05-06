@@ -320,11 +320,11 @@ In this case, SLWatchdog will do the following:
 
 In the file *MaintenanceSettings.xml*, you can specify a number of SLWatchdog settings.
 
-1. Open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+1. Open the file `C:\Skyline DataMiner\MaintenanceSettings.xml`.
 
 1. In the *Watchdog* tag, modify the SLWatchdog settings (see below).
 
-1. Save *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+1. Save `C:\Skyline DataMiner\MaintenanceSettings.xml`.
 
 1. Stop the DataMiner Agent.
 

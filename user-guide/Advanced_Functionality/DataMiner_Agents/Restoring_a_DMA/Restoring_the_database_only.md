@@ -23,7 +23,7 @@ If you do not use the Taskbar Utility to restore a DMA, there are two ways you c
 
 1. If it is not running yet, start the MySQL service.
 
-1. Navigate to the *C:\\Skyline DataMiner\\Backup\\* directory:
+1. Navigate to the `C:\Skyline DataMiner\Backup\` directory:
 
    - To perform a full database restore, double-click `{5B8F34AF-1656-4c02-94EE-CF028054602D}.bat`.
 
