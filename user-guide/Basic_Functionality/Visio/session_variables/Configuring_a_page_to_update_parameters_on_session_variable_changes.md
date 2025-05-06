@@ -45,5 +45,5 @@ Set|218/652|1205|[var:LoadTime]|SetTrigger=ValueChanged
 ```
 
 > [!TIP]
-> Change by default separators to avoid having problems with dynamic values (such as Element and View names or properties).
+> To avoid problems with dynamic values (such as element and view names or properties), we highly recommend changing the default separators. Ideally, you should use separators that are exceptional or combine multiple characters, so that they definitely will not occur in the dynamic values, such as `§`, `@`, or `ùµ`, or [forbidden characters](xref:Forbidden_characters) such as `?`.
 > Example: [sep:-$][sep:|@]SET@CardVariable@myElem@[Property:ViewProperty]@SetTrigger=ValueChanged$[sep:|@]SET@CardVariable@IP@[RegexMatch:[sep:,#](?:\d{1,3}\.){3}\d{1,3}(?=[^|]*$)#[param:[cardvar:myElem],1002]]@SetTrigger=ValueChanged
