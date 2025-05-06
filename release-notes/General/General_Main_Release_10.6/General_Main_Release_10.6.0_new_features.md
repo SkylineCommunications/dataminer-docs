@@ -561,27 +561,6 @@ If multiple settings indicate that the element should be running in isolation mo
 > - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
 > - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
 
-#### Tracking DataMiner app package contents via SLNet [ID 42353]
-
-<!-- MR 10.6.0 - FR 10.5.6 -->
-
-`AppPackageContent` classes have now been added to SLNet. These classes can be accessed via `AppPackageContentHelper`, and will allow you to track which items (e.g. connectors, Automation scripts, etc.) were installed using a *.dmapp* package.
-
-Using these classes, you can add, update and delete AppPackageContent records in bulk. Each record will contain the following fields:
-
-- ID (GUID)
-- DmappName (string)
-- DmappVersion (string)
-- DmappCatalogGuid (GUID)
-- ContentType (type of installed item)
-- ContentName (unique identifier per type)
-- ContentHash (hash of the content at installation, which will allow tracking changes)
-
-By default, all users will have read access to these records, but only users with *Install Application Package* permission will be able to edit them.
-
-> [!IMPORTANT]
-> This functionality will only work on systems using STaaS or systems using an OpenSearch/Elasticsearch indexing database. It will not work on systems using a Cassandra database.
-
 #### New NotifyProtocol call NT_CLEAR_PARAMETER [ID 42397]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
