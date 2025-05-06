@@ -42,6 +42,12 @@ Up to now, the ModuleInstaller upgrade action would time out after 15 minutes. A
 
 From now on, the ModuleInstaller upgrade action will only time out after 30 minutes.
 
+#### Visual Overview in the web apps: Enhanced behavior in case of a failing visual overview request [ID 42677]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When a request for a visual overview in a web app failed, up to now, that request would incorrectly not be removed, causing it to block all subsequent requests for a visual overview in a web app. From now on, when a request for a visual overview in a web app fails, it will be removed from the list of pending requests.
+
 ### Fixes
 
 #### Not all DCF interfaces would be listed in the Connectivity tab of an element's Properties window [ID 42591]
