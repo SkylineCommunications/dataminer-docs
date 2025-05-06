@@ -217,7 +217,7 @@ Using the RAD API, you can fully tailor the RAD functionality to your needs. For
 1. In Cube, click *Add Degradation* in the *Demo Control* page of the *RAD - Commtia LON 3* element. 
 1. Notice that no new relational anomaly appears in the alarm console as the script only configured RAD for the DAB Transmitters situated in Southampton.
 
-## Step 9: Optionally, clean up your system
+## Step 9: Clean up your system
 
 1. In the RAD Manager, remove all the groups you created in the previous step by selecting them and clicking the *Remove Group* button.
 1. In case you would like to repeat some of the exercises, you can duplicate the related elements 
