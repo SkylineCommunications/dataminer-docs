@@ -29,7 +29,7 @@ When adding a DataMiner configuration to a DMA, you can select
 
 1. Start Notepad.exe as Administrator, and open the following file:
 
-   *C:\\Program Files (x86)\\Skyline Communications\\Skyline Taskbar Utility\\ApplicationSettings.xml*
+   `C:\Program Files (x86)\Skyline Communications\Skyline Taskbar Utility\ApplicationSettings.xml`
 
 1. Locate the *\<AdvancedOptions>* tag, and set it to “true”:
 
@@ -37,7 +37,7 @@ When adding a DataMiner configuration to a DMA, you can select
    <AdvancedOptions>true</AdvancedOptions>
    ```
 
-1. Locate the *\<ConfigFolderPath>* tag, and set it to the folder that should contain the DataMiner configurations for the DMA. This can for instance be a folder on the D drive. By default, it is set to *C:\\Skyline DataMiner Configs\\*.
+1. Locate the *\<ConfigFolderPath>* tag, and set it to the folder that should contain the DataMiner configurations for the DMA. This can for instance be a folder on the D drive. By default, it is set to `C:\Skyline DataMiner Configs\`.
 
    The folder `C:\Skyline DataMiner` will be linked to the configuration that is currently running, but will not actually contain any data. All configurations will be stored at the configured path.
 
@@ -67,7 +67,8 @@ When adding a DataMiner configuration to a DMA, you can select
 1. Click *Create* to install the package you selected.
 
 > [!NOTE]
-> - For a new configuration, it is possible that the files “ConnectionSettings.txt” and “EndPoints.txt” are missing in the *Webpages* folder of a particular configuration. In that case, copy them to this folder from the folder *C:\\Skyline DataMiner Configs\\Skyline DataMiner\\Webpages*.
+>
+> - For a new configuration, it is possible that the files “ConnectionSettings.txt” and “EndPoints.txt” are missing in the *Webpages* folder of a particular configuration. In that case, copy them to this folder from the folder `C:\Skyline DataMiner Configs\Skyline DataMiner\Webpages`.
 > - After you have created a new configuration, it is possible that the DMA has problems restarting, so a manual restart is advisable.
 
 ## Switching to another DataMiner configuration

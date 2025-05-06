@@ -12,7 +12,7 @@ To do so:
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml.*
+1. Open the file `C:\Skyline Dataminer\MaintenanceSettings.xml`.
 
 1. In the *\<Surveyor>* tag, add the *\[#Tickets\]* placeholder to the *\<ViewStatistics>*, *\<ServiceStatistics>* and/or *\<ElementStatistics>* tag.
 

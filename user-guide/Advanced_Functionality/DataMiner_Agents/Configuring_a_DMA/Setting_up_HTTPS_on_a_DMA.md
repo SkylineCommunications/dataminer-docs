@@ -43,7 +43,7 @@ To do so:
 
 1. Stop the DataMiner software.
 
-1. On a DataMiner Agent, open *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+1. On a DataMiner Agent, open `C:\Skyline DataMiner\MaintenanceSettings.xml`.
 
 1. At the top level of the \<MaintenanceSettings> XML tree, add an HTTPS tag with the necessary attributes. For example:
 

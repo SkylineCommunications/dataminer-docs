@@ -35,7 +35,7 @@ It is also possible to specify alarm filters, so that blinking is only enabled b
 
 1. Stop the DataMiner software.
 
-1. On a DataMiner Agent, open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+1. On a DataMiner Agent, open the file `C:\Skyline DataMiner\MaintenanceSettings.xml`.
 
 1. In the *\<AlarmSettings>* tag, specify a *\<Blinking>* tag like the following one:
 
