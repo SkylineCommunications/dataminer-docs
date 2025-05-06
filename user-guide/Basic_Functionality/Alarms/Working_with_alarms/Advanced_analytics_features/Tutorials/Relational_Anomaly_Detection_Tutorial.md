@@ -19,27 +19,24 @@ Estimated duration: 25 minutes.
 
 - Relational Anomaly Detection is enabled (in DataMiner Cube: *System Center* > *System settings* > *analytics config*).
 
-- The RAD Manager app is deployed. You can find it in the DataMiner Catalog by searching for "RAD Manager" or by going to <https://aka.dataminer.services/RAD-Manager-Catalog>.
-
 ## Overview
 
 The tutorial consists of the following steps:
 
-- [Step 1: Install the example package from the Catalog](#step-1-install-the-example-package-from-the-catalog)
-- [Step 2: Install the RAD Manager from the Catalog](#step-2-install-the-rad-manager-from-the-catalog)
-- [Step 3: Check the DAB transmitter elements in Cube](#step-3-check-the-dab-transmitter-elements-in-cube)
-- [Step 4: Configure your first RAD group](#step-4-configure-your-first-rad-group)
-- [Step 5: Create a problem and verify if RAD detects it](#step-5-create-a-problem-and-verify-if-rad-detects-it)
-- [Step 6: Tweak the advanced configuration](#step-6-tweak-the-advanced-configuration)
-- [Step 7: Configure monitoring on devices with the same connector](#step-7-configure-monitoring-on-devices-with-the-same-connector)
-- [Step 8: Configure RAD groups with the API via a script](#step-8-configure-rad-groups-with-the-api-via-a-script)
-- [Step 9: Clean up your system](#step-9-clean-up-your-system)
+- [Step 1: Install the example package from the Catalog](#step-1-install-the-necessary-packages-from-the-catalog)
+- [Step 2: Check the DAB transmitter elements in Cube](#step-2-check-the-dab-transmitter-elements-in-cube)
+- [Step 3: Configure your first RAD group](#step-3-configure-your-first-rad-group)
+- [Step 4: Create a problem and verify if RAD detects it](#step-4-create-a-problem-and-verify-if-rad-detects-it)
+- [Step 5: Tweak the advanced configuration](#step-5-tweak-the-advanced-configuration)
+- [Step 6: Configure monitoring on devices with the same connector](#step-6-configure-monitoring-on-devices-with-the-same-connector)
+- [Step 7: Configure RAD groups with the API via a script](#step-7-configure-rad-groups-with-the-api-via-a-script)
+- [Step 8: Clean up your system](#step-8-clean-up-your-system)
 
-## Step 1: Install the example package from the Catalog
+## Step 1: Install the necessary packages from the Catalog
 
 1. Go to the [RAD Demonstrator](https://catalog.dataminer.services/details/eeedd709-d681-448d-9a1e-2e5fbfd73740) package in the Catalog.
 
-1. Deploy the package to your DataMiner Agent by clicking the *Deploy* button.
+1. [Deploy the package](xref:Deploying_a_catalog_item) to your DataMiner Agent by clicking the *Deploy* button.
 
    This will create an Automation script called *Don't touch my stuff* in the Automation module, in the *DataMiner Catalog > RAD Demonstrator* folder.
 
@@ -52,15 +49,13 @@ The tutorial consists of the following steps:
 
    You can find these elements in the Cube Surveyor under *DataMiner Catalog* > *Using Relational Anomaly Detection*.
 
-## Step 2: Install the RAD Manager from the Catalog
+1. Go to the [RAD Manager](https://aka.dataminer.services/RAD-Manager-Catalog) package in the DataMiner Catalog and [deploy it](xref:Deploying_a_catalog_item).
 
-1. You can find the RAD Manager in the DataMiner Catalog by searching for "RAD Manager" or by simply clicking [RAD Manager](https://aka.dataminer.services/RAD-Manager-Catalog).
+1. Go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
 
-1. Deploy and Access the RAD Manager by following the steps on the picture below.
+1. Check if you can see the *RAD Manager* app.
 
-![Deploying and accessing the RAD Manager](~/user-guide/images/tutorial_RAD_Deploy_RAD_Manager.png)
-
-## Step 3: Check the DAB transmitter elements in Cube
+## Step 2: Check the DAB transmitter elements in Cube
 
 Our Catalog package has created a number of dummy DAB Transmitter elements in your system.
 
@@ -86,7 +81,7 @@ During this tutorial, we will focus on the fact that the output powers of the di
 and that their sum should be equal to the total output power up to some losses.
 In the next step, we will configure RAD to monitor these relations.
 
-## Step 4: Configure your first RAD group
+## Step 3: Configure your first RAD group
 
 1. Go to the RAD Manager App.
 
@@ -114,7 +109,7 @@ In the next step, we will configure RAD to monitor these relations.
 
    ![Add a group](~/user-guide/images/tutorial_RAD_groupOverview.jpg)
 
-## Step 5: Create a problem and verify if RAD detects it
+## Step 4: Create a problem and verify if RAD detects it
 
 1. In Cube, open the *RAD - Commtia LON 1* element.
 
@@ -146,7 +141,7 @@ In the next step, we will configure RAD to monitor these relations.
 
    The *anomaly score* expresses how strongly the model believes that the relations between the parameters are broken at any given time. The increase in the anomaly score is what led the system to trigger the RAD event in the alarm console.
 
-## Step 6: Tweak the advanced configuration
+## Step 5: Tweak the advanced configuration
 
 Despite the fact that the algorithm is fully automatic, you can still influence its behavior by doing some advanced configurations.
 Let's dive deeper into the advanced configurations of the RAD Manager and learn how we can suppress events created as a result of a short maintenance or cleaning operations.
@@ -191,7 +186,7 @@ Let's dive deeper into the advanced configurations of the RAD Manager and learn 
 
 1. Notice that no new Relational Anomaly appears in the alarm console.
 
-## Step 7: Configure monitoring on devices with the same connector
+## Step 6: Configure monitoring on devices with the same connector
 
 Typically, operators are not just monitoring one single DAB Transmitter, but multiple. It would not be ideal to configure RAD for each transmitter separately.
 
@@ -219,7 +214,7 @@ In this step, we will show you how to configure monitoring on all devices with t
 
 1. Optionally, in Cube: click *Add Degradation* in the *Demo Control* page of the *RAD - Commtia STH 1* element to verify that DataMiner picks up on the relational anomaly. Leave the *RAD - Commtia LON 3* element alone for a later exercise.
 
-## Step 8: Configure RAD groups with the API via a script
+## Step 7: Configure RAD groups with the API via a script
 
 Using the RAD API, you can fully tailor the RAD functionality to your needs. For example, what if you would like to configure RAD to monitor your DAB transmitters, but only those in Southampton (because maybe a different team is responsible for those in London). Let us show you how to do this using the RAD API.
 
@@ -239,7 +234,7 @@ Using the RAD API, you can fully tailor the RAD functionality to your needs. For
 
 1. Notice that no new relational anomaly appears in the Alarm Console as the script only configured RAD for the DAB Transmitters situated in Southampton.
 
-## Step 9: Clean up your system
+## Step 8: Clean up your system
 
 1. In the RAD Manager, remove all the groups you created in the previous step by selecting them and clicking the *Remove Group* button.
 
