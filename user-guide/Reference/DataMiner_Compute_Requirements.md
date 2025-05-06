@@ -83,7 +83,9 @@ In the table below, you can find which .NET (Framework) versions are required fo
 | DataMiner versions prior to 10.1.11 | Microsoft .NET Framework 4.6.2 |
 
 > [!NOTE]
-> We recommend always upgrading to the latest .NET Framework version.
+>
+> - We recommend always upgrading to the latest .NET Framework version.
+> - Major .NET versions are not cross-compatible, which means that you always need to install the appropriate version mentioned above. If you are for example using a DataMiner version that requires .NET 8.0, this will not work if only .NET 9.0 is installed, so in that case you will need to install .NET 8.0 as well.
 
 ### Microsoft Visual C++
 
