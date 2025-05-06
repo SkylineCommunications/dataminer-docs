@@ -72,6 +72,8 @@ items:
     topicUid: Change_Catalog_Publishing_State
   - name: Deploying a Catalog item
     topicUid: Deploying_a_catalog_item
+  - name: Deleting a Catalog item
+    topicUid: Deleting_a_catalog_item
   - name: Downloading a Catalog item with the API
     topicUid: Downloading_a_catalog_item
   - name: Tutorials

@@ -16,12 +16,12 @@ To make a private item available to all users, or to make a public item availabl
 
 1. [Go to the details page](xref:Looking_up_an_item_in_the_catalog) of the Catalog item.
 
-1. At the top of the page, click *Make private* or *Make public*.
+1. At the top of the page, click the ![Context menu button](~/user-guide/images/Catalog_context_menu.png) button and select *Make private* or *Make public*.
 
-   If you cannot see these buttons, double-check whether the correct organization is selected, because these will only be shown for members of the organization that published the item.
+   If you cannot see these options, double-check whether the correct organization is selected, because these will only be shown for members of the organization that published the item.
 
 > [!NOTE]
-> You must have the Owner or Admin role in the organization that published the Catalog item in order to change the publishing state. If you have the Member role, you will be able to see the button to change the publishing state, but an error message will be shown if you try to use it.
+> You must have the Owner or Admin role in the organization that published the Catalog item in order to change the publishing state. If you have the Member role, you will be able to see the option to change the publishing state, but an error message will be shown if you try to use it.
 
 ## Changing the publishing state using the Catalog API
 
