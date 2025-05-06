@@ -242,6 +242,12 @@ In all messages of the Relational Anomaly Detection API, the term "MAD" has now 
 
 Also, all objects that referred to items containing "MAD" have now been deprecated.
 
+#### Security enhancements [ID 42747]
+
+<!-- 42747: MR 10.4.0 [CU15]/10.5.0 [CU4] - FR 10.5.6 [CU0] -->
+
+A number of security enhancements have been made.
+
 #### SLNetClientTest tool - DataMiner Object Model: Enhancements made to the ModuleSettings window [ID 42788]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->

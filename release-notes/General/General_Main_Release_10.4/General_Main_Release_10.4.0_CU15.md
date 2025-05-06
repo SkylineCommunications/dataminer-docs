@@ -78,6 +78,12 @@ To configure an override parameter, use the following syntax:
 > - The `FACTOR_PID` is optional and can be left empty.
 > - The ID of the override parameter (`OVERRIDE_PID`) is the third value in the comma-separated list. The `OVERRIDE_PID` value must be (a) the parameter ID of a column in the same table as the source column or (b) the parameter ID of a standalone column. Any other parameter ID will not work.
 
+#### Security enhancements [ID 42747]
+
+<!-- 42747: MR 10.4.0 [CU15]/10.5.0 [CU4] - FR 10.5.6 [CU0] -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Problem with SLProtocol when a protocol version was overwritten while an element using that protocol version was starting up [ID 42344]

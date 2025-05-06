@@ -29,6 +29,12 @@ From now on, the ModuleInstaller upgrade action will only time out after 30 minu
 
 When a request for a visual overview in a web app failed, up to now, that request would incorrectly not be removed, causing it to block all subsequent requests for a visual overview in a web app. From now on, when a request for a visual overview in a web app fails, it will be removed from the list of pending requests.
 
+#### Security enhancements [ID 42747]
+
+<!-- 42747: MR 10.4.0 [CU15]/10.5.0 [CU4] - FR 10.5.6 [CU0] -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### LDAP users added as part of an LDAP user group would incorrectly appear as local users instead of domain users [ID 42743]
