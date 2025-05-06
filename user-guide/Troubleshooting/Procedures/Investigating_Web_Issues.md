@@ -4,6 +4,9 @@ uid: Investigating_Web_Issues
 
 # Troubleshooting – web
 
+> [!TIP]
+> For a flowchart for troubleshooting web apps based on a recording, see [Troubleshooting - web apps](xref:Troubleshooting_Webapps).
+
 ## Client web app
 
 Is something not working as expected? Then do the following:
