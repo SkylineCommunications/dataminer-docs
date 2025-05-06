@@ -45,6 +45,7 @@ The overview below lists all data sources that currently have update support. If
 | Data source | Support level | Supported since |
 | ----------- | -------- | -------- |
 | [Get ad hoc data](xref:Get_ad_hoc_data) | [Real-time events](#query-update-support) | DataMiner 10.4.4/10.5.0 |
+| [Get object manager instances](xref:Get_object_manager_instances) | [Real-time events](#query-update-support) | DataMiner 10.5.0/10.5.7 when using the [GQI DxM](xref:GQI_DxM) <!-- RN 42530 --> |
 | [Get parameter table by ID](xref:Get_parameter_table_by_ID) | [Real-time events](#query-update-support) | DataMiner 10.3.10/10.4.0 |
 | [Get views](xref:Get_views) | [Real-time events](#query-update-support) | DataMiner 10.3.10/10.4.0 |
 
