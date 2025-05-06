@@ -76,3 +76,10 @@ When, in the *MaintenanceSettings.xml* file, the `<SLNet>` element contained a `
 <!-- MR 10.4.0 [CU16] - FR 10.5.7 -->
 
 When the NATS connection between SLNet and SLHelper was unavailable, in some cases, either of those processes could stop working.
+
+#### Active clients would not receive an updated ElementInfoEventMessage after an element had been swarmed [ID 42778]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+<!-- Not added to MR 10.6.0 -->
+
+In some cases, after an element had been swarmed, active clients would not receive an updated `ElementInfoEventMessage`, causing them to display the element as if it was still hosted on the source agent.

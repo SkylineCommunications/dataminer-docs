@@ -57,3 +57,13 @@ From now on, for every parameter or element than cannot be found, a clear error 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
 When, in a node edge graph, you dragged a node to another position, up to now, the actions configured in that node would incorrectly be executed.
+
+#### Web API: WebSocket connections would incorrectly not get closed when a client disconnected [ID 42848]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+In the web API, in some cases, WebSocket connections would incorrectly not get closed when a client disconnected. As a result, the web API would believe it was still connected to the client and would keep a connection to SLNet.
+
+From now on, WebSocket connections will automatically get closed after 5 minutes of inactivity.
+
+Also, a number of enhancements have been made with regard to error handling, especially when a connection gets closed.
