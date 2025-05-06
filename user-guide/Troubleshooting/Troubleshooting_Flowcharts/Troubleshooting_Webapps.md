@@ -26,6 +26,8 @@ MissingComponents{{Are components or data sources missing that should be availab
 CheckSoftLaunch{{Check the software version and soft-launch options and upgrade or configure as necessary}}
 KnownIssue{{Does the software version used contain this known issue?}}
 UpgradeToFix{{Upgrade to a version that fixes the issue}}
+InvisibleComponents{{Does the page contain invisible components?}}
+ClearInvisibleComponents{{Clear the invisible components as detailed below}}
 LoadingIssues{{In the console logs, can you see loading issues or a Service Unavailable error?}}
 IISRunning{{Is the IIS web server running?}}
 CheckCloudConnection{{Check the connection to dataminer.services}}
@@ -41,7 +43,9 @@ Adhocdatasource --- |No|LicenseAvailable
 MissingComponents --- |Yes|CheckSoftLaunch
 MissingComponents --- |No|KnownIssue
 KnownIssue --- |Yes|UpgradeToFix
-KnownIssue --- |No|LoadingIssues
+KnownIssue --- |No|InvisibleComponents
+InvisibleComponents --- |Yes|ClearInvisibleComponents
+InvisibleComponents --- |No|LoadingIssues
 LoadingIssues --- |Yes|IISRunning
 LoadingIssues --- |No|FailingCalls
 IISRunning --- |Yes|CheckCloudConnection
@@ -50,10 +54,26 @@ FailingCalls --- |Yes|CheckErrorMessage
 FailingCalls --- |No|CheckConsoleErrors
 %% Define hyperlinks %%
 click CheckCloudConnection "/user-guide/Troubleshooting/Procedures/Cloud_Connection_Issues.html" "dataminer.services troubleshooting"
+click InvisibleComponents "#dealing-with-invisible-components" "Dealing with invisible components"
+click ClearInvisibleComponents "#dealing-with-invisible-components" "Dealing with invisible components"
 %% Apply styles to blocks %%
 class START classTerminal;
 class Adhocdatasource,MissingComponents,KnownIssue,LoadingIssues,IISRunning,FailingCalls classDecision;
-%%class classExternalRef;
-class CheckCloudConnection,CheckConsoleErrors classActionClickable;
+class InvisibleComponents classExternalRef;
+class CheckCloudConnection,CheckConsoleErrors,ClearInvisibleComponents classActionClickable;
 class ScriptCompiles,LicenseAvailable,CheckSoftLaunch,UpgradeToFix,RestartIIS,CheckErrorMessage classAction;
 ```
+
+## Dealing with invisible components
+
+In some cases, it can occur that a page in a low-code app or a dashboard contains components that are not shown but that do influence the page or dashboard, causing unexpected behavior.
+
+To check if this is the case, do the following in the dashboard or on every page and panel of the low-code app:
+
+1. Press Ctrl + A and then press Delete.
+
+1. Count the components mentioned in the dialog to see if they match the shown components, and then click **Cancel**.
+
+   If the count matches up, the page, panel, or dashboard does not contain invisible components.
+
+1. If the count does not match up, clear the selection of the components you can see by clicking them while keeping Ctrl pressed, and then press Delete again to remove the invisible component.
