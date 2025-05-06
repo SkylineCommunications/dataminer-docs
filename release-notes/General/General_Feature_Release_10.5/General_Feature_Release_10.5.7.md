@@ -73,7 +73,7 @@ When, in the *MaintenanceSettings.xml* file, the `<SLNet>` element contained a `
 
 #### Problem with SLNet and/or SLHelper when the NATS connection between them was unavailable [ID 42755]
 
-<!-- MR 10.4.0 [CU16] - FR 10.5.7 -->
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
 When the NATS connection between SLNet and SLHelper was unavailable, in some cases, either of those processes could stop working.
 
