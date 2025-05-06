@@ -39,12 +39,3 @@ If you want the set commands in the **Execute** field to be performed each time 
 ```txt
 ExecuteSetsOnInit
 ```
-
-## Example
-
-```txt
-Set|218/652|1201|Session:[var:GuidVar]: ListSelection=[var:Chain],
-Data =[var:LoadTime]|SetTrigger=ValueChanged-
-Set|218/652|1203|[var:Chain]|SetTrigger=ValueChanged-
-Set|218/652|1205|[var:LoadTime]|SetTrigger=ValueChanged
-```
