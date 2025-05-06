@@ -36,6 +36,12 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### Dashboards app & Low-Code Apps: Enhancements made to dropdown controls [ID 42840]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+A number of minor enhancements have been made to the dropdown controls.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: No error would be returned when a parameter or an element could not be fetched [ID 42584]
