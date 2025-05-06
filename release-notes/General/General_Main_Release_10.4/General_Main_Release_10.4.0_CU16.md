@@ -39,3 +39,9 @@ When, in the *MaintenanceSettings.xml* file, the `<SLNet>` element contained a `
 
 > [!NOTE]
 > The above-mentioned `<DefaultUpgradeOptions>` element will be added to the *MaintenanceSettings.xml* file the first time you make any changes to the default upgrade options. To change these options in DataMiner Cube, go to *System Center > System Settings > Upgrade*.
+
+#### Problem with SLNet and/or SLHelper when the NATS connection between them was unavailable [ID 42755]
+
+<!-- MR 10.4.0 [CU16] - FR 10.5.7 -->
+
+When the NATS connection between SLNet and SLHelper was unavailable, in some cases, either of those processes could stop working.

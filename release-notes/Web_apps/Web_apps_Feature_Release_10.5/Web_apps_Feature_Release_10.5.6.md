@@ -155,3 +155,9 @@ When, in a low-code app, clicking or double-clicking a node of a *Node edge grap
 <!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 [CU0] -->
 
 In some cases, using the *GetAlarms* method to e.g. retrieve history alarms could cause the web services API to leak memory.
+
+#### Dashboards/Low-Code Apps - Timeline component: Timeline items would incorrectly no longer be stuck to the edge of the timeline when grouped [ID 42860]
+
+<!-- MR 10.4.0 [CU15] / 10.5.0 [CU3] - FR 10.5.6 [CU0] -->
+
+When, in a *Timeline* component, items had been grouped, the sides of those items would incorrectly no longer be stuck to the edge of the timeline. Instead, they would go out of view. From now on, when items are grouped, they will again be stuck to the edge of the timeline.
