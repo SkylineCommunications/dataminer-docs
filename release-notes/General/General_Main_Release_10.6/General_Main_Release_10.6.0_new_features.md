@@ -640,4 +640,4 @@ The context name and context ID can be changed at run-time, and are not saved by
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
-The SLNet message `EditConnection`, which can be used to edit a connection from within an Automation script, now has a `GenerateInformationEvents` property. If this property is set to true, information events will be generated when a connection is created, updated, or deleted.
+The SLNet message `EditConnection`, which can be used to edit a connection from within a QAction, now has a `GenerateInformationEvents` property. If this property is set to true, information events will be generated when a connection is created, updated, or deleted.
