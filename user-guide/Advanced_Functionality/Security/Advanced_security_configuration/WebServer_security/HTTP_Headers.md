@@ -107,7 +107,7 @@ There are some other HTTP headers that can improve security. However, their valu
 
 ### Server Header
 
-DataMiner versions older then 10.3.8/10.4.0 [CU0] <!-- RN36624 --> will have the *Server* header configured by default. This header leaks information on the type and version of the web server.
+DataMiner versions older than 10.3.8/10.4.0 [CU0] <!-- RN36624 --> will have the *Server* header configured by default. This header leaks information on the type and version of the web server.
 
 To remove the *Server* header in IIS, create an outbound rewrite rule that removes the value for the *Server* header.
 
