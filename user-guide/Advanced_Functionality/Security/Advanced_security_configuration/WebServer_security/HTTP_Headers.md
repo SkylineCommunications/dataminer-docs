@@ -6,7 +6,7 @@ uid: HTTP_Headers
 
 HTTP response headers allow you to instruct how the browser should behave when handling data. The HTTP headers below provide extra protection layers to mitigate vulnerabilities (e.g. cross-site scripting, clickjacking, information disclosure, etc.).
 
-## Headers to Add
+## Headers to add
 
 ### X-Frame-Options
 
@@ -18,7 +18,7 @@ The X-Frame-Options header controls which other websites can embed the DataMiner
 
 1. In the middle pane, double-click *HTTP Reponse Headers*.
 
-1. In the *Actions* pane, click *Add...*.
+1. In the *Actions* pane, click *Add*.
 
 1. Set *Name* to *X-Frame-Options*.
 
@@ -36,7 +36,7 @@ The X-Content-Type-Options header dictates how the browser should handle MIME ty
 
 1. In the middle pane, double-click *HTTP Reponse Headers*.
 
-1. In the *Actions* pane, click *Add...*.
+1. In the *Actions* pane, click *Add*.
 
 1. Set *Name* to *X-Content-Type-Options*.
 
@@ -46,7 +46,7 @@ The X-Content-Type-Options header dictates how the browser should handle MIME ty
 
 ### HSTS - Strict Transport Security
 
-To bypass TLS encryption on websites served over HTTPS, attackers can use *SSL stripping*. To mitigate this type of attack, set the *Strict-Transport-Security* (HSTS) response header. This will instruct the browser to always load DataMiner over HTTPS.
+To bypass TLS encryption on websites served over HTTPS, attackers can use **SSL stripping**. To mitigate this type of attack, set the *Strict-Transport-Security* (HSTS) response header. This will instruct the browser to always load DataMiner over HTTPS.
 
 To enable *Strict Transport Security*:
 
@@ -80,7 +80,7 @@ To enable *Strict Transport Security*:
 
 1. In the middle pane, double-click *HTTP Reponse Headers*.
 
-1. In the *Actions* pane, click *Add...*.
+1. In the *Actions* pane, click *Add*.
 
 1. Set *Name* to *Strict-Transport-Security*.
 

@@ -104,7 +104,7 @@ By default, DataMiner uses HTTP to serve the web applications. HTTP is unencrypt
 
 ### HTTP headers
 
-By default, DataMiner does not configure some http headers that improve the security of the webpages. Additionally, depending on the DataMiner version, there may be some http headers present that leak information about the underlying technologies. For this reason, we recommend to have a look at the [HTTP Header configuration](xref:HTTP_Headers).
+By default, DataMiner does not configure some HTTP headers that improve the security of the webpages. Additionally, depending on the DataMiner version, some HTTP headers may be present by default that leak information about the underlying technologies. For this reason, we recommend having a look at the [HTTP header configuration](xref:HTTP_Headers).
 
 ## Operating system hardening
 
