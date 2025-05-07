@@ -9,7 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 05 May 2025 - 5 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42793]
+### 08 May 2025 - New feature - Syncing authentication state across cloud applications.
+
+Signing in or out will now sync to other applications automatically without the need to refresh the page.
+
+### 07 May 2025 - Fix - Fixed local sign-on fallback [ID 42883]
+
+When experiencing issues with the shared single sign-on, application will now fallback to a local sign-on. 
+
+### 05 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42793]
 
 If you are a member of the organization that published a specific Catalog item, and you have the Owner or Admin role, you can now delete that Catalog item using a context menu at the top of the item's details page. When you do so, you will have to provide the reason for the deletion.
 
@@ -17,9 +25,9 @@ If you are a member of the organization that published a specific Catalog item, 
 
 Previously, export requests in the Admin app ignored the DataMiner Systems selected by the user and exported all available data instead. This issue has been resolved. Export results are now correctly limited to the selected DataMiner Systems.
 
-### 05 May 2025 - New feature - Single sign-on for Catalog, Admin, and Shares [ID 42768] [ID 42789]
+### 05 May 2025 - New feature - Single sign-on for Catalog, Admin, Connection and Shares [ID 42768] [ID 42789]
 
-Single sign-on (SSO) has been implemented across the Catalog, Admin, and Shares apps on dataminer.services. Users who sign in to one of these applications will now be automatically signed in to the others, providing a more seamless user experience.
+Single sign-on (SSO) has been implemented across the Catalog, Admin, Connection and Shares apps on dataminer.services. Users who sign in to one of these applications will now be automatically signed in to the others, providing a more seamless user experience.
 
 ### 28 April 2025 - Fix - Usage API - Performance and stability improvements [ID 42791]
 
