@@ -6,7 +6,7 @@ uid: GetMatrixConnections
 
 Use this method to retrieve the connected crosspoints of a matrix.
 
-Available from DataMiner version 9.5.1 onwards.
+<!-- Available from DataMiner version 9.5.1 onwards. -->
 
 ## Input
 

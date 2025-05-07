@@ -6,7 +6,7 @@ uid: GetPagesForServiceElementV2
 
 Use this method to retrieve the Data Display pages of a specified element that is included in a specified service, as well as the alarm cache status.
 
-Available from DataMiner 10.0.7 onwards.
+<!-- Available from DataMiner 10.0.7 onwards. -->
 
 ## Input
 
