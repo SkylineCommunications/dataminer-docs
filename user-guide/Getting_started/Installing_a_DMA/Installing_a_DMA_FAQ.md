@@ -33,7 +33,7 @@ To do so, when the computer is booting:
 
 When you get an HTTP error 401.3 ("Unauthorized") when trying to browse to any web page of the DataMiner Agent in question, verify the security settings of the Skyline DataMiner directory that you copied.
 
-1. In *File Explorer*, go to the *C:\Skyline DataMiner* directory.
+1. In *File Explorer*, go to the `C:\Skyline DataMiner` directory.
 1. Right-click the directory, and click *Security*.
 1. Make sure that the *Users* group has been added, and has "Read" rights.
 
@@ -76,7 +76,7 @@ THE DIRECTORY NAME IS INVALID.
 
 If so, do the following:
 
-1. Check if a *C:\Windows\temp* directory exists. If it does not, create it.
+1. Check if a `C:\Windows\temp` directory exists. If it does not, create it.
 1. For this directory, grant full permissions to the ASPNET or NETWORK SERVICE user accounts.
 1. Right-click *My Computer*, and click *Properties*.
 1. On the *Advanced* tab, click *Environment Variables*.
@@ -105,7 +105,7 @@ This error is caused by SLDMS being unable to start or locate the ntbackup proce
 
 To solve this problem, proceed as follows:
 
-- Copy the *ntbackup.exe* file from the *C:\WINDOWS\system32* directory of a 32-bit system to the *C:\Skyline DataMiner\Files* directory of the 64-bit system.
+- Copy the *ntbackup.exe* file from the `C:\WINDOWS\system32` directory of a 32-bit system to the `C:\Skyline DataMiner\Files` directory of the 64-bit system.
 
 ### Problem with DataMiner database dump
 
@@ -115,7 +115,7 @@ This error is caused by SLDMS being unable to start or locate *mysqldump.exe*.
 
 To solve this problem, proceed as follows:
 
-- Create a dummy *C:\MySQL\bin* directory containing the *mysqldump.exe* file.
+- Create a dummy `C:\MySQL\bin` directory containing the *mysqldump.exe* file.
 
 ## How do I configure IIS 6 on a 64-bit system?
 
@@ -215,8 +215,8 @@ To resolve this issue, proceed as follows:
 
 1. Go to the MySQL Server installation directory:
 
-   - On an x86 machine: *C:\Program Files\MySQL\MySQL Server x.x\Data*
-   - On an x64 machine: *C:\Program Files(86)\MySQL\MySQL Server x.x\Data*
+   - On an x86 machine: `C:\Program Files\MySQL\MySQL Server x.x\Data`
+   - On an x64 machine: `C:\Program Files(86)\MySQL\MySQL Server x.x\Data`
 
 1. Remove the following files:
 

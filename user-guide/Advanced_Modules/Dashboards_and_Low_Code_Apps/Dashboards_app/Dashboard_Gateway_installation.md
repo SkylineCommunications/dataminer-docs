@@ -67,13 +67,13 @@ There are two main reasons to consider a Dashboard Gateway setup:
 
 1. Configure URL Rewrite to forward all HTTP traffic to HTTPS
 
-1. From a DataMiner Agent, copy the folder *C:\\Skyline DataMiner\\Webpages\\API* to the web root folder of the Dashboard Gateway web server (default: *C:\\inetpub\\wwwroot*) and, in IIS Manager, convert the API into an application.
+1. From a DataMiner Agent, copy the folder `C:\Skyline DataMiner\Webpages\API` to the web root folder of the Dashboard Gateway web server (default: `C:\inetpub\wwwroot`) and, in IIS Manager, convert the API into an application.
 
 1. From a DataMiner Agent, copy the following folders to the web root folder of the Dashboard Gateway web server:
 
-   - The web application folder(s), e.g. *C:\\Skyline DataMiner\\Webpages\\Dashboard*, *C:\\Skyline DataMiner\\Webpages\\App*, *C:\\Skyline DataMiner\\Webpages\\Monitoring*, *C:\\Skyline DataMiner\\Webpages\\Jobs*, *C:\\Skyline DataMiner\\Webpages\\Ticketing*, etc.
-   - *C:\\Skyline DataMiner\\Webpages\\SharedComponents*
-   - The Authentication app folder, i.e. *C:\\Skyline DataMiner\\Webpages\\Auth* (from DataMiner 10.3.5 onwards)
+   - The web application folder(s), e.g. `C:\Skyline DataMiner\Webpages\Dashboard`, `C:\Skyline DataMiner\Webpages\App`, `C:\Skyline DataMiner\Webpages\Monitoring`, `C:\Skyline DataMiner\Webpages\Jobs`, `C:\Skyline DataMiner\Webpages\Ticketing`, etc.
+   - `C:\Skyline DataMiner\Webpages\SharedComponents`
+   - The Authentication app folder, i.e. `C:\Skyline DataMiner\Webpages\Auth` (from DataMiner 10.3.5 onwards)
 
 1. On the Dashboard Gateway web server, edit the *web.config* in the API folder, and specify the following settings:
 

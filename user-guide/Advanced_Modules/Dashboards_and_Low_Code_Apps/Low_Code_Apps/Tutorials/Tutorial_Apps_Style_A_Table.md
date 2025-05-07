@@ -347,7 +347,7 @@ In this tutorial, you will use an [ad hoc data source](xref:Get_ad_hoc_data), wh
    }
    ```
 
-1. Save the file under the name *Orders.json* in the *C:\Skyline DataMiner\Documents\GQI data sources* folder.
+1. Save the file under the name *Orders.json* in the `C:\Skyline DataMiner\Documents\GQI data sources` folder.
 
 ## Step 2: Add a table component
 

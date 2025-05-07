@@ -6,7 +6,7 @@ uid: Configuring_Mobile_Gateway_in_DataMiner_Cube
 
 1. In DataMiner Cube, go to *Apps* > *System Center \> Mobile Gateway*.
 
-1. At the top of the screen, next to *Cellphone location*, click *\<Click to select>*, select the DataMiner Agent containing the *C:\\Skyline DataMiner\\Mobile Gateway\\Config.xml* file in which you have configured all necessary device settings, and click *Apply*.
+1. At the top of the screen, next to *Cellphone location*, click *\<Click to select>*, select the DataMiner Agent containing the `C:\Skyline DataMiner\Mobile Gateway\Config.xml` file in which you have configured all necessary device settings, and click *Apply*.
 
    > [!NOTE]
    > When you click *Apply*, the cell phone modem will be initialized. Note that, in some cases, this can take up to two minutes.

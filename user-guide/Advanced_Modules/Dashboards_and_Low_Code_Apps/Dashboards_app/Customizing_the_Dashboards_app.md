@@ -17,7 +17,7 @@ The *maxJSONLength* setting is used when WebSocket messages are serialized and d
 
 To customize this setting:
 
-1. Open the *Web.config* file located in the *C:\\Skyline DataMiner\\Webpages\\API* folder.
+1. Open the *Web.config* file located in the `C:\Skyline DataMiner\Webpages\API` folder.
 
 1. Make sure that the *configuration.appSettings* section contains an element similar to the following example:
 

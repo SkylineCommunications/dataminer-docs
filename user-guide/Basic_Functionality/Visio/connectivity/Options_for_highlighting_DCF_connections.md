@@ -203,7 +203,7 @@ HighlightStyle|HighlightTarget=SourceDestination|Source:Tag=MySource|Direction=B
 
 ## Highlighting connections from a Connectivity.xml chain
 
-In a Visio drawing that contains connected elements, it is possible to highlight DCF connectivity chains configured in *Connectivity.xml* files located in *C:\Skyline DataMiner\Connectivity* and its subfolders.
+In a Visio drawing that contains connected elements, it is possible to highlight DCF connectivity chains configured in *Connectivity.xml* files located in `C:\Skyline DataMiner\Connectivity` and its subfolders.
 
 To do so:
 

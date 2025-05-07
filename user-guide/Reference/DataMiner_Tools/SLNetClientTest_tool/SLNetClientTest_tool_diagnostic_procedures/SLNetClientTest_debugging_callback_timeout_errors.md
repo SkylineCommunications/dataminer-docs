@@ -20,7 +20,7 @@ To debug such errors, you can do the following:
 
 1. In the *SLNet RunTime Flags* window, double-click *dumpCallbackTimeoutData*.
 
-   Whenever a callback timeout is encountered, the packet of messages will now be dumped into an .slnetdump file in the following folder: *C:\\Skyline DataMiner\\logging\\CallbackTimeoutDumps*. You can open this file in the SLNetClientTest tool by going to *File* > *Dump* > *Open*.
+   Whenever a callback timeout is encountered, the packet of messages will now be dumped into an .slnetdump file in the following folder: `C:\Skyline DataMiner\logging\CallbackTimeoutDumps`. You can open this file in the SLNetClientTest tool by going to *File* > *Dump* > *Open*.
 
 > [!NOTE]
 > These options are not remembered across SLNet restarts, and apply to one DataMiner Agent only.

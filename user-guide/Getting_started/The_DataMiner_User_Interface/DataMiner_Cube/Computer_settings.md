@@ -65,7 +65,7 @@ This page contains the following debug settings:
   > [!TIP]
   > See also: [Data Display settings](xref:User_settings#data-display-settings)
 
-- **Trace mode**: When you enable this setting, Cube debug logging is saved in a file in the following folder: *C:\\ProgramData\\Skyline\\DataMiner\\DataMinerCube\\Traces*. This mode is meant to solve issues, and will not be needed in normal circumstances.
+- **Trace mode**: When you enable this setting, Cube debug logging is saved in a file in the following folder: `C:\ProgramData\Skyline\DataMiner\DataMinerCube\Traces`. This mode is meant to solve issues, and will not be needed in normal circumstances.
 
 - **Enable trend logging**: If you enable this setting, a number of log files will be kept with regard to trending.
 

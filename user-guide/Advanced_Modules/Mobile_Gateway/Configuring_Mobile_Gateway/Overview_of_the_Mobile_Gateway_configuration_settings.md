@@ -4,7 +4,7 @@ uid: Overview_of_the_Mobile_Gateway_configuration_settings
 
 # Overview of the Mobile Gateway configuration settings
 
-Below you can find an alphabetical list of the possible settings in the file *C:\\Skyline DataMiner\\Mobile Gateway\\Config.xml*.
+Below you can find an alphabetical list of the possible settings in the file `C:\Skyline DataMiner\Mobile Gateway\Config.xml`.
 
 ## CountryCode
 
@@ -45,11 +45,11 @@ Default: 100 (retries).
 
 The file that contains all encrypted settings used by Mobile Gateway (e.g. the modem’s PIN and PUK codes).
 
-Default: *C:\\Skyline DataMiner\\Mobile Gateway\\MobileGateway.cfg*.
+Default: `C:\Skyline DataMiner\Mobile Gateway\MobileGateway.cfg`.
 
 ## Files.Logging
 
-Obsolete. All Mobile Gateway log information is now stored in the folder *C:\\Skyline DataMiner\\Logging\\Mobile Gateway.txt*.
+Obsolete. All Mobile Gateway log information is now stored in the folder` C:\Skyline DataMiner\Logging\Mobile Gateway.txt`.
 
 ## Files.Macros
 
@@ -57,13 +57,13 @@ The XML file that contains all commands that have been configured.
 
 In a Failover setup, this file is synchronized among the two DataMiner Agents.
 
-Default: *C:\\Skyline DataMiner\\Mobile Gateway\\Macros.xml*
+Default: `C:\Skyline DataMiner\Mobile Gateway\Macros.xml`
 
 ## Files.Messages
 
 The XML file that contains the translations of the default Mobile Gateway (error) messages.
 
-Default: *C:\\Skyline DataMiner\\Mobile Gateway\\Messages.xml*
+Default: `C:\Skyline DataMiner\Mobile Gateway\Messages.xml`
 
 ## GSM.ServiceCenter
 

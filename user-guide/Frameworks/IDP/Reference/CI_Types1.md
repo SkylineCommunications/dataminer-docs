@@ -328,7 +328,7 @@ For each connection, this section also has to contain one of the following array
 
         - **udp**: Use this value when the *TypeConnection* is *Serial* or *SmartSerial* and UDP/IP communication is required.
 
-    - **IPAddress**: Contains the polling IP of the device. Typically configured with the keyword *\[IPAddress\]* (see [Using keywords or placeholders](#using-keywords-or-placeholders)). This can also be configured in combination with prefixes, e.g. *wss://\[IPAddress\]* or *https://\[IPAddress\]*.
+    - **IPAddress**: Contains the polling IP of the device. Typically configured with the keyword *\[IPAddress\]* (see [Using keywords or placeholders](#using-keywords-or-placeholders)). This can also be configured in combination with prefixes, e.g. `wss://[IPAddress]` or `https://[IPAddress]`.
 
     - **Network**: Allows you to specify a specific network interface (NIC) on the DMA where the element has to communicate with the device. If you specify an empty string, the DMA will automatically select a NIC based on the local IP address configuration.
 
@@ -704,7 +704,7 @@ The following mandatory fields need to be specified for a software upgrade:
 - **ImageFileLocation**: The location of the folder where the software is available.
 
     > [!NOTE]
-    > If the path contains a backslash (“\\”) character, an additional backslash character must be specified. For example: “*C:\\\\Images\\\\MyLocation*”.
+    > If the path contains a backslash (“\\”) character, an additional backslash character must be specified. For example: `“C:\\Images\\MyLocation”`.
 
 - **Version**: The version of the software that will be deployed on the element.
 

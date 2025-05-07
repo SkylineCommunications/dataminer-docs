@@ -64,7 +64,7 @@ Alternatively, if [Swarming](xref:Swarming) is not enabled, this can be done man
 
 1. Stop DataMiner.
 
-1. In *C:\\Skyline DataMiner\\Elements\\,* go to the subfolder of the parent element and open *Element.xml*.
+1. In `C:\Skyline DataMiner\Elements\`, go to the subfolder of the parent element and open *Element.xml*.
 
 1. Add the *dvecreate* attribute to the Name tag and set its value to FALSE.
 

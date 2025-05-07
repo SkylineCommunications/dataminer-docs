@@ -44,7 +44,7 @@ This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configurati
 
 - Detecting the issue **before an upgrade**:
 
-  The following log line can be found in *C:\Skyline DataMiner\Logging\ActiveDirectory.txt*:
+  The following log line can be found in `C:\Skyline DataMiner\Logging\ActiveDirectory.txt`:
 
   ```txt
   2024/10/04 11:00:03.273|ActiveDirectory|18064|136|CActiveDirectoryInfo::ADQuery|DBG|0|Query:    (&(nCName=DC=us,DC=NFL,DC=NET)(nETBIOSName=*))
@@ -60,7 +60,7 @@ This issue occurs on LDAP servers where `CN=CONTOSA,CN=Partitions,CN=Configurati
 
   - All domain users are unable to log in. When trying to log in, the following entry is added to the *SLNet.txt* log file: `Authentication Step Failure: Not a DataMiner user: CONTOSA\user`.
 
-  - In *C:\Skyline DataMiner\Security.xml*, users appear without their domain prefix in the `name` attribute. For example:
+  - In `C:\Skyline DataMiner\Security.xml`, users appear without their domain prefix in the `name` attribute. For example:
 
     - Before upgrade: `CONTOSA\username`.
 

@@ -100,7 +100,7 @@ In order for DataMiner to be able to acquire the virtual IP addresses, these add
 
 1. If you do not have an acquisition network, you can remove the acquisition section.
 
-1. Save the script under the name *VIPAcquired.ps1* in the *C:\Skyline DataMiner\Tools* folder on the correct DMA.
+1. Save the script under the name *VIPAcquired.ps1* in the `C:\Skyline DataMiner\Tools` folder on the correct DMA.
 
 ```txt
 #----------------------------------AWS-----------------------------------#

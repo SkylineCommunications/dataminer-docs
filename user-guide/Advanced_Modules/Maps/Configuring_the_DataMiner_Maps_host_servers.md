@@ -4,7 +4,7 @@ uid: Configuring_the_DataMiner_Maps_host_servers
 
 # Configuring the DataMiner Maps host servers
 
-On a DataMiner Agent, the host servers for DataMiner Maps have to be configured in the file *C:\\Skyline DataMiner\\Maps\\ServerConfig.xml* (which is synchronized throughout the DataMiner System).
+On a DataMiner Agent, the host servers for DataMiner Maps have to be configured in the file `C:\Skyline DataMiner\Maps\ServerConfig.xml` (which is synchronized throughout the DataMiner System).
 
 If this file does not exist, it will be created automatically the first time DataMiner Maps is opened. It will contain the default configuration needed to load Google Maps without license key.
 
@@ -33,7 +33,7 @@ It can have the following additional subtags:
 | TilesServer | Use this tag to make Open Street Maps available offline. However, this is only possible if *AppVersion* is set to "1" and *MapsProvider* is set to "OSM". For more information on how to configure this, see [Configuration of the TilesServer tag](#configuration-of-the-tilesserver-tag). |
 
 > [!NOTE]
-> If app version 1 is used, custom icons must be placed in the folder *C:\\Skyline DataMiner\\Webpages\\Maps\\v1\\images\\icons*.
+> If app version 1 is used, custom icons must be placed in the folder `C:\Skyline DataMiner\Webpages\Maps\v1\images\icons`.
 
 ### Attributes of the GoogleMaps tag
 

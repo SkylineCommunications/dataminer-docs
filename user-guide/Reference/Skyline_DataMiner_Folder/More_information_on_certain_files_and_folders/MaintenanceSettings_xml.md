@@ -8,7 +8,7 @@ In the file *MaintenanceSettings.xml*, you can specify a number of general syste
 
 - This file is located in the following folder:
 
-    *C:\\Skyline DataMiner\\*
+    `C:\Skyline DataMiner\`
 
 - Before you make changes to this file, always stop DataMiner. Restart DataMiner when your changes have been saved.
 
@@ -264,7 +264,7 @@ Used to enforce a backup package mechanism on machines running an operating syst
 
 ### DeltCache
 
-Every time a .dmimport package is exported from or imported onto a DataMiner Agent, it is stored in the *C:\\Skyline DataMiner\\System Cache\\DELT\\* folder of that DataMiner Agent. The cleanup instructions for this folder are configured within the *\<DeltCache>* tag.
+Every time a .dmimport package is exported from or imported onto a DataMiner Agent, it is stored in the `C:\Skyline DataMiner\System Cache\DELT\` folder of that DataMiner Agent. The cleanup instructions for this folder are configured within the *\<DeltCache>* tag.
 
 > [!NOTE]
 >
@@ -317,7 +317,7 @@ When you specify multiple conditions, they will be combined into one expression 
 
 ### DELTUpgrades
 
-This tag allows you to configure the automatic cleanup of DELT-related packages in the folder *C:\\Skyline DataMiner\\Upgrades\\*.
+This tag allows you to configure the automatic cleanup of DELT-related packages in the folder `C:\Skyline DataMiner\Upgrades\`.
 
 The tag contains a number of *\<Delete>* subtags, which each specify a particular deletion mode with a *mode* attribute and a corresponding value with a *value* attribute.
 

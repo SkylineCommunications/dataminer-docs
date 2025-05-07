@@ -31,13 +31,13 @@ To run Cassandra as a non-SYSTEM user:
 
 1. Grant the user *Modify* access to the following folders:
 
-   - *C:\\Program Files\\Cassandra\\data*
+   - `C:\Program Files\Cassandra\data`
 
-   - *C:\\Program Files\\Cassandra\\logs*
+   - `C:\Program Files\Cassandra\logs`
 
-   - *C:\\Program Files\\Cassandra\\bin\\daemon\\*
+   - `C:\Program Files\Cassandra\bin\daemon\`
 
-   - *C:\\ProgramData\\Cassandra*
+   - `C:\ProgramData\Cassandra`
 
    > [!CAUTION]
    > Do not grant the permissions on the entire `C:\Program Files\Cassandra` folder, as this may introduce vulnerabilities.

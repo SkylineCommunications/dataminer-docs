@@ -36,7 +36,7 @@ In the following example, DataMiner uses port 461:
 
 ### Checking which port DataMiner is using
 
-To check which port is used by DataMiner when it acts as an SNMP agent, look in the file *C:\\Skyline DataMiner\\Logging\\SLSNMPAgent.txt*.
+To check which port is used by DataMiner when it acts as an SNMP agent, look in the file `C:\Skyline DataMiner\Logging\SLSNMPAgent.txt`.
 
 If the default port is used, you will find a line like the following one:
 

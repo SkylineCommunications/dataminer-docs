@@ -14,7 +14,7 @@ To configure a cell phone modem that is physically connected to one of your Data
 
 1. Connect the device to a power source.
 
-1. In the *C:\\Skyline DataMiner\\Mobile Gateway* folder of the DataMiner Agent to which you have physically connected the modem, make sure that there is a *Config.xml* file similar to the one in the example below.
+1. In the `C:\Skyline DataMiner\Mobile Gateway` folder of the DataMiner Agent to which you have physically connected the modem, make sure that there is a *Config.xml* file similar to the one in the example below.
 
    > [!NOTE]
    > If the modem is connected to a DataMiner Agent through a serial gateway, then you need to configure a virtual COM port on the DataMiner Agent, and map it to the port on the serial gateway to which the modem is connected.
@@ -105,7 +105,7 @@ The following procedure explains how to configure a virtual COM port when using 
 
 1. Set the COM port in the Mobile Gateway configuration file.
 
-   1. Open the file *Config.xml* in the folder *C:\\Skyline DataMiner\\Mobile Gateway\\*.
+   1. Open the file *Config.xml* in the folder `C:\Skyline DataMiner\Mobile Gateway\`.
 
    1. In the *\<Port>* tag, specify the virtual COM port you selected in step 2.5 in the *\<Nr>* tag, and if the port settings differ from the default port settings, also specify those settings.
 

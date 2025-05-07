@@ -18,7 +18,7 @@ uid: Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu
 
    1. In the drop-down list next to *Type*, select *File*.
 
-   1. In the *File* box, specify the following path: *C:\\Skyline DataMiner\\Hyperlinks.xml*.
+   1. In the *File* box, specify the following path: `C:\Skyline DataMiner\Hyperlinks.xml`.
 
    1. Click the *Sync now* button.
 

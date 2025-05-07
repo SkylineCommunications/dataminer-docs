@@ -50,7 +50,7 @@ SLWatchdog will perform the following actions, depending on what has happened:
 
 ### Where can you find SLWatchdog logging?
 
-You can find the SLWatchdog logging in *C:\Skyline DataMiner\Logging\SLWatchdog2.txt*.
+You can find the SLWatchdog logging in `C:\Skyline DataMiner\Logging\SLWatchdog2.txt`.
 
 Note that this file contains the number 2. *SLWatchdog.txt* also exists, but this is an older log file that contains less relevant information.
 
@@ -187,7 +187,7 @@ If there is a mismatch, perform the steps below:
 
 1. Stop DataMiner.
 
-1. Go to the folder *C:\Skyline DataMiner\Tools* and run the following files as Administrator:
+1. Go to the folder `C:\Skyline DataMiner\Tools` and run the following files as Administrator:
 
    1. *UnRegister DLLs of DataMiner.bat*
 
@@ -195,7 +195,7 @@ If there is a mismatch, perform the steps below:
 
 1. Restart the server.
 
-1. From the folder *C:\Skyline DataMiner\Tools*, run the following files as Administrator:
+1. From the folder `C:\Skyline DataMiner\Tools`, run the following files as Administrator:
 
    1. *RegisterDLLs.bat*
 

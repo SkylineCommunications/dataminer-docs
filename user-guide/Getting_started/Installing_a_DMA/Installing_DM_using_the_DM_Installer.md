@@ -278,7 +278,7 @@ At this point, the basic installation is complete. However, to be able to make f
 > [!NOTE]
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
-> - If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
+> - If you closed the DataMiner installer before uploading the license files, copy the license files to the `C:\Skyline DataMiner` folder and restart DataMiner.
 > - After the installation, if you have [configured security](xref:Managing_users) so that there is at least one other user with full administrator rights, you can safely remove the account you used for the installation if necessary.
 
 ### Custom DataMiner installation
@@ -332,7 +332,7 @@ If you are using an older, deprecated DataMiner installer, follow the steps belo
 1. In the *License* tab of the DataMiner Installer, click *browse and upload*, and navigate to the license files.
 
    > [!NOTE]
-   > If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
+   > If you closed the DataMiner installer before uploading the license files, copy the license files to the `C:\Skyline DataMiner` folder and restart DataMiner.
 
 1. Once all files have been uploaded successfully, click *restart DataMiner*.
 

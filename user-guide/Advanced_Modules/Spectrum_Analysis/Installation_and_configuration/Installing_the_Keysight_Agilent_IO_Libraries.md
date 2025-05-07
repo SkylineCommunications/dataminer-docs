@@ -10,7 +10,7 @@ On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you hav
 > After installing the IO Libraries, you will need to restart the machine. After changing the IO configuration, you will need to restart the DMA software.
 
 > [!WARNING]
-> Both the Keysight Distributed Infrastructure service (*kdi-controller.exe*) and the NATS module within DataMiner use IP port 9090. This will result in NATS issues and will prevent DataMiner from starting. To fix this, change the port number of the KDI service by editing *C:\\ProgramData\\Keysight\\Distributed Infrastructure\\kdi.yaml* and restarting the machine, or change the NATS port. See [Troubleshooting – NATS](xref:Investigating_NATS_Issues#check-if-port-is-already-in-use). This procedure must be followed for every DMA running DataMiner 10.1.0/10.1.1 or higher.
+> Both the Keysight Distributed Infrastructure service (*kdi-controller.exe*) and the NATS module within DataMiner use IP port 9090. This will result in NATS issues and will prevent DataMiner from starting. To fix this, change the port number of the KDI service by editing `C:\ProgramData\Keysight\Distributed Infrastructure\kdi.yaml` and restarting the machine, or change the NATS port. See [Troubleshooting – NATS](xref:Investigating_NATS_Issues#check-if-port-is-already-in-use). This procedure must be followed for every DMA running DataMiner 10.1.0/10.1.1 or higher.
 
 ## Installing the IO Libraries
 
@@ -19,7 +19,7 @@ The minimum version for the IO libraries is 17.1.20011.
 > [!NOTE]
 > Although you can continue to use the IO Libraries version M.01.01.04, upgrading to version 17.1.20011 or higher is recommended. However, if you still have the M.01.01.04 version of the IO libraries installed, this will first need to be removed before you can install version 17.1.20011 or higher:
 >
-> - Go to *C:\\Program Files (x86)\\InstallShield Installation Information\\{04107B50-CCF1-11D3-931C-00108301D203}\\* <br>(which is typically a hidden folder).
+> - Go to `C:\Program Files (x86)\InstallShield Installation Information\{04107B50-CCF1-11D3-931C-00108301D203}\` <br>(which is typically a hidden folder).
 > - In the file properties of *Setup.exe*, indicate that you want the file to run in *Windows XP compatibility mode*.
 > - Run *Setup.exe*. This should remove the existing IO libraries, IVI shared components, and VISA shared components. Go to *Programs and features* if you want to check whether all those items were removed.
 

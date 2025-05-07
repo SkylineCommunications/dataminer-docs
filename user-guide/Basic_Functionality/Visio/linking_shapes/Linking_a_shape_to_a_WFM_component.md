@@ -13,6 +13,6 @@ Add the following shape data fields to the shape:
 - **WfmDll**: In this shape data field, specify the name of the dll file.
 
     > [!NOTE]
-    > The dll file has to be located in the *C:\\Skyline Dataminer\\WFM* folder.
+    > The dll file has to be located in the `C:\Skyline Dataminer\WFM` folder.
 
 - **WfmControl**: In this shape data field, specify the name of the class.

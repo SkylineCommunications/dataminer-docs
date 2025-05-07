@@ -4,7 +4,7 @@ uid: General_Connectivity_xml_file
 
 # General Connectivity.xml file
 
-The main *Connectivity.xml* file is located in the *C:\\Skyline DataMiner\\Connectivity\\* folder. It can contain two settings:
+The main *Connectivity.xml* file is located in the `C:\Skyline DataMiner\Connectivity\` folder. It can contain two settings:
 
 | Tag | Description |
 |--|--|

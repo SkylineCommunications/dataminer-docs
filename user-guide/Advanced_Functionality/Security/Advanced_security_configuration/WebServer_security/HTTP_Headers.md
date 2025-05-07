@@ -36,7 +36,7 @@ To create the outbound rewrite rule:
 
 1. Restart IIS
 
-Alternatively, you can add the following XML in the *\<system.webServer>* element of *C:\Skyline DataMiner\Webpages\web.config* and then restart IIS:
+Alternatively, you can add the following XML in the *\<system.webServer>* element of `C:\Skyline DataMiner\Webpages\web.config` and then restart IIS:
 
 ```xml
 <rewrite>
