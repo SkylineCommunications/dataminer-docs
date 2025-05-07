@@ -254,7 +254,7 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
 		/// <para>For <see cref="GetFilterString"/> to work, <see cref="UIBlockDefinition.WantsOnFilter"/> has to be set to true and <see cref="WasOnFilter"/> for the current result should return true.</para>
-		/// <note type="note">Available from DataMiner 10.5.7/10.6.0 onwards, in Automation scripts launched from web apps and [specifying the `useNewIASInputComponents=true` URL parameter](xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url).</note> <!-- RN 42808 / RN 42845 -->
+		/// <note type="note">Available from DataMiner 10.5.7/10.6.0 onwards, in Automation scripts launched from web apps and <see cref="xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url">specifying the `useNewIASInputComponents=true` URL parameter</see>.</note> <!-- RN 42808 / RN 42845 -->
 		/// <note type="important">While filtering the options, the current selected option (if still relevant) needs to be inserted as an option, regardless if the filter matches. Otherwise, the dropdown will consider that value incorrect and clear the dropdown.</note>
 		/// <note type="tip">Consider only filtering the display value of the options and, if possible, case invariant.</note>
 		/// </remarks>
@@ -492,7 +492,7 @@ namespace Skyline.DataMiner.Automation
 		/// </example>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
-		/// <note type="note">Available from DataMiner 10.5.7/10.6.0 onwards, in Automation scripts launched from web apps and [specifying the `useNewIASInputComponents=true` URL parameter](xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url).</note> <!-- RN 42808 / RN 42845 -->
+		/// <note type="note">Available from DataMiner 10.5.7/10.6.0 onwards, in Automation scripts launched from web apps and <see href="xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url">specifying the `useNewIASInputComponents=true` URL parameter</see>.</note> <!-- RN 42808 / RN 42845 -->
 		/// <para>For <see cref="WasOnFilter"/> to work, <see cref="UIBlockDefinition.WantsOnFilter"/> has to be set to true. Use <see cref="GetFilterString"/> to get the filter value. See example.</para>
 		/// <note type="important">While filtering the options, the current selected option (if still relevant) needs to be inserted as an option, regardless if the filter matches. Otherwise, the dropdown will consider that value incorrect and clear the dropdown.</note>
 		/// <note type="tip">Consider only filtering the display value of the options and, if possible, case invariant.</note>
