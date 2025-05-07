@@ -79,7 +79,7 @@ Once you have compiled a C# code block as a library, you can then import that li
 
 ## Remarks regarding compiling C# blocks as libraries
 
-- On the DMA, the DLL files of the libraries are placed in the folder *C:\\Skyline DataMiner\\Scripts\\Libraries*.
+- On the DMA, the DLL files of the libraries are placed in the folder `C:\Skyline DataMiner\Scripts\Libraries`.
 
 - To optimize performance, we recommend that you create each library in a separate script.
 

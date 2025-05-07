@@ -8,7 +8,7 @@ The file *SNMP Managers.xml* is used for the configuration of remote SNMP Manage
 
 - This file is located in the following folder:
 
-  *C:\\Skyline DataMiner\\*
+  `C:\Skyline DataMiner\`
 
 - For each DataMiner Agent in the DMS, the *\<Configuration>* section of this file contains an *\<Agent>* tag with the following subtags:
 

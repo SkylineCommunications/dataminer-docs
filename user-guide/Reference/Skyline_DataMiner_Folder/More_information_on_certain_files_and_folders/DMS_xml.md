@@ -6,7 +6,7 @@ uid: DMS_xml
 
 This file contains a list of all DMAs in the DMS cluster.
 
-- This file is located in the folder *C:\\Skyline DataMiner\\*.
+- This file is located in the folder `C:\Skyline DataMiner\`.
 
 - Before you make changes to this file, always **stop DataMiner**. Restart DataMiner when your changes have been saved.
 

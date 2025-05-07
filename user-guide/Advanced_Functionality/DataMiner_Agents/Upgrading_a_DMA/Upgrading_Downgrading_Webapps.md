@@ -20,7 +20,7 @@ Note that it is not possible to upgrade the web apps to a DataMiner 10.5.x versi
 
 ## Automatic backup
 
-From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37413-->, whenever you [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) or install a DataMiner web upgrade, an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in *C:\Skyline DataMiner\System Cache\Web\Backups*.
+From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37413-->, whenever you [upgrade your DMA](xref:Upgrading_a_DataMiner_Agent) or install a DataMiner web upgrade, an automatic backup of all existing dashboards and low-code apps on the system is generated and stored in `C:\Skyline DataMiner\System Cache\Web\Backups`.
 
 After the upgrade process, your dashboards and low-code apps may be migrated to ensure compatibility with the updated software version. If an error occurs during this migration, or if you need to perform a DataMiner downgrade, you can manually restore your dashboards and low-code apps from the backup.
 
@@ -33,9 +33,9 @@ Since dashboards and low-code apps can automatically get migrated after a softwa
 
 To deal with this, after a downgrade, follow the steps below:
 
-1. Optionally, create a copy of the current files in *C:\Skyline DataMiner\Applications* and *C:\Skyline DataMiner\Dashboards*.
-1. Go to *C:\Skyline DataMiner\System Cache\Web\Backups* and locate the most recent zip package (or the zip package that originally got created on the version you have now downgraded to).
-1. Extract this zip package in *C:\Skyline DataMiner* and let it replace the files in the *Applications* and *Dashboards* folders.
+1. Optionally, create a copy of the current files in `C:\Skyline DataMiner\Applications` and `C:\Skyline DataMiner\Dashboards`.
+1. Go to `C:\Skyline DataMiner\System Cache\Web\Backups` and locate the most recent zip package (or the zip package that originally got created on the version you have now downgraded to).
+1. Extract this zip package in `C:\Skyline DataMiner` and let it replace the files in the *Applications* and *Dashboards* folders.
 1. Do the same on every DMA in cluster.
 
 > [!NOTE]

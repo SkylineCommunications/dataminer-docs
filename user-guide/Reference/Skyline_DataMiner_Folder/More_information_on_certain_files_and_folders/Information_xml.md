@@ -8,7 +8,7 @@ For every protocol, there can be a number of “Information” files. These corr
 
 - These files are located in the following folder:
 
-    *C:\\Skyline DataMiner\\Protocols\\\[Protocol\]*
+    `C:\Skyline DataMiner\Protocols\[Protocol]`
 
 > [!TIP]
 > See also:

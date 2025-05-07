@@ -33,7 +33,7 @@ To save a Log Collector package:
    ![Log Collector](~/user-guide/images/LogCollector.png)
 
    > [!NOTE]
-   > If the DataMiner Taskbar Utility icon is missing from the taskbar, or if the Log Collector option is not present in the dropdown list, you can manually find the *C:\Skyline DataMiner\Tools\SLLogCollector\SL_LogCollector.exe* file or download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
+   > If the DataMiner Taskbar Utility icon is missing from the taskbar, or if the Log Collector option is not present in the dropdown list, you can manually find the `C:\Skyline DataMiner\Tools\SLLogCollector\SL_LogCollector.exe` file or download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
 
 1. In the *DataMiner Log Collector* pop-up window, select *Start* in the lower right corner.
 

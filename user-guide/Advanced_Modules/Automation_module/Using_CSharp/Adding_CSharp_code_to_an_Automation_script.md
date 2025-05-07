@@ -46,7 +46,7 @@ To add C# code to a script:
      > - SLLoggerUtil.dll
      > - SLAnalyticsTypes.dll (from DataMiner 10.1.11 onwards)
      >
-     > To reference additional DLLs, e.g. a custom DLL placed in the *C:\\Skyline DataMiner\\ProtocolScripts* folder, you need to specify an absolute path.
+     > To reference additional DLLs, e.g. a custom DLL placed in the `C:\Skyline DataMiner\ProtocolScripts` folder, you need to specify an absolute path.
 
    - *Script references*: Allows you to refer to other C# blocks. See [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library).
 

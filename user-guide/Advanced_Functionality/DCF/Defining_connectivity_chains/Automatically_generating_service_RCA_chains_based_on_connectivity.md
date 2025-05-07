@@ -8,7 +8,7 @@ It is possible to have RCA chains generated automatically for elements in a serv
 
 For this, a specific *Connectivity.xml* file must be created, which is very similar to a regular connectivity file, with two notable differences:
 
-- A *Connectivity.xml* file that is used to generate RCA chains must be stored in the folder *C:\\Skyline DataMiner\\Connectivity\\RCA Chain*.
+- A *Connectivity.xml* file that is used to generate RCA chains must be stored in the folder `C:\Skyline DataMiner\Connectivity\RCA Chain`.
 
 - A *Connectivity.xml* file that is used to generate RCA chains must contain the following link:
 

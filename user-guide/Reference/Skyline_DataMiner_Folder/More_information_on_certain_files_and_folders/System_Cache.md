@@ -4,7 +4,7 @@ uid: System_Cache
 
 # System Cache
 
-The *C:\\Skyline DataMiner\\System Cache\\* directory of a DMA contains synchronization information and cached data.
+The `C:\Skyline DataMiner\System Cache\` directory of a DMA contains synchronization information and cached data.
 
 > [!NOTE]
 > Everything in this directory can be deleted, EXCEPT the files of which the name contains “DO_NOT_REMOVE”.

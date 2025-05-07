@@ -26,7 +26,7 @@ The GQI DxM is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards, and automat
 
 ## Enabling the use of the GQI DxM
 
-To enable the use of the GQI DxM in the DataMiner web apps, add the following configuration key to the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file:
+To enable the use of the GQI DxM in the DataMiner web apps, add the following configuration key to the `C:\Skyline DataMiner\Webpages\API\Web.config` file:
 
 ```xml
 <appSettings>
@@ -69,7 +69,7 @@ The GQI DxM comprises multiple processes that work together to handle GQI reques
 
 ## Configuration
 
-Below you can find an overview of the different settings you can configure in the file *C:\\Program Files\\Skyline Communications\\DataMiner GQI\\appsettings.custom.json*.
+Below you can find an overview of the different settings you can configure in the file `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.custom.json`.
 
 Do not edit the file *appsettings.json*, because that file gets overwritten when a new version of the GQI DxM is installed.
 

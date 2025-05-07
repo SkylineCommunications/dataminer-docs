@@ -187,7 +187,7 @@ Visual Overview in web apps has limited functionality:
 
 If you encounter any issues or if you notice any behavior that is different from that in Cube, then check the `SLUIProvider.txt` and `SLHelperWrapper.txt` log files. Always include the Visio file when you ask for support by email.
 
-On mobile devices, Visual Overview pages automatically subscribe to all alarms. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41327-->, if no alarm information is needed when a visual overview is shown, you can configure alarm subscriptions to be skipped by setting the `helper:load-alarms` option to "false" in *C:\Skyline DataMiner\Files\SLHelper.exe.config*.
+On mobile devices, Visual Overview pages automatically subscribe to all alarms. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41327-->, if no alarm information is needed when a visual overview is shown, you can configure alarm subscriptions to be skipped by setting the `helper:load-alarms` option to "false" in `C:\Skyline DataMiner\Files\SLHelper.exe.config`.
 
 For example:
 
@@ -210,7 +210,7 @@ For example:
 
 From DataMiner 10.5.2/10.6.0 onwards<!--RN 41434-->, you can implement load balancing for visual overviews shown in web apps among DataMiner Agents in a DMS. Prior to this, the DataMiner Agent to which you were connected would handle all requests and updates with regard to web visual overviews.
 
-To configure load balancing, in the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
+To configure load balancing, in the `C:\Skyline DataMiner\Webpages\API\Web.config` file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
 
 - `<add key="visualOverviewLoadBalancer" value="true" />`
 

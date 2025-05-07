@@ -7,7 +7,7 @@ uid: Creating_a_dashboard_based_on_an_example
 Instead of creating a dashboard from scratch, you can instead first import an example dashboard and then edit this dashboard.
 
 > [!NOTE]
-> Importing example dashboards is only possible if such dashboards have been placed in the folder *C:\\Skyline DataMiner\\ImportDashboards* on the server.
+> Importing example dashboards is only possible if such dashboards have been placed in the folder `C:\Skyline DataMiner\ImportDashboards` on the server.
 
 1. On the home page of the app, click *Start with an example dashboard*.
 

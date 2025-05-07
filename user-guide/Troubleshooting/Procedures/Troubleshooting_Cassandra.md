@@ -59,7 +59,7 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 - DevCenter
 
   - Allows you to manually query the database.
-  - Can be found in *C:\\Program Files\\Cassandra\\DevCenter\\Run DevCenter* (*Cassandra Single*) or can be downloaded from the Apache or DataStax websites.
+  - Can be found in `C:\Program Files\Cassandra\DevCenter\Run DevCenter` (*Cassandra Single*) or can be downloaded from the Apache or DataStax websites.
 
 - Notepad++ (optional)
 
@@ -100,7 +100,7 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
    The most important log files are *debug.log* and *system.log*. For an overview of all log files, see [Cassandra Logs](https://cassandra.apache.org/doc/latest/cassandra/troubleshooting/reading_logs.html).
 
-   In a *Cassandra Cluster* setup, on a Linux node, these files can mostly be found in */var/log/cassandra*. In a *Cassandra Single* setup, these can be found in *C:\Program Files\Cassandra\logs*.
+   In a *Cassandra Cluster* setup, on a Linux node, these files can mostly be found in `/var/log/cassandra`. In a *Cassandra Single* setup, these can be found in `C:\Program Files\Cassandra\logs`.
 
    Search for "tombstone" or "timeout" in *debug.log* and *system.log*. This is particularly relevant if elements are unable to start or if element data is missing (see [Element fails to start because of database failure](xref:Cassandra_General_DB_Failure)).
 

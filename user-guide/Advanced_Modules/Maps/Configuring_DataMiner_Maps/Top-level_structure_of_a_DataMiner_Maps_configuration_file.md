@@ -181,7 +181,7 @@ In the src attribute of a `<Script>` tag, specify the path to a JavaScript file:
 
 - an absolute path (starting with *http://*), or
 
-- a path relative to *C:\\Skyline DataMiner\\Webpages\\Maps\\*
+- a path relative to `C:\Skyline DataMiner\Webpages\Maps\`
 
 ## ToggleGroups
 
