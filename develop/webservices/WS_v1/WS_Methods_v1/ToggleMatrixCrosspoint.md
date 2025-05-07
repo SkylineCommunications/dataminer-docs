@@ -6,7 +6,7 @@ uid: ToggleMatrixCrosspoint
 
 Use this method to toggle a matrix crosspoint to connect or disconnect it, by specifying the (1-based) input and output indexes.
 
-Available from DataMiner version 9.5.1 onwards.
+<!-- Available from DataMiner version 9.5.1 onwards. -->
 
 ## Input
 
