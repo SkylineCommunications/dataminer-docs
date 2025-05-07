@@ -43,6 +43,12 @@ When a service was migrated from one DMA to another within the same DMS, in some
 
 From now on, the message ordering the deletion of a service will always be sent to the DMA that is hosting the service. That DMA will then forward the message to the other DMAs within the cluster.
 
+#### Failover: Enhanced performance when executing a Failover switch [ID 42842]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when executing a Failover switch.
+
 ### Fixes
 
 #### LDAP users added as part of an LDAP user group would incorrectly appear as local users instead of domain users [ID 42743]
