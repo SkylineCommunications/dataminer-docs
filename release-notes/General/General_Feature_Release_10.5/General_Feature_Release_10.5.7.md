@@ -28,7 +28,11 @@ uid: General_Feature_Release_10.5.7
 
 ## New features
 
-*No new features have been added yet.*
+#### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+The SLNet message `EditConnection`, which can be used to edit a connection from within an Automation script, now has a `GenerateInformationEvents` property. If this property is set to true, information events will be generated when a connection is created, updated, or deleted.
 
 ## Changes
 
