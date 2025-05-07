@@ -6,7 +6,7 @@ uid: GetActiveAlarmsForViewSortedV2
 
 Use this method to retrieve a specific number of active view alarms along with the alarm cache status.
 
-Available from DataMiner 10.0.7 onwards.
+<!-- Available from DataMiner 10.0.7 onwards. -->
 
 > [!NOTE]
 > Using this method, you can e.g. request alarms in batches in order to minimize loading time.
