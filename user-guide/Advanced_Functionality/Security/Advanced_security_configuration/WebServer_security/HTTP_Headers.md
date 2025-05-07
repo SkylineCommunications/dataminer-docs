@@ -103,7 +103,6 @@ There are some other HTTP headers that can improve security. However, their valu
 
 - [Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
 
-
 ## Headers to remove
 
 ### Server Header
@@ -148,19 +147,3 @@ Alternatively, you can add the following XML in the *\<system.webServer>* elemen
   </outboundRules>
 </rewrite>
 ```
-
-### X-Powered-By
-
-DataMiner versions older then 10.1.9/10.1.0 [CU6]/10.0.0 [CU 17] <!-- RN30561 --> the will have the *X-Powered-By* header configured by default. This header leaks information on the technologies used in the web server.
-
-To remove the *X-Powered-By* response header:
-
-1. Open *IIS Manager*.
-
-1. In the *Connections* pane, select the web server by clicking the server name.
-
-1. In the middle pane, double-click *HTTP Reponse Headers*.
-
-1. Select *X-Powered-By*, and click *Remove* in the *Actions* pane.
-
-1. Click *Yes* when asked to confirm the removal.
