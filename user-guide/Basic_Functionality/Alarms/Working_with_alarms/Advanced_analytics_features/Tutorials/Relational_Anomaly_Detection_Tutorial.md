@@ -51,63 +51,73 @@ The tutorial consists of the following steps:
 
 1. Go to the [RAD Manager](https://aka.dataminer.services/RAD-Manager-Catalog) package in the DataMiner Catalog and [deploy it](xref:Deploying_a_catalog_item).
 
-1. Go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/).
+1. Go to the root page of your DataMiner System, for example by clicking the *Home* button for your DMS on the [dataminer.services page](https://dataminer.services/), and check if you can see the *RAD Manager* app.
 
-1. Check if you can see the *RAD Manager* app.
+   ![RAD Manager icon on the root page](~/user-guide/images/RAD_Manager_on_root_page.png)
 
 ## Step 2: Check the DAB transmitter elements in Cube
 
-Our Catalog package has created a number of dummy DAB Transmitter elements in your system.
+1. In the Surveyor, open the view *DataMiner Catalog* > *Using Relational Anomaly Detection* > *London*, and select the element *RAD - Commtia LON 1*.
 
-1. In the Surveyor, open the element *RAD - Commtia LON 1*, located under the *DataMiner Catalog > Using Relational Anomaly Detection* view.
+1. Go to the *Amplifier* > *PAs* page.
 
-1. Click the dropdown icon next to the *Amplifier* page and select *PAs*.
-
-    This page provides information about the different PAs or power amplifiers in the DAB transmitter.
+   This page provides information about the different power amplifiers (PAs) in the DAB transmitter.
 
 1. In the *PAs* Measurements table, look at the *Output Power* column.
 
    All three power amplifiers should have similar output power values.
 
-   ![Output Power](~/user-guide/images/tutorial_RAD_Output_Powers.jpg)
+   ![Output Power](~/user-guide/images/tutorial_RAD_Output_Powers.png)
 
 1. Next, go to the main *Amplifier* page and look at the *Tx Amplifier Output Power* parameter.
-  
-    Up to some losses, this should be equal to the sum of the previously mentioned output power values.
 
-   ![Total Output Power](~/user-guide/images/tutorial_RAD_Total_Output_Power.jpg)
+   This should be a little bit less than the sum of the previously mentioned output power values.
 
-During this tutorial, we will focus on the fact that the output powers of the different amplifiers in the DAB transmitter should be more or less equal
-and that their sum should be equal to the total output power up to some losses.
-In the next step, we will configure RAD to monitor these relations.
+   ![Total Output Power](~/user-guide/images/tutorial_RAD_Total_Output_Power.png)
+
+This gives you an idea of the parameter relations that will be used further in this tutorial: the output power of the different amplifiers in the DAB transmitter should be more or less equal, and the total output should be equal to the sum of these values with some losses.
 
 ## Step 3: Configure your first RAD group
 
-1. Go to the RAD Manager App.
+1. Go to the RAD Manager app.
 
-1. At the top left, click "Add Group".
+1. On the left side of the header bar, click *Add Group*.
 
-    A popup will appear where you can configure the group.
+   This will open a window where you can configure a new parameter group.
 
-    ![Add a group](~/user-guide/images/tutorial_RAD_AddGroup.jpg)
+   ![Add a group](~/user-guide/images/tutorial_RAD_AddGroup.jpg)
 
-1. As the *Group name*, fill in *PA's unbalanced*.
+1. As the *Group name*, fill in *PAs unbalanced*.
 
-   It is best to give the group a meaningful name as the name will appear as part of the event that is triggered when the relation between the output powers is broken.
+   Parameter groups should be given a meaningful name, because this name will be shown as part of the event that is triggered when the relation between the parameters is broken.
 
-1. Under element, select *RAD - Commtia LON 1*.
+1. Add a first parameter:
 
-1. Select *Output Power* under *Parameter*. Under *Display key filter*, type *PA**. Click Add.
+   1. In the *Element* box, select *RAD - Commtia LON 1*.
 
-   This informs DataMiner that we want to monitor the *Output Powers* of *PA1, PA2* and *PA3* together.
+   1. Make sure the *Output Power* parameter is selected.
 
-1. Select *Tx Amplifier Output Power* under *Parameter*. Keep the *Display key filter* empty and click Add.
+   1. Under *Display key filter*, specify `PA*`.
 
-1. Finally, click *Add group* to create the group.
+   1. Click *Add*.
 
-   The top table in the RAD Manager should display the group that was just created.
+   This informs DataMiner that you want to monitor the *Output Power* of *PA1*, *PA2*, and *PA3* together.
 
-   ![Add a group](~/user-guide/images/tutorial_RAD_groupOverview.jpg)
+1. Add a second parameter:
+
+   1. Keep the *RAD - Commtia LON 1* element selected.
+
+   1. Select the *Tx Amplifier Output Power* parameter.
+
+   1. Keep the *Display key filter* empty.
+
+   1. Click *Add*.
+
+1. Click *Add group* to create the group.
+
+The top table in the RAD Manager app should now display the group you have created.
+
+![Add a group](~/user-guide/images/tutorial_RAD_groupOverview.png)
 
 ## Step 4: Create a problem and verify if RAD detects it
 
@@ -119,27 +129,29 @@ In the next step, we will configure RAD to monitor these relations.
 
    When the element was created, it pushed some historical trend data to the database. This data is used by the algorithm to learn the relations between the parameters. The demo status will be set to *Ready* as soon as the history data is processed. This whole process should take about 5 minutes.
 
-1. Click the *Add Degradation* button.
+1. Click the *Add Degradation* button, and confirm if necessary.
 
    This will cause the *Output Power* of *PA3* to start deviating from the output powers of the other two amplifiers.
 
-1. Click the lightbulb icon on the top right of the alarm console and select the item referring to *relational anomalies*.
+1. In the Alarm Console, click the lightbulb icon in the top-right corner and select the item referring to relational anomalies.
 
-   You will see an event informing you that the relation between the *Output Powers* of the amplifiers and the *Tx Amplifier Output Power* is broken.
+   You will see an event informing you that the relation between the *Output Power* of the amplifiers and the *Tx Amplifier Output Power* is broken.
 
-   ![Detected Relational Anomaly](~/user-guide/images/tutorial_RAD_Detected_Anomaly.jpg)
+   ![Detected Relational Anomaly](~/user-guide/images/tutorial_RAD_Detected_Anomaly.png)
 
-1. In the RAD Manager App, select the group you created.
+1. In the RAD Manager app, select the group you created.
 
-   This will populate the *Group Information* table with the parameters included in your group.
+   The *Group Information* table will now display the parameters included in your group.
 
-1. Select the *PA2* and *PA3 Output Power* parameters and investigate the trend and anomaly score:
+1. Keep Ctrl pressed and select the *PA2* and *PA3 Output Power* parameters in the *Group Information* table.
+
+1. Below the table, investigate the trend and anomaly score:
 
    - Notice how, during the last hour, the *PA3* parameter started deviating from the *PA2*.
 
-   - On the *Inspect the anomaly score of your group* graph, notice how the *anomaly score* went up during the last hour.
+   - In the *Inspect the anomaly score of your group* graph, notice how the *anomaly score* went up during the last hour.
 
-   The *anomaly score* expresses how strongly the model believes that the relations between the parameters are broken at any given time. The increase in the anomaly score is what led the system to trigger the RAD event in the alarm console.
+   The *anomaly score* expresses how strongly the model believes that the relations between the parameters are broken at any given time. The increase in the anomaly score is what led the system to trigger the RAD event in the Alarm Console.
 
 ## Step 5: Tweak the advanced configuration
 
