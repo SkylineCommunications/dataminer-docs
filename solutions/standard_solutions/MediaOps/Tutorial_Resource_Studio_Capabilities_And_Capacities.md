@@ -95,6 +95,8 @@ In this step, we will be adding capabilities to the resources we created in the 
 
 ## Step 5: Define parameter on the resource pool
 
+In this step, we will be defining a parameter on a resource pool. In the [Scheduling Jobs with Configurations Tutorial](xref:Tutorial_MediaOps_Scheduling_Configurations), we will see how this can come in handy upon resource selection, to filter out all the resources that don't satisfy the desired capability constraints.
+
 1. Navigate to the ``Resource Pools`` page.
 
 1. Select the **Converter** resource.

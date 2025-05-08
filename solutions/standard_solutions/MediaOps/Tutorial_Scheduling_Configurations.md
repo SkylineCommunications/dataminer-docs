@@ -67,10 +67,11 @@ Expected duration: 15 minutes
 
 1. Add "**Converter**" resource pool node again.
 
-   ![Workflo Converters](~/solutions/images/Scheduling_Workflow_Converters.png)
+   ![Workflow Converters](~/solutions/images/Scheduling_Workflow_Converters.png)
 
-    > [!NOTE]  
-    > Depending on the Scheduling app **version**, you might need to hit the **refresh** button to see the newly added resource.
+1. If you don't see the results immediately in the node-edge graph, use the `Workflow` section's `Refresh` button.
+
+    ![Refresh Node-Edge Graph](~/solutions/images/Scheduling_Workflow_Refresh.png)
 
 ## Step 3: Configure resource pools
 

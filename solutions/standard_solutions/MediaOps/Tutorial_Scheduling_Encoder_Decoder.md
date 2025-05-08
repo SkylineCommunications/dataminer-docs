@@ -18,7 +18,7 @@ Expected duration: 15 minutes
 
 - A DataMiner System using DataMiner 10.5.5 or higher.
 - Access to the **Resource Studio** application.
-- Having some reasources ready to be assigned to jobs. You can find out how to create those in the [Resource Studio tutorial](xref:Tutorial_MediaOps_Resource_Studio).
+- Having some reasources ready to be assigned to jobs. You can find out how to create those in the [Resource Studio tutorial](xref:Tutorial_MediaOps_Resource_Studio_Intro).
 
 ## Overview
 
@@ -35,12 +35,12 @@ Expected duration: 15 minutes
 
     ![NewJob Button Placement](~/solutions/images/Scheduling_New_Job_Button_Placement.png)
 
-1. Give the job a name of your choice and `Create` it (There is no need to change any other default values for now.)
+1. Give the job a name of your choice and `Create` it. Optionally, delay the job `Start Time` and `End Time` for several hours to give the job some time before it starts.
 
     ![Create Job Panel](~/solutions/images/Scheduling_Create_Job_Panel.png)
 
     > [!NOTE]  
-    > The default new job time is one hour starting from the time of starting the job form.
+    > The default duration for a new job is one hour, starting at the job creation time.
 
 1. You should be able to see the newly created job in the timeline.
 
@@ -64,10 +64,10 @@ Let's try and add some resources to our newly created job.
 
 1. Close the panel and make sure that you see your resource in the node-edge graph.
 
-    ![Check out the newly added resource](~/solutions/images/Scheduling_Workflow_Resource_Added.png)
-
     > [!NOTE]  
     > Depending on the Scheduling app **version**, you might need to hit the **refresh** button to see the newly added resource.
+
+    ![Check out the newly added resource](~/solutions/images/Scheduling_Workflow_Resource_Added.png)
 
 ## Step 3: Reserving the resource
 
@@ -79,7 +79,7 @@ To reserve the resource for your job:
 
     ![Save Job as Tentative](~/solutions/images/Scheduling_Edit_Job_Save_As_Tentative.png)
     
-1. Close the `Edit Job` panel and confirm that your job's color has changed to **blue**, which indicated that it's in the `Tentative` state now.
+1. Close the `Edit Job` panel and confirm that your job's color has changed, which indicates that it has changed state. It's in the `Tentative` state now.
 
 ## Step 4: Add another resource
 
@@ -119,8 +119,9 @@ Since the `NewTek 001` resource can act both as an `Encoder` and as a `Decoder`,
 
     ![Swap Resource](~/solutions/images/Scheduling_Create_Job_Swap_Resource.png)
 
-    > [!NOTE]  
-    > Depending on the Scheduling app **version**, you might need to hit the **refresh** button to see the newly added resource.
+1. If you don't see the results immediately in the node-edge graph, use the `Workflow` section's `Refresh` button.
+
+    ![Refresh Node-Edge Graph](~/solutions/images/Scheduling_Workflow_Refresh.png)
 
 1. Now we should have a resource available in the decoder pool to assign it to our job. In the `Nodes` table, select the `Decoder` resource pool and click on the `Red Hand` icon.
 
