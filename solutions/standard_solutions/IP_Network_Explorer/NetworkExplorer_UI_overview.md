@@ -1,8 +1,8 @@
 ---
-uid: NetworkExplorer_UI_overview
+uid: IpNetworkExplorer_UI_overview
 ---
 
-# Network Explorer UI overview
+# IP Network Explorer UI overview
 
 ## Topology
 

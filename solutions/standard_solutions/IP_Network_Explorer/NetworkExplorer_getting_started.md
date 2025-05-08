@@ -1,10 +1,10 @@
 ---
-uid: NetworkExplorer_getting_started
+uid: IpNetworkExplorer_getting_started
 ---
 
-# Getting started with Network Explorer
+# Getting started with IP Network Explorer
 
-When you open the Network Explorer app, you will see a topology overview of the network switches managed by your DataMiner System.
+When you open the IP Network Explorer app, you will see a topology overview of the network switches managed by your DataMiner System.
 
 ![Topology](~/solutions/images/NS_manual_topology.png)
 
