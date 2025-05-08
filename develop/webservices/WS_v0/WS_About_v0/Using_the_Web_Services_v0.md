@@ -6,7 +6,7 @@ uid: Using_the_Web_Services_v0
 
 > [!WARNING]
 >
-> - From DataMiner 10.2.0/10.1.6 onwards, the Web Services API v0 is considered **obsolete**. By default, the v0 interface is disabled from these DataMiner versions onwards. However, you can enable the v0 interface again, provided that your DMS is not connected to dataminer.services. To do so, in the file `C:\Skyline DataMiner\Webpages\API\Web.config`, add the following extra tag under \<appSettings>: *\<add key="enableLegacyV0Interface" value="true"/>*
+> - The Web Services API v0 is **obsolete**. By default, the v0 interface is disabled. If your DMS is not connected to dataminer.services, you can enable the v0 interface again by opening the file `C:\Skyline DataMiner\Webpages\API\Web.config` and adding the following extra tag under `<appSettings>`: `<add key="enableLegacyV0Interface" value="true"/>`.
 > - We strongly recommend that you use HTTPS when accessing the Web Service APIs over public Internet. If you do not do so, all information – including logon credentials – will be sent over the Internet as plain, unencrypted text.
 
 1. Load the WSDL file.

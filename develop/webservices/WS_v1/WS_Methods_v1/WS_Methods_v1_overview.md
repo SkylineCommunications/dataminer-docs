@@ -12,20 +12,20 @@ uid: WS_Methods_v1_overview
 | Method | Description |
 |--|--|
 | [ActivateElement](xref:ActivateElementv1) | Activates an element. |
-| [AddBookingAttachment](xref:AddBookingAttachment) | Adds an attachment file to a booking. <!-- Available from DataMiner 10.0.10 onwards. --> For internal use at Skyline only.|
+| [AddBookingAttachment](xref:AddBookingAttachment) | Adds an attachment file to a booking. <!-- Available from DataMiner 10.0.10 onwards. -->For internal use at Skyline only.|
 | [AddBookingAttachmentV2](xref:AddBookingAttachmentV2) | Adds an attachment file to a booking. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. For internal use at Skyline only. |
 | [AddCommentToAlarm](xref:AddCommentToAlarm) | Adds a comment to an alarm. |
 | [AddElementToPinned](xref:AddElementToPinned) | Pins an element in the Recent list. |
 | [AddElementToRecent](xref:AddElementToRecent) | Adds an element to the Recent list. |
 | [AddElementToView](xref:AddElementToView) | Adds an element to a specified view. |
 | [AddElementsToRecent](xref:AddElementsToRecent) | Adds a number of elements to the Recent list. |
-| [AddJobAttachment](xref:AddJobAttachment) | Adds an attachment to a job. <!-- Available from DataMiner 10.0.5 onwards. --> For internal use at Skyline only.|
+| [AddJobAttachment](xref:AddJobAttachment) | Adds an attachment to a job. <!-- Available from DataMiner 10.0.5 onwards. -->For internal use at Skyline only.|
 | [AddJobAttachmentV2](xref:AddJobAttachmentV2) | Adds an attachment to a job. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. For internal use at Skyline only. |
 | [AddOrUpdateJobsSectionDefinitionField](xref:AddOrUpdateJobsSectionDefinitionField) | Adds or updates a job section definition field. <!-- Available from DataMiner 9.6.4 onwards. --> |
 | [AddServiceToPinned](xref:AddServiceToPinned) | Pins a service in the Recent list. |
 | [AddServiceToRecent](xref:AddServiceToRecent) | Adds a service to the Recent list. |
 | [AddServicesToRecent](xref:AddServicesToRecent) | Adds a number of services to the Recent list. |
-| [AddTicketAttachment](xref:AddTicketAttachment) | Adds an attachment file to a ticket. <!-- Available from DataMiner 10.0.10 onwards. --> For internal use at Skyline only.|
+| [AddTicketAttachment](xref:AddTicketAttachment) | Adds an attachment file to a ticket. <!-- Available from DataMiner 10.0.10 onwards. -->For internal use at Skyline only.|
 | [AddTicketAttachmentV2](xref:AddTicketAttachmentV2) | Adds an attachment file to a ticket. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. For internal use at Skyline only.|
 | [AddTicketField](xref:AddTicketField) | Adds a new field to the specified ticket type. |
 | [AddTicketType](xref:AddTicketType) | Adds a new ticket type. |
@@ -70,7 +70,7 @@ uid: WS_Methods_v1_overview
 | [DeleteJobAttachments](xref:DeleteJobAttachments) | Deletes multiple attachments from a job. <!-- Available from DataMiner 10.0.5 onwards. --> |
 | [DeleteJobs](xref:DeleteJobs) | Deletes several jobs at the same time. <!-- Available from DataMiner 9.6.13 onwards. --> |
 | [DeleteJobsDomain](xref:DeleteJobsDomain) | Deletes a jobs domain. <!-- Available from DataMiner 10.0.9 onwards. --> |
-| [DeleteJobsSectionDefinition](xref:DeleteJobsSectionDefinition) | Deletes a job section definition. <!-- Available from DataMiner 9.6.4 onwards. --> No longer supported <!-- from DataMiner 10.0.9 onwards -->. Use **DeleteJobsSectionDefinitionFromDomain** instead. |
+| [DeleteJobsSectionDefinition](xref:DeleteJobsSectionDefinition) | Deletes a job section definition. No longer supported. Use **DeleteJobsSectionDefinitionFromDomain** instead.<!-- Available from DataMiner 9.6.4 onwards, no longer supported from DataMiner 10.0.9 onwards --> |
 | [DeleteJobsSectionDefinitionField](xref:DeleteJobsSectionDefinitionField) | Deletes a job section definition field. <!-- Available from DataMiner 9.6.4 onwards. --> |
 | [DeleteJobsSectionDefinitionFromDomain](xref:DeleteJobsSectionDefinitionFromDomain) | Deletes a job section definition from a specific job domain. <!-- Available from DataMiner 10.0.9 onwards. --> |
 | [DeleteJobTemplate](xref:DeleteJobTemplate) | Deletes a job template. <!-- Available from DataMiner 9.6.6 onwards. --> |
@@ -98,7 +98,7 @@ uid: WS_Methods_v1_overview
 | [ExecuteAutomationScriptWithOutput](xref:ExecuteAutomationScriptWithOutput) | Executes an interactive Automation script and retrieves its output. <!-- Available from DataMiner 10.0.5 onwards. --> |
 | [ExecuteGenericAsyncRequest](xref:ExecuteGenericAsyncRequest) | Used in order to have a method executed asynchronously. |
 | [ExecuteVisioShapeAction](xref:ExecuteVisioShapeAction) | Execute an action on a Visio shape. |
-| [GenerateTicketBasedOnAlarm](xref:GenerateTicketBasedOnAlarm) | <!-- Available from DataMiner 9.6.6 onwards. --> Generates a ticket based on alarm properties. |
+| [GenerateTicketBasedOnAlarm](xref:GenerateTicketBasedOnAlarm) | Generates a ticket based on alarm properties.<!-- Available from DataMiner 9.6.6 onwards. --> |
 | [GetActiveAlarmCountForElement](xref:GetActiveAlarmCountForElement) | Retrieves the number of active alarms on an element. |
 | [GetActiveAlarmCountForElementV2](xref:GetActiveAlarmCountForElementV2) | Retrieves the number of active alarms on an element along with the alarm cache status. <!-- Available from DataMiner 10.0.7 onwards. --> |
 | [GetActiveAlarmCountForService](xref:GetActiveAlarmCountForService) | Retrieves the number of active alarms on a service. |
@@ -430,7 +430,7 @@ uid: WS_Methods_v1_overview
 | [ReorderPinned](xref:ReorderPinned) | Reorders a number of pinned items in the Recent list. |
 | [RequestLoginAsTicket](xref:RequestLoginAsTicket) | Requests a logon ticket that can then be added to e.g. a DataMiner Maps URL. |
 | [RestartElement](xref:RestartElement) | Restarts an element. |
-| [SaveJobsSectionDomainConfig](xref:SaveJobsSectionDomainConfig) | Deprecated. <!-- Available from DataMiner 9.6.4 onwards. --><!-- From DataMiner 10.0.9 onwards,  -->Replaced by UpdateDomainSectionDefinitionConfiguration. |
+| [SaveJobsSectionDomainConfig](xref:SaveJobsSectionDomainConfig) | Deprecated. Replaced by UpdateDomainSectionDefinitionConfiguration.<!-- Available from DataMiner 9.6.4 onwards, deprecated from DataMiner 10.0.9 onwards --> |
 | [SaveSpectrumPreset](xref:SaveSpectrumPreset) | Saves a specified spectrum analyzer preset. |
 | [SetMeasurementPoints](xref:SetMeasurementPoints) | Sets the measurement point cycle of a spectrum analyzer. |
 | [SetParameter](xref:SetParameter) | Updates a particular parameter. |
