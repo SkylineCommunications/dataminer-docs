@@ -9,13 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 08 May 2025 - Enhancement - Syncing authentication state across dataminer.services applications
+### 08 May 2025 - Fix - Fixed local sign-on fallback [ID 42883]
 
-Signing in or out will now automatically sync to other applications without the need to refresh the page.
+When experiencing issues with the shared single sign-on, application will now fallback to a local sign-on.
 
-### 08 May 2025 - Enhancement - Local sign-on fallback [ID 42883]
+### 08 May 2025 - New feature - Syncing authentication state across cloud applications. [ID 42882]
 
-When experiencing issues with the shared single sign-on, applications will now fall back to a local sign-on.
+Signing in or out will now sync to other applications automatically without the need to refresh the page.
 
 ### 05 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42793]
 
