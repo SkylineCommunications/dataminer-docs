@@ -6,7 +6,7 @@ uid: GetHistoryAlarmsForService
 
 Use this method in order to retrieve the history alarms for a particular service.
 
-Available from DataMiner version 9.5.1 onwards.
+<!-- Available from DataMiner version 9.5.1 onwards. -->
 
 ## Input
 

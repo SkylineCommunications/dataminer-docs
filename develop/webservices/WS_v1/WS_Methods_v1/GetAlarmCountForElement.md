@@ -4,7 +4,9 @@ uid: GetAlarmCountForElement
 
 # GetAlarmCountForElement
 
-Use this method to retrieve the number of alarms for every alarm severity for the specified element during the specified timespan. Available from DataMiner 9.5.8 onwards.
+Use this method to retrieve the number of alarms for every alarm severity for the specified element during the specified timespan.
+
+<!-- Available from DataMiner 9.5.8 onwards. -->
 
 ## Input
 

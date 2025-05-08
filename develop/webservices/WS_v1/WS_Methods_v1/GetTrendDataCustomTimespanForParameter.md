@@ -6,7 +6,7 @@ uid: GetTrendDataCustomTimespanForParameter
 
 Use this method to retrieve the trend data for a particular parameter within a custom time range.
 
-Available from DataMiner 9.5.8 onwards.
+<!-- Available from DataMiner 9.5.8 onwards. -->
 
 ## Input
 

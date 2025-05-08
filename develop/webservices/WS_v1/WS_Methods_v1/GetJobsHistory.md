@@ -4,7 +4,9 @@ uid: GetJobsHistory
 
 # GetJobsHistory
 
-Use this method to retrieve all changes that were made to a job, with the most recent changes first. Available from DataMiner 10.0.11 onwards.
+Use this method to retrieve all changes that were made to a job, with the most recent changes first.
+
+<!-- Available from DataMiner 10.0.11 onwards. -->
 
 ## Input
 

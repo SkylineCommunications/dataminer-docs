@@ -4,7 +4,9 @@ uid: CreateJobsDomain
 
 # CreateJobsDomain
 
-Use this method to create a job domain. Available from DataMiner 10.0.9 onwards.
+Use this method to create a job domain.
+
+<!-- Available from DataMiner 10.0.9 onwards. -->
 
 ## Input
 

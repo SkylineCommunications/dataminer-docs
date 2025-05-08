@@ -6,7 +6,7 @@ uid: GetServiceDefinitions
 
 Use this method to retrieve all available service definitions.
 
-Available from DataMiner 10.0.2 onwards.
+<!-- Available from DataMiner 10.0.2 onwards. -->
 
 ## Input
 
