@@ -4,7 +4,7 @@ uid: SaveJobsSectionDomainConfig
 
 # SaveJobsSectionDomainConfig
 
-This method is deprecated. <!-- From DataMiner 10.0.9 onwards, --> Use [UpdateDomainSectionDefinitionConfiguration](xref:UpdateDomainSectionDefinitionConfiguration) instead.
+This method is deprecated. <!-- From DataMiner 10.0.9 onwards -->Use [UpdateDomainSectionDefinitionConfiguration](xref:UpdateDomainSectionDefinitionConfiguration) instead.
 
 ## Input
 

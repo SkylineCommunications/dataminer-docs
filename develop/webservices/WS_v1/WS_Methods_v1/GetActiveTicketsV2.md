@@ -9,7 +9,7 @@ Use this method to retrieve the active tickets for this DMA, i.e. tickets that a
 <!-- From DataMiner 10.0.13 onwards, this method should be used instead of the [GetActiveTickets](xref:GetActiveTickets) method. -->
 
 > [!NOTE]
-> DataMiner Ticketing requires a Cassandra database as well as a specific license. <!-- From DataMiner 10.0.13 onwards, --> It also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
+> DataMiner Ticketing requires a Cassandra database as well as a specific license. <!-- From DataMiner 10.0.13 onwards, -->It also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
 
 > [!CAUTION]
 >

@@ -430,7 +430,7 @@ uid: WS_Methods_v1_overview
 | [ReorderPinned](xref:ReorderPinned) | Reorders a number of pinned items in the Recent list. |
 | [RequestLoginAsTicket](xref:RequestLoginAsTicket) | Requests a logon ticket that can then be added to e.g. a DataMiner Maps URL. |
 | [RestartElement](xref:RestartElement) | Restarts an element. |
-| [SaveJobsSectionDomainConfig](xref:SaveJobsSectionDomainConfig) | Deprecated. <!-- Available from DataMiner 9.6.4 onwards. --> <!-- From DataMiner 10.0.9 onwards,  -->Replaced by UpdateDomainSectionDefinitionConfiguration. |
+| [SaveJobsSectionDomainConfig](xref:SaveJobsSectionDomainConfig) | Deprecated. <!-- Available from DataMiner 9.6.4 onwards. --><!-- From DataMiner 10.0.9 onwards,  -->Replaced by UpdateDomainSectionDefinitionConfiguration. |
 | [SaveSpectrumPreset](xref:SaveSpectrumPreset) | Saves a specified spectrum analyzer preset. |
 | [SetMeasurementPoints](xref:SetMeasurementPoints) | Sets the measurement point cycle of a spectrum analyzer. |
 | [SetParameter](xref:SetParameter) | Updates a particular parameter. |

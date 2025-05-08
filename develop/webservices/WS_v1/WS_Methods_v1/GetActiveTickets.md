@@ -4,10 +4,10 @@ uid: GetActiveTickets
 
 # GetActiveTickets
 
-This method is deprecated. <!-- From DataMiner 10.0.13 onwards, --> Use the [GetActiveTicketsV2](xref:GetActiveTicketsV2) method instead.
+This method is deprecated. <!-- From DataMiner 10.0.13 onwards, -->Use the [GetActiveTicketsV2](xref:GetActiveTicketsV2) method instead.
 
 > [!NOTE]
-> DataMiner Ticketing requires a Cassandra database as well as a specific license. <!-- From DataMiner 10.0.13 onwards, --> It also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
+> DataMiner Ticketing requires a Cassandra database as well as a specific license. <!-- From DataMiner 10.0.13 onwards, -->It also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
 
 > [!CAUTION]
 >
