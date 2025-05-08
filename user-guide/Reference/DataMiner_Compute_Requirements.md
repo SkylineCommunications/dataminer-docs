@@ -15,7 +15,6 @@ Minimum requirements are displayed in gray, default requirements in light blue, 
 
 > [!TIP]
 >
-> - To estimate how many nodes your DMS will need and what the specifications of these nodes should be, you can use the [DataMiner Node Calculator](https://community.dataminer.services/calculator/)
 > - For all information on client requirements, see [DataMiner Client Requirements](xref:DataMiner_Client_Requirements).
 
 > [!NOTE]
