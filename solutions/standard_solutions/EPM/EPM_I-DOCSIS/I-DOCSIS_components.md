@@ -83,6 +83,8 @@ The Integrated DOCSIS EPM Solution includes the following dashboards:
 - SERVICE GROUP/04. US QAM CHANNELS
 - SERVICE GROUP/05. OFDM CHANNELS
 - SERVICE GROUP/06. OFDMA CHANNELS
+- US FN BREACH REPORT (OFDMA)
+- US FN BREACH REPORT (SC-QAM)
 
 > [!NOTE]
 > To use the Top 50 dashboards, Data Aggregator must be installed and configured with certain queries. Please reach out to your Skyline representative to set this up if you would like to use those dashboards.
