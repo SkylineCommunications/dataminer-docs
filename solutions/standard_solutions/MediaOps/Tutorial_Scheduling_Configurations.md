@@ -27,8 +27,8 @@ Expected duration: 15 minutes
 - [Step 1: Create a new job](#step-1-create-a-new-job)
 - [Step 2: Add Converter resource pool to the job](#step-2-add-converter-resource-pool-to-the-job)
 - [Step 3: Configure resource pools](#step-3-configure-resource-pools)
-- [Step 4: Pick resources](step-4-pick-resources)
-- [Step 5: Confirm the job](step-5-Confirm-the-job)
+- [Step 4: Pick resources](#step-4-pick-resources)
+- [Step 5: Confirm the job](#step-5-Confirm-the-job)
 
 ## Step 1: Create a new job
 
