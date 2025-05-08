@@ -9,13 +9,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 08 May 2025 - New feature - Syncing authentication state across cloud applications.
+### 08 May 2025 - Enhancement - Syncing authentication state across dataminer.services applications
 
-Signing in or out will now sync to other applications automatically without the need to refresh the page.
+Signing in or out will now automatically sync to other applications without the need to refresh the page.
 
-### 08 May 2025 - Fix - Fixed local sign-on fallback [ID 42883]
+### 08 May 2025 - Enhancement - Local sign-on fallback [ID 42883]
 
-When experiencing issues with the shared single sign-on, application will now fallback to a local sign-on. 
+When experiencing issues with the shared single sign-on, applications will now fall back to a local sign-on.
 
 ### 05 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42793]
 
@@ -25,9 +25,9 @@ If you are a member of the organization that published a specific Catalog item, 
 
 Previously, export requests in the Admin app ignored the DataMiner Systems selected by the user and exported all available data instead. This issue has been resolved. Export results are now correctly limited to the selected DataMiner Systems.
 
-### 05 May 2025 - New feature - Single sign-on for Catalog, Admin, Connection and Shares [ID 42768] [ID 42789]
+### 05 May 2025 - New feature - Single sign-on across various dataminer.services apps [ID 42768] [ID 42789]
 
-Single sign-on (SSO) has been implemented across the Catalog, Admin, Connection and Shares apps on dataminer.services. Users who sign in to one of these applications will now be automatically signed in to the others, providing a more seamless user experience.
+Single sign-on (SSO) has been implemented across the Catalog, Admin, and Sharing apps on dataminer.services, as well as on the page used to connect Agents to dataminer.services and configure account linking. Users who sign in to one of these apps or pages will now be automatically signed in to the others, providing a more seamless user experience.
 
 ### 28 April 2025 - Fix - Usage API - Performance and stability improvements [ID 42791]
 
