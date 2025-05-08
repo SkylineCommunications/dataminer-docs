@@ -160,11 +160,9 @@ Do one of the following:
 
 - Click the cogwheel icon in the lower right corner of the start window, and select *Check for updates*.
 
-### Finding the logs of the start window
+### Consulting the start window logging
 
-The log files of the start window application can be found in the following location:
-`%LocalAppData%\Skyline\DataMiner\DataMinerCube\Logs\logYYYYMMDD.txt`
+The log files of the start window application can be found in the following location: `%LocalAppData%\Skyline\DataMiner\DataMinerCube\Logs\logYYYYMMDD.txt`
+
 > [!NOTE]
-> This is different from the ![Cube Logging](xref:Cube_logging).
-
-
+> This is different from the [Cube Logging](xref:Cube_logging).
