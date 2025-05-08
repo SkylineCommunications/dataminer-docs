@@ -24,7 +24,7 @@ uid: General_Feature_Release_10.5.6
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Automation: Separate log file for every Automation script that is run [ID 42572]](#automation-separate-log-file-for-every-automation-script-that-is-run-id-42572)
 
 ## New features
 
