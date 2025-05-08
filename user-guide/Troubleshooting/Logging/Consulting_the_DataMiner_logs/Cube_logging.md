@@ -11,6 +11,9 @@ Logging is extremely useful in order to detect, investigate, and solve issues.
 ![Cube logging](~/user-guide/images/Cube_Logging.png)<br>
 *Cube logging in DataMiner 10.3*
 
+> [!TIP]
+> Logging for the Cube start window is located elsewhere. See [Consulting the start window logging](xref:Managing_the_start_window#consulting-the-start-window-logging).
+
 ## Log file locations
 
 For every DataMiner Cube session, both local and remote logging is created, each in a different location.
