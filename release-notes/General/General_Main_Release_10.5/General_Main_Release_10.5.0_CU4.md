@@ -29,12 +29,6 @@ From now on, the ModuleInstaller upgrade action will only time out after 30 minu
 
 When a request for a visual overview in a web app failed, up to now, that request would incorrectly not be removed, causing it to block all subsequent requests for a visual overview in a web app. From now on, when a request for a visual overview in a web app fails, it will be removed from the list of pending requests.
 
-#### Security enhancements [ID 42747]
-
-<!-- 42747: MR 10.4.0 [CU15]/10.5.0 [CU4] - FR 10.5.6 [CU0] -->
-
-A number of security enhancements have been made.
-
 #### Enhanced processing of service deletions [ID 42754]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->

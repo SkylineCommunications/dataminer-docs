@@ -80,7 +80,7 @@ To configure an override parameter, use the following syntax:
 
 #### Security enhancements [ID 42747]
 
-<!-- 42747: MR 10.4.0 [CU15]/10.5.0 [CU4] - FR 10.5.6 [CU0] -->
+<!-- 42747: MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 [CU0] -->
 
 A number of security enhancements have been made.
 
