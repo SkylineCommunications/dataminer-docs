@@ -13,7 +13,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 Signing in or out will now sync to other applications automatically without the need to refresh the page.
 
-### 07 May 2025 - Fix - Fixed local sign-on fallback [ID 42883]
+### 08 May 2025 - Fix - Fixed local sign-on fallback [ID 42883]
 
 When experiencing issues with the shared single sign-on, application will now fallback to a local sign-on. 
 
