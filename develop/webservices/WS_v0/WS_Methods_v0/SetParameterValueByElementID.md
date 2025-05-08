@@ -22,7 +22,7 @@ Use this method to update the value of a parameter linked to an element (referen
 | ParamValue | Object  | The new parameter value.                                              |
 
 > [!NOTE]
-> To do a parameter set on a certain cell of a table, <!-- from DataMiner 9.5.1 onwards, --> specify the table column parameter name and either the display key or the primary key of the row.
+> To do a parameter set on a certain cell of a table, <!-- from DataMiner 9.5.1 onwards, -->specify the table column parameter name and either the display key or the primary key of the row.
 
 ## Output
 
