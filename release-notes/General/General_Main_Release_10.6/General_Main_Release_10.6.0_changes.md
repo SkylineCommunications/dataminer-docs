@@ -356,12 +356,6 @@ When a Notify method was called from a thread created within an Automation scrip
 
 In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.
 
-#### Not all DCF interfaces would be listed in the Connectivity tab of an element's Properties window [ID 42591]
-
-<!-- MR 10.6.0 - FR 10.5.7 -->
-
-When, in e.g. DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
-
 #### ModelHost DxM would stop working when it failed to retrieve a proxy endpoint [ID 42651]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
