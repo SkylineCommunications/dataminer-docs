@@ -36,6 +36,22 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### Dashboards app & Low-Code Apps - Timeline component: Enhanced behavior of timeline items when panning [ID 42670]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+Because of a number of enhancements, the behavior of timeline items has improved when panning.
+
+#### Low-Code Apps - Interactive Automation scripts: Enhancements made to redesigned UI component 'CheckBoxList' [ID 42826]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+A number of enhancements have been made to the redesigned `UIBlockType.CheckBoxList` component. Its behavior is now more in line with other redesigned components like the `UIBlockType.RadioButtonList` component.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
+
 #### Dashboards app & Low-Code Apps: Enhancements made to dropdown controls [ID 42840]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
