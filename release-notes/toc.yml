@@ -48,6 +48,8 @@ items:
             href: PA/toc.yml
           - name: PTP release notes
             href: PTP/toc.yml
+          - name: RAD Manager
+            href: RAD_Manager/toc.yml
           - name: SRM release notes
             href: SRM/toc.yml
       - name: Breaking changes
