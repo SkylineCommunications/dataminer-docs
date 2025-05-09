@@ -10,7 +10,7 @@ uid: RAD_Manager_2.0.3
 
 #### Improvements to the caching mechanism for anomaly scores
 
-Various improvements have been made to the caching mechanism of the *Get Relational Anomaly Score* ad-hoc data source. As a result, the update to the anomaly score graph after zooming in and out on the parameter trend graph above it, will be faster.
+Various improvements have been made to the caching mechanism of the *Get Relational Anomaly Score* ad hoc data source. As a result, after you zoom in and out on the parameter trend graph, the anomaly score graph below it will be updated more quickly.
 
 #### Added time range picker for trend graph [ID 42838]
 
@@ -18,6 +18,6 @@ A time range picker has been added above the parameter trend graph, allowing the
 
 ### Bug fixes
 
-#### Always show full time range on anomaly score graph [ID 42838]
+#### Anomaly score graph time range not aligned with trend graph time range [ID 42838]
 
-The time range shown on the anomaly score graph is now always aligned with the time range shown on the parameter trend graph above it. Before, it would show a smaller time range if anomaly scores were not available in the beginning or the end of the time range.
+If anomaly scores were not available in the beginning or the end of the time range shown in the trend graph, up to now, the time range of the anomaly score graph below it could be smaller than that of the trend graph. Now the time range of the two graphs will always be aligned.
