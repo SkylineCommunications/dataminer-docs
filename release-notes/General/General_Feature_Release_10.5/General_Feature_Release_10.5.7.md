@@ -95,6 +95,16 @@ When, in the *MaintenanceSettings.xml* file, the `<SLNet>` element contained a `
 
 When the NATS connection between SLNet and SLHelper was unavailable, in some cases, either of those processes could stop working.
 
+#### Problem when deleting a newly created service that had failed to load [ID 42775]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When a service was created, in some cases, loading that new service would fail, even though a *service.xml* file had correctly been added on disk.Moreover, deleting that service would also fail, making it impossible to create a new service with an identical name.
+
+From now on, when a new service fails to load, additional logging will be added, and a backup *service.xml* file will be created in the `C:\Skyline DataMiner\Recycle Bin\` folder for debugging purposes.
+
+Also, when the service that failed to load is deleted, an attempt will be made to delete the files and folders associated with that service in order to prevent any subsequent issues when creating a new service with an identical name.
+
 #### Active clients would not receive an updated ElementInfoEventMessage after an element had been swarmed [ID 42778]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
