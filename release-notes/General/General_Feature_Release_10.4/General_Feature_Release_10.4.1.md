@@ -268,14 +268,14 @@ Also, the newly added *UninstallApiDeployment* upgrade action will remove everyt
 
 - Remove the following files (if present):
 
-  - *C:\Skyline DataMiner\SLAPIEndpoint*
-  - *C:\Skyline DataMiner\DeployerTokens*
-  - *C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt*
-  - *C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip*
+  - `C:\Skyline DataMiner\SLAPIEndpoint`
+  - `C:\Skyline DataMiner\DeployerTokens`
+  - `C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt`
+  - `C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip`
 
 - If present, remove the rewrite rules for API Deployment.
 
-- Remove the API Deployment configuration file from *C:\Skyline DataMiner\Configurations\JSON*.
+- Remove the API Deployment configuration file from `C:\Skyline DataMiner\Configurations\JSON`.
 
 - Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
 

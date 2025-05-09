@@ -315,7 +315,7 @@ From now on, in Cube, you can not only enable a simulation file, but also create
 
 When you open an element card, you can also access this same command via the card’s hamburger menu.
 
-The simulation file will be stored on the DataMiner Agent, in the protocol folder of the element in question: *C:\\Skyline DataMiner\\Protocols\\NAME\\VERSION\\Simulation_ELEMENTNAME.xml*
+The simulation file will be stored on the DataMiner Agent, in the protocol folder of the element in question: `C:\Skyline DataMiner\Protocols\NAME\VERSION\Simulation_ELEMENTNAME.xml`
 
 #### Resources app: Time-dependent capabilities \[ID 25409\]
 

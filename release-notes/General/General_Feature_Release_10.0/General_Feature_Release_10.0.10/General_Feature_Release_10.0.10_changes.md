@@ -75,7 +75,7 @@ A number of enhancements have been made to the Cube Launcher:
 
 - When you click the cogwheel button at the bottom, you can now click *View logging* to open the folder containing the log files of the Cube Launcher:
 
-    *C:\\Users\\\<username>\\AppData\\Local\\Skyline\\DataMiner\\DataMinerCube\\Logs*
+    `C:\Users\<username>\AppData\Local\Skyline\DataMiner\DataMinerCube\Logs`
 
 - Retrieving and saving temporary Cube settings has been optimized.
 

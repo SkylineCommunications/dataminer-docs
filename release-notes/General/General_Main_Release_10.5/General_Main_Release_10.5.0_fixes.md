@@ -137,12 +137,12 @@ When an element name contained a curly bracket ("{" or "}"), exporting the eleme
 
 <!-- MR 10.5.0 - FR 10.4.10 -->
 
-Up to now, when *defaultApp* was set to "Cube" in *C:\\Skyline DataMiner\\Webpages\\Config.manual.asp*, the DataMiner root page *C:\\Skyline DataMiner\\Webpages\\default.asp* would incorrectly still use deprecated XBAP URLs to open DataMiner Cube. It will now open DataMiner Cube using *cube://* URLs instead.
+Up to now, when *defaultApp* was set to "Cube" in `C:\Skyline DataMiner\Webpages\Config.manual.asp`, the DataMiner root page `C:\Skyline DataMiner\Webpages\default.asp` would incorrectly still use deprecated XBAP URLs to open DataMiner Cube. It will now open DataMiner Cube using *cube://* URLs instead.
 
-For example, when *defaultApp* is set to "Cube" in *C:\\Skyline DataMiner\\Webpages\\Config.manual.asp*, using the URL ``https://mydma/?element=12/76`` will open DataMiner Cube, which will then immediately open an element card containing the specified element.
+For example, when *defaultApp* is set to "Cube" in `C:\Skyline DataMiner\Webpages\Config.manual.asp`, using the URL ``https://mydma/?element=12/76`` will open DataMiner Cube, which will then immediately open an element card containing the specified element.
 
 > [!NOTE]
-> When *defaultApp* was set to "Cube" in *C:\\Skyline DataMiner\\Webpages\\Config.manual.asp*, up to now, if you tried to open a link like ``https://mydma/?element=dmaID/elementID`` in Microsoft Edge, Google Chrome or Mozilla Firefox on Microsoft Windows, the link would incorrectly be opened in the Monitoring app instead of DataMiner Cube. From now on, that link will correctly be opened in DataMiner Cube. Only if you open the link on a mobile device or an operating system other than Microsoft Windows (e.g. Linux, macOS, etc.), will it still be opened in the Monitoring app.
+> When *defaultApp* was set to "Cube" in `C:\Skyline DataMiner\Webpages\Config.manual.asp`, up to now, if you tried to open a link like ``https://mydma/?element=dmaID/elementID`` in Microsoft Edge, Google Chrome or Mozilla Firefox on Microsoft Windows, the link would incorrectly be opened in the Monitoring app instead of DataMiner Cube. From now on, that link will correctly be opened in DataMiner Cube. Only if you open the link on a mobile device or an operating system other than Microsoft Windows (e.g. Linux, macOS, etc.), will it still be opened in the Monitoring app.
 
 #### SLDataGateway would not send the correct error to the client application when there was a database problem [ID 40488]
 

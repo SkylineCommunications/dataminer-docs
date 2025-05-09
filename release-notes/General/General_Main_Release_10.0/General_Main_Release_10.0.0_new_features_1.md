@@ -729,9 +729,9 @@ The .NET Compiler Platform ("Roslyn") is now used to compile QActions, so that C
 
 #### Possibility to refer to DLLs in subfolders of ProtocolScripts folder \[ID 23565\]
 
-Up to now, to use a custom DLL in a protocol's QActions, it always had to be stored in the folder *C:\\Skyline DataMiner\\ProtocolScripts*. Now it is also possible to use a DLL that is stored in a subfolder of this folder. In that case, you must mention the subfolder when you specify the DLL in the protocol.
+Up to now, to use a custom DLL in a protocol's QActions, it always had to be stored in the folder `C:\Skyline DataMiner\ProtocolScripts`. Now it is also possible to use a DLL that is stored in a subfolder of this folder. In that case, you must mention the subfolder when you specify the DLL in the protocol.
 
-For example, to use “test.dll” stored in *C:\\Skyline DataMiner\\ProtocolScripts\\SubFolder*, configure the *dllImport* attribute of the QAction tag as follows: *dllImport="SubFolder\\test.dll"*.
+For example, to use “test.dll” stored in `C:\Skyline DataMiner\ProtocolScripts\SubFolder`, configure the *dllImport* attribute of the QAction tag as follows: *dllImport="SubFolder\\test.dll"*.
 
 It is now also possible to use DLLs with the same name but with different assembly versions within the same driver, though not within the same QAction.
 
@@ -749,7 +749,7 @@ For example, the following QAction definitions are possible within a single prot
 >
 > - A leading slash before the folder name is supported, but not required.
 > - A folder separator can be a forward slash or backslash.
-> - DLL files stored in *C:\\Skyline DataMiner\\Files\\* will take precedence over DLL files in other folders if they are not strongly named (signed). This is standard Microsoft .NET assembly resolving behavior.
+> - DLL files stored in `C:\Skyline DataMiner\Files\` will take precedence over DLL files in other folders if they are not strongly named (signed). This is standard Microsoft .NET assembly resolving behavior.
 > - In the details of a DLL, ‘File Version’ and ‘Product Version’ reflect the project’s file version at compilation. Other tools might be needed to check the actual assembly version.
 
 #### SLProtocol class refactored to an interface \[ID 23787\]

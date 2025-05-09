@@ -213,7 +213,7 @@ When you set the *Recursive* option to true, the table will not only contain all
 
 #### Dashboards app: Existing GQI queries stored in Queries.json will now automatically be copied to the correct dashboard files during a DataMiner upgrade \[ID 28816\]
 
-As from DataMiner main release version 10.1.0 and feature release version 10.1.3, GQI queries are stored in the dashboards instead of a separate *Queries.json* file, located in the *C:\\Skyline DataMiner\\Generic Interface\\* folder.
+As from DataMiner main release version 10.1.0 and feature release version 10.1.3, GQI queries are stored in the dashboards instead of a separate *Queries.json* file, located in the `C:\Skyline DataMiner\Generic Interface\` folder.
 
 When you upgrade to DataMiner main release version 10.2.0 or feature release version 10.1.4, any existing GQI queries that are still stored in the Queries.json file will now automatically be copied to the correct dashboard files.
 
@@ -303,7 +303,7 @@ It is now possible to share dashboards with other users via the DataMiner Cloud.
 
 - The DataMiner Web Services API now has a Web Application Firewall. Each time a CCA user calls a particular web method, this firewall will check whether that CCA user is allowed to do so.
 
-- Detailed logging is stored in *C:\\Skyline DataMiner\\logging\\Web* and Dashboards Sharing SPI metrics are published.
+- Detailed logging is stored in `C:\Skyline DataMiner\Logging\Web` and Dashboards Sharing SPI metrics are published.
 
 > [!NOTE]
 > In the list of users and groups in System Center, there is a separate section for dataminer.services users and groups. These also have their own icon, so the distinction with regular users and groups is more clear.
@@ -878,7 +878,7 @@ See the following example:
 The Web Services API v0 is now disabled by default. It is recommended to use the Web Services API v1 instead (SOAP or JSON).
 
 > [!NOTE]
-> If necessary, you can still enable the Web Services API v0 by adding the following key inside the \<appSettings> element of the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file:
+> If necessary, you can still enable the Web Services API v0 by adding the following key inside the \<appSettings> element of the `C:\Skyline DataMiner\Webpages\API\Web.config` file:
 >
 > *\<add key="enableLegacyV0Interface" value="true"/>*
 
