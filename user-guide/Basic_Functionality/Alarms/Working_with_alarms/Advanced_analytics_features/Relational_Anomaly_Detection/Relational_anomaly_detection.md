@@ -6,7 +6,15 @@ uid: Relational_anomaly_detection
 
 From DataMiner 10.5.3/10.6.0 onwards, you can use relational anomaly detection (RAD) to detect when a group of parameters deviates from its normal behavior.<!-- RN 42034 -->
 
-After you have [configured one or more groups of parameters](#configuring-parameter-groups-for-rad) that should be monitored together, RAD will learn how these parameters are related and detect whenever this relation is broken. In that case, [*suggestion events* will be shown in the Alarm Console](#relational-anomalies-in-the-alarm-console).
+The RAD functionality works in three different steps:
+
+1. First you need to [configure one or more groups of parameters](#configuring-parameter-groups-for-rad) that should be monitored together, e.g. a main bit rate and backup bit rate.
+
+1. The algorithm will then **learn the relations** between the parameters, e.g. learn that main and backup are typically equal. This is done automatically by the system, but you can manually specify a training range.
+
+1. Whenever a detected relation is broken, e.g. the main is no longer equal to the backup, RAD will generate [suggestion events in the Alarm Console](#relational-anomalies-in-the-alarm-console).
+
+![The three steps of the RAD algorithm](~/user-guide/images/tutorial_RAD_Overview_Algorithm.jpg)
 
 Every five minutes, RAD calculates an anomaly score for each configured group of parameters. This score is based on the average value of each parameter in that group over the last five minutes. A high anomaly score indicates that the relationships between the parameters are broken, whereas a low anomaly score means the relationships remain intact. Historical anomaly scores can be visualized in the [RAD Manager](xref:RAD_manager) app.
 
@@ -18,6 +26,20 @@ This means that the following prerequisites apply:
 
 - Average trending has to be enabled for each parameter used in a RAD group.
 - The TTL for five-minute average trend data has to be set to more than one week (recommended setting: 1 month).
+
+## Use cases
+
+By way of example, here are a few of the possible use cases for relational anomaly detection:
+
+- **Main and backup transcoders (Xcoders)**: Monitor the output bit rate differences between main and backup transcoders to make sure that your backup remains synced with the main.
+
+- **Bonded Interfaces**: Spot differences in bit rates across bonded interfaces. This can provide early warnings for failures in the load balancing circuit or for issues with individual interfaces or fibers.
+
+- **UPS Management**: Decide on the best time to replace your battery. For a full use case description, refer to [UPS Management Use Case](https://community.dataminer.services/cut-ups-costs-and-prevent-outages-with-ai-powered-monitoring/).
+
+- **Temperatures vs. fan speeds**: Monitor whether the fan speed of a device is in sync with the temperature of the device. This can help identify faults in the cooling system or in the device itself.
+
+- **Power amplifiers in DAB transmitters**: Monitor the power outputs of all amplifiers in a DAB transmitter to ensure they remain in sync. This helps identify faults in the transmitter or the antenna system. For a tutorial on how to set up RAD for this use case, refer to [Working with relational anomaly detection](xref:Relational_Anomaly_Detection_Tutorial).
 
 ## Configuring parameter groups for RAD
 
