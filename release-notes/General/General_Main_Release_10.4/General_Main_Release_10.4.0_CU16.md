@@ -37,6 +37,14 @@ When a service was migrated from one DMA to another within the same DMS, in some
 
 From now on, the message ordering the deletion of a service will always be sent to the DMA that is hosting the service. That DMA will then forward the message to the other DMAs within the cluster.
 
+#### Security Advisory BPA test: Enhancements [ID 42850]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+A number of enhancements have been made to the *Security Advisory* BPA test.
+
+For example, the BPA test is now also able to run on the offline agent of a Failover setup.
+
 ### Fixes
 
 #### Not all DCF interfaces would be listed in the Connectivity tab of an element's Properties window [ID 42591]
