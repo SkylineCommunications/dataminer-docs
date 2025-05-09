@@ -36,11 +36,11 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
-#### Dashboards app & Low-Code Apps - Timeline component: Enhanced behavior of timeline items when panning [ID 42670]
+#### Dashboards app & Low-Code Apps - Timeline component: Enhanced updating of timeline items [ID 42670]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
-Because of a number of enhancements, the behavior of timeline items has improved when panning.
+A number of enhancements have been made to the way in which timeline items are updated.
 
 #### Low-Code Apps - Interactive Automation scripts: Enhancements made to redesigned UI component 'CheckBoxList' [ID 42826]
 
