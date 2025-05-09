@@ -38,6 +38,15 @@ The SLNet message `EditConnection`, which can be used to edit a connection from 
 
 ### Enhancements
 
+#### BrokerGateway will now reconfigure the NATS cluster before a DMA is added to or removed from the DMS [ID 42494]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+From now on, when BrokerGateway detects that a DataMiner Agent is about to be added to or removed from a DataMiner System, it will reconfigure the NATS cluster before the DataMiner Agent is actually added or removed.
+
+> [!NOTE]
+> When BrokerGateway fails to reconfigure the NATS cluster, the DataMiner Agent will not be added or removed.
+
 #### DataMiner upgrade: ModuleInstaller upgrade action timeout has been increased to 30 minutes [ID 42659]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
