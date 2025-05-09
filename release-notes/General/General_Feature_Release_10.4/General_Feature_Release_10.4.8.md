@@ -170,7 +170,7 @@ This will prevent out of memory exceptions from being thrown, especially on larg
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
-From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default be added to all backup packages that contain services.
+From now on, the `C:\Skyline DataMiner\RemoteServices` folder will by default be added to all backup packages that contain services.
 
 #### Storage as a Service: Enhanced storage of non-indexed logger tables [ID 40066]
 

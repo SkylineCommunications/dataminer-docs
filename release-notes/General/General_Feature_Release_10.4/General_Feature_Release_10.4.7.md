@@ -158,10 +158,10 @@ From now on, SLLogCollector packages will also include the *nslookup* output for
 
 From now on, SLLogCollector packages will also include the contents of the following folders:
 
-- *C:\\Skyline DataMiner\\Logging\\GQI*
-- *C:\\Skyline DataMiner\\Logging\\GQI\\Ad hoc data sources*
-- *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
-- *C:\\Skyline DataMiner\\Logging\\Web*
+- `C:\Skyline DataMiner\Logging\GQI`
+- `C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources`
+- `C:\Skyline DataMiner\Logging\GQI\Custom operators`
+- `C:\Skyline DataMiner\Logging\Web`
 
 #### SLAnalytics: Enhanced alarm template monitoring [ID 39561]
 
