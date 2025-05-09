@@ -40,12 +40,22 @@ The SLNet message `EditConnection`, which can be used to edit a connection from 
 
 #### BrokerGateway will now reconfigure the NATS cluster before a DMA is added to or removed from the DMS [ID 42494]
 
-<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+<!-- MR 10.6.0 - FR 10.5.7 -->
 
 From now on, when BrokerGateway detects that a DataMiner Agent is about to be added to or removed from a DataMiner System, it will reconfigure the NATS cluster before the DataMiner Agent is actually added or removed.
 
+Similarly, when BrokerGateway detects that a DataMiner Agent is about to be added to a Failover setup, it will reconfigure the NATS cluster before the DataMiner Agent is actually added.
+
 > [!NOTE]
 > When BrokerGateway fails to reconfigure the NATS cluster, the DataMiner Agent will not be added or removed.
+
+#### New connector installed as part of an application package will now automatically be set as production version [ID 42623]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+When a new connector is installed for the first time on a DMS as part of an application package, from now on, it will automatically be set as production version.
+
+Also, when, in DataMiner Cube, the current production version of a connector was set as production again, up to now, the alarm and trend templates of that connector would incorrectly not be copied to the production version when you clicked *Yes* in the *Copy templates?* dialog box.
 
 #### DataMiner upgrade: ModuleInstaller upgrade action timeout has been increased to 30 minutes [ID 42659]
 
