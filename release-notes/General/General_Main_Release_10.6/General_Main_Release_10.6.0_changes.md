@@ -345,6 +345,14 @@ When, in the *Scheduler* app, a dashboard was exported via an email action, up t
 
 When a trend graph seemed to increase or decrease, in some cases, change points could incorrectly be labeled as a level shift.
 
+#### Credentials Library: Problem with duplicate sets of credentials [ID 42248]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In the DataMiner Cube Credentials Library, you can add and manage sets of predefined credentials.
+
+Because of an issue in SLNet, up to now, it would incorrectly be possible to have duplicate sets of credentials in the Credentials Library. From now on, this will be prevented.
+
 #### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
