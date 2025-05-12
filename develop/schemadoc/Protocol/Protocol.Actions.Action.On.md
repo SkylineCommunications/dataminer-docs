@@ -30,7 +30,7 @@ The following table gives an overview of the actions that can be used with the d
 
 |On|Action|
 |--- |--- |
-|command|crc, length, make, read, replace, replace data, stuffing|
+|command|crc, length, make, replace, replace data, stuffing|
 |group|add to execute, execute, execute next, execute one, execute one top, execute one now, force execute, set|
 |pair| set next, timeout|
 |parameter| aggregate, append, append data, change length, clear, clear on display, copy, copy reverse, go, increment, multiply, normalize, pow, read, replace data, reverse, run actions, save, set, set and get with wait, set info, set with wait|
