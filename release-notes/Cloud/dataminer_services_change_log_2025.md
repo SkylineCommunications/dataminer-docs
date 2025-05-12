@@ -9,9 +9,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 12 May 2025 - Enhancement - Local sign-on fallback [ID 42918]
+### 12 May 2025 - Fix - share management - Local sign-on fallback [ID 42918]
 
-When experiencing issues with the shared single sign-on, applications will now fall back to a local sign-on.
+You are now able to log in to share management, even if shared login is not supported by your browser.
 
 ### 12 May 2025 - Fix - Catalog - renaming market to element type [ID 42917]
 
