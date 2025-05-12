@@ -2,7 +2,7 @@
 uid: KI_user_locked_out_after_single_failed_attempt
 ---
 
-# User locked out after single login attempt
+# User locked out after single failed login attempt
 
 ## Affected versions
 
