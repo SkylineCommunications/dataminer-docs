@@ -12,4 +12,6 @@ DataMiner open monitoring and orchestration software is a transformational platf
 - [Perpetual-Use Licensing](xref:Pricing_Perpetual_Use_Licensing)
 
 > [!TIP]
-> See also: [Questions related to pricing of usage-based services](xref:FAQs_Pricing)
+> See also:
+> - [Questions related to pricing of usage-based services](xref:FAQs_Pricing)
+> - Article on DataMiner Dojo about [usage-based pricing](https://community.dataminer.services/usage-based-pricing/).
