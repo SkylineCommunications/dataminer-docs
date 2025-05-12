@@ -53,7 +53,7 @@ Addresses: 10.11.5.52
 
 > [!IMPORTANT]
 >
-> - If your system has been configured to use HTTPS, make sure that the virtual IP addresses or shared hostname are configured in **HTTPS tag** of [MaintenanceSettings.xml](xref:MaintenanceSettings_xml) and also have **signed certificates**. For more information, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+> - If your system has been configured to use HTTPS, make sure that the virtual IP addresses or shared hostname are configured in **HTTPS tag** of [MaintenanceSettings.xml](xref:MaintenanceSettings_xml#https) and also have **signed certificates**. For more information, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 >
 >   As the setup of the certificates can be highly situational, for example in case proxies are involved, check with your IT services if you are not sure how to generate and deploy TLS/SSL certificates.
 >
