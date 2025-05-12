@@ -23,7 +23,7 @@ The value is the decimal representation of a hexadecimal bit flag combination. T
 |0x000     |None         |Indicates that no options are set.         |
 |0x008     |DebugMode         |If this flag is present, comment type statements will be logged as information events. (Equivalent to a comment with "debug=true" as first script statement.)         |
 |0x010     |AllowUndef         |Allows GetParameter to return `null` when parameter value is undefined.         |
-|0x020     |RequireInteractive         |If present, the script can only be executed in interactive mode.         |
+|0x020     |RequireInteractive         |If present, the script can only be executed in interactive mode. This option is automatically set by DataMiner if the script contains engine.ShowUI, engine.RunClientProgram or engine.ShowProgress, but does not contain engine.FindInteractiveClient or engine.IsInteractive.          |
 |0x040     |SupportsBackForward         |If present, interactive portions in the script can be controlled by back/forward buttons.         |
 |0x080     |SkipElementChecks         |If present, parameter sets on elements will not be checked. (Equivalent to comment with "skipElementChecks == true".)         |
 |0x100     |SavedFromCube         |`true` if script was saved from Cube.        |
