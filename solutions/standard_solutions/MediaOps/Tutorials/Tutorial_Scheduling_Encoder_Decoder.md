@@ -96,7 +96,7 @@ Let's add another resource to our job, a `Decoder` this time.
     ![Add Resource Pool](~/solutions/images/Scheduling_Create_Job_Add_Resource_Pool.png)
 
     > [!TIP]  
-    > If you get an error in this step, make sure that you selected the resource before clicking `Add After` in the previous step.
+    > If you get an error in this step, make sure that you have **selected** the resource node in the previous step.
 
 1. Resource pool should now be added to our job.
 
