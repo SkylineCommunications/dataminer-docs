@@ -268,6 +268,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: User locked out after single login attempt
+            topicUid: KI_user_locked_out_after_single_failed_attempt
           - name: Local user not pushed to Windows
             topicUid: KI_Local_user_not_pushed_to_windows
           - name: Unable to open trended parameter cards via Cube advanced search
