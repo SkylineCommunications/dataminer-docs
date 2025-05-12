@@ -4,6 +4,14 @@ uid: Installing_and_configuring_DataMiner_Integration_Studio
 
 # Installing and configuring DataMiner Integration Studio
 
+## Downloads
+To download the current version from Visual Studio Marketplace, click [here](https://marketplace.visualstudio.com/items?itemName=skyline-communications.DataMinerIntegrationStudio).
+
+> [!NOTE]
+> See also:
+> - [All DIS versions](https://community.dataminer.services/dataminer-integration-studio-other-downloads/): Current version and all versions supporting Visual Studio 2019 or older
+> - [Class Library Packages](https://community.dataminer.services/class-library-packages/)
+
 ## Installing the DataMiner Integration Studio extension
 
 To install DataMiner Integration Studio in Visual Studio, go to *Extensions* > *Manage Extensions...* to open the *Manage Extensions* dialog box.
