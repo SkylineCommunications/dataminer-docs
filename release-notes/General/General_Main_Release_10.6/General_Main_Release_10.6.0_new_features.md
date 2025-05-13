@@ -561,6 +561,12 @@ If multiple settings indicate that the element should be running in isolation mo
 > - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
 > - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
 
+#### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
+
 #### New NotifyProtocol call NT_CLEAR_PARAMETER [ID 42397]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
