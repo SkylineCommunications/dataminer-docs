@@ -4,19 +4,21 @@ uid: MO_Workflow_Designer
 
 # Workflow Designer
 
-The workflow designer app allows you to manage and configure _workflows_ in a visual and user friendly way. A workflow defines what resources and resource pools are needed for an operation and how they are interconnected. Workflows can be used as templates for Jobs in the [Scheduling app](xref:MO_Scheduling).
+The workflow designer app allows you to visually manage and configure [workflows](#workflows), which can be used as templates for jobs in the [Scheduling app](xref:MO_Scheduling).
 
 ![Example workflow](~/solutions/images/WFD_Example_WF.png)
 
-The main features of the app:
+## App overview 
 
-- Manage workflows by defining which workflows are currently available (the ones in the `Complete` state) for job creation.
+The following pages are available in the Workflow Designer app:
 
-- Specify the resources required for the workflow and how they are linked to each other.
+- ![Home](~/user-guide/images/WD_Home.png) **Home**: From the Home View page you can keep track of all Workflows in the system. From this page, users can **create new Workflows**, and **duplicate**, **update**, or **delete** the existing ones. Here you can also **specify the resources** required for the workflow and how they are linked to each other, as well as provide **default configuration** settings for resources.
 
-- Provide default configuration settings for certain resources (e.g. required capacities).
+- ![About](~/user-guide/images/WD_About.png) **About**: The About page provides information on the **version** of the `MediaOps` package.
 
-- Define a custom workflow execution script.
+## Workflows
+
+A workflow defines what resources and resource pools are needed for an operation, and how they are interconnected. This is useful if you have a repeating set of resources you want to reuse in multiple jobs, or over a period of time. For example, if a certain set of resources is always required when organizing live broadcast events, you can group these into a "Live Broadcast" workflow and use it whenever you want to send out a crew for a live broadcast operation. Workflow designer allows you to also use resource pools in your workflows, enabling you to specify which types of resources you need in your workflows, without the need to specify the exact resources up-front.
 
 More details on creating workflows can be found [here](xref:WFD_Creating_Workflows).
 
