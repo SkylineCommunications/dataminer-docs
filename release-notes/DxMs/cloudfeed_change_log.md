@@ -4,6 +4,12 @@ uid: cloudfeed_change_log
 
 # Cloud Feed change log
 
+#### 12 May 2025 - Enhancement - CloudFeed 1.4.5 - Enhanced performance when upgrading CloudFeed DxM [ID 42814]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when upgrading the CloudFeed DxM.
+
 #### 2 April 2025 - Fix - CloudFeed 1.4.4 - Problem during startup caused by inability to contact CloudGateway [ID 42599]
 
 <!-- MR 10.5.0 [CU3] - FR 10.5.6 -->
