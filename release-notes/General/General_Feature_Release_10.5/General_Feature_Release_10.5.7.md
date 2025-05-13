@@ -76,7 +76,7 @@ A `Hash` property has now been added to the `GetScriptInfoResponseMessage`. This
 > [!NOTE]
 > Author will not be included in the hash value as changing the author would result in a different value being calculated.
 
-All hash values of all Automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoResponseMessage` was called.
+All hash values of all Automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
 
 Format of an AutomationScriptHashInfo object: `Script Name;LastUpdate;Calculated hash`
 
