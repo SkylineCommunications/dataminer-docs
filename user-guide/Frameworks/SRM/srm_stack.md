@@ -18,7 +18,7 @@ The Scheduler timeline can be visualized [in Visual Overview](xref:Embedding_a_R
 
 To prevent alarm fatigue in operation teams, you can also apply **schedule-aware monitoring**. Alarm template configurations can be included in various [Profile-Load Scripts (PLS)](xref:srm_scripting#profile-load-script-pls) and/or [Life cycle Service Orchestration (LSO)](xref:srm_scripting#life-cycle-service-orchestration-lso-script) scripts. This way, when a profile is loaded on a resource based on the schedule, an alarm template can be loaded that only monitors the health status of the resource. Similarly, on service life cycle orchestration level, a switch to a different LSO state can go hand in hand with updated alarm monitoring.
 
-The scheduling engine supports a wide range of possibilities. Bookings can be permanent, scheduled to happen just once, or made to recur. DataMiner SRM supports a variety of LSO state transitions, including pre- and post-roll LSO state changes, as well as booking events. This allows you to streamline even the most complex event schedules.
+The scheduling engine supports a wide range of possibilities. Bookings scheduled to happen just once, or they can be made permanent. DataMiner SRM supports a variety of LSO state transitions, including pre- and post-roll LSO state changes, as well as booking events. This allows you to streamline even the most complex event schedules.
 
 ## Resource Manager
 
