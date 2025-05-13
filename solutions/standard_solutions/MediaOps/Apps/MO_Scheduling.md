@@ -48,6 +48,6 @@ For more details on how to create and manage resources, please check out the [Re
 
 ## Workflows
 
-If you have a repeating groups of resources you would like to reuse in your jobs, you can organize and manage them with **MediaOps Workflows**. For example, if you have a constant set of resources required when organizing live broadcast events, you can group these into a **Workflow** and use them whenever you want to send out a crew out for a live broadcast operation.
+If you have a repeating group of resources you would like to reuse in your jobs, you can turn it into a **MediaOps Workflow** with the **Workflow Designer** app. For example, if a constant set of resources is required when organizing live broadcast events, you can group these into a **Workflow** and use them whenever you want to send out a crew out for a live broadcast operation.
 
 For more details on how to create and manage workflows, please check out the [Workflow Designer Documentation](ref:MO_Workflow_Designer).
