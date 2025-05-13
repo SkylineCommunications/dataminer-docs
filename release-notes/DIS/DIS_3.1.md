@@ -10,7 +10,7 @@ uid: DIS_3.1
 
 #### IDE
 
-##### Updated XML Schemas and Validator dependencies [ID 42906]
+##### Updated XMLSchemas and Validators dependencies [ID 42906]
 
 DIS now uses:
 
