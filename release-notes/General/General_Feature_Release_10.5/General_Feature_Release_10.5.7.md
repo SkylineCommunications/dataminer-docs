@@ -34,6 +34,54 @@ uid: General_Feature_Release_10.5.7
 
 In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
 
+#### Automation: Hash property of GetScriptInfoResponseMessage now contains a hash value of the script [ID 42616]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+A `Hash` property has now been added to the `GetScriptInfoResponseMessage`. This property will contain a calculated hash value of the script based on the following script data:
+
+- Name
+- Description
+- Type
+- Script options:
+
+  - Options included in the hash value calculation:
+  
+    - DebugMode
+    - SkipElementChecks
+    - SkipInfoEventsSet
+    - SupportsBackAndForward
+    - AllowUndef
+    - WebCompliant (see soft-launch option [UseWebIAS](xref:Overview_of_Soft_Launch_Options#usewebias))
+
+  - Options not included in the hash value calculation:
+
+    - None
+    - RequireInteractive
+    - SavedFromCube
+    - HasFindInteractiveClient
+
+  > [!NOTE]
+  > For more information on the different script options, see [options attribute](xref:DMSScript-options).
+
+- CheckSets
+- Protocols
+- Memories
+- Parameters
+- Executables
+
+  > [!NOTE]
+  > Executable code will be trimmed. All empty lines before and after the code will be removed.
+
+> [!NOTE]
+> Author will not be included in the hash value as changing the author would result in a different value being calculated.
+
+All hash values of all Automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoResponseMessage` was called.
+
+Format of an AutomationScriptHashInfo object: `Script Name;LastUpdate;Calculated hash`
+
+Example: `Automation script;638786700548555379;48bcb02e89875979c680d936ec19ad5e9697f7ed73498fd061aecb73e7097497`
+
 #### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
