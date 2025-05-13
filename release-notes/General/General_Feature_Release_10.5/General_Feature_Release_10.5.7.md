@@ -95,13 +95,11 @@ For example, the BPA test is now also able to run on the offline agent of a Fail
 
 ### Fixes
 
-#### Credentials Library: Problem with duplicate sets of credentials [ID 42248]
+#### Credentials Library: Problem when the same group was added more than once in the UpdateLibraryCredentialMessage [ID 42248]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
-In the DataMiner Cube Credentials Library, you can add and manage sets of predefined credentials.
-
-Because of an issue in SLNet, up to now, it would incorrectly be possible to have duplicate sets of credentials in the Credentials Library. From now on, this will be prevented.
+Because of an issue in SLNet, up to now, if the same group would be added more than once in the `UpdateLibraryCredentialMessage` (i.e. the SLNet message used to add or update credentials), duplicated `Group` tags would end up in the *Library.xml* file. As a result, in DataMiner Cube, the updated credential would get stuck, showing a "[modified]" tag.
 
 #### Not all DCF interfaces would be listed in the Connectivity tab of an element's Properties window [ID 42591]
 
