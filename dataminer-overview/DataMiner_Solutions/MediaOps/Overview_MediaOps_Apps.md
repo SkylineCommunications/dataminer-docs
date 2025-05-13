@@ -79,7 +79,7 @@ The workflow designer is an operator-level DevOps environment to create technica
 
 Additionally, a workflow describes:
 
-- How the nodes in the workflow need to be connected by [Flow Engineering](#flow-engineering).
+- How the nodes in the workflow need to be connected by Flow Engineering.
 - What automation is run as part of the workflow execution.
 - Whether or not resources and capacity are reserved.
 - If and how the service needs to be monitored.
