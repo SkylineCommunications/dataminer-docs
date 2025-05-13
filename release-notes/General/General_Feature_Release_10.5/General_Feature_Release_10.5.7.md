@@ -146,3 +146,9 @@ Also, when the service that failed to load is deleted, an attempt will be made t
 <!-- Not added to MR 10.6.0 -->
 
 In some cases, after an element had been swarmed, active clients would not receive an updated `ElementInfoEventMessage`, causing them to display the element as if it was still hosted on the source agent.
+
+#### Problem when the element.xml file of an SNMPv3 element that used a credential library did not contain a base-16 community string [ID 42805]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, a `GetElementMessage` call would throw an exception when the *element.xml* file of an SNMPv3 element that used a credential library did not contain a base-16 community string. From now on, it will return an empty string instead.
