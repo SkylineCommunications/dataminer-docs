@@ -8,9 +8,9 @@ The DataMiner Web Support Assistant is a **Chrome extension** designed to assist
 
 ## Installing the extension
 
-To add the DataMiner Web Support Assistant extension to your Google Chrome browser:
+To add the DataMiner Web Support Assistant extension to your Chromium browser:
 
-1. Open [this link](https://chromewebstore.google.com/detail/dataminer-web-support-ass/nofmcbgpolhjblmafpfbffjnganhapge) and click *Add to Chrome*.
+1. Open [this link](https://chromewebstore.google.com/detail/dataminer-web-support-ass/nofmcbgpolhjblmafpfbffjnganhapge) and click *Download*.
 
 1. If a confirmation box appears, click *Add extension*.
 
@@ -22,7 +22,7 @@ To add the DataMiner Web Support Assistant extension to your Google Chrome brows
 
    While this step is optional, we highly recommend it as it will make the extension icon visible in the browser header bar, making it easier to create a recording later.
 
-1. Before you use the extension for the first time, **refresh the tab** you want to record or restart your Chrome browser.
+1. Before you use the extension for the first time, **refresh the tab** you want to record or restart your browser.
 
 ## Creating a recording
 
