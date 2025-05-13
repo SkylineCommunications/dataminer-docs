@@ -71,6 +71,13 @@ Up to now, the ModuleInstaller upgrade action would time out after 15 minutes. A
 
 From now on, the ModuleInstaller upgrade action will only time out after 30 minutes.
 
+#### Swarming: Enhanced error handling [ID 42667]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+<!-- Not added to MR 10.6.0 -->
+
+Because of a number of enhancements, error handling has improved when swarming elements from one DataMiner Agent to another.
+
 #### Visual Overview in the web apps: Enhanced behavior in case of a failing visual overview request [ID 42677]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
