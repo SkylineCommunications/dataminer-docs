@@ -18,7 +18,16 @@ uid: Cube_Feature_Release_10.5.7
 
 ## New features
 
-*No new features have been added yet.*
+#### Cube search box now supports fuzzy matching [ID 42911]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+The search box in the middle of the Cube header bar now supports fuzzy matching.
+
+Search results will now account for diacritic similarities within the same alphabet (e.g. "é" with will match "e"). However, transliteration is not supported. Typos or substitutions with the closest corresponding letters (e.g. "ø" vs. "o" or "graphic" vs. "grafic") will not yield any results.
+
+> [!NOTE]
+> For Japanese characters to be processed properly, your Windows system needs to support Japanese text rendering.
 
 ## Changes
 
