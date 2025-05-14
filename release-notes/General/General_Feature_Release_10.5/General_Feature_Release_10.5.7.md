@@ -238,6 +238,19 @@ In some cases, after an element had been swarmed, active clients would not recei
 
 Up to now, a `GetElementMessage` call would throw an exception when the *element.xml* file of an SNMPv3 element that used a credential library did not contain a base-16 community string. From now on, it will return an empty string instead.
 
+#### SLAnalytics: Problem when an element of which a parameter was part of a RAD parameter group was swarmed [ID 42879]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element of which a parameter was part of a RAD parameter group was swarmed, SLAnalytics would incorrectly send a `PagedDataRequest` to retrieve RAD data from the *MadModelRecord* customdata table, causing SLNet to throw a NullReference exception.
+
+From now on, when an element of which a parameter is part of a RAD parameter group is swarmed, SLAnalytics will no longer send a `PagedDataRequest`. Instead, it will log an error message.
+
+> [!IMPORTANT]
+> Until further notice, when an element of which a parameter is part of a RAD parameter group was swarmed, RAD monitoring will no longer be active for the parameter group in question.
+> If you want RAD monitoring to stay active for the parameter group in question, then you will have to either adapt the configuration of the parameter group or undo the element swarming.
+
 #### SLSNMPManager process responsible for SNMPv3 communication could disappear when it was not able to redirect a trap [ID 42888]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
