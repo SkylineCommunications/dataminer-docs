@@ -17,8 +17,8 @@ Expected duration: 15 minutes
 ## Prerequisites
 
 - A DataMiner System using DataMiner 10.5.5 or higher.
-- Access to the **Resource Studio** application.
-- Having some reasources ready to be assigned to jobs. You can find out how to create those in the [Resource Studio tutorial](xref:Tutorial_MediaOps_Resource_Studio_Intro).
+- Access to the **Scheduling** application.
+- Ideally you should have completed the [Resource Studio tutorial](xref:Tutorial_MediaOps_Resource_Studio_Intro), since we're going to make use of the resources from that tutorial here.
 
 ## Overview
 
@@ -35,7 +35,7 @@ Expected duration: 15 minutes
 
     ![NewJob Button Placement](~/solutions/images/Scheduling_New_Job_Button_Placement.png)
 
-1. Give the job a name of your choice and `Create` it. Optionally, delay the job `Start Time` and `End Time` for several hours to give the job some time before it starts.
+1. Give the job a name of your choice and `Create` it. Ideally, delay the job `Start Time` and `End Time` for several hours to give the job some time before it starts.
 
     ![Create Job Panel](~/solutions/images/Scheduling_Create_Job_Panel.png)
 
@@ -48,7 +48,7 @@ Expected duration: 15 minutes
 
 ## Step 2: Add resources to the job
 
-Let's try and add some resources to our newly created job.
+Let's add some resources to our newly created job.
 
 1. Open the `Edit job` panel.
 
@@ -65,7 +65,7 @@ Let's try and add some resources to our newly created job.
 1. Close the panel and make sure that you see your resource in the node-edge graph.
 
     > [!NOTE]  
-    > Depending on the Scheduling app **version**, you might need to hit the **refresh** button to see the newly added resource.
+    > If you don't see the newly created resource, you might need to hit the **Workflow refresh** button in the upper right corner of the `Workflow` section.
 
     ![Check out the newly added resource](~/solutions/images/Scheduling_Workflow_Resource_Added.png)
 
@@ -91,7 +91,7 @@ Let's add another resource to our job, a `Decoder` this time.
 
     ![Add After](~/solutions/images/Scheduling_Create_Job_Add_After.png)
 
-1. Select the **Decoder** pool. But there's no any resources available to add to our job. Worry not! We will take care of that. For now, to declare that we need a `Decoder` resource in our job, `Add Resource Pool` as a whole to the job.
+1. Select the **Decoder** pool. But there's no any resources available to add to our job. Worry not! We will take care of that later. For now, to declare that we need a `Decoder` resource in our job, click `Add Resource Pool`.
 
     ![Add Resource Pool](~/solutions/images/Scheduling_Create_Job_Add_Resource_Pool.png)
 
