@@ -14,7 +14,7 @@ uid: Cube_Feature_Release_10.5.7
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Cube search box now supports fuzzy matching [ID 42911]](#cube-search-box-now-supports-fuzzy-matching-id-42911)
 
 ## New features
 
