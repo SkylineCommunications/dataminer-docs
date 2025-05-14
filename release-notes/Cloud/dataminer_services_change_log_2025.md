@@ -9,6 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 14 May 2025 - Fix - Invalid token after silent renew
+
+When a user session is silently renewed, will now save the renewed session correctly and broadcast it to the other applications.
+
+### 14 May 2025 - Fix - Admin - DxM updates giving false positives
+
+DxM versions are now compared with the available versions.
+If the installed version is higher or the same, it will no longer be taken into account for the 'X updates available'.
+
 ### 12 May 2025 - Fix - Share Management - Problem logging in if shared login is not supported [ID 42918]
 
 If shared login was not supported by the browser, it could occur that logging in to Share Management was not possible.
