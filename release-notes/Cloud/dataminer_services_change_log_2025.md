@@ -13,9 +13,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 If shared login was not supported by the browser, it could occur that logging in to Share Management was not possible.
 
-### 12 May 2025 - Fix - Catalog - renaming market to element type [ID 42917]
+### 12 May 2025 - Fix - Catalog - renaming market to element type on the detail page [ID 42917]
 
-Renaming market to element type on catalog detail page.
+Renaming market label on the catalog detail page in the sidebar to element type so that the value is correctly represented.
 
 ### 08 May 2025 - Enhancement - Local sign-on fallback  [ID 42883]
 
