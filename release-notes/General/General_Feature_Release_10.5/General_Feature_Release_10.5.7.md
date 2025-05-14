@@ -168,6 +168,12 @@ A number of enhancements have been made to the *Security Advisory* BPA test.
 
 For example, the BPA test is now also able to run on the offline agent of a Failover setup.
 
+#### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded.
+
 ### Fixes
 
 #### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]

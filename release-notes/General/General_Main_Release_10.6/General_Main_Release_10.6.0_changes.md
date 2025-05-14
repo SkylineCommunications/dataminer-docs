@@ -306,6 +306,12 @@ A number of enhancements have been made to the *ModuleSettings* window.
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
