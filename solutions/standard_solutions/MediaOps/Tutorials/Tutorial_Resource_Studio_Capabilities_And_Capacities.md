@@ -25,7 +25,7 @@ Expected duration: 15 minutes
 - [Step 1: Create new resource pool](#step-1-create-new-resource-pool)
 - [Step 2: Creating the capability](#step-2-creating-the-capability)
 - [Step 3: Assigning capabilities to resources](#step-3-assigning-capabilities-to-resources)
-- [Step 4: Add resources to the pools](#step-4-add-resources-to-the-pools)
+- [Step 4: Assign resources to the pool](#step-4-assign-resources-to-the-pool)
 - [Step 5: Define parameter on the resource pool](#step-5-define-parameter-on-the-resource-pool)
 
 ## Step 1: Create new resource pool
