@@ -43,16 +43,16 @@ items:
           topicUid: PO_Managing_Organizations
       - name: Tutorials
         items: 
-        - name: Getting started with the Resource Studio
+        - name: Resource Studio Intro
           topicUid: Tutorial_MediaOps_Resource_Studio_Intro
-        - name: Resource Studio Capabilities & Capacities
-          topicUid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
         - name: Scheduling Intro
           topicUid: Tutorial_MediaOps_Scheduling_Encoder_Decoder
-        - name: Scheduling Jobs With Configurations
-          topicUid: Tutorial_MediaOps_Scheduling_Configurations
         - name: People & Organizations Intro
           topicUid: Tutorial_MediaOps_People_and_Organizations_Intro
+        - name: "Resource Studio: Using Capabilities & Capacities"
+          topicUid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
+        - name: "Scheduling: Using Capabilities & Capacities with Configurations"
+          topicUid: Tutorial_MediaOps_Scheduling_Configurations
     - name: DataMiner PTP
       topicUid: SolPTP
       items:
