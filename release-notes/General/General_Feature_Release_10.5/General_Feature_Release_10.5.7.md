@@ -188,6 +188,12 @@ Because of an issue in SLNet, up to now, if the same group would be added more t
 
 When, in e.g. DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
 
+#### Alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service [ID 42724]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
+
 #### LDAP users added as part of an LDAP user group would incorrectly appear as local users instead of domain users [ID 42743]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->

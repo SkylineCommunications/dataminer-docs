@@ -367,3 +367,9 @@ In systems with many trended parameters, an SLNet memory leak could occur whenev
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
 At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
+
+#### Alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service [ID 42724]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
