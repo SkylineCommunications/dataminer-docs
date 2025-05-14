@@ -78,7 +78,7 @@ There are two main categories of connector licenses, i.e. Product and System Con
 
 DataMiner Service and Resource Management (SRM) enables a suite of tools useful for resource and service orchestration use cases.
 
-This product is licensed per DataMiner System, based on the maximum number of concurrent services running in the system at any point in time (with "services" in this case referring to "ReservationInstance" or "booking" objects in DataMiner). Capacity licenses are available for 1, 10, 50, 100, 500, and 1000 simultaneous services.
+This product is licensed per DataMiner System, based on the maximum number of concurrent services running in the system at any point in time. "Services" in this case refers to resource and service orchestration bookings. Capacity licenses are available for 1, 10, 50, 100, 500, and 1000 simultaneous services.
 
 > [!NOTE]
 > Not sure if your orchestration use case requires SRM licenses? Consult the [Service & Resource Management](https://community.dataminer.services/service-resource-management/) page on DataMiner Dojo.
