@@ -10,7 +10,7 @@ The DataMiner Web Support Assistant is a **Chrome extension** designed to assist
 
 To add the DataMiner Web Support Assistant extension to your Chromium browser:
 
-1. Open [this link](https://chromewebstore.google.com/detail/dataminer-web-support-ass/nofmcbgpolhjblmafpfbffjnganhapge) and click *Download*.
+1. Open [this link](https://chromewebstore.google.com/detail/dataminer-web-support-ass/nofmcbgpolhjblmafpfbffjnganhapge) and click the button to deploy the extension.
 
 1. If a confirmation box appears, click *Add extension*.
 
