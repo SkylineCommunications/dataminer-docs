@@ -4,7 +4,7 @@ uid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
 
 # Using capabilities and capacities in resource studio
 
-In this tutorial, you will learn how to model real devices in the Resource Studio app, making use of `Capabilities` and `Capacities` -- MediaOps concepts introduced in the [Resource Studio documentation](xref:MO_Resource_Studio). In particular, we will be modelling a **converter** device which is capable of doing a conversion between [SDI](https://en.wikipedia.org/wiki/Serial_digital_interface) and [IP](https://en.wikipedia.org/wiki/Internet_Protocol). The type of conversion will be modelled with **Resource Capabilities** having discrete values which represent these two types of conversion.
+In this tutorial, you will learn how to model real devices in the Resource Studio app, making use of `Capabilities` and `Capacities` — MediaOps concepts introduced in the [Resource Studio documentation](xref:MO_Resource_Studio). In particular, we will be modelling a **Converter** device which is capable of doing a conversion between [SDI](https://en.wikipedia.org/wiki/Serial_digital_interface) and [IP](https://en.wikipedia.org/wiki/Internet_Protocol). The type of conversion will be modelled with **Resource Capabilities**, which will have discrete values to represent these two types of conversion.
 
 Expected duration: 15 minutes
 
@@ -19,7 +19,6 @@ Expected duration: 15 minutes
 - A DataMiner System using DataMiner `10.5.4` or higher.
 - Access to the **Resource Studio** application.
 - Understading of the basic Resource Studio concepts, explained in the [Resource Studio Intro Tutorial](xref:Tutorial_MediaOps_Resource_Studio_Intro).
-- Understanding of the basic Scheduling app concepts, explained in the [Scheduling Intro Tutorial](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder)
 
 ## Overview
 
@@ -87,11 +86,11 @@ In this step, we will be adding capabilities to the resources we created in the 
 
 1. Click ``Apply``.
 
-1. Repeat the steps to add both ``SDI to IP`` and ``IP to SDA`` capability discretes to the "**NewTek 001**" resource.
+1. Repeat the steps to add both ``SDI to IP`` and ``IP to SDA`` capability discretes to the **NewTek 001** resource.
  
-## Step 4: Add resources to the pools
+## Step 4: Assign resources to the pool
 
-1. Add both **Video Solution 001** and **NewTek 001** resources to the **Converter** resource pool.
+1. Assign both **Video Solution 001** and **NewTek 001** resources to the **Converter** resource pool.
 
 ## Step 5: Define parameter on the resource pool
 
