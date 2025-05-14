@@ -53,6 +53,8 @@ items:
           topicUid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
         - name: "Scheduling: Using Capabilities & Capacities with Configurations"
           topicUid: Tutorial_MediaOps_Scheduling_Configurations
+        - name: Workflow Designer Intro
+          topicUid: Tutorial_MediaOps_Workflow_Designer_Intro
     - name: DataMiner PTP
       topicUid: SolPTP
       items:
