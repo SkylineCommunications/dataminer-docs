@@ -162,6 +162,12 @@ For example, the BPA test is now also able to run on the offline agent of a Fail
 
 ### Fixes
 
+#### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+In some cases, the SLNet process could leak memory when the *progress.log* file was deleted after a DataMiner upgrade had been performed.
+
 #### Credentials Library: Problem when the same group was added more than once in the UpdateLibraryCredentialMessage [ID 42248]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
