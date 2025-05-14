@@ -94,3 +94,11 @@ When a service was created, in some cases, loading that new service would fail, 
 From now on, when a new service fails to load, additional logging will be added, and a backup *service.xml* file will be created in the `C:\Skyline DataMiner\Recycle Bin\` folder for debugging purposes.
 
 Also, when the service that failed to load is deleted, an attempt will be made to delete the files and folders associated with that service in order to prevent any subsequent issues when creating a new service with an identical name.
+
+#### SLSNMPManager process responsible for SNMPv3 communication could disappear when it was not able to redirect a trap [ID 42888]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+By default, an SLSNMPManager process responsible for SNMPv3 communication will listen for any incoming traps, and will forward, for example, SNMPv2 traps to the SLSNMPManager process responsible for SNMPv2 communication.
+
+Up to now, when an SLSNMPManager process responsible for SNMPv3 communication was not able to communicate with the SLSNMPManager process to which it had to redirect a trap, in some cases, the process could stop working and disappear.

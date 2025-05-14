@@ -217,3 +217,11 @@ In some cases, after an element had been swarmed, active clients would not recei
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, a `GetElementMessage` call would throw an exception when the *element.xml* file of an SNMPv3 element that used a credential library did not contain a base-16 community string. From now on, it will return an empty string instead.
+
+#### SLSNMPManager process responsible for SNMPv3 communication could disappear when it was not able to redirect a trap [ID 42888]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+By default, an SLSNMPManager process responsible for SNMPv3 communication will listen for any incoming traps, and will forward, for example, SNMPv2 traps to the SLSNMPManager process responsible for SNMPv2 communication.
+
+Up to now, when an SLSNMPManager process responsible for SNMPv3 communication was not able to communicate with the SLSNMPManager process to which it had to redirect a trap, in some cases, the process could stop working and disappear.
