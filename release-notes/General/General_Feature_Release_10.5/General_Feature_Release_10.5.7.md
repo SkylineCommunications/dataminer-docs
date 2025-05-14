@@ -103,6 +103,14 @@ Similarly, when BrokerGateway detects that a DataMiner Agent is about to be adde
 > [!NOTE]
 > When BrokerGateway fails to reconfigure the NATS cluster, the DataMiner Agent will not be added or removed.
 
+#### GQI: 'Get object manager instances' data source now supports real-time updates [ID 42530]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+On systems using the GQI DxM, the *Get object manager instances* data source now supports real-time updates.
+
+For more information on real-time updates, see [Query updates](xref:Query_updates).
+
 #### New connector installed as part of an application package will now automatically be set as production version [ID 42623]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
