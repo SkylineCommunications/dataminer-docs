@@ -8,6 +8,23 @@ The Resource Studio app helps you create and manage bookable resources efficient
 
 ![Resource Studio Overview](~/solutions/images/Resource_Studio_Overview.png)
 
+## App overview 
+The following pages are available in the app:
+
+- [*Resource Pools*](#resource-pools)
+- [*Resources*](#resources)
+- [*Capability Management*](#capability-management)
+- [*Search Jobs*](#search-jobs)
+- [*Apps configuration*](#apps-configuration)
+- [*About*](#about)
+
+
+## Resource Pools
+
+A _resource pool_ can be created to group a set of **interchangeable resources**. This allows users who utilize resources in other apps to refer to a pool instead of a specific resource, which allows _deferring_ resource selection until it's actually needed, rather than at booking creation.
+
+Resources can be added to multiple pools, making them eligible for multiple purposes while keeping a single availability timeline and preventing resource conflicts.
+
 ## Resources
 
 The Resource Studio app allows you to create and manage resources. A resource can represent anything that involves managed use over time. Examples of things a resource can represent include:
@@ -19,12 +36,6 @@ The Resource Studio app allows you to create and manage resources. A resource ca
 - Anything with limited availability that is not managed by DataMiner, such as **rooms**, **people**, **vehicles**, **satellite transponder slots**, **IP addresses**, etc.
 
 Each resource has a _concurrency_ setting, which defines how many bookings of the resource can be made at the same time. By default, this is set to **1**. 
-
-## Resource Pools
-
-A _resource pool_ can be created to group a set of **interchangeable resources**. This allows users who utilize resources in other apps to refer to a pool instead of a specific resource, which allows _deferring_ resource selection until it's actually needed, rather than at booking creation.
-
-Resources can be added to multiple pools, making them eligible for multiple purposes while keeping a single availability timeline and preventing resource conflicts.
 
 ## Capability Management
 
