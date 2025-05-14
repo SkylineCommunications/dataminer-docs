@@ -91,11 +91,11 @@ Expected duration: 15 minutes
 
 1. Navigate to the `Nodes` section of the `Edit` panel of the job.
 
-1. Notice that both of the resources pools have a red hand symbol in the `Resource Select Column`, which means that we still have to pick concrete resources for them.
+1. Notice that both of the resources pools have a red hand symbol in the `Resource Select Column`, which means that we still have to pick actual resources for them.
 
 1. For both resources, click the `Red hand icon`.
 
-1. For the first resource pool, choose the `Video Solutions 001` resource. For the second one, chose `NewTek 001`.
+1. For the first resource pool, choose the `Video Solutions 001` resource. For the second one, choose `NewTek 001`.
 
    ![Pick Resource](~/solutions/images/Scheduling_Pick_Resource.png)
    
@@ -110,4 +110,4 @@ Expected duration: 15 minutes
 
 1. Click on `Confirm Job` button.
 
-🎉 Congratulations, you have successfully scheduled a job! 🎉
+🎉 Congratulations, you have successfully scheduled a job with the use of configurations! 🎉
