@@ -16,6 +16,14 @@ Expected duration: 15 minutes
 - A DataMiner System using DataMiner `10.5.4` or higher.
 - Access to the **People & Organizations** application.
 
+## Overview
+
+- [Step 1: Create a new organization](#step-1-create-a-new-organization)
+- [Step 2: Create a new contact](#step-2-create-a-new-contact)
+- [Step 3: Create a new team](#step-3-create-a-new-team)
+- [Step 4: Add members to a team](#step-4-add-members-to-a-team)
+- [Step 5: Make a team bookable](#step-5-make-a-team-bookable)
+
 ## Step 1: Create a new organization
 
 1. Navigate to the `People & Organizations` app.
