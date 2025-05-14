@@ -54,8 +54,6 @@ Expected duration: 15 minutes
 
 1. Navigate to the `Teams` page.
 
-1. In the upper right corner of the page, click the New Team button. 
-
 1. On the top right, click `+ New team`.
 
 1. Enter the `Team name` you want to give to your team.
