@@ -57,8 +57,6 @@ This is an example of a *MaintenanceSettings.xml* file:
   <Trending>
     <EDCurves></EDCurves>
     <SDCurves></SDCurves>
-    <!-- CAUTION: SLDataGateway crashes on startup when MaintenanceSettings.xml contains <TimeSpan1DayRecords window="0"> -->
-    <TimeSpan1DayRecords window="0" />
     <TimeSpan1HourRecords window="60" />
     <TimeSpan5MinRecords window="5" />
     <WarningLevel></WarningLevel>
@@ -548,7 +546,7 @@ This deprecated tag was used to specify the maximum number of trend graphs that 
 
 In the *TimeSpan1DayRecords* tag, you can customize the interval of the 1-day "average trending" records. To do so, specify a *window* attribute value in minutes.
 
-Not active by default.
+By default, this is not included. If you do include this tag, make sure to not set it to "0", as this configuration is invalid and would lead to issues.
 
 > [!NOTE]
 > If you are looking to configure how long these records need to be stored, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).
