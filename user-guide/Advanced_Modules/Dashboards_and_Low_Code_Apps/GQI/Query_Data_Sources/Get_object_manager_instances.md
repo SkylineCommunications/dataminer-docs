@@ -11,7 +11,4 @@ The *Get object manager instances* data source retrieves [DOM instances](xref:Do
 
 ## Updates
 
-[Real-time updates](xref:Query_updates) are available for this data source from DataMiner 10.5.0/10.5.7 onwards when using the [GQI DxM](xref:GQI_DxM)<!-- RN 42530 -->.
-
-> [!TIP]
-> [Filters](xref:GQI_Filter) applied directly on this data source will also support real-time updates.
+[Real-time updates](xref:Query_updates) are available for this data source from DataMiner 10.5.0/10.5.7 onwards when using the [GQI DxM](xref:GQI_DxM)<!-- RN 42530 -->. [Filters](xref:GQI_Filter) applied directly on this data source will also support real-time updates.
