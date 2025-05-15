@@ -69,7 +69,7 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 
 1. When the login screen is shown, log in to the VM.
 
-1. DataMiner requires a static IP. Verify via the network configuration that the network interface uses a static IP instead of DHCP. 
+1. Verify via the network configuration that the network interface uses a static IP instead of DHCP, because DataMiner requires a static IP.
 
 ## Configuring DataMiner
 
