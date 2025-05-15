@@ -138,7 +138,7 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
 
 1. Make sure the following prerequisites are available:
 
-   - [DataMiner](xref:Creating_a_DataMiner_System)
+   - [DataMiner](xref:Deploying_a_DataMiner_System)
 
    - [Visual Studio](https://visualstudio.microsoft.com/downloads/)
 
