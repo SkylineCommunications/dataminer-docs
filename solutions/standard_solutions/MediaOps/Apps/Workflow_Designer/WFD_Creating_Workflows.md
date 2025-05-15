@@ -16,8 +16,6 @@ More node types will be supported in a later version. Each node that is part of 
 
 - **Alias (optional)**: An alias for the node in the workflow. This can be useful if there are multiple nodes of the same type in a workflow.
 
-- **Include in booking** — For resource or resource pool nodes, this determines whether node resources should be reserved when the workflow is executed.
-
 ## Creating connections between nodes
 
 Between workflow nodes that represent **network inventory**, connectivity may need to be set up in order to execute the workflow. For this, connections between the nodes can be defined. Each of these connections has a single source node and a single destination node.
