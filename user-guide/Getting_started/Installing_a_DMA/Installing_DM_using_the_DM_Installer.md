@@ -47,6 +47,10 @@ You can follow the steps below or watch this short video, which shows you how to
 > [!NOTE]
 > The installation requires that [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) is installed for systems intended for DataMiner Failover based on virtual IP. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed.
 
+> [!IMPORTANT]
+>
+> DataMiner requires a **static IP** to be configured. Make sure to do this before continuing with the below steps. If you have to change the IP afterwards, you can do so by following the steps described in [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA).
+
 ## DataMiner Installer v10.4
 
 If you are using DataMiner Installer v10.4, follow the steps below to install DataMiner:
