@@ -25,6 +25,7 @@ When a confirmed job starts, and only when it has been confirmed, it will go to 
 
 When a running job stops it will go to the Completed state. This indicates that the job has ended. In this stage it is still possible to make adjustments to the C&B information.
 
+<!--
 <div style="background-color:#36F0F3;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Ready for invoice</div>
 
 Ready for invoice means that all changes are final and therefor it is no longer allowed to make any changes to the job.
@@ -34,6 +35,7 @@ Ready for invoice means that all changes are final and therefor it is no longer 
 Invoiced is the final state of a job, but it does not mean that all jobs will reach this state.
 
 <div style="background-color:#FC7D76;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Canceled</div>
+-->
 
 When a job is no longer needed it can be moved to a canceled state.
 
@@ -46,12 +48,9 @@ graph LR
     A[🖉 🗑 Draft] --> B[🖉 Tentative]
     B --> C[🖉 Confirmed]
     C --> D[🖉 Running]
-    D --> E[🖉 Completed]
-    E --> F[Ready for Invoice]
-    F --> G[🗑 Invoiced]
+    D --> E[🖉 🗑 Completed]
     C --> H[🗑 Canceled]
-    B --> H[🗑 Canceled]
-    H --> F[Ready for Invoice]
+    B --> H
 
     style A fill:#9140D9,stroke:#000,stroke-width:2px,color:#ffffff
     style B fill:#F7EC15,stroke:#000,stroke-width:2px,color:#000000
