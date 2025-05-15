@@ -57,6 +57,7 @@ This is an example of a *MaintenanceSettings.xml* file:
   <Trending>
     <EDCurves></EDCurves>
     <SDCurves></SDCurves>
+    <!-- CAUTION: SLDataGateway crashes on startup when MaintenanceSettings.xml contains <TimeSpan1DayRecords window="0"> -->
     <TimeSpan1DayRecords window="0" />
     <TimeSpan1HourRecords window="60" />
     <TimeSpan5MinRecords window="5" />
