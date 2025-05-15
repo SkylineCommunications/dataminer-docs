@@ -69,7 +69,9 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 
 1. When the login screen is shown, log in to the VM.
 
-1. Verify via the network configuration that the network interface uses a static IP instead of DHCP, because DataMiner requires a static IP.
+1. Verify in the network configuration that the network interface uses a static IP instead of DHCP, because DataMiner requires a static IP.
+
+   For more details, refer to *Change TCP/IP Settings* under [Essential Network Settings and Tasks in Windows](https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9).
 
 ## Configuring DataMiner
 
@@ -84,7 +86,6 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 >   - For the data storage configuration, please refer to [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
 > - If you intend to restore a **backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip** the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](#restoring-a-backup-onto-the-virtual-hard-disk).
 > - If you are installing a **Failover** Agent, **skip** the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](#configuring-the-new-dataminer-agent-as-a-new-agent-in-a-failover-pair).
-
 
 > [!NOTE]
 > If you have accidentally closed the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`. Make sure to run it with administrator privileges.
