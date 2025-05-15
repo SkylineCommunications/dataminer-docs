@@ -4,7 +4,7 @@ uid: SCH_Edit_Job
 
 # Editing a Job
 
-Jobs can be edited through the Edit Job panel. This panel can be accessed from the [Scheduling](xref:MO_Scheduling) **job view** or **resource view**, through the 🖉 icon. On top of the Edit Job panel the current state of the job is indicated and what states will follow under normal circumstances. The panel also contains sections which are described below.
+Jobs can be edited through the Edit Job panel. This panel can be accessed from the **job view**, **resource view**, **Ops Board** or **Search Jobs** pages, through the 🖉 icon. On top of the Edit Job panel the current state of the job is indicated and what states will follow under normal circumstances. The panel contains sections which are described below.
 
 - **Job info**: Contains the general information (e.g. Name, Description, start, end) of the job and based on the [state of the job](xref:MO_S_Job_States) different buttons will be shown:
   - **Save as Tentative** (Draft): Move the job from Draft to a tentative state which will reserve all resources.
