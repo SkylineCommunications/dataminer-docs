@@ -68,6 +68,10 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 
 1. When the login screen is shown, log in to the VM.
 
+1. Verify in the network configuration that the network interface uses a static IP instead of DHCP, because DataMiner requires a static IP.
+
+   For more details, refer to *Change TCP/IP Settings* under [Essential Network Settings and Tasks in Windows](https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9).
+
 ## Configuring DataMiner
 
 As soon as you log in to the VM, a window will be shown where you can configure your DataMiner System.
@@ -76,15 +80,14 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 
 > [!IMPORTANT]
 >
-> - DataMiner requires a **static IP** to be configured. Make sure to do this before continuing with the below steps. If you have to change the IP afterwards, you can do so by following the steps described in [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA).
-> - The configuration wizard takes care of the automatic license and data storage configuration. However, if you **do not want a default installation**, you may not want to use this automatic configuration:
+> The configuration wizard takes care of the automatic license and data storage configuration. However, if you **do not want a default installation**, you may not want to use this automatic configuration:
 >
->   - If you need to install DataMiner **offline**, the license and data storage configuration will need to be done manually:
->     - For the license, see [Permanent license](xref:Permanent_license).
->     - For the data storage configuration, please refer to [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
->   - The procedure below will deploy DataMiner in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. To immediately install DataMiner with a **perpetual license**, you will need to configure the license and data storage manually, similar to an offline installation. To switch to a [perpetual license](xref:Pricing_Perpetual_Use_Licensing) after the initial installation, see [Switching from subscription mode to perpetual license](xref:Switching_from_subscription_mode_to_perpetual_license). To switch to an offline demo license, see [Switching from subscription mode to an offline demo license](xref:Switching_from_subscription_mode_to_offline_demo).
->   - If you intend to restore a **backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip** the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](xref:Restoring_backup_on_newly_installed_DMA).
->   - If you are installing a **Failover** Agent, **skip** the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](xref:Configuring_a_new_DMA_in_Failover_pair). These steps are the same as for an installation using the DataMiner Installer.
+> - If you need to install DataMiner **offline**, the license and data storage configuration will need to be done manually:
+>   - For the license, see [Permanent license](xref:Permanent_license).
+>   - For the data storage configuration, please refer to [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
+> - The procedure below will deploy DataMiner in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. To immediately install DataMiner with a **perpetual license**, you will need to configure the license and data storage manually, similar to an offline installation. To switch to a [perpetual license](xref:Pricing_Perpetual_Use_Licensing) after the initial installation, see [Switching from subscription mode to perpetual license](xref:Switching_from_subscription_mode_to_perpetual_license). To switch to an offline demo license, see [Switching from subscription mode to an offline demo license](xref:Switching_from_subscription_mode_to_offline_demo).
+> - If you intend to restore a **backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip** the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](xref:Restoring_backup_on_newly_installed_DMA).
+> - If you are installing a **Failover** Agent, **skip** the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](xref:Configuring_a_new_DMA_in_Failover_pair). These steps are the same as for an installation using the DataMiner Installer.
 
 > [!NOTE]
 > If you have accidentally closed the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`. Make sure to run it with administrator privileges.
