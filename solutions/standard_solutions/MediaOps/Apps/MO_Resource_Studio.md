@@ -11,24 +11,18 @@ The Resource Studio app helps you create and manage bookable resources efficient
 ## App overview 
 The following pages are available in the app:
 
-- [*Resource Pools*](#resource-pools)
-- [*Resources*](#resources)
-- [*Capability Management*](#capability-management)
-- [*Search Jobs*](#search-jobs)
-- [*Apps configuration*](#apps-configuration)
-- [*About*](#about)
-
-
-## Resource Pools
-
-A _resource pool_ can be created to group a set of **interchangeable resources**. This allows users who utilize resources in other apps to refer to a pool instead of a specific resource, which allows _deferring_ resource selection until it's actually needed, rather than at booking creation.
-
-Resources can be added to multiple pools, making them eligible for multiple purposes while keeping a single availability timeline and preventing resource conflicts.
+- ![Resource Pools](~/user-guide/images/Resource_Studio_Resource_Pools.png) **Resource Pools**: In this page you can **create**, **edit**, **delete**, **search** and **filter** [resource pools](#resource-pools). You can also **assign** [resources](#resources) to resource pools. Here you can also edit [**capabilities**](#capabilities), [**capacities**](#capacities), and [**properties**](#properties) per resource pool.
+- ![Resources](~/user-guide/images/Resource_Studio_Resources.png) **Resources**: The Resources page, similarly to the **Resource pools** page, allows you to **create** and **manage** specific resources, their **capabilities**, **capacities** and **properties**.
+- ![Capability Management](~/user-guide/images/Resource_Studio_Capability_Management.png) **Capability Management**: Here you can **create** and **manage** capabilities, and assign them the possible values they can assume when associated with resources and resource pools.
+- ![Capacity Management](~/user-guide/images/Resource_Studio_Capacity_Management.png) **Capacity Management**: Similar to **Capability management** page, here you can **create** and **manage** capacities.
+- ![Configuration Management](~/user-guide/images/Resource_Studio_Configuration_Management.png) **Configuration Management**: If a resource pool has parameters that can be **defined** per job in the Scheduling app, you can add that type of parameter here. You can give the configurations default values or make them mandatory to configure upon job creation.
+- ![Properties](~/user-guide/images/Resource_Studio_Properties.png) **Properties**: **Manage** properties that can be used by resources and resource pools.
+- ![Sync](~/user-guide/images/Resource_Studio_Sync.png) **Sync**: This page allows you to **sync** the resources from dataminer cube with the resource representations used in MediaOps. If you choose to sync them, before any changes are made you will get a message specifying each change that will take place. After the sync, MediaOps resources will be updated to mirror the dataminer resources.
+- ![About](~/user-guide/images/Resource_Studio_About.png) **About**: The About page provides information on the **version** of the `MediaOps` package.
 
 ## Resources
 
-The Resource Studio app allows you to create and manage resources. A resource can represent anything that involves managed use over time. Examples of things a resource can represent include:
-
+The Resource Studio app allows you to create and manage resources. A resource can represent anything that involves managed use over time. Some examples of things a resource can represent include:
 - A piece of network inventory managed by DataMiner, such as an **IRD**, a **cloud-based encoder**, or a **port on a switch**.
 
 - An entire service managed by DataMiner that can be made available for use, such as an **uplink connection** with a certain bandwidth that will be available for a certain period of time.
@@ -37,7 +31,13 @@ The Resource Studio app allows you to create and manage resources. A resource ca
 
 Each resource has a _concurrency_ setting, which defines how many bookings of the resource can be made at the same time. By default, this is set to **1**. 
 
-## Capability Management
+## Resource Pools
+
+A _resource pool_ can be created to group a set of **interchangeable resources**. This allows users who utilize resources in other apps to refer to a pool instead of a specific resource, which allows _deferring_ resource selection until it's actually needed, rather than at booking creation.
+
+Resources can be added to multiple pools, making them eligible for multiple purposes while keeping a single availability timeline and preventing resource conflicts.
+
+## Capabilities
 
 _Capabilities_ give a **qualitative description** of a resource or pool, making it clear what they can be used for. When creating a workflow or job, users can specify the required capabilities for the resource to be used, and they can filter the resources in the system with these capability requirements in order to easily find a suitable one.
 
@@ -53,7 +53,7 @@ Capabilities can be assigned either to a resource or to a resource pool. If they
 
 ![Capabilities](~/solutions/images/Resource_Studio_Capabilities.png)
 
-## Capacity Management
+## Capacities
 
 _Capacities_, like capabilities, define how a resource can be used, but they are measured **numerically**. The following settings can be configured for capabilities:
 
@@ -73,4 +73,12 @@ Typical examples of capacities are bandwidths, bit rates, symbol rates, etc. Whe
 
 ## Properties
 
-Properties store extra details that don't affect resource selection, such as contact person, vendor name, geolocation, etc.
+Properties store extra details that don't affect resource selection.
+
+Some examples of properties include data such as:
+
+- Contact person
+
+- Vendor name
+
+- Geolocation
