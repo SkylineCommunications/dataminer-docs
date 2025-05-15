@@ -77,73 +77,17 @@ To deprecate an existing contact:
    > [!NOTE]
    > To access this overview of deprecated contacts at a later point, click *Deprecated* in the header bar of the *List* tab.
 
-## Searching within the list of contacts
-
-To search within the list of contacts:
-
-1. Navigate to the *List* tab.
-
-1. Hover your mouse pointer over the contacts list.
-
-   In the top-right corner of the list, you will see a magnifying glass icon.
-
-1. Click the magnifying glass icon to activate the search bar.
-
-1. Type in your search query.
-
-   You can search based on the following columns of the contacts list: name, email, skill, experience, and organization name.
-
-   As you type, the list will dynamically update to show contacts that match your search criteria. For example, typing "Audio Mixer" will filter and display all contacts who have "Audio Mixer" listed as their skill.
-
-   ![Audio Mixer](~/user-guide/images/PO_Search_List.png)
-
-> [!NOTE]
-> To clear your search and return to the full list of contacts, delete the text in the search box and click outside of the search box to close it.
-
 ## Managing skills
 
 On both the *Overview* and *List* tabs, you can access the *Skills* panel by clicking the *Skills* button in the header bar.
 
 ![Header bar](~/user-guide/images/PO_Skills_Header_Bar.png)
 
-The *Skills* panel provides an overview of all available skills, with options to [edit](#editing-a-skill) them or [create new ones](#adding-a-new-skill).
-
-[Assigning skills to individuals](#assigning-a-skill) streamlines the booking process by allowing you to quickly identify qualified individuals to assign tasks to.
-
-### Adding a new skill
-
-To add a new skill:
-
-1. In the header bar, click *Skills* to open the *Skills* panel.
-
-1. Select *+ New skill*.
-
-1. Enter a name for the new skill in the *Skill* field, e.g. `Video Editor`.
-
-1. Select *Save* in the top-right corner.
-
-   Your new skill will now appear in the list of skills in the *Skills* panel.
-
-### Editing a skill
-
-To edit an existing skill:
-
-1. In the header bar, click *Skills* to open the *Skills* panel.
-
-1. Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the skill you want to edit.
-
-1. Edit the name of the skill and select *Save* in the top-right corner.
-
-> [!NOTE]
-> You may need to refresh the page for the change to become visible in the *Skill* column on the *List* tab.
+[Assigning skills to individuals](#assigning-a-skill) allows you to filder down people during the resource picking process on jobs.
 
 ### Assigning a skill
 
-To assign a skill, enter the appropriate skill in the *Personal skills* field when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
-
-![Personal skills](~/user-guide/images/PO_Personal_Skills.png)
-
-You can view a contact's skill in the *Skill* column on the *List* tab.
+To assign a skill, you can click the ![Edit](~/user-guide/images/PO_Skills_TODO.png) button on the *List* tab.
 
 ## Managing experience
 
@@ -154,33 +98,6 @@ On both the *Overview* and *List* tabs, you can access the *Experience* panel by
 The *Experience* panel provides an overview of all experience entries, with options to [edit](#editing-an-experience-entry) them or [create new ones](#adding-a-new-experience-entry).
 
 [Assigning experience to individuals](#assigning-experience) streamlines the booking process by making it easier to match people with tasks that suit their level of expertise.
-
-### Adding a new experience entry
-
-To create a new experience entry:
-
-1. In the header bar, click *Experience* to open the *Experience* panel.
-
-1. Select *+ New experience*.
-
-1. Enter a name for the new experience entry, e.g. `Manager`.
-
-1. Select *Save* in the top-right corner.
-
-   Your new experience entry will now appear in the list on the *Experience* panel.
-
-### Editing an experience entry
-
-To edit an existing experience entry:
-
-1. In the header bar, click *Experience* to open the *Experience* panel.
-
-1. Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the entry you want to edit.
-
-1. Edit the name of the experience level and select *Save* in the top-right corner.
-
-> [!NOTE]
-> You may need to refresh the page for the change to become visible in the *Experience* column on the *List* tab.
 
 ## Assigning experience
 
