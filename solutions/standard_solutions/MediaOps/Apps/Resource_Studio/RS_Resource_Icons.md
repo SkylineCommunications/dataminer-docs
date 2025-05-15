@@ -10,9 +10,9 @@ To change icon, navigate to Resource Studio:
 
 1. Open the **Edit** option for *Resource* or *Resource Pool*.
 
-1. Click on the **Change icon** button.
+1. Check the box next to **Icon**.
 
-1. Select the icon you want to use and **Confirm** your choice.
+1. Select the icon you want from the dropdown and **Save** your changes.
 
 > [!IMPORTANT]
 > Icons will be visible only on *Nodes* added to workflow after an icon is assigned to a *Resource* or *Resource pool*.
