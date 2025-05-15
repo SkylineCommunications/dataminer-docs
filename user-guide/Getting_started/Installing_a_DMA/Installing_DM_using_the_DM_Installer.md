@@ -45,6 +45,10 @@ You can follow the steps below or watch this short video, which shows you how to
 
 1. Make sure you have a Windows account with administrator rights. If you intend to use a DataMiner installer older than version 10.2, this must be the server's local Administrator account. For later installers, any account with administrator rights will suffice.
 
+1. Verify in the network configuration that the network interface uses a static IP instead of DHCP, because DataMiner requires a static IP.
+
+   For more details, refer to *Change TCP/IP Settings* under [Essential Network Settings and Tasks in Windows](https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9).
+
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/dataminer-installer/).
 
 > [!NOTE]
