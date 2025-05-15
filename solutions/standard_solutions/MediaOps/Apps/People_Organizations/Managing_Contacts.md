@@ -87,7 +87,7 @@ On both the *Overview* and *List* tabs, you can access the *Skills* panel by cli
 
 ### Assigning a skill
 
-To assign a skill, you can click the ![Edit](~/user-guide/images/PO_Skills_TODO.png) button on the *List* tab.
+To assign a skill, you can click the ![Edit](~/user-guide/images/PO_Skills.png) button on the *List* tab.
 
 ## Managing experience
 
