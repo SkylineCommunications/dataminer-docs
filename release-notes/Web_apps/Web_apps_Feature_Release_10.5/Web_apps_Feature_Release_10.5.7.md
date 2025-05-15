@@ -82,12 +82,26 @@ From now on, it will only be possible to publish a low-code app when the app has
 
 When, in a node edge graph, you dragged a node to another position, up to now, the actions configured in that node would incorrectly be executed.
 
-#### Web API: WebSocket connections would incorrectly not get closed when a client disconnected [ID 42848]
+#### Web Services API: WebSocket connections would incorrectly not get closed when a client disconnected [ID 42848]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
-In the web API, in some cases, WebSocket connections would incorrectly not get closed when a client disconnected. As a result, the web API would believe it was still connected to the client and would keep a connection to SLNet.
+In the Web Services API, in some cases, WebSocket connections would incorrectly not get closed when a client disconnected. As a result, the API would believe it was still connected to the client and would keep a connection to SLNet.
 
 From now on, WebSocket connections will automatically get closed after 5 minutes of inactivity.
 
 Also, a number of enhancements have been made with regard to error handling, especially when a connection gets closed.
+
+#### Web Services API: Problem with GetAlarms method [ID 42902]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When a *GetAlarms* call was sent in a JSON request, in some cases, the following issues could occur when *History* was set to true in the alarm filter.
+
+- When the filter that did not contain a *Columns* or a *SortBy* item, an error would be thrown.
+
+- When the filter contained a *Search* item but no *Columns* item, an error would be thrown (even when *History* as set to false).
+
+- Filters in which *StartTime* and *EndTime* were set to 0 would be cached incorrectly, causing problems when the call was sent multiple times over different days since the 0 values would be replaced with "Now" en "End - 1 hour".
+
+- In the result set, the alarms would not always be sorted by *TimeOfArrival* (i.e. the default setting).
