@@ -5,9 +5,10 @@ description: With headquarters in Belgium but present across the globe, Skyline 
 
 # About Skyline Communications
 
-Skyline Communications' innovative DataMiner xOps platform empowers global leaders to manage mission-critical ecosystems, including telecom networks, satellite operations, broadcast platforms, utility grids, and smart infrastructures spanning cities, facilities and venues, transportation hubs, and industrial installations.
-DataMiner xOps fast-tracks digital transformation and empowers organizations to operate as agile, data-driven powerhouses that thrive in a rapidly evolving world. By unifying diverse data sources and controls—from hardware, software, and cloud services to operational and business insights—DataMiner provides a real-time digital twin for seamless monitoring, AI-driven analytics, hyper-automation, and resource-aware orchestration. Combining out-of-the-box solutions with customizable flexibility, DataMiner xOps fosters innovation, backed by a vibrant global DevOps community.
+Skyline Communications' innovative DataMiner xOps platform empowers global leaders to manage mission-critical ecosystems, including telecom networks, satellite operations, broadcast platforms, utility grids, and smart infrastructures spanning cities, facilities and venues, transportation hubs, and industrial installations. DataMiner xOps fast-tracks digital transformation and empowers organizations to operate as agile, data-driven powerhouses that thrive in a rapidly evolving world. By unifying diverse data sources and controls, from hardware, software, and cloud services to operational and business insights, DataMiner provides a real-time digital twin for seamless monitoring, AI-driven analytics, hyper-automation, and resource-aware orchestration. Combining out-of-the-box solutions with customizable flexibility, DataMiner xOps fosters innovation, backed by a vibrant global DevOps community.
+
 With deployments in 125+ countries, Skyline Communications is the trusted partner for organizations seeking scalable, future-proof xOps solutions. With its global presence and offices in Belgium, Bosnia and Herzegovina, Portugal, Singapore, UAE, and the US, Skyline empowers organizations worldwide to take control of their operations and drive innovation with confidence.
+
 Founded in 1985, Skyline has decades of industry-specific NMS and OSS expertise. Not only Skyline's DataMiner platform has received various prestigious awards, but the company itself has also been awarded multiple times for innovation, growth and excellence.
 
 > [!TIP]
