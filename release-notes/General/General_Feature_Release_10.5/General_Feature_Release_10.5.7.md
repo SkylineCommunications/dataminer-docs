@@ -160,13 +160,15 @@ Because of a number of enhancements, overall performance has increased when upgr
 
 Because of a number of enhancements, overall performance has increased when executing a Failover switch.
 
-#### Security Advisory BPA test: Enhancements [ID 42850]
+#### Security Advisory BPA test: Enhancements [ID 42850] [ID 42914]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
 A number of enhancements have been made to the *Security Advisory* BPA test.
 
-For example, the BPA test is now also able to run on the offline agent of a Failover setup.
+For example, the BPA test is now able to run on the offline agent of a Failover setup.
+
+Also, when the BPA test is run on a system with a local Cassandra database and a local Elasticsearch/OpenSearch database, a notice will now appear, saying that a separate Cassandra setup with indexing is no longer recommended.
 
 #### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896]
 
