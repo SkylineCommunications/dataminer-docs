@@ -39,6 +39,28 @@ Several things can be configured in this file:
 
 - SNMP agent community strings are specified on element level with the *\<SNMPAgent>* tag. See [Configuring SNMP agent community strings](xref:Configuring_SNMP_agent_community_strings).
 
+- To determine how long trend data are kept for a specific element, overriding the configuration from [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml), a *Trending* tag can be added with the following subtags:<!-- RN 4167 -->
+
+  - *TimeSpan*: Determines the period during which the "real-time trending" records have to be kept in the database.
+  - *TimeSpan1DayRecords*: Determines the period during which the daily "average trending" records have to be kept in the database.
+  - *TimeSpan1HourRecords*: Determines the period during which the 1-hour "average trending" records have to be kept in the database.
+  - *TimeSpan5MinRecords*: Determines the period during which the 5-minute "average trending" records have to be kept in the database.
+  - *TimeSpanSpectrumRecords*: Determines the period during which spectrum trend data has to be kept in the database.
+
+  For each of these tags, you can specify integer values (e.g. 1, 2, 12, etc.) or decimal values (1.5, 2.5, etc.). Each of these also has a *unit* attribute that can be set to "hour", "hours", "day", "days", "month", "months", "year" or "years".
+
+  For example:
+
+  ```xml
+  <Trending>
+      <TimeSpan1DayRecords unit="days">730</TimeSpan1DayRecords><!--2 years-->
+      <TimeSpan1HourRecords unit="days">365</TimeSpan1HourRecords><!--1 year-->
+      <TimeSpan5MinRecords unit="days">30</TimeSpan5MinRecords><!--1 month-->
+      <TimeSpanSpectrumRecords unit="days">365</TimeSpanSpectrumRecords><!--1 year-->
+      <TimeSpan unit="hours">24</TimeSpan>
+  </Trending>
+  ```
+
 ## Description.xml
 
 If Swarming is not enabled, every element has its own *Description.xml* file. In that file, you can specify aliases for each of the parameters of that element.
