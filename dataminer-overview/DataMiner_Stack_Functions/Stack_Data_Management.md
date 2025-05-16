@@ -55,7 +55,6 @@ The administrator can see the changes made per user or per device/element, inclu
 > [!TIP]
 > For more information:
 >
-> - [Security expert hub](https://community.dataminer.services/expert-hub-ict-security/)
 > - [Security](xref:About_DMS_Security)
 > - [Experts & Insights - DataMiner Security](https://community.dataminer.services/video/experts-insights-dataminer-security/) (webinar/video) ![Video](~/user-guide/images/video_Duo.png)
 
