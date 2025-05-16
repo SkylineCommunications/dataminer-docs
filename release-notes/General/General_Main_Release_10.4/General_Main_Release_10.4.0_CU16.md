@@ -60,6 +60,12 @@ Also, when the BPA test is run on a system with a local Cassandra or Elasticsear
 
 ### Fixes
 
+#### DataMiner upgrade: Folder to which the contents of the upgrade package had been extracted would not be removed [ID 41393]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 - FR 10.5.1 -->
+
+When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
+
 #### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
