@@ -11,12 +11,13 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 14 May 2025 - Fix - Invalid token after silent renew
 
-When a user session is silently renewed, will now save the renewed session correctly and broadcast it to the other applications.
+When a user session is silently renewed, the token could become invalid causing the application to go in an invalid state preventing user actions to complete.
+Tokens should now correctly be renewed and not block application actions.
 
 ### 14 May 2025 - Fix - Admin - DxM updates giving false positives
 
-DxM versions are now compared with the available versions.
-If the installed version is higher or the same, it will no longer be taken into account for the 'X updates available'.
+When an installed DxM version was different than the latest available version, the update message would be shown.
+The update message should now only be shown when the installed version is higher or equal to the latest available version.
 
 ### 12 May 2025 - Fix - Share Management - Problem logging in if shared login is not supported [ID 42918]
 
