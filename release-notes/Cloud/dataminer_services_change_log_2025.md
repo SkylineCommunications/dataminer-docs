@@ -22,6 +22,14 @@ Links that direct to the DxM page on the DMS overview page in Admin will now ope
 Applications on *.dataminer.services will now support an unauthenticated view and navigate to the root page of the application when the user session expires or the user signs out.
 Additionally on dataminer.services the loading animations have been improved and the admin application will no be shown in available applications when the user is not signed in.
 
+### 14 May 2025 - Fix - Invalid token after silent renew
+
+When a user session was silently renewed, the token could become invalid, causing the application to go into an invalid state that made it impossible to complete user actions. Tokens should now be correctly renewed and not block application actions.
+
+### 14 May 2025 - Fix - Admin - DxM updates giving false positives
+
+When an installed DxM version was different than the latest available version, the update message would be shown, even if the installed version was not lower than the latest available version. This should no longer occur.
+
 ### 12 May 2025 - Fix - Share Management - Problem logging in if shared login is not supported [ID 42918]
 
 If shared login was not supported by the browser, it could occur that logging in to Share Management was not possible.
