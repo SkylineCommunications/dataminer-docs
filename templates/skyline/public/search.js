@@ -51,7 +51,7 @@ function initSearch() {
   }
 
   function getDocsUrlFromBlobStoragePathUri(blobUri) {
-    // example url docs main: https://docshelp.blob.core.windows.net/docs/user-guide/Getting_started/Creating_a_DataMiner_System.html
+    // example url docs main: https://docshelp.blob.core.windows.net/docs/user-guide/Getting_started/Deploying_a_DataMiner_System.html
     // example url docs connectors: https://docshelp.blob.core.windows.net/docs-connectors/connector/doc/Skyline_Regression_Test_Result_Collector.html
 
     for (const blobContainerName of BLOB_CONTAINER_NAMES) {
