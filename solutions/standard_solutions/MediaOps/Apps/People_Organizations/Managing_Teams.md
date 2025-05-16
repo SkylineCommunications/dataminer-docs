@@ -14,7 +14,7 @@ You can switch between the *Overview* and *List* tabs by clicking *Overview* and
 
   ![Overview page](~/user-guide/images/PO_Teams_Overview_Example.png)
 
-- The *List* tab provides an **overview of all teams**, along with their state, bookable status, number of members, team email address, team description, and expertise. This tab allows you to access and review team details in one centralized location. It also provides an efficient way to [filter through the list of teams](#searching-within-the-list-of-teams) based on the provided information.
+- The *List* tab provides an **overview of all teams**, along with their state, bookable status, number of members, team email address, team description, and skills. This tab allows you to access and review team details in one centralized location. It also provides an efficient way to [filter through the list of teams](#searching-within-the-list-of-teams) based on the provided information.
 
 ## Adding a new team
 
@@ -136,59 +136,30 @@ To search within the list of teams:
 
 1. Type in your search query.
 
-   You can search based on the following columns of the teams list: name, team email, team description, and expertise.
+   You can search based on the following columns of the teams list: name, team email, team description, and skills.
 
-   As you type, the list will dynamically update to show teams that match your search criteria. For example, typing "Production" will filter and display all teams that have "Production" listed as their expertise.
+   As you type, the list will dynamically update to show teams that match your search criteria. For example, typing "Production" will filter and display all teams that have "Production" listed as their skill.
 
    ![Production](~/user-guide/images/PO_Search_Teams_List.png)
 
 > [!NOTE]
 > To clear your search and return to the full list of teams, delete the text in the search box and click outside of the search box to close it.
 
-## Managing areas of expertise
+## Managing skills in teams
 
-On both the *Overview* and *List* tabs, you can access the *Expertise* panel by clicking the *Expertise* button in the header bar.
+On both the *Overview* and *List* tabs, you can access the *Skills* panel from the header bar.
 
-![Header bar](~/user-guide/images/PO_Expertise_Header_Bar.png)
+![Header bar](~/user-guide/images/PO_Skills_Header_Bar.png)
 
-The *Expertise* panel provides an overview of all available areas of expertise, with options to [edit](#editing-an-area-of-expertise) and [create new ones](#adding-a-new-area-of-expertise).
+This panel provides an overview of all available skills, with options to edit and create new ones.
 
-[Assigning an area of expertise](#assigning-an-area-of-expertise) to teams streamlines the booking process by making it easier to match teams with tasks that suit their level of expertise.
+[Assigning a skill](#assigning-a-skill) to teams streamlines the booking process by making it easier to match teams with tasks that suit their level of expertise.
 
-### Adding a new area of expertise
+### Assigning a skill
 
-To add a new area of expertise:
+To manage skills for a team, in the `List` view, click on the lightning bolt icon in the `Team Skills` column for the team you want to manage. In the newly opened popup, select the skills you want your team to poses, and click the `Save`.
 
-1. In the header bar, click *Expertises* to open the *Expertise* panel.
-
-1. Select *+ New expertise*.
-
-1. Enter a name for the new area of expertise in the *Expertise* field, e.g. `Product Management`.
-
-1. Select *Save* in the top-right corner.
-
-   Your new area of expertise will now appear in the list of areas of expertise.
-
-### Editing an area of expertise
-
-To edit an existing area of expertise:
-
-1. In the header bar, click *Expertises* to open the *Expertise* panel.
-
-1. Click the ![Edit](~/user-guide/images/PO_Edit.png) button next to the area of expertise you want to edit.
-
-1. Edit the name of the area of expertise and select *Save* in the top-right corner.
-
-> [!NOTE]
-> You may need to refresh the page for the change to become visible in the *Expertise* column on the *List* tab.
-
-### Assigning an area of expertise
-
-To assign an area of expertise to a team, enter the appropriate area of expertise in the *Team expertise(s)* field when you [create a new team](#adding-a-new-team) or [edit an existing team](#editing-a-team).
-
-![Assigning expertise](~/user-guide/images/Assigning_Expertise.png)
-
-You can view a team's area of expertise in the *Expertise* column on the *List* tab.
+![Assigning skills](~/user-guide/images/Assigning_Skills.png)
 
 ## Managing roles
 
