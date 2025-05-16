@@ -243,7 +243,7 @@ When an element is in the timeout state, any write parameters of this element wi
 
 #### New Logging.DaysToKeep tag in DataMiner.xml \[ID 20911\]
 
-In the file *DataMiner.xml*, a new *\<DaysToKeep>* subtag can now be specified within the *\<Logging>* tag, which will determine for how many days log files are kept in the folder *C:\\Skyline DataMiner\\Logging*. If this tag is not specified or if its value is 0, log files will be kept for 100 days.
+In the file *DataMiner.xml*, a new *\<DaysToKeep>* subtag can now be specified within the *\<Logging>* tag, which will determine for how many days log files are kept in the folder `C:\Skyline DataMiner\Logging`. If this tag is not specified or if its value is 0, log files will be kept for 100 days.
 
 Example:
 

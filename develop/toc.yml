@@ -1032,6 +1032,8 @@ items:
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Automation
     - name: Skyline.DataMiner.Core.DataMinerSystem.Protocol
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
+    - name: Skyline.DataMiner.Analytics.Rad
+      topicUid: Skyline.DataMiner.Analytics.Rad
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
     - name: Skyline.DataMiner.Net.Swarming
@@ -1283,6 +1285,8 @@ items:
         topicUid: NT_SET_BITRATE_DELTA_INDEX_TRACKING
       - name: NT_ADD_VIEWS
         topicUid: NT_ADD_VIEWS
+      - name: NT_CLEAR_PARAMETER
+        topicUid: NT_CLEAR_PARAMETER
     - name: DMS notify types
       topicUid: SLDmsNotifyTypes
       items:
@@ -3646,6 +3650,102 @@ items:
         topicUid: Automation-EnumTrueFalseLowerCase
       - name: NonEmptyStringType
         topicUid: Automation-NonEmptyStringType
+  - name: Functions schema
+    topicUid: SchemaFunctions
+    items:
+    - name: Functions
+      topicUid: Functions
+      items: 
+      - name: Function
+        topicUid: Functions.Function
+        items: 
+        - name: '@id'
+          topicUid: Functions.Function-id
+        - name: '@maxInstances'
+          topicUid: Functions.Function-maxInstances
+        - name: '@name'
+          topicUid: Functions.Function-name
+        - name: '@profile'
+          topicUid: Functions.Function-profile
+        - name: EntryPoints
+          topicUid: Functions.Function.EntryPoints
+          items: 
+          - name: EntryPoint
+            topicUid: Functions.Function.EntryPoints.EntryPoint
+            items: 
+            - name: '@pid'
+              topicUid: Functions.Function.EntryPoints.EntryPoint-pid
+            - name: '@type'
+              topicUid: Functions.Function.EntryPoints.EntryPoint-type
+        - name: ExportRules
+          topicUid: Functions.Function.ExportRules
+          items: 
+          - name: ExportRule
+            topicUid: Functions.Function.ExportRules.ExportRule
+            items: 
+            - name: '@attribute'
+              topicUid: Functions.Function.ExportRules.ExportRule-attribute
+            - name: '@regex'
+              topicUid: Functions.Function.ExportRules.ExportRule-regex
+            - name: '@tag'
+              topicUid: Functions.Function.ExportRules.ExportRule-tag
+            - name: '@value'
+              topicUid: Functions.Function.ExportRules.ExportRule-value
+            - name: '@whereAttribute'
+              topicUid: Functions.Function.ExportRules.ExportRule-whereAttribute
+            - name: '@whereTag'
+              topicUid: Functions.Function.ExportRules.ExportRule-whereTag
+            - name: '@whereValue'
+              topicUid: Functions.Function.ExportRules.ExportRule-whereValue
+        - name: Graphical
+          topicUid: Functions.Function.Graphical
+        - name: Interfaces
+          topicUid: Functions.Function.Interfaces
+          items: 
+          - name: Interface
+            topicUid: Functions.Function.Interfaces.Interface
+            items: 
+            - name: '@broadcast'
+              topicUid: Functions.Function.Interfaces.Interface-broadcast
+            - name: '@id'
+              topicUid: Functions.Function.Interfaces.Interface-id
+            - name: '@name'
+              topicUid: Functions.Function.Interfaces.Interface-name
+            - name: '@parameterGroupLink'
+              topicUid: Functions.Function.Interfaces.Interface-parameterGroupLink
+            - name: '@profile'
+              topicUid: Functions.Function.Interfaces.Interface-profile
+            - name: '@type'
+              topicUid: Functions.Function.Interfaces.Interface-type
+        - name: Parameters
+          topicUid: Functions.Function.Parameters
+          items: 
+          - name: Parameter
+            topicUid: Functions.Function.Parameters.Parameter
+            items: 
+            - name: '@id'
+              topicUid: Functions.Function.Parameters.Parameter-id
+      - name: OverrideTimeoutVF
+        topicUid: Functions.OverrideTimeoutVF
+      - name: Protocol
+        topicUid: Functions.Protocol
+        items: 
+        - name: Name
+          topicUid: Functions.Protocol.Name
+      - name: Version
+        topicUid: Functions.Version
+    - name: SchemaTypes
+      items:
+      - name: EnumTrueFalseLowerCase
+        topicUid: Functions-EnumTrueFalseLowerCase
+      - name: Guid
+        topicUid: Functions-TypeGuid
+      - name: InputType
+        topicUid: Functions-TypeInputType
+      - name: TypeNonEmptyString
+        topicUid: Functions-TypeNonEmptyString
+      - name: TypeParamId
+        topicUid: Functions-TypeParamId
   - name: NuGet stages schema
     topicUid: SchemaNuGetStagesConfig
     items:
@@ -5454,7 +5554,7 @@ items:
       items:
       - name: GitHub quality gate
         topicUid: CICD_Quality_Gate_Github
-    - name: Publishing items in the DataMiner Catalog
+    - name: Publishing items in the Catalog
       topicUid: publish_to_catalog
     - name: CI/CD Skyline Communications GitHub
       items:
@@ -5910,6 +6010,10 @@ items:
               topicUid: EpmIntegrationTrainingLowCodeApp
         - name: Topology app configuration
           topicUid: Topology_app_configuration
+        - name: Enhanced view configuration
+          topicUid: Enhanced_view_configuration
+        - name: Agent caching configuration
+          topicUid: EPMIntegration_Agent_cache_config
         - name: DataMiner processes configuration
           topicUid: EPM_DataMiner_processes_config
     - name: Swarming

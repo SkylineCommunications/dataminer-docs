@@ -139,7 +139,7 @@ If the root cause of the large number of tombstone lies within the connector, fo
 
 1. Verify whether the grace seconds were changed, using the previously mentioned query to verify the current *gc_grace_seconds*.
 
-1. On the server hosting Cassandra, open a command prompt and go to the folder *C:/Program Files/Cassandra/bin*.
+1. On the server hosting Cassandra, open a command prompt and go to the folder `C:\Program Files\Cassandra\bin`.
 
 1. Use the following command to start a compaction to remove the tombstones:
 

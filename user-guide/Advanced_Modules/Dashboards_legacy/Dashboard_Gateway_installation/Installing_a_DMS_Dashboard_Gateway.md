@@ -43,7 +43,7 @@ To install a Dashboard Gateway on Windows Server 2012, you must first install II
 
 ### Installing the dashboards
 
-1. Copy the directory *C:\\Skyline DataMiner\\Webpages\\Dashboards* from the DataMiner Agent to a location on the DataMiner Gateway, such as *C:\\Skyline DataMiner*.
+1. Copy the directory `C:\Skyline DataMiner\Webpages\Dashboards` from the DataMiner Agent to a location on the DataMiner Gateway, such as `C:\Skyline DataMiner`.
 
 1. Remove all the files and subfolders in the directory *...\\Dashboards\\db*.
 
@@ -139,6 +139,6 @@ To install a Dashboard Gateway on Windows Vista Server, you must first install I
 
 ### Installing the dashboards
 
-1. Copy the directory *C:\\Skyline DataMiner\\Webpages\\Dashboards* from the DataMiner Agent to a location on the DataMiner Gateway, such as *C:\\Skyline DataMiner*.
+1. Copy the directory `C:\Skyline DataMiner\Webpages\Dashboards` from the DataMiner Agent to a location on the DataMiner Gateway, such as `C:\Skyline DataMiner`.
 
 1. Remove all the files and subfolders in the directory *...\\Dashboards\\db*.

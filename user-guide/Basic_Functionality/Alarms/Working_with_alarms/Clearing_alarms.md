@@ -48,7 +48,7 @@ Alternatively, if a column with action buttons to clear alarms has been added in
 
 ## System-wide AutoClear setting
 
-The default AutoClear setting can be configured in the *C:\\Skyline DataMiner\\MaintenanceSettings.xml* file.
+The default AutoClear setting can be configured in the `C:\Skyline DataMiner\MaintenanceSettings.xml` file.
 
 If you set the AutoClear setting to FALSE, alarms will not be cleared automatically. Instead, they will get into a “clearable” state, and someone will have to manually clear them.
 

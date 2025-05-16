@@ -16,7 +16,7 @@ To configure an IP-based cell phone modem that is connected to your DataMiner Sy
 
 1. In an internet browser, go to the IP address of the device, and configure the PIN of the SIM card as well as the necessary user accounts.
 
-1. In the *C:\\Skyline DataMiner\\Mobile Gateway* folder of one of your DataMiner Agents, make sure that there is a *Config.xml* file similar to the one in the example below.
+1. In the `C:\Skyline DataMiner\Mobile Gateway` folder of one of your DataMiner Agents, make sure that there is a *Config.xml* file similar to the one in the example below.
 
    > [!NOTE]
    > You can add the password as plain text as illustrated in the example below. After the DMA has restarted, the password will be replaced by a GUID referring to the encrypted password, which is stored elsewhere.

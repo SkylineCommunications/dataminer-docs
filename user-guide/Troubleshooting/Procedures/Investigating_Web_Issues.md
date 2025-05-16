@@ -4,6 +4,9 @@ uid: Investigating_Web_Issues
 
 # Troubleshooting – web
 
+> [!TIP]
+> For a flowchart for troubleshooting web apps based on a recording, see [Troubleshooting - web apps](xref:Troubleshooting_Webapps).
+
 ## Client web app
 
 Is something not working as expected? Then do the following:
@@ -90,7 +93,11 @@ GQI runs as an extension module ([GQI DxM](xref:GQI_DxM)) or inside the [SLHelpe
 - Are data sources missing? Check whether the DMA has the necessary licenses and soft-launch options.
 - Are there no errors, but invalid data? Check the origin of the invalid data.
 - Are ad-hoc data sources or operators failing? Contact the person who created the data source or the operator (check [GitHub](https://github.com/orgs/SkylineCommunications/repositories?q=gqi&type=all)).
-- Error messages, no data, no response, or slow performance? Then record the GQI session and include the ad-hoc data scripts (if any) when asking support.
+- Error messages, no data, no response, or slow performance? Then [record the GQI session](#record-gqi-session) and include the ad hoc data scripts (if any) when asking support.
+- GQI DxM not working? Try to [repair the service](#gqi-dxm-repair).
+
+> [!NOTE]
+> The troubleshooting procedures below require access to the DataMiner server. If you are using a DaaS system, this is not possible, and you will need to contact <daas@dataminer.services> instead.
 
 #### Record GQI session
 
@@ -106,6 +113,26 @@ GQI recording is a debugging feature that allows you to save GQI communication a
 
 > [!NOTE]
 > Recording might impact performance as data is written to the disk. Once the recording has been made, stop the recording by deleting the folder.
+
+#### GQI DxM repair
+
+If you encounter issues with GQI DxM, for example, if you have [enabled the GQI DxM](xref:GQI_DxM#enabling-the-use-of-the-gqi-dxm) but are unable to see GQI DxM version on the *About* page, try repairing the service by running the GQI DxM installer:
+
+1. Using Task Manager, stop the DataMiner GQI service.
+
+   > [!NOTE]
+   > Make sure the associated DataMiner GQI process is stopped as well.
+
+1. Navigate to `C:\Skyline DataMiner\Tools\ModuleInstallers\Web`.
+
+1. Run the *DataMiner GQI* DxM installer in Repair mode.
+
+   ![GQI installer repair mode](~/user-guide/images/repair_gqi_installer.png)
+
+1. Restart the web server using IIS Manager to reconnect the web apps with the GQI DxM.
+
+   > [!TIP]
+   > For more detailed information, refer to [How to restart Internet Information Services (IIS) for a Website in Windows Server](https://www.ipserverone.info/knowledge-base/how-to-restart-internet-information-services-iis-for-a-website-in-windows-server/).
 
 ### PDF
 
@@ -160,7 +187,7 @@ Visual Overview in web apps has limited functionality:
 
 If you encounter any issues or if you notice any behavior that is different from that in Cube, then check the `SLUIProvider.txt` and `SLHelperWrapper.txt` log files. Always include the Visio file when you ask for support by email.
 
-On mobile devices, Visual Overview pages automatically subscribe to all alarms. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41327-->, if no alarm information is needed when a visual overview is shown, you can configure alarm subscriptions to be skipped by setting the `helper:load-alarms` option to "false" in *C:\Skyline DataMiner\Files\SLHelper.exe.config*.
+On mobile devices, Visual Overview pages automatically subscribe to all alarms. From DataMiner 10.4.0 [CU10]/10.5.0/10.5.1 onwards<!--RN 41327-->, if no alarm information is needed when a visual overview is shown, you can configure alarm subscriptions to be skipped by setting the `helper:load-alarms` option to "false" in `C:\Skyline DataMiner\Files\SLHelper.exe.config`.
 
 For example:
 
@@ -183,7 +210,7 @@ For example:
 
 From DataMiner 10.5.2/10.6.0 onwards<!--RN 41434-->, you can implement load balancing for visual overviews shown in web apps among DataMiner Agents in a DMS. Prior to this, the DataMiner Agent to which you were connected would handle all requests and updates with regard to web visual overviews.
 
-To configure load balancing, in the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
+To configure load balancing, in the `C:\Skyline DataMiner\Webpages\API\Web.config` file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
 
 - `<add key="visualOverviewLoadBalancer" value="true" />`
 

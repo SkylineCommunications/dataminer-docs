@@ -6,7 +6,7 @@ uid: GetInformationEventsSortedV2
 
 Use this method to retrieve the information events for a specified timespan, sorted according to a particular alarm state, start index, count filter and orderBy, as well as the alarm cache status.
 
-Available from DataMiner 10.0.7 onwards.
+<!-- Available from DataMiner 10.0.7 onwards. -->
 
 ## Input
 

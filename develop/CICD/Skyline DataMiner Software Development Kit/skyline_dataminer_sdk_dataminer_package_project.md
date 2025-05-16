@@ -15,11 +15,13 @@ The project is by default configured to create a .dmapp file every time you buil
 
 When you compile or build the project, you will find the generated .dmapp in the standard output folder, which is typically the *bin* folder of your project.
 
-When you publish the project, a corresponding item will be created in the online DataMiner Catalog.
+When you publish the project, a corresponding item will be created in the online Catalog.
 
 ## Adding extra artifacts in the same solution
 
-You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. adding additional Automation scripts).
+### New artifacts
+
+You can right-click the solution and select *Add* > *New Project*. This will allow you to select DataMiner project templates (e.g. to add additional Automation scripts).
 
 > [!NOTE]
 > Connectors are currently not supported for this.
@@ -34,6 +36,10 @@ You can also add new projects by using the dotnet-cli. For the sake of stability
 
 Every *Skyline.DataMiner.SDK* project within the solution, except other DataMiner package projects, will by default be included within the .dmapp created by this project. You can customize this behavior using the *PackageContent/ProjectReferences.xml* file. This allows you to add filters to include or exclude projects as needed. See [ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references) for more information.
 
+### Existing Automation script files
+
+You can right-click the solution and select *Add* > *Add Existing DataMiner Automation Script*. This will allow you to add existing Automation scripts files to the solution.
+
 ## Importing from DataMiner
 
 You can import specific items directly from a DataMiner Agent using DIS:
@@ -44,9 +50,27 @@ You can import specific items directly from a DataMiner Agent using DIS:
 
 1. Once connected, import the DataMiner artifacts you want:
 
-   1. In your *Solution Explorer*, navigate to folders such as *PackageContent/Dashboards* or *PackageContent/LowCodeApps*.
-   1. Right-click, and select *Add*.
-   1. Select e.g. *Import DataMiner Dashboard/Low-Code App*, depending on what you want to import.
+   - To import **dashboards**:
+
+     1. In your *Solution Explorer*, navigate in the Package project to *PackageContent/Dashboards*.
+
+     1. Right-click, and select *Add*.
+
+     1. Select *Import DataMiner Dashboard*.
+
+   - To import **low-code apps**:
+
+     1. In your *Solution Explorer*, navigate in the Package project to *PackageContent/LowCodeApps*.
+
+     1. Right-click, and select *Add*.
+
+     1. Select *Import DataMiner Low-Code App*.
+
+   - To import an **Automation script**:
+
+     1. In your *Solution Explorer*, right-click the solution, and select *Add*.
+
+     1. Select *Import DataMiner Automation Script*.
 
 ## Adding content from the Catalog
 
@@ -95,7 +119,7 @@ string setupContentPath = installer.GetSetupContentDirectory();
 
 ## Publishing to the Catalog
 
-By default, a project is created with support for publishing to the DataMiner Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow.
+By default, a project is created with support for publishing to the Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow.
 
 ### Publishing manually
 
@@ -195,7 +219,7 @@ With this setup, any push with new content (including the initial creation) to t
 1. Create a new release, select the desired version as a **tag**, and provide a title and description.
 
 > [!NOTE]
-> The description will be visible in the DataMiner Catalog.
+> The description will be visible in the Catalog.
 
 ### Publishing to the Catalog with the complete CI/CD workflow
 
@@ -250,7 +274,7 @@ The following secrets and variables will have been added to your repository afte
 1. Create a new release, select the desired version as a **tag**, and provide a title and description.
 
 > [!NOTE]
-> The description will be visible in the DataMiner Catalog.
+> The description will be visible in the Catalog.
 
 ## See also
 

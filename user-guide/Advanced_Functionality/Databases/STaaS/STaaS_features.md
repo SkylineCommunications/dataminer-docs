@@ -9,7 +9,7 @@ uid: STaaS_features
 DataMiner STaaS relies on Azure Storage, which stores multiple copies of your data to make sure it is always available even in case outages or disasters occur. Different storage redundancy setups are possible. STaaS supports zone-redundant storage and geo-redundant storage. When you contact Skyline to register your system to use STaaS, you can include your preferences as to the region(s) where your data should be stored and the type of storage redundancy that should be used.
 
 > [!NOTE]
-> DataMiner STaaS's standard supported regions are West Europe (The Netherlands), UK South, North Central US, UAE North, Southeast Asia (Singapore), and Australia East. Choosing regions outside this standard list will incur additional charges.
+> DataMiner STaaS's standard supported regions are West Europe (The Netherlands), UK South, Central US, UAE North, Southeast Asia (Singapore), and Australia East. Choosing regions outside this standard list will incur additional charges.
 
 - **Zone-redundant storage (ZRS)** copies your data synchronously across three Azure availability zones in one region. Each availability zone is a separate physical location with independent power, cooling, and networking. By **default**, DataMiner STaaS uses ZRS.
 

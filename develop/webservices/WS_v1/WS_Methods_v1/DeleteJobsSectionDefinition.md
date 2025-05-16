@@ -4,7 +4,9 @@ uid: DeleteJobsSectionDefinition
 
 # DeleteJobsSectionDefinition
 
-Use this method to delete a job section definition. No longer supported from DataMiner 10.0.9 onwards. Use DeleteJobsSectionDefinitionFromDomain instead (see [DeleteJobsSectionDefinitionFromDomain](xref:DeleteJobsSectionDefinitionFromDomain)).
+This method is no longer supported.<!-- No longer supported from DataMiner 10.0.9 onwards. -->
+
+To delete a job section definition, use [DeleteJobsSectionDefinitionFromDomain](xref:DeleteJobsSectionDefinitionFromDomain) instead.
 
 > [!NOTE]
 > The default job section definition cannot be deleted.

@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.5.5
 ---
 
-# DataMiner web apps Feature Release 10.5.5 – Preview
+# DataMiner web apps Feature Release 10.5.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +14,8 @@ uid: Web_apps_Feature_Release_10.5.5
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Dashboards/Low-Code Apps - Template editor: Layer tooltips [ID 42503]](#dashboardslow-code-apps---template-editor-layer-tooltips-id-42503)
+- [Dashboards/Low-Code Apps - Template editor: New layer of type HTML [ID 42519]](#dashboardslow-code-apps---template-editor-new-layer-of-type-html-id-42519)
 
 ## New features
 
@@ -266,7 +267,7 @@ When a component was linked to GQI table data, up to now, it could lose its GQI-
 
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
-In some cases, the Web API would lose the permission the write to the *C:\\Skyline DataMiner\\Logging\\Web* folder. As a result, it would no longer be allowed to write log entries.
+In some cases, the Web API would lose the permission the write to the `C:\Skyline DataMiner\Logging\Web` folder. As a result, it would no longer be allowed to write log entries.
 
 #### Dashboards/Low-Code Apps - Node edge graph component: Real-time updates would not restored connections that had been removed [ID 42529]
 
@@ -333,3 +334,9 @@ When a component used joined queries to fetch data, the data would incorrectly n
 <!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 -->
 
 In some cases, it would not be possible to load the `https://{HOSTNAME}/api/v0/maps.asmx` page due to a serialization issue.
+
+#### Dashboards/Low-Code Apps - Query builder: Not possible to scroll up or down after selecting the 'Get object manager instances' data source [ID 42648]
+
+<!-- MR 10.4.0 [CU14] / 10.5.0 [CU2] - FR 10.5.5 [CU0] -->
+
+Up to now, when you had selected the *Get object manager instances* data source while building a GQI query, in some cases, the scrollbar would incorrectly not appear when you hovered over the object manager instances in the list, making it impossible to scroll up or down in the list.

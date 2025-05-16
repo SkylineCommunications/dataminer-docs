@@ -104,21 +104,7 @@ By default, DataMiner uses HTTP to serve the web applications. HTTP is unencrypt
 
 ### HTTP headers
 
-When configuring HTTPS in IIS on your DataMiner Agent, we also recommend setting the following HTTP headers:
-
-- [HTTP Strict Transport Security](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis)
-
-- [X-Frame-Options](https://support.microsoft.com/en-us/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79): We recommend setting this to *DENY* or *SAMEORIGIN*.
-
-- [X-Content-Type-Options](https://docs.oracle.com/en/industries/health-sciences/argus-safety/8.2.1/asmsc/configuring-x-content-type-options-iis.html#GUID-954EE526-1220-4DD7-A946-0FEAA1A39679): We recommend setting this to *NOSNIFF*.
-
-There are some other HTTP headers that can improve security. However, their value depends on your specific DataMiner setup (e.g. resources used in Dashboards/Low-Code Apps):
-
-- [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
-
-- [Referrer Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
-
-- [Permissions-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Permissions-Policy)
+By default, DataMiner does not configure some HTTP headers that improve the security of the webpages. Additionally, depending on the DataMiner version, some HTTP headers may be present by default that leak information about the underlying technologies. For this reason, we recommend having a look at the [HTTP header configuration](xref:HTTP_Headers).
 
 ## Operating system hardening
 

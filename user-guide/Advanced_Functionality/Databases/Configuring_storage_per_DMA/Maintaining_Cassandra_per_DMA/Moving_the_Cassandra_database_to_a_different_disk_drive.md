@@ -13,20 +13,20 @@ To do so:
 1. Stop the DMA.
 
     > [!NOTE]
-    > To reduce the size of the data that will need to be copied, at this point, it can be useful to first do a cleanup of the snapshots that are used in Cassandra, by means of the Cassandra nodetool. For Windows, nodetool is located by default in the folder *C:\\Program Files\\Cassandra\\bin\\*. For Linux, the tool is available system-wide by default.
+    > To reduce the size of the data that will need to be copied, at this point, it can be useful to first do a cleanup of the snapshots that are used in Cassandra, by means of the Cassandra nodetool. For Windows, nodetool is located by default in the folder `C:\Program Files\Cassandra\bin\`. For Linux, the tool is available system-wide by default.
     >
     > - To check the size of the snapshots, run the following command in a command prompt window: *nodetool listsnapshots*.
     > - To clean up the snapshots, run the following command in a command prompt window: *nodetool clearsnapshot*. This will mark all snapshots as ready for deletion. Then restart the Cassandra service in order to remove the snapshots.
 
 1. Stop the Cassandra service
 
-1. Locate the file *cassandra.yaml*. By default, it is located in the folder */etc/cassandra* on Linux and *C:\\Program Files\\Cassandra\\conf* on Windows.
+1. Locate the file *cassandra.yaml*. By default, it is located in the folder */etc/cassandra* on Linux and `C:\Program Files\Cassandra\conf` on Windows.
 
 1. Open the .yaml file (as Administrator) and look for the attribute *data_file_directories*.
 
 1. Edit this attribute so that it points to the new disk you wish to use.
 
-1. Locate the current Cassandra data directory. By default, this is */var/lib/cassandra/data* on Linux and *C:\\ProgramData\\Cassandra* on Windows.
+1. Locate the current Cassandra data directory. By default, this is */var/lib/cassandra/data* on Linux and `C:\ProgramData\Cassandra` on Windows.
 
 1. Copy the data from this directory to the new data directory you wish to use.
 

@@ -26,7 +26,7 @@ To deploy the Integrated DOCSIS branch of the EPM Solution:
 
    - There should be a separate DMA to host the front-end element, which does not host any collectors. This is not mandatory, but it is highly recommended.
 
-   - If you want to be able to use the Topology app, the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) must be enabled.
+   - If you are using a DataMiner Cube version prior to DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 --> and you want to be able to use the Topology app, the [*CPEIntegration* soft-launch option](xref:Overview_of_Soft_Launch_Options#cpeintegration) must be enabled.
 
 1. Create the necessary views. See [Creating a view](xref:Managing_views#creating-a-view).
 

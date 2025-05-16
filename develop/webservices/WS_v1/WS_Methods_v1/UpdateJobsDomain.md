@@ -6,7 +6,7 @@ uid: UpdateJobsDomain
 
 Use this method to update a jobs domain.
 
-Available from DataMiner 10.0.9 onwards.
+<!-- Available from DataMiner 10.0.9 onwards. -->
 
 ## Input
 

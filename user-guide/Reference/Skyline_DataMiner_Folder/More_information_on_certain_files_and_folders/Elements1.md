@@ -4,7 +4,7 @@ uid: Elements1
 
 # Elements
 
-In systems where [Swarming](xref:Swarming) is not enabled, the *C:\\Skyline DataMiner\\Elements\\* directory contains a subdirectory for every element on the DMA, containing the following files:
+In systems where [Swarming](xref:Swarming) is not enabled, the `C:\Skyline DataMiner\Elements\` directory contains a subdirectory for every element on the DMA, containing the following files:
 
 - Element.xml
 

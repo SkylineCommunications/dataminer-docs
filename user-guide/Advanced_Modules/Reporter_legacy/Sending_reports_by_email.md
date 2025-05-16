@@ -6,7 +6,7 @@ uid: Sending_reports_by_email
 
 Using DataMiner Scheduler and DataMiner Automation, you can make DataMiner send email messages that include reports created with the Reporter app or with a third-party report editor.
 
-By default, the email containing the report is sent in HTML format, using the template in *C:\\Skyline Dataminer\\NotifyMail.html*, but it can also be sent in plain text format.
+By default, the email containing the report is sent in HTML format, using the template in `C:\Skyline DataMiner\NotifyMail.html`, but it can also be sent in plain text format.
 
 The report content will normally be placed inside the message body. However, you can also choose to attach reports to email messages as separate PDF or MHT files.
 

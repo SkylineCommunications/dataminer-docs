@@ -112,7 +112,7 @@ The following issues may occur when you try to access the Dashboard Gateway:
 
         - ViewFolder.aspx
 
-    1. Go to the folder *C:\\Skyline DataMiner\\Webpages\\Dashboards* of the DataMiner Agent, and copy the same files and folders as you have just deleted on the Gateway server.
+    1. Go to the folder `C:\Skyline DataMiner\Webpages\Dashboards` of the DataMiner Agent, and copy the same files and folders as you have just deleted on the Gateway server.
 
     1. Paste the files and folders in the *Dashboards* folder on the Gateway server.
 

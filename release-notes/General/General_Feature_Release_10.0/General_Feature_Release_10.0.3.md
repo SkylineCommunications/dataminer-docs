@@ -73,7 +73,7 @@ protocol.NotifyDataMiner(182 /*NT_DELETE_FOLDER*/, folderName, bRecycle);
 ```
 
 > [!NOTE]
-> If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the *C:\\Skyline DataMiner\\Documents\\* folder. So, in the example above, the function will try to delete the *C:\\Skyline DataMiner\\Documents\\Configurations* folder. If you want it to delete the *C:\\Skyline DataMiner\\Configurations* folder, then you have to specify the full path.
+> If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the `C:\Skyline DataMiner\Documents` folder. So, in the example above, the function will try to delete the `C:\Skyline DataMiner\Documents\Configurations` folder. If you want it to delete the `C:\Skyline DataMiner\Configurations` folder, then you have to specify the full path.
 
 ### DMS Cube
 

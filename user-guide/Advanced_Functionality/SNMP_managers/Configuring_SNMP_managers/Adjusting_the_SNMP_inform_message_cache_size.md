@@ -10,7 +10,7 @@ In the *DataMiner.xml* file, you can customize how many inform messages are stor
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Set the *informCacheSize* attribute of the *SNMP* tag to the number of inform messages that should be stored. For example:
 

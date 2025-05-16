@@ -52,7 +52,7 @@ class LinkRootCause,LinkProcessList,Rte,Crash classExternalRef;
 
 ## How does SLLog work?
 
-SLLog is the process responsible for all DataMiner logging with the exception of SLNet. All output is written into files in *C:\Skyline DataMiner\logging*. Various processes connect to *SLLog.exe* and pass information to be logged. It is then written to *SL\*.txt* (a separate file for each process). Separate files are also created for each element and service.
+SLLog is the process responsible for all DataMiner logging with the exception of SLNet. All output is written into files in `C:\Skyline DataMiner\Logging`. Various processes connect to *SLLog.exe* and pass information to be logged. It is then written to *SL\*.txt* (a separate file for each process). Separate files are also created for each element and service.
 
 SLNet uses its own logging mechanism. One of the reasons for this is that at DataMiner startup, SLNet starts earlier than SLLog.
 

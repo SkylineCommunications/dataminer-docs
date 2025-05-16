@@ -13,7 +13,7 @@ DxMs depend on a minimum version of the core software. This is indicated in the 
 
 ## Packs
 
-For ease of installation, DxMs may be packaged together in a pack, such as the [Cloud Pack](xref:CloudPackages). These packs allow users to install several DxMs at once.
+For ease of installation, DxMs may be packaged together in a pack, such as the [Cloud Pack](xref:DataMiner_Cloud_Pack). These packs allow users to install several DxMs at once.
 
 ## Available DcMs
 
@@ -86,6 +86,10 @@ The CloudFeed module is responsible for offloading data towards dataminer.servic
 From CloudFeed version 1.4.0 onwards, the minimum required DataMiner version is DataMiner 10.4.10.<!-- RN 40413 -->
 
 From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages by default include the latest version of the CloudFeed module. If a newer version of the CloudFeed module is available but you prefer not to install an upgrade package, you can install a newer version separately via the Admin app.
+
+### Copilot
+
+The Copilot module extends DataMiner with conversational AI. For more information, see [Copilot](xref:Copilot_DxM).
 
 ### DataAggregator
 

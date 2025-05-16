@@ -18,7 +18,7 @@ To add a DMA to the list:
    | Information | Description |
    |-------------|-------------|
    | Display name | In this box, enter the name of the DMA as it will appear in the list. |
-   | Host | In this box, enter the IP address or server name of the DataMiner Agent using the following syntax:<br>*https://\[IP address or server name\]:\[Port\]/SLNetService*<br>Note:<br>- Both HTTP and HTTPS are supported.<br>- Specifying the IP port is optional. Default port: 8004<br>- Specifying the suffix "/SLNetService" is optional.<br>See also [If a DMA uses DataMiner configuration switching](#if-a-dma-uses-dataminer-configuration-switching) |
+   | Host | In this box, enter the IP address or server name of the DataMiner Agent using the following syntax:<br>`https://[IP address or server name]:[Port]/SLNetService`<br>Note:<br>- Both HTTP and HTTPS are supported.<br>- Specifying the IP port is optional. Default port: 8004<br>- Specifying the suffix "/SLNetService" is optional.<br>See also [If a DMA uses DataMiner configuration switching](#if-a-dma-uses-dataminer-configuration-switching) |
    | Login | Choose how you want DIS to log on to the DMA:<br>- Using the current Windows user (default)<br>- Using a specific user/password combination |
    | Group | The DMAs listed in the DMA tab can be organized in groups.<br> In this box, enter or select the name of the group to which you want the DMA to belong. |
    | Production DMA | Select this checkbox if the DMA is a production DMA.<br> When you try to publish a protocol or an Automation script to a production DMA, a confirmation box will appear to prevent you from accidentally publishing that file to it. |
@@ -86,8 +86,8 @@ These are the folders that should contain files like *SLDatabase.dll*, *SLProtoc
 
 If you are working on a local DMA, you can keep the following default folders:
 
-- *C:\\Skyline DataMiner\\Files*
-- *C:\\Skyline DataMiner\\ProtocolScripts*
+- `C:\Skyline DataMiner\Files`
+- `C:\Skyline DataMiner\ProtocolScripts`
 
 ## Solutions
 

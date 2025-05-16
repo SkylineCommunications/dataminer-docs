@@ -7,7 +7,7 @@ uid: Embedding_a_Service_Manager_component
 It is possible to embed a Service Manager component in Visio. With this component, you can essentially embed the *Services* app in Visio.
 
 > [!TIP]
-> See also: [Service and Resource Management](xref:SRM#service-and-resource-management)
+> See also: [Service and Resource Management](xref:About_SRM)
 
 ## Basic shape data field configuration
 

@@ -4,7 +4,9 @@ uid: GetJobsDomain
 
 # GetJobsDomain
 
-Use this method to retrieve a job domain. Available from DataMiner 10.0.9 onwards.
+Use this method to retrieve a job domain.
+
+<!-- Available from DataMiner 10.0.9 onwards. -->
 
 ## Input
 

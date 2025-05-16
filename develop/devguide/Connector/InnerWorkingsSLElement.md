@@ -48,7 +48,7 @@ A parameter requires that RTDisplay is set to true in the following cases:
   - NotifyDataMiner type 73 method call ([NT_GET_PARAMETER](xref:NT_GET_PARAMETER)) when called from SLDataMiner (protocol.NotifyDataMiner).
   - NotifyDataMiner type 106 method call ([NT_MAKE_ALARM](xref:NT_MAKE_ALARM))
   - GetKeys: In legacy DataMiner versions prior to DataMiner 9.0, retrieving the primary keys ([KeyType.Index](xref:Skyline.DataMiner.Scripting.NotifyProtocol.KeyType)) used the [NT_GET_INDEXES](xref:NT_GET_INDEXES) call. In the currently supported DataMiner versions, retrieving the primary keys using this method does not involve the SLElement process, but retrieving the display keys ([KeyType.DisplayKey](xref:Skyline.DataMiner.Scripting.NotifyProtocol.KeyType)) does still involve the SLElement process.
-  - ClearAllKeys (SLProtocol) as the implementation of this method contains an NT_GET_INDEXES call.
+  - Prior to DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6<!-- RN 42368 -->, ClearAllKeys (SLProtocol), as the implementation of this method contains an NT_GET_INDEXES call. From DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 onwards, instead a new NT_CLEAR_PARAMETER call is used, which eliminates the SLElement dependency.
 
 - A property of the QActionTable class is called expecting the parameter to be present in the SLElement process:
 

@@ -6,7 +6,7 @@ uid: CreateSLAElement
 
 Use this method to create a new SLA element.
 
-Available from DataMiner 9.0.5 onwards.
+<!-- Available from DataMiner 9.0.5 onwards. -->
 
 ## Input
 

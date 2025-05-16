@@ -4,7 +4,9 @@ uid: GetCapacityParametersForResource
 
 # GetCapacityParametersForResource
 
-Use this method to retrieve all the capacity parameters for a specific resource. Available from DataMiner 10.0.2 onwards.
+Use this method to retrieve all the capacity parameters for a specific resource.
+
+<!-- Available from DataMiner 10.0.2 onwards. -->
 
 ## Input
 

@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.5
 ---
 
-# General Feature Release 10.5.5 – Preview
+# General Feature Release 10.5.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -24,35 +24,163 @@ uid: General_Feature_Release_10.5.5
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]](#snmp-forwarding-new-option-to-prevent-an-snmp-manager-from-resending-snmp-inform-messages-id-41884)
+- [Migration from SLNet-managed NATS solution to BrokerGateway [ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)
 
 ## New features
 
-#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP Inform messages [ID 41884]
+#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option. If you select this option, DataMiner will track which Inform messages have been sent, and will not resend those that have already been acknowledged.
+Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option. If you select this option, DataMiner will track which inform messages have been sent and will not resend those that have already been acknowledged.
 
 > [!NOTE]
-> This new *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
+> This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
+
+#### Migration from SLNet-managed NATS solution to BrokerGateway [ID 42019] [ID 42020] [ID 42573]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+It is now possible to migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service). Previously, starting from DataMiner 10.5.0/10.5.2, this feature was available in [soft launch](xref:SoftLaunchOptions).
+
+BrokerGateway will manage NATS communication based on a single source of truth that has the complete knowledge of the cluster, resulting in more robust, carefree NATS communication. In addition, TLS will be configured automatically, and a newer version of NATS will be used that has better performance and is easier to upgrade.
+
+Before you start the migration, the entire cluster must have been running smoothly for some time. A BPA test is available that allows you to easily verify this ([Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites)).
+
+You can then run the migration by opening a remote desktop connection to all DMAs at the same time, opening a command prompt as administrator, and running the executable `C:\Skyline DataMiner\Tools\NATSMigration.exe`. This must happen on each DMA in the cluster within a 10-minute timeframe. For more detailed information, refer to [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+
+Note that when you add a DataMiner Agent to a DataMiner System, it will have to use the same NATS solution as the DataMiner System. This means that if the DMS has been migrated to BrokerGateway, the DMA you add also needs to be migrated to BrokerGateway, but if the DMS still uses the SLNet-managed NATS solution, the DMA you add also has to use this solution.
+
+#### GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+GQI extensions use the Automation engine to create DLL libraries that are then loaded by GQI to add ad hoc data sources, custom operators, etc.
+
+GQI will now look for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This will allow GQI extension scripts to find the Automation script library at runtime.
+
+> [!IMPORTANT]
+> If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
+
+#### GQI DxM: New life cycle method allows ad hoc data sources to optimize sort operators [ID 42528]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+A new optional life cycle method has been introduced for ad hoc data sources running in the GQI DxM. It will allow to optimize or modify sort operators added to the query.
+
+You can use this life cycle by implementing the `Skyline.DataMiner.Analytics.GenericInterface.IGQIOptimizeableDataSource` interface, which has one method:
+
+```csharp
+IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
+```
+
+- `currentNode` is the query node that represents the current ad hoc data source.
+- `nextOperator` represents the next operator appended to the query.
+
+This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
+
+- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this life cycle method is not implemented).
+- Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
+- Modify/add operators.
+
+> [!NOTE]
+>
+> - This life cycle method will only be called when the `nextOperator` is a filter or a sort operator.
+> - This life cycle method can be called multiple times if there is a new `nextOperator`.
 
 ## Changes
 
 ### Enhancements
 
+#### BrokerGateway files collected by SLLogCollector [ID 40299]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.9/10.5.0-->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), SLLogCollector will now collect files related BrokerGateway.
+
+#### DataMiner recycle bin enhancements [ID 40565]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+
+The `C:\Skyline DataMiner\Recycle Bin\` folder contains backup copies of modified configuration files and folders, stored as zip files. Each zip file includes the modified file or folder along with a *Cause.txt* file, which details the reason for the change and its timestamp. These backup copies help you restore previous configurations if needed.
+
+Up to now, a separate zip file would be created for each configuration change that had been implemented in the system.
+
+From now on, the contents of the `C:\Skyline DataMiner\System Cache\Recyclable\` folder will be zipped and moved to the `C:\Skyline DataMiner\Recycle Bin\` folder every 11 minutes. This process will first occur 3 minutes after DataMiner startup.
+
+When a configuration change occurs, two scenarios are possible:
+
+- If the file or folder has not been modified after the most recent move to the *Recycle Bin* folder (which happens every 11 minutes), a new entry is created in the `C:\Skyline DataMiner\System Cache\Recyclable\` folder with the name of the changed file or folder.
+
+- If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in the `C:\Skyline DataMiner\System Cache\Recyclable\` folder is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
+
+##### RecycleBinSize setting in MaintenanceSettings.xml
+
+In the *MaintenanceSettings.xml* file, you can specify the maximum size (in MB) of the DataMiner recycle bin in the *RecycleBinSize* tag.
+
+From now on, the system will check every 7 minutes whether storage limits have been exceeded. If the system detects a breach, it will perform a cleanup on the recycle bin to restore the storage within acceptable limits:
+
+- If the number of files exceeds the limit, the system will clean up the recycle bin until it holds 80% of the lowest value between the maximum allowed number of files (default: 1000) and the current number of files.
+
+- If the folder size exceeds the limit, the system will clean up until the folder size is no longer over the configured size limit.
+
+This cleanup will occur for the first time 2 minutes after DataMiner startup. Up to now, the recycle bin was cleaned to the maximum size and number of files every hour.
+
+> [!NOTE]
+>
+> - Whatever the maximum size specified in the *RecycleBinSize* tag, the maximum number of files in the recycle bin is limited to 5000.
+> - The default recycle bin size is 100 MB.
+> - From now on, if the recycle bin size is set to 0 MB or an invalid size, it will revert to the default value of 100 MB.
+
+##### Restoring a previous configuration
+
+If an incorrect configuration change is implemented in the system, in some cases, it is possible to use the recycle bin to restore the original configuration.
+
+For example, if a view is renamed or moved in the Surveyor, a zip file will be created containing the *Views.xml* file and a cause file, which details why the change occurred. It is then possible to restore the *Views.xml* file as follows:
+
+1. Copy the file from the *Recycle Bin* folder back to its original location.
+
+   > [!NOTE]
+   > From now on, the files in the *Recycle Bin* folder are only updated every 11 minutes. This means that when you restore the files, they may not contain recent changes.
+
+1. Restart the DMA.
+
+1. Force a synchronization of the file in the DMS.
+
+> [!CAUTION]
+> Always be extremely careful when using this functionality, as it can have far-reaching consequences on your DataMiner System.
+
+#### VerifyNatsIsRunning BPA test updated with BrokerGateway prerequisite [ID 40641]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), and the automatic NATS configuration has not been disabled (using [NATSForceManualConfig](xref:SLNetClientTest_disabling_automatic_nats_config)), the *VerifyNatsIsRunning* prerequisite check will now verify if the single source of truth for the NATS communication (i.e. ClusterEndpointConfiguration.json) is present and contains at least one viable endpoint entry.
+
+#### Factory reset tool: New ResetBrokerGatewayNATS action [ID 40759]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.4.11/10.5.0-->
+
+The *SLReset* factory reset tool will now also reset the DataMiner Agent to use the SLNet-managed NATS solution in case it had been migrated to BrokerGateway (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)).
+
+#### Notices generated in case local NATS server is not responding [ID 41289]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 - previously available in soft-launch starting from 10.5.0/10.5.1 -->
+
+In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [[ID 42573]](#migration-from-slnet-managed-nats-solution-to-brokergateway-id-42019-id-42020-id-42573)), SLNet will now generate notices in case the local NATS server is not responding. The connectivity will be checked at a random interval between 3 and 10 minutes.
+
 #### BPA test 'Check Deprecated MySQL DLL' renamed to 'Check Deprecated DLL Usage' [ID 42057]
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
 
-Up to now, the BAP test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
+Up to now, the BPA test named *Check Deprecated MySQL DLL* would check whether the *MySql.Data.dll* was not outdated.
 
 Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending on the DataMiner version, it will checks for the following DLL files, in the specified folders:
 
 | Deprecated DLL | Deprecated since DataMiner version | Minimum safe DLL version | Folder |
 |----------------|------------------------------------|--------------------------|--------|
-| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | *C:\Skyline DataMiner\ProtocolScripts* |
-| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | *C:\Skyline DataMiner\ProtocolScripts* or *C:\Skyline DataMiner\Files* |
+| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | `C:\Skyline DataMiner\ProtocolScripts` |
+| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | `C:\Skyline DataMiner\ProtocolScripts` or `C:\Skyline DataMiner\Files` |
 
 Any version lower than the specified minimum version will be considered outdated, as older versions are known to pose security risks.
 
@@ -70,6 +198,12 @@ From now on, it will clone the reservation object in the cache, make the change,
 
 A number of security enhancements have been made.
 
+#### NATS repair tool [ID 42328]
+
+<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
+
+A repair tool, *NATSRepair.exe*, will now be included in the `C:\Skyline DataMiner\Tools\` folder. You can use this to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
+
 #### DataMiner Object Model: An error will now be returned when a FieldValue was added for a non-existing FieldDescriptor [ID 42358]
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
@@ -84,11 +218,21 @@ From now on, the trace data will indicate that a `DomInstanceError` was thrown w
 
 When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to e.g. aggregation or merge actions.
 
-#### GQI DxM will now shut down faster [ID 42428]
+#### STaaS: An alarm will now be generated when a data type is being throttled [ID 42387]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+If your system is pushing too much load for a specific data type, that data type will be throttled. This could for example happen when you have an element that is continuously saving parameter updates.
+
+From now on, when this happens, an alarm will be generated with information about the data type or types that are being throttled.
+
+#### GQI DxM will now shut down faster [ID 42428] [ID 42621]
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
 Because of a number of enhancements, the GQI DxM will now shut down faster, especially in situations where NATS is not running.
+
+Also, before the GQI DxM gets installed or upgraded, the DataMiner GQI service and all its child processes will now be stopped to prevent issues due to certain files being locked.
 
 #### SLAnalytics - Relational anomaly detection: Input validation when adding a new parameter group [ID 42429]
 
@@ -124,17 +268,6 @@ SLLogCollector packages will now include the output of the `dotnet --list-runtim
 The output will be stored in the following file:
 
 *\\Logs\\Windows\\.NET runtimes\\cmd.exe _c dotnet --list-runtimes.txt*
-
-#### GQI DxM will now look for missing dependencies in the Automation script libraries folder [ID 42468]
-
-<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
-
-GQI extensions use the Automation engine to create DLL libraries that are then loaded by GQI to add ad hoc data sources, custom operators, etc.
-
-GQI will now look for missing dependencies in the *C:\\Skyline DataMiner\\Scripts\\Libraries* folder. This will allow GQI extension scripts to find the Automation script library at runtime.
-
-> [!IMPORTANT]
-> If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
 
 #### GQI recording removed from GQI DxM [ID 42470]
 
@@ -177,7 +310,7 @@ In the *DataMiner Object Model* window, which allows you to see all details of a
 | Button | Description |
 |--------|-------------|
 | Enable | Adds or updates an override for the log file of the current DOM manager, setting all log levels to 6. |
-| Reset  | Removes the override for the log file of the current DOM manager is removed, regardless of the tool that added it. |
+| Reset  | Removes the override for the log file of the current DOM manager, regardless of the tool that added it. |
 
 Also, a status label will now indicate whether debug logging is enabled or disabled.
 
@@ -185,32 +318,6 @@ Also, a status label will now indicate whether debug logging is enabled or disab
 >
 > - The above-mentioned status label will show "Enabled" when a level-6 override is present. If all log files have level 6 by default, the status label will show "Disabled" until you add an override.
 > - Enabling debug logging may significantly increase the amount of logging that is written to disk.
-
-#### GQI DxM: New life cycle method allows ad hoc data sources to optimize sort operators [ID 42528]
-
-<!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
-
-A new optional life cycle method has been introduced for ad hoc data sources running in the GQI DxM. It will allow to optimize or modify sort operators added to the query.
-
-You can use this life cycle by implementing the `Skyline.DataMiner.Analytics.GenericInterface.IGQIOptimizeableDataSource` interface, which has one method:
-
-```csharp
-IGQIQueryNode Optimize(IGQIDataSourceNode currentNode, IGQICoreOperator nextOperator)
-```
-
-- `currentNode` is the query node that represents the current ad hoc data source.
-- `nextOperator` represents the next operator appended to the query.
-
-This method should return the query node that represents the result of applying the next operator to the current ad hoc data source node. Similar to the custom operator implementation, the ad hoc data source implementation can decide to do the following:
-
-- Append the `nextOperator` to the `currentNode` (i.e. the default behavior when this life cycle method is not implemented).
-- Remove/ignore the `nextOperator`, usually taking responsibility of the operation internally.
-- Modify/add operators.
-
-> [!NOTE]
->
-> - This life cycle method will only be called when the `nextOperator` is a filter or a sort operator.
-> - This life cycle method can be called multiple times if there is a new `nextOperator`.
 
 #### New log viewer web page [ID 42533]
 
@@ -250,6 +357,12 @@ As DataMiner IDP no longer requires neither a separate license nor an Indexing E
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 From now on, an anomaly alarm event will be generated when a change point with a change point type for which no anomaly monitoring was configured, is updated to a change point with a change point type for which anomaly monitoring is configured.
+
+#### Enhanced performance when logging in using external authentication via SAML [ID 42668]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.5 [CU0] -->
+
+Because of a number of enhancements, overall performance has increased when logging in using external authentication via SAML.
 
 ### Fixes
 
@@ -333,7 +446,14 @@ When the GQI DxM was being used, ad hoc data sources and custom operators would 
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
-In some cases, an error could be thrown when the *ClusterEndpoints.json* file was created in the *C:\\Skyline DataMiner\\Configurations\\* folder.
+In some cases, an error could be thrown when the *ClusterEndpoints.json* file was created in the `C:\Skyline DataMiner\Configurations\` folder.
+
+#### SLAnalytics - Relational anomaly detection: GetMADParameterGroupInfoMessage would incorrectly return an empty display instance for parameters with non-advanced naming [ID 42508]
+
+<!-- MR 10.6.0 - FR 10.5.5 -->
+<!-- Not added to MR 10.6.0 -->
+
+For parameters with non-advanced naming, the `GetMADParameterGroupInfoMessage` would incorrectly return an empty display instance.
 
 #### DVE settings could get out of sync with the element data when DataMiner or an element was restarted [ID 42515]
 

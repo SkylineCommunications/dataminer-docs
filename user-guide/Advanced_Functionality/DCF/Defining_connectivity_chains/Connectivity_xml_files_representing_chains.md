@@ -6,7 +6,7 @@ uid: Connectivity_xml_files_representing_chains
 
 To configure connectivity chains:
 
-1. For every connectivity chain that you want to configure, create a subfolder with a meaningful name in *C:\\Skyline DataMiner\\Connectivity\\*
+1. For every connectivity chain that you want to configure, create a subfolder with a meaningful name in `C:\Skyline DataMiner\Connectivity\`
 
    > [!NOTE]
    > The name of the subfolder will be the name of the connectivity chain configuration.

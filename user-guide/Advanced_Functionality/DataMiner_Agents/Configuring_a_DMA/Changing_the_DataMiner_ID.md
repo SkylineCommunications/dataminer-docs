@@ -13,7 +13,7 @@ To do so:
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml*.
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *id* attribute of the *\<DataMiner>* tag, specify the new DataMiner ID of the DMA.
 

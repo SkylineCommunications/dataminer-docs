@@ -20,7 +20,7 @@ When adding a DataMiner configuration to a DMA, you can select
 
 ## Enabling DataMiner configuration switching on a DMA
 
-1. Take a backup of the *C:\\Skyline DataMiner* folder, and make sure it is not shared.
+1. Take a backup of the `C:\Skyline DataMiner` folder, and make sure it is not shared.
 
 1. Stop DataMiner Taskbar Utility.
 
@@ -29,7 +29,7 @@ When adding a DataMiner configuration to a DMA, you can select
 
 1. Start Notepad.exe as Administrator, and open the following file:
 
-   *C:\\Program Files (x86)\\Skyline Communications\\Skyline Taskbar Utility\\ApplicationSettings.xml*
+   `C:\Program Files (x86)\Skyline Communications\Skyline Taskbar Utility\ApplicationSettings.xml`
 
 1. Locate the *\<AdvancedOptions>* tag, and set it to “true”:
 
@@ -37,9 +37,9 @@ When adding a DataMiner configuration to a DMA, you can select
    <AdvancedOptions>true</AdvancedOptions>
    ```
 
-1. Locate the *\<ConfigFolderPath>* tag, and set it to the folder that should contain the DataMiner configurations for the DMA. This can for instance be a folder on the D drive. By default, it is set to *C:\\Skyline DataMiner Configs\\*.
+1. Locate the *\<ConfigFolderPath>* tag, and set it to the folder that should contain the DataMiner configurations for the DMA. This can for instance be a folder on the D drive. By default, it is set to `C:\Skyline DataMiner Configs\`.
 
-   The folder *C:\\Skyline DataMiner* will be linked to the configuration that is currently running, but will not actually contain any data. All configurations will be stored at the configured path.
+   The folder `C:\Skyline DataMiner` will be linked to the configuration that is currently running, but will not actually contain any data. All configurations will be stored at the configured path.
 
 1. Save the *ApplicationSettings.xml* file.
 
@@ -47,10 +47,10 @@ When adding a DataMiner configuration to a DMA, you can select
 
 1. Right-click DataMiner Taskbar Utility in the notification area, select *Start Using Configs*, and confirm.
 
-   The current contents of the *C:\\Skyline DataMiner* folder and all its subfolders will now be copied to the specified configurations folder.
+   The current contents of the `C:\Skyline DataMiner` folder and all its subfolders will now be copied to the specified configurations folder.
 
    > [!NOTE]
-   > DataMiner Taskbar Utility will stop the running DataMiner software to make sure that none of the files in *C:\\Skyline DataMiner* are locked. In certain rare cases, however, files can be locked by third-party processes (e.g. anti-virus or even NATS). If this is the case, you will have to kill those processes manually and retry step 7.
+   > DataMiner Taskbar Utility will stop the running DataMiner software to make sure that none of the files in `C:\Skyline DataMiner` are locked. In certain rare cases, however, files can be locked by third-party processes (e.g. anti-virus or even NATS). If this is the case, you will have to kill those processes manually and retry step 7.
 
 ## Adding DataMiner configurations to a DMA
 
@@ -67,7 +67,8 @@ When adding a DataMiner configuration to a DMA, you can select
 1. Click *Create* to install the package you selected.
 
 > [!NOTE]
-> - For a new configuration, it is possible that the files “ConnectionSettings.txt” and “EndPoints.txt” are missing in the *Webpages* folder of a particular configuration. In that case, copy them to this folder from the folder *C:\\Skyline DataMiner Configs\\Skyline DataMiner\\Webpages*.
+>
+> - For a new configuration, it is possible that the files “ConnectionSettings.txt” and “EndPoints.txt” are missing in the *Webpages* folder of a particular configuration. In that case, copy them to this folder from the folder `C:\Skyline DataMiner Configs\Skyline DataMiner\Webpages`.
 > - After you have created a new configuration, it is possible that the DMA has problems restarting, so a manual restart is advisable.
 
 ## Switching to another DataMiner configuration

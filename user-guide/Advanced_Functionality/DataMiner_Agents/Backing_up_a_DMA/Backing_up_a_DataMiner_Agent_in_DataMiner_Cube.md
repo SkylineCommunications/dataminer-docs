@@ -19,11 +19,11 @@ The following steps can be taken to configure the backups for a DMA:
 
 1. In the *General* tab, under *Location*, optionally configure local or network path(s) where the backups should also be stored.
 
-   - If you select the *Local paths* option, all Agents in the *Local paths* list will automatically be selected, but you can clear the selection for some Agents if necessary. For the selected Agents, the backup package will be placed both in the default local folder *C:\\Skyline DataMiner\\Backup* and in the folder specified in the *Local path* box (on the same Agent).
+   - If you select the *Local paths* option, all Agents in the *Local paths* list will automatically be selected, but you can clear the selection for some Agents if necessary. For the selected Agents, the backup package will be placed both in the default local folder `C:\Skyline DataMiner\Backup` and in the folder specified in the *Local path* box (on the same Agent).
 
    - If you select the *Store the backups on a network path* option, you can either use one network path for all DMAs, or a different network path for each DMA.
 
-     If *Use a different network path for each Agent* is selected, you can select for which Agents this applies. For the selected Agents, the backup package will be placed both in the default local folder *C:\\Skyline DataMiner\\Backup* and in the folder specified in the *Network path* box. From DataMiner 10.3.11/10.3.0 [CU8]/10.2.0 [CU20] onwards<!-- RN 37143 -->, the backups for each DataMiner Agent in the DMS will be stored in a dedicated subfolder of this folder. The subfolder will have the DMA ID as its name.
+     If *Use a different network path for each Agent* is selected, you can select for which Agents this applies. For the selected Agents, the backup package will be placed both in the default local folder `C:\Skyline DataMiner\Backup` and in the folder specified in the *Network path* box. From DataMiner 10.3.11/10.3.0 [CU8]/10.2.0 [CU20] onwards<!-- RN 37143 -->, the backups for each DataMiner Agent in the DMS will be stored in a dedicated subfolder of this folder. The subfolder will have the DMA ID as its name.
 
      > [!NOTE]
      > Only SMB file shares are supported for network backups. It is not possible to back up to e.g. (S)FTP shares.
@@ -55,7 +55,7 @@ The following steps can be taken to configure the backups for a DMA:
 
      - *Configuration Backup without Database*: Similar to the configuration backup, but does not include any information from the database. If you are using [STaaS](xref:STaaS), you can choose this option, as you do not have to manage the database yourself in that case.
 
-     - *Visual Configuration Backup*: Backup containing all protocols (including Visio files, WFMs, and the production protocol), all Visio files linked to views, and the contents of the folder *C:\\Skyline DataMiner\\Webpages*.
+     - *Visual Configuration Backup*: Backup containing all protocols (including Visio files, WFMs, and the production protocol), all Visio files linked to views, and the contents of the folder `C:\Skyline DataMiner\Webpages`.
 
    - If you select *Use custom backup*, in the table below, select what is to be included in the backup.
 

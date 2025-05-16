@@ -6,7 +6,7 @@ uid: Activating_the_Asset_Management_database_in_Cube
 
 Before you activate the Asset Management database in DataMiner Cube:
 
-- Ensure that the Asset Manager configuration file has been placed in the following folder on the DMA: *C:\\Skyline DataMiner\\AssetManager\\Configs*
+- Ensure that the Asset Manager configuration file has been placed in the following folder on the DMA: `C:\Skyline DataMiner\AssetManager\Configs`
 
 - Ensure that the database containing your Asset Management data is running.
 

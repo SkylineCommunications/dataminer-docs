@@ -127,7 +127,7 @@ To load crosspoints:
    A status message will indicate whether the operation succeeded or failed.
 
 > [!NOTE]
-> Matrix crosspoint files are saved in the following folder: <br>*C:\\Skyline DataMiner\\Documents\\\[Protocol Name\]\\Backups*.
+> Matrix crosspoint files are saved in the following folder: <br>`C:\Skyline DataMiner\Documents\[Protocol Name]\Backups`.
 
 ## Filtering the inputs and outputs in a matrix parameter
 

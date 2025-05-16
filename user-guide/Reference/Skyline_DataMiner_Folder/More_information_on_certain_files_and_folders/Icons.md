@@ -4,20 +4,20 @@ uid: Icons
 
 # Icons
 
-The *C:\\Skyline DataMiner\\Icons\\* directory contains any custom icons that have been configured for elements, services, redundancy groups and views, as well as rules that dictate when they should be displayed.
+The `C:\Skyline DataMiner\Icons\` directory contains any custom icons that have been configured for elements, services, redundancy groups and views, as well as rules that dictate when they should be displayed.
 
 The icons and the icon rules are specified in the following XML files:
 
-- *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml*
+- `C:\Skyline DataMiner\Icons\CustomIcons.xml`
 
-- *C:\\Skyline DataMiner\\Icons\\IconSelectionRules.xml*
+- `C:\Skyline DataMiner\Icons\IconSelectionRules.xml`
 
 > [!NOTE]
 > If you have made any changes to these files, restart DataMiner to implement your changes.
 
 ## CustomIcons.xml
 
-In the *CustomIcons.xml* file, each *\<Icon>* tag can either contain XAML code or refer to an image file located in the folder *C:\\Skyline DataMiner\\Icons\\Refs\\*. See the following example.
+In the *CustomIcons.xml* file, each *\<Icon>* tag can either contain XAML code or refer to an image file located in the folder `C:\Skyline DataMiner\Icons\Refs\`. See the following example.
 
 ```xml
 <Icons>
@@ -32,7 +32,7 @@ The icon tag can have the following attributes:
 
 - **key**: Unique identifier of the icon within a particular theme.
 
-- **ref**: Name of the image file, which must be located in the folder *C:\\Skyline DataMiner\\Icons\\Refs\\*.
+- **ref**: Name of the image file, which must be located in the folder `C:\Skyline DataMiner\Icons\Refs\`.
 
   - Preferred format: PNG. SVG is also supported
   

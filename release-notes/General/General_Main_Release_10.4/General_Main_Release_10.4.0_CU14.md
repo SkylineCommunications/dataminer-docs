@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.4.0_CU14
 ---
 
-# General Main Release 10.4.0 CU14 - Preview
+# General Main Release 10.4.0 CU14
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -15,14 +15,14 @@ uid: General_Main_Release_10.4.0_CU14
 
 ### Enhancements
 
-#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP Inform messages [ID 41884]
+#### SNMP forwarding: New option to prevent an SNMP manager from resending SNMP inform messages [ID 41884]
 
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
-Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option. If you select this option, DataMiner will track which Inform messages have been sent, and will not resend those that have already been acknowledged.
+Up to now, when you stopped and restarted an SNMP manager, all open alarms would be resent. From now on, when you configure an SNMP manager, you will be able to prevent this by selecting the *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option. If you select this option, DataMiner will track which inform messages have been sent and will not resend those that have already been acknowledged.
 
 > [!NOTE]
-> This new *Enable tracking to avoid duplicate Inform Acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
+> This new *Enable tracking to avoid duplicate inform acknowledgments (ACKs)* option is not selected by default and is not compatible with the existing *Resend all active alarms every:* option. It is also not compatible with the *Resend...* command, which in DataMiner Cube can be selected after right-clicking an SNMP manager in the *SNMP forwarding* section of *System Center*.
 
 #### Security enhancements [ID 42307]
 
@@ -35,6 +35,14 @@ A number of security enhancements have been made.
 <!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
 
 When a large number of parameters are updated in bulk, from now on, SLProtocol will send the parameter changes to SLElement in chunks of 1000 rows. This will considerably reduce overall memory usage during serialization, especially when a large number of rows are updated due to e.g. aggregation or merge actions.
+
+#### STaaS: An alarm will now be generated when a data type is being throttled [ID 42387]
+
+<!-- MR 10.4.0 [CU14]/10.5.0 [CU2] - FR 10.5.5 -->
+
+If your system is pushing too much load for a specific data type, that data type will be throttled. This could for example happen when you have an element that is continuously saving parameter updates.
+
+From now on, when this happens, an alarm will be generated with information about the data type or types that are being throttled.
 
 #### Enhanced performance when restarting HTTP elements in a timeout state [ID 42443]
 
@@ -178,6 +186,12 @@ When DataMiner or an element was stopped while there were still DVE parameter se
 
 > [!NOTE]
 > Always make sure element names are unique, especially when using the `noelementprefix` option.
+
+#### Problem with Annotations module [ID 42538]
+
+<!-- MR 10.4.0 [CU14] - FR TBD -->
+
+In some cases, the *Annotations* module would not work correctly, especially on systems with multiple DataMiner Agents or on Failover setups.
 
 #### Incorrect 'Detected duplicate DVE' notice would appear due to a caching issue [ID 42546]
 

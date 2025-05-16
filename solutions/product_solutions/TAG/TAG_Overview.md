@@ -13,7 +13,7 @@ The TAG Management app seamlessly identifies the device type installed in the sy
 > [!IMPORTANT]
 > For optimal utilization of the app's capabilities, we highly recommend using TAG's Media Control System (MCS). While TAG MCM alone can sustain the app's functionality, certain information and KPIs may be missing. See [Limitation: missing information](xref:How_to_TAG_App#limitation-missing-information).
 
-The *TAG Management* package, available for download from the DataMiner Catalog, contains the following items:
+The *TAG Management* package, available for download from the Catalog, contains the following items:
 
 - TAG Management low-code app
 

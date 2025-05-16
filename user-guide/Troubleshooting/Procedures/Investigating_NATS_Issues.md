@@ -118,7 +118,7 @@ A few details to pay attention to:
 ### nats-server.config
 
 > [!NOTE]
-> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nats-server.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nats-server.config*, the old version of that file is saved in the `C:\Skyline DataMiner\Recycle Bin`folder.
 
 #### Cluster of 3 or more DMAs
 
@@ -393,7 +393,7 @@ Starting from DataMiner 10.3.0 [CU11]/10.4.0/10.4.2<!-- RN 38089 -->, DataMiner 
 Prior to DataMiner 10.3.0 [CU11]/10.4.0/10.4.2, DataMiner configures a single primary NAS in each DMS, with the configuration detailed below. Every other NAS is configured as a secondary, except in a cluster of exactly 2 Agents. In a cluster of exactly 2 Agents, both NATS configs will point to the same NAS in their resolver setting. The other NAS will be running, but neither NATS will connect to it.
 
 > [!NOTE]
-> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nas.config*, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to *nas.config*, the old version of that file is saved in the `C:\Skyline DataMiner\Recycle Bin`folder.
 
 #### Primary NAS
 
@@ -507,7 +507,7 @@ NATS uses port 4222, 6222, and 8222. If another program is already bound to one 
 
 - DataMiner fails to start
 - NATS is stopped
-- The log file at *C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.log* can contain the following:
+- The log file at `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.log` can contain the following:
 
   `Error listening on port: 0.0.0.0:4222, "listen tcp 0.0.0.0:4222: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."`
 
@@ -536,7 +536,7 @@ Nats Account Server (NAS) uses port 9090 by default. If another program is alrea
 
 - NATS is stopped.
 
-- Several 2kB large log files can be found in the *C:\Skyline DataMiner\NATS\nats-account-server* folder.
+- Several 2kB large log files can be found in the `C:\Skyline DataMiner\NATS\nats-account-server` folder.
 
   > [!NOTE]
   > The number of log files in this folder can increase rapidly (over 30,000 files in 12 hours).
@@ -563,7 +563,7 @@ To resolve this issue, manually configure a custom port for NATS that is not yet
 
 1. Make sure SLWatchdog is stopped.
 
-1. Open *C:\Skyline DataMiner\NATS\nats-account-server\nas.config* and change the port from 9090 to your chosen custom port, e.g. 9091.
+1. Open `C:\Skyline DataMiner\NATS\nats-account-server\nas.config` and change the port from 9090 to your chosen custom port, e.g. 9091.
 
 1. Open a command prompt as Administrator and navigate to the location of the NATS account server:
 
@@ -575,11 +575,11 @@ To resolve this issue, manually configure a custom port for NATS that is not yet
 
 1. Change any mentions of 9090 to 9091.
 
-1. Open *C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config* and change the port from 9090 to 9091.
+1. Open `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config` and change the port from 9090 to 9091.
 
 1. In Windows Firewall, locate the inbound rule for NAS. Change the port from 9090 to 9091.
 
-1. Open *C:\Skyline DataMiner\MaintenanceSettings.xml* and add the following lines:
+1. Open `C:\Skyline DataMiner\MaintenanceSettings.xml` and add the following lines:
 
    ```xml
    <SLNet>
@@ -686,4 +686,4 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
 This algorithm is run on all DMAs at the same time and will only change the configuration of the local NAS/NATS/DMA. It is therefore important that all DMAs in your cluster are online and reachable when you run the NATS reset.
 
 > [!NOTE]
-> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to the *SLCloud.xml*, *nats-server.config*, or *nas.config* files, the old version of that file is saved in the *C:\Skyline DataMiner\Recycle Bin* folder.
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to the *SLCloud.xml*, *nats-server.config*, or *nas.config* files, the old version of that file is saved in the `C:\Skyline DataMiner\Recycle Bin`folder.

@@ -10,7 +10,7 @@ The DOM DevOps tools allow you to create and update DOM models in a more graphic
 > These tools have been created by developers for developers. We have made them available in case this could be useful, but they are currently by no means complete tools.
 
 > [!NOTE]
-> These tools are available via the DataMiner Catalog. See [DOM DevOps tools installation](xref:DOM_DevOps_installation).
+> These tools are available via the Catalog. See [DOM DevOps tools installation](xref:DOM_DevOps_installation).
 
 The [**DOM Designer**](xref:DOM_Designer) allows you to quickly and easily set up an entire new module with a definition from scratch. However, it only supports a limited set of editing actions:
 

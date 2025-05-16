@@ -14,7 +14,7 @@ When SLDataMiner attempts to fetch users of a group, either by adding the group 
 
 ## Workaround
 
-1. Open the *DataMiner.xml* file, located in the folder *C:\\Skyline DataMiner\\*.
+1. Open the *DataMiner.xml* file, located in the folder `C:\Skyline DataMiner\`.
 
 1. Remove the attribute *referralConfigured="false"* from the LDAP tag.
 

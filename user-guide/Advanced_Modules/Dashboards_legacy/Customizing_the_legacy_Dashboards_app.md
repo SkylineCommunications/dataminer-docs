@@ -21,7 +21,7 @@ By default, the *Dashboards* app in DataMiner Cube makes use of Windows authenti
 
 However, two-step authentication can be enabled by using a Dashboard Gateway, or by disabling Windows authentication in the web.config file. To do so:
 
-1. Open the file *C:\\Skyline DataMiner\\webpages\\Dashboards\\web.config*.
+1. Open the file `C:\Skyline DataMiner\webpages\Dashboards\web.config`.
 
 1. Set the following tags as shown below:
 
@@ -37,7 +37,7 @@ However, two-step authentication can be enabled by using a Dashboard Gateway, or
 
 It is possible to configure the *Dashboards* app to show a custom provider logo. To do so:
 
-1. Place a .jpg file displaying your logo in the folder *C:\\Skyline DataMiner\\Webpages\\Dashboards.*
+1. Place a .jpg file displaying your logo in the folder `C:\Skyline DataMiner\Webpages\Dashboards`.
 
 1. In the same folder, open the file *web.config*.
 
@@ -60,7 +60,7 @@ When the Dashboards app requests protocols from the server, by default the 100 m
 
 To modify the memory cache size:
 
-1. Open the file *C:\\Skyline DataMiner\\webpages\\Dashboards\\web.config*.
+1. Open the file `C:\Skyline DataMiner\webpages\Dashboards\web.config`.
 
 1. In the web.config file, in the tag configuration.dataminer.clusters.add, add the attribute *memoryCacheSize* and set it to the desired value, as illustrated in the example below:
 

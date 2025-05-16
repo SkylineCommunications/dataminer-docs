@@ -21,7 +21,7 @@ In this tutorial, you will learn how to create a [flow](xref:Using_flows), and u
 
 ## Step 1: Install and open the Flows app
 
-1. Go to the [Tutorial - Flows](https://catalog.dataminer.services/details/4149a3a6-f87d-466e-bf09-1503a5a0dbb5) package in the DataMiner Catalog.
+1. Go to the [Tutorial - Flows](https://catalog.dataminer.services/details/4149a3a6-f87d-466e-bf09-1503a5a0dbb5) package in the Catalog.
 
 1. [Deploy the package](xref:Deploying_a_catalog_item) to your DataMiner System by clicking the *Deploy* button.
 

@@ -45,6 +45,7 @@ Makes it possible to [swarm bookings](xref:SwarmingBookings).
 Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS configuration instead.
 
 - **Minimum version**: 10.4.1<!-- RN 37649 -->
+- **Release version**: 10.5.5/10.5.0 [CU2]<!-- RN 42573 -->
 
 > [!TIP]
 > See also: [Migrating to BrokerGateway](xref:BrokerGateway_Migration)
@@ -61,7 +62,7 @@ Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS
 Enables the Topology app in DataMiner Cube. Note that you also need specific protocol changes in order to benefit from this. See [Topology app configuration](xref:Topology_app_configuration).
 
 - **Minimum version**: 9.6.7
-- **Estimated Release version**: 10.5.5<!-- RN 42221 -->
+- **Release version**: Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!-- RN 42221 -->
 
 ### DataAPI
 

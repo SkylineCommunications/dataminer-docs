@@ -8,7 +8,7 @@ In the file *MaintenanceSettings.xml*, you can specify a number of general syste
 
 - This file is located in the following folder:
 
-    *C:\\Skyline DataMiner\\*
+    `C:\Skyline DataMiner\`
 
 - Before you make changes to this file, always stop DataMiner. Restart DataMiner when your changes have been saved.
 
@@ -57,7 +57,6 @@ This is an example of a *MaintenanceSettings.xml* file:
   <Trending>
     <EDCurves></EDCurves>
     <SDCurves></SDCurves>
-    <TimeSpan1DayRecords window="0" />
     <TimeSpan1HourRecords window="60" />
     <TimeSpan5MinRecords window="5" />
     <WarningLevel></WarningLevel>
@@ -264,7 +263,7 @@ Used to enforce a backup package mechanism on machines running an operating syst
 
 ### DeltCache
 
-Every time a .dmimport package is exported from or imported onto a DataMiner Agent, it is stored in the *C:\\Skyline DataMiner\\System Cache\\DELT\\* folder of that DataMiner Agent. The cleanup instructions for this folder are configured within the *\<DeltCache>* tag.
+Every time a .dmimport package is exported from or imported onto a DataMiner Agent, it is stored in the `C:\Skyline DataMiner\System Cache\DELT\` folder of that DataMiner Agent. The cleanup instructions for this folder are configured within the *\<DeltCache>* tag.
 
 > [!NOTE]
 >
@@ -317,7 +316,7 @@ When you specify multiple conditions, they will be combined into one expression 
 
 ### DELTUpgrades
 
-This tag allows you to configure the automatic cleanup of DELT-related packages in the folder *C:\\Skyline DataMiner\\Upgrades\\*.
+This tag allows you to configure the automatic cleanup of DELT-related packages in the folder `C:\Skyline DataMiner\Upgrades\`.
 
 The tag contains a number of *\<Delete>* subtags, which each specify a particular deletion mode with a *mode* attribute and a corresponding value with a *value* attribute.
 
@@ -422,11 +421,27 @@ Default timeout: 30000 milliseconds
 
 In this tag, you can specify the maximum size (in MB) of the DataMiner recycle bin.
 
+From DataMiner 10.5.5/10.6.0 onwards<!--RN 40565-->, the system checks every 7 minutes whether storage limits have been exceeded. If the system detects a breach, it performs a cleanup on the recycle bin to restore the storage within acceptable limits. The cleanup continues until both of the following conditions are met:
+
+- The folder size is below the set limit (default: 100 MB).
+
+- The number of files is below the set limit (default: 1000).
+
+If either of these conditions is breached, the system will continue to clean up until the folder size is within the configured limit and the number of files is reduced to 80% of whichever number is lower: the maximum allowed number of files or the current number of files at the time of cleanup.
+
+Examples:
+
+- In a system with a limit of maximum 1000 files, there are 1010 files, so the file limit is exceeded, but the folder size is still within the limit. In this case, The system will clean up until only 80% of the maximum allowed number of files remain (i.e. 80% of 1000 = 800 files). Since 210 files are deleted, the folder size will automatically decrease as well.
+
+- In a system with a limit of maximum 1000 files, there are 600 files, but a large file has caused the folder size to exceed the limit (i.e. 105 MB while the limit is 100 MB). In this case, the system will clean up until only 80% of the current number of files remain (i.e. 80% of 600 = 480 files). If necessary, the system will continue the cleanup process until the folder size is within the configured size limit of 100 MB.
+
+This cleanup occurs for the first time two minutes after DataMiner startup. Prior to DataMiner 10.5.5/10.6.0, the recycle bin is cleaned to the maximum size and number of files every hour.
+
 > [!NOTE]
 >
 > - Whatever the maximum size specified in this tag, the maximum number of files in the recycle bin is limited to 5000.
 > - The default recycle bin size is 100 MB.
-> - The recycle bin is cleaned to the maximum size and number of files every hour.
+> - From DataMiner 10.5.5/10.6.0 onwards<!--RN 40565-->, if the recycle bin size is set to 0 MB or an invalid size, it will revert to the default value of 100 MB.
 
 ### Replication.ConnectionMinDelayBeforeRetry
 
@@ -531,7 +546,7 @@ This deprecated tag was used to specify the maximum number of trend graphs that 
 
 In the *TimeSpan1DayRecords* tag, you can customize the interval of the 1-day "average trending" records. To do so, specify a *window* attribute value in minutes.
 
-Not active by default.
+By default, this is not included. If you do include this tag, make sure to not set it to "0", as this configuration is invalid and would lead to issues.
 
 > [!NOTE]
 > If you are looking to configure how long these records need to be stored, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).

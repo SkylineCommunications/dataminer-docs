@@ -4,7 +4,9 @@ uid: GetServiceTemplate
 
 # GetServiceTemplate
 
-Use this method to retrieve an existing service template. Available from DataMiner 10.2.1/10.3.0 onwards.
+Use this method to retrieve an existing service template.
+
+Available from DataMiner 10.2.1/10.3.0 onwards.
 
 ## Input
 

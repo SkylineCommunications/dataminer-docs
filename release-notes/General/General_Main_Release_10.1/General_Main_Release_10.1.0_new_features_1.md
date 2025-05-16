@@ -411,7 +411,7 @@ recursivefullfilter=(1002 > 0)
 
 #### Support for icons in SVG format \[ID 24841\]
 
-In function protocols and the *C:\\Skyline DataMiner\\Icons\\CustomIcons.xml* file, icons can now also be defined in SVG format.
+In function protocols and the `C:\Skyline DataMiner\Icons\CustomIcons.xml` file, icons can now also be defined in SVG format.
 
 Also, the default function icon has been updated.
 
@@ -819,7 +819,7 @@ protocol.NotifyDataMiner(182 /*NT_DELETE_FOLDER*/, folderName, bRecycle);
 ```
 
 > [!NOTE]
-> If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the *C:\\Skyline DataMiner\\Documents\\* folder. So, in the example above, the function will try to delete the *C:\\Skyline DataMiner\\Documents\\Configurations* folder. If you want it to delete the *C:\\Skyline DataMiner\\Configurations* folder, then you have to specify the full path.
+> If a relative path is passed to the NT_DELETE_FOLDER function, it will assume it to be relative to the `C:\Skyline DataMiner\Documents\` folder. So, in the example above, the function will try to delete the `C:\Skyline DataMiner\Documents\Configurations` folder. If you want it to delete the `C:\Skyline DataMiner\Configurations` folder, then you have to specify the full path.
 
 #### Authentication via a client certificate when polling an HTTPS server \[ID 25243\]
 

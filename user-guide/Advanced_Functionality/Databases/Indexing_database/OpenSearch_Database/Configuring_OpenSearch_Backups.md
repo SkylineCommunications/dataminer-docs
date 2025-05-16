@@ -305,7 +305,7 @@ You have now finished configuring an OpenSearch backup.
    }
    ```
 
-   - "dbprefix": The prefix specified in the *DB* tag for the indexing database in the *DB.xml* file (in the folder *C:\Skyline DataMiner\\*)
+   - "dbprefix": The prefix specified in the *DB* tag for the indexing database in the *DB.xml* file (in the folder `C:\Skyline DataMiner\`)
 
      > [!NOTE]
      > To find the prefix DataMiner puts in front of an index name, enter `http://[IP address]:9200/_cat/indices` in your browser's address bar. Replace "[IP address]" with your IP address.

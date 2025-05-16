@@ -13,7 +13,7 @@ Estimated duration: 20 minutes.
 
 ## Prerequisites
 
-- A DataMiner System that is [connected to dataminer.services](https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connecting_your_DataMiner_System_to_the_cloud.html).
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - Make sure the [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface) soft-launch option is enabled. See [Soft-launch options](xref:SoftLaunchOptions).
 
 > [!TIP]
@@ -29,7 +29,7 @@ Estimated duration: 20 minutes.
 
 To deploy the package:
 
-1. Go to the [Kata DCF package](https://catalog.dataminer.services/details/1b2baca9-9fa6-4a62-84c1-69e836612a8e) in the DataMiner Catalog.
+1. Go to the [Kata DCF package](https://catalog.dataminer.services/details/1b2baca9-9fa6-4a62-84c1-69e836612a8e) in the Catalog.
 
 1. Deploy the latest version of the package on your DMA using the *Deploy* button.
 
@@ -85,7 +85,7 @@ To deploy the package:
 
    1. Right-click the *VISUAL* page, select *Set as active Visio file* > *Existing*, and select the file **kata_dcf_view.vsdx**.
 
-      If you cannot see that Visio file listed in the window, click *Other file* and browse to the folder *C:\Skyline DataMiner\Views*. You will be able to select the file there. If you do not have access to this folder, restarting the DMA will also make the Visio file become available in the window.
+      If you cannot see that Visio file listed in the window, click *Other file* and browse to the folder `C:\Skyline DataMiner\Views`. You will be able to select the file there. If you do not have access to this folder, restarting the DMA will also make the Visio file become available in the window.
 
       > [!TIP]
       > See also: [Editing a Visual Overview in DataMiner Cube](xref:Editing_a_visual_overview_in_DataMiner_Cube).

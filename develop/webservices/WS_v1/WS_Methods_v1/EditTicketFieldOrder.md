@@ -7,7 +7,7 @@ uid: EditTicketFieldOrder
 Use this method to edit the order of the ticket fields for a specific ticket type (called “domain” in the Ticketing app).
 
 > [!NOTE]
-> DataMiner Ticketing requires a Cassandra database as well as a specific license. From DataMiner 10.0.13 onwards, it also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
+> DataMiner Ticketing requires a Cassandra database as well as a specific license. <!-- From DataMiner 10.0.13 onwards, -->It also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
 
 > [!CAUTION]
 >

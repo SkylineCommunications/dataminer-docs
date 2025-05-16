@@ -18,7 +18,7 @@ In the file *DB.xml*, you can specify the configuration data for several databas
   > [!TIP]
   > See also: [Inventory & Asset Management](xref:About_DMS_Inventory_Asset_Management)
 
-This file is located in the folder *C:\\Skyline DataMiner\\*.
+This file is located in the folder `C:\Skyline DataMiner\`.
 
 Before you make changes to this file, always **stop DataMiner**. Restart DataMiner when your changes have been saved.
 
@@ -105,7 +105,7 @@ In the example above, the parameter data will be kept in the *rep_pd_info* table
 
 In the *Database* tag, you can use the **slowquery** attribute to configure slow query log settings for the database in question. A separate log will then be kept with all database queries that take longer than the configured number of seconds:
 
-- The log file is kept in the following location: *C:\\Skyline DataMiner\\Logging\\SLDatabase_SlowQuery\[ProcessName\].txt*
+- The log file is kept in the following location: `C:\Skyline DataMiner\Logging\SLDatabase_SlowQuery[ProcessName].txt`
 
 - Each log entry has the following syntax: *Date Time \| ThreadId \| DatabaseName \| QueryTime \| Query*
 
@@ -233,7 +233,7 @@ When the main database is offline, file offloads are used to store write/delete 
 
 To configure this size limit:
 
-1. Open the file *DB.xml* in the folder *C:\\Skyline DataMiner\\*.
+1. Open the file *DB.xml* in the folder `C:\Skyline DataMiner\`.
 
 1. Configure the file with a *FileOffloadConfiguration* element with the desired maximum size (in MB), as illustrated below:
 
@@ -402,7 +402,7 @@ To do so:
 
 1. Stop the DMA.
 
-1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder `C:\Skyline DataMiner\`).
 
 1. In the offload database's *\<offload>* tag containing *local="dataavg"*, add the option *oldstyle="true"*.
 
@@ -426,7 +426,7 @@ To support the offload of files to a file cache instead of to a MySQL, MSSQL, or
 
 1. Stop the DMA.
 
-1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder `C:\Skyline DataMiner\`).
 
 1. If it is not yet present, add the *\<FileCache>* tag under the *\<Database>* tag for the offload database.
 
@@ -435,7 +435,7 @@ To support the offload of files to a file cache instead of to a MySQL, MSSQL, or
    For example:
 
    ```xml
-   <DataBase active="true" local = "false">
+   <DataBase active="true" local="false" type="MySQL">
     <FileCache enabled="true">
     <MaxSizeKB>10000</MaxSizeKB>
     </FileCache>
@@ -525,7 +525,7 @@ To define a different port:
 
 1. Stop the DMA.
 
-1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder `C:\Skyline DataMiner\`).
 
 1. In the \<DBServer> element for the indexing database, add a colon after the hostname or IP and specify the port.
 
@@ -536,7 +536,7 @@ To define a different port:
    ```
 
    > [!NOTE]
-   > The port specified in *DB.xml* must always be the same as the port defined in the configuration of the indexing database. For Elasticsearch, this configuration is by default located in the folder *C:\\Program Files\\Elasticsearch\\config\\elasticsearch.yml*.
+   > The port specified in *DB.xml* must always be the same as the port defined in the configuration of the indexing database. For Elasticsearch, this configuration is by default located in the folder `C:\Program Files\Elasticsearch\config\elasticsearch.yml`.
 
 1. Save the file and restart the DMA.
 
@@ -548,7 +548,7 @@ To do so:
 
 1. Stop the DMA.
 
-1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder `C:\Skyline DataMiner\`).
 
 1. In the *DB* element for the indexing database, specify the custom prefix. Keep in mind that only regular alphanumeric characters are supported for the prefix, not symbols. The specified value must be the same for each OpenSearch cluster defined in *DB.xml*.
 
@@ -562,7 +562,7 @@ To do so:
 
 1. Stop the DMA.
 
-1. Open the file *DB.xml* (in the folder *C:\\Skyline DataMiner\\*).
+1. Open the file *DB.xml* (in the folder `C:\Skyline DataMiner\`).
 
 1. In the *UID* and *PWD* elements below the Elasticsearch *Database* tag (which is also used for OpenSearch), specify the username and password, respectively.
 

@@ -6,7 +6,7 @@ uid: GetSLAElementConfiguration
 
 Use this method to retrieve the configuration for a specified SLA element.
 
-Available from DataMiner 9.0.5 onwards.
+<!-- Available from DataMiner 9.0.5 onwards. -->
 
 ## Input
 

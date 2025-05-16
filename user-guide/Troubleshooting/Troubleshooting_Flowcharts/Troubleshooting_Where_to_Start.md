@@ -56,7 +56,7 @@ If there is insufficient disk space, free up disk space, reboot the server, and 
 
 ### Check DataMiner CrashDump and MiniDump folders
 
-Check if new files are present in the folder ***C:\Skyline DataMiner\logging\CrashDump***. Files are created in this folder when an unexpected disappearance of a DataMiner process occurs.
+Check if new files are present in the folder `C:\Skyline DataMiner\logging\CrashDump`. Files are created in this folder when an unexpected disappearance of a DataMiner process occurs.
 
 Note the names of the processes if there are any. If a crash dump is saved correctly, you will have details on the exception that occurred in the ***ERRORLOG.TXT*** file inside the package.
 
@@ -64,7 +64,7 @@ Example:
 
 ![ERRORLOGTXT](~/user-guide/images/ERRORLOGTXT.png)
 
-Also check if new files are present in ***C:\Skyline DataMiner\logging\MiniDump***. Files are created in this folder when a process disappearance or a run-time error is detected by the SLWatchDog process.
+Also check if new files are present in `C:\Skyline DataMiner\logging\MiniDump`. Files are created in this folder when a process disappearance or a run-time error is detected by the SLWatchDog process.
 
 The minidump is a copy of all DataMiner log files saved at the moment a problem is detected by SLWatchDog. It should not be confused with a crash dump and a memory dump, which are snapshots of memory allocated by a certain process.
 

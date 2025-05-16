@@ -31,7 +31,7 @@ To configure the component:
 
    - For a table parameter, an *indices* filter is supported.
 
-   - In a system using Service & Resource Management, you can add resources as data to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time. See [Service and Resource Management](xref:SRM#service-and-resource-management).
+   - In a system using [Service and Resource Management](xref:About_SRM), you can add resources as data to make the graph display the resource capacity parameters as a stacked trend chart. If you then click the chart and select a point in time, the legend lists all bookings for that specific point in time.
 
    - From DataMiner 10.2.0/10.1.3 onwards, a parameter table filter is supported if the URL option showAdvancedSettings=true is used. This type of filter supports both VALUE and FULLFILTER syntax. For more information on this syntax, see [Dynamic table filter syntax](xref:Dynamic_table_filter_syntax).
 
@@ -114,7 +114,7 @@ To configure the component:
 
    - *Styling and Information* > *Expand legend initially*: Select this option to immediately show the trend legend in the component. Otherwise, the legend section is initially collapsed, and you can display it using the arrow icon next to the graph.
 
-   - *Styling and Information* > *Hide non-trended parameters*: Determines whether parameters are shown in the legend of the graph if they have no trend data available. If the option is selected, these parameters are hidden. By default, it is not selected in the most recent DataMiner versions, but it is selected by default prior to DataMiner 10.3.9/10.4.0<!-- RN 36869 -->. Prior to DataMiner 10.3.0/10.2.12, this option is named *Hide parameters without trend data in the legend*.
+   - *Styling and Information* > *Hide non-trended parameters*: Determines whether parameters are shown in the legend of the graph if they have no trend data available. If the option is selected, these parameters are hidden. This option is enabled by default. However, note that it is disabled by default from DataMiner 10.3.9/10.4.0 up to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4.<!--RN 36869 + 42532--> Prior to DataMiner 10.3.0/10.2.12, this option is named *Hide parameters without trend data in the legend*.
 
      > [!NOTE]
      > Prior to DataMiner 10.3.9/10.4.0, when a line chart component used element table column parameters as data and indices as filter, it would cross-match indices across the unique elements associated with the table column parameters. This behavior is prevented by disabling the *Hide non-trended parameters* option, enhancing the performance of these visualizations.

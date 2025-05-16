@@ -6,11 +6,13 @@ keywords: element wizard
 
 # Adding elements
 
-You can follow the steps below or watch this short video, which shows you how to [deploy a connector](xref:Deploying_a_catalog_item) from the DataMiner Catalog and provides instructions on creating an example element:
+You can follow the steps below or watch this short video, which shows you how to [deploy a connector](xref:Deploying_a_catalog_item) from the Catalog and provides instructions on creating an example element:
 
-<video width="800" height="450" controls>
-  <source src="~/user-guide/images/CreatingaDataMinerElement.mp4" type="video/mp4">
-</video>
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/user-guide/images/CreatingaDataMinerElement.mp4" type="video/mp4">
+  </video>
+</div>
 
 1. [Open DataMiner Cube](xref:Using_the_desktop_app).
 
@@ -153,7 +155,7 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - **Run in isolation mode**: Available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->. Select this checkbox if you want the element to be run in isolation mode. See [Adding elements in isolation mode](#adding-elements-in-isolation-mode).
 
-   - **Block Swarming**: Available from 10.5.5/10.6.0 onwards<!--RN 42535-->. See [Blocking elements from being swarmed](xref:SwarmingElements#blocking-elements-from-being-swarmed).
+   - **Block Swarming**: Available from 10.5.5/10.6.0 onwards<!--RN 42535 + 42536-->. See [Blocking elements from being swarmed](xref:SwarmingElements#blocking-elements-from-being-swarmed).
 
    - **Element state**: Select the initial state of the element in this selection box. By default this will be set to “Active”.
 

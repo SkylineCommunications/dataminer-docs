@@ -15,7 +15,7 @@ The settings that control the data being displayed have to be configured in *Mai
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml.*
+1. Open the file `C:\Skyline Dataminer\MaintenanceSettings.xml`.
 
 1. In the *Surveyor* tag, configure the *ViewStatistics*, *ServiceStatistics* and *ElementStatistics* subtags.
 

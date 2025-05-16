@@ -8,7 +8,7 @@ When an SNMPv3 trap or inform message is received that cannot be processed, for 
 
 1. Stop the DataMiner software.
 
-1. Open *C:\\Skyline DataMiner\\DataMiner.xml*.
+1. Open `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<SNMPv3>* tag, add the attribute *generateNoticeOnIncorrectTrapReceived* and set it to "true".
 
