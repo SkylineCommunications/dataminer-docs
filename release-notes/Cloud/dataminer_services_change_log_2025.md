@@ -11,16 +11,17 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 16 May 2025 - Enhancement - Catalog - Catalog item market
 
-On the details page of a catalog item, users will now be able to see the market for which the item is intended.
+On the details page of a Catalog item, users will now be able to see the market for which the item is intended.
 
 ### 16 May 2025 - Enhancement - Admin - DMS overview links to DxM page
 
-Links that direct to the DxM page on the DMS overview page in Admin will now open the link in the current tab of the browser instead of opening a new tab.
+Links that direct to the DxM page on the DMS overview page in the Admin app will now open the link in the current tab of the browser instead of opening a new tab.
 
 ### 16 May 2025 - Enhancement - Unauthenticated views
 
 Applications on *.dataminer.services will now support an unauthenticated view and navigate to the root page of the application when the user session expires or the user signs out.
-Additionally on dataminer.services the loading animations have been improved and the admin application will no be shown in available applications when the user is not signed in.
+
+Additionally, the loading animations on dataminer.services have been improved, and the Admin app will no be shown in available applications when the user is not signed in.
 
 ### 14 May 2025 - Fix - Invalid token after silent renew
 
