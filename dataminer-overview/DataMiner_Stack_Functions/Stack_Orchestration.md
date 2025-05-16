@@ -66,7 +66,7 @@ DataMiner Scheduler provides a wealth of features and capabilities, including bu
 > - Various Scheduler-related videos are available in the [video library](https://community.dataminer.services/videos?_sf_s=schedule) ![Video](~/user-guide/images/video_Duo.png)
 > - Various Scheduler use cases with screenshots are available in the [use case library](https://community.dataminer.services/use-cases/?_sf_s=scheduler)
 > - [Free DataMiner Orchestration and Automation training](https://community.dataminer.services/learning/courses/orchestration-automation/)
-> - [DataMiner Scheduler user guide](xref:scheduler)
+> - [DataMiner Scheduler](xref:scheduler)
 
 ## Job Manager
 
@@ -80,7 +80,7 @@ The DataMiner Job Manager can be used to create and manage jobs, which are then 
 > - [Watch how it works: from event creation to live event monitoring.](https://community.dataminer.services/event-job-management-dataminer-covers-your-complete-media-service-supply-chain/) This demo series consists of 8 chronological videos demonstrating how DataMiner can manage events and jobs in any media service supply chain.
 > - [Production Event Management: From job to booking](https://community.dataminer.services/video/production-event-management-1-5-from-job-to-booking/). This 5-part demo about managing and orchestrating live productions in a more efficient way covers the complete workflow: from scheduling a production and gathering all data that is required for that production to making reservations for people, incoming signals, media assets, and production equipment. Linked to this, you will also find an 8-part use case with many screenshots.
 > - Videos related to Job Manager in the [video library](https://community.dataminer.services/videos?_sf_s=Job) ![Video](~/user-guide/images/video_Duo.png)
-> - [Job Manager user guide](xref:jobs)
+> - [Job Manager](xref:jobs)
 
 ## Automation Engine
 
@@ -103,7 +103,7 @@ Combined with DataMiner's integrated [Scheduler](xref:Stack_Orchestration#schedu
 > - Various Automation-related videos are available in the [video library](https://community.dataminer.services/videos/?_sf_s=automation), including a 60-min. [Experts & Insights webinar](https://community.dataminer.services/video/experts-insights-dataminer-automation-engine/) ![Video](~/user-guide/images/video_Duo.png)
 > - Various SRM use cases with screenshots are available in the [SRM use case library](https://community.dataminer.services/use-cases/?_sf_s=SRM)
 > - [Free Orchestration and Automation training](https://community.dataminer.services/learning/courses/orchestration-automation/)
-> - [Automation user guide](xref:automation)
+> - [Automation](xref:automation)
 
 ## Apps
 
@@ -114,9 +114,9 @@ A typical example as part of the automation and orchestration stack is the Booki
 > [!TIP]
 > For more information:
 >
-> - [Booking Manager app](xref:Booking_Manager_user_interface) in the DataMiner User Guide
-> - [DataMiner frameworks](xref:DataMiner_Frameworks) in the DataMiner User Guide
-> - [DataMiner apps](https://community.dataminer.services/dataminer-apps/) on DataMiner Dojo Community
+> - [Booking Manager app](xref:Booking_Manager_user_interface)
+> - [DataMiner frameworks](xref:DataMiner_Frameworks)
+> - [DataMiner apps](https://community.dataminer.services/dataminer-apps/)
 
 ## Profile Manager
 
@@ -127,7 +127,7 @@ Configure complex resources repeatedly and reliably.
 >
 > - [Profile Manager explained](https://community.dataminer.services/profile-manager/)
 > - [Overview of the 4 SRM use cases and SRM stack](https://community.dataminer.services/service-resource-management/)
-> - [Service and Resource Management user guide](xref:About_SRM)
+> - [Service and Resource Management](xref:About_SRM)
 
 ## Resource Manager
 
@@ -138,4 +138,4 @@ Off-the-shelf component to streamline and standardize the management of your res
 >
 > - [Resource Manager explained](https://community.dataminer.services/resource-manager/)
 > - [Overview of the 4 SRM use cases and SRM stack](https://community.dataminer.services/service-resource-management/)
-> - [Service and Resource Management user guide](xref:About_SRM)
+> - [Service and Resource Management](xref:About_SRM)

@@ -43,9 +43,9 @@ The design of this powerful module in DataMiner provides a variety of strategic 
 >
 > For more information:
 >
-> - [Keeping an eye on SLA data with DataMiner](https://www.youtube.com/watch?v=u-fxWo3DGYo&ab_channel=DataMinerbySkylineCommunications)
-> - [Learn to Configure Your SLAs](https://www.youtube.com/watch?v=c_9tAupBP_4&ab_channel=DataMinerbySkylineCommunications)
-> - [DataMiner Business Intelligence User Guide](xref:sla)
+> - [Keeping an eye on SLA data with DataMiner](https://www.youtube.com/watch?v=u-fxWo3DGYo&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
+> - [Learn to Configure Your SLAs](https://www.youtube.com/watch?v=c_9tAupBP_4&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
+> - [DataMiner Business Intelligence](xref:sla)
 
 ## Service Monitoring
 
@@ -60,10 +60,10 @@ DataMiner monitors service compliance and quality at any point in the infrastruc
 > [!TIP]
 > For more information:
 >
-> - Demo video: [DataMiner Services Explained](https://community.dataminer.services/video/dataminer-services-explained/)
-> - Advanced video: [DataMiner service templates](https://community.dataminer.services/video/service-templates/)
-> - Video: [Service-Aware Confidence Monitoring](https://www.youtube.com/watch?v=f0Z581xPrI4&ab_channel=DataMinerbySkylineCommunications)
-> - User Guide: [Services and service templates](xref:About_services)
+> - Demo video: [DataMiner Services Explained](https://community.dataminer.services/video/dataminer-services-explained/) ![Video](~/user-guide/images/video_Duo.png)
+> - Advanced video: [DataMiner service templates](https://community.dataminer.services/video/service-templates/) ![Video](~/user-guide/images/video_Duo.png)
+> - Video: [Service-Aware Confidence Monitoring](https://www.youtube.com/watch?v=f0Z581xPrI4&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
+> - [Services and service templates](xref:About_services)
 
 ## Element Management
 

@@ -18,7 +18,7 @@ Select or create an Automation script, and with only a few clicks, you can publi
 > For more information:
 >
 > - [DataMiner User-Defined APIs - Solution Use Case](https://community.dataminer.services/use-case/dataminer-user-definable-apis-webhooks/)
-> - User Guide: [User-Defined APIs](xref:UD_APIs).
+> - [User-Defined APIs](xref:UD_APIs).
 
 ## Northbound APIs
 
