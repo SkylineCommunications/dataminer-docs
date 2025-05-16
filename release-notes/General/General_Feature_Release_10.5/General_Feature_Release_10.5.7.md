@@ -148,6 +148,14 @@ When a service was migrated from one DMA to another within the same DMS, in some
 
 From now on, the message ordering the deletion of a service will always be sent to the DMA that is hosting the service. That DMA will then forward the message to the other DMAs within the cluster.
 
+#### Service & Resource Management: Enhanced retrieval of service definitions [ID 42810]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving service definitions.
+
+Also, SLNet and SLDataGateway will now exchange data faster thanks to the use of protobuf serialization.
+
 #### Enhanced performance when upgrading BrokerGateway [ID 42812]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
