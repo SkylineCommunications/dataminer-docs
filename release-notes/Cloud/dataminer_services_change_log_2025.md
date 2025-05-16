@@ -11,8 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 14 May 2025 - Fix - Invalid token after silent renew
 
-When a user session is silently renewed, the token could become invalid causing the application to go in an invalid state preventing user actions to complete.
-Tokens should now correctly be renewed and not block application actions.
+When a user session was silently renewed, the token could become invalid, causing the application to go into an invalid state that made it impossible to complete user actions. Tokens should now be correctly renewed and not block application actions.
 
 ### 14 May 2025 - Fix - Admin - DxM updates giving false positives
 
