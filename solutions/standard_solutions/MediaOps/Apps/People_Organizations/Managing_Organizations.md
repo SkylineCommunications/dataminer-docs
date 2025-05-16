@@ -14,7 +14,7 @@ You can switch between the *Overview* and *List* tabs by clicking *Overview* and
 
   ![Overview page](~/user-guide/images/PO_Organizations_Overview_Example.png)
 
-- The *List* tab provides an **overview of all organizations**, along with their state, number of members, and organization category. This tab allows you to access and review organization details in one centralized location. It also provides an efficient way to [filter through the list of organizations](#searching-within-the-list-of-organizations) based on the provided information.
+- The *List* tab provides an **overview of all organizations**, along with their state, number of members, and organization category. This tab allows you to access and review organization details in one centralized location. It also provides an efficient way to filter through the list of organizations based on the provided information.
 
 ## Adding a new organization
 

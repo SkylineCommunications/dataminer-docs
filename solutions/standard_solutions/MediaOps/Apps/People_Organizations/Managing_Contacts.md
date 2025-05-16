@@ -14,7 +14,7 @@ You can switch between the *Overview* and *List* tabs by clicking *Overview* and
 
   ![Overview page](~/user-guide/images/PO_People_Overview_Example.png)
 
-- The *List* tab provides an **overview of all contacts**, along with their state, email address, skill, experience level, and organization name. This tab allows you to access and review contact details in one centralized location. It also provides an efficient way to [filter through the list of contacts](#searching-within-the-list-of-contacts) based on the provided contact information.
+- The *List* tab provides an **overview of all contacts**, along with their state, email address, skill, experience level, and organization name. This tab allows you to access and review contact details in one centralized location. It also provides an efficient way to filter through the list of contacts based on the provided contact information.
 
   To obtain more information about a specific contact, click the ![Details](~/user-guide/images/PO_Details.png) button in the corresponding row of the list.
 
@@ -95,7 +95,7 @@ On both the *Overview* and *List* tabs, you can access the *Experience* panel by
 
 ![Header bar](~/user-guide/images/PO_Experience_Header_Bar.png)
 
-The *Experience* panel provides an overview of all experience entries, with options to [edit](#editing-an-experience-entry) them or [create new ones](#adding-a-new-experience-entry).
+The *Experience* panel provides an overview of all experience entries, with options to edit them or create new ones.
 
 [Assigning experience to individuals](#assigning-experience) streamlines the booking process by making it easier to match people with tasks that suit their level of expertise.
 
