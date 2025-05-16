@@ -15,8 +15,7 @@ When a user session was silently renewed, the token could become invalid, causin
 
 ### 14 May 2025 - Fix - Admin - DxM updates giving false positives
 
-When an installed DxM version was different than the latest available version, the update message would be shown.
-The update message should not be shown when the installed version is higher or equal to the latest available version.
+When an installed DxM version was different than the latest available version, the update message would be shown, even if the installed version was not lower than the latest available version. This should no longer occur.
 
 ### 12 May 2025 - Fix - Share Management - Problem logging in if shared login is not supported [ID 42918]
 
