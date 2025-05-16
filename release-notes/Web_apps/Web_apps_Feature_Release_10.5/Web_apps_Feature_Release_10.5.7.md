@@ -105,3 +105,9 @@ When a *GetAlarms* call was sent in a JSON request, in some cases, the following
 - Filters in which *StartTime* and *EndTime* were set to 0 would be cached incorrectly, causing problems when the call was sent multiple times over different days since the 0 values would be replaced with "Now" en "End - 1 hour".
 
 - In the result set, the alarms would not always be sorted by *TimeOfArrival* (i.e. the default setting).
+
+#### Dashboards app: Problem after generating PDF reports [ID 42907]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, in some cases, an exception could be thrown after a PDF report had been generated. As a result, channels and sockets would not be cleaned up correctly.
