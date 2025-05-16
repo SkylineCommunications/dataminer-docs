@@ -39,7 +39,7 @@ The AI-powered forecasting functionality automatically learns the behavior and e
 > - [DataMiner Forecasting use case 1](https://community.dataminer.services/use-case/dataminer-forecasting-2/)
 > - [DataMiner Forecasting use case 2](https://community.dataminer.services/use-case/dataminer-forecasting-3/)
 > - Video: [Behold DataMiner AI Trend Forecasting](https://community.dataminer.services/video/behold-dataminer-ai-trend-forecasting/) ![Video](~/user-guide/images/video_Duo.png)
-> - User Guide: [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
+> - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 
 ## Proactive Alarms
 
@@ -52,7 +52,7 @@ The proactive cap detection solution uses the Trend Prediction functionality to 
 >
 > - Course: [Trend prediction and proactive cap detection](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/trend-prediction-and-proactive-cap-detection/)
 > - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Proactive Cap Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
-> - User Guide: [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
+> - [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
 
 ## Pattern Detection
 
@@ -71,8 +71,8 @@ Based on AI pattern matching algorithms, instances of tagged patterns are automa
 > - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Automated Tagging, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - Blog post about [Pattern Matching in DataMiner 10.1](https://community.dataminer.services/pattern-matching-10-1-update/)
 > - Blog post about [Multivariate Pattern Matching](https://community.dataminer.services/using-the-power-of-multivariate-patterns-to-add-context-to-your-trend-graphs/)
-> - User Guide: [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
-> - User Guide: [Working with pattern matching](xref:Working_with_pattern_matching)
+> - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
+> - [Working with pattern matching](xref:Working_with_pattern_matching)
 
 ## Change Point Detection
 
@@ -86,7 +86,7 @@ DataMiner’s change point detection solution automatically identifies both abru
 > - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Change Point Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - Blog post about [Automatic Detection of Frozen States](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states)
 > - Blog post about [User Feedback on Behavioral Anomalies](https://community.dataminer.services/enhance-your-dataminer-experience-with-anomaly-feedback/).
-> - User Guide: [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
+> - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 
 ## Anomaly Detection
 
@@ -99,9 +99,9 @@ An anomaly significance scoring mechanism augments the change point detection so
 >
 > - Course: [Behavioral Anomaly Detection](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/behavioral-anomaly-detection/)
 > - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Anomaly Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
-> - User Guide: [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
-> - User Guide: [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
-> - See also: [Kata #12: Automatically detect anomalies with DataMiner](https://community.dataminer.services/courses/kata-12/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
+> - [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
+> - [Kata #12: Automatically detect anomalies with DataMiner](https://community.dataminer.services/courses/kata-12/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Incident Identification
 
@@ -115,7 +115,7 @@ The Automatic Incident Tracking feature autonomously learns about system behavio
 > - Course: [Incident Tracking](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/incident-tracking/)
 > - Video: [Focus on the Root of Issues with Incident Analysis](https://community.dataminer.services/video/finding-the-root-of-problems-with-dataminer-incident-analysys/) ![Video](~/user-guide/images/video_Duo.png)
 > - Blog post about [Automatic Incident Detection](https://community.dataminer.services/tweak-automatically-detected-incidents-with-dataminer-10-2-5/)
-> - User Guide: [Automatic Incident Tracking](xref:Automatic_incident_tracking)
+> - [Automatic Incident Tracking](xref:Automatic_incident_tracking)
 
 ## Focus Alarms
 
@@ -128,7 +128,7 @@ Focus alarms only show the "unexpected" alarms and ignore recurring alarms due t
 > For more information:
 >
 > - Course: [Focus Alarms](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/alarm-focus/)
-> - User Guide: [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus)
+> - [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus)
 
 ## Relationship Learning
 
@@ -139,7 +139,8 @@ Get insights based on learned relations between the numerous integrated metrics.
 >
 > - Course: [Related parameters](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/related-parameters/)
 > - Blog post about [The power of insights](https://community.dataminer.services/dataminer-10-3-gives-you-the-power-of-insights/)
-> - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph) and  [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
+> - [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
+> - [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
 
 ## Visual cues for operators
 
@@ -152,7 +153,7 @@ Gain valuable insights with ease. Tagged patterns and anomalies provide context 
 >
 > - Course: [Time-scoped relations](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/time-scoped-relations/)
 > - Course: [Trend icons](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/trend-icons/)
-> - User Guide: [Working with trend icons](xref:Working_with_trend_icons)
-> - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
-> - User Guide: [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
-> - User Guide: [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature)
+> - [Working with trend icons](xref:Working_with_trend_icons)
+> - [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
+> - [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
+> - [Working with the Alarm Console light bulb feature](xref:Light_Bulb_Feature)
