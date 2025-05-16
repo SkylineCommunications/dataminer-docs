@@ -84,26 +84,6 @@ To configure organization members for an existing organization:
 
 The selected organization members will now appear in the list of members on the *Details* panel.
 
-## Assigning a contract to an organization
-
-To assign a contract to an organization:
-
-1. Navigate to the *List* tab.
-
-1. In the *Contracts* column, click the ![Contracts](~/user-guide/images/PO_Contracts.png) button.
-
-   A panel will appear.
-
-1. Select *+ Assign*.
-
-1. Select the contract you want to assign to the current organization.
-
-1. Click *Ok*.
-
-   The contract will now appear under *Contracts*.
-
-   ![Contract](~/user-guide/images/PO_Contract.png)
-
 ## Deprecating an organization
 
 To deprecate an existing organization:
@@ -118,29 +98,6 @@ To deprecate an existing organization:
 
    > [!NOTE]
    > To access this overview of deprecated organizations at a later point, click *Deprecated* in the header bar of the *List* tab.
-
-## Searching within the list of organizations
-
-To search within the list of organizations:
-
-1. Navigate to the *List* tab.
-
-1. Hover your mouse pointer over the organizations list.
-
-   In the top-right corner of the list, you will see a magnifying glass icon.
-
-1. Click the magnifying glass icon to activate the search bar.
-
-1. Type in your search query.
-
-   You can search based on the *Name* and *Organization category* columns of the organizations list.
-
-   As you type, the list will dynamically update to show organizations that match your search criteria. For example, typing "Retail Chain" will filter and display all organizations that have "Retail Chain" listed as their organization category.
-
-   ![Retail Chain](~/user-guide/images/PO_Search_Organizations_List.png)
-
-> [!NOTE]
-> To clear your search and return to the full list of organizations, delete the text in the search box and click outside of the search box to close it.
 
 ## Managing organization categories
 
