@@ -7,6 +7,15 @@ items:
     - name: dataminer.MediaOps
       topicUid: MediaOps
       items:
+      - name: People & Organizations
+        topicUid: People_Organizations
+        items:
+        - name: Managing contacts
+          topicUid: PO_Managing_Contacts
+        - name: Managing teams
+          topicUid: PO_Managing_Teams
+        - name: Managing organizations
+          topicUid: PO_Managing_Organizations
       - name: Resource Studio
         topicUid: MO_Resource_Studio
         items: 
@@ -14,6 +23,11 @@ items:
           topicUid: RS_Resource_Icons
         - name: Linking resource pools
           topicUid: RS_Linking_Pools
+      - name: Workflow Designer
+        topicUid: MO_Workflow_Designer
+        items:
+          - name: Creating Workflows
+            topicUid: WFD_Creating_Workflows
       - name: Scheduling
         topicUid: MO_Scheduling
         items:
@@ -27,20 +41,6 @@ items:
             topicUid: MO_S_Job_Locking
           - name: Validation of (Upcoming) Jobs
             topicUid: Overview_MediaOps_Validation
-      - name: Workflow Designer
-        topicUid: MO_Workflow_Designer
-        items:
-          - name: Creating Workflows
-            topicUid: WFD_Creating_Workflows
-      - name: People & Organizations
-        topicUid: People_Organizations
-        items:
-        - name: Managing contacts
-          topicUid: PO_Managing_Contacts
-        - name: Managing teams
-          topicUid: PO_Managing_Teams
-        - name: Managing organizations
-          topicUid: PO_Managing_Organizations
       - name: Tutorials
         items: 
         - name: Resource Studio Intro

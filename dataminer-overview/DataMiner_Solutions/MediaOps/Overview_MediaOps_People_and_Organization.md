@@ -21,3 +21,6 @@ The People and Organizations application is a comprehensive solution for managin
 - Integrate with **third-party CRM systems** to exchange (import/export) people and team information.
 
 ![People & Organization app UI](~/dataminer-overview/images/MediaOps_People_Organization.gif)
+
+> [!TIP]
+> For more detailed information about this app, see [People and Organizations app](xref:People_Organizations).

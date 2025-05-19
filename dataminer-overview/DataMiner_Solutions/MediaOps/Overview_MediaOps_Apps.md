@@ -4,11 +4,56 @@ uid: Overview_MediaOps_Apps
 
 # MediaOps apps
 
-dataminer.MediaOps is available on the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
+dataminer.MediaOps is available in the [Catalog](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) as a package containing multiple low-code apps. Using these apps within media operations simplifies the customization of user experiences. For instance, a booking team may opt to view schedule timelines for all tasks, while an MCR team typically prefers a sorted list of tasks, with the earliest upcoming job displayed at the top of the list.
 
 Below is an overview of the out-of-the-box DataMiner applications included in the dataminer.MediaOps installation package.
 
-<!--
+## People and Organizations
+
+![People and Organizations app icon](~/dataminer-overview/images/DM_PeopleOrganizations.png)
+
+Upgrade your business operations with our People and Organizations app. This app simplifies personnel management by enabling you to effortlessly create, edit, and track records for individuals and teams. With features like team booking, optimizing personnel allocation for the right job has never been easier. You can also streamline organization management by overseeing categories, contracts, billing contacts, and company affiliation — all from a single intuitive interface.
+
+For more detailed information about this application, see [People and Organizations application](xref:Overview_MediaOps_People_and_Organization).
+
+## Resource Studio
+
+![Resource Studio app icon](~/dataminer-overview/images/DM_ResourceStudio.png)
+
+The Resource Studio app serves as a comprehensive platform for creating, managing, and optimizing resource utilization. Its key features include the ability to create diverse resources, ranging from network inventory to services and other limited-availability items such as rooms, people, vehicles etc. Users can organize these resources into pools, simplifying workflow and job resource selection. Capabilities and capacities can be assigned to resources, facilitating precise resource allocation based on specific job requirements. Users can also store supplementary information as properties, enhancing the resource management process. Utilization metrics provided by the app offer valuable insights, enabling users to optimize resource deployment and maximize operational efficiency.
+
+For more detailed information on this application, see [Resource Studio application](xref:Overview_MediaOps_Resource_Studio).
+
+## Workflow Designer
+
+![Workflow Designer app icon](~/dataminer-overview/images/DM_WorkflowDesigner.png)
+
+The workflow designer is an operator-level DevOps environment to create technical workflows. In the app, users can define what needs to happen when a connection is created between a source and a destination, when a certain job is executed, when a type of service is delivered, etc. This is done by describing workflows. Each workflow consists of a set of nodes and a set of connections between these nodes. These typically describe how a source signal (virtual signal group) is transported to a destination and how it gets processed in between. These workflows can then be executed ad hoc (from a control surface) or based on a schedule (for example by scheduling a job in the [Scheduling app](#scheduling)).
+
+Additionally, a workflow describes:
+
+- How the nodes in the workflow need to be connected.
+- What automation is run as part of the workflow execution.
+- Whether or not resources and capacity are reserved.
+- If and how the service needs to be monitored.
+
+For more detailed information about this application, see [Workflow Designer application](xref:Overview_MediaOps_Workflow_Designer).
+
+## Scheduling
+
+![Scheduling app icon](~/dataminer-overview/images/MediaOps_ICON_7.png)
+
+The Scheduling application is a comprehensive solution for the scheduling and orchestration of resources and workflows. Using a job, users can easily schedule specific resources, request a resource for a given pool of resources, schedule an entire workflow, or a combination of each of the options. The full life cycle of a job can be managed with tools created for requestors, booking teams, or operational teams.
+
+Among others, the app includes the following features:
+
+- Tracking information about a job, including who is requesting it, when the job starts and ends, and job priorities.
+- Guaranteeing that a resource used in a job is available for the scheduled time.
+- Easily spotting when a job needs additional input prior to the job's start.
+- Generating cost and billing information based on assign contracts and actual usage of the resource.
+
+For more detailed information about this application, see [Scheduling application](xref:Overview_MediaOps_Scheduling).
+
 <!--
 ## Virtual Signal Groups
 
@@ -55,39 +100,7 @@ The goal of the Flow Monitoring app is to provide visibility on the path of all 
 - **As-is flow paths** show the flows as reported by the elements in the DataMiner System. These therefore reflect the actual current state of the flows in the network. These can then be compared to the as-engineered paths to see if the actual state of the network corresponds to the desired state. To be able to reconstruct the as-is path, elements in the path need to report the incoming and outgoing flows on the underlying product in a standardized format. This is therefore only supported for elements that are integrated with the MediaOps solution.
 
 For more detailed information about this application, see [Flow Monitoring application](xref:Overview_MediaOps_Flow_Monitoring).
--->
 
-## Scheduling
-
-![Scheduling app icon](~/dataminer-overview/images/MediaOps_ICON_7.png)
-
-The Scheduling application is a comprehensive solution for the scheduling and orchestration of resources and workflows. Using a job, users can easily schedule specific resources, request a resource for a given pool of resources, schedule an entire workflow, or a combination of each of the options. The full life cycle of a job can be managed with tools created for requestors, booking teams, or operational teams.
-
-Among others, the app includes the following features:
-
-- Tracking information about a job, including who is requesting it, when the job starts and ends, and job priorities.
-- Guaranteeing that a resource used in a job is available for the scheduled time.
-- Easily spotting when a job needs additional input prior to the job's start.
-- Generating cost and billing information based on assign contracts and actual usage of the resource.
-
-For more detailed information about this application, see [Scheduling application](xref:Overview_MediaOps_Scheduling).
-
-## Workflow Designer
-
-![Workflow Designer app icon](~/dataminer-overview/images/DM_WorkflowDesigner.png)
-
-The workflow designer is an operator-level DevOps environment to create technical workflows. In the app, users can define what needs to happen when a connection is created between a source and a destination, when a certain job is executed, when a type of service is delivered, etc. This is done by describing workflows. Each workflow consists of a set of nodes and a set of connections between these nodes. These typically describe how a source signal (virtual signal group) is transported to a destination and how it gets processed in between. These workflows can then be executed ad hoc (from a control surface) or based on a schedule (for example by scheduling a job in the [Scheduling app](#scheduling)).
-
-Additionally, a workflow describes:
-
-- How the nodes in the workflow need to be connected.
-- What automation is run as part of the workflow execution.
-- Whether or not resources and capacity are reserved.
-- If and how the service needs to be monitored.
-
-For more detailed information about this application, see [Workflow Designer application](xref:Overview_MediaOps_Workflow_Designer).
-
-<!--
 ## Cost and Billing
 
 ![Cost and Billing app icon](~/dataminer-overview/images/cost-billing-dm-logo.png)
@@ -102,19 +115,3 @@ The **Currencies** module efficiently manages multiple currencies. This function
 
 For more detailed information about this application, see [Cost and Billing application](xref:Overview_MediaOps_Cost_and_Billing).
 -->
-
-## People and Organizations
-
-![People and Organizations app icon](~/dataminer-overview/images/DM_PeopleOrganizations.png)
-
-Upgrade your business operations with our People and Organizations app. This app simplifies personnel management by enabling you to effortlessly create, edit, and track records for individuals and teams. With features like team booking, optimizing personnel allocation for the right job has never been easier. You can also streamline organization management by overseeing categories, contracts, billing contacts, and company affiliation — all from a single intuitive interface.
-
-For more detailed information about this application, see [People and Organizations application](xref:Overview_MediaOps_People_and_Organization).
-
-## Resource Studio
-
-![Resource Studio app icon](~/dataminer-overview/images/DM_ResourceStudio.png)
-
-The Resource Studio app serves as a comprehensive platform for creating, managing, and optimizing resource utilization. Its key features include the ability to create diverse resources, ranging from network inventory to services and other limited-availability items such as rooms, people, vehicles etc. Users can organize these resources into pools, simplifying workflow and job resource selection. Capabilities and capacities can be assigned to resources, facilitating precise resource allocation based on specific job requirements. Users can also store supplementary information as properties, enhancing the resource management process. Utilization metrics provided by the app offer valuable insights, enabling users to optimize resource deployment and maximize operational efficiency.
-
-For more detailed information on this application, see [Resource Studio application](xref:Overview_MediaOps_Resource_Studio).

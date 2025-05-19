@@ -19,7 +19,7 @@ The DOM Viewer application consists of several pages:
 
 ## SDM Modules
 
-This page shows the Standard Data Model if it is present in your DataMiner System. The Standard Data Model is a single unified DOM model to capture a wide range of business and operational data. Several low-code apps available in the DataMiner Catalog, including all [MediaOps applications](xref:MediaOps), are built on this model.
+This page shows the Standard Data Model if it is present in your DataMiner System. The Standard Data Model is a single unified DOM model to capture a wide range of business and operational data. Several low-code apps available in the [Catalog](https://catalog.dataminer.services/), including all [MediaOps applications](xref:MediaOps), are built on this model.
 
 > [!NOTE]
 > The DOM Viewer will only be able to display the SDM information if the Standard Data Model is present in your DataMiner System.
