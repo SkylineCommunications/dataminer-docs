@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [DCOMConfig flagged as virus causing upgrade issues](xref:KI_DCOMConfig_flagged_as_virus) | From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards | | May 19, 2025 |
 | [Local user not pushed to Windows](xref:KI_Local_user_not_pushed_to_windows) | From DataMiner 10.4.0 [CU4]/10.4.7 onwards | | March 27, 2025 |
 | [Unable to open trended parameter cards via Cube advanced search](xref:KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search) | From DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3 onwards | | March 20, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
@@ -31,6 +32,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [DCOMConfig flagged as virus causing upgrade issues](xref:KI_DCOMConfig_flagged_as_virus) | From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards | | May 19, 2025 |
 | [Local user not pushed to Windows](xref:KI_Local_user_not_pushed_to_windows) | From DataMiner 10.4.0 [CU4]/10.4.7 onwards | | March 27, 2025 |
 | [Unable to open trended parameter cards via Cube advanced search](xref:KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search) | From DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3 onwards | | March 20, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | | March 6, 2025 |
