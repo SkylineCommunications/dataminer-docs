@@ -20,7 +20,7 @@ You can switch between the *Overview* and *List* tabs by clicking *Overview* and
 
 ## Adding a new contact
 
-To add a new contact:
+To add a new contact to an [existing organization](xref:PO_Managing_Organizations):
 
 1. Navigate to the *List* tab.
 
@@ -83,11 +83,13 @@ On both the *Overview* and *List* tabs, you can access the *Skills* panel by cli
 
 ![Header bar](~/user-guide/images/PO_Skills_Header_Bar.png)
 
-[Assigning skills to individuals](#assigning-a-skill) allows you to filder down people during the resource picking process on jobs.
+In this panel, you can see an overview of the existing skills, add more skills with the "+" button, and remove any skills that are not needed with the "x" button.
 
-### Assigning a skill
+![Skills panel](~/solutions/images/PO_Manage_Skills.png)
 
-To assign a skill, you can click the ![Edit](~/user-guide/images/PO_Skills.png) button on the *List* tab.
+Assigning skills to individuals allows you to filter on people with those skills during the resource picking process for jobs.
+
+To assign a skill, click the ![Lightning](~/user-guide/images/PO_Skills.png) button in the list of contacts in the *List* tab.
 
 ## Managing experience
 
@@ -95,14 +97,14 @@ On both the *Overview* and *List* tabs, you can access the *Experience* panel by
 
 ![Header bar](~/user-guide/images/PO_Experience_Header_Bar.png)
 
-The *Experience* panel provides an overview of all experience entries, with options to edit them or create new ones.
+In this panel, you can see an overview of all experience entries, edit an entry via the pencil button or create a new entry with the *New experience* button at the top.
 
-[Assigning experience to individuals](#assigning-experience) streamlines the booking process by making it easier to match people with tasks that suit their level of expertise.
+![Experience panel](~/solutions/images/Experience_panel.png)
 
-## Assigning experience
+Assigning experience to individuals streamlines the booking process by making it easier to match people with tasks that suit their level of expertise.
 
 To assign experience, enter the appropriate experience entry in the *Experience level* field when you [create a new contact](#adding-a-new-contact) or [edit an existing contact](#editing-a-contact).
 
 ![Experience level](~/user-guide/images/PO_Experience_Level.png)
 
-You can view a contact's experience level in the *Experience* column on the *List* tab.
+You can view a contact's experience level in the *Experience* column in the *List* tab.

@@ -4,7 +4,7 @@ uid: People_Organizations
 
 # People & Organizations
 
-The People & Organizations app allows you to create, edit, and organize People, Teams, and Organizations.
+The People & Organizations app allows you to create, edit, and organize people, teams, and organizations.
 
 ## App overview
 
@@ -16,22 +16,21 @@ The following pages are available in the app:
 
 - ![Organizations overview](~/user-guide/images/PO_Organizations_Overview.png) **Organizations overview**: This page helps you [manage all organizations](xref:PO_Managing_Organizations) within your system. You can [add or remove organization members](xref:PO_Managing_Organizations#configuring-organization-members). [Categories](xref:PO_Managing_Organizations#managing-organization-categories) can be used to group organizations.
 
-- ![About](~/user-guide/images/PO_About.png) **About**: The About page provides information on the **version** of the `MediaOps` package.
+- ![About](~/user-guide/images/PO_About.png) **About**: The About page provides information on the **version** of the MediaOps package.
 
 ## People
 
-People can be created to store administrative data on individuals that are relevant to your operations, such as operators, management, contractors, and customers. This data includes contact details, skills and experience information. People added in this app can be used in other DataMiner applications:
+You can add people to store administrative data on individuals that are relevant to your operations, such as operators, management, contractors, and customers. This data includes contact details, skills, and experience information. People added in this app can be used in other DataMiner applications:
 
-- As contact persons that can be linked to a Job in the Scheduling app
-- As bookable resources in the Resource Studio, Scheduling and Workflow apps
+- As contact persons that can be linked to a job in the [Scheduling app](xref:MO_Scheduling).
+- As bookable resources in the [Resource Studio](xref:MO_Resource_Studio), [Scheduling](xref:MO_Scheduling), and [Workflow Designer](xref:MO_Workflow_Designer) apps.
 
-The P&O app allows to define a list of Skills, that can be assigned to people. These Skills appear as capabilities on the associated resources, making it easy to find the right person for a Job.
+The People & Organizations app allows to define a list of **skills**, which can be assigned to people. These skills appear as capabilities on the associated resources, making it easy to find the right person for a job.
 
 ## Organizations
 
-An organization represents a company in your supply chain, such as customers, suppliers or partners. Each person added to the People & Organizations app can be part of up to one Organization. The organizations created here can be used in the Scheduling app for the Organization field on a Job, which can for example be used to specify for which external or internal customer a Job is being carried out.
+An organization represents a company in your supply chain, such as customers, suppliers, or partners. Each person added to the People & Organizations app can be part of up to one organization. The organizations created here can be used in the [Scheduling app](xref:MO_Scheduling) for the *Organization* field of a job, which can for example be used to specify for which external or internal customer a job is being carried out.
 
 ## Teams
 
-Teams are used to group together a smaller number of people. After creating a Team, users can add People to it and assign them a role in the team, like 'member', 'supervisor' etc. People can be part of multiple teams at the same time.
-Teams can be converted into pools of bookable people resources that will show up in the Resource Studio, Scheduling and Workflow Designer apps. People from different organizations can be part of the same team.
+Teams are used to group together a smaller number of people. When a team has been created, users can add people to it and assign them a role in the team, such as "member", "supervisor", etc. People can be part of multiple teams at the same time. Teams can be converted into pools of bookable people resources that will show up in the [Resource Studio](xref:MO_Resource_Studio), [Scheduling](xref:MO_Scheduling), and [Workflow Designer](xref:MO_Workflow_Designer) apps. People from different organizations can be part of the same team.
