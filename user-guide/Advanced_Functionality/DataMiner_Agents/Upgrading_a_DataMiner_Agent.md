@@ -5,6 +5,9 @@ description: Once your system meets the necessary requirements and you have prep
 
 # Upgrading a DataMiner Agent
 
+> [!IMPORTANT]
+> The DataMiner 10.5.6, 10.5.5, 10.5.0 [CU3], 10.5.0 [CU2], 10.4.0 [CU15], and 10.4.0 [CU14] upgrade packages are temporarily unavailable because of a [false-positive anti-virus detection](xref:KI_DCOMConfig_flagged_as_virus), resulting in a failed upgrade. If you still want the upgrade package, contact <techsupport@skyline.be>. Please make sure DataMiner is properly excluded from anti-virus software, even for Windows Defender.
+
 > [!TIP]
 > For more information on DataMiner upgrades, check out the following videos on Dojo:
 >
