@@ -63,8 +63,6 @@ The Virtual Signal Groups app is used to manage the database of all sources and 
 
 Individual signals can be bundled into virtual signal groups, which can then be used by operators to route a large number of signals, potentially coming from different devices and with a main and a backup, in one click. The app also allows you to organize sources and destinations into areas and domains so you can find them more easily, for example when you are looking from a control surface.
 
-For more detailed information about this application, see [Virtual Signal Groups application](xref:Overview_MediaOps_Virtual_Signal_Groups).
-
 ## Control Surface
 
 ![Control Surface app icon](~/dataminer-overview/images/DM_ControlSurface.png)
@@ -72,8 +70,6 @@ For more detailed information about this application, see [Virtual Signal Groups
 The MediaOps control surfaces allow users to build their own user interfaces where they can set up connectivity between sources and destinations, configure devices, and view monitoring information coming from the devices. The MediaOps installation package comes with a sample control surface out of the box. It shows the sources and destinations in the system and allows users to do an instant connect or disconnect, or to schedule a connection to happen at a later time.
 
 Users can use this sample app as is, they can take use it as a starting point and further customize it, or they can build their own control surface from scratch.
-
-For more detailed information about this application, see [Control Surface application](xref:Overview_MediaOps_Control_Surface).
 
 ## Flow Engineering
 
@@ -87,8 +83,6 @@ Unlike the other apps listed on this page, Flow Engineering is not an applicatio
 
 - **Flow documentation**: The result of the path calculation is also stored, so it can be used for [monitoring](#flow-monitoring) and other purposes.
 
-For more detailed information about this application, see: [Flow Engineering application](xref:Overview_MediaOps_Flow_Engineering).
-
 ## Flow Monitoring
 
 ![Flow Monitoring app icon](~/dataminer-overview/images/DM_FlowMonitoring.png)
@@ -98,8 +92,6 @@ The goal of the Flow Monitoring app is to provide visibility on the path of all 
 - **As-engineered paths** represent the expected state of flows in the network, as they have been set up by DataMiner. Whenever DataMiner is instructed to set up a connection between a source and a destination, it documents the result of its path calculation in the as-engineered flow database. This as-engineered flow path documentation is independent of the connector used by the elements in the path, and therefore works with any element.
 
 - **As-is flow paths** show the flows as reported by the elements in the DataMiner System. These therefore reflect the actual current state of the flows in the network. These can then be compared to the as-engineered paths to see if the actual state of the network corresponds to the desired state. To be able to reconstruct the as-is path, elements in the path need to report the incoming and outgoing flows on the underlying product in a standardized format. This is therefore only supported for elements that are integrated with the MediaOps solution.
-
-For more detailed information about this application, see [Flow Monitoring application](xref:Overview_MediaOps_Flow_Monitoring).
 
 ## Cost and Billing
 
@@ -113,5 +105,4 @@ Within the **Rate Cards** module, the app seamlessly associates with job nodes, 
 
 The **Currencies** module efficiently manages multiple currencies. This functionality facilitates seamless currency conversion for precise billing and cost calculations across nodes with different rate cards, ensuring a globally adaptable and efficient financial ecosystem.
 
-For more detailed information about this application, see [Cost and Billing application](xref:Overview_MediaOps_Cost_and_Billing).
 -->
