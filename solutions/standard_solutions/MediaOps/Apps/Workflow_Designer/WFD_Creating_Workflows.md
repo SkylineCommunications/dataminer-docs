@@ -2,11 +2,11 @@
 uid: WFD_Creating_Workflows
 ---
 
-# Creating Workflows
+# Creating workflows
 
 ## Adding nodes to a workflow
 
-For a workflow to be useful, it must contain at least one **node**. Nodes are used to indicate something is required by the workflow. When adding a node you will be able to select a class or a specific entity. At the moment we have **Resource pool** as class and **Resource** as entity:
+For a workflow to be useful, it must contain at least one **node**. Nodes are used to indicate something is required by the workflow. When adding a node you will be able to select a class or a specific entity. At the moment, you can use **Resource pool** as class and **Resource** as entity:
 
 - **Resource pool**: A resource pool indicates that a resource is needed from a specific pool without having to already assign a specific resource instance to the workflow. As the workflow can be reused for multiple jobs, it is not yet possible to understand which resources in the pool will be available. The resource pool node allows you to configure the node before selecting an available resource.
 
@@ -22,7 +22,7 @@ Between workflow nodes that represent **network inventory**, connectivity may ne
 
 ## Describing workflow execution behavior
 
-Workflows can be executed by planning a Job based on the Workflow in the Scheduling app. The Workflow Designer app allows you to describe what needs to happen when a workflow execution is triggered. This is done by providing Automation scripts in two places:
+Workflows can be executed by planning a job based on the workflow in the Scheduling app. The Workflow Designer app allows you to describe what needs to happen when a workflow execution is triggered. This is done by providing Automation scripts in two places:
 
 - **Workflow execution script**: This script describes the overall execution logic of the workflow. The script will always be triggered by the system when a workflow is executed.
 

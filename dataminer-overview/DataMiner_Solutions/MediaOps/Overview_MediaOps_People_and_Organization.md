@@ -23,4 +23,4 @@ The People and Organizations application is a comprehensive solution for managin
 ![People & Organization app UI](~/dataminer-overview/images/MediaOps_People_Organization.gif)
 
 > [!TIP]
-> For more detailed information about this app, see [People and Organizations app](xref:People_Organizations).
+> For more detailed information about this app, see [People and Organizations](xref:People_Organizations).

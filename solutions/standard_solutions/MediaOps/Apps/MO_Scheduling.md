@@ -8,7 +8,7 @@ The Scheduling app allows users to efficiently manage and orchestrate a schedule
 
 ![Scheduling Overview](~/user-guide/images/Scheduling_Overview.png)
 
-## App overview 
+## App overview
 
 The following pages are available in the Scheduling app:
 

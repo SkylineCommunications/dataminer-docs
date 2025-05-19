@@ -8,7 +8,8 @@ The Resource Studio app helps you create and manage bookable resources efficient
 
 ![Resource Studio Overview](~/solutions/images/Resource_Studio_Overview.png)
 
-## App overview 
+## App overview
+
 The following pages are available in the app:
 
 - ![Resource Pools](~/user-guide/images/Resource_Studio_Resource_Pools.png) **Resource Pools**: In this page you can **create**, **edit**, **delete**, **search** and **filter** [resource pools](#resource-pools). You can also **assign** [resources](#resources) to resource pools. Here you can also edit [**capabilities**](#capabilities), [**capacities**](#capacities), and [**properties**](#properties) per resource pool.
@@ -23,23 +24,24 @@ The following pages are available in the app:
 ## Resources
 
 The Resource Studio app allows you to create and manage resources. A resource can represent anything that involves managed use over time. Some examples of things a resource can represent include:
+
 - A piece of network inventory managed by DataMiner, such as an **IRD**, a **cloud-based encoder**, or a **port on a switch**.
 
 - An entire service managed by DataMiner that can be made available for use, such as an **uplink connection** with a certain bandwidth that will be available for a certain period of time.
 
 - Anything with limited availability that is not managed by DataMiner, such as **rooms**, **people**, **vehicles**, **satellite transponder slots**, **IP addresses**, etc.
 
-Each resource has a _concurrency_ setting, which defines how many bookings of the resource can be made at the same time. By default, this is set to **1**. 
+Each resource has a **concurrency** setting, which defines how many bookings of the resource can be made at the same time. By default, this is set to **1**.
 
 ## Resource Pools
 
-A _resource pool_ can be created to group a set of **interchangeable resources**. This allows users who utilize resources in other apps to refer to a pool instead of a specific resource, which allows _deferring_ resource selection until it's actually needed, rather than at booking creation.
+A resource pool can be created to group a set of **interchangeable resources**. This allows users who utilize resources in other apps to refer to a pool instead of a specific resource. this makes it possible to **defer resource selection** until the resource is actually needed, instead of assigning a specific resource at booking creation.
 
 Resources can be added to multiple pools, making them eligible for multiple purposes while keeping a single availability timeline and preventing resource conflicts.
 
 ## Capabilities
 
-_Capabilities_ give a **qualitative description** of a resource or pool, making it clear what they can be used for. When creating a workflow or job, users can specify the required capabilities for the resource to be used, and they can filter the resources in the system with these capability requirements in order to easily find a suitable one.
+Capabilities give a **qualitative description** of a resource or pool, making it clear what it can be used for. When creating a workflow or job, users can specify the required capabilities for the resource to be used, and they can filter the resources in the system with these capability requirements in order to easily find a suitable one.
 
 Each capability has a name and a list of values. Users can assign one or more values to a resource or a pool. Examples of capabilities include:
 
@@ -55,7 +57,7 @@ Capabilities can be assigned either to a resource or to a resource pool. If they
 
 ## Capacities
 
-_Capacities_, like capabilities, define how a resource can be used, but they are measured **numerically**. The following settings can be configured for capabilities:
+Capacities, like capabilities, define how a resource can be used, but they are measured **numerically**. The following settings can be configured for capabilities:
 
 - Units: The unit for the values of this capacity (MHz, Gbps, kBd, etc.).
 
@@ -73,7 +75,7 @@ Typical examples of capacities are bandwidths, bit rates, symbol rates, etc. Whe
 
 ## Properties
 
-Properties store extra details that don't affect resource selection.
+Properties store extra details that do not affect resource selection.
 
 Some examples of properties include data such as:
 
