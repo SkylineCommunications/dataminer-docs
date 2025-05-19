@@ -14,11 +14,20 @@ uid: Cube_Feature_Release_10.5.7
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Cube search box now supports fuzzy matching [ID 42911]](#cube-search-box-now-supports-fuzzy-matching-id-42911)
 
 ## New features
 
-*No new features have been added yet.*
+#### Cube search box now supports fuzzy matching [ID 42911]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+The search box in the middle of the Cube header bar now supports fuzzy matching.
+
+Search results will now account for diacritic similarities within the same alphabet (e.g. "é" with will match "e"). However, transliteration is not supported. Typos or substitutions with the closest corresponding letters (e.g. "ø" vs. "o" or "graphic" vs. "grafic") will not yield any results.
+
+> [!NOTE]
+> For Japanese characters to be processed properly, your Windows system needs to support Japanese text rendering.
 
 ## Changes
 
@@ -57,3 +66,9 @@ Up to now, when the logon screen appeared after a Cube session had been disconne
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
 When, in the *Topology* pane, you navigated quickly through the different levels of a topology chain, in some cases, an exception could be thrown.
+
+#### Problem when multiple property updates were received for the same element, service or view card [ID 42863]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, an error could be thrown when a Cube client received multiple property updates for the same element, service or view card.

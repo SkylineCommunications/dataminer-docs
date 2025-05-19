@@ -26,6 +26,14 @@ Similarly, when BrokerGateway detects that a DataMiner Agent is about to be adde
 > [!NOTE]
 > When BrokerGateway fails to reconfigure the NATS cluster, the DataMiner Agent will not be added or removed.
 
+#### GQI: 'Get object manager instances' data source now supports real-time updates [ID 42530]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+On systems using the GQI DxM, the *Get object manager instances* data source now supports real-time updates.
+
+For more information on real-time updates, see [Query updates](xref:Query_updates).
+
 #### New connector installed as part of an application package will now automatically be set as production version [ID 42623]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
@@ -68,15 +76,23 @@ Because of a number of enhancements, overall performance has increased when upgr
 
 Because of a number of enhancements, overall performance has increased when executing a Failover switch.
 
-#### Security Advisory BPA test: Enhancements [ID 42850]
+#### Security Advisory BPA test: Enhancements [ID 42850] [ID 42914]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
 A number of enhancements have been made to the *Security Advisory* BPA test.
 
-For example, the BPA test is now also able to run on the offline agent of a Failover setup.
+For example, the BPA test is now able to run on the offline agent of a Failover setup.
+
+Also, when the BPA test is run on a system with a local Cassandra or Elasticsearch database, a notice will now appear, saying that a local Cassandra/Indexing setup is no longer recommended.
 
 ### Fixes
+
+#### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+In some cases, the SLNet process could leak memory when the *progress.log* file was deleted after a DataMiner upgrade had been performed.
 
 #### Not all DCF interfaces would be listed in the Connectivity tab of an element's Properties window [ID 42591]
 
@@ -120,3 +136,11 @@ Also, when the service that failed to load is deleted, an attempt will be made t
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, a `GetElementMessage` call would throw an exception when the *element.xml* file of an SNMPv3 element that used a credential library did not contain a base-16 community string. From now on, it will return an empty string instead.
+
+#### SLSNMPManager process responsible for SNMPv3 communication could disappear when it was not able to redirect a trap [ID 42888]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+By default, an SLSNMPManager process responsible for SNMPv3 communication will listen for any incoming traps, and will forward, for example, SNMPv2 traps to the SLSNMPManager process responsible for SNMPv2 communication.
+
+Up to now, when an SLSNMPManager process responsible for SNMPv3 communication was not able to communicate with the SLSNMPManager process to which it had to redirect a trap, in some cases, the process could stop working and disappear.

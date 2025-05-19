@@ -306,6 +306,20 @@ A number of enhancements have been made to the *ModuleSettings* window.
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Service & Resource Management: Enhanced retrieval of service definitions [ID 42810]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving service definitions.
+
+Also, SLNet and SLDataGateway will now exchange data faster thanks to the use of protobuf serialization.
+
+#### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
@@ -367,3 +381,9 @@ In systems with many trended parameters, an SLNet memory leak could occur whenev
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
 At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
+
+#### Alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service [ID 42724]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.

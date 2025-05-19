@@ -76,7 +76,7 @@ A `Hash` property has now been added to the `GetScriptInfoResponseMessage`. This
 > [!NOTE]
 > Author will not be included in the hash value as changing the author would result in a different value being calculated.
 
-All hash values of all Automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoResponseMessage` was called.
+All hash values of all Automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
 
 Format of an AutomationScriptHashInfo object: `Script Name;LastUpdate;Calculated hash`
 
@@ -102,6 +102,14 @@ Similarly, when BrokerGateway detects that a DataMiner Agent is about to be adde
 
 > [!NOTE]
 > When BrokerGateway fails to reconfigure the NATS cluster, the DataMiner Agent will not be added or removed.
+
+#### GQI: 'Get object manager instances' data source now supports real-time updates [ID 42530]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+On systems using the GQI DxM, the *Get object manager instances* data source now supports real-time updates.
+
+For more information on real-time updates, see [Query updates](xref:Query_updates).
 
 #### New connector installed as part of an application package will now automatically be set as production version [ID 42623]
 
@@ -140,6 +148,14 @@ When a service was migrated from one DMA to another within the same DMS, in some
 
 From now on, the message ordering the deletion of a service will always be sent to the DMA that is hosting the service. That DMA will then forward the message to the other DMAs within the cluster.
 
+#### Service & Resource Management: Enhanced retrieval of service definitions [ID 42810]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving service definitions.
+
+Also, SLNet and SLDataGateway will now exchange data faster thanks to the use of protobuf serialization.
+
 #### Enhanced performance when upgrading BrokerGateway [ID 42812]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
@@ -152,15 +168,29 @@ Because of a number of enhancements, overall performance has increased when upgr
 
 Because of a number of enhancements, overall performance has increased when executing a Failover switch.
 
-#### Security Advisory BPA test: Enhancements [ID 42850]
+#### Security Advisory BPA test: Enhancements [ID 42850] [ID 42914]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
 A number of enhancements have been made to the *Security Advisory* BPA test.
 
-For example, the BPA test is now also able to run on the offline agent of a Failover setup.
+For example, the BPA test is now able to run on the offline agent of a Failover setup.
+
+Also, when the BPA test is run on a system with a local Cassandra or Elasticsearch database, a notice will now appear, saying that a local Cassandra/Indexing setup is no longer recommended.
+
+#### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded.
 
 ### Fixes
+
+#### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+In some cases, the SLNet process could leak memory when the *progress.log* file was deleted after a DataMiner upgrade had been performed.
 
 #### Credentials Library: Problem when the same group was added more than once in the UpdateLibraryCredentialMessage [ID 42248]
 
@@ -173,6 +203,12 @@ Because of an issue in SLNet, up to now, if the same group would be added more t
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
 When, in e.g. DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
+
+#### Alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service [ID 42724]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
 
 #### LDAP users added as part of an LDAP user group would incorrectly appear as local users instead of domain users [ID 42743]
 
@@ -217,3 +253,24 @@ In some cases, after an element had been swarmed, active clients would not recei
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, a `GetElementMessage` call would throw an exception when the *element.xml* file of an SNMPv3 element that used a credential library did not contain a base-16 community string. From now on, it will return an empty string instead.
+
+#### SLAnalytics: Problem when an element of which a parameter was part of a RAD parameter group was swarmed [ID 42879]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+<!-- Not added to MR 10.6.0 -->
+
+When an element of which a parameter was part of a RAD parameter group was swarmed, SLAnalytics would incorrectly send a `PagedDataRequest` to retrieve RAD data from the *MadModelRecord* customdata table, causing SLNet to throw a NullReference exception.
+
+From now on, when an element of which a parameter is part of a RAD parameter group is swarmed, SLAnalytics will no longer send a `PagedDataRequest`. Instead, it will log an error message.
+
+> [!IMPORTANT]
+> Until further notice, when an element of which a parameter is part of a RAD parameter group was swarmed, RAD monitoring will no longer be active for the parameter group in question.
+> If you want RAD monitoring to stay active for the parameter group in question, then you will have to either adapt the configuration of the parameter group or undo the element swarming.
+
+#### SLSNMPManager process responsible for SNMPv3 communication could disappear when it was not able to redirect a trap [ID 42888]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+By default, an SLSNMPManager process responsible for SNMPv3 communication will listen for any incoming traps, and will forward, for example, SNMPv2 traps to the SLSNMPManager process responsible for SNMPv2 communication.
+
+Up to now, when an SLSNMPManager process responsible for SNMPv3 communication was not able to communicate with the SLSNMPManager process to which it had to redirect a trap, in some cases, the process could stop working and disappear.

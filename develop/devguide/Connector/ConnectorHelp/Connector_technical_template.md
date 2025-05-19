@@ -4,6 +4,15 @@ uid: Connector_technical_template
 
 # Connector technical documentation template
 
+Below you can find the template for the technical page for connectors. When you copy-paste this, remember to replace all the placeholder text and remove any unnecessary square brackets.
+
+```md
+---
+uid: Connector_technical_template
+---
+
+# Connector technical documentation template
+
 ## About
 
 [Short description of the data source and of the function of the connector.]
@@ -156,3 +165,4 @@ Physical dynamic interfaces:
 ## Notes
 
 [In this section, you can provide additional information about the connector that does not fit in the other sections. Remove this section if it does not contain any info.]
+```
