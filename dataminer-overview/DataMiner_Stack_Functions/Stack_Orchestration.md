@@ -94,7 +94,7 @@ A typical example as part of the automation and orchestration stack is the Booki
 > [!TIP]
 > For more information:
 >
-> - [Booking Manager app](xref:Booking_Manager_user_interface) in the DataMiner User Guide
+> - [Booking Manager app](xref:Booking_Manager_user_interface)
 > - [DataMiner frameworks](xref:DataMiner_Frameworks) in the DataMiner User Guide
 
 ## Profile Manager
