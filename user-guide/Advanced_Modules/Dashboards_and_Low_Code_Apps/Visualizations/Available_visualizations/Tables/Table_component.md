@@ -18,14 +18,14 @@ With this component, you can:
 
 - [Copy](#copying-table-data) or [export data](#exporting-the-table) to CSV for reporting or further analysis.
 
--[Configure actions](#adding-actions-to-a-table) on rows and cells to trigger specific workflow steps.
+- [Configure actions](#adding-actions-to-a-table) on rows and cells to trigger specific workflow steps.
 
 These capabilities make the table component a powerful tool for data exploration and interaction.
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
     <b>💡 TIPS TO TAKE FLIGHT</b><br>
-    Want to learn how to style your table with custom columns, conditional coloring, icons, hyperlinks, and even a context menu? Check out the <a href="xref:Installing_DM_using_the_DM_installer" style="color: #657AB7;"><i>Styling a table component</i> tutorial></a> for a hands-on walkthrough in a low-code app, using real data.
+    Want to learn how to style your table with custom columns, conditional coloring, icons, hyperlinks, and even a context menu? Check out the <a href="xref:Installing_DM_using_the_DM_installer" style="color: #657AB7;"><i>Styling a table component</i> tutorial</a> for a hands-on walkthrough in a low-code app, using real data.
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>
@@ -148,6 +148,37 @@ You can **resize the columns** of the table by dragging the edges of the column 
 > From DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->, you can adjust the default column width by accessing the [Template Editor](xref:Template_Editor) through *Layout > Column appearance*.
 
 ![Resizing and moving columns](~/user-guide/images/Resizing.gif)<br>*Table component in DataMiner 10.5.6*
+
+## Sorting columns
+
+To sort the table, you can **click a column header**. To toggle between ascending and descending order, click the column header again.
+
+![Column sorting](~/user-guide/images/Column_Sorting.png)<br>*Table component in DataMiner 10.5.6*
+
+To apply **additional sorting**, press **Ctrl** while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
+
+Alternatively, you can also select one of the available sorting options in the **column header right-click menu**.
+
+To **group** by a specific table column, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.
+
+## Copying table data
+
+From DataMiner 10.2.7/10.3.0 onwards, you can copy a cell, a column, a row, or the entire table via the right-click menu of the component.
+
+Unless a single cell is copied, the copy is in CSV format. If an entire column or single cell is copied, the values will not be encapsulated in double quotes. Copying an entire row or table will encapsulate all values in accordance with CSV formatting. If a value contains a double quote, this will be escaped when it is copied.
+
+## Exporting the table
+
+From DataMiner 10.1.3/10.2.0 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. What happens next depends on your DataMiner version:
+
+- Prior to DataMiner 10.3.8/10.4.0, if nothing is selected in the table, the entire table will be exported; otherwise only the selected rows will be exported. The data will contain the display values, not the raw values. This means that units will be included for the parameter values and that discrete values will be replaced by their corresponding display values.
+
+- From DataMiner 10.3.8/10.4.0 onwards, a pop-up window will open where you can select whether the raw values or the display values from the table should be exported. Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units. If you export the raw values, no formatting will be applied to them. The only exception are discrete values, for which the corresponding display values will always be exported. If no rows are selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
+
+The export file will be named “Query XXX” (XXX being the name of the query, as configured in the *Data* pane). The first line of the CSV file will contain the names of the columns. The subsequent lines will contain the data, each line being a row of the query result.
+
+> [!NOTE]
+> To only export specific columns, first apply a filter by dragging the columns onto the table component before you export the component.
 
 ## Configuration options
 
@@ -287,38 +318,3 @@ To configure actions:
   1. In the *Icon* box, select an icon for the action.
 
   1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
-
-## Sorting columns
-
-To sort the table, you can **click a column header**. To toggle between ascending and descending order, click the column header again.
-
-![Column sorting](~/user-guide/images/Column_Sorting.png)<br>*Table component in DataMiner 10.5.6*
-
-To apply **additional sorting**, press **Ctrl** while clicking one or more additional headers. The first column will then be used for the initial sorting, the next one to sort equal values of the first column, and so on.
-
-Alternatively, you can also select one of the available sorting options in the **column header right-click menu**.
-
-To **group** by a specific table column, right-click the column header and click *Group*. To stop grouping, right-click the header again and select *Stop grouping*.
-
-## Copying table data
-
-From DataMiner 10.2.7/10.3.0 onwards, you can copy a cell, a column, a row, or the entire table via the right-click menu of the component.
-
-Unless a single cell is copied, the copy is in CSV format. If an entire column or single cell is copied, the values will not be encapsulated in double quotes. Copying an entire row or table will encapsulate all values in accordance with CSV formatting. If a value contains a double quote, this will be escaped when it is copied.
-
-## Exporting the table
-
-From DataMiner 10.1.3/10.2.0 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. What happens next depends on your DataMiner version:
-
-- Prior to DataMiner 10.3.8/10.4.0, if nothing is selected in the table, the entire table will be exported; otherwise only the selected rows will be exported. The data will contain the display values, not the raw values. This means that units will be included for the parameter values and that discrete values will be replaced by their corresponding display values.
-
-- From DataMiner 10.3.8/10.4.0 onwards, a pop-up window will open where you can select whether the raw values or the display values from the table should be exported. Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units. If you export the raw values, no formatting will be applied to them. The only exception are discrete values, for which the corresponding display values will always be exported. If no rows are selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
-
-The export file will be named “Query XXX” (XXX being the name of the query, as configured in the *Data* pane). The first line of the CSV file will contain the names of the columns. The subsequent lines will contain the data, each line being a row of the query result.
-
-> [!NOTE]
-> To only export specific columns, first apply a filter by dragging the columns onto the table component before you export the component.
-
-
-> [!NOTE]
-> Prior to DataMiner 10.3.7/10.4.0, if the data in the table is fetched again by means of a [trigger component](xref:DashboardTrigger) or a [component action](xref:LowCodeApps_event_config) while data is selected in the table, this selection is lost. From DataMiner 10.3.7/10.4.0 onwards, the component will try to reapply the selection. This means that the table will keep fetching more data until all previously selected rows are found. When a previously selected row is missing, the table will fetch all data looking for it. Reapplying the previous selection will take precedence over selecting the first row when the *Initial Selection* setting is enabled. The table will also update its data to reflect the new selection. <!-- RN 36372 -->
