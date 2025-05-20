@@ -12,13 +12,13 @@ With this component, you can:
 
 - [Sort](#sorting-columns) and [filter data](#filtering-table-content) to quickly find the information you need.
 
-- Apply **conditional formatting** to highlight key values.
+- Apply [conditional formatting](#conditional-coloring) to highlight key values.
 
-- Use the **Template Editor** to customize the column appearance and draw attention to what matters most.
+- Use the Template Editor to [customize the column appearance](#column-appearance) and draw attention to what matters most.
 
 - [Copy](#copying-table-data) or [export data](#exporting-the-table) to CSV for reporting or further analysis.
 
-- Configure **actions on rows and cells** to trigger specific workflow steps.
+-[Configure actions](#adding-actions-to-a-table) on rows and cells to trigger specific workflow steps.
 
 These capabilities make the table component a powerful tool for data exploration and interaction.
 
@@ -32,7 +32,7 @@ These capabilities make the table component a powerful tool for data exploration
 
 ## Supported data types
 
-The table component is used to display the results of queries in table format. It should therefore always be configured with [query data input](xref:Query_Data).
+The table component is used to display the results of queries in table format. It should therefore **always be configured with [query data input](xref:Query_Data)**.
 
 It displays the different possible data sources of queries as follows:
 
@@ -77,7 +77,7 @@ To apply a general filter across the table, a search box is available:
    This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Creating_GQI_query).
 
 > [!IMPORTANT]
-> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->, the search box is only available when the [*Show quick filter* setting](#filtering--highlighting) is enabled.
+> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->, the search box is only available when the [*Show quick filter* setting](#table-layout) is enabled.
 
 ### Column-based filter
 
@@ -124,7 +124,7 @@ You can do this in several different ways, for example:
   When you input text in the published version of the dashboard or app, the table component will automatically filter based on this input, and the value will appear in the table's search box.
 
   > [!NOTE]
-  > If you do not want the search box to appear when using text or search input data as a filter, disable the [*Show quick filter* setting](#filtering--highlighting) in the *Layout* pane.
+  > If you do not want the search box to appear when using text or search input data as a filter, disable the [*Show quick filter* setting](#table-layout) in the *Layout* pane.
 
   ![Text input](~/user-guide/images/Text_input_filter_table.gif)<br>*Text input and table components in DataMiner 10.4.11*
 
@@ -153,12 +153,140 @@ You can **resize the columns** of the table by dragging the edges of the column 
 
 ### Table layout
 
-In the *Layout* pane, you can (...)
+In the *Layout* pane, you can find the default options available for all components. See [Customizing the component layout](xref:Customize_Component_Layout).
 
-| Option | Description |
+Additionally, the following layout options are also available:
+
+| Section | Option | Description |
+|--|--|--|
+| Filtering & Highlighting | Conditional coloring | Highlight cells based on a condition. For more information, refer to [Conditional coloring](#conditional-coloring). |
+| Filtering & Highlighting | Show quick filter | Available from DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40818-->. Toggle the switch to determine whether the search box, which lets you [apply a general filter](#general-filter) across the table, is available in the top-right corner of the table. Enabled by default. |
+| Column appearance | Column appearance | Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->. Customize the appearance of a column. For more information, refer to [Column appearance](#column-appearance). |
+| Advanced | Empty result message | Available from DataMiner 10.3.11/10.4.0 onwards<!--RN 37173-->. Configure the message shown when a query returns no results. By default, this message is set to *Nothing to show*, but you can change this to a custom message. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
+
+#### Conditional coloring
+
+In the *Layout* pane for this component, the *Conditional coloring* option is available, which allows you to highlight cells based on a condition. You can configure this option as follows:
+
+- If the column you want to use for highlighting contains **values for which a specific range can be specified**, select the column, indicate the range to be highlighted, select the range and then click the color icon on the right to specify a highlight color. Multiple ranges can be indicated for one column, each with a color of its own.
+
+- Alternatively, from DataMiner 10.2.0/10.1.8 onwards, you can **filter on specific text** instead. To do so, select the column you want to use for highlighting, specify the text, and select the highlight color. By default, the cell value will need to be equal to the specified text to be highlighted. However, you can change this by clicking *equal* above the text box and selecting *contain* or *match regex* instead, depending on the type of filtering you want to apply. You can also apply a negative filter by clicking *does*, which will make this field switch to *does not* instead.
+
+  ![Conditional coloring](~/user-guide/images/Conditional_Coloring.png)<br>*Table component in DataMiner 10.5.6*
+
+- **Multiple filters** can be applied on the same value. In that case, the filters will be applied from the top of the list to the bottom. Positive filters will get priority over negative filters.
+
+- You can **remove a column filter** again by selecting *No color* instead of a specific color.
+
+#### Column appearance
+
+From DataMiner 10.4.1/10.5.0 onwards<!-- RN 37522 -->, in the *Layout* pane, the *Column appearance* option is available, which allows you to customize the appearance of a column.
+
+##### Column appearance presets
+
+To use one of the available presets to alter the column appearance, click the preview below the column name and select a preset option:
+
+| Preset | Description |
 |--|--|
+| ![Left](~/user-guide/images/Preset_Left.png) | Aligns text to the left of the cell. This is the default setting for columns containing values of type string. |
+| ![Center](~/user-guide/images/Preset_Center.png) | Centers the text within the cell. |
+| ![Right](~/user-guide/images/Preset_Right.png) | Aligns text to the right of the cell. This is the default setting for columns containing values of type double or datetime. |
+| ![Hyperlink](~/user-guide/images/Preset_Hyperlink.png) | Available in low-code apps only. Turns the text into a hyperlink that opens a webpage in a new tab. |
+| ![Icon](~/user-guide/images/Preset_Icon.png) | Displays a centered icon in the cell. By default, the info icon is used. |
+| ![Background](~/user-guide/images/Preset_Background.png) | Adds a background color to the cell. By default, a blue color (#1F68BF) is used. |
+
+> [!NOTE]
+> If you select the *Hyperlink* preset option, a [*Navigate to a URL* action](xref:LowCodeApps_event_config#navigating-to-a-url) is automatically configured. The default URL is `https://[Your DMA]/{DMA root}`, which you can edit using the [Template Editor](xref:Template_Editor).
+
+##### Custom column appearance
+
+To freely **customize the appearance** of a column:
+
+1. Click the ellipsis button ("...") next to the column name.
+
+1. Select *Customize preset* to open the Template Editor.
+
+> [!NOTE]
+> If you open the Template Editor after selecting a preset option, the template may already contain certain configured layers.
+>
+> For example, if you selected the *Hyperlink* preset, a rectangle layer with opacity 0%, including a *Navigate to a URL* action, will be configured. Additionally, the text color of the text layer will be set to blue (#1F68BF), and the text inside the text box will be enclosed by HTML `<u>` elements to define underlined text.
+
+From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42226-->, you can also **reuse saved templates** from the same dashboard or low-code app:
+
+1. Click the ellipsis button ("...") next to the column name.
+
+1. Select *Browse templates*.
+
+> [!TIP]
+> For thorough instructions on changing the column appearance within the Template Editor, refer to [Template Editor](xref:Template_Editor).
+
+##### Examples
+
+Below are two examples illustrating how the Template Editor can be used to customize the appearance and behavior of individual columns beyond the standard presets.
+
+- A green checkmark icon is displayed when the status is set to `Paid`:
+
+  ![Example 1](~/user-guide/images/Custom_Column_Appearance.png)<br>*Template Editor and table component in DataMiner 10.5.6*
+
+- A currency conversion menu is added to the *Total* column using a calculator icon:
+
+  ![Example 2](~/user-guide/images/Custom_Column_Appearance2.png)<br>*Template Editor and table component in DataMiner 10.5.6*
+
+  > [!TIP]
+  > These examples illustrate that the Template Editor can be used not only to customize how data looks but also to add interactive elements. For more information, refer to [Adding actions to a table](#adding-actions-to-a-table).
 
 ### Table settings
+
+In the *Settings* pane for this component, you can customize its behavior to suit your requirements.
+
+| Section | Option | Description |
+|--|--|--|
+| WebSocket settings | Inherit WebSocket settings from page/panel | Clear the checkbox to use a custom polling interval for this component. When cleared, you can specify a different polling interval (in seconds). |
+| General | Override dynamic units | Clear the checkbox to prevent parameter units from changing dynamically based on their value and protocol definition. Disabled by default. |
+| Data retrieval | Update data | Available from DataMiner 10.2.0/10.2.1 onwards. Toggle the switch to determine whether the data in the table should be refreshed automatically (provided this is supported by the data source). |
+| Actions | On double click | Configure one or more actions to be executed when a row is double-clicked. Only available in Low-Code Apps. |
+| Initial selection | Select first row by default | Available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->. Toggle the switch to determine whether the first row is selected by default. When enabled, the first row will automatically be selected whenever the component is loaded or when the data in the table is refreshed. |
+
+> [!NOTE]
+>
+> - While the *Update data* setting is available from DataMiner 10.2.0/10.2.1 onwards<!-- RN 31450 -->, in older DataMiner versions it can only be used with the *Get parameter table by ID* query data source. From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36789 -->, other data sources are also supported.
+> - Instead of enabling the *Update data* setting to refresh data automatically, you can also refresh it manually using a [trigger component](xref:DashboardTrigger) or a [component action](xref:LowCodeApps_event_config).
+> - In versions prior to DataMiner 10.3.7/10.4.0, refreshing the table using a trigger component or component action causes the any selected data to be lost. From DataMiner 10.3.7/10.4.0 onwards, the component will try to reapply the selection. This means that the table will keep fetching more data until all previously selected rows are found. When a previously selected row is missing, the table will fetch all data looking for it. Reapplying the previous selection will take precedence over selecting the first row when the *Initial Selection* setting is enabled. The table will also update its data to reflect the new selection. <!-- RN 36372 -->
+
+## Adding actions to a table
+
+If you add a table component to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app. <!-- RN 29394 -->
+
+To configure actions:
+
+- From DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->:
+
+  - In the Template Editor, you can **configure actions for table columns**. Actions can be linked to the *On click* event of a shape in a column template, allowing you to define your own links or buttons inside a table.
+
+    > [!TIP]
+    > For more information, see [Changing template settings](xref:Template_Editor#changing-template-settings).
+
+  - You can also **configure actions that are executed when a row is double-clicked**:
+
+    1. In the *Component > Settings* pane, expand the *Actions* section.
+
+    1. Click *On double-click*.
+
+    1. In the pop-up window, select the action that should be executed. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+
+- Prior to DataMiner 10.4.1/10.5.0:
+
+  1. In the *Component* \> *Settings* pane, expand the *Actions* section.
+
+  1. Click *Add action*.
+
+  1. To specify how the action is triggered, at the top of the action configuration section, click the icon for text hyperlink, row double-click, or cell button.
+
+  1. In the *Label* box, specify a label for the action.
+
+  1. In the *Icon* box, select an icon for the action.
+
+  1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
 ## Sorting columns
 
@@ -190,3 +318,7 @@ The export file will be named “Query XXX” (XXX being the name of the query, 
 
 > [!NOTE]
 > To only export specific columns, first apply a filter by dragging the columns onto the table component before you export the component.
+
+
+> [!NOTE]
+> Prior to DataMiner 10.3.7/10.4.0, if the data in the table is fetched again by means of a [trigger component](xref:DashboardTrigger) or a [component action](xref:LowCodeApps_event_config) while data is selected in the table, this selection is lost. From DataMiner 10.3.7/10.4.0 onwards, the component will try to reapply the selection. This means that the table will keep fetching more data until all previously selected rows are found. When a previously selected row is missing, the table will fetch all data looking for it. Reapplying the previous selection will take precedence over selecting the first row when the *Initial Selection* setting is enabled. The table will also update its data to reflect the new selection. <!-- RN 36372 -->
