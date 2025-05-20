@@ -44,7 +44,7 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
    As value for the `Contract` property, specify:
 
    * 0 = when GQI queries are processed by SLHelper
-   * 1 = when GQI queries are processed by the GQI DxM ([`UseGQIDxM`](xref:Data_Aggregator_settings#GQI_DxM) setting is enabled)
+   * 1 = when GQI queries are processed by the GQI DxM ([`UseGQIDxM`](xref:Data_Aggregator_settings#gqi-dxm) setting is enabled)
 
    ## [From DataMiner 10.3.2/10.4.0-CU0 till 10.5.6/10.4.0-CU5/10.5.0-CU3](#tab/tabid-2)
 
