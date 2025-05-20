@@ -58,6 +58,33 @@ Currently, by default, the existing components will still be used by default to 
 
 A number of minor enhancements have been made to the dropdown controls.
 
+#### Web Services API: ConvertQueryToProtoJson method now allows the JSON version to be specified [ID 42855]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+If you want the Data Aggregator DxM to be able to use a GQI query, you have to convert that query to a JSON string using the *ConvertQueryToProtoJson* web method.
+
+From now on, the *ConvertQueryToProtoJson* web method will allow you to specify the contract to be used:
+
+| Version | Description |
+|---------|-------------|
+| contract 0 | The JSON version needed when GQI queries are processed by SLHelper. |
+| contract 1 (default version) | The JSON version needed when GQI queries are processed by the GQI DxM. |
+
+Example:
+
+`HTTP POST https://DmaIP/API/v1/Internal.asmx/ConvertQueryToProtoJson`
+
+with payload:
+
+```json
+{
+   "connection": "...",
+   "options": { "Contract": 1 },
+   "query": {...}
+}
+```
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: No error would be returned when a parameter or an element could not be fetched [ID 42584]
