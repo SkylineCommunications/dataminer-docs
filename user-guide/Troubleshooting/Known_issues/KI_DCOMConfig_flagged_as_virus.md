@@ -17,7 +17,7 @@ DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 includes an improvement to the file 
 
 ## Fix
 
-No fix is available yet.<!-- RN 42979 -->
+Install DataMiner 10.4.0 [CU16], 10.5.0 [CU4], or 10.5.7.<!-- RN 42979 -->
 
 ## Workaround
 

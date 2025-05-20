@@ -156,3 +156,9 @@ When a main DVE element was started or restarted, up to now, an attempt would in
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.
+
+#### Antivirus software could incorrectly flag DcomConfig.exe as a virus and remove it from the system [ID 42979]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+Since DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5, some antivirus software could incorrectly flag `C:\Skyline DataMiner\tools\DcomConfig.exe` as a virus and remove it from the system. As a result, DataMiner upgrades would fail.
