@@ -190,6 +190,14 @@ From now on, when a DataMiner upgrade is performed on a system containing a Mode
 
 A number of enhancements have been made to BrokerGateway with regard to error handling, especially in case of connection problems.
 
+#### Migrating to BrokerGateway no longer requires a DataMiner restart [ID 42930]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+From DataMiner 10.5.0 [CU2]/10.5.5 onwards, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the *NATSMigration* tool.
+
+Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at run-time, it will no longer be required to restart DataMiner when migrating.
+
 ### Fixes
 
 #### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]
