@@ -206,6 +206,7 @@ Protocol implementation:
 > [!NOTE]
 >
 > - The default number of rows that is retrieved in one request is 10.
+> - The number of rows to be retrieved in one request should be carefully chosen in order to reduce the risk of having an SNMP response that would be larger than the Path MTU of the path across the network traversed by the message. Messages with a large size are subject to fragmentation. Fragmentation is generally considered to be harmful, since among other problems, it leads to decrease in the reliability of the transfer of the messages. For a UDP packet inside a typical ethernet frame, this typically means that the entire SNMP response is preferred to stay below 1472 bytes (+8 bytes UDP header +20 bytes IPv4 header = 1500 bytes ethernet payload). See also RFC3416, chapter 2.3 Message Sizes.
 > - The get bulk request was introduced in SNMPv2. Therefore, this method cannot be used for devices that only support SNMPv1.
 
 Capture observation:
