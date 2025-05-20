@@ -41,8 +41,8 @@ Other data storage solutions can be added optionally.
 > [!TIP]
 > For more information:
 >
-> - [About storage](xref:About_storage) in the DataMiner User Guide
-> - [Storage as a Service (STaaS)](xref:STaaS) in the DataMiner User Guide
+> - [About storage](xref:About_storage)
+> - [Storage as a Service (STaaS)](xref:STaaS)
 
 ## Audit trailing
 
@@ -55,8 +55,7 @@ The administrator can see the changes made per user or per device/element, inclu
 > [!TIP]
 > For more information:
 >
-> - [Security expert hub](https://community.dataminer.services/expert-hub-ict-security/)
-> - [Security](xref:About_DMS_Security) in the DataMiner User Guide
+> - [Security](xref:About_DMS_Security)
 > - [Experts & Insights - DataMiner Security](https://community.dataminer.services/video/experts-insights-dataminer-security/) (webinar/video) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Single sign-on
@@ -73,4 +72,4 @@ DataMiner supports two principal schemes to manage the actual user accounts (i.e
 > [!TIP]
 > For more information:
 >
-> - [Managing Users](xref:Managing_users) in the DataMiner User Guide
+> - [Managing Users](xref:Managing_users)

@@ -261,7 +261,7 @@ A number of issues that occurred while synchronizing files among agents in a DMS
 
 #### DataMiner upgrade: Folder to which the contents of the upgrade package had been extracted would not be removed [ID 41393]
 
-<!-- MR 10.5.0 - FR 10.5.1 -->
+<!-- MR 10.4.0 [CU16]/10.5.0 - FR 10.5.1 -->
 
 When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
 

@@ -255,7 +255,7 @@ items:
             - name: Terms of sale
               topicUid: Terms_of_Sale
             - name: Terms for online deployments
-              topicUid: Terms_Online_Deployments
+              topicUid: License_and_Service_Terms
             - name: Terms for partners
               topicUid: Terms_partners
         - name: Support terms

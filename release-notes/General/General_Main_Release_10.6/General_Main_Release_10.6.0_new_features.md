@@ -561,6 +561,12 @@ If multiple settings indicate that the element should be running in isolation mo
 > - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
 > - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
 
+#### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
+
 #### New NotifyProtocol call NT_CLEAR_PARAMETER [ID 42397]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
@@ -605,6 +611,54 @@ Example: `2025/04/01 16:31:31.813|SLManagedAutomation|RunSafe|INF|0|959|473|Exam
 >
 > - In the Automation script log file, you will find an indication of when the script execution started and stopped. However, this indication will be slightly different from the one you will find in the *SLAutomation.txt* log file. The one in the *SLAutomation.txt* log file will represent the total time it took for the script to run, while the one in the script log file will only take into account the C# blocks in the Automation script.
 > - For each entry that is logged in one of the above-mentioned script log files, an identical copy will also be logged in the *SLAutomation.txt* file. However, note that the timestamps of both entries may not be identical.
+
+#### Automation: Hash property of GetScriptInfoResponseMessage now contains a hash value of the script [ID 42616]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+A `Hash` property has now been added to the `GetScriptInfoResponseMessage`. This property will contain a calculated hash value of the script based on the following script data:
+
+- Name
+- Description
+- Type
+- Script options:
+
+  - Options included in the hash value calculation:
+  
+    - DebugMode
+    - SkipElementChecks
+    - SkipInfoEventsSet
+    - SupportsBackAndForward
+    - AllowUndef
+    - WebCompliant (see soft-launch option [UseWebIAS](xref:Overview_of_Soft_Launch_Options#usewebias))
+
+  - Options not included in the hash value calculation:
+
+    - None
+    - RequireInteractive
+    - SavedFromCube
+    - HasFindInteractiveClient
+
+  > [!NOTE]
+  > For more information on the different script options, see [options attribute](xref:DMSScript-options).
+
+- CheckSets
+- Protocols
+- Memories
+- Parameters
+- Executables
+
+  > [!NOTE]
+  > Executable code will be trimmed. All empty lines before and after the code will be removed.
+
+> [!NOTE]
+> Author will not be included in the hash value as changing the author would result in a different value being calculated.
+
+All hash values of all Automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
+
+Format of an AutomationScriptHashInfo object: `Script Name;LastUpdate;Calculated hash`
+
+Example: `Automation script;638786700548555379;48bcb02e89875979c680d936ec19ad5e9697f7ed73498fd061aecb73e7097497`
 
 #### SNMPv3: Parameter value can now be used as context name or context ID when executing an SNMP get or set command [ID 42676]
 
