@@ -184,6 +184,12 @@ Also, when the BPA test is run on a system with a local Cassandra or Elasticsear
 
 From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded.
 
+#### BrokerGateway: Enhanced error handling [ID 42929]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+A number of enhancements have been made to BrokerGateway with regard to error handling, especially in case of connection problems.
+
 ### Fixes
 
 #### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]

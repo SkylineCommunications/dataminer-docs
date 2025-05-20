@@ -86,6 +86,12 @@ For example, the BPA test is now able to run on the offline agent of a Failover 
 
 Also, when the BPA test is run on a system with a local Cassandra or Elasticsearch database, a notice will now appear, saying that a local Cassandra/Indexing setup is no longer recommended.
 
+#### BrokerGateway: Enhanced error handling [ID 42929]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+A number of enhancements have been made to BrokerGateway with regard to error handling, especially in case of connection problems.
+
 ### Fixes
 
 #### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]
