@@ -287,6 +287,12 @@ When a main DVE element was started or restarted, up to now, an attempt would in
 
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.
 
+#### DataMiner upgrade: VerifyClusterPorts prerequisite check could fail when SLXML was still running [ID 42947]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, during a DataMiner upgrade, the *VerifyClusterPorts* prerequisite check could fail when SLXML was still running.
+
 #### Antivirus software could incorrectly flag DcomConfig.exe as a virus and remove it from the system [ID 42979]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
