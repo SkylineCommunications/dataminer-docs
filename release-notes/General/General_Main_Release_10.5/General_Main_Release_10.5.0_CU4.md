@@ -145,6 +145,12 @@ By default, an SLSNMPManager process responsible for SNMPv3 communication will l
 
 Up to now, when an SLSNMPManager process responsible for SNMPv3 communication was not able to communicate with the SLSNMPManager process to which it had to redirect a trap, in some cases, the process could stop working and disappear.
 
+#### Incorrect attempts to delete child DVE elements upon start or restart of a main DVE element [ID 42924]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When a main DVE element was started or restarted, up to now, an attempt would incorrectly be made to delete child DVE elements that had already been deleted, causing unnecessary information events like "Deleting element-connections for source..." to be generated.
+
 #### Automation: Associated TXF files would not be removed when an Automation script was deleted [ID 42943]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
