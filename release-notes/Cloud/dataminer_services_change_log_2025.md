@@ -21,7 +21,7 @@ Links that direct to the DxM page on the DMS overview page in the Admin app will
 
 Applications on *.dataminer.services will now support an unauthenticated view and navigate to the root page of the application when the user session expires or the user signs out.
 
-Additionally, the loading animations on dataminer.services have been improved, and the Admin app will no be shown in available applications when the user is not signed in.
+Additionally, the loading animations on dataminer.services have been improved, and the Admin app will not be shown in available applications when the user is not signed in.
 
 ### 14 May 2025 - Fix - Invalid token after silent renew
 
