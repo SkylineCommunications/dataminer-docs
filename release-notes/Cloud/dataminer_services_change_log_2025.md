@@ -9,15 +9,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 19 May 2025 - Enhancement - Catalog - Catalog item market
+### 20 May 2025 - Enhancement - Catalog - Catalog item market
 
 On the details page of a Catalog item, users will now be able to see the market for which the item is intended.
 
-### 19 May 2025 - Enhancement - Admin - DMS overview links to DxM page
+### 20 May 2025 - Enhancement - Admin - DMS overview links to DxM page
 
 Links that direct to the DxM page on the DMS overview page in the Admin app will now open the link in the current tab of the browser instead of opening a new tab.
 
-### 19 May 2025 - Enhancement - Unauthenticated views
+### 20 May 2025 - Enhancement - Unauthenticated views
 
 Applications on *.dataminer.services will now support an unauthenticated view and navigate to the root page of the application when the user session expires or the user signs out.
 
