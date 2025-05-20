@@ -10,13 +10,13 @@ The People & Organizations app allows you to create, edit, and organize people, 
 
 The following pages are available in the app:
 
-- ![People overview](~/user-guide/images/PO_People_Overview.png) **People Overview**: This page helps you to [manage all contacts](xref:PO_Managing_Contacts) within your system. [Skills](xref:PO_Managing_Contacts#managing-skills) and [experience levels](xref:PO_Managing_Contacts#managing-experience) can be defined.
+- ![People](~/solutions/images/PO_People_Overview.png) **People**: This page helps you to [manage all contacts](xref:PO_Managing_Contacts) within your system. [Skills](xref:PO_Managing_Contacts#managing-skills) and [experience levels](xref:PO_Managing_Contacts#managing-experience) can be defined.
 
-- ![Teams overview](~/user-guide/images/PO_Teams_Overview.png) **Teams overview**: This page helps you to [manage all teams](xref:PO_Managing_Teams) within your system. Teams can be made bookable, this will create a pool for the team with all people as resources. [Skills](xref:PO_Managing_Contacts#managing-skills) can be used as a capability to find the right person for the job. [Roles](xref:PO_Managing_Teams#managing-roles) can be defined and people within the team can be assigned to those roles.
+- ![Teams](~/solutions/images/PO_Teams_Overview.png) **Teams**: This page helps you to [manage all teams](xref:PO_Managing_Teams) within your system. Teams can be made bookable, this will create a pool for the team with all people as resources. [Skills](xref:PO_Managing_Contacts#managing-skills) can be used as a capability to find the right person for the job. [Roles](xref:PO_Managing_Teams#managing-roles) can be defined and people within the team can be assigned to those roles.
 
-- ![Organizations overview](~/user-guide/images/PO_Organizations_Overview.png) **Organizations overview**: This page helps you [manage all organizations](xref:PO_Managing_Organizations) within your system. You can [add or remove organization members](xref:PO_Managing_Organizations#configuring-organization-members). [Categories](xref:PO_Managing_Organizations#managing-organization-categories) can be used to group organizations.
+- ![Organizations](~/solutions/images/PO_Organizations_Overview.png) **Organizations**: This page helps you [manage all organizations](xref:PO_Managing_Organizations) within your system. You can [add or remove organization members](xref:PO_Managing_Organizations#configuring-organization-members). [Categories](xref:PO_Managing_Organizations#managing-organization-categories) can be used to group organizations.
 
-- ![About](~/user-guide/images/PO_About.png) **About**: The About page provides information on the **version** of the MediaOps package.
+- ![About](~/solutions/images/PO_About.png) **About**: The About page provides information on the **version** of the MediaOps package.
 
 ## People
 
