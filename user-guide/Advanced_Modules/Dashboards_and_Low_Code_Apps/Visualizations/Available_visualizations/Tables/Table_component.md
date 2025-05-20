@@ -25,7 +25,7 @@ These capabilities make the table component a powerful tool for data exploration
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
     <b>💡 TIPS TO TAKE FLIGHT</b><br>
-    Want to learn how to style your table with custom columns, conditional coloring, icons, hyperlinks, and even a context menu? Check out the <a href="xref:Installing_DM_using_the_DM_installer" style="color: #657AB7;"><i>Styling a table component</i> tutorial</a> for a hands-on walkthrough in a low-code app, using real data.
+    Interested in what's possible with the table component? Deploy our <a href="https://catalog.dataminer.services/details/6e79f0d1-e622-4fce-8939-d9779beed651" style="color: #657AB7;"><i>Table show case</i> app</a> to see the component in action.
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>
@@ -68,9 +68,9 @@ From DataMiner 10.2.7/10.3.0 onwards, you can filter the contents of a table com
 
 ### General filter
 
-To apply a general filter across the table, a search box is available:
+To apply a general filter across the table, a **search box** is available:
 
-1. Hover over the table component and click the search icon.
+1. click the search icon in the top-right corner.
 
 1. Specify the filter text (case-insensitive) in the search box.
 
@@ -81,7 +81,7 @@ To apply a general filter across the table, a search box is available:
 
 ### Column-based filter
 
-To apply a filter based on a specific column:
+To apply **a filter based on a specific column**:
 
 1. Right-click the column header and select *Filter*.
 
@@ -111,7 +111,7 @@ To apply a filter based on a specific column:
 
 ### Filter based on text string
 
-From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can filter the table by passing it a text string.
+From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can **filter the table by passing it a text string**.
 
 You can do this in several different ways, for example:
 
@@ -142,7 +142,7 @@ You can do this in several different ways, for example:
 
 ## Resizing the table columns
 
-You can **resize the columns** of the table by dragging the edges of the column headers. From DataMiner 10.1.8/10.2.0 onwards, you can also change the order of the columns by dragging the column headers to a different position.
+You can **resize the columns** of a table by dragging the edges of the column headers. From DataMiner 10.1.8/10.2.0 onwards, you can also change the order of the columns by dragging the column headers to a different position.
 
 > [!TIP]
 > From DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->, you can adjust the default column width by accessing the [Template Editor](xref:Template_Editor) through *Layout > Column appearance*.
@@ -169,7 +169,11 @@ Unless a single cell is copied, the copy is in CSV format. If an entire column o
 
 ## Exporting the table
 
-From DataMiner 10.1.3/10.2.0 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. What happens next depends on your DataMiner version:
+From DataMiner 10.1.3/10.2.0 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*.
+
+![Export to CSV](~/user-guide/images/Export_to_CSV.png)<br>*Table component in DataMiner 10.5.6*
+
+What happens next depends on your DataMiner version:
 
 - Prior to DataMiner 10.3.8/10.4.0, if nothing is selected in the table, the entire table will be exported; otherwise only the selected rows will be exported. The data will contain the display values, not the raw values. This means that units will be included for the parameter values and that discrete values will be replaced by their corresponding display values.
 
