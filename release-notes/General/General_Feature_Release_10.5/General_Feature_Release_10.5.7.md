@@ -295,12 +295,6 @@ Up to now, when an SLSNMPManager process responsible for SNMPv3 communication wa
 
 When a main DVE element was started or restarted, up to now, an attempt would incorrectly be made to delete child DVE elements that had already been deleted, causing unnecessary information events like "Deleting element-connections for source..." to be generated.
 
-#### Failover: Problem with BrokerGateway during a Failover switch [ID 42935]
-
-<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
-
-During a Failover switch, in some cases, BrokerGateway could stop working. As a result, all subsequent calls to BrokerGateway would get blocked.
-
 #### Automation: Associated TXF files would not be removed when an Automation script was deleted [ID 42943]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
