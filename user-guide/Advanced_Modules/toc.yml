@@ -472,6 +472,9 @@ items:
                 topicUid: DashboardPivotTable
               - name: Table
                 topicUid: DashboardTable
+                items:
+                  - name: Filtering table content
+                    topicUid: Filtering_Table_Content
           - name: Charts
             items:
               - name: Column & Bar chart
