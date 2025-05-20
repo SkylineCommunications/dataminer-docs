@@ -18,6 +18,18 @@ uid: Cube_Feature_Release_10.5.7
 
 ## New features
 
+#### Automation: Package name will now be displayed for Automation scripts installed as part of a DataMiner package [ID 42773]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When, in the *Automation* module, you select an Automation script that was installed as part of a DataMiner package, the name and version of that package will now be displayed below the description in the *General* section.
+
+- Clicking the name of the package will open its page in the [DataMiner Catalog](https://catalog.dataminer.services/).
+- If you try to save any changes you made to an Automation script that was installed as part of a package, a confirmation box will now appear, informing you that you are about to change the contents of a package script.
+- If the word "[Customized]" is displayed in front of the package name, this means that the Automation script has been modified since the package was installed.
+
+Also, the following problem has been fixed. When you made a change to an Automation script containing an Exe block with ID 1, up to now, the ID of the Exe block would incorrectly be changed to 2 after the script had been saved.
+
 #### Cube search box now supports fuzzy matching [ID 42911]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->

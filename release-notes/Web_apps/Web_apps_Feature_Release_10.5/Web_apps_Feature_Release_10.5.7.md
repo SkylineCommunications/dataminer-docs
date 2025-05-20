@@ -111,3 +111,9 @@ When a *GetAlarms* call was sent in a JSON request, in some cases, the following
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, in some cases, an exception could be thrown after a PDF report had been generated. As a result, channels and sockets would not be cleaned up correctly.
+
+#### Low-Code Apps: Problem with 'Open monitoring card' action after deleting and recreating the referenced object [ID 42926]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When you had created an "Open monitoring card" action that referenced an object (i.e. an element, service or view) by name, and then deleted and recreated that object, up to now, the action would no longer work because it would still reference the object that was deleted.
