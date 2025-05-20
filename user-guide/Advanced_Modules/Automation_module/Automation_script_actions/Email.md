@@ -17,8 +17,8 @@ Use this action to send a notification via email.
 1. To include a (legacy) report or a dashboard in the email, select *Include report or dashboard*, select an existing report template or dashboard, add any required elements, parameters, etc.
 
 The subject and message support the following placeholders:
-- [DummyX]: This will be replaced with the name of the specific element you want to display.
-- [user]: This will be replaced with the username of the user executing the automation script.
+- [DummyX]: This will be replaced with the name of the specific element you want to display. X is the dummy ID.
+- [user]: This will be replaced with the name of the user executing the automation script.
 
 ![Email](~/user-guide/images/Automation_Email.png)<br>*Automation module in DataMiner 10.4.5*
 
