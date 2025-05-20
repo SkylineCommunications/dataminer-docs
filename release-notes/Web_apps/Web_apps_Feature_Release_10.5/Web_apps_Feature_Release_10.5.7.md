@@ -144,3 +144,9 @@ Up to now, in some cases, an exception could be thrown after a PDF report had be
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
 When you had created an "Open monitoring card" action that referenced an object (i.e. an element, service or view) by name, and then deleted and recreated that object, up to now, the action would no longer work because it would still reference the object that was deleted.
+
+#### Dashboards app & Low-Code Apps - Timeline component: Scroll position would incorrectly reset on Mozilla Firefox [ID 42966]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+On Mozilla Firefox, when you scrolled inside a *Timeline* component, in some cases, the scroll position would incorrectly reset.
