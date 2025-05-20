@@ -15,6 +15,10 @@ Note that it is possible for the issue to occur in earlier DataMiner versions as
 
 DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 includes an improvement to the file `C:\Skyline DataMiner\tools\DcomConfig.exe`. For some reason, this change can cause some antivirus software to flag this file as a virus and remove it from the system. This causes DataMiner upgrades to fail.
 
+## Fix
+
+No fix is available yet.<!-- RN 42979 -->
+
 ## Workaround
 
 Add the folder `C:\Skyline DataMiner\` to the exclusions of the antivirus software, and run the upgrade again.
