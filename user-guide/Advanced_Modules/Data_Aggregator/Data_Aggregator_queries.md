@@ -44,7 +44,7 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
      - Use `"Contract": 0` for queries that should be executed via CoreGateway and SLHelper.
      - Use `"Contract": 1` for queries that should be executed via the GQI DxM.
 
-     The used contract should correspond to the [`UseGQIDxM`](xref:Data_Aggregator_settings#executing-queries-using-the-gqi-dxm) setting.
+     The used contract should correspond to the [`UseGQIDxM`](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) setting.
 
    - In **earlier** DataMiner versions:
 
