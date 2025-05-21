@@ -64,3 +64,10 @@ From DataMiner 10.4.2/10.5.0 onwards<!--RN 38150-->, when you add a sort operato
 - In case of a *Left* type of join, but only if all sorts are descending
 
 - In case of a *Right* type of join
+
+## Updates
+
+[Real-time updates](xref:Query_updates) are available for this data source from DataMiner 10.5.0/10.5.7 when using the [GQI DxM](xref:GQI_DxM) <!-- RN 42941 -->. 
+
+> [!CAUTION]
+> The sort order will **not** be reevaluated when an update is processed!

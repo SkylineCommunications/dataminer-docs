@@ -56,9 +56,10 @@ The overview below lists all data sources that currently have update support. If
 
 The overview below indicates the support levels for all operators.
 
-| Operator | Support level  |
-| -------- | --------------- |
+| Operator | Support level  | Supported since |
+| -------- | -------------- | --------------- |
 | [Select](xref:GQI_Select) | [Real-time events](#query-update-support) |
+| [Sort](xref:GQI_Sort) | [Real-time events](#query-update-support) | DataMiner 10.5.0/10.5.7 when using the [GQI DxM](xref:GQI_DxM) <!-- RN 42941 -->|
 | All other operators| [Notification events](#query-update-support) |
 
 > [!NOTE]
