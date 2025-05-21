@@ -1,5 +1,6 @@
 ---
 uid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
+description: Download a virtual hard disk with DataMiner pre-installed and get started immediately. The VM is hardened out-of-the box for improved security.
 ---
 
 # Using a pre-installed DataMiner Virtual Hard Disk
