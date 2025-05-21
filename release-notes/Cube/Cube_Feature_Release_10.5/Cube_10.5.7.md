@@ -61,6 +61,21 @@ From now on, users will get more feedback when a DataMiner version mismatch is d
 
 ### Fixes
 
+#### Spectrum analysis: No context menu would appear when selecting measurement points [ID 42735]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When, in a spectrum card, you had selected one or more measurement points in the *Manual* tab of the right-hand pane, no context menu would appear in the *Measurement points* section of the spectrum graph sidebar.
+
+From now on, when you select a single measurement point in the *Manual* tab of the right-hand pane, a context menu will appear with the following options:
+
+- Display trace
+- Display min. hold
+- Display max. hold
+- Display avg hold
+
+Also, in the *trace* menu, the *Show current* button will from now on be disabled by default.
+
 #### Alarm templates: Problem when duplicating a scheduled alarm template [ID 42823]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
