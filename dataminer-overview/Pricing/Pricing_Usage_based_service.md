@@ -92,9 +92,9 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 |---|---|---|
 | Data Plane   | *Standard Managed Object*       | Endpoints directly or indirectly interfaced by DataMiner with 200 or more metrics. |
 | Data Plane   | *Light Managed Object*          | Endpoints with less than 200 metrics. |
-| Data Plane   | *Unmanaged Object*             | Unmanaged Object Instances available on the system (Cf.  [DataMiner Object Model](xref:DOM)). |
+| Data Plane   | *Unmanaged Object*              | Unmanaged Object Instances available in the system (see [DataMiner Object Models](xref:DOM)). |
 | Data Sources | *Connector Services*            | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [Catalog](https://catalog.dataminer.services/).<br>Connectors developed by the user or another third party are not counted. |
-| Automation   | *Automation Actions*            | [**Automation scripts**](xref:Running_Automation_scripts) - e.g. Life cycle Service Orchestration (LSO) scripts and Profile-Load Scripts (PLS). <br> **New Unmanaged Object Instances** added to the [DataMiner Object Model](xref:DOM) - e.g. a new tickets, work order, asset, or contract record |
+| Automation   | *Automation Actions*            | - [**Automation scripts**](xref:Running_Automation_scripts), e.g. Life cycle Service Orchestration (LSO) scripts and Profile-Load Scripts (PLS). <br> - **New Unmanaged Object Instances** added to the [DataMiner Object Models](xref:DOM), e.g. a new tickets, work order, asset, or contract record. |
 | Collaboration Services | *Dashboard Sharing*   | Sharing dashboards with real-time data and controls with both internal and external organization users. |
 | Storage as a Service (STaaS) | *Alarm Updates* | New alarm updates written to the storage service. |
 | Storage as a Service (STaaS) | *Information Events*| New information events written to the storage service.|
@@ -113,7 +113,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Light Managed Object*        | Sum of metrics on Managed Objects with less than 200 metrics.                         | 2 for 1000 metrics         | A Managed Object with 150 metrics, the metered value is 150. |
 | *Unmanaged Object*            | Sum of instances from all Unmanaged Objects.  | 4 per 100K instances. | A system with 5K tickets and 25K assets, the metered value is 30k x 4 / 100k = 1.2. |
 | *Connector Services*          | Sum of connectors delivered by Skyline, concurrently used.                            | 8 | Using 20 connectors a month, but with a maximum of 5 at any given time, the metered value is 5. |
-| *Automation Actions*          | Sum of Automation script runs and new Unmanaged Object Instances, with each instance counted as the number of its possible states.        | Starting at 5 for 1K script runs.<br> Decreases with volume. | For an object "Ticket" with 8 possible life cycle states - *Acknowledged, Rejected, Cancelled, In Progress, Pending, Resolved, Held, Closed* - , creating 100 new tickets, the metered value equals 100 instances x 8 states = 800.||
+| *Automation Actions*          | Sum of Automation script runs and new Unmanaged Object Instances, with each instance counted as the number of its possible states.        | Starting at 5 for 1K script runs.<br> Decreases with volume. | For an object "Ticket" with 8 possible life cycle states *Acknowledged, Rejected, Cancelled, In Progress, Pending, Resolved, Held*, and *Closed* , when creating 100 new tickets, the metered value equals 100 instances x 8 states = 800.|
 | *Dashboard Sharing*           | Sum of number of unique shares.                                                       | 0.5 | Sharing 2 dashboards with 5 email recipients for a full month, the metered value is 2 dashboards x 5 recipients = 10. |
 | *Alarm Updates*               | Sum of alarm update writes.       | 0.9 per 100K alarm updates. | |
 | *Information Events*          | Sum of information event writes.  | 0.3 per 100K information events. | |
