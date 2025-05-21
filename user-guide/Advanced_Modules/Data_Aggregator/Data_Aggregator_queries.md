@@ -29,31 +29,31 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
    > [!NOTE]
    > Replace `dataminer.company.local` with the hostname or IP address of your DataMiner Agent.
 
-   with payload:
+   with the following payload, depending on the DataMiner version:
 
-   ## [From DataMiner 10.5.7/10.4.0-CU6/10.5.0-CU4 onwards](#tab/tabid-1)
+   - From DataMiner **10.4.0 [CU6]/10.5.0 [CU4]/10.5.7** onwards:
 
-   > ``` json
-   > {
-   >   "connection": "", // copied in previous step
-   >   "options": { "Contract": 1 },
-   >   "query": {} // copied in previous step
-   > }
-   > ```
+     > ``` json
+     > {
+     >   "connection": "", // copied in previous step
+     >   "options": { "Contract": 1 },
+     >   "query": {} // copied in previous step
+     > }
+     > ```
 
-   * Use `"Contract": 0` for queries that should be executed via CoreGateway and SLHelper.
-   * Use `"Contract": 1` for queries that should be executed via the GQI DxM.
+     - Use `"Contract": 0` for queries that should be executed via CoreGateway and SLHelper.
+     - Use `"Contract": 1` for queries that should be executed via the GQI DxM.
 
-   The used contract should correspond to the [`UseGQIDxM`](xref:Data_Aggregator_settings#executing-queries-using-the-gqi-dxm) setting.
+     The used contract should correspond to the [`UseGQIDxM`](xref:Data_Aggregator_settings#executing-queries-using-the-gqi-dxm) setting.
 
-   ## [From DataMiner 10.3.2/10.4.0-CU0 till 10.5.6/10.4.0-CU5/10.5.0-CU3](#tab/tabid-2)
+   - In **earlier** DataMiner versions:
 
-   > ``` json
-   > {
-   >   "connection": "", // copied in previous step
-   >   "query": {} // copied in previous step
-   > }
-   > ```
+     > ``` json
+     > {
+     >   "connection": "", // copied in previous step
+     >   "query": {} // copied in previous step
+     > }
+     > ```
 
 1. From the received response, copy the value of *d:*.
 

@@ -6,15 +6,15 @@ uid: Data_Aggregator_Migrators
 
 Following migrators are available to make it easier to update existing setups to newer versions:
 
-* [Enabling GQI DxM](#enabling-gqi-dxm)
-* [Upgrading from version 2.x.x](#upgrading-from-version-2xx)
+- [Enabling GQI DxM](#enabling-gqi-dxm)
+- [Upgrading from version 2.x.x](#upgrading-from-version-2xx)
 
 > [!TIP]
 > See also: [Data Aggregator](xref:Data_Aggregator_DxM)
 
 ## Enabling GQI DxM
 
-The Data Aggregator MigratorToGQIDxM tool should be used to migrate any existing queries into the format supported by the GQI DxM.
+The Data Aggregator *MigratorToGQIDxM* tool should be used to migrate any existing queries into the format supported by the GQI DxM.
 
 1. Make sure Data Aggregator version 3.1.0 or higher is installed.
 
@@ -22,7 +22,7 @@ The Data Aggregator MigratorToGQIDxM tool should be used to migrate any existing
 
 1. Restart the `DataMiner DataAggregator` service.
 
-1. Use the MigratorToGQIDxM tool with the following options:
+1. Use the *MigratorToGQIDxM* tool with the following options:
 
     | Option | Description |
     |--|--|
@@ -37,16 +37,20 @@ The Data Aggregator MigratorToGQIDxM tool should be used to migrate any existing
 
 1. The output will confirm whether the migration succeeded.
 
-### Revert GQI DxM migration
+### Reverting the GQI DxM migration
 
 If you want to revert the GQI DxM migration, a backup of the query files is created.
 
 To revert:
 
 1. Stop the `DataMiner DataAggregator` service.
+
 1. Disable the [`UseGQIDxM`](xref:Data_Aggregator_settings#executing-queries-using-the-gqi-dxm) setting.
-1. In `C:\Program Files\Skyline Communications\DataMiner DataAggregator` replace the new `.json` files with their corresponding `.bak` file.
+
+1. In `C:\Program Files\Skyline Communications\DataMiner DataAggregator`, replace the new `.json` files with their corresponding `.bak` file.
+
 1. In `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Helper.json` within the `DataSources` array, remove the `"Contract": 1` property on every item where it exists.
+
 1. Start the `DataMiner DataAggregator` service.
 
 ## Upgrading from version 2.x.x
