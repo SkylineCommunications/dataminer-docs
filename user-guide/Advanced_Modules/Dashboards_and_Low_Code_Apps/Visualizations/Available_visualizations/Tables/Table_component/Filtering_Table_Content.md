@@ -19,7 +19,7 @@ To apply a general filter across the table, a **search box** is available:
    This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Creating_GQI_query).
 
 > [!IMPORTANT]
-> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->, the search box is only available when the [*Show quick filter* setting](#table-layout) is enabled.
+> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->, the search box is only available when the [*Show quick filter* setting](xref:DashboardTable#table-layout) is enabled.
 
 ## Column-based filter
 
@@ -68,7 +68,7 @@ You can do this in several different ways, for example:
   When you input text in the published version of the dashboard or app, the table component will automatically filter based on this input, and the value will appear in the table's search box.
 
   > [!NOTE]
-  > If you do not want the search box to appear when using text or search input data as a filter, disable the [*Show quick filter* setting](#table-layout) in the *Layout* pane.
+  > If you do not want the search box to appear when using text or search input data as a filter, disable the [*Show quick filter* setting](xref:DashboardTable#table-layout) in the *Layout* pane.
 
   ![Text input](~/user-guide/images/Text_input_filter_table.gif)<br>*Text input and table components in DataMiner 10.4.11*
 

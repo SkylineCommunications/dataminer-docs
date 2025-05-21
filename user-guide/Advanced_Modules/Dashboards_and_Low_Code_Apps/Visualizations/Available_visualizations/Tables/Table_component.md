@@ -115,7 +115,7 @@ Additionally, the following layout options are also available:
 | Section | Option | Description |
 |--|--|--|
 | Filtering & Highlighting | Conditional coloring | Highlight cells based on a condition. For more information, refer to [Conditional coloring](#conditional-coloring). |
-| Filtering & Highlighting | Show quick filter | Available from DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40818-->. Toggle the switch to determine whether the search box, which lets you [apply a general filter](#general-filter) across the table, is available in the top-right corner of the table. Enabled by default. |
+| Filtering & Highlighting | Show quick filter | Available from DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40818-->. Toggle the switch to determine whether the search box, which lets you [apply a general filter](xref:Filtering_Table_Content#general-filter) across the table, is available in the top-right corner of the table. Enabled by default. |
 | Column appearance | Column appearance | Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 37522-->. Customize the appearance of a column. For more information, refer to [Column appearance](#column-appearance). |
 | Advanced | Empty result message | Available from DataMiner 10.3.11/10.4.0 onwards<!--RN 37173-->. Configure the message shown when a query returns no results. By default, this message is set to *Nothing to show*, but you can change this to a custom message. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
 
@@ -183,7 +183,7 @@ Below are two examples illustrating how the Template Editor can be used to custo
 
   ![Example 1](~/user-guide/images/Custom_Column_Appearance.png)<br>*Template Editor and table component in DataMiner 10.5.6*
 
-- A currency conversion menu is added to the *Total* column using a calculator icon:
+- A currency conversion menu is added to the *Total* column using a calculator icon (only possible in Low-Code Apps):
 
   ![Example 2](~/user-guide/images/Custom_Column_Appearance2.png)<br>*Template Editor and table component in DataMiner 10.5.6*
 
