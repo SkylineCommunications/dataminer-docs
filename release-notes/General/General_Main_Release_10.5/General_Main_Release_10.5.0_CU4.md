@@ -182,3 +182,9 @@ When you create an Automation script, apart from an XML file containing the actu
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, during a DataMiner upgrade, the *VerifyClusterPorts* prerequisite check could fail when SLXML was still running.
+
+#### Failover: NATS communication error on online agent after a Failover switch [ID 42964]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+After a Failover switch, in some cases, the ClusterEndpointManager would fail to initialize on the agent that had gone online. In the *Failover Status* window, *NATS communication* would show an error state.
