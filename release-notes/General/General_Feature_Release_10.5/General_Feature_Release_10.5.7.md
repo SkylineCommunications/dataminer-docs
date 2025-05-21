@@ -184,6 +184,12 @@ Also, when the BPA test is run on a system with a local Cassandra or Elasticsear
 
 From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded.
 
+#### BrokerGateway: Enhanced performance [ID 42900]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Because of a number of enhancements, overall BrokerGateway performance has increased, especially after adding or removing DMAs from the cluster.
+
 #### BrokerGateway: Enhanced error handling [ID 42929]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->

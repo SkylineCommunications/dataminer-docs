@@ -86,6 +86,12 @@ For example, the BPA test is now able to run on the offline agent of a Failover 
 
 Also, when the BPA test is run on a system with a local Cassandra or Elasticsearch database, a notice will now appear, saying that a local Cassandra/Indexing setup is no longer recommended.
 
+#### BrokerGateway: Enhanced performance [ID 42900]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Because of a number of enhancements, overall BrokerGateway performance has increased, especially after adding or removing DMAs from the cluster.
+
 #### BrokerGateway: Enhanced error handling [ID 42929]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
