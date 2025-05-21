@@ -17,7 +17,7 @@ Data Aggregator does not necessarily have to be installed on a server running a 
   > [!NOTE]
   > If you want to use queries with [ad hoc data sources](xref:Get_ad_hoc_data), you will need DataMiner 10.3.3/10.4.0 or higher.
 
-Depending on the [`UseGQIDxM`](xref:Data_Aggregator_settings#gqi-dxm) setting, either:
+Depending on the [`UseGQIDxM`](xref:Data_Aggregator_settings#executing-queries-using-the-gqi-dxm) setting, either:
 
 - [GQI DxM](xref:GQI_DxM) must be installed on the DataMiner Agents you want to use Data Aggregator with (GQI DxM is included in DataMiner 10.5.0 [CU1]/10.5.4).
 

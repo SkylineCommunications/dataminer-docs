@@ -40,7 +40,7 @@ For example:
 > - Keep in mind that **if there is no firewall in place, anyone can use the web UI and the REST API**, as no authentication is required to use Data Aggregator.
 > - To go to the debug page, add `/debug` to the URL. For example, if the URL was defined as `http://127.0.0.1:5000`, you can access the debug page at `http://127.0.0.1:5000/debug`.
 
-## GQI DxM
+## Executing queries using the GQI DxM
 
 By default, queries are executed using CoreGateway and SLHelper.
 To execute the queries using the [GQI DxM](xref:GQI_DxM), the following setting must be enabled:
@@ -53,10 +53,10 @@ To execute the queries using the [GQI DxM](xref:GQI_DxM), the following setting 
 }
 ```
 
-> [!NOTE]
+> [!IMPORTANT]
 >
-> - This setting requires Data Aggregator version 3.1.0 or higher.
-> - When changing this setting on an existing Data Aggregator setup where queries have been configured already, the existing queries will no longer work. Existing queries must be [migrated](xref:Data_Aggregator_Migrators).
+> - This setting is available from Data Aggregator version 3.1.0 onwards.
+> - When changing this setting on an existing Data Aggregator setup where queries have been configured already, the existing queries will no longer work. Existing queries must be [migrated](xref:Data_Aggregator_Migrators#enabling-gqi-dxm).
 
 ## Multi-DMS connection
 
