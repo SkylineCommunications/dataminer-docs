@@ -176,9 +176,3 @@ When you create an Automation script, apart from an XML file containing the actu
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, during a DataMiner upgrade, the *VerifyClusterPorts* prerequisite check could fail when SLXML was still running.
-
-#### Antivirus software could incorrectly flag DcomConfig.exe as a virus and remove it from the system [ID 42979]
-
-<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
-
-Since DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5, some antivirus software could incorrectly flag `C:\Skyline DataMiner\tools\DcomConfig.exe` as a virus and remove it from the system. As a result, DataMiner upgrades would fail.

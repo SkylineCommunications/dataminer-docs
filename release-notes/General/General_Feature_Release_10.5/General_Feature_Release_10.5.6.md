@@ -372,3 +372,9 @@ As 32-bit Windows systems are no longer supported, from now on, the *Register Da
 In order to communicate with its extension processes, the GQI DxM uses named pipes. In some cases, because a pipe would fail to connect to the core GQI process, it would no longer be possible to use a particular extension.
 
 Additionally, a number of enhancements have been made with regard to the management of named pipes.
+
+#### Antivirus software could incorrectly flag DcomConfig.exe as a virus and remove it from the system [ID 42979]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 [CU0] -->
+
+Since DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5, some antivirus software could incorrectly flag `C:\Skyline DataMiner\tools\DcomConfig.exe` as a virus and remove it from the system. As a result, DataMiner upgrades would fail.

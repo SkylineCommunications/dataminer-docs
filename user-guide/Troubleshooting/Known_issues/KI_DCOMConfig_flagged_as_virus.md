@@ -6,8 +6,7 @@ uid: KI_DCOMConfig_flagged_as_virus
 
 ## Affected versions
 
-- Feature Release versions from DataMiner 10.5.5 onwards.
-- Main Release versions from DataMiner 10.4.0 [CU14]/10.5.0 [CU2] onwards.
+DataMiner 10.5.5/10.4.0 [CU14]/10.5.0 [CU2]
 
 Note that it is possible for the issue to occur in earlier DataMiner versions as well, but this is considerably less likely.
 
@@ -17,7 +16,7 @@ DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 includes an improvement to the file 
 
 ## Fix
 
-Install DataMiner 10.4.0 [CU16], 10.5.0 [CU4], or 10.5.7.<!-- RN 42979 -->
+Install DataMiner 10.4.0 [CU15], 10.5.0 [CU3], or 10.5.6.<!-- RN 42979 -->
 
 ## Workaround
 
