@@ -1,5 +1,6 @@
 ---
 uid: Overview_Training_certification
+description: The DataMiner Certification Program offers a broad range of certification services that enable people to get the maximum out of a DataMiner System.
 ---
 
 # DataMiner certification
