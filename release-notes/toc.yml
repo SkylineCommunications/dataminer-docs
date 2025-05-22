@@ -43,6 +43,8 @@ items:
             href: IDP/toc.yml
           - name: MbgNMS release notes
             href: MbgNMS/toc.yml
+          - name: MediaOps release notes
+            href: MediaOps/toc.yml
           - name: PA release notes
             topicUid: PA_1.3.1
             href: PA/toc.yml
