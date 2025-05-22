@@ -26,7 +26,7 @@ The period (in ms) that each row should be executed in the table. For example, e
 
 ## ignoreIf
 
-Expected format: ifgnoreIf:\<columnIndex\>:\<value\>
+Expected format: ignoreIf:\<columnIndex\>:\<value\>
 
 With this option, you can make sure a group is NOT executed when the specified condition is met. This will not execute the group when the specified 0-based column position (of the table with ID specified in the "ip" option) has the specified value (value needs to be a numeric value) or the cell value is not initialized.
 
