@@ -30,6 +30,9 @@ When, in the *Automation* module, you select an Automation script that was insta
 
 Also, the following problem has been fixed. When you made a change to an Automation script containing an Exe block with ID 1, up to now, the ID of the Exe block would incorrectly be changed to 2 after the script had been saved.
 
+> [!NOTE]
+> This feature will only be available if the DataMiner server uses DataMiner 10.5.7/10.6.0 or higher.<!-- RN 42616 -->
+
 #### Cube search box now supports fuzzy matching [ID 42911]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
