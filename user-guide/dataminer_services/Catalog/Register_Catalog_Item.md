@@ -158,6 +158,15 @@ tags:
 # If the vendor ID is not provided during an update, the vendor will be unchanged and keep the previously set value.
 #   Must be a valid GUID.
 vendor_id: '<fill in GUID here>'
+
+# [Optional]
+# The name of the market the Catalog item belongs to.
+market_name: '<fill in name here>'
+
+# [Optional]
+# The type of the element.
+# This can only be applied to Catalog items with the type Connector
+element_type: '<fill in element type here>'
 ```
 
 ## Registering a new version with the API
