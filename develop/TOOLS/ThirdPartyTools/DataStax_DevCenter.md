@@ -1,5 +1,6 @@
 ---
 uid: DataStax_DevCenter
+description: DataStax DevCenter allows you to perform CQL queries or run scripts on a Cassandra database. It can be used on any server using a Cassandra database.
 ---
 
 # DataStax DevCenter
