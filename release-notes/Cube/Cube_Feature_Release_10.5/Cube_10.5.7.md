@@ -53,7 +53,7 @@ When the DataMiner Cube desktop app is deployed using [shared MSI installation](
 
 From now on, users will get more feedback when a DataMiner version mismatch is detected:
 
-- In the *About* box of the DataMiner Cube desktop app, the version of the app will now include either a "(shared)" or "(MSI)" suffix. This will indicate whether the app was deployed using [shared MSI installation](xref:DataMiner_Cube_deployment_methods#shared-msi-installation) or [bootstrap MSI installation](xref:DataMiner_Cube_deployment_methods#bootstrap-msi-installation).
+- In the *About* box of the DataMiner Cube desktop app, the version of the app will now include either a "(shared)" or "(bootstrap)" suffix. This will indicate whether the app was deployed using [shared MSI installation](xref:DataMiner_Cube_deployment_methods#shared-msi-installation) or [bootstrap MSI installation](xref:DataMiner_Cube_deployment_methods#bootstrap-msi-installation).
 
 - The logging of the DataMiner Cube desktop app will now explicitly indicate when a "version not found" error was caused by a system-wide installation conflict.
 
