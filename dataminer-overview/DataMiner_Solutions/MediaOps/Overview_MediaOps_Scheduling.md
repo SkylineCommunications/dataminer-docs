@@ -21,4 +21,4 @@ MediaOps Scheduling offers a wealth of features catering to all teams engaged in
 ![Scheduling app UI](~/dataminer-overview/images/MediaOps_Scheduling.png)
 
 > [!TIP]
-> This page contains information about the Scheduling app within the MediaOps Solution. If you are looking for information about the Scheduler module within DataMiner Cube instead, refer to [DataMiner Scheduler](xref:scheduler).
+> This page contains information about the Scheduling app within the MediaOps Solution. For more detailed information about this app, see [Scheduling](xref:MO_Scheduling). If you are instead looking for information about the Scheduler module within DataMiner Cube, refer to [DataMiner Scheduler](xref:scheduler).
