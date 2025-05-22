@@ -165,7 +165,7 @@ market_name: '<fill in name here>'
 
 # [Optional]
 # The type of the element.
-# This can only be applied to Catalog items with the type Connector
+# This can only be applied to Catalog items with the type Connector.
 element_type: '<fill in element type here>'
 ```
 
