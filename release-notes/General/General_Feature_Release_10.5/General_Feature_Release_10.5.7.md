@@ -204,6 +204,12 @@ From DataMiner 10.5.0 [CU2]/10.5.5 onwards, you can migrate from the SLNet-manag
 
 Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at run-time, it will no longer be required to restart DataMiner when migrating.
 
+#### Failover: Enhanced performance when executing a Failover switch [ID 42983]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when executing a Failover switch.
+
 ### Fixes
 
 #### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]

@@ -99,3 +99,9 @@ When, in the *Topology* pane, you navigated quickly through the different levels
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, an error could be thrown when a Cube client received multiple property updates for the same element, service or view card.
+
+#### Trending: Problem with trend graphs displaying exception values with multiple Y axes [ID 42889]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+In some cases, trend graphs displaying exception values with multiple Y axes would render unstably, resulting in misaligned axes or inconsistent graph layouts.
