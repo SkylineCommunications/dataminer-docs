@@ -330,3 +330,10 @@ Up to now, during a DataMiner upgrade, the *VerifyClusterPorts* prerequisite che
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 After a Failover switch, in some cases, the ClusterEndpointManager would fail to initialize on the agent that had gone online. In the *Failover Status* window, *NATS communication* would show an error state.
+
+#### Editing an element on a swarming-enabled system would incorrectly cause the element's alarm ID range to be reset to 1 [ID 42988]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+<!-- Not added to MR 10.6.0 -->
+
+On swarming-enabled systems, up to now, editing an element would cause the alarm ID of that element to incorrectly be reset to 1. For the element to generate alarms in the correct range again, either DataMiner or the element had to be restarted.
