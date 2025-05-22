@@ -133,6 +133,8 @@ Below you can find an overview of the different methods that can be used to depl
 
 - The launcher is backwards compatible and can be used to deploy any 9.x or 10.x Cube version. Shared MSI installation packages can be provided on demand for older versions.
 
+- From DataMiner Cube 10.4.0 [CU16]/10.5.0 [CU4]/10.5.7 onwards<!-- RN 42706 -->, the *About* window of the start window (available via the cogwheel button) will include info about how the installed version was deployed. If it shows "(shared)", a shared MSI installation was used. If it shows ("bootstrap"), a bootstrap MSI installation was used.
+
 - All packages support using the INSTALLDIR parameter to customize the target folder.
 
   Default folder: `%ProgramFiles%\Skyline Communications\DataMiner Cube`
