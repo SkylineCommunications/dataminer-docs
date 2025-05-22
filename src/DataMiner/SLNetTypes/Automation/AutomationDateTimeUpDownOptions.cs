@@ -121,7 +121,7 @@ namespace Skyline.DataMiner.Automation
 		///   		<item><description><see cref="DateTimeKind.Local"/>: Based on the server’s local time, then adjusted to the client's local time.</description></item>
 		///   		<item><description><see cref="DateTimeKind.Utc"/>: Interpreted as UTC, then adjusted to the client's local time. It is recommended to use Utc to have full consistency regardless of the server and client timezone.</description></item>
 		/// 	</list>
-		/// </note>
+		/// </note> <!-- RN 43014 -->
 		/// </remarks>
 		/// <example>
 		/// <code>
