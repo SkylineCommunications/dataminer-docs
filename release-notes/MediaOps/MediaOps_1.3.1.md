@@ -29,6 +29,25 @@ To improve performance and keep the size of log collector packages under control
 
 Creating and editing resources and resource pools in the MediaOps apps will now be done with interactive Automation scripts instead of form components. This way, validation can be performed directly in the UI before the resources or resource pools are created or updated, and resources and resource pools can now be created directly in the complete state.
 
+#### Performance improvements [ID 43037]
+
+The following performance improvements have been implemented:
+
+- When the job edit panel was opened, whenever there was an update to any existing job, the job details were retrieved for the job in the panel. This could cause performance issues in systems with many job updates. Now only changes to the job in the panel will cause the job details to be retrieved again.
+- When certain fields (e.g. the organization) were not filled in, it could occur that requests were sent to the database with an empty field, which would fail. To make sure such unnecessary requests are no longer sent, the ID will now be validated before a request is sent.
+
+#### Compatibility with SRM framework [ID 43038]
+
+A custom quarantine script is now included in the MediaOps solution, making it compatible with the SRM framework. This means that you can now deploy both MediaOps and SRM on the same system.
+
+#### Workflow Designer: 'Include in booking' option removed [ID 43039]
+
+the *Include in booking* option has now been removed from the Workflow Designer app, as it could cause confusion for resources that were present in the job but that were not reserved.
+
+#### GQI DxM now required [ID 43040]
+
+To improve performance, the MediaOps Solution now requires the use of the [GQI DxM](xref:GQI_DxM).
+
 ### Fixes
 
 #### Resource Studio: Downgrading resource concurrency could cause sync issue [ID 43031]
