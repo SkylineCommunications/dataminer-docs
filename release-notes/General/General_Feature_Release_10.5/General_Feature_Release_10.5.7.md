@@ -301,6 +301,12 @@ By default, an SLSNMPManager process responsible for SNMPv3 communication will l
 
 Up to now, when an SLSNMPManager process responsible for SNMPv3 communication was not able to communicate with the SLSNMPManager process to which it had to redirect a trap, in some cases, the process could stop working and disappear.
 
+#### Failover: Online agent would not clear local information about elements, services, and redundancy groups from its event cache when going offline [ID 42890]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When, during a Failover switch, the online agent went offline, up to now, it would incorrectly not clear local information about elements, services, and redundancy groups from its event cache.
+
 #### Incorrect attempts to delete child DVE elements upon start or restart of a main DVE element [ID 42924]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
