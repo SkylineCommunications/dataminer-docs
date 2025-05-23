@@ -509,6 +509,9 @@ uiBuilder.AppendBlock(blockItem);
 > [!NOTE]
 > The kind of returned date/time may be different depending on whether the script is executed in a web or Cube environment. From DataMiner 10.5.4/10.6.0 onwards<!-- RN 42064 / RN 42097 / RN 42110 -->, [GetClientDateTime](xref:Skyline.DataMiner.Automation.UIResults.GetClientDateTime(System.String)) can be used to get the date/time as it is displayed. Enable the [ClientTimeInfo](xref:Skyline.DataMiner.Automation.UIBlockDefinition.ClientTimeInfo) property to make sure the info is available.
 
+> [!NOTE]
+> From DataMiner 10.5.8/10.6.0 onwards<!-- RN 43014 -->, for the [AutomationDateTimeUpDownOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions), [AutomationDateTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationDateTimePickerOptions) and [AutomationTimePickerOptions](xref:Skyline.DataMiner.Automation.AutomationTimePickerOptions), the [DateTimeKind](cref:DateTimeKind) of the the [Minimum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Minimum) and [Maximum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Maximum) will be taken into account. Check out how the different DateTimeKinds interact with the component on [Minimum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Minimum) and [Maximum](xref:Skyline.DataMiner.Automation.AutomationDateTimeUpDownOptions.Maximum).
+
 ## TreeView
 
 Allows you to define a tree view. Available from DataMiner 10.0.10 onwards.
