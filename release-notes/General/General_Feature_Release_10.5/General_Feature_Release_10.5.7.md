@@ -307,6 +307,12 @@ Up to now, when an SLSNMPManager process responsible for SNMPv3 communication wa
 
 When, during a Failover switch, the online agent went offline, up to now, it would incorrectly not clear local information about elements, services, and redundancy groups from its event cache.
 
+#### Failover: ClusterEndpoints.json files would not get updated correctly on offline agents when a DMA was added to the cluster [ID 42923]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, when a DMA was added to a DMS that contains one or more Failover pairs, in some cases, the `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` files would not get updated correctly on the offline agents.
+
 #### Incorrect attempts to delete child DVE elements upon start or restart of a main DVE element [ID 42924]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
