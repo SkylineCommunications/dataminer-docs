@@ -60,5 +60,5 @@ The overview below indicates the support levels for all operators.
 | -------- | ------------- | ------- |
 | [Select](xref:GQI_Select) | [Real-time events](#query-update-support) | |
 | [Sort](xref:GQI_Sort) | [Real-time events](#query-update-support) | Starting from DataMiner 10.5.0 [CU4]/10.5.7 with the [GQI DxM](xref:GQI_DxM). <!-- RN 42941 --> |
-| [Filter](xref:GQI_Sort) | [Real-time events](#query-update-support) / [Notification events](#query-update-support) | When supported, this is available in the relevant data source documentation. |
+| [Filter](xref:GQI_Sort) | [Real-time events](#query-update-support) / [Notification events](#query-update-support) | When supported, this is mentioned in the relevant data source documentation. |
 | All other operators | [Notification events](#query-update-support) | |
