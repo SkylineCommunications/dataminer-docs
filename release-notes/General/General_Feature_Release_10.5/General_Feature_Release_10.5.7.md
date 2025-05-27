@@ -204,6 +204,17 @@ From DataMiner 10.5.0 [CU2]/10.5.5 onwards, you can migrate from the SLNet-manag
 
 Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at run-time, it will no longer be required to restart DataMiner when migrating.
 
+#### GQI: Sort operator now supports real-time updates [ID 42941]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+When a GQI query that included a Sort operator was used in a component of which the *Update data* option was enabled, up to now, the Sort operator would incorrectly prevent updates through real-time events. As a result, the component would be updated through notification events instead.
+
+From now on, a Sort operator will forward all real-time events, resulting in rows being added, updated and removed as soon as an update is received.
+
+> [!IMPORTANT]
+> Sorting will not be re-evaluated on update. As a result, if an update is received for a sorting column, the table will no longer be sorted correctly.
+
 #### Failover: Enhanced performance when executing a Failover switch [ID 42983]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
