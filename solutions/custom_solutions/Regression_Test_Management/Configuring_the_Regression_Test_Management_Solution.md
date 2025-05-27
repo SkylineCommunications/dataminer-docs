@@ -30,7 +30,7 @@ Go to the **Settings** page in the element to define how the tests should behave
 
 The **Settings** page of the *Regression Test Results* element contains all email-related configurations in one centralized panel.
 
-![Email Settings Panel](~/solutions/images/Regression_Test_Settings_.png)
+![Email Settings Panel](~/solutions/images/Regression_Test_Settings.png)
 
 - **Daily Email Report**: Enables or disables the automatic daily execution and email report.
 - **Send Email on Single Test Run**: If enabled, email reports will also be sent when executing individual tests from the *Test Configuration* page.
