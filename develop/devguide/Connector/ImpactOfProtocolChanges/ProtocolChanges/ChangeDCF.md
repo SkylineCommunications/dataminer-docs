@@ -4,7 +4,7 @@ uid: ChangeDCF
 
 # Change DCF
 
-Changes to existing DCF interfaces and/or connections are typically considered a major change, and as such a major change is required in the version numbering.
+Changes to existing [DataMiner Connectivity Framework](xref:AdvancedDcf) (DCF) interfaces and/or connections are typically considered a major change, and as such a major change is required in the version numbering.
 
 ## Impact
 

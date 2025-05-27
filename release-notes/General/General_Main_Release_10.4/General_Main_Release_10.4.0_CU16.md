@@ -116,3 +116,21 @@ Also, when the service that failed to load is deleted, an attempt will be made t
 By default, an SLSNMPManager process responsible for SNMPv3 communication will listen for any incoming traps, and will forward, for example, SNMPv2 traps to the SLSNMPManager process responsible for SNMPv2 communication.
 
 Up to now, when an SLSNMPManager process responsible for SNMPv3 communication was not able to communicate with the SLSNMPManager process to which it had to redirect a trap, in some cases, the process could stop working and disappear.
+
+#### Failover: Online agent would not clear local information about elements, services, and redundancy groups from its event cache when going offline [ID 42890]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When, during a Failover switch, the online agent went offline, up to now, it would incorrectly not clear local information about elements, services, and redundancy groups from its event cache.
+
+#### Incorrect attempts to delete child DVE elements upon start or restart of a main DVE element [ID 42924]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When a main DVE element was started or restarted, up to now, an attempt would incorrectly be made to delete child DVE elements that had already been deleted, causing unnecessary information events like "Deleting element-connections for source..." to be generated.
+
+#### Automation: Associated TXF files would not be removed when an Automation script was deleted [ID 42943]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.

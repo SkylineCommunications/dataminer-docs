@@ -11,7 +11,7 @@ We are working on adding more information to this section soon, so check back fo
 
 <div class="row"> 
   <div class="column">
-    <a href="/dataminer-overview/General%20Introduction/Overview_General_introduction.html" title="General introduction" target="_self"><img src="~/dataminer-overview/images/General_Introduction.svg" style="width:100%"></a>
+    <a href="/dataminer-overview/General_Introduction/Overview_General_introduction.html" title="General introduction" target="_self"><img src="~/dataminer-overview/images/General_Introduction.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer-overview/DataMiner_Platform/Overview_Platform_intro.html" title="DataMiner platform" target="_self"><img src="~/dataminer-overview/images/DataMiner_Platform.svg" style="width:100%"></a>

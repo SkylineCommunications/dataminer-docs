@@ -18,6 +18,34 @@ uid: Cube_Feature_Release_10.5.7
 
 ## New features
 
+#### System Center: New Automation tab in Logging section [ID 42737]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+In DataMiner feature version 10.5.6, Automation script log files were introduced. These log files can now be consulted in DataMiner Cube. To do so, in Cube, open *System Center*, and go to *Logging > Automation*.
+
+On the left, you will find a list of all Automation scripts available on the system, grouped per DataMiner Agent.
+
+- Right-clicking a script in the list will open a shortcut menu with two options: *Open* and *Open previous*. If there is no previous log file, the latter option will not be available.
+- To set the log levels for one or more Automation scripts on a particular DataMiner Agent, open the *Log settings* pane at the top of the *Automation* tab, select the files\*, set the log levels, and click *Apply levels*.
+
+\**To select more than one script, click one, and then click another while holding down the Ctrl key, etc. To select a list of consecutive scripts, click the first one in the list and then click the last one while holding down the Shift key.*
+
+> [!NOTE]
+> When you open an Automation script in the *Automation* module, you can access the script's log file by clicking the *View Log* button or by right-clicking inside the script's contents and selecting *View log* from the shortcut menu. Note that this will only be possible if you have permission to view log files.
+
+#### Automation: Package name will now be displayed for Automation scripts installed as part of a DataMiner package [ID 42773]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When, in the *Automation* module, you select an Automation script that was installed as part of a DataMiner package, the name and version of that package will now be displayed below the description in the *General* section.
+
+- Clicking the name of the package will open its page in the [DataMiner Catalog](https://catalog.dataminer.services/).
+- If you try to save any changes you made to an Automation script that was installed as part of a package, a confirmation box will now appear, informing you that you are about to change the contents of a package script.
+- If the word "[Customized]" is displayed in front of the package name, this means that the Automation script has been modified since the package was installed.
+
+Also, the following problem has been fixed. When you made a change to an Automation script containing an Exe block with ID 1, up to now, the ID of the Exe block would incorrectly be changed to 2 after the script had been saved.
+
 #### Cube search box now supports fuzzy matching [ID 42911]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
@@ -41,13 +69,28 @@ When the DataMiner Cube desktop app is deployed using [shared MSI installation](
 
 From now on, users will get more feedback when a DataMiner version mismatch is detected:
 
-- In the *About* box of the DataMiner Cube desktop app, the version of the app will now include either a "(shared)" or "(MSI)" suffix. This will indicate whether the app was deployed using [shared MSI installation](xref:DataMiner_Cube_deployment_methods#shared-msi-installation) or [bootstrap MSI installation](xref:DataMiner_Cube_deployment_methods#bootstrap-msi-installation).
+- In the *About* box of the DataMiner Cube desktop app, the version of the app will now include either a "(shared)" or "(bootstrap)" suffix. This will indicate whether the app was deployed using [shared MSI installation](xref:DataMiner_Cube_deployment_methods#shared-msi-installation) or [bootstrap MSI installation](xref:DataMiner_Cube_deployment_methods#bootstrap-msi-installation).
 
 - The logging of the DataMiner Cube desktop app will now explicitly indicate when a "version not found" error was caused by a system-wide installation conflict.
 
 - The error message displayed on the screen will now explicitly say that a version mismatch was detected and that an update is required. Also, users will be referred to the [DataMiner Cube deployment methods](xref:DataMiner_Cube_deployment_methods) documentation page for more details.
 
 ### Fixes
+
+#### Spectrum analysis: No context menu would appear when selecting a measurement point [ID 42735]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When, in a spectrum card, you had selected one or more measurement points in the *Manual* tab of the right-hand pane, no context menu would appear in the *Measurement points* section of the spectrum graph sidebar.
+
+From now on, when you select a single measurement point in the *Manual* tab of the right-hand pane, a context menu will appear with the following options:
+
+- Display trace
+- Display min. hold
+- Display max. hold
+- Display avg hold
+
+Also, in the *trace* menu, the *Show current* button will now be disabled when multiple measurement points are selected.
 
 #### Alarm templates: Problem when duplicating a scheduled alarm template [ID 42823]
 
@@ -72,3 +115,9 @@ When, in the *Topology* pane, you navigated quickly through the different levels
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, an error could be thrown when a Cube client received multiple property updates for the same element, service or view card.
+
+#### Trending: Problem with trend graphs displaying exception values with multiple Y axes [ID 42889]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+In some cases, trend graphs displaying exception values with multiple Y axes would render unstably, resulting in misaligned axes or inconsistent graph layouts.

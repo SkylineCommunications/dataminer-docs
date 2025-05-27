@@ -1,5 +1,6 @@
 ---
 uid: Factory_reset_tool
+keywords: SLReset
 ---
 
 # Factory reset tool

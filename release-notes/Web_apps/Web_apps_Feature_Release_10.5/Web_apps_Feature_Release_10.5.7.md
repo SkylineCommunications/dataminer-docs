@@ -58,6 +58,33 @@ Currently, by default, the existing components will still be used by default to 
 
 A number of minor enhancements have been made to the dropdown controls.
 
+#### Web Services API: ConvertQueryToProtoJson method now allows the JSON version to be specified [ID 42855]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+If you want the Data Aggregator DxM to be able to use a GQI query, you have to convert that query to a JSON string using the *ConvertQueryToProtoJson* web method.
+
+From now on, the *ConvertQueryToProtoJson* web method will allow you to specify the contract to be used:
+
+| Version | Description |
+|---------|-------------|
+| contract 0 | The JSON version needed when GQI queries are processed by SLHelper. |
+| contract 1 (default version) | The JSON version needed when GQI queries are processed by the GQI DxM. |
+
+Example:
+
+`HTTP POST https://DmaIP/API/v1/Internal.asmx/ConvertQueryToProtoJson`
+
+with payload:
+
+```json
+{
+   "connection": "...",
+   "options": { "Contract": 1 },
+   "query": {...}
+}
+```
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: No error would be returned when a parameter or an element could not be fetched [ID 42584]
@@ -111,3 +138,15 @@ When a *GetAlarms* call was sent in a JSON request, in some cases, the following
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, in some cases, an exception could be thrown after a PDF report had been generated. As a result, channels and sockets would not be cleaned up correctly.
+
+#### Low-Code Apps: Problem with 'Open monitoring card' action after deleting and recreating the referenced object [ID 42926]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When you had created an "Open monitoring card" action that referenced an object (i.e. an element, service or view) by name, and then deleted and recreated that object, up to now, the action would no longer work because it would still reference the object that was deleted.
+
+#### Dashboards app & Low-Code Apps - Timeline component: Scroll position would incorrectly reset on Mozilla Firefox [ID 42966]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+On Mozilla Firefox, when you scrolled inside a *Timeline* component, in some cases, the scroll position would incorrectly reset.

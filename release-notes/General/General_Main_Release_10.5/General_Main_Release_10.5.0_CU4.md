@@ -86,6 +86,32 @@ For example, the BPA test is now able to run on the offline agent of a Failover 
 
 Also, when the BPA test is run on a system with a local Cassandra or Elasticsearch database, a notice will now appear, saying that a local Cassandra/Indexing setup is no longer recommended.
 
+#### BrokerGateway: Enhanced performance [ID 42900]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Because of a number of enhancements, overall BrokerGateway performance has increased, especially after adding or removing DMAs from the cluster.
+
+#### BrokerGateway: Enhanced error handling [ID 42929]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+A number of enhancements have been made to BrokerGateway with regard to error handling, especially in case of connection problems.
+
+#### Migrating to BrokerGateway no longer requires a DataMiner restart [ID 42930]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+From DataMiner 10.5.0 [CU2]/10.5.5 onwards, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the *NATSMigration* tool.
+
+Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at run-time, it will no longer be required to restart DataMiner when migrating.
+
+#### Failover: Enhanced performance when executing a Failover switch [ID 42983]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when executing a Failover switch.
+
 ### Fixes
 
 #### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]
@@ -144,3 +170,33 @@ Up to now, a `GetElementMessage` call would throw an exception when the *element
 By default, an SLSNMPManager process responsible for SNMPv3 communication will listen for any incoming traps, and will forward, for example, SNMPv2 traps to the SLSNMPManager process responsible for SNMPv2 communication.
 
 Up to now, when an SLSNMPManager process responsible for SNMPv3 communication was not able to communicate with the SLSNMPManager process to which it had to redirect a trap, in some cases, the process could stop working and disappear.
+
+#### Failover: Online agent would not clear local information about elements, services, and redundancy groups from its event cache when going offline [ID 42890]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When, during a Failover switch, the online agent went offline, up to now, it would incorrectly not clear local information about elements, services, and redundancy groups from its event cache.
+
+#### Incorrect attempts to delete child DVE elements upon start or restart of a main DVE element [ID 42924]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When a main DVE element was started or restarted, up to now, an attempt would incorrectly be made to delete child DVE elements that had already been deleted, causing unnecessary information events like "Deleting element-connections for source..." to be generated.
+
+#### Automation: Associated TXF files would not be removed when an Automation script was deleted [ID 42943]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.
+
+#### DataMiner upgrade: VerifyClusterPorts prerequisite check could fail when SLXML was still running [ID 42947]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, during a DataMiner upgrade, the *VerifyClusterPorts* prerequisite check could fail when SLXML was still running.
+
+#### Failover: NATS communication error on online agent after a Failover switch [ID 42964]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+After a Failover switch, in some cases, the ClusterEndpointManager would fail to initialize on the agent that had gone online. In the *Failover Status* window, *NATS communication* would show an error state.
