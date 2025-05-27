@@ -6,6 +6,8 @@ uid: BrokerGateway_Migration
 
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the "NATSMigration" tool. Prior to this, starting from DataMiner 10.5.0/10.5.2, this feature is available in [soft launch](xref:SoftLaunchOptions).
 
+Note that prior to DataMiner 10.5.0 [CU4]/10.5.7, this procedure requires a DataMiner restart.<!-- RN 42930 -->
+
 From DataMiner 10.6.0 onwards, this migration will happen automatically during a DataMiner upgrade.
 
 ## Prerequisites
@@ -27,9 +29,9 @@ If the BPA succeeds, the system is all set to migrate.
 1. On each machine, enter the `install` command and confirm.
 
    > [!IMPORTANT]
-   > This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **all DataMiner Agents, including Failover DMAs**. The migration needs to write files and restart DataMiner, because a flag is adjusted that changes SLNet behavior at startup. As a single instance cannot remotely shut down and restart a DataMiner Agent, this action must be done on each separate Agent in the cluster.
+   > This must happen on **each DMA** in the cluster **within a 10-minute time frame**. It is very important that this happens for **each individual DataMiner Agent, including Failover DMAs**. Prior to DataMiner 10.5.0 [CU4]/10.5.7, this also involves a restart of each DataMiner Agent.
 
-   Successful installation output might look like this:
+   Successful installation output might look like this (depending on your DataMiner version):
 
    ```cmd
    C:\Skyline DataMiner\Tools>NATSMigration.exe
@@ -86,7 +88,7 @@ If the BPA succeeds, the system is all set to migrate.
    ```
 
    > [!NOTE]
-   > If you run this executable prior to DataMiner 10.5.0 [CU2]/10.5.5 as a soft-launch feature, the output will be slightly different, indicating the "BrokerGateway SoftLaunch flag" instead of the "BrokerGateway maintenance flag".
+   > If you run this executable on a recent DataMiner version (DataMiner 10.5.0 [CU4]/10.5.7 or higher<!-- RN 42930 -->), no restart will be mentioned. If you run this executable prior to DataMiner 10.5.0 [CU2]/10.5.5 as a soft-launch feature, the output will indicate the "BrokerGateway SoftLaunch flag" instead of the "BrokerGateway maintenance flag".
 
 ## Actions during the migration
 
