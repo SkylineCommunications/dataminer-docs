@@ -185,7 +185,7 @@ If the root cause of the large number of tombstone lies within the connector, fo
 
 ## Contacting tech support for this issue
 
-If you are unable to resolve this yourself using the information above, contact [techsupport@skyline.be](mailto:techsupport@skyline.be).
+If you are unable to resolve this yourself using the information above, contact <support@dataminer.services>.
 
 Please provide all data useful for the investigation. This will include the following:
 

@@ -233,4 +233,4 @@ If SLLogCollector seems stuck, but none of the issues mentioned above apply for 
 
    The resulting file will be placed in the folder `C:\Skyline DataMiner\Tools\Procdump\`.
 
-1. Send the resulting .dmp file to <techsupport@skyline.be>.
+1. Send the resulting .dmp file to <support@dataminer.services>.
