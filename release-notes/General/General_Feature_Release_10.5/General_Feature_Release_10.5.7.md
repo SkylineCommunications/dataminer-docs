@@ -204,13 +204,13 @@ From DataMiner 10.5.0 [CU2]/10.5.5 onwards, you can migrate from the SLNet-manag
 
 Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at run-time, it will no longer be required to restart DataMiner when migrating.
 
-#### GQI: Sort operator now supports real-time updates [ID 42941]
+#### GQI: Sort operator now supports real-time updates when GQI DxM is being used [ID 42941]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 When a GQI query that included a Sort operator was used in a component of which the *Update data* option was enabled, up to now, the Sort operator would incorrectly prevent updates through real-time events. As a result, the component would be updated through notification events instead.
 
-From now on, a Sort operator will forward all real-time events, resulting in rows being added, updated and removed as soon as an update is received.
+From now on, on systems using the GQI DxM, a Sort operator will forward all real-time events, resulting in rows being added, updated and removed as soon as an update is received.
 
 > [!IMPORTANT]
 > Sorting will not be re-evaluated on update. As a result, if an update is received for a sorting column, the table will no longer be sorted correctly.
@@ -335,6 +335,12 @@ When a main DVE element was started or restarted, up to now, an attempt would in
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.
+
+#### Failover: Database status in 'Failover status' window would incorrectly always be displayed as OK on a system using STaaS [ID 42944]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+When, in e.g. DataMiner Cube, you opened the *Failover status* window when connected to a system using STaaS, up to now, the database status would always be displayed as OK, even when STaaS was degraded.
 
 #### DataMiner upgrade: VerifyClusterPorts prerequisite check could fail when SLXML was still running [ID 42947]
 
