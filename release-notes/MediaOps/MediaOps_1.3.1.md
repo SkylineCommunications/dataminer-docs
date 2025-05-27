@@ -17,6 +17,10 @@ When a job is set up, either manually or automatically, operators or orchestrati
 
 It is now possible to delete completed MediaOps jobs.
 
+#### Ability to set job back from confirmed to tentative [ID 43042]
+
+When a job has been confirmed, it is now possible to return it to the tentative state.
+
 ## Changes
 
 ### Enhancements
