@@ -104,6 +104,8 @@ items:
                 topicUid: Element_in_Protocol_logging
           - name: Elements logging
             topicUid: Elements_logging
+          - name: Automation logging
+            topicUid: Automation_logging
           - name: Changing the maximum size of DataMiner log files
             topicUid: Changing_the_maximum_size_of_DataMiner_log_files
   - name: Troubleshooting flowcharts
