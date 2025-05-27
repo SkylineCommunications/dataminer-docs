@@ -6,7 +6,7 @@ uid: Configuring_Mobile_Gateway_to_communicate_with_an_SMSEagle_device_via_HTTPS
 
 It is possible to set up communication with an SMSEagle device via HTTPS. To do so:
 
-1. Open *C:\\Skyline DataMiner\\Mobile Gateway\\Config.xml*.
+1. Open `C:\Skyline DataMiner\Mobile Gateway\Config.xml`.
 
 1. In the `<HttpGsm>` tag, add the following subtags:
 
@@ -34,7 +34,7 @@ If `<RequireValidSsl>` is set to *false*, no further configuration is required. 
 
 1. Make sure the DataMiner Agent trusts the default server certificate of the SMSEagle device:
 
-   1. In your internet browser, go to *https://\<IP address of the SMSEagle device>*.
+   1. In your internet browser, go to `https://\<IP address of the SMSEagle device`>.
 
       If an error message appears, telling you that the site is not secure, ignore it.
 
@@ -66,7 +66,7 @@ If `<RequireValidSsl>` is set to *false*, no further configuration is required. 
 
 1. Update the Windows hosts file:
 
-   1. Open *C:\\Windows\\System32\\Drivers\\etc\\hosts*.
+   1. Open `C:\Windows\System32\Drivers\etc\hosts`.
 
    1. At the bottom, add a line with the IP address of the SMSEagle device, followed by a space and the word "smseagle"
 
@@ -74,7 +74,7 @@ If `<RequireValidSsl>` is set to *false*, no further configuration is required. 
 
    1. Save and close the hosts file.
 
-1. To check if the certificate was correctly installed, open an internet browser, and go to *https://smseagle/login*. If no "invalid certificate" errors appear, the certificate was correctly installed.
+1. To check if the certificate was correctly installed, open an internet browser, and go to `https://smseagle/login`. If no "invalid certificate" errors appear, the certificate was correctly installed.
 
 > [!NOTE]
 >

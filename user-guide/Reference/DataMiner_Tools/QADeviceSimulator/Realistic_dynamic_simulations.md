@@ -29,7 +29,7 @@ The difference with a regular simulation file is that there is a *ProxyAgents* 
 
 - *devicePort*: This specifies the port the device is listening on. By default, this is 161.
 
-When this simulation containing the *ProxyAgent* is running, the tool will automatically create the folder *C:\\QASNMPSimulations\\ProxySimulations*, together with a file that has the same name as the simulation file, but with the extension .txt. In case the file becomes too big, it will be renamed; the first file ends with \_1.txt, the second file with \_2.txt, etc.
+When this simulation containing the *ProxyAgent* is running, the tool will automatically create the folder `C:\QASNMPSimulations\ProxySimulations`, together with a file that has the same name as the simulation file, but with the extension .txt. In case the file becomes too big, it will be renamed; the first file ends with \_1.txt, the second file with \_2.txt, etc.
 
 These files will contain all variable bindings coming from the device that the proxy captures. Each line contains a timestamp, OID, binding type, and value. All are separated by #@#. Below is an example of such a proxy simulation file:
 
@@ -142,7 +142,7 @@ Finally, configure the simulation file to poll the database:
                   <Definitions>
    ```
 
-1. Place the simulation file in the folder *C:\\QASNMPSimulations*. The tool will now be able to run it.
+1. Place the simulation file in the folder `C:\QASNMPSimulations`. The tool will now be able to run it.
 
 > [!NOTE]
 > SNMPv3 is not yet supported.

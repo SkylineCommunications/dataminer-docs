@@ -41,4 +41,4 @@ To change the connection settings on the login page:
 If you are already logged in, changing the connection settings in Cube is similar. For detailed information, see [Manual configuration of client communication settings](xref:DMA_configuration_related_to_client_applications#manual-configuration-of-client-communication-settings).
 
 > [!NOTE]
-> These connection settings are defined in the file *connectionsettings.txt* (located in the following directory on the DMA: *C:\\Skyline DataMiner\\Webpages*).
+> These connection settings are defined in the file *connectionsettings.txt* (located in the following directory on the DMA: `C:\Skyline DataMiner\Webpages`).

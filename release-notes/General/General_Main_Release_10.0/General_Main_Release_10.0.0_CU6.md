@@ -40,7 +40,7 @@ Performance has improved when a subscription is added on element level, specific
 In addition, it is now possible to change the number of records that can be contained in the protocol cache. You can do so using the SLNetClientTest tool by going to *Options* > *SLNet Options*, selecting *protocolCacheMru* in the drop-down box, changing the value where necessary and clicking *OK*. However, do not change this value without checking with Skyline for advice first, as an incorrect setting can cause serious issues.
 
 > [!WARNING]
-> The DataMiner SLNetClientTest tool is an advanced system administration tool that should be used with extreme care (*C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe*).
+> The DataMiner SLNetClientTest tool is an advanced system administration tool that should be used with extreme care (`C:\Skyline DataMiner\Files\SLNetClientTest.exe`).
 
 #### Improved logging for view tables in SLElement log \[ID 27192\]
 

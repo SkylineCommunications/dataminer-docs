@@ -51,7 +51,7 @@ In the `C:\Skyline DataMiner\Logging\SLTimeToLive` folder, you can now find a ne
 
 <!-- MR 10.5.0 - FR 10.4.5 -->
 
-SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the *C:\\Skyline DataMiner\\Logging* folder or one of its subfolders:
+SLNetTypes now exposes two new request-response operations that will allow you to retrieve a file from the `C:\Skyline DataMiner\Logging` folder or one of its subfolders:
 
 | Type of file to be retrieved | Request | Response |
 |---|---|---|
@@ -312,8 +312,8 @@ Because of a number of enhancements, overall performance has increased when star
 
 When the factory reset tool (*SLReset.exe*) is run, from now on, it will also remove the *NodeId.txt* files located in the following folders:
 
-- *C:\\ProgramData\\Skyline Communications\\DxMs Shared\\Data*
-- *C:\\ProgramData\\Skyline Communications\\DataMiner Orchestrator\\Data*
+- `C:\ProgramData\Skyline Communications\DxMs Shared\Data`
+- `C:\ProgramData\Skyline Communications\DataMiner Orchestrator\Data`
 
 These files will be recreated with a new identifier when DataMiner or any of its extension modules is restarted.
 
@@ -423,7 +423,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.5.8
 - DataMiner SupportAssistant: version 1.6.8
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### GQI: Maximum number of concurrent queries has been increased from 20 to 100 [ID 39293]
 

@@ -95,7 +95,7 @@ Because of a number of enhancements, overall performance has increased when the 
 
 #### New icons added to Icons.xml file \[ID 28566\]
 
-A set of 6 new colored LED icons has been added to the file *Icons.xml*, located in the folder *C:\\Skyline DataMiner\\Protocols*.
+A set of 6 new colored LED icons has been added to the file *Icons.xml*, located in the folder `C:\Skyline DataMiner\Protocols`.
 
 #### SLWatchDog will no longer try to restart NAS and NATS when they are disabled \[ID 28585\]
 
@@ -261,7 +261,7 @@ From now on, SLDMS will perform DNS lookups using the getaddrinfo function inste
 
 #### Ongoing spectrum recording will now automatically be saved when the session is closed \[ID 29843\]
 
-When a spectrum session is closed while a recording is in progress, from now on, the recording will automatically be saved to the user’s folder in *C:\\Skyline DataMiner\\Users*.
+When a spectrum session is closed while a recording is in progress, from now on, the recording will automatically be saved to the user’s folder in `C:\Skyline DataMiner\Users`.
 
 #### Additional logging for actions in SRM modules \[ID 29924\]
 
@@ -311,7 +311,7 @@ A number of enhancements have been made with regard to the loading indicator tha
 
 #### Logging: An entry will no longer by default be added to the SLDataMiner.txt and SLErrors.txt log files when the 'C:\\Skyline DataMiner\\Simulations' folder cannot be found at DataMiner startup \[ID 30168\]
 
-Up to now, at DataMiner startup, the following entry would by default be added to the *SLDataMiner.txt* and *SLErrors.txt* log files when no *C:\\Skyline DataMiner\\Simulations* folder could be found:
+Up to now, at DataMiner startup, the following entry would by default be added to the *SLDataMiner.txt* and *SLErrors.txt* log files when no `C:\Skyline DataMiner\Simulations` folder could be found:
 
 ```txt
 CDataMiner::LoadSimulations|ERR|0|Failed to query directory 'C:\Skyline DataMiner\Simulations' with filter 'Simulation_*.xml' (The system cannot find the path specified.).
@@ -542,9 +542,9 @@ In the *Agents* section of *System Center*, a number of enhancements have been m
 
 To download the CefSharp library, DataMiner Cube will now look in the following locations, in the order specified below:
 
-- The location defined in a registry key created by the Cube MSI installation (*HKLM\\SOFTWARE\\Skyline Communications\\DataMiner Cube\\InstallDir*), by default *C:\\Program Files\\Skyline Communications\\DataMiner Cube*
-- *%LocalAppData%\\Skyline\\DataMiner*
-- *%ProgramData%\\Skyline\\DataMiner*
+- The location defined in a registry key created by the Cube MSI installation (`HKLM\SOFTWARE\Skyline Communications\DataMiner Cube\InstallDir`), by default `C:\Program Files\Skyline Communications\DataMiner Cube`
+- `%LocalAppData%\Skyline\DataMiner`
+- `%ProgramData%\Skyline\DataMiner`
 
 #### Enhanced logging when importing groups from Azure AD \[ID 31917\]
 

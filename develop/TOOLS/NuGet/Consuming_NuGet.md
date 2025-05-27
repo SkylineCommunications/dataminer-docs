@@ -145,3 +145,8 @@ If you encounter problems with credentials in Visual Studio, particularly when t
 
 > [!IMPORTANT]
 > If you choose to add your credentials in an unencrypted manner, it is highly recommended to restrict the token's scope to only allow reading packages, as explained in [step 1 of creating a personal access token](#step-1-creating-a-personal-access-token).
+
+## Accessing the Azure NuGet registry
+
+> [!NOTE]
+> This NuGet registry is to be used by Skyline employees only. More information is available on [Skyline Internal Docs](https://internaldocs.skyline.be/DevDocs/Skyline%20Software%20Development%20Toolkit/Private%20NuGet%20Store.html) (accessible for Skyline employees only).

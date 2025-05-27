@@ -1,16 +1,26 @@
 ---
 uid: SLNetClientTest_tracking_dma_communication
+keywords: Cube follow
 ---
 
 # Tracking DMA communication
 
-Via the *Follow* menu, you can activate follow mode for several aspects of DMA communication. Messages will then appear in the *Properties* tab of the main menu as the DMA communication is tracked.
+Via the *Follow* menu, you can activate follow mode for several aspects of DMA communication, for example to [follow a DataMiner Cube session](#following-a-dataminer-cube-session). Messages will then appear in the *Properties* tab of the main menu as the DMA communication is tracked.
 
-To activate follow mode:
+> [!WARNING]
+> Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+## Activating follow mode
+
+In general, this is how you activate follow mode:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
-1. Select which aspects of communication should be followed:
+1. In the menu bar at the top, select *Follow* > *Follow*.
+
+   This will open a new window.
+
+1. In the new window, select which aspects of communication should be followed:
 
    - *Events* and *Requests/Responses* are selected by default, to track events that are sent to a client and requests and responses respectively.
 
@@ -36,5 +46,26 @@ To save a transcript of the DMA communication, go to *File* > *Dump* > *Save*. Y
 
 To stop follow mode, in the *Follow* menu, select *Stop Following*.
 
-> [!WARNING]
-> Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+## Following a DataMiner Cube session
+
+Below you can find how you can activate follow mode specifically to follow a DataMiner Cube session for troubleshooting purposes. This is similar to what is outlined above, but here the specific options are described that you need to select for the purpose of following Cube only.
+
+1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+
+1. In the menu bar at the top, select *Follow* > *Follow*.
+
+1. In the *Who to follow* window:
+
+   1. Select *Hook Into Active Session* and select the Cube session.
+
+   1. In the *Quick Filter* box, specify the name of the user whose Cube session you want to follow.
+
+   1. Under *What to Follow*, select *Requests* and *Responses*.
+
+   1. Click *OK*.
+
+   ![Who to Follow window](~/user-guide/images/Who_to_follow_window.png)
+
+1. In DataMiner Cube, reproduce the issue you are trying to troubleshoot.
+
+1. Save a transcript by going to *File* > *Dump* > *Save*.

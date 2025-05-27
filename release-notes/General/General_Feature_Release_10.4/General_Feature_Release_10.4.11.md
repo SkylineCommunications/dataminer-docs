@@ -172,9 +172,9 @@ The following calls have been improved:
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file would by default be cleared.
+When, in a Failover setup, a DataMiner Agent went offline, up to now, its `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` file would by default be cleared.
 
-From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
+From now on, both DMAs in a Failover setup will keep a copy of the `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
 
 #### Service & Resource Management: Switching master agents [ID 40712]
 
@@ -230,7 +230,7 @@ From now on, the following Engine methods will use alarm IDs with the syntax DMA
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\* folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
+From now on, the *nats-server.config* file, located in the `C:\Skyline DataMiner\NATS\nats-streaming-server\` folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
 
 #### SLLogCollector: Deprecated tool used to archive collected files replaced [ID 40815]
 

@@ -89,7 +89,7 @@ When you open an element card, each trended parameter on that card gets one of t
 
 DataMiner will do the following to select a trend state icon for a particular parameter:
 
-1. From the trend data of the parameter, DataMiner will fetch all change points that occurred during the last X seconds. X being the number of seconds specified in the *arrowWindowLength* parameter, found in *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. Default value: 3600 seconds.
+1. From the trend data of the parameter, DataMiner will fetch all change points that occurred during the last X seconds. X being the number of seconds specified in the *arrowWindowLength* parameter, found in `C:\Skyline DataMiner\Files\SLAnalytics.config`. Default value: 3600 seconds.
 
 2. If some of the change points are anomalous, then the following trend state icon is selected:
 
@@ -311,7 +311,7 @@ Up to now, messages of category Warning, Error and Exception were displayed in a
 
 If DataMiner Cube remains unresponsive for a number of seconds, a pop-up window will now appear, asking you whether to keep waiting or to exit Cube.
 
-You can configure this detection mechanism by means of the following system settings in the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file:
+You can configure this detection mechanism by means of the following system settings in the `C:\Skyline DataMiner\users\ClientSettings.json` file:
 
 | Setting                                            | Description                                                                                             |
 |----------------------------------------------------|---------------------------------------------------------------------------------------------------------|

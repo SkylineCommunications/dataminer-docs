@@ -297,7 +297,7 @@ In some cases, it would not be possible to update properties that had a value eq
 
 When an element was requested via IDms, in some cases, an exception could be thrown when the element had duplicate properties.
 
-From now on, when an element has duplicate properties, no exception will be thrown, but an entry will be added to the *C:\\Skyline DataMiner\\Logging\\ClassLibrary.txt* log file.
+From now on, when an element has duplicate properties, no exception will be thrown, but an entry will be added to the `C:\Skyline DataMiner\Logging\ClassLibrary.txt` log file.
 
 #### Class Library: GetAlarmTemplates() and GetTrendTemplates() would not work when the protocol was a production protocol \[ID 24357\]
 

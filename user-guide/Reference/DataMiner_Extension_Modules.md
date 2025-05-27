@@ -13,7 +13,7 @@ DxMs depend on a minimum version of the core software. This is indicated in the 
 
 ## Packs
 
-For ease of installation, DxMs may be packaged together in a pack, such as the [Cloud Pack](xref:CloudPackages). These packs allow users to install several DxMs at once.
+For ease of installation, DxMs may be packaged together in a pack, such as the [Cloud Pack](xref:DataMiner_Cloud_Pack). These packs allow users to install several DxMs at once.
 
 ## Available DcMs
 
@@ -87,6 +87,10 @@ From CloudFeed version 1.4.0 onwards, the minimum required DataMiner version is 
 
 From DataMiner 10.5.0/10.5.1 onwards<!--RN 41357-->, DataMiner upgrade packages by default include the latest version of the CloudFeed module. If a newer version of the CloudFeed module is available but you prefer not to install an upgrade package, you can install a newer version separately via the Admin app.
 
+### Copilot
+
+The Copilot module extends DataMiner with conversational AI. For more information, see [Copilot](xref:Copilot_DxM).
+
 ### DataAggregator
 
 See [Data Aggregator](xref:Data_Aggregator_DxM).
@@ -95,7 +99,7 @@ See [Data Aggregator](xref:Data_Aggregator_DxM).
 
 The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
-The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->
 
 ### CommunicationGateway
 

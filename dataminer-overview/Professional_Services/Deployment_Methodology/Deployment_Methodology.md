@@ -2,8 +2,6 @@
 uid: DeploymentMethodology
 ---
 
-# DataMiner Solution Deployment Methodology
-
 # About Digital Transformation
 
 Today we are all catapulted into a new digital age, which is about to affect and fundamentally change pretty much everything you can think of. Digital Transformation is key to preparing an organization to operate and flourish in the new data-driven future, and to evolving into a so-called composable business fit for the emerging digital age.

@@ -46,7 +46,7 @@ To add C# code to a script:
      > - SLLoggerUtil.dll
      > - SLAnalyticsTypes.dll (from DataMiner 10.1.11 onwards)
      >
-     > To reference additional DLLs, e.g. a custom DLL placed in the *C:\\Skyline DataMiner\\ProtocolScripts* folder, you need to specify an absolute path.
+     > To reference additional DLLs, e.g. a custom DLL placed in the `C:\Skyline DataMiner\ProtocolScripts` folder, you need to specify an absolute path.
 
    - *Script references*: Allows you to refer to other C# blocks. See [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library).
 
@@ -140,6 +140,9 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
     >
     > - Custom entry points are possible. See [Custom entry points](#custom-entry-points).
 
+    > [!IMPORTANT]
+    > Be careful how you handle async code in an Automation script. See [Handling async code](xref:Handling_Async_Code).
+
 ## Preprocessor directives
 
 DataMiner compiles C# blocks of Automation scripts with the following preprocessor directives:
@@ -221,6 +224,9 @@ Restrictions:
 - For reasons of backward compatibility, we recommend using the Script class as the entry point class for a script.
 
 - The script must contain the string "class Script" as otherwise DataMiner will wrap the code. See [Script class](#script-class).
+
+> [!IMPORTANT]
+> Be careful how you handle async code in an Automation script. See [Handling async code](xref:Handling_Async_Code).
 
 ## Online help and user assistance
 

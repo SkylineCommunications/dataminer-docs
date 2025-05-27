@@ -54,7 +54,7 @@ dllImport="[ProtocolName]_[ProtocolVersion].dll"
 
 To refer to DLLs that are stored in a subfolder of the ProtocolScripts folder, you must mention the subfolder when you specify the DLL in the protocol. For example, to use "test.dll" stored in `C:\Skyline DataMiner\ProtocolScripts\SubFolder`, configure the dllImport attribute of the QAction tag as follows: dllImport="SubFolder\test.dll".<!-- RN 23565 -->
 
-If the DLL file is stored in the `C:\Skyline DataMiner\ProtocolScripts\DllImport` folder, there is no need to specify the subfolder in the protocol. DLL files stored in *C:\Skyline DataMiner\ProtocolScripts\DllImport* will take precedence over DLL files stored in *C:\Skyline DataMiner\ProtocolScripts*.<!-- RN 23565 -->
+If the DLL file is stored in the `C:\Skyline DataMiner\ProtocolScripts\DllImport` folder, there is no need to specify the subfolder in the protocol. DLL files stored in `C:\Skyline DataMiner\ProtocolScripts\DllImport` will take precedence over DLL files stored in `C:\Skyline DataMiner\ProtocolScripts`.<!-- RN 23565 -->
 
 It is also possible to reference DLLs with the same name but with different assembly versions within the same connector, though not within the same QAction.<!-- RN 23565 -->
 

@@ -1,5 +1,6 @@
 ---
 uid: Factory_reset_tool
+keywords: SLReset
 ---
 
 # Factory reset tool
@@ -35,7 +36,9 @@ It will always perform the following actions, regardless of whether the DMA is r
 - UndoFirewallConfig
 - Unregister
 - UninstallEndpoints
+- ResetBrokerGatewayNATS<!-- RN 40759 -->
 - DeleteTaskbarAppSettings
+- ResetMaintenanceSettingsXml
 - FileCleanup
 
   This action deletes any unnecessary files in the folder `C:\Skyline DataMiner\`. It uses a whitelist to determine which files to keep. When it is first executed, the default whitelist is added to `C:\Skyline DataMiner\Files\ResetConfig.txt`. Afterwards, you can add files you want to keep to this whitelist, so that these are not removed when the tool is executed again. If you delete *ResetConfig.txt*, the default whitelist will be used again.

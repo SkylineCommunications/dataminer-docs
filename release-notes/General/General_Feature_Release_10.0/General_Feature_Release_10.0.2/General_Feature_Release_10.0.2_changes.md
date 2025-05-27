@@ -37,7 +37,7 @@ A number of enhancements have been made with regard to the management of profile
 
 #### Failover: Additional folders synchronized at initial setup \[ID 23875\]
 
-From now on, at initial Failover setup, the following folders under *C:\\Skyline DataMiner\\* will also be synchronized among the two DataMiner Agents:
+From now on, at initial Failover setup, the following folders under `C:\Skyline DataMiner\` will also be synchronized among the two DataMiner Agents:
 
 - Aggregation
 - Configurations\\JSON
@@ -65,7 +65,7 @@ The maxJSONLength setting, for instance, has now been made configurable. Up to n
 
 To set maxJSONLength to a specific value, do the following:
 
-1. Open the *Web.config* file located in the *C:\\Skyline DataMiner\\Webpages\\API* folder.
+1. Open the *Web.config* file located in the `C:\Skyline DataMiner\Webpages\API` folder.
 
 1. Make sure that the *configuration.appSettings* section contains an element similar to the following one:
 

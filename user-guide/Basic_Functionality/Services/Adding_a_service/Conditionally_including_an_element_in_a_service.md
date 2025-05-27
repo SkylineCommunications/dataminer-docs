@@ -20,7 +20,7 @@ During service creation or while editing a service, it is possible to include an
 
    - If you select *Element is in the active connectivity chain*, element inclusion will depend on whether the element, or the instance of the element, is part of a connectivity chain. In this case, the following steps in this procedure no longer apply, and you can instead specify a connectivity configuration.
 
-   - Note that for the above-mentioned option to be enabled, the folder *C:\\Skyline DataMiner\\Connectivity* must be created, which must contain a file called *Connectivity.xml* containing the following code:
+   - Note that for the above-mentioned option to be enabled, the folder `C:\Skyline DataMiner\Connectivity` must be created, which must contain a file called *Connectivity.xml* containing the following code:
 
      ```xml
      <DCF>

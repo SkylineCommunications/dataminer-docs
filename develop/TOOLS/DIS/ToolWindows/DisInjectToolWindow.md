@@ -45,7 +45,7 @@ Below the element selection box you can find the element manipulation tool bar. 
 
   > [!NOTE]
   >
-  > - If DIS is connected to a remote DataMiner Agent, then make sure the *C:\\Skyline DataMiner\\logging* folder on that DataMiner Agent is shared and accessible.
+  > - If DIS is connected to a remote DataMiner Agent, then make sure the `C:\Skyline DataMiner\logging` folder on that DataMiner Agent is shared and accessible.
   > - Element Display is no longer available from DataMiner 9.6.0 onwards.
 
 ### Linking temporary QAction projects to QActions in the protocol of the selected element

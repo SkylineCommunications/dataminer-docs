@@ -96,7 +96,7 @@ In the ListView component, which is used in the Bookings and Services apps as we
 
 In the new Cube X layout, by default, cards no longer have a Forward button in their header bar menu.
 
-If you want card header bar menus to contain a Forward button, then open the *C:\\Skyline DataMiner\\Users\\ClientSettings.json* file, and set the *commonServer.card.DisplayForwardButton* option to true.
+If you want card header bar menus to contain a Forward button, then open the `C:\Skyline DataMiner\users\ClientSettings.json` file, and set the *commonServer.card.DisplayForwardButton* option to true.
 
 #### Alarm Console now fully compliant with the new Cube X style \[ID 24859\]
 
@@ -315,7 +315,7 @@ From now on, in Cube, you can not only enable a simulation file, but also create
 
 When you open an element card, you can also access this same command via the card’s hamburger menu.
 
-The simulation file will be stored on the DataMiner Agent, in the protocol folder of the element in question: *C:\\Skyline DataMiner\\Protocols\\NAME\\VERSION\\Simulation_ELEMENTNAME.xml*
+The simulation file will be stored on the DataMiner Agent, in the protocol folder of the element in question: `C:\Skyline DataMiner\Protocols\NAME\VERSION\Simulation_ELEMENTNAME.xml`
 
 #### Resources app: Time-dependent capabilities \[ID 25409\]
 

@@ -86,7 +86,7 @@ Add the following configuration:
 
 ### Changing the minimum log level (SLHelper)
 
-Change the configuration in the *appSettings* section in *C:\Skyline DataMiner\Files\SLHelper.exe.config*. For example:
+Change the configuration in the *appSettings* section in `C:\Skyline DataMiner\Files\SLHelper.exe.config`. For example:
 
 ```xml
 <appSettings>

@@ -80,7 +80,7 @@ Below you can find an overview of the different methods that can be used to depl
 
 - No support for automatic updates.
 
-- The `CubeVersion.msi` packages contain the following optional features (which are not exposed in the UI wizard):
+- The `DataMiner Cube.msi` packages contain the following optional features (which are not exposed in the UI wizard):
 
   - *MainFeature*: CubeLauncher + one Cube version (mandatory).
   - *Autorun*: Adds a registry key to show the CubeLauncher icon in the notification area (i.e. "systray") at logon for all users.
@@ -102,7 +102,7 @@ Below you can find an overview of the different methods that can be used to depl
   msiexec /i CubeVersion-10.2.1.msi ADDLOCAL=ALL
   ```
 
-  Installing multiple `CubeVersion.msi` packages side-by-side will keep the latest version of DataMinerCube.exe (i.e. the launcher) in place:
+  Installing multiple `DataMiner Cube.msi` packages side-by-side will keep the latest version of DataMinerCube.exe (i.e. the launcher) in place:
 
   - Installing an older version after a newer version will not overwrite the launcher.
   - Uninstalling the newest version will not roll back the launcher to the previously installed version.
@@ -132,6 +132,8 @@ Below you can find an overview of the different methods that can be used to depl
 - All MSI packages require a 64-bit operating system.
 
 - The launcher is backwards compatible and can be used to deploy any 9.x or 10.x Cube version. Shared MSI installation packages can be provided on demand for older versions.
+
+- From DataMiner Cube 10.4.0 [CU16]/10.5.0 [CU4]/10.5.7 onwards<!-- RN 42706 -->, the *About* window of the start window (available via the cogwheel button) will include info about how the installed version was deployed. If it shows "(shared)", a shared MSI installation was used. If it shows ("bootstrap"), a bootstrap MSI installation was used.
 
 - All packages support using the INSTALLDIR parameter to customize the target folder.
 

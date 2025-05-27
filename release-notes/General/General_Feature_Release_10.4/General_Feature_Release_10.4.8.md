@@ -108,7 +108,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.6.0
 - DataMiner SupportAssistant: version 1.6.9
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### SLAnalytics - Behavioral anomaly detection: Enhanced trend change detection accuracy [ID 39805]
 
@@ -170,7 +170,7 @@ This will prevent out of memory exceptions from being thrown, especially on larg
 
 <!-- MR 10.3.0 [CU17]/10.4.0 [CU5] - FR 10.4.8 -->
 
-From now on, the *C:\\Skyline DataMiner\\RemoteServices* folder will by default be added to all backup packages that contain services.
+From now on, the `C:\Skyline DataMiner\RemoteServices` folder will by default be added to all backup packages that contain services.
 
 #### Storage as a Service: Enhanced storage of non-indexed logger tables [ID 40066]
 

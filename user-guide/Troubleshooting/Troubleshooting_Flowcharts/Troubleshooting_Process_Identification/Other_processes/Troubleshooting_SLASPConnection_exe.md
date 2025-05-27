@@ -118,7 +118,7 @@ To troubleshoot this issue:
 
 1. Register *aspapi.dll* and *comchartdir.dll* (regsvr32).
 
-1. If registration fails with "module could not be found", make sure the following file exists: *C:\windows\System32\msvbvm60.dll*. If it does not, copy it from another computer.
+1. If registration fails with "module could not be found", make sure the following file exists: `C:\windows\System32\msvbvm60.dll`. If it does not, copy it from another computer.
 
 1. Check the permissions on these files. Make sure everyone is allowed to "Read" / "Read and Execute" them.
 

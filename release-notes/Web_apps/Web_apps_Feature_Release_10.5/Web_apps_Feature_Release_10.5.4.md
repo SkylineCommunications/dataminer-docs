@@ -53,7 +53,7 @@ For all information about this component, see [Maps](xref:DashboardMaps).
 
 > [!NOTE]
 >
-> - To use the Maps component, the host servers for DataMiner Maps have to be configured in the file *C:\Skyline DataMiner\Maps\ServerConfig.xml*. If this file does not exist, it will be created automatically when you use a Maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
+> - To use the Maps component, the host servers for DataMiner Maps have to be configured in the file `C:\Skyline DataMiner\Maps\ServerConfig.xml`. If this file does not exist, it will be created automatically when you use a Maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
 > - This component currently only supports **Google Maps** ("gmaps") as the [Maps provider](xref:Configuring_the_DataMiner_Maps_host_servers).
 
 ## Changes
@@ -154,7 +154,7 @@ In the *Time range* component, up to now, the color of the *Apply* button would,
 
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 -->
 
-Items selected in *Node edge graph*, *Grid*, *Maps*, *Timeline* or *Table* components will now be passed to another components in the order in which they have been selected.
+Items selected in *Node edge graph*, *Grid*, *Maps*, *Timeline*, or *Table* components will now be passed to other components in the order in which they have been selected.
 
 #### Dashboards app: Default Skyline dashboard themes updated [ID 42179]
 
@@ -404,3 +404,9 @@ When you entered the edit mode of a low-code app, in some cases, a run-time erro
 <!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
 
 In some cases, a *Query filter* component could throw an error whenever you made a change to a query that contained boolean columns.
+
+#### Low-Code Apps: Loops in component data could cause an app to become unresponsive [ID 42531]
+
+<!-- MR 10.4.0 [CU13] / 10.5.0 [CU1] - FR 10.5.4 [CU0] -->
+
+In some cases, a low-code app could become unresponsive due to loops in component data.

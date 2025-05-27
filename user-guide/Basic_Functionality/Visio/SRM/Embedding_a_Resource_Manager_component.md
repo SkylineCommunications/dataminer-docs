@@ -4,10 +4,10 @@ uid: Embedding_a_Resource_Manager_component
 
 # Embedding a Resource Manager component
 
-For DMAs with a Resource Manager license, it is possible to embed a Resource Manager component in Visual Overview, which will allow users to get a timeline overview of which bookings have been made.
+For systems that use DataMiner SRM, you can embed a timeline in Visual Overview that will provide an overview of which bookings have been made. This timeline is known as a "Resource Manager component".
 
 > [!NOTE]
-> In order to see this component in Visual Overview, you need to have a Resource Manager license or IDP license, as well as the user permission [Modules > Resources > UI Available](xref:DataMiner_user_permissions#modules--resources--ui-available).
+> In order to see this component in Visual Overview, you need to have the appropriate license, as well as the user permission [Modules > Resources > UI Available](xref:DataMiner_user_permissions#modules--resources--ui-available).
 
 ## Configuring the shape data fields of the timeline component
 

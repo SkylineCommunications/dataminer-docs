@@ -36,13 +36,16 @@ Suppose two pairs are defined, where each pair consists of a command and a respo
 In addition, two triggers are defined, one after response 1 and another one after response 2. Both triggers trigger the execution of a QAction that processes the value of parameter A. Now consider the following sequence:
 
 1. Suppose command 1 is sent and the device sends a response back matching response 1 and parameter A receives value "A". Now the trigger triggers and when the value of the parameter is retrieved in the QAction, "A" is returned.
-1. Next, command 2 is sent and the device sends a response back matching response 2 and parameter A receives value "D". Now the trigger triggers and the when the value of the parameter is retrieved in the QAction, "D" is returned.
+1. Next, command 2 is sent and the device sends a response back matching response 2 and parameter A receives value "D". Now the trigger triggers and when the value of the parameter is retrieved in the QAction, "D" is returned.
 1. Now command 1 is sent again and the device sends back the same response as in step one. Now the trigger will again go off, but when the value of parameter A is retrieved in the QAction, "D" is returned instead of the expected value "A". This is because DataMiner keeps responses in memory. As response 1 in step 3 was identical to response 1 in step 1, the response parameters (parameter A in this case) were not updated.
 
 In order to obtain the correct behavior in this case, it is important to clear responses via an action "clear response".
 
 > [!NOTE]
 > Typically, different responses will not reuse the same parameters.
+
+> [!TIP]
+> See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
 
 ## Defining multiple responses in a pair
 

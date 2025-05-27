@@ -138,7 +138,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator: version 1.7.1
 - DataMiner SupportAssistant: version 1.7.1
 
-For detailed information about the changes included in those versions, refer to the [dataminer.services change log](xref:DCP_change_log).
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 #### GQI: Ad hoc data source now supports real-time updates [ID 38643]
 
@@ -198,8 +198,8 @@ Exceptions associated with a custom data source will be logged in the log file o
 
 When the factory reset tool (*SLReset.exe*) is run, from now on, it will also remove the *NodeId.txt* files located in the following folders:
 
-- *C:\\ProgramData\\Skyline Communications\\DxMs Shared\\Data*
-- *C:\\ProgramData\\Skyline Communications\\DataMiner Orchestrator\\Data*
+- `C:\ProgramData\Skyline Communications\DxMs Shared\Data`
+- `C:\ProgramData\Skyline Communications\DataMiner Orchestrator\Data`
 
 These files will be recreated with a new identifier when DataMiner or any of its extension modules is restarted.
 
@@ -425,10 +425,10 @@ When a DOM instance contains string fields of which the value exceeds this limit
 
 From now on, SLLogCollector packages will also include the contents of the following folders:
 
-- *C:\\Skyline DataMiner\\Logging\\GQI*
-- *C:\\Skyline DataMiner\\Logging\\GQI\\Ad hoc data sources*
-- *C:\\Skyline DataMiner\\Logging\\GQI\\Custom operators*
-- *C:\\Skyline DataMiner\\Logging\\Web*
+- `C:\Skyline DataMiner\Logging\GQI`
+- `C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources`
+- `C:\Skyline DataMiner\Logging\GQI\Custom operators`
+- `C:\Skyline DataMiner\Logging\Web`
 
 #### Elasticsearch/OpenSearch: Limit set on queries retrieving DOM instances will now be applied to the result set [ID 39686]
 
@@ -548,7 +548,7 @@ Because of a number of enhancements, the accuracy of the time-scoped relation le
 
 <!-- MR 10.5.0 - FR 10.4.10 -->
 
-The *C:\\Skyline Dataminer\\Logging\\FormatterExceptions* folder will now be emptied each time a DataMiner upgrade is performed.
+The `C:\Skyline Dataminer\Logging\FormatterExceptions` folder will now be emptied each time a DataMiner upgrade is performed.
 
 This folder is used by Skyline developers to keep track of serialization issues.
 
@@ -580,7 +580,7 @@ On a DaaS system, BPA tests than cannot be run on a DaaS system will now be flag
 
 When a booking was started or stopped, up to now, the system would always verify whether that booking had an `SRMServiceInfo` object. If it did, then no services would be created or deleted. However, when the start actions were run on a DMA other than the DMA on which the booking was created, no `SRMServiceInfo` object would be found, causing a service to be created when that was not necessary.
 
-In the configuration file of the Resource Manager (*C:\\Skyline DataMiner\\ResourceManager\\config.xml*), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
+In the configuration file of the Resource Manager (`C:\Skyline DataMiner\ResourceManager\config.xml`), you can now specify a new *SkipServiceHandling* option, which will allow you to indicate whether or not an `SRMServiceInfo` object check has to be performed when a booking is started or stopped.
 
 #### DataMiner upgrade: 'VerifyNoLegacyReportsDashboards' prerequisite will no longer be run on DMAs with version 10.4.0 or higher [ID 39964]
 
@@ -602,7 +602,7 @@ In other words, from now on, when this soft-launch option is set to true, these 
 
 #### SLNet: Enhanced performance when sending requests to SLDataGateway [ID 40023]
 
-<!-- MR 10.5.0 - FR 10.4.9 -->
+<!-- MR 10.4.0 [CU13]/10.5.0 - FR 10.4.9 -->
 
 Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
 
@@ -718,9 +718,9 @@ When you run the DataMiner installer or install a DataMiner upgrade package, the
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-When, in a Failover setup, a DataMiner Agent went offline, up to now, its *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file would by default be cleared.
+When, in a Failover setup, a DataMiner Agent went offline, up to now, its `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` file would by default be cleared.
 
-From now on, both DMAs in a Failover setup will keep a copy of the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
+From now on, both DMAs in a Failover setup will keep a copy of the `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` file, and the online agent will push all changes made to that file toward the offline agent in order to keep both files in sync.
 
 #### Failover - Virtual IP address check: Logging of the arp command will now also include the MAC address that claimed the IP address [ID 40703]
 
@@ -828,7 +828,7 @@ From now on, the following Engine methods will use alarm IDs with the syntax DMA
 
 <!-- MR 10.5.0 - FR 10.4.11 -->
 
-From now on, the *nats-server.config* file, located in the *C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\* folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
+From now on, the *nats-server.config* file, located in the `C:\Skyline DataMiner\NATS\nats-streaming-server\` folder, will by default be added to all backup packages (except the predefined backup type *Visual Configuration Backup*).
 
 #### STaaS: Enhanced performance when writing data to the database [ID 40870]
 
@@ -886,7 +886,7 @@ When an element is replicated, the following information events will no longer b
 
 <!-- MR 10.5.0 - FR 10.4.12 -->
 
-A number of enhancements have been made with regard to updating values stored in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file based on current system status.
+A number of enhancements have been made with regard to updating values stored in the `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` file based on current system status.
 
 #### GQI: Enhanced performance of 'top X' queries using the 'Get alarms' data source [ID 40937]
 
@@ -983,7 +983,7 @@ Up to now, when an error occurred while a booking is being created, in some case
 All DataMiner upgrade packages now include the latest Visual C++ Redistributable.
 
 > [!NOTE]
-> From now on, after having upgraded a DataMiner Agent, the *C:\\Skyline DataMiner\\Files* and *C:\\Skyline DataMiner\\Files\\x64* folders will no longer contain any individual Visual C++ Redistributable DLL files.
+> From now on, after having upgraded a DataMiner Agent, the `C:\Skyline DataMiner\Files` and `C:\Skyline DataMiner\Files\x64` folders will no longer contain any individual Visual C++ Redistributable DLL files.
 
 #### Service & Resource Management: Process of starting blocking tasks has now been optimized [ID 41175]
 
@@ -1005,13 +1005,13 @@ From now on, these log entries will be assigned a log level that indicates their
 
 <!-- MR 10.5.0 - FR 10.5.1 -->
 
-Up to now, the *VerifyNatsIsRunning* prerequisite would fail when it did not find `IgnitionValue` in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file. From now on, it will no longer check whether `IgnitionValue` is present in that file.
+Up to now, the *VerifyNatsIsRunning* prerequisite would fail when it did not find `IgnitionValue` in the `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` file. From now on, it will no longer check whether `IgnitionValue` is present in that file.
 
 #### VerifyClusterPorts: Endpoints to be tested will be retrieved from the Single Source of Truth [ID 41262]
 
 <!-- MR 10.5.0 - FR 10.5.1 -->
 
-The *VerifyClusterPorts* prerequisite and the *VerifyClusterPorts.dmupgrade* package will now use the Single Source of Truth (*C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json*) to determine which endpoints should be tested.
+The *VerifyClusterPorts* prerequisite and the *VerifyClusterPorts.dmupgrade* package will now use the Single Source of Truth (`C:\Skyline DataMiner\Configurations\ClusterEndpoints.json`) to determine which endpoints should be tested.
 
 If this JSON file cannot be found, the endpoint to be tested will be retrieved from the *DMS.xml* and *SLCloud.xml* files.
 
@@ -1056,7 +1056,7 @@ The above-mentioned array will now be locked to prevent the data from getting co
 
 <!-- MR 10.5.0 - FR 10.5.2 -->
 
-At DataMiner startup, SLDataMiner will now check the *C:\\Skyline DataMiner\\SoftLaunchOptions.xml* file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
+At DataMiner startup, SLDataMiner will now check the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file to determine whether the *BrokerGateway* soft-launch option is enabled or not.
 
 - If the *BrokerGateway* soft-launch option is **enabled**, it will start the **nats-server service**.
 - If the *BrokerGateway* soft-launch option is **disabled**, it will start the **NAS and NATS services**.

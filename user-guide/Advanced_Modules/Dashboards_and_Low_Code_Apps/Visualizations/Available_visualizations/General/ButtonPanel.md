@@ -99,7 +99,7 @@ In the table listing the buttons, add the buttons that you want to display and s
     In the example above, *buttonLayout.sources* is a list of mappings. In the “html”, you can then refer to a source, e.g. *$btn1*, to display the corresponding image, in this case *button1.png*.
 
   > [!NOTE]
-  > Any images you refer to in the advanced layout of a button must be placed in the folder *C:\\Skyline DataMiner\\Dashboards\\\_IMAGES\\buttons*.
+  > Any images you refer to in the advanced layout of a button must be placed in the folder `C:\Skyline DataMiner\Dashboards\_IMAGES\buttons`.
 
 - *Container* or *Page*: Allows you to link the button to a particular container or page. In that case, a separate parameter can be used to select the currently active container or page.
 

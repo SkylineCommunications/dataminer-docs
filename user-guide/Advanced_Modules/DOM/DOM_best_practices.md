@@ -209,6 +209,13 @@ When defining [CRUD scripts](xref:ExecuteScriptOnDomInstanceActionSettings) or [
 
 You can also keep your CRUD scripts fast by using the ['FullCrudMeta' variant](xref:ExecuteScriptOnDomInstanceActionSettings#full-crud-meta-type) of the CRUD scripts. This way, you already have access to the full `DomInstance` instead of having to retrieve it from DataMiner inside the script. This saves a lot of time and allows your script to more efficiently retrieve the information from the `DomInstance` that is required.
 
+### Watch out for race conditions when updating DOM instances
+
+Since updates to a DOM instance can be executed on any Agent in a cluster, it is possible for the same DOM instance to be modified at nearly the same time by different Agents. This can lead to a race condition, where one Agent's updates may unintentionally overwrite changes made by another. To minimize the risk of this happening:
+
+- Restrict updates to a single Agent per module, for example by implementing this logic in an element or by ensuring these requests are only sent to the same Agent.
+- Reduce the time between retrieving and updating a DOM instance to narrow the window in which another, conflicting update could occur.
+
 ## UI and GQI
 
 ### Avoid using DOM data on the right side of a join in GQI

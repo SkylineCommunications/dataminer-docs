@@ -4,7 +4,7 @@ uid: Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu
 
 # Adding a custom command to the Alarm Console shortcut menu
 
-1. Go to the *C:\\Skyline DataMiner* root directory of one of your DataMiner Agents and open the file *Hyperlinks.xml*.
+1. Go to the `C:\Skyline DataMiner` root directory of one of your DataMiner Agents and open the file *Hyperlinks.xml*.
 
    If this file does not exist, create it.
 
@@ -18,7 +18,7 @@ uid: Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu
 
    1. In the drop-down list next to *Type*, select *File*.
 
-   1. In the *File* box, specify the following path: *C:\\Skyline DataMiner\\Hyperlinks.xml*.
+   1. In the *File* box, specify the following path: `C:\Skyline DataMiner\Hyperlinks.xml`.
 
    1. Click the *Sync now* button.
 

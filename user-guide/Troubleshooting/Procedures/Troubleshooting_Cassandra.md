@@ -59,7 +59,7 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 - DevCenter
 
   - Allows you to manually query the database.
-  - Can be found in *C:\\Program Files\\Cassandra\\DevCenter\\Run DevCenter* (*Cassandra Single*) or can be downloaded from the Apache or DataStax websites.
+  - Can be found in `C:\Program Files\Cassandra\DevCenter\Run DevCenter` (*Cassandra Single*) or can be downloaded from the Apache or DataStax websites.
 
 - Notepad++ (optional)
 
@@ -82,12 +82,12 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
 ### Basic debugging
 
-1. Check *SLCassandraHealth.txt* in *C:\\Skyline DataMiner\\Logging*.
+1. Check *SLCassandraHealth.txt* in `C:\Skyline DataMiner\Logging`.
 
    - Green: All is well.
    - Red: The database is down and needs to be looked at.
 
-1. Check the *SLDBConnection.txt* log in *C:\\Skyline DataMiner\\Logging*.
+1. Check the *SLDBConnection.txt* log in `C:\Skyline DataMiner\Logging`.
 
    Look for a line saying `Failed to fetch max alarm ID`.
 
@@ -100,9 +100,9 @@ To do so, in DataMiner Cube, go to *System Center* > *Database* > *Type*:
 
    The most important log files are *debug.log* and *system.log*. For an overview of all log files, see [Cassandra Logs](https://cassandra.apache.org/doc/latest/cassandra/troubleshooting/reading_logs.html).
 
-   In a *Cassandra Cluster* setup, on a Linux node, these files can mostly be found in */var/log/cassandra*. In a *Cassandra Single* setup, these can be found in *C:\Program Files\Cassandra\logs*.
+   In a *Cassandra Cluster* setup, on a Linux node, these files can mostly be found in `/var/log/cassandra`. In a *Cassandra Single* setup, these can be found in `C:\Program Files\Cassandra\logs`.
 
-   Search for "tombstone" or "timeout" in *debug.log* and *system.log*. This is particularly relevant if elements are unable to start or if element data is missing.
+   Search for "tombstone" or "timeout" in *debug.log* and *system.log*. This is particularly relevant if elements are unable to start or if element data is missing (see [Element fails to start because of database failure](xref:Cassandra_General_DB_Failure)).
 
    Tombstones are created upon adding/updating/deleting a null value toward the database. They correspond with a "delete" in Cassandra and drastically decrease read performance. They also take up space.
 

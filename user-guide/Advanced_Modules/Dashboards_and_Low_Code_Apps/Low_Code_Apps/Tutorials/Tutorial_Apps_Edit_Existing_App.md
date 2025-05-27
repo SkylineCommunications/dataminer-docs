@@ -15,7 +15,7 @@ This tutorial shows how to edit an existing app.
 
 ## Step 1: Edit the latest version of your app
 
-The DataMiner Low-Code Apps are available on the DataMiner landing page. To access this page, browse to the IP or hostname of a DMA or to *https://[Your DMA]/root*, depending on your configuration.
+The DataMiner Low-Code Apps are available on the DataMiner landing page. To access this page, browse to the IP or hostname of a DMA or to `https://[Your DMA]/root`, depending on your configuration.
 
 1. Click the app on the landing page to open it.
 

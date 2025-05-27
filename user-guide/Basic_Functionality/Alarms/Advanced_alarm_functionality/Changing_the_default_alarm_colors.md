@@ -6,7 +6,7 @@ uid: Changing_the_default_alarm_colors
 
 In the *DataMiner.xml* file, you can specify the colors you want to assign to each of the alarm states:
 
-1. Open the file *DataMiner.xml* in a text file editor (e.g. Microsoft Notepad), from the folder *C:\\Skyline DataMiner\\*.
+1. Open the file *DataMiner.xml* in a text file editor (e.g. Microsoft Notepad), from the folder `C:\Skyline DataMiner\`.
 
 1. In the `<Colors>` tag, modify the alarm colors.
 
@@ -24,7 +24,7 @@ In the *DataMiner.xml* file, you can specify the colors you want to assign to ea
 
    1. In the drop-down list next to *Type*, select *File*.
 
-   1. In the *File* box, specify the following path: *C:\\Skyline Dataminer\\DataMiner.xml*.
+   1. In the *File* box, specify the following path: `C:\Skyline Dataminer\DataMiner.xml`.
 
    1. Click the *Sync now* button.
 

@@ -22,7 +22,7 @@ Call the *addExtraFilesToInclude()* method at the very top of the template. Be s
 ```
 
 > [!NOTE]
-> File references must be either absolute or relative to the following folder:<br> *C:\\Skyline DataMiner\\Webpages\\Reports\\templates*
+> File references must be either absolute or relative to the following folder:<br> `C:\Skyline DataMiner\Webpages\Reports\templates`
 
 ## Edit references inside the template
 

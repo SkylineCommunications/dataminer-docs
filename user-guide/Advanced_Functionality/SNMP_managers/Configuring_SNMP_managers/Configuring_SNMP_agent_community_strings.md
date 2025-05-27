@@ -10,7 +10,7 @@ To override this on DMA level:
 
 1. Stop the DataMiner software.
 
-1. Open *C:\\Skyline DataMiner\\DataMiner.xml*.
+1. Open `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Specify the community strings in the SNMP tag:
 

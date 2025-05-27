@@ -4,7 +4,7 @@ uid: ClientSettings_json
 
 # ClientSettings.json
 
-Within the subfolder *C:\\Skyline DataMiner\\Users*, there is a file *ClientSettings.json*, which contains client settings that apply for all users. Some of these settings, e.g. *MaxNumberOfSimultaneousNewAlarmsBeforeDelayingSort*, can only be configured directly within this file. You can find more information about these below.
+Within the subfolder `C:\Skyline DataMiner\Users`, there is a file *ClientSettings.json*, which contains client settings that apply for all users. Some of these settings, e.g. *MaxNumberOfSimultaneousNewAlarmsBeforeDelayingSort*, can only be configured directly within this file. You can find more information about these below.
 
 The folder also contains a subfolder for each user, which in turn contains a user-specific *ClientSettings.json* file. However, all settings in that file can be configured via the Cube UI.
 
@@ -48,7 +48,7 @@ A number of other languages can be made available in Cube for demo purposes. The
 
 To be able to select a demo language, do the following:
 
-1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
+1. Open the file *ClientSettings.json* in the folder `C:\Skyline DataMiner\Users`.
 
 1. For the value of the setting *commonServer.ui.Include_All_Uilocale* from *false* to *true*.
 
@@ -62,7 +62,7 @@ To improve the memory usage of DataMiner Cube in systems with many properties, y
 
 You can do so using the settings *commonServer.ui.Subscribe_To_All_Properties* and *commonServer.ui.Property_Cache* in the *ClientSettings.json* file:
 
-1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
+1. Open the file *ClientSettings.json* in the folder `C:\Skyline DataMiner\Users`.
 
 1. Set the setting *commonServer.ui.Subscribe_To_All_Properties* to *false*:
 
@@ -168,7 +168,7 @@ It is possible to configure whether an EPM card is opened based on a selection i
 
 To do so:
 
-1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*\\*\[User name\]*.
+1. Open the file *ClientSettings.json* in the folder `C:\Skyline DataMiner\Users`\\*\[User name\]*.
 
 1. Set the value of the setting *Surveyor.CPE.LaunchCPECardOnSelect* to true.
 
@@ -192,7 +192,7 @@ If a Visio file is opened from Visual Overview, an advanced editing add-in is av
 
 In the shared client settings file, it is possible to enable or disable this add-in:
 
-1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
+1. Open the file *ClientSettings.json* in the folder `C:\Skyline DataMiner\Users`.
 
 1. Set the setting *commonServer.ui.EnableVisioExtension* to *true* to enable the add-in or to *false* to disable it:
 
@@ -212,11 +212,11 @@ In the shared client settings file, it is possible to enable or disable this add
 
 ## Setting the default time zone for DataMiner web apps
 
-The time displayed in the DataMiner web apps (e.g. the Dashboards app) is based on a time zone setting in the file *C:\\Skyline DataMiner\\Users\\ClientSettings.json*. If this setting is not configured, the time zone of the client browser is used instead.
+The time displayed in the DataMiner web apps (e.g. the Dashboards app) is based on a time zone setting in the file `C:\Skyline DataMiner\users\ClientSettings.json`. If this setting is not configured, the time zone of the client browser is used instead.
 
 To configure this setting:
 
-1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
+1. Open the file *ClientSettings.json* in the folder `C:\Skyline DataMiner\Users`.
 
 1. Set the setting *commonServer.ui.DefaultTimeZone* to the time zone you want.
 
@@ -254,9 +254,9 @@ To configure this setting:
 
 ## Configuring settings for Cube UI freezing
 
-The Cube logging can display logs of type "Freeze" to indicate when the Cube UI has been frozen. In *C:\\Skyline DataMiner\\Users\\ClientSettings.json*, you can configure how long the Cube UI has to be frozen before an entry is logged in the Cube logging. In addition, you can also configure how long the UI has been frozen before a pop-up is displayed.
+The Cube logging can display logs of type "Freeze" to indicate when the Cube UI has been frozen. In `C:\Skyline DataMiner\users\ClientSettings.json`, you can configure how long the Cube UI has to be frozen before an entry is logged in the Cube logging. In addition, you can also configure how long the UI has been frozen before a pop-up is displayed.
 
-1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
+1. Open the file *ClientSettings.json* in the folder `C:\Skyline DataMiner\Users`.
 
 1. Set the setting *commonServer.client.ui.logging.FreezeLogTime* to the number of seconds the Cube UI has to be frozen before a "Freeze" log entry is made (default: 10).
 
@@ -289,7 +289,7 @@ It is possible to enable a setting that clears each data page from memory when y
 
 To enable this setting:
 
-1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
+1. Open the file *ClientSettings.json* in the folder `C:\Skyline DataMiner\Users`.
 
 1. Set the setting *commonServer.ui.datadisplay.PageUnloadOnNavigatingAway* to *true*.
 
@@ -309,7 +309,7 @@ To enable this setting:
 
 By default, the header of cards in DataMiner Cube does not display a forward button. However, it is possible to configure a setting in *ClientSettings.json* to make sure such a button is displayed:
 
-1. Open the file *ClientSettings.json* in the folder *C:\\Skyline DataMiner\\Users*.
+1. Open the file *ClientSettings.json* in the folder `C:\Skyline DataMiner\Users`.
 
 1. Set the setting commonServer.card.DisplayForwardButton to *true*.
 

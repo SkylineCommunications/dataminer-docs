@@ -6,7 +6,7 @@ uid: GetMatrixOutputsForInput
 
 Use this method to retrieve the outputs of a matrix input, using a 1-based index.
 
-Available from DataMiner version 9.5.1 onwards.
+<!-- Available from DataMiner version 9.5.1 onwards. -->
 
 ## Input
 

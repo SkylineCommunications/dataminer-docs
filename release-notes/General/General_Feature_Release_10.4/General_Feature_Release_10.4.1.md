@@ -262,20 +262,20 @@ When you upgrade DataMiner from a version older than 10.4.0 to a version from 10
 
 - [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed)
 
-Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated [API Deployment](xref:Overview_of_Soft_Launch_Options#apideployment) feature:
+Also, the newly added *UninstallApiDeployment* upgrade action will remove everything related to the deprecated API Deployment soft-launch feature:
 
 - Stop and delete the *SLAPIEndpoint* service.
 
 - Remove the following files (if present):
 
-  - *C:\Skyline DataMiner\SLAPIEndpoint*
-  - *C:\Skyline DataMiner\DeployerTokens*
-  - *C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt*
-  - *C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip*
+  - `C:\Skyline DataMiner\SLAPIEndpoint`
+  - `C:\Skyline DataMiner\DeployerTokens`
+  - `C:\Skyline DataMiner\ForceDeployerTokensFileStorage.txt`
+  - `C:\Skyline DataMiner\Resources\SLAPIEndpoint.zip`
 
 - If present, remove the rewrite rules for API Deployment.
 
-- Remove the API Deployment configuration file from *C:\Skyline DataMiner\Configurations\JSON*.
+- Remove the API Deployment configuration file from `C:\Skyline DataMiner\Configurations\JSON`.
 
 - Remove the *APIDeployment* soft-launch flag from *SoftLaunchOptions.xml*.
 

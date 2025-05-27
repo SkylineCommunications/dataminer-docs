@@ -1,4 +1,24 @@
 items:
+  - name: Support Services
+    topicUid: Support_Services
+    items:
+      - name: Support plans
+        topicUid: Overview_Support_Plans
+      - name: Software updates and upgrades
+        topicUid: Overview_Support_upgrade_policy
+      - name: Out-of-business-hours support
+        topicUid: Overview_Out_Of_Business_Hours_Support
+      - name: Proactive Support
+        topicUid: Proactive_Support
+        items:
+          - name: Proactive Support - Low Disk Space
+            topicUid: Proactive_Support_Low_Disk_Space
+          - name: Proactive Support - Missing CDMR Reporting
+            topicUid: Proactive_Support_Missing_CDMR_Reporting
+      - name: Partner support lines
+        topicUid: Partner_support_lines
+      - name: Support application
+        topicUid: User_operations_support
   - name: Error messages
     topicUid: ErrorMessages
     items:
@@ -115,6 +135,8 @@ items:
             topicUid: Troubleshooting_Services
           - name: Troubleshooting - trending
             topicUid: Troubleshooting_Trending
+          - name: Troubleshooting - web apps
+            topicUid: Troubleshooting_Webapps
           - name: Troubleshooting - process identification
             topicUid: Troubleshooting_Process_Identification
             items:
@@ -191,17 +213,22 @@ items:
         topicUid: Collecting_DataMiner_Cube_memory_dumps
       - name: Collecting data to report an issue to Technical Support
         topicUid: Collecting_data_to_report_an_issue_to_TechSupport
+        items:
+          - name: Web Support Assistant
+            topicUid: Web_Issues_Support_Assistant
       - name: Troubleshooting – Cassandra
         topicUid: Troubleshooting_Cassandra
         items:
           - name: Expired SSTables blocking other tables from being dropped
             topicUid: Cassandra_expired_blocking_SSTables
+          - name: Element fails to start because of database failure
+            topicUid: Cassandra_General_DB_Failure
       - name: Troubleshooting – dataminer.services
         items:
           - name: Investigating dataminer.services connection issues
             topicUid: Cloud_Connection_Issues
           - name: Investigating dataminer.services feature issues
-            topicUid: Investigating_Dataminerservices_Feature_Issues
+            topicUid: investigating_dataminer_services_feature_issues
       - name: Troubleshooting – NATS
         topicUid: Investigating_NATS_Issues
       - name: Troubleshooting – Indexing database
@@ -243,8 +270,12 @@ items:
     items:
       - name: Current issues
         items:
-          - name: DIS unable to connect to DataMiner Agent
-            topicUid: KI_DIS_unable_to_connect
+          - name: User locked out after single failed login attempt
+            topicUid: KI_user_locked_out_after_single_failed_attempt
+          - name: Local user not pushed to Windows
+            topicUid: KI_Local_user_not_pushed_to_windows
+          - name: Unable to open trended parameter cards via Cube advanced search
+            topicUid: KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search
           - name: Failed getting progress notices during upgrade
             topicUid: KI_SLNetIPC_Errors_During_Upgrade
           - name: SLProtocol crash when restarting elements used by enhanced services
@@ -279,6 +310,22 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: DCOMConfig flagged as virus causing upgrade issues
+            topicUid: KI_DCOMConfig_flagged_as_virus
+          - name: SLNet not starting correctly after change to default upgrade options
+            topicUid: KI_Default_upgrade_options_SLNet_issue
+          - name: Higher CPU usage and connection issues when using SAML with automatic groups
+            topicUid: KI_SAML_with_automatic_groups
+          - name: SLScripting crash when using JScript QActions
+            topicUid: KI_SLScripting_crash_JScript_QActions
+          - name: Unable to configure dashboards for 'Email' actions in Automation scripts, scheduled tasks, and Correlation rules
+            topicUid: KI_Unable_to_configure_dashboards_included_in_email_actions
+          - name: Cube displays incorrect offload configuration for real-time trending data
+            topicUid: KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data
+          - name: SLNet memory leak related to indexing logic for Cube search bar
+            topicUid: KI_SLNet_memory_leak
+          - name: DIS unable to connect to DataMiner Agent
+            topicUid: KI_DIS_unable_to_connect
           - name: Upgrade to DataMiner 10.5.1 or 10.5.2 is stuck
             topicUid: KI_Upgrade_to_1051_stuck
           - name: Reuploaded DVE protocol version is incorrectly set as production version
@@ -328,7 +375,7 @@ items:
           - name: SLDataMiner crashes because of subgroup query failure
             topicUid: KI_SLDataMiner_crashes_because_of_subgroup_query_failure
           - name: One or multiple Analytics features fail to start
-            topicUid:  KI_Analytics_features_not_starting
+            topicUid: KI_Analytics_features_not_starting
           - name: Max Payload exceptions occur when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker_Chunking_MaxPayload
           - name: Error in SLDataMiner when generating MIB file

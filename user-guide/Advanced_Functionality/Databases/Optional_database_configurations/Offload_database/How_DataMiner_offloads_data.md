@@ -49,7 +49,7 @@ If the offload database cannot be reached for some time while it is activated, t
    ![Offload database of type MSSQL](~/user-guide/images/db_offload_mssql.jpg)
 
 > [!NOTE]
-> The folder *C:\\Skyline DataMiner\\System Cache\\Offload* has to be shared as “\\\\\[server\]\\Offload” with anonymous access. See also: [Configuring data offloads to an MSSQL database in another domain](xref:DB_xml#configuring-data-offloads-to-an-mssql-database-in-another-domain).
+> The folder `C:\Skyline DataMiner\System Cache\Offload` has to be shared as “\\\\\[server\]\\Offload” with anonymous access. See also: [Configuring data offloads to an MSSQL database in another domain](xref:DB_xml#configuring-data-offloads-to-an-mssql-database-in-another-domain).
 
 ## Offload database of type Oracle
 

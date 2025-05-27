@@ -6,7 +6,7 @@ uid: ID_Troubleshooting_Tools
 
 ## DataMiner connectors
 
-There are several DataMiner connectors available for download from the DataMiner Catalog that can assist you in actively monitoring your indexing database and its hosting servers:
+There are several DataMiner connectors available for download from the Catalog that can assist you in actively monitoring your indexing database and its hosting servers:
 
 - [*Elasticsearch Cluster Monitor* connector](#elasticsearch-cluster-monitor)
 

@@ -128,6 +128,11 @@ It is possible to manually freeze and unfreeze the trace. To do so:
   > [!NOTE]
   > Zooming vertically is only possible if the spectrum protocol includes the *Amplitude scale* parameter.
 
+From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42597-->, you can **auto-scale the trace** by clicking the ![auto-scale](~/user-guide/images/Auto-scale.png) button next to the reference level Y-axis label in the real-time display section of the spectrum analyzer card. Clicking this button will maximize and center the current trace based on minimum and maximum values.
+
+> [!NOTE]
+> The auto-scale option is only available when the spectrum protocol includes the *Reference level* and *Amplitude scale* parameters.
+
 ## Displaying the minimum and maximum hold of the trace
 
 It is possible to display the minimum and/or maximum hold of the trace you are currently viewing. To do so:

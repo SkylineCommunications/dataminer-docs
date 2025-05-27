@@ -19,7 +19,7 @@ When the main database is offline, file offloads are used to store write/delete 
 
 You can configure this size limit as follows:
 
-1. Open the file *DBConfiguration.xml* in the folder *C:\\Skyline DataMiner\\Database*. If this file does not exist yet, create it manually.
+1. Open the file *DBConfiguration.xml* in the folder `C:\Skyline DataMiner\Database`. If this file does not exist yet, create it manually.
 
 1. Configure the file with a *FileOffloadConfiguration* element with the desired maximum size (in MB), as illustrated below:
 

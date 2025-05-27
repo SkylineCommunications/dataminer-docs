@@ -4,7 +4,9 @@ uid: GetFullService
 
 # GetFullService
 
-Use this method to retrieve all data of a particular service, including a list of its parameters and its properties. This method effectively combines the [GetService](xref:GetService), [GetServiceParameters](xref:GetServiceParameters) and [GetPropertiesForService](xref:GetPropertiesForService) methods. (Available from DataMiner 9.5.8 onwards.)
+Use this method to retrieve all data of a particular service, including a list of its parameters and its properties. This method effectively combines the [GetService](xref:GetService), [GetServiceParameters](xref:GetServiceParameters) and [GetPropertiesForService](xref:GetPropertiesForService) methods.
+
+<!-- Available from DataMiner 9.5.8 onwards. -->
 
 ## Input
 

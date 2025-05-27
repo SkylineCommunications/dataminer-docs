@@ -33,6 +33,9 @@ uid: solution_index
   <div class="column">
     <a href="/solutions/standard_solutions/Ping_Monitoring/PingMonitoring.html" title="Ping Monitoring" target="_self"><img src="~/solutions/images/Ping_Monitoring.svg" style="width:100%"></a>
   </div>
+  <div class="column">
+    <a href="/solutions/standard_solutions/Smart_Trap_Processor/Smart_Trap_Processor_Overview.html" title="Smart Trap Processor" target="_self"><img src="~/solutions/images/Smart_Trap_Processor.svg" style="width:100%"></a>
+  </div>
 </div>
 
 ## Product Solutions
@@ -58,9 +61,6 @@ uid: solution_index
   <div class="column">
     <a href="/solutions/devtools/Performance_Analyzer/Performance_Analyzer.html" title="Performance Analyzer" target="_self"><img src="~/solutions/images/performance_analyzer.svg" style="width:100%"></a>
   </div>
-  <div class="column">
-    <a href="/solutions/devtools/Smart_Trap_Processor/Smart_Trap_Processor_Overview.html" title="Smart Trap Processor" target="_self"><img src="~/solutions/images/Smart_Trap_Processor.svg" style="width:100%"></a>
-  </div>
 </div>
 
 ## Custom Solutions
@@ -82,3 +82,5 @@ uid: solution_index
     <a href="/solutions/custom_solutions/Vecima_Remote_PHY_Monitor/Remote_PHY_Monitoring.html" title="Remote PHY Monitoring" target="_self"><img src="~/solutions/images/Remote_PHY_Monitoring.svg" style="width:100%"></a>
   </div>
 </div>
+
+<!-- Todo: Add DataMiner Health Check Tool -->

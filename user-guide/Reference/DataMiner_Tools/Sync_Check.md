@@ -22,7 +22,7 @@ To use this script:
 
 1. Run the script in the Automation module and specify a username and password. These credentials will be used to access the different Agents in the DMS via file shares
 
-1. When the script has run, check its output in the file *SyncInfo.txt*, which you can find in the following folder on the DMA: *C:\Skyline_Data\SyncInfo*.
+1. When the script has run, check its output in the file *SyncInfo.txt*, which you can find in the following folder on the DMA: `C:\Skyline_Data\SyncInfo`.
 
 Note that to be able to run the script, file share access to all IP addresses in the cluster is required.
 

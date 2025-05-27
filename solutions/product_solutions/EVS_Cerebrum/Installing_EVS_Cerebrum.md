@@ -12,7 +12,7 @@ uid: Installing_EVS_Cerebrum
 
 ## Deploying the EVS Cerebrum Application
 
-1. Look up the [*EVS Cerebrum* package](https://catalog.dataminer.services/details/334a4bfd-9a4a-4aea-8169-c4a3b754a683) in the DataMiner Catalog.
+1. Look up the [*EVS Cerebrum* package](https://catalog.dataminer.services/details/334a4bfd-9a4a-4aea-8169-c4a3b754a683) in the Catalog.
 
 1. Click the *Deploy* button.
 

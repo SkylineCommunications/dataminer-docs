@@ -20,11 +20,11 @@ Integrate various ticketing systems (e.g. Jira, Remedy, etc.) in a reliable mann
 Application-specific network security for mobile application infrastructures.
 
 > [!TIP]
-> For detailed info, see [DataMiner Mobile Gateway](xref:MobileGateway)
+> For detailed info, see [DataMiner Mobile Gateway](xref:MobileGateway).
 
 ## Notifications
 
 Get notified when specific events occur.
 
 > [!TIP]
-> For detailed info, see [Configuring user notifications](xref:Configuring_user_notifications)
+> For detailed info, see [Configuring user notifications](xref:Configuring_user_notifications).

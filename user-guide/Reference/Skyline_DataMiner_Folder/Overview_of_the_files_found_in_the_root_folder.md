@@ -5,7 +5,7 @@ uid: Overview_of_the_files_found_in_the_root_folder
 # Overview of the files found in the root folder
 
 > [!NOTE]
-> All DataMiner system files can be found in the *C:\\Skyline DataMiner* folder of a DataMiner Agent.
+> All DataMiner system files can be found in the `C:\Skyline DataMiner` folder of a DataMiner Agent.
 
 | Name | Description | Synchronized? |
 |--|--|--|
@@ -39,7 +39,7 @@ uid: Overview_of_the_files_found_in_the_root_folder
 | StartupDataMiner.bat | Batch file executed at startup. | No |
 | SyncRules.xml | Synchronization rules that can prevent file synchronization between DMAs running different versions of DataMiner. See [SyncRules.xml](xref:SyncRules_xml). | Yes |
 | videoservers.xml | Configuration of video servers (for video thumbnails). | No |
-| Views.xml | View configuration. | Yes |
+| Views.xml | [View configuration](xref:Views_xml). | Yes |
 
 > [!NOTE]
 > Files marked as "synchronized" in the rightmost column are synchronized among all DMAs in the cluster every day at midnight (00:00). Therefore, it is of great importance that the time settings of all DMAs in the cluster are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms).

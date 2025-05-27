@@ -185,7 +185,7 @@ If multiple settings indicate that the element should be running in isolation mo
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-Per DataMiner Agent, the RAD parameter groups must be configured in the *C:\\Skyline DataMiner\\Analytics\\RelationalAnomalyDetection.xml* file, which must be formatted as follows.
+Per DataMiner Agent, the RAD parameter groups must be configured in the `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml` file, which must be formatted as follows.
 
 ```xml
 <?xml version="1.0" ?>
@@ -310,7 +310,7 @@ From now on, those suggestion events will be grouped into a single incident, whi
 
 <!-- MR 10.6.0 - FR 10.5.4 -->
 
-When Swarming is enabled, a file named *Where are my elements.txt* will now be present in the *C:\\Skyline DataMiner\\Elements\\* folder.
+When Swarming is enabled, a file named *Where are my elements.txt* will now be present in the `C:\Skyline DataMiner\Elements\` folder.
 
 In that file, users who wonder why this folder no longer contains any *element.xml* files will be referred to the [Swarming documentation](https://aka.dataminer.services/swarming) in [docs.dataminer.services](https://docs.dataminer.services/).
 
@@ -339,12 +339,12 @@ Also, no new log file will be started every day anymore. From now on, a new log 
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
-From now on, a separate log file will be created per GQI DxM extension library in the *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions* folder.
+From now on, a separate log file will be created per GQI DxM extension library in the `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions` folder.
 
 Example:
 
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library A.txt*
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library B.txt*
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions\Library A.txt`
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions\Library B.txt`
 
 The log entries added to those files will now each include the name of the extension as well as the name of the user. The log entry format will now be the following:
 
@@ -356,7 +356,7 @@ The log entries added to those files will now each include the name of the exten
 
 SLLogCollector will now look for GQI DxM extension logging in the following folder:
 
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions*
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions`
 
 ### Fixes
 
@@ -542,3 +542,9 @@ The *WebView2Loader.dll* file will now been added to the DataMiner upgrade packa
 <!-- Not added to MR 10.6.0 -->
 
 When an element had been migrated from one DataMiner Agent to another, in some rare cases, certain actions involving that migrated element (e.g. a deletion of the element) would fail until the DataMiner Agent was restarted.
+
+#### SLNet memory leak related to indexing logic for Cube search bar [ID 42544]
+
+<!-- MR 10.6.0 - FR 10.5.4 [CU0] -->
+
+In systems with many trended parameters, an SLNet memory leak could occur whenever an ElementInfoMessage was sent (e.g. when an element was restarted or edited, or when an element property was changed). This was caused by the SLNet indexing of trended parameters for the Cube search bar not being cleaned up correctly, which lead to duplicate entries being kept in the SearchManager in SLNet, consuming more and more memory.

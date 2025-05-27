@@ -141,7 +141,7 @@ The tutorial consists of the following steps:
 
 ## Step 3: Interpret the timestamp of every occurrence
 
-Now that you have retrieved the most recent pattern occurrence per server, you can use a custom operator to make a judgment based on those timestamps. A custom operator provides a lot of flexibility, allowing you to code pretty much whatever you want. In this case, the custom operator *DateIsOlderThan* will be used, which is available in the DataMiner Catalog and was also included in the package you installed earlier. It adds a column indicating if the date is older than a given number of days.
+Now that you have retrieved the most recent pattern occurrence per server, you can use a custom operator to make a judgment based on those timestamps. A custom operator provides a lot of flexibility, allowing you to code pretty much whatever you want. In this case, the custom operator *DateIsOlderThan* will be used, which is available in the Catalog and was also included in the package you installed earlier. It adds a column indicating if the date is older than a given number of days.
 
 1. At the bottom of the *Most recent pattern occurrences per server* query, add the *DateIsOlderThan* custom operator, with the following configuration:
 

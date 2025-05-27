@@ -6,16 +6,16 @@ uid: DOM_managers
 
 A DOM manager manages create, read, update, and delete (CRUD) actions performed on DOM objects. Multiple DOM manager instances can be used at the same time in a DMS, for instance for invoicing, planned maintenance, etc.
 
-A DOM manager sends out various [events](xref:DOM_events) when actions are done on the DOM objects and tracks the [history](xref:DOM_history) of all changes done to the field values of a DOM instance. It also allows you to configure the [status system](xref:DOM_status_system) for a DOM definition.
+The DOM manager handles every request related to a specific set of models, logically grouped in a module and identified by a module ID. The manager for example also sends out various [events](xref:DOM_events) when actions are done on the DOM objects and tracks the [history](xref:DOM_history) of all changes done to the field values of a DOM instance. It contains the checking logging that ensures instance updates adhere to the model definition and ensures the timely execution of CRUD scripts.
 
 > [!NOTE]
 >
 > - Logging for each DOM manager is done in a separate log file with the name "SLDomManager_{moduleId}", e.g. "SLDomManager_my_module.txt".
-> - A backup of all DOM manager data can be taken using the backup option *Create a backup of the database* > *Include all DomManager data in backup*. This is by default enabled in the backup preset *Full Backup*. See [Configuring the DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups).
+> - For more information on backing up the data of a DOM manager, refer to [DOM data storage](xref:DOM_data_storage#backups).
 
 ## Module ID
 
-To create a DOM manager, you first need to create a [ModuleSettings](xref:DOM_ModuleSettings) object, which includes a **unique module ID** that is used to identify the DOM manager instance in the DMS. In the module settings, you can also configure the behavior of the DOM manager. You can for example define the permissions that will be needed for the various script actions, or you can enable information events.
+To create a DOM manager, you first need to create a [ModuleSettings](xref:DOM_ModuleSettings) object, which includes a **unique module ID** that is used to identify the DOM manager instance in the DMS. In the module settings, you can also configure the behavior of the DOM manager. You can for example define the scripts that will be executed on every create action, or you can enable information events. For more information on these different features, refer to the subpages under [DOM module settings](xref:DOM_ModuleSettings).
 
 ## Creation and startup logic
 

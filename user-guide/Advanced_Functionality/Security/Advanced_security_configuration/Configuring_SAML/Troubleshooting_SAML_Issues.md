@@ -113,7 +113,7 @@ The SAML attribute names, also known as **claims**; must be exactly the **same**
 
 To check whether the claims and attributes match:
 
-1. Go to the *C:\Skyline DataMiner* folder and open the *DataMiner.xml* file.
+1. Go to the `C:\Skyline DataMiner` folder and open the *DataMiner.xml* file.
 
 1. Verify that the `<ExternalAuthentication>` tag is configured correctly and the tag name for your attribute matches the definition.
 

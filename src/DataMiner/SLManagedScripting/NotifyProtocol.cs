@@ -98,8 +98,26 @@ namespace Skyline.DataMiner.Scripting
 		/// </summary>
 		/// <param name="protocol">Instance that implements <see cref="SLProtocol"/>.</param>
 		/// <param name="tableId">The ID of the table parameter.</param>
-		/// <returns>The number of rows left. In case the ClearAllKeys method has been invoked specifying an empty table, -1 is returned.</returns>
-		/// <remarks>This method first retrieves all primary keys from the table using a NotifyProtocol type 168 call [NT_GET_INDEXES](xref:NT_GET_INDEXES). If there is at least one primary key present, the method performs a NofityProtocol type 156 call [NT_DELETE_ROW](xref:NT_DELETE_ROW), removing all rows.</remarks>
+		/// <returns>
+		///		<list type = "bullet">
+		///			<item>
+		///				<description>Starting from DataMiner 10.5.6/10.4.0 [CU15]/10.5.0 [CU3] (RN 42368): -1 In case the ClearAllKeys method has been invoked specifying an empty table, 0 if clearing succeeded, otherwise 1.</description>
+		///			</item>
+		///			<item>
+		///				<description>Prior to DataMiner 10.5.6/10.4.0 [CU15]/10.5.0 [CU3]: The number of rows left. In case the ClearAllKeys method has been invoked specifying an empty table, -1 is returned.</description>
+		///			</item>
+		///		</list>
+		/// </returns>
+		/// <remarks>
+		/// 	<list type = "bullet">
+		///			<item>
+		///				<description>Starting from DataMiner 10.5.6/10.4.0 [CU15]/10.5.0 [CU3] (RN 42368): This method first retrieves all primary keys from the table using a NotifyProtocol type 397 call (<see href="xref:NT_GET_KEYS_SLPROTOCOL">NT_GET_KEYS_SLPROTOCOL</see>). If there is at least one primary key present, the method performs a NotifyProtocol type 474 call (<see href="xref:NT_CLEAR_PARAMETER">NT_CLEAR_PARAMETER</see>), removing all rows.</description>
+		///			</item>
+		///			<item>
+		///				<description>Prior to DataMiner 10.5.6/10.4.0 [CU15]/10.5.0 [CU3]: This method first retrieves all primary keys from the table using a NotifyProtocol type 168 call (<see href="xref:NT_GET_INDEXES">NT_GET_INDEXES</see>). If there is at least one primary key present, the method performs a NotifyProtocol type 156 call (<see href="xref:NT_DELETE_ROW">NT_DELETE_ROW</see>), removing all rows.</description>
+		///			</item>
+		///		</list>
+		/// </remarks>
 		[Obsolete("Use protocol.ClearAllKeys instead", false)]
 		public static object ClearAllKeys(SLProtocol protocol, int tableId)
 		{

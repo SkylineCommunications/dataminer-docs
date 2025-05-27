@@ -8,11 +8,9 @@ We believe in empowering people. Maximum agility can only be achieved when peopl
 
 Therefore, all official Skyline training materials are available in the [DataMiner Dojo Learning section](https://community.dataminer.services/learning) free of charge. This includes:
 
-- DataMiner courses: Develop and improve your DataMiner skills and learn about a wide variety of topics.
+- DataMiner e-learning courses: Develop and improve your DataMiner skills and learn about a wide variety of topics.
 - Video library: Get specialized tutorials and training.
 - Tutorials: Follow weekly online learning sessions featuring immersive video tutorials and hands-on exercises.
-- DevOps Enablement Services: Equip your team with the knowledge and skills to establish a productive and empowered DataMiner DevOps squad.
-- Third-party courses: Boost your knowledge of topics related to the world of DataMiner.
 - Quizzes: Put your knowledge to the test with our various quizzes.
 - Books: Check out our reading recommendations.
 

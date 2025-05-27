@@ -20,6 +20,8 @@ uid: Troubleshooting_Flowcharts
   - [Services](xref:Troubleshooting_Services)
 
   - [Trending](xref:Troubleshooting_Trending)
+  
+  - [Web apps](xref:Troubleshooting_Webapps)
 
   - [Process identification](xref:Troubleshooting_Process_Identification)
 

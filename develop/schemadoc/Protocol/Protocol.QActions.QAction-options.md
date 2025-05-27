@@ -36,13 +36,6 @@ By default, every QAction is compiled into a DLL file at first use. This DLL fil
 
 Example: Microsoft Platform.1.5.0.36.Qaction.27.dll
 
-> [!NOTE]
-> In case the /DataMiner/ProcessOptions@scriptingProcesses attribute in the DataMiner.xml configuration file has been set to "protocol", the DLL name will be as follows:
->
-> `[ProtocolName].[ProtocolVersion].QAction.[QactionID].[ProcessID].dll`
->
-> ProcessID is the process ID of the corresponding SLProtocol process.
-
 When you want the DLL file to include a meaningful name, enter that name in this options attribute.
 
 This name will then replace the QAction.[QActionID] part:

@@ -11,7 +11,7 @@ From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42031-->, low-cod
 > [!NOTE]
 >
 > - From DataMiner 10.2.0/10.2.2 onwards<!--RN 31833-->, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter `d` is used instead of `data`.
-> - To only display a dashboard without the rest of the app, add the argument "*embed=true*". To display the *Clear all* button for an embedded dashboard, add "*subheader=true*" as well. For example: *https://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
+> - To only display a dashboard without the rest of the app, add the argument "*embed=true*". To display the *Clear all* button for an embedded dashboard, add "*subheader=true*" as well. For example: `https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true`
 > - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 > - When data is selected in a component, the URL of a dashboard changes. However, unlike dashboards, low-code apps will not push data to the URL.
 

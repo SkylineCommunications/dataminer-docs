@@ -15,6 +15,12 @@ uid: General_Main_Release_10.4.0_CU13
 
 ### Enhancements
 
+#### SLNet: Enhanced performance when sending requests to SLDataGateway [ID 40023]
+
+<!-- MR 10.4.0 [CU13]/10.5.0 - FR 10.4.9 -->
+
+Because of a number of enhancements made to SLNet, overall performance has increased when sending requests to SLDataGateway.
+
 #### Enhanced performance when updating subscriptions and when checking events against the set of active subscriptions [ID 41822]
 
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
@@ -108,6 +114,12 @@ In some cases, it would not be possible to simultaneously update multiple TTL se
 <!-- MR 10.4.0 [CU13]/10.5.0 [CU1] - FR 10.5.4 -->
 
 After a MessageBroker client had disposed of a subscription and had reconnected to NATS, in some cases, the subscription would incorrectly get recreated.
+
+#### No alarm would be generated when an SNMPv3 element did not have its user name filled in [ID 42244]
+
+<!-- MR 10.4.0 [CU13] - FR TBD -->
+
+As from DataMiner version 10.4.0 [CU10]/10.5.1, when an element of type SNMPv3 does not have its user name filled in, it should go into an error state and an alarm should be generated. However, up to now, although the element went into an error state, no alarm would incorrectly be generated.
 
 #### Problem when exporting an element to a .dmimport file [ID 42320]
 
