@@ -28,4 +28,10 @@ uid: Web_apps_Feature_Release_10.5.8
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Low-Code Apps: It would incorrectly be possible to publish a low-code app while it was still being saved [ID 42680]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+Up to now, it would incorrectly be possible to publish a low-code app while it was still being saved.
+
+From now on, it will only be possible to publish a low-code app when the app has been saved.
