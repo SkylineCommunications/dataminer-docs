@@ -135,8 +135,8 @@ When a main DVE element was started or restarted, up to now, an attempt would in
 
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.
 
-#### Changes to LDAP settings would incorrectly not get synchronized with the other DMAs in the cluster [ID 42950]
+#### Changes to LDAP users or LDAP groups would incorrectly not get synchronized among the DMAs in the cluster [ID 42950]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
-When you made any changes to the LDAP settings of a particular DataMiner Agent (e.g. in DataMiner Cube's *System Center*), up to now, those changes would not get synchronized with the other DMAs in the cluster, not even after a midnight sync.
+Up to now, changes to an LDAP user or an LDAP group would incorrectly not get synchronized among the DMAs in the cluster, not even after a midnight sync.

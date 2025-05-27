@@ -325,11 +325,11 @@ When you create an Automation script, apart from an XML file containing the actu
 
 Up to now, during a DataMiner upgrade, the *VerifyClusterPorts* prerequisite check could fail when SLXML was still running.
 
-#### Changes to LDAP settings would incorrectly not get synchronized with the other DMAs in the cluster [ID 42950]
+#### Changes to LDAP users or LDAP groups would incorrectly not get synchronized among the DMAs in the cluster [ID 42950]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
 
-When you made any changes to the LDAP settings of a particular DataMiner Agent (e.g. in DataMiner Cube's *System Center*), up to now, those changes would not get synchronized with the other DMAs in the cluster, not even after a midnight sync.
+Up to now, changes to an LDAP user or an LDAP group would incorrectly not get synchronized among the DMAs in the cluster, not even after a midnight sync.
 
 #### Failover: NATS communication error on online agent after a Failover switch [ID 42964]
 
