@@ -22,26 +22,24 @@ The Data Aggregator *MigratorToGQIDxM* tool should be used to migrate any existi
 
 1. Restart the `DataMiner DataAggregator` service.
 
-1. Use the *MigratorToGQIDxM* tool with the following options:
+1. Use the *MigratorToGQIDxM* tool, by executing the following command with Administrator permissions, with or without the options below:
 
-    | Option | Description |
-    |--|--|
-    | -u | Optional, use when another URL is configured in `appsettings.custom.json` (default is `http://localhost:12345`) |
-    | -p | Optional, use when DataAggregator is installed in custom location (default is `C:\Program Files\Skyline Communications\DataMiner DataAggregator`) |
+   ```bat
+   DataAggregator.MigratorToGQIDxM.exe
+   ```
 
-    Execute the following command with Administrator permissions:
-
-    ```bat
-    DataAggregator.MigratorToGQIDxM.exe
-    ```
+   | Option | Description |
+   |--|--|
+   | -u | Optional. To be used when another URL is configured in `appsettings.custom.json` (default: `http://localhost:12345`). |
+   | -p | Optional. To be used when Data Aggregator is installed in a custom location (default: `C:\Program Files\Skyline Communications\DataMiner DataAggregator`). |
 
 1. The output will confirm whether the migration succeeded.
 
 ### Reverting the GQI DxM migration
 
-If you want to revert the GQI DxM migration, a backup of the query files is created.
+When you migrate the existing queries, a backup of the query files is created, so that it is possible to revert the migration if necessary.
 
-To revert:
+To revert the GQI DxM migration:
 
 1. Stop the `DataMiner DataAggregator` service.
 
