@@ -21,6 +21,10 @@ It is now possible to delete completed MediaOps jobs.
 
 When a job has been confirmed, it is now possible to return it to the tentative state.
 
+#### New button to copy job edit panel URL to clipboard [ID 43059]
+
+In the header bar of the job edit panel, a button is now available that allows you to copy the URL of the panel to the clipboard.
+
 ## Changes
 
 ### Enhancements
