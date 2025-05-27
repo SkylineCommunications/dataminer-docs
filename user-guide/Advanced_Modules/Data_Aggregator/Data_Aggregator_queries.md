@@ -31,7 +31,7 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
 
    with the following payload, depending on the DataMiner version:
 
-   - From DataMiner **10.4.0 [CU6]/10.5.0 [CU4]/10.5.7** onwards:
+   - From DataMiner **10.4.0 [CU6]/10.5.0 [CU4]/10.5.7** onwards:<!-- RN 42855 -->
 
      > ``` json
      > {
