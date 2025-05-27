@@ -88,6 +88,74 @@ Example: `Automation script;638786700548555379;48bcb02e89875979c680d936ec19ad5e9
 
 The SLNet message `EditConnection`, which can be used to edit a connection from within a QAction, now has a `GenerateInformationEvents` property. If this property is set to true, information events will be generated when a connection is created, updated, or deleted.
 
+#### Automation: New OnRequestScriptInfo entry point [ID 42969]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other Automation scripts (or any other code) to request information about the script in question, for example which parameter values are required for a particular profile parameter.
+
+##### Using the entry point
+
+To use the entry point, add a method with the following signature to the script:
+
+```csharp
+[AutomationEntryPoint(AutomationEntryPointType.Types.OnRequestScriptInfo)]
+public RequestScriptInfoOutput OnRequestScriptInfoRequest(IEngine engine, RequestScriptInfoInput inputData)
+```
+
+Both `RequestScriptInfoInput` and `RequestScriptInfoOutput` have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. It is strongly recommended to keep the passed data below 20 MB (i.e. 10 million characters). If larger chunks need to be passed, a reference to that information should be passed instead.
+
+It is allowed to pass null as input data and to return null as output data.
+
+##### Arguments
+
+If the script has any script parameters, dummies or memory files, then these are not required when executing the `OnRequestScriptInfo` entry point. However, they are required when executing the `Run` method of that same script.
+
+- When an omitted script parameter is used in the entry point logic, retrieving the script parameter is possible, but its value will be an empty string.
+- When an omitted dummy is used in the entry point logic, retrieving the dummy is possible, but it will refer to DMA ID -1 and element ID -1. Any actions that use the dummy will fail with an exception.
+- When an omitted memory file is used in the entry point logic, retrieving the memory file is possible, but it will refer to a linked file that is empty. Retrieving a value using the memory file will fail with an exception.
+
+##### Subscript
+
+To execute the `OnRequestScriptInfo` entry point within Automation, you have to use the following `PrepareSubScript` method on `Engine` or `IEngine`:
+
+```csharp
+RequestScriptInfoSubScriptOptions PrepareSubScript(String scriptName, RequestScriptInfoInput input)
+```
+
+The script should be started synchronously. It will return a subscript options object with an `Output` property containing the information returned by the script. The `Input` property can be used to check or update the data sent to the script.
+
+Executing subscripts is limited to a maximum of 10 levels.
+
+##### ExecuteScriptMessage
+
+The `ExecuteScriptMessage` can be used to trigger the entry point using an SLNet connection.
+
+```csharp
+var input = new RequestScriptInfoInput
+{
+  Data = new Dictionary<string, string>
+  {
+    { "Action", "RequestValues" },
+  },
+};
+
+new ExecuteScriptMessage
+{
+  ScriptName = scriptName,
+  Options = new SA(new []{ "DEFER:FALSE" }),
+  CustomEntryPoint = new AutomationEntryPoint
+  {
+    EntryPointType = AutomationEntryPoint.Types.OnRequestScriptInfo,
+    Parameters = new List<object> { input },
+  },
+};
+```
+
+When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will be returned. The information is returned in an `EntryPointResult.Result` property of type `RequestScriptInfoOutput`.
+
+This message should not be used to request the information in an Automation script.
+
 ## Changes
 
 ### Enhancements
