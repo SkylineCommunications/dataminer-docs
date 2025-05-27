@@ -52,6 +52,10 @@ the *Include in booking* option has now been removed from the Workflow Designer 
 
 To improve performance, the MediaOps Solution now requires the use of the [GQI DxM](xref:GQI_DxM).
 
+#### Scheduling: Action icons temporarily disabled while action is being executed [ID 43045]
+
+While actions are being executed in the Scheduling app, the icons that execute those actions (e.g. the pencil icon to open the edit job panel and the icons in the edit job panel) will now temporarily be disabled. This will prevent users from clicking action items multiple times while actions are still ongoing.
+
 ### Fixes
 
 #### Resource Studio: Downgrading resource concurrency could cause sync issue [ID 43031]
