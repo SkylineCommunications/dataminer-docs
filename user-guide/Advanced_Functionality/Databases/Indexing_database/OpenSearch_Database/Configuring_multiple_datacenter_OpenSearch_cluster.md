@@ -5,9 +5,6 @@ keywords: allocation awareness, opensearch
 
 # Configuring a multiple data center OpenSearch cluster
 
-> [!IMPORTANT]
-> Two-site redundant indexing clusters are no longer supported. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS).
-
 When the nodes in the OpenSearch cluster are hosted in different data centers, racks, or zones, you should use **allocation awareness**. This will ensure that the data is correctly spread between the different locations and that you will still have all your data in case the connection to a location is lost.
 
 There are two kinds of allocation awareness: shard allocation awareness and forced awareness. The difference between these two is the way they handle the shards when a location is suddenly unreachable. **Shard allocation awareness** will assign the shards of the missing replicas nodes that can still be reached in the other locations. This can cause a big load on those nodes. If your nodes would not be able to handle this, you can solve this by using **forced awareness** instead. Forced awareness will never allow copies of the same shard to be allocated to the same locations.
