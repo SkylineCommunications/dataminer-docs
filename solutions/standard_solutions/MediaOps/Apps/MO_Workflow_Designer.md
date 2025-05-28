@@ -12,9 +12,9 @@ The workflow designer app allows you to visually manage and configure [workflows
 
 The following pages are available in the Workflow Designer app:
 
-- ![Home](~/user-guide/images/WD_Home.png) **Home**: From the Home View page you can keep track of all Workflows in the system. From this page, you can [create new workflows](xref:WFD_Creating_Workflows), and **duplicate**, **update**, or **delete** the existing ones. Here you can also **specify the resources** required for the workflow and how they are linked to each other, as well as provide **default configuration** settings for resources.
+- ![Home](~/user-guide/images/WD_Home.png) **Home**: Allows you to keep track of all workflows in the system, [create new workflows](xref:WFD_Creating_Workflows), and **duplicate**, **update**, or **delete** existing workflows. You can also **specify the resources** required for a workflow and how they are linked to each other, as well as provide **default configuration** settings for resources.
 
-- ![About](~/user-guide/images/WD_About.png) **About**: The About page provides information on the **version** of the `MediaOps` package.
+- ![About](~/user-guide/images/WD_About.png) **About**: Provides information on the **version** of the MediaOps package.
 
 ## Workflows
 
