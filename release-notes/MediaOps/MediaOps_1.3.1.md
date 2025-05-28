@@ -9,19 +9,29 @@ uid: MediaOps_1.3.1
 
 ## New features
 
-#### Pre-roll and post-roll configuration for jobs [ID 43035]
+#### Scheduling: Pre-roll and post-roll configuration for jobs [ID 43035]
 
-When a job is set up, either manually or automatically, operators or orchestration scripts require some time to do the setup or to take down the job or workflow. To ensure that resources are reserved for long enough before the start of the job and after the end of a job, it is now possible to configure a pre-roll and/or post-roll period.
+When a job is set up in the Scheduling app, either manually or automatically, operators or orchestration scripts require some time to do the setup or to take down the job or workflow. To ensure that resources are reserved for long enough before the start of the job and after the end of a job, it is now possible to configure a pre-roll and/or post-roll period.
 
-#### Possibility to delete completed jobs [ID 43036]
+#### Scheduling: Possibility to delete completed jobs [ID 43036]
 
-It is now possible to delete completed MediaOps jobs.
+In the Scheduling app, it is now possible to delete completed MediaOps jobs.
 
-#### Ability to set job back from confirmed to tentative [ID 43042]
+#### Scheduling: Job and node properties can now be divided into sections [ID 43041]
 
-When a job has been confirmed, it is now possible to return it to the tentative state.
+On the *App Configuration* page of the Scheduling app, you can now divide job and node properties into sections. Within a property section, you can order the properties to your preference.
 
-#### New button to copy job edit panel URL to clipboard [ID 43059]
+#### Scheduling: Ability to set job back from confirmed to tentative [ID 43042]
+
+When a job has been confirmed, it is now possible to return it to the tentative state from the job edit panel.
+
+#### Scheduling: Recurring jobs [ID 43043]
+
+Via the context menu on a job, it is now possible to convert the job into a recurring job. This will only be possible for jobs that have not started yet and only if the state of the jobs is draft or tentative.
+
+Once a job has been converted into a recurring job, it is still possible to update each job individually, but it is not possible to update all jobs at once. This means that it is best to make sure a job is fully configured before you convert it into a recurring job.
+
+#### Scheduling: New button to copy job edit panel URL to clipboard [ID 43059]
 
 In the header bar of the job edit panel, a button is now available that allows you to copy the URL of the panel to the clipboard.
 
@@ -33,7 +43,7 @@ In the header bar of the job edit panel, a button is now available that allows y
 
 To improve performance and keep the size of log collector packages under control, the maximum size of the MediaOps log files has now been reduced from 100 MB to 10 MB.
 
-#### Resource (pool) creation now happens via interactive Automation scripts [ID 43033]
+#### Resource Studio: Resource (pool) creation now happens via interactive Automation scripts [ID 43033]
 
 Creating and editing resources and resource pools in the MediaOps apps will now be done with interactive Automation scripts instead of form components. This way, validation can be performed directly in the UI before the resources or resource pools are created or updated, and resources and resource pools can now be created directly in the complete state.
 
