@@ -6,9 +6,9 @@ uid: Setting_up_authentication_and_creating_the_ASP_pages
 
 Do the following if you want to be able to show DataMiner report components on webpages by means of \<img> tags:
 
-1. Copy the *C:\\Skyline DataMiner\\Webpages\\Reports\\RemoteGraphs* folder from the DataMiner Agent to an arbitrary location on your web server.
+1. Copy the `C:\Skyline DataMiner\Webpages\Reports\RemoteGraphs` folder from the DataMiner Agent to an arbitrary location on your web server.
 
-1. On the DataMiner Agent, create a file named *C:\\Skyline DataMiner\\Reporter.xml*. In it, specify the secret string that will be shared by the DataMiner Agent and the web server as a means of authentication:
+1. On the DataMiner Agent, create a file named `C:\Skyline DataMiner\Reporter.xml`. In it, specify the secret string that will be shared by the DataMiner Agent and the web server as a means of authentication:
 
    ```xml
    <Reporter>
@@ -18,7 +18,7 @@ Do the following if you want to be able to show DataMiner report components on w
    </Reporter>
    ```
 
-1. On the web server, open the *RemoteGraphs\\Config.inc.asp* file and edit the following two lines:
+1. On the web server, open the `RemoteGraphs\Config.inc.asp` file and edit the following two lines:
 
    ```txt
    strRemoteUrl = 'http://DataMiner Agent IP Address/Reports/Graphs/';

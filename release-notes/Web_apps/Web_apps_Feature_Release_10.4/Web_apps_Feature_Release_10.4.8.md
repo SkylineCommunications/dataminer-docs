@@ -112,9 +112,9 @@ When a pie chart disappeared to allow an error message to get displayed, in some
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-Up to now, the web API would incorrectly retrieve the current time zone from the *ClientSettings.json* file located in the user-specific *C:\\Skyline DataMiner\\users\\\<username\>\\* folder.
+Up to now, the web API would incorrectly retrieve the current time zone from the *ClientSettings.json* file located in the user-specific `C:\Skyline DataMiner\users\<username>\` folder.
 
-From now on, the current time zone will be retrieved from the *ClientSettings.json* file located in the *C:\\Skyline DataMiner\\users\\* folder, which applies to all users.
+From now on, the current time zone will be retrieved from the *ClientSettings.json* file located in the `C:\Skyline DataMiner\users\` folder, which applies to all users.
 
 #### Low-Code Apps: The app would incorrectly open in edit mode when you clicked 'Preview draft' [ID 39935]
 
@@ -132,7 +132,7 @@ When you deleted a low-code app while the dashboard cache was still being initia
 
 <!-- MR 10.3.0 [CU17] / 10.4.0 [CU5] - FR 10.4.8 -->
 
-In dashboards and low-code apps, the *Parameter page* component would incorrectly not use the time zone specified in the *ClientSettings.json* file located in the *C:\\Skyline DataMiner\\users\\* folder, which applies to all users.
+In dashboards and low-code apps, the *Parameter page* component would incorrectly not use the time zone specified in the *ClientSettings.json* file located in the `C:\Skyline DataMiner\users\` folder, which applies to all users.
 
 From now on, this component will correctly use the time zone specified in the above-mentioned *ClientSettings.json* file.
 

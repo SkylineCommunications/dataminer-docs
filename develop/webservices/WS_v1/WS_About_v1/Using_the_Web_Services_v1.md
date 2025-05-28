@@ -63,7 +63,7 @@ For examples, see [JSON examples](xref:WS_v1_examples#json-examples).
 
 DataMiner's API supports the use of encoded URLs as the content of the body in an HTTP POST request, as illustrated below:
 
-```
+```txt
 POST https://dma.local/API/v1/Json.asmx/GetElement
 Content-Type: application/x-www-form-urlencoded
 Content-Length: length

@@ -4,7 +4,9 @@ uid: GetBookingsForJobSection
 
 # GetBookingsForJobSection
 
-Use this method to retrieve a list of the bookings for a specific job section. Available from DataMiner 9.6.11 onwards.
+Use this method to retrieve a list of the bookings for a specific job section.
+
+<!-- Available from DataMiner 9.6.11 onwards. -->
 
 ## Input
 

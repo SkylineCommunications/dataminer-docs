@@ -29,6 +29,7 @@ flowchart TD
     Alarms([Alarms])
     Services([Services])
     Trending([Trending])
+    WebApps([Web apps])
     %% Connect blocks %%
     START --- CheckStartup
     CheckStartup ---|Yes| CHECK1
@@ -42,6 +43,7 @@ flowchart TD
     Which --- Alarms
     Which --- Services
     Which --- Trending
+    Which --- WebApps
     %% Define hyperlinks %%
     click CHECK1 "#examples-of-critical-issues" "examples of critical issues"
     click critical "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "To critical issues flowchart"
@@ -49,13 +51,14 @@ flowchart TD
     click ProcessFlowcharts "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html" "Process identification"
     click Module "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Troubleshooting_Identify_Per_Module.html" "Identify per module"
     click Trending "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Trending.html" "Trending"
+    click WebApps "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Webapps.html" "Web apps"
     click Services "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Services.html" "Services"
     click Alarms "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Alarms.html" "Alarms"
     click Investigate "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
     %% Apply styles to blocks %%
     class START classTerminal;
     class Which,AlarmsServicesTrending,CheckStartup,CHECK1,identify classDecision;
-    class Investigate,Cassandra,Elasticsearch,DMAStartupIssues,critical,ProcessFlowcharts,Module,Alarms,Trending,Services classExternalRef;
+    class Investigate,Cassandra,Elasticsearch,DMAStartupIssues,critical,ProcessFlowcharts,Module,Alarms,Trending,WebApps,Services classExternalRef;
 ```
 
 ## Examples of critical issues

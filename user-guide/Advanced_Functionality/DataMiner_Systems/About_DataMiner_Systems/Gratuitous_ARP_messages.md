@@ -29,7 +29,7 @@ If WinPcap has not been installed on the DMA, everything will work, but no ARP m
 
 ## SLSendGARP.exe
 
-If you have to broadcast a gratuitous ARP message manually towards a given IP address, you can use SLSendGARP.exe, which is located in the *C:\\Skyline DataMiner\\Tools* directory.
+If you have to broadcast a gratuitous ARP message manually towards a given IP address, you can use SLSendGARP.exe, which is located in the `C:\Skyline DataMiner\Tools` directory.
 
 At the command prompt, enter the following command:
 

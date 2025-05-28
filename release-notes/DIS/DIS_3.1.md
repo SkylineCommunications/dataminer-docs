@@ -4,6 +4,19 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.10
+
+### New features
+
+#### IDE
+
+##### Updated XMLSchemas and Validators dependencies [ID 42906]
+
+DIS now uses:
+
+- [Validator version 1.3.2](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Validators/releases/tag/1.3.2)
+- [Skyline.DataMiner.XmlSchemas version 1.1.2](https://github.com/SkylineCommunications/Skyline.DataMiner.XmlSchemas/releases/tag/1.1.2)
+
 ## DIS 3.1.9
 
 ### New features

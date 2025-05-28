@@ -2,10 +2,10 @@
 uid: Cube_Feature_Release_10.5.6
 ---
 
-# DataMiner Cube Feature Release 10.5.6 – Preview
+# DataMiner Cube Feature Release 10.5.6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -14,7 +14,7 @@ uid: Cube_Feature_Release_10.5.6
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [View cards: New 'Isolation mode' column in element list [ID 42562]](#view-cards-new-isolation-mode-column-in-element-list-id-42562)
 
 ## New features
 

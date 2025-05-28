@@ -6,7 +6,9 @@ uid: GetCurrentAlarmByRootIDV2
 
 Use this method to retrieve the current alarm associated with a particular root alarm ID, as well as the alarm cache status.
 
-Available from DataMiner 10.0.7 onwards. Deprecated since DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11.<!-- RN 40240 -->. From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards, use the [GetCurrentAlarmByRootIDV3](xref:GetCurrentAlarmByRootIDV3) method instead.
+<!-- Available from DataMiner 10.0.7 onwards. -->
+
+Deprecated since DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11.<!-- RN 40240 -->. Use the [GetCurrentAlarmByRootIDV3](xref:GetCurrentAlarmByRootIDV3) method instead.
 
 ## Input
 

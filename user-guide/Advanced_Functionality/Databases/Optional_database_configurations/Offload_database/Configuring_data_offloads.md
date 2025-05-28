@@ -102,7 +102,7 @@ If, for a particular element, you want to disable data offloads to the offload d
 
 1. Stop DataMiner.
 
-1. In *C:\\Skyline DataMiner\\Elements\\,* go to the subfolder of the element and open *Element.xml*.
+1. In `C:\Skyline DataMiner\Elements\`, go to the subfolder of the element and open *Element.xml*.
 
 1. Set the *\<CentralOffload>* tag to *false*.
 

@@ -4,7 +4,9 @@ uid: GetAlarmPages
 
 # GetAlarmPages
 
-Use this method to retrieve filtered alarms in pages, grouped by time (default) or severity. Available from DataMiner 9.5.6 onwards.
+Use this method to retrieve filtered alarms in pages, grouped by time (default) or severity.
+
+<!-- Available from DataMiner 9.5.6 onwards. -->
 
 ## Input
 

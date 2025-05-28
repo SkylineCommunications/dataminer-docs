@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.6
 ---
 
-# General Feature Release 10.5.6 – Preview
+# General Feature Release 10.5.6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -24,30 +24,9 @@ uid: General_Feature_Release_10.5.6
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Automation: Separate log file for every Automation script that is run [ID 42572]](#automation-separate-log-file-for-every-automation-script-that-is-run-id-42572)
 
 ## New features
-
-#### Tracking DataMiner app package contents via SLNet [ID 42353]
-
-<!-- MR 10.6.0 - FR 10.5.6 -->
-
-`AppPackageContent` classes have now been added to SLNet. These classes can be accessed via `AppPackageContentHelper`, and will allow you to track which items (e.g. connectors, Automation scripts, etc.) were installed using a *.dmapp* package.
-
-Using these classes, you can add, update and delete AppPackageContent records in bulk. Each record will contain the following fields:
-
-- ID (GUID)
-- DmappName (string)
-- DmappVersion (string)
-- DmappCatalogGuid (GUID)
-- ContentType (type of installed item)
-- ContentName (unique identifier per type)
-- ContentHash (hash of the content at installation, which will allow tracking changes)
-
-By default, all users will have read access to these records, but only users with *Install Application Package* permission will be able to edit them.
-
-> [!IMPORTANT]
-> This functionality will only work on systems using STaaS or systems using an OpenSearch/Elasticsearch indexing database. It will not work on systems using a Cassandra database.
 
 #### New NotifyProtocol call NT_CLEAR_PARAMETER [ID 42368] [ID 42397]
 
@@ -263,6 +242,13 @@ In all messages of the Relational Anomaly Detection API, the term "MAD" has now 
 
 Also, all objects that referred to items containing "MAD" have now been deprecated.
 
+#### Security enhancements [ID 42747] [ID 42843]
+
+<!-- 42747: MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 [CU0] -->
+<!-- 42843: MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 [CU0] -->
+
+A number of security enhancements have been made.
+
 #### SLNetClientTest tool - DataMiner Object Model: Enhancements made to the ModuleSettings window [ID 42788]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
@@ -386,3 +372,9 @@ As 32-bit Windows systems are no longer supported, from now on, the *Register Da
 In order to communicate with its extension processes, the GQI DxM uses named pipes. In some cases, because a pipe would fail to connect to the core GQI process, it would no longer be possible to use a particular extension.
 
 Additionally, a number of enhancements have been made with regard to the management of named pipes.
+
+#### Antivirus software could incorrectly flag DcomConfig.exe as a virus and remove it from the system [ID 42979]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 [CU0] -->
+
+Since DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5, some antivirus software could incorrectly flag `C:\Skyline DataMiner\tools\DcomConfig.exe` as a virus and remove it from the system. As a result, DataMiner upgrades would fail.

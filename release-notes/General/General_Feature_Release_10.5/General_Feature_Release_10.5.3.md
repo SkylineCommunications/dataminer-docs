@@ -137,7 +137,7 @@ Relational anomaly detection (RAD) will detect when a group of parameters deviat
 
 ##### Configuration file
 
-Per DataMiner Agent, the above-mentioned parameter groups must be configured in the *C:\\Skyline DataMiner\\Analytics\\RelationalAnomalyDetection.xml* file. This file will be read when SLAnalytics starts up, when RAD is enabled or re-enabled, or when a *ReloadMadConfigurationMessage* is sent.
+Per DataMiner Agent, the above-mentioned parameter groups must be configured in the `C:\Skyline DataMiner\Analytics\RelationalAnomalyDetection.xml` file. This file will be read when SLAnalytics starts up, when RAD is enabled or re-enabled, or when a *ReloadMadConfigurationMessage* is sent.
 
 The configuration file must be formatted as follows.
 

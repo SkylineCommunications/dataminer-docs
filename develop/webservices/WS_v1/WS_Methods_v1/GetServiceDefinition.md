@@ -6,7 +6,7 @@ uid: GetServiceDefinition
 
 Use this method to retrieve a specific service definition.
 
-Available from DataMiner 10.0.2 onwards.
+<!-- Available from DataMiner 10.0.2 onwards. -->
 
 ## Input
 

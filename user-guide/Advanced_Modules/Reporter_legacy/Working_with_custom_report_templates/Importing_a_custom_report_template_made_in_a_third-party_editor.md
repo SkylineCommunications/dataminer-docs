@@ -8,7 +8,7 @@ If you have created a report template using your favorite ASP editor, you have t
 
 1. On a DataMiner Agent, copy the ASP page to the following directory:
 
-   - *C:\\Skyline DataMiner\\Webpages\\Reports\\Templates\\*
+   - `C:\Skyline DataMiner\Webpages\Reports\Templates\`
 
 1. On the report templates page, click *add new custom report*.
 

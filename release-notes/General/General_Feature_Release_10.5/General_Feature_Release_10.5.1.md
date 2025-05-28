@@ -313,7 +313,7 @@ This will significantly enhance overall performance when deleting large numbers 
 
 <!-- MR 10.5.0 - FR 10.5.1 -->
 
-Up to now, the *VerifyNatsIsRunning* prerequisite would fail when it did not find `IgnitionValue` in the *C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json* file. From now on, it will no longer check whether `IgnitionValue` is present in that file.
+Up to now, the *VerifyNatsIsRunning* prerequisite would fail when it did not find `IgnitionValue` in the `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` file. From now on, it will no longer check whether `IgnitionValue` is present in that file.
 
 #### gRPC connection reliability has been enhanced [ID 41261]
 
@@ -337,7 +337,7 @@ Also, a new SLNet option `HttpTcpKeepAliveInterval` can now be configured on Dat
 
 <!-- MR 10.5.0 - FR 10.5.1 -->
 
-The *VerifyClusterPorts* prerequisite and the *VerifyClusterPorts.dmupgrade* package will now use the Single Source of Truth (*C:\\Skyline DataMiner\\Configurations\\ClusterEndpoints.json*) to determine which endpoints should be tested.
+The *VerifyClusterPorts* prerequisite and the *VerifyClusterPorts.dmupgrade* package will now use the Single Source of Truth (`C:\Skyline DataMiner\Configurations\ClusterEndpoints.json`) to determine which endpoints should be tested.
 
 If this JSON file cannot be found, the endpoint to be tested will be retrieved from the *DMS.xml* and *SLCloud.xml* files.
 
@@ -345,7 +345,7 @@ If this JSON file cannot be found, the endpoint to be tested will be retrieved f
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 
-Up to now, when you had made changes to a *C:\\Skyline DataMiner\\Analytics\\configuration.xml* file on the leader Agent, you had to manually replace the file on all Agents in the cluster. From now on, you can force the synchronization of this file via Cube.
+Up to now, when you had made changes to a `C:\Skyline DataMiner\Analytics\configuration.xml` file on the leader Agent, you had to manually replace the file on all Agents in the cluster. From now on, you can force the synchronization of this file via Cube.
 
 See also [Synchronizing data between DataMiner Agents](xref:Synchronizing_data_between_DataMiner_Agents)
 
@@ -540,11 +540,11 @@ A number of issues that occurred while synchronizing files among agents in a DMS
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. *C:\Skyline DataMiner\users\\<UserName\>*).
+When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. `C:\Skyline DataMiner\users\<UserName>`).
 
 #### DataMiner upgrade: Folder to which the contents of the upgrade package had been extracted would not be removed [ID 41393]
 
-<!-- MR 10.5.0 - FR 10.5.1 -->
+<!-- MR 10.4.0 [CU16]/10.5.0 - FR 10.5.1 -->
 
 When a DataMiner Agent had been upgraded, in some cases, the folder to which the contents of the upgrade package had been extracted would incorrectly not be removed.
 

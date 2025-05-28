@@ -1,8 +1,8 @@
 ---
-uid: Terms_Online_Deployments
+uid: License_and_Service_Terms
 ---
 
-# Terms for online deployments
+# License and Service Terms
 
 Thank you for choosing Skyline's Software and Services. By using them, you acknowledge and agree to the terms set forth in this Agreement. This applies to both individual users and those representing an entity. Your use signifies your authority to bind yourself or the entity you represent to these terms.
 

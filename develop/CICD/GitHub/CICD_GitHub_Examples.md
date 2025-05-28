@@ -176,6 +176,6 @@ jobs:
         echo "${{ steps.UploadDMPROTOCOL.outputs.uploadOutput }}"
         
     - name: Deploy DMAPP
-      run: dataminer-package-deploy from-catalog --artifact-id "${{ steps.UploadDMPROTOCOL.outputs.uploadOutput }}" --dm-catalog-token "${{ secrets.DATAMINER_DEPLOY_KEY }}"
+      run: dataminer-package-deploy from-volatile --artifact-id "${{ steps.UploadDMPROTOCOL.outputs.uploadOutput }}" --dm-system-token "${{ secrets.DATAMINER_DEPLOY_KEY }}"
       shell: bash
 ```

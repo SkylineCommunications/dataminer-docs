@@ -26,4 +26,6 @@ To promote a protocol version to the production version:
 1. Under *Versions*, right-click the protocol version and select *Set as production*.
 
 > [!NOTE]
-> DVE child protocols cannot be set as production protocol.
+>
+> - DVE child protocols cannot be set as production protocol.
+> - From DataMiner 10.4.10/10.5.0 onwards<!--RN 40291-->, when you deploy a protocol for the first time, it will automatically be promoted to the production version. From DataMiner 10.5.0 [CU4]/10.5.7 onwards, this will also happen for protocols that are deployed for the first time as part of a .dmapp package.<!-- RN 42623 -->

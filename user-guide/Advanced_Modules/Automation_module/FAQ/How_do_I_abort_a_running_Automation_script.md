@@ -26,4 +26,4 @@ If the script is an interactive Automation script, and you are the user currentl
 Alternatively, you can abort a running Automation script by means of the DataMiner SLNetClientTest tool. See [Aborting a running Automation script](xref:SLNetClientTest_aborting_running_script).
 
 > [!WARNING]
-> The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (*C:\\Skyline DataMiner\\Files\\SLNetClientTest.exe*).
+> The DataMiner SLNetClientTest program is an advanced system administration tool that should be used with extreme care (`C:\Skyline DataMiner\Files\SLNetClientTest.exe`).

@@ -4,7 +4,9 @@ uid: DuplicateJobsDomain
 
 # DuplicateJobsDomain
 
-Use this method to duplicate a jobs domain. Available from DataMiner 10.0.10 onwards.
+Use this method to duplicate a jobs domain.
+
+<!-- Available from DataMiner 10.0.10 onwards. -->
 
 ## Input
 

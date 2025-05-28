@@ -7,7 +7,7 @@ uid: Simulations
 Before you can simulate SNMP or HTTP devices, you need to capture the data that is available on those devices. The following sections will tell you how.
 
 > [!NOTE]
-> All simulation files must be placed in the folder *C:\\QASNMPSimulations*. The first time you start the tool, this folder will automatically be created.
+> All simulation files must be placed in the folder `C:\QASNMPSimulations`. The first time you start the tool, this folder will automatically be created.
 
 - [Creating SNMP simulations](xref:Creating_SNMP_simulations)
 

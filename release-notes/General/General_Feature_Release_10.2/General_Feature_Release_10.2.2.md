@@ -328,9 +328,9 @@ In the DataMiner Cube desktop app, a number of enhancements have been made with 
 
 To download the CefSharp library, DataMiner Cube will now look in the following locations, in the order specified below:
 
-- The location defined in a registry key created by the Cube MSI installation (*HKLM\\SOFTWARE\\Skyline Communications\\DataMiner Cube\\InstallDir*), by default *C:\\Program Files\\Skyline Communications\\DataMiner Cube*
-- *%LocalAppData%\\Skyline\\DataMiner*
-- *%ProgramData%\\Skyline\\DataMiner*
+- The location defined in a registry key created by the Cube MSI installation (`HKLM\SOFTWARE\Skyline Communications\DataMiner Cube\InstallDir`), by default `C:\Program Files\Skyline Communications\DataMiner Cube`
+- `%LocalAppData%\Skyline\DataMiner`
+- `%ProgramData%\Skyline\DataMiner`
 
 #### Dashboards app - Parameter feed: Enhanced performance when fetching parameter indices \[ID 31841\]
 

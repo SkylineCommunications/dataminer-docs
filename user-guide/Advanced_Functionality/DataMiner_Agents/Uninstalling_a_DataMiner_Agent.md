@@ -41,7 +41,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
 ## Uninstalling a DMA using a manual procedure
 
-1. Go to the folder *C:\\Skyline DataMiner\\Tools*.
+1. Go to the folder `C:\Skyline DataMiner\Tools`.
 
 1. Run the following scripts as Administrator:
 
@@ -64,7 +64,7 @@ There are two possibilities to uninstall a DataMiner Agent:
 
 1. From DataMiner 10.1.0/10.1.1 onwards, use SLEndpointTool_console to remove **NATS**:
 
-   1. Run *C:\\Skyline DataMiner\\Files\\SLEndpointTool_Console.exe* either directly or from *cmd.exe* as Administrator.
+   1. Run `C:\Skyline DataMiner\Files\SLEndpointTool_Console.exe` either directly or from *cmd.exe* as Administrator.
 
    1. Select *Uninstall*.
 
@@ -122,12 +122,12 @@ There are two possibilities to uninstall a DataMiner Agent:
 
    1. Run *regedit* as Administrator and delete *HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Apache Software Foundation\\Procrun 2.0\\elasticsearch-service-x64*.
 
-   1. Delete the Elasticsearch data folder, e.g. *C:\\ProgramData\\Elasticsearch*. If you are unsure where to find the directory, look for path.data in the elasticsearch.yml file.
+   1. Delete the Elasticsearch data folder, e.g. `C:\ProgramData\Elasticsearch`. If you are unsure where to find the directory, look for path.data in the elasticsearch.yml file.
 
       > [!NOTE]
       > The *ProgramData* folder is not displayed by default, so you may need to select to display hidden items in order to access this folder.
 
-   1. Delete the folder *C:\\Program Files\\Elasticsearch*.
+   1. Delete the folder `C:\Program Files\Elasticsearch`.
 
    1. If any Elasticsearch firewall rule exists, delete it.
 

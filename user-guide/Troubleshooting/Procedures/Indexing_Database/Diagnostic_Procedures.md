@@ -223,7 +223,7 @@ Maintaining the health of your indexing database network is vital for optimal pe
 
 ## Are you still experiencing issues?
 
-If you are still experiencing issues, please report them to [techsupport@skyline.be](mailto:techsupport@skyline.be).
+If you are still experiencing issues, please report them to <support@dataminer.services>.
 
 When reporting an issue that may be related to the indexing database, include the following information:
 

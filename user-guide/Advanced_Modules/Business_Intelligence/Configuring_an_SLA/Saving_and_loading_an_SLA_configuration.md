@@ -22,7 +22,7 @@ It is possible to save the configuration of an SLA element in DataMiner Cube. Th
    - If you wish to save the configuration to an existing file, select the file in the drop-down list next to *Configuration Name*, and click the green check mark.
 
    > [!NOTE]
-   > The configuration files are saved in the folder *C:\\Skyline DataMiner\\Documents\\SLA Configurations*. If you want to save the configuration to a file that is already in this folder, but this file does not appear in the drop-down list, click the *Load Configurations* button to refresh the list first.
+   > The configuration files are saved in the folder `C:\Skyline DataMiner\Documents\SLA Configurations`. If you want to save the configuration to a file that is already in this folder, but this file does not appear in the drop-down list, click the *Load Configurations* button to refresh the list first.
 
 1. Click the *Save* button.
 

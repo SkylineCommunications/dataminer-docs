@@ -10,7 +10,7 @@ To do so:
 
 1. Stop DataMiner.
 
-1. Open the file *C:\\Skyline Dataminer\\MaintenanceSettings.xml.*
+1. Open the file `C:\Skyline Dataminer\MaintenanceSettings.xml`.
 
 1. In the SLNet.SearchOptions tag, specify one or more of the following options. To specify multiple options, separate them by semicolons (“;”).
 

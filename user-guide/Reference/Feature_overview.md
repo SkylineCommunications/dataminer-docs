@@ -111,6 +111,7 @@ Below you can find an overview of the main features that have been added to Data
 | Low-Code Apps: [Timeline component events and actions](xref:DashboardTimeline#configuring-events-and-actions) | DataMiner web 10.3.0 CU14/10.4.0 CU2/10.4.5<!-- [ID 39254] --> |
 | Protocols: [Buttons in table cells to open DataMiner objects](xref:UIComponentsTableRowButtons) | DataMiner 10.1.9/10.2.0 <!-- [ID 30413] --> |
 | Protocols: [Buttons to open EPM objects](xref:AdvancedEPMLaunchEPMObjectsTableCellButtons)| DataMiner 10.2.3/10.3.0 <!-- [ID 32368] --> |
+| Protocols: [NT_CLEAR_PARAMETER (474)](xref:NT_CLEAR_PARAMETER) message | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 <!-- RN 42368 --> |
 | Protocols: [Protocol.ParameterGroups.Group-isInternal](xref:Protocol.ParameterGroups.Group-isInternal) attribute to mark DCF connections as internal | DataMiner 10.1.6/10.2.0 <!-- [ID 29438] -->|
 | Protocols: [Table-based matrix](xref:UIComponentsTableMatrix) | DataMiner 10.3.1/10.4.0 <!-- [ID 34645] -->|
 | Protocols: [Direct view table with table columns of different protocols](xref:Protocol.Params.Param.CrossDriverOptions) | DataMiner 10.2.9/10.3.0 <!-- [ID 33253] --> |

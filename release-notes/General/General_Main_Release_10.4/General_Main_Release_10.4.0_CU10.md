@@ -218,7 +218,7 @@ Up to now, that list could incorrectly contain multiple entries for the same fil
 
 <!-- MR 10.4.0 [CU10] - FR 10.5.1 -->
 
-When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. *C:\Skyline DataMiner\users\\<UserName\>*).
+When, in DataMiner Cube, you opened *System Center* and went to *Tools > Clean up unused*, no alarm filters would be loaded when the deprecated *clientsettings.dat* file was still present in your user folder on the DataMiner Agent (i.e. `C:\Skyline DataMiner\users\<UserName>`).
 
 #### Failover: Offline Agent would not be able to synchronize with the online Agent [ID 41527]
 

@@ -82,3 +82,5 @@ uid: solution_index
     <a href="/solutions/custom_solutions/Vecima_Remote_PHY_Monitor/Remote_PHY_Monitoring.html" title="Remote PHY Monitoring" target="_self"><img src="~/solutions/images/Remote_PHY_Monitoring.svg" style="width:100%"></a>
   </div>
 </div>
+
+<!-- Todo: Add DataMiner Health Check Tool -->

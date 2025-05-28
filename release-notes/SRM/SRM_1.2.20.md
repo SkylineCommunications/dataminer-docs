@@ -40,7 +40,7 @@ A new script, *SRM_BookResourcesQuickly*, is now available, which allows you to 
 
 It is now possible to import and export the settings of a Booking Manager element.
 
-- To **export** the settings, on the *General* data page of the element, click *Export*. An export file will be created in folder *C:\\Skyline DataMiner\\Documents\\Skyline Booking Manager\\Configurations*.
+- To **export** the settings, on the *General* data page of the element, click *Export*. An export file will be created in folder `C:\Skyline DataMiner\Documents\Skyline Booking Manager\Configurations`.
 
 - To **import** the settings, on the *General* data page of the element, click *Import*, and then select the file to import in the pop-up window. As the import feature is intended to be used to **pass settings from one DMS to another**, it does not import the parameter *DMA IDs to Store Reservations*.
 

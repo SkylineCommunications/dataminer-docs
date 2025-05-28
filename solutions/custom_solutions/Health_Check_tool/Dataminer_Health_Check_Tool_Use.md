@@ -12,19 +12,19 @@ The *General* page of the *Health Check Manager* element provides an overview of
 
 Key metrics on this page are the **overall failure rate** of the **last run** and for a **longer duration**. The time range for this second metric can be adjusted with the *Longer Duration Time* parameter on the *Configuration* page.
 
-![General Page](~/user-guide/images/Health_Check_General_Page.png)
+![General Page](~/solutions/images/Health_Check_General_Page.png)
 
 ### Test Configuration data page
 
 This page allows you to manage the configuration of both **tests** and **subscriptions**, ensuring they align with your monitoring needs. For more information, see [Configuring the DataMiner Health Check Tool](xref:DataMiner_Health_Check_Tool_Configuration).
 
-![Test Configuration Page](~/user-guide/images/Health_Check_Results.png)
+![Test Configuration Page](~/solutions/images/Health_Check_Results.png)
 
 ### Results Data Page
 
 The *Results* page displays a table listing all the tests that have been executed within a specified time span. This table contains essential details, including the execution time, test results, and the failure rate.
 
-![Results Page](~/user-guide/images/Health_Check_Result_table.png)
+![Results Page](~/solutions/images/Health_Check_Result_table.png)
 
 #### Results metrics
 
@@ -78,4 +78,4 @@ The report also display the **overall failure rate** of the most recent test run
 
 On the **Configuration** page of the Health Check Manager element, you can [configure who should receive the email reports](xref:DataMiner_Health_Check_Tool_Configuration#configuring-email-reports).
 
-![Email Report](~/user-guide/images/Health_Check_Email_Report.png)
+![Email Report](~/solutions/images/Health_Check_Email_Report.png)

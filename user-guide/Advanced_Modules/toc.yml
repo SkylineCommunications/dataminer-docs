@@ -1,7 +1,8 @@
 items:
   - name: Automation
-    topicUid: automation
     items:
+      - name: About DataMiner Automation
+        topicUid: automation
       - name: Managing Automation scripts
         topicUid: Managing_Automation_scripts
       - name: Designing Automation scripts
@@ -318,8 +319,6 @@ items:
             items:
               - name: Displaying a custom empty component message
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
-              - name: Leveraging feeds in a web component
-                topicUid: Tutorial_Dashboards_Feeds_Web_Component
               - name: Leveraging controls and feeds to create a dynamic GQI query
                 topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
               - name: Getting started with node edge graphs
@@ -386,6 +385,8 @@ items:
                 topicUid: TutorialMaps
               - name: Getting started with the grid component
                 topicUid: Tutorial_Apps_Grid
+              - name: Leveraging feeds in a web component
+                topicUid: Tutorial_Dashboards_Feeds_Web_Component
               - name: Creating a visually appealing and user-friendly low-code app
                 topicUid: Tutorial_App_Design
               - name: Using flows in a low-code app

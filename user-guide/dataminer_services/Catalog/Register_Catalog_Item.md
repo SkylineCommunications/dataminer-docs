@@ -80,7 +80,6 @@ This file will contain all the necessary information to register a Catalog item 
 #   - ChatOps Extension: If the Catalog item is a DataMiner Automation script designed as a ChatOps extension.
 #   - Connector: If the Catalog item is a DataMiner XML connector.
 #   - Custom Solution: If the Catalog item is a DataMiner Solution.
-#   - Data Query: If the Catalog item is a GQI data query.
 #   - Data Transformer: Includes a data transformer that enables you to modify data using a GQI data query before making it available to users in low-code apps or dashboards.
 #   - Dashboard: If the Catalog item is a DataMiner dashboard.
 #   - DevTool: If the Catalog item is a DevTool.
@@ -159,6 +158,15 @@ tags:
 # If the vendor ID is not provided during an update, the vendor will be unchanged and keep the previously set value.
 #   Must be a valid GUID.
 vendor_id: '<fill in GUID here>'
+
+# [Optional]
+# The name of the market the Catalog item belongs to.
+market_name: '<fill in name here>'
+
+# [Optional]
+# The type of the element.
+# This can only be applied to Catalog items with the type Connector.
+element_type: '<fill in element type here>'
 ```
 
 ## Registering a new version with the API

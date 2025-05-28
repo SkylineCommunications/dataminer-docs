@@ -312,8 +312,8 @@ Because of a number of enhancements, overall performance has increased when star
 
 When the factory reset tool (*SLReset.exe*) is run, from now on, it will also remove the *NodeId.txt* files located in the following folders:
 
-- *C:\\ProgramData\\Skyline Communications\\DxMs Shared\\Data*
-- *C:\\ProgramData\\Skyline Communications\\DataMiner Orchestrator\\Data*
+- `C:\ProgramData\Skyline Communications\DxMs Shared\Data`
+- `C:\ProgramData\Skyline Communications\DataMiner Orchestrator\Data`
 
 These files will be recreated with a new identifier when DataMiner or any of its extension modules is restarted.
 

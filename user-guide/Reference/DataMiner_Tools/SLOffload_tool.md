@@ -12,7 +12,7 @@ The SLOffload tool allows the user to manually trigger a database offload to an 
 
 To trigger a database offload:
 
-1. Start the tool by double-clicking the file “SLOffload.exe” in the folder *C:\\Skyline DataMiner\\Tools*.
+1. Start the tool by double-clicking the file “SLOffload.exe” in the folder `C:\Skyline DataMiner\Tools`.
 
    A window will open that lists the different DMAs in the cluster, and the databases to be offloaded.
 

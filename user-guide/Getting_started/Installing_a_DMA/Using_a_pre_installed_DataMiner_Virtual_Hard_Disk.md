@@ -12,7 +12,7 @@ When you configure this setup, you will be able to choose between different data
 
 - [Self-managed dedicated clustered storage](xref:Configuring_dedicated_clustered_storage): A setup where you host and manage the Cassandra and OpenSearch clusters required by DataMiner yourself on dedicated servers (not recommended). If you choose this setup, you will need to make sure these database clusters are fully installed before you run the procedures below, so that DataMiner will be able to connect to them.
 
-- A **staging setup** where both Cassandra and OpenSearch run **locally** on Windows Subsystem for Linux (WSL). Such a setup should only be used for **testing and staging environments**, and this will also require additional resources on the local machine. To switch such a setup to production, you will need to either migrate to [Storage as a Service (STaaS)](xref:STaaS) or switch to using Cassandra and OpenSearch clusters on separate servers (not recommended), and then [decommission WSL](xref:Decommissioning_WSL).
+- A **development setup** where both Cassandra and OpenSearch run **locally** on Windows Subsystem for Linux (WSL). Such a setup should only be used for **single-Agent development environments**, and this will also require additional resources on the local machine. To convert such a setup to a staging or production setup, you will need to either migrate to [Storage as a Service (STaaS)](xref:STaaS) or switch to using Cassandra and OpenSearch clusters on separate servers (not recommended), and then [decommission WSL](xref:Decommissioning_WSL).
 
 Once you have downloaded the [pre-installed virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) from DataMiner Dojo, you will need to follow the steps below to use it:
 
@@ -69,6 +69,10 @@ When you have downloaded the virtual hard disk, you can start to create a VM in 
 
 1. When the login screen is shown, log in to the VM.
 
+1. Verify in the network configuration that the network interface uses a static IP instead of DHCP, because DataMiner requires a static IP.
+
+   For more details, refer to *Change TCP/IP Settings* under [Essential Network Settings and Tasks in Windows](https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9).
+
 ## Configuring DataMiner
 
 As soon as you log in to the VM, a window will be shown where you can configure your DataMiner System.
@@ -81,7 +85,7 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 >   - For the license, see [Permanent license](xref:Permanent_license).
 >   - For the data storage configuration, please refer to [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
 > - If you intend to restore a **backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip** the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](#restoring-a-backup-onto-the-virtual-hard-disk).
-> - DataMiner requires a **static IP** to be configured. Make sure to do this before continuing with the below steps. If you have to change the IP afterwards, you can do so by following the steps described in [Changing the IP of a DMA](xref:Changing_the_IP_of_a_DMA).
+> - If you are installing a **Failover** Agent, **skip** the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](#configuring-the-new-dataminer-agent-as-a-new-agent-in-a-failover-pair).
 
 > [!NOTE]
 > If you have accidentally closed the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`. Make sure to run it with administrator privileges.
@@ -108,7 +112,7 @@ Follow the below steps to configure your DataMiner Agent:
 
 1. Fill in the required details to connect your DataMiner Agent to dataminer.services and click *Next*:
 
-   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
+   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner Systems in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
    - *System Name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
    - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
    - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
@@ -180,7 +184,7 @@ If you want to restore a backup coming from another machine because of e.g. a ha
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-1. Open the *C:\Skyline DataMiner\\* folder.
+1. Open the `C:\Skyline DataMiner\` folder.
 
 1. Remove all *\*.lic* files, if any.
 
@@ -196,6 +200,31 @@ If you want to restore a backup coming from another machine because of e.g. a ha
 
 1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
+## Configuring the new DataMiner Agent as a new Agent in a Failover pair
+
+If the new Agent will be paired with an existing Agent in a Failover setup, after you have created and connected the VM, instead of the configuration steps detailed above:
+
+1. Make sure both the existing and new DMA are prepared and the necessary prerequisites are met, as detailed under [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
+
+   > [!IMPORTANT]
+   > Do not start DataMiner on the new DMA before this preparation is fully done.
+
+1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
+
+1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the ID of the existing DMA and the *Request.lic* file.
+
+   In your email, mention that it concerns a Failover Agent for an existing Agent.
+
+1. Wait until you receive either a *dataminer.lic* or *response.lic* file from Skyline.
+
+1. When you have the *dataminer.lic* or *response.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
+
+1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+Once the new DMA is running, continue with the [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
+
 ## Switching from subscription mode to perpetual license
 
 When you deploy a DataMiner Agent using the pre-installed DataMiner Virtual Hard Disk, your system will run in subscription mode and get licensed automatically. Part of this process involves getting a DataMiner ID, which uniquely identifies your DataMiner Agent.
@@ -204,7 +233,7 @@ If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-1. Open the *C:\Skyline DataMiner\\* folder.
+1. Open the `C:\Skyline DataMiner\` folder.
 
 1. Remove all *\*.lic* files, if any.
 
@@ -236,7 +265,7 @@ If after this period you want to extend the usage of the system, you can convert
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-1. Open the *C:\Skyline DataMiner\\* folder.
+1. Open the `C:\Skyline DataMiner\` folder.
 
 1. Remove all *\*.lic* files, if any.
 

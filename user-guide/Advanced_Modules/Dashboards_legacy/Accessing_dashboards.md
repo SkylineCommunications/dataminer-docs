@@ -24,5 +24,5 @@ More information on accessing the Dashboards app is included in the following to
 
 > [!NOTE]
 >
-> - Some dashboard components, such as the *Trend parameter* component, can be used outside the *Dashboards* app in custom portals. The code and web services for the components can be found on the DMA in the folder *C:\\Skyline DataMiner\\Webpages\\Dashboards\\Parts*.
+> - Some dashboard components, such as the *Trend parameter* component, can be used outside the *Dashboards* app in custom portals. The code and web services for the components can be found on the DMA in the folder `C:\Skyline DataMiner\Webpages\Dashboards\Parts`.
 > - While data is being loaded in a dashboard, an activity indicator is displayed in the top-right corner of the page. You can click the indicator to see the number of calls in progress.

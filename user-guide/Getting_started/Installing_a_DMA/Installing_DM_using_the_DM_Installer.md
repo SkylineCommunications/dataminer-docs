@@ -20,7 +20,9 @@ You can follow the steps below or watch this short video, which shows you how to
 <p><br></p>
 
 > [!IMPORTANT]
-> Avoid using duplicates of existing VMs to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
+>
+> - **Avoid using duplicates of existing VMs** to install a new DataMiner machine. Using cloned VMs can cause certain configurations from the previous DataMiner machine to linger and cause conflicts in the system.
+> - To restore a **backup**, create a **Failover** Agent to pair with an existing Agent, or do an **offline** installation, you will need to follow a **different procedure** than shown in the video above. Please read the instructions below carefully to make sure you follow the correct procedure.
 
 ## Before you run the installer
 
@@ -39,6 +41,10 @@ You can follow the steps below or watch this short video, which shows you how to
 1. Make sure that no anti-virus software will interfere with the DataMiner installer and with the DataMiner software once it is installed. See [Regarding antivirus software](xref:Regarding_antivirus_software).
 
 1. Make sure you have a Windows account with administrator rights. If you intend to use a DataMiner installer older than version 10.2, this must be the server's local Administrator account. For later installers, any account with administrator rights will suffice.
+
+1. Verify in the network configuration that the network interface uses a static IP instead of DHCP, because DataMiner requires a static IP.
+
+   For more details, refer to *Change TCP/IP Settings* under [Essential Network Settings and Tasks in Windows](https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9).
 
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/dataminer-installer/).
 
@@ -67,6 +73,7 @@ If you are using DataMiner Installer v10.4, follow the steps below to install Da
    >   - For the data storage configuration, please refer to [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
    > - The procedure below will deploy DataMiner in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. To switch to a [perpetual license](xref:Pricing_Perpetual_Use_Licensing), see [Switching from subscription mode to perpetual license](#switching-from-subscription-mode-to-perpetual-license). To immediately install DataMiner with a perpetual license, you will need to configure the license and data storage manually, similar to an offline installation.
    > - If you intend to **restore a backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip the configuration below** and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](#restoring-a-backup-onto-the-new-installed-dataminer-agent).
+   > - If you are installing a **Failover** Agent, **skip the configuration below**, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](#configuring-the-new-dataminer-agent-as-a-new-agent-in-a-failover-pair).
 
 1. Click *Start*.
 
@@ -83,7 +90,7 @@ If you are using DataMiner Installer v10.4, follow the steps below to install Da
 
 1. Fill in the required details to connect your DataMiner Agent to dataminer.services and click *Next*:
 
-   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner nodes in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
+   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner Systems in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
    - *System Name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
    - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
    - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
@@ -113,7 +120,7 @@ If you are using the DataMiner Installer v10.4 to restore a backup coming from a
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-1. Open the *C:\Skyline DataMiner\\* folder.
+1. Open the `C:\Skyline DataMiner\` folder.
 
 1. Remove all *\*.lic* files, if any.
 
@@ -129,6 +136,31 @@ If you are using the DataMiner Installer v10.4 to restore a backup coming from a
 
 1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
+### Configuring the new DataMiner Agent as a new Agent in a Failover pair
+
+If you are using the DataMiner Installer v10.4 to install an Agent that will be paired with an existing Agent in a Failover setup, after you have installed DataMiner, instead of clicking *Start* to configure the DataMiner Agent, follow the steps below:
+
+1. Make sure both the existing and new DMA are prepared and the necessary prerequisites are met, as detailed under [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
+
+   > [!IMPORTANT]
+   > Do not start DataMiner on the newly installed DMA before this preparation is fully done.
+
+1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
+
+1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the ID of the existing DMA and the *Request.lic* file.
+
+   In your email, mention that it concerns a Failover Agent for an existing Agent.
+
+1. Wait until you receive either a *dataminer.lic* or *response.lic* file from Skyline.
+
+1. When you have the *dataminer.lic* or *response.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
+
+1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
+
+Once the new DMA is running, continue with the [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
+
 ### Switching from subscription mode to perpetual license
 
 When you deploy a DataMiner Agent using the installer, your system will run in subscription mode and get licensed automatically. Part of this process involves getting a DataMiner ID, which uniquely identifies your DataMiner Agent.
@@ -137,7 +169,7 @@ If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-1. Open the *C:\Skyline DataMiner\\* folder.
+1. Open the `C:\Skyline DataMiner\` folder.
 
 1. Remove all *\*.lic* files, if any.
 
@@ -169,7 +201,7 @@ If after this period you want to extend the usage of the system, you can convert
 
 1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
 
-1. Open the *C:\Skyline DataMiner\\* folder.
+1. Open the `C:\Skyline DataMiner\` folder.
 
 1. Remove all *\*.lic* files, if any.
 
@@ -250,7 +282,7 @@ At this point, the basic installation is complete. However, to be able to make f
 > [!NOTE]
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
-> - If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
+> - If you closed the DataMiner installer before uploading the license files, copy the license files to the `C:\Skyline DataMiner` folder and restart DataMiner.
 > - After the installation, if you have [configured security](xref:Managing_users) so that there is at least one other user with full administrator rights, you can safely remove the account you used for the installation if necessary.
 
 ### Custom DataMiner installation
@@ -304,7 +336,7 @@ If you are using an older, deprecated DataMiner installer, follow the steps belo
 1. In the *License* tab of the DataMiner Installer, click *browse and upload*, and navigate to the license files.
 
    > [!NOTE]
-   > If you closed the DataMiner installer before uploading the license files, copy the license files to the *C:\Skyline DataMiner* folder and restart DataMiner.
+   > If you closed the DataMiner installer before uploading the license files, copy the license files to the `C:\Skyline DataMiner` folder and restart DataMiner.
 
 1. Once all files have been uploaded successfully, click *restart DataMiner*.
 

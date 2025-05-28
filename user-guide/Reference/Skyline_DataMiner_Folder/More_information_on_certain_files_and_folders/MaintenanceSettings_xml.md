@@ -8,7 +8,7 @@ In the file *MaintenanceSettings.xml*, you can specify a number of general syste
 
 - This file is located in the following folder:
 
-    *C:\\Skyline DataMiner\\*
+    `C:\Skyline DataMiner\`
 
 - Before you make changes to this file, always stop DataMiner. Restart DataMiner when your changes have been saved.
 
@@ -57,7 +57,6 @@ This is an example of a *MaintenanceSettings.xml* file:
   <Trending>
     <EDCurves></EDCurves>
     <SDCurves></SDCurves>
-    <TimeSpan1DayRecords window="0" />
     <TimeSpan1HourRecords window="60" />
     <TimeSpan5MinRecords window="5" />
     <WarningLevel></WarningLevel>
@@ -264,7 +263,7 @@ Used to enforce a backup package mechanism on machines running an operating syst
 
 ### DeltCache
 
-Every time a .dmimport package is exported from or imported onto a DataMiner Agent, it is stored in the *C:\\Skyline DataMiner\\System Cache\\DELT\\* folder of that DataMiner Agent. The cleanup instructions for this folder are configured within the *\<DeltCache>* tag.
+Every time a .dmimport package is exported from or imported onto a DataMiner Agent, it is stored in the `C:\Skyline DataMiner\System Cache\DELT\` folder of that DataMiner Agent. The cleanup instructions for this folder are configured within the *\<DeltCache>* tag.
 
 > [!NOTE]
 >
@@ -317,7 +316,7 @@ When you specify multiple conditions, they will be combined into one expression 
 
 ### DELTUpgrades
 
-This tag allows you to configure the automatic cleanup of DELT-related packages in the folder *C:\\Skyline DataMiner\\Upgrades\\*.
+This tag allows you to configure the automatic cleanup of DELT-related packages in the folder `C:\Skyline DataMiner\Upgrades\`.
 
 The tag contains a number of *\<Delete>* subtags, which each specify a particular deletion mode with a *mode* attribute and a corresponding value with a *value* attribute.
 
@@ -547,7 +546,7 @@ This deprecated tag was used to specify the maximum number of trend graphs that 
 
 In the *TimeSpan1DayRecords* tag, you can customize the interval of the 1-day "average trending" records. To do so, specify a *window* attribute value in minutes.
 
-Not active by default.
+By default, this is not included. If you do include this tag, make sure to not set it to "0", as this configuration is invalid and would lead to issues.
 
 > [!NOTE]
 > If you are looking to configure how long these records need to be stored, see [DBMaintenanceDMS.xml](xref:DBMaintenanceDMS_xml).

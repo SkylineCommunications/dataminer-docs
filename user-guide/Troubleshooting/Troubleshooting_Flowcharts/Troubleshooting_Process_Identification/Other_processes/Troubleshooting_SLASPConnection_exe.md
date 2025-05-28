@@ -8,7 +8,7 @@ uid: Troubleshooting_SLASPConnection_exe
 
 DMS Reporter is a legacy DataMiner module that is used to generate reports showing statistical data and operational metrics. These reports can be generated on the fly, forwarded by email at regular intervals (e.g. weekly, monthly, etc.) or sent by the DataMiner Correlation or Automation modules. They can also be incorporated into existing third-party web environments. For more detailed information on this module, see [DMS Reporter](xref:reporter) in the DataMiner Help.
 
-This page is dedicated to helping you troubleshoot issues that might be preventing the generation of legacy reports. You can request additional assistance either via our [community platform](https://community.dataminer.services/questions/) or by sending an email to [techsupport@skyline.be](mailto:techsupport@skyline.be).
+This page is dedicated to helping you troubleshoot issues that might be preventing the generation of legacy reports. You can request additional assistance either via our [community platform](https://community.dataminer.services/questions/) or by sending an email to <support@dataminer.services>.
 
 ### SLASPConnection
 
@@ -118,7 +118,7 @@ To troubleshoot this issue:
 
 1. Register *aspapi.dll* and *comchartdir.dll* (regsvr32).
 
-1. If registration fails with "module could not be found", make sure the following file exists: *C:\windows\System32\msvbvm60.dll*. If it does not, copy it from another computer.
+1. If registration fails with "module could not be found", make sure the following file exists: `C:\windows\System32\msvbvm60.dll`. If it does not, copy it from another computer.
 
 1. Check the permissions on these files. Make sure everyone is allowed to "Read" / "Read and Execute" them.
 

@@ -45,6 +45,7 @@ The overview below lists all data sources that currently have update support. If
 | Data source | Support level | Supported since |
 | ----------- | -------- | -------- |
 | [Get ad hoc data](xref:Get_ad_hoc_data) | [Real-time events](#query-update-support) | DataMiner 10.4.4/10.5.0 |
+| [Get object manager instances](xref:Get_object_manager_instances) | [Real-time events](#query-update-support) | DataMiner 10.5.0/10.5.7 when using the [GQI DxM](xref:GQI_DxM) <!-- RN 42530 --> |
 | [Get parameter table by ID](xref:Get_parameter_table_by_ID) | [Real-time events](#query-update-support) | DataMiner 10.3.10/10.4.0 |
 | [Get views](xref:Get_views) | [Real-time events](#query-update-support) | DataMiner 10.3.10/10.4.0 |
 
@@ -55,10 +56,9 @@ The overview below lists all data sources that currently have update support. If
 
 The overview below indicates the support levels for all operators.
 
-| Operator | Support level  |
-| -------- | --------------- |
-| [Select](xref:GQI_Select) | [Real-time events](#query-update-support) |
-| All other operators| [Notification events](#query-update-support) |
-
-> [!NOTE]
-> Some operators that usually only support notification events may in fact support real-time updates in combination with other data sources. Check the data source documentation for more details.
+| Operator | Support level | Support |
+| -------- | ------------- | ------- |
+| [Select](xref:GQI_Select) | [Real-time events](#query-update-support) | |
+| [Sort](xref:GQI_Sort) | [Real-time events](#query-update-support) | Starting from DataMiner 10.5.0 [CU4]/10.5.7 with the [GQI DxM](xref:GQI_DxM). <!-- RN 42941 --> |
+| [Filter](xref:GQI_Sort) | [Real-time events](#query-update-support) / [Notification events](#query-update-support) | When supported, this is mentioned in the relevant data source documentation. |
+| All other operators | [Notification events](#query-update-support) | |

@@ -14,7 +14,7 @@ When you do so, the following things will happen when a script is executed:
 
 - Temporary compilation files will be copied in the following directory:
 
-    *C:\\Skyline DataMiner\\Scripts\\Compiled*
+    `C:\Skyline DataMiner\Scripts\Compiled`
 
 If Microsoft Visual Studio (or another debugger) is installed on the DataMiner Agent, it is possible to attach to the SLAutomation process (debugging “Managed” code), and place breakpoints in the script’s source file. Note that you may need to run the script again.
 

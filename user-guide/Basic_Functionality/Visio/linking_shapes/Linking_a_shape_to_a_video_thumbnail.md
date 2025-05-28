@@ -97,19 +97,19 @@ The following image formats are supported: .png, .jpg, .bmp, and .emf.
 
 If you want a shape to display an image located on a DMA, then do the following:
 
-1. Place the image in the DMA's *C:\\Skyline DataMiner\\Webpages* folder (or one of its subfolders e.g. *C:\\Skyline DataMiner\\Webpages\\MyImages\\*).
+1. Place the image in the DMA's `C:\Skyline DataMiner\Webpages` folder (or one of its subfolders e.g. `C:\Skyline DataMiner\Webpages\MyImages\`).
 
 1. In the shape, specify the URL of the image (e.g. `http://DmaIpAddress/MyImages/Picture.png`).
 
 > [!NOTE]
-> If you get an "Invalid path" error, open the file *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*, and check whether the image folder (e.g. */MyImages/*) has been added to the *ExtraAllowedPaths* key.
+> If you get an "Invalid path" error, open the file `C:\Skyline DataMiner\Webpages\VideoThumbnails\Web.config`, and check whether the image folder (e.g. */MyImages/*) has been added to the *ExtraAllowedPaths* key.
 > See also [Allowed paths in case of connection via DataMiner proxy](xref:Linking_a_shape_to_a_video_thumbnail#allowed-paths-in-case-of-connection-via-dataminer-proxy).
 
 ## Video server parameters
 
 The parameters you are allowed to pass inside the URL depend on the type of the video server.
 
-All supported video server types and their associated parameters are defined in the file *C:\\Skyline DataMiner\\videoservers.xml*.
+All supported video server types and their associated parameters are defined in the file `C:\Skyline DataMiner\videoservers.xml`.
 
 Additional configuration is possible in the URL:
 
@@ -167,7 +167,7 @@ http://ipaddress/images/getthumbnail/...
 
 If more URLs need to be added to the list of allowed URLs, do the following:
 
-1. Open *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*.
+1. Open `C:\Skyline DataMiner\Webpages\VideoThumbnails\Web.config`.
 
 1. Go to the *appSettings* section.
 
@@ -180,7 +180,7 @@ If more URLs need to be added to the list of allowed URLs, do the following:
    > [!NOTE]
    > If you just add a single slash ("/") in the value of the ExtraAllowedPaths key, all possible URLs will be allowed.
 
-Example: If, under *C:\\Skyline DataMiner\\Webpages*, you created your own folder named *MyThumbnails*, then add */MyThumbnails/* to the value of the *ExtraAllowedPaths* key.
+Example: If, under `C:\Skyline DataMiner\Webpages`, you created your own folder named *MyThumbnails*, then add */MyThumbnails/* to the value of the *ExtraAllowedPaths* key.
 
 ## Ignoring validation errors during HTTP parsing
 
@@ -191,7 +191,7 @@ It is possible to configure the thumbnail web.config file to ignore any validati
 
 To do so:
 
-1. Open the file *C:\\Skyline DataMiner\\Webpages\\VideoThumbnails\\Web.config*.
+1. Open the file `C:\Skyline DataMiner\Webpages\VideoThumbnails\Web.config`.
 
 1. Add the following option:
 

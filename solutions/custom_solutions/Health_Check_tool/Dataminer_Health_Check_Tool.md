@@ -12,4 +12,4 @@ The primary use case for this tool is the configuration of tests that proactivel
 
 While the system comes with several DMA-related tests out of the box, you also have the flexibility to build your own custom script-based tests. Additionally, custom subscriptions can be defined for any standalone or table-based parameters beyond the connectors that are mentioned above.
 
-![Health Check Email Report](~/user-guide/images/Health_Check_Email_Report.png)
+![Health Check Email Report](~/solutions/images/Health_Check_Email_Report.png)

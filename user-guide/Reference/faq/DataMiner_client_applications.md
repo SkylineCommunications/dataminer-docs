@@ -14,7 +14,7 @@ uid: DataMiner_client_applications
 
 ## How do I send info about my DataMiner client to Technical Support?
 
-In case of problems, Skyline Technical Support may ask you to provide version information and/or debug information. Below, you can find how you can gather the requested information.
+In case of problems, Technical Support may ask you to provide version information and/or debug information. Below, you can find how you can gather the requested information.
 
 > [!TIP]
 > See also: [Collecting data to report an issue to Technical Support](xref:Collecting_data_to_report_an_issue_to_TechSupport)
@@ -27,7 +27,7 @@ In case of problems, Skyline Technical Support may ask you to provide version in
 
 1. At the bottom of the dialog box, click *Copy Versions Information*.
 
-1. Paste the text in a new email message, and send the information to [techsupport@skyline.be](mailto:techsupport%40skyline.be).
+1. Paste the text in a new email message, and send the information to [support@dataminer.services](mailto:support@dataminer.services).
 
 ### Sending debug information to Technical Support
 
@@ -40,7 +40,10 @@ In case of problems, Skyline Technical Support may ask you to provide version in
    > [!NOTE]
    > You may get a warning, saying that an application (DataMiner Cube) is trying to send an email message from your computer.
 
-1. Send the information to [techsupport@skyline.be](mailto:techsupport%40skyline.be).
+1. Send the information to [support@dataminer.services](mailto:support@dataminer.services).
+
+> [!TIP]
+> See also: [Collecting data to report an issue to Technical Support](xref:Collecting_data_to_report_an_issue_to_TechSupport)
 
 ## How do I reinstall the DataMiner Cube browser app?
 
@@ -72,8 +75,8 @@ To reinstall the browser app, you need to clean the XBAP cache:
 
 ## What should I do if I cannot connect to a DMA using the DataMiner Cube browser app?
 
-> [!NOTE]
-> While using the DataMiner Cube browser application is still supported, we highly recommend using the desktop application instead. See [Installing the DataMiner Cube desktop application](xref:Installing_the_DataMiner_Cube_desktop_application).
+> [!IMPORTANT]
+> As of DataMiner 10.3.x, the DataMiner Cube browser app is *End of Life*. Up to DataMiner 10.4.0 [CU11]/10.5.2, the application's existing features will continue to function, but no new features will be added. From DataMiner 10.4.0 [CU12]/10.5.3 onwards<!--RN 41873-->, the browser app is completely deprecated and can no longer be installed.
 
 1. Check if Microsoft Edge has been correctly configured to run Cube for this DMA.
 

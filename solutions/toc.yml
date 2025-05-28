@@ -207,6 +207,15 @@ items:
         topicUid: Ping_Monitoring_managing_groups_destinations
       - name: Getting started tutorial
         topicUid: Tutorial_Apps_Ping_Monitoring_App
+    - name: IP Network Explorer
+      topicUid: IpNetworkExplorer
+      items:
+      - name: Getting started with IP Network Explorer
+        topicUid: IpNetworkExplorer_getting_started
+      - name: IP Network Explorer UI overview
+        topicUid: IpNetworkExplorer_UI_overview
+      - name: Supported devices and protocols
+        topicUid: IpNetworkExplorer_Supported_Devices_And_Protocols
     - name: Smart Trap Processor
       topicUid: Smart_Trap_Processor_Overview
       items:
@@ -290,6 +299,17 @@ items:
         topicUid: Open_Putty_with_DITT
       - name: Implementing DITT in a visual overview
         topicUid: Implementing_DITT_in_Visio
+    - name: DataMiner Health Check Tool
+      topicUid: DataMiner_Health_Check_Tool
+      items:
+      - name: Installing the Health Check Tool
+        topicUid: DataMiner_Health_Check_Tool_Installation
+      - name: Configuring the Health Check Tool
+        topicUid: DataMiner_Health_Check_Tool_Configuration
+      - name: Using the Health Check Tool
+        topicUid: DataMiner_Health_Check_Usage
+      - name: Health Check Tool Dashboards
+        topicUid: DataMiner_Health_Dashboards
     - name: DataMiner Planned Maintenance (PLM) tool
       topicUid: DataMiner_PLM_Tool_Overview
       items:

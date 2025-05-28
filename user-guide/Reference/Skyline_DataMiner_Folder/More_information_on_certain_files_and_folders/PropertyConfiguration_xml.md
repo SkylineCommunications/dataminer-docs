@@ -6,7 +6,7 @@ uid: PropertyConfiguration_xml
 
 In the *PropertyConfiguration.xml* file, you can define custom properties to be linked to elements, parameters and alarms.
 
-- This file is located in the following folder: *C:\\Skyline DataMiner\\*
+- This file is located in the following folder: `C:\Skyline DataMiner\`
 
 Several custom options can be configured in this file:
 
@@ -57,7 +57,7 @@ However, it is possible to configure alarm properties so that a group is created
 
 To do so:
 
-1. Open the file *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
+1. Open the file `C:\Skyline DataMiner\PropertyConfiguration.xml`.
 
 1. In the XML file, define a *contentDescription* and *contentSeparator* attribute for each relevant property:
 
@@ -88,7 +88,7 @@ To do so:
 
    1. In the drop-down list next to *Type*, select *File*.
 
-   1. In the *File* box, specify the following path: *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
+   1. In the *File* box, specify the following path: `C:\Skyline DataMiner\PropertyConfiguration.xml`.
 
    1. Click the *Sync now* button.
 
@@ -100,7 +100,7 @@ In a DataMiner protocol, a property can be configured on a parameter to get its 
 
 To disable alarm updates on changes of such a read-only property:
 
-1. Open the file *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
+1. Open the file `C:\Skyline DataMiner\PropertyConfiguration.xml`.
 
 1. In the XML file, set the attribute *doUpdateAlarmOnValueChange* for the relevant property to `false`.
 
@@ -118,7 +118,7 @@ To disable alarm updates on changes of such a read-only property:
 
    1. In the drop-down list next to *Type*, select *File*.
 
-   1. In the *File* box, specify the following path: *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
+   1. In the *File* box, specify the following path: `C:\Skyline DataMiner\PropertyConfiguration.xml`.
 
    1. Click the *Sync now* button.
 
@@ -130,7 +130,7 @@ It is possible to have the value of a property that is available for an alarm co
 
 To do so:
 
-1. Open the file *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
+1. Open the file `C:\Skyline DataMiner\PropertyConfiguration.xml`.
 
 1. In the *XML* file, add the *copyToAlarmField* attribute to the *Property* tag of the property that needs to be copied, and set it to the correct keyword:
 
@@ -159,7 +159,7 @@ To do so:
 
    1. In the drop-down list next to *Type*, select *File*.
 
-   1. In the *File* box, specify the following path: *C:\\Skyline DataMiner\\PropertyConfiguration.xml*.
+   1. In the *File* box, specify the following path: `C:\Skyline DataMiner\PropertyConfiguration.xml`.
 
    1. Click the *Sync now* button.
 

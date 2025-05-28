@@ -15,7 +15,7 @@ This tutorial shows how you can create and publish an IP Address Management (IPA
 
 ## Step 1: Create an app
 
-The DataMiner Low-Code Apps are available on the DataMiner landing page. To access this page, browse to the IP or hostname of a DMA or to *https://[Your DMA]/root*, depending on your configuration.
+The DataMiner Low-Code Apps are available on the DataMiner landing page. To access this page, browse to the IP or hostname of a DMA or to `https://[Your DMA]/root`, depending on your configuration.
 
 1. Hover over a section below the DataMiner apps section until you see the "+" icon, and then click that icon to start creating a new app.
 

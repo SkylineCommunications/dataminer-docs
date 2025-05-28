@@ -206,8 +206,8 @@ Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending o
 
 | Deprecated DLL | Deprecated since DataMiner version | Minimum safe DLL version | Folder |
 |----------------|------------------------------------|--------------------------|--------|
-| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | *C:\Skyline DataMiner\ProtocolScripts* |
-| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | *C:\Skyline DataMiner\ProtocolScripts* or *C:\Skyline DataMiner\Files* |
+| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | `C:\Skyline DataMiner\ProtocolScripts` |
+| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | `C:\Skyline DataMiner\ProtocolScripts` or `C:\Skyline DataMiner\Files` |
 
 Any version lower than the specified minimum version will be considered outdated, as older versions are known to pose security risks.
 
@@ -306,6 +306,20 @@ A number of enhancements have been made to the *ModuleSettings* window.
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Service & Resource Management: Enhanced retrieval of service definitions [ID 42810]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving service definitions.
+
+Also, SLNet and SLDataGateway will now exchange data faster thanks to the use of protobuf serialization.
+
+#### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
@@ -334,6 +348,12 @@ When, in the *Scheduler* app, a dashboard was exported via an email action, up t
 
 When a trend graph seemed to increase or decrease, in some cases, change points could incorrectly be labeled as a level shift.
 
+#### Credentials Library: Problem when the same group was added more than once in the UpdateLibraryCredentialMessage [ID 42248]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+Because of an issue in SLNet, up to now, if the same group would be added more than once in the `UpdateLibraryCredentialMessage` (i.e. the SLNet message used to add or update credentials), duplicated `Group` tags would end up in the *Library.xml* file. As a result, in DataMiner Cube, the updated credential would get stuck, showing a "[modified]" tag.
+
 #### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
@@ -361,3 +381,9 @@ In systems with many trended parameters, an SLNet memory leak could occur whenev
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
 At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
+
+#### Alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service [ID 42724]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.

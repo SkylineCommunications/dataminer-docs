@@ -8,7 +8,7 @@ When you encounter an issue with the software and you need help to resolve it, c
 
 If for some reason you cannot access the Support application and create a ticket, you can instead contact Skyline's Support helpdesk:
 
-- Email: <techsupport@skyline.be>
+- Email: <support@dataminer.services>
 
 - Phone (during business hours):
   - Belgium: +32 51 33 19 25

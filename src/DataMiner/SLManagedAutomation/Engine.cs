@@ -1085,7 +1085,13 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Log("My log message");
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>
+		/// <list type="bullet">
+		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
+		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the Automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
+		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.</description></item>
+		/// </list>
+		/// </remarks>
 		public void Log(string message) { }
 
 		/// <summary>
@@ -1100,7 +1106,13 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Log("My log message", LogType.Always, 5);
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>
+		/// <list type="bullet">
+		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
+		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the Automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
+		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.</description></item>
+		/// </list>
+		/// </remarks>
 		public void Log(string message, LogType type, int logLevel) { }
 
 		/// <summary>
@@ -1116,7 +1128,13 @@ namespace Skyline.DataMiner.Automation
 		/// engine.Log("My log message", LogType.Always, 5, "Initialize");
 		/// </code>
 		/// </example>
-		/// <remarks>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</remarks>
+		/// <remarks>
+		/// <list type="bullet">
+		/// <item><description>In DataMiner 10.4.0 [CU10]/10.5.1 (RN 41195), some changes are introduced in the locking behavior of this Automation script action. From these versions onward, text that supports the dummy placeholder will display the old element name if it is updated during the execution of a script, or it will still display the element name even if the element has been deleted in the meantime.</description></item>
+		/// <item><description>From DataMiner 10.5.6/10.6.0 onwards (RN 42572), logging will also be added in a dedicated log file with the name of the Automation script. For additional information, see <see href="xref:Log">Log</see>.</description></item>
+		/// <item><description>To configure a custom log level for a specific script in its dedicated log file, send an UpdateLogfileSettingMessage in which Name is set to "Automation\ScriptName". If no custom log configuration exists for a particular Automation script, the default configuration will be used.</description></item>
+		/// </list>
+		/// </remarks>
 		public void Log(string message, LogType type, int logLevel, string method) { }
 
 		/// <summary>

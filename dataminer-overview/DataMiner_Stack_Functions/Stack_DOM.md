@@ -29,8 +29,8 @@ The **DataMiner Object Model (DOM)** enables the quick modeling and management o
 > - [Stateful DOM – Extend your administrative data models with more powerful, automated flows](https://community.dataminer.services/stateful-doms-extend-your-administrative-data-models-with-more-powerful-automated-flows/)
 > - [Introduction to Stateful DataMiner Object Models](https://community.dataminer.services/video/introduction-to-stateful-dataminer-object-models-1-3/) ![Video](~/user-guide/images/video_Duo.png)
 > - [Model and Create an Object](https://community.dataminer.services/video/model-and-create-an-object-2-3//) ![Video](~/user-guide/images/video_Duo.png)
-> - Kata session: [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/video/kata-15-getting-started-with-dataminer-object-models/) ![Video](~/user-guide/images/video_Duo.png)
-> - User Guide: [DataMiner Object Models (DOM)](xref:DOM)
+> - [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/video/kata-15-getting-started-with-dataminer-object-models/) ![Video](~/user-guide/images/video_Duo.png)
+> - [DataMiner Object Models (DOM)](xref:DOM)
 
 ## Planned Maintenance
 

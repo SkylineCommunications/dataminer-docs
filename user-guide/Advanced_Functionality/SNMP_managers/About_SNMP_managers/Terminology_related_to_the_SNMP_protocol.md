@@ -14,7 +14,7 @@ When dealing with the SNMP protocol, you have to be familiar with the following 
 
   In a DataMiner System, you can find two kinds of MIBs: general MIBs and protocol-specific MIBs.
 
-  - **General MIBs**: These describe the default SNMP notifications sent by the DataMiner System, and are shipped with every version of the DataMiner Agent software. On a DataMiner Agent, the general MIBs can be found in the folder *C:\\Skyline DataMiner\\MIBs\\*.
+  - **General MIBs**: These describe the default SNMP notifications sent by the DataMiner System, and are shipped with every version of the DataMiner Agent software. On a DataMiner Agent, the general MIBs can be found in the folder `C:\Skyline DataMiner\MIBs\`.
 
     > [!NOTE]
     > For detailed information about the contents of the default DataMiner notifications, see [DataMiner SNMP notification definition](xref:Default_DataMiner_notification).

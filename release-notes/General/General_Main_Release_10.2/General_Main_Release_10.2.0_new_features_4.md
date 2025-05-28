@@ -127,7 +127,7 @@ To do so, place the following prefix before the variable name:
 
 `__saved_`
 
-The variable is then saved in a separate .dat file located in the following folder on the client machine: *C:\\Users\\{Username}\\AppData\\Roaming\\Skyline\\DataMiner*. When a variable is saved, if a user reopens a card with that variable, the variable will be set to the last saved value.
+The variable is then saved in a separate .dat file located in the following folder on the client machine: `C:\Users\{Username}\AppData\Roaming\Skyline\DataMiner`. When a variable is saved, if a user reopens a card with that variable, the variable will be set to the last saved value.
 
 #### Visual Overview - ChildrenFilter: Using a regular expression to filter by name \[ID 28445\]
 

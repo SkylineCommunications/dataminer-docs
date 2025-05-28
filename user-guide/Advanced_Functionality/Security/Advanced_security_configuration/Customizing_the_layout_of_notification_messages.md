@@ -10,7 +10,7 @@ By default, all notification messages have a standard, hard-coded layout. Howeve
 
 If you want to customize the layout of all or some of the notification messages sent by a particular DataMiner Agent, do the following:
 
-1. Create a file called *NotifyTemplates.xml* and store it in the folder *C:\\Skyline DataMiner\\* of that DataMiner Agent.
+1. Create a file called *NotifyTemplates.xml* and store it in the folder `C:\Skyline DataMiner\` of that DataMiner Agent.
 
 1. In the *NotifyTemplates.xml* file, create a *\<Template>* tag inside the *\<NotifyTemplates>* root tag for every type of notification message for which you do not want to use the default, hard-coded layout.
 
@@ -58,7 +58,7 @@ In the above-mentioned template names, *\[Format\]* must be replaced by one of t
 Example: The template called “text-notifications” should contain the template for notification messages sent in plain-text emails.
 
 > [!NOTE]
-> HTML templates will be inserted into the *\[contents\]* placeholder located in the *\<body>* tag of the file *C:\\Skyline DataMiner\\NotifyMail.html*.
+> HTML templates will be inserted into the *\[contents\]* placeholder located in the *\<body>* tag of the file `C:\Skyline DataMiner\NotifyMail.html`.
 
 ## Using special characters in NotifyTemplates.xml
 

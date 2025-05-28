@@ -48,7 +48,7 @@ BrokerGateway will manage NATS communication based on a single source of truth t
 
 Before you start the migration, the entire cluster must have been running smoothly for some time. A BPA test is available that allows you to easily verify this ([Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites)).
 
-You can then run the migration by opening a remote desktop connection to all DMAs at the same time, opening a command prompt as administrator, and running the executable *C:\Skyline DataMiner\Tools\NATSMigration.exe*. This must happen on each DMA in the cluster within a 10-minute timeframe. For more detailed information, refer to [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+You can then run the migration by opening a remote desktop connection to all DMAs at the same time, opening a command prompt as administrator, and running the executable `C:\Skyline DataMiner\Tools\NATSMigration.exe`. This must happen on each DMA in the cluster within a 10-minute timeframe. For more detailed information, refer to [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
 Note that when you add a DataMiner Agent to a DataMiner System, it will have to use the same NATS solution as the DataMiner System. This means that if the DMS has been migrated to BrokerGateway, the DMA you add also needs to be migrated to BrokerGateway, but if the DMS still uses the SLNet-managed NATS solution, the DMA you add also has to use this solution.
 
@@ -58,7 +58,7 @@ Note that when you add a DataMiner Agent to a DataMiner System, it will have to 
 
 GQI extensions use the Automation engine to create DLL libraries that are then loaded by GQI to add ad hoc data sources, custom operators, etc.
 
-GQI will now look for missing dependencies in the *C:\\Skyline DataMiner\\Scripts\\Libraries* folder. This will allow GQI extension scripts to find the Automation script library at runtime.
+GQI will now look for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This will allow GQI extension scripts to find the Automation script library at runtime.
 
 > [!IMPORTANT]
 > If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
@@ -103,17 +103,17 @@ In case the DataMiner System uses the BrokerGateway-managed NATS solution (see [
 
 <!-- MR 10.6.0 - FR 10.5.5 -->
 
-The *C:\\Skyline DataMiner\\Recycle Bin\\* folder contains backup copies of modified configuration files and folders, stored as zip files. Each zip file includes the modified file or folder along with a *Cause.txt* file, which details the reason for the change and its timestamp. These backup copies help you restore previous configurations if needed.
+The `C:\Skyline DataMiner\Recycle Bin\` folder contains backup copies of modified configuration files and folders, stored as zip files. Each zip file includes the modified file or folder along with a *Cause.txt* file, which details the reason for the change and its timestamp. These backup copies help you restore previous configurations if needed.
 
 Up to now, a separate zip file would be created for each configuration change that had been implemented in the system.
 
-From now on, the contents of the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder will be zipped and moved to the *C:\\Skyline DataMiner\\Recycle Bin\\* folder every 11 minutes. This process will first occur 3 minutes after DataMiner startup.
+From now on, the contents of the `C:\Skyline DataMiner\System Cache\Recyclable\` folder will be zipped and moved to the `C:\Skyline DataMiner\Recycle Bin\` folder every 11 minutes. This process will first occur 3 minutes after DataMiner startup.
 
 When a configuration change occurs, two scenarios are possible:
 
-- If the file or folder has not been modified after the most recent move to the *Recycle Bin* folder (which happens every 11 minutes), a new entry is created in the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder with the name of the changed file or folder.
+- If the file or folder has not been modified after the most recent move to the *Recycle Bin* folder (which happens every 11 minutes), a new entry is created in the `C:\Skyline DataMiner\System Cache\Recyclable\` folder with the name of the changed file or folder.
 
-- If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in the *C:\\Skyline DataMiner\\System Cache\\Recyclable\\* folder is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
+- If the file or folder has been modified after the most recent move to the *Recycle Bin* folder, the existing entry in the `C:\Skyline DataMiner\System Cache\Recyclable\` folder is not replaced. Instead, the *Cause.txt* file is updated with the new change description and corresponding timestamp.
 
 ##### RecycleBinSize setting in MaintenanceSettings.xml
 
@@ -179,8 +179,8 @@ Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending o
 
 | Deprecated DLL | Deprecated since DataMiner version | Minimum safe DLL version | Folder |
 |----------------|------------------------------------|--------------------------|--------|
-| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | *C:\Skyline DataMiner\ProtocolScripts* |
-| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | *C:\Skyline DataMiner\ProtocolScripts* or *C:\Skyline DataMiner\Files* |
+| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | `C:\Skyline DataMiner\ProtocolScripts` |
+| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | `C:\Skyline DataMiner\ProtocolScripts` or `C:\Skyline DataMiner\Files` |
 
 Any version lower than the specified minimum version will be considered outdated, as older versions are known to pose security risks.
 
@@ -202,7 +202,7 @@ A number of security enhancements have been made.
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
-A repair tool, *NATSRepair.exe*, will now be included in the *C:\Skyline DataMiner\Tools\\* folder. You can use this to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
+A repair tool, *NATSRepair.exe*, will now be included in the `C:\Skyline DataMiner\Tools\` folder. You can use this to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
 
 #### DataMiner Object Model: An error will now be returned when a FieldValue was added for a non-existing FieldDescriptor [ID 42358]
 
@@ -446,7 +446,7 @@ When the GQI DxM was being used, ad hoc data sources and custom operators would 
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
-In some cases, an error could be thrown when the *ClusterEndpoints.json* file was created in the *C:\\Skyline DataMiner\\Configurations\\* folder.
+In some cases, an error could be thrown when the *ClusterEndpoints.json* file was created in the `C:\Skyline DataMiner\Configurations\` folder.
 
 #### SLAnalytics - Relational anomaly detection: GetMADParameterGroupInfoMessage would incorrectly return an empty display instance for parameters with non-advanced naming [ID 42508]
 

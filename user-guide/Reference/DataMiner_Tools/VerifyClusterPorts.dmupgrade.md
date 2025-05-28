@@ -16,9 +16,9 @@ Note:
 
 - Running this package usually takes about 5 minutes.
 
-- When you run the package, information will be displayed in the upgrade progress window. If you want to consult this information after the window is closed, it is available in the progress.log file in the folder *C:\Skyline DataMiner\Upgrades\Packages\VerifyClusterPorts.dmupgrade-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*.
+- When you run the package, information will be displayed in the upgrade progress window. If you want to consult this information after the window is closed, it is available in the progress.log file in the folder `C:\Skyline DataMiner\Upgrades\Packages\VerifyClusterPorts.dmupgrade-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`.
 
-- While this is not recommended, it is possible to force a DMA to upgrade even if not all ports are reachable. To do so, create a custom *VerifyClusterPorts.LastRun.xml* file in the folder *C:\Skyline Dataminer\Upgrades\Helper\VerifyClusterPorts*, containing Success = true and a recent timestamp, as illustrated below. Note that the *LastRun.xml* file is only valid for 10 days.
+- While this is not recommended, it is possible to force a DMA to upgrade even if not all ports are reachable. To do so, create a custom *VerifyClusterPorts.LastRun.xml* file in the folder `C:\Skyline Dataminer\Upgrades\Helper\VerifyClusterPorts`, containing Success = true and a recent timestamp, as illustrated below. Note that the *LastRun.xml* file is only valid for 10 days.
 
 ```xml
 <VerifyResult>

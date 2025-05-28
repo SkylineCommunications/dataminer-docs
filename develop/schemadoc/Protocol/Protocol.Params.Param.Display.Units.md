@@ -106,6 +106,7 @@ In case you have a suggestion for a unit to be added to the list below, send an 
 |cmHg|centimeter of mercury (pressure)|
 |Columns|columns|
 |Connections|connections|
+|Connections/s|connections per second|
 |cPa|centipascal|
 |cps|chips per second|
 |cs|centisecond|
@@ -804,6 +805,8 @@ In case you have a suggestion for a unit to be added to the list below, send an 
 |Tm/s|terameter per second|
 |TOhm|teraohm|
 |TPa|terapascal|
+|Transactions|transactions|
+|Transactions/s|transactions per second|
 |Ts|terasecond|
 |TV|teravolt|
 |TW|terawatt|
@@ -842,6 +845,7 @@ In case you have a suggestion for a unit to be added to the list below, send an 
 |Units/Week|Units per week|
 |Units/Year|units per year|
 |uPa|micropascal|
+|Updates|updates|
 |us|microsecond|
 |uT|microtesla|
 |uV|microvolt|

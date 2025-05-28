@@ -43,11 +43,15 @@ items:
             href: IDP/toc.yml
           - name: MbgNMS release notes
             href: MbgNMS/toc.yml
+          - name: MediaOps release notes
+            href: MediaOps/toc.yml
           - name: PA release notes
             topicUid: PA_1.3.1
             href: PA/toc.yml
           - name: PTP release notes
             href: PTP/toc.yml
+          - name: RAD Manager
+            href: RAD_Manager/toc.yml
           - name: SRM release notes
             href: SRM/toc.yml
       - name: Breaking changes

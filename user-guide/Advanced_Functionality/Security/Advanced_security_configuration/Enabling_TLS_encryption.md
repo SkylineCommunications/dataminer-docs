@@ -8,7 +8,7 @@ When you enable TLS encryption on elements that behave as a server (e.g. smart-s
 
 To enable TLS encryption, do the following on every DMA in the DMS that is to contain such elements:
 
-1. In the folder *C:\\Skyline DataMiner\\Certificates*, place a PKCS12 file with (default) name "server.pfx", containing the certificates and the private key.
+1. In the folder `C:\Skyline DataMiner\Certificates`, place a PKCS12 file with (default) name "server.pfx", containing the certificates and the private key.
 
 1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
