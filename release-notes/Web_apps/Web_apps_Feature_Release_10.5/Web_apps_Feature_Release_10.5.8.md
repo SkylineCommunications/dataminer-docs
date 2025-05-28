@@ -24,7 +24,13 @@ uid: Web_apps_Feature_Release_10.5.8
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Dashboards app & Low-Code Apps: Automatically saved component settings will only get saved when in edit mode [ID 43029]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+Up to now, certain component settings would automatically get saved in a dashboard or low-code app, even when you were not in edit mode.
+
+From now on, these automatically saved component settings will only get saved in a dashboard or low-code code when you are in edit mode.
 
 ### Fixes
 
