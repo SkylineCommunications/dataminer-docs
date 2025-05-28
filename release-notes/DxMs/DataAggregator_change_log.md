@@ -4,15 +4,12 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
-#### 20 May 2025 - New feature - DataAggregator 3.1.0 - Migrator tool to switch to using the GQI DxM [ID 42831]
-
-A new tool, *MigratorToGQIDxM*, is now available, which allows you to migrate existing queries into the format supported by the GQI DxM.
-
-#### 20 May 2025 - Enhancement - DataAggregator 3.1.0 - Use of GQI DxM [ID 39216]
+#### 20 May 2025 - Enhancement - DataAggregator 3.1.0 - Use of GQI DxM [ID 39216] [ID 42831]
 
 The DataAggregator DxM is now capable of communicating directly with the GQI DxM. This will improve performance, as data will no longer have to flow through CoreGateway, SLNet, and SLHelper. To make use of the GQI DxM, the following manual configuration is required:
 
 1. Update the DataAggregator DxM to version 3.1.0.
+
 1. In the *appsettings.custom.json* file, add the following setting:
 
    ```json
@@ -24,6 +21,8 @@ The DataAggregator DxM is now capable of communicating directly with the GQI DxM
    ```
 
 1. Restart the *DataAggregator* service.
+
+1. In case your setup already contains queries, run the *MigratorToGQIDxM* tool to migrate these to the format supported by the GQI DxM. This tool is available on demand.
 
 #### 6 September 2024 - Fix - DataAggregator 3.0.7 - Old CSV exports not removed [ID 40623]
 
