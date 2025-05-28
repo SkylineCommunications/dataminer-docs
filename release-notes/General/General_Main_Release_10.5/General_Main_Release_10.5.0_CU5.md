@@ -33,6 +33,14 @@ In some cases, SLDataGateway could stop working because of issues caused by TPL 
 
 The number of TPL tasks has now been reduced, especially when writing trend data to the database.
 
+#### Error 'The object exporter specified was not found' would get logged upon DMA startup [ID 42927]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, a DataMiner Agent would not start up properly, and the following error would get logged in the *SLDataMiner.txt* log file:
+
+`The object exporter specified was not found`
+
 #### Redundancy groups: Alarm mentioning that all redundancy resources are in use would incorrectly not get cleared [ID 42970]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
