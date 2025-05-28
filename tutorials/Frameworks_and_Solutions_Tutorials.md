@@ -23,14 +23,13 @@ uid: Frameworks_and_Solutions_Tutorials
 |--|--|
 | [Getting started with EPM](xref:EPM_Introduction_Tutorial) | Learn the basics of working with an EPM setup. DataMiner EPM is a software platform specifically designed to manage very high volumes of devices in cable, telco, terrestrial, and satellite environments. |
 | [Getting started with the Ping Monitoring tool](xref:Tutorial_Apps_Ping_Monitoring_App) | Learn how to use the Ping Monitoring tool for network monitoring and diagnostics. |
-| [Dive into MediaOps: Resource Studio Intro](xref:Tutorial_MediaOps_Resource_Studio_Intro) | Hands-on guide for creating your first resources and resource pools. |
-| [Dive into MediaOps: Scheduling Intro](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder) | Schedule your first jobs. |
-| [Dive into MediaOps: People & Organizations Intro](xref:Tutorial_MediaOps_People_and_Organizations_Intro) | Create and Organization with a bookable Team and Contacts. |
-| [Dive into MediaOps: Resource Studio Capabilities & Capacities](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) | Learn how to model a converter device as a resource using Capabilities and Capacities. |
-| [Dive into MediaOps: Scheduling Jobs With Configurations](xref:Tutorial_MediaOps_Scheduling_Configurations) | Learn how to use configurations in your jobs. |
-| [Dive into MediaOps: Workflow Designer Intro](xref:Tutorial_MediaOps_Workflow_Designer_Intro) | Learn how to reuse sets of resources in your jobs. |
+| MediaOps: [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro) | Learn how to create resources and resource pools in the Resource Studio app of the dataminer.MediaOps Solution. |
+| MediaOps: [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder) | Learn how to create a job and configure it with resources in the Scheduling app of the dataminer.MediaOps Solution. |
+| MediaOps: [Creating an organization with a team and contacts to use as resources in MediaOps apps](xref:Tutorial_MediaOps_People_and_Organizations_Intro) | Learn how to create an organization with a team and contacts that can be booked within the dataminer.MediaOps Solution. |
+| MediaOps: [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) | Learn how to model a device as a resource using capabilities and capacities in the dataminer.MediaOps Solution. |
+| MediaOps: [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations) | Learn how to create a job using a resource pool that was configured with specific capabilities in the dataminer.MediaOps Solution. |
+| MediaOps: [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro) | Learn how to create a workflow that can be used as a template for jobs in the dataminer.MediaOps Solution. |
 
-          
 ### DevTools tutorials
 
 | Name | Description |

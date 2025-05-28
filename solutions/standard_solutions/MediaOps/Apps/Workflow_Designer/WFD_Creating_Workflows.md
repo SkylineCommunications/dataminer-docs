@@ -4,6 +4,8 @@ uid: WFD_Creating_Workflows
 
 # Creating workflows
 
+To create workflows, you can use the buttons in the header bar of the Workflow Designer. Either create a completely new workflow with the *New workflow* button, or select a workflow in the list and use the *Duplicate workflow* button. If you add a new workflow, you will first need to configure some basic information before it is added to the list. For detailed steps based on an example, refer to the tutorial [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro).
+
 ## Adding nodes to a workflow
 
 For a workflow to be useful, it must contain at least one **node**. Nodes are used to indicate something is required by the workflow. When adding a node you will be able to select a class or a specific entity. At the moment, you can use **Resource pool** as class and **Resource** as entity:
@@ -26,7 +28,7 @@ Workflows can be executed by planning a job based on the workflow in the Schedul
 
 - **Workflow execution script**: This script describes the overall execution logic of the workflow. The script will always be triggered by the system when a workflow is executed.
 
-  The `dataminer.MediaOps` installation package comes with a *default* workflow execution script called `Workflow.Default`. This script will iterate over the connections of the workflow in the *execution order* and trigger the *execution script* defined on the connections. Additional or different logic can be specified in the workflow execution script in order to automate anything that needs to happen when the Job starts.
+  The dataminer.MediaOps installation package comes with a *default* workflow execution script called *Workflow.Default*. This script will iterate over the connections of the workflow in the *execution order* and trigger the *execution script* defined on the connections. Additional or different logic can be specified in the workflow execution script in order to automate anything that needs to happen when the Job starts.
 
 - **Connection execution script**: This is an optional property of all connections in a workflow. It can be used to describe what exactly needs to happen when the source of the connection is connected to its destination.
 

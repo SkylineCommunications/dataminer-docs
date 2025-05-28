@@ -2,16 +2,16 @@
 uid: Tutorial_MediaOps_Workflow_Designer_Intro
 ---
 
-# Getting started with the Workflow Designer app
+# Creating a workflow to use as a template for a job
 
-In this tutorial, we will create a workflow similar to the one we created in the [Scheduling With Configurations Tutorial](xref:Tutorial_MediaOps_Scheduling_Configurations). This way, we will be able to reuse the workflow in as many jobs as we want, without the need to do the same setup and configuration each time.
+In this tutorial, you will create a workflow similar to the one created in the tutorial [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations). This way, you will be able to reuse the workflow in as many jobs as you want, without the need to do the same setup and configuration each time.
 
 Expected duration: 15 minutes
 
-> [!NOTE]  
-> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.2.5-CU0.
+> [!NOTE]
+> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
 
-> [!TIP]  
+> [!TIP]
 > See also: [Resource Studio](xref:MO_Resource_Studio) and [Scheduling](xref:MO_Scheduling) documentation.
 
 ## Prerequisites
@@ -19,8 +19,8 @@ Expected duration: 15 minutes
 - A DataMiner System using DataMiner 10.5.4 or higher.
 - Access to the **Workflow Designer** application.
 - Access to the **Scheduling** application.
-- Having completed the [Resource Studio Capabilities Tutorial](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities).
-- Having completed the [Scheduling With Configurations Tutorial](xref:Tutorial_MediaOps_Scheduling_Configurations).
+- Having completed the [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities).
+- Having completed the [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations).
 
 ## Overview
 
@@ -138,7 +138,9 @@ Our workflow should now be ready for use in the **Scheduling** app.
 
 1. Click the pencil icon to open the edit panel for the job.
 
-1. Similarly to how we did it in the [Scheduling With Configurations Tutorial](xref:Tutorial_MediaOps_Scheduling_Configurations#step-4-pick-resources), for the first resource pool, choose the *Video Solutions 001* resource, and for the second resource pool choose the *NewTek 001* resource.
+1. For the first resource pool, select the *Video Solutions 001* resource, and for the second resource pool select the *NewTek 001* resource.
+
+   This is done in the same way as in the tutorial [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations), so you can refer to that tutorial for more details.
 
 1. Navigate to the *Job Info* section.
 

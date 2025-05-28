@@ -2,25 +2,25 @@
 uid: Tutorial_MediaOps_Scheduling_Configurations
 ---
 
-# Schedule Job with the Help of Resource Configurations
+# Scheduling a job using a resource pool with specific capabilities
 
-In this tutorial we will see how to add the capabilities we created in the [Resource Studio Capabilities Tutorial](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) to the jobs in the Scheduling app.
+This tutorial builds on the [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) tutorial, showing you how you can schedule a job using a resource pool with specific capabilities.
 
 Expected duration: 15 minutes
 
-> [!NOTE]  
-> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.2.5-CU0.
+> [!NOTE]
+> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
 
-> [!TIP]  
+> [!TIP]
 > See also: [Resource Studio](xref:MO_Resource_Studio) and [Scheduling](xref:MO_Scheduling) documentation.
 
 ## Prerequisites
 
 - A DataMiner System using DataMiner 10.5.4 or higher.
 - Access to the **Scheduling** application.
-- Understanding of the basic Resource Studio concepts, explained in the [Resource Studio Intro Tutorial](xref:Tutorial_MediaOps_Resource_Studio_Intro).
-- Understanding of the basic Scheduling app concepts, explained in the [Scheduling Intro Tutorial](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder).
-- Having the resources with capabilities created in the [Resource Studio Capabilities Tutorial](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities).
+
+> [!NOTE]
+> This tutorial continues from the tutorials [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro), [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder), and [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities). Ideally, you should follow these tutorials first, so that you have an understanding of the basic concepts they introduce. The current tutorial will also make us of the resources with capabilities created in this last tutorial.
 
 ## Overview
 
@@ -39,9 +39,6 @@ Expected duration: 15 minutes
 1. Open *+ New* job dialog and give your job an arbitrary name.
 
 1. *Create job*.
-
-> [!NOTE]  
-> More detailed guide on creating jobs is presented in the [Scheduling Intro Tutorial](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder).
 
 ## Step 2: Add Converter resource pool to the job
 
@@ -99,8 +96,8 @@ Expected duration: 15 minutes
 
    ![Pick Resource](~/solutions/images/Scheduling_Pick_Resource.png)
 
-    > [!NOTE]  
-    > Notice how the options get narrowed down when picking resources. In the above picture, the resources shown are only those that match the configurations we choose earlier. Pretty neat!
+   > [!NOTE]
+   > Notice how the options get narrowed down when picking resources. Above, you can see that the resources shown are only those that match the configuration selected earlier.
 
 ## Step 5: Confirm the job
 

@@ -2,16 +2,16 @@
 uid: Tutorial_MediaOps_Resource_Studio_Intro
 ---
 
-# Getting started with the Resource Studio
+# Configuring resources and resource pools
 
-In this tutorial, you will learn how to create and configure resource pools and resources using the Resource Studio.
+In this tutorial, you will learn how to create and configure resource pools and resources using the Resource Studio. By way of example, a set of items will be added as resources that convert signals between SDI and IP. SDI-to-IP devices act as **encoders**, and IP-to-SDI devices as **decoders**.
 
 Expected duration: 15 minutes
 
-> [!NOTE]  
-> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.2.5-CU0.
+> [!NOTE]
+> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
 
-> [!TIP]  
+> [!TIP]
 > See also: [Resource Studio documentation](xref:MO_Resource_Studio)
 
 ## Prerequisites
@@ -27,11 +27,9 @@ Expected duration: 15 minutes
 
 ## Step 1: Create resource pools
 
-Assume that you have a set of devices you would like to add to the Resource Studio app. The devices convert signals between [SDI](https://en.wikipedia.org/wiki/Serial_digital_interface) and [IP](https://en.wikipedia.org/wiki/Internet_Protocol). SDI-to-IP devices act as **encoders**, and IP-to-SDI devices as **decoders**.
+To represent the two different device types in the Resource Studio app, create two matching resource pools:
 
-To represent these device types in the Resource Studio app, you can create two matching resource pools:
-
-1. Open the *+ New* Resource Pool window.
+1. On the *Resource Pools* page of the Resource Studio app, click *+ New*.
 
    ![New Resource Pool](~/solutions/images/Resource_Studio_New_Resource_Pool.png)
 
@@ -39,8 +37,8 @@ To represent these device types in the Resource Studio app, you can create two m
 
    ![New Resource Pool Form](~/solutions/images/Resource_Studio_New_Resource_Pool_Form.png)
 
-   > [!TIP]  
-   > You don’t need to modify other fields in the form for this tutorial.
+   > [!TIP]
+   > You do not need to modify other fields in the form for this tutorial.
 
 1. Click **Save as Completed**.
 

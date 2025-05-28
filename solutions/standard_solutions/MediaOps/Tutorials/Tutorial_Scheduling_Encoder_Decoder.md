@@ -2,14 +2,14 @@
 uid: Tutorial_MediaOps_Scheduling_Encoder_Decoder
 ---
 
-# Getting started with the Scheduling app
+# Creating a job and configuring it with resources
 
-In this tutorial, you will learn how to create and schedule jobs, swap resources and confirm the created jobs.
+In this tutorial, you will learn how to create and schedule jobs, swap resources, and confirm the created jobs, all of this in the MediaOps Scheduling app.
 
 Expected duration: 15 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.2.5-CU0.
+> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
 
 > [!TIP]
 > See also: [Scheduling documentation](xref:MO_Scheduling)
@@ -18,7 +18,9 @@ Expected duration: 15 minutes
 
 - A DataMiner System using DataMiner 10.5.5 or higher.
 - Access to the **Scheduling** application.
-- Ideally you should have completed the [Resource Studio tutorial](xref:Tutorial_MediaOps_Resource_Studio_Intro), since we're going to make use of the resources from that tutorial here.
+
+> [!NOTE]
+> This tutorial continues from the [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro) tutorial. Ideally, you should follow that tutorial first, as the current tutorial makes use of the resources that are configured in it.
 
 ## Overview
 

@@ -2,14 +2,14 @@
 uid: Tutorial_MediaOps_People_and_Organizations_Intro
 ---
 
-# Create Organization, Team and Contacts
+# Creating an organization with a team and contacts to use as resources in MediaOps apps
 
 In this tutorial, you will learn how to create an organization, a team, and contacts in the People & Organizations app, to interconnect these, and to make them bookable so that they can be treated as resources in other MediaOps apps.
 
 Expected duration: 15 minutes
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.2.5-CU0.
+> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
 
 ## Prerequisites
 

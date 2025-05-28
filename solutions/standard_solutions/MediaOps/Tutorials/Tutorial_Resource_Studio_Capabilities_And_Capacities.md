@@ -2,23 +2,25 @@
 uid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
 ---
 
-# Using capabilities and capacities in resource studio
+# Assigning capabilities to resources
 
-In this tutorial, you will learn how to model real devices in the Resource Studio app, making use of `Capabilities` and `Capacities` — MediaOps concepts introduced in the [Resource Studio documentation](xref:MO_Resource_Studio). In particular, we will be modelling a **Converter** device which is capable of doing a conversion between [SDI](https://en.wikipedia.org/wiki/Serial_digital_interface) and [IP](https://en.wikipedia.org/wiki/Internet_Protocol). The type of conversion will be modelled with **Resource Capabilities**, which will have discrete values to represent these two types of conversion.
+In this tutorial, you will learn how to model real devices in the Resource Studio app, making use of [capabilities](xref:MO_Resource_Studio#capabilities) and [capacities](xref:MO_Resource_Studio#capacities). The tutorial will use the example of a **converter** device that is capable of doing a conversion between [SDI](https://en.wikipedia.org/wiki/Serial_digital_interface) and [IP](https://en.wikipedia.org/wiki/Internet_Protocol). The conversion types will be modeled with a **resource capability** that has the two types as its discrete values.
 
 Expected duration: 15 minutes
 
-> [!NOTE]  
-> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.2.5-CU0.
+> [!NOTE]
+> The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
 
-> [!TIP]  
+> [!TIP]
 > See also: [Resource Studio](xref:MO_Resource_Studio) and [Scheduling](xref:MO_Scheduling) documentation.
 
 ## Prerequisites
 
-- A DataMiner System using DataMiner `10.5.4` or higher.
+- A DataMiner System using DataMiner 10.5.4 or higher.
 - Access to the **Resource Studio** application.
-- Understanding of the basic Resource Studio concepts, explained in the [Resource Studio Intro Tutorial](xref:Tutorial_MediaOps_Resource_Studio_Intro).
+
+> [!NOTE]
+> This tutorial continues from the [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro) tutorial. Ideally, you should follow that tutorial first, as the current tutorial makes use of the resources that are configured in it.
 
 ## Overview
 
@@ -60,11 +62,9 @@ Expected duration: 15 minutes
 
 ## Step 3: Assigning capabilities to resources
 
-In this step, we will be adding capabilities to the resources we created in the [Resource Studio Intro Tutorial](xref:Tutorial_MediaOps_Resource_Studio_Intro). If not done yet, It's highly recommended to do that tutorial first.
-
 1. Navigate to the *Resources* page.
 
-1. Select the "**Video Solution 001**" resource.
+1. Select the **Video Solution 001** resource.
 
 1. On the right side of the screen, you can see 3 sections: *Capabilities*, *Capacities*, and *Properties*. Click the *Edit* button in the *Capabilities*.
 
@@ -94,7 +94,7 @@ In this step, we will be adding capabilities to the resources we created in the 
 
 ## Step 5: Define parameter on the resource pool
 
-In this step, you will define a parameter on a resource pool, which can come in handy later when selecting resources (see [Scheduling jobs with configurations tutorial](xref:Tutorial_MediaOps_Scheduling_Configurations).
+In this step, you will define a parameter on a resource pool, which can come in handy later when selecting resources (see [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations)).
 
 1. Navigate to the *Resource Pools* page.
 
