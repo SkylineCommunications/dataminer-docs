@@ -9,7 +9,9 @@ After deploying the solution, you can configure how and when tests are run, how 
 ## Step 1: Creating groups and tests
 
 1. In DataMiner Cube, open the *Regression Test Results* element.
+
 1. Go to the *Test Configuration* page.
+
 1. In the *Groups* table:
 
    1. Right-click, and select *Add item* to create a new test group.

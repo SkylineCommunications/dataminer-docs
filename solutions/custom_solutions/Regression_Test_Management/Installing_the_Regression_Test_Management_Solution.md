@@ -14,27 +14,28 @@ Before deploying this solution, ensure the following:
 
 ## Deploying the solution from the Catalog
 
-1. Go to the [Regression Test Management package in the DataMiner Catalog](https://catalog.dataminer.services/details/74ddb623-f9fb-4a99-acee-0965ba495e2d).
+1. In the DataMiner Catalog, go to the [Regression Test Management package](https://catalog.dataminer.services/details/74ddb623-f9fb-4a99-acee-0965ba495e2d).
 
-2. Click **Deploy**, then select the DataMiner System you want to deploy the package to.
+1. Click *Deploy*, and then select the DataMiner System you want to deploy the package to.
 
-3. Once the deployment finishes:
-   - A new **view** called `Regression Tests` is created.
-   - An **element** named `Regression Test Results` is added to the view.
-   - The **Skyline Regression Test Result Collector** connector and Visio are deployed.
-   - The `RegressionTestRunner` automation script is installed.
+1. Once the deployment finishes:
+
+   - A new *view* called `Regression Tests` is created.
+   - An *element* named `Regression Test Results` is added to the view.
+   - The *Skyline Regression Test Result Collector* connector and Visio are deployed.
+   - The `RegressionTestRunner` Automation script is installed.
    - Default alarm and trend templates are assigned to the element.
   
     ![Element in the Surveyor](~/solutions/images/Regression_Test_Element_Path.png)
 
-1. Open the `Regression Test Results` element in DataMiner Cube to begin configuration.
+1. In DataMiner Cube, open the `Regression Test Results` element to begin the configuration.
 
 > [!TIP]
 > You can relocate or rename the element and view after installation based on your naming conventions.
 
 ## What's included
 
-- **Skyline Regression Test Result Collector** connector  
-- **Regression Test Result Collector Visio** visual overview  
-- **RegressionTestRunner** automation script  
+- *Skyline Regression Test Result Collector* connector  
+- *Regression Test Result Collector Visio* visual overview  
+- *RegressionTestRunner* Automation script  
 - Optional default alarm and trend templates for visual feedback and notifications
