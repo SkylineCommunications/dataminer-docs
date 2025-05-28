@@ -35,3 +35,9 @@ uid: Web_apps_Feature_Release_10.5.8
 Up to now, it would incorrectly be possible to publish a low-code app while it was still being saved.
 
 From now on, it will only be possible to publish a low-code app when the app has been saved.
+
+#### Low-Code Apps - Interactive Automation scripts: initialValue of UI component 'Time' would not get updated in the UI when the value changed [ID 42878]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When the `UIBlockType.Time` component had a time range configured in the AutomationTimeUpDownOptions property, up to now, the initialValue that was displayed, would incorrectly not get updated when the value changed.
