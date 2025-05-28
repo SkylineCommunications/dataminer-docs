@@ -23,7 +23,7 @@ The following pages are available in the Scheduling app:
 
 - ![Search Jobs](~/user-guide/images/Scheduling_Search_Jobs.png) **Search Jobs**: Provides the tools to **easily find any job** in the system. This includes canceled jobs, which are hidden on all other pages.
 
-- ![App configuration](~/user-guide/images/Scheduling_App_Configuration.png) **App configuration**: Allows you to configure general [app-wide settings](#app-wide-settings).
+- ![App Configuration](~/user-guide/images/Scheduling_App_Configuration.png) **App Configuration**: Allows you to configure general [app-wide settings](#app-wide-settings).
 
 - ![About](~/user-guide/images/Scheduling_About.png) **About**: Provides information on the **version** of the MediaOps package.
 
@@ -35,7 +35,7 @@ Next to that, **administrative metadata** can be added to a job, such as a descr
 
 ## App-wide settings
 
-On the *App configuration* page, you can configure the following app-wide settings:
+On the *App Configuration* page, you can configure the following app-wide settings:
 
 - To reserve a fixed amount of time for the equipment setup before a job starts and the time for the equipment dismantling after a job ends, you can define **pre-roll** and **post-roll** parameters across the whole app. This way, by default, the resources will be reserved for some time before the job begins and after it ends.
 

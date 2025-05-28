@@ -13,7 +13,7 @@ Jobs can be edited through the Edit Job panel. This panel can be accessed from t
   - **Cancel job** (Tentative, Confirmed): To cancel the job and to free up the resources again.
   - **Manual start** (Confirmed): When the event needs to start immediately, you can use this action to move the start time to now. This will change the job state to running.
   - **Stop early** (Running): When the event needs to stop immediately, you can use this action to trigger the stop actions. This will change the job state to Confirmed.
-- **Related**: Contains all related/linked objects to the job. New links can be added by clicking the 'Add Link' button. New types can be added from the [Apps Configuration](xref:MO_Scheduling#app-configuration) page.
+- **Related**: Contains all related/linked objects to the job. New links can be added by clicking the 'Add Link' button. New types can be added from the [App Configuration](xref:MO_Scheduling#app-wide-settings) page.
 - **Administration**: This section provides information to which organization the job can be billed. The billing depends on the contract selected.
 - **Nodes**: Provides a list view of all nodes in the job. Resources or resource pools can be added from this section through the 'Add Resource' button.
 - **Workflow**: Provides a workflow diagram of all nodes. Nodes and connection between them can be managed from this view.
