@@ -26,3 +26,11 @@ uid: General_Main_Release_10.5.0_CU5
 In some cases, SLDataGateway could stop working because of issues caused by TPL tasks.
 
 The number of TPL tasks has now been reduced, especially when writing trend data to the database.
+
+#### Redundancy groups: Alarm mentioning that all redundancy resources are in use would incorrectly not get cleared [ID 42970]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+If a redundancy group has more primary elements than backup elements, at the moment when all backups are in use, an alarm with severity level "Notice" will appear in the Alarm Console mentioning that all redundancy resources are in use.
+
+By default, that alarm is cleared as soon as one of the backup elements is available again. However, up to now, in some cases, the alarm would incorrectly not get cleared.
