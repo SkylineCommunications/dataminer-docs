@@ -925,7 +925,7 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <remarks>
 		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
-		/// <note type="note">Available from DataMiner 10.5.7/10.6.0 onwards, in Automation scripts launched from web apps and <see href="xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url">specifying the useNewIASInputComponents=true URL parameter</see>.</note> <!-- RN 42808 / RN 42845 -->
+		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps and <see href="xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url">specifying the useNewIASInputComponents=true URL parameter</see>.</note> <!-- RN 42808 / RN 42845 -->
 		/// </remarks>
 		/// <code>
 		/// var dropDownControl = new UIBlockDefinition
