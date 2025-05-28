@@ -19,4 +19,10 @@ uid: General_Main_Release_10.4.0_CU17
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SLDataGateway could stop working because of issues caused by TPL tasks [ID 42846]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, SLDataGateway could stop working because of issues caused by TPL tasks.
+
+The number of TPL tasks has now been reduced, especially when writing trend data to the database.
