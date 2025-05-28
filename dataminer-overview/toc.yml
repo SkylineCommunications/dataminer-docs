@@ -81,15 +81,6 @@ items:
           items:
             - name: MediaOps apps
               topicUid: Overview_MediaOps_Apps
-              items:
-                - name: People and Organizations
-                  topicUid: Overview_MediaOps_People_and_Organization
-                - name: Resource Studio
-                  topicUid: Overview_MediaOps_Resource_Studio
-                - name: Workflow Designer
-                  topicUid: Overview_MediaOps_Workflow_Designer
-                - name: Scheduling
-                  topicUid: Overview_MediaOps_Scheduling
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:

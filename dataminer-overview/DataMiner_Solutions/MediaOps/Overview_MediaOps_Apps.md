@@ -14,7 +14,7 @@ Below is an overview of the out-of-the-box DataMiner applications included in th
 
 Upgrade your business operations with our People and Organizations app. This app simplifies personnel management by enabling you to effortlessly create, edit, and track records for individuals and teams. With features like team booking, optimizing personnel allocation for the right job has never been easier. You can also streamline organization management by overseeing categories, contracts, billing contacts, and company affiliation — all from a single intuitive interface.
 
-For more detailed information about this application, see [People and Organizations application](xref:Overview_MediaOps_People_and_Organization).
+For more detailed information about this application, see [People and Organizations application](xref:People_Organizations).
 
 ## Resource Studio
 
@@ -22,7 +22,7 @@ For more detailed information about this application, see [People and Organizati
 
 The Resource Studio app serves as a comprehensive platform for creating, managing, and optimizing resource utilization. Its key features include the ability to create diverse resources, ranging from network inventory to services and other limited-availability items such as rooms, people, vehicles etc. Users can organize these resources into pools, simplifying workflow and job resource selection. Capabilities and capacities can be assigned to resources, facilitating precise resource allocation based on specific job requirements. Users can also store supplementary information as properties, enhancing the resource management process. Utilization metrics provided by the app offer valuable insights, enabling users to optimize resource deployment and maximize operational efficiency.
 
-For more detailed information on this application, see [Resource Studio application](xref:Overview_MediaOps_Resource_Studio).
+For more detailed information on this application, see [Resource Studio application](xref:MO_Resource_Studio).
 
 ## Workflow Designer
 
@@ -37,7 +37,7 @@ Additionally, a workflow describes:
 - Whether or not resources and capacity are reserved.
 - If and how the service needs to be monitored.
 
-For more detailed information about this application, see [Workflow Designer application](xref:Overview_MediaOps_Workflow_Designer).
+For more detailed information about this application, see [Workflow Designer application](xref:MO_Workflow_Designer).
 
 ## Scheduling
 
@@ -52,7 +52,7 @@ Among others, the app includes the following features:
 - Easily spotting when a job needs additional input prior to the job's start.
 - Generating cost and billing information based on assign contracts and actual usage of the resource.
 
-For more detailed information about this application, see [Scheduling application](xref:Overview_MediaOps_Scheduling).
+For more detailed information about this application, see [Scheduling application](xref:MO_Scheduling).
 
 <!--
 ## Virtual Signal Groups

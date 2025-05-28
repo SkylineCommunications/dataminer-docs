@@ -8,6 +8,9 @@ The Scheduling app allows users to efficiently manage and orchestrate a schedule
 
 ![Scheduling Overview](~/user-guide/images/Scheduling_Overview.png)
 
+> [!TIP]
+> This page contains information about the Scheduling app within the MediaOps Solution. If you are looking for information about the Scheduler module within DataMiner Cube instead, refer to [DataMiner Scheduler](xref:scheduler).
+
 ## App overview
 
 The following pages are available in the Scheduling app:
