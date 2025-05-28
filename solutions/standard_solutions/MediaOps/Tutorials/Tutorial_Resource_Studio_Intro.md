@@ -27,11 +27,11 @@ Expected duration: 15 minutes
 
 ## Step 1: Create resource pools
 
-Assume that you have a set of devices you would like to add to the Resource Studio app. The devices convert signals between [SDI](https://en.wikipedia.org/wiki/Serial_digital_interface) and [IP](https://en.wikipedia.org/wiki/Internet_Protocol). `SDI-to-IP` devices act as **encoders**, and `IP-to-SDI` devices as **decoders**.
+Assume that you have a set of devices you would like to add to the Resource Studio app. The devices convert signals between [SDI](https://en.wikipedia.org/wiki/Serial_digital_interface) and [IP](https://en.wikipedia.org/wiki/Internet_Protocol). SDI-to-IP devices act as **encoders**, and IP-to-SDI devices as **decoders**.
 
 To represent these device types in the Resource Studio app, you can create two matching resource pools:
 
-1. Open the `+ New` Resource Pool window.
+1. Open the *+ New* Resource Pool window.
 
    ![New Resource Pool](~/solutions/images/Resource_Studio_New_Resource_Pool.png)
 
@@ -45,7 +45,7 @@ To represent these device types in the Resource Studio app, you can create two m
 1. Click **Save as Completed**.
 
    > [!NOTE]
-   > `Complete` is one of the states a resource pool can be in. If you choose to save it in the `Draft` state (on the bottom left) instead, you will be able to finish the tutorial, but the resource pools won't be available for use in the other apps like [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
+   > *Complete* is one of the states a resource pool can be in. If you choose to save it in the *Draft* state (on the bottom left) instead, you will be able to finish the tutorial, but the resource pools will not be available for use in the other apps like [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
 
 1. Confirm both resource pools are listed in the **Resource Pools** table.
 
@@ -60,10 +60,11 @@ Now that the resource pools are created, we can proceed to create resources and 
    ![New Resource](~/solutions/images/Resource_Studio_New_Resource.png)
 
 1. Create two resources:
+
    - *Video Solutions 001*
    - *NewTek 001*
 
-1. For both resources, the **Type** should be `Unmanaged`.
+1. For both resources, the **Type** should be *Unmanaged*.
 
 1. Click **Save as Completed**.
 
@@ -76,7 +77,7 @@ Now that the resource pools are created, we can proceed to create resources and 
 
 1. Navigate to the **Resource Pools** page.
 
-1. On the **Encoder** resource pool that we created earlier, click `...` to open up the context menu.
+1. On the **Encoder** resource pool that we created earlier, click *...* to open up the context menu.
 
 1. Click **Assign Resources**.
 
@@ -86,7 +87,7 @@ Now that the resource pools are created, we can proceed to create resources and 
 
 1. Optionally, use the filter box to locate the resources you want to assign.
 
-1. Select *Video Solutions 001* and *NewTek 001* resources, and click `+ ADD`.
+1. Select *Video Solutions 001* and *NewTek 001* resources, and click *+ ADD*.
 
    ![Assign Resources Panel](~/solutions/images/Resource_Studio_Assign_Resources_Panel.png)
 
@@ -98,11 +99,12 @@ Now that the resource pools are created, we can proceed to create resources and 
 You should now see the resources listed in the right-hand column of each pool. This brings us to the end of this tutorial. By now, if all went well, you should have some resources and resource pools ready for use in other applications such as [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
 
 > [!NOTE]
-> In case your resources or resource pools are in `Draft` state, you can change the state to `Complete` as follows:
-> 1. By clickin on the pencil icon, open the **Edit** panel of each resource/resource pool you want to edit.
+> In case your resources or resource pools are in *Draft* state, you can change the state to *Complete* as follows:
+>
+> 1. By clicking the pencil icon, open the **Edit** panel of each resource/resource pool you want to edit.
 > 1. Click **Complete**.
 
 ![Mark Complete](~/solutions/images/Resource_Studio_Complete.png)
 
-> [!TIP]  
+> [!TIP]
 > You can also **Change icon** of the resource pools to add visual context in other applications.

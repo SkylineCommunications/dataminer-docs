@@ -19,7 +19,7 @@ items:
       - name: Resource Studio
         topicUid: MO_Resource_Studio
         items: 
-        - name: Resource Icons
+        - name: Assigning resource icons
           topicUid: RS_Resource_Icons
         - name: Linking resource pools
           topicUid: RS_Linking_Pools

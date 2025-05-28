@@ -2,24 +2,25 @@
 uid: RS_Resource_Icons
 ---
 
-# Resource icons
+# Assigning resource icons
 
-It is possible to change the visual representation for a *Resource* or *Resource Pool* used in workflows shown in the [Scheduling](xref:MO_Scheduling) and [Worfklow Designer](xref:MO_Workflow_Designer) apps. This helps users by adding more graphical context when inspecting different workflows.
+When an icon is assigned to a resource or resource pool, this will be displayed on nodes in the workflows in the [Scheduling](xref:MO_Scheduling) and [Worfklow Designer](xref:MO_Workflow_Designer) apps. These icons help users by adding more graphical context when inspecting different workflows.
 
-To change icon, navigate to Resource Studio:
+To assign an icon or change the assigned icon:
 
-1. Open the **Edit** option for *Resource* or *Resource Pool*.
+To change the icon for a resource or resource pool:
 
-1. Check the box next to **Icon**.
+1. Open the Resource Studio app.
 
-1. Select the icon you want from the dropdown and **Save** your changes.
+1. Go to either the *Resources* or *Resource Pools* page and click the pencil icon for the resource or resource pool for which you want to change the icon.
 
-> [!IMPORTANT]
-> Icons will be visible only on *Nodes* added to workflow after an icon is assigned to a *Resource* or *Resource pool*.
+1. Click the *Change icon* button.
 
-## Node Icons table
+1. Select the icon you want to use and click *Confirm*.
 
-The following table contains a list of icons and their associated image files.
+## Icons overview
+
+The following icons are currently available:
 
 | Icon Name | Icon |
 |:--|--:|
@@ -53,4 +54,3 @@ The following table contains a list of icons and their associated image files.
 | Virtual Gallery | <img src="~/solutions/images/RS_Virtual_Gallery.svg" alt="Virtual Gallery" style="width:70px;"/> |
 | Vision Mixer | <img src="~/solutions/images/RS_Vision_Mixer.svg" alt="Vision Mixer" style="width:70px;"/> |
 | Voice Over Booth | <img src="~/solutions/images/RS_Voice_Over_Booth.svg" alt="Voice Over Booth" style="width:70px;"/> |
-
