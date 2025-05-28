@@ -17,6 +17,8 @@ The [dataminer.services home page](xref:dataminer_services_home_page) is availab
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>
 
+<br>
+
 For more information on how to connect to dataminer.services (i.e. connect to the cloud), see [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 > [!TIP]
