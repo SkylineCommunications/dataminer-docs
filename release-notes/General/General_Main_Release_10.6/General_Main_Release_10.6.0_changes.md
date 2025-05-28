@@ -387,3 +387,11 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
+
+#### Error 'The object exporter specified was not found' would get logged upon DMA startup [ID 42927]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+In some cases, a DataMiner Agent would not start up properly, and the following error would get logged in the *SLDataMiner.txt* log file:
+
+`The object exporter specified was not found`
