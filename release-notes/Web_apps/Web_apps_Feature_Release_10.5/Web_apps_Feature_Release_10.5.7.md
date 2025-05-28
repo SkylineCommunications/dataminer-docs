@@ -95,14 +95,6 @@ When a component tried to fetch parameters or elements, up to now, null would be
 
 From now on, for every parameter or element than cannot be found, a clear error message will be returned. Each of those error messages will then explain why a particular parameter or element could not be found.
 
-#### Low-Code Apps: It would incorrectly be possible to publish a low-code app while it was still being saved [ID 42680]
-
-<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
-
-Up to now, it would incorrectly be possible to publish a low-code app while it was still being saved.
-
-From now on, it will only be possible to publish a low-code app when the app has been saved.
-
 #### Dashboards app & Low-Code Apps - Node edge graph component: Moving a node would incorrectly cause the actions of that node to be executed [ID 42798]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
@@ -150,3 +142,9 @@ When you had created an "Open monitoring card" action that referenced an object 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
 On Mozilla Firefox, when you scrolled inside a *Timeline* component, in some cases, the scroll position would incorrectly reset.
+
+#### Dashboards app & Low-Code Apps - Table component: Problem when filtering on numeric columns containing discrete values [ID 43061]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 [CU0] -->
+
+When a *Table* component was filtered on a numeric column that contained discrete values, up to now, an error could occur when you selected one of the discrete values instead of entering a number manually.

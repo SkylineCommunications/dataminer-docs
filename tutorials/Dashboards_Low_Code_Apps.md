@@ -10,7 +10,6 @@ keywords: low-code, low code, lowcode
 | Name | Description |
 |--|--|
 | [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message) | Add a custom message when a query returns no results for any of the following components of a dashboard: table, grid, pie & donut chart, line & area chart, timeline, and node edge graph. |
-| [Leveraging feeds in a web component](xref:Tutorial_Dashboards_Feeds_Web_Component) | Embed another webpage or HTML content directly into your dashboard using a web component. |
 | [Leveraging controls and feeds to create a dynamic GQI query](xref:Tutorial_Dashboards_Controls_And_Feeds_Query) | Discover how to harness controls and feeds that are used in a GQI query, so that an update to the user input will lead to an updated GQI result. |
 | [Getting started with node edge graphs](xref:Tutorial_Apps_Node_Edge)| Build a basic network diagram using GQI queries with a node edge graph component. |
 | [Creating a parameter table connected to an element feed](xref:Creating_a_parameter_table_connected_to_an_element_feed) | Create a parameter table connected to an element feed. |
@@ -41,6 +40,7 @@ keywords: low-code, low code, lowcode
 | [Styling a table component](xref:Tutorial_Apps_Style_A_Table) | Style a table component in a low-code app using GQI queries and the Template Editor. |
 | [Using the maps component in a low-code app](xref:TutorialMaps) | Add and configure a maps component in a low-code app to visualize cell towers, their connections, and their coverage. |
 | [Getting started with the grid component](xref:Tutorial_Apps_Grid) | Getting started with a grid component in a low-code app using GQI queries and the Template Editor. |
+| [Leveraging feeds in a web component](xref:Tutorial_Dashboards_Feeds_Web_Component) | Embed another webpage or HTML content directly into your dashboard using a web component. |
 | [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design) | Create an intuitive, visually appealing, and user-friendly low-code app, learning about best practices in low-code app design. |
 | [Using flows in a low-code app](xref:Tutorial_Apps_Flows) | Use flows to only load items inside of the timeline viewport and reuse panels. |
 | [Using variables in a low-code app](xref:Tutorial_Apps_Variables) | Use a variable to dynamically filter elements in a low-code app based on their state. |

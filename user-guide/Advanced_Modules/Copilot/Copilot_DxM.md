@@ -10,7 +10,7 @@ The current 1.0.0 version only supports the [natural language to GQI](xref:NL2GQ
 
 ## Installation
 
-Copilot is currently not included in DataMiner upgrade packages and [needs to be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+Copilot is currently not included in DataMiner upgrade packages and [needs to be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). However, once it has been deployed, it gets upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 -->
 
 For Copilot to run correctly, the following **prerequisites** must be met:
 
