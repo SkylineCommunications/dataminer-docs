@@ -23,7 +23,7 @@ On the *App Configuration* page of the Scheduling app, you can now divide job an
 
 #### Scheduling: Ability to set job back from confirmed to tentative [ID 43042]
 
-When a job has been confirmed, it is now possible to return it to the tentative state from the job edit panel.
+When a job has been confirmed, you can now return it to the tentative state from the job edit panel.
 
 #### Scheduling: Recurring jobs [ID 43043]
 
