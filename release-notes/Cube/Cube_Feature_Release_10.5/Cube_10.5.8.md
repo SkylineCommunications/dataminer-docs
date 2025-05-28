@@ -28,4 +28,8 @@ uid: Cube_Feature_Release_10.5.8
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem when trying to open a view card in an EPM environment [ID 43049]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In EPM environments, in some rare cases, a view card could get stuck when you tried to open it.
