@@ -60,13 +60,3 @@ This list will continue to grow over time as new releases become available for d
 - **Finish**: Cleaning up the network post-event is essential, involving tasks such as removing multicast routes from switches, deactivating cloud infrastructure (eliminating excess cost), and adjusting host and flow policies to enhance network security.
 
 - **Cost & billing**: At the end of the day, M&E enterprises need to manage costs and income. dataminer.MediaOps provides reports on resource utilization, cost, and sales billing prices for each event, enabling M&E companies to understand their costs and allocate them to shows, channels, categories, content providers, customers, and more. dataminer.MediaOps can also generate raw billing information and integrate it into your billing system.
-
-## MediaOps apps
-
-dataminer.MediaOps comes with a set of low-code apps that expose the MediaOps functionality to end users. You can use these apps as they are, or use them as a starting point to develop a custom user interfaces for specific projects.
-
-For an overview of the different applications available in the package, see [MediaOps apps](xref:Overview_MediaOps_Apps).
-
-## Getting started with MediaOps
-
-For instructions how to install and get started with MediaOps, refer to our [user guide](xref:Installing_MediaOps).
