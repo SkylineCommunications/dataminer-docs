@@ -6,7 +6,7 @@ uid: Configuring_components
 
 Each dashboard or low-code app component consists of **a visualization and data**.
 
-In the edit mode, visualizations are available via the panel on the left, and data is available via the *Data* pane on the right.
+In the edit mode, [visualizations](xref:Available_visualizations) are available via the panel on the left, and [data](xref:Available_Data_Types) is available via the *Data* pane on the right.
 
 There are several ways to add a component:
 
