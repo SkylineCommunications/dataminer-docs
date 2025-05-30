@@ -6,7 +6,7 @@ uid: Connecting_to_an_element_using_telnet
 
 1. In Windows, open the *Run* window (e.g. by pressing Windows key + R).
 
-1. Enter *telnet*, followed by the virtual IP address of the element.
+1. Enter *telnet*, followed by a space and then the virtual IP address of the element.
 
 > [!NOTE]
 > You can only open a telnet session to monitor an element if the following is configured:
