@@ -12,12 +12,12 @@ Use this guide as a basis to build or improve dashboards and low-code apps. Thes
 > - [Kata #19: Transform low-code apps into visual delights](https://community.dataminer.services/courses/kata-19/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - Tutorial: [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design)
 
-> [!IMPORTANT]
-> If something comes up that is not documented yet:
-> 
-> 1. Discuss the best solution internally (it should be consistent across the app and take existing solutions into account)
-> 1. Ask for feedback from Rens Ampe if needed.
-> 1. Add it to the documentation.
+> [!NOTE]
+> If you come across something that has not been added to this style guide yet:
+>
+> 1. Investigate what the best possible solution would be, ensuring consistency across the app and across the different available solutions.
+> 1. If you have any doubt, check with <rens.ampe@skyline.be>.
+> 1. [Create a pull request](xref:CTB_Quick_Edit) to update this documentation.
 
 ## Colors/themes
 
