@@ -58,6 +58,33 @@ Currently, by default, the existing components will still be used by default to 
 
 A number of minor enhancements have been made to the dropdown controls.
 
+#### Web Services API: ConvertQueryToProtoJson method now allows the JSON version to be specified [ID 42855]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+If you want the Data Aggregator DxM to be able to use a GQI query, you have to convert that query to a JSON string using the *ConvertQueryToProtoJson* web method.
+
+From now on, the *ConvertQueryToProtoJson* web method will allow you to specify the contract to be used:
+
+| Version | Description |
+|---------|-------------|
+| contract 0 | The JSON version needed when GQI queries are processed by SLHelper. |
+| contract 1 (default version) | The JSON version needed when GQI queries are processed by the GQI DxM. |
+
+Example:
+
+`HTTP POST https://DmaIP/API/v1/Internal.asmx/ConvertQueryToProtoJson`
+
+with payload:
+
+```json
+{
+   "connection": "...",
+   "options": { "Contract": 1 },
+   "query": {...}
+}
+```
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: No error would be returned when a parameter or an element could not be fetched [ID 42584]
@@ -67,14 +94,6 @@ A number of minor enhancements have been made to the dropdown controls.
 When a component tried to fetch parameters or elements, up to now, null would be returned for every parameter or element that could not be found.
 
 From now on, for every parameter or element than cannot be found, a clear error message will be returned. Each of those error messages will then explain why a particular parameter or element could not be found.
-
-#### Low-Code Apps: It would incorrectly be possible to publish a low-code app while it was still being saved [ID 42680]
-
-<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
-
-Up to now, it would incorrectly be possible to publish a low-code app while it was still being saved.
-
-From now on, it will only be possible to publish a low-code app when the app has been saved.
 
 #### Dashboards app & Low-Code Apps - Node edge graph component: Moving a node would incorrectly cause the actions of that node to be executed [ID 42798]
 
@@ -105,3 +124,27 @@ When a *GetAlarms* call was sent in a JSON request, in some cases, the following
 - Filters in which *StartTime* and *EndTime* were set to 0 would be cached incorrectly, causing problems when the call was sent multiple times over different days since the 0 values would be replaced with "Now" en "End - 1 hour".
 
 - In the result set, the alarms would not always be sorted by *TimeOfArrival* (i.e. the default setting).
+
+#### Dashboards app: Problem after generating PDF reports [ID 42907]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, in some cases, an exception could be thrown after a PDF report had been generated. As a result, channels and sockets would not be cleaned up correctly.
+
+#### Low-Code Apps: Problem with 'Open monitoring card' action after deleting and recreating the referenced object [ID 42926]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+When you had created an "Open monitoring card" action that referenced an object (i.e. an element, service or view) by name, and then deleted and recreated that object, up to now, the action would no longer work because it would still reference the object that was deleted.
+
+#### Dashboards app & Low-Code Apps - Timeline component: Scroll position would incorrectly reset on Mozilla Firefox [ID 42966]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
+
+On Mozilla Firefox, when you scrolled inside a *Timeline* component, in some cases, the scroll position would incorrectly reset.
+
+#### Dashboards app & Low-Code Apps - Table component: Problem when filtering on numeric columns containing discrete values [ID 43061]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 [CU0] -->
+
+When a *Table* component was filtered on a numeric column that contained discrete values, up to now, an error could occur when you selected one of the discrete values instead of entering a number manually.

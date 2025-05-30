@@ -10,13 +10,15 @@ To access the *Logging* page, in DataMiner Cube, go to *Apps* > *System Center* 
 
 The page consists of four tabs:
 
-- *Cube*: see [Cube logging](xref:Cube_logging)
+- *Cube*: See [Cube logging](xref:Cube_logging).
 
-- *Communication*: see [Communication logging](xref:Communication_logging)
+- *Communication*: See [Communication logging](xref:Communication_logging).
 
-- *DataMiner*: see [DataMiner logging](xref:DataMiner_logging)
+- *DataMiner*: See [DataMiner logging](xref:DataMiner_logging).
 
-- *Elements*: see [Elements logging](xref:Elements_logging)
+- *Elements*: See [Elements logging](xref:Elements_logging).
+
+- *Automation*: See [Automation logging](xref:Automation_logging). (Available from DataMiner Cube 10.5.7/10.6.0 onwards.<!-- RN 42737 -->)
 
 > [!NOTE]
 >

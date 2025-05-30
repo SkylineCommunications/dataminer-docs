@@ -8,7 +8,9 @@ keywords: DELT export, DELT
 In the DataMiner Cube Surveyor, you can right-click a view in order to export it, with any elements, services, redundancy groups, documents, SLAs and service templates it contains, to .dmimport format. It is also possible to right-click an element or service directly to export it. The .dmimport package will also contain any related properties, protocols, information templates, trend templates, alarm template and Automation scripts.
 
 > [!NOTE]
-> It is not possible to export spectrum analyzer elements or separate DVE child elements.
+>
+> - It is not possible to export spectrum analyzer elements or separate DVE child elements.
+> - Exporting trend data to a .dmimport file is not supported in DataMiner Systems using [Storage as a Service (STaaS)](xref:STaaS).
 
 1. In the Surveyor right-click menu, select *Actions \> Export*.
 

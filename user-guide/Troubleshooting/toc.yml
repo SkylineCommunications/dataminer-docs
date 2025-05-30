@@ -104,6 +104,8 @@ items:
                 topicUid: Element_in_Protocol_logging
           - name: Elements logging
             topicUid: Elements_logging
+          - name: Automation logging
+            topicUid: Automation_logging
           - name: Changing the maximum size of DataMiner log files
             topicUid: Changing_the_maximum_size_of_DataMiner_log_files
   - name: Troubleshooting flowcharts
@@ -268,6 +270,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: User locked out after single failed login attempt
+            topicUid: KI_user_locked_out_after_single_failed_attempt
           - name: Local user not pushed to Windows
             topicUid: KI_Local_user_not_pushed_to_windows
           - name: Unable to open trended parameter cards via Cube advanced search
@@ -306,6 +310,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: DCOMConfig flagged as virus causing upgrade issues
+            topicUid: KI_DCOMConfig_flagged_as_virus
           - name: SLNet not starting correctly after change to default upgrade options
             topicUid: KI_Default_upgrade_options_SLNet_issue
           - name: Higher CPU usage and connection issues when using SAML with automatic groups

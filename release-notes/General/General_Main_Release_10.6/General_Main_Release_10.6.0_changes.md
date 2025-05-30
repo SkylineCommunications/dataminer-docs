@@ -306,6 +306,14 @@ A number of enhancements have been made to the *ModuleSettings* window.
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Service & Resource Management: Enhanced retrieval of service definitions [ID 42810]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving service definitions.
+
+Also, SLNet and SLDataGateway will now exchange data faster thanks to the use of protobuf serialization.
+
 #### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->

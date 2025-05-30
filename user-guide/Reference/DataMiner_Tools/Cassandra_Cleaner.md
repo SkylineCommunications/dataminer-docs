@@ -84,7 +84,7 @@ It is possible that the deletion of some partitions or time ranges fails (becaus
 
 #### Will this tool also clear the alarm table?
 
-The alarm table is left untouched. This means that after the cleaning, the alarm table will have alarms that are no longer in the timetrace table. If you encounter any problems that may be related to this, please contact [Skyline Techsupport](mailto:techsupport@skyline.be).
+The alarm table is left untouched. This means that after the cleaning, the alarm table will have alarms that are no longer in the timetrace table. If you encounter any problems that may be related to this, please contact [DataMiner Support](mailto:support@dataminer.services).
 
 #### What should I do if my database is part of a Cassandra cluster (e.g. in case of DataMiner Failover)?
 
