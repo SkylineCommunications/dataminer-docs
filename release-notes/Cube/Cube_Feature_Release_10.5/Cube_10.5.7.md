@@ -15,6 +15,7 @@ uid: Cube_Feature_Release_10.5.7
 ## Highlights
 
 - [Cube search box now supports fuzzy matching [ID 42911]](#cube-search-box-now-supports-fuzzy-matching-id-42911)
+- [View automation script log files [ID 42737]](#system-center-new-automation-tab-in-logging-section-id-42737)
 
 ## New features
 
