@@ -12,6 +12,13 @@ Use this guide as a basis to build or improve dashboards and low-code apps. Thes
 > - [Kata #19: Transform low-code apps into visual delights](https://community.dataminer.services/courses/kata-19/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - Tutorial: [Creating a visually appealing and user-friendly low-code app](xref:Tutorial_App_Design)
 
+> [!NOTE]
+> If you come across something that has not been added to this style guide yet:
+>
+> 1. Investigate what the best possible solution would be, ensuring consistency across the app and across the different available solutions.
+> 1. If you have any doubt, check with <rens.ampe@skyline.be>.
+> 1. [Create a pull request](xref:CTB_Quick_Edit) to update this documentation.
+
 ## Colors/themes
 
 - When you create a new app or dashboard, it essential to start from a good **theme**. The same themes exist across the Dashboards and Low-Code Apps module within a DMS. The themes are primarily managed in the Dashboards app. If the theme you want to use does not exist yet, start by **duplicating a theme in the Dashboards app** that has a similar look and feel to what you have in mind, and then fine-tune it. In a low-code app, you can then select this theme on page level. Use the same theme for every page.
