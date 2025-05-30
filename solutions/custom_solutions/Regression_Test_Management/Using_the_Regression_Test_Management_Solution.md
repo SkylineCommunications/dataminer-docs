@@ -6,58 +6,60 @@ uid: Using_the_Regression_Test_Management_Solution
 
 Once you have configured your test groups and report settings, you can execute tests manually or automatically, track their results, and access detailed reports.
 
-## Execution methods
+## Executing regression tests
 
-There are multiple ways to execute regression tests:
+Below you can find the different ways you can execute regression tests.
 
-### 1. From the Settings page
+### From the Settings page
 
-Click the *Execute Tests* button to run all configured tests immediately. This simulates the daily automated execution and sends an email report if enabled.
+Click the *Execute Tests* button on the *Settings* page to run all configured tests immediately. This simulates the daily automated execution and sends an email report if this is enabled.
 
-### 2. From the Test Configuration page
+### From the Test Configuration page
 
-- To run a **single test**, click the *Execute* button on the corresponding row in the *Regression Tests* table.
+On the *Test Configuration* page:
+
+- To run a **single test**, click the *Execute* button in the corresponding row in the *Regression Tests* table.
 - To run an entire **group**, click the *Execute* button next to a group in the *Groups* table. All associated tests will execute in the specified order.
 
-### 3. From the visual overview (Visio)
+### From the visual overview
 
-Click the *EXECUTE* button on the visual overview of the *Regression Test Results* element. A pop-up will appear, allowing you to select specific tests or folders to run.
+On the visual overview of the *Regression Test Results* element, click the *EXECUTE* button. This will open a window where you can select specific tests or folders to run.
 
 ![Visual overview](~/solutions/images/Regression_Test_Visual.png)
 
-### 4. From the DataMiner Scheduler
+### From DataMiner Scheduler
 
-1. In DataMiner Cube, open the *Scheduler* module.
+1. In DataMiner Cube, open the [Scheduler](xref:scheduler) module.
 
-1. Create a new *Task*.
+1. [Create a new task](xref:Manually_adding_a_scheduled_task), using the following configuration:
 
-1. Set the *Recurrence* (e.g. daily at 2:00 AM).
+   1. Set the *Recurrence* (e.g. daily at 2:00 AM).
 
-1. Under *Actions*, select the `RegressionTestRunner` script.
+   1. Under *Actions*, select the *RegressionTestRunner* script.
 
-1. Provide the configuration in the *ScriptConfiguration* field using a JSON structure like this:
+   1. Provide the configuration in the *ScriptConfiguration* field using a JSON structure like this:
 
-   ```json
-   {
-     "Folders": ["Regression Testing"],
-     "Scripts": ["RT_TestName"],
-     "SearchSubDirectories": True,
-     "ScriptsToSkip": ["RT_SKIP_THIS"],
-     "FoldersToSkip": ["Regression Testing/FolderToSkip"],
-     "Recipients": ["someone@example.com"]
-   }
-   ```
+      ```json
+      {
+        "Folders": ["Regression Testing"],
+        "Scripts": ["RT_TestName"],
+        "SearchSubDirectories": True,
+        "ScriptsToSkip": ["RT_SKIP_THIS"],
+        "FoldersToSkip": ["Regression Testing/FolderToSkip"],
+        "Recipients": ["someone@example.com"]
+      }
+      ```
 
 ## Viewing test results
 
-Go to the *General* page in the *Regression Test Results* element to view the summary of test executions.
+Go to the *General* page of the *Regression Test Results* element to view the summary of test executions.
 
-- *Summary* shows the total amount of tests and overall success rate.
-- *Overview* displays the list of executed tests with their result, reason, and timestamp.
+- **Summary** shows the total number of tests and the overall success rate.
+- **Overview** displays the list of executed tests with their result, reason, and timestamp.
 
 ## Email reports
 
-If enabled in the *Settings* page, the system sends out a formatted email report after execution, summarizing:
+If this is enabled on the *Settings* page, the system sends out a formatted email report after execution, with the following information:
 
 - Success rate
 - Test names
