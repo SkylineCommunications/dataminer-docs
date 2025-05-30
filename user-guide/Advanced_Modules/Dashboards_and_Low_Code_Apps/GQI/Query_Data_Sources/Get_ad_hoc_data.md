@@ -11,6 +11,6 @@ Available from DataMiner 10.3.0/10.2.4 onwards. The *Get ad hoc data* data sourc
 
 ## Updates
 
-[Real-time updates](xref:Query_updates) are available for this data source from DataMiner 10.4.4/10.5.0 onwards<!-- RN 38643 -->. To have real-time updates, the ad hoc data sources requires implementing the [IGQIUpdateable interface](xref:GQI_IGQIUpdateable).
+[Real-time updates](xref:Query_updates) are available for this data source from DataMiner 10.4.4/10.5.0 onwards<!-- RN 38643 -->. To have real-time updates, the [IGQIUpdateable interface](xref:GQI_IGQIUpdateable) must be implemented in the ad hoc data source.
 
-Refer to [query updates](xref:Query_updates#query-update-support) for a more detailed explanation on the different ways you can have your query result updated automatically.
+For a more detailed explanation on the different ways you can have a query result updated automatically, refer to [query updates](xref:Query_updates#query-update-support).
