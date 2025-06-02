@@ -20,6 +20,45 @@ If you do install antivirus software on the **server**, you must:
   - All DataMiner processes (process names starting with "SL" or "DataMiner").
   - The NATS processes *nats-account-server.exe* and *nats-streaming-server.exe*.
   - In case you are using self-managed storage instead of [Storage as a Service](xref:STaaS), the process(es) of the database application(s) you are using with DataMiner (e.g. Cassandra).
+  - For those using antivirus programs that don't allow wildcard-based process exclusions, here's a list of all the processes currently being used by DataMiner and their paths
+
+| Name                                   | Path                                                                                                                                         |
+|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| DataMiner APIGateway                   | "C:\Program Files\Skyline Communications\DataMiner APIGateway\DataMiner APIGateway.exe"                                                     |
+| DataMiner ArtifactDeployer            | "C:\Program Files\Skyline Communications\DataMiner ArtifactDeployer\DataMiner ArtifactDeployer.exe"                                         |
+| DataMiner BrokerGateway               | "C:\Program Files\Skyline Communications\DataMiner BrokerGateway\DataMiner BrokerGateway.exe"                                               |
+| DataMiner CloudFeed                   | "C:\Program Files\Skyline Communications\DataMiner CloudFeed\DataMiner CloudFeed.exe"                                                       |
+| DataMiner CloudGateway                | "C:\Program Files\Skyline Communications\DataMiner CloudGateway\DataMiner CloudGateway.exe"                                                 |
+| DataMiner CommunicationGateway        | "C:\Program Files\Skyline Communications\DataMiner CommunicationGateway\DataMiner CommunicationGateway.exe"                                |
+| DataMiner Copilot                     | "C:\Program Files\Skyline Communications\DataMiner Copilot\DataMiner Copilot.exe"                                                           |
+| DataMiner CoreGateway                 | "C:\Program Files\Skyline Communications\DataMiner CoreGateway\DataMiner CoreGateway.exe"                                                   |
+| DataMiner DataAggregator              | "C:\Program Files\Skyline Communications\DataMiner DataAggregator\DataMiner DataAggregator.exe"                                             |
+| DataMiner DataAPI                     | "C:\Program Files\Skyline Communications\DataMiner DataAPI\DataMiner DataAPI.exe"                                                           |
+| DataMiner FieldControl                | "C:\Program Files\Skyline Communications\DataMiner FieldControl\DataMiner FieldControl.exe"                                                 |
+| DataMiner GQI                         | "C:\Program Files\Skyline Communications\DataMiner GQI\DataMiner GQI.exe"                                                                   |
+| DataMiner ModelHost                   | "C:\Program Files\Skyline Communications\DataMiner ModelHost\DataMiner ModelHost.exe"                                                       |
+| DataMiner Orchestrator                | "C:\Program Files\Skyline Communications\DataMiner Orchestrator\DataMiner Orchestrator.exe"                                                 |
+| DataMiner StorageModule              | "C:\Program Files\Skyline Communications\DataMiner StorageModule\DataMiner StorageModule.exe"                                               |
+| DataMiner SupportAssistant           | "C:\Program Files\Skyline Communications\DataMiner SupportAssistant\DataMiner SupportAssistant.exe"                                         |
+| DataMiner UserDefinableApiEndpoint   | "C:\Program Files\Skyline Communications\DataMiner UserDefinableApiEndpoint\DataMiner UserDefinableApiEndpoint.exe"                         |
+| NAS                                   | C:\Skyline DataMiner\NATS\nats-account-server\nssm.exe                                                                                      |
+| NATS                                  | "C:\Skyline DataMiner\NATS\nats-streaming-server\nats-streaming-server.exe" -c "C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config" |
+| SLAnalytics                           | "C:\Skyline DataMiner\Files\x64\SLAnalytics.exe"                                                                                            |
+| SLASPConnection                       | "C:\Skyline DataMiner\Files\x64\SLASPConnection.exe"                                                                                        |
+| SLAutomation                          | "C:\Skyline DataMiner\Files\SLAutomation.exe"                                                                                               |
+| SLDataGateway                         | "C:\Skyline DataMiner\Files\x64\SLDataGateway.exe"                                                                                          |
+| SLDataMiner                           | "C:\Skyline DataMiner\Files\SLDataMiner.exe"                                                                                                |
+| SLDMS                                 | "C:\Skyline DataMiner\Files\SLDMS.exe"                                                                                                      |
+| SLElement                             | "C:\Skyline DataMiner\Files\x64\SLElement.exe"                                                                                              |
+| SLGSMGateway                          | "C:\Skyline DataMiner\Files\SLGSMGateway.exe"                                                                                               |
+| SLLog                                 | "C:\Skyline DataMiner\Files\SLLog.exe"                                                                                                      |
+| SLNet                                 | "C:\Skyline DataMiner\Files\SLNet.exe"                                                                                                      |
+| SLNetCOMService                       | "C:\Skyline DataMiner\Files\SLNetCOMService.exe"                                                                                            |
+| SLScheduler                           | "C:\Skyline DataMiner\Files\SLScheduler.exe"                                                                                                |
+| SLSNMPAgent                           | "C:\Skyline DataMiner\Files\SLSNMPAgent.exe"                                                                                                |
+| SLSpectrum                            | "C:\Skyline DataMiner\Files\SLSpectrum.exe"                                                                                                 |
+| SLWatchDog                            | "C:\Skyline DataMiner\Files\x64\SLWatchDog.exe"                                                                                             |
+| SLXml                                 | "C:\Skyline DataMiner\Files\SLXml.exe"                                                                                                      |
 
 - Avoid scheduled virus scans affecting the available resources for the DataMiner software at certain moments in time.
 
