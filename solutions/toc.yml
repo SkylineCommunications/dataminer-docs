@@ -254,8 +254,6 @@ items:
         topicUid: netinsight-nimbra-vision-install
       - name: Using the Nimbra Vision app
         topicUid: netinsight-nimbra-vision-howtouse
-      - name: Architecture of the Nimbra Vision app
-        topicUid: netinsight-nimbra-vision-architecture
     - name: DataMiner TAG Management app
       topicUid: Overview_TAG_App
       items:
