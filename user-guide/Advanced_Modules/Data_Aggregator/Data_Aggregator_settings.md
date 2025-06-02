@@ -56,7 +56,7 @@ By default, queries are executed using CoreGateway and SLHelper. To execute the 
 
 > [!IMPORTANT]
 >
-> - This setting is available from Data Aggregator version 3.1.0 onwards.
+> - This setting is available from Data Aggregator version 3.1.0 onwards and can be used with DataMiner versions from DataMiner 10.5.0 [CU1]/10.5.4 onwards.
 > - When this setting is changed in an existing Data Aggregator setup where queries have been configured already, the existing queries will no longer work. Existing queries must be [migrated](xref:Data_Aggregator_Migrators#enabling-gqi-dxm).
 
 ## Multi-DMS connection
