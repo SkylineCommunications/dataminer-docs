@@ -43,7 +43,7 @@ The Failover *Status* window displays status parameters for both DMAs.
 
   In case of "Not Available", a reason will be displayed. This status is only available for the DMA that is currently online.
 
-- **DB Sync**: "Active" or "Failing"
+- **DB Sync**: "Active" or "Failing". Only displayed in case self-hosted data storage is used.
 
   - "Active" means there has been at least one successful forward operation.
   
@@ -52,7 +52,7 @@ The Failover *Status* window displays status parameters for both DMAs.
   > [!TIP]
   > See also: [Viewing DMA synchronization information](xref:Synchronizing_the_DMA_databases#viewing-dma-synchronization-information)
 
-- **DB Sync Stack**: "OK" or "Too Large"
+- **DB Sync Stack**: "OK" or "Too Large". Only displayed in case self-hosted data storage is used.
 
   When this status is in error, but the DB Sync status is not, the sync might be going on, but it might not be able to keep up. The number of queries/files left to be forwarded is also listed between brackets. This status is only available for the DMA that is currently online.
 
@@ -71,6 +71,8 @@ The Failover *Status* window displays status parameters for both DMAs.
   ```
 
   "Failing" means that the database server is probably not running or that there is a configuration issue.
+
+- **NATS communication**: Indicates whether the NATS communication between the Agents is OK and if the clusterEndpoints.json file is in sync between the two Agents. Displayed from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42250 -->
 
 > [!NOTE]
 >
