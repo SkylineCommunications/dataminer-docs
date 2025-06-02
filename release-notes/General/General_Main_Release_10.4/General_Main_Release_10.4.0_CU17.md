@@ -43,7 +43,7 @@ In some cases, a DataMiner Agent would not start up properly, and the following 
 
 #### Redundancy groups: Alarm mentioning that all redundancy resources are in use would incorrectly not get cleared [ID 42970]
 
-<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU4] - FR 10.5.8 -->
 
 If a redundancy group has more primary elements than backup elements, at the moment when all backups are in use, an alarm with severity level "Notice" will appear in the Alarm Console mentioning that all redundancy resources are in use.
 
