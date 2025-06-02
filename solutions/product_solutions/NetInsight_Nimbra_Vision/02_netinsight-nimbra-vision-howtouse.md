@@ -1,5 +1,5 @@
 ---
-uid: netinsight-nimbra-vision-nowtouse
+uid: netinsight-nimbra-vision-howtouse
 ---
 
 # Using the NetInsight Nimbra Vision App
@@ -28,7 +28,7 @@ Users gain an overview of the Nimbra nodes orchestrated by Nimbra Vision, allowi
 ## Nimbra Interfaces
 Users can inspect the network interfaces of the Nimbra nodes, identifying their status as well as current and historical transmission rates.
 
-![Nimbra Interfaces](~/user-guide/images/netinsight-nimbra-vision-interfaces.png.png)
+![Nimbra Interfaces](~/user-guide/images/netinsight-nimbra-vision-interfaces.png)
 
 ## Network Overview
 Users are provided with a node-edge component that offers a visual overview of Nimbra's network topology.
