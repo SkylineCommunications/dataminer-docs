@@ -550,6 +550,8 @@ items:
             topicUid: Object_Manager_Definition_Data
           - name: Object manager instance data
             topicUid: Object_Manager_Instance_Data
+          - name: Parameter table filters
+            topicUid: Parameter_Table_Filters
           - name: Parameter data
             topicUid: Parameter_Data
           - name: Profile parameter data

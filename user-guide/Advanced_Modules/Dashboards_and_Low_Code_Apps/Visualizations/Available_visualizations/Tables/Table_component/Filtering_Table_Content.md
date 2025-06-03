@@ -4,22 +4,24 @@ uid: Filtering_Table_Content
 
 # Filtering table content
 
-From DataMiner 10.2.7/10.3.0 onwards, you can filter the contents of a table component using one of the available three methods: the [general filter](#general-filter), the [column-based filter](#column-based-filter), or a [text string](#filter-based-on-text-string).
+From DataMiner 10.2.7/10.3.0 onwards, you can filter the contents of a table component using one of the available four methods: the [general filter](#general-filter), the [column-based filter](#column-based-filter), a [text string](#filter-based-on-text-string), or a [*Filter* query operator](#filter-using-a-query-operator).
 
 ## General filter
 
 To apply a general filter across the table, a **search box** is available:
 
-1. Click the search icon in the top-right corner.
+1. In edit mode, make sure the [*Show quick filter* setting](xref:DashboardTable#table-layout) is enabled (from DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->).
 
-1. Specify the filter text (case-insensitive) in the search box.
+1. In read mode, click the search icon in the top-right corner of the component.
+
+1. Specify the filter text in the search box. The search is case-insensitive and matches values as displayed in the table.
 
    ![General filter](~/user-guide/images/General_Filter.gif)<br>*Table component in DataMiner 10.5.6*
 
-   This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Creating_GQI_query).
+   This applies a **client-side filter** based on the display values shown in the table. For example, if the table shows a value like "2 GB", you can search for "GB" and the value will be matched.
 
-> [!IMPORTANT]
-> From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!-- RN 40818-->, the search box is only available when the [*Show quick filter* setting](xref:DashboardTable#table-layout) is enabled.
+   > [!NOTE]
+   > If you want to apply a **server-side filter**, you need to use a [filter operator](xref:GQI_Filter) when you [configure the query data source](xref:Creating_GQI_query). Server-side filtering is based on the raw data stored in the database, not on what is displayed in the table. For example, if you want to find values in gigabytes using server-side filtering, you may need to search for something like `> 1 000 000 KB`, depending on how the data is stored.
 
 ## Column-based filter
 
@@ -57,7 +59,11 @@ To apply **a filter based on a specific column**:
 
 From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards<!--RN 40793-->, you can **filter the table by passing it a text string**.
 
-You can do this in several different ways, for example:
+![Text input](~/user-guide/images/Text_input_filter_table.gif)<br>*Text input component and table component in DataMiner 10.4.11*
+
+This method uses client-side filtering, which applies the filter based on the values currently shown in the table, not on the raw data stored in the database. It offers fast and flexible filtering, but may not be suitable if you need to search based on underlying raw data or large datasets that are not fully loaded in the table.
+
+You can filter based on a text string in several different ways, for example:
 
 - Use a **text input** or **search input** component:
 
@@ -70,8 +76,6 @@ You can do this in several different ways, for example:
   > [!NOTE]
   > If you do not want the search box to appear when using text or search input data as a filter, disable the [*Show quick filter* setting](xref:DashboardTable#table-layout) in the *Layout* pane.
 
-  ![Text input](~/user-guide/images/Text_input_filter_table.gif)<br>*Text input and table components in DataMiner 10.4.11*
-
 - Specify a **text string in the dashboard or app URL**:
 
   1. Hover over the component, click the filter icon, and then add a filter from the *URL > Text* section of the *Data* pane. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075 + 41141-->, add a filter from the *Feeds > URL > Strings* section of the *Data* pane.
@@ -83,3 +87,25 @@ You can do this in several different ways, for example:
      In the following example, the text string "test" is sent to the component with component ID 1:
 
      `https://<dma>/<app-id>?data={"components": [{"cid":1, "select":{"strings": ["test"]}}]`
+
+## Filter using a query operator
+
+When you add a *Filter* operator to a GQI query, you can apply a server-side filter whose value is dynamically set, either by a component in your dashboard/app or via the URL.
+
+To use a *Filter* operator in a GQI query:
+
+1. [Create a GQI query](xref:Creating_GQI_query).
+
+1. Add a [*Filter* operator](xref:GQI_Filter).
+
+1. Select the column you want to filter on.
+
+1. Choose the filter method you want to use
+
+1. Under *Value*, click the *Link to data* icon and select a data source from the dropdown list.
+
+1. Set *Empty data shows* to `everything`.
+
+1. Drag the configured query onto the table component.
+
+![Filter operator](~/user-guide/images/Filter_Operator.gif)<br>*Table component and grid component in DataMiner 10.5.6*
