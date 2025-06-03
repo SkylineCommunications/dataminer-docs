@@ -229,3 +229,11 @@ Up to now, changes to an LDAP user or an LDAP group would incorrectly not get sy
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 After a Failover switch, in some cases, the ClusterEndpointManager would fail to initialize on the agent that had gone online. In the *Failover Status* window, *NATS communication* would show an error state.
+
+#### Redundancy groups: Alarm mentioning that all redundancy resources are in use would incorrectly not get cleared [ID 42970]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU4] - FR 10.5.8 -->
+
+If a redundancy group has more primary elements than backup elements, at the moment when all backups are in use, an alarm with severity level "Notice" will appear in the Alarm Console mentioning that all redundancy resources are in use.
+
+By default, that alarm is cleared as soon as one of the backup elements is available again. However, up to now, in some cases, the alarm would incorrectly not get cleared.
