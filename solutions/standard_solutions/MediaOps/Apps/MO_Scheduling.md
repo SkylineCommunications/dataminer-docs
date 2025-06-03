@@ -4,9 +4,12 @@ uid: MO_Scheduling
 
 # Scheduling
 
-The Scheduling app allows users to efficiently manage and orchestrate a schedule of [jobs](#jobs), [resources](#resources), and [workflows](#workflows).
+The Scheduling app allows users to efficiently manage a schedule of [Jobs](#jobs), [Resources](#resources), and [Workflows](#workflows).
 
 ![Scheduling Overview](~/user-guide/images/Scheduling_Overview.png)
+
+> [!TIP]
+> For those who prefer visual learning, [demo video](https://www.youtube.com/watch?v=lfeCwxYTA4o) covering the same material is also available.
 
 > [!TIP]
 > This page contains information about the Scheduling app within the MediaOps Solution. If you are looking for information about the Scheduler module within DataMiner Cube instead, refer to [DataMiner Scheduler](xref:scheduler).
@@ -23,7 +26,7 @@ The following pages are available in the Scheduling app:
 
 - ![Search Jobs](~/user-guide/images/Scheduling_Search_Jobs.png) **Search Jobs**: Provides the tools to **easily find any job** in the system. This includes canceled jobs, which are hidden on all other pages.
 
-- ![App Configuration](~/user-guide/images/Scheduling_App_Configuration.png) **App Configuration**: Allows you to configure general [app-wide settings](#app-wide-settings).
+- ![App configuration](~/user-guide/images/Scheduling_App_Configuration.png) **App configuration**: On the Apps Configuration page you can configure general [app-wide settings](xref:MO_S_App_Configuration).
 
 - ![About](~/user-guide/images/Scheduling_About.png) **About**: Provides information on the **version** of the MediaOps package.
 
@@ -32,18 +35,6 @@ The following pages are available in the Scheduling app:
 A job represents a planned activity that will be executed. With a job, you can reserve [resources](#resources), request a resource from a given pool of resources, or even schedule an entire [workflow](#workflows) for this planned activity. The system will make sure that, in the background, the availability of all resources is managed so that no resource conflicts occur.
 
 Next to that, **administrative metadata** can be added to a job, such as a description, an owner, or the organization for which the job will be carried out.
-
-## App-wide settings
-
-On the *App Configuration* page, you can configure the following app-wide settings:
-
-- To reserve a fixed amount of time for the equipment setup before a job starts and the time for the equipment dismantling after a job ends, you can define **pre-roll** and **post-roll** parameters across the whole app. This way, by default, the resources will be reserved for some time before the job begins and after it ends.
-
-- Each job will have, apart from its name, a job ID, which can be used to uniquely identify the job, since the job names are not unique. Via the **Configure Job ID** button, you can configure the **job ID pattern** that will be used in all the newly created jobs.
-
-- If you want to attach **additional metadata** to your jobs, you can do so through the system properties. Via the **Configure System Properties** button, you can define these properties, so you can then use them in your jobs. The properties will not affect any logic in the MediaOps apps; they are metadata intended purely as additional information for users.
-
-- If you want your jobs to be able to reference internal MediaOps entities or external generic entities, you can define the entities referenced in the **Reference types** section. The references are very generic, enabling you to reference a vast array of different types of entities.
 
 ## Resources
 

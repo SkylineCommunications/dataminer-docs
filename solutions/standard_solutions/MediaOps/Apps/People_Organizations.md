@@ -6,6 +6,11 @@ uid: People_Organizations
 
 The People & Organizations app allows you to create, edit, and organize people, teams, and organizations.
 
+![People & Organizations Overview](~/solutions/images/People_and_Organizations_Overview.png)
+
+> [!TIP]
+> For those who prefer visual learning, [demo video](https://www.youtube.com/watch?v=ybRBZICWMes) covering the same material is also available.
+
 ## App overview
 
 The following pages are available in the app:

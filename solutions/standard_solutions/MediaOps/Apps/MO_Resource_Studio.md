@@ -8,6 +8,9 @@ The Resource Studio app helps you create and manage bookable resources efficient
 
 ![Resource Studio Overview](~/solutions/images/Resource_Studio_Overview.png)
 
+> [!TIP]
+> For those who prefer visual learning, [demo video](https://www.youtube.com/watch?v=NM4NFFCM7k8) covering the same material is also available.
+
 ## App overview
 
 The following pages are available in the app:

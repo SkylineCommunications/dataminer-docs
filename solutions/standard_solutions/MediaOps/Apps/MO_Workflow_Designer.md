@@ -8,6 +8,9 @@ The workflow designer app allows you to visually manage and configure [workflows
 
 ![Example workflow](~/solutions/images/WFD_Example_WF.png)
 
+> [!TIP]
+> For those who prefer visual learning, [demo video](https://www.youtube.com/watch?v=DR1ObA8F0m0) covering the same material is also available.
+
 ## App overview
 
 The following pages are available in the Workflow Designer app:
