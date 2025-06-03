@@ -354,16 +354,6 @@ When a trend graph seemed to increase or decrease, in some cases, change points 
 
 Because of an issue in SLNet, up to now, if the same group would be added more than once in the `UpdateLibraryCredentialMessage` (i.e. the SLNet message used to add or update credentials), duplicated `Group` tags would end up in the *Library.xml* file. As a result, in DataMiner Cube, the updated credential would get stuck, showing a "[modified]" tag.
 
-#### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
-
-<!-- MR 10.6.0 - FR 10.5.5 -->
-
-Up to now, in some cases, behavioral anomaly detection would not be able to start up correctly due to the maximum cache size having been reached when the internal caches were being fetched after SLAnalytics had been started.
-
-From now on, if the maximum cache size is reached, old model information might get discarded to allow behavioral anomaly detection to start up correctly. If this happens, the following error will be logged:
-
-`Max cache size reached during prefetch of the cache, potential data loss`
-
 #### Problem with SLAutomation when a Notify method was called shortly after an Automation script had finished [ID 42465]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->

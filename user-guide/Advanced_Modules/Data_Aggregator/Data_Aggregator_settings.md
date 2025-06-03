@@ -8,6 +8,8 @@ Below you can find an overview of the different settings you can configure in th
 
 - [HTTP listening](#http-listening)
 
+- [Using the GQI DxM for queries](#using-the-gqi-dxm-for-queries)
+
 - [Multi-DMS connection](#multi-dms-connection)
 
 - [Throttling](#throttling)
@@ -39,6 +41,23 @@ For example:
 > - Using the REST API, you can also do certain actions like getting the status of the jobs or manually triggering a specific job. More information is available via the URL `[Your configured URL]/swagger/index.html`, e.g. `http://127.0.0.1:5000/swagger/index.html`.
 > - Keep in mind that **if there is no firewall in place, anyone can use the web UI and the REST API**, as no authentication is required to use Data Aggregator.
 > - To go to the debug page, add `/debug` to the URL. For example, if the URL was defined as `http://127.0.0.1:5000`, you can access the debug page at `http://127.0.0.1:5000/debug`.
+
+## Using the GQI DxM for queries
+
+By default, queries are executed using CoreGateway and SLHelper. To execute the queries using the [GQI DxM](xref:GQI_DxM), enable the following setting:
+
+```json
+{
+  "QueryExecutorOptions": {
+    "UseGQIDxM": true
+  }
+}
+```
+
+> [!IMPORTANT]
+>
+> - This setting is available from Data Aggregator version 3.1.0 onwards and can be used with DataMiner versions from DataMiner 10.5.0 [CU1]/10.5.4 onwards.
+> - When this setting is changed in an existing Data Aggregator setup where queries have been configured already, the existing queries will no longer work. Existing queries must be [migrated](xref:Data_Aggregator_Migrators#enabling-gqi-dxm).
 
 ## Multi-DMS connection
 

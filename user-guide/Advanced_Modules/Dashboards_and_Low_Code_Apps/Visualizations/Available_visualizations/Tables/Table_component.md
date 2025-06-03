@@ -41,7 +41,7 @@ Each row in a query corresponds to a row in a table.
 
 ## Filtering table content
 
-From DataMiner 10.2.7/10.3.0 onwards, you can filter the contents of a table component using one of three available methods:
+From DataMiner 10.2.7/10.3.0 onwards, you can filter the contents of a table component using one of four available methods:
 
 - Use the [search box](xref:Filtering_Table_Content#general-filter) to filter the entire table based on the entered value.
 
@@ -54,6 +54,10 @@ From DataMiner 10.2.7/10.3.0 onwards, you can filter the contents of a table com
 - Pass a [text string](xref:Filtering_Table_Content#filter-based-on-text-string) to the table, for example by using a text input component.
 
   ![Text string filter](~/user-guide/images/Text_String_Filter.gif)<br>*Table component in DataMiner 10.5.6*
+
+- Add a [*Filter* operator](xref:Filtering_Table_Content#filter-using-a-query-operator) to a GQI query to apply a server-side filter. The filter value can be set dynamically via a component or the URL.
+
+  ![Filter operator](~/user-guide/images/Filter_Operator.gif)<br>*Table component and grid component in DataMiner 10.5.6*
 
 > [!TIP]
 > If you have made changes to the way a table is displayed, and you want to quickly reset your changes and return to the initial table view, click the eye icon in the top-right corner of the component (available from DataMiner 10.2.11/10.3.0 onwards).
@@ -151,7 +155,7 @@ To use one of the available presets to alter the column appearance, click the pr
 | ![Background](~/user-guide/images/Preset_Background.png) | Adds a background color to the cell. By default, a blue color (#1F68BF) is used. |
 
 > [!NOTE]
-> If you select the *Hyperlink* preset option, a [*Navigate to a URL* action](xref:LowCodeApps_event_config#navigating-to-a-url) is automatically configured. The default URL is `https://[Your DMA]/{DMA root}`, which you can edit using the [Template Editor](xref:Template_Editor).
+> If you select the *Hyperlink* preset option, a [*Navigate to a URL* action](xref:LowCodeApps_event_config#navigating-to-a-url) is automatically configured. The target URL can be edited using the [Template Editor](xref:Template_Editor).
 
 ##### Custom column appearance
 
