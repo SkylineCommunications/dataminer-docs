@@ -16,9 +16,9 @@ Click any [device](#device-details) or [connection](#connection-details) to view
 
 When hovering over a connection, you can use the dot in the upper-right corner of the details window to choose which metric is displayed and used to color the lines.
 
-You can select between interface operational status and interface output utilization.
-
 ![Topology connection details](~/solutions/images/NS_manual_topology_hover.png)
+
+You select either interface operational status or interface output utilization.
 
 ![Topology connection analytics](~/solutions/images/NS_manual_topology_analytics.png)
 
