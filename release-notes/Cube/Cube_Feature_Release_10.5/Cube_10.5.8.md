@@ -32,11 +32,11 @@ Because of a number of enhancements, overall performance has increased when proc
 
 ### Fixes
 
-#### Trending: Trend graphs would incorrectly not show the trend data of the last few hours [ID 42909]
+#### Trending: Trend graphs would incorrectly show gaps in the trend data [ID 42909]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-In some cases, trend graphs would incorrectly not show the trend data of the last few hours.
+In some cases, trend graphs would incorrectly show gaps in the trend data.
 
 #### Problem when trying to open a view card in an EPM environment [ID 43049]
 

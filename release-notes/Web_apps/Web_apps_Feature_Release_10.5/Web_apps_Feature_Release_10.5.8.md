@@ -47,3 +47,9 @@ From now on, it will only be possible to publish a low-code app when the app has
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 When the `UIBlockType.Time` component had a time range configured in the AutomationTimeUpDownOptions property, up to now, the initialValue that was displayed, would incorrectly not get updated when the value changed.
+
+#### Low-Code Apps: Components used in a low-code app could cause a user's web browser to leak memory [ID 42955]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, components used in a low-code app could cause a user's web browser to leak memory.
