@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 3 June 2025 - Fix - CloudGateway 2.17.7 - Crash while subscribing to NATS during reconnect
 
-Initiating a subscription while NATS connection was reconnecting could result in a crash. This has been fixed.
+Initiating a subscription while the NATS message broker connection was reconnecting could cause the DxM to crash. This has been fixed.
 
 #### 3 June 2025 - Enhancement - CloudGateway 2.17.7 - Dependencies updated
 
