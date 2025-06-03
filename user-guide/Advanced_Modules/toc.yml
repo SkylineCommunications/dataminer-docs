@@ -226,8 +226,8 @@ items:
             topicUid: Sending_a_text_message
           - name: Triggering a parameter set
             topicUid: Triggering_a_parameter_set
-      - name: Best practices when creating Correlation rules
-        topicUid: Best_Practices_When_Creating_Correlation_Rules
+      - name: Best practices for Correlation
+        topicUid: Best_Practices_For_Correlation
       - name: DataMiner Correlation tutorials
         items:
           - name: Responding to element timeouts using Correlation
