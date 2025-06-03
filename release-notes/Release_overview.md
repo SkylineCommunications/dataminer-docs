@@ -28,7 +28,7 @@ Here is an example of how you should interpret the overview: DataMiner 10.5.8 is
 
 As we live in a VUCA world, the content of the releases cannot be determined beforehand.
 
-When a version is released, you can find the full DataMiner packages for both the Main and the Feature release on [DataMiner Dojo](https://community.dataminer.services/dataminer-server-upgrade-packages/).
+When a version is released, you can find the full DataMiner packages for both the Main and the Feature Release on [DataMiner Dojo](https://community.dataminer.services/dataminer-server-upgrade-packages/).
 
 ## Client updates
 
