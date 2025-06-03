@@ -34,11 +34,11 @@ uid: General_Feature_Release_10.5.8
 
 ### Enhancements
 
-#### DataMiner upgrade: New entry added to FilesToDelete.txt to remove all TXF files [ID 43058]
+#### DataMiner upgrade: All TXF files will now be removed each time a DataMiner upgrade is performed [ID 43058]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
 
-Every DataMiner upgrade package includes a *FilesToDelete.txt* file, which lists all files in the `C:\Skyline DataMiner\` folder that should be deleted during the upgrade procedure. A new entry has now been added to that file to make sure all TXF files are removed from the `C:\Skyline DataMiner\Scripts\` folder.
+From now on, each time a DataMiner upgrade is performed, all TXF files will be automatically removed from the `C:\Skyline DataMiner\Scripts\` folder.
 
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying.
 
