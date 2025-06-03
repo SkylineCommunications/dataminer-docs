@@ -22,7 +22,10 @@ The DataAggregator DxM is now capable of communicating directly with the GQI DxM
 
 1. Restart the *DataAggregator* service.
 
-1. In case your setup already contains queries, run the *MigratorToGQIDxM* tool to migrate these to the format supported by the GQI DxM. This tool is available on demand.
+1. In case your setup already contains queries, run the *MigratorToGQIDxM* tool to migrate these to the format supported by the GQI DxM.
+
+> [!NOTE]
+> At present, the *MigratorToGQIDxM* tool is only available on demand by sending a request to <support@dataminer.services>.
 
 #### 6 September 2024 - Fix - DataAggregator 3.0.7 - Old CSV exports not removed [ID 40623]
 
