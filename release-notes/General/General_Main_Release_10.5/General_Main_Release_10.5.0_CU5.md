@@ -25,6 +25,16 @@ When you create an Automation script, apart from an XML file containing the actu
 
 ### Fixes
 
+#### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.5 -->
+
+Up to now, in some cases, behavioral anomaly detection would not be able to start up correctly because the maximum cache size had been reached when the internal caches were being fetched after SLAnalytics had been started.
+
+From now on, if the maximum cache size is reached, old model information might get discarded to allow behavioral anomaly detection to start up correctly. If this happens, the following error will be logged:
+
+`Max cache size reached during prefetch of the cache, potential data loss`
+
 #### SLDataGateway could stop working because of issues caused by TPL tasks [ID 42846]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
