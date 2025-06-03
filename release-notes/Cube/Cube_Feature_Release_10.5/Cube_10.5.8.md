@@ -32,11 +32,11 @@ Because of a number of enhancements, overall performance has increased when proc
 
 ### Fixes
 
-#### Trending: Trend graphs would incorrectly show gaps in the trend data [ID 42909]
+#### Trending: Trend data between two gaps would incorrectly not be displayed [ID 42909]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-In some cases, trend graphs would incorrectly show gaps in the trend data.
+In trend graphs showing gaps in the trend data, in some rare cases, the data between two gaps would incorrectly not be displayed.
 
 #### Problem when trying to open a view card in an EPM environment [ID 43049]
 
