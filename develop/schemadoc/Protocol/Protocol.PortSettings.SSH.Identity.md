@@ -9,7 +9,9 @@ Specifies the ID of the parameter that holds the path to the private key used fo
 It should be formatted like this: `key=C:\Users\User\.ssh\my_key_rsa`
 
 > [!NOTE]
-> If the private key is protected by a passphrase, it must be appended to the file path, separated by a semicolon. It should be formatted like this: `key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase`
+>
+> - If the private key is protected by a passphrase, it must be appended to the file path, separated by a semicolon. It should be formatted like this: `key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase`
+> - DataMiner cannot derive the SSH username from your public/private key pair. If you authenticate with a key through a private/public key pair, you must still specify the SSH Username parameter explicitly.
 
 ## Parent
 
@@ -28,5 +30,3 @@ It should be formatted like this: `key=C:\Users\User\.ssh\my_key_rsa`
     <Identity pid="1004" />
 </SSH>
 ```
-> [!NOTE]
-> Dataminer cannot derive the SSH username from your public-/private key pair. If you authenticate with a key through private/public key pair, you must still specify the SSH Username parameter explicitly.
