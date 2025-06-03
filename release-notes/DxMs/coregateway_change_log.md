@@ -6,7 +6,7 @@ uid: coregateway_change_log
 
 #### 3 June 2025 - Fix - CoreGateway 2.14.13 - Crash due to Racecondition
 
-​When rapid file changes occurred in *DataMiner.xml* or *MaintenanceSettings.xml*, a race condition related to registering a handle could cause a problem in CloudGateway, causing the DxM to restart.
+​Rapid file changes in *DataMiner.xml* or *MaintenanceSettings.xml* could cause a problem in CoreGateway, causing the DxM to restart.
 
 #### 1 April 2025 - Enhancement - Dependencies updated [ID 42655]
 
