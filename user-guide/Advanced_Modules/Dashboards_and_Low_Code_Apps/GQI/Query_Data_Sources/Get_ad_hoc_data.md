@@ -16,6 +16,6 @@ Available from DataMiner 10.3.0/10.2.4 onwards. The *Get ad hoc data* data sourc
 For a more detailed explanation on the different ways you can have a query result updated automatically, refer to [query updates](xref:Query_updates#query-update-support).
 
 > [!IMPORTANT]
-> When implementing real-time updates, be aware that you are operating in a multithreaded environment. The lifecycle events of an ad hoc data source (e.g., GetNextPage, OnStopUpdates, etc.) may be triggered concurrently with your real-time update logic.
+> When implementing real-time updates, be aware that you are operating in a multithreaded environment. The life cycle events of an ad hoc data source (e.g. *GetNextPage*, *OnStopUpdates*, etc.) may be triggered concurrently with your real-time update logic.
 >
-> To ensure correctness and prevent race conditions, you must implement appropriate thread-safety measures (e.g., synchronization or locking mechanisms) when accessing shared resources or modifying internal state.
+> To ensure correctness and prevent race conditions, you must implement appropriate thread-safety measures (e.g. synchronization or locking mechanisms) when accessing shared resources or modifying the internal state.
