@@ -3746,6 +3746,37 @@ items:
         topicUid: Functions-TypeNonEmptyString
       - name: TypeParamId
         topicUid: Functions-TypeParamId
+  - name: Hyperlinks schema
+    topicUid: SchemaHyperlinks
+    items:
+    - name: HyperLinks
+      topicUid: HyperLinks
+      items:
+      - name: HyperLink
+        topicUid: HyperLinks.HyperLink
+        items:
+        - name: '@alarmAction'
+          topicUid: HyperLinks.HyperLink-alarmAction
+        - name: '@alarmColumn'
+          topicUid: HyperLinks.HyperLink-alarmColumn
+        - name: '@combineParameters'
+          topicUid: HyperLinks.HyperLink-combineParameters
+        - name: '@descriptionParsing'
+          topicUid: HyperLinks.HyperLink-descriptionParsing
+        - name: '@filterElement'
+          topicUid: HyperLinks.HyperLink-filterElement
+        - name: '@id'
+          topicUid: HyperLinks.HyperLink-id
+        - name: '@menu'
+          topicUid: HyperLinks.HyperLink-menu
+        - name: '@name'
+          topicUid: HyperLinks.HyperLink-name
+        - name: '@type'
+          topicUid: HyperLinks.HyperLink-type
+        - name: '@valueParsing'
+          topicUid: HyperLinks.HyperLink-valueParsing
+        - name: '@version'
+          topicUid: HyperLinks.HyperLink-version
   - name: NuGet stages schema
     topicUid: SchemaNuGetStagesConfig
     items:
