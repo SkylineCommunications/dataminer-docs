@@ -113,13 +113,16 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Light Managed Object*        | Sum of metrics on Managed Objects with less than 200 metrics.                         | 2 for 1000 metrics         | A Managed Object with 150 metrics, the metered value is 150. |
 | *Unmanaged Object*            | Sum of instances from all Unmanaged Objects.  | 4 per 100K instances. | A system with 5K tickets and 25K assets, the metered value is 30k x 4 / 100k = 1.2. |
 | *Connector Services*          | Sum of connectors delivered by Skyline, concurrently used.                            | 8 | Using 20 connectors a month, but with a maximum of 5 at any given time, the metered value is 5. |
-| *Automation Actions*          | Sum of Automation script runs and new Unmanaged Object Instances, with each instance counted as the number of its possible states.        | Starting at 5 for 1K script runs.<br> Decreases with volume. | For an object "Ticket" with 8 possible life cycle states *Acknowledged, Rejected, Cancelled, In Progress, Pending, Resolved, Held*, and *Closed* , when creating 100 new tickets, the metered value equals 100 instances x 8 states = 800.|
+| *Automation Actions*          | Sum of Automation script runs (1x per run) and new Unmanaged Object Instances (5x new instance)    | Starting at 5 for 1K script runs.<br> Decreases with volume. | For an object "Ticket", when creating 100 new tickets, the metered value equals 500 |
 | *Dashboard Sharing*           | Sum of number of unique shares.                                                       | 0.5 | Sharing 2 dashboards with 5 email recipients for a full month, the metered value is 2 dashboards x 5 recipients = 10. |
 | *Alarm Updates*               | Sum of alarm update writes.       | 0.9 per 100K alarm updates. | |
 | *Information Events*          | Sum of information event writes.  | 0.3 per 100K information events. | |
 | *Trend data points*           | Sum of trend data point writes.   | 0.3 per 10M trend data points. | |
 | *Element data*                | Sum of element data writes.       | 0.3 per 10M element data updates. | |
 | *Hosted Managed Objects*      | Sum of metrics of all Managed Objects hosted. | 0.1 for 10K metrics| A hosted system With 2 Managed Objects, one with 24K metrics and the other with 150 metrics, the metered value is 24,150 x 0.1 / 10K = 0.2415 |
+
+> [!NOTE]
+> Instead of a fixed number of 5 actions, some objects defined in Skyline's [Standard Data Model](xref:Overview_DataMiner_Solutions#standard-data-model) may trigger a different number of Automation Actions when new unmanaged object instances are created.
 
 > [!TIP]
 > While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g. specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 1.7 credits for 100 Managed Objects per month, considering a typical usage scenario of 180 alarm updates, 240 information events, 400,000 stored data points and 100,000 element data updates per Managed Object on average per month.

@@ -26,6 +26,8 @@ Managing Automation scripts, e.g. adding and deleting scripts or organizing them
 
 - [Importing and exporting Automation scripts](#importing-and-exporting-automation-scripts)
 
+<!-- The Automation module also includes scripts that have been deployed as part of packages from the Catalog. From DataMiner Cube ... onwards (RN 42773, other RN TBD), the description of such scripts will indicate the name and version of the package that was used to deploy them. You can make changes to such scripts, but that does mean you are customizing the deployed package. In that case, the description of the script will display "[Customized]" in front of the package name. To restore the original script, you can redeploy the package. -->
+
 ## Collapsing and expanding Automation script folders
 
 You can collapse or expand folders in the tree view:

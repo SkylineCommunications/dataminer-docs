@@ -60,7 +60,7 @@ Beautiful Soup is a commonly used library that makes it easy to scrape informati
 
 #### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Improve DataAggregator Migrator [ID 38682]
 
-Improvements have been made to the [migrator tool](xref:Data_Aggregator_Migrator) to better allow converting GQI queries from the [previous syntax to the new one](xref:Data_Aggregator_settings#gqi-queries).
+Improvements have been made to the [migrator tool](xref:Data_Aggregator_Migrators#upgrading-from-version-2xx) to better allow converting GQI queries from the [previous syntax to the new one](xref:Data_Aggregator_settings#gqi-queries).
 
 This includes:
 
