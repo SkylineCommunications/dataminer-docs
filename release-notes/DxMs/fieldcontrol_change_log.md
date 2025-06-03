@@ -4,6 +4,10 @@ uid: fieldcontrol_change_log
 
 # Field Control change log
 
+#### 3 June 2025 - Enhancement - FieldControl 2.11.3 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 1 April 2025 - Fix - TCP port Leak [ID 42656]
 
 A potential TCP port leak has been fixed.

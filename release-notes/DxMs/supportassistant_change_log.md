@@ -4,6 +4,10 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 3 June 2025 - Enhancement - Support Assistant 1.7.4 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 1 April 2025 - Enhancement - SupportAsistant 1.7.3 - Dependencies updated [ID 42658]
 
 Several dependencies have been updated.

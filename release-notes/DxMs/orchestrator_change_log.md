@@ -4,6 +4,10 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
+#### 3 June 2025 - Enhancement - Orchestrator 1.7.6 - Dependencies updated
+
+Several dependencies have been updated.
+
 #### 1 April 2025 - Enhancement - Dependencies updated [ID 42657]
 
 Several dependencies have been updated.
