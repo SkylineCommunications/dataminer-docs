@@ -4,17 +4,17 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 3 June 2025 - Fix - CloudGateway 2.17.7- Crash while subscribing to NATS during reconnect
+#### 3 June 2025 - Fix - CloudGateway 2.17.7 - Crash while subscribing to NATS during reconnect
 
 Initiating a subscription while NATS connection was reconnecting could result in a crash. This has been fixed.
 
-#### 3 June 2025 - Enhancement - CloudGateway 2.17.7- Dependencies updated
+#### 3 June 2025 - Enhancement - CloudGateway 2.17.7 - Dependencies updated
 
 Several dependencies have been updated.
 
-#### 3 June 2025 - Fix - CloudGateway 2.17.7- Racecondition while checking DMA name could cause a crash
+#### 3 June 2025 - Fix - CloudGateway 2.17.7 - Crash due to Racecondition
 
-​Rapid consecutive file changes in DataMiner.xml could cause the CoreGateway DXM to crash and restart. A racecondition when using a FileSystemWatcher is fixed.
+​When rapid file changes occurred in *DataMiner.xml* or *MaintenanceSettings.xml*, a race condition related to registering a handle could cause a problem in CloudGateway, causing the DxM to restart.
 
 #### 4 April 2025 - Enhancement - CloudGateway 2.17.4 - Dependencies updated [ID 42682]
 
