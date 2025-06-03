@@ -4,7 +4,7 @@ uid: coregateway_change_log
 
 # Core Gateway change log
 
-#### 3 June 2025 - Fix - CoreGateway 2.14.13 - Crash due to Racecondition
+#### 3 June 2025 - Fix - CoreGateway 2.14.13 - Possible crash due to rapid file changes
 
 ​Rapid file changes in *DataMiner.xml* or *MaintenanceSettings.xml* could cause a problem in CoreGateway, causing the DxM to restart.
 
