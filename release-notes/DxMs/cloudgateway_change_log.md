@@ -12,7 +12,7 @@ Initiating a subscription while the NATS message broker connection was reconnect
 
 Several dependencies have been updated.
 
-#### 3 June 2025 - Fix - CloudGateway 2.17.7 - Crash due to Racecondition
+#### 3 June 2025 - Fix - CloudGateway 2.17.7 - Possible crash due to rapid file changes
 
 ​Rapid file changes in *DataMiner.xml* or *MaintenanceSettings.xml* could cause a problem in CloudGateway, causing the DxM to restart.
 
