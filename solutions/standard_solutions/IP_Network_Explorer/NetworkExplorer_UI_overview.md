@@ -14,6 +14,14 @@ Click any [device](#device-details) or [connection](#connection-details) to view
 
 ![Topology](~/solutions/images/NS_manual_topology.png)
 
+When hovering over a connection, you can use the dot in the upper-right corner of the details window to choose which metric is displayed and used to color the lines.
+
+![Topology connection details](~/solutions/images/NS_manual_topology_hover.png)
+
+You select either interface operational status or interface output utilization.
+
+![Topology connection analytics](~/solutions/images/NS_manual_topology_analytics.png)
+
 ### Device Details
 
 The **Device Details** page gives an overview of the device's overall health.
@@ -35,6 +43,10 @@ The **Ports** page shows an overview of all ports for the selected network devic
 To switch devices, use the **dropdown box** in the top-right corner.
 
 ![Ports](~/solutions/images/NS_manual_ports.png)
+
+Using the Compare button in the menu bar, you can view the ports of two devices side by side for easier analysis.
+
+![Compare Ports](~/solutions/images/NS_manual_ports_compare.png)
 
 ## Flows
 
