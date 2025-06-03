@@ -233,9 +233,9 @@ Only applicable for parameters of type read.
 
 This option specifies that this parameter holds the path to the private key for setting up SSH communication based on public key authentication. This is an alternative way to set up an SSH connection (instead of user credentials).
 
-The content of the "ssh options" parameter is as follows: ```key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase```
+The content of the "ssh options" parameter is as follows: `key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase`
 
 Only applicable for parameters of type read.
 
 > [!NOTE]
-> Dataminer cannot derive the SSH username from your public-/private key pair. If you authenticate with a key through private/public key pair, you must still specify the SSH Username parameter explicitly. 
+> DataMiner cannot derive the SSH username from your public/private key pair. If you authenticate with a key through a private/public key pair, you must still specify the SSH Username parameter explicitly.
