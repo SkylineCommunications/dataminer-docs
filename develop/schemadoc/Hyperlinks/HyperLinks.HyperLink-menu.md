@@ -4,7 +4,7 @@ uid: HyperLinks.HyperLink-menu
 
 # menu attribute
 
-Configures in which submenu (or in the root) of the shortcut menu the item should appear.
+Configures where in the shortcut menu (a specific submenu or the root) the item should appear.
 
 ## Content Type
 

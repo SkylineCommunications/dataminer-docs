@@ -95,7 +95,8 @@ A legacy hyperlink must have the following syntax:
 
 ---
 
-Refer to [HyperLink](xref:HyperLinks.HyperLink) for more information about the content of this tag and the possible attributes.
+> [!TIP]
+> Refer to [HyperLink](xref:HyperLinks.HyperLink) for more information about the content of this tag and the possible attributes.
 
 ## Upgrading legacy hyperlinks to second-generation hyperlinks
 
@@ -193,7 +194,7 @@ For example, if a hyperlink of type "openelement" contains the following content
 
 ### About the \[VID\] keyword
 
-It is possible to specify a view filter with the \[VID\] keyword in second-generation hyperlinks of type "url", "execute", "script", and "openview"
+It is possible to specify a view filter with the \[VID\] keyword in second-generation hyperlinks of type "url", "execute", "script", and "openview".
 
 For example:
 

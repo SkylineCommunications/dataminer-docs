@@ -70,7 +70,7 @@ Inside the *\<HyperLink>* tag, enter the actual command that has to be displayed
 
 The string you specify can contain:
 
-- [Keywords](#keywords), which allow you to insert real-time data in the command name that is displayed.
+- [Keywords](xref:Hyperlinks_xml#keywords), which allow you to insert real-time data in the command name that is displayed.
 - [Placeholders](xref:Hyperlinks_xml#placeholders), which allow you to insert parts of the value of the alarm or information event in the command that is displayed.
 
 ---
@@ -91,7 +91,7 @@ The string you specify can contain:
 | [descriptionParsing](xref:HyperLinks.HyperLink-descriptionParsing) | string |  | Specifies that the command should appear only in the shortcut menu of alarms and information events with a specific description. |
 | [filterElement](xref:HyperLinks.HyperLink-filterElement) | string |  | Defines a conditional hyperlink. The hyperlink will only be displayed for alarms matching the specified filter. |
 | [id](xref:HyperLinks.HyperLink-id) | integer | Yes | Specifies the unique identifier of the hyperlink. Used primarily for synchronization purposes. |
-| [menu](xref:HyperLinks.HyperLink-menu) | string |  | Configures in which submenu (or in the root) of the shortcut menu the item should appear. |
+| [menu](xref:HyperLinks.HyperLink-menu) | string |  | Configures where in the shortcut menu (a specific submenu or the root) the item should appear. |
 | [name](xref:HyperLinks.HyperLink-name) | string |  | Specifies the name of the command as it has to appear in the user interfaces. |
 | [type](xref:HyperLinks.HyperLink-type) | string | Yes | Specifies the hyperlink type. |
 | [valueParsing](xref:HyperLinks.HyperLink-valueParsing) | string |  | Configures the command to appear only in the shortcut menu of alarms and information events with a specific value. |

@@ -16,7 +16,7 @@ boolean
 
 ## Remarks
 
-By default, the different parameters will be separated by means of *+* characters. If you want to specify a custom separator, add a separator attribute, and specify the separator.
+By default, the different parameters will be separated by means of "+" characters. If you want to specify a custom separator, add a separator attribute, and specify the separator.
 
 Example:
 
