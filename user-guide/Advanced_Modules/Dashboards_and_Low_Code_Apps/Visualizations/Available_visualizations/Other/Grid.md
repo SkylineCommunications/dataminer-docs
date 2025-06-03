@@ -6,7 +6,7 @@ uid: DashboardGrid
 
 Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 34761-->.
 
-The grid component is a versatile visualization designed to display the results of queries in a tile-based layout. It is particularly suited for  It is perfect for dashboards that  displays query-based data in a clear, grid format with support for configurable display of rows and columns, item templates, and dynamic scaling to fit any dashboard design. Templates allow full visual customization of grid items, including conditional formatting and interactive behaviors like triggering actions on cell selection.
+The grid component is a versatile visualization designed to display the results of queries in a tile-based layout. It is particularly suited for  It is perfect for dashboards that  displays query-based data in a clear, grid format with support for configurable display of rows and columns, item templates, and dynamic scaling to fit any dashboard design. Templates allow full visual customization of grid items, including conditional formatting and interactive behaviors like triggering actions on cell selection. <!--This is a work in progress-->
 
 With this component, you can:
 
@@ -17,12 +17,6 @@ This component allows you to visualize data as a grid.
 ![Grid](~/user-guide/images/Grid.png)<br>*Grid component in DataMiner 10.4.1*
 
 From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42128-->, when you right-click the grid component, you can access the browser's context menu and its options. For example, you can select text in a grid component and copy it to another application using the browser's *Copy* command.
-
-## Enabling the component in soft launch
-
-From DataMiner 10.2.12 onwards, the grid component is available in soft launch, if the soft-launch option *ReportsAndDashboardsDynamicVisuals* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
-
-If you use the preview version of the grid component, its functionality may be different from what is described below.
 
 ## Supported data types
 
@@ -45,19 +39,6 @@ The grid component is used to display the results of queries in grid format. It 
 
 - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a cell in the grid**, it will by default be highlighted with a blue border and a light-blue background. This can for instance be useful when the grid's [component data](xref:Component_Data) (i.e. *Components* > *Grid #* > *Selected items* > *Tables*) is used in another component, clearly indicating which data is driving the content in the linked component.
 
-## Filtering grid data via the URL
-
-You can filter the content of a grid component by specifying a query column and a filter value directly in the page URL.
-
-1. Hover the mouse pointer over the component and click the filter icon.
-
-1. Add a filter from the *URL* > *Data* > *Query column* section of the *Data* pane.
-
-   > [!NOTE]
-   > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, you can find the query column filter in the *Feeds > URL > Query columns* section of the *Data* pane.
-
-You can repeat this several times in order to filter on several query columns<!--RN 34761-->.
-
 ## Configuration options
 
 ### Grid layout
@@ -68,8 +49,8 @@ Additionally, the following layout options are also available:
 
 | Section | Option | Description |
 |--|--|--|
-| Filtering & Highlighting | Highlight | Toggle the switch to determine whether the nodes that match the filter will be highlighted. Enabled by default. |
-| Filtering & Highlighting | Opacity | Set the level of transparency of the items that do not match the filter. This option is only available when *Highlight* is enabled. |
+| Filtering & Highlighting | Highlight | Toggle the switch to determine whether the nodes that match the filter will be highlighted. Enabled by default. For more information, see [Using the *Highlight* option with a query filter](#using-the-highlight-option-with-a-query-filter). |
+| Filtering & Highlighting | Opacity | Set the level of transparency of the items that do not match the filter. This option is only available when *Highlight* is enabled. For more information, see [Using the *Highlight* option with a query filter](#using-the-highlight-option-with-a-query-filter). |
 | Advanced | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
 | Advanced | Grid template | Configure the number of columns and rows in the grid, and adjust scaling options<!--RN 34761 + 34781-->. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
 | Item templates | Browse templates<br>*or* Reuse template (prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
@@ -106,6 +87,24 @@ In the *Layout* pane for this component, the *Item templates* section is availab
 
 -
 
+#### Using the 'highlight' option with a query filter
+
+To **visually distinguish between items that match your filter criteria and those that do not**, you can combine the *Highlight* option of the grid component with a query filter component. This allows you to lower the opacity of non-matching items while keeping relevant results clearly visible.
+
+1. In the *Layout* pane, make sure the *Filtering & Highlighting* > *Highlight* option is enabled.
+
+1. Set your preferred opacity, e.g. 20 %. This determines how clearly you will see the grid items that do not meet the criteria specified in the query filter.
+
+1. Add a [query filter visualization](xref:DashboardQueryFilter) to your app or dashboard.
+
+1. Apply the same query data to the query filter that is used by the grid component.
+
+1. In the *Data* pane, navigate to *All available data* > *Components* > *Query filter #*, and drag the *Query columns* data item onto your grid component.
+
+   In read mode, you can now use the query filter component to filter and refine the data displayed in the grid component. Items that do not meet the specified criteria will be shown with lowered opacity.
+
+![Highlight](~/user-guide/images/Grid_Highlight.gif)<br>*Grid component and query filter component in DataMiner 10.5.6*
+
 ### Grid settings
 
 In the *Settings* pane for this component, you can customize its behavior to suit your requirements.
@@ -117,3 +116,9 @@ In the *Settings* pane for this component, you can customize its behavior to sui
 | General | Use dynamic units | Determine whether parameter units will change dynamically based on their value and protocol definition. This option is only available when *Override dynamic units* is enabled. |
 | Data retrieval | Update data | Toggle the switch to determine whether the data in the grid should be refreshed automatically (provided this is supported by the data source). See [Query updates](xref:Query_updates).<!--RN 37269--> |
 | Initial selection | Select first item by default | Available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->. Toggle the switch to determine whether the first item is selected by default. When enabled, this is the value that will automatically be applied in the grid whenever the component is loaded or when the data in the grid is refreshed, unless a custom URL is used specifying a different value. Disabled by default. |
+
+## Enabling the component in soft launch
+
+From DataMiner 10.2.12 onwards, the grid component is available in soft launch, if the soft-launch option *ReportsAndDashboardsDynamicVisuals* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
+If you use the preview version of the grid component, its functionality may be different from what is described below.
