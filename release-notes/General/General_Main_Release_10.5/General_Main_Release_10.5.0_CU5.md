@@ -56,3 +56,9 @@ The number of TPL tasks has now been reduced, especially when writing trend data
 In some cases, a DataMiner Agent would not start up properly, and the following error would get logged in the *SLDataMiner.txt* log file:
 
 `The object exporter specified was not found`
+
+#### Problem with conditional alarm monitoring based on a condition made up of multiple AND/OR clauses [ID 42942]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When, in an alarm template, you had configured conditional monitoring based on a condition made up of multiple AND/OR clauses, up to now, some of those AND/OR clauses could incorrectly get disabled when the alarm template was refreshed in SLElement following e.g. a template update.
