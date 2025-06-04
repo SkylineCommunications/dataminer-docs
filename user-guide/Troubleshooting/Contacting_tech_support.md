@@ -6,6 +6,8 @@ uid: Contacting_tech_support
 
 When you encounter an issue with the software and you need help to resolve it, contact DataMiner tech support by creating a ticket using the [Support application](xref:User_operations_support).
 
+Alternatively, you can consult the DataMiner Community first by posting a question in the [DataMiner Dojo Q&A](https://community.dataminer.services/questions/).
+
 If for some reason you cannot access the Support application and create a ticket, you can instead contact Skyline's Support helpdesk:
 
 - Email: <support@dataminer.services>
