@@ -1,0 +1,105 @@
+---
+uid: Implementing_OnRequestScriptInfo_Entry_Point
+---
+
+# Implementing the OnRequestScriptInfo entry point
+
+From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point can be implemented in an Automation script. This will allow other Automation scripts (or any other code) to request information about the script in question. The [example](#orchestration-script-example) bellow uses the entry point to detect which profile parameter values a script needs to orchestrate a device.
+
+## Using the entry point
+
+To use the entry point, add a method with the following signature to the script:
+
+```csharp
+[AutomationEntryPoint(AutomationEntryPointType.Types.OnRequestScriptInfo)]
+public RequestScriptInfoOutput OnRequestScriptInfoRequest(IEngine engine, RequestScriptInfoInput inputData)
+```
+
+Both [RequestScriptInfoInput](xref:Skyline.DataMiner.Net.Automation.RequestScriptInfoInput) and [RequestScriptInfoOutput](xref:Skyline.DataMiner.Net.Automation.RequestScriptInfoOutput) have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. It is strongly recommended to keep the passed data below 20 MB. If larger chunks need to be passed, it's suggested to instead pass a reference to that information.
+
+## Arguments
+
+If the script has any script parameters, dummies or memory files, then these are not required when executing the `OnRequestScriptInfo` entry point. However, they are required when executing the `Run` method of that same script.
+
+- When an omitted script parameter is used in the entry point logic, retrieving the script parameter is possible, but its value will be an empty string.
+- When an omitted dummy is used in the entry point logic, retrieving the dummy is possible, but it will refer to DMA ID -1 and element ID -1. Any actions that use the dummy will fail with an exception.
+- When an omitted memory file is used in the entry point logic, retrieving the memory file is possible, but it will refer to a linked file that is empty. Retrieving a value using the memory file will fail with an exception.
+
+## Starting the entry point
+
+To start the `OnRequestScriptInfo` entry point the below methods can be used. Within an Automation script a [subscript](#subscript) should be started. Using the [ExecuteScriptMessage](#executescriptmessage) will only allow 10 simultaneous executions at most.
+
+### Subscript
+
+To execute the `OnRequestScriptInfo` entry point within Automation, you have to use the [PrepareSubScript](xref:Skyline.DataMiner.Automation.Engine.OnRequestScriptInfo) method.
+
+In the following snippet, the entry point of script 'Script with entry point' will be started. As input data the 'Action' key with value 'RequestValues'. After executing the script's entry point synchronously (default behavior), the returned output is checked for the value of key 'ActionResult'.
+
+```csharp
+var input = new RequestScriptInfoInput
+{
+    Data = new Dictionary<string, string>
+    {
+        { "Action", "RequestValues" },
+    },
+};
+
+var subscriptOptions = engine.PrepareSubScript("Script with entry point", input);
+subscriptOptions.StartScript();
+
+if (subscriptOptions.Output?.Data is null ||
+    !subscriptOptions.Output.Data.TryGetValue("ActionResult", out string resultKeyValue))
+{
+    engine.ExitFail("Expected an ActionResult in the output of the subscript.");
+}
+```
+
+The script should be started synchronously. It will return a subscript options object with an `Output` property containing the information returned by the script. The `Input` property can be used to check or update the data sent to the script.
+
+### ExecuteScriptMessage
+
+The `ExecuteScriptMessage` can be used to trigger the entry point using an SLNet connection.
+
+In the following snippet, the entry point of script 'Script with entry point' will be started. As input data the 'Action' key with value 'RequestValues'. After executing the script's entry point synchronously, the returned output is checked for the value of key 'ActionResult'.
+
+```csharp
+var input = new RequestScriptInfoInput
+{
+    Data = new Dictionary<string, string>
+    {
+        { "Action", "RequestValues" },
+    },
+};
+
+var msg = new ExecuteScriptMessage
+{
+    ScriptName = "Script with entry point",
+    Options = new SA(new[] { "DEFER:FALSE" }),
+    CustomEntryPoint = new AutomationEntryPoint
+    {
+        EntryPointType = AutomationEntryPoint.Types.OnRequestScriptInfo,
+        Parameters = new List<object> { input },
+    },
+};
+
+var response = slnetConnection.HandleSingleResponseMessage(msg) as ExecuteScriptResponseMessage;
+var output = response?.EntryPointResult?.Result as RequestScriptInfoOutput;
+
+if (output?.Data is null ||
+    !output.Data.TryGetValue("ActionResult", out string resultKeyValue))
+{
+    throw new InvalidOperationException("Expected an ActionResult in the output of the subscript.");
+}
+```
+
+When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will be returned. The information is returned in an `EntryPointResult.Result` property of type `RequestScriptInfoOutput`.
+
+This message should not be used to request the information in an Automation script.
+
+## Orchestration script example
+
+In this example a library was created, to easily implement Automation scripts that orchestrate a function of a device, resource or element. The `OnRequestScriptInfo` entry point is used to detect which values, defined as profile parameters, such a script needs to perform the orchestration.
+
+The [OrchestrationHelperExample repository](https://github.com/SkylineCommunications/SLC-S-OrchestrationHelperExample) is available on GitHub.
+
+A more detailed explanation, together with the flow of the scripts, is available in [the project's README](https://github.com/SkylineCommunications/SLC-S-OrchestrationHelperExample?tab=readme-ov-file#technical-documentation-for-the-orchestrationhelper-example).
