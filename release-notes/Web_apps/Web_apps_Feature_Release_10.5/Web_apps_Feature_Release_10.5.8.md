@@ -32,6 +32,12 @@ Up to now, certain component settings would automatically get saved in a dashboa
 
 From now on, these automatically saved component settings will only get saved in a dashboard or low-code code when you are in edit mode.
 
+#### Web apps: Email address of Skyline support has been changed to <support@dataminer.services> [ID 43093]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In all DataMiner web apps, the email address of Skyline support has been changed from <techsupport@skyline.be> to <support@dataminer.services>.
+
 ### Fixes
 
 #### Low-Code Apps: It would incorrectly be possible to publish a low-code app while it was still being saved [ID 42680]
