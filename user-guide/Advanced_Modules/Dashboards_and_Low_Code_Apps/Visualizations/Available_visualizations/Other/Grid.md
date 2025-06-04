@@ -30,6 +30,8 @@ With this component, you can:
 
 ## Using the grid component
 
+A grid component exists of a number of columns and rows, depending on the [layout options](#layout-and-scaling-options) configured in the *Grid template* section. If the number of grid items exceeds the size of the component, you can navigate through the columns and rows with a scrollbar that appears when you hover over the component.
+
 - In read mode, you can manipulate the grid component to **navigate through the columns and rows**:
 
   - If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to navigate through the items.
