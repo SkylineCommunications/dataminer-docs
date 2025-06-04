@@ -71,3 +71,9 @@ In some cases, components used in a low-code app could cause a user's web browse
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 When, in the `C:\Skyline DataMiner\Webpages\API\Web.config` file, you had specified that all GQI-related operations had to be executed by the GQI DxM, in some cases, SLHelper would incorrectly still be used to process GQI queries.
+
+#### Low-Code Apps: Not possible to edit any app when the app.config.json of a published app did not contain an ID [ID 43106]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When the *app.config.json* file of a published app did not contain an ID, up to now, it would not be possible to edit any of the existing apps.
