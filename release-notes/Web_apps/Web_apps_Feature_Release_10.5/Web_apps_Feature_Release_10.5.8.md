@@ -18,7 +18,59 @@ uid: Web_apps_Feature_Release_10.5.8
 
 ## New features
 
-*No new features have been added yet.*
+#### Interactive Automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+To prevent dropdown boxes in interactive Automation scripts to get loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
+
+Note that this feature will only work if you use the redesigned `UIBlockType.DropDown` component. To use this redesigned component, add the following argument to the URL of the dashboard or low-code app:
+
+`?useNewIASInputComponents=true`
+
+To enable filtering for `UIBlockType.DropDown` component, in the `UIBlockDefinition`, set the `WantsOnFilter` property to true.
+
+The information returned by a `ShowUI` command (`UIResults`) has been extended with the following methods to get the filter value:
+
+- `WasOnFilter()` will return true if a filter value was entered.
+
+  ```csharp
+  bool WasOnFilter(string destVar)
+  ```
+
+- `GetFilterString()` will return the filter value that was entered when `WasOnFilter()` was set to true.
+
+  ```csharp
+  string GetFilterString(string destVar)
+  ```
+
+Example:
+
+```csharp
+var dropDownControl = new UIBlockDefinition
+{
+    Type = UIBlockType.DropDown,
+    DestVar = "DropDownVariable",
+    // Set WantsOnFilter to true, if changing the filter of this UI block item should trigger an OnFilter event. False, by default.
+    WantsOnFilter = true,
+};
+
+// ...
+
+// WasOnFilter() will return true if the user entered a filter value.
+if (results.WasOnFilter("DropDownVariable"))
+{
+    // GetString() will return the current value of the control, at the time the filter value was entered.
+    var currentValue = results.GetString("DropDownVariable");
+    // When WasOnFilter() was true, GetFilterString() will return the filter value that was entered.
+    var filterValue = results.GetFilterString("DropDownVariable");
+}
+```
+
+> [!NOTE]
+>
+> - While filtering the dropdown box entries, the script's logic is responsible for adding the currently selected entry (if relevant). Otherwise, the dropdown box will consider that value as incorrect and clear itself. Consider only filtering the display value of the entries (case-invariant if possible).
+> - Scripts using this feature should not include components of which the variable name (DestVar) contains "_FilterString". Otherwise, the identifier will not be unique.
 
 ## Changes
 
