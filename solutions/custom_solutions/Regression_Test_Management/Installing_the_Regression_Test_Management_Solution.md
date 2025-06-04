@@ -16,7 +16,7 @@ Before deploying this solution, ensure the following:
 
 ## Deploying the solution from the Catalog
 
-1. In the DataMiner Catalog, go to the [Regression Test Management package](https://catalog.dataminer.services/details/74ddb623-f9fb-4a99-acee-0965ba495e2d).
+1. In the DataMiner Catalog, go to the [Regression Test Management package](https://catalog.dataminer.services/details/27636bb4-e3ce-4a2a-bd28-fe514a4ac5e7).
 
 1. Click *Deploy*, and then select the DataMiner System you want to deploy the package to.
 
