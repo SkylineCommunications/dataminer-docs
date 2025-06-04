@@ -6,26 +6,29 @@ uid: DashboardGrid
 
 Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 34761-->.
 
-The grid component is a versatile visualization designed to display the results of queries in a tile-based layout. It is particularly suited for  It is perfect for dashboards that  displays query-based data in a clear, grid format with support for configurable display of rows and columns, item templates, and dynamic scaling to fit any dashboard design. Templates allow full visual customization of grid items, including conditional formatting and interactive behaviors like triggering actions on cell selection. <!--This is a work in progress-->
+The grid component is a versatile visualization designed to display the results of queries in a clear, tile-based grid format. It offers a wide range of customization options, such as dynamic scaling that automatically adjusts the layout, and features like conditional formatting and interactive behavior through templates. This lets you highlight key data and trigger actions directly from each grid block.
+
+![Grid](~/user-guide/images/Grid.png)<br>*Grid component in DataMiner 10.5.6*
 
 With this component, you can:
 
--
+- Instantly assess the status of items at a glance, using conditional formatting that highlights issues. For example, a red block might indicate a service that requires attention.
 
-This component allows you to visualize data as a grid.
+- Interact with individual blocks to trigger actions, such as opening a pop-up window with more details about an upcoming event.
 
-![Grid](~/user-guide/images/Grid.png)<br>*Grid component in DataMiner 10.4.1*
+- Focus on items that meet specific criteria, with unmatched blocks automatically dimmed to reduce visual noise.
 
-From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42128-->, when you right-click the grid component, you can access the browser's context menu and its options. For example, you can select text in a grid component and copy it to another application using the browser's *Copy* command.
+- Stay focused and avoid overwhelming views, even when there is a lot of data. You can limit how many grid blocks appear at once, while still being able to explore everything intuitively.
 
-## Supported data types
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
+  <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>
+    Interested in what's possible with the table component? Deploy our <a href="https://catalog.dataminer.services/details/6e79f0d1-e622-4fce-8939-d9779beed651" style="color: #657AB7;"><i>Table show case</i> app</a> to see the component in action.
+  </div>
+  <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
+</div>
 
-The grid component is used to display the results of queries in grid format. It should therefore **always be configured with [query data input](xref:Query_Data)**.
-
-> [!TIP]
-> For an example of how to configure a GQI query that can be used as data input for a grid component, see [Tutorial: Getting started with the grid component](xref:Tutorial_Apps_Grid).
-
-## Using the grid component in read mode
+## Using the grid component
 
 - In read mode, you can manipulate the grid component to **navigate through the columns and rows**:
 
@@ -38,6 +41,15 @@ The grid component is used to display the results of queries in grid format. It 
     - You can select grid items by tapping them.
 
 - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a cell in the grid**, it will by default be highlighted with a blue border and a light-blue background. This can for instance be useful when the grid's [component data](xref:Component_Data) (i.e. *Components* > *Grid #* > *Selected items* > *Tables*) is used in another component, clearly indicating which data is driving the content in the linked component.
+
+## Supported data types
+
+The grid component is used to display the results of queries in grid format. It should therefore **always be configured with [query data input](xref:Query_Data)**.
+
+Each row in a query corresponds to a column in the grid.
+
+> [!TIP]
+> For an example of how to configure a GQI query that can be used as data input for a grid component, see [Tutorial: Getting started with the grid component](xref:Tutorial_Apps_Grid).
 
 ## Configuration options
 
