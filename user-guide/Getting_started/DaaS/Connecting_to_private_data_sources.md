@@ -12,19 +12,7 @@ To establish this connection:
 
    - You have configured a [supported VPN device](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices) for Skyline to connect to.
 
-   - One of the following supported encryption and authentication combinations is used:
-
-     - For Phase 1:
-
-       - AES256 and SHA1
-       - 3DES and SHA1
-       - AES256 and SHA256
-
-     - For Phase 2:
-
-       - AES256 and SHA1
-       - 3DES and SHA1
-       - AES256 and SHA256
+   - You can configure the following [Cryptographic algorithms & key strengths](https://learn.microsoft.com/en-us/azure/vpn-gateway/ipsec-ike-policy-howto#cryptographic-algorithms--key-strengths).
 
 1. Contact <daas@dataminer.services> to set up a site-to-site VPN connection.
 
@@ -37,17 +25,23 @@ To establish this connection:
    - The address space of the network(s) that should be reachable by your DaaS system.
   
    - If BGP should be enabled, the ASN and BGP peer IP address.
+
+   - The preferred cryptographic algorithms & key strengths. We prefer to use the most secure and efficient settings that are available on your device.
   
    - Any other information that might be relevant for your specific setup.
 
-   Skyline will enable an [Azure VPN Gateway](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways) in the virtual network of your DaaS environment. By default the [Generation 1 VPN Gateway SKU *VpnGw1AZ*](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus) will be used. If you require another SKU, let us know. 
+Skyline will enable an [Azure VPN Gateway](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways) in the virtual network of your DaaS environment. By default the [Generation 1 VPN Gateway SKU *VpnGw1AZ*](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus) will be used.
+   
+The "AZ" in this SKU refers to Zone Redundant, which means it automatically distributes the gateway across multiple Availability Zones to enhance redundancy and fault tolerance. This setup ensures higher availability and resilience against zone-level failures.
 
-   By default, the IKEv2 protocol will be used. If you would prefer a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq), let us know.
+If you require another SKU, let us know.
+
+By default, the IKEv2 protocol will be used. If you would prefer a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq), let us know.
 
 1. Once the VPN Gateway has been enabled, Skyline will provide you with the following information:
 
    - The public IP of the Azure VPN Gateway.
 
-   - The DaaS address space (by default 172.23.12.0/22, but this can be different to prevent an overlap with your address space).
+   - The DaaS address space (by default 172.23.0.0/16, but this can be different to prevent an overlap with your address space).
 
-   - The BGP ASN.
+   - The BGP ASN (if BGP is set)
