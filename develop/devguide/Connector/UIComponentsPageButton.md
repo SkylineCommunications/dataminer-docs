@@ -52,7 +52,7 @@ To define a page button:
 > - Page buttons are typically used to display a limited amount of data. A pop-up window opened by means of a page button should contain either data of less importance or data that should remain visible while users are working on other pages.
 > - A pop-up page opened by means of a page button should not contain page buttons. In other words, nesting of page buttons should be avoided.
 > - The page buttons are right-aligned on the page. So in the example above, this means that the Settings page button will be displayed to the far right, while the Advanced Settings page button will be displayed to its left.
-> - In the page tree, the popup pages are listed in the order defined in the protocol.
+> - In the page tree, the pop-up pages are listed in the order defined in the protocol.
 
 ## See also
 
