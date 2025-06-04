@@ -12,7 +12,7 @@ To establish this connection:
 
    - You have configured a [supported VPN device](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices) for Skyline to connect to.
 
-   - You can configure the following [Cryptographic algorithms & key strengths](https://learn.microsoft.com/en-us/azure/vpn-gateway/ipsec-ike-policy-howto#cryptographic-algorithms--key-strengths).
+   - You have configured one of the [supported cryptographic algorithms and key strengths options](https://learn.microsoft.com/en-us/azure/vpn-gateway/ipsec-ike-policy-howto#cryptographic-algorithms--key-strengths).
 
 1. Contact <daas@dataminer.services> to set up a site-to-site VPN connection.
 
