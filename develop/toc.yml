@@ -3514,6 +3514,8 @@ items:
         topicUid: DMSScript.Author
       - name: CheckSets
         topicUid: DMSScript.CheckSets
+      - name: Interactivity
+        topicUid: DMSScript.Interactivity
       - name: Description
         topicUid: DMSScript.Description
       - name: Folder
@@ -3650,6 +3652,8 @@ items:
         topicUid: Automation-EnumTrueFalseLowerCase
       - name: NonEmptyStringType
         topicUid: Automation-NonEmptyStringType
+      - name: InteractivityOptions
+        topicUid: Automation-InteractivityOptions
   - name: Functions schema
     topicUid: SchemaFunctions
     items:
