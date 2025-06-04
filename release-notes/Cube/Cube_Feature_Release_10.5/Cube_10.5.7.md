@@ -64,16 +64,16 @@ From now on, users will get more feedback when a DataMiner version mismatch is d
 
 - The error message displayed on the screen will now explicitly say that a version mismatch was detected and that an update is required. Also, users will be referred to the [DataMiner Cube deployment methods](xref:DataMiner_Cube_deployment_methods) documentation page for more details.
 
-#### DataMiner Cube desktop app: Manual updates will now always take into account the update track specified in the configuration file [ID 42939]
+#### DataMiner Cube desktop app: Clicking 'Check for updates' will now always let users download the latest app version of the chosen update track [ID 42939]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
-When, in the DataMiner Cube desktop app, you opened the cogwheel menu and clicked *Check for updates*, up to now, the app would check [dataminer.services](https://dataminer.services/) for the latest version of the app, but would not take into account the update track specified in its configuration file. It would also check for the latest Cube version for every cluster in the overview. However, in this case, it would take the update track into account.
+When, in the DataMiner Cube desktop app, you opened the cogwheel menu and clicked *Check for updates*, up to now, the app would not always let users download the very latest app version of the update track that had been chosen.
 
-From now on, when you open the cogwheel menu and click *Check for updates*, the app will always take into account the update track specified in its configuration file.
+From now on, when you open the cogwheel menu and click *Check for updates*, the app will always let users download the very latest app version of the update track that had been chosen.
 
 > [!NOTE]
-> This change in behavior only applies to manual updates, i.e. updates launched by a user clicking the *Check for updates* button. Automatic updates launched by a scheduled task will always respect the update track specified in the configuration file.
+> This change in behavior only applies to manual updates, i.e. updates launched by a user clicking the *Check for updates* button. Automatic updates launched by a scheduled task will always respect the update track and the phase delay specified in the configuration file.
 
 ### Fixes
 
