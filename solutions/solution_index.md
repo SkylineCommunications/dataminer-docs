@@ -52,6 +52,12 @@ uid: solution_index
   </div>
 </div>
 
+<div class="row"> 
+  <div class="column">
+    <a href="/solutions/product_solutions/Techex_TX_Core/00_techex-tx-core.html" title="Techex TX Core app" target="_self"><img src="~/solutions/images/Techex_TX_Core.svg" style="width:100%"></a>
+  </div>
+</div>
+
 ## DevTools
 
 <div class="row"> 
