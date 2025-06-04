@@ -30,17 +30,17 @@ With this component, you can:
 
 ## Using the grid component
 
-A grid component exists of a number of columns and rows, depending on the [layout options](#layout-and-scaling-options) configured in the *Grid template* section. If the number of grid items exceeds the size of the component, you can navigate through the columns and rows with a scrollbar that appears when you hover over the component.
+A grid component exists of a number of columns and rows, depending on the [layout options](#layout-and-scaling-options) configured in the *Grid template* section of the *Layout* pane. This defines how many items can be shown at once.
 
-- In read mode, you can manipulate the grid component to **navigate through the columns and rows**:
+If there are more items than fit in the grid, navigation arrows appear below it. These allow you to **move forward and back through the additional items**.
 
-  - If the number of items exceeds the size of the component, a scrollbar appears when you hover over the component, allowing you to navigate through the items.
+If the size of the individual grid blocks (which you can edit using the [Template Editor](xref:Template_Editor)) prevents all items from fitting within the visible area of the grid component, a scrollbar appears when you hover over it. You can use this scrollbar to scroll through the content.
 
-  - From DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 38191-->, when you are using a mobile device:
+From DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 38191-->, when you are using a mobile device:
 
-    - You can move the grid left or right and up or down by sliding one finger across the component.
+- You can move the grid left or right and up or down by sliding one finger across the component.
 
-    - You can select grid items by tapping them.
+- You can select grid items by tapping them.
 
 - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a cell in the grid**, it will by default be highlighted with a blue border and a light-blue background. This can for instance be useful when the grid's [component data](xref:Component_Data) (i.e. *Components* > *Grid #* > *Selected items* > *Tables*) is used in another component, clearly indicating which data is driving the content in the linked component.
 
