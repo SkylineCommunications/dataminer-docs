@@ -22,7 +22,7 @@ For smart-serial connections, you can specify the following connection settings 
   To add another accepted IP address, below the box, click *Add*.
 
   > [!NOTE]
-  > This functionality is only available if *AllowedIPAddresses.Disabled* is set to “false” in the user settings of the smart-serial connection in the protocol.
+  > This functionality can be disabled if *AllowedIPAddresses.Disabled* is set to “true” in the user settings of the smart-serial connection in the protocol.
 
 - **Bus address**: The bus address of the device. This is not always required.
 
