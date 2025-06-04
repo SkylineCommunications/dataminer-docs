@@ -48,6 +48,12 @@ From now on, it will only be possible to publish a low-code app when the app has
 
 When the `UIBlockType.Time` component had a time range configured in the AutomationTimeUpDownOptions property, up to now, the initialValue that was displayed, would incorrectly not get updated when the value changed.
 
+#### Dashboards app & Low-Code Apps - Line & area chart component: Y axis name change would incorrectly only be propagated to other Y axis settings after moving the mouse pointer [ID 42940]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When, in a *Line & area chart* component, you had changed the name of the Y axis, up to now, that name change would incorrectly only be propagated to other Y axis settings after you had moved the mouse pointer. From now on, the change will get propagated immediately.
+
 #### Low-Code Apps: Components used in a low-code app could cause a user's web browser to leak memory [ID 42955]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
