@@ -6,7 +6,7 @@ uid: Parameter_Data
 
 The *Parameters* data category allows you to use data from [parameters](xref:parameters) in your DataMiner System as input for components in your dashboards or low-code apps.
 
-When you expand the *Parameters* section in the *Data* pane, you first need to select an element, service, view, or protocol. Once selected, all available parameters for that source are listed.
+When you expand the *Parameters* section in the *Data* pane, you first need to select an element, service, view, or protocol. When this is done, all available parameters for that source are listed.
 
 The type of parameter you select determines how the data is interpreted:
 
