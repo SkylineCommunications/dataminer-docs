@@ -4,12 +4,19 @@ uid: netinsight-nimbra-vision-install
 
 # Installing the DataMiner NetInsight Nimbra Vision solution
 
-## DataMiner Prerequisites
+## Prerequisites
 
 - DataMiner license **Tier 2** or subscription
-- DataMiner Minimum version **10.4.8** or higher
-- Soft-launch features: GenericInterface
+- DataMiner minimum version **10.4.8** or higher
+- Soft-launch features: [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface)
 - [NetInsight Nimbra Vision DataMiner connector](https://catalog.dataminer.services/details/e48af0b9-b52c-4106-b0e0-22c44ead85f5)
+- The necessary **Nimbra Vision Licenses**:
+
+  - **Service Provisioning**: To provision services from Nimbra Vision.
+  - **Northbound Provisioning**: For access to the REST APIs.
+  - **Scheduling**: To schedule and book resources needed by the services, e.g. ports and trunk.
+capacity.
+  - **Autoroute**: To automatically create the path based on time, and to book available resources.
 
 ## Deploying the DataMiner NetInsight Nimbra Vision DataMiner solution
 
@@ -33,34 +40,29 @@ To access the NetInsight Nimbra Vision application:
 ![NetInsight Nimbra Vision](~/user-guide/images/netinsight-nimbra-vision-openapp.png)
 
 > [!NOTE]
-> This application enhances the functionality of existing NetInsight Nimbra Vision elements on your DMA. If these elements have not been configured yet, [add the necessary elements](xref:Adding_elements) using the [appropriate connectors](https://catalog.dataminer.services/details/e48af0b9-b52c-4106-b0e0-22c44ead85f5).
+> This application enhances the functionality of existing NetInsight Nimbra Vision elements on your DMA. If these elements have not been configured yet, [add the necessary elements](#dataminer-element-configuration) using the [appropriate connectors](https://catalog.dataminer.services/details/e48af0b9-b52c-4106-b0e0-22c44ead85f5).
 
-## DataMiner Element
-The solution package installs the latest version of the NetInsight Nimbra Vision connector. Alternatively, users can choose to install a specific version from the catalog, with a minimum required version of 1.0.1.1.
+## DataMiner element configuration
 
-After creating the element, note the IP address and port, additional details need to be configured, such as setting the Username and Password, located at the top of the configuration page, to authenticate requests. Since this connector uses the HTTP protocol with Subscriptions, you must allow the Nimbra Vision platform to send asynchronous messages to your DataMiner element (refer to the next section).
+The solution package installs the latest version of the NetInsight Nimbra Vision connector. You can also choose to install a specific version of the connector from the Catalog. However, note that the minimum required version of the connector is 1.0.1.1.
 
-### Subscriptions
-Nimbra Vision leverages webhooks and subscriptions to receive updates from specific endpoints with filtering capabilities. Currently, data filtering and new endpoints cannot be added manually or on-demand. For support with additional endpoints or subscriptions, please contact Skyline team members for evaluation.
+When you have [created the elements](xref:Adding_elements) using this connector, specify the username and password on their Configuration page so requests can be authenticated. In addition, as this connector uses the HTTP protocol with [subscriptions](#subscriptions), you must **allow the Nimbra Vision platform to send asynchronous messages** to your DataMiner element.
 
-To process asynchronous messages, you can use the default subscription address or define other entry points. The default address is: ```http://[DMS IP ADDRESS]/NimbraVision/subscriptions```
+### Subscriptions configuration
+
+Nimbra Vision leverages webhooks and subscriptions to receive updates from specific endpoints with filtering capabilities. Currently, data filtering and new endpoints cannot be added manually or on demand. For support with additional endpoints or subscriptions, please contact Skyline Communications.
+
+To process asynchronous messages, you can use the default subscription address or define other entry points. The default address is `http://[DMS IP ADDRESS]/NimbraVision/subscriptions`.
 
 To define which endpoints to subscribe to, navigate to the ***Subscriptions** subpage and enable the desired endpoints.
 
-## Nimbra Vision Licenses
-
-- **Service Provisioning**: to provision services from Nimbra Vision
-- **Northbound Provisioning**: access the REST APIs
-- **Scheduling**: to schedule and book resources needed by the services, e.g., ports and trunk
-capacity.
-- **Autoroute**: to automatically create the path based on time, and book and available resources.
-
 ### Function Enablement
-The autoroute must be enabled for the provisioner to automatically route a path. If not, then it will use whatever path the northbound application provided. If none was provided, then the network will route the channel but not create and book a path. 
 
-To enable above mentioned functions:
+The autoroute must be enabled for the provisioner to automatically route a path. If not, it will use whatever path the northbound application provided. If none was provided, then the network will route the channel but not create and book a path.
 
-- Install the licenses on page *Admin > System Administration > License Details*. In *Action* menu, select *Install...*.
-- Scheduling is enabled on page *Admin > Circuit Provisioning > Scheduling Configurations*, setting *Enabled: true*
-- Manually trigger creation of resources using the node context menu: *Scheduling > Refresh Resources...*. 
-- Default circuits to autoroute on page *Admin > Circuit Provisioning > Northbound Configuration*, setting *MSR Automatic Routing: true*
+To enable the above-mentioned functions:
+
+- Install the licenses on the page *Admin* > *System Administration* > *License Details*. In the *Action* menu, select *Install*.
+- Scheduling is enabled on the page *Admin* > *Circuit Provisioning* > *Scheduling Configurations*, by setting *Enabled* to *true*.
+- Manually trigger creation of resources using the node context menu by selecting *Scheduling* > *Refresh Resources*.
+- Default circuits to autoroute on page *Admin* > *Circuit Provisioning* > *Northbound Configuration*, setting *MSR Automatic Routing: true*
