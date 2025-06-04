@@ -25,6 +25,12 @@ When you create an Automation script, apart from an XML file containing the actu
 
 ### Fixes
 
+#### Problem when combining conditional monitoring templates into an alarm template group [ID 42839]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When multiple conditional alarm templates had been combined into an alarm template group, up to now, the resulting group template could fail to properly apply its conditions.
+
 #### SLDataGateway could stop working because of issues caused by TPL tasks [ID 42846]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
