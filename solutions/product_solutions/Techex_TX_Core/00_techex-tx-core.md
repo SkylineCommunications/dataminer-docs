@@ -2,23 +2,23 @@
 uid: techex-tx-core-overview
 ---
 
-# Techex TX Core
+# Techex TX Core app
+
 The Techex TX Core platform (formerly MW Core) manages TXEdges (formerly MW Edge) and captures telemetry data for real-time monitoring. DataMiner interfaces with TX Core through the REST API to manage monitored devices, channels, TX Edges, streams, sources, and outputs. Additionally, you can configure a statistics connection to provide telemetry data for sources and outputs, including ETR290 statistics.
 
 In this context, the Techex TX Core package offers a solution for end-to-end monitoring and orchestration of the TX Core platform and TX Edges from a single pane of glass. This network orchestration solution package is still an MVP and may not cover the full feature set of the TX Core and TX Edge products. It allows users to deploy a package for off-the-shelf monitoring and orchestration of the Techex TX Core platform.
 
 ![Techex TX Core](~/user-guide/images/techex-txcore-demo.gif)
 
-## Key Features
+## Key features
 
 - **Infrastructure management**: Managing and overseeing the tx core cluster has never been easier.
 - **End-to-end flow diagrams**: Easily monitor and manage your flows from end to end.
 - **Monitoring page**: Checking the system's health is now easier than ever.
 
+## Solution components
 
-## Solution Components
-
-This solution is composed by the following artifacts.
+This solution consists of the following artifacts.
 
 | Artifact name | Artifact type     | Location |
 |-------------|---------------------|------    |
@@ -26,5 +26,3 @@ This solution is composed by the following artifacts.
 | Techex MWCore | Visio    | [Catalog](https://catalog.dataminer.services/details/fdd0f03c-a5b5-49b6-8275-2c736e37369e)    |
 | Techex TX Core app | Low-code app | [Catalog](https://catalog.dataminer.services/details/3db5e1b5-9d22-44f6-bf6c-7c6c205f8c13) |
 | SLC-AS-TXCore | Automation | [GitHub](https://github.com/SkylineCommunications/SLC-AS-TXCore) |
-
-Please head over to [Techex TX Core](xref:techex-tx-core-howtouse) to get more details on the architecture of this solution.
