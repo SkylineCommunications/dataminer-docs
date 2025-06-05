@@ -4,7 +4,7 @@ uid: Implementing_OnRequestScriptInfo_Entry_Point
 
 # Implementing the OnRequestScriptInfo entry point
 
-From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point can be implemented in an Automation script. This will allow other Automation scripts (or any other code) to request information about the script in question. The [example](#orchestration-script-example) bellow uses the entry point to detect which profile parameter values a script needs to orchestrate a device.
+From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point can be implemented in an Automation script. This will allow other Automation scripts (or any other code) to request information about the script in question. The [example](#orchestration-script-example) below uses the entry point to detect which profile parameter values a script needs to orchestrate a device.
 
 ## Using the entry point
 
