@@ -37,7 +37,7 @@ Allows you to specify a deviation on the command to be verified using Command Ex
 > [!NOTE]
 > Command Execution Verification has to be enabled in MaintenanceSettings.xml.
 
-See also: [annalog](xref:Protocol.Params.Param.Measurement.Type#analog)
+See also: [analog](xref:Protocol.Params.Param.Measurement.Type#analog)
 
 ### Options for measurement type "discreet"
 
