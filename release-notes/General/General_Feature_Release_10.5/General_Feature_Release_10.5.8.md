@@ -43,6 +43,12 @@ For an example showing how to implement a dropdown box filter in an interactive 
 
 ### Enhancements
 
+#### DataMiner installer: Available STaaS regions will now be retrieved from dataminer.services [ID 43030]
+ 
+<!-- MR 10.6.0 - FR 10.5.8 -->
+ 
+When, while installing DataMiner using the DataMiner installer, you have selected to use STaaS for data storage, at some point, you will have to select the STaaS region. Up to now, you were only able to select one of two hard-coded regions. From now on, the available STaaS regions will be retrieved from dataminer.services by means of an API call.
+
 #### DataMiner upgrade: All TXF files will now be removed each time a DataMiner upgrade is performed [ID 43058]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
