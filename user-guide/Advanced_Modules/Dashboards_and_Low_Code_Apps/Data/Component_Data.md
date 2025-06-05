@@ -8,7 +8,9 @@ keywords: feeds
 > [!NOTE]
 > Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, component data is referred to as "feeds" instead.
 
-Many components in dashboards and low-code apps can be configured to be linked to component data, so that their content can be dynamically adjusted by the users.
+Many components in dashboards and low-code apps can be configured to be linked to component data, i.e. data that is made available by other components in the dashboard or app. This way, their content can be dynamically adjusted by users.
+
+## Configuration
 
 To have a component in your dashboard or app updated based on component data:
 

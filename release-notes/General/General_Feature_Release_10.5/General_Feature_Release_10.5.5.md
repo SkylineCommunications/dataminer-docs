@@ -412,9 +412,9 @@ When a logger table was queried, in some cases, the query would incorrectly not 
 
 #### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
 
-<!-- MR 10.6.0 - FR 10.5.5 -->
+<!-- MR 10.5.0 [CU5] - FR 10.5.5 -->
 
-Up to now, in some cases, behavioral anomaly detection would not be able to start up correctly due to the maximum cache size having been reached when the internal caches were being fetched after SLAnalytics had been started.
+Up to now, in some cases, behavioral anomaly detection would not be able to start up correctly because the maximum cache size had been reached when the internal caches were being fetched after SLAnalytics had been started.
 
 From now on, if the maximum cache size is reached, old model information might get discarded to allow behavioral anomaly detection to start up correctly. If this happens, the following error will be logged:
 

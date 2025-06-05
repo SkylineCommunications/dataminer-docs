@@ -15,15 +15,21 @@ uid: General_Main_Release_10.4.0_CU17
 
 ### Enhancements
 
-#### DataMiner upgrade: New entry added to FilesToDelete.txt to remove all TXF files [ID 43058]
+#### DataMiner upgrade: All TXF files will now be removed each time a DataMiner upgrade is performed [ID 43058]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
 
-Every DataMiner upgrade package includes a *FilesToDelete.txt* file, which lists all files in the `C:\Skyline DataMiner\` folder that should be deleted during the upgrade procedure. A new entry has now been added to that file to make sure all TXF files are removed from the `C:\Skyline DataMiner\Scripts\` folder.
+From now on, each time a DataMiner upgrade is performed, all TXF files will be automatically removed from the `C:\Skyline DataMiner\Scripts\` folder.
 
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying.
 
 ### Fixes
+
+#### Problem when combining conditional monitoring templates into an alarm template group [ID 42839]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When multiple conditional alarm templates had been combined into an alarm template group, up to now, the resulting group template could fail to properly apply its conditions.
 
 #### SLDataGateway could stop working because of issues caused by TPL tasks [ID 42846]
 
@@ -40,6 +46,12 @@ The number of TPL tasks has now been reduced, especially when writing trend data
 In some cases, a DataMiner Agent would not start up properly, and the following error would get logged in the *SLDataMiner.txt* log file:
 
 `The object exporter specified was not found`
+
+#### Problem with conditional alarm monitoring based on a condition made up of multiple AND/OR clauses [ID 42942]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When, in an alarm template, you had configured conditional monitoring based on a condition made up of multiple AND/OR clauses, up to now, some of those AND/OR clauses could incorrectly get disabled when the alarm template was refreshed in SLElement following e.g. a template update.
 
 #### Redundancy groups: Alarm mentioning that all redundancy resources are in use would incorrectly not get cleared [ID 42970]
 

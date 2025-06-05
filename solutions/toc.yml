@@ -338,6 +338,15 @@ items:
             topicUid: Deleting_maintenance_event
       - name: Planned Maintenance records
         topicUid: PLM_Records
+    - name: Regression Test Management
+      topicUid: Regression_Test_Management
+      items:
+        - name: Installing the Regression Test Management Solution
+          topicUid: Installing_the_Regression_Test_Management_Solution
+        - name: Configuring the Regression Test Management Solution
+          topicUid: Configuring_the_Regression_Test_Management_Solution
+        - name: Using the Regression Test Management Solution
+          topicUid: Using_the_Regression_Test_Management_Solution
     - name: Remote PHY Monitoring
       topicUid: Remote_PHY_Monitoring
       items:

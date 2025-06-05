@@ -696,6 +696,17 @@ The context name and context ID can be changed at run-time, and are not saved by
 
 The SLNet message `EditConnection`, which can be used to edit a connection from within a QAction, now has a `GenerateInformationEvents` property. If this property is set to true, information events will be generated when a connection is created, updated, or deleted.
 
+#### Interactive Automation scripts executed in a web app: Filtering values in a dropdown box [ID 42808]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+To prevent dropdown boxes in interactive Automation scripts to get loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
+
+For an example showing how to implement a dropdown box filter in an interactive Automation script, see [Interactive Automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]](xref:Web_apps_Feature_Release_10.5.8#interactive-automation-scripts-filtering-values-in-a-redesigned-ui-component-dropdown-id-42845).
+
+> [!IMPORTANT]
+> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+
 #### Automation: New OnRequestScriptInfo entry point [ID 42969]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->

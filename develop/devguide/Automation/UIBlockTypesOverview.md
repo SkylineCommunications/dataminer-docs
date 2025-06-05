@@ -209,6 +209,9 @@ foreach (string dropDownOption in dropDownOptions)
 uiBuilder.AppendBlock(blockItem);
 ```
 
+> [!NOTE]
+> It is possible for dropdowns in interactive Automation scripts to become overloaded with data. Although a filter can be used to locate items in a dropdown list, retrieving and displaying all available options could be time-consuming. From DataMiner 10.5.8/10.6.0 onwards<!-- RN 42808 / RN 42845 -->, for Automation scripts launched from web apps where the [`useNewIASInputComponents=true` URL parameter](xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url) is used, you can use [WasOnFilter](xref:Skyline.DataMiner.Automation.UIResults.WasOnFilter(System.String)) to get the filter value that was entered. The options added to the selection box can be filtered by the script. Enable the [WantsOnFilter](xref:Skyline.DataMiner.Automation.UIBlockDefinition.WantsOnFilter) property when defining the selection box.
+
 ## Executable
 
 Allows you to run a program execution. To do this, you must fill in the property *Extra* with the name of the program you want to execute.

@@ -24,9 +24,25 @@ uid: Cube_Feature_Release_10.5.8
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Current host of an element or service is now shown in Properties window [ID 42807]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When you right-click an element or a service, and select *Properties*, the *General* tab of the *Properties* window will now also display the current host, i.e. the DataMiner Agent that is currently hosting that element or service.
+
+#### Alarm Console: Enhanced performance when processing alarm focus information [ID 42938]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+Because of a number of enhancements, overall performance has increased when processing alarm focus information.
 
 ### Fixes
+
+#### Trending: Trend data between two gaps would incorrectly not be displayed [ID 42909]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In trend graphs showing gaps in the trend data, in some rare cases, the data between two gaps would incorrectly not be displayed.
 
 #### Problem when trying to open a view card in an EPM environment [ID 43049]
 

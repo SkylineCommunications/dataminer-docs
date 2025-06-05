@@ -323,7 +323,7 @@ items:
                 topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
               - name: Getting started with node edge graphs
                 topicUid: Tutorial_Apps_Node_Edge
-              - name: Creating a parameter table connected to an element feed
+              - name: Creating a custom parameter table connected to an element feed
                 topicUid: Creating_a_parameter_table_connected_to_an_element_feed
               - name: Creating an alarm dashboard for a daily DMS health check
                 topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
@@ -473,6 +473,9 @@ items:
                 topicUid: DashboardPivotTable
               - name: Table
                 topicUid: DashboardTable
+                items:
+                  - name: Filtering table content
+                    topicUid: Filtering_Table_Content
           - name: Charts
             items:
               - name: Column & Bar chart
@@ -525,19 +528,56 @@ items:
                 topicUid: TimeRange
               - name: Toggle
                 topicUid: Toggle
-      - name: Component data
-        topicUid: Component_Data
-      - name: URL data
-        topicUid: URL_data
-      - name: Flows
-        topicUid: Using_flows
+      - name: Available data types
+        topicUid: Available_Data_Types
         items:
-          - name: Configuring a flow
-            topicUid: Configuring_a_flow
-          - name: Flow operators
-            topicUid: Flow_operators
-      - name: Variables
-        topicUid: Variables
+          - name: Booking data
+            topicUid: Booking_Data
+          - name: Component data
+            topicUid: Component_Data
+          - name: Element data
+            topicUid: Element_Data
+          - name: Flows
+            topicUid: Using_flows
+            items:
+              - name: Configuring a flow
+                topicUid: Configuring_a_flow
+              - name: Flow operators
+                topicUid: Flow_operators
+          - name: Index data
+            topicUid: Index_Data
+          - name: Object manager definition data
+            topicUid: Object_Manager_Definition_Data
+          - name: Object manager instance data
+            topicUid: Object_Manager_Instance_Data
+          - name: Parameter table filters
+            topicUid: Parameter_Table_Filters
+          - name: Parameter data
+            topicUid: Parameter_Data
+          - name: Profile parameter data
+            topicUid: Profile_Parameter_Data
+          - name: Protocol data
+            topicUid: Protocol_Data
+          - name: Query data
+            topicUid: Query_Data
+          - name: Redundancy group data
+            topicUid: Redundancy_Group_Data
+          - name: Resource data
+            topicUid: Resource_Data
+          - name: Service definition data
+            topicUid: Service_Definition_Data
+          - name: Service data
+            topicUid: Service_Data
+          - name: Spectrum buffer data
+            topicUid: Spectrum_Buffer_Data
+          - name: Spectrum preset data
+            topicUid: Spectrum_Preset_Data
+          - name: URL data
+            topicUid: URL_data
+          - name: Variables
+            topicUid: Variables
+          - name: View data
+            topicUid: View_Data
       - name: Specifying data input in a dashboard or app URL
         topicUid: Specifying_data_input_in_a_URL
       - name: Generic Query Interface (GQI)

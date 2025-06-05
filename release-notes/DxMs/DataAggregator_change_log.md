@@ -4,6 +4,29 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 20 May 2025 - Enhancement - DataAggregator 3.1.0 - Use of GQI DxM [ID 39216] [ID 42831]
+
+The DataAggregator DxM is now capable of communicating directly with the GQI DxM. This will improve performance, as data will no longer have to flow through CoreGateway, SLNet, and SLHelper. To make use of the GQI DxM, the following manual configuration is required:
+
+1. Update the DataAggregator DxM to version 3.1.0.
+
+1. In the *appsettings.custom.json* file, add the following setting:
+
+   ```json
+   {
+     "QueryExecutorOptions": {
+       "UseGQIDxM": true
+     }
+   }
+   ```
+
+1. Restart the *DataAggregator* service.
+
+1. In case your setup already contains queries, run the *MigratorToGQIDxM* tool to migrate these to the format supported by the GQI DxM.
+
+> [!NOTE]
+> At present, the *MigratorToGQIDxM* tool is only available on demand by sending a request to <support@dataminer.services>.
+
 #### 6 September 2024 - Fix - DataAggregator 3.0.7 - Old CSV exports not removed [ID 40623]
 
 If Data Aggregator was configured to export data to CSV for multiple jobs, storing the CSV export files in separate folders according to the configured paths, it could occur that the old CSV files did not get removed after the number of days configured with the *DeleteAfterXDays* setting, which could eventually cause the system to run out of disk space. This has now been fixed: the old CSV files of every job will be deleted as configured.
