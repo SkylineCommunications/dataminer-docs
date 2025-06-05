@@ -199,6 +199,68 @@ namespace Skyline.DataMiner.Automation
 		}
 
 		/// <summary>
+		/// Gets the filter value from the specified destination variable that is linked to a dialog box item.
+		/// </summary>
+		/// <param name="key">The name of the destination variable.</param>
+		/// <returns>The filter value from the specified destination variable that is linked to a dialog box item.</returns>
+		/// <example>
+		/// <code>
+		/// UIResults results;
+		/// string initialValue = null;
+		/// string filter = null;
+		/// 
+		/// do
+		/// {
+		///   var uib = new UIBuilder()
+		///   {
+		///     RequireResponse = true,
+		///     RowDefs = "a;a",
+		///     ColumnDefs = "a",
+		///   };
+		/// 
+		///   var dropDownControl = new UIBlockDefinition
+		///   {
+		///     InitialValue = initialValue,
+		///     Type = UIBlockType.DropDown,
+		///     Row = 0,
+		///     Column = 0,
+		///     DestVar = "FilterDropdown",
+		///     WantsOnFilter = true,
+		///   };
+		///   uib.AppendBlock(dropDownControl);
+		///   // Add options to dropDownControl based on filter
+		/// 
+		///   var closeButton = new UIBlockDefinition
+		///   {
+		///     Type = UIBlockType.Button,
+		///     Text = "Close",
+		///     Row = 1,
+		///     Column = 0,
+		///     DestVar = "Close",
+		///   };
+		///   uib.AppendBlock(closeButton);
+		/// 
+		///   results = engine.ShowUI(uib);
+		/// 
+		///   if (results.WasOnFilter("FilterDropdown"))
+		///   {
+		///     initialValue = results.GetString("FilterDropdown");
+		///     filter = results.GetFilterString("FilterDropdown");
+		///   }
+		/// }
+		/// while (!results.WasButtonPressed("Close"));
+		/// </code>
+		/// </example>
+		/// <remarks>
+		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
+		/// <para>For <see cref="GetFilterString"/> to work, <see cref="UIBlockDefinition.WantsOnFilter"/> has to be set to true and <see cref="WasOnFilter"/> for the current result should return true.</para>
+		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps and <see href="xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url">specifying the useNewIASInputComponents=true URL parameter</see>.</note> <!-- RN 42808 / RN 42845 -->
+		/// <note type="important">When the options are filtered, the currently selected option (if still relevant) needs to be inserted as an option, regardless of whether the filter matches. Otherwise, the dropdown will consider that value incorrect, and the dropdown will be cleared.</note>
+		/// <note type="tip">Consider only filtering the display value of the options and, if possible, ensure that the filter is not case-sensitive.</note>
+		/// </remarks>
+		public string GetFilterString(string key) { return ""; }
+
+		/// <summary>
 		/// Gets the string value from the specified destination variable that is linked to a dialog box item (typically a text box).
 		/// </summary>
 		/// <param name="key">The name of the destination variable.</param>
@@ -374,7 +436,69 @@ namespace Skyline.DataMiner.Automation
 		/// </note>
 		/// </remarks>
 		public bool WasOnChange(string key) { return false; }
-		
+
+		/// <summary>
+		/// Returns a value indicating whether a filter value was entered for a specific dialog box item.
+		/// </summary>
+		/// <param name="key">The destination variable that is linked to the specific dialog box item.</param>
+		/// <returns><c>true</c> if the user entered a filter value; otherwise, <c>false</c>.</returns>
+		/// <example>
+		/// <code>
+		/// UIResults results;
+		/// string currentValue = null;
+		/// string filter = null;
+		/// 
+		/// do
+		/// {
+		///   var uib = new UIBuilder()
+		///   {
+		///     RequireResponse = true,
+		///     RowDefs = "a;a",
+		///     ColumnDefs = "a",
+		///   };
+		/// 
+		///   var dropDownControl = new UIBlockDefinition
+		///   {
+		///     InitialValue = currentValue,
+		///     Type = UIBlockType.DropDown,
+		///     Row = 0,
+		///     Column = 0,
+		///     DestVar = "FilterDropdown",
+		///     WantsOnFilter = true,
+		///   };
+		///   uib.AppendBlock(dropDownControl);
+		///   // Add options to dropDownControl based on filter...
+		/// 
+		///   var closeButton = new UIBlockDefinition
+		///   {
+		///     Type = UIBlockType.Button,
+		///     Text = "Close",
+		///     Row = 1,
+		///     Column = 0,
+		///     DestVar = "Close",
+		///   };
+		///   uib.AppendBlock(closeButton);
+		/// 
+		///   results = engine.ShowUI(uib);
+		/// 
+		///   if (results.WasOnFilter("FilterDropdown"))
+		///   {
+		///     currentValue = results.GetString("FilterDropdown");
+		///     filter = results.GetFilterString("FilterDropdown");
+		///   }
+		/// }
+		/// while (!results.WasButtonPressed("Close"));
+		/// </code>
+		/// </example>
+		/// <remarks>
+		/// <para>Applicable only in case <see cref="Type"/> is set to <see cref="UIBlockType.DropDown"/>.</para>
+		/// <note type="note">Available from DataMiner 10.5.8/10.6.0 onwards, in Automation scripts launched from web apps and <see href="xref:Configuring_app_actions_and_behavior_via_URL#configuring-app-behavior-via-the-url">specifying the useNewIASInputComponents=true URL parameter</see>.</note> <!-- RN 42808 / RN 42845 -->
+		/// <para>For <see cref="WasOnFilter"/> to work, <see cref="UIBlockDefinition.WantsOnFilter"/> has to be set to true. Use <see cref="GetFilterString"/> to get the filter value. See example.</para>
+		/// <note type="important">When the options are filtered, the currently selected option (if still relevant) needs to be inserted as an option, regardless of whether the filter matches. Otherwise, the dropdown will consider that value incorrect, and the dropdown will be cleared.</note>
+		/// <note type="tip">Consider only filtering the display value of the options and, if possible, ensure that the filter is not case-sensitive.</note>
+		/// </remarks>
+		public bool WasOnFilter(string key) { return false; }
+
 		/// <summary>
 		/// Returns true if a dialog box item with the given destination variable and with the property WantsOnFocusLoss set to true has lost focus.
 		/// </summary>
