@@ -10,7 +10,7 @@ When assigning [alarm severity levels](xref:Alarm_types#alarm-severity-levels) i
 
 Carefully select your alarm severity levels and always make sure they make sense. After all, alarm messages should be meaningful.
 
-- **Do monitor parameters just because you can**. It is not necessary and even not advisable to always use every possible severity level.
+- **Do not monitor parameters just because you can**. It is not necessary and even not advisable to always use every possible severity level.
 
 - Make sure the severity levels are **not too strict**. If you do, this could lead to alarm floods in which critical alarms might get overlooked.
 
