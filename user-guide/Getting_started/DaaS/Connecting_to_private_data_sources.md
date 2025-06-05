@@ -12,7 +12,9 @@ To establish this connection, after you have followed the [procedure below](#est
 
 By default the [Generation 1 VPN Gateway SKU *VpnGw1AZ*](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus) will be used. The "AZ" in this SKU refers to "Zone Redundant", which means it automatically distributes the gateway across multiple availability zones to enhance redundancy and fault tolerance. This setup ensures higher availability and resilience against zone-level failures. However, you can request a different SKU during the setup, and it is also possible to scale up to *VpnGw2AZ* and *VpnGw3AZ* (generation 1) later if necessary.
 
-By default, the IKEv2 protocol will be used. If a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq) is preferred, you can request this during the setup.
+By default, the IKEv2 protocol will be used. IKEv1 is possible but not recommended.
+
+If a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq) is preferred, you can request this during the setup.
 
 ## Establishing the site-to-site VPN connection
 
@@ -38,7 +40,7 @@ By default, the IKEv2 protocol will be used. If a [custom policy](https://learn.
 
    - Optionally, if the *VpnGw1AZ* [gateway SKU](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus) does not meet your requirements, the required SKU.
 
-   - Optionally, if you want a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq) to be used instead of the the IKEv2 protocol, the required policy.
+   - Optionally, if you want a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto?WT.mc_id=Portal-Microsoft_Azure_HybridNetworking#ipsecike-policy-faq) to be used, the required policy.
 
    - Any other information that might be relevant for your specific setup.
 
