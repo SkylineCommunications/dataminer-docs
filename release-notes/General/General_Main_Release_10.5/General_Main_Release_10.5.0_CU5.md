@@ -67,4 +67,4 @@ When, in an alarm template, you had configured conditional monitoring based on a
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
-In some cases, both GQI DxM and SLHelper could leak memory when executing GQI queries.
+In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e. ad hoc data source or custom operators) that throw exceptions from their life cycle methods.
