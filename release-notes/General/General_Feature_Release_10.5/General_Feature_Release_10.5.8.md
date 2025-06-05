@@ -106,3 +106,10 @@ In some cases, both GQI DxM and SLHelper could leak memory, especially when exec
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
 In some cases, SLHelper could leak memory because SLNet connections used by GQI extensions were not properly cleaned up.
+
+#### SLAutomation would leak memory each time an Automation script was run [ID 43073]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+<!-- Not added to MR 10.6.0 -->
+
+Up to now, SLAutomation would leak memory each time an Automation script was run.
