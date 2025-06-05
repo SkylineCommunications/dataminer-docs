@@ -51,7 +51,9 @@ Resources can be added to multiple pools, making them eligible for multiple purp
 
 ## Capabilities
 
-Capabilities give a **qualitative description** of a resource or pool, making it clear what it can be used for. When creating a workflow or job, users can specify the required capabilities for the resource to be used, and they can filter the resources in the system with these capability requirements in order to easily find a suitable one.
+Capabilities give a **qualitative description** of a resource or pool, making it clear what it can be used for.
+
+![Capabilities](~/solutions/images/Resource_Studio_Capabilities.png)
 
 Each capability has a name and a list of values. Users can assign one or more values to a resource or a pool. Examples of capabilities include:
 
@@ -63,7 +65,12 @@ Each capability has a name and a list of values. Users can assign one or more va
 
 Capabilities can be assigned either to a resource or to a resource pool. If they are assigned to a resource pool, all resources in that pool will inherit the capabilities of the pool, but extra capabilities can also be added to individual resources.
 
-![Capabilities](~/solutions/images/Resource_Studio_Capabilities.png)
+When creating a [workflow](xref:MO_Workflow_Designer#workflows) or a [job](xref:MO_Scheduling#jobs), users can specify the required capabilities of the resourcers to be used in the workflow or job. This will limit the resources available for picking only to those which satisfy the capability requirements, making it easier to find the suitable ones.
+
+For example, `Location` can be one important capability when planning operations where resources need to be on-site. You can assign locations to all you resources beforehand, and then upon job creation you can choose the location your resources need to have. Then, when picking the resources, only the ones on the actual location will show up. Capabilities offer a very flexible and general way of solving this problem for a wide array of cases.
+
+> [!TIP]
+> You can find a hands-on example of assigning capacities to resources and resource pools in this [tutorial](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities), and an example of using these capacities when creating jobs in this [tutorial](xref:Tutorial_MediaOps_Scheduling_Configurations)
 
 ## Capacities
 
@@ -79,7 +86,11 @@ Capacities, like capabilities, define how a resource can be used, but they are m
 
 - Decimals: The number of decimals allowed for values of this capacity.
 
-Typical examples of capacities are bandwidths, bit rates, symbol rates, etc. When booking a resource, users book only a specific amount of capacity on the resource. If a resource has a concurrency higher than one, other jobs can still make use of the remaining capacity on that same resource. Contrary to capabilities, capacities cannot be configured on pools, but only on individual resources.
+Typical examples of capacities are bandwidths, bit rates, symbol rates, etc. When booking a resource, users book only a specific amount of capacity on the resource. If a resource has a concurrency higher than one, other jobs can still make use of the remaining capacity on that same resource.
+
+Contrary to capabilities, capacities cannot be configured on pools, but only on individual resources.
+
+But similar to capabilities, capacities can also be used when creating jobs and workflows. You can specify capabilities on your resources, and then limit the resources available for picking in jobs and workflows based on those constraints.
 
 ![Capacities](~/solutions/images/Resource_Studio_Capacities.png)
 
