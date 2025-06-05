@@ -31,9 +31,9 @@ To start the `OnRequestScriptInfo` entry point the below methods can be used. Wi
 
 ### Subscript
 
-To execute the `OnRequestScriptInfo` entry point within Automation, you have to use the [PrepareSubScript](xref:Skyline.DataMiner.Automation.Engine.OnRequestScriptInfo) method.
+To execute the `OnRequestScriptInfo` entry point within Automation, you have to use the [PrepareSubScript](xref:Skyline.DataMiner.Automation.Engine.PrepareSubScript*) method.
 
-In the following snippet, the entry point of script 'Script with entry point' will be started. As input data the 'Action' key with value 'RequestValues'. After executing the script's entry point synchronously (default behavior), the returned output is checked for the value of key 'ActionResult'.
+In the following snippet, the entry point of the script "Script with entry point" will be started. As input data, the "Action" key with value "RequestValues" is used. After the script's entry point has been executed synchronously (i.e. the default behavior), the returned output is checked for the value of the key "ActionResult".
 
 ```csharp
 var input = new RequestScriptInfoInput
