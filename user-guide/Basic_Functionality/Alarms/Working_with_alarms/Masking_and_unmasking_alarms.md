@@ -24,8 +24,7 @@ To manually mask an alarm:
 
    - **Mask the alarm for a limited period of time**: You will then need to specify the number of minutes during which the alarm should be masked. After this time, it will automatically be unmasked. Even when it gets cleared and reappears afterwards, it will remain masked for the specified period of time.
 
-     > [!NOTE]
-     > The maximum masking duration if you mask an alarm for a limited period of time is 30 days.
+     The maximum masking duration if you mask an alarm for a limited period of time is 30 days.
 
    - **Mask alarm until unmasked**: This will keep the alarm masked even if it is cleared. This way, if the alarm is first cleared and then reoccurs, there will be no need to mask it again.
 
@@ -33,6 +32,7 @@ To manually mask an alarm:
 
    > [!NOTE]
    >
+   > - Avoid using this option unless it is really necessary, as it can cause excessively large alarm trees to go unnoticed. See [best practices](xref:Best_practices_for_assigning_alarm_severity_levels#keep-alarm-trees-from-growing-too-large).
    > - Depending on the configuration of your DataMiner System, you may need to specify a motivation before you can select the masking method. See [Enforcing motivation of alarm actions](xref:Enforcing_motivation_of_alarm_actions).
    > - If you select *Mask alarm until cleared* but automatic clearing of alarms is disabled (which can be [configured system-wide or per parameter](xref:Clearing_alarms#system-wide-autoclear-setting) or [configured in an alarm template](xref:Setting_the_autoclear_option_in_alarm_template)), alarms will not be unmasked when they reach the clearable state. You will have to manually clear the alarm to unmask it.
 

@@ -186,8 +186,8 @@ items:
             topicUid: Alarm_types
           - name: Alarm hysteresis
             topicUid: Alarm_hysteresis
-          - name: Alarm linking
-            topicUid: Alarm_linking
+          - name: Alarm trees
+            topicUid: Alarm_trees
           - name: Alarm filters
             topicUid: Alarm_filters
       - name: Alarm cards
@@ -435,8 +435,8 @@ items:
                 topicUid: Scheduling_an_alarm_template
           - name: Changing the alarm range for one parameter
             topicUid: Changing_the_alarm_range_for_one_parameter
-          - name: Guidelines for assigning alarm severity levels
-            topicUid: Guidelines_for_assigning_alarm_severity_levels
+          - name: Best practices
+            topicUid: Best_practices_for_assigning_alarm_severity_levels
           - name: Alarm template groups
             topicUid: Alarm_template_groups
           - name: Exporting alarm template parameter data
