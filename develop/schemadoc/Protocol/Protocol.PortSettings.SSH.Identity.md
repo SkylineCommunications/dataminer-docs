@@ -11,7 +11,8 @@ It should be formatted like this: `key=C:\Users\User\.ssh\my_key_rsa`
 > [!NOTE]
 >
 > - If the private key is protected by a passphrase, it must be appended to the file path, separated by a semicolon. It should be formatted like this: `key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase`
-> - DataMiner cannot derive the SSH username from your public/private key pair. If you authenticate with a key through a private/public key pair, you must still specify the SSH Username parameter explicitly.
+> - When you authenticate with a key through a private/public key pair, you must still specify the user.
+> - See also [Defining an SSH connection in a protocol](xref:ConnectionsSerialSecureShell#defining-an-ssh-connection-in-a-protocol).
 
 ## Parent
 
