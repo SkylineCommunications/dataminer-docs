@@ -88,6 +88,10 @@ public class Script
 }
 ```
 
+> [!NOTE]
+>
+> - As of DataMiner version 10.5.8 the comment ".FindInteractiveClient(" is no longer necessary, that can be defined on the [Interactivity](xref:DMSScript.Interactivity) tag of the script.
+
 ## Building the UI
 
 Now you can start to develop the first dialog. A dialog is a single page in an IAS that requires user input. For this example, we will make a dialog with the title “Hello World”, a label, a text box, and a button. Whenever this button is clicked, the username of the user who launched the script should be displayed in the text box.
