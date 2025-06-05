@@ -238,4 +238,4 @@ The content of the "ssh options" parameter is as follows: `key=C:\Users\User\.ss
 Only applicable for parameters of type read.
 
 > [!NOTE]
-> DataMiner cannot derive the SSH username from your public/private key pair. If you authenticate with a key through a private/public key pair, you must still specify the SSH Username parameter explicitly.
+> When you authenticate with a key through a private/public key pair, you must still specify the user. See also: [Defining an SSH connection in a protocol](xref:ConnectionsSerialSecureShell#defining-an-ssh-connection-in-a-protocol).
