@@ -21,17 +21,19 @@ Both [RequestScriptInfoInput](xref:Skyline.DataMiner.Net.Automation.RequestScrip
 
 If the script has any script parameters, dummies or memory files, then these are not required when executing the `OnRequestScriptInfo` entry point. However, they are required when executing the `Run` method of that same script.
 
+If the entry point would make use of them, it's recommended to provide all defined arguments in the code that's executing the entry point. In case that isn't possible the following should be taken into account when an argument is used in the entry point code:
+
 - When an omitted script parameter is used in the entry point logic, retrieving the script parameter is possible, but its value will be an empty string.
 - When an omitted dummy is used in the entry point logic, retrieving the dummy is possible, but it will refer to DMA ID -1 and element ID -1. Any actions that use the dummy will fail with an exception.
 - When an omitted memory file is used in the entry point logic, retrieving the memory file is possible, but it will refer to a linked file that is empty. Retrieving a value using the memory file will fail with an exception.
 
 ## Starting the entry point
 
-To start the `OnRequestScriptInfo` entry point the below methods can be used. Within an Automation script a [subscript](#subscript) should be started. Using the [ExecuteScriptMessage](#executescriptmessage) will only allow 10 simultaneous executions at most.
+To start the `OnRequestScriptInfo` entry point the below methods can be used. Within an Automation script the entry point should be executed as a [subscript](#subscript).
 
 ### Subscript
 
-To execute the `OnRequestScriptInfo` entry point within Automation, you have to use the [PrepareSubScript](xref:Skyline.DataMiner.Automation.Engine.PrepareSubScript*) method.
+To execute the `OnRequestScriptInfo` entry point within Automation, you have to use the [PrepareSubScript](xref:Skyline.DataMiner.Automation.Engine.PrepareSubScript(System.String,Skyline.DataMiner.Net.Automation.RequestScriptInfoInput)) method.
 
 In the following snippet, the entry point of the script "Script with entry point" will be started. As input data, the "Action" key with value "RequestValues" is used. After the script's entry point has been executed synchronously (i.e. the default behavior), the returned output is checked for the value of the key "ActionResult".
 
@@ -54,13 +56,13 @@ if (subscriptOptions.Output?.Data is null ||
 }
 ```
 
-The script should be started synchronously. It will return a subscript options object with an `Output` property containing the information returned by the script. The `Input` property can be used to check or update the data sent to the script.
+The `input` passed when preparing the subscript can be used to sent the data to the script. The data can be updated using the `Input` property of the options. The script should be started synchronously. It will return a subscript options object with an `Output` property containing the information returned by the script.
 
 ### ExecuteScriptMessage
 
-The `ExecuteScriptMessage` can be used to trigger the entry point using an SLNet connection.
+The `ExecuteScriptMessage` can be used to trigger the entry point using an SLNet connection. This message should **not** be used to request the information in an Automation script.
 
-In the following snippet, the entry point of script 'Script with entry point' will be started. As input data the 'Action' key with value 'RequestValues'. After executing the script's entry point synchronously, the returned output is checked for the value of key 'ActionResult'.
+In the following snippet, the entry point of the script "Script with entry point" will be started. As input data, the "Action" key with value "RequestValues" is used. After the script's entry point has been executed synchronously, the returned output is checked for the value of the key "ActionResult".
 
 ```csharp
 var input = new RequestScriptInfoInput
@@ -93,8 +95,6 @@ if (output?.Data is null ||
 ```
 
 When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will be returned. The information is returned in an `EntryPointResult.Result` property of type `RequestScriptInfoOutput`.
-
-This message should not be used to request the information in an Automation script.
 
 ## Orchestration script example
 
