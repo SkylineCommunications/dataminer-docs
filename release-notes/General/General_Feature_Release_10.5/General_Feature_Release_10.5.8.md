@@ -88,3 +88,9 @@ When, in an alarm template, you had configured conditional monitoring based on a
 If a redundancy group has more primary elements than backup elements, at the moment when all backups are in use, an alarm with severity level "Notice" will appear in the Alarm Console mentioning that all redundancy resources are in use.
 
 By default, that alarm is cleared as soon as one of the backup elements is available again. However, up to now, in some cases, the alarm would incorrectly not get cleared.
+
+#### GQI: GQI DxM and SLHelper could leak memory [ID 43028]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, both GQI DxM and SLHelper could leak memory when executing GQI queries.
