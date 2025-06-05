@@ -64,23 +64,99 @@ To enable this option, follow the steps below. These steps are intended for a Li
 
 1. Repeat the steps above for each of the nodes in the Cassandra Cluster.
 
-1. Open a connection to the Cassandra nodes via DevCenter.
-
-1. Send the following query for all TWCS keyspaces:
-
-   ```txt
-   ALTER TABLE PREFIXPLACEHOLDER_trend_data_medium.trend_data_medium
-   with compaction = {
-   'class' : 'TimeWindowCompactionStrategy',
-   'unsafe_aggressive_sstable_expiration' : true
-   };
-   ```
-
-   For Cassandra Cluster databases used by DataMiner, you will need to run this query for the following tables:
+1. Look up Cassandra's PREFIXPLACEHOLDER as we will need to run queries on the following keyspaces:
 
    - PREFIXPLACEHOLDER_trend_data_long
    - PREFIXPLACEHOLDER_trend_data_medium
    - PREFIXPLACEHOLDER_trend_data_rt
    - PREFIXPLACEHOLDER_trend_data_short
 
-   To find out what the PREFIXPLACEHOLDER is, navigate to the `/data/cassandra/data` folder and check the name used in that folder.
+  To find out what the PREFIXPLACEHOLDER is, navigate to the `/data/cassandra/data` folder and check the name used in that folder.
+  
+1. Open a connection to the Cassandra nodes via DevCenter.
+
+1. Execute the following queries one by one and save the contents of the "compaction" column:
+
+  - select * from system_schema.tables where keyspace_name='PREFIXPLACEHOLDER_trend_data_long';
+  - select * from system_schema.tables where keyspace_name='PREFIXPLACEHOLDER_trend_data_medium';
+  - select * from system_schema.tables where keyspace_name='PREFIXPLACEHOLDER_trend_data_short';
+  - select * from system_schema.tables where keyspace_name='PREFIXPLACEHOLDER_trend_data_rt';
+
+1. The output should look something like this, note that the "compaction_window_size" is different for each different trend type.
+Take note here of the values in *compaction_window_size* and *compaction_window_unit*.
+
+-e.g. output for PREFIXPLACEHOLDER_trend_data_long
+
+```txt
+{
+  "class" : "org.apache.cassandra.db.compaction.TimeWindowCompactionStrategy",
+  "compaction_window_size" : "30",
+  "compaction_window_unit" : "DAYS",
+  "max_threshold" : "32",
+  "min_threshold" : "4"
+}
+```
+
+-e.g. output for PREFIXPLACEHOLDER_trend_data_short. Note the difference in *compaction_window_size*
+
+```txt
+{
+  "class" : "org.apache.cassandra.db.compaction.TimeWindowCompactionStrategy",
+  "compaction_window_size" : "4",
+  "compaction_window_unit" : "DAYS",
+  "max_threshold" : "32",
+  "min_threshold" : "4"
+}
+```
+
+1. Execute the following query for all of the keyspaces, filling in the corresponding *compaction_window_size* and *compaction_window_unit* for each trend data table (as found in the above queries).
+e.g. as in above example, fill in a *compaction_window_size* of '4' for trend_data_short, as opposed to '30' for trend_data_long.
+
+   ```txt
+   ALTER TABLE PREFIXPLACEHOLDER_trend_data_short.trend_data_short
+   with compaction = {
+   'class' : 'TimeWindowCompactionStrategy',
+   'unsafe_aggressive_sstable_expiration' : true,
+   'compaction_window_size' : '4',
+   'compaction_window_unit' : 'DAYS',
+   };
+   ```
+
+Do this also for the other keyspaces, taking into account *compaction_window_size* and *compaction_window_unit*.
+
+   - PREFIXPLACEHOLDER_trend_data_long
+
+    e.g. 
+   ```txt
+   ALTER TABLE PREFIXPLACEHOLDER_trend_data_long.trend_data_long
+   with compaction = {
+   'class' : 'TimeWindowCompactionStrategy',
+   'unsafe_aggressive_sstable_expiration' : true,
+   'compaction_window_size' : '30',
+   'compaction_window_unit' : 'DAYS',
+   };
+   ```
+
+   - PREFIXPLACEHOLDER_trend_data_medium
+
+    e.g. 
+   ```txt
+   ALTER TABLE PREFIXPLACEHOLDER_trend_data_medium.trend_data_medium
+   with compaction = {
+   'class' : 'TimeWindowCompactionStrategy',
+   'unsafe_aggressive_sstable_expiration' : true,
+   'compaction_window_size' : '14',
+   'compaction_window_unit' : 'DAYS',
+   };
+
+   - PREFIXPLACEHOLDER_trend_data_rt
+
+    e.g. 
+   ```txt
+   ALTER TABLE PREFIXPLACEHOLDER_trend_data_rt.trend_data_rt
+   with compaction = {
+   'class' : 'TimeWindowCompactionStrategy',
+   'unsafe_aggressive_sstable_expiration' : true,
+   'compaction_window_size' : '3',
+   'compaction_window_unit' : 'HOURS',
+   };
