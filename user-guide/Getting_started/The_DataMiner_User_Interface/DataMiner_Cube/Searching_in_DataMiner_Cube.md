@@ -10,8 +10,6 @@ To search for an item in the DataMiner System, you can use the search box in the
 
 As soon as you click the search box, a list of suggestions is shown below. Initially, this list shows recent items (with any pinned items at the top), but it is updated with search results as soon as you type anything in the box.
 
-From DataMiner 10.4.0 [CU16] / 10.5.0 [CU4] onwards, the search functionality supports fuzzy matching. This means that search results account for diacritic similarities within the same alphabet. For example, entering "e" will also return matches that contain "é". However, transliteration is not supported. Typos or substitutions with visually similar characters (e.g. "ø" vs. "o") will not yield results.
-
 Click a suggestion to immediately open the corresponding card, or click *Advanced search* at the bottom of the list to open a complete list of search results in a side panel. You can also right-click a suggestion in the list to open the same right-click menu as in the Surveyor (see [Surveyor right-click menu](xref:DataMiner_Cube_sidebar#surveyor-right-click-menu)).
 
 From DataMiner 10.1.11/10.2.0 onwards, you can also search directly in the advanced search pane using the search box at the top. If the pane is pinned to the sidebar, it is always displayed, even if you have not done a search using the search box in the header bar. (see [Sidebar](xref:DataMiner_Cube_sidebar)).
@@ -51,6 +49,8 @@ Please note the following:
     > In an advanced search, “\*” and “?” will be interpreted as wildcard characters. See [Searching with wildcard characters](#searching-with-wildcard-characters).
 
 - For Japanese characters to be processed properly in search results, your Windows system must support Japanese text rendering.
+
+- The search does not support fuzzy matching, so typos or substitutions with visually similar characters (e.g. "ø" vs. "o") will not yield results. However, from DataMiner 10.4.0 [CU16]/10.5.0 [CU4] onwards, search results do account for diacritic similarities within the same alphabet. For example, entering "e" will also return matches that contain "é".<!-- RN 42911 -->
 
 - For more information on which search terms you can enter to find specific DataMiner items, see [Searching for specific DataMiner items](#searching-for-specific-dataminer-items).
 
