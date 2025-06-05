@@ -112,4 +112,4 @@ In some cases, SLHelper could leak memory because SLNet connections used by GQI 
 <!-- MR 10.6.0 - FR 10.5.8 -->
 <!-- Not added to MR 10.6.0 -->
 
-Up to now, SLAutomation would leak memory each time an Automation script was run.
+Since DataMiner 10.5.6, SLAutomation would leak memory each time an Automation script was run.
