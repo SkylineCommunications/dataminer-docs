@@ -9,7 +9,7 @@ The People & Organizations app allows you to create, edit, and organize people, 
 ![People & Organizations Overview](~/solutions/images/People_and_Organizations_Overview.png)
 
 > [!TIP]
-> For those who prefer visual learning, [demo video](https://www.youtube.com/watch?v=ybRBZICWMes) covering the same material is also available.
+> Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=ybRBZICWMes) about this app.
 
 ## App overview
 

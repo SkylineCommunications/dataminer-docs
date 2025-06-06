@@ -9,7 +9,7 @@ The Resource Studio app helps you create and manage bookable resources efficient
 ![Resource Studio Overview](~/solutions/images/Resource_Studio_Overview.png)
 
 > [!TIP]
-> For those who prefer visual learning, [demo video](https://www.youtube.com/watch?v=NM4NFFCM7k8) covering the same material is also available.
+> Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=NM4NFFCM7k8) about this app.
 
 ## App overview
 
@@ -65,12 +65,12 @@ Each capability has a name and a list of values. Users can assign one or more va
 
 Capabilities can be assigned either to a resource or to a resource pool. If they are assigned to a resource pool, all resources in that pool will inherit the capabilities of the pool, but extra capabilities can also be added to individual resources.
 
-When creating a [workflow](xref:MO_Workflow_Designer#workflows) or a [job](xref:MO_Scheduling#jobs), users can specify the required capabilities of the resourcers to be used in the workflow or job. This will limit the resources available for picking only to those which satisfy the capability requirements, making it easier to find the suitable ones.
+When creating a [workflow](xref:MO_Workflow_Designer#workflows) or a [job](xref:MO_Scheduling#jobs), users can specify the required capabilities of the resources to be used in the workflow or job. This will limit the resources available for picking only to those which satisfy the capability requirements, making it easier to find the suitable ones.
 
-For example, `Location` can be one important capability when planning operations where resources need to be on-site. You can assign locations to all you resources beforehand, and then upon job creation you can choose the location your resources need to have. Then, when picking the resources, only the ones on the actual location will show up. Capabilities offer a very flexible and general way of solving this problem for a wide array of cases.
+For example, *Location* can be an important capability when planning operations where resources need to be on-site. You can assign locations to all you resources beforehand, and then upon job creation you can choose the location your resources need to have. Then, when the resources are picked, only the ones on the actual location will be available for selection. Capabilities offer a very flexible and general way of solving this problem for a wide array of cases.
 
 > [!TIP]
-> You can find a hands-on example of assigning capacities to resources and resource pools in this [tutorial](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities), and an example of using these capacities when creating jobs in this [tutorial](xref:Tutorial_MediaOps_Scheduling_Configurations)
+> For a hands-on example of assigning capacities to resources and resource pools, follow the tutorial [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities). For an example of using these capacities when creating jobs, follow the [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations).
 
 ## Capacities
 
@@ -90,7 +90,7 @@ Typical examples of capacities are bandwidths, bit rates, symbol rates, etc. Whe
 
 Contrary to capabilities, capacities cannot be configured on pools, but only on individual resources.
 
-But similar to capabilities, capacities can also be used when creating jobs and workflows. You can specify capabilities on your resources, and then limit the resources available for picking in jobs and workflows based on those constraints.
+However, similar to capabilities, capacities can also be used when creating jobs and workflows. You can specify capabilities on your resources, and then limit the resources available for picking in jobs and workflows based on those constraints.
 
 ![Capacities](~/solutions/images/Resource_Studio_Capacities.png)
 

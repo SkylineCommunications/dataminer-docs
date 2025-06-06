@@ -4,14 +4,14 @@ uid: MO_Scheduling
 
 # Scheduling
 
-The Scheduling app allows users to efficiently manage a schedule of [Jobs](#jobs), [Resources](#resources), and [Workflows](#workflows).
+The Scheduling app allows users to efficiently manage a schedule of [jobs](#jobs), [resources](#resources), and [workflows](#workflows).
 
 ![Scheduling Overview](~/user-guide/images/Scheduling_Overview.png)
 
 > [!TIP]
-> For those who prefer visual learning, [demo video](https://www.youtube.com/watch?v=lfeCwxYTA4o) covering the same material is also available.
+> Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=lfeCwxYTA4o) about this app.
 
-> [!TIP]
+> [!NOTE]
 > This page contains information about the Scheduling app within the MediaOps Solution. If you are looking for information about the Scheduler module within DataMiner Cube instead, refer to [DataMiner Scheduler](xref:scheduler).
 
 ## App overview
@@ -26,7 +26,7 @@ The following pages are available in the Scheduling app:
 
 - ![Search Jobs](~/user-guide/images/Scheduling_Search_Jobs.png) **Search Jobs**: Provides the tools to **easily find any job** in the system. This includes canceled jobs, which are hidden on all other pages.
 
-- ![App configuration](~/user-guide/images/Scheduling_App_Configuration.png) **App configuration**: On the Apps Configuration page you can configure general [app-wide settings](xref:MO_S_App_Configuration).
+- ![App Configuration](~/user-guide/images/Scheduling_App_Configuration.png) **App Configuration**: Allows you to configure general [app-wide settings](xref:MO_S_App_Configuration).
 
 - ![About](~/user-guide/images/Scheduling_About.png) **About**: Provides information on the **version** of the MediaOps package.
 
