@@ -33,20 +33,23 @@ Expected duration: 15 minutes
 
 ## Step 1: Create a new job
 
-1. Head over to the new job panel by clicking the *+ New* button.
+1. In the Scheduling app, go to the *Job View* page and click the *+ New* button to open the new job panel.
 
-   ![NewJob Button Placement](~/solutions/images/Scheduling_New_Job_Button_Placement.png)
+   ![New job button](~/solutions/images/Scheduling_New_Job_Button_Placement.png)
 
-1. Give the job a name of your choice and create it. Ideally, delay the job *Start Time* and *End Time* for several hours to give the job some time before it starts.
+1. Fill in a name of your choice in the *Name* box.
 
-   ![Create Job Panel](~/solutions/images/Scheduling_Create_Job_Panel.png)
+1. Delay the job *Start Time* and *End Time* for several hours to give the job some time before it starts.
 
-   > [!NOTE]
-   > The default duration for a new job is one hour, starting at the job creation time.
+   By default the job will be set to last one hour and start at the job creation time.
 
-1. You should be able to see the newly created job in the timeline.
+   ![Create job panel](~/solutions/images/Scheduling_Create_Job_Panel.png)
 
-   ![New Job Created](~/solutions/images/Scheduling_New_Job_Created.png)
+1. No other settings need to be configured, so click *Next* and then *Create Job*.
+
+You now should be able to see the newly created job on the timeline.
+
+![Job on the timeline](~/solutions/images/Scheduling_New_Job_Created.png)
 
 ## Step 2: Add resources to the job
 

@@ -27,7 +27,7 @@ Expected duration: 15 minutes
 
 ## Step 1: Create the resource pools
 
-To represent the two different device types in the Resource Studio app, create two matching resource pools:
+In the Resource Studio app, create two matching resource pools to represent the two different device types:
 
 1. On the *Resource Pools* page of the Resource Studio app, click *+ New*.
 
