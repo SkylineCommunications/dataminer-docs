@@ -22,11 +22,6 @@ uid: General_Feature_Release_10.5.7
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.7](xref:Web_apps_Feature_Release_10.5.7).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-- [Automation: Hash property of GetScriptInfoResponseMessage now contains a hash value of the script [ID 42616]](#automation-hash-property-of-getscriptinforesponsemessage-now-contains-a-hash-value-of-the-script-id-42616)
-- [Automation: New OnRequestScriptInfo entry point [ID 42969]](#automation-new-onrequestscriptinfo-entry-point-id-42969)
-
 ## New features
 
 #### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250]
