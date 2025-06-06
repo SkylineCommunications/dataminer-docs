@@ -126,3 +126,10 @@ In some cases, SLHelper could leak memory because SLNet connections used by GQI 
 <!-- Not added to MR 10.6.0 -->
 
 Since DataMiner 10.5.6, SLAutomation would leak memory each time an Automation script was run.
+
+#### Swarming: Stopped elements would remain stuck in a 'Swarming' state after having been swarmed [ID 43078]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+<!-- Not added to MR 10.6.0 -->
+
+When stopped elements had been swarmed over to another DataMiner Agent, in some cases, they would remain stuck in a *Swarming* state.
