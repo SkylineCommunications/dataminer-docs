@@ -36,6 +36,10 @@ To request a cost estimation, follow the procedure below:
 1. Let the script run for 24 hours without restarting the DataMiner System (DMS).
 
 1. After the 24-hour period, restart the DMS to stop the estimation process.
+   > [!NOTE]
+   > - The 24-hour period is not mandatory but is recommended to be able to extrapolate this data from a daily consumption to a monthly consumption.
+   > - Restarting the DMS is a manual action and not automated by the automation script.
+   > - If your DMS is running a failover pair only restarting the active agent is sufficient.
 
 1. After this, at approximately 2 AM UTC, you will be able to view your cost estimation in the [Admin app](https://admin.dataminer.services), under *Overview* > *Usage* for the relevant organization.
 
