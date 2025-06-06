@@ -71,9 +71,7 @@ To configure organization members for an existing organization:
 
    If you quickly want to find a specific contact in the lists, click the magnifying glass icon at the top and specify a filter.
 
-1. Close the pop-up window with the "X" button in the top-right corner.
-
-The selected organization members will now appear in the list of members on the *Details* panel.
+When you close the panel, the selected organization members will be shown in the list of members in the *Details* panel.
 
 ## Deprecating an organization
 

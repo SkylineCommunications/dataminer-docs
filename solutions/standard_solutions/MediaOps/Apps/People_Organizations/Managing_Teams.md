@@ -6,8 +6,6 @@ uid: PO_Managing_Teams
 
 The *Teams* page focuses on your managed teams. It allows you to switch between two tabs: *Overview* and *List*, each offering a different perspective on the available teams.
 
-You can switch between the *Overview* and *List* tabs by clicking *Overview* or *List* in the header bar.
-
 ![Header bar](~/solutions/images/Teams_Header_Bar.png)
 
 - The *Overview* tab provides a **snapshot of key metrics**, including the teams with the most people, the number of teams, active teams, and drafts, and the most recently added teams. This tab gives you a quick view of important information.
@@ -69,9 +67,7 @@ To configure team members for an existing team:
 
    If you quickly want to find a specific contact in the lists, click the magnifying glass icon at the top and specify a filter.
 
-1. Close the pop-up window with the "X" button in the top-right corner.
-
-The selected team members will now be shown in the list of members in the *Details* panel.
+When you close the panel, the selected team members will be shown in the list of members in the *Details* panel.
 
 ## Making a team bookable
 
@@ -104,7 +100,7 @@ To deprecate an existing team:
 
 1. Click *Deprecate Selected* in the header bar.
 
-   An overview of all deprecated teams will appear. This will include the team you have just deprecated.
+   An overview of all deprecated teams will be shown. This will include the team you have just deprecated.
 
    > [!NOTE]
    > To access this overview of deprecated teams at a later point, click *Deprecated* in the header bar of the *List* tab.

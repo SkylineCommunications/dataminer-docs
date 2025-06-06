@@ -10,7 +10,7 @@ You can switch between the *Overview* and *List* tabs by clicking *Overview* or 
 
 ![Header bar](~/solutions/images/PO_HeaderBar.png)
 
-- The *Overview* tab provides a **snapshot of key metrics**, including the top 5 individuals in multiple teams, the most available skills, the number of contacts, deprecated contacts, and drafts, and the five most recently added contacts. This tab gives you a quick view of important information.
+- The *Overview* tab provides a **snapshot of key metrics**, including the top 5 individuals in multiple teams, the most available skills, the number of contacts, active contacts, and drafts, and the five most recently added contacts. This tab gives you a quick view of important information.
 
   ![Overview page](~/solutions/images/PO_People_Overview_Example.png)
 
@@ -52,6 +52,9 @@ To edit an existing contact:
 
 1. Make the necessary changes to the contact details.
 
+   > [!TIP]
+   > Changing a contact's personal skills is done differently. See [Managing skills](#managing-skills)
+
 1. After making your changes, select *Activate* in the lower right corner.
 
    > [!NOTE]
@@ -69,7 +72,7 @@ To deprecate an existing contact:
 
 1. Click *Deprecate Selected* in the header bar.
 
-   An overview of all deprecated contacts will appear. This will include the contact you have just deprecated.
+   An overview of all deprecated contacts will be shown. This will include the contact you have just deprecated.
 
    > [!NOTE]
    > To access this overview of deprecated contacts at a later point, click *Deprecated* in the header bar of the *List* tab.
