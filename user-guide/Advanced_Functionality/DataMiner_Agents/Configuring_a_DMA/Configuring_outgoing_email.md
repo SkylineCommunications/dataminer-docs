@@ -1,5 +1,6 @@
 ---
 uid: Configuring_outgoing_email
+description: A DMS can be configured to send out email notifications and reports via an SMTP server. You can either configure this directly in DataMiner.xml or use the SLNetClientTest tool.
 ---
 
 # Configuring outgoing email

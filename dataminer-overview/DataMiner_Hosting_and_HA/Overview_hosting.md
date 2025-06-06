@@ -1,5 +1,6 @@
 ---
 uid: Overview_hosting
+description: DataMiner's architecture makes it extremely resilient to all types of failures, also because this architecture has no single point of failure.
 ---
 
 # DataMiner Hosting and High Availability
