@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.7
 ---
 
-# General Feature Release 10.5.7 – Preview
+# General Feature Release 10.5.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -24,7 +24,8 @@ uid: General_Feature_Release_10.5.7
 
 ## Highlights
 
-*No highlights have been selected yet.*
+- [Automation: Hash property of GetScriptInfoResponseMessage now contains a hash value of the script [ID 42616]](#automation-hash-property-of-getscriptinforesponsemessage-now-contains-a-hash-value-of-the-script-id-42616)
+- [Automation: New OnRequestScriptInfo entry point [ID 42969]](#automation-new-onrequestscriptinfo-entry-point-id-42969)
 
 ## New features
 
