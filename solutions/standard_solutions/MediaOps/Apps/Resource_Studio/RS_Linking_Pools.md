@@ -30,10 +30,10 @@ To link resource pools:
      - When a pool (or one of its resources) is added to a **job**, the system adds the linked resource pool to the job, allowing the user to manually select a specific resource later.
      - When a pool (or one of its resources) is added to a **workflow**, a **pool node** is added to the workflow, with the option *Auto-select resource at job creation* set to *false*.
 
+1. Click *Save*.
+
    Example:
 
    ![Resource pool linking example](~/solutions/images/Resource_pool_linking.png)
-
-1. Click *Save*.
 
 Via the **Resource Pool links** button in the top-right corner of the *Resource Pools* page, you can get an overview of all the links that have been configured between resource pools in the system.

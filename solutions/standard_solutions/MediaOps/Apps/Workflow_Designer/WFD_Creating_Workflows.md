@@ -4,7 +4,11 @@ uid: WFD_Creating_Workflows
 
 # Creating workflows
 
-To create workflows, you can use the buttons in the header bar of the Workflow Designer. Either create a completely new workflow with the *New workflow* button, or select a workflow in the list and use the *Duplicate workflow* button. If you add a new workflow, you will first need to configure some basic information before it is added to the list. For detailed steps based on an example, refer to the tutorial [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro).
+To create workflows, you can use the buttons in the header bar of the Workflow Designer.
+
+![Workflow Designer header bar](~/solutions/images/Workflow_Designer_header_bar.png)
+
+Either create a completely new workflow with the *New workflow* button, or select a workflow in the list and use the *Duplicate workflow* button. If you add a new workflow, you will first need to configure some basic information before it is added to the list. For detailed steps based on an example, refer to the tutorial [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro).
 
 ## Adding nodes to a workflow
 

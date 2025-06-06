@@ -51,6 +51,9 @@ Resources can be added to multiple pools, making them eligible for multiple purp
 
 The resource pools displayed in the app include [teams that have been made bookable](xref:PO_Managing_Teams#making-a-team-bookable) in the People & Organizations app. These resource pools cannot be edited directly in the Resource Studio app.
 
+> [!TIP]
+> For a detailed example of how you can add resource pools and resources, refer to the tutorial [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro).
+
 ## Capabilities
 
 Capabilities give a **qualitative description** of a resource or pool, making it clear what it can be used for.

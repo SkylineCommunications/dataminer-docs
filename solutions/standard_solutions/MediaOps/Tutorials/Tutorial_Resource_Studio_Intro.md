@@ -21,11 +21,11 @@ Expected duration: 15 minutes
 
 ## Overview
 
-- [Step 1: Create resource pools](#step-1-create-resource-pools)
-- [Step 2: Create resources](#step-2-create-resources)
-- [Step 3: Assign resources to pools](#step-3-assign-resources-to-pools)
+- [Step 1: Create the resource pools](#step-1-create-the-resource-pools)
+- [Step 2: Create the resources](#step-2-create-the-resources)
+- [Step 3: Assign the resources to the pools](#step-3-assign-the-resources-to-the-pools)
 
-## Step 1: Create resource pools
+## Step 1: Create the resource pools
 
 To represent the two different device types in the Resource Studio app, create two matching resource pools:
 
@@ -33,7 +33,7 @@ To represent the two different device types in the Resource Studio app, create t
 
    ![New Resource Pool](~/solutions/images/Resource_Studio_New_Resource_Pool.png)
 
-1. Fill in the form with the names "Encoder" and "Decoder" for the respective pools.
+1. Fill in the form with the name "Encoder".
 
    ![New Resource Pool Form](~/solutions/images/Resource_Studio_New_Resource_Pool_Form.png)
 
@@ -43,66 +43,57 @@ To represent the two different device types in the Resource Studio app, create t
 1. Click **Save as Completed**.
 
    > [!NOTE]
-   > *Complete* is one of the states a resource pool can be in. If you choose to save it in the *Draft* state (on the bottom left) instead, you will be able to finish the tutorial, but the resource pools will not be available for use in the other apps like [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
+   > *Complete* is one of the states a resource pool can be in. If you choose to save it in the *Draft* state (with the button on the left) instead, you will be able to finish the tutorial, but the resource pools will not be available for use in other apps like [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
 
-1. Confirm both resource pools are listed in the **Resource Pools** table.
+1. Repeat the steps above for the "Decoder" resource pool.
 
-   ![New Resource Pool Created](~/solutions/images/Resource_Studio_New_Resource_Pools_Created.png)
+Both resources will now be listed in the **Resource Pools** table.
 
-## Step 2: Create resources
+![New Resource Pool Created](~/solutions/images/Resource_Studio_New_Resource_Pools_Created.png)
 
-Now that the resource pools are created, we can proceed to create resources and assign them to the resource pools.
+## Step 2: Create the resources
+
+Now that you have created the resource pools, you can proceed to create resources and assign them to the resource pools.
 
 1. Go to the **Resources** page.
 
-   ![New Resource](~/solutions/images/Resource_Studio_New_Resource.png)
+1. Create a first resource:
 
-1. Create two resources:
+   1. Click the **+ New** button at the top.
 
-   - *Video Solutions 001*
-   - *NewTek 001*
+      ![New Resource](~/solutions/images/Resource_Studio_New_Resource.png)
 
-1. For both resources, the **Type** should be *Unmanaged*.
+   1. Fill in the name `Video Solutions 001`.
 
-1. Click **Save as Completed**.
+   1. Optionally, if you want a custom icon to be shown for the resource, click the checkbox next to *Icon*, and select the icon of your choice.
 
-   ![New Resource Form](~/solutions/images/Resource_Studio_New_Resource_Form.png)
+   1. Keep the *Type* set to *Unmanaged*.
 
-> [!NOTE]  
-> In this example, *Video Solutions 001* is an **Encoder** only, while *NewTek 001* can act as either an **Encoder** or **Decoder**, but only one at a time.
+   1. Click **Save as Completed**.
 
-## Step 3: Assign resources to pools
+      ![New Resource Form](~/solutions/images/Resource_Studio_New_Resource_Form.png)
+
+1. Create a second resource by following the same steps, but fill in the name `NewTek 001`.
+
+## Step 3: Assign the resources to the pools
+
+In this tutorial, *Video Solutions 001* will be used as an *Encoder* only, while *NewTek 001* will be used as either an *Encoder* or *Decoder*, but only one at a time. To configure this behavior, you should assign the resources to these pools as follows:
 
 1. Navigate to the **Resource Pools** page.
 
-1. On the **Encoder** resource pool that we created earlier, click *...* to open up the context menu.
-
-1. Click **Assign Resources**.
+1. Next to the **Encoder** resource pool that you created earlier, click *...* to open up the context menu, and select **Assign Resources**.
 
    ![Assign Resources](~/solutions/images/Resource_Studio_Assign_Resources.png)
 
-1. At the top of the panel, confirm the resource pool name matches the one you actually want to assigning resources to, namely "**Encoder**".
-
-1. Optionally, use the filter box to locate the resources you want to assign.
-
 1. Select *Video Solutions 001* and *NewTek 001* resources, and click *+ ADD*.
+
+   You can select multiple resources in one go by keeping Ctrl pressed while you select them. If you have many resources, use the filter box at the top to quickly locate the resources you want to assign.
 
    ![Assign Resources Panel](~/solutions/images/Resource_Studio_Assign_Resources_Panel.png)
 
-1. Similarly, assign *NewTek 001* resource to the **Decoder** pool.
+   > [!TIP]
+   > If one of the resources you have made does not show up in the list of resources you can selected, it is most likely still set to draft. In that case, edit the resource and click *Complete* to mark it as complete.
 
-> [!TIP]  
-> If your resource doesn’t show up, make sure it has been **marked complete**.
+1. Similarly, assign the *NewTek 001* resource to the **Decoder** pool.
 
-You should now see the resources listed in the right-hand column of each pool. This brings us to the end of this tutorial. By now, if all went well, you should have some resources and resource pools ready for use in other applications such as [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
-
-> [!NOTE]
-> In case your resources or resource pools are in *Draft* state, you can change the state to *Complete* as follows:
->
-> 1. By clicking the pencil icon, open the **Edit** panel of each resource/resource pool you want to edit.
-> 1. Click **Complete**.
-
-![Mark Complete](~/solutions/images/Resource_Studio_Complete.png)
-
-> [!TIP]
-> You can also **Change icon** of the resource pools to add visual context in other applications.
+When the resource pool is selected in the *Resource Pools* table, the table to the right will now show the resources you have added to it. These are ready for use in other applications such as [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
