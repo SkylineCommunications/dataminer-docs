@@ -88,7 +88,7 @@ The SLNet message `EditConnection`, which can be used to edit a connection from 
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
-In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other Automation scripts (or any other code) to request information about the script in question, for example which parameter values are required for a particular profile parameter.
+In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other Automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
 
 ##### Using the entry point
 
