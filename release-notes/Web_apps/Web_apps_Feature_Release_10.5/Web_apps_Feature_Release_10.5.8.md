@@ -69,6 +69,7 @@ if (results.WasOnFilter("DropDownVariable"))
 
 > [!NOTE]
 >
+> - This feature will only work in conjunction with DataMiner server version 10.5.8 or newer.
 > - While filtering the dropdown box entries, the script's logic is responsible for adding the currently selected entry (if relevant). Otherwise, the dropdown box will consider that value as incorrect and clear itself. Consider only filtering the display value of the entries (case-invariant if possible).
 > - Scripts using this feature should not include components of which the variable name (DestVar) contains "_FilterString". Otherwise, the identifier will not be unique.
 
