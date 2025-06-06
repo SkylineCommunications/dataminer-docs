@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using Skyline.DataMiner.Net.Automation;
 
 namespace Skyline.DataMiner.Automation
 {
@@ -147,6 +148,11 @@ namespace Skyline.DataMiner.Automation
 			/// On DOM action.
 			/// </summary>
 			OnDomAction = 10,
+			/// <summary>
+			/// On Request script info.
+			/// Detailed information about implementing this entry point type is available in <see href="xref:Implementing_OnRequestScriptInfo_Entry_Point">Implementing the OnRequestScriptInfo entry point</see>.
+			/// </summary>
+			OnRequestScriptInfo = 13,
 			/// <summary>
 			/// Automation test entry point.
 			/// </summary>

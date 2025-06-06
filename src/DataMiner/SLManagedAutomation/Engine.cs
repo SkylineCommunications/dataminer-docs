@@ -6,6 +6,7 @@ using Skyline.DataMiner.Net.Exceptions;
 using Skyline.DataMiner.Net.Profiles;
 using System.Collections.Generic;
 using Skyline.DataMiner.Net.Messages.SLDataGateway;
+using Skyline.DataMiner.Net.Automation;
 
 namespace Skyline.DataMiner.Automation
 {
@@ -1170,6 +1171,9 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		public SubScriptOptions PrepareSubScript(string scriptName) { return null; }
+
+		/// <inheritdoc cref="IEngine.PrepareSubScript(string, RequestScriptInfoInput)"/>
+		public RequestScriptInfoSubScriptOptions PrepareSubScript(string scriptName, RequestScriptInfoInput input) { return null; }
 
 		/// <summary>
 		/// Launches an application on the client in an interactive script.

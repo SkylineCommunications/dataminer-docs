@@ -1,4 +1,5 @@
 ﻿using Skyline.DataMiner.Net;
+using Skyline.DataMiner.Net.Automation;
 using Skyline.DataMiner.Net.Exceptions;
 using Skyline.DataMiner.Net.Messages;
 using Skyline.DataMiner.Net.Messages.SLDataGateway;
@@ -908,6 +909,33 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		SubScriptOptions PrepareSubScript(string scriptName);
+
+		/// <summary>
+		/// Returns a <see cref="RequestScriptInfoSubScriptOptions"/> object, which you can use to configure and start the <see cref="AutomationEntryPointType.Types.OnRequestScriptInfo"/> entry point as a subscript.
+		/// </summary>
+		/// <param name="scriptName">The name of the script to prepare.</param>
+		/// <param name="input">The input for the <see cref="AutomationEntryPointType.Types.OnRequestScriptInfo"/> entry point method.</param>
+		/// <exception cref="ArgumentNullException"><paramref name="scriptName"/> is <see langword="null"/>.</exception>
+		/// <returns>The <see cref="RequestScriptInfoSubScriptOptions"/> object.</returns>
+		/// <example>
+		/// <code>
+		/// SubScriptOptions subscriptInfo;
+		/// RequestScriptInfoInput infoInput = new RequestScriptInfoInput { Data = new Dictionary&gt;string, string&lt;{ { "requestKey", "value" } } };
+		/// subscriptInfo = engine.PrepareSubScript("myOtherScript", infoInput);
+		/// subscriptInfo.Synchronous = true;
+		/// ...
+		/// subscriptInfo.StartScript();
+		/// if (!subscriptInfo.Output?.Data?.TryGetValue("resultKey", out string resultKeyValue))
+		/// {
+		///		engine.ExitFail("Expected a resultKey in the output of the subscript.");
+		/// }
+		/// </code>
+		/// </example>
+		/// <remarks>
+		/// <note type="note">Available from DataMiner 10.5.7/10.6.0 onwards.</note><!-- RN 42969 -->
+		/// <note type="note">Detailed information about implementing the <see cref="AutomationEntryPointType.Types.OnRequestScriptInfo"/>  entry point type is available in <see href="xref:Implementing_OnRequestScriptInfo_Entry_Point">Implementing the OnRequestScriptInfo entry point</see>.</note>
+		/// </remarks>
+		RequestScriptInfoSubScriptOptions PrepareSubScript(string scriptName, RequestScriptInfoInput input);
 
 		/// <summary>
 		/// Returns a <see cref="MailReportOptions" /> object, which you can use to configure and launch an email report.
