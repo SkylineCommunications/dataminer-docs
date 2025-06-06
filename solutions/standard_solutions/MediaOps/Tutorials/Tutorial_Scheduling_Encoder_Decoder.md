@@ -25,121 +25,130 @@ Expected duration: 15 minutes
 ## Overview
 
 - [Step 1: Create a new job](#step-1-create-a-new-job)
-- [Step 2: Add resources to the job](#step-2-add-resources-to-the-job)
-- [Step 3: Reserving the resource](#step-3-reserving-the-resource)
-- [Step 4: Add another resource](#step-4-add-another-resource)
+- [Step 2: Add an encoder resource to the job](#step-2-add-an-encoder-resource-to-the-job)
+- [Step 3: Reserve the encoder resource](#step-3-reserve-the-encoder-resource)
+- [Step 4: Add a decoder resource to the job](#step-4-add-a-decoder-resource-to-the-job)
 - [Step 5: Swap resources](#step-5-swap-resources)
-- [Step 6: Confirming the job](#step-6-confirming-the-job)
+- [Step 6: Confirm the job](#step-6-confirm-the-job)
 
 ## Step 1: Create a new job
 
-1. In the Scheduling app, go to the *Job View* page and click the *+ New* button to open the new job panel.
+1. In the Scheduling app, go to the **Job View** page and click the **+ New** button to open the new job panel.
 
    ![New job button](~/solutions/images/Scheduling_New_Job_Button_Placement.png)
 
-1. Fill in a name of your choice in the *Name* box.
+1. Fill in a name of your choice in the **Name** box.
 
-1. Delay the job *Start Time* and *End Time* for several hours to give the job some time before it starts.
+1. Delay the job **Start Time** and **End Time** for several hours to give the job some time before it starts.
 
    By default the job will be set to last one hour and start at the job creation time.
 
    ![Create job panel](~/solutions/images/Scheduling_Create_Job_Panel.png)
 
-1. No other settings need to be configured, so click *Next* and then *Create Job*.
+1. No other settings need to be configured, so click *Next* and then **Create Job**.
 
 You now should be able to see the newly created job on the timeline.
 
 ![Job on the timeline](~/solutions/images/Scheduling_New_Job_Created.png)
 
-## Step 2: Add resources to the job
+## Step 2: Add an encoder resource to the job
 
-1. Open the *Edit job* panel.
+1. Click the pencil icon in the box representing the job to open the *Edit job* panel.
 
-   ![Edit Job Icon](~/solutions/images/Scheduling_Edit_Job_Icon.png)
+   ![Edit job icon](~/solutions/images/Scheduling_Edit_Job_Icon.png)
 
-1. Scroll down to the bottom of the panel, where you should be presented with the *Workflow* section. Here you can manage the resources that should be included in the job.
+1. Scroll down to the *Workflow* section at the bottom of the panel.
 
-   ![Edit Job Workflow](~/solutions/images/Scheduling_Edit_Job_Workflow.png)
+   This is where resources in a job are managed.
 
-1. Open the *Add Node* panel and *+ Add Resource* **NewTek 001** from the *Encoder* resource pool to your job.
+   ![Workflow section](~/solutions/images/Scheduling_Edit_Job_Workflow.png)
+
+1. Click the **Add Node** button.
+
+1. In the list of resource pools on the left, select *Encoder*, then select one of the available resources in this resource pool, and click **+ Add Resource** at the top of the pane.
 
    ![Add Encoder Resource](~/solutions/images/Scheduling_Edit_Job_Add_Encoder_Resource.png)
 
-1. Close the panel and make sure that you see your resource in the node-edge graph.
+1. Close the *Add Node* panel and check if you can see your resource in the *Workflow* section.
 
-   > [!NOTE]
-   > If you do not see the newly created resource, you might need to hit the **Workflow refresh** button in the upper right corner of the *Workflow* section.
+   If you cannot see the resource yet, click the refresh button in the top-right corner of the section.
 
    ![Check out the newly added resource](~/solutions/images/Scheduling_Workflow_Resource_Added.png)
 
-## Step 3: Reserving the resource
+## Step 3: Reserve the encoder resource
 
-To reserve the resource for your job:
+To reserve the encoder resource for your job, you will need to save the job as tentative:
 
-1. Open the **Edit job** panel.
+1. Scroll to the top of the *Edit job* panel, and click **Save as Tentative**.
 
-1. Save the job as *Tentative*.
-
-   ![Save Job as Tentative](~/solutions/images/Scheduling_Edit_Job_Save_As_Tentative.png)
+   ![Save as Tentative button](~/solutions/images/Scheduling_Edit_Job_Save_As_Tentative.png)
 
 1. Close the *Edit Job* panel and confirm that the color of the job has changed, indicating that it is now in the *Tentative* state.
 
-## Step 4: Add another resource
+   ![Job in tentative state](~/solutions/images/Scheduling_Job_in_tentative_state.png)
 
-Let's add another resource to our job, a decoder this time.
+   If the color does not update immediately, try switching between schedule types with the buttons on the left to refresh the view.
 
-1. Open the *Edit job* panel and head over to the *Workflow* section.
+## Step 4: Add a decoder resource to the job
 
-1. **Select** the *NewTek 001* resource and open the *Add After* panel.
+1. Open the *Edit job* panel and head over to the *Workflow* section again.
 
-   ![Add After](~/solutions/images/Scheduling_Create_Job_Add_After.png)
+1. First select the *NewTek 001* resource, and then click **Add After**.
 
-1. Select the **Decoder** pool. But there's no any resources available to add to our job. Worry not! We will take care of that later. For now, to declare that we need a decoder resource in the job, click *Add Resource Pool*.
+   ![Add After button](~/solutions/images/Scheduling_Create_Job_Add_After.png)
 
-   ![Add Resource Pool](~/solutions/images/Scheduling_Create_Job_Add_Resource_Pool.png)
+1. Select the **Decoder** pool, and then click **Add Resource Pool**.
 
-   > [!TIP]  
-   > If you get an error in this step, make sure that you have **selected** the resource node in the previous step.
+   If at this point, you have no resources available yet to add to the job, this is not a problem, because it will be taken care of later in this tutorial.
 
-1. Resource pool should now be added to our job.
+   ![Add the resource pool](~/solutions/images/Scheduling_Create_Job_Add_Resource_Pool.png)
 
-   ![Resource Pool Added with Red Hand](~/solutions/images/Scheduling_Create_Job_Red_Hand.png)
+   If you get an error in this step, this is likely because no resource was selected in the previous step, so in that case close the panel and try again from the previous step, making sure the resource is selected.
 
-   > [!NOTE]
-   > Note the red hand icon on the resource pool in the *Nodes* table. It means that we still have to pick a concrete resource for our job.
+You should now see the resource pool in the list of nodes and the workflow overview. Note that the red hand icon for the Decoder resource pool in the *Nodes* table indicates that an actual resource still has to be picked for the job.
+
+![Resource pool added without resource](~/solutions/images/Scheduling_Create_Job_Red_Hand.png)
 
 ## Step 5: Swap resources
 
-Since the *NewTek 001* resource can act both as an encoder and as a decoder, in this step, you will swap its role and use it as a decoder in the job. Then the *Video Solutions 001* resource is still available to be used as an encoder.
+The *NewTek 001* resource can act both as an encoder and as a decoder; however, because you added it as an encoder to the job earlier, it cannot be used as a decoder for the same job. To solve this, you can swap its role to decoder, and then use the *Video Solutions 001* resource as an encoder.
 
-1. Open the *Edit job* panel and head over to the *Nodes* table.
+1. In the *Nodes* table of the *Edit job* panel, select the *Encoder* row.
 
-1. Select the *Encoder* row, and under the *Actions* column, click the **swap action**.
+1. In the *Actions* column, click the **swap action icon**.
 
-    ![Swap Action](~/solutions/images/Scheduling_Create_Job_Swap_Action.png)
+   ![Swap action icon](~/solutions/images/Scheduling_Create_Job_Swap_Action.png)
 
-1. In the newly opened window, the *Encoder* resource pool should be preselected. Select the *Video Solutions 001* resource and click the swap button.
+   This will open the *Swap Resources* pane, where the *Encoder* resource pool will be selected already.
 
-    ![Swap Resource](~/solutions/images/Scheduling_Create_Job_Swap_Resource.png)
+1. Select the *Video Solutions 001* resource and click the *Swap* button.
 
-1. If you do not see the results immediately in the node edge graph, use the *Workflow* section's *Refresh* button.
+   ![Swap button](~/solutions/images/Scheduling_Create_Job_Swap_Resource.png)
 
-    ![Refresh Node-Edge Graph](~/solutions/images/Scheduling_Workflow_Refresh.png)
+   You should now see this resource in the *Edit job* panel instead, and a resource will be available in the decoder pool to assign to the job. If you do not see the results immediately, use the *Workflow* section's *Refresh* button.
 
-1. Now we should have a resource available in the decoder pool to assign it to our job. In the *Nodes* table, select the *Decoder* resource pool and click the *Red Hand* icon.
+   ![Refresh button](~/solutions/images/Scheduling_Workflow_Refresh.png)
 
-1. The *Decoder* resource pool should be preselected. Select the *NewTek 001* resource and pick it.
+1. In the *Nodes* table, select the *Decoder* resource pool and click the ![Red Hand](~/solutions/images/Red_Hand_icon.png) icon.
+
+   This will open the Pick Resource pane, where the *Decoder* resource pool will be preselected
+
+1. Select the *NewTek 001* resource and click the *Pick* button.
 
     ![Pick Resource](~/solutions/images/Scheduling_Create_Job_Pick_Resource.png)
 
-1. You should see both resources displayed in *Nodes* and *Workflow* sections now.
+You should now see both resources displayed in *Nodes* and *Workflow* sections.
 
-## Step 6: Confirming the job
+## Step 6: Confirm the job
 
-Now that we have the resources in place, it's time to confirm the job.
+Now that the resources are in place, you can confirm the job:
 
-1. Head over to the *Job info* section and click *Confirm job*.
+1. In the *Job info* section of the *Edit job* panel, click *Confirm job*.
 
    ![Confirm Job](~/solutions/images/Scheduling_Create_Job_Confirm.png)
 
-1. You should see you job now colored in blue, with a green underline, which indicates that it's successfully created.
+1. Close the panel and check what your job looks like on the timeline.
+
+   The job should now be colored blue, with a green underline, indicating that it has been successfully created.
+
+   ![Successfully created job](~/solutions/images/Scheduling_job_successful.png)
