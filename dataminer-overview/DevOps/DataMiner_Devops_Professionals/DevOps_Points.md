@@ -66,6 +66,8 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 - **Being an advocate for the DataMiner brand**: Being an advocate is also part of the culture of being a DataMiner DevOps Professional. That's why you can earn 250 points simply by adding your DataMiner DevOps level to your LinkedIn headline. Once you've updated your LinkedIn profile, you can send an email to [devops@skyline.be](mailto:devops@skyline.be) with the link to your profile page and we will get you your points! If DataMiner is mentioned in the job title in your email signature, we will hit you up with another 250 points per year. Each LinkedIn post that mentions @skyline-communications and uses the tag #dataminerdevops will automatically result in 50 points per post.
 
+- **Sharing a story for #CommunityTuesdays**: The #CommunityTuesdays series on LinkedIn shines a light on the people, ideas, and moments that make the DataMiner Community truly unique. If you provide a story — for example, a cool integration, an inspiring use case, or someone in the ecosystem making a quiet impact — and it gets featured, you'll earn 250 DevOps Points. You can reach out to [Wouter Bogaert](mailto:wouter.bogaert@skyline.be) and share your story!
+
 - **Reward for outstanding DevOps mindset**: From time to time, Skyline staff members have the opportunity to nominate registered DataMiner DevOps Professionals who exemplify an exceptional DevOps mindset and demonstrate the effective application of associated best practices. Such recognition leads to the allocation of additional points in the range of 100 up to 750 on the recipient's DataMiner DevOps Professional account.
 
 > [!IMPORTANT]
