@@ -49,6 +49,8 @@ A resource pool can be created to group a set of **interchangeable resources**. 
 
 Resources can be added to multiple pools, making them eligible for multiple purposes while keeping a single availability timeline and preventing resource conflicts.
 
+The resource pools displayed in the app include [teams that have been made bookable](xref:PO_Managing_Teams#making-a-team-bookable) in the People & Organizations app. These resource pools cannot be edited directly in the Resource Studio app.
+
 ## Capabilities
 
 Capabilities give a **qualitative description** of a resource or pool, making it clear what it can be used for.
@@ -67,7 +69,7 @@ Capabilities can be assigned either to a resource or to a resource pool. If they
 
 When creating a [workflow](xref:MO_Workflow_Designer#workflows) or a [job](xref:MO_Scheduling#jobs), users can specify the required capabilities of the resources to be used in the workflow or job. This will limit the resources available for picking only to those which satisfy the capability requirements, making it easier to find the suitable ones.
 
-For example, *Location* can be an important capability when planning operations where resources need to be on-site. You can assign locations to all you resources beforehand, and then upon job creation you can choose the location your resources need to have. Then, when the resources are picked, only the ones on the actual location will be available for selection. Capabilities offer a very flexible and general way of solving this problem for a wide array of cases.
+For example, *Location* can be an important capability when planning operations where resources need to be on-site. You can assign locations to all your resources beforehand, and then upon job creation you can choose the location your resources need to have. Then, when the resources are picked, only the ones on the actual location will be available for selection. Capabilities offer a very flexible and general way of solving this problem for a wide array of cases.
 
 > [!TIP]
 > For a hands-on example of assigning capacities to resources and resource pools, follow the tutorial [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities). For an example of using these capacities when creating jobs, follow the [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations).
