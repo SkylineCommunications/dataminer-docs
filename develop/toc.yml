@@ -3777,6 +3777,37 @@ items:
           topicUid: HyperLinks.HyperLink-valueParsing
         - name: '@version'
           topicUid: HyperLinks.HyperLink-version
+  - name: LogSettings schema
+    topicUid: SchemaLogSettings
+    items:
+    - name: Log
+      topicUid: LogSettingsLog
+      items:
+      - name: File
+        topicUid: Log.File
+      - name: General
+        topicUid: Log.General
+        items:
+        - name: LinesPerIteration
+          topicUid: Log.General.LinesPerIteration
+        - name: SLLogMaxMemory
+          topicUid: Log.General.SLLogMaxMemory
+    - name: SchemaTypes
+      items:
+      - name: FileElementType
+        topicUid: LogSettings-FileElementType
+        items:
+        - name: Levels
+          topicUid: LogSettings-FileElementType.Levels
+          items:
+          - name: '@debug'
+            topicUid: LogSettings-FileElementType.Levels-debug
+          - name: '@error'
+            topicUid: LogSettings-FileElementType.Levels-error
+          - name: '@info'
+            topicUid: LogSettings-FileElementType.Levels-info
+        - name: '@name'
+          topicUid: LogSettings-FileElementType-name
   - name: NuGet stages schema
     topicUid: SchemaNuGetStagesConfig
     items:
