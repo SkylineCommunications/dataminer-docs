@@ -5,7 +5,9 @@ uid: LogSettings-FileElementType
 # FileElementType complex type
 
 Specifies the log settings for the log file as mentioned in the name attribute.
-Note: if the name attribute is empty, this represents the default log settings.
+
+> [!NOTE]
+> If the name attribute is empty, this represents the default log settings.
 
 ## Children
 
