@@ -965,7 +965,6 @@ items:
         topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
-
   - name: Class Library
     items:
     - name: Class library introduction
