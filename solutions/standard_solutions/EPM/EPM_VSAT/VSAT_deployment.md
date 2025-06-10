@@ -87,6 +87,8 @@ Follow the steps below to set up the **front-end and back-end elements**:
       | File Export Path            | A shared folder path, for example `C:\EPM\Documents\GEO`    |
 
    1. Select the *assignments* tab.
+      
+   1. Add the element IDs (in DMAID/ElementID format) to the *Frontend Assignments* table.
 
    1. Add the element IDs (in DMAID/ElementID format) to the *Backend Assignments* table.
 
