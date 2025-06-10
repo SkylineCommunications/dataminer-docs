@@ -15,15 +15,16 @@ Expected duration: 15 minutes
 
 - A DataMiner System using DataMiner 10.5.4 or higher.
 - Access to the **Scheduling** application.
+- You have complete the tutorials [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro) and [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities).
 
 > [!NOTE]
-> This tutorial continues from the tutorials [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro), [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder), and [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities). Ideally, you should follow these tutorials first, so that you have an understanding of the basic concepts they introduce. The current tutorial will also make us of the resources with capabilities created in this last tutorial.
+> Ideally, you should also follow the tutorial [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder) first, so you have a better understanding of how to create a basic job.
 
 ## Overview
 
 - [Step 1: Create a new job](#step-1-create-a-new-job)
 - [Step 2: Add the Converter resource pool to the job](#step-2-add-the-converter-resource-pool-to-the-job)
-- [Step 3: Configure resource pools](#step-3-configure-resource-pools)
+- [Step 3: Configure the resource pools](#step-3-configure-the-resource-pools)
 - [Step 4: Pick resources](#step-4-pick-resources)
 - [Step 5: Confirm the job](#step-5-confirm-the-job)
 
@@ -37,67 +38,74 @@ Expected duration: 15 minutes
 
 ## Step 2: Add the Converter resource pool to the job
 
-1. Click the **pencil** icon for the job to open the *Edit* panel.
+1. Click the **pencil** icon on the job to open the *Edit* panel.
 
 1. Scroll down to the *Workflow* section of the panel, and click **Add Node**.
 
    ![Add Node](~/solutions/images/Scheduling_Add_Node.png)
 
-1. Select the "**Converter**" resource pool.
+1. On the left side of the *Add Node* panel, select the **Converter** resource pool.
 
-1. Click the *+ Add Resource Pool* button.
+1. Click the **+ Add Resource Pool** button.
 
    ![Add Resource Pool](~/solutions/images/Scheduling_Add_Resource_Pool.png)
 
-1. **Select** the newly added node.
-
-1. Click the *Add After* button to add another resource pool.
+1. First select the newly added node, and then click the **Add After** button to add another resource pool.
 
    ![Add After](~/solutions/images/Scheduling_Add_After.png)
 
-1. Add "**Converter**" resource pool node again.
+1. Again select the **Converter** resource pool and click **+ Add Resource Pool**.
 
-   ![Workflow Converters](~/solutions/images/Scheduling_Workflow_Converters.png)
+   This will be the resulting workflow:
 
-1. If you do not see the results immediately in the node-edge graph, use the *Workflow* section's *Refresh* button.
+   ![Converters workflow](~/solutions/images/Scheduling_Workflow_Converters.png)
 
-    ![Refresh Node-Edge Graph](~/solutions/images/Scheduling_Workflow_Refresh.png)
+   If you do not see this result immediately, use the refresh button in the top-right corner of the *Workflow* section.
 
-## Step 3: Configure resource pools
+    ![Refresh button](~/solutions/images/Scheduling_Workflow_Refresh.png)
 
-1. In the *Workflow* section of both nodes, click the *Configure* button.
+## Step 3: Configure the resource pools
 
-1. In the *CONFIGURATION* section, select "**Conversion Type**" from the dropdown menu.
+1. Select the first node in the *Workflow* section, and click the *Configure* button.
 
-1. Select the check box to enable option selection.
+1. In the *Select Configuration* window, make sure **Conversion Type** is selected.
 
-1. For the first resource, choose the "**SDI to IP**" option, and for the second one choose the "**IP to SDI**".
+   This is the parameter that was configured in the last step of the tutorial [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities).
 
-1. Click *Update*.
+1. Select the checkbox to enable option selection, and select **SDI to IP**.
+
+1. Click **Update**.
 
    ![Select Configuration](~/solutions/images/Scheduling_Select_Configuration.png)
 
+1. Select the second node and repeat the steps above, selecting **IP to SDI** instead.
+
 ## Step 4: Pick resources
 
-1. Navigate to the *Nodes* section of the *Edit* panel of the job.
+1. Scroll up to the *Nodes* section of the *Edit* panel.
 
-1. Notice that both of the resources pools have a red hand symbol in the *Resource Select Column*, which means that we still have to pick actual resources for them.
+   You will see that for both resource pools the ![Red Hand](~/solutions/images/Red_Hand_icon.png) icon is shown in the *Resource Select Column*, which means that the resources still need to be picked for these.
 
-1. For both resources, click the *Red hand icon*.
+1. Click this icon for the first resource pool, and then select the *Video Solutions 001* resource and click *Pick*.
 
-1. For the first resource pool, choose the *Video Solutions 001* resource. For the second one, choose *NewTek 001*.
+   Note how only the resources matching your configuration will be shown.
 
    ![Pick Resource](~/solutions/images/Scheduling_Pick_Resource.png)
 
-   > [!NOTE]
-   > Notice how the options get narrowed down when picking resources. Above, you can see that the resources shown are only those that match the configuration selected earlier.
+1. Click the icon for the second resource pool, and now select *NewTek 001* and select *Pick*.
+
+   Note how the options for resource selection have been narrowed down further at this point: the resource you picked earlier is no longer available for selection.
 
 ## Step 5: Confirm the job
 
-1. Navigate to the *Job Info* section.
+1. Scroll up to the **Job Info** section.
 
-1. Click the *Save as Tentative* button.
+1. Click the **Save as Tentative** button.
 
-1. Click *Confirm Job* button.
+1. Click **Confirm Job** button.
 
-You have now successfully scheduled a job with the use of configurations.
+You have now successfully scheduled a job using a resource pool featuring a capability and parameter configuration.
+
+## Up next
+
+To learn how you can create a workflow template that can be used in different jobs, making the job configuration easier and more user-friendly, follow the next tutorial [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro).

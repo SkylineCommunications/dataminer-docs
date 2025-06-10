@@ -12,15 +12,27 @@ Either create a completely new workflow with the *New workflow* button, or selec
 
 ## Adding nodes to a workflow
 
-For a workflow to be useful, it must contain at least one **node**. Nodes are used to indicate something is required by the workflow. When adding a node you will be able to select a class or a specific entity. At the moment, you can use **Resource pool** as class and **Resource** as entity:
+For a workflow to be useful, it must contain at least one **node**. Each node indicates something that is required by the workflow.
 
-- **Resource pool**: A resource pool indicates that a resource is needed from a specific pool without having to already assign a specific resource instance to the workflow. As the workflow can be reused for multiple jobs, it is not yet possible to understand which resources in the pool will be available. The resource pool node allows you to configure the node before selecting an available resource.
+To add a node, select the workflow and then click the *Add node* button. You can then select to either use a **resource pool** to indicate the type of required resource, or use a specific **resource**.
 
-- **Resource**: When we know upfront what resource is required by the workflow, a specific resource can be selected as a node. As the resource can be part of multiple resource pools, we still have to select the resource pool (context) in which we want to use the resource. When creating a job from the workflow, the resource will automatically be added as node to the job.
+- **Resource pool**: Select this option if you want the specific resource instance to be assigned later. This way, you can already configure the node and limit the resources that will be selectable for jobs using the workflow. This is for instance useful if you do not know which resources in the pool will be available.
 
-More node types will be supported in a later version. Each node that is part of a workflow also has several configuration options:
+- **Resource**: If you know exactly which resource will be required by the workflow, select a specific resource as a node. As a resource can be part of multiple resource pools, you still then also have to select the resource pool to indicate the context in which the resource will be used. When a job will be created using the workflow, the resource will automatically be added as node to the job.
 
-- **Alias (optional)**: An alias for the node in the workflow. This can be useful if there are multiple nodes of the same type in a workflow.
+Once a first node has been added to a workflow, you can add additional nodes in different ways:
+
+- Click the *Add node* button like before. The wizard will include an extra step where you can indicate how the node is connected to other nodes, by selecting the source and/or destination node(s).
+- Select a node in the workflow, open the *Node Actions* menu, and select *Add before* or *Add After* to add the node before or after the selected node.
+
+## Configuring existing nodes in a workflow
+
+After you have added a node, you can make changes to it by selecting it and then selecting an action in the **Node Actions** menu at the top:
+
+- **Edit**: Allows you to change the selected resource and/or resource pool. However, you cannot change the type of node. If you linked it to a resource pool, you cannot change it to a node linked to a resource, and vice versa.
+- **Configure Node**: Allows you to select capabilities, capacities, or parameters for the node.
+- **Edit properties**: Allows you to add or edit properties for a node
+- **Remove**
 
 ## Creating connections between nodes
 

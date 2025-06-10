@@ -11,16 +11,12 @@ Expected duration: 15 minutes
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
 
-> [!TIP]
-> See also: [Resource Studio](xref:MO_Resource_Studio) and [Scheduling](xref:MO_Scheduling) documentation.
-
 ## Prerequisites
 
 - A DataMiner System using DataMiner 10.5.4 or higher.
 - Access to the **Workflow Designer** application.
 - Access to the **Scheduling** application.
-- Having completed the [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities).
-- Having completed the [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations).
+- You have completed the tutorials [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro), [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities), and [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations).
 
 ## Overview
 
@@ -34,118 +30,106 @@ Expected duration: 15 minutes
 
 1. Navigate to the **Workflow Designer** app.
 
-1. Click the *+ New Workflow* button in the upper-left part of the screen.
+1. In the top-left corner, click **+ New workflow**.
 
-   ![New Workflow](~/solutions/images/Workflow_Designer_New_Workflow.png)
+   ![New workflow button](~/solutions/images/Workflow_Designer_New_Workflow.png)
 
-1. Give your workflow an arbitrary workflow name.
+1. Specify a name of your choice in the **Workflow name** box, e.g. *SDI/IP Base Workflow*.
 
-1. Optionally, mark it as a **favorite** so that it shows up at the top of your workflows.
+1. If you want the workflow to show up at the top of the list of workflows, select the **Favorite** box.
 
-1. Click *Save*.
+1. Click the **Save** button at the top.
 
-   ![Save Workflow](~/solutions/images/Workflow_Designer_Save_Workflow.png)
+   ![Save button](~/solutions/images/Workflow_Designer_Save_Workflow.png)
 
-1. Make sure the workflow was indeed created.
+You should now see your workflow in the list on the left, for example:
 
-   ![All Workflow](~/solutions/images/Workflow_Designer_All_Workflows.png)
+![Workflow overview](~/solutions/images/Workflow_Designer_All_Workflows.png)
 
 ## Step 2: Add resource pools to the workflow
 
-1. Select the newly created workflow in the list.
+1. Select the newly created workflow in the list, and click the **Add node** button.
 
-1. Click the *Add Node* button.
+   ![Add node button](~/solutions/images/Workflow_Designer_Add_Node.png)
 
-   ![Add Node to Workflow](~/solutions/images/Workflow_Designer_Add_Node.png)
-
-1. Select *Resource Pool*.
-
-1. Click *Next*.
+1. Select **Resource Pool**, and click *Next*.
 
    ![Select Resource Pool](~/solutions/images/Workflow_Designer_Select_Resource_Pool.png)
 
-1. From the dropdown menu, select the *Converter* resource pool.
-
-1. Click *Save*.
+1. In the dropdown box, select the **Converter** resource pool, and click *Save*.
 
    ![Save Resource Pool](~/solutions/images/Workflow_Designer_Save_Resource_Pool.png)
 
-1. Select the newly added resource pool.
+1. Select the newly added resource pool in the *Selected workflow* pane.
 
-1. Under *Node Actions* menu, click the *Add After* option.
+1. Expand the **Node Actions** menu at the top, and select **Add After**.
 
    ![Add Node After](~/solutions/images/Workflow_Designer_Add_Node_After.png)
 
-1. Similarly to the previously added resource pool, add another **Converter**.
+1. Again select to add a resource pool and select the **Converter** resource pool.
 
-1. Make sure your workflow looks as below.
+Your workflow should now look like this:
 
-   ![Node Configuration](~/solutions/images/Workflow_Designer_Node_Configuration.png)
+![Node configuration](~/solutions/images/Workflow_Designer_Node_Configuration.png)
 
 ## Step 3: Configure the resource pools
 
-In this step, you will add some configuration to the workflow, so that one node represent an SDI-to-IP device, and the other will represent an IP-to-SDI device.
+In this step, you will add some configuration to the workflow, so that one node will represent an SDI-to-IP device, and the other will represent an IP-to-SDI device.
 
-1. In the *Selected Workflow* section, select the **Converter (1)** node.
+1. In the *Selected Workflow* pane, select the **Converter (1)** node.
 
-1. Under *Node Actions* dropdown menu, click the *Configure Node* option.
+1. Expand the **Node Actions** menu, and select **Configure Node**.
 
-   ![Configure Node](~/solutions/images/Workflow_Designer_Configure_Node.png)
+   ![Configure Node option](~/solutions/images/Workflow_Designer_Configure_Node.png)
 
-1. In the new window, to the right of the **Conversion Type**, click on the checkbox to enter the value.
+1. In the pop-up window, select the checkbox and then select the **SDI to IP** option and click *Create*.
 
-1. In the new dropdown, select the *SDI to IP* option.
+   ![Select Configuration window](~/solutions/images/Workflow_Designer_Select_Configuration.png)
 
-   ![Select Configuration](~/solutions/images/Workflow_Designer_Select_Configuration.png)
+1. Select the **Converter (2)** node and repeat the steps above, but select the **IP to SDI** option instead.
 
-1. Do the similar thing to the second node, but when selecting the **Conversion Type**, select the *IP to SDI* option.
-
-If all went as expected, you should have the same node configuration as the one we created in the tutorial for using configurations in the **Scheduling** app.
+You should have the same node configuration as in the tutorial [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations).
 
 ## Step 4: Complete the workflow
 
-In order to be able to use the workflow we created in the **Scheduling** app, we need change the workflow's state to *Complete*.
+In order to be able to use this workflow in the Scheduling app, the workflow's state now has to be set to *Complete*:
 
-1. Select the workflow we have just created.
+1. Select the workflow you have just created and click the **pencil icon** in the *EDIT* column.
 
-1. Click the pencil icon in the *EDIT* column.
+1. In the newly opened panel, click the **Mark Complete** button at the bottom.
 
-1. In the newly opened panel, at the bottom-right, click the *Mark Complete* button.
-
-1. Click the *Save* button.
-
-Our workflow should now be ready for use in the **Scheduling** app.
+1. Click the **Save** button at the top.
 
 ## Step 5: Create a new job with the workflow as a template
 
-1. Navigate to the Scheduling app.
+1. Open the **Scheduling** app.
 
-1. To go to the panel for creating new job, click on the *+ New* button.
+1. On the *Job View* page, click the **+ New** button at the top.
 
-1. In the newly opened panel, give the job an arbitrary name.
+1. In the *Create job* panel, specify a **name** of your choice for the job.
 
-1. Optionally, **delay** the time of the job for several hours, so that it does not start executing right away.
+1. In the **Start Time** and **End Time** boxes, customize the timing for the job so that it does not start executing right away.
 
-1. Set *Workflow* field to the workflow we created earlier in the tutorial, **SDI/IP Base Workflow**.
+1. In the **Workflow** box, select workflow you created earlier, e.g. *SDI/IP Base Workflow*.
 
-1. Click the *Create Job* button.
+1. Click the **Create Job** button.
 
-   ![Scheduling Create Job](~/solutions/images/Scheduling_Create_Job_With_Workflow.png)
+   ![Create job panel](~/solutions/images/Scheduling_Create_Job_With_Workflow.png)
 
-1. If all went well, you should see your job in the timeline. Notice that the job has a *Red Hand* symbol on it, meaning that it still needs to have its resources selected before it can execute.
+   You should now see your job on the timeline. A red hand symbol will be shown in the box representing the job, which means that resources still need to be selected before the job can be executed.
 
-   ![New Job](~/solutions/images/Scheduling_Workflow_New_Job.png)
+   ![Job on the timeline](~/solutions/images/Scheduling_Workflow_New_Job.png)
 
-1. Click the pencil icon to open the edit panel for the job.
+1. Click the **pencil icon** to open the edit panel for the job.
 
-1. For the first resource pool, select the *Video Solutions 001* resource, and for the second resource pool select the *NewTek 001* resource.
+1. In the **Nodes** section, pick the *Video Solutions 001* resource for the first resource pool, and the *NewTek 001* resource for the second resource pool.
 
    This is done in the same way as in the tutorial [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations), so you can refer to that tutorial for more details.
 
-1. Navigate to the *Job Info* section.
+1. Scroll up to the **Job Info** section.
 
-1. Click the *Save as Tentative* button.
+1. Click the **Save as Tentative** button.
 
-1. Click the *Confirm Job* button.
+1. Click the **Confirm Job** button.
 
-You should now have created a job which uses the encoded and decoder resources with a predefined workflow.
+You have now created a job that uses the encoded and decoder resources with a predefined workflow.

@@ -15,9 +15,7 @@ Expected duration: 15 minutes
 
 - A DataMiner System using DataMiner 10.5.4 or higher.
 - Access to the **Resource Studio** application.
-
-> [!NOTE]
-> This tutorial continues from the [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro) tutorial. Ideally, you should follow that tutorial first, as the current tutorial makes use of the resources that are configured in it.
+- You have complete the tutorial [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro).
 
 ## Overview
 

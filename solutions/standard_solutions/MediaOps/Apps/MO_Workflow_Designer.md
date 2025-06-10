@@ -9,7 +9,7 @@ The workflow designer app allows you to visually manage and configure [workflows
 ![Example workflow](~/solutions/images/WFD_Example_WF.png)
 
 > [!TIP]
-> Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=DR1ObA8F0m0) about this app.
+> Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=DR1ObA8F0m0) about this app. Or if you would like a practical example of how to use this app, refer to the tutorial [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro).
 
 ## App overview
 
@@ -21,6 +21,8 @@ The following pages are available in the Workflow Designer app:
 
 ## Workflows
 
-A workflow defines what resources and resource pools are needed for an operation, and how they are interconnected. This is useful if you have a repeating set of resources you want to reuse in multiple jobs, or over a period of time. For example, if a certain set of resources is always required when organizing live broadcast events, you can group these into a "Live Broadcast" workflow and use it whenever you want to send out a crew for a live broadcast operation. Workflow Designer allows you to also use resource pools in your workflows, enabling you to specify which types of resources you need in your workflows, without the need to specify the exact resources up front.
+A workflow defines which resources and resource pools are needed for an operation, and how they are interconnected. This is useful if you want to reuse the same set of resources in multiple jobs. For example, if a certain set of resources is always required when organizing live broadcast events, you can group these into a "Live Broadcast" workflow and use it whenever you want to send out a crew for a live broadcast operation.
+
+Workflow Designer allows you to also use resource pools in your workflows, enabling you to specify which types of resources you need in your workflows, without the need to specify the exact resources up front.
 
 For more details on how you can create workflows in this app, see [Creating workflows](xref:WFD_Creating_Workflows).
