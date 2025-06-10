@@ -430,3 +430,10 @@ After a Failover switch, in some cases, the ClusterEndpointManager would fail to
 <!-- Not added to MR 10.6.0 -->
 
 On swarming-enabled systems, up to now, editing an element would cause the alarm ID of that element to incorrectly be reset to 1. For the element to generate alarms in the correct range again, either DataMiner or the element had to be restarted.
+
+#### SLAutomation would leak memory each time an Automation script was run [ID 43073]
+
+<!-- MR 10.6.0 - FR 10.5.7 [CU0] -->
+<!-- Not added to MR 10.6.0 -->
+
+Since DataMiner 10.5.6, SLAutomation would leak memory each time an Automation script was run.
