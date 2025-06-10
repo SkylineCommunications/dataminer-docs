@@ -21,8 +21,8 @@ Expected duration: 15 minutes
 - [Step 1: Create a new organization](#step-1-create-a-new-organization)
 - [Step 2: Create a new contact](#step-2-create-a-new-contact)
 - [Step 3: Create a new team](#step-3-create-a-new-team)
-- [Step 4: Add members to a team](#step-4-add-members-to-a-team)
-- [Step 5: Make a team bookable](#step-5-make-a-team-bookable)
+- [Step 4: Add the contact to the team](#step-4-add-the-contact-to-the-team)
+- [Step 5: Make the team bookable](#step-5-make-the-team-bookable)
 
 ## Step 1: Create a new organization
 
@@ -48,7 +48,7 @@ Expected duration: 15 minutes
 
 1. Click the *New contact* button on the right side of the header bar.
 
-1. Enter *Full name* of the contact.
+1. Enter the *Full name* of the contact.
 
 1. In the *Organization* field, select the organization you created in the previous step.
 
@@ -62,7 +62,7 @@ Expected duration: 15 minutes
 
 1. Navigate to the *Teams* page.
 
-1. On the top right, click *+ New team*.
+1. In the top-right corner, click *+ New team*.
 
 1. Enter the *Team name* you want to give to your team.
 
@@ -72,28 +72,24 @@ Expected duration: 15 minutes
 
 1. In the new dialog, select your new team and click *Activate Selected* to make it available in other MediaOps apps.
 
-## Step 4: Add members to a team
+## Step 4: Add the contact to the team
 
-1. From the *Teams* table, find the team you just created.
-
-1. Click on the button in the *Details* column to open up team members panel.
+1. In the *Teams* table, click the button in the *Details* column for te team you have just created.
 
 1. Click the *Edit members* button in the upper left corner of the new panel.
 
-1. In the left side list, find and select the contact you created in Step 2.
+1. In the list on the left, find and select the contact you created earlier.
 
-1. Click the button with an arrow pointing to the right to move the person to the team.
+1. Click the arrow button that points to the right to move the person to the team.
 
    ![Add Contact To Team](~/solutions/images/People_And_Organizations_Add_Contact_To_Team.png)
 
-1. The contact is now part of the team, good job! You may close the panel now.
+## Step 5: Make the team bookable
 
-## Step 5: Make a team bookable
+1. If you closed the panel in the previous step, open it again by clicking the button in the *Details* column.
 
-1. With the team still selected, click the *Bookable* switch in the top right.
-
-1. Confirm you want to make it bookable.
+1. Click the *Bookable* switch in the top-right corner and click *OK* to confirm.
 
    ![Make Team Bookable](~/solutions/images/People_And_Organizations_Make_Team_Bookable.png)
 
-The team and its members should now show up in the Resource Studio app, up and ready for bookings. The team should show up as a resource pool, and its members should show up as resources belonging to that pool.
+The team and its members should now show up in the Resource Studio app, up and ready for bookings. The team will be available as a resource pool, and its members will show up as resources belonging to that pool.

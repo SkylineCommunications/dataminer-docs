@@ -9,7 +9,7 @@ The People & Organizations app allows you to create, edit, and organize people, 
 ![People & Organizations Overview](~/solutions/images/People_and_Organizations_Overview.png)
 
 > [!TIP]
-> Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=ybRBZICWMes) about this app.
+> Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=ybRBZICWMes) about this app. Or if you would like a practical example of how to use this app, refer to the tutorial [Creating an organization with a team and contacts to use as resources in MediaOps apps](xref:Tutorial_MediaOps_People_and_Organizations_Intro).
 
 ## App overview
 

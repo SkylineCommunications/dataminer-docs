@@ -11,9 +11,6 @@ Expected duration: 15 minutes
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
 
-> [!TIP]
-> See also: [Resource Studio](xref:MO_Resource_Studio) and [Scheduling](xref:MO_Scheduling) documentation.
-
 ## Prerequisites
 
 - A DataMiner System using DataMiner 10.5.4 or higher.
@@ -24,88 +21,94 @@ Expected duration: 15 minutes
 
 ## Overview
 
-- [Step 1: Create new resource pool](#step-1-create-new-resource-pool)
-- [Step 2: Creating the capability](#step-2-creating-the-capability)
-- [Step 3: Assigning capabilities to resources](#step-3-assigning-capabilities-to-resources)
+- [Step 1: Create a new resource pool](#step-1-create-a-new-resource-pool)
+- [Step 2: Create a new capability](#step-2-create-a-new-capability)
+- [Step 3: Assign the capability to resources](#step-3-assign-the-capability-to-resources)
 - [Step 4: Assign resources to the pool](#step-4-assign-resources-to-the-pool)
-- [Step 5: Define parameter on the resource pool](#step-5-define-parameter-on-the-resource-pool)
+- [Step 5: Define a parameter on the resource pool](#step-5-define-a-parameter-on-the-resource-pool)
 
-## Step 1: Create new resource pool
+## Step 1: Create a new resource pool
 
 1. Open the **Resource Studio** app.
 
-1. Bring up the **Add New Resource Pool** panel by clicking the *+ New* button on the upper left corner.
+1. On the *Resource Pools* page, click the **+ New** button in the upper left corner.
 
-1. Name the new resource "**Converter**".
+   This will open the **Add New Resource Pool** panel.
 
-1. *Save as Completed* the new resource pool.
+1. Specify the name `Converter` and click **Save as Completed** to save your new resource pool.
 
-   ![New Converter Resource Pool](~/solutions/images/Resource_Studio_New_Converter_Pool.png)
+   ![New Converter resource pool](~/solutions/images/Resource_Studio_New_Converter_Pool.png)
 
-## Step 2: Creating the capability
+## Step 2: Create a new capability
 
-1. Navigate to the *Capability Management* page.
+1. Navigate to the **Capability Management** page.
 
-1. Open the **New Capability** panel by clicking *+ New Capability* in the upper left corner.
+1. Click **+ New Capability** in the upper left corner to open the *New Capability* panel.
 
    ![Capability Management](~/solutions/images/Resource_Studio_Capability_Management.png)
 
-1. Give the new capability *Name* "**Conversion Type**".
+1. Specify the name `Conversion Type`.
 
-1. Set the *Is Mandatory* toggle on.
+1. Select the **Is Mandatory** checkbox.
 
-1. *Add Discrete* options "**IP to SDI**" and "**SDI to IP**".
+1. Next to **Options**, specify `IP to SDI`.
 
-1. *Add* the new capacity.
+1. Click **Add Discrete**, and specify `SDI to IP` in the additional options box.
 
-   ![New Capability](~/solutions/images/Resource_Studio_New_Capability.png)
+1. Click **Add** to add the new capability.
 
-## Step 3: Assigning capabilities to resources
+   ![New capability](~/solutions/images/Resource_Studio_New_Capability.png)
 
-1. Navigate to the *Resources* page.
+## Step 3: Assign the capability to resources
+
+1. Navigate to the **Resources** page.
 
 1. Select the **Video Solution 001** resource.
 
-1. On the right side of the screen, you can see 3 sections: *Capabilities*, *Capacities*, and *Properties*. Click the *Edit* button in the *Capabilities*.
+1. In the **Capabilities** section on the right, click the **Edit** button.
 
-1. In the newly opened *Manage Capabilities* window, in the *CAPABILITIES* section click on the *+* button to add a new capability.
+1. In the newly opened *Manage Capabilities* window, click the **+** button in the *CAPABILITIES* section to add a new capability.
 
    ![Manage Capabilities](~/solutions/images/Resource_Studio_Manage_Capabilities.png)
 
-1. In the new dropdown, select the *Conversion Type*.
+1. In the new dropdown box , select **Conversion Type**.
 
-1. Click the *Values* button to select the capability values.
+1. Click the **Values** button to select the capability values.
 
-1. In the *DISCRETES* section, click on the *+* button.
+1. In the *DISCRETES* section, click the **+** button.
 
-1. In the dropdown, select the *SDI to IP* option.
-
-1. Click *Back*.
+1. In the dropdown, select the **SDI to IP** option.
 
    ![Manage Capabilities - Discretes](~/solutions/images/Resource_Studio_Manage_Capabilities_Discretes.png)
 
-1. Click *Apply*.
+1. Click **Back**, and then **Apply**.
 
-1. Repeat the steps to add both *SDI to IP* and *IP to SDA* capability discretes to the **NewTek 001** resource.
+1. Select the **NewTek 001** resource.
+
+1. Repeat the steps from the *Video Solution 001* resource to add **both the *SDI to IP* and *IP to SDI* capability discretes** to the *NewTek 001* resource.
 
 ## Step 4: Assign resources to the pool
 
-1. Assign both **Video Solution 001** and **NewTek 001** resources to the **Converter** resource pool.
+1. Navigate to the **Resource Pools** page.
 
-## Step 5: Define parameter on the resource pool
+1. Next to the **Converter** resource pool that you created earlier, click ... to open up the context menu, and select **Assign Resources**.
 
-In this step, you will define a parameter on a resource pool, which can come in handy later when selecting resources (see [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations)).
+1. Select the *Video Solution 001* and *NewTek 001* resources and click the **+Add** button at the top.
 
-1. Navigate to the *Resource Pools* page.
+## Step 5: Define a parameter on the resource pool
 
-1. Select the **Converter** resource.
+In this step, you will define a parameter on a resource pool, which can come in handy when a job is scheduled and you need to select resources for it.
 
-1. Open the *...* menu and select the *Edit Parameters* option.
+1. On the *Resource Pools* page, click ... next to the **Converter** resource pool, and select the *Edit Parameters* option.
 
    ![Edit Resource Pool Parameters](~/solutions/images/Resource_Studio_Edit_Resource_Pool_Parameters.png)
 
-1. Under the *CAPABILITIES* section, click the *+* button and select the *Conversion Type* option from the dropdown.
+1. Click the *+* button and select the *Conversion Type* option from the dropdown.
 
 1. Click *Update*.
 
    ![Edit Resource Pool Parameters Popup](~/solutions/images/Resource_Studio_Edit_Resource_Pool_Parameters_Popup.png)
+
+## Up next
+
+When you have finished this tutorial, follow the tutorial [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations) to learn how you can use schedule a job using the resource pool you have configured in this tutorial.

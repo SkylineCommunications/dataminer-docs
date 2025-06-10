@@ -4,15 +4,12 @@ uid: Tutorial_MediaOps_Scheduling_Configurations
 
 # Scheduling a job using a resource pool with specific capabilities
 
-This tutorial builds on the [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) tutorial, showing you how you can schedule a job using a resource pool with specific capabilities.
+This tutorial builds on the [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities) tutorial, showing you how you can schedule a job using a resource pool with specific [capabilities](xref:MO_Resource_Studio#capabilities).
 
 Expected duration: 15 minutes
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
-
-> [!TIP]
-> See also: [Resource Studio](xref:MO_Resource_Studio) and [Scheduling](xref:MO_Scheduling) documentation.
 
 ## Prerequisites
 
@@ -25,28 +22,24 @@ Expected duration: 15 minutes
 ## Overview
 
 - [Step 1: Create a new job](#step-1-create-a-new-job)
-- [Step 2: Add Converter resource pool to the job](#step-2-add-converter-resource-pool-to-the-job)
+- [Step 2: Add the Converter resource pool to the job](#step-2-add-the-converter-resource-pool-to-the-job)
 - [Step 3: Configure resource pools](#step-3-configure-resource-pools)
 - [Step 4: Pick resources](#step-4-pick-resources)
 - [Step 5: Confirm the job](#step-5-confirm-the-job)
 
 ## Step 1: Create a new job
 
-1. Open the Scheduling app.
+1. Open the **Scheduling** app.
 
-1. Navigate to the *Job View* panel.
+1. On the *Job View* page, click the **+ New** button.
 
-1. Open *+ New* job dialog and give your job an arbitrary name.
+1. Specify a name of your choice for the job and click **Create Job**.
 
-1. *Create job*.
+## Step 2: Add the Converter resource pool to the job
 
-## Step 2: Add Converter resource pool to the job
+1. Click the **pencil** icon for the job to open the *Edit* panel.
 
-1. Open the *Edit* panel of the job created in the previous step.
-
-1. Navigate to the *Workflow* section of the job at the bottom of the Edit panel.
-
-1. Click the *Add Node* button.
+1. Scroll down to the *Workflow* section of the panel, and click **Add Node**.
 
    ![Add Node](~/solutions/images/Scheduling_Add_Node.png)
 

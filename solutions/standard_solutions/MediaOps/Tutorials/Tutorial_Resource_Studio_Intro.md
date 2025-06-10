@@ -4,7 +4,7 @@ uid: Tutorial_MediaOps_Resource_Studio_Intro
 
 # Configuring resources and resource pools
 
-In this tutorial, you will learn how to create and configure resource pools and resources using the Resource Studio. By way of example, a set of items will be added as resources that convert signals between SDI and IP. SDI-to-IP devices act as **encoders**, and IP-to-SDI devices as **decoders**.
+In this tutorial, you will learn how to create and configure resource pools and resources using the Resource Studio app. By way of example, a set of items will be added as resources that convert signals between SDI and IP. SDI-to-IP devices act as **encoders**, and IP-to-SDI devices as **decoders**.
 
 Expected duration: 15 minutes
 
@@ -97,3 +97,7 @@ In this tutorial, *Video Solutions 001* will be used as an *Encoder* only, while
 1. Similarly, assign the *NewTek 001* resource to the **Decoder** pool.
 
 When the resource pool is selected in the *Resource Pools* table, the table to the right will now show the resources you have added to it. These are ready for use in other applications such as [Scheduling](xref:MO_Scheduling) and [Resource Studio](xref:MO_Resource_Studio).
+
+## Up next
+
+When you have finished this tutorial, you can learn how you can add the resources you have created to a job in the tutorial [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder), or learn how to further fine-tune your resources in the tutorial [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities).
