@@ -24,6 +24,12 @@ uid: Cube_Feature_Release_10.5.8
 
 ### Enhancements
 
+#### Current host of an element or service is now shown in Properties window [ID 42807]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When you right-click an element or a service, and select *Properties*, the *General* tab of the *Properties* window will now also display the current host, i.e. the DataMiner Agent that is currently hosting that element or service.
+
 #### Alarm Console: Enhanced performance when processing alarm focus information [ID 42938]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->

@@ -11,15 +11,20 @@ uid: General_Main_Release_10.6.0_changes
 
 ### Enhancements
 
-#### DataMiner installer has been updated [ID 40409] [ID 41299]
+#### DataMiner installer has been updated [ID 40409] [ID 41299] [ID 43030]
 
-<!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- RN 40409: MR 10.6.0 - FR 10.5.1 -->
+<!-- RN 41299: MR 10.6.0 - FR 10.5.1 -->
+<!-- RN 43030: MR 10.6.0 - FR 10.5.8 -->
 
 The DataMiner installer has been updated.
 
-When the configuration window appears, it will now be possible to either continue with the configuration or cancel the entire installation.
+- When the configuration window appears, it will now be possible to either continue with the configuration or cancel the entire installation.
 
-For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
+- When, while installing DataMiner using the DataMiner installer, you have selected to use STaaS for data storage, at some point, you will have to select the STaaS region. Up to now, you were only able to select one of two hard-coded regions. From now on, the available STaaS regions will be retrieved from dataminer.services by means of an API call.
+
+> [!TIP]
+> For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
 #### DataMiner recycle bin enhancements [ID 40565]
 

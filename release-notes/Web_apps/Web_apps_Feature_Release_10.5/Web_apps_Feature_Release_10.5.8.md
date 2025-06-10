@@ -69,12 +69,23 @@ if (results.WasOnFilter("DropDownVariable"))
 
 > [!NOTE]
 >
+> - This feature will only work in conjunction with DataMiner server version 10.5.8 or newer.
 > - While filtering the dropdown box entries, the script's logic is responsible for adding the currently selected entry (if relevant). Otherwise, the dropdown box will consider that value as incorrect and clear itself. Consider only filtering the display value of the entries (case-invariant if possible).
 > - Scripts using this feature should not include components of which the variable name (DestVar) contains "_FilterString". Otherwise, the identifier will not be unique.
 
 ## Changes
 
 ### Enhancements
+
+#### Low-Code Apps - Interactive Automation scripts: Color support for redesigned UI components [ID 42781]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+From now on, the redesigned UI components used in interactive Automation scripts will inherit the default accent color and the default page theme color of the low-code app, as well as any custom accent color that has been specified on component level.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`
 
 #### Dashboards app & Low-Code Apps: Automatically saved component settings will only get saved when in edit mode [ID 43029]
 

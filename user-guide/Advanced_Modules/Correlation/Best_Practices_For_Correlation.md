@@ -1,8 +1,8 @@
 ---
-uid: Best_Practices_When_Creating_Correlation_Rules
+uid: Best_Practices_For_Correlation
 ---
 
-# Best practices when creating Correlation rules
+# Best practices for Correlation
 
 ## Avoid lengthy Correlation rules
 
@@ -27,3 +27,7 @@ Lengthy Correlation rules can have the following consequences:
 
 > [!TIP]
 > If you have discovered other solutions or workarounds while troubleshooting, feel free to [propose your changes](xref:CTB_Quick_Edit) to this guide.
+
+## Avoid keeping correlated alarms open for a long time
+
+See [Keep alarm trees from growing too large](xref:Best_practices_for_assigning_alarm_severity_levels#keep-alarm-trees-from-growing-too-large).

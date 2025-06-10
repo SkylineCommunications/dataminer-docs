@@ -43,6 +43,12 @@ For an example showing how to implement a dropdown box filter in an interactive 
 
 ### Enhancements
 
+#### DataMiner installer: Available STaaS regions will now be retrieved from dataminer.services [ID 43030]
+ 
+<!-- MR 10.6.0 - FR 10.5.8 -->
+ 
+When, while installing DataMiner using the DataMiner installer, you have selected to use STaaS for data storage, at some point, you will have to select the STaaS region. Up to now, you were only able to select one of two hard-coded regions. From now on, the available STaaS regions will be retrieved from dataminer.services by means of an API call.
+
 #### DataMiner upgrade: All TXF files will now be removed each time a DataMiner upgrade is performed [ID 43058]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
@@ -52,6 +58,13 @@ From now on, each time a DataMiner upgrade is performed, all TXF files will be a
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying.
 
 ### Fixes
+
+#### Swarming: Information on where elements are being hosted could be incorrect [ID 42691]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+<!-- Not added to MR 10.6.0 -->
+
+In some rare cases, on certain DataMiner Agents in the cluster, the information on where element are being hosted could be incorrect, especially after multiple hosting agent updates had been processed simultaneously.
 
 #### Problem when combining conditional monitoring templates into an alarm template group [ID 42839]
 
@@ -81,6 +94,12 @@ In some cases, a DataMiner Agent would not start up properly, and the following 
 
 When, in an alarm template, you had configured conditional monitoring based on a condition made up of multiple AND/OR clauses, up to now, some of those AND/OR clauses could incorrectly get disabled when the alarm template was refreshed in SLElement following e.g. a template update.
 
+#### Visual Overview in web apps: Incomplete images could be returned [ID 42968]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When a user requested a mobile visual overview, in some cases, an incomplete image could be returned.
+
 #### Redundancy groups: Alarm mentioning that all redundancy resources are in use would incorrectly not get cleared [ID 42970]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU4] - FR 10.5.8 -->
@@ -88,3 +107,29 @@ When, in an alarm template, you had configured conditional monitoring based on a
 If a redundancy group has more primary elements than backup elements, at the moment when all backups are in use, an alarm with severity level "Notice" will appear in the Alarm Console mentioning that all redundancy resources are in use.
 
 By default, that alarm is cleared as soon as one of the backup elements is available again. However, up to now, in some cases, the alarm would incorrectly not get cleared.
+
+#### GQI: GQI DxM and SLHelper could leak memory [ID 43028]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e. ad hoc data source or custom operators) that throw exceptions from their life cycle methods.
+
+#### GQI: SLHelper could leak memory because SLNet connections used by GQI extensions were not properly cleaned up [ID 43065]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, SLHelper could leak memory because SLNet connections used by GQI extensions were not properly cleaned up.
+
+#### SLAutomation would leak memory each time an Automation script was run [ID 43073]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+<!-- Not added to MR 10.6.0 -->
+
+Since DataMiner 10.5.6, SLAutomation would leak memory each time an Automation script was run.
+
+#### Swarming: Stopped elements would remain stuck in a 'Swarming' state after having been swarmed [ID 43078]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+<!-- Not added to MR 10.6.0 -->
+
+When stopped elements had been swarmed over to another DataMiner Agent, in some cases, they would remain stuck in a *Swarming* state.
