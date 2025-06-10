@@ -17,13 +17,13 @@ To use the entry point, add a method with the following signature to the script:
 public RequestScriptInfoOutput OnRequestScriptInfoRequest(IEngine engine, RequestScriptInfoInput inputData)
 ```
 
-Both [RequestScriptInfoInput](xref:Skyline.DataMiner.Net.Automation.RequestScriptInfoInput) and [RequestScriptInfoOutput](xref:Skyline.DataMiner.Net.Automation.RequestScriptInfoOutput) have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. It is strongly recommended to keep the passed data below 20 MB. If larger chunks need to be passed, a reference to that information should be passed instead.
+Both [RequestScriptInfoInput](xref:Skyline.DataMiner.Net.Automation.RequestScriptInfoInput) and [RequestScriptInfoOutput](xref:Skyline.DataMiner.Net.Automation.RequestScriptInfoOutput) have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. We strongly recommend keeping the passed data below 20 MB. If larger chunks need to be passed, a reference to that information should be passed instead.
 
 ## Arguments
 
 If the script has any script parameters, dummies or memory files, then these are not required when executing the `OnRequestScriptInfo` entry point. However, they are required when executing the `Run` method of that same script.
 
-If the entry point would make use of them, it is recommended to provide all defined arguments in the code that is executing the entry point. In case that is not possible, the following should be taken into account when an argument is used in the entry point code:
+If the entry point would make use of them, we recommend providing all defined arguments in the code that is executing the entry point. In case that is not possible, the following should be taken into account when an argument is used in the entry point code:
 
 - When an omitted script parameter is used in the entry point logic, retrieving the script parameter is possible, but its value will be an empty string.
 - When an omitted dummy is used in the entry point logic, retrieving the dummy is possible, but it will refer to DMA ID -1 and element ID -1. Any actions that use the dummy will fail with an exception.
