@@ -34,6 +34,7 @@ Currently, the following parts of the system are covered:
   - Authentication: Verifies if authentication is enabled and if a secure password is used.
   - Authorization: Verifies if the database user is not a superuser.
   - TLS: Verifies if the connection towards the database is using TLS.
+  - Database software: Verifies whether the database software is still supported. This check is included from DataMiner 10.4.0 [CU16]/10.5.0 [CU4]/10.5.7 onwards.<!-- RN 42914 -->
 
 > [!NOTE]
 > This BPA test is available from DataMiner 10.3.0 [CU15]/10.4.0 [CU3]/10.4.5 onwards.<!-- RN 38632 -->
