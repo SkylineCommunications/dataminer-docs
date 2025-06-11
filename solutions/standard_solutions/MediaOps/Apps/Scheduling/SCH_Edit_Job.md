@@ -4,16 +4,69 @@ uid: SCH_Edit_Job
 
 # Editing a job
 
-Jobs can be edited through the Edit Job panel. This panel can be accessed from the **job view**, **resource view**, **Ops Board** or **Search Jobs** pages, through the 🖉 icon. On top of the Edit Job panel the current state of the job is indicated and what states will follow under normal circumstances. The panel contains sections which are described below.
+To edit a job, click the pencil icon for that job on the *Job View*, *Resource View*, *Ops Board*, or *Search Jobs* page. This will open the *Edit Job* panel. This panel consists of different sections where you can view and edit job settings and information, as detailed below.
 
-- **Job info**: Contains the general information (e.g. Name, Description, start, end) of the job and based on the [state of the job](xref:MO_S_Job_States) different buttons will be shown:
-  - **Save as Tentative** (Draft): Move the job from Draft to a tentative state which will reserve all resources.
-  - **Edit job config** (Draft, Tentative, Confirmed): some buttons to change the state of the job or to access the [profile configuration](xref:MO_S_Configuration) of the job itself. The configuration for the nodes can be accessed from both the Nodes and Workflow section.
-  - **Confirm job** (Tentative): Move the job from Tentative to confirmed. Once the job is confirmed, the orchestration script will be executed.
-  - **Cancel job** (Tentative, Confirmed): To cancel the job and to free up the resources again.
-  - **Manual start** (Confirmed): When the event needs to start immediately, you can use this action to move the start time to now. This will change the job state to running.
-  - **Stop early** (Running): When the event needs to stop immediately, you can use this action to trigger the stop actions. This will change the job state to Confirmed.
-- **Related**: Contains all related/linked objects to the job. New links can be added by clicking the 'Add Link' button. New types can be added from the [App Configuration](xref:MO_S_App_Configuration) page.
-- **Administration**: This section provides information to which organization the job can be billed. The billing depends on the contract selected.
-- **Nodes**: Provides a list view of all nodes in the job. Resources or resource pools can be added from this section through the 'Add Resource' button.
-- **Workflow**: Provides a workflow diagram of all nodes. Nodes and connection between them can be managed from this view.
+## Header bar
+
+In the header bar, several buttons are available:
+
+![Header bar Edit Job panel](~/solutions/images/Edit_job_header_bar.png)
+
+1. The **Contacts** button opens a panel where you can manage contacts related to the job. With the Add Contact button at the bottom of the panel, you can add contacts that have been configured in the [People & Organizations](xref:People_Organizations) app. You can remove contacts again with the x button in the list.
+1. The **Duplicate** button opens the *Duplicate job* window, where you can configure a new job based on the current one.
+1. The ![Copy to clipboard](~/solutions/images/Scheduling_edit_job_copy.png) button copies the URL of the job to the clipboard.<!-- RN 43059 -->
+
+## State overview
+
+All the way at the top of the panel, you can see an overview indicating the current state of the job and the states that will follow it under normal circumstances.
+
+For example:
+
+![State overview](~/solutions/images/Scheduling_state_overview.png)
+
+## Job Info
+
+This section contains the **general information** about the job: the ID, name, description, priority, and the start and end time. Clicking the pencil icon in the top-right corner allows you to make changes to this. The pencil icon below that can be used to modify the properties of the job.
+
+Below this general information, different buttons are shown depending on the [state of the job](xref:MO_S_Job_States):
+
+| Job state | Available buttons |
+|--|--|
+| Draft | Save as Tentative, Edit job config |
+| Tentative | Edit job config, Confirm, Cancel job |
+| Confirmed | Edit job config, Manual start, Cancel job, Return to Tentative |
+| Running | Stop early |
+
+These buttons can be used for the following actions:
+
+- **Save as Tentative**: Moves the job to the tentative state, which will reserve all resources.
+- **Edit job config**: Allows you to configure the capabilities and/or capacities linked to the job.
+- **Confirm**: Moves the job from the tentative to the confirmed state, which will execute the orchestration script linked to the job.
+- **Cancel job**: Cancels the job and frees up the resources again.
+- **Return to Tentative**: Moves the job back to the tentative state, which frees up the resources again.<!-- RN 43042 -->
+- **Manual start**: Moves the start time of the job to the current time, so that it starts immediately. This will change the job state to running.
+- **Stop early**: Triggers the stop actions, so that the job stops immediately. This will change the job state to confirmed.
+
+## Related
+
+This section contains all related objects that have been linked to the job.
+
+You can add new links with the *Add Link* button at the top.
+
+New types of objects can be added on the [App Configuration](xref:MO_S_App_Configuration) page.
+
+<!-- TODO: Explain the practical use of this, with an example -->
+
+## Administration
+
+This section shows the organization and job owner that the job is linked to, if any. Via the pencil icon, you can change the linked organization and job owner.
+
+## Nodes
+
+This section provides a list view of all nodes in the job. With the *Add Node* button at the top, you can add more resources or resource pools as nodes in the job.
+
+If a node is linked to a resource pool but the resource itself still needs to be selected, the ![Red Hand](~/solutions/images/Red_Hand_icon.png) icon will be shown in the *Resource Select Column*. In that case, you can click the icon to pick the resource from the available resources in the pool.
+
+## Workflow
+
+This section shows the nodes in a workflow diagram. You can manage both the nodes and the connections between them here. For a practical example, refer to the tutorial [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder).

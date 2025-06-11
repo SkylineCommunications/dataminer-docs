@@ -6,7 +6,7 @@ uid: MO_Scheduling
 
 The Scheduling app allows users to efficiently manage a schedule of [jobs](#jobs), [resources](#resources), and [workflows](#workflows).
 
-![Scheduling Overview](~/user-guide/images/Scheduling_Overview.png)
+![Scheduling Overview](~/solutions/images/Scheduling_Overview.png)<br>*Scheduling app in MediaOps 1.3.1*
 
 > [!TIP]
 > Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=lfeCwxYTA4o) about this app.
@@ -18,17 +18,17 @@ The Scheduling app allows users to efficiently manage a schedule of [jobs](#jobs
 
 The following pages are available in the Scheduling app:
 
-- ![Job View](~/user-guide/images/Scheduling_Job_View.png) **Job View**: Allows you to keep track of all jobs in the system on a timeline. Using the available filtering options, you can focus on the jobs that are relevant to you. You can also **create new jobs** from here, either [starting from scratch](xref:SCH_Create_Job#from-scratch) or [starting from a predefined workflow](xref:SCH_Create_Job#starting-from-a-predefined-workflow). To **update existing** jobs, you can use the pencil icon to open the [Edit job panel](xref:SCH_Edit_Job). An [automatic locking mechanism](xref:MO_S_Job_Locking) is used to avoid conflicts when multiple users try to update the same job.
+- ![Job View](~/solutions/images/Scheduling_Job_View.png) **Job View**: Allows you to keep track of all jobs in the system on a timeline. Using the available filtering options, you can focus on the jobs that are relevant to you. You can also **create new jobs** from here, either [starting from scratch](xref:SCH_Create_Job#creating-a-completely-new-job) or [starting from a predefined workflow](xref:SCH_Create_Job#creating-a-job-using-a-predefined-workflow). To **update existing** jobs, you can use the pencil icon to open the [Edit job panel](xref:SCH_Edit_Job). An [automatic locking mechanism](xref:MO_S_Job_Locking) is used to avoid conflicts when multiple users try to update the same job.
 
-- ![Resource View](~/user-guide/images/Scheduling_Resource_View.png) **Resource View**: Shows the jobs for the resources in a specific resource pool. When a resource is used within a job, this will be visualized in the row of that resource in the timeline component. This page allows you to [create a job where the selected resource is added immediately](xref:SCH_Create_Job#by-selecting-a-specific-resource). From this page, it is also easy to **swap jobs** between resources in the same resource pool: just drag the job from that resource's row to another resource's row.
+- ![Resource View](~/solutions/images/Scheduling_Resource_View.png) **Resource View**: Shows the jobs for the resources in a specific resource pool. When a resource is used within a job, this will be visualized in the row of that resource in the timeline component. This page allows you to [create a job where the selected resource is added immediately](xref:SCH_Create_Job#creating-a-job-by-selecting-a-specific-resource). You can also **swap jobs** between resources in the same resource pool here, by dragging the job from one resource's row to another resource's row.
 
-- ![Ops Board](~/user-guide/images/Scheduling_Ops_Board.png) **Ops Board**: Shows the jobs in the system in a list view, filtered on the state of the job (*Active*, *Upcoming*, *Completed*, or *All*). From the *Actions* column, you can **edit**, **duplicate**, or **start/stop a job** easily.
+- ![Ops Board](~/solutions/images/Scheduling_Ops_Board.png) **Ops Board**: Shows the jobs in the system in a list view, filtered on the state of the job (*Active*, *Upcoming*, *Completed*, or *All*). From the *Actions* column, you can **edit**, **duplicate**, **start** or **stop a job**.
 
-- ![Search Jobs](~/user-guide/images/Scheduling_Search_Jobs.png) **Search Jobs**: Provides the tools to **easily find any job** in the system. This includes canceled jobs, which are hidden on all other pages.
+- ![Search Jobs](~/solutions/images/Scheduling_Search_Jobs.png) **Search Jobs**: Provides the tools to **find any job** in the system. This includes canceled jobs, which are hidden on all other pages.
 
-- ![App Configuration](~/user-guide/images/Scheduling_App_Configuration.png) **App Configuration**: Allows you to configure general [app-wide settings](xref:MO_S_App_Configuration).
+- ![App Configuration](~/solutions/images/Scheduling_App_Configuration.png) **App Configuration**: Allows you to configure general [app-wide settings](xref:MO_S_App_Configuration).
 
-- ![About](~/user-guide/images/Scheduling_About.png) **About**: Provides information on the **version** of the MediaOps package.
+- ![About](~/solutions/images/Scheduling_About.png) **About**: Provides information on the **version** of the MediaOps package.
 
 ## Jobs
 
@@ -44,6 +44,6 @@ For more details on how to create and manage resources, see [Resource Studio](xr
 
 ## Workflows
 
-If you have a repeating group of resources you would like to reuse in your jobs, you can turn it into a **MediaOps Workflow** with the **Workflow Designer** app. For example, if a constant set of resources is required when organizing live broadcast events, you can group these into a **Workflow** and use them whenever you want to send out a crew out for a live broadcast operation.
+When you schedule a job, you can either create a workflow on the fly, or you can select a [predefined workflow](xref:MO_Workflow_Designer#workflows) created in the [Workflow Designer](xref:MO_Workflow_Designer) app.
 
-For more details on how to create and manage workflows, see [Workflow Designer](xref:MO_Workflow_Designer).
+For an example of how you can create a job and make a workflow on the fly, refer to the tutorial [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder). For an example of how you can use a predefined workflow instead, follow the tutorial [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro).

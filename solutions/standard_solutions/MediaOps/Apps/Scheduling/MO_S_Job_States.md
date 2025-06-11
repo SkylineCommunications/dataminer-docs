@@ -6,24 +6,19 @@ uid: MO_S_Job_States
 
 A job can have one of the following states:
 
-<div style="background-color:#9140D9;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Draft</div>
+| State | Description |
+|--|--|
+| <div style="background-color:#9140D9;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Draft</div> | Unless a job is created based on a specific resource, it starts off in the draft state. This allows you to create a provisionary job without actually booking any of the resources. |
+| <div style="background-color:#F7EC15;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Tentative</div> | When a job moves into the tentative state, the resources assigned to the job will be reserved to prevent other jobs from selecting the same resources. |
+| <div style="background-color:#348D42;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Confirmed</div> | When a job is fully configured and ready to be executed, it should be set to confirmed. |
+| <div style="background-color:#4CEF8E;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Running</div> | When a job has been confirmed and its configured start time occurs, it will move to the running state. This indicates that the job is live. |
+| <div style="background-color:#4A41E6;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Completed</div> | When a running job stops, it will go to the completed state, indicating that the job has ended. |
+| <div style="background-color:#D60000;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Error</div> | If there is an error on a job, it will be displayed with this color. However, underlying this, it will still have one of the above states, which will still be shown in the [edit panel](xref:SCH_Edit_Job). |
 
-The Draft state allows to create a provisionary job without actually booking any of the resources or triggering cost & billing calculations. When a new job is created from scratch or based on a workflow in the Scheduling app, it will be created in Draft state.
-
-<div style="background-color:#F7EC15;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Tentative</div>
-When a job moves into a Tentative state, the resources assigned in the job will be reserved to prevent other jobs to select the same resources.
-
-<div style="background-color:#348D42;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Confirmed</div>
-
-Once a job is confirmed it indicates that the job will occur and therefor all resources that are (or where) assigned to the job from this stage will be considered for billing. 
-
-<div style="background-color:#4CEF8E;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Running</div>
-
-When a confirmed job starts, and only when it has been confirmed, it will go to the running state. This indicates the job is live.
-
-<div style="background-color:#4A41E6;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Completed</div>
-
-When a running job stops it will go to the Completed state. This indicates that the job has ended. In this stage it is still possible to make adjustments to the C&B information.
+> [!NOTE]
+>
+> - When a job that has not started yet is no longer needed, it can be canceled via the [Edit Job](xref:SCH_Edit_Job) panel, which will move it to a canceled state. However, canceled jobs are not displayed on most pages. You can only find them on the *Search Jobs* page.
+> - When a job is completed, it can be deleted. This option will be available via the ... icon for the job on any of the pages in the app.<!-- RN 43036 -->
 
 <!--
 <div style="background-color:#36F0F3;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Ready for invoice</div>
@@ -37,11 +32,7 @@ Invoiced is the final state of a job, but it does not mean that all jobs will re
 <div style="background-color:#FC7D76;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Canceled</div>
 -->
 
-When a job is no longer needed it can be moved to a canceled state.
-
-<div style="background-color:#D60000;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Error</div>
-
-Job in error will be displayed with this color but will underlaying still have any of the above states which will be visible from the edit panel.
+Here is an overview of how these different states are connected:
 
 ```mermaid
 graph LR
@@ -57,7 +48,7 @@ graph LR
     style C fill:#348D42,stroke:#000,stroke-width:2px,color:#ffffff
     style D fill:#4CEF8E,stroke:#000,stroke-width:2px,color:#000000
     style E fill:#4A41E6,stroke:#000,stroke-width:2px,color:#ffffff
-    style F fill:#36F0F3,stroke:#000,stroke-width:2px,color:#000000
-    style G fill:#529495,stroke:#000,stroke-width:2px,color:#ffffff
+    %% style F fill:#36F0F3,stroke:#000,stroke-width:2px,color:#000000 %%
+    %% style G fill:#529495,stroke:#000,stroke-width:2px,color:#ffffff %%
     style H fill:#FC7D76,stroke:#000,stroke-width:2px,color:#000000
 ```

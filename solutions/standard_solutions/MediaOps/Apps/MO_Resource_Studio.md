@@ -15,21 +15,23 @@ The Resource Studio app helps you create and manage bookable resources efficient
 
 The following pages are available in the app:
 
-- ![Resource Pools](~/user-guide/images/Resource_Studio_Resource_Pools.png) **Resource Pools**: Allows you to **create**, **edit**, **delete**, **search**, and **filter** [resource pools](#resource-pools). You can also **assign** [resources](#resources) to resource pools, and edit [**capabilities**](#capabilities), [**capacities**](#capacities), and [**properties**](#properties) for each resource pool.
+- ![Resource Pools](~/solutions/images/Resource_Studio_Resource_Pools.png) **Resource Pools**: Allows you to **create**, **edit**, **delete**, **search**, and **filter** [resource pools](#resource-pools). You can also **assign** [resources](#resources) to resource pools, and edit [**capabilities**](#capabilities), [**capacities**](#capacities), and [**properties**](#properties) for each resource pool.
 
-- ![Resources](~/user-guide/images/Resource_Studio_Resources.png) **Resources**: Allows you to **create** and **manage** specific [resources](#resources), and configure their **capabilities**, **capacities**, and **properties**.
+- ![Resources](~/solutions/images/Resource_Studio_Resources.png) **Resources**: Allows you to **create** and **manage** specific [resources](#resources), and configure their **capabilities**, **capacities**, and **properties**.
 
-- ![Capability Management](~/user-guide/images/Resource_Studio_Capability_Management.png) **Capability Management**: Here you can **create** and **manage** [capabilities](#capabilities), and assign the possible values they can have when associated with resources and resource pools.
+- ![Capability Management](~/solutions/images/Resource_Studio_Capability_Management_icon.png) **Capability Management**: Here you can **create** and **manage** [capabilities](#capabilities), and assign the possible values they can have when associated with resources and resource pools.
 
-- ![Capacity Management](~/user-guide/images/Resource_Studio_Capacity_Management.png) **Capacity Management**: Here you can **create** and **manage** [capacities](#capacities).
+- ![Capacity Management](~/solutions/images/Resource_Studio_Capacity_Management.png) **Capacity Management**: Here you can **create** and **manage** [capacities](#capacities).
 
-- ![Configuration Management](~/user-guide/images/Resource_Studio_Configuration_Management.png) **Configuration Management**: If a resource pool has **parameters** that can be defined per job in the Scheduling app, you can add those types of parameters here. You can give the configurations default values or make it mandatory to configure them upon job creation.
+- ![Configuration Management](~/solutions/images/Resource_Studio_Configuration_Management.png) **Configuration Management**: If a resource pool has **parameters** that can be defined per job in the Scheduling app, you can add those types of parameters here. You can give the configurations default values or make it mandatory to configure them upon job creation.
 
-- ![Properties](~/user-guide/images/Resource_Studio_Properties.png) **Properties**: Allows you to manage [properties](#properties) that can be used by resources and resource pools.
+- ![Properties](~/solutions/images/Resource_Studio_Properties.png) **Properties**: Allows you to manage [properties](#properties) that can be used by resources and resource pools.
 
-- ![Sync](~/user-guide/images/Resource_Studio_Sync.png) **Sync**: Allows you to sync the resources from DataMiner Cube with the resource representations used in MediaOps. If you choose to sync them, before any changes are made, you will get a message specifying each change that will take place. After the sync, MediaOps resources will be updated to mirror the DataMiner resources.
+- ![Sync](~/solutions/images/Resource_Studio_Sync.png) **Sync**: Allows you to sync the resources from DataMiner Cube with the resource representations used in MediaOps. If you choose to sync them, before any changes are made, you will get a message specifying each change that will take place. After the sync, MediaOps resources will be updated to mirror the DataMiner resources.
 
-- ![About](~/user-guide/images/Resource_Studio_About.png) **About**: Provides information on the **version** of the MediaOps package.
+- ![About](~/solutions/images/Resource_Studio_About.png) **About**: Provides information on the **version** of the MediaOps package.
+
+<!-- TODO: Add more subpages below this page explaining how to use the different features of this app. Links to those pages with more extensive info should then be added here. At present, the info for this app is too high-level, and a lot is missing, e.g. how to import resource pools, how to configure concurrency, how to manage capabilities & capacities, what is configuration management all about and how does it work, etc. -->
 
 ## Resources
 

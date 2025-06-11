@@ -95,7 +95,7 @@ Expected duration: 15 minutes
 
 ## Step 5: Define a parameter on the resource pool
 
-In this step, you will define a parameter on a resource pool, which can come in handy when a job is scheduled and you need to select resources for it.
+In this step, you will define a parameter on a resource pool, which can come in handy when a job is scheduled and you need to select resources for it. <!-- TODO: either explain why, or link to section that explains configuration management for more info -->
 
 1. On the *Resource Pools* page, click ... next to the **Converter** resource pool, and select the *Edit Parameters* option.
 

@@ -4,36 +4,41 @@ uid: Overview_MediaOps_Validation
 
 # Validation of upcoming jobs
 
-To ensure smooth operations, it is essential that each booking is properly configured and that all required resources are available when the booking starts. To achieve this, a scheduled task runs every hour to validate the upcoming jobs set to start within the next hour.
+To ensure smooth operations, it is essential that each booking is properly configured and that all required resources are available when the booking starts. By default, a scheduled task runs every hour to verify this. The task will validate the upcoming jobs set to start within the next hour. However, the interval and period can be [customized](#customizing-the-interval-and-period).
 
-When an error is detected, an error flag is activated in the booking object to make it visible that something is not correct with a red color.
+When an error is detected, the job will enter the [error state](xref:MO_S_Job_States). This will be indicated with a red color, for example:
 
 ![Job with error(s)](~/solutions/images/Scheduling_Validation_Error_Job.png)
 
-A detailed list of identified issues is accessible by opening the booking and clicking the error icon.
+To see a detailed list of the issues that have been identified:
 
-![Job error icon](~/solutions/images/Scheduling_Validation_Error_Icon.png)
+1. Click the pencil icon for the job to open the *Edit Job* panel.
 
-This opens a popup that contains a table listing all detected errors.
+1. In the *Job Info* section, click the error icon.
+
+   ![Job error icon](~/solutions/images/Scheduling_Validation_Error_Icon.png)
+
+   This will display a table listing all detected errors.
 
 ![Job error list](~/solutions/images/Scheduling_Validation_Error_List.png)
 
 Detected errors cannot be cleared individually by a user. Instead, any change to the booking will automatically trigger a re-validation of the entire object. Errors that are no longer detected are automatically removed from the list.
 
-## Customization of the interval and period
+## Customizing the interval and period
 
-By default, the scheduled task triggers validation every hour. You can adjust this schedule by editing the **MediaOps // Scheduling - Validate upcoming bookings** scheduled task. This task will not be touched anymore when installing an upgrade package, as long as the name has not changed.
+By default, the scheduled task triggers validation every hour. You can adjust this schedule by editing the **MediaOps // Scheduling - Validate upcoming bookings** scheduled task in the Scheduler module in DataMiner Cube. As long as the name of this scheduled task is not changed, it will not be adjusted when you install upgrades.
 
-- **Interval**: Modify the "repeat every" setting on the Schedule tab to set how often the task runs. Default value: 60 minutes.
-- **Validation Period**: Modify the period for upcoming bookings (e.g., next x minutes) on the Actions tab. The "Scheduling_Validate Upcoming" script has a parameter that specifies the validation period in minutes. Default value: 60 minutes.
+- To modify the **interval**, in the *schedule* tab of the task configuration, configure a different schedule.Default value: 60 minutes.
 
-These settings allow to adapt the validation timings according to your specific needs.
+- To modify the **validation period**, in the *actions* tab of the task configuration, enter your custom value in the *UpcomingMinutes* box. Default value: 60 minutes.
+
+For more information on how to work with the Scheduler module in DataMiner Cube, see [About the Scheduler module](xref:About_the_Scheduler_module).
 
 ## Current tests
 
-A flexible and extendable framework has been designed to validate various types of objects within MediaOps. This framework is capable of validating multiple object types such as jobs, resources, resource pools, and others. The result of these tests are stored in the DOM object in a standardized and generic way. Adding new validation checks or modifying existing ones can be done with minimal effort.
+A flexible and extendable framework has been designed to validate various types of objects within MediaOps. This framework is capable of validating multiple object types such as jobs, resources, resource pools, and others. The result of these tests are stored in the DOM object in a standardized and generic way, so that it is possible to add new validation checks or modify existing ones.
 
-The current test that get executed on job instances check for the following things:
+The current tests that get executed on job instances check for the following things:
 
 - All resources exist and are valid.
 - All mandatory configuration is done.

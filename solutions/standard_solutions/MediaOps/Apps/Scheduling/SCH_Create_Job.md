@@ -6,30 +6,60 @@ uid: SCH_Create_Job
 
 There are three main ways to manually create a new job through the Scheduling app:
 
-- [From scratch](#from-scratch)
-- [Starting from a predefined workflow](#starting-from-a-predefined-workflow)
-- [By selecting a resource](#by-selecting-a-specific-resource)
+- [From scratch](#creating-a-completely-new-job)
+- [Starting from a predefined workflow](#creating-a-job-using-a-predefined-workflow)
+- [By selecting a resource](#creating-a-job-by-selecting-a-specific-resource)
 
-## From scratch
+## Creating a completely new job
 
-The first way to create a new job is by clicking the *New* button on the *Job View* page of the application. A popup will appear prompting the user to enter a job name along with a start and end time. By default, the time range is set to one hour starting from the current time. This will create an empty job, without any resource in it yet. Once the job has been created, it will appear on the schedule in the draft state. The user can then start adding resources to it from the [Job edit panel](xref:SCH_Edit_Job) by clicking the pencil icon in the top-right corner of the job on the timeline.
+1. On the *Job View* page, click the *+ New* button at the top.
+
+   !['New' button in the Scheduling app](~/solutions/images/Scheduling_Create_Job.png)<br>*Scheduling app in MediaOps 1.3.1*
+
+1. Specify the name and optionally a description for the job.
+
+1. Customize the start and end time if necessary.
+
+   By default, the time range is set to one hour starting from the current time.
+
+1. Optionally, configure a pre-roll and/or post-roll time for the job.<!-- RN 43035 -->
+
+   This can be useful to ensure hat resources are reserved for long enough before the start of the job and after the end of a job, for example so operators or orchestration scripts have enough time to do the setup or to take down the workflow.
+
+1. Optionally, click *Next* to select the organization and/or job owner linked to the job.
+
+   This will link the job to an organization and/or contact defined in the [People & Organizations](xref:People_Organizations) app.
+
+1. Click *Create Job*.
+
+   This will create an empty job, without any resource in it yet. Once the job has been created, it will appear on the schedule in the [draft state](xref:MO_S_Job_States).
+
+1. To start adding resources to your job, click the pencil icon of the job on the timeline to open a panel where you can edit the job. For detailed info, refer to [Editing a job](xref:SCH_Edit_Job).
+
+   > [!NOTE]
+   > When you have added the resources, it is best to click *Save as Tentative* as soon as possible. Saving the job in the [tentative state](xref:MO_S_Job_States) will ensure that the selected resources are reserved and cannot be used by other nodes or jobs.
+
+## Creating a job using a predefined workflow
+
+To create a job starting from a workflow that has been predefined in the [Workflow Designer](xref:MO_Workflow_Designer) app, follow the same procedure as detailed above, but select the desired workflow in the *Create job* pop-up window before you click *Create Job*.
+
+![Selecting a predefined workflow to create a job](~/solutions/images/Scheduling_Create_Job_from_Workflow.png)<br>*Create job window in MediaOps 1.3.1*
 
 > [!NOTE]
-> It is advised to go to the [tentative state](xref:MO_S_Job_States) as soon as possible to ensure the resources you add/select are reserved and cannot be used by other nodes or jobs.
+> Only workflows that have been marked as *Complete* in the Workflow Designer will be available for selection in the Scheduling app.
 
-!['New' button in the Scheduling app](~/user-guide/images/Scheduling_Create_Job.png)
+## Creating a job by selecting a specific resource
 
-## Starting from a predefined workflow
+Create a job directly based on one specific resource can be useful when you want to quickly reserve a specific resource. To do so:
 
-It is also possible to create a Job starting from a workflow that has been predefined in the [Workflow Designer](xref:MO_Workflow_Designer) app. This is done similarly to creating a Job from scratch, but instead selecting the desired workflow from the dropdown in the 'Create job' popup window.
+1. On the *Resource View* page, select the resource pool and the resource that need to be booked.
 
-![Selecting a predefined workflow to create a job](~/solutions/images/Scheduling_Create_Job_from_Workflow.png)
+1. Click the *+ New* button at the top.
 
-> [!NOTE]
-> Only workflows that have been marked as *Complete* in the Workflow Designer will appear for selection in the Scheduling app.
+   ![Creating a job directly on a specific resource](~/solutions/images/Scheduling_Create_Job_on_Resource.png)<br>*Scheduling app in MediaOps 1.3.1*
 
-## By selecting a specific resource
+1. Configure the same settings as [mentioned above](#creating-a-completely-new-job) and click *Create Job*.
 
-A third option is to create a job directly on one specific resource. This can be useful when a user wants to quickly reserve a specific resource. This is done by first selecting a resource pool, then selecting the resource that needs to be booked and then clicking the 'New' button above the timeline. This will trigger the same pop-up to create a job as described in the previous two options. The job will be created immediately in 'Tentative' state, so that the resource is immediately reserved. After creating the job, the user can still edit the job in order to add more resources to it if needed.
+   The job will immediately be created in the [tentative state](xref:MO_S_Job_States), so that the resource is immediately reserved.
 
-![Creating a job directly on a specific resource](~/solutions/images/Scheduling_Create_Job_on_Resource.png)
+1. If necessary, click the pencil icon on the job to edit it and add more resources. See [Editing a job](xref:SCH_Edit_Job).

@@ -93,3 +93,5 @@ Expected duration: 15 minutes
    ![Make Team Bookable](~/solutions/images/People_And_Organizations_Make_Team_Bookable.png)
 
 The team and its members should now show up in the Resource Studio app, up and ready for bookings. The team will be available as a resource pool, and its members will show up as resources belonging to that pool.
+
+<!-- TODO: To make this example more complete, a step 6 should be added where the contact is actually booked in a job (or an additional tutorial should be added for this if this is too much to put in one step). -->
