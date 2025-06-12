@@ -1,5 +1,6 @@
 ---
 uid: DM_selfhosted_and_StaaS
+description: DataMiner Storage as a Service (STaaS) provides hassle-free database storage for your self-managed DataMiner nodes.
 ---
 
 # Self-managed DataMiner nodes with Storage as a Service (STaaS)

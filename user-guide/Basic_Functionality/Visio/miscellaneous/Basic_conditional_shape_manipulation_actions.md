@@ -1,5 +1,6 @@
 ---
 uid: Basic_conditional_shape_manipulation_actions
+description: In some shape data fields, you can specify actions that allow you to have a shape shown, hidden, flipped, rotated or colored based on a certain value.
 ---
 
 # Basic conditional shape manipulation actions
