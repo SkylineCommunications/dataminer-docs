@@ -24,6 +24,12 @@ uid: Cube_Feature_Release_10.5.8
 
 ### Enhancements
 
+#### Trending: Enhanced performance when loading trend graphs [ID 42647]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+Because of a number of enhancements, overall performance has increased when loading trend graphs.
+
 #### Current host of an element or service is now shown in Properties window [ID 42807]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
