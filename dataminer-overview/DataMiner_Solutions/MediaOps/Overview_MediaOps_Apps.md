@@ -12,7 +12,7 @@ Below is an overview of the out-of-the-box DataMiner applications included in th
 
 ![People and Organizations app icon](~/dataminer-overview/images/DM_PeopleOrganizations.png)
 
-Upgrade your business operations with our People and Organizations app. This app simplifies personnel management by enabling you to effortlessly create, edit, and track records for individuals and teams. With features like team booking, optimizing personnel allocation for the right job has never been easier. You can also streamline organization management by overseeing categories, contracts, billing contacts, and company affiliation — all from a single intuitive interface.
+Upgrade your business operations with our People and Organizations app. This app simplifies personnel management by enabling you to effortlessly create, edit, and track records for individuals and teams. With features like team booking, optimizing personnel allocation for the right job has never been easier.
 
 For more detailed information about this application, see [People and Organizations application](xref:People_Organizations).
 
@@ -28,7 +28,7 @@ For more detailed information on this application, see [Resource Studio applicat
 
 ![Workflow Designer app icon](~/dataminer-overview/images/DM_WorkflowDesigner.png)
 
-The workflow designer is an operator-level DevOps environment to create technical workflows. In the app, users can define what needs to happen when a connection is created between a source and a destination, when a certain job is executed, when a type of service is delivered, etc. This is done by describing workflows. Each workflow consists of a set of nodes and a set of connections between these nodes. These typically describe how a source signal (virtual signal group) is transported to a destination and how it gets processed in between. These workflows can then be executed ad hoc (from a control surface) or based on a schedule (for example by scheduling a job in the [Scheduling app](#scheduling)).
+The Workflow Designer is an operator-level DevOps environment to create technical workflows. In the app, users can define what needs to happen when a connection is created between a source and a destination, when a certain job is executed, when a type of service is delivered, etc. This is done by describing workflows. Each workflow consists of a set of nodes and a set of connections between these nodes. These typically describe how a source signal (virtual signal group) is transported to a destination and how it gets processed in between. These workflows can then be executed by scheduling a job in the [Scheduling app](#scheduling).
 
 Additionally, a workflow describes:
 
@@ -43,14 +43,13 @@ For more detailed information about this application, see [Workflow Designer app
 
 ![Scheduling app icon](~/dataminer-overview/images/MediaOps_ICON_7.png)
 
-The Scheduling application is a comprehensive solution for the scheduling and orchestration of resources and workflows. Using a job, users can easily schedule specific resources, request a resource for a given pool of resources, schedule an entire workflow, or a combination of each of the options. The full life cycle of a job can be managed with tools created for requestors, booking teams, or operational teams.
+The Scheduling application is a comprehensive solution for the scheduling and orchestration of resources and workflows. Using a job, users can easily schedule specific resources, request a resource for a given pool of resources, schedule an entire workflow, or a combination of each of the options.
 
 Among others, the app includes the following features:
 
 - Tracking information about a job, including who is requesting it, when the job starts and ends, and job priorities.
 - Guaranteeing that a resource used in a job is available for the scheduled time.
 - Easily spotting when a job needs additional input prior to the job's start.
-- Generating cost and billing information based on assign contracts and actual usage of the resource.
 
 For more detailed information about this application, see [Scheduling application](xref:MO_Scheduling).
 
