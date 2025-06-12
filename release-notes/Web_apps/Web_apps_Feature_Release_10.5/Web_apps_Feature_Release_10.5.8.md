@@ -135,6 +135,12 @@ In some cases, components used in a low-code app could cause a user's web browse
 
 When, in the `C:\Skyline DataMiner\Webpages\API\Web.config` file, you had specified that all GQI-related operations had to be executed by the GQI DxM, in some cases, SLHelper would incorrectly still be used to process GQI queries.
 
+#### Dashboards app: Components could incorrectly get destroyed when you switched to another page [ID 43081]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+Up to now, components could incorrectly get destroyed when you switched to another page of a dashboard.
+
 #### Dashboards app & Low-Code Apps - Timeline & Maps components: Settings would incorrectly get overwritten when a query returned an empty result set [ID 43088]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
