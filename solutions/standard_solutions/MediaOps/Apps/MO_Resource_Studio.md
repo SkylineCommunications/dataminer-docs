@@ -77,11 +77,11 @@ When creating a [workflow](xref:MO_Workflow_Designer#workflows) or a [job](xref:
 For example, *Location* can be an important capability when planning operations where resources need to be on-site. You can assign locations to all your resources beforehand, and then upon job creation you can choose the location your resources need to have. Then, when the resources are picked, only the ones on the actual location will be available for selection. Capabilities offer a very flexible and general way of solving this problem for a wide array of cases.
 
 > [!TIP]
-> For a hands-on example of assigning capacities to resources and resource pools, follow the tutorial [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities). For an example of using these capacities when creating jobs, follow the [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations).
+> For a hands-on example of assigning capabilities to resources and resource pools, follow the tutorial [Assigning capabilities to resources](xref:Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities). For an example of using these capabilities when creating jobs, follow the [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations).
 
 ## Capacities
 
-Capacities, like capabilities, define how a resource can be used, but they are measured **numerically**. The following settings can be configured for capabilities:
+Capacities, like capabilities, define how a resource can be used, but they are measured **numerically**. The following settings can be configured for capacities:
 
 - Units: The unit for the values of this capacity (MHz, Gbps, kBd, etc.).
 
@@ -95,7 +95,7 @@ Capacities, like capabilities, define how a resource can be used, but they are m
 
 Typical examples of capacities are bandwidths, bit rates, symbol rates, etc. When booking a resource, users book only a specific amount of capacity on the resource. If a resource has a concurrency higher than one, other jobs can still make use of the remaining capacity on that same resource.
 
-Contrary to capabilities, capacities cannot be configured on pools, but only on individual resources.
+Contrary to capabilities, capacities **cannot be configured on resource pools**, but only on individual resources.
 
 However, similar to capabilities, capacities can also be used when creating jobs and workflows. You can specify capabilities on your resources, and then limit the resources available for picking in jobs and workflows based on those constraints.
 
