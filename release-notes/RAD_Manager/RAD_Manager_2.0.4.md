@@ -8,12 +8,12 @@ uid: RAD_Manager_2.0.4
 
 ### Enhancements
 
-#### Select production version for connector by default [ID 42898]
+#### Production version of connector now selected by default [ID 42898]
 
-When adding a group for each element with a given connector, by default the 'Production' version of the connector is selected now, instead of the version that appears first in alphabetical order.
+When a group is added for each element with a specific connector, by default the "Production" version of that connector is now selected, instead of the version that appears first in alphabetical order.
 
-### Bug fixes
+### Fixes
 
-#### Reload anomaly score graph after retraining a parameter group [ID 42903]
+#### Anomaly score graph not reloaded correctly after retraining a parameter group [ID 42903]
 
-​After retraining a RAD parameter group, the anomaly score graph would not be correctly reloaded in some cases, due to a caching mechanism in the background. The graph will now always be correctly reloaded after retraining.
+​After a RAD parameter group was retrained, it could occur that the anomaly score graph was not reloaded correctly. This was caused by a caching mechanism in the background. The graph will now always be correctly reloaded after retraining.
