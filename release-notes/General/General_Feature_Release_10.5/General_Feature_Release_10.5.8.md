@@ -139,3 +139,9 @@ In some cases, SLHelper could leak memory because SLNet connections used by GQI 
 <!-- Not added to MR 10.6.0 -->
 
 When stopped elements had been swarmed over to another DataMiner Agent, in some cases, they would remain stuck in a *Swarming* state.
+
+#### GQI: Deserialization issue when querying DOM instances via the GQI DxM [ID 43132]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+When querying DOM instances with service definition fields via the GQI DxM, up to now, the `ServiceDefinitionFieldDescriptor` would not deserialize correctly coming from SLNet, causing an exception to be thrown in GQI.

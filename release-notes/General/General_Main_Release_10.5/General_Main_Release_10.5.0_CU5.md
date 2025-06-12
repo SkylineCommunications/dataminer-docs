@@ -93,3 +93,9 @@ From now on, the maximum number of repetitions defined for `multipleGetBulk` wil
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
 In some cases, SLHelper could leak memory because SLNet connections used by GQI extensions were not properly cleaned up.
+
+#### GQI: Deserialization issue when querying DOM instances via the GQI DxM [ID 43132]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+When querying DOM instances with service definition fields via the GQI DxM, up to now, the `ServiceDefinitionFieldDescriptor` would not deserialize correctly coming from SLNet, causing an exception to be thrown in GQI.
