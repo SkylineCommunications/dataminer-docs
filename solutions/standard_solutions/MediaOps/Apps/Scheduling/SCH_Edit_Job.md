@@ -12,7 +12,7 @@ In the header bar, several buttons are available:
 
 ![Header bar Edit Job panel](~/solutions/images/Edit_job_header_bar.png)
 
-1. The **Contacts** button opens a panel where you can manage contacts related to the job. With the Add Contact button at the bottom of the panel, you can add contacts that have been configured in the [People & Organizations](xref:People_Organizations) app. You can remove contacts again with the x button in the list.
+1. The **Contacts** button opens a panel where you can manage contacts related to the job. With the *Add Contact* button at the bottom of the panel, you can add contacts that have been configured in the [People & Organizations](xref:People_Organizations) app. You can remove contacts again with the x button in the list.
 1. The **Duplicate** button opens the *Duplicate job* window, where you can configure a new job based on the current one.
 1. The ![Copy to clipboard](~/solutions/images/Scheduling_edit_job_copy.png) button copies the URL of the job to the clipboard.<!-- RN 43059 -->
 
