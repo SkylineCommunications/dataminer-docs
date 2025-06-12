@@ -8,9 +8,7 @@ When an icon is assigned to a resource or resource pool, this will be displayed 
 
 To assign an icon or change the assigned icon:
 
-1. Open the Resource Studio app.
-
-1. Go to either the *Resources* or *Resource Pools* page and click the pencil icon for the resource or resource pool for which you want to change the icon.
+1. In the Resource Studio app, go to either the *Resources* or *Resource Pools* page and click the pencil icon for the resource or resource pool for which you want to change the icon.
 
 1. Click the *Change icon* button.
 
