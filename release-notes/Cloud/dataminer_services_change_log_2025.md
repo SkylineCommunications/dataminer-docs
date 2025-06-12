@@ -13,6 +13,80 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 An issue has been resolved that could cause connector deployment to fail with the message "Something is wrong".
 
+### 12 June 2025 - Enhancements - Various dataminer.services apps - Improved user session management
+
+When arriving on one of the dataminer.services apps it will now try to refresh the user's session if there's a valid refresh token.
+Before this would not be the case; most of the times the user would simple be signed out but sometimes it would result in a signed in and out state at the same time.
+
+The lifetime of both the access token and refresh tokens have been reduced to make it more secure.
+
+When a user is unauthenticated the URL will stay as is, but the user will see an unauthenticated view.
+So the user is free to share and refresh links even when they are signed out.
+
+### 12 June 2025 - Admin - Add user popup, dropdown
+
+This change applies to Admin users.
+Changing the add organization user and add DMS user into a popup.
+Changing the DMS user to a dropdown. This dropdown consists of organization users that are not in the current DMS yet.
+
+### 12 June 2025 - Enhancement - Account Linking - Updated DCP account to dataminer.services account
+
+The account linking app now mentions 'dataminer.services account' instead of 'DCP account'
+
+### 12 June 2025 - Enhancement - Catalog - Documentation improvements + cache notifier removal
+
+Removed the new version notifications.  
+Updated the styling of the description of a catalog item to improve readability e.g. updated spacing between headings of description.  
+Updated the width of the detail page to have a bit cleaner reading section.
+
+
+### 12 June 2025 - Fix - Catalog - Fix relative links of headings
+
+Fixed an issue where the catalog app would not scroll to the heading mentioned in the URL.
+Before it would just stay at the top, now it will scroll down to the correct heading.
+
+### 12 June 2025 - Enhancement - Updated support mail address
+
+Updated support mail address into support@dataminer.services
+This will replace the current techsupport@skyline.be address moving forward.
+
+### 12 June 2025 - Catalog - Fix - Not being able to click on view all results
+
+Fixed a small overlay closure issue that prevented navigation on view all results on the homepage of Catalog'
+
+### 12 June 2025 - Enhancement - Admin - Prevent scrollbar on shown keys
+
+Before this change when a user would toggle the visibility of either an organization key or a dms key.
+It could occur that the value was in a horizontal scrollable container.
+
+This has been fixed be reordering the container to prevent the scrolling from happening without any layout shifts. Additionally the value now also has a title in case it gets ellipsed.
+
+### 12 June 2025 - Fix - Shares - Allow scrolling
+
+Before this change, when the user would have a lot of shared items in their shared item list.
+It would not be possible to scroll through the list preventing the user to see the items that are towards the end of the list.
+
+The page has now been made scrollable
+
+### 12 June 2025 - Enhancement - Catalog - Better align the featured section on homepage
+
+Improved the alignment for smaller screens for the featured sections, it will now switch between one and three columns.
+
+### 12 June 2025 - Enhancement - Admin - Improve unreachable nodes on dms-overview page  
+
+Before this change the amount of unreachable nodes that could be shown was unlimited.
+With this change the user will now see the amount of unreachable nodes and when hovered over the exact names of the unreachable nodes.
+
+The unreachable nodes row has also been moved to the Connection section.
+
+### 12 June 2025 - Fix - Catalog - Tags not updating after switching details page
+
+Fixed an issue where the width calculation for the tags container would not be reset upon an item change.
+This caused older tags configuration to linger around and preventing to update the the new item tags.
+
+Fixed a visibility issue where the aside of a private item would still be visible when fe. changing organization.
+The aside will now properly be hidden when an error occured regarding the item fetch
+
 ### 20 May 2025 - Enhancement - Catalog - Catalog item market
 
 On the details page of a Catalog item, users will now be able to see the market for which the item is intended.
