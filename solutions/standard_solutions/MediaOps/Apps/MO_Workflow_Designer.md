@@ -19,6 +19,8 @@ The following pages are available in the Workflow Designer app:
 
 - ![About](~/solutions/images/WD_About.png) **About**: Provides information on the **version** of the MediaOps package.
 
+<!-- TODO: Add more info on how to delete workflows and configure default configuration settings (or if the latter refers to the "Configure Node" option mentioned on WFD_Creating_Workflows, clarify this) -->
+
 ## Workflows
 
 A workflow defines which resources and resource pools are needed for an operation, and how they are interconnected. This is useful if you want to reuse the same set of resources in multiple jobs. For example, if a certain set of resources is always required when organizing live broadcast events, you can group these into a "Live Broadcast" workflow and use it whenever you want to send out a crew for a live broadcast operation.
