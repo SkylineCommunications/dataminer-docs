@@ -24,12 +24,6 @@ uid: General_Feature_Release_10.5.7
 
 ## New features
 
-#### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250]
-
-<!-- MR 10.6.0 - FR 10.5.7 -->
-
-In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
-
 #### Automation: Hash property of GetScriptInfoResponseMessage now contains a hash value of the script [ID 42616]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
