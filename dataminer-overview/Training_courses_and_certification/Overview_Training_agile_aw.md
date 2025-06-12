@@ -4,18 +4,60 @@ uid: Overview_Training_agile_aw
 
 # Agile Fundamentals Training
 
-While Agile plays a crucial role in many aspects of any business, and it may seem like a relatively simple concept, it is in fact a major undertaking to make it a reality. **Implementing Agile is a multifaceted and diverse process** and in fact also a journey without a final destination. Our Agile Fundamentals Training is aimed to support you in this journey and provide your team with the keys to success in the new data-driven era.
+Agile may seem like a simple concept, but making it a reality in your organization is a major undertaking. It’s not a one-off implementation—it’s an ongoing, multifaceted journey. And in today’s fast-paced, data-driven world, mastering Agile is more important than ever.
 
-## Long-term transformation
+Our Agile Fundamentals Training is designed to support you on this journey. Whether you’re new to Agile or looking to refresh your knowledge, this course will deliver lasting value—well beyond your current projects with Skyline.
 
-To implement Agile, everyone must adopt a new mindset with new values and principles. The necessary tools, technologies, methodologies and best practices must be introduced. Existing structures must be reformed. The multitude of changes effectively **affect everything you are accustomed to**.
+You’ll build a strong foundation in Agile principles and practices, with hands-on experience in Scrum and Kanban. Through interactive sessions, team exercises, and real-world applications, you’ll develop the mindset and skills needed to thrive in a dynamic, ever-evolving workplace.
 
-However, as most of us know very well, organizations and people by nature are inclined to resist change. Changing and letting go of old habits takes time, and therefore it unavoidably **requires dedication and continuous attention**. One training course, one lecture or speech, and one booklet with some guidelines are not enough. What you need is long-term transformation and dedication to flourishing in the new data-driven future.
+## What you will learn
 
-## Agile as a key to success
+### Competencies
 
-In this context, Skyline is more than just a technology supplier. While we deliver the ultimate technology to make digital transformation happen, we also aim to create a **complete all-inclusive ecosystem to ensure your success**. We apply our vast experience and expertise to offer you the collaborative tooling and workflows that support our joint squads in their mission, and to support you in any other way we can. After all, our shared mission is the successful outcome of your projects.
+By the end of this training, you'll be equipped to work effectively in an Agile environment—combining a solid theoretical understanding with hands-on experience in Agile methodologies.
 
-As part of our solution, we also offer **Agile Fundamentals Training** for your staff. For this, we have partnered with widely acclaimed industry experts to make sure that everybody involved in the deployment of a DataMiner project is fully empowered and optimally prepared to make it a success. You can sit back, and we will take care of everything. This way, you can focus your time and energy on what goes to the heart of your goals with our joint project.
+You'll develop the following competencies:
 
-Whether as a first introduction to Agile for some people, or as a refresher course for others, our Agile Fundamentals Training will deliver a valuable return for you, even well beyond your projects with Skyline. After all, Agile is one of the keys to success in pretty much anything ahead of you in the new data-driven era.
+- **Agile Knowledge**: Understand Agile principles, values, and their practical applications.
+- **Team Collaboration**: Contribute to team activities with a focus on open communication and shared understanding.
+- **Adaptability**: Embrace change, work in iterations, and prioritize progress over perfection.
+- **Critical Thinking**: Always ask “why” to ensure alignment with your goals and team values.
+- **Practical Application**: Confidently apply Agile, Scrum, and Kanban practices to real-world scenarios.
+
+### Goals
+
+At the end of this course, you will be able to:
+
+- Understand and explain the core Agile principles and values
+- Navigate Skyline-specific Agile terminology and practices
+- Enhance team collaboration and communication
+- Work adaptively and incrementally
+- Apply Agile methodologies in a practical, hands-on way
+
+## Training content
+
+Here's what the day looks like:
+
+- Introduction using the GRIP model: Goals, Roles, Interactions, Plan
+- Why Are You Here?: Align expectations and kick off
+- Brainstorm – What Does Agile Mean to You?: Explore current perceptions
+- Agile Manifesto & Values: Group activity to connect with Agile principles
+- Terminology & Roles: Learn about Scrum roles, values, and artifacts; intro to Kanban
+- Critical Thinking Game – Ask “Why?”: Strengthen your Agile mindset
+- Team Presentations: Share workflows and exchange insights
+- Adaptability in Action: Exercises to build iterative and flexible thinking
+- Experiential Learning Simulation: Virtual project experience (e.g., Lego City Online)
+- Retrospective & Reflection: Capture key takeaways and next steps
+
+## Practical info
+
+- Duration: 8 hours
+- Pricing: 40 Service Credits
+- Format: Co-located (recommended) or remote
+  - Co-located: 2 sessions of 4 hours
+  - Remote: 4 sessions of 2 hours
+- Team size: 3 to 8 participants
+
+## How to register
+
+Send an email to [salesops@skyline.be](mailto:salesops@skyline.be) to register or request more info about the Agile Fundamentals training. 
