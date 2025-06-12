@@ -6,7 +6,7 @@ uid: MO_Scheduling
 
 The Scheduling app allows users to efficiently manage a schedule of [jobs](#jobs), [resources](#resources), and [workflows](#workflows).
 
-![Scheduling Overview](~/solutions/images/Scheduling_Overview.png)<br>*Scheduling app in MediaOps 1.3.1*
+![Scheduling Overview](~/solutions/images/Scheduling_Overview.png)
 
 > [!TIP]
 > Do you prefer visual learning? Take a look at the [demo video](https://www.youtube.com/watch?v=lfeCwxYTA4o) about this app.
@@ -20,7 +20,7 @@ The following pages are available in the Scheduling app:
 
 - ![Job View](~/solutions/images/Scheduling_Job_View.png) **Job View**: Allows you to keep track of all jobs in the system on a timeline. Using the available filtering options, you can focus on the jobs that are relevant to you. You can also **create new jobs** from here, either [starting from scratch](xref:SCH_Create_Job#creating-a-completely-new-job) or [starting from a predefined workflow](xref:SCH_Create_Job#creating-a-job-using-a-predefined-workflow). To **update existing** jobs, you can use the pencil icon to open the [Edit job panel](xref:SCH_Edit_Job). An [automatic locking mechanism](xref:MO_S_Job_Locking) is used to avoid conflicts when multiple users try to update the same job.
 
-- ![Resource View](~/solutions/images/Scheduling_Resource_View.png) **Resource View**: Shows the jobs for the resources in a specific resource pool. When a resource is used within a job, this will be visualized in the row of that resource in the timeline component. This page allows you to [create a job where the selected resource is added immediately](xref:SCH_Create_Job#creating-a-job-by-selecting-a-specific-resource). You can also **swap jobs** between resources in the same resource pool here, by dragging the job from one resource's row to another resource's row.
+- ![Resource View](~/solutions/images/Scheduling_Resource_View.png) **Resource View**: Shows the jobs for the resources in a specific resource pool. When a resource is used within a job, this will be visualized in the row of that resource in the timeline component. This page allows you to [create a job where the selected resource is added immediately](xref:SCH_Create_Job#creating-a-job-by-selecting-a-specific-resource). You can also **swap jobs** between resources in the same resource pool, by dragging the job from one resource's row to another resource's row.
 
 - ![Ops Board](~/solutions/images/Scheduling_Ops_Board.png) **Ops Board**: Shows the jobs in the system in a list view, filtered on the state of the job (*Active*, *Upcoming*, *Completed*, or *All*). From the *Actions* column, you can **edit**, **duplicate**, **start** or **stop a job**.
 
@@ -32,7 +32,7 @@ The following pages are available in the Scheduling app:
 
 ## Jobs
 
-A job represents a planned activity that will be executed. With a job, you can reserve [resources](#resources), request a resource from a given pool of resources, or even schedule an entire [workflow](#workflows) for this planned activity. The system will make sure that, in the background, the availability of all resources is managed so that no resource conflicts occur.
+A job represents a planned activity that will be executed. With a job, you can reserve [resources](#resources), request a resource from a given pool of resources, and schedule a [workflow](#workflows). The system will make sure that, in the background, the availability of all resources is managed so that no resource conflicts occur.
 
 Next to that, **administrative metadata** can be added to a job, such as a description, an owner, or the organization for which the job will be carried out.
 

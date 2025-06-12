@@ -18,7 +18,7 @@ To see a detailed list of the issues that have been identified:
 
    ![Job error icon](~/solutions/images/Scheduling_Validation_Error_Icon.png)
 
-   This will display a table listing all detected errors.
+This will display a table listing all detected errors.
 
 ![Job error list](~/solutions/images/Scheduling_Validation_Error_List.png)
 
@@ -26,17 +26,20 @@ Detected errors cannot be cleared individually by a user. Instead, any change to
 
 ## Customizing the interval and period
 
-By default, the scheduled task triggers validation every hour. You can adjust this schedule by editing the **MediaOps // Scheduling - Validate upcoming bookings** scheduled task in the Scheduler module in DataMiner Cube. As long as the name of this scheduled task is not changed, it will not be adjusted when you install upgrades.
+By default, validation occurs every hour. You can adjust this schedule by editing the **MediaOps // Scheduling - Validate upcoming bookings** scheduled task in the Scheduler module in DataMiner Cube. As long as the name of this scheduled task is not changed, it will not be adjusted when you install upgrades.
 
-- To modify the **interval**, in the *schedule* tab of the task configuration, configure a different schedule.Default value: 60 minutes.
+- To modify the **interval**, in the *schedule* tab of the task configuration, configure a different schedule. Default value: 60 minutes.
 
 - To modify the **validation period**, in the *actions* tab of the task configuration, enter your custom value in the *UpcomingMinutes* box. Default value: 60 minutes.
 
-For more information on how to work with the Scheduler module in DataMiner Cube, see [About the Scheduler module](xref:About_the_Scheduler_module).
+> [!TIP]
+> For more information on how to work with the Scheduler module in DataMiner Cube, see [About the Scheduler module](xref:About_the_Scheduler_module).
 
 ## Current tests
 
-A flexible and extendable framework has been designed to validate various types of objects within MediaOps. This framework is capable of validating multiple object types such as jobs, resources, resource pools, and others. The result of these tests are stored in the DOM object in a standardized and generic way, so that it is possible to add new validation checks or modify existing ones.
+A flexible and extendable framework has been designed to validate various types of objects within MediaOps. This framework is capable of validating multiple object types such as jobs, resources, and resource pools, and allows you to add new validation checks or modify existing ones as necessary. The results of these tests are stored in the DOM object in a standardized and generic way.
+
+<!-- TODO: explain how to add/modify checks -->
 
 The current tests that get executed on job instances check for the following things:
 

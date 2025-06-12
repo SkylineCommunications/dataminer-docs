@@ -6,6 +6,8 @@ uid: SCH_Edit_Job
 
 To edit a job, click the pencil icon for that job on the *Job View*, *Resource View*, *Ops Board*, or *Search Jobs* page. This will open the *Edit Job* panel. This panel consists of different sections where you can view and edit job settings and information, as detailed below.
 
+<!-- TODO: Add nice example screenshots of the sections -->
+
 ## Header bar
 
 In the header bar, several buttons are available:
@@ -18,11 +20,7 @@ In the header bar, several buttons are available:
 
 ## State overview
 
-All the way at the top of the panel, you can see an overview indicating the current state of the job and the states that will follow it under normal circumstances.
-
-For example:
-
-![State overview](~/solutions/images/Scheduling_state_overview.png)
+All the way at the top of the panel, you can see an overview indicating the current [state of the job](xref:MO_S_Job_States) and the states that will follow it under normal circumstances.
 
 ## Job Info
 
@@ -53,7 +51,7 @@ This section contains all related objects that have been linked to the job.
 
 You can add new links with the *Add Link* button at the top.
 
-New types of objects can be added on the [App Configuration](xref:MO_S_App_Configuration) page.
+New types of objects can be added in the *Reference Types* section of the [App Configuration](xref:MO_S_App_Configuration) page.
 
 <!-- TODO: Explain the practical use of this, with an example -->
 
@@ -69,4 +67,6 @@ If a node is linked to a resource pool but the resource itself still needs to be
 
 ## Workflow
 
-This section shows the nodes in a workflow diagram. You can manage both the nodes and the connections between them here. For a practical example, refer to the tutorial [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder).
+This section shows the nodes in the job in a workflow diagram and allows you to manage both the nodes and the connections between them.
+
+For a practical example, refer to the tutorial [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder).
