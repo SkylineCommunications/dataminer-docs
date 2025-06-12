@@ -34,7 +34,7 @@ In the active alarms tab, history tracking is enabled by default. In a history a
 > [!TIP]
 >
 > - For more information on creating filtered tabs, see [Manually applying an alarm filter in an Alarm Console tab](xref:ApplyingAlarmFiltersInTheAlarmConsole#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
-> - For information on how alarm records are combined in an alarm tree, see [Alarm linking](xref:Alarm_linking).
+> - For information on how alarm records are combined in an alarm tree, see [Alarm trees](xref:Alarm_trees).
 
 > [!NOTE]
 > By default, a maximum of 20 alarms can be included in an alarm tree. This default number can be customized with the [AlarmsPerParameter tag in MaintenanceSettings.xml](xref:MaintenanceSettings_xml#alarmsettingsalarmsperparameter).

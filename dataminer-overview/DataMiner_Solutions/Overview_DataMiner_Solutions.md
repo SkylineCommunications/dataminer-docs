@@ -30,10 +30,7 @@ The icons of sample applications are not marked with a DataMiner icon.
 
 ## Available solutions
 
-These are the main solutions that are currently available:
-
-- [dataminer.MediaOps](xref:Overview_dataminer_MediaOps)
-- [DOM Viewer](xref:domviewer_about)
+For detailed information about the main solutions that are currently available, refer to [DataMiner Solutions](xref:solution_index).
 
 ## Standard Data Model
 

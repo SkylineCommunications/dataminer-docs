@@ -8,7 +8,7 @@ The Regression Test Management Solution allows you to centrally organize, config
 
 This solution includes a dedicated connector, visual overview, and reusable Automation script that together help teams automate and track the execution of regression test scripts. Results are visualized, emailed, and stored historically for auditing and reporting purposes.
 
-Deployed as a [Catalog package](https://catalog.dataminer.services/details/74ddb623-f9fb-4a99-acee-0965ba495e2d), the solution installs everything needed to start managing your regression tests immediately.
+Deployed as a [Catalog package](https://catalog.dataminer.services/details/27636bb4-e3ce-4a2a-bd28-fe514a4ac5e7), the solution installs everything needed to start managing your regression tests immediately.
 
 ## Key capabilities
 

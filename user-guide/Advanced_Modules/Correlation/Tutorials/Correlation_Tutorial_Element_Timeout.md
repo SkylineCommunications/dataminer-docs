@@ -89,7 +89,7 @@ In this step, you will create a Correlation rule that will trigger based on alar
       ![Adding the *run script* action](~/user-guide/images/Correlation_Add_Run_Script_Action.png)
 
    > [!NOTE]
-   > Generating an information event is just one example of what you can do with this functionality. There are many, many more possibilities. However, when you explore these further outside the scope of this tutorial, make sure to keep the [best practices when creating Correlation rules](xref:Best_Practices_When_Creating_Correlation_Rules) in mind to avoid creating a Correlation rule that could have a negative impact on your system.
+   > Generating an information event is just one example of what you can do with this functionality. There are many, many more possibilities. However, when you explore these further outside the scope of this tutorial, make sure to keep the [best practices for Correlation](xref:Best_Practices_For_Correlation) in mind to avoid creating a Correlation rule that could have a negative impact on your system.
 
 1. Optionally, add another action to send an email to your account when the rule is triggered:
 

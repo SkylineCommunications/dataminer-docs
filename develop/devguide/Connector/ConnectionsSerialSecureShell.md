@@ -310,7 +310,7 @@ DataMiner will propose the following hash-based message authentication algorithm
 - ecdsa-sha2-nistp521 (from DataMiner 10.2.6/10.3.0 onwards)
 - ecdsa-sha2-nistp384 (from DataMiner 10.2.6/10.3.0 onwards)
 - ecdsa-sha2-nistp256 (from DataMiner 10.2.6/10.3.0 onwards)
-- ssha-rsa
+- ssh-rsa
 - ssh-dss
 
 #### [Prior to DataMiner 10.3.0/10.2.4](#tab/ssh-2)
@@ -342,7 +342,7 @@ DataMiner will propose the following hash-based message authentication algorithm
 
 #### Host key types
 
-- ssha-rsa
+- ssh-rsa
 - ssh-dss
 
 ***

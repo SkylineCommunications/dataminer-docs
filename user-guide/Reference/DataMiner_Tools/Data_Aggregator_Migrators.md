@@ -33,6 +33,9 @@ The Data Aggregator *MigratorToGQIDxM* tool should be used to migrate any existi
    | -u | Optional. To be used when another URL is configured in `appsettings.custom.json` (default: `http://localhost:12345`). |
    | -p | Optional. To be used when Data Aggregator is installed in a custom location (default: `C:\Program Files\Skyline Communications\DataMiner DataAggregator`). |
 
+   > [!NOTE]
+   > At present, this tool is only available on demand by sending a request to <support@dataminer.services>.
+
 1. The output will confirm whether the migration succeeded.
 
 ### Reverting the GQI DxM migration
