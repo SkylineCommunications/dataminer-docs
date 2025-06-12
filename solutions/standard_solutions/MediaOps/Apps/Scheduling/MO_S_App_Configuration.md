@@ -12,6 +12,4 @@ On the *App Configuration* page, you can configure several app-wide settings:
 
 - **Configure System Properties**: This button allows you to define **additional metadata** to use in your jobs. These properties will not affect any logic in the MediaOps apps; they are metadata intended purely as additional information for users. To make it easier to order those properties, you can divide them into sections.<!-- RN 43041 -->
 
-- If you want your jobs to be able to reference internal MediaOps entities or external generic entities, you can define the entities referenced in the **Reference types** section. The references are very generic, enabling you to reference a vast array of different types of entities.
-
-<!-- TODO: determine whether this last item should instead be this: - **Object types**: If you want your jobs to be able to reference internal MediaOps entities or external generic entities, you can define additional entities in this section section. These object types are very generic, enabling you to reference a vast array of different types of entities. -->
+- **Reference Types**: If you want your jobs to be able to reference internal MediaOps entities or external generic entities, you can define the additional entities in this section. The references are very generic, enabling you to reference a vast array of different types of entities.
