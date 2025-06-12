@@ -20,15 +20,15 @@ To link resource pools:
 
      This type of resource selection works as follows:
 
-     - When a pool (or one of its resources) is added to a **job**, the system **automatically selects** an available resource from the linked pool for the entire job duration. If **no resources** in the linked pool are available for the duration of the job, the system adds the **resource pool** without resource selection. The user must then pick a resource after making one available.
-     - When a pool (or one of its resources) is added to a **workflow**, a **pool node** is added to the workflow, with the option *Auto-select resource at job creation* set to *true*.
+     - When a pool (or one of its resources) is added to a **job**, the system **automatically selects an available resource** from the linked pool for the entire job duration. If no resources in the linked pool are available for the duration of the job, the system adds the resource pool without resource selection. The user must then pick a resource after making one available.
+     - When a pool (or one of its resources) is added to a **workflow**, a pool node is added to the workflow, with the option **Auto-select resource at job creation** set to **true**.
 
    - **Manual**:
 
      This type of resource selection works as follows:
 
-     - When a pool (or one of its resources) is added to a **job**, the system adds the linked resource pool to the job, allowing the user to manually select a specific resource later.
-     - When a pool (or one of its resources) is added to a **workflow**, a **pool node** is added to the workflow, with the option *Auto-select resource at job creation* set to *false*.
+     - When a pool (or one of its resources) is added to a **job**, the system adds the linked resource pool to the job, allowing the user to **manually select a specific resource** later.
+     - When a pool (or one of its resources) is added to a **workflow**, a pool node is added to the workflow, with the option **Auto-select resource at job creation** set to **false**.
 
 1. Click *Save*.
 
