@@ -152,3 +152,9 @@ When a query returned an empty result set without any columns, up to now, the va
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 When the *app.config.json* file of a published app did not contain an ID, up to now, it would not be possible to edit any of the existing apps.
+
+#### Dashboards app & Low-Code Apps: Problem when adding a DOM module to a component [ID 43142]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When a DOM module was added to a component, in some cases, that component would incorrectly get stuck in a loading state.
