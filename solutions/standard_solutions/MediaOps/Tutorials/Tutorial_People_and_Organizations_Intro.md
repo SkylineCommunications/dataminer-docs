@@ -4,7 +4,7 @@ uid: Tutorial_MediaOps_People_and_Organizations_Intro
 
 # Creating an organization with a team and contacts to use as resources in MediaOps apps
 
-In this tutorial, you will learn how to create an organization, a team, and contacts in the People & Organizations app, to interconnect these, and to make them bookable so that they can be treated as resources in other MediaOps apps.
+In this tutorial, you will learn how to create an organization, a team, and contacts in the [People & Organizations app](xref:People_Organizations), to interconnect these, and to make them bookable so that they can be treated as resources in other MediaOps apps.
 
 Expected duration: 15 minutes
 
@@ -46,17 +46,17 @@ Expected duration: 15 minutes
 
 1. Navigate to the *People* page.
 
-1. Click the *New contact* button on the right side of the header bar.
+1. In the top-right corner, click *New contact*.
 
 1. Enter the *Full name* of the contact.
 
-1. In the *Organization* field, select the organization you created in the previous step.
+1. In the *Organization* box, select the organization you created in the previous step.
 
 1. Click *Save*.
 
    ![New Contact](~/solutions/images/People_And_Organizations_New_Contact.png)
 
-1. In the new dialog, select your new contact and click *Activate Selected* to make it available in other MediaOps apps.
+1. In the new panel, select your new contact and click *Activate Selected* to make it available in other MediaOps apps.
 
 ## Step 3: Create a new team
 
@@ -74,7 +74,7 @@ Expected duration: 15 minutes
 
 ## Step 4: Add the contact to the team
 
-1. In the *Teams* table, click the button in the *Details* column for te team you have just created.
+1. In the *Teams* table, click the button in the *Details* column for the team you have just created.
 
 1. Click the *Edit members* button in the upper left corner of the new panel.
 
@@ -92,6 +92,6 @@ Expected duration: 15 minutes
 
    ![Make Team Bookable](~/solutions/images/People_And_Organizations_Make_Team_Bookable.png)
 
-The team and its members should now show up in the Resource Studio app, up and ready for bookings. The team will be available as a resource pool, and its members will show up as resources belonging to that pool.
+The team and its members should now show up in the Resource Studio app. The team will be available as a resource pool, and its members will show up as resources belonging to that pool.
 
-<!-- TODO: To make this example more complete, a step 6 should be added where the contact is actually booked in a job (or an additional tutorial should be added for this if this is too much to put in one step). -->
+<!-- TODO: To make this example more complete, a step 6 should be added where the contact is actually booked in a job -->

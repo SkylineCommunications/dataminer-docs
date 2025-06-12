@@ -4,7 +4,7 @@ uid: Tutorial_MediaOps_Resource_Studio_Capabilities_and_Capacities
 
 # Assigning capabilities to resources
 
-In this tutorial, you will learn how to model real devices in the Resource Studio app, making use of [capabilities](xref:MO_Resource_Studio#capabilities) and [capacities](xref:MO_Resource_Studio#capacities). The tutorial will use the example of a **converter** device that is capable of doing a conversion between [SDI](https://en.wikipedia.org/wiki/Serial_digital_interface) and [IP](https://en.wikipedia.org/wiki/Internet_Protocol). The conversion types will be modeled with a **resource capability** that has the two types as its discrete values.
+In this tutorial, you will learn how to model real devices in the [Resource Studio app](xref:MO_Resource_Studio), making use of [capabilities](xref:MO_Resource_Studio#capabilities) and [capacities](xref:MO_Resource_Studio#capacities). The tutorial will use the example of a **converter** device that is capable of doing a conversion between SDI and IP. The conversion types will be modeled with a **resource capability** that has the two types as its discrete values.
 
 Expected duration: 15 minutes
 
@@ -65,13 +65,13 @@ Expected duration: 15 minutes
 
 1. In the **Capabilities** section on the right, click the **Edit** button.
 
-1. In the newly opened *Manage Capabilities* window, click the **+** button in the *CAPABILITIES* section to add a new capability.
+1. In the newly opened *Manage Capabilities* window, click the **+** button to add a capability.
 
    ![Manage Capabilities](~/solutions/images/Resource_Studio_Manage_Capabilities.png)
 
-1. In the new dropdown box , select **Conversion Type**.
+1. In the dropdown box, select **Conversion Type**.
 
-1. Click the **Values** button to select the capability values.
+1. Click the **Values** button.
 
 1. In the *DISCRETES* section, click the **+** button.
 

@@ -4,7 +4,7 @@ uid: SCH_Edit_Job
 
 # Editing a job
 
-To edit a job, click the pencil icon for that job on the *Job View*, *Resource View*, *Ops Board*, or *Search Jobs* page. This will open the *Edit Job* panel. This panel consists of different sections where you can view and edit job settings and information, as detailed below.
+To edit a job, click the pencil icon for that job on the *Job View*, *Resource View*, *Ops Board*, or *Search Jobs* page. This will open the *Edit job* panel. This panel consists of different sections where you can view and edit job settings and information, as detailed below.
 
 <!-- TODO: Add nice example screenshots of the sections -->
 
@@ -12,7 +12,7 @@ To edit a job, click the pencil icon for that job on the *Job View*, *Resource V
 
 In the header bar, several buttons are available:
 
-![Header bar Edit Job panel](~/solutions/images/Edit_job_header_bar.png)
+![Header bar Edit job panel](~/solutions/images/Edit_job_header_bar.png)
 
 1. The **Contacts** button opens a panel where you can manage contacts related to the job. With the *Add Contact* button at the bottom of the panel, you can add contacts that have been configured in the [People & Organizations](xref:People_Organizations) app. You can remove contacts again with the x button in the list.
 1. The **Duplicate** button opens the *Duplicate job* window, where you can configure a new job based on the current one.

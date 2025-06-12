@@ -4,23 +4,18 @@ uid: Tutorial_MediaOps_Scheduling_Encoder_Decoder
 
 # Creating a job and configuring it with resources
 
-In this tutorial, you will learn how to create and schedule jobs, swap resources, and confirm the created jobs, all of this in the MediaOps Scheduling app.
+In this tutorial, you will learn how to create and schedule a job, swap resources, and confirm the created job, using the MediaOps [Scheduling app](xref:MO_Scheduling).
 
 Expected duration: 15 minutes
 
 > [!NOTE]
 > The content and screenshots for this tutorial have been created using DataMiner version 10.5.5 and MediaOps version 1.3.1.
 
-> [!TIP]
-> See also: [Scheduling documentation](xref:MO_Scheduling)
-
 ## Prerequisites
 
 - A DataMiner System using DataMiner 10.5.5 or higher.
 - Access to the **Scheduling** application.
-
-> [!NOTE]
-> This tutorial continues from the [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro) tutorial. Ideally, you should follow that tutorial first, as the current tutorial makes use of the resources that are configured in it.
+- You have complete the tutorial [Configuring resources and resource pools](xref:Tutorial_MediaOps_Resource_Studio_Intro).
 
 ## Overview
 
@@ -45,9 +40,9 @@ Expected duration: 15 minutes
 
    ![Create job panel](~/solutions/images/Scheduling_Create_Job_Panel.png)
 
-1. No other settings need to be configured, so click *Next* and then **Create Job**.
+1. No other settings need to be configured, so click **Create Job**.
 
-You now should be able to see the newly created job on the timeline.
+You should now be able to see the newly created job on the timeline.
 
 ![Job on the timeline](~/solutions/images/Scheduling_New_Job_Created.png)
 
@@ -59,7 +54,7 @@ You now should be able to see the newly created job on the timeline.
 
 1. Scroll down to the *Workflow* section at the bottom of the panel.
 
-   This is where resources in a job are managed.
+   In this section, you can add resources to a job as nodes in a workflow.
 
    ![Workflow section](~/solutions/images/Scheduling_Edit_Job_Workflow.png)
 
@@ -83,17 +78,15 @@ To reserve the encoder resource for your job, you will need to save the job as t
 
    ![Save as Tentative button](~/solutions/images/Scheduling_Edit_Job_Save_As_Tentative.png)
 
-1. Close the *Edit Job* panel and confirm that the color of the job has changed, indicating that it is now in the *Tentative* state.
+1. Close the *Edit job* panel and confirm that the color of the job has changed, indicating that it is now in the *Tentative* state.
 
    ![Job in tentative state](~/solutions/images/Scheduling_Job_in_tentative_state.png)
-
-   If the color does not update immediately, try switching between schedule types with the buttons on the left to refresh the view.
 
 ## Step 4: Add a decoder resource to the job
 
 1. Open the *Edit job* panel and head over to the *Workflow* section again.
 
-1. First select the *NewTek 001* resource, and then click **Add After**.
+1. First select the *NewTek 001* resource in the workflow, and then click **Add After**.
 
    ![Add After button](~/solutions/images/Scheduling_Create_Job_Add_After.png)
 
@@ -105,7 +98,7 @@ To reserve the encoder resource for your job, you will need to save the job as t
 
    If you get an error in this step, this is likely because no resource was selected in the previous step, so in that case close the panel and try again from the previous step, making sure the resource is selected.
 
-You should now see the resource pool in the list of nodes and the workflow overview. Note that the red hand icon for the Decoder resource pool in the *Nodes* table indicates that an actual resource still has to be picked for the job.
+You should now see the resource pool in the list of nodes and in the workflow overview. Note that the red hand icon for the *Decoder* resource pool in the *Nodes* table indicates that an actual resource still has to be picked for the job.
 
 ![Resource pool added without resource](~/solutions/images/Scheduling_Create_Job_Red_Hand.png)
 
@@ -115,9 +108,9 @@ The *NewTek 001* resource can act both as an encoder and as a decoder; however, 
 
 1. In the *Nodes* table of the *Edit job* panel, select the *Encoder* row.
 
-1. In the *Actions* column, click the **swap action icon**.
+1. In the *Actions* column, click the ![Swap icon](~/solutions/images/Scheduling_swap_icon.png) icon.
 
-   ![Swap action icon](~/solutions/images/Scheduling_Create_Job_Swap_Action.png)
+   ![Swap action icon in the Nodes table](~/solutions/images/Scheduling_Create_Job_Swap_Action.png)
 
    This will open the *Swap Resources* pane, where the *Encoder* resource pool will be selected already.
 
@@ -131,7 +124,7 @@ The *NewTek 001* resource can act both as an encoder and as a decoder; however, 
 
 1. In the *Nodes* table, select the *Decoder* resource pool and click the ![Red Hand](~/solutions/images/Red_Hand_icon.png) icon.
 
-   This will open the Pick Resource pane, where the *Decoder* resource pool will be preselected
+   This will open the *Pick Resource* pane, where the *Decoder* resource pool will be preselected
 
 1. Select the *NewTek 001* resource and click the *Pick* button.
 

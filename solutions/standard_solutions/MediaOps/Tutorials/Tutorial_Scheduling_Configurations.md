@@ -38,15 +38,13 @@ Expected duration: 15 minutes
 
 ## Step 2: Add the Converter resource pool to the job
 
-1. Click the **pencil** icon on the job to open the *Edit* panel.
+1. Click the **pencil** icon on the job to open the *Edit job* panel.
 
 1. Scroll down to the *Workflow* section of the panel, and click **Add Node**.
 
    ![Add Node](~/solutions/images/Scheduling_Add_Node.png)
 
-1. On the left side of the *Add Node* panel, select the **Converter** resource pool.
-
-1. Click the **+ Add Resource Pool** button.
+1. On the left side of the *Add Node* panel, select the **Converter** resource pool, and then click the **+ Add Resource Pool** button.
 
    ![Add Resource Pool](~/solutions/images/Scheduling_Add_Resource_Pool.png)
 
@@ -88,7 +86,7 @@ Expected duration: 15 minutes
 
 1. Click this icon for the first resource pool, and then select the *Video Solutions 001* resource and click *Pick*.
 
-   Note how only the resources matching your configuration will be shown.
+   Note how only the resources matching your configuration will be available for selection.
 
    ![Pick Resource](~/solutions/images/Scheduling_Pick_Resource.png)
 
@@ -102,10 +100,10 @@ Expected duration: 15 minutes
 
 1. Click the **Save as Tentative** button.
 
-1. Click **Confirm Job** button.
+1. Click the **Confirm Job** button.
 
 You have now successfully scheduled a job using a resource pool featuring a capability and parameter configuration.
 
 ## Up next
 
-To learn how you can create a workflow template that can be used in different jobs, making the job configuration easier and more user-friendly, follow the next tutorial [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro).
+To learn how you can create a workflow template that can be used in different jobs, making the job configuration easier and more user-friendly when the same workflow is used in multiple jobs, follow the next tutorial [Creating a workflow to use as a template for a job](xref:Tutorial_MediaOps_Workflow_Designer_Intro).

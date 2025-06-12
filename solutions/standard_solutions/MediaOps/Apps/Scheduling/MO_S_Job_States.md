@@ -16,7 +16,7 @@ A job can have one of the following states:
 | <div style="background-color:#D60000;color:#FFFFFF;width:150px;text-align:center;margin:10px;margin-top:20px">Error</div> | If there is an error on a job, it will be displayed with this color. However, underlying this, it will still have one of the above states, which will still be shown in the [edit panel](xref:SCH_Edit_Job). For more info, refer to [Validation of upcoming jobs](xref:Overview_MediaOps_Validation). |
 
 > [!NOTE]
-> When a job that has not started yet is no longer needed, it can be canceled via the [Edit Job](xref:SCH_Edit_Job) panel, which will move it to a **canceled** state. However, canceled jobs are not displayed on most pages. You can only find them on the *Search Jobs* page.
+> When a job that has not started yet is no longer needed, it can be canceled via the [Edit job](xref:SCH_Edit_Job) panel, which will move it to a **canceled** state. However, canceled jobs are not displayed on most pages. You can only find them on the *Search Jobs* page.
 
 <!--
 <div style="background-color:#36F0F3;color:#000000;width:150px;text-align:center;margin:10px;margin-top:20px">Ready for invoice</div>

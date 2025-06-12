@@ -4,7 +4,7 @@ uid: Tutorial_MediaOps_Workflow_Designer_Intro
 
 # Creating a workflow to use as a template for a job
 
-In this tutorial, you will create a workflow similar to the one created in the tutorial [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations). This way, you will be able to reuse the workflow in as many jobs as you want, without the need to do the same setup and configuration each time.
+In this tutorial, you will use the [Workflow Designer app](xref:MO_Workflow_Designer) to create a workflow similar to the one created in the tutorial [Scheduling a job using a resource pool with specific capabilities](xref:Tutorial_MediaOps_Scheduling_Configurations). This way, you will be able to reuse the workflow in as many jobs as you want, without the need to do the same setup and configuration each time.
 
 Expected duration: 15 minutes
 
@@ -110,7 +110,7 @@ In order to be able to use this workflow in the Scheduling app, the workflow's s
 
 1. In the **Start Time** and **End Time** boxes, customize the timing for the job so that it does not start executing right away.
 
-1. In the **Workflow** box, select workflow you created earlier, e.g. *SDI/IP Base Workflow*.
+1. In the **Workflow** box, select the workflow you created earlier, e.g. *SDI/IP Base Workflow*.
 
 1. Click the **Create Job** button.
 
@@ -132,4 +132,4 @@ In order to be able to use this workflow in the Scheduling app, the workflow's s
 
 1. Click the **Confirm Job** button.
 
-You have now created a job that uses the encoded and decoder resources with a predefined workflow.
+You have now created a job that uses the encoder and decoder resources with a predefined workflow.

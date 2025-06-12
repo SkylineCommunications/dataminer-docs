@@ -12,7 +12,7 @@ When an error is detected, the job will enter the [error state](xref:MO_S_Job_St
 
 To see a detailed list of the issues that have been identified:
 
-1. Click the pencil icon for the job to open the *Edit Job* panel.
+1. Click the pencil icon for the job to open the *Edit job* panel.
 
 1. In the *Job Info* section, click the error icon.
 
