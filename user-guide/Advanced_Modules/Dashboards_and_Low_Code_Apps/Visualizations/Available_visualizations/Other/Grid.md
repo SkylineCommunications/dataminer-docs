@@ -6,24 +6,24 @@ uid: DashboardGrid
 
 Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 34761-->.
 
-The grid component is a versatile visualization designed to display the results of queries in a clear, tile-based grid format. It offers a wide range of customization options, such as dynamic scaling that automatically adjusts the layout, and features like conditional formatting and interactive behavior through templates. This lets you highlight key data and trigger actions directly from each grid block.
+The grid component is a versatile visualization designed to display the results of queries in a clear, tile-based grid format. It offers **a wide range of customization options**, such as dynamic scaling that automatically adjusts the layout, and features like conditional formatting and interactive behavior through templates. This lets you highlight key data and trigger actions directly from each grid block.
 
 ![Grid](~/user-guide/images/Grid.png)<br>*Grid component in DataMiner 10.5.6*
 
 With this component, you can:
 
-- Instantly assess the status of items at a glance, using conditional formatting that highlights issues. For example, a red block might indicate a service that requires attention.
+- Instantly assess the status of items, thanks to [conditional formatting](#custom-item-appearance), e.g. red may indicate a service is in alarm.
 
-- Interact with individual blocks to trigger actions, such as opening a pop-up window with more details about an upcoming event.
+- Interact with individual blocks to [trigger actions](#), such as opening a pop-up window with more details about an upcoming event.
 
-- Focus on items that meet specific criteria, with unmatched blocks automatically dimmed to reduce visual noise.
+- Focus on items that meet specific criteria, with unmatched blocks [automatically dimmed](#highlighting-filtered-results-in-the-grid) to reduce visual noise.
 
-- Stay focused and avoid overwhelming views, even when there is a lot of data. You can limit how many grid blocks appear at once, while still being able to explore everything intuitively.
+- Stay focused and avoid overwhelming views, even when there is a lot of data. You can [limit how many grid blocks appear at once](#layout-and-scaling-options), while still being able to explore everything intuitively.
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
     <b>💡 TIPS TO TAKE FLIGHT</b><br>
-    Interested in what's possible with the table component? Deploy our <a href="https://catalog.dataminer.services/details/6e79f0d1-e622-4fce-8939-d9779beed651" style="color: #657AB7;"><i>Table show case</i> app</a> to see the component in action.
+    Interested in getting some hands-on experience with the grid component? Follow <a href="xref:Tutorial_Apps_Grid" style="color: #657AB7;">this beginner-friendly tutorial</a>!
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>
@@ -34,15 +34,17 @@ A grid component exists of a number of columns and rows, depending on the [layou
 
 If there are more items than fit in the grid, navigation arrows appear below it. These allow you to **move forward and back through the additional items**.
 
-If the size of the individual grid blocks (which you can edit using the [Template Editor](xref:Template_Editor)) prevents all items from fitting within the visible area of the grid component, a scrollbar appears when you hover over it. You can use this scrollbar to scroll through the content.
+![Navigation arrows](~/user-guide/Grid_Navigation_Arrows.gif)<br>*Grid component in DataMiner 10.5.7*
+
+If the size of the individual grid blocks (which you can edit using the [Template Editor](xref:Template_Editor)) prevents all items from fitting within the visible area of the grid component, a scrollbar appears when you hover over it. You can use this scrollbar to **scroll through the content**.
+
+![Scrollbar](~/user-guide/images/Grid_Scrollbar.gif)<br>*Grid component in DataMiner 10.5.7*
 
 From DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 38191-->, when you are using a mobile device:
 
 - You can move the grid left or right and up or down by sliding one finger across the component.
 
 - You can select grid items by tapping them.
-
-- From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a cell in the grid**, it will by default be highlighted with a blue border and a light-blue background. This can for instance be useful when the grid's [component data](xref:Component_Data) (i.e. *Components* > *Grid #* > *Selected items* > *Tables*) is used in another component, clearly indicating which data is driving the content in the linked component.
 
 ## Supported data types
 
@@ -63,11 +65,11 @@ Additionally, the following layout options are also available:
 
 | Section | Option | Description |
 |--|--|--|
-| Filtering & Highlighting | Highlight | Toggle the switch to determine whether the nodes that match the filter will be highlighted. Enabled by default. For more information, see [Using the *Highlight* option with a query filter](#using-the-highlight-option-with-a-query-filter). |
-| Filtering & Highlighting | Opacity | Set the level of transparency of the items that do not match the filter. This option is only available when *Highlight* is enabled. For more information, see [Using the *Highlight* option with a query filter](#using-the-highlight-option-with-a-query-filter). |
+| Filtering & Highlighting | Highlight | Toggle the switch to determine whether the nodes that match the filter will be highlighted. Enabled by default. For more information, see [Highlighting filtered results in the grid](#highlighting-filtered-results-in-the-grid). |
+| Filtering & Highlighting | Opacity | Set the level of transparency of the items that do not match the filter. This option is only available when *Highlight* is enabled. For more information, see [Highlighting filtered results in the grid](#highlighting-filtered-results-in-the-grid). |
 | Advanced | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
 | Advanced | Grid template | Configure the number of columns and rows in the grid, and adjust scaling options<!--RN 34761 + 34781-->. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
-| Item templates | Browse templates<br>*or* Reuse template (prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
+| Item templates | Browse templates *or*<br>Reuse template (prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
 | Item templates | Edit | Open the Template Editor<!--RN 34761--> to customize the appearance of grid items and configure actions, such as opening a panel when a cell is selected. For more information, refer to [Using the Template Editor](xref:Template_Editor). |
 
 > [!NOTE]
@@ -78,6 +80,8 @@ Additionally, the following layout options are also available:
 #### Layout and scaling options
 
 In the *Layout* pane for this component, the *Grid template* section is available, which allows you to configure the number of columns and rows displayed in the grid component, along with scaling options.
+
+![*Grid template* section](~/user-guide/images/Grid_Template.png)<br>*Grid layout settings in DataMiner 10.5.7*
 
 - By default, the number of displayed columns and rows is set to *Auto* (i.e. all columns and/or rows are displayed). To modify the number of displayed columns and rows, clear the checkbox in this section and specify the desired number. To revert to *Auto*, delete the entry.
 
@@ -97,17 +101,21 @@ In the *Layout* pane for this component, the *Grid template* section is availabl
 
 In the *Layout* pane for this component, the *Item templates* section is available, which allows you to customize the appearance of the grid items.
 
+From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->, when you **select a cell in the grid**, it will by default be highlighted with a blue border and a light-blue background. This can for instance be useful when the grid's [component data](xref:Component_Data) (i.e. *Components* > *Grid #* > *Selected items* > *Tables*) is used in another component, clearly indicating which data is driving the content in the linked component.
+
 ##### Examples
 
 -
 
-#### Using the 'highlight' option with a query filter
+#### Highlighting filtered results in the grid
 
 To **visually distinguish between items that match your filter criteria and those that do not**, you can combine the *Highlight* option of the grid component with a query filter component. This allows you to lower the opacity of non-matching items while keeping relevant results clearly visible.
 
 1. In the *Layout* pane, make sure the *Filtering & Highlighting* > *Highlight* option is enabled.
 
 1. Set your preferred opacity, e.g. 20 %. This determines how clearly you will see the grid items that do not meet the criteria specified in the query filter.
+
+   ![Highlight filtered results](~/user-guide/images/Highlight_Filtered_Results.png)<br>*Grid layout settings in DataMiner 10.5.7*
 
 1. Add a [query filter visualization](xref:DashboardQueryFilter) to your app or dashboard.
 
@@ -135,4 +143,4 @@ In the *Settings* pane for this component, you can customize its behavior to sui
 
 From DataMiner 10.2.12 onwards, the grid component is available in soft launch, if the soft-launch option *ReportsAndDashboardsDynamicVisuals* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-If you use the preview version of the grid component, its functionality may be different from what is described below.
+If you use the preview version of the grid component, its functionality may be different from what is described on this page.
