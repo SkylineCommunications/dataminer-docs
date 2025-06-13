@@ -392,9 +392,3 @@ When, in DataMiner Integration Studio (DIS), you tried to publish an Automation 
 `Failed to load info for script 'XXX'`
 
 From now on, when you publish an Automation script via DIS, its name will be validated. If the name is invalid, the publish action will be aborted.
-
-#### Problem with masked alarms when the alarm template was removed or when the parameters were no longer monitored [ID 43098]
-
-<!-- MR 10.6.0 - FR 10.5.8 -->
-
-When an element had masked alarms, the alarm status of the parameters in question would incorrectly remain masked when the alarm template was removed from the element or when conditional alarm monitoring would cause the parameters to no longer be monitored.

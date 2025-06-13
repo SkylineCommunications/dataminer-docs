@@ -79,3 +79,9 @@ From now on, the maximum number of repetitions defined for `multipleGetBulk` wil
 >
 > - We recommend defining a partialSnmp row option that is equal to or a multiple of the maximum number of repetitions in order to avoid having to request a single row in the final request.
 > - When both the `partialSnmp` option and the `GetNext` option were used when polling an SNMP table, up to now, this would result in an infinite loop. From now on, although combining `partialSnmp` with `GetNext` is still not supported, this will no longer cause any issues.
+
+#### Problem with masked alarms when the alarm template was removed or when the parameters were no longer monitored [ID 43098]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When an element had masked alarms, the alarm status of the parameters in question would incorrectly remain masked when the alarm template was removed from the element or when conditional alarm monitoring would cause the parameters to no longer be monitored.

@@ -152,7 +152,7 @@ When stopped elements had been swarmed over to another DataMiner Agent, in some 
 
 #### Problem with masked alarms when the alarm template was removed or when the parameters were no longer monitored [ID 43098]
 
-<!-- MR 10.6.0 - FR 10.5.8 -->
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
 
 When an element had masked alarms, the alarm status of the parameters in question would incorrectly remain masked when the alarm template was removed from the element or when conditional alarm monitoring would cause the parameters to no longer be monitored.
 
