@@ -153,6 +153,12 @@ When a query returned an empty result set without any columns, up to now, the va
 
 When the *app.config.json* file of a published app did not contain an ID, up to now, it would not be possible to edit any of the existing apps.
 
+#### Dashboards app & Low-Code Apps - Query filter component: GQI DxM would pass incorrect column statistics for boolean columns [ID 43127]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When a query was processed by the GQI DxM, the result set of the query would contain incorrect column statistics for boolean columns, causing those columns to not be filterable in *Query filter* components.
+
 #### Dashboards app & Low-Code Apps: Problem when adding a DOM module to a component [ID 43142]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
