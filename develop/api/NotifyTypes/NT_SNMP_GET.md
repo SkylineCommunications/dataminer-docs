@@ -73,7 +73,7 @@ if (response.Length == 1)
   - elementInfo[3] (string): Instance.
   - elementInfo[4] (int): Connection ID (default 0).
   - elementInfo[5] (string): Get community string<!-- RN 4048 -->
-  - elementInfo[6] (bool): Split errors from values. Default: False.
+  - elementInfo[6] (bool): Split errors from values. When set to false, errors are included directly in the response. When set to true, only the values are returned, and errors are omitted from the response. Default: false.
   - elementInfo[7] (int): DataMiner Agent ID. Default: local DataMiner Agent ID.
   - elementInfo[8] (int): Dynamic poll type. Default: 2 (SingleGets).
 
