@@ -63,3 +63,9 @@ In trend graphs showing gaps in the trend data, in some rare cases, the data bet
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 In EPM environments, in some rare cases, a view card could get stuck when you tried to open it.
+
+#### Trending: Problem when loading trend graphs [ID 43156]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some rare cases, an error could occur when loading trend graphs.
