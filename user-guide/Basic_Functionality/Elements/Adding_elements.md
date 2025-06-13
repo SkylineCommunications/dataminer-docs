@@ -96,7 +96,7 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - For a **WebSocket** connection, see [WebSocket connection](xref:WebSocket_Connection).
 
-1. If the protocol is configured to allow you to test the connections, optionally click the button *Test connection* below any connections you want to test.
+1. If the protocol is [configured to allow you to test the connection](xref:Protocol.Groups.Group-ping), optionally click the button *Test connection* below the connection you want to test.
 
    After you click the button, a message will display the results of the test.
 
