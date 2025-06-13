@@ -196,11 +196,12 @@ Below are two examples illustrating how the Template Editor can be used to custo
 
 ### Table settings
 
-In the *Settings* pane for this component, you can customize its behavior to suit your requirements.
+In the *Settings* pane for this component, you can find the default options available for all components. See [Configuring default component settings](xref:Configure_Component_Settings).
+
+Additionally, the following settings are also available:
 
 | Section | Option | Description |
 |--|--|--|
-| WebSocket settings | Inherit WebSocket settings from page/panel | Clear the checkbox to use a custom polling interval for this component. When cleared, you can specify a different polling interval (in seconds). |
 | General | Override dynamic units | Clear the checkbox to prevent parameter units from changing dynamically based on their value and protocol definition. Disabled by default. |
 | Data retrieval | Update data | Available from DataMiner 10.2.0/10.2.1 onwards. Toggle the switch to determine whether the data in the table should be refreshed automatically (provided this is supported by the data source). |
 | Actions | On double click | Configure one or more actions to be executed when a row is double-clicked. Only available in Low-Code Apps. |
