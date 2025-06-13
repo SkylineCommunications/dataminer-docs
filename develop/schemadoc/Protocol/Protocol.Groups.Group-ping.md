@@ -18,7 +18,7 @@ Specifies whether this is the group to be used when testing the connection in th
 
 ## Remarks
 
-When you create or update an element, it is possible to first test the connection with the data you entered before creating or updating the element:
+When you [create or update an element](xref:Adding_elements), it is possible to first test the connection with the data you entered before creating or updating the element:
 
 - If you click a Test connection button, you will either get a "Connection successful" message or an error message explaining why the test failed.
 - If a Test connection button is disabled, hover over it to see the reason why it is disabled.
