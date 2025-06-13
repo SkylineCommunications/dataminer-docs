@@ -22,7 +22,7 @@ Setting a value different from "Auto" will replace the [options](xref:DMSScript-
 
 Setting "Optional" will make the option flag "HasFindInteractiveClient" to be enabled.
 
-Setting "Always" will make the option flag "RequireInteractive" to be enabled.
+Setting "Always" will make the option flag "RequireInteractive" to be enabled. This is the preferred option when automation scripts are used in an [IAS component](xref:InteractiveAutomationScript) in low code apps.
 
 > [!NOTE]
 >
