@@ -382,3 +382,13 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
+
+#### Automation: Problem when trying to publish an Automation script with an invalid name via DIS [ID 42974]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+When, in DataMiner Integration Studio (DIS), you tried to publish an Automation script of which the name contained leading and/or trailing spaces, up to now, the script would initially be added, but it would immediately be removed from the system. Also, the following error message would be added to the SLAutomation log file:
+
+`Failed to load info for script 'XXX'`
+
+From now on, when you publish an Automation script via DIS, its name will be validated. If the name is invalid, the publish action will be aborted.

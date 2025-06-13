@@ -44,9 +44,9 @@ For an example showing how to implement a dropdown box filter in an interactive 
 ### Enhancements
 
 #### DataMiner installer: Available STaaS regions will now be retrieved from dataminer.services [ID 43030]
- 
+
 <!-- MR 10.6.0 - FR 10.5.8 -->
- 
+
 When, while installing DataMiner using the DataMiner installer, you have selected to use STaaS for data storage, at some point, you will have to select the STaaS region. Up to now, you were only able to select one of two hard-coded regions. From now on, the available STaaS regions will be retrieved from dataminer.services by means of an API call.
 
 #### DataMiner upgrade: All TXF files will now be removed each time a DataMiner upgrade is performed [ID 43058]
@@ -107,6 +107,16 @@ When a user requested a mobile visual overview, in some cases, an incomplete ima
 If a redundancy group has more primary elements than backup elements, at the moment when all backups are in use, an alarm with severity level "Notice" will appear in the Alarm Console mentioning that all redundancy resources are in use.
 
 By default, that alarm is cleared as soon as one of the backup elements is available again. However, up to now, in some cases, the alarm would incorrectly not get cleared.
+
+#### Automation: Problem when trying to publish an Automation script with an invalid name via DIS [ID 42974]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+When, in DataMiner Integration Studio (DIS), you tried to publish an Automation script of which the name contained leading and/or trailing spaces, up to now, the script would initially be added, but it would immediately be removed from the system. Also, the following error message would be added to the SLAutomation log file:
+
+`Failed to load info for script 'XXX'`
+
+From now on, when you publish an Automation script via DIS, its name will be validated. If the name is invalid, the publish action will be aborted.
 
 #### GQI: GQI DxM and SLHelper could leak memory [ID 43028]
 
