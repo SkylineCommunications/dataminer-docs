@@ -141,7 +141,7 @@ Accompanying write parameters can be added so the credentials can be entered fro
 > [!IMPORTANT]
 > Use the [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string) option on the parameter holding the password. Using this option ensures greater security.
 
-The two parameters also need to be defined in the port settings.
+The two parameters also need to be defined in the port settings. (Note that all connections should have a PortSettings tag and placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute.)
 
 ```xml
 <PortSettings name="SSH Connection">
@@ -190,7 +190,7 @@ The content of this parameter should be formatted like this: ```key=C:\Users\Use
 </Param>
 ```
 
-This parameter also needs to be defined in the port settings.
+This parameter also needs to be defined in the port settings. (Note that all connections should have a PortSettings tag and placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute.) Note also that the `Credentials/Username` tag is present as this will incidate the user under which to connect.
 
 ```xml
 <PortSettings name="SSH Connection">
@@ -208,11 +208,36 @@ This parameter also needs to be defined in the port settings.
     </PortTypeUDP>
     <SSH>
        <Identity pid="1200"/>
+       <Credentials>
+          <Username pid="1100"/>
+       </Credentials>
     </SSH>
 </PortSettings>
 ```
 
 The connection is then established by DataMiner, provided the parameter holds the private key and passphrase.
+
+You can also provide both the Identity tag and Credentials/Password as follows:
+
+```xml
+    <SSH>
+       <Identity pid="1200"/>
+       <Credentials>
+            <Username pid="1100"/>
+            <Password pid="1101"/>
+        </Credentials>
+    </SSH>
+</PortSettings>
+```
+
+In this case the authentication using the identity file will have priority.
+
+> [!NOTE]
+> The approach by specifying the parameter IDs for the identity file and/or credentials supports having an SSH connection that is not the main (first) connection in the connector.
+> There is another way to specify these parameters, which is now deprecated as it only works when the SSH connection is the main (first) connection in the connector.
+> This involves adding the following options to different parameters:
+>
+> TODO: add links to optinos and provide an example.
 
 #### Remarks
 
