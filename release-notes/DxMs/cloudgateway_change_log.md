@@ -4,6 +4,18 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 3 June 2025 - Fix - CloudGateway 2.17.7 - Crash while subscribing during NATS  message broker reconnect
+
+Initiating a subscription while the NATS message broker connection was reconnecting could cause the DxM to crash. This has been fixed.
+
+#### 3 June 2025 - Enhancement - CloudGateway 2.17.7 - Dependencies updated
+
+Several dependencies have been updated.
+
+#### 3 June 2025 - Fix - CloudGateway 2.17.7 - Possible crash due to rapid file changes
+
+​Rapid file changes in *DataMiner.xml* or *MaintenanceSettings.xml* could cause a problem in CloudGateway, causing the DxM to restart.
+
 #### 4 April 2025 - Enhancement - CloudGateway 2.17.4 - Dependencies updated [ID 42682]
 
 Several dependencies have been updated.
