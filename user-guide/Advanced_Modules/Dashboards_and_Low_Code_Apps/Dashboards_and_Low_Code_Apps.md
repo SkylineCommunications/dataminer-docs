@@ -1,5 +1,6 @@
 ---
 uid: Dashboards_and_Low_Code_Apps
+description: With the Dashboards app and Low-Code Apps module, you can consolidate any data from your monitored system, so you can access it on any device.
 ---
 
 # Dashboards and Low-Code Apps

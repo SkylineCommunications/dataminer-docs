@@ -1,6 +1,7 @@
 ---
 uid: Creating_a_DMS_on_dataminer_services
 keywords: dms in the cloud
+description: To create a new DMS on dataminer.services, log on to dataminer.services, click 'Add a DataMiner System', select 'DataMiner as a Service', specify the necessary details, and click Deploy.
 ---
 
 # Creating a new DMS on dataminer.services

@@ -1,5 +1,6 @@
 ---
 uid: ConnectorFundamentals
+description: It is important to have a good understanding of the concepts mentioned in this chapter in order to be able to develop a DataMiner Protocol.
 --- 
 
 # Connector fundamentals

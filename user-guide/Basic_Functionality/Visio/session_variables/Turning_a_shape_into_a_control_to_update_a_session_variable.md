@@ -1,5 +1,6 @@
 ---
 uid: Turning_a_shape_into_a_control_to_update_a_session_variable
+description: Using a shape data field of type SetVar, you can turn a shape or a page into a control that allows users to update a session variable.
 ---
 
 # Turning a shape into a control to update a session variable
