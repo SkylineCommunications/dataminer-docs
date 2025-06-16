@@ -95,4 +95,4 @@ When this is done, you can reconnect the system to dataminer.services in Cube un
 
 ## Contact support
 
-If the connection issues still persist, [contact tech support](xref:Contacting_tech_support).
+If the connection issues still persist, [contact DataMiner Support](xref:Contacting_tech_support).

@@ -98,9 +98,9 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
 %% -------------------------------------------------------------------------
 %% Ending: Contact Techsupport
 %% -------------------------------------------------------------------------
-  ContactTechsupport([Describe the issue in detail and contact tech support.])
-  ContactTechsupport_2([Describe the issue in detail and contact tech support.])
-  ContactTechsupport_3([Describe the issue in detail and contact tech support.])
+  ContactTechsupport([Describe the issue in detail and contact DataMiner Support.])
+  ContactTechsupport_2([Describe the issue in detail and contact DataMiner Support.])
+  ContactTechsupport_3([Describe the issue in detail and contact DataMiner Support.])
 %% -------------------------------------------------------------------------
 %% Ending: Issue fixed
 %% -------------------------------------------------------------------------

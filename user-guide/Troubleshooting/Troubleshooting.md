@@ -24,7 +24,7 @@ uid: Part6Troubleshooting
     <a href="/user-guide/Troubleshooting/Known_issues/Known_issues.html" title="Known issues" target="_self"><img src="~/user-guide/images/Known_Issues.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/user-guide/Troubleshooting/Contacting_tech_support.html" title="Contacting tech support" target="_self"><img src="~/user-guide/images/Contacting_Tech_Support.svg" style="width:100%"></a>
+    <a href="/user-guide/Troubleshooting/Contacting_tech_support.html" title="Contacting DataMiner Support" target="_self"><img src="~/user-guide/images/Contacting_Tech_Support.svg" style="width:100%"></a>
   </div>
 </div>
 
