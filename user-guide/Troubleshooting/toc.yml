@@ -268,7 +268,7 @@ items:
     items:
       - name: Current issues
         items:
-          - name: Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3
+          - name: Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7
             topicUid: KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3
           - name: User locked out after single failed login attempt
             topicUid: KI_user_locked_out_after_single_failed_attempt
