@@ -143,7 +143,7 @@ function processSearchResults(data, searchTerm) {
         "User Guide": "user-guide/",
         "Solutions": "solutions/",
         "Dev Guide": "develop/",
-        "Connector Docs": "connector/",
+        "Connectors": "connector/",
         "Release Notes": "release-notes/"
     };
 
@@ -151,7 +151,7 @@ function processSearchResults(data, searchTerm) {
     for (const category in CATEGORY_RULES) {
         categories[category] = { count: 0, items: [] };
     }
-    categories["other"] = { count: 0, items: [] };
+    categories["Other"] = { count: 0, items: [] };
 
     const results = [];
 
@@ -163,7 +163,7 @@ function processSearchResults(data, searchTerm) {
             const score = result["@search.score"] || 0;
 
             // Determine category based on URL pattern
-            let category = "other";
+            let category = "Other";
             for (const [key, prefix] of Object.entries(CATEGORY_RULES)) {
                 if (url.includes(prefix)) {
                     category = key;
