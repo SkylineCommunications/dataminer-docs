@@ -6109,6 +6109,13 @@ items:
 - name: Best practices
   topicUid: Best_practices
   items:
+    - name: Catalog Items
+      topicUid: Best_practices-Catalog_Items
+      items:
+      - name: Best practices when creating Catalog items
+        topicUid: Best_Practices_When_Creating_Catalog_Items
+      - name: Best practices when documenting Catalog items
+        topicUid: Best_Practices_When_Documenting_Catalog_Items
     - name: Unit testing
       topicUid: Unit_testing
       items:

@@ -1,0 +1,12 @@
+---
+uid: Best_practices-Catalog_Items
+---
+
+# Catalog Items
+
+When publishing items on the [Catalog](xref:About_the_Catalog_app), it is good to be consistent and adhere to our best practices.
+
+- [Best practices when creating Catalog items](xref:Best_Practices_When_Creating_Catalog_Items)
+- [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items)
+
+
