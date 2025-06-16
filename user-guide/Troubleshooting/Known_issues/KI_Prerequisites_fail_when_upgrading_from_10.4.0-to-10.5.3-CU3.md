@@ -1,5 +1,5 @@
 ---
-uid: KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3/10.5.6/10.5.7
+uid: KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3
 ---
 
 # Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3/10.5.6/10.5.7
