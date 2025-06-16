@@ -1,5 +1,6 @@
 ---
 uid: Initializing_a_session_variable
+description: You can initialize (i.e. declare) a session variable by adding a shape data field of type InitVar to a page of a Visio drawing.
 ---
 
 # Initializing a session variable

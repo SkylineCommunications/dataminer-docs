@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpRetrievingTables
+description: An overview of the different methods that are available for retrieving tables via SNMP in a protocol.
 ---
 
 # Retrieving tables

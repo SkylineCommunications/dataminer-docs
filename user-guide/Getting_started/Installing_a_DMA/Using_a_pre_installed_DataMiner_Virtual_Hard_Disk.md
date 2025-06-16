@@ -1,10 +1,11 @@
 ---
 uid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
+description: Download a virtual hard disk with DataMiner pre-installed and get started immediately. The VM is hardened out of the box for improved security.
 ---
 
 # Using a pre-installed DataMiner Virtual Hard Disk
 
-You can [download a virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) with DataMiner pre-installed to immediately get started. The virtual hard disk is available in **VHD**, **VHDX**, and **VMDK** format. The pre-installed DataMiner VM is [hardened](xref:DataMiner_hardening_guide) out-of-the box for improved security.
+You can [download a virtual hard disk](https://community.dataminer.services/dataminer-virtual-hard-disk/) with DataMiner pre-installed to immediately get started. The virtual hard disk is available in **VHD**, **VHDX**, and **VMDK** format. The pre-installed DataMiner VM is [hardened](xref:DataMiner_hardening_guide) out of the box for improved security.
 
 When you configure this setup, you will be able to choose between different data storage setups:
 
