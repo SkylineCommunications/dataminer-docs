@@ -16,8 +16,6 @@ Specifies if the script requires user interaction.
 
 ## Remarks
 
-Default value is "Auto".
+Available from DataMiner 10.5.8/10.6.0 onwards.<!-- RN 42954 -->
 
-> [!NOTE]
->
-> - This is available from DataMiner version 10.5.8/10.6.0 onwards.
+Default value: "Auto".

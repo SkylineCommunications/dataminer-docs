@@ -12,7 +12,7 @@ This component allows you to visualize any interactive Automation script (IAS) w
 >
 > - This component is only available in the Low-Code Apps module.
 > - Scripts will time out after they have run for 15 minutes. This means that after a script has been shown in the component for 15 minutes, an error will be shown.
-> - From DataMiner 10.5.8/10.6.0 onwards the script's [InteractivityOptions](xref:Automation-InteractivityOptions) should be set to 'Always' for it to be compatible with this component.
+> - From DataMiner 10.5.8/10.6.0 onwards, the script's [InteractivityOptions](xref:Automation-InteractivityOptions) should be set to *Always* for it to be compatible with this component.
 
 ## Configuring the component
 

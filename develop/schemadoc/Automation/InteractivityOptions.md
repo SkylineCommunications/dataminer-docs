@@ -11,19 +11,17 @@ Defines the interactivity options for an Automation script.
 |Item|Facet value|Description|
 |--- |--- |--- |
 |***string restriction***|||
-|&nbsp;&nbsp;Enumeration|Auto|Default option and old behavior. In the background the script will be read to try to find out if interactivity is needed.|
-|&nbsp;&nbsp;Enumeration|Never|The script will never be interactive. This means that the script will not show any UI elements.|
-|&nbsp;&nbsp;Enumeration|Optional|The script will be interactive if it needs to be. This means that the script will show UI elements if needed.|
-|&nbsp;&nbsp;Enumeration|Always|The script will always be interactive. This means that the script will always show UI elements.|
+|&nbsp;&nbsp;Enumeration|Auto|Default option. In the background, the script will be read to try to find out if interactivity is needed. This behavior is the same as in DataMiner versions prior to 10.5.8/10.6.0, where the [Interactivity](xref:DMSScript.Interactivity) tag is not yet supported. |
+|&nbsp;&nbsp;Enumeration|Never|The script will never be interactive. It will not show any UI elements.|
+|&nbsp;&nbsp;Enumeration|Optional|The script will be interactive if it needs to be. It will show UI elements if needed.|
+|&nbsp;&nbsp;Enumeration|Always|The script will always be interactive. It will always show UI elements.|
 
 ## Remarks
 
-Setting a value different from "Auto" will replace the [options](xref:DMSScript-options) auto detection mechanism for options "RequireInteractive" and "HasFindInteractiveClient".
+Available from DataMiner 10.5.8/10.6.0 onwards.<!-- RN 42954 -->
 
-Setting "Optional" will make the option flag "HasFindInteractiveClient" to be enabled.
+Setting a value different from "Auto" will replace the [options](xref:DMSScript-options) auto-detection mechanism for options "RequireInteractive" and "HasFindInteractiveClient":
 
-Setting "Always" will make the option flag "RequireInteractive" to be enabled. This is the preferred option when automation scripts are used in an [IAS component](xref:InteractiveAutomationScript) in low code apps.
+- Setting "Optional" will enable the option flag "HasFindInteractiveClient".
 
-> [!NOTE]
->
-> - This is available from DataMiner version 10.5.8/10.6.0 onwards.
+- Setting "Always" will enable the option flag "RequireInteractive". This is the preferred option when Automation scripts are used in an [IAS component](xref:InteractiveAutomationScript) in low-code apps.
