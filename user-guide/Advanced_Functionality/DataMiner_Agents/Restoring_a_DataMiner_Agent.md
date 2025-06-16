@@ -12,7 +12,7 @@ Before restoring a DataMiner Agent, you need to [prepare the destination server]
 
 > [!IMPORTANT]
 >
-> - If you use [Storage as a Service](xref:STaaS) and want to restore your DataMiner Agent on a new (virtual) machine, contact <staas@dataminer.services> to make sure your new setup is connected correctly.
+> - If you use [Storage as a Service](xref:STaaS) and want to restore your DataMiner Agent on a new (virtual) machine, contact <support@dataminer.services> to make sure your new setup is connected correctly.
 > - If a DataMiner Agent is connected to dataminer.services and you want to restore it on a new (virtual) machine, it is important that you take extra steps to [make sure that the connection is maintained](xref:Maintaining_cloud_connection_when_restoring).
 
 > [!NOTE]
