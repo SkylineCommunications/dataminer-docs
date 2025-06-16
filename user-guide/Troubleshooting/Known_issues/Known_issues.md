@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [SLProtocol RTE because of element stuck in slow poll mode](xref:KI_SLProtocol_RTE_after_slow_poll_timeout) | From DataMiner 10.4.0 [CU11] onwards | | June 16, 2025 |
 | [Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | | June 2, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [Local user not pushed to Windows](xref:KI_Local_user_not_pushed_to_windows) | From DataMiner 10.4.0 [CU4]/10.4.7 onwards | | March 27, 2025 |
@@ -35,6 +36,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
+| [SLProtocol RTE because of element stuck in slow poll mode](xref:KI_SLProtocol_RTE_after_slow_poll_timeout) | From DataMiner 10.4.0 [CU11] onwards | | June 16, 2025 |
 | [Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | | June 2, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [Local user not pushed to Windows](xref:KI_Local_user_not_pushed_to_windows) | From DataMiner 10.4.0 [CU4]/10.4.7 onwards | | March 27, 2025 |
