@@ -15,7 +15,7 @@ Each definition element represents a single, unique OID and corresponding value.
 |Name|Occurrences|Default Value|Description|
 |--- |--- |--- |--- |
 |OID |1 |Mandatory |The object identifier of the SNMP value. For example: `1.3.6.1.4.1.32473.1.0` |
-|Type |1 |Mandatory |The type of the SNMP value. See [Types](#Types) |
+|Type |1 |Mandatory |The type of the SNMP value. See [Types](#types) |
 |ReturnValue |1 |Mandatory |The SNMP value to return. |
 |LogOutput |[0, 1] |Empty |The format for the log output. |
 |Comment |[0, 1] |Empty |No longer used. |
