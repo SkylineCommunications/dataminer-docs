@@ -82,7 +82,7 @@ If STaaS is unreachable for some reason, the following error message will be sho
 
 DataMiner will automatically initiate offload mode, ensuring that no data loss occurs. While this error is displayed in the Alarm Console, **do not restart** the system or any of its elements.
 
-This issue typically resolves itself. If it persists, contact <support@dataminer.services>.
+This issue typically resolves itself.
 
 ## The API Deployment Manager failed to initialize
 

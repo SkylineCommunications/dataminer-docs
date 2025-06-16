@@ -88,4 +88,4 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
 1. Restart DataMiner to begin using STaaS.
 
 > [!NOTE]
-> If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these using the [available troubleshooting information](xref:Troubleshooting_STaaS), contact <support@dataminer.services>.
+> If you experience any issues during setup or while using Storage as a Service, refer to [Troubleshooting - STaaS](xref:Troubleshooting_STaaS).

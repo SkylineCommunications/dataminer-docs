@@ -61,7 +61,7 @@ From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42387 -->, when 
 
 ![ThrottlingAlarmExample](~/user-guide/images/throttling_alarm_example.png)
 
-If you encounter such an alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load. If the alarm persists or you are unable to find the root cause, please contact <support@dataminer.services>.
+If you encounter such an alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load.
 
 ## Limitations
 
