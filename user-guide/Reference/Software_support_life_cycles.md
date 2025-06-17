@@ -18,7 +18,6 @@ For the **Main Release** track, the following support is available:
 | 10.4.0  | 21 Nov 2025           | **26 Feb 2027**     | *25 Feb 2028*           |
 | 10.3.0  | 15 Nov 2024           | **27 Feb 2026**     | *26 Feb 2027*           |
 | 10.2.0  | 24 Nov 2023           | **28 Feb 2025**     | *27 Feb 2026*           |
-| 10.1.0  | 18 Nov 2022           | **23 Feb 2024**     | *28 Feb 2025*           |
 
 Older versions are no longer supported.
 
