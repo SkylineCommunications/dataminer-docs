@@ -8,10 +8,6 @@ uid: orchestrator_change_log
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
 
-#### 17 June 2025 - Enhancement - Orchestrator 1.7.6 - Dependencies updated
-
-Several dependencies have been updated.
-
 #### 1 April 2025 - Enhancement - Dependencies updated [ID 42657]
 
 Several dependencies have been updated.

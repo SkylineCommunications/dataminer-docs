@@ -8,10 +8,6 @@ uid: supportassistant_change_log
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
 
-#### 17 June 2025 - Enhancement - Support Assistant 1.7.4 - Dependencies updated
-
-Several dependencies have been updated.
-
 #### 1 April 2025 - Enhancement - SupportAsistant 1.7.3 - Dependencies updated [ID 42658]
 
 Several dependencies have been updated.
