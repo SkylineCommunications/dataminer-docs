@@ -53,7 +53,7 @@ From DataMiner 10.3.0 [CU11]/10.4.2 onwards<!--RN 38191-->, grid components supp
 
 The grid component is used to display the results of queries in grid format. It should therefore **always be configured with [query data input](xref:Query_Data)**.
 
-Each row in a query corresponds to a column in the grid.
+Each row in a query corresponds to an item in the grid.
 
 > [!TIP]
 > For an example of how to configure a GQI query that can be used as data input for a grid component, see [Tutorial: Getting started with the grid component](xref:Tutorial_Apps_Grid).
