@@ -107,6 +107,12 @@ In all DataMiner web apps, the email address of Skyline support has been changed
 
 In the template editor, for all types of layers, the color picker now allow you to configure the current color, i.e. the font color of the component.
 
+#### Dashboards app & Low-Code Apps: Border roundness setting will now be set to 5px in the default component themes [ID 43146]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In the default component themes, the border roundness setting will now be set to 5px.
+
 ### Fixes
 
 #### Low-Code Apps: It would incorrectly be possible to publish a low-code app while it was still being saved [ID 42680]
