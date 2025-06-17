@@ -4,9 +4,9 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 17 June 2025 - Enhancement - CloudGateway 2.17.7 - Reduce shutdown time
+#### 17 June 2025 - Enhancement - CloudGateway 2.17.7 - Improve upgrade process
 
-Improvements have been made to reduce DXM shutdown times which improves the installation process.
+Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
 
 #### 17 June 2025 - Enhancement - CloudGateway 2.17.7 - Future endpoint 
 
