@@ -23,6 +23,14 @@ From now on, each time a DataMiner upgrade is performed, all TXF files will be a
 
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying.
 
+#### GQI DxM: Enhanced installation [ID 43063]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+A number of enhancements have been made to the installation procedure of the GQI DxM.
+
+For example, during the installation, the following notice will no longer appear: `Could not stop the following processes (60s): DataMiner GQI`.
+
 ### Fixes
 
 #### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
