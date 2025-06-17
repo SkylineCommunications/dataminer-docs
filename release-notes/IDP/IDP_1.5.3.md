@@ -6,6 +6,12 @@ uid: IDP_1.5.3
 
 ## New features
 
+#### New 'File Storage Behavior' setting for configuration backups [ID 42857]
+
+On the *General* data page of the DataMiner IDP Configuration element, a new *File Storage Behavior* setting is now available, which determines when backups are stored in the configuration archive in case change detection is used. By default, all backup files will be stored in the configuration archive, but if this setting is set to *Only Store on Change*, backups will only be stored in the configuration archive when IDP detects a change.
+
+This setting is only applicable when change detection is used. If change detection is not used, all backup files continue to be stored in the configuration archive.
+
 #### Configuration Management: New column with change detection state per element [ID 43027]
 
 On the *Configuration* > *Summary* tab of the IDP app, a new *Changes* column has now been added. This column represents the state of the change detection. It can contain the following values:

@@ -51,9 +51,9 @@ This tab allows you to compare two configuration files. To do so:
 
 1. Start a search to get a list of configuration files matching specific search criteria.
 
-1. Use the buttons above the table to select the configuration files to show on the left side and on the right side of the comparison, and click the *Compare* button to start comparing them.
+1. Use the buttons above the table to select the configuration files to show on the left side and on the right side of the comparison, and click the *Compare* button to start comparing them. This will open a pop-up window.<!-- RN 43181 -->
 
-With the dropdown box in the top-right corner, you can select whether you want to compare the *Full Configuration Backup* or the *Core Configuration Only*. This last option allows you to focus on the information that is most relevant for comparison.
+With the dropdown box in the pop-up window, you can select whether you want to compare the *Full Configuration Backup* or the *Core Configuration Only*. This last option allows you to focus on the information that is most relevant for comparison.
 
 If you started a comparison from the *Summary* or *Backups* subtab, the file you selected there will automatically be selected as the left file in the comparison.
 
