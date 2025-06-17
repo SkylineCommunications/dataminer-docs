@@ -165,6 +165,14 @@ When the *app.config.json* file of a published app did not contain an ID, up to 
 
 When a query was processed by the GQI DxM, the result set of the query would contain incorrect column statistics for boolean columns, causing those columns to not be filterable in *Query filter* components.
 
+#### Dashboards app & Low-Code Apps - Timeline component: Timeline items would incorrectly shift when you clicked 'Lock timeline to now' [ID 43130]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When, in the *Timeline* component, you clicked *Lock timeline to now*, the default timezone configured in the `C:\Skyline DataMiner\users\ClientSettings.json` file would incorrectly not be taken into account, causing the timeline items to shift to UTC time.
+
+The same issue would occur when you double-clicked the left mouse button while holding the CTRL key pressed.
+
 #### Dashboards app & Low-Code Apps: Problem when adding a DOM module to a component [ID 43142]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
