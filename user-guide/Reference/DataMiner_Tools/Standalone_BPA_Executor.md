@@ -82,7 +82,7 @@ The following options are supported:
 Examples:
 
 ```txt
-StandaloneBpaExecutor.exe -u Administrator -p Swordfish123 --"C:\BPA tests\AnalyzeStartupLogs\AnalyzeStartupLogsBpa.dll" "C:\BPA tests\StandaloneBpaExecutor\ReportActiveRTE\ReportActiveRTE.dll"
+StandaloneBpaExecutor.exe -u Administrator -p my_password --"C:\BPA tests\AnalyzeStartupLogs\AnalyzeStartupLogsBpa.dll" "C:\BPA tests\StandaloneBpaExecutor\ReportActiveRTE\ReportActiveRTE.dll"
 
-StandaloneBpaExecutor.exe -u Administrator -p Swordfish123 -f "C:\Skyline DataMiner\Tools\StandaloneBpaExecutor\test.json" --"C:\Skyline DataMiner\Tools\StandaloneBpaExecutor\Check System Health.dll"
+StandaloneBpaExecutor.exe -u Administrator -p my_password -f "C:\Skyline DataMiner\Tools\StandaloneBpaExecutor\test.json" --"C:\Skyline DataMiner\Tools\StandaloneBpaExecutor\Check System Health.dll"
 ```

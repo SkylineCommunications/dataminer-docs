@@ -42,6 +42,14 @@ When you right-click an element or a service, and select *Properties*, the *Gene
 
 Because of a number of enhancements, overall performance has increased when processing alarm focus information.
 
+#### Automation: An error message will now be displayed when an error occurs while importing an Automation script [ID 43069]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When, in the Automation module, you imported an Automation script by clicking *More > Import* or by right-clicking and selecting *Import*, errors that occurred during the import operation would not be displayed in the UI.
+
+From now on, whenever an error occurs while importing an Automation script, a pop-up window will appear, displaying the associated error message.
+
 ### Fixes
 
 #### Trending: Trend data between two gaps would incorrectly not be displayed [ID 42909]
@@ -55,3 +63,9 @@ In trend graphs showing gaps in the trend data, in some rare cases, the data bet
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 In EPM environments, in some rare cases, a view card could get stuck when you tried to open it.
+
+#### Trending: Problem when loading trend graphs [ID 43156]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some rare cases, an error could occur when loading trend graphs.
