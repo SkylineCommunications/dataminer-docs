@@ -36,6 +36,25 @@ Because of a number of enhancements, overall performance has increased when load
 
 When you right-click an element or a service, and select *Properties*, the *General* tab of the *Properties* window will now also display the current host, i.e. the DataMiner Agent that is currently hosting that element or service.
 
+#### Scheduler: Support for memory files in scheduler templates [ID 42904]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When you add an event to the Scheduler timeline, from now on, you will be able to configure memory files.
+
+If a scheduler template includes a preset comment (e.g. `Preset="MyProfile"`) that defines a memory file entry named "Memory1" using the format `Memory1="MemoryFileName"`, from now on, the corresponding memory file name (`MemoryFileName`) will be correctly assigned when the event is created in the Scheduler.
+
+Example:
+
+`Preset="MyProfile" Parameter1="Value1" Dummy1="34/2" Memory1="MemoryFileName"`
+
+To display the value of a memory file in an event block, you can use the following syntax:
+
+`Display="{m:Memory1}"`
+
+> [!NOTE]
+> When events are moved within the Scheduler timeline, the memory file configuration is preserved. This will ensure consistent behavior, even when events are rescheduled.
+
 #### Alarm Console: Enhanced performance when processing alarm focus information [ID 42938]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
