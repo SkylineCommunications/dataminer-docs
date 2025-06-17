@@ -184,3 +184,9 @@ The same issue would occur when you double-clicked the left mouse button while h
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 When a DOM module was added to a component, in some cases, that component would incorrectly get stuck in a loading state.
+
+#### Low-Code Apps: 'Fetch the data' action would incorrectly reuse a cached query session instead of opening a new one [ID 43152]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, the *Fetch the data* action would incorrectly reuse a cached query session instead of opening a new one.
