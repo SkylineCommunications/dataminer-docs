@@ -4,20 +4,23 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 17 June 2025 - Enhancement - CloudGateway 2.17.7 - Reduce shutdown time
 
-#### 3 June 2025 - Enhancement - CloudGateway 2.17.7 - Future endpoint 
+Improvements have been made to reduce DXM shutdown times which improves the installation process.
+
+#### 17 June 2025 - Enhancement - CloudGateway 2.17.7 - Future endpoint 
 
 Added an endpoint to the ConnectionTester Tool, which will be required in the future. 
 
-#### 3 June 2025 - Fix - CloudGateway 2.17.7 - Crash while subscribing during NATS  message broker reconnect
+#### 17 June 2025 - Fix - CloudGateway 2.17.7 - Crash while subscribing during NATS  message broker reconnect
 
 Initiating a subscription while the NATS message broker connection was reconnecting could cause the DxM to crash. This has been fixed.
 
-#### 3 June 2025 - Enhancement - CloudGateway 2.17.7 - Dependencies updated
+#### 17 June 2025 - Enhancement - CloudGateway 2.17.7 - Dependencies updated
 
 Several dependencies have been updated.
 
-#### 3 June 2025 - Fix - CloudGateway 2.17.7 - Possible crash due to rapid file changes
+#### 17 June 2025 - Fix - CloudGateway 2.17.7 - Possible crash due to rapid file changes
 
 ​Rapid file changes in *DataMiner.xml* or *MaintenanceSettings.xml* could cause a problem in CloudGateway, causing the DxM to restart.
 

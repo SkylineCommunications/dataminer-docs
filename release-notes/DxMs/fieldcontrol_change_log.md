@@ -4,7 +4,11 @@ uid: fieldcontrol_change_log
 
 # Field Control change log
 
-#### 3 June 2025 - Enhancement - FieldControl 2.11.3 - Dependencies updated
+#### 17 June 2025 - Enhancement - FieldControl 2.11.3 - Reduce shutdown time
+
+Improvements have been made to reduce DXM shutdown times which improves the installation process.
+
+#### 17 June 2025 - Enhancement - FieldControl 2.11.3 - Dependencies updated
 
 Several dependencies have been updated.
 

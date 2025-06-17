@@ -4,7 +4,11 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
-#### 3 June 2025 - Enhancement - Support Assistant 1.7.4 - Dependencies updated
+#### 17 June 2025 - Enhancement - Support Assistant 1.7.4 - Reduce shutdown time
+
+Improvements have been made to reduce DXM shutdown times which improves the installation process.
+
+#### 17 June 2025 - Enhancement - Support Assistant 1.7.4 - Dependencies updated
 
 Several dependencies have been updated.
 

@@ -4,6 +4,10 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
+#### 17 June 2025 - Enhancement - ArtifactDeployer 1.8.4 - Improved shutdown
+
+Improvements have been made to reduce DXM shutdown times which improves the installation process.
+
 #### 1 April 2025 - Enhancement - Dependencies updated [ID 42654]
 
 Several dependencies have been updated.

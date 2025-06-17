@@ -4,7 +4,11 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
-#### 3 June 2025 - Enhancement - Orchestrator 1.7.6 - Dependencies updated
+#### 17 June 2025 - Enhancement - Orchestrator 1.7.6 - Reduce shutdown time
+
+Improvements have been made to reduce DXM shutdown times which improves the installation process.
+
+#### 17 June 2025 - Enhancement - Orchestrator 1.7.6 - Dependencies updated
 
 Several dependencies have been updated.
 
