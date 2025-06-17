@@ -6,7 +6,7 @@ uid: DashboardGrid
 
 Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 34761-->.
 
-The grid component is a versatile visualization designed to display the results of queries in a clear, tile-based grid format. It offers **a wide range of customization options**, such as dynamic scaling that automatically adjusts the layout, and features like conditional formatting and interactive behavior through templates. This lets you highlight key data and trigger actions directly from each grid block.
+The grid component is a versatile visualization designed to display the results of queries in a clear, tile-based grid format. It offers a **wide range of customization options**, including dynamic scaling, conditional formatting, and interactive features that let you trigger actions directly from each grid block.
 
 ![Grid](~/user-guide/images/Grid.png)<br>*Grid component in DataMiner 10.5.6*
 
@@ -68,8 +68,8 @@ Additionally, the following layout options are also available:
 
 | Section | Option | Description |
 |--|--|--|
-| Filtering & Highlighting | Highlight | Toggle the switch to determine whether the nodes that match the filter will be highlighted. Enabled by default. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
-| Filtering & Highlighting | Opacity | Set the level of transparency of the items that do not match the filter. This option is only available when *Highlight* is enabled. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
+| Filtering & Highlighting | Highlight | Toggle the switch to determine whether the nodes that match the criteria specified in a query filter will be highlighted. Enabled by default. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
+| Filtering & Highlighting | Opacity | Set the level of transparency of the items that do not match the criteria specified in a query filter. This option is only available when *Highlight* is enabled. For more information, see [Highlighting filtered results](#highlighting-filtered-results). |
 | Advanced | Empty result message | Available from 10.3.11/10.4.0 onwards<!-- RN 37173 -->. Specify a custom message that is displayed when a query returns no results. See also: [Displaying a custom empty component message](xref:Tutorial_Dashboards_Displaying_a_custom_empty_component_message). |
 | Advanced | Grid template | Configure the number of columns and rows in the grid, and adjust scaling options<!--RN 34761 + 34781-->. For more information, see [Layout and scaling options](#layout-and-scaling-options). |
 | Item templates | Browse templates *or*<br>Reuse template (prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4) | Reuse a saved template from another component in the same dashboard or low-code app. This option is only available if a template is already in use<!--RN 42226-->. |
@@ -109,7 +109,7 @@ To edit the grid item template:
 
 1. Click *Edit* to open the Template Editor.
 
-1. Make your changes. See [Using the Template Editor](xref:Template_Editor).
+1. Make your changes as described under [Using the Template Editor](xref:Template_Editor).
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
@@ -144,7 +144,7 @@ By default, the template of a grid component includes the following **pre-config
 | ![Rectangle layer 1](~/user-guide/images/Grid_Rectangle_Layer.png) | Rectangle | Acts as the background of each grid block. Default color is `#F6F6F6`, with conditional formatting for hover (`#E8E8E9`) and selection (`#D5DBE9`). |
 | ![Rectangle layer 2](~/user-guide/images/Grid_Rectangle_Layer2.png) | Rectangle | Acts as a visual border by being slightly larger than the background layer. Default color is `#B8BABC`, with conditional formatting for selection (`#2563EB`). |
 
-This default template ensures that a grid block is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
+This default template (available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42322-->) ensures that a grid block is highlighted when hovered over and stands out when selected, with a light-blue background and a blue border.
 
 ![Selecting a grid block](~/user-guide/images/Selecting_Grid_Block.gif)<br>*Grid component in DataMiner 10.5.7*
 
@@ -179,26 +179,28 @@ Additionally, the following settings are also available:
 | Section | Option | Description |
 |--|--|--|
 | General | Override dynamic units | Clear the checkbox to prevent parameter units from changing dynamically based on their value and protocol definition. Disabled by default. |
-| General | Use dynamic units | Determine whether parameter units will change dynamically based on their value and protocol definition. This option is only available when *Override dynamic units* is enabled. |
+| General | Use dynamic units | Determine whether parameter units will change dynamically based on their value and protocol definition. This option is only available if *Override dynamic units* is enabled. |
 | Data retrieval | Update data | Toggle the switch to determine whether the data in the grid should be refreshed automatically (provided this is supported by the data source). See [Query updates](xref:Query_updates).<!--RN 37269--> |
 | Initial selection | Select first item by default | Available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->. Toggle the switch to determine whether the first item is selected by default. When enabled, this is the value that will automatically be applied in the grid whenever the component is loaded or when the data in the grid is refreshed, unless a custom URL is used specifying a different value. Disabled by default. |
 
 ## Adding actions to a grid
 
-If you add a grid component to a low-code app, you can also configure actions for the component. This feature is not available in the Dashboards app.
+If you add a grid component to a low-code app, you can configure actions that are triggered when users interact with elements inside the grid. This feature is not supported in the Dashboards app.
 
-To configure actions, open the Template Editor, where you can configure actions for grid items. Actions can be linked to the *On click* event of a shape in an item template, allowing you to define your own links or buttons inside a table.
+In the Template Editor, you can define actions for grid items. These actions can be triggered by the *On click* event of a shape in the item template, allowing you to define your own links or buttons inside the grid.
 
 > [!TIP]
 > For more information, see [Adding conditional cases to a layer](xref:Template_Editor#adding-conditional-cases-to-a-layer).
 
-Some real-life examples:
+Some **real-life examples**:
 
-- In this example, grid components are used to connect sources to destinations. By configuring on-click actions behind the scenes, you can easily select available sources and destinations in read mode to connect or disconnect them.
+- In the example below, grid components are used to connect sources to destinations. By configuring on-click actions behind the scenes, users can select sources and destinations in read mode and connect or disconnect them directly.
 
   ![Control Surface](~/user-guide/images/Control_Surface.png)<br>*Grid component and button component in DataMiner 10.5.1*
 
-- 
+- In this example, an on-click action is configured on a pencil icon within each grid item. When a user clicks the icon, a pop-up panel opens, allowing them to edit the corresponding contract directly.
+
+  ![Edit contract](~/user-guide/images/Edit_Contract.gif)<br>*Low-Code Apps module in DataMiner 10.5.7*
 
 ## Enabling the component in soft launch
 
