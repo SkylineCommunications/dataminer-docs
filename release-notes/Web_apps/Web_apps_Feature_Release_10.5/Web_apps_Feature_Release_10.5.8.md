@@ -113,6 +113,12 @@ In the template editor, for all types of layers, the color picker now allow you 
 
 In the default component themes, the border roundness setting will now be set to 5px.
 
+#### Dashboards app - Dashboard sharing: Message mentioning 'DataMiner Cloud Platform' now mentions 'dataminer.services' instead [ID 43163]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When you tried to share a dashboard while connected to a DataMiner Agent that was not cloud-connected, up to now, the message that appeared would incorrectly still mention the term "DataMiner Cloud Platform". In that message, that term has now been replaced by the term "dataminer.services".
+
 ### Fixes
 
 #### Low-Code Apps: It would incorrectly be possible to publish a low-code app while it was still being saved [ID 42680]
