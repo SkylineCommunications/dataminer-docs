@@ -45,7 +45,7 @@ To make changes to the information template for one particular parameter:
 
 1. Click *Update Information Template* to save your changes.
 
-   > [!NOTE]
-   >
-   > - The template will be updated for all elements that use it. These are listed for reference at the bottom of the *Information* window.
-   > - If you use this procedure for an element that was using the default information template, a new template will be created with the changes you entered for this parameter.
+> [!NOTE]
+> - The template will be updated for all elements that use it. These are listed for reference at the bottom of the *Information* window.
+> - If you use this procedure for an element that was using the default information template, a new template will be created with the changes you entered for this parameter.
+> - If you're trying to change the **Description** for a Parameter representing a Table Column, you may need to also include a parenthesis with the table name in order to make sure the other table column's names don't change. For example, If you're trying to rename "IP Address" on a table named "Information" to "Main IP Address", you'll need to put it in the "Description" section of the Information Template as "Main IP Address (Information)". 
