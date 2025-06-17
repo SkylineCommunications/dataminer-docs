@@ -4,7 +4,7 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
-#### 17 June 2025 - Enhancement - Support Assistant 1.7.4 - Improve upgrade process
+#### 17 June 2025 - Enhancement - Support Assistant 1.7.4 - Improved upgrade process
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
 

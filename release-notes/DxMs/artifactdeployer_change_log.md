@@ -4,7 +4,7 @@ uid: artifactdeployer_change_log
 
 # ArtifactDeployer change log
 
-#### 17 June 2025 - Enhancement - ArtifactDeployer 1.8.4 - Improve upgrade process
+#### 17 June 2025 - Enhancement - ArtifactDeployer 1.8.4 - Improved upgrade process
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
 

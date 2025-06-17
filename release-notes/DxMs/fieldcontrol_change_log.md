@@ -4,7 +4,7 @@ uid: fieldcontrol_change_log
 
 # Field Control change log
 
-#### 17 June 2025 - Enhancement - FieldControl 2.11.3 - Improve upgrade process
+#### 17 June 2025 - Enhancement - FieldControl 2.11.3 - Improved upgrade process
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
 
