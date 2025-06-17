@@ -53,6 +53,12 @@ In some cases, a DataMiner Agent would not start up properly, and the following 
 
 When, in an alarm template, you had configured conditional monitoring based on a condition made up of multiple AND/OR clauses, up to now, some of those AND/OR clauses could incorrectly get disabled when the alarm template was refreshed in SLElement following e.g. a template update.
 
+#### Problem with SLPort when stopping an element with a GPIB connection in an error state [ID 42949]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When you stopped an element with a GPIB connection in an error state, in some cases, the SLPort process could stop working and disappear.
+
 #### Visual Overview in web apps: Incomplete images could be returned [ID 42968]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
