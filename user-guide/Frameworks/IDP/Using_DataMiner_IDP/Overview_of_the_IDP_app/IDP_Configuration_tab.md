@@ -10,15 +10,23 @@ This tab consists of several subtabs, as detailed below.
 
 This tab provides an overview of the elements of which the CI Type has *Take Backup* and/or *Configuration Update* enabled (via *Admin* > *Activities*, or *Processes* > *Automation* in older IDP versions). The overview includes the CI Type, element name and IP address for each element, as well as the update progress of the last backup that was copied to the configuration archive, and the date and time when the last configuration change was detected.
 
-Above the overview, the following buttons are available:
+In the *Changes* column, you can see whether changes have been detected. For each element, one of the following values will be shown:<!-- RN 43027 -->
 
-- *Backup*: Creates a configuration backup of the selected elements.
+- **Unknown**: A backup exists, but change detection is not enabled.
 
-- *Default*: Applies the default configuration to the selected elements.
+- **No Change**: The latest backup has no changes compared to the previous one.
 
-- *Compare*: Starts a configuration comparison with the selected file as one of the files to be compared.
+- **Changed**: The latest backup has changes compared to the previous one.
 
-- *Show Backups*: Displays all available configuration backups from the last 30 days for the selected element in the *Backups* tab.
+Above the overview, the following **buttons** are available:
+
+- **Backup**: Creates a configuration backup of the selected elements.
+
+- **Default**: Applies the default configuration to the selected elements.
+
+- **Compare**: Starts a configuration comparison with the selected file as one of the files to be compared.
+
+- **Show Backups**: Displays all available configuration backups from the last 30 days for the selected element in the *Backups* tab.
 
 ## Backups
 
@@ -26,9 +34,9 @@ On this tab, you can view a list of configuration backups, either based on a sel
 
 Clicking the *Search* icon opens a wizard where you can specify these search criteria. Searching is possible by CI Type, by element name or by time range (UTC), or a combination of these. When you select a configuration backup in the table, you can also use the following buttons above the table:
 
-- *Show content*: Displays the content of the selected configuration backup to the right of the list. Above the content, a dropdown box allows you to select whether the *Full Configuration Backup* should be displayed or the *Core Configuration Only*. This last option allows you to focus on the information that is most important for the configuration.
+- **Show content**: Displays the content of the selected configuration backup to the right of the list. Above the content, a dropdown box allows you to select whether the *Full Configuration Backup* should be displayed or the *Core Configuration Only*. This last option allows you to focus on the information that is most important for the configuration.
 
-- *Compare*: Starts a configuration comparison with the selected file as one of the files to be compared.
+- **Compare**: Starts a configuration comparison with the selected file as one of the files to be compared.
 
 ## Update
 
@@ -51,5 +59,5 @@ If you started a comparison from the *Summary* or *Backups* subtab, the file you
 
 To clear the current file selection, click *Clear*.
 
-  > [!NOTE]
-  > Files can only be compared if they have an extension listed under *Admin* > *Configuration* > *Backup*. See [Configuration](xref:Configuration).
+> [!NOTE]
+> Files can only be compared if they have an extension listed under *Admin* > *Configuration* > *Backup*. See [Configuration](xref:Configuration).
