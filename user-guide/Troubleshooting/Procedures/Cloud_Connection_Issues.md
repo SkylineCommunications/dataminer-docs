@@ -8,14 +8,14 @@ keywords: cloud connection, connect to the cloud, connecting to the cloud
 
 If you encounter issues with [dataminer.services](xref:about_dataminer_services) features that may be caused by connection issues, follow the actions below in the specified order:
 
-1. [Make sure the deployed DxMs are up to date](#make-sure-the-deployed-dxms-are-up-to-date)
+1. [Make sure the installed DxMs are up to date](#make-sure-the-installed-dxms-are-up-to-date)
 1. [Check the status on dataminer.services](#check-the-status-on-dataminerservices)
 1. [Check the status of the DMS](#check-the-status-of-the-dms)
 1. [Check the status of the CloudGateway DxM](#check-the-status-of-the-cloudgateway-dxm)
 1. [Check the cloud session](#check-the-cloud-session)
 1. [Contact support](#contact-support)
 
-## Make sure the deployed DxMs are up to date
+## Make sure the installed DxMs are up to date
 
 Often when issues are encountered, these have already been fixed in the latest versions of the DataMiner DxMs, so updating the DxMs may be enough to resolve the issues.
 
