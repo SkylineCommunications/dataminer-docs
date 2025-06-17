@@ -404,8 +404,6 @@ items:
             topicUid: Apply_Visualization
           - name: Adding data to a component
             topicUid: Adding_data_to_component
-          - name: Configuring default component settings
-            topicUid: Configure_Component_Settings
           - name: Customizing the component layout
             topicUid: Customize_Component_Layout
           - name: Dynamically referencing data in text

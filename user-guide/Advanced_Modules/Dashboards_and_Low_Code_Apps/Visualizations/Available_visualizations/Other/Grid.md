@@ -172,12 +172,11 @@ To **visually distinguish items that match your filter criteria from others**, y
 
 ### Grid settings
 
-In the *Settings* pane for this component, you can find the default options available for all components. See [Configuring default component settings](xref:Configure_Component_Settings).
-
-Additionally, the following settings are also available:
+In the *Settings* pane for this component, you can customize its behavior to suit your requirements.
 
 | Section | Option | Description |
 |--|--|--|
+| WebSocket settings | Inherit WebSocket settings from page/panel | Clear the checkbox to use a custom polling interval for this component. When cleared, you can specify a different polling interval (in seconds). |
 | General | Override dynamic units | Clear the checkbox to prevent parameter units from changing dynamically based on their value and protocol definition. Disabled by default. |
 | General | Use dynamic units | Determine whether parameter units will change dynamically based on their value and protocol definition. This option is only available if *Override dynamic units* is enabled. |
 | Data retrieval | Update data | Toggle the switch to determine whether the data in the grid should be refreshed automatically (provided this is supported by the data source). See [Query updates](xref:Query_updates).<!--RN 37269--> |
