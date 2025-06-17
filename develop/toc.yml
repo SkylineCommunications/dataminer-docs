@@ -6116,6 +6116,7 @@ items:
         topicUid: Best_Practices_When_Creating_Catalog_Items
       - name: Best practices when documenting Catalog items
         topicUid: Best_Practices_When_Documenting_Catalog_Items
+      - name: Naming Conventions for Catalog Item Components 
     - name: Unit testing
       topicUid: Unit_testing
       items:
