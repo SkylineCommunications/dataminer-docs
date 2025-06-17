@@ -72,7 +72,7 @@ Y1[" \- Find the time when memory use started to grow. <br/>- Check logging, inf
 Sol1[" \- Check if Windows file updates are correctly installed. <br/>\- If an update is not correctly installed, a server restart might be needed to finish the installation. <br/>\- Check in the SLXml log file for a possible cause. "]
 Ch1{{Is the leak still present?}}
 N2([Issue resolved.])
-Y2([Contact tech support with the required logging and memory dump.])
+Y2([Contact DataMiner Support with the required logging and memory dump.])
 %% Connect blocks %%
 D1 --- |YES| Y1
 D1 --- |NO| N1
@@ -104,12 +104,12 @@ classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 %% Define blocks %%
 ProcessCrashed["\- Save .high crashdump + note timestamp. <br/>\- Check the ErrorLog.txt file for possible causes. <br/>\- Check if DMA was missing production DVEs while restarting."]
 Minidump{{"Minidump found at issue time? C:\Skyline DataMiner\Logging\MiniDump"}}
-MinidumpNo(["Contact tech support with the required logging and memory dump."])
+MinidumpNo(["Contact DataMiner Support with the required logging and memory dump."])
 MinidumpYes["Identify the cause in the required log file: SLXML, SLErrors, SLDMS, etc."]
 Sol2[Collect all the logs and restart the DMA.]
 Ch3{{Does the crash happen after the restart?}}
 N3([Issue resolved.])
-Y3([Contact tech support with the required logging and crashdump files.])
+Y3([Contact DataMiner Support with the required logging and crashdump files.])
 CrashdumpDetected{{"Crash dump found at issue time? C:\Skyline DataMiner\Logging\CrashDump"}}
 %% Connect blocks %%
 CrashdumpDetected --- |YES| ProcessCrashed

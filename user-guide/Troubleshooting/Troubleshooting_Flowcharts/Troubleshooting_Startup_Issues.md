@@ -29,7 +29,7 @@ SwarmingIssue["Swarming issue"]
 IPChangeIssue["IP change issue"]
 NATSIssue["NATS issue"]
 CassandraIssue["Cassandra issue"]
-ContactTechSupport["Contact tech support"]
+ContactTechSupport["Contact DataMiner Support"]
 %% Connect blocks %%
 DMAStartupIssues --- AgentNotLicensed
 Home([Start page])

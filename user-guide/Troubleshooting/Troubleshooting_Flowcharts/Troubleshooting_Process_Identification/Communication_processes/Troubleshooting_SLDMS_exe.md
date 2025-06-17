@@ -73,7 +73,7 @@ Y1[1\. Find the time where memory use started to grow.<br/>2\. Check logging, in
 Sol1[As a solution, collect all logs and restart the DMA.]
 Ch1{{Is the leak still present?}}
 N2([Issue resolved])
-Y2([Contact tech support with the required logging and memory dump.])
+Y2([Contact DataMiner Support with the required logging and memory dump.])
 Nt1[In the Alarm Console or SLWatchdog2 log file.]
 Nt2[Always a notification getting deadlocked or taking a long time.]
 Nt3[Take logging and restart DMA.]
@@ -119,7 +119,7 @@ classDef LightGray fill:#DDDDDD,stroke:#000070,stroke-width:0px, color:#1E5179;
 CrashdumpDetected{{"Crash dump found at issue time?  C:\Skyline DataMiner\Logging\CrashDump"}}
 ProcessCrashed(["1\. Save .high crashdump<br> + note timestamp. <br/>2\. Check the ErrorLog.txt file for possible causes. <br/>3\. Send crashdump + logging + conclusions to Create squads. "])
 Minidump{{"Minidump found at issue time? C:\Skyline DataMiner\Logging\MiniDump"}}
-MinidumpNo(["Contact tech support with the required logging and memory dump."])
+MinidumpNo(["Contact DataMiner Support with the required logging and memory dump."])
 MinidumpYes["Identify the cause in the required log file: SLWatchDog2, SLDataMiner, SLDMS, etc."]
 Crash[Process crash]
 %% Connect blocks %%
