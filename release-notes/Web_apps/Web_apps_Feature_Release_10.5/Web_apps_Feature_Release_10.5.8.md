@@ -87,6 +87,15 @@ Currently, by default, the existing components will still be used by default to 
 
 `?useNewIASInputComponents=true`
 
+#### DataMiner landing page: Redesigned header bar [ID 43024]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+The header bar of the DataMiner landing page (e.g. `https://myDMA/root/`) has been redesigned.
+
+- On the left, the DataMiner icon now also shows the URL of the landing page.
+- On the right, next to the user icon, you can now find a cogwheel icon. Clicking that icon will open the *System home settings* window, which contains a setting that allows you to show or hide draft applications.
+
 #### Dashboards app & Low-Code Apps: Automatically saved component settings will only get saved when in edit mode [ID 43029]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
