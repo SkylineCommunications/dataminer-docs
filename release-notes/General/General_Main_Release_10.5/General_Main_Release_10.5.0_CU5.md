@@ -108,6 +108,12 @@ From now on, the maximum number of repetitions defined for `multipleGetBulk` wil
 
 In some cases, SLHelper could leak memory because SLNet connections used by GQI extensions were not properly cleaned up.
 
+#### Failover: Problem when synchronizing the ClusterEndpoints.json files [ID 43079]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing indefinitely.
+
 #### Problem with masked alarms when the alarm template was removed or when the parameters were no longer monitored [ID 43098]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
