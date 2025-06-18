@@ -20,5 +20,5 @@ Contains all the groups that have to be executed when the timer is triggered.
 
 > [!IMPORTANT]
 >
-> - Do not include too many groups in one timer.
-> - Take polling time into account. Make different timers at different times instead of one fast timer that retrieves everything.
+> - There is not really any limit regarding the number of groups that can be included within a timer (other than the below remark). On the contrary, each timer you add results in an extra thread to be created causing higher resource consumption. So it is better to have few timers with plenty of groups than many timers with few groups. In fact, we should typically only create new timers when we actualy require different timings (See [Group/Time tag](xref:Protocol.Timers.Timer.Time)).
+> - Make sure the content of a timer can realistically be fully executed within the defined [Group/Time](xref:Protocol.Timers.Timer.Time).
