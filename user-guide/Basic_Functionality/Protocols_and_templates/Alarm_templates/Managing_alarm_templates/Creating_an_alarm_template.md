@@ -4,6 +4,16 @@ uid: Creating_an_alarm_template
 
 # Creating an alarm template
 
+You can follow the steps below or watch this short video, which walks you through creating a basic alarm template:
+
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/user-guide/images/AlarmTemplate.mp4" type="video/mp4">
+  </video>
+</div>
+
+*Watch first: [Creating a DataMiner element](xref:Adding_elements)*
+
 To create a new alarm template:
 
 1. Go to *Apps* > *Protocols & Templates*.
