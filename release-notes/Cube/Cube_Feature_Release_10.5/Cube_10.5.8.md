@@ -61,6 +61,20 @@ To display the value of a memory file in an event block, you can use the followi
 
 Because of a number of enhancements, overall performance has increased when processing alarm focus information.
 
+#### Automation/Scheduler - Email action: Restricted use of placeholders in Subject and Message text [ID 42985]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When, in the *Automation* module or the *Scheduler* module, you right-clicked in the *Subject* or *Message* box while configuring an *Email* action, up to now, you would incorrectly be allowed to insert every possible placeholder in the text.
+
+As most of these placeholders can only be inserted when configuring an *Email* action in the *Correlation* module, from now on, no placeholders will be listed anymore when you right-click in the *Subject* or *Message* box while configuring an *Email* action in the *Automation* module or the *Scheduler* module.
+
+> [!NOTE]
+> When you are configuring an *Email* action in the *Automation* module or the *Scheduler* module, only the following placeholders are allowed in the *Subject* or *Message* text:
+>
+> - [dummyX]: This will be replaced with the name of the specific element you want to display. X is the dummy ID.
+> - [user]: This will be replaced with the name of the user executing the automation script.
+
 #### Automation: An error message will now be displayed when an error occurs while importing an Automation script [ID 43069]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
