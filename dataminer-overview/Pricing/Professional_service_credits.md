@@ -43,7 +43,7 @@ Below, you can find an overview of how the Service Credits can be used.
 
 > [!NOTE]
 >
-> - Except for Agile Awareness and DevOps Enablement, all training is available in both in-person and online format. For in-person training, additional credits are required to cover the transportation and on-site expenses of having the instructor present. These expenses are not included in the course fees.
+> - Except for the DevOps Enablement Service, all training is available in both in-person and online format. For in-person training, additional credits are required to cover the transportation and on-site expenses of having the instructor present. These expenses are not included in the course fees.
 > - The number of hours required by a program depends on factors like the number of people, their skills, their profile, and the desired program outcome.
 
 > [!TIP]
