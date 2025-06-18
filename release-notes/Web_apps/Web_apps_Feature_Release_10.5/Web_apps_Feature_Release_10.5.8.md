@@ -212,3 +212,19 @@ When a DOM module was added to a component, in some cases, that component would 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 In some cases, the *Fetch the data* action would incorrectly reuse a cached query session instead of opening a new one.
+
+#### Dashboards app & Low-Code Apps - State, Node edge graph, Maps & Grid components: Problem with initial selection of table data [ID 43155]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When a *State*, *Node edge graph*, *Maps* or *Grid* component was configured to visualize table data, the following issues could occur when the component was loaded:
+
+- Data selection instructions in the URL would not be applied.
+- If supported by the component, any option to select the first item by default would not be applied
+- The current selection would not be preserved when the data was refetched.
+
+From now on, whether the above-mentioned components are configured to visualize query data or table data, data selection will occur as follows:
+
+1. Apply the data selection instructions in the URL (if any).
+1. If no data selection instructions could be found in the URL, select the first item if such an option is supported and enabled.
+1. Preserve the current selection when the data is refetched.
