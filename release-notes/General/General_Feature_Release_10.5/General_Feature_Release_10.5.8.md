@@ -170,6 +170,14 @@ When stopped elements had been swarmed over to another DataMiner Agent, in some 
 
 When an element had masked alarms, the alarm status of the parameters in question would incorrectly remain masked when the alarm template was removed from the element or when conditional alarm monitoring would cause the parameters to no longer be monitored.
 
+#### Problem when deleting or renaming services [ID 43109]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When a service was deleted, in some cases, it would only be fully deleted on the DataMiner Agent that hosted it.
+
+Also, when a service was renamed, in some cases, all DataMiner Agents except the one hosting it could start to experience issues because the old service had not been properly deleted.
+
 #### GQI: Deserialization issue when querying DOM instances via the GQI DxM [ID 43132]
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
