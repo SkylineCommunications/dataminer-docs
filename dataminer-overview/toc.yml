@@ -176,6 +176,8 @@ items:
         topicUid: Pricing_Usage_based_service
       - name: Perpetual-Use Licensing
         topicUid: Pricing_Perpetual_Use_Licensing
+      - name: Professional Service credits
+        topicUid: Professional_service_credits
       - name: Maximizing your azure investments with MACC and DataMiner credits
         topicUid: MACC_and_DataMiner_credits
     - name: Support Services
@@ -312,7 +314,7 @@ items:
           topicUid: FAQ_Copy_existing_connector
         - name: What if a second- or third-party DataMiner connector malfunctions
           topicUid: FAQ_2nd_3rd_party_connector_malfunctions
-      - name: Commercial models
+      - name: Pricing
         topicUid: FAQs_Pricing
       - name: Support Services
         topicUid: FAQs_Support_Services
