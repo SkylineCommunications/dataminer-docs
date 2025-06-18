@@ -6,7 +6,7 @@ uid: Overview_References_and_use_cases
 DataMiner has been deployed around the world in various high-profile projects with leading operators.
 
 > [!TIP]
-> For an overview of our references, go to [Trusted by 1,000+ Companies worldwide](https://skyline.be/skyline/users/).
+> To learn more about the industry leaders who rely on DataMiner every day, go to [skyline.be](https://skyline.be/skyline/users/).
 
 The DataMiner Dojo Community showcases many use cases, spanning a large variety of solutions, operational domains, modules, and vendors.
 
