@@ -2,7 +2,7 @@ items:
 - name: DataMiner Overview
   topicUid: OverviewIndex
   items:
-    - name: General introduction
+    - name: Introduction
       topicUid: Overview_General_Introduction
       items:
         - name: About Skyline Communications
@@ -11,6 +11,11 @@ items:
           topicUid: Overview_About_DataMiner
         - name: DataMiner principal advantages
           topicUid: Overview_Principal_Advantages
+        - name: Digital transformation
+          topicUid: Overview_Platform_intro
+          items:
+            - name: Open software platform
+              topicUid: Overview_Platform_Open_Platform
         - name: Standardized foundation
           topicUid: Overview_Standardized_Foundation
         - name: References and use cases
@@ -19,17 +24,6 @@ items:
           topicUid: DataMiner_compliance_offering
         - name: Evolution vs. optimization in software development
           topicUid: evolution_vs_optimization
-    - name: DataMiner platform - Empowering your digital transformation
-      topicUid: Overview_Platform_intro
-      items:
-        - name: Agility
-          topicUid: Overview_Platform_Agility
-        - name: Preparing for the new data-driven future
-          topicUid: Overview_Platform_Prepare
-        - name: DataMiner Digital Transformation Suite
-          topicUid: Overview_Platform_DTS_Suite
-        - name: Open software platform
-          topicUid: Overview_Platform_Open_Platform
     - name: DataMiner hosting and high availability
       topicUid: Overview_hosting
       items:
