@@ -14,7 +14,7 @@ The moment you become our partner, you start receiving benefits.
 
 - Referrals
 
-- Updated Go-To-Market Strategies
+- Updated go-to-market strategies
 
 - Access to tooling/partner portal
 
