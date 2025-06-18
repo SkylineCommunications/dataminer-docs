@@ -4,11 +4,7 @@ uid: Stack_Augmented_Operations
 
 # Augmented Operations
 
-***Ensure maximum uptime by leveraging big data and AI.***
-
-![stack.functions.categories](~/dataminer-overview/images/stack_augmented_operations.png)
-
-**Make the shift from reactive to proactive management.**
+**Make the shift from reactive to proactive management and ensure maximum uptime.**
 
 DataMiner Augmented Operations continuously and autonomously learn from your data, making DataMiner increasingly intelligent.
 
