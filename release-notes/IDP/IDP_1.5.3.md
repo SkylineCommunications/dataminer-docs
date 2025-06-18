@@ -30,11 +30,23 @@ It is now possible to provision devices that have been discovered but for which 
 
 ### Enhancements
 
+#### Information events generated when connections are created, updated, or deleted [ID 42784]
+
+When used with the DataMiner core software version 10.5.7/10.6.0<!-- RN42783 --> or higher, IDP will now generate information events when connections are created, updated, or deleted.
+
 #### Configuration comparison now shown in new window [ID 43181]
 
 On the *Configuration* > *Compare* tab of the IDP app, when you click the *Compare* button, the comparison page is now opened in a new window. Previously, the comparison was embedded within the app, but this could be inconvenient since the IDP visual overview does not support scaling.
 
 ### Fixes
+
+#### DataMiner IDP Configuration: Failure to connect to remote location mapped as network drive [ID 42548]
+
+When a remote location was also mapped as a network drive on the host OS, it could occur that the DataMiner IDP Configuration element failed to connect and backup to/from that remote location.
+
+#### DataMiner IDP Configuration: RTE when bulk backup jobs took a long time to complete [ID 42549]
+
+When many slow backup jobs were requested at the same time, an RTE and memory leak in the SetParameterThread could occur. To prevent this, the IDP Configuration element now queues and handles backup jobs using a dedicated worker thread.
 
 #### Configuration Management subscript failed when changing value of password parameter [ID 43124]
 
