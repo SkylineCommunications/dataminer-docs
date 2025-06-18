@@ -20,6 +20,12 @@ If the BPA succeeds, the system is all set to migrate.
 
 1. Make sure the [prerequisites](#prerequisites) are met.
 
+2. Run the [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package. This will automatically trigger `C:\Skyline DataMiner\Tools\NATSMigration.exe` with the default settings on all agents in the cluster. The DataMiner Agents will not be restarted. 
+
+## Running the migration manually
+
+1. Make sure the [prerequisites](#prerequisites) are met.
+
 1. Open a **remote desktop connection** to **all** DataMiner Agents at the same time.
 
 1. On each of the machines, open a **command prompt** as administrator, and run the executable `C:\Skyline DataMiner\Tools\NATSMigration.exe`.
