@@ -47,10 +47,12 @@ This tab allows you to start a device discovery and manage the discovered elemen
 
 - **Most recent discoveries**: Displays information on the 6 most recent discovery operations.
 
-- **Discovered elements**: Lists all discovered elements with detailed information, including the provisioning status. The buttons above the table allow you to show the responses returned by the selected device during discovery, provision the element or remove the device from the list. The toggle button on the right determines if all discovered elements are displayed, or only managed elements.
+- **Discovered elements**: Lists all discovered elements with detailed information, including the provisioning status. The buttons above the table allow you to show the responses returned by the selected device during discovery, provision the element, or remove the device from the list. The toggle button on the right determines if all discovered elements are displayed, or only managed elements.
 
   > [!NOTE]
-  > Depending on the *Discovery Results to Show* setting, either all discoveries are shown in the *Discovered Elements* table, or only the most recent discoveries. This setting can be found on the *Settings* data page of the IDP app. To access this page, click the hamburger button in the top-left corner, select *Show card side* *panel* and then go to *DATA* > *Settings*.
+  >
+  > - It is possible to provision discovered devices even if no matching CI Type was detected for them, but in that case you will have to select the CI Type manually when you start the provisioning.<!-- RN 43095 -->
+  > - Depending on the *Discovery Results to Show* setting, either all discoveries are shown in the *Discovered Elements* table, or only the most recent discoveries. This setting can be found on the *Settings* data page of the IDP app. To access this page, click the hamburger button in the top-left corner, select *Show card side* *panel* and then go to *DATA* > *Settings*.
 
 ## Deleted
 
