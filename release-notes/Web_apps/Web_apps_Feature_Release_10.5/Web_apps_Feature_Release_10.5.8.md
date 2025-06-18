@@ -107,6 +107,16 @@ In all DataMiner web apps, the email address of Skyline support has been changed
 
 In the template editor, for all types of layers, the color picker now allow you to configure the current color, i.e. the font color of the component.
 
+#### Dashboards app & Low-Code Apps - Timeline component: Minor visual enhancements [ID 43129]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+A number of minor visual enhancements have been made to the *Timeline* component:
+
+- The timeline's segment lines have been made a bit less transparent, and should now stand out more. Also, the background shading of the timeline groups has been removed.
+
+- The template previews in the *Item Templates* section of the *Layout* pane will now scale to fit into the available screen real estate. Also, they will now better reflect the component color.
+
 #### Dashboards app & Low-Code Apps: Border roundness setting will now be set to 5px in the default component themes [ID 43146]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
