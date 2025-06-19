@@ -43,7 +43,7 @@ To request a cost estimation, follow the procedure below:
    > [!NOTE]
    > You will only be able to see the *Usage* module if you are an Owner or Admin of the organization.
 
-If you have any questions regarding this cost estimation, please contact <staas@dataminer.services>.
+If you have any questions regarding this cost estimation, please contact <support@dataminer.services>.
 
 > [!IMPORTANT]
 > Cost estimations can currently only be performed for the West Europe, UK South, Southeast Asia, and Central US regions.
