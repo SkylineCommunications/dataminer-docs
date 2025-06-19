@@ -20,6 +20,8 @@ If the BPA succeeds, the system is all set to migrate.
 
 ## Running an automatic migration
 
+If you are using DataMiner 10.5.0 [CU4]/10.5.7 or higher, the easiest way to run the migration is by means of an upgrade package available on our Dojo Community platform:
+
 1. Make sure the [prerequisites](#prerequisites) are met.
 
 1. Download and run the [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package.
@@ -27,6 +29,8 @@ If the BPA succeeds, the system is all set to migrate.
    This will automatically run `C:\Skyline DataMiner\Tools\NATSMigration.exe` with the default settings on all Agents in the cluster. The DataMiner Agents will not be restarted.
 
 ## Running the migration manually
+
+For DataMiner versions prior to DataMiner 10.5.0 [CU4]/10.5.7, we recommend running the migration manually:
 
 1. Make sure the [prerequisites](#prerequisites) are met.
 
