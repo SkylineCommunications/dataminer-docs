@@ -29,6 +29,6 @@ The use of conditions must always be favored over starting, stopping and restart
 
 ## Timer content
 
-If a timer contains some poll group(s) (group of type "poll", "poll trigger", or "poll action"), the last group within such timer also needs to be a poll group. This is to guarantee that the timer does not start again while not all (poll) groups of the timer have been executed yet.
+If a timer contains one or more poll groups (groups of type "poll", "poll trigger", or "poll action"), the last group within such a timer also needs to be a poll group. This guarantees that the timer does not start again while not all (poll) groups of the timer have been executed yet.
 
-A timer only containing non-poll group (group of type "action" or "trigger") is fine. Do keep in mind that a timer which is enabled by default and contains some non-poll groups will lead to a race condition between after startup logic and such non-poll groups. To avoid that, a nice solution is to have such timer disabled by default and start it from the After Startup logic. This way you have full control of what should happen when.
+A timer only containing non-poll groups (groups of type "action" or "trigger") is fine. Do keep in mind that if a timer is enabled by default and it contains some non-poll groups, this will lead to a race condition between after startup logic and such non-poll groups. To avoid this, a good solution is to have such timers disabled by default and start them from the after startup logic. This way you have full control over what should happen and when.
