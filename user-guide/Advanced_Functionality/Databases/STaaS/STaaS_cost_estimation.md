@@ -38,6 +38,12 @@ To request a cost estimation, follow the procedure below:
 
 1. After the 24-hour period, restart the DMS to stop the estimation process.
 
+   > [!NOTE]
+   >
+   > - This 24-hour period is not mandatory, but we recommend this to be able to extrapolate the data from a daily consumption to a monthly consumption.
+   > - The DMS will not get restarted automatically by the script. You will need to restart the DMS manually.
+   > - If your DMS is running a Failover pair, only restarting the active Agent is sufficient.
+
 1. After this, at approximately 2 AM UTC, you will be able to view your cost estimation in the [Admin app](https://admin.dataminer.services), under *Overview* > *Usage* for the relevant organization.
 
    > [!NOTE]
