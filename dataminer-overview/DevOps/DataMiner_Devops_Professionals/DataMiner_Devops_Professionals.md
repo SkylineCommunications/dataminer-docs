@@ -18,4 +18,4 @@ With the DataMiner DevOps Professional Program, Skyline can help you achieve all
 > Find out more about the [principles](xref:What_is_the_DevOps_Professionals_Program), [benefits](xref:Benefits_DevOps_Professionals_Program), and [required skill sets](xref:Skill_Sets_DevOps_Professionals_Program) of the DataMiner DevOps Professional Program.
 
 > [!NOTE]
-> You can find more information on the DataMiner DevOps Professional Program on [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program/) and the [Skyline website](https://skyline.be/dataminer-devops-professional).
+> Sign-up for the DevOps Professional program via [this link](https://community.dataminer.services/dataminer-devops-professional-program-signup/)
