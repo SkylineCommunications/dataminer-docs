@@ -11,21 +11,122 @@ By creating value for the DataMiner community, you earn [**DevOps Points**](xref
 
 The benefits of being part of the exclusive DataMiner DevOps Professionals community are very diverse and range from small personal perks to gaining access to exclusive content, all the way up to bumping up your DataMiner Support Plan from the standard Continuity level to the added-value Evolve Plan, which includes premium SLAs and even free credits for you to spend.
 
-A short overview of all benefits that can be unlocked using DevOps Points:
+The benefits, which vary depending on your DevOps Professional level, are as follows:
 
-- Access to the Evolve Support Services plan
+<figure id="SupportPlans">
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align:left;">DevOps Professional Level</th>
+        <th style="text-align:center;">advocate<br><small>(750 points)</small></th>
+        <th style="text-align:center;">enabler<br><small>(5,000 points)</small></th>
+        <th style="text-align:center;">catalyst<br><small>(15,000 points)</small></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:left;"><strong>Access to the Evolve Support Plan</strong></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">
+          Bump up your <a href="https://community.dataminer.services/support-services/">DataMiner Support Plan</a> from Continuity to Evolve, resulting in various very substantial benefits such as premium SLAs and free credits to get expert
+          consultancy to further increase the value for your business.<sup>*</sup>
+        </td>
+        <td style="text-align:center;">-</td>
+        <td style="text-align:center;">&#x2714;</td>
+        <td style="text-align:center;">&#x2714;</td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><strong>Access to DIS Source Code</strong></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">
+          Get exclusive access to the entire DIS Source Code, enabling you to understand the capabilities even better, and to contribute to the further evolution of it.
+        </td>
+        <td style="text-align:center;">-</td>
+        <td style="text-align:center;">-</td>
+        <td style="text-align:center;">&#x2714;</td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><strong>Free Personal DataMiner Licenses</strong></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">Get any DataMiner software free of charge for testing and development purposes.</td>
+        <td style="text-align:center;">-</td>
+        <td style="text-align:center;">-</td>
+        <td style="text-align:center;">&#x2714;</td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><strong>Priority Community Support</strong></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">
+          Your exclusive DataMiner DevOps Professional status triggers priority treatment from the entire Skyline community, resulting in faster responses to ensure that you can achieve your goals faster than ever.
+        </td>
+        <td style="text-align:center;">&#x2714;</td>
+        <td style="text-align:center;">&#x2714;</td>
+        <td style="text-align:center;">&#x2714;</td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><strong>Access to Exclusive Content</strong></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">
+          To further support and accelerate you and to empower you with knowledge, we will provide you with exclusive content. You will be the first to know, the first to weigh in, and the first to benefit from the transformational power of
+          DataMiner.
+        </td>
+        <td style="text-align:center;">-</td>
+        <td style="text-align:center;">&#x2714;</td>
+        <td style="text-align:center;">&#x2714;</td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><strong>Join Developer Reviews</strong></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">
+          Whenever we work on developing evolutions of DataMiner that are important for you, our development squads will include you in regular review meetings, so that you can provide feedback in real time and achieve your goals quicker.
+        </td>
+        <td style="text-align:center;">-</td>
+        <td style="text-align:center;">-</td>
+        <td style="text-align:center;">&#x2714;</td>
+      </tr>
+      <tr>
+        <td style="text-align:left;"><strong>Exclusive option to convert your Dojo credits</strong></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+        <td style="text-align:center;"></td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">
+          Dojo activity typically gets converted into credits you can spend in the <a href="https://community.dataminer.services/swag-shop/">Swag Shop</a> on DataMiner Dojo. However, as an accredited DataMiner DevOps Professional you can also
+          convert these into free-of-charge <a href="https://community.dataminer.services/product/dataminer-credit/">DataMiner Credits</a> to further accelerate your ambitions.
+        </td>
+        <td style="text-align:center;">&#x2714;</td>
+        <td style="text-align:center;">&#x2714;</td>
+        <td style="text-align:center;">&#x2714;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 
-- Free personal DataMiner licenses
-
-- Access to DIS source code
-
-- Priority community support
-
-- Access to exclusive content
-
-- Option to join developer reviews
-
-- Exclusive option to convert your DevOps Points to [DataMiner credits](xref:Pricing_Usage_based_service#usage-terms) or [Professional Service credits](xref:Professional_service_credits)
 
 Learn how to earn DevOps Points: [Accumulating DevOps Points](xref:DevOps_Points)
 
