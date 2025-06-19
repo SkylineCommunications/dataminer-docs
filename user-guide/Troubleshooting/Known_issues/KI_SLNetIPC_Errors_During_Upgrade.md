@@ -41,8 +41,7 @@ The monitor should now show all the events.
 
 ## Fix
 
-Fix available in 10.4.0 [CU14] ; 10.5.0 [CU2] ; 10.5.5
-[Release note](xref:General_Main_Release_10.4.0_CU14#dataminer-upgrade-no-progress-updates-when-dataminer-cube-was-connected-to-the-local-dataminer-agent-id-42114)
+Install DataMiner 10.4.0 [CU14], 10.5.0 [CU2], or 10.5.5.<!-- RN 42114 -->
 
 ## Description
 

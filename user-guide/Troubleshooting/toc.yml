@@ -278,8 +278,6 @@ items:
             topicUid: KI_Local_user_not_pushed_to_windows
           - name: Unable to open trended parameter cards via Cube advanced search
             topicUid: KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search
-          - name: Failed getting progress notices during upgrade
-            topicUid: KI_SLNetIPC_Errors_During_Upgrade
           - name: SLProtocol crash when restarting elements used by enhanced services
             topicUid: KI_SLProtocol_Crash_Enhanced_Services
           - name: Sticky element alarm state caused by correlation rules
@@ -312,6 +310,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Failed getting progress notices during upgrade
+            topicUid: KI_SLNetIPC_Errors_During_Upgrade
           - name: SLAutomation memory leak when Automation script runs
             topicUid: KI_Automation_Memory_leak_when_executing_scripts
           - name: DCOMConfig flagged as virus causing upgrade issues
