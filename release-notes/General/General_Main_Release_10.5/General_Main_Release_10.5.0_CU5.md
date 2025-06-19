@@ -128,6 +128,16 @@ When a service was deleted, in some cases, it would only be fully deleted on the
 
 Also, when a service was renamed, in some cases, all DataMiner Agents except the one hosting it could start to experience issues because the old service had not been properly deleted.
 
+#### GQI DxM: Problem when setting up an SLNet connection for a GQI query to be executed without user context [ID 43128]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+When the GQI DxM had to set up an SLNet connection within an ad hoc data source for a GQI query to be executed without user context, up to now, the following error would be thrown:
+
+`Cannot clone non-authenticated or non-regular connections.`
+
+From now on, when such an SLNet connection has to be set up, the GQI DxM will set up a system connection with Administrator privileges.
+
 #### GQI: Deserialization issue when querying DOM instances via the GQI DxM [ID 43132]
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
