@@ -6,23 +6,19 @@ uid: Stack_Data_Management
 
 ***Easily manage, protect, and enrich your data flows.***
 
-![stack.functions.categories](~/dataminer-overview/images/stack_data_management.png)
-
 ## Log file management
-
-**Collecting, formatting, aggregating, and analyzing log data to optimize programs and applications.**
 
 DataMiner collects and analyzes log files from various data sources (devices, servers, applications, etc.) in a central location. This allows for more efficient troubleshooting and faster resolution of issues. The log files can be automatically monitored for errors, warnings, or other predefined events, and alerts can be generated to notify operators when such events occur.
 
-Using OpenSearch indexing for log file management, this allows for efficient indexing, searching, and filtering of log files to quickly locate specific events.
-
 ## Backup
 
-**Automatically make backups of your entire setup at the touch of the button.**
+Automatically make backups of your entire setup.
 
 A **full backup** will create a copy of the entire setup to restore the entire DataMiner Agent, including all configurations, user accounts, scripts, and historical data. This type of backup is useful when migrating to a new server, restoring a complete setup, or setting up a disaster recovery solution.
 
-A **partial backup**, on the other hand, allows you to select specific parts of the setup to back up. This type of backup is useful when making changes to a specific part of the setup and wanting to ensure a quick restore in case of issues.
+A **partial backup**, on the other hand, allows you to select specific parts of the setup to back up. This type of backup is useful when you make changes to a specific part of the setup and want to ensure a quick restore in case of issues.
+
+For information on the different types of backups and the different ways you can take a backup, refer to [Backing up a DataMiner Agent](xref:Backing_up_a_DataMiner_Agent).
 
 Different types of partial backup are available in DataMiner, including:
 
@@ -46,8 +42,6 @@ Other data storage solutions can be added optionally.
 
 ## Audit trailing
 
-**Documenting the flow of transactions.**
-
 DataMiner offers detailed, uniform, and fully consolidated audit trailing, easy to browse and search via the DataMiner Cube client UI, and providing insight in all activities in the operational ecosystem.
 
 The administrator can see the changes made per user or per device/element, including which resources, which actions, etc.
@@ -60,8 +54,6 @@ The administrator can see the changes made per user or per device/element, inclu
 
 ## Single sign-on
 
-**User authentication service that permits a user to use one set of login credentials.**
-
 DataMiner security enables role-based and domain-based management. It provides the administrator with a simple tool to define in detail what each account or group is allowed to do or see, based on views (write, configure, visibility), permissions (access, add, edit, delete, import, properties, lock, unlock, pause, stop, etc.), and access levels. Administrators can create as many groups/profiles as they want.
 
 DataMiner supports two principal schemes to manage the actual user accounts (i.e. username and password):
@@ -70,6 +62,4 @@ DataMiner supports two principal schemes to manage the actual user accounts (i.e
 - Domain-integrated: Rather than adding all the user accounts separately in the DataMiner System, you can simply point DataMiner to an existing Windows domain.
 
 > [!TIP]
-> For more information:
->
-> - [Managing Users](xref:Managing_users)
+> For more detailed information, see [User management](xref:User_management).
