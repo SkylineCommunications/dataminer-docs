@@ -32,29 +32,28 @@ The benefits, which vary depending on your DevOps Professional level, are as fol
       </tr>
       <tr>
         <td style="text-align:left;">
-          Bump up your <a href="https://community.dataminer.services/support-services/">DataMiner Support Plan</a> from Continuity to Evolve, resulting in various very substantial benefits such as premium SLAs and free credits to get expert
-          consultancy to further increase the value for your business.<sup>*</sup>
+          Bump up your <a href="https://community.dataminer.services/support-services/">DataMiner Support Plan</a> from Continuity to Evolve, resulting in various substantial benefits such as premium SLAs and free credits to get expert consultancy to further increase the value for your business.
         </td>
         <td style="text-align:center;">-</td>
         <td style="text-align:center;">&#x2714;</td>
         <td style="text-align:center;">&#x2714;</td>
       </tr>
       <tr>
-        <td style="text-align:left;"><strong>Access to DIS Source Code</strong></td>
+        <td style="text-align:left;"><strong>Access to DIS source code</strong></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
       </tr>
       <tr>
         <td style="text-align:left;">
-          Get exclusive access to the entire DIS Source Code, enabling you to understand the capabilities even better, and to contribute to the further evolution of it.
+          Get exclusive access to the entire DIS source code, enabling you to understand its capabilities even better and to contribute to its further evolution.
         </td>
         <td style="text-align:center;">-</td>
         <td style="text-align:center;">-</td>
         <td style="text-align:center;">&#x2714;</td>
       </tr>
       <tr>
-        <td style="text-align:left;"><strong>Free Personal DataMiner Licenses</strong></td>
+        <td style="text-align:left;"><strong>Free personal DataMiner licenses</strong></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
@@ -66,7 +65,7 @@ The benefits, which vary depending on your DevOps Professional level, are as fol
         <td style="text-align:center;">&#x2714;</td>
       </tr>
       <tr>
-        <td style="text-align:left;"><strong>Priority Community Support</strong></td>
+        <td style="text-align:left;"><strong>Priority community support</strong></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
@@ -80,29 +79,28 @@ The benefits, which vary depending on your DevOps Professional level, are as fol
         <td style="text-align:center;">&#x2714;</td>
       </tr>
       <tr>
-        <td style="text-align:left;"><strong>Access to Exclusive Content</strong></td>
+        <td style="text-align:left;"><strong>Access to exclusive content</strong></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
       </tr>
       <tr>
         <td style="text-align:left;">
-          To further support and accelerate you and to empower you with knowledge, we will provide you with exclusive content. You will be the first to know, the first to weigh in, and the first to benefit from the transformational power of
-          DataMiner.
+          To further support and accelerate you and to empower you with knowledge, we will provide you with exclusive content. You will be the first to know, the first to weigh in, and the first to benefit from the transformational power of DataMiner.
         </td>
         <td style="text-align:center;">-</td>
         <td style="text-align:center;">&#x2714;</td>
         <td style="text-align:center;">&#x2714;</td>
       </tr>
       <tr>
-        <td style="text-align:left;"><strong>Join Developer Reviews</strong></td>
+        <td style="text-align:left;"><strong>Join developer reviews</strong></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
       </tr>
       <tr>
         <td style="text-align:left;">
-          Whenever we work on developing evolutions of DataMiner that are important for you, our development squads will include you in regular review meetings, so that you can provide feedback in real time and achieve your goals quicker.
+          Whenever we work on developing evolutions of DataMiner that are important for you, our development squads will include you in regular review meetings, so that you can provide feedback in real time and achieve your goals more quickly.
         </td>
         <td style="text-align:center;">-</td>
         <td style="text-align:center;">-</td>
@@ -116,8 +114,7 @@ The benefits, which vary depending on your DevOps Professional level, are as fol
       </tr>
       <tr>
         <td style="text-align:left;">
-          Dojo activity typically gets converted into credits you can spend in the <a href="https://community.dataminer.services/swag-shop/">Swag Shop</a> on DataMiner Dojo. However, as an accredited DataMiner DevOps Professional you can also
-          convert these into free-of-charge <a href="https://community.dataminer.services/product/dataminer-credit/">DataMiner Credits</a> to further accelerate your ambitions.
+          Dojo activity typically results in credits that you can spend in the <a href="https://community.dataminer.services/swag-shop/">Swag Shop</a> on DataMiner Dojo. However, as an accredited DataMiner DevOps Professional, you can also convert these into free-of-charge <a href="https://community.dataminer.services/product/dataminer-credit/">DataMiner credits</a> to further accelerate your ambitions.
         </td>
         <td style="text-align:center;">&#x2714;</td>
         <td style="text-align:center;">&#x2714;</td>
@@ -127,8 +124,7 @@ The benefits, which vary depending on your DevOps Professional level, are as fol
   </table>
 </figure>
 
-
-Learn how to earn DevOps Points: [Accumulating DevOps Points](xref:DevOps_Points)
+Curious how you can earn DevOps Points? Refer to [Accumulating DevOps Points](xref:DevOps_Points).
 
 > [!TIP]
 > You can find a more extensive overview of all benefits on [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program/#benefits).
