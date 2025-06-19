@@ -56,7 +56,5 @@ The table below provides an overview of the naming conventions that should be ap
 > [!NOTE]
 >
 > - **Automation**: *TYPE* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention).
-> - **Document**: The above-mentioned convention is applicable in the case of general documents.
 > - **Element**: If multiple elements are used within a solution, the elements should be prefixed with SOLCODE, separated by a space character. Elements should also be hidden where applicable.
-> - **Property**: The above-mentioned naming convention applies to custom properties. For generic properties, a list will be made available that provides an overview of all generic properties used in solutions. The objective here is to ensure the reuse of specific generic properties across multiple solutions. As a result, if a newly generated property needs to be created, it will need to go through an approval process to ensure alignment.
 > - **Low-Code Apps**: One low-code app can be named in a similar way as a solution. Others will require a SOLCODE prefix.
