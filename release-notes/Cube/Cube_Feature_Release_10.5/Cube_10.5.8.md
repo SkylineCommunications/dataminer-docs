@@ -83,6 +83,12 @@ When, in the Automation module, you imported an Automation script by clicking *M
 
 From now on, whenever an error occurs while importing an Automation script, a pop-up window will appear, displaying the associated error message.
 
+#### Services: Enhanced performance when editing services [ID 43122]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+Because of a number of enhancements, overall performance has increased when editing services.
+
 ### Fixes
 
 #### Trending: Trend data between two gaps would incorrectly not be displayed [ID 42909]
