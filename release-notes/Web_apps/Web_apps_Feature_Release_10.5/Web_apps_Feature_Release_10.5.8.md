@@ -82,7 +82,7 @@ In a low-code app, a *Trigger* component can now be controlled via the following
 | Action | Description |
 |--------|-------------|
 | Trigger  | This action will cause the trigger to go off.<br>When *Trigger timer* is enabled, the timer will not be affected. |
-| Pause    | When *Trigger timer* is enabled, this action will pause the timer.<br>In the phrase "was triggered X seconds ago", the elapsed time will not keep on going. |
+| Pause    | When *Trigger timer* is enabled, this action will pause the timer.<br>In the phrase "was triggered X seconds ago", the elapsed time will keep on going. |
 | Continue | When *Trigger timer* is enabled and the timer is currently paused, this action will cause the timer to resume. |
 | Reset    | When *Trigger timer* is enabled, this action will resets the timer, keeping its paused/running state intact.<br>In the phrase "was triggered X seconds ago", the elapsed time will not be reset. |
 

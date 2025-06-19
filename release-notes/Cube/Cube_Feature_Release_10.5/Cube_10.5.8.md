@@ -24,11 +24,15 @@ uid: Cube_Feature_Release_10.5.8
 
 In the *Settings* window, a new *Enable 'Multiple set'* setting has been added to the *User > Cube* section.
 
-When this setting is disabled, it will not be possible to click the *Multiple set* command in the following context menus:
+When this setting is disabled, it will not be possible to open the *Multiple set* window by performing one of the following actions:
 
-- the context menu of an element in the Surveyor
-- the context menu of an element in the element list of a view
-- the context menu of an element shape in a visual overview
+- Clicking the *Multiple set* command in one of the following context menus:
+
+  - the context menu of an element in the Surveyor
+  - the context menu of an element in the element list of a view
+  - the context menu of an element shape in a visual overview
+
+- Clicking a shape linked to a multiple set command in a visual overview.
 
 Default value: Enabled
 
