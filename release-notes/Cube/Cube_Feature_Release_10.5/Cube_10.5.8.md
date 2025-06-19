@@ -18,7 +18,19 @@ uid: Cube_Feature_Release_10.5.8
 
 ## New features
 
-*No new features have been added yet.*
+#### New setting: Enable 'Multiple set' [ID 43135]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In the *Settings* window, a new *Enable 'Multiple set'* setting has been added to the *User > Cube* section.
+
+When this setting is disabled, it will not be possible to click the *Multiple set* command in the following context menus:
+
+- the context menu of an element in the Surveyor
+- the context menu of an element in the element list of a view
+- the context menu of an element shape in a visual overview
+
+Default value: Enabled
 
 ## Changes
 
