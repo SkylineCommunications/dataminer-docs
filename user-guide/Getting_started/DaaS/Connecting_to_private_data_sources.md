@@ -1,5 +1,6 @@
 ---
 uid: Connecting_to_private_data_sources
+description: To make sure DaaS can also access private data sources, a site-to-site VPN connection will need to be set up. 
 ---
 
 # Connecting to private data sources with DaaS
