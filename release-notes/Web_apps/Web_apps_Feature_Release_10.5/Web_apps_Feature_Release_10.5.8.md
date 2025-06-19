@@ -73,6 +73,19 @@ if (results.WasOnFilter("DropDownVariable"))
 > - While filtering the dropdown box entries, the script's logic is responsible for adding the currently selected entry (if relevant). Otherwise, the dropdown box will consider that value as incorrect and clear itself. Consider only filtering the display value of the entries (case-invariant if possible).
 > - Scripts using this feature should not include components of which the variable name (DestVar) contains "_FilterString". Otherwise, the identifier will not be unique.
 
+#### Low-Code Apps: Trigger component can now be controlled via actions [ID 43184]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In a low-code app, a *Trigger* component can now be controlled via the following actions:
+
+| Action | Description |
+|--------|-------------|
+| Trigger  | This action will cause the trigger to go off.<br>When *Trigger timer* is enabled, the timer will not be affected. |
+| Pause    | When *Trigger timer* is enabled, this action will pause the timer.<br>In the phrase "was triggered X seconds ago", the elapsed time will not keep on going. |
+| Continue | When *Trigger timer* is enabled and the timer is currently paused, this action will cause the timer to resume. |
+| Reset    | When *Trigger timer* is enabled, this action will resets the timer, keeping its paused/running state intact.<br>In the phrase "was triggered X seconds ago", the elapsed time will not be reset. |
+
 ## Changes
 
 ### Enhancements
