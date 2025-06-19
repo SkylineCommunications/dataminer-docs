@@ -103,13 +103,13 @@ In trend graphs showing gaps in the trend data, in some rare cases, the data bet
 
 In EPM environments, in some rare cases, a view card could get stuck when you tried to open it.
 
-#### Correlation: History of base alarms would incorrectly be missing [ID 43072]
+#### Correlation: History of correlation and incident alarms would incorrectly always show the base alarms of the last update [ID 43072]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-When, in the alarm card of a correlation alarm, you selected a particular update, the data in the right pane would change but the data below *Correlation sources of the previous alarms* would incorrectly not change.
+When, in the alarm card of a correlation alarm or an incident alarm, you selected a particular update, the data in the right pane would change but the data below *Correlation sources of the previous alarms* would incorrectly not change.
 
-This issue has now been fixed. Also, the caption *Correlation sources of the previous alarms* has now been renamed to *Sources of the previous alarms*, and the side panel of the Alarm Console will no longer display correlation sources when you open a history tab.
+This issue has now been fixed. Also, the caption *Correlation sources of the previous alarms* has now been renamed to *Correlation sources* or *Incident sources* (depending on the type of alarm shown in the alarm card), and the side panel of the Alarm Console will no longer display correlation sources when you open a history tab.
 
 #### Trending: Problem when loading trend graphs [ID 43156]
 
