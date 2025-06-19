@@ -65,6 +65,22 @@ A number of enhancements have been made to the installation procedure of the GQI
 
 For example, during the installation, the following notice will no longer appear: `Could not stop the following processes (60s): DataMiner GQI`.
 
+#### GQI: Support filtering by columns of type GUID [ID 43141]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+It is now possible to filter by columns of type GUID.
+
+For example, using the *Get trend data pattern events* data source, it is now possible to filter by pattern ID.
+
+#### ModelHost and Copilot DxMs will now only be upgraded if the version in the upgrade package is newer than the installed version [ID 43182]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+When a DataMiner upgrade was performed on a system containing a ModelHost and/or a Copilot DxM, since DataMiner 10.5.7, those modules would always be reinstalled, even if the installed version and the version in the upgrade package were the same.
+
+From now on, the ModelHost and Copilot DxMs will only be upgraded if the version in the upgrade package is newer than the installed version.
+
 ### Fixes
 
 #### Swarming: Information on where elements are being hosted could be incorrect [ID 42691]

@@ -319,11 +319,20 @@ Because of a number of enhancements, overall performance has increased when retr
 
 Also, SLNet and SLDataGateway will now exchange data faster thanks to the use of protobuf serialization.
 
-#### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896]
+#### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896] [ID 43182]
 
-<!-- MR 10.6.0 - FR 10.5.7 -->
+<!-- RN 42896: MR 10.6.0 - FR 10.5.7 -->
+<!-- RN 43182: MR 10.6.0 - FR 10.5.8 -->
 
-From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded.
+From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded if the version in the upgrade package is newer than the installed version.
+
+#### GQI: Support filtering by columns of type GUID [ID 43141]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+It is now possible to filter by columns of type GUID.
+
+For example, using the *Get trend data pattern events* data source, it is now possible to filter by pattern ID.
 
 ### Fixes
 
