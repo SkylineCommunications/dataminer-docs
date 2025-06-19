@@ -44,7 +44,7 @@ For example:
 
 ## Using the GQI DxM for queries
 
-By default, queries are executed using CoreGateway and SLHelper. To execute the queries using the [GQI DxM](xref:GQI_DxM), enable the following setting:
+By default, queries are executed using CoreGateway and SLHelper. To execute the queries using the [GQI DxM](xref:GQI_DxM), enable the following setting in appsettings.json ("C:\Program Files\Skyline Communications\DataMiner DataAggregator\appsettings.json"):
 
 ```json
 {
