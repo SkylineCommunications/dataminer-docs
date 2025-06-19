@@ -124,7 +124,5 @@ The benefits, which vary depending on your DevOps Professional level, are as fol
   </table>
 </figure>
 
-Curious how you can earn DevOps Points? Refer to [Accumulating DevOps Points](xref:DevOps_Points).
-
 > [!TIP]
-> You can find a more extensive overview of all benefits on [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program/#benefits).
+> Curious how you can earn DevOps Points? Refer to [Accumulating DevOps Points](xref:DevOps_Points).
