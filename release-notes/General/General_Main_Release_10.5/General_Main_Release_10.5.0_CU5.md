@@ -130,6 +130,24 @@ In large DataMiner Systems, in some cases, an issue could occur when the *Cluste
 
 When an element had masked alarms, the alarm status of the parameters in question would incorrectly remain masked when the alarm template was removed from the element or when conditional alarm monitoring would cause the parameters to no longer be monitored.
 
+#### DataMiner upgrade: VerifyClusterPorts and VerifyNatsCluster prerequisites would fail when upgrading from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 [ID 43099]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+When you upgraded directly from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7, the upgrade process would fail, and the following lines would be added to the update log:
+
+```txt
+DataMiner Agent: 4 error(s) and 0 notice(s)
+    - Prerequisite VerifyClusterPorts.dll failed: Exception: Exception has been thrown by the target of an invocation.
+    - Prerequisite VerifyNatsCluster.dll failed: Could not load file or assembly 'System.Text.Json, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+    - Prerequisite VerifyNATSMigrationPrerequisites.dll failed: Exception: This BPA cannot run on 10.4.0-CU4
+- One or more prerequisites failed
+```
+
+Some prerequisite checks included in the upgrade to 10.5.0 [CU3], 10.5.6, and 10.5.7 rely on a version of the `System.Text.Json` library that is not present in 10.4.0. This caused the VerifyClusterPorts and VerifyNatsCluster prerequisites to fail during the upgrade process.
+
+In addition, although the VerifyNATSMigrationPrerequisites.dll check was reverted in code in 10.5.0 [CU3], the corresponding file still remained in the installation packages, which may result in the check being executed anyway. In DataMiner 10.5.6/10.5.7 installation packages, this file has been removed.
+
 #### Problem when deleting or renaming services [ID 43109]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
