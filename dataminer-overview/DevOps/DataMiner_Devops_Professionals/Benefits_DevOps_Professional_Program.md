@@ -39,20 +39,6 @@ The benefits, which vary depending on your DevOps Professional level, are as fol
         <td style="text-align:center;">&#x2714;</td>
       </tr>
       <tr>
-        <td style="text-align:left;"><strong>Access to DIS source code</strong></td>
-        <td style="text-align:center;"></td>
-        <td style="text-align:center;"></td>
-        <td style="text-align:center;"></td>
-      </tr>
-      <tr>
-        <td style="text-align:left;">
-          Get exclusive access to the entire DIS source code, enabling you to understand its capabilities even better and to contribute to its further evolution.
-        </td>
-        <td style="text-align:center;">-</td>
-        <td style="text-align:center;">-</td>
-        <td style="text-align:center;">&#x2714;</td>
-      </tr>
-      <tr>
         <td style="text-align:left;"><strong>Free personal DataMiner licenses</strong></td>
         <td style="text-align:center;"></td>
         <td style="text-align:center;"></td>
