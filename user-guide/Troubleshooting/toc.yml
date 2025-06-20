@@ -270,8 +270,6 @@ items:
         items:
           - name: SLProtocol RTE because of element stuck in slow poll mode
             topicUid: KI_SLProtocol_RTE_after_slow_poll_timeout
-          - name: Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7
-            topicUid: KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3
           - name: User locked out after single failed login attempt
             topicUid: KI_user_locked_out_after_single_failed_attempt
           - name: Local user not pushed to Windows
@@ -312,6 +310,8 @@ items:
         items:
           - name: Online Failover Agent unable to acquire VIP
             topicUid: KI_Online_Failover_Agent_unable_to_acquire_VIP
+          - name: Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7
+            topicUid: KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3
           - name: Failed getting progress notices during upgrade
             topicUid: KI_SLNetIPC_Errors_During_Upgrade
           - name: SLAutomation memory leak when Automation script runs

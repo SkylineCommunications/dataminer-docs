@@ -8,7 +8,6 @@ uid: Known_issues
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
 | [SLProtocol RTE because of element stuck in slow poll mode](xref:KI_SLProtocol_RTE_after_slow_poll_timeout) | From DataMiner 10.4.0 [CU11] onwards | | June 16, 2025 |
-| [Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | | June 2, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [Local user not pushed to Windows](xref:KI_Local_user_not_pushed_to_windows) | From DataMiner 10.4.0 [CU4]/10.4.7 onwards | | March 27, 2025 |
 | [Unable to open trended parameter cards via Cube advanced search](xref:KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search) | From DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3 onwards | | March 20, 2025 |
@@ -21,6 +20,7 @@ uid: Known_issues
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
+| [Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | DataMiner 10.5.0 [CU5]/10.5.8 | June 2, 2025 |
 | [SLAutomation memory leak when Automation script runs](xref:KI_Automation_Memory_leak_when_executing_scripts) | DataMiner 10.5.6 | DataMiner 10.5.7 | June 10, 2025 |
 | [DCOMConfig flagged as virus causing upgrade issues](xref:KI_DCOMConfig_flagged_as_virus) | DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | May 19, 2025 |
 | [SLNet not starting correctly after change to default upgrade options](xref:KI_Default_upgrade_options_SLNet_issue) | From DataMiner 10.4.1/10.5.0 [CU0] onwards | DataMiner 10.5.0 [CU4]/10.5.7 | May 5, 2025 |
@@ -38,7 +38,6 @@ uid: Known_issues
 | Issue | Affected versions | Resolved in | Date added |
 |--|--|--|--|
 | [SLProtocol RTE because of element stuck in slow poll mode](xref:KI_SLProtocol_RTE_after_slow_poll_timeout) | From DataMiner 10.4.0 [CU11] onwards | | June 16, 2025 |
-| [Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | | June 2, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [Local user not pushed to Windows](xref:KI_Local_user_not_pushed_to_windows) | From DataMiner 10.4.0 [CU4]/10.4.7 onwards | | March 27, 2025 |
 | [Unable to open trended parameter cards via Cube advanced search](xref:KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search) | From DataMiner Cube 10.4.0 [CU12]/10.5.0/10.5.3 onwards | | March 20, 2025 |
@@ -51,6 +50,7 @@ uid: Known_issues
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
+| [Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | DataMiner 10.5.0 [CU5]/10.5.8 | June 2, 2025 |
 | [DCOMConfig flagged as virus causing upgrade issues](xref:KI_DCOMConfig_flagged_as_virus) | DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | May 19, 2025 |
 | [SLNet not starting correctly after change to default upgrade options](xref:KI_Default_upgrade_options_SLNet_issue) | From DataMiner 10.4.1/10.5.0 [CU0] onwards | DataMiner 10.5.0 [CU4]/10.5.7 | May 5, 2025 |
 | [Higher CPU usage and connection issues when using SAML with automatic groups](xref:KI_SAML_with_automatic_groups) | From DataMiner 10.4.0 [CU4]/10.4.7 onwards | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.5 | April 16, 2025 |

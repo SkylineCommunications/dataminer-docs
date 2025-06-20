@@ -16,7 +16,7 @@ In addition, although the `VerifyNATSMigrationPrerequisites.dll` check was rever
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.5.0 [CU5] or 10.5.8.
 
 ## Workaround
 
