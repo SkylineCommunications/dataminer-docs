@@ -25,8 +25,6 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 
 1. Start the migration:
 
-   - Make sure *Replication only* is **not** selected.
-
    - Select the desired storage types for migration.
 
      Prior to DataMiner 10.5.4/10.6.0, certain custom data, such as DOM, SRM, and Analytics data, are grouped together under the *custom_data* storage type and can only be migrated as a single category. From DataMiner 10.5.4/10.6.0 onwards<!--RN 42219-->, you can select specific storage types such as *DOM*, *SRM*, and *Analytics*, allowing you to migrate this data separately.
