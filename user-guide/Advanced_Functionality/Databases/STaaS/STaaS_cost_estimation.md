@@ -32,7 +32,7 @@ To request a cost estimation, follow the procedure below:
       
    1. Click *Stop Migration/Replication* to stop the replication.
       
-      1. Optionally, you can also restart your DMS to stop the estimation.
+      1. Optionally, you can also restart your DMS to stop the replication.
 
    > [!NOTE]
    >
