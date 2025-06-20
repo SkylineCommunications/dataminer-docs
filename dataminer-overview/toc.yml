@@ -105,13 +105,13 @@ items:
           items:
             - name: About the DevOps Professional Program
               topicUid: What_is_the_DevOps_Professionals_Program
-            - name: Benefits
+            - name: Benefits for members
               topicUid: Benefits_DevOps_Professionals_Program
             - name: Benefits for business and tech partners
               topicUid: Benefits_Business_and_Tech_Partners
             - name: Accumulating DevOps Points
               topicUid: DevOps_Points
-            - name: Required skill sets
+            - name: Expectations
               topicUid: Skill_Sets_DevOps_Professionals_Program
         - name: DataMiner DevOps Enablement Service
           topicUid: DataMiner_DevOps_Enablement

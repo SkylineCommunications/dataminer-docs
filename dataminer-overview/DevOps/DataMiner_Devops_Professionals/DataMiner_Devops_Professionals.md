@@ -15,4 +15,4 @@ Ready to sign up? Go to [DataMiner Dojo](https://community.dataminer.services/da
 ![DevOps Professionals](~/dataminer-overview/images/DevOpsEnablement.png)
 
 > [!TIP]
-> Find out more about the [principles](xref:What_is_the_DevOps_Professionals_Program), [benefits](xref:Benefits_DevOps_Professionals_Program), and [required skill sets](xref:Skill_Sets_DevOps_Professionals_Program) of the DataMiner DevOps Professional Program.
+> Find out more about the [principles](xref:What_is_the_DevOps_Professionals_Program), [benefits](xref:Benefits_DevOps_Professionals_Program), and [expectations](xref:Skill_Sets_DevOps_Professionals_Program) of the DataMiner DevOps Professional Program.
