@@ -229,3 +229,11 @@ From now on, when such an SLNet connection has to be set up, the GQI DxM will se
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
 When querying DOM instances with service definition fields via the GQI DxM, up to now, the `ServiceDefinitionFieldDescriptor` would not deserialize correctly coming from SLNet, causing an exception to be thrown in GQI.
+
+#### Web.config file could contain an outdated configuration [ID 43159]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, the `C:\Skyline DataMiner\Webpages\API\Web.config` file could contain an outdated configuration, causing the Web Services API to not start up, and the web apps to throw the following error:
+
+`The type initializer for 'Skyline.DataMiner.Web.Common.v1.TransportAgnosticInterface' threw an exception.`
