@@ -103,7 +103,7 @@ items:
         - name: DataMiner DevOps Professional Program
           topicUid: DataMiner_Devops_Professionals
           items:
-            - name: What is it?
+            - name: About the DevOps Professional Program
               topicUid: What_is_the_DevOps_Professionals_Program
             - name: Benefits
               topicUid: Benefits_DevOps_Professionals_Program
