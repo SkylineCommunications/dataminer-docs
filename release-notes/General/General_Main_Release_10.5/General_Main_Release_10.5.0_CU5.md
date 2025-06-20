@@ -148,7 +148,7 @@ Some prerequisite checks included in the upgrade to 10.5.0 [CU3], 10.5.6, and 10
 
 #### DataMiner upgrade: Problem with incorrectly set file path in VerifyClusterPorts prerequisite [ID 43101]
 
-<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
 
 Up to now, the VerifyClusterPorts prerequisite would have its file path incorrectly set to null. This would cause the system to always check the configuration file of the SLNet-managed NATS solution, even in situation where it had to check the configuration file of the BrokerGateway-managed NATS solution.
 

@@ -326,6 +326,16 @@ Also, SLNet and SLDataGateway will now exchange data faster thanks to the use of
 
 From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded if the version in the upgrade package is newer than the installed version.
 
+#### SLNet will now pass updated company information to client applications [ID 43168]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+By default, SLNet will now pass the following updated company information to client applications:
+
+- Company website: <https://www.skyline.be>
+- TechSupport web page: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
+- TechSupport email address: <support@dataminer.services>
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]

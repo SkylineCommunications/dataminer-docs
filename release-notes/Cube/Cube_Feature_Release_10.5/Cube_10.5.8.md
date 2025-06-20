@@ -105,6 +105,16 @@ From now on, whenever an error occurs while importing an Automation script, a po
 
 Because of a number of enhancements, overall performance has increased when editing services.
 
+#### About box: Updated company information [ID 43167]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+By default, the *About* box will now show the following updated company information:
+
+- *Skyline Communications N.V.* will now link to <https://www.skyline.be>.
+- *DataMiner Technical Support* will now link to [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support).
+- *Contact us* will now link to <support@dataminer.services>.
+
 ### Fixes
 
 #### Trending: Trend data between two gaps would incorrectly not be displayed [ID 42909]
