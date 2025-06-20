@@ -83,6 +83,16 @@ When you stopped an element with a GPIB connection in an error state, in some ca
 
 When a user requested a mobile visual overview, in some cases, an incomplete image could be returned.
 
+#### Automation: Problem when trying to publish an Automation script with an invalid name via DIS [ID 42974]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When, in DataMiner Integration Studio (DIS), you tried to publish an Automation script of which the name contained leading and/or trailing spaces, up to now, the script would initially be added, but it would immediately be removed from the system. Also, the following error message would be added to the SLAutomation log file:
+
+`Failed to load info for script 'XXX'`
+
+From now on, when you publish an Automation script via DIS, its name will be validated. If the name is invalid, the publish action will be aborted.
+
 #### GQI: GQI DxM and SLHelper could leak memory [ID 43028]
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
