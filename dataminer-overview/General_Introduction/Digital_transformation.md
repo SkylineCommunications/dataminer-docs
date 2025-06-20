@@ -1,5 +1,5 @@
 ---
-uid: Overview_Platform_intro
+uid: Digital_transformation
 description: DataMiner is key technology for your digital transformation, ensuring your operation is prepared for the unexpected and capable of evolving quickly.
 ---
 
