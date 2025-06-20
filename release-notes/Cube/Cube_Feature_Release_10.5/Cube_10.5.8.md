@@ -113,6 +113,12 @@ Because of a number of enhancements, overall performance has increased when edit
 
 In trend graphs showing gaps in the trend data, in some rare cases, the data between two gaps would incorrectly not be displayed.
 
+#### Cube would incorrectly try to display certain message boxes when running as a service [ID 43048]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, Cube would incorrectly try to display certain message boxes when running as a service (e.g. within SLHelper).
+
 #### Problem when trying to open a view card in an EPM environment [ID 43049]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
