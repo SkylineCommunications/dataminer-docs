@@ -172,7 +172,7 @@ The background color of toggle buttons.
 - Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(42,138,212);">HEX #2A8AD4, RGB 42-138-212</span>
 
 - Black theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(42,138,212);">HEX #2A8AD4, RGB 42-138-212</span>
- 
+
 Examples:
 
 - Background of selected toggle buttons in Alarm Console
@@ -186,7 +186,7 @@ The text color used when the background has the accent color.
 - Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:black;border:1px solid black;background-color:rgb(255,255,255);">HEX #FFFFFF, RGB 255-255-255</span>
 
 - Black theme: <span style="padding:2px;width:200px;text-align:center;color:black;border: 1px solid black;background-color:rgb(255,255,255);">HEX #FFFFFF, RGB 255-255-255</span>
-		
+
 Example:
 
 - Text color of selected sections and tiles in System Center
@@ -198,7 +198,7 @@ The text color used when the background has the theme’s background color (whit
 - Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(0,114,198);">HEX #0072C6, RGB 0-114-198</span>
 
 - Black theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(157,195,230);">HEX #9DC3E6, RGB 157-195-230</span>
-	
+
 Example:
 
 - Titles on the Cube home page
@@ -210,12 +210,13 @@ The text color used when the background color is inverted.
 - Mixed theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(180,211,239);">HEX #B4D3EF, RGB 180-211-239</span>
 
 - Black theme: <span style="padding:2px;width:200px;text-align:center;color:white;background-color:rgb(180,211,239);">HEX #B4D3EF, RGB 180-211-239</span>
-		
+
 Example:
 
 - Text color in Surveyor search result list
 
 > [!NOTE]
+>
 > - **accentFilterColor** needs to be a color that works well in combination with a dark background as the one used in the Surveyor and the Alarm Console footer.
 > - **accentTextColor** needs to be a color that works well in combination with either the default theme color or the custom background image/color.
 
@@ -223,20 +224,20 @@ Example:
 
 In a custom brand theme, the contact information in the General tab page of the DataMiner Cube About box will also be customized:
 
-| Information                  | Default                                       |
-|------------------------------|-----------------------------------------------|
-| Company name                 | Skyline Communications N.V.                   |
-| Product name                 | DataMiner                                     |
-| Company website              | `www.skyline.be`                              |
-| Company email                | `info@skyline.be`                             |
-| TechSupport name             | DataMiner Technical Support                   |
-| TechSupport address (line1)  | Ambachtenstraat 33                            |
-| TechSupport address (line 2) | B-8870 Izegem                                 |
-| TechSupport address (line 3) | Belgium                                       |
-| TechSupport website          | `www.skyline.be/Contact/TechnicalSupport.htm` |
-| TechSupport email            | `support@dataminer.services`                  |
-| Extranet link                | `dataminer.services`                          |
-| Online collaboration link    | `www.skyline.be/meeting.exe`                  |
+| Information                  | Default                      |
+|------------------------------|------------------------------|
+| Company name                 | Skyline Communications N.V.  |
+| Product name                 | DataMiner                    |
+| Company website              | `https://www.skyline.be`     |
+| Company email                | `info@skyline.be`            |
+| TechSupport name             | DataMiner Technical Support  |
+| TechSupport address (line1)  | Ambachtenstraat 33           |
+| TechSupport address (line 2) | B-8870 Izegem                |
+| TechSupport address (line 3) | Belgium                      |
+| TechSupport website          | `https://docs.dataminer.services/user-guide/Troubleshooting/Contacting_tech_support.html` |
+| TechSupport email            | `support@dataminer.services` |
+| Extranet link                | `https://collaboration.dataminer.services/` |
+| Online collaboration link    |                              |
 
 > [!NOTE]
 > If a custom product name is specified, this will also replace the DataMiner tab name in the Logging app and the "(DataMiner)" root in the tree view pane of the Resources app.
