@@ -56,6 +56,10 @@ object[] result = (object[])protocol.NotifyProtocol(292/*NT_SNMP_SET*/, elementI
       - 1: None
       - 2: HMAC-MD5
       - 3: HMAC-SHA
+      - 4: HMAC128-SHA-224
+      - 5: HMAC192-SHA-256
+      - 6: HMAC256-SHA-384
+      - 7: HMAC384-SHA-512
 
       Default: 1 (None)
     - [3] (string): Authentication password. Default: empty string ("").
@@ -64,6 +68,8 @@ object[] result = (object[])protocol.NotifyProtocol(292/*NT_SNMP_SET*/, elementI
       - 2: DES
       - 3: N/A, deprecated
       - 4: AES128
+      - 20: AES192
+      - 21: AES256
 
       Default: 1 (None)
     - [5] (string): Encryption passphrase. Default: empty string ("")
