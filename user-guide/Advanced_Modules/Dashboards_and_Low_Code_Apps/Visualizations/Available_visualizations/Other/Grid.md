@@ -4,7 +4,7 @@ uid: DashboardGrid
 
 # Grid
 
-Available from DataMiner 10.4.1/10.5.0 onwards<!--RN 34761-->.
+Available from DataMiner 10.4.0/10.4.1 onwards<!--RN 34761-->.
 
 The grid component is a versatile visualization designed to display the results of queries in a clear, tile-based grid format. It offers a **wide range of customization options**, including dynamic scaling, conditional formatting, and interactive features that let you trigger actions directly from each grid block.
 
