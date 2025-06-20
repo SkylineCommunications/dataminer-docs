@@ -319,11 +319,12 @@ Because of a number of enhancements, overall performance has increased when retr
 
 Also, SLNet and SLDataGateway will now exchange data faster thanks to the use of protobuf serialization.
 
-#### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896]
+#### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896] [ID 43182]
 
-<!-- MR 10.6.0 - FR 10.5.7 -->
+<!-- RN 42896: MR 10.6.0 - FR 10.5.7 -->
+<!-- RN 43182: MR 10.6.0 - FR 10.5.8 -->
 
-From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded.
+From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded if the version in the upgrade package is newer than the installed version.
 
 ### Fixes
 
@@ -382,13 +383,3 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
-
-#### Automation: Problem when trying to publish an Automation script with an invalid name via DIS [ID 42974]
-
-<!-- MR 10.6.0 - FR 10.5.8 -->
-
-When, in DataMiner Integration Studio (DIS), you tried to publish an Automation script of which the name contained leading and/or trailing spaces, up to now, the script would initially be added, but it would immediately be removed from the system. Also, the following error message would be added to the SLAutomation log file:
-
-`Failed to load info for script 'XXX'`
-
-From now on, when you publish an Automation script via DIS, its name will be validated. If the name is invalid, the publish action will be aborted.

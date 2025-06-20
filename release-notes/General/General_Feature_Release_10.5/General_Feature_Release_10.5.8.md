@@ -65,6 +65,14 @@ A number of enhancements have been made to the installation procedure of the GQI
 
 For example, during the installation, the following notice will no longer appear: `Could not stop the following processes (60s): DataMiner GQI`.
 
+#### ModelHost and Copilot DxMs will now only be upgraded if the version in the upgrade package is newer than the installed version [ID 43182]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+When a DataMiner upgrade was performed on a system containing a ModelHost and/or a Copilot DxM, since DataMiner 10.5.7, those modules would always be reinstalled, even if the installed version and the version in the upgrade package were the same.
+
+From now on, the ModelHost and Copilot DxMs will only be upgraded if the version in the upgrade package is newer than the installed version.
+
 ### Fixes
 
 #### Swarming: Information on where elements are being hosted could be incorrect [ID 42691]
@@ -124,7 +132,7 @@ By default, that alarm is cleared as soon as one of the backup elements is avail
 
 #### Automation: Problem when trying to publish an Automation script with an invalid name via DIS [ID 42974]
 
-<!-- MR 10.6.0 - FR 10.5.8 -->
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
 
 When, in DataMiner Integration Studio (DIS), you tried to publish an Automation script of which the name contained leading and/or trailing spaces, up to now, the script would initially be added, but it would immediately be removed from the system. Also, the following error message would be added to the SLAutomation log file:
 
@@ -175,6 +183,24 @@ In large DataMiner Systems, in some cases, an issue could occur when the *Cluste
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
 
 When an element had masked alarms, the alarm status of the parameters in question would incorrectly remain masked when the alarm template was removed from the element or when conditional alarm monitoring would cause the parameters to no longer be monitored.
+
+#### DataMiner upgrade: VerifyClusterPorts and VerifyNatsCluster prerequisites would fail when upgrading from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 [ID 43099]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+When you upgraded directly from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7, the upgrade process would fail, and the following lines would be added to the update log:
+
+```txt
+DataMiner Agent: 4 error(s) and 0 notice(s)
+    - Prerequisite VerifyClusterPorts.dll failed: Exception: Exception has been thrown by the target of an invocation.
+    - Prerequisite VerifyNatsCluster.dll failed: Could not load file or assembly 'System.Text.Json, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+    - Prerequisite VerifyNATSMigrationPrerequisites.dll failed: Exception: This BPA cannot run on 10.4.0-CU4
+- One or more prerequisites failed
+```
+
+Some prerequisite checks included in the upgrade to 10.5.0 [CU3], 10.5.6, and 10.5.7 rely on a version of the `System.Text.Json` library that is not present in 10.4.0. This caused the VerifyClusterPorts and VerifyNatsCluster prerequisites to fail during the upgrade process.
+
+In addition, although the VerifyNATSMigrationPrerequisites.dll check was reverted in code in 10.5.0 [CU3], the corresponding file still remained in the installation packages, which may result in the check being executed anyway. In DataMiner 10.5.6/10.5.7 installation packages, this file has been removed.
 
 #### Problem when deleting or renaming services [ID 43109]
 
