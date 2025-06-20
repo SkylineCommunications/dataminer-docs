@@ -133,6 +133,12 @@ When, in the alarm card of a correlation alarm or an incident alarm, you selecte
 
 This issue has now been fixed. Also, the caption *Correlation sources of the previous alarms* has now been renamed to *Correlation sources* or *Incident sources* (depending on the type of alarm shown in the alarm card), and the side panel of the Alarm Console will no longer display correlation sources when you open a history tab.
 
+#### Service templates: Conditions to dynamically include or exclude child element would be interpreted incorrectly [ID 43119]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When, while configuring a service template, you had specified conditional triggers to dynamically include or exclude child element, in some cases, DataMiner Cube would interpret the conditions incorrectly.
+
 #### Trending: Problem when loading trend graphs [ID 43156]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
