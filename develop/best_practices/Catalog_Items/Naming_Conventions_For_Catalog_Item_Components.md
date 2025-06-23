@@ -34,27 +34,109 @@ In the naming conventions, references will be made to the following abbreviation
 
 ## Naming conventions per component
 
-The table below provides an overview of the naming conventions that should be applied to the different components used in a solution.
+### Automation script
 
-|Component  | Level 1 | Level 2 | Level 3 | Level 4 | Level 5 |
-|-----------|--------|--------|--------|--------|--------|
-|**Automation**|DataMiner Catalog|SOLCATEGORY|SOLNAME|*subfolders*|SOLCODE-TYPE-[name]|
-|**Ad Hoc Data Source**|SOLCODE [name]|||||
-|**Correlation**|DataMiner Catalog|SOLCATEGORY|SOLNAME|*subfolders*|SOLCODE-[name]|
-|**Document**|DataMiner Catalog|SOLCATEGORY|SOLNAME|*subfolders*|SOLCODE-[name]|
-|**View**|DataMiner Catalog|SOLCATEGORY|SOLNAME|*subviews*|[name] (SOLCODE)|
-|**Dashboard**|DataMiner Catalog|SOLCATEGORY|SOLNAME|SOLCODE [name]||
-|**Low-Code App**|DataMiner Catalog|SOLCATEGORY|SOLNAME|SOLCODE [name]||
-|**Element**|DataMiner Catalog|SOLNAME|SOLCODE [name]|||
-|**Property**|SOLCODE [name]|||||
-|**Protocol/Template**|[vendor] SOLCODE [name]|||||
-|**Scheduled Task**|SOLCODE_[name]|||||
-|**Visio File**|[view or protocol name]|||||
-|**Simulation**|DataMiner Catalog|SOLNAME|SOLCODE [name]|||
-|**User-Defined API**|api/custom|SOLCODE|[name]|||
+Automation scripts should have a name in the following format, where *[TYPE]* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention): `[SOLCODE]-[TYPE]-[name]`
 
-> [!NOTE]
->
-> - **Automation**: *TYPE* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention).
-> - **Element**: If multiple elements are used within a solution, the elements should be prefixed with SOLCODE, separated by a space character. Elements should also be hidden where applicable.
-> - **Low-Code Apps**: One low-code app can be named in a similar way as a solution. Others will require a SOLCODE prefix.
+They should be added in the Automation module in the following folders, depending on the type of script:
+
+- For standalone scripts:
+
+  - **Regular** Automation script: `DataMiner Catalog/Automation`
+  - **Ad hoc data source** script: `DataMiner Catalog/Ad Hoc Data Sources`
+  - **Data transformer** script: `DataMiner Catalog/Data Transformers`
+  - **User-defined API** script: `DataMiner Catalog/User-Defined APIs`
+  - **ChatOps** script: `DataMiner Catalog/ChatOps/bot`
+
+- For scripts that are part of a **solution**: `DataMiner Catalog/[SOLCATEGORY]/[SOLNAME]/[subfolders]`
+
+  For example: `DataMiner Catalog/Apps & Solutions/MediaOps/Common`
+
+  > [!NOTE]
+  > ChatOps scripts should always be included in a `bot` subfolder. See [Adding custom commands for the Teams bot](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms).
+
+### Ad hoc data source
+
+For the name of the ad hoc data source as shown in the DataMiner web apps, use the following format: `[SOLCODE] [name]`
+
+For the name of the Automation script used for an ad hoc data source, see [Automation script](#automation-script).
+
+### Correlation rule
+
+Correlation rules should have a name in the following format: `[SOLCODE]-[name]`
+
+They should be added in the Correlation module in the following folder: `DataMiner Catalog/[SOLCATEGORY]/[SOLNAME]/[subfolders]`
+
+### Dashboard
+
+Dashboards should have a name in the following format: `[SOLCODE] [name]`
+
+They should be added in the Dashboards app in the following folder: `DataMiner Catalog/[SOLCATEGORY]/[SOLNAME]`
+
+### Data transformer
+
+For the name of the data transformer as shown in the DataMiner web apps, use the following format: `[SOLCODE] [name]`
+
+For the name of the Automation script used for a data transformer, see [Automation script](#automation-script).
+
+### Document
+
+Documents should have a name in the following format: `[SOLCODE]-[name]`
+
+They should be added in the Documents module in the following folder: `DataMiner Catalog/[SOLCATEGORY]/[SOLNAME]/[subfolders]`
+
+### Element
+
+Elements should have a name in the following format: `[SOLCODE] [name]`
+
+They should be added to the Surveyor in the following view structure: `DataMiner Catalog/[SOLNAME]`
+
+Elements should also be hidden where applicable.
+
+### Low-code app
+
+A low-code app should have the name of the solution.
+
+It should be placed in a category reflecting the solution market. This can be one of the following categories:
+
+- MediaOps
+- GridOps
+- SatOps
+- NetOps
+- IoTOps
+
+If none of the above are a match, you can use a custom category that does match your solution (e.g. "Business Administration" for the "People & Organization" low-code app).
+
+### Property
+
+Properties should have a name in the following format: `[SOLCODE] [name]`
+
+### Protocol/template
+
+A protocol or template should have a name in the following format: `[vendor] [SOLCODE] [name]`
+
+### Scheduled task
+
+A scheduled task should have a name in the following format: `[SOLCODE]_[name]`
+
+### Simulation
+
+A simulation should have a name in the following format: `[SOLCODE] [name]`
+
+It should be added to the folder `DataMiner Catalog|[SOLNAME]`.
+
+### User-Defined API
+
+A user-defined API should have a URL in the following format: `http(s)://<HOSTNAME>/api/custom/[SOLCODE]/[name]`
+
+For the name of the Automation script used for a user-defined API, see [Automation script](#automation-script).
+
+### View
+
+A view should have a name in the following format: `[name] ([SOLCODE])`
+
+It should be added to the Surveyor in the following view structure: `DataMiner Catalog/[SOLCATEGORY]/[SOLNAME]/[subviews]`
+
+### Visio file
+
+A Visio file should be named after the corresponding view or protocol.
