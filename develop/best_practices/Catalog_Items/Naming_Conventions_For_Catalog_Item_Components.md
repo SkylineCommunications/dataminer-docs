@@ -36,9 +36,11 @@ In the naming conventions, references will be made to the following abbreviation
 
 ### Automation script
 
-Automation scripts should have a name in the following format, where *[TYPE]* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention): `[SOLCODE]-[TYPE]-[name]`
+Generic Automation scripts and Automation scripts that are used in solutions should have a name in the following format, where *[TYPE]* is the type of the script as defined in [Github repository naming convention](xref:Using_GitHub_for_CICD#repository-naming-convention): `[SOLCODE]-[TYPE]-[name]`
 
-They should be added in the Automation module in the following folders, depending on the type of script:
+For scripts created by Skyline for a specific customer, the customer abbreviation should be used instead of [SOLCODE]. For a list of these abbreviations, refer to [DCP](https://dcp.skyline.be/Lists/Customers/AllItems.aspx) (internal link for Skyline employees only).
+
+Scripts should be added in the Automation module in the following folders, depending on the type of script:
 
 - For standalone scripts:
 
@@ -63,7 +65,7 @@ For the name of the Automation script used for an ad hoc data source, see [Autom
 
 ### Correlation rule
 
-Correlation rules should have a name in the following format: `[SOLCODE]-[name]`
+Correlation rules should have a name in the following format: `[SOLCODE] [name]`
 
 They should be added in the Correlation module in the following folder: `DataMiner Catalog/[SOLCATEGORY]/[SOLNAME]/[subfolders]`
 
@@ -81,7 +83,7 @@ For the name of the Automation script used for a data transformer, see [Automati
 
 ### Document
 
-Documents should have a name in the following format: `[SOLCODE]-[name]`
+Documents should have a name in the following format: `[SOLCODE] [name]`
 
 They should be added in the Documents module in the following folder: `DataMiner Catalog/[SOLCATEGORY]/[SOLNAME]/[subfolders]`
 
@@ -117,13 +119,13 @@ A protocol or template should have a name in the following format: `[vendor] [SO
 
 ### Scheduled task
 
-A scheduled task should have a name in the following format: `[SOLCODE]_[name]`
+A scheduled task should have a name in the following format: `[SOLCODE] [name]`
 
 ### Simulation
 
 A simulation should have a name in the following format: `[SOLCODE] [name]`
 
-It should be added to the folder `DataMiner Catalog|[SOLNAME]`.
+It should be added to the folder `DataMiner Catalog/[SOLNAME]`.
 
 ### User-Defined API
 
