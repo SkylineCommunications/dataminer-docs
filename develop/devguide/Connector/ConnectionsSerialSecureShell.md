@@ -188,7 +188,7 @@ The content of this parameter should be formatted like this: `key=C:\Users\User\
 </Param>
 ```
 
-This parameter also needs to be defined in the port settings. Note that all connections should have a PortSettings tag and placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute. Note also that the `Credentials/Username` tag is present, as this will indicate the user for the connection.
+This parameter also needs to be defined in the port settings. Note that all connections should have a PortSettings tag, and they have to be placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute. Note also that the `Credentials/Username` tag is present, as this will indicate the user for the connection.
 
 ```xml
 <PortSettings name="SSH Connection">
