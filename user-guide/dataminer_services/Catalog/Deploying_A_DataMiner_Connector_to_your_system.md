@@ -38,7 +38,9 @@ To deploy an item from the Catalog (e.g. a connector or package) to your DataMin
 
    > [!NOTE]
    >
-   > - If your organization does not have a license for the displayed item, the *Deploy trial* button will be displayed instead, which you can use to test the item in a staging environment. To get a license to deploy the item in a Production system, contact <licensing@skyline.be>.<!-- RN 39205 -->
+   > - If your organization does not have a license for the displayed item, the *Deploy trial* button will be displayed instead, which you can use to test the item in a staging environment.
+       By default, the trial is registered for a 3-month period. Towards the end of this period we will check if you were able to validate the trial and if there would be any interest in acquiring the connector going forward.
+   > - To get a license to deploy the item in a Production system, contact <licensing@skyline.be>.<!-- RN 39205 -->
    > - To be able to deploy an item to your DataMiner System, the DataMiner user profile linked to your dataminer.services user profile has to have the following permissions:
    >   - [Modules > System configuration > Agents > Install App packages](xref:DataMiner_user_permissions#modules--system-configuration--agents--install-app-packages).
    >   - [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute).
