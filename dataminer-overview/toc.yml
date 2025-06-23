@@ -3,7 +3,6 @@ items:
   topicUid: OverviewIndex
   items:
     - name: Introduction
-      topicUid: Overview_General_Introduction
       items:
         - name: About Skyline Communications
           topicUid: Overview_About_Skyline
@@ -13,11 +12,10 @@ items:
           topicUid: Overview_Principal_Advantages
         - name: Digital transformation
           topicUid: Digital_transformation
-          items:
-            - name: Open software platform
-              topicUid: Overview_Platform_Open_Platform
         - name: Standardized foundation
           topicUid: Overview_Standardized_Foundation
+        - name: Open software platform
+          topicUid: Overview_Platform_Open_Platform
         - name: References and use cases
           topicUid: Overview_References_and_use_cases
         - name: Compliance offering
