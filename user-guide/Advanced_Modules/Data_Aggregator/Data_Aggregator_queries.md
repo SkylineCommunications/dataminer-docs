@@ -63,4 +63,4 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
 
 1. Paste the copied JSON code into a new file and save it as a *.json* file.
 
-1. Add the path to this file to the Data Aggregator configuration file. See [GQI queries](xref:Data_Aggregator_settings#gqi-queries).
+1. Rename your *.json* file, place it in the correct folder, and modify the *Helper.json*. See [GQI queries](xref:Data_Aggregator_settings#gqi-queries) for detailed instructions.
