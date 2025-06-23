@@ -230,13 +230,13 @@ In a custom brand theme, the contact information in the General tab page of the 
 | Product name                 | DataMiner                    |
 | Company website              | `https://www.skyline.be`     |
 | Company email                | `info@skyline.be`            |
-| TechSupport name             | DataMiner Technical Support  |
-| TechSupport address (line1)  | Ambachtenstraat 33           |
-| TechSupport address (line 2) | B-8870 Izegem                |
-| TechSupport address (line 3) | Belgium                      |
-| TechSupport website          | `https://docs.dataminer.services/user-guide/Troubleshooting/Contacting_tech_support.html` |
-| TechSupport email            | `support@dataminer.services` |
-| Extranet link                | `https://collaboration.dataminer.services/` |
+| Support name                 | DataMiner Technical Support  |
+| Support address (line 1)     | Ambachtenstraat 33           |
+| Support address (line 2)     | B-8870 Izegem                |
+| Support address (line 3)     | Belgium                      |
+| Support website              | `https://aka.dataminer.services/contacting-tech-support/` |
+| Support email                | `support@dataminer.services` |
+| Extranet link                | `https://aka.dataminer.services/collaboration/` |
 | Online collaboration link    |                              |
 
 > [!NOTE]
