@@ -4,7 +4,7 @@ uid: Bidding_DataMiner
 
 # Bidding DataMiner
 
-If you bid DataMiner for a [Digital Transformation](xref:Overview_Platform_intro) program, here is what you need to take into account to build a winning proposal.
+If you bid DataMiner for a [Digital Transformation](xref:Digital_transformation) program, here is what you need to take into account to build a winning proposal.
 
 ## Value proposition
 
