@@ -6,8 +6,7 @@ uid: ConnectionsSerialSecureShell
 
 ## About SSH
 
-Secure Shell (SSH) is a protocol for secure remote login and other secure network services over an insecure network.
-It replaces older protocols like Telnet or rlogin.
+Secure Shell (SSH) is a protocol for secure remote login and other secure network services over an insecure network. It replaces older protocols like Telnet or rlogin.
 
 The specification of the SSH protocol (version 2) can be found in the following RFCs:
 
@@ -35,7 +34,7 @@ There are two methods of authentication when establishing an SSH connection:
 > Typically, both methods of authentication are implemented in a protocol to give the user the choice how to connect. When both methods are configured, public key authentication has precedence over password authentication, as this is considered more secure.
 
 > [!IMPORTANT]
-> Refer to [Differences with serial communication](xref:ConnectionsSerialSecureShell#differences-with-serial-communication) for an overview of some differences between regular serial connections and SSH connections in DataMiner.
+> Refer to [Differences with serial communication](#differences-with-serial-communication) for an overview of some differences between regular serial connections and SSH connections in DataMiner.
 
 ### Password authentication
 
@@ -140,7 +139,7 @@ Accompanying write parameters can be added so the credentials can be entered fro
 > [!IMPORTANT]
 > Use the [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string) option on the parameter holding the password. Using this option ensures greater security.
 
-The two parameters also need to be defined in the port settings. (Note that all connections should have a [PortSettings](xref:Protocol.Ports.PortSettings) tag and placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute.)
+The two parameters also need to be defined in the port settings. Note that all connections should have a [PortSettings](xref:Protocol.Ports.PortSettings) tag and placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute.
 
 ```xml
 <PortSettings name="SSH Connection">
@@ -189,7 +188,7 @@ The content of this parameter should be formatted like this: `key=C:\Users\User\
 </Param>
 ```
 
-This parameter also needs to be defined in the port settings. (Note that all connections should have a PortSettings tag and placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute.) Note also that the `Credentials/Username` tag is present as this will incidate the user under which to connect.
+This parameter also needs to be defined in the port settings. Note that all connections should have a PortSettings tag and placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute. Note also that the `Credentials/Username` tag is present, as this will indicate the user for the connection.
 
 ```xml
 <PortSettings name="SSH Connection">
@@ -232,9 +231,7 @@ To give the user the choice how to connect, both methods of authentication are t
 When both methods are configured, public key authentication has precedence over password authentication, as this is considered more secure.
 
 > [!NOTE]
-> The approach by specifying the parameter IDs for the identity file and/or credentials supports having an SSH connection that is not the main (first) connection in the connector.
-> There is another way to specify these parameters, which is now deprecated as it only supports connectors with a single SSH connection using the fixed port 22.
-> This involves adding the following options to different parameters: [ssh username](xref:Protocol.Params.Param.Type-options#ssh-username), [ssh password](xref:Protocol.Params.Param.Type-options#ssh-pwd), [ssh options](xref:Protocol.Params.Param.Type-options#ssh-options).
+> The approach where the parameter IDs are specified for the identity file and/or credentials supports having an SSH connection that is not the main (first) connection in the connector. There is another way to specify these parameters, which is now deprecated as it only supports connectors with a single SSH connection using the fixed port 22. This involves adding the following options to different parameters: [ssh username](xref:Protocol.Params.Param.Type-options#ssh-username), [ssh password](xref:Protocol.Params.Param.Type-options#ssh-pwd), and [ssh options](xref:Protocol.Params.Param.Type-options#ssh-options).
 
 #### Remarks
 
