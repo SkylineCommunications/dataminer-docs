@@ -14,6 +14,8 @@ With this component, you can:
 
 - Instantly assess the status of items, thanks to [conditional formatting](#customizing-grid-items), e.g. red may indicate a service is in alarm.
 
+- [Select a grid item](#using-the-grid-as-a-selector) to filter or update the content shown in other parts of your dashboard or app.
+
 - Interact with individual blocks to [trigger actions](#adding-actions-to-a-grid), such as opening a pop-up window with more details about an upcoming event.
 
 - Focus on items that meet specific criteria, with unmatched blocks [automatically dimmed](#highlighting-filtered-results) to reduce visual noise.
@@ -57,6 +59,18 @@ Each row in a query corresponds to an item in the grid.
 
 > [!TIP]
 > For an example of how to configure a GQI query that can be used as data input for a grid component, see [Tutorial: Getting started with the grid component](xref:Tutorial_Apps_Grid).
+
+## Using the grid as a selector
+
+You can use a grid component as an interactive selector, where users click grid items to control what is displayed in other components.
+
+In the example below, a grid filters a table component based on job state. By selecting a grid item, users can quickly switch between active, upcoming, completed, or all jobs.
+
+![Grid as a selector](~/user-guide/images/Grid_as_Selector.gif)<br>*Grid component and table component in DataMiner 10.5.7*
+
+To use a grid as a selector:
+
+1.
 
 ## Configuration options
 
