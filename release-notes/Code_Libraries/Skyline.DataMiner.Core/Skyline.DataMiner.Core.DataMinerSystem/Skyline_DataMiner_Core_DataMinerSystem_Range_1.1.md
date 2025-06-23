@@ -7,6 +7,81 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > [!NOTE]
 > Range 1.1.x.x is supported as from **DataMiner 10.1.11**. It makes use of a change introduced in DataMiner 10.1.11 that makes it possible to obtain table cell data using the primary key. In earlier DataMiner versions, the display key was needed to obtain this data.
 
+### 1.1.3.2
+
+> **Important Notice – Monitors and Proper Cleanup**
+>
+> New monitors have been added to support usage outside of Protocols (e.g., in Automation Scripts or Ad-Hoc DataSources). These allow external code to subscribe to state, name, or alarm level changes without relying on `SLProtocol`.
+> **However**, subscriptions created using these monitors must be explicitly stopped using the corresponding `StopMonitor` methods. Failing to do so may result in **hanging subscriptions** that persist in the system.
+> Only monitors on `IDms`, `IDmsElement`, and `IDmsTable` are supported for now. If you need monitor support elsewhere, please reach out to request it.
+
+#### New feature – Monitor support added for non-Protocol use cases \[ID 43228]
+
+The `IDms`, `IDmsElement`, and `IDmsTable` interfaces have been extended with new `Start*Monitor` and `Stop*Monitor` methods, enabling stateful event subscriptions **outside of Protocols** (e.g., in Ad-Hoc DataSources or external integrations). These are alternative APIs for monitoring DataMiner behavior in custom contexts without direct use of `SLProtocol`.
+
+The following types of monitors are supported:
+
+* **On `IDmsElement`**:
+
+  * `StartAlarmLevelMonitor` / `StopAlarmLevelMonitor`
+  * `StartNameMonitor` / `StopNameMonitor`
+  * `StartStateMonitor` / `StopStateMonitor`
+
+* **On `IDms`**:
+
+  * `StartElementAlarmLevelMonitor` / `StopElementAlarmLevelMonitor`
+  * `StartElementNameMonitor` / `StopElementNameMonitor`
+  * `StartElementStateMonitor` / `StopElementStateMonitor`
+  * `StartServiceStateMonitor` / `StopServiceStateMonitor`
+  * `StartViewStateMonitor` / `StopViewStateMonitor`
+
+* **On `IDmsTable`**:
+
+  * `StartValueMonitor` / `StopValueMonitor`
+  * Supports monitoring all or filtered columns using primary key index.
+
+Each monitor requires a `sourceId` to uniquely identify the subscription and a callback delegate (e.g., `Action<ElementStateChange>`). Subscriptions can be initiated using either a default timeout or a user-defined `TimeSpan`.
+
+**Example – Monitoring an element's alarm level and state:**
+
+```csharp
+string sourceId = Guid.NewGuid().ToString();
+
+element.StartAlarmLevelMonitor(sourceId, change =>
+{
+    Log($"{change.NewLevel} alarm raised on element {change.ElementId}");
+});
+
+element.StartStateMonitor(sourceId, change =>
+{
+    Log($"Element {change.ElementId} changed state to {change.NewState}");
+});
+```
+
+**Important**: When your use case is complete or the script is exiting, you must **explicitly stop the subscriptions**:
+
+```csharp
+element.StopAlarmLevelMonitor(sourceId);
+element.StopStateMonitor(sourceId);
+```
+
+If needed, overloads exist to specify a timeout and whether to forcefully remove the subscription:
+
+```csharp
+element.StopAlarmLevelMonitor(sourceId, TimeSpan.FromSeconds(10), force: true);
+```
+
+**Filtering table columns is supported** using the following overload on `IDmsTable`:
+
+```csharp
+table.StartValueMonitor(sourceId, pkIndex, new[] { 1001, 1003 }, change =>
+{
+    Log($"Row {change.PrimaryKey} changed.");
+});
+```
+
+This extension provides flexible, lightweight monitoring capabilities for many integration scenarios outside the traditional protocol-based flow.
+
 ### 1.1.3.1
 
 #### New feature - API added for retrieving element and service count on each Agent [ID 41795]
