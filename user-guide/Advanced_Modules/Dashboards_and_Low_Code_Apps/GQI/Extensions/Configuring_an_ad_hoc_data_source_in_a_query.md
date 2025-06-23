@@ -3,9 +3,24 @@ uid: Configuring_an_ad_hoc_data_source_in_a_query
 description: For an ad hoc data source, add a correctly configured script in the Automation app and select 'Get ad hoc data' and your source in the query config.
 ---
 
-# Configuring an ad hoc data source in a query
+# Ad hoc data sources
 
-When you create a query, you can also use an ad hoc data source (i.e. external data source).
+When you create a GQI query, many built-in data sources are available to use. However, sometimes that is not enough. Ad hoc data sources allow you to extend GQI by adding your own data source. Common scenarios include:
+
+- accessing data from external sources (database, csv files, etc.)
+- accessing data from DataMiner for which no built-in data source exists yet
+- specialized performance optimizations (caching, data stitching, ...)
+
+> [!IMPORTANT]
+> Prefer using built-in data sources and operators whenever possible to reduce complexity and maintainability. Great power comes with great responsability.
+
+## What is an ad hoc data source
+
+An ad hoc data source is a custom GQI data source that you can create yourself to extend queries with your own data. Each data source is defined in an **automation script library** by a **C# class** that implements specific [interfaces](xref:Ad_hoc_Building_blocks).
+
+Every time GQI requires information from the ad hoc data source, it will create a new instance of that class and call the relevant [life cycle](xref:Ad_hoc_Life_cycle) methods.
+
+## How to define an ad hoc data source
 
 > [!TIP]
 > If you are using [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio) with Visual Studio 2022, you can use a template in Visual Studio to create ad hoc data sources more easily. To do so:
@@ -16,7 +31,7 @@ When you create a query, you can also use an ad hoc data source (i.e. external d
 > 1. Under *Additional information*, fill in the name and author for the data source, and select the life cycle interfaces you want to implement.
 > 1. Click *Create*.
 
-To use an ad hoc data source in a query:
+To define a new ad hoc data source:
 
 1. In the Automation app, add a script containing a new class that implements the [*IGQIDataSource* interface](xref:GQI_IGQIDataSource).
 
