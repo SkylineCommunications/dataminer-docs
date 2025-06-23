@@ -139,7 +139,7 @@ Accompanying write parameters can be added so the credentials can be entered fro
 > [!IMPORTANT]
 > Use the [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string) option on the parameter holding the password. Using this option ensures greater security.
 
-The two parameters also need to be defined in the port settings. Note that all connections should have a [PortSettings](xref:Protocol.Ports.PortSettings) tag and placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute.
+The two parameters also need to be defined in the port settings. Note that all connections should have a [PortSettings](xref:Protocol.Ports.PortSettings) tag, and they have to be placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute.
 
 ```xml
 <PortSettings name="SSH Connection">
