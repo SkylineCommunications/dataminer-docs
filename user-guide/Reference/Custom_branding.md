@@ -237,7 +237,6 @@ In a custom brand theme, the contact information in the General tab page of the 
 | Support website              | `https://aka.dataminer.services/contacting-tech-support/` |
 | Support email                | `support@dataminer.services` |
 | Extranet link                | `https://aka.dataminer.services/collaboration/` |
-| Online collaboration link    |                              |
 
 > [!NOTE]
 > If a custom product name is specified, this will also replace the DataMiner tab name in the Logging app and the "(DataMiner)" root in the tree view pane of the Resources app.
