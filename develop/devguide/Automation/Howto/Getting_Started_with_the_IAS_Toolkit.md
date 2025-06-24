@@ -89,7 +89,7 @@ public class Script
 ```
 
 > [!NOTE]
-> From DataMiner 10.5.8/10.6.0 onwards, the comment ".FindInteractiveClient(" is no longer necessary. Instead, this can be defined with the [Interactivity](xref:DMSScript.Interactivity) tag of the script.<!-- RN 42954 -->
+> From DataMiner 10.5.9/10.6.0 onwards, the comment ".FindInteractiveClient(" is no longer necessary. Instead, this can be defined with the [Interactivity](xref:DMSScript.Interactivity) tag of the script.<!-- RN 42954 -->
 
 ## Building the UI
 
