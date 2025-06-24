@@ -4,6 +4,10 @@ uid: orchestrator_change_log
 
 # Orchestrator change log
 
+#### 24 June 2025 - Enhancement - Orchestrator 1.7.7 - Improved upgrade process
+
+Improvements have been made to the startup and shutdown of the DxM, which improves the upgrade process.
+
 #### 17 June 2025 - Enhancement - Orchestrator 1.7.6 - Improved upgrade process
 
 Improvements have been made to the shutdown of the DxM, which improves the upgrade process.
