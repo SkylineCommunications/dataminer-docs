@@ -28,16 +28,17 @@ DIS now uses:
 
 #### IDE
 
-##### Empty window when closing XML file [ID 43217]
+##### Text editor window would open empty when an XML file was closed [ID 43217]
 
-When an XML file was being closed, while a .cs file was still open, DIS would try to reopen the XML file which whould result in the text editor of the XML file to become empty. Now, when the file is re-opened, the editor for the XML file is no longer empty.
+When an XML file was being closed while a *.cs* file was still open, DIS would try to re-open the XML file, causing the text editor of the XML file to open empty.
 
-Also, an update has been done on the check that determines whether the opened file belongs to a DataMiner-specific solution (e.g. an Automation script solution, connector solution, etc.). Now, as soon as DIS sees the SDK used by the project is `Skyline.DataMiner.Sdk`, then DIS will consider this a DataMiner-specific solution.
+Also, the check that determines whether the opened file belongs to a DataMiner-specific solution (e.g. an Automation script solution, a connector solution, etc.) has been updated. From now on, as soon as DIS detects that the project is using `Skyline.DataMiner.Sdk`, it will consider this a DataMiner-specific solution.
 
-##### Exception thrown when switching branches [ID 43234]
+##### Problem when switching branches [ID 43234]
 
-When switching branches in a repo that contains a large DataMiner solution, DIS could throw an exception while trying to determine the type of project.
-The implementation of the method that determines the project type has now been updated so that it returns false instead of throwing an exception if the project type could not be determined because the project was not yet fully loaded after a branch switch.
+Up to now, when DIS switched branches in a repository that contains a large DataMiner solution, an exception could be thrown when an attempt was made to determine the type of project.
+
+From now on, when the project type could not be determined because the project was not fully loaded yet after a branch switch, the method that determines the project type will no longer throw an exception. Instead, it will return false.
 
 ## DIS 3.1.10
 
