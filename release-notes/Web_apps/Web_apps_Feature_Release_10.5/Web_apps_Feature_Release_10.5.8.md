@@ -250,3 +250,9 @@ From now on, whether the above-mentioned components are configured to visualize 
 1. Apply the data selection instructions in the URL (if any).
 1. If no data selection instructions could be found in the URL, select the first item if such an option is supported and enabled.
 1. Preserve the current selection when the data is refetched.
+
+#### Dashboards app & Low-Code Apps - GQI: Problem when a query was refetched [ID 43195]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When a query was refetched immediately after the data had been loaded, in some cases, the dashboard or low-code app could become unresponsive.
