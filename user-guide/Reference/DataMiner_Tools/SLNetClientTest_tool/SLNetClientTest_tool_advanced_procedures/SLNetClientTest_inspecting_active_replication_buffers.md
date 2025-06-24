@@ -64,7 +64,7 @@ When a replication buffer saves files to disk, those files are located in `C:\Sk
        | Command | Action |
        |--|--|
        | `flush:*` | Flushes all files |
-       | `flush:slc-h32-g06` | Flushes all files for Agent slc-h32-g06 |
+       | `flush:slc-h32-g06_*` | Flushes all files for Agent slc-h32-g06 |
        | `flush:slc-h32-g06_10.11.6.32_223_4` | Flushes files for a specific element on the Agent |
 
     1. In the *Type* field at the bottom, select *ReplicationBufferStats*.
