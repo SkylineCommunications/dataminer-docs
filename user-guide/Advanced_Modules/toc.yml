@@ -668,12 +668,12 @@ items:
                         topicUid: Ad_hoc_Tutorials_Satellites
                       - name: Building a GQI data source that retrieves data from a DMS
                         topicUid: Ad_hoc_Tutorials_GQIDMS
-              - name: Configuring a custom operator
+              - name: Custom operators
                 topicUid: GQI_Custom_Operator
                 items:
-                  - name: Building blocks of a custom operator
+                  - name: Building blocks
                     topicUid: CO_Building_blocks
-                  - name: Life cycle of a custom operator
+                  - name: Life cycle
                     topicUid: CO_Life_cycle
                   - name: Modifying links to DataMiner objects
                     topicUid: CO_Metadata
