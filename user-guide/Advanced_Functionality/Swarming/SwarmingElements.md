@@ -29,6 +29,9 @@ To swarm elements in DataMiner Cube:
 
 1. Click *Swarm*.
 
+> [!NOTE]
+> From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 42807-->, you can view which DMA is currently hosting an element in the *General* tab of the element's *Properties* window.
+
 ## Swarming elements via Automation
 
 To swarm elements via an Automation script, call the SwarmingHelper.Create method and indicate the elements that need to be swarmed and the ID of the node they need to be swarmed to.
