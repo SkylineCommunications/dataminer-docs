@@ -6,13 +6,13 @@ uid: ConnectionsIntroduction
 
 A protocol typically defines one or more connections through which the element running the protocol communicates with the device (or multiple devices). DataMiner supports different types of connections, such as SNMP, serial, HTTP, etc. A protocol can define multiple connections of different types (e.g. an HTTP connection and two SNMP connections).
 
-With the [Type](xref:Protocol.Type) tag, the protocol connections can be defined. The main connection is specified as the value of tye `Type` tag, e.g. `<Type relativeTimers="true">snmp</Type>`. In case multiple connections are used, the additional connections need to be defined in the [advanced](xref:Protocol.Type-advanced) attribute of the Type tag, indicating the type and name of each additional connection:
+With the [Type](xref:Protocol.Type) tag, the protocol connections can be defined. The main connection is specified as the value of the `Type` tag, e.g. `<Type relativeTimers="true">snmp</Type>`. In case multiple connections are used, the additional connections need to be defined in the [advanced](xref:Protocol.Type-advanced) attribute of the Type tag, indicating the type and name of each additional connection:
 
 ```xml
 <Type relativeTimers="true" options="unicode" communicationOptions="smartIPHeader" advanced="smart-serial:IP Connection - POST Messages;http:HTTP Connection - Master">http</Type>
 ```
 
-In the connector logic, it is sometimes necessary to specify to which connection particular functionality relates. This is done using an integer value denoting the connection ID. The main connection has ID 0, and every additional connection defined in the protocol corresponds to an incremented ID (For the example above, this means the main HTTP connection has ID 0, the smart-serial connection has ID 1 and the second HTTP connection has ID 2).
+In the connector logic, it is sometimes necessary to specify to which connection particular functionality relates. This is done using an integer value denoting the connection ID. The main connection has ID 0, and every additional connection defined in the protocol corresponds to an incremented ID. (For the example above, this means that the main HTTP connection has ID 0, the smart-serial connection has ID 1, and the second HTTP connection has ID 2.)
 
 By default, groups and actions that involve a connection always use the main connection (connection ID 0). In case another connection should be used, this must be specified in the protocol.
 
@@ -22,10 +22,10 @@ You can specify a connection on group level by using the [connection](xref:Proto
 <Groups>
   <Group id="1" connection="2">
     <Name>getXmlFile</Name>
-	 <Description>Get XML File</Description>
-	 <Content>
-	   <Session>1</Session>
-	 </Content>
+    <Description>Get XML File</Description>
+    <Content>
+      <Session>1</Session>
+    </Content>
   </Group>
 </Groups>
 ```
@@ -46,7 +46,7 @@ For some actions, you can for example use the [Type@nr](xref:Protocol.Actions.Ac
 A connection has a number of configurable port settings. It is possible to define default settings for connections. It is also possible to restrict the capabilities of a device port, and to define the format and range of the bus address, if any.
 
 > [!NOTE]
-> It is advised to always specify as many port settings as possible, because it greatly enhances the user-friendliness of the protocol during element creation.
+> We recommend specifying as many port settings as possible, because it greatly enhances the user-friendliness of the protocol during element creation.
 
 The [PortSettings](xref:Protocol.PortSettings) tag allows the configuration of the main connection. Using the [Ports/PortSettings](xref:Protocol.Ports.PortSettings) tag, the port settings of each additional connection can be configured.
 
