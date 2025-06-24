@@ -83,6 +83,14 @@ When a DataMiner upgrade was performed on a system containing a ModelHost and/or
 
 From now on, the ModelHost and Copilot DxMs will only be upgraded if the version in the upgrade package is newer than the installed version.
 
+#### GQI DxM: Enhanced life cycle behavior for ad hoc data sources and custom operators [ID 43186]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+Up to now, when an error occurred in the `OnInit` life cycle method, the `OnDestroy` life cycle method would still be called to clean up resources.
+
+From now on, when something goes wrong during the `OnInit` life cycle method, the `OnDestroy` life cycle method will no longer be called.
+
 ### Fixes
 
 #### Swarming: Information on where elements are being hosted could be incorrect [ID 42691]

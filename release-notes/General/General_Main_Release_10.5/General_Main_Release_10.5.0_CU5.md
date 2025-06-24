@@ -31,6 +31,14 @@ A number of enhancements have been made to the installation procedure of the GQI
 
 For example, during the installation, the following notice will no longer appear: `Could not stop the following processes (60s): DataMiner GQI`.
 
+#### GQI DxM: Enhanced life cycle behavior for ad hoc data sources and custom operators [ID 43186]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+Up to now, when an error occurred in the `OnInit` life cycle method, the `OnDestroy` life cycle method would still be called to clean up resources.
+
+From now on, when something goes wrong during the `OnInit` life cycle method, the `OnDestroy` life cycle method will no longer be called.
+
 ### Fixes
 
 #### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
