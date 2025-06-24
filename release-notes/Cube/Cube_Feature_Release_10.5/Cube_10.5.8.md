@@ -119,7 +119,7 @@ By default, the *About* box will now show the following updated company informat
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
-In order to prevent flickering, a number of enhancements have been made to the way in which trend graph data is loaded.
+In order to reduce flickering, a number of enhancements have been made to the way in which trend graph data is loaded.
 
 #### Alarm Console: Enhanced performance when opening alarms [ID 43207]
 
