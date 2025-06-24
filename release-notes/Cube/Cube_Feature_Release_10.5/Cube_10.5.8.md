@@ -115,6 +115,18 @@ By default, the *About* box will now show the following updated company informat
 - *DataMiner Technical Support* will now link to [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support).
 - *Contact us* will now link to <support@dataminer.services>.
 
+#### Trending: Enhanced loading of trend graph data [ID 43193]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In order to prevent flickering, a number of enhancements have been made to the way in which trend graph data is loaded.
+
+#### Alarm Console: Enhanced performance when opening alarms [ID 43207]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+Because of a number of enhancements, overall performance has increased when opening alarms in the Alarm Console.
+
 ### Fixes
 
 #### Trending: Trend data between two gaps would incorrectly not be displayed [ID 42909]
