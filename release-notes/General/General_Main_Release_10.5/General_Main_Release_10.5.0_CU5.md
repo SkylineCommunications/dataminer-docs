@@ -83,6 +83,16 @@ When you stopped an element with a GPIB connection in an error state, in some ca
 
 When a user requested a mobile visual overview, in some cases, an incomplete image could be returned.
 
+#### Automation: Problem when trying to publish an Automation script with an invalid name via DIS [ID 42974]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When, in DataMiner Integration Studio (DIS), you tried to publish an Automation script of which the name contained leading and/or trailing spaces, up to now, the script would initially be added, but it would immediately be removed from the system. Also, the following error message would be added to the SLAutomation log file:
+
+`Failed to load info for script 'XXX'`
+
+From now on, when you publish an Automation script via DIS, its name will be validated. If the name is invalid, the publish action will be aborted.
+
 #### GQI: GQI DxM and SLHelper could leak memory [ID 43028]
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
@@ -108,14 +118,68 @@ From now on, the maximum number of repetitions defined for `multipleGetBulk` wil
 
 In some cases, SLHelper could leak memory because SLNet connections used by GQI extensions were not properly cleaned up.
 
+#### Failover: Problem when synchronizing the ClusterEndpoints.json files [ID 43079]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+In large DataMiner Systems, in some cases, an issue could occur when the *ClusterEndpoints.json* files were being synchronized, causing the DataMiner Agents to keep on synchronizing indefinitely.
+
 #### Problem with masked alarms when the alarm template was removed or when the parameters were no longer monitored [ID 43098]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
 
 When an element had masked alarms, the alarm status of the parameters in question would incorrectly remain masked when the alarm template was removed from the element or when conditional alarm monitoring would cause the parameters to no longer be monitored.
 
+#### DataMiner upgrade: VerifyClusterPorts and VerifyNatsCluster prerequisites would fail when upgrading from DataMiner 10.4.0-10.4.4 to 10.5.0 CU3, 10.5.6, or 10.5.7 [ID 43099]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+When you upgraded directly from DataMiner 10.4.0, 10.4.1, 10.4.2, 10.4.3 or 10.4.4 to 10.5.0 CU3, 10.5.6, or 10.5.7, the upgrade process would fail, and the following lines would be added to the update log:
+
+```txt
+DataMiner Agent: 4 error(s) and 0 notice(s)
+    - Prerequisite VerifyClusterPorts.dll failed: Exception: Exception has been thrown by the target of an invocation.
+    - Prerequisite VerifyNatsCluster.dll failed: Could not load file or assembly 'System.Text.Json, Version=9.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)
+    - Prerequisite VerifyNATSMigrationPrerequisites.dll failed: Exception: This BPA cannot run on 10.4.0-CU4
+- One or more prerequisites failed
+```
+
+Some prerequisite checks included in the upgrade to 10.5.0 [CU3], 10.5.6, and 10.5.7 rely on a version of the `System.Text.Json` library that is not present in 10.4.0. This caused the VerifyClusterPorts and VerifyNatsCluster prerequisites to fail during the upgrade process.
+
+#### DataMiner upgrade: Problem with incorrectly set file path in VerifyClusterPorts prerequisite [ID 43101]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+Up to now, the VerifyClusterPorts prerequisite would have its file path incorrectly set to null. This would cause the system to always check the configuration file of the SLNet-managed NATS solution, even in situation where it had to check the configuration file of the BrokerGateway-managed NATS solution.
+
+#### Problem when deleting or renaming services [ID 43109]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
+
+When a service was deleted, in some cases, it would only be fully deleted on the DataMiner Agent that hosted it.
+
+Also, when a service was renamed, in some cases, all DataMiner Agents except the one hosting it could start to experience issues because the old service had not been properly deleted.
+
+#### GQI DxM: Problem when setting up an SLNet connection for a GQI query to be executed without user context [ID 43128]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+When the GQI DxM had to set up an SLNet connection within an ad hoc data source for a GQI query to be executed without user context, up to now, the following error would be thrown:
+
+`Cannot clone non-authenticated or non-regular connections.`
+
+From now on, when such an SLNet connection has to be set up, the GQI DxM will set up a system connection with Administrator privileges.
+
 #### GQI: Deserialization issue when querying DOM instances via the GQI DxM [ID 43132]
 
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
 When querying DOM instances with service definition fields via the GQI DxM, up to now, the `ServiceDefinitionFieldDescriptor` would not deserialize correctly coming from SLNet, causing an exception to be thrown in GQI.
+
+#### Web.config file could contain an outdated configuration [ID 43159]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, the `C:\Skyline DataMiner\Webpages\API\Web.config` file could contain an outdated configuration, causing the Web Services API to not start up, and the web apps to throw the following error:
+
+`The type initializer for 'Skyline.DataMiner.Web.Common.v1.TransportAgnosticInterface' threw an exception.`

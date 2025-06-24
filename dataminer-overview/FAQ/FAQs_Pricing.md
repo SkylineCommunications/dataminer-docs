@@ -2,16 +2,16 @@
 uid: FAQs_Pricing
 ---
 
-# Questions related to commercial models
+# Pricing
 
-## General
+## Commercial models
 
 ### What commercial and deploy models does Skyline offer?
 
 Commercial models define how you pay for software and determine ownership and usage rights. We offer two models:
 
-- Usage-based services
-- Perpetual-use licenses
+- [Usage-based services](xref:Pricing_Usage_based_service)
+- [Perpetual-use licenses](xref:Pricing_Perpetual_Use_Licensing)
 
 Deploy or delivery models determine how that same software is deployed. We offer three models:
 
@@ -40,7 +40,7 @@ Yes. Licensing and usage are measured at the DMS (DataMiner System) level. An or
 
 ### Can different commercial models exist in the same DataMiner System?
 
-Yes, but limited. If a DMS has a perpetual license, it can only use dataminer.services and STaaS from the usage services.
+Yes, but limited. If a DMS has a perpetual license, it can use Collaboration Services, Unmanaged Objects, and STaaS from the usage services.
 
 ### Can I transition my perpetual licenses into a subscription?
 
@@ -50,6 +50,21 @@ Yes. Your Account Manager will be able to provide more information and assist yo
 
 No.
 
-### Can I use Professional Services credits in exchange for DataMiner credits?
+## Professional Service credits
+
+### What is the difference between buying specific product codes (e.g. DtaMiner Fundamentals Training) and credits?
+
+There is no difference in pricing: whether you buy a specific product or an equivalent number of credits, the cost is the same. The difference is **flexibility**:
+
+- **Service credits** can be used for **any** type of service.
+- **Product codes** can only be used for that specific service.
+
+Procurement teams often need to define budgets before knowing exactly what services are needed. This makes credits a more practical option. Product-specific purchases often result in unused services or scope changes, which create administrative overhead (change orders, new quotes, etc.).
+
+### Can I use Professional Service credits in exchange for DataMiner credits?
 
 No.
+
+### Can I order specific product codes instead of credits?
+
+Yes. You can always request a quote from the Skyline Sales Team.

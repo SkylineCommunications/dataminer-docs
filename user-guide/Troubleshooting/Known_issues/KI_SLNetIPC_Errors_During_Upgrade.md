@@ -41,7 +41,7 @@ The monitor should now show all the events.
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.4.0 [CU14], 10.5.0 [CU2], or 10.5.5.<!-- RN 42114 -->
 
 ## Description
 

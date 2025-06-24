@@ -20,7 +20,6 @@ Once you have downloaded the [pre-installed virtual hard disk](https://community
 1. [Create the VM](#creating-the-vm).
 1. [Connect and start the VM](#connecting-and-starting-the-vm).
 1. [Configure DataMiner](#configuring-dataminer).
-1. Optionally, [switch from subscription mode to a perpetual-license setup](#switching-from-subscription-mode-to-perpetual-license).
 
 > [!NOTE]
 >
@@ -82,11 +81,14 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 
 > [!IMPORTANT]
 >
-> - The configuration wizard takes care of the automatic license and data storage configuration; however, this requires a connection to the internet. If you need to install DataMiner **offline**, you will not be able to use this wizard. Instead, the license and data storage configuration will need to be done manually:
+> The configuration wizard takes care of the automatic license and data storage configuration. However, if you **do not want a default installation**, you may not want to use this automatic configuration:
+>
+> - If you need to install DataMiner **offline**, the license and data storage configuration will need to be done manually:
 >   - For the license, see [Permanent license](xref:Permanent_license).
 >   - For the data storage configuration, please refer to [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
-> - If you intend to restore a **backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip** the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](#restoring-a-backup-onto-the-virtual-hard-disk).
-> - If you are installing a **Failover** Agent, **skip** the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](#configuring-the-new-dataminer-agent-as-a-new-agent-in-a-failover-pair).
+> - The procedure below will deploy DataMiner in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. To immediately install DataMiner with a **perpetual license**, you will need to configure the license and data storage manually, similar to an offline installation. To switch to a [perpetual license](xref:Pricing_Perpetual_Use_Licensing) after the initial installation, see [Switching from subscription mode to perpetual license](xref:Switching_from_subscription_mode_to_perpetual_license). To switch to an offline demo license, see [Switching from subscription mode to an offline demo license](xref:Switching_from_subscription_mode_to_offline_demo).
+> - If you intend to restore a **backup** coming from another machine because of e.g. a hardware migration or during disaster recovery, **skip** the configuration below and follow the steps under [Restoring a backup onto the virtual hard disk](xref:Restoring_backup_on_newly_installed_DMA).
+> - If you are installing a **Failover** Agent, **skip** the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](xref:Configuring_a_new_DMA_in_Failover_pair). These steps are the same as for an installation using the DataMiner Installer.
 
 > [!NOTE]
 > If you have accidentally closed the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.ps1`. Make sure to run it with administrator privileges.
@@ -134,7 +136,7 @@ Follow the below steps to configure your DataMiner Agent:
 
 ## WSL management
 
-If you selected the option *Self-hosted - Local storage*, which is not recommended and should only be done for **testing and staging environments**, that means you are running a WSL container for your storage.
+If you selected the option *Self-hosted - Local storage*, which is not recommended and should only be done for **testing and staging environments**, that means you are running a WSL container for the Cassandra and OpenSearch storage nodes used by DataMiner. If you selected a different storage option, the information below is not relevant for you.
 
 If you want to manage the configuration of Cassandra or OpenSearch for this setup, you should **connect to the container**. To do so, you will need to open a command prompt using the user account used for the installation (by default the Administrator account) and run the `wsl` command. This way, you should automatically be logged in and connected to the WSL container.
 
@@ -176,110 +178,3 @@ You can change the admin password by following these steps:
 1. Update the user account file: `sudo vi /etc/opensearch/opensearch-security/internal_users.yml`
 
 1. Update the hash in the admin user account with your hashed password.
-
-## Restoring a backup onto the virtual hard disk
-
-If you want to restore a backup coming from another machine because of e.g. a hardware migration or during disaster recovery, after you have created and connected the VM, instead of the configuration steps detailed above, follow the steps below:
-
-1. Restore the backup in the same way as for a regular DataMiner Agent. See [Restoring a DataMiner Agent using the DataMiner Taskbar Utility](xref:Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility).
-
-1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-
-1. Open the `C:\Skyline DataMiner\` folder.
-
-1. Remove all *\*.lic* files, if any.
-
-1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-
-1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
-
-1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the *Request.lic* file.
-
-1. Wait until you receive a *dataminer.lic* file from Skyline.
-
-1. When you have the *dataminer.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
-
-1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-
-## Configuring the new DataMiner Agent as a new Agent in a Failover pair
-
-If the new Agent will be paired with an existing Agent in a Failover setup, after you have created and connected the VM, instead of the configuration steps detailed above:
-
-1. Make sure both the existing and new DMA are prepared and the necessary prerequisites are met, as detailed under [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
-
-   > [!IMPORTANT]
-   > Do not start DataMiner on the new DMA before this preparation is fully done.
-
-1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-
-1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
-
-1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the ID of the existing DMA and the *Request.lic* file.
-
-   In your email, mention that it concerns a Failover Agent for an existing Agent.
-
-1. Wait until you receive either a *dataminer.lic* or *response.lic* file from Skyline.
-
-1. When you have the *dataminer.lic* or *response.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
-
-1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-
-Once the new DMA is running, continue with the [Failover configuration in Cube](xref:Failover_configuration_in_Cube).
-
-## Switching from subscription mode to perpetual license
-
-When you deploy a DataMiner Agent using the pre-installed DataMiner Virtual Hard Disk, your system will run in subscription mode and get licensed automatically. Part of this process involves getting a DataMiner ID, which uniquely identifies your DataMiner Agent.
-
-If you have purchased a [permanent license](xref:Pricing_Perpetual_Use_Licensing), follow the steps below to convert your subscription installation to a perpetual-license one:
-
-1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-
-1. Open the `C:\Skyline DataMiner\` folder.
-
-1. Remove all *\*.lic* files, if any.
-
-1. Open the *DataMiner.xml* file.
-
-1. Find the *&lt;DataMiner&gt;* tag and locate the *id* attribute.
-
-1. Note down the value in the *id* attribute.
-
-1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-
-1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
-
-1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the ID and the *Request.lic* file.
-
-   In your email, mention that it concerns a conversion from a subscription to a perpetual license.
-
-1. Wait until you receive a *dataminer.lic* file from Skyline.
-
-1. When you have the *dataminer.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
-
-1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-
-## Switching from subscription mode to an offline demo license
-
-When you deploy a DataMiner Agent using the pre-installed DataMiner Virtual Hard Disk, your system will automatically be licensed and run in subscription mode. A DataMiner Agent running in subscription mode **has to remain connected** to [dataminer.services](xref:about_dataminer_services) to keep it licensed. If for some reason you cannot keep your Agent connected to [dataminer.services](xref:about_dataminer_services), it will automatically shut down after 1 month.
-
-If after this period you want to extend the usage of the system, you can convert your subscription installation to an offline demo installation:
-
-1. [Stop the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-
-1. Open the `C:\Skyline DataMiner\` folder.
-
-1. Remove all *\*.lic* files, if any.
-
-1. [Start the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).
-
-1. After a short while, a *Request.lic* file should appear in the `C:\Skyline DataMiner\` folder.
-
-1. Contact [dataminer.licensing@skyline.be](mailto:dataminer.licensing@skyline.be) and provide them with the *Request.lic* file.
-
-   In your email, mention that it concerns a conversion from a subscription to a demo license.
-
-1. Wait until you receive a *Response.lic* file from Skyline.
-
-1. When you have the *Response.lic* file, copy it to the `C:\Skyline DataMiner\` folder.
-
-1. [Restart the DMA using the DataMiner Taskbar Utility](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility).

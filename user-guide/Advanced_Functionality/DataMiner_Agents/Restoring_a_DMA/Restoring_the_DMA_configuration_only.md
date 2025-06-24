@@ -13,4 +13,4 @@ If you do not use the Taskbar Utility to restore the DMA, you can restore the DM
 1. In the `C:\Skyline DataMiner\` directory, delete *DMS.xml*.
 
 > [!NOTE]
-> If you are using [STaaS](xref:STaaS), there is no need to restore the database. If you want to restore your DataMiner Agent on a new (virtual) machine, contact <staas@dataminer.services> to make sure your new setup is connected correctly.
+> If you are using [STaaS](xref:STaaS), there is no need to restore the database. If you want to restore your DataMiner Agent on a new (virtual) machine, contact <support@dataminer.services> to make sure your new setup is connected correctly.

@@ -6,7 +6,9 @@ uid: BrokerGateway_Migration
 
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the "NATSMigration" tool. Prior to this, starting from DataMiner 10.5.0/10.5.2, this feature is available in [soft launch](xref:SoftLaunchOptions).
 
-Note that prior to DataMiner 10.5.0 [CU4]/10.5.7, this procedure requires a DataMiner restart.<!-- RN 42930 -->
+Once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#running-an-automatic-migration) or [run the migration manually](#running-the-migration-manually).
+
+Note that prior to DataMiner 10.5.0 [CU4]/10.5.7, this migration requires a DataMiner restart.<!-- RN 42930 -->
 
 From DataMiner 10.6.0 onwards, this migration will happen automatically during a DataMiner upgrade.
 
@@ -16,7 +18,19 @@ Before you start the migration, the entire cluster must have been running smooth
 
 If the BPA succeeds, the system is all set to migrate.
 
-## Running the migration
+## Running an automatic migration
+
+If you are using DataMiner 10.5.0 [CU4]/10.5.7 or higher, the easiest way to run the migration is by means of an upgrade package available on our Dojo Community platform:
+
+1. Make sure the [prerequisites](#prerequisites) are met.
+
+1. Download and run the [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package.
+
+   This will automatically run `C:\Skyline DataMiner\Tools\NATSMigration.exe` with the default settings on all Agents in the cluster. The DataMiner Agents will not be restarted.
+
+## Running the migration manually
+
+For DataMiner versions prior to DataMiner 10.5.0 [CU4]/10.5.7, we recommend running the migration manually:
 
 1. Make sure the [prerequisites](#prerequisites) are met.
 
@@ -135,9 +149,11 @@ The following actions will be executed during the migration, in the indicated or
 
 ## Migrating back to the old system
 
-After you have migrated to BrokerGateway, to go back to the old system, follow the same procedure as when you [run the migration](#migrating-to-brokergateway), but use the `uninstall` command instead of the `install` command.
+After you have migrated to BrokerGateway, there are two different ways you can go back to the old system:
 
-The same restrictions apply as for the migration: this must happen on all DataMiner Agents in the cluster at the same time.
+- Download and run the package [NATSMigrationRollback.dmupgrade](https://community.dataminer.services/download/natsmigrationrollback-dmupgrade/).
+
+- Follow the same procedure as when you [run the migration manually](#running-the-migration-manually), but use the `uninstall` command instead of the `install` command. In this case, the same restrictions apply as for the migration: this must happen on all DataMiner Agents in the cluster at the same time.
 
 ## FAQ
 
