@@ -64,45 +64,11 @@ Each row in a query corresponds to an item in the grid.
 
 You can use a grid component as a dynamic selector, i.e. a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is controlling what is shown in another component, but selected values can also serve as input for scripts, queries, or conditional behavior.
 
+When you select an item in the grid, the selected data (*All available data* > *Components* > *Grid #* > *Selected items* > *Tables*) becomes automatically available for use in other components.
+
 In the example below, a grid filters a table component based on job state. By selecting a grid item, users can quickly switch between active, upcoming, completed, or all jobs.
 
 ![Grid as a selector](~/user-guide/images/Grid_as_Selector.gif)<br>*Grid component and table component in DataMiner 10.5.7*
-
-To configure a grid component as a dynamic selector, you can:
-
-- [Configure an on-click action](#adding-actions-to-a-grid) using the Template Editor, or
-
-- Link the query used in another component to the grid selection:
-
-   1. Select an item in your grid component.
-
-   1. In the *Data* pane, go to *Queries* and locate the query used in the component you want to link to the grid selection.
-
-   1. Click the pencil icon to start editing the query.
-
-   1. Adjust the query and link to the grid selection where relevant, depending on the result you want to achieve.
-
-      For example, if you want to control what content is displayed in the linked component:
-
-      1. At the end of the query, click *Select operator* and choose *Filter* from the dropdown list.
-
-      1. Select the column you want to filter based on the selected grid value.
-
-      1. Choose a filter method, such as `contains` or `equals`.
-
-      1. Under *Value*, click the ![Link to data](~/user-guide/images/Link_to_Data.png) icon.
-
-      1. In the *Link to* pop-up window, configure the following settings:
-
-         - *Data*: Select the appropriate grid component.
-
-         - *Type*: `Tables` (set automatically).
-
-         - *Property*: Select the query column from the grid you want to filter by.
-
-         - *Empty data shows*: Set to `everything` to show all data when no grid item is selected.
-
-   1. Click the pencil icon again to stop editing the query.
 
 ## Configuration options
 
