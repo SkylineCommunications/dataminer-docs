@@ -18,11 +18,11 @@ To request a cost estimation, follow the procedure below:
    > - When you run the Automation script and there are Failover pairs in the cluster, make sure the **main Failover Agents** (i.e. the first Agent in the Failover configuration) are the **active** ones. Otherwise, the Automation script will not function correctly.
    > - To do the cost estimation for a **cluster**, you only need to execute the script on **one Agent**.
 
-1. Initialize the replication:
+1. Initialize the Test Run:
 
-   1. Optionally, configure a proxy for the replication if necessary. This is supported from DataMiner 10.4.6 onwards.
+   1. Optionally, configure a proxy for the test run if necessary. This is supported from DataMiner 10.4.6 onwards.
 
-   1. Click *Start Replication* to initialize the replication.
+   1. Click *Start Test Run* to initialize the test run.
 
 1. Let the script run for 24 hours without restarting the DataMiner System (DMS).
 
@@ -30,9 +30,9 @@ To request a cost estimation, follow the procedure below:
 
    1. Locate the *CloudStorageMigration* script and [execute the script](xref:Manually_executing_a_script).
       
-   1. Click *Stop Migration/Replication* to stop the replication.
+   1. Click *Stop Migration/Replication* to stop the test run.
       
-      1. Optionally, you can also restart your DMS to stop the replication.
+      1. Optionally, you can also restart your DMS.
 
    > [!NOTE]
    >
