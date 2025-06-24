@@ -32,7 +32,7 @@ DIS now uses:
 
 When an XML file was being closed while a *.cs* file was still open, DIS would try to re-open the XML file, causing the text editor of the XML file to open empty.
 
-Also, the check that determines whether the opened file belongs to a DataMiner-specific solution (e.g. an Automation script solution, a connector solution, etc.) has been updated. From now on, as soon as DIS detects that the project is using `Skyline.DataMiner.Sdk`, it will consider this a DataMiner-specific solution.
+Also, the check that determines whether the opened file belongs to a DataMiner-specific solution (e.g. an Automation script solution, a connector solution, etc.) has been updated. From now on, as soon as DIS detects that the project is using the `Skyline.DataMiner.Sdk` SDK, it will consider this a DataMiner-specific solution.
 
 ##### Problem when switching branches [ID 43234]
 
