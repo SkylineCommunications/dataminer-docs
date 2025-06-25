@@ -72,7 +72,14 @@ See also: [Swarming](xref:Swarming).
 
 ### What backup policy does a DaaS system have?
 
-For more information, see [Data resilience and backups](xref:STaaS_features#data-resilience-and-backups).
+- **Daily backups:** DaaS performs daily backups and these are kept for 7 days.
+
+- **Weekly backups:** DaaS performs additional weekly backups (taken on Monday) and stores these for 4 weeks.
+
+- **Data restoration and support:** In the event a rollback is necessary, our support team will assist you. To submit a rollback request, please contact <daas@dataminer.services>.
+
+> [!NOTE]
+> For the STaaS database layer, see [Data resilience and backups](xref:STaaS_features#data-resilience-and-backups).
 
 ### Is it possible to make a local backup of all data?
 
