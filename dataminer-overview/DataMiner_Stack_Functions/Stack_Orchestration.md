@@ -28,7 +28,7 @@ With DataMiner Virtual Functions, the elementary functional capabilities of a co
 >
 > - [Virtualization Engine](xref:srm_stack#virtualization-engine)
 > - [SRM use cases](xref:srm_use_cases)
-> - Various SRM-related videos are available in the [video library](https://community.dataminer.services/videos/?_sf_s=SRM) ![Video](~/user-guide/images/video_Duo.png)
+> - Various SRM-related videos are available in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=SRM) ![Video](~/user-guide/images/video_Duo.png)
 > - Various SRM use cases with screenshots are available in the [use case library](https://community.dataminer.services/use-cases/?_sf_s=SRM)
 > - [Free DataMiner Orchestration and Automation training](https://community.dataminer.services/learning/courses/orchestration-automation/)
 
@@ -57,8 +57,8 @@ DataMiner Scheduler provides a wealth of features and capabilities, including bu
 >
 > - [Scheduling Engine](xref:srm_stack#scheduling-engine)
 > - [SRM use cases](xref:srm_use_cases)
-> - Demo video: [How To Schedule your Resources using SRM](https://community.dataminer.services/video/how-to-schedule-your-resources-using-srm/) ![Video](~/user-guide/images/video_Duo.png)
-> - Various Scheduler-related videos are available in the [video library](https://community.dataminer.services/videos?_sf_s=schedule) ![Video](~/user-guide/images/video_Duo.png)
+> - Demo video: [How To Schedule your Resources using SRM](https://www.youtube.com/watch?v=BNK0RhlxwEc) ![Video](~/user-guide/images/video_Duo.png)
+> - Various Scheduler-related videos are available in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=schedule) ![Video](~/user-guide/images/video_Duo.png)
 > - Various Scheduler use cases with screenshots are available in the [use case library](https://community.dataminer.services/use-cases/?_sf_s=scheduler)
 > - [Free DataMiner Orchestration and Automation training](https://community.dataminer.services/learning/courses/orchestration-automation/)
 
@@ -80,7 +80,7 @@ Combined with DataMiner's integrated [Scheduler](xref:Stack_Orchestration#schedu
 > - [The Basics of DataMiner Automation Snippets](https://www.youtube.com/watch?v=i5_FLER_-tE&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
 > - [Automation Engine](xref:srm_stack#automation-engine)
 > - [SRM use cases](xref:srm_use_cases)
-> - Various Automation-related videos are available in the [video library](https://community.dataminer.services/videos/?_sf_s=automation), including a 60-min. [Experts & Insights webinar](https://community.dataminer.services/video/experts-insights-dataminer-automation-engine/) ![Video](~/user-guide/images/video_Duo.png)
+> - Various Automation-related videos are available in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=automation), including a 60-min. [Experts & Insights webinar](https://community.dataminer.services/video/experts-insights-dataminer-automation-engine/) ![Video](~/user-guide/images/video_Duo.png)
 > - Various SRM use cases with screenshots are available in the [SRM use case library](https://community.dataminer.services/use-cases/?_sf_s=SRM)
 > - [Free Orchestration and Automation training](https://community.dataminer.services/learning/courses/orchestration-automation/)
 > - [The Automation module in DataMiner Cube](xref:automation)
