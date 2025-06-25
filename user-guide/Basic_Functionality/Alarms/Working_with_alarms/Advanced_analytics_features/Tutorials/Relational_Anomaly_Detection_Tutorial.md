@@ -9,13 +9,13 @@ This tutorial showcases DataMiner's [relational anomaly detection (RAD)](xref:Re
 Estimated duration: 25 minutes.
 
 > [!NOTE]
-> The content and screenshots for this tutorial have been created in DataMiner 10.5.4.
+> The content and screenshots for this tutorial have been created in DataMiner 10.5.7.
 
 ## Prerequisites
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-- DataMiner 10.5.4 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
+- DataMiner 10.5.7 or higher with [Storage as a Service (STaaS)](xref:STaaS) (recommended) or a [self-managed Cassandra-compatible database and indexing database](xref:Supported_system_data_storage_architectures).
 
 - Relational Anomaly Detection is enabled (in DataMiner Cube: *System Center* > *System settings* > *analytics config*).
 
@@ -143,7 +143,7 @@ The top table in the RAD Manager app should now display the group you have creat
 
    The *Group Information* table will now display the parameters included in your group.
 
-1. Keep Ctrl pressed and select the *PA2* and *PA3 Output Power* parameters in the *Group Information* table.
+1. In the *Group Information* table, select both the *PA2* and *PA3 Output Power* parameters by keeping Ctrl pressed when you click them.
 
 1. Below the table, investigate the trend and anomaly score:
 
@@ -153,38 +153,33 @@ The top table in the RAD Manager app should now display the group you have creat
 
    The *anomaly score* expresses how strongly the model believes that the relations between the parameters are broken at any given time. The increase in the anomaly score is what led the system to trigger the RAD event in the Alarm Console.
 
+   ![Trend and anomaly score graphs](~/user-guide/images/tutorial_RAD_trend_and_anomaly_score.png)
+
 ## Step 5: Tweak the advanced configuration
 
-Despite the fact that the algorithm is fully automatic, you can still influence its behavior by doing some advanced configurations.
-Let's dive deeper into the advanced configurations of the RAD Manager and learn how we can suppress events created as a result of a short maintenance or cleaning operations.
+Despite the fact that the algorithm is fully automatic, you can still influence its behavior by tweaking some advanced options.
+In this step, you will learn how you can for instance suppress events created as a result of a short maintenance or cleaning operations.
 
-1. In the RAD Manager, create a new group by clicking the *Add Group* button.
-
-   Note that the pop-up shows three checkboxes.
-
-   - Checking the *Update model on new data* checkbox means that the model will be updated when new data is available.
-
-     This is useful when monitoring parameters that you would like to see changing over time: the model can then adapt to this new behavior. The idea is that only more pronounced breaks in relations will be detected. If your relation is static (e.g. 2 parameters that should remain equal, forever), it is best to keep this checkbox unchecked.
-
-   - The "Override default anomaly threshold" allows you to make the algorithm more sensitive (lower value) or less sensitive (higher value) to anomalies. The default value is 3.
-
-   - Finally, the *Override default minimum anomaly duration* is a setting similar to [Alarm hysteresis](xref:Alarm_hysteresis). It allows you to specify how long the relation should be broken before an event is triggered. The default value is 5 minutes.
+1. In the RAD Manager, create a new group by clicking the *Add Group* button in the header bar.
 
 1. In the *Group name* field, enter *PA Maintenance*.
 
 1. Select the *RAD - Commtia LON 2* element this time.
 
-1. As before, select the *Output Power* parameter and filter on *PA**. Click *Add*.
+1. As before, select the *Output Power* parameter, filter on `PA*`, and click *Add*.
 
-1. Select the *Tx Amplifier Output Power* parameter and keep the *Display key filter* empty. Click *Add*.
+1. Select the *Tx Amplifier Output Power* parameter, keep the *Display key filter* empty, and click *Add*.
 
 1. Select the *Override default minimum anomaly duration* checkbox and fill in the value *15*.
 
-   This means that the relation should be broken for at least 15 minutes before an event is triggered. It should look like this
+   This means that the relation should be broken for at least 15 minutes before an event is triggered.
 
    ![Configuration suppressing short maintenance operations](~/user-guide/images/tutorial_RAD_Maintenance_Configuration.jpg)
 
-1. Click Add group.
+   > [!TIP]
+   > Two other checkboxes are also available to tweak the group configuration. For more information on these options, refer to [Options for parameter groups](xref:Relational_anomaly_detection#options-for-parameter-groups).
+
+1. Click *Add group*.
 
 1. In Cube, open the *RAD - Commtia LON 2* element.
 
@@ -196,33 +191,33 @@ Let's dive deeper into the advanced configurations of the RAD Manager and learn 
 
    This will create a **short** deviation between the *PA2* and *PA3 output power*.
 
-1. Notice that no new Relational Anomaly appears in the alarm console.
+1. Check the Alarm Console: no new relational anomaly should be shown.
 
 ## Step 6: Configure monitoring on devices with the same connector
 
-Typically, operators are not just monitoring one single DAB Transmitter, but multiple. It would not be ideal to configure RAD for each transmitter separately.
+Typically, you will monitor not just one single DAB transmitter but multiple, and ideally you should not configure RAD for each transmitter separately. In this step, you will learn how to configure monitoring on all devices with the same connector.
 
-In this step, we will show you how to configure monitoring on all devices with the same connector.
+1. In the RAD Manager, remove the two groups you created earlier:
 
-1. In the RAD Manager, start by removing the two previously created groups by selecting them and clicking the *Remove Group* button.
+   1. Select the groups in the table at the top while keeping Ctrl pressed.
 
-1. Click the *Add Group* button.
+   1. In the header bar, click *Remove Group*, and then confirm.
 
-1. In the pop-up, in the *What to add?* menu, select *Add group for each element with given connector*.
+1. In the header bar, click *Add Group*.
 
-1. Set the *Group name prefix* equal to *DAB Fleet*.
+1. In the *What to add?* dropdown bow at the top, select *Add group for each element with given connector*.
+
+1. Set the *Group name prefix* to *DAB Fleet*.
 
 1. In the *Connector* field, select *Empower 2025 - AI - Commtia DAB*.
 
-1. As before, select the *Output Power* parameter and filter on *PA**. Click *Add*.
+1. As before, select the *Output Power* parameter, filter on `PA*`, and click *Add*.
 
-1. Select the *Tx Amplifier Output Power* parameter and keep the *Display key filter* empty. Click *Add*.
+1. Select the *Tx Amplifier Output Power* parameter, keep the *Display key filter* empty, and click *Add*.
 
-1. Click the *Add group* button.
+1. Click *Add group*.
 
-   This will create a group for each element with the selected connector. In this case, it will create groups for *RAD - Commtia LON 1*, *RAD - Commtia LON 2*, *RAD - Commtia LON 3* and *RAD - Commtia STH 1*.
-
-1. Take a screen shot of the 4 newly created groups in the RAD Manager. Upload it later to collect devops points!
+   This will create a group for each element with the selected connector. In this case, it will create groups for *RAD - Commtia LON 1*, *RAD - Commtia LON 2*, *RAD - Commtia LON 3*, and *RAD - Commtia STH 1*.
 
 1. Optionally, in Cube: click *Add Degradation* in the *Demo Control* page of the *RAD - Commtia STH 1* element to verify that DataMiner picks up on the relational anomaly. Leave the *RAD - Commtia LON 3* element alone for a later exercise.
 
