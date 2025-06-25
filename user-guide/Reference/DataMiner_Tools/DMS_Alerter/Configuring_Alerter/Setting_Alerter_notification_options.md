@@ -32,5 +32,6 @@ Do the following if you want to change settings with regard to alarm sounds and 
 
     > [!NOTE]
     > To use this feature, you must have Windows Media Player installed on your client computer.
+    > To use this feature, you will also need alarm pop ups to be enabled by going to *Settings > Filter > Clientside filter* and selecting all the alarm types that match what you want sound effects for
 
 1. If you just want to hear the generic computer beep when a pop-up balloon appears, select the *Enable beep* option.
