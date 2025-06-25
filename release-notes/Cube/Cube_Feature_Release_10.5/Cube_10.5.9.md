@@ -61,3 +61,11 @@ As the *Add/remove elements* user permission in *General > Views* allows users t
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 Up to now, when an error occurred while loading apps in the *Apps* pane, in some cases, Cube could stop working.
+
+#### Trending: Problem when clicking a pattern in a trend graph [ID 43228]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When you clicked a pattern in a trend graph, an exception would be thrown, and the following error would be logged:
+
+`An item with the same key has already been added.`
