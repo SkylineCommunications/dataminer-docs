@@ -14,4 +14,4 @@ uid: Display_keys1
 
 - In new implementations, the "\[IDX\]" suffix is no longer required. However, in existing implementations, removing this "\[IDX\]" suffix is not recommended, as this could have an impact on existing systems.
 
-- Leading and trailine spaces should be avoided on display keys (as well as on primary keys)
+- Leading and trailing spaces should be avoided on display keys (as well as on primary keys)
