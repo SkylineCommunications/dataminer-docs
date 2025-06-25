@@ -27,7 +27,7 @@ Every time GQI requires needs to use the custom operator, it will create a new i
 
 ## How to define a custom operator
 
-A custom operator is defined in exactly the same way as an ad hoc data source. See [ad hoc data sources](xref:Configuring_an_ad_hoc_data_source_in_a_query#defining-an-ad-hoc-data-source).
+A custom operator is defined in exactly the same way as an ad hoc data source. See [ad hoc data sources](xref:GQI_Ad_hoc_data_sources#defining-an-ad-hoc-data-source).
 
 > [!TIP]
 > See also: [Best practices for developing GQI extensions](xref:GQI_Extensions_Best_Practices).

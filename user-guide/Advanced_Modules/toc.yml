@@ -648,7 +648,7 @@ items:
             topicUid: GQI_Extensions
             items:
               - name: Ad hoc data sources
-                topicUid: Configuring_an_ad_hoc_data_source_in_a_query
+                topicUid: GQI_Ad_hoc_data_sources
                 items:
                   - name: Building blocks
                     topicUid: Ad_hoc_Building_blocks

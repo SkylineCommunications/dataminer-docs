@@ -17,7 +17,7 @@ The available interfaces are:
 - [IGQIDataSource](xref:GQI_IGQIDataSource): Makes it possible to provide rows and columns.
 
   > [!IMPORTANT]
-  > This is the only required interface. See also: [Ad hoc data sources](xref:Configuring_an_ad_hoc_data_source_in_a_query)
+  > This is the only required interface. See also: [Ad hoc data sources](xref:GQI_Ad_hoc_data_sources)
 
 - [IGQIInputArguments](xref:GQI_IGQIInputArguments): Retrieves input from the user through input arguments.
 

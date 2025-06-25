@@ -1,5 +1,5 @@
 ---
-uid: Configuring_an_ad_hoc_data_source_in_a_query
+uid: GQI_Ad_hoc_data_sources
 description: For an ad hoc data source, add a correctly configured script in the Automation app and select 'Get ad hoc data' and your source in the query config.
 ---
 

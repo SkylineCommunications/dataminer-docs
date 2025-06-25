@@ -5,7 +5,7 @@ keywords: GQI logging
 
 # GQI extensions logging
 
-From DataMiner 10.4.5/10.5.0 onwards<!-- RN 39043 -->, [ad hoc data sources](xref:Configuring_an_ad_hoc_data_source_in_a_query) and [custom operators](xref:GQI_Custom_Operator) can log their own messages and exceptions within GQI, complementing the existing [GQI core logging functionality](xref:GQI_Logging) (available from DataMiner 10.4.0/10.4.4).
+From DataMiner 10.4.5/10.5.0 onwards<!-- RN 39043 -->, [ad hoc data sources](xref:GQI_Ad_hoc_data_sources) and [custom operators](xref:GQI_Custom_Operator) can log their own messages and exceptions within GQI, complementing the existing [GQI core logging functionality](xref:GQI_Logging) (available from DataMiner 10.4.0/10.4.4).
 
 > [!TIP]
 > For information about general GQI logging, see [GQI logging](xref:GQI_Logging).
