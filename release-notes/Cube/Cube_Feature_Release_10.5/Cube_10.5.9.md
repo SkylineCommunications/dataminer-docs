@@ -52,4 +52,8 @@ For more information on the `<Interactivity>` tag, see [Automation scripts: New 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Problem when loading apps in the Apps pane [ID 43208]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, when an error occurred while loading apps in the *Apps* pane, in some cases, Cube could stop working.
