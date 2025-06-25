@@ -38,8 +38,8 @@ DataMiner brings it all together in one standard UI, with a rich set of features
 > - Discover all the capabilities of DataMiner Spectrum Management in this 60-min. [Experts & Insights webinar](https://community.dataminer.services/video/experts-insights-dataminer-spectrum-management/) ![Video](~/user-guide/images/video_Duo.png)
 > - Example use case: [Spectrum Assurance and Teleport Interference](https://community.dataminer.services/use-case/spectrum-assurance-and-teleport-interference/)
 > - Example use case: [L-Band Spectrum Monitoring](https://community.dataminer.services/use-case/l-band-spectrum-monitoring/)
-> - Different spectrum-related videos in the [Dojo video library](https://community.dataminer.services/videos/?_sf_s=spectrum) ![Video](~/user-guide/images/video_Duo.png)
-> - Different videos related to Visual Overview in the [Dojo video library](https://community.dataminer.services/videos/?_sf_s=visual%20overview) ![Video](~/user-guide/images/video_Duo.png)
+> - Different spectrum-related videos in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=spectrum) ![Video](~/user-guide/images/video_Duo.png)
+> - Different videos related to Visual Overview in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=visual%20overview) ![Video](~/user-guide/images/video_Duo.png)
 > - [DataMiner Spectrum Analysis](xref:SpectrumAnalysis)
 
 ## Performance Management
@@ -71,7 +71,7 @@ In summary, Visual Overview offers a remarkably powerful and graphical way to na
 > [!TIP]
 > See also:
 >
-> - [Benefits of the Visual Overviews](https://community.dataminer.services/video/benefits-of-the-visual-overviews/) ![Video](~/user-guide/images/video_Duo.png)
+> - [Benefits of the Visual Overviews](https://www.youtube.com/watch?v=f3-WGXShNl4) ![Video](~/user-guide/images/video_Duo.png)
 > - [Earth Station Uplink Visual Overview sample](https://community.dataminer.services/use-case/earth-station-uplink-visual-overview-sample/)
 > - [Control Surfaces](https://community.dataminer.services/use-case/control-surfaces/)
 > - [Ziine – your reference for Visual Overview functionality](https://community.dataminer.services/ziine-your-reference-for-visual-overview-functionality/)
@@ -141,7 +141,7 @@ The unified platform provides **highly enriched fault messages**, **out of the b
 > For more information:
 >
 > - [New to DataMiner (DataMiner Operator)](https://www.youtube.com/playlist?list=PLFb70A6JV6vgaop9IVx3PeEQWktDjJegU): a collection of bite-sized videos on element states, Alarm Console features, etc. ![Video](~/user-guide/images/video_Duo.png)
-> - Videos related to alarm and fault management in our extensive [Video Library](https://community.dataminer.services/videos?_sf_s=alarm) ![Video](~/user-guide/images/video_Duo.png)
+> - Videos related to alarm and fault management in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=alarm) ![Video](~/user-guide/images/video_Duo.png)
 > - [DataMiner Alarm Console training video](https://community.dataminer.services/lessons/alarm-console-2/) ![Video](~/user-guide/images/video_Duo.png)
 > - [Experts & Insights – End-to-end fault management](https://community.dataminer.services/video/experts-insights-end-to-end-fault-management/) ![Video](~/user-guide/images/video_Duo.png)
 > - [Alarms](xref:About_alarms)
@@ -168,8 +168,8 @@ The DataMiner Dashboards app offers a wide range of visualizations that can make
 > - Example use case: [Monitor a Group of Servers via GQI](https://community.dataminer.services/use-case/monitor-a-group-of-servers-via-gqi/)
 > - [DataMiner Dashboards](xref:newR_D)
 > - [DataMiner Dashboards training course](https://community.dataminer.services/courses/dashboard/)
-> - [Videos on the Dashboards app](https://community.dataminer.services/videos?_sf_s=dashboard) ![Video](~/user-guide/images/video_Duo.png)
-> - [GQI-related videos](https://community.dataminer.services/videos?_sf_s=GQI) ![Video](~/user-guide/images/video_Duo.png)
+> - Videos related to the Dashboards app in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=dashboard) ![Video](~/user-guide/images/video_Duo.png)
+> - Videos related to GQI in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=GQI) ![Video](~/user-guide/images/video_Duo.png)
 > - [Analyzing a network of switches with the DataMiner Dashboards module](https://www.youtube.com/watch?v=e0tqNFMqgwo&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
 > - [Analyzing performance of a Kubernetes Cluster with the DataMiner Dashboard module](https://www.youtube.com/watch?v=eST-XhA4P7I&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
 
@@ -187,7 +187,7 @@ The data input for the node edge component can be configured via our Generic Que
 >
 > - [Node edge component now generally available](https://community.dataminer.services/node-edge-component-now-generally-available/)
 > - [Dashboards use cases](https://community.dataminer.services/use-cases?_sf_s=dashboards)
-> - [Kata #17: Node Edge Component](https://community.dataminer.services/video/kata-17-node-edge-component/) ![Video](~/user-guide/images/video_Duo.png)
+> - [Kata #17: Node Edge Component](https://www.youtube.com/watch?v=vU2gZQqVEFs) ![Video](~/user-guide/images/video_Duo.png)
 > - Course on [node edge graphs](https://community.dataminer.services/courses/dashboard/lessons/node-edge-graph/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Button Panel (i.e. Control Panel)
@@ -235,13 +235,13 @@ These apps run on HTML5, making them **accessible from anywhere**, including mob
 > For more information:
 >
 > - [Create your own powerful apps regardless of your coding abilities](https://community.dataminer.services/low-code-apps-create-your-own-powerful-apps-regardless-of-your-coding-abilities/)
-> - [DataMiner Low-Code Apps: 5 things you need to know](https://community.dataminer.services/video/dataminer-low-code-apps-5-things-you-need-to-know/) ![Video](~/user-guide/images/video_Duo.png)
-> - [Using Button Components and Header Bars in Low-Code Apps](https://community.dataminer.services/video/using-button-components-and-header-bars-in-dataminer-apps/) ![Video](~/user-guide/images/video_Duo.png)
-> - [Version Control for Low-Code Apps](https://community.dataminer.services/video/make-the-most-out-of-version-control-for-low-code-apps/) ![Video](~/user-guide/images/video_Duo.png)
+> - [DataMiner Low-Code Apps: 5 things you need to know](https://www.youtube.com/watch?v=5hx1pDe9am0) ![Video](~/user-guide/images/video_Duo.png)
+> - [Using Button Components and Header Bars in Low-Code Apps](https://www.youtube.com/watch?v=7Qhitj3fQB4) ![Video](~/user-guide/images/video_Duo.png)
+> - [Version Control for Low-Code Apps](https://www.youtube.com/watch?v=njieQ_zWNP0) ![Video](~/user-guide/images/video_Duo.png)
 > - Example use case : [Switch configuration with DataMiner Low-Code Apps](https://community.dataminer.services/use-case/switch-configuration-with-dataminer-low-code-apps/)
 > - Workflow use case : [DataMiner Low-Code Apps & Telestream Vantage – Media Asset Workflow Automation](https://community.dataminer.services/use-case/dataminer-low-code-apps-telestream-vantage-media-asset-workflow-automation/)
-> - [Kata #3: Build your first low-code app](https://community.dataminer.services/video/kata-3-build-your-first-low-code-app/) ![Video](~/user-guide/images/video_Duo.png)
-> - [Kata #7: Pages, panels and headers in a low-code app](https://community.dataminer.services/video/kata-7-pages-panels-and-headers-in-a-low-code-app/) ![Video](~/user-guide/images/video_Duo.png)
-> - [Kata #8: Actions and events in a low-code app](https://community.dataminer.services/video/kata-8-actions-and-events-in-a-low-code-app/) ![Video](~/user-guide/images/video_Duo.png)
-> - [Kata #13: Control and feeds in a Low-Code App](https://community.dataminer.services/video/kata-13-control-and-feeds-in-a-low-code-app/) ![Video](~/user-guide/images/video_Duo.png)
+> - [Kata #3: Build your first low-code app](https://www.youtube.com/watch?v=FzZEi5iCq44) ![Video](~/user-guide/images/video_Duo.png)
+> - [Kata #7: Pages, panels and headers in a low-code app](https://www.youtube.com/watch?v=YZHK8PiRbek) ![Video](~/user-guide/images/video_Duo.png)
+> - [Kata #8: Actions and events in a low-code app](https://www.youtube.com/watch?v=rr0I2JP8isU) ![Video](~/user-guide/images/video_Duo.png)
+> - [Kata #13: Control and feeds in a Low-Code App](https://www.youtube.com/watch?v=TvStVP7cN5g) ![Video](~/user-guide/images/video_Duo.png)
 > - [DataMiner Low-Code Apps](xref:Application_framework)
