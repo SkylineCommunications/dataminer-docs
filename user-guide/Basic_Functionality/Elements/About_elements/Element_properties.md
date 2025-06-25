@@ -37,7 +37,7 @@ The *general* tab of an element's *Properties* window displays the following inf
 
 - Element name (2): Displays the name assigned to the element.
 
-- Element ID (3): Shows the element's unique ID in the format `DMAID\ElementID`.
+- Element ID (3): Displays the element's unique ID in the format `DMAID\ElementID`.
 
 - Masking status (4): Indicates whether the element is currently masked or not.
 
