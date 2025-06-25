@@ -9,7 +9,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 24 June 2025 - Fix - Catalog - Catalog item deployment failure
+### 24 June 2025 - Fix - Catalog - Failing connector deployment
 
 It could happen that a deployment of a connector catalog item failed with "something is wrong". An edge case was fixed when the license of the connector could not be verified.
 
