@@ -58,7 +58,18 @@ Possible values:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Swarming: An information event will be generated when an element was successfully swarmed [ID 43196]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+From now on, an information event will be generated when an element was successfully swarmed.
+
+Example:
+
+`Swarmed from <DmaName> (<DmaId>) to <DmaName> (<DmaId>) by <UserName>`
+
+> [!NOTE]
+> When the source DMA is no longer available or unknown, the information event will be shortened to `Swarmed to <DmaName> (<DmaId>) by <UserName>`.
 
 ### Fixes
 
