@@ -393,9 +393,3 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
-
-#### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
-
-<!-- MR 10.6.0 - FR 10.5.9 -->
-
-When a service created from a service template had a reservation ID defined, up to now, that reservation ID would incorrectly disappear when the service template was re-applied.
