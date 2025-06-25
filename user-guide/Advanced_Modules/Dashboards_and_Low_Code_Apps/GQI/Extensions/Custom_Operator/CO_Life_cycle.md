@@ -4,22 +4,22 @@ uid: CO_Life_cycle
 
 # Life cycle of a custom operator
 
-Whenever a custom operator is used, an instance of the associated C# class is created and GQI will call the relevant life cycle methods that define its behavior.
+Whenever a custom operator is used, an instance of the associated C# class is created, and GQI will call the relevant life cycle methods that define its behavior.
 
-The following simplified diagram shows in what order each GQI life cycle method is called.
+The simplified diagram below shows in what order each GQI life cycle method is called.
 
 > [!NOTE]
-> In practice, the life cycle methods that will be called depend on a various conditions. See the [detailed life cycle overview](#detailed-life-cycle-overview) for a complete overview.
+> In practice, the life cycle methods that will be called depend on various conditions. Refer to the [detailed life cycle overview](#detailed-life-cycle-overview) for a complete overview.
 
 ![Custom operator life cycle](~/user-guide/images/GQI_CustomOperatorLifeCycle.png)
 
 ## When is a custom operator instance created?
 
-A new custom operator instance is created *every time* one of the following requests occur:
+A new custom operator instance is created **every time** one of the following requests occur:
 
-1. A **capability request**: used to determine the query arguments used in the query builder.
-1. A **columns request**: used to determine which columns are available without fetching any data.
-1. A **new session request**: used to fetch and transform data.
+- A **capability request**, used to determine the query arguments used in the query builder.
+- A **columns request**, used to determine which columns are available without fetching any data.
+- A **new session request**, used to fetch and transform data.
 
 The type of request also determines which life cycle methods are used.
 
@@ -27,7 +27,7 @@ The type of request also determines which life cycle methods are used.
 
 The following life cycle methods exist for custom operators:
 
-| Method | Interface | Required | Availablity |
+| Method | Interface | Required | Availability |
 |--|--|--|--|
 | [OnInit](#oninit) | [IGQIOnInit](xref:GQI_IGQIOnInit) | No | From DataMiner 10.4.5/10.5.0 onwards<!-- RN 38959 --> |
 | [GetInputArguments](#getinputarguments) | [IGQIInputArguments](xref:GQI_IGQIInputArguments) | No | Always |
@@ -39,10 +39,10 @@ The following life cycle methods exist for custom operators:
 
 The life cycle methods that are called on a custom operator instance depend on the following conditions:
 
-- The [interfaces](xref:CO_Building_blocks) that are implemented by the associated C# class
-- The type of GQI request for which the instance was [created](#when-is-a-custom-operator-instance-created)
-- The operators used in the query
-- The result of previous life cycle methods
+- The [interfaces](xref:CO_Building_blocks) that are implemented by the associated C# class.
+- The type of GQI request for which the instance was [created](#when-is-a-custom-operator-instance-created).
+- The operators used in the query.
+- The result of previous life cycle methods.
 
 The following diagram shows a complete overview of all possible life cycle paths.
 
@@ -64,7 +64,7 @@ If implemented, `OnInit` is always the first life cycle method. It can provide r
 
 Building block interface: [IGQIInputArguments](xref:GQI_IGQIInputArguments)
 
-If implemented, the `GetInputArguments` defines the arguments that can be used to configure the custom operator in a query.
+If implemented, the `GetInputArguments` method defines the arguments that can be used to configure the custom operator in a query.
 
 Later, the arguments defined here will determine which argument values are available in the [OnArgumentsProcessed](#onargumentsprocessed) life cycle method.
 
@@ -93,7 +93,7 @@ Of course, this method can also be used simply to provide access to the currentl
 
 Building block interface: [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator)
 
-If implemented, the `Optimize` life cycle method allows the custom operator to interpret downstream operators that are applied directly and allows to adjust its behavior to achieve a more performant query execution.
+If implemented, the `Optimize` life cycle method allows the custom operator to interpret downstream operators that are applied directly and allows to adjust its behavior to improve performance of query execution.
 
 This life cycle method may be called multiple times for the same instance when the custom operator removes or reorders other operators.
 
@@ -115,7 +115,7 @@ If implemented, the `HandleRow` life cycle method defines how query rows will be
 
 Building block interface: [IGQIOnDestroy](xref:GQI_IGQIOnDestroy)
 
-If implemented, `OnDestroy` is always the last life cycle method. It allows you to clean up any resources that were used during the life time of the custom operator instance.
+If implemented, `OnDestroy` is always the last life cycle method. It allows you to clean up any resources that were used during the lifetime of the custom operator instance.
 
-> [!WARNING]
+> [!IMPORTANT]
 > The `OnDestroy` life cycle method will **not** be called when the [OnInit](#oninit) life cycle method failed.
