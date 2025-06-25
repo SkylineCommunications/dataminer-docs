@@ -48,5 +48,7 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 
    This indicates that the migration has successfully finished.
 
+1. Continue with the next step of the [setup procedure](xref:Setting_up_StaaS).
+
 > [!NOTE]
 > In case of issues during or after the migration, revert the *DB.xml* file to its previous state and re-trigger the migration process. If you want to be certain no data inconsistencies are possible, contact <support@dataminer.services>. For detailed troubleshooting information, refer to [Troubleshooting – STaaS](xref:Troubleshooting_STaaS).

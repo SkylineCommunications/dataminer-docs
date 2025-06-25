@@ -31,6 +31,14 @@ A number of enhancements have been made to the installation procedure of the GQI
 
 For example, during the installation, the following notice will no longer appear: `Could not stop the following processes (60s): DataMiner GQI`.
 
+#### GQI DxM: Enhanced life cycle behavior for ad hoc data sources and custom operators [ID 43186]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+Up to now, when an error occurred in the `OnInit` life cycle method, the `OnDestroy` life cycle method would still be called to clean up resources.
+
+From now on, when something goes wrong during the `OnInit` life cycle method, the `OnDestroy` life cycle method will no longer be called.
+
 ### Fixes
 
 #### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
@@ -146,6 +154,12 @@ DataMiner Agent: 4 error(s) and 0 notice(s)
 
 Some prerequisite checks included in the upgrade to 10.5.0 [CU3], 10.5.6, and 10.5.7 rely on a version of the `System.Text.Json` library that is not present in 10.4.0. This caused the VerifyClusterPorts and VerifyNatsCluster prerequisites to fail during the upgrade process.
 
+#### DataMiner upgrade: Problem with incorrectly set file path in VerifyClusterPorts prerequisite [ID 43101]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+Up to now, the VerifyClusterPorts prerequisite would have its file path incorrectly set to null. This would cause the system to always check the configuration file of the SLNet-managed NATS solution, even in situation where it had to check the configuration file of the BrokerGateway-managed NATS solution.
+
 #### Problem when deleting or renaming services [ID 43109]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
@@ -169,3 +183,11 @@ From now on, when such an SLNet connection has to be set up, the GQI DxM will se
 <!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
 
 When querying DOM instances with service definition fields via the GQI DxM, up to now, the `ServiceDefinitionFieldDescriptor` would not deserialize correctly coming from SLNet, causing an exception to be thrown in GQI.
+
+#### Web.config file could contain an outdated configuration [ID 43159]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, the `C:\Skyline DataMiner\Webpages\API\Web.config` file could contain an outdated configuration, causing the Web Services API to not start up, and the web apps to throw the following error:
+
+`The type initializer for 'Skyline.DataMiner.Web.Common.v1.TransportAgnosticInterface' threw an exception.`

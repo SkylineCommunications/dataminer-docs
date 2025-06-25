@@ -67,3 +67,13 @@ Want to see how it works? Check out [Andi Tamer's personal attestation page](htt
 
 > [!TIP]
 > You can check and validate a certification via our [validator](https://community.dataminer.services/verify-a-certificate/)
+
+## DataMiner DevOps Enablement
+
+For DataMiner deployments contracted to and executed by Skyline, Skyline also offers the [DevOps Enablement](xref:DataMiner_DevOps_Enablement) option. This option specifically aspires towards the goal of establishing a team of DataMiner DevOps Professionals who can ensure the continuous evolution of a solution upon completion of the work contracted to Skyline.
+
+As part of the DevOps Enablement Service, Skyline provides guidance and consultancy for the candidate DataMiner DevOps Professionals and leads them through training and education all the way to being involved hands-on in the ongoing implementation work.
+
+Furthermore, as part of the DevOps Enablement, Skyline also provides consultancy and guidance for the setup of a professional industry-standard CI/CD ecosystem, wrapping around the DataMiner platform and leveraging tools such as code repositories, DataMiner Integration Studio, DataMiner CI/CD Services, and more.
+
+![DevOps Enablement](https://community.dataminer.services/wp-content/uploads/2022/11/DevOpsEnablement.png)

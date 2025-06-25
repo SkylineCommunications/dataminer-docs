@@ -326,6 +326,16 @@ Also, SLNet and SLDataGateway will now exchange data faster thanks to the use of
 
 From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded if the version in the upgrade package is newer than the installed version.
 
+#### SLNet will now pass updated company information to client applications [ID 43168]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+By default, SLNet will now pass the following updated company information to client applications:
+
+- Company website: <https://www.skyline.be>
+- TechSupport web page: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
+- TechSupport email address: <support@dataminer.services>
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
@@ -383,3 +393,9 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
+
+#### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When a service created from a service template had a reservation ID defined, up to now, that reservation ID would incorrectly disappear when the service template was re-applied.

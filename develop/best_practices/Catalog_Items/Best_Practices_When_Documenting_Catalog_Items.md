@@ -7,7 +7,9 @@ keywords: documentation, catalog item, description, connector help, solution hel
 
 On this page, you will find more information about writing documentation for your Catalog item. In order to have consistent, clear, and uniform documentation in the Catalog, we recommend following these best practices.
 
-The main principle to keep in mind is that the documentation in the Catalog should be **attractive and clearly present the value** of the Catalog item. Technical and more detailed documentation should reside in another location.
+The main principle to keep in mind is that the documentation in the Catalog should be **attractive and clearly present the value** of the Catalog item.
+
+As the documentation shown in the Catalog should be concise and not include a lot of technical details, you can add a link (see *documentation_url* in the [Manifest file](xref:Register_Catalog_Item#manifest-file)) to direct users to more detailed documentation. For substantial solutions developed by Skyline, this technical documentation is typically located under [DataMiner Solutions](xref:solution_index). For smaller items, this could be a link to markdown pages in the public source code repository. If the source code is open source, you can also provide a link using the *source_code_url* field in the [Manifest file](xref:Register_Catalog_Item#manifest-file).
 
 ## Catalog item documentation structure
 

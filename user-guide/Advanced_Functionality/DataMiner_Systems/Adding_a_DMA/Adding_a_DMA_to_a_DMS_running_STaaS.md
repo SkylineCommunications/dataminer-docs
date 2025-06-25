@@ -10,7 +10,7 @@ To add a DataMiner Agent to a DMS running STaaS:
 
 1. Install the [DataMiner Cloud Pack](xref:DataMiner_Cloud_Pack) on the new DMA.
 
-1. Stop DataMiner and stop CloudGateway on the new DMA.
+1. Stop DataMiner and CloudGateway on the new DMA.
 
 1. From a DMA in the cluster where CloudGateway is running, copy the folder `C:\ProgramData\Skyline Communications\DataMiner CloudGateway\Data\CcaGatewayPersisted` and place it in the same location on the new DMA.
 

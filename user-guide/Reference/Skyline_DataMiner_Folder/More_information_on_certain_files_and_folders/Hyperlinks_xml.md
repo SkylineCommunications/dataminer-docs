@@ -189,7 +189,7 @@ For example, if a hyperlink of type "openelement" contains the following content
 
 > [!NOTE]
 >
-> - If you want to use a view property, service property, or element property in a hyperlink, make sure the option *Make this property available for alarm filtering* is enabled for that property. See [Managing element properties](xref:Managing_element_properties).
+> - If you want to use a view property, service property, or element property in a hyperlink, make sure the option *Make this property available for alarm filtering* is enabled for that property. See [Managing custom properties](xref:Managing_element_properties).
 > - If you use a view property on an alarm of an element contained in multiple views, the hyperlink will use the property of the view with the lowest ID.
 
 ### About the \[VID\] keyword

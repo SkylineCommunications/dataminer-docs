@@ -2,7 +2,7 @@
 uid: Benefits_DevOps_Professionals_Program
 ---
 
-# Benefits
+# Benefits for members of the DevOps Professional Program
 
 By creating value for the DataMiner community, you earn [**DevOps Points**](xref:DevOps_Points). Not only do these points determine your DevOps Professional level, they also allow you to enjoy the plentiful benefits attached to the DevOps Professional Program.
 
@@ -36,20 +36,6 @@ The benefits, which vary depending on your DevOps Professional level, are as fol
         </td>
         <td style="text-align:center;">-</td>
         <td style="text-align:center;">&#x2714;</td>
-        <td style="text-align:center;">&#x2714;</td>
-      </tr>
-      <tr>
-        <td style="text-align:left;"><strong>Access to DIS source code</strong></td>
-        <td style="text-align:center;"></td>
-        <td style="text-align:center;"></td>
-        <td style="text-align:center;"></td>
-      </tr>
-      <tr>
-        <td style="text-align:left;">
-          Get exclusive access to the entire DIS source code, enabling you to understand its capabilities even better and to contribute to its further evolution.
-        </td>
-        <td style="text-align:center;">-</td>
-        <td style="text-align:center;">-</td>
         <td style="text-align:center;">&#x2714;</td>
       </tr>
       <tr>

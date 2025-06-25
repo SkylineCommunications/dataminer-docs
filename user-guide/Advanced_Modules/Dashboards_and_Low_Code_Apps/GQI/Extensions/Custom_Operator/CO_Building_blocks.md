@@ -6,7 +6,7 @@ uid: CO_Building_blocks
 
 A custom operator implements predefined interfaces that act as building blocks that each add a desired functionality and can be combined together to form the operator.
 
-The [*IGQIRowOperator*](xref:GQI_IGQIDataSource), [*IGQIColumnOperator*](xref:GQI_IGQIDataSource) and [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator) interfaces can be used to identify the class as a custom operator. At least one of them should be implemented for the class to be detected by GQI as a custom operator.
+The [*IGQIRowOperator*](xref:GQI_IGQIRowOperator), [*IGQIColumnOperator*](xref:GQI_IGQIColumnOperator), and [*IGQIOptimizableOperator*](xref:GQI_IGQIOptimizableOperator) interfaces are used to identify the class as a custom operator. At least one of them should be implemented for the class to be detected by GQI as a custom operator.
 
 All other interfaces add additional functionality.
 

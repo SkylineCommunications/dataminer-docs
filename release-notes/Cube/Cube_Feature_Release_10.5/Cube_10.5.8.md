@@ -105,6 +105,28 @@ From now on, whenever an error occurs while importing an Automation script, a po
 
 Because of a number of enhancements, overall performance has increased when editing services.
 
+#### About box: Updated company information [ID 43167]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+By default, the *About* box will now show the following updated company information:
+
+- *Skyline Communications N.V.* will now link to <https://www.skyline.be>.
+- *DataMiner Technical Support* will now link to [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support).
+- *Contact us* will now link to <support@dataminer.services>.
+
+#### Trending: Enhanced loading of trend graph data [ID 43193]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In order to reduce flickering, a number of enhancements have been made to the way in which trend graph data is loaded.
+
+#### Alarm Console: Enhanced performance when opening alarms [ID 43207]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+Because of a number of enhancements, overall performance has increased when opening alarms in the Alarm Console.
+
 ### Fixes
 
 #### Trending: Trend data between two gaps would incorrectly not be displayed [ID 42909]
@@ -132,6 +154,12 @@ In EPM environments, in some rare cases, a view card could get stuck when you tr
 When, in the alarm card of a correlation alarm or an incident alarm, you selected a particular update, the data in the right pane would change but the data below *Correlation sources of the previous alarms* would incorrectly not change.
 
 This issue has now been fixed. Also, the caption *Correlation sources of the previous alarms* has now been renamed to *Correlation sources* or *Incident sources* (depending on the type of alarm shown in the alarm card), and the side panel of the Alarm Console will no longer display correlation sources when you open a history tab.
+
+#### Service templates: Conditions to dynamically include or exclude child element would be interpreted incorrectly [ID 43119]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When, while configuring a service template, you had specified conditional triggers to dynamically include or exclude child element, in some cases, DataMiner Cube would interpret the conditions incorrectly.
 
 #### Trending: Problem when loading trend graphs [ID 43156]
 

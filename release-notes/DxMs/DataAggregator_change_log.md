@@ -4,6 +4,10 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 2 June 2025 - Enhancement - DataAggregator 3.1.1 - Error logging in case helper.json could not be read [ID 43094]
+
+When manual changes cause the JSON configuration within the helper.json to be invalid, up to now the configuration was ignored without giving any reason. Now an error will be logged in the log file that will indicate what went wrong. JSON deserialization errors will contain the line number.
+
 #### 20 May 2025 - Enhancement - DataAggregator 3.1.0 - Use of GQI DxM [ID 39216] [ID 42831]
 
 The DataAggregator DxM is now capable of communicating directly with the GQI DxM. This will improve performance, as data will no longer have to flow through CoreGateway, SLNet, and SLHelper. To make use of the GQI DxM, the following manual configuration is required:
