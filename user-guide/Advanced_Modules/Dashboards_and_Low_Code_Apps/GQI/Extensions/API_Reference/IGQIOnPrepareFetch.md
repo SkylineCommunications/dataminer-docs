@@ -16,3 +16,6 @@ The *IGQIOnPrepareFetch* interface is triggered once before any data pages are f
 ### OnPrepareFetchOutputArgs OnPrepareFetch(OnPrepareFetchInputArgs args)
 
 Indicates that the GQI has processed the query.
+
+> [!TIP]
+> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle#onpreparefetch).

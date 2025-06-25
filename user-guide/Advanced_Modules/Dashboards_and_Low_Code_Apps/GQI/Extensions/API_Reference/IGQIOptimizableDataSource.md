@@ -25,6 +25,9 @@ The *IGQIOptimizableDataSource* interface can be used to optimize an ad hoc data
 
 Called when an optimizable operator is appended directly to the ad hoc data source. Given the current query node that represents the ad hoc data source and the next operator, it should return the resulting query node.
 
+> [!TIP]
+> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle#optimize).
+
 > [!IMPORTANT]
 >
 > - The `Optimize` method may not be called if there are no supported subsequent operators.
