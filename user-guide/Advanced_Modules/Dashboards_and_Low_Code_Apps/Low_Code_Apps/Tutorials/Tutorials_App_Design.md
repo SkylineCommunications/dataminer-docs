@@ -439,7 +439,7 @@ You can improve the appearance of each column by editing the template applied to
    - *Vertical padding*: 5px
 
    > [!TIP]
-   > For more information about the different *Text* layer properties, see [Specifying layer properties](xref:Template_Editor#specifying-layer-properties).
+   > For more information about the different *Text* layer properties, see [Customizing layer appearance and behavior](xref:Template_Editor#customizing-layer-appearance-and-behavior).
 
 1. Make the font bold by entering the following HTML in the text box:
 
@@ -452,7 +452,7 @@ You can improve the appearance of each column by editing the template applied to
 1. Add an icon to the left of the `{Full name}` text.
 
    > [!TIP]
-   > For more information about adding an icon, see [Adding new layers](xref:Template_Editor#adding-new-layers).
+   > For more information about adding an icon, see [Adding new layers](xref:Template_Editor#adding-a-new-layer).
 
 1. In the *Properties* section of the *Settings* pane, click *Icon* and choose a fitting new icon, e.g. an icon depicting a person.
 
@@ -469,7 +469,7 @@ You can improve the appearance of each column by editing the template applied to
    - *Left*: 13px
 
    > [!TIP]
-   > For an overview of the different layer dimensions, see [Specifying layer dimensions](xref:Template_Editor#specifying-layer-dimensions).
+   > See also: [Resizing and positioning a layer](xref:Template_Editor#resizing-and-positioning-a-layer).
 
 1. Click *Save* in the lower right corner.
 
