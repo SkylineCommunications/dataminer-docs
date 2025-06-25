@@ -10,7 +10,7 @@ keywords: cloud keys
 
 ## System keys
 
-System keys can be used with the [GitHub action to deploy Automation scripts](xref:Marketplace_deployment_action) to a DMS that is connected to dataminer.services.
+System keys can be used with the [DataMinerDeploy .NET tool to deploy packages](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.DataMinerDeploy/tree/main/CICD.Tools.DataMinerDeploy#deploying-from-a-volatile-upload) to a DMS that is connected to dataminer.services.
 
 To view your system keys:
 
@@ -51,7 +51,7 @@ Each set of keys consists of a (user-defined) label, a primary key, and a second
 - To **copy** a primary or secondary key, click the copy icon next to the key.
 - To **add** a new set of keys, click *New Key* at the top of the page, and specify a label.
   
-  When adding a new key, you have to specify permissions for the key. The *Register catalog items* permission will allow the key to be used to [register new Catalog items](xref:Register_Catalog_Item). The *Add Dataminer nodes* permission will allow the key to be used to add new DataMiner nodes, e.g. when creating a DataMiner System with the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk).
+  When adding a new key, you have to specify permissions for the key. The *Register catalog items* permission will allow the key to be used to [register new Catalog items](xref:Register_Catalog_Item). The *Add DataMiner System* permission will allow the key to be used to add new DataMiner Systems, e.g. when creating a DMS with the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk).
 
 - To **regenerate** a primary or secondary key, click the *...* button to the right of the entry, and click *Regenerate primary key* or *Regenerate secondary key* respectively.
 

@@ -6,7 +6,7 @@ uid: Customizing_alarm_grouping_rules
 
 Automatic incident tracking strives to maximize the amount of information used for grouping alarms. By default, all [available source of information](xref:Automatic_incident_tracking) are taken into account for incident tracking. However, in some cases, it can be beneficial to tweak this configuration by disabling specific rules for grouping or defining custom ones.
 
-You can do so by modifying the *configuration.xml* file, located in the *C:\\Skyline DataMiner\\analytics\\* folder of the leader Agent. If you are using a DataMiner System that consists of multiple DMAs, it is important that you modify the file on the server hosting that leader Agent. To find out which DMA is the leader Agent, see [Automatic incident tracking configuration in System Center](xref:Automatic_incident_tracking#automatic-incident-tracking-configuration-in-system-center).
+You can do so by modifying the *configuration.xml* file, located in the `C:\Skyline DataMiner\analytics\` folder of the leader Agent. If you are using a DataMiner System that consists of multiple DMAs, it is important that you modify the file on the server hosting that leader Agent. To find out which DMA is the leader Agent, see [Automatic incident tracking configuration in System Center](xref:Automatic_incident_tracking#automatic-incident-tracking-configuration-in-system-center).
 
 Below you can find information about the [basic syntax](#basic-syntax), as well as detailed procedures for some of the rules. Customizing the other rules can be done in a very similar way to the described procedures.
 

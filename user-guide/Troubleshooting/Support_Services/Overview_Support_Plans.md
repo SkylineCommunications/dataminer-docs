@@ -74,13 +74,13 @@ The three levels mentioned above are available for usage-based services. However
 > [!IMPORTANT]
 > All support plans require an active connection to [dataminer.services](xref:Overview_dataminer_services).
 
-## Professional Service Credits included
+## Professional Service credits included
 
-Support plans may include free [Professional Service Credits](https://community.dataminer.services/professional-service-credits/) based on the commercial model and the number of licenses or usage. This is a yearly time budget to support and consult your team.
+Support plans may include free [Professional Service credits](xref:Professional_service_credits) based on the commercial model and the number of licenses or usage. This is a yearly time budget to support and consult your team.
 
 | Usage-based services | Perpetual-Use Licenses |
 |:-:|:-:|
 |  100 < MUA < 200: 100 <br> 200 < MUA < 400: 200 <br> MUA >= 400: 400 | 200 <br> Only available with Evolve plan |
 
 > [!NOTE]
-> These Professional Service Credits must be used within the contracted year. They will not be carried over to the next year.
+> These Professional Service credits must be used within the contracted year. They will not be carried over to the next year.

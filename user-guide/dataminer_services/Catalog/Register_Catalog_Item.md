@@ -10,6 +10,9 @@ When you register a new Catalog item, it will only become available for the regi
 
 A Catalog item is identified by a unique ID (GUID), which you will need to provide yourself.
 
+> [!TIP]
+> Before you register a new Catalog item, make sure to check the **best practices** for [creating Catalog items](xref:Best_Practices_When_Creating_Catalog_Items) and for [documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
+
 > [!IMPORTANT]
 > The API calls are authenticated using [organization keys](xref:Managing_dataminer_services_keys#organization-keys). Make sure you use a key that has the *Register Catalog items* permission and add it to the HTTP request in a header called **Ocp-Apim-Subscription-Key**. Also, note that you need to have the *Owner* role in order to access or create organization keys. The API calls use the following rate limiting policy:
 >
@@ -18,8 +21,8 @@ A Catalog item is identified by a unique ID (GUID), which you will need to provi
 > - Long-term sustained request rate: 1 request every 36 seconds (100 request per hour)
 > - No queueing for extra requests beyond the token bucket
 
-> [!TIP]
-> For practical examples, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version), and [Registering a new version of a connector in the Catalog using GitHub Actions](xref:Tutorial_Register_Catalog_Version_GitHub_Actions).
+> [!NOTE]
+> For practical examples of how to register a Catalog item, refer to the tutorials [Registering a new connector in the Catalog](xref:Tutorial_Register_Catalog_Item), [Registering a new version of a connector in the Catalog](xref:Tutorial_Register_Catalog_Version), and [Registering a new version of a connector in the Catalog using GitHub Actions](xref:Tutorial_Register_Catalog_Version_GitHub_Actions).
 
 ## Registering a Catalog item with workflows and tooling
 
@@ -38,7 +41,7 @@ For a complete definition of the API, go to [Key Catalog API Swagger](https://ca
 This page also provides a quick way to execute the call: Expand the "catalog/register" item, and click the *Try it out* button.
 
 > [!IMPORTANT]
-> Clicking the *Try it out* button will execute the register call on the production Catalog.
+> Clicking the *Try it out* button will execute the register call directly on the Catalog.
 
 The [Swagger.json](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/key-catalog_2.0/swagger.json) can be used by e.g. [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
 
@@ -80,7 +83,6 @@ This file will contain all the necessary information to register a Catalog item 
 #   - ChatOps Extension: If the Catalog item is a DataMiner Automation script designed as a ChatOps extension.
 #   - Connector: If the Catalog item is a DataMiner XML connector.
 #   - Custom Solution: If the Catalog item is a DataMiner Solution.
-#   - Data Query: If the Catalog item is a GQI data query.
 #   - Data Transformer: Includes a data transformer that enables you to modify data using a GQI data query before making it available to users in low-code apps or dashboards.
 #   - Dashboard: If the Catalog item is a DataMiner dashboard.
 #   - DevTool: If the Catalog item is a DevTool.
@@ -159,6 +161,15 @@ tags:
 # If the vendor ID is not provided during an update, the vendor will be unchanged and keep the previously set value.
 #   Must be a valid GUID.
 vendor_id: '<fill in GUID here>'
+
+# [Optional]
+# The name of the market the Catalog item belongs to.
+market_name: '<fill in name here>'
+
+# [Optional]
+# The type of the element.
+# This can only be applied to Catalog items with the type Connector.
+element_type: '<fill in element type here>'
 ```
 
 ## Registering a new version with the API

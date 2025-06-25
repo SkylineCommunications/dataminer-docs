@@ -12,11 +12,11 @@ DataMiner administrators will often create custom commands that open a web page,
 > When you make changes to *Hyperlinks.xml*, you should also force a synchronization of the file and reopen DataMiner Cube. For more details, see [Adding a custom command to the Alarm Console shortcut menu](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu).
 
 > [!TIP]
-> See also: [Alarm Console – Extending the right-click menu](https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Alarm Console - Extending the right-click menu](https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## File syntax
 
-The *Hyperlinks.xml* file has to have a *\<HyperLinks>* root tag containing a *\<HyperLink>* tag for every custom command.
+The *Hyperlinks.xml* file has to have a [\<HyperLinks>](xref:HyperLinks) root tag containing a [\<HyperLink>](xref:HyperLinks.HyperLink) tag for every custom command.
 
 There are two types of hyperlinks:
 
@@ -51,9 +51,9 @@ See the following example:
 ```
 
 > [!NOTE]
-> When you specify an Automation script in a hyperlink, you only need to use the "Script:" prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the *type* attribute clearly specifies that it concerns a reference to an Automation script.
+> When you specify an Automation script in a hyperlink, you only need to use the "Script:" prefix in legacy hyperlinks. In second-generation hyperlinks, this prefix has no function, as the [type](xref:HyperLinks.HyperLink-type) attribute clearly specifies that it concerns a reference to an Automation script.
 
-## Syntax of second-generation hyperlinks
+### [Second-generation hyperlink syntax](#tab/secondgenerationsyntax)
 
 In the syntax of a second-generation hyperlink, the ID, the version, the type and the actual command must always be specified. In addition to this mandatory configuration, several optional attributes can be configured.
 
@@ -85,208 +85,7 @@ Or:
 </HyperLink>
 ```
 
-### Content of the Hyperlink tag
-
-In the *\<HyperLink>* tag, enter the following content, depending on the type of hyperlink specified in the *type* attribute (see [type](#type)):
-
-- **Type "url"**: The URL that should be opened.
-
-- **Type "execute"**: The name of the executable file.
-
-  The path to the executable file can include spaces, but only if it is enclosed in double quotation marks. Anything that is added after a space and is not enclosed within quotation marks will be interpreted as an argument. For example: *\<HyperLink id="20" version="2" type="execute" name="MyApp" menu="root" \>"C:\\Program Files (x86)\\MyApp\\App.exe" \[ENAME\]\</HyperLink>*
-
-- **Type "script"**: The Automation script execution command. This should be configured in the same way as when you link a shape to an Automation script in a Visio drawing. See [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script) for more information.
-
-  > [!NOTE]
-  > It is not necessary to use the "Script:" prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an Automation script is referred to.
-
-- **Type "OpenCPE"**: The EPM card.
-
-  Supported from DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42221 -->, or with the *CPEIntegration* [soft-launch option](xref:SoftLaunchOptions) in earlier DataMiner versions.<!-- RN 22125 -->
-
-  For example, to add an "Open OLT" hyperlink to the Alarm Console context menu to open the EPM card of the object that generated the selected alarm: `<HyperLink  name="Open OLT" menu="root" type="OpenCPE" version="2" id="18">:visual:pagename</HyperLink>`.
-
-  Hyperlinks of this type can also be shown or hidden based on a filter configured with the [filterElement](#filterelement) attribute. For example: `<HyperLink filterElement="AlarmEventMessage.PropertiesDict.&quot;System Type&quot;[String] == 'OLT'" name="Open OLT" menu="root" type="OpenCPE" version="2" id="18">[EID]:visual:qam ds</HyperLink>`.
-
-- **Type "openview"**: The view ID. Alternatively, you can use the \[VID\] placeholder to open the view of the selected alarm.
-
-  You can also have the view opened on a particular page, using the same syntax as in a [Cube argument](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page) (e.g. *\[VID\]::Aggregation*).
-
-- **Type "openservice"**: The service ID. Alternatively, you can use the \[SID\] placeholder to open the service of the selected alarm.
-
-  You can also have the service opened on a particular page, using the same syntax as in a [Cube argument](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page) (e.g. *\[SID\]:d:Australia Service*).
-
-- **Type "openelement"**: The element ID. Alternatively, you can use the \[EID\] placeholder to open the element of the selected alarm.
-
-  You can also have the element opened on a particular page, using the same syntax as in a [Cube argument](xref:Options_for_opening_DataMiner_Cube#opening-a-card-on-a-particular-page) (e.g. *\[EID\]:Data:Performance/Ping*).
-
-- **Type "openparameter"**: The parameter ID. Alternatively, you can use the \[PID\] placeholder to open the parameter of the selected alarm.
-
-- **Type "reference"**: The ID of a legacy hyperlink. See [Upgrading legacy hyperlinks to second-generation hyperlinks](#upgrading-legacy-hyperlinks-to-second-generation-hyperlinks).
-
-> [!NOTE]
-> The string you specify can contain:
->
-> - [Keywords](#keywords), which allow you to insert real-time data in the command name that is displayed.
-> - [Placeholders](#placeholders), which allow you to insert parts of the value of the alarm or information event in the command that is displayed.
-
-> [!TIP]
-> See also: [type](#type)
-
-### Attributes of the Hyperlink tag
-
-- [alarmAction](#alarmaction)
-- [alarmColumn](#alarmcolumn)
-- [filterElement](#filterelement)
-- [combineParameters](#combineparameters)
-- [descriptionParsing](#descriptionparsing)
-- [id](#id)
-- [menu](#menu)
-- [name](#name)
-- [type](#type)
-- [valueParsing](#valueparsing)
-- [version](#version)
-
-#### alarmAction
-
-If you want the selected alarm or alarms to be acknowledged automatically when a hyperlink is executed, add an *alarmAction* attribute to the *\<HyperLink>* tag and set its value to "acknowledge".
-
-This attribute is optional.
-
-#### alarmColumn
-
-If you want a hyperlink to appear not only in the Alarm Console shortcut menu but also as a column in the Alarm Console, add an *alarmColumn* attribute to the *\<HyperLink>* tag and set its value to "true".
-
-This attribute is optional.
-
-#### filterElement
-
-This optional attribute can be used to add a conditional hyperlink. The hyperlink will only be displayed for alarms matching the specified filter.
-
-For example, to create a hyperlink that is only available on alarms that have a property called "PropName" of which the value is "PropValue", add the following hyperlink tag to *Hyperlinks.xml*:
-
-```xml
-<HyperLink id="20" version="2" name="RootTime_v2" type="url" menu="/root" filterElement="(AlarmEventMessage.PropertiesDict.PropName[String] =='PropValue')"> [DMAID]</HyperLink>
-```
-
-To test a filter that you want to specify for a conditional hyperlink, you can use the SLNetClientTest tool. See [Checking a hyperlink filter](xref:SLNetClientTest_checking_hyperlink_filter).
-
-This attribute supports alarm properties containing a space, but these need to be contained in double quotes (or `&quot;` in XML), for example:
-
-```txt
-filterElement="(AlarmEventMessage.PropertiesDict.&quot;Property Name&quot;[String] == 'PropValue')"
-```
-
-You can also use a filter that checks whether a specific key exists. For example:
-
-```xml
-<HyperLink id="1" version="2" name="Issue_ID blank" type="script" alarmColumn="true"
- menu="root/JIRA" combineParameters="true"
- filterElement="(AlarmEventMessage.PropertiesDict.KeyExists:Issue_ID[Bool] == False) OR (AlarmEventMessage.PropertiesDict.Issue_ID[String]=='')">
-  Script:dummy script||||Tooltips|NoConfirmation,CloseWhenFinished
-</HyperLink>
-```
-
-> [!NOTE]
-> The KeyExists filter is not recommended for data retrieval from Cassandra or an indexing database, as the filter will only be applied after data is retrieved from these databases.
-
-#### combineParameters
-
-In order to combine parameters in case multiple alarms have been selected, add the optional *combineParameters* attribute to the *\<HyperLink>* tag and set its value to "true".
-
-By default, the different parameters will be separated by means of *+* characters. If you want to specify a custom separator, add a separator attribute, and specify the separator.
-
-Example:
-
-```xml
-<HyperLink id="1"
-        version="2"
-        name="Automation Script"
-        menu="root/utils"
-        type="script"
-        combineParameters="true"
-        separator="&amp;">
-  Information Generator||Parameter=[ENAME]||Tooltip|
-</HyperLink>
-```
-
-> [!NOTE]
-> When you use an XML reserved character as a separator, it has to be escaped. (e.g. "`&amp;`" instead of "&").
-
-#### descriptionParsing
-
-Use this optional attribute if you want the command to appear only in the shortcut menu of alarms and information events with a specific description.
-
-If you specify a string in this attribute, the command will only appear in the shortcut menu of alarms and information events of which the description matches the string you specified.
-
-If you leave this attribute empty, the command will appear in the shortcut menu of every alarm and information event.
-
-The string you specify in this *descriptionParsing* attribute can contain wildcards (question marks and asterisks) as well as placeholders. See [Placeholders](#placeholders).
-
-> [!NOTE]
-> Alternatively, you can use the attribute *valueParsing* to have the command appear only for alarms and information events with a particular value.
-
-#### id
-
-In this mandatory attribute, specify the unique identifier of the hyperlink. It is primarily used for synchronization purposes.
-
-#### menu
-
-If you add a hyperlink to *Hyperlinks.xml*, by default, it will appear in the "Hyperlinks" submenu of the Alarm Console shortcut menu. However, if you want it to appear in another submenu (or in the root) of the shortcut menu, add the optional *menu* attribute to the *\<HyperLink>* tag and specify a location.
-
-Examples:
-
-- Enter "root" to make it appear in the root of the shortcut menu.
-- Enter e.g. "root/MyLinks" to make it appear in the "MyLinks" submenu.
-- Enter e.g. "root/MyLinks/Scripts" to make it appear in the "MyLinks/Scripts" submenu.
-
-> [!NOTE]
-> If you do not specify a *menu* attribute or if you do not start the value of the menu attribute with "root", the hyperlink will be added to the default "Hyperlinks" submenu.
-
-#### name
-
-In this optional attribute, specify the name of the command as it has to appear in the user interfaces.
-
-If you want a hyperlink of type "script" (i.e. a hyperlink that starts an Automation script) to have a custom name, then enter that name in the *name* attribute. If you leave the *name* attribute empty, the hyperlink will have the name of the script.
-
-#### type
-
-In this mandatory attribute, specify the hyperlink type. The following types are supported:
-
-- **url**: Opens a URL in a web browser.
-- **execute**: Runs an executable file.
-- **script**: Runs an Automation script. For information on how to specify the script to be run, see [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script).
-
-  > [!NOTE]
-  > It is not necessary to use the "Script:" prefix in a second-generation hyperlink, as the *type* attribute already makes it clear an Automation script is referred to.
-
-- **openview**: Opens a DataMiner view in a new card. If the \[VID\] placeholder is used in the \<Hyperlink> tag, the view of the selected alarm is opened.
-- **openservice**: Opens a DataMiner service in a new card. If the \[SID\] placeholder is used in the \<Hyperlink> tag, the service of the selected alarm is opened.
-- **openelement**: Opens a DataMiner element in a new card. If the \[EID\] placeholder is used in the \<Hyperlink> tag, the element of the selected alarm is opened.
-- **openparameter**: Opens a DataMiner parameter in a new card. If the \[PID\] placeholder is used in the \<Hyperlink> tag, the parameter of the selected alarm is opened.
-- **reference**: Refers to a legacy hyperlink. See [Upgrading legacy hyperlinks to second-generation hyperlinks](#upgrading-legacy-hyperlinks-to-second-generation-hyperlinks) for more information.
-
-> [!TIP]
-> See also: [Content of the Hyperlink tag](#content-of-the-hyperlink-tag)
-
-#### valueParsing
-
-Use this optional attribute if you want the command to appear only in the shortcut menu of alarms and information events with a specific value.
-
-If you specify a string in this attribute, the command will only appear in the shortcut menu of alarms and information events of which the value matches the string you specified.
-
-If you leave this attribute empty, the command will appear in the shortcut menu of every alarm and information event.
-
-The string you specify in this *valueParsing* attribute can contain wildcards (question marks and asterisks) as well as placeholders. See [Placeholders](#placeholders).
-
-> [!NOTE]
-> Alternatively, you can use the attribute *descriptionParsing* to have the command appear only for alarms and information events with a particular description.
-
-#### version
-
-In second-generation hyperlinks, this mandatory attribute has to be set to "2".
-
-## Syntax of legacy hyperlinks
+### [Legacy hyperlinks syntax](#tab/legacysyntax)
 
 A legacy hyperlink must have the following syntax:
 
@@ -294,30 +93,10 @@ A legacy hyperlink must have the following syntax:
 <HyperLink id="..." valueParsing="...">[Hyperlink]</HyperLink>
 ```
 
-### Content of the Hyperlink tag (legacy)
+---
 
-Inside the *\<HyperLink>* tag, enter the actual command that has to be displayed on the shortcut menu.
-
-The string you specify can contain:
-
-- [Keywords](#keywords), which allow you to insert real-time data in the command name that is displayed.
-- [Placeholders](#placeholders), which allow you to insert parts of the value of the alarm or information event in the command that is displayed.
-
-### Attributes of the Hyperlink tag (legacy)
-
-#### id (legacy)
-
-In this attribute, specify the unique identifier of the hyperlink. It is primarily used for synchronization purposes.
-
-#### valueParsing (legacy)
-
-Use this attribute if you want the command to appear only in the shortcut menu of specific alarms and information events.
-
-If you specify a string in this attribute, the command will only appear in the shortcut menu of alarms and information events of which the value matches the string you specified.
-
-If you leave this attribute empty, the command will appear in the shortcut menu of every alarm and information event.
-
-The string you specify in this *valueParsing* attribute can contain wildcards (question marks and asterisks) as well as placeholders. See [Placeholders](#placeholders).
+> [!TIP]
+> Refer to [HyperLink](xref:HyperLinks.HyperLink) for more information about the content of this tag and the possible attributes.
 
 ## Upgrading legacy hyperlinks to second-generation hyperlinks
 
@@ -410,12 +189,12 @@ For example, if a hyperlink of type "openelement" contains the following content
 
 > [!NOTE]
 >
-> - If you want to use a view property, service property, or element property in a hyperlink, make sure the option *Make this property available for alarm filtering* is enabled for that property. See [Managing element properties](xref:Managing_element_properties).
+> - If you want to use a view property, service property, or element property in a hyperlink, make sure the option *Make this property available for alarm filtering* is enabled for that property. See [Managing custom properties](xref:Managing_element_properties).
 > - If you use a view property on an alarm of an element contained in multiple views, the hyperlink will use the property of the view with the lowest ID.
 
 ### About the \[VID\] keyword
 
-It is possible to specify a view filter with the \[VID\] keyword in second-generation hyperlinks of type "url", "execute", "script", and "openview’"
+It is possible to specify a view filter with the \[VID\] keyword in second-generation hyperlinks of type "url", "execute", "script", and "openview".
 
 For example:
 

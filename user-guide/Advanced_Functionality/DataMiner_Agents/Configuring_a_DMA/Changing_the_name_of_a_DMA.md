@@ -14,7 +14,7 @@ To configure an alias in *DataMiner.xml*, you will need to activate "manual" mod
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<DMAName>* start tag, add a *mode* attribute, and set its value to “manual”.
 

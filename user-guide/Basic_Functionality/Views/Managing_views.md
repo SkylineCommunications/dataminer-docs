@@ -71,4 +71,4 @@ There are several ways to remove an item from a view:
 Adding, editing or deleting custom properties for a view is done in a similar way as for an element.
 
 > [!TIP]
-> See also: [Managing element properties](xref:Managing_element_properties)
+> See also: [Managing custom properties](xref:Managing_element_properties)

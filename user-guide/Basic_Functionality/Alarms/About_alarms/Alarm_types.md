@@ -27,7 +27,7 @@ For the different alarm levels, it is also possible to assign high and low level
 > See also:
 >
 > - [Changing the default alarm colors](xref:Changing_the_default_alarm_colors)
-> - [Guidelines for assigning alarm severity levels](xref:Guidelines_for_assigning_alarm_severity_levels)
+> - [Best practices for assigning alarm severity levels](xref:Best_practices_for_assigning_alarm_severity_levels)
 
 ## Special alarm types
 

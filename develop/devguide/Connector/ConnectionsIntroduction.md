@@ -6,37 +6,49 @@ uid: ConnectionsIntroduction
 
 A protocol typically defines one or more connections through which the element running the protocol communicates with the device (or multiple devices). DataMiner supports different types of connections, such as SNMP, serial, HTTP, etc. A protocol can define multiple connections of different types (e.g. an HTTP connection and two SNMP connections).
 
-With the Type tag, the protocol connections can be defined. In case multiple connections are used, the additional connections need to be defined in the advanced attribute of the Type tag, indicating the type and name of each additional connection.
+With the [Type](xref:Protocol.Type) tag, the protocol connections can be defined. The main connection is specified as the value of the `Type` tag, e.g. `<Type relativeTimers="true">snmp</Type>`. In case multiple connections are used, the additional connections need to be defined in the [advanced](xref:Protocol.Type-advanced) attribute of the Type tag, indicating the type and name of each additional connection:
 
 ```xml
-<Type advanced="snmp:ConnectionName">serial</Type>
+<Type relativeTimers="true" options="unicode" communicationOptions="smartIPHeader" advanced="smart-serial:IP Connection - POST Messages;http:HTTP Connection - Master">http</Type>
 ```
 
-It can sometimes be necessary to specify which connection a particular functionality relates to in a protocol. This is done using an integer value denoting the connection ID. The main connection always has ID 0, and every additional connection defined in the protocol corresponds to an incremented ID (For the example above, this means the serial connection has ID 0 and the SNMP connection has ID 1).
+In the connector logic, it is sometimes necessary to specify to which connection particular functionality relates. This is done using an integer value denoting the connection ID. The main connection has ID 0, and every additional connection defined in the protocol corresponds to an incremented ID. (For the example above, this means that the main HTTP connection has ID 0, the smart-serial connection has ID 1, and the second HTTP connection has ID 2.)
 
 By default, groups and actions that involve a connection always use the main connection (connection ID 0). In case another connection should be used, this must be specified in the protocol.
 
+You can specify a connection on group level by using the [connection](xref:Protocol.Groups.Group-connection) attribute in the Group tag.
+
 ```xml
 <Groups>
-  <Group id="" connection="0" />
-  <Group id="" connection="1" />
+  <Group id="1" connection="2">
+    <Name>getXmlFile</Name>
+    <Description>Get XML File</Description>
+    <Content>
+      <Session>1</Session>
+    </Content>
+  </Group>
 </Groups>
-<Actions>
-  <Action id="" options="connection:0"/>
-  <Action id="" options="connection:1"/>
-</Actions>
 ```
 
-By default, you only need to specify a connection on group level by using the connection attribute in the Group tag. In case you need to perform an SNMP Set command, specify the connection to be used in the action.
+For some actions, you can for example use the [Type@nr](xref:Protocol.Actions.Action.Type-nr) attribute to specify the connection.
+
+```xml
+<Actions>
+  <Action id="402">
+    <On id="402" nr="1">parameter</On>
+    <Type>set</Type>
+  </Action>
+</Actions>
+```
 
 ## Element Wizard
 
 A connection has a number of configurable port settings. It is possible to define default settings for connections. It is also possible to restrict the capabilities of a device port, and to define the format and range of the bus address, if any.
 
 > [!NOTE]
-> It is advised to always specify as many port settings as possible, because it greatly enhances the user-friendliness of the protocol during element creation.
+> We recommend specifying as many port settings as possible, because it greatly enhances the user-friendliness of the protocol during element creation.
 
-The PortSettings tag allows the configuration of the main connection. Using the Ports tag, the port settings of each additional connection can be configured using the name of the connection.
+The [PortSettings](xref:Protocol.PortSettings) tag allows the configuration of the main connection. Using the [Ports/PortSettings](xref:Protocol.Ports.PortSettings) tag, the port settings of each additional connection can be configured.
 
 ```xml
 <PortSettings>
@@ -54,7 +66,7 @@ The PortSettings tag allows the configuration of the main connection. Using the 
 For example, when an element is created or edited in DataMiner, the bus address field allows the user to provide input for the configuration of the element. In most cases, this bus address will be a slot number of a chassis. In case no bus parameter is used in the protocol, it should be disabled.
 
 > [!NOTE]
-> The order in which the port settings are defined in the parent Ports tag determines which connections these port settings apply to. The "name" attribute of the PortSettings tag has no influence on this.
+> The order in which the port settings are defined in the parent Ports tag determines which connections these port settings apply to. The [name](xref:Protocol.PortSettings-name) attribute of the PortSettings tag has no influence on this.
 
 ```xml
 <PortSettings>
@@ -112,6 +124,7 @@ For several connection types, some port types are already disabled by the client
 
 ## See also
 
+- [Connection names](xref:Connection_names)
 - [bypassProxy](xref:ConnectionsHttpElementConfiguration)
 
 DataMiner Protocol Markup Language:

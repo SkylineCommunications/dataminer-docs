@@ -6,7 +6,7 @@ uid: GetServicesForFilter
 
 Use this method to retrieve the services matching a specific property filter.
 
-Available from DataMiner 10.0.12 onwards.
+<!-- Available from DataMiner 10.0.12 onwards. -->
 
 ## Input
 

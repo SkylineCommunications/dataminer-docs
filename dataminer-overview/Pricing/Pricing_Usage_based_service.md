@@ -88,30 +88,41 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 
 #### Definition
 
-| Service | Definition |
-|---|---|
-| *Standard Managed Object* | Endpoints directly or indirectly interfaced by DataMiner with 200 or more metrics, metered as the count of 10K metrics on each endpoint. Example: A Managed Object with 24K metrics is metered as 3. |
-| *Light Managed Object* | Endpoints with less than 200 metrics, metered as the sum of their metrics. |
-| *Connector Services* | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [Catalog](https://catalog.dataminer.services/).<br>Connectors developed by the user or another third party are not counted. |
-| *Script Runs* | Every time Automation scripts are [triggered](xref:Running_Automation_scripts).<br>Amongst others, this includes Life cycle Service Orchestration (LSO) scripts, Profile-Load Scripts (PLS), Process Automation activities, and DOM instance state transitions. |
-| *Collaboration Services* | Services consumed as part of [dataminer.services](xref:Overview_Collaboration), charged per volume. |
-| *Storage as a Service (STaaS)* | Charged based solely on data ingress (i.e. data going into the cloud). No charges apply for data egress (i.e. consumption of data from the cloud).<br>This includes Zone-Redundant Storage (ZRS) in one of the available [regions](xref:STaaS_features#data-location-and-redundancy), as well as automatic backup every 24 hours with a sliding window of 30 days. Other regions as well as Geo-Redundant Storage (GRS) are available at an additional charge. |
-| *DataMiner as a Service (DaaS)* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
+| Category | Service | Definition |
+|---|---|---|
+| Data Plane   | *Standard Managed Object*       | Endpoints directly or indirectly interfaced by DataMiner with 200 or more metrics. |
+| Data Plane   | *Light Managed Object*          | Endpoints with less than 200 metrics. |
+| Data Plane   | *Unmanaged Object*              | Unmanaged Object Instances available in the system (see [DataMiner Object Models](xref:DOM)). |
+| Data Sources | *Connector Services*            | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [Catalog](https://catalog.dataminer.services/).<br>Connectors developed by the user or another third party are not counted. |
+| Automation   | *Automation Actions*            | - [**Automation scripts**](xref:Running_Automation_scripts), e.g. Life cycle Service Orchestration (LSO) scripts and Profile-Load Scripts (PLS). <br> - **New Unmanaged Object Instances** added to the [DataMiner Object Models](xref:DOM), e.g. a new tickets, work order, asset, or contract record. |
+| Collaboration Services | *Dashboard Sharing*   | Sharing dashboards with real-time data and controls with both internal and external organization users. |
+| Storage as a Service (STaaS) | *Alarm Updates* | New alarm updates written to the storage service. |
+| Storage as a Service (STaaS) | *Information Events*| New information events written to the storage service.|
+| Storage as a Service (STaaS) | *Trend data points* | New data point updates from trended metrics written to the storage service. |
+| Storage as a Service (STaaS) | *Element data*| Metrics from Managed Objects written to the storage service. |
+| DataMiner as Service (DaaS)  | *Hosted Managed Objects* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
 
 > [!NOTE]
 > Only active and paused Managed Objects are counted for Managed Objects, Connector Services, and DaaS. Directly interfaced endpoints include data sources, devices, and platforms that expose an interface that allows direct interaction with those endpoints. Indirectly interfaced endpoints include those reported through a mediating data source, for example message brokers (like Apache Kafka or RabbitMQ), databases, or Element and Network Management Systems.
 
 #### Metering units
 
-| Service | Metering unit | Credits per month |
-|---|---|---|
-| *Standard Managed Object* | Count of 10K metrics on Managed Objects with 200 or more metrics | 0.4 |
-| *Light Managed Object* | Sum of metrics on Managed Objects with less than 200 metrics | 2 for 1000 metrics |
-| *Connector Services* | Sum of connectors delivered by Skyline, concurrently used | 8 |
-| *Script Runs* | Sum of script runs. | Starting at 5 for 1k script runs.<br>Unit credit rate decreases with increased quantities. |
-| *Collaboration Services* | Sum of total used volume | Dashboard Sharing: 0.5 credits/share/recipient/month |
-| *Storage as a Service (STaaS)* | Sum of ingress units. | 0.9 per 100K alarm updates.<br>0.3 per 100K information events.<br>0.3 per 10M trend data points.<br>0.3 per 10M element data updates. |
-| *DataMiner as a Service (DaaS)* | Sum of metrics of all Managed Objects hosted. | 0.1 for 10000 metrics|
+| Service | Metering unit | Credits per month | Example |
+|---|---|---|---|
+| *Standard Managed Object*     | Count of 10K metrics on Managed Objects with 200 or more metrics.                     | 0.4                        | A Managed Object with 24K metrics, the metered value is 3. |
+| *Light Managed Object*        | Sum of metrics on Managed Objects with less than 200 metrics.                         | 2 for 1000 metrics         | A Managed Object with 150 metrics, the metered value is 150. |
+| *Unmanaged Object*            | Sum of instances from all Unmanaged Objects.  | 4 per 100K instances. | A system with 5K tickets and 25K assets, the metered value is 30k x 4 / 100k = 1.2. |
+| *Connector Services*          | Sum of connectors delivered by Skyline, concurrently used.                            | 8 | Using 20 connectors a month, but with a maximum of 5 at any given time, the metered value is 5. |
+| *Automation Actions*          | Sum of Automation script runs (1x per run) and new Unmanaged Object Instances (5x new instance)    | Starting at 5 for 1K script runs.<br> Decreases with volume. | For an object "Ticket", when creating 100 new tickets, the metered value equals 500 |
+| *Dashboard Sharing*           | Sum of number of unique shares.                                                       | 0.5 | Sharing 2 dashboards with 5 email recipients for a full month, the metered value is 2 dashboards x 5 recipients = 10. |
+| *Alarm Updates*               | Sum of alarm update writes.       | 0.9 per 100K alarm updates. | |
+| *Information Events*          | Sum of information event writes.  | 0.3 per 100K information events. | |
+| *Trend data points*           | Sum of trend data point writes.   | 0.3 per 10M trend data points. | |
+| *Element data*                | Sum of element data writes.       | 0.3 per 10M element data updates. | |
+| *Hosted Managed Objects*      | Sum of metrics of all Managed Objects hosted. | 0.1 for 10K metrics| A hosted system With 2 Managed Objects, one with 24K metrics and the other with 150 metrics, the metered value is 24,150 x 0.1 / 10K = 0.2415 |
+
+> [!NOTE]
+> Instead of a fixed number of 5 actions, some objects defined in Skyline's [Standard Data Model](xref:Overview_DataMiner_Solutions#standard-data-model) may trigger a different number of Automation Actions when new unmanaged object instances are created.
 
 > [!TIP]
 > While STaaS charges can vary depending on the specifics of each DataMiner deployment and setup (e.g. specific types of Managed Objects, personal preferences and system configurations, etc.), the above translates to an average charge of 1.7 credits for 100 Managed Objects per month, considering a typical usage scenario of 180 alarm updates, 240 information events, 400,000 stored data points and 100,000 element data updates per Managed Object on average per month.

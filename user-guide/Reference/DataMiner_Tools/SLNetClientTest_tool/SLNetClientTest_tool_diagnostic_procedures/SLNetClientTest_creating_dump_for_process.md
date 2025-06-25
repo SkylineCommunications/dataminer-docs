@@ -12,7 +12,7 @@ With the SLNetClientTest tool, you can create a dump file for a process, i.e. a 
 
 1. In the *Select Dump Level* window, indicate what information should be included in the dump file, and click *OK*.
 
-   A file with the extension .dmp will be saved in the folder *C:\\Skyline Dataminer\\logging\\CrashDump*.
+   A file with the extension .dmp will be saved in the folder `C:\Skyline Dataminer\logging\CrashDump`.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

@@ -6,7 +6,7 @@ uid: GetResourceCapacityTrend
 
 Use this method to retrieve data points and info over time for a specific capacity and resource.
 
-Available from DataMiner 10.0.2 onwards.
+<!-- Available from DataMiner 10.0.2 onwards. -->
 
 ## Input
 

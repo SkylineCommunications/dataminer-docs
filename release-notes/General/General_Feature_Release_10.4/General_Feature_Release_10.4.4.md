@@ -438,7 +438,7 @@ Up to now, on STaaS systems, a notice would be generated when a DataMiner backup
 From now on, when a DataMiner backup is executed with the database backup option enabled, on a STaaS system, no database backup will be performed.
 
 > [!NOTE]
-> On STaaS systems, database backups are taken automatically. If you want a STaaS backup to be restored, contact [Skyline support](mailto:techsupport@skyline.be).
+> On STaaS systems, database backups are taken automatically. If you want a STaaS backup to be restored, contact [DataMiner Support](mailto:support@dataminer.services).
 
 #### StorageModule: Only final retry will be logged as error when a data storage request fails [ID 38897]
 

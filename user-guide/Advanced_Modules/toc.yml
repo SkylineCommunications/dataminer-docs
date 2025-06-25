@@ -1,7 +1,8 @@
 items:
   - name: Automation
-    topicUid: automation
     items:
+      - name: About DataMiner Automation
+        topicUid: automation
       - name: Managing Automation scripts
         topicUid: Managing_Automation_scripts
       - name: Designing Automation scripts
@@ -166,6 +167,12 @@ items:
         items:
           - name: Using an SLA to monitor a power service
             topicUid: SLA_tutorial
+  - name: Copilot
+    items:
+      - name: Copilot DxM
+        topicUid: Copilot_DxM
+      - name: Natural language to GQI
+        topicUid: NL2GQI
   - name: Correlation
     items:
       - name: About DataMiner Correlation
@@ -219,8 +226,8 @@ items:
             topicUid: Sending_a_text_message
           - name: Triggering a parameter set
             topicUid: Triggering_a_parameter_set
-      - name: Best practices when creating Correlation rules
-        topicUid: Best_Practices_When_Creating_Correlation_Rules
+      - name: Best practices for Correlation
+        topicUid: Best_Practices_For_Correlation
       - name: DataMiner Correlation tutorials
         items:
           - name: Responding to element timeouts using Correlation
@@ -312,13 +319,11 @@ items:
             items:
               - name: Displaying a custom empty component message
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
-              - name: Leveraging feeds in a web component
-                topicUid: Tutorial_Dashboards_Feeds_Web_Component
               - name: Leveraging controls and feeds to create a dynamic GQI query
                 topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
               - name: Getting started with node edge graphs
                 topicUid: Tutorial_Apps_Node_Edge
-              - name: Creating a parameter table connected to an element feed
+              - name: Creating a custom parameter table connected to an element feed
                 topicUid: Creating_a_parameter_table_connected_to_an_element_feed
               - name: Creating an alarm dashboard for a daily DMS health check
                 topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
@@ -380,6 +385,8 @@ items:
                 topicUid: TutorialMaps
               - name: Getting started with the grid component
                 topicUid: Tutorial_Apps_Grid
+              - name: Leveraging feeds in a web component
+                topicUid: Tutorial_Dashboards_Feeds_Web_Component
               - name: Creating a visually appealing and user-friendly low-code app
                 topicUid: Tutorial_App_Design
               - name: Using flows in a low-code app
@@ -466,6 +473,9 @@ items:
                 topicUid: DashboardPivotTable
               - name: Table
                 topicUid: DashboardTable
+                items:
+                  - name: Filtering table content
+                    topicUid: Filtering_Table_Content
           - name: Charts
             items:
               - name: Column & Bar chart
@@ -518,19 +528,56 @@ items:
                 topicUid: TimeRange
               - name: Toggle
                 topicUid: Toggle
-      - name: Component data
-        topicUid: Component_Data
-      - name: URL data
-        topicUid: URL_data
-      - name: Flows
-        topicUid: Using_flows
+      - name: Available data types
+        topicUid: Available_Data_Types
         items:
-          - name: Configuring a flow
-            topicUid: Configuring_a_flow
-          - name: Flow operators
-            topicUid: Flow_operators
-      - name: Variables
-        topicUid: Variables
+          - name: Booking data
+            topicUid: Booking_Data
+          - name: Component data
+            topicUid: Component_Data
+          - name: Element data
+            topicUid: Element_Data
+          - name: Flows
+            topicUid: Using_flows
+            items:
+              - name: Configuring a flow
+                topicUid: Configuring_a_flow
+              - name: Flow operators
+                topicUid: Flow_operators
+          - name: Index data
+            topicUid: Index_Data
+          - name: Object manager definition data
+            topicUid: Object_Manager_Definition_Data
+          - name: Object manager instance data
+            topicUid: Object_Manager_Instance_Data
+          - name: Parameter table filters
+            topicUid: Parameter_Table_Filters
+          - name: Parameter data
+            topicUid: Parameter_Data
+          - name: Profile parameter data
+            topicUid: Profile_Parameter_Data
+          - name: Protocol data
+            topicUid: Protocol_Data
+          - name: Query data
+            topicUid: Query_Data
+          - name: Redundancy group data
+            topicUid: Redundancy_Group_Data
+          - name: Resource data
+            topicUid: Resource_Data
+          - name: Service definition data
+            topicUid: Service_Definition_Data
+          - name: Service data
+            topicUid: Service_Data
+          - name: Spectrum buffer data
+            topicUid: Spectrum_Buffer_Data
+          - name: Spectrum preset data
+            topicUid: Spectrum_Preset_Data
+          - name: URL data
+            topicUid: URL_data
+          - name: Variables
+            topicUid: Variables
+          - name: View data
+            topicUid: View_Data
       - name: Specifying data input in a dashboard or app URL
         topicUid: Specifying_data_input_in_a_URL
       - name: Generic Query Interface (GQI)

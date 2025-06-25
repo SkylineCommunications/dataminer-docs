@@ -11,15 +11,10 @@ export default {
       title: 'LinkedIn'
     },
     {
-      icon: 'twitter-x',
-      href: 'https://twitter.com/skydataminer',
-      title: 'X'
+      icon: 'youtube',
+      href: 'https://www.youtube.com/@SkylineCommu',
+      title: 'YouTube'
     },
-	{
-		icon: 'youtube',
-		href: 'https://www.youtube.com/@SkylineCommu',
-		title: 'YouTube'
-	},
     {
       icon: 'facebook',
       href: 'https://www.facebook.com/SkylineCommunications',

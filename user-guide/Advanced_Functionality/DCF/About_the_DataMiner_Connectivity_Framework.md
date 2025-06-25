@@ -20,7 +20,7 @@ Connections can be set in different ways:
 
 - In Visual Overview. See [Implementing DataMiner Connectivity Framework functions](xref:Implementing_DataMiner_Connectivity_Framework_functions).
 
-- In *Connectivity.xml* files in the folder *C:\\Skyline DataMiner\\Connectivity*. See [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files).
+- In *Connectivity.xml* files in the folder `C:\Skyline DataMiner\Connectivity`. See [Defining connectivity chains in XML files](xref:Defining_connectivity_chains_in_XML_files).
 
 - By importing connection data from an external source (e.g. a configuration management database).
 

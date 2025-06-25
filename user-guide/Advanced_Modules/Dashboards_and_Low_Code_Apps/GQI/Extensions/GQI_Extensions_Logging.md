@@ -27,19 +27,19 @@ Log file names adhere to the following format: *Script_Library_Type.txt*.
 
 The location of the log files depends on the DataMiner version and on whether the GQI DxM is used:
 
-- From DataMiner 10.5.0 [CU1]/10.5.4 onwards, if the [GQI DxM](xref:GQI_DxM) is used, a separate log file will be created per GQI DxM extension library in the *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions* folder.
+- From DataMiner 10.5.0 [CU1]/10.5.4 onwards, if the [GQI DxM](xref:GQI_DxM) is used, a separate log file will be created per GQI DxM extension library in the `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions` folder.
 
 - Prior to DataMiner 10.5.0 [CU1]/10.5.4, if the [GQI DxM](xref:GQI_DxM) is used, log files are created for both types of extensions, each within their respective subfolders:
 
-  - For ad hoc data sources: *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Ad hoc data sources*
+  - For ad hoc data sources: `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Ad hoc data sources`
 
-  - For custom operators: *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Custom operators*
+  - For custom operators: `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Custom operators`
 
 - If GQI runs in the SLHelper process, log files are created for both types of extensions, each within their respective subfolders:
 
-  - For ad hoc data sources: *C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources*
+  - For ad hoc data sources: `C:\Skyline DataMiner\Logging\GQI\Ad hoc data sources`
 
-  - For custom operators: *C:\Skyline DataMiner\Logging\GQI\Custom operators*
+  - For custom operators: `C:\Skyline DataMiner\Logging\GQI\Custom operators`
 
 ## Log messages
 
@@ -165,7 +165,7 @@ Suppose a user named Kevin applies this operator to the following data:
 
 Kevin selects the *Color* column as the argument.
 
-If Kevin is using a DataMiner version prior to 10.5.0 [CU1]/10.5.4, he can now access the relevant log messages in the *ExampleScript_ExampleLibrary_LogOperator.txt* file, located in the *C:\Skyline DataMiner\Logging\GQI\Custom operators* directory:
+If Kevin is using a DataMiner version prior to 10.5.0 [CU1]/10.5.4, he can now access the relevant log messages in the *ExampleScript_ExampleLibrary_LogOperator.txt* file, located in the `C:\Skyline DataMiner\Logging\GQI\Custom operators` directory:
 
 ```log
 [2024-04-22 10:19:13.143 INF] [c6a3d4bf] [71ba5588] Logs for user Kevin
@@ -175,7 +175,7 @@ If Kevin is using a DataMiner version prior to 10.5.0 [CU1]/10.5.4, he can now a
 [2024-04-22 10:19:13.189 DBG] [c6a3d4bf] [71ba5588] Value for '3' is 'Carmine'
 ```
 
-With later DataMiner versions, the log message will instead be available in a file named *ExampleScript_ExampleLibrary.txt*, located in the *C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions* folder:
+With later DataMiner versions, the log message will instead be available in a file named *ExampleScript_ExampleLibrary.txt*, located in the `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions` folder:
 
 ```log
 [2024-04-22 10:19:13.143][INF][ExampleLibrary.Operator1][SKYLINE2\Kevin][c6a3d4bf][71ba5588] Column to log: Color

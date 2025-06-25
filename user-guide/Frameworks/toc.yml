@@ -119,14 +119,16 @@ items:
       - name: SRM use cases
         topicUid: srm_use_cases
         items:
-          - name: Resource Automation
-            topicUid: srm_resource_automation
           - name: Resource Scheduling
             topicUid: srm_resource_scheduling
+          - name: Resource Automation
+            topicUid: srm_resource_automation
           - name: Resource Orchestration
             topicUid: srm_resource_orchestration
           - name: Service Orchestration
             topicUid: srm_service_orchestration
+      - name: SRM stack
+        topicUid: srm_stack
       - name: SRM framework concepts
         topicUid: srm_concepts
         items:
@@ -298,5 +300,3 @@ items:
             topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
       - name: SRM logging
         topicUid: SRM_logging
-  - name: Standard Data Model (SDM)
-    topicUid: SDM

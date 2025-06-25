@@ -1,5 +1,6 @@
 ---
 uid: Configuring_outgoing_email
+description: A DMS can send out email notifications and reports via an SMTP server. This is configured either in DataMiner.xml or via the SLNetClientTest tool.
 ---
 
 # Configuring outgoing email
@@ -44,7 +45,7 @@ You can either configure this directly in *DataMiner.xml* or use the SLNetClient
 
   1. Stop the DataMiner software.
 
-  1. Open the file *C:\\Skyline DataMiner\\DataMiner.xml*.
+  1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
   1. Go to the *\<SMTP>* section. If this section does not exist yet, add it.
 

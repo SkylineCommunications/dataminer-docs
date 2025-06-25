@@ -24,7 +24,7 @@ Typically, this is used in the following cases:
 
 - When the DataMiner Agents are unable to authenticate with each other and you wish to specify the credentials of a Windows user with Administrator privileges to work around this.
 
-  It will typically become clear from the *C:\Skyline DataMiner\Logging\SLNet.txt* log if DataMiner Agents are unable to authenticate between each other. This may occur in setups where the DMAs are in different domains.
+  It will typically become clear from the `C:\Skyline DataMiner\Logging\SLNet.txt` log if DataMiner Agents are unable to authenticate between each other. This may occur in setups where the DMAs are in different domains.
 
 In some existing setups, connection strings are also used in the cases below. However, these configurations should not be used on newer systems. Changing ports or IP addresses may also require other changes in the DMS, such as NATS tweaks or tweaks in other configuration files.
 

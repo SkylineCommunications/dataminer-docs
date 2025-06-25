@@ -18,7 +18,7 @@ The type of data required depends on the type of issue you are experiencing:
 - For element communication issues: [Stream Viewer traces](#stream-viewer-traces)
 
 > [!TIP]
-> See also: [Contacting tech support](xref:Contacting_tech_support)
+> See also: [Contacting DataMiner Support](xref:Contacting_tech_support)
 
 ## Log Collector packages
 
@@ -33,7 +33,7 @@ To save a Log Collector package:
    ![Log Collector](~/user-guide/images/LogCollector.png)
 
    > [!NOTE]
-   > If the DataMiner Taskbar Utility icon is missing from the taskbar, or if the Log Collector option is not present in the dropdown list, you can manually find the *C:\Skyline DataMiner\Tools\SLLogCollector\SL_LogCollector.exe* file or download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
+   > If the DataMiner Taskbar Utility icon is missing from the taskbar, or if the Log Collector option is not present in the dropdown list, you can manually find the `C:\Skyline DataMiner\Tools\SLLogCollector\SL_LogCollector.exe` file or download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
 
 1. In the *DataMiner Log Collector* pop-up window, select *Start* in the lower right corner.
 
@@ -93,42 +93,9 @@ You should also collect information to investigate why Cube could not connect to
 
 ## Web app recordings
 
-For troubleshooting issues related to DataMiner web apps, such as DataMiner Dashboards, the Monitoring app, and DataMiner Low-Code Apps, we recommend using the DataMiner Web Support Assistant browser extension.
+For troubleshooting issues related to DataMiner web apps, such as DataMiner Dashboards, the Monitoring app, and DataMiner Low-Code Apps, we recommend using the **DataMiner Web Support Assistant browser extension**. This extension is available for Google Chrome or any Chromium-based browser.
 
-This extension is available for Google Chrome or any Chromium-based browser.
-
-### Installing the DataMiner Web Support Assistant
-
-1. Look up the [*DataMiner Web Support Assistant*](https://chromewebstore.google.com/detail/dataminer-web-support-ass/nofmcbgpolhjblmafpfbffjnganhapge) extension in the Chrome Web Store.
-
-1. Click *Add to Chrome* in the top-right corner.
-
-1. Restart your browser.
-
-### Creating a recording with the DataMiner Web Support Assistant
-
-1. Navigate to the tab where you are experiencing an issue with a DataMiner web app.
-
-1. Click the puzzle icon in the top-right corner of your browser and select *DataMiner Web Support Assistant* from the list of available extensions.
-
-1. Click the large red recording button to start the recording.
-
-   ![Web Support Assistant icon and popup](~/user-guide/images/Web_Support_Assistant_icon_popup.png)
-
-   The extension will minimize, indicating that the recording has begun. The maximum duration for a recording is 10 minutes.
-
-1. Replicate the process that led to the bug or issue in the web app.
-
-1. When the issue has been successfully replicated, reopen the extension and click the red *END* button to stop the recording.
-
-1. Allow the extension to finish processing the data. This will be indicated by a loading screen. Do not close the extension during this process.
-
-   Once the recording is ready, a green checkmark will be displayed.
-
-1. Click *Download* to download the ZIP file containing all the necessary data. This concludes the recording process.
-
-> [!IMPORTANT]
-> The extension only collects data from the tab in which the recording was started. Ensure to stay within that tab to accurately recreate the issue.
+For information about how to install the extension and create a recording with it, refer to [Web Support Assistant](xref:Web_Issues_Support_Assistant).
 
 ## DELT export packages
 

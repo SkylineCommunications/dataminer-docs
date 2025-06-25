@@ -27,6 +27,6 @@ Once a test has run, the *Message* column will display information on the test r
 
 > [!NOTE]
 >
-> - Standard BPA tests are included in updates from DataMiner 10.2.0/10.1.2 onwards and added in the folder *C:\\Skyline DataMiner\\BPA*.
+> - Standard BPA tests are included in updates from DataMiner 10.2.0/10.1.2 onwards and added in the folder `C:\Skyline DataMiner\BPA`.
 > - To use the *Agents* > *BPA* page in System Center, you need the user permissions under *Modules* > *System Configuration* > *Tools* > *Best Practices Analyzer*.
 > - A BPA test can only be executed if it has been digitally signed by Skyline, and if your DataMiner version is within the limitations of the minimum and/or maximum DataMiner version configured in the test (if any).

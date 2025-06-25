@@ -64,6 +64,8 @@ Whenever the relationship for a parameter group is broken, RAD detects this and 
 
 Suggestion events for the same group of parameters are grouped into a single incident. Clearing the grouped incident will also clear all suggestion events included in it. Other changes (e.g., taking ownership, adding comments) are not supported for grouped incidents. Note that prior to DataMiner 10.5.4, <!-- RN 41983, 42050 --> a separate suggestion event was generated for each parameter in the group where a broken relationship was detected.
 
+From DataMiner 10.5.6/10.6.0 onwards<!--RN 42602-->, [deleting a parameter group](xref:RAD_manager#removing-a-parameter-group) will also clear all open suggestion events associated with that group.
+
 ## Limitations
 
 - RAD is only able to monitor parameters on the local DataMiner Agent. This means that all parameter instances configured in the *RelationalAnomalyDetection.xml* configuration file on a given DMA must be hosted on that same DMA. Currently, RAD is not able to simultaneously monitor parameters hosted on different DMAs.

@@ -15,7 +15,7 @@ This platform is constantly getting improved. At present, several workarounds ar
 
 Connectors (also known as protocols or drivers) are XML files and assemblies that are packaged into .dmprotocol files. The source code of these is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the Catalog.
 
-All connectors are public Catalog items. Perform the following steps to release a connector version:
+Perform the following steps to release a connector version:
 
 1. Make sure the following prerequisites are available:
 
@@ -138,7 +138,7 @@ As dashboards are a purely visual artifact, the source code is rarely changed di
 
 1. Make sure the following prerequisites are available:
 
-   - [DataMiner](xref:Creating_a_DataMiner_System)
+   - [DataMiner](xref:Deploying_a_DataMiner_System)
 
    - [Visual Studio](https://visualstudio.microsoft.com/downloads/)
 

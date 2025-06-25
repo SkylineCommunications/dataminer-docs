@@ -9,6 +9,62 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 20 May 2025 - Enhancement - Catalog - Catalog item market
+
+On the details page of a Catalog item, users will now be able to see the market for which the item is intended.
+
+### 20 May 2025 - Enhancement - Admin - DMS overview links to DxM page
+
+Links that direct to the DxM page on the DMS overview page in the Admin app will now open the link in the current tab of the browser instead of opening a new tab.
+
+### 20 May 2025 - Enhancement - Unauthenticated views
+
+Applications on *.dataminer.services will now support an unauthenticated view and navigate to the root page of the application when the user session expires or the user signs out.
+
+Additionally, the loading animations on dataminer.services have been improved, and the Admin app will not be shown in available applications when the user is not signed in.
+
+### 14 May 2025 - Fix - Invalid token after silent renew
+
+When a user session was silently renewed, the token could become invalid, causing the application to go into an invalid state that made it impossible to complete user actions. Tokens should now be correctly renewed and not block application actions.
+
+### 14 May 2025 - Fix - Admin - DxM updates giving false positives
+
+When an installed DxM version was different than the latest available version, the update message would be shown, even if the installed version was not lower than the latest available version. This should no longer occur.
+
+### 12 May 2025 - Fix - Share Management - Problem logging in if shared login is not supported [ID 42918]
+
+If shared login was not supported by the browser, it could occur that logging in to Share Management was not possible.
+
+### 12 May 2025 - Enhancement - Catalog - Market field renamed to Element Type in Catalog item details [ID 42917]
+
+In the sidebar on the details page of Catalog items, the "Market" field has now been renamed to "Element Type", so that this more correctly indicates what this field represents.
+
+### 08 May 2025 - Enhancement - Local sign-on fallback [ID 42883]
+
+When experiencing issues with the shared single sign-on, applications will now fall back to a local sign-on.
+
+### 08 May 2025 - Enhancement - Syncing authentication state across dataminer.services applications [ID 42882]
+
+Signing in or out will now automatically sync to other applications without the need to refresh the page.
+
+### 05 May 2025 - Enhancement - Catalog - Deletion of items by publishing organization [ID 42793]
+
+If you are a member of the organization that published a specific Catalog item, and you have the Owner or Admin role, you can now delete that Catalog item using a context menu at the top of the item's details page. When you do so, you will have to provide the reason for the deletion.
+
+### 05 May 2025 - Fix - Usage Export - Selected DataMiner Systems not respected during export [ID 42865]
+
+Previously, export requests in the Admin app ignored the DataMiner Systems selected by the user and exported all available data instead. This issue has been resolved. Export results are now correctly limited to the selected DataMiner Systems.
+
+### 05 May 2025 - New feature - Single sign-on across various dataminer.services apps [ID 42768] [ID 42789]
+
+Single sign-on (SSO) has been implemented across the Catalog, Admin, and Sharing apps on dataminer.services, as well as on the page used to connect Agents to dataminer.services and configure account linking. Users who sign in to one of these apps or pages will now be automatically signed in to the others, providing a more seamless user experience.
+
+### 28 April 2025 - Fix - Usage API - Performance and stability improvements [ID 42791]
+
+It was possible that an export request failed with an out of memory exception. This has been fixed.
+
+In addition, retrieving usage data to display in the Admin app resulted in a timeout when a large amount of data had to be retrieved. Query performance has been improved to prevent this.
+
 ### 22 April 2025 - Fix - Catalog - Incorrect vendor name shown [ID 42769]
 
 In some cases, it could occur that the wrong vendor name was shown.

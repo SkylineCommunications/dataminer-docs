@@ -26,7 +26,7 @@ To do so:
 1. Next to *Audio file*, select the audio file that should be used. If the file is not yet available, select *\<Add audio file>* and browse to the desired file.
 
    > [!NOTE]
-   > - When you add a sound file, it is placed in the folder *C:\\Skyline DataMiner\\Sounds*.
+   > - When you add a sound file, it is placed in the folder `C:\Skyline DataMiner\Sounds`.
    > - The following file extensions are supported: ".asf", ".wmv", ".wm", ".asx", ".wax", ".wvx", ".wmx", ".wpl", ".wmd", ".mpg", ".m1v", ".mp2", ".mp3", ".mpa", ".mpe", ".m3u", ".mid", ".midi", ".rmi", ".aif", ".aifc", ".aiff", ".au", ".snd", ".wav", ".cda", ".ivf", ".wmz", ".wms".
    > - You can also delete an audio file in the drop-down list, by hovering the mouse pointer over the file and then clicking the *X*.
    > - If you add, update or delete a sound file, an information event is generated. If a sound is updated or deleted, a recycle bin entry is generated.

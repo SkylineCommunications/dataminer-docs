@@ -25,7 +25,7 @@ Up to now, the DataMiner Agent to which you were connected would handle all requ
 
 ##### Configuration
 
-In the *C:\\Skyline DataMiner\\Webpages\\API\\Web.config* file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
+In the `C:\Skyline DataMiner\Webpages\API\Web.config` file of a particular DataMiner Agent, add the following keys in the `<appSettings>` section:
 
 - `<add key="visualOverviewLoadBalancer" value="true" />`
 
@@ -61,7 +61,7 @@ The following new messages can now be used to  which you can target to be sent t
 
 ##### Logging
 
-Additional logging with regard to visual overview load balancing will be available in the web logs located in the *C:\\Skyline DataMiner\\Logging\\Web* folder.
+Additional logging with regard to visual overview load balancing will be available in the web logs located in the `C:\Skyline DataMiner\Logging\Web` folder.
 
 #### Enhanced performance when updating subscriptions and when checking events against the set of active subscriptions [ID 41822]
 
@@ -174,12 +174,12 @@ Also, no new log file will be started every day anymore. From now on, a new log 
 
 <!-- MR 10.5.0 [CU1] - FR 10.5.4 -->
 
-From now on, a separate log file will be created per GQI DxM extension library in the *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions* folder.
+From now on, a separate log file will be created per GQI DxM extension library in the `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions` folder.
 
 Example:
 
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library A.txt*
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions\\Library B.txt*
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions\Library A.txt`
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions\Library B.txt`
 
 The log entries added to those files will now each include the name of the extension as well as the name of the user. The log entry format will now be the following:
 
@@ -191,7 +191,7 @@ The log entries added to those files will now each include the name of the exten
 
 SLLogCollector will now look for GQI DxM extension logging in the following folder:
 
-- *C:\\ProgramData\\Skyline Communications\\DataMiner GQI\\Logs\\Extensions*
+- `C:\ProgramData\Skyline Communications\DataMiner GQI\Logs\Extensions`
 
 ### Fixes
 

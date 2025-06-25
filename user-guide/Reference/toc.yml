@@ -114,21 +114,10 @@ items:
         topicUid: Connection_Check
       - name: Copy Element Data
         topicUid: Copy_Element_Data
-      - name: Data Aggregator Migrator
-        topicUid: Data_Aggregator_Migrator
+      - name: Data Aggregator Migrators
+        topicUid: Data_Aggregator_Migrators
       - name: DataMiner Comparison tool
         topicUid: DataMinerComparisonTool
-      - name: DataMiner Health Check Tool
-        topicUid: DataMiner_Health_Check_Tool
-        items:
-          - name: Installing the Health Check Tool
-            topicUid: DataMiner_Health_Check_Tool_Installation
-          - name: Configuring the Health Check Tool
-            topicUid: DataMiner_Health_Check_Tool_Configuration
-          - name: Using the Health Check Tool
-            topicUid: DataMiner_Health_Check_Usage
-          - name: Health Check Tool Dashboards
-            topicUid: DataMiner_Health_Dashboards
       - name: DataMiner Size tool
         topicUid: DataMinerSizeTool
       - name: DataMiner Taskbar Utility

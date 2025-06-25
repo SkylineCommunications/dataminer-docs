@@ -33,7 +33,7 @@ In essence, dataminer.MediaOps revolutionizes media operations by combining mode
 
 ## What can you do with dataminer.MediaOps?
 
-dataminer.MediaOps simplifies and automates your media supply chain. It comes with a [set of ready-made applications](xref:Overview_MediaOps_Apps), which will soon be available in the Catalog<!-- TBD: update when available -->. These can be extended with your own customized applications to tailor the UEx (User Experience) to the user's role. It can also be extended with workflows, automation, and even user-defined APIs to integrate with your existing systems.
+dataminer.MediaOps simplifies and automates your media supply chain. It comes with a [set of ready-made applications](xref:Overview_MediaOps_Apps), which can be extended with your own customized applications to tailor the UEx (User Experience) to the user's role. It can also be extended with workflows, automation, and even user-defined APIs to integrate with your existing systems.
 
 The use cases offered by dataminer.MediaOps are listed below. The solution's focus spans from inventory management to planning and reservation, to live operations, up to finishing events and managing costs and billing.
 
@@ -60,13 +60,3 @@ This list will continue to grow over time as new releases become available for d
 - **Finish**: Cleaning up the network post-event is essential, involving tasks such as removing multicast routes from switches, deactivating cloud infrastructure (eliminating excess cost), and adjusting host and flow policies to enhance network security.
 
 - **Cost & billing**: At the end of the day, M&E enterprises need to manage costs and income. dataminer.MediaOps provides reports on resource utilization, cost, and sales billing prices for each event, enabling M&E companies to understand their costs and allocate them to shows, channels, categories, content providers, customers, and more. dataminer.MediaOps can also generate raw billing information and integrate it into your billing system.
-
-## MediaOps apps
-
-dataminer.MediaOps comes with a set of low-code apps that expose the MediaOps functionality to end users. You can use these apps as they are, or use them as a starting point to develop a custom user interfaces for specific projects.
-
-For an overview of the different applications available in the package, see [MediaOps apps](xref:Overview_MediaOps_Apps).
-
-## Getting started with MediaOps
-
-For instructions how to install and get started with MediaOps, refer to our [user guide](xref:Installing_MediaOps).

@@ -15,7 +15,7 @@ To set a different number:
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Specify a different number for the *portProcesses* attribute of the *ProcessOptions* tag.
 
@@ -42,7 +42,7 @@ To set a different number:
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Specify a different number for the *protocolProcesses* attribute of the *ProcessOptions* tag.
 
@@ -74,7 +74,7 @@ To have separate SLProtocol processes created for every protocol being used, do 
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<ProcessOptions>* tag, set the *protocolProcesses* attribute to "protocol".
 
@@ -84,7 +84,7 @@ To have separate SLProtocol processes created for every protocol being used, do 
    </DataMiner>
     ```
 
-1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Save `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Restart the DataMiner software.
 
@@ -99,7 +99,7 @@ To have separate SLScripting processes created for every protocol being used, do
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<ProcessOptions>* tag, set both the *protocolProcesses* attribute and the *scriptingProcesses* attribute to "protocol".
 
@@ -112,7 +112,7 @@ To have separate SLScripting processes created for every protocol being used, do
    > [!NOTE]
    > If scriptingProcesses is set to "protocol", an SLScripting process is initialized for every SLProtocol process (see [Configuring a separate SLScripting process for each SLProtocol process](#configuring-a-separate-slscripting-process-for-each-slprotocol-process)). As an SLProtocol process is used for every protocol when protocolProcesses is set to "protocol", combining these two attributes effectively initializes a separate SLScripting process for every protocol.
 
-1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Save `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Restart the DataMiner software.
 
@@ -122,7 +122,7 @@ In a system where the load for one particular protocol has to be spread over sev
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<ProcessOptions>* tag, set the *protocolProcesses* attribute to a fixed number and the *scriptingProcesses* attribute to "protocol".
 
@@ -134,7 +134,7 @@ In a system where the load for one particular protocol has to be spread over sev
 
    The number you specified determines the number of SLProtocol processes. Elements using the same SLProtocol process will also use the same SLScripting process.
 
-1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Save `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Restart the DataMiner software.
 
@@ -153,7 +153,7 @@ To configure this:
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<ProcessOptions>* element, specify a *\<SeparateProcesses>* element listing the protocols that should run in separate SLProtocol and SLScripting instances. For example:
 
@@ -173,7 +173,7 @@ To configure this:
    </DataMiner>
    ```
 
-1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Save `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Restart the DataMiner software.
 
@@ -190,7 +190,7 @@ To do so:
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Set the *protocolProcesses* attribute of the *\<ProcessOptions>* tag to "replicationIP":
 
@@ -208,7 +208,7 @@ From DataMiner 10.2.7/10.3.0 onwards, the number of simultaneously running SLScr
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. In the *\<ProcessOptions>* tag, set the *scriptingProcesses* attribute to the desired number. For example:
 
@@ -218,7 +218,7 @@ From DataMiner 10.2.7/10.3.0 onwards, the number of simultaneously running SLScr
    </DataMiner>
    ```
 
-1. Save *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Save `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Restart the DataMiner software.
 
@@ -239,7 +239,7 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. Make sure *DataMiner.xml* contains a *\<ProcessOptions>* tag and that it contains the *scriptingProcesses="\[Service\]"* attribute:
 
@@ -249,7 +249,7 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 1. Open a command window as Administrator, and do the following:
 
-   1. Go to *C:\\Skyline DataMiner\\Files*.
+   1. Go to `C:\Skyline DataMiner\Files`.
 
    1. Execute the following command: *SLScripting.exe /service*
 
@@ -259,7 +259,7 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 1. Stop the DataMiner software.
 
-1. Open the file *C:\\Skyline Dataminer\\DataMiner.xml.*
+1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
 1. If *DataMiner.xml* contains a *\<ProcessOptions>* tag with a *scriptingProcesses="\[Service\]"* attribute, remove that attribute:
 
@@ -269,7 +269,7 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 1. Open a command window as Administrator, and do the following:
 
-   1. Go to *C:\\Skyline DataMiner\\Files*.
+   1. Go to `C:\Skyline DataMiner\Files`.
 
    1. Execute the following command: *SLScripting.exe /regserver*
 
@@ -320,11 +320,11 @@ In this case, SLWatchdog will do the following:
 
 In the file *MaintenanceSettings.xml*, you can specify a number of SLWatchdog settings.
 
-1. Open the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+1. Open the file `C:\Skyline DataMiner\MaintenanceSettings.xml`.
 
 1. In the *Watchdog* tag, modify the SLWatchdog settings (see below).
 
-1. Save *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+1. Save `C:\Skyline DataMiner\MaintenanceSettings.xml`.
 
 1. Stop the DataMiner Agent.
 
@@ -786,7 +786,7 @@ If you do want information events to be generated when scripts are triggered by 
 
 On a DMA, you can specify the port to be used for .NET Remoting.
 
-1. Go to the *C:\\Skyline DataMiner\\Files* directory of the DMA.
+1. Go to the `C:\Skyline DataMiner\Files` directory of the DMA.
 
 1. In a text editor (e.g. Microsoft Notepad), open *SLNet.exe.config*.
 

@@ -12,7 +12,7 @@ The Maps component is fully available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/
 
 > [!NOTE]
 >
-> - To use the Maps component, the host servers for DataMiner Maps have to be configured in the file *C:\Skyline DataMiner\Maps\ServerConfig.xml*. If this file does not exist, it will be created automatically when you use a Maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
+> - To use the Maps component, the host servers for DataMiner Maps have to be configured in the file `C:\Skyline DataMiner\Maps\ServerConfig.xml`. If this file does not exist, it will be created automatically when you use a Maps component for the first time. To change the configuration, see [Configuring the DataMiner Maps host servers](xref:Configuring_the_DataMiner_Maps_host_servers).
 > - This component currently only supports **Google Maps** ("gmaps") as the [Maps provider](xref:Configuring_the_DataMiner_Maps_host_servers).
 
 ## Adding data
@@ -103,7 +103,7 @@ The following actions are available:
 
 - *Set zoom level*: This action zooms to a certain level on the map. The zoom level can be static or dynamic (using the *Link to data* option).
 
-- *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (which can also be received using the *Link to data* option), and it can be either a local source, specified by a relative path in the *C:\Skyline DataMiner\Maps* folder, or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available:
+- *Overlay actions*: Using app actions, different types of overlays can be shown on the map. The supported overlay types are .kml, .kmz and .geoJSON. The source of the overlay needs to be specified in an input (which can also be received using the *Link to data* option), and it can be either a local source, specified by a relative path in the `C:\Skyline DataMiner\Maps` folder, or a web source, specified by a public URL that hosts the overlay. The following overlay actions are available:
 
   - *Open overlay*
 

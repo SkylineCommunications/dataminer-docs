@@ -11,15 +11,20 @@ uid: General_Main_Release_10.6.0_changes
 
 ### Enhancements
 
-#### DataMiner installer has been updated [ID 40409] [ID 41299]
+#### DataMiner installer has been updated [ID 40409] [ID 41299] [ID 43030]
 
-<!-- MR 10.6.0 - FR 10.5.1 -->
+<!-- RN 40409: MR 10.6.0 - FR 10.5.1 -->
+<!-- RN 41299: MR 10.6.0 - FR 10.5.1 -->
+<!-- RN 43030: MR 10.6.0 - FR 10.5.8 -->
 
 The DataMiner installer has been updated.
 
-When the configuration window appears, it will now be possible to either continue with the configuration or cancel the entire installation.
+- When the configuration window appears, it will now be possible to either continue with the configuration or cancel the entire installation.
 
-For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
+- When, while installing DataMiner using the DataMiner installer, you have selected to use STaaS for data storage, at some point, you will have to select the STaaS region. Up to now, you were only able to select one of two hard-coded regions. From now on, the available STaaS regions will be retrieved from dataminer.services by means of an API call.
+
+> [!TIP]
+> For more information on the installer, see [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer).
 
 #### DataMiner recycle bin enhancements [ID 40565]
 
@@ -206,8 +211,8 @@ Now, this BPA test has been renamed to *Check Deprecated DLL Usage*. Depending o
 
 | Deprecated DLL | Deprecated since DataMiner version | Minimum safe DLL version | Folder |
 |----------------|------------------------------------|--------------------------|--------|
-| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | *C:\Skyline DataMiner\ProtocolScripts* |
-| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | *C:\Skyline DataMiner\ProtocolScripts* or *C:\Skyline DataMiner\Files* |
+| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370--> | 8.0.0.0 | `C:\Skyline DataMiner\ProtocolScripts` |
+| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057--> | N/A     | `C:\Skyline DataMiner\ProtocolScripts` or `C:\Skyline DataMiner\Files` |
 
 Any version lower than the specified minimum version will be considered outdated, as older versions are known to pose security risks.
 
@@ -306,6 +311,31 @@ A number of enhancements have been made to the *ModuleSettings* window.
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Service & Resource Management: Enhanced retrieval of service definitions [ID 42810]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when retrieving service definitions.
+
+Also, SLNet and SLDataGateway will now exchange data faster thanks to the use of protobuf serialization.
+
+#### DataMiner upgrade packages will now automatically upgrade the ModelHost and Copilot DxMs [ID 42896] [ID 43182]
+
+<!-- RN 42896: MR 10.6.0 - FR 10.5.7 -->
+<!-- RN 43182: MR 10.6.0 - FR 10.5.8 -->
+
+From now on, when a DataMiner upgrade is performed on a system containing a ModelHost and/or a Copilot DxM, these modules will automatically be upgraded if the version in the upgrade package is newer than the installed version.
+
+#### SLNet will now pass updated company information to client applications [ID 43168]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+By default, SLNet will now pass the following updated company information to client applications:
+
+- Company website: <https://www.skyline.be>
+- TechSupport web page: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
+- TechSupport email address: <support@dataminer.services>
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
@@ -334,15 +364,11 @@ When, in the *Scheduler* app, a dashboard was exported via an email action, up t
 
 When a trend graph seemed to increase or decrease, in some cases, change points could incorrectly be labeled as a level shift.
 
-#### SLAnalytics: Problem when starting behavioral anomaly detection due to caching issue [ID 42422]
+#### Credentials Library: Problem when the same group was added more than once in the UpdateLibraryCredentialMessage [ID 42248]
 
-<!-- MR 10.6.0 - FR 10.5.5 -->
+<!-- MR 10.6.0 - FR 10.5.7 -->
 
-Up to now, in some cases, behavioral anomaly detection would not be able to start up correctly due to the maximum cache size having been reached when the internal caches were being fetched after SLAnalytics had been started.
-
-From now on, if the maximum cache size is reached, old model information might get discarded to allow behavioral anomaly detection to start up correctly. If this happens, the following error will be logged:
-
-`Max cache size reached during prefetch of the cache, potential data loss`
+Because of an issue in SLNet, up to now, if the same group would be added more than once in the `UpdateLibraryCredentialMessage` (i.e. the SLNet message used to add or update credentials), duplicated `Group` tags would end up in the *Library.xml* file. As a result, in DataMiner Cube, the updated credential would get stuck, showing a "[modified]" tag.
 
 #### Problem with SLAutomation when a Notify method was called shortly after an Automation script had finished [ID 42465]
 
@@ -361,3 +387,9 @@ In systems with many trended parameters, an SLNet memory leak could occur whenev
 <!-- MR 10.6.0 - FR 10.5.6 -->
 
 At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
+
+#### Alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service [ID 42724]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.

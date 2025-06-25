@@ -20,7 +20,7 @@ In layers of sourceType "table", this ID can be used in conjunction with the `<M
 
 In this mandatory attribute, specify the path to the marker image file.
 
-Enter either an absolute path (starting with *http://*) or a path relative to *C:\\Skyline DataMiner\\Webpages\\Maps\\*
+Enter either an absolute path (starting with *http://*) or a path relative to `C:\Skyline DataMiner\Webpages\Maps\`
 
 > [!NOTE]
 > To generate images dynamically, it is possible to use placeholders in the URL, which should then be specified in the `<MarkerDetails>` tag. See [MarkerDetails](xref:MarkerDetails).

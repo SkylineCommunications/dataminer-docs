@@ -4,12 +4,10 @@ uid: GetActiveTickets
 
 # GetActiveTickets
 
-Use this method to retrieve the active tickets for this DMA, i.e. tickets that are not closed and tickets linked to an active DataMiner alarm. The tickets are retrieved in pages, in descending order.
+This method is deprecated. <!-- From DataMiner 10.0.13 onwards, -->Use the [GetActiveTicketsV2](xref:GetActiveTicketsV2) method instead.
 
 > [!NOTE]
->
-> - From DataMiner 10.0.13 onwards, use the [GetActiveTicketsV2](xref:GetActiveTicketsV2) method instead.
-> - DataMiner Ticketing requires a Cassandra database as well as a specific license. From DataMiner 10.0.13 onwards, it also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
+> DataMiner Ticketing requires a Cassandra database as well as a specific license. <!-- From DataMiner 10.0.13 onwards, -->It also requires an indexing database. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
 
 > [!CAUTION]
 >

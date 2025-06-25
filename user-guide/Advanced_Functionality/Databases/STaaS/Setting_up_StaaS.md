@@ -1,5 +1,6 @@
 ---
 uid: Setting_up_StaaS
+description: To set up STaaS on a self-managed DMS, connect the system to dataminer.services, register, edit DB.xml on each DMA, and restart DataMiner.
 ---
 
 # Setting up STaaS
@@ -29,7 +30,7 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
 
 1. Make sure that all Agents in your DataMiner System have internet access, either directly or through a proxy.
 
-   For specific endpoints or IPs to whitelist, contact <staas@dataminer.services>. The configuration depends on the region you will register your system for.
+   For specific endpoints or IPs to whitelist, contact <support@dataminer.services>. The configuration depends on the region you will register your system for.
 
    > [!NOTE]
    > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
@@ -88,4 +89,4 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
 1. Restart DataMiner to begin using STaaS.
 
 > [!NOTE]
-> If you experience any issues during setup or while using Storage as a Service, and you cannot resolve these using the [available troubleshooting information](xref:Troubleshooting_STaaS), contact <staas@dataminer.services>.
+> If you experience any issues during setup or while using Storage as a Service, refer to [Troubleshooting - STaaS](xref:Troubleshooting_STaaS).

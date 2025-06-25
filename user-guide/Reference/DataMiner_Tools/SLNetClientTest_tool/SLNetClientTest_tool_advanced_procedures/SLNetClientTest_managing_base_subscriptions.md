@@ -10,7 +10,7 @@ When a client (e.g. DataMiner Cube) opens an element card, a subscription is mad
 
 However, if a base subscription has been defined for an element, the subscription for this element stays open permanently. As a consequence, when you open an element card for such an element, SLNet will send the data to the client instantly, as it does not have to do any initial setup. This is particularly useful for elements that are accessed very frequently.
 
-The base subscriptions for a DMA can be found in *C:\\Skyline DataMiner\\BaseSubscriptions.xml*.
+The base subscriptions for a DMA can be found in `C:\Skyline DataMiner\BaseSubscriptions.xml`.
 
 In order to ensure that the subscription for a particular element stays open:
 

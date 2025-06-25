@@ -18,15 +18,15 @@ To prepare the destination server, there are **several possibilities**:
 
   1. If necessary, take a backup of the existing configuration.
 
-  1. Go to the folder *C:\\Skyline DataMiner\\Tools* and run the *DataMiner Stop DataMiner And SLNet.bat* file. This will stop the DataMiner software.
+  1. Go to the folder `C:\Skyline DataMiner\Tools` and run the *DataMiner Stop DataMiner And SLNet.bat* file. This will stop the DataMiner software.
 
-  1. From the *C:\\Skyline DataMiner\\Backup* directory, delete all content EXCEPT *TakeBackup.exe*, *BackupSettings.xml* and all *.dll* files. If necessary, copy existing backups to another location before deleting them.
+  1. From the `C:\Skyline DataMiner\Backup` directory, delete all content EXCEPT *TakeBackup.exe*, *BackupSettings.xml* and all *.dll* files. If necessary, copy existing backups to another location before deleting them.
 
-  1. From the *C:\\Skyline DataMiner\\Webpages\\Pictures* directory, delete all content EXCEPT the four files of which the name starts with *DMSPicViewer*.
+  1. From the `C:\Skyline DataMiner\Webpages\Pictures` directory, delete all content EXCEPT the four files of which the name starts with *DMSPicViewer*.
 
-  1. From the *C:\\Skyline DataMiner\\Webpages\\Reports\\templates* directory, delete all report templates. In other words, delete all content EXCEPT the *Template.inc.asp* file and the *styles* subdirectory.
+  1. From the `C:\Skyline DataMiner\Webpages\Reports\templates` directory, delete all report templates. In other words, delete all content EXCEPT the *Template.inc.asp* file and the *styles* subdirectory.
 
-  1. From the *C:\\ProgramData\\Skyline Communications\\DxMs Shared\\Data* and *C:\\ProgramData\\Skyline Communications\\DataMiner Orchestrator\\Data* directory, delete the *NodeId.txt* file, if present.
+  1. From the `C:\ProgramData\Skyline Communications\DxMs Shared\Data` and `C:\ProgramData\Skyline Communications\DataMiner Orchestrator\Data` directory, delete the *NodeId.txt* file, if present.
 
   1. Delete all content from the following directories:
 
@@ -66,7 +66,7 @@ To prepare the destination server, there are **several possibilities**:
 
   1. For a DMA using a Cassandra database:
 
-     1. Open DevCenter, by going to *C:\\Program Files\\Cassandra\\DevCenter\\Run DevCenter.lnk*.
+     1. Open DevCenter, by going to `C:\Program Files\Cassandra\DevCenter\Run DevCenter.lnk`.
 
      1. In the *Connections* pane, click the icon to create a new connection.
 
@@ -94,15 +94,15 @@ To prepare the destination server, there are **several possibilities**:
 
      1. Delete all content from the SLDMADB directory. Depending on the MySQL version, this will be:
 
-        - *C:\\MySQL\\Data\\SLDMADB*, or
+        - `C:\MySQL\Data\SLDMADB`, or
 
-        - *C:\\Program Files\\MySQL\\MySQL Server 5.0\\data\\SLDMADB*
+        - `C:\Program Files\MySQL\MySQL Server 5.0\data\SLDMADB`
 
   1. For a DMA using a local Elasticsearch database:
 
       1. Open Windows Task Manager and stop the Elasticsearch service.
 
-      1. Delete the content of the folder *D:\\ProgramData\\ElasticSearch\\*.
+      1. Delete the content of the folder `D:\ProgramData\ElasticSearch\`.
 
   1. For a DMA using a local OpenSearch database:
 
@@ -114,7 +114,7 @@ To prepare the destination server, there are **several possibilities**:
 
       1. Delete the content of the folder specified with *path.data*.
 
-         If no path.data folder is configured in the YAML file, you will instead need to remove the content of the folder *C:\\Users\\<username>\\AppData\\Local\\OpenSearch* of the user that was running the OpenSearch database.
+         If no path.data folder is configured in the YAML file, you will instead need to remove the content of the folder `C:\Users\<username>\AppData\Local\OpenSearch` of the user that was running the OpenSearch database.
 
   1. Delete the Windows user accounts on the server that have a corresponding DataMiner account.
 
@@ -126,7 +126,7 @@ To prepare the destination server, there are **several possibilities**:
 
   1. In the `C:\Skyline DataMiner` folder, clear the content of the *Security.xml* file. In addition, we recommend that you also remove the DataMiner users in Windows (by running compmgmt.msc), as DataMiner will not remove them.
 
-  1. Remove the file *C:\\Skyline DataMiner\\files\\SyncInfo\\{DO_NOT_REMOVE_68EE4388-7EF6-4cb4-B38F-5E0045175340}.xml*.
+  1. Remove the file `C:\Skyline DataMiner\files\SyncInfo\{DO_NOT_REMOVE_68EE4388-7EF6-4cb4-B38F-5E0045175340}.xml`.
 
   1. Start DataMiner. During startup, the necessary database tables will be created.
 

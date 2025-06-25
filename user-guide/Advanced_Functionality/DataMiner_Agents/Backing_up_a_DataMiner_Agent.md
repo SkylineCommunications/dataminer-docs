@@ -12,7 +12,7 @@ If you use self-managed storage instead of the recommended [Storage as a Service
 
   If you take a backup of a DataMiner system that uses Cassandra, Cassandra takes snapshots of the database, which are then included in the DataMiner backup package. However, the snapshots Cassandra has taken remain on the disk and are not cleaned up automatically.
 
-  If you wish to manage these snapshots, it is possible to use nodetool, which is provided by Cassandra in the folder *C:\\Program Files\\Cassandra\\bin\\*.
+  If you wish to manage these snapshots, it is possible to use nodetool, which is provided by Cassandra in the folder `C:\Program Files\Cassandra\bin\`.
 
   - To check the size of the snapshots, you can run the following command in a command prompt window: *nodetool listsnapshots*.
 

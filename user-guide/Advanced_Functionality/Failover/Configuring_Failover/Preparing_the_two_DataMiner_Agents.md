@@ -8,7 +8,7 @@ Before you start the actual configuration, make sure you have the following:
 
 - A [primary DMA](#primary-dataminer-agent)
 
-- A [backup DMA](#backup-dataminer-agent) (newly installed)
+- A [backup DMA](#backup-dataminer-agent) (newly installed; see [Installation with the DataMiner Installer](xref:Installing_DM_using_the_DM_installer) or [Installation with pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk))
 
 - A [pair of additional IP addresses or a hostname](#additional-ip-addresses-or-hostname)
 
@@ -53,7 +53,7 @@ Addresses: 10.11.5.52
 
 > [!IMPORTANT]
 >
-> - If your system has been configured to use HTTPS, make sure that the virtual IP addresses or shared hostname also have **signed certificates**. For more information, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
+> - If your system has been configured to use HTTPS, make sure that the virtual IP addresses or shared hostname are configured in the **HTTPS tag** of *MaintenanceSettings.xml* and also have **signed certificates**. For more information, see [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 >
 >   As the setup of the certificates can be highly situational, for example in case proxies are involved, check with your IT services if you are not sure how to generate and deploy TLS/SSL certificates.
 >

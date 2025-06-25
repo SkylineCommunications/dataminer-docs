@@ -29,17 +29,22 @@ To create scheduler templates, which will show up in the EVENT list in Scheduler
 
      Example: To define an Event Profile called “MyPresets” containing a preset value for two parameters called “From” and “To” and one dummy called “MyDummy”, the following comment is added: *Preset="MyPresets" From="a" To="b" MyDummy="34/2"*. In this example, the dummy value is “34/2”, meaning Element ID 2 of DMA ID 34.
 
+     > [!NOTE]
+     > From DataMiner 10.5.8/10.6.0 onwards<!-- RN42904 -->, you can also use `[Memory file]="value"` when defining a profile to specify the value of a memory file. For example, if you add `MyMemory="config"` to the comment, the memory file named "MyMemory" will be set to the value "config".
+
    - To display text on the task rectangle for an event, add a comment as follows:
 
      ```txt
      Display="Text to be displayed".
      ```
 
-     You can also have script dummies or script parameters displayed this way, by using the following syntax:
+     You can also have script dummies, script parameters or memory files displayed this way, by using the following syntax:
 
      - For a dummy: *Display="{d:MyDummy}"*
 
      - For a parameter: *Display="{p:MyParameter}"*
+
+     - For a memory file: *Display="{m:MyMemory}"* (from DataMiner 10.5.8/10.6.0 onwards<!--RN 42904-->)
 
    - To display a custom tooltip over the task rectangle for an event, add a comment as follows:
 

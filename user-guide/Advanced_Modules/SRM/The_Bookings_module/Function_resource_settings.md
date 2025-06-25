@@ -4,7 +4,7 @@ uid: Function_resource_settings
 
 # Function resource settings
 
-Some advanced settings related to function DVEs linked with a function resource can be configured in the file *Config.xml*, in the folder *C:\\Skyline DataMiner\\ProtocolFunctionManager*.
+Some advanced settings related to function DVEs linked with a function resource can be configured in the file *Config.xml*, in the folder `C:\Skyline DataMiner\ProtocolFunctionManager`.
 
 This file contains the following tags:
 

@@ -4,7 +4,7 @@ uid: Synchronizing_a_database_with_elements_and_views_with_the_Surveyor
 
 # Synchronizing a database with elements and views with the Surveyor
 
-To synchronize a database (MySQL and Microsoft SQL Server) containing elements and views with the Surveyor in DataMiner Cube, a configuration file must be placed in the directory *C:\\Skyline DataMiner\\AssetManager\\MediationConfigs*.
+To synchronize a database (MySQL and Microsoft SQL Server) containing elements and views with the Surveyor in DataMiner Cube, a configuration file must be placed in the directory `C:\Skyline DataMiner\AssetManager\MediationConfigs`.
 
 The configuration file needs to contain the following four tables:
 

@@ -65,7 +65,7 @@ A number of security enhancements have been made.
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
-A repair tool, *NATSRepair.exe*, will now be included in the *C:\Skyline DataMiner\Tools\\* folder. You can use this to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
+A repair tool, *NATSRepair.exe*, will now be included in the `C:\Skyline DataMiner\Tools\` folder. You can use this to repair the BrokerGateway-managed NATS cluster in case you encounter any issues.
 
 #### Reduced memory usage when updating a large number of parameters in bulk [ID 42385]
 
@@ -119,7 +119,7 @@ The output will be stored in the following file:
 
 GQI extensions use the Automation engine to create DLL libraries that are then loaded by GQI to add ad hoc data sources, custom operators, etc.
 
-GQI will now look for missing dependencies in the *C:\\Skyline DataMiner\\Scripts\\Libraries* folder. This will allow GQI extension scripts to find the Automation script library at runtime.
+GQI will now look for missing dependencies in the `C:\Skyline DataMiner\Scripts\Libraries` folder. This will allow GQI extension scripts to find the Automation script library at runtime.
 
 > [!IMPORTANT]
 > If the referenced Automation script library has dependencies of its own, these will also need to be added as dependencies in the GQI extension scripts.
@@ -198,7 +198,7 @@ BrokerGateway will manage NATS communication based on a single source of truth t
 
 Before you start the migration, the entire cluster must have been running smoothly for some time. A BPA test is available that allows you to easily verify this ([Verify NATS Migration Prerequisites](xref:BPA_NATS_Migration_Prerequisites)).
 
-You can then run the migration by opening a remote desktop connection to all DMAs at the same time, opening a command prompt as administrator, and running the executable *C:\Skyline DataMiner\Tools\NATSMigration.exe*. This must happen on each DMA in the cluster within a 10-minute timeframe. For more detailed information, refer to [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+You can then run the migration by opening a remote desktop connection to all DMAs at the same time, opening a command prompt as administrator, and running the executable `C:\Skyline DataMiner\Tools\NATSMigration.exe`. This must happen on each DMA in the cluster within a 10-minute timeframe. For more detailed information, refer to [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
 Note that when you add a DataMiner Agent to a DataMiner System, it will have to use the same NATS solution as the DataMiner System. This means that if the DMS has been migrated to BrokerGateway, the DMA you add also needs to be migrated to BrokerGateway, but if the DMS still uses the SLNet-managed NATS solution, the DMA you add also has to use this solution.
 
@@ -304,7 +304,7 @@ When the GQI DxM was being used, ad hoc data sources and custom operators would 
 
 <!-- MR 10.5.0 [CU2] - FR 10.5.5 -->
 
-In some cases, an error could be thrown when the *ClusterEndpoints.json* file was created in the *C:\\Skyline DataMiner\\Configurations\\* folder.
+In some cases, an error could be thrown when the *ClusterEndpoints.json* file was created in the `C:\Skyline DataMiner\Configurations\` folder.
 
 #### DVE settings could get out of sync with the element data when DataMiner or an element was restarted [ID 42515]
 

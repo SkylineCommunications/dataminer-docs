@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU3
 ---
 
-# General Main Release 10.5.0 CU3 - Preview
+# General Main Release 10.5.0 CU3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -96,6 +96,13 @@ To configure an override parameter, use the following syntax:
 > - The `FACTOR_PID` is optional and can be left empty.
 > - The ID of the override parameter (`OVERRIDE_PID`) is the third value in the comma-separated list. The `OVERRIDE_PID` value must be (a) the parameter ID of a column in the same table as the source column or (b) the parameter ID of a standalone column. Any other parameter ID will not work.
 
+#### Security enhancements [ID 42747] [ID 42843]
+
+<!-- 42747: MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 [CU0] -->
+<!-- 42843: MR 10.3.0 [CU22]/10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 [CU0] -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Problem with SLProtocol when a protocol version was overwritten while an element using that protocol version was starting up [ID 42344]
@@ -180,3 +187,9 @@ As 32-bit Windows systems are no longer supported, from now on, the *Register Da
 In order to communicate with its extension processes, the GQI DxM uses named pipes. In some cases, because a pipe would fail to connect to the core GQI process, it would no longer be possible to use a particular extension.
 
 Additionally, a number of enhancements have been made with regard to the management of named pipes.
+
+#### Antivirus software could incorrectly flag DcomConfig.exe as a virus and remove it from the system [ID 42979]
+
+<!-- MR 10.4.0 [CU15]/10.5.0 [CU3] - FR 10.5.6 [CU0] -->
+
+Since DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5, some antivirus software could incorrectly flag `C:\Skyline DataMiner\tools\DcomConfig.exe` as a virus and remove it from the system. As a result, DataMiner upgrades would fail.

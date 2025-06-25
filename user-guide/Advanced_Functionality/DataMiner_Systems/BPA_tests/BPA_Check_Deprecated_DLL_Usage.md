@@ -12,8 +12,8 @@ Depending on the DataMiner version, it checks for the following DLLs, in the spe
 
 | Deprecated DLL | Deprecated since DataMiner version | Minimum safe DLL version | Folder                   |
 |----------------|------------------------------------|--------------------------|--------------------------|
-| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370-->       | 8.0.0.0                  | *C:\Skyline DataMiner\ProtocolScripts* |
-| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057-->       | N/A                      | *C:\Skyline DataMiner\ProtocolScripts* or *C:\Skyline DataMiner\Files* |
+| MySql.Data.dll | 10.4.6/10.5.0<!--RN 39370-->       | 8.0.0.0                  | `C:\Skyline DataMiner\ProtocolScripts` |
+| SLDatabase.dll | 10.5.5/10.6.0<!--RN 42057-->       | N/A                      | `C:\Skyline DataMiner\ProtocolScripts` or `C:\Skyline DataMiner\Files` |
 
 Any version lower than the specified minimum version will be considered outdated, as older versions are known to pose security risks.
 
@@ -141,7 +141,7 @@ A deprecated DLL file was detected in the ProtocolScripts folder.
 
   1. Stop the DataMiner Agent.
 
-  1. Remove the *X.dll* file from the *C:\Skyline DataMiner\ProtocolScripts* folder.
+  1. Remove the *X.dll* file from the `C:\Skyline DataMiner\ProtocolScripts` folder.
 
      > [!IMPORTANT]
      > When you remove the DLL file, we strongly recommend keeping a temporary copy and checking the DataMiner log files *Errors* and *Errors in Protocol* for lines mentioning missing references to the file when a QAction or an Automation script is executed.

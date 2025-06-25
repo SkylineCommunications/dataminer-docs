@@ -18,7 +18,6 @@ For the **Main Release** track, the following support is available:
 | 10.4.0  | 21 Nov 2025           | **26 Feb 2027**     | *25 Feb 2028*           |
 | 10.3.0  | 15 Nov 2024           | **27 Feb 2026**     | *26 Feb 2027*           |
 | 10.2.0  | 24 Nov 2023           | **28 Feb 2025**     | *27 Feb 2026*           |
-| 10.1.0  | 18 Nov 2022           | **23 Feb 2024**     | *28 Feb 2025*           |
 
 Older versions are no longer supported.
 
@@ -53,6 +52,7 @@ Important announcements about the latest changes to DataMiner core functionality
 | Child bookings | End of Engineering | Child bookings are being retired, as the same functionality is supported with contributing bookings | End of Life as of DataMiner version 10.5.x (Q4 2024) |
 | Recurring bookings | End of Engineering | Recurring bookings are being retired. Instead, we suggest duplicating the previous occurrence of the booking. | End of Life as of DataMiner version 10.5.x (Q4 2024) |
 | Annotations | End of Life | From DataMiner version 10.3.x (Q4 2022) onwards, Annotations should no longer be used. | End of Life |
+| OPC communication | End of Life | OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector. | End of Life |
 | Web Services API v0 | End of Life | From DataMiner version 10.1.5 onwards, version 0 of the DataMiner Web Services API is disabled. Users will be required to port any reliant applications to use Web Services API v1. | End of Life |
 | XML storage of SRM resources and profiles | End of Life | From DataMiner 10.4.0/10.4.1 onwards, SRM resources and profiles must be stored in the indexing database instead of in XML. | End of Life |
 

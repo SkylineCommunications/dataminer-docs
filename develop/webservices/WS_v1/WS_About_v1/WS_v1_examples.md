@@ -128,7 +128,7 @@ Content-Type: application/json
         "Ports": [
             { "__type": "Skyline.DataMiner.Web.Common.v1.DMAElementSerialPortInfo", "SerialPort": "COM3", "Baudrate": "2800kbps" },
             { "__type": "Skyline.DataMiner.Web.Common.v1.DMAElementSNMPPortInfo", "IPAddress": "127.0.0.1", "GetCommunity": "public", "SetCommunity": "secret_key" },
-            { "__type": "Skyline.DataMiner.Web.Common.v1.DMAElementSNMPV3PortInfo", "IPAddress": "127.0.0.1", "AuthType": "MD5", "AuthPassword": "Skyline321" }
+            { "__type": "Skyline.DataMiner.Web.Common.v1.DMAElementSNMPV3PortInfo", "IPAddress": "127.0.0.1", "AuthType": "MD5", "AuthPassword": "my_password" }
         ]
     }
 }

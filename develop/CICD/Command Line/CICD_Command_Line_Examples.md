@@ -72,13 +72,13 @@ dotnet tool install -g Skyline.DataMiner.CICD.Tools.DataMinerDeploy
 
 dataminer-package-create dmapp "C:\PathToDirectoryOfSolution" --name HelloFromPowershell --output "C:\CreatedPackages" --type automation
 $id = dataminer-catalog-upload --path-to-artifact "C:\CreatedPackages\HelloFromPowershell.dmapp" --dm-catalog-token 1234567
-dataminer-package-deploy from-catalog --artifact-id "$id" --dm-catalog-token 1234567
+dataminer-package-deploy from-volatile --artifact-id "$id" --dm-system-token 1234567
 
 ```
 
 ### Ubuntu terminal
 
-Prerequisites on Ubuntu/Linux: you need dotnet-sdk-6.0.
+Prerequisites on Ubuntu/Linux: you need dotnet-sdk-8.0.
 
 ```bash
 # Get Ubuntu version
@@ -96,7 +96,7 @@ rm packages-microsoft-prod.deb
 # Update packages
 sudo apt update
 
-sudo apt install dotnet-sdk-6.0
+sudo apt install dotnet-sdk-8.0
 ```
 
 You will need to restart your session or log out and back in before the next part.

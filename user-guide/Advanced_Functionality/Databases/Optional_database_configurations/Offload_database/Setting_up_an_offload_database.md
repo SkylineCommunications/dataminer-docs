@@ -69,12 +69,12 @@ Depending on the type of database, the procedure is slightly different.
 
      1. Fill in "sldmsdb" as the database name, make sure *Collation* is set to *utf8 - default collation* and click *OK*.
 
-     1. From the *C:\\Skyline DataMiner\\Tools* directory, run the following script to create the tables: *CentralTabledef.txt*.
+     1. From the `C:\Skyline DataMiner\Tools` directory, run the following script to create the tables: *CentralTabledef.txt*.
 
    > [!NOTE]
    >
    > - Note that the script in *CentralTabledef.txt* will drop any tables in the selected database (causing these to be permanently deleted) and recreate the schema, so it must be used with caution.
-   > - Alternatively, you can also use the program SLOffload.exe from the *C:\\Skyline DataMiner\\Tools* directory to do an offload to your new database. However, note that running this program involves a restart of the DMA.
+   > - Alternatively, you can also use the program SLOffload.exe from the `C:\Skyline DataMiner\Tools` directory to do an offload to your new database. However, note that running this program involves a restart of the DMA.
 
    - In MSSQL:
 
@@ -84,9 +84,9 @@ Depending on the type of database, the procedure is slightly different.
 
      1. Fill in "SLDMSDB" as *Database name*, and click *OK*.
 
-     1. From the *C:\\Skyline DataMiner\\Tools* directory, run the following script to create the tables: *CentralTableDefSQLServer.sql*.
+     1. From the `C:\Skyline DataMiner\Tools` directory, run the following script to create the tables: *CentralTableDefSQLServer.sql*.
 
-   - For an Oracle database, run the following table creation script found in the *C:\\Skyline DataMiner\\Tools* directory: *CentralTabledefOracle.sql*.
+   - For an Oracle database, run the following table creation script found in the `C:\Skyline DataMiner\Tools` directory: *CentralTabledefOracle.sql*.
 
    > [!TIP]
    > See also: [Automatic creation and verification of the offload database](#automatic-creation-and-verification-of-the-offload-database)
@@ -139,9 +139,9 @@ Once the server has been configured, the next step in setting up the offload dat
 
 The final step is the configuration of the DMS.
 
-1. For a MSSQL database only, on every DMA in the DMS, share the *C:\\Skyline DataMiner\\System Cache\\Offload* folder:
+1. For a MSSQL database only, on every DMA in the DMS, share the `C:\Skyline DataMiner\System Cache\Offload` folder:
 
-   1. Go the folder *C:\\Skyline DataMiner\\System Cache* *folder* and open the properties of the *Offload* folder.
+   1. Go the folder `C:\Skyline DataMiner\System Cache` folder and open the properties of the *Offload* folder.
 
    1. In the *Sharing* tab, click *Share*.
 

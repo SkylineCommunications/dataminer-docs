@@ -522,8 +522,6 @@ items:
             items:
               - name: HTTP headers
                 topicUid: HTTP_Headers
-              - name: Disabling legacy protocols
-                topicUid: Disabling_legacy_protocols
           - name: Configuring SAML settings
             topicUid: Configuring_external_authentication_via_an_identity_provider_using_SAML
             items:

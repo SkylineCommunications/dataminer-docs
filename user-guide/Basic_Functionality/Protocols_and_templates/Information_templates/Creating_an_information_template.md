@@ -22,7 +22,9 @@ To create an information template:
    - **Description**: The parameter display name that will appear in the user interface instead of the display name defined in the protocol.
 
      > [!NOTE]
-     > The actual parameter name in the protocol is an internal identifier only, and cannot be modified in an information template.
+     >
+     > - The actual parameter name in the protocol is an internal identifier only and cannot be modified in an information template.
+     > - When you change the description for a parameter representing a **table column**, you may also need to **include the table name in parentheses** to make sure the other table column names do not change. For example, to rename "IP Address" in a table named "Information" to "Main IP Address", change the description in the information template to "Main IP Address (Information)".
 
    - **Detailed description**: The parameter description that will be displayed in the parameter details.
 

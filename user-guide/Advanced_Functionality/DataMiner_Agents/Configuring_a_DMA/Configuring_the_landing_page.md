@@ -4,7 +4,7 @@ uid: Configuring_the_landing_page
 
 # Configuring the landing page of a DMA
 
-In the file *Config.manual.asp*, located in the folder *C:\\Skyline DataMiner\\WebPages\\*, you can specify what happens when a user browses directly to the IP address of hostname of the DMA.
+In the file *Config.manual.asp*, located in the folder `C:\Skyline DataMiner\WebPages\`, you can specify what happens when a user browses directly to the IP address of hostname of the DMA.
 
 > [!NOTE]
 >
@@ -15,7 +15,7 @@ In the file *Config.manual.asp*, located in the folder *C:\\Skyline DataMiner\\W
 
 You can configure whether the landing page is displayed or instead the Monitoring app is opened when a user browses to a DMA.
 
-1. Open *C:\\Skyline DataMiner\\WebPages\\config.manual.asp* in a text editor.
+1. Open `C:\Skyline DataMiner\WebPages\config.manual.asp` in a text editor.
 
 1. Set the variable *defaultHTMLApp* to one of the following values:
 
@@ -35,7 +35,7 @@ You can configure whether the landing page is displayed or instead the Monitorin
 
 It is possible to customize the landing page so that the company logo is displayed.
 
-1. Open *C:\\Skyline DataMiner\\WebPages\\config.manual.asp* in a text editor.
+1. Open `C:\Skyline DataMiner\WebPages\config.manual.asp` in a text editor.
 
 1. Set the setting *showCustomerLogo* to *true*. This setting is set to false by default.
 
@@ -50,7 +50,7 @@ It is possible to customize the landing page so that the company logo is display
 
 It is possible to customize the landing page so that certain applications are not listed on it.
 
-1. Open *C:\\Skyline DataMiner\\WebPages\\config.manual.asp* in a text editor.
+1. Open `C:\Skyline DataMiner\WebPages\config.manual.asp` in a text editor.
 
 1. Specify the applications that should not be displayed in the *disallowed* setting.
 

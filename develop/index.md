@@ -34,7 +34,7 @@ description: Discover all the information you need as a DataMiner Developer, fro
     <a href="/develop/DSI/DSI.html" title="DataMiner device-specific integrations" target="_self"><img src="~/develop/images/Device_Specific_Integrations.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/develop/DMI/DataMinerModuleIntegrations.html" title="DataMiner module integrations" target="_self"><img src="~/develop/images/DataMiner_Module_Integrations.svg" style="width:100%"></a>
+    <a href="/develop/DMI/DataMinerModuleIntegrations.html" title="DataMiner feature integrations" target="_self"><img src="~/develop/images/DataMiner_Feature_Integrations.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/develop/ThirdParty/ThirdPartyIntegrations.html" title="Third-party integrations" target="_self"><img src="~/develop/images/Third-Party_Integrations.svg" style="width:100%"></a>

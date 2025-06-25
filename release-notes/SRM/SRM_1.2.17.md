@@ -69,7 +69,7 @@ Several improvements have been implemented in the Booking Manager app.
 
 #### SRM_About.txt moved to Webpages\\SRM directory \[ID 30653\]
 
-The file *SRM_About.txt*, which contains the information on which SRM package is used, has been moved to the *C:\\Skyline DataMiner\\Webpages\\SRM* directory.
+The file *SRM_About.txt*, which contains the information on which SRM package is used, has been moved to the `C:\Skyline DataMiner\Webpages\SRM` directory.
 
 ### Fixes
 

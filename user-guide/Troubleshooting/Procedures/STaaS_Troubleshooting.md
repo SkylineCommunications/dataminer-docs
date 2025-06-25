@@ -67,7 +67,7 @@ There are two ways to verify if you are using a STaaS setup:
 
 - **In the *DB.xml* file**:
 
-  1. Open *C:\Skyline DataMiner\DB.xml*.
+  1. Open `C:\Skyline DataMiner\db.xml`.
 
   1. Verify that the `type` attribute of the `<Database>` element is set to `CloudStorage`.
 
@@ -162,7 +162,7 @@ There are two ways to verify whether your DMS is connected to dataminer.services
 
 - **Using the SLCloudStorage log file**:
 
-  1. Navigate to the *C:/Skyline DataMiner/logging* folder of your DataMiner Agent, and open the *SLCloudStorage.txt* log file.
+  1. Navigate to the `C:\Skyline DataMiner\logging` folder of your DataMiner Agent, and open the *SLCloudStorage.txt* log file.
 
   1. Check whether you can find the following error message in the log file:
 
@@ -182,7 +182,7 @@ Verify the following:
 
 - Verify that the necessary endpoints are reachable.
 
-  These depend on the region you have registered your system for. During the [STaaS setup](xref:Setting_up_StaaS), you should have received information from <staas@dataminer.services> about the specific endpoints or IPs to whitelist.
+  These depend on the region you have registered your system for. During the [STaaS setup](xref:Setting_up_StaaS), you should have received information from <support@dataminer.services> about the specific endpoints or IPs to whitelist.
 
 ## Common pitfalls
 
@@ -234,7 +234,7 @@ Actions:
 
    1. Alternatively, check the *Services* tab to see if the service with the same name has the *Running* status.
 
-1. Manually remove the file *C:\ProgramData\Skyline Communications\DxMs Shared\Data\NodeId.txt*.
+1. Manually remove the file `C:\ProgramData\Skyline Communications\DxMs Shared\Data\NodeId.txt`.
 
 1. Restart the DMA.
 
@@ -258,7 +258,7 @@ Reason:
 
 Actions:
 
-- Navigate to the *C:/Skyline DataMiner/Logging* folder of your DataMiner Agent, open the *SLCloudStorage.txt* log file, and look for throttling warnings.
+- Navigate to the `C:\Skyline DataMiner\Logging` folder of your DataMiner Agent, open the *SLCloudStorage.txt* log file, and look for throttling warnings.
 
 - If the DataMiner System relies heavily on inter-element or inter-automation communication, consider using the InterApp framework as a better architectural choice.
 

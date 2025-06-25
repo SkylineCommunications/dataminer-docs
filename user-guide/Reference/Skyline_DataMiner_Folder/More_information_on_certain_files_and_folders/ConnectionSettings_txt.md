@@ -12,7 +12,7 @@ This file contains default connection settings to be used by DataMiner client ap
 > - An update of this file does not require a restart of the DataMiner software.
 > - This file is not synchronized throughout the DataMiner System.
 
-- This file is located in the folder *C:\\Skyline DataMiner\\Webpages\\*.
+- This file is located in the folder `C:\Skyline DataMiner\WebPages\`.
 
 - ConnectionSettings.txt format:
 

@@ -6,7 +6,7 @@ uid: SLNet_exe_config
 
 The file *SLNet.exe.config* is used for the configuration of settings related to the SLNet process.
 
-This file is located in the following folder: *C:\\Skyline DataMiner\\Files*
+This file is located in the following folder: `C:\Skyline DataMiner\Files`
 
 It contains among others the following settings:
 

@@ -3567,7 +3567,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <exception cref="ArgumentException">The provided parameter ID is invalid.</exception>
 		/// <remarks>
 		/// <list type="bullet">
-		/// <item><description>Performs an NotifyProtocol 474 [NT_CLEAR_PARAMETER](xref:NT_CLEAR_PARAMETER) call with wrapping to throw an argumentException if the clear cannot execute due to an invalid parameter ID (e.g. for a table column).</description></item>
+		/// <item><description>Performs a NotifyProtocol 474 <see href="xref:NT_CLEAR_PARAMETER">NT_CLEAR_PARAMETER</see> call with wrapping to throw an argumentException if the clear cannot execute due to an invalid parameter ID (e.g. for a table column).</description></item>
 		/// <item><description>Feature introduced in DataMiner 10.5.6 (RN 42397).</description></item>
 		/// </list>
 		/// </remarks>

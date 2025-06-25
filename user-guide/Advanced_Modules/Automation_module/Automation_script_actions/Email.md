@@ -6,25 +6,24 @@ uid: Email
 
 Use this action to send a notification via email.
 
-1. Enter the recipients in the *To*, *CC* and *BCC* fields.
+![Email](~/user-guide/images/Automation_Email.png)<br>*Automation module in DataMiner 10.5.6*
 
-1. Enter the message *Subject*.
+- You will need to fill in at least the *To* and *Subject* fields. The *CC*, *BCC*, and *Message* fields are optional.
 
-1. Enter the email message in the *Message* field.
+- The subject and message support the following **placeholders**:
 
-1. To send a plain text email, select *Plain text*.
+  - `[dummyX]`: This will be replaced with the name of the specific element you want to display. X is the dummy ID.
+  - `[user]`: This will be replaced with the name of the user executing the Automation script.
 
-1. To include a (legacy) report or a dashboard in the email, select *Include report or dashboard*, select an existing report template or dashboard, add any required elements, parameters, etc.
+- To send a **plain text** email, select *Plain text*.
 
-![Email](~/user-guide/images/Automation_Email.png)<br>*Automation module in DataMiner 10.4.5*
+- To include a **dashboard** in the email, select *Include report or dashboard*, select an existing dashboard, and optionally click the *Configure* button to further configure it. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
 
-   > [!NOTE]
-   >
-   > - If you want to specify multiple indices for one table parameter, use a semicolon ";" as separator.
-   > - If you want to specify multiple parameters for one element, service, or protocol version, assign them all within a single line.
-   > - The icon in front of each item in the drop-down list shows whether the item is a dashboard or a report.
+  You can select any of the dashboards available in the [dashboards app](xref:newR_D).
 
-1. If you have selected a report or dashboard to include, optionally click the *Configure* button to further configure it. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
+- To include a **legacy report** in the email, select *Include report or dashboard*, select an existing report template, and add any required elements, parameters, etc. If you want to specify multiple indices for one table parameter, use a semicolon ";" as separator. If you want to specify multiple parameters for one element, service, or protocol version, assign them all within a single line.
 
-> [!NOTE]
+  Legacy reports are only available if the [legacy Reporter module](xref:reporter) is still available in your system.
+
+> [!TIP]
 > It is also possible to add this action within a C# block in a script. For more information, see [SendEmail](xref:Skyline.DataMiner.Automation.Engine.SendEmail(Skyline.DataMiner.Automation.EmailOptions)), [PrepareMailReport](xref:Skyline.DataMiner.Automation.Engine.PrepareMailReport(System.String)) and [SendReport](xref:Skyline.DataMiner.Automation.Engine.SendReport(Skyline.DataMiner.Automation.MailReportOptions)).

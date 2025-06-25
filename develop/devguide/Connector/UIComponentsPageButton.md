@@ -17,7 +17,7 @@ To define a page button:
 
 ```xml
 <Param id="220">
-  <Name>DetailsPageButton</Name>
+  <Name>settingsPageButton</Name>
   <Description></Description>
   <Type>write</Type>
   <Interprete>
@@ -32,8 +32,12 @@ To define a page button:
     <Type width="110">pagebutton</Type>
     <Discreets>
       <Discreet>
-        <Display>Details...</Display>
-        <Value>Details</Value>
+        <Display>Settings...</Display>
+        <Value>Settings</Value>
+      </Discreet>
+      <Discreet>
+        <Display>Advanced Settings...</Display>
+        <Value>Advanced Settings</Value>
       </Discreet>
     </Discreets>
   </Measurement>
@@ -44,9 +48,11 @@ To define a page button:
 
 > [!NOTE]
 >
-> - Typically, the description tag is left empty when a toggle button is defined.
+> - Typically, the [Description](xref:Protocol.Params.Param.Description) tag is omitted when a page button is defined.
 > - Page buttons are typically used to display a limited amount of data. A pop-up window opened by means of a page button should contain either data of less importance or data that should remain visible while users are working on other pages.
 > - A pop-up page opened by means of a page button should not contain page buttons. In other words, nesting of page buttons should be avoided.
+> - The page buttons are right-aligned on the page. So in the example above, this means that the Settings page button will be displayed to the far right, while the Advanced Settings page button will be displayed to its left.
+> - In the page tree, the pop-up pages are listed in the order defined in the protocol.
 
 ## See also
 

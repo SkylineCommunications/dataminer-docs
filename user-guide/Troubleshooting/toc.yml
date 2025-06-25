@@ -133,6 +133,8 @@ items:
             topicUid: Troubleshooting_Services
           - name: Troubleshooting - trending
             topicUid: Troubleshooting_Trending
+          - name: Troubleshooting - web apps
+            topicUid: Troubleshooting_Webapps
           - name: Troubleshooting - process identification
             topicUid: Troubleshooting_Process_Identification
             items:
@@ -209,6 +211,9 @@ items:
         topicUid: Collecting_DataMiner_Cube_memory_dumps
       - name: Collecting data to report an issue to Technical Support
         topicUid: Collecting_data_to_report_an_issue_to_TechSupport
+        items:
+          - name: Web Support Assistant
+            topicUid: Web_Issues_Support_Assistant
       - name: Troubleshooting – Cassandra
         topicUid: Troubleshooting_Cassandra
         items:
@@ -263,12 +268,14 @@ items:
     items:
       - name: Current issues
         items:
+          - name: SLProtocol RTE because of element stuck in slow poll mode
+            topicUid: KI_SLProtocol_RTE_after_slow_poll_timeout
+          - name: User locked out after single failed login attempt
+            topicUid: KI_user_locked_out_after_single_failed_attempt
           - name: Local user not pushed to Windows
             topicUid: KI_Local_user_not_pushed_to_windows
           - name: Unable to open trended parameter cards via Cube advanced search
             topicUid: KI_Unable_to_open_trended_parameter_cards_via_Cube_advanced_search
-          - name: Failed getting progress notices during upgrade
-            topicUid: KI_SLNetIPC_Errors_During_Upgrade
           - name: SLProtocol crash when restarting elements used by enhanced services
             topicUid: KI_SLProtocol_Crash_Enhanced_Services
           - name: Sticky element alarm state caused by correlation rules
@@ -301,6 +308,18 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Online Failover Agent unable to acquire VIP
+            topicUid: KI_Online_Failover_Agent_unable_to_acquire_VIP
+          - name: Prerequisites fail when upgrading from 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7
+            topicUid: KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3
+          - name: Failed getting progress notices during upgrade
+            topicUid: KI_SLNetIPC_Errors_During_Upgrade
+          - name: SLAutomation memory leak when Automation script runs
+            topicUid: KI_Automation_Memory_leak_when_executing_scripts
+          - name: DCOMConfig flagged as virus causing upgrade issues
+            topicUid: KI_DCOMConfig_flagged_as_virus
+          - name: SLNet not starting correctly after change to default upgrade options
+            topicUid: KI_Default_upgrade_options_SLNet_issue
           - name: Higher CPU usage and connection issues when using SAML with automatic groups
             topicUid: KI_SAML_with_automatic_groups
           - name: SLScripting crash when using JScript QActions
@@ -362,7 +381,7 @@ items:
           - name: SLDataMiner crashes because of subgroup query failure
             topicUid: KI_SLDataMiner_crashes_because_of_subgroup_query_failure
           - name: One or multiple Analytics features fail to start
-            topicUid:  KI_Analytics_features_not_starting
+            topicUid: KI_Analytics_features_not_starting
           - name: Max Payload exceptions occur when using MessageBroker with chunking
             topicUid: KI_DataMinerMessageBroker_Chunking_MaxPayload
           - name: Error in SLDataMiner when generating MIB file
@@ -485,7 +504,7 @@ items:
             topicUid: KI_Upgrade_error_api-ms-win-crt-stdio-l1-1-0_dll_is_missing
           - name: GenIf folder takes up too much disk space
             topicUid: KI_GenIf_Folder_Growing_In_Size
-  - name: Contacting tech support
+  - name: Contacting DataMiner Support
     topicUid: Contacting_tech_support
   - name: Customer DataMiner Reporting (CDMR)
     topicUid: CDMR

@@ -34,20 +34,18 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
   Point system:
 
-  - **Correct a spelling or grammar mistake**: Spotted a typo while browsing the documentation? Click the "Improve this page" link in the top-right corner and correct it yourself. **25 points**
+  - **Correct a spelling or grammar mistake**: Spotted a typo while browsing the documentation? Click the "Improve this page" link in the top-right corner and correct it yourself. **25 – 50 points**
 
-  - **Add missing information**: Noticed something missing halfway through reading a page on docs.dataminer.services? Add it yourself and earn up to... **300 points**
+  - **Add missing information**: Noticed something missing halfway through reading a page on docs.dataminer.services? Add it yourself and earn up to... **5000 points**
+
+  - **Deliver documentation**: Not quite comfortable using GitHub but bursting with inspiration? Send your documentation as a Word file to [Team Documentation](mailto:documentation@skyline.be) at Skyline so they can add it to DataMiner docs. Doing this, you can earn up to... **3000 points**
 
   - **Adding an issue**: Create a valid issue on GitHub to let us know about a problem in the documentation. **100 points**
-
-  - **Deliver documentation**: Not quite comfortable using GitHub but bursting with inspiration? Send your documentation as a Word file to [Team Documentation](mailto:documentation@skyline.be) at Skyline so they can add it to DataMiner docs. Doing this, you can earn up to... **500 points**
-
-  - **Make a large contribution to docs**: Are you an expert on a DataMiner-related topic? Make a large contribution to the DataMiner docs using GitHub! Earn up to... **1000 points**
 
   > [!TIP]
   > Unsure of how to start contributing? Take a look at the [Contributing page](xref:contributing) or at our [video series](https://www.youtube.com/playlist?list=PLFb70A6JV6vj1f0DPcdYXExEbNWVPYMgW) on how to contribute to the DataMiner documentation!
 
-- **Writing blog posts**: You can opt to write and submit a [blog post](https://community.dataminer.services/blog/) for the community, and upon acceptance, this will result in 500 up to 1000 points. Blog posts can revolve around any technology or topic relevant to the community or could, for example, describe a solution that you have designed with DataMiner.
+- **Writing blog posts**: You can opt to write and submit a [blog post](https://community.dataminer.services/blog/) for the community, and upon acceptance, this will result in 500 up to 5000 points. Blog posts can revolve around any technology or topic relevant to the community or could, for example, describe a solution that you have designed with DataMiner.
 
   > [!TIP]
   > Not really sure how to get started? Take a look at our [blog post template](https://community.dataminer.services/download/blog-post-template/)!
@@ -57,7 +55,7 @@ In general, the more active you are in the DataMiner Dojo community and the more
   > [!TIP]
   > Not really sure how to get started? Take a look at our [use case template](https://community.dataminer.services/download/use-case-template/)!
 
-- **Submitting a retro recipe**: You can choose to submit a [retro recipe](https://community.dataminer.services/retro-recipes/) for the community, and upon acceptance, this will result in 500 up to 1000 points. Retro recipes describe engaging and often creative retrospectives in a recipe format, including a list of ingredients followed by a step-by-step section. Only retro recipes that have been personally tried and tested are accepted.
+- **Submitting a retro recipe**: You can choose to submit a [retro recipe](https://community.dataminer.services/retro-recipes/) for the community, and upon acceptance, this will result in 500 up to 3000 points. Retro recipes describe engaging and often creative retrospectives in a recipe format, including a list of ingredients followed by a step-by-step section. Only retro recipes that have been personally tried and tested are accepted.
 
   > [!TIP]
   > Not really sure how to get started? Take a look at our [retro recipe template](https://community.dataminer.services/download/retro-recipe-template/)!
@@ -66,7 +64,9 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 - **Submitting feedback**: Your feedback is valuable. You will receive DevOps Points per submission of feedback via <https://aka.dataminer.services/Feedback/>. Each submission of feedback will result in 50 DevOps Points (limited to a maximum of 100 points per month).
 
-- **Being an advocate for the DataMiner brand**: Being an advocate is also part of the culture of being a DataMiner DevOps Professional. That's why you can earn 250 points simply by adding your DataMiner DevOps level to your LinkedIn headline. Once you've updated your LinkedIn profile, you can send an email to [devops@skyline.be](mailto:devops@skyline.be) with the link to your profile page and we will get you your points! If DataMiner is mentioned in the job title in your email signature, we will hit you up with another 250 points per year. Each LinkedIn post that mentions @skyline-communications and uses the tag #dataminerdevops will automatically result in 50 points per post.
+- **Being an advocate for the DataMiner brand**: Being an advocate is also part of the culture of being a DataMiner DevOps Professional. That is why you can earn 250 points simply by adding your DataMiner DevOps level to your LinkedIn headline. Once you've updated your LinkedIn profile, you can send an email to [devops@skyline.be](mailto:devops@skyline.be) with the link to your profile page and we will get you your points! If DataMiner is mentioned in the job title in your email signature, we will hit you up with another 250 points per year. Each LinkedIn post that mentions @skyline-communications and uses the tag #dataminerdevops will automatically result in 50 points per post.
+
+- **Sharing a story for #CommunityTuesdays**: The *#CommunityTuesdays* series on LinkedIn highlights the people, ideas, and moments that reflect what makes the DataMiner community unique. If your story is featured, you will earn 250 DevOps Points. Stories can cover a notable integration, an inspiring use case, or someone in the ecosystem making a quiet impact. To submit a story, contact [Wouter Bogaert](mailto:wouter.bogaert@skyline.be).
 
 - **Reward for outstanding DevOps mindset**: From time to time, Skyline staff members have the opportunity to nominate registered DataMiner DevOps Professionals who exemplify an exceptional DevOps mindset and demonstrate the effective application of associated best practices. Such recognition leads to the allocation of additional points in the range of 100 up to 750 on the recipient's DataMiner DevOps Professional account.
 

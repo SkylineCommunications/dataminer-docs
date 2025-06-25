@@ -9,15 +9,16 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## Highlights
 
-- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535)
+- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535-id-43196)
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 <!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
 <!-- RN 42535: MR 10.6.0 - FR 10.5.5 -->
+<!-- RN 43196: MR 10.6.0 - FR 10.5.9 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -116,6 +117,13 @@ public class Script
   }
 }
 ```
+
+An information event will be generated when an element was successfully swarmed. Example:
+
+`Swarmed from <DmaName> (<DmaId>) to <DmaName> (<DmaId>) by <UserName>`
+
+> [!NOTE]
+> When the source DMA is no longer available or unknown, the information event will be shortened to `Swarmed to <DmaName> (<DmaId>) by <UserName>`.
 
 #### Retrieving additional logging from a DataMiner System [ID 40766]
 
@@ -561,27 +569,6 @@ If multiple settings indicate that the element should be running in isolation mo
 > - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
 > - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
 
-#### Tracking DataMiner app package contents via SLNet [ID 42353]
-
-<!-- MR 10.6.0 - FR 10.5.6 -->
-
-`AppPackageContent` classes have now been added to SLNet. These classes can be accessed via `AppPackageContentHelper`, and will allow you to track which items (e.g. connectors, Automation scripts, etc.) were installed using a *.dmapp* package.
-
-Using these classes, you can add, update and delete AppPackageContent records in bulk. Each record will contain the following fields:
-
-- ID (GUID)
-- DmappName (string)
-- DmappVersion (string)
-- DmappCatalogGuid (GUID)
-- ContentType (type of installed item)
-- ContentName (unique identifier per type)
-- ContentHash (hash of the content at installation, which will allow tracking changes)
-
-By default, all users will have read access to these records, but only users with *Install Application Package* permission will be able to edit them.
-
-> [!IMPORTANT]
-> This functionality will only work on systems using STaaS or systems using an OpenSearch/Elasticsearch indexing database. It will not work on systems using a Cassandra database.
-
 #### New NotifyProtocol call NT_CLEAR_PARAMETER [ID 42397]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
@@ -627,6 +614,54 @@ Example: `2025/04/01 16:31:31.813|SLManagedAutomation|RunSafe|INF|0|959|473|Exam
 > - In the Automation script log file, you will find an indication of when the script execution started and stopped. However, this indication will be slightly different from the one you will find in the *SLAutomation.txt* log file. The one in the *SLAutomation.txt* log file will represent the total time it took for the script to run, while the one in the script log file will only take into account the C# blocks in the Automation script.
 > - For each entry that is logged in one of the above-mentioned script log files, an identical copy will also be logged in the *SLAutomation.txt* file. However, note that the timestamps of both entries may not be identical.
 
+#### Automation: Hash property of GetScriptInfoResponseMessage now contains a hash value of the script [ID 42616]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+A `Hash` property has now been added to the `GetScriptInfoResponseMessage`. This property will contain a calculated hash value of the script based on the following script data:
+
+- Name
+- Description
+- Type
+- Script options:
+
+  - Options included in the hash value calculation:
+  
+    - DebugMode
+    - SkipElementChecks
+    - SkipInfoEventsSet
+    - SupportsBackAndForward
+    - AllowUndef
+    - WebCompliant (see soft-launch option [UseWebIAS](xref:Overview_of_Soft_Launch_Options#usewebias))
+
+  - Options not included in the hash value calculation:
+
+    - None
+    - RequireInteractive
+    - SavedFromCube
+    - HasFindInteractiveClient
+
+  > [!NOTE]
+  > For more information on the different script options, see [options attribute](xref:DMSScript-options).
+
+- CheckSets
+- Protocols
+- Memories
+- Parameters
+- Executables
+
+  > [!NOTE]
+  > Executable code will be trimmed. All empty lines before and after the code will be removed.
+
+> [!NOTE]
+> Author will not be included in the hash value as changing the author would result in a different value being calculated.
+
+All hash values of all Automation scripts will be added as `AutomationScriptHashInfo` objects to the Automation script hash value cache file *AutomationScriptHashCache.txt*, located in the `C:\Skyline DataMiner\System Cache\` folder. This file will be updated one minute after an Automation script was created or updated or one minute after a `GetScriptInfoMessage` was called.
+
+Format of an AutomationScriptHashInfo object: `Script Name;LastUpdate;Calculated hash`
+
+Example: `Automation script;638786700548555379;48bcb02e89875979c680d936ec19ad5e9697f7ed73498fd061aecb73e7097497`
+
 #### SNMPv3: Parameter value can now be used as context name or context ID when executing an SNMP get or set command [ID 42676]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
@@ -656,3 +691,114 @@ To define that the value of a particular parameter should be used as context ID 
 If the parameter is not initialized or is set to an empty string, the default parameter value will be used (i.e. an empty string).
 
 The context name and context ID can be changed at run-time, and are not saved by default. When the element is restarted, the parameter data will be lost unless the `save` attribute of the parameter was set to true (e.g. `<Param id="1" save="true">`).
+
+#### Automation scripts: Generating information events when editing a connection in a QAction [ID 42783]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+The SLNet message `EditConnection`, which can be used to edit a connection from within a QAction, now has a `GenerateInformationEvents` property. If this property is set to true, information events will be generated when a connection is created, updated, or deleted.
+
+#### Interactive Automation scripts executed in a web app: Filtering values in a dropdown box [ID 42808]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+To prevent dropdown boxes in interactive Automation scripts to get loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
+
+For an example showing how to implement a dropdown box filter in an interactive Automation script, see [Interactive Automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]](xref:Web_apps_Feature_Release_10.5.8#interactive-automation-scripts-filtering-values-in-a-redesigned-ui-component-dropdown-id-42845).
+
+> [!IMPORTANT]
+> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+
+#### Automation scripts: New Interactivity tag [ID 42954]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, Automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
+
+```xml
+<DMSScript xmlns="http://www.skyline.be/automation">
+  ...  
+  <Interactivity>Always</Interactivity>
+  ...
+  <Script>
+    ...
+  </Script>
+</DMSScript>
+```
+
+Possible values:
+
+| Value | Description |
+|-------|-------------|
+| Auto     | Like before, an attempt will be made to automatically detect the interactive behavior of the script. |
+| Never    | The script will never show any UI element. |
+| Optional | The script will be interactive when it needs to be. |
+| Always   | The script will always be interactive. |
+
+#### Automation: New OnRequestScriptInfo entry point [ID 42969]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other Automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
+
+##### Using the entry point
+
+To use the entry point, add a method with the following signature to the script:
+
+```csharp
+[AutomationEntryPoint(AutomationEntryPointType.Types.OnRequestScriptInfo)]
+public RequestScriptInfoOutput OnRequestScriptInfoRequest(IEngine engine, RequestScriptInfoInput inputData)
+```
+
+Both `RequestScriptInfoInput` and `RequestScriptInfoOutput` have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. We strongly recommend keeping the passed data below 20 MB (i.e. 10 million characters). If larger chunks need to be passed, a reference to that information should be passed instead.
+
+It is allowed to pass null as input data and to return null as output data.
+
+##### Arguments
+
+If the script has any script parameters, dummies or memory files, then these are not required when executing the `OnRequestScriptInfo` entry point. However, they are required when executing the `Run` method of that same script.
+
+- When an omitted script parameter is used in the entry point logic, retrieving the script parameter is possible, but its value will be an empty string.
+- When an omitted dummy is used in the entry point logic, retrieving the dummy is possible, but it will refer to DMA ID -1 and element ID -1. Any actions that use the dummy will fail with an exception.
+- When an omitted memory file is used in the entry point logic, retrieving the memory file is possible, but it will refer to a linked file that is empty. Retrieving a value using the memory file will fail with an exception.
+
+##### Subscript
+
+To execute the `OnRequestScriptInfo` entry point within Automation, you have to use the following `PrepareSubScript` method on `Engine` or `IEngine`:
+
+```csharp
+RequestScriptInfoSubScriptOptions PrepareSubScript(String scriptName, RequestScriptInfoInput input)
+```
+
+The script should be started synchronously. It will return a subscript options object with an `Output` property containing the information returned by the script. The `Input` property can be used to check or update the data sent to the script.
+
+Executing subscripts is limited to a maximum of 10 levels.
+
+##### ExecuteScriptMessage
+
+The `ExecuteScriptMessage` can be used to trigger the entry point using an SLNet connection.
+
+```csharp
+var input = new RequestScriptInfoInput
+{
+  Data = new Dictionary<string, string>
+  {
+    { "Action", "RequestValues" },
+  },
+};
+
+new ExecuteScriptMessage
+{
+  ScriptName = scriptName,
+  Options = new SA(new []{ "DEFER:FALSE" }),
+  CustomEntryPoint = new AutomationEntryPoint
+  {
+    EntryPointType = AutomationEntryPoint.Types.OnRequestScriptInfo,
+    Parameters = new List<object> { input },
+  },
+};
+```
+
+When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will be returned. The information is returned in an `EntryPointResult.Result` property of type `RequestScriptInfoOutput`.
+
+This message should not be used to request the information in an Automation script.

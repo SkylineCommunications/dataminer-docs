@@ -76,7 +76,7 @@ To configure TLS encryption for client-server communication:
 
 1. Stop the DataMiner Agent.
 
-1. Add the full *https://* URL (including the port) in the \<DBServer> element in the *DB.xml* file. For example:
+1. Add the full `https://` URL (including the port) in the \<DBServer> element in the *DB.xml* file. For example:
    `<DBServer>https://elastic.dataminer:9200</DBServer>`
 
 1. Import the certificate in the *Trusted Root Certification Authorities* store of the Windows Certificate Store.
@@ -173,7 +173,7 @@ To enable authentication in Elasticsearch 6.8.X:
 
 1. Stop the *elasticsearch-service-x64* service.
 
-1. Add the following lines to the *elasticsearch.yml* file (typically located in *C:\Program Files\Elasticsearch\config*):
+1. Add the following lines to the *elasticsearch.yml* file (typically located in `C:\Program Files\Elasticsearch\config`):
 
    `xpack.security.enabled: true`
 
@@ -192,7 +192,7 @@ To enable authentication in Elasticsearch 6.8.X:
 
 1. When the script prompts you to do so, enter the new credentials for several users. Ideally these are random-generated, strong passwords.
 
-1. When the script is finished, add the credentials for the *elastic* user to the *db.xml* file. This file is located on every DataMiner Agent in *C:\Skyline DataMiner\db.xml*.
+1. When the script is finished, add the credentials for the *elastic* user to the *db.xml* file. This file is located on every DataMiner Agent in `C:\Skyline DataMiner\db.xml`.
 
    ```xml
    <DataBase active="true" search="true" type="Elasticsearch">
@@ -205,11 +205,11 @@ To enable authentication in Elasticsearch 6.8.X:
 1. Start your DataMiner Agent.
 
 > [!NOTE]
-> To keep using Kibana, also set the credentials in the *elasticsearch.username* and *elasticsearch.password* fields of the *kibana.yml* (typically located in *C:\Program Files\Elasticsearch\Kibana\config*).
+> To keep using Kibana, also set the credentials in the *elasticsearch.username* and *elasticsearch.password* fields of the *kibana.yml* (typically located in `C:\Program Files\Elasticsearch\Kibana\config`).
 
 ## Updating passwords
 
-The *elasticsearch-setup-passwords.bat* script can only *create* the passwords. 
+The *elasticsearch-setup-passwords.bat* script can only *create* the passwords.
 
 To **update** an existing password:
 
@@ -230,7 +230,7 @@ By default, DataMiner installs Elasticsearch 6.8.23. For more information about 
 
 ## Updating Java
 
-By default, DataMiner installs Elasticsearch with its own Java installation. This is typically located in the folder *C:\Program Files\Elasticsearch\Java\bin*. DataMiner deploys Elasticsearch with **Java 1.8.0_121**.
+By default, DataMiner installs Elasticsearch with its own Java installation. This is typically located in the folder `C:\Program Files\Elasticsearch\Java\bin`. DataMiner deploys Elasticsearch with **Java 1.8.0_121**.
 
 To update the Java version:
 
@@ -240,7 +240,7 @@ To update the Java version:
 
 1. Stop the *elasticsearch-service-x64* service.
 
-1. Update the binaries in *C:\Program Files\Elasticsearch\Java*.
+1. Update the binaries in `C:\Program Files\Elasticsearch\Java`.
 
 1. Start the *elasticsearch-service-x64* service.
 
