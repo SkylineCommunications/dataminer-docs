@@ -72,9 +72,9 @@ See also: [Swarming](xref:Swarming).
 
 ### What backup policy does a DaaS system have?
 
-- **Daily backups:** DaaS performs daily backups and these are kept for 7 days.
+- **Daily backups:** DaaS performs daily backups. These are kept for 7 days.
 
-- **Weekly backups:** DaaS performs additional weekly backups (taken on Monday) and stores these for 4 weeks.
+- **Weekly backups:** DaaS performs additional weekly backups (taken on Monday). These are kept for 4 weeks.
 
 - **Data restoration and support:** In the event a rollback is necessary, our support team will assist you. To submit a rollback request, please contact <daas@dataminer.services>.
 
