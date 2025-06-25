@@ -55,7 +55,7 @@ items:
             topicUid: Masking_or_unmasking_an_element
           - name: Locking and unlocking elements
             topicUid: Locking_and_unlocking_elements
-          - name: Managing custom element properties
+          - name: Managing custom properties
             topicUid: Managing_element_properties
           - name: Changing the polling speed of an element
             topicUid: Changing_the_polling_speed_of_an_element
