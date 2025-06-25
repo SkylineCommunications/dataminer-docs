@@ -56,6 +56,16 @@ As the *Add/remove elements* user permission in *General > Views* allows users t
 
 ### Fixes
 
+#### System Center - SNMP forwarding: 'Resend all active alarms every' option would incorrectly be set to 0 [ID 43206]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in the *SNMP forwarding* section of *System Center*, you had created a new SNMP manager, up to now, the *Resend all active alarms every* option in the *Resend* tab would by default incorrectly be set to 0. From now on, this option will by default be set to 30 seconds.
+
+Also, up to now, users would incorrectly be allowed to manually set this option to 0 seconds. From now on, the minimum allowed value will be 1 second.
+
+In order to prevent any issues from occurring because of a *Resend all active alarms every* option having been set to 0, DataMiner Agents will now automatically interpret a value set to 0 as being a value set to 30 seconds.
+
 #### Problem when loading apps in the Apps pane [ID 43208]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
