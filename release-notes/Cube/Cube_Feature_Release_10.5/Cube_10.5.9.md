@@ -48,7 +48,11 @@ For more information on the `<Interactivity>` tag, see [Automation scripts: New 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security: User permission 'General > View > Add/remove elements' renamed to 'Add/remove items (elements, services, etc.)' [ID 43215]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+As the *Add/remove elements* user permission in *General > Views* allows users to also add or remove other items, including services, measurement points, service templates, redundancy groups, redundancy templates, etc., this user permission has now been renamed to *Add/remove items (elements, services, etc.)*.
 
 ### Fixes
 
