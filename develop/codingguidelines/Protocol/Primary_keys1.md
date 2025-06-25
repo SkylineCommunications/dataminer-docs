@@ -12,4 +12,4 @@ uid: Primary_keys1
 
 - Backslashes are not allowed in the primary keys because MySQL does not allow these.
 
-- Leading and trailing spaces should be avoided in primary keys (as well as in display keys)
+- Leading and trailing spaces should be avoided in primary keys (as well as in display keys).
