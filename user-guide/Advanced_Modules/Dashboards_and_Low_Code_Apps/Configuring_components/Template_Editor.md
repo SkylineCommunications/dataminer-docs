@@ -5,10 +5,11 @@ keywords: table templates
 
 # Using the Template Editor
 
-> [!IMPORTANT]
-> The Template Editor is in preview until DataMiner 10.4.1/10.5.0. If you use the preview version of the feature, its functionality may be different from what is described below. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+Available from DataMiner 10.4.1/10.5.0 onwards.
 
-Available from DataMiner 10.4.1/10.5.0 onwards. Prior to this, the Template Editor is available in soft launch from DataMiner 10.2.12 onwards, if the soft-launch options *ReportsAndDashboardsDynamicVisuals* and *ReportsAndDashboardsScheduler* are enabled.
+The Template Editor allows you to **design and customize the layout of supported components** in your dashboards and low-code apps. It offers a flexible layer-based interface where you can add icons, text, shapes, and HTML content, apply conditions, and configure styling and actions. This gives you full control over how data is visually represented in your dashboards and low-code apps.
+
+![Template Editor](~/user-guide/images/TemplateEditor.png)<br>*Template Editor in DataMiner 10.5.8*
 
 The Template Editor is currently supported for the following components:
 
@@ -19,30 +20,34 @@ The Template Editor is currently supported for the following components:
 
 ## Accessing the Template Editor
 
-- For the **grid** and **timeline** components:
+The way you can access the Template Editor depends on the type of component:
 
-  1. Select the component and go to the *Layout* pane on the right.
+### [Grid and timeline](#tab/grid-timeline)
 
-  1. In the *Item templates* section, click *Edit*.
+1. Select the component and go to the *Layout* pane on the right.
 
-     > [!NOTE]
-     > A preview of the template currently used for this component is displayed in the *Item templates* section.
+1. In the *Item templates* section, click *Edit*.
 
-- For the **table** component:
+   > [!NOTE]
+   > A preview of the template currently used for this component is displayed in the *Item templates* section.
 
-  1. Select the component and go to the *Layout* pane on the right.
+### [Table](#tab/table)
 
-  1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to create a template for.
+1. Select the table component and go to the *Layout* pane on the right.
 
-  1. Click the ellipsis button ("...") in the top-right corner and select *Customize preset*.
+1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to create a template for.
 
-- For the **maps** component:
+1. Click the ellipsis button ("...") in the top-right corner and select *Customize preset*.
 
-  1. Select the component and go to the *Layout* pane on the right.
+### [Maps](#tab/maps)
 
-  1. Under the *Layer settings* for a specific layer of the map, click *Edit* in the template section.
+1. Select the maps component and go to the *Layout* pane on the right.
 
-     These settings will only be available once a set of markers has been added to the component.
+1. Under the *Layer settings* for a specific layer of the map, click *Edit* in the template section.
+
+   These settings will only be available once a set of markers has been added to the component.
+
+***
 
 ## Template Editor UI overview
 
@@ -69,40 +74,17 @@ In the side pane of the Template Editor, the *Layers* tab offers an overview of 
 
 The benefits of working with layers:
 
-- You can add elements on top of each other without removing data.
+- You can [add elements](#adding-a-new-layer) on top of each other without removing data.
 
-- You can apply conditions to only one layer of the template. See [Adding conditional cases to a layer](#adding-conditional-cases-to-a-layer).
+- You can [apply conditions](#adding-conditional-cases-to-a-layer) to only one layer of the template.
 
-- You can discard any layers you no longer need without affecting the entire template.
+- You can [discard any layers](#deleting-a-layer) you no longer need without affecting the entire template.
 
-- You can mask layers so that they are temporarily hidden without the need to delete them.
+- You can [mask layers](#temporarily-masking-a-layer) so that they are temporarily hidden without the need to delete them.
 
-If one layer is positioned higher than another, the higher layer will appear in front of the lower one. To **change the order of layers**, click the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and drag the layer up or down in the *Layers* tab. Release the mouse button when you reach the position where you want to place the selected layer.
+### Adding a new layer
 
-![Change order layers](~/user-guide/images/Change_Order_Layers.gif)<br/>*The Template Editor in DataMiner 10.4.1*
-
-To **temporarily mask a layer** within the Template Editor, hover the mouse pointer over the layer and click the *eye* icon in the lower right corner. This action renders the layer invisible while you modify the template. To bring the layer back into view, click the *eye* icon again.
-
-> [!TIP]
-> If you want to render a layer invisible in the final result, you can mask the layer by adjusting its properties in the *Settings* pane. See [Specifying layer properties](#specifying-layer-properties).
-
-To **delete a layer**:
-
-- From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->: Hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Delete*.
-
-- Earlier versions: Hover the mouse pointer over the layer and click the *delete* button in the top-right corner.
-
-- Alternatively, regardless of the DataMiner version, select the layer in the preview and press *Delete* on your keyboard.
-
-To **duplicate a layer**, hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Duplicate*. Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->.
-
-To **add a new layer**, [add a new tool](#adding-new-layers) in the *Tools* tab.
-
-In the lower left corner of each layer, an icon denotes the layer type: an *icon*, *text*, *HTML*, *rectangle*, or *ellipse* layer.
-
-## Adding new layers
-
-In the *Tools* tab, you can add new layers to the template. Each tool in the *Tools* tab corresponds to a type of layer you can incorporate into your template. You can choose from the following types:
+In the *Tools* tab, you can find an overview of available tools, each corresponding to a type of layer that can be added to your template. The following layer types are available:
 
 - Icon
 
@@ -116,16 +98,57 @@ In the *Tools* tab, you can add new layers to the template. Each tool in the *To
 
 ![*Tools* tab](~/user-guide/images/Tools_Tab.png)<br/>*The Template Editor in DataMiner 10.5.5*
 
-1. To add a new layer to the template, click the *Icon*, *Text*, *HTML*, *Rectangle*, or *Ellipse* button.
+To add a new layer:
 
-1. Within the preview, press and hold down the left mouse button to define the area for your new layer. The layer appears, enclosed by dotted lines in a frame around the selected area. Release the mouse button once you are satisfied with the size and shape of the tool.
+1. In the *Tools* tab, click the button for the layer type you want to add.
 
-1. Optionally, you can resize the layer by dragging the frame edges or move the layer by dragging and dropping it using the left mouse button.
+1. In the preview area, press and hold down the left mouse button to draw the layer. Drag to define the size and position, then release the button to place it.
+
+1. Optionally, adjust the size or position of the layer:
+
+   - Drag the frame edges to resize.
+
+   - Click and drag the entire layer to move it.
 
    > [!NOTE]
-   > Alternatively, you can also adjust the size, shape, and position of the layer in the [*Dimensions* section](#specifying-layer-dimensions) of the *Settings* pane.
+   > Alternatively, you can also adjust the size, shape, and position of the layer in the [*Dimensions* section](#resizing-and-positioning-a-layer) of the *Settings* pane.
 
-1. Optionally, you can add certain properties and/or conditional cases to the layer. See [Specifying layer properties](#specifying-layer-properties) and [Adding conditional cases to a layer](#adding-conditional-cases-to-a-layer).
+1. Optionally, configure additional settings for the layer:
+
+   - [Customize the layer's appearance and behavior](#customizing-layer-appearance-and-behavior).
+
+   - [Add conditional cases to the layer](#adding-conditional-cases-to-a-layer).
+
+### Changing the order of layers
+
+If one layer is positioned higher than another, the higher layer will appear in front of the lower one. To change the order of layers, click the ![*Drag-and-drop*](~/user-guide/images/drag-and-drop.png) button and drag the layer up or down in the *Layers* tab. Release the mouse button when you reach the position where you want to place the selected layer.
+
+![Change order layers](~/user-guide/images/Change_Order_Layers.gif)<br/>*Template Editor in DataMiner 10.5.8*
+
+### Temporarily masking a layer
+
+To temporarily mask a layer within the Template Editor, hover the mouse pointer over the layer and click the *eye* icon in the lower right corner. This action renders the layer invisible while you modify the template. To bring the layer back into view, click the *eye* icon again.
+
+![Temporarily mask layer](~/user-guide/images/Temporarily_Mask_Layer.gif)<br>*Template Editor in DataMiner 10.5.8*
+
+> [!TIP]
+> If you want to render a layer invisible in the final result, you can mask the layer by adjusting its properties in the *Settings* pane. See [Customizing layer appearance and behavior](#customizing-layer-appearance-and-behavior).
+
+### Deleting a layer
+
+To delete a layer, hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Delete*.
+
+![Delete layer](~/user-guide/images/Delete_Layer.gif)<br>*Template Editor in DataMiner 10.5.8*
+
+Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->, hover the mouse pointer over the layer and click the *delete* button in the top-right corner.
+
+Alternatively, regardless of the DataMiner version, select the layer in the preview and press *Delete* on your keyboard.
+
+### Duplicating a layer
+
+To duplicate a layer, hover the mouse pointer over the layer, click the ellipsis button ("...") in the top-right corner, and select *Duplicate*. Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42479-->.
+
+![Duplicate layer](~/user-guide/images/Duplicate_Layer.gif)<br>*Template Editor in DataMiner 10.5.8*
 
 ## Changing template settings
 
@@ -135,15 +158,15 @@ With the *Settings* pane to the right side of the preview, you can change the se
 
 - To modify the **layer settings**, make sure a layer is selected. In the *Settings* pane, you can adjust the following layer settings in three collapsible sections:
 
-  - [Dimensions](#specifying-layer-dimensions)
+  - [Dimensions](#resizing-and-positioning-a-layer)
 
-  - [Properties](#specifying-layer-properties)
+  - [Properties](#customizing-layer-appearance-and-behavior)
 
   - [Conditional cases](#adding-conditional-cases-to-a-layer)
 
-### Specifying layer dimensions
+### Resizing and positioning a layer
 
-The table below describes the dimension settings available for template layers<!--RN 37476-->.
+In the *Dimensions* section of the *Settings* pane, you can resize and position a layer<!--RN 37476-->:
 
 | Icon | Setting | Description |
 |--|--|--|
@@ -161,229 +184,108 @@ The table below describes the dimension settings available for template layers<!
 > - You can secure one or multiple dimension settings of a layer by clicking the ![*Lock*](~/user-guide/images/Dimensions_Lock.png) icon next to the chosen setting. This lock functionality enhances the security of your design, preserving your template's intended appearance, especially when dealing with variable widths and heights. For example, when adjusting a table column width, you may want to maintain specific proportions. Once a setting is locked, any attempt to override the specified dimension will be restricted. This includes moving or resizing the layer in the preview and adjusting the component size in the dashboard or low-code app edit mode (e.g. changing the size of a table column). The locked dimensions ensure that the template remains in its designated position. If you are unable to lock a dimension setting because of the locking of other settings, the lock icon will be grayed out.
 > - For some layers, the width and height is determined by the left and right position and can therefore not be modified.
 
-### Specifying layer properties
+### Customizing layer appearance and behavior
 
 Depending on the type of layer, you can specify different layer properties in the *Settings* pane.
 
-- For *Icon* layers, you can specify the following properties:
+Common properties:
 
-  - *Show icon*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but it will not be visible in the template's end result.
+| Icon | Property | Description | Layer types |
+|--|--|--|
+| ![Show layer](~/user-guide/images/Show_Layer-type.png) | Show [layer type] | Toggle the switch to determine whether the layer is visible in the final output. When disabled, the layer is visible (with lowered opacity) in the preview, but not in the end result. | All |
+| ![tooltip](~/user-guide/images/Tooltip.png) | Tooltip | Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Configure a tooltip that appears when hovering over the layer. If multiple layers overlap, the tooltip of the topmost layer will be displayed. | All |
+| ![Configure actions](~/user-guide/images/ConfigureActions.png) | Configure actions | [Configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the layer. Only available for DataMiner Low-Code Apps<!--RN 34761-->. | All |
+| ![Color](~/user-guide/images/Templates_Color.png) | Color | Specify a custom color for the shape, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. The most recently used template colors and the theme colors are always displayed<!--RN 34876-->. | Icon, Rectangle, Ellipse |
 
-  - *Color*: Allows you to specify a custom icon color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
+Layer-specific properties:
 
-    ![RGB or hex or HTML](~/user-guide/images/Color_RGB_Hex_HTML.png)<br/>*Template Editor in DataMiner 10.4.1*
-
-    > [!TIP]
-    > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
-
-  - *Icon*: Allows you to select any of the available icons from the dropdown list. You can search for a specific icon using the filter box at the top.
-
-  - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the icon. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
-
-  - *Configure actions*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the icon. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
-
-- For *Text* layers, you can specify the following properties:
-
-  - *Show text*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview, but it will not be visible in the template's end result.
-
-  - *Text box*: Allows you to enter custom text. You can enter a column name surrounded by curly brackets (e.g. `{my column}`) to insert the corresponding cell value inside your text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported. Text layers containing HTML content created before these versions will still be rendered as HTML.
-
-  - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the text. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
-
-  - *Configure actions*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42473-->. Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the text. Only available for DataMiner Low-Code Apps.
-
-  - The table below describes the remaining settings available for *Text* layers:
-
-    | Icon | Setting | Description |
-    |--|--|--|
-    | ![Font size](~/user-guide/images/Text_Font_Size.png) | Font size | Specify the size (in pixels) of the text. |
-    | ![Color](~/user-guide/images/Text_Color.png) | Color | Specify a custom text color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.|
-    | ![Border radius](~/user-guide/images/Text_Roundness.png) | Border radius | Specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally). |
-    | ![Background color](~/user-guide/images/Text_Background_Color.png) | Background color | Specify a custom background color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. |
-    | ![Horizontal padding](~/user-guide/images/Text_Horizontal_Padding.png) | Horizontal padding | Specify the amount of space (in pixels) that should be left free above the text. |
-    | ![Vertical padding](~/user-guide/images/Text_Vertical_Padding.png) | Vertical padding | Specify the amount of space (in pixels) that should be left free underneath the text. |
-    | ![Horizontal alignment](~/user-guide/images/Text_Horizontal_Alignment.png) | Horizontal alignment | Left, center, right, or justify. |
-    | ![Vertical alignment](~/user-guide/images/Text_Vertical_Alignment.png) | Vertical alignment | Top, center, or bottom. |
-
-- For *HTML* layers (available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42519-->), you can specify the following properties:
-
-  - *Show HTML*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview, but it will not be visible in the template's end result.
-
-  - *Text box*: Allows you to enter HTML code. Basic syntax highlighting and IntelliSense is supported.
-
-    ![HTML code example](~/user-guide/images/HTML.gif)<br>*Template Editor in DataMiner 10.5.5*
-
-    > [!NOTE]
-    > Certain HTML tags, such as `<iframe>` and `<object>`, are not supported in HTML layers because embedded content is currently restricted in templates. If you want to use these tags, consider using the [web component](xref:DashboardWeb) instead. To display content like video thumbnails in a template, you can convert the content to a base64-encoded image and display it using an `<img>` tag.
-
-  - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Allows you to configure a tooltip that appears when hovering over the HTML content. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
-
-  - *Configure actions*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the HTML content. Only available for DataMiner Low-Code Apps.
-
-- For *Rectangle* layers, you can specify the following properties:
-
-  - *Show rectangle*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but it will not be visible in the template's end result.
-
-  - *Color*: Allows you to specify a custom color for the rectangle, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
-
-    > [!TIP]
-    > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
-
-  - *Border radius*: Allows you to specify the roundness (in pixels) of the rectangle edges.
-
-  - *Link width to*: Allows you to link the width of this column to that of another column, selected from the dropdown list. Only available for table and grid components.
-  
-  - *Link height to*: Allows you to link the height of this column to that of another column, selected from the dropdown list. Only available for table and grid components.
-
-  - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the rectangle. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
-
-  - *Configure actions*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the rectangle. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
-
-- For *Ellipse* layers, you can specify the following properties:
-
-  - *Show ellipse*: Allows you to mask the layer, rendering it temporarily invisible. If disabled, the layer is still visible in the preview with lowered opacity, but it will not be visible in the template's end result.
-
-  - *Color*: Allows you to specify a custom color for the ellipse, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
-
-    > [!TIP]
-    > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
-
-  - *Tooltip* ![tooltip](~/user-guide/images/Tooltip.png) : Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the ellipse. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
-
-  - *Configure actions*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the ellipse. Only available for DataMiner Low-Code Apps<!--RN 34761-->.
+| Icon | Property | Description | Layer type(s) |
+|--|--|--|--|
+| N/A | Icon | Select any of the available icons from the dropdown list. You can search for a specific icon using the filter box. | Icon |
+| N/A | Text box | Enter custom text. You can enter a column name surrounded by curly brackets (e.g. `{my column}`) to insert the corresponding cell value inside your text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.4<!--RN 42519-->, HTML text formatting is supported. Text layers containing HTML content created before these versions will still be rendered as HTML. | Text |
+| ![Font size](~/user-guide/images/Text_Font_Size.png) | Font size | Specify the size (in pixels) of the text. | Text |
+| ![Color](~/user-guide/images/Text_Color.png) | Text Color | Specify a custom text color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. The most recently used template colors and the theme colors are always displayed<!--RN 34876-->. | Text |
+| ![Border radius](~/user-guide/images/Text_Roundness.png) | Border radius | Specify the roundness (in pixels) of a shape. The higher the number, the rounder the corners. | Text, Rectangle |
+| ![Background color](~/user-guide/images/Text_Background_Color.png) | Background color | Specify a custom background color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. The most recently used template colors and the theme colors are always displayed<!--RN 34876-->. | Text |
+| ![Horizontal padding](~/user-guide/images/Text_Horizontal_Padding.png) | Horizontal padding | Specify the amount of space (in pixels) that should be left free above the text. | Text |
+| ![Vertical padding](~/user-guide/images/Text_Vertical_Padding.png) | Vertical padding | Specify the amount of space (in pixels) that should be left free underneath the text. | Text |
+| ![Horizontal alignment](~/user-guide/images/Text_Horizontal_Alignment.png) | Horizontal alignment | Left, center, right, or justify. | Text |
+| ![Vertical alignment](~/user-guide/images/Text_Vertical_Alignment.png) | Vertical alignment | Top, center, or bottom. | Text |
+| N/A | HTML code | Enter HTML code. Basic syntax highlighting and IntelliSense is supported. | HTML |
+| N/A | Link width to | Link the width of this column to that of another column, selected from the dropdown list. Only available for table and grid components. | Rectangle |
+| N/A | Link height to | Link the height of this column to that of another column, selected from the dropdown list. Only available for table and grid components. | Rectangle |
 
 > [!NOTE]
-> When you change the color of a layer, the most recently used template colors and the theme colors are always displayed<!--RN 34876-->.
+> Certain HTML tags, such as `<iframe>` and `<object>`, are not supported in HTML layers because embedded content is currently restricted in templates. If you want to use these tags, consider using the [web component](xref:DashboardWeb) instead. To display content like video thumbnails in a template, you can convert the content to a base64-encoded image and display it using an `<img>` tag.
 
 ### Adding conditional cases to a layer
 
-For each layer, you can add one or multiple conditional cases in the *Conditional cases* section of the *Settings* pane, making certain actions dependent on one or more conditions.
+You can make a layer respond dynamically to certain conditions, such as whether an item is selected or a specific column has a certain value. Conditional cases are defined in the *Conditional cases* section of the *Settings* pane.
 
-A conditional case consists of two sections: A first section that contains one or more conditions combined with "and", and a second section that contains actions that exclusively execute when the conditions are met.
+Each case includes:
 
-To add a condition:
+- Conditions: Criteria that determine when the case applies.
+
+- Actions: What happens when the conditions are met (e.g. show or hide the layer, change styling, trigger events).
+
+To configure a conditional case:
 
 1. Click *Add case*.
 
-1. Choose a state or column from the dropdown list.
+1. Choose a state or a column from the dropdown list.
 
-   The available states:
+   - The available states:
 
-   - *Is selected*: The action will be executed when a user selects the item<!--RN 34761-->.
+     - *Is selected*: The action will be executed when a user selects the item<!--RN 34761-->.
 
-   - *Is busy*: The action will be executed when the component is busy<!--RN 34859-->.
+     - *Is busy*: The action will be executed when the component is busy<!--RN 34859-->.
 
-   - *Hovering*: The action will be executed when a user hovers the mouse pointer over the item<!--RN 34761-->.
+     - *Hovering*: The action will be executed when a user hovers the mouse pointer over the item<!--RN 34761-->.
 
-1. When you have chosen a state, select *Yes* or *No*.
+   - When you have chosen a state, select *Yes* or *No*.
 
-   - *Yes*: The action is only executed when the element is in the specified state.
+     - *Yes*: The action is only executed when the element is in the specified state.
 
-   - *No*: The action is only executed when the element is not in the specified state.
+     - *No*: The action is only executed when the element is not in the specified state.
 
-1. When you have chosen a column, provide the necessary details based on the column type.
+   - When you have chosen a column, provide the necessary details based on the column type.
 
-   Some examples:
+     For example:
 
-   - Element name: The action is only executed when the element name matches this entry.
+     - Element name: The action is only executed when the element name matches this entry.
 
-   - Parameter description: The action is only executed when the parameter description matches this entry.
+     - Parameter description: The action is only executed when the parameter description matches this entry.
 
-   - Root time: The action is only executed when the current time aligns with the specified timestamp.
+     - Root time: The action is only executed when the current time aligns with the specified timestamp.
 
-     - `= dd/MM/yyyy hh:mm`: The root time matches the specified timestamp.
+       - `= dd/MM/yyyy hh:mm`: The root time matches the specified timestamp.
 
-     - `> dd/MM/yyyy hh:mm`: The root time occurs after the specified lower bound.
+       - `> dd/MM/yyyy hh:mm`: The root time occurs after the specified lower bound.
 
-     - `≥ dd/MM/yyyy hh:mm`: The root time occurs at or after the specified lower bound.
+       - `≥ dd/MM/yyyy hh:mm`: The root time occurs at or after the specified lower bound.
 
-     - `< dd/MM/yyyy hh:mm`: The root time occurs before the specified upper bound.
+       - `< dd/MM/yyyy hh:mm`: The root time occurs before the specified upper bound.
 
-     - `≤ dd/MM/yyyy hh:mm`: The root time occurs at or before the specified upper bound.
+       - `≤ dd/MM/yyyy hh:mm`: The root time occurs at or before the specified upper bound.
 
-1. Enable or disable the toggle button next to `Show [layer-type]`:
+1. Optionally, add more conditions by clicking *and condition* and repeating the step above.
 
-   - If this is enabled, the selected layer is shown if the conditions are met.
+1. Use the toggle next to `Show [layer-type]` to control the layer's visibility when the conditions are met:
 
-   - If this is disabled, the selected layer is hidden if the conditions are met.
+   - Enabled: The layer is shown.
 
-1. If you chose to show the layer in the previous step, optionally change the look of the layer when the conditions are met.
+   - Disabled: The layer is hidden.
 
-   Depending on the type of layer and the type of component, the following options may be available:
+1. Define how the layer should behave when the conditions are met. You can customize the appearance of the layer or configure on-click actions that can be triggered when the conditions apply.
 
-   - *Icon* layer:
+   - Styling options: Change the appearance of the layer, such as text color, background color, or size. The available options depend on the layer type and are the same as those listed in the [Customizing layer appearance and behavior](#customizing-layer-appearance-and-behavior) section.
 
-     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
-
-     - *Icon*: Allows you to select a new icon from the dropdown list. You can search for a specific icon using the filter box at the top.
-
-     - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the icon. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
-
-     - *Events*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when the conditions are met. Only available for DataMiner Low-Code Apps.
-
-   - *Text* layer:
-
-     - *Text*: Allows you to enter custom text. Prior to DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5<!--RN 42519-->, HTML text formatting is supported.
-
-     - *Font size*: Allows you to set the font size.
-
-     - *Text color*: Allows you to select a text color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
-
-     - *Border radius*: Allows you to specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally).
-
-     - *Background*: Allows you to specify a custom background color, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
-
-     - *Horizontal padding*: Allows you to specify the amount of space (in pixels) that should be left free above the text.
-
-     - *Vertical padding*: Allows you to specify the amount of space (in pixels) that should be left free underneath the text.
-
-     - *Text alignment*: Determines the horizontal alignment (left, center, right, or justify).
-
-     - *Vertical alignment*: Determines the vertical alignment (top, center, or bottom).
-
-     - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the text. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
-
-     - *Events*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42473-->. Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when the conditions are met. Only available for DataMiner Low-Code Apps.
-
-   - *HTML* layer:
-
-     - *HTML*: Allows you to enter custom HTML code. The editor provides basic syntax highlighting and IntelliSense support.
-
-     - *Tooltip*: Allows you to configure a tooltip that appears when hovering over the HTML content. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
-
-     - *Events*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when the conditions are met. Only available for DataMiner Low-Code Apps.
-
-   - *Rectangle* layer:
-
-     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
-
-     - *Border radius*: Allows you to specify the roundness (in pixels) of the background color that can be displayed behind the text (optionally).
-
-     - *Link width to*: Allows you to link the width of this tool to that of another column, selected from the dropdown list.
-
-     - *Link height to*: Allows you to link the height of this tool to that of another column, selected from the dropdown list.
-
-     - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the rectangle. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
-
-     - *Events*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when the conditions are met. Only available for DataMiner Low-Code Apps.
-
-   - *Ellipse* layer:
-
-     - *Color*: Allows you to select a color for the tool, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box.
-
-     - *Tooltip*: Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Allows you to configure a tooltip that appears when hovering over the ellipse. If multiple layers overlap, the tooltip of the topmost layer will be displayed.
-
-     - *Events*: Allows you to [configure actions](xref:LowCodeApps_event_config) that are executed when the conditions are met. Only available for DataMiner Low-Code Apps.
-
-   > [!TIP]
-   > For a full overview of all HTML color names, see [HTML Color Names](https://www.w3schools.com/tags/ref_colornames.asp).
+   - Event actions: Click the *Events* button to [configure an on-click action](xref:LowCodeApps_event_config) that can be executed when the conditions are met. Only available for DataMiner Low-Code Apps. For *Text* layers, this feature is only available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42473-->.
 
    > [!NOTE]
    >
    > - Any visual changes made when configuring a conditional case will not show up in the preview.
    > - From DataMiner 10.3.0 [CU12]/10.4.3 onwards<!--RN 38368-->, you can reset visual changes made when configuring a conditional case by clicking the ![reset](~/user-guide/images/Reset_Button.png) button to the right of the option you want to reset. Prior to DataMiner 10.3.0 [CU12]/10.4.3, you can only reset custom text entered for a *Text* layer.
-
-1. If you want to add another condition, go back to step 1 and repeat the steps until all the necessary conditions have been added.
 
 #### Example
 
@@ -452,3 +354,9 @@ If you have already configured a template for a component of the same type in th
 Keep in mind that when you reuse templates, you may need to **manually update column references**: In a text layer of a template, you can enter a column name surrounded by curly brackets (e.g. {CustomerName}) to insert the corresponding cell value into your text. However, when you reuse a template, these linked columns will not be automatically updated. If the component you are applying the template to has columns with different column IDs, you will need to manually update the column reference in the template to ensure the correct data is displayed.
 
 ![Update template](~/user-guide/images/CustomerName.gif)<br>*Template Editor in DataMiner 10.5.4*
+
+## Enabling the Template Editor in soft launch
+
+From DataMiner 10.2.12 onwards, the Template Editor is available in soft launch, if the soft-launch options *ReportsAndDashboardsDynamicVisuals* and *ReportsAndDashboardsScheduler* are enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
+If you use the preview version of this feature, its functionality may be different from what is described on this page.
