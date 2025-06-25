@@ -37,4 +37,10 @@ The app sections on the DataMiner landing page (e.g. `https://myDMA/root/`) have
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Dashboards app & Low-Code Apps - Timeline component: Group label tooltips missing [ID 43242]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in a *Timeline* component, you had grouped on multiple columns, only the labels of the bottom-level group would have a tooltip.
+
+From now on, all group labels will have a tooltip.
