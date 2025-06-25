@@ -11,7 +11,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 24 June 2025 - Fix - Catalog - Failing connector deployment
 
-An issue has been resolved where a connector deployment failed with "something is wrong".
+An issue has been resolved that could cause connector deployment to fail with the message "Something is wrong".
 
 ### 20 May 2025 - Enhancement - Catalog - Catalog item market
 
