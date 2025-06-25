@@ -24,3 +24,7 @@ Up to now, after a reboot or software upgrade of the device , the Cisco CBR-8 CC
 To prevent this, the connector will now store and sync the FTP settings, ensuring they are always backed up and restored by DataMiner. If a reboot or upgrade happens, the settings stored in the UTSC element will automatically be pushed to the CCAP again.
 
 In addition, users will now be able to configure the *PNM Bulk Data Transfer Configuration Table* directly from the CCAP UTSC element.
+
+#### Cisco CBR-8 CCAP UTSC/Generic SFTP Client: Improved spectrum capture process [ID 43237]
+
+Previously, it could occur that it was not clear when all spectrum trace results were processed. To improve this, after a UTSC capture is triggered, the Cisco CBR-8 CCAP UTSC logic will now wait for the duration that combines the free run duration with one repeat block and the user-configured delay before handing control to the Generic SFTP Client element. This will ensure that every payload file is safely written to local storage. The UTSC will then send both the timestamp of the final payload file and the expected total number of payload files to the SFTP element, so it knows when the last file has arrived, delivering a reliable, self-terminating capture workflow.
