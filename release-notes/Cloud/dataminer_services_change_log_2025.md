@@ -9,6 +9,24 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 30 June 2025 - Fix - Catalog - Improved grid view rendering
+
+The Catalog grid view on the browse page could use only 1 column if you switched from row view.
+
+### 30 June 2025 - Fix - Improved sign in behaviour
+
+A user could end up in an infinite loading state in case of a incorrect processed authentication renew message.
+
+A user could see a incorrect "your are not authorized to access this page" error after signing in when browser local storage still had older auth configs stored.
+
+### 30 June 2025 - Fix - Catalog - Improved private label rendering in Firefox browser
+
+The private label of a Catalog item was not rendered correctly when using Firefox, this has been fixed.
+
+### 30 June 2025 - Fix - Catalog - Incorrect deployment status shown
+
+When deploying a Catalog item, the status is shown in the header of the Catalog item. If you used the search and navigate to another item afterwards, the state of the previous visited Catalog item would be shown.
+
 ### 24 June 2025 - Fix - Catalog - Failing connector deployment
 
 An issue has been resolved that could cause connector deployment to fail with the message "Something is wrong".
