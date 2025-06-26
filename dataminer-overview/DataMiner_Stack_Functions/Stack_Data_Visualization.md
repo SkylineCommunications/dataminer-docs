@@ -220,7 +220,7 @@ And finally, the control panels **enable true multi-tenant operations**. You can
 
 The No-Code/Low-Code Apps toolset enables you to **compose tailor-made apps** for specific audiences, from the ground up **with little to no coding experience**.
 
-**Leverage your data!** Thanks to DataMiner's support for every possible category of integration, no-code apps can leverage your data lake, providing deeper insights and value. You can monitor metrics from any data source in real time, aggregate and manipulate data abstracted from hardware products, and create views tailored to the needs of each of your teams. Perform **real-time analytics** using the *[**Generic Query Interface (GQI)**](xref:Creating_GQI_query), also supporting [external data sources](xref:Configuring_an_ad_hoc_data_source_in_a_query).
+**Leverage your data!** Thanks to DataMiner's support for every possible category of integration, no-code apps can leverage your data lake, providing deeper insights and value. You can monitor metrics from any data source in real time, aggregate and manipulate data abstracted from hardware products, and create views tailored to the needs of each of your teams. Perform **real-time analytics** using the *[**Generic Query Interface (GQI)**](xref:Creating_GQI_query), also supporting [external data sources](xref:GQI_Ad_hoc_data_sources).
 
 > [!TIP]
 > See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi/)

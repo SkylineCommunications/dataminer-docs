@@ -27,6 +27,9 @@ Some common use cases include:
 Intercepts how subsequent operators should be handled. Given the current query node and the next operator, it should return the resulting query node.
 
 > [!TIP]
+> Learn more about when this method is called within a [custom operator](xref:CO_Life_cycle#optimize).
+
+> [!TIP]
 > We recommend forwarding operators whenever possible as this enables the core framework to perform significant optimizations.
 
 > [!IMPORTANT]

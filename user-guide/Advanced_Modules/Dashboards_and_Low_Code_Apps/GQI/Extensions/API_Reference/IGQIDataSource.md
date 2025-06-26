@@ -18,7 +18,10 @@ Implementing this interface marks the class as a GQI data source.
 
 ### GQIColumn[] GetColumns()
 
-The GQI will request the columns.
+Defines the columns of the data source.
+
+> [!TIP]
+> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle#getcolumns).
 
 #### Returns
 
@@ -26,7 +29,10 @@ The columns available in the data source.
 
 ### GQIPage GetNextPage(GetNextPageInputArgs args)
 
-The GQI will request data.
+Retrieves the next page of data from the data source.
+
+> [!TIP]
+> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle#getnextpage).
 
 #### Returns
 
