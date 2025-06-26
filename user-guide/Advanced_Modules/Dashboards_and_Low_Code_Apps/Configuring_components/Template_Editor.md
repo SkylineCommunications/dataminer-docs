@@ -270,7 +270,7 @@ To configure a conditional case:
 
 1. Optionally, add more conditions by clicking *and condition* and repeating the step above.
 
-1. Use the toggle next to `Show [layer-type]` to control the layer's visibility when the conditions are met:
+1. Use the toggle next to `Show [layer type]` to control the layer's visibility when the conditions are met:
 
    - Enabled: The layer is shown.
 
