@@ -57,7 +57,7 @@ If implemented, `OnInit` is always the first life cycle method. It can provide r
 > [!IMPORTANT]
 > Resources that are initialized here should be cleaned up in the final [OnDestroy](#ondestroy) life cycle method.
 
-> [!TIP]
+> [!NOTE]
 > When resources are only required to determine the columns, the initialization should instead be done in the [HandleColumns](#handlecolumns) life cycle method to avoid unnecessary resource allocations.
 
 ### GetInputArguments
@@ -84,16 +84,16 @@ If implemented, the `HandleColumns` life cycle method allows you to transform th
 - Renaming existing columns
 - Removing existing columns
 
-Of course, this method can also be used simply to provide access to the currently available columns.
+This method can also be used to just provide access to the currently available columns.
 
 > [!IMPORTANT]
-> Avoid the implicit use of query columns in your custom operator by retrieving them explicitly via [query arguments](xref:GQI_IGQIInputArguments). This both informs users which columns are relevant and prevents unintended side effects when GQI optimizes the query.
+> Avoid the implicit use of query columns in your custom operator by retrieving them explicitly via [query arguments](xref:GQI_IGQIInputArguments). This both informs users which columns are relevant and prevents unintended side effects when the query is optimized.
 
 ### Optimize
 
 Building block interface: [IGQIOptimizableOperator](xref:GQI_IGQIOptimizableOperator)
 
-If implemented, the `Optimize` life cycle method allows the custom operator to interpret downstream operators that are applied directly and allows to adjust its behavior to improve performance of query execution.
+If implemented, the `Optimize` life cycle method allows the custom operator to interpret downstream operators that are applied directly and makes it possible to adjust its behavior to improve query execution performance.
 
 This life cycle method may be called multiple times for the same instance when the custom operator removes or reorders other operators.
 
@@ -101,7 +101,7 @@ This life cycle method may be called multiple times for the same instance when t
 
 Building block interface: [IGQIRowOperator](xref:GQI_IGQIRowOperator)
 
-If implemented, the `HandleRow` life cycle method defines how query rows will be transformed. It will be called exactly once for each row in the current query result and for every row you can do any of the following:
+If implemented, the `HandleRow` life cycle method defines how query rows will be transformed. It will be called exactly once for each row in the current query result, and for every row you can do any of the following:
 
 - Get the row key
 - Get or set the row metadata
