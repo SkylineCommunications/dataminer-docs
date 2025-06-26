@@ -19,4 +19,10 @@ uid: General_Main_Release_10.4.0_CU18
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### DataMiner upgrade: Redirect tags in DMS.xml would incorrectly not be taken into account [ID 43172]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When `<Redirect via="..." />` tags were configured in the *DMS.xml* file, these would incorrectly not be taken into account when an SLNet instance retrieved upgrade progress messages from another SLNet instance.
+
+Although the upgrade would succeed in the background, no information regarding the remote agents would be available in DataMiner Cube or the DataMiner TaskBar Utility during the upgrade, and notices saying that `http://<ip>:8004/UpgradeService` was unavailable would be added to the logs.
