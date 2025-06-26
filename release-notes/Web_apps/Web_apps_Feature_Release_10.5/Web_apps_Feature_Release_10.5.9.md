@@ -24,7 +24,7 @@ uid: Web_apps_Feature_Release_10.5.9
 
 ### Enhancements
 
-#### DataMiner landing page: Redesigned app sections [ID 43115]
+#### DataMiner landing page: Redesigned app sections [ID 43115] [ID 43226]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
