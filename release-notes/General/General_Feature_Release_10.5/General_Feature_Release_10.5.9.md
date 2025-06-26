@@ -77,6 +77,16 @@ Example:
 > [!NOTE]
 > When the source DMA is no longer available or unknown, the information event will be shortened to `Swarmed to <DmaName> (<DmaId>) by <UserName>`.
 
+#### DataMiner upgrade: CloudGateway DxM now included in DataMiner upgrade packages [ID 43205]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+From now on, the CloudGateway DxM will be included in DataMiner upgrade packages. However, the DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
+
+Current version: DataMiner CloudGateway 2.17.7
+
+For detailed information about the changes included in this version, refer to the [Cloud Gateway release notes](xref:cloudgateway_change_log).
+
 ### Fixes
 
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
