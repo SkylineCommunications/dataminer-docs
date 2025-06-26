@@ -91,7 +91,7 @@ Up to now, when an error occurred in the `OnInit` life cycle method, the `OnDest
 
 From now on, when something goes wrong during the `OnInit` life cycle method, the `OnDestroy` life cycle method will no longer be called.
 
-#### DxMs upgraded [ID 43202]
+#### DxMs upgraded [ID 43202] [ID 43240]
 
 <!-- MR 10.6.0 - FR 10.5.8 -->
 
@@ -100,7 +100,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner ArtifactDeployer 1.8.4
 - DataMiner CoreGateway 2.14.13
 - DataMiner FieldControl 2.11.3
-- DataMiner Orchestrator 1.7.6
+- DataMiner Orchestrator 1.7.5
 - DataMiner SupportAssistant 1.7.4
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
