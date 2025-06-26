@@ -6,6 +6,8 @@ uid: Accessing_custom_apps
 
 The DataMiner Low-Code Apps are available on the DataMiner landing page. To access this page, browse to the IP or hostname of a DMA or to `https://[Your DMA]/root`, depending on your configuration.
 
+![DataMiner landing page](~/user-guide/images/DataMiner_Landing_Page.png)<br>*DataMiner landing page in DataMiner 10.5.8*
+
 You can then access any of the available low-code apps by clicking the relevant app icon, or [create a new low-code app](xref:Creating_custom_apps).
 
 From DataMiner 10.2.9/10.3.0 onwards, you can also access each of the published low-code apps from the apps pane in DataMiner Cube.<!-- RN 33944 -->
