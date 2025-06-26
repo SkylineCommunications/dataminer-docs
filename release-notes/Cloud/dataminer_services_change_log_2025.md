@@ -9,23 +9,21 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
-### 30 June 2025 - Fix - Catalog - Improved grid view rendering
+### 30 June 2025 - Fix - Catalog - Grid view rendered incorrectly
 
-The Catalog grid view on the browse page could use only 1 column if you switched from row view.
+On the browse page of the Catalog, if you switched from row view to grid view, it could occur that only one column was used.
 
-### 30 June 2025 - Fix - Improved sign in behaviour
+### 30 June 2025 - Fix - Authentication issues
 
-A user could end up in an infinite loading state in case of a incorrect processed authentication renew message.
+If an authentication renewal message was processed incorrectly, it could occur that a page kept loading infinitely. In addition, when a user tried to sign in while their local browser storage still had older authentication settings stored, an incorrect message "You are not authorized to access this page" could be shown.
 
-A user could see a incorrect "your are not authorized to access this page" error after signing in when browser local storage still had older auth configs stored.
+### 30 June 2025 - Fix - Catalog - Private label not rendered correctly in Firefox browser
 
-### 30 June 2025 - Fix - Catalog - Improved private label rendering in Firefox browser
-
-The private label of a Catalog item was not rendered correctly when using Firefox, this has been fixed.
+If a private Catalog item was viewed using Firefox, it could occur that the private label was not rendered correctly.
 
 ### 30 June 2025 - Fix - Catalog - Incorrect deployment status shown
 
-When deploying a Catalog item, the status is shown in the header of the Catalog item. If you used the search and navigate to another item afterwards, the state of the previous visited Catalog item would be shown.
+When a Catalog item is deployed, the deployment status is shown in the header of the Catalog item. However, if you used the search and navigated to another item afterwards, it could occur that the state of the previous Catalog item continued to be shown.
 
 ### 24 June 2025 - Fix - Catalog - Failing connector deployment
 
