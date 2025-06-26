@@ -243,6 +243,12 @@ When you migrate data of data type *CustomData* from either Cassandra Single or 
 
 For example, if you want to migrate only the SLAnalytics data, you can now specify the *CustomData* data type as well as the *Analytics* data type.
 
+#### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250] [ID 43169]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
+
 #### SLAnalytics - Pattern matching: Multivariate pattern suggestion events will now be grouped into a single incident [ID 42274]
 
 <!-- MR 10.6.0 - FR 10.5.4 -->

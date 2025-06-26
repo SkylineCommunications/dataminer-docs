@@ -58,6 +58,12 @@ Possible values:
 
 ### Enhancements
 
+#### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250] [ID 43169]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
+
 #### Swarming: An information event will be generated when an element was successfully swarmed [ID 43196]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
