@@ -309,7 +309,7 @@ If you have already configured at least one other template for a component in th
 
   1. Under *Item templates*, click *Browse templates*.
 
-     A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question is applied.
+     A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question was applied.
 
   1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
 
@@ -317,11 +317,11 @@ If you have already configured at least one other template for a component in th
 
   1. Select the component and go to the *Layout* pane on the right.
 
-  1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to create a template for.
+  1. In the *Column appearance* section, click the downward arrow next to *Select a column* and select the column you want to assign a template to.
 
   1. Click the ellipsis button ("...") in the top-right corner and select *Browse templates*.
 
-     A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question is applied.
+     A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question was applied.
 
   1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
 
@@ -331,7 +331,7 @@ If you have already configured at least one other template for a component in th
 
   1. Under the *Layer settings* for a specific layer of the map, click *Browse templates* in the *Template* section.
 
-     A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question is applied.
+     A list of existing components and their templates is displayed, ordered by component type. A preview shows how the current component would look if the template in question was applied.
 
   1. Select a template from the list and click *Apply* in the lower right corner of the pop-up window.
 
