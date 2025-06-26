@@ -54,6 +54,12 @@ For more information on the `<Interactivity>` tag, see [Automation scripts: New 
 
 As the *Add/remove elements* user permission in *General > Views* allows users to also add or remove other items, including services, measurement points, service templates, redundancy groups, redundancy templates, etc., this user permission has now been renamed to *Add/remove items (elements, services, etc.)*.
 
+#### Edge/WebView2 browser engine now supports CTRL+F search functionality [ID 43241]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In DataMiner Cube, up to now, when the Microsoft Edge (WebView2) browser engine was used to display embedded webpages, it was not possible to enter CTRL+F in order to search for a particular text string. This has now been made possible.
+
 ### Fixes
 
 #### System Center - SNMP forwarding: 'Resend all active alarms every' option would incorrectly be set to 0 [ID 43206]
