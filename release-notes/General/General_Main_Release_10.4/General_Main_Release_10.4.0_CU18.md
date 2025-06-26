@@ -19,6 +19,12 @@ uid: General_Main_Release_10.4.0_CU18
 
 ### Fixes
 
+#### SLProtocol would leak memory when an element was restarted [ID 42697]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
+
 #### DataMiner upgrade: Redirect tags in DMS.xml would incorrectly not be taken into account [ID 43172]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
