@@ -327,7 +327,7 @@ uid: QuestionsAndAnswers
 
 1. *Under which circumstances can `row=true` work and when not?*
 
-    `row=true` will work when the QAction triggers on a write column parameter, a read column parameter (in recent DataMiner versions), or a table parameter (for SNMP tables). It is useless on a QAction that does not trigger on table-related parameters.
+    `row=true` will work when the QAction triggers on a write column parameter, a read column parameter, or a table parameter (for SNMP tables). It is useless on a QAction that does not trigger on table-related parameters.
 
 1. *Is it OK to have an "After Startup" trigger to run a "Run Actions" action?*
 
