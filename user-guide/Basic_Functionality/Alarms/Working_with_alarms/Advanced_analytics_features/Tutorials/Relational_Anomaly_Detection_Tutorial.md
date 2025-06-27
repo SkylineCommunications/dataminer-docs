@@ -241,7 +241,8 @@ Using the RAD API, you can fully tailor the RAD functionality to your needs. For
 
    This script will create RAD groups for all DAB transmitters containing *STH* (short for Southampton) as part of their name.
 
-   Note that you can do similar actions even if the element names in your system do not include a location, if the location info is made available in element properties instead.
+   > [!TIP]
+   > This is only one possible example of how you can use the RAD API. If you would like to create your own script to create a custom advanced configuration, refer to [Working with the RAD API](xref:RAD_API).
 
 1. On the *Demo Control* page of the *RAD - Commtia LON 3* element, click *Add Degradation* .
 
