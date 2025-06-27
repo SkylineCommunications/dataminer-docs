@@ -95,11 +95,25 @@ For detailed information about the changes included in this version, refer to th
 
 When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
 
+#### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When, on a system running multiple SLScripting processes, a connector was modified, but its version was left untouched, in some cases, a number of SLScripting processes could incorrectly keep on using outdated QActions or helper libraries, resulting in exceptions like the following being thrown:
+
+`System.ArgumentException: Object of type 'Skyline.DataMiner.Scripting.ConcreteSLProtocolExt' cannot be converted to type 'Skyline.DataMiner.Scripting.SLProtocolExt'`
+
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 When a service created from a service template had a reservation ID defined, up to now, that reservation ID would incorrectly disappear when the service template was re-applied.
+
+#### Service replication would not work when a gRPC connection was being used [ID 43133]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, service replication would not work when a gRPC connection was being used.
 
 #### Problem with SLDMS when redundancy group properties were being updated [ID 43148]
 

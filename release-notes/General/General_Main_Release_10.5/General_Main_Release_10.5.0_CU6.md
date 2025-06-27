@@ -31,6 +31,12 @@ When you restarted an element that had previously been stopped, up to now, SLPro
 
 When a service created from a service template had a reservation ID defined, up to now, that reservation ID would incorrectly disappear when the service template was re-applied.
 
+#### Service replication would not work when a gRPC connection was being used [ID 43133]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, service replication would not work when a gRPC connection was being used.
+
 #### Problem with SLDMS when redundancy group properties were being updated [ID 43148]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
