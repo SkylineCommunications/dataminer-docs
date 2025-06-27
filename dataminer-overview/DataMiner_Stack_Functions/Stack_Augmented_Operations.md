@@ -4,7 +4,7 @@ uid: Stack_Augmented_Operations
 
 # Augmented Operations
 
-***Make the shift from reactive to proactive management.***
+***Make the shift from reactive to proactive management and ensure maximum uptime.***
 
 DataMiner Augmented Operations continuously and autonomously learn from your data, making DataMiner increasingly intelligent.
 

@@ -6,15 +6,9 @@ uid: Overview_Stack_Functions
 
 A **modular architecture** allows for customization of modules and the addition of new functionality as needed, without complex integrations or upgrades. This flexibility enables operators to build a platform that **meets their unique needs** and **expand it to support new services or technologies**.
 
-DataMiner functions are the **foundation of your data-driven operation**. They make it easy to create powerful solutions by **cherry-picking the building blocks you need**. Plus, their modular architecture lets you build **a scalable operation** and integrate with third-party applications and services. This gives you the flexibility to create better, faster, and cheaper solutions.
+The DataMiner stack functions are the **foundation of your data-driven operation**. They offer unparalleled flexibility and make it easy to create powerful solutions by allowing you to **cherry-pick the building blocks you need**. Plus, their modular architecture lets you build a **scalable** operation and integrate with third-party applications and services. This gives you the flexibility to create better, faster, and cheaper solutions.
 
-So, what exactly are those stack functions?
-
-![dataminer.services.categories](~/dataminer-overview/images/Stack_Functions.png)
-
-The DataMiner stack functions, represented as a "modular toolbox" in the illustration above, offer **unparalleled flexibility**, allowing you to **cherry-pick** the ideal combination for your ICT workflows and build highly automated operations, **empowering your business** to thrive in the digital age. These functions serve as your **building blocks for digital transformation**, enabling you to create the perfect solution for your challenges.
-
-This **collection of functions** , which you can pick and choose according to your preference, is grouped in **several categories**, based on a **shared value**:
+The stack functions are grouped in **several categories**, based on a shared value:
 
 - The [**Orchestration**](xref:Stack_Orchestration) category offers powerful automation and orchestration functions, to maximize efficiency.
 
