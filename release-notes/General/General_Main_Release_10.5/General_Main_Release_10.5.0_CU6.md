@@ -27,7 +27,7 @@ When you restarted an element that had previously been stopped, up to now, SLPro
 
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When a service created from a service template had a reservation ID defined, up to now, that reservation ID would incorrectly disappear when the service template was re-applied.
 
