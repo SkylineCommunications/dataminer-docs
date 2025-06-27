@@ -78,6 +78,14 @@ In order to prevent any issues from occurring because of a *Resend all active al
 
 Up to now, when an error occurred while loading apps in the *Apps* pane, in some cases, Cube could stop working.
 
+#### Trending: Problem when the row index of a table column parameter contained trailing spaces [ID 43211]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When the trend key of a table column parameter was requested, an error would occur when the row index contained trailing spaces, especially when the key was used in a table filter like `VALUE=DK == xxx`.
+
+In order to prevent issues caused by trailing spaces in row indices, Cube will now use a `FULLFILTER=` filter instead of a `VALUE=` filter. A `FULLFILTER=` filter allows the row index to be passed within single quotes.
+
 #### Trending: Problem when clicking a pattern in a trend graph [ID 43228]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
