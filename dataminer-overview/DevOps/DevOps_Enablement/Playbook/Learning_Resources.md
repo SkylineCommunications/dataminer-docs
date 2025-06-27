@@ -35,4 +35,4 @@ On [DataMiner Dojo](https://community.dataminer.services/learning/courses/), you
 >   - [The latest and greatest of Visual Overview](https://community.dataminer.services/video/the-latest-and-greatest-of-visual-overview/)
 >   - [DataMiner Inspire - The New DataMiner Stencils & Style Guide](https://community.dataminer.services/video/dataminer-inspire-the-new-dataminer-stencils-style-guide/)
 >   - [Query any data using GQI](https://community.dataminer.services/video/query-any-data-using-gqi/)
->   - [How to do Column Manipulation with GQI](https://community.dataminer.services/video/how-to-do-column-manipulation-with-gqi/)
+>   - [How to do Column Manipulation with GQI](https://www.youtube.com/watch?v=5xBIlfQmLb0)

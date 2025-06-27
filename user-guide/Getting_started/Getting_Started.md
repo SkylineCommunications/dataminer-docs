@@ -62,6 +62,6 @@ description: Create a DataMiner System, and learn how to interact with DataMiner
     <a href="/user-guide/Reference/Reference.html" title="Reference" target="_self"><img src="~/user-guide/images/Docs_Reference.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="https://community.dataminer.services/videos/" title="Video Library" target="_self"><img src="~/user-guide/images/Docs_VideoLibrary.svg" style="width:100%"></a>
+    <a href="https://www.youtube.com/@SkylineCommu" title="Video collection" target="_self"><img src="~/user-guide/images/Docs_VideoLibrary.svg" style="width:100%"></a>
   </div>
 </div>

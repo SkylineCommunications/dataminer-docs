@@ -25,4 +25,4 @@ Some examples of where Resource Automation will be a perfect fit:
 - Tuning an IRD.
 
 > [!TIP]
-> See also: [Automatically configure your resources](https://community.dataminer.services/video/automatically-configure-your-resources/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Automatically configure your resources](https://www.youtube.com/watch?v=yEEE6dYsfoA) ![Video](~/user-guide/images/video_Duo.png)

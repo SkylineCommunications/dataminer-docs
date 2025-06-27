@@ -234,7 +234,7 @@ Restrictions:
 ## Online help and user assistance
 
 > [!TIP]
-> See also: [The Basics of DataMiner Automation Snippets](https://community.dataminer.services/video/the-basics-of-dataminer-automation-snippets/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [The Basics of DataMiner Automation Snippets](https://www.youtube.com/watch?v=i5_FLER_-tE) ![Video](~/user-guide/images/video_Duo.png)
 
 ### Sample snippets in shortcut menu
 

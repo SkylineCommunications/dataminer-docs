@@ -20,13 +20,13 @@ If you are just getting started with the DataMiner Object Models (DOM), this is 
 
 1. **Watch the introduction video**
 
-   Begin by watching the introduction video [Kata #15: Getting started with DataMiner Object Models](https://community.dataminer.services/video/kata-15-getting-started-with-dataminer-object-models/). 
+   Begin by watching the introduction video [Kata #15: Getting started with DataMiner Object Models](https://www.youtube.com/watch?v=c4RmylxOpfA).
 
    You can also find further details related to this in the tutorial [Getting started with DOM](xref:DOM_Getting_Started_With_DOM).
 
 1. **Watch the follow-up video**
 
-   Once you understand the basics, watch the follow-up video [Kata #24: Make a DOM module state-aware](https://community.dataminer.services/video/kata-24-make-a-dom-module-state-aware/).
+   Once you understand the basics, watch the follow-up video [Kata #24: Make a DOM module state-aware](https://www.youtube.com/watch?v=VyV28_xWGFI).
 
    For further details related to this, check the tutorial [Making DOM objects state-aware](xref:DOM_Making_DOM_Stateful).
 

@@ -23,4 +23,4 @@ Triggering the configuration is typically done during the pre-roll phase before 
 - Planning of resource utilization for resources that do not require any configuration, such as rooms, editing desks, IP addresses, or even staff.
 
 > [!TIP]
-> See also: [Schedule your resources and avoid resource conflicts](https://community.dataminer.services/video/how-to-schedule-your-resources-using-srm/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Schedule your resources and avoid resource conflicts](https://www.youtube.com/watch?v=BNK0RhlxwEc) ![Video](~/user-guide/images/video_Duo.png)

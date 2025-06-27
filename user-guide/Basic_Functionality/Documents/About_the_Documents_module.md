@@ -28,4 +28,4 @@ The following information can be stored with the app:
 - Hyperlinks to web pages
 
 > [!TIP]
-> See also: [Make the most of DataMiner Documents](https://community.dataminer.services/video/make-the-most-of-dataminer-documents/) ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Make the most of DataMiner Documents](https://www.youtube.com/watch?v=8XKpSk5fm3I) ![Video](~/user-guide/images/video_Duo.png)

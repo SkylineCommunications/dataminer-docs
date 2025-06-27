@@ -34,7 +34,7 @@ The AI-powered forecasting functionality automatically learns the behavior and e
 > - Course: [Trend prediction and proactive cap detection](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/trend-prediction-and-proactive-cap-detection/)
 > - [DataMiner Forecasting use case 1](https://community.dataminer.services/use-case/dataminer-forecasting-2/)
 > - [DataMiner Forecasting use case 2](https://community.dataminer.services/use-case/dataminer-forecasting-3/)
-> - Video: [Behold DataMiner AI Trend Forecasting](https://community.dataminer.services/video/behold-dataminer-ai-trend-forecasting/) ![Video](~/user-guide/images/video_Duo.png)
+> - Video: [Behold DataMiner AI Trend Forecasting](https://www.youtube.com/watch?v=OeE5sPKQ_Yg) ![Video](~/user-guide/images/video_Duo.png)
 > - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 
 ## Proactive Alarms
@@ -47,7 +47,7 @@ The proactive cap detection solution uses the Trend Prediction functionality to 
 > For more information:
 >
 > - Course: [Trend prediction and proactive cap detection](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/trend-prediction-and-proactive-cap-detection/)
-> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Proactive Cap Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
+> - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Proactive Cap Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
 
 ## Pattern Detection
@@ -64,7 +64,7 @@ Based on AI pattern matching algorithms, instances of tagged patterns are automa
 > - Course: [Pattern Matching](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/pattern-matching/)
 > - [DataMiner Automated Tagging use case 1](https://community.dataminer.services/use-case/dataminer-automatic-pattern-detection/)
 > - [DataMiner Automated Tagging use case 2](https://community.dataminer.services/use-case/automatic-tag-detection/)
-> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Automated Tagging, among others) ![Video](~/user-guide/images/video_Duo.png)
+> - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Automated Tagging, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - Blog post about [Pattern Matching in DataMiner 10.1](https://community.dataminer.services/pattern-matching-10-1-update/)
 > - Blog post about [Multivariate Pattern Matching](https://community.dataminer.services/using-the-power-of-multivariate-patterns-to-add-context-to-your-trend-graphs/)
 > - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
@@ -79,7 +79,7 @@ DataMiner’s change point detection solution automatically identifies both abru
 > [!TIP]
 > For more information:
 >
-> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Change Point Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
+> - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Change Point Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - Blog post about [Automatic Detection of Frozen States](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states)
 > - Blog post about [User Feedback on Behavioral Anomalies](https://community.dataminer.services/enhance-your-dataminer-experience-with-anomaly-feedback/).
 > - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
@@ -94,7 +94,7 @@ An anomaly significance scoring mechanism augments the change point detection so
 > For more information:
 >
 > - Course: [Behavioral Anomaly Detection](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/behavioral-anomaly-detection/)
-> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Anomaly Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
+> - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Anomaly Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
 > - [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
 > - [Kata #12: Automatically detect anomalies with DataMiner](https://community.dataminer.services/courses/kata-12/) ![Video](~/user-guide/images/video_Duo.png)
@@ -109,7 +109,7 @@ The Automatic Incident Tracking feature autonomously learns about system behavio
 > For more information:
 >
 > - Course: [Incident Tracking](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/incident-tracking/)
-> - Video: [Focus on the Root of Issues with Incident Analysis](https://community.dataminer.services/video/finding-the-root-of-problems-with-dataminer-incident-analysys/) ![Video](~/user-guide/images/video_Duo.png)
+> - Video: [Focus on the Root of Issues with Incident Analysis](https://www.youtube.com/watch?v=m6ITgtTFz1E) ![Video](~/user-guide/images/video_Duo.png)
 > - Blog post about [Automatic Incident Detection](https://community.dataminer.services/tweak-automatically-detected-incidents-with-dataminer-10-2-5/)
 > - [Automatic Incident Tracking](xref:Automatic_incident_tracking)
 
