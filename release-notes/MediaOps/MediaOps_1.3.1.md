@@ -70,6 +70,10 @@ To improve performance, the MediaOps Solution now requires the use of the [GQI D
 
 While actions are being executed in the Scheduling app, the icons that execute those actions (e.g. the pencil icon to open the edit job panel and the icons in the edit job panel) will now temporarily be disabled. This will prevent users from clicking action items multiple times while actions are still ongoing.
 
+#### Fit to view option now enabled for optimal screen usage
+
+On all main pages of the MediaOps apps, the *Fit to view* option has now been enabled, ensuring optimal usage of the available space on the screen. This way, tables and timeline components will be able to take up more space on screens with larger resolutions (e.g. 4K).
+
 ### Fixes
 
 #### Resource Studio: Downgrading resource concurrency could cause sync issue [ID 43031]
