@@ -195,7 +195,7 @@ Common properties:
 | ![Show layer](~/user-guide/images/Show_Layer-type.png) | Show [layer type] | Toggle the switch to determine whether the layer is visible in the final output. When disabled, the layer is visible (with lowered opacity) in the preview, but not in the end result. | All |
 | ![tooltip](~/user-guide/images/Tooltip.png) | Tooltip | Available from DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!--RN 42503-->. Configure a tooltip that appears when hovering over the layer. If multiple layers overlap, the tooltip of the topmost layer will be displayed. | All |
 | ![Configure actions](~/user-guide/images/ConfigureActions.png) | Configure actions | [Configure actions](xref:LowCodeApps_event_config) that are executed when a user clicks the layer. Only available for DataMiner Low-Code Apps<!--RN 34761-->. | All |
-| ![Color](~/user-guide/images/Templates_Color.png) | Color | Specify a custom color for the shape, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. The most recently used template colors and the theme colors are always displayed<!--RN 34876-->. | Icon, Rectangle, Ellipse |
+| ![Color](~/user-guide/images/Templates_Color.png) | Color | Specify a custom color for the shape, either by specifying the color in RGB format, by entering the hex value or HTML color name, or by using the color picker box. The most recently used template colors and the theme colors are always displayed<!--RN 34876-->. From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 43113-->, you can also manually type `currentColor` into the color box. This will automatically apply the font color of the component. | Icon, Rectangle, Ellipse |
 
 Layer-specific properties:
 
