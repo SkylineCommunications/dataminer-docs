@@ -100,6 +100,9 @@ For the SDK to be able to download the referenced items from the Catalog, config
       }
       ```
 
+> [!NOTE]
+> Alternatively, you can set the organization key as an environment variable instead of using user secrets. When using environment variables, use the format `skyline__sdk__dataminertoken` (with double underscores) instead of the user secrets format with colons.
+
 ## Executing additional code on installation
 
 Open the `$SCRIPTNAME$.cs` file to write custom installation code. Common actions include creating elements, services, or views.
@@ -144,6 +147,9 @@ By default, a project is created with support for publishing to the Catalog. You
         }
       }
       ```
+
+   > [!NOTE]
+   > Alternatively, you can set the organization key as an environment variable instead of using user secrets. When using environment variables, use the format `skyline__sdk__dataminertoken` (with double underscores) instead of the user secrets format with colons.
 
 1. Publish the package by right-clicking your project in Visual Studio and then selecting the *Publish* option.
 

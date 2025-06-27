@@ -17,13 +17,16 @@ This is a basic example for uploading non-connector items to the Catalog. Eventu
 
 For this example, you need a Visual Studio solution containing projects that are using [Skyline.DataMiner.SDK](xref:skyline_dataminer_sdk).
 
-You will also need *DATAMINER_TOKEN* as a secret. This will be the key for the **DataMiner organization** as provided through the [Admin app](xref:About_the_Admin_app).
+You will also need to configure your DataMiner organization key. This will be the key for the **DataMiner organization** as provided through the [Admin app](xref:About_the_Admin_app).
+
+> [!NOTE]
+> When using environment variables with the Skyline DataMiner SDK, use the format `skyline__sdk__dataminertoken` (with double underscores). This differs from the user secrets format which uses `skyline:sdk:dataminertoken` (with colons).
 
 ### Windows PowerShell
 
 ```powershell
-$env:DATAMINER_TOKEN = "MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
+$env:skyline__sdk__dataminertoken = "MyOrgKey"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
 ```
 
 ### Ubuntu terminal
@@ -54,8 +57,8 @@ You will need to restart your session or log out and back in before the next par
 Below, you can find the actual code for creation and deployment, assuming you have a Visual Studio solution with projects using Skyline.DataMiner.SDK.
 
 ```bash
-export DATAMINER_TOKEN="MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
+export skyline__sdk__dataminertoken="MyOrgKey"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
 ```
 
 ## Uploading and deploying connectors
