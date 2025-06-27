@@ -28,4 +28,4 @@ uid: Troubleshooting_Flowcharts
   - [Identify per module](xref:Troubleshooting_Identify_per_Module)
 
 > [!TIP]
-> See also: [Discover the DataMiner Live Flowchart Troubleshooting](https://community.dataminer.services/video/discover-the-dataminer-live-flowchart-troubleshooting/)
+> See also: [Discover the DataMiner Live Flowchart Troubleshooting](https://www.youtube.com/watch?v=vFiKIVF02ak)
