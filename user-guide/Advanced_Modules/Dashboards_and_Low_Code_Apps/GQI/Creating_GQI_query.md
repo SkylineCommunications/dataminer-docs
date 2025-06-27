@@ -7,7 +7,7 @@ uid: Creating_GQI_query
 The "Queries" data item allows you to construct a query in order to tap into the wealth of data available in your DataMiner System using the Generic Query Interface.
 
 > [!TIP]
-> See also: [Building Queries with DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/video/building-queries-with-dataminer-generic-query-interface-gqi/) ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Building Queries with DataMiner Generic Query Interface (GQI)](https://www.youtube.com/watch?v=S6U9xERPrL8) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Creating a query
 

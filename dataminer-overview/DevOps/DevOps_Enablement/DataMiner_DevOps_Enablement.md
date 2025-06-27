@@ -23,4 +23,4 @@ But even that doesn’t suffice. Building teams and an entire organization aroun
 > [!TIP]
 >
 > - Find out more about the [principles of DataMiner DevOps Enablement](xref:What_is_DataMiner_DevOps_Enablement) and its [connection to the DataMiner DevOps Professional Program](xref:DevOps_Enablement_and_the_DevOps_Professional_program).
-> - See also: [DataMiner DevOps Enablement Service package](https://community.dataminer.services/video/dataminer-devops-enablement-service-package/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - See also: [DataMiner DevOps Enablement Service package](https://www.youtube.com/watch?v=Dv-T-Tv1SaE) ![Video](~/user-guide/images/video_Duo.png)

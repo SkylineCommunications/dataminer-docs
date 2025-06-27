@@ -51,7 +51,7 @@ Our DataMiner Dojo community offers all the materials you need to work your way 
 
 - [DataMiner courses](https://community.dataminer.services/learning/courses/): Sharpen your DataMiner skills and learn about a variety of topics.
 - [DataMiner certification](https://community.dataminer.services/learning/certification/): Validate your knowledge through official certificates.
-- [Video library](https://community.dataminer.services/videos/): Get specialized tutorials and training.
+- [Video collection](https://www.youtube.com/@SkylineCommu): Get specialized tutorials and training.
 - [Development guide](https://docs.dataminer.services/develop/devguide/index.html): Read everything there is to know for developers.
 - [API documentation](https://docs.dataminer.services/develop/api/index.html): Interconnect DataMiner with your own ecosystem.
 - [UI/UEX documentation](https://community.dataminer.services/dataminer-devops-professionals-ui-uex/): Craft beautiful dashboards and purpose-built apps.

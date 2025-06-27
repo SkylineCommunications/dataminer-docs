@@ -13,4 +13,4 @@ If you choose the *Regexmatch* method, you will need to select a column and spec
 For both manipulation methods, you will also need to specify the name for the new column. When the column manipulation operation is fully configured, you can further fine-tune the result by applying another operator.
 
 > [!TIP]
-> See also: [How to do Column Manipulation with GQI](https://community.dataminer.services/video/how-to-do-column-manipulation-with-gqi/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [How to do Column Manipulation with GQI](https://www.youtube.com/watch?v=5xBIlfQmLb0) ![Video](~/user-guide/images/video_Duo.png)

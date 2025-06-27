@@ -20,4 +20,4 @@ The knowledge is served in bite-size topics:
 - Etc.
 
 > [!TIP]
-> For a complete overview, refer to [Videos](https://community.dataminer.services/videos/) on DataMiner Dojo.
+> For a complete overview, see our [video collection](https://www.youtube.com/@SkylineCommu).
