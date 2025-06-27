@@ -7,6 +7,7 @@ description: Learn how to create DataMiner connectors & Automation scripts, and 
 
 - [Connectors](xref:Introduction)
 - [Automation scripts](xref:AutomationDevGuideIndex)
+- [DataMiner feature integrations](xref:DataMinerFeatureIntegrations)
 - [Class Library](xref:ClassLibraryIntroduction)
 - [InterApp framework](xref:InterAppCalls_Introduction)
 - [Getting started as a System Developer](xref:GettingStartedAsSysDev)

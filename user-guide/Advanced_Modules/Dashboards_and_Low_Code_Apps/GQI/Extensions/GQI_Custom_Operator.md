@@ -6,14 +6,7 @@ uid: GQI_Custom_Operator
 
 ## About custom operators
 
-Out of the box, GQI offers basic operators for filtering, sorting, aggregating, etc. However, there could be many more operations that you may want to perform on your data. For these scenarios, you can define a custom operator, i.e. an operator that you fully define yourself to extend query functionality. This could for example be for any of the following purposes:
-
-- Adding, removing, and renaming columns
-- Transforming data by changing cell values, display values, and metadata
-- Filtering out rows based on custom conditions
-- Optimizing the behavior of downstream operators
-
-Each custom operator is defined in an **Automation script library** by a **C# class** that implements specific [interfaces](xref:CO_Building_blocks). Every time GQI needs to use the custom operator, it will create a new instance of that class and call the relevant [life cycle](xref:CO_Life_cycle) methods.
+Each custom operator for GQI is defined in an **Automation script library** by a **C# class** that implements specific [interfaces](xref:CO_Building_blocks). Every time GQI needs to use the custom operator, it will create a new instance of that class and call the relevant [life cycle](xref:CO_Life_cycle) methods.
 
 > [!NOTE]
 > When transforming data, the custom operator is **applied on row level**. This means a custom operator **cannot** be used to do any of the following:
