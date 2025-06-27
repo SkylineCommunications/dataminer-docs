@@ -205,7 +205,7 @@ Typically, you will monitor not just one single DAB transmitter but multiple, an
 
 1. In the header bar, click *Add Group*.
 
-1. In the *What to add?* dropdown bow at the top, select *Add group for each element with given connector*.
+1. In the *What to add?* box at the top, select *Add group for each element with given connector*.
 
 1. Set the *Group name prefix* to *DAB Fleet*.
 
@@ -219,30 +219,36 @@ Typically, you will monitor not just one single DAB transmitter but multiple, an
 
    This will create a group for each element with the selected connector. In this case, it will create groups for *RAD - Commtia LON 1*, *RAD - Commtia LON 2*, *RAD - Commtia LON 3*, and *RAD - Commtia STH 1*.
 
-1. Optionally, in Cube: click *Add Degradation* in the *Demo Control* page of the *RAD - Commtia STH 1* element to verify that DataMiner picks up on the relational anomaly. Leave the *RAD - Commtia LON 3* element alone for a later exercise.
+   ![The resulting groups](~/user-guide/images/tutorial_RAD_Resulting_groups.png)
+
+1. Optionally, test the new configuration in DataMiner Cube:
+
+   1. Go to the *Demo Control* page of the *RAD - Commtia STH 1* element and click *Add Degradation*.
+
+   1. Check the lightbulb icon in the Alarm Console to see if the relational anomaly was detected.
 
 ## Step 7: Configure RAD groups with the API via a script
 
-Using the RAD API, you can fully tailor the RAD functionality to your needs. For example, what if you would like to configure RAD to monitor your DAB transmitters, but only those in Southampton (because maybe a different team is responsible for those in London). Let us show you how to do this using the RAD API.
+Using the RAD API, you can fully tailor the RAD functionality to your needs. For example, you can configure RAD to monitor only the DAB transmitters in Southampton, for instance because a different team is responsible for those in London. In this step, you will learn how to do this using the RAD API.
 
-1. In the RAD Manager, remove all the groups you created in the previous step by selecting them and clicking the *Remove Group* button.
+1. In the RAD Manager, remove all the groups you created in the previous step like before.
 
-1. In Cube, open the *Automation App*.
+1. In the Cube sidebar, go to *Apps* > *Automation*.
 
-1. Select the *Don't touch my stuff* Automation script in the *Automation script > DataMiner Catalog > RAD Demonstrator* folder.
-
-   The script will create RAD groups for all DAB transmitters containing *STH* (short for Southampton) as part of their name.
-
-   If your naming conventions do not contain the location, you could add location info to the elements using element properties, manually or by using [IDP](xref:SolIDP).
+1. in the *Automation script > DataMiner Catalog > RAD Demonstrator* folder, select the *Don't touch my stuff* Automation script.
 
 1. Run the Automation script.
 
-1. In Cube, click *Add Degradation* in the *Demo Control* page of the *RAD - Commtia LON 3* element.
+   This script will create RAD groups for all DAB transmitters containing *STH* (short for Southampton) as part of their name.
 
-1. Notice that no new relational anomaly appears in the Alarm Console as the script only configured RAD for the DAB Transmitters situated in Southampton.
+   Note that you can do similar actions even if the element names in your system do not include a location, if the location info is made available in element properties instead.
+
+1. On the *Demo Control* page of the *RAD - Commtia LON 3* element, click *Add Degradation* .
+
+1. Check the Alarm Console: no new relational anomaly will appear, as the script only configured RAD for the DAB transmitters in Southampton.
 
 ## Step 8: Clean up your system
 
-1. In the RAD Manager, remove all the groups you created in the previous step by selecting them and clicking the *Remove Group* button.
+In the RAD Manager, remove all the groups you created in the previous step by selecting them and clicking the *Remove Group* button.
 
-1. In case you would like to repeat some of the exercises, you can duplicate the related elements or deploy the *RAD Demonstrator* catalog package a second time. It will overwrite the existing elements.
+In case you would like to repeat some of the exercises, you can duplicate the related elements or deploy the *RAD Demonstrator* package a second time, which will overwrite the existing elements.
