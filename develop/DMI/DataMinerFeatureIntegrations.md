@@ -1,11 +1,12 @@
 ---
-uid: DataMinerModuleIntegrations
+uid: DataMinerFeatureIntegrations
 ---
 
 # DataMiner feature integrations
 
 In this section:
 
-- [User-Defined APIs](xref:DMI_User-DefinedAPIs)
 - [EPM integration](xref:EpmIntegrationTrainingAbout)
+- [GQI extensions](xref:GQI_Extensions)
 - [Swarming](xref:SwarmingPrepare)
+- [User-Defined APIs](xref:DMI_User-DefinedAPIs)
