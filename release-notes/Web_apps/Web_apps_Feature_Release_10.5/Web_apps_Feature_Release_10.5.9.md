@@ -18,7 +18,30 @@ uid: Web_apps_Feature_Release_10.5.9
 
 ## New features
 
-*No new features have been added yet.*
+#### Low-Code Apps: Using script output in the post actions of a 'Launch a script' action [ID 43222]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+The output of an Automation script can now be used in the post actions of a *Launch a script* action.
+
+If a referenced key does not exist in the output, it will by default return an empty string.
+
+Actions will now be numbered hierarchically to allow easier referencing when linking output data. See the example below.
+
+- 1
+
+  - 1.1
+
+    - 1.1.1
+
+  - 1.2
+
+    - 1.2.1
+    - 1.2.2
+
+      - 1.2.2.1
+
+- 2
 
 ## Changes
 
