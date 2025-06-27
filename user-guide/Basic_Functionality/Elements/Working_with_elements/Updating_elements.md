@@ -25,6 +25,9 @@ If you want to update one element:
 
 1. Right-click an element in the Surveyor and click *Multiple set*.
 
+   > [!NOTE]
+   > If *Multiple set* is not visible in the Surveyor right-click menu, make sure the [*Enable 'Multiple set'* Cube user setting](xref:User_settings#cube-settings) is enabled<!--RN 43135-->.
+
 1. In the *Multiple set* dialog box, select the elements of which you want to update a particular parameter value.
 
    - By default, the list will contain all elements using the same protocol version as the element you right-clicked.
