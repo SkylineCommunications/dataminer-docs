@@ -33,7 +33,7 @@ When a service created from a service template had a reservation ID defined, up 
 
 #### Problem with SLDMS when redundancy group properties were being updated [ID 43148]
 
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some cases, an error could occur in SLDMS when redundancy group properties were being updated.
 
