@@ -24,7 +24,7 @@ The *IGQIOnInit* interface allows you to receive a notification via the `OnInit`
 Indicates that an instance of the class has been created.
 
 > [!TIP]
-> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle) or [custom operator](xref:CO_Life_cycle).
+> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle#oninit) or [custom operator](xref:CO_Life_cycle#oninit).
 
 #### Parameters
 

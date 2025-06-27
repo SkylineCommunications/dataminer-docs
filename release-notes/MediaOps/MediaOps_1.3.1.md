@@ -70,8 +70,16 @@ To improve performance, the MediaOps Solution now requires the use of the [GQI D
 
 While actions are being executed in the Scheduling app, the icons that execute those actions (e.g. the pencil icon to open the edit job panel and the icons in the edit job panel) will now temporarily be disabled. This will prevent users from clicking action items multiple times while actions are still ongoing.
 
+#### Fit to view option now enabled for optimal screen usage
+
+On all main pages of the MediaOps apps, the *Fit to view* option has now been enabled, ensuring optimal usage of the available space on the screen. This way, tables and timeline components will be able to take up more space on screens with larger resolutions (e.g. 4K).
+
 ### Fixes
 
 #### Resource Studio: Downgrading resource concurrency could cause sync issue [ID 43031]
 
 When the concurrency of a resource was downgraded, this could result in conflicts for future jobs or bookings, which could in turn cause an incorrect concurrency to be visualized in Resource Studio, because the concurrency could not be lowered in DataMiner. Now when changing the concurrency will cause a conflict, the user will be prompted to confirm whether to proceed and jobs or bookings may be pushed into quarantine as a result.
+
+#### Scheduling: Duplicating a job did not duplicate the node configurations [ID 43189]
+
+When a job was duplicated in the Scheduling app, the new job still used the same node configurations as the original job instead of a duplicate of the configurations.

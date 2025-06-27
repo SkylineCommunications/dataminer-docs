@@ -73,6 +73,19 @@ if (results.WasOnFilter("DropDownVariable"))
 > - While filtering the dropdown box entries, the script's logic is responsible for adding the currently selected entry (if relevant). Otherwise, the dropdown box will consider that value as incorrect and clear itself. Consider only filtering the display value of the entries (case-invariant if possible).
 > - Scripts using this feature should not include components of which the variable name (DestVar) contains "_FilterString". Otherwise, the identifier will not be unique.
 
+#### Low-Code Apps: Trigger component can now be controlled via actions [ID 43184]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+In a low-code app, a *Trigger* component can now be controlled via the following actions:
+
+| Action | Description |
+|--------|-------------|
+| Trigger  | This action will cause the trigger to go off.<br>When *Trigger timer* is enabled, the timer will not be affected. |
+| Pause    | When *Trigger timer* is enabled, this action will pause the timer.<br>In the phrase "was triggered X seconds ago", the elapsed time will keep on going. |
+| Continue | When *Trigger timer* is enabled and the timer is currently paused, this action will cause the timer to resume. |
+| Reset    | When *Trigger timer* is enabled, this action will resets the timer, keeping its paused/running state intact.<br>In the phrase "was triggered X seconds ago", the elapsed time will not be reset. |
+
 ## Changes
 
 ### Enhancements
@@ -86,6 +99,15 @@ From now on, the redesigned UI components used in interactive Automation scripts
 Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
 
 `?useNewIASInputComponents=true`
+
+#### DataMiner landing page: Redesigned header bar [ID 43024]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+The header bar of the DataMiner landing page (e.g. `https://myDMA/root/`) has been redesigned.
+
+- On the left, the DataMiner icon now also shows the URL of the landing page.
+- On the right, next to the user icon, you can now find a cogwheel icon. Clicking that icon will open the *System home settings* window, which contains a setting that allows you to show or hide draft applications.
 
 #### Dashboards app & Low-Code Apps: Automatically saved component settings will only get saved when in edit mode [ID 43029]
 
@@ -107,11 +129,33 @@ In all DataMiner web apps, the email address of Skyline support has been changed
 
 In the template editor, for all types of layers, the color picker now allow you to configure the current color, i.e. the font color of the component.
 
+#### Dashboards app & Low-Code Apps - Timeline component: Minor visual enhancements [ID 43129]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+A number of minor visual enhancements have been made to the *Timeline* component:
+
+- The timeline's segment lines have been made a bit less transparent, and should now stand out more. Also, the background shading of the timeline groups has been removed.
+
+- The template previews in the *Item Templates* section of the *Layout* pane will now scale to fit into the available screen real estate. Also, they will now better reflect the component color.
+
 #### Dashboards app & Low-Code Apps: Border roundness setting will now be set to 5px in the default component themes [ID 43146]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 In the default component themes, the border roundness setting will now be set to 5px.
+
+#### Dashboards app - Dashboard sharing: Message mentioning 'DataMiner Cloud Platform' now mentions 'dataminer.services' instead [ID 43163]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When you tried to share a dashboard while connected to a DataMiner Agent that was not cloud-connected, up to now, the message that appeared would incorrectly still mention the term "DataMiner Cloud Platform". In that message, that term has now been replaced by the term "dataminer.services".
+
+#### Low-Code Apps: 'Discard draft' pop-up window will no longer mention the word 'delete' [ID 43164]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+Up to now, when you clicked *Discard draft*, the pop-up window that appeared would incorrectly mention the word "delete". In that pop-up window, every mention of the word "delete" has now been replaced by the word "discard".
 
 ### Fixes
 
@@ -190,3 +234,25 @@ When a DOM module was added to a component, in some cases, that component would 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 In some cases, the *Fetch the data* action would incorrectly reuse a cached query session instead of opening a new one.
+
+#### Dashboards app & Low-Code Apps - State, Node edge graph, Maps & Grid components: Problem with initial selection of table data [ID 43155]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When a *State*, *Node edge graph*, *Maps* or *Grid* component was configured to visualize table data, the following issues could occur when the component was loaded:
+
+- Data selection instructions in the URL would not be applied.
+- If supported by the component, any option to select the first item by default would not be applied
+- The current selection would not be preserved when the data was refetched.
+
+From now on, whether the above-mentioned components are configured to visualize query data or table data, data selection will occur as follows:
+
+1. Apply the data selection instructions in the URL (if any).
+1. If no data selection instructions could be found in the URL, select the first item if such an option is supported and enabled.
+1. Preserve the current selection when the data is refetched.
+
+#### Dashboards app & Low-Code Apps - GQI: Problem when a query was refetched [ID 43195]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
+
+When a query was refetched immediately after the data had been loaded, in some cases, the dashboard or low-code app could become unresponsive.

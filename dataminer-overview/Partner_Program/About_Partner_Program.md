@@ -10,9 +10,13 @@ The moment you become our partner, you start receiving benefits.
 
 - Buy DataMiner Licenses, Usage-based Services, and Support Services at reduced rates
 
-- Access lower certification and training fees
+- Early access to roadmap discussions
 
 - Referrals
+
+- Updated go-to-market strategies
+
+- Access to tooling/partner portal
 
 ## Partner skill levels
 

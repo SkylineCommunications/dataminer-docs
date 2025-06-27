@@ -44,7 +44,7 @@ For example:
 
 ## Using the GQI DxM for queries
 
-By default, queries are executed using CoreGateway and SLHelper. To execute the queries using the [GQI DxM](xref:GQI_DxM), enable the following setting:
+By default, queries are executed using CoreGateway and SLHelper. To execute the queries using the [GQI DxM](xref:GQI_DxM), enable the following setting in *appsettings.custom.json* (see [GQI DxM configuration](xref:GQI_DxM#configuration)):
 
 ```json
 {

@@ -2,8 +2,7 @@ items:
 - name: DataMiner Overview
   topicUid: OverviewIndex
   items:
-    - name: General introduction
-      topicUid: Overview_General_Introduction
+    - name: Introduction
       items:
         - name: About Skyline Communications
           topicUid: Overview_About_Skyline
@@ -11,25 +10,18 @@ items:
           topicUid: Overview_About_DataMiner
         - name: DataMiner principal advantages
           topicUid: Overview_Principal_Advantages
+        - name: Digital transformation
+          topicUid: Digital_transformation
         - name: Standardized foundation
           topicUid: Overview_Standardized_Foundation
+        - name: Open software platform
+          topicUid: Overview_Platform_Open_Platform
         - name: References and use cases
           topicUid: Overview_References_and_use_cases
         - name: Compliance offering
           topicUid: DataMiner_compliance_offering
         - name: Evolution vs. optimization in software development
           topicUid: evolution_vs_optimization
-    - name: DataMiner platform - Empowering your digital transformation
-      topicUid: Overview_Platform_intro
-      items:
-        - name: Agility
-          topicUid: Overview_Platform_Agility
-        - name: Preparing for the new data-driven future
-          topicUid: Overview_Platform_Prepare
-        - name: DataMiner Digital Transformation Suite
-          topicUid: Overview_Platform_DTS_Suite
-        - name: Open software platform
-          topicUid: Overview_Platform_Open_Platform
     - name: DataMiner hosting and high availability
       topicUid: Overview_hosting
       items:
@@ -103,15 +95,15 @@ items:
         - name: DataMiner DevOps Professional Program
           topicUid: DataMiner_Devops_Professionals
           items:
-            - name: What is it?
+            - name: About the DevOps Professional Program
               topicUid: What_is_the_DevOps_Professionals_Program
-            - name: Benefits
+            - name: Benefits for members
               topicUid: Benefits_DevOps_Professionals_Program
             - name: Benefits for business and tech partners
               topicUid: Benefits_Business_and_Tech_Partners
             - name: Accumulating DevOps Points
               topicUid: DevOps_Points
-            - name: Required skill sets
+            - name: Expectations
               topicUid: Skill_Sets_DevOps_Professionals_Program
         - name: DataMiner DevOps Enablement Service
           topicUid: DataMiner_DevOps_Enablement
@@ -176,6 +168,8 @@ items:
         topicUid: Pricing_Usage_based_service
       - name: Perpetual-Use Licensing
         topicUid: Pricing_Perpetual_Use_Licensing
+      - name: Professional Service credits
+        topicUid: Professional_service_credits
       - name: Maximizing your azure investments with MACC and DataMiner credits
         topicUid: MACC_and_DataMiner_credits
     - name: Support Services
@@ -312,7 +306,7 @@ items:
           topicUid: FAQ_Copy_existing_connector
         - name: What if a second- or third-party DataMiner connector malfunctions
           topicUid: FAQ_2nd_3rd_party_connector_malfunctions
-      - name: Commercial models
+      - name: Pricing
         topicUid: FAQs_Pricing
       - name: Support Services
         topicUid: FAQs_Support_Services

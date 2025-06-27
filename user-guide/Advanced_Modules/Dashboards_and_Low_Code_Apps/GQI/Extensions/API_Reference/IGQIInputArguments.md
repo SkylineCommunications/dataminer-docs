@@ -18,7 +18,10 @@ Implement this interface to define input arguments for an ad hoc data source or 
 
 ### GQIArgument[] GetInputArguments()
 
-The GQI will request the arguments.
+Defines the input arguments for the extension instance that can be filled in when building a query.
+
+> [!TIP]
+> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle#getinputarguments) or [custom operator](xref:CO_Life_cycle#getinputarguments).
 
 #### Returns
 
@@ -26,7 +29,10 @@ An array of [GQIArgument](xref:GQI_GQIArgument), which provides all arguments th
 
 ### void OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
 
-GQI has processed the input arguments provided by the user.
+Applies the argument values of the input arguments that were provided in the query.
+
+> [!TIP]
+> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle#onargumentsprocessed) or [custom operator](xref:CO_Life_cycle#onargumentsprocessed).
 
 #### Parameters
 

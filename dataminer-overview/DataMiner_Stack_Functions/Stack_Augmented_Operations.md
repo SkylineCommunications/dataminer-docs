@@ -4,7 +4,7 @@ uid: Stack_Augmented_Operations
 
 # Augmented Operations
 
-**Make the shift from reactive to proactive management and ensure maximum uptime.**
+***Make the shift from reactive to proactive management and ensure maximum uptime.***
 
 DataMiner Augmented Operations continuously and autonomously learn from your data, making DataMiner increasingly intelligent.
 
@@ -137,6 +137,16 @@ Get insights based on learned relations between the numerous integrated metrics.
 > - Blog post about [The power of insights](https://community.dataminer.services/dataminer-10-3-gives-you-the-power-of-insights/)
 > - [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
 > - [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)
+
+## Relational anomaly detection
+
+The relational anomaly detection (RAD) feature allows you to configure specific parameter groups so you get alerted whenever the relations between those parameters change.
+
+> [!TIP]
+> For more information:
+>
+> - [Relational anomaly detection](xref:Relational_anomaly_detection)
+> - Tutorial: [Working with relational anomaly detection](xref:Relational_Anomaly_Detection_Tutorial)
 
 ## Visual cues for operators
 

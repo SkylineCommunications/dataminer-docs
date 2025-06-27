@@ -21,4 +21,4 @@ The *IGQIOnDestroy* interface can be implemented for an ad hoc data source or cu
 This method is invoked when the data source instance will no longer be used. It can be implemented to clean up or dispose of any resources the instance may hold.
 
 > [!TIP]
-> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle) or [custom operator](xref:CO_Life_cycle).
+> Learn more about when this method is called within an [ad hoc data source](xref:Ad_hoc_Life_cycle#ondestroy) or [custom operator](xref:CO_Life_cycle#ondestroy).
