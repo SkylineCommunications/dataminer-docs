@@ -9,7 +9,9 @@ uid: IpNetworkExplorer_Supported_Devices_And_Protocols
 The IP Network Explorer supports all equipment that can be monitored using the following protocols:
 
 - Arista Manager
+- Arista eOS Manager
 - Cisco Nexus
+- Cisco NxOS Manager
 - Cisco Manager
 
 ## Supported multicast routing protocols
