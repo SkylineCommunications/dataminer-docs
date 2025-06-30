@@ -20,14 +20,25 @@ For this example, you need a Visual Studio solution containing projects that are
 You will also need to configure your DataMiner organization key. This will be the key for the **DataMiner organization** as provided through the [Admin app](xref:About_the_Admin_app).
 
 > [!NOTE]
-> When using environment variables with the Skyline DataMiner SDK, use the format `skyline__sdk__dataminertoken` (with double underscores). This differs from the user secrets format which uses `skyline:sdk:dataminertoken` (with colons).
+> The Skyline DataMiner SDK supports two approaches for environment variables:
+> 1. **With explicit parameters**: You can use any environment variable name (e.g., `DATAMINER_TOKEN`) when specifying `-p:CatalogPublishKeyName="DATAMINER_TOKEN"`
+> 2. **Default behavior**: When you omit the `-p:CatalogPublishKeyName` parameter, the SDK automatically looks for `skyline__sdk__dataminertoken`
+> 
+> The examples below show the explicit parameter approach. For the default approach, see the notes at the end of each example.
 
 ### Windows PowerShell
 
 ```powershell
-$env:skyline__sdk__dataminertoken = "MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken" -p:CatalogDefaultDownloadKeyName="skyline__sdk__dataminertoken"
+$env:DATAMINER_TOKEN = "MyOrgKey"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
+
+> [!TIP]
+> **Alternative (default behavior)**: You can omit the `-p:CatalogPublishKeyName` and `-p:CatalogDefaultDownloadKeyName` parameters if you set the environment variable to `skyline__sdk__dataminertoken`:
+> ```powershell
+> $env:skyline__sdk__dataminertoken = "MyOrgKey"
+> dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
+> ```
 
 ### Ubuntu terminal
 
@@ -57,9 +68,16 @@ You will need to restart your session or log out and back in before the next par
 Below, you can find the actual code for creation and deployment, assuming you have a Visual Studio solution with projects using Skyline.DataMiner.SDK.
 
 ```bash
-export skyline__sdk__dataminertoken="MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken" -p:CatalogDefaultDownloadKeyName="skyline__sdk__dataminertoken"
+export DATAMINER_TOKEN="MyOrgKey"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
+
+> [!TIP]
+> **Alternative (default behavior)**: You can omit the `-p:CatalogPublishKeyName` and `-p:CatalogDefaultDownloadKeyName` parameters if you set the environment variable to `skyline__sdk__dataminertoken`:
+> ```bash
+> export skyline__sdk__dataminertoken="MyOrgKey"
+> dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
+> ```
 
 ## Uploading and deploying connectors
 
