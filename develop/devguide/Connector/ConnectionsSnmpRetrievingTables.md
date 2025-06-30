@@ -9,18 +9,26 @@ Tables in a MIB are structured as illustrated below. There is always a table fol
 
 ![MIB table structure](~/develop/images/iftable.png)
 
-In a protocol, a table is implemented using a parameter representing the table (of type "array") and additional parameters for each column in the table. Depending on the table retrieval method (discussed in Retrieval methods), SNMP tags need to be provided for the table parameter and/or the column parameters.
+In a protocol, a table is implemented using a parameter representing the table (of type "array") and additional parameters for each column in the table. By adding `<SNMP>` tags that include the appropriate `<OID>` definitions, the table and its columns are mapped to the corresponding SNMP table and column OIDs, enabling SNMP polling similar to polling single variables.
 
 ## Retrieval methods
 
-Multiple methods are available for retrieving tables via SNMP in a protocol. The following sections describe the different available methods:
+A protocol can retrieve SNMP tables using various methods. The preferred method is specified on the table parameter by setting the options attribute within the <OID> tag. Only one retrieval method can be configured per table. The following sections describe each available method:
 
-- GetNext
-- GetNext + MultipleGet
-- GetNext + MultipleGet by row
-- MultipleGetNext
-- MultipleGetBulk
-- Comparison
+* **[GetNext](#getnext):**
+  Fetches each cell individually using SNMP **GetNext** requests.
+
+* **[GetNext + MultipleGet](#getnext--multipleget):**
+  Uses **GetNext** requests to fetch the instance identifier of each row individually. Then, **Get** requests are used to fetch multiple cells at once, proceeding column by column, only moving to the next column when all cells have been fetched.
+
+* **[GetNext + MultipleGet by Row](#getnext--multipleget-by-row):**
+  Similar to the previous method, but proceeding row by row, only moving to the next row when all cells have been fetched.
+
+* **[MultipleGetNext](#multiplegetnext):**
+  Uses **GetNext** requests to fetch all column values for one row at a time.
+
+* **[MultipleGetBulk](#multiplegetbulk):**
+  Uses **GetBulk** requests to fetch all column values for multiple rows at a time.
 
 > [!NOTE]
 > The [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/) include the following [Wireshark](xref:Wireshark) captures to help understand the different retrieval methods:
@@ -34,204 +42,400 @@ Multiple methods are available for retrieving tables via SNMP in a protocol. The
 >
 > An example protocol "SLC SDF SNMP - Tables" is also available in the companion files.
 
+### Recommendation
+
+In general, the more messages required to retrieve a table, the longer the process will take. To optimize performance and compatibility, and to minimize the risk of [index shift issues](#index-shift-issues-during-polling), follow this guidance when selecting a retrieval method:
+
+* **Start with MultipleGetBulk**, as it typically offers the best performance.
+* If the device does **not support SNMPv2**, fall back to **MultipleGetNext**.
+* If the device cannot handle **MultipleGetNext** due to memory or processing limitations, try **GetNext + MultipleGet by Row**.
+* If issues persist, **reduce the number of cells to retrieve** to lessen the burden on the device.
+* Only use **GetNext + MultipleGet** if required by specific features.
+* Avoid using **GetNext** due to poor performance and because you cannot as freely select which columns to poll.
+
 ### GetNext
 
-Gets the table contents, retrieving one cell at a time.
+Fetches each cell individually using SNMP GetNext requests.
 
 ![GetNext execution](~/develop/images/Interfaces_Table_GetNext.png)
 
-Protocol implementation:
+With the **GetNext** method, you cannot explicitly select which columns to poll by specifying column OIDs. Only the table OID is used, and any OIDs defined on column parameters will be ignored. You can define a protocol table with fewer columns than exist in the SNMP table, but the columns must be defined in a continuous, ordered sequence starting from the first column. Skipping columns or defining them out of order is not supported. For example, if the SNMP table has eight columns, you may define only the first three, but you cannot define just the first and third columns while omitting the second.
 
-- **Table parameter:**
+> [!NOTE]
+> Since version 10.4.0 \[CU10\]/10.5.0 \[CU0\]/10.5.1, **GetNext** only retrieves the columns defined in your protocol table. In earlier versions, all columns were polled, but only defined columns were displayed.<!-- RN 41235 -->
 
-  Define an SNMP tag on the Array parameter, specifying the OID.
+#### Example
 
-  ```xml
-  <SNMP>
-      <Enabled>true</Enabled>
-      <OID type="complete">1.3.6.1.2.1.2.2</OID>
-  </SNMP>
-  ```
+```xml
+<Param id="1000">
+    <Name>Interfaces</Name>
+    <Description>Interfaces</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
+        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        ...
+    </ArrayOptions>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete">1.3.6.1.2.1.2.2</OID>
+    </SNMP>
+</Param>
+<Param id="1001" trending="false">
+    <Name>InterfacesIndex</Name>
+    <Description>Instance [IDX] (Interfaces)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+</Param>
+<Param id="1002" trending="false">
+    <Name>InterfacesName</Name>
+    <Description>Name (Interfaces)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+</Param>
+```
 
-- **Column parameter:**
+> [!IMPORTANT] When using the **GetNext** method, it is mandatory to specify the table OID on the table parameter. Do not specify OIDs on the column parameters, as these will be ignored.
 
-  Define column parameters for every column defined in the MIB for this table. Do not define SNMP tags for the column parameters.
-
-  > [!NOTE]
-  >
-  > - It is possible to define a table in the protocol that only contains the first columns. In the example above, the protocol table only defines column parameters for the first eight columns of the ifTable. Note, however, that once you include a column, all preceding columns must be included as well.
-  > - In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, all columns were retrieved from the Agent, even though these were not visualized.<!-- RN 41235 -->
-
-Capture observation:
+SNMP Communication Flow:
 
 - The initial request is an SNMP get next request with the OID of ifEntry (1.3.6.1.2.1.2.2.1). This returns the content of 1.3.6.1.2.1.2.2.1.1 (first row, first column).
 - In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, additional get next requests were performed until the OID in the response exceeds the table OID range. In versions 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 or above, get next requests are performed until the values of the defined column parameters are retrieved or, in case the number of defined columns exceeds the number of column values, until the table OID range is exceeded.
 
 ### GetNext + MultipleGet
 
-Gets the table contents, retrieving instances one by one, getting multiple values at once.
+Uses GetNext requests to fetch the index of each row individually. Then, Get requests are used to fetch multiple cells at once, proceeding column by column, only moving to the next column when all cells have been fetched. If the configured size is large enough, multiple columns (or part of the next column) can be included in a single request.
 
 ![GetNext + MultipleGet execution](~/develop/images/Interfaces_Table_GetNext_MultipleGet.png)
 
-Protocol implementation:
+To use this polling method, add `bulk` to the `options` attribute of the table parameter's `OID` tag. You can specify the number of cells to retrieve per request by adding a value after `bulk` (e.g., `bulk:10`). If no value is provided, the default is 50.
 
-- **Table parameter:**
+#### Example
 
-  Define an SNMP tag on the Array parameter (OID value in OID tag is optional).
-
-  ```xml
-  <SNMP>
-      <Enabled>true</Enabled>
-      <OID type="complete" options=";instance;bulk:3"></OID>
-  </SNMP>
-  ```
-
-- **Column parameter:**
-
-  Define an SNMP tag on the column parameters, specifying the OID.
-
-  ```xml
-  <SNMP>
-      <Enabled>true</Enabled>
-      <OID type="complete">1.3.6.1.2.1.2.2.1.2</OID>
-      <Type>octetstring</Type>
+```xml
+<Param id="1000">
+    <Name>Interfaces</Name>
+    <Description>Interfaces</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
+        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        ...
+    </ArrayOptions>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete" options=";bulk:3"></OID>
     </SNMP>
-  ```
+</Param>
+<Param id="1001" trending="false">
+    <Name>InterfacesIndex</Name>
+    <Description>Instance [IDX] (Interfaces)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete">1.3.6.1.2.1.2.2.1.1</OID>
+        <Type>Integer32</Type>
+    </SNMP>
+</Param>
+<Param id="1002" trending="false">
+    <Name>InterfacesName</Name>
+    <Description>Name (Interfaces)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete">1.3.6.1.2.1.2.2.1.2</OID>
+        <Type>octetstring</Type>
+    </SNMP>
+</Param>
+```
 
-  > [!NOTE]
-  >
-  > - Not all columns defined in the MIB table need to be defined in the protocol. With this approach, you can specify the columns that are of interest, so that only these columns will be retrieved.
-  > - By default, 50 cells are retrieved in one request. In order to change this, use the "bulk" option.
-  > - In case the optional OID is specified in the table parameter, be aware that GetNext requests will be executed using the OID defined on the table parameter until the OID of the next column is found. In other words, GetNext requests are performed on the first SNMP column in the device. From the GetNext responses, the values will be placed in the first column of the protocol table. The OID defined on the first column parameter will be ignored. This means that when the OID is specified on the table parameter, the first column defined in the protocol table should correspond with the first column in the SNMP table.
-
-Capture observation:
+SNMP Communication Flow:
 
 - Get next requests are performed to obtain the number of rows using the instance, starting with the OID of ifEntry (1.3.6.1.2.1.2.2.1). Once the number of rows is known, one or more get requests (with multiple variable bindings) are performed to obtain all the cells in the table.
 - Rows can disappear while the table is being retrieved. If this happens, the retrieved table can get mixed up because the data was retrieved block by block. If a row was deleted during a retrieval process, it is possible that, for example, the first block contains 5 rows, while the second block only contains 4 rows.
 
 ### GetNext + MultipleGet by Row
 
-It is also possible to retrieve the values by row instead of by column.<!-- RN 30780 --> This scheme will first poll the instances (if they have not been provided) and will then poll the data row by row.
+Uses GetNext requests to fetch the index of each row individually. Then, Get requests are used to fetch multiple cells at once, proceeding row by row, only moving to the next row when all cells have been fetched. If the configured size is large enough, multiple rows (or part of the next row) can be included in a single request.
 
-To use this alternative polling scheme, add `multipleGet` to the SNMP options of the SNMP table to be polled.
+To use this polling method, add `multipleGet` to the `options` attribute of the table parameter's `OID` tag. You can specify the number of cells to retrieve per request by adding a value after `multipleGet` (e.g., `multipleGet:10`). If no value is provided, the default is 10.
 
-- If you specify the "multipleGet" keyword without additional arguments, by default 10 rows will be polled in a single run. See the following example:
-  
-  ```xml
-  <SNMP>
-      <Enabled>true</Enabled>
-      <OID type="complete" options="instance;multipleGet">1.3.6.1.4.1.34086.2.2.17.5.1</OID>
-  </SNMP>
-  ```
-  
-- If you want to have a specific number of rows polled in a single run, you can specify the "multipleGet" keyword followed by a colon (`:`) and the number of rows to be polled in a single run. In the following example, 5 rows will be polled in a single run:
-  
-  ```xml
-  <SNMP>
-    <Enabled>true</Enabled>
-    <OID type="complete" options="instance;multipleGet:5">1.3.6.1.4.1.34086.2.2.17.5.1</OID>
-  </SNMP>
-  ```
+#### Example
 
-> [!NOTE]
->
-> - The multipleGet option cannot be used together with the multipleGetNext, multipleGetBulk and bulk options.
-> - The multipleGet keyword can be used together with options like Subtable.
-> - The notify protocol command [NT_GET_BITRATE_DELTA](xref:NT_GET_BITRATE_DELTA), which can be launched from within a QAction, can also retrieve the delta times per row when polling an SNMP table. This functionality also works in conjunction with this `multipleGet` option.
+```xml
+<Param id="1000">
+    <Name>Interfaces</Name>
+    <Description>Interfaces</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
+        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        ...
+    </ArrayOptions>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete" options=";multipleGet:3"></OID>
+    </SNMP>
+</Param>
+<Param id="1001" trending="false">
+    <Name>InterfacesIndex</Name>
+    <Description>Instance [IDX] (Interfaces)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete">1.3.6.1.2.1.2.2.1.1</OID>
+        <Type>Integer32</Type>
+    </SNMP>
+</Param>
+<Param id="1002" trending="false">
+    <Name>InterfacesName</Name>
+    <Description>Name (Interfaces)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete">1.3.6.1.2.1.2.2.1.2</OID>
+        <Type>octetstring</Type>
+    </SNMP>
+</Param>
+```
 
 ### MultipleGetNext
 
-Gets the table contents, retrieving rows one by one.
+Uses GetNext requests to fetch all column values for one row at a time.
 
 ![MultipleGetNext execution](~/develop/images/Interfaces_Table_MultipleGetNext.png)
 
-Protocol implementation:
+To use this polling method, add `multipleGetNext` to the `options` attribute of the table parameter's `OID` tag.
 
-- **Table parameter:**
+#### Example
 
-  Define an SNMP tag on the table parameter (OID value in OID tag is optional). Use the “multipleGetNext” option (options=";multipleGetNext").
+```xml
+<Param id="1000">
+    <Name>Interfaces</Name>
+    <Description>Interfaces</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
+        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        ...
+    </ArrayOptions>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete" options=";multipleGetNext"></OID>
+    </SNMP>
+</Param>
+<Param id="1001" trending="false">
+    <Name>InterfacesIndex</Name>
+    <Description>Instance [IDX] (Interfaces)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete">1.3.6.1.2.1.2.2.1.1</OID>
+        <Type>Integer32</Type>
+    </SNMP>
+</Param>
+<Param id="1002" trending="false">
+    <Name>InterfacesName</Name>
+    <Description>Name (Interfaces)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete">1.3.6.1.2.1.2.2.1.2</OID>
+        <Type>octetstring</Type>
+    </SNMP>
+</Param>
+```
 
-  ```xml
-  <SNMP>
-      <Enabled>true</Enabled>
-      <OID type="complete" options=";multipleGetNext"></OID>
-  </SNMP>
-  ```
-
-- **Column parameter:**
-
-  Define an SNMP tag on the column parameters, specifying the OID.
-
-  > [!NOTE]
-  > Not all columns defined in the MIB need to be defined in the protocol.
-
-Capture observation:
+SNMP Communication Flow:
 
 - Get next requests are performed (where the variable bindings in the request correspond with all the columns defined in the protocol table) until all rows are retrieved. One row is retrieved at a time.
 - Note that using this method no data will be missing.
 
 ### MultipleGetBulk
 
-Gets the table contents, retrieving multiple rows at once.
+Uses GetBulk requests to fetch all column values for multiple rows at a time.
 
 ![MultipleGetBulk execution](~/develop/images/Interfaces_Table_multipleGetBulk.png)
 
-Protocol implementation:
+To use this polling method, add `multipleGetBulk` to the `options` attribute of the table parameter's `OID` tag. You can specify the number of rows to retrieve per request by adding a value after `multipleGetBulk` (e.g., `multipleGetBulk:10`). If no value is provided, the default is 10.
 
-- **Table parameter:**
+#### Example
 
-  Define an SNMP tag on the Array parameter (OID value in OID tag is optional). Use the “multipleGetBulk” option (options=";multipleGetBulk").
-
-  ```xml
-  <SNMP>
-    <Enabled>true</Enabled>
-    <OID type="complete" options=";multipleGetBulk:10"></OID>
-  </SNMP>
-  ```
-
-- **Column parameter:**
-
-  Define an SNMP tag on the column parameters providing the OID.
-  
-  ```xml
-  <SNMP>
-    <Enabled>true</Enabled>
-    <OID type="complete">1.3.6.1.2.1.2.2.1.2</OID>
-    <Type>octetstring</Type>
-  </SNMP>
-  ```
-  
-  > [!NOTE]
-  > Not all columns defined in the MIB need to be defined in the protocol.
+```xml
+<Param id="1000">
+    <Name>Interfaces</Name>
+    <Description>Interfaces</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
+        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        ...
+    </ArrayOptions>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete" options=";multipleGetBulk:3"></OID>
+    </SNMP>
+</Param>
+<Param id="1001" trending="false">
+    <Name>InterfacesIndex</Name>
+    <Description>Instance [IDX] (Interfaces)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete">1.3.6.1.2.1.2.2.1.1</OID>
+        <Type>Integer32</Type>
+    </SNMP>
+</Param>
+<Param id="1002" trending="false">
+    <Name>InterfacesName</Name>
+    <Description>Name (Interfaces)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete">1.3.6.1.2.1.2.2.1.2</OID>
+        <Type>octetstring</Type>
+    </SNMP>
+</Param>
+```
 
 > [!NOTE]
 >
-> - The default number of rows that is retrieved in one request is 10.
-> - The number of rows to be retrieved in one request should be carefully chosen in order to reduce the risk of having an SNMP response that will be larger than the Path MTU of the path across the network traversed by the message. Messages with a large size are subject to fragmentation. Fragmentation is generally considered to be harmful, because it leads among others to a decrease in the reliability of the transfer of the messages. For a UDP packet inside a typical Ethernet frame, this typically means that the entire SNMP response should preferably stay below 1472 bytes (+8 bytes UDP header +20 bytes IPv4 header = 1500 bytes Ethernet payload). See also: [RFC 3416, chapter 2.3 Message Sizes](https://www.rfc-editor.org/rfc/rfc3416.html#section-2.3).
-> - The get bulk request was introduced in SNMPv2. Therefore, this method cannot be used for devices that only support SNMPv1.
+> - Choose the number of rows per request carefully to avoid SNMP responses that exceed the network Path MTU. Large responses may be fragmented, which can reduce reliability. For typical Ethernet networks, keep SNMP responses under 1472 bytes (plus 8 bytes for the UDP header and 20 bytes for the IPv4 header, totaling 1500 bytes). For more details, see [RFC 3416, section 2.3](https://www.rfc-editor.org/rfc/rfc3416.html#section-2.3).
+> - The GetBulk request is only available in SNMPv2 and later. This method is not supported on SNMPv1 devices.
 
-Capture observation:
+SNMP Communication Flow:
 
 - Get bulk requests are performed until all data is retrieved.
 - The max-repetitions field indicates how many rows will be retrieved per request. In DataMiner, you can define this field by specifying a number after the "multipleGetBulk" option. E.g multipleGetBulk:5.  
 
-### Comparison
+### Index Shift Issues During Polling
 
-|Method|Advantage|Disadvantage|
-|--- |--- |--- |
-|GetNext|Works on any device SNMPv1|Slow, requests 1 cell at a time|
-|GetNext+MultipleGetNext|Faster, for specific columns, Subtables, SNMPv1|If empty cells rest is incorrect, MultipleGet must be supported|
-|MultipleGetNext|Faster, for specific columns,SNMPv1|MultipleGet must be supported|
-|MultipleGetBulk|Faster, for specific columns|Needs SNMPv2,Not to be used with small tables,MultipleGet must be supported|
+SNMP table indexes are often based on sequential numbers (e.g., `1`, `2`, `3`, ...). When a row is added or removed from such a table, the indexes of subsequent rows will shift. If DataMiner is polling the table during this shift, and the polling method does **not retrieve an entire row in one operation**, it can result in inconsistent data retrieval. Parts of a row may be collected **before** the shift and others **after**, causing the final row in DataMiner to contain a **mix of values from two different rows**, leading to an incorrect representation of the data.
+
+To avoid this issue, prefer polling methods that retrieve complete rows in a single operation. Methods like **GetNext + MultipleGet by Row**, **MultipleGetNext**, and **MultipleGetBulk** are generally less prone to this issue.
+
+> [!NOTE]
+> Tables where the row indexes do **not** shift when rows are added or removed (e.g., tables with fixed or unique indexes) are **not affected** by this issue.
+
+> [!WARNING] Methods that fetch individual columns across multiple requests, such as **GetNext** or **GetNext + MultipleGet**, are **especially vulnerable** to this problem.
+
+## Instance Option
+
+In DataMiner, SNMP tables must have a single **primary key**, which is expected to be the **value of the first column**.
+
+However, some SNMP tables define **multiple index columns**, meaning the row instance identifier is composed of values from more than one column. Additionally, certain SNMP tables may define an index column from a **different table**. These tables have the same number of rows and maintain a **one-to-one relationship**.
+
+To correctly poll these types of tables, you must add the `instance` option to the table parameter. This instructs DataMiner write the full row instance identifier into the first column of the table.
+
+> [!IMPORTANT] Do **not** specify an OID for the first column when using the `instance` option. The value will be automatically generated and any configured OID will be ignored.
+
+### Example
+
+```xml
+<Param id="1000">
+    <Name>Table</Name>
+    <Description>Table</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
+        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+    </ArrayOptions>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete" options="instance;multipleGetNext"></OID>
+    </SNMP>
+</Param>
+<Param id="1001" trending="false">
+    <Name>TableInstance</Name>
+    <Description>Instance (Table)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+</Param>
+<Param id="1002" trending="false">
+    <Name>TableColumn1</Name>
+    <Description>Column 1 (Table)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete">1.3.6.1.2.1.2.2.1.2</OID>
+        <Type>octetstring</Type>
+    </SNMP>
+</Param>
+```
+
+![SNMP table using instance option](~/develop/images/Table_SNMP_instance_option.png)
+
+> [!CAUTION]
+> When using the `instance` option with **GetNext + MultipleGet** or **GetNext + MultipleGet by Row**, a known issue causes the instance identifier to be written into the **second column** of the table as well as the first.
+>
+> **Workaround:** Create a **dedicated column** to store the duplicate instance identifier. This column serves only as a workaround and can be hidden by setting `RTDisplay` to `false`.
+>
+> This extra column **must define an OID**. The actual value does not matter, but it is common to use the OID of the first column of the SNMP table.
+>
+> The reason for this requirement is that if any SNMP-type column (except the first when using `instance`) does **not** specify an OID, DataMiner will automatically fall back to using the **GetNext** method, since it is the only method that polls without column OIDs. This fallback can lead to unintended behavior and performance issues.
 
 ## Subtable
 
 A filtered set of rows can be retrieved using the [subtable](xref:Protocol.Params.Param.SNMP.OID-options#subtable) option (options=";subtable") on the SNMP.OID tag of a table parameter (i.e. a table of type "array"). Even though the result is a filtered set of rows, queries are sent to the device until the filter matches. DataMiner retrieves the instances of the table until the filtered data is retrieved. Only the filtered data will be displayed.
 
-The subtable option only works with the "GetNext+MultipleGet" method. Multiple filters can be used, separated by a comma. The filter is defined in the parameter referenced by the id attribute on the SNMP OID of the array.
-
-> [!NOTE]
-> Take care when using the subtable option in combination with the instance option: this will result is the instance being returned twice. Therefore, provide 2 columns instead of 1 for the instance. When you retrieve the table without the instance option, you need to create your first column twice, as otherwise the first column will be overwritten by the instance.
+The subtable option only works with the **GetNext + MultipleGet** and **GetNext + MultipleGet by Row** methods. Multiple filters can be used, separated by a comma. The filter is defined in the parameter referenced by the id attribute on the SNMP OID of the array.
 
 ## Filtered set of rows in table using dynamic OID
 
@@ -289,25 +493,3 @@ In the example below, table 1100 will retrieve a filtered set of rows for the co
 ...
 </Param>
 ```
-
-## Instance option
-
-Using the option "instance", the OIDs corresponding with the rows can be retrieved. This value will then be set to the first column defined in the table.
-
-```xml
-<SNMP>
-  <Enabled>true</Enabled>
-   <OID type="complete" options=";instance;multipleGetNext">1.3.6.1.2.1.2.2</OID>
-</SNMP>
-```
-
-![SNMP table using instance option](~/develop/images/Table_SNMP_instance_option.png)
-
-> [!NOTE]
-> In case the instance option is used with the GetNext + MultipleGet table retrieval method, the same remark applies in case the optional OID is specified on the table parameter:
->
-> GetNext requests will be executed using the OID defined on the table parameter until the OID of the next column is found. In other words, GetNext requests are performed on the first SNMP column in the device.
->
-> From the GetNext responses, the instances will be placed in the first column, the values will be placed in the second column. The OID defined on the second column parameter will be ignored.
->
-> This means that when the OID is specified on the table parameter, the first column defined in the protocol table should correspond with the first column in the SNMP table. The MultipleGet will be executed on the remaining items, starting on the OID defined on the third column parameter.
