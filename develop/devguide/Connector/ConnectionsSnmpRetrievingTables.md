@@ -103,7 +103,8 @@ With the **GetNext** method, you cannot explicitly select which columns to poll 
 </Param>
 ```
 
-> [!IMPORTANT] When using the **GetNext** method, it is mandatory to specify the table OID on the table parameter. Do not specify OIDs on the column parameters, as these will be ignored.
+> [!IMPORTANT]
+> When using the **GetNext** method, it is mandatory to specify the table OID on the table parameter. Do not specify OIDs on the column parameters, as these will be ignored.
 
 SNMP Communication Flow:
 
@@ -365,7 +366,8 @@ To avoid this issue, prefer polling methods that retrieve complete rows in a sin
 > [!NOTE]
 > Tables where the row indexes do **not** shift when rows are added or removed (e.g., tables with fixed or unique indexes) are **not affected** by this issue.
 
-> [!WARNING] Methods that fetch individual columns across multiple requests, such as **GetNext** or **GetNext + MultipleGet**, are **especially vulnerable** to this problem.
+> [!WARNING]
+> Methods that fetch individual columns across multiple requests, such as **GetNext** or **GetNext + MultipleGet**, are **especially vulnerable** to this problem.
 
 ## Instance Option
 
@@ -375,7 +377,8 @@ However, some SNMP tables define **multiple index columns**, meaning the row ins
 
 To correctly poll these types of tables, you must add the `instance` option to the table parameter. This instructs DataMiner write the full row instance identifier into the first column of the table.
 
-> [!IMPORTANT] Do **not** specify an OID for the first column when using the `instance` option. The value will be automatically generated and any configured OID will be ignored.
+> [!IMPORTANT]
+> Do **not** specify an OID for the first column when using the `instance` option. The value will be automatically generated and any configured OID will be ignored.
 
 ### Example
 
