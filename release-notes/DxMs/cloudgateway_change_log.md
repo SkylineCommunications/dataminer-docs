@@ -4,9 +4,9 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 30 June 2025 - Fix - CloudGateway 2.17.9 - Sharing dashboard failed on proxy setups
+#### 30 June 2025 - Fix - CloudGateway 2.17.9 - Problem with dashboard sharing in proxy setups
 
-An issue has been resolved that would occur when sharing a dashboard or trying to modify a shared dashboard when a proxy was configured. The error would state `Sharing dashboard failed. Error trapped: Something went wrong while fecthing the sharing URL.`.
+In proxy setups, sharing a dashboard or trying to modify a shared dashboard could result in the following error message: `Sharing dashboard failed. Error trapped: Something went wrong while fetching the sharing URL.` This issue has now been resolved.
 
 #### 24 June 2025 - Enhancement - CloudGateway 2.17.8 - Improved upgrade process
 
