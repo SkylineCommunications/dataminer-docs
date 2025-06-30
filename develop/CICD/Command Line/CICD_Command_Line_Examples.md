@@ -26,7 +26,7 @@ You will also need to configure your DataMiner organization key. This will be th
 
 ```powershell
 $env:skyline__sdk__dataminertoken = "MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken" -p:CatalogDefaultDownloadKeyName="skyline__sdk__dataminertoken"
 ```
 
 ### Ubuntu terminal
@@ -58,7 +58,7 @@ Below, you can find the actual code for creation and deployment, assuming you ha
 
 ```bash
 export skyline__sdk__dataminertoken="MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken" -p:CatalogDefaultDownloadKeyName="skyline__sdk__dataminertoken"
 ```
 
 ## Uploading and deploying connectors

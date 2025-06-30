@@ -31,7 +31,7 @@ By default, the following call is used to release every package in a solution to
 
 ```bash
 $env:skyline__sdk__dataminertoken = "MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken" -p:CatalogDefaultDownloadKeyName="skyline__sdk__dataminertoken"
 ```
 
 #### Call with filters
@@ -44,8 +44,8 @@ To instead release only specific packages, a call with [solution filter files](x
 ```bash
 $env:skyline__sdk__dataminertoken_A = "MyOrgAKey"
 $env:skyline__sdk__dataminertoken_B = "MyOrgBKey"
-dotnet publish PackagesForOrganizationA.slnf -p:Version="1.0.1" -p:VersionComment="Releasing 1.0.1 for A." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken_A"
-dotnet publish PackagesForOrganizationB.slnf -p:Version="2.0.1" -p:VersionComment="Releasing 2.0.1 for B." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken_B"
+dotnet publish PackagesForOrganizationA.slnf -p:Version="1.0.1" -p:VersionComment="Releasing 1.0.1 for A." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken_A" -p:CatalogDefaultDownloadKeyName="skyline__sdk__dataminertoken_A"
+dotnet publish PackagesForOrganizationB.slnf -p:Version="2.0.1" -p:VersionComment="Releasing 2.0.1 for B." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken_B" -p:CatalogDefaultDownloadKeyName="skyline__sdk__dataminertoken_B"
 ```
 
 ### Using GitHub reusable workflows
@@ -122,7 +122,7 @@ Default call that releases every package in a solution to the same organization 
 
 ```bash
 $env:skyline__sdk__dataminertoken = "MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken" -p:CatalogDefaultDownloadKeyName="skyline__sdk__dataminertoken"
 ```
 
 #### Call with different organization key
@@ -132,7 +132,7 @@ Call that releases every package in a solution to the same organization with the
 ```bash
 $env:skyline__sdk__dataminertoken = "MyOrgKey"
 $env:OVERRIDE_DATAMINER_TOKEN = "MyOtherOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogDefaultDownloadKeyName="OVERRIDE_DATAMINER_TOKEN"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="skyline__sdk__dataminertoken" -p:CatalogDefaultDownloadKeyName="OVERRIDE_DATAMINER_TOKEN"
 ```
 
 ### Using GitHub reusable workflows
