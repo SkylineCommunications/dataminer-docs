@@ -62,13 +62,15 @@ Each row in a query corresponds to an item in the grid.
 
 ## Using the grid as a selector
 
-You can use a grid component as a dynamic selector, i.e. a component whose selection determines behavior or data elsewhere in your dashboard or app. A common use case is controlling what is shown in another component, but selected values can also serve as input for scripts, queries, or conditional behavior.
+You can use a grid component as a dynamic selector, i.e. a component whose selection **determines behavior or data elsewhere in your dashboard or app**. A common use case is controlling what is shown in another component, but selected values can also serve as input for scripts, queries, or conditional behavior.
 
 When you select an item in the grid, the selected data (*All available data* > *Components* > *Grid #* > *Selected items* > *Tables*) becomes automatically available for use in other components.
 
 In the example below, a grid filters a table component based on job state. By selecting a grid item, users can quickly switch between active, upcoming, completed, or all jobs.
 
 ![Grid as a selector](~/user-guide/images/Grid_as_Selector.gif)<br>*Grid component and table component in DataMiner 10.5.7*
+
+To **clear the selection** in a grid, keep Ctrl pressed and click each selected item.
 
 ## Configuration options
 
