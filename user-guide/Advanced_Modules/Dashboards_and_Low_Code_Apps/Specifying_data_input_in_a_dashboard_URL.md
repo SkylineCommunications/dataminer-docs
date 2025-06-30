@@ -191,7 +191,7 @@ Within the dashboard or app URL, the following data objects can be specified:
 
 - *numbers*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35911 -->. Numbers, which will serve as the default value for a **numeric input** component. Note that prior to DataMiner 10.4.1<!-- RN 37752 -->, you can only specify a default value for all numeric input components, while in recent DataMiner versions you can specify data per component.
 
-- *object manager definitions*: Reference a specific DOM definition using the format: `object manager definitions=[Module]/[Definition]`. Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->.
+- *object manager definitions*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Allows referencing a specific DOM definition. Use the following format: `object manager definitions=[Module]/[Definition]`.
 
   - `[Module]`: the [DOM module name](xref:DOM_ModuleId).
 
@@ -199,7 +199,7 @@ Within the dashboard or app URL, the following data objects can be specified:
 
   For example: `?object manager definitions=Jobs/7a58af57-58d6-4027-8b55-40d5ba97c368`
 
-- *object manager instances*: Reference a specific DOM instance using the format: `object manager instances=[Module]/[Instance]`. Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->.
+- *object manager instances*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Allows referencing a specific DOM instance. Use the following format: `object manager instances=[Module]/[Instance]`.
 
   - `[Module]`: the [DOM module name](xref:DOM_ModuleId).
 
@@ -207,7 +207,7 @@ Within the dashboard or app URL, the following data objects can be specified:
 
   For example: `?object manager instances=Jobs/e91fe0cf-51e8-40f1-add4-f4752561890b`
 
-- *object manager modules*: Reference a specific DOM module using the format: `object manager modules=[Module]`. Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->.
+- *object manager modules*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Allows referencing a specific DOM module. Use the following format: `object manager modules=[Module]`.
 
   - `[Module]`: the [DOM module name](xref:DOM_ModuleId).
 
