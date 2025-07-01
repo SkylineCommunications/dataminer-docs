@@ -45,6 +45,12 @@ When `<Redirect via="..." />` tags were configured in the *DMS.xml* file, these 
 
 Although the upgrade would succeed in the background, no information regarding the remote agents would be available in DataMiner Cube or the DataMiner TaskBar Utility during the upgrade, and notices saying that `http://<ip>:8004/UpgradeService` was unavailable would be added to the logs.
 
+#### OpenSearch: Queries with a limit could cause scroll contexts to linger [ID 43191]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In OpenSearch, in some cases, queries with a limit could cause scroll contexts to linger. From now on, queries with a limit will be properly tracked and cleaned up.
+
 #### BrokerGateway would not be able to retrieve local IP addresses at start-up [ID 43209]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->

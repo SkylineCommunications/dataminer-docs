@@ -48,6 +48,14 @@ For more information on the `<Interactivity>` tag, see [Automation scripts: New 
 
 ### Enhancements
 
+#### System Center - Agents: 'Agent cluster' section no longer visible when selecting a DaaS system [ID 43110]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in the *Agents* section of *System Center*, you select a DaaS system, from now on, the *Agent cluster* section will no longer be visible. This means that you will not be able the click the *Join cluster* and *Leave cluster* buttons.
+
+Also, when there are any DaaS systems in the cluster to which you are connected, you will no longer be able to click the *Add* and *Remove* buttons.
+
 #### Security: User permission 'General > View > Add/remove elements' renamed to 'Add/remove items (elements, services, etc.)' [ID 43215]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
