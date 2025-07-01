@@ -25,6 +25,14 @@ uid: General_Main_Release_10.4.0_CU18
 
 When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
 
+#### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
+
+<!-- MR 10.4.0 [CU18] - FR 10.5.9 -->
+
+When, on a system running multiple SLScripting processes, a connector was modified, but its version was left untouched, in some cases, a number of SLScripting processes could incorrectly keep on using outdated QActions or helper libraries, resulting in exceptions like the following being thrown:
+
+`System.ArgumentException: Object of type 'Skyline.DataMiner.Scripting.ConcreteSLProtocolExt' cannot be converted to type 'Skyline.DataMiner.Scripting.SLProtocolExt'`
+
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
