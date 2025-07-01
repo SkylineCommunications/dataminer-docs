@@ -4,10 +4,17 @@ uid: Get_ad_hoc_data
 
 # Get ad hoc data
 
-Available from DataMiner 10.3.0/10.2.4 onwards. The *Get ad hoc data* data source retrieves external data based on an Automation script that is compiled as a library. The data can for example be retrieved from a CSV file, a MySQL database, or an API endpoint. If no such Automation script has been configured, this option is not available.
+When you create a GQI query, many built-in data sources are available to use. However, sometimes these are not enough. In that case, you can create an ad hoc data source to extend GQI with your own custom data source. Common scenarios include:
 
-> [!TIP]
-> See: [Ad hoc data sources](xref:GQI_Ad_hoc_data_sources)
+- Accessing data from external sources (database, CSV files, etc.)
+- Accessing data from DataMiner for which no built-in data source exists yet
+- Specialized performance optimizations (caching, data stitching, etc.)
+
+An ad hoc data source retrieves external data based on an Automation script that is compiled as a library. The data can for example be retrieved from a CSV file, a MySQL database, or an API endpoint. If no such Automation script has been configured, this option is not available.
+
+For more information on how you can create ad hoc data sources, see [Ad hoc data sources](xref:GQI_Ad_hoc_data_sources).
+
+This query data source is available from DataMiner 10.3.0/10.2.4 onwards.
 
 ## Updates
 
