@@ -45,11 +45,11 @@ When a service created from a service template had a reservation ID defined, up 
 
 Up to now, service replication would not work when a gRPC connection was being used.
 
-#### Problem with SLDMS when redundancy group properties were being updated [ID 43148]
+#### SLDMS and SLDataMiner could get into a deadlock when redundancy group properties were being updated [ID 43148]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In some cases, an error could occur in SLDMS when redundancy group properties were being updated.
+In some cases, SLDMS and SLDataMiner could get into a deadlock when redundancy group properties were being updated.
 
 #### DataMiner upgrade: Redirect tags in DMS.xml would incorrectly not be taken into account [ID 43172]
 
