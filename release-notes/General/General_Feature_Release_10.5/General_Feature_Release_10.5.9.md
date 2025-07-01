@@ -64,6 +64,14 @@ Possible values:
 
 In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
 
+#### OpenSearch: auto_expand_replicas with minimum 0 and maximum 2 [ID 43179]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+In OpenSearch, indexing will now use the `auto_expand_replicas` setting.
+
+If the database consists of a single node at the time of index creation, an index will be made that has no replicas (minimum number of replicas is set to 0). If, at a later stage, nodes are then added to or removed from the cluster, replicas will automatically be assigned up to a maximum of 2 (maximum number of replicas is set to 2).
+
 #### Swarming: An information event will be generated when an element was successfully swarmed [ID 43196]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->

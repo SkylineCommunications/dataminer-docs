@@ -347,6 +347,14 @@ By default, SLNet will now pass the following updated company information to cli
 - TechSupport web page: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
 - TechSupport email address: <support@dataminer.services>
 
+#### OpenSearch: auto_expand_replicas with minimum 0 and maximum 2 [ID 43179]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+In OpenSearch, indexing will now use the `auto_expand_replicas` setting.
+
+If the database consists of a single node at the time of index creation, an index will be made that has no replicas (minimum number of replicas is set to 0). If, at a later stage, nodes are then added to or removed from the cluster, replicas will automatically be assigned up to a maximum of 2 (maximum number of replicas is set to 2).
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
