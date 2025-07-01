@@ -6,58 +6,18 @@ uid: Available_visualizations
 
 Many visualizations are available in the Dashboards app and Low-Code Apps, in the categories listed below.
 
-### General
-
-<style>
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
- 
-/* Create five equal columns that sit next to each other */
-.column {
-  flex: 20%;
-  max-width: 20%;
-  padding: 0 11px;
-}
-</style>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Block.html" title="Block" target="_self"><img src="~/user-guide/images/Block.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Button.html" title="Button" target="_self"><img src="~/user-guide/images/Button.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/ButtonPanel.html" title="Button Panel" target="_self"><img src="~/user-guide/images/Button_Panel.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/DashboardForm.html" title="Form" target="_self"><img src="~/user-guide/images/Form.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Text.html" title="Text" target="_self"><img src="~/user-guide/images/Text.svg" style="width:100%"></a>
-  </div>  
-</div>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Image.html" title="Image" target="_self"><img src="~/user-guide/images/Image.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Icon.html" title="Icon" target="_self"><img src="~/user-guide/images/Icon.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Generic_map.html" title="Generic Map" target="_self"><img src="~/user-guide/images/Generic_Map.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Clock_digital.html" title="Clock" target="_self"><img src="~/user-guide/images/Clock.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Clock_analog.html" title="Clock (Analog)" target="_self"><img src="~/user-guide/images/Clock_Analog.svg" style="width:100%"></a>
-  </div>  
-</div>
+| Visualization | Description |
+|:--:|--|
+| ![Block](~/user-guide/images/Block.svg) | A [block](xref:DashboardBlock) is used as a divider between other components. |
+| ![Button](~/user-guide/images/Button.svg) | A [button](xref:DashboardButton) is an interactive element that can be used in a low-code app. |
+| ![Button panel](~/user-guide/images/Button_Panel.svg) | A [button panel](xref:DashboardButtonPanel) lets you replicate and control physical hardware buttons remotely. |
+| ![Form](~/user-guide/images/Form.svg) | A [form](xref:DashboardForm) allows users to view, enter, or update structured information in a clear layout. |
+| ![Text](~/user-guide/images/Text.svg) | A [text](xref:DashboardText) component displays a block of static text. |
+| ![Image](~/user-guide/images/Image.svg) | An [image](xref:DashboardImage) displays an uploaded image. |
+| ![Icon](~/user-guide/images/Icon.svg) | An [icon](xref:DashboardIcon) displays a symbol to help recognize or highlight something. |
+| ![Generic map](~/user-guide/images/Generic_Map.svg) | A [generic map](xref:DashboardGenericMap) visualizes real-time data from the DataMiner System on top of geographical maps provided by online map services. |
+| ![Clock](~/user-guide/images/Clock.svg) | |
+| ![Clock (Analog)](~/user-guide/images/Clock_Analog.svg) | |
 
 <div class="row">
   <div class="column">
