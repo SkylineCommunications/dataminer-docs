@@ -32,5 +32,5 @@ Contains the LDAP configuration. See [Configuring LDAP settings](xref:Configurin
 | --- | --- | --- |
 | All |  |  |
 | &#160;&#160;[Group](xref:DataMiner.LDAP.Group) | [0, 1] | Configures a group. |
-| &#160;&#160;[QueryTimeout](xref:DataMiner.LDAP.QueryTimeout) |  | Specifies the number of seconds after which an individual LDAP request will time out. Default: 300.|
+| &#160;&#160;[QueryTimeout](xref:DataMiner.LDAP.QueryTimeout) | [0, 1] | Specifies the number of seconds after which an individual LDAP request will time out. Default: 300.|
 | &#160;&#160;[User](xref:DataMiner.LDAP.User) | [0, 1] | Configures a user. |

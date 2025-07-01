@@ -3822,8 +3822,6 @@ items:
         topicUid: DataMiner-elementid
       - name: '@id'
         topicUid: DataMiner-id
-      - name: '@initializeRemoteServices'
-        topicUid: DataMiner-initializeRemoteServices
       - name: '@licenseNotice'
         topicUid: DataMiner-licenseNotice
       - name: '@protocolVisioLnk'
@@ -3843,6 +3841,21 @@ items:
         items:
         - name: '@port'
           topicUid: DataMiner.AlarmSocket-port
+      - name: AzureAD
+        topicUid: DataMiner.AzureAD
+        items:
+        - name: '@clientId'
+          topicUid: DataMiner.AzureAD-clientId
+        - name: '@clientSecret'
+          topicUid: DataMiner.AzureAD-clientSecret
+        - name: '@objectId'
+          topicUid: DataMiner.AzureAD-objectId
+        - name: '@password'
+          topicUid: DataMiner.AzureAD-password
+        - name: '@tenantId'
+          topicUid: DataMiner.AzureAD-tenantId
+        - name: '@username'
+          topicUid: DataMiner.AzureAD-username
       - name: ClearableAlarmStormProtection
         topicUid: DataMiner.ClearableAlarmStormProtection
         items:

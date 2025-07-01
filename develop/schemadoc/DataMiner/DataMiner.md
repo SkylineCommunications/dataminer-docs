@@ -13,7 +13,6 @@ Configures the DataMiner Agent.
 | [disableElementIP](xref:DataMiner-disableElementIP) | boolean |  | When set to “true”, after a restart of the DataMiner Agent, it will no longer be possible to assign a virtual IP address to an element. Moreover, the virtual IP addresses of all existing elements will be disabled. See [Forcing a DataMiner Agent to work without virtual IP addresses](xref:Forcing_a_DMA_to_work_without_virtual_IPs).|
 | [elementid](xref:DataMiner-elementid) | integer |  | Specifies the ID of the most recently added element. |
 | [id](xref:DataMiner-id) | integer | Yes | Specifies the DataMiner Agent ID. See [Changing the DataMiner ID of a DMA](xref:Changing_the_DMA_ID).|
-| [initializeRemoteServices](xref:DataMiner-initializeRemoteServices) | boolean |  |  |
 | [licenseNotice](xref:DataMiner-licenseNotice) | string |  | Automatically generated attribute. Contains information about which license notices have been generated for this DMA. |
 | [protocolVisioLnk](xref:DataMiner-protocolVisioLnk) | integer |  | When set to "1", this tag indicates that DataMiner has attempted to create all the Visio.lnk files that indicate the current Visio file for a protocol. This is used for troubleshooting purposes. |
 | [readElementData](xref:DataMiner-readElementData) | boolean |  | Automatically generated attribute, indicating that previously configured element data that was saved in DataMiner.xml has been moved to the element data database tables. |
@@ -28,6 +27,7 @@ Configures the DataMiner Agent.
 | --- | --- | --- |
 | All |  |  |
 | &#160;&#160;[AlarmSocket](xref:DataMiner.AlarmSocket) | [0, 1] | Specifies that alarm events should be forwarded via a particular TCP/IP socket. See [Configuring the TCP-IP socket settings](xref:Configuring_the_TCP-IP_socket_settings#configuring-the-tcp-ip-socket-settings).|
+| &#160;&#160;[AzureAD](xref:DataMiner.AzureAD) | [0, 1] | Specifies Microsoft Entra ID (formerly known as Azure AD) related settings. See [](xref:SAML_using_Entra_ID#configuring-dataminer-to-import-users-and-groups-from-microsoft-entra-id)|
 | &#160;&#160;[ClearableAlarmStormProtection](xref:DataMiner.ClearableAlarmStormProtection) | [0, 1] | Configures alarm storm protection for clearable alarms: |
 | &#160;&#160;[Colors](xref:DataMiner.Colors) | [0, 1] | Specifies the colors assigned to each of the alarm levels. See [Changing the default alarm colors](xref:Changing_the_default_alarm_colors).|
 | &#160;&#160;[Crowd](xref:DataMiner.Crowd) | [0, 1] | Configures the use of an Atlassian Crowd server. |
@@ -50,5 +50,5 @@ Configures the DataMiner Agent.
 | &#160;&#160;[SNMPv1](xref:DataMiner.SNMPv1) | [0, 1] | Configures SNMPv1 related settings. |
 | &#160;&#160;[SNMPv2](xref:DataMiner.SNMPv2) | [0, 1] | Configures SNMPv2c related settings. |
 | &#160;&#160;[SNMPv3](xref:DataMiner.SNMPv3) | [0, 1] | Configures SNMPv3 related settings. |
-| &#160;&#160;[Telnet](xref:DataMiner.Telnet) | [0, 1] | Obsolete. Configures Telnet. |
+| &#160;&#160;[Telnet](xref:DataMiner.Telnet) | [0, 1] | **Obsolete** Configures Telnet. |
 | &#160;&#160;[WarningThreshold](xref:DataMiner.WarningThreshold) | [0, 1] | Configures when messages are generated that indicate a DMA is approaching the limit of its element license. By default, warning messages are generated. |

@@ -27,7 +27,7 @@ Install DataMiner 10.3.0 [CU13], 10.4.0 [CU1], or 10.4.4<!--RN 39058-->.
 - SLDataMiner crashes when executing the scheduled task *Skyline DataMiner LDAP Resync* or when adding a group with a subgroup to a DataMiner System where the DataMiner.LDAP attribute "referralConfigured" is set to false.
 
   > [!TIP]
-  > See also: [DataMiner.LDAP attributes](xref:DataMiner_xml#dataminerldap-attributes)
+  > See also: [DataMiner.LDAP attributes](xref:DataMiner.LDAP)
 
 - The *ActiveDirectory.txt* logfile contains a query with an empty "name" field, similar to the following example:
 
