@@ -36,7 +36,7 @@ basic_upload_ubuntu:
     - git clone https://github.com/your-repo.git
     - cd your-repo
     - dotnet publish \
-        -p:Version="0.0.${{ github.run_number }}-prerelease" \
+        -p:Version="0.0.${CI_PIPELINE_IID}-prerelease" \
         -p:VersionComment="This is just a pre-release version." \
         -p:CatalogPublishKeyName="DATAMINER_TOKEN" \
         -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
