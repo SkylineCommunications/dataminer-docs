@@ -41,7 +41,7 @@ Important announcements about the latest changes to DataMiner core functionality
 |---------|---------|---------|---------|
 | Logger tables with autoincrement option | End of Support | See [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement). | End of Life to be confirmed. |
 | Query executor | End of Support | Tool is being retired. | End of Life to be confirmed. |
-| Use of JScript in QActions | End of Support | C# should be used instead. | End of Life to be confirmed |
+| Use of JScript in QActions | End of Support | C# should be used instead. JScript in QActions can not be used on Windows Server 2025. | End of Life to be confirmed |
 | Use of VBScript in QActions | End of Support | C# should be used instead. | End of Life to be confirmed |
 | Asset Manager | End of Engineering | Module is being retired. | End of Support as of DataMiner version 10.6.x (Q4 2025) |
 | Pivot table and Group components | End of Engineering | These components are being retired in the Dashboards app and Low-Code Apps. | End of Support as of DataMiner version 10.6.x (Q4 2025) |
