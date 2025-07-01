@@ -7,7 +7,10 @@ description: Learn how to create DataMiner connectors & Automation scripts, and 
 
 - [Connectors](xref:Introduction)
 - [Automation scripts](xref:AutomationDevGuideIndex)
-- [DataMiner feature integrations](xref:DataMinerFeatureIntegrations)
 - [Class Library](xref:ClassLibraryIntroduction)
+- [EPM integration](xref:EpmIntegrationTrainingAbout)
+- [GQI extensions](xref:GQI_Extensions)
 - [InterApp framework](xref:InterAppCalls_Introduction)
+- [Swarming](xref:SwarmingPrepare)
+- [User-Defined APIs](xref:DMI_User-DefinedAPIs)
 - [Getting started as a System Developer](xref:GettingStartedAsSysDev)

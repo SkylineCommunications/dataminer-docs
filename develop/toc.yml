@@ -893,6 +893,37 @@ items:
           topicUid: Investigating_slow_device_control_using_dotTrace
         - name: Protocol thread run-time errors - use cases
           topicUid: Protocol_thread_run_time_errors_use_cases
+  - name: Class Library
+    items:
+    - name: Class library introduction
+      topicUid: ClassLibraryIntroduction
+    - name: Class library development
+      topicUid: ClassLibraryDevelopment
+    - name: Class library versioning
+      topicUid: ClassLibraryVersioning
+    - name: Lazy loading
+      topicUid: ClassLibraryLazyLoading
+    - name: Element creation
+      topicUid: ClassLibraryElementCreation
+    - name: Monitors
+      topicUid: ClassLibraryMonitors
+      items:
+      - name: Requirements
+        topicUid: ClassLibraryMonitorsRequirements
+      - name: Getting started
+        topicUid: ClassLibraryMonitorsGettingStarted
+      - name: Cleanup rules
+        topicUid: ClassLibraryMonitorsCleanupRules
+      - name: Starting a started monitor
+        topicUid: ClassLibraryMonitorsStartingAStartedMonitor
+      - name: Stopping a stopped monitor
+        topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
+    - name: Scheduler
+      topicUid: Scheduler_NuGet_Package
+    - name: Obsolete namespaces
+      topicUid: Obsolete_namespaces
+    - name: Examples
+      topicUid:  ClassLibraryExamples
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
@@ -965,238 +996,191 @@ items:
         topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
-  - name: DataMiner feature integrations
-    topicUid: DataMinerFeatureIntegrations
+  - name: EPM integration
     items:
-      - name: EPM integration
+      - name: EPM Integration Training
+        topicUid: EpmIntegrationTrainingAbout
+      - name: Connectors configuration
         items:
-          - name: EPM Integration Training
-            topicUid: EpmIntegrationTrainingAbout
-          - name: Connectors configuration
-            items:
-            - name: General configuration EPM Manager connector
-              topicUid: EPMManagerGeneralConfiguration
-            - name: Topology configuration
-              topicUid: EPMManagerTopology
-            - name: Chains and fields configuration
-              topicUid: EPMManagerChainsAndFields
-            - name: Linking collector data to an EPM object
-              topicUid: EpmIntegrationLinkingCollectorData
-            - name: View impact configuration
-              topicUid: EpmIntegrationViewImpact
-            - name: Configuring buttons in table cells to open EPM objects
-              topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
-            - name: Aggregation and merge actions
-              topicUid: EpmIntegrationTrainingAggregations
-            - name: Alarm settings
-              topicUid: EPMManagerAlarms
-            - name: View tables
-              topicUid: EpmIntegrationTrainingViewTables
-          - name: Visual Overview configuration
-            items:
-              - name: Linking a shape to an EPM object
-                topicUid: LinkingShapeEpmObjectSystemNameType
-              - name: Filtering alarms based on system name and type
-                topicUid: FilteringAlarmsUsingSystemNameType
-              - name: Linking a shape to a filtered alarm tab
-                topicUid: AlarmConsoleNavigation
-              - name: Linking a shape to a dashboard or app
-                topicUid: DashboardAndAppsNavigation
-              - name: Best practices for retrieving remote parameters
-                topicUid: BestPracticesRemoteKpis
-              - name: Performing ping and tracert operations using DITT
-                topicUid: DITTIntegration
-          - name: Web apps configuration
-            items:
-              - name: EPM and Dashboards
-                topicUid: EpmIntegrationTrainingDashboards
-              - name: EPM and the Monitoring app
-                topicUid: EpmIntegrationTrainingMonitoring
-              - name: EPM and Low-Code Apps
-                topicUid: EpmIntegrationTrainingLowCodeApp
-          - name: Topology app configuration
-            topicUid: Topology_app_configuration
-          - name: Enhanced view configuration
-            topicUid: Enhanced_view_configuration
-          - name: Agent caching configuration
-            topicUid: EPMIntegration_Agent_cache_config
-          - name: DataMiner processes configuration
-            topicUid: EPM_DataMiner_processes_config
-      - name: GQI extensions
-        topicUid: GQI_Extensions
+        - name: General configuration EPM Manager connector
+          topicUid: EPMManagerGeneralConfiguration
+        - name: Topology configuration
+          topicUid: EPMManagerTopology
+        - name: Chains and fields configuration
+          topicUid: EPMManagerChainsAndFields
+        - name: Linking collector data to an EPM object
+          topicUid: EpmIntegrationLinkingCollectorData
+        - name: View impact configuration
+          topicUid: EpmIntegrationViewImpact
+        - name: Configuring buttons in table cells to open EPM objects
+          topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
+        - name: Aggregation and merge actions
+          topicUid: EpmIntegrationTrainingAggregations
+        - name: Alarm settings
+          topicUid: EPMManagerAlarms
+        - name: View tables
+          topicUid: EpmIntegrationTrainingViewTables
+      - name: Visual Overview configuration
         items:
-          - name: Ad hoc data sources
-            topicUid: GQI_Ad_hoc_data_sources
-            items:
-              - name: Building blocks
-                topicUid: Ad_hoc_Building_blocks
-              - name: Life cycle
-                topicUid: Ad_hoc_Life_cycle
-              - name: Linking rows to DataMiner objects
-                topicUid: Ad_hoc_Metadata
-              - name: Examples
-                items:
-                  - name: Forwarding dummy data to the GQI
-                    topicUid: Forwarding_dummy_data_to_GQI
-                  - name: Scaling an ad hoc data source
-                    topicUid: Scaling_Ad_hoc_Data_Source
-              - name: Tutorials
-                items:
-                  - name: Building a GQI data source that fetches satellites
-                    topicUid: Ad_hoc_Tutorials_Satellites
-                  - name: Building a GQI data source that retrieves data from a DMS
-                    topicUid: Ad_hoc_Tutorials_GQIDMS
-          - name: Custom operators
-            topicUid: GQI_Custom_Operator
-            items:
-              - name: Building blocks
-                topicUid: CO_Building_blocks
-              - name: Life cycle
-                topicUid: CO_Life_cycle
-              - name: Modifying links to DataMiner objects
-                topicUid: CO_Metadata
-              - name: Tutorials
-                items:
-                  - name: Creating a minus operator
-                    topicUid: Creating_Minus_Operator
-                  - name: Creating a duration operator
-                    topicUid: Creating_Duration_Operator
-                  - name: Optimizing your custom operator
-                    topicUid: Custom_Operator_Tutorial
-                  - name: Providing a custom sort order
-                    topicUid: GQI_Redirect_Sort_Tutorial
-          - name: API reference
-            items:
-              - name: GenIfRowMetadata
-                topicUid: GQI_GenIfRowMetadata
-              - name: GQIArgument
-                topicUid: GQI_GQIArgument
-              - name: GQICell
-                topicUid: GQI_GQICell
-              - name: GQIColumn
-                topicUid: GQI_GQIColumn
-              - name: GQIColumn<T>
-                topicUid: GQI_GQIColumnT
-              - name: GQIDMS
-                topicUid: GQI_GQIDMS
-              - name: GQIEditableHeader
-                topicUid: GQI_GQIEditableHeader
-              - name: GQIEditableRow
-                topicUid: GQI_GQIEditableRow
-              - name: GQILogLevel
-                topicUid: GQI_GQILogLevel
-              - name: GQIPage
-                topicUid: GQI_GQIPage
-              - name: GQIRow
-                topicUid: GQI_GQIRow
-              - name: GQISortDirection
-                topicUid: GQI_GQISortDirection
-              - name: IGQIColumn
-                topicUid: GQI_IGQIColumn
-              - name: IGQIColumnOperator
-                topicUid: GQI_IGQIColumnOperator
-              - name: IGQICoreBlock
-                topicUid: GQI_IGQICoreBlock
-              - name: IGQICoreDataSource
-                topicUid: GQI_IGQICoreDataSource
-              - name: IGQICoreOperator
-                topicUid: GQI_IGQICoreOperator
-              - name: IGQIDataSource
-                topicUid: GQI_IGQIDataSource
-              - name: IGQIDataSourceNode 
-                topicUid: GQI_IGQIDataSourceNode 
-              - name: IGQIFactory
-                topicUid: GQI_IGQIFactory
-              - name: IGQIFilterOperator
-                topicUid: GQI_IGQIFilterOperator
-              - name: IGQIInputArguments
-                topicUid: GQI_IGQIInputArguments
-              - name: IGQILogger
-                topicUid: GQI_IGQILogger
-              - name: IGQIOnDestroy
-                topicUid: GQI_IGQIOnDestroy
-              - name: IGQIOnInit
-                topicUid: GQI_IGQIOnInit
-              - name: IGQIOnPrepareFetch
-                topicUid: GQI_IGQIOnPrepareFetch
-              - name: IGQIOperator
-                topicUid: GQI_IGQIOperator
-              - name: IGQIOperatorNode
-                topicUid: GQI_IGQIOperatorNode
-              - name: IGQIOptimizableDataSource
-                topicUid: GQI_IGQIOptimizableDataSource
-              - name: IGQIOptimizableOperator
-                topicUid: GQI_IGQIOptimizableOperator
-              - name: IGQIQueryNode
-                topicUid: GQI_IGQIQueryNode
-              - name: IGQIRowOperator
-                topicUid: GQI_IGQIRowOperator
-              - name: IGQISortField
-                topicUid: GQI_IGQISortField
-              - name: IGQISortOperator
-                topicUid: GQI_IGQISortOperator
-              - name: IGQIUpdateable
-                topicUid: GQI_IGQIUpdateable
-              - name: IGQIUpdater
-                topicUid: GQI_IGQIUpdater
-              - name: ObjectRefMetadata
-                topicUid: GQI_ObjectRefMetadata
-              - name: OnArgumentsProcessedInputArgs
-                topicUid: GQI_OnArgumentsProcessedInputArgs
-              - name: OnInitInputArgs
-                topicUid: GQI_OnInitInputArgs
-              - name: RowMetadataBase
-                topicUid: GQI_RowMetadataBase
-              - name: TimeRangeMetadata
-                topicUid: GQI_TimeRangeMetadata
-          - name: Best practices
-            topicUid: GQI_Extensions_Best_Practices
-          - name: Logging
-            topicUid: GQI_Extensions_Logging
-      - name: Swarming
+          - name: Linking a shape to an EPM object
+            topicUid: LinkingShapeEpmObjectSystemNameType
+          - name: Filtering alarms based on system name and type
+            topicUid: FilteringAlarmsUsingSystemNameType
+          - name: Linking a shape to a filtered alarm tab
+            topicUid: AlarmConsoleNavigation
+          - name: Linking a shape to a dashboard or app
+            topicUid: DashboardAndAppsNavigation
+          - name: Best practices for retrieving remote parameters
+            topicUid: BestPracticesRemoteKpis
+          - name: Performing ping and tracert operations using DITT
+            topicUid: DITTIntegration
+      - name: Web apps configuration
         items:
-          - name: Preparing scripts and connectors for Swarming
-            topicUid: SwarmingPrepare
-          - name: Configuring a script to swarm elements
-            topicUid: SwarmingScriptElement
-          - name: Configuring a script to swarm bookings
-            topicUid: SwarmingScriptBooking
-      - name: User-Defined APIs
-        topicUid: DMI_User-DefinedAPIs
-        items:
-          - name: Bad and best practices
-            topicUid: UD_APIs_Bad_and_Best_Practices
-  - name: Class Library
+          - name: EPM and Dashboards
+            topicUid: EpmIntegrationTrainingDashboards
+          - name: EPM and the Monitoring app
+            topicUid: EpmIntegrationTrainingMonitoring
+          - name: EPM and Low-Code Apps
+            topicUid: EpmIntegrationTrainingLowCodeApp
+      - name: Topology app configuration
+        topicUid: Topology_app_configuration
+      - name: Enhanced view configuration
+        topicUid: Enhanced_view_configuration
+      - name: Agent caching configuration
+        topicUid: EPMIntegration_Agent_cache_config
+      - name: DataMiner processes configuration
+        topicUid: EPM_DataMiner_processes_config
+  - name: GQI extensions
+    topicUid: GQI_Extensions
     items:
-    - name: Class library introduction
-      topicUid: ClassLibraryIntroduction
-    - name: Class library development
-      topicUid: ClassLibraryDevelopment
-    - name: Class library versioning
-      topicUid: ClassLibraryVersioning
-    - name: Lazy loading
-      topicUid: ClassLibraryLazyLoading
-    - name: Element creation
-      topicUid: ClassLibraryElementCreation
-    - name: Monitors
-      topicUid: ClassLibraryMonitors
-      items:
-      - name: Requirements
-        topicUid: ClassLibraryMonitorsRequirements
-      - name: Getting started
-        topicUid: ClassLibraryMonitorsGettingStarted
-      - name: Cleanup rules
-        topicUid: ClassLibraryMonitorsCleanupRules
-      - name: Starting a started monitor
-        topicUid: ClassLibraryMonitorsStartingAStartedMonitor
-      - name: Stopping a stopped monitor
-        topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
-    - name: Scheduler
-      topicUid: Scheduler_NuGet_Package
-    - name: Obsolete namespaces
-      topicUid: Obsolete_namespaces
-    - name: Examples
-      topicUid:  ClassLibraryExamples
+      - name: Ad hoc data sources
+        topicUid: GQI_Ad_hoc_data_sources
+        items:
+          - name: Building blocks
+            topicUid: Ad_hoc_Building_blocks
+          - name: Life cycle
+            topicUid: Ad_hoc_Life_cycle
+          - name: Linking rows to DataMiner objects
+            topicUid: Ad_hoc_Metadata
+          - name: Examples
+            items:
+              - name: Forwarding dummy data to the GQI
+                topicUid: Forwarding_dummy_data_to_GQI
+              - name: Scaling an ad hoc data source
+                topicUid: Scaling_Ad_hoc_Data_Source
+          - name: Tutorials
+            items:
+              - name: Building a GQI data source that fetches satellites
+                topicUid: Ad_hoc_Tutorials_Satellites
+              - name: Building a GQI data source that retrieves data from a DMS
+                topicUid: Ad_hoc_Tutorials_GQIDMS
+      - name: Custom operators
+        topicUid: GQI_Custom_Operator
+        items:
+          - name: Building blocks
+            topicUid: CO_Building_blocks
+          - name: Life cycle
+            topicUid: CO_Life_cycle
+          - name: Modifying links to DataMiner objects
+            topicUid: CO_Metadata
+          - name: Tutorials
+            items:
+              - name: Creating a minus operator
+                topicUid: Creating_Minus_Operator
+              - name: Creating a duration operator
+                topicUid: Creating_Duration_Operator
+              - name: Optimizing your custom operator
+                topicUid: Custom_Operator_Tutorial
+              - name: Providing a custom sort order
+                topicUid: GQI_Redirect_Sort_Tutorial
+      - name: API reference
+        items:
+          - name: GenIfRowMetadata
+            topicUid: GQI_GenIfRowMetadata
+          - name: GQIArgument
+            topicUid: GQI_GQIArgument
+          - name: GQICell
+            topicUid: GQI_GQICell
+          - name: GQIColumn
+            topicUid: GQI_GQIColumn
+          - name: GQIColumn<T>
+            topicUid: GQI_GQIColumnT
+          - name: GQIDMS
+            topicUid: GQI_GQIDMS
+          - name: GQIEditableHeader
+            topicUid: GQI_GQIEditableHeader
+          - name: GQIEditableRow
+            topicUid: GQI_GQIEditableRow
+          - name: GQILogLevel
+            topicUid: GQI_GQILogLevel
+          - name: GQIPage
+            topicUid: GQI_GQIPage
+          - name: GQIRow
+            topicUid: GQI_GQIRow
+          - name: GQISortDirection
+            topicUid: GQI_GQISortDirection
+          - name: IGQIColumn
+            topicUid: GQI_IGQIColumn
+          - name: IGQIColumnOperator
+            topicUid: GQI_IGQIColumnOperator
+          - name: IGQICoreBlock
+            topicUid: GQI_IGQICoreBlock
+          - name: IGQICoreDataSource
+            topicUid: GQI_IGQICoreDataSource
+          - name: IGQICoreOperator
+            topicUid: GQI_IGQICoreOperator
+          - name: IGQIDataSource
+            topicUid: GQI_IGQIDataSource
+          - name: IGQIDataSourceNode 
+            topicUid: GQI_IGQIDataSourceNode 
+          - name: IGQIFactory
+            topicUid: GQI_IGQIFactory
+          - name: IGQIFilterOperator
+            topicUid: GQI_IGQIFilterOperator
+          - name: IGQIInputArguments
+            topicUid: GQI_IGQIInputArguments
+          - name: IGQILogger
+            topicUid: GQI_IGQILogger
+          - name: IGQIOnDestroy
+            topicUid: GQI_IGQIOnDestroy
+          - name: IGQIOnInit
+            topicUid: GQI_IGQIOnInit
+          - name: IGQIOnPrepareFetch
+            topicUid: GQI_IGQIOnPrepareFetch
+          - name: IGQIOperator
+            topicUid: GQI_IGQIOperator
+          - name: IGQIOperatorNode
+            topicUid: GQI_IGQIOperatorNode
+          - name: IGQIOptimizableDataSource
+            topicUid: GQI_IGQIOptimizableDataSource
+          - name: IGQIOptimizableOperator
+            topicUid: GQI_IGQIOptimizableOperator
+          - name: IGQIQueryNode
+            topicUid: GQI_IGQIQueryNode
+          - name: IGQIRowOperator
+            topicUid: GQI_IGQIRowOperator
+          - name: IGQISortField
+            topicUid: GQI_IGQISortField
+          - name: IGQISortOperator
+            topicUid: GQI_IGQISortOperator
+          - name: IGQIUpdateable
+            topicUid: GQI_IGQIUpdateable
+          - name: IGQIUpdater
+            topicUid: GQI_IGQIUpdater
+          - name: ObjectRefMetadata
+            topicUid: GQI_ObjectRefMetadata
+          - name: OnArgumentsProcessedInputArgs
+            topicUid: GQI_OnArgumentsProcessedInputArgs
+          - name: OnInitInputArgs
+            topicUid: GQI_OnInitInputArgs
+          - name: RowMetadataBase
+            topicUid: GQI_RowMetadataBase
+          - name: TimeRangeMetadata
+            topicUid: GQI_TimeRangeMetadata
+      - name: Best practices
+        topicUid: GQI_Extensions_Best_Practices
+      - name: Logging
+        topicUid: GQI_Extensions_Logging
   - name: InterApp framework
     items:
       - name: About the InterApp framework
@@ -1218,6 +1202,19 @@ items:
         topicUid: InterAppCalls_Customizations
       - name: Examples
         topicUid: InterAppCalls_Examples
+  - name: Swarming
+    items:
+      - name: Preparing scripts and connectors for Swarming
+        topicUid: SwarmingPrepare
+      - name: Configuring a script to swarm elements
+        topicUid: SwarmingScriptElement
+      - name: Configuring a script to swarm bookings
+        topicUid: SwarmingScriptBooking
+  - name: User-Defined APIs
+    topicUid: DMI_User-DefinedAPIs
+    items:
+      - name: Bad and best practices
+        topicUid: UD_APIs_Bad_and_Best_Practices
   - name: Getting started as a System Developer
     topicUid: GettingStartedAsSysDev
 - name: API documentation
