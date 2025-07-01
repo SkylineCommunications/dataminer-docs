@@ -89,12 +89,6 @@ For detailed information about the changes included in this version, refer to th
 
 ### Fixes
 
-#### SLProtocol would leak memory when an element was restarted [ID 42697]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
-
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
 
 <!-- MR 10.4.0 [CU18] - FR 10.5.9 -->
