@@ -122,3 +122,11 @@ In some cases, SLDMS and SLDataMiner could get into a deadlock when redundancy g
 When `<Redirect via="..." />` tags were configured in the *DMS.xml* file, these would incorrectly not be taken into account when an SLNet instance retrieved upgrade progress messages from another SLNet instance.
 
 Although the upgrade would succeed in the background, no information regarding the remote agents would be available in DataMiner Cube or the DataMiner TaskBar Utility during the upgrade, and notices saying that `http://<ip>:8004/UpgradeService` was unavailable would be added to the logs.
+
+#### BrokerGateway would not be able to retrieve local IP addresses at start-up [ID 43209]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+As BrokerGateway is started alongside the Microsoft Windows operating system, in some cases, it would not be able to retrieve the local IP addresses of the server.
+
+To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
