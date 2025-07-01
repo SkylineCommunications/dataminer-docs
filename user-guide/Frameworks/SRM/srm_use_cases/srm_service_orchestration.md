@@ -39,4 +39,4 @@ Typical uses of Service Orchestration include contribution and distribution netw
 While the DataMiner SRM stack is deployed on any DataMiner node by default at no additional cost, using Service Orchestration requires [SRM licenses](xref:Pricing_Perpetual_Use_Licensing#special-purpose-licenses).
 
 > [!TIP]
-> See also: [Enabling powerful orchestration of service workflows](https://community.dataminer.services/video/enabling-powerful-orchestration-of-service-workflows/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Enabling powerful orchestration of service workflows](https://www.youtube.com/watch?v=XBDk48hY300) ![Video](~/user-guide/images/video_Duo.png)

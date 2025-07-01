@@ -53,7 +53,7 @@ Make the candidates familiar with DataMiner Dojo Community
 
 - [Use case library](https://community.dataminer.services/use-cases/)
 
-- [Video library](https://community.dataminer.services/videos/)
+- [Video collection](https://www.youtube.com/@SkylineCommu)
 
 Ensure all candidates have enrolled in the [DataMiner DevOps Professional Program](https://community.dataminer.services/dataminer-devops-professional-program/) and address any questions they may have about it. Establish the frequency of check-in sessions with the group.
 

@@ -18,7 +18,30 @@ uid: Web_apps_Feature_Release_10.5.9
 
 ## New features
 
-*No new features have been added yet.*
+#### Low-Code Apps: Using script output in the post actions of a 'Launch a script' action [ID 43222]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+The output of an Automation script can now be used in the post actions of a *Launch a script* action.
+
+If a referenced key does not exist in the output, it will by default return an empty string.
+
+Actions will now be numbered hierarchically to allow easier referencing when linking output data. See the example below.
+
+- 1
+
+  - 1.1
+
+    - 1.1.1
+
+  - 1.2
+
+    - 1.2.1
+    - 1.2.2
+
+      - 1.2.2.1
+
+- 2
 
 ## Changes
 
@@ -44,3 +67,19 @@ The app sections on the DataMiner landing page (e.g. `https://myDMA/root/`) have
 When, in a *Timeline* component, you had grouped on multiple columns, only the labels of the bottom-level group would have a tooltip.
 
 From now on, all group labels will have a tooltip.
+
+#### Low-Code Apps: Actions on open panels would stop working when you switched from one page to another [ID 43256]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When you switched from one page to another, up to now, actions on open panels would stop working.
+
+#### Low-Code Apps - Interactive Automation script component: Input box values would not be updated correctly [ID 43282]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When the redesigned UI components were used in an Interactive Automation script component, in some cases, input box values would not be updated correctly, especially when a negative value was changed into a positive value.
+
+Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
+
+`?useNewIASInputComponents=true`

@@ -64,6 +64,14 @@ Possible values:
 
 In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
 
+#### OpenSearch: auto_expand_replicas with minimum 0 and maximum 2 [ID 43179]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+In OpenSearch, indexing will now use the `auto_expand_replicas` setting.
+
+If the database consists of a single node at the time of index creation, an index will be made that has no replicas (minimum number of replicas is set to 0). If, at a later stage, nodes are then added to or removed from the cluster, replicas will automatically be assigned up to a maximum of 2 (maximum number of replicas is set to 2).
+
 #### Swarming: An information event will be generated when an element was successfully swarmed [ID 43196]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -89,15 +97,9 @@ For detailed information about the changes included in this version, refer to th
 
 ### Fixes
 
-#### SLProtocol would leak memory when an element was restarted [ID 42697]
-
-<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
-
-When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
-
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
 
-<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU18] - FR 10.5.9 -->
 
 When, on a system running multiple SLScripting processes, a connector was modified, but its version was left untouched, in some cases, a number of SLScripting processes could incorrectly keep on using outdated QActions or helper libraries, resulting in exceptions like the following being thrown:
 
@@ -105,7 +107,7 @@ When, on a system running multiple SLScripting processes, a connector was modifi
 
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When a service created from a service template had a reservation ID defined, up to now, that reservation ID would incorrectly disappear when the service template was re-applied.
 
@@ -115,11 +117,11 @@ When a service created from a service template had a reservation ID defined, up 
 
 Up to now, service replication would not work when a gRPC connection was being used.
 
-#### Problem with SLDMS when redundancy group properties were being updated [ID 43148]
+#### SLDMS and SLDataMiner could get into a deadlock when redundancy group properties were being updated [ID 43148]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-In some cases, an error could occur in SLDMS when redundancy group properties were being updated.
+In some cases, SLDMS and SLDataMiner could get into a deadlock when redundancy group properties were being updated.
 
 #### DataMiner upgrade: Redirect tags in DMS.xml would incorrectly not be taken into account [ID 43172]
 
@@ -128,3 +130,24 @@ In some cases, an error could occur in SLDMS when redundancy group properties we
 When `<Redirect via="..." />` tags were configured in the *DMS.xml* file, these would incorrectly not be taken into account when an SLNet instance retrieved upgrade progress messages from another SLNet instance.
 
 Although the upgrade would succeed in the background, no information regarding the remote agents would be available in DataMiner Cube or the DataMiner TaskBar Utility during the upgrade, and notices saying that `http://<ip>:8004/UpgradeService` was unavailable would be added to the logs.
+
+#### OpenSearch: Queries with a limit could cause scroll contexts to linger [ID 43191]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In OpenSearch, in some cases, queries with a limit could cause scroll contexts to linger. From now on, queries with a limit will be properly tracked and cleaned up.
+
+#### BrokerGateway would not be able to retrieve local IP addresses at start-up [ID 43209]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+As BrokerGateway is started alongside the Microsoft Windows operating system, in some cases, it would not be able to retrieve the local IP addresses of the server.
+
+To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
+
+#### AnnounceHostingAgentEvent instances could linger around in the cache after a remote agent had reconnected [ID 43230]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+When a remote agent disconnected and later reconnected, in some cases, `AnnounceHostingAgentEvent` instances could linger around in the cache even though the event, element, service or redundancy group no longer existed on that remote agent.

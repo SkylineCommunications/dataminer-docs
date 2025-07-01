@@ -58,13 +58,17 @@ DataMiner features a system architecture geared towards converting data and cont
 
 - **Flexible and secure data and control consumption**: With DataMiner in place, you can empower your entire organization and far beyond with select data, comprehensive insights, and secure intuitive controls, leveraging the most optimal methods, including intuitive UIs, APIs, collaboration tools, AI agents, and much more.
 
-## Connecting the dots that drive success
+## The digital thread - connecting the dots that drive success
 
-Success in any organization depends on the ability to connect critical dots across every stage of operations — from understanding what resources are available and planning their use, to deploying them effectively, monitoring their performance, and turning insights into smarter decisions.
+Success in any organization depends on its ability to digitally connect critical dots across every stage of its operations. From understanding what resources are available and planning their use, to deploying them effectively, monitoring their performance, controlling them, and turning insights into smarter decisions moving forward. This applies to any organization, regardless of its nature.
 
-These steps are not isolated tasks: they are part of a continuous, interconnected flow. However, all too often they remain fragmented across silos, tools, and workflows. DataMiner bridges those gaps. It creates a seamless flow of information and actions, ensuring every stage feeds into the next with precision and clarity.
+> These steps are not isolated tasks. They must form a continuous, interconnected flow by design. This is the aorta that carries the lifeblood of your organization; a strategic digital thread running through every part of your operation.
 
-The result? Fewer blind spots, better decisions, and a more agile organization ready to adapt, optimize, and deliver results.
+However, in real life, these steps all too often remain fragmented across loosely coupled silos, tools, and workflows, despite their vital nature. And that's where DataMiner bridges the gaps. It creates a seamless flow of information and actions, ensuring every stage feeds into the next with precision and clarity.
+
+The result? Fewer blind spots, better decisions, and a more agile organization — ready to adapt, optimize, and deliver results.
+
+## The digital thread - the lifeblood of your operation
 
 Inventorying > Planning > Reserving > Scheduling > Designing > Deploying > Configuring > Validating > Controlling > Monitoring > Observing > Automating > Reporting > Analyzing > Optimizing > Forecasting
 
@@ -77,3 +81,17 @@ Often you want the freedom of "Do it yourself", but you know it inevitably comes
 - **Standard solutions**: With DataMiner, you can tap into an ever-growing abundance of standard out-of-the-box solutions, accelerating your journey. Benefit from out-of-the-box convenience, without compromising your freedom to innovate, to differentiate yourself, and to capitalize on every opportunity.
 
 - **Community power**: With DataMiner, you are not just adopting a leading platform or enjoying the backing from Skyline as a long-term strategic partner; you are also joining a vibrant, global community of innovators, experts, and forward-thinkers. Whether you are looking for inspiration, collaboration, or proven blueprints for success, the DataMiner community provides an invaluable foundation for accelerating your innovation and maximizing your outcomes.
+
+## Data and control are two sides of the same coin
+
+You have probably heard the phrase *"garbage in, garbage out."* No matter how advanced your tools are, the value you get depends entirely on your foundation: your data. And that comes down to how clean, accurate, structured, and contextualized it is.
+
+This becomes even clearer when you accept a simple truth: no tool or technology will give you a lasting competitive edge, because anyone can leverage them. What truly sets you apart is your data, and its quality determines how easily and efficiently you can turn it into real value.
+
+But the new world brings new challenges. As more of your ecosystem becomes virtualized and its dynamics evolve daily, it becomes harder to ensure your data is properly contextualized.
+
+Aligning data collection with your ecosystem's dynamics requires tight integration between control and collection processes. But in many cases, these still sit in separate silos and toolsets, leading to complex, costly integrations. And as ecosystems grow more dynamic, this challenge only escalates, quickly becoming unsustainable.
+
+> The only way forward is to deploy solutions that tightly integrate data collection and control by design, eliminating the need for complex, fragile integrations.
+
+That is exactly where DataMiner stands apart. It uniquely combines control and data collection into one unified solution, delivering high-quality, contextualized insights that naturally align with your ecosystem's evolving dynamics. And it all comes standard, by design.

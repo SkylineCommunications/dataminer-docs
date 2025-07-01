@@ -7,13 +7,7 @@ description: For an ad hoc data source, add a correctly configured script in the
 
 ## About ad hoc data sources
 
-When you create a GQI query, many built-in data sources are available to use. However, sometimes these are not enough. In that case, you can create an ad hoc data source to extend GQI with your own custom data source. Common scenarios include:
-
-- Accessing data from external sources (database, CSV files, etc.)
-- Accessing data from DataMiner for which no built-in data source exists yet
-- Specialized performance optimizations (caching, data stitching, etc.)
-
-Each data source is defined in an **Automation script library** by a **C# class** that implements specific [interfaces](xref:Ad_hoc_Building_blocks). Every time GQI requires information from the ad hoc data source, it will create a new instance of that class and call the relevant [life cycle](xref:Ad_hoc_Life_cycle) methods.
+Each ad hoc data source for GQI is defined in an **Automation script library** by a **C# class** that implements specific [interfaces](xref:Ad_hoc_Building_blocks). Every time GQI requires information from the ad hoc data source, it will create a new instance of that class and call the relevant [life cycle](xref:Ad_hoc_Life_cycle) methods.
 
 > [!IMPORTANT]
 > To reduce complexity and maintainability, only create an ad hoc data source if it is not possible to use the built-in data sources and operators for the purpose you have in mind.

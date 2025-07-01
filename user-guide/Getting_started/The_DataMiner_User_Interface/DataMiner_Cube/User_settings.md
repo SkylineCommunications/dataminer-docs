@@ -239,6 +239,8 @@ On the *Cube* page, the following settings are available:
   > [!TIP]
   > See also: [Alarm Console settings](xref:AlarmConsoleSettings)
 
+- **Enable 'Multiple set'**: Available from DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 43135-->. This setting determines whether users can open [the *Multiple set* window](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements) to update the same parameter on several elements at once. This dialog box can be accessed by selecting the *Multiple set* option from an element's right-click menu (e.g. in the surveyor) or by clicking a shape linked to a [MULTIPLE SET command](xref:Linking_a_shape_to_a_MULTIPLE_SET_command) in a visual overview. This setting is mainly intended to make it possible for administrators to restrict access to the *Multiple set* feature via the [user group settings](xref:Configuring_a_set_of_user_group_settings). By default, this setting is enabled.
+
 - **Show the news section**: Determines whether the optional news section is displayed on the DataMiner Pulse welcome page in Cube.
 
 - **Show the DataMiner TV section**: Obsolete. Determines whether the optional DataMiner TV section is displayed on the DataMiner Pulse welcome page in Cube. No longer available since DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1.

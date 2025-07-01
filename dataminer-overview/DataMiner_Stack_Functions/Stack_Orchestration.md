@@ -39,4 +39,4 @@ Each of the four DataMiner SRM use cases described above relies on a **combinati
 > - Various related content is also available on DataMiner Dojo:
 >   - [Free DataMiner Orchestration and Automation training](https://community.dataminer.services/learning/courses/orchestration-automation/)
 >   - SRM use cases with screenshots in the [use case library](https://community.dataminer.services/use-cases/?_sf_s=SRM)
->   - SRM videos in the [video library](https://community.dataminer.services/videos/?_sf_s=SRM) ![Video](~/user-guide/images/video_Duo.png)
+> - Various SRM-related videos are available in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=SRM) ![Video](~/user-guide/images/video_Duo.png)

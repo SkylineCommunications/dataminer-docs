@@ -21,4 +21,4 @@ Some examples:
 - Initial configuration of devices associated with an event.
 
 > [!TIP]
-> See also: [Learn to orchestrate an entire resource](https://community.dataminer.services/video/learn-to-orchestrate-an-entire-resource/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Learn to orchestrate an entire resource](https://www.youtube.com/watch?v=Lg75E8hrwxs) ![Video](~/user-guide/images/video_Duo.png)

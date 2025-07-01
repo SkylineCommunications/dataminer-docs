@@ -347,6 +347,14 @@ By default, SLNet will now pass the following updated company information to cli
 - TechSupport web page: [Contacting DataMiner Support](https://aka.dataminer.services/contacting-tech-support)
 - TechSupport email address: <support@dataminer.services>
 
+#### OpenSearch: auto_expand_replicas with minimum 0 and maximum 2 [ID 43179]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+In OpenSearch, indexing will now use the `auto_expand_replicas` setting.
+
+If the database consists of a single node at the time of index creation, an index will be made that has no replicas (minimum number of replicas is set to 0). If, at a later stage, nodes are then added to or removed from the cluster, replicas will automatically be assigned up to a maximum of 2 (maximum number of replicas is set to 2).
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
@@ -404,11 +412,3 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
-
-#### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
-
-<!-- MR 10.6.0 - FR 10.5.9 -->
-
-When, on a system running multiple SLScripting processes, a connector was modified, but its version was left untouched, in some cases, a number of SLScripting processes could incorrectly keep on using outdated QActions or helper libraries, resulting in exceptions like the following being thrown:
-
-`System.ArgumentException: Object of type 'Skyline.DataMiner.Scripting.ConcreteSLProtocolExt' cannot be converted to type 'Skyline.DataMiner.Scripting.SLProtocolExt'`
