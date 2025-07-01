@@ -893,37 +893,6 @@ items:
           topicUid: Investigating_slow_device_control_using_dotTrace
         - name: Protocol thread run-time errors - use cases
           topicUid: Protocol_thread_run_time_errors_use_cases
-  - name: Class Library
-    items:
-    - name: Class library introduction
-      topicUid: ClassLibraryIntroduction
-    - name: Class library development
-      topicUid: ClassLibraryDevelopment
-    - name: Class library versioning
-      topicUid: ClassLibraryVersioning
-    - name: Lazy loading
-      topicUid: ClassLibraryLazyLoading
-    - name: Element creation
-      topicUid: ClassLibraryElementCreation
-    - name: Monitors
-      topicUid: ClassLibraryMonitors
-      items:
-      - name: Requirements
-        topicUid: ClassLibraryMonitorsRequirements
-      - name: Getting started
-        topicUid: ClassLibraryMonitorsGettingStarted
-      - name: Cleanup rules
-        topicUid: ClassLibraryMonitorsCleanupRules
-      - name: Starting a started monitor
-        topicUid: ClassLibraryMonitorsStartingAStartedMonitor
-      - name: Stopping a stopped monitor
-        topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
-    - name: Scheduler
-      topicUid: Scheduler_NuGet_Package
-    - name: Obsolete namespaces
-      topicUid: Obsolete_namespaces
-    - name: Examples
-      topicUid:  ClassLibraryExamples
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
@@ -996,60 +965,6 @@ items:
         topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
-  - name: EPM integration
-    items:
-      - name: EPM Integration Training
-        topicUid: EpmIntegrationTrainingAbout
-      - name: Connectors configuration
-        items:
-        - name: General configuration EPM Manager connector
-          topicUid: EPMManagerGeneralConfiguration
-        - name: Topology configuration
-          topicUid: EPMManagerTopology
-        - name: Chains and fields configuration
-          topicUid: EPMManagerChainsAndFields
-        - name: Linking collector data to an EPM object
-          topicUid: EpmIntegrationLinkingCollectorData
-        - name: View impact configuration
-          topicUid: EpmIntegrationViewImpact
-        - name: Configuring buttons in table cells to open EPM objects
-          topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
-        - name: Aggregation and merge actions
-          topicUid: EpmIntegrationTrainingAggregations
-        - name: Alarm settings
-          topicUid: EPMManagerAlarms
-        - name: View tables
-          topicUid: EpmIntegrationTrainingViewTables
-      - name: Visual Overview configuration
-        items:
-          - name: Linking a shape to an EPM object
-            topicUid: LinkingShapeEpmObjectSystemNameType
-          - name: Filtering alarms based on system name and type
-            topicUid: FilteringAlarmsUsingSystemNameType
-          - name: Linking a shape to a filtered alarm tab
-            topicUid: AlarmConsoleNavigation
-          - name: Linking a shape to a dashboard or app
-            topicUid: DashboardAndAppsNavigation
-          - name: Best practices for retrieving remote parameters
-            topicUid: BestPracticesRemoteKpis
-          - name: Performing ping and tracert operations using DITT
-            topicUid: DITTIntegration
-      - name: Web apps configuration
-        items:
-          - name: EPM and Dashboards
-            topicUid: EpmIntegrationTrainingDashboards
-          - name: EPM and the Monitoring app
-            topicUid: EpmIntegrationTrainingMonitoring
-          - name: EPM and Low-Code Apps
-            topicUid: EpmIntegrationTrainingLowCodeApp
-      - name: Topology app configuration
-        topicUid: Topology_app_configuration
-      - name: Enhanced view configuration
-        topicUid: Enhanced_view_configuration
-      - name: Agent caching configuration
-        topicUid: EPMIntegration_Agent_cache_config
-      - name: DataMiner processes configuration
-        topicUid: EPM_DataMiner_processes_config
   - name: GQI extensions
     topicUid: GQI_Extensions
     items:
@@ -1181,6 +1096,42 @@ items:
         topicUid: GQI_Extensions_Best_Practices
       - name: Logging
         topicUid: GQI_Extensions_Logging
+  - name: User-Defined APIs
+    topicUid: DMI_User-DefinedAPIs
+    items:
+      - name: Bad and best practices
+        topicUid: UD_APIs_Bad_and_Best_Practices
+  - name: Class Library
+    items:
+    - name: Class library introduction
+      topicUid: ClassLibraryIntroduction
+    - name: Class library development
+      topicUid: ClassLibraryDevelopment
+    - name: Class library versioning
+      topicUid: ClassLibraryVersioning
+    - name: Lazy loading
+      topicUid: ClassLibraryLazyLoading
+    - name: Element creation
+      topicUid: ClassLibraryElementCreation
+    - name: Monitors
+      topicUid: ClassLibraryMonitors
+      items:
+      - name: Requirements
+        topicUid: ClassLibraryMonitorsRequirements
+      - name: Getting started
+        topicUid: ClassLibraryMonitorsGettingStarted
+      - name: Cleanup rules
+        topicUid: ClassLibraryMonitorsCleanupRules
+      - name: Starting a started monitor
+        topicUid: ClassLibraryMonitorsStartingAStartedMonitor
+      - name: Stopping a stopped monitor
+        topicUid: ClassLibraryMonitorsStoppingAStoppedMonitor
+    - name: Scheduler
+      topicUid: Scheduler_NuGet_Package
+    - name: Obsolete namespaces
+      topicUid: Obsolete_namespaces
+    - name: Examples
+      topicUid:  ClassLibraryExamples
   - name: InterApp framework
     items:
       - name: About the InterApp framework
@@ -1210,11 +1161,60 @@ items:
         topicUid: SwarmingScriptElement
       - name: Configuring a script to swarm bookings
         topicUid: SwarmingScriptBooking
-  - name: User-Defined APIs
-    topicUid: DMI_User-DefinedAPIs
+  - name: EPM integration
     items:
-      - name: Bad and best practices
-        topicUid: UD_APIs_Bad_and_Best_Practices
+      - name: EPM Integration Training
+        topicUid: EpmIntegrationTrainingAbout
+      - name: Connectors configuration
+        items:
+        - name: General configuration EPM Manager connector
+          topicUid: EPMManagerGeneralConfiguration
+        - name: Topology configuration
+          topicUid: EPMManagerTopology
+        - name: Chains and fields configuration
+          topicUid: EPMManagerChainsAndFields
+        - name: Linking collector data to an EPM object
+          topicUid: EpmIntegrationLinkingCollectorData
+        - name: View impact configuration
+          topicUid: EpmIntegrationViewImpact
+        - name: Configuring buttons in table cells to open EPM objects
+          topicUid: AdvancedEPMLaunchEPMObjectsTableCellButtons
+        - name: Aggregation and merge actions
+          topicUid: EpmIntegrationTrainingAggregations
+        - name: Alarm settings
+          topicUid: EPMManagerAlarms
+        - name: View tables
+          topicUid: EpmIntegrationTrainingViewTables
+      - name: Visual Overview configuration
+        items:
+          - name: Linking a shape to an EPM object
+            topicUid: LinkingShapeEpmObjectSystemNameType
+          - name: Filtering alarms based on system name and type
+            topicUid: FilteringAlarmsUsingSystemNameType
+          - name: Linking a shape to a filtered alarm tab
+            topicUid: AlarmConsoleNavigation
+          - name: Linking a shape to a dashboard or app
+            topicUid: DashboardAndAppsNavigation
+          - name: Best practices for retrieving remote parameters
+            topicUid: BestPracticesRemoteKpis
+          - name: Performing ping and tracert operations using DITT
+            topicUid: DITTIntegration
+      - name: Web apps configuration
+        items:
+          - name: EPM and Dashboards
+            topicUid: EpmIntegrationTrainingDashboards
+          - name: EPM and the Monitoring app
+            topicUid: EpmIntegrationTrainingMonitoring
+          - name: EPM and Low-Code Apps
+            topicUid: EpmIntegrationTrainingLowCodeApp
+      - name: Topology app configuration
+        topicUid: Topology_app_configuration
+      - name: Enhanced view configuration
+        topicUid: Enhanced_view_configuration
+      - name: Agent caching configuration
+        topicUid: EPMIntegration_Agent_cache_config
+      - name: DataMiner processes configuration
+        topicUid: EPM_DataMiner_processes_config
   - name: Getting started as a System Developer
     topicUid: GettingStartedAsSysDev
 - name: API documentation
