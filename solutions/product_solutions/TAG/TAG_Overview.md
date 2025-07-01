@@ -28,4 +28,4 @@ For more information about how to install the package, see [Installing the TAG M
 The TAG Management app contains three main pages containing information on the TAG devices. For more information about the user interface and the available functionalities, see [Using the Tag Management application](xref:How_to_TAG_App).
 
 > [!TIP]
-> See also: [Use case: TAG VS – Tech Partner Integration](https://community.dataminer.services/use-case/tag-vs-tag-management-app/).
+> See also: [Use case: TAG VS – TAG Management app](https://community.dataminer.services/use-case/tag-vs-tag-management-app/).
