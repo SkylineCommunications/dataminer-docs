@@ -18,10 +18,10 @@ A protocol can retrieve SNMP tables using various methods. The desired method is
 * **[GetNext](#getnext):**
   Fetches each cell individually using SNMP **GetNext** requests.
 
-* **[GetNext + MultipleGet](#getnext--multipleget):**
+* **[GetNext + MultipleGet (column-based)](#getnext--multipleget-column-based):**
   Uses **GetNext** requests to fetch the instance identifier of each row individually. Then, **Get** requests are used to fetch multiple cells at once, proceeding column by column, only moving to the next column when all cells have been fetched.
 
-* **[GetNext + MultipleGet by Row](#getnext--multipleget-by-row):**
+* **[GetNext + MultipleGet (row-based)](#getnext--multipleget-row-based):**
   Similar to the previous method, but proceeding row by row, only moving to the next row when all cells have been fetched.
 
 * **[MultipleGetNext](#multiplegetnext):**
@@ -48,9 +48,9 @@ In general, the more messages required to retrieve a table, the longer the proce
 
 * **Start with MultipleGetBulk**, as it typically offers the best performance.
 * If the device does **not support SNMPv2**, fall back to **MultipleGetNext**.
-* If the device cannot handle **MultipleGetNext** due to memory or processing limitations, try **GetNext + MultipleGet by Row**.
+* If the device cannot handle **MultipleGetNext** due to memory or processing limitations, try **GetNext + MultipleGet (row-based)**.
 * If issues persist, **reduce the number of cells to retrieve** to lessen the burden on the device.
-* Only use **GetNext + MultipleGet** if required by specific features.
+* Only use **GetNext + MultipleGet (column-based)** if required by specific features.
 * Avoid using **GetNext** due to poor performance and because you cannot as freely select which columns to poll.
 
 ### GetNext
@@ -111,11 +111,11 @@ SNMP Communication Flow:
 - The initial request is an SNMP get next request with the OID of ifEntry (1.3.6.1.2.1.2.2.1). This returns the content of 1.3.6.1.2.1.2.2.1.1 (first row, first column).
 - In versions prior to 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1, additional get next requests were performed until the OID in the response exceeds the table OID range. In versions 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 or above, get next requests are performed until the values of the defined column parameters are retrieved or, in case the number of defined columns exceeds the number of column values, until the table OID range is exceeded.
 
-### GetNext + MultipleGet
+### GetNext + MultipleGet (column-based)
 
 Uses GetNext requests to fetch the index of each row individually. Then, Get requests are used to fetch multiple cells at once, proceeding column by column, only moving to the next column when all cells have been fetched. If the configured size is large enough, multiple columns (or part of the next column) can be included in a single request.
 
-![GetNext + MultipleGet execution](~/develop/images/Interfaces_Table_GetNext_MultipleGet.png)
+![GetNext + MultipleGet (column-based) execution](~/develop/images/Interfaces_Table_GetNext_MultipleGet.png)
 
 To use this polling method, add `bulk` to the `options` attribute of the table parameter's `OID` tag. You can specify the number of cells to retrieve per request by adding a value after `bulk` (e.g., `bulk:10`). If no value is provided, the default is 50.
 
@@ -173,7 +173,7 @@ SNMP Communication Flow:
 - Get next requests are performed to obtain the number of rows using the instance, starting with the OID of ifEntry (1.3.6.1.2.1.2.2.1). Once the number of rows is known, one or more get requests (with multiple variable bindings) are performed to obtain all the cells in the table.
 - Rows can disappear while the table is being retrieved. If this happens, the retrieved table can get mixed up because the data was retrieved block by block. If a row was deleted during a retrieval process, it is possible that, for example, the first block contains 5 rows, while the second block only contains 4 rows.
 
-### GetNext + MultipleGet by Row
+### GetNext + MultipleGet (row-based)
 
 Uses GetNext requests to fetch the index of each row individually. Then, Get requests are used to fetch multiple cells at once, proceeding row by row, only moving to the next row when all cells have been fetched. If the configured size is large enough, multiple rows (or part of the next row) can be included in a single request.
 
@@ -287,8 +287,8 @@ To use this polling method, add `multipleGetNext` to the `options` attribute of 
 
 SNMP Communication Flow:
 
-- Get next requests are performed (where the variable bindings in the request correspond with all the columns defined in the protocol table) until all rows are retrieved. One row is retrieved at a time.
-- Note that using this method no data will be missing.
+ - Uses GetNext requests on each column OID to fetch each column value for the first row. 
+ - Then uses GetNext request on the previously retrieved cell OID for each row to get subsequent rows one at a time.
 
 ### MultipleGetBulk
 
@@ -361,13 +361,17 @@ SNMP Communication Flow:
 
 SNMP table indexes are often based on sequential numbers (e.g., `1`, `2`, `3`, ...). When a row is added or removed from such a table, the indexes of subsequent rows will shift. If DataMiner is polling the table during this shift, and the polling method does **not retrieve an entire row in one operation**, it can result in inconsistent data retrieval. Parts of a row may be collected **before** the shift and others **after**, causing the final row in DataMiner to contain a **mix of values from two different rows**, leading to an incorrect representation of the data.
 
-To avoid this issue, prefer polling methods that retrieve complete rows in a single operation. Methods like **GetNext + MultipleGet by Row**, **MultipleGetNext**, and **MultipleGetBulk** are generally less prone to this issue.
+> [!WARNING]
+> Methods that fetch individual columns across multiple requests, such as **GetNext** or **GetNext + MultipleGet (column-based)**, are **especially vulnerable** to this problem.
 
 > [!NOTE]
 > Tables where the row indexes do **not** shift when rows are added or removed (e.g., tables with fixed or unique indexes) are **not affected** by this issue.
 
-> [!WARNING]
-> Methods that fetch individual columns across multiple requests, such as **GetNext** or **GetNext + MultipleGet**, are **especially vulnerable** to this problem.
+To avoid this issue, prefer polling methods that can retrieve complete rows in a single operation such as **GetNext + MultipleGet (row-based)**, **MultipleGetNext**, and **MultipleGetBulk**.
+
+> [!IMPORTANT]
+>  **GetNext + MultipleGet (row-based)** is still vulnerable when the bulk size is not equal to, or a multiple of, the number of columns to be retrieved (excluding the first/instance column).
+> Any other size will again result in partial rows being retrieved.
 
 ## Instance Option
 
@@ -426,7 +430,7 @@ To correctly poll these types of tables, you must add the `instance` option to t
 ![SNMP table using instance option](~/develop/images/Table_SNMP_instance_option.png)
 
 > [!CAUTION]
-> When using the `instance` option with **GetNext + MultipleGet** or **GetNext + MultipleGet by Row**, a known issue causes the instance identifier to be written into the **second column** of the table as well as the first.
+> When using the `instance` option with **GetNext + MultipleGet (column-based)** or **GetNext + MultipleGet (row-based)**, a known issue causes the instance identifier to be written into the **second column** of the table as well as the first.
 >
 > **Workaround:** Create a **dedicated column** to store the duplicate instance identifier. This column serves only as a workaround and can be hidden by setting `RTDisplay` to `false`.
 >
@@ -438,7 +442,7 @@ To correctly poll these types of tables, you must add the `instance` option to t
 
 A filtered set of rows can be retrieved using the [subtable](xref:Protocol.Params.Param.SNMP.OID-options#subtable) option (options=";subtable") on the SNMP.OID tag of a table parameter (i.e. a table of type "array"). Even though the result is a filtered set of rows, queries are sent to the device until the filter matches. DataMiner retrieves the instances of the table until the filtered data is retrieved. Only the filtered data will be displayed.
 
-The subtable option only works with the **GetNext + MultipleGet** and **GetNext + MultipleGet by Row** methods. Multiple filters can be used, separated by a comma. The filter is defined in the parameter referenced by the id attribute on the SNMP OID of the array.
+The subtable option only works with the **GetNext + MultipleGet (column-based)** and **GetNext + MultipleGet (row-based)** methods. Multiple filters can be used, separated by a comma. The filter is defined in the parameter referenced by the id attribute on the SNMP OID of the array.
 
 ## Filtered set of rows in table using dynamic OID
 
