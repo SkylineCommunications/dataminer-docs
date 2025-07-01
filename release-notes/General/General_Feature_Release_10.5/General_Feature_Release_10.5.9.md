@@ -144,3 +144,10 @@ In OpenSearch, in some cases, queries with a limit could cause scroll contexts t
 As BrokerGateway is started alongside the Microsoft Windows operating system, in some cases, it would not be able to retrieve the local IP addresses of the server.
 
 To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
+
+#### AnnounceHostingAgentEvent instances could linger around in the cache after a remote agent had reconnected [ID 43230]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+When a remote agent disconnected and later reconnected, in some cases, `AnnounceHostingAgentEvent` instances could linger around in the cache even though the event, element, service or redundancy group no longer existed on that remote agent.
