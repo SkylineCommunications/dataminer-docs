@@ -67,3 +67,9 @@ The app sections on the DataMiner landing page (e.g. `https://myDMA/root/`) have
 When, in a *Timeline* component, you had grouped on multiple columns, only the labels of the bottom-level group would have a tooltip.
 
 From now on, all group labels will have a tooltip.
+
+#### Low-Code Apps: Actions on open panels would stop working when you switched from one page to another [ID 43256]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When you switched from one page to another, up to now, actions on open panels would stop working.
