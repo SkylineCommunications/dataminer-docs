@@ -13,7 +13,7 @@ In a protocol, a table is implemented using a parameter representing the table (
 
 ## Retrieval methods
 
-A protocol can retrieve SNMP tables using various methods. The preferred method is specified on the table parameter by setting the options attribute within the <OID> tag. Only one retrieval method can be configured per table. The following sections describe each available method:
+A protocol can retrieve SNMP tables using various methods. The desired method is specified on the table parameter by setting the options attribute within the <OID> tag. Only one retrieval method can be configured per table. The following sections describe each available method:
 
 * **[GetNext](#getnext):**
   Fetches each cell individually using SNMP **GetNext** requests.
@@ -72,8 +72,8 @@ With the **GetNext** method, you cannot explicitly select which columns to poll 
     <Description>Interfaces</Description>
     <Type>array</Type>
     <ArrayOptions index="0">
-        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
-        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        <ColumnOption idx="0" pid="1001" type="snmp" />
+        <ColumnOption idx="1" pid="1002" type="snmp" />
         ...
     </ArrayOptions>
     <SNMP>
@@ -83,7 +83,7 @@ With the **GetNext** method, you cannot explicitly select which columns to poll 
 </Param>
 <Param id="1001" trending="false">
     <Name>InterfacesIndex</Name>
-    <Description>Instance [IDX] (Interfaces)</Description>
+    <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
         <RawType>other</RawType>
@@ -127,8 +127,8 @@ To use this polling method, add `bulk` to the `options` attribute of the table p
     <Description>Interfaces</Description>
     <Type>array</Type>
     <ArrayOptions index="0">
-        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
-        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        <ColumnOption idx="0" pid="1001" type="snmp" />
+        <ColumnOption idx="1" pid="1002" type="snmp" />
         ...
     </ArrayOptions>
     <SNMP>
@@ -138,7 +138,7 @@ To use this polling method, add `bulk` to the `options` attribute of the table p
 </Param>
 <Param id="1001" trending="false">
     <Name>InterfacesIndex</Name>
-    <Description>Instance [IDX] (Interfaces)</Description>
+    <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
         <RawType>other</RawType>
@@ -187,8 +187,8 @@ To use this polling method, add `multipleGet` to the `options` attribute of the 
     <Description>Interfaces</Description>
     <Type>array</Type>
     <ArrayOptions index="0">
-        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
-        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        <ColumnOption idx="0" pid="1001" type="snmp" />
+        <ColumnOption idx="1" pid="1002" type="snmp" />
         ...
     </ArrayOptions>
     <SNMP>
@@ -198,7 +198,7 @@ To use this polling method, add `multipleGet` to the `options` attribute of the 
 </Param>
 <Param id="1001" trending="false">
     <Name>InterfacesIndex</Name>
-    <Description>Instance [IDX] (Interfaces)</Description>
+    <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
         <RawType>other</RawType>
@@ -244,8 +244,8 @@ To use this polling method, add `multipleGetNext` to the `options` attribute of 
     <Description>Interfaces</Description>
     <Type>array</Type>
     <ArrayOptions index="0">
-        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
-        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        <ColumnOption idx="0" pid="1001" type="snmp" />
+        <ColumnOption idx="1" pid="1002" type="snmp" />
         ...
     </ArrayOptions>
     <SNMP>
@@ -255,7 +255,7 @@ To use this polling method, add `multipleGetNext` to the `options` attribute of 
 </Param>
 <Param id="1001" trending="false">
     <Name>InterfacesIndex</Name>
-    <Description>Instance [IDX] (Interfaces)</Description>
+    <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
         <RawType>other</RawType>
@@ -306,8 +306,8 @@ To use this polling method, add `multipleGetBulk` to the `options` attribute of 
     <Description>Interfaces</Description>
     <Type>array</Type>
     <ArrayOptions index="0">
-        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
-        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        <ColumnOption idx="0" pid="1001" type="snmp" />
+        <ColumnOption idx="1" pid="1002" type="snmp" />
         ...
     </ArrayOptions>
     <SNMP>
@@ -317,7 +317,7 @@ To use this polling method, add `multipleGetBulk` to the `options` attribute of 
 </Param>
 <Param id="1001" trending="false">
     <Name>InterfacesIndex</Name>
-    <Description>Instance [IDX] (Interfaces)</Description>
+    <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
         <RawType>other</RawType>
@@ -388,8 +388,8 @@ To correctly poll these types of tables, you must add the `instance` option to t
     <Description>Table</Description>
     <Type>array</Type>
     <ArrayOptions index="0">
-        <ColumnOption idx="0" pid="1001" type="snmp" options="" />
-        <ColumnOption idx="1" pid="1002" type="snmp" options="" />
+        <ColumnOption idx="0" pid="1001" type="snmp" />
+        <ColumnOption idx="1" pid="1002" type="snmp" />
     </ArrayOptions>
     <SNMP>
         <Enabled>true</Enabled>
