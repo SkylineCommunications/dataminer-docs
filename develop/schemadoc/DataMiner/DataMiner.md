@@ -19,8 +19,8 @@ Configures the DataMiner Agent.
 | [readElementData](xref:DataMiner-readElementData) | boolean |  | Automatically generated attribute, indicating that previously configured element data that was saved in DataMiner.xml has been moved to the element data database tables. |
 | [readProperties](xref:DataMiner-readProperties) | boolean |  | Automatically generated attribute. Deprecated. |
 | [safeMode](xref:DataMiner-safeMode) | boolean |  | If set to `true`, elements will not be started using multiple threads. |
-| [storeLastPollTimes](xref:DataMiner-storeLastPollTimes) | boolean |  |  |
-| [useAgentBinding](xref:DataMiner-useAgentBinding) | string |  |  |
+| [storeLastPollTimes](xref:DataMiner-storeLastPollTimes) | boolean |  | Indicates whether SLProtocol should store the last poll times. |
+| [useAgentBinding](xref:DataMiner-useAgentBinding) | boolean |  | Global setting that indicates whether traps are assigned to elements based on the *agentaddress* binding (1.3.6.1.3.1057.1) instead of the source address.  |
 
 ## Children
 
