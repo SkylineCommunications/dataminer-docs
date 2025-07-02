@@ -112,6 +112,12 @@ When, on a system running multiple SLScripting processes, a connector was modifi
 
 `System.ArgumentException: Object of type 'Skyline.DataMiner.Scripting.ConcreteSLProtocolExt' cannot be converted to type 'Skyline.DataMiner.Scripting.SLProtocolExt'`
 
+#### Problem when stopping an element or performing a Failover switch when another action was being executed [ID 43089]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When you stopped an element or performed a Failover switch when another action was being executed (e.g. a parameter set being performed by a QAction), in some cases, a deadlock could occur.
+
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -158,3 +164,9 @@ To prevent being unaware of certain IP addresses, from now on, BrokerGateway wil
 <!-- Not added to MR 10.6.0 -->
 
 When a remote agent disconnected and later reconnected, in some cases, `AnnounceHostingAgentEvent` instances could linger around in the cache even though the event, element, service or redundancy group no longer existed on that remote agent.
+
+#### DMA without Swarming enabled would fail to start up if no db.xml file was present [ID 43274]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, it would fail to start up because of an unhandled exception in SLNet.

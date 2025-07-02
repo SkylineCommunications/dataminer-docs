@@ -58,3 +58,9 @@ In OpenSearch, in some cases, queries with a limit could cause scroll contexts t
 As BrokerGateway is started alongside the Microsoft Windows operating system, in some cases, it would not be able to retrieve the local IP addresses of the server.
 
 To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
+
+#### DMA without Swarming enabled would fail to start up if no db.xml file was present [ID 43274]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, it would fail to start up because of an unhandled exception in SLNet.

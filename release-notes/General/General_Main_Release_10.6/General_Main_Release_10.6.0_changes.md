@@ -414,3 +414,9 @@ At startup, up to now, the ModelHost DxM would stop working when it failed to re
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 In some cases, an alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service, even though the alarm was already cleared or no longer had any of its service impact fields filled in.
+
+#### Problem when stopping an element or performing a Failover switch when another action was being executed [ID 43089]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When you stopped an element or performed a Failover switch when another action was being executed (e.g. a parameter set being performed by a QAction), in some cases, a deadlock could occur.
