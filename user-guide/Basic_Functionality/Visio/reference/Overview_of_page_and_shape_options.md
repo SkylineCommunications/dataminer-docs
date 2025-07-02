@@ -78,6 +78,28 @@ Page- and shape-level option.
 
 Can be used as an option on any shape to show it even when some dynamic values have not yet resolved.
 
+By default, DataMiner ensures that no operations occur from shape data before all dynamic values within that shape data have been resolved. This is done for performance reasons. However, this can sometimes lead to deadlock situations when one operation depends on the result of another operation within the same shape data.
+
+### When to use this option
+
+Use this option when you have shape data that contains multiple operations where one depends on the result of another, and you encounter a deadlock situation. This typically occurs with Execute shape data that contains multiple SET commands where later commands reference session variables set by earlier commands.
+
+### Example
+
+Consider the following scenario where you want to set two session variables, where the second depends on the first:
+
+```
+Execute: SET@CardVariable@myElem@[Property:ViewProperty]@SetTrigger=ValueChanged|SET@CardVariable@IP@[param:[cardvar:myElem],1002]@SetTrigger=ValueChanged
+```
+
+Without the `AllowEmptyDynamicValues` option, this creates a deadlock because:
+
+- The first SET command cannot execute until all dynamic values in the entire Execute field are resolved
+- The second SET command contains `[cardvar:myElem]` which cannot be resolved until the first SET command executes
+- This creates a circular dependency
+
+Adding the `AllowEmptyDynamicValues` option resolves this by allowing the first SET command to execute even when the second SET command still contains unresolved dynamic values. Once the first SET executes and sets the `myElem` variable, the second SET will be triggered due to the `SetTrigger=ValueChanged` option.
+
 ## AllowInheritance=False
 
 Shape-level option.
