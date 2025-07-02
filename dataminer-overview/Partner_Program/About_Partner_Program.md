@@ -5,26 +5,30 @@ uid: About_Partner_Program
 # About the Partner Program
 
 At Skyline we value the collaboration with our partners and your commitment and contributions to create value for end customers. Our Partner Program is designed to recognize and reward you for the value your technical and business skills add to the market.
+> [!NOTE]
+> In its simplist form, the greater the engagement, the greater the discount
 
-The moment you become our partner, you start receiving benefits.  
+We ensure your efforts are recognised from the day our partnership journey begins: 
 
-- Buy DataMiner Licenses, Usage-based Services, and Support Services at reduced rates
+- Structured discount on DataMiner Licenses, Usage-based Services, and Support Services
 
 - Early access to roadmap discussions
 
 - Referrals
 
-- Updated go-to-market strategies
+- Access to go-to-market strategies
 
 - Access to tooling/partner portal
 
-## Partner skill levels
+- Partner exclusive events throughout the year
 
-Your engagement is rewarded with DataMiner Credits, recognizing your expertise and collaboration. The number of credits obtained in a calendar year determines your skill level, which remains valid from the moment you earn it until the end of the following year.
+## Partnership levels
 
-There are 3 types of skill level depending on your engagement:
+Your engagement is rewarded with DataMiner Credits, recognizing your expertise and collaboration. The number of credits obtained in a calendar year determines your partnership level, which remains valid from the moment you earn it until the end of the following year.
 
-- Member (bronze level)
+Today there are 3 core partnership levels:
+
+- Member (bronze level) 
 
 - Collaborator (silver level, as of 25 credits)
 
