@@ -80,15 +80,8 @@ Can be used as an option on any shape to show it even when some dynamic values h
 
 By default, DataMiner ensures that no operations occur from shape data before all dynamic values within that shape data have been resolved. This is done for performance reasons. However, this can cause issues in two scenarios:
 
-1. **Unresolvable dynamic placeholders**: When some dynamic placeholders cannot be resolved, the entire shape or control may not be displayed.
-2. **Circular dependencies**: When operations have dependencies that create deadlock situations.
-
-### When to use this option
-
-Use this option in the following scenarios:
-
-- **When dynamic placeholders cannot be resolved**: If you want shapes or controls to be displayed even when some dynamic values cannot be resolved, rather than hiding the entire component.
-- **When you encounter deadlock situations**: When you have shape data that contains multiple operations where one depends on the result of another, creating a circular dependency. This typically occurs with Execute shape data that contains multiple SET commands where later commands reference session variables set by earlier commands.
+1. **Unresolvable dynamic placeholders**: When some dynamic placeholders cannot be resolved, the entire shape or control may not be displayed. Use this option if you want shapes or controls to be displayed even when some dynamic values cannot be resolved, rather than hiding the entire component.
+2. **Circular dependencies**: When operations have dependencies that create deadlock situations. This typically occurs with Execute shape data that contains multiple operations where one depends on the result of another, creating a circular dependency.
 
 ### Example: Resolving circular dependencies
 
