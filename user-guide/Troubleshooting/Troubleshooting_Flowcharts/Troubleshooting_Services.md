@@ -75,9 +75,7 @@ class NotFixed,NotFixedProtocolIssue classSolution;
 
 If you encounter issues related to service alarms, you will need to gather the following information from the DMAs involved and then contact [support.data-core@skyline.be](mailto:support.data-core@skyline.be):
 
-- Logging
-
-- While the issue is active on the system, collect **memory dumps of the SLElement, SLDataMiner, and SLNet processes** from both the Agents hosting the affected elements and the Agent hosting the affected services.
+- While the issue is active on the system, [use SLLogCollector](xref:Collecting_data_to_report_an_issue_to_TechSupport#log-collector-packages) to collect **memory dumps of the SLElement, SLDataMiner, and SLNet processes** from both the Agents hosting the affected elements and the Agent hosting the affected services.
 
   When you share these files, make sure to also include the **element ID and service ID**, as this will help us quickly locate the relevant information in the logs and dumps.
 
