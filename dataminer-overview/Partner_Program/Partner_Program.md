@@ -33,17 +33,21 @@ DataMiner itself is also a modular transformational technology platform that can
 
 Because of the pronounced open architecture and powerful enabling capabilities of DataMiner, anybody can leverage it to design innovative new solutions and to make digital transformation happen. This includes you as a partner.
 
-## Your role as our partner
+## Our evolving partnership
 
-In line with the general trend, your own role in the overall market landscape has also evolved considerably. This means you have to realign with the needs and expectations of your customers.
+As the industry continues to evolve, so too does the role each of us plays within it. Like many others, your position in the broader market landscape is transforming, driven by changing customer needs and expectations. This creates an opportunity for us to realign and collaborate even more closely to deliver value in new and innovative ways.
 
-We no longer live in a world where an organization’s engineering team contracts a select number of vendors alongside a system integrator to implement monolithic bespoke ecosystems that are then handed over to an operational team to be operated in a static mode for five years or longer. Today, the **key objective of those organizations is to build an agile, data-driven operational ecosystem that can be evolved easily and continuously** and you have to align with that.
+Gone are the days when engineering teams would contract a small number of vendors and a systems integrator to deploy rigid, monolithic ecosystems, which were then handed off to operational teams for static use over many years. Today's organizations are focused on building agile, data-driven operational platforms that can evolve continuously. Meeting those expectations requires all of us — vendors, partners, and integrators — to embrace flexibility, modularity, and innovation.
 
-Furthermore, in the new world, the qualities, features, and characteristics of an operational platform are no longer exclusively defined by the actual core infrastructure consisting of the core processing products that have been deployed, whereas this was the case with bespoke monolithic hard-coded ecosystems. The fabric of the connectivity and the functions of the various modular components that an operation is made of are only definitive to some point.
+In this new paradigm, the capabilities and characteristics of an operational platform are no longer solely defined by the core infrastructure and processing products, as was typical in the past. Instead, they are shaped by how these components interact, the flexibility of the overall architecture, and especially the tooling that surrounds and enables it.
 
-Today, the **quality, features, and characteristics of an operational platform are increasingly defined by the tooling layer** that wraps around the core infrastructure. That tooling layer defines how the infrastructure is used, what types of workflows are supported, how efficiently the core processing products can be used, how secure the overall platform is, how easily new emerging products can be introduced into it and leveraged, and much more. And of course, DataMiner is all about that tooling layer that wraps around the core processing products, and it delivers on all those new expectations customers have.
+This tooling layer plays a pivotal role. It determines how infrastructure is leveraged, what workflows are supported, how efficiently systems operate, how easily new solutions can be integrated, and how secure and scalable the platform is as a whole.
 
-### What can you offer the new market?
+This is exactly where DataMiner comes in. As a platform designed to empower and enhance core systems through a powerful and adaptive tooling layer, DataMiner enables our shared customers to meet their evolving needs with agility and confidence.
+
+By working together, we can ensure that we are not just keeping pace with industry change, we are leading it.
+
+### What can you offer the market?
 
 - **General consultancy & guidance**:
 
