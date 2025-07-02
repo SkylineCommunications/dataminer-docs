@@ -296,7 +296,7 @@ In the `C:\Skyline DataMiner\NotifyMail.html` file, i.e. the email report templa
 <!-- RN 43202: MR 10.6.0 - FR 10.5.8 -->
 <!-- RN 43205: MR 10.6.0 - FR 10.5.9 -->
 <!-- RN 43240: MR 10.6.0 - FR 10.5.8 [CU0] -->
-<!-- RN 43298: MR 10.6.0 - FR 10.5.9 -->
+<!-- RN 43298: MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
@@ -307,7 +307,7 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner Orchestrator 1.7.8
 - DataMiner SupportAssistant 1.7.5
 
-As from DataMiner 10.6.0/10.5.9, the CloudGateway DxM will also be included in DataMiner upgrade packages. However, the DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed. Current version: DataMiner CloudGateway 2.17.7
+<!-- RN 43205 -->As from now, the CloudGateway DxM will also be included in DataMiner upgrade packages. However, the DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed. Current version: DataMiner CloudGateway 2.17.7
 
 For detailed information about the changes included in the above-mentioned versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
