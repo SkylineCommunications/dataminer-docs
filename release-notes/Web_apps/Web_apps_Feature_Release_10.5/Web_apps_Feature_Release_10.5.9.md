@@ -7,6 +7,8 @@ uid: Web_apps_Feature_Release_10.5.9
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
+This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU18] and 10.5.0 [CU6].
+
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.9](xref:General_Feature_Release_10.5.9).
@@ -73,6 +75,14 @@ From now on, all group labels will have a tooltip.
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When you switched from one page to another, up to now, actions on open panels would stop working.
+
+#### Dashboards app & Low-Code Apps - Table component: Run-time error could appear when multiple queries had been configured [ID 43262]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in a *Table* component with multiple queries, you rapidly switched between the different queries or generated a PDF, in some cases, the following run-time error could appear instead of the actual table data:
+
+`Cannot read properties of undefined (reading "Value")`
 
 #### Low-Code Apps - Interactive Automation script component: Input box values would not be updated correctly [ID 43282]
 
