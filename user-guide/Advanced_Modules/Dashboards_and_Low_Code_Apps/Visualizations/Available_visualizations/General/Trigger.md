@@ -14,6 +14,8 @@ With this component, you can:
 
 - Automatically refresh data [at regular intervals](#automatically-triggering-updates-with-a-timer), helping you keep your view up to date without interaction.
 
+- [Pause, resume, or reset automatic updates](#letting-users-control-the-trigger-timer), for example to temporarily stop refreshing while analyzing data.
+
 - Visually [track when data was last refreshed](#displaying-when-the-trigger-was-last-activated), thanks to the optional countdown and timestamp.
 
 ## Supported components
@@ -105,3 +107,27 @@ To set up automatic refresh with a timer:
    > The interval must be 5 seconds or higher.
 
 In view mode, a countdown bar will appear in the trigger component, showing when the next refresh is scheduled to occur.
+
+##### Letting users control the trigger timer
+
+From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 43184-->, you can make the timer interactive by allowing users to manually pause, resume, reset it, or trigger an update immediately. This can be useful, for example, if users want to temporarily stop automatic updates while analyzing data.
+
+![Control the timer](~/user-guide/images/Trigger_Timer_Actions.gif)<br>*Trigger component and button components in DataMiner 10.5.8*
+
+You can do this by configuring component actions in your low-code app using events. These actions can be linked to button components or other UI elements, giving users more control over how and when data is refreshed.
+
+To configure this:
+
+1. Add an event to your app. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+
+1. From the dropdown list, select *Execute component action*.
+
+1. Under *I want to*, choose one of the available options under *Trigger*:
+
+   - *Continue timer*: Resumes the timer if it is currently paused.
+
+   - *Pause timer*: Pauses the timer. If [*Show when the last trigger happened*](#displaying-when-the-trigger-was-last-activated) is enabled, the displayed time continues updating based on the last trigger.
+
+   - *Reset timer*: Resets the timer. The paused or running state of the timer is not affected. If [*Show when the last trigger happened*](#displaying-when-the-trigger-was-last-activated) is enabled, the displayed time is not reset.
+
+   - *Trigger*: Immediately activates the trigger, without resetting or affecting the timer.
