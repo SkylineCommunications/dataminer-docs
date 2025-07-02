@@ -112,6 +112,14 @@ When, on a system running multiple SLScripting processes, a connector was modifi
 
 `System.ArgumentException: Object of type 'Skyline.DataMiner.Scripting.ConcreteSLProtocolExt' cannot be converted to type 'Skyline.DataMiner.Scripting.SLProtocolExt'`
 
+#### Elements deleted during an element migration could incorrectly not be recovered when an action failed [ID 42976]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When some action would fail during one of the phases of an element migration, up to now, there would be no way to recover any elements that had already been deleted.
+
+From now on, elements will only be deleted once all steps in the migration process have been completed successfully. Moreover, if a step in the process fails after an element has been deleted, it will now be possible to manually recover the deleted element.
+
 #### Problem when stopping an element or performing a Failover switch when another action was being executed [ID 43089]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
@@ -165,8 +173,8 @@ To prevent being unaware of certain IP addresses, from now on, BrokerGateway wil
 
 When a remote agent disconnected and later reconnected, in some cases, `AnnounceHostingAgentEvent` instances could linger around in the cache even though the event, element, service or redundancy group no longer existed on that remote agent.
 
-#### DMA without Swarming enabled would fail to start up if no db.xml file was present [ID 43274]
+#### Start-up process of a DMA without Swarming enabled would fail abruptly if no db.xml file was present [ID 43274]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, it would fail to start up because of an unhandled exception in SLNet.
+When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, up to now, the start-up process would fail abruptly because of an unhandled exception in SLNet. From now on, it will fail gracefully.

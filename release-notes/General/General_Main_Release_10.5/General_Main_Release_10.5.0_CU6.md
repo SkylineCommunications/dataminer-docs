@@ -19,6 +19,14 @@ uid: General_Main_Release_10.5.0_CU6
 
 ### Fixes
 
+#### Elements deleted during an element migration could incorrectly not be recovered when an action failed [ID 42976]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When some action would fail during one of the phases of an element migration, up to now, there would be no way to recover any elements that had already been deleted.
+
+From now on, elements will only be deleted once all steps in the migration process have been completed successfully. Moreover, if a step in the process fails after an element has been deleted, it will now be possible to manually recover the deleted element.
+
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -59,8 +67,8 @@ As BrokerGateway is started alongside the Microsoft Windows operating system, in
 
 To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
 
-#### DMA without Swarming enabled would fail to start up if no db.xml file was present [ID 43274]
+#### Start-up process of a DMA without Swarming enabled would fail abruptly if no db.xml file was present [ID 43274]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, it would fail to start up because of an unhandled exception in SLNet.
+When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, up to now, the start-up process would fail abruptly because of an unhandled exception in SLNet. From now on, it will fail gracefully.

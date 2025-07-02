@@ -27,6 +27,14 @@ When, on a system running multiple SLScripting processes, a connector was modifi
 
 `System.ArgumentException: Object of type 'Skyline.DataMiner.Scripting.ConcreteSLProtocolExt' cannot be converted to type 'Skyline.DataMiner.Scripting.SLProtocolExt'`
 
+#### Elements deleted during an element migration could incorrectly not be recovered when an action failed [ID 42976]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When some action would fail during one of the phases of an element migration, up to now, there would be no way to recover any elements that had already been deleted.
+
+From now on, elements will only be deleted once all steps in the migration process have been completed successfully. Moreover, if a step in the process fails after an element has been deleted, it will now be possible to manually recover the deleted element.
+
 #### Service & Resource Management: Reservation ID of a service created from a service template would disappears when the template was re-applied [ID 43090]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
