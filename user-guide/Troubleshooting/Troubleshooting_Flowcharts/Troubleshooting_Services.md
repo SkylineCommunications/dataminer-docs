@@ -81,4 +81,4 @@ If you encounter issues related to service alarms, you will need to gather the f
 
 - Provide [a **DELT export package**](xref:Exporting_elements_services_etc_to_a_dmimport_file) that includes the alarms from the affected services and elements.
 
-- If the service was generated from a **service template**, include the template. You can find this *Service.xml* file on the DataMiner server in the folder `C:\Skyline DataMiner\[ServiceTemplateName]`.
+- If the service was generated from a **service template**, include the template. You can find this *Service.xml* file on the DataMiner server in the folder `C:\Skyline DataMiner\Services\[ServiceTemplateName]`.
