@@ -130,4 +130,4 @@ To configure this:
 
    - *Reset timer*: Resets the timer. The paused or running state of the timer is not affected. If [*Show when the last trigger happened*](#displaying-when-the-trigger-was-last-activated) is enabled, the displayed time is not reset.
 
-   - *Trigger*: Immediately activates the trigger.
+   - *Trigger*: Immediately activates the trigger, without resetting or affecting the timer.
