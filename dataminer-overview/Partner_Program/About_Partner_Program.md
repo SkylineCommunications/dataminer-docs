@@ -5,12 +5,12 @@ uid: About_Partner_Program
 # About the Partner Program
 
 At Skyline we value the collaboration with our partners and your commitment and contributions to create value for end customers. Our Partner Program is designed to recognize and reward you for the value your technical and business skills add to the market.
-> [!NOTE]
-> In its simplist form, the greater the engagement, the greater the discount
 
-We ensure your efforts are recognised from the day our partnership journey begins: 
+In essence: **the greater the engagement, the greater the discount**.
 
-- Structured discount on DataMiner Licenses, Usage-based Services, and Support Services
+We ensure that your efforts are recognized from the day our partnership journey begins:
+
+- Structured discount on DataMiner licenses, usage-based services, and support services
 
 - Early access to roadmap discussions
 
@@ -20,15 +20,15 @@ We ensure your efforts are recognised from the day our partnership journey begin
 
 - Access to tooling/partner portal
 
-- Partner exclusive events throughout the year
+- Partner-exclusive events throughout the year
 
 ## Partnership levels
 
-Your engagement is rewarded with DataMiner Credits, recognizing your expertise and collaboration. The number of credits obtained in a calendar year determines your partnership level, which remains valid from the moment you earn it until the end of the following year.
+Your engagement is rewarded with DataMiner credits, recognizing your expertise and collaboration. The number of credits obtained in a calendar year determines your partnership level, which remains valid from the moment you earn it until the end of the following year.
 
-Today there are 3 core partnership levels:
+Today there are three core partnership levels:
 
-- Member (bronze level) 
+- Member (bronze level)
 
 - Collaborator (silver level, as of 25 credits)
 
@@ -51,7 +51,7 @@ The credits you accumulate serve a dual purpose. Not only do they allow you to a
 > [!NOTE]
 > The total number of credits utilized in any given order cannot exceed 5% of the DataMiner Licenses or Usage-based Services ordered for an end customer, 25% of DataMiner credits when ordering for self-use (e.g. setting up a lab or a demo system), or 50% for your training and certifications.
 
-## Earning Credits  
+## Earning Credits
 
 We recognize that our partners have different professional profiles and backgrounds. Whether you are a technical expert, designing and integrating DataMiner solutions, a staff augmentation partner, or a reseller, every effort counts.
 
