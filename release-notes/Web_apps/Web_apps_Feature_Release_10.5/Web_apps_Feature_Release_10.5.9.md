@@ -49,6 +49,17 @@ Actions will now be numbered hierarchically to allow easier referencing when lin
 
 ### Enhancements
 
+#### Interactive Automation scripts: Minimum and Maximum properties of the time components will now have their value adapted according to the time zone [ID 43014]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In time components like e.g. `DateTimePicker` and `TimePicker`, input can be limited by means of the `Minimum` and `Maximum` properties.
+
+Up to now, when the client machine and the server were located in different time zones, the datetime values in those two properties would not always be consistent. From now on, the values in the `Minimum` and `Maximum` properties will be adapted according to the time zone.
+
+> [!NOTE]
+> Because of the above-mentioned changes, the `Maximum` value may roll over to the next day, causing the hour/minute value of the `Maximum` property to be lower than the hour/minute value of the `Minimum` property.
+
 #### DataMiner landing page: Redesigned app sections [ID 43115] [ID 43226]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
