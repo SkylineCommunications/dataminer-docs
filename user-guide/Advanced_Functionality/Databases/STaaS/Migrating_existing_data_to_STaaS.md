@@ -21,11 +21,9 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
 
    1. Optionally, configure a proxy for the migration if necessary. This is supported from DataMiner 10.4.6 onwards.
 
-   1. Click *Init migration* to initialize the migration.
+   1. Click *Start Move to STaaS* to initialize the migration.
 
 1. Start the migration:
-
-   - Make sure *Replication only* is **not** selected.
 
    - Select the desired storage types for migration.
 
