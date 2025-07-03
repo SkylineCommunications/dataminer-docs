@@ -49,21 +49,21 @@ Actions will now be numbered hierarchically to allow easier referencing when lin
 
 ### Enhancements
 
-#### Interactive Automation scripts: Minimum and Maximum properties of the time components will now have their value adapted according to the specified DateKindKind setting [ID 43014]
+#### Interactive Automation scripts: Minimum and Maximum properties of the time components will now be considered to be either local time or UTC time [ID 43014]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In time components like e.g. `DateTimePicker` and `TimePicker`, input can be limited by means of the `Minimum` and `Maximum` properties.
 
-Up to now, when the client machine and the server were located in different timezones, the datetime values in those two properties would not always be consistent. From now on, the values in the `Minimum` and `Maximum` properties will be adapted according to the [DateTimeKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetimekind?view=netframework-4.8), specified using [SpecifyKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetime.specifykind?view=netframework-4.8).
+Up to now, when the client machine and the server were located in different timezones, the datetime values in those two properties would not always be consistent. From now on, the values in the `Minimum` and `Maximum` properties will be considered to be either local time or UTC time according to the [DateTimeKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetimekind?view=netframework-4.8), specified using [SpecifyKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetime.specifykind?view=netframework-4.8).
 
 `DateTimeKind` can be set to one of the following values:
 
 | Value | Description |
 |-------|-------------|
 | Undefined | Minimum and Maximum will be used as is, regardless of the client time zone. (former behavior) |
-| Local     | Minimum and Maximum will be adapted to the local time of the server. |
-| Utc       | Minimum and Maximum will be adapted to UTC time. |
+| Local     | Minimum and Maximum will be considered to be the local time of the server. |
+| Utc       | Minimum and Maximum will be considered to be UTC time. |
 
 > [!NOTE]
 > If, for the `TimePicker` component, you set the `DateTimeKind` of the `Maximum` value to either "Local" or "Utc", the `Maximum` value may roll over to the next day, causing the hour/minute value of the `Maximum` property to be lower than the hour/minute value of the `Minimum` property. Hence, all values will be invalid.
