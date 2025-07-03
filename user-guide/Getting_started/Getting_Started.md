@@ -56,7 +56,7 @@ description: Create a DataMiner System, and learn how to interact with DataMiner
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/DataMiner_Tools/DataminerTools.html" title="Tools" target="_self"><img src="~/user-guide/images/DataMiner_tools.svg" style="width:100%"></a>
+    <a href="/user-guide/DataMiner_Tools/DataMinerTools.html" title="Tools" target="_self"><img src="~/user-guide/images/DataMiner_tools.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Troubleshooting/Troubleshooting.html" title="Troubleshooting" target="_self"><img src="~/user-guide/images/Docs_Troubleshooting.svg" style="width:100%"></a>

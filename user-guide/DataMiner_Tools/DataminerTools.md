@@ -1,5 +1,5 @@
 ---
-uid: DataminerTools
+uid: DataMinerTools
 ---
 
 # DataMiner tools
