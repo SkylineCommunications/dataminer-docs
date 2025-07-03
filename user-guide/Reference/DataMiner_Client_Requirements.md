@@ -29,6 +29,8 @@ Recommended DataMiner client configuration:
 
 - Windows Server 2022
 
+- Windows Server 2025
+
 ### Microsoft .NET Framework
 
 Microsoft .NET Framework 4.7.2
