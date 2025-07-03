@@ -90,6 +90,14 @@ As BrokerGateway is started alongside the Microsoft Windows operating system, in
 
 To prevent being unaware of certain IP addresses, from now on, BrokerGateway will not only refresh its IP address cache every 5 minutes, it will also refresh that cache each time it detects a network adapter update.
 
+#### Failover: Primary IP address could incorrectly be set to the IP address of the online agent [ID 43257]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, in a Failover setup using a shared hostname, in some cases, the primary IP address would incorrectly be set to the IP address of the online agent instead of the hostname. Moreover, if that primary IP address was set to an incorrect IP address, it would be impossible to remove the Failover pair from the DataMiner System.
+
+Also, from now on, the primary IP address of the offline agent will be set to either the virtual IP address or the hostname of the Failover pair. Up to now, it would be set to the local IP address.
+
 #### Start-up process of a DMA without Swarming enabled would fail abruptly if no db.xml file was present [ID 43274]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->

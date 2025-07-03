@@ -179,6 +179,14 @@ To prevent being unaware of certain IP addresses, from now on, BrokerGateway wil
 
 When a remote agent disconnected and later reconnected, in some cases, `AnnounceHostingAgentEvent` instances could linger around in the cache even though the event, element, service or redundancy group no longer existed on that remote agent.
 
+#### Failover: Primary IP address could incorrectly be set to the IP address of the online agent [ID 43257]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, in a Failover setup using a shared hostname, in some cases, the primary IP address would incorrectly be set to the IP address of the online agent instead of the hostname. Moreover, if that primary IP address was set to an incorrect IP address, it would be impossible to remove the Failover pair from the DataMiner System.
+
+Also, from now on, the primary IP address of the offline agent will be set to either the virtual IP address or the hostname of the Failover pair. Up to now, it would be set to the local IP address.
+
 #### Start-up process of a DMA without Swarming enabled would fail abruptly if no db.xml file was present [ID 43274]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
