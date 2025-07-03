@@ -55,7 +55,7 @@ Important announcements about the latest changes to DataMiner core functionality
 | Legacy Reporter & Dashboards | End of Support | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner version 10.6.x (Q4 2025). |
 | [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service) | End of Support | This configuration is obsolete and should not be used. | End of Life as of DataMiner version 10.7.x (Q4 2026). |
 | Query executor | End of Support | Tool is being retired. | End of Life as of DataMiner version 10.7.x (Q4 2026). |
-| Use of JScript in QActions | End of Support | C# should be used instead. | End of Life as of DataMiner version 10.7.x (Q4 2026). |
+| Use of JScript in QActions | End of Support | C# should be used instead. JScript in QActions cannot be used on Windows Server 2025. | End of Life as of DataMiner version 10.7.x (Q4 2026). |
 | Use of VBScript in QActions | End of Support | C# should be used instead. | End of Life as of DataMiner version 10.7.x (Q4 2026). |
 | Logger tables with autoincrement option | End of Support | See [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement). | End of Life as of DataMiner version 10.8.x (Q4 2027). |
 | Annotations | End of Life | From DataMiner version 10.3.x (Q4 2022) onwards, Annotations should no longer be used. | End of Life. |
