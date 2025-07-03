@@ -46,7 +46,7 @@ A protocol can retrieve SNMP tables using various methods. The desired method is
 
 It’s helpful to understand the differences between the three main SNMP operations used to retrieve data:
 
-- **Get** requests retrieve the value of a specific OID. They require you to know the exact OID you want to retrieve.
+- **Get** requests retrieve the values of specific OIDs. They require you to know the exact OIDs you want to retrieve.
 - **GetNext** requests retrieve the *next* OID in the MIB tree. This makes them ideal for walking through tables or discovering unknown entries, but they can be less efficient and harder to control.
 - **GetBulk**
   Introduced in SNMPv2 as a more efficient **GetNext**. Next to the requested OIDs as usual, it also includes two new parameters:
