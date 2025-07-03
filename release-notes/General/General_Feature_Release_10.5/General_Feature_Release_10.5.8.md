@@ -112,14 +112,6 @@ In some rare cases, on certain DataMiner Agents in the cluster, the information 
 
 When multiple conditional alarm templates had been combined into an alarm template group, up to now, the resulting group template could fail to properly apply its conditions.
 
-#### SLDataGateway could stop working because of issues caused by TPL tasks [ID 42846]
-
-<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
-
-In some cases, SLDataGateway could stop working because of issues caused by TPL tasks.
-
-The number of TPL tasks has now been reduced, especially when writing trend data to the database.
-
 #### Error 'The object exporter specified was not found' would get logged upon DMA startup [ID 42927]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 -->
