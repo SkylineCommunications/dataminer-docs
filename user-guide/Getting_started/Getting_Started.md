@@ -56,12 +56,12 @@ description: Create a DataMiner System, and learn how to interact with DataMiner
 
 <div class="row"> 
   <div class="column">
+    <a href="/user-guide/DataMiner_Tools/DataminerTools.html" title="Tools" target="_self"><img src="~/user-guide/images/DataMiner_tools.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/user-guide/Troubleshooting/Troubleshooting.html" title="Troubleshooting" target="_self"><img src="~/user-guide/images/Docs_Troubleshooting.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Reference/Reference.html" title="Reference" target="_self"><img src="~/user-guide/images/Docs_Reference.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="https://www.youtube.com/@SkylineCommu" title="Video collection" target="_self"><img src="~/user-guide/images/Docs_VideoLibrary.svg" style="width:100%"></a>
   </div>
 </div>
