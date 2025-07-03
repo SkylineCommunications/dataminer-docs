@@ -10,8 +10,6 @@ uid: Part7Reference
 
 - [Skyline DataMiner folder](xref:Overview_of_the_files_found_in_the_root_folder)
 
-- [Tools](xref:DataminerTools)
-
 - [Methods of Procedure](xref:MOP_Changing_the_default_password_for_Cassandra)
 
 - [Naming of elements, services, views, etc.](xref:NamingConventions)
