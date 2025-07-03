@@ -191,6 +191,6 @@ When a DataMiner Agent that did not have Swarming enabled was started without a 
 
 If the GQI DxM is used with an admin connection, its underlying persistent system connection is used to handle any requests or subscriptions towards SLNet.
 
-Up to now, when the admin connection had been idle for at least 1 minute, the underlying system connection would automatically close the admin connection, causing the GQI DxM to unsubscribe from NATS and close all sessions and extension workers.
+Up to now, when the admin connection had been idle for at least 1 minute after being used, the underlying system connection would automatically close the admin connection, causing the GQI DxM to unsubscribe from NATS and close all sessions and extension workers.
 
 From now on, the admin connection will no longer expire, and will no longer be automatically closed by the underlying system connection.
