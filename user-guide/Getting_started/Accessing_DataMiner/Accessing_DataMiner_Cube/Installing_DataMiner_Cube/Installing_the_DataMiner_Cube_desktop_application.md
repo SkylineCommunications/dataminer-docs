@@ -59,5 +59,5 @@ From DataMiner 10.2.0/10.2.2 onwards, it is also possible to install DataMiner C
 
 > [!NOTE]
 >
-> - If you install DataMiner Cube with the MSI installer, you will also have to manually install the corresponding CefSharp version using the separate CefSharp MSI installation package, which is available on demand.
+> - If you install DataMiner Cube with the MSI installer, you will also have to manually install the corresponding CefSharp version using the separate CefSharp MSI installation package. More information can be found in [DataMiner Cube Deployment Mehods - CefSharp MSI](xef:DataMiner_Cube_deployment_methods#cefsharp-msi).
 > - The upgrade packages for the Main Release track contain the MSI installer for the latest Feature Release version of DataMiner Cube.
