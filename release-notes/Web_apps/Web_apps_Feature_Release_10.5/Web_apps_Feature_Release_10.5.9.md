@@ -49,16 +49,24 @@ Actions will now be numbered hierarchically to allow easier referencing when lin
 
 ### Enhancements
 
-#### Interactive Automation scripts: Minimum and Maximum properties of the time components will now have their value adapted according to the time zone [ID 43014]
+#### Interactive Automation scripts: Minimum and Maximum properties of the time components will now have their value adapted according to the specified DateKindKind setting [ID 43014]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In time components like e.g. `DateTimePicker` and `TimePicker`, input can be limited by means of the `Minimum` and `Maximum` properties.
 
-Up to now, when the client machine and the server were located in different time zones, the datetime values in those two properties would not always be consistent. From now on, the values in the `Minimum` and `Maximum` properties will be adapted according to the time zone.
+Up to now, when the client machine and the server were located in different timezones, the datetime values in those two properties would not always be consistent. From now on, the values in the `Minimum` and `Maximum` properties will be adapted according to the [DateTimeKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetimekind?view=netframework-4.8), specified using [SpecifyKind](https://learn.microsoft.com/en-us/dotnet/api/system.datetime.specifykind?view=netframework-4.8).
+
+`DateTimeKind` can be set to one of the following values:
+
+| Value | Description |
+|-------|-------------|
+| Undefined | Minimum and Maximum will be used as is, regardless of the client time zone. (former behavior) |
+| Local     | Minimum and Maximum will be adapted to the local time of the server. |
+| Utc       | Minimum and Maximum will be adapted to UTC time. |
 
 > [!NOTE]
-> Because of the above-mentioned changes, the `Maximum` value may roll over to the next day, causing the hour/minute value of the `Maximum` property to be lower than the hour/minute value of the `Minimum` property.
+> If, for the `TimePicker` component, you set the `DateTimeKind` of the `Maximum` value to either "Local" or "Utc", the `Maximum` value may roll over to the next day, causing the hour/minute value of the `Maximum` property to be lower than the hour/minute value of the `Minimum` property. Hence, all values will be invalid.
 
 #### DataMiner landing page: Redesigned app sections [ID 43115] [ID 43226]
 
