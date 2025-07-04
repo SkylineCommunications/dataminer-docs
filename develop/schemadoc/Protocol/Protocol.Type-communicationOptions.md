@@ -195,7 +195,7 @@ See also [Configuring a smart-serial connection as a server](xref:ConnectionsSma
 SNMP traps will be assigned to elements based on the trap’s agentaddress binding (1.3.6.1.3.1057.1).
 
 > [!IMPORTANT]
-> To activate this feature on system level, add the following line in DataMiner.xml: `<DataMiner useAgentBinding="true">`.
+> To activate this feature on system level, set the [useAgentBinding](xref:DataMiner-useAgentBinding) (DataMiner.xml) to `true`.
 
 ## Examples
 

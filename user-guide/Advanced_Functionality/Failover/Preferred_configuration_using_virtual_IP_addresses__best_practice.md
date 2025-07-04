@@ -21,7 +21,7 @@ Make sure to respect the order of the connections in the *Network Connections* l
 - The second connection represents the acquisition network, which is mainly used for communication with data sources managed by DataMiner.
 
 > [!NOTE]
-> To avoid possible issues in case a NIC is unplugged, you can specify the order of the network adapters used by a DMA (the first being used for the corporate network, the second for the acquisition network). To do so, configure the *NetworkAdapters* tag in the file *DataMiner.xml* (see [DataMiner.NetworkAdapters](xref:DataMiner_xml#dataminernetworkadapters)). However, note that to do so, you will need to stop both Failover Agents and then restart them once the file has been modified. If you do this for an existing Failover setup, you will also need to make sure that the changes you make match the IP configuration in DMS.xml.
+> To avoid possible issues in case a NIC is unplugged, you can specify the order of the network adapters used by a DMA (the first being used for the corporate network, the second for the acquisition network). To do so, configure the *NetworkAdapters* tag in the file *DataMiner.xml* (see [DataMiner.NetworkAdapters](xref:DataMiner.NetworkAdapters)). However, note that to do so, you will need to stop both Failover Agents and then restart them once the file has been modified. If you do this for an existing Failover setup, you will also need to make sure that the changes you make match the IP configuration in DMS.xml.
 
 ## Four heartbeats
 
