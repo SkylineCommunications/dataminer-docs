@@ -4,7 +4,9 @@ uid: DataMiner.AzureAD
 
 # AzureAD element
 
-Specifies Azure AD related settings. Specifies Microsoft Entra ID (formerly known as Azure AD) related settings. See [](xref:SAML_using_Entra_ID#configuring-dataminer-to-import-users-and-groups-from-microsoft-entra-id)
+Specifies Microsoft Entra ID (formerly known as Azure AD) related settings.
+
+See [Configuring DataMiner to import users and groups from Microsoft Entra ID](xref:SAML_using_Entra_ID#configuring-dataminer-to-import-users-and-groups-from-microsoft-entra-id)
 
 ## Parents
 

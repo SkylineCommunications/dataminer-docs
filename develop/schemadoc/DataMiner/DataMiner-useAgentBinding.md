@@ -4,7 +4,9 @@ uid: DataMiner-useAgentBinding
 
 # useAgentBinding attribute
 
-Global setting that indicates whether traps are assigned to elements based on the *agentaddress* binding (1.3.6.1.3.1057.1) instead of the source address. Default: false.
+Global setting that indicates whether traps are assigned to elements based on the *agentaddress* binding (1.3.6.1.3.1057.1) instead of the source address.
+
+Default: false
 
 ## Content Type
 

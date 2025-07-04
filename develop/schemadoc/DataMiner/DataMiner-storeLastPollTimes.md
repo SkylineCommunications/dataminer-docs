@@ -4,7 +4,9 @@ uid: DataMiner-storeLastPollTimes
 
 # storeLastPollTimes attribute
 
-Indicates whether SLProtocol should store the last poll times. Default: false.
+Indicates whether SLProtocol should store the last poll times.
+
+Default: false
 
 ## Content Type
 

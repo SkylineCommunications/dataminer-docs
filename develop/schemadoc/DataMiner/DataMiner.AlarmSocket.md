@@ -5,7 +5,8 @@ uid: DataMiner.AlarmSocket
 # AlarmSocket element
 
 Specifies that alarm events should be forwarded via a particular TCP/IP socket.
-See [Configuring the TCP-IP socket settings](xref:Configuring_the_TCP-IP_socket_settings#configuring-the-tcp-ip-socket-settings).
+
+See [Configuring the TCP-IP socket settings](xref:Configuring_the_TCP-IP_socket_settings#configuring-the-tcp-ip-socket-settings)
 
 ## Parents
 
