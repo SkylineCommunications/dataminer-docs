@@ -23,26 +23,15 @@ This is most easily handled using [Visual Studio 2022 solution filters (*.slnf)]
 ### Using dotnet-cli
 
 > [!NOTE]
-> The Skyline DataMiner SDK supports two approaches for environment variables:
-> 1. **With explicit parameters**: You can use any environment variable name (e.g., `DATAMINER_TOKEN`) when specifying `-p:CatalogPublishKeyName="DATAMINER_TOKEN"`
-> 2. **Default behavior**: When you omit the `-p:CatalogPublishKeyName` parameter, the SDK automatically looks for `skyline__sdk__dataminertoken`
-> 
-> The examples below show both approaches.
+> The examples below use explicit parameter names (e.g., `-p:CatalogPublishKeyName="DATAMINER_TOKEN"`) which allows you to use any environment variable name. When you omit these parameters, the SDK uses the default key name configured in your project's csproj file.
 
 #### Default call
 
 By default, the following call is used to release every package in a solution to the same organization with the same version:
 
-**Approach 1: With explicit parameters (flexible environment variable name)**
 ```bash
 $env:DATAMINER_TOKEN = "MyOrgKey"
 dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
-```
-
-**Approach 2: Default behavior (specific environment variable name)**
-```bash
-$env:skyline__sdk__dataminertoken = "MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
 ```
 
 #### Call with filters
@@ -52,20 +41,11 @@ To instead release only specific packages, a call with [solution filter files](x
 - PackagesForOrganizationA.slnf
 - PackagesForOrganizationB.slnf
 
-**Approach 1: With explicit parameters**
 ```bash
-$env:DATAMINER_TOKEN_A = "MyOrgAKey"
-$env:DATAMINER_TOKEN_B = "MyOrgBKey"
-dotnet publish PackagesForOrganizationA.slnf -p:Version="1.0.1" -p:VersionComment="Releasing 1.0.1 for A." -p:CatalogPublishKeyName="DATAMINER_TOKEN_A" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN_A"
-dotnet publish PackagesForOrganizationB.slnf -p:Version="2.0.1" -p:VersionComment="Releasing 2.0.1 for B." -p:CatalogPublishKeyName="DATAMINER_TOKEN_B" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN_B"
-```
-
-**Approach 2: Default behavior (requires switching environment variable between calls)**
-```bash
-$env:skyline__sdk__dataminertoken = "MyOrgAKey"
-dotnet publish PackagesForOrganizationA.slnf -p:Version="1.0.1" -p:VersionComment="Releasing 1.0.1 for A."
-$env:skyline__sdk__dataminertoken = "MyOrgBKey"
-dotnet publish PackagesForOrganizationB.slnf -p:Version="2.0.1" -p:VersionComment="Releasing 2.0.1 for B."
+$env:DATAMINER_TOKENA = "MyOrgAKey"
+$env:DATAMINER_TOKENB = "MyOrgAKey"
+dotnet publish PackagesForOrganizationA.slnf -p:Version="1.0.1" -p:VersionComment="Releasing 1.0.1 for A." -p:CatalogPublishKeyName="DATAMINER_TOKENA" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKENA"
+dotnet publish PackagesForOrganizationB.slnf -p:Version="2.0.1" -p:VersionComment="Releasing 2.0.1 for B." -p:CatalogPublishKeyName="DATAMINER_TOKENB" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKENB"
 ```
 
 ### Using GitHub reusable workflows
@@ -140,34 +120,19 @@ jobs:
 
 Default call that releases every package in a solution to the same organization with the same version:
 
-**Approach 1: With explicit parameters**
 ```bash
 $env:DATAMINER_TOKEN = "MyOrgKey"
 dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
-```
-
-**Approach 2: Default behavior**
-```bash
-$env:skyline__sdk__dataminertoken = "MyOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
 ```
 
 #### Call with different organization key
 
 Call that releases every package in a solution to the same organization with the same version, but with the difference that the referenced Catalog items will be downloaded with the other key:
 
-**Approach 1: With explicit parameters**
 ```bash
 $env:DATAMINER_TOKEN = "MyOrgKey"
 $env:OVERRIDE_DATAMINER_TOKEN = "MyOtherOrgKey"
 dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="OVERRIDE_DATAMINER_TOKEN"
-```
-
-**Approach 2: Default behavior (mixed approach)**
-```bash
-$env:skyline__sdk__dataminertoken = "MyOrgKey"
-$env:OVERRIDE_DATAMINER_TOKEN = "MyOtherOrgKey"
-dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogDefaultDownloadKeyName="OVERRIDE_DATAMINER_TOKEN"
 ```
 
 ### Using GitHub reusable workflows
