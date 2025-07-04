@@ -25,6 +25,17 @@ Assume the following multi-threaded timer is defined:
 </Timer>
 ```
 
+Group 1011 is a group of type `poll`, with an empty `content` tag, e.g. as defined below.
+```xml
+		<Group id="1011">
+			<Name>Multithread Group 1011</Name>
+      <Description>Multithread Group 1011</Description>
+			<Type>poll</Type>
+			<Content>
+			</Content>
+		</Group>
+```
+
 To build the request, create a QAction triggered by a multi-threaded timer (using the qactionBefore option), which creates the request object and returns this.
 
 ```xml
@@ -172,7 +183,7 @@ public class QAction
             {
                 string communicationState = Convert.ToString(result);
                 
-                if (communicationState != "TIMEOUT" && communicationState != "NO POLLING OCCURRED")
+                if (communicationState != "TIMEOUT" && communicationState != "NO POLLING OCCURED")
                 {
                     object[] responses = (object[])result;
                 
