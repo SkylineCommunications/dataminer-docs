@@ -4,7 +4,7 @@ uid: DataMiner.LDAP.User.PhoneField
 
 # PhoneField element
 
-Specifies the user’s fixed phone number.
+Specifies the user's fixed phone number.
 
 ## Content Type
 

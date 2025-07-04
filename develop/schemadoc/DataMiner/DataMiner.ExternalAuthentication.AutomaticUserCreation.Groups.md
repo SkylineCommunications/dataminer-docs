@@ -22,4 +22,4 @@ string
 
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| [claims](xref:DataMiner.ExternalAuthentication.AutomaticUserCreation.Groups-claims) | boolean |  | Speficies whether claims are used. |
+| [claims](xref:DataMiner.ExternalAuthentication.AutomaticUserCreation.Groups-claims) | boolean |  | Specifies whether claims are used. |

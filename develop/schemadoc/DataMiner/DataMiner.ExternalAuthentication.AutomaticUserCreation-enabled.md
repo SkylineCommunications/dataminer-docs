@@ -4,7 +4,7 @@ uid: DataMiner.ExternalAuthentication.AutomaticUserCreation-enabled
 
 # enabled attribute
 
-Speficies whether automatic user creation is enabled.
+Specifies whether automatic user creation is enabled.
 
 ## Content Type
 

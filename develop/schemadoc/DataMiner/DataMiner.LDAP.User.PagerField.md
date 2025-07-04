@@ -4,7 +4,7 @@ uid: DataMiner.LDAP.User.PagerField
 
 # PagerField element
 
-Specifies the user’s pager number.
+Specifies the user's pager number.
 
 ## Content Type
 

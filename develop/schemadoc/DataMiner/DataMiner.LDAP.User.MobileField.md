@@ -4,7 +4,7 @@ uid: DataMiner.LDAP.User.MobileField
 
 # MobileField element
 
-Specifies the mobile phone number.
+Specifies the user's mobile phone number.
 
 ## Content Type
 

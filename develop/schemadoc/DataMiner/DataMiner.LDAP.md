@@ -4,7 +4,9 @@ uid: DataMiner.LDAP
 
 # LDAP element
 
-Contains the LDAP configuration. See [Configuring LDAP settings](xref:Configuring_LDAP_settings).
+Contains the LDAP configuration.
+
+See [Configuring LDAP settings](xref:Configuring_LDAP_settings)
 
 ## Parents
 

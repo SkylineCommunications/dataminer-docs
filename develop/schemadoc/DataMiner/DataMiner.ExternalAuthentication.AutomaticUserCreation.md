@@ -12,7 +12,7 @@ uid: DataMiner.ExternalAuthentication.AutomaticUserCreation
 
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| [enabled](xref:DataMiner.ExternalAuthentication.AutomaticUserCreation-enabled) | boolean |  | Speficies whether automatic user creation is enabled. |
+| [enabled](xref:DataMiner.ExternalAuthentication.AutomaticUserCreation-enabled) | boolean |  | Specifies whether automatic user creation is enabled. |
 
 ## Children
 

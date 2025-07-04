@@ -14,7 +14,7 @@ Configures IP related settings.
 
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| [skipMAC](xref:DataMiner.IP-skipMAC) | string |  | Configures DataMiner to ignore certain network adapters, so that these will not be considered as a local network interface. Multiple addresses can be specified by using a ";" separator. |
+| [skipMAC](xref:DataMiner.IP-skipMAC) | string |  | Configures DataMiner to ignore certain network adapters so that these will not be considered as a local network interface.<br>Multiple addresses can be specified using ";" separators. |
 
 ## Children
 

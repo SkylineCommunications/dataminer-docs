@@ -4,7 +4,9 @@ uid: DataMiner.LDAP.QueryTimeout
 
 # QueryTimeout element
 
-Specifies the number of seconds after which an individual LDAP request will time out. Default: 300.
+Specifies the number of seconds after which an individual LDAP request will time out.
+
+Default: 300
 
 ## Content Type
 

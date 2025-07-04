@@ -4,7 +4,7 @@ uid: DataMiner.DMA.Location3
 
 # Location3 element
 
-Specifies location information about this Agent.
+Specifies location information for this DataMiner Agent.
 
 ## Content Type
 

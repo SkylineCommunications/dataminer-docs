@@ -5,7 +5,8 @@ uid: DataMiner.Colors
 # Colors element
 
 Specifies the colors assigned to each of the alarm levels.
-See [Changing the default alarm colors](xref:Changing_the_default_alarm_colors).
+
+See [Changing the default alarm colors](xref:Changing_the_default_alarm_colors)
 
 ## Parents
 
@@ -38,5 +39,4 @@ In the following example, the default alarm colors have been configured:
     <Color type="information" value="204,204,204"/>
   </Colors>
 </DataMiner>
-
 ```

@@ -4,7 +4,7 @@ uid: DataMiner.LDAP.User.DescriptionField
 
 # DescriptionField element
 
-Specifies the user’s description.
+Specifies the user's description.
 
 ## Content Type
 

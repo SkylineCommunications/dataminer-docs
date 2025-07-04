@@ -4,7 +4,9 @@ uid: DataMiner.LDAP.User.Classname
 
 # Classname element
 
-Specifies the object class(es) that identify users. Multiple values can be separated with pipe characters ("|").
+Specifies the object class/classes that identifies/identify users.
+
+Multiple values can be separated by pipe characters ("|").
 
 ## Content Type
 
