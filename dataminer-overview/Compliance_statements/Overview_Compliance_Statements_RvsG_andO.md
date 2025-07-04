@@ -32,7 +32,7 @@ This applies to any type of project, no matter which technology or industry segm
 
 Each project therefore typically starts with specific goals and objectives of the organization, which are then translated into a first preliminary set of "requirements" by the internal users, collected throughout the organization. The latter can be limited or quite elaborate.
 
-![Evolution from goals & objectives to implementation](~/dataminer-overview/images/REQ_G_and_O.png)
+![Evolution from goals & objectives to implementation](~/user-guide/images/REQ_G_and_O.png)
 
 Because of the nature of software ICT projects, those requirements will never be fully accurate, nor will they ever be conclusive. They neither have to be nor should be. As a consequence of the complexity of a software ICT ecosystem and the general challenge for users to express their exact needs accurately, many (often very implicit) assumptions are made during the drafting of requirements. Typically, important requirements and expectations will be missing, and other requirements that have been stipulated will turn out to be less relevant than initially thought. Some activities will turn out to be more complex to achieve (e.g. because of unexpected limitations of an underlying API), while others might turn out to be more reasonable than expected.
 

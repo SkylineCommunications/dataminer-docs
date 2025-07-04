@@ -10,7 +10,7 @@ Today, this must be accomplished in a world empowered by transformational techno
 
 Therefore, Skyline’s mission translates directly into ensuring that you can **build and operate a powerful, agile data-driven operation**, an operation that can evolve and adapt continuously by leveraging all these **transformational technologies** to the maximum extent, easily and securely.
 
-![DataMinerDevOpsEnablement](~/dataminer-overview/images/DataMinerDevOpsEnablement.png)
+![DataMinerDevOpsEnablement](~/user-guide/images/DataMinerDevOpsEnablement.png)
 
 Achieving this requires more than simply deploying these transformational technologies to deliver your services. After all, **building a properly architected overall technology stack** with these transformational technologies is of key importance as well.
 

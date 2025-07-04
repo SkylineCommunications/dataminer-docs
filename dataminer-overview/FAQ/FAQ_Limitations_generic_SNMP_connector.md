@@ -28,8 +28,8 @@ In summary, the Generic SNMP connector is to be used for very simple devices tha
 
 For example, below you can find two elements that monitor a laptop computer ("System Uptime" is highlighted). The first one uses the Generic SNMP connector, while the second one uses the Microsoft Platform SNMP connector.
 
-![Generic SNMP connector](~/dataminer-overview/images/FAQ_Generic_SNMP_connector.png)<br>
+![Generic SNMP connector](~/user-guide/images/FAQ_Generic_SNMP_connector.png)<br>
 *Generic SNMP connector*
 
-![Dedicated connector/connector](~/dataminer-overview/images/FAQ_Dedicated_connector.png)<br>
+![Dedicated connector/connector](~/user-guide/images/FAQ_Dedicated_connector.png)<br>
 *Dedicated connector*

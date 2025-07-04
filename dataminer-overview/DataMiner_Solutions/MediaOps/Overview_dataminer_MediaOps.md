@@ -14,7 +14,7 @@ dataminer.MediaOps seamlessly blends information and communication technology (I
 
 While dataminer.MediaOps encompasses the entire media operation, it allows each tenant — whether within the organization or external stakeholders like customers, contractors, network providers, rental companies, and reporters — to work independently within their designated area, while maintaining seamless harmony with other teams.
 
-![MediaOps for planned, live, and file-based operations](~/dataminer-overview/images/mediaops_plan_live_file.png)
+![MediaOps for planned, live, and file-based operations](~/user-guide/images/mediaops_plan_live_file.png)
 
 ## Who can benefit from dataminer.MediaOps?
 

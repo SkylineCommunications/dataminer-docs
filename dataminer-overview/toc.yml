@@ -31,18 +31,11 @@ items:
           topicUid: DM_selfhosted_and_StaaS
         - name: Self-managed DataMiner nodes and storage nodes (not recommended)
           topicUid: DM_and_storage_selfhosted
-    - name: dataminer.services
-      topicUid: Overview_dataminer_services
-      items:
-        - name: DevOps
-          topicUid: Overview_DevOps
-        - name: Platform Services
-          topicUid: Overview_Platform_services
-        - name: Collaboration
-          topicUid: Overview_Collaboration
     - name: Stack functions
       topicUid: Overview_Stack_Functions
       items:
+        - name: dataminer.services
+          topicUid: Overview_dataminer_services
         - name: Orchestration
           topicUid: Stack_Orchestration
         - name: Data Management

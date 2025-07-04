@@ -36,7 +36,7 @@ An agile partnership needs to detail the deployment methodology. The overview be
 
 ## High-level Overview
 
-![High-level overview of agile scope-based deployment](~/dataminer-overview/images/ASB_methodology.png)<br>
+![High-level overview of agile scope-based deployment](~/user-guide/images/ASB_methodology.png)<br>
 *Open this image in a new tab to view the full resolution.*
 
 The Agile Scope-Based project methodology is most suitable for projects with **well-defined goals and objectives** (i.e. high-level requirements) but which at the same time also still have **many unknown factors**, both from user expectation and technical implementation perspective (e.g. ambiguous requirements, no well-defined exact user expectations, unknown technical dependencies, etc.). At the same time, it fits with any projects that have the ambition to put the best possible DataMiner solution in place within a **fixed time frame and a well-defined fixed budget**, which will effectively but also reasonably live up to the expectations defined in the goals and high-level requirements.

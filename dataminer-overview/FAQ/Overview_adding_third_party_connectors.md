@@ -4,7 +4,7 @@ uid: Overview_adding_third_party_connectors
 
 # How are third-party connectors added?
 
-On request, anyone can add a connector to the [Catalog](xref:Overview_DevOps#catalog). See [Registering a Catalog item](xref:Register_Catalog_Item).
+On request, anyone can add a connector to the [Catalog](xref:About_the_Catalog_app). See [Registering a Catalog item](xref:Register_Catalog_Item).
 
 1. Complimentary (i.e. free) Skyline Communications service to add a connector to the Catalog:
 

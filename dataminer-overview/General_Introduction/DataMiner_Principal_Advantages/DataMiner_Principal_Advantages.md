@@ -6,7 +6,7 @@ uid: Overview_Principal_Advantages
 
 DataMiner converts flexible new technologies into one consolidated operational platform and gives you the agility to continuously evolve in a fast-changing world with many unknowns.
 
-![Advantages](~/dataminer-overview/images/DA_advantages.png)
+![Advantages](~/user-guide/images/DA_advantages.png)
 
 DataMiner is a solution that unconditionally ensures a powerful end-to-end perspective on your complete operation, cutting right through any vendor and technology domains, from service origin to destination.
 
