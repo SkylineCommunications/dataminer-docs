@@ -61,7 +61,7 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/user-guide/Advanced_Modules/Job_Manager/Job_Manager.html" title="Job Manager" target="_self"><img src="~/user-guide/images/Job_Manager.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Maps/About_DMS_Maps.html" title="Maps" target="_self"><img src="~/user-guide/images/Maps.svg" style="width:100%"></a>
+    <a href="/user-guide/Advanced_Modules/Maps/About_DMS_Maps.html" title="Maps" target="_self"><img src="~/user-guide/images/Maps2.svg" style="width:100%"></a>
   </div>
 </div>
 
