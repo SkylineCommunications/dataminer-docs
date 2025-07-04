@@ -52,6 +52,12 @@ When some action would fail during one of the phases of an element migration, up
 
 From now on, elements will only be deleted once all steps in the migration process have been completed successfully. Moreover, if a step in the process fails after an element has been deleted, it will now be possible to manually recover the deleted element.
 
+#### Problem when restarting an element multiple times in rapid succession [ID 42996]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When an element was restarted multiple times in rapid succession, in some cases, an run-time error could occur in the parameter thread of SLElement.
+
 #### Problem when stopping an element or performing a Failover switch when another action was being executed [ID 43089]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
