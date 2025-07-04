@@ -6,8 +6,6 @@ uid: Stack_Data_Aggregation
 
 ***Merge complex data streams into actionable insights.***
 
-![stack.functions.categories](~/dataminer-overview/images/stack_data_aggregation.png)
-
 ## Data Aggregation
 
 Summarize data from multiple sources.

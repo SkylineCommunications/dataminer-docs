@@ -4,7 +4,7 @@ uid: Overview_dataminer_services
 
 # dataminer.services
 
-![dataminer.services.categories](~/dataminer-overview/images/dataminer.services_visual.png)
+![dataminer.services.categories](~/user-guide/images/dataminer.services_visual.png)
 
 Connecting your DataMiner System to dataminer.services opens up a new world of possibilities with respect to how DataMiner integrations are done and how interactions with partners, customers, and technology vendors take place. It is not just a service, it is a **catalyst for digital transformation**, driving your business towards a brighter, more connected future.
 

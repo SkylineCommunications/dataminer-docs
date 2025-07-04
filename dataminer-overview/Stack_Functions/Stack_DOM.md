@@ -6,8 +6,6 @@ uid: Stack_DOM
 
 ***Enrich your operations with administrative and business-related data.***
 
-![stack.functions.categories](~/dataminer-overview/images/stack_DOM.png)
-
 ## Process Automation
 
 Automate complex business processes.

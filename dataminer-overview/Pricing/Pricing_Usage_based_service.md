@@ -59,7 +59,7 @@ An "organization" is the billing entity and the highest level in the hierarchy i
 > [!NOTE]
 > Though we recommend having one organization per company, there is no limit to the number of organizations that can be created under the same company. This might be useful in the following scenarios: test or development accounts, managing multiple concurrent subscriptions on number of credits, or large companies with an Enterprise Agreement with multiple billing entities.
 
-![Business organization overview](~/dataminer-overview/images/Business_organization_Overview.png)
+![Business organization overview](~/user-guide/images/Business_organization_Overview.png)
 
 ### Usage terms
 

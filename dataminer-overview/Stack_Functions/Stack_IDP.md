@@ -6,8 +6,6 @@ uid: Stack_IDP
 
 ***Manage and automate all your network implementation workflows.***
 
-![stack.functions.categories](~/dataminer-overview/images/stack_IDP.png)
-
 ## Config Provisioning
 
 Setting up IT infrastructure.

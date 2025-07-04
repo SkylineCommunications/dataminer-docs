@@ -6,8 +6,6 @@ uid: Stack_Data_Connectivity
 
 ***Configure and visualize signal paths throughout your infrastructure.***
 
-![stack.functions.categories](~/dataminer-overview/images/stack_data_connectivity.png)
-
 ## Router Control
 
 Easily manage signal routes.

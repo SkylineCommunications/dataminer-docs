@@ -9,7 +9,7 @@ DataMiner's architecture makes it extremely resilient to all types of failures, 
 
 DataMiner is deployed starting from [dataminer.services](xref:Overview_dataminer_services). The core software can be deployed either as a managed service ([DaaS](xref:DaaS_hosting)) or via [private cloud or on-premises deployment](xref:DM_selfhosted_and_StaaS). Both options by default use Storage as a Service ([STaaS](xref:DaaS_hosting#effortless-storage-with-staas)).
 
-![DataMiner deployment models](~/dataminer-overview/images/DataMiner_Stack_deployment_models.png)
+![DataMiner deployment models](~/user-guide/images/DataMiner_Stack_deployment_models.png)
 
 Each of the different hosting possibilities has its own strengths in term of redundancy and high-availability options:
 

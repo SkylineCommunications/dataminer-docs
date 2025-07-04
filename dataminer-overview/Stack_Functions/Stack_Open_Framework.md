@@ -6,8 +6,6 @@ uid: Stack_Open_Framework
 
 ***Enable easy and secure integration with data from any source or system.***
 
-![stack.functions.categories](~/dataminer-overview/images/stack_open_framework.png)
-
 ## User-Defined APIs
 
 Create RESTful APIs on the fly, tailored to your use case.

@@ -6,8 +6,6 @@ uid: Stack_SLA_Management
 
 ***Reduce operational expenses and ensure that business stakes are always taken into account.***
 
-![stack.functions.categories](~/dataminer-overview/images/stack_SLA_management.png)
-
 ## SLA Management
 
 ***Automate, track, and measure the digital processes that a key relationship depends on.***

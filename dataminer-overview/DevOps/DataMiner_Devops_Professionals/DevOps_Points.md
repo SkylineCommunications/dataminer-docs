@@ -8,7 +8,7 @@ To maintain a DataMiner DevOps Professional status and to be an official member 
 
 There are three levels available for DataMiner DevOps Professionals, with *Advocate* being the entry level and *Catalyst* being the top tier.
 
-![DevOps Points](~/dataminer-overview/images/DevOps_Timeline.svg)
+![DevOps Points](~/user-guide/images/DevOps_Timeline.svg)
 
 | **ADVOCATE** | **ENABLER** | **CATALYST** |
 |--|--|--|
@@ -97,13 +97,13 @@ Example:
 
 - Upon reaching your first anniversary on April 12, 2024, you have earned a total of 7600 DevOps Points. Your annual DevOps Points are reset to zero, but you retain your Enabler level, at least until the next renewal comes around. To maintain this status by then, you will need to accumulate at minimum 5000 DevOps Points again before April 12, 2025.
 
-  ![DevOpsPointsLifeCycle](~/dataminer-overview/images/DevOps_Life_Cycle1.svg)
+  ![DevOpsPointsLifeCycle](~/user-guide/images/DevOps_Life_Cycle1.svg)
 
 - By August 13th, 2024, you have earned 750 DevOps Points, already ensuring your Advocate status at the end of the 12-month period, on April 12, 2025. Of course, while you have reached the Advocate status again, you still remain an Enabler, as this was the level you obtained during your previous membership year.
 
 - Upon reaching your second anniversary on April 12, 2025, you have earned a total of 4300 DevOps Points. You did not accumulate the required 5000 Points to retain the Enabler level within a 12-month period. Consequently, you are now demoted to the Advocate level. To retain this level, you will need to collect 750 DevOps Points before April 12, 2026.
 
-  ![DevOpsPointsLifeCycle2](~/dataminer-overview/images/DevOps_Life_Cycle2.svg)
+  ![DevOpsPointsLifeCycle2](~/user-guide/images/DevOps_Life_Cycle2.svg)
 
 - By June 5th, 2026, you have earned 750 DevOps Points, ensuring your Advocate status for the next renewal.
 
@@ -111,4 +111,4 @@ Example:
 
 - Upon reaching your third anniversary on April 12, 2026, you have earned a total of 7500 DevOps Points and will therefore retain the Enabler level at least until the next renewal on April 12, 2027.
 
-  ![DevOpsPointsLifeCycle3](~/dataminer-overview/images/DevOps_Life_Cycle3.svg)
+  ![DevOpsPointsLifeCycle3](~/user-guide/images/DevOps_Life_Cycle3.svg)
