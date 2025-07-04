@@ -112,7 +112,7 @@ When using the GQI DxM, ad hoc data sources and custom operators will now be abl
 
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
 
-<!-- MR 10.4.0 [CU18] - FR 10.5.9 -->
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When, on a system running multiple SLScripting processes, a connector was modified, but its version was left untouched, in some cases, a number of SLScripting processes could incorrectly keep on using outdated QActions or helper libraries, resulting in exceptions like the following being thrown:
 
