@@ -22,7 +22,7 @@ Additionally, DataMiner Augmented Operations reduce setup and configuration time
 > [!NOTE]
 > Are you struggling with something? Are there use cases you want us to tackle? Or do you simply have a great idea on how to improve DataMiner’s AI capabilities? Then [**let's talk AI**](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states/) and [**share your thoughts with Team AI**](https://community.dataminer.services/skylines-ai-team-wants-to-hear-from-you/).
 
-## Trend Prediction
+## Trend prediction
 
 **Automatic prediction on any numeric metric with enabled time tracing.**
 
@@ -37,11 +37,11 @@ The AI-powered forecasting functionality automatically learns the behavior and e
 > - Video: [Behold DataMiner AI Trend Forecasting](https://www.youtube.com/watch?v=OeE5sPKQ_Yg) ![Video](~/user-guide/images/video_Duo.png)
 > - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 
-## Proactive Alarms
+## Proactive alarms
 
 **Proactively detect critical highs and lows before they occur.**
 
-The proactive cap detection solution uses the Trend Prediction functionality to provide an automated risk analysis for metrics that are likely to hit important key values. By continuously monitoring and modeling the trend of the metrics, proactive cap detection will give the user an early warning if it predicts problems for a metric in the future. This enables a proactive way of tackling emerging issues and prevents issues from affecting services.
+The proactive cap detection solution uses the trend prediction functionality to provide an automated risk analysis for metrics that are likely to hit important key values. By continuously monitoring and modeling the trend of the metrics, proactive cap detection will give the user an early warning if it predicts problems for a metric in the future. This enables a proactive way of tackling emerging issues and prevents issues from affecting services.
 
 > [!TIP]
 > For more information:
@@ -50,7 +50,7 @@ The proactive cap detection solution uses the Trend Prediction functionality to 
 > - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Proactive Cap Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
 
-## Pattern Detection
+## Pattern detection
 
 **Automated application of tags to describe content.**
 
@@ -61,11 +61,10 @@ Based on AI pattern matching algorithms, instances of tagged patterns are automa
 > [!TIP]
 > For more information:
 >
-> - Course: [Pattern Matching](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/pattern-matching/)
+> - Course: [Pattern matching](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/pattern-matching/)
 > - [DataMiner Automated Tagging use case 1](https://community.dataminer.services/use-case/dataminer-automatic-pattern-detection/)
 > - [DataMiner Automated Tagging use case 2](https://community.dataminer.services/use-case/automatic-tag-detection/)
 > - Video about [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) (covering Automated Tagging, among others) ![Video](~/user-guide/images/video_Duo.png)
-> - Blog post about [Pattern Matching in DataMiner 10.1](https://community.dataminer.services/pattern-matching-10-1-update/)
 > - Blog post about [Multivariate Pattern Matching](https://community.dataminer.services/using-the-power-of-multivariate-patterns-to-add-context-to-your-trend-graphs/)
 > - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 > - [Working with pattern matching](xref:Working_with_pattern_matching)
@@ -74,7 +73,7 @@ Based on AI pattern matching algorithms, instances of tagged patterns are automa
 
 **Automatic detection of changes in metric behavior.**
 
-DataMiner’s change point detection solution automatically identifies both abrupt and subtle behavioral changes in the trend data of individual performance metrics in (semi) real time. Detection of a change in level, trend, or variance can be applied for early fault detection, as a user can be warned about previously unseen or rare behavior. Knowledge of change points also proves useful in improving the modeling and prediction of the metric behavior, and in the automatic detection of relationships between metrics or DataMiner objects.
+DataMiner's change point detection solution automatically identifies both abrupt and subtle behavioral changes in the trend data of individual performance metrics in (semi) real time. Detection of a change in level, trend, or variance can be applied for early fault detection, as a user can be warned about previously unseen or rare behavior. Knowledge of change points also proves useful in improving the modeling and prediction of the metric behavior, and in the automatic detection of relationships between metrics or DataMiner objects.
 
 > [!TIP]
 > For more information:
@@ -110,15 +109,13 @@ The Automatic Incident Tracking feature autonomously learns about system behavio
 >
 > - Course: [Incident Tracking](https://community.dataminer.services/courses/dataminer-augmented-operations/lessons/incident-tracking/)
 > - Video: [Focus on the Root of Issues with Incident Analysis](https://www.youtube.com/watch?v=m6ITgtTFz1E) ![Video](~/user-guide/images/video_Duo.png)
-> - Blog post about [Automatic Incident Detection](https://community.dataminer.services/tweak-automatically-detected-incidents-with-dataminer-10-2-5/)
 > - [Automatic Incident Tracking](xref:Automatic_incident_tracking)
 
 ## Focus Alarms
 
 **Automatic alarm noise reduction.**
 
-Based on an analysis of the alarm history and its patterns, the focused alarms option reduces alarm noise and allows easy focus on the events and incidents that are truly impactful.
-Focus alarms only show the "unexpected" alarms and ignore recurring alarms due to bad template configuration.
+Based on an analysis of the alarm history and its patterns, the focused alarms option reduces alarm noise and allows easy focus on the events and incidents that are truly impactful. Focus alarms only show the "unexpected" alarms and ignore alarms that keep recurring because of a bad template configuration.
 
 > [!TIP]
 > For more information:

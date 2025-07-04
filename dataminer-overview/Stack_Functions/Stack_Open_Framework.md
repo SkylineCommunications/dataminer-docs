@@ -25,7 +25,7 @@ Select or create an Automation script, and with only a few clicks, you can publi
 The DataMiner Web Services API is northbound accessible for third-party applications.
 
 > [!TIP]
-> More information is available in the user guide:
+> For more information:
 >
 > - [DataMiner interfaces](xref:DataMiner_interfaces)
 > - [Using the Web Services](xref:Using_the_Web_Services_v1)

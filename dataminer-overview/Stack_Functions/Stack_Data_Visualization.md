@@ -154,12 +154,9 @@ DataMiner Dashboards enable operators to efficiently leverage the extensive, val
 
 With the Dashboards app, you can **create, manage, and view** dashboards that display a **wealth of information** about the managed system.
 
-Moreover, dashboards adhere to DevOps principles and can easily evolve over time at runtime. They can even be **shared with just about anybody outside of the company** through [dataminer.services](xref:Overview_dataminer_services). Our built-in security functionality allows you control over the data you share, enabling you to determine which data is shared, with whom, and for how long.
+Moreover, dashboards adhere to DevOps principles and can easily evolve over time at runtime. They can even be **[shared with just about anybody](xref:Overview_dataminer_services#dashboard-sharing) outside of the company** through [dataminer.services](xref:Overview_dataminer_services). Our built-in security functionality allows you control over the data you share, enabling you to determine which data is shared, with whom, and for how long.
 
-> [!TIP]
-> See [Dashboard Share](xref:Overview_Collaboration#dashboard-share) for more information.
-
-The DataMiner Dashboards app offers a wide range of visualizations that can make use of various data, including **GQI-based queries**. This "Queries" data item allows you to [construct queries](xref:Creating_GQI_query) to access the wealth of data available in your DataMiner System. See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi)
+The DataMiner Dashboards app offers a wide range of visualizations that can make use of various data, including **GQI-based queries**. This "Queries" data item allows you to [construct queries](xref:Creating_GQI_query) to access the wealth of data available in your DataMiner System. See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi).
 
 > [!TIP]
 > For more information:

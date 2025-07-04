@@ -8,7 +8,9 @@ A **modular architecture** allows for customization of modules and the addition 
 
 The DataMiner stack functions are the **foundation of your data-driven operation**. They offer unparalleled flexibility and make it easy to create powerful solutions by allowing you to **cherry-pick the building blocks you need**. Plus, their modular architecture lets you build a **scalable** operation and integrate with third-party applications and services. This gives you the flexibility to create better, faster, and cheaper solutions.
 
-The stack functions are grouped in **several categories**, based on a shared value:
+The stack functions are grouped in **several categories**:
+
+- The [**dataminer.services**](xref:Overview_dataminer_services) category includes all the functions you get access to when your DataMiner System is connected to dataminer.services.
 
 - The [**Orchestration**](xref:Stack_Orchestration) category offers powerful automation and orchestration functions, to maximize efficiency.
 
