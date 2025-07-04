@@ -53,7 +53,21 @@ At present, the following types of Catalog items are supported:
 
 ### Versioning of Catalog items
 
-Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [semantic versioning](https://semver.org/) is recommended. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
+Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [Semantic Versioning 2.0.0](https://semver.org/) is recommended. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
+
+#### Semantic versioning format
+
+Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
+
+- **A (MAJOR)**: Incremented for incompatible changes that may require user action
+- **B (MINOR)**: Incremented for new functionality added in a backward-compatible manner  
+- **C (PATCH)**: Incremented for backward-compatible bug fixes
+
+When introducing a new version range, the PATCH version (C) should always start at 0, not 1.
+
+**Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
+
+#### Version ranges
 
 For Catalog items that follow semantic versioning, versions are grouped by **range**. Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.<!-- RN 41243 -->
 
