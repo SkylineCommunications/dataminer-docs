@@ -59,11 +59,14 @@ Catalog items can have multiple versions. To make sure that the versioning of it
 
 Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
 
-- **A (MAJOR)**: Incremented for incompatible changes that may require user action
+- **A (MAJOR)**: Incremented for incompatible changes that may require user action, breaking changes, or major architectural redesign
 - **B (MINOR)**: Incremented for new functionality added in a backward-compatible manner  
 - **C (PATCH)**: Incremented for backward-compatible bug fixes
 
 When introducing a new version range, the PATCH version (C) should always start at 0, not 1.
+
+> [!NOTE]
+> While people often use a suffix 'CU1' (e.g., 1.2.3-CU1), this should be used rather exceptionally. The only time where it can be used is when there was a release, but suddenly after the first deploy there is a critical issue. At that time, you should 'unlist' the released version and release a new cumulative update.
 
 **Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
 
