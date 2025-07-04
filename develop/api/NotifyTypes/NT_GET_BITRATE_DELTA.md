@@ -24,7 +24,7 @@ int delta = Convert.ToInt32(protocol.NotifyProtocol(269/*NT_GET_BITRATE_DELTA*/,
 
 - When a retry is performed because of a timeout, this will be considered a new execution of the group.
 
-- While it possible to retrieve the time delta per row when polling an SNMP table, this will only work for the multipleGetNext and multipleGetBulk polling schemes, since only these polling schemes retrieve entire rows per request.<!-- RN 29445 -->
+- While it possible to retrieve the time delta per row when polling an SNMP table, this will only work for the **GetNext + MultipleGet (row-based)**, **MultipleGetNext** and **MultipleGetBulk** polling schemes, since only these polling schemes retrieve entire rows per request.<!-- RN 29445 -->
 
   We recommend enabling this feature at startup using the notify protocol command NT_SET_BITRATE_DELTA_INDEX_TRACKING (see [NT_SET_BITRATE_DELTA_INDEX_TRACKING (448)](xref:NT_SET_BITRATE_DELTA_INDEX_TRACKING)) with either a single parameter ID or multiple parameter IDs. This information will not be saved and will only be kept as long as the element is running.
 
