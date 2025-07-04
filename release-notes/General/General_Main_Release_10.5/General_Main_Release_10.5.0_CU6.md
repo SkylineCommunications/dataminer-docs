@@ -117,13 +117,3 @@ Also, from now on, the primary IP address of the offline agent will be set to ei
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, up to now, the start-up process would fail abruptly because of an unhandled exception in SLNet. From now on, it will fail gracefully.
-
-#### GQI DxM: Admin connection would incorrectly be allowed to expire [ID 43290]
-
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
-
-If the GQI DxM is used with an admin connection, its underlying persistent system connection is used to handle any requests or subscriptions towards SLNet.
-
-Up to now, when the admin connection had been idle for at least 1 minute after being used, the underlying system connection would automatically close the admin connection, causing the GQI DxM to unsubscribe from NATS and close all sessions and extension workers.
-
-From now on, the admin connection will no longer expire, and will no longer be automatically closed by the underlying system connection.

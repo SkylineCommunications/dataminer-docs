@@ -185,3 +185,13 @@ In some cases, the `C:\Skyline DataMiner\Webpages\API\Web.config` file could con
 Up to now, when an error occurred in the `OnInit` life cycle method, the `OnDestroy` life cycle method would still be called to clean up resources.
 
 From now on, when something goes wrong in the `OnInit` life cycle method, the `OnDestroy` life cycle method will no longer be called.
+
+#### GQI DxM: Admin connection would incorrectly be allowed to expire [ID 43290]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+If the GQI DxM is used with an admin connection, its underlying persistent system connection is used to handle any requests or subscriptions towards SLNet.
+
+Up to now, when the admin connection had been idle for at least 1 minute after being used, the underlying system connection would automatically close the admin connection, causing the GQI DxM to unsubscribe from NATS and close all sessions and extension workers.
+
+From now on, the admin connection will no longer expire, and will no longer be automatically closed by the underlying system connection.
