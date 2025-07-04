@@ -8,7 +8,7 @@ Configures the number of SLPort processes.
 
 ## Content Type
 
-int
+integer
 
 ## Parents
 

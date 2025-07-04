@@ -4,7 +4,7 @@ uid: DataMiner.ProcessOptions.SeparateProcesses
 
 # SeparateProcesses element
 
-Defines the protocols that should run in separate SLProtocol and SLScripting instance.
+Defines the protocols that should run in separate SLProtocol and SLScripting instances.
 
 ## Parents
 

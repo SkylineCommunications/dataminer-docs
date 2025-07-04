@@ -4,7 +4,9 @@ uid: DataMiner.SMTP
 
 # SMTP element
 
-Configures outgoing mail. See [Configuring outgoing email](xref:Configuring_outgoing_email).
+Configures outgoing mail.
+
+See [Configuring outgoing email](xref:Configuring_outgoing_email)
 
 ## Parents
 
@@ -15,7 +17,7 @@ Configures outgoing mail. See [Configuring outgoing email](xref:Configuring_outg
 | Name | Occurrences | Description |
 | --- | --- | --- |
 | All |  |  |
-| &#160;&#160;[From](xref:DataMiner.SMTP.From) | [0, 1] | Configures a custom “From” address that will override the default “From” address specified in the DataMiner Agent interface. |
+| &#160;&#160;[From](xref:DataMiner.SMTP.From) | [0, 1] | Configures a custom "From" address that will override the default "From" address specified in the DataMiner Agent interface. |
 | &#160;&#160;[Helo](xref:DataMiner.SMTP.Helo) | [0, 1] | Specifies the fully qualified domain name of the client, which will be sent to the SMTP server in the HELO command. |
 | &#160;&#160;[Host](xref:DataMiner.SMTP.Host) | [0, 1] | Specifies the name or IP address of the SMTP server. |
 | &#160;&#160;[HostPort](xref:DataMiner.SMTP.HostPort) | [0, 1] | Specifies the port. |

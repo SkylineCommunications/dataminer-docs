@@ -4,11 +4,11 @@ uid: DataMiner.SNMP-informCacheSize
 
 # informCacheSize attribute
 
-Specifies the number of inform message that are cached per SNMP entity by DataMiner.
+Specifies the number of inform messages that are cached per SNMP entity by DataMiner.
 
 ## Content Type
 
-int
+integer
 
 ## Parents
 

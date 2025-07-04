@@ -8,7 +8,7 @@ The port to connect to the LDAP server.
 
 ## Content Type
 
-int
+integer
 
 ## Parents
 

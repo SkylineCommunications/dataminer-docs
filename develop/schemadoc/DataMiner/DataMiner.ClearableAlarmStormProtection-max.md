@@ -10,7 +10,7 @@ Default: 1000
 
 ## Content Type
 
-int
+integer
 
 ## Parents
 

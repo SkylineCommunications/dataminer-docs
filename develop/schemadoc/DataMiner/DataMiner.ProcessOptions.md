@@ -4,7 +4,9 @@ uid: DataMiner.ProcessOptions
 
 # ProcessOptions element
 
-Configures the DataMiner processes. See [Configuration of DataMiner processes](xref:Configuration_of_DataMiner_processes)
+Configures the DataMiner processes.
+
+See [Configuration of DataMiner processes](xref:Configuration_of_DataMiner_processes)
 
 ## Parents
 
@@ -22,4 +24,4 @@ Configures the DataMiner processes. See [Configuration of DataMiner processes](x
 
 | Name | Occurrences | Description |
 | --- | --- | --- |
-| [SeparateProcesses](xref:DataMiner.ProcessOptions.SeparateProcesses) | [0, 1] | Defines the protocols that should run in separate SLProtocol and SLScripting instance. |
+| [SeparateProcesses](xref:DataMiner.ProcessOptions.SeparateProcesses) | [0, 1] | Defines the protocols that should run in separate SLProtocol and SLScripting instances. |

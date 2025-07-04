@@ -4,7 +4,7 @@ uid: DataMiner.Logging.DaysToKeep
 
 # DaysToKeep element
 
-Specifies how many days log files are kept in the folder `C:\Skyline DataMiner\Logging`.
+Specifies how many days log files are kept in the `C:\Skyline DataMiner\Logging` folder.
 
 ## Content Type
 

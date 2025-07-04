@@ -31,15 +31,10 @@ This can be done in two ways:
 - By specifying one of the following predefined QoS traffic types (in ascending order of priority):
 
   - Background
-
   - BestEffort (default DiffServ marker)
-
   - ExcellentEffort
-
   - AudioVideo
-
   - Voice
-
   - Control
 
   Example:
@@ -69,7 +64,6 @@ This can be done in two ways:
   For more information, see:
 
   - <https://en.wikipedia.org/wiki/Differentiated_services#Class_Selector>
-
   - <https://tools.ietf.org/html/rfc2474>
 
   > [!NOTE]
