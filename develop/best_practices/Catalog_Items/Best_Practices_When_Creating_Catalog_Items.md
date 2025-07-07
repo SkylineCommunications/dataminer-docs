@@ -34,20 +34,42 @@ You can optimize the visibility of your Catalog item by making sure the [**Manif
 
 ## Optimize the accessibility of your Catalog item
 
-- Help users understand what your Catalog item is, what it does, and what it looks like, by **adding documentation**. This will be shown in the item's description. For details, refer to [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
+### Add clear and attractive documentation
 
-- When you release a version of a Catalog item, make sure to **adhere to [semantic versioning (A.B.C)](xref:About_the_Catalog_app#versioning-of-catalog-items)**.
+Help users understand what your Catalog item is, what it does, and what it looks like, by **adding documentation**. This will be shown in the item's description. For details, refer to [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
 
-  Using a postfix (such as -CU1) is only necessary in exceptional circumstances (e.g. if you released a version that you immediately unlisted because of a severe bug. You should not delete such a version, but unlist it. Once a fix has been made, it is appropriate to use CU to clarify the situation to users).
+### Use semantic versioning
 
-  For the version description, clearly state what has changed, and if there are bug fixes or new features. Use the following phrases as appropriate: "Change:", "Fix:", "New Feature:". Each phrase can be used multiple times.
+When you release a version of a Catalog item, make sure to **adhere to semantic versioning** to ensure clarity and predictability for users. Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
 
-- Use the appropriate **state for the range** (*Active*, *Main*, custom tag, or *Deprecated*):
+- **A (MAJOR)**: Incremented for incompatible changes, breaking changes, or major architectural redesigns that may require user action.
 
-  - As a rule of thumb, there should be **only one Main range**, and as **few *Active* ranges as possible**.
-  - When a range is *Active*, this indicates that the range is still being maintained and bug fixes should always be added to these ranges.
-  - The *Main* range indicates the latest and most recommended range to install.
-  - Custom tags on a range should only be used in exceptional cases, where two ranges might be considered but each has its specifics.
+- **B (MINOR)**: Incremented for new functionality added in a backward-compatible manner.
+
+- **C (PATCH)**: Incremented for backward-compatible bug fixes. When a new version range is introduced, the PATCH version (C) should always start at 0, not 1.
+
+**Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
+
+> [!NOTE]
+> The "CUx" suffix (e.g. 1.2.3-CU2) should only be used exceptionally, in case a critical issue is discovered after a release deployment. In such cases, the released version should be unlisted and a new cumulative update should be released.
+
+### Use clear version descriptions
+
+When you add a new version of a Catalog item, in the version description, clearly state what has changed and if there are bug fixes or new features. Use the following phrases as appropriate: "Change:", "Fix:", "New Feature:". Each phrase can be used multiple times.
+
+### Make sure ranges are tagged correctly
+
+For Catalog items that follow semantic versioning, versions are grouped by range. Tags can be assigned to specific versions and ranges, for instance to indicate the main range of a connector.
+
+Some rules of thumb:
+
+- There should be **only one Main range**, and as **few *Active* ranges as possible**.
+- When a range is *Active*, this indicates that the range is still being maintained and bug fixes should always be added to these ranges.
+- The *Main* range indicates the latest and most recommended range to install.
+- Custom tags on a range should only be used in exceptional cases, where two ranges might be considered but each has its specifics.
+
+> [!TIP]
+> See also: [Versioning of Catalog items](xref:About_the_Catalog_app#versioning-of-catalog-items)
 
 ## Follow the naming conventions
 

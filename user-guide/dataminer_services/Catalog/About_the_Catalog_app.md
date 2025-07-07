@@ -67,3 +67,6 @@ The Catalog will recommend certain versions based on the following conditions:
 
 > [!NOTE]
 > Versions and ranges that are not supported (i.e. deprecated ranges and versions marked as pre-release or unlisted) are not shown by default. To view these, use the *Unsupported versions* toggle button.<!-- RN 39903 -->
+
+> [!TIP]
+> For detailed information about semantic versioning practices and best practices for the creation of Catalog items, see [Best practices when creating Catalog items](xref:Best_Practices_When_Creating_Catalog_Items#use-semantic-versioning).
