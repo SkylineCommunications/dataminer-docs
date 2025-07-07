@@ -13,7 +13,7 @@ description: Get a bird's eye view on DataMiner, including a general introductio
     <a href="/dataminer-overview/DataMiner_Hosting_and_HA/Overview_hosting.html" title="DataMiner Hosting and High Availability" target="_self"><img src="~/user-guide/images/Hosting_High_Availability.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer-overview/DataMiner_Stack_Functions/Overview_stack_functions.html" title="DataMiner stack functions" target="_self"><img src="~/user-guide/images/Stack_Functions.svg" style="width:100%"></a>
+    <a href="/dataminer-overview/Stack_Functions/Overview_stack_functions.html" title="DataMiner stack functions" target="_self"><img src="~/user-guide/images/Stack_Functions.svg" style="width:100%"></a>
   </div>
 </div>
 
