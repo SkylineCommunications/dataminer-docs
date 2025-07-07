@@ -4,6 +4,10 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 07 July 2025 - Fix - CloudGateway 2.17.10 - Unhandled exception in tunnel connection could cause a DXM restart
+
+When the connection to the tunnel encounters an exception it could result in a crash and restart of the CloudGateway DXM.
+
 #### 30 June 2025 - Fix - CloudGateway 2.17.9 - Problem with dashboard sharing in proxy setups
 
 In proxy setups, sharing a dashboard or trying to modify a shared dashboard could result in the following error message: `Sharing dashboard failed. Error trapped: Something went wrong while fetching the sharing URL.` This issue has now been resolved.
