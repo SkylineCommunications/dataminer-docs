@@ -686,4 +686,4 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
 This algorithm is run on all DMAs at the same time and will only change the configuration of the local NAS/NATS/DMA. It is therefore important that all DMAs in your cluster are online and reachable when you run the NATS reset.
 
 > [!NOTE]
-> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to the *SLCloud.xml*, *nats-server.config*, or *nas.config* files, the old version of that file is saved in the `C:\Skyline DataMiner\Recycle Bin`folder.
+> From DataMiner 10.3.11/10.3.0 [CU8] onwards<!--RN 37401-->, when DataMiner makes changes to the *SLCloud.xml*, *nats-server.config*, or *nas.config* files, the old version of that file is saved in the `C:\Skyline DataMiner\Recycle Bin` folder.
