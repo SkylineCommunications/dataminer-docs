@@ -69,9 +69,9 @@ If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the followi
 
 - **ID**: A unique ID.
 
-- **CredsUrl**: The API end point of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`
+- **CredsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
 
-- **APIKeyPath**: File path to the *appsettings.runtime.json* file containing the private key. This file has to be copied from the DMA which can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+- **APIKeyPath**: File path to the *appsettings.runtime.json* file containing the private key. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
 
   > [!NOTE]
   > This setting is available from Data Aggregator version 3.2.0 onwards.
