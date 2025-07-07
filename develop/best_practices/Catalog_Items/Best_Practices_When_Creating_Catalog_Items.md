@@ -36,30 +36,11 @@ You can optimize the visibility of your Catalog item by making sure the [**Manif
 
 - Help users understand what your Catalog item is, what it does, and what it looks like, by **adding documentation**. This will be shown in the item's description. For details, refer to [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
 
-- When you release a version of a Catalog item, make sure to **adhere to [semantic versioning (A.B.C)](xref:About_the_Catalog_app#versioning-of-catalog-items)**.
+- When you release a version of a Catalog item, make sure to **adhere to [semantic versioning](#semantic-versioning)**.
 
-  Using a postfix (such as -CU1) is only necessary in exceptional circumstances (e.g. if you released a version that you immediately unlisted because of a severe bug. You should not delete such a version, but unlist it. Once a fix has been made, it is appropriate to use CU to clarify the situation to users).
+  Using a postfix (such as -CUx) is only necessary in exceptional circumstances (e.g. if you released a version that you immediately unlisted because of a severe bug. You should not delete such a version, but unlist it. Once a fix has been made, it is appropriate to use CU to clarify the situation to users).
 
   For the version description, clearly state what has changed, and if there are bug fixes or new features. Use the following phrases as appropriate: "Change:", "Fix:", "New Feature:". Each phrase can be used multiple times.
-
-### Versions
-
-Catalog items should follow proper semantic versioning practices to ensure clarity and predictability for users.
-
-#### Semantic versioning format
-
-Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
-
-- **A (MAJOR)**: Incremented for incompatible changes, breaking changes, or major architectural redesigns that may require user action
-- **B (MINOR)**: Incremented for new functionality added in a backward-compatible manner  
-- **C (PATCH)**: Incremented for backward-compatible bug fixes
-
-When introducing a new version range, the PATCH version (C) should always start at 0, not 1.
-
-> [!NOTE]
-> The 'CU1' suffix (e.g., 1.2.3-CU1) should be used exceptionally only when there is a critical issue discovered after a release deployment. In such cases, the released version should be unlisted and a new cumulative update should be released.
-
-**Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
 
 - Use the appropriate **state for the range** (*Active*, *Main*, custom tag, or *Deprecated*):
 
@@ -71,3 +52,34 @@ When introducing a new version range, the PATCH version (C) should always start 
 ## Follow the naming conventions
 
 See [Naming conventions for Catalog item components](xref:Naming_Conventions_For_Catalog_Item_Components).
+
+## Semantic versioning
+
+Catalog items should follow proper semantic versioning practices to ensure clarity and predictability for users.
+
+### Semantic versioning format
+
+Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
+
+- **A (MAJOR)**: Incremented for incompatible changes, breaking changes, or major architectural redesigns that may require user action
+- **B (MINOR)**: Incremented for new functionality added in a backward-compatible manner  
+- **C (PATCH)**: Incremented for backward-compatible bug fixes
+
+When introducing a new version range, the PATCH version (C) should always start at 0, not 1.
+
+> [!NOTE]
+> The 'CUx' suffix (e.g., 1.2.3-CU2) should be used exceptionally only when there is a critical issue discovered after a release deployment. In such cases, the released version should be unlisted and a new cumulative update should be released.
+
+**Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
+
+### Version ranges and management
+
+For Catalog items that follow semantic versioning, versions are grouped by **range**. Versions following semantic version A.B.C.D will be displayed in an A.B.C range, versions following semantic version A.B.C will be displayed in an A range, and all other version formats will be displayed in the "Other" range.
+
+Tags can be assigned to specific versions and ranges, for instance to indicate the main range of a connector. If you are a member of the organization that published an item, you can manage these tags via the ![Context menu button](~/user-guide/images/Catalog_context_menu.png) button for each item.
+
+The Catalog will recommend certain versions based on the following conditions:
+
+- The latest version of a range that is tagged as the "Main" version (visualized in green).
+- The latest version of a range that is tagged with a custom tag (visualized in gray).
+- If neither of the above apply, the latest version of the highest active range will be recommended.
