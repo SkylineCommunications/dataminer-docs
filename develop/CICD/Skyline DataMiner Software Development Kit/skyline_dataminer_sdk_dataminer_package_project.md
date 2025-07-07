@@ -100,6 +100,9 @@ For the SDK to be able to download the referenced items from the Catalog, config
       }
       ```
 
+> [!TIP]
+> You can also do this by using the default environment variable. More details [here](#publishing-manually).
+
 ## Executing additional code on installation
 
 Open the `$SCRIPTNAME$.cs` file to write custom installation code. Common actions include creating elements, services, or views.
@@ -119,9 +122,33 @@ string setupContentPath = installer.GetSetupContentDirectory();
 
 ## Publishing to the Catalog
 
-By default, a project is created with support for publishing to the Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow.
+By default, a project is created with support for publishing to the Catalog. You can publish your artifact manually through Visual Studio or by setting up a CI/CD workflow. To ensure high quality, Skyline only publishes Catalog items through CI/CD.
 
 ### Publishing manually
+
+Below two examples are described on how to publish manually to the Catalog from within Visual Studio.
+
+#### .NET CLI - Environment Variable
+When working in a collaborative environment, it is typically best practice to work with Environment Variables. 
+
+You can do a dotnet command to publish your Catalog Item.
+
+```bash
+$env:DATAMINER_TOKEN = "MyOrgKey"
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version." -p:CatalogPublishKeyName="DATAMINER_TOKEN" -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
+```
+
+You can also agree to leave the default CatalogPublishKeyName in the csproj file and add a system variable in Windows (through [Powershell](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#set-environment-variables-with-setenvironmentvariable) or [System Control Panel](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.5#set-environment-variables-in-the-system-control-panel), e.g. [Environment]::SetEnvironmentVariable("skyline__sdk__dataminertoken", "MyOrgKey", "Machine")).
+
+By doing so, you can possibly omit 'CatalogDefaultDownloadKeyName' and 'CatalogPublishKeyName' and make the command easier:
+
+```bash
+dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
+```
+
+
+#### Visual Studio Publish - User Secret
+ This section describes how you can make use of the [default Publish functionality in Visual Studio](https://learn.microsoft.com/en-us/dotnet/core/tutorials/publishing-with-visual-studio). Making use of a user secret is convenient when you have multiple projects with different registration keys.
 
 1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
@@ -173,6 +200,17 @@ There are two ways to change the version of a package:
      ```xml
      <Version>1.0.1</Version>
      ```
+
+### Updating Catalog item details
+
+When you would like to edit simply the **Catalog item details**, you can publish an already existing version. The catalog does not allow for re-publishing a new version. Therefore, nothing will happen and the initial version will remain on the Catalog. The Catalog details however will be updated. This includes the details provided in the **manifest.yml** and the **readme**. When you have the default key name added as a system environment variable (see above), you can simply do the following command:
+
+```bash
+dotnet publish -p:Version="1.0.0"
+```
+
+> [!NOTE]
+> When Version is not included, it will take the value from the Version tag in the csproj file.
 
 ### Publishing to the Catalog with the basic CI/CD workflow
 
