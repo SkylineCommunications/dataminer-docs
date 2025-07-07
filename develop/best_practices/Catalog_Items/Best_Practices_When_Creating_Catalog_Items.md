@@ -42,6 +42,25 @@ You can optimize the visibility of your Catalog item by making sure the [**Manif
 
   For the version description, clearly state what has changed, and if there are bug fixes or new features. Use the following phrases as appropriate: "Change:", "Fix:", "New Feature:". Each phrase can be used multiple times.
 
+### Versions
+
+Catalog items should follow proper semantic versioning practices to ensure clarity and predictability for users.
+
+#### Semantic versioning format
+
+Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
+
+- **A (MAJOR)**: Incremented for incompatible changes, breaking changes, or major architectural redesigns that may require user action
+- **B (MINOR)**: Incremented for new functionality added in a backward-compatible manner  
+- **C (PATCH)**: Incremented for backward-compatible bug fixes
+
+When introducing a new version range, the PATCH version (C) should always start at 0, not 1.
+
+> [!NOTE]
+> The 'CU1' suffix (e.g., 1.2.3-CU1) should be used exceptionally only when there is a critical issue discovered after a release deployment. In such cases, the released version should be unlisted and a new cumulative update should be released.
+
+**Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
+
 - Use the appropriate **state for the range** (*Active*, *Main*, custom tag, or *Deprecated*):
 
   - As a rule of thumb, there should be **only one Main range**, and as **few *Active* ranges as possible**.
