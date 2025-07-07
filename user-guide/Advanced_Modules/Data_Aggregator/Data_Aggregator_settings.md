@@ -63,6 +63,23 @@ By default, queries are executed using CoreGateway and SLHelper. To execute the 
 
 For every DataMiner System you want Data Aggregator to connect to, you will need to specify the following fields under *BrokerOptions.Clusters*:
 
+### DMS with BrokerGateway
+
+If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the following fields:
+
+- **ID**: A unique ID.
+
+- **CredsUrl**: The API end point of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`
+
+- **APIKeyPath**: File path to the *appsettings.runtime.json* file containing the private key. This file has to be copied from the DMA which can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+  > [!NOTE]
+  > This setting is available from Data Aggregator version 3.2.0 onwards.
+
+### DMS without BrokerGateway
+
+If the DMS does not use [BrokerGateway](xref:BrokerGateway_Migration) yet, specify the following fields:
+
 - **ID**: A unique ID.
 
 - **URIs**: A string array containing the NATS endpoints. Every DMA in the DMS can be specified here.
