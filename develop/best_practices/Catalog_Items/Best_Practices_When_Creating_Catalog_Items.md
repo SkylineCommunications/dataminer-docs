@@ -32,34 +32,13 @@ You can optimize the visibility of your Catalog item by making sure the [**Manif
 
 - Assign an **icon** to your Catalog item to catch the user's attention. You can do this by defining a vendor for your Catalog item with the `vendor_id` field in the [Manifest file](xref:Register_Catalog_Item#manifest-file). If you need assistance with this, please reach out to your technical contact.
 
-## Follow the naming conventions
-
-See [Naming conventions for Catalog item components](xref:Naming_Conventions_For_Catalog_Item_Components).
-
 ## Optimize the accessibility of your Catalog item
 
-- Help users understand what your Catalog item is, what it does, and what it looks like, by **adding documentation**. This will be shown in the item's description. For details, refer to [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
+### Clear & attractive documentation
+Help users understand what your Catalog item is, what it does, and what it looks like, by **adding documentation**. This will be shown in the item's description. For details, refer to [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
 
-- When you release a version of a Catalog item, make sure to **adhere to [semantic versioning](#semantic-versioning)**.
-
-  Using a postfix (such as -CUx) is only necessary in exceptional circumstances (e.g. if you released a version that you immediately unlisted because of a severe bug. You should not delete such a version, but unlist it. Once a fix has been made, it is appropriate to use CU to clarify the situation to users).
-
-  For the version description, clearly state what has changed, and if there are bug fixes or new features. Use the following phrases as appropriate: "Change:", "Fix:", "New Feature:". Each phrase can be used multiple times.
-
-- Use the appropriate **state for the range** (*Active*, *Main*, custom tag, or *Deprecated*):
-
-  - As a rule of thumb, there should be **only one Main range**, and as **few *Active* ranges as possible**.
-  - When a range is *Active*, this indicates that the range is still being maintained and bug fixes should always be added to these ranges.
-  - The *Main* range indicates the latest and most recommended range to install.
-  - Custom tags on a range should only be used in exceptional cases, where two ranges might be considered but each has its specifics.
-
-## Semantic versioning
-
-Catalog items should follow proper semantic versioning practices to ensure clarity and predictability for users.
-
-### Semantic versioning format
-
-Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
+### Semantic versioning
+When you release a version of a Catalog item, make sure to **adhere to [semantic versioning](#semantic-versioning)** to ensure clarity and predictability for users. Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
 
 - **A (MAJOR)**: Incremented for incompatible changes, breaking changes, or major architectural redesigns that may require user action
 - **B (MINOR)**: Incremented for new functionality added in a backward-compatible manner  
@@ -83,3 +62,13 @@ The Catalog will recommend certain versions based on the following conditions:
 - The latest version of a range that is tagged as the "Main" version (visualized in green).
 - The latest version of a range that is tagged with a custom tag (visualized in gray).
 - If neither of the above apply, the latest version of the highest active range will be recommended.
+
+Some rules of thumb:
+- There should be **only one Main range**, and as **few *Active* ranges as possible**.
+- When a range is *Active*, this indicates that the range is still being maintained and bug fixes should always be added to these ranges.
+- The *Main* range indicates the latest and most recommended range to install.
+- Custom tags on a range should only be used in exceptional cases, where two ranges might be considered but each has its specifics.
+
+## Follow the naming conventions
+
+See [Naming conventions for Catalog item components](xref:Naming_Conventions_For_Catalog_Item_Components).
