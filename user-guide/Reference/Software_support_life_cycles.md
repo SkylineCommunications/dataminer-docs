@@ -14,6 +14,7 @@ For the **Main Release** track, the following support is available:
 
 | Version | Regular updates until | Supported until     | *Limited support until* |
 |---------|-----------------------|---------------------|-------------------------|
+| 10.6.0  | 19 Nov 2027           | **23 Feb 2029**     | *22 Feb 2030*           |
 | 10.5.0  | 20 Nov 2026           | **25 Feb 2028**     | *23 Feb 2029*           |
 | 10.4.0  | 21 Nov 2025           | **26 Feb 2027**     | *25 Feb 2028*           |
 | 10.3.0  | 15 Nov 2024           | **27 Feb 2026**     | *26 Feb 2027*           |
