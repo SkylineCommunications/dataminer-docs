@@ -9,7 +9,7 @@ The **DataMiner Certification Program** offers a broad range of certification se
 
 The **Certificate of Expertise** attests the effective knowledge and expertise of an individual in a specific domain related to DataMiner. To acquire this type of certificate, the individual must successfully complete the associated certification program, which typically consists of a series of hands-on exercises, verbal and written examinations, and a thorough final evaluation.
 
-![DataMiner certification](~/dataminer-overview/images/DataMiner_Certification.png)
+![DataMiner certification](~/user-guide/images/DataMiner_Certification.png)
 
 For example, the DataMiner Fundamentals Certification is intended for DataMiner users who handle day-to-day operations in the DataMiner software, and the DataMiner Configurator Certification is intended for DataMiner users who set up and maintain DataMiner Systems, including adding new devices and new connectors, managing user accounts, setting up backup policies, creating Visual Overview pages, defining alarm thresholds, etc.
 
