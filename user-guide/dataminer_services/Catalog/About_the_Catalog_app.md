@@ -55,7 +55,7 @@ At present, the following types of Catalog items are supported:
 
 Catalog items can have multiple versions. To make sure that the versioning of items is easy to understand for everyone, [semantic versioning](https://semver.org/) is recommended. Extra labels can be assigned to versions to indicate that a certain version is not an official release (e.g. 1.2.3-alpha).
 
-For detailed information about semantic versioning practices and best practices for Catalog items, see [Best practices when creating Catalog items](xref:Best_Practices_When_Creating_Catalog_Items#versions).
+For detailed information about semantic versioning practices and best practices for Catalog items, see [Best practices when creating Catalog items](xref:Best_Practices_When_Creating_Catalog_Items#semantic-versioning).
 
 #### Version ranges
 
