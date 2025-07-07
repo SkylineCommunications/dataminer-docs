@@ -21,10 +21,11 @@ Different teams working on private DataMiner Systems, deployed **on premises, of
 Enabled [in just a few clicks](xref:Linking_your_DataMiner_and_dataminer_services_account), dataminer.services **empowers every single DataMiner user and DevOps engineer** to collaborate across the entire service supply chain, continuously and frictionlessly. With dataminer.services, you can seamlessly expand your DataMiner Systems to get even more value, **better, faster, and cheaper** than ever before.
 
 > [!TIP]
+> Find out more:
 >
-> - For more information on how to access dataminer.services, see [How to access DataMiner Services](https://dataminer.services/make-an-account/access_dcp.html).
-> - For more information on how to work with dataminer.services, refer to [About dataminer.services](xref:about_dataminer_services).
-> - For detailed information on the benefits for Support Services, see [Proactive Support](xref:Proactive_Support).
+> - [How to access dataminer.services](https://dataminer.services/make-an-account/access_dcp.html).
+> - [How to work with dataminer.services](xref:about_dataminer_services).
+> - [The benefits of Support Services](xref:Proactive_Support).
 
 ## DevOps
 
