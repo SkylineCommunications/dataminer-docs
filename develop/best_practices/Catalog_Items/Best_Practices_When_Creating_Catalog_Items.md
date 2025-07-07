@@ -67,10 +67,10 @@ Most Catalog items (except connectors) should follow the standard **A.B.C** sema
 
 When introducing a new version range, the PATCH version (C) should always start at 0, not 1.
 
+**Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
+
 > [!NOTE]
 > The 'CUx' suffix (e.g., 1.2.3-CU2) should be used exceptionally only when there is a critical issue discovered after a release deployment. In such cases, the released version should be unlisted and a new cumulative update should be released.
-
-**Connectors** use a special **A.B.C.D** format for more detailed versioning. For more information about connector versioning, see [Protocol version semantics](xref:ProtocolVersionSemantics).
 
 ### Version ranges and management
 
