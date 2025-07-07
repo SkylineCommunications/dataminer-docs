@@ -4,6 +4,36 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 7 July 2025 - Enhancement - DataAggregator 3.2.0 - BrokerGateway support [ID 43238]
+
+The DataAggregator DxM now supports [BrokerGateway](xref:BrokerGateway_Migration). In case your Data Aggregator setup connects to multiple DataMiner Systems and BrokerGateway is enabled, you will need to configure the *BrokerOptions.Clusters* setting in *appsettings.custom.json* with the following fields:
+
+- **ID**: A unique ID.
+- **CredsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+- **APIKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+For example:
+
+```json
+   "BrokerOptions": {
+    "Clusters": [
+      {
+        "ID": "localhost"
+      },
+      {
+        "ID": "My Other DMS - Without BrokerGateway",
+        "URIs": [ "nats://slc-dms2-dma01:4222", "nats://slc-dms2-dma02:4222", "nats://slc-dms2-dma03:4222" ],
+        "CredsFile": "C:\\data aggregator\\creds\\SLC-DMS2-DMA01.creds" // Note: creds file can change when DMS config changes
+      },
+      {
+        "ID": "Another DMS - With BrokerGateway",
+        "CredsUrl": "https://10.11.12.13/BrokerGateway/api/natsconnection/getnatsconnectiondetails",
+        "APIKeyPath": "C:\\data aggregator\\apikeys\\appsettings.runtime.json" // Works only on DMAs using BrokerGateway, keeps working even if DMS config changes
+      }
+    ]
+  },
+```
+
 #### 2 June 2025 - Enhancement - DataAggregator 3.1.1 - Error logging in case helper.json could not be read [ID 43094]
 
 When manual changes cause the JSON configuration within the helper.json to be invalid, up to now the configuration was ignored without giving any reason. Now an error will be logged in the log file that will indicate what went wrong. JSON deserialization errors will contain the line number.
