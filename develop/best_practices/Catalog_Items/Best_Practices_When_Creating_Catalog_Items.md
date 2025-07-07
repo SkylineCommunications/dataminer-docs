@@ -32,6 +32,10 @@ You can optimize the visibility of your Catalog item by making sure the [**Manif
 
 - Assign an **icon** to your Catalog item to catch the user's attention. You can do this by defining a vendor for your Catalog item with the `vendor_id` field in the [Manifest file](xref:Register_Catalog_Item#manifest-file). If you need assistance with this, please reach out to your technical contact.
 
+## Follow the naming conventions
+
+See [Naming conventions for Catalog item components](xref:Naming_Conventions_For_Catalog_Item_Components).
+
 ## Optimize the accessibility of your Catalog item
 
 - Help users understand what your Catalog item is, what it does, and what it looks like, by **adding documentation**. This will be shown in the item's description. For details, refer to [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
@@ -48,10 +52,6 @@ You can optimize the visibility of your Catalog item by making sure the [**Manif
   - When a range is *Active*, this indicates that the range is still being maintained and bug fixes should always be added to these ranges.
   - The *Main* range indicates the latest and most recommended range to install.
   - Custom tags on a range should only be used in exceptional cases, where two ranges might be considered but each has its specifics.
-
-## Follow the naming conventions
-
-See [Naming conventions for Catalog item components](xref:Naming_Conventions_For_Catalog_Item_Components).
 
 ## Semantic versioning
 
