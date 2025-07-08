@@ -101,3 +101,9 @@ When an element had masked alarms, the alarm status of the parameters in questio
 When a service was deleted, in some cases, it would only be fully deleted on the DataMiner Agent that hosted it.
 
 Also, when a service was renamed, in some cases, all DataMiner Agents except the one hosting it could start to experience issues because the old service had not been properly deleted.
+
+#### No history alarms would appear when data was being migrated or replicated from Cassandra Single Node to STaaS [ID 43325]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+No history alarms would appear when data was being migrated or replicated from Cassandra Single Node to STaaS.

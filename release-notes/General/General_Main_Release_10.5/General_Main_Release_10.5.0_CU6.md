@@ -15,12 +15,6 @@ uid: General_Main_Release_10.5.0_CU6
 
 ### Enhancements
 
-#### GQI DxM: Support for asynchronous SLNet messages within ad hoc data sources and custom operators [ID 43231]
-
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
-
-When using the GQI DxM, ad hoc data sources and custom operators will now be able to send SLNet messages asynchronously using `connection.Async.Launch()`.
-
 #### DxMs upgraded [ID 43298]
 
 <!-- RN 43298: MR 10.5.0 [CU6] - FR 10.5.9 -->

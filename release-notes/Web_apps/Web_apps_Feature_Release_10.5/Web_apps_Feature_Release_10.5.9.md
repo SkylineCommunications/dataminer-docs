@@ -79,6 +79,12 @@ The app sections on the DataMiner landing page (e.g. `https://myDMA/root/`) have
 
   Click *Browse catalog* to open the [DataMiner Catalog](https://catalog.dataminer.services/) or *Create app* to create a low-code app.
 
+#### GQI DxM: Support for asynchronous SLNet messages within ad hoc data sources and custom operators [ID 43231]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When using the GQI DxM, ad hoc data sources and custom operators will now be able to send SLNet messages asynchronously using `connection.Async.Launch()`.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Timeline component: Group label tooltips missing [ID 43242]

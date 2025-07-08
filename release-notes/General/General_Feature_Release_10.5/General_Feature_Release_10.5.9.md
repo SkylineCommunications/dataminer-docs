@@ -102,12 +102,6 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
-#### GQI DxM: Support for asynchronous SLNet messages within ad hoc data sources and custom operators [ID 43231]
-
-<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
-
-When using the GQI DxM, ad hoc data sources and custom operators will now be able to send SLNet messages asynchronously using `connection.Async.Launch()`.
-
 ### Fixes
 
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
