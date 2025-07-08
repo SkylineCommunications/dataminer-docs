@@ -204,7 +204,7 @@ There are two ways to change the version of a package:
 
 ### Updating Catalog item details
 
-To update only the **Catalog item details**, you can re-publish an already existing version. The Catalog does not allow re-publishing an existing version artifact, so the artifact will not be updated (i.e. nothing will happen and the initial version will remain available in the Catalog). However, the Catalog item details will be updated. This includes the details provided in the **manifest.yml** and the **readme**.
+To update only the **Catalog item details**, you can re-publish an already existing version. The Catalog does not allow the re-publishing of an existing version artifact, so the artifact will not be updated (i.e. the existing version will remain unchanged in the Catalog). However, the Catalog item details will be updated. This includes the details provided in the **manifest.yml** and the **readme**.
 
 If you have set the default key name as a system environment variable (see above), you can run the following command:
 
