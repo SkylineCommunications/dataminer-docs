@@ -102,6 +102,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### SLAnalytics: Reduced memory usage because of enhanced management of parameters with constant values [ID 43266]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced, especially when managing parameters of which the values remain constant for a long time.
+
 ### Fixes
 
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]

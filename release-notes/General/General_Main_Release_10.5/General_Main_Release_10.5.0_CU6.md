@@ -15,6 +15,12 @@ uid: General_Main_Release_10.5.0_CU6
 
 ### Enhancements
 
+#### SLAnalytics: Reduced memory usage because of enhanced management of parameters with constant values [ID 43266]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of a number of enhancements, overall memory usage of SLAnalytics has been reduced, especially when managing parameters of which the values remain constant for a long time.
+
 #### DxMs upgraded [ID 43298]
 
 <!-- RN 43298: MR 10.5.0 [CU6] - FR 10.5.9 -->
