@@ -191,6 +191,14 @@ When, in a *Line & area chart* component, you had changed the name of the Y axis
 
 In some cases, components used in a low-code app could cause a user's web browser to leak memory.
 
+#### GQI: GQI DxM and SLHelper could leak memory [ID 43028]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 -->
+
+In some cases, both GQI DxM and SLHelper could leak memory, especially when executing GQI queries with GQI extensions (i.e. ad hoc data source or custom operators) that throw exceptions from their life cycle methods.
+
+See also: [GQI DxM - Life cycle: OnDestroy method would incorrectly be called when an error occurred in the OnInit method [ID 43186]](#gqi-dxm---life-cycle-ondestroy-method-would-incorrectly-be-called-when-an-error-occurred-in-the-oninit-method-id-43186)
+
 #### Web Services API: SLHelper would incorrectly be used to process GQI queries when GQI DxM had been enabled in Web.config [ID 43046]
 
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
