@@ -90,7 +90,10 @@ items:
                     topicUid: Desktop_app_command_line_arguments
               - name: Using the browser application
                 topicUid: Using_the_browser_app
-      - name: Accessing the Monitoring app
+      - name: Accessing the web apps
+        topicUid: Accessing_the_web_apps
+        items:
+          - name: Accessing the Monitoring app
         topicUid: Accessing_the_Monitoring_app
   - name: Working with DataMiner Cube
     items:
