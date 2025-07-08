@@ -32,8 +32,6 @@ To request a cost estimation, follow the procedure below:
 
    1. Click *Stop Migration/Replication* to stop the test run.
 
-      1. Optionally, you can also restart your DMS.
-
    > [!NOTE]
    > This 24-hour period is not mandatory, but we recommend this to be able to extrapolate the data from a daily consumption to a monthly consumption.
 
