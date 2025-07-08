@@ -35,7 +35,7 @@ items:
             topicUid: SCH_Create_Job
           - name: Editing a job
             topicUid: SCH_Edit_Job
-          - name: Recurring jobs
+          - name: Working with recurring jobs
             topicUid: SCH_Recurring
           - name: Job states
             topicUid: MO_S_Job_States
