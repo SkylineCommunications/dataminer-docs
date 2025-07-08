@@ -64,7 +64,22 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 - **Submitting feedback**: Your feedback is valuable. You will receive DevOps Points per submission of feedback via <https://aka.dataminer.services/Feedback/>. Each submission of feedback will result in 50 DevOps Points (limited to a maximum of 100 points per month).
 
-- **Being an advocate for the DataMiner brand**: Being an advocate is also part of the culture of being a DataMiner DevOps Professional. That is why you can earn 250 points simply by adding your DataMiner DevOps level to your LinkedIn headline. Once you've updated your LinkedIn profile, you can send an email to [devops@skyline.be](mailto:devops@skyline.be) with the link to your profile page and we will get you your points! If DataMiner is mentioned in the job title in your email signature, we will hit you up with another 250 points per year. Each LinkedIn post that mentions @skyline-communications and uses the tag #dataminerdevops will automatically result in 50 points per post.
+- **Being an advocate for the DataMiner brand**: Being an advocate is also part of the culture of being a DataMiner DevOps Professional.
+
+  - You can earn 250 points simply by **adding your DataMiner DevOps level to your LinkedIn headline**. Once you have updated your LinkedIn profile, you can send an email to [devops@skyline.be](mailto:devops@skyline.be) with the link to your profile page and we will get you your points!
+
+    > [!NOTE]
+    > This action needs to be repeated each year to continue earning points.
+
+  - If DataMiner is mentioned in the **job title in your email signature**, we will hit you up with another 250 points per year.
+
+  - You can earn 100 points by **sharing your DevOps attestation on LinkedIn**. Make sure to:
+
+    - Mention `@skyline-communications`
+
+    - Use the hashtag `#dataminerdevops`.
+
+    Email the link to your post to [devops@skyline.be](mailto:devops@skyline.be) and we will award your points.
 
 - **Reward for outstanding DevOps mindset**: From time to time, Skyline staff members have the opportunity to nominate registered DataMiner DevOps Professionals who exemplify an exceptional DevOps mindset and demonstrate the effective application of associated best practices. Such recognition leads to the allocation of additional points in the range of 100 up to 750 on the recipient's DataMiner DevOps Professional account.
 
