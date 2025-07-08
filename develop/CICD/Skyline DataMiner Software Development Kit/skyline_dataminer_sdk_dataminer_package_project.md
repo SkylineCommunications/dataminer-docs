@@ -130,7 +130,7 @@ You can manually publish a Catalog item using either the [.NET CLI](#using-the-n
 
 #### Using the .NET CLI with an environment variable
 
-When working in a collaborative environment, it is typically best practice to work with environment variables.
+When working in a collaborative environment, it is typically considered a best practice to work with environment variables.
 
 You can use a `dotnet` command to publish your Catalog item:
 
