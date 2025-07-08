@@ -59,7 +59,6 @@ DataMiner monitors service compliance and quality at any point in the infrastruc
 > For more information:
 >
 > - Demo video: [DataMiner Services Explained](https://www.youtube.com/watch?v=pK5z0nzfW_Q) ![Video](~/user-guide/images/video_Duo.png)
-> - Advanced video: [DataMiner service templates](https://community.dataminer.services/video/service-templates/) ![Video](~/user-guide/images/video_Duo.png)
 > - Video: [Service-Aware Confidence Monitoring](https://www.youtube.com/watch?v=f0Z581xPrI4) ![Video](~/user-guide/images/video_Duo.png)
 > - [Services and service templates](xref:About_services)
 

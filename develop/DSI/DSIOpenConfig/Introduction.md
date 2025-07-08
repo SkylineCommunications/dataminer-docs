@@ -217,7 +217,6 @@ Related articles on DataMiner Dojo:
 - Blog: [Monitoring high-traffic networks the easy way](https://community.dataminer.services/monitoring-high-traffic-networks-the-easy-way/)
 - Blog: [Multicast flow monitoring and path visualization for ALL-IP Broadcast Infrastructures](https://community.dataminer.services/multicast-flow-monitoring-and-path-visualization-for-all-ip-broadcast-infrastructures/?hilite=%27flow%27%2C%27monitoring%27)
 - Use Case: [Media flow tracking & analytics](https://community.dataminer.services/use-case/media-flow-tracking/?hilite=%27flow%27%2C%27monitoring%27) (TPC Truck app)
-- Use Case Video: [Integrations - TPC: Overview OB UHD truck-app](https://community.dataminer.services/video/integrations-tpc-overview-ob-uhd-truck-app/)
 - Use Case: [Flow Monitoring - DataMiner Dojo](https://community.dataminer.services/use-case/flow-monitoring/) (DataMiner Dashboards)
 - Use Case: [SFlow Manager](https://community.dataminer.services/use-case/sflow-manager/) (Cisco / Arista / etc.)
 - Use Case: [NetFlow](https://community.dataminer.services/use-case/netflow/)

@@ -14,10 +14,6 @@ The Scheduler module allows you to schedule events in two ways:
 
 - By dragging events, based on Scheduler templates, onto a timeline, in the *timeline \> EVENTS* tab. See [Scheduling an event based on a Scheduler template](xref:Scheduling_an_event_based_on_a_Scheduler_template).
 
-> [!TIP]
-> See also:
-> [Rui’s Rapid Recap – Scheduler](https://community.dataminer.services/video/ruis-rapid-recap-scheduler/) ![Video](~/user-guide/images/video_Duo.png)
-
 ## Overview of the Scheduler UI
 
 The Scheduler module consists of different tabs that each provide a different perspective on the task scheduled in Cube.

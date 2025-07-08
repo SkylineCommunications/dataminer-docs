@@ -9,5 +9,4 @@ DataMiner has a standard, fully integrated security module that allows you to co
 > [!TIP]
 > See also:
 >
-> - [Security – Introduction to DataMiner Security](https://community.dataminer.services/video/security-introduction-to-dataminer-security/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - [Securing self-managed DataMiner storage](xref:Cassandra_authentication)

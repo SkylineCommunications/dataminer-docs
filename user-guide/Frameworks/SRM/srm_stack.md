@@ -23,8 +23,8 @@ The scheduling engine supports a wide range of possibilities. Bookings can be sc
 > [!TIP]
 > For more information:
 >
-> - Demo video: [How To Schedule your Resources using SRM](https://community.dataminer.services/video/how-to-schedule-your-resources-using-srm/) ![Video](~/user-guide/images/video_Duo.png)
-> - Various Scheduler-related videos are available in the [video library](https://community.dataminer.services/videos?_sf_s=schedule) ![Video](~/user-guide/images/video_Duo.png)
+> - Demo video: [How To Schedule your Resources using SRM](https://www.youtube.com/watch?v=BNK0RhlxwEc) ![Video](~/user-guide/images/video_Duo.png)
+> - Various Scheduler-related videos are available in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=schedule) ![Video](~/user-guide/images/video_Duo.png)
 > - Various Scheduler use cases with screenshots are available in the [use case library](https://community.dataminer.services/use-cases/?_sf_s=scheduler)
 
 ## Resource Manager
@@ -52,7 +52,7 @@ By fully automating operating and business procedures or workflows, operational 
 ![Automation script example](~/user-guide/images/Automation_module_example.png)<br>*Automation module in DataMiner Cube 10.5.5*
 
 > [!TIP]
-> Various Automation-related videos are available in the [video library](https://community.dataminer.services/videos/?_sf_s=automation), including a 60-min. [Experts & Insights webinar](https://community.dataminer.services/video/experts-insights-dataminer-automation-engine/), and an introduction to the [basics of DataMiner Automation snippets](https://community.dataminer.services/video/the-basics-of-dataminer-automation-snippets/).
+> Various Automation-related videos are available in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=automation), including an introduction to the [basics of DataMiner Automation snippets](https://www.youtube.com/watch?v=i5_FLER_-tE).
 
 ## Profile Manager
 

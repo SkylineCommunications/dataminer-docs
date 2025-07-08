@@ -5,9 +5,7 @@ uid: Specifying_the_background_of_Visual_Overview_pages
 # Specifying the background of Visual Overview pages
 
 > [!TIP]
->
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[misc > COLORS]* page.
-> - For a how-to video, see [Visio – Adding a background](https://community.dataminer.services/video/visio-adding-a-background/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[misc > COLORS]* page.
 
 ## Specifying background pages in Visio
 

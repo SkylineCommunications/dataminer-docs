@@ -12,9 +12,6 @@ When you back up a DataMiner Agent, you will be able to select different backup 
 
 Note that if you want to back up the data from one or more specific elements to migrate these to a different DMA, the easiest way to do so is by [exporting the data to a .dmimport package](xref:Exporting_and_importing_packages_on_a_DMA).
 
-> [!TIP]
-> See also: [Backup – Configuring backups](https://community.dataminer.services/video/backup-configuring-backups/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 > [!NOTE]
 > The binaries and settings of NAS and NATS are not included in a DataMiner backup. On startup, DataMiner automatically detects whether the NATS folders exist and creates them if necessary. However, this means that if for some reason a problem occurs with your NATS setup, you cannot fix this by means of a backup and restore.
 

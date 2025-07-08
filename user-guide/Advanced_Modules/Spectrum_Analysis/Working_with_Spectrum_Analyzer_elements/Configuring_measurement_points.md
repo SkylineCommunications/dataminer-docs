@@ -6,10 +6,6 @@ uid: Configuring_measurement_points
 
 A measurement point is a series of sets that is executed on devices to select an input for a spectrum analyzer device, e.g. to set a switch to the correct position. This way, multiple signals can be measured with one single spectrum analyzer.
 
-> [!TIP]
-> See also:
-> [Spectrum Analyzer – About presets and measurement points](https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/) ![Video](~/user-guide/images/video_Duo.png)
-
 ## The measurement point configuration window
 
 On a spectrum analyzer card, go to the *Measurement points* tab in the overhead ribbon, and click *New measurement point* or *Edit measurement point* to open the measurement point configuration window.

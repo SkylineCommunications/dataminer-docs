@@ -12,9 +12,7 @@ In a Visio drawing, you can position shapes in a grid layout. This allows you to
 > - You can use placeholders for variables in **Layout** shape data, so that the positioning of shapes in a grid can be controlled dynamically (e.g. by using a session variable).
 
 > [!TIP]
->
-> - See also: [DataMiner Inspire – Advanced Visual Overview Features](https://community.dataminer.services/video/dataminer-inspire-advanced-visual-overview-features/) ![Video](~/user-guide/images/video_Duo.png)
-> - For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[positioning > GRID]* page.
+> For an example, see [Ziine](xref:ZiineDemoSystem) > *Visual Overview Design Examples* view > *[positioning > GRID]* page.
 
 ## Configuring the shape data fields
 

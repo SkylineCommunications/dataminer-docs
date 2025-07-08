@@ -112,7 +112,6 @@ The following options are available:
 > See also:
 >
 > - [Icons settings](xref:User_settings#icons-settings)
-> - [Surveyor – Using latched and special icons](https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/) ![Video](~/user-guide/images/video_Duo.png)
 
 ### Surveyor right-click menu
 

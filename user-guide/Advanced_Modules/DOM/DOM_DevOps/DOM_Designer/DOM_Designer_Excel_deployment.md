@@ -25,4 +25,4 @@ uid: DOM_Designer_Excel_deployment
    While deploying a new object model, the script will log its actions in the information events. If something is wrong with your Excel file, an error message will be displayed there.
 
 > [!TIP]
-> When you have successfully imported the file, you can check what your data model looks like in a DataMiner low-code app. For more information on how to create such an app, refer to [this demo on DataMiner Dojo](https://community.dataminer.services/video/object-modeling-and-apps/). Prior to DataMiner 10.3.6/10.4.0, this requires the [DOMManager](xref:Overview_of_Soft_Launch_Options#dommanager) soft-launch option.
+> When you have successfully imported the file, you can check what your data model looks like in a DataMiner low-code app. Prior to DataMiner 10.3.6/10.4.0, this requires the [DOMManager](xref:Overview_of_Soft_Launch_Options#dommanager) soft-launch option.

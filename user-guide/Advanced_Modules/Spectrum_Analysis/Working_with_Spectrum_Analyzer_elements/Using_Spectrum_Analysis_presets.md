@@ -4,10 +4,6 @@ uid: Using_Spectrum_Analysis_presets
 
 # Using Spectrum Analysis presets
 
-> [!TIP]
-> See also:
-> [Spectrum Analyzer – About presets and measurement points](https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/) ![Video](~/user-guide/images/video_Duo.png)
-
 ## About presets
 
 Spectrum Analysis presets can be used to reload settings, to reload a set of markers, to save and reload a trace image, to load a reference trace, etc. The following information can be stored in a preset:

@@ -17,6 +17,3 @@ Before restoring a DataMiner Agent, you need to [prepare the destination server]
 
 > [!NOTE]
 > For information on how to back up and restore an OpenSearch or Elasticsearch database, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups) or [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups), respectively.
-
-> [!TIP]
-> See also: [Backup – Restoring and migrating a DataMiner Agent](https://community.dataminer.services/video/backup-restoring-and-migrating-a-dataminer-agent/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

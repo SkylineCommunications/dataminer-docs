@@ -8,9 +8,6 @@ In the Alarm Console, you can display a timeline at the bottom of the *Active al
 
 ![History slider](~/user-guide/images/History_Slider.png)<br>*The Alarm Console history slider in DataMiner 10.4.5*
 
-> [!TIP]
-> See also: [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 ## Active alarms tab timeline
 
 The timeline in the *Active alarms* tab shows the alarms that were active at a particular point in time.

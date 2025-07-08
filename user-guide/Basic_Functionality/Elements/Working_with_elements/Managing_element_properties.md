@@ -9,9 +9,6 @@ uid: Managing_element_properties
 
 ## Adding a custom property to an item
 
-> [!TIP]
-> See also: [DataMiner Cube – Adding properties to elements, views and services](https://community.dataminer.services/video/dataminer-cube-adding-properties-to-elements-views-and-services/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 To add a custom property to a DataMiner element, service, or view:
 
 1. Right-click the item and select *Properties*.

@@ -22,7 +22,6 @@ On [DataMiner Dojo](https://community.dataminer.services/learning/courses/), you
 >   - [Getting started with Automation script development](xref:GettingStartedWithAutomationScriptDevelopment)
 >   - [How to make your Automation scripts debug ready](xref:How_to_make_your_automation_scripts_debug_ready)
 >   - [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit)
->   - [Rui's Rapid Recap - C# Automation snippets](https://community.dataminer.services/video/ruis-rapid-recap-c-automation-snippets/)
 >
 > - Cloud Services:
 >
@@ -32,7 +31,4 @@ On [DataMiner Dojo](https://community.dataminer.services/learning/courses/), you
 > - Visualization:
 >
 >   - [DataMiner Visual Overview course](https://community.dataminer.services/courses/visio/)
->   - [The latest and greatest of Visual Overview](https://community.dataminer.services/video/the-latest-and-greatest-of-visual-overview/)
->   - [DataMiner Inspire - The New DataMiner Stencils & Style Guide](https://community.dataminer.services/video/dataminer-inspire-the-new-dataminer-stencils-style-guide/)
->   - [Query any data using GQI](https://community.dataminer.services/video/query-any-data-using-gqi/)
 >   - [How to do Column Manipulation with GQI](https://www.youtube.com/watch?v=5xBIlfQmLb0)
