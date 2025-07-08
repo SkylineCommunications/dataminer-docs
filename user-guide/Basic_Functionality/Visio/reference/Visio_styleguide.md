@@ -214,5 +214,3 @@ You can download a single icon, or you can download the full icon pack by clicki
 ## More information
 
 A wide range of Visio examples can be found in the [use case library](https://community.dataminer.services/use-cases/) on DataMiner Dojo.
-
-Also on DataMiner Dojo, you can find a [DataMiner Inspire video](https://community.dataminer.services/video/dataminer-inspire-the-new-dataminer-stencils-style-guide/) on how to use the DataMiner stencils.

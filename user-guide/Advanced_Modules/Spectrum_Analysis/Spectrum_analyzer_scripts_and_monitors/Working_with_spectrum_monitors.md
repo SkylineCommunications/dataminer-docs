@@ -9,10 +9,6 @@ A spectrum monitor works as a schedule to run a spectrum script, optionally with
 > [!NOTE]
 > Only one spectrum monitor script can be executed on the same element at the same time. If a script is set to run while another script is being executed, DataMiner will wait until the script can obtain exclusive element access.
 
-> [!TIP]
-> See also:
-> [Spectrum Analyzer – Setting up continuous background RF measurements](https://community.dataminer.services/video/spectrum-analyzer-setting-up-continuous-background-rf-measurements/) ![Video](~/user-guide/images/video_Duo.png)
-
 ## Managing spectrum monitors
 
 On a spectrum analyzer card, you can manage the spectrum monitors for one particular element. Managing spectrum monitors across all elements is possible in System Center.

@@ -13,9 +13,6 @@ However, note that this is not recommended in larger systems as it can cause ala
 > - It is possible that because of database issues, duplicate alarms are created for column parameters. In that case, the oldest one will automatically be cleared, and the following comment will be added to the alarm: *Detected duplicate alarm on column parameter. Clearing alarm for PID \[x\] with ROOTKey \[y\] found alarm with other ROOTKey \[z\]*
 > - In DataMiner 10.2.0/10.1.6, a protection mode has been added to avoid reduced performance of the system when an alarm storm happens that causes there to be a large number of clearable alarms at the same time. By default, when there are more than 1000 clearable alarm trees on a DMA, the newly generated clearable alarms will be closed instead of clearable. Once the number of clearable alarm trees has dropped to less than 100, this protection mode is lifted and newly generated alarms will be clearable again. Note that these default values can be customized in [DataMiner.xml](xref:DataMiner_xml#dataminerxml).
 
-> [!TIP]
-> See also: [Alarm Console – Working with clearable alarms](https://community.dataminer.services/video/alarm-console-working-with-clearable-alarms/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 ## Automatic versus manual alarm clearing
 
 ### About automatic alarm clearing

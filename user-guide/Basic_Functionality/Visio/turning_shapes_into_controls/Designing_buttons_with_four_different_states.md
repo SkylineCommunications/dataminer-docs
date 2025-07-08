@@ -4,9 +4,6 @@ uid: Designing_buttons_with_four_different_states
 
 # Designing buttons with four different states
 
-> [!TIP]
-> For a how-to video, see [Visio – Customizing mouseover effects on a view object](https://community.dataminer.services/video/visio-customizing-mouseover-effects-on-a-view-object/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 In Visio, you can design buttons with four different states:
 
 - Normal,

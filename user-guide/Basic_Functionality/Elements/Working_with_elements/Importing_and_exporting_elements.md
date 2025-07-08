@@ -9,9 +9,6 @@ uid: Importing_and_exporting_elements
 
 ## Importing elements from a CSV file
 
-> [!TIP]
-> See also: [Rui’s Rapid Recap – Bulk editing via CSV import](https://community.dataminer.services/video/ruis-rapid-recap-bulk-editing-via-csv-import/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 1. Either open the card of the view where you want to import the elements and click the hamburger button in the top-left corner, or right-click the view in the Surveyor.
 
 1. In the menu, select *Actions \> Import*.

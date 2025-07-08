@@ -33,7 +33,6 @@ DataMiner brings it all together in one standard UI, with a rich set of features
 > For more information:
 >
 > - Solution Overview: [Spectrum analysis, monitoring and management](https://community.dataminer.services/solution/manage-your-rf-with-care-dataminer-spectrum-analysis-monitoring-and-management/)
-> - Discover all the capabilities of DataMiner Spectrum Management in this 60-min. [Experts & Insights webinar](https://community.dataminer.services/video/experts-insights-dataminer-spectrum-management/) ![Video](~/user-guide/images/video_Duo.png)
 > - Example use case: [Spectrum Assurance and Teleport Interference](https://community.dataminer.services/use-case/spectrum-assurance-and-teleport-interference/)
 > - Example use case: [L-Band Spectrum Monitoring](https://community.dataminer.services/use-case/l-band-spectrum-monitoring/)
 > - Different spectrum-related videos in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=spectrum) ![Video](~/user-guide/images/video_Duo.png)
@@ -53,8 +52,6 @@ DataMiner allows the user to define exactly for which parameters trending inform
 >
 > - [Trending](xref:trending)
 > - [Navigating trending graphs](https://www.youtube.com/watch?v=hvWkbjUr82I&ab_channel=DataMinerbySkylineCommunications)
-> - [Trend predictions](https://community.dataminer.services/video/trending-trend-predictions-in-dataminer/)
-> - [Trend groups](https://community.dataminer.services/video/ruis-rapid-recap-trend-groups/)
 
 ## Visual Overview
 
@@ -141,7 +138,6 @@ The unified platform provides **highly enriched fault messages**, **out of the b
 > - [New to DataMiner (DataMiner Operator)](https://www.youtube.com/playlist?list=PLFb70A6JV6vgaop9IVx3PeEQWktDjJegU): a collection of bite-sized videos on element states, Alarm Console features, etc. ![Video](~/user-guide/images/video_Duo.png)
 > - Videos related to alarm and fault management in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=alarm) ![Video](~/user-guide/images/video_Duo.png)
 > - [DataMiner Alarm Console training video](https://community.dataminer.services/lessons/alarm-console-2/) ![Video](~/user-guide/images/video_Duo.png)
-> - [Experts & Insights – End-to-end fault management](https://community.dataminer.services/video/experts-insights-end-to-end-fault-management/) ![Video](~/user-guide/images/video_Duo.png)
 > - [Alarms](xref:About_alarms)
 
 ## Dashboards

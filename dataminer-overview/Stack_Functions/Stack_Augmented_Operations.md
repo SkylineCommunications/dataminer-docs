@@ -16,8 +16,6 @@ Additionally, DataMiner Augmented Operations reduce setup and configuration time
 > For more information:
 >
 > - Learn to leverage DataMiner's AI capabilities—from proactive issues detection to streamlined incident response—so you can stay ahead of potential problems and work more effectively, with the free [DataMiner AI course](https://community.dataminer.services/learning/courses/AI/). ![Video](~/user-guide/images/video_Duo.png)
-> - A 60-min. webinar from our Experts & Insights series, showing how DataMiner leverages AI technology, is available at [Experts & Insights - Augmented Operations](https://community.dataminer.services/video/experts-insights-dataminer-augmented-operation/) ![Video](~/user-guide/images/video_Duo.png)
-> - A high-level introduction video (50 minutes) is available in our Inspire Rewind section on our Community site, at [Inspire Rewind – Augmented Operations](https://community.dataminer.services/video/inspire-rewind-augmented-operations/) ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > Are you struggling with something? Are there use cases you want us to tackle? Or do you simply have a great idea on how to improve DataMiner’s AI capabilities? Then [**let's talk AI**](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states/) and [**share your thoughts with Team AI**](https://community.dataminer.services/skylines-ai-team-wants-to-hear-from-you/).
