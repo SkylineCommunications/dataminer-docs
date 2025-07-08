@@ -17,10 +17,10 @@ This is a basic example for uploading non-connector items to the Catalog. Eventu
 
 For this example, you need a Visual Studio solution containing projects that are using [Skyline.DataMiner.SDK](xref:skyline_dataminer_sdk).
 
-You will also need to configure your DataMiner organization key. This will be the key for the **DataMiner organization** as provided through the [Admin app](xref:About_the_Admin_app).
+You will also need to configure your DataMiner organization key, which you can find on the organization's *Keys* page in the [Admin app](xref:About_the_Admin_app). For more information, see [Organization keys](xref:Managing_dataminer_services_keys#organization-keys).
 
 > [!NOTE]
-> The examples below use explicit parameter names (e.g., `-p:CatalogPublishKeyName="DATAMINER_TOKEN"`) which allows you to use any environment variable name. When you omit these parameters, the SDK uses the default key name configured in your project's csproj file.
+> The examples below use explicit parameter names (e.g. `-p:CatalogPublishKeyName="DATAMINER_TOKEN"`), which allows you to use any environment variable name. When you omit these parameters, the SDK uses the default key name configured in your project's .csproj file.
 
 ### Windows PowerShell
 
