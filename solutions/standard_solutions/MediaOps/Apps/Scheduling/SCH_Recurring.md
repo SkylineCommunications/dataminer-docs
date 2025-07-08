@@ -26,16 +26,15 @@ uid: SCH_Recurring
 
 1. Optionally, you can still change the timings of the job and the desired job state.
 
-   > [!NOTE]
-   > The job start time will be translated by default to UTC time. If needed, you can pick a different timezone and update the start time accordingly. When using a timezone that supports daylights savings, the jobs will be created so that the start time is always valid for the given date.
+   The job start time will be translated by default to UTC time. If needed, you can pick a different timezone and update the start time accordingly. When using a timezone that supports daylights savings, the jobs will be created so that the start time is always valid for the given date.
 
 1. Click *Create Recurrence*.
 
-   This will update the first instance and create an entry in the *Recurring Job View* page. There you can track the *Process status* indicating if all jobs were created successfully.
+   This will update the first instance and create an entry in the *Recurring Job View* page. There you can track the *Process status* indicating if all jobs were created successfully. Jobs will be created up to one year in the future, on a daily basis new jobs will be created for all recurring jobs if needed. This is to keep the number of jobs linked to the recurring job under control when creating, cancelling or deleting the recurring job.
 
 ## Canceling a recurring job
 
-When canceling an active recurring job, all jobs part of the recurrence that are still in the future will be canceled.
+When canceling an active recurring job, all jobs part of the recurrence that are still in the future will be canceled (Tentative or Confirmed jobs) or deleted (jobs in Draft).
 
 1. Open the *Edit recurring job* panel from the *Recurring Job View* page.
 
