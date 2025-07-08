@@ -154,8 +154,8 @@ In some cases, the `C:\Skyline DataMiner\Webpages\API\Web.config` file could con
 
 `The type initializer for 'Skyline.DataMiner.Web.Common.v1.TransportAgnosticInterface' threw an exception.`
 
-#### No history alarms would appear when data was being migrated or replicated from Cassandra Single Node to STaaS [ID 43325]
+#### No history alarms shown when data was being migrated or replicated from separate Cassandra setup to STaaS [ID 43325]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 [CU0] -->
 
-No history alarms would appear when data was being migrated or replicated from Cassandra Single Node to STaaS.
+While a DataMiner storage setup was migrated or replicated where each DMA had its own Cassandra database, no history alarms were shown.
