@@ -188,20 +188,3 @@ In a nutshell: **You operate the platform, we build and maintain the platform fo
 > - [Examples - Custom chat commands](xref:DataMiner_Teams_bot)
 > - [Examples - Chat integration](xref:Microsoft_Teams_Chat_Integration)
 > - [Kata #6: Custom ChatOps operator](https://www.youtube.com/watch?v=qYOM6-55YYU) ![Video](~/user-guide/images/video_Duo.png)
-
-### API Sharing *(coming soon)*
-
-Share your **user-defined APIs** with anybody who needs the provided data to control and trigger more complex actions in DataMiner.
-
-User-defined API sharing is primarily focused on **machine-to-machine interactions** (whereas our low-code app sharing, mentioned below, is primarily focused on peer-to-peer sharing). Both functions will provide the ability to share data with a specific audience, allowing for more precise control and triggering of complex actions in DataMiner.
-
-> [!TIP]
-> See also:
->
-> - [Video - DataMiner compute and storage, on-prem and in the cloud](https://community.dataminer.services/video/dataminer-compute-and-storage-on-prem-and-in-the-cloud/) ![Video](~/user-guide/images/video_Duo.png)
-
-### App Sharing *(coming soon)*
-
-Share your low-code app along with its underlying data with a defined target audience to control and trigger more complex actions in DataMiner.
-
-**Low-code app sharing** is primarily focused on **peer-to-peer sharing** (whereas our user-defined API sharing, mentioned above, is primarily focused on machine-to-machine interactions). Both functions will provide the ability to share data with a specific audience, allowing for more precise control and triggering of complex actions in DataMiner.
