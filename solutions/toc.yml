@@ -276,6 +276,13 @@ items:
         topicUid: Installing_EVS_Cerebrum
       - name: Working with the EVS Cerebrum app
         topicUid: Using_EVS_Cerebrum
+    - name: Grass Valley AMPP Manager app
+      topicUid: GVAMPP_Manager_Overview
+      items:
+      - name: Installing the Grass Valley AMPP Manager app
+        topicUid: GVAMPP_Manager_Installing
+      - name: Using the Grass Valley AMPP Manager app
+        topicUid: GVAMPP_Manager_Using
     - name: Nevion Video IPath app
       topicUid: Overview_NevionVideoIPath_App
       items:
