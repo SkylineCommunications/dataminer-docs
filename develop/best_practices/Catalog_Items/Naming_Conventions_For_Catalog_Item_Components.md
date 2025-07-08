@@ -11,6 +11,8 @@ Naming conventions should be applied to all components used in solutions, for th
 - **Readability and understandability**: Consistent and meaningful names make it easier for users to understand for which solution a component is used and what the exact purpose of the component is.
 - **Consistency**: Consistent naming conventions contribute to a unified style across all solutions.
 
+This applies to all places where the user gets in touch with your solution, from Catalog item to the components visible in DataMiner.
+
 ## Abbreviations used in these naming conventions
 
 In the naming conventions, references will be made to the following abbreviations:
