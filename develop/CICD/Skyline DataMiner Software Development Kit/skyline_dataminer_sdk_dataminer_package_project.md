@@ -147,9 +147,9 @@ By doing so, you can omit `CatalogDefaultDownloadKeyName` and `CatalogPublishKey
 dotnet publish -p:Version="0.0.1" -p:VersionComment="This is just a pre-release version."
 ```
 
-#### Using Visual Studio with a user secret
+#### Using Visual Studio with a User Secret
 
-You can also publish your artifact via [Visual Studio's default publish functionality](https://learn.microsoft.com/en-us/dotnet/core/tutorials/publishing-with-visual-studio), using a secret user. This is convenient when managing multiple projects with different registration keys.
+You can also publish your artifact via [Visual Studio's default publish functionality](https://learn.microsoft.com/en-us/dotnet/core/tutorials/publishing-with-visual-studio), using a User Secret. This is convenient when managing multiple projects with different registration keys.
 
 1. Obtain an **organization key** from [admin.dataminer.services](https://admin.dataminer.services/) with the following scopes:
 
