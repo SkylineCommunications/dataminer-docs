@@ -40,7 +40,7 @@ Help users understand what your Catalog item is, what it does, and what it looks
 
 ### Use semantic versioning
 
-When you release a version of a Catalog item, make sure to **adhere to semantic versioning** to ensure clarity and predictability for users. Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
+When you release a version of a Catalog item, make sure to **adhere to [semantic versioning](https://semver.org/)** to ensure clarity and predictability for users. Most Catalog items (except connectors) should follow the standard **A.B.C** semantic versioning format:
 
 - **A (MAJOR)**: Incremented for incompatible changes, breaking changes, or major architectural redesigns that may require user action.
 
