@@ -17,6 +17,9 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
    > - When you run the Automation script and there are Failover pairs in the cluster, make sure the **main Failover Agents** (i.e. the first Agent in the Failover configuration) are the **active** ones. Otherwise, the Automation script will not function correctly.
    > - To migrate a **cluster**, you only need to start the migration on **one Agent**.
 
+   > [!IMPORTANT]
+   > For a separate Cassandra setup (see [storage options overview](xref:Supported_system_data_storage_architectures)), migration is supported from DataMiner 10.4.0 [CU17], 10.5.0 [CU5], and 10.5.8 onwards.<!-- RN 43325 -->
+
 1. Initialize the migration:
 
    1. Optionally, configure a proxy for the migration if necessary. This is supported from DataMiner 10.4.6 onwards.

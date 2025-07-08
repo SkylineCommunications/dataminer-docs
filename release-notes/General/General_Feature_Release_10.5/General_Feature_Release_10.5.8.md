@@ -235,8 +235,8 @@ In some cases, the `C:\Skyline DataMiner\Webpages\API\Web.config` file could con
 
 In DataMiner 10.5.6, improvements had been made to the Resource Manager caching, introducing throttling to reduce latency. However, under specific conditions, this throttling could cause the SRM scheduler to become unresponsive. This happened when asynchronous and synchronous booking tasks competed for limited cache access slots, exhausting the available thread pool and preventing progress.
 
-#### No history alarms would appear when data was being migrated or replicated from Cassandra Single Node to STaaS [ID 43325]
+#### No history alarms shown when data was being migrated or replicated from separate Cassandra setup to STaaS [ID 43325]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 [CU0] -->
 
-No history alarms would appear when data was being migrated or replicated from Cassandra Single Node to STaaS.
+While a DataMiner storage setup was migrated or replicated where each DMA had its own Cassandra database, no history alarms were shown.
