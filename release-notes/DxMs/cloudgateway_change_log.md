@@ -4,9 +4,9 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 07 July 2025 - Fix - CloudGateway 2.17.10 - Unhandled exception in tunnel connection could cause a DXM restart
+#### 07 July 2025 - Fix - CloudGateway 2.17.10 - Unhandled exception while setting up connection could cause a DxM restart
 
-When the connection to the tunnel encounters an exception it could result in a crash and restart of the CloudGateway DXM.
+When an exception was encountered while setting up the connection, this could cause the CloudGateway DxM to stop working correctly and then restart.
 
 #### 30 June 2025 - Fix - CloudGateway 2.17.9 - Problem with dashboard sharing in proxy setups
 
