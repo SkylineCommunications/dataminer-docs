@@ -18,7 +18,7 @@ Before migrating your data over to STaaS, make sure you are aware of the [limita
    > - To migrate a **cluster**, you only need to start the migration on **one Agent**.
    
    > [!IMPORTANT]
-   > For Cassandra Single Node Setups, cost migration is supported from DataMiner 10.4.0.0-CU17, 10.5.0.0-CU5 and 10.5.8.0 onwards.
+   > For Cassandra Single Node Setups, migration is supported from DataMiner 10.4.0.0-CU17, 10.5.0.0-CU5 and 10.5.8.0 onwards.
 
 1. Initialize the migration:
 
