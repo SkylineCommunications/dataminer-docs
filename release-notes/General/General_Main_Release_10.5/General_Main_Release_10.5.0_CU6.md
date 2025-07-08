@@ -30,6 +30,12 @@ For detailed information about the changes included in the above-mentioned versi
 
 ### Fixes
 
+#### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, the same dependency would be loaded multiple times by different connectors. From now on, if multiple connectors attempt to load the same dependency at the same time, it will only be loaded once.
+
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
