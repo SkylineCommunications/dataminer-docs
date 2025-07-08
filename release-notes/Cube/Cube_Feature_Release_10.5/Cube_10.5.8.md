@@ -164,3 +164,9 @@ When, while configuring a service template, you had specified conditional trigge
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 -->
 
 In some rare cases, an error could occur when loading trend graphs.
+
+#### Alarm Console: Drag-and-drop editing button would incorrectly not be visible when you selected an incident alarm [ID 43328]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+When, in the Alarm Console, you had selected the *Show side panel* option, the *Drag-and-drop editing* button would incorrectly not be visible when you selected an incident alarm.
