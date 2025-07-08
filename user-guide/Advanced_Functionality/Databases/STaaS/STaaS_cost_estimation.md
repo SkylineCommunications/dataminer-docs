@@ -18,6 +18,9 @@ To request a cost estimation, follow the procedure below:
    > - When you run the Automation script and there are Failover pairs in the cluster, make sure the **main Failover Agents** (i.e. the first Agent in the Failover configuration) are the **active** ones. Otherwise, the Automation script will not function correctly.
    > - To do the cost estimation for a **cluster**, you only need to execute the script on **one Agent**.
 
+   > [!IMPORTANT]
+   > For Cassandra Single Node Setups, cost migration is supported from DataMiner 10.4.0.0-CU17, 10.5.0.0-CU5 and 10.5.8.0 onwards.
+
 1. Initialize the test run:
 
    1. Optionally, configure a proxy for the test run if necessary. This is supported from DataMiner 10.4.6 onwards.
