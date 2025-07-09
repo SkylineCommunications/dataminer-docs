@@ -152,11 +152,11 @@ When you stopped an element or performed a Failover switch when another action w
 
 When a service created from a service template had a reservation ID defined, up to now, that reservation ID would incorrectly disappear when the service template was re-applied.
 
-#### Problem when restarting a DaaS system [ID 43100]
+#### Incorrect license check could cause DaaS systems to shut down [ID 43100]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When a DaaS system was restarted, up to now, because of an incorrect license check the system would not be able to fully restart.
+Up to now, when a DaaS system was not able to validate its license, after a certain amount of time it would shut down because of an incorrect license check.
 
 #### Service replication would not work when a gRPC connection was being used [ID 43133]
 
