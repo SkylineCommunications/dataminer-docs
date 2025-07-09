@@ -68,7 +68,7 @@ Up to now, when the client machine and the server were located in different time
 > [!NOTE]
 > If, for the `TimePicker` component, you set the `DateTimeKind` of the `Maximum` value to either "Local" or "Utc", the `Maximum` value may roll over to the next day, causing the hour/minute value of the `Maximum` property to be lower than the hour/minute value of the `Minimum` property. Hence, all values will be invalid.
 
-#### DataMiner landing page: Redesigned app sections [ID 43115] [ID 43226]
+#### DataMiner landing page: Redesigned app sections [ID 43115] [ID 43226] [ID 43261]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
@@ -77,7 +77,7 @@ The app sections on the DataMiner landing page (e.g. `https://myDMA/root/`) have
 - In the upper section, you will find the native DataMiner apps like Dashboards, Monitoring, and Cube.
 - In the lower section, you will find the apps you downloaded from the DataMiner Catalog as well as the low-code apps you create yourself (in different tabs per category).
 
-  Click *Browse catalog* to open the [DataMiner Catalog](https://catalog.dataminer.services/) or *Create app* to create a low-code app.
+  Click *Browse catalog* to open the [DataMiner Catalog](https://catalog.dataminer.services/) or *Create your first app* to create your first low-code app.
 
 #### GQI DxM: Support for asynchronous SLNet messages within ad hoc data sources and custom operators [ID 43231]
 
