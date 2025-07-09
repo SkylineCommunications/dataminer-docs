@@ -230,7 +230,7 @@ In some cases, the `C:\Skyline DataMiner\Webpages\API\Web.config` file could con
 
 #### Service & Resource Management: Problem while scheduling resources [ID 43295]
 
-<!-- MR 10.5.0 [CU6] - FR 10.5.8 [CU0] -->
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
 
 In DataMiner 10.5.6, improvements had been made to the Resource Manager caching, introducing throttling to reduce latency. However, under specific conditions, this throttling could cause the SRM scheduler to become unresponsive. This happened when asynchronous and synchronous booking tasks competed for limited cache access slots, exhausting the available thread pool and preventing progress.
 

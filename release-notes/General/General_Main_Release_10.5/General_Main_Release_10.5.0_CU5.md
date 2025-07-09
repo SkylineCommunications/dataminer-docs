@@ -154,6 +154,12 @@ In some cases, the `C:\Skyline DataMiner\Webpages\API\Web.config` file could con
 
 `The type initializer for 'Skyline.DataMiner.Web.Common.v1.TransportAgnosticInterface' threw an exception.`
 
+#### Service & Resource Management: Problem while scheduling resources [ID 43295]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+In DataMiner 10.5.6, improvements had been made to the Resource Manager caching, introducing throttling to reduce latency. However, under specific conditions, this throttling could cause the SRM scheduler to become unresponsive. This happened when asynchronous and synchronous booking tasks competed for limited cache access slots, exhausting the available thread pool and preventing progress.
+
 #### No history alarms shown when data was being migrated or replicated from separate Cassandra setup to STaaS [ID 43325]
 
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 [CU0] -->
