@@ -10,7 +10,7 @@ uid: Changing_group_membership_of_a_user
 
 1. Go to the *Group membership* tab.
 
-1. User the *ADD \>\>* and *\<\< REMOVE* buttons to move different groups to or from the *Available groups* and *Included in groups* columns.
+1. Use the *ADD \>\>* and *\<\< REMOVE* buttons to move different groups to or from the *Available groups* and *Included in groups* columns.
 
 1. Click the *Apply* button.
 
