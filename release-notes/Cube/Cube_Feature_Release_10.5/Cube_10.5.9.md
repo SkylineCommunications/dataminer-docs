@@ -64,6 +64,12 @@ Also, when there are any DaaS systems in the cluster to which you are connected,
 
 As the *Add/remove elements* user permission in *General > Views* allows users to also add or remove other items, including services, measurement points, service templates, redundancy groups, redundancy templates, etc., this user permission has now been renamed to *Add/remove items (elements, services, etc.)*.
 
+#### Profiles module: Enhanced performance when loading profiles [ID 43235]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading profiles into the *Profiles* module.
+
 #### Edge/WebView2 browser engine now supports CTRL+F search functionality [ID 43241]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
