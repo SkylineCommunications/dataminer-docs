@@ -164,6 +164,17 @@ Up to now, when a DaaS system was not able to validate its license, after a cert
 
 Up to now, service replication would not work when a gRPC connection was being used.
 
+#### Service & Resource Management: Booking could incorrectly be set to 'Confirmed' indefinitely [ID 43140]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a booking with status "Ongoing" or "Ended" had its timing or one of its properties updated, in some cases, its status could incorrectly remain set to "Confirmed" indefinitely. This behavior has now been fixed.
+
+Also, from now on, the booking status will only be set to "Confirmed" in the following cases:
+
+- When the start time of the new booking is in the future.
+- When the prior reservation has ended, and the new end time is extended to a point in the future beyond the original end time.
+
 #### SLDMS and SLDataMiner could get into a deadlock when redundancy group properties were being updated [ID 43148]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
