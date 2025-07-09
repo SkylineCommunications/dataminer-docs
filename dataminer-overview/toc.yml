@@ -66,8 +66,6 @@ items:
           items:
             - name: MediaOps apps
               topicUid: Overview_MediaOps_Apps
-            - name: Supported connectors for MediaOps
-              topicUid: Overview_MediaOps_supported_connectors
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:
