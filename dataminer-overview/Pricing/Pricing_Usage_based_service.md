@@ -61,6 +61,16 @@ An "organization" is the billing entity and the highest level in the hierarchy i
 
 ![Business organization overview](~/user-guide/images/Business_organization_Overview.png)
 
+### Metering requirements
+
+Metering and billing require an active connection to dataminer.services to ensure accurate usage reporting. In the event of a short-term connection loss (e.g. a few days), usage data is not lost.
+
+For offline or air-gapped environments, local usage logging is supported through the following options:
+
+- Monthly manual export: Usage data is logged locally and must be securely exported by the end user within 5 calendar days following the end of each month (e.g. via file transfer, physical media, or email relay).
+
+- Quarterly auditing (exceptional cases): A scheduled audit session (remote or on-site) to verify usage directly on the system. Please contact your Account Manager to discuss eligibility and setup.
+
 ### Usage terms
 
 | Term      | Definition |
