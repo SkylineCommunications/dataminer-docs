@@ -85,6 +85,12 @@ The app sections on the DataMiner landing page (e.g. `https://myDMA/root/`) have
 
 When using the GQI DxM, ad hoc data sources and custom operators will now be able to send SLNet messages asynchronously using `connection.Async.Launch()`.
 
+#### Web API will now return a custom error page instead of a standard .NET error page [ID 43250]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When the web API received an invalid request, up to now, it would return a standard .NET error page. From now on, it will return a custom error page instead.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Timeline component: Group label tooltips missing [ID 43242]
