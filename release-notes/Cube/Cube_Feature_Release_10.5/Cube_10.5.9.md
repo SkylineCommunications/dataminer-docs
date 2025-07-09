@@ -109,3 +109,13 @@ In order to prevent issues caused by trailing spaces in row indices, Cube will n
 When you clicked a pattern in a trend graph, an exception would be thrown, and the following error would be logged:
 
 `An item with the same key has already been added.`
+
+#### Settings: Problem with card-specific alarm tab settings [ID 43280]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In the *Settings* window, you can configure card-specific alarm tab settings on user level as well as on group level.
+
+Up to now, in some cases, when you checked card-specific alarm tab settings configured on user level, you would incorrectly see settings that had been configured on group level. Also, when you checked settings configured for a particular group, you would incorrectly see settings that had been configured for another group.
+
+Also, when, in the *Settings* window, you went to *Alarm Console > Card-specific*, up to now, the *Card types* list would not show the card types that had been enforced on group level.
