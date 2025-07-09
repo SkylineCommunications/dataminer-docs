@@ -32,7 +32,7 @@ uid: SCH_Recurring
 
 1. Click *Create Recurrence*.
 
-   This will update the job from which you started the action to be the first instance, create an entry on the *Recurring Job View* page that will trigger all other jobs in the future to be created in the background. From the *Recurring Job View* page, you can track the *Process status*, which indicates if all jobs were created successfully.
+   This will update the job from which you started the action so it is the first instance in the series of recurring jobs, and it will create an entry on the *Recurring Job View* page that will make all other job instances get created in the background in the future. From the *Recurring Job View* page, you can track the *Process status*, which indicates if all jobs were created successfully.
 
    Jobs will be created up to one year in the future. On a daily basis, new jobs will be created for all recurring jobs if needed. This keeps the number of jobs linked to the recurring job under control when you create, cancel, or delete a recurring job.
 
