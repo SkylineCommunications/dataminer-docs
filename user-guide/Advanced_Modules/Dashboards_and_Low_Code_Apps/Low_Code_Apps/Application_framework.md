@@ -8,6 +8,8 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 
 The DataMiner Low-Code Apps module is fully available from DataMiner 10.2.5/10.3.0 onwards. Prior to this, you can preview it if the *Applications* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
+You can access the Low-Code Apps module via the [DataMiner landing page](xref:Accessing_the_web_apps) or from the [*Apps* pane](xref:DataMiner_Cube_sidebar#apps-pane) in DataMiner Cube (from DataMiner 10.2.9/10.3.0 onwards<!-- RN 33944 -->).
+
 ![Low-Code App example](~/user-guide/images/Low-Code_App.png)<br>*Low-Code Apps module in DataMiner 10.4.9*
 
 > [!IMPORTANT]

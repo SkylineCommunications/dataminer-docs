@@ -13,7 +13,7 @@ To install the RAD Manager app, go to [RAD Manager](https://catalog.dataminer.se
 You can then find the RAD Manager app on your DataMiner landing page at `https://[Your DMA]/root`.
 
 > [!TIP]
-> See also [Accessing the Low-Code Apps module](xref:Accessing_custom_apps).
+> See also [Accessing the web apps](xref:Accessing_the_web_apps).
 
 ## Inspecting the configured parameter groups
 

@@ -65,7 +65,7 @@ This tutorial consists of the following steps:
    - On the home page of your DataMiner System, check whether the low-code app "Skyline Spectrum Simulation" has been added.
 
      > [!TIP]
-     > See also: [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)
+     > See also: [Accessing the web apps](xref:Accessing_the_web_apps)
 
 ## Step 2: Initialize the use case
 
