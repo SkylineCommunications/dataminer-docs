@@ -123,3 +123,9 @@ Also, from now on, the primary IP address of the offline agent will be set to ei
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, up to now, the start-up process would fail abruptly because of an unhandled exception in SLNet. From now on, it will fail gracefully.
+
+#### Service & Resource Management: Problem while scheduling resources [ID 43295]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.8 [CU0] -->
+
+In DataMiner 10.5.6, improvements had been made to the Resource Manager caching, introducing throttling to reduce latency. However, under specific conditions, this throttling could cause the SRM scheduler to become unresponsive. This happened when asynchronous and synchronous booking tasks competed for limited cache access slots, exhausting the available thread pool and preventing progress.
