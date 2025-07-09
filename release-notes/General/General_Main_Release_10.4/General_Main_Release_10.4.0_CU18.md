@@ -15,7 +15,16 @@ uid: General_Main_Release_10.4.0_CU18
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### NT Notify types NT_SNMP_GET and NT_SNMP_RAW_GET now have infinite loop protection [ID 43273]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+The NT Notify types NT_SNMP_GET (295) and NT_SNMP_RAW_GET (424) now have infinite loop protection.
+
+When an infinite loop is detected, the following will be returned:
+
+- When the `splitErrors` option is set to false, the error message `INFINITE LOOP` will be returned.
+- When the `splitErrors` option is set to true, the values will be returned.
 
 ### Fixes
 
