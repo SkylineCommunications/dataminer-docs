@@ -33,6 +33,6 @@ The DataMiner web apps are a suite of applications, available on the [DataMiner 
 
   ![Monitoring app](~/user-guide/images/Monitoring_app.png)<br/>*Monitoring app in DataMiner 10.4.1*
 
-- Dashboards app and Low-Code Apps: These modules allow you to easily create custom dashboards and apps that provide access to specific information and functionality. This way you can give users limited access to only those data and features they need. For more information, see [Dashboards app and Low-Code Apps](xref:Dashboards_and_Low_Code_Apps).
+- **Dashboards app and Low-Code Apps**: These modules allow the creation of custom dashboards and apps that provide access to specific information and functionality. This way, users will only see the data and features that they need for a specific purpose. For more information, see [Dashboards app and Low-Code Apps](xref:Dashboards_and_Low_Code_Apps).
 
   ![Low-code app](~/user-guide/images/Low_Code_App_Example.png)<br/>*Low-Code Apps module in DataMiner 10.4.1*
