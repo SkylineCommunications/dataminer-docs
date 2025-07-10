@@ -17,7 +17,7 @@ You can access all DataMiner web apps via the **DataMiner landing page**.
    > [!NOTE]
    >
    > - If you are trying to use the remote access URL (e.g. `https://ziine-skyline.on.dataminer.services/root/`) to access the web apps, make sure you have been granted [remote access](xref:About_Remote_Access).
-   > - System Administrators can [configure whether the landing page is displayed](xref:Configuring_the_landing_page#configuring-whether-the-landing-page-is-displayed) or whether the Monitoring app opens directly when a user browses to a DMA. If the Monitoring app opens directly, you can access the other web apps by clicking the waffle icon in the top-left corner.
+   > - System Administrators can [configure whether the landing page is displayed](xref:Configuring_the_landing_page#configuring-whether-the-landing-page-is-displayed) or whether the Monitoring app opens directly when a user browses to a DMA. If the Monitoring app opens directly, you can access the other web apps by clicking the icon in the top-left corner.
 
 1. Sign in using your DataMiner credentials.
 
