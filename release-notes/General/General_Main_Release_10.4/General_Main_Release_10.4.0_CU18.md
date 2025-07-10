@@ -28,6 +28,12 @@ When an infinite loop is detected, the following will be returned:
 
 ### Fixes
 
+#### SLProtocol would leak memory when an element was restarted [ID 42697] [ID 43300]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
+
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -107,3 +113,9 @@ In OpenSearch, in some cases, queries with a limit could cause scroll contexts t
 Up to now, in a Failover setup using a shared hostname, in some cases, the primary IP address would incorrectly be set to the IP address of the online agent instead of the hostname. Moreover, if that primary IP address was set to an incorrect IP address, it would be impossible to remove the Failover pair from the DataMiner System.
 
 Also, from now on, the primary IP address of the offline agent will be set to either the virtual IP address or the hostname of the Failover pair. Up to now, it would be set to the local IP address.
+
+#### Problem when deleting a DVE child element [ID 43302]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, a run-time error could be thrown when a DVE child element was deleted.

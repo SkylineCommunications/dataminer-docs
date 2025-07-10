@@ -47,6 +47,12 @@ For detailed information about the changes included in the above-mentioned versi
 
 ### Fixes
 
+#### SLProtocol would leak memory when an element was restarted [ID 42697] [ID 43300]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
+
 #### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -159,3 +165,9 @@ When a DataMiner Agent that did not have Swarming enabled was started without a 
 When using the BrokerGateway-managed NATS solution, in some cases, the `GetConnectionDetails` call would incorrectly not return any destinations when an attempt was made to connect to NATS.
 
 Also, up to now, when a `GetNatsConnection` call was made while no endpoints were specified in the *appsettings.runtime.json* file, the response would incorrectly contain `nats://<ip>:4222` instead of `<ip>:4222`.
+
+#### Problem when deleting a DVE child element [ID 43302]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, a run-time error could be thrown when a DVE child element was deleted.
