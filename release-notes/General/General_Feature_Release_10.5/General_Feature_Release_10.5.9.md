@@ -54,6 +54,29 @@ Possible values:
 | Optional | The script will be interactive when it needs to be. |
 | Always   | The script will always be interactive. |
 
+#### QAction dependencies can now also be uploaded to 'DllImport' subfolders [ID 43108]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, QAction dependencies could only be uploaded to the `C:\Skyline DataMiner\Scripts\DllImport` folder. From now on, the `UploadScriptDependencyMessage` will also be able to upload dependencies to any of the subfolders of that `DllImport` folder.
+
+See the following example. The `UploadScriptDependencyMessage` now has a `DependencyFolder` property, which allows you to specify the destination of the dependency to be uploaded.
+
+```csharp
+var uploadDependencyMessage = new UploadScriptDependencyMessage()
+{
+  Bytes = bytes,
+  DependencyName = name,
+  Path = string.Empty, // Subfolders within the destination can be specified here
+  DependencyFolder = ScriptDependencyFolder.SolutionLibraries // Default is 'ScriptDependencyFolder.ScriptImports'
+};
+```
+
+After a dependency has been uploaded, all scripts using that dependency will be recompiled.
+
+> [!NOTE]
+> For QActions in protocols, the relevant SLScripting process must be restarted before the new DLL will get loaded.
+
 ## Changes
 
 ### Enhancements
