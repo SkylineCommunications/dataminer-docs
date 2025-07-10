@@ -99,6 +99,14 @@ The NATS request timeout has been increased from 1 minute to 5 minutes.
 
 Also, when a timeout occurs, the error added to the web logs will now include the message that timed out.
 
+#### Dashboards app & Low-Code Apps - Timeline component: Group order will now be preserved [ID 43296]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, the *Timeline* component would try to preserve as much state as possible when refreshing the data (via an action, a trigger component, a change to the data being fed, etc.). This meant that groups that were already present since the previous query would remain in the same spot, relative to each other. This would also be the case if the order in which the new data was returned was different from that of the previous query.
+
+From now on, the order of the rows will be taken into account when determining the position of the timeline groups. In that way, the groups will be sorted according to the data. The position of the items within a group will not change.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Timeline component: Group label tooltips missing [ID 43242]
