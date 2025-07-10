@@ -6,7 +6,7 @@ uid: Accessing_the_web_apps
 
 You can access all DataMiner web apps via the **DataMiner landing page**.
 
-1. In a browser, go to:
+1. In a supported web browser (Google Chrome, Microsoft Edge, Mozilla Firefox, or Safari), navigate to:
 
    ```txt
    https://[DMA]/root/
@@ -28,9 +28,6 @@ You can access all DataMiner web apps via the **DataMiner landing page**.
    Available web apps:
 
    - (1) [Dashboards app](xref:newR_D): Use this app to create, manage, and view dashboards that provide insights into your monitored system.
-
-     > [!NOTE]
-     > We recommend using Google Chrome to access the Dashboards app. Microsoft Edge, Mozilla Firefox, and Safari are also supported.
 
    - (2) [Monitoring app](xref:Working_with_the_Monitoring_app): Access a web-based interface similar to DataMiner Cube, with more limited functionality but broader accessibility.
 
