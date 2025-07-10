@@ -234,3 +234,11 @@ Also, from now on, the primary IP address of the offline agent will be set to ei
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
 When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, up to now, the start-up process would fail abruptly because of an unhandled exception in SLNet. From now on, it will fail gracefully.
+
+#### BrokerGateway: GetConnectionDetails call would incorrectly not return any destinations [ID 43292]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When using the BrokerGateway-managed NATS solution, in some cases, the `GetConnectionDetails` call would incorrectly not return any destinations when an attempt was made to connect to NATS.
+
+Also, up to now, when a `GetNatsConnection` call was made while no endpoints were specified in the *appsettings.runtime.json* file, the response would incorrectly contain `nats://<ip>:4222` instead of `<ip>:4222`.
