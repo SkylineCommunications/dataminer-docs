@@ -54,11 +54,11 @@ Possible values:
 | Optional | The script will be interactive when it needs to be. |
 | Always   | The script will always be interactive. |
 
-#### QAction dependencies can now also be uploaded to 'DllImport' subfolders [ID 43108]
+#### Automation script and QAction dependencies can now also be uploaded to the 'DllImport\\SolutionLibraries' folder [ID 43108]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-Up to now, QAction dependencies could only be uploaded to the `C:\Skyline DataMiner\Scripts\DllImport` folder. From now on, the `UploadScriptDependencyMessage` will also be able to upload dependencies to any of the subfolders of that `DllImport` folder.
+Up to now, the `UploadScriptDependencyMessage` was only able to upload Automation script and QAction dependencies to the `C:\Skyline DataMiner\Scripts\DllImport` folder. From now on, it will also be able to upload those dependencies to the `C:\Skyline DataMiner\ProtocolScripts\DllImport\SolutionLibraries` folder.
 
 See the following example. The `UploadScriptDependencyMessage` now has a `DependencyFolder` property, which allows you to specify the destination of the dependency to be uploaded.
 
@@ -277,3 +277,9 @@ Also, up to now, when a `GetNatsConnection` call was made while no endpoints wer
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 In some cases, a run-time error could be thrown when a DVE child element was deleted.
+
+#### Problem with SLNet when an error was thrown while setting up the database connection [ID 43314]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in SLDataGateway, an error was thrown while setting up the connection to the database, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.

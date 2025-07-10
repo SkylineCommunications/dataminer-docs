@@ -803,11 +803,11 @@ When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will b
 
 This message should not be used to request the information in an Automation script.
 
-#### QAction dependencies can now also be uploaded to 'DllImport' subfolders [ID 43108]
+#### Automation script and QAction dependencies can now also be uploaded to the 'DllImport\\SolutionLibraries' folder [ID 43108]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-Up to now, QAction dependencies could only be uploaded to the `C:\Skyline DataMiner\Scripts\DllImport` folder. From now on, the `UploadScriptDependencyMessage` will also be able to upload dependencies to any of the subfolders of that `DllImport` folder.
+Up to now, the `UploadScriptDependencyMessage` was only able to upload Automation script and QAction dependencies to the `C:\Skyline DataMiner\Scripts\DllImport` folder. From now on, it will also be able to upload those dependencies to the `C:\Skyline DataMiner\ProtocolScripts\DllImport\SolutionLibraries` folder.
 
 See the following example. The `UploadScriptDependencyMessage` now has a `DependencyFolder` property, which allows you to specify the destination of the dependency to be uploaded.
 
