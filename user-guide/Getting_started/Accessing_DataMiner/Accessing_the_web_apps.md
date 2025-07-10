@@ -67,7 +67,7 @@ To do so:
 1. Click the install button on the right side of the browser address bar.
 
    > [!NOTE]
-   > The install button will not appear in the browser address bar if you used the remote access link to open the web app.
+   > The install button will not appear in the browser address bar if you used a [remote access](xref:About_Remote_Access) URL to open the web app.
 
 1. Select *Install*.
 
