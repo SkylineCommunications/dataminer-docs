@@ -108,6 +108,12 @@ Example:
 > [!NOTE]
 > When the source DMA is no longer available or unknown, the information event will be shortened to `Swarmed to <DmaName> (<DmaId>) by <UserName>`.
 
+#### GQI: Enhanced performance when setting up GQI connections [ID 43251]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When executing GQI queries via SLHelper, overall performance has increased when setting up GQI connections.
+
 #### DxMs upgraded [ID 43205] [ID 43298] [ID 43334]
 
 <!-- RN 43205: MR 10.6.0 - FR 10.5.9 -->
@@ -283,3 +289,11 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
+
+#### DataMiner upgrade: Existing instances of the BPA test 'Check Agent Presence Test In NATS' would incorrectly not be removed [ID 43359]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+In DataMiner versions 10.5.0/10.4.12, the BPA test *Check Agent Presence Test In NATS* was renamed to *Nats connections between the DataMiner Agents*. However, up to now, any existing instances of the *Check Agent Presence Test In NATS* test would incorrectly not be removed during a DataMiner upgrade. From now on, any existing instance of the *Check Agent Presence Test In NATS* test will be automatically removed during a DataMiner upgrade.
+
+Also, the *VerifyNatsIsRunning* prerequisite check has now been replaced by the *VerifyNatsCluster* check. While this change had already been implemented in DataMiner 10.5.0 [CU3]/10.5.6, up to now, it had not yet been fully deployed.

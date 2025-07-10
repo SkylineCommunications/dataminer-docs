@@ -15,6 +15,12 @@ uid: General_Main_Release_10.4.0_CU18
 
 ### Enhancements
 
+#### GQI: Enhanced performance when setting up GQI connections [ID 43251]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When executing GQI queries via SLHelper, overall performance has increased when setting up GQI connections.
+
 #### NT Notify types NT_SNMP_GET and NT_SNMP_RAW_GET now have infinite loop protection [ID 43273]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
