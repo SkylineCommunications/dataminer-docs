@@ -184,7 +184,7 @@ Depending on the configuration and version of your DataMiner System, as well as 
 
 - **Applications**: Plug-in applications, e.g. [IDP](xref:SolIDP), [PTP](xref:SolPTP), etc.
 
-- **Web Apps**: The [Monitoring app](xref:The_Monitoring_app_user_interface), [Dashboards app](xref:newR_D), and any available [low-code apps](xref:Dashboards_and_Low_Code_Apps).<!-- RN 33944 -->
+- **Web Apps**: The [Monitoring app](xref:Working_with_the_Monitoring_app), [Dashboards app](xref:newR_D), and any available [low-code apps](xref:Dashboards_and_Low_Code_Apps).<!-- RN 33944 -->
 
 - **General**: The Help, Settings, and About.
 

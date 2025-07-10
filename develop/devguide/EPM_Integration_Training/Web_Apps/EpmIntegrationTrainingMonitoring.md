@@ -10,5 +10,5 @@ Dealing with EPM elements containing substantial amounts of data can cause perfo
 
 > [!TIP]
 >
-> - For information on accessing the Monitoring app, see [Accessing the Monitoring app](xref:Accessing_the_Monitoring_app)
-> - For information about the Monitoring app UI, see [The Monitoring app user interface](xref:The_Monitoring_app_user_interface).
+> - For information on accessing the Monitoring app, see [Accessing the web apps](xref:Accessing_the_web_apps)
+> - For information about the Monitoring app UI, see [Working with the Monitoring app](xref:Working_with_the_Monitoring_app).

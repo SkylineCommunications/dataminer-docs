@@ -19,7 +19,7 @@ description: Create a DataMiner System, and learn how to interact with DataMiner
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Getting_started/The_DataMiner_User_Interface/Monitoring_app/The_Monitoring_app_user_interface.html" title="Working with the Monitoring app" target="_self"><img src="~/user-guide/images/Working_with_Monitoring_app.svg" style="width:100%"></a>
+    <a href="/user-guide/Getting_started/The_DataMiner_User_Interface/Monitoring_app/Working_with_the_Monitoring_app.html" title="Working with the Monitoring app" target="_self"><img src="~/user-guide/images/Working_with_Monitoring_app.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Getting_started/Getting_started_community.html" title="DataMiner Community" target="_self"><img src="~/user-guide/images/DataMiner_Community.svg" style="width:100%"></a>

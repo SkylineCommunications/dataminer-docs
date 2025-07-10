@@ -9,9 +9,7 @@ Several client apps are available that allow you to interact with a DataMiner Sy
 
 - [DataMiner Cube](#dataminer-cube) (1)
 
-- [DataMiner Monitoring app](#dataminer-monitoring-app) (2)
-
-- [Dashboards app and Low-Code Apps](#dashboards-app-and-low-code-apps) (3)
+- [DataMiner web apps](#dataminer-web-apps) (2)
 
 ![dataminer.services home page](~/user-guide/images/Accessing_Client_Apps.png)<br>*[dataminer.services](https://dataminer.services/) home page*
 
@@ -27,16 +25,14 @@ DataMiner Cube is the main DataMiner client application. With Cube, you can full
 
 ![Cube start window](~/user-guide/images/Cube_Start_Window.png)<br/>*Cube start window in DataMiner 10.4.1*
 
-## DataMiner Monitoring app
+## DataMiner web apps
 
-The DataMiner Monitoring app is the main web application to monitor a DataMiner System. While it has more limited functionality than DataMiner Cube, it is more easily accessible, as you can open it in any modern browser.
+The DataMiner web apps are a suite of applications, available on the [DataMiner landing page](xref:Accessing_the_web_apps), that allow users to interact with a DataMiner System. These include:
 
-For more information on how to access a DataMiner System with this app, see [Accessing the Monitoring app](xref:Accessing_the_Monitoring_app).
+- **DataMiner Monitoring app**: The main web application for monitoring a DataMiner System. While it has more limited functionality than DataMiner Cube, it is more easily accessible, as you can open it in any modern browser.
 
-![Monitoring app](~/user-guide/images/Monitoring_app.png)<br/>*Monitoring app in DataMiner 10.4.1*
+  ![Monitoring app](~/user-guide/images/Monitoring_app.png)<br/>*Monitoring app in DataMiner 10.4.1*
 
-## Dashboards app and Low-Code Apps
+- **Dashboards app and Low-Code Apps**: These modules allow the creation of custom dashboards and apps that provide access to specific information and functionality. This way, users will only see the data and features that they need for a specific purpose. For more information, see [Dashboards app and Low-Code Apps](xref:Dashboards_and_Low_Code_Apps).
 
-With the [Dashboards app and Low-Code Apps](xref:Dashboards_and_Low_Code_Apps), you can easily create custom dashboards and apps that provide access to specific information and functionality. This way you can give users limited access to only those data and features they need.
-
-![Low-code app](~/user-guide/images/Low_Code_App_Example.png)<br/>*Low-Code Apps module in DataMiner 10.4.1*
+  ![Low-code app](~/user-guide/images/Low_Code_App_Example.png)<br/>*Low-Code Apps module in DataMiner 10.4.1*

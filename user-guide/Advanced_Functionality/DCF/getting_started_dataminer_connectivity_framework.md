@@ -164,7 +164,7 @@ To deploy the package:
 
 ## Step 3: Create a node edge graph using DCF connections
 
-1. Go to the [Dashboards app](xref:Accessing_the_Dashboards_app).
+1. Go to the [Dashboards app](xref:Accessing_the_web_apps).
 
 1. In the pane on the left, in the *KATA_DCF* folder, select the *KATA_DCF* dashboard.
 

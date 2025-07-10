@@ -9,7 +9,7 @@ uid: Creating_custom_apps
 
 ## Creating a new low-code app
 
-1. Go to the DataMiner landing page (see [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)).
+1. Go to the [DataMiner landing page](xref:Accessing_the_web_apps).
 
 1. If no apps exist yet, click *Create a new app*. Otherwise, hover the mouse pointer over the *Other apps* section and click the "+" button next to *Other apps*.
 
@@ -43,7 +43,7 @@ From DataMiner 10.3.0 [CU10]/10.4.1 onwards<!-- RN 37698+37724 -->, it is possib
 
 ### Duplicating an app from the DataMiner landing page
 
-1. Go to the DataMiner landing page (see [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)).
+1. Go to the [DataMiner landing page](xref:Accessing_the_web_apps).
 
 1. Hover over the app you want to duplicate until you see the ellipsis ("...") button.
 
