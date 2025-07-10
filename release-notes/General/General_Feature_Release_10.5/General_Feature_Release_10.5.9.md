@@ -278,8 +278,8 @@ Also, up to now, when a `GetNatsConnection` call was made while no endpoints wer
 
 In some cases, a run-time error could be thrown when a DVE child element was deleted.
 
-#### Problem with SLNet when an error was thrown while setting up the database connection [ID 43314]
+#### Problem when an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet [ID 43314]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When, in SLDataGateway, an error was thrown while setting up the connection to the database, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
+When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
