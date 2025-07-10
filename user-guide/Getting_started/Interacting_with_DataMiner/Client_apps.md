@@ -29,7 +29,7 @@ DataMiner Cube is the main DataMiner client application. With Cube, you can full
 
 The DataMiner web apps are a suite of applications, available on the [DataMiner landing page](xref:Accessing_the_web_apps), that allow users to interact with a DataMiner System. These include:
 
-- DataMiner Monitoring app: The main web application for monitoring a DataMiner System. While it has more limited functionality than DataMiner Cube, it is more easily accessible, as you can open it in any modern browser.
+- **DataMiner Monitoring app**: The main web application for monitoring a DataMiner System. While it has more limited functionality than DataMiner Cube, it is more easily accessible, as you can open it in any modern browser.
 
   ![Monitoring app](~/user-guide/images/Monitoring_app.png)<br/>*Monitoring app in DataMiner 10.4.1*
 
