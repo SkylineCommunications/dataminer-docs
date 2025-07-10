@@ -107,13 +107,13 @@ Up to now, the *Timeline* component would try to preserve as much state as possi
 
 From now on, the order of the rows will be taken into account when determining the position of the timeline groups. In that way, the groups will be sorted according to the data. The position of the items within a group will not change.
 
-#### GQI DxM: Ad hoc data sources and customer operators can now also send SLNet messages defined in SLAnalyticsTypes [ID 43299]
+#### GQI DxM: Ad hoc data sources and customer operators can now send SLNet messages defined in all assemblies that are officially supported to communicate with SLNet [ID 43299]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-When using the GQI DxM, SLNet messages can be sent via ad hoc data sources or customer operators. However, up to now, sending an SLNet message that is not defined in `SLNetTypes` could fail when the underlying connection worker process did not have a reference to the assembly in which the message is defined.
+When using the GQI DxM, SLNet messages can be sent via ad hoc data sources or customer operators. However, up to now, sending an SLNet message that was not defined in `SLNetTypes` could fail because the underlying connection worker process did not have a reference to the assembly in which the message is defined.
 
-From now on, the connection worker process also has references to the `SLAnalyticsTypes` assemblies. This means that SLNet messages (requests, responses and events) defined in these assemblies can now also be used in ad hoc data sources and customer operators.
+From now on, the connection worker process has references to all assemblies that are officially supported to communicate with SLNet (including `SLAnalyticsTypes`). This means that SLNet messages (requests, responses and events) defined in these assemblies can now also be used in ad hoc data sources and customer operators.
 
 ### Fixes
 
