@@ -7,38 +7,61 @@ uid: GVAMPP_Manager_Installing
 ## Prerequisites
 
 - DataMiner version 10.4.5 or higher
+
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
-- A connection to an AMPP tenancy via its URL (i.e., https://mytenancy.gvampp.com)
-  
-  > [!IMPORTANT]
-  > The GV AMPP Manager connector requires an API key, which can be generated using the AMPP Identity Manager. Please refer to the AMPP documentation hub for specific instructions.
+
+- [Microsoft .NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.17-windows-hosting-bundle-installer)
+
+- A connection to an AMPP tenancy via its URL (e.g. `https://mytenancy.gvampp.com`)
+
+- An API key generated using the AMPP Identity Manager.
+
+  > [!TIP]
+  > Refer to the AMPP documentation hub for specific instructions.
 
 ## Deploying the Grass Valley AMPP Manager app
 
-1. Look up the [*GV AMPP Metrics* package](https://catalog.dataminer.services/details/56870962-1ade-45d2-b7ac-2fbb84383307) in the Catalog.
-2. Click the *Deploy* button.
-3. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
+1. Look up the [*GV AMPP Manager Application* package](https://catalog.dataminer.services/details/56870962-1ade-45d2-b7ac-2fbb84383307) in the Catalog.
 
-## Initial manager configuration
+1. Click the *Deploy* button.
 
-The Grass Valley AMPP Manager application relies on an external component to communicate with the designated AMPP tenancy. This component must be installed and configured on each DataMiner agent where an AMPP Manager element will be created.
+1. Select the target DataMiner System and confirm the deployment. The package will be pushed to the DataMiner System.
 
-The installation of the external component and the creation of a DataMiner AMPP Manager element is supported conveniently by an automation script that can be executed from the Metrics LCA as follows:
+The *Grass Valley AMPP Manager Application* package includes:
 
-1. Access the GV AMPP Manager LCA from the Cube Apps panel or the DataMiner services homepage.
-2. The LCA begins with the Statistics page. Click on the configuration page in the left pane (cogwheel icon):
+- The *Grass Valley AMPP Manager* connector
 
-![AMPP Metrics](~/user-guide/images/GVAMPP_statistics_page.png)
+- The *GV AMPP Manager* low-code app
 
-3. The configuration page is open with initial instructions and a link to download and install the Host bundle prerequisite. See details above.
-4. Click the configure button to begin the configuration script, which will display the following interactive dialog:
+- The *AMPP* Automation script folder, which includes scripts used in the app to gather data and perform workload and snapshot control operations
 
-![AMPP Setup Script](~/user-guide/images/GVAMPP_Setup_Script.png)
+- The SignalR Forwarder application
 
-- **GVAMPP Endpoint:**  The URL for the target AMPP tenancy, for example,  https://mytenancy.gvampp.com.
-- **API Key:** The key that was generated in the Identity Manager.
-- **DMA:** In the case of a DMS, you can choose the agent to install and configure.
+## Installing and configuring the communication component
+
+The Grass Valley AMPP Manager app relies on an external component to communicate with the designated AMPP tenancy. This component must be installed and configured on each DataMiner Agent where an AMPP Manager element will be created.
+
+An Automation script included in the package helps with both installing this component and creating the AMPP Manager element. To run the script:
+
+1. Go to the DataMiner landing page (`https://[DMA]/root/`).
+
+1. Open the *GV AMPP Manager* app.
+
+1. In the app, click the cogwheel ![cogwheel](~/user-guide/images/GV_AMPP_Manager_Configuration_page.png) icon in the sidebar to open the *Setup* page.
+
+   This page provides initial instructions and a link to download and install the Microsoft .NET 8.0 Hosting Bundle.
+
+1. Click the *Configure* button to launch the configuration script.
+
+   ![AMPP Setup Script](~/user-guide/images/GVAMPP_Setup_Script.png)
+
+1. In the *Dialog* window, provide the following information:
+
+   - *GVAMPP Endpoint*: The URL of the target AMPP tenancy, e.g. `https://mytenancy.gvampp.com`.
+
+   - *API Key*: The key generated using the Identity Manager.
+
+   - *DMA*: For a DMS, select the Agent on which to install and configure the component.
 
 > [!IMPORTANT]
-> If the target agent already has an AMPP Manager element, the script will recognize this and avoid any further configuration.
-
+> If the target Agent already hosts an AMPP Manager element, the script will recognize this and avoid any further configuration.
