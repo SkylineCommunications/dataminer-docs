@@ -225,5 +225,5 @@ Related articles on DataMiner Dojo:
 - Use Case: [Cisco Nexus](https://community.dataminer.services/use-case/cisco-nexus/) (Multicast Routing Tables)
 - Use Case: [Arista Manager Connector](https://community.dataminer.services/use-case/arista-manager-connector/) (Routing Tables)
 - Example use case: [OpenConfig](https://community.dataminer.services/use-case/openconfig/)
-- Exhibition Video: [NAB 2019 - PTP management and media flow monitoring](https://community.dataminer.services/video/nab-2019-ptp-management-and-media-flow-monitoring/?hilite=%27flow%27%2C%27monitoring%27)
+- Exhibition Video: [NAB 2019 - PTP management and media flow monitoring](https://www.youtube.com/watch?v=f246uxP3rY0)
 - Webinar 2019: [All-IP SMPTE-2110 infrastructure and media-over-IP monitoring](https://community.dataminer.services/webinars/all-ip-smpte-2110-infrastructure-and-media-over-ip-monitoring/?hilite=%27flow%27%2C%27monitoring%27)
