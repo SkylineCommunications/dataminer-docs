@@ -18,13 +18,13 @@ Explore our series of short demonstration videos in our Dojo use case and video 
 
 - [Meinberg NMS Dashboards Module](https://www.youtube.com/watch?v=wYYcneoKpIc) ![Video](~/user-guide/images/video_Duo.png)
 
-- [Meinberg NMS - Discovery and Provisioning (1/4)](https://community.dataminer.services/video/meinberg-nms-discovery-and-provisioning-1-4/) ![Video](~/user-guide/images/video_Duo.png)
+- [Meinberg NMS - Discovery and Provisioning (1/4)](https://www.youtube.com/watch?v=y-Qx0d-v3HU) ![Video](~/user-guide/images/video_Duo.png)
 
-- [Meinberg NMS - Monitoring and Control (2/4)](https://community.dataminer.services/video/meinberg-nms-monitoring-and-control-2-4/) ![Video](~/user-guide/images/video_Duo.png)
+- [Meinberg NMS - Monitoring and Control (2/4)](https://www.youtube.com/watch?v=Lk4Ho1G_qB0) ![Video](~/user-guide/images/video_Duo.png)
 
-- [Meinberg NMS - Configuration Management (3/4)](https://community.dataminer.services/video/meinberg-nms-monitoring-and-control-3-4/) ![Video](~/user-guide/images/video_Duo.png)
+- [Meinberg NMS - Configuration Management (3/4)](https://www.youtube.com/watch?v=iVMKKs8R5Jo) ![Video](~/user-guide/images/video_Duo.png)
 
-- [Meinberg NMS - Firmware Management (4/4)](https://community.dataminer.services/video/meinberg-nms-discovery-and-provisioning-4-4/) ![Video](~/user-guide/images/video_Duo.png)
+- [Meinberg NMS - Firmware Management (4/4)](https://www.youtube.com/watch?v=lzfUajhtZ3w) ![Video](~/user-guide/images/video_Duo.png)
 
 - [Meinberg Network Management System (mbgNMS)](https://community.dataminer.services/use-case/meinberg-network-management-system-mbgnms/) (use case)
 

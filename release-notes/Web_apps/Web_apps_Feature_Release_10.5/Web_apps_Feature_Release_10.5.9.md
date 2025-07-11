@@ -68,7 +68,7 @@ Up to now, when the client machine and the server were located in different time
 > [!NOTE]
 > If, for the `TimePicker` component, you set the `DateTimeKind` of the `Maximum` value to either "Local" or "Utc", the `Maximum` value may roll over to the next day, causing the hour/minute value of the `Maximum` property to be lower than the hour/minute value of the `Minimum` property. Hence, all values will be invalid.
 
-#### DataMiner landing page: Redesigned app sections [ID 43115] [ID 43226]
+#### DataMiner landing page: Redesigned app sections [ID 43115] [ID 43226] [ID 43261]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
@@ -77,7 +77,43 @@ The app sections on the DataMiner landing page (e.g. `https://myDMA/root/`) have
 - In the upper section, you will find the native DataMiner apps like Dashboards, Monitoring, and Cube.
 - In the lower section, you will find the apps you downloaded from the DataMiner Catalog as well as the low-code apps you create yourself (in different tabs per category).
 
-  Click *Browse catalog* to open the [DataMiner Catalog](https://catalog.dataminer.services/) or *Create app* to create a low-code app.
+  Click *Browse catalog* to open the [DataMiner Catalog](https://catalog.dataminer.services/) or *Create your first app* to create your first low-code app.
+
+#### GQI DxM: Support for asynchronous SLNet messages within ad hoc data sources and custom operators [ID 43231]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When using the GQI DxM, ad hoc data sources and custom operators will now be able to send SLNet messages asynchronously using `connection.Async.Launch()`.
+
+#### Web Services API will now return a custom error page instead of a standard .NET error page [ID 43250]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When the Web Services API received an invalid request, up to now, it would return a standard .NET error page. From now on, it will return a custom error page instead.
+
+#### Web Services API: NATS request timeout increased to 5 minutes [ID 43268]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+The NATS request timeout has been increased from 1 minute to 5 minutes.
+
+Also, when a timeout occurs, the error added to the web logs will now include the message that timed out.
+
+#### Dashboards app & Low-Code Apps - Timeline component: Group order will now be preserved [ID 43296]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, the *Timeline* component would try to preserve as much state as possible when refreshing the data (via an action, a trigger component, a change to the data being fed, etc.). This meant that groups that were already present since the previous query would remain in the same spot, relative to each other. This would also be the case if the order in which the new data was returned was different from that of the previous query.
+
+From now on, the order of the rows will be taken into account when determining the position of the timeline groups. In that way, the groups will be sorted according to the data. The position of the items within a group will not change.
+
+#### GQI DxM: Ad hoc data sources and customer operators can now send SLNet messages defined in all assemblies that are officially supported to communicate with SLNet [ID 43299]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When using the GQI DxM, SLNet messages can be sent via ad hoc data sources or customer operators. However, up to now, sending an SLNet message that was not defined in `SLNetTypes` could fail because the underlying connection worker process did not have a reference to the assembly in which the message is defined.
+
+From now on, the connection worker process has references to all assemblies that are officially supported to communicate with SLNet (including `SLAnalyticsTypes`). This means that SLNet messages (requests, responses and events) defined in these assemblies can now also be used in ad hoc data sources and customer operators.
 
 ### Fixes
 

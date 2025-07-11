@@ -15,9 +15,36 @@ uid: General_Main_Release_10.4.0_CU18
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### GQI: Enhanced performance when setting up GQI connections [ID 43251]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When executing GQI queries via SLHelper, overall performance has increased when setting up GQI connections.
+
+#### NT Notify types NT_SNMP_GET and NT_SNMP_RAW_GET now have infinite loop protection [ID 43273]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+The NT Notify types NT_SNMP_GET (295) and NT_SNMP_RAW_GET (424) now have infinite loop protection.
+
+When an infinite loop is detected, the following will be returned:
+
+- When the `splitErrors` option is set to false, the error message `INFINITE LOOP` will be returned.
+- When the `splitErrors` option is set to true, the values will be returned.
 
 ### Fixes
+
+#### SLProtocol would leak memory when an element was restarted [ID 42697] [ID 43300]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When you restarted an element that had previously been stopped, up to now, SLProtocol would leak memory.
+
+#### SLManagedScripting: The same dependency would be loaded multiple times by different connectors [ID 42779]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, the same dependency would be loaded multiple times by different connectors. From now on, if multiple connectors attempt to load the same dependency at the same time, it will only be loaded once.
 
 #### Problem when a connector had been modified on a system running multiple SLScripting processes [ID 42877]
 
@@ -53,6 +80,12 @@ When you stopped an element or performed a Failover switch when another action w
 
 When a service created from a service template had a reservation ID defined, up to now, that reservation ID would incorrectly disappear when the service template was re-applied.
 
+#### Incorrect license check could cause DaaS systems to shut down [ID 43100]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Up to now, when a DaaS system was not able to validate its license, after a certain amount of time it would shut down because of an incorrect license check.
+
 #### Service replication would not work when a gRPC connection was being used [ID 43133]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -86,3 +119,15 @@ In OpenSearch, in some cases, queries with a limit could cause scroll contexts t
 Up to now, in a Failover setup using a shared hostname, in some cases, the primary IP address would incorrectly be set to the IP address of the online agent instead of the hostname. Moreover, if that primary IP address was set to an incorrect IP address, it would be impossible to remove the Failover pair from the DataMiner System.
 
 Also, from now on, the primary IP address of the offline agent will be set to either the virtual IP address or the hostname of the Failover pair. Up to now, it would be set to the local IP address.
+
+#### Problem when deleting a DVE child element [ID 43302]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, a run-time error could be thrown when a DVE child element was deleted.
+
+#### Problem when an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet [ID 43314]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.

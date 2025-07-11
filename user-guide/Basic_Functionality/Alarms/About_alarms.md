@@ -14,4 +14,3 @@ The most important tool to manage alarms in DataMiner is the [Alarm Console](xre
 > See also:
 >
 > - [Kata #63: The power of the Alarm Console](https://community.dataminer.services/courses/kata-63/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-> - [Rui’s Rapid Recap – Alarm Console introduction](https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

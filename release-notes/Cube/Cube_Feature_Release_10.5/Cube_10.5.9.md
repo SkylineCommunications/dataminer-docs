@@ -64,6 +64,12 @@ Also, when there are any DaaS systems in the cluster to which you are connected,
 
 As the *Add/remove elements* user permission in *General > Views* allows users to also add or remove other items, including services, measurement points, service templates, redundancy groups, redundancy templates, etc., this user permission has now been renamed to *Add/remove items (elements, services, etc.)*.
 
+#### Profiles module: Enhanced performance when loading profiles [ID 43235]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading profiles into the *Profiles* module.
+
 #### Edge/WebView2 browser engine now supports CTRL+F search functionality [ID 43241]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
@@ -103,3 +109,13 @@ In order to prevent issues caused by trailing spaces in row indices, Cube will n
 When you clicked a pattern in a trend graph, an exception would be thrown, and the following error would be logged:
 
 `An item with the same key has already been added.`
+
+#### Settings: Problem with card-specific alarm tab settings [ID 43280]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In the *Settings* window, you can configure card-specific alarm tab settings on user level as well as on group level.
+
+Up to now, in some cases, when you checked card-specific alarm tab settings configured on user level, you would incorrectly not see certain settings that had been configured on group level. Also, when you checked settings configured for a particular group, you would incorrectly see settings that had been configured for another group.
+
+Also, when, in the *Settings* window, you went to *Alarm Console > Card-specific*, up to now, the *Card types* list would not show the card types that had been enforced on group level.

@@ -12,7 +12,7 @@ The **DataMiner DevOps Professional Program** is centered around empowered peopl
 
 Ready to sign up? Go to [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program-signup/).
 
-![DevOps Professionals](~/dataminer-overview/images/DevOpsEnablement.png)
+![DevOps Professionals](~/user-guide/images/DevOpsEnablement.png)
 
 > [!TIP]
 > Find out more about the [principles](xref:What_is_the_DevOps_Professionals_Program), [benefits](xref:Benefits_DevOps_Professionals_Program), and [expectations](xref:Skill_Sets_DevOps_Professionals_Program) of the DataMiner DevOps Professional Program.

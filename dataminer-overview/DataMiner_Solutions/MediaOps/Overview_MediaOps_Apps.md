@@ -10,7 +10,7 @@ Below is an overview of the out-of-the-box DataMiner applications included in th
 
 ## People and Organizations
 
-![People and Organizations app icon](~/dataminer-overview/images/DM_PeopleOrganizations.png)
+![People and Organizations app icon](~/user-guide/images/DM_PeopleOrganizations.png)
 
 Upgrade your business operations with our People and Organizations app. This app simplifies personnel management by enabling you to effortlessly create, edit, and track records for individuals and teams. With features like team booking, optimizing personnel allocation for the right job has never been easier.
 
@@ -18,7 +18,7 @@ For more detailed information about this application, see [People and Organizati
 
 ## Resource Studio
 
-![Resource Studio app icon](~/dataminer-overview/images/DM_ResourceStudio.png)
+![Resource Studio app icon](~/user-guide/images/DM_ResourceStudio.png)
 
 The Resource Studio app serves as a comprehensive platform for creating, managing, and optimizing resource utilization. Its key features include the ability to create diverse resources, ranging from network inventory to services and other limited-availability items such as rooms, people, vehicles etc. Users can organize these resources into pools, simplifying workflow and job resource selection. Capabilities and capacities can be assigned to resources, facilitating precise resource allocation based on specific job requirements. Users can also store supplementary information as properties, enhancing the resource management process. Utilization metrics provided by the app offer valuable insights, enabling users to optimize resource deployment and maximize operational efficiency.
 
@@ -26,7 +26,7 @@ For more detailed information on this application, see [Resource Studio applicat
 
 ## Workflow Designer
 
-![Workflow Designer app icon](~/dataminer-overview/images/DM_WorkflowDesigner.png)
+![Workflow Designer app icon](~/user-guide/images/DM_WorkflowDesigner.png)
 
 The Workflow Designer is an operator-level DevOps environment to create technical workflows. In the app, users can define what needs to happen when a connection is created between a source and a destination, when a certain job is executed, when a type of service is delivered, etc. This is done by describing workflows. Each workflow consists of a set of nodes and a set of connections between these nodes. These typically describe how a source signal (virtual signal group) is transported to a destination and how it gets processed in between. These workflows can then be executed by scheduling a job in the [Scheduling app](#scheduling).
 
@@ -41,7 +41,7 @@ For more detailed information about this application, see [Workflow Designer app
 
 ## Scheduling
 
-![Scheduling app icon](~/dataminer-overview/images/MediaOps_ICON_7.png)
+![Scheduling app icon](~/user-guide/images/MediaOps_ICON_7.png)
 
 The Scheduling application is a comprehensive solution for the scheduling and orchestration of resources and workflows. Using a job, users can easily schedule specific resources, request a resource for a given pool of resources, schedule an entire workflow, or a combination of each of the options.
 
@@ -56,7 +56,7 @@ For more detailed information about this application, see [Scheduling applicatio
 <!--
 ## Virtual Signal Groups
 
-![Virtual Signal Groups app icon](~/dataminer-overview/images/DM_VirtualSignalGroup.png)
+![Virtual Signal Groups app icon](~/user-guide/images/DM_VirtualSignalGroup.png)
 
 The Virtual Signal Groups app is used to manage the database of all sources and destinations in the media network. It allows you to define video, audio, and data signals using a variety technology, including IP ST-2110, IP ST-2022, SDI, SRT, etc. Each signal is typically described by its location in the network (element and optionally interface), the required transmission information to set up a connection, and a set of user-defined metadata, such as labels.
 
@@ -64,7 +64,7 @@ Individual signals can be bundled into virtual signal groups, which can then be 
 
 ## Control Surface
 
-![Control Surface app icon](~/dataminer-overview/images/DM_ControlSurface.png)
+![Control Surface app icon](~/user-guide/images/DM_ControlSurface.png)
 
 The MediaOps control surfaces allow users to build their own user interfaces where they can set up connectivity between sources and destinations, configure devices, and view monitoring information coming from the devices. The MediaOps installation package comes with a sample control surface out of the box. It shows the sources and destinations in the system and allows users to do an instant connect or disconnect, or to schedule a connection to happen at a later time.
 
@@ -72,7 +72,7 @@ Users can use this sample app as is, they can take use it as a starting point an
 
 ## Flow Engineering
 
-![Flow Engineering icon](~/dataminer-overview/images/DM_FlowEngineering.png)
+![Flow Engineering icon](~/user-guide/images/DM_FlowEngineering.png)
 
 Unlike the other apps listed on this page, Flow Engineering is not an application that end users interact with. It is the engine running in the background to successfully execute requests to set up flows in the network. It is responsible for three things:
 
@@ -84,7 +84,7 @@ Unlike the other apps listed on this page, Flow Engineering is not an applicatio
 
 ## Flow Monitoring
 
-![Flow Monitoring app icon](~/dataminer-overview/images/DM_FlowMonitoring.png)
+![Flow Monitoring app icon](~/user-guide/images/DM_FlowMonitoring.png)
 
 The goal of the Flow Monitoring app is to provide visibility on the path of all flows going through the media network. The app makes a distinction between as-engineered flow paths and as-is flow paths. For both, the path of a flow over DataMiner elements is shown, from the flow source to its destination, with everything in between. The exact information shown for as-engineered and as-is paths is a different, though.
 
@@ -94,7 +94,7 @@ The goal of the Flow Monitoring app is to provide visibility on the path of all 
 
 ## Cost and Billing
 
-![Cost and Billing app icon](~/dataminer-overview/images/cost-billing-dm-logo.png)
+![Cost and Billing app icon](~/user-guide/images/cost-billing-dm-logo.png)
 
 Cost and Billing is a robust application designed to streamline financial operations within a media environment. It consists of several modules.
 

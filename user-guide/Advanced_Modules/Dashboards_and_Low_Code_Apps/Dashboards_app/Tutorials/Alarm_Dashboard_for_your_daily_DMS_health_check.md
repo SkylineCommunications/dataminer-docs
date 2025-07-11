@@ -35,7 +35,7 @@ Expected duration: 20 minutes
 
 1. Click the *Deploy* button to deploy the *Alarm Report* package on your DMA.
 
-1. When the package has been deployed, [open the Dashboards app](xref:Accessing_the_Dashboards_app) and check if you can see the *Alarm Report* dashboard.
+1. When the package has been deployed, [open the Dashboards app](xref:Accessing_the_web_apps) and check if you can see the *Alarm Report* dashboard.
 
    When the deployment is complete, this dashboard is added in the root view of your dashboards folder structure.
 

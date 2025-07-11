@@ -112,7 +112,6 @@ The following options are available:
 > See also:
 >
 > - [Icons settings](xref:User_settings#icons-settings)
-> - [Surveyor – Using latched and special icons](https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/) ![Video](~/user-guide/images/video_Duo.png)
 
 ### Surveyor right-click menu
 
@@ -185,7 +184,7 @@ Depending on the configuration and version of your DataMiner System, as well as 
 
 - **Applications**: Plug-in applications, e.g. [IDP](xref:SolIDP), [PTP](xref:SolPTP), etc.
 
-- **Web Apps**: The [Monitoring app](xref:The_Monitoring_app_user_interface), [Dashboards app](xref:newR_D), and any available [low-code apps](xref:Dashboards_and_Low_Code_Apps).<!-- RN 33944 -->
+- **Web Apps**: The [Monitoring app](xref:Working_with_the_Monitoring_app), [Dashboards app](xref:newR_D), and any available [low-code apps](xref:Dashboards_and_Low_Code_Apps).<!-- RN 33944 -->
 
 - **General**: The Help, Settings, and About.
 

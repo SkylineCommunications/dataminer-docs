@@ -5,10 +5,6 @@ keywords: unused drivers, unused connectors, cleanup
 
 # Cleaning up unused files on a DMA
 
-> [!TIP]
-> See also:
-> [Rui’s Rapid Recap – Cleaning up unused items](https://community.dataminer.services/video/ruis-rapid-recap-cleaning-up-unused-items/) ![Video](~/user-guide/images/video_Duo.png)
-
 In System Center, you can clean up unused protocols, unused alarm filters and unused Visio files.
 
 To do so:

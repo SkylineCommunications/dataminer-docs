@@ -276,8 +276,6 @@ items:
       - name: Dashboards app
         topicUid: newR_D
         items:
-          - name: Accessing the Dashboards app
-            topicUid: Accessing_the_Dashboards_app
           - name: Overview of the Dashboards app UI
             topicUid: Overview_of_the_Dashboards_app_UI
           - name: Managing dashboard folders
@@ -330,8 +328,6 @@ items:
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
-          - name: Accessing the Low-Code Apps module
-            topicUid: Accessing_custom_apps
           - name: Creating low-code applications
             topicUid: Creating_custom_apps
           - name: Editing a low-code application

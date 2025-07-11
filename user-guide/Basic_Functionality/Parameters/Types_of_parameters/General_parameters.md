@@ -11,9 +11,6 @@ For each element in DataMiner, a *GENERAL PARAMETERS* page can be displayed in C
 > [!NOTE]
 > Replicated elements only replicate the [Lock status], [Lock owner] and [Timer base] general parameters.
 
-> [!TIP]
-> See also: [Rui’s Rapid Recap – General parameters](https://community.dataminer.services/video/ruis-rapid-recap-general-parameters/) ![Video](~/user-guide/images/video_Duo.png)
-
 ### [Lock status]
 
 This general parameter indicates whether the element is locked or unlocked.

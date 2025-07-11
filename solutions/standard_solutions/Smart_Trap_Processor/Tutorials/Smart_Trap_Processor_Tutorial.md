@@ -47,7 +47,7 @@ This tutorial consists of the following steps:
 
    ![Surveyor view](~/user-guide/images/TrapProcessor_SurveyorView.png)
 
-1. Browse to the [landing page of your DMA](xref:Accessing_custom_apps), and check if the *Smart Trap Processor* app is available.
+1. Browse to the [landing page of your DMA](xref:Accessing_the_web_apps), and check if the *Smart Trap Processor* app is available.
 
 ## Step 2: Configure the Trap IP Sources
 

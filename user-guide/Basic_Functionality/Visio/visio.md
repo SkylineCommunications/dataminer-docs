@@ -18,6 +18,3 @@ At Skyline, we do our utmost to keep the DataMiner software in pace with Microso
 > - DataMiner supports Visio drawings saved in either VDX or VSDX format.
 > - In the drawings, you can insert images in a variety of formats: png, jpg, bmp, and emf.
 > - If a Visio drawing contains multiple pages, in DataMiner Cube these can be displayed as separated pages in a tree view or in tabs, or both.
-
-> [!TIP]
-> See also: [Visio – Creating compelling Visio files](https://community.dataminer.services/video/visio-creating-compelling-visio-files/) ![Video](~/user-guide/images/video_Duo.png)

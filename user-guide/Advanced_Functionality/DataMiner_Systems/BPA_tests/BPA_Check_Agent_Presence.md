@@ -2,9 +2,9 @@
 uid: BPA_Check_Agent_Presence
 ---
 
-# NATS connections between the DataMiner Agents
+# NATS cluster verification
 
-Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, this BPA test is called "Check Agent Presence Test In NATS".
+Prior to DataMiner 10.5.0 [CU6]/10.5.9<!--RN 43359-->, this BPA test is called "NATS connections between the DataMiner Agents". Prior to DataMiner 10.4.12/10.5.0<!--RN 40751-->, it is called "Check Agent Presence Test In NATS".
 
 NATS serves as an inter-DMA message broker. This means that every DataMiner Agent must be able to reach every other DataMiner Agent in the cluster over NATS.
 

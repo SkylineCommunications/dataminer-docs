@@ -9,7 +9,7 @@ Using the Dashboards app:
 1. Select a dashboard and click the *Start editing* button in the header bar.
 
    > [!TIP]
-   > For information on how to access the Dashboards app, see [Accessing the Dashboards app](xref:Accessing_the_Dashboards_app).
+   > For information on how to access the Dashboards app, see [Accessing the web apps](xref:Accessing_the_web_apps).
 
 1. Drag the *Generic Map* component onto the dashboard from the panel with available components on the left.
 

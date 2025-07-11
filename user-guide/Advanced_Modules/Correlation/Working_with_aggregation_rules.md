@@ -14,6 +14,3 @@ This section consists of the following topics:
 
 > [!NOTE]
 > For more information on the Aggregation folder on the server and on how to configure an aggregation rule to ignore exception values on the aggregated parameter, see [Aggregation](xref:Aggregation).
-
-> [!TIP]
-> See also: [Rui’s Rapid Recap – Aggregation](https://community.dataminer.services/video/ruis-rapid-recap-aggregation/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

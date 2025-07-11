@@ -22,24 +22,24 @@ Below, you can find an overview of how the Service Credits can be used.
 
 | Item | Details |
 |------|---------|
-| Fundamentals Certificate | 16 credits<br>Per certificate |
-| Configurator Certificate | 36 credits<br>Per certificate |
-| Visual Overview | 6 credits<br>Per certificate |
-| Automation Certificate | 24 credits<br>Per certificate |
-| Connector Integration: SNMP Basics | 40 credits<br>Per certificate |
-| Connector Integration: HTTP Basics | 40 credits<br>Per certificate |
+| [Fundamentals Certificate](https://community.dataminer.services/learning/certification/dataminer-fundamentals/) | 16 credits<br>Per certificate |
+| [Configurator Certificate](https://community.dataminer.services/learning/certification/dataminer-configurator/) | 36 credits<br>Per certificate |
+| [Visual Overview](https://community.dataminer.services/learning/certification/visual-overview-level-1/) | 6 credits<br>Per certificate |
+| [Automation Certificate](https://community.dataminer.services/learning/certification/automation/) | 24 credits<br>Per certificate |
+| [Connector Integration: SNMP Basics](https://community.dataminer.services/learning/certification/scripts-connectors-developer-snmp-basics/) | 40 credits<br>Per certificate |
+| [Connector Integration: HTTP Basics](https://community.dataminer.services/learning/certification/scripts-connectors-developer-http-basics/) | 40 credits<br>Per certificate |
 
 ## Dedicated training
 
 | Item | Details |
 |------|---------|
-| DevOps Enablement Service | 5 credits<br>Per hour, per person |
+| [DevOps Enablement Service](xref:DataMiner_DevOps_Enablement) | 5 credits<br>Per hour, per person |
 | [Open Day Training](https://community.dataminer.services/open-training/) | 14 credits<br>Per day, per person |
 | Fundamentals Training (2 days) | 160 credits<br>Per session |
 | Configurator Training (2 days) | 160 credits<br>Per session |
 | Sys Admin Training (1 day) | 90 credits<br>Per session |
-| Agile Fundamentals Training | 40 credits<br>Per session |
-| Kanban Workshop | 40 credits<br>Per session |
+| [Agile Fundamentals Training](xref:Overview_Training_agile_aw) | 40 credits<br>Per session |
+| [Kanban Workshop](xref:Overview_Kanban_workshop) | 40 credits<br>Per session |
 
 > [!NOTE]
 >

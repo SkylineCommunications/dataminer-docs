@@ -28,7 +28,7 @@ Skyline Communications aims to deliver the best possible project within the avai
 
 For each feature, functionality, or requirement, a delivered solution can typically vary between an acceptable minimum viable solution and a solution that fulfills the user’s wildest dreams and ambitions. The budget Skyline Communications typically foresees is set to meet in the "golden middle".
 
-![Our value proposal](~/dataminer-overview/images/REQ_Value_proposal.png)<br>
+![Our value proposal](~/user-guide/images/REQ_Value_proposal.png)<br>
 *Open this image in a new tab to view the full resolution.*
 
 Your team has the freedom to set and shift priorities (and therefore engineering time) between buckets in the Preliminary Solution Backlog, as long as the total number of engineering days does not exceed the budget.

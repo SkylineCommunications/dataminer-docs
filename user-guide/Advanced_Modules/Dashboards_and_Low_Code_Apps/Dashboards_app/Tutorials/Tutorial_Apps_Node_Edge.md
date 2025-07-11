@@ -106,7 +106,7 @@ The dashboard *Node_Edge* contains the following GQI queries:
 
 ## Step 2: Add the node edge graph component
 
-1. When the package has been deployed, go to the [Dashboards app](xref:Accessing_the_Dashboards_app).
+1. When the package has been deployed, go to the [Dashboards app](xref:Accessing_the_web_apps).
 
 1. In the pane on the left, navigate to *KATA* > *NODE_EDGE* to open the *Node_Edge* dashboard.
 

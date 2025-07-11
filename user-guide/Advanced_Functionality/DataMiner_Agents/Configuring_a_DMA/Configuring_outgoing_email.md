@@ -10,9 +10,6 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 > [!NOTE]
 > For this feature, this product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (<http://www.openssl.org/>). In recent DataMiner versions, OpenSSL library version v1.1.1c is used.
 
-> [!TIP]
-> See also: [Agents – configuring an email server](https://community.dataminer.services/video/agents-configuring-an-email-server/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 ## Prerequisites
 
 In order to send out email notifications or email reports, a DataMiner Agent has to be able to connect to an outgoing email server (SMTP server).

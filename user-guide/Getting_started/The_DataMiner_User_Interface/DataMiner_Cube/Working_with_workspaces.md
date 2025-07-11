@@ -43,9 +43,3 @@ The following actions are possible in the *Workspaces* pane:
 
 > [!NOTE]
 > With certain kinds of elements, it is possible to make a workspace that appears as an app in the *Apps* list. To do so, when you create a workspace, enter the description "\[Workspace for xxx\]", where xxx is the name of an element using a protocol with the tag \<App type="...">, specifically created for this purpose.
-
-> [!TIP]
-> See also:
->
-> - [Rui’s Rapid Recap – Workspaces](https://community.dataminer.services/video/ruis-rapid-recap-workspaces/) ![Video](~/user-guide/images/video_Duo.png)
-> - [DataMiner Cube – Workspaces in DataMiner Cube](https://community.dataminer.services/video/dataminer-cube-workspaces-in-dataminer-cube/) ![Video](~/user-guide/images/video_Duo.png)

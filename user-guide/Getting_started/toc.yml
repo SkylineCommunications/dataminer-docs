@@ -90,8 +90,8 @@ items:
                     topicUid: Desktop_app_command_line_arguments
               - name: Using the browser application
                 topicUid: Using_the_browser_app
-      - name: Accessing the Monitoring app
-        topicUid: Accessing_the_Monitoring_app
+      - name: Accessing the web apps
+        topicUid: Accessing_the_web_apps
   - name: Working with DataMiner Cube
     items:
       - name: DataMiner Cube UI components
@@ -124,7 +124,7 @@ items:
       - name: DataMiner Cube tips & tricks
         topicUid: DataMiner_Cube_tips_tricks
   - name: Working with the Monitoring app
-    topicUid: The_Monitoring_app_user_interface
+    topicUid: Working_with_the_Monitoring_app
     items:
       - name: Monitoring app header bar
         topicUid: Monitoring_app_header_bar

@@ -18,6 +18,3 @@ Two types of [hysteresis](xref:Alarm_hysteresis) are available, clear hysteresis
 > - For parameters of type string, hysteresis should only be applied to "high" severity levels (e.g. Warning High, Major High), not to "low" severity levels. From DataMiner 10.1.9/10.2.0 onwards, applying hysteresis to "low" severity levels is no longer possible for string parameters.
 > - Using hysteresis in combination with conditions on the same parameter is not supported.
 > - Using hysteresis in combination with [history sets](xref:Protocol.Params.Param-historySet) on the same parameter can cause unexpected behavior in alarm timestamps, as both features modify the parameter and alarm times. For this reason, we do not recommend combining them.
-
-> [!TIP]
-> See also: [Alarm templates – Hysteresis](https://community.dataminer.services/video/alarm-templates-hysteresis/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

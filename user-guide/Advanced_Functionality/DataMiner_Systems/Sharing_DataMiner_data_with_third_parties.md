@@ -33,7 +33,7 @@ The Sharing app allows you to share live data via dataminer.services. For more i
 > [!TIP]
 > See also:
 >
-> - [The Monitoring app user interface](xref:The_Monitoring_app_user_interface)
+> - [Working with the Monitoring app](xref:Working_with_the_Monitoring_app)
 > - [Security](xref:About_DMS_Security)
 
 ## DataMiner Dashboard Gateway

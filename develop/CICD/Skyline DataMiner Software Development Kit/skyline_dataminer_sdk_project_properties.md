@@ -46,14 +46,18 @@ The content of this is used for the version comment when a DataMiner application
 This is the name of the key defined either in Visual Studio User Secrets or as an environment variable. This key is used for publishing the DataMiner application package to the Catalog.
 
 > [!NOTE]
-> This will be overwritten during a workflow run when the GitHub workflows are used.
+>
+> - This will be overwritten during a workflow run when the GitHub workflows are used.
+> - When using environment variables, replace colons (`:`) in the key name with double underscores (`__`). For example, if the .csproj file specifies `skyline:sdk:dataminertoken`, the corresponding environment variable should be named `skyline__sdk__dataminertoken`.
 
 ## CatalogDefaultDownloadKeyName
 
 This is the name of the key defined either in Visual Studio User Secrets or as an environment variable. This key is used for downloading versions from the Catalog that are defined in the *CatalogReferences.xml* in the package project.
 
 > [!NOTE]
-> This will be overwritten during a workflow run when the GitHub workflows are used.
+>
+> - This will be overwritten during a workflow run when the GitHub workflows are used.
+> - When using environment variables, replace colons (`:`) in the key name with double underscores (`__`). For example, if the .csproj file specifies `skyline:sdk:dataminertoken`, the corresponding environment variable should be named `skyline__sdk__dataminertoken`.
 
 ## UserSecretsId
 

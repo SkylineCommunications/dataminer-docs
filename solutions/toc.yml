@@ -35,6 +35,8 @@ items:
             topicUid: SCH_Create_Job
           - name: Editing a job
             topicUid: SCH_Edit_Job
+          - name: Working with recurring jobs
+            topicUid: SCH_Recurring
           - name: Job states
             topicUid: MO_S_Job_States
           - name: Job locking

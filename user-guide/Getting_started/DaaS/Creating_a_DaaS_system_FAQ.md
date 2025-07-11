@@ -81,6 +81,10 @@ See also: [Swarming](xref:Swarming).
 > [!NOTE]
 > For the STaaS database layer, see [Data resilience and backups](xref:STaaS_features#data-resilience-and-backups).
 
+### Where are DaaS backups stored?
+
+Backups are stored in zone-redundant storage (ZRS) managed by Azure backup, in the same region as the DaaS system.
+
 ### Is it possible to make a local backup of all data?
 
 This is currently not possible. Skyline takes regular backups of all systems, which they can use to restore systems. If you want to get access to a backup of your system, please contact <daas@dataminer.services>.
