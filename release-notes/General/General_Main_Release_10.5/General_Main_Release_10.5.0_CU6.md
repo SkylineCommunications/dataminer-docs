@@ -191,3 +191,11 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
+
+#### Fields of type datetime would incorrectly not be empty when the DOM definition field did not have a default value defined [ID 43351]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a DOM definition field does not have a default value defined, by default, no value should be displayed. However, up to now, when the default time zone had been changed in the *ClientSettings.json* file, fields of type datetime would incorrectly contain the value "01/01/1970 - DefaultTimezone".
+
+From now on, if a DOM definition field does not have a default value defined, all fields of that type will be empty when displayed on a form.
