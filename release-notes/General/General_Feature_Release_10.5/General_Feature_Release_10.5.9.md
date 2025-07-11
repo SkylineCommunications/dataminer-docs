@@ -81,9 +81,9 @@ After a dependency has been uploaded, all scripts using that dependency will be 
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
-The `ClientRequestMessage` class has been extended with a new `TraceInfo` class, which has one `TraceId` property of type string. This property can be set to a string that can be used to track requests across multiple modules (e.g. queries coming from ad hoc data sources).
+The `ClientRequestMessage` class has been extended with a new `TraceInfo` class, which has one `TraceId` property of type string. In a later phase, this property will be used to track requests across multiple modules (e.g. queries coming from ad hoc data sources).
 
-From now on, CrudLoggerProxy logging will also support trace IDs for CRUD operations by the following managers:
+CrudLoggerProxy logging will also support trace IDs for CRUD operations by the following managers:
 
 - AppPackageContentManager
 - BaseFunctionManager
