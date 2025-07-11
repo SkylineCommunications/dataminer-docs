@@ -107,6 +107,8 @@ items:
     topicUid: About_the_Admin_app
   - name: Accessing the Admin app
     topicUid: Accessing_the_Admin_app
+  - name: Creating an organization
+    topicUid: Creating_an_organization
   - name: Getting your organization verified
     topicUid: CloudConnectionVerification
   - name: Managing dataminer.services users
