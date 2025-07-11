@@ -290,10 +290,10 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
-#### DataMiner upgrade: Existing instances of the BPA test 'Check Agent Presence Test In NATS' would incorrectly not be removed [ID 43359]
+#### DataMiner upgrade: BPA tests 'Check Agent Presence Test In NATS' and 'Verify NATS is Running' replaced by 'Verify NATS Cluster' [ID 43359]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-In DataMiner versions 10.5.0/10.4.12, the BPA test *Check Agent Presence Test In NATS* was renamed to *Nats connections between the DataMiner Agents*. However, up to now, any existing instances of the *Check Agent Presence Test In NATS* test would incorrectly not be removed during a DataMiner upgrade. From now on, any existing instance of the *Check Agent Presence Test In NATS* test will be automatically removed during a DataMiner upgrade.
+The BPA tests *Check Agent Presence Test In NATS* (which was renamed to *Nats connections between the DataMiner Agents* in DataMiner versions 10.5.0/10.4.12) and *Verify NATS is Running* have now both been replaced by the *Verify NATS Cluster* test.
 
-Also, the *VerifyNatsIsRunning* prerequisite check has now been replaced by the *VerifyNatsCluster* check. While this change had already been implemented in DataMiner 10.5.0 [CU3]/10.5.6, up to now, it had not yet been fully deployed.
+This means that, from now on, during a DataMiner upgrade, the *Verify NATS Cluster* test will be installed and any existing instances of the deprecated *Check Agent Presence Test In NATS* and *Verify NATS is Running* tests will be removed.

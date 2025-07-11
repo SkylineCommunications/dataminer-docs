@@ -170,3 +170,9 @@ In some rare cases, an error could occur when loading trend graphs.
 <!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
 
 When, in the Alarm Console, you had selected the *Show side panel* option, the *Drag-and-drop editing* button would incorrectly not be visible when you selected an incident alarm.
+
+#### Alarm card showing the details of an alarm storm alarm would incorrectly not list the source alarms [ID 43352]
+
+<!-- MR 10.4.0 [CU17] / 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+When you opened an alarm card showing the details of an alarm storm alarm, the source alarms would incorrectly not be listed.
