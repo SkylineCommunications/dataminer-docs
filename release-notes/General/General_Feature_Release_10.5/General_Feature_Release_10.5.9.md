@@ -216,10 +216,10 @@ The first time DataMiner starts up after having been upgraded to version 10.6.0/
 
 Also, a number of smaller changes have been made:
 
-- An exception will now be generated when you try to configure a RAD parameter group that contains an instance of a (direct) view column parameter. At present, only base table parameters are allowed.
 - The response to a `GetRADParameterGroupInfo` message now includes an IsMonitored flag. This flag will indicate whether the (sub)group is correctly being monitored ("true"), or whether an error has occurred that prevents the group from being monitored ("false"). In the latter case, more information can be found in the SLAnalytics logging.
-- DVE child parameters provided in the `AddRADPArameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the parent parameters.
-- Security has been added to all RAD messages. From now on, you will no longer be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will still returned all groups though.
+- Instances of (direct) view column parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the base table parameters.
+- DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the parent parameters.
+- Security has been added to all RAD messages. From now on, you will no longer be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will still return all groups though.
 
 #### DataMiner upgrade: BPA tests 'Check Agent Presence Test In NATS' and 'Verify NATS is Running' replaced by 'Verify NATS Cluster' [ID 43359]
 
