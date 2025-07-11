@@ -115,6 +115,12 @@ When using the GQI DxM, SLNet messages can be sent via ad hoc data sources or cu
 
 From now on, the connection worker process has references to all assemblies that are officially supported to communicate with SLNet (including `SLAnalyticsTypes`). This means that SLNet messages (requests, responses and events) defined in these assemblies can now also be used in ad hoc data sources and customer operators.
 
+#### DataMiner landing page: Redesigned user menu [ID 43303]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+The user menu in the header bar of the DataMiner landing page (e.g. `https://myDMA/root/`) has been redesigned.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Timeline component: Group label tooltips missing [ID 43242]
