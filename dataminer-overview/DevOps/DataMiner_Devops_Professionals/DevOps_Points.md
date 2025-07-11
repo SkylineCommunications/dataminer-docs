@@ -10,7 +10,7 @@ There are three levels available for DataMiner DevOps Professionals, with *Advoc
 
 ![DevOps Points](~/user-guide/images/DevOps_Timeline.svg)
 
-| **ADVOCATE** | **ENABLER** | **CATALYST** |
+| ADVOCATE | ENABLER | CATALYST |
 |--|--|--|
 | ***a well-performing community member*** | ***a trusted DevOps Professional*** | ***an advanced DevOps Professional*** |
 | 750 points per year | 5,000 points per year | 15,000 points per year |
@@ -20,74 +20,99 @@ There are three levels available for DataMiner DevOps Professionals, with *Advoc
 
 In general, the more active you are in the DataMiner Dojo community and the more you work with DataMiner, the more DevOps Points you will accumulate. This can be achieved through a variety of actions, such as:
 
-- **Being active in the Q&A section on Dojo**: Asking, answering, and commenting on questions in the [Q&A section](https://community.dataminer.services/questions/) generates DevOps Points. Moreover, if your answer gets selected as the best answer by the community, you will earn extra DevOps Points. The person selecting the best answer will get something extra as well. Even voting on questions and answers will further grow your points, as does receiving votes (between 10 to 75 points).
+- **Community Engagement**: Being active in the [Q&A section](https://community.dataminer.services/questions/) on Dojo.
 
-- **Enrolling in and completing online training courses**: The DataMiner Community offers a broad selection of [free online training](https://community.dataminer.services/learning/courses/). Enrolling in and completing any of those courses will again generate points (between 25 to 250 points). Note that the community also offers a variety of free self-tests to evaluate your knowledge. The successful completion of those quizzes will also result in points.
+  | Action | DevOps Points |
+  |--------|----------------|
+  | Ask a question | 10 |
+  | Answer a question | 25 |
+  | Your answer selected as best | 75 |
+  | You select an answer as best | 10 |
+  | Upvote someone’s question/answer | 1 |
+  | Receive an upvote | 25 |
+  | Comment on question or answer | 10 |
+  | Receive a downvote | -10 |
 
-- **Participating in open or private on-site training sessions**: Attend DataMiner's on-site training sessions, typically spanning 2 to 5 days. Skyline regularly hosts [open training sessions](xref:Overview_Training_dedicated#open-training-sessions), welcoming individuals from different organizations. Private [on-site training sessions](xref:Overview_Training_dedicated#on-site-training-sessions) are held at your own facilities. Each day of in-person training attended earns you 250 points.
+- **Learning**: The DataMiner Community offers a broad selection of [free online training](https://community.dataminer.services/learning/courses/).
 
-- **Actively participating in Kata sessions**: Participate in a [Kata session](https://community.dataminer.services/learning-courses-tutorials/) and complete the associated tutorial to earn 75 points. If you manage to submit the task within a week after the release of the Kata session, you will be awarded another 75 points.
+  | Action | DevOps Points |
+  |--------|----------------|
+  | Enroll in an e-learning course | 25 |
+  | Complete an e-learning course | 250 |
+  | Complete a mini quiz (linked to an e-learning course) | 15 |
+  | Pass a final quiz (e-learning course-specific) | 400 |
+  | Approved assignment (linked to a lesson) | 75 |
+  | Attend open or private on-site training | 250 per day |
+  | Attend Empower or Inspire event | 500 per day |
+  | Participate in a [Kata session](https://community.dataminer.services/learning-courses-tutorials/) and complete the assignment | 75 |
+  | Complete a Kata assignment within 1 week of release | +75 bonus |
 
-- **Formal certification**: Optionally, you can go for the paid [formal certification](xref:Overview_Training_certification) of some of your DataMiner skills. Upon obtaining your certification, you will be rewarded with extra points (500 to 1000 points).
+- **Formal certification**: Optionally, you can go for the paid [formal certification](xref:Overview_Training_certification) of some of your DataMiner skills. Upon obtaining your certification, you will be rewarded with extra points.
 
-- **Contributing to the DataMiner documentation**: DataMiner DevOps Professionals work with a community mindset, and sharing knowledge and information is all about empowering each other. Therefore, you are rewarded if you participate in and [contribute to the documentation](xref:contributing) of the DataMiner platform.
+  | Certification Track | DevOps Points |
+  |---------------------|----------------|
+  | DataMiner Fundamentals | 500 |
+  | DataMiner Configurator | 750 |
+  | Visual Overview Level 1 | 500 |
+  | Automation | 750 |
+  | Scripts & Connectors | 750 |
 
-  Point system:
+- **Documentation contributions**: DataMiner DevOps Professionals work with a community mindset, and sharing knowledge and information is all about empowering each other. Therefore, you are rewarded if you participate in and [contribute to the documentation](xref:contributing) of the DataMiner platform.
 
-  - **Correct a spelling or grammar mistake**: Spotted a typo while browsing the documentation? Click the "Improve this page" link in the top-right corner and correct it yourself. **25 – 50 points**
-
-  - **Add missing information**: Noticed something missing halfway through reading a page on docs.dataminer.services? Add it yourself and earn up to... **5000 points**
-
-  - **Deliver documentation**: Not quite comfortable using GitHub but bursting with inspiration? Send your documentation as a Word file to [Team Documentation](mailto:documentation@skyline.be) at Skyline so they can add it to DataMiner docs. Doing this, you can earn up to... **3000 points**
-
-  - **Adding an issue**: Create a valid issue on GitHub to let us know about a problem in the documentation. **100 points**
+  | Action | DevOps Points |
+  |--------|----------------|
+  | [Correct a typo or grammar](xref:CTB_Quick_Edit) | 25–50 |
+  | [Add missing information](xref:CTB_Larger_Contribution) | Up to 5000 |
+  | Submit documentation via email to [Team Documentation](mailto:documentation@skyline.be) | Up to 3000 |
+  | [Create a valid GitHub issue](xref:CTB_Reporting_Issue) about docs | 100 |
 
   > [!TIP]
   > Unsure of how to start contributing? Take a look at the [Contributing page](xref:contributing) or at our [video series](https://www.youtube.com/playlist?list=PLFb70A6JV6vj1f0DPcdYXExEbNWVPYMgW) on how to contribute to the DataMiner documentation!
 
-- **Writing blog posts**: You can opt to write and submit a [blog post](https://community.dataminer.services/blog/) for the community, and upon acceptance, this will result in 500 up to 5000 points. Blog posts can revolve around any technology or topic relevant to the community or could, for example, describe a solution that you have designed with DataMiner.
+- **Content creation**
+
+  | Content Type | <div style="width: 150px;">DevOps Points<div> |
+  |--------------|----------------|
+  | Submit a [blog post](https://community.dataminer.services/blog/), for example about a technology or topic relevant to the community or about a solution you have designed with DataMiner. | 2500–5000 |
+  | Submit a [use case](https://community.dataminer.services/use-cases/), for example related to a new product integration or a solution that you have implemented with DataMiner. | 2500–5000 |
+  | Submit a [retro recipe](https://community.dataminer.services/retro-recipes/) that you have personally tried and tested, i.e. an engaging and creative retrospective in recipe format, including a list of ingredients and step-by-step section. | 2000 |
+  | Submit a solution to the [Solutions page](https://community.dataminer.services/solutions/), designed to resolve a specific technological problem or challenge using DataMiner. | 250-2500 |
 
   > [!TIP]
-  > Not really sure how to get started? Take a look at our [blog post template](https://community.dataminer.services/download/blog-post-template/)!
+  > Not really sure how to get started? Check out the available templates:
+  >
+  > - [Blog post template](https://community.dataminer.services/download/blog-post-template/)
+  > - [Use case template](https://community.dataminer.services/download/use-case-template/)
+  > - [Retro recipe template](https://community.dataminer.services/download/retro-recipe-template/)
 
-- **Submitting a use case**: You can choose to submit a [use case](https://community.dataminer.services/use-cases/) for the community, and upon acceptance, this will result in 250 up to 5000 points. Use cases could focus on a new product integration that you have completed for DataMiner, or on any other type of solution that you have implemented with DataMiner.
+- **Your feedback is valuable**
+
+  | Action | DevOps Points |
+  |--------|----------------|
+  | Submit feedback via [this form](https://aka.dataminer.services/Feedback/) | 50 per submission (max 100/month) |
+
+- **DataMiner brand advocacy**: Being an advocate is also part of the culture of being a DataMiner DevOps Professional.
+
+  | Action | <div style="width: 150px;">DevOps Points<div> |
+  |--------|----------------|
+  | Add your DevOps level to your LinkedIn headline (yearly) and send the link to your profile page to [devops@skyline.be](mailto:devops@skyline.be) | 250 |
+  | Mention DataMiner in your job title (email signature, yearly) | 250 |
+  | Share your DevOps attestation on LinkedIn<br> Use `@skyline-communications` and `#dataminerdevops`, and email your post to [devops@skyline.be](mailto:devops@skyline.be). | 100 |
+
+  > [!NOTE]
+  > You will need to repeat this action each year to keep earning these points annually.
+
+- **Reward for outstanding DevOps mindset**: From time to time, Skyline staff members have the opportunity to nominate registered DataMiner DevOps Professionals who exemplify an exceptional DevOps mindset and demonstrate the effective application of associated best practices.
+
+  | Action | <div style="width: 150px;">DevOps Points<div> |
+  |--------|----------------|
+  | Get nominated by Skyline staff for an exceptional DevOps mindset | 750 |
+
+  > [!IMPORTANT]
+  > In addition to automatic tracking for most of the aforementioned activities to generate points, our community administrators will track certain activities to the best of their abilities to ensure that everybody is awarded all the points they are eligible for in due time. However, you are always welcome to expedite or facilitate the process by highlighting your activities via [devops@skyline.be](mailto:devops@skyline.be) if DevOps Points were not automatically attributed.
 
   > [!TIP]
-  > Not really sure how to get started? Take a look at our [use case template](https://community.dataminer.services/download/use-case-template/)!
-
-- **Submitting a retro recipe**: You can choose to submit a [retro recipe](https://community.dataminer.services/retro-recipes/) for the community, and upon acceptance, this will result in 500 up to 3000 points. Retro recipes describe engaging and often creative retrospectives in a recipe format, including a list of ingredients followed by a step-by-step section. Only retro recipes that have been personally tried and tested are accepted.
-
-  > [!TIP]
-  > Not really sure how to get started? Take a look at our [retro recipe template](https://community.dataminer.services/download/retro-recipe-template/)!
-
-- **Submitting a solution**: You can choose to add a solution to the dedicated *Solutions* page on [DataMiner Dojo](https://community.dataminer.services/solutions/), and upon acceptance, this will result in 250 up to 2500 points. DataMiner solutions are designed to resolve specific technological problems or challenges.
-
-- **Submitting feedback**: Your feedback is valuable. You will receive DevOps Points per submission of feedback via <https://aka.dataminer.services/Feedback/>. Each submission of feedback will result in 50 DevOps Points (limited to a maximum of 100 points per month).
-
-- **Being an advocate for the DataMiner brand**: Being an advocate is also part of the culture of being a DataMiner DevOps Professional.
-
-  - You can earn 250 points simply by **adding your DataMiner DevOps level to your LinkedIn headline**. Once you have updated your LinkedIn profile, you can send an email to [devops@skyline.be](mailto:devops@skyline.be) with the link to your profile page and we will get you your points!
-
-    > [!NOTE]
-    > This action needs to be repeated each year to continue earning points.
-
-  - If DataMiner is mentioned in the **job title in your email signature**, we will hit you up with another 250 points per year.
-
-  - You can earn 100 points by **sharing your DevOps attestation on LinkedIn**. Make sure to:
-
-    - Mention `@skyline-communications`
-
-    - Use the hashtag `#dataminerdevops`.
-
-    Email the link to your post to [devops@skyline.be](mailto:devops@skyline.be) and we will award your points.
-
-- **Reward for outstanding DevOps mindset**: From time to time, Skyline staff members have the opportunity to nominate registered DataMiner DevOps Professionals who exemplify an exceptional DevOps mindset and demonstrate the effective application of associated best practices. Such recognition leads to the allocation of additional points in the range of 100 up to 750 on the recipient's DataMiner DevOps Professional account.
-
-> [!IMPORTANT]
-> In addition to automatic tracking for most of the aforementioned activities to generate points, our community administrators will track certain activities to the best of their abilities to ensure that everybody is awarded all the points they are eligible for in due time. However, you are always welcome to expedite or facilitate the process by highlighting your activities via [devops@skyline.be](mailto:devops@skyline.be) if DevOps Points were not automatically attributed.
-
-> [!TIP]
-> For more information on how to **earn DevOps Points as a business or technology partner**, see [Benefits for DataMiner business and technology partners](xref:Benefits_Business_and_Tech_Partners).
+  > For more information on how to **earn DevOps Points as a business or technology partner**, see [Benefits for DataMiner business and technology partners](xref:Benefits_Business_and_Tech_Partners).
 
 ## DevOps Points life cycle
 
@@ -95,8 +120,8 @@ The life cycle of DevOps Points operates as follows:
 
 - **Expiration**: The DevOps Points you have collected expire after 12 months from your sign-up date for the program (referred to as your anniversary date or renewal date). However, although your DevOps Points total will reset to zero, you will retain the DevOps Professional status you had on your anniversary date.
 
-  > [!IMPORTANT]
-  > DevOps Points are only used to determine your DevOps level. The Dojo Credits you have earned remain untouched and can be spent in the [Swag Shop](https://community.dataminer.services/swag-shop/) at any time.
+> [!IMPORTANT]
+> DevOps Points are only used to determine your DevOps level. The Dojo Credits you have earned remain untouched and can be spent in the [Swag Shop](https://community.dataminer.services/swag-shop/) at any time.
 
 - **Renewal period**: After your anniversary date, a new 12-month period begins. During this period, you have the opportunity to gather enough points to reach a higher status level.
 
