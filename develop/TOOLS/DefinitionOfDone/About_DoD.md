@@ -38,14 +38,17 @@ This tool helps development teams by:
 ### ⚡ Smart Actions
 
 - **Microsoft Teams Integration**
-  ![Teams Test](../../images/TeamsIntegrationNumbered.png)
+
+  ![Teams Integration](../../images/TeamsIntegration.png)
   1. Schedule Teams meetings directly from tasks
   2. Create group chats with relevant team members for task discussions
 
 - **OneNote Integration**
+
+  ![Onenote Integration Create](../../images/OnenoteIntegrationCreate.png)
+  ![Onenote Integration](../../images/OnenoteIntegration.png)
   - Generate structured OneNote notebooks and pages
   - Organize documentation by vendor, device, and version
-  - Link specific pages to checklist items
 
 - **External Tool Links**
   - Direct access to Catalog items
