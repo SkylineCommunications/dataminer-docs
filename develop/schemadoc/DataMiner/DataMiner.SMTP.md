@@ -23,6 +23,5 @@ See [Configuring outgoing email](xref:Configuring_outgoing_email)
 | &#160;&#160;[HostPort](xref:DataMiner.SMTP.HostPort) | [0, 1] | Specifies the port. |
 | &#160;&#160;[LoginMethod](xref:DataMiner.SMTP.LoginMethod) | [0, 1] | Specifies the method that will be used to authenticate the DataMiner Agent when it logs on to the SMTP server. |
 | &#160;&#160;[MaxSubjectLength](xref:DataMiner.SMTP.MaxSubjectLength) | [0, 1] | Specifies the maximum length of the message subject. |
-| &#160;&#160;[NoFooter](xref:DataMiner.SMTP.NoFooter) | [0, 1] |  |
 | &#160;&#160;[Password](xref:DataMiner.SMTP.Password) | [0, 1] | Specifies the password with which the DataMiner Agent will log on to the SMTP server. |
 | &#160;&#160;[User](xref:DataMiner.SMTP.User) | [0, 1] | Specifies the username with which the DataMiner Agent will log on to the SMTP server. |

@@ -4095,11 +4095,6 @@ items:
           topicUid: DataMiner.SMTP.LoginMethod
         - name: MaxSubjectLength
           topicUid: DataMiner.SMTP.MaxSubjectLength
-        - name: NoFooter
-          topicUid: DataMiner.SMTP.NoFooter
-          items:
-          - name: To
-            topicUid: DataMiner.SMTP.NoFooter.To
         - name: Password
           topicUid: DataMiner.SMTP.Password
         - name: User

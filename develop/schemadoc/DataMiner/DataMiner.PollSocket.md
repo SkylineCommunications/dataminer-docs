@@ -16,5 +16,5 @@ See [Configuring the TCP-IP socket settings](xref:Configuring_the_TCP-IP_socket_
 
 | Name | Type | Required | Description |
 | --- | --- | --- | --- |
-| [allowSets](xref:DataMiner.PollSocket-allowSets) | string |  |  |
+| [allowSets](xref:DataMiner.PollSocket-allowSets) | string |  | Specifies either "true" or a semicolon-separated list of IP addresses from which sets are allowed.  |
 | [port](xref:DataMiner.PollSocket-port) | integer |  | Specifies the port. |
