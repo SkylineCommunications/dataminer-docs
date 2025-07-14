@@ -239,3 +239,9 @@ In DataMiner 10.5.6, improvements had been made to the Resource Manager caching,
 <!-- MR 10.4.0 [CU17]/10.5.0 [CU5] - FR 10.5.8 [CU0] -->
 
 While a DataMiner storage setup was migrated or replicated where each DMA had its own Cassandra database, no history alarms were shown.
+
+#### SLNet memory leak and Agent disconnects caused by ClusterEndpointsManager issue [ID 43370]
+
+<!-- MR 10.5.0 [CU5] - FR 10.5.8 [CU0] -->
+
+A problem in ClusterEndpointsManager could cause a memory leak in the SLNet process and could cause DataMiner Agents to disconnect. To prevent this, the ClusterEndpointsManager is now disabled unless the system has already been migrated to BrokerGateway.
