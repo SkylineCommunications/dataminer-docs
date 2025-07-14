@@ -4,7 +4,7 @@ uid: Creating_an_organization
 
 # Creating an organization
 
-At present, the dedicated UI to create an organization via the Admin app is still being developed.
+At present, the dedicated UI to create an organization is still being developed.
 
 For now, to create an organization, you will need to partially follow the [procedure to create a new DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services):
 
