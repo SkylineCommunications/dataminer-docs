@@ -6,11 +6,16 @@ uid: GVAMPP_Manager_Installing
 
 ## Prerequisites
 
-- DataMiner version 10.4.5 or higher
+- DataMiner version 10.5 Main Release, 10.4.4 Feature Release or higher
 
 - A DataMiner System [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
 - [Microsoft .NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-8.0.17-windows-hosting-bundle-installer)
+
+   > [!TIP] This package must be installed directly on the DataMiner agent where the AMPP SignalR Forwarder will operate.
+
+   > [!NOTE]
+   > The AMPP SignalR Forwarder is a .NET Core ASP API application that utilizes Microsoft SignalR libraries for communication with AMPP. It forwards notifications received to a listener in a DataMiner element via the GV AMPP Manager connector. Typically, this application is installed on the same DataMiner agent as the GVAMPP Manager element and is usually hosted in IIS.
 
 - A connection to an AMPP tenancy via its URL (e.g. `https://mytenancy.gvampp.com`)
 
