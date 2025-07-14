@@ -6,7 +6,7 @@ uid: Protocol.Params.Param.ArrayOptions.ColumnOption-pollingRate
 
 <!-- RN 16411 -->
 
-The `pollingRate` attribute allows you to slow down polling for specific SNMP columns in a table by specifying a minimum interval (in milliseconds) between polls. This attribute applies only to SNMP columns.
+The `pollingRate` attribute allows you to slow down polling for specific SNMP columns in a table by specifying a minimum interval (in milliseconds) between polling. This attribute applies only to SNMP columns.
 
 ## Content Type
 
@@ -21,12 +21,14 @@ unsignedInt
 Use `pollingRate` to reduce the polling frequency for columns that change infrequently or contain large amounts of data. Set the attribute to the desired interval in milliseconds.
 
 > [!IMPORTANT]
+>
 > - The [`instance`](xref:ConnectionsSnmpRetrievingTables#instance-option) option must be enabled for the table.
-> - When using the [**GetNext**](xref:ConnectionsSnmpRetrievingTables#instance-option) polling method, all columns will still be polled, but the result will not be written to the column. Setting `pollingRate` has no practical effect in this case, so it is better not to use `pollingRate` with **GetNext**.
+> - When the [**GetNext**](xref:ConnectionsSnmpRetrievingTables#instance-option) polling method is used, all columns will still be polled, but the result will not be written to the column. Setting `pollingRate` has no practical effect in this case, so it is better not to use `pollingRate` with **GetNext**.
 
 > [!NOTE]
-> - `pollingRate` can only slow down polling. If set lower than or equal to the protocol timer interval, it has no effect—the column will be polled at the timer interval.
-> - The column is skipped until its `pollingRate` interval has elapsed, ensuring it is not polled more frequently than specified.
+>
+> - `pollingRate` can only slow down polling. If set lower than or equal to the protocol timer interval, it has no effect; the column will be polled at the timer interval.
+> - The column is skipped until its `pollingRate` interval has elapsed, ensuring that it is not polled more frequently than specified.
 > - When new rows are discovered during polling, all columns for that row are polled immediately, regardless of their `pollingRate`.
 
 ## Examples
