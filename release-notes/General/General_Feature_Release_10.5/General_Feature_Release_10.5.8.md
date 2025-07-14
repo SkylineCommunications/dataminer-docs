@@ -246,4 +246,4 @@ While a DataMiner storage setup was migrated or replicated where each DMA had it
 
 A problem in ClusterEndpointsManager could cause a memory leak in the SLNet process and could cause DataMiner Agents to disconnect. To prevent this, the ClusterEndpointsManager is now disabled unless the system has already been migrated to BrokerGateway.
 
-To start a migration to BrokerGateway, you will now first need to enable the *ClusterEndpointsManager* soft-launch option.
+To start a migration to BrokerGateway, you will now first need to enable the *ClusterEndpointsManager* soft-launch option on each DataMiner Agent in the cluster.

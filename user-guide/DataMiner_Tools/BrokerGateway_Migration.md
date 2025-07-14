@@ -7,7 +7,7 @@ uid: BrokerGateway_Migration
 From DataMiner 10.5.0 [CU2]/10.5.5 onwards<!-- RN 42573 -->, you can migrate from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service) using the "NATSMigration" tool. Prior to this, starting from DataMiner 10.5.0/10.5.2, this feature is available in [soft launch](xref:SoftLaunchOptions).
 
 > [!IMPORTANT]
-> This migration requires the ClusterEndpointsManager, which is by default disabled from DataMiner 10.5.0 [CU5]/10.5.8 onwards.<!-- RN 43370 --> If you want to start this migration using this DataMiner version or higher, first enable the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft-launch option.
+> This migration requires the ClusterEndpointsManager, which is by default disabled from DataMiner 10.5.0 [CU5]/10.5.8 onwards.<!-- RN 43370 --> If you want to start this migration using this DataMiner version or higher, first enable the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft-launch option on each DataMiner Agent in the cluster.
 
 Once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#running-an-automatic-migration) or [run the migration manually](#running-the-migration-manually).
 
