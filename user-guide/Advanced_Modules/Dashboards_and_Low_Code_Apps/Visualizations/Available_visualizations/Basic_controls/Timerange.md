@@ -4,7 +4,7 @@ uid: TimeRange
 
 # Time range
 
-The time range component allows you to specify a time range, which can then be used as a filter for compatible components such as the [line & area chart](xref:LineAndAreaChart). You can either select a **preset** or a **quick pick button**, or manually set a **custom time range**. When you modify the time range in this component, the data displayed in any linked component is updated accordingly.
+The time range component allows you to specify a time range, which can then for example be used as a filter for compatible components such as the [line & area chart](xref:LineAndAreaChart). You can either select a **preset** or a **quick pick button**, or manually set a **custom time range**. When you modify the time range in this component, the data displayed in any linked component is updated accordingly.
 
 > [!NOTE]
 > Prior to DataMiner 10.4.0 [CU12]/10.5.3<!--RN 41934-->, this component is available under *General*.

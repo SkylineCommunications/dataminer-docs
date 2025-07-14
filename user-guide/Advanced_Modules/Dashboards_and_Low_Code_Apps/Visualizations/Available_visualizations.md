@@ -11,7 +11,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | Visualization | Description |
 |:--:|--|
 | ![Block](~/user-guide/images/Block.svg) | A [block](xref:DashboardBlock) is used as a divider between other components. |
-| ![Button](~/user-guide/images/Button.svg) | A [button](xref:DashboardButton) is an interactive element that can be used in a low-code app. |
+| ![Button](~/user-guide/images/Button.svg) | A [button](xref:DashboardButton) allows users to execute actions in a low-code app. |
 | ![Button panel](~/user-guide/images/Button_Panel.svg) | A [button panel](xref:DashboardButtonPanel) lets you replicate and control physical hardware buttons remotely. |
 | ![Form](~/user-guide/images/Form.svg) | A [form](xref:DashboardForm) allows users to view, enter, or update structured information in a clear layout. |
 | ![Text](~/user-guide/images/Text.svg) | A [text](xref:DashboardText) component displays a block of static text. |
@@ -31,11 +31,11 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 
 | Visualization | Description |
 |:--:|--|
-| ![State](~/user-guide/images/State.svg) | A [state](xref:DashboardState) component displays the state, name, and, if applicable, the value of a DataMiner object. |
+| ![State](~/user-guide/images/State.svg) | A [state](xref:DashboardState) component displays the state, name, and, if applicable, the value of an object. |
 | ![Progress bar](~/user-guide/images/Progress_Bar.svg) | A [progress bar](xref:DashboardProgressBar) shows the value of one or more analog parameters with a progress bar. |
-| ![Gauge](~/user-guide/images/Gauge.svg) | A [gauge](xref:DashboardGauge) displays the name and, if applicable, the value of a DataMiner object within a colored gauge matching the state of the object. |
-| ![Ring](~/user-guide/images/Ring.svg) | A [ring](xref:DashboardRing) displays the name and, if applicable, the value of a DataMiner object within a colored ring matching the state of the object. |
-| ![State timeline](~/user-guide/images/State_Timeline.svg) | A [state timeline](xref:DashboardStateTimeline) visualizes the alarm state changes over time of a parameter, element, or service. |
+| ![Gauge](~/user-guide/images/Gauge.svg) | A [gauge](xref:DashboardGauge) displays the name and, if applicable, the value of an object within a colored gauge matching the state of the object. |
+| ![Ring](~/user-guide/images/Ring.svg) | A [ring](xref:DashboardRing) displays the name and, if applicable, the value of an object within a colored ring matching the state of the object. |
+| ![State timeline](~/user-guide/images/State_Timeline.svg) | A [state timeline](xref:DashboardStateTimeline) visualizes alarm state changes over time. |
 
 ### Tables
 
@@ -50,9 +50,9 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 
 | Visualization | Description |
 |:--:|--|
-| ![Column & Bar chart](~/user-guide/images/Column_Bar_Chart.svg) | A [column & bar chart](xref:ColumnAndBarChart) displays the elements or services in a view that caused the most or the least alarms in a selected time range and were in an alarm state for the longest or shortest period of time. |
-| ![Line & Area chart](~/user-guide/images/Line_Area_Chart.svg) | A [mine & area chart](xref:LineAndAreaChart) displays a trend graph. |
-| ![Pie & Donut chart](~/user-guide/images/Pie_Donut_Chart.svg) | A [pie & donut chart](xref:PieAndDonutChart) displays the results of queries in a chart shaped like a pie or donut. |
+| ![Column & Bar chart](~/user-guide/images/Column_Bar_Chart.svg) | A [column & bar chart](xref:ColumnAndBarChart) displays information in the form of a column or bar chart. This can for example be based on a GQI query or on DataMiner alarm information for elements or services. |
+| ![Line & Area chart](~/user-guide/images/Line_Area_Chart.svg) | A [line & area chart](xref:LineAndAreaChart) displays a graph that can for example be based on DataMiner trending or on a GQI query. |
+| ![Pie & Donut chart](~/user-guide/images/Pie_Donut_Chart.svg) | A [pie & donut chart](xref:PieAndDonutChart) displays information in a chart shaped like a pie or donut. |
 
 ### Other
 
@@ -61,7 +61,7 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | ![Timeline](~/user-guide/images/Timeline.svg) | A [timeline](xref:DashboardTimeline) is used to visualize and manage bookings, events, and other time-bound data. |
 | ![List](~/user-guide/images/List.svg) | A [list](xref:DashboardList) allows users to select one or more items in a list. |
 | ![EPM picker](~/user-guide/images/EPM_Picker.svg) | An [EPM picker](xref:DashboardEPMPicker) allows users to make a filter selection for a particular EPM element and EPM chain. |
-| ![Grid](~/user-guide/images/Grid.svg) | A [grid](xref:DashboardGrid) displays the results of queries in a clear, tile-based grid format and offers a wide range of customization options. |
+| ![Grid](~/user-guide/images/Grid.svg) | A [grid](xref:DashboardGrid) displays information in a clear, tile-based grid format and offers a wide range of customization options. |
 | ![IAS](~/user-guide/images/IAS.svg) | An [interactive Automation script](xref:InteractiveAutomationScript) component visualizes any interactive Automation script (IAS) within pages or panels of a low-code app. |
 | ![Node edge graph](~/user-guide/images/Node_Edge_Graph.svg) | A [node edge graph](xref:DashboardNodeEdgeGraph) visualizes any type of objects (i.e. "nodes") and the connections between them (i.e. "edges"). By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data. |
 | ![Parameter page](~/user-guide/images/Parameter_Page.svg) | A [parameter page](xref:DashboardParameterPage) displays a particular data page of an element. |
@@ -77,8 +77,8 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 | Visualization | Description |
 |:--:|--|
 | ![Dropdown](~/user-guide/images/Dropdown.svg) | A [dropdown](xref:DashboardDropdown) allows users to select an item in a dropdown list. |
-| ![Numeric input](~/user-guide/images/Numeric_Input.svg) | A [numeric input](xref:DashboardNumericInput) component allows users to enter numbers, which will then be available as numeric data in the dashboard or app. |
-| ![Search input](~/user-guide/images/Search_Input.svg) | A [search input](xref:DashboardSearchInput) component allows users to enter text, which will then be available as text data in the dashboard or app. |
-| ![Text input](~/user-guide/images/Text_Input.svg) | A [text input](xref:DashboardTextInput) component allows users to enter text, which will then be available as string data in the dashboard or app. |
-| ![Time range](~/user-guide/images/Time_Range.svg) | A [time range](xref:TimeRange) is used to enter a specific time range, which can then be used as a filter for compatible components. |
+| ![Numeric input](~/user-guide/images/Numeric_Input.svg) | A [numeric input](xref:DashboardNumericInput) component allows users to enter numbers, which will then be available as data in the dashboard or app. |
+| ![Search input](~/user-guide/images/Search_Input.svg) | A [search input](xref:DashboardSearchInput) component allows users to enter text for the purpose of searching for something in the dashboard or app. |
+| ![Text input](~/user-guide/images/Text_Input.svg) | A [text input](xref:DashboardTextInput) component allows users to enter text, which will then be available as data in the dashboard or app. |
+| ![Time range](~/user-guide/images/Time_Range.svg) | A [time range](xref:TimeRange) is used to enter a specific time range, which can then for example be used as a filter for compatible components. |
 | ![Toggle](~/user-guide/images/Toggle.svg) | A [toggle](xref:Toggle) is used to enable or disable specific capabilities. |
