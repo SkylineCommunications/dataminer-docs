@@ -50,6 +50,13 @@ Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS
 > [!TIP]
 > See also: [Migrating to BrokerGateway](xref:BrokerGateway_Migration)
 
+### ClusterEndpointsManager
+
+Enables the ClusterEndpointsManager, which is required in order to be able to migrate to BrokerGateway.
+
+- **Minimum version**: 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->
+- **Release version**: 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->
+
 ### CorrectedDisplayKeyOnNaming
 
   Takes exception values into account for display key generation.
