@@ -22,7 +22,7 @@ Currently available certifications include
 
 - [Visual Overview - Level 1](https://community.dataminer.services/learning/certification/visual-overview-level-1/)
 
-It is advisable to discuss certification goals early with participants and establish target dates for achieving each certification batch. When the participant is ready to begin the certification process, the learning team will receive a notification from Project Management to start the certification process.  
+It is advisable to discuss certification goals early with participants and establish target dates for achieving each certification batch. When the participant is ready to begin the certification process, the learning team will receive a notification from Project Management to start the certification process.
 
 > [!TIP]
-> For more information, take a look at the [exam guide](https://docs.dataminer.services/dataminer-overview/Training_courses_and_certification/Overview_Training_certification.html) per certification track, or have a look at some [frequently asked questions about the DataMiner Certification Program](https://community.dataminer.services/learning/certification/#faq_certification).
+> For more information, take a look at the [exam guide](xref:Overview_Training_certification) per certification track or at the [frequently asked questions about the DataMiner Certification Program](https://community.dataminer.services/learning/certification/#faq_certification).
