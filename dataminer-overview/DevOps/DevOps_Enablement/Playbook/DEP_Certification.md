@@ -22,11 +22,7 @@ Currently available certifications include
 
 - [Visual Overview - Level 1](https://community.dataminer.services/learning/certification/visual-overview-level-1/)
 
-It is advisable to discuss certification goals early with participants and establish target dates for achieving each certification batch. When the participant is ready to begin the certification process, they should contact [Skyline Academy](mailto:academy@skyline.be) to schedule an intake session.
-
-During this intake session, candidates will meet their examiner, who will outline the certification process and provide them with all practical details. Over the course of the certification process, candidates will complete various hands-on, performance-based assignments, evaluated by the examiner on an individual basis during online sessions.
-
-When the candidate has completed the certification process, their examiner will share the results during a final debriefing session.
+It is advisable to discuss certification goals early with participants and establish target dates for achieving each certification batch. When the participant is ready to begin the certification process, the learning team will receive a notification from Project Management to start the certification process.  
 
 > [!TIP]
-> For more information, have a look at some [frequently asked questions about the DataMiner Certification Program](https://community.dataminer.services/learning/certification/#faq_certification), or take a look at the [exam guide](https://docs.dataminer.services/dataminer-overview/Training_courses_and_certification/Overview_Training_certification.html) per certification track.
+> For more information, take a look at the [exam guide](https://docs.dataminer.services/dataminer-overview/Training_courses_and_certification/Overview_Training_certification.html) per certification track, or have a look at some [frequently asked questions about the DataMiner Certification Program](https://community.dataminer.services/learning/certification/#faq_certification).
