@@ -4,7 +4,7 @@ uid: DataMiner.DaaS
 
 # DaaS element
 
-Configures DaaS related settings.
+Configures DaaS-related settings.
 
 ## Parents
 

@@ -6,7 +6,7 @@ uid: DataMiner.SMTP
 
 Configures outgoing mail.
 
-See [Configuring outgoing email](xref:Configuring_outgoing_email)
+See [Configuring outgoing email](xref:Configuring_outgoing_email).
 
 ## Parents
 

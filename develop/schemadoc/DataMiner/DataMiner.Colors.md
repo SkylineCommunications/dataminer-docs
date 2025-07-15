@@ -6,7 +6,7 @@ uid: DataMiner.Colors
 
 Specifies the colors assigned to each of the alarm levels.
 
-See [Changing the default alarm colors](xref:Changing_the_default_alarm_colors)
+See [Changing the default alarm colors](xref:Changing_the_default_alarm_colors).
 
 ## Parents
 

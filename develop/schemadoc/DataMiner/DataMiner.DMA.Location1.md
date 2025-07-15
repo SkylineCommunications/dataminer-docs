@@ -6,7 +6,7 @@ uid: DataMiner.DMA.Location1
 
 Specifies location information for this DataMiner Agent.
 
-See [Specifying your company data](xref:Specifying_your_company_data)
+See [Specifying your company data](xref:Specifying_your_company_data).
 
 ## Content Type
 

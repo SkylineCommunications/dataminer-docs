@@ -6,7 +6,7 @@ uid: DataMiner.DMA.DMAName
 
 Specifies the name of this DataMiner Agent.
 
-See [Changing the name of a DMA](xref:Changing_the_name_of_a_DMA)
+See [Changing the name of a DMA](xref:Changing_the_name_of_a_DMA).
 
 ## Type
 

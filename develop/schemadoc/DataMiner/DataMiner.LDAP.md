@@ -6,7 +6,7 @@ uid: DataMiner.LDAP
 
 Contains the LDAP configuration.
 
-See [Configuring LDAP settings](xref:Configuring_LDAP_settings)
+See [Configuring LDAP settings](xref:Configuring_LDAP_settings).
 
 ## Parents
 

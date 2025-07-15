@@ -4,7 +4,7 @@ uid: DataMiner.SNMPv1
 
 # SNMPv1 element
 
-Configures SNMPv1 related settings.
+Configures SNMPv1-related settings.
 
 ## Parents
 

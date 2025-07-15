@@ -4,7 +4,7 @@ uid: DataMiner.SNMP
 
 # SNMP element
 
-Configures SNMP related settings.
+Configures SNMP-related settings.
 
 ## Parents
 

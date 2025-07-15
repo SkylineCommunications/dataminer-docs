@@ -6,7 +6,7 @@ uid: DataMiner.Logging
 
 Specifies the logging level for Info logging, Debug logging, and Error logging.
 
-See [Consulting the DataMiner logs in DataMiner Cube](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube)
+See [Consulting the DataMiner logs in DataMiner Cube](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube).
 
 ## Parents
 

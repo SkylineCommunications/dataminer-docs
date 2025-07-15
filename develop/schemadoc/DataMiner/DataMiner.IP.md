@@ -4,7 +4,7 @@ uid: DataMiner.IP
 
 # IP element
 
-Configures IP related settings.
+Configures IP-related settings.
 
 ## Parents
 

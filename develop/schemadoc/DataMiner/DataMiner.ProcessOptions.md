@@ -6,7 +6,7 @@ uid: DataMiner.ProcessOptions
 
 Configures the DataMiner processes.
 
-See [Configuration of DataMiner processes](xref:Configuration_of_DataMiner_processes)
+See [Configuration of DataMiner processes](xref:Configuration_of_DataMiner_processes).
 
 ## Parents
 

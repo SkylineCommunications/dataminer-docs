@@ -4,7 +4,7 @@ uid: DataMiner.SNMPv2
 
 # SNMPv2 element
 
-Configures SNMPv2c related settings.
+Configures SNMPv2c-related settings.
 
 ## Parents
 

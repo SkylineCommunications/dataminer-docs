@@ -4,7 +4,7 @@ uid: DataMiner.SNMPv3
 
 # SNMPv3 element
 
-Configures SNMPv3 related settings.
+Configures SNMPv3-related settings.
 
 ## Parents
 
