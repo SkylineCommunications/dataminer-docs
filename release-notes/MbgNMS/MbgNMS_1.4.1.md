@@ -7,6 +7,12 @@ uid: MbgNMS_1.4.1
 > [!IMPORTANT]
 > We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
 
+## New features
+
+#### Configuration rules bulk actions [ID 43363]
+
+It is now possible to include, exclude, and delete configuration rules in bulk. You can do so via the context menu of the configuration rules table.
+
 ## Enhancements
 
 #### "Running" backup option now retrieves complete configuration [ID 43275]
