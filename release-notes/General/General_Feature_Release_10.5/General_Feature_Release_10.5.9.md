@@ -219,6 +219,16 @@ When an infinite loop is detected, the following will be returned:
 - When the `splitErrors` option is set to false, the error message `INFINITE LOOP` will be returned.
 - When the `splitErrors` option is set to true, the values will be returned.
 
+#### Automation: An error message will now appear when a script import operation fails [ID 43316]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in the *Automation* module, you imported an Automation script, up to now, you would not receive any feedback about whether or not the import operation had been successful. Only after checking the Cube logs would you be able to find out that an import operation had failed.
+
+From now on, the following error message will appear whenever an exception is thrown while an Automation script is being imported:
+
+`Something went wrong. Please check the Cube and Automation logging for more information.`
+
 #### Relational anomaly detection: Configuration moved from XML file to database [ID 43320]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->

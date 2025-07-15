@@ -60,6 +60,16 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in the above-mentioned versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### Automation: An error message will now appear when a script import operation fails [ID 43316]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When, in the *Automation* module, you imported an Automation script, up to now, you would not receive any feedback about whether or not the import operation had been successful. Only after checking the Cube logs would you be able to find out that an import operation had failed.
+
+From now on, the following error message will appear whenever an exception is thrown while an Automation script is being imported:
+
+`Something went wrong. Please check the Cube and Automation logging for more information.`
+
 #### DataMiner upgrade: BPA tests 'Check Agent Presence Test In NATS' and 'Verify NATS is Running' replaced by 'Verify NATS Cluster' [ID 43359]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
