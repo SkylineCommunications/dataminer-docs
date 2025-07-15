@@ -42,4 +42,4 @@ Explore our series of short demonstration videos in our Dojo use case and video 
 
 ## Manual
 
-![pdf](~/develop/images/mbgNMS_pdf.svg) [**SLC_UM_Meinberg_NMS_REV011.pdf**](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2)
+![pdf](~/develop/images/mbgNMS_pdf.svg) [**SLC_UM_Meinberg_NMS.pdf**](https://community.dataminer.services/download/slc_um_meinberg_nms_rev000-pdf-2)

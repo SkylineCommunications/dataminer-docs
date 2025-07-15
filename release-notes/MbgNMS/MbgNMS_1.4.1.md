@@ -2,10 +2,7 @@
 uid: MbgNMS_1.4.1
 ---
 
-# MbgNMS 1.4.1 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MbgNMS 1.4.1
 
 ## New features
 
