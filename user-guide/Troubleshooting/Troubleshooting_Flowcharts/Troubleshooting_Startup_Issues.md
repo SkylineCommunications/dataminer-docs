@@ -16,8 +16,11 @@ classDef DarkGray fill:#58595B,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef Gray fill:#999999,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef DarkBlue fill:#1E5179,stroke:#000070,stroke-width:0px, color:#FFFFFF;
 classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width:0px;
+
 %% Define blocks %%
 DMAStartupIssues([DMA startup issues])
+ServicesRunning{{"Are all DataMiner Core Module services running? <br/>"}}
+DCMIssue["DcM issue"]
 AgentNotLicensed{{"Agent not licensed message in Cube? <br/>"}}
 SwarmingEnabled{{"Swarming recently enabled? <br/>"}}
 SLNetComFailure{{"SLNetCom failure logged in SLDataMiner.txt? <br/>"}}
@@ -30,9 +33,12 @@ IPChangeIssue["IP change issue"]
 NATSIssue["NATS issue"]
 CassandraIssue["Cassandra issue"]
 ContactTechSupport["Contact DataMiner Support"]
+
 %% Connect blocks %%
-DMAStartupIssues --- AgentNotLicensed
+DMAStartupIssues --- ServicesRunning
 Home([Start page])
+ServicesRunning --- |YES| AgentNotLicensed
+ServicesRunning --- |NO| DCMIssue
 AgentNotLicensed --- |YES| LicensingIssue
 AgentNotLicensed --- |NO| SwarmingEnabled
 SwarmingEnabled --- |YES| SwarmingIssue
@@ -45,20 +51,49 @@ NATSErrors --- |YES| NATSIssue
 NATSErrors --- |NO| CassandraErrors
 CassandraErrors --- |YES| CassandraIssue
 CassandraErrors --- |NO| ContactTechSupport
+
 %% Define hyperlinks %%
 click Home "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click DCMIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#dcm-issue"
 click LicensingIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#licensing-issue"
 click SwarmingIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#swarming-issue"
 click IPChangeIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#ip-change-issue"
 click NATSIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#nats-issue"
 click CassandraIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html#cassandra-issue"
 click ContactTechSupport "/user-guide/Troubleshooting/Contacting_tech_support.html"
+
 %% Apply styles to blocks %%
 class DMAStartupIssues,ContactTechSupport DarkBlue;
-class LicensingIssue,SwarmingIssue,IPChangeIssue,NATSIssue,CassandraIssue classExternalRef;
-class AgentNotLicensed,SwarmingEnabled,SLNetComFailure,IncorrectIPAddresses,NATSErrors,CassandraErrors Blue;
+class LicensingIssue,SwarmingIssue,IPChangeIssue,NATSIssue,CassandraIssue,DCMIssue classExternalRef;
+class ServicesRunning,AgentNotLicensed,SwarmingEnabled,SLNetComFailure,IncorrectIPAddresses,NATSErrors,CassandraErrors Blue;
 class Home LightBlue;
 ```
+
+## DcM issue
+
+### Symptoms
+
+- DataMiner fails to start, takes too long to start, or gets stuck at 99% during the startup process.
+
+- [DataMiner Core Module](xref:DataMinerExtensionModules#available-dcms) services are stopped.
+
+- The server where the DMA is running has recently been rebooted.
+
+### Root cause
+
+Some DataMiner Core Module (DcM) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g. because of Windows updates).
+
+### Solution
+
+1. Open Task Manager on the DMA.
+
+1. Navigate to the **Services** tab.
+
+1. Sort by name and locate the *DataMiner* services.
+
+1. Start all services identified as DataMiner Core Modules (see [Available DcMs](xref:DataMinerExtensionModules#available-dcms)).
+
+1. Restart the DataMiner Agent.
 
 ## Licensing issue
 
