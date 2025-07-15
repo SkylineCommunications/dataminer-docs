@@ -135,11 +135,11 @@ The logging of a DOM manager will now also contain a line indicating the start o
 
 ### Enhancements
 
-#### SLDataGateway will now periodically check all Cassandra, OpenSearch and Elasticsearch certificates [ID 41793]
+#### SLDataGateway will now check all Cassandra, OpenSearch and Elasticsearch certificates on a daily basis [ID 41793]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-SLDataGateway will now periodically check all Cassandra, OpenSearch and Elasticsearch certificates.
+SLDataGateway will now check all Cassandra, OpenSearch and Elasticsearch certificates on a daily basis.
 
 - If a certificate is set to expire within 30 days, a notice alarm will be created.
 - If a certificate is set to expire within 7 days, an error alarm will be created.

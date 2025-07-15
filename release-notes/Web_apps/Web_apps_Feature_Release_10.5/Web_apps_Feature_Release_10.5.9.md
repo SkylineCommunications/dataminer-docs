@@ -180,3 +180,9 @@ Currently, by default, the existing components will still be used by default to 
 When the app settings of the GQI DxM are changed, in some cases, the persistent system connection will reconnect. However, up to now, the reference to that persistent system connection was not updated in the ConnectionManager, causing any subsequent query requests made by the system user to throw an `Attempted to use a closed connection` error. The GQI DxM would always be able to recover by itself though, as it periodically checked whether the connections in the ConnectionManager were still alive.
 
 As, since DataMiner version 10.5.0 [CU5]/10.5.8 [CU0], this connection check is no longer performed, the ConnectionManager will now automatically clear the reference to the persistent system connection when it detect that it has been closed, and will, when a new query request arrives, either retrieve the new persistent system connection reference or trigger a reconnect if no connection exists yet.
+
+#### Dashboards app: Not possible to make changes to a dashboard after cancelling the generation of a PDF report [ID 43358]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When you cancelled the generation of a PDF report by closing the preview window, and then entered edit mode, up to now, it would incorrectly not be possible to make any changes to the dashboard in question.
