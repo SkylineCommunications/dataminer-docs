@@ -6,7 +6,7 @@ uid: KI_Startup_issue_DcM_not_running
 
 ## Affected versions
 
-From DataMiner 10.3.7/10.4.0 onwards.
+This issue is assumed to occur since the introduction of the DcMs, i.e. from DataMiner 10.3.7/10.4.0 onwards. It has been reproduced in DataMiner 10.5.4 and 10.5.7.
 
 ## Cause
 
