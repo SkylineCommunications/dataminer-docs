@@ -30,7 +30,7 @@ In the Atlassian Crowd server, make sure there is an application named “datami
 
 DataMiner users can be authenticated against an Atlassian Crowd server.
 
-To configure this, open the *DataMiner.xml* file, add an *\<ExternalAuthentication>* tag as shown in the example below, and restart the DataMiner Agent. Users added to the Crowd server and imported into DataMiner should then be able to log on.
+To configure this, open the *DataMiner.xml* file, add an [ExternalAuthentication](xref:DataMiner.ExternalAuthentication) tag as shown in the example below, and restart the DataMiner Agent. Users added to the Crowd server and imported into DataMiner should then be able to log on.
 
 ```xml
 <DataMiner>

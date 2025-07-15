@@ -4,7 +4,7 @@ uid: DataMiner.LDAP.Group.Classname
 
 # Classname element
 
-Specifies the object class/classes that identifies/identify groups.
+Specifies the object class or classes that identify groups.
 
 Multiple values can be separated by pipe characters ("|").
 

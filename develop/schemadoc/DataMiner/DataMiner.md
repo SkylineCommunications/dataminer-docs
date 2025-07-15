@@ -15,7 +15,7 @@ Configures the DataMiner Agent.
 | [id](xref:DataMiner-id) | integer | Yes | Specifies the DataMiner Agent ID.<br>See [Changing the DataMiner ID of a DMA](xref:Changing_the_DMA_ID). |
 | [licenseNotice](xref:DataMiner-licenseNotice) | string |  | Automatically generated attribute. Contains information about which license notices have been generated for this DataMiner Agent. |
 | [protocolVisioLnk](xref:DataMiner-protocolVisioLnk) | integer |  | When set to "1", this tag indicates that DataMiner has attempted to create all the Visio.lnk files that indicate the current Visio file for a protocol. This is used for troubleshooting purposes. |
-| [readElementData](xref:DataMiner-readElementData) | boolean |  | Automatically generated attribute, indicating that previously configured element data that was saved in DataMiner.xml has been moved to the element data database tables. |
+| [readElementData](xref:DataMiner-readElementData) | boolean |  | Automatically generated attribute, indicating that previously configured element data that was saved in *DataMiner.xml* has been moved to the element data database tables. |
 | [readProperties](xref:DataMiner-readProperties) | boolean |  | Automatically generated attribute. Deprecated. |
 | [safeMode](xref:DataMiner-safeMode) | boolean |  | If set to "true", elements will not be started using multiple threads. |
 | [storeLastPollTimes](xref:DataMiner-storeLastPollTimes) | boolean |  | Indicates whether SLProtocol should store the last poll times. |

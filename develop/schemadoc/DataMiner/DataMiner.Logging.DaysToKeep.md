@@ -27,6 +27,6 @@ integer
 </DataMiner>
 ```
 
-# Remarks
+## Remarks
 
 If this tag is not specified or if its value is 0, log files will be kept for 100 days.

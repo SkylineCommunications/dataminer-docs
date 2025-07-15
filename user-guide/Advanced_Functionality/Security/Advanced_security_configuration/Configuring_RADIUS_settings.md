@@ -12,7 +12,7 @@ To configure a RADIUS server:
 
 1. Go to the folder `C:\Skyline DataMiner` and open the - file.
 
-1. In *DataMiner.xml*, configure the `<ExternalAuthentication>` tag as illustrated in the example below:
+1. In *DataMiner.xml*, configure the [ExternalAuthentication](xref:DataMiner.ExternalAuthentication) tag as illustrated in the example below:
 
    ```xml
    <DataMiner>

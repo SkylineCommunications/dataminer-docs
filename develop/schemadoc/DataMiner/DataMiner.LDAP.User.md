@@ -16,7 +16,7 @@ Configures a user.
 | --- | --- | --- |
 | All |  |  |
 | &#160;&#160;[AccountNameField](xref:DataMiner.LDAP.User.AccountNameField) | [0, 1] | The user's account name. |
-| &#160;&#160;[Classname](xref:DataMiner.LDAP.User.Classname) | [0, 1] | Specifies the object class/classes that identifies/identify users.<br>Multiple values can be separated by pipe characters ("\|"). |
+| &#160;&#160;[Classname](xref:DataMiner.LDAP.User.Classname) | [0, 1] | Specifies the object class or classes that identify users.<br>Multiple values can be separated by pipe characters ("\|"). |
 | &#160;&#160;[DescriptionField](xref:DataMiner.LDAP.User.DescriptionField) | [0, 1] | Specifies the user's description. |
 | &#160;&#160;[DisplayNameField](xref:DataMiner.LDAP.User.DisplayNameField) | [0, 1] | Specifies the user name that will be displayed. |
 | &#160;&#160;[EmailField](xref:DataMiner.LDAP.User.EmailField) | [0, 1] | Specifies the user's email address. |

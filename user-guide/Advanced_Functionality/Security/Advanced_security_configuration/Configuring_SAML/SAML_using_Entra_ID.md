@@ -172,7 +172,7 @@ To set up external authentication, you first need to create an enterprise applic
 
 1. Go to the folder `C:\Skyline DataMiner` and open the *DataMiner.xml* file.
 
-1. In *DataMiner.xml*, configure the `<ExternalAuthentication>` tag as illustrated in the example below:
+1. In *DataMiner.xml*, configure the [ExternalAuthentication](xref:DataMiner.ExternalAuthentication) tag as illustrated in the example below:
 
    ```xml
    <DataMiner ...>
