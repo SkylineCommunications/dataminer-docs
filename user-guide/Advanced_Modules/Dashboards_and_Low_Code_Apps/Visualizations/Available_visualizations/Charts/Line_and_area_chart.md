@@ -4,7 +4,7 @@ uid: LineAndAreaChart
 
 # Line & area chart
 
-This component can be used to display a trend graph.
+This component displays a line graph that can for example be based on DataMiner trending or on a GQI query.
 
 ![Line & area chart](~/user-guide/images/Line_Area_Chart.png)<br>*Line & area chart component in DataMiner 10.4.5*
 
