@@ -11,16 +11,15 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
 
-From now on, when remotely accessing the Cube desktop app while the DataMiner System is starting up or while an upgrade is in progress, the progress will be displayed instead of an error.
-Updating the DataMiner System while remotely accesing Cube will also no longer disconnect the session but show the progress accordingly.
+From now on, if you remotely access the Cube desktop app while the DataMiner System is starting up or while an upgrade is in progress, the progress will be displayed instead of an error. Upgrading the DataMiner System while remotely accessing Cube will also no longer disconnect the session but will instead show the upgrade progress.
 
 ### 15 July 2025 - Fix - Remote Access & Live Sharing - Authentication issue redirecting to a blue error page
 
-An issue has been fixed that could occur while signin in redirecting to a blue error page displaying `An error occurred while processing your request.`.
+In some cases, users that tried to sign in could be redirected to a blue error page displaying `An error occurred while processing your request`. This issue has been resolved.
 
 ### 15 July 2025 - Enhancement - Remote Access & Live Sharing - Stability and performance improvements
 
-Stability and performance improvements have been done which should make the remote access features more stable.
+Stability and performance improvements have been implemented, which should make the remote access features more stable.
 
 ### 30 June 2025 - Fix - Catalog - Grid view rendered incorrectly
 
