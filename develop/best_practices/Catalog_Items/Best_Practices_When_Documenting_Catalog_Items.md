@@ -11,6 +11,9 @@ The main principle to keep in mind is that the documentation in the Catalog shou
 
 As the documentation shown in the Catalog should be concise and not include a lot of technical details, you can add a link (see *documentation_url* in the [Manifest file](xref:Register_Catalog_Item#manifest-file)) to direct users to more detailed documentation. For substantial solutions developed by Skyline, this technical documentation is typically located under [DataMiner Solutions](xref:solution_index). For smaller items, this could be a link to markdown pages in the public source code repository. If the source code is open source, you can also provide a link using the *source_code_url* field in the [Manifest file](xref:Register_Catalog_Item#manifest-file).
 
+> [!NOTE]
+> For more details regarding connectors documentation, please refer to [our connector documentation guidelines](https://aka.dataminer.services/connectorDocsGuidelines).
+
 ## Catalog item documentation structure
 
 When you create documentation for an item in the Catalog, focus on showcasing the value of the item in a concise and engaging way, while keeping the technical details to a minimum. Use this structure to ensure clarity and consistency, and make sure to [include visuals](#visuals) in your text:
