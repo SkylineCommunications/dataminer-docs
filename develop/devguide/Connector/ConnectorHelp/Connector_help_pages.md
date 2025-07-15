@@ -5,11 +5,11 @@ description: For every connector that is developed for DataMiner, two or more do
 
 # Connector documentation
 
-For every connector that is developed for DataMiner, two or more documentation pages can be made.
+For every connector that is developed for DataMiner, at least one documentation pages should be made and is referred to as the [marketing page](#marketing-page).
 
-The first page is the [marketing page](#marketing-page), which should be appealing and focus on demonstrating the value the connector can bring to users, similar to the packaging of a product in a store. Creating this page is mandatory. If the connector is technically very simple, the below technical page can be ommited and couple of technical details can be embedded in the marketing page.
+The [marketing page](#marketing-page) should be appealing and focussed on demonstrating the value the connector can bring to users, similar to the packaging of a product in a store. If the connector is very simple and intuitive, a limited amount of technical details and "how tos" can be added directly within the marketing page.
 
-The second page is the [technical page](#technical-page), which should be a subpage of the marketing page containing further technical details. You could compare this to the instructions booklet included with a product in a store. The technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc. This page is not mandatory for any connector that is very straight forward and intuitive. In that case, feel free to add limited technical details directly within the marketing page.
+For connectors a bit more complex, a [technical page](#technical-page) should be made. It should be a subpage of the marketing page containing further technical details. You could compare this to the instructions booklet included with a product in a store. The technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, configured, etc.
 
 If a connector exports child connectors, a subpage should also be created for each of these child connectors.
 
