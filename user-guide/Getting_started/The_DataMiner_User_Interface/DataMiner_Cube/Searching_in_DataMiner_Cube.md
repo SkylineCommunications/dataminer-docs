@@ -14,7 +14,7 @@ Click a suggestion to immediately open the corresponding card, or click *Advance
 
 From DataMiner 10.1.11/10.2.0 onwards, you can also search directly in the advanced search pane using the search box at the top. If the pane is pinned to the sidebar, it is always displayed, even if you have not done a search using the search box in the header bar. (see [Sidebar](xref:DataMiner_Cube_sidebar)).
 
-Please note the following
+Please note the following:
 
 - For a quick search, only the following objects can be displayed in the results: elements, services, service children with alias, redundancy groups, SLAs, views and apps, as well as objects of which the ID matches the search string. Hidden elements are not included.
 
@@ -47,6 +47,10 @@ Please note the following
 
     > [!NOTE]
     > In an advanced search, “\*” and “?” will be interpreted as wildcard characters. See [Searching with wildcard characters](#searching-with-wildcard-characters).
+
+- For Japanese characters to be processed properly in search results, your Windows system must support Japanese text rendering.
+
+- The search does not support fuzzy matching, so typos or substitutions with visually similar characters (e.g. "ø" vs. "o") will not yield results. However, from DataMiner 10.4.0 [CU16]/10.5.0 [CU4] onwards, search results do account for diacritic similarities within the same alphabet. For example, entering "e" will also return matches that contain "é".<!-- RN 42911 -->
 
 - For more information on which search terms you can enter to find specific DataMiner items, see [Searching for specific DataMiner items](#searching-for-specific-dataminer-items).
 

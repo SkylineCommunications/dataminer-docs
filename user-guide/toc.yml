@@ -17,6 +17,9 @@ items:
 - name: dataminer.services
   topicUid: dataminer_services
   href: dataminer_services/toc.yml
+- name: DataMiner tools
+  topicUid: DataMinerTools
+  href: DataMiner_Tools/toc.yml
 - name: Troubleshooting
   topicUid: Part6Troubleshooting
   href: Troubleshooting/toc.yml

@@ -112,7 +112,6 @@ The following options are available:
 > See also:
 >
 > - [Icons settings](xref:User_settings#icons-settings)
-> - [Surveyor – Using latched and special icons](https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/) ![Video](~/user-guide/images/video_Duo.png)
 
 ### Surveyor right-click menu
 
@@ -129,7 +128,7 @@ In the Surveyor right-click menu, the following options are available, depending
 | State | Element only | Opens a shortcut that allows you to [change the element state](xref:Changing_the_state_of_an_element). |
 | Mask | Element only | [Masks the element](xref:Masking_or_unmasking_an_element). |
 | Unmask | Element only | [Unmasks the element](xref:Masking_or_unmasking_an_element#unmasking-an-element). This option is only available for masked elements. |
-| Multiple set | Element only | Allows you to [set a parameter value in multiple elements](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements). |
+| Multiple set | Element only | Allows you to [set a parameter value in multiple elements](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements). From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards<!--RN 43135-->, this menu option is only available when the [*Enable 'Multiple set'* Cube user setting](xref:User_settings#cube-settings) is enabled. |
 | Protocols & Templates | Element, enhanced service | Opens a submenu where you can:<br> - View the used [protocol](xref:Protocols1) or [service protocol](xref:About_services#enhanced-services), [alarm template](xref:About_alarm_templates), and [trend template](xref:About_trend_templates).<br> - Assign alternative templates.<br> - View all available templates. |
 | View | Element | Opens a shortcut menu that allows quick access to [DataMiner logging](xref:Consulting_the_DataMiner_logs_in_DataMiner_Cube) or [Stream Viewer](xref:Connecting_to_an_element_using_Stream_Viewer). |
 | Edit | Element, service | Opens a card where you can change the configuration of the element or service. |
@@ -185,7 +184,7 @@ Depending on the configuration and version of your DataMiner System, as well as 
 
 - **Applications**: Plug-in applications, e.g. [IDP](xref:SolIDP), [PTP](xref:SolPTP), etc.
 
-- **Web Apps**: The [Monitoring app](xref:The_Monitoring_app_user_interface), [Dashboards app](xref:newR_D), and any available [low-code apps](xref:Dashboards_and_Low_Code_Apps).<!-- RN 33944 -->
+- **Web Apps**: The [Monitoring app](xref:Working_with_the_Monitoring_app), [Dashboards app](xref:newR_D), and any available [low-code apps](xref:Dashboards_and_Low_Code_Apps).<!-- RN 33944 -->
 
 - **General**: The Help, Settings, and About.
 

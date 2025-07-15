@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.5.7
 ---
 
-# General Feature Release 10.5.7 – Preview
+# General Feature Release 10.5.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 >
@@ -22,17 +22,7 @@ uid: General_Feature_Release_10.5.7
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.5.7](xref:Web_apps_Feature_Release_10.5.7).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
-
-#### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250]
-
-<!-- MR 10.6.0 - FR 10.5.7 -->
-
-In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
 
 #### Automation: Hash property of GetScriptInfoResponseMessage now contains a hash value of the script [ID 42616]
 
@@ -87,6 +77,74 @@ Example: `Automation script;638786700548555379;48bcb02e89875979c680d936ec19ad5e9
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 The SLNet message `EditConnection`, which can be used to edit a connection from within a QAction, now has a `GenerateInformationEvents` property. If this property is set to true, information events will be generated when a connection is created, updated, or deleted.
+
+#### Automation: New OnRequestScriptInfo entry point [ID 42969]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other Automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
+
+##### Using the entry point
+
+To use the entry point, add a method with the following signature to the script:
+
+```csharp
+[AutomationEntryPoint(AutomationEntryPointType.Types.OnRequestScriptInfo)]
+public RequestScriptInfoOutput OnRequestScriptInfoRequest(IEngine engine, RequestScriptInfoInput inputData)
+```
+
+Both `RequestScriptInfoInput` and `RequestScriptInfoOutput` have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. We strongly recommend keeping the passed data below 20 MB (i.e. 10 million characters). If larger chunks need to be passed, a reference to that information should be passed instead.
+
+It is allowed to pass null as input data and to return null as output data.
+
+##### Arguments
+
+If the script has any script parameters, dummies or memory files, then these are not required when executing the `OnRequestScriptInfo` entry point. However, they are required when executing the `Run` method of that same script.
+
+- When an omitted script parameter is used in the entry point logic, retrieving the script parameter is possible, but its value will be an empty string.
+- When an omitted dummy is used in the entry point logic, retrieving the dummy is possible, but it will refer to DMA ID -1 and element ID -1. Any actions that use the dummy will fail with an exception.
+- When an omitted memory file is used in the entry point logic, retrieving the memory file is possible, but it will refer to a linked file that is empty. Retrieving a value using the memory file will fail with an exception.
+
+##### Subscript
+
+To execute the `OnRequestScriptInfo` entry point within Automation, you have to use the following `PrepareSubScript` method on `Engine` or `IEngine`:
+
+```csharp
+RequestScriptInfoSubScriptOptions PrepareSubScript(String scriptName, RequestScriptInfoInput input)
+```
+
+The script should be started synchronously. It will return a subscript options object with an `Output` property containing the information returned by the script. The `Input` property can be used to check or update the data sent to the script.
+
+Executing subscripts is limited to a maximum of 10 levels.
+
+##### ExecuteScriptMessage
+
+The `ExecuteScriptMessage` can be used to trigger the entry point using an SLNet connection.
+
+```csharp
+var input = new RequestScriptInfoInput
+{
+  Data = new Dictionary<string, string>
+  {
+    { "Action", "RequestValues" },
+  },
+};
+
+new ExecuteScriptMessage
+{
+  ScriptName = scriptName,
+  Options = new SA(new []{ "DEFER:FALSE" }),
+  CustomEntryPoint = new AutomationEntryPoint
+  {
+    EntryPointType = AutomationEntryPoint.Types.OnRequestScriptInfo,
+    Parameters = new List<object> { input },
+  },
+};
+```
+
+When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will be returned. The information is returned in an `EntryPointResult.Result` property of type `RequestScriptInfoOutput`.
+
+This message should not be used to request the information in an Automation script.
 
 ## Changes
 
@@ -204,6 +262,23 @@ From DataMiner 10.5.0 [CU2]/10.5.5 onwards, you can migrate from the SLNet-manag
 
 Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at run-time, it will no longer be required to restart DataMiner when migrating.
 
+#### GQI: Sort operator now supports real-time updates when GQI DxM is being used [ID 42941]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+When a GQI query that included a Sort operator was used in a component of which the *Update data* option was enabled, up to now, the Sort operator would incorrectly prevent updates through real-time events. As a result, the component would be updated through notification events instead.
+
+From now on, on systems using the GQI DxM, a Sort operator will forward all real-time events, resulting in rows being added, updated and removed as soon as an update is received.
+
+> [!IMPORTANT]
+> Sorting will not be re-evaluated on update. As a result, if an update is received for a sorting column, the table will no longer be sorted correctly.
+
+#### Failover: Enhanced performance when executing a Failover switch [ID 42983]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when executing a Failover switch.
+
 ### Fixes
 
 #### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]
@@ -295,6 +370,18 @@ By default, an SLSNMPManager process responsible for SNMPv3 communication will l
 
 Up to now, when an SLSNMPManager process responsible for SNMPv3 communication was not able to communicate with the SLSNMPManager process to which it had to redirect a trap, in some cases, the process could stop working and disappear.
 
+#### Failover: Online agent would not clear local information about elements, services, and redundancy groups from its event cache when going offline [ID 42890]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When, during a Failover switch, the online agent went offline, up to now, it would incorrectly not clear local information about elements, services, and redundancy groups from its event cache.
+
+#### Failover: ClusterEndpoints.json files would not get updated correctly on offline agents when a DMA was added to the cluster [ID 42923]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, when a DMA was added to a DMS that contains one or more Failover pairs, in some cases, the `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` files would not get updated correctly on the offline agents.
+
 #### Incorrect attempts to delete child DVE elements upon start or restart of a main DVE element [ID 42924]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
@@ -307,14 +394,40 @@ When a main DVE element was started or restarted, up to now, an attempt would in
 
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.
 
+#### Failover: Database status in 'Failover status' window would incorrectly always be displayed as OK on a system using STaaS [ID 42944]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+When, in e.g. DataMiner Cube, you opened the *Failover status* window when connected to a system using STaaS, up to now, the database status would always be displayed as OK, even when STaaS was degraded.
+
 #### DataMiner upgrade: VerifyClusterPorts prerequisite check could fail when SLXML was still running [ID 42947]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, during a DataMiner upgrade, the *VerifyClusterPorts* prerequisite check could fail when SLXML was still running.
 
+#### Changes to LDAP users or LDAP groups would incorrectly not get synchronized among the DMAs in the cluster [ID 42950]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, changes to an LDAP user or an LDAP group would incorrectly not get synchronized among the DMAs in the cluster, not even after a midnight sync.
+
 #### Failover: NATS communication error on online agent after a Failover switch [ID 42964]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 After a Failover switch, in some cases, the ClusterEndpointManager would fail to initialize on the agent that had gone online. In the *Failover Status* window, *NATS communication* would show an error state.
+
+#### Editing an element on a swarming-enabled system would incorrectly cause the element's alarm ID range to be reset to 1 [ID 42988]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+<!-- Not added to MR 10.6.0 -->
+
+On swarming-enabled systems, up to now, editing an element would cause the alarm ID of that element to incorrectly be reset to 1. For the element to generate alarms in the correct range again, either DataMiner or the element had to be restarted.
+
+#### SLAutomation would leak memory each time an Automation script was run [ID 43073]
+
+<!-- MR 10.6.0 - FR 10.5.7 [CU0] -->
+<!-- Not added to MR 10.6.0 -->
+
+Since DataMiner 10.5.6, SLAutomation would leak memory each time an Automation script was run.

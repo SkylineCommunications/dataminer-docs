@@ -33,7 +33,7 @@ Up to now, when an SLProtocol process disappeared, the DataMiner Agent would res
 `Process disappearance of SLProtocol.exe with PID <processId>; <x> elements hosted by the disappeared process have been restarted.`
 
 > [!IMPORTANT]
-> When an SLProtocol process disappears, typically, a crashdump will also be created. It is highly recommended to ask [Skyline TechSupport](mailto:techsupport@skyline.be) to investigate that crashdump so that future SLProtocol disappearances and subsequent element restarts can be prevented.
+> When an SLProtocol process disappears, typically, a crashdump will also be created. We highly recommend asking [DataMiner Support](mailto:support@dataminer.services) to investigate that crashdump so that future SLProtocol disappearances and subsequent element restarts can be prevented.
 
 In the *SLElementInProtocol.txt* log file, the following fields have been added:
 

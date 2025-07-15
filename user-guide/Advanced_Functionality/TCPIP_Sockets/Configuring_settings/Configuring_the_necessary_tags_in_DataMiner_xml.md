@@ -4,7 +4,7 @@ uid: Configuring_the_necessary_tags_in_DataMiner_xml
 
 # Configuring the necessary tags in DataMiner.xml
 
-1. If you want the DMA to forward alarm events via a particular TCP/IP socket, then add an *\<AlarmSocket>* tag and specify the socket in the *port* attribute.
+1. If you want the DMA to forward alarm events via a particular TCP/IP socket, add an [AlarmSocket](xref:DataMiner.AlarmSocket) tag and specify the socket in the *port* attribute.
 
    Example:
 
@@ -12,7 +12,7 @@ uid: Configuring_the_necessary_tags_in_DataMiner_xml
    <AlarmSocket port="5000"/>
    ```
 
-1. If you want to allow the DMA to forward information about elements and parameters when it receives a request on a particular TCP/IP socket, then add a *\<PollSocket>* tag and specify the socket in the *port* attribute.
+1. If you want to allow the DMA to forward information about elements and parameters when it receives a request on a particular TCP/IP socket, add a [PollSocket](xref:DataMiner.PollSocket) tag and specify the socket in the *port* attribute.
 
    Example:
 

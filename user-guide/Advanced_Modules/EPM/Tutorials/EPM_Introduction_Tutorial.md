@@ -153,7 +153,7 @@ The system should now have a large decrease in critical alarms.
 
 In dashboards and low-code apps, you can add an EPM feed component to allow users to select an EPM filter. This component should always be linked to a front-end EPM manager element. While the steps below describe how you can do this in a dashboard, this is very similar in a low-code app.
 
-1. [Open the DataMiner Dashboards app](xref:Accessing_the_Dashboards_app).
+1. [Open the DataMiner Dashboards app](xref:Accessing_the_web_apps).
 
 1. Create a new *Customer* folder in the *Training* folder:
 

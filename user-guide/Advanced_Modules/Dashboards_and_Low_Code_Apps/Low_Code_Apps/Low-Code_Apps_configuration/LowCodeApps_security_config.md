@@ -59,4 +59,4 @@ Keep this in mind when you configure security for the Low-Code Apps module:
 - If you restrict the view access for an app but do not restrict edit access, everyone with view access and the necessary permissions on DataMiner level will be able to edit the app. If you restrict both the view and edit access, only users with edit access will be able to edit the app.
 
 > [!TIP]
-> See also: [Managing user access for DataMiner apps](https://community.dataminer.services/video/managing-user-access-for-dataminer-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [Managing user access for DataMiner apps](https://www.youtube.com/watch?v=j83krLYXnmQ) ![Video](~/user-guide/images/video_Duo.png)

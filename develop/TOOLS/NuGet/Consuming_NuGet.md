@@ -20,7 +20,7 @@ Note that support for subfolders in the `ProtocolScripts` folder is introduced i
 > - In a protocol or Automation script solution, you **cannot use NuGet packages that generate code** (e.g. the [Grpc.Tools](https://www.nuget.org/packages/Grpc.Tools) NuGet package). This is because when DataMiner compiles a protocol or Automation script, it only considers the C# code that is included in the XML file of the protocol or Automation script. Therefore, if you want to make use of this NuGet package, you need to include the generated code in the protocol or Automation script solution.
 > - When consuming different versions of the same NuGet package, make sure you are aware of the **potential pitfalls** when doing so as explained in [Run-time assembly binding](xref:Run_Time_Assembly_Binding).
 
-At Skyline, an [internal NuGet store](https://devcore3/nuget) is available where Skyline employees can produce and consume private libraries. As a Skyline employee, you will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) in order to use it.
+At Skyline, an [internal NuGet store](https://dev.azure.com/skyline-cloud/Private_NuGets/_artifacts/feed/skyline-private-nugets) is available where Skyline employees can produce and consume private libraries. As a Skyline employee, you will need to [add this store in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources) in order to use it.
 
 ## Licensing
 

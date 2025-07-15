@@ -114,4 +114,4 @@ Proceed as follows to activate the email settings via the SLNetClientTest tool:
 
 ### Notify Skyline Communications
 
-The final step in the activation of CDMR is notifying Skyline Communications so they can add your email domain to CDMR. For this purpose, send an email to <techsupport@skyline.be>.
+The final step in the activation of CDMR is notifying Skyline Communications so they can add your email domain to CDMR. For this purpose, send an email to <support@dataminer.services>.

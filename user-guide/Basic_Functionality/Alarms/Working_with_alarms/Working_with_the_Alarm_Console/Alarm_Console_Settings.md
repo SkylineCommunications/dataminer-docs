@@ -34,7 +34,7 @@ In the active alarms tab, history tracking is enabled by default. In a history a
 > [!TIP]
 >
 > - For more information on creating filtered tabs, see [Manually applying an alarm filter in an Alarm Console tab](xref:ApplyingAlarmFiltersInTheAlarmConsole#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
-> - For information on how alarm records are combined in an alarm tree, see [Alarm linking](xref:Alarm_linking).
+> - For information on how alarm records are combined in an alarm tree, see [Alarm trees](xref:Alarm_trees).
 
 > [!NOTE]
 > By default, a maximum of 20 alarms can be included in an alarm tree. This default number can be customized with the [AlarmsPerParameter tag in MaintenanceSettings.xml](xref:MaintenanceSettings_xml#alarmsettingsalarmsperparameter).
@@ -113,17 +113,11 @@ Select this option to specify a delay between the creation of a new alarm and it
 
 E.g. if you set the delay to 30 seconds, when an alarm enters the Alarm Console, it will only be added to the list 30 seconds later. If in this interval the alarm has already been cleared, it will not be added to the list at all.
 
-> [!TIP]
-> See also: [Alarm Console – Delay & refresh rate of alarms](https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 ## Refresh rate
 
 Select this option to specify how frequently the selected tab will be refreshed. This rate will be applied from the moment this setting is set.
 
 E.g. if you set the refresh rate to 30 seconds at 11:48:00, the Alarm Console will be updated every 30 seconds with all the alarms that entered during those 30 seconds. The first refresh will take place at 11:48:30, the next at 11:49:00, etc.
-
-> [!TIP]
-> See also: [Alarm Console – Delay & refresh rate of alarms](https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Merge alarm trees
 

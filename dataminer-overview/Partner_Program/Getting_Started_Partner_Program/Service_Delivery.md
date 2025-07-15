@@ -24,7 +24,7 @@ To get started with the DataMiner Partner Program, it is important to note that 
 
     - **Quizzes**: [Self-assessment tools](https://community.dataminer.services/learning/quizzes/) to test key knowledge on various DataMiner-related topics.
 
-    - **Video library**: Casual [video content](https://community.dataminer.services/videos/) on a myriad of DataMiner-related topics, covering features, capabilities, and typical use cases.
+    - **Video collection**: Casual [video content](https://www.youtube.com/@SkylineCommu) on a myriad of DataMiner-related topics, covering features, capabilities, and typical use cases.
 
     - **Documentation**: [docs.dataminer.services](xref:docs_dataminer_services) provides DataMiner-related documentation, both for users and developers.
 

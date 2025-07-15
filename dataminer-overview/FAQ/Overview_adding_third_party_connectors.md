@@ -4,7 +4,7 @@ uid: Overview_adding_third_party_connectors
 
 # How are third-party connectors added?
 
-On request, anyone can add a connector to the [Catalog](xref:Overview_DevOps#catalog). See [Registering a Catalog item](xref:Register_Catalog_Item).
+On request, anyone can add a connector to the [Catalog](xref:About_the_Catalog_app). See [Registering a Catalog item](xref:Register_Catalog_Item).
 
 1. Complimentary (i.e. free) Skyline Communications service to add a connector to the Catalog:
 
@@ -16,7 +16,7 @@ On request, anyone can add a connector to the [Catalog](xref:Overview_DevOps#cat
 1. Paid Skyline Communications service that verifies the Skyline CI/CD pipeline:
 
    - Paid service ensures successful passage through the Skyline Jenkins pipeline with all quality gates met.
-   - Burn rate: [professional engineering service credits](https://community.dataminer.services/professional-service-credits/) per starting hour.
+   - Burn rate: [professional engineering service credits](xref:Professional_service_credits) per starting hour.
    - Goal: pass the CI/CD process without errors.
    - Visualization: Skyline visually identifies the owner as the third-party provider, and optionally, the column on the right in the Catalog can display the following status info: "SLC Quality Gate Pass: Yes".
    - Benefits:

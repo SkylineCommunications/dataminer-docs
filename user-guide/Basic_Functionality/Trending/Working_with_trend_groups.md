@@ -4,9 +4,6 @@ uid: Working_with_trend_groups
 
 # Working with trend groups
 
-> [!TIP]
-> See also: [Rui’s Rapid Recap – Trend groups](https://community.dataminer.services/video/ruis-rapid-recap-trend-groups/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 Trend information associated with groups of parameters can be displayed in so-called trend groups.
 
 Trend groups are created and managed with the side and bottom panes in the Trending window:

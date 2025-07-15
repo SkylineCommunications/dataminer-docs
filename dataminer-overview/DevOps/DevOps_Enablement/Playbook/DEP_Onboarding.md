@@ -31,7 +31,7 @@ The next step involves **selecting the appropriate learning track(s) for each ca
 | IP networking (firewalls, ports, etc.) | :heavy_check_mark: | | | | :heavy_check_mark: |
 | CI/CD (e.g. GitHub, CI/CD concepts, etc.) | :heavy_check_mark: | | :heavy_check_mark: | | |
 | DataMiner user basics | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| DataMiner Administrator basics | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+| DataMiner Configurator level 1 | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | DataMiner Connectivity Framework (DCF) | | :heavy_check_mark: | | | |
 | DataMiner service modeling | | :heavy_check_mark: | :heavy_check_mark: | | |
 | DataMiner Service & Resource Management (SRM) | | | :heavy_check_mark: | | |
@@ -53,7 +53,7 @@ Make the candidates familiar with DataMiner Dojo Community
 
 - [Use case library](https://community.dataminer.services/use-cases/)
 
-- [Video library](https://community.dataminer.services/videos/)
+- [Video collection](https://www.youtube.com/@SkylineCommu)
 
 Ensure all candidates have enrolled in the [DataMiner DevOps Professional Program](https://community.dataminer.services/dataminer-devops-professional-program/) and address any questions they may have about it. Establish the frequency of check-in sessions with the group.
 

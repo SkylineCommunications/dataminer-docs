@@ -6,16 +6,14 @@ uid: ConnectionsSerialSecureShell
 
 ## About SSH
 
-Secure Shell (SSH) is a protocol for secure remote login and other secure network services over an insecure network.
-
-It replaces older protocols like Telnet or rlogin.
+Secure Shell (SSH) is a protocol for secure remote login and other secure network services over an insecure network. It replaces older protocols like Telnet or rlogin.
 
 The specification of the SSH protocol (version 2) can be found in the following RFCs:
 
-- RFC 4251: The Secure Shell (SSH) Protocol Architecture
-- RFC 4252: The Secure Shell (SSH) Authentication Protocol
-- RFC 4253: The Secure Shell (SSH) Transport Layer Protocol
-- RFC 4254: The Secure Shell (SSH) Connection Protocol
+- [RFC 4251](https://datatracker.ietf.org/doc/html/rfc4251): The Secure Shell (SSH) Protocol Architecture
+- [RFC 4252](https://datatracker.ietf.org/doc/html/rfc4252): The Secure Shell (SSH) Authentication Protocol
+- [RFC 4253](https://datatracker.ietf.org/doc/html/rfc4253): The Secure Shell (SSH) Transport Layer Protocol
+- [RFC 4254](https://datatracker.ietf.org/doc/html/rfc4254): The Secure Shell (SSH) Connection Protocol
 
 > [!NOTE]
 > This list is not exhaustive.
@@ -32,15 +30,15 @@ There are two methods of authentication when establishing an SSH connection:
 
    The protocol provides a digital signature created with a private key, and the server verifies it using the matching public key.
 
-Apart from the specification of the connection credentials, the protocol is the same as any other serial protocol that does not use SSH (e.g. the use of headers, trailers, and timeout time for responses are supported).
-
 > [!NOTE]
 > Typically, both methods of authentication are implemented in a protocol to give the user the choice how to connect. When both methods are configured, public key authentication has precedence over password authentication, as this is considered more secure.
+
+> [!IMPORTANT]
+> Refer to [Differences with serial communication](#differences-with-serial-communication) for an overview of some differences between regular serial connections and SSH connections in DataMiner.
 
 ### Password authentication
 
 For this method, two parameters need to be created: one to hold the username and the other to hold the password.
-
 Accompanying write parameters can be added so the credentials can be entered from the element.
 
 ```xml
@@ -141,7 +139,7 @@ Accompanying write parameters can be added so the credentials can be entered fro
 > [!IMPORTANT]
 > Use the [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string) option on the parameter holding the password. Using this option ensures greater security.
 
-The two parameters also need to be defined in the port settings.
+The two parameters also need to be defined in the port settings. Note that all connections should have a [PortSettings](xref:Protocol.Ports.PortSettings) tag, and they have to be placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute.
 
 ```xml
 <PortSettings name="SSH Connection">
@@ -172,13 +170,13 @@ The connection is then established by DataMiner, provided the correct username a
 
 For this method, a parameter needs to be created to hold the path to the private key file.
 
-The content of this parameter should be formatted like this: ```key=C:\Users\User\.ssh\my_key_rsa```
+The content of this parameter should be formatted like this: `key=C:\Users\User\.ssh\my_key_rsa`
 
 > [!NOTE]
-> If the private key is protected by a passphrase, it must be appended to the file path, separated by a semicolon. It should be formatted like this: ```key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase```
+> If the private key is protected by a passphrase, it must be appended to the file path, separated by a semicolon. It should be formatted like this: `key=C:\Users\User\.ssh\my_key_rsa;pass=passphrase`
 
 ```xml
-<Param id="1200" trending="false" save="true">
+<Param id="1102" trending="false" save="true">
     <Name>PrivateKeyAndPassphrase</Name>
     <Description>Private Key and Passphrase</Description>
     <Type>read</Type>
@@ -190,7 +188,7 @@ The content of this parameter should be formatted like this: ```key=C:\Users\Use
 </Param>
 ```
 
-This parameter also needs to be defined in the port settings.
+This parameter also needs to be defined in the port settings. Note that all connections should have a PortSettings tag, and they have to be placed in the same order as defined in the [Protocol.Type](xref:Protocol.Type) advanced attribute. Note also that the `Credentials/Username` tag is present, as this will indicate the user for the connection.
 
 ```xml
 <PortSettings name="SSH Connection">
@@ -207,16 +205,37 @@ This parameter also needs to be defined in the port settings.
         <Disabled>true</Disabled>
     </PortTypeUDP>
     <SSH>
-       <Identity pid="1200"/>
+       <Identity pid="1102"/>
+       <Credentials>
+          <Username pid="1100"/>
+       </Credentials>
     </SSH>
 </PortSettings>
 ```
 
 The connection is then established by DataMiner, provided the parameter holds the private key and passphrase.
 
+To give the user the choice how to connect, both methods of authentication are typically implemented in a connector:
+
+```xml
+    <SSH>
+       <Identity pid="1102"/>
+       <Credentials>
+            <Username pid="1100"/>
+            <Password pid="1101"/>
+        </Credentials>
+    </SSH>
+</PortSettings>
+```
+
+When both methods are configured, public key authentication has precedence over password authentication, as this is considered more secure.
+
+> [!NOTE]
+> The approach where the parameter IDs are specified for the identity file and/or credentials supports having an SSH connection that is not the main (first) connection in the connector. There is another way to specify these parameters, which is now deprecated as it only supports connectors with a single SSH connection using the fixed port 22. This involves adding the following options to different parameters: [ssh username](xref:Protocol.Params.Param.Type-options#ssh-username), [ssh password](xref:Protocol.Params.Param.Type-options#ssh-pwd), and [ssh options](xref:Protocol.Params.Param.Type-options#ssh-options).
+
 #### Remarks
 
-Once authentication is successful, the socket timeout is set to zero (no timeout) to keep the connection from being closed when no activity occurs on the SSH connection for *timeoutTime* ms (RN 3303).
+Once authentication is successful, the socket timeout is set to zero (no timeout) to prevent the connection from being closed when no activity occurs on the SSH connection for *timeoutTime* ms (RN 3303).
 
 ## Differences with serial communication
 
@@ -310,7 +329,7 @@ DataMiner will propose the following hash-based message authentication algorithm
 - ecdsa-sha2-nistp521 (from DataMiner 10.2.6/10.3.0 onwards)
 - ecdsa-sha2-nistp384 (from DataMiner 10.2.6/10.3.0 onwards)
 - ecdsa-sha2-nistp256 (from DataMiner 10.2.6/10.3.0 onwards)
-- ssha-rsa
+- ssh-rsa
 - ssh-dss
 
 #### [Prior to DataMiner 10.3.0/10.2.4](#tab/ssh-2)
@@ -342,7 +361,7 @@ DataMiner will propose the following hash-based message authentication algorithm
 
 #### Host key types
 
-- ssha-rsa
+- ssh-rsa
 - ssh-dss
 
 ***
@@ -369,5 +388,7 @@ When you need to implement SCP or SFTP in a protocol, we recommend referencing t
 
 ### See also
 
+- [SSH](xref:Protocol.PortSettings.SSH)
+- [password](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string)
 - [QActions](xref:LogicQActions)
 - [Protocol.QActions.QAction](xref:Protocol.QActions.QAction)

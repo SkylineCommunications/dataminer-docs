@@ -85,4 +85,4 @@ uid: DOM_editor_new_def
    1. Click *Apply* and *OK*.
 
 > [!TIP]
-> You can check what your data model looks like in a DataMiner low-code app. For more information on how to create such an app, refer to [this demo on DataMiner Dojo](https://community.dataminer.services/video/object-modeling-and-apps/). Prior to DataMiner 10.3.6/10.4.0, this requires the [DOMManager](xref:Overview_of_Soft_Launch_Options#dommanager) soft-launch option.
+> You can check what your data model looks like in a DataMiner low-code app. Prior to DataMiner 10.3.6/10.4.0, this requires the [DOMManager](xref:Overview_of_Soft_Launch_Options#dommanager) soft-launch option.

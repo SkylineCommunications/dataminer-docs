@@ -1,5 +1,6 @@
 ---
 uid: Overview_Training_certification
+description: The DataMiner Certification Program offers a broad range of certification services that enable people to get the maximum out of a DataMiner System.
 ---
 
 # DataMiner certification
@@ -8,7 +9,7 @@ The **DataMiner Certification Program** offers a broad range of certification se
 
 The **Certificate of Expertise** attests the effective knowledge and expertise of an individual in a specific domain related to DataMiner. To acquire this type of certificate, the individual must successfully complete the associated certification program, which typically consists of a series of hands-on exercises, verbal and written examinations, and a thorough final evaluation.
 
-![DataMiner certification](~/dataminer-overview/images/DataMiner_Certification.png)
+![DataMiner certification](~/user-guide/images/DataMiner_Certification.png)
 
 For example, the DataMiner Fundamentals Certification is intended for DataMiner users who handle day-to-day operations in the DataMiner software, and the DataMiner Configurator Certification is intended for DataMiner users who set up and maintain DataMiner Systems, including adding new devices and new connectors, managing user accounts, setting up backup policies, creating Visual Overview pages, defining alarm thresholds, etc.
 
@@ -45,7 +46,7 @@ The examiner will use a predefined exam plan to ask different questions per modu
 >
 > - If you do not pass the exam, you have one free retake.
 > - Exams are recorded to ensure the integrity of the process and to provide a reference for review if needed.
-> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded DevOps Points after you successfully pass the Fundamentals and Configurator exams. For passing the Fundamentals exam, 500 points are awarded, and for passing the Configurator exam, 750 points are awarded.
+> - If you are a member of the [DevOps Professional Program](xref:DataMiner_Devops_Professionals), you will be awarded DevOps Points after you successfully pass the Fundamentals and Configurator exams. For passing the Fundamentals exam, 500 points are awarded, and for passing the Configurator exam, 750 points are awarded.
 
 ### Requirements
 
@@ -139,7 +140,7 @@ You will receive your score within 5 business days. If you have any questions ab
 >
 > - If you do not pass the exam, you have one free retake.
 > - Appointments are recorded to ensure the integrity of the process and to provide a reference for review if needed.
-> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded 750 DevOps Points after you successfully pass the Automation exam.
+> - If you are a member of the [DevOps Professional Program](xref:DataMiner_Devops_Professionals), you will be awarded 750 DevOps Points after you successfully pass the Automation exam.
 
 ### Requirements
 
@@ -202,7 +203,7 @@ Once you have successfully passed the second assignment, you will receive your c
 > - You will receive information about the assignments during your intake session with your examiner.
 > - You have one free retake per assignment.
 > - Appointments are recorded to ensure the integrity of the process and to provide a reference for review if needed.
-> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded 750 DevOps Points after you successfully pass the exam.
+> - If you are a member of the [DevOps Professional Program](xref:DataMiner_Devops_Professionals), you will be awarded 750 DevOps Points after you successfully pass the exam.
 
 ### Requirements
 
@@ -261,7 +262,7 @@ When you have finished your assignment, you must book an exam check-in meeting w
 > - If you do not pass the exam, you have one free retake.
 > - Appointments are recorded to ensure the integrity of the process and to provide a reference for review if needed.
 > - After successfully completing the exam, you will receive your certification badge within 5 business days.
-> - If you are a member of the [DevOps Professionals Program](xref:DataMiner_Devops_Professionals), you will be awarded 500 DevOps Points after you successfully pass the Visual Overview level 1 exam.
+> - If you are a member of the [DevOps Professional Program](xref:DataMiner_Devops_Professionals), you will be awarded 500 DevOps Points after you successfully pass the Visual Overview level 1 exam.
 
 ### Requirements
 

@@ -6,6 +6,9 @@ uid: Setting_the_priority_of_a_primary_or_backup_element
 
 1. Right-click the element in the Surveyor and select *Multiple set.*
 
+   > [!NOTE]
+   > If *Multiple set* is not visible in the Surveyor right-click menu, make sure the [*Enable 'Multiple set'* Cube user setting](xref:User_settings#cube-settings) is enabled<!--RN 43135-->.
+
 1. In the *Multiple set* window, do the following.
 
    1. In the *Parameter* box, select the general parameter *\[Priority Level\]*.

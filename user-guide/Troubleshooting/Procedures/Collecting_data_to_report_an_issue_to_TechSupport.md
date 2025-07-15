@@ -18,7 +18,7 @@ The type of data required depends on the type of issue you are experiencing:
 - For element communication issues: [Stream Viewer traces](#stream-viewer-traces)
 
 > [!TIP]
-> See also: [Contacting tech support](xref:Contacting_tech_support)
+> See also: [Contacting DataMiner Support](xref:Contacting_tech_support)
 
 ## Log Collector packages
 

@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU4
 ---
 
-# General Main Release 10.5.0 CU4 - Preview
+# General Main Release 10.5.0 CU4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -106,6 +106,23 @@ From DataMiner 10.5.0 [CU2]/10.5.5 onwards, you can migrate from the SLNet-manag
 
 Up to now, changes made to the *MaintenanceSettings.xml* file during the migration required DataMiner to be restarted. As these changes will now be read at run-time, it will no longer be required to restart DataMiner when migrating.
 
+#### GQI: Sort operator now supports real-time updates when GQI DxM is being used [ID 42941]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+When a GQI query that included a Sort operator was used in a component of which the *Update data* option was enabled, up to now, the Sort operator would incorrectly prevent updates through real-time events. As a result, the component would be updated through notification events instead.
+
+From now on, on systems using the GQI DxM, a Sort operator will forward all real-time events, resulting in rows being added, updated and removed as soon as an update is received.
+
+> [!IMPORTANT]
+> Sorting will not be re-evaluated on update. As a result, if an update is received for a sorting column, the table will no longer be sorted correctly.
+
+#### Failover: Enhanced performance when executing a Failover switch [ID 42983]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Because of a number of enhancements, overall performance has increased when executing a Failover switch.
+
 ### Fixes
 
 #### SLNet could leak memory when the progress.log file was deleted after a DataMiner upgrade [ID 42040]
@@ -165,6 +182,18 @@ By default, an SLSNMPManager process responsible for SNMPv3 communication will l
 
 Up to now, when an SLSNMPManager process responsible for SNMPv3 communication was not able to communicate with the SLSNMPManager process to which it had to redirect a trap, in some cases, the process could stop working and disappear.
 
+#### Failover: Online agent would not clear local information about elements, services, and redundancy groups from its event cache when going offline [ID 42890]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+When, during a Failover switch, the online agent went offline, up to now, it would incorrectly not clear local information about elements, services, and redundancy groups from its event cache.
+
+#### Failover: ClusterEndpoints.json files would not get updated correctly on offline agents when a DMA was added to the cluster [ID 42923]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, when a DMA was added to a DMS that contains one or more Failover pairs, in some cases, the `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` files would not get updated correctly on the offline agents.
+
 #### Incorrect attempts to delete child DVE elements upon start or restart of a main DVE element [ID 42924]
 
 <!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
@@ -177,14 +206,34 @@ When a main DVE element was started or restarted, up to now, an attempt would in
 
 When you create an Automation script, apart from an XML file containing the actual script, a number of TXF files will be created. These will contain cached query information to speed up XML querying. Up to now, when an Automation script was deleted, the associated TXF files would incorrectly not be removed.
 
+#### Failover: Database status in 'Failover status' window would incorrectly always be displayed as OK on a system using STaaS [ID 42944]
+
+<!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
+
+When, in e.g. DataMiner Cube, you opened the *Failover status* window when connected to a system using STaaS, up to now, the database status would always be displayed as OK, even when STaaS was degraded.
+
 #### DataMiner upgrade: VerifyClusterPorts prerequisite check could fail when SLXML was still running [ID 42947]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 Up to now, during a DataMiner upgrade, the *VerifyClusterPorts* prerequisite check could fail when SLXML was still running.
 
+#### Changes to LDAP users or LDAP groups would incorrectly not get synchronized among the DMAs in the cluster [ID 42950]
+
+<!-- MR 10.4.0 [CU16]/10.5.0 [CU4] - FR 10.5.7 -->
+
+Up to now, changes to an LDAP user or an LDAP group would incorrectly not get synchronized among the DMAs in the cluster, not even after a midnight sync.
+
 #### Failover: NATS communication error on online agent after a Failover switch [ID 42964]
 
 <!-- MR 10.5.0 [CU4] - FR 10.5.7 -->
 
 After a Failover switch, in some cases, the ClusterEndpointManager would fail to initialize on the agent that had gone online. In the *Failover Status* window, *NATS communication* would show an error state.
+
+#### Redundancy groups: Alarm mentioning that all redundancy resources are in use would incorrectly not get cleared [ID 42970]
+
+<!-- MR 10.4.0 [CU17]/10.5.0 [CU4] - FR 10.5.8 -->
+
+If a redundancy group has more primary elements than backup elements, at the moment when all backups are in use, an alarm with severity level "Notice" will appear in the Alarm Console mentioning that all redundancy resources are in use.
+
+By default, that alarm is cleared as soon as one of the backup elements is available again. However, up to now, in some cases, the alarm would incorrectly not get cleared.

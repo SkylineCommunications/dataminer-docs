@@ -59,7 +59,7 @@ To ensure smooth and timely maintenance, users are encouraged to:
 
 ## Feedback and support
 
-We value user feedback on our maintenance process. Should you experience any issues or have suggestions, please contact our support team at <techsupport@skyline.be>.
+We value user feedback on our maintenance process. Should you experience any issues or have suggestions, please contact our support team at <support@dataminer.services>.
 
 ## Rescheduling maintenance
 

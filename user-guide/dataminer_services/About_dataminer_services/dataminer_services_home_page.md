@@ -11,6 +11,12 @@ To access the dataminer.services home page:
 
 - In DataMiner Cube, go to the System Center > *Cloud* page and select *Open dataminer.services* (Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4 onwards<!--RN 38715-->).
 
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/user-guide/images/dataminer.services-home-page.mp4" type="video/mp4">
+  </video>
+</div>
+
 ## dataminer.services apps
 
 At the top of the dataminer.services home page, you will find links to the different available dataminer.services apps:

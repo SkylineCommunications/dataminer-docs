@@ -9,15 +9,16 @@ uid: General_Main_Release_10.6.0_new_features
 
 ## Highlights
 
-- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535)
+- [Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196]](#swarming-id-37381-id-37437-id-37486-id-37925-id-38019-id-39303-id-40704-id-40939-id-41258-id-41490-id-42314-id-42535-id-43196)
 
 ## New features
 
-#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535]
+#### Swarming [ID 37381] [ID 37437] [ID 37486] [ID 37925] [ID 38019] [ID 39303] [ID 40704] [ID 40939] [ID 41258] [ID 41490] [ID 42314] [ID 42535] [ID 43196]
 
 <!-- MR 10.6.0 - FR 10.5.1 -->
 <!-- RN 42314: MR 10.6.0 - FR 10.5.4 -->
 <!-- RN 42535: MR 10.6.0 - FR 10.5.5 -->
+<!-- RN 43196: MR 10.6.0 - FR 10.5.9 -->
 
 From now on, you can enable the Swarming feature in a DataMiner System in order to be able to swarm [elements](xref:SwarmingElements) from one DataMiner Agent to another Agent in the same cluster. Prior to this, this feature is available in preview if the *Swarming* [soft-launch option](xref:SoftLaunchOptions) is enabled.
 
@@ -116,6 +117,13 @@ public class Script
   }
 }
 ```
+
+An information event will be generated when an element was successfully swarmed. Example:
+
+`Swarmed from <DmaName> (<DmaId>) to <DmaName> (<DmaId>) by <UserName>`
+
+> [!NOTE]
+> When the source DMA is no longer available or unknown, the information event will be shortened to `Swarmed to <DmaName> (<DmaId>) by <UserName>`.
 
 #### Retrieving additional logging from a DataMiner System [ID 40766]
 
@@ -561,12 +569,6 @@ If multiple settings indicate that the element should be running in isolation mo
 > - If, in DataMiner Cube, you specified that a particular element had to run in isolation mode, the boolean property `RunInIsolationMode` will be true. In some cases, this boolean `RunInIsolationMode` property will be false, while the above-mentioned `RunInIsolationModeConfig` property will be set to "Protocol". In that case, the element will be running in isolation mode because it was configured to do on protocol level.
 > - See also [Elements can now be configured to run in isolation mode [ID 41757]](#elements-can-now-be-configured-to-run-in-isolation-mode-id-41757)
 
-#### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250]
-
-<!-- MR 10.6.0 - FR 10.5.7 -->
-
-In DataMiner Cube, the NATS cluster state will now be visible in the *Failover Status* window. This state will indicate whether NATS communication between main agent and backup agent is up and running and whether the *clusterEndpoints.json* file is synchronized between the two agents.
-
 #### New NotifyProtocol call NT_CLEAR_PARAMETER [ID 42397]
 
 <!-- MR 10.6.0 - FR 10.5.6 -->
@@ -695,3 +697,185 @@ The context name and context ID can be changed at run-time, and are not saved by
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
 The SLNet message `EditConnection`, which can be used to edit a connection from within a QAction, now has a `GenerateInformationEvents` property. If this property is set to true, information events will be generated when a connection is created, updated, or deleted.
+
+#### Interactive Automation scripts executed in a web app: Filtering values in a dropdown box [ID 42808]
+
+<!-- MR 10.6.0 - FR 10.5.8 -->
+
+To prevent dropdown boxes in interactive Automation scripts from getting loaded with too much data, it is now possible to filter the data that is loaded into a dropdown box.
+
+For an example showing how to implement a dropdown box filter in an interactive Automation script, see [Interactive Automation scripts: Filtering values in a redesigned UI component 'DropDown' [ID 42845]](xref:Web_apps_Feature_Release_10.5.8#interactive-automation-scripts-filtering-values-in-a-redesigned-ui-component-dropdown-id-42845).
+
+> [!IMPORTANT]
+> This feature is only supported for interactive Automation scripts executed in web apps. It is not supported for interactive Automation scripts executed in DataMiner Cube.
+
+#### Automation scripts: New Interactivity tag [ID 42954]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, Automation scripts using the IAS Interactive Toolkit required a special comment or code snippet in order to be recognized as interactive. From now on, you will be able to define the interactive behavior of an Automation script by adding an `<Interactivity>` tag in the header of the script. See the following example.
+
+```xml
+<DMSScript xmlns="http://www.skyline.be/automation">
+  ...  
+  <Interactivity>Always</Interactivity>
+  ...
+  <Script>
+    ...
+  </Script>
+</DMSScript>
+```
+
+Possible values:
+
+| Value | Description |
+|-------|-------------|
+| Auto     | Like before, an attempt will be made to automatically detect the interactive behavior of the script. |
+| Never    | The script will never show any UI element. |
+| Optional | The script will be interactive when it needs to be. |
+| Always   | The script will always be interactive. |
+
+#### Automation: New OnRequestScriptInfo entry point [ID 42969]
+
+<!-- MR 10.6.0 - FR 10.5.7 -->
+
+In an Automation script, you can now implement the `OnRequestScriptInfo` entry point. This will allow other Automation scripts (or any other code) to request information about the script in question, for example to find out which profile parameter values a script needs in order to orchestrate a device.
+
+##### Using the entry point
+
+To use the entry point, add a method with the following signature to the script:
+
+```csharp
+[AutomationEntryPoint(AutomationEntryPointType.Types.OnRequestScriptInfo)]
+public RequestScriptInfoOutput OnRequestScriptInfoRequest(IEngine engine, RequestScriptInfoInput inputData)
+```
+
+Both `RequestScriptInfoInput` and `RequestScriptInfoOutput` have a `Data` property of type `Dictionary<string, string>`, which can be used to exchange information between the script and other code. We strongly recommend keeping the passed data below 20 MB (i.e. 10 million characters). If larger chunks need to be passed, a reference to that information should be passed instead.
+
+It is allowed to pass null as input data and to return null as output data.
+
+##### Arguments
+
+If the script has any script parameters, dummies or memory files, then these are not required when executing the `OnRequestScriptInfo` entry point. However, they are required when executing the `Run` method of that same script.
+
+- When an omitted script parameter is used in the entry point logic, retrieving the script parameter is possible, but its value will be an empty string.
+- When an omitted dummy is used in the entry point logic, retrieving the dummy is possible, but it will refer to DMA ID -1 and element ID -1. Any actions that use the dummy will fail with an exception.
+- When an omitted memory file is used in the entry point logic, retrieving the memory file is possible, but it will refer to a linked file that is empty. Retrieving a value using the memory file will fail with an exception.
+
+##### Subscript
+
+To execute the `OnRequestScriptInfo` entry point within Automation, you have to use the following `PrepareSubScript` method on `Engine` or `IEngine`:
+
+```csharp
+RequestScriptInfoSubScriptOptions PrepareSubScript(String scriptName, RequestScriptInfoInput input)
+```
+
+The script should be started synchronously. It will return a subscript options object with an `Output` property containing the information returned by the script. The `Input` property can be used to check or update the data sent to the script.
+
+Executing subscripts is limited to a maximum of 10 levels.
+
+##### ExecuteScriptMessage
+
+The `ExecuteScriptMessage` can be used to trigger the entry point using an SLNet connection.
+
+```csharp
+var input = new RequestScriptInfoInput
+{
+  Data = new Dictionary<string, string>
+  {
+    { "Action", "RequestValues" },
+  },
+};
+
+new ExecuteScriptMessage
+{
+  ScriptName = scriptName,
+  Options = new SA(new []{ "DEFER:FALSE" }),
+  CustomEntryPoint = new AutomationEntryPoint
+  {
+    EntryPointType = AutomationEntryPoint.Types.OnRequestScriptInfo,
+    Parameters = new List<object> { input },
+  },
+};
+```
+
+When an `ExecuteScriptMessage` is sent, an `ExecuteScriptResponseMessage` will be returned. The information is returned in an `EntryPointResult.Result` property of type `RequestScriptInfoOutput`.
+
+This message should not be used to request the information in an Automation script.
+
+#### Automation script and QAction dependencies can now also be uploaded to the 'DllImport\\SolutionLibraries' folder [ID 43108]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Up to now, the `UploadScriptDependencyMessage` was only able to upload Automation script and QAction dependencies to the `C:\Skyline DataMiner\Scripts\DllImport` folder. From now on, it will also be able to upload those dependencies to the `C:\Skyline DataMiner\ProtocolScripts\DllImport\SolutionLibraries` folder.
+
+See the following example. The `UploadScriptDependencyMessage` now has a `DependencyFolder` property, which allows you to specify the destination of the dependency to be uploaded.
+
+```csharp
+var uploadDependencyMessage = new UploadScriptDependencyMessage()
+{
+  Bytes = bytes,
+  DependencyName = name,
+  Path = string.Empty, // Subfolders within the destination can be specified here
+  DependencyFolder = ScriptDependencyFolder.SolutionLibraries // Default is 'ScriptDependencyFolder.ScriptImports'
+};
+```
+
+After a dependency has been uploaded, all scripts using that dependency will be recompiled.
+
+> [!NOTE]
+> For QActions in protocols, the relevant SLScripting process must be restarted before the new DLL will get loaded.
+
+#### SLNet: 'TraceId' property added to ClientRequestMessage & extended logging [ID 43187]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+The `ClientRequestMessage` class has been extended with a new `TraceInfo` class, which has one `TraceId` property of type string. In a later phase, this property will be used to track requests across multiple modules (e.g. queries coming from ad hoc data sources).
+
+CrudLoggerProxy logging will also support trace IDs for CRUD operations by the following managers:
+
+- AppPackageContentManager
+- BaseFunctionManager
+- BaseProfileManager
+- BPAManager
+- ClusterEndpointsManager
+- ClusterManager
+- ConfigurationManager
+- DOMManager
+- IncrementManager
+- JobManager
+- MigrationManager
+- ModuleSettingsManager
+- NATSCustodianManager
+- SRMServiceStateManager
+- TicketingManager
+- UserDefinableApiManager
+- VisualManager
+
+Examples of CRUD operation log entries with a trace ID:
+
+```txt
+2025/07/02 13:19:14.170|SLNet.exe|CrudLoggerProxy|INF|3|6|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Object: SectionDefinition, Forced: False, User: DOMAIN\UserName, Action: Creating CustomSectionDefinition[IDQ1XPM7DXBIL9YXKWZZ,c74e85be-2c1d-4002-aaba-a3b7d712fe3a].
+
+2025/07/02 13:19:14.457|SLNet.exe|CrudLoggerProxy|INF|3|6|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Object: SectionDefinition, Forced: False, User: DOMAIN\UserName, Action: Created CustomSectionDefinition[IDQ1XPM7DXBIL9YXKWZZ,c74e85be-2c1d-4002-aaba-a3b7d712fe3a].
+```
+
+Also, the trace ID will be logged for the following messages:
+
+- slow client messages (in *SLNet.txt* and *SLSlowClientMessages.txt*)
+
+  ```txt
+  2025/07/02 13:19:34.715|SLNet.exe|LogSlowClientMessage|INF|0|252|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] [Facade.HandleMessage] 60908.7999ms were needed to handle Cube (FirstName LastName @ GTC-USERNAME) => Diagnostic Request: Hang ()
+  ```
+
+- incoming messages in SLNet (in *SLNet.txt* and *SLNet\FacadeHandleMessage.txt*)
+
+  ```txt
+  2025-07-02 15:05:04.329|277|Facade.HandleMessage|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Incoming (RTManagerGUI.exe (FirstName LastName @ GTC-USERNAME)): Skyline.DataMiner.Net.Messages.ManagerStoreCreateRequest`1[Skyline.DataMiner.Net.Apps.DataMinerObjectModel.DomDefinition]
+  ```
+
+The logging of a DOM manager will now also contain a line indicating the start of status transitions. This will be logged on information level 3, i.e. the same type and level as regular CRUD actions:
+
+```txt
+2025/07/02 15:05:11.110|SLNet.exe|HandleStatusTransitionRequest|INF|3|269|[Trace: AUT/98731f18-15ca-421c-9ed7-f93346160d89] Handling status transition with ID 'new_to_closed' for instance with ID '1ff720a3-0aa2-4548-8b51-d8b975e19ea4'.
+```

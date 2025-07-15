@@ -1,6 +1,6 @@
 items:
-  - name: Creating a DataMiner System
-    topicUid: Creating_a_DataMiner_System
+  - name: Deploying a DataMiner System
+    topicUid: Deploying_a_DataMiner_System
     items:
     - name: Creating a DataMiner System in the cloud (DaaS)
       topicUid: Creating_a_DMS_in_the_cloud
@@ -25,10 +25,21 @@ items:
     - name: Installing a self-managed DataMiner Agent
       topicUid: Installing_a_DataMiner_Agent
       items:
-        - name: Using a pre-installed DataMiner Virtual Hard Disk
-          topicUid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
         - name: Using the DataMiner Installer
           topicUid: Installing_DM_using_the_DM_installer
+          items:
+            - name: Restoring a backup onto a newly installed DMA
+              topicUid: Restoring_backup_on_newly_installed_DMA
+            - name: Configuring a new DMA as a new Agent in a Failover pair
+              topicUid: Configuring_a_new_DMA_in_Failover_pair
+            - name: Switching from subscription mode to perpetual license
+              topicUid: Switching_from_subscription_mode_to_perpetual_license
+            - name: Switching from subscription mode to offline demo license
+              topicUid: Switching_from_subscription_mode_to_offline_demo
+            - name: Using an older installer (deprecated)
+              topicUid: Using_older_installers
+        - name: Using a pre-installed DataMiner Virtual Hard Disk
+          topicUid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
         - name: Unattended DataMiner installation
           topicUid: Unattended_DM_installation
         - name: Regarding virtual servers
@@ -79,8 +90,8 @@ items:
                     topicUid: Desktop_app_command_line_arguments
               - name: Using the browser application
                 topicUid: Using_the_browser_app
-      - name: Accessing the Monitoring app
-        topicUid: Accessing_the_Monitoring_app
+      - name: Accessing the web apps
+        topicUid: Accessing_the_web_apps
   - name: Working with DataMiner Cube
     items:
       - name: DataMiner Cube UI components
@@ -113,7 +124,7 @@ items:
       - name: DataMiner Cube tips & tricks
         topicUid: DataMiner_Cube_tips_tricks
   - name: Working with the Monitoring app
-    topicUid: The_Monitoring_app_user_interface
+    topicUid: Working_with_the_Monitoring_app
     items:
       - name: Monitoring app header bar
         topicUid: Monitoring_app_header_bar

@@ -11,7 +11,7 @@ uid: Working_with_behavioral_anomaly_detection
 > See also:
 >
 > - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
-> - [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Intelligent Fault Detection](https://www.youtube.com/watch?v=Ug1J0Pn6o3k) ![Video](~/user-guide/images/video_Duo.png)
 
 DataMiner Analytics can detect the changes in the behavior of a trend, also known as "change points".
 

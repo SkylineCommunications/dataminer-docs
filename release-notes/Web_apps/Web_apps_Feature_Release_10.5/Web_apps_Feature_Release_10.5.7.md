@@ -2,23 +2,17 @@
 uid: Web_apps_Feature_Release_10.5.7
 ---
 
-# DataMiner web apps Feature Release 10.5.7 – Preview
+# DataMiner web apps Feature Release 10.5.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.4.0 [CU16] and 10.5.0 [CU4].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.5.7](xref:General_Feature_Release_10.5.7).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.5.7](xref:Cube_Feature_Release_10.5.7).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
 
 ## Changes
 
@@ -95,14 +89,6 @@ When a component tried to fetch parameters or elements, up to now, null would be
 
 From now on, for every parameter or element than cannot be found, a clear error message will be returned. Each of those error messages will then explain why a particular parameter or element could not be found.
 
-#### Low-Code Apps: It would incorrectly be possible to publish a low-code app while it was still being saved [ID 42680]
-
-<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
-
-Up to now, it would incorrectly be possible to publish a low-code app while it was still being saved.
-
-From now on, it will only be possible to publish a low-code app when the app has been saved.
-
 #### Dashboards app & Low-Code Apps - Node edge graph component: Moving a node would incorrectly cause the actions of that node to be executed [ID 42798]
 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
@@ -150,3 +136,9 @@ When you had created an "Open monitoring card" action that referenced an object 
 <!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 -->
 
 On Mozilla Firefox, when you scrolled inside a *Timeline* component, in some cases, the scroll position would incorrectly reset.
+
+#### Dashboards app & Low-Code Apps - Table component: Problem when filtering on numeric columns containing discrete values [ID 43061]
+
+<!-- MR 10.4.0 [CU16] / 10.5.0 [CU4] - FR 10.5.7 [CU0] -->
+
+When a *Table* component was filtered on a numeric column that contained discrete values, up to now, an error could occur when you selected one of the discrete values instead of entering a number manually.

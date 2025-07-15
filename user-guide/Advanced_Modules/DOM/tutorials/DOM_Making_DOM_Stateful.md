@@ -66,7 +66,7 @@ Expected duration: 20 minutes
    If this app is available, the package has been successfully deployed.
 
    > [!TIP]
-   > See also: [Accessing the Low-Code Apps module](xref:Accessing_custom_apps).
+   > See also: [Accessing the web apps](xref:Accessing_the_web_apps).
 
 ## Step 3: Define states on a DOM definition
 
@@ -259,7 +259,7 @@ Now that you have deployed the DOM Editor to your DMA, you can use it to edit th
    ![Empty Event Management app](~/user-guide/images/DOM_Making_DOM_Statefel_app_empty.png)
 
    > [!TIP]
-   > See also: [Accessing the Low-Code Apps module](xref:Accessing_custom_apps).
+   > See also: [Accessing the web apps](xref:Accessing_the_web_apps).
 
 1. Click *New* to open the event form panel on the right-hand side.
 

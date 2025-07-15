@@ -25,6 +25,3 @@ To query an SQL database, do the following:
 > - To select a previously entered query, click the *Recent* button.
 > - To access a number of preset SQL commands, click *\>*.
 > - To export the result of the query as a CSV file, click the *Export* button.
-
-> [!TIP]
-> See also: [Cassandra – Querying a Cassandra database](https://community.dataminer.services/video/cassandra-querying-a-cassandra-database/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

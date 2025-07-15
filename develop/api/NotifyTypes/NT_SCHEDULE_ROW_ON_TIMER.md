@@ -10,7 +10,7 @@ Allows the triggering of a specific row to be run by the multi-threaded timer ou
 string rowKey = "Row 1";
 int timerID = 1;
 
-protocol.NotifyProtocol(229 /* NT_FILL_ARRAY_WITH_COLUMN */, rowKey, timerID);
+protocol.NotifyProtocol(229 /* NT_SCHEDULE_ROW_ON_TIMER */, rowKey, timerID);
 ```
 
 ## Parameters

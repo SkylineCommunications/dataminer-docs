@@ -25,7 +25,7 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
 HOME([Start page])
 START([Correlation engine issues in SLNet])
 BACK([Back to SLNet troubleshooting])
-CONTACT([Send all information to tech support.])
+CONTACT([Send all information to DataMiner Support.])
 ENDING([End])
 PRESENT{{Issue still present?}}
 PRESENTYES[[Check SLNetClientTest tool Diagnostics > SLNet > Stacksizes >for high Correlation thread.]]
@@ -85,7 +85,7 @@ If this is the case, it could be caused by an **incorrectly configured Correlati
 
 ### SLNetClientTest tool
 
-The [SLNetClientTest tool](xref:SLNetClientTest_tool_advanced_procedures) is an advanced system administration tool. You should always **be extremely careful when using this tool**, as it can have far-reaching consequences for the functionality of your DataMiner System. If you do not feel comfortable using this tool, leave this to tech support.
+The [SLNetClientTest tool](xref:SLNetClientTest_tool_advanced_procedures) is an advanced system administration tool. You should always **be extremely careful when using this tool**, as it can have far-reaching consequences for the functionality of your DataMiner System. If you do not feel comfortable using this tool, leave this to DataMiner Support.
 
 In the SLNetClientTest tool, after you have [connected to the DMA](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool), go to *Diagnostics > SLNet > Stacksizes* and check the output.
 

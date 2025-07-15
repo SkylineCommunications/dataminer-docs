@@ -18,7 +18,14 @@ The Scheduler timeline can be visualized [in Visual Overview](xref:Embedding_a_R
 
 To prevent alarm fatigue in operation teams, you can also apply **schedule-aware monitoring**. Alarm template configurations can be included in various [Profile-Load Scripts (PLS)](xref:srm_scripting#profile-load-script-pls) and/or [Life cycle Service Orchestration (LSO)](xref:srm_scripting#life-cycle-service-orchestration-lso-script) scripts. This way, when a profile is loaded on a resource based on the schedule, an alarm template can be loaded that only monitors the health status of the resource. Similarly, on service life cycle orchestration level, a switch to a different LSO state can go hand in hand with updated alarm monitoring.
 
-The scheduling engine supports a wide range of possibilities. Bookings scheduled to happen just once, or they can be made permanent. DataMiner SRM supports a variety of LSO state transitions, including pre- and post-roll LSO state changes, as well as booking events. This allows you to streamline even the most complex event schedules.
+The scheduling engine supports a wide range of possibilities. Bookings can be scheduled to happen just once, or they can be made permanent. DataMiner SRM supports a variety of LSO state transitions, including pre- and post-roll LSO state changes, as well as booking events. This allows you to streamline even the most complex event schedules.
+
+> [!TIP]
+> For more information:
+>
+> - Demo video: [How To Schedule your Resources using SRM](https://www.youtube.com/watch?v=BNK0RhlxwEc) ![Video](~/user-guide/images/video_Duo.png)
+> - Various Scheduler-related videos are available in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=schedule) ![Video](~/user-guide/images/video_Duo.png)
+> - Various Scheduler use cases with screenshots are available in the [use case library](https://community.dataminer.services/use-cases/?_sf_s=scheduler)
 
 ## Resource Manager
 
@@ -34,11 +41,18 @@ DataMiner Resource Manager **controls and monitors the availability of all resou
 
 The DataMiner Automation engine performs all automation tasks in the ecosystem. Its pronounced **open architecture** enables operators to easily create scripts and customize script behavior to their specific environment whenever needed. To create scripts, they can either use the built-in [Automation module](xref:automation) in DataMiner Cube, or make use of the [DataMiner Integration Studio (DIS)](xref:Overall_concept_of_the_DataMiner_Integration_Studio).
 
+Once created, scripts can be triggered in a variety of ways, ranging from manual operator initiation to event-based, change-based, or scheduled execution (through integration with the [Scheduling Engine](#scheduling-engine)).
+
 Even if tasks are automated, the operator always remains in control. Not only is there a full audit trail of the executed tasks, but operators can also opt to **interact with the Automation engine at runtime**. DataMiner interactive Automation scripts can be set up to prompt for operator input, which is then used to automate further actions.
 
 Automation scripts can be **developed, tested, and deployed at runtime**. Using built-in version control and quality checks during deployment (with DIS and CI/CD using our [dedicated workflows](xref:github_reusable_workflows_automation_master_workflow)), operators can easily use DevOps practices to respond to the rapid changes in today's networks, data centers, and service offerings.
 
+By fully automating operating and business procedures or workflows, operational expenses can be drastically reduced. Automation scripts can be used in a lot of applications such as intelligent backup and service-healing routines, guided troubleshooting for operators, automatic configuration, provisioning of services, etc.
+
 ![Automation script example](~/user-guide/images/Automation_module_example.png)<br>*Automation module in DataMiner Cube 10.5.5*
+
+> [!TIP]
+> Various Automation-related videos are available in our [video collection](https://www.youtube.com/@SkylineCommu/search?query=automation), including an introduction to the [basics of DataMiner Automation snippets](https://www.youtube.com/watch?v=i5_FLER_-tE).
 
 ## Profile Manager
 

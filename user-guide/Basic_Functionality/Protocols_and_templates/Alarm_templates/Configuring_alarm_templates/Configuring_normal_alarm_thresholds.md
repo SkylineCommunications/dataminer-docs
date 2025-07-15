@@ -8,17 +8,21 @@ The way you can configure the alarm thresholds for a parameter in the [alarm tem
 
 Note the following:
 
-- Depending on whether you are working on a new or existing alarm template, some parameters may not be shown by default. See [The alarm template editor user interface](xref:About_the_alarm_template_editor#the-alarm-template-editor-user-interface).
+- Depending on whether you are working on a new or existing alarm template, **some parameters may not be shown by default**. See [The alarm template editor user interface](xref:About_the_alarm_template_editor#the-alarm-template-editor-user-interface).
 
-- It is not necessary to enter a value for each severity level. See [Guidelines for assigning alarm severity levels](xref:Guidelines_for_assigning_alarm_severity_levels).
+- It is **not necessary to enter a value for each severity level**. See [Best practices for assigning alarm severity levels](xref:Best_practices_for_assigning_alarm_severity_levels).
 
-- When multiple values are specified for one alarm severity, the existing alarm will be updated with a new value each time it crosses a new threshold.
+- You can **assign the same severity level to multiple possible values** of the same parameter. In that case, the existing alarm will be updated with a new value each time it crosses a new threshold. For example, if you have a parameter of which the value can range from 0 to 10, you could assign the level "Minor" to all values from 0 to 4.
 
-- If you select the *Monitored* checkbox next to a parameter, but do not define any threshold, the parameter will be set to an undefined state.
+- If you select the *Monitored* checkbox next to a parameter, but do not define any threshold, the parameter will be set to an **undefined state**.
 
-- If you want to quickly enable or disable a large number of parameters, first select them by keeping the Ctrl key pressed or by selecting the first parameter, keeping the Shift key pressed, and then selecting the last parameter. Then right-click and select *Enable selected parameters* or *Disable selected parameters*, respectively. To select all parameters at once or clear the selection for all parameters at once, right-click the column header of the list of parameters and select *Enable all parameters* or *Disable all parameters*, respectively.
+- If you do not use dynamic alarm thresholds, in some cases it can be useful to specify a **"Normal" alarm threshold**, though this is not mandatory. You can for instance specify a "Normal" threshold for an analog parameter to indicate the base expectations for normal values in the oscilloscope or LED bar representing this parameter.
 
-- For DVE elements, the behavior of the alarm monitoring of child and parent elements can be different depending on specific circumstances. For detailed information, see [Assigning templates to DVE parent or child elements](xref:AdvancedDVEsTemplates).
+- If a parameter has an **exception value**, and you do not specify the exception value in the alarm template, it will be considered a normal value.
+
+- If you want to **quickly enable or disable a large number of parameters**, first select them by keeping the Ctrl key pressed or by selecting the first parameter, keeping the Shift key pressed, and then selecting the last parameter. Then right-click and select *Enable selected parameters* or *Disable selected parameters*, respectively. To select all parameters at once or clear the selection for all parameters at once, right-click the column header of the list of parameters and select *Enable all parameters* or *Disable all parameters*, respectively.
+
+- For **DVE elements**, the behavior of the alarm monitoring of child and parent elements can be different depending on specific circumstances. For detailed information, see [Assigning templates to DVE parent or child elements](xref:AdvancedDVEsTemplates).
 
 > [!NOTE]
 > Instead of defining alarm thresholds as a fixed value, you can also set them as a dynamic threshold. See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds).

@@ -4,9 +4,6 @@ uid: Data_Aggregator_queries
 
 # Configuring GQI queries for Data Aggregator
 
-> [!IMPORTANT]
-> After configuring GQI queries for Data Aggregator, a one-time migration process using the [Data Aggregator Migrator](xref:Data_Aggregator_Migrator) is required when upgrading from version 2.x.x to 3.0.0 or higher.
-
 Every GQI query you want to execute must be saved in a separate file in JSON format.
 
 To get a correctly configured query, you can make use of the DataMiner Dashboards app:
@@ -32,14 +29,31 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
    > [!NOTE]
    > Replace `dataminer.company.local` with the hostname or IP address of your DataMiner Agent.
 
-   with payload:
+   with the following payload, depending on the DataMiner version:
 
-   > ``` json
-   > {
-   >   "connection": "", // copied in previous step
-   >   "query": {} // copied in previous step
-   > }
-   > ```
+   - From DataMiner **10.4.0 [CU6]/10.5.0 [CU4]/10.5.7** onwards:<!-- RN 42855 -->
+
+     > ``` json
+     > {
+     >   "connection": "", // copied in previous step
+     >   "options": { "Contract": 1 },
+     >   "query": {} // copied in previous step
+     > }
+     > ```
+
+     - Use `"Contract": 0` for queries that should be executed via CoreGateway and SLHelper.
+     - Use `"Contract": 1` for queries that should be executed via the GQI DxM.
+
+     The used contract should correspond to the [`UseGQIDxM`](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) setting.
+
+   - In **earlier** DataMiner versions:
+
+     > ``` json
+     > {
+     >   "connection": "", // copied in previous step
+     >   "query": {} // copied in previous step
+     > }
+     > ```
 
 1. From the received response, copy the value of *d:*.
 
@@ -49,4 +63,4 @@ To get a correctly configured query, you can make use of the DataMiner Dashboard
 
 1. Paste the copied JSON code into a new file and save it as a *.json* file.
 
-1. Add the path to this file to the Data Aggregator configuration file. See [GQI queries](xref:Data_Aggregator_settings#gqi-queries).
+1. Rename your *.json* file, place it in the correct folder, and modify the *Helper.json*. See [GQI queries](xref:Data_Aggregator_settings#gqi-queries) for detailed instructions.

@@ -18,7 +18,7 @@ DataMiner applications are intended to be used as they are and will continuously
 
 The icons of DataMiner applications are marked with a DataMiner icon to distinguish them from sample applications.
 
-![icon of a dataminer application](~/dataminer-overview/images/DM_Scheduling.png)
+![icon of a dataminer application](~/user-guide/images/DM_Scheduling.png)
 
 ### Sample applications
 
@@ -26,14 +26,11 @@ Sample applications are primarily utilized for use cases requiring extensive cus
 
 The icons of sample applications are not marked with a DataMiner icon.
 
-![icon of a sample application](~/dataminer-overview/images/FacilityAssetManager.png)
+![icon of a sample application](~/user-guide/images/FacilityAssetManager.png)
 
 ## Available solutions
 
-These are the main solutions that are currently available:
-
-- [dataminer.MediaOps](xref:Overview_dataminer_MediaOps)
-- [DOM Viewer](xref:domviewer_about)
+For detailed information about the main solutions that are currently available, refer to [DataMiner Solutions](xref:solution_index).
 
 ## Standard Data Model
 

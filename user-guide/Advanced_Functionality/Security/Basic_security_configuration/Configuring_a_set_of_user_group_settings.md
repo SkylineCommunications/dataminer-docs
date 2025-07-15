@@ -4,11 +4,6 @@ uid: Configuring_a_set_of_user_group_settings
 
 # Configuring a set of user group settings
 
-> [!TIP]
-> See also:
-> [How To Video
-DataMiner Cube – Creating group settings](https://community.dataminer.services/video/dataminer-cube-creating-group-settings/) ![Video](~/user-guide/images/video_Duo.png)
-
 If a set of user settings has been assigned to a user group, you can open that set and specify a default value for every setting in it.
 
 1. In DataMiner Cube, go to *Apps* > *Settings*.

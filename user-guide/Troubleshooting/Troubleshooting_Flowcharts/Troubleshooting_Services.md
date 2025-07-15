@@ -8,6 +8,7 @@ uid: Troubleshooting_Services
 >
 > - This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
 > - If you need more information on how to execute any of the steps below, feel free to reach out to [support.data-core@skyline.be](mailto:support.data-core@skyline.be).
+> - For issues related to service alarms, see [Service alarm issues](#service-alarm-issues)
 > - You can leave feedback using the [*issues* feature](xref:CTB_Reporting_Issue), or [propose a change](xref:contributing).
 
 ```mermaid
@@ -69,3 +70,15 @@ class NotFixed,NotFixedProtocolIssue classSolution;
 >
 > - your investigation may be complete.
 > - you may need to check the log information in *SLErrors.txt*, *SLWatchDog2.txt*, *SLDBConnection.txt*, the element logging, or the *\_\_service\_\<serviceName\>.txt* logging on each DMA.
+
+## Service alarm issues
+
+If you encounter issues related to service alarms, you will need to gather the following information from the DMAs involved and then contact [support.data-core@skyline.be](mailto:support.data-core@skyline.be):
+
+- While the issue is active on the system, [use SLLogCollector](xref:Collecting_data_to_report_an_issue_to_TechSupport#log-collector-packages) to collect **memory dumps of the SLElement, SLDataMiner, and SLNet processes** from both the Agents hosting the affected elements and the Agent hosting the affected services.
+
+  When you share these files, make sure to also include the **element ID and service ID**, as this will help us quickly locate the relevant information in the logs and dumps.
+
+- Provide [a **DELT export package**](xref:Exporting_elements_services_etc_to_a_dmimport_file) that includes the alarms from the affected services and elements.
+
+- If the service was generated from a **service template**, include the template. You can find this *Service.xml* file on the DataMiner server hosting the service template in the folder `C:\Skyline DataMiner\Services\[ServiceTemplateName]`.

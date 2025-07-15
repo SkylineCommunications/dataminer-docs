@@ -33,4 +33,4 @@ To configure a header bar:
 > See also:
 >
 > - [Tutorials — Using a header bar](xref:Tutorial_Apps_Headerbar)
-> - [Using button components and header bars in Low-Code Apps](https://community.dataminer.services/video/using-button-components-and-header-bars-in-dataminer-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Using button components and header bars in Low-Code Apps](https://www.youtube.com/watch?v=7Qhitj3fQB4) ![Video](~/user-guide/images/video_Duo.png)

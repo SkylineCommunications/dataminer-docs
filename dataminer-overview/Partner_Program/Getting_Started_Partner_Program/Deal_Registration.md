@@ -95,7 +95,7 @@ If the opportunity results in a successful business transaction, the partner wil
 
 If the opportunity results in a successful business transaction for Skyline, but the partner has lost the opportunity to a competitor, the Business Development Reward will be provided to the partner by Skyline acknowledging the partner’s business efforts if the opportunity is marked as registered.
 
-![Business Transaction](~/dataminer-overview/images/Business_Transaction.png)
+![Business Transaction](~/user-guide/images/Business_Transaction.png)
 
 ### Withdrawal
 

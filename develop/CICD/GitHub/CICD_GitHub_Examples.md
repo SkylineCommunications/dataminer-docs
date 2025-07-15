@@ -44,11 +44,11 @@ jobs:
       env:
         DATAMINER_TOKEN: ${{ secrets.DATAMINER_TOKEN }}
       run: |
-        dotnet publish `
-          -p:Version="0.0.${{ github.run_number }}-prerelease" `
-          -p:VersionComment="This is just a pre-release version." `
-          -p:CatalogPublishKeyName="DATAMINER_TOKEN" `
-          -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN" `
+        dotnet publish \
+          -p:Version="0.0.${{ github.run_number }}-prerelease" \
+          -p:VersionComment="This is just a pre-release version." \
+          -p:CatalogPublishKeyName="DATAMINER_TOKEN" \
+          -p:CatalogDefaultDownloadKeyName="DATAMINER_TOKEN"
 ```
 
 On a **Windows** runner:

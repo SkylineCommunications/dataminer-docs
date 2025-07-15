@@ -4,6 +4,8 @@ uid: Cube_Feature_Release_10.5.1
 
 # DataMiner Cube Feature Release 10.5.1
 
+This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.4.0 [CU10].
+
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
 

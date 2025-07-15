@@ -8,6 +8,8 @@ Below you can find an overview of the different settings you can configure in th
 
 - [HTTP listening](#http-listening)
 
+- [Using the GQI DxM for queries](#using-the-gqi-dxm-for-queries)
+
 - [Multi-DMS connection](#multi-dms-connection)
 
 - [Throttling](#throttling)
@@ -40,9 +42,43 @@ For example:
 > - Keep in mind that **if there is no firewall in place, anyone can use the web UI and the REST API**, as no authentication is required to use Data Aggregator.
 > - To go to the debug page, add `/debug` to the URL. For example, if the URL was defined as `http://127.0.0.1:5000`, you can access the debug page at `http://127.0.0.1:5000/debug`.
 
+## Using the GQI DxM for queries
+
+By default, queries are executed using CoreGateway and SLHelper. To execute the queries using the [GQI DxM](xref:GQI_DxM), enable the following setting in *appsettings.custom.json* (see [GQI DxM configuration](xref:GQI_DxM#configuration)):
+
+```json
+{
+  "QueryExecutorOptions": {
+    "UseGQIDxM": true
+  }
+}
+```
+
+> [!IMPORTANT]
+>
+> - This setting is available from Data Aggregator version 3.1.0 onwards and can be used with DataMiner versions from DataMiner 10.5.0 [CU1]/10.5.4 onwards.
+> - When this setting is changed in an existing Data Aggregator setup where queries have been configured already, the existing queries will no longer work. Existing queries must be [migrated](xref:Data_Aggregator_Migrators#enabling-gqi-dxm).
+
 ## Multi-DMS connection
 
 For every DataMiner System you want Data Aggregator to connect to, you will need to specify the following fields under *BrokerOptions.Clusters*:
+
+### DMS with BrokerGateway
+
+If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the following fields:
+
+- **ID**: A unique ID.
+
+- **CredsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+
+- **APIKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+  > [!NOTE]
+  > This setting is available from Data Aggregator version 3.2.0 onwards.
+
+### DMS without BrokerGateway
+
+If the DMS does not use [BrokerGateway](xref:BrokerGateway_Migration) yet, specify the following fields:
 
 - **ID**: A unique ID.
 

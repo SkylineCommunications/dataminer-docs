@@ -8,7 +8,7 @@ When you make changes to an existing low-code app, the previous version will be 
 
 To go back to a previous version of a low-code app:
 
-1. Open the application from the DataMiner landing page (see [Accessing the Low-Code Apps module](xref:Accessing_custom_apps)).
+1. Open the application from the [DataMiner landing page](xref:Accessing_the_web_apps).
 
 1. Access the version history of the app:
 

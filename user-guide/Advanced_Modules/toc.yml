@@ -226,8 +226,8 @@ items:
             topicUid: Sending_a_text_message
           - name: Triggering a parameter set
             topicUid: Triggering_a_parameter_set
-      - name: Best practices when creating Correlation rules
-        topicUid: Best_Practices_When_Creating_Correlation_Rules
+      - name: Best practices for Correlation
+        topicUid: Best_Practices_For_Correlation
       - name: DataMiner Correlation tutorials
         items:
           - name: Responding to element timeouts using Correlation
@@ -276,8 +276,6 @@ items:
       - name: Dashboards app
         topicUid: newR_D
         items:
-          - name: Accessing the Dashboards app
-            topicUid: Accessing_the_Dashboards_app
           - name: Overview of the Dashboards app UI
             topicUid: Overview_of_the_Dashboards_app_UI
           - name: Managing dashboard folders
@@ -319,21 +317,17 @@ items:
             items:
               - name: Displaying a custom empty component message
                 topicUid: Tutorial_Dashboards_Displaying_a_custom_empty_component_message
-              - name: Leveraging feeds in a web component
-                topicUid: Tutorial_Dashboards_Feeds_Web_Component
               - name: Leveraging controls and feeds to create a dynamic GQI query
                 topicUid: Tutorial_Dashboards_Controls_And_Feeds_Query
               - name: Getting started with node edge graphs
                 topicUid: Tutorial_Apps_Node_Edge
-              - name: Creating a parameter table connected to an element feed
+              - name: Creating a custom parameter table connected to an element feed
                 topicUid: Creating_a_parameter_table_connected_to_an_element_feed
               - name: Creating an alarm dashboard for a daily DMS health check
                 topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
-          - name: Accessing the Low-Code Apps module
-            topicUid: Accessing_custom_apps
           - name: Creating low-code applications
             topicUid: Creating_custom_apps
           - name: Editing a low-code application
@@ -387,6 +381,8 @@ items:
                 topicUid: TutorialMaps
               - name: Getting started with the grid component
                 topicUid: Tutorial_Apps_Grid
+              - name: Leveraging feeds in a web component
+                topicUid: Tutorial_Dashboards_Feeds_Web_Component
               - name: Creating a visually appealing and user-friendly low-code app
                 topicUid: Tutorial_App_Design
               - name: Using flows in a low-code app
@@ -473,6 +469,9 @@ items:
                 topicUid: DashboardPivotTable
               - name: Table
                 topicUid: DashboardTable
+                items:
+                  - name: Filtering table content
+                    topicUid: Filtering_Table_Content
           - name: Charts
             items:
               - name: Column & Bar chart
@@ -525,19 +524,56 @@ items:
                 topicUid: TimeRange
               - name: Toggle
                 topicUid: Toggle
-      - name: Component data
-        topicUid: Component_Data
-      - name: URL data
-        topicUid: URL_data
-      - name: Flows
-        topicUid: Using_flows
+      - name: Available data types
+        topicUid: Available_Data_Types
         items:
-          - name: Configuring a flow
-            topicUid: Configuring_a_flow
-          - name: Flow operators
-            topicUid: Flow_operators
-      - name: Variables
-        topicUid: Variables
+          - name: Booking data
+            topicUid: Booking_Data
+          - name: Component data
+            topicUid: Component_Data
+          - name: Element data
+            topicUid: Element_Data
+          - name: Flows
+            topicUid: Using_flows
+            items:
+              - name: Configuring a flow
+                topicUid: Configuring_a_flow
+              - name: Flow operators
+                topicUid: Flow_operators
+          - name: Index data
+            topicUid: Index_Data
+          - name: Object manager definition data
+            topicUid: Object_Manager_Definition_Data
+          - name: Object manager instance data
+            topicUid: Object_Manager_Instance_Data
+          - name: Parameter table filters
+            topicUid: Parameter_Table_Filters
+          - name: Parameter data
+            topicUid: Parameter_Data
+          - name: Profile parameter data
+            topicUid: Profile_Parameter_Data
+          - name: Protocol data
+            topicUid: Protocol_Data
+          - name: Query data
+            topicUid: Query_Data
+          - name: Redundancy group data
+            topicUid: Redundancy_Group_Data
+          - name: Resource data
+            topicUid: Resource_Data
+          - name: Service definition data
+            topicUid: Service_Definition_Data
+          - name: Service data
+            topicUid: Service_Data
+          - name: Spectrum buffer data
+            topicUid: Spectrum_Buffer_Data
+          - name: Spectrum preset data
+            topicUid: Spectrum_Preset_Data
+          - name: URL data
+            topicUid: URL_data
+          - name: Variables
+            topicUid: Variables
+          - name: View data
+            topicUid: View_Data
       - name: Specifying data input in a dashboard or app URL
         topicUid: Specifying_data_input_in_a_URL
       - name: Generic Query Interface (GQI)
@@ -594,6 +630,8 @@ items:
                 topicUid: GQI_Aggregate
               - name: Column manipulations
                 topicUid: GQI_Column_manipulations
+              - name: Custom operator
+                topicUid: GQI_Custom_Operator_About
               - name: Filter
                 topicUid: GQI_Filter
               - name: Join
@@ -604,137 +642,6 @@ items:
                 topicUid: GQI_Sort
               - name: Top X
                 topicUid: GQI_Top_X
-          - name: Extensions
-            topicUid: GQI_Extensions
-            items:
-              - name: Configuring an ad hoc data source
-                topicUid: Configuring_an_ad_hoc_data_source_in_a_query
-                items:
-                  - name: Building blocks of queries with ad hoc data
-                    topicUid: Ad_hoc_Building_blocks
-                  - name: Life cycle of queries with ad hoc data
-                    topicUid: Ad_hoc_Life_cycle
-                  - name: Linking rows to DataMiner objects
-                    topicUid: Ad_hoc_Metadata
-                  - name: Examples
-                    items:
-                      - name: Forwarding dummy data to the GQI
-                        topicUid: Forwarding_dummy_data_to_GQI
-                      - name: Scaling an ad hoc data source
-                        topicUid: Scaling_Ad_hoc_Data_Source
-                  - name: Tutorials
-                    items:
-                      - name: Building a GQI data source that fetches satellites
-                        topicUid: Ad_hoc_Tutorials_Satellites
-                      - name: Building a GQI data source that retrieves data from a DMS
-                        topicUid: Ad_hoc_Tutorials_GQIDMS
-              - name: Configuring a custom operator
-                topicUid: GQI_Custom_Operator
-                items:
-                  - name: Building blocks of a custom operator
-                    topicUid: CO_Building_blocks
-                  - name: Life cycle of a custom operator
-                    topicUid: CO_Life_cycle
-                  - name: Modifying links to DataMiner objects
-                    topicUid: CO_Metadata
-                  - name: Tutorials
-                    items:
-                      - name: Creating a minus operator
-                        topicUid: Creating_Minus_Operator
-                      - name: Creating a duration operator
-                        topicUid: Creating_Duration_Operator
-                      - name: Optimizing your custom operator
-                        topicUid: Custom_Operator_Tutorial
-                      - name: Providing a custom sort order
-                        topicUid: GQI_Redirect_Sort_Tutorial
-              - name: API reference
-                items:
-                  - name: GenIfRowMetadata
-                    topicUid: GQI_GenIfRowMetadata
-                  - name: GQIArgument
-                    topicUid: GQI_GQIArgument
-                  - name: GQICell
-                    topicUid: GQI_GQICell
-                  - name: GQIColumn
-                    topicUid: GQI_GQIColumn
-                  - name: GQIColumn<T>
-                    topicUid: GQI_GQIColumnT
-                  - name: GQIDMS
-                    topicUid: GQI_GQIDMS
-                  - name: GQIEditableHeader
-                    topicUid: GQI_GQIEditableHeader
-                  - name: GQIEditableRow
-                    topicUid: GQI_GQIEditableRow
-                  - name: GQILogLevel
-                    topicUid: GQI_GQILogLevel
-                  - name: GQIPage
-                    topicUid: GQI_GQIPage
-                  - name: GQIRow
-                    topicUid: GQI_GQIRow
-                  - name: GQISortDirection
-                    topicUid: GQI_GQISortDirection
-                  - name: IGQIColumn
-                    topicUid: GQI_IGQIColumn
-                  - name: IGQIColumnOperator
-                    topicUid: GQI_IGQIColumnOperator
-                  - name: IGQICoreBlock
-                    topicUid: GQI_IGQICoreBlock
-                  - name: IGQICoreDataSource
-                    topicUid: GQI_IGQICoreDataSource
-                  - name: IGQICoreOperator
-                    topicUid: GQI_IGQICoreOperator
-                  - name: IGQIDataSource
-                    topicUid: GQI_IGQIDataSource
-                  - name: IGQIDataSourceNode 
-                    topicUid: GQI_IGQIDataSourceNode 
-                  - name: IGQIFactory
-                    topicUid: GQI_IGQIFactory
-                  - name: IGQIFilterOperator
-                    topicUid: GQI_IGQIFilterOperator
-                  - name: IGQIInputArguments
-                    topicUid: GQI_IGQIInputArguments
-                  - name: IGQILogger
-                    topicUid: GQI_IGQILogger
-                  - name: IGQIOnDestroy
-                    topicUid: GQI_IGQIOnDestroy
-                  - name: IGQIOnInit
-                    topicUid: GQI_IGQIOnInit
-                  - name: IGQIOnPrepareFetch
-                    topicUid: GQI_IGQIOnPrepareFetch
-                  - name: IGQIOperator
-                    topicUid: GQI_IGQIOperator
-                  - name: IGQIOperatorNode
-                    topicUid: GQI_IGQIOperatorNode
-                  - name: IGQIOptimizableDataSource
-                    topicUid: GQI_IGQIOptimizableDataSource
-                  - name: IGQIOptimizableOperator
-                    topicUid: GQI_IGQIOptimizableOperator
-                  - name: IGQIQueryNode
-                    topicUid: GQI_IGQIQueryNode
-                  - name: IGQIRowOperator
-                    topicUid: GQI_IGQIRowOperator
-                  - name: IGQISortField
-                    topicUid: GQI_IGQISortField
-                  - name: IGQISortOperator
-                    topicUid: GQI_IGQISortOperator
-                  - name: IGQIUpdateable
-                    topicUid: GQI_IGQIUpdateable
-                  - name: IGQIUpdater
-                    topicUid: GQI_IGQIUpdater
-                  - name: ObjectRefMetadata
-                    topicUid: GQI_ObjectRefMetadata
-                  - name: OnArgumentsProcessedInputArgs
-                    topicUid: GQI_OnArgumentsProcessedInputArgs
-                  - name: OnInitInputArgs
-                    topicUid: GQI_OnInitInputArgs
-                  - name: RowMetadataBase
-                    topicUid: GQI_RowMetadataBase
-                  - name: TimeRangeMetadata
-                    topicUid: GQI_TimeRangeMetadata
-              - name: Best practices
-                topicUid: GQI_Extensions_Best_Practices
-              - name: Logging
-                topicUid: GQI_Extensions_Logging
           - name: Logging
             topicUid: GQI_Logging
           - name: Query updates
