@@ -167,7 +167,7 @@ Currently, by default, the existing components will still be used by default to 
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-Up to now, the redesigned `UIBlockType.StaticText` component would no longer work when its `Text` property had not been set.
+Since DataMiner versions 10.4.0 [CU16]/10.5.0 [CU4]/10.5.7, the redesigned `UIBlockType.StaticText` component would no longer work when its `Text` property had not been set.
 
 Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
 
