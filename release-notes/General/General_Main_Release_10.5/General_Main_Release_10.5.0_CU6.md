@@ -181,6 +181,22 @@ Also, from now on, the primary IP address of the offline agent will be set to ei
 
 When a DataMiner Agent that did not have Swarming enabled was started without a *db.xml* file present, up to now, the start-up process would fail abruptly because of an unhandled exception in SLNet. From now on, it will fail gracefully.
 
+#### SNMP managers could get stuck in 'not responding' ping mode [ID 43278]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a northbound SNMP manager that is configured to send inform messages has exhausted all its retries, it will enter ping mode, generate a "not responding" timeout alarm, and send a ping inform message to the end point to found out whether it is up and running again.
+
+Up to now, when an SNMP manager was in ping mode, in some cases, it would no longer send the ping inform message to the end point.
+
+From now on, when the first ping inform message was unsuccessful, a new ping inform message will be scheduled, and the following entry will be logged with information log level 1 (in which %s will be replaced by the name of the SNMP manager):
+
+```txt
+Adding a ping message for SNMP Manager %s. Too long since last ping was sent. Retrying...
+Logging has been adjusted to not spam if multiple SNMP Managers send to the same IP/Port:
+Failed resolving authoritative context ID for SNMP Manager
+```
+
 #### BrokerGateway: GetConnectionDetails call would incorrectly not return any destinations [ID 43292]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
