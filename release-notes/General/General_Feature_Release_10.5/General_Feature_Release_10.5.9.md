@@ -378,11 +378,11 @@ When a DataMiner Agent that did not have Swarming enabled was started without a 
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-When a northbound SNMP manager that is configured to send inform messages has exhausted all its retries, it will enter ping mode, generate a "not responding" timeout alarm, and send a ping inform message to the end point to found out whether it is up and running again.
+When a northbound SNMP manager configured to send inform messages exhausts all its retries, it enters ping mode. At this point, it generates a "not responding" timeout alarm, and sends a ping inform message to the endpoint to check whether it is up and running again.
 
-Up to now, when an SNMP manager was in ping mode, in some cases, it would no longer send the ping inform message to the end point.
+Up to now, when an SNMP manager was in ping mode, it could, in some cases, stop sending further ping inform messages to the endpoint.
 
-From now on, when the first ping inform message was unsuccessful, a new ping inform message will be scheduled, and the following entry will be logged with information log level 1 (in which %s will be replaced by the name of the SNMP manager):
+From now on, when the first ping inform message is unsuccessful, a new ping inform message will be scheduled. Additionally, the following entry will be logged at information log level 1 (in which %s will be replaced by the name of the SNMP manager):
 
 ```txt
 Adding a ping message for SNMP Manager %s. Too long since last ping was sent. Retrying...
