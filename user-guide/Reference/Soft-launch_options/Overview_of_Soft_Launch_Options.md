@@ -52,7 +52,7 @@ Disables specific NATS logic, in order to use the BrokerGateway DxM for the NATS
 
 ### ClusterEndpointsManager
 
-Enables the ClusterEndpointsManager, which is required in order to be able to migrate to BrokerGateway.
+Allows you to disable the ClusterEndpointsManager. This can prevent possible issues, but it will not be possible to [migrate to BrokerGateway](xref:BrokerGateway_Migration). If this option is not specified or if it is set to "true", ClusterEndpointsManager is enabled.
 
 - **Minimum version**: 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->
 - **Release version**: 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->
