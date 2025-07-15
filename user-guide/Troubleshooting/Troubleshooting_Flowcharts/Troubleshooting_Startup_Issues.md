@@ -81,7 +81,7 @@ class Home LightBlue;
 
 ### Root cause
 
-Some DataMiner Core Module (DcM) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g. because of Windows updates). As a consequence, these services are still stopped while the DataMiner Agent has already started.
+Some DataMiner Core Module (DcM) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g. because of Windows updates). As a consequence, these services are still stopped while the DataMiner Agent is already starting up, but DataMiner needs these services to be able to start up fully.
 
 ### Solution
 
