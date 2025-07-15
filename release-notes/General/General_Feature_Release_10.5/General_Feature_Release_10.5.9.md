@@ -196,6 +196,12 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### Service & Resource Management: Enhanced performance when creating or editing bookings [ID 43254]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Because of a number of enhancements, overall performance has increased when creating or editing bookings, especially on systems with a large number of resources.
+
 #### SLAnalytics: Reduced memory usage because of enhanced management of parameters with constant values [ID 43266]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->

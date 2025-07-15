@@ -359,6 +359,12 @@ In OpenSearch, indexing will now use the `auto_expand_replicas` setting.
 
 If the database consists of a single node at the time of index creation, an index will be made that has no replicas (minimum number of replicas is set to 0). If, at a later stage, nodes are then added to or removed from the cluster, replicas will automatically be assigned up to a maximum of 2 (maximum number of replicas is set to 2).
 
+#### Service & Resource Management: Enhanced performance when creating or editing bookings [ID 43254]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+Because of a number of enhancements, overall performance has increased when creating or editing bookings, especially on systems with a large number of resources.
+
 #### Relational anomaly detection: Configuration moved from XML file to database [ID 43320]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
