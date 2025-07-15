@@ -99,6 +99,14 @@ The NATS request timeout has been increased from 1 minute to 5 minutes.
 
 Also, when a timeout occurs, the error added to the web logs will now include the message that timed out.
 
+#### GQI DxM will now include invalid session IDs in HeartbeatResponse or CloseSessionResponse messages [ID 43294]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When a client (e.g. the Web Services API) sent a `HeartbeatRequest` or a `CloseSessionRequest` with invalid session IDs to the GQI DxM, up to now, the GQI DxM would return an error.
+
+From now on, instead of returning an error, the GQI DxM will return a `HeartbeatResponse` or `CloseSessionResponse` that contains the invalid session IDs. This will allows the client to react accordingly without having to parse any error message.
+
 #### Dashboards app & Low-Code Apps - Timeline component: Group order will now be preserved [ID 43296]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
