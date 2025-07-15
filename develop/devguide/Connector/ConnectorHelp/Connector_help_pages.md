@@ -7,7 +7,7 @@ description: For every connector that is developed for DataMiner, two or more do
 
 For every connector that is developed for DataMiner, at least one documentation pages should be made and is referred to as the [marketing page](#marketing-page).
 
-The [marketing page](#marketing-page) should be appealing and focussed on demonstrating the value the connector can bring to users, similar to the packaging of a product in a store. If the connector is very simple and intuitive, a limited amount of technical details and "how tos" can be added directly within the marketing page.
+The [marketing page](#marketing-page) should be appealing and focussed on demonstrating the value the connector can bring to users, similar to the packaging of a product in a store. If the connector is very simple and intuitive, a limited amount of technical details and "how tos" can be added directly within the marketing page instead of creating a dedicated technical page.
 
 For connectors a bit more complex, a [technical page](#technical-page) should be made. It should be a subpage of the marketing page containing further technical details. You could compare this to the instructions booklet included with a product in a store. The technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, configured, etc.
 
