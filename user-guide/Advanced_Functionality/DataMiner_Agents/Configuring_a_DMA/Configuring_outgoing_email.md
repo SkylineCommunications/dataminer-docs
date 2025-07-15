@@ -109,7 +109,7 @@ You can specify the following advanced settings. However, these are not mandator
   
 ## Example of SMTP server configuration
 
-The example below shows how the SMTP element in DataMiner.xml should be configured.
+The example below shows how the [SMTP](xref:DataMiner.SMTP) element in *DataMiner.xml* should be configured.
 
 ```xml
 <SMTP>

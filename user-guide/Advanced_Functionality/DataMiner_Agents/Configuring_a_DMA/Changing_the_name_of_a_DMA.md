@@ -16,9 +16,9 @@ To configure an alias in *DataMiner.xml*, you will need to activate "manual" mod
 
 1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
-1. In the *\<DMAName>* start tag, add a *mode* attribute, and set its value to “manual”.
+1. In the [DMAName](xref:DataMiner.DMA.DMAName) opening tag, add a *mode* attribute, and set its value to “manual”.
 
-1. Between the *\<DMAName>* start tag and the *\</DMAName>* end tag, specify the custom name of the DataMiner Agent. For example:
+1. In the `<DMAName>` element, specify the custom name of the DataMiner Agent. For example:
 
    ```xml
    <DataMiner ...>
