@@ -15,6 +15,15 @@ uid: General_Main_Release_10.5.0_CU6
 
 ### Enhancements
 
+#### SLDataGateway will now periodically check all Cassandra, OpenSearch and Elasticsearch certificates [ID 41793]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+SLDataGateway will now periodically check all Cassandra, OpenSearch and Elasticsearch certificates.
+
+- If a certificate is set to expire within 30 days, a notice alarm will be created.
+- If a certificate is set to expire within 7 days, an error alarm will be created.
+
 #### GQI: Enhanced performance when setting up GQI connections [ID 43251]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->

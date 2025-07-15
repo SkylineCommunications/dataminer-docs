@@ -135,6 +135,15 @@ The logging of a DOM manager will now also contain a line indicating the start o
 
 ### Enhancements
 
+#### SLDataGateway will now periodically check all Cassandra, OpenSearch and Elasticsearch certificates [ID 41793]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+SLDataGateway will now periodically check all Cassandra, OpenSearch and Elasticsearch certificates.
+
+- If a certificate is set to expire within 30 days, a notice alarm will be created.
+- If a certificate is set to expire within 7 days, an error alarm will be created.
+
 #### Failover: NATS cluster state will now be visible in DataMiner Cube's Failover Status window [ID 42250] [ID 43169]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
