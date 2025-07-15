@@ -19,8 +19,8 @@ classDef classExternalRef fill:#9ddaf5,stroke:#9ddaf5,color:#1E5179,stroke-width
 
 %% Define blocks %%
 DMAStartupIssues([DMA startup issues])
-ServicesRunning{{"Services of DataMiner Core Modules are running? <br/>"}}
-DCMIssue["DCM issue"]
+ServicesRunning{{"Are all DataMiner Core Module services running? <br/>"}}
+DCMIssue["DcM issue"]
 AgentNotLicensed{{"Agent not licensed message in Cube? <br/>"}}
 SwarmingEnabled{{"Swarming recently enabled? <br/>"}}
 SLNetComFailure{{"SLNetCom failure logged in SLDataMiner.txt? <br/>"}}
@@ -69,19 +69,19 @@ class ServicesRunning,AgentNotLicensed,SwarmingEnabled,SLNetComFailure,Incorrect
 class Home LightBlue;
 ```
 
-## DCM issue
+## DcM issue
 
 ### Symptoms
 
 - DataMiner fails to start, takes too long to start, or gets stuck at 99% during the startup process.
 
-- DataMiner Core Module services are stopped.
+- [DataMiner Core Module](xref:DataMinerExtensionModules#available-dcms) services are stopped.
 
-- The server where the DMA is running has recently been (re)booted.
+- The server where the DMA is running has recently been rebooted.
 
 ### Root cause
 
-Some DataMiner Core Module (DCM) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g., due to Windows Updates).
+Some DataMiner Core Module (DcM) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g. because of Windows updates).
 
 ### Solution
 
@@ -89,12 +89,12 @@ Some DataMiner Core Module (DCM) services do not respond quickly enough to the W
 
 1. Navigate to the **Services** tab.
 
-1. Sort by name and locate the 'DataMiner' services.
+1. Sort by name and locate the *DataMiner* services.
 
-1. Start all services identified as DataMiner Core Modules.
+1. Start all services identified as DataMiner Core Modules (see [Available DcMs](xref:DataMinerExtensionModules#available-dcms)).
 
 1. Restart the DataMiner Agent.
-   
+
 ## Licensing issue
 
 ### Symptoms
