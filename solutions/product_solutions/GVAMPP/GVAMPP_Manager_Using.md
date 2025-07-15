@@ -4,7 +4,9 @@ uid: GVAMPP_Manager_Using
 
 # Using the AMPP Manager Application
 
-The Grass Valley Manager application allows users to visualize and control multiple GV AMPP Manager elements. You can select a manager using the dropdown box in the top-right corner of the *Statistics* page.
+The Grass Valley Manager application allows users to visualize and control multiple GV AMPP Manager elements.
+
+You can select a manager using the dropdown box in the top-right corner of the *Statistics* page.
 
 ![Manager Selection](~/user-guide/images/GVAMPP_Manager_Selection.png)
 
