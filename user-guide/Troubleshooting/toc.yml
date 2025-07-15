@@ -268,6 +268,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: DataMiner startup issue with one or more DcMs not running
+            topicUid: KI_Startup_issue_DcM_not_running
           - name: SRM scheduler unresponsive
             topicUid: KI_SRM_scheduler_unresponsive
           - name: SLProtocol RTE because of element stuck in slow poll mode
