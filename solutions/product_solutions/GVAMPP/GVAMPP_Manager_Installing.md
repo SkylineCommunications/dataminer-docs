@@ -10,10 +10,6 @@ uid: GVAMPP_Manager_Installing
 
 - A DataMiner System [**connected to dataminer.services**](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
-- **.NET 8.0** (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0))
-
-  This must be installed on the DataMiner Agent where you will deploy the app. If you are running DataMiner 10.4.10 or higher, this will already be installed, as this is also a requirement for recent DataMiner versions.
-
 - A connection to an **AMPP tenancy** via its URL (e.g. `https://mytenancy.gvampp.com`)
 
 - An **API key** generated using the AMPP Identity Manager.
@@ -51,7 +47,7 @@ An Automation script included in the package helps with both the installation of
 
 1. In the app, click the cogwheel ![cogwheel](~/user-guide/images/GV_AMPP_Manager_Configuration_page.png) icon in the sidebar to open the *Setup* page.
 
-   This page provides initial instructions and a link to download and install the Microsoft .NET 8.0 Hosting Bundle.
+   This page provides initial instructions and a link to download and install the Microsoft .NET 8.0 Hosting Bundle. However, this will already be installed on your DataMiner Agent, as it is a prerequisite for DataMiner starting from DataMiner 10.3.0 [CU12]/10.4.0/10.4.3.
 
 1. Click the *Configure* button to launch the configuration script.
 
