@@ -971,6 +971,8 @@ items:
       - name: Ad hoc data sources
         topicUid: GQI_Ad_hoc_data_sources
         items:
+          - name: Creation
+            topicUid: Ad_hoc_Creation
           - name: Building blocks
             topicUid: Ad_hoc_Building_blocks
           - name: Life cycle
