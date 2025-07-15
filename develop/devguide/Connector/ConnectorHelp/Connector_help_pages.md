@@ -5,11 +5,11 @@ description: For every connector that is developed for DataMiner, two or more do
 
 # Connector documentation
 
-For every connector that is developed for DataMiner, two or more documentation pages should be made.
+For every connector that is developed for DataMiner, two or more documentation pages can be made.
 
-The first page is the [marketing page](#marketing-page), which should be appealing and focus on demonstrating the value the connector can bring to users, similar to the packaging of a product in a store.
+The first page is the [marketing page](#marketing-page), which should be appealing and focus on demonstrating the value the connector can bring to users, similar to the packaging of a product in a store. Creating this page is mandatory. If the connector is technically very simple, the below technical page can be ommited and couple of technical details can be embedded in the marketing page.
 
-The second page is the [technical page](#technical-page), which should be a subpage of the marketing page containing further technical details. You could compare this to the instructions booklet included with a product in a store. The technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc.
+The second page is the [technical page](#technical-page), which should be a subpage of the marketing page containing further technical details. You could compare this to the instructions booklet included with a product in a store. The technical page details among others how the connections should be set up when you create an element with the connector, how the element should be used, etc. This page is not mandatory for any connector that is very straight forward and intuitive. In that case, feel free to add limited technical details directly within the marketing page.
 
 If a connector exports child connectors, a subpage should also be created for each of these child connectors.
 
@@ -69,7 +69,9 @@ The title of both pages should be the name of the connector in the [Catalog](htt
 
 The format of the marketing page should be the same as for the documentation of other Catalog items. See [Best practices when documenting Catalog items](xref:Best_Practices_When_Documenting_Catalog_Items).
 
-However, note that the Marketing page of a connector should always have a **Technical Reference** section, and this section must include a note with a link to the [technical page](#technical-page) for the connector (optionally in addition to other technical info that is important enough to include it here):
+For very straight-forward and intuitive connectors, a **Technical Reference** section will contain very brief explanation on how to use the connector.
+
+For connectors that requires more technical and how to use explanations, the **Technical Reference** section must include a note with a link to the [technical page](#technical-page) for the connector (optionally in addition to other technical info that is important enough to include it here):
 
 ```md
 > [!NOTE]
@@ -77,6 +79,8 @@ However, note that the Marketing page of a connector should always have a **Tech
 ```
 
 ### Technical page
+
+Depending on the complexity of the connector, a technical page can be made and should be organized as follows.
 
 #### 'About' section
 
