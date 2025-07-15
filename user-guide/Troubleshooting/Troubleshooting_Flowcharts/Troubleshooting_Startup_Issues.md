@@ -78,10 +78,13 @@ class Home LightBlue;
 - [DataMiner Core Module](xref:DataMinerExtensionModules#available-dcms) services are stopped.
 
 - The server where the DMA is running has recently been rebooted.
+  
+- The server where the DMA is running also contains the DataMiner Core Modules.
 
 ### Root cause
 
 Some DataMiner Core Module (DcM) services do not respond quickly enough to the Windows Service Controller after a reboot (e.g. because of Windows updates).
+The effect is that these services are not started (stopped) when DataMiner Agent is starting up. 
 
 ### Solution
 
