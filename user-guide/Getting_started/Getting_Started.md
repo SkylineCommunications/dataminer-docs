@@ -3,7 +3,7 @@ uid: Getting_Started
 description: Create a DataMiner System, and learn how to interact with DataMiner, work with DataMiner Cube and the DataMiner Monitoring app, and more.
 ---
 
-# Getting started with DataMiner
+# Getting started
 
 <div class="row"> 
   <div class="column">

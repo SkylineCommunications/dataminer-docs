@@ -5,7 +5,7 @@ items:
   - name: About DataMiner
     topicUid: Overview_About_DataMiner
     href: About_DataMiner/toc.yml
-  - name: Getting started with DataMiner
+  - name: Getting started
     topicUid: Getting_Started
     href: Getting_started/toc.yml
   - name: Professional services
@@ -38,6 +38,6 @@ items:
   - name: Legal
     topicUid: Terms_of_Sale
     href: Legal/toc.yml
-  - name: FAQ
+  - name: Frequently asked questions
     topicUid: FAQs
     href: FAQ/toc.yml
