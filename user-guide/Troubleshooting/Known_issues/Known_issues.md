@@ -21,6 +21,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [SLProtocol process could disappear when a protocol version was modified while an element was starting up](xref:KI_SLProtocol_process_disappearance) | All currently supported versions | 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6. | July 16, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
 | [Prerequisites fail when upgrading from 10.4.0-10.4.4 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | DataMiner 10.5.0 [CU5]/10.5.8 | June 2, 2025 |
 | [SLAutomation memory leak when Automation script runs](xref:KI_Automation_Memory_leak_when_executing_scripts) | DataMiner 10.5.6 | DataMiner 10.5.7 | June 10, 2025 |
@@ -52,6 +53,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [SLProtocol process could disappear when a protocol version was modified while an element was starting up](xref:KI_SLProtocol_process_disappearance) | All currently supported versions | 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6. | July 16, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
 | [Prerequisites fail when upgrading from 10.4.0-10.4.4 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | DataMiner 10.5.0 [CU5]/10.5.8 | June 2, 2025 |
 | [DCOMConfig flagged as virus causing upgrade issues](xref:KI_DCOMConfig_flagged_as_virus) | DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | May 19, 2025 |
