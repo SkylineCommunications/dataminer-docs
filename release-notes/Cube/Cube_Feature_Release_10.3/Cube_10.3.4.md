@@ -66,7 +66,7 @@ From now on, DataMiner Cube will no longer accept database TTL settings that exc
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
-When, in DataMiner Cube, you select *Help* in the user menu or the *Apps* pane, the ['Getting started' page of the online DataMiner user guide](xref:Part1GettingStarted) will open in a browser window.
+When, in DataMiner Cube, you select *Help* in the user menu or the *Apps* pane, the ['Getting started' page of the online DataMiner user guide](xref:Getting_Started) will open in a browser window.
 
 #### Services app: Enhanced performance when opening the 'Profiles' tab [ID 35634]
 

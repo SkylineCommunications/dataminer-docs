@@ -1,28 +1,43 @@
 items:
-- name: Getting started with DataMiner
-  topicUid: Part1GettingStarted
-  href: Getting_started/toc.yml
-- name: Basic DataMiner functionality
-  topicUid: Part2BasicFunctionalities
-  href: Basic_Functionality/toc.yml
-- name: Advanced DataMiner functionality for administrators
-  topicUid: Part3AdvancedFunctionalities
-  href: Advanced_Functionality/toc.yml
-- name: DataMiner modules
-  topicUid: Part4AdvancedModules
-  href: Advanced_Modules/toc.yml
-- name: DataMiner frameworks
-  topicUid: DataMiner_Frameworks
-  href: Frameworks/toc.yml
-- name: dataminer.services
-  topicUid: dataminer_services
-  href: dataminer_services/toc.yml
-- name: DataMiner tools
-  topicUid: DataMinerTools
-  href: DataMiner_Tools/toc.yml
-- name: Troubleshooting
-  topicUid: Part6Troubleshooting
-  href: Troubleshooting/toc.yml
-- name: Reference
-  topicUid: Part7Reference
-  href: Reference/toc.yml
+- name: DataMiner
+  topicUid: DataMiner_index
+  items:
+  - name: About DataMiner
+    topicUid: Overview_About_DataMiner
+    href: About_DataMiner/toc.yml
+  - name: Getting started with DataMiner
+    topicUid: Getting_Started
+    href: Getting_started/toc.yml
+  - name: Professional services
+    topicUid: Professional_services
+    href: Professional_services/toc.yml
+  - name: Operator guide
+    topicUid: Operator_guide
+    href: Operator_guide/toc.yml
+  - name: Administrator guide
+    topicUid: Part3AdvancedFunctionalities
+    href: Advanced_Functionality/toc.yml
+  - name: Functions
+    topicUid: Part4AdvancedModules
+    href: Advanced_Modules/toc.yml
+  - name: Frameworks
+    topicUid: DataMiner_Frameworks
+    href: Frameworks/toc.yml
+  - name: dataminer.services
+    topicUid: dataminer_services
+    href: dataminer_services/toc.yml
+  - name: Tools
+    topicUid: DataMinerTools
+    href: DataMiner_Tools/toc.yml
+  - name: Troubleshooting
+    topicUid: Part6Troubleshooting
+    href: Troubleshooting/toc.yml
+  - name: Reference
+    topicUid: Part7Reference
+    href: Reference/toc.yml
+  - name: Legal
+    topicUid: Terms_of_Sale
+    href: Legal/toc.yml
+  - name: FAQ
+    topicUid: FAQs
+    href: FAQ/toc.yml

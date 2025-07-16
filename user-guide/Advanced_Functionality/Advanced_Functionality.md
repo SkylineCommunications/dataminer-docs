@@ -3,7 +3,7 @@ uid: Part3AdvancedFunctionalities
 description: Discover everything you need to know as a DataMiner administrator, from the basic setup of your system to the most complex configurations.
 ---
 
-# Advanced DataMiner functionality for administrators
+# Administrator guide
 
 <div class="row"> 
   <div class="column">
@@ -48,4 +48,4 @@ description: Discover everything you need to know as a DataMiner administrator, 
   <div class="column">
     <a href="/user-guide/Advanced_Functionality/Swarming/Swarming.html" title="Swarming" target="_self"><img src="~/user-guide/images/Swarming.svg" style="width:100%"></a>
   </div>
-</div>  
+</div>

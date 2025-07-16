@@ -1,5 +1,5 @@
 ---
-uid: Part1GettingStarted
+uid: Getting_Started
 description: Create a DataMiner System, and learn how to interact with DataMiner, work with DataMiner Cube and the DataMiner Monitoring app, and more.
 ---
 
@@ -26,42 +26,5 @@ description: Create a DataMiner System, and learn how to interact with DataMiner
   </div>
   <div class="column">
     <a href="/user-guide/Getting_started/ZiineDemoSystem/ZiineDemoSystem.html" title="Ziine" target="_self"><img src="~/user-guide/images/Docs_Ziine.svg" style="width:100%"></a>
-  </div>
-</div>
-
-## Features and functionality
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Basic_Functionality/Basic_Functionality.html" title="Basic functionality" target="_self"><img src="~/user-guide/images/Docs_BasicFunctionality.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Functionality/Advanced_Functionality.html" title="Advanced functionality" target="_self"><img src="~/user-guide/images/Docs_AdvancedFunctionality.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Advanced_Modules.html" title="DataMiner modules" target="_self"><img src="~/user-guide/images/Docs_DataMinerModules.svg" style="width:100%"></a>
-  </div>
-</div>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Frameworks/DataMiner_Frameworks.html" title="DataMiner frameworks" target="_self"><img src="~/user-guide/images/Docs_DataMiner_Frameworks.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/dataminer_services/dataminer_services.html" title="dataminer.services" target="_self"><img src="~/user-guide/images/Docs_DataMinerServices.svg" style="width:100%"></a>
-  </div>
-</div>
-
-## Additional resources
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/DataMiner_Tools/DataMinerTools.html" title="Tools" target="_self"><img src="~/user-guide/images/DataMiner_tools.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Troubleshooting/Troubleshooting.html" title="Troubleshooting" target="_self"><img src="~/user-guide/images/Docs_Troubleshooting.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Reference/Reference.html" title="Reference" target="_self"><img src="~/user-guide/images/Docs_Reference.svg" style="width:100%"></a>
   </div>
 </div>

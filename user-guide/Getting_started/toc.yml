@@ -54,8 +54,8 @@ items:
         topicUid: Client_apps
       - name: DataMiner components
         topicUid: DataMiner_components
-      - name: DataMiner modules
-        topicUid: DataMiner_modules
+      - name: DataMiner functions
+        topicUid: DataMiner_functions
       - name: Accessing DataMiner Cube
         items:
           - name: Installing & configuring the DataMiner Cube software

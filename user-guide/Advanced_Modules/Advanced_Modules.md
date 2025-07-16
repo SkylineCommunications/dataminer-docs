@@ -3,7 +3,7 @@ uid: Part4AdvancedModules
 description: A DataMiner System can have several additional modules or apps, e.g. Automation, Dashboards, etc. Some require a specific type of DataMiner license.
 ---
 
-# DataMiner modules
+# DataMiner functions
 
 <div class="row"> 
   <div class="column">
@@ -46,7 +46,7 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/user-guide/Advanced_Modules/DOM/DOM.html" title="DOM" target="_self"><img src="~/user-guide/images/DOM.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Basic_Functionality/Documents/About_the_Documents_module.html" title="Documents" target="_self"><img src="~/user-guide/images/Documents.svg" style="width:100%"></a>
+    <a href="/user-guide/Operator_guide/Documents/About_the_Documents_module.html" title="Documents" target="_self"><img src="~/user-guide/images/Documents.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Advanced_Modules/EPM/EPM.html" title="Experience and Performance Management" target="_self"><img src="~/user-guide/images/Experience_Performance_Management.svg" style="width:100%"></a>
@@ -73,7 +73,7 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/user-guide/Advanced_Modules/SRM/The_Profiles_module/The_Profiles_module.html" title="Profiles" target="_self"><img src="~/user-guide/images/Profiles.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Basic_Functionality/Protocols_and_templates/Protocols_and_templates.html" title="Protocols & Templates" target="_self"><img src="~/user-guide/images/Protocols_Templates.svg" style="width:100%"></a>
+    <a href="/user-guide/Operator_guide/Protocols_and_templates/Protocols_and_templates.html" title="Protocols & Templates" target="_self"><img src="~/user-guide/images/Protocols_Templates.svg" style="width:100%"></a>
   </div>
 </div>
 

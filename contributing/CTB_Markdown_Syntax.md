@@ -251,7 +251,7 @@ To then display the image in the text, use the following syntax:
 For example:
 
 ```md
-![Awards](~/dataminer-overview/images/awards.png)
+![Awards](~/user-guide/images/awards.png)
 ```
 
 > [!NOTE]

@@ -43,8 +43,8 @@
     "content": [
       {
         "files": [
-          "dataminer-overview/**.md",
-          "dataminer-overview/**/toc.yml",
+          "dataminer/**.md",
+          "dataminer/**/toc.yml",
           "solutions/**.md",
           "solutions/**/toc.yml",
           "user-guide/**.md",
@@ -76,7 +76,7 @@
         "files": [
           "fonts/**",
           "images/**",
-          "dataminer-overview/images/**",
+          "dataminer/images/**",
           "solutions/images/**",
           "user-guide/images/**",
           "release-notes/images/**",
