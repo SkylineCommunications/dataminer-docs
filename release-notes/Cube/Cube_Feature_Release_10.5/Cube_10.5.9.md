@@ -64,6 +64,12 @@ Also, when there are any DaaS systems in the cluster to which you are connected,
 
 As the *Add/remove elements* user permission in *General > Views* allows users to also add or remove other items, including services, measurement points, service templates, redundancy groups, redundancy templates, etc., this user permission has now been renamed to *Add/remove items (elements, services, etc.)*.
 
+#### Alarm Console: Enhanced performance when loading alarms into a linked alarm tab [ID 43218]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of a number of enhancements, overall performance has increased when loading alarms into a linked alarm tab, especially on systems with a large number of correlation alarms or a large number of base alarms.
+
 #### Profiles module: Enhanced performance when loading profiles [ID 43235]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->

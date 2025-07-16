@@ -246,6 +246,12 @@ Also, a number of smaller changes have been made:
 - DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the parent parameters.
 - Security has been added to all RAD messages. From now on, you will no longer be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will still return all groups though.
 
+#### Proactive cap detection: Enhanced detection of predicted data range breaches [ID 43338]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+The decision when to trigger a proactive detection suggestion event for a future data range breach (e.g. predicted 100% between ... and ...) has been fine-tuned. This will prevent suggestion events from being generated for parameters with values near or on the data range that should not be considered problematic.
+
 #### DataMiner upgrade: BPA tests 'Check Agent Presence Test In NATS' and 'Verify NATS is Running' replaced by 'Verify NATS Cluster' [ID 43359]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
@@ -254,13 +260,13 @@ The BPA tests *Check Agent Presence Test In NATS* (which was renamed to *Nats co
 
 This means that, from now on, during a DataMiner upgrade, the *Verify NATS Cluster* test will be installed and any existing instances of the deprecated *Check Agent Presence Test In NATS* and *Verify NATS is Running* tests will be removed.
 
-#### Migration from ElasticSearch to OpenSearch: is_write_index flag will no longer be reset [ID 43369]
+#### Migration from ElasticSearch to OpenSearch: is_write_index flag of the aliases will no longer be reset [ID 43369]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
 When migrating data from Elasticsearch to OpenSearch, at some point, the *ReIndexElasticSearchIndexes* tool needs to be used to re-index the data.
 
-This tool has now been adapted to make sure the `is_write_index` flag is not reset during the migration process.
+This tool has now been adapted to make sure the `is_write_index` flag of the aliases is not reset during the migration process.
 
 ### Fixes
 
@@ -418,6 +424,13 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
 
+#### Swarming: An element being swarmed would briefly run on the old DMA as well as on the new DMA [ID 43345]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+In some cases, when an element was being swarmed, for a short while, the element in question would incorrectly run on the old DMA as well as on the new DMA.
+
 #### StorageModule DcM would fail to read an element XML file [ID 43350]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
@@ -433,3 +446,10 @@ From now on, it will try up to three times to read an element XML file that is b
 When a DOM definition field does not have a default value defined, by default, no value should be displayed. However, up to now, when the default time zone had been changed in the *ClientSettings.json* file, fields of type datetime would incorrectly contain the value "01/01/1970 - DefaultTimezone".
 
 From now on, if a DOM definition field does not have a default value defined, all fields of that type will be empty when displayed on a form.
+
+#### Swarming: Element would incorrectly be stuck in the Swarming state after being swarmed [ID 43360]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+After an element had been swarmed, in some cases, that element would incorrectly be stuck in the Swarming state.

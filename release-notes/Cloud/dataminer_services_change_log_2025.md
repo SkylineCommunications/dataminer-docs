@@ -9,6 +9,18 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 16 July 2025 - Enhancement - Startup and upgrade progress displayed when remotely accessing Cube
+
+From now on, if you remotely access the Cube desktop app while the DataMiner System is starting up or while an upgrade is in progress, the progress will be displayed instead of an error. Upgrading the DataMiner System while remotely accessing Cube will also no longer disconnect the session but will instead show the upgrade progress.
+
+### 15 July 2025 - Fix - Remote Access & Live Sharing - Authentication issue redirecting to a blue error page
+
+In some cases, users that tried to sign in could be redirected to a blue error page displaying `An error occurred while processing your request`. This issue has been resolved.
+
+### 15 July 2025 - Enhancement - Remote Access & Live Sharing - Stability and performance improvements
+
+Stability and performance improvements have been implemented, which will make the remote access features more stable.
+
 ### 30 June 2025 - Fix - Catalog - Grid view rendered incorrectly
 
 On the browse page of the Catalog, if you switched from row view to grid view, it could occur that only one column was used.
