@@ -1,6 +1,5 @@
 ---
 uid: Overview_dataminer_services
-description: With dataminer.services, you gain access to innovative and game-changing solutions that empower digital transformation programs.
 ---
 
 # dataminer.services
