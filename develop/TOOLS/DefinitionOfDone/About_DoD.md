@@ -24,8 +24,8 @@ This tool helps development teams by:
 
 ### 📋 1. Clipboard & URL Management
 
+- **Task Link** - Seamless navigation to collaboration
 - **Task URL Copying** - Quick copying of task URLs for sharing
-- **Navigation Collaboration** - Seamless navigation to collaboration
 
 ### ⏱️ 2. Time Registration
 
@@ -72,15 +72,15 @@ This tool helps development teams by:
 
 The tool currently supports the following task types:
 
-- **Driver Issue** - Bug fixes and issue resolution in drivers
-- **Driver Development** - New driver development tasks
-- **New Driver Feature** - Adding new features to existing drivers
+- **Driver Development** - New connector development tasks
+- **New Driver Feature** - Adding new features to existing connector
+- **Driver Issue** - Bug fixes and issue resolution in existing connector
 
 ## How to Use the Tool
 
 ### 1. **Getting Started**
 
-1. Navigate to the DoD Tool application
+1. Navigate to the DoD Tool home page
 2. Sign in using your Azure AD credentials
 3. Access tasks through the main interface
 
@@ -94,10 +94,10 @@ The tool currently supports the following task types:
 
 ### 3. **Managing Checklist Items**
 
-1. **Add Steps**: Click the + button to add additional DoD steps
-2. **Delete Steps**: Use the delete button to remove unnecessary steps
-3. **Edit Comments**: Click the pencil icon to edit comments in detail
-4. **Skip Items**: Use the dropdown to skip steps with proper reasoning
+1. **Add Steps**: Click the + button to duplicate DoD steps in case you want to involve more guards.
+2. **Delete Steps**: Use the delete button to remove unnecessary duplicated steps
+3. **Edit Comments**: Quick edit the comment directly within the main interface or click the pencil icon to edit multi-lines comments in a more confortable way.
+4. **Skip Items**: Use the Status dropdown to skip steps with proper reasoning
 
 ## User Interface Features
 
