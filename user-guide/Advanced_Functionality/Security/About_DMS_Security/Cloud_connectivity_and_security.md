@@ -31,7 +31,7 @@ In addition, the following backup address should also be accessible, as this may
 
 - 20.103.147.5
 
-If you install your DataMiner system with the [DataMiner Installer](xref:Installing_DM_using_the_DM_installer) or by using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) and deploy it in subscription mode with a Community Edition license, make sure the following IP address is accessible to enable activation, registration, and licensing:
+If you install your DataMiner System with the [DataMiner Installer](xref:Installing_DM_using_the_DM_installer) or by using the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) to deploy DataMiner in subscription mode with a Community Edition license, make sure the following IP address is accessible to enable activation, registration, and licensing:
 
 - 20.50.2.83
 
