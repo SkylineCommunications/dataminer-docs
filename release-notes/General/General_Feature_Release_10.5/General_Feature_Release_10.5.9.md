@@ -246,6 +246,12 @@ Also, a number of smaller changes have been made:
 - DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the parent parameters.
 - Security has been added to all RAD messages. From now on, you will no longer be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will still return all groups though.
 
+#### Proactive cap detection: Enhanced detection of predicted data range breaches [ID 43338]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+The decision when to trigger a proactive detection suggestion event for a future data range breach (e.g. predicted 100% between ... and ...) has been fine-tuned. This will prevent suggestion events from being generated for parameters with values near or on the data range that should not be considered problematic.
+
 #### DataMiner upgrade: BPA tests 'Check Agent Presence Test In NATS' and 'Verify NATS is Running' replaced by 'Verify NATS Cluster' [ID 43359]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
@@ -254,13 +260,13 @@ The BPA tests *Check Agent Presence Test In NATS* (which was renamed to *Nats co
 
 This means that, from now on, during a DataMiner upgrade, the *Verify NATS Cluster* test will be installed and any existing instances of the deprecated *Check Agent Presence Test In NATS* and *Verify NATS is Running* tests will be removed.
 
-#### Migration from ElasticSearch to OpenSearch: is_write_index flag will no longer be reset [ID 43369]
+#### Migration from ElasticSearch to OpenSearch: is_write_index flag of the aliases will no longer be reset [ID 43369]
 
 <!-- MR 10.6.0 - FR 10.5.9 -->
 
 When migrating data from Elasticsearch to OpenSearch, at some point, the *ReIndexElasticSearchIndexes* tool needs to be used to re-index the data.
 
-This tool has now been adapted to make sure the `is_write_index` flag is not reset during the migration process.
+This tool has now been adapted to make sure the `is_write_index` flag of the aliases is not reset during the migration process.
 
 ### Fixes
 
