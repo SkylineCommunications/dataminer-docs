@@ -151,11 +151,11 @@ Because of a number of enhancements, overall performance has increased when star
 
 For example, information that does not frequently change (e.g. alarm colors) will now be cached in the web API. It will no longer be fetched each time a web app is opened.
 
-#### GQI DxM: GQI sessions marked as invalid will no longer send heartbeats to clients that have not yet closed them [ID 43374]
+#### Web API will no longer send any heartbeats to the GQI DxM to keep invalid GQI sessions alive [ID 43374]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-From now on, when a GQI session is marked as invalid by the GQI DxM, it will no longer send any heartbeats to the client apps that have not yet closed it.
+From now on, when a GQI session is marked as invalid by the GQI DxM, the web API will no longer send any heartbeats to the GQI DxM in order to keep that session alive.
 
 ### Fixes
 
