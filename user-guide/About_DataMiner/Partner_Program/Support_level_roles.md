@@ -72,7 +72,7 @@ All [minimum required skills and knowledge for Level 1](#minimum-required-skills
 
   - Keep up to date with the DataMiner documentation and the DataMiner Community. For example, use the Q&A section on Dojo to reach out to an expert.
   - High level knowledge of the DataMiner architecture (What is the purpose of the different modules and processes?)
-  - High level knowledge of the advanced functionalities of DataMiner. See [Administrator guide](xref:Part3AdvancedFunctionalities)
+  - High level knowledge of the advanced functionalities of DataMiner. See [Administrator guide](xref:Administrator_guide)
 
 - Guides:
 

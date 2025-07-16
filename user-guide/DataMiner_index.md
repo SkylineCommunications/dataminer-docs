@@ -2,6 +2,8 @@
 uid: DataMiner_index
 ---
 
+# DataMiner Overview
+
 ## Get to know DataMiner
 
 <div class="row"> 
@@ -16,17 +18,17 @@ uid: DataMiner_index
   </div>
 </div>
 
-## Features and functionality<!-- TODO: rename advanced functionality + advanced modules files/folders -->
+## Features and functionality
 
 <div class="row"> 
   <div class="column">
     <a href="/user-guide/Operator_guide/Operator_guide.html" title="Operator guide" target="_self"><img src="~/user-guide/images/Operator_Guide.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Functionality/Advanced_Functionality.html" title="Administrator guide" target="_self"><img src="~/user-guide/images/Administrator_Guide.svg" style="width:100%"></a>
+    <a href="/user-guide/Administrator_guide/Administrator_guide.html" title="Administrator guide" target="_self"><img src="~/user-guide/images/Administrator_Guide.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Advanced_Modules/Advanced_Modules.html" title="DataMiner functions" target="_self"><img src="~/user-guide/images/Functions.svg" style="width:100%"></a>
+    <a href="/user-guide/Functions/Overview_Functions.html" title="DataMiner functions" target="_self"><img src="~/user-guide/images/Functions.svg" style="width:100%"></a>
   </div>
 </div>
 

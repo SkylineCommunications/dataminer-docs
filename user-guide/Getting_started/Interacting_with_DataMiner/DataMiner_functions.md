@@ -20,7 +20,7 @@ A DataMiner System can have several additional modules or apps. Depending on the
 
 <div style="display: flex; align-items: center; justify-content: space-between; margin: 0 auto; max-width: 100%;">
   <div style="border: 1px solid #ccc; border-radius: 10px; padding: 10px; flex-grow: 1; background-color: #DEF7FF; margin-right: 20px; color: #000000;">
-    <b>💡 TIPS TO TAKE FLIGHT</b><br>For more information about other functions, take a look at our <a href="xref:Part4AdvancedModules" style="color: #657AB7;">DataMiner functions section</a>.
+    <b>💡 TIPS TO TAKE FLIGHT</b><br>For more information about other functions, take a look at our <a href="xref:Overview_Functions" style="color: #657AB7;">DataMiner functions section</a>.
   </div>
   <img src="~/images/Skye.svg" alt="Skye" style="width: 100px; flex-shrink: 0;">
 </div>

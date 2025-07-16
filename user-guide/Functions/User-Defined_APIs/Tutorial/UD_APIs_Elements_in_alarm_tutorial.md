@@ -59,13 +59,13 @@ Before the API logic can be written, the API script wrapper code needs to be pre
 
 The script has now been updated with the `OnApiTrigger(IEngine, ApiTriggerInput)` method. You can also remove the comments and unused "using" directives. This should result in the following script code:
 
-[!code-csharp[](~/user-guide/Advanced_modules/User-Defined_APIs/Tutorial/Scripts/Elements_Tutorial_Script_Default.cs)]
+[!code-csharp[](~/user-guide/Functions/User-Defined_APIs/Tutorial/Scripts/Elements_Tutorial_Script_Default.cs)]
 
 ### Store user input
 
 For this API, the input from the user should be the alarm level (minor, major, etc.) for which the user wants to see the elements. Anything passed in the body of the API request will be available as a string in the *RawBody* property of the *requestData* input argument of the entrypoint method. This content of the *rawBody* can be stored in a variable.
 
-[!code-csharp[](~/user-guide/Advanced_modules/User-Defined_APIs/Tutorial/Scripts/Elements_Tutorial_Script_Stored_user_input.cs?highlight=12)]
+[!code-csharp[](~/user-guide/Functions/User-Defined_APIs/Tutorial/Scripts/Elements_Tutorial_Script_Stored_user_input.cs?highlight=12)]
 
 ### Validate user input
 
@@ -75,7 +75,7 @@ You can add a collection of valid alarm levels, which will be used to check the 
 
 For the response code, the integer representation of the *StatusCode.BadRequest* enum option can be assigned. This will cause the response of the API to be clearly marked as a user request error with the appropriate response code (400).
 
-[!code-csharp[](~/user-guide/Advanced_modules/User-Defined_APIs/Tutorial/Scripts/Elements_Tutorial_Script_With_input_validation.cs?highlight=10-11,18-26)]
+[!code-csharp[](~/user-guide/Functions/User-Defined_APIs/Tutorial/Scripts/Elements_Tutorial_Script_With_input_validation.cs?highlight=10-11,18-26)]
 
 ### Expand the user input with JSON
 
@@ -128,7 +128,7 @@ When the input data is not correctly formatted, exceptions can be thrown. This i
 
 Note that there are also `JsonSerializerSettings` defined. These ensure that the conversion will always accept and output camel-case JSON names, which is the recommended casing type for JSON. ("alarmLevel" instead of "AlarmLevel")
 
-[!code-csharp[](~/user-guide/Advanced_modules/User-Defined_APIs/Tutorial/Scripts/Elements_Tutorial_Script_With_json_input.cs?highlight=4,8-9,16-20,25-32,34-47,49,68-76)]
+[!code-csharp[](~/user-guide/Functions/User-Defined_APIs/Tutorial/Scripts/Elements_Tutorial_Script_With_json_input.cs?highlight=4,8-9,16-20,25-32,34-47,49,68-76)]
 
 ### Retrieve the element data
 
@@ -145,7 +145,7 @@ Another clear error can be returned when something goes wrong.
 
 As you can see at the bottom of the script, an `ElementInfo` class has been defined, which will be used to generate the JSON response. Defining your own types is recommended. This way you have full control over what is included and how it will be serialized. Avoid serializing a class from an external DLL, as there is no guarantee this will remain functional after updates.
 
-[!code-csharp[](~/user-guide/Advanced_modules/User-Defined_APIs/Tutorial/Scripts/Elements_Tutorial_Script_Full.cs?highlight=60-72,76,81-116,122-133)]
+[!code-csharp[](~/user-guide/Functions/User-Defined_APIs/Tutorial/Scripts/Elements_Tutorial_Script_Full.cs?highlight=60-72,76,81-116,122-133)]
 
 ### Publish the script
 

@@ -2,7 +2,7 @@
 uid: DataMinerTools
 ---
 
-# DataMiner tools
+# Tools
 
 DataMiner has many tools available, such as the [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility), [Alerter](xref:Alerter), [SLLogCollector](xref:SLLogCollector), [SLNetClientTest tool](xref:SLNetClientTest_tool), and many others. You will find information about these in this section.
 

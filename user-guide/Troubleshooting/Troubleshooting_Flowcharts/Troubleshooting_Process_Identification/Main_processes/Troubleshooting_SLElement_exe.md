@@ -63,7 +63,7 @@ ElementActive ----- |NO|LogCollectorSw
 click StartPage "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click RunPending "https://docs.dataminer.services/develop/devguide/Connector/Howto/How_to_retrieve_protocol_pending_calls.html"
 click CassandraTb "https://community.dataminer.services/troubleshooting-cassandra/"
-click Delt "/user-guide/Advanced_Functionality/DataMiner_Agents/Exporting_and_importing/Exporting_elements_services_etc_to_a_dmimport_file.html"
+click Delt "/user-guide/Administrator_guide/DataMiner_Agents/Exporting_and_importing/Exporting_elements_services_etc_to_a_dmimport_file.html"
 %% Apply styles to blocks %%
 class Start,LogCollectorSw,DumpAlarm,DumpDb,SendSw DarkBlue;
 class Watchdog,MemoryLeak,ThreadsDB,ThreadsAlarm,Offload,PendingCalls,Delt LightGray;

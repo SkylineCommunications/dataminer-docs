@@ -15,11 +15,11 @@ items:
     topicUid: Operator_guide
     href: Operator_guide/toc.yml
   - name: Administrator guide
-    topicUid: Part3AdvancedFunctionalities
-    href: Advanced_Functionality/toc.yml
+    topicUid: Administrator_guide
+    href: Administrator_guide/toc.yml
   - name: Functions
-    topicUid: Part4AdvancedModules
-    href: Advanced_Modules/toc.yml
+    topicUid: Overview_Functions
+    href: Functions/toc.yml
   - name: Frameworks
     topicUid: DataMiner_Frameworks
     href: Frameworks/toc.yml
