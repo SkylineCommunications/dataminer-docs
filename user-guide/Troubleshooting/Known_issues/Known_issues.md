@@ -21,7 +21,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
-| [SLProtocol process could disappear when a protocol version was modified while an element was starting up](xref:KI_SLProtocol_process_disappearance) | All currently supported versions | 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6. | July 16, 2025 |
+| [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6. | July 16, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
 | [Prerequisites fail when upgrading from 10.4.0-10.4.4 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | DataMiner 10.5.0 [CU5]/10.5.8 | June 2, 2025 |
 | [SLAutomation memory leak when Automation script runs](xref:KI_Automation_Memory_leak_when_executing_scripts) | DataMiner 10.5.6 | DataMiner 10.5.7 | June 10, 2025 |
@@ -53,7 +53,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
-| [SLProtocol process could disappear when a protocol version was modified while an element was starting up](xref:KI_SLProtocol_process_disappearance) | All currently supported versions | 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6. | July 16, 2025 |
+| [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6. | July 16, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
 | [Prerequisites fail when upgrading from 10.4.0-10.4.4 to 10.5.0 CU3, 10.5.6, or 10.5.7](xref:KI_Prerequisites_fail_when_upgrading_from_10.4.0-to-10.5.3-CU3) | Upgrade path from DataMiner 10.4.0 to 10.5.0 CU3, 10.5.6, or 10.5.7 | DataMiner 10.5.0 [CU5]/10.5.8 | June 2, 2025 |
 | [DCOMConfig flagged as virus causing upgrade issues](xref:KI_DCOMConfig_flagged_as_virus) | DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | DataMiner 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6 | May 19, 2025 |
@@ -102,6 +102,7 @@ uid: Known_issues
 | [Problem after removing DMA from cluster](xref:KI_Problem_after_removing_DMA_from_cluster) | Any DataMiner version with clustered storage <br>and/or indexing | | December 15, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6. | July 16, 2025 |
 | [Online Failover Agent unable to acquire VIP](xref:KI_Online_Failover_Agent_unable_to_acquire_VIP) | From DataMiner 10.3.0 [CU20]/10.4.0 [CU8]/10.4.11 onwards | DataMiner 10.4.0 [CU12]/10.5.0 [CU0]/10.5.3| June 20, 2025 |
 | [Cube displays incorrect offload configuration for real-time trending data](xref:KI_Cube_displays_incorrect_offload_configuration_for_real-time_trending_data) | From DataMiner Cube 10.3.7/10.4.0 onwards | DataMiner Cube 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | March 20, 2025 |
 | ["Failed getting progress" notices during upgrade](xref:KI_SLNetIPC_Errors_During_Upgrade) | From 10.4.0 [CU0] and 10.3.7 onwards | DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | March 6, 2025 |
@@ -165,6 +166,7 @@ uid: Known_issues
 | [Elasticsearch not initialized when DataMiner starts up](xref:KI_Elasticsearch_not_initialized_on_DMA_startup) | Any version using Elasticsearch | | April 20, 2023 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From DataMiner 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [SLProtocol process disappearance after protocol changes](xref:KI_SLProtocol_process_disappearance) | All versions up to 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 | 10.4.0 [CU15]/10.5.0 [CU3]/10.5.6. | July 16, 2025 |
 | [Reuploaded DVE protocol version is incorrectly set as production version](xref:KI_Reuploaded_DVE_protocol_version_incorrectly_set_as_production_version) | DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.7 to DataMiner 10.4.0 [CU11]/10.5.2 | DataMiner 10.4.0 [CU12]/10.5.3 | December 18, 2024 |
 | [Inter-DMA connection issues when ExternalAuthentication is used](xref:KI_Inter-DMA-connection_issues_when_ExternAuthentication_is_used) | From DataMiner 10.4.3 onwards | DataMiner 10.4.12/10.5.0 | December 2, 2024 |
 | [nats-server.config file not included in DataMiner backups](xref:KI_nats-server_config_file_not_included_in_backups) | From DataMiner 10.2.0 [CU6]/10.2.8 onwards | DataMiner 10.4.11/10.5.0 | October 10, 2024 |
