@@ -28,8 +28,6 @@ uid: Part7Reference
 
 - [Technical information](xref:Connecting_devices_using_RS_232_RS_422_RS_485)
 
-- [Frequently asked questions](xref:faq)
-
 - [Glossary](xref:glossary_a_to_l)
 
 > [!NOTE]

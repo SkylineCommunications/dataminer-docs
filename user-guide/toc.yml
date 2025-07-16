@@ -1,5 +1,5 @@
 items:
-- name: DataMiner
+- name: DataMiner Overview
   topicUid: DataMiner_index
   items:
   - name: About DataMiner

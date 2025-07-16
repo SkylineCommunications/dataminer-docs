@@ -57,3 +57,9 @@ items:
     topicUid: FAQs_Support_Services
   - name: dataminer.services
     topicUid: FAQ_dataminer_services
+  - name: General configuration
+    topicUid: General_configuration
+  - name: IDs of views, elements, services, redundancy groups and parameters
+    topicUid: IDs_of_views_elements_services_redundancy_groups_and_parameters
+  - name: DataMiner client applications
+    topicUid: DataMiner_client_applications
