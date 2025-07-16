@@ -4,8 +4,6 @@ uid: GQI_Custom_Operator
 
 # Custom operators
 
-## About custom operators
-
 Each custom operator for GQI is defined in an **Automation script library** by a **C# class** that implements specific [interfaces](xref:CO_Building_blocks). Every time GQI needs to use the custom operator, it will create a new instance of that class and call the relevant [life cycle](xref:CO_Life_cycle) methods.
 
 > [!NOTE]

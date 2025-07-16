@@ -971,7 +971,7 @@ items:
       - name: Ad hoc data sources
         topicUid: GQI_Ad_hoc_data_sources
         items:
-          - name: Creation
+          - name: Creating an ad hoc data source
             topicUid: Ad_hoc_Creation
           - name: Building blocks
             topicUid: Ad_hoc_Building_blocks
@@ -994,7 +994,7 @@ items:
       - name: Custom operators
         topicUid: GQI_Custom_Operator
         items:
-          - name: Creation
+          - name: Creating a custom operator
             topicUid: CO_Creation
           - name: Building blocks
             topicUid: CO_Building_blocks

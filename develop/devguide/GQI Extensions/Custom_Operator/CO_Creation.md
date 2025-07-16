@@ -11,7 +11,7 @@ To define a new custom operator:
    > [!NOTE]
    > All object types needed to create a custom operator can be found within *SLAnalyticsTypes.dll*, which is located in the folder `C:\Skyline DataMiner\Files`.
 
-2. Above the class, add the *GQIMetaData* attribute in order to configure the name of the operator as displayed in the Dashboards app or Low-Code Apps.
+1. Above the class, add the *GQIMetaData* attribute in order to configure the name of the operator as displayed in the Dashboards app or Low-Code Apps.
 
    For example (see [Example custom operator](xref:Creating_Minus_Operator) for a full example):
 
@@ -28,13 +28,13 @@ To define a new custom operator:
    > [!NOTE]
    > This is the name that will be shown to the user when they select the operator in the Dashboards app or Low-Code Apps. If you do not configure this name, the name of the class is displayed instead, which may not be very user-friendly.
 
-3. Compile the script as a library (see [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library)). You can use the same name as defined in the *GQIMetaData* attribute, or a different name. If there are different operators for which the same name is defined in the *GQIMetaData* attribute, the library name is appended to the metadata name.
+1. Compile the script as a library (see [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library)). You can use the same name as defined in the *GQIMetaData* attribute, or a different name. If there are different operators for which the same name is defined in the *GQIMetaData* attribute, the library name is appended to the metadata name.
 
-4. Validate and save the script. It is important that you do this after you have compiled the script as a library, as otherwise the compiler will detect errors.
+1. Validate and save the script. It is important that you do this after you have compiled the script as a library, as otherwise the compiler will detect errors.
 
-5. In the Dashboards app or Low-Code Apps, configure a query and select the operator *Apply custom operator*.
+1. In the Dashboards app or Low-Code Apps, configure a query and select the operator *Apply custom operator*.
 
-6. In the *Operator* dropdown box, select the name of your operator.
+1. In the *Operator* dropdown box, select the name of your operator.
 
 Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the [*IGQIInputArguments* interface](xref:GQI_IGQIInputArguments) in the script to define that a specific argument is required.
 
