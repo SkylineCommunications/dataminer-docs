@@ -254,6 +254,14 @@ The BPA tests *Check Agent Presence Test In NATS* (which was renamed to *Nats co
 
 This means that, from now on, during a DataMiner upgrade, the *Verify NATS Cluster* test will be installed and any existing instances of the deprecated *Check Agent Presence Test In NATS* and *Verify NATS is Running* tests will be removed.
 
+#### Migration from ElasticSearch to OpenSearch: is_write_index flag will no longer be reset [ID 43369]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When migrating data from Elasticsearch to OpenSearch, at some point, the *ReIndexElasticSearchIndexes* tool needs to be used to re-index the data.
+
+This tool has now been adapted to make sure the `is_write_index` flag is not reset during the migration process.
+
 ### Fixes
 
 #### SLProtocol would leak memory when an element was restarted [ID 42697] [ID 43300]
