@@ -16,9 +16,9 @@ For more information on how you can create ad hoc data sources, see [Ad hoc data
 
 This query data source is available from DataMiner 10.2.4/10.3.0 onwards.
 
-## Linking the data source to data in the same dashboard or low-code app
+## Linking the data source to data of the dashboard or app
 
-From DataMiner 10.2.5/10.3.0 onwards, when you set up an ad hoc data source in a dashboard or low-code app, you can link its arguments to existing data in the same dashboard or low-code app. Depending on the linked data, more information may need to be specified.
+From DataMiner 10.2.5/10.3.0 onwards, when you set up an ad hoc data source in a dashboard or low-code app, you can link its arguments to data of the dashboard or app. Depending on the linked data, more information may need to be specified.
 
 For example, if you link to existing query data with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g. elements) or tables (prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41075)-->: query rows). Then you will need to select the property you want to use. In most cases, you can select the property in a dropdown list, except if *Type* is set to *Tables*, *Query rows*, or *Script output*, in which case you will have to specify the value yourself. For tables/query rows, when you start typing the value, DataMiner will propose any matching values it can find.
 
