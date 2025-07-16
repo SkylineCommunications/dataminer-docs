@@ -45,7 +45,7 @@ To define a new ad hoc data source:
 
 1. In the *Data source* dropdown box, select the name of your ad hoc data source.
 
-Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the *IGQIInputArguments* interface in the script to define that a specific argument is required, for instance to filter the displayed data. For more information, refer to the sections below.
+Depending on how the script is configured, there can be additional configuration possibilities. You can for instance use the [*IGQIInputArguments* interface](xref:GQI_IGQIInputArguments) in the script to define that a specific argument is required, for instance to filter the displayed data.
 
 > [!IMPORTANT]
 > Ad hoc data sources are identified by a combination of their script name, library name, and class name. Changing any of these values will cause existing queries to stop working, because they will no longer be able to find the script based on the identifier they are using.

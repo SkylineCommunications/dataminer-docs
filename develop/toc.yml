@@ -994,6 +994,8 @@ items:
       - name: Custom operators
         topicUid: GQI_Custom_Operator
         items:
+          - name: Creation
+            topicUid: CO_Creation
           - name: Building blocks
             topicUid: CO_Building_blocks
           - name: Life cycle
