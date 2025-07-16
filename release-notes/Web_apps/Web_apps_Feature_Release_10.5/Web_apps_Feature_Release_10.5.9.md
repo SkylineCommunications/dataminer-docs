@@ -129,6 +129,20 @@ From now on, the connection worker process has references to all assemblies that
 
 The user menu in the header bar of the DataMiner landing page (e.g. `https://myDMA/root/`) has been redesigned.
 
+#### DataMiner landing page: Theme selection [ID 43332]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+On the DataMiner landing page (e.g. `https://myDMA/root/`), you can now select one of the following themes:
+
+- Light (i.e. the default theme)
+- Dark
+- System (i.e. the theme set in the browser)
+
+Currently, the theme selector is only available when you add the following argument to the URL of the landing page:
+
+`?showAdvancedSettings=true`
+
 #### Web apps: Enhanced performance when starting a web app [ID 43364]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
