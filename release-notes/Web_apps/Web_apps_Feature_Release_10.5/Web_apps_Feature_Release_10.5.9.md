@@ -181,8 +181,8 @@ When the app settings of the GQI DxM are changed, in some cases, the persistent 
 
 As, since DataMiner version 10.5.0 [CU5]/10.5.8 [CU0], this connection check is no longer performed, the ConnectionManager will now automatically clear the reference to the persistent system connection when it detect that it has been closed, and will, when a new query request arrives, either retrieve the new persistent system connection reference or trigger a reconnect if no connection exists yet.
 
-#### Dashboards app: Not possible to make changes to a dashboard after cancelling the generation of a PDF report [ID 43358]
+#### Dashboards app: Some changes to a dashboard would no longer be saved after cancelling the generation of a PDF report [ID 43358]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
-When you cancelled the generation of a PDF report by closing the preview window, and then entered edit mode, up to now, it would incorrectly not be possible to make any changes to the dashboard in question.
+When you cancelled the generation of a PDF report by closing the preview window, and then entered edit mode, up to now, some changes made to the dashboard in question would incorrectly no longer be saved.
