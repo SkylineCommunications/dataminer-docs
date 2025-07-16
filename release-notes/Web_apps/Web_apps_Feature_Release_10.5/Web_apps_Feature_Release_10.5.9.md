@@ -129,6 +129,14 @@ From now on, the connection worker process has references to all assemblies that
 
 The user menu in the header bar of the DataMiner landing page (e.g. `https://myDMA/root/`) has been redesigned.
 
+#### Web apps: Enhanced performance when starting a web app [ID 43364]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of a number of enhancements, overall performance has increased when starting a web app.
+
+For example, information that does not frequently change (e.g. alarm colors) will now be cached in the web API. It will no longer be fetched each time a web app is opened.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Timeline component: Group label tooltips missing [ID 43242]
