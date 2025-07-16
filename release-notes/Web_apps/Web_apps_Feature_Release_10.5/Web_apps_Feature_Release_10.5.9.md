@@ -143,6 +143,14 @@ Currently, the theme selector is only available when you add the following argum
 
 `?showAdvancedSettings=true`
 
+#### DataMiner landing page: DataMiner icon in header bar will now show the name of the DMS instead of the URL of the landing page [ID 43341]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In the header bar of the DataMiner landing page (e.g. `https://myDMA/root/`), the DataMiner icon on the left will now show the name of the DMS* instead of the URL of the landing page.
+
+\**If not applicable, the DataMiner icon will show the name of the DMA instead.*
+
 #### Web apps: Enhanced performance when starting a web app [ID 43364]
 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
