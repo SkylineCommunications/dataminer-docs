@@ -20,6 +20,46 @@ This tool helps development teams by:
 
 ## Key Features
 
+![Definition of Done Tool - Main View](../../images/DoD%20View.png)
+
+### 📋 1. Clipboard & URL Management
+
+- **Task URL Copying** - Quick copying of task URLs for sharing
+- **Navigation Collaboration** - Seamless navigation to collaboration
+
+### ⏱️ 2. Time Registration
+
+- **Punch In/Out** - Track time spent on tasks with punch in/out functionality
+- **Time Validation** - Automatic validation of time entries (max 12 hours, logical time ranges)
+- **Cross-task Management** - Handle switching between different tasks seamlessly
+- **Time Entry Editing** - Modify start/end times and add comments to time logs
+
+### 🛠️ 3. External Tools
+
+- **OneNote Integration**
+
+  - Generate structured OneNote notebooks and pages
+  - Organize documentation by vendor, device, and version
+
+- **External Tool Links**
+
+  - Direct access to Catalog items
+  - Admin tool integration
+  - Connector documentation links (docs)
+  - Device documentation access (SharePoint)
+
+### 💬 4. Microsoft Teams Integration
+
+- **Schedule Meetings** - Create Teams meetings directly from tasks
+- **Group Chats** - Start group chats with relevant team members for task discussions
+
+### ⚡ 5. Smart Actions
+
+- **External Tool Links**
+
+  - Pipeline status monitoring
+  - Version Request
+
 ### 🗂️ Task Management
 
 - **Dynamic Checklists** - Automatically generated DoD steps based on task type and category
@@ -27,40 +67,6 @@ This tool helps development teams by:
 - **Guard Assignment** - Assign responsible users (guards) to specific DoD steps
 - **Comments & Reasons** - Add comments and skip reasons for audit trails
 - **Step Management** - Add or remove DoD steps dynamically
-
-### ⏱️ Time Registration
-
-- **Punch In/Out** - Track time spent on tasks with punch in/out functionality
-- **Time Validation** - Automatic validation of time entries (max 12 hours, logical time ranges)
-- **Cross-task Management** - Handle switching between different tasks seamlessly
-- **Time Entry Editing** - Modify start/end times and add comments to time logs
-
-### ⚡ Smart Actions
-
-- **Microsoft Teams Integration**
-
-  ![Teams Integration](../../images/TeamsIntegration.png)
-  1. Schedule Teams meetings directly from tasks
-  2. Create group chats with relevant team members for task discussions
-
-- **OneNote Integration**
-
-  ![Onenote Integration Create](../../images/OnenoteIntegrationCreate.png)
-  ![Onenote Integration](../../images/OnenoteIntegration.png)
-  - Generate structured OneNote notebooks and pages
-  - Organize documentation by vendor, device, and version
-
-- **External Tool Links**
-  - Direct access to Catalog items
-  - Connector documentation links (docs)
-  - Device documentation access (SharePoint)
-  - Admin tool integration
-  - Pipeline status monitoring
-
-### 📋 Clipboard & URL Management
-
-- **Task URL Copying** - Quick copying of task URLs for sharing
-- **Navigation** - Seamless navigation between related tools and documentation
 
 ## Supported Task Types
 
