@@ -446,3 +446,10 @@ From now on, it will try up to three times to read an element XML file that is b
 When a DOM definition field does not have a default value defined, by default, no value should be displayed. However, up to now, when the default time zone had been changed in the *ClientSettings.json* file, fields of type datetime would incorrectly contain the value "01/01/1970 - DefaultTimezone".
 
 From now on, if a DOM definition field does not have a default value defined, all fields of that type will be empty when displayed on a form.
+
+#### Swarming: Element would incorrectly be stuck in the Swarming state after being swarmed [ID 43360]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+<!-- Not added to MR 10.6.0 -->
+
+After an element had been swarmed, in some cases, that element would incorrectly be stuck in the Swarming state.
