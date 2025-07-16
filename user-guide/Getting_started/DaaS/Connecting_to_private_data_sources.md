@@ -18,7 +18,7 @@ If a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gat
 
 ## Establishing the site-to-site VPN connection
 
-> [!NOTE]
+> [!TIP]
 > If you are not familiar with any of the terminology used in this section, please refer to [Azure VPN Gateway FAQ](https://docs.azure.cn/en-us/vpn-gateway/vpn-gateway-vpn-faq).
 
 1. Make sure the following prerequisites are met:
