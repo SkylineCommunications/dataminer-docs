@@ -194,3 +194,9 @@ As, since DataMiner version 10.5.0 [CU5]/10.5.8 [CU0], this connection check is 
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When you cancelled the generation of a PDF report by closing the preview window, and then entered edit mode, up to now, some changes made to the dashboard in question would incorrectly no longer be saved.
+
+#### Dashboards app: Problem when sharing a dashboard [ID 43367]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, an NullReference exception could be thrown when you shared a dashboard.
