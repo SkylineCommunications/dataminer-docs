@@ -43,7 +43,7 @@ If a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gat
    - The preferred cryptographic algorithms and key strengths. We prefer to use the most secure and efficient settings that are available on your device.
 
       > [!NOTE]
-      > The IPSec Phase 1 or Main Mode lifetime is fixed to 28000 seconds for Azure VPN Gateways.
+      > The IPSec Phase 1 or Main Mode lifetime is fixed to 28800 seconds for Azure VPN Gateways.
 
    - Optionally, if the *VpnGw1AZ* [gateway SKU](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus) does not meet your requirements, the required SKU.
 
