@@ -49,10 +49,9 @@ You can follow the steps below or watch this short video, which shows you how to
 
    For more details, refer to *Change TCP/IP Settings* under [Essential Network Settings and Tasks in Windows](https://support.microsoft.com/en-us/windows/essential-network-settings-and-tasks-in-windows-f21a9bbc-c582-55cd-35e0-73431160a1b9).
 
-1. Download and install DataMiner Cloud Pack from [DataMiner Dojo](https://community.dataminer.services/dataminer-cloud-pack/).
+1. Download and install the DataMiner Cloud Pack from [DataMiner Dojo](https://community.dataminer.services/dataminer-cloud-pack/).
 
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/dataminer-installer/).
-
 
 > [!NOTE]
 > If you intend to install a DataMiner Agent that will be used in a [Failover setup](xref:About_DMA_Failover) based on virtual IP, you will also need to install [Npcap](https://nmap.org/npcap/) or WinPcap (deprecated) on the system. For a regular DataMiner Agent or a Failover setup based on hostname, this software will not be needed.
