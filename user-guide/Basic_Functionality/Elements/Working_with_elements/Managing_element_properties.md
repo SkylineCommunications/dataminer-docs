@@ -2,27 +2,14 @@
 uid: Managing_element_properties
 ---
 
-# Managing element properties
+# Managing custom properties
 
-## Accessing element properties
-
-To access the properties of an element:
-
-1. Right-click the element in the Surveyor or on the *Elements* page of a view card.
-
-1. Select *Properties*.
-
-   The *Properties* window will open, with a separate tab for general and for custom properties.
-
-> [!NOTE]
-> To access properties of views and services, you can also use the Surveyor right-click menu.
+> [!TIP]
+> For information on custom properties for alarms, see [Changing custom alarm properties](xref:Changing_custom_alarm_properties).
 
 ## Adding a custom property to an item
 
-> [!TIP]
-> See also: [DataMiner Cube – Adding properties to elements, views and services](https://community.dataminer.services/video/dataminer-cube-adding-properties-to-elements-views-and-services/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
-To add a custom property to a DataMiner item, which can be an element, but also a service, a view, or an alarm:
+To add a custom property to a DataMiner element, service, or view:
 
 1. Right-click the item and select *Properties*.
 

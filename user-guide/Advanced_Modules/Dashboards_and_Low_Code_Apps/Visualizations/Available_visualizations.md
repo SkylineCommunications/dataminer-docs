@@ -8,279 +8,77 @@ Many visualizations are available in the Dashboards app and Low-Code Apps, in th
 
 ### General
 
-<style>
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
- 
-/* Create five equal columns that sit next to each other */
-.column {
-  flex: 20%;
-  max-width: 20%;
-  padding: 0 11px;
-}
-</style>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Block.html" title="Block" target="_self"><img src="~/user-guide/images/Block.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Button.html" title="Button" target="_self"><img src="~/user-guide/images/Button.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/ButtonPanel.html" title="Button Panel" target="_self"><img src="~/user-guide/images/Button_Panel.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/DashboardForm.html" title="Form" target="_self"><img src="~/user-guide/images/Form.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Text.html" title="Text" target="_self"><img src="~/user-guide/images/Text.svg" style="width:100%"></a>
-  </div>  
-</div>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Image.html" title="Image" target="_self"><img src="~/user-guide/images/Image.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Icon.html" title="Icon" target="_self"><img src="~/user-guide/images/Icon.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Generic_map.html" title="Generic Map" target="_self"><img src="~/user-guide/images/Generic_Map.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Clock_digital.html" title="Clock" target="_self"><img src="~/user-guide/images/Clock.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Clock_analog.html" title="Clock (Analog)" target="_self"><img src="~/user-guide/images/Clock_Analog.svg" style="width:100%"></a>
-  </div>  
-</div>
-
-<div class="row">
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Group.html" title="Group" target="_self"><img src="~/user-guide/images/Group.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Maps.html" title="Maps" target="_self"><img src="~/user-guide/images/DL_Maps.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/DashboardQueryFilter.html" title="Query Filter" target="_self"><img src="~/user-guide/images/Query_Filter.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Stepper.html" title="Stepper" target="_self"><img src="~/user-guide/images/Stepper.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Trigger.html" title="Trigger" target="_self"><img src="~/user-guide/images/Trigger.svg" style="width:100%"></a>
-  </div>
-</div>
-
-<div class="row">
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/General/Web.html" title="Web" target="_self"><img src="~/user-guide/images/Web.svg" style="width:100%"></a>
-  </div>  
-</div>
+| Visualization | Description |
+|:--:|--|
+| ![Block](~/user-guide/images/Block.svg) | A [block](xref:DashboardBlock) is used as a divider between other components. |
+| ![Button](~/user-guide/images/Button.svg) | A [button](xref:DashboardButton) allows users to execute actions in a low-code app. |
+| ![Button panel](~/user-guide/images/Button_Panel.svg) | A [button panel](xref:DashboardButtonPanel) lets you replicate and control physical hardware buttons remotely. |
+| ![Form](~/user-guide/images/Form.svg) | A [form](xref:DashboardForm) allows users to view, enter, or update structured information in a clear layout. |
+| ![Text](~/user-guide/images/Text.svg) | A [text](xref:DashboardText) component displays a block of static text. |
+| ![Image](~/user-guide/images/Image.svg) | An [image](xref:DashboardImage) displays an uploaded image. |
+| ![Icon](~/user-guide/images/Icon.svg) | An [icon](xref:DashboardIcon) displays a symbol to help recognize or highlight something. |
+| ![Generic map](~/user-guide/images/Generic_Map.svg) | A [generic map](xref:DashboardGenericMap) visualizes real-time data from the DataMiner System on top of geographical maps provided by online map services. |
+| ![Clock](~/user-guide/images/Clock.svg) | A [digital clock](xref:DashboardClockDigital) displays the current time in a digital format. |
+| ![Clock (Analog)](~/user-guide/images/Clock_Analog.svg) | An [analog clock](xref:DashboardClockAnalog) displays the current time with clock hands. |
+| ![Group](~/user-guide/images/Group.svg) | A [group](xref:DashboardGroup) is used to display multiple components at once. |
+| ![Maps](~/user-guide/images/maps.svg) | A [maps](xref:DashboardMaps) component is used to display markers and/or lines on a map. |
+| ![Query filter](~/user-guide/images/Query_Filter.svg) | A [query filter](xref:DashboardQueryFilter) is used to filter and refine data based on specific criteria. |
+| ![Stepper](~/user-guide/images/Stepper.svg) | A [stepper](xref:DashboardStepper) is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. |
+| ![Trigger](~/user-guide/images/Trigger.svg) | A [trigger](xref:DashboardTrigger) allows users to manually or automatically refresh other components. |
+| ![Web](~/user-guide/images/Web.svg) | A [web](xref:DashboardWeb) component displays a webpage or a block of static HTML. It can also be used to display a video thumbnail. |
 
 ### States and values
 
-<style>
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
- 
-/* Create five equal columns that sit next to each other */
-.column {
-  flex: 20%;
-  max-width: 20%;
-  padding: 0 11px;
-}
-</style>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/States_and_values/State_component.html" title="State" target="_self"><img src="~/user-guide/images/State.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/States_and_values/Progress_bar_component.html" title="Progress Bar" target="_self"><img src="~/user-guide/images/Progress_Bar.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/States_and_values/Gauge_component.html" title="Gauge" target="_self"><img src="~/user-guide/images/Gauge.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/States_and_values/Ring_component.html" title="Ring" target="_self"><img src="~/user-guide/images/Ring.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/States_and_values/State_timeline_component.html" title="State Timeline" target="_self"><img src="~/user-guide/images/State_Timeline.svg" style="width:100%"></a>
-  </div>  
-</div>
+| Visualization | Description |
+|:--:|--|
+| ![State](~/user-guide/images/State.svg) | A [state](xref:DashboardState) component displays the state, name, and, if applicable, the value of an object. |
+| ![Progress bar](~/user-guide/images/Progress_Bar.svg) | A [progress bar](xref:DashboardProgressBar) shows the value of one or more analog parameters with a progress bar. |
+| ![Gauge](~/user-guide/images/Gauge.svg) | A [gauge](xref:DashboardGauge) displays the name and, if applicable, the value of an object within a colored gauge matching the state of the object. |
+| ![Ring](~/user-guide/images/Ring.svg) | A [ring](xref:DashboardRing) displays the name and, if applicable, the value of an object within a colored ring matching the state of the object. |
+| ![State timeline](~/user-guide/images/State_Timeline.svg) | A [state timeline](xref:DashboardStateTimeline) visualizes alarm state changes over time. |
 
 ### Tables
 
-<style>
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
- 
-/* Create five equal columns that sit next to each other */
-.column {
-  flex: 20%;
-  max-width: 20%;
-  padding: 0 11px;
-}
-</style>
-
-<div class="row">
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Tables/Parameter_table_component.html" title="Parameter Table" target="_self"><img src="~/user-guide/images/Parameter_Table.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Tables/Alarm_table_component.html" title="Alarm Table" target="_self"><img src="~/user-guide/images/Alarm_Table.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Tables/Pivot_table_component.html" title="Pivot Table" target="_self"><img src="~/user-guide/images/Pivot_Table.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Tables/Table_component.html" title="Table" target="_self"><img src="~/user-guide/images/Table.svg" style="width:100%"></a>
-  </div>  
-</div>
+| Visualization | Description |
+|:--:|--|
+| ![Parameter table](~/user-guide/images/Parameter_Table.svg) | A [parameter table](xref:DashboardParameterTable) displays a data table of an element. |
+| ![Alarm table](~/user-guide/images/Alarm_Table.svg) | An [alarm table](xref:DashboardAlarmTable) displays a list of alarms or information events, which can be filtered in multiple ways. |
+| ![Pivot table](~/user-guide/images/Pivot_Table.svg) | A [pivot table](xref:DashboardPivotTable) displays a status report for a number of parameters of the elements using the selected protocol and protocol version. |
+| ![Table](~/user-guide/images/Table.svg) | A [table](xref:DashboardTable) displays the results of a query in a structured, row-column format, similar to a spreadsheet. |
 
 ### Charts
 
-<style>
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
- 
-/* Create five equal columns that sit next to each other */
-.column {
-  flex: 20%;
-  max-width: 20%;
-  padding: 0 11px;
-}
-</style>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Charts/Column_and_Bar_chart.html" title="Column & Bar Chart" target="_self"><img src="~/user-guide/images/Column&Bar_Chart.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Charts/Line_and_area_chart.html" title="Line & Area Chart" target="_self"><img src="~/user-guide/images/Line&Area_Chart.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Charts/Pie_and_donut_chart.html" title="Pie & Donut Chart" target="_self"><img src="~/user-guide/images/Pie&Donut_Chart.svg" style="width:100%"></a>
-  </div>  
-</div>
+| Visualization | Description |
+|:--:|--|
+| ![Column & Bar chart](~/user-guide/images/Column_Bar_Chart.svg) | A [column & bar chart](xref:ColumnAndBarChart) displays information in the form of a column or bar chart. This can for example be based on a GQI query or on DataMiner alarm information for elements or services. |
+| ![Line & Area chart](~/user-guide/images/Line_Area_Chart.svg) | A [line & area chart](xref:LineAndAreaChart) displays a graph that can for example be based on DataMiner trending or on a GQI query. |
+| ![Pie & Donut chart](~/user-guide/images/Pie_Donut_Chart.svg) | A [pie & donut chart](xref:PieAndDonutChart) displays information in a chart shaped like a pie or donut. |
 
 ### Other
 
-<style>
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
- 
-/* Create five equal columns that sit next to each other */
-.column {
-  flex: 20%;
-  max-width: 20%;
-  padding: 0 11px;
-}
-</style>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Timeline_component.html" title="Timeline" target="_self"><img src="~/user-guide/images/Timeline.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/List.html" title="List" target="_self"><img src="~/user-guide/images/List.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/EPMPicker.html" title="EPM picker" target="_self"><img src="~/user-guide/images/EPM_Picker.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Grid.html" title="Grid" target="_self"><img src="~/user-guide/images/Grid.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Interactive_automation_script.html" title="Interactive Automation script" target="_self"><img src="~/user-guide/images/IAS.svg" style="width:100%"></a>
-  </div>
-</div>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Node_edge_graph.html" title="Node Edge Graph" target="_self"><img src="~/user-guide/images/Node_Edge_Graph.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Parameter_page.html" title="Parameter Page" target="_self"><img src="~/user-guide/images/Parameter_Page.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Service_definition.html" title="Service Definition" target="_self"><img src="~/user-guide/images/Service_Definition.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Spectrum_analyzer.html" title="Spectrum Analyzer" target="_self"><img src="~/user-guide/images/Spectrum_Analyzer.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Visual_Overview_component.html" title="Visual Overview" target="_self"><img src="~/user-guide/images/Visual_Overview.svg" style="width:100%"></a>
-  </div>
-</div>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Tree.html" title="Tree" target="_self"><img src="~/user-guide/images/Tree.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/ParameterPicker.html" title="Parameter picker" target="_self"><img src="~/user-guide/images/Parameter_Picker.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Trend_statistics.html" title="Trend Statistics" target="_self"><img src="~/user-guide/images/Trend_Statistics.svg" style="width:100%"></a>
-  </div> 
-</div>
+| Visualization | Description |
+|:--:|--|
+| ![Timeline](~/user-guide/images/Timeline.svg) | A [timeline](xref:DashboardTimeline) is used to visualize and manage bookings, events, and other time-bound data. |
+| ![List](~/user-guide/images/List.svg) | A [list](xref:DashboardList) allows users to select one or more items in a list. |
+| ![EPM picker](~/user-guide/images/EPM_Picker.svg) | An [EPM picker](xref:DashboardEPMPicker) allows users to make a filter selection for a particular EPM element and EPM chain. |
+| ![Grid](~/user-guide/images/Grid.svg) | A [grid](xref:DashboardGrid) displays information in a clear, tile-based grid format and offers a wide range of customization options. |
+| ![IAS](~/user-guide/images/IAS.svg) | An [interactive Automation script](xref:InteractiveAutomationScript) component visualizes any interactive Automation script (IAS) within pages or panels of a low-code app. |
+| ![Node edge graph](~/user-guide/images/Node_Edge_Graph.svg) | A [node edge graph](xref:DashboardNodeEdgeGraph) visualizes any type of objects (i.e. "nodes") and the connections between them (i.e. "edges"). By linking parameters and properties to those nodes and edges, you can turn a node edge graph into a full-fledged analytical tool that shows real-time alarm statuses and KPI data. |
+| ![Parameter page](~/user-guide/images/Parameter_Page.svg) | A [parameter page](xref:DashboardParameterPage) displays a particular data page of an element. |
+| ![Service definition](~/user-guide/images/Service_Definition.svg) | A [service definition](xref:DashboardServiceDefinition) displays a service definition as a node edge graph. It can display the graph based on service definition data or booking data. |
+| ![Spectrum analyzer](~/user-guide/images/Spectrum_Analyzer.svg) | A [spectrum analyzer](xref:DashboardSpectrumAnalyzer) displays a spectrum graph. |
+| ![Visual Overview](~/user-guide/images/Visual_Overview.svg) | A [visual overview](xref:DashboardVisualOverview) displays a Visio file linked to an element. |
+| ![Tree](~/user-guide/images/Tree.svg) | A [tree](xref:DashboardTree) allows users to select one or more items in a tree view. |
+| ![Parameter picker](~/user-guide/images/Parameter_Picker.svg) | A [parameter picker](xref:DashboardParameterPicker) allows users to select multiple parameters from a predefined list. |
+| ![Trend statistics](~/user-guide/images/Trend_Statistics.svg) | A [trend statistics](xref:DashboardTrendStatistics) component displays the minimum, average, and maximum value of one or more trended parameters. |
 
 ### Basic controls
 
-<style>
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
- 
-/* Create five equal columns that sit next to each other */
-.column {
-  flex: 20%;
-  max-width: 20%;
-  padding: 0 11px;
-}
-</style>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/Dropdown.html" title="DropDown" target="_self"><img src="~/user-guide/images/Dropdown.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardNumericInput.html" title="Numeric Input" target="_self"><img src="~/user-guide/images/Numeric_Input.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardSearchInput.html" title="DropDown" target="_self"><img src="~/user-guide/images/Search_Input.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/DashboardTextInput.html" title="Text Input" target="_self"><img src="~/user-guide/images/Text_Input.svg" style="width:100%"></a>
-  </div>  
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/Timerange.html" title="Time Range" target="_self"><img src="~/user-guide/images/Time_Range.svg" style="width:100%"></a>
-  </div>
-</div>
-
-<div class="row"> 
-  <div class="column">
-    <a href="/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Basic_controls/Toggle.html" title="Toggle" target="_self"><img src="~/user-guide/images/Toggle.svg" style="width:100%"></a>
-  </div>
-</div>
+| Visualization | Description |
+|:--:|--|
+| ![Dropdown](~/user-guide/images/Dropdown.svg) | A [dropdown](xref:DashboardDropdown) allows users to select an item in a dropdown list. |
+| ![Numeric input](~/user-guide/images/Numeric_Input.svg) | A [numeric input](xref:DashboardNumericInput) component allows users to enter numbers, which will then be available as data in the dashboard or app. |
+| ![Search input](~/user-guide/images/Search_Input.svg) | A [search input](xref:DashboardSearchInput) component allows users to enter text for the purpose of searching for something in the dashboard or app. |
+| ![Text input](~/user-guide/images/Text_Input.svg) | A [text input](xref:DashboardTextInput) component allows users to enter text, which will then be available as data in the dashboard or app. |
+| ![Time range](~/user-guide/images/Time_Range.svg) | A [time range](xref:TimeRange) is used to enter a specific time range, which can then for example be used as a filter for compatible components. |
+| ![Toggle](~/user-guide/images/Toggle.svg) | A [toggle](xref:Toggle) is used to enable or disable specific capabilities. |

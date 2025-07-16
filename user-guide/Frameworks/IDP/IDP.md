@@ -33,7 +33,6 @@ More than ever, it is crucial to keep track of the network implementation and ne
 > [!TIP]
 > For more information:
 >
-> - [Webinar](https://community.dataminer.services/video/experts-insights-dataminer-infrastructure-discovery-and-provisioning-idp/)
 > - [Introduction video](https://www.youtube.com/watch?v=DdrSfUBzfOI)
 
 ## IDP components

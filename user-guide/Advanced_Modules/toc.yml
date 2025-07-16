@@ -276,8 +276,6 @@ items:
       - name: Dashboards app
         topicUid: newR_D
         items:
-          - name: Accessing the Dashboards app
-            topicUid: Accessing_the_Dashboards_app
           - name: Overview of the Dashboards app UI
             topicUid: Overview_of_the_Dashboards_app_UI
           - name: Managing dashboard folders
@@ -330,8 +328,6 @@ items:
       - name: Low-Code Apps
         topicUid: Application_framework
         items:
-          - name: Accessing the Low-Code Apps module
-            topicUid: Accessing_custom_apps
           - name: Creating low-code applications
             topicUid: Creating_custom_apps
           - name: Editing a low-code application
@@ -634,6 +630,8 @@ items:
                 topicUid: GQI_Aggregate
               - name: Column manipulations
                 topicUid: GQI_Column_manipulations
+              - name: Custom operator
+                topicUid: GQI_Custom_Operator_About
               - name: Filter
                 topicUid: GQI_Filter
               - name: Join
@@ -644,137 +642,6 @@ items:
                 topicUid: GQI_Sort
               - name: Top X
                 topicUid: GQI_Top_X
-          - name: Extensions
-            topicUid: GQI_Extensions
-            items:
-              - name: Configuring an ad hoc data source
-                topicUid: Configuring_an_ad_hoc_data_source_in_a_query
-                items:
-                  - name: Building blocks of queries with ad hoc data
-                    topicUid: Ad_hoc_Building_blocks
-                  - name: Life cycle of queries with ad hoc data
-                    topicUid: Ad_hoc_Life_cycle
-                  - name: Linking rows to DataMiner objects
-                    topicUid: Ad_hoc_Metadata
-                  - name: Examples
-                    items:
-                      - name: Forwarding dummy data to the GQI
-                        topicUid: Forwarding_dummy_data_to_GQI
-                      - name: Scaling an ad hoc data source
-                        topicUid: Scaling_Ad_hoc_Data_Source
-                  - name: Tutorials
-                    items:
-                      - name: Building a GQI data source that fetches satellites
-                        topicUid: Ad_hoc_Tutorials_Satellites
-                      - name: Building a GQI data source that retrieves data from a DMS
-                        topicUid: Ad_hoc_Tutorials_GQIDMS
-              - name: Configuring a custom operator
-                topicUid: GQI_Custom_Operator
-                items:
-                  - name: Building blocks of a custom operator
-                    topicUid: CO_Building_blocks
-                  - name: Life cycle of a custom operator
-                    topicUid: CO_Life_cycle
-                  - name: Modifying links to DataMiner objects
-                    topicUid: CO_Metadata
-                  - name: Tutorials
-                    items:
-                      - name: Creating a minus operator
-                        topicUid: Creating_Minus_Operator
-                      - name: Creating a duration operator
-                        topicUid: Creating_Duration_Operator
-                      - name: Optimizing your custom operator
-                        topicUid: Custom_Operator_Tutorial
-                      - name: Providing a custom sort order
-                        topicUid: GQI_Redirect_Sort_Tutorial
-              - name: API reference
-                items:
-                  - name: GenIfRowMetadata
-                    topicUid: GQI_GenIfRowMetadata
-                  - name: GQIArgument
-                    topicUid: GQI_GQIArgument
-                  - name: GQICell
-                    topicUid: GQI_GQICell
-                  - name: GQIColumn
-                    topicUid: GQI_GQIColumn
-                  - name: GQIColumn<T>
-                    topicUid: GQI_GQIColumnT
-                  - name: GQIDMS
-                    topicUid: GQI_GQIDMS
-                  - name: GQIEditableHeader
-                    topicUid: GQI_GQIEditableHeader
-                  - name: GQIEditableRow
-                    topicUid: GQI_GQIEditableRow
-                  - name: GQILogLevel
-                    topicUid: GQI_GQILogLevel
-                  - name: GQIPage
-                    topicUid: GQI_GQIPage
-                  - name: GQIRow
-                    topicUid: GQI_GQIRow
-                  - name: GQISortDirection
-                    topicUid: GQI_GQISortDirection
-                  - name: IGQIColumn
-                    topicUid: GQI_IGQIColumn
-                  - name: IGQIColumnOperator
-                    topicUid: GQI_IGQIColumnOperator
-                  - name: IGQICoreBlock
-                    topicUid: GQI_IGQICoreBlock
-                  - name: IGQICoreDataSource
-                    topicUid: GQI_IGQICoreDataSource
-                  - name: IGQICoreOperator
-                    topicUid: GQI_IGQICoreOperator
-                  - name: IGQIDataSource
-                    topicUid: GQI_IGQIDataSource
-                  - name: IGQIDataSourceNode 
-                    topicUid: GQI_IGQIDataSourceNode 
-                  - name: IGQIFactory
-                    topicUid: GQI_IGQIFactory
-                  - name: IGQIFilterOperator
-                    topicUid: GQI_IGQIFilterOperator
-                  - name: IGQIInputArguments
-                    topicUid: GQI_IGQIInputArguments
-                  - name: IGQILogger
-                    topicUid: GQI_IGQILogger
-                  - name: IGQIOnDestroy
-                    topicUid: GQI_IGQIOnDestroy
-                  - name: IGQIOnInit
-                    topicUid: GQI_IGQIOnInit
-                  - name: IGQIOnPrepareFetch
-                    topicUid: GQI_IGQIOnPrepareFetch
-                  - name: IGQIOperator
-                    topicUid: GQI_IGQIOperator
-                  - name: IGQIOperatorNode
-                    topicUid: GQI_IGQIOperatorNode
-                  - name: IGQIOptimizableDataSource
-                    topicUid: GQI_IGQIOptimizableDataSource
-                  - name: IGQIOptimizableOperator
-                    topicUid: GQI_IGQIOptimizableOperator
-                  - name: IGQIQueryNode
-                    topicUid: GQI_IGQIQueryNode
-                  - name: IGQIRowOperator
-                    topicUid: GQI_IGQIRowOperator
-                  - name: IGQISortField
-                    topicUid: GQI_IGQISortField
-                  - name: IGQISortOperator
-                    topicUid: GQI_IGQISortOperator
-                  - name: IGQIUpdateable
-                    topicUid: GQI_IGQIUpdateable
-                  - name: IGQIUpdater
-                    topicUid: GQI_IGQIUpdater
-                  - name: ObjectRefMetadata
-                    topicUid: GQI_ObjectRefMetadata
-                  - name: OnArgumentsProcessedInputArgs
-                    topicUid: GQI_OnArgumentsProcessedInputArgs
-                  - name: OnInitInputArgs
-                    topicUid: GQI_OnInitInputArgs
-                  - name: RowMetadataBase
-                    topicUid: GQI_RowMetadataBase
-                  - name: TimeRangeMetadata
-                    topicUid: GQI_TimeRangeMetadata
-              - name: Best practices
-                topicUid: GQI_Extensions_Best_Practices
-              - name: Logging
-                topicUid: GQI_Extensions_Logging
           - name: Logging
             topicUid: GQI_Logging
           - name: Query updates

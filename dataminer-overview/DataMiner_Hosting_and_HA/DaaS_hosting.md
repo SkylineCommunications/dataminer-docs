@@ -1,5 +1,6 @@
 ---
 uid: DaaS_hosting
+description: DataMiner as a Service will allow you to spin up your DataMiner System in the cloud in just a few minutes with cloud-hosted DataMiner nodes.
 ---
 
 # DataMiner as a Service
@@ -62,7 +63,7 @@ For its data storage, DataMiner as a Service makes use of DataMiner Storage as a
 
 With DataMiner as a Service, Skyline offers a complete cloud-native experience:
 
-![Pillars_NMS](~/dataminer-overview/images/Hosting_DaaS_create.png)
+![Pillars_NMS](~/user-guide/images/Hosting_DaaS_create.png)
 
 You can go to [dataminer.services](xref:Overview_dataminer_services), where
 

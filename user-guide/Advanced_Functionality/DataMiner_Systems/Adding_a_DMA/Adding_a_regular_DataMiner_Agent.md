@@ -4,10 +4,6 @@ uid: Adding_a_regular_DataMiner_Agent
 
 # Adding a regular DataMiner Agent
 
-> [!TIP]
-> See also:
-> [Agents – Adding a DMA to a cluster](https://community.dataminer.services/video/agents-adding-a-dma-to-a-cluster/) ![Video](~/user-guide/images/video_Duo.png)
-
 > [!IMPORTANT]
 >
 > - Before you add a DataMiner Agent, make sure the IP network ports are configured correctly. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).

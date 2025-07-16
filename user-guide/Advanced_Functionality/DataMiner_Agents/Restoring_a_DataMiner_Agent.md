@@ -12,11 +12,8 @@ Before restoring a DataMiner Agent, you need to [prepare the destination server]
 
 > [!IMPORTANT]
 >
-> - If you use [Storage as a Service](xref:STaaS) and want to restore your DataMiner Agent on a new (virtual) machine, contact <staas@dataminer.services> to make sure your new setup is connected correctly.
+> - If you use [Storage as a Service](xref:STaaS) and want to restore your DataMiner Agent on a new (virtual) machine, contact <support@dataminer.services> to make sure your new setup is connected correctly.
 > - If a DataMiner Agent is connected to dataminer.services and you want to restore it on a new (virtual) machine, it is important that you take extra steps to [make sure that the connection is maintained](xref:Maintaining_cloud_connection_when_restoring).
 
 > [!NOTE]
 > For information on how to back up and restore an OpenSearch or Elasticsearch database, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups) or [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups), respectively.
-
-> [!TIP]
-> See also: [Backup – Restoring and migrating a DataMiner Agent](https://community.dataminer.services/video/backup-restoring-and-migrating-a-dataminer-agent/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

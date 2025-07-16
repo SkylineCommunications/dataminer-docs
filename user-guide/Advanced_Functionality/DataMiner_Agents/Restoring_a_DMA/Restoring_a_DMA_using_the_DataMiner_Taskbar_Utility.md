@@ -28,7 +28,7 @@ uid: Restoring_a_DMA_using_the_DataMiner_Taskbar_Utility
 > - Elasticsearch: see [Taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux).
 > - Cassandra: see [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool).
 >
-> If you are using [Storage as a Service](xref:STaaS), there is no need to restore the database. If you want to restore your DataMiner Agent on a new (virtual) machine, contact <staas@dataminer.services> to make sure your new setup is connected correctly.
+> If you are using [Storage as a Service](xref:STaaS), there is no need to restore the database. If you want to restore your DataMiner Agent on a new (virtual) machine, contact <support@dataminer.services> to make sure your new setup is connected correctly.
 
 > [!TIP]
 > See also: [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)

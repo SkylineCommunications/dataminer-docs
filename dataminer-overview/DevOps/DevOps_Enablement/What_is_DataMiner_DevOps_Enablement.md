@@ -10,7 +10,7 @@ A powerful, agile, data-driven operation heavily depends on the successful imple
 
 DevOps is the combination of cultural philosophies, practices, and tools that increase an organization’s ability to **deliver applications and services at high velocity**: evolving and improving products and services at a faster pace than organizations using traditional processes.
 
-![AboutDevOps](~/dataminer-overview/images/About_DevOps.png)
+![AboutDevOps](~/user-guide/images/About_DevOps.png)
 
 ## About DataMiner and DevOps
 
@@ -30,7 +30,7 @@ With DataMiner DevOps Enablement, Skyline provides you with a proven and fully m
 
 It ensures that you can not only successfully deploy DataMiner and achieve your initial project-specific goals and ambitions, but you are also fully equipped and empowered to get the maximum out of the investment and reap the benefits of a DevOps operation.
 
-![DevOps](~/dataminer-overview/images/DevOpsEnablement.png)
+![DevOps](~/user-guide/images/DevOpsEnablement.png)
 
 The initiative can be organized independently, for anybody who already has a DataMiner-empowered operation, but typically also runs in parallel with each contracted project.
 

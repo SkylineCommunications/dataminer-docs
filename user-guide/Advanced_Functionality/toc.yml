@@ -150,32 +150,32 @@ items:
       - name: Running BPA tests
         topicUid: Running_BPA_tests
         items:
-          - name: Cassandra DB Size
-            topicUid: BPA_Cassandra_DB_Size
-          - name: NATS connections between the DataMiner Agents
-            topicUid: BPA_Check_Agent_Presence
+          - name: Active Runtime Errors
+            topicUid: BPA_Report_Active_RTE
           - name: Antivirus on the DataMiner Agents
             topicUid: BPA_Check_Antivirus_DLLs
-          - name: SLNet connections between the DataMiner Agents
-            topicUid: BPA_Check_Cluster_SLNet_Connections
+          - name: Cassandra DB Size
+            topicUid: BPA_Cassandra_DB_Size
           - name: Check Deprecated DLL Usage
             topicUid: BPA_Check_Deprecated_DLL_Usage
           - name: Database Security
             topicUid: BPA_Database_Security
+          - name: DataMiner Agent Minimum Requirements
+            topicUid: BPA_Minimum_Requirements_Check
           - name: Firewall Configuration
             topicUid: BPA_Firewall_Configuration
           - name: HTTPS Configuration
             topicUid: BPA_Https_Configuration
-          - name: DataMiner Agent Minimum Requirements
-            topicUid: BPA_Minimum_Requirements_Check
+          - name: NATS cluster verification
+            topicUid: BPA_Check_Agent_Presence
           - name: Password Strength
             topicUid: BPA_Password_Strength
-          - name: Active Runtime Errors
-            topicUid: BPA_Report_Active_RTE
           - name: Security Advisory
             topicUid: BPA_Security_Advisory
           - name: Service Automatic Properties
             topicUid: BPA_Service_Automatic_Properties
+          - name: SLNet connections between the DataMiner Agents
+            topicUid: BPA_Check_Cluster_SLNet_Connections
           - name: SRM Framework Configuration
             topicUid: BPA_SRM_Framework_Configuration
           - name: SRM Function Resources Consistency

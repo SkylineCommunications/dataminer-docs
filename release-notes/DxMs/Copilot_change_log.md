@@ -4,6 +4,10 @@ uid: Copilot_change_log
 
 # Copilot change log
 
+#### 7 July 2025 - Fix - Copilot 1.4.0 - Automatically generated query name would not be a meaningful term [ID 43255]
+
+When, in the Dashboards app or Low-Code Apps, you used the Natural language to GQI feature to create a query, in some cases, the automatically generated query name would not be a meaningful term.
+
 #### 14 April 2025 - Copilot 1.0.0 - Natural language to GQI [ID 42234] [ID 42507]
 
 The new Copilot DxM extends DataMiner with conversational AI. In this first release, it can translate a request in natural language into a GQI query.

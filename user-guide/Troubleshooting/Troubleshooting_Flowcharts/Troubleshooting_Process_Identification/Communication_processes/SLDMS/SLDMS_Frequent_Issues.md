@@ -56,7 +56,7 @@ Y2["1\. On the DMA with the most recent file, go to System Center.<br>2\. Go to 
 N2(["Check for connectivity issues between DMAs."])
 C{{Has the file been synchronized?}}
 Y3["Verify on all DMAs in the cluster."]
-N3(["Contact tech support; this might not work every time."])
+N3(["Contact DataMiner Support; this might not work every time."])
 %% Connect blocks %%
 FNS --- Check
 Check --- |YES| Y1

@@ -248,7 +248,7 @@ Some of the ports that are opened by default can potentially be closed depending
 
 Some ports that are displayed above are no longer opened by default during DataMiner installation with newer versions of the installer. However, to avoid breaking changes, these ports are **not closed when you upgrade an existing DataMiner System** that was installed with an installer prior to version 10.1. We therefore recommend that you verify if any of the following ports can be closed manually:
 
-- TCP port **23** can be closed if the DataMiner Telnet feature is disabled. For more information, see [DataMiner.Telnet](xref:DataMiner_xml#dataminertelnet).
+- TCP port **23** can be closed if the DataMiner Telnet feature is disabled. For more information, see [DataMiner.Telnet](xref:DataMiner.Telnet).
 
 - TCP port **9004** can always be closed in the currently supported DataMiner versions.
 

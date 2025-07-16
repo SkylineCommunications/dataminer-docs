@@ -10,7 +10,6 @@ You will often find filter boxes in DataMiner Cube that you can use to filter th
 > See also:
 >
 > - [Using the Alarm Console quick filter box](xref:ApplyingAlarmFiltersInTheAlarmConsole#using-the-alarm-console-quick-filter-box)
-> - [Rui’s Rapid Recap – Quick filters](https://community.dataminer.services/video/ruis-rapid-recap-quick-filters/) on DataMiner Dojo
 
 ## Tips on the use of quick filters
 

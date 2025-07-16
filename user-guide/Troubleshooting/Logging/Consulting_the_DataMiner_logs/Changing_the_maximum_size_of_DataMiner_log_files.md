@@ -16,3 +16,4 @@ In System Center, you can change the maximum total size of the log files in your
 >
 > - The total size of SLNet log files is not controlled by this setting. See [SLNet.exe.config](xref:SLNet_exe_config).
 > - This setting determines the size of the log files for the entire DataMiner System, even though prior to DataMiner 10.2.0 [CU22], 10.3.0 [CU11], 10.4.0 [CU0], and 10.4.2, the description of the setting suggests that only the size of the log files on the current DMA is affected.
+> - In *DataMiner.xml*, you can also modify how long log files are stored. See [DayToKeep](xref:DataMiner.Logging.DaysToKeep).

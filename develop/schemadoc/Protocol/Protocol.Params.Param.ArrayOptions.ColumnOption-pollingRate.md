@@ -6,7 +6,7 @@ uid: Protocol.Params.Param.ArrayOptions.ColumnOption-pollingRate
 
 <!-- RN 16411 -->
 
-Specifies the polling rate of this column (in ms).
+The `pollingRate` attribute allows you to slow down polling for specific SNMP columns in a table by specifying a minimum interval (in milliseconds) between polling. This attribute applies only to SNMP columns.
 
 ## Content Type
 
@@ -18,40 +18,28 @@ unsignedInt
 
 ## Remarks
 
-As data in some columns (e.g. interface name) may be expected to change less frequently than data in other columns, it is possible to configure a slower poll cycle for specific columns.
+Use `pollingRate` to reduce the polling frequency for columns that change infrequently or contain large amounts of data. Set the attribute to the desired interval in milliseconds.
 
-To specify a column-specific poll cycle for a specific column, add a pollingRate attribute, and set its value to a number of milliseconds.
-
-Note that the polling rate that will eventually be used for the column also takes into account the corresponding timer interval of the table.
-
-**SNMP instance must be stored in the table**
-
-For this feature to work, the SNMP instance must be stored in the table. This way, it is possible to keep track of the instances that have already been polled. Also, if a new instance is added to the SNMP table, all columns for that specific instance can immediately be polled in order to retrieve all information available for a particular instance.
-
-In order to have the SNMP instance stored in the index column, go to the `<SNMP>` tag of the table parameter, and add the "instance" option to the options attribute of the `<OID>` tag. For example:
-
-```xml
-<Param>
-  ...
-   <SNMP>
-      <Enabled>true</Enabled>
-      <OID type="complete" options="instance;multipleGetNext">1.3.6.1.2.1.2.2</OID>
-   </SNMP>
-  ...
-</Param>
-```
+> [!IMPORTANT]
+>
+> - The [`instance`](xref:ConnectionsSnmpRetrievingTables#instance-option) option must be enabled for the table.
+> - When the [**GetNext**](xref:ConnectionsSnmpRetrievingTables#instance-option) polling method is used, all columns will still be polled, but the result will not be written to the column. Setting `pollingRate` has no practical effect in this case, so it is better not to use `pollingRate` with **GetNext**.
 
 > [!NOTE]
-> When, during a particular poll, a new instance is discovered in the table, the entire row will be polled instead of only the columns that had to be polled at that moment.
+>
+> - `pollingRate` can only slow down polling. If set lower than or equal to the protocol timer interval, it has no effect; the column will be polled at the timer interval.
+> - The column is skipped until its `pollingRate` interval has elapsed, ensuring that it is not polled more frequently than specified.
+> - When new rows are discovered during polling, all columns for that row are polled immediately, regardless of their `pollingRate`.
 
 ## Examples
 
-In the following example, every 10 seconds a protocol timer executes the group in which the table is polled.
+Suppose the polling timer is set to 10 seconds. Columns without a `pollingRate` are polled every 10 seconds. Columns with a `pollingRate` greater than the timer are polled at the next matching interval.
 
-- Columns 5, 6, 7 and 8 do not have a column-specific poll cycle and will therefore be polled every 10 seconds.
-- Column 1 has a column-specific poll cycle of 11 seconds, but as the protocol timer is set to 10 seconds, it will be polled every other poll cycle, i.e. every 20 seconds.
-- Column 2 has a column-specific poll cycle of 20 seconds, and will be polled every 20 seconds.
-- Column 3 has a column-specific poll cycle of 21 seconds and column 4 has a column-specific poll cycle of 30 seconds. Both will be polled every 30 seconds.
+- Columns 5–8: Default polling (every 10 seconds)
+- Column 1: `pollingRate` 11,000 ms (polled every 20 seconds)
+- Column 2: `pollingRate` 20,000 ms (polled every 20 seconds)
+- Column 3: `pollingRate` 21,000 ms (polled every 30 seconds)
+- Column 4: `pollingRate` 30,000 ms (polled every 30 seconds)
 
 ```xml
 <ArrayOptions index="0">

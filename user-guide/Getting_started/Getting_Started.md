@@ -7,7 +7,7 @@ description: Create a DataMiner System, and learn how to interact with DataMiner
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Getting_started/Creating_a_DataMiner_System.html" title="Creating a DMS" target="_self"><img src="~/user-guide/images/Creating_DMS.svg" style="width:100%"></a>
+    <a href="/user-guide/Getting_started/Deploying_a_DataMiner_System.html" title="Deploying a DMS" target="_self"><img src="~/user-guide/images/Deploying_DMS.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Getting_started/Interacting_with_DataMiner/Client_apps.html" title="Interacting with DataMiner" target="_self"><img src="~/user-guide/images/Interacting_with_DataMiner.svg" style="width:100%"></a>
@@ -19,7 +19,7 @@ description: Create a DataMiner System, and learn how to interact with DataMiner
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Getting_started/The_DataMiner_User_Interface/Monitoring_app/The_Monitoring_app_user_interface.html" title="Working with the Monitoring app" target="_self"><img src="~/user-guide/images/Working_with_Monitoring_app.svg" style="width:100%"></a>
+    <a href="/user-guide/Getting_started/The_DataMiner_User_Interface/Monitoring_app/Working_with_the_Monitoring_app.html" title="Working with the Monitoring app" target="_self"><img src="~/user-guide/images/Working_with_Monitoring_app.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Getting_started/Getting_started_community.html" title="DataMiner Community" target="_self"><img src="~/user-guide/images/DataMiner_Community.svg" style="width:100%"></a>
@@ -56,12 +56,12 @@ description: Create a DataMiner System, and learn how to interact with DataMiner
 
 <div class="row"> 
   <div class="column">
+    <a href="/user-guide/DataMiner_Tools/DataMinerTools.html" title="Tools" target="_self"><img src="~/user-guide/images/DataMiner_tools.svg" style="width:100%"></a>
+  </div>
+  <div class="column">
     <a href="/user-guide/Troubleshooting/Troubleshooting.html" title="Troubleshooting" target="_self"><img src="~/user-guide/images/Docs_Troubleshooting.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Reference/Reference.html" title="Reference" target="_self"><img src="~/user-guide/images/Docs_Reference.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
-    <a href="https://community.dataminer.services/videos/" title="Video Library" target="_self"><img src="~/user-guide/images/Docs_VideoLibrary.svg" style="width:100%"></a>
   </div>
 </div>

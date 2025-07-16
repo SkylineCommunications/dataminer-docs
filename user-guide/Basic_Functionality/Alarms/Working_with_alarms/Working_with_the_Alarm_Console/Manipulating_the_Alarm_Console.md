@@ -27,6 +27,3 @@ uid: Manipulating_the_Alarm_Console
 - To undock one tab of the Alarm Console, drag the tab header out of the Alarm Console.
 
 - To dock an alarm tab page as a separate card in the workspace, first drag the tab header out of the Alarm Console, and then click *Dock to workspace* in the top right corner of the window.
-
-    > [!TIP]
-    > See also: [Alarm Console – Creating a workspace with a filtered alarm tab page](https://community.dataminer.services/video/alarm-console-creating-a-workspace-with-a-filtered-alarm-tab-page/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

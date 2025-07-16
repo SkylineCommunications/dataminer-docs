@@ -228,10 +228,13 @@ Restrictions:
 > [!IMPORTANT]
 > Be careful how you handle async code in an Automation script. See [Handling async code](xref:Handling_Async_Code).
 
+> [!NOTE]
+> From DataMiner 10.5.7/10.6.0 <!-- RN 42969 --> onwards, the [OnRequestScriptInfo](xref:Skyline.DataMiner.Automation.AutomationEntryPointType.Types.OnRequestScriptInfo) entry point allows other Automation scripts (or any other code) to request information about the script in question. Information about implementing that entry point and executing it is available in [this how-to](xref:Implementing_OnRequestScriptInfo_Entry_Point).
+
 ## Online help and user assistance
 
 > [!TIP]
-> See also: [The Basics of DataMiner Automation Snippets](https://community.dataminer.services/video/the-basics-of-dataminer-automation-snippets/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> See also: [The Basics of DataMiner Automation Snippets](https://www.youtube.com/watch?v=i5_FLER_-tE) ![Video](~/user-guide/images/video_Duo.png)
 
 ### Sample snippets in shortcut menu
 

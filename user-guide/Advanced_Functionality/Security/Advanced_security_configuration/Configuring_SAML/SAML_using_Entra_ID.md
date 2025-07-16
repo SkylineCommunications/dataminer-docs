@@ -1,5 +1,6 @@
 ---
 uid: SAML_using_Entra_ID
+description: Microsoft Entra ID (known as Azure Active Directory prior to July 2023) is supported as an identity provider for external authentication via SAML.
 ---
 
 # Configuring SAML with Microsoft Entra ID as identity provider
@@ -172,7 +173,7 @@ To set up external authentication, you first need to create an enterprise applic
 
 1. Go to the folder `C:\Skyline DataMiner` and open the *DataMiner.xml* file.
 
-1. In *DataMiner.xml*, configure the `<ExternalAuthentication>` tag as illustrated in the example below:
+1. In *DataMiner.xml*, configure the [ExternalAuthentication](xref:DataMiner.ExternalAuthentication) tag as illustrated in the example below:
 
    ```xml
    <DataMiner ...>

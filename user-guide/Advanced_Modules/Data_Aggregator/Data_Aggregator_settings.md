@@ -44,7 +44,7 @@ For example:
 
 ## Using the GQI DxM for queries
 
-By default, queries are executed using CoreGateway and SLHelper. To execute the queries using the [GQI DxM](xref:GQI_DxM), enable the following setting:
+By default, queries are executed using CoreGateway and SLHelper. To execute the queries using the [GQI DxM](xref:GQI_DxM), enable the following setting in *appsettings.custom.json* (see [GQI DxM configuration](xref:GQI_DxM#configuration)):
 
 ```json
 {
@@ -62,6 +62,23 @@ By default, queries are executed using CoreGateway and SLHelper. To execute the 
 ## Multi-DMS connection
 
 For every DataMiner System you want Data Aggregator to connect to, you will need to specify the following fields under *BrokerOptions.Clusters*:
+
+### DMS with BrokerGateway
+
+If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the following fields:
+
+- **ID**: A unique ID.
+
+- **CredsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+
+- **APIKeyPath**: The file path to the *appsettings.runtime.json* file containing the private key. This file has to be copied from the DMA and can be found here: `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+  > [!NOTE]
+  > This setting is available from Data Aggregator version 3.2.0 onwards.
+
+### DMS without BrokerGateway
+
+If the DMS does not use [BrokerGateway](xref:BrokerGateway_Migration) yet, specify the following fields:
 
 - **ID**: A unique ID.
 

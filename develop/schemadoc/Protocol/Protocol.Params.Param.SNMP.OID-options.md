@@ -50,7 +50,7 @@ Specifies that the "multipleGetBulk" table retrieval method should be used. Refe
 
 When polling large SNMP tables, you can use the partialSNMP:x option to fetch only "x" rows at a time. This allows you to perform sets in-between and to prevent timeout errors.
 
-The get method can be getNext + multipleGet ("bulk"), multipleGetNext or multipleGetBulk. If the protocol type is snmpV1 and you specified multipleGetBulk, then multipleGetNext will be used.
+The get method can be **GetNext + MultipleGet (column-based)**, **MultipleGetNext** or **MultipleGetBulk**. If the protocol type is snmpV1 and you specified `multipleGetBulk`, then `multipleGetNext` will be used.
 
 Example:
 
@@ -63,7 +63,8 @@ Example:
 > - The partialSNMP:x option always has to be used together with the instance option.
 > - The partialSNMP:x option cannot be used to fetch data from subtables or filtered rows.
 > - The displayed table will be updated only when the entire table has been fetched.
-> - When the multipleGetBulk retrieval method is used in combination with the partialSNMP option, the value for the partialSNMP option will take precedence over the value for the multipleGetBulk option. For example, the configuration `<OID type="complete" options="instance;partialSNMP:12;multipleGetBulk:24">` will result in the value 12 being used by DataMiner.
+> - When the multipleGetBulk retrieval method is used in combination with the partialSNMP option, both options are taken into account. The partialSNMP value determines the total number of rows to fetch in a cycle, and the multipleGetBulk value determines the maximum number of rows per individual GetBulk request. For example, the configuration `<OID type="complete" options="instance;partialSNMP:8;multipleGetBulk:3">` will result in 3 rows being requested, then another 3, and finally 2. A total of 8 rows will be returned to SLProtocol. If the value of multipleGetBulk is larger than the value of partialSNMP, the partialSNMP value will also be used as the maximum number of rows per individual GetBulk request, and the multipleGetBulk value will be ignored. We recommend setting the partialSNMP value equal to or as a multiple of the multipleGetBulk value to avoid inefficient cases where only a single row is retrieved in the final request. Prior to DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8<!--RN 43034-->, the value for the partialSNMP option takes precedence over the value for the multipleGetBulk option. For example, the configuration `<OID type="complete" options="instance;partialSNMP:12;multipleGetBulk:24">` will result in the value 12 being used by DataMiner.
+> - Combining the partialSNMP option with getNext is not supported.
 
 ### subtable
 

@@ -10,7 +10,7 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 > See also:
 >
 > - [Tutorials — Creating and showing a panel](xref:Tutorial_Apps_Panel)
-> - [Using panels in DataMiner Low-Code Apps](https://community.dataminer.services/video/using-panels-in-dataminer-low-code-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Using panels in DataMiner Low-Code Apps](https://www.youtube.com/watch?v=-fIeNFeVFEM) ![Video](~/user-guide/images/video_Duo.png)
 
 1. While you are editing a page, in the page configuration pane, open the *panels* section.
 

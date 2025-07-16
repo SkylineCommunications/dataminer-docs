@@ -15,7 +15,7 @@ uid: QuestionsAndAnswers
   
     The result of this is the content of 1.3.6.1.2.1.2.2.1.1, the first row, first column. GetNext requests are performed until the OID in the response exceeds the range of table OID.
 
-    **GetNext + MultipleGet**
+    **GetNext + MultipleGet (column-based)**
 
     Implementation: Define an SNMP tag on the table parameter and on the column parameters.
 
@@ -177,7 +177,16 @@ uid: QuestionsAndAnswers
 
 1. *Can you name one or more reasons for the problem "Too many groups on the protocol stacks"? How can this be solved?*
 
-    This occurs when the last group in a timer is of type "Action" or "Trigger" or when a trigger executes a group of those two types. This is because the system does not wait for "Action" or "Trigger" groups to be finished before continuing. It can be solved by using type "poll action" or "poll trigger", or by putting a poll group after the group.
+   This issue occurs when the last group in a timer is of type "Action" or "Trigger", or when a "Trigger" group calls other groups of these types. To understand why this causes problems, consider how timers work: a timer restarts only when all its scheduled groups have completed. However, the system determines this based on the last group in the timer.
+
+   The key issue is that "Action" and "Trigger" groups are not enqueued on the main protocol thread like "Poll" groups are. They are executed immediately on the timer thread. This can cause the last group to complete before other earlier groups (like poll groups) have even started or finished, since those are still waiting in the main thread queue.
+
+   As a result, the timer assumes that all groups are done and restarts prematurely, before the previous ones have finished. This means that it is possible that the timer will continue adding its poll groups to the main protocol thread execution queue before the poll groups from the previous cycle are completed. Over time, this causes a buildup, leading to the problem of having "too many groups on the protocol stacks". This problem is further amplified by the fact that timers have the lowest priority when groups are placed on the execution queue, which means that their poll groups may be delayed even more, making it even more likely that the last "Action" or "Trigger" group finishes first and causes an early timer restart.
+
+   Solutions:
+
+   - Use "Poll Action" or "Poll Trigger" types instead. These variants behave like poll groups and are queued on the main thread, avoiding premature timer restarts.
+   - Ensure the last group in the timer is a "Poll" group. This guarantees that the timer will not restart until the main thread has completed execution of all its groups.
 
 1. *What is the difference between starting a Trigger -> Action with a SetParameter and a CheckTrigger?*
 
@@ -327,7 +336,7 @@ uid: QuestionsAndAnswers
 
 1. *Under which circumstances can `row=true` work and when not?*
 
-    `row=true` will work when the QAction triggers on a table parameter. It is useless on a QAction that does not trigger on a table.
+    `row=true` will work when the QAction triggers on a write column parameter, a read column parameter, or a table parameter (for SNMP tables). It is useless on a QAction that does not trigger on table-related parameters.
 
 1. *Is it OK to have an "After Startup" trigger to run a "Run Actions" action?*
 

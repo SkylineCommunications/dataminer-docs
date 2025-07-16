@@ -17,7 +17,3 @@ These report templates can then be used to:
 - Generate reports with the Reporter app. See [Report template components](xref:Report_template_components).
 
 - Send email reports with other DataMiner apps. See [Sending reports by email](xref:Sending_reports_by_email).
-
-> [!TIP]
-> See also:
-> [Email Reports – Configuring email reports](https://community.dataminer.services/video/email-reports-configuring-email-reports/) ![Video](~/user-guide/images/video_Duo.png)

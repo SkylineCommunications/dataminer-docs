@@ -126,7 +126,7 @@ There are two ways to configure this setup: with or without group claims. If gro
 
 1. Go to the `C:\Skyline DataMiner` folder and open the *DataMiner.xml* file.
 
-1. In *DataMiner.xml*, configure the *\<ExternalAuthentication>* tag as detailed below:
+1. In *DataMiner.xml*, configure the [ExternalAuthentication](xref:DataMiner.ExternalAuthentication) tag as detailed below:
 
    - **When using group claims**, set the *claims* attribute of the *Groups* element to "true", and add the name of the SAML attribute that will contain the group names in the XML element (i.e. *userGroups*):
 

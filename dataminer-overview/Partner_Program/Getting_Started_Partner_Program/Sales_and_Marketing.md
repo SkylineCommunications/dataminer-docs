@@ -116,7 +116,7 @@ Therefore, partners are highly encouraged to align with this collaborative minds
 
   - **Q&A**: The [Q&A section](https://community.dataminer.services/questions/) of Dojo allows people to ask all kinds of questions and to get a fast, accurate response straight from the source, as the entire Skyline staff are active Dojo users.
 
-  - **Video library**: The [video library](https://community.dataminer.services/videos/) contains a wealth of video material (e.g. presentations) on a variety of topics, ranging from general topics all the way to highly specific use cases or features and capabilities of DataMiner.
+  - **Video collection**: Our [video collection](https://www.youtube.com/@SkylineCommu) contains a wealth of video material (e.g. presentations) on a variety of topics, ranging from general topics all the way to highly specific use cases or features and capabilities of DataMiner.
 
   - **Use case library**: The [use case library](https://community.dataminer.services/use-cases/) provides bite-sized inspiration on what can be done with the transformational power of DataMiner, for a variety of different market verticals and applications.
 

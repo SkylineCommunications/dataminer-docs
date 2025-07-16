@@ -19,6 +19,9 @@ If a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gat
 
 ## Establishing the site-to-site VPN connection
 
+> [!TIP]
+> If you are not familiar with any of the terminology used in this section, please refer to [Azure VPN Gateway FAQ](https://docs.azure.cn/en-us/vpn-gateway/vpn-gateway-vpn-faq).
+
 1. Make sure the following prerequisites are met:
 
    - You have configured a [supported VPN device](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpn-devices) for Skyline to connect to.
@@ -38,6 +41,9 @@ If a [custom policy](https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gat
    - If BGP should be enabled, the ASN and BGP peer IP address.
 
    - The preferred cryptographic algorithms and key strengths. We prefer to use the most secure and efficient settings that are available on your device.
+
+      > [!NOTE]
+      > The IPSec Phase 1 or Main Mode lifetime is fixed to 28000 seconds for Azure VPN Gateways.
 
    - Optionally, if the *VpnGw1AZ* [gateway SKU](https://learn.microsoft.com/en-us/azure/vpn-gateway/about-gateway-skus) does not meet your requirements, the required SKU.
 

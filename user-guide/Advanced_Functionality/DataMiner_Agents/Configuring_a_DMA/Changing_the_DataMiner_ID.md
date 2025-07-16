@@ -15,7 +15,7 @@ To do so:
 
 1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
-1. In the *id* attribute of the *\<DataMiner>* tag, specify the new DataMiner ID of the DMA.
+1. In the [id](xref:DataMiner-id) attribute of the `<DataMiner>` tag, specify the new DataMiner ID of the DMA.
 
 1. Save the file.
 

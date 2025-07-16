@@ -1,5 +1,6 @@
 ---
 uid: Web_Issues_Support_Assistant
+description: The DataMiner Web Support Assistant is a Chrome extension designed to assist users of DataMiner web apps on Chromium browsers.
 ---
 
 # Web Support Assistant

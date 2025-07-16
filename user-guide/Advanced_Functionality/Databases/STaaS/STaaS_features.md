@@ -1,5 +1,6 @@
 ---
 uid: STaaS_features
+description: STaaS takes care of data redundancy, data resilience, data security, and data availability out of the box.
 ---
 
 # STaaS features
@@ -13,7 +14,7 @@ DataMiner STaaS relies on Azure Storage, which stores multiple copies of your da
 
 - **Zone-redundant storage (ZRS)** copies your data synchronously across three Azure availability zones in one region. Each availability zone is a separate physical location with independent power, cooling, and networking. By **default**, DataMiner STaaS uses ZRS.
 
-- **Geo-redundant storage (GRS)** copies your data synchronously three times within a single physical location in the primary region and then also copies your data asynchronously to a single physical location in the secondary region. Only specific regions can be combined in such a setup, e.g. if the primary region is Switzerland North, the secondary region can only be Switzerland West. For an overview of the supported regions, see [Azure paired regions](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions). GRS is **available upon request**, but will result in additional charges. If you wish to use DataMiner STaaS with GRS, contact <staas@dataminer.services>.
+- **Geo-redundant storage (GRS)** copies your data synchronously three times within a single physical location in the primary region and then also copies your data asynchronously to a single physical location in the secondary region. Only specific regions can be combined in such a setup, e.g. if the primary region is Switzerland North, the secondary region can only be Switzerland West. For an overview of the supported regions, see [Azure paired regions](https://learn.microsoft.com/en-us/azure/reliability/cross-region-replication-azure#azure-paired-regions). GRS is **available upon request**, but will result in additional charges. If you wish to use DataMiner STaaS with GRS, contact <support@dataminer.services>.
 
 > [!TIP]
 > For detailed information, see [Azure Storage redundancy on learn.microsoft.com](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy)
@@ -24,7 +25,7 @@ To ensure data resilience for potential recovery scenarios, protecting against u
 
 - **Daily backups**: STaaS performs backups with a granularity of 1 day and maintains a 30-day rolling snapshot of your data.
 
-- **Data restoration and support**: In the event a rollback is necessary, our support team will assist you. To submit a rollback request, contact the support team by sending an email to <staas@dataminer.services>. They will guide you through the necessary steps to ensure a successful data restoration.
+- **Data restoration and support**: In the event a rollback is necessary, our support team will assist you. To submit a rollback request, contact the support team by sending an email to <support@dataminer.services>. They will guide you through the necessary steps to ensure a successful data restoration.
 
 > [!IMPORTANT]
 > When you [disconnect a system from dataminer.services](xref:Disconnecting_from_dataminer.services#permanently-disconnecting-from-dataminerservices) or [remove a DaaS system](xref:Removing_a_DaaS_system), all STaaS data for that specific system, including backups, will be removed 7 days after you take this action. Upon request, all STaaS data can be recovered within those 7 days.
@@ -61,7 +62,7 @@ From DataMiner 10.4.0 [CU14]/10.5.0 [CU2]/10.5.5 onwards<!-- RN 42387 -->, when 
 
 ![ThrottlingAlarmExample](~/user-guide/images/throttling_alarm_example.png)
 
-If you encounter such an alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load. If the alarm persists or you are unable to find the root cause, please contact <staas@dataminer.services>.
+If you encounter such an alarm, to ensure smooth operation of your DataMiner System, try to identify and resolve the root cause of this higher load.
 
 ## Limitations
 

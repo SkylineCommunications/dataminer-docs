@@ -8,7 +8,7 @@ In the *DataMiner.xml* file, you can specify the colors you want to assign to ea
 
 1. Open the file *DataMiner.xml* in a text file editor (e.g. Microsoft Notepad), from the folder `C:\Skyline DataMiner\`.
 
-1. In the `<Colors>` tag, modify the alarm colors.
+1. In the [Colors](xref:DataMiner.Colors) tag, modify the alarm colors.
 
    In the value attribute of each of the `<Color>` tags, you can specify a color as a set of RGB values.
 
@@ -24,12 +24,12 @@ In the *DataMiner.xml* file, you can specify the colors you want to assign to ea
 
    1. In the drop-down list next to *Type*, select *File*.
 
-   1. In the *File* box, specify the following path: `C:\Skyline Dataminer\DataMiner.xml`.
+   1. In the *File* box, specify the following path: `C:\Skyline DataMiner\DataMiner.xml`.
 
    1. Click the *Sync now* button.
 
 > [!NOTE]
-> The alarm colors have to be specified in the `<Colors>` tag of the *DataMiner.xml* file. If the `<Colors>` tag is missing, it should be added. In that case, we recommend adding the tag you find in the example below. It contains all default colors.
+> The alarm colors have to be specified in the [Colors](xref:DataMiner.Colors) tag of the *DataMiner.xml* file. If this tag is missing, it should be added. In that case, we recommend adding the tag you find in the example below. It contains all default colors.
 
 > [!TIP]
 > See also:

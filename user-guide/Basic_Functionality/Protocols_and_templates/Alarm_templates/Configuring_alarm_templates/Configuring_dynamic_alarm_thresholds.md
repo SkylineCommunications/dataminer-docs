@@ -72,6 +72,3 @@ Both for "absolute" and "relative" alarm thresholds, the "normal" value has to b
 >
 > - If you want to overrule the dynamic behavior for a certain limit and specify a fixed value instead, in the template editor, select the *Fixed* option for that limit.
 > - If normalization is triggered from the protocol, rather than from the template, baseline values are available as a read-only list.
-
-> [!TIP]
-> See also: [Rui’s Rapid Recap – Smart baseline](https://community.dataminer.services/video/ruis-rapid-recap-smart-baseline/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

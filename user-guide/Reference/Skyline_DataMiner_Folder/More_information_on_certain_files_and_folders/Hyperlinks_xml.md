@@ -11,9 +11,6 @@ DataMiner administrators will often create custom commands that open a web page,
 > [!NOTE]
 > When you make changes to *Hyperlinks.xml*, you should also force a synchronization of the file and reopen DataMiner Cube. For more details, see [Adding a custom command to the Alarm Console shortcut menu](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu).
 
-> [!TIP]
-> See also: [Alarm Console - Extending the right-click menu](https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
-
 ## File syntax
 
 The *Hyperlinks.xml* file has to have a [\<HyperLinks>](xref:HyperLinks) root tag containing a [\<HyperLink>](xref:HyperLinks.HyperLink) tag for every custom command.
@@ -189,7 +186,7 @@ For example, if a hyperlink of type "openelement" contains the following content
 
 > [!NOTE]
 >
-> - If you want to use a view property, service property, or element property in a hyperlink, make sure the option *Make this property available for alarm filtering* is enabled for that property. See [Managing element properties](xref:Managing_element_properties).
+> - If you want to use a view property, service property, or element property in a hyperlink, make sure the option *Make this property available for alarm filtering* is enabled for that property. See [Managing custom properties](xref:Managing_element_properties).
 > - If you use a view property on an alarm of an element contained in multiple views, the hyperlink will use the property of the view with the lowest ID.
 
 ### About the \[VID\] keyword

@@ -12,7 +12,7 @@ To do so:
 
 1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
-1. Add a *disableElementIP* attribute to the *\<DataMiner>* tag, and set it to “true”.
+1. Add a [disableElementIP](xref:DataMiner-disableElementIP) attribute to the `<DataMiner>` tag, and set it to “true”.
 
    By default, the *disableElementIP* attribute is set to “false”.
 

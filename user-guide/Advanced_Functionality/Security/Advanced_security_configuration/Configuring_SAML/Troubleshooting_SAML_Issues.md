@@ -19,7 +19,7 @@ When you encounter SAML issues, investigate the logs detailed below, in the spec
 1. [SLDataMiner.txt](xref:DataMiner_processes#sldataminer): `C:\Skyline DataMiner\logging\SLDataMiner.txt`
 
 > [!NOTE]
-> If you contact tech support for a SAML issue, please collect the logs mentioned above, the [files mentioned below](#files-to-check), as well as a [LogCollector](xref:SLLogCollector) package.
+> If you contact DataMiner Support for a SAML issue, please collect the logs mentioned above, the [files mentioned below](#files-to-check), as well as a [LogCollector](xref:SLLogCollector) package.
 
 ## Files to check
 
@@ -38,7 +38,7 @@ When troubleshooting SAML, the following configuration files contain the informa
   - *SAML response*: To collect this, [use the SAML-tracer extension](#collecting-the-saml-response).
 
 > [!NOTE]
-> If you contact tech support for a SAML issue, please collect these files and the [logs](#logs-to-check) mentioned above, as well as a [LogCollector](xref:SLLogCollector) package.
+> If you contact DataMiner Support for a SAML issue, please collect these files and the [logs](#logs-to-check) mentioned above, as well as a [LogCollector](xref:SLLogCollector) package.
 
 ## Troubleshooting
 

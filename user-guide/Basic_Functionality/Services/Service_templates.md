@@ -37,5 +37,4 @@ Below you will find examples of how to define a service template that will autom
 > [!TIP]
 > See also:
 >
-> - [Service templates](https://community.dataminer.services/video/service-templates/) ![Video](~/user-guide/images/video_Duo.png)
-> - [Getting Started with Service Templates](https://community.dataminer.services/video/getting-started-with-service-templates/) ![Video](~/user-guide/images/video_Duo.png)
+> - [Getting Started with Service Templates](https://www.youtube.com/watch?v=0cX1mIPbGAw) ![Video](~/user-guide/images/video_Duo.png)

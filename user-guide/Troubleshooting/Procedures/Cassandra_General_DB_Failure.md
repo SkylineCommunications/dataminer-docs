@@ -105,7 +105,7 @@ If the Cassandra setup was already using the increased threshold values, then th
 
    The solution will depend on the root cause. For example: do all columns need to be saved, can you make this a volatile table, is the table being polled too fast, etc.
 
-   If the root cause appears to be connector-related, then the connector will need to receive an update. In that case, [contact tech support](#contacting-tech-support-for-this-issue) to verify the findings and to forward them to the correct team.
+   If the root cause appears to be connector-related, then the connector will need to receive an update. In that case, [contact DataMiner Support](#contacting-dataminer-support-for-this-issue) to verify the findings and to forward them to the correct team.
 
 ### Other checks
 
@@ -117,7 +117,7 @@ If the Cassandra setup was already using the increased threshold values, then th
 
    If the Reaper configuration is not correct, it can happen that the Cassandra maintenance is not done properly, causing the necessary cleanup not to be triggered.
 
-1. If you have been unable to solve the issue through any of the steps above, [contact tech support](#contacting-tech-support-for-this-issue).
+1. If you have been unable to solve the issue through any of the steps above, [contact DataMiner Support](#contacting-dataminer-support-for-this-issue).
 
 ## Workaround
 
@@ -183,7 +183,7 @@ If the root cause of the large number of tombstone lies within the connector, fo
 
    `ALTER TABLE sldmadb_elementdata.elementdata WITH gc_grace_seconds = 86400;`
 
-## Contacting tech support for this issue
+## Contacting DataMiner Support for this issue
 
 If you are unable to resolve this yourself using the information above, contact <support@dataminer.services>.
 

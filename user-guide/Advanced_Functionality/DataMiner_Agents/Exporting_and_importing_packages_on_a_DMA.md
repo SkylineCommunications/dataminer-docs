@@ -21,6 +21,3 @@ This section consists of the following topics:
 >
 > - Importing a package created with a more recent DataMiner version into a system with an older version is not supported and may not work. Importing a package created with an older DataMiner version into a system with a newer version will work in most cases, but this is not guaranteed.
 > - External DLLs are not included in .dmimport packages. If you export and import an element that uses an external DLL, this external DLL will still need to be added to the DMA where you import the element, either manually, or by means of a separate install package.
-
-> [!TIP]
-> See also: [Rui’s Rapid Recap – DELT](https://community.dataminer.services/video/ruis-rapid-recap-delt/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

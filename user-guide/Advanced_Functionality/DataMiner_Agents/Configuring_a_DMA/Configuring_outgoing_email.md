@@ -1,5 +1,6 @@
 ---
 uid: Configuring_outgoing_email
+description: A DMS can send out email notifications and reports via an SMTP server. This is configured either in DataMiner.xml or via the SLNetClientTest tool.
 ---
 
 # Configuring outgoing email
@@ -8,9 +9,6 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 
 > [!NOTE]
 > For this feature, this product includes software developed by the OpenSSL Project for use in the OpenSSL Toolkit (<http://www.openssl.org/>). In recent DataMiner versions, OpenSSL library version v1.1.1c is used.
-
-> [!TIP]
-> See also: [Agents – configuring an email server](https://community.dataminer.services/video/agents-configuring-an-email-server/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -111,7 +109,7 @@ You can specify the following advanced settings. However, these are not mandator
   
 ## Example of SMTP server configuration
 
-The example below shows how the SMTP element in DataMiner.xml should be configured.
+The example below shows how the [SMTP](xref:DataMiner.SMTP) element in *DataMiner.xml* should be configured.
 
 ```xml
 <SMTP>

@@ -59,7 +59,17 @@ An "organization" is the billing entity and the highest level in the hierarchy i
 > [!NOTE]
 > Though we recommend having one organization per company, there is no limit to the number of organizations that can be created under the same company. This might be useful in the following scenarios: test or development accounts, managing multiple concurrent subscriptions on number of credits, or large companies with an Enterprise Agreement with multiple billing entities.
 
-![Business organization overview](~/dataminer-overview/images/Business_organization_Overview.png)
+![Business organization overview](~/user-guide/images/Business_organization_Overview.png)
+
+### Metering requirements
+
+Metering and billing require an active connection to dataminer.services to ensure accurate usage reporting. In the event of a short-term connection loss (e.g. a few days), usage data is not lost.
+
+For offline or air-gapped environments, local usage logging is supported through the following options:
+
+- Monthly manual export: Usage data is logged locally and must be securely exported by the end user within 5 calendar days following the end of each month (e.g. via file transfer, physical media, or email relay).
+
+- Quarterly auditing (exceptional cases): A scheduled audit session (remote or on-site) to verify usage directly on the system. Please contact your Account Manager to discuss eligibility and setup.
 
 ### Usage terms
 
@@ -113,7 +123,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | *Light Managed Object*        | Sum of metrics on Managed Objects with less than 200 metrics.                         | 2 for 1000 metrics         | A Managed Object with 150 metrics, the metered value is 150. |
 | *Unmanaged Object*            | Sum of instances from all Unmanaged Objects.  | 4 per 100K instances. | A system with 5K tickets and 25K assets, the metered value is 30k x 4 / 100k = 1.2. |
 | *Connector Services*          | Sum of connectors delivered by Skyline, concurrently used.                            | 8 | Using 20 connectors a month, but with a maximum of 5 at any given time, the metered value is 5. |
-| *Automation Actions*          | Sum of Automation script runs (1x per run) and new Unmanaged Object Instances (5x new instance)    | Starting at 5 for 1K script runs.<br> Decreases with volume. | For an object "Ticket", when creating 100 new tickets, the metered value equals 500 |
+| *Automation Actions*          | Sum of Automation script runs (1x per run) and new Unmanaged Object instances (5x new instance)    | Starting at 5 for 1K actions.<br> Decreases with volume. | For an object "Ticket", when creating 100 new tickets, the metered value equals 500 |
 | *Dashboard Sharing*           | Sum of number of unique shares.                                                       | 0.5 | Sharing 2 dashboards with 5 email recipients for a full month, the metered value is 2 dashboards x 5 recipients = 10. |
 | *Alarm Updates*               | Sum of alarm update writes.       | 0.9 per 100K alarm updates. | |
 | *Information Events*          | Sum of information event writes.  | 0.3 per 100K information events. | |

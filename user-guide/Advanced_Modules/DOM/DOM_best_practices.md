@@ -222,7 +222,7 @@ Since updates to a DOM instance can be executed on any Agent in a cluster, it is
 
 With the current behavior of joining data using a [GQI query](xref:About_GQI), all data of the right-hand-side data source will be retrieved. If this is configured to use a `DomDefinition` containing a lot of instances, this will lead to performance and scaling issues.
 
-We recommend implementing an [ad hoc data source](xref:Configuring_an_ad_hoc_data_source_in_a_query) instead. This allows you to more efficiently retrieve the DOM data by only retrieving the `DomInstances` that are needed. Within this ad-hoc data source, a potential caching layer can also be implemented.
+We recommend implementing an [ad hoc data source](xref:GQI_Ad_hoc_data_sources) instead. This allows you to more efficiently retrieve the DOM data by only retrieving the `DomInstances` that are needed. Within this ad-hoc data source, a potential caching layer can also be implemented.
 
 Note that this recommendation is only important when the DOM data could contain a large number of records. If the expected maximum number of `DomInstances` is limited to about 100, the performance of the default join functionality should not be impacted.
 

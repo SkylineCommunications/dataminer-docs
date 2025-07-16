@@ -52,6 +52,3 @@ When you click in the selection box in the *Condition* column, the following act
 
   > [!NOTE]
   > If there are multiple alarm template entries for the same parameter, each with a different condition, then the first entry of which the condition is false, starting from the top, will be applied.
-
-> [!TIP]
-> See also: [Alarm templates – Conditional monitoring](https://community.dataminer.services/video/alarm-templates-conditional-monitoring/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

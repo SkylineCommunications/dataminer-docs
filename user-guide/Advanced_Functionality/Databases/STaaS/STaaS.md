@@ -23,4 +23,4 @@ Advantages of DataMiner Storage as a Service (STaaS) include:
 - Safe and secure data
 
 > [!TIP]
-> If you have any questions or need support with the STaaS feature, contact <staas@dataminer.services>.
+> If you have any questions or need support with the STaaS feature, contact <support@dataminer.services>.

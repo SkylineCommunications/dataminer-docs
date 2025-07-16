@@ -17,7 +17,7 @@ If you do not use the Taskbar Utility to restore a DMA, there are two ways you c
 > - Elasticsearch: [Taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux)
 > - Cassandra: [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool)
 >
-> If you are using [Storage as a Service](xref:STaaS), there is no need to restore the database. If you want to restore your DataMiner Agent on a new (virtual) machine, contact <staas@dataminer.services> to make sure your new setup is connected correctly.
+> If you are using [Storage as a Service](xref:STaaS), there is no need to restore the database. If you want to restore your DataMiner Agent on a new (virtual) machine, contact <support@dataminer.services> to make sure your new setup is connected correctly.
 
 ## Restoring a MySQL database dump
 
