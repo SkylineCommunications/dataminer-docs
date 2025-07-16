@@ -6075,6 +6075,10 @@ items:
           topicUid: Notifications
         - name: Viewing test results
           topicUid: Viewing_test_results
+    - name: Definition of Done (DoD)
+      items:
+        - name: About DoD
+          topicUid: About_DoD
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:
@@ -6184,10 +6188,6 @@ items:
         items:
         - name: Wireshark stream decryption
           topicUid: WiresharkDecrypt
-    - name: Definition of Done (DoD)
-      items:
-        - name: About DoD
-          topicUid: About_DoD
 - name: DataMiner device-specific integrations
   topicUid: DSI
   items:
