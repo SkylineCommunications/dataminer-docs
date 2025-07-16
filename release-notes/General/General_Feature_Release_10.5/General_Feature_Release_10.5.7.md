@@ -299,7 +299,7 @@ Because of an issue in SLNet, up to now, if the same group would be added more t
 
 When, in e.g. DataMiner Cube, you opened the *Connectivity* tab in the *Properties* window of an element, in some rare cases, not all DCF interfaces would be listed.
 
-#### Alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service [ID 42724]
+#### Alarm with a source other than 'DataMiner' could incorrectly impact the alarm severity of a service [ID 42724]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 

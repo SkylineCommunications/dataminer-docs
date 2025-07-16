@@ -129,6 +129,14 @@ From now on, the connection worker process has references to all assemblies that
 
 The user menu in the header bar of the DataMiner landing page (e.g. `https://myDMA/root/`) has been redesigned.
 
+#### Web apps: Enhanced performance when starting a web app [ID 43364]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+Because of a number of enhancements, overall performance has increased when starting a web app.
+
+For example, information that does not frequently change (e.g. alarm colors) will now be cached in the web API. It will no longer be fetched each time a web app is opened.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Timeline component: Group label tooltips missing [ID 43242]
@@ -172,3 +180,23 @@ Since DataMiner versions 10.4.0 [CU16]/10.5.0 [CU4]/10.5.7, the redesigned `UIBl
 Currently, by default, the existing components will still be used by default to keep the UI aligned. If you want to use the new components, then add the following argument to the URL of the low-code app:
 
 `?useNewIASInputComponents=true`
+
+#### GQI DxM: Persistent system connection would no longer be able to recover when closed [ID 43343]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+When the app settings of the GQI DxM are changed, in some cases, the persistent system connection will reconnect. However, up to now, the reference to that persistent system connection was not updated in the ConnectionManager, causing any subsequent query requests made by the system user to throw an `Attempted to use a closed connection` error. The GQI DxM would always be able to recover by itself though, as it periodically checked whether the connections in the ConnectionManager were still alive.
+
+As, since DataMiner version 10.5.0 [CU5]/10.5.8 [CU0], this connection check is no longer performed, the ConnectionManager will now automatically clear the reference to the persistent system connection when it detect that it has been closed, and will, when a new query request arrives, either retrieve the new persistent system connection reference or trigger a reconnect if no connection exists yet.
+
+#### Dashboards app: Some changes to a dashboard would no longer be saved after cancelling the generation of a PDF report [ID 43358]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+When you cancelled the generation of a PDF report by closing the preview window, and then entered edit mode, up to now, some changes made to the dashboard in question would incorrectly no longer be saved.
+
+#### Dashboards app: Problem when sharing a dashboard [ID 43367]
+
+<!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some cases, an NullReference exception could be thrown when you shared a dashboard.

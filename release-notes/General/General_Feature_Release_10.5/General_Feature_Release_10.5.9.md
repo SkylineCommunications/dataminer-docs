@@ -135,11 +135,11 @@ The logging of a DOM manager will now also contain a line indicating the start o
 
 ### Enhancements
 
-#### SLDataGateway will now periodically check all Cassandra, OpenSearch and Elasticsearch certificates [ID 41793]
+#### SLDataGateway will now check all Cassandra, OpenSearch and Elasticsearch certificates on a daily basis [ID 41793]
 
 <!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
 
-SLDataGateway will now periodically check all Cassandra, OpenSearch and Elasticsearch certificates.
+SLDataGateway will now check all Cassandra, OpenSearch and Elasticsearch certificates on a daily basis.
 
 - If a certificate is set to expire within 30 days, a notice alarm will be created.
 - If a certificate is set to expire within 7 days, an error alarm will be created.
@@ -253,6 +253,14 @@ Also, a number of smaller changes have been made:
 The BPA tests *Check Agent Presence Test In NATS* (which was renamed to *Nats connections between the DataMiner Agents* in DataMiner versions 10.5.0/10.4.12) and *Verify NATS is Running* have now both been replaced by the *Verify NATS Cluster* test.
 
 This means that, from now on, during a DataMiner upgrade, the *Verify NATS Cluster* test will be installed and any existing instances of the deprecated *Check Agent Presence Test In NATS* and *Verify NATS is Running* tests will be removed.
+
+#### Migration from ElasticSearch to OpenSearch: is_write_index flag will no longer be reset [ID 43369]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When migrating data from Elasticsearch to OpenSearch, at some point, the *ReIndexElasticSearchIndexes* tool needs to be used to re-index the data.
+
+This tool has now been adapted to make sure the `is_write_index` flag is not reset during the migration process.
 
 ### Fixes
 
@@ -409,6 +417,14 @@ In some cases, a run-time error could be thrown when a DVE child element was del
 <!-- MR 10.4.0 [CU18] / 10.5.0 [CU6] - FR 10.5.9 -->
 
 When an error was thrown while setting up the Repository API connections between SLDataGateway and SLNet, in some cases, threads in SLNet could get stuck indefinitely, causing certain DataMiner features (e.g. DOM, SRM, etc.) to not being able to progress beyond their initialization phase.
+
+#### StorageModule DcM would fail to read an element XML file [ID 43350]
+
+<!-- MR 10.5.0 [CU6] - FR 10.5.9 -->
+
+In some rare cases, the StorageModule DcM would fail to read an element XML file because that file was being used by another process.
+
+From now on, it will try up to three times to read an element XML file that is being used by another process.
 
 #### Fields of type datetime would incorrectly not be empty when the DOM definition field did not have a default value defined [ID 43351]
 

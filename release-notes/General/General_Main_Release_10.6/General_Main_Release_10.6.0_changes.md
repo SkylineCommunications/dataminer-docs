@@ -382,6 +382,14 @@ Also, a number of smaller changes have been made:
 - DVE child parameters provided in the `AddRADParameterGroupMessage` or the `AddRADSubgroupMessage` will now automatically be translated to the parent parameters.
 - Security has been added to all RAD messages. From now on, you will no longer be able to edit, remove or retrieve information about groups that contain parameters of elements to which you do not have access. The `GetRADParameterGroupsMessage` will still return all groups though.
 
+#### Migration from ElasticSearch to OpenSearch: is_write_index flag will no longer be reset [ID 43369]
+
+<!-- MR 10.6.0 - FR 10.5.9 -->
+
+When migrating data from Elasticsearch to OpenSearch, at some point, the *ReIndexElasticSearchIndexes* tool needs to be used to re-index the data.
+
+This tool has now been adapted to make sure the `is_write_index` flag is not reset during the migration process.
+
 ### Fixes
 
 #### Mobile Visual Overview: Problem with user context [ID 42061]
@@ -434,7 +442,7 @@ In systems with many trended parameters, an SLNet memory leak could occur whenev
 
 At startup, up to now, the ModelHost DxM would stop working when it failed to retrieve a proxy endpoint. From now on, when it fails to retrieve a proxy endpoint, it will retry until it succeeds.
 
-#### Alarm with a source other than "DataMiner" could incorrectly impact the alarm severity of a service [ID 42724]
+#### Alarm with a source other than 'DataMiner' could incorrectly impact the alarm severity of a service [ID 42724]
 
 <!-- MR 10.6.0 - FR 10.5.7 -->
 
