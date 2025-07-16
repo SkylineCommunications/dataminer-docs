@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_hardening_guide
+description: This guide will give you a comprehensive overview to help you make the necessary changes to secure your DataMiner System as much as possible.
 keywords: hardening, hardening guide, security
 ---
 

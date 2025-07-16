@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_compliance_offering
+description: Skyline Communications takes pride in the security of its products and wants to provide the necessary guarantees to its users.
 ---
 
 # DataMiner compliance offering
