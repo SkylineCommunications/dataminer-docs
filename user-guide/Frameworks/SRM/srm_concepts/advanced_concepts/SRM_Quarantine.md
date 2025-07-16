@@ -267,7 +267,7 @@ The script example for [Quarantine on booking updates](#quarantine-on-booking-up
 | UnavailableCapability | The booked resource does not provide the requested capability value. |
 | UnavailableTimeDependentCapability | The booked time-dependent capability on the resource has a conflict with a different booking. |
 | OutsideResourceAvailabilityWindow | The resource has an availability window defined and is not available in the time range of the booking. See also [Resource availability](xref:Resource_availability). |
-| RangeCapacityConflict | The requested capacity range conflicts with the existing bookings or is outside of the resource supported range. |
+| RangeCapacityConflict | The requested capacity range conflicts with the existing bookings or is outside of the supported range for the resource. |
 
 ## Moving bookings out of the quarantine state
 
